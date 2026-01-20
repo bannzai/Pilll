@@ -21,9 +21,7 @@ final allMenstruationProvider = StreamProvider<List<Menstruation>>(
       ),
 );
 final latestMenstruationProvider = Provider(
-  (ref) => ref
-      .watch(allMenstruationProvider)
-      .whenData((menstruations) => menstruations.firstOrNull),
+  (ref) => ref.watch(allMenstruationProvider).whenData((menstruations) => menstruations.firstOrNull),
 );
 
 final beginMenstruationProvider = Provider(
@@ -49,11 +47,7 @@ class BeginMenstruation {
       );
     }
 
-    return await databaseConnection
-        .menstruationsReference()
-        .add(menstruation)
-        .then((event) => event.get())
-        .then((value) => value.data()!);
+    return await databaseConnection.menstruationsReference().add(menstruation).then((event) => event.get()).then((value) => value.data()!);
   }
 }
 
@@ -77,8 +71,7 @@ class SetMenstruation {
       }
     } else {
       if (await _healthKitDateDidSave(menstruation: mutableMenstruation)) {
-        final healthKitSampleDataUUID =
-            await updateOrAddMenstruationFlowHealthKitData(mutableMenstruation);
+        final healthKitSampleDataUUID = await updateOrAddMenstruationFlowHealthKitData(mutableMenstruation);
         mutableMenstruation = mutableMenstruation.copyWith(
           healthKitSampleDataUUID: healthKitSampleDataUUID,
         );

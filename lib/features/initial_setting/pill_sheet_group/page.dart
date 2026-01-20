@@ -178,8 +178,7 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
   Widget build(BuildContext context) {
     if (state.pillSheetTypes.isEmpty) {
       return AddPillSheetTypeEmpty(
-        onSelect: (pillSheetType) =>
-            store.selectedFirstPillSheetType(pillSheetType),
+        onSelect: (pillSheetType) => store.selectedFirstPillSheetType(pillSheetType),
       );
     } else {
       return Column(
@@ -218,8 +217,7 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
   }
 }
 
-extension InitialSettingPillSheetGroupPageRoute
-    on InitialSettingPillSheetGroupPage {
+extension InitialSettingPillSheetGroupPageRoute on InitialSettingPillSheetGroupPage {
   static InitialSettingPillSheetGroupPage screen() {
     analytics.logScreenView(screenName: 'InitialSettingPillSheetGroupPage');
     return const InitialSettingPillSheetGroupPage();

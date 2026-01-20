@@ -168,9 +168,7 @@ class SettingPageBody extends StatelessWidget {
                     return SettingSectionTitle(
                       text: L.pillSheet,
                       children: [
-                        if (activePillSheet != null &&
-                            pillSheetGroup != null &&
-                            !pillSheetGroup.isDeactived) ...[
+                        if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) ...[
                           TodayPllNumberRow(
                             setting: setting,
                             pillSheetGroup: pillSheetGroup,
@@ -200,8 +198,7 @@ class SettingPageBody extends StatelessWidget {
                         _separator(),
                         NotificationTimeRow(setting: setting),
                         _separator(),
-                        if (activePillSheet != null &&
-                            activePillSheet.pillSheetHasRestOrFakeDuration) ...[
+                        if (activePillSheet != null && activePillSheet.pillSheetHasRestOrFakeDuration) ...[
                           NotificationInRestDuration(
                             setting: setting,
                             pillSheet: activePillSheet,
@@ -271,8 +268,7 @@ class SettingPageBody extends StatelessWidget {
                               name: 'tap_share_to_friend',
                               parameters: {},
                             );
-                            final text =
-                                '''
+                            final text = '''
 ${L.pilllDescription}
 
 iOS: https://onl.sc/piiY1A6
@@ -413,8 +409,7 @@ Android: https://onl.sc/c9xnQUk''';
                                     onPressed: () {
                                       Navigator.of(dialogContext).pop();
                                       analytics.logEvent(
-                                        name:
-                                            'did_select_faq_from_inquiry_dialog',
+                                        name: 'did_select_faq_from_inquiry_dialog',
                                         parameters: {},
                                       );
                                       launchUrl(

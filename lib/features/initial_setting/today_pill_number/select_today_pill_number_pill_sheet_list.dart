@@ -23,8 +23,7 @@ class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final pageController = usePageController(
-      viewportFraction:
-          (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width,
+      viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width,
     );
     return Column(
       children: [
@@ -49,10 +48,9 @@ class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
                       pageIndex: index,
                       appearanceMode: PillSheetAppearanceMode.number,
                       pillSheetTypes: state.pillSheetTypes,
-                      selectedPillNumberIntoPillSheet: state
-                          .selectedTodayPillNumberIntoPillSheet(
-                            pageIndex: index,
-                          ),
+                      selectedPillNumberIntoPillSheet: state.selectedTodayPillNumberIntoPillSheet(
+                        pageIndex: index,
+                      ),
                       markSelected: (pageIndex, number) {
                         analytics.logEvent(
                           name: 'selected_today_number_initial_setting',

@@ -19,8 +19,7 @@ const double _horizontalPadding = 10;
 
 class MenstruationCalendarHeader extends StatelessWidget {
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
-  final List<CalendarScheduledMenstruationBandModel>
-  calendarScheduledMenstruationBandModels;
+  final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
   final List<Diary> diaries;
   final List<Schedule> schedules;
@@ -58,9 +57,7 @@ class MenstruationCalendarHeader extends StatelessWidget {
                 itemBuilder: (context, index) {
                   final days = menstruationWeekCalendarDataSource[index];
                   return SizedBox(
-                    width:
-                        MediaQuery.of(context).size.width -
-                        _horizontalPadding * 2,
+                    width: MediaQuery.of(context).size.width - _horizontalPadding * 2,
                     height: MenstruationPageConst.tileHeight,
                     child: CalendarWeekLine(
                       dateRange: DateRange(days.first, days.last),
@@ -88,12 +85,9 @@ class MenstruationCalendarHeader extends StatelessWidget {
                           },
                         );
                       },
-                      calendarMenstruationBandModels:
-                          calendarMenstruationBandModels,
-                      calendarNextPillSheetBandModels:
-                          calendarNextPillSheetBandModels,
-                      calendarScheduledMenstruationBandModels:
-                          calendarScheduledMenstruationBandModels,
+                      calendarMenstruationBandModels: calendarMenstruationBandModels,
+                      calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
+                      calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
                     ),
                   );
                 },
@@ -113,8 +107,7 @@ class _WeekdayLine extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: List.generate(
         Weekday.values.length,
-        (index) =>
-            Expanded(child: WeekdayBadge(weekday: Weekday.values[index])),
+        (index) => Expanded(child: WeekdayBadge(weekday: Weekday.values[index])),
       ),
     );
   }

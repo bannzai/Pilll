@@ -32,8 +32,7 @@ class MenstruationCardState with _$MenstruationCardState {
     );
   }
 
-  factory MenstruationCardState.record({required Menstruation menstruation}) =>
-      MenstruationCardState(
+  factory MenstruationCardState.record({required Menstruation menstruation}) => MenstruationCardState(
         title: L.menstruationStartDate,
         scheduleDate: menstruation.beginDate,
         countdownString: L.menstruationProgressingDay(

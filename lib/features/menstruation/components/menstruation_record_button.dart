@@ -49,8 +49,7 @@ class MenstruationRecordButton extends HookConsumerWidget {
           analytics.logEvent(name: 'pressed_menstruation_record');
 
           final latestMenstruation = this.latestMenstruation;
-          if (latestMenstruation != null &&
-              latestMenstruation.dateRange.inRange(today())) {
+          if (latestMenstruation != null && latestMenstruation.dateRange.inRange(today())) {
             // 生理期間中は、生理期間を編集する
             return showMenstruationEditSelectionSheet(
               context,

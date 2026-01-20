@@ -59,15 +59,15 @@ void main() {
               dateForMonth: DateTime(2020, 09, 14),
               weekCalendarBuilder:
                   (context, diaries, schedules, weekDateRange) {
-                    return CalendarWeekLine(
-                      dateRange: weekDateRange,
-                      calendarMenstruationBandModels: const [],
-                      calendarScheduledMenstruationBandModels: const [],
-                      calendarNextPillSheetBandModels: [model],
-                      horizontalPadding: 0,
-                      day: (p0, p1, p2) => Container(),
-                    );
-                  },
+                return CalendarWeekLine(
+                  dateRange: weekDateRange,
+                  calendarMenstruationBandModels: const [],
+                  calendarScheduledMenstruationBandModels: const [],
+                  calendarNextPillSheetBandModels: [model],
+                  horizontalPadding: 0,
+                  day: (p0, p1, p2) => Container(),
+                );
+              },
             ),
           ),
         ),
@@ -78,8 +78,7 @@ void main() {
       expect(find.byType(CalendarNextPillSheetBand), findsOneWidget);
       expect(
         find.byWidgetPredicate(
-          (widget) =>
-              (widget is CalendarNextPillSheetBand &&
+          (widget) => (widget is CalendarNextPillSheetBand &&
               DateRange.isSameDay(widget.begin, model.begin) &&
               DateRange.isSameDay(widget.end, model.end)),
         ),
@@ -122,15 +121,15 @@ void main() {
               dateForMonth: DateTime(2020, 09, 14),
               weekCalendarBuilder:
                   (context, diaries, schedules, weekDateRange) {
-                    return CalendarWeekLine(
-                      dateRange: weekDateRange,
-                      calendarMenstruationBandModels: const [],
-                      calendarScheduledMenstruationBandModels: const [],
-                      calendarNextPillSheetBandModels: [model],
-                      horizontalPadding: 0,
-                      day: (p0, p1, p2) => Container(),
-                    );
-                  },
+                return CalendarWeekLine(
+                  dateRange: weekDateRange,
+                  calendarMenstruationBandModels: const [],
+                  calendarScheduledMenstruationBandModels: const [],
+                  calendarNextPillSheetBandModels: [model],
+                  horizontalPadding: 0,
+                  day: (p0, p1, p2) => Container(),
+                );
+              },
             ),
           ),
         ),
@@ -141,8 +140,7 @@ void main() {
       expect(find.byType(CalendarNextPillSheetBand), findsNWidgets(2));
       expect(
         find.byWidgetPredicate(
-          (widget) =>
-              (widget is CalendarNextPillSheetBand &&
+          (widget) => (widget is CalendarNextPillSheetBand &&
               DateRange.isSameDay(widget.begin, model.begin) &&
               DateRange.isSameDay(widget.end, model.end)),
         ),
@@ -172,15 +170,15 @@ void main() {
               dateForMonth: DateTime(2020, 09, 14),
               weekCalendarBuilder:
                   (context, diaries, schedules, weekDateRange) {
-                    return CalendarWeekLine(
-                      dateRange: weekDateRange,
-                      calendarMenstruationBandModels: const [],
-                      calendarScheduledMenstruationBandModels: const [],
-                      calendarNextPillSheetBandModels: [model],
-                      horizontalPadding: 0,
-                      day: (p0, p1, p2) => Container(),
-                    );
-                  },
+                return CalendarWeekLine(
+                  dateRange: weekDateRange,
+                  calendarMenstruationBandModels: const [],
+                  calendarScheduledMenstruationBandModels: const [],
+                  calendarNextPillSheetBandModels: [model],
+                  horizontalPadding: 0,
+                  day: (p0, p1, p2) => Container(),
+                );
+              },
             ),
           ),
         ),
@@ -211,15 +209,15 @@ void main() {
               dateForMonth: DateTime(2020, 09, 14),
               weekCalendarBuilder:
                   (context, diaries, schedules, weekDateRange) {
-                    return CalendarWeekLine(
-                      dateRange: weekDateRange,
-                      calendarMenstruationBandModels: const [],
-                      calendarScheduledMenstruationBandModels: const [],
-                      calendarNextPillSheetBandModels: [model],
-                      horizontalPadding: 0,
-                      day: (p0, p1, p2) => Container(),
-                    );
-                  },
+                return CalendarWeekLine(
+                  dateRange: weekDateRange,
+                  calendarMenstruationBandModels: const [],
+                  calendarScheduledMenstruationBandModels: const [],
+                  calendarNextPillSheetBandModels: [model],
+                  horizontalPadding: 0,
+                  day: (p0, p1, p2) => Container(),
+                );
+              },
             ),
           ),
         ),

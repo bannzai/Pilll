@@ -18,22 +18,18 @@ import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/local_notification.dart';
 import 'package:riverpod/riverpod.dart';
 
-final initialSettingStateNotifierProvider =
-    StateNotifierProvider.autoDispose<
-      InitialSettingStateNotifier,
-      InitialSettingState
-    >(
-      (ref) => InitialSettingStateNotifier(
-        ref.watch(endInitialSettingProvider),
-        ref.watch(batchFactoryProvider),
-        ref.watch(batchSetSettingProvider),
-        ref.watch(batchSetPillSheetModifiedHistoryProvider),
-        ref.watch(batchSetPillSheetGroupProvider),
-        ref.watch(remoteConfigParameterProvider),
-        ref.watch(registerReminderLocalNotificationRunnerProvider),
-        now(),
-      ),
-    );
+final initialSettingStateNotifierProvider = StateNotifierProvider.autoDispose<InitialSettingStateNotifier, InitialSettingState>(
+  (ref) => InitialSettingStateNotifier(
+    ref.watch(endInitialSettingProvider),
+    ref.watch(batchFactoryProvider),
+    ref.watch(batchSetSettingProvider),
+    ref.watch(batchSetPillSheetModifiedHistoryProvider),
+    ref.watch(batchSetPillSheetGroupProvider),
+    ref.watch(remoteConfigParameterProvider),
+    ref.watch(registerReminderLocalNotificationRunnerProvider),
+    now(),
+  ),
+);
 
 class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   final EndInitialSetting endInitialSetting;
@@ -42,8 +38,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
   final RemoteConfigParameter remoteConfigParameter;
-  final RegisterReminderLocalNotificationRunner
-  registerReminderLocalNotificationRunner;
+  final RegisterReminderLocalNotificationRunner registerReminderLocalNotificationRunner;
 
   InitialSettingStateNotifier(
     this.endInitialSetting,
@@ -55,13 +50,13 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     this.registerReminderLocalNotificationRunner,
     DateTime _now,
   ) : super(
-        InitialSettingState(
-          reminderTimes: [
-            ReminderTime(hour: _now.hour, minute: 0),
-            ReminderTime(hour: _now.hour + 1, minute: 0),
-          ],
-        ),
-      );
+          InitialSettingState(
+            reminderTimes: [
+              ReminderTime(hour: _now.hour, minute: 0),
+              ReminderTime(hour: _now.hour + 1, minute: 0),
+            ],
+          ),
+        );
 
   void selectedFirstPillSheetType(PillSheetType pillSheetType) {
     state = state.copyWith(
@@ -152,11 +147,10 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
         ),
       );
 
-      final history =
-          PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-            beforePillSheetGroup: null,
-            createdNewPillSheetGroup: createdPillSheetGroup,
-          );
+      final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+        beforePillSheetGroup: null,
+        createdNewPillSheetGroup: createdPillSheetGroup,
+      );
       batchSetPillSheetModifiedHistory(batch, history);
     }
 

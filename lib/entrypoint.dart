@@ -48,9 +48,7 @@ Future<void> entrypoint() async {
     definedChannel();
 
     HomeWidget.setAppGroupId(
-      Environment.isDevelopment
-          ? 'group.com.mizuki.Ohashi.Pilll.dev'
-          : 'group.com.mizuki.Ohashi.Pilll',
+      Environment.isDevelopment ? 'group.com.mizuki.Ohashi.Pilll.dev' : 'group.com.mizuki.Ohashi.Pilll',
     );
 
     if (kDebugMode) {
@@ -120,8 +118,7 @@ Future<void> handleNotificationAction(
       syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
 
       // AlarmKit解除はRiverpodコンテナ内でのみ実行可能なため、ここではlocal notificationのみ解除
-      final pendingNotifications = await localNotificationService
-          .pendingReminderNotifications();
+      final pendingNotifications = await localNotificationService.pendingReminderNotifications();
       await Future.wait(
         pendingNotifications.map(
           (p) => localNotificationService.cancelNotification(
@@ -133,10 +130,7 @@ Future<void> handleNotificationAction(
       final activePillSheet = pillSheetGroup?.activePillSheet;
       final user = (await database.userReference().get()).data();
       final setting = user?.setting;
-      if (pillSheetGroup != null &&
-          activePillSheet != null &&
-          user != null &&
-          setting != null) {
+      if (pillSheetGroup != null && activePillSheet != null && user != null && setting != null) {
         await RegisterReminderLocalNotification.run(
           pillSheetGroup: pillSheetGroup,
           activePillSheet: activePillSheet,

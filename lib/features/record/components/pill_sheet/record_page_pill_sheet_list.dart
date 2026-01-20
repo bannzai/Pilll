@@ -29,8 +29,7 @@ class RecordPagePillSheetList extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final pageController = usePageController(
       initialPage: activePillSheet.groupIndex,
-      viewportFraction:
-          (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width,
+      viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width,
     );
     return Column(
       children: [

@@ -50,11 +50,8 @@ class RestDurationAnnouncementBar extends StatelessWidget {
       return L.pauseTakingDay(day);
     }
 
-    if (activePillSheet.typeInfo.dosingPeriod <
-        activePillSheet.todayPillNumber) {
-      final day =
-          activePillSheet.todayPillNumber -
-          activePillSheet.typeInfo.dosingPeriod;
+    if (activePillSheet.typeInfo.dosingPeriod < activePillSheet.todayPillNumber) {
+      final day = activePillSheet.todayPillNumber - activePillSheet.typeInfo.dosingPeriod;
       return L.restDurationDays(
         activePillSheet.pillSheetType.notTakenWord,
         day,
@@ -63,11 +60,8 @@ class RestDurationAnnouncementBar extends StatelessWidget {
 
     const threshold = 4;
     if (activePillSheet.pillSheetType.notTakenWord.isNotEmpty) {
-      if (activePillSheet.typeInfo.dosingPeriod - threshold + 1 <
-          activePillSheet.todayPillNumber) {
-        final diff =
-            activePillSheet.typeInfo.dosingPeriod -
-            activePillSheet.todayPillNumber;
+      if (activePillSheet.typeInfo.dosingPeriod - threshold + 1 < activePillSheet.todayPillNumber) {
+        final diff = activePillSheet.typeInfo.dosingPeriod - activePillSheet.todayPillNumber;
         return L.daysUntilPausePeriod(
           diff + 1,
           activePillSheet.pillSheetType.notTakenWord,

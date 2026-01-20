@@ -7,8 +7,7 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/c
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/row_layout.dart';
 import 'package:pilll/features/localizations/l.dart';
 
-class PillSheetModifiedHistoryChangedEndDisplayNumberAction
-    extends StatelessWidget {
+class PillSheetModifiedHistoryChangedEndDisplayNumberAction extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
   final PillSheetGroup? beforePillSheetGroup;
   final PillSheetGroup? afterPillSheetGroup;
@@ -27,11 +26,10 @@ class PillSheetModifiedHistoryChangedEndDisplayNumberAction
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
       pillNumbersOrHyphenOrDate: PillNumber(
-        pillNumber:
-            PillSheetModifiedHistoryPillNumberOrDate.changedEndDisplayNumberSetting(
-              beforePillSheetGroup: beforePillSheetGroup,
-              afterPillSheetGroup: afterPillSheetGroup,
-            ),
+        pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedEndDisplayNumberSetting(
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        ),
       ),
       detail: Text(
         L.changeEndOfPillDays,

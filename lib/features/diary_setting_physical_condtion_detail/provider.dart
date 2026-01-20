@@ -38,8 +38,7 @@ class AddDiarySettingPhysicalConditionDetail {
   }) async {
     await reference.set(
       diarySetting.copyWith(
-        physicalConditions: [...diarySetting.physicalConditions]
-          ..insert(0, physicalConditionDetail),
+        physicalConditions: [...diarySetting.physicalConditions]..insert(0, physicalConditionDetail),
       ),
       SetOptions(merge: true),
     );
@@ -62,8 +61,7 @@ class DeleteDiarySettingPhysicalConditionDetail {
   }) async {
     await reference.set(
       diarySetting.copyWith(
-        physicalConditions: [...diarySetting.physicalConditions]
-          ..remove(physicalConditionDetail),
+        physicalConditions: [...diarySetting.physicalConditions]..remove(physicalConditionDetail),
       ),
       SetOptions(merge: true),
     );

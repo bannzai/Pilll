@@ -110,6 +110,5 @@ class MenstruationListRow extends HookConsumerWidget {
     return widthForDay * menstruationDuration;
   }
 
-  int? get _menstruationDuration =>
-      menstruationsDiff(menstruation, previousMenstruation);
+  int? get _menstruationDuration => menstruationsDiff(menstruation, previousMenstruation);
 }

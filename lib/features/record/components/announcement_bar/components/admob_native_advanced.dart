@@ -15,9 +15,7 @@ class AdMobNativeAdvanceState extends State<AdMobNativeAdvance> {
   NativeAd? _nativeAd;
   bool _nativeAdIsLoaded = false;
 
-  final String _adUnitId = Platform.isAndroid
-      ? Secret.androidAdmobNativeAdvanceIdentifier
-      : Secret.iOSAdmobNativeAdvanceIdentifier;
+  final String _adUnitId = Platform.isAndroid ? Secret.androidAdmobNativeAdvanceIdentifier : Secret.iOSAdmobNativeAdvanceIdentifier;
 
   @override
   void initState() {

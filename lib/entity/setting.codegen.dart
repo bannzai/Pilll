@@ -30,8 +30,7 @@ class ReminderTime with _$ReminderTime {
     required int minute,
   }) = _ReminderTime;
 
-  factory ReminderTime.fromJson(Map<String, dynamic> json) =>
-      _$ReminderTimeFromJson(json);
+  factory ReminderTime.fromJson(Map<String, dynamic> json) => _$ReminderTimeFromJson(json);
 
   /// 現在日付を基準にしたDateTime型の時刻を生成する
   ///
@@ -138,8 +137,7 @@ class Setting with _$Setting {
     ///
     /// 通知タイトル、メッセージ、表示項目などのカスタマイズ設定です。
     /// デフォルトでReminderNotificationCustomizationの初期値が設定されます。
-    @Default(ReminderNotificationCustomization())
-    ReminderNotificationCustomization reminderNotificationCustomization,
+    @Default(ReminderNotificationCustomization()) ReminderNotificationCustomization reminderNotificationCustomization,
 
     /// 緊急アラート機能の有効フラグ
     ///
@@ -167,8 +165,7 @@ class Setting with _$Setting {
     required String? timezoneDatabaseName,
   }) = _Setting;
 
-  factory Setting.fromJson(Map<String, dynamic> json) =>
-      _$SettingFromJson(json);
+  factory Setting.fromJson(Map<String, dynamic> json) => _$SettingFromJson(json);
 
   // NOTE: v3.9.6 で PillSheetType.pillsheet_24_rest_4 を含めた状態でのコード生成をしていなかった
   // 本来初期設定でpillsheet_24_rest_4を選択したユーザーの pillSheetTypes の値が null が入ってしまっている
@@ -211,7 +208,5 @@ class Setting with _$Setting {
 List<PillSheetType> backportPillSheetTypes(
   List<PillSheetType?> pillSheetTypes,
 ) {
-  return pillSheetTypes
-      .map((e) => e ?? PillSheetType.pillsheet_24_rest_4)
-      .toList();
+  return pillSheetTypes.map((e) => e ?? PillSheetType.pillsheet_24_rest_4).toList();
 }

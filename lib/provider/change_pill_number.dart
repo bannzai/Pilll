@@ -41,11 +41,8 @@ class ChangePillNumber {
   }) async {
     final batch = batchFactory.batch();
 
-    final pillSheetTypes = pillSheetGroup.pillSheets
-        .map((e) => e.pillSheetType)
-        .toList();
-    final nextSerializedPillNumber =
-        summarizedPillCountWithPillSheetTypesToIndex(
+    final pillSheetTypes = pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+    final nextSerializedPillNumber = summarizedPillCountWithPillSheetTypesToIndex(
           pillSheetTypes: pillSheetTypes,
           toIndex: pillSheetPageIndex,
         ) +
@@ -116,11 +113,10 @@ class ChangePillNumber {
     final updatedPillSheetGroup = pillSheetGroup.copyWith(
       pillSheets: updatedPillSheets,
     );
-    final history =
-        PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
-        );
+    final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+      beforePillSheetGroup: pillSheetGroup,
+      afterPillSheetGroup: updatedPillSheetGroup,
+    );
     batchSetPillSheetModifiedHistory(batch, history);
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
 

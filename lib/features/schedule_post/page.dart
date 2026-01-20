@@ -40,8 +40,7 @@ class SchedulePostPage extends HookConsumerWidget {
       data: (data) => _SchedulePostPage(
         date: date,
         user: data.$1,
-        schedule:
-            data.$2.firstOrNull ??
+        schedule: data.$2.firstOrNull ??
             Schedule(
               title: '',
               localNotification: null,
@@ -178,8 +177,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                           final navigator = Navigator.of(context);
 
                           try {
-                            final localNotificationID =
-                                schedule.localNotification?.localNotificationID;
+                            final localNotificationID = schedule.localNotification?.localNotificationID;
                             if (localNotificationID != null) {
                               await localNotificationService.cancelNotification(
                                 localNotificationID: localNotificationID,
@@ -202,10 +200,9 @@ class _SchedulePostPage extends HookConsumerWidget {
                                   ),
                                 ),
                               );
-                              await localNotificationService
-                                  .scheduleCalendarScheduleNotification(
-                                    schedule: newSchedule,
-                                  );
+                              await localNotificationService.scheduleCalendarScheduleNotification(
+                                schedule: newSchedule,
+                              );
                             } else {
                               newSchedule = schedule.copyWith(
                                 title: title.value,
@@ -213,11 +210,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                               );
                             }
 
-                            await ref
-                                .read(databaseProvider)
-                                .schedulesReference()
-                                .doc(newSchedule.id)
-                                .set(newSchedule, SetOptions(merge: true));
+                            await ref.read(databaseProvider).schedulesReference().doc(newSchedule.id).set(newSchedule, SetOptions(merge: true));
                             navigator.pop();
                           } catch (error) {
                             if (context.mounted) showErrorAlert(context, error);
@@ -247,25 +240,17 @@ class _SchedulePostPage extends HookConsumerWidget {
                           onPressed: () async {
                             final navigator = Navigator.of(context);
                             try {
-                              final localNotificationID = schedule
-                                  .localNotification
-                                  ?.localNotificationID;
+                              final localNotificationID = schedule.localNotification?.localNotificationID;
                               if (localNotificationID != null) {
-                                await localNotificationService
-                                    .cancelNotification(
-                                      localNotificationID: localNotificationID,
-                                    );
+                                await localNotificationService.cancelNotification(
+                                  localNotificationID: localNotificationID,
+                                );
                               }
 
-                              await ref
-                                  .read(databaseProvider)
-                                  .schedulesReference()
-                                  .doc(scheduleID)
-                                  .delete();
+                              await ref.read(databaseProvider).schedulesReference().doc(scheduleID).delete();
                               navigator.popUntil((route) => route.isFirst);
                             } catch (error) {
-                              if (context.mounted)
-                                showErrorAlert(context, error);
+                              if (context.mounted) showErrorAlert(context, error);
                             }
                           },
                         ),

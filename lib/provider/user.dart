@@ -17,11 +17,7 @@ import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final userProvider = StreamProvider(
-  (ref) => ref
-      .watch(databaseProvider)
-      .userReference()
-      .snapshots()
-      .map((event) => event.data()!),
+  (ref) => ref.watch(databaseProvider).userReference().snapshots().map((event) => event.data()!),
 );
 
 class UpdatePurchaseInfo {
@@ -41,17 +37,10 @@ class UpdatePurchaseInfo {
       UserFirestoreFieldKeys.purchaseAppID: purchaseAppID,
     }, SetOptions(merge: true));
     final privates = {
-      if (premiumPlanIdentifier != null)
-        UserPrivateFirestoreFieldKeys.latestPremiumPlanIdentifier:
-            premiumPlanIdentifier,
-      if (originalPurchaseDate != null)
-        UserPrivateFirestoreFieldKeys.originalPurchaseDate:
-            originalPurchaseDate,
-      if (activeSubscriptions.isNotEmpty)
-        UserPrivateFirestoreFieldKeys.activeSubscriptions: activeSubscriptions,
-      if (entitlementIdentifier != null)
-        UserPrivateFirestoreFieldKeys.entitlementIdentifier:
-            entitlementIdentifier,
+      if (premiumPlanIdentifier != null) UserPrivateFirestoreFieldKeys.latestPremiumPlanIdentifier: premiumPlanIdentifier,
+      if (originalPurchaseDate != null) UserPrivateFirestoreFieldKeys.originalPurchaseDate: originalPurchaseDate,
+      if (activeSubscriptions.isNotEmpty) UserPrivateFirestoreFieldKeys.activeSubscriptions: activeSubscriptions,
+      if (entitlementIdentifier != null) UserPrivateFirestoreFieldKeys.entitlementIdentifier: entitlementIdentifier,
     };
     if (privates.isNotEmpty) {
       await databaseConnection.userPrivateRawReference().set({
@@ -115,8 +104,7 @@ class FetchOrCreateUser {
       StringKey.lastSignInAnonymousUID,
     );
     return databaseConnection.userRawReference().set({
-      if (anonymousUserID != null)
-        UserFirestoreFieldKeys.anonymousUserID: anonymousUserID,
+      if (anonymousUserID != null) UserFirestoreFieldKeys.anonymousUserID: anonymousUserID,
       UserFirestoreFieldKeys.userIDWhenCreateUser: uid,
     }, SetOptions(merge: true));
   }
@@ -230,17 +218,14 @@ class SaveUserLaunchInfo {
       StringKey.lastSignInAnonymousUID,
     );
     List<String> anonymousUserIDSets = [...user.anonymousUserIDSets];
-    if (lastSignInAnonymousUID != null &&
-        !anonymousUserIDSets.contains(lastSignInAnonymousUID)) {
+    if (lastSignInAnonymousUID != null && !anonymousUserIDSets.contains(lastSignInAnonymousUID)) {
       anonymousUserIDSets.add(lastSignInAnonymousUID);
     }
-    final firebaseCurrentUserID =
-        firebase_auth.FirebaseAuth.instance.currentUser?.uid;
+    final firebaseCurrentUserID = firebase_auth.FirebaseAuth.instance.currentUser?.uid;
     List<String> firebaseCurrentUserIDSets = [
       ...user.firebaseCurrentUserIDSets,
     ];
-    if (firebaseCurrentUserID != null &&
-        !firebaseCurrentUserIDSets.contains(firebaseCurrentUserID)) {
+    if (firebaseCurrentUserID != null && !firebaseCurrentUserIDSets.contains(firebaseCurrentUserID)) {
       firebaseCurrentUserIDSets.add(firebaseCurrentUserID);
     }
 
@@ -264,8 +249,7 @@ class SaveUserLaunchInfo {
 
       // UserIDs
       UserFirestoreFieldKeys.userDocumentIDSets: userDocumentIDSets,
-      UserFirestoreFieldKeys.firebaseCurrentUserIDSets:
-          firebaseCurrentUserIDSets,
+      UserFirestoreFieldKeys.firebaseCurrentUserIDSets: firebaseCurrentUserIDSets,
       UserFirestoreFieldKeys.anonymousUserIDSets: anonymousUserIDSets,
 
       UserFirestoreFieldKeys.isTrial: user.isTrial,
@@ -285,13 +269,10 @@ class EndInitialSetting {
     return databaseConnection.userRawReference().set({
       UserFirestoreFieldKeys.isTrial: true,
       UserFirestoreFieldKeys.beginTrialDate: now(),
-      UserFirestoreFieldKeys.trialDeadlineDate: now()
-          .addDays(remoteConfigParameter.trialDeadlineDateOffsetDay)
-          .endOfDay(),
+      UserFirestoreFieldKeys.trialDeadlineDate: now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay).endOfDay(),
       UserFirestoreFieldKeys.discountEntitlementDeadlineDate: now()
           .addDays(
-            remoteConfigParameter.trialDeadlineDateOffsetDay +
-                remoteConfigParameter.discountEntitlementOffsetDay,
+            remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay,
           )
           .endOfDay(),
     }, SetOptions(merge: true));

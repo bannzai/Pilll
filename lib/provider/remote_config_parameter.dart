@@ -32,26 +32,20 @@ RemoteConfigParameter remoteConfigParameter(RemoteConfigParameterRef ref) {
     ),
     premiumIntroductionShowsAppStoreReviewCard: remoteConfig.getBoolOrDefault(
       RemoteConfigKeys.premiumIntroductionShowsAppStoreReviewCard,
-      RemoteConfigParameterDefaultValues
-          .premiumIntroductionShowsAppStoreReviewCard,
+      RemoteConfigParameterDefaultValues.premiumIntroductionShowsAppStoreReviewCard,
     ),
     specialOfferingUserCreationDateTimeOffset: remoteConfig.getIntOrDefault(
       RemoteConfigKeys.specialOfferingUserCreationDateTimeOffset,
-      RemoteConfigParameterDefaultValues
-          .specialOfferingUserCreationDateTimeOffset,
+      RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffset,
     ),
-    specialOfferingUserCreationDateTimeOffsetSince: remoteConfig
-        .getIntOrDefault(
-          RemoteConfigKeys.specialOfferingUserCreationDateTimeOffsetSince,
-          RemoteConfigParameterDefaultValues
-              .specialOfferingUserCreationDateTimeOffsetSince,
-        ),
-    specialOfferingUserCreationDateTimeOffsetUntil: remoteConfig
-        .getIntOrDefault(
-          RemoteConfigKeys.specialOfferingUserCreationDateTimeOffsetUntil,
-          RemoteConfigParameterDefaultValues
-              .specialOfferingUserCreationDateTimeOffsetUntil,
-        ),
+    specialOfferingUserCreationDateTimeOffsetSince: remoteConfig.getIntOrDefault(
+      RemoteConfigKeys.specialOfferingUserCreationDateTimeOffsetSince,
+      RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetSince,
+    ),
+    specialOfferingUserCreationDateTimeOffsetUntil: remoteConfig.getIntOrDefault(
+      RemoteConfigKeys.specialOfferingUserCreationDateTimeOffsetUntil,
+      RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil,
+    ),
     specialOffering2UseAlternativeText: remoteConfig.getBoolOrDefault(
       RemoteConfigKeys.specialOffering2UseAlternativeText,
       RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,

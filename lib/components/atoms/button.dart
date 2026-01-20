@@ -219,9 +219,7 @@ class InconspicuousButton extends HookWidget {
             Text(
               text,
               style: TextStyle(
-                color: isProcessing.value
-                    ? TextColor.lightGray
-                    : TextColor.gray,
+                color: isProcessing.value ? TextColor.lightGray : TextColor.gray,
               ),
             ),
             if (isProcessing.value) _Loading(),
@@ -385,9 +383,7 @@ class AlertButton extends HookWidget {
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w600,
               fontSize: 14,
-              color: (isProcessing.value || onPressed == null)
-                  ? TextColor.gray
-                  : TextColor.primary,
+              color: (isProcessing.value || onPressed == null) ? TextColor.gray : TextColor.primary,
             ),
           ),
           if (isProcessing.value) _Loading(),

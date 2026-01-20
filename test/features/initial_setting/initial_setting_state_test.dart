@@ -19,10 +19,10 @@ void main() {
 
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(timezoneChannel, (
-          MethodCall methodCall,
-        ) async {
-          return 'Asia/Tokyo';
-        });
+      MethodCall methodCall,
+    ) async {
+      return 'Asia/Tokyo';
+    });
   });
 
   tearDown(() {

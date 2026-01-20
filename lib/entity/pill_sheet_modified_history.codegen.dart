@@ -103,12 +103,9 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   }) = _PillSheetModifiedHistory;
   const PillSheetModifiedHistory._();
 
-  factory PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =>
-      _$PillSheetModifiedHistoryFromJson(json);
+  factory PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) => _$PillSheetModifiedHistoryFromJson(json);
 
-  PillSheetModifiedActionType? get enumActionType => PillSheetModifiedActionType
-      .values
-      .firstWhereOrNull((element) => element.name == actionType);
+  PillSheetModifiedActionType? get enumActionType => PillSheetModifiedActionType.values.firstWhereOrNull((element) => element.name == actionType);
 }
 
 // Factories
@@ -320,9 +317,7 @@ int missedPillDays({
     (history) => history.estimatedEventCausingDate,
   );
 
-  final minDate = orderedHistories
-      .map((history) => history.estimatedEventCausingDate)
-      .reduce((a, b) => a.isBefore(b) ? a : b);
+  final minDate = orderedHistories.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isBefore(b) ? a : b);
 
   final allDates = <DateTime>{};
   final days = daysBetween(minDate, maxDate);
@@ -344,10 +339,7 @@ int missedPillDays({
       history.estimatedEventCausingDate.day,
     );
     if (history.actionType == PillSheetModifiedActionType.takenPill.name ||
-        history.actionType ==
-            PillSheetModifiedActionType
-                .automaticallyRecordedLastTakenDate
-                .name) {
+        history.actionType == PillSheetModifiedActionType.automaticallyRecordedLastTakenDate.name) {
       takenDates.add(date);
     }
 
@@ -357,11 +349,7 @@ int missedPillDays({
       // PillSheetModifiedActionType.endedRestDuration.name であるか内科に関わらず計算に含めてしまう
       // 服用お休みが開始されて、次の履歴が服用お休み終了の場合は、服用お休みの日数を計算する
       // 服用お休みが開始されて、次の履歴が服用お休み以外の時は考慮パターンが多い。のでallDatesから除外するように計算に含めてしまう
-      for (
-        var i = 0;
-        i < daysBetween(historyBeginRestDurationDate, date);
-        i++
-      ) {
+      for (var i = 0; i < daysBetween(historyBeginRestDurationDate, date); i++) {
         restDurationDates.add(
           historyBeginRestDurationDate.add(Duration(days: i)),
         );
@@ -369,19 +357,14 @@ int missedPillDays({
       historyBeginRestDurationDate = null;
     }
 
-    if (history.actionType ==
-        PillSheetModifiedActionType.beganRestDuration.name) {
+    if (history.actionType == PillSheetModifiedActionType.beganRestDuration.name) {
       historyBeginRestDurationDate = date;
     }
   }
 
   // 現在まで服用お休み中の場合には、差分の日付をrestDurationDatesに追加する
   if (historyBeginRestDurationDate != null) {
-    for (
-      var i = 0;
-      i < daysBetween(historyBeginRestDurationDate, maxDate);
-      i++
-    ) {
+    for (var i = 0; i < daysBetween(historyBeginRestDurationDate, maxDate); i++) {
       restDurationDates.add(
         historyBeginRestDurationDate.add(Duration(days: i)),
       );
@@ -389,9 +372,6 @@ int missedPillDays({
   }
 
   // 服用記録がない日数を計算
-  final missedDays = allDates
-      .difference(takenDates)
-      .difference(restDurationDates)
-      .length;
+  final missedDays = allDates.difference(takenDates).difference(restDurationDates).length;
   return missedDays;
 }

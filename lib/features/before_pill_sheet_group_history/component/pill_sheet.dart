@@ -6,8 +6,7 @@ import 'package:pilll/components/organisms/pill_mark/pill_mark_with_number_layou
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_weekday_line.dart';
 import 'package:pilll/features/record/components/pill_sheet/components/pill_number.dart';
-import 'package:pilll/features/record/components/pill_sheet/record_page_pill_sheet.dart'
-    show remainingPillTakenCountFor;
+import 'package:pilll/features/record/components/pill_sheet/record_page_pill_sheet.dart' show remainingPillTakenCountFor;
 import 'package:pilll/provider/revert_take_pill.dart';
 import 'package:pilll/provider/take_pill.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
@@ -26,8 +25,7 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
   final PillSheet pillSheet;
   final Setting setting;
 
-  List<PillSheetType> get pillSheetTypes =>
-      pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+  List<PillSheetType> get pillSheetTypes => pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
 
   const HistoricalPillsheetGroupPagePillSheet({
     super.key,
@@ -62,8 +60,7 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
               context,
               takePill: takePill,
               revertTakePill: revertTakePill,
-              registerReminderLocalNotification:
-                  registerReminderLocalNotification,
+              registerReminderLocalNotification: registerReminderLocalNotification,
               lineIndex: index,
               pageIndex: pillSheet.groupIndex,
             ),
@@ -77,18 +74,14 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
     BuildContext context, {
     required TakePill takePill,
     required RevertTakePill revertTakePill,
-    required RegisterReminderLocalNotification
-    registerReminderLocalNotification,
+    required RegisterReminderLocalNotification registerReminderLocalNotification,
     required int lineIndex,
     required int pageIndex,
   }) {
     final lineNumber = lineIndex + 1;
     int countOfPillMarksInLine = Weekday.values.length;
-    if (lineNumber * Weekday.values.length >
-        pillSheet.pillSheetType.totalCount) {
-      int diff =
-          pillSheet.pillSheetType.totalCount -
-          lineIndex * Weekday.values.length;
+    if (lineNumber * Weekday.values.length > pillSheet.pillSheetType.totalCount) {
+      int diff = pillSheet.pillSheetType.totalCount - lineIndex * Weekday.values.length;
       countOfPillMarksInLine = diff;
     }
 
@@ -97,11 +90,10 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
         return Container(width: PillSheetViewLayout.componentWidth);
       }
 
-      final pillNumberInPillSheet =
-          PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(
-            columnIndex,
-            lineIndex,
-          );
+      final pillNumberInPillSheet = PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(
+        columnIndex,
+        lineIndex,
+      );
       return SizedBox(
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
@@ -155,8 +147,7 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
     }
 
     return switch (activePillSheet) {
-      PillSheetV1() =>
-        pillNumberInPillSheet <= activePillSheet.lastTakenOrZeroPillNumber,
+      PillSheetV1() => pillNumberInPillSheet <= activePillSheet.lastTakenOrZeroPillNumber,
       PillSheetV2 v2 => pillNumberInPillSheet <= v2.lastCompletedPillNumber,
     };
   }
@@ -167,8 +158,7 @@ PillMarkType pillMarkFor({
   required PillSheet pillSheet,
 }) {
   if (pillNumberInPillSheet > pillSheet.typeInfo.dosingPeriod) {
-    return (pillSheet.pillSheetType == PillSheetType.pillsheet_21 ||
-            pillSheet.pillSheetType == PillSheetType.pillsheet_24_rest_4)
+    return (pillSheet.pillSheetType == PillSheetType.pillsheet_21 || pillSheet.pillSheetType == PillSheetType.pillsheet_24_rest_4)
         ? PillMarkType.rest
         : PillMarkType.fake;
   }
@@ -220,8 +210,7 @@ bool shouldPillMarkAnimation({
     PillSheetV1() => activePillSheet.lastTakenOrZeroPillNumber,
     PillSheetV2 v2 => v2.lastCompletedPillNumber,
   };
-  return pillNumberInPillSheet > lastCompleted &&
-      pillNumberInPillSheet <= activePillSheet.todayPillNumber;
+  return pillNumberInPillSheet > lastCompleted && pillNumberInPillSheet <= activePillSheet.todayPillNumber;
 }
 
 class PillNumber extends StatelessWidget {
@@ -248,8 +237,7 @@ class PillNumber extends StatelessWidget {
 
     final containedMenstruationDuration = menstruationDateRanges
         .where(
-          (e) =>
-              e.inRange(pillSheet.displayPillTakeDate(pillNumberInPillSheet)),
+          (e) => e.inRange(pillSheet.displayPillTakeDate(pillNumberInPillSheet)),
         )
         .isNotEmpty;
 

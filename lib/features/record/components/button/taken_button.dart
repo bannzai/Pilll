@@ -43,8 +43,7 @@ class TakenButton extends HookConsumerWidget {
             analytics.logEvent(
               name: 'taken_button_pressed',
               parameters: {
-                'last_taken_pill_number':
-                    activePillSheet.lastTakenOrZeroPillNumber,
+                'last_taken_pill_number': activePillSheet.lastTakenOrZeroPillNumber,
                 'today_pill_number': activePillSheet.todayPillNumber,
               },
             );

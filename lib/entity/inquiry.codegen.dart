@@ -48,6 +48,5 @@ class Inquiry with _$Inquiry {
   }) = _Inquiry;
   const Inquiry._();
 
-  factory Inquiry.fromJson(Map<String, dynamic> json) =>
-      _$InquiryFromJson(json);
+  factory Inquiry.fromJson(Map<String, dynamic> json) => _$InquiryFromJson(json);
 }

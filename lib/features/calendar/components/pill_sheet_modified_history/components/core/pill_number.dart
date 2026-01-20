@@ -170,10 +170,11 @@ abstract class PillSheetModifiedHistoryPillNumberOrDate {
     required int beforeTodayPillNumber,
     required int afterTodayPillNumber,
     required PillSheetAppearanceMode pillSheetAppearanceMode,
-  }) => _formatPillNumber(
-    '$beforeTodayPillNumber→$afterTodayPillNumber',
-    pillSheetAppearanceMode: pillSheetAppearanceMode,
-  );
+  }) =>
+      _formatPillNumber(
+        '$beforeTodayPillNumber→$afterTodayPillNumber',
+        pillSheetAppearanceMode: pillSheetAppearanceMode,
+      );
 
   static String changedBeginDisplayNumberSetting({
     required PillSheetGroup? beforePillSheetGroup,
@@ -203,10 +204,7 @@ abstract class PillSheetModifiedHistoryPillNumberOrDate {
     return L.withNumber('${before.endPillNumber}→${after?.endPillNumber ?? 1}');
   }
 
-  static String pillSheetCount(List<String> pillSheetIDs) =>
-      pillSheetIDs.isNotEmpty
-      ? L.withPillSheetCount(pillSheetIDs.length)
-      : hyphen();
+  static String pillSheetCount(List<String> pillSheetIDs) => pillSheetIDs.isNotEmpty ? L.withPillSheetCount(pillSheetIDs.length) : hyphen();
 
   static String changedRestDuration(ChangedRestDurationValue value) {
     final before = value.beforeRestDuration;

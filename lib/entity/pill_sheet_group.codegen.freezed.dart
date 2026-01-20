@@ -12,8 +12,7 @@ part of 'pill_sheet_group.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PillSheetGroup _$PillSheetGroupFromJson(Map<String, dynamic> json) {
   return _PillSheetGroup.fromJson(json);
@@ -35,28 +34,20 @@ mixin _$PillSheetGroup {
 
   /// グループ作成日時（必須項目）
   /// Firestoreのタイムスタンプとして保存される
-  @JsonKey(
-    fromJson: NonNullTimestampConverter.timestampToDateTime,
-    toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-  )
+  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdAt => throw _privateConstructorUsedError;
 
   /// 削除日時（論理削除で使用）
   /// nullの場合は削除されていない状態を表す
-  @JsonKey(
-    fromJson: TimestampConverter.timestampToDateTime,
-    toJson: TimestampConverter.dateTimeToTimestamp,
-  )
+  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt => throw _privateConstructorUsedError; // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
   /// ピル番号の表示設定（カスタマイズ用）
   /// 開始番号・終了番号のユーザーカスタマイズを管理
-  PillSheetGroupDisplayNumberSetting? get displayNumberSetting =>
-      throw _privateConstructorUsedError;
+  PillSheetGroupDisplayNumberSetting? get displayNumberSetting => throw _privateConstructorUsedError;
 
   /// ピルシートの表示モード設定
   /// 番号表示、日付表示、連続番号表示の切り替えを制御
-  PillSheetAppearanceMode get pillSheetAppearanceMode =>
-      throw _privateConstructorUsedError;
+  PillSheetAppearanceMode get pillSheetAppearanceMode => throw _privateConstructorUsedError;
 
   /// ピルシートグループのバージョン（記録用）
   /// "v1": 1錠飲みユーザー（デフォルト）
@@ -74,43 +65,29 @@ mixin _$PillSheetGroup {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PillSheetGroupCopyWith<PillSheetGroup> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PillSheetGroupCopyWith<PillSheetGroup> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PillSheetGroupCopyWith<$Res> {
-  factory $PillSheetGroupCopyWith(
-    PillSheetGroup value,
-    $Res Function(PillSheetGroup) then,
-  ) = _$PillSheetGroupCopyWithImpl<$Res, PillSheetGroup>;
+  factory $PillSheetGroupCopyWith(PillSheetGroup value, $Res Function(PillSheetGroup) then) = _$PillSheetGroupCopyWithImpl<$Res, PillSheetGroup>;
   @useResult
-  $Res call({
-    @JsonKey(includeIfNull: false) String? id,
-    List<String> pillSheetIDs,
-    List<PillSheet> pillSheets,
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
-    DateTime createdAt,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    DateTime? deletedAt,
-    PillSheetGroupDisplayNumberSetting? displayNumberSetting,
-    PillSheetAppearanceMode pillSheetAppearanceMode,
-    String version,
-    int pillTakenCount,
-  });
+  $Res call(
+      {@JsonKey(includeIfNull: false) String? id,
+      List<String> pillSheetIDs,
+      List<PillSheet> pillSheets,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdAt,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+      PillSheetGroupDisplayNumberSetting? displayNumberSetting,
+      PillSheetAppearanceMode pillSheetAppearanceMode,
+      String version,
+      int pillTakenCount});
 
   $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get displayNumberSetting;
 }
 
 /// @nodoc
-class _$PillSheetGroupCopyWithImpl<$Res, $Val extends PillSheetGroup>
-    implements $PillSheetGroupCopyWith<$Res> {
+class _$PillSheetGroupCopyWithImpl<$Res, $Val extends PillSheetGroup> implements $PillSheetGroupCopyWith<$Res> {
   _$PillSheetGroupCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -131,47 +108,44 @@ class _$PillSheetGroupCopyWithImpl<$Res, $Val extends PillSheetGroup>
     Object? version = null,
     Object? pillTakenCount = null,
   }) {
-    return _then(
-      _value.copyWith(
-            id: freezed == id
-                ? _value.id
-                : id // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            pillSheetIDs: null == pillSheetIDs
-                ? _value.pillSheetIDs
-                : pillSheetIDs // ignore: cast_nullable_to_non_nullable
-                      as List<String>,
-            pillSheets: null == pillSheets
-                ? _value.pillSheets
-                : pillSheets // ignore: cast_nullable_to_non_nullable
-                      as List<PillSheet>,
-            createdAt: null == createdAt
-                ? _value.createdAt
-                : createdAt // ignore: cast_nullable_to_non_nullable
-                      as DateTime,
-            deletedAt: freezed == deletedAt
-                ? _value.deletedAt
-                : deletedAt // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            displayNumberSetting: freezed == displayNumberSetting
-                ? _value.displayNumberSetting
-                : displayNumberSetting // ignore: cast_nullable_to_non_nullable
-                      as PillSheetGroupDisplayNumberSetting?,
-            pillSheetAppearanceMode: null == pillSheetAppearanceMode
-                ? _value.pillSheetAppearanceMode
-                : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
-                      as PillSheetAppearanceMode,
-            version: null == version
-                ? _value.version
-                : version // ignore: cast_nullable_to_non_nullable
-                      as String,
-            pillTakenCount: null == pillTakenCount
-                ? _value.pillTakenCount
-                : pillTakenCount // ignore: cast_nullable_to_non_nullable
-                      as int,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pillSheetIDs: null == pillSheetIDs
+          ? _value.pillSheetIDs
+          : pillSheetIDs // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      pillSheets: null == pillSheets
+          ? _value.pillSheets
+          : pillSheets // ignore: cast_nullable_to_non_nullable
+              as List<PillSheet>,
+      createdAt: null == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      deletedAt: freezed == deletedAt
+          ? _value.deletedAt
+          : deletedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      displayNumberSetting: freezed == displayNumberSetting
+          ? _value.displayNumberSetting
+          : displayNumberSetting // ignore: cast_nullable_to_non_nullable
+              as PillSheetGroupDisplayNumberSetting?,
+      pillSheetAppearanceMode: null == pillSheetAppearanceMode
+          ? _value.pillSheetAppearanceMode
+          : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
+              as PillSheetAppearanceMode,
+      version: null == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String,
+      pillTakenCount: null == pillTakenCount
+          ? _value.pillTakenCount
+          : pillTakenCount // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
   }
 
   @override
@@ -181,56 +155,37 @@ class _$PillSheetGroupCopyWithImpl<$Res, $Val extends PillSheetGroup>
       return null;
     }
 
-    return $PillSheetGroupDisplayNumberSettingCopyWith<$Res>(
-      _value.displayNumberSetting!,
-      (value) {
-        return _then(_value.copyWith(displayNumberSetting: value) as $Val);
-      },
-    );
+    return $PillSheetGroupDisplayNumberSettingCopyWith<$Res>(_value.displayNumberSetting!, (value) {
+      return _then(_value.copyWith(displayNumberSetting: value) as $Val);
+    });
   }
 }
 
 /// @nodoc
-abstract class _$$PillSheetGroupImplCopyWith<$Res>
-    implements $PillSheetGroupCopyWith<$Res> {
-  factory _$$PillSheetGroupImplCopyWith(
-    _$PillSheetGroupImpl value,
-    $Res Function(_$PillSheetGroupImpl) then,
-  ) = __$$PillSheetGroupImplCopyWithImpl<$Res>;
+abstract class _$$PillSheetGroupImplCopyWith<$Res> implements $PillSheetGroupCopyWith<$Res> {
+  factory _$$PillSheetGroupImplCopyWith(_$PillSheetGroupImpl value, $Res Function(_$PillSheetGroupImpl) then) =
+      __$$PillSheetGroupImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(includeIfNull: false) String? id,
-    List<String> pillSheetIDs,
-    List<PillSheet> pillSheets,
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
-    DateTime createdAt,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    DateTime? deletedAt,
-    PillSheetGroupDisplayNumberSetting? displayNumberSetting,
-    PillSheetAppearanceMode pillSheetAppearanceMode,
-    String version,
-    int pillTakenCount,
-  });
+  $Res call(
+      {@JsonKey(includeIfNull: false) String? id,
+      List<String> pillSheetIDs,
+      List<PillSheet> pillSheets,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdAt,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+      PillSheetGroupDisplayNumberSetting? displayNumberSetting,
+      PillSheetAppearanceMode pillSheetAppearanceMode,
+      String version,
+      int pillTakenCount});
 
   @override
   $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get displayNumberSetting;
 }
 
 /// @nodoc
-class __$$PillSheetGroupImplCopyWithImpl<$Res>
-    extends _$PillSheetGroupCopyWithImpl<$Res, _$PillSheetGroupImpl>
+class __$$PillSheetGroupImplCopyWithImpl<$Res> extends _$PillSheetGroupCopyWithImpl<$Res, _$PillSheetGroupImpl>
     implements _$$PillSheetGroupImplCopyWith<$Res> {
-  __$$PillSheetGroupImplCopyWithImpl(
-    _$PillSheetGroupImpl _value,
-    $Res Function(_$PillSheetGroupImpl) _then,
-  ) : super(_value, _then);
+  __$$PillSheetGroupImplCopyWithImpl(_$PillSheetGroupImpl _value, $Res Function(_$PillSheetGroupImpl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -245,46 +200,44 @@ class __$$PillSheetGroupImplCopyWithImpl<$Res>
     Object? version = null,
     Object? pillTakenCount = null,
   }) {
-    return _then(
-      _$PillSheetGroupImpl(
-        id: freezed == id
-            ? _value.id
-            : id // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        pillSheetIDs: null == pillSheetIDs
-            ? _value._pillSheetIDs
-            : pillSheetIDs // ignore: cast_nullable_to_non_nullable
-                  as List<String>,
-        pillSheets: null == pillSheets
-            ? _value._pillSheets
-            : pillSheets // ignore: cast_nullable_to_non_nullable
-                  as List<PillSheet>,
-        createdAt: null == createdAt
-            ? _value.createdAt
-            : createdAt // ignore: cast_nullable_to_non_nullable
-                  as DateTime,
-        deletedAt: freezed == deletedAt
-            ? _value.deletedAt
-            : deletedAt // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        displayNumberSetting: freezed == displayNumberSetting
-            ? _value.displayNumberSetting
-            : displayNumberSetting // ignore: cast_nullable_to_non_nullable
-                  as PillSheetGroupDisplayNumberSetting?,
-        pillSheetAppearanceMode: null == pillSheetAppearanceMode
-            ? _value.pillSheetAppearanceMode
-            : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
-                  as PillSheetAppearanceMode,
-        version: null == version
-            ? _value.version
-            : version // ignore: cast_nullable_to_non_nullable
-                  as String,
-        pillTakenCount: null == pillTakenCount
-            ? _value.pillTakenCount
-            : pillTakenCount // ignore: cast_nullable_to_non_nullable
-                  as int,
-      ),
-    );
+    return _then(_$PillSheetGroupImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pillSheetIDs: null == pillSheetIDs
+          ? _value._pillSheetIDs
+          : pillSheetIDs // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      pillSheets: null == pillSheets
+          ? _value._pillSheets
+          : pillSheets // ignore: cast_nullable_to_non_nullable
+              as List<PillSheet>,
+      createdAt: null == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      deletedAt: freezed == deletedAt
+          ? _value.deletedAt
+          : deletedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      displayNumberSetting: freezed == displayNumberSetting
+          ? _value.displayNumberSetting
+          : displayNumberSetting // ignore: cast_nullable_to_non_nullable
+              as PillSheetGroupDisplayNumberSetting?,
+      pillSheetAppearanceMode: null == pillSheetAppearanceMode
+          ? _value.pillSheetAppearanceMode
+          : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
+              as PillSheetAppearanceMode,
+      version: null == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String,
+      pillTakenCount: null == pillTakenCount
+          ? _value.pillTakenCount
+          : pillTakenCount // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
   }
 }
 
@@ -292,30 +245,22 @@ class __$$PillSheetGroupImplCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$PillSheetGroupImpl extends _PillSheetGroup {
-  _$PillSheetGroupImpl({
-    @JsonKey(includeIfNull: false) this.id,
-    required final List<String> pillSheetIDs,
-    required final List<PillSheet> pillSheets,
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
-    required this.createdAt,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    this.deletedAt,
-    this.displayNumberSetting,
-    this.pillSheetAppearanceMode = PillSheetAppearanceMode.number,
-    this.version = 'v1',
-    this.pillTakenCount = 1,
-  }) : _pillSheetIDs = pillSheetIDs,
-       _pillSheets = pillSheets,
-       super._();
+  _$PillSheetGroupImpl(
+      {@JsonKey(includeIfNull: false) this.id,
+      required final List<String> pillSheetIDs,
+      required final List<PillSheet> pillSheets,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.createdAt,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.deletedAt,
+      this.displayNumberSetting,
+      this.pillSheetAppearanceMode = PillSheetAppearanceMode.number,
+      this.version = 'v1',
+      this.pillTakenCount = 1})
+      : _pillSheetIDs = pillSheetIDs,
+        _pillSheets = pillSheets,
+        super._();
 
-  factory _$PillSheetGroupImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PillSheetGroupImplFromJson(json);
+  factory _$PillSheetGroupImpl.fromJson(Map<String, dynamic> json) => _$$PillSheetGroupImplFromJson(json);
 
   /// FirestoreドキュメントID（自動生成される場合はnull）
   @override
@@ -351,21 +296,15 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
   /// グループ作成日時（必須項目）
   /// Firestoreのタイムスタンプとして保存される
   @override
-  @JsonKey(
-    fromJson: NonNullTimestampConverter.timestampToDateTime,
-    toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-  )
+  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime createdAt;
 
   /// 削除日時（論理削除で使用）
   /// nullの場合は削除されていない状態を表す
   @override
-  @JsonKey(
-    fromJson: TimestampConverter.timestampToDateTime,
-    toJson: TimestampConverter.dateTimeToTimestamp,
-  )
+  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? deletedAt;
-  // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
+// NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
   /// ピル番号の表示設定（カスタマイズ用）
   /// 開始番号・終了番号のユーザーカスタマイズを管理
   @override
@@ -406,122 +345,88 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
         (other.runtimeType == runtimeType &&
             other is _$PillSheetGroupImpl &&
             (identical(other.id, id) || other.id == id) &&
-            const DeepCollectionEquality().equals(
-              other._pillSheetIDs,
-              _pillSheetIDs,
-            ) &&
-            const DeepCollectionEquality().equals(
-              other._pillSheets,
-              _pillSheets,
-            ) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt) &&
-            (identical(other.deletedAt, deletedAt) ||
-                other.deletedAt == deletedAt) &&
-            (identical(other.displayNumberSetting, displayNumberSetting) ||
-                other.displayNumberSetting == displayNumberSetting) &&
-            (identical(
-                  other.pillSheetAppearanceMode,
-                  pillSheetAppearanceMode,
-                ) ||
-                other.pillSheetAppearanceMode == pillSheetAppearanceMode) &&
+            const DeepCollectionEquality().equals(other._pillSheetIDs, _pillSheetIDs) &&
+            const DeepCollectionEquality().equals(other._pillSheets, _pillSheets) &&
+            (identical(other.createdAt, createdAt) || other.createdAt == createdAt) &&
+            (identical(other.deletedAt, deletedAt) || other.deletedAt == deletedAt) &&
+            (identical(other.displayNumberSetting, displayNumberSetting) || other.displayNumberSetting == displayNumberSetting) &&
+            (identical(other.pillSheetAppearanceMode, pillSheetAppearanceMode) || other.pillSheetAppearanceMode == pillSheetAppearanceMode) &&
             (identical(other.version, version) || other.version == version) &&
-            (identical(other.pillTakenCount, pillTakenCount) ||
-                other.pillTakenCount == pillTakenCount));
+            (identical(other.pillTakenCount, pillTakenCount) || other.pillTakenCount == pillTakenCount));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    id,
-    const DeepCollectionEquality().hash(_pillSheetIDs),
-    const DeepCollectionEquality().hash(_pillSheets),
-    createdAt,
-    deletedAt,
-    displayNumberSetting,
-    pillSheetAppearanceMode,
-    version,
-    pillTakenCount,
-  );
+  int get hashCode => Object.hash(runtimeType, id, const DeepCollectionEquality().hash(_pillSheetIDs),
+      const DeepCollectionEquality().hash(_pillSheets), createdAt, deletedAt, displayNumberSetting, pillSheetAppearanceMode, version, pillTakenCount);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PillSheetGroupImplCopyWith<_$PillSheetGroupImpl> get copyWith =>
-      __$$PillSheetGroupImplCopyWithImpl<_$PillSheetGroupImpl>(
-        this,
-        _$identity,
-      );
+  _$$PillSheetGroupImplCopyWith<_$PillSheetGroupImpl> get copyWith => __$$PillSheetGroupImplCopyWithImpl<_$PillSheetGroupImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PillSheetGroupImplToJson(this);
+    return _$$PillSheetGroupImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _PillSheetGroup extends PillSheetGroup {
-  factory _PillSheetGroup({
-    @JsonKey(includeIfNull: false) final String? id,
-    required final List<String> pillSheetIDs,
-    required final List<PillSheet> pillSheets,
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
-    required final DateTime createdAt,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    final DateTime? deletedAt,
-    final PillSheetGroupDisplayNumberSetting? displayNumberSetting,
-    final PillSheetAppearanceMode pillSheetAppearanceMode,
-    final String version,
-    final int pillTakenCount,
-  }) = _$PillSheetGroupImpl;
+  factory _PillSheetGroup(
+      {@JsonKey(includeIfNull: false) final String? id,
+      required final List<String> pillSheetIDs,
+      required final List<PillSheet> pillSheets,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime createdAt,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? deletedAt,
+      final PillSheetGroupDisplayNumberSetting? displayNumberSetting,
+      final PillSheetAppearanceMode pillSheetAppearanceMode,
+      final String version,
+      final int pillTakenCount}) = _$PillSheetGroupImpl;
   _PillSheetGroup._() : super._();
 
-  factory _PillSheetGroup.fromJson(Map<String, dynamic> json) =
-      _$PillSheetGroupImpl.fromJson;
+  factory _PillSheetGroup.fromJson(Map<String, dynamic> json) = _$PillSheetGroupImpl.fromJson;
 
   @override
+
   /// FirestoreドキュメントID（自動生成される場合はnull）
   @JsonKey(includeIfNull: false)
   String? get id;
   @override
+
   /// このグループに含まれるピルシートのIDリスト
   /// pillSheetsプロパティと対応関係を持つ
   List<String> get pillSheetIDs;
   @override
+
   /// このグループに含まれる実際のピルシートデータ
   /// 服用状況や日程計算の基準となる
   List<PillSheet> get pillSheets;
   @override
+
   /// グループ作成日時（必須項目）
   /// Firestoreのタイムスタンプとして保存される
-  @JsonKey(
-    fromJson: NonNullTimestampConverter.timestampToDateTime,
-    toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-  )
+  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdAt;
   @override
+
   /// 削除日時（論理削除で使用）
   /// nullの場合は削除されていない状態を表す
-  @JsonKey(
-    fromJson: TimestampConverter.timestampToDateTime,
-    toJson: TimestampConverter.dateTimeToTimestamp,
-  )
+  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt;
   @override // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
   /// ピル番号の表示設定（カスタマイズ用）
   /// 開始番号・終了番号のユーザーカスタマイズを管理
   PillSheetGroupDisplayNumberSetting? get displayNumberSetting;
   @override
+
   /// ピルシートの表示モード設定
   /// 番号表示、日付表示、連続番号表示の切り替えを制御
   PillSheetAppearanceMode get pillSheetAppearanceMode;
   @override
+
   /// ピルシートグループのバージョン（記録用）
   /// "v1": 1錠飲みユーザー（デフォルト）
   /// "v2": 2錠飲みユーザー
@@ -529,6 +434,7 @@ abstract class _PillSheetGroup extends PillSheetGroup {
   /// Added: 2026-01-12
   String get version;
   @override
+
   /// 1回の服用で飲むピルの錠数（記録用）
   /// 1: 1錠飲み（デフォルト）
   /// 2: 2錠飲み
@@ -537,8 +443,7 @@ abstract class _PillSheetGroup extends PillSheetGroup {
   int get pillTakenCount;
   @override
   @JsonKey(ignore: true)
-  _$$PillSheetGroupImplCopyWith<_$PillSheetGroupImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PillSheetGroupImplCopyWith<_$PillSheetGroupImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -553,22 +458,15 @@ mixin _$PillSheetGroupPillNumberDomainPillMarkValue {
   int get number => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $PillSheetGroupPillNumberDomainPillMarkValueCopyWith<
-    PillSheetGroupPillNumberDomainPillMarkValue
-  >
-  get copyWith => throw _privateConstructorUsedError;
+  $PillSheetGroupPillNumberDomainPillMarkValueCopyWith<PillSheetGroupPillNumberDomainPillMarkValue> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PillSheetGroupPillNumberDomainPillMarkValueCopyWith<$Res> {
   factory $PillSheetGroupPillNumberDomainPillMarkValueCopyWith(
-    PillSheetGroupPillNumberDomainPillMarkValue value,
-    $Res Function(PillSheetGroupPillNumberDomainPillMarkValue) then,
-  ) =
-      _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl<
-        $Res,
-        PillSheetGroupPillNumberDomainPillMarkValue
-      >;
+          PillSheetGroupPillNumberDomainPillMarkValue value, $Res Function(PillSheetGroupPillNumberDomainPillMarkValue) then) =
+      _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl<$Res, PillSheetGroupPillNumberDomainPillMarkValue>;
   @useResult
   $Res call({PillSheet pillSheet, DateTime date, int number});
 
@@ -576,15 +474,9 @@ abstract class $PillSheetGroupPillNumberDomainPillMarkValueCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl<
-  $Res,
-  $Val extends PillSheetGroupPillNumberDomainPillMarkValue
->
+class _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl<$Res, $Val extends PillSheetGroupPillNumberDomainPillMarkValue>
     implements $PillSheetGroupPillNumberDomainPillMarkValueCopyWith<$Res> {
-  _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl(
-    this._value,
-    this._then,
-  );
+  _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -598,23 +490,20 @@ class _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl<
     Object? date = null,
     Object? number = null,
   }) {
-    return _then(
-      _value.copyWith(
-            pillSheet: null == pillSheet
-                ? _value.pillSheet
-                : pillSheet // ignore: cast_nullable_to_non_nullable
-                      as PillSheet,
-            date: null == date
-                ? _value.date
-                : date // ignore: cast_nullable_to_non_nullable
-                      as DateTime,
-            number: null == number
-                ? _value.number
-                : number // ignore: cast_nullable_to_non_nullable
-                      as int,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      pillSheet: null == pillSheet
+          ? _value.pillSheet
+          : pillSheet // ignore: cast_nullable_to_non_nullable
+              as PillSheet,
+      date: null == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      number: null == number
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
   }
 
   @override
@@ -630,9 +519,8 @@ class _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl<
 abstract class _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith<$Res>
     implements $PillSheetGroupPillNumberDomainPillMarkValueCopyWith<$Res> {
   factory _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith(
-    _$PillSheetGroupPillNumberDomainPillMarkValueImpl value,
-    $Res Function(_$PillSheetGroupPillNumberDomainPillMarkValueImpl) then,
-  ) = __$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWithImpl<$Res>;
+          _$PillSheetGroupPillNumberDomainPillMarkValueImpl value, $Res Function(_$PillSheetGroupPillNumberDomainPillMarkValueImpl) then) =
+      __$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({PillSheet pillSheet, DateTime date, int number});
@@ -643,17 +531,11 @@ abstract class _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith<$Res>
 
 /// @nodoc
 class __$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWithImpl<$Res>
-    extends
-        _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl<
-          $Res,
-          _$PillSheetGroupPillNumberDomainPillMarkValueImpl
-        >
-    implements
-        _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith<$Res> {
+    extends _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl<$Res, _$PillSheetGroupPillNumberDomainPillMarkValueImpl>
+    implements _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith<$Res> {
   __$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWithImpl(
-    _$PillSheetGroupPillNumberDomainPillMarkValueImpl _value,
-    $Res Function(_$PillSheetGroupPillNumberDomainPillMarkValueImpl) _then,
-  ) : super(_value, _then);
+      _$PillSheetGroupPillNumberDomainPillMarkValueImpl _value, $Res Function(_$PillSheetGroupPillNumberDomainPillMarkValueImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -662,34 +544,27 @@ class __$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWithImpl<$Res>
     Object? date = null,
     Object? number = null,
   }) {
-    return _then(
-      _$PillSheetGroupPillNumberDomainPillMarkValueImpl(
-        pillSheet: null == pillSheet
-            ? _value.pillSheet
-            : pillSheet // ignore: cast_nullable_to_non_nullable
-                  as PillSheet,
-        date: null == date
-            ? _value.date
-            : date // ignore: cast_nullable_to_non_nullable
-                  as DateTime,
-        number: null == number
-            ? _value.number
-            : number // ignore: cast_nullable_to_non_nullable
-                  as int,
-      ),
-    );
+    return _then(_$PillSheetGroupPillNumberDomainPillMarkValueImpl(
+      pillSheet: null == pillSheet
+          ? _value.pillSheet
+          : pillSheet // ignore: cast_nullable_to_non_nullable
+              as PillSheet,
+      date: null == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      number: null == number
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
   }
 }
 
 /// @nodoc
 
-class _$PillSheetGroupPillNumberDomainPillMarkValueImpl
-    implements _PillSheetGroupPillNumberDomainPillMarkValue {
-  const _$PillSheetGroupPillNumberDomainPillMarkValueImpl({
-    required this.pillSheet,
-    required this.date,
-    required this.number,
-  });
+class _$PillSheetGroupPillNumberDomainPillMarkValueImpl implements _PillSheetGroupPillNumberDomainPillMarkValue {
+  const _$PillSheetGroupPillNumberDomainPillMarkValueImpl({required this.pillSheet, required this.date, required this.number});
 
   /// 対象となるピルシート情報
   @override
@@ -713,8 +588,7 @@ class _$PillSheetGroupPillNumberDomainPillMarkValueImpl
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PillSheetGroupPillNumberDomainPillMarkValueImpl &&
-            (identical(other.pillSheet, pillSheet) ||
-                other.pillSheet == pillSheet) &&
+            (identical(other.pillSheet, pillSheet) || other.pillSheet == pillSheet) &&
             (identical(other.date, date) || other.date == date) &&
             (identical(other.number, number) || other.number == number));
   }
@@ -725,84 +599,64 @@ class _$PillSheetGroupPillNumberDomainPillMarkValueImpl
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith<
-    _$PillSheetGroupPillNumberDomainPillMarkValueImpl
-  >
-  get copyWith =>
-      __$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWithImpl<
-        _$PillSheetGroupPillNumberDomainPillMarkValueImpl
-      >(this, _$identity);
+  _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith<_$PillSheetGroupPillNumberDomainPillMarkValueImpl> get copyWith =>
+      __$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWithImpl<_$PillSheetGroupPillNumberDomainPillMarkValueImpl>(this, _$identity);
 }
 
-abstract class _PillSheetGroupPillNumberDomainPillMarkValue
-    implements PillSheetGroupPillNumberDomainPillMarkValue {
-  const factory _PillSheetGroupPillNumberDomainPillMarkValue({
-    required final PillSheet pillSheet,
-    required final DateTime date,
-    required final int number,
-  }) = _$PillSheetGroupPillNumberDomainPillMarkValueImpl;
+abstract class _PillSheetGroupPillNumberDomainPillMarkValue implements PillSheetGroupPillNumberDomainPillMarkValue {
+  const factory _PillSheetGroupPillNumberDomainPillMarkValue(
+      {required final PillSheet pillSheet,
+      required final DateTime date,
+      required final int number}) = _$PillSheetGroupPillNumberDomainPillMarkValueImpl;
 
   @override
+
   /// 対象となるピルシート情報
   PillSheet get pillSheet;
   @override
+
   /// 対象となる日付
   DateTime get date;
   @override
+
   /// 表示番号
   int get number;
   @override
   @JsonKey(ignore: true)
-  _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith<
-    _$PillSheetGroupPillNumberDomainPillMarkValueImpl
-  >
-  get copyWith => throw _privateConstructorUsedError;
+  _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith<_$PillSheetGroupPillNumberDomainPillMarkValueImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-PillSheetGroupDisplayNumberSetting _$PillSheetGroupDisplayNumberSettingFromJson(
-  Map<String, dynamic> json,
-) {
+PillSheetGroupDisplayNumberSetting _$PillSheetGroupDisplayNumberSettingFromJson(Map<String, dynamic> json) {
   return _PillSheetGroupDisplayNumberSetting.fromJson(json);
 }
 
 /// @nodoc
 mixin _$PillSheetGroupDisplayNumberSetting {
-  // 開始番号はピルシートグループの開始の番号。周期ではない。終了の番号に到達・もしくは服用お休み期間あとは1番から始まる
+// 開始番号はピルシートグループの開始の番号。周期ではない。終了の番号に到達・もしくは服用お休み期間あとは1番から始まる
   /// グループ全体での開始番号設定
   /// nullの場合は1から開始される
-  int? get beginPillNumber =>
-      throw _privateConstructorUsedError; // 開始番号は周期の終了番号。周期の終了した数・服用お休みの有無に関わらずこの番号が最終番号となる
+  int? get beginPillNumber => throw _privateConstructorUsedError; // 開始番号は周期の終了番号。周期の終了した数・服用お休みの有無に関わらずこの番号が最終番号となる
   /// 周期の終了番号設定
   /// nullの場合は終了番号制限なしで連続番号付けされる
   int? get endPillNumber => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PillSheetGroupDisplayNumberSettingCopyWith<
-    PillSheetGroupDisplayNumberSetting
-  >
-  get copyWith => throw _privateConstructorUsedError;
+  $PillSheetGroupDisplayNumberSettingCopyWith<PillSheetGroupDisplayNumberSetting> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PillSheetGroupDisplayNumberSettingCopyWith<$Res> {
   factory $PillSheetGroupDisplayNumberSettingCopyWith(
-    PillSheetGroupDisplayNumberSetting value,
-    $Res Function(PillSheetGroupDisplayNumberSetting) then,
-  ) =
-      _$PillSheetGroupDisplayNumberSettingCopyWithImpl<
-        $Res,
-        PillSheetGroupDisplayNumberSetting
-      >;
+          PillSheetGroupDisplayNumberSetting value, $Res Function(PillSheetGroupDisplayNumberSetting) then) =
+      _$PillSheetGroupDisplayNumberSettingCopyWithImpl<$Res, PillSheetGroupDisplayNumberSetting>;
   @useResult
   $Res call({int? beginPillNumber, int? endPillNumber});
 }
 
 /// @nodoc
-class _$PillSheetGroupDisplayNumberSettingCopyWithImpl<
-  $Res,
-  $Val extends PillSheetGroupDisplayNumberSetting
->
+class _$PillSheetGroupDisplayNumberSettingCopyWithImpl<$Res, $Val extends PillSheetGroupDisplayNumberSetting>
     implements $PillSheetGroupDisplayNumberSettingCopyWith<$Res> {
   _$PillSheetGroupDisplayNumberSettingCopyWithImpl(this._value, this._then);
 
@@ -817,29 +671,24 @@ class _$PillSheetGroupDisplayNumberSettingCopyWithImpl<
     Object? beginPillNumber = freezed,
     Object? endPillNumber = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            beginPillNumber: freezed == beginPillNumber
-                ? _value.beginPillNumber
-                : beginPillNumber // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            endPillNumber: freezed == endPillNumber
-                ? _value.endPillNumber
-                : endPillNumber // ignore: cast_nullable_to_non_nullable
-                      as int?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      beginPillNumber: freezed == beginPillNumber
+          ? _value.beginPillNumber
+          : beginPillNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
+      endPillNumber: freezed == endPillNumber
+          ? _value.endPillNumber
+          : endPillNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$PillSheetGroupDisplayNumberSettingImplCopyWith<$Res>
-    implements $PillSheetGroupDisplayNumberSettingCopyWith<$Res> {
+abstract class _$$PillSheetGroupDisplayNumberSettingImplCopyWith<$Res> implements $PillSheetGroupDisplayNumberSettingCopyWith<$Res> {
   factory _$$PillSheetGroupDisplayNumberSettingImplCopyWith(
-    _$PillSheetGroupDisplayNumberSettingImpl value,
-    $Res Function(_$PillSheetGroupDisplayNumberSettingImpl) then,
-  ) = __$$PillSheetGroupDisplayNumberSettingImplCopyWithImpl<$Res>;
+          _$PillSheetGroupDisplayNumberSettingImpl value, $Res Function(_$PillSheetGroupDisplayNumberSettingImpl) then) =
+      __$$PillSheetGroupDisplayNumberSettingImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? beginPillNumber, int? endPillNumber});
@@ -847,16 +696,11 @@ abstract class _$$PillSheetGroupDisplayNumberSettingImplCopyWith<$Res>
 
 /// @nodoc
 class __$$PillSheetGroupDisplayNumberSettingImplCopyWithImpl<$Res>
-    extends
-        _$PillSheetGroupDisplayNumberSettingCopyWithImpl<
-          $Res,
-          _$PillSheetGroupDisplayNumberSettingImpl
-        >
+    extends _$PillSheetGroupDisplayNumberSettingCopyWithImpl<$Res, _$PillSheetGroupDisplayNumberSettingImpl>
     implements _$$PillSheetGroupDisplayNumberSettingImplCopyWith<$Res> {
   __$$PillSheetGroupDisplayNumberSettingImplCopyWithImpl(
-    _$PillSheetGroupDisplayNumberSettingImpl _value,
-    $Res Function(_$PillSheetGroupDisplayNumberSettingImpl) _then,
-  ) : super(_value, _then);
+      _$PillSheetGroupDisplayNumberSettingImpl _value, $Res Function(_$PillSheetGroupDisplayNumberSettingImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -864,41 +708,33 @@ class __$$PillSheetGroupDisplayNumberSettingImplCopyWithImpl<$Res>
     Object? beginPillNumber = freezed,
     Object? endPillNumber = freezed,
   }) {
-    return _then(
-      _$PillSheetGroupDisplayNumberSettingImpl(
-        beginPillNumber: freezed == beginPillNumber
-            ? _value.beginPillNumber
-            : beginPillNumber // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        endPillNumber: freezed == endPillNumber
-            ? _value.endPillNumber
-            : endPillNumber // ignore: cast_nullable_to_non_nullable
-                  as int?,
-      ),
-    );
+    return _then(_$PillSheetGroupDisplayNumberSettingImpl(
+      beginPillNumber: freezed == beginPillNumber
+          ? _value.beginPillNumber
+          : beginPillNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
+      endPillNumber: freezed == endPillNumber
+          ? _value.endPillNumber
+          : endPillNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
   }
 }
 
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$PillSheetGroupDisplayNumberSettingImpl
-    implements _PillSheetGroupDisplayNumberSetting {
-  const _$PillSheetGroupDisplayNumberSettingImpl({
-    this.beginPillNumber,
-    this.endPillNumber,
-  });
+class _$PillSheetGroupDisplayNumberSettingImpl implements _PillSheetGroupDisplayNumberSetting {
+  const _$PillSheetGroupDisplayNumberSettingImpl({this.beginPillNumber, this.endPillNumber});
 
-  factory _$PillSheetGroupDisplayNumberSettingImpl.fromJson(
-    Map<String, dynamic> json,
-  ) => _$$PillSheetGroupDisplayNumberSettingImplFromJson(json);
+  factory _$PillSheetGroupDisplayNumberSettingImpl.fromJson(Map<String, dynamic> json) => _$$PillSheetGroupDisplayNumberSettingImplFromJson(json);
 
-  // 開始番号はピルシートグループの開始の番号。周期ではない。終了の番号に到達・もしくは服用お休み期間あとは1番から始まる
+// 開始番号はピルシートグループの開始の番号。周期ではない。終了の番号に到達・もしくは服用お休み期間あとは1番から始まる
   /// グループ全体での開始番号設定
   /// nullの場合は1から開始される
   @override
   final int? beginPillNumber;
-  // 開始番号は周期の終了番号。周期の終了した数・服用お休みの有無に関わらずこの番号が最終番号となる
+// 開始番号は周期の終了番号。周期の終了した数・服用お休みの有無に関わらずこの番号が最終番号となる
   /// 周期の終了番号設定
   /// nullの場合は終了番号制限なしで連続番号付けされる
   @override
@@ -914,10 +750,8 @@ class _$PillSheetGroupDisplayNumberSettingImpl
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PillSheetGroupDisplayNumberSettingImpl &&
-            (identical(other.beginPillNumber, beginPillNumber) ||
-                other.beginPillNumber == beginPillNumber) &&
-            (identical(other.endPillNumber, endPillNumber) ||
-                other.endPillNumber == endPillNumber));
+            (identical(other.beginPillNumber, beginPillNumber) || other.beginPillNumber == beginPillNumber) &&
+            (identical(other.endPillNumber, endPillNumber) || other.endPillNumber == endPillNumber));
   }
 
   @JsonKey(ignore: true)
@@ -927,30 +761,22 @@ class _$PillSheetGroupDisplayNumberSettingImpl
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PillSheetGroupDisplayNumberSettingImplCopyWith<
-    _$PillSheetGroupDisplayNumberSettingImpl
-  >
-  get copyWith =>
-      __$$PillSheetGroupDisplayNumberSettingImplCopyWithImpl<
-        _$PillSheetGroupDisplayNumberSettingImpl
-      >(this, _$identity);
+  _$$PillSheetGroupDisplayNumberSettingImplCopyWith<_$PillSheetGroupDisplayNumberSettingImpl> get copyWith =>
+      __$$PillSheetGroupDisplayNumberSettingImplCopyWithImpl<_$PillSheetGroupDisplayNumberSettingImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PillSheetGroupDisplayNumberSettingImplToJson(this);
+    return _$$PillSheetGroupDisplayNumberSettingImplToJson(
+      this,
+    );
   }
 }
 
-abstract class _PillSheetGroupDisplayNumberSetting
-    implements PillSheetGroupDisplayNumberSetting {
-  const factory _PillSheetGroupDisplayNumberSetting({
-    final int? beginPillNumber,
-    final int? endPillNumber,
-  }) = _$PillSheetGroupDisplayNumberSettingImpl;
+abstract class _PillSheetGroupDisplayNumberSetting implements PillSheetGroupDisplayNumberSetting {
+  const factory _PillSheetGroupDisplayNumberSetting({final int? beginPillNumber, final int? endPillNumber}) =
+      _$PillSheetGroupDisplayNumberSettingImpl;
 
-  factory _PillSheetGroupDisplayNumberSetting.fromJson(
-    Map<String, dynamic> json,
-  ) = _$PillSheetGroupDisplayNumberSettingImpl.fromJson;
+  factory _PillSheetGroupDisplayNumberSetting.fromJson(Map<String, dynamic> json) = _$PillSheetGroupDisplayNumberSettingImpl.fromJson;
 
   @override // 開始番号はピルシートグループの開始の番号。周期ではない。終了の番号に到達・もしくは服用お休み期間あとは1番から始まる
   /// グループ全体での開始番号設定
@@ -962,8 +788,5 @@ abstract class _PillSheetGroupDisplayNumberSetting
   int? get endPillNumber;
   @override
   @JsonKey(ignore: true)
-  _$$PillSheetGroupDisplayNumberSettingImplCopyWith<
-    _$PillSheetGroupDisplayNumberSettingImpl
-  >
-  get copyWith => throw _privateConstructorUsedError;
+  _$$PillSheetGroupDisplayNumberSettingImplCopyWith<_$PillSheetGroupDisplayNumberSettingImpl> get copyWith => throw _privateConstructorUsedError;
 }

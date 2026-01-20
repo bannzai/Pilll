@@ -12555,12 +12555,12 @@ void main() {
         );
 
         // 引数でcyclicSequentialを指定すると連続番号が返る
-        final resultSequential = pillSheetGroup
-            .pillNumberWithoutDateOrZeroFromDate(
-              pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
-              targetDate: DateTime.parse("2020-09-29"),
-              estimatedEventCausingDate: DateTime.parse("2020-10-15"),
-            );
+        final resultSequential =
+            pillSheetGroup.pillNumberWithoutDateOrZeroFromDate(
+          pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
+          targetDate: DateTime.parse("2020-09-29"),
+          estimatedEventCausingDate: DateTime.parse("2020-10-15"),
+        );
         expect(resultSequential, 29);
 
         // 引数でnumberを指定するとピルシート内番号が返る
@@ -12673,21 +12673,21 @@ void main() {
         );
 
         // 2回目の休薬期間終了日（9/18）は番号1から再開
-        final resultAfterSecondRest = pillSheetGroup
-            .pillNumberWithoutDateOrZeroFromDate(
-              pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
-              targetDate: DateTime.parse("2020-09-18"),
-              estimatedEventCausingDate: DateTime.parse("2020-09-25"),
-            );
+        final resultAfterSecondRest =
+            pillSheetGroup.pillNumberWithoutDateOrZeroFromDate(
+          pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+          targetDate: DateTime.parse("2020-09-18"),
+          estimatedEventCausingDate: DateTime.parse("2020-09-25"),
+        );
         expect(resultAfterSecondRest, 1);
 
         // 1回目の休薬期間終了日（9/8）も番号1から再開
-        final resultAfterFirstRest = pillSheetGroup
-            .pillNumberWithoutDateOrZeroFromDate(
-              pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
-              targetDate: DateTime.parse("2020-09-08"),
-              estimatedEventCausingDate: DateTime.parse("2020-09-25"),
-            );
+        final resultAfterFirstRest =
+            pillSheetGroup.pillNumberWithoutDateOrZeroFromDate(
+          pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+          targetDate: DateTime.parse("2020-09-08"),
+          estimatedEventCausingDate: DateTime.parse("2020-09-25"),
+        );
         expect(resultAfterFirstRest, 1);
       });
     });

@@ -51,9 +51,7 @@ class InitialSettingState with _$InitialSettingState {
 
   Future<Setting> buildSetting() async {
     const menstruationDuration = 4;
-    final maxPillCount = pillSheetTypes
-        .map((e) => e.totalCount)
-        .fold(0, (previousValue, element) => previousValue + element);
+    final maxPillCount = pillSheetTypes.map((e) => e.totalCount).fold(0, (previousValue, element) => previousValue + element);
     final pillNumberForFromMenstruation = max(
       0,
       maxPillCount - menstruationDuration,
@@ -126,9 +124,7 @@ class InitialSettingState with _$InitialSettingState {
     if (pageIndex <= todayPillNumber.pageIndex) {
       // Left side from todayPillNumber.pageIndex
       // Or current pageIndex == todayPillNumber.pageIndex
-      final passedTotalCountElement = pillSheetTypes
-          .sublist(0, todayPillNumber.pageIndex - pageIndex)
-          .map((e) => e.totalCount);
+      final passedTotalCountElement = pillSheetTypes.sublist(0, todayPillNumber.pageIndex - pageIndex).map((e) => e.totalCount);
       final int passedTotalCount;
       if (passedTotalCountElement.isEmpty) {
         passedTotalCount = 0;
@@ -160,9 +156,7 @@ class InitialSettingState with _$InitialSettingState {
     required InitialSettingTodayPillNumber todayPillNumber,
     required List<PillSheetType> pillSheetTypes,
   }) {
-    if (pageIndex == 0 &&
-        todayPillNumber.pageIndex == 0 &&
-        todayPillNumber.pillNumberInPillSheet == 1) {
+    if (pageIndex == 0 && todayPillNumber.pageIndex == 0 && todayPillNumber.pillNumberInPillSheet == 1) {
       return null;
     }
     final pillSheetType = pillSheetTypes[pageIndex];

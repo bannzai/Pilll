@@ -7,8 +7,7 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/c
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
 
-class PillSheetModifiedHistoryChangedRestDurationBeginDate
-    extends StatelessWidget {
+class PillSheetModifiedHistoryChangedRestDurationBeginDate extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
   final ChangedRestDurationBeginDateValue? value;
 
@@ -27,10 +26,9 @@ class PillSheetModifiedHistoryChangedRestDurationBeginDate
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
       pillNumbersOrHyphenOrDate: PillNumber(
-        pillNumber:
-            PillSheetModifiedHistoryPillNumberOrDate.changedRestDurationBeginDate(
-              value,
-            ),
+        pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedRestDurationBeginDate(
+          value,
+        ),
       ),
       detail: Text(
         L.changePauseStartDate,

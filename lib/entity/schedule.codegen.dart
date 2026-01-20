@@ -48,8 +48,7 @@ class Schedule with _$Schedule {
   }) = _Schedule;
   const Schedule._();
 
-  factory Schedule.fromJson(Map<String, dynamic> json) =>
-      _$ScheduleFromJson(json);
+  factory Schedule.fromJson(Map<String, dynamic> json) => _$ScheduleFromJson(json);
 }
 
 /// スケジュールに関連付けられるローカル通知の設定
@@ -72,6 +71,5 @@ class LocalNotification with _$LocalNotification {
   }) = _LocalNotification;
   const LocalNotification._();
 
-  factory LocalNotification.fromJson(Map<String, dynamic> json) =>
-      _$LocalNotificationFromJson(json);
+  factory LocalNotification.fromJson(Map<String, dynamic> json) => _$LocalNotificationFromJson(json);
 }

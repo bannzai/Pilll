@@ -59,10 +59,8 @@ class TakePill {
       }
       // ピルシートが終了しているかどうかを判定
       final isEnded = switch (pillSheet) {
-        PillSheetV1() =>
-          pillSheet.typeInfo.totalCount == pillSheet.lastTakenOrZeroPillNumber,
-        PillSheetV2() =>
-          pillSheet.typeInfo.totalCount == pillSheet.lastCompletedPillNumber,
+        PillSheetV1() => pillSheet.typeInfo.totalCount == pillSheet.lastTakenOrZeroPillNumber,
+        PillSheetV2() => pillSheet.typeInfo.totalCount == pillSheet.lastCompletedPillNumber,
       };
       if (isEnded) {
         return pillSheet;
@@ -114,12 +112,11 @@ class TakePill {
     final batch = batchFactory.batch();
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
 
-    final history =
-        PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          isQuickRecord: isQuickRecord,
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
-        );
+    final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+      isQuickRecord: isQuickRecord,
+      beforePillSheetGroup: pillSheetGroup,
+      afterPillSheetGroup: updatedPillSheetGroup,
+    );
     batchSetPillSheetModifiedHistory(batch, history);
 
     await batch.commit();
@@ -140,9 +137,9 @@ extension TakenPillSheet on PillSheet {
     return switch (this) {
       PillSheetV1 v1 => v1.copyWith(lastTakenDate: takenDate),
       PillSheetV2 v2 => v2._takenPillSheetV2(
-        takenDate,
-        completeAllPills: completeAllPills,
-      ),
+          takenDate,
+          completeAllPills: completeAllPills,
+        ),
     };
   }
 }

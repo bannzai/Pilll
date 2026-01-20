@@ -15,14 +15,9 @@ class PillSheetViewLayout extends StatelessWidget {
     int numberOfLineInPillSheet,
     bool isHideWeekdayLine,
   ) {
-    const verticalSpacing =
-        PillSheetViewLayout.topSpace + PillSheetViewLayout.bottomSpace;
-    final pillMarkListHeight =
-        PillSheetViewLayout.lineHeight * numberOfLineInPillSheet +
-        verticalSpacing;
-    return isHideWeekdayLine
-        ? pillMarkListHeight
-        : pillMarkListHeight + WeekdayBadgeConst.height;
+    const verticalSpacing = PillSheetViewLayout.topSpace + PillSheetViewLayout.bottomSpace;
+    final pillMarkListHeight = PillSheetViewLayout.lineHeight * numberOfLineInPillSheet + verticalSpacing;
+    return isHideWeekdayLine ? pillMarkListHeight : pillMarkListHeight + WeekdayBadgeConst.height;
   }
 
   static PillSheetType mostLargePillSheetType(

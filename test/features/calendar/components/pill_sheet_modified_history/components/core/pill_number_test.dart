@@ -352,10 +352,10 @@ void main() {
       test('ピル番号変更（before=5, after=10）の場合、「5→10番」を返す', () {
         final result =
             PillSheetModifiedHistoryPillNumberOrDate.changedPillNumber(
-              beforeTodayPillNumber: 5,
-              afterTodayPillNumber: 10,
-              pillSheetAppearanceMode: pillSheetAppearanceMode,
-            );
+          beforeTodayPillNumber: 5,
+          afterTodayPillNumber: 10,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
+        );
         expect(result, '5→10番');
       });
     });
@@ -366,10 +366,10 @@ void main() {
       test('ピル番号変更（before=5, after=10）の場合、「5→10日目」を返す', () {
         final result =
             PillSheetModifiedHistoryPillNumberOrDate.changedPillNumber(
-              beforeTodayPillNumber: 5,
-              afterTodayPillNumber: 10,
-              pillSheetAppearanceMode: pillSheetAppearanceMode,
-            );
+          beforeTodayPillNumber: 5,
+          afterTodayPillNumber: 10,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
+        );
         expect(result, '5→10日目');
       });
     });

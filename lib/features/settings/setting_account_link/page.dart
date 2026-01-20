@@ -200,8 +200,7 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
   }
 }
 
-extension SettingAccountCooperationListPageRoute
-    on SettingAccountCooperationLinkPage {
+extension SettingAccountCooperationListPageRoute on SettingAccountCooperationLinkPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: 'SettingAccountCooperationListPage'),

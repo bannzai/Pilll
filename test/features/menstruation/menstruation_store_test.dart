@@ -236,11 +236,11 @@ void main() {
         ];
         final calendarScheduledMenstruationBandModels =
             scheduledMenstruationDateRanges(
-                  pillSheetGroup,
-                  setting,
-                  menstruations,
-                  12,
-                )
+          pillSheetGroup,
+          setting,
+          menstruations,
+          12,
+        )
                 .map(
                   (e) => CalendarScheduledMenstruationBandModel(e.begin, e.end),
                 )
@@ -299,11 +299,11 @@ void main() {
         ];
         final calendarScheduledMenstruationBandModels =
             scheduledMenstruationDateRanges(
-                  pillSheetGroup,
-                  setting,
-                  menstruations,
-                  12,
-                )
+          pillSheetGroup,
+          setting,
+          menstruations,
+          12,
+        )
                 .map(
                   (e) => CalendarScheduledMenstruationBandModel(e.begin, e.end),
                 )
@@ -421,11 +421,11 @@ void main() {
         ];
         final calendarScheduledMenstruationBandModels =
             scheduledMenstruationDateRanges(
-                  pillSheetGroup,
-                  setting,
-                  menstruations,
-                  12,
-                )
+          pillSheetGroup,
+          setting,
+          menstruations,
+          12,
+        )
                 .map(
                   (e) => CalendarScheduledMenstruationBandModel(e.begin, e.end),
                 )

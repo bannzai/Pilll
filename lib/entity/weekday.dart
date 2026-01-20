@@ -66,8 +66,7 @@ extension WeekdayFunctions on Weekday {
   /// 週の開始曜日を変更する際に使用される。
   /// 例：月曜日開始の場合、[月,火,水,木,金,土,日]の順で返される
   static List<Weekday> weekdaysForFirstWeekday(Weekday firstWeekday) {
-    return Weekday.values.sublist(firstWeekday.index)
-      ..addAll(Weekday.values.sublist(0, firstWeekday.index));
+    return Weekday.values.sublist(firstWeekday.index)..addAll(Weekday.values.sublist(0, firstWeekday.index));
   }
 
   /// 曜日の短縮形文字列を取得する

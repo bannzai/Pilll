@@ -12,23 +12,15 @@ Future<void> syncActivePillSheetValue({
 }) async {
   try {
     final map = {
-      'pillSheetLastTakenDate': pillSheetGroup
-          ?.activePillSheet
-          ?.lastTakenDate
-          ?.millisecondsSinceEpoch,
-      'pillSheetTodayPillNumber':
-          pillSheetGroup?.activePillSheet?.todayPillNumber,
-      'pillSheetGroupTodayPillNumber':
-          pillSheetGroup?.sequentialTodayPillNumber,
-      'pillSheetEndDisplayPillNumber':
-          pillSheetGroup?.displayNumberSetting?.endPillNumber,
+      'pillSheetLastTakenDate': pillSheetGroup?.activePillSheet?.lastTakenDate?.millisecondsSinceEpoch,
+      'pillSheetTodayPillNumber': pillSheetGroup?.activePillSheet?.todayPillNumber,
+      'pillSheetGroupTodayPillNumber': pillSheetGroup?.sequentialTodayPillNumber,
+      'pillSheetEndDisplayPillNumber': pillSheetGroup?.displayNumberSetting?.endPillNumber,
       'pillSheetValueLastUpdateDateTime': DateTime.now().millisecondsSinceEpoch,
       // NOTE: 昔はSetting.pillSheetAppearanceModeがWidgetに同期されていたが、PillSheetGroupに移行したため、PillSheetGroupのものを使用する。気が向いたらkeyもリネームする
-      'settingPillSheetAppearanceMode':
-          pillSheetGroup?.pillSheetAppearanceMode.name,
+      'settingPillSheetAppearanceMode': pillSheetGroup?.pillSheetAppearanceMode.name,
       // NOTE: settingPillSheetAppearanceMode から移行中。強制アップデートが浸透してから削除する。 since: 2025-05-25
-      'pillSheetGroupPillSheetAppearanceMode':
-          pillSheetGroup?.pillSheetAppearanceMode.name,
+      'pillSheetGroupPillSheetAppearanceMode': pillSheetGroup?.pillSheetAppearanceMode.name,
     };
     for (final element in map.entries) {
       await HomeWidget.saveWidgetData(element.key, element.value);

@@ -78,9 +78,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                           alignment: AlignmentDirectional.topEnd,
                           children: [
                             Image.asset(
-                              Platform.isIOS
-                                  ? 'images/ios-quick-record.gif'
-                                  : 'images/android-quick-record.gif',
+                              Platform.isIOS ? 'images/ios-quick-record.gif' : 'images/android-quick-record.gif',
                             ),
                             Positioned(
                               right: -27,
@@ -150,8 +148,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                       didEndInitialSettingNotifier,
                     );
                   } catch (error) {
-                    if (context.mounted)
-                      showErrorAlert(context, error.toString());
+                    if (context.mounted) showErrorAlert(context, error.toString());
                   }
                 },
               ),
@@ -164,8 +161,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
   }
 }
 
-extension IntiialSettingPremiumTrialStartPageRoute
-    on IntiialSettingPremiumTrialStartPage {
+extension IntiialSettingPremiumTrialStartPageRoute on IntiialSettingPremiumTrialStartPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(

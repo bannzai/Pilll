@@ -6,9 +6,7 @@ Future<void> main() async {
   final extractedStrings = <String, String>{};
 
   await for (final file in dir.list(recursive: true)) {
-    if (file is File &&
-        file.path.endsWith('.dart') &&
-        !file.path.endsWith('.freezed.dart')) {
+    if (file is File && file.path.endsWith('.dart') && !file.path.endsWith('.freezed.dart')) {
       final content = await file.readAsString();
 
       // Remove line breaks and unnecessary whitespaces

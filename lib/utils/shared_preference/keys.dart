@@ -1,17 +1,14 @@
 extension BoolKey on String {
   static const didEndInitialSetting = 'isDidEndInitialSettingKey';
-  static const shownPaywallWhenAppFirstLaunch =
-      'shownPaywallWhenAppFirstLaunch';
+  static const shownPaywallWhenAppFirstLaunch = 'shownPaywallWhenAppFirstLaunch';
   static const isAlreadyShowDemography = 'isAlreadyShowDemography';
   static const isAlreadyDoneDemography = 'isAlreadyDoneDemography';
-  static const isAlreadyAnsweredPreStoreReviewModal =
-      'isAlreadyAnsweredPreStoreReviewModal';
+  static const isAlreadyAnsweredPreStoreReviewModal = 'isAlreadyAnsweredPreStoreReviewModal';
   static const isPreStoreReviewGoodAnswer = 'isPreStoreReviewGoodAnswer';
   static const migration20240819 = 'migration20240819';
   static const specialOfferingIsClosed = 'specialOfferingIsClosed';
   static const specialOfferingIsClosed2 = 'specialOfferingIsClosed2';
-  static const lifetimeSubscriptionWarningIsClosed =
-      'lifetimeSubscriptionWarningIsClosed';
+  static const lifetimeSubscriptionWarningIsClosed = 'lifetimeSubscriptionWarningIsClosed';
 }
 
 extension StringKey on String {
@@ -48,6 +45,5 @@ extension ReleaseNoteKey on String {
 
 extension IntKey on String {
   static const String totalCountOfActionForTakenPill = 'totalPillCount';
-  static const String monthlyPremiumIntroductionSheetPresentedDateMilliSeconds =
-      'monthlyPremiumIntroductionSheetPresentedDateMilliSeconds';
+  static const String monthlyPremiumIntroductionSheetPresentedDateMilliSeconds = 'monthlyPremiumIntroductionSheetPresentedDateMilliSeconds';
 }

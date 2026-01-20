@@ -38,9 +38,7 @@ List<DateRange> scheduledMenstruationDateRanges(
   );
   for (var i = 1; i <= maxDateRangeCount; i++) {
     final offset = pillSheetGroupTotalPillCount * i;
-    final dateRangesWithOffset = scheduledMenstruationDateRanges
-        .map((e) => DateRange(e.begin.addDays(offset), e.end.addDays(offset)))
-        .toList();
+    final dateRangesWithOffset = scheduledMenstruationDateRanges.map((e) => DateRange(e.begin.addDays(offset), e.end.addDays(offset))).toList();
     dateRanges = [...dateRanges, ...dateRangesWithOffset];
   }
 
@@ -49,22 +47,20 @@ List<DateRange> scheduledMenstruationDateRanges(
   // 例えば現在2シートめでこのwhere句でフィルタリングしてしまうと、1シート目とoffsetを考慮した生理予定日が表示されないようになる
   dateRanges = dateRanges
       .where(
-        (scheduledMenstruationRange) =>
-            !scheduledMenstruationRange.end.isBefore(today()),
-      )
+    (scheduledMenstruationRange) => !scheduledMenstruationRange.end.isBefore(today()),
+  )
       .where((scheduledMenstruationRange) {
-        // すでに記録されている生理については除外したものを予定されている生理とする
-        return menstruationDateRanges
-            .where(
-              (menstruationDateRange) =>
-                  menstruationDateRange.inRange(
-                    scheduledMenstruationRange.begin,
-                  ) ||
-                  menstruationDateRange.inRange(scheduledMenstruationRange.end),
-            )
-            .isEmpty;
-      })
-      .toList();
+    // すでに記録されている生理については除外したものを予定されている生理とする
+    return menstruationDateRanges
+        .where(
+          (menstruationDateRange) =>
+              menstruationDateRange.inRange(
+                scheduledMenstruationRange.begin,
+              ) ||
+              menstruationDateRange.inRange(scheduledMenstruationRange.end),
+        )
+        .isEmpty;
+  }).toList();
 
   if (dateRanges.length > maxDateRangeCount) {
     // maxDateRangeCount分だけ返す。主にテストの時に結果を予想しやすいのでこの形をとっている
@@ -83,9 +79,7 @@ List<DateRange> nextPillSheetDateRanges(
   }
   assert(maxDateRangeCount > 0);
 
-  final totalPillCount = pillSheetGroup.pillSheets
-      .map((e) => e.pillSheetType.totalCount)
-      .reduce((value, element) => value + element);
+  final totalPillCount = pillSheetGroup.pillSheets.map((e) => e.pillSheetType.totalCount).reduce((value, element) => value + element);
   var dateRanges = <DateRange>[];
   for (int i = 0; i < maxDateRangeCount; i++) {
     final offset = totalPillCount * i;
@@ -125,7 +119,5 @@ bool isNecessaryLineBreak(DateTime date, DateRange dateRange) {
 }
 
 int offsetForStartPositionAtLine(DateTime begin, DateRange dateRange) {
-  return isNecessaryLineBreak(begin, dateRange)
-      ? 0
-      : daysBetween(dateRange.begin.date(), begin.date());
+  return isNecessaryLineBreak(begin, dateRange) ? 0 : daysBetween(dateRange.begin.date(), begin.date());
 }

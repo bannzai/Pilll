@@ -281,9 +281,7 @@ class SignInSheet extends HookConsumerWidget {
     if (_isLoginMode) {
       analytics.logEvent(name: 'signin_sheet_sign_in_apple');
       return signInWithApple().then(
-        (value) => value == null
-            ? SignInWithAppleState.cancel
-            : SignInWithAppleState.determined,
+        (value) => value == null ? SignInWithAppleState.cancel : SignInWithAppleState.determined,
       );
     } else {
       analytics.logEvent(name: 'signin_sheet_link_with_apple');
@@ -295,9 +293,7 @@ class SignInSheet extends HookConsumerWidget {
     if (_isLoginMode) {
       analytics.logEvent(name: 'signin_sheet_sign_in_google');
       return signInWithGoogle().then(
-        (value) => value == null
-            ? SignInWithGoogleState.cancel
-            : SignInWithGoogleState.determined,
+        (value) => value == null ? SignInWithGoogleState.cancel : SignInWithGoogleState.determined,
       );
     } else {
       analytics.logEvent(name: 'signin_sheet_link_with_google');
@@ -314,8 +310,7 @@ void showSignInSheet(
   analytics.logScreenView(screenName: 'SigninSheet');
   showModalBottomSheet(
     context: context,
-    builder: (context) =>
-        SignInSheet(stateContext: stateContext, onSignIn: onSignIn),
+    builder: (context) => SignInSheet(stateContext: stateContext, onSignIn: onSignIn),
     backgroundColor: Colors.transparent,
   );
 }

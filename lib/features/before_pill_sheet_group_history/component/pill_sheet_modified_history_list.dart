@@ -6,8 +6,7 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/p
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 
-class BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList
-    extends HookConsumerWidget {
+class BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList extends HookConsumerWidget {
   final PillSheet pillSheet;
 
   const BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList({

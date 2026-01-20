@@ -65,6 +65,5 @@ class DiarySetting with _$DiarySetting {
     required DateTime createdAt,
   }) = _DiarySetting;
 
-  factory DiarySetting.fromJson(Map<String, dynamic> json) =>
-      _$DiarySettingFromJson(json);
+  factory DiarySetting.fromJson(Map<String, dynamic> json) => _$DiarySettingFromJson(json);
 }

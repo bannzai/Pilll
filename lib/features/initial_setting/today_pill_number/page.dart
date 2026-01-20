@@ -108,8 +108,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
   }
 }
 
-extension InitialSettingSelectTodayPillNumberPageRoute
-    on InitialSettingSelectTodayPillNumberPage {
+extension InitialSettingSelectTodayPillNumberPageRoute on InitialSettingSelectTodayPillNumberPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(

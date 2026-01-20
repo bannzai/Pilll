@@ -41,8 +41,7 @@ class PillTaken with _$PillTaken {
     @Default(false) bool isAutomaticallyRecorded,
   }) = _PillTaken;
 
-  factory PillTaken.fromJson(Map<String, dynamic> json) =>
-      _$PillTakenFromJson(json);
+  factory PillTaken.fromJson(Map<String, dynamic> json) => _$PillTakenFromJson(json);
 }
 
 /// ピルシート内の1つのピルを表すクラス
@@ -97,9 +96,7 @@ class Pill with _$Pill {
         takenCount: pillTakenCount,
         createdDateTime: currentDate,
         updatedDateTime: currentDate,
-        pillTakens:
-            lastTakenDate != null &&
-                (date.isBefore(lastTakenDate) || isSameDay(date, lastTakenDate))
+        pillTakens: lastTakenDate != null && (date.isBefore(lastTakenDate) || isSameDay(date, lastTakenDate))
             ? List.generate(pillTakenCount, (i) {
                 // ピルは複数飲む場合もあるので、dateでtakenDateTimeを更新するのではなく、引数でもらったlastTakenDateを使って値を埋める
                 return PillTaken(
@@ -129,9 +126,7 @@ class Pill with _$Pill {
         takenCount: pillTakenCount,
         createdDateTime: now(),
         updatedDateTime: now(),
-        pillTakens:
-            lastTakenDate != null &&
-                (date.isBefore(lastTakenDate) || isSameDay(date, lastTakenDate))
+        pillTakens: lastTakenDate != null && (date.isBefore(lastTakenDate) || isSameDay(date, lastTakenDate))
             ? List.generate(pillTakenCount, (i) {
                 // generateAndFillToとの違いはここになる。lastTakenDateではなく、そのピルが通常服用する予定だった服用日がtakenDateTimeにセットされる
                 return PillTaken(

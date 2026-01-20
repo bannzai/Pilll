@@ -22,13 +22,13 @@ class CalendarDayTile extends StatelessWidget {
     required DateTime date,
     required Weekday weekday,
   }) : this(
-         key: key,
-         onTap: null,
-         weekday: weekday,
-         diary: null,
-         schedule: null,
-         date: date,
-       );
+          key: key,
+          onTap: null,
+          weekday: weekday,
+          diary: null,
+          schedule: null,
+          date: date,
+        );
 
   const CalendarDayTile({
     super.key,

@@ -26,8 +26,7 @@ Future<void> main() async {
       false,
     );
     // local notificationのみ解除（AlarmKit解除はRiverpodコンテナ内でのみ実行可能）
-    final pendingNotifications = await localNotificationService
-        .pendingReminderNotifications();
+    final pendingNotifications = await localNotificationService.pendingReminderNotifications();
     await Future.wait(
       pendingNotifications.map(
         (p) => localNotificationService.cancelNotification(

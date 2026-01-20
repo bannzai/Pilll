@@ -29,7 +29,7 @@ import '../../helper/mock.mocks.dart';
 void main() {
   const MethodChannel timezoneChannel = MethodChannel('flutter_timezone');
   late RegisterReminderLocalNotificationRunner
-  registerReminderLocalNotificationRunner;
+      registerReminderLocalNotificationRunner;
 
   setUp(() async {
     TestWidgetsFlutterBinding.ensureInitialized();
@@ -37,10 +37,10 @@ void main() {
 
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(timezoneChannel, (
-          MethodCall methodCall,
-        ) async {
-          return 'Asia/Tokyo';
-        });
+      MethodCall methodCall,
+    ) async {
+      return 'Asia/Tokyo';
+    });
     errorLogger = MockErrorLogger();
 
     initializeDateFormatting('ja_JP');
@@ -428,11 +428,11 @@ void main() {
         batchSetPillSheetGroup(batch, pillSheetGroup),
       ).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
-      final history =
-          PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-            beforePillSheetGroup: null,
-            createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
-          );
+      final history = PillSheetModifiedHistoryServiceActionFactory
+          .createCreatedPillSheetAction(
+        beforePillSheetGroup: null,
+        createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
+      );
       final batchSetPillSheetModifiedHistory =
           MockBatchSetPillSheetModifiedHistory();
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
@@ -535,11 +535,11 @@ void main() {
         batchSetPillSheetGroup(batch, pillSheetGroup),
       ).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
-      final history =
-          PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-            beforePillSheetGroup: null,
-            createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
-          );
+      final history = PillSheetModifiedHistoryServiceActionFactory
+          .createCreatedPillSheetAction(
+        beforePillSheetGroup: null,
+        createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
+      );
       final batchSetPillSheetModifiedHistory =
           MockBatchSetPillSheetModifiedHistory();
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
@@ -598,7 +598,8 @@ void main() {
     });
 
     // ref: https://github.com/bannzai/Pilll/pull/534
-    test("state.pillSheetTypes is [PillSheetType.pillsheet_24_rest_4]", () async {
+    test("state.pillSheetTypes is [PillSheetType.pillsheet_24_rest_4]",
+        () async {
       const setting = Setting(
         pillNumberForFromMenstruation: 24,
         durationMenstruation: 4,
@@ -650,11 +651,11 @@ void main() {
         batchSetPillSheetGroup(batch, pillSheetGroup),
       ).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
-      final history =
-          PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-            beforePillSheetGroup: null,
-            createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
-          );
+      final history = PillSheetModifiedHistoryServiceActionFactory
+          .createCreatedPillSheetAction(
+        beforePillSheetGroup: null,
+        createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
+      );
       final batchSetPillSheetModifiedHistory =
           MockBatchSetPillSheetModifiedHistory();
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);

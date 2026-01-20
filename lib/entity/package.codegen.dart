@@ -46,6 +46,5 @@ class Package with _$Package {
     required String buildNumber,
   }) = _Package;
 
-  factory Package.fromJson(Map<String, dynamic> json) =>
-      _$PackageFromJson(json);
+  factory Package.fromJson(Map<String, dynamic> json) => _$PackageFromJson(json);
 }

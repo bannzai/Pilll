@@ -26,9 +26,7 @@ class SpecialOfferingPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return ref
-        .watch(userProvider)
-        .when(
+    return ref.watch(userProvider).when(
           data: (user) {
             return SpecialOfferingPageBody(
               user: user,

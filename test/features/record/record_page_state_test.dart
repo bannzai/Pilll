@@ -226,14 +226,12 @@ void main() {
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(mockToday);
 
-        final pillSheetEntity =
-            PillSheet.create(
-                  PillSheetType.pillsheet_21,
-                  beginDate: DateTime.parse("2020-11-21"),
-                  lastTakenDate: null,
-                  pillTakenCount: 2,
-                )
-                as PillSheetV2;
+        final pillSheetEntity = PillSheet.create(
+          PillSheetType.pillsheet_21,
+          beginDate: DateTime.parse("2020-11-21"),
+          lastTakenDate: null,
+          pillTakenCount: 2,
+        ) as PillSheetV2;
         // 1回服用した状態を作成
         final updatedPills = pillSheetEntity.pills.map((pill) {
           if (pill.index == 0) {

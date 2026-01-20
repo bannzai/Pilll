@@ -96,12 +96,12 @@ class Diary with _$Diary {
   /// 新規日記作成時の初期値を設定する
   /// メモは空文字、体調リストは空、性行為はfalseで初期化
   factory Diary.fromDate(DateTime date) => Diary(
-    date: date,
-    memo: '',
-    createdAt: now(),
-    physicalConditions: [],
-    hasSex: false,
-  );
+        date: date,
+        memo: '',
+        createdAt: now(),
+        physicalConditions: [],
+        hasSex: false,
+      );
 
   factory Diary.fromJson(Map<String, dynamic> json) => _$DiaryFromJson(json);
 
@@ -114,6 +114,5 @@ class Diary with _$Diary {
   ///
   /// [status] - 比較対象の体調状態
   /// 現在の体調状態と引数の状態が一致する場合にtrueを返す
-  bool hasPhysicalConditionStatusFor(PhysicalConditionStatus status) =>
-      physicalConditionStatus == status;
+  bool hasPhysicalConditionStatusFor(PhysicalConditionStatus status) => physicalConditionStatus == status;
 }

@@ -36,8 +36,8 @@ Future<String> debugInfo(String separator) async {
   Setting? setting;
   try {
     setting = await databaseConnection.userReference().get().then(
-      (event) => event.data()?.setting,
-    );
+          (event) => event.data()?.setting,
+        );
   } catch (_) {}
 
   PackageInfo? package;
@@ -54,14 +54,10 @@ Future<String> debugInfo(String separator) async {
   final Map<String, dynamic> activedPillSheetDebugInfo = <String, dynamic>{};
   if (activePillSheet != null) {
     activedPillSheetDebugInfo['id'] = activePillSheet.id;
-    activedPillSheetDebugInfo['beginingDate'] = activePillSheet.beginDate
-        .toIso8601String();
-    activedPillSheetDebugInfo['lastTakenDate'] = activePillSheet.lastTakenDate
-        ?.toIso8601String();
-    activedPillSheetDebugInfo['createdAt'] = activePillSheet.createdAt
-        ?.toIso8601String();
-    activedPillSheetDebugInfo['deletedAt'] = activePillSheet.deletedAt
-        ?.toIso8601String();
+    activedPillSheetDebugInfo['beginingDate'] = activePillSheet.beginDate.toIso8601String();
+    activedPillSheetDebugInfo['lastTakenDate'] = activePillSheet.lastTakenDate?.toIso8601String();
+    activedPillSheetDebugInfo['createdAt'] = activePillSheet.createdAt?.toIso8601String();
+    activedPillSheetDebugInfo['deletedAt'] = activePillSheet.deletedAt?.toIso8601String();
   }
 
   final contents = [

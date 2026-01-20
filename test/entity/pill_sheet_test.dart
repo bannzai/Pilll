@@ -7368,32 +7368,30 @@ void main() {
         ).thenReturn(DateTime.parse("2022-05-01"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final pillSheet =
-            PillSheet.v2(
-                  id: firestoreIDGenerator(),
-                  beginDate: DateTime.parse("2022-05-01"),
-                  createdAt: now(),
-                  groupIndex: 0,
-                  restDurations: [],
-                  // pillTakenCount: 2,
-                  pills: List.generate(
-                    sheetType.totalCount,
-                    (index) => Pill(
-                      takenCount: 2,
-                      index: index,
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                      pillTakens: [],
-                    ),
-                  ),
-                  typeInfo: PillSheetTypeInfo(
-                    dosingPeriod: sheetType.dosingPeriod,
-                    name: sheetType.fullName,
-                    totalCount: sheetType.totalCount,
-                    pillSheetTypeReferencePath: sheetType.rawPath,
-                  ),
-                )
-                as PillSheetV2;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          // pillTakenCount: 2,
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) => Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            ),
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
 
         expect(pillSheet.lastCompletedPillNumber, 0);
       });
@@ -7406,46 +7404,44 @@ void main() {
         ).thenReturn(DateTime.parse("2022-05-01"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final pillSheet =
-            PillSheet.v2(
-                  id: firestoreIDGenerator(),
-                  beginDate: DateTime.parse("2022-05-01"),
-                  createdAt: now(),
-                  groupIndex: 0,
-                  restDurations: [],
-                  // pillTakenCount: 2,
-                  pills: List.generate(sheetType.totalCount, (index) {
-                    if (index == 0) {
-                      return Pill(
-                        takenCount: 2,
-                        index: index,
-                        createdDateTime: now(),
-                        updatedDateTime: now(),
-                        pillTakens: [
-                          PillTaken(
-                            recordedTakenDateTime: DateTime.parse("2022-05-01"),
-                            createdDateTime: now(),
-                            updatedDateTime: now(),
-                          ),
-                        ],
-                      );
-                    }
-                    return Pill(
-                      takenCount: 2,
-                      index: index,
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                      pillTakens: [],
-                    );
-                  }),
-                  typeInfo: PillSheetTypeInfo(
-                    dosingPeriod: sheetType.dosingPeriod,
-                    name: sheetType.fullName,
-                    totalCount: sheetType.totalCount,
-                    pillSheetTypeReferencePath: sheetType.rawPath,
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          // pillTakenCount: 2,
+          pills: List.generate(sheetType.totalCount, (index) {
+            if (index == 0) {
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(
+                    recordedTakenDateTime: DateTime.parse("2022-05-01"),
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
                   ),
-                )
-                as PillSheetV2;
+                ],
+              );
+            }
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            );
+          }),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
 
         expect(pillSheet.lastCompletedPillNumber, 0);
       });
@@ -7458,51 +7454,49 @@ void main() {
         ).thenReturn(DateTime.parse("2022-05-01"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final pillSheet =
-            PillSheet.v2(
-                  id: firestoreIDGenerator(),
-                  beginDate: DateTime.parse("2022-05-01"),
-                  createdAt: now(),
-                  groupIndex: 0,
-                  restDurations: [],
-                  // pillTakenCount: 2,
-                  pills: List.generate(sheetType.totalCount, (index) {
-                    if (index == 0) {
-                      return Pill(
-                        takenCount: 2,
-                        index: index,
-                        createdDateTime: now(),
-                        updatedDateTime: now(),
-                        pillTakens: [
-                          PillTaken(
-                            recordedTakenDateTime: DateTime.parse("2022-05-01"),
-                            createdDateTime: now(),
-                            updatedDateTime: now(),
-                          ),
-                          PillTaken(
-                            recordedTakenDateTime: DateTime.parse("2022-05-01"),
-                            createdDateTime: now(),
-                            updatedDateTime: now(),
-                          ),
-                        ],
-                      );
-                    }
-                    return Pill(
-                      takenCount: 2,
-                      index: index,
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                      pillTakens: [],
-                    );
-                  }),
-                  typeInfo: PillSheetTypeInfo(
-                    dosingPeriod: sheetType.dosingPeriod,
-                    name: sheetType.fullName,
-                    totalCount: sheetType.totalCount,
-                    pillSheetTypeReferencePath: sheetType.rawPath,
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          // pillTakenCount: 2,
+          pills: List.generate(sheetType.totalCount, (index) {
+            if (index == 0) {
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(
+                    recordedTakenDateTime: DateTime.parse("2022-05-01"),
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
                   ),
-                )
-                as PillSheetV2;
+                  PillTaken(
+                    recordedTakenDateTime: DateTime.parse("2022-05-01"),
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
+                  ),
+                ],
+              );
+            }
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            );
+          }),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
 
         expect(pillSheet.lastCompletedPillNumber, 1);
       });
@@ -7515,55 +7509,53 @@ void main() {
         ).thenReturn(DateTime.parse("2022-05-02"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final pillSheet =
-            PillSheet.v2(
-                  id: firestoreIDGenerator(),
-                  beginDate: DateTime.parse("2022-05-01"),
-                  createdAt: now(),
-                  groupIndex: 0,
-                  restDurations: [],
-                  // pillTakenCount: 2,
-                  pills: List.generate(sheetType.totalCount, (index) {
-                    if (index <= 1) {
-                      return Pill(
-                        takenCount: 2,
-                        index: index,
-                        createdDateTime: now(),
-                        updatedDateTime: now(),
-                        pillTakens: [
-                          PillTaken(
-                            recordedTakenDateTime: DateTime.parse(
-                              "2022-05-01",
-                            ).add(Duration(days: index)),
-                            createdDateTime: now(),
-                            updatedDateTime: now(),
-                          ),
-                          PillTaken(
-                            recordedTakenDateTime: DateTime.parse(
-                              "2022-05-01",
-                            ).add(Duration(days: index)),
-                            createdDateTime: now(),
-                            updatedDateTime: now(),
-                          ),
-                        ],
-                      );
-                    }
-                    return Pill(
-                      takenCount: 2,
-                      index: index,
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                      pillTakens: [],
-                    );
-                  }),
-                  typeInfo: PillSheetTypeInfo(
-                    dosingPeriod: sheetType.dosingPeriod,
-                    name: sheetType.fullName,
-                    totalCount: sheetType.totalCount,
-                    pillSheetTypeReferencePath: sheetType.rawPath,
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          // pillTakenCount: 2,
+          pills: List.generate(sheetType.totalCount, (index) {
+            if (index <= 1) {
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(
+                    recordedTakenDateTime: DateTime.parse(
+                      "2022-05-01",
+                    ).add(Duration(days: index)),
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
                   ),
-                )
-                as PillSheetV2;
+                  PillTaken(
+                    recordedTakenDateTime: DateTime.parse(
+                      "2022-05-01",
+                    ).add(Duration(days: index)),
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
+                  ),
+                ],
+              );
+            }
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            );
+          }),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
 
         expect(pillSheet.lastCompletedPillNumber, 2);
       });
@@ -7578,51 +7570,49 @@ void main() {
         ).thenReturn(DateTime.parse("2022-05-01"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final pillSheet =
-            PillSheet.v2(
-                  id: firestoreIDGenerator(),
-                  beginDate: DateTime.parse("2022-05-01"),
-                  createdAt: now(),
-                  groupIndex: 0,
-                  restDurations: [],
-                  // pillTakenCount: 2,
-                  pills: List.generate(sheetType.totalCount, (index) {
-                    if (index == 0) {
-                      return Pill(
-                        takenCount: 2,
-                        index: index,
-                        createdDateTime: now(),
-                        updatedDateTime: now(),
-                        pillTakens: [
-                          PillTaken(
-                            recordedTakenDateTime: DateTime.parse("2022-05-01"),
-                            createdDateTime: now(),
-                            updatedDateTime: now(),
-                          ),
-                          PillTaken(
-                            recordedTakenDateTime: DateTime.parse("2022-05-01"),
-                            createdDateTime: now(),
-                            updatedDateTime: now(),
-                          ),
-                        ],
-                      );
-                    }
-                    return Pill(
-                      takenCount: 2,
-                      index: index,
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                      pillTakens: [],
-                    );
-                  }),
-                  typeInfo: PillSheetTypeInfo(
-                    dosingPeriod: sheetType.dosingPeriod,
-                    name: sheetType.fullName,
-                    totalCount: sheetType.totalCount,
-                    pillSheetTypeReferencePath: sheetType.rawPath,
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          // pillTakenCount: 2,
+          pills: List.generate(sheetType.totalCount, (index) {
+            if (index == 0) {
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(
+                    recordedTakenDateTime: DateTime.parse("2022-05-01"),
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
                   ),
-                )
-                as PillSheetV2;
+                  PillTaken(
+                    recordedTakenDateTime: DateTime.parse("2022-05-01"),
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
+                  ),
+                ],
+              );
+            }
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            );
+          }),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
 
         expect(pillSheet.todayPillAllTaken, true);
       });
@@ -7635,46 +7625,44 @@ void main() {
         ).thenReturn(DateTime.parse("2022-05-01"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final pillSheet =
-            PillSheet.v2(
-                  id: firestoreIDGenerator(),
-                  beginDate: DateTime.parse("2022-05-01"),
-                  createdAt: now(),
-                  groupIndex: 0,
-                  restDurations: [],
-                  // pillTakenCount: 2,
-                  pills: List.generate(sheetType.totalCount, (index) {
-                    if (index == 0) {
-                      return Pill(
-                        takenCount: 2,
-                        index: index,
-                        createdDateTime: now(),
-                        updatedDateTime: now(),
-                        pillTakens: [
-                          PillTaken(
-                            recordedTakenDateTime: DateTime.parse("2022-05-01"),
-                            createdDateTime: now(),
-                            updatedDateTime: now(),
-                          ),
-                        ],
-                      );
-                    }
-                    return Pill(
-                      takenCount: 2,
-                      index: index,
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                      pillTakens: [],
-                    );
-                  }),
-                  typeInfo: PillSheetTypeInfo(
-                    dosingPeriod: sheetType.dosingPeriod,
-                    name: sheetType.fullName,
-                    totalCount: sheetType.totalCount,
-                    pillSheetTypeReferencePath: sheetType.rawPath,
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          // pillTakenCount: 2,
+          pills: List.generate(sheetType.totalCount, (index) {
+            if (index == 0) {
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(
+                    recordedTakenDateTime: DateTime.parse("2022-05-01"),
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
                   ),
-                )
-                as PillSheetV2;
+                ],
+              );
+            }
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            );
+          }),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
 
         expect(pillSheet.todayPillAllTaken, false);
       });
@@ -7690,46 +7678,44 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_21;
         // 全てのピルを服用完了済みにする
-        final pillSheet =
-            PillSheet.v2(
-                  id: firestoreIDGenerator(),
-                  beginDate: DateTime.parse("2022-05-01"),
-                  createdAt: now(),
-                  groupIndex: 0,
-                  restDurations: [],
-                  pills: List.generate(
-                    sheetType.totalCount,
-                    (index) => Pill(
-                      takenCount: 2,
-                      index: index,
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                      pillTakens: [
-                        PillTaken(
-                          recordedTakenDateTime: DateTime.parse(
-                            "2022-05-01",
-                          ).add(Duration(days: index)),
-                          createdDateTime: now(),
-                          updatedDateTime: now(),
-                        ),
-                        PillTaken(
-                          recordedTakenDateTime: DateTime.parse(
-                            "2022-05-01",
-                          ).add(Duration(days: index)),
-                          createdDateTime: now(),
-                          updatedDateTime: now(),
-                        ),
-                      ],
-                    ),
-                  ),
-                  typeInfo: PillSheetTypeInfo(
-                    dosingPeriod: sheetType.dosingPeriod,
-                    name: sheetType.fullName,
-                    totalCount: sheetType.totalCount,
-                    pillSheetTypeReferencePath: sheetType.rawPath,
-                  ),
-                )
-                as PillSheetV2;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) => Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [
+                PillTaken(
+                  recordedTakenDateTime: DateTime.parse(
+                    "2022-05-01",
+                  ).add(Duration(days: index)),
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                ),
+                PillTaken(
+                  recordedTakenDateTime: DateTime.parse(
+                    "2022-05-01",
+                  ).add(Duration(days: index)),
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                ),
+              ],
+            ),
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
 
         // todayPillNumberはピルシート終了日を超えた日数も含めて計算される
         // 2022-05-01から2022-06-01は32日目なのでtodayPillNumber = 32
@@ -7750,46 +7736,44 @@ void main() {
         ).thenReturn(DateTime.parse("2022-05-01"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final pillSheet =
-            PillSheet.v2(
-                  id: firestoreIDGenerator(),
-                  beginDate: DateTime.parse("2022-05-01"),
-                  createdAt: now(),
-                  groupIndex: 0,
-                  restDurations: [],
-                  // pillTakenCount: 2,
-                  pills: List.generate(sheetType.totalCount, (index) {
-                    if (index == 0) {
-                      return Pill(
-                        takenCount: 2,
-                        index: index,
-                        createdDateTime: now(),
-                        updatedDateTime: now(),
-                        pillTakens: [
-                          PillTaken(
-                            recordedTakenDateTime: DateTime.parse("2022-05-01"),
-                            createdDateTime: now(),
-                            updatedDateTime: now(),
-                          ),
-                        ],
-                      );
-                    }
-                    return Pill(
-                      takenCount: 2,
-                      index: index,
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                      pillTakens: [],
-                    );
-                  }),
-                  typeInfo: PillSheetTypeInfo(
-                    dosingPeriod: sheetType.dosingPeriod,
-                    name: sheetType.fullName,
-                    totalCount: sheetType.totalCount,
-                    pillSheetTypeReferencePath: sheetType.rawPath,
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          // pillTakenCount: 2,
+          pills: List.generate(sheetType.totalCount, (index) {
+            if (index == 0) {
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(
+                    recordedTakenDateTime: DateTime.parse("2022-05-01"),
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
                   ),
-                )
-                as PillSheetV2;
+                ],
+              );
+            }
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            );
+          }),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
 
         expect(pillSheet.anyTodayPillsAreAlreadyTaken, true);
       });
@@ -7802,32 +7786,30 @@ void main() {
         ).thenReturn(DateTime.parse("2022-05-01"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final pillSheet =
-            PillSheet.v2(
-                  id: firestoreIDGenerator(),
-                  beginDate: DateTime.parse("2022-05-01"),
-                  createdAt: now(),
-                  groupIndex: 0,
-                  restDurations: [],
-                  // pillTakenCount: 2,
-                  pills: List.generate(
-                    sheetType.totalCount,
-                    (index) => Pill(
-                      takenCount: 2,
-                      index: index,
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                      pillTakens: [],
-                    ),
-                  ),
-                  typeInfo: PillSheetTypeInfo(
-                    dosingPeriod: sheetType.dosingPeriod,
-                    name: sheetType.fullName,
-                    totalCount: sheetType.totalCount,
-                    pillSheetTypeReferencePath: sheetType.rawPath,
-                  ),
-                )
-                as PillSheetV2;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          // pillTakenCount: 2,
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) => Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            ),
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
 
         expect(pillSheet.anyTodayPillsAreAlreadyTaken, false);
       });
@@ -7843,46 +7825,44 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_21;
         // 全てのピルを服用完了済みにする
-        final pillSheet =
-            PillSheet.v2(
-                  id: firestoreIDGenerator(),
-                  beginDate: DateTime.parse("2022-05-01"),
-                  createdAt: now(),
-                  groupIndex: 0,
-                  restDurations: [],
-                  pills: List.generate(
-                    sheetType.totalCount,
-                    (index) => Pill(
-                      takenCount: 2,
-                      index: index,
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                      pillTakens: [
-                        PillTaken(
-                          recordedTakenDateTime: DateTime.parse(
-                            "2022-05-01",
-                          ).add(Duration(days: index)),
-                          createdDateTime: now(),
-                          updatedDateTime: now(),
-                        ),
-                        PillTaken(
-                          recordedTakenDateTime: DateTime.parse(
-                            "2022-05-01",
-                          ).add(Duration(days: index)),
-                          createdDateTime: now(),
-                          updatedDateTime: now(),
-                        ),
-                      ],
-                    ),
-                  ),
-                  typeInfo: PillSheetTypeInfo(
-                    dosingPeriod: sheetType.dosingPeriod,
-                    name: sheetType.fullName,
-                    totalCount: sheetType.totalCount,
-                    pillSheetTypeReferencePath: sheetType.rawPath,
-                  ),
-                )
-                as PillSheetV2;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) => Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [
+                PillTaken(
+                  recordedTakenDateTime: DateTime.parse(
+                    "2022-05-01",
+                  ).add(Duration(days: index)),
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                ),
+                PillTaken(
+                  recordedTakenDateTime: DateTime.parse(
+                    "2022-05-01",
+                  ).add(Duration(days: index)),
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                ),
+              ],
+            ),
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
 
         // todayPillIndexはtodayPillNumber - 1 = 31で、pills.length(21)を超える
         // 境界チェックによりfalseを返す
@@ -7903,27 +7883,25 @@ void main() {
         ).thenReturn(DateTime.parse("2022-05-01"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final pillSheet =
-            PillSheet.v2(
-                  id: firestoreIDGenerator(),
-                  beginDate: DateTime.parse("2022-05-01"),
-                  createdAt: now(),
-                  groupIndex: 0,
-                  restDurations: [],
-                  pills: Pill.testGenerateAndIterateTo(
-                    pillSheetType: sheetType,
-                    fromDate: DateTime.parse("2022-05-01"),
-                    lastTakenDate: null,
-                    pillTakenCount: 2,
-                  ),
-                  typeInfo: PillSheetTypeInfo(
-                    dosingPeriod: sheetType.dosingPeriod,
-                    name: sheetType.fullName,
-                    totalCount: sheetType.totalCount,
-                    pillSheetTypeReferencePath: sheetType.rawPath,
-                  ),
-                )
-                as PillSheetV2;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: null,
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
 
         final result = pillSheet.replacedPills(newPills: []);
         expect(result, pillSheet.pills);
@@ -7937,27 +7915,25 @@ void main() {
         ).thenReturn(DateTime.parse("2022-05-01"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final pillSheet =
-            PillSheet.v2(
-                  id: firestoreIDGenerator(),
-                  beginDate: DateTime.parse("2022-05-01"),
-                  createdAt: now(),
-                  groupIndex: 0,
-                  restDurations: [],
-                  pills: Pill.testGenerateAndIterateTo(
-                    pillSheetType: sheetType,
-                    fromDate: DateTime.parse("2022-05-01"),
-                    lastTakenDate: null,
-                    pillTakenCount: 2,
-                  ),
-                  typeInfo: PillSheetTypeInfo(
-                    dosingPeriod: sheetType.dosingPeriod,
-                    name: sheetType.fullName,
-                    totalCount: sheetType.totalCount,
-                    pillSheetTypeReferencePath: sheetType.rawPath,
-                  ),
-                )
-                as PillSheetV2;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: null,
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
 
         final updatedPill = Pill(
           index: 0,
@@ -7988,27 +7964,25 @@ void main() {
         ).thenReturn(DateTime.parse("2022-05-03"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final pillSheet =
-            PillSheet.v2(
-                  id: firestoreIDGenerator(),
-                  beginDate: DateTime.parse("2022-05-01"),
-                  createdAt: now(),
-                  groupIndex: 0,
-                  restDurations: [],
-                  pills: Pill.testGenerateAndIterateTo(
-                    pillSheetType: sheetType,
-                    fromDate: DateTime.parse("2022-05-01"),
-                    lastTakenDate: null,
-                    pillTakenCount: 2,
-                  ),
-                  typeInfo: PillSheetTypeInfo(
-                    dosingPeriod: sheetType.dosingPeriod,
-                    name: sheetType.fullName,
-                    totalCount: sheetType.totalCount,
-                    pillSheetTypeReferencePath: sheetType.rawPath,
-                  ),
-                )
-                as PillSheetV2;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: null,
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
 
         final updatedPills = [
           Pill(
@@ -8065,27 +8039,25 @@ void main() {
         ).thenReturn(DateTime.parse("2022-05-01"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final pillSheet =
-            PillSheet.v2(
-                  id: firestoreIDGenerator(),
-                  beginDate: DateTime.parse("2022-05-01"),
-                  createdAt: now(),
-                  groupIndex: 0,
-                  restDurations: [],
-                  pills: Pill.testGenerateAndIterateTo(
-                    pillSheetType: sheetType,
-                    fromDate: DateTime.parse("2022-05-01"),
-                    lastTakenDate: null,
-                    pillTakenCount: 2,
-                  ),
-                  typeInfo: PillSheetTypeInfo(
-                    dosingPeriod: sheetType.dosingPeriod,
-                    name: sheetType.fullName,
-                    totalCount: sheetType.totalCount,
-                    pillSheetTypeReferencePath: sheetType.rawPath,
-                  ),
-                )
-                as PillSheetV2;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: null,
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
 
         // index=100は範囲外（totalCount=28）なのでassertエラーが発生する
         final outOfRangePill = Pill(
@@ -8112,27 +8084,25 @@ void main() {
         ).thenReturn(DateTime.parse("2022-05-01"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final pillSheet =
-            PillSheet.v2(
-                  id: firestoreIDGenerator(),
-                  beginDate: DateTime.parse("2022-05-01"),
-                  createdAt: now(),
-                  groupIndex: 0,
-                  restDurations: [],
-                  pills: Pill.testGenerateAndIterateTo(
-                    pillSheetType: sheetType,
-                    fromDate: DateTime.parse("2022-05-01"),
-                    lastTakenDate: null,
-                    pillTakenCount: 2,
-                  ),
-                  typeInfo: PillSheetTypeInfo(
-                    dosingPeriod: sheetType.dosingPeriod,
-                    name: sheetType.fullName,
-                    totalCount: sheetType.totalCount,
-                    pillSheetTypeReferencePath: sheetType.rawPath,
-                  ),
-                )
-                as PillSheetV2;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: null,
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
 
         expect(pillSheet.lastTakenDate, null);
       });
@@ -8146,45 +8116,43 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_28_7;
         final takenDateTime = DateTime.parse("2022-05-01");
-        final pillSheet =
-            PillSheet.v2(
-                  id: firestoreIDGenerator(),
-                  beginDate: DateTime.parse("2022-05-01"),
-                  createdAt: now(),
-                  groupIndex: 0,
-                  restDurations: [],
-                  pills: List.generate(sheetType.totalCount, (index) {
-                    if (index == 0) {
-                      return Pill(
-                        takenCount: 2,
-                        index: index,
-                        createdDateTime: now(),
-                        updatedDateTime: now(),
-                        pillTakens: [
-                          PillTaken(
-                            recordedTakenDateTime: takenDateTime,
-                            createdDateTime: now(),
-                            updatedDateTime: now(),
-                          ),
-                        ],
-                      );
-                    }
-                    return Pill(
-                      takenCount: 2,
-                      index: index,
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                      pillTakens: [],
-                    );
-                  }),
-                  typeInfo: PillSheetTypeInfo(
-                    dosingPeriod: sheetType.dosingPeriod,
-                    name: sheetType.fullName,
-                    totalCount: sheetType.totalCount,
-                    pillSheetTypeReferencePath: sheetType.rawPath,
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: List.generate(sheetType.totalCount, (index) {
+            if (index == 0) {
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(
+                    recordedTakenDateTime: takenDateTime,
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
                   ),
-                )
-                as PillSheetV2;
+                ],
+              );
+            }
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            );
+          }),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
 
         expect(pillSheet.lastTakenDate, takenDateTime);
       });
@@ -8198,27 +8166,25 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_28_7;
         final lastTakenDateTime = DateTime.parse("2022-05-03");
-        final pillSheet =
-            PillSheet.v2(
-                  id: firestoreIDGenerator(),
-                  beginDate: DateTime.parse("2022-05-01"),
-                  createdAt: now(),
-                  groupIndex: 0,
-                  restDurations: [],
-                  pills: Pill.testGenerateAndIterateTo(
-                    pillSheetType: sheetType,
-                    fromDate: DateTime.parse("2022-05-01"),
-                    lastTakenDate: lastTakenDateTime,
-                    pillTakenCount: 2,
-                  ),
-                  typeInfo: PillSheetTypeInfo(
-                    dosingPeriod: sheetType.dosingPeriod,
-                    name: sheetType.fullName,
-                    totalCount: sheetType.totalCount,
-                    pillSheetTypeReferencePath: sheetType.rawPath,
-                  ),
-                )
-                as PillSheetV2;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: lastTakenDateTime,
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
 
         expect(pillSheet.lastTakenDate, lastTakenDateTime);
       });
@@ -8232,70 +8198,68 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_28_7;
         // 5日目まで服用、6日目は未服用、7日目に服用というケース
-        final pillSheet =
-            PillSheet.v2(
-                  id: firestoreIDGenerator(),
-                  beginDate: DateTime.parse("2022-05-01"),
-                  createdAt: now(),
-                  groupIndex: 0,
-                  restDurations: [],
-                  pills: List.generate(sheetType.totalCount, (index) {
-                    if (index < 5) {
-                      // 1〜5日目まで完全服用
-                      return Pill(
-                        takenCount: 2,
-                        index: index,
-                        createdDateTime: now(),
-                        updatedDateTime: now(),
-                        pillTakens: [
-                          PillTaken(
-                            recordedTakenDateTime: DateTime.parse(
-                              "2022-05-01",
-                            ).add(Duration(days: index)),
-                            createdDateTime: now(),
-                            updatedDateTime: now(),
-                          ),
-                          PillTaken(
-                            recordedTakenDateTime: DateTime.parse(
-                              "2022-05-01",
-                            ).add(Duration(days: index)),
-                            createdDateTime: now(),
-                            updatedDateTime: now(),
-                          ),
-                        ],
-                      );
-                    } else if (index == 6) {
-                      // 7日目に1錠だけ服用
-                      return Pill(
-                        takenCount: 2,
-                        index: index,
-                        createdDateTime: now(),
-                        updatedDateTime: now(),
-                        pillTakens: [
-                          PillTaken(
-                            recordedTakenDateTime: DateTime.parse("2022-05-07"),
-                            createdDateTime: now(),
-                            updatedDateTime: now(),
-                          ),
-                        ],
-                      );
-                    }
-                    return Pill(
-                      takenCount: 2,
-                      index: index,
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                      pillTakens: [],
-                    );
-                  }),
-                  typeInfo: PillSheetTypeInfo(
-                    dosingPeriod: sheetType.dosingPeriod,
-                    name: sheetType.fullName,
-                    totalCount: sheetType.totalCount,
-                    pillSheetTypeReferencePath: sheetType.rawPath,
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: List.generate(sheetType.totalCount, (index) {
+            if (index < 5) {
+              // 1〜5日目まで完全服用
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(
+                    recordedTakenDateTime: DateTime.parse(
+                      "2022-05-01",
+                    ).add(Duration(days: index)),
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
                   ),
-                )
-                as PillSheetV2;
+                  PillTaken(
+                    recordedTakenDateTime: DateTime.parse(
+                      "2022-05-01",
+                    ).add(Duration(days: index)),
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
+                  ),
+                ],
+              );
+            } else if (index == 6) {
+              // 7日目に1錠だけ服用
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(
+                    recordedTakenDateTime: DateTime.parse("2022-05-07"),
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
+                  ),
+                ],
+              );
+            }
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            );
+          }),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
 
         // 最後に服用記録があるのは7日目
         expect(pillSheet.lastTakenDate, DateTime.parse("2022-05-07"));
@@ -8310,32 +8274,30 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-07-25"));
 
       const sheetType = PillSheetType.pillsheet_28_7;
-      final pillSheet =
-          PillSheet.v2(
-                id: firestoreIDGenerator(),
-                beginDate: DateTime.parse("2022-07-24"),
-                createdAt: now(),
-                groupIndex: 0,
-                restDurations: [],
-                // pillTakenCount: 2,
-                pills: List.generate(
-                  sheetType.totalCount,
-                  (index) => Pill(
-                    takenCount: 2,
-                    index: index,
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                    pillTakens: [],
-                  ),
-                ),
-                typeInfo: PillSheetTypeInfo(
-                  dosingPeriod: sheetType.dosingPeriod,
-                  name: sheetType.fullName,
-                  totalCount: sheetType.totalCount,
-                  pillSheetTypeReferencePath: sheetType.rawPath,
-                ),
-              )
-              as PillSheetV2;
+      final pillSheet = PillSheet.v2(
+        id: firestoreIDGenerator(),
+        beginDate: DateTime.parse("2022-07-24"),
+        createdAt: now(),
+        groupIndex: 0,
+        restDurations: [],
+        // pillTakenCount: 2,
+        pills: List.generate(
+          sheetType.totalCount,
+          (index) => Pill(
+            takenCount: 2,
+            index: index,
+            createdDateTime: now(),
+            updatedDateTime: now(),
+            pillTakens: [],
+          ),
+        ),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      ) as PillSheetV2;
 
       expect(pillSheet.lastCompletedPillNumber, 0);
     });
@@ -8346,51 +8308,49 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-07-25"));
 
       const sheetType = PillSheetType.pillsheet_28_7;
-      final pillSheet =
-          PillSheet.v2(
-                id: firestoreIDGenerator(),
-                beginDate: DateTime.parse("2022-07-24"),
-                createdAt: now(),
-                groupIndex: 0,
-                restDurations: [],
-                // pillTakenCount: 2,
-                pills: List.generate(sheetType.totalCount, (index) {
-                  if (index == 0) {
-                    return Pill(
-                      takenCount: 2,
-                      index: index,
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                      pillTakens: [
-                        PillTaken(
-                          recordedTakenDateTime: DateTime.parse("2022-07-24"),
-                          createdDateTime: now(),
-                          updatedDateTime: now(),
-                        ),
-                        PillTaken(
-                          recordedTakenDateTime: DateTime.parse("2022-07-24"),
-                          createdDateTime: now(),
-                          updatedDateTime: now(),
-                        ),
-                      ],
-                    );
-                  }
-                  return Pill(
-                    takenCount: 2,
-                    index: index,
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                    pillTakens: [],
-                  );
-                }),
-                typeInfo: PillSheetTypeInfo(
-                  dosingPeriod: sheetType.dosingPeriod,
-                  name: sheetType.fullName,
-                  totalCount: sheetType.totalCount,
-                  pillSheetTypeReferencePath: sheetType.rawPath,
+      final pillSheet = PillSheet.v2(
+        id: firestoreIDGenerator(),
+        beginDate: DateTime.parse("2022-07-24"),
+        createdAt: now(),
+        groupIndex: 0,
+        restDurations: [],
+        // pillTakenCount: 2,
+        pills: List.generate(sheetType.totalCount, (index) {
+          if (index == 0) {
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [
+                PillTaken(
+                  recordedTakenDateTime: DateTime.parse("2022-07-24"),
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
                 ),
-              )
-              as PillSheetV2;
+                PillTaken(
+                  recordedTakenDateTime: DateTime.parse("2022-07-24"),
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                ),
+              ],
+            );
+          }
+          return Pill(
+            takenCount: 2,
+            index: index,
+            createdDateTime: now(),
+            updatedDateTime: now(),
+            pillTakens: [],
+          );
+        }),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      ) as PillSheetV2;
 
       expect(pillSheet.lastCompletedPillNumber, 1);
     });
@@ -8401,55 +8361,53 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-07-27"));
 
       const sheetType = PillSheetType.pillsheet_28_7;
-      final pillSheet =
-          PillSheet.v2(
-                id: firestoreIDGenerator(),
-                beginDate: DateTime.parse("2022-07-24"),
-                createdAt: now(),
-                groupIndex: 0,
-                restDurations: [],
-                // pillTakenCount: 2,
-                pills: List.generate(sheetType.totalCount, (index) {
-                  if (index <= 2) {
-                    return Pill(
-                      takenCount: 2,
-                      index: index,
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                      pillTakens: [
-                        PillTaken(
-                          recordedTakenDateTime: DateTime.parse(
-                            "2022-07-24",
-                          ).add(Duration(days: index)),
-                          createdDateTime: now(),
-                          updatedDateTime: now(),
-                        ),
-                        PillTaken(
-                          recordedTakenDateTime: DateTime.parse(
-                            "2022-07-24",
-                          ).add(Duration(days: index)),
-                          createdDateTime: now(),
-                          updatedDateTime: now(),
-                        ),
-                      ],
-                    );
-                  }
-                  return Pill(
-                    takenCount: 2,
-                    index: index,
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                    pillTakens: [],
-                  );
-                }),
-                typeInfo: PillSheetTypeInfo(
-                  dosingPeriod: sheetType.dosingPeriod,
-                  name: sheetType.fullName,
-                  totalCount: sheetType.totalCount,
-                  pillSheetTypeReferencePath: sheetType.rawPath,
+      final pillSheet = PillSheet.v2(
+        id: firestoreIDGenerator(),
+        beginDate: DateTime.parse("2022-07-24"),
+        createdAt: now(),
+        groupIndex: 0,
+        restDurations: [],
+        // pillTakenCount: 2,
+        pills: List.generate(sheetType.totalCount, (index) {
+          if (index <= 2) {
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [
+                PillTaken(
+                  recordedTakenDateTime: DateTime.parse(
+                    "2022-07-24",
+                  ).add(Duration(days: index)),
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
                 ),
-              )
-              as PillSheetV2;
+                PillTaken(
+                  recordedTakenDateTime: DateTime.parse(
+                    "2022-07-24",
+                  ).add(Duration(days: index)),
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                ),
+              ],
+            );
+          }
+          return Pill(
+            takenCount: 2,
+            index: index,
+            createdDateTime: now(),
+            updatedDateTime: now(),
+            pillTakens: [],
+          );
+        }),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      ) as PillSheetV2;
 
       expect(pillSheet.lastCompletedPillNumber, 3);
     });
@@ -8466,58 +8424,56 @@ void main() {
       // 休薬期間: 7/26-7/27
       // 3日目: 7/28 (index 2)
       // 4日目: 7/29 (index 3)
-      final pillSheet =
-          PillSheet.v2(
-                id: firestoreIDGenerator(),
-                beginDate: DateTime.parse("2022-07-24"),
-                createdAt: now(),
-                groupIndex: 0,
-                // pillTakenCount: 2,
-                restDurations: [
-                  RestDuration(
-                    id: "rest_duration_id",
-                    beginDate: DateTime.parse("2022-07-26"),
-                    createdDate: DateTime.parse("2022-07-26"),
-                    endDate: DateTime.parse("2022-07-28"),
-                  ),
-                ],
-                pills: List.generate(sheetType.totalCount, (index) {
-                  if (index <= 3) {
-                    return Pill(
-                      takenCount: 2,
-                      index: index,
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                      pillTakens: [
-                        PillTaken(
-                          recordedTakenDateTime: now(),
-                          createdDateTime: now(),
-                          updatedDateTime: now(),
-                        ),
-                        PillTaken(
-                          recordedTakenDateTime: now(),
-                          createdDateTime: now(),
-                          updatedDateTime: now(),
-                        ),
-                      ],
-                    );
-                  }
-                  return Pill(
-                    takenCount: 2,
-                    index: index,
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                    pillTakens: [],
-                  );
-                }),
-                typeInfo: PillSheetTypeInfo(
-                  dosingPeriod: sheetType.dosingPeriod,
-                  name: sheetType.fullName,
-                  totalCount: sheetType.totalCount,
-                  pillSheetTypeReferencePath: sheetType.rawPath,
+      final pillSheet = PillSheet.v2(
+        id: firestoreIDGenerator(),
+        beginDate: DateTime.parse("2022-07-24"),
+        createdAt: now(),
+        groupIndex: 0,
+        // pillTakenCount: 2,
+        restDurations: [
+          RestDuration(
+            id: "rest_duration_id",
+            beginDate: DateTime.parse("2022-07-26"),
+            createdDate: DateTime.parse("2022-07-26"),
+            endDate: DateTime.parse("2022-07-28"),
+          ),
+        ],
+        pills: List.generate(sheetType.totalCount, (index) {
+          if (index <= 3) {
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [
+                PillTaken(
+                  recordedTakenDateTime: now(),
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
                 ),
-              )
-              as PillSheetV2;
+                PillTaken(
+                  recordedTakenDateTime: now(),
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                ),
+              ],
+            );
+          }
+          return Pill(
+            takenCount: 2,
+            index: index,
+            createdDateTime: now(),
+            updatedDateTime: now(),
+            pillTakens: [],
+          );
+        }),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      ) as PillSheetV2;
 
       // 休薬期間を考慮したピル番号は4（4日目まで服用完了）
       expect(pillSheet.lastCompletedPillNumber, 4);
@@ -8532,87 +8488,85 @@ void main() {
       // 1日目: 2回服用完了
       // 2日目: 1回のみ服用（未完了）
       // 3日目: 2回服用完了
-      final pillSheet =
-          PillSheet.v2(
-                id: firestoreIDGenerator(),
-                beginDate: DateTime.parse("2022-07-24"),
-                createdAt: now(),
-                groupIndex: 0,
-                restDurations: [],
-                // pillTakenCount: 2,
-                pills: List.generate(sheetType.totalCount, (index) {
-                  if (index == 0) {
-                    return Pill(
-                      takenCount: 2,
-                      index: index,
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                      pillTakens: [
-                        PillTaken(
-                          recordedTakenDateTime: DateTime.parse("2022-07-24"),
-                          createdDateTime: now(),
-                          updatedDateTime: now(),
-                        ),
-                        PillTaken(
-                          recordedTakenDateTime: DateTime.parse("2022-07-24"),
-                          createdDateTime: now(),
-                          updatedDateTime: now(),
-                        ),
-                      ],
-                    );
-                  }
-                  if (index == 1) {
-                    // 2日目は1回のみ服用
-                    return Pill(
-                      takenCount: 2,
-                      index: index,
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                      pillTakens: [
-                        PillTaken(
-                          recordedTakenDateTime: DateTime.parse("2022-07-25"),
-                          createdDateTime: now(),
-                          updatedDateTime: now(),
-                        ),
-                      ],
-                    );
-                  }
-                  if (index == 2) {
-                    return Pill(
-                      takenCount: 2,
-                      index: index,
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                      pillTakens: [
-                        PillTaken(
-                          recordedTakenDateTime: DateTime.parse("2022-07-26"),
-                          createdDateTime: now(),
-                          updatedDateTime: now(),
-                        ),
-                        PillTaken(
-                          recordedTakenDateTime: DateTime.parse("2022-07-26"),
-                          createdDateTime: now(),
-                          updatedDateTime: now(),
-                        ),
-                      ],
-                    );
-                  }
-                  return Pill(
-                    takenCount: 2,
-                    index: index,
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                    pillTakens: [],
-                  );
-                }),
-                typeInfo: PillSheetTypeInfo(
-                  dosingPeriod: sheetType.dosingPeriod,
-                  name: sheetType.fullName,
-                  totalCount: sheetType.totalCount,
-                  pillSheetTypeReferencePath: sheetType.rawPath,
+      final pillSheet = PillSheet.v2(
+        id: firestoreIDGenerator(),
+        beginDate: DateTime.parse("2022-07-24"),
+        createdAt: now(),
+        groupIndex: 0,
+        restDurations: [],
+        // pillTakenCount: 2,
+        pills: List.generate(sheetType.totalCount, (index) {
+          if (index == 0) {
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [
+                PillTaken(
+                  recordedTakenDateTime: DateTime.parse("2022-07-24"),
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
                 ),
-              )
-              as PillSheetV2;
+                PillTaken(
+                  recordedTakenDateTime: DateTime.parse("2022-07-24"),
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                ),
+              ],
+            );
+          }
+          if (index == 1) {
+            // 2日目は1回のみ服用
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [
+                PillTaken(
+                  recordedTakenDateTime: DateTime.parse("2022-07-25"),
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                ),
+              ],
+            );
+          }
+          if (index == 2) {
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [
+                PillTaken(
+                  recordedTakenDateTime: DateTime.parse("2022-07-26"),
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                ),
+                PillTaken(
+                  recordedTakenDateTime: DateTime.parse("2022-07-26"),
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                ),
+              ],
+            );
+          }
+          return Pill(
+            takenCount: 2,
+            index: index,
+            createdDateTime: now(),
+            updatedDateTime: now(),
+            pillTakens: [],
+          );
+        }),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      ) as PillSheetV2;
 
       // lastWhereOrNullで最後の完了済みピルを探すので、3日目（index 2）が返される
       expect(pillSheet.lastCompletedPillNumber, 3);
@@ -8625,57 +8579,55 @@ void main() {
 
       const sheetType = PillSheetType.pillsheet_28_7;
       // 通常28個のピルがあるべきところ、10個しかない（データ不整合のシミュレーション）
-      final pillSheet =
-          PillSheet.v2(
-                id: firestoreIDGenerator(),
-                beginDate: DateTime.parse("2022-07-24"),
-                createdAt: now(),
-                groupIndex: 0,
-                restDurations: [],
-                pills: List.generate(
-                  10, // 本来は28個だが10個しかない
-                  (index) {
-                    if (index <= 2) {
-                      return Pill(
-                        takenCount: 2,
-                        index: index,
-                        createdDateTime: now(),
-                        updatedDateTime: now(),
-                        pillTakens: [
-                          PillTaken(
-                            recordedTakenDateTime: DateTime.parse(
-                              "2022-07-24",
-                            ).add(Duration(days: index)),
-                            createdDateTime: now(),
-                            updatedDateTime: now(),
-                          ),
-                          PillTaken(
-                            recordedTakenDateTime: DateTime.parse(
-                              "2022-07-24",
-                            ).add(Duration(days: index)),
-                            createdDateTime: now(),
-                            updatedDateTime: now(),
-                          ),
-                        ],
-                      );
-                    }
-                    return Pill(
-                      takenCount: 2,
-                      index: index,
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                      pillTakens: [],
-                    );
-                  },
-                ),
-                typeInfo: PillSheetTypeInfo(
-                  dosingPeriod: sheetType.dosingPeriod,
-                  name: sheetType.fullName,
-                  totalCount: sheetType.totalCount,
-                  pillSheetTypeReferencePath: sheetType.rawPath,
-                ),
-              )
-              as PillSheetV2;
+      final pillSheet = PillSheet.v2(
+        id: firestoreIDGenerator(),
+        beginDate: DateTime.parse("2022-07-24"),
+        createdAt: now(),
+        groupIndex: 0,
+        restDurations: [],
+        pills: List.generate(
+          10, // 本来は28個だが10個しかない
+          (index) {
+            if (index <= 2) {
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(
+                    recordedTakenDateTime: DateTime.parse(
+                      "2022-07-24",
+                    ).add(Duration(days: index)),
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
+                  ),
+                  PillTaken(
+                    recordedTakenDateTime: DateTime.parse(
+                      "2022-07-24",
+                    ).add(Duration(days: index)),
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
+                  ),
+                ],
+              );
+            }
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            );
+          },
+        ),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      ) as PillSheetV2;
 
       // pills.length(10) < dates.length(28) の場合
       // lastCompletedPill.index は最大9なので、dates[9]へのアクセスは安全
@@ -8689,58 +8641,56 @@ void main() {
 
       // 21日型シートだが35個のピルがある場合（データ不整合のシミュレーション）
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet =
-          PillSheet.v2(
-                id: firestoreIDGenerator(),
-                beginDate: DateTime.parse("2022-07-24"),
-                createdAt: now(),
-                groupIndex: 0,
-                restDurations: [],
-                pills: List.generate(
-                  35, // 本来は21個だが35個ある
-                  (index) {
-                    // 30番目のピルまで服用完了
-                    if (index <= 29) {
-                      return Pill(
-                        takenCount: 2,
-                        index: index,
-                        createdDateTime: now(),
-                        updatedDateTime: now(),
-                        pillTakens: [
-                          PillTaken(
-                            recordedTakenDateTime: DateTime.parse(
-                              "2022-07-24",
-                            ).add(Duration(days: index)),
-                            createdDateTime: now(),
-                            updatedDateTime: now(),
-                          ),
-                          PillTaken(
-                            recordedTakenDateTime: DateTime.parse(
-                              "2022-07-24",
-                            ).add(Duration(days: index)),
-                            createdDateTime: now(),
-                            updatedDateTime: now(),
-                          ),
-                        ],
-                      );
-                    }
-                    return Pill(
-                      takenCount: 2,
-                      index: index,
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                      pillTakens: [],
-                    );
-                  },
-                ),
-                typeInfo: PillSheetTypeInfo(
-                  dosingPeriod: sheetType.dosingPeriod,
-                  name: sheetType.fullName,
-                  totalCount: sheetType.totalCount,
-                  pillSheetTypeReferencePath: sheetType.rawPath,
-                ),
-              )
-              as PillSheetV2;
+      final pillSheet = PillSheet.v2(
+        id: firestoreIDGenerator(),
+        beginDate: DateTime.parse("2022-07-24"),
+        createdAt: now(),
+        groupIndex: 0,
+        restDurations: [],
+        pills: List.generate(
+          35, // 本来は21個だが35個ある
+          (index) {
+            // 30番目のピルまで服用完了
+            if (index <= 29) {
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(
+                    recordedTakenDateTime: DateTime.parse(
+                      "2022-07-24",
+                    ).add(Duration(days: index)),
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
+                  ),
+                  PillTaken(
+                    recordedTakenDateTime: DateTime.parse(
+                      "2022-07-24",
+                    ).add(Duration(days: index)),
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
+                  ),
+                ],
+              );
+            }
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            );
+          },
+        ),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      ) as PillSheetV2;
 
       // pills.length(35) > dates.length(21) の場合
       // lastCompletedPill.index = 29 で dates.length = 21 なので

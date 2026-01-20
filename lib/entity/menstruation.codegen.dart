@@ -25,8 +25,7 @@ class MenstruationFirestoreKey {
 /// HealthKitとの連携機能もサポートしている
 @freezed
 class Menstruation with _$Menstruation {
-  factory Menstruation.fromJson(Map<String, dynamic> json) =>
-      _$MenstruationFromJson(json);
+  factory Menstruation.fromJson(Map<String, dynamic> json) => _$MenstruationFromJson(json);
   const Menstruation._();
 
   @JsonSerializable(explicitToJson: true)
@@ -78,8 +77,7 @@ class Menstruation with _$Menstruation {
 
   /// 生理期間をFlutterのDateTimeRange形式で取得する
   /// UI表示やカレンダー選択で使用される
-  DateTimeRange get dateTimeRange =>
-      DateTimeRange(start: beginDate, end: endDate);
+  DateTimeRange get dateTimeRange => DateTimeRange(start: beginDate, end: endDate);
 
   /// 現在生理中かどうかを判定する
   /// 今日の日付が生理期間内に含まれるかをチェック

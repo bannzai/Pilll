@@ -115,9 +115,7 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
 
                           final navigator = Navigator.of(context);
                           try {
-                            await ref
-                                .read(deleteMenstruationProvider)
-                                .call(menstruation);
+                            await ref.read(deleteMenstruationProvider).call(menstruation);
                           } catch (e) {
                             if (context.mounted) showErrorAlert(context, e);
                           }

@@ -170,8 +170,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
     analytics.logEvent(name: 'show_initial_setting_reminder_picker');
     final reminderDateTime = state.reminderTimeOrNull(index);
     final n = now();
-    DateTime initialDateTime =
-        reminderDateTime ?? DateTime(n.year, n.month, n.day, n.hour, 0, 0);
+    DateTime initialDateTime = reminderDateTime ?? DateTime(n.year, n.month, n.day, n.hour, 0, 0);
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -201,9 +200,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
     int index,
   ) {
     final reminderTime = state.reminderTimeOrNull(index);
-    final formValue = reminderTime == null
-        ? '--:--'
-        : DateTimeFormatter.militaryTime(reminderTime);
+    final formValue = reminderTime == null ? '--:--' : DateTimeFormatter.militaryTime(reminderTime);
     return Padding(
       padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
       child: Column(
@@ -252,8 +249,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
   }
 }
 
-extension InitialSettingReminderTimesPageRoute
-    on InitialSettingReminderTimesPage {
+extension InitialSettingReminderTimesPageRoute on InitialSettingReminderTimesPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: 'InitialSettingReminderTimesPage'),

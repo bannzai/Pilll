@@ -45,9 +45,7 @@ void _showMenstruationDateRangePicker(
     initialDateRange: initialMenstruation?.dateTimeRange,
     firstDate: DateTime.parse('2020-01-01'),
     lastDate: today().addDays(30),
-    helpText: initialMenstruation == null
-        ? L.selectMenstruationStartDate
-        : L.editMenstruationPeriod,
+    helpText: initialMenstruation == null ? L.selectMenstruationStartDate : L.editMenstruationPeriod,
     fieldStartHintText: L.menstruationStartDate,
     fieldEndLabelText: L.menstruationEndDate,
     builder: (context, child) {

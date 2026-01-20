@@ -168,8 +168,7 @@ Exception? mapToDisplayedException(PlatformException exception) {
           exception.details,
         ),
       );
-    case PurchasesErrorCode
-        .productDiscountMissingSubscriptionGroupIdentifierError:
+    case PurchasesErrorCode.productDiscountMissingSubscriptionGroupIdentifierError:
       return FormatException(
         L.purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError(
           exception.code,

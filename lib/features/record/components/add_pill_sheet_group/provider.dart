@@ -58,11 +58,10 @@ class AddPillSheetGroup {
       updatedPillSheetGroup,
     );
 
-    final history =
-        PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-          beforePillSheetGroup: pillSheetGroup,
-          createdNewPillSheetGroup: createdPillSheetGroup,
-        );
+    final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+      beforePillSheetGroup: pillSheetGroup,
+      createdNewPillSheetGroup: createdPillSheetGroup,
+    );
     batchSetPillSheetModifiedHistory(batch, history);
 
     batchSetSetting(batch, setting.copyWith(pillSheetTypes: pillSheetTypes));
@@ -118,9 +117,7 @@ PillSheetGroup buildPillSheetGroup({
   final updatedPillSheetGroup = PillSheetGroup(
     pillSheetIDs: pillSheetIDs,
     pillSheets: createdPillSheets,
-    pillSheetAppearanceMode:
-        pillSheetGroup?.pillSheetAppearanceMode ??
-        PillSheetAppearanceMode.number,
+    pillSheetAppearanceMode: pillSheetGroup?.pillSheetAppearanceMode ?? PillSheetAppearanceMode.number,
     displayNumberSetting: () {
       if (pillSheetGroup?.pillSheetAppearanceMode.isSequential == true) {
         if (displayNumberSetting != null) {
@@ -128,8 +125,7 @@ PillSheetGroup buildPillSheetGroup({
         }
         if (pillSheetGroup != null) {
           return PillSheetGroupDisplayNumberSetting(
-            beginPillNumber:
-                pillSheetGroup.sequentialEstimatedEndPillNumber + 1,
+            beginPillNumber: pillSheetGroup.sequentialEstimatedEndPillNumber + 1,
           );
         }
       }

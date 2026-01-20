@@ -104,8 +104,7 @@ extension UserFirestoreFieldKeys on String {
   static const trialDeadlineDate = 'trialDeadlineDate';
 
   /// 割引プラン利用期限日
-  static const discountEntitlementDeadlineDate =
-      'discountEntitlementDeadlineDate';
+  static const discountEntitlementDeadlineDate = 'discountEntitlementDeadlineDate';
 
   /// 解約理由を聞くかどうかのフラグ
   static const shouldAskCancelReason = 'shouldAskCancelReason';
@@ -195,8 +194,7 @@ class User with _$User {
   /// nullの場合はトライアル中として権限ありと判定
   /// 有効期限が現在時刻より後の場合に権限ありと判定
   bool get hasDiscountEntitlement {
-    final discountEntitlementDeadlineDate =
-        this.discountEntitlementDeadlineDate;
+    final discountEntitlementDeadlineDate = this.discountEntitlementDeadlineDate;
     if (discountEntitlementDeadlineDate == null) {
       return true;
     } else {

@@ -12,12 +12,10 @@ void requestInAppReview() async {
   } else {
     final sharedPreferences = await SharedPreferences.getInstance();
 
-    int count =
-        sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
+    int count = sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
     sharedPreferences.setInt(IntKey.totalCountOfActionForTakenPill, count + 1);
 
-    final isGoodAnswer =
-        sharedPreferences.getBool(BoolKey.isPreStoreReviewGoodAnswer) ?? false;
+    final isGoodAnswer = sharedPreferences.getBool(BoolKey.isPreStoreReviewGoodAnswer) ?? false;
     if (!isGoodAnswer) {
       return;
     }

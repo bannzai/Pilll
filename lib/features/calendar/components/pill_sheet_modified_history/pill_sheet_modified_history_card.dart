@@ -30,19 +30,12 @@ class CalendarPillSheetModifiedHistoryCardState {
     required this.trialDeadlineDate,
   });
 
-  bool get moreButtonIsShown =>
-      _allPillSheetModifiedHistories.length >
-      CalendarPillSheetModifiedHistoryCardState
-          .pillSheetModifiedHistoriesThreshold;
+  bool get moreButtonIsShown => _allPillSheetModifiedHistories.length > CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold;
   List<PillSheetModifiedHistory> get pillSheetModifiedHistories {
-    if (_allPillSheetModifiedHistories.length >
-        CalendarPillSheetModifiedHistoryCardState
-            .pillSheetModifiedHistoriesThreshold) {
+    if (_allPillSheetModifiedHistories.length > CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold) {
       final copied = [..._allPillSheetModifiedHistories];
       copied.removeRange(
-        CalendarPillSheetModifiedHistoryCardState
-                .pillSheetModifiedHistoriesThreshold -
-            1,
+        CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold - 1,
         copied.length,
       );
       return copied;
@@ -105,9 +98,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                       premiumOrTrial: user.premiumOrTrial,
                     ),
                   ),
-                  if (histories.length >
-                      CalendarPillSheetModifiedHistoryCardState
-                          .pillSheetModifiedHistoriesThreshold)
+                  if (histories.length > CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold)
                     PillSheetModifiedHistoryMoreButton(user: user),
                 ];
               } else {
@@ -156,8 +147,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                                         text: L.viewMoreDetails,
                                         onPressed: () async {
                                           analytics.logEvent(
-                                            name:
-                                                'pressed_show_detail_pill_sheet_history',
+                                            name: 'pressed_show_detail_pill_sheet_history',
                                           );
                                           showPremiumIntroductionSheet(context);
                                         },

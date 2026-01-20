@@ -29,9 +29,7 @@ class SpecialOfferingPage2 extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return ref
-        .watch(userProvider)
-        .when(
+    return ref.watch(userProvider).when(
           data: (user) {
             return SpecialOfferingPageBody(
               user: user,
@@ -74,8 +72,7 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
       monthlySpecialOfferingPackageProvider,
     );
 
-    if (monthlySpecialOfferingPackage == null ||
-        monthlyPremiumPackage == null) {
+    if (monthlySpecialOfferingPackage == null || monthlyPremiumPackage == null) {
       return const ScaffoldIndicator();
     }
 

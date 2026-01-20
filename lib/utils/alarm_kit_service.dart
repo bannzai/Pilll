@@ -78,8 +78,7 @@ class AlarmKitService {
         'getAlarmKitAuthorizationStatus',
       );
       if (result?['result'] == 'success') {
-        final statusString =
-            result?['authorizationStatus'] as String? ?? 'notAvailable';
+        final statusString = result?['authorizationStatus'] as String? ?? 'notAvailable';
         return AlarmKitAuthorizationStatus.fromString(statusString);
       }
       return AlarmKitAuthorizationStatus.notAvailable;
@@ -140,12 +139,11 @@ class AlarmKitService {
     }
 
     try {
-      final result = await _channel
-          .invokeMethod<Map<dynamic, dynamic>>('scheduleAlarmKitReminder', {
-            'localNotificationID': localNotificationID,
-            'title': title,
-            'scheduledTimeMs': reminderDateTime.millisecondsSinceEpoch,
-          });
+      final result = await _channel.invokeMethod<Map<dynamic, dynamic>>('scheduleAlarmKitReminder', {
+        'localNotificationID': localNotificationID,
+        'title': title,
+        'scheduledTimeMs': reminderDateTime.millisecondsSinceEpoch,
+      });
 
       if (result?['result'] != 'success') {
         throw Exception(result?['message'] ?? 'Failed to schedule alarm');

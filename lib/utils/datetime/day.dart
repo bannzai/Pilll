@@ -30,9 +30,7 @@ DateTime firstDayOfWeekday(DateTime day) {
 }
 
 DateTime endDayOfWeekday(DateTime day) {
-  return day
-      .subtract(Duration(days: day.weekday == 7 ? 0 : day.weekday))
-      .addDays(Weekday.values.length - 1);
+  return day.subtract(Duration(days: day.weekday == 7 ? 0 : day.weekday)).addDays(Weekday.values.length - 1);
 }
 
 extension Date on DateTime {

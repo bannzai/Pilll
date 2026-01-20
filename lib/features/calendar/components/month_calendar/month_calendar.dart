@@ -15,8 +15,7 @@ import 'package:pilll/provider/schedule.dart';
 
 class MonthCalendar extends HookConsumerWidget {
   final DateTime dateForMonth;
-  final Widget Function(BuildContext, List<Diary>, List<Schedule>, DateRange)
-  weekCalendarBuilder;
+  final Widget Function(BuildContext, List<Diary>, List<Schedule>, DateRange) weekCalendarBuilder;
 
   const MonthCalendar({
     super.key,
@@ -97,10 +96,9 @@ class MonthCalendar extends HookConsumerWidget {
     );
   }
 
-  WeekCalendarDateRangeCalculator get _calculator =>
-      WeekCalendarDateRangeCalculator(dateForMonth);
+  WeekCalendarDateRangeCalculator get _calculator => WeekCalendarDateRangeCalculator(dateForMonth);
   List<DateRange> get _weeks => List.generate(
-    _calculator.weeklineCount(),
-    (index) => index + 1,
-  ).map((line) => _calculator.dateRangeOfLine(line)).toList();
+        _calculator.weeklineCount(),
+        (index) => index + 1,
+      ).map((line) => _calculator.dateRangeOfLine(line)).toList();
 }

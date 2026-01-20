@@ -69,6 +69,5 @@ class CalendarPageTitle extends StatelessWidget {
     );
   }
 
-  String get _displayMonthString =>
-      DateTimeFormatter.yearAndMonth(displayedMonth);
+  String get _displayMonthString => DateTimeFormatter.yearAndMonth(displayedMonth);
 }

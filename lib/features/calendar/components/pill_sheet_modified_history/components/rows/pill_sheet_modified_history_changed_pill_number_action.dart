@@ -24,18 +24,16 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
     if (beforePillSheetGroup == null || afterPillSheetGroup == null) {
       return Text(L.failedToGetPillSheetHistory('changedPillNumber'));
     }
-    final beforeTodayPillNumber = beforePillSheetGroup
-        .pillNumberWithoutDateOrZeroFromDate(
-          pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
-          targetDate: estimatedEventCausingDate,
-          estimatedEventCausingDate: estimatedEventCausingDate,
-        );
-    final afterTodayPillNumber = afterPillSheetGroup
-        .pillNumberWithoutDateOrZeroFromDate(
-          pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
-          targetDate: estimatedEventCausingDate,
-          estimatedEventCausingDate: estimatedEventCausingDate,
-        );
+    final beforeTodayPillNumber = beforePillSheetGroup.pillNumberWithoutDateOrZeroFromDate(
+      pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+      targetDate: estimatedEventCausingDate,
+      estimatedEventCausingDate: estimatedEventCausingDate,
+    );
+    final afterTodayPillNumber = afterPillSheetGroup.pillNumberWithoutDateOrZeroFromDate(
+      pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+      targetDate: estimatedEventCausingDate,
+      estimatedEventCausingDate: estimatedEventCausingDate,
+    );
 
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),

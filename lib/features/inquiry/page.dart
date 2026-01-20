@@ -33,9 +33,7 @@ class InquiryPage extends HookWidget {
     bool isInvalid() {
       if (!isValidEmail(emailController.text)) return true;
       if (contentController.text.isEmpty) return true;
-      if (selectedType.value == InquiryType.other &&
-          otherTypeText.value.isEmpty)
-        return true;
+      if (selectedType.value == InquiryType.other && otherTypeText.value.isEmpty) return true;
       return false;
     }
 
@@ -108,11 +106,7 @@ class InquiryPage extends HookWidget {
                         decoration: InputDecoration(
                           hintText: L.emailPlaceholder,
                           border: const OutlineInputBorder(),
-                          errorText:
-                              emailController.text.isNotEmpty &&
-                                  !isValidEmail(emailController.text)
-                              ? L.invalidEmailFormat
-                              : null,
+                          errorText: emailController.text.isNotEmpty && !isValidEmail(emailController.text) ? L.invalidEmailFormat : null,
                         ),
                         keyboardType: TextInputType.emailAddress,
                         textInputAction: TextInputAction.next,
@@ -144,10 +138,7 @@ class InquiryPage extends HookWidget {
                             hintText: L.inquiryContentPlaceholder,
                             border: const OutlineInputBorder(),
                             alignLabelWithHint: true,
-                            errorText:
-                                emailController.text.isNotEmpty &&
-                                    isValidEmail(emailController.text) &&
-                                    contentController.text.isEmpty
+                            errorText: emailController.text.isNotEmpty && isValidEmail(emailController.text) && contentController.text.isEmpty
                                 ? L.inquiryContentRequired
                                 : null,
                           ),
@@ -161,8 +152,7 @@ class InquiryPage extends HookWidget {
                   ),
                 ),
               ),
-              if (emailFocusNode.hasPrimaryFocus ||
-                  contentFocusNode.hasPrimaryFocus) ...[
+              if (emailFocusNode.hasPrimaryFocus || contentFocusNode.hasPrimaryFocus) ...[
                 KeyboardToolbar(
                   doneButton: AlertButton(
                     text: L.completed,
@@ -179,13 +169,13 @@ class InquiryPage extends HookWidget {
                 onPressed: isInvalid() || isSending.value
                     ? null
                     : () => _submitInquiry(
-                        context: context,
-                        selectedType: selectedType.value,
-                        otherTypeText: otherTypeText.value,
-                        email: emailController.text,
-                        content: contentController.text,
-                        isSending: isSending,
-                      ),
+                          context: context,
+                          selectedType: selectedType.value,
+                          otherTypeText: otherTypeText.value,
+                          email: emailController.text,
+                          content: contentController.text,
+                          isSending: isSending,
+                        ),
               ),
               const SizedBox(height: 20),
             ],

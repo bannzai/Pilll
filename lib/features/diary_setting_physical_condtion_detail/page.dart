@@ -123,8 +123,7 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
           ),
         );
       },
-      error: (error, _) =>
-          UniversalErrorPage(error: error, child: null, reload: null),
+      error: (error, _) => UniversalErrorPage(error: error, child: null, reload: null),
       loading: () => const ScaffoldIndicator(),
     );
   }

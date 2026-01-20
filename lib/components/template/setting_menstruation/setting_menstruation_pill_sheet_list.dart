@@ -24,8 +24,7 @@ class SettingMenstruationPillSheetList extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final pageController = usePageController(
-      viewportFraction:
-          (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width,
+      viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width,
     );
     return Column(
       children: [
@@ -55,8 +54,7 @@ class SettingMenstruationPillSheetList extends HookConsumerWidget {
                       selectedPillNumberIntoPillSheet: selectedPillNumber(
                         pageIndex,
                       ),
-                      markSelected: (pageIndex, number) =>
-                          markSelected(pageIndex, number),
+                      markSelected: (pageIndex, number) => markSelected(pageIndex, number),
                     ),
                   ),
                   const Spacer(),

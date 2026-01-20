@@ -33,9 +33,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
     }
 
     final begin = format(restDuration.beginDate);
-    final end = restDuration.endDate != null
-        ? format(restDuration.endDate!)
-        : null;
+    final end = restDuration.endDate != null ? format(restDuration.endDate!) : null;
 
     void onChanged() {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -69,8 +67,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
           final dateTime = await showDatePicker(
             context: context,
             initialEntryMode: DatePickerEntryMode.calendarOnly,
-            initialDate:
-                pillSheetGroup.lastActiveRestDuration?.beginDate ?? today(),
+            initialDate: pillSheetGroup.lastActiveRestDuration?.beginDate ?? today(),
             firstDate: pillSheetGroup.pillSheets.first.beginDate,
             lastDate: pillSheetGroup.availableRestDurationBeginDate,
             helpText: L.selectPauseStartDate,

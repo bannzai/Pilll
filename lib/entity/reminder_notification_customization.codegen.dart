@@ -12,8 +12,7 @@ part 'reminder_notification_customization.codegen.freezed.dart';
 ///
 /// バージョン管理機能を持ち、機能追加時の後方互換性を保証します。
 @freezed
-class ReminderNotificationCustomization
-    with _$ReminderNotificationCustomization {
+class ReminderNotificationCustomization with _$ReminderNotificationCustomization {
   @JsonSerializable(explicitToJson: true)
   const factory ReminderNotificationCustomization({
     /// 設定のバージョン番号
@@ -59,13 +58,13 @@ class ReminderNotificationCustomization
     /// v2で追加された機能です。複数日の飲み忘れが検出された場合に
     /// 表示されるメッセージです。デフォルトでは🤔絵文字付きの
     /// 日本語メッセージが設定されています。
-    @Default('飲み忘れていませんか？\n服用記録がない日が複数あります$thinkingFaceEmoji')
-    String missedTakenMessage,
+    @Default('飲み忘れていませんか？\n服用記録がない日が複数あります$thinkingFaceEmoji') String missedTakenMessage,
     // END: From v2
   }) = _ReminderNotificationCustomization;
   const ReminderNotificationCustomization._();
 
   factory ReminderNotificationCustomization.fromJson(
     Map<String, dynamic> json,
-  ) => _$ReminderNotificationCustomizationFromJson(json);
+  ) =>
+      _$ReminderNotificationCustomizationFromJson(json);
 }

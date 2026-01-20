@@ -57,11 +57,7 @@ List<Diary> _sortedDiaries(List<Diary> diaries) {
 }
 
 final diaryProvider = Provider.family((ref, DateTime date) {
-  return ref
-      .watch(diariesForMonthProvider(date))
-      .asData
-      ?.value
-      .firstWhereOrNull((element) => element.date == date);
+  return ref.watch(diariesForMonthProvider(date)).asData?.value.firstWhereOrNull((element) => element.date == date);
 });
 
 final setDiaryProvider = Provider(
@@ -73,9 +69,7 @@ class SetDiary {
   SetDiary(this.databaseConnection);
 
   Future<void> call(Diary diary) async {
-    await databaseConnection
-        .diaryReference(diary)
-        .set(diary, SetOptions(merge: true));
+    await databaseConnection.diaryReference(diary).set(diary, SetOptions(merge: true));
   }
 }
 

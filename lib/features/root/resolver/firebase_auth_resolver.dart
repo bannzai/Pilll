@@ -11,9 +11,7 @@ class FirebaseAuthResolver extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return ref
-        .watch(firebaseUserStateProvider)
-        .when(
+    return ref.watch(firebaseUserStateProvider).when(
           data: (user) {
             if (user != null) {
               return builder(context, user);
@@ -39,9 +37,7 @@ class _FirebaseAuthSignInResolver extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return ref
-        .watch(firebaseSignInOrCurrentUserProvider)
-        .when(
+    return ref.watch(firebaseSignInOrCurrentUserProvider).when(
           data: (user) => builder(context, user),
           error: (e, st) => UniversalErrorPage(
             error: e,

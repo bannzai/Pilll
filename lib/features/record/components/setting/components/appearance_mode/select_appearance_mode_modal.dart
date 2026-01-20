@@ -22,10 +22,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final setting = ref.watch(settingProvider).requireValue;
-    final pillSheetGroup = ref
-        .watch(latestPillSheetGroupProvider)
-        .asData
-        ?.value;
+    final pillSheetGroup = ref.watch(latestPillSheetGroupProvider).asData?.value;
     final setPillSheetGroup = ref.watch(setPillSheetGroupProvider);
     final registerReminderLocalNotification = ref.watch(
       registerReminderLocalNotificationProvider,
@@ -59,8 +56,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   setting: setting,
                   pillSheetGroup: pillSheetGroup,
                   setPillSheetGroup: setPillSheetGroup,
-                  registerReminderLocalNotification:
-                      registerReminderLocalNotification,
+                  registerReminderLocalNotification: registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.date,
                   text: L.dateDisplay,
@@ -71,8 +67,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   setting: setting,
                   pillSheetGroup: pillSheetGroup,
                   setPillSheetGroup: setPillSheetGroup,
-                  registerReminderLocalNotification:
-                      registerReminderLocalNotification,
+                  registerReminderLocalNotification: registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.number,
                   text: L.pillNumber,
@@ -83,8 +78,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   setting: setting,
                   pillSheetGroup: pillSheetGroup,
                   setPillSheetGroup: setPillSheetGroup,
-                  registerReminderLocalNotification:
-                      registerReminderLocalNotification,
+                  registerReminderLocalNotification: registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.cyclicSequential,
                   text: L.pillDaysCycle,
@@ -101,8 +95,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
   Widget _row(
     BuildContext context, {
     required SetPillSheetGroup setPillSheetGroup,
-    required RegisterReminderLocalNotification
-    registerReminderLocalNotification,
+    required RegisterReminderLocalNotification registerReminderLocalNotification,
     required Setting setting,
     required PillSheetGroup pillSheetGroup,
     required User user,

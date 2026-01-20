@@ -76,9 +76,7 @@ class RevertTakePill {
             return pillSheet.copyWith(lastTakenDate: null, restDurations: []);
           case PillSheetV2():
             return pillSheet.copyWith(
-              pills: pillSheet.pills
-                  .map((pill) => pill.copyWith(pillTakens: []))
-                  .toList(),
+              pills: pillSheet.pills.map((pill) => pill.copyWith(pillTakens: [])).toList(),
               restDurations: [],
             );
         }
@@ -86,13 +84,10 @@ class RevertTakePill {
         // Revert対象の日付よりも後ろにある休薬期間のデータは消す
         final remainingResetDurations = pillSheet.restDurations
             .where(
-              (restDuration) =>
-                  restDuration.beginDate.date().isBefore(revertDate),
+              (restDuration) => restDuration.beginDate.date().isBefore(revertDate),
             )
             .toList();
-        return pillSheet
-            .revertedPillSheet(revertDate)
-            .copyWith(restDurations: remainingResetDurations);
+        return pillSheet.revertedPillSheet(revertDate).copyWith(restDurations: remainingResetDurations);
       }
     }).toList();
 
@@ -100,10 +95,8 @@ class RevertTakePill {
       pillSheets: updatedPillSheets,
     );
     final updatedIndexses = pillSheetGroup.pillSheets.asMap().keys.where(
-      (index) =>
-          pillSheetGroup.pillSheets[index] !=
-          updatedPillSheetGroup.pillSheets[index],
-    );
+          (index) => pillSheetGroup.pillSheets[index] != updatedPillSheetGroup.pillSheets[index],
+        );
 
     if (updatedIndexses.isEmpty) {
       return null;
@@ -112,11 +105,10 @@ class RevertTakePill {
     final batch = batchFactory.batch();
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
 
-    final history =
-        PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          beforePillSheetGroup: pillSheetGroup,
-          afterPillSheetGroup: updatedPillSheetGroup,
-        );
+    final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+      beforePillSheetGroup: pillSheetGroup,
+      afterPillSheetGroup: updatedPillSheetGroup,
+    );
     batchSetPillSheetModifiedHistory(batch, history);
 
     await batch.commit();

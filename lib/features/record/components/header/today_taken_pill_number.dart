@@ -17,8 +17,7 @@ class TodayTakenPillNumber extends StatelessWidget {
     required this.onPressed,
   });
 
-  PillSheetAppearanceMode get _appearanceMode =>
-      pillSheetGroup?.pillSheetAppearanceMode ?? PillSheetAppearanceMode.number;
+  PillSheetAppearanceMode get _appearanceMode => pillSheetGroup?.pillSheetAppearanceMode ?? PillSheetAppearanceMode.number;
 
   @override
   Widget build(BuildContext context) {
@@ -63,10 +62,7 @@ class TodayTakenPillNumber extends StatelessWidget {
   Widget _content() {
     final pillSheetGroup = this.pillSheetGroup;
     final activePillSheet = this.pillSheetGroup?.activePillSheet;
-    if (pillSheetGroup == null ||
-        activePillSheet == null ||
-        pillSheetGroup.isDeactived ||
-        pillSheetGroup.lastActiveRestDuration != null) {
+    if (pillSheetGroup == null || activePillSheet == null || pillSheetGroup.isDeactived || pillSheetGroup.lastActiveRestDuration != null) {
       return const Padding(
         padding: EdgeInsets.only(top: 8),
         child: Text(

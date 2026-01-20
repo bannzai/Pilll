@@ -267,9 +267,7 @@ class ReminderTimesPageBody extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return TimePicker(
-          initialDateTime: isEditing
-              ? setting.reminderTimes[index].dateTime()
-              : const ReminderTime(hour: 20, minute: 0).dateTime(),
+          initialDateTime: isEditing ? setting.reminderTimes[index].dateTime() : const ReminderTime(hour: 20, minute: 0).dateTime(),
           done: (dateTime) {
             if (isEditing) {
               analytics.logEvent(name: 'edited_reminder_time');

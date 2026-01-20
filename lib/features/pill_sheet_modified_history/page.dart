@@ -25,16 +25,13 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
 
     useEffect(() {
       final fetchedHistories = historiesAsync.asData?.value ?? [];
-      if (fetchedHistories.isNotEmpty &&
-          fetchedHistories.length != histories.value.length) {
+      if (fetchedHistories.isNotEmpty && fetchedHistories.length != histories.value.length) {
         histories.value = fetchedHistories;
       }
       return null;
     }, [historiesAsync.asData?.value]);
 
-    return ref
-        .watch(userProvider)
-        .when(
+    return ref.watch(userProvider).when(
           error: (error, _) => UniversalErrorPage(
             error: error,
             child: null,
@@ -61,8 +58,7 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
                   onNotification: (notification) {
                     if (histories.value.isNotEmpty &&
                         histories.value.length == limit.value &&
-                        notification.metrics.pixels >=
-                            notification.metrics.maxScrollExtent) {
+                        notification.metrics.pixels >= notification.metrics.maxScrollExtent) {
                       print('[DEBUG] LoadNext: limit.value: ${limit.value}');
                       limit.value += 20;
                     }
@@ -100,8 +96,7 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
   }
 }
 
-extension PillSheetModifiedHistoriesPageRoute
-    on PillSheetModifiedHistoriesPage {
+extension PillSheetModifiedHistoriesPageRoute on PillSheetModifiedHistoriesPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: 'PillSheetModifiedHistoriesPage'),

@@ -28,8 +28,7 @@ class DiaryPostPhysicalConditionDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     late List<String> availablePhysicalConditionDetails;
     if (user.premiumOrTrial) {
-      availablePhysicalConditionDetails =
-          diarySetting?.physicalConditions ?? defaultPhysicalConditions;
+      availablePhysicalConditionDetails = diarySetting?.physicalConditions ?? defaultPhysicalConditions;
     } else {
       availablePhysicalConditionDetails = defaultPhysicalConditions;
     }
@@ -78,9 +77,7 @@ class DiaryPostPhysicalConditionDetails extends StatelessWidget {
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w300,
                     fontSize: 14,
-                    color: physicalConditionDetails.value.contains(e)
-                        ? TextColor.white
-                        : TextColor.darkGray,
+                    color: physicalConditionDetails.value.contains(e) ? TextColor.white : TextColor.darkGray,
                   ),
                   disabledColor: AppColors.disabledSheet,
                   selectedColor: AppColors.primary,

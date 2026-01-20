@@ -44,9 +44,7 @@ final isAppleLinkedProvider = Provider((ref) {
 });
 
 bool isLinkedAppleFor(User user) {
-  return user.providerData
-      .where((element) => element.providerId == AppleAuthProvider.PROVIDER_ID)
-      .isNotEmpty;
+  return user.providerData.where((element) => element.providerId == AppleAuthProvider.PROVIDER_ID).isNotEmpty;
 }
 
 Future<void> appleReauthentification() async {

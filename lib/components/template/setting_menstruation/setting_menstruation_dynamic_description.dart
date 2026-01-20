@@ -154,9 +154,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
   }
 
   void _showPicker(BuildContext context) {
-    final maximumCount = pillSheetTypes
-        .map((e) => e.totalCount)
-        .reduce((value, element) => value + element);
+    final maximumCount = pillSheetTypes.map((e) => e.totalCount).reduce((value, element) => value + element);
     int keepSelectedFromMenstruation = min(fromMenstruation, maximumCount);
     showModalBottomSheet(
       context: context,
@@ -235,10 +233,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
                   scrollController: FixedExtentScrollController(
                     initialItem: keepSelectedDurationMenstruation,
                   ),
-                  children: SettingMenstruationDynamicDescriptionConstants
-                      .durationList
-                      .map(_pickerItem)
-                      .toList(),
+                  children: SettingMenstruationDynamicDescriptionConstants.durationList.map(_pickerItem).toList(),
                 ),
               ),
             ),

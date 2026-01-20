@@ -81,11 +81,7 @@ class PillMarkState extends State<PillMark> with TickerProviderStateMixin {
               Text(
                 '${widget.remainingPillTakenCount}',
                 style: TextStyle(
-                  color:
-                      (widget.pillMarkType == PillMarkType.rest ||
-                          widget.pillMarkType == PillMarkType.fake)
-                      ? AppColors.gray
-                      : Colors.white,
+                  color: (widget.pillMarkType == PillMarkType.rest || widget.pillMarkType == PillMarkType.fake) ? AppColors.gray : Colors.white,
                   fontSize: 10,
                   fontWeight: FontWeight.bold,
                 ),

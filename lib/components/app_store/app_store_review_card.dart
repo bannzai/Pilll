@@ -177,8 +177,8 @@ class AppStoreReviewCard extends HookWidget {
           isFullStar
               ? Icons.star
               : isHalfStar
-              ? Icons.star_half
-              : Icons.star_border,
+                  ? Icons.star_half
+                  : Icons.star_border,
           color: Colors.amber,
           size: 20,
         );

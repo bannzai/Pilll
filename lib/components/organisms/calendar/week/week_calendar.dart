@@ -27,8 +27,7 @@ class CalendarWeekLine extends HookConsumerWidget {
   final double horizontalPadding;
   final Widget Function(BuildContext, Weekday, DateTime) day;
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
-  final List<CalendarScheduledMenstruationBandModel>
-  calendarScheduledMenstruationBandModels;
+  final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
 
   const CalendarWeekLine({
@@ -42,9 +41,7 @@ class CalendarWeekLine extends HookConsumerWidget {
   });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    var tileWidth =
-        (MediaQuery.of(context).size.width - horizontalPadding * 2) /
-        Weekday.values.length;
+    var tileWidth = (MediaQuery.of(context).size.width - horizontalPadding * 2) / Weekday.values.length;
     return Stack(
       children: [
         Row(
@@ -58,9 +55,7 @@ class CalendarWeekLine extends HookConsumerWidget {
             return day(context, weekday, date);
           }).toList(),
         ),
-        ...calendarMenstruationBandModels
-            .where(_contains)
-            .map(
+        ...calendarMenstruationBandModels.where(_contains).map(
               (e) => _buildBand(
                 calendarBandModel: e,
                 bottomOffset: CalendarBandConst.height,
@@ -81,9 +76,7 @@ class CalendarWeekLine extends HookConsumerWidget {
                 ),
               ),
             ),
-        ...calendarScheduledMenstruationBandModels
-            .where(_contains)
-            .map(
+        ...calendarScheduledMenstruationBandModels.where(_contains).map(
               (e) => _buildBand(
                 calendarBandModel: e,
                 bottomOffset: CalendarBandConst.height,
@@ -95,9 +88,7 @@ class CalendarWeekLine extends HookConsumerWidget {
                 ),
               ),
             ),
-        ...calendarNextPillSheetBandModels
-            .where(_contains)
-            .map(
+        ...calendarNextPillSheetBandModels.where(_contains).map(
               (e) => _buildBand(
                 calendarBandModel: e,
                 bottomOffset: 0,
@@ -117,8 +108,7 @@ class CalendarWeekLine extends HookConsumerWidget {
   bool _contains(CalendarBandModel calendarBandModel) {
     // 週の期間と生理期間が重なるかどうかを判定
     // 週の開始が生理期間の終了より前 かつ 週の終了が生理期間の開始より後
-    final isOverlapping =
-        dateRange.begin.isBefore(
+    final isOverlapping = dateRange.begin.isBefore(
           calendarBandModel.end.add(const Duration(days: 1)),
         ) &&
         dateRange.end.isAfter(
@@ -172,10 +162,8 @@ void transitionWhenCalendarDayTapped(
       showModalBottomSheet(
         context: context,
         builder: (context) => DiaryOrScheduleSheet(
-          showDiary: () =>
-              Navigator.of(context).push(DiaryPostPageRoute.route(date, null)),
-          showSchedule: () =>
-              Navigator.of(context).push(SchedulePostPageRoute.route(date)),
+          showDiary: () => Navigator.of(context).push(DiaryPostPageRoute.route(date, null)),
+          showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date)),
         ),
       );
     } else {
@@ -183,8 +171,7 @@ void transitionWhenCalendarDayTapped(
         context: context,
         builder: (context) => DiaryOrScheduleSheet(
           showDiary: () => _showConfirmDiarySheet(context, diary),
-          showSchedule: () =>
-              Navigator.of(context).push(SchedulePostPageRoute.route(date)),
+          showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date)),
         ),
       );
     }

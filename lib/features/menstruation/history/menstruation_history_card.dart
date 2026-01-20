@@ -137,9 +137,7 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
         const Spacer(),
         CounterUnitLayout(
           title: L.averagePeriod,
-          number: (state.isPremium || state.isTrial)
-              ? state.avalageMenstruationDuration
-              : '🔒',
+          number: (state.isPremium || state.isTrial) ? state.avalageMenstruationDuration : '🔒',
           unit: L.days,
         ),
         const SizedBox(width: 30),
@@ -150,9 +148,7 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
         const SizedBox(width: 30),
         CounterUnitLayout(
           title: L.averageDays,
-          number: (state.isPremium || state.isTrial)
-              ? state.avalageMenstruationPeriod
-              : '🔒',
+          number: (state.isPremium || state.isTrial) ? state.avalageMenstruationPeriod : '🔒',
           unit: L.days,
         ),
         const Spacer(),

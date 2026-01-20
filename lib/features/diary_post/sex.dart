@@ -24,9 +24,7 @@ class DiaryPostSex extends StatelessWidget {
             height: 32,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: sex.value
-                  ? AppColors.thinSecondary
-                  : AppColors.disabledSheet,
+              color: sex.value ? AppColors.thinSecondary : AppColors.disabledSheet,
             ),
             child: SvgPicture.asset(
               sex.value ? 'images/heart.svg' : 'images/heart-stroke.svg',

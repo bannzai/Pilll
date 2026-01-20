@@ -13,11 +13,11 @@ class PillSheetModifiedHistoryEndedPillSheetAction extends StatelessWidget {
   });
 
   TextStyle get _textStyle => const TextStyle(
-    color: TextColor.main,
-    fontFamily: FontFamily.japanese,
-    fontSize: 12,
-    fontWeight: FontWeight.w400,
-  );
+        color: TextColor.main,
+        fontFamily: FontFamily.japanese,
+        fontSize: 12,
+        fontWeight: FontWeight.w400,
+      );
   @override
   Widget build(BuildContext context) {
     return Row(

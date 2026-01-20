@@ -101,11 +101,11 @@ void main() {
 
         final batchSetPillSheetModifiedHistory =
             MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              beforePillSheetGroup: pillSheetGroupV2,
-              afterPillSheetGroup: updatedPillSheetGroupV2,
-            );
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV2,
+          afterPillSheetGroup: updatedPillSheetGroupV2,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(
@@ -209,11 +209,11 @@ void main() {
 
         final batchSetPillSheetModifiedHistory =
             MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              beforePillSheetGroup: pillSheetGroupV2,
-              afterPillSheetGroup: updatedPillSheetGroupV2,
-            );
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV2,
+          afterPillSheetGroup: updatedPillSheetGroupV2,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(
@@ -285,11 +285,11 @@ void main() {
 
         final batchSetPillSheetModifiedHistory =
             MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              beforePillSheetGroup: pillSheetGroupV1,
-              afterPillSheetGroup: updatedPillSheetGroupV1,
-            );
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV1,
+          afterPillSheetGroup: updatedPillSheetGroupV1,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(
@@ -390,11 +390,11 @@ void main() {
 
         final batchSetPillSheetModifiedHistory =
             MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              beforePillSheetGroup: pillSheetGroupV2,
-              afterPillSheetGroup: updatedPillSheetGroupV2,
-            );
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV2,
+          afterPillSheetGroup: updatedPillSheetGroupV2,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(
@@ -494,11 +494,11 @@ void main() {
 
         final batchSetPillSheetModifiedHistory =
             MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              beforePillSheetGroup: pillSheetGroupV2,
-              afterPillSheetGroup: updatedPillSheetGroupV2,
-            );
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV2,
+          afterPillSheetGroup: updatedPillSheetGroupV2,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(
@@ -598,11 +598,11 @@ void main() {
 
         final batchSetPillSheetModifiedHistory =
             MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              beforePillSheetGroup: pillSheetGroupV2,
-              afterPillSheetGroup: updatedPillSheetGroupV2,
-            );
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV2,
+          afterPillSheetGroup: updatedPillSheetGroupV2,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(
@@ -702,11 +702,11 @@ void main() {
 
         final batchSetPillSheetModifiedHistory =
             MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              beforePillSheetGroup: pillSheetGroupV2,
-              afterPillSheetGroup: updatedPillSheetGroupV2,
-            );
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV2,
+          afterPillSheetGroup: updatedPillSheetGroupV2,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(
@@ -810,11 +810,11 @@ void main() {
 
         final batchSetPillSheetModifiedHistory =
             MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              beforePillSheetGroup: pillSheetGroupV2,
-              afterPillSheetGroup: updatedPillSheetGroupV2,
-            );
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV2,
+          afterPillSheetGroup: updatedPillSheetGroupV2,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(
@@ -916,11 +916,11 @@ void main() {
 
         final batchSetPillSheetModifiedHistory =
             MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              beforePillSheetGroup: pillSheetGroupV2,
-              afterPillSheetGroup: updatedPillSheetGroupV2,
-            );
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV2,
+          afterPillSheetGroup: updatedPillSheetGroupV2,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(
@@ -1022,11 +1022,11 @@ void main() {
 
         final batchSetPillSheetModifiedHistory =
             MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              beforePillSheetGroup: pillSheetGroupV2,
-              afterPillSheetGroup: updatedPillSheetGroupV2,
-            );
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV2,
+          afterPillSheetGroup: updatedPillSheetGroupV2,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(
@@ -1128,11 +1128,11 @@ void main() {
 
         final batchSetPillSheetModifiedHistory =
             MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              beforePillSheetGroup: pillSheetGroupV2,
-              afterPillSheetGroup: updatedPillSheetGroupV2,
-            );
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV2,
+          afterPillSheetGroup: updatedPillSheetGroupV2,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(

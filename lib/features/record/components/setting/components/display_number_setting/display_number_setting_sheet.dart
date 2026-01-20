@@ -35,16 +35,11 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
       text: '${end.value ?? pillSheetGroup.sequentialEstimatedEndPillNumber}',
     );
 
-    final beforePillSheetGroup = ref
-        .watch(beforePillSheetGroupProvider)
-        .valueOrNull;
+    final beforePillSheetGroup = ref.watch(beforePillSheetGroupProvider).valueOrNull;
 
     const estimatedKeyboardHeight = 216;
     const offset = 24;
-    final height =
-        1 -
-        ((estimatedKeyboardHeight - offset) /
-            MediaQuery.of(context).size.height);
+    final height = 1 - ((estimatedKeyboardHeight - offset) / MediaQuery.of(context).size.height);
 
     final batchFactory = ref.watch(batchFactoryProvider);
     final batchSetPillSheetGroup = ref.watch(batchSetPillSheetGroupProvider);
@@ -92,8 +87,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                       await _submit(
                         batchFactory: batchFactory,
                         batchSetPillSheetGroup: batchSetPillSheetGroup,
-                        batchSetPillSheetModifiedHistory:
-                            batchSetPillSheetModifiedHistory,
+                        batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
                         begin: begin,
                         end: end,
                       );
@@ -203,8 +197,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                           children: [
                             Text(
                               L.estimatedEndPillNumber(
-                                beforePillSheetGroup
-                                    .sequentialEstimatedEndPillNumber,
+                                beforePillSheetGroup.sequentialEstimatedEndPillNumber,
                               ),
                               style: const TextStyle(
                                 fontFamily: FontFamily.japanese,
@@ -348,8 +341,7 @@ void showDisplayNumberSettingSheet(
   analytics.logScreenView(screenName: 'DisplayNumberSettingSheet');
   showModalBottomSheet(
     context: context,
-    builder: (context) =>
-        DisplayNumberSettingSheet(pillSheetGroup: pillSheetGroup),
+    builder: (context) => DisplayNumberSettingSheet(pillSheetGroup: pillSheetGroup),
     backgroundColor: Colors.transparent,
     isScrollControlled: true,
   );

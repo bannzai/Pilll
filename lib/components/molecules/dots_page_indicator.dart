@@ -22,8 +22,7 @@ class DotsIndicator extends AnimatedWidget {
   }
 
   Widget _buildDot(int index) {
-    final isSelected =
-        index == (controller.page ?? controller.initialPage).round();
+    final isSelected = index == (controller.page ?? controller.initialPage).round();
     return SizedBox(
       width: 25,
       child: Center(

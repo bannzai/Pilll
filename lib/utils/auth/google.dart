@@ -53,9 +53,7 @@ final isGoogleLinkedProvider = Provider((ref) {
 });
 
 bool isLinkedGoogleFor(User user) {
-  return user.providerData
-      .where((element) => element.providerId == GoogleAuthProvider.PROVIDER_ID)
-      .isNotEmpty;
+  return user.providerData.where((element) => element.providerId == GoogleAuthProvider.PROVIDER_ID).isNotEmpty;
 }
 
 Future<void> googleReauthentification() async {

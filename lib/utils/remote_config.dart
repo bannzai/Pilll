@@ -23,35 +23,20 @@ Future<void> setupRemoteConfig() async {
       ),
       // [RemoteConfigDefaultValues] でgrepした場所に全て設定する
       remoteConfig.setDefaults({
-        RemoteConfigKeys.isPaywallFirst:
-            RemoteConfigParameterDefaultValues.isPaywallFirst,
-        RemoteConfigKeys.skipInitialSetting:
-            RemoteConfigParameterDefaultValues.skipInitialSetting,
-        RemoteConfigKeys.trialDeadlineDateOffsetDay:
-            RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,
-        RemoteConfigKeys.discountEntitlementOffsetDay:
-            RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay,
-        RemoteConfigKeys.discountCountdownBoundaryHour:
-            RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
-        RemoteConfigKeys.releasedVersion:
-            RemoteConfigParameterDefaultValues.releasedVersion,
-        RemoteConfigKeys.premiumIntroductionPattern:
-            RemoteConfigParameterDefaultValues.premiumIntroductionPattern,
-        RemoteConfigKeys.premiumIntroductionShowsAppStoreReviewCard:
-            RemoteConfigParameterDefaultValues
-                .premiumIntroductionShowsAppStoreReviewCard,
-        RemoteConfigKeys.specialOfferingUserCreationDateTimeOffset:
-            RemoteConfigParameterDefaultValues
-                .specialOfferingUserCreationDateTimeOffset,
+        RemoteConfigKeys.isPaywallFirst: RemoteConfigParameterDefaultValues.isPaywallFirst,
+        RemoteConfigKeys.skipInitialSetting: RemoteConfigParameterDefaultValues.skipInitialSetting,
+        RemoteConfigKeys.trialDeadlineDateOffsetDay: RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,
+        RemoteConfigKeys.discountEntitlementOffsetDay: RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay,
+        RemoteConfigKeys.discountCountdownBoundaryHour: RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
+        RemoteConfigKeys.releasedVersion: RemoteConfigParameterDefaultValues.releasedVersion,
+        RemoteConfigKeys.premiumIntroductionPattern: RemoteConfigParameterDefaultValues.premiumIntroductionPattern,
+        RemoteConfigKeys.premiumIntroductionShowsAppStoreReviewCard: RemoteConfigParameterDefaultValues.premiumIntroductionShowsAppStoreReviewCard,
+        RemoteConfigKeys.specialOfferingUserCreationDateTimeOffset: RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffset,
         RemoteConfigKeys.specialOfferingUserCreationDateTimeOffsetSince:
-            RemoteConfigParameterDefaultValues
-                .specialOfferingUserCreationDateTimeOffsetSince,
+            RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetSince,
         RemoteConfigKeys.specialOfferingUserCreationDateTimeOffsetUntil:
-            RemoteConfigParameterDefaultValues
-                .specialOfferingUserCreationDateTimeOffsetUntil,
-        RemoteConfigKeys.specialOffering2UseAlternativeText:
-            RemoteConfigParameterDefaultValues
-                .specialOffering2UseAlternativeText,
+            RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil,
+        RemoteConfigKeys.specialOffering2UseAlternativeText: RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
       }),
     ).wait;
     // 項目が増えて来てfetchが重たくなっていてアプリが開かない説があるので非同期にする。計測はしてない。since: 2025-06-25

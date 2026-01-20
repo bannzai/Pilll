@@ -97,12 +97,12 @@ void main() {
 
           final batchSetPillSheetModifiedHistory =
               MockBatchSetPillSheetModifiedHistory();
-          final history =
-              PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-                isQuickRecord: false,
-                beforePillSheetGroup: pillSheetGroup,
-                afterPillSheetGroup: updatedPillSheetGroup,
-              );
+          final history = PillSheetModifiedHistoryServiceActionFactory
+              .createTakenPillAction(
+            isQuickRecord: false,
+            beforePillSheetGroup: pillSheetGroup,
+            afterPillSheetGroup: updatedPillSheetGroup,
+          );
           when(
             batchSetPillSheetModifiedHistory(batch, history),
           ).thenReturn(null);
@@ -206,12 +206,12 @@ void main() {
 
           final batchSetPillSheetModifiedHistory =
               MockBatchSetPillSheetModifiedHistory();
-          final history =
-              PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-                isQuickRecord: false,
-                beforePillSheetGroup: pillSheetGroupV2,
-                afterPillSheetGroup: updatedPillSheetGroupV2,
-              );
+          final history = PillSheetModifiedHistoryServiceActionFactory
+              .createTakenPillAction(
+            isQuickRecord: false,
+            beforePillSheetGroup: pillSheetGroupV2,
+            afterPillSheetGroup: updatedPillSheetGroupV2,
+          );
           when(
             batchSetPillSheetModifiedHistory(batch, history),
           ).thenReturn(null);
@@ -302,12 +302,12 @@ void main() {
 
           final batchSetPillSheetModifiedHistory =
               MockBatchSetPillSheetModifiedHistory();
-          final history =
-              PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-                isQuickRecord: false,
-                beforePillSheetGroup: pillSheetGroupV2,
-                afterPillSheetGroup: updatedPillSheetGroupV2,
-              );
+          final history = PillSheetModifiedHistoryServiceActionFactory
+              .createTakenPillAction(
+            isQuickRecord: false,
+            beforePillSheetGroup: pillSheetGroupV2,
+            afterPillSheetGroup: updatedPillSheetGroupV2,
+          );
           when(
             batchSetPillSheetModifiedHistory(batch, history),
           ).thenReturn(null);
@@ -565,12 +565,12 @@ void main() {
 
           final batchSetPillSheetModifiedHistory =
               MockBatchSetPillSheetModifiedHistory();
-          final history =
-              PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-                isQuickRecord: false,
-                beforePillSheetGroup: pillSheetGroupV2,
-                afterPillSheetGroup: updatedPillSheetGroupV2,
-              );
+          final history = PillSheetModifiedHistoryServiceActionFactory
+              .createTakenPillAction(
+            isQuickRecord: false,
+            beforePillSheetGroup: pillSheetGroupV2,
+            afterPillSheetGroup: updatedPillSheetGroupV2,
+          );
           when(
             batchSetPillSheetModifiedHistory(batch, history),
           ).thenReturn(null);
@@ -623,8 +623,8 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final updatedActivePillSheet = (activePillSheet as PillSheetV1)
-            .copyWith(lastTakenDate: takenDate);
+        final updatedActivePillSheet =
+            (activePillSheet as PillSheetV1).copyWith(lastTakenDate: takenDate);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
         final updatedPillSheetGroup = pillSheetGroup.copyWith(
@@ -642,10 +642,10 @@ void main() {
             MockBatchSetPillSheetModifiedHistory();
         final history =
             PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-              isQuickRecord: false,
-              beforePillSheetGroup: pillSheetGroup,
-              afterPillSheetGroup: updatedPillSheetGroup,
-            );
+          isQuickRecord: false,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: updatedPillSheetGroup,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final takePill = TakePill(
@@ -738,12 +738,12 @@ void main() {
 
           final batchSetPillSheetModifiedHistory =
               MockBatchSetPillSheetModifiedHistory();
-          final history =
-              PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-                isQuickRecord: false,
-                beforePillSheetGroup: pillSheetGroup,
-                afterPillSheetGroup: updatedPillSheetGroup,
-              );
+          final history = PillSheetModifiedHistoryServiceActionFactory
+              .createTakenPillAction(
+            isQuickRecord: false,
+            beforePillSheetGroup: pillSheetGroup,
+            afterPillSheetGroup: updatedPillSheetGroup,
+          );
           when(
             batchSetPillSheetModifiedHistory(batch, history),
           ).thenReturn(null);
@@ -806,12 +806,12 @@ void main() {
 
           final batchSetPillSheetModifiedHistory =
               MockBatchSetPillSheetModifiedHistory();
-          final history =
-              PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-                isQuickRecord: false,
-                beforePillSheetGroup: pillSheetGroup,
-                afterPillSheetGroup: updatedPillSheetGroup,
-              );
+          final history = PillSheetModifiedHistoryServiceActionFactory
+              .createTakenPillAction(
+            isQuickRecord: false,
+            beforePillSheetGroup: pillSheetGroup,
+            afterPillSheetGroup: updatedPillSheetGroup,
+          );
           when(
             batchSetPillSheetModifiedHistory(batch, history),
           ).thenReturn(null);
@@ -881,12 +881,12 @@ void main() {
 
           final batchSetPillSheetModifiedHistory =
               MockBatchSetPillSheetModifiedHistory();
-          final history =
-              PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-                isQuickRecord: false,
-                beforePillSheetGroup: pillSheetGroup,
-                afterPillSheetGroup: updatedPillSheetGroup,
-              );
+          final history = PillSheetModifiedHistoryServiceActionFactory
+              .createTakenPillAction(
+            isQuickRecord: false,
+            beforePillSheetGroup: pillSheetGroup,
+            afterPillSheetGroup: updatedPillSheetGroup,
+          );
           when(
             batchSetPillSheetModifiedHistory(batch, history),
           ).thenReturn(null);
@@ -933,8 +933,8 @@ void main() {
 
         final updatedPreviousPillSheet = (previousPillSheet as PillSheetV1)
             .copyWith(lastTakenDate: previousPillSheet.estimatedEndTakenDate);
-        final updatedActivePillSheet = (activePillSheet as PillSheetV1)
-            .copyWith(lastTakenDate: takenDate);
+        final updatedActivePillSheet =
+            (activePillSheet as PillSheetV1).copyWith(lastTakenDate: takenDate);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
         final updatedPillSheetGroup = pillSheetGroup.copyWith(
@@ -952,10 +952,10 @@ void main() {
             MockBatchSetPillSheetModifiedHistory();
         final history =
             PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-              isQuickRecord: false,
-              beforePillSheetGroup: pillSheetGroup,
-              afterPillSheetGroup: updatedPillSheetGroup,
-            );
+          isQuickRecord: false,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: updatedPillSheetGroup,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final takePill = TakePill(
@@ -1016,12 +1016,12 @@ void main() {
 
           final batchSetPillSheetModifiedHistory =
               MockBatchSetPillSheetModifiedHistory();
-          final history =
-              PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-                isQuickRecord: false,
-                beforePillSheetGroup: pillSheetGroup,
-                afterPillSheetGroup: updatedPillSheetGroup,
-              );
+          final history = PillSheetModifiedHistoryServiceActionFactory
+              .createTakenPillAction(
+            isQuickRecord: false,
+            beforePillSheetGroup: pillSheetGroup,
+            afterPillSheetGroup: updatedPillSheetGroup,
+          );
           when(
             batchSetPillSheetModifiedHistory(batch, history),
           ).thenReturn(null);
@@ -1056,8 +1056,8 @@ void main() {
           previousPillSheet = (previousPillSheet as PillSheetV1).copyWith(
             lastTakenDate: previousPillSheetLastTakenDate,
           );
-          final activePillSheetLastTakenDate = activePillSheet.beginDate
-              .subtract(const Duration(days: 1));
+          final activePillSheetLastTakenDate =
+              activePillSheet.beginDate.subtract(const Duration(days: 1));
           activePillSheet = (activePillSheet as PillSheetV1).copyWith(
             lastTakenDate: activePillSheetLastTakenDate,
           );
@@ -1097,12 +1097,12 @@ void main() {
 
           final batchSetPillSheetModifiedHistory =
               MockBatchSetPillSheetModifiedHistory();
-          final history =
-              PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-                isQuickRecord: false,
-                beforePillSheetGroup: pillSheetGroup,
-                afterPillSheetGroup: updatedPillSheetGroup,
-              );
+          final history = PillSheetModifiedHistoryServiceActionFactory
+              .createTakenPillAction(
+            isQuickRecord: false,
+            beforePillSheetGroup: pillSheetGroup,
+            afterPillSheetGroup: updatedPillSheetGroup,
+          );
           when(
             batchSetPillSheetModifiedHistory(batch, history),
           ).thenReturn(null);
@@ -1191,12 +1191,12 @@ void main() {
 
           final batchSetPillSheetModifiedHistory =
               MockBatchSetPillSheetModifiedHistory();
-          final history =
-              PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-                isQuickRecord: false,
-                beforePillSheetGroup: pillSheetGroup,
-                afterPillSheetGroup: updatedPillSheetGroup,
-              );
+          final history = PillSheetModifiedHistoryServiceActionFactory
+              .createTakenPillAction(
+            isQuickRecord: false,
+            beforePillSheetGroup: pillSheetGroup,
+            afterPillSheetGroup: updatedPillSheetGroup,
+          );
           when(
             batchSetPillSheetModifiedHistory(batch, history),
           ).thenReturn(null);
@@ -1226,18 +1226,14 @@ void main() {
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(mockToday);
 
-        previousPillSheet =
-            (previousPillSheet.copyWith(
-                      beginDate: DateTime.parse("2022-06-23T00:00:00"),
-                    )
-                    as PillSheetV1)
-                .copyWith(lastTakenDate: DateTime.parse("2022-07-20T00:00:00"));
-        activePillSheet =
-            (activePillSheet.copyWith(
-                      beginDate: DateTime.parse("2022-07-21T00:00:00"),
-                    )
-                    as PillSheetV1)
-                .copyWith(lastTakenDate: DateTime.parse("2022-08-11"));
+        previousPillSheet = (previousPillSheet.copyWith(
+          beginDate: DateTime.parse("2022-06-23T00:00:00"),
+        ) as PillSheetV1)
+            .copyWith(lastTakenDate: DateTime.parse("2022-07-20T00:00:00"));
+        activePillSheet = (activePillSheet.copyWith(
+          beginDate: DateTime.parse("2022-07-21T00:00:00"),
+        ) as PillSheetV1)
+            .copyWith(lastTakenDate: DateTime.parse("2022-08-11"));
         activePillSheet = activePillSheet.copyWith(
           restDurations: [
             RestDuration(
@@ -1295,8 +1291,8 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final updatedActivePillSheet = (activePillSheet as PillSheetV1)
-            .copyWith(lastTakenDate: takenDate);
+        final updatedActivePillSheet =
+            (activePillSheet as PillSheetV1).copyWith(lastTakenDate: takenDate);
 
         final updatedPillSheetGroup = pillSheetGroup.copyWith(
           pillSheets: [updatedActivePillSheet],
@@ -1310,10 +1306,10 @@ void main() {
             MockBatchSetPillSheetModifiedHistory();
         final history =
             PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-              isQuickRecord: false,
-              beforePillSheetGroup: pillSheetGroup,
-              afterPillSheetGroup: updatedPillSheetGroup,
-            );
+          isQuickRecord: false,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: updatedPillSheetGroup,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final takePill = TakePill(
@@ -1386,9 +1382,8 @@ void main() {
         );
 
         // 今日（2日目）を記録すると、1日目も完了し、2日目は1回記録される
-        final result =
-            pillSheet.takenPillSheet(DateTime.parse("2022-07-25"))
-                as PillSheetV2;
+        final result = pillSheet.takenPillSheet(DateTime.parse("2022-07-25"))
+            as PillSheetV2;
 
         // 1日目(index=0): 既存の1回 + 追加の1回 = 2回で完了
         expect(result.pills[0].pillTakens.length, 2);

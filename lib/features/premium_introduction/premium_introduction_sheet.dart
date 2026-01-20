@@ -33,8 +33,7 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
       ref.watch(purchaseOfferingsProvider),
       ref.watch(userProvider),
     ).when(
-      data: (data) =>
-          PremiumIntroductionSheetBody(offerings: data.$1, user: data.$2),
+      data: (data) => PremiumIntroductionSheetBody(offerings: data.$1, user: data.$2),
       error: (error, stackTrace) => UniversalErrorPage(
         error: error,
         reload: () {
@@ -113,13 +112,10 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                             if (monthlyPremiumPackage != null)
                               PremiumIntroductionDiscountRow(
                                 monthlyPremiumPackage: monthlyPremiumPackage,
-                                discountEntitlementDeadlineDate:
-                                    user.discountEntitlementDeadlineDate,
+                                discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate,
                               ),
                           const SizedBox(height: 12),
-                          if (monthlyPremiumPackage != null &&
-                              monthlyPackage != null &&
-                              annualPackage != null)
+                          if (monthlyPremiumPackage != null && monthlyPackage != null && annualPackage != null)
                             PurchaseButtons(
                               offeringType: offeringType,
                               monthlyPackage: monthlyPackage,

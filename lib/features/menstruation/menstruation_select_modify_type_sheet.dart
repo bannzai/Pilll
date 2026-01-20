@@ -71,9 +71,7 @@ class MenstruationSelectModifyTypeSheet extends StatelessWidget {
               height: _tileHeight * MenstruationSelectModifyType.values.length,
               child: ListView(
                 physics: const NeverScrollableScrollPhysics(),
-                children: MenstruationSelectModifyType.values
-                    .map((e) => _tile(e))
-                    .toList(),
+                children: MenstruationSelectModifyType.values.map((e) => _tile(e)).toList(),
               ),
             ),
           ],

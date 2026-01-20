@@ -31,8 +31,7 @@ final firebaseSignInOrCurrentUserProvider = FutureProvider<User>((ref) async {
   } else {
     analytics.logEvent(name: 'cached_current_user_not_exists');
 
-    final anonymousUserCredential = await FirebaseAuth.instance
-        .signInAnonymously();
+    final anonymousUserCredential = await FirebaseAuth.instance.signInAnonymously();
     analytics.logEvent(
       name: 'signin_anonymously',
       parameters: _logginParameters(anonymousUserCredential.user),
@@ -57,8 +56,7 @@ final firebaseSignInOrCurrentUserProvider = FutureProvider<User>((ref) async {
 });
 
 final isLinkedProvider = Provider(
-  (ref) =>
-      ref.watch(isAppleLinkedProvider) || ref.watch(isGoogleLinkedProvider),
+  (ref) => ref.watch(isAppleLinkedProvider) || ref.watch(isGoogleLinkedProvider),
 );
 
 Map<String, dynamic> _logginParameters(User? currentUser) {
@@ -69,11 +67,7 @@ Map<String, dynamic> _logginParameters(User? currentUser) {
   return {
     'uid': currentUser.uid,
     'isAnonymous': currentUser.isAnonymous,
-    'hasGoogleProviderData': currentUser.providerData
-        .where((element) => element.providerId == googleProviderID)
-        .isNotEmpty,
-    'hasAppleProviderData': currentUser.providerData
-        .where((element) => element.providerId == AppleAuthProvider.PROVIDER_ID)
-        .isNotEmpty,
+    'hasGoogleProviderData': currentUser.providerData.where((element) => element.providerId == googleProviderID).isNotEmpty,
+    'hasAppleProviderData': currentUser.providerData.where((element) => element.providerId == AppleAuthProvider.PROVIDER_ID).isNotEmpty,
   };
 }

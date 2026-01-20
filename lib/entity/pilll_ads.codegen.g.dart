@@ -6,14 +6,9 @@ part of 'pilll_ads.codegen.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PilllAdsImpl _$$PilllAdsImplFromJson(Map<String, dynamic> json) =>
-    _$PilllAdsImpl(
-      startDateTime: NonNullTimestampConverter.timestampToDateTime(
-        json['startDateTime'] as Timestamp,
-      ),
-      endDateTime: NonNullTimestampConverter.timestampToDateTime(
-        json['endDateTime'] as Timestamp,
-      ),
+_$PilllAdsImpl _$$PilllAdsImplFromJson(Map<String, dynamic> json) => _$PilllAdsImpl(
+      startDateTime: NonNullTimestampConverter.timestampToDateTime(json['startDateTime'] as Timestamp),
+      endDateTime: NonNullTimestampConverter.timestampToDateTime(json['endDateTime'] as Timestamp),
       description: json['description'] as String,
       imageURL: json['imageURL'] as String?,
       destinationURL: json['destinationURL'] as String,
@@ -22,14 +17,9 @@ _$PilllAdsImpl _$$PilllAdsImplFromJson(Map<String, dynamic> json) =>
       chevronRightColor: json['chevronRightColor'] as String? ?? 'FFFFFF',
     );
 
-Map<String, dynamic> _$$PilllAdsImplToJson(_$PilllAdsImpl instance) =>
-    <String, dynamic>{
-      'startDateTime': NonNullTimestampConverter.dateTimeToTimestamp(
-        instance.startDateTime,
-      ),
-      'endDateTime': NonNullTimestampConverter.dateTimeToTimestamp(
-        instance.endDateTime,
-      ),
+Map<String, dynamic> _$$PilllAdsImplToJson(_$PilllAdsImpl instance) => <String, dynamic>{
+      'startDateTime': NonNullTimestampConverter.dateTimeToTimestamp(instance.startDateTime),
+      'endDateTime': NonNullTimestampConverter.dateTimeToTimestamp(instance.endDateTime),
       'description': instance.description,
       'imageURL': instance.imageURL,
       'destinationURL': instance.destinationURL,

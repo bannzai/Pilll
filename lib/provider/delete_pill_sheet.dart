@@ -34,14 +34,11 @@ class DeletePillSheetGroup {
     final updatedPillSheet = activePillSheet.copyWith(
       deletedAt: DateTime.now(),
     );
-    final updatedPillSheetGroup = latestPillSheetGroup
-        .replaced(updatedPillSheet)
-        .copyWith(deletedAt: DateTime.now());
-    final history =
-        PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
-          beforePillSheetGroup: latestPillSheetGroup,
-          updatedPillSheetGroup: updatedPillSheetGroup,
-        );
+    final updatedPillSheetGroup = latestPillSheetGroup.replaced(updatedPillSheet).copyWith(deletedAt: DateTime.now());
+    final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+      beforePillSheetGroup: latestPillSheetGroup,
+      updatedPillSheetGroup: updatedPillSheetGroup,
+    );
     batchSetPillSheetModifiedHistory(batch, history);
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
     await batch.commit();

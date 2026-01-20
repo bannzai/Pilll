@@ -89,33 +89,25 @@ class HomePageBody extends HookConsumerWidget {
     });
 
     final isJaLocale = ref.watch(isJaLocaleProvider);
-    final isAlreadyAnsweredPreStoreReviewModal =
-        sharedPreferences.getBool(
+    final isAlreadyAnsweredPreStoreReviewModal = sharedPreferences.getBool(
           BoolKey.isAlreadyAnsweredPreStoreReviewModal,
         ) ??
         false;
-    final totalCountOfActionForTakenPill =
-        sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
+    final totalCountOfActionForTakenPill = sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
     final disableShouldAskCancelReason = ref.watch(
       disableShouldAskCancelReasonProvider,
     );
     final shouldAskCancelReason = user.shouldAskCancelReason;
-    final monthlyPremiumIntroductionSheetPresentedDateMilliSeconds =
-        sharedPreferences.getInt(
+    final monthlyPremiumIntroductionSheetPresentedDateMilliSeconds = sharedPreferences.getInt(
           IntKey.monthlyPremiumIntroductionSheetPresentedDateMilliSeconds,
         ) ??
         0;
     final isOneMonthPassedSinceLastDisplayedMonthlyPremiumIntroductionSheet =
-        now().millisecondsSinceEpoch -
-            monthlyPremiumIntroductionSheetPresentedDateMilliSeconds >
-        1000 * 60 * 60 * 24 * 30;
+        now().millisecondsSinceEpoch - monthlyPremiumIntroductionSheetPresentedDateMilliSeconds > 1000 * 60 * 60 * 24 * 30;
     final bool isOneMonthPassedTrialDeadline;
     final trialDeadlineDate = user.trialDeadlineDate;
     if (trialDeadlineDate != null) {
-      isOneMonthPassedTrialDeadline =
-          now().millisecondsSinceEpoch -
-              trialDeadlineDate.millisecondsSinceEpoch >
-          1000 * 60 * 60 * 24 * 30;
+      isOneMonthPassedTrialDeadline = now().millisecondsSinceEpoch - trialDeadlineDate.millisecondsSinceEpoch > 1000 * 60 * 60 * 24 * 30;
     } else {
       isOneMonthPassedTrialDeadline = false;
     }
@@ -127,8 +119,7 @@ class HomePageBody extends HookConsumerWidget {
           await Navigator.of(context).push(
             WebViewPageRoute.route(
               title: L.requestForCancelSurvey,
-              url:
-                  'https://docs.google.com/forms/d/e/1FAIpQLScmxg1amJik_8viuPI3MeDCzz7FuBDXeIHWzorbXRKR38yp7g/viewform',
+              url: 'https://docs.google.com/forms/d/e/1FAIpQLScmxg1amJik_8viuPI3MeDCzz7FuBDXeIHWzorbXRKR38yp7g/viewform',
             ),
           );
           disableShouldAskCancelReason();
@@ -137,9 +128,7 @@ class HomePageBody extends HookConsumerWidget {
             context: context,
             builder: (_) => const ChurnSurveyCompleteDialog(),
           );
-        } else if (!isAlreadyAnsweredPreStoreReviewModal &&
-            totalCountOfActionForTakenPill > 10 &&
-            isJaLocale) {
+        } else if (!isAlreadyAnsweredPreStoreReviewModal && totalCountOfActionForTakenPill > 10 && isJaLocale) {
           showModalBottomSheet(
             context: context,
             backgroundColor: Colors.transparent,
@@ -149,9 +138,7 @@ class HomePageBody extends HookConsumerWidget {
             BoolKey.isAlreadyAnsweredPreStoreReviewModal,
             true,
           );
-        } else if (isOneMonthPassedTrialDeadline &&
-            isOneMonthPassedSinceLastDisplayedMonthlyPremiumIntroductionSheet &&
-            !user.premiumOrTrial) {
+        } else if (isOneMonthPassedTrialDeadline && isOneMonthPassedSinceLastDisplayedMonthlyPremiumIntroductionSheet && !user.premiumOrTrial) {
           if (!user.premiumOrTrial) {
             showPremiumIntroductionSheet(context);
             sharedPreferences.setInt(
@@ -219,17 +206,13 @@ class HomePageBody extends HookConsumerWidget {
                   Tab(
                     text: L.pill,
                     icon: SvgPicture.asset(
-                      tabIndex.value == HomePageTabType.record.index
-                          ? 'images/tab_icon_pill_enable.svg'
-                          : 'images/tab_icon_pill_disable.svg',
+                      tabIndex.value == HomePageTabType.record.index ? 'images/tab_icon_pill_enable.svg' : 'images/tab_icon_pill_disable.svg',
                     ),
                   ),
                   Tab(
                     text: L.menstruation,
                     icon: SvgPicture.asset(
-                      tabIndex.value == HomePageTabType.menstruation.index
-                          ? 'images/menstruation.svg'
-                          : 'images/menstruation_disable.svg',
+                      tabIndex.value == HomePageTabType.menstruation.index ? 'images/menstruation.svg' : 'images/menstruation_disable.svg',
                     ),
                   ),
                   Tab(
@@ -243,9 +226,7 @@ class HomePageBody extends HookConsumerWidget {
                   Tab(
                     text: L.settings,
                     icon: SvgPicture.asset(
-                      tabIndex.value == HomePageTabType.setting.index
-                          ? 'images/tab_icon_setting_enable.svg'
-                          : 'images/tab_icon_setting_disable.svg',
+                      tabIndex.value == HomePageTabType.setting.index ? 'images/tab_icon_setting_enable.svg' : 'images/tab_icon_setting_disable.svg',
                     ),
                   ),
                 ],

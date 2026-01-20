@@ -64,10 +64,7 @@ class CalendarPage extends HookConsumerWidget {
     return AsyncValueGroup.group6(
       ref.watch(
         pillSheetModifiedHistoriesWithLimitProvider(
-          limit:
-              CalendarPillSheetModifiedHistoryCardState
-                  .pillSheetModifiedHistoriesThreshold +
-              1,
+          limit: CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold + 1,
         ),
       ),
       ref.watch(userProvider),
@@ -99,17 +96,13 @@ class CalendarPage extends HookConsumerWidget {
 
 const double _shadowHeight = 2;
 const _monthlyCalendarHeight =
-    WeekdayBadgeConst.height +
-    (CalendarConstants.tileHeight + CalendarConstants.dividerHeight) *
-        CalendarConstants.maxLineCount +
-    _shadowHeight;
+    WeekdayBadgeConst.height + (CalendarConstants.tileHeight + CalendarConstants.dividerHeight) * CalendarConstants.maxLineCount + _shadowHeight;
 
 class _CalendarPageBody extends StatelessWidget {
   final List<PillSheetModifiedHistory> histories;
   final User user;
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
-  final List<CalendarScheduledMenstruationBandModel>
-  calendarScheduledMenstruationBandModels;
+  final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
   final DateTime displayedMonth;
   final Diary? todayDiary;
@@ -168,22 +161,16 @@ class _CalendarPageBody extends StatelessWidget {
                 physics: const PageScrollPhysics(),
                 children: List.generate(_calendarDataSourceLength, (index) {
                   // NOTE: 生理タブ上部のカレンダーの90日のデータと合わせて3index分の表示をフリープランとする
-                  final withInFreePlanMonth =
-                      _todayCalendarPageIndex + 3 >= index &&
-                      index >= _todayCalendarPageIndex - 3;
+                  final withInFreePlanMonth = _todayCalendarPageIndex + 3 >= index && index >= _todayCalendarPageIndex - 3;
                   return Stack(
                     children: [
                       MonthCalendarPager(
                         displayedMonth: displayedMonth,
-                        calendarMenstruationBandModels:
-                            calendarMenstruationBandModels,
-                        calendarScheduledMenstruationBandModels:
-                            calendarScheduledMenstruationBandModels,
-                        calendarNextPillSheetBandModels:
-                            calendarNextPillSheetBandModels,
+                        calendarMenstruationBandModels: calendarMenstruationBandModels,
+                        calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
+                        calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
                       ),
-                      if (!user.premiumOrTrial && !withInFreePlanMonth)
-                        const PremiumIntroductionOverlay(),
+                      if (!user.premiumOrTrial && !withInFreePlanMonth) const PremiumIntroductionOverlay(),
                     ],
                   );
                 }),
@@ -216,8 +203,7 @@ class MonthCalendarPager extends StatelessWidget {
 
   final DateTime displayedMonth;
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
-  final List<CalendarScheduledMenstruationBandModel>
-  calendarScheduledMenstruationBandModels;
+  final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
 
   @override
@@ -241,8 +227,7 @@ class MonthCalendarPager extends StatelessWidget {
           return CalendarWeekLine(
             dateRange: weekDateRange,
             calendarMenstruationBandModels: calendarMenstruationBandModels,
-            calendarScheduledMenstruationBandModels:
-                calendarScheduledMenstruationBandModels,
+            calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
             calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
             horizontalPadding: 0,
             day: (context, weekday, date) {

@@ -6,21 +6,12 @@ part of 'schedule.codegen.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ScheduleImpl _$$ScheduleImplFromJson(Map<String, dynamic> json) =>
-    _$ScheduleImpl(
+_$ScheduleImpl _$$ScheduleImplFromJson(Map<String, dynamic> json) => _$ScheduleImpl(
       id: json['id'] as String?,
       title: json['title'] as String,
-      date: NonNullTimestampConverter.timestampToDateTime(
-        json['date'] as Timestamp,
-      ),
-      localNotification: json['localNotification'] == null
-          ? null
-          : LocalNotification.fromJson(
-              json['localNotification'] as Map<String, dynamic>,
-            ),
-      createdDateTime: NonNullTimestampConverter.timestampToDateTime(
-        json['createdDateTime'] as Timestamp,
-      ),
+      date: NonNullTimestampConverter.timestampToDateTime(json['date'] as Timestamp),
+      localNotification: json['localNotification'] == null ? null : LocalNotification.fromJson(json['localNotification'] as Map<String, dynamic>),
+      createdDateTime: NonNullTimestampConverter.timestampToDateTime(json['createdDateTime'] as Timestamp),
     );
 
 Map<String, dynamic> _$$ScheduleImplToJson(_$ScheduleImpl instance) {
@@ -36,26 +27,16 @@ Map<String, dynamic> _$$ScheduleImplToJson(_$ScheduleImpl instance) {
   val['title'] = instance.title;
   val['date'] = NonNullTimestampConverter.dateTimeToTimestamp(instance.date);
   val['localNotification'] = instance.localNotification?.toJson();
-  val['createdDateTime'] = NonNullTimestampConverter.dateTimeToTimestamp(
-    instance.createdDateTime,
-  );
+  val['createdDateTime'] = NonNullTimestampConverter.dateTimeToTimestamp(instance.createdDateTime);
   return val;
 }
 
-_$LocalNotificationImpl _$$LocalNotificationImplFromJson(
-  Map<String, dynamic> json,
-) => _$LocalNotificationImpl(
-  localNotificationID: (json['localNotificationID'] as num).toInt(),
-  remindDateTime: NonNullTimestampConverter.timestampToDateTime(
-    json['remindDateTime'] as Timestamp,
-  ),
-);
+_$LocalNotificationImpl _$$LocalNotificationImplFromJson(Map<String, dynamic> json) => _$LocalNotificationImpl(
+      localNotificationID: (json['localNotificationID'] as num).toInt(),
+      remindDateTime: NonNullTimestampConverter.timestampToDateTime(json['remindDateTime'] as Timestamp),
+    );
 
-Map<String, dynamic> _$$LocalNotificationImplToJson(
-  _$LocalNotificationImpl instance,
-) => <String, dynamic>{
-  'localNotificationID': instance.localNotificationID,
-  'remindDateTime': NonNullTimestampConverter.dateTimeToTimestamp(
-    instance.remindDateTime,
-  ),
-};
+Map<String, dynamic> _$$LocalNotificationImplToJson(_$LocalNotificationImpl instance) => <String, dynamic>{
+      'localNotificationID': instance.localNotificationID,
+      'remindDateTime': NonNullTimestampConverter.dateTimeToTimestamp(instance.remindDateTime),
+    };

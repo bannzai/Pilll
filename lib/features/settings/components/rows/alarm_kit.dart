@@ -78,8 +78,7 @@ class AlarmKitSetting extends HookConsumerWidget {
               try {
                 if (value) {
                   // AlarmKit有効時は権限リクエスト
-                  final hasPermission =
-                      await AlarmKitService.requestPermission();
+                  final hasPermission = await AlarmKitService.requestPermission();
                   if (hasPermission) {
                     final setSetting = ref.read(setSettingProvider);
                     await setSetting(setting.copyWith(useAlarmKit: true));
@@ -123,8 +122,7 @@ class AlarmKitSetting extends HookConsumerWidget {
               }
             },
           ),
-          if (isLoading.value)
-            const SizedBox(width: 40, height: 40, child: Indicator()),
+          if (isLoading.value) const SizedBox(width: 40, height: 40, child: Indicator()),
         ],
       ),
     );

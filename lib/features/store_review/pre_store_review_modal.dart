@@ -65,9 +65,7 @@ class PreStoreReviewModal extends HookConsumerWidget {
                       analytics.logEvent(
                         name: 'submit_pre_store_review_modal_good',
                       );
-                      ref
-                          .read(sharedPreferencesProvider)
-                          .setBool(BoolKey.isPreStoreReviewGoodAnswer, true);
+                      ref.read(sharedPreferencesProvider).setBool(BoolKey.isPreStoreReviewGoodAnswer, true);
                       break;
                     case PreStoreReviewModalSelection.bad:
                       analytics.logEvent(
@@ -114,9 +112,7 @@ class PreStoreReviewModal extends HookConsumerWidget {
           Container(
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
-              color: isSelected
-                  ? AppColors.primary.withOpacity(0.08)
-                  : AppColors.white,
+              color: isSelected ? AppColors.primary.withOpacity(0.08) : AppColors.white,
               border: Border.all(
                 width: isSelected ? 2 : 1,
                 color: isSelected ? AppColors.primary : AppColors.border,
@@ -126,9 +122,7 @@ class PreStoreReviewModal extends HookConsumerWidget {
             child: Row(
               children: [
                 SvgPicture.asset(
-                  target == PreStoreReviewModalSelection.good
-                      ? 'images/laugh.svg'
-                      : 'images/angry.svg',
+                  target == PreStoreReviewModalSelection.good ? 'images/laugh.svg' : 'images/angry.svg',
                   colorFilter: ColorFilter.mode(
                     isSelected ? AppColors.primary : Colors.grey,
                     BlendMode.srcIn,
@@ -136,9 +130,7 @@ class PreStoreReviewModal extends HookConsumerWidget {
                 ),
                 const SizedBox(height: 16),
                 Text(
-                  target == PreStoreReviewModalSelection.good
-                      ? L.satisfied
-                      : L.notSatisfied,
+                  target == PreStoreReviewModalSelection.good ? L.satisfied : L.notSatisfied,
                   style: const TextStyle(
                     color: AppColors.primary,
                     fontWeight: FontWeight.bold,
@@ -197,12 +189,10 @@ class _ThanksDialog extends StatelessWidget {
             final String uri;
             switch (goodOrBad) {
               case PreStoreReviewModalSelection.good:
-                uri =
-                    'https://docs.google.com/forms/d/e/1FAIpQLScljawYCa-f13D94TvJXOoBQ_6lLBtwSpML5c55Zr115ukgeQ/viewform';
+                uri = 'https://docs.google.com/forms/d/e/1FAIpQLScljawYCa-f13D94TvJXOoBQ_6lLBtwSpML5c55Zr115ukgeQ/viewform';
                 break;
               case PreStoreReviewModalSelection.bad:
-                uri =
-                    'https://docs.google.com/forms/d/e/1FAIpQLScdNJ5VsiWCNLk7LvSUJpb8ps0DHFnsvXVH8KbPWp9XDtuVMw/viewform';
+                uri = 'https://docs.google.com/forms/d/e/1FAIpQLScdNJ5VsiWCNLk7LvSUJpb8ps0DHFnsvXVH8KbPWp9XDtuVMw/viewform';
                 break;
             }
             await Navigator.of(context).push(

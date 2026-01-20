@@ -29,20 +29,14 @@ class DiscountPriceDeadline extends HookConsumerWidget {
     );
     final annualPackage = ref.watch(annualPackageProvider(user));
     final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider);
-    if (difference.inSeconds <= 0 ||
-        annualPackage == null ||
-        monthlyPremiumPackage == null) {
+    if (difference.inSeconds <= 0 || annualPackage == null || monthlyPremiumPackage == null) {
       return Container();
     }
 
     final countdown = discountPriceDeadlineCountdownString(difference);
     // NOTE: [DiscountPercent]
     final offPercentForMonthlyPremiumPackage =
-        ((1 -
-                    (annualPackage.storeProduct.price /
-                        (monthlyPremiumPackage.storeProduct.price * 12))) *
-                100)
-            .toInt();
+        ((1 - (annualPackage.storeProduct.price / (monthlyPremiumPackage.storeProduct.price * 12))) * 100).toInt();
 
     return Container(
       padding: const EdgeInsets.only(top: 10, bottom: 4, left: 8, right: 8),

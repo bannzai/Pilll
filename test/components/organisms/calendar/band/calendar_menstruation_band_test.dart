@@ -142,11 +142,9 @@ void main() {
                 child: Column(
                   children: [
                     // 全ての週を表示して確認
-                    for (
-                      var weekStart = DateTime(2025, 1, 5);
-                      weekStart.isBefore(DateTime(2025, 1, 26));
-                      weekStart = weekStart.add(const Duration(days: 7))
-                    )
+                    for (var weekStart = DateTime(2025, 1, 5);
+                        weekStart.isBefore(DateTime(2025, 1, 26));
+                        weekStart = weekStart.add(const Duration(days: 7)))
                       _buildWeekWidget(
                         DateRange(
                           weekStart,

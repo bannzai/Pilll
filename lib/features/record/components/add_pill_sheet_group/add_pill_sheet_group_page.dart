@@ -40,12 +40,11 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
     final displayNumberSetting = useState<PillSheetGroupDisplayNumberSetting?>(
       null,
     );
-    final initialPillTakenCount =
-        switch (pillSheetGroup?.pillSheets.firstOrNull) {
-          PillSheetV1() => 1,
-          PillSheetV2 v2 => v2.pills.first.takenCount,
-          null => 1,
-        };
+    final initialPillTakenCount = switch (pillSheetGroup?.pillSheets.firstOrNull) {
+      PillSheetV1() => 1,
+      PillSheetV2 v2 => v2.pills.first.takenCount,
+      null => 1,
+    };
     final pillTakenCount = useState(initialPillTakenCount);
 
     return Scaffold(
@@ -112,8 +111,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                             name: 'setting_delete_pill_sheet_group',
                             parameters: {'index': index},
                           );
-                          pillSheetTypes.value = [...pillSheetTypes.value]
-                            ..removeAt(index);
+                          pillSheetTypes.value = [...pillSheetTypes.value]..removeAt(index);
                         },
                       ),
                     ],
@@ -154,8 +152,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                                       setting: setting,
                                       pillSheetGroup: pillSheetGroup,
                                       pillSheetTypes: pillSheetTypes.value,
-                                      displayNumberSetting:
-                                          displayNumberSetting.value,
+                                      displayNumberSetting: displayNumberSetting.value,
                                       pillTakenCount: pillTakenCount.value,
                                     );
                                     await registerReminderLocalNotification();

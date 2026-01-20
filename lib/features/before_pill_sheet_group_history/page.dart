@@ -71,8 +71,7 @@ class _Page extends HookConsumerWidget {
     final currentPillSheet = useState(pillSheetGroup.pillSheets[0]);
     final pageController = usePageController(
       initialPage: 0,
-      viewportFraction:
-          (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width,
+      viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width,
     );
     pageController.addListener(() {
       final page = pageController.page?.toInt();
@@ -120,9 +119,7 @@ class _Page extends HookConsumerWidget {
             SizedBox(
               height: PillSheetViewLayout.calcHeight(
                 PillSheetViewLayout.mostLargePillSheetType(
-                  pillSheetGroup.pillSheets
-                      .map((e) => e.pillSheetType)
-                      .toList(),
+                  pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
                 ).numberOfLineInPillSheet,
                 false,
               ),
@@ -159,10 +156,9 @@ class _Page extends HookConsumerWidget {
             ],
             Padding(
               padding: const EdgeInsets.only(left: 24, right: 24),
-              child:
-                  BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList(
-                    pillSheet: currentPillSheet.value,
-                  ),
+              child: BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList(
+                pillSheet: currentPillSheet.value,
+              ),
             ),
           ],
         ),
@@ -171,8 +167,7 @@ class _Page extends HookConsumerWidget {
   }
 }
 
-extension BeforePillSheetGroupHistoryPageRoute
-    on BeforePillSheetGroupHistoryPage {
+extension BeforePillSheetGroupHistoryPageRoute on BeforePillSheetGroupHistoryPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: 'BeforePillSheetGroupHistoryPage'),
