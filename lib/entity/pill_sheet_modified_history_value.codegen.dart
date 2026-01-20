@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 
 part 'pill_sheet_modified_history_value.codegen.g.dart';
 part 'pill_sheet_modified_history_value.codegen.freezed.dart';
@@ -74,57 +75,137 @@ class PillSheetModifiedHistoryValue with _$PillSheetModifiedHistoryValue {
 }
 
 /// ピルシート作成時の履歴情報を記録するクラス
-/// v2ではbeforePillSheetGroup/afterPillSheetGroupから情報を取得するため、
-/// このクラスは後方互換性のために空の状態で保持される
+/// 新規ピルシートが作成された際の作成日時と対象シートIDを保存
 @freezed
 class CreatedPillSheetValue with _$CreatedPillSheetValue {
   const CreatedPillSheetValue._();
   @JsonSerializable(explicitToJson: true)
-  const factory CreatedPillSheetValue() = _CreatedPillSheetValue;
+  const factory CreatedPillSheetValue({
+    // The below properties are deprecated and added since v1.
+    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+    /// ピルシート作成日時（非推奨）
+    /// Firestoreタイムスタンプから自動変換される作成日時
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+    required DateTime pillSheetCreatedAt,
+
+    /// 作成されたピルシートのIDリスト（非推奨）
+    /// 複数シート同時作成に対応するためのIDリスト
+    @Default([]) List<String> pillSheetIDs,
+  }) = _CreatedPillSheetValue;
 
   factory CreatedPillSheetValue.fromJson(Map<String, dynamic> json) => _$CreatedPillSheetValueFromJson(json);
 }
 
 /// 最終服用日の自動記録時の履歴情報を記録するクラス
-/// v2ではbeforePillSheetGroup/afterPillSheetGroupから情報を取得するため、
-/// このクラスは後方互換性のために空の状態で保持される
+/// システムが自動的に最終服用日を更新した際のbefore/after情報を保存
 @freezed
 class AutomaticallyRecordedLastTakenDateValue with _$AutomaticallyRecordedLastTakenDateValue {
   const AutomaticallyRecordedLastTakenDateValue._();
   @JsonSerializable(explicitToJson: true)
-  const factory AutomaticallyRecordedLastTakenDateValue() = _AutomaticallyRecordedLastTakenDateValue;
+  const factory AutomaticallyRecordedLastTakenDateValue({
+    // The below properties are deprecated and added since v1.
+    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+    /// 変更前の最終服用日（非推奨、nullable）
+    /// 初回服用の場合はnullとなる
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+    DateTime? beforeLastTakenDate,
+
+    /// 変更後の最終服用日（非推奨）
+    /// 自動記録によって設定された新しい最終服用日
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+    required DateTime afterLastTakenDate,
+
+    /// 変更前の最終服用ピル番号（非推奨）
+    /// 自動記録前のピル番号
+    required int beforeLastTakenPillNumber,
+
+    /// 変更後の最終服用ピル番号（非推奨）
+    /// 自動記録後のピル番号
+    required int afterLastTakenPillNumber,
+  }) = _AutomaticallyRecordedLastTakenDateValue;
 
   factory AutomaticallyRecordedLastTakenDateValue.fromJson(Map<String, dynamic> json) => _$AutomaticallyRecordedLastTakenDateValueFromJson(json);
 }
 
 /// ピルシート削除時の履歴情報を記録するクラス
-/// v2ではbeforePillSheetGroup/afterPillSheetGroupから情報を取得するため、
-/// このクラスは後方互換性のために空の状態で保持される
+/// ピルシートが削除された際の削除日時と対象シートIDを保存
 @freezed
 class DeletedPillSheetValue with _$DeletedPillSheetValue {
   const DeletedPillSheetValue._();
   @JsonSerializable(explicitToJson: true)
-  const factory DeletedPillSheetValue() = _DeletedPillSheetValue;
+  const factory DeletedPillSheetValue({
+    // The below properties are deprecated and added since v1.
+    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+    /// ピルシート削除日時（非推奨）
+    /// Firestoreタイムスタンプから自動変換される削除日時
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+    required DateTime pillSheetDeletedAt,
+
+    /// 削除されたピルシートのIDリスト（非推奨）
+    /// 複数シート同時削除に対応するためのIDリスト
+    @Default([]) List<String> pillSheetIDs,
+  }) = _DeletedPillSheetValue;
 
   factory DeletedPillSheetValue.fromJson(Map<String, dynamic> json) => _$DeletedPillSheetValueFromJson(json);
 }
 
 /// ピル服用記録時の履歴情報を記録するクラス
-/// ユーザーがピルを服用した際の記録方法（クイック記録か手動か）と
-/// 編集情報を保存する
-/// v2ではbeforePillSheetGroup/afterPillSheetGroupから服用日時情報を取得する
+/// ユーザーがピルを服用した際の記録方法（クイック記録か手動か）、
+/// 編集情報、服用日時の変更前後情報を保存する
+/// v1で追加されたプロパティと非推奨プロパティが混在している
 @freezed
 class TakenPillValue with _$TakenPillValue {
   const TakenPillValue._();
   @JsonSerializable(explicitToJson: true)
   const factory TakenPillValue({
-    /// クイック記録かどうかのフラグ
+    // ============ BEGIN: Added since v1 ============
+    /// クイック記録かどうかのフラグ（v1追加）
     /// nullは途中から追加されたプロパティのため判定不能を表す
+    // null => 途中から追加したプロパティなので、どちらか不明
     bool? isQuickRecord,
 
-    /// 服用記録の編集情報
+    /// 服用記録の編集情報（v1追加）
     /// ユーザーが後から服用時刻を編集した場合の詳細情報
     TakenPillEditedValue? edited,
+    // ============ END: Added since v1 ============
+
+    // The below properties are deprecated and added since v1.
+    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+    /// 変更前の最終服用日（非推奨、nullable）
+    /// 初回服用の場合はnullとなる
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+    DateTime? beforeLastTakenDate,
+
+    /// 変更後の最終服用日（非推奨）
+    /// 服用記録によって設定された新しい最終服用日
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+    required DateTime afterLastTakenDate,
+
+    /// 変更前の最終服用ピル番号（非推奨）
+    /// 服用記録前のピル番号
+    required int beforeLastTakenPillNumber,
+
+    /// 変更後の最終服用ピル番号（非推奨）
+    /// 服用記録後のピル番号
+    required int afterLastTakenPillNumber,
   }) = _TakenPillValue;
 
   factory TakenPillValue.fromJson(Map<String, dynamic> json) => _$TakenPillValueFromJson(json);
@@ -172,25 +253,84 @@ class TakenPillEditedValue with _$TakenPillEditedValue {
 }
 
 /// ピル服用記録の取り消し時の履歴情報を記録するクラス
-/// v2ではbeforePillSheetGroup/afterPillSheetGroupから情報を取得するため、
-/// このクラスは後方互換性のために空の状態で保持される
+/// 誤って記録された服用を取り消した際の変更前後情報を保存
 @freezed
 class RevertTakenPillValue with _$RevertTakenPillValue {
   const RevertTakenPillValue._();
   @JsonSerializable(explicitToJson: true)
-  const factory RevertTakenPillValue() = _RevertTakenPillValue;
+  const factory RevertTakenPillValue({
+    // The below properties are deprecated and added since v1.
+    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+    /// 取り消し前の最終服用日（非推奨、nullable）
+    /// 取り消し操作前の最終服用日
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+    DateTime? beforeLastTakenDate,
+
+    /// 取り消し後の最終服用日（非推奨、nullable）
+    /// 取り消し操作後の最終服用日、服用履歴がなくなった場合はnull
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+    required DateTime? afterLastTakenDate,
+
+    /// 取り消し前の最終服用ピル番号（非推奨）
+    /// 取り消し操作前のピル番号
+    required int beforeLastTakenPillNumber,
+
+    /// 取り消し後の最終服用ピル番号（非推奨）
+    /// 取り消し操作後のピル番号
+    required int afterLastTakenPillNumber,
+  }) = _RevertTakenPillValue;
 
   factory RevertTakenPillValue.fromJson(Map<String, dynamic> json) => _$RevertTakenPillValueFromJson(json);
 }
 
 /// ピル番号変更時の履歴情報を記録するクラス
-/// v2ではbeforePillSheetGroup/afterPillSheetGroupから情報を取得するため、
-/// このクラスは後方互換性のために空の状態で保持される
+/// ピル服用スケジュールの調整や修正が行われた際の詳細な変更情報を保存
+/// 開始日、今日のピル番号、グループインデックスの変更前後を記録
 @freezed
 class ChangedPillNumberValue with _$ChangedPillNumberValue {
   const ChangedPillNumberValue._();
   @JsonSerializable(explicitToJson: true)
-  const factory ChangedPillNumberValue() = _ChangedPillNumberValue;
+  const factory ChangedPillNumberValue({
+    // The below properties are deprecated and added since v1.
+    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+    /// 変更前の開始日（非推奨）
+    /// ピル番号変更前のピルシート開始日
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+    required DateTime beforeBeginingDate,
+
+    /// 変更後の開始日（非推奨）
+    /// ピル番号変更後のピルシート開始日
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+    required DateTime afterBeginingDate,
+
+    /// 変更前の今日のピル番号（非推奨）
+    /// 変更操作前の今日に対応するピル番号
+    required int beforeTodayPillNumber,
+
+    /// 変更後の今日のピル番号（非推奨）
+    /// 変更操作後の今日に対応するピル番号
+    required int afterTodayPillNumber,
+
+    /// 変更前のグループインデックス（非推奨）
+    /// ピルシートグループ内での順序番号（デフォルト：1）
+    @Default(1) int beforeGroupIndex,
+
+    /// 変更後のグループインデックス（非推奨）
+    /// ピルシートグループ内での順序番号（デフォルト：1）
+    @Default(1) int afterGroupIndex,
+  }) = _ChangedPillNumberValue;
 
   factory ChangedPillNumberValue.fromJson(Map<String, dynamic> json) => _$ChangedPillNumberValueFromJson(json);
 }
@@ -306,25 +446,47 @@ class ChangedRestDurationValue with _$ChangedRestDurationValue {
 }
 
 /// 表示開始番号変更時の履歴情報を記録するクラス
-/// v2ではbeforePillSheetGroup/afterPillSheetGroupから情報を取得するため、
-/// このクラスは後方互換性のために空の状態で保持される
+/// ピルシートの表示番号の開始値を変更した際のbefore/after設定を保存
+/// カスタム表示機能で使用される表示番号設定の変更履歴を管理
 @freezed
 class ChangedBeginDisplayNumberValue with _$ChangedBeginDisplayNumberValue {
   const ChangedBeginDisplayNumberValue._();
   @JsonSerializable(explicitToJson: true)
-  const factory ChangedBeginDisplayNumberValue() = _ChangedBeginDisplayNumberValue;
+  const factory ChangedBeginDisplayNumberValue({
+    // The below properties are deprecated and added since v1.
+    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+    /// 変更前の表示番号設定（非推奨、nullable）
+    /// 番号を変更したことがない場合はnullとなる
+    // 番号を変更した事が無い場合もあるのでnullable
+    required PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting,
+
+    /// 変更後の表示番号設定（非推奨）
+    /// 変更操作後の新しい表示番号設定
+    required PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting,
+  }) = _ChangedBeginDisplayNumberValue;
 
   factory ChangedBeginDisplayNumberValue.fromJson(Map<String, dynamic> json) => _$ChangedBeginDisplayNumberValueFromJson(json);
 }
 
 /// 表示終了番号変更時の履歴情報を記録するクラス
-/// v2ではbeforePillSheetGroup/afterPillSheetGroupから情報を取得するため、
-/// このクラスは後方互換性のために空の状態で保持される
+/// ピルシートの表示番号の終了値を変更した際のbefore/after設定を保存
+/// カスタム表示機能で使用される表示番号設定の変更履歴を管理
 @freezed
 class ChangedEndDisplayNumberValue with _$ChangedEndDisplayNumberValue {
   const ChangedEndDisplayNumberValue._();
   @JsonSerializable(explicitToJson: true)
-  const factory ChangedEndDisplayNumberValue() = _ChangedEndDisplayNumberValue;
+  const factory ChangedEndDisplayNumberValue({
+    // The below properties are deprecated and added since v1.
+    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+    /// 変更前の表示番号設定（非推奨、nullable）
+    /// 番号を変更したことがない場合はnullとなる
+    // 番号を変更した事が無い場合もあるのでnullable
+    required PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting,
+
+    /// 変更後の表示番号設定（非推奨）
+    /// 変更操作後の新しい表示番号設定
+    required PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting,
+  }) = _ChangedEndDisplayNumberValue;
 
   factory ChangedEndDisplayNumberValue.fromJson(Map<String, dynamic> json) => _$ChangedEndDisplayNumberValueFromJson(json);
 }

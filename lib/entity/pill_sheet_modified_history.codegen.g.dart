@@ -7,7 +7,7 @@ part of 'pill_sheet_modified_history.codegen.dart';
 // **************************************************************************
 
 _$PillSheetModifiedHistoryImpl _$$PillSheetModifiedHistoryImplFromJson(Map<String, dynamic> json) => _$PillSheetModifiedHistoryImpl(
-      version: json['version'] ?? 'v2',
+      version: json['version'] ?? 'v1',
       id: json['id'] as String?,
       actionType: json['actionType'] as String,
       estimatedEventCausingDate: NonNullTimestampConverter.timestampToDateTime(json['estimatedEventCausingDate'] as Timestamp),
@@ -19,6 +19,12 @@ _$PillSheetModifiedHistoryImpl _$$PillSheetModifiedHistoryImplFromJson(Map<Strin
       archivedDateTime: TimestampConverter.timestampToDateTime(json['archivedDateTime'] as Timestamp?),
       isArchived: json['isArchived'] as bool? ?? false,
       value: PillSheetModifiedHistoryValue.fromJson(json['value'] as Map<String, dynamic>),
+      pillSheetID: json['pillSheetID'] as String?,
+      pillSheetGroupID: json['pillSheetGroupID'] as String?,
+      beforePillSheetID: json['beforePillSheetID'] as String?,
+      afterPillSheetID: json['afterPillSheetID'] as String?,
+      before: json['before'] == null ? null : PillSheet.fromJson(json['before'] as Map<String, dynamic>),
+      after: json['after'] == null ? null : PillSheet.fromJson(json['after'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$PillSheetModifiedHistoryImplToJson(_$PillSheetModifiedHistoryImpl instance) {
@@ -42,5 +48,11 @@ Map<String, dynamic> _$$PillSheetModifiedHistoryImplToJson(_$PillSheetModifiedHi
   val['archivedDateTime'] = TimestampConverter.dateTimeToTimestamp(instance.archivedDateTime);
   val['isArchived'] = instance.isArchived;
   val['value'] = instance.value.toJson();
+  val['pillSheetID'] = instance.pillSheetID;
+  val['pillSheetGroupID'] = instance.pillSheetGroupID;
+  val['beforePillSheetID'] = instance.beforePillSheetID;
+  val['afterPillSheetID'] = instance.afterPillSheetID;
+  val['before'] = instance.before?.toJson();
+  val['after'] = instance.after?.toJson();
   return val;
 }

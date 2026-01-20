@@ -53,6 +53,9 @@ class BeginRestDuration {
     batchSetPillSheetModifiedHistory(
       batch,
       PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
+        pillSheetGroupID: pillSheetGroup.id,
+        before: pillSheetGroup.targetBeginRestDurationPillSheet,
+        after: updatedPillSheet,
         restDuration: restDuration,
         beforePillSheetGroup: pillSheetGroup,
         afterPillSheetGroup: updatedPillSheetGroup,
@@ -117,6 +120,9 @@ class EndRestDuration {
     batchSetPillSheetModifiedHistory(
       batch,
       PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
+        pillSheetGroupID: pillSheetGroup.id,
+        before: activePillSheet,
+        after: updatedPillSheet,
         restDuration: updatedRestDuration,
         beforePillSheetGroup: pillSheetGroup,
         afterPillSheetGroup: updatedPillSheetGroup,
@@ -274,6 +280,9 @@ class ChangeRestDuration {
         batchSetPillSheetModifiedHistory(
           batch,
           PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+            pillSheetGroupID: pillSheetGroup.id,
+            before: fromRestDurationPillSheet,
+            after: updatedToRestDurationPillSheet,
             beforeRestDuration: fromRestDuration,
             afterRestDuration: toRestDuration,
             beforePillSheetGroup: pillSheetGroup,
@@ -284,6 +293,9 @@ class ChangeRestDuration {
         batchSetPillSheetModifiedHistory(
           batch,
           PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+            pillSheetGroupID: pillSheetGroup.id,
+            before: fromRestDurationPillSheet,
+            after: updatedToRestDurationPillSheet,
             beforeRestDuration: fromRestDuration,
             afterRestDuration: toRestDuration,
             beforePillSheetGroup: pillSheetGroup,

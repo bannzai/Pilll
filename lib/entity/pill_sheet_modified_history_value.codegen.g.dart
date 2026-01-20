@@ -51,28 +51,58 @@ Map<String, dynamic> _$$PillSheetModifiedHistoryValueImplToJson(_$PillSheetModif
       'changedEndDisplayNumber': instance.changedEndDisplayNumber?.toJson(),
     };
 
-_$CreatedPillSheetValueImpl _$$CreatedPillSheetValueImplFromJson(Map<String, dynamic> json) => _$CreatedPillSheetValueImpl();
+_$CreatedPillSheetValueImpl _$$CreatedPillSheetValueImplFromJson(Map<String, dynamic> json) => _$CreatedPillSheetValueImpl(
+      pillSheetCreatedAt: NonNullTimestampConverter.timestampToDateTime(json['pillSheetCreatedAt'] as Timestamp),
+      pillSheetIDs: (json['pillSheetIDs'] as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
+    );
 
-Map<String, dynamic> _$$CreatedPillSheetValueImplToJson(_$CreatedPillSheetValueImpl instance) => <String, dynamic>{};
+Map<String, dynamic> _$$CreatedPillSheetValueImplToJson(_$CreatedPillSheetValueImpl instance) => <String, dynamic>{
+      'pillSheetCreatedAt': NonNullTimestampConverter.dateTimeToTimestamp(instance.pillSheetCreatedAt),
+      'pillSheetIDs': instance.pillSheetIDs,
+    };
 
 _$AutomaticallyRecordedLastTakenDateValueImpl _$$AutomaticallyRecordedLastTakenDateValueImplFromJson(Map<String, dynamic> json) =>
-    _$AutomaticallyRecordedLastTakenDateValueImpl();
+    _$AutomaticallyRecordedLastTakenDateValueImpl(
+      beforeLastTakenDate: TimestampConverter.timestampToDateTime(json['beforeLastTakenDate'] as Timestamp?),
+      afterLastTakenDate: NonNullTimestampConverter.timestampToDateTime(json['afterLastTakenDate'] as Timestamp),
+      beforeLastTakenPillNumber: (json['beforeLastTakenPillNumber'] as num).toInt(),
+      afterLastTakenPillNumber: (json['afterLastTakenPillNumber'] as num).toInt(),
+    );
 
 Map<String, dynamic> _$$AutomaticallyRecordedLastTakenDateValueImplToJson(_$AutomaticallyRecordedLastTakenDateValueImpl instance) =>
-    <String, dynamic>{};
+    <String, dynamic>{
+      'beforeLastTakenDate': TimestampConverter.dateTimeToTimestamp(instance.beforeLastTakenDate),
+      'afterLastTakenDate': NonNullTimestampConverter.dateTimeToTimestamp(instance.afterLastTakenDate),
+      'beforeLastTakenPillNumber': instance.beforeLastTakenPillNumber,
+      'afterLastTakenPillNumber': instance.afterLastTakenPillNumber,
+    };
 
-_$DeletedPillSheetValueImpl _$$DeletedPillSheetValueImplFromJson(Map<String, dynamic> json) => _$DeletedPillSheetValueImpl();
+_$DeletedPillSheetValueImpl _$$DeletedPillSheetValueImplFromJson(Map<String, dynamic> json) => _$DeletedPillSheetValueImpl(
+      pillSheetDeletedAt: NonNullTimestampConverter.timestampToDateTime(json['pillSheetDeletedAt'] as Timestamp),
+      pillSheetIDs: (json['pillSheetIDs'] as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
+    );
 
-Map<String, dynamic> _$$DeletedPillSheetValueImplToJson(_$DeletedPillSheetValueImpl instance) => <String, dynamic>{};
+Map<String, dynamic> _$$DeletedPillSheetValueImplToJson(_$DeletedPillSheetValueImpl instance) => <String, dynamic>{
+      'pillSheetDeletedAt': NonNullTimestampConverter.dateTimeToTimestamp(instance.pillSheetDeletedAt),
+      'pillSheetIDs': instance.pillSheetIDs,
+    };
 
 _$TakenPillValueImpl _$$TakenPillValueImplFromJson(Map<String, dynamic> json) => _$TakenPillValueImpl(
       isQuickRecord: json['isQuickRecord'] as bool?,
       edited: json['edited'] == null ? null : TakenPillEditedValue.fromJson(json['edited'] as Map<String, dynamic>),
+      beforeLastTakenDate: TimestampConverter.timestampToDateTime(json['beforeLastTakenDate'] as Timestamp?),
+      afterLastTakenDate: NonNullTimestampConverter.timestampToDateTime(json['afterLastTakenDate'] as Timestamp),
+      beforeLastTakenPillNumber: (json['beforeLastTakenPillNumber'] as num).toInt(),
+      afterLastTakenPillNumber: (json['afterLastTakenPillNumber'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$TakenPillValueImplToJson(_$TakenPillValueImpl instance) => <String, dynamic>{
       'isQuickRecord': instance.isQuickRecord,
       'edited': instance.edited?.toJson(),
+      'beforeLastTakenDate': TimestampConverter.dateTimeToTimestamp(instance.beforeLastTakenDate),
+      'afterLastTakenDate': NonNullTimestampConverter.dateTimeToTimestamp(instance.afterLastTakenDate),
+      'beforeLastTakenPillNumber': instance.beforeLastTakenPillNumber,
+      'afterLastTakenPillNumber': instance.afterLastTakenPillNumber,
     };
 
 _$TakenPillEditedValueImpl _$$TakenPillEditedValueImplFromJson(Map<String, dynamic> json) => _$TakenPillEditedValueImpl(
@@ -87,13 +117,37 @@ Map<String, dynamic> _$$TakenPillEditedValueImplToJson(_$TakenPillEditedValueImp
       'createdDate': NonNullTimestampConverter.dateTimeToTimestamp(instance.createdDate),
     };
 
-_$RevertTakenPillValueImpl _$$RevertTakenPillValueImplFromJson(Map<String, dynamic> json) => _$RevertTakenPillValueImpl();
+_$RevertTakenPillValueImpl _$$RevertTakenPillValueImplFromJson(Map<String, dynamic> json) => _$RevertTakenPillValueImpl(
+      beforeLastTakenDate: TimestampConverter.timestampToDateTime(json['beforeLastTakenDate'] as Timestamp?),
+      afterLastTakenDate: TimestampConverter.timestampToDateTime(json['afterLastTakenDate'] as Timestamp?),
+      beforeLastTakenPillNumber: (json['beforeLastTakenPillNumber'] as num).toInt(),
+      afterLastTakenPillNumber: (json['afterLastTakenPillNumber'] as num).toInt(),
+    );
 
-Map<String, dynamic> _$$RevertTakenPillValueImplToJson(_$RevertTakenPillValueImpl instance) => <String, dynamic>{};
+Map<String, dynamic> _$$RevertTakenPillValueImplToJson(_$RevertTakenPillValueImpl instance) => <String, dynamic>{
+      'beforeLastTakenDate': TimestampConverter.dateTimeToTimestamp(instance.beforeLastTakenDate),
+      'afterLastTakenDate': TimestampConverter.dateTimeToTimestamp(instance.afterLastTakenDate),
+      'beforeLastTakenPillNumber': instance.beforeLastTakenPillNumber,
+      'afterLastTakenPillNumber': instance.afterLastTakenPillNumber,
+    };
 
-_$ChangedPillNumberValueImpl _$$ChangedPillNumberValueImplFromJson(Map<String, dynamic> json) => _$ChangedPillNumberValueImpl();
+_$ChangedPillNumberValueImpl _$$ChangedPillNumberValueImplFromJson(Map<String, dynamic> json) => _$ChangedPillNumberValueImpl(
+      beforeBeginingDate: NonNullTimestampConverter.timestampToDateTime(json['beforeBeginingDate'] as Timestamp),
+      afterBeginingDate: NonNullTimestampConverter.timestampToDateTime(json['afterBeginingDate'] as Timestamp),
+      beforeTodayPillNumber: (json['beforeTodayPillNumber'] as num).toInt(),
+      afterTodayPillNumber: (json['afterTodayPillNumber'] as num).toInt(),
+      beforeGroupIndex: (json['beforeGroupIndex'] as num?)?.toInt() ?? 1,
+      afterGroupIndex: (json['afterGroupIndex'] as num?)?.toInt() ?? 1,
+    );
 
-Map<String, dynamic> _$$ChangedPillNumberValueImplToJson(_$ChangedPillNumberValueImpl instance) => <String, dynamic>{};
+Map<String, dynamic> _$$ChangedPillNumberValueImplToJson(_$ChangedPillNumberValueImpl instance) => <String, dynamic>{
+      'beforeBeginingDate': NonNullTimestampConverter.dateTimeToTimestamp(instance.beforeBeginingDate),
+      'afterBeginingDate': NonNullTimestampConverter.dateTimeToTimestamp(instance.afterBeginingDate),
+      'beforeTodayPillNumber': instance.beforeTodayPillNumber,
+      'afterTodayPillNumber': instance.afterTodayPillNumber,
+      'beforeGroupIndex': instance.beforeGroupIndex,
+      'afterGroupIndex': instance.afterGroupIndex,
+    };
 
 _$EndedPillSheetValueImpl _$$EndedPillSheetValueImplFromJson(Map<String, dynamic> json) => _$EndedPillSheetValueImpl(
       endRecordDate: NonNullTimestampConverter.timestampToDateTime(json['endRecordDate'] as Timestamp),
@@ -142,11 +196,26 @@ Map<String, dynamic> _$$ChangedRestDurationValueImplToJson(_$ChangedRestDuration
       'afterRestDuration': instance.afterRestDuration.toJson(),
     };
 
-_$ChangedBeginDisplayNumberValueImpl _$$ChangedBeginDisplayNumberValueImplFromJson(Map<String, dynamic> json) =>
-    _$ChangedBeginDisplayNumberValueImpl();
+_$ChangedBeginDisplayNumberValueImpl _$$ChangedBeginDisplayNumberValueImplFromJson(Map<String, dynamic> json) => _$ChangedBeginDisplayNumberValueImpl(
+      beforeDisplayNumberSetting: json['beforeDisplayNumberSetting'] == null
+          ? null
+          : PillSheetGroupDisplayNumberSetting.fromJson(json['beforeDisplayNumberSetting'] as Map<String, dynamic>),
+      afterDisplayNumberSetting: PillSheetGroupDisplayNumberSetting.fromJson(json['afterDisplayNumberSetting'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$$ChangedBeginDisplayNumberValueImplToJson(_$ChangedBeginDisplayNumberValueImpl instance) => <String, dynamic>{};
+Map<String, dynamic> _$$ChangedBeginDisplayNumberValueImplToJson(_$ChangedBeginDisplayNumberValueImpl instance) => <String, dynamic>{
+      'beforeDisplayNumberSetting': instance.beforeDisplayNumberSetting?.toJson(),
+      'afterDisplayNumberSetting': instance.afterDisplayNumberSetting.toJson(),
+    };
 
-_$ChangedEndDisplayNumberValueImpl _$$ChangedEndDisplayNumberValueImplFromJson(Map<String, dynamic> json) => _$ChangedEndDisplayNumberValueImpl();
+_$ChangedEndDisplayNumberValueImpl _$$ChangedEndDisplayNumberValueImplFromJson(Map<String, dynamic> json) => _$ChangedEndDisplayNumberValueImpl(
+      beforeDisplayNumberSetting: json['beforeDisplayNumberSetting'] == null
+          ? null
+          : PillSheetGroupDisplayNumberSetting.fromJson(json['beforeDisplayNumberSetting'] as Map<String, dynamic>),
+      afterDisplayNumberSetting: PillSheetGroupDisplayNumberSetting.fromJson(json['afterDisplayNumberSetting'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$$ChangedEndDisplayNumberValueImplToJson(_$ChangedEndDisplayNumberValueImpl instance) => <String, dynamic>{};
+Map<String, dynamic> _$$ChangedEndDisplayNumberValueImplToJson(_$ChangedEndDisplayNumberValueImpl instance) => <String, dynamic>{
+      'beforeDisplayNumberSetting': instance.beforeDisplayNumberSetting?.toJson(),
+      'afterDisplayNumberSetting': instance.afterDisplayNumberSetting.toJson(),
+    };

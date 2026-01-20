@@ -131,30 +131,22 @@ abstract class PillSheetModifiedHistoryPillNumberOrDate {
   }) =>
       _formatPillNumber('$beforeTodayPillNumber→$afterTodayPillNumber', pillSheetAppearanceMode: pillSheetAppearanceMode);
 
-  static String changedBeginDisplayNumberSetting({
-    required PillSheetGroup? beforePillSheetGroup,
-    required PillSheetGroup? afterPillSheetGroup,
-  }) {
+  static String changedBeginDisplayNumberSetting(ChangedBeginDisplayNumberValue value) {
     // 表示番号設定の変更履歴は常に「番」表記（これはピルシートの物理的な番号なため）
-    final before = beforePillSheetGroup?.displayNumberSetting;
-    final after = afterPillSheetGroup?.displayNumberSetting;
+    final before = value.beforeDisplayNumberSetting;
     if (before == null || before.beginPillNumber == null) {
-      return L.withNumber('1→${after?.beginPillNumber ?? 1}');
+      return L.withNumber('1→${value.afterDisplayNumberSetting.beginPillNumber}');
     }
-    return L.withNumber('${before.beginPillNumber}→${after?.beginPillNumber ?? 1}');
+    return L.withNumber('${before.beginPillNumber}→${value.afterDisplayNumberSetting.beginPillNumber}');
   }
 
-  static String changedEndDisplayNumberSetting({
-    required PillSheetGroup? beforePillSheetGroup,
-    required PillSheetGroup? afterPillSheetGroup,
-  }) {
+  static String changedEndDisplayNumberSetting(ChangedEndDisplayNumberValue value) {
     // 表示番号設定の変更履歴は常に「番」表記（これはピルシートの物理的な番号なため）
-    final before = beforePillSheetGroup?.displayNumberSetting;
-    final after = afterPillSheetGroup?.displayNumberSetting;
+    final before = value.beforeDisplayNumberSetting;
     if (before == null || before.endPillNumber == null) {
-      return L.withNumber('1→${after?.endPillNumber ?? 1}');
+      return L.withNumber('1→${value.afterDisplayNumberSetting.endPillNumber}');
     }
-    return L.withNumber('${before.endPillNumber}→${after?.endPillNumber ?? 1}');
+    return L.withNumber('${before.endPillNumber}→${value.afterDisplayNumberSetting.endPillNumber}');
   }
 
   static String pillSheetCount(List<String> pillSheetIDs) => pillSheetIDs.isNotEmpty ? L.withPillSheetCount(pillSheetIDs.length) : hyphen();

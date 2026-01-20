@@ -67,6 +67,9 @@ void main() {
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
+        pillSheetGroupID: "group_id",
+        before: pillSheet,
+        after: updatedPillSheet,
         restDuration: notYetEndRestDuration,
         beforePillSheetGroup: pillSheetGroup,
         afterPillSheetGroup: updatedPillSheetGroup,
@@ -133,6 +136,9 @@ void main() {
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
+        pillSheetGroupID: "group_id",
+        before: pillSheet,
+        after: updatedPillSheet,
         restDuration: notYetEndRestDuration,
         beforePillSheetGroup: pillSheetGroup,
         afterPillSheetGroup: updatedPillSheetGroup,
@@ -213,6 +219,9 @@ void main() {
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
+        pillSheetGroupID: "group_id",
+        before: pillSheet1,
+        after: updatedPillSheet,
         restDuration: notYetEndRestDuration,
         beforePillSheetGroup: pillSheetGroup,
         afterPillSheetGroup: updatedPillSheetGroup,
@@ -293,6 +302,9 @@ void main() {
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
+        pillSheetGroupID: "group_id",
+        before: pillSheet2,
+        after: updatedPillSheet,
         restDuration: notYetEndRestDuration,
         beforePillSheetGroup: pillSheetGroup,
         afterPillSheetGroup: updatedPillSheetGroup,
@@ -362,6 +374,9 @@ void main() {
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
+        pillSheetGroupID: "group_id",
+        before: pillSheet,
+        after: updatedPillSheet,
         restDuration: endedRestDuration,
         beforePillSheetGroup: pillSheetGroup,
         afterPillSheetGroup: updatedPillSheetGroup,
@@ -457,6 +472,9 @@ void main() {
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
+        pillSheetGroupID: "group_id",
+        before: pillSheets[0],
+        after: updatedPillSheets[0],
         restDuration: endedRestDuration,
         beforePillSheetGroup: pillSheetGroup,
         afterPillSheetGroup: updatedPillSheetGroup,
@@ -532,6 +550,9 @@ void main() {
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+        pillSheetGroupID: "group_id",
+        before: pillSheet,
+        after: updatedPillSheet,
         beforeRestDuration: beforeRestDuration,
         afterRestDuration: afterRestDuration,
         beforePillSheetGroup: pillSheetGroup,
@@ -636,6 +657,9 @@ void main() {
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+        pillSheetGroupID: "group_id",
+        before: pillSheet2,
+        after: updatedPillSheet1,
         beforeRestDuration: beforeRestDuration,
         afterRestDuration: afterRestDuration,
         beforePillSheetGroup: pillSheetGroup,
@@ -748,6 +772,9 @@ void main() {
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+        pillSheetGroupID: "group_id",
+        before: pillSheet2,
+        after: updatedPillSheet1,
         beforeRestDuration: beforeRestDuration,
         afterRestDuration: afterRestDuration,
         beforePillSheetGroup: pillSheetGroup,
@@ -829,6 +856,9 @@ void main() {
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+        pillSheetGroupID: "group_id",
+        before: pillSheet,
+        after: updatedPillSheet,
         beforeRestDuration: beforeRestDuration,
         afterRestDuration: afterRestDuration,
         beforePillSheetGroup: pillSheetGroup,
@@ -940,6 +970,9 @@ void main() {
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+        pillSheetGroupID: "group_id",
+        before: pillSheet2,
+        after: updatedPillSheet1,
         beforeRestDuration: beforeRestDuration,
         afterRestDuration: afterRestDuration,
         beforePillSheetGroup: pillSheetGroup,
@@ -1043,6 +1076,9 @@ void main() {
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+        pillSheetGroupID: "group_id",
+        before: pillSheet2,
+        after: updatedPillSheet1,
         beforeRestDuration: beforeRestDuration,
         afterRestDuration: afterRestDuration,
         beforePillSheetGroup: pillSheetGroup,

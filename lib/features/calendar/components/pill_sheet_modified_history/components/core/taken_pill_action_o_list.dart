@@ -5,13 +5,16 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 
 class TakenPillActionOList extends StatelessWidget {
+  final TakenPillValue value;
   final PillSheetGroup beforePillSheetGroup;
   final PillSheetGroup afterPillSheetGroup;
 
   const TakenPillActionOList({
     super.key,
+    required this.value,
     required this.beforePillSheetGroup,
     required this.afterPillSheetGroup,
   });
@@ -34,8 +37,7 @@ class TakenPillActionOList extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: List.generate(min(takenPillCount, 4), (index) {
-          final afterLastTakenPillNumber = afterPillSheet.lastTakenOrZeroPillNumber;
-          final inRestDuration = _inRestDuration(afterPillSheet, afterLastTakenPillNumber, index);
+          final inRestDuration = _inRestDuration(afterPillSheet, value.afterLastTakenPillNumber, index);
           if (index == 0) {
             return inRestDuration ? SvgPicture.asset('images/dash_o.svg') : SvgPicture.asset('images/o.svg');
           } else if (index < 3) {
