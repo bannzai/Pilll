@@ -33,23 +33,35 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final setPillSheetModifiedHistory = ref.watch(setPillSheetModifiedHistoryProvider);
+    final setPillSheetModifiedHistory = ref.watch(
+      setPillSheetModifiedHistoryProvider,
+    );
     final value = this.value;
     final beforePillSheetGroup = history.beforePillSheetGroup;
     final afterPillSheetGroup = history.afterPillSheetGroup;
-    if (value == null || afterPillSheetGroup == null || beforePillSheetGroup == null) {
+    if (value == null ||
+        afterPillSheetGroup == null ||
+        beforePillSheetGroup == null) {
       return Text(L.failedToGetPillSheetHistory('takenPill'));
     }
 
     final time = DateTimeFormatter.hourAndMinute(estimatedEventCausingDate);
-    int? beforeLastTakenPillNumber = beforePillSheetGroup.pillNumberWithoutDateOrZero(
+    int?
+    beforeLastTakenPillNumber = beforePillSheetGroup.pillNumberWithoutDateOrZero(
       // 例えば履歴の表示の際にbeforePillSheetGroupとafterPillSheetGroupのpillSheetAppearanceModeが違う場合があるので、afterPillSheetGroup.pillSheetAppearanceModeを引数にする
       pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
-      pageIndex: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
-      pillNumberInPillSheet: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber,
+      pageIndex:
+          beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
+      pillNumberInPillSheet: beforePillSheetGroup
+          .lastTakenPillSheetOrFirstPillSheet
+          .lastTakenOrZeroPillNumber,
     );
     // そのピルシートの服用番号が最後の場合は、1つ前のピルシートと認識する。その場合は表記を省略するためにnullにする
-    if (beforeLastTakenPillNumber == beforePillSheetGroup.activePillSheetWhen(estimatedEventCausingDate)?.pillSheetType.totalCount) {
+    if (beforeLastTakenPillNumber ==
+        beforePillSheetGroup
+            .activePillSheetWhen(estimatedEventCausingDate)
+            ?.pillSheetType
+            .totalCount) {
       beforeLastTakenPillNumber = null;
     }
 
@@ -64,7 +76,13 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
               return DateAndTimePicker(
                 initialDateTime: estimatedEventCausingDate,
                 done: (dateTime) async {
-                  analytics.logEvent(name: 'selected_date_taken_history', parameters: {'hour': dateTime.hour, 'minute': dateTime.minute});
+                  analytics.logEvent(
+                    name: 'selected_date_taken_history',
+                    parameters: {
+                      'hour': dateTime.hour,
+                      'minute': dateTime.minute,
+                    },
+                  );
 
                   try {
                     final messenger = ScaffoldMessenger.of(context);
@@ -76,11 +94,20 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
                       value: history.value,
                       takenPillValue: value,
                     );
-                    final date = DateTimeFormatter.slashYearAndMonthAndDayAndTime(dateTime);
-                    messenger.showSnackBar(SnackBar(duration: const Duration(seconds: 2), content: Text(L.changedToDate(date))));
+                    final date =
+                        DateTimeFormatter.slashYearAndMonthAndDayAndTime(
+                          dateTime,
+                        );
+                    messenger.showSnackBar(
+                      SnackBar(
+                        duration: const Duration(seconds: 2),
+                        content: Text(L.changedToDate(date)),
+                      ),
+                    );
                     navigator.pop();
                   } catch (error) {
-                    if (context.mounted) showErrorAlert(context, L.failedToUpdate);
+                    if (context.mounted)
+                      showErrorAlert(context, L.failedToUpdate);
                   }
                 },
               );
@@ -91,24 +118,39 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
       child: RowLayout(
         day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
         pillNumbersOrHyphenOrDate: PillNumber(
-          pillNumber: switch (afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet) {
+          pillNumber: switch (afterPillSheetGroup
+              .lastTakenPillSheetOrFirstPillSheet) {
             PillSheetV1() => PillSheetModifiedHistoryPillNumberOrDate.taken(
               beforeLastTakenPillNumber: beforeLastTakenPillNumber,
-              afterLastTakenPillNumber: afterPillSheetGroup.pillNumberWithoutDateOrZero(
-                pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
-                pageIndex: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
-                pillNumberInPillSheet: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber,
-              ),
-              pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+              afterLastTakenPillNumber: afterPillSheetGroup
+                  .pillNumberWithoutDateOrZero(
+                    pillSheetAppearanceMode:
+                        afterPillSheetGroup.pillSheetAppearanceMode,
+                    pageIndex: afterPillSheetGroup
+                        .lastTakenPillSheetOrFirstPillSheet
+                        .groupIndex,
+                    pillNumberInPillSheet: afterPillSheetGroup
+                        .lastTakenPillSheetOrFirstPillSheet
+                        .lastTakenOrZeroPillNumber,
+                  ),
+              pillSheetAppearanceMode:
+                  afterPillSheetGroup.pillSheetAppearanceMode,
             ),
             PillSheetV2() => PillSheetModifiedHistoryPillNumberOrDate.takenV2(
               beforeLastTakenPillNumber: beforeLastTakenPillNumber,
-              afterLastTakenPillNumber: afterPillSheetGroup.pillNumberWithoutDateOrZero(
-                pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
-                pageIndex: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
-                pillNumberInPillSheet: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber,
-              ),
-              pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+              afterLastTakenPillNumber: afterPillSheetGroup
+                  .pillNumberWithoutDateOrZero(
+                    pillSheetAppearanceMode:
+                        afterPillSheetGroup.pillSheetAppearanceMode,
+                    pageIndex: afterPillSheetGroup
+                        .lastTakenPillSheetOrFirstPillSheet
+                        .groupIndex,
+                    pillNumberInPillSheet: afterPillSheetGroup
+                        .lastTakenPillSheetOrFirstPillSheet
+                        .lastTakenOrZeroPillNumber,
+                  ),
+              pillSheetAppearanceMode:
+                  afterPillSheetGroup.pillSheetAppearanceMode,
             ),
           },
         ),

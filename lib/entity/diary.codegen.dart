@@ -48,14 +48,22 @@ class Diary with _$Diary {
     ///
     /// 日記エントリが作成された日付を表す
     /// Firestoreとの変換時にTimestampConverterを使用
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required DateTime date,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+    required DateTime date,
 
     /// 日記の作成日時
     ///
     /// 日記が実際に作成された日時を記録
     /// 古いデータでは存在しない可能性があるためnullable
     // NOTE: OLD data does't have createdAt
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required DateTime? createdAt,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+    required DateTime? createdAt,
 
     /// 体調状態の総合評価
     ///
@@ -87,7 +95,13 @@ class Diary with _$Diary {
   ///
   /// 新規日記作成時の初期値を設定する
   /// メモは空文字、体調リストは空、性行為はfalseで初期化
-  factory Diary.fromDate(DateTime date) => Diary(date: date, memo: '', createdAt: now(), physicalConditions: [], hasSex: false);
+  factory Diary.fromDate(DateTime date) => Diary(
+    date: date,
+    memo: '',
+    createdAt: now(),
+    physicalConditions: [],
+    hasSex: false,
+  );
 
   factory Diary.fromJson(Map<String, dynamic> json) => _$DiaryFromJson(json);
 
@@ -100,5 +114,6 @@ class Diary with _$Diary {
   ///
   /// [status] - 比較対象の体調状態
   /// 現在の体調状態と引数の状態が一致する場合にtrueを返す
-  bool hasPhysicalConditionStatusFor(PhysicalConditionStatus status) => physicalConditionStatus == status;
+  bool hasPhysicalConditionStatusFor(PhysicalConditionStatus status) =>
+      physicalConditionStatus == status;
 }

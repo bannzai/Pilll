@@ -23,7 +23,8 @@ class PillSheetModifiedHistoryValue with _$PillSheetModifiedHistoryValue {
 
     /// 自動記録された最終服用日の変更
     /// システムが自動的に最終服用日を更新した際の記録
-    @Default(null) AutomaticallyRecordedLastTakenDateValue? automaticallyRecordedLastTakenDate,
+    @Default(null)
+    AutomaticallyRecordedLastTakenDateValue? automaticallyRecordedLastTakenDate,
 
     /// ピルシート削除時の記録
     /// ピルシートが削除された際の削除情報
@@ -55,7 +56,8 @@ class PillSheetModifiedHistoryValue with _$PillSheetModifiedHistoryValue {
 
     /// 休薬期間開始日変更時の記録（v2から追加）
     /// 既存の休薬期間の開始日を変更した際の情報
-    @Default(null) ChangedRestDurationBeginDateValue? changedRestDurationBeginDateValue,
+    @Default(null)
+    ChangedRestDurationBeginDateValue? changedRestDurationBeginDateValue,
 
     /// 休薬期間内容変更時の記録（v2から追加）
     /// 休薬期間の設定内容を変更した際の情報
@@ -70,7 +72,8 @@ class PillSheetModifiedHistoryValue with _$PillSheetModifiedHistoryValue {
     @Default(null) ChangedEndDisplayNumberValue? changedEndDisplayNumber,
   }) = _PillSheetModifiedHistoryValue;
 
-  factory PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) => _$PillSheetModifiedHistoryValueFromJson(json);
+  factory PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) =>
+      _$PillSheetModifiedHistoryValueFromJson(json);
 }
 
 /// ピルシート作成時の履歴情報を記録するクラス
@@ -82,19 +85,24 @@ class CreatedPillSheetValue with _$CreatedPillSheetValue {
   @JsonSerializable(explicitToJson: true)
   const factory CreatedPillSheetValue() = _CreatedPillSheetValue;
 
-  factory CreatedPillSheetValue.fromJson(Map<String, dynamic> json) => _$CreatedPillSheetValueFromJson(json);
+  factory CreatedPillSheetValue.fromJson(Map<String, dynamic> json) =>
+      _$CreatedPillSheetValueFromJson(json);
 }
 
 /// 最終服用日の自動記録時の履歴情報を記録するクラス
 /// v2ではbeforePillSheetGroup/afterPillSheetGroupから情報を取得するため、
 /// このクラスは後方互換性のために空の状態で保持される
 @freezed
-class AutomaticallyRecordedLastTakenDateValue with _$AutomaticallyRecordedLastTakenDateValue {
+class AutomaticallyRecordedLastTakenDateValue
+    with _$AutomaticallyRecordedLastTakenDateValue {
   const AutomaticallyRecordedLastTakenDateValue._();
   @JsonSerializable(explicitToJson: true)
-  const factory AutomaticallyRecordedLastTakenDateValue() = _AutomaticallyRecordedLastTakenDateValue;
+  const factory AutomaticallyRecordedLastTakenDateValue() =
+      _AutomaticallyRecordedLastTakenDateValue;
 
-  factory AutomaticallyRecordedLastTakenDateValue.fromJson(Map<String, dynamic> json) => _$AutomaticallyRecordedLastTakenDateValueFromJson(json);
+  factory AutomaticallyRecordedLastTakenDateValue.fromJson(
+    Map<String, dynamic> json,
+  ) => _$AutomaticallyRecordedLastTakenDateValueFromJson(json);
 }
 
 /// ピルシート削除時の履歴情報を記録するクラス
@@ -106,7 +114,8 @@ class DeletedPillSheetValue with _$DeletedPillSheetValue {
   @JsonSerializable(explicitToJson: true)
   const factory DeletedPillSheetValue() = _DeletedPillSheetValue;
 
-  factory DeletedPillSheetValue.fromJson(Map<String, dynamic> json) => _$DeletedPillSheetValueFromJson(json);
+  factory DeletedPillSheetValue.fromJson(Map<String, dynamic> json) =>
+      _$DeletedPillSheetValueFromJson(json);
 }
 
 /// ピル服用記録時の履歴情報を記録するクラス
@@ -127,7 +136,8 @@ class TakenPillValue with _$TakenPillValue {
     TakenPillEditedValue? edited,
   }) = _TakenPillValue;
 
-  factory TakenPillValue.fromJson(Map<String, dynamic> json) => _$TakenPillValueFromJson(json);
+  factory TakenPillValue.fromJson(Map<String, dynamic> json) =>
+      _$TakenPillValueFromJson(json);
 }
 
 /// 服用記録の編集に関する詳細情報を記録するクラス
@@ -168,7 +178,8 @@ class TakenPillEditedValue with _$TakenPillEditedValue {
   }) = _TakenPillEditedValue;
   const TakenPillEditedValue._();
 
-  factory TakenPillEditedValue.fromJson(Map<String, dynamic> json) => _$TakenPillEditedValueFromJson(json);
+  factory TakenPillEditedValue.fromJson(Map<String, dynamic> json) =>
+      _$TakenPillEditedValueFromJson(json);
 }
 
 /// ピル服用記録の取り消し時の履歴情報を記録するクラス
@@ -180,7 +191,8 @@ class RevertTakenPillValue with _$RevertTakenPillValue {
   @JsonSerializable(explicitToJson: true)
   const factory RevertTakenPillValue() = _RevertTakenPillValue;
 
-  factory RevertTakenPillValue.fromJson(Map<String, dynamic> json) => _$RevertTakenPillValueFromJson(json);
+  factory RevertTakenPillValue.fromJson(Map<String, dynamic> json) =>
+      _$RevertTakenPillValueFromJson(json);
 }
 
 /// ピル番号変更時の履歴情報を記録するクラス
@@ -192,7 +204,8 @@ class ChangedPillNumberValue with _$ChangedPillNumberValue {
   @JsonSerializable(explicitToJson: true)
   const factory ChangedPillNumberValue() = _ChangedPillNumberValue;
 
-  factory ChangedPillNumberValue.fromJson(Map<String, dynamic> json) => _$ChangedPillNumberValueFromJson(json);
+  factory ChangedPillNumberValue.fromJson(Map<String, dynamic> json) =>
+      _$ChangedPillNumberValueFromJson(json);
 }
 
 /// ピルシート終了時の履歴情報を記録するクラス
@@ -222,7 +235,8 @@ class EndedPillSheetValue with _$EndedPillSheetValue {
     required DateTime lastTakenDate,
   }) = _EndedPillSheetValue;
 
-  factory EndedPillSheetValue.fromJson(Map<String, dynamic> json) => _$EndedPillSheetValueFromJson(json);
+  factory EndedPillSheetValue.fromJson(Map<String, dynamic> json) =>
+      _$EndedPillSheetValueFromJson(json);
 }
 
 /// 休薬期間開始時の履歴情報を記録するクラス
@@ -241,7 +255,8 @@ class BeganRestDurationValue with _$BeganRestDurationValue {
     // ============ END: Added since v1 ============
   }) = _BeganRestDurationValue;
 
-  factory BeganRestDurationValue.fromJson(Map<String, dynamic> json) => _$BeganRestDurationValueFromJson(json);
+  factory BeganRestDurationValue.fromJson(Map<String, dynamic> json) =>
+      _$BeganRestDurationValueFromJson(json);
 }
 
 /// 休薬期間終了時の履歴情報を記録するクラス
@@ -260,7 +275,8 @@ class EndedRestDurationValue with _$EndedRestDurationValue {
     // ============ END: Added since v1 ============
   }) = _EndedRestDurationValue;
 
-  factory EndedRestDurationValue.fromJson(Map<String, dynamic> json) => _$EndedRestDurationValueFromJson(json);
+  factory EndedRestDurationValue.fromJson(Map<String, dynamic> json) =>
+      _$EndedRestDurationValueFromJson(json);
 }
 
 /// 休薬期間の開始日変更時の履歴情報を記録するクラス
@@ -268,7 +284,8 @@ class EndedRestDurationValue with _$EndedRestDurationValue {
 /// v2から導入された新しい構造のクラス
 // ChangedRestDurationBeginDateValue は v2 からの構造体
 @freezed
-class ChangedRestDurationBeginDateValue with _$ChangedRestDurationBeginDateValue {
+class ChangedRestDurationBeginDateValue
+    with _$ChangedRestDurationBeginDateValue {
   const ChangedRestDurationBeginDateValue._();
   @JsonSerializable(explicitToJson: true)
   const factory ChangedRestDurationBeginDateValue({
@@ -281,7 +298,9 @@ class ChangedRestDurationBeginDateValue with _$ChangedRestDurationBeginDateValue
     required RestDuration afterRestDuration,
   }) = _ChangedRestDurationBeginDateValue;
 
-  factory ChangedRestDurationBeginDateValue.fromJson(Map<String, dynamic> json) => _$ChangedRestDurationBeginDateValueFromJson(json);
+  factory ChangedRestDurationBeginDateValue.fromJson(
+    Map<String, dynamic> json,
+  ) => _$ChangedRestDurationBeginDateValueFromJson(json);
 }
 
 /// 休薬期間の内容変更時の履歴情報を記録するクラス
@@ -302,7 +321,8 @@ class ChangedRestDurationValue with _$ChangedRestDurationValue {
     required RestDuration afterRestDuration,
   }) = _ChangedRestDurationValue;
 
-  factory ChangedRestDurationValue.fromJson(Map<String, dynamic> json) => _$ChangedRestDurationValueFromJson(json);
+  factory ChangedRestDurationValue.fromJson(Map<String, dynamic> json) =>
+      _$ChangedRestDurationValueFromJson(json);
 }
 
 /// 表示開始番号変更時の履歴情報を記録するクラス
@@ -312,9 +332,11 @@ class ChangedRestDurationValue with _$ChangedRestDurationValue {
 class ChangedBeginDisplayNumberValue with _$ChangedBeginDisplayNumberValue {
   const ChangedBeginDisplayNumberValue._();
   @JsonSerializable(explicitToJson: true)
-  const factory ChangedBeginDisplayNumberValue() = _ChangedBeginDisplayNumberValue;
+  const factory ChangedBeginDisplayNumberValue() =
+      _ChangedBeginDisplayNumberValue;
 
-  factory ChangedBeginDisplayNumberValue.fromJson(Map<String, dynamic> json) => _$ChangedBeginDisplayNumberValueFromJson(json);
+  factory ChangedBeginDisplayNumberValue.fromJson(Map<String, dynamic> json) =>
+      _$ChangedBeginDisplayNumberValueFromJson(json);
 }
 
 /// 表示終了番号変更時の履歴情報を記録するクラス
@@ -326,5 +348,6 @@ class ChangedEndDisplayNumberValue with _$ChangedEndDisplayNumberValue {
   @JsonSerializable(explicitToJson: true)
   const factory ChangedEndDisplayNumberValue() = _ChangedEndDisplayNumberValue;
 
-  factory ChangedEndDisplayNumberValue.fromJson(Map<String, dynamic> json) => _$ChangedEndDisplayNumberValueFromJson(json);
+  factory ChangedEndDisplayNumberValue.fromJson(Map<String, dynamic> json) =>
+      _$ChangedEndDisplayNumberValueFromJson(json);
 }

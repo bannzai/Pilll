@@ -44,13 +44,17 @@ final isAppleLinkedProvider = Provider((ref) {
 });
 
 bool isLinkedAppleFor(User user) {
-  return user.providerData.where((element) => element.providerId == AppleAuthProvider.PROVIDER_ID).isNotEmpty;
+  return user.providerData
+      .where((element) => element.providerId == AppleAuthProvider.PROVIDER_ID)
+      .isNotEmpty;
 }
 
 Future<void> appleReauthentification() async {
   try {
     final provider = AppleAuthProvider().addScope('email');
-    await FirebaseAuth.instance.currentUser?.reauthenticateWithProvider(provider);
+    await FirebaseAuth.instance.currentUser?.reauthenticateWithProvider(
+      provider,
+    );
   } on FirebaseAuthException catch (e) {
     // Googleのcodeとは違うので注意
     if (e.code == 'canceled') {

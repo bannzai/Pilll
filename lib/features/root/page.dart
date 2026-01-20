@@ -33,12 +33,16 @@ class RootPage extends HookConsumerWidget {
                     debugPrint('Resolved: UserSetup');
                     return Stack(
                       children: [
-                        UserStreamResolver(stream: (user) => analyticsDebugIsEnabled = user.analyticsDebugIsEnabled),
+                        UserStreamResolver(
+                          stream: (user) => analyticsDebugIsEnabled =
+                              user.analyticsDebugIsEnabled,
+                        ),
                         const SyncDataResolver(),
                         InitialSettingOrAppPage(
                           initialSettingPageBuilder: (_) => ShowPaywallOnAppLaunch(
                             builder: (_) => SkipInitialSetting(
-                              initialSettingPageBuilder: (context) => InitialSettingPillSheetGroupPageRoute.screen(),
+                              initialSettingPageBuilder: (context) =>
+                                  InitialSettingPillSheetGroupPageRoute.screen(),
                               homePageBuilder: (_) => const HomePage(),
                             ),
                           ),

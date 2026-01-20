@@ -80,7 +80,11 @@ class PurchaseButtons extends HookConsumerWidget {
     );
   }
 
-  Future<void> _purchase(BuildContext context, Package package, Purchase purchase) async {
+  Future<void> _purchase(
+    BuildContext context,
+    Package package,
+    Purchase purchase,
+  ) async {
     if (isLoading.value) {
       return;
     }

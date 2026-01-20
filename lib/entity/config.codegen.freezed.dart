@@ -33,13 +33,15 @@ mixin _$Config {
 
 /// @nodoc
 abstract class $ConfigCopyWith<$Res> {
-  factory $ConfigCopyWith(Config value, $Res Function(Config) then) = _$ConfigCopyWithImpl<$Res, Config>;
+  factory $ConfigCopyWith(Config value, $Res Function(Config) then) =
+      _$ConfigCopyWithImpl<$Res, Config>;
   @useResult
   $Res call({String minimumSupportedAppVersion});
 }
 
 /// @nodoc
-class _$ConfigCopyWithImpl<$Res, $Val extends Config> implements $ConfigCopyWith<$Res> {
+class _$ConfigCopyWithImpl<$Res, $Val extends Config>
+    implements $ConfigCopyWith<$Res> {
   _$ConfigCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -64,15 +66,23 @@ class _$ConfigCopyWithImpl<$Res, $Val extends Config> implements $ConfigCopyWith
 
 /// @nodoc
 abstract class _$$ConfigImplCopyWith<$Res> implements $ConfigCopyWith<$Res> {
-  factory _$$ConfigImplCopyWith(_$ConfigImpl value, $Res Function(_$ConfigImpl) then) = __$$ConfigImplCopyWithImpl<$Res>;
+  factory _$$ConfigImplCopyWith(
+    _$ConfigImpl value,
+    $Res Function(_$ConfigImpl) then,
+  ) = __$$ConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String minimumSupportedAppVersion});
 }
 
 /// @nodoc
-class __$$ConfigImplCopyWithImpl<$Res> extends _$ConfigCopyWithImpl<$Res, _$ConfigImpl> implements _$$ConfigImplCopyWith<$Res> {
-  __$$ConfigImplCopyWithImpl(_$ConfigImpl _value, $Res Function(_$ConfigImpl) _then) : super(_value, _then);
+class __$$ConfigImplCopyWithImpl<$Res>
+    extends _$ConfigCopyWithImpl<$Res, _$ConfigImpl>
+    implements _$$ConfigImplCopyWith<$Res> {
+  __$$ConfigImplCopyWithImpl(
+    _$ConfigImpl _value,
+    $Res Function(_$ConfigImpl) _then,
+  ) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -93,7 +103,8 @@ class __$$ConfigImplCopyWithImpl<$Res> extends _$ConfigCopyWithImpl<$Res, _$Conf
 class _$ConfigImpl extends _Config {
   _$ConfigImpl({required this.minimumSupportedAppVersion}) : super._();
 
-  factory _$ConfigImpl.fromJson(Map<String, dynamic> json) => _$$ConfigImplFromJson(json);
+  factory _$ConfigImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ConfigImplFromJson(json);
 
   /// 最小サポートバージョンを表すバージョン文字列。
   /// このバージョンより古いアプリは強制アップデートが必要となる。
@@ -111,8 +122,12 @@ class _$ConfigImpl extends _Config {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConfigImpl &&
-            (identical(other.minimumSupportedAppVersion, minimumSupportedAppVersion) ||
-                other.minimumSupportedAppVersion == minimumSupportedAppVersion));
+            (identical(
+                  other.minimumSupportedAppVersion,
+                  minimumSupportedAppVersion,
+                ) ||
+                other.minimumSupportedAppVersion ==
+                    minimumSupportedAppVersion));
   }
 
   @JsonKey(ignore: true)
@@ -122,7 +137,8 @@ class _$ConfigImpl extends _Config {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ConfigImplCopyWith<_$ConfigImpl> get copyWith => __$$ConfigImplCopyWithImpl<_$ConfigImpl>(this, _$identity);
+  _$$ConfigImplCopyWith<_$ConfigImpl> get copyWith =>
+      __$$ConfigImplCopyWithImpl<_$ConfigImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -131,7 +147,8 @@ class _$ConfigImpl extends _Config {
 }
 
 abstract class _Config extends Config {
-  factory _Config({required final String minimumSupportedAppVersion}) = _$ConfigImpl;
+  factory _Config({required final String minimumSupportedAppVersion}) =
+      _$ConfigImpl;
   _Config._() : super._();
 
   factory _Config.fromJson(Map<String, dynamic> json) = _$ConfigImpl.fromJson;
@@ -143,5 +160,6 @@ abstract class _Config extends Config {
   String get minimumSupportedAppVersion;
   @override
   @JsonKey(ignore: true)
-  _$$ConfigImplCopyWith<_$ConfigImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ConfigImplCopyWith<_$ConfigImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -11,7 +11,12 @@ class SwitchingAppearanceMode extends StatelessWidget {
   final User user;
   final PillSheetGroup pillSheetGroup;
 
-  const SwitchingAppearanceMode({super.key, required this.setting, required this.user, required this.pillSheetGroup});
+  const SwitchingAppearanceMode({
+    super.key,
+    required this.setting,
+    required this.user,
+    required this.pillSheetGroup,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +25,11 @@ class SwitchingAppearanceMode extends StatelessWidget {
       title: Text(L.displayMode),
       onTap: () {
         analytics.logEvent(name: 'did_tapped_record_page_appearance_mode');
-        showSelectAppearanceModeModal(context, user: user, pillSheetGroup: pillSheetGroup);
+        showSelectAppearanceModeModal(
+          context,
+          user: user,
+          pillSheetGroup: pillSheetGroup,
+        );
       },
     );
   }

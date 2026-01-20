@@ -22,9 +22,14 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final setting = ref.watch(settingProvider).requireValue;
-    final pillSheetGroup = ref.watch(latestPillSheetGroupProvider).asData?.value;
+    final pillSheetGroup = ref
+        .watch(latestPillSheetGroupProvider)
+        .asData
+        ?.value;
     final setPillSheetGroup = ref.watch(setPillSheetGroupProvider);
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final registerReminderLocalNotification = ref.watch(
+      registerReminderLocalNotificationProvider,
+    );
 
     if (pillSheetGroup == null) {
       return const SizedBox();
@@ -39,7 +44,12 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
           children: [
             Text(
               L.displayMode,
-              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500, fontFamily: FontFamily.japanese, color: TextColor.main),
+              style: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+                fontFamily: FontFamily.japanese,
+                color: TextColor.main,
+              ),
             ),
             const SizedBox(height: 24),
             Column(
@@ -49,7 +59,8 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   setting: setting,
                   pillSheetGroup: pillSheetGroup,
                   setPillSheetGroup: setPillSheetGroup,
-                  registerReminderLocalNotification: registerReminderLocalNotification,
+                  registerReminderLocalNotification:
+                      registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.date,
                   text: L.dateDisplay,
@@ -60,7 +71,8 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   setting: setting,
                   pillSheetGroup: pillSheetGroup,
                   setPillSheetGroup: setPillSheetGroup,
-                  registerReminderLocalNotification: registerReminderLocalNotification,
+                  registerReminderLocalNotification:
+                      registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.number,
                   text: L.pillNumber,
@@ -71,7 +83,8 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   setting: setting,
                   pillSheetGroup: pillSheetGroup,
                   setPillSheetGroup: setPillSheetGroup,
-                  registerReminderLocalNotification: registerReminderLocalNotification,
+                  registerReminderLocalNotification:
+                      registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.cyclicSequential,
                   text: L.pillDaysCycle,
@@ -88,7 +101,8 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
   Widget _row(
     BuildContext context, {
     required SetPillSheetGroup setPillSheetGroup,
-    required RegisterReminderLocalNotification registerReminderLocalNotification,
+    required RegisterReminderLocalNotification
+    registerReminderLocalNotification,
     required Setting setting,
     required PillSheetGroup pillSheetGroup,
     required User user,
@@ -98,16 +112,26 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
   }) {
     return GestureDetector(
       onTap: () async {
-        analytics.logEvent(name: 'did_select_pill_sheet_appearance', parameters: {'mode': mode.toString(), 'isPremiumFunction': isPremiumFunction});
+        analytics.logEvent(
+          name: 'did_select_pill_sheet_appearance',
+          parameters: {
+            'mode': mode.toString(),
+            'isPremiumFunction': isPremiumFunction,
+          },
+        );
 
         if (user.isPremium || user.isTrial) {
-          await setPillSheetGroup(pillSheetGroup.copyWith(pillSheetAppearanceMode: mode));
+          await setPillSheetGroup(
+            pillSheetGroup.copyWith(pillSheetAppearanceMode: mode),
+          );
           await registerReminderLocalNotification();
         } else if (isPremiumFunction) {
           showPremiumIntroductionSheet(context);
         } else {
           // User selected non premium function mode
-          await setPillSheetGroup(pillSheetGroup.copyWith(pillSheetAppearanceMode: mode));
+          await setPillSheetGroup(
+            pillSheetGroup.copyWith(pillSheetAppearanceMode: mode),
+          );
           await registerReminderLocalNotification();
         }
       },
@@ -115,13 +139,22 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
         height: 48,
         child: Row(
           children: [
-            SelectCircle(isSelected: mode == pillSheetGroup.pillSheetAppearanceMode),
+            SelectCircle(
+              isSelected: mode == pillSheetGroup.pillSheetAppearanceMode,
+            ),
             const SizedBox(width: 34),
             Text(
               text,
-              style: const TextStyle(color: TextColor.main, fontWeight: FontWeight.w500, fontSize: 14),
+              style: const TextStyle(
+                color: TextColor.main,
+                fontWeight: FontWeight.w500,
+                fontSize: 14,
+              ),
             ),
-            if (isPremiumFunction) ...[const SizedBox(width: 12), const PremiumBadge()],
+            if (isPremiumFunction) ...[
+              const SizedBox(width: 12),
+              const PremiumBadge(),
+            ],
           ],
         ),
       ),
@@ -129,7 +162,11 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
   }
 }
 
-void showSelectAppearanceModeModal(BuildContext context, {required User user, required PillSheetGroup pillSheetGroup}) {
+void showSelectAppearanceModeModal(
+  BuildContext context, {
+  required User user,
+  required PillSheetGroup pillSheetGroup,
+}) {
   analytics.logScreenView(screenName: 'SelectAppearanceModeModal');
   showModalBottomSheet(
     context: context,

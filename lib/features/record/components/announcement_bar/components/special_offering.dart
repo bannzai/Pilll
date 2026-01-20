@@ -10,7 +10,10 @@ import 'package:pilll/utils/analytics.dart';
 
 class SpecialOfferingAnnouncementBar extends HookConsumerWidget {
   final ValueNotifier<bool> specialOfferingIsClosed;
-  const SpecialOfferingAnnouncementBar({super.key, required this.specialOfferingIsClosed});
+  const SpecialOfferingAnnouncementBar({
+    super.key,
+    required this.specialOfferingIsClosed,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -26,7 +29,9 @@ class SpecialOfferingAnnouncementBar extends HookConsumerWidget {
           analytics.logEvent(name: 'special_offering_announcement_bar_tap');
           showModalBottomSheet(
             context: context,
-            builder: (context) => SpecialOfferingPage(specialOfferingIsClosed: specialOfferingIsClosed),
+            builder: (context) => SpecialOfferingPage(
+              specialOfferingIsClosed: specialOfferingIsClosed,
+            ),
             backgroundColor: Colors.transparent,
             isScrollControlled: true,
             enableDrag: false,
@@ -39,14 +44,25 @@ class SpecialOfferingAnnouncementBar extends HookConsumerWidget {
               alignment: Alignment.center,
               child: Text(
                 '97.2%の人が「飲み忘れが減った」と回答！\n今だけ半額でプレミアムプランをゲット！',
-                style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 14, color: TextColor.white),
+                style: TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                  color: TextColor.white,
+                ),
                 textAlign: TextAlign.center,
               ),
             ),
             Align(
               alignment: Alignment.centerRight,
               child: IconButton(
-                icon: SvgPicture.asset('images/arrow_right.svg', colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn)),
+                icon: SvgPicture.asset(
+                  'images/arrow_right.svg',
+                  colorFilter: const ColorFilter.mode(
+                    Colors.white,
+                    BlendMode.srcIn,
+                  ),
+                ),
                 onPressed: () {},
                 iconSize: 24,
                 padding: const EdgeInsets.all(8),

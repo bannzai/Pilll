@@ -25,7 +25,11 @@ class SignInSheet extends HookConsumerWidget {
   final SignInSheetStateContext stateContext;
   final Function(LinkAccountType)? onSignIn;
 
-  const SignInSheet({super.key, required this.stateContext, required this.onSignIn});
+  const SignInSheet({
+    super.key,
+    required this.stateContext,
+    required this.onSignIn,
+  });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isLoading = useState(false);
@@ -35,7 +39,11 @@ class SignInSheet extends HookConsumerWidget {
     return HUD(
       shown: isLoading.value,
       child: Container(
-        constraints: BoxConstraints(maxHeight: 333, minHeight: 300, minWidth: MediaQuery.of(context).size.width),
+        constraints: BoxConstraints(
+          maxHeight: 333,
+          minHeight: 300,
+          minWidth: MediaQuery.of(context).size.width,
+        ),
         color: Colors.white,
         child: SafeArea(
           child: Padding(
@@ -50,13 +58,23 @@ class SignInSheet extends HookConsumerWidget {
                 Text(
                   _title,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main),
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 20,
+                    color: TextColor.main,
+                  ),
                 ),
                 const SizedBox(height: 16),
                 Text(
                   _message,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 14,
+                    color: TextColor.main,
+                  ),
                 ),
                 const SizedBox(height: 24),
                 _appleButton(context, linkApple, isLoading),
@@ -71,11 +89,17 @@ class SignInSheet extends HookConsumerWidget {
     );
   }
 
-  Widget _appleButton(BuildContext context, LinkApple linkApple, ValueNotifier<bool> isLoading) {
+  Widget _appleButton(
+    BuildContext context,
+    LinkApple linkApple,
+    ValueNotifier<bool> isLoading,
+  ) {
     return OutlinedButton(
       style: ButtonStyle(
         backgroundColor: WidgetStateProperty.all(AppColors.appleBlack),
-        shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(6))),
+        shape: WidgetStateProperty.all(
+          RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+        ),
       ),
       onPressed: () async {
         analytics.logEvent(name: 'signin_sheet_selected_apple');
@@ -110,7 +134,12 @@ class SignInSheet extends HookConsumerWidget {
                 padding: const EdgeInsets.only(left: 10),
                 child: Text(
                   _appleButtonText,
-                  style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 16, color: TextColor.white),
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 16,
+                    color: TextColor.white,
+                  ),
                 ),
               ),
             ],
@@ -120,7 +149,11 @@ class SignInSheet extends HookConsumerWidget {
     );
   }
 
-  Widget _googleButton(BuildContext context, LinkGoogle linkGoogle, ValueNotifier<bool> isLoading) {
+  Widget _googleButton(
+    BuildContext context,
+    LinkGoogle linkGoogle,
+    ValueNotifier<bool> isLoading,
+  ) {
     return OutlinedButton(
       style: ButtonStyle(
         backgroundColor: WidgetStateProperty.all(Colors.white),
@@ -164,7 +197,12 @@ class SignInSheet extends HookConsumerWidget {
                 padding: const EdgeInsets.only(left: 10),
                 child: Text(
                   _googleButtonText,
-                  style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 16, color: TextColor.main),
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 16,
+                    color: TextColor.main,
+                  ),
                 ),
               ),
             ],
@@ -242,7 +280,11 @@ class SignInSheet extends HookConsumerWidget {
   Future<SignInWithAppleState> _handleApple(LinkApple linkApple) {
     if (_isLoginMode) {
       analytics.logEvent(name: 'signin_sheet_sign_in_apple');
-      return signInWithApple().then((value) => value == null ? SignInWithAppleState.cancel : SignInWithAppleState.determined);
+      return signInWithApple().then(
+        (value) => value == null
+            ? SignInWithAppleState.cancel
+            : SignInWithAppleState.determined,
+      );
     } else {
       analytics.logEvent(name: 'signin_sheet_link_with_apple');
       return callLinkWithApple(linkApple);
@@ -252,7 +294,11 @@ class SignInSheet extends HookConsumerWidget {
   Future<SignInWithGoogleState> _handleGoogle(LinkGoogle linkGoogle) {
     if (_isLoginMode) {
       analytics.logEvent(name: 'signin_sheet_sign_in_google');
-      return signInWithGoogle().then((value) => value == null ? SignInWithGoogleState.cancel : SignInWithGoogleState.determined);
+      return signInWithGoogle().then(
+        (value) => value == null
+            ? SignInWithGoogleState.cancel
+            : SignInWithGoogleState.determined,
+      );
     } else {
       analytics.logEvent(name: 'signin_sheet_link_with_google');
       return callLinkWithGoogle(linkGoogle);
@@ -260,11 +306,16 @@ class SignInSheet extends HookConsumerWidget {
   }
 }
 
-void showSignInSheet(BuildContext context, SignInSheetStateContext stateContext, Function(LinkAccountType)? onSignIn) {
+void showSignInSheet(
+  BuildContext context,
+  SignInSheetStateContext stateContext,
+  Function(LinkAccountType)? onSignIn,
+) {
   analytics.logScreenView(screenName: 'SigninSheet');
   showModalBottomSheet(
     context: context,
-    builder: (context) => SignInSheet(stateContext: stateContext, onSignIn: onSignIn),
+    builder: (context) =>
+        SignInSheet(stateContext: stateContext, onSignIn: onSignIn),
     backgroundColor: Colors.transparent,
   );
 }

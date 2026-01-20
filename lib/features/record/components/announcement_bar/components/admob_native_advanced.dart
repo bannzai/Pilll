@@ -15,7 +15,9 @@ class AdMobNativeAdvanceState extends State<AdMobNativeAdvance> {
   NativeAd? _nativeAd;
   bool _nativeAdIsLoaded = false;
 
-  final String _adUnitId = Platform.isAndroid ? Secret.androidAdmobNativeAdvanceIdentifier : Secret.iOSAdmobNativeAdvanceIdentifier;
+  final String _adUnitId = Platform.isAndroid
+      ? Secret.androidAdmobNativeAdvanceIdentifier
+      : Secret.iOSAdmobNativeAdvanceIdentifier;
 
   @override
   void initState() {
@@ -75,10 +77,26 @@ class AdMobNativeAdvanceState extends State<AdMobNativeAdvance> {
       nativeTemplateStyle: NativeTemplateStyle(
         templateType: TemplateType.small,
         mainBackgroundColor: const Color(0xfffffbed),
-        callToActionTextStyle: NativeTemplateTextStyle(textColor: Colors.white, style: NativeTemplateFontStyle.monospace, size: 16.0),
-        primaryTextStyle: NativeTemplateTextStyle(textColor: Colors.black, style: NativeTemplateFontStyle.bold, size: 16.0),
-        secondaryTextStyle: NativeTemplateTextStyle(textColor: Colors.black, style: NativeTemplateFontStyle.italic, size: 16.0),
-        tertiaryTextStyle: NativeTemplateTextStyle(textColor: Colors.black, style: NativeTemplateFontStyle.normal, size: 16.0),
+        callToActionTextStyle: NativeTemplateTextStyle(
+          textColor: Colors.white,
+          style: NativeTemplateFontStyle.monospace,
+          size: 16.0,
+        ),
+        primaryTextStyle: NativeTemplateTextStyle(
+          textColor: Colors.black,
+          style: NativeTemplateFontStyle.bold,
+          size: 16.0,
+        ),
+        secondaryTextStyle: NativeTemplateTextStyle(
+          textColor: Colors.black,
+          style: NativeTemplateFontStyle.italic,
+          size: 16.0,
+        ),
+        tertiaryTextStyle: NativeTemplateTextStyle(
+          textColor: Colors.black,
+          style: NativeTemplateFontStyle.normal,
+          size: 16.0,
+        ),
       ),
     )..load();
   }

@@ -6,20 +6,29 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/p
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 
-class BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList extends HookConsumerWidget {
+class BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList
+    extends HookConsumerWidget {
   final PillSheet pillSheet;
 
-  const BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList({super.key, required this.pillSheet});
+  const BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList({
+    super.key,
+    required this.pillSheet,
+  });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final begin = pillSheet.beginDate;
     final end = pillSheet.estimatedEndTakenDate;
 
     return ref
-        .watch(pillSheetModifiedHistoriesWithRangeProvider(begin: begin, end: end))
+        .watch(
+          pillSheetModifiedHistoriesWithRangeProvider(begin: begin, end: end),
+        )
         .when(
           data: (pillSheetModifiedHistories) {
-            return PillSheetModifiedHistoryList(pillSheetModifiedHistories: pillSheetModifiedHistories, premiumOrTrial: true);
+            return PillSheetModifiedHistoryList(
+              pillSheetModifiedHistories: pillSheetModifiedHistories,
+              premiumOrTrial: true,
+            );
           },
           loading: () => const Indicator(),
           error: (e, _) => Text(L.failedToGetPillSheetHistory(e.toString())),

@@ -14,20 +14,35 @@ class DiscountPriceDeadline extends HookConsumerWidget {
   final DateTime discountEntitlementDeadlineDate;
   final VoidCallback onTap;
 
-  const DiscountPriceDeadline({super.key, required this.user, required this.discountEntitlementDeadlineDate, required this.onTap});
+  const DiscountPriceDeadline({
+    super.key,
+    required this.user,
+    required this.discountEntitlementDeadlineDate,
+    required this.onTap,
+  });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final difference = ref.watch(durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
+    final difference = ref.watch(
+      durationToDiscountPriceDeadlineProvider(
+        discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
+      ),
+    );
     final annualPackage = ref.watch(annualPackageProvider(user));
     final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider);
-    if (difference.inSeconds <= 0 || annualPackage == null || monthlyPremiumPackage == null) {
+    if (difference.inSeconds <= 0 ||
+        annualPackage == null ||
+        monthlyPremiumPackage == null) {
       return Container();
     }
 
     final countdown = discountPriceDeadlineCountdownString(difference);
     // NOTE: [DiscountPercent]
-    final offPercentForMonthlyPremiumPackage = ((1 - (annualPackage.storeProduct.price / (monthlyPremiumPackage.storeProduct.price * 12))) * 100)
-        .toInt();
+    final offPercentForMonthlyPremiumPackage =
+        ((1 -
+                    (annualPackage.storeProduct.price /
+                        (monthlyPremiumPackage.storeProduct.price * 12))) *
+                100)
+            .toInt();
 
     return Container(
       padding: const EdgeInsets.only(top: 10, bottom: 4, left: 8, right: 8),
@@ -40,14 +55,25 @@ class DiscountPriceDeadline extends HookConsumerWidget {
               alignment: Alignment.center,
               child: Text(
                 '${L.premiumIntroductionDiscountPriceDeadline}\n${L.countdownForDiscountPriceDeadline(countdown, offPercentForMonthlyPremiumPackage)}',
-                style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 14, color: TextColor.white),
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                  color: TextColor.white,
+                ),
                 textAlign: TextAlign.center,
               ),
             ),
             Align(
               alignment: Alignment.centerRight,
               child: IconButton(
-                icon: SvgPicture.asset('images/arrow_right.svg', colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn)),
+                icon: SvgPicture.asset(
+                  'images/arrow_right.svg',
+                  colorFilter: const ColorFilter.mode(
+                    Colors.white,
+                    BlendMode.srcIn,
+                  ),
+                ),
                 onPressed: () {},
                 iconSize: 24,
                 padding: const EdgeInsets.all(8),

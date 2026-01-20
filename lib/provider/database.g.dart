@@ -13,9 +13,14 @@ String _$databaseHash() => r'28567367b7034c4ae52606373e30c94f89bacbd4';
 final databaseProvider = Provider<DatabaseConnection>.internal(
   database,
   name: r'databaseProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$databaseHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$databaseHash,
   dependencies: <ProviderOrFamily>[firebaseUserStateProvider],
-  allTransitiveDependencies: <ProviderOrFamily>{firebaseUserStateProvider, ...?firebaseUserStateProvider.allTransitiveDependencies},
+  allTransitiveDependencies: <ProviderOrFamily>{
+    firebaseUserStateProvider,
+    ...?firebaseUserStateProvider.allTransitiveDependencies,
+  },
 );
 
 typedef DatabaseRef = ProviderRef<DatabaseConnection>;

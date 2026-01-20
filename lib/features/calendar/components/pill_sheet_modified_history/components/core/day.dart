@@ -9,7 +9,8 @@ class Day extends StatelessWidget {
   const Day({super.key, required this.estimatedEventCausingDate});
 
   int get _day => estimatedEventCausingDate.day;
-  Weekday get _weekday => WeekdayFunctions.weekdayFromDate(estimatedEventCausingDate);
+  Weekday get _weekday =>
+      WeekdayFunctions.weekdayFromDate(estimatedEventCausingDate);
 
   @override
   Widget build(BuildContext context) {
@@ -20,14 +21,24 @@ class Day extends StatelessWidget {
           width: 28,
           child: Text(
             '$_day',
-            style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.number, fontSize: 23, fontWeight: FontWeight.w500),
+            style: const TextStyle(
+              color: TextColor.main,
+              fontFamily: FontFamily.number,
+              fontSize: 23,
+              fontWeight: FontWeight.w500,
+            ),
             textAlign: TextAlign.end,
           ),
         ),
         const SizedBox(width: 4),
         Text(
           '(${_weekday.weekdayString()})',
-          style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400),
+          style: const TextStyle(
+            color: TextColor.main,
+            fontFamily: FontFamily.japanese,
+            fontSize: 12,
+            fontWeight: FontWeight.w400,
+          ),
         ),
       ],
     );

@@ -14,7 +14,9 @@ import 'package:pilll/utils/datetime/day.dart';
 final changePillNumberProvider = Provider.autoDispose(
   (ref) => ChangePillNumber(
     batchFactory: ref.watch(batchFactoryProvider),
-    batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
+    batchSetPillSheetModifiedHistory: ref.watch(
+      batchSetPillSheetModifiedHistoryProvider,
+    ),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
   ),
 );
@@ -25,7 +27,11 @@ class ChangePillNumber {
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
 
-  ChangePillNumber({required this.batchFactory, required this.batchSetPillSheetModifiedHistory, required this.batchSetPillSheetGroup});
+  ChangePillNumber({
+    required this.batchFactory,
+    required this.batchSetPillSheetModifiedHistory,
+    required this.batchSetPillSheetGroup,
+  });
 
   Future<void> call({
     required PillSheetGroup pillSheetGroup,
@@ -35,10 +41,18 @@ class ChangePillNumber {
   }) async {
     final batch = batchFactory.batch();
 
-    final pillSheetTypes = pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+    final pillSheetTypes = pillSheetGroup.pillSheets
+        .map((e) => e.pillSheetType)
+        .toList();
     final nextSerializedPillNumber =
-        summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pillSheetPageIndex) + pillNumberInPillSheet;
-    final firstPilSheetBeginDate = today().subtract(Duration(days: nextSerializedPillNumber - 1));
+        summarizedPillCountWithPillSheetTypesToIndex(
+          pillSheetTypes: pillSheetTypes,
+          toIndex: pillSheetPageIndex,
+        ) +
+        pillNumberInPillSheet;
+    final firstPilSheetBeginDate = today().subtract(
+      Duration(days: nextSerializedPillNumber - 1),
+    );
 
     final List<PillSheet> updatedPillSheets = [];
     pillSheetGroup.pillSheets.asMap().keys.forEach((index) {
@@ -48,7 +62,10 @@ class ChangePillNumber {
       if (index == 0) {
         beginDate = firstPilSheetBeginDate;
       } else {
-        final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: index);
+        final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(
+          pillSheetTypes: pillSheetTypes,
+          toIndex: index,
+        );
         beginDate = firstPilSheetBeginDate.addDays(passedTotalCount);
       }
 
@@ -56,7 +73,9 @@ class ChangePillNumber {
       if (pillSheetPageIndex == index) {
         lastTakenDate = beginDate.addDays(pillNumberInPillSheet - 2);
       } else if (pillSheetPageIndex > index) {
-        lastTakenDate = beginDate.addDays(pillSheet.pillSheetType.totalCount - 1);
+        lastTakenDate = beginDate.addDays(
+          pillSheet.pillSheetType.totalCount - 1,
+        );
       } else {
         // state.selectedPillMarkNumberIntoPillSheet < index
         lastTakenDate = null;
@@ -72,7 +91,11 @@ class ChangePillNumber {
       final PillSheet updatedPillSheet;
       switch (pillSheet) {
         case PillSheetV1():
-          updatedPillSheet = pillSheet.copyWith(beginDate: beginDate, lastTakenDate: lastTakenDate, restDurations: []);
+          updatedPillSheet = pillSheet.copyWith(
+            beginDate: beginDate,
+            lastTakenDate: lastTakenDate,
+            restDurations: [],
+          );
         case PillSheetV2():
           // v2ではlastTakenDateはpillsから導出されるため、pillsを再構築する
           final pills = Pill.generateAndFillTo(
@@ -81,16 +104,23 @@ class ChangePillNumber {
             lastTakenDate: lastTakenDate,
             pillTakenCount: pillSheet.pills.first.takenCount,
           );
-          updatedPillSheet = pillSheet.copyWith(beginDate: beginDate, restDurations: [], pills: pills);
+          updatedPillSheet = pillSheet.copyWith(
+            beginDate: beginDate,
+            restDurations: [],
+            pills: pills,
+          );
       }
       updatedPillSheets.add(updatedPillSheet);
     });
 
-    final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
-    final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-      beforePillSheetGroup: pillSheetGroup,
-      afterPillSheetGroup: updatedPillSheetGroup,
+    final updatedPillSheetGroup = pillSheetGroup.copyWith(
+      pillSheets: updatedPillSheets,
     );
+    final history =
+        PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: updatedPillSheetGroup,
+        );
     batchSetPillSheetModifiedHistory(batch, history);
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
 

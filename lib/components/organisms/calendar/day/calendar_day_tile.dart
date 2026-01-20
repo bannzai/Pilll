@@ -17,10 +17,27 @@ class CalendarDayTile extends StatelessWidget {
   final Schedule? schedule;
   final Function(DateTime)? onTap;
 
-  const CalendarDayTile.grayout({Key? key, required DateTime date, required Weekday weekday})
-    : this(key: key, onTap: null, weekday: weekday, diary: null, schedule: null, date: date);
+  const CalendarDayTile.grayout({
+    Key? key,
+    required DateTime date,
+    required Weekday weekday,
+  }) : this(
+         key: key,
+         onTap: null,
+         weekday: weekday,
+         diary: null,
+         schedule: null,
+         date: date,
+       );
 
-  const CalendarDayTile({super.key, required this.date, required this.weekday, required this.diary, required this.schedule, required this.onTap});
+  const CalendarDayTile({
+    super.key,
+    required this.date,
+    required this.weekday,
+    required this.diary,
+    required this.schedule,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +71,10 @@ class CalendarDayTile extends StatelessWidget {
                 child: Container(
                   width: 32,
                   height: 32,
-                  decoration: BoxDecoration(color: AppColors.primary, borderRadius: BorderRadius.circular(16)),
+                  decoration: BoxDecoration(
+                    color: AppColors.primary,
+                    borderRadius: BorderRadius.circular(16),
+                  ),
                 ),
               ),
             ),
@@ -74,7 +94,11 @@ class CalendarDayTile extends StatelessWidget {
   }
 
   TextStyle _font() {
-    return const TextStyle(fontFamily: FontFamily.number, fontWeight: FontWeight.w600, fontSize: 16);
+    return const TextStyle(
+      fontFamily: FontFamily.number,
+      fontWeight: FontWeight.w600,
+      fontSize: 16,
+    );
   }
 
   Color _textColor() {

@@ -21,7 +21,10 @@ class ReleaseNote extends StatelessWidget {
         type: MaterialType.transparency,
         child: Center(
           child: Container(
-            decoration: BoxDecoration(color: AppColors.white, borderRadius: BorderRadius.circular(4)),
+            decoration: BoxDecoration(
+              color: AppColors.white,
+              borderRadius: BorderRadius.circular(4),
+            ),
             constraints: const BoxConstraints(maxWidth: 320),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -40,10 +43,19 @@ class ReleaseNote extends StatelessWidget {
                     Align(
                       alignment: Alignment.center,
                       child: Container(
-                        padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
+                        padding: const EdgeInsets.only(
+                          top: 40,
+                          left: 40,
+                          right: 40,
+                        ),
                         child: const Text(
                           '服薬時刻に目覚ましアラームが鳴るようにしました',
-                          style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 16, color: TextColor.black),
+                          style: TextStyle(
+                            fontFamily: FontFamily.japanese,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                            color: TextColor.black,
+                          ),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -55,9 +67,17 @@ class ReleaseNote extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('''
+                      Text(
+                        '''
 集中モードがONまたはデバイスが消音時でも、目覚ましのようにアラームが鳴らせるオプションを追加しました
-                        ''', style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main)),
+                        ''',
+                        style: TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 14,
+                          color: TextColor.main,
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -107,5 +127,10 @@ void showReleaseNotePreDialog(BuildContext context) async {
 
 void openReleaseNote() async {
   // NOTE: www.notion.so から始まっている場合は間違い
-  launchUrl(Uri.parse('https://pilll.notion.site/202509-20-x-273293831717809790f9e6cbd8f948c2?pvs=74'), mode: LaunchMode.inAppBrowserView);
+  launchUrl(
+    Uri.parse(
+      'https://pilll.notion.site/202509-20-x-273293831717809790f9e6cbd8f948c2?pvs=74',
+    ),
+    mode: LaunchMode.inAppBrowserView,
+  );
 }

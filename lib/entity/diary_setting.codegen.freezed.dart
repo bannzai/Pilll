@@ -28,26 +28,38 @@ mixin _$DiarySetting {
 
   /// 設定が作成された日時
   /// Firestoreのタイムスタンプ形式で保存され、読み書き時に自動変換される
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  @JsonKey(
+    fromJson: NonNullTimestampConverter.timestampToDateTime,
+    toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+  )
   DateTime get createdAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $DiarySettingCopyWith<DiarySetting> get copyWith => throw _privateConstructorUsedError;
+  $DiarySettingCopyWith<DiarySetting> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $DiarySettingCopyWith<$Res> {
-  factory $DiarySettingCopyWith(DiarySetting value, $Res Function(DiarySetting) then) = _$DiarySettingCopyWithImpl<$Res, DiarySetting>;
+  factory $DiarySettingCopyWith(
+    DiarySetting value,
+    $Res Function(DiarySetting) then,
+  ) = _$DiarySettingCopyWithImpl<$Res, DiarySetting>;
   @useResult
   $Res call({
     List<String> physicalConditions,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdAt,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+    DateTime createdAt,
   });
 }
 
 /// @nodoc
-class _$DiarySettingCopyWithImpl<$Res, $Val extends DiarySetting> implements $DiarySettingCopyWith<$Res> {
+class _$DiarySettingCopyWithImpl<$Res, $Val extends DiarySetting>
+    implements $DiarySettingCopyWith<$Res> {
   _$DiarySettingCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -75,20 +87,32 @@ class _$DiarySettingCopyWithImpl<$Res, $Val extends DiarySetting> implements $Di
 }
 
 /// @nodoc
-abstract class _$$DiarySettingImplCopyWith<$Res> implements $DiarySettingCopyWith<$Res> {
-  factory _$$DiarySettingImplCopyWith(_$DiarySettingImpl value, $Res Function(_$DiarySettingImpl) then) = __$$DiarySettingImplCopyWithImpl<$Res>;
+abstract class _$$DiarySettingImplCopyWith<$Res>
+    implements $DiarySettingCopyWith<$Res> {
+  factory _$$DiarySettingImplCopyWith(
+    _$DiarySettingImpl value,
+    $Res Function(_$DiarySettingImpl) then,
+  ) = __$$DiarySettingImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({
     List<String> physicalConditions,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdAt,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+    DateTime createdAt,
   });
 }
 
 /// @nodoc
-class __$$DiarySettingImplCopyWithImpl<$Res> extends _$DiarySettingCopyWithImpl<$Res, _$DiarySettingImpl>
+class __$$DiarySettingImplCopyWithImpl<$Res>
+    extends _$DiarySettingCopyWithImpl<$Res, _$DiarySettingImpl>
     implements _$$DiarySettingImplCopyWith<$Res> {
-  __$$DiarySettingImplCopyWithImpl(_$DiarySettingImpl _value, $Res Function(_$DiarySettingImpl) _then) : super(_value, _then);
+  __$$DiarySettingImplCopyWithImpl(
+    _$DiarySettingImpl _value,
+    $Res Function(_$DiarySettingImpl) _then,
+  ) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -114,11 +138,16 @@ class __$$DiarySettingImplCopyWithImpl<$Res> extends _$DiarySettingCopyWithImpl<
 class _$DiarySettingImpl extends _DiarySetting with DiagnosticableTreeMixin {
   const _$DiarySettingImpl({
     final List<String> physicalConditions = defaultPhysicalConditions,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.createdAt,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+    required this.createdAt,
   }) : _physicalConditions = physicalConditions,
        super._();
 
-  factory _$DiarySettingImpl.fromJson(Map<String, dynamic> json) => _$$DiarySettingImplFromJson(json);
+  factory _$DiarySettingImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DiarySettingImplFromJson(json);
 
   /// 日記機能で選択可能な体調項目のリスト
   /// デフォルトでは事前定義された14種類の体調項目が設定される
@@ -131,7 +160,8 @@ class _$DiarySettingImpl extends _DiarySetting with DiagnosticableTreeMixin {
   @override
   @JsonKey()
   List<String> get physicalConditions {
-    if (_physicalConditions is EqualUnmodifiableListView) return _physicalConditions;
+    if (_physicalConditions is EqualUnmodifiableListView)
+      return _physicalConditions;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_physicalConditions);
   }
@@ -139,7 +169,10 @@ class _$DiarySettingImpl extends _DiarySetting with DiagnosticableTreeMixin {
   /// 設定が作成された日時
   /// Firestoreのタイムスタンプ形式で保存され、読み書き時に自動変換される
   @override
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  @JsonKey(
+    fromJson: NonNullTimestampConverter.timestampToDateTime,
+    toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+  )
   final DateTime createdAt;
 
   @override
@@ -161,18 +194,27 @@ class _$DiarySettingImpl extends _DiarySetting with DiagnosticableTreeMixin {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DiarySettingImpl &&
-            const DeepCollectionEquality().equals(other._physicalConditions, _physicalConditions) &&
-            (identical(other.createdAt, createdAt) || other.createdAt == createdAt));
+            const DeepCollectionEquality().equals(
+              other._physicalConditions,
+              _physicalConditions,
+            ) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_physicalConditions), createdAt);
+  int get hashCode => Object.hash(
+    runtimeType,
+    const DeepCollectionEquality().hash(_physicalConditions),
+    createdAt,
+  );
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$DiarySettingImplCopyWith<_$DiarySettingImpl> get copyWith => __$$DiarySettingImplCopyWithImpl<_$DiarySettingImpl>(this, _$identity);
+  _$$DiarySettingImplCopyWith<_$DiarySettingImpl> get copyWith =>
+      __$$DiarySettingImplCopyWithImpl<_$DiarySettingImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -183,12 +225,16 @@ class _$DiarySettingImpl extends _DiarySetting with DiagnosticableTreeMixin {
 abstract class _DiarySetting extends DiarySetting {
   const factory _DiarySetting({
     final List<String> physicalConditions,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
     required final DateTime createdAt,
   }) = _$DiarySettingImpl;
   const _DiarySetting._() : super._();
 
-  factory _DiarySetting.fromJson(Map<String, dynamic> json) = _$DiarySettingImpl.fromJson;
+  factory _DiarySetting.fromJson(Map<String, dynamic> json) =
+      _$DiarySettingImpl.fromJson;
 
   @override
   /// 日記機能で選択可能な体調項目のリスト
@@ -198,9 +244,13 @@ abstract class _DiarySetting extends DiarySetting {
   @override
   /// 設定が作成された日時
   /// Firestoreのタイムスタンプ形式で保存され、読み書き時に自動変換される
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  @JsonKey(
+    fromJson: NonNullTimestampConverter.timestampToDateTime,
+    toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+  )
   DateTime get createdAt;
   @override
   @JsonKey(ignore: true)
-  _$$DiarySettingImplCopyWith<_$DiarySettingImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$DiarySettingImplCopyWith<_$DiarySettingImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

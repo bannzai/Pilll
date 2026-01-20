@@ -42,7 +42,9 @@ final _calendarDataSource = List.generate(
   _calendarDataSourceLength,
   (index) => (index + 1) - (_calendarDataSourceLength ~/ 2),
 ).map((e) => DateTime(today().year, today().month + e, 1)).toList();
-final _todayCalendarPageIndex = _calendarDataSource.lastIndexWhere((element) => isSameMonth(element, today()));
+final _todayCalendarPageIndex = _calendarDataSource.lastIndexWhere(
+  (element) => isSameMonth(element, today()),
+);
 
 class CalendarPage extends HookConsumerWidget {
   const CalendarPage({super.key});
@@ -50,7 +52,9 @@ class CalendarPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final page = useState(_todayCalendarPageIndex);
-    final pageController = usePageController(initialPage: _todayCalendarPageIndex);
+    final pageController = usePageController(
+      initialPage: _todayCalendarPageIndex,
+    );
     pageController.addListener(() {
       final index = (pageController.page ?? pageController.initialPage).round();
       page.value = index;
@@ -59,7 +63,12 @@ class CalendarPage extends HookConsumerWidget {
     final displayedMonth = _calendarDataSource[page.value];
     return AsyncValueGroup.group6(
       ref.watch(
-        pillSheetModifiedHistoriesWithLimitProvider(limit: CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold + 1),
+        pillSheetModifiedHistoriesWithLimitProvider(
+          limit:
+              CalendarPillSheetModifiedHistoryCardState
+                  .pillSheetModifiedHistoriesThreshold +
+              1,
+        ),
       ),
       ref.watch(userProvider),
       ref.watch(calendarMenstruationBandListProvider),
@@ -78,7 +87,11 @@ class CalendarPage extends HookConsumerWidget {
         page: page,
         pageController: pageController,
       ),
-      error: (error, _) => UniversalErrorPage(error: error, child: null, reload: () => ref.refresh(databaseProvider)),
+      error: (error, _) => UniversalErrorPage(
+        error: error,
+        child: null,
+        reload: () => ref.refresh(databaseProvider),
+      ),
       loading: () => const ScaffoldIndicator(),
     );
   }
@@ -86,13 +99,17 @@ class CalendarPage extends HookConsumerWidget {
 
 const double _shadowHeight = 2;
 const _monthlyCalendarHeight =
-    WeekdayBadgeConst.height + (CalendarConstants.tileHeight + CalendarConstants.dividerHeight) * CalendarConstants.maxLineCount + _shadowHeight;
+    WeekdayBadgeConst.height +
+    (CalendarConstants.tileHeight + CalendarConstants.dividerHeight) *
+        CalendarConstants.maxLineCount +
+    _shadowHeight;
 
 class _CalendarPageBody extends StatelessWidget {
   final List<PillSheetModifiedHistory> histories;
   final User user;
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
-  final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
+  final List<CalendarScheduledMenstruationBandModel>
+  calendarScheduledMenstruationBandModels;
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
   final DateTime displayedMonth;
   final Diary? todayDiary;
@@ -119,7 +136,9 @@ class _CalendarPageBody extends StatelessWidget {
         child: FloatingActionButton(
           onPressed: () {
             analytics.logEvent(name: 'calendar_fab_pressed');
-            Navigator.of(context).push(DiaryPostPageRoute.route(today(), todayDiary));
+            Navigator.of(
+              context,
+            ).push(DiaryPostPageRoute.route(today(), todayDiary));
           },
           backgroundColor: AppColors.primary,
           child: const Icon(Icons.add, color: Colors.white),
@@ -127,7 +146,11 @@ class _CalendarPageBody extends StatelessWidget {
       ),
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: CalendarPageTitle(displayedMonth: displayedMonth, page: page, pageController: pageController),
+        title: CalendarPageTitle(
+          displayedMonth: displayedMonth,
+          page: page,
+          pageController: pageController,
+        ),
         centerTitle: true,
         elevation: 0,
         backgroundColor: AppColors.white,
@@ -145,16 +168,22 @@ class _CalendarPageBody extends StatelessWidget {
                 physics: const PageScrollPhysics(),
                 children: List.generate(_calendarDataSourceLength, (index) {
                   // NOTE: 生理タブ上部のカレンダーの90日のデータと合わせて3index分の表示をフリープランとする
-                  final withInFreePlanMonth = _todayCalendarPageIndex + 3 >= index && index >= _todayCalendarPageIndex - 3;
+                  final withInFreePlanMonth =
+                      _todayCalendarPageIndex + 3 >= index &&
+                      index >= _todayCalendarPageIndex - 3;
                   return Stack(
                     children: [
                       MonthCalendarPager(
                         displayedMonth: displayedMonth,
-                        calendarMenstruationBandModels: calendarMenstruationBandModels,
-                        calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
-                        calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
+                        calendarMenstruationBandModels:
+                            calendarMenstruationBandModels,
+                        calendarScheduledMenstruationBandModels:
+                            calendarScheduledMenstruationBandModels,
+                        calendarNextPillSheetBandModels:
+                            calendarNextPillSheetBandModels,
                       ),
-                      if (!user.premiumOrTrial && !withInFreePlanMonth) const PremiumIntroductionOverlay(),
+                      if (!user.premiumOrTrial && !withInFreePlanMonth)
+                        const PremiumIntroductionOverlay(),
                     ],
                   );
                 }),
@@ -163,7 +192,10 @@ class _CalendarPageBody extends StatelessWidget {
             const SizedBox(height: 30),
             Padding(
               padding: const EdgeInsets.only(left: 16, right: 16),
-              child: CalendarPillSheetModifiedHistoryCard(histories: histories, user: user),
+              child: CalendarPillSheetModifiedHistoryCard(
+                histories: histories,
+                user: user,
+              ),
             ),
             const SizedBox(height: 120),
           ],
@@ -184,7 +216,8 @@ class MonthCalendarPager extends StatelessWidget {
 
   final DateTime displayedMonth;
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
-  final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
+  final List<CalendarScheduledMenstruationBandModel>
+  calendarScheduledMenstruationBandModels;
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
 
   @override
@@ -192,7 +225,13 @@ class MonthCalendarPager extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: AppColors.white,
-        boxShadow: [BoxShadow(color: AppColors.shadow, blurRadius: 6.0, offset: const Offset(0, _shadowHeight))],
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.shadow,
+            blurRadius: 6.0,
+            offset: const Offset(0, _shadowHeight),
+          ),
+        ],
       ),
       height: _monthlyCalendarHeight,
       width: MediaQuery.of(context).size.width,
@@ -202,7 +241,8 @@ class MonthCalendarPager extends StatelessWidget {
           return CalendarWeekLine(
             dateRange: weekDateRange,
             calendarMenstruationBandModels: calendarMenstruationBandModels,
-            calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
+            calendarScheduledMenstruationBandModels:
+                calendarScheduledMenstruationBandModels,
             calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
             horizontalPadding: 0,
             day: (context, weekday, date) {
@@ -213,10 +253,19 @@ class MonthCalendarPager extends StatelessWidget {
                 weekday: weekday,
                 date: date,
                 diary: diaries.firstWhereOrNull((e) => isSameDay(e.date, date)),
-                schedule: schedules.firstWhereOrNull((e) => isSameDay(e.date, date)),
+                schedule: schedules.firstWhereOrNull(
+                  (e) => isSameDay(e.date, date),
+                ),
                 onTap: (date) {
-                  analytics.logEvent(name: 'did_select_day_tile_on_calendar_card');
-                  transitionWhenCalendarDayTapped(context, date: date, diaries: diaries, schedules: schedules);
+                  analytics.logEvent(
+                    name: 'did_select_day_tile_on_calendar_card',
+                  );
+                  transitionWhenCalendarDayTapped(
+                    context,
+                    date: date,
+                    diaries: diaries,
+                    schedules: schedules,
+                  );
                 },
               );
             },
@@ -248,7 +297,12 @@ class PremiumIntroductionOverlay extends StatelessWidget {
                   const SizedBox(height: 12),
                   Text(
                     L.medicationHistoryPremiumFeatureRestriction,
-                    style: const TextStyle(color: TextColor.main, fontSize: 14, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400),
+                    style: const TextStyle(
+                      color: TextColor.main,
+                      fontSize: 14,
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w400,
+                    ),
                   ),
                   const SizedBox(height: 15),
                   SizedBox(
@@ -256,7 +310,9 @@ class PremiumIntroductionOverlay extends StatelessWidget {
                     child: AppOutlinedButton(
                       text: L.viewMoreDetails,
                       onPressed: () async {
-                        analytics.logEvent(name: 'pressed_premium_overlay_monthly_calendar');
+                        analytics.logEvent(
+                          name: 'pressed_premium_overlay_monthly_calendar',
+                        );
                         showPremiumIntroductionSheet(context);
                       },
                     ),

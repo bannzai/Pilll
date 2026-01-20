@@ -39,7 +39,10 @@ mixin _$Inquiry {
   String get content => throw _privateConstructorUsedError;
 
   /// 作成日時
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  @JsonKey(
+    fromJson: NonNullTimestampConverter.timestampToDateTime,
+    toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+  )
   DateTime get createdAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -49,7 +52,8 @@ mixin _$Inquiry {
 
 /// @nodoc
 abstract class $InquiryCopyWith<$Res> {
-  factory $InquiryCopyWith(Inquiry value, $Res Function(Inquiry) then) = _$InquiryCopyWithImpl<$Res, Inquiry>;
+  factory $InquiryCopyWith(Inquiry value, $Res Function(Inquiry) then) =
+      _$InquiryCopyWithImpl<$Res, Inquiry>;
   @useResult
   $Res call({
     @JsonKey(includeIfNull: false) String? id,
@@ -57,12 +61,17 @@ abstract class $InquiryCopyWith<$Res> {
     String? otherTypeText,
     String email,
     String content,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdAt,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+    DateTime createdAt,
   });
 }
 
 /// @nodoc
-class _$InquiryCopyWithImpl<$Res, $Val extends Inquiry> implements $InquiryCopyWith<$Res> {
+class _$InquiryCopyWithImpl<$Res, $Val extends Inquiry>
+    implements $InquiryCopyWith<$Res> {
   _$InquiryCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -114,7 +123,10 @@ class _$InquiryCopyWithImpl<$Res, $Val extends Inquiry> implements $InquiryCopyW
 
 /// @nodoc
 abstract class _$$InquiryImplCopyWith<$Res> implements $InquiryCopyWith<$Res> {
-  factory _$$InquiryImplCopyWith(_$InquiryImpl value, $Res Function(_$InquiryImpl) then) = __$$InquiryImplCopyWithImpl<$Res>;
+  factory _$$InquiryImplCopyWith(
+    _$InquiryImpl value,
+    $Res Function(_$InquiryImpl) then,
+  ) = __$$InquiryImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({
@@ -123,13 +135,22 @@ abstract class _$$InquiryImplCopyWith<$Res> implements $InquiryCopyWith<$Res> {
     String? otherTypeText,
     String email,
     String content,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdAt,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+    DateTime createdAt,
   });
 }
 
 /// @nodoc
-class __$$InquiryImplCopyWithImpl<$Res> extends _$InquiryCopyWithImpl<$Res, _$InquiryImpl> implements _$$InquiryImplCopyWith<$Res> {
-  __$$InquiryImplCopyWithImpl(_$InquiryImpl _value, $Res Function(_$InquiryImpl) _then) : super(_value, _then);
+class __$$InquiryImplCopyWithImpl<$Res>
+    extends _$InquiryCopyWithImpl<$Res, _$InquiryImpl>
+    implements _$$InquiryImplCopyWith<$Res> {
+  __$$InquiryImplCopyWithImpl(
+    _$InquiryImpl _value,
+    $Res Function(_$InquiryImpl) _then,
+  ) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -182,10 +203,15 @@ class _$InquiryImpl extends _Inquiry {
     this.otherTypeText,
     required this.email,
     required this.content,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.createdAt,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+    required this.createdAt,
   }) : super._();
 
-  factory _$InquiryImpl.fromJson(Map<String, dynamic> json) => _$$InquiryImplFromJson(json);
+  factory _$InquiryImpl.fromJson(Map<String, dynamic> json) =>
+      _$$InquiryImplFromJson(json);
 
   /// ドキュメントID。Firestore保存時に自動設定される
   @override
@@ -211,7 +237,10 @@ class _$InquiryImpl extends _Inquiry {
 
   /// 作成日時
   @override
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  @JsonKey(
+    fromJson: NonNullTimestampConverter.timestampToDateTime,
+    toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+  )
   final DateTime createdAt;
 
   @override
@@ -225,21 +254,33 @@ class _$InquiryImpl extends _Inquiry {
         (other.runtimeType == runtimeType &&
             other is _$InquiryImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.inquiryType, inquiryType) || other.inquiryType == inquiryType) &&
-            (identical(other.otherTypeText, otherTypeText) || other.otherTypeText == otherTypeText) &&
+            (identical(other.inquiryType, inquiryType) ||
+                other.inquiryType == inquiryType) &&
+            (identical(other.otherTypeText, otherTypeText) ||
+                other.otherTypeText == otherTypeText) &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.content, content) || other.content == content) &&
-            (identical(other.createdAt, createdAt) || other.createdAt == createdAt));
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, inquiryType, otherTypeText, email, content, createdAt);
+  int get hashCode => Object.hash(
+    runtimeType,
+    id,
+    inquiryType,
+    otherTypeText,
+    email,
+    content,
+    createdAt,
+  );
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$InquiryImplCopyWith<_$InquiryImpl> get copyWith => __$$InquiryImplCopyWithImpl<_$InquiryImpl>(this, _$identity);
+  _$$InquiryImplCopyWith<_$InquiryImpl> get copyWith =>
+      __$$InquiryImplCopyWithImpl<_$InquiryImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -254,7 +295,10 @@ abstract class _Inquiry extends Inquiry {
     final String? otherTypeText,
     required final String email,
     required final String content,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
     required final DateTime createdAt,
   }) = _$InquiryImpl;
   const _Inquiry._() : super._();
@@ -280,9 +324,13 @@ abstract class _Inquiry extends Inquiry {
   String get content;
   @override
   /// 作成日時
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  @JsonKey(
+    fromJson: NonNullTimestampConverter.timestampToDateTime,
+    toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+  )
   DateTime get createdAt;
   @override
   @JsonKey(ignore: true)
-  _$$InquiryImplCopyWith<_$InquiryImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$InquiryImplCopyWith<_$InquiryImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

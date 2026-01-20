@@ -8,9 +8,15 @@ class Indicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (Environment.disableWidgetAnimation) {
-      return Center(child: Container(color: AppColors.secondary, width: 40, height: 40));
+      return Center(
+        child: Container(color: AppColors.secondary, width: 40, height: 40),
+      );
     }
-    return const Center(child: CircularProgressIndicator(valueColor: AlwaysStoppedAnimation(AppColors.secondary)));
+    return const Center(
+      child: CircularProgressIndicator(
+        valueColor: AlwaysStoppedAnimation(AppColors.secondary),
+      ),
+    );
   }
 }
 
@@ -19,7 +25,10 @@ class ScaffoldIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(backgroundColor: AppColors.background, body: Indicator());
+    return const Scaffold(
+      backgroundColor: AppColors.background,
+      body: Indicator(),
+    );
   }
 }
 
@@ -32,7 +41,10 @@ class DialogIndicator extends StatelessWidget {
       color: Colors.transparent,
       child: Center(
         child: Container(
-          decoration: BoxDecoration(color: AppColors.modalBackground, borderRadius: BorderRadius.circular(10)),
+          decoration: BoxDecoration(
+            color: AppColors.modalBackground,
+            borderRadius: BorderRadius.circular(10),
+          ),
           width: 200,
           height: 200,
           child: const Indicator(),

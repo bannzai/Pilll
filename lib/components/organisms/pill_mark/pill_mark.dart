@@ -38,7 +38,10 @@ class PillMarkState extends State<PillMark> with TickerProviderStateMixin {
 
   @override
   void initState() {
-    _controller = AnimationController(duration: const Duration(milliseconds: 1500), vsync: this);
+    _controller = AnimationController(
+      duration: const Duration(milliseconds: 1500),
+      vsync: this,
+    );
     // NOTE: This statement for avoid of tester.pumpAndSettle exception about timeout
     if (!Environment.isTest && !Environment.disableWidgetAnimation) {
       _controller!.repeat();
@@ -69,12 +72,20 @@ class PillMarkState extends State<PillMark> with TickerProviderStateMixin {
               PillMarkType.selected => const SelectedPillMark(),
               PillMarkType.done => const LightGrayPillMark(),
             },
-            if (widget.showsCheckmark) const Align(alignment: Alignment.center, child: PillMarkDoneMark()),
+            if (widget.showsCheckmark)
+              const Align(
+                alignment: Alignment.center,
+                child: PillMarkDoneMark(),
+              ),
             if (widget.remainingPillTakenCount != null)
               Text(
                 '${widget.remainingPillTakenCount}',
                 style: TextStyle(
-                  color: (widget.pillMarkType == PillMarkType.rest || widget.pillMarkType == PillMarkType.fake) ? AppColors.gray : Colors.white,
+                  color:
+                      (widget.pillMarkType == PillMarkType.rest ||
+                          widget.pillMarkType == PillMarkType.fake)
+                      ? AppColors.gray
+                      : Colors.white,
                   fontSize: 10,
                   fontWeight: FontWeight.bold,
                 ),
@@ -88,7 +99,10 @@ class PillMarkState extends State<PillMark> with TickerProviderStateMixin {
             left: -30,
             top: -30,
             child: CustomPaint(
-              size: const Size(PillMarkConst.edgeOfRipple, PillMarkConst.edgeOfRipple),
+              size: const Size(
+                PillMarkConst.edgeOfRipple,
+                PillMarkConst.edgeOfRipple,
+              ),
               painter: Ripple(_controller, color: AppColors.secondary),
             ),
           ),

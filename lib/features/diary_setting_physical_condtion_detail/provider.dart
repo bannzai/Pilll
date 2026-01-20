@@ -5,7 +5,9 @@ import 'package:pilll/entity/diary_setting.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
 final createDiarySettingPhysicalConditionDetailProvider = Provider.autoDispose(
-  (ref) => CreateDiarySettingPhysicalConditionDetail(ref.watch(databaseProvider).diarySettingReference()),
+  (ref) => CreateDiarySettingPhysicalConditionDetail(
+    ref.watch(databaseProvider).diarySettingReference(),
+  ),
 );
 
 class CreateDiarySettingPhysicalConditionDetail {
@@ -13,37 +15,56 @@ class CreateDiarySettingPhysicalConditionDetail {
   CreateDiarySettingPhysicalConditionDetail(this.reference);
 
   Future<void> call() async {
-    await reference.set(DiarySetting(createdAt: now()), SetOptions(merge: true));
+    await reference.set(
+      DiarySetting(createdAt: now()),
+      SetOptions(merge: true),
+    );
   }
 }
 
 final addDiarySettingPhysicalConditionDetailProvider = Provider.autoDispose(
-  (ref) => AddDiarySettingPhysicalConditionDetail(ref.watch(databaseProvider).diarySettingReference()),
+  (ref) => AddDiarySettingPhysicalConditionDetail(
+    ref.watch(databaseProvider).diarySettingReference(),
+  ),
 );
 
 class AddDiarySettingPhysicalConditionDetail {
   final DocumentReference<DiarySetting> reference;
   AddDiarySettingPhysicalConditionDetail(this.reference);
 
-  Future<void> call({required DiarySetting diarySetting, required String physicalConditionDetail}) async {
+  Future<void> call({
+    required DiarySetting diarySetting,
+    required String physicalConditionDetail,
+  }) async {
     await reference.set(
-      diarySetting.copyWith(physicalConditions: [...diarySetting.physicalConditions]..insert(0, physicalConditionDetail)),
+      diarySetting.copyWith(
+        physicalConditions: [...diarySetting.physicalConditions]
+          ..insert(0, physicalConditionDetail),
+      ),
       SetOptions(merge: true),
     );
   }
 }
 
 final deleteDiarySettingPhysicalConditionDetailProvider = Provider.autoDispose(
-  (ref) => DeleteDiarySettingPhysicalConditionDetail(ref.watch(databaseProvider).diarySettingReference()),
+  (ref) => DeleteDiarySettingPhysicalConditionDetail(
+    ref.watch(databaseProvider).diarySettingReference(),
+  ),
 );
 
 class DeleteDiarySettingPhysicalConditionDetail {
   final DocumentReference<DiarySetting> reference;
   DeleteDiarySettingPhysicalConditionDetail(this.reference);
 
-  Future<void> call({required DiarySetting diarySetting, required String physicalConditionDetail}) async {
+  Future<void> call({
+    required DiarySetting diarySetting,
+    required String physicalConditionDetail,
+  }) async {
     await reference.set(
-      diarySetting.copyWith(physicalConditions: [...diarySetting.physicalConditions]..remove(physicalConditionDetail)),
+      diarySetting.copyWith(
+        physicalConditions: [...diarySetting.physicalConditions]
+          ..remove(physicalConditionDetail),
+      ),
       SetOptions(merge: true),
     );
   }

@@ -24,7 +24,9 @@ class RecordPageButton extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final registerReminderLocalNotification = ref.watch(
+      registerReminderLocalNotificationProvider,
+    );
 
     final todayPillAllTaken = switch (currentPillSheet) {
       PillSheetV1 v1 => v1.todayPillIsAlreadyTaken,

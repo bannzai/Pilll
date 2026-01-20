@@ -6,7 +6,11 @@ class TimePicker extends StatelessWidget {
   final DateTime initialDateTime;
   final void Function(DateTime datetime) done;
 
-  const TimePicker({super.key, required this.initialDateTime, required this.done});
+  const TimePicker({
+    super.key,
+    required this.initialDateTime,
+    required this.done,
+  });
 
   @override
   Widget build(BuildContext context) {

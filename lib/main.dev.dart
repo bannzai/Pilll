@@ -11,17 +11,30 @@ Future<void> main() async {
     if (!Environment.isDevelopment) {
       throw AssertionError('This method should not call out of development');
     }
-    (await SharedPreferences.getInstance()).setBool(BoolKey.didEndInitialSetting, false);
+    (await SharedPreferences.getInstance()).setBool(
+      BoolKey.didEndInitialSetting,
+      false,
+    );
     await FirebaseAuth.instance.currentUser?.delete();
   };
   Environment.signOutUser = () async {
     if (!Environment.isDevelopment) {
       throw AssertionError('This method should not call out of development');
     }
-    (await SharedPreferences.getInstance()).setBool(BoolKey.didEndInitialSetting, false);
+    (await SharedPreferences.getInstance()).setBool(
+      BoolKey.didEndInitialSetting,
+      false,
+    );
     // local notificationのみ解除（AlarmKit解除はRiverpodコンテナ内でのみ実行可能）
-    final pendingNotifications = await localNotificationService.pendingReminderNotifications();
-    await Future.wait(pendingNotifications.map((p) => localNotificationService.cancelNotification(localNotificationID: p.id)));
+    final pendingNotifications = await localNotificationService
+        .pendingReminderNotifications();
+    await Future.wait(
+      pendingNotifications.map(
+        (p) => localNotificationService.cancelNotification(
+          localNotificationID: p.id,
+        ),
+      ),
+    );
     await FirebaseAuth.instance.signOut();
   };
   await entrypoint();

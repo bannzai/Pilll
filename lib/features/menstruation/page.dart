@@ -34,8 +34,10 @@ import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 abstract class MenstruationPageConst {
   static const double calendarHeaderDropShadowOffset = 2;
-  static const double tileHeight = CalendarConstants.tileHeight + calendarHeaderDropShadowOffset;
-  static const double calendarHeaderHeight = WeekdayBadgeConst.height + tileHeight;
+  static const double tileHeight =
+      CalendarConstants.tileHeight + calendarHeaderDropShadowOffset;
+  static const double calendarHeaderHeight =
+      WeekdayBadgeConst.height + tileHeight;
 }
 
 class MenstruationPage extends HookConsumerWidget {
@@ -71,7 +73,11 @@ class MenstruationPage extends HookConsumerWidget {
           calendarNextPillSheetBandModels: data.$10,
         );
       },
-      error: (error, _) => UniversalErrorPage(error: error, child: null, reload: () => ref.refresh(refreshAppProvider)),
+      error: (error, _) => UniversalErrorPage(
+        error: error,
+        child: null,
+        reload: () => ref.refresh(refreshAppProvider),
+      ),
       loading: () => const ScaffoldIndicator(),
     );
   }
@@ -86,7 +92,8 @@ class MenstruationPageBody extends HookConsumerWidget {
   final List<Diary> diaries;
   final List<Schedule> schedules;
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
-  final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
+  final List<CalendarScheduledMenstruationBandModel>
+  calendarScheduledMenstruationBandModels;
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
 
   const MenstruationPageBody({
@@ -118,7 +125,10 @@ class MenstruationPageBody extends HookConsumerWidget {
       backgroundColor: AppColors.background,
       appBar: AppBar(
         title: SizedBox(
-          child: Text(_displayMonth(page.value), style: const TextStyle(color: TextColor.black)),
+          child: Text(
+            _displayMonth(page.value),
+            style: const TextStyle(color: TextColor.black),
+          ),
         ),
         backgroundColor: AppColors.white,
         elevation: 0,
@@ -130,14 +140,18 @@ class MenstruationPageBody extends HookConsumerWidget {
               children: [
                 MenstruationCalendarHeader(
                   pageController: pageController,
-                  calendarMenstruationBandModels: calendarMenstruationBandModels,
-                  calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
-                  calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
+                  calendarMenstruationBandModels:
+                      calendarMenstruationBandModels,
+                  calendarNextPillSheetBandModels:
+                      calendarNextPillSheetBandModels,
+                  calendarScheduledMenstruationBandModels:
+                      calendarScheduledMenstruationBandModels,
                   diaries: diaries,
                   schedules: schedules,
                 ),
                 MenstruationCardList(
-                  calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
+                  calendarScheduledMenstruationBandModels:
+                      calendarScheduledMenstruationBandModels,
                   user: user,
                   setting: setting,
                   latestPillSheetGroup: latestPillSheetGroup,
@@ -151,7 +165,10 @@ class MenstruationPageBody extends HookConsumerWidget {
               alignment: Alignment.bottomCenter,
               child: Padding(
                 padding: const EdgeInsets.only(bottom: 20.0),
-                child: MenstruationRecordButton(latestMenstruation: latestMenstruation, setting: setting),
+                child: MenstruationRecordButton(
+                  latestMenstruation: latestMenstruation,
+                  setting: setting,
+                ),
               ),
             ),
           ],
@@ -160,7 +177,8 @@ class MenstruationPageBody extends HookConsumerWidget {
     );
   }
 
-  String _displayMonth(int page) => DateTimeFormatter.jaMonth(_targetEndDayOfWeekday(page));
+  String _displayMonth(int page) =>
+      DateTimeFormatter.jaMonth(_targetEndDayOfWeekday(page));
   DateTime _targetEndDayOfWeekday(int page) {
     final diff = page - todayCalendarPageIndex;
     final base = today().addDays(diff * Weekday.values.length);

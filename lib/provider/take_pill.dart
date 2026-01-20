@@ -15,7 +15,9 @@ import 'package:riverpod/riverpod.dart';
 final takePillProvider = Provider.autoDispose(
   (ref) => TakePill(
     batchFactory: ref.watch(batchFactoryProvider),
-    batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
+    batchSetPillSheetModifiedHistory: ref.watch(
+      batchSetPillSheetModifiedHistoryProvider,
+    ),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
   ),
 );
@@ -26,7 +28,11 @@ class TakePill {
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
 
-  TakePill({required this.batchFactory, required this.batchSetPillSheetModifiedHistory, required this.batchSetPillSheetGroup});
+  TakePill({
+    required this.batchFactory,
+    required this.batchSetPillSheetModifiedHistory,
+    required this.batchSetPillSheetGroup,
+  });
 
   Future<PillSheetGroup?> call({
     required DateTime takenDate,
@@ -53,8 +59,10 @@ class TakePill {
       }
       // ピルシートが終了しているかどうかを判定
       final isEnded = switch (pillSheet) {
-        PillSheetV1() => pillSheet.typeInfo.totalCount == pillSheet.lastTakenOrZeroPillNumber,
-        PillSheetV2() => pillSheet.typeInfo.totalCount == pillSheet.lastCompletedPillNumber,
+        PillSheetV1() =>
+          pillSheet.typeInfo.totalCount == pillSheet.lastTakenOrZeroPillNumber,
+        PillSheetV2() =>
+          pillSheet.typeInfo.totalCount == pillSheet.lastCompletedPillNumber,
       };
       if (isEnded) {
         return pillSheet;
@@ -63,7 +71,10 @@ class TakePill {
       // takenDateよりも予測するピルシートの最終服用日よりも小さい場合は、そのピルシートの最終日で予測する最終服用日を記録する
       // 前のピルシートなので、最終ピルも含めて全てのピルを完了させる
       if (takenDate.isAfter(pillSheet.estimatedEndTakenDate)) {
-        return pillSheet.takenPillSheet(pillSheet.estimatedEndTakenDate, completeAllPills: true);
+        return pillSheet.takenPillSheet(
+          pillSheet.estimatedEndTakenDate,
+          completeAllPills: true,
+        );
       }
 
       // takenDateがピルシートの開始日に満たない場合は、記録の対象になっていないので早期リターン
@@ -75,8 +86,12 @@ class TakePill {
       return pillSheet.takenPillSheet(takenDate);
     }).toList();
 
-    final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
-    final updatedIndexses = pillSheetGroup.pillSheets.asMap().keys.where((index) {
+    final updatedPillSheetGroup = pillSheetGroup.copyWith(
+      pillSheets: updatedPillSheets,
+    );
+    final updatedIndexses = pillSheetGroup.pillSheets.asMap().keys.where((
+      index,
+    ) {
       final updatedPillSheet = updatedPillSheetGroup.pillSheets[index];
       if (pillSheetGroup.pillSheets[index] == updatedPillSheet) {
         return false;
@@ -88,7 +103,10 @@ class TakePill {
     if (updatedIndexses.isEmpty) {
       // NOTE: prevent error for unit test
       if (Firebase.apps.isNotEmpty) {
-        errorLogger.recordError(const FormatException('unexpected updatedIndexes is empty'), StackTrace.current);
+        errorLogger.recordError(
+          const FormatException('unexpected updatedIndexes is empty'),
+          StackTrace.current,
+        );
       }
       return null;
     }
@@ -96,11 +114,12 @@ class TakePill {
     final batch = batchFactory.batch();
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
 
-    final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-      isQuickRecord: isQuickRecord,
-      beforePillSheetGroup: pillSheetGroup,
-      afterPillSheetGroup: updatedPillSheetGroup,
-    );
+    final history =
+        PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+          isQuickRecord: isQuickRecord,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: updatedPillSheetGroup,
+        );
     batchSetPillSheetModifiedHistory(batch, history);
 
     await batch.commit();
@@ -114,10 +133,16 @@ extension TakenPillSheet on PillSheet {
   /// 服用記録を追加したPillSheetを返す
   /// [completeAllPills] がtrueの場合、最後のピルも含めて全てのピルを完了させる
   /// 前のピルシートを処理する場合など、全てのピルを完了させる必要がある場合にtrueを指定する
-  PillSheet takenPillSheet(DateTime takenDate, {bool completeAllPills = false}) {
+  PillSheet takenPillSheet(
+    DateTime takenDate, {
+    bool completeAllPills = false,
+  }) {
     return switch (this) {
       PillSheetV1 v1 => v1.copyWith(lastTakenDate: takenDate),
-      PillSheetV2 v2 => v2._takenPillSheetV2(takenDate, completeAllPills: completeAllPills),
+      PillSheetV2 v2 => v2._takenPillSheetV2(
+        takenDate,
+        completeAllPills: completeAllPills,
+      ),
     };
   }
 }
@@ -128,7 +153,10 @@ extension _TakenPillSheetV2 on PillSheetV2 {
   /// takenDateまでの全てのピルに対して服用記録を追加する
   /// 途中に未完了のピルがあれば全て完了させ、最後のピルは1回の記録を追加する
   /// [completeAllPills] がtrueの場合、最後のピルも含めて全てのピルを完了させる
-  PillSheet _takenPillSheetV2(DateTime takenDate, {bool completeAllPills = false}) {
+  PillSheet _takenPillSheetV2(
+    DateTime takenDate, {
+    bool completeAllPills = false,
+  }) {
     // pillsが空の場合は何もせず元のシートを返す
     if (pills.isEmpty) {
       return this;
@@ -137,7 +165,10 @@ extension _TakenPillSheetV2 on PillSheetV2 {
     // 一番最後の記録対象のピル
     final rawFinalTakenPillIndex = pillNumberFor(targetDate: takenDate) - 1;
     // 範囲外のインデックスをクランプ
-    final finalTakenPillIndex = rawFinalTakenPillIndex.clamp(0, pills.length - 1);
+    final finalTakenPillIndex = rawFinalTakenPillIndex.clamp(
+      0,
+      pills.length - 1,
+    );
 
     return copyWith(
       pills: pills.map((pill) {
@@ -155,11 +186,23 @@ extension _TakenPillSheetV2 on PillSheetV2 {
           // NOTE: 一番最後の記録対象のピル以外は、ピルの服用記録をtakenCountに達するまで追加する
           // completeAllPillsがtrueの場合は、最後のピルも含めて全てのピルを完了させる
           for (var i = pill.pillTakens.length; i < pill.takenCount; i++) {
-            pillTakenDoneList.add(PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now()));
+            pillTakenDoneList.add(
+              PillTaken(
+                recordedTakenDateTime: takenDate,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+              ),
+            );
           }
         } else {
           // NOTE: 一番最後の記録対象のピルは、ピルの服用記録を1回追加する
-          pillTakenDoneList.add(PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now()));
+          pillTakenDoneList.add(
+            PillTaken(
+              recordedTakenDateTime: takenDate,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+            ),
+          );
         }
         return pill.copyWith(pillTakens: pillTakenDoneList);
       }).toList(),

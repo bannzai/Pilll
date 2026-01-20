@@ -19,7 +19,9 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorKey: navigatorKey,
-      navigatorObservers: [FirebaseAnalyticsObserver(analytics: firebaseAnalytics)],
+      navigatorObservers: [
+        FirebaseAnalyticsObserver(analytics: firebaseAnalytics),
+      ],
       theme: ThemeData(
         useMaterial3: false,
         appBarTheme: const AppBarTheme(
@@ -29,23 +31,37 @@ class App extends StatelessWidget {
           elevation: 3,
           foregroundColor: TextColor.main,
         ),
-        textSelectionTheme: const TextSelectionThemeData(cursorColor: AppColors.secondary),
+        textSelectionTheme: const TextSelectionThemeData(
+          cursorColor: AppColors.secondary,
+        ),
         primaryColor: AppColors.secondary,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(
           textTheme: CupertinoTextThemeData(
-            textStyle: TextStyle(fontFamily: FontFamily.number, fontWeight: FontWeight.w500, fontSize: 24),
+            textStyle: TextStyle(
+              fontFamily: FontFamily.number,
+              fontWeight: FontWeight.w500,
+              fontSize: 24,
+            ),
           ),
         ),
         buttonTheme: const ButtonThemeData(
           buttonColor: AppColors.primary,
           disabledColor: AppColors.disable,
           textTheme: ButtonTextTheme.primary,
-          colorScheme: ColorScheme.light(primary: AppColors.secondary, secondary: AppColors.accent),
+          colorScheme: ColorScheme.light(
+            primary: AppColors.secondary,
+            secondary: AppColors.accent,
+          ),
         ),
-        datePickerTheme: const DatePickerThemeData(backgroundColor: Colors.white, headerBackgroundColor: AppColors.primary),
+        datePickerTheme: const DatePickerThemeData(
+          backgroundColor: Colors.white,
+          headerBackgroundColor: AppColors.primary,
+        ),
         switchTheme: SwitchThemeData(
-          thumbColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
+          thumbColor: WidgetStateProperty.resolveWith<Color?>((
+            Set<WidgetState> states,
+          ) {
             if (states.contains(WidgetState.disabled)) {
               return null;
             }
@@ -54,7 +70,9 @@ class App extends StatelessWidget {
             }
             return null;
           }),
-          trackColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
+          trackColor: WidgetStateProperty.resolveWith<Color?>((
+            Set<WidgetState> states,
+          ) {
             if (states.contains(WidgetState.disabled)) {
               return null;
             }
@@ -65,7 +83,9 @@ class App extends StatelessWidget {
           }),
         ),
         radioTheme: RadioThemeData(
-          fillColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
+          fillColor: WidgetStateProperty.resolveWith<Color?>((
+            Set<WidgetState> states,
+          ) {
             if (states.contains(WidgetState.disabled)) {
               return null;
             }
@@ -77,7 +97,9 @@ class App extends StatelessWidget {
           }),
         ),
         checkboxTheme: CheckboxThemeData(
-          fillColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
+          fillColor: WidgetStateProperty.resolveWith<Color?>((
+            Set<WidgetState> states,
+          ) {
             if (states.contains(WidgetState.disabled)) {
               return null;
             }

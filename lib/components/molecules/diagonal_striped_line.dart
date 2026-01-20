@@ -8,7 +8,10 @@ class DiagonalStripedLine extends CustomPainter {
   DiagonalStripedLine({required this.color, required this.isNecessaryBorder});
   @override
   void paint(Canvas canvas, Size size) {
-    canvas.drawRect(Rect.fromLTWH(0, 0, size.width, size.height), Paint()..color = color);
+    canvas.drawRect(
+      Rect.fromLTWH(0, 0, size.width, size.height),
+      Paint()..color = color,
+    );
     if (!isNecessaryBorder) {
       return;
     }

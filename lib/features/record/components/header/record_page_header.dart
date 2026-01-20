@@ -17,7 +17,12 @@ class RecordPageInformationHeader extends StatelessWidget {
   final DateTime today;
   final PillSheetGroup? pillSheetGroup;
   final User user;
-  const RecordPageInformationHeader({super.key, required this.today, required this.pillSheetGroup, required this.user});
+  const RecordPageInformationHeader({
+    super.key,
+    required this.today,
+    required this.pillSheetGroup,
+    required this.user,
+  });
 
   String _formattedToday() => DateTimeFormatter.monthAndDay(today);
   String _todayWeekday() => DateTimeFormatter.shortWeekday(today);
@@ -39,16 +44,26 @@ class RecordPageInformationHeader extends StatelessWidget {
                 children: <Widget>[
                   _todayWidget(),
                   const SizedBox(width: 28),
-                  const SizedBox(height: 64, child: VerticalDivider(width: 10, color: AppColors.divider)),
+                  const SizedBox(
+                    height: 64,
+                    child: VerticalDivider(width: 10, color: AppColors.divider),
+                  ),
                   const SizedBox(width: 28),
                   TodayTakenPillNumber(
                     pillSheetGroup: pillSheetGroup,
                     onPressed: () {
-                      analytics.logEvent(name: 'tapped_record_information_header');
-                      if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) {
-                        Navigator.of(
-                          context,
-                        ).push(SettingTodayPillNumberPageRoute.route(pillSheetGroup: pillSheetGroup, activePillSheet: activePillSheet));
+                      analytics.logEvent(
+                        name: 'tapped_record_information_header',
+                      );
+                      if (activePillSheet != null &&
+                          pillSheetGroup != null &&
+                          !pillSheetGroup.isDeactived) {
+                        Navigator.of(context).push(
+                          SettingTodayPillNumberPageRoute.route(
+                            pillSheetGroup: pillSheetGroup,
+                            activePillSheet: activePillSheet,
+                          ),
+                        );
                       }
                     },
                   ),
@@ -85,7 +100,12 @@ class RecordPageInformationHeader extends StatelessWidget {
     return Center(
       child: Text(
         '${_formattedToday()} (${_todayWeekday()})',
-        style: const TextStyle(fontFamily: FontFamily.number, fontWeight: FontWeight.w600, fontSize: 24, color: TextColor.gray),
+        style: const TextStyle(
+          fontFamily: FontFamily.number,
+          fontWeight: FontWeight.w600,
+          fontSize: 24,
+          color: TextColor.gray,
+        ),
       ),
     );
   }

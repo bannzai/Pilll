@@ -17,13 +17,21 @@ class ToggleReminderNotification extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final setSetting = ref.watch(setSettingProvider);
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
-    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
+    final registerReminderLocalNotification = ref.watch(
+      registerReminderLocalNotificationProvider,
+    );
+    final cancelReminderLocalNotification = ref.watch(
+      cancelReminderLocalNotificationProvider,
+    );
 
     return SwitchListTile(
       title: Text(
         L.pillReminder,
-        style: const TextStyle(fontFamily: FontFamily.roboto, fontWeight: FontWeight.w300, fontSize: 16),
+        style: const TextStyle(
+          fontFamily: FontFamily.roboto,
+          fontWeight: FontWeight.w300,
+          fontSize: 16,
+        ),
       ),
       activeThumbColor: AppColors.secondary,
       onChanged: (bool value) async {
@@ -37,7 +45,12 @@ class ToggleReminderNotification extends HookConsumerWidget {
           } else {
             await cancelReminderLocalNotification();
           }
-          messenger.showSnackBar(SnackBar(duration: const Duration(seconds: 2), content: Text(L.pillReminderChanged(value ? 'ON' : 'OFF'))));
+          messenger.showSnackBar(
+            SnackBar(
+              duration: const Duration(seconds: 2),
+              content: Text(L.pillReminderChanged(value ? 'ON' : 'OFF')),
+            ),
+          );
         } catch (error) {
           if (context.mounted) showErrorAlert(context, error);
         }

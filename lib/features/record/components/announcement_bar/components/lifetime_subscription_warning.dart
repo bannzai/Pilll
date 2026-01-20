@@ -12,7 +12,10 @@ import 'package:url_launcher/url_launcher.dart';
 class LifetimeSubscriptionWarningAnnouncementBar extends HookConsumerWidget {
   final ValueNotifier<bool> isClosed;
 
-  const LifetimeSubscriptionWarningAnnouncementBar({super.key, required this.isClosed});
+  const LifetimeSubscriptionWarningAnnouncementBar({
+    super.key,
+    required this.isClosed,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -36,7 +39,9 @@ class LifetimeSubscriptionWarningAnnouncementBar extends HookConsumerWidget {
             GestureDetector(
               child: const Icon(Icons.close, color: Colors.white, size: 24),
               onTap: () {
-                analytics.logEvent(name: 'lifetime_subscription_warning_closed');
+                analytics.logEvent(
+                  name: 'lifetime_subscription_warning_closed',
+                );
                 isClosed.value = true;
               },
             ),
@@ -44,13 +49,26 @@ class LifetimeSubscriptionWarningAnnouncementBar extends HookConsumerWidget {
             Expanded(
               child: Text(
                 L.lifetimeSubscriptionWarning,
-                style: const TextStyle(color: Colors.white, fontSize: 11, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700),
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 11,
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w700,
+                ),
                 textAlign: TextAlign.center,
                 maxLines: 3,
               ),
             ),
             const SizedBox(width: 10),
-            SvgPicture.asset('images/arrow_right.svg', colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn), height: 16, width: 16),
+            SvgPicture.asset(
+              'images/arrow_right.svg',
+              colorFilter: const ColorFilter.mode(
+                Colors.white,
+                BlendMode.srcIn,
+              ),
+              height: 16,
+              width: 16,
+            ),
           ],
         ),
       ),

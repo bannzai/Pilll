@@ -23,7 +23,10 @@ class ReminderPushNotificationPreview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8)),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(8),
+      ),
       padding: const EdgeInsets.all(8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,19 +37,34 @@ class ReminderPushNotificationPreview extends StatelessWidget {
               const SizedBox(width: 8),
               const Text(
                 'Pilll',
-                style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 13, fontWeight: FontWeight.w400, color: TextColor.lightGray2),
+                style: TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontSize: 13,
+                  fontWeight: FontWeight.w400,
+                  color: TextColor.lightGray2,
+                ),
               ),
             ],
           ),
           const SizedBox(height: 16),
           Text(
             "$word${isInVisibleReminderDate ? "" : " 1/7"}${isInvisiblePillNumber ? "" : " ${L.beginToEndNumbers(5, 8)}"}",
-            style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600, fontFamily: FontFamily.japanese, color: TextColor.black),
+            style: const TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.w600,
+              fontFamily: FontFamily.japanese,
+              color: TextColor.black,
+            ),
           ),
           if (!isInvisibleDescription || message.isEmpty)
             Text(
               message,
-              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w400, fontFamily: FontFamily.japanese, color: TextColor.black),
+              style: const TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+                fontFamily: FontFamily.japanese,
+                color: TextColor.black,
+              ),
             ),
         ],
       ),

@@ -13,12 +13,22 @@ class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
       pillNumbersOrHyphen: Container(),
       detail: Text(
         L.takingTime,
-        style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400),
+        style: const TextStyle(
+          color: TextColor.main,
+          fontFamily: FontFamily.japanese,
+          fontSize: 12,
+          fontWeight: FontWeight.w400,
+        ),
         textAlign: TextAlign.left,
       ),
       takenPillActionOList: Text(
         L.alreadyTaken,
-        style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400),
+        style: const TextStyle(
+          color: TextColor.main,
+          fontFamily: FontFamily.japanese,
+          fontSize: 12,
+          fontWeight: FontWeight.w400,
+        ),
         textAlign: TextAlign.center,
       ),
     );
@@ -32,7 +42,12 @@ class _HeaderLayout extends StatelessWidget {
   final Widget detail;
   final Widget takenPillActionOList;
 
-  const _HeaderLayout({required this.day, required this.pillNumbersOrHyphen, required this.detail, required this.takenPillActionOList});
+  const _HeaderLayout({
+    required this.day,
+    required this.pillNumbersOrHyphen,
+    required this.detail,
+    required this.takenPillActionOList,
+  });
 
   @override
   Widget build(BuildContext context) {

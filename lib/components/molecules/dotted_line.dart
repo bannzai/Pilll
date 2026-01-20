@@ -9,7 +9,13 @@ class DottedLine extends StatelessWidget {
   final double dashLength;
   final double dashGapLength;
 
-  const DottedLine({super.key, this.lineLength = double.infinity, this.height = 1, this.dashLength = 3, this.dashGapLength = 3});
+  const DottedLine({
+    super.key,
+    this.lineLength = double.infinity,
+    this.height = 1,
+    this.dashLength = 3,
+    this.dashGapLength = 3,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +27,9 @@ class DottedLine extends StatelessWidget {
       height: 1,
       child: LayoutBuilder(
         builder: (context, constraints) {
-          final dashAndDashGapCount = _calculateDashAndDashGapCount(min(constraints.maxWidth, lineLength));
+          final dashAndDashGapCount = _calculateDashAndDashGapCount(
+            min(constraints.maxWidth, lineLength),
+          );
 
           return Wrap(
             direction: Axis.horizontal,

@@ -14,18 +14,35 @@ class TimezoneSettingDialog extends HookConsumerWidget {
   final String deviceTimezoneName;
   final Function(String) onDone;
 
-  const TimezoneSettingDialog({super.key, required this.setting, required this.deviceTimezoneName, required this.onDone});
+  const TimezoneSettingDialog({
+    super.key,
+    required this.setting,
+    required this.deviceTimezoneName,
+    required this.onDone,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final setSetting = ref.watch(setSettingProvider);
     return AlertDialog(
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
-      contentPadding: const EdgeInsets.only(left: 24, right: 24, top: 32, bottom: 20),
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+      ),
+      contentPadding: const EdgeInsets.only(
+        left: 24,
+        right: 24,
+        top: 32,
+        bottom: 20,
+      ),
       actionsPadding: const EdgeInsets.only(left: 24, right: 24),
       title: Text(
         L.syncWithDeviceTimeZone(deviceTimezoneName),
-        style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 17, fontWeight: FontWeight.w600, color: TextColor.main),
+        style: const TextStyle(
+          fontFamily: FontFamily.japanese,
+          fontSize: 17,
+          fontWeight: FontWeight.w600,
+          color: TextColor.main,
+        ),
         textAlign: TextAlign.center,
       ),
       content: Column(
@@ -33,12 +50,22 @@ class TimezoneSettingDialog extends HookConsumerWidget {
         children: <Widget>[
           Text(
             L.currentTimeZone,
-            style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 14, fontWeight: FontWeight.w600, color: TextColor.main),
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontSize: 14,
+              fontWeight: FontWeight.w600,
+              color: TextColor.main,
+            ),
           ),
           const SizedBox(height: 12),
           Text(
             setting.timezoneDatabaseName ?? 'Asia/Tokyo',
-            style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 14, fontWeight: FontWeight.w400, color: TextColor.main),
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontSize: 14,
+              fontWeight: FontWeight.w400,
+              color: TextColor.main,
+            ),
           ),
         ],
       ),
@@ -47,12 +74,17 @@ class TimezoneSettingDialog extends HookConsumerWidget {
           onPressed: () async {
             analytics.logEvent(
               name: 'pressed_timezone_yes',
-              parameters: {'user_timezone': setting.timezoneDatabaseName, 'device_timezone': deviceTimezoneName},
+              parameters: {
+                'user_timezone': setting.timezoneDatabaseName,
+                'device_timezone': deviceTimezoneName,
+              },
             );
 
             final navigator = Navigator.of(context);
             try {
-              await setSetting(setting.copyWith(timezoneDatabaseName: deviceTimezoneName));
+              await setSetting(
+                setting.copyWith(timezoneDatabaseName: deviceTimezoneName),
+              );
               onDone(deviceTimezoneName);
             } catch (error) {
               if (context.mounted) showErrorAlert(context, error);
@@ -67,7 +99,10 @@ class TimezoneSettingDialog extends HookConsumerWidget {
             onPressed: () async {
               analytics.logEvent(
                 name: 'pressed_timezone_no',
-                parameters: {'user_timezone': setting.timezoneDatabaseName, 'device_timezone': deviceTimezoneName},
+                parameters: {
+                  'user_timezone': setting.timezoneDatabaseName,
+                  'device_timezone': deviceTimezoneName,
+                },
               );
               Navigator.of(context).pop();
             },

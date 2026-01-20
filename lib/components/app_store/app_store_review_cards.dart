@@ -59,7 +59,10 @@ class AppStoreReviewCards extends HookConsumerWidget {
 
     return Column(
       children: [
-        const Text('ストアの評価もご覧ください', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
+        const Text(
+          'ストアの評価もご覧ください',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+        ),
         const SizedBox(height: 10),
         SizedBox(
           height: 260,
@@ -70,7 +73,13 @@ class AppStoreReviewCards extends HookConsumerWidget {
               currentPage.value = index;
             },
             itemBuilder: (context, index) {
-              return Padding(padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0), child: reviews[index]);
+              return Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 8.0,
+                  vertical: 8.0,
+                ),
+                child: reviews[index],
+              );
             },
           ),
         ),
@@ -86,7 +95,9 @@ class AppStoreReviewCards extends HookConsumerWidget {
               height: 8,
               width: currentPage.value == index ? 24 : 8,
               decoration: BoxDecoration(
-                color: currentPage.value == index ? Theme.of(context).primaryColor : Colors.grey.shade300,
+                color: currentPage.value == index
+                    ? Theme.of(context).primaryColor
+                    : Colors.grey.shade300,
                 borderRadius: BorderRadius.circular(4),
               ),
             ),

@@ -10,13 +10,21 @@ import 'package:url_launcher/url_launcher.dart';
 class PilllAdsAnnouncementBar extends HookConsumerWidget {
   final PilllAds pilllAds;
   final VoidCallback onClose;
-  const PilllAdsAnnouncementBar({super.key, required this.pilllAds, required this.onClose});
+  const PilllAdsAnnouncementBar({
+    super.key,
+    required this.pilllAds,
+    required this.onClose,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final imageURL = pilllAds.imageURL;
     if (imageURL != null) {
-      return PilllAdsImageAnnouncementBar(imageURL: imageURL, pilllAds: pilllAds, onClose: onClose);
+      return PilllAdsImageAnnouncementBar(
+        imageURL: imageURL,
+        pilllAds: pilllAds,
+        onClose: onClose,
+      );
     } else {
       return PilllAdsTextAnnouncementBar(pilllAds: pilllAds, onClose: onClose);
     }
@@ -28,7 +36,12 @@ class PilllAdsImageAnnouncementBar extends StatelessWidget {
   final String imageURL;
   final VoidCallback onClose;
 
-  const PilllAdsImageAnnouncementBar({super.key, required this.pilllAds, required this.imageURL, required this.onClose});
+  const PilllAdsImageAnnouncementBar({
+    super.key,
+    required this.pilllAds,
+    required this.imageURL,
+    required this.onClose,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +64,11 @@ class PilllAdsImageAnnouncementBar extends StatelessWidget {
               children: [
                 IconButton(
                   alignment: Alignment.centerLeft,
-                  icon: Icon(Icons.close, color: HexColor.fromHex(pilllAds.closeButtonColor), size: 24),
+                  icon: Icon(
+                    Icons.close,
+                    color: HexColor.fromHex(pilllAds.closeButtonColor),
+                    size: 24,
+                  ),
                   onPressed: () {
                     analytics.logEvent(name: 'pilll_ads_image_is_closed');
                     onClose();
@@ -62,7 +79,10 @@ class PilllAdsImageAnnouncementBar extends StatelessWidget {
                 const Spacer(),
                 SvgPicture.asset(
                   'images/arrow_right.svg',
-                  colorFilter: ColorFilter.mode(HexColor.fromHex(pilllAds.chevronRightColor), BlendMode.srcIn),
+                  colorFilter: ColorFilter.mode(
+                    HexColor.fromHex(pilllAds.chevronRightColor),
+                    BlendMode.srcIn,
+                  ),
                   height: 20,
                   width: 20,
                 ),
@@ -80,7 +100,11 @@ class PilllAdsTextAnnouncementBar extends StatelessWidget {
   final PilllAds pilllAds;
   final VoidCallback onClose;
 
-  const PilllAdsTextAnnouncementBar({super.key, required this.pilllAds, required this.onClose});
+  const PilllAdsTextAnnouncementBar({
+    super.key,
+    required this.pilllAds,
+    required this.onClose,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -110,7 +134,12 @@ class PilllAdsTextAnnouncementBar extends StatelessWidget {
                   for (final w in pilllAds.description.split('\\n'))
                     Text(
                       w,
-                      style: const TextStyle(color: Colors.white, fontSize: 11, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700),
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 11,
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w700,
+                      ),
                       textAlign: TextAlign.center,
                       maxLines: 2,
                     ),
@@ -118,7 +147,15 @@ class PilllAdsTextAnnouncementBar extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 10),
-            SvgPicture.asset('images/arrow_right.svg', colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn), height: 20, width: 20),
+            SvgPicture.asset(
+              'images/arrow_right.svg',
+              colorFilter: const ColorFilter.mode(
+                Colors.white,
+                BlendMode.srcIn,
+              ),
+              height: 20,
+              width: 20,
+            ),
           ],
         ),
       ),

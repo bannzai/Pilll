@@ -9,7 +9,11 @@ class PremiumIntroductionRow extends StatelessWidget {
   final bool isPremium;
   final DateTime? trialDeadlineDate;
 
-  const PremiumIntroductionRow({super.key, required this.isPremium, required this.trialDeadlineDate});
+  const PremiumIntroductionRow({
+    super.key,
+    required this.isPremium,
+    required this.trialDeadlineDate,
+  });
   @override
   Widget build(BuildContext context) {
     return ListTile(
@@ -23,7 +27,11 @@ class PremiumIntroductionRow extends StatelessWidget {
           const SizedBox(width: 8),
           Text(
             L.viewPremiumPlan,
-            style: const TextStyle(fontFamily: FontFamily.roboto, fontWeight: FontWeight.w300, fontSize: 16),
+            style: const TextStyle(
+              fontFamily: FontFamily.roboto,
+              fontWeight: FontWeight.w300,
+              fontSize: 16,
+            ),
           ),
         ],
       ),

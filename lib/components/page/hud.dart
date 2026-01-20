@@ -17,7 +17,12 @@ class HUD extends StatefulWidget {
   final bool barrierEnabled;
   final Widget? child;
 
-  const HUD({super.key, required this.child, required this.shown, this.barrierEnabled = true});
+  const HUD({
+    super.key,
+    required this.child,
+    required this.shown,
+    this.barrierEnabled = true,
+  });
 
   @override
   HUDState createState() => HUDState();
@@ -49,7 +54,10 @@ class HUDState extends State<HUD> {
     if (child == null) {
       return _hud(context);
     }
-    return Stack(alignment: AlignmentDirectional.bottomCenter, children: [child, _hud(context)]);
+    return Stack(
+      alignment: AlignmentDirectional.bottomCenter,
+      children: [child, _hud(context)],
+    );
   }
 
   Widget _hud(BuildContext context) {

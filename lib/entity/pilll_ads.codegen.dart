@@ -15,12 +15,18 @@ class PilllAds with _$PilllAds {
   factory PilllAds({
     /// 広告の表示開始日時
     /// この時刻以降に広告が表示される
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
     required DateTime startDateTime,
 
     /// 広告の表示終了日時
     /// この時刻以降は広告が表示されなくなる
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
     required DateTime endDateTime,
 
     /// 広告のテキスト説明
@@ -49,5 +55,6 @@ class PilllAds with _$PilllAds {
   }) = _PilllAds;
   PilllAds._();
 
-  factory PilllAds.fromJson(Map<String, dynamic> json) => _$PilllAdsFromJson(json);
+  factory PilllAds.fromJson(Map<String, dynamic> json) =>
+      _$PilllAdsFromJson(json);
 }

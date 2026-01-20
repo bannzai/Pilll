@@ -12,7 +12,12 @@ class CriticalAlert extends HookConsumerWidget {
   final Setting setting;
   final bool isPremium;
   final bool isTrial;
-  const CriticalAlert({super.key, required this.setting, required this.isPremium, required this.isTrial});
+  const CriticalAlert({
+    super.key,
+    required this.setting,
+    required this.isPremium,
+    required this.isTrial,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -22,20 +27,30 @@ class CriticalAlert extends HookConsumerWidget {
         children: [
           Text(
             L.enableNotificationInSilentModeSetting,
-            style: const TextStyle(fontFamily: FontFamily.roboto, fontWeight: FontWeight.w300, fontSize: 16),
+            style: const TextStyle(
+              fontFamily: FontFamily.roboto,
+              fontWeight: FontWeight.w300,
+              fontSize: 16,
+            ),
           ),
           if (!isPremium) ...[const SizedBox(width: 8), const PremiumBadge()],
         ],
       ),
       subtitle: Text(
         L.silentModeNotificationDescription,
-        style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14),
+        style: const TextStyle(
+          fontFamily: FontFamily.japanese,
+          fontWeight: FontWeight.w300,
+          fontSize: 14,
+        ),
       ),
       contentPadding: const EdgeInsets.fromLTRB(14, 4, 6, 0),
       onTap: () {
         analytics.logEvent(name: 'did_select_critical_alert_notification');
         if (isTrial || isPremium) {
-          Navigator.of(context).push(CriticalAlertPageRoutes.route(setting: setting));
+          Navigator.of(
+            context,
+          ).push(CriticalAlertPageRoutes.route(setting: setting));
         } else {
           showPremiumIntroductionSheet(context);
         }

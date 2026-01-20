@@ -28,15 +28,19 @@ import '../../helper/mock.mocks.dart';
 
 void main() {
   const MethodChannel timezoneChannel = MethodChannel('flutter_timezone');
-  late RegisterReminderLocalNotificationRunner registerReminderLocalNotificationRunner;
+  late RegisterReminderLocalNotificationRunner
+  registerReminderLocalNotificationRunner;
 
   setUp(() async {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
 
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(timezoneChannel, (MethodCall methodCall) async {
-      return 'Asia/Tokyo';
-    });
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(timezoneChannel, (
+          MethodCall methodCall,
+        ) async {
+          return 'Asia/Tokyo';
+        });
     errorLogger = MockErrorLogger();
 
     initializeDateFormatting('ja_JP');
@@ -44,11 +48,13 @@ void main() {
     final mockLocalNotificationService = MockLocalNotificationService();
     localNotificationService = mockLocalNotificationService;
 
-    registerReminderLocalNotificationRunner = MockRegisterReminderLocalNotificationRunner();
+    registerReminderLocalNotificationRunner =
+        MockRegisterReminderLocalNotificationRunner();
   });
 
   tearDown(() {
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(timezoneChannel, null);
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(timezoneChannel, null);
   });
   group("#selectedFirstPillSheetType", () {
     test("when first selected", () {
@@ -56,7 +62,8 @@ void main() {
       final endInitialSetting = MockEndInitialSetting();
       final batchSetSetting = MockBatchSetSetting();
 
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      final batchSetPillSheetModifiedHistory =
+          MockBatchSetPillSheetModifiedHistory();
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
 
       final container = ProviderContainer(
@@ -64,27 +71,41 @@ void main() {
           endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
-          batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
-          batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
-          remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-          deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
+          batchSetPillSheetModifiedHistoryProvider.overrideWith(
+            (ref) => batchSetPillSheetModifiedHistory,
+          ),
+          batchSetPillSheetGroupProvider.overrideWith(
+            (ref) => batchSetPillSheetGroup,
+          ),
+          remoteConfigParameterProvider.overrideWithValue(
+            RemoteConfigParameter(),
+          ),
+          deviceTimezoneNameProvider.overrideWith(
+            (ref) => Future.value("Asia/Tokyo"),
+          ),
         ],
       );
-      final store = container.read(initialSettingStateNotifierProvider.notifier);
+      final store = container.read(
+        initialSettingStateNotifierProvider.notifier,
+      );
 
       store.selectedFirstPillSheetType(PillSheetType.pillsheet_28_0);
-      expect(container.read(initialSettingStateNotifierProvider).pillSheetTypes, [
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-      ]);
+      expect(
+        container.read(initialSettingStateNotifierProvider).pillSheetTypes,
+        [
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
+        ],
+      );
     });
     test("re select first pill sheet type", () {
       final endInitialSetting = MockEndInitialSetting();
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
 
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      final batchSetPillSheetModifiedHistory =
+          MockBatchSetPillSheetModifiedHistory();
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
 
       final container = ProviderContainer(
@@ -92,28 +113,46 @@ void main() {
           endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
-          batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
-          batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
-          batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
-          remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-          deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
+          batchSetPillSheetModifiedHistoryProvider.overrideWith(
+            (ref) => batchSetPillSheetModifiedHistory,
+          ),
+          batchSetPillSheetModifiedHistoryProvider.overrideWith(
+            (ref) => batchSetPillSheetModifiedHistory,
+          ),
+          batchSetPillSheetGroupProvider.overrideWith(
+            (ref) => batchSetPillSheetGroup,
+          ),
+          remoteConfigParameterProvider.overrideWithValue(
+            RemoteConfigParameter(),
+          ),
+          deviceTimezoneNameProvider.overrideWith(
+            (ref) => Future.value("Asia/Tokyo"),
+          ),
         ],
       );
-      final store = container.read(initialSettingStateNotifierProvider.notifier);
+      final store = container.read(
+        initialSettingStateNotifierProvider.notifier,
+      );
 
       store.selectedFirstPillSheetType(PillSheetType.pillsheet_28_0);
-      expect(container.read(initialSettingStateNotifierProvider).pillSheetTypes, [
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-      ]);
+      expect(
+        container.read(initialSettingStateNotifierProvider).pillSheetTypes,
+        [
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
+        ],
+      );
 
       store.changePillSheetType(0, PillSheetType.pillsheet_21_0);
-      expect(container.read(initialSettingStateNotifierProvider).pillSheetTypes, [
-        PillSheetType.pillsheet_21_0,
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-      ]);
+      expect(
+        container.read(initialSettingStateNotifierProvider).pillSheetTypes,
+        [
+          PillSheetType.pillsheet_21_0,
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
+        ],
+      );
     });
   });
   group("#addPillSheetType", () {
@@ -122,7 +161,8 @@ void main() {
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
 
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      final batchSetPillSheetModifiedHistory =
+          MockBatchSetPillSheetModifiedHistory();
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
 
       final container = ProviderContainer(
@@ -130,22 +170,35 @@ void main() {
           endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
-          batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
-          batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
-          remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-          deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
+          batchSetPillSheetModifiedHistoryProvider.overrideWith(
+            (ref) => batchSetPillSheetModifiedHistory,
+          ),
+          batchSetPillSheetGroupProvider.overrideWith(
+            (ref) => batchSetPillSheetGroup,
+          ),
+          remoteConfigParameterProvider.overrideWithValue(
+            RemoteConfigParameter(),
+          ),
+          deviceTimezoneNameProvider.overrideWith(
+            (ref) => Future.value("Asia/Tokyo"),
+          ),
         ],
       );
-      final store = container.read(initialSettingStateNotifierProvider.notifier);
+      final store = container.read(
+        initialSettingStateNotifierProvider.notifier,
+      );
 
       store.selectedFirstPillSheetType(PillSheetType.pillsheet_28_0);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
-      expect(container.read(initialSettingStateNotifierProvider).pillSheetTypes, [
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-      ]);
+      expect(
+        container.read(initialSettingStateNotifierProvider).pillSheetTypes,
+        [
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
+        ],
+      );
     });
   });
   group("#changePillSheetType", () {
@@ -154,7 +207,8 @@ void main() {
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
 
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      final batchSetPillSheetModifiedHistory =
+          MockBatchSetPillSheetModifiedHistory();
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
 
       final container = ProviderContainer(
@@ -162,23 +216,36 @@ void main() {
           endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
-          batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
-          batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
-          remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-          deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
+          batchSetPillSheetModifiedHistoryProvider.overrideWith(
+            (ref) => batchSetPillSheetModifiedHistory,
+          ),
+          batchSetPillSheetGroupProvider.overrideWith(
+            (ref) => batchSetPillSheetGroup,
+          ),
+          remoteConfigParameterProvider.overrideWithValue(
+            RemoteConfigParameter(),
+          ),
+          deviceTimezoneNameProvider.overrideWith(
+            (ref) => Future.value("Asia/Tokyo"),
+          ),
         ],
       );
-      final store = container.read(initialSettingStateNotifierProvider.notifier);
+      final store = container.read(
+        initialSettingStateNotifierProvider.notifier,
+      );
 
       store.selectedFirstPillSheetType(PillSheetType.pillsheet_28_0);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
       store.changePillSheetType(1, PillSheetType.pillsheet_24_0);
-      expect(container.read(initialSettingStateNotifierProvider).pillSheetTypes, [
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_24_0,
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-      ]);
+      expect(
+        container.read(initialSettingStateNotifierProvider).pillSheetTypes,
+        [
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_24_0,
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
+        ],
+      );
     });
   });
   group("#removePillSheetType", () {
@@ -187,7 +254,8 @@ void main() {
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
 
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      final batchSetPillSheetModifiedHistory =
+          MockBatchSetPillSheetModifiedHistory();
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
 
       final container = ProviderContainer(
@@ -195,36 +263,52 @@ void main() {
           endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
-          batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
-          batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
-          remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-          deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
+          batchSetPillSheetModifiedHistoryProvider.overrideWith(
+            (ref) => batchSetPillSheetModifiedHistory,
+          ),
+          batchSetPillSheetGroupProvider.overrideWith(
+            (ref) => batchSetPillSheetGroup,
+          ),
+          remoteConfigParameterProvider.overrideWithValue(
+            RemoteConfigParameter(),
+          ),
+          deviceTimezoneNameProvider.overrideWith(
+            (ref) => Future.value("Asia/Tokyo"),
+          ),
         ],
       );
-      final store = container.read(initialSettingStateNotifierProvider.notifier);
+      final store = container.read(
+        initialSettingStateNotifierProvider.notifier,
+      );
 
       store.selectedFirstPillSheetType(PillSheetType.pillsheet_28_0);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
       store.changePillSheetType(1, PillSheetType.pillsheet_24_0);
       store.removePillSheetType(0);
-      expect(container.read(initialSettingStateNotifierProvider).pillSheetTypes, [
-        PillSheetType.pillsheet_24_0,
-        PillSheetType.pillsheet_28_0,
-        PillSheetType.pillsheet_28_0,
-      ]);
+      expect(
+        container.read(initialSettingStateNotifierProvider).pillSheetTypes,
+        [
+          PillSheetType.pillsheet_24_0,
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
+        ],
+      );
     });
   });
   group("#setReminderTime", () {
     test("replace default reminderTime", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 29, 20, 0, 0));
+      when(
+        mockTodayRepository.now(),
+      ).thenReturn(DateTime(2020, 9, 29, 20, 0, 0));
 
       final endInitialSetting = MockEndInitialSetting();
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
 
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      final batchSetPillSheetModifiedHistory =
+          MockBatchSetPillSheetModifiedHistory();
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
 
       final container = ProviderContainer(
@@ -232,28 +316,46 @@ void main() {
           endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
-          batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
-          batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
-          remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-          deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
+          batchSetPillSheetModifiedHistoryProvider.overrideWith(
+            (ref) => batchSetPillSheetModifiedHistory,
+          ),
+          batchSetPillSheetGroupProvider.overrideWith(
+            (ref) => batchSetPillSheetGroup,
+          ),
+          remoteConfigParameterProvider.overrideWithValue(
+            RemoteConfigParameter(),
+          ),
+          deviceTimezoneNameProvider.overrideWith(
+            (ref) => Future.value("Asia/Tokyo"),
+          ),
         ],
       );
-      final store = container.read(initialSettingStateNotifierProvider.notifier);
+      final store = container.read(
+        initialSettingStateNotifierProvider.notifier,
+      );
 
       store.setReminderTime(index: 0, hour: 22, minute: 10);
-      expect(container.read(initialSettingStateNotifierProvider).reminderTimes,
-          [const ReminderTime(hour: 22, minute: 10), const ReminderTime(hour: 21, minute: 0)]);
+      expect(
+        container.read(initialSettingStateNotifierProvider).reminderTimes,
+        [
+          const ReminderTime(hour: 22, minute: 10),
+          const ReminderTime(hour: 21, minute: 0),
+        ],
+      );
     });
     test("add reminderTime", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 29, 20, 0, 0));
+      when(
+        mockTodayRepository.now(),
+      ).thenReturn(DateTime(2020, 9, 29, 20, 0, 0));
 
       final endInitialSetting = MockEndInitialSetting();
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
 
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      final batchSetPillSheetModifiedHistory =
+          MockBatchSetPillSheetModifiedHistory();
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
 
       final container = ProviderContainer(
@@ -261,17 +363,33 @@ void main() {
           endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
-          batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
-          batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
-          remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-          deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
+          batchSetPillSheetModifiedHistoryProvider.overrideWith(
+            (ref) => batchSetPillSheetModifiedHistory,
+          ),
+          batchSetPillSheetGroupProvider.overrideWith(
+            (ref) => batchSetPillSheetGroup,
+          ),
+          remoteConfigParameterProvider.overrideWithValue(
+            RemoteConfigParameter(),
+          ),
+          deviceTimezoneNameProvider.overrideWith(
+            (ref) => Future.value("Asia/Tokyo"),
+          ),
         ],
       );
-      final store = container.read(initialSettingStateNotifierProvider.notifier);
+      final store = container.read(
+        initialSettingStateNotifierProvider.notifier,
+      );
 
       store.setReminderTime(index: 2, hour: 22, minute: 10);
-      expect(container.read(initialSettingStateNotifierProvider).reminderTimes,
-          [const ReminderTime(hour: 20, minute: 0), const ReminderTime(hour: 21, minute: 0), const ReminderTime(hour: 22, minute: 10)]);
+      expect(
+        container.read(initialSettingStateNotifierProvider).reminderTimes,
+        [
+          const ReminderTime(hour: 20, minute: 0),
+          const ReminderTime(hour: 21, minute: 0),
+          const ReminderTime(hour: 22, minute: 10),
+        ],
+      );
     });
   });
   group("#register", () {
@@ -306,20 +424,27 @@ void main() {
         pillSheetAppearanceMode: PillSheetAppearanceMode.date,
       );
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-      when(batchSetPillSheetGroup(batch, pillSheetGroup)).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
+      when(
+        batchSetPillSheetGroup(batch, pillSheetGroup),
+      ).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
-      final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-        beforePillSheetGroup: null,
-        createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
-      );
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      final history =
+          PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+            beforePillSheetGroup: null,
+            createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
+          );
+      final batchSetPillSheetModifiedHistory =
+          MockBatchSetPillSheetModifiedHistory();
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
       const setting = Setting(
         pillNumberForFromMenstruation: 24,
         durationMenstruation: 4,
         isOnReminder: true,
-        reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 21, minute: 0)],
+        reminderTimes: [
+          ReminderTime(hour: 21, minute: 20),
+          ReminderTime(hour: 21, minute: 0),
+        ],
         pillSheetTypes: [PillSheetType.pillsheet_21],
         timezoneDatabaseName: null,
       );
@@ -331,14 +456,26 @@ void main() {
           endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
-          batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
-          batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
-          remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-          deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
-          registerReminderLocalNotificationRunnerProvider.overrideWithValue(registerReminderLocalNotificationRunner),
+          batchSetPillSheetModifiedHistoryProvider.overrideWith(
+            (ref) => batchSetPillSheetModifiedHistory,
+          ),
+          batchSetPillSheetGroupProvider.overrideWith(
+            (ref) => batchSetPillSheetGroup,
+          ),
+          remoteConfigParameterProvider.overrideWithValue(
+            RemoteConfigParameter(),
+          ),
+          deviceTimezoneNameProvider.overrideWith(
+            (ref) => Future.value("Asia/Tokyo"),
+          ),
+          registerReminderLocalNotificationRunnerProvider.overrideWithValue(
+            registerReminderLocalNotificationRunner,
+          ),
         ],
       );
-      final store = container.read(initialSettingStateNotifierProvider.notifier);
+      final store = container.read(
+        initialSettingStateNotifierProvider.notifier,
+      );
 
       store.selectedFirstPillSheetType(PillSheetType.pillsheet_21);
       store.removePillSheetType(1);
@@ -358,7 +495,9 @@ void main() {
 
       var idGeneratorCallCount = 0;
       final mockIDGenerator = MockFirestoreIDGenerator();
-      when(mockIDGenerator.call()).thenAnswer((_) => ["sheet_id", "sheet_id2"][idGeneratorCallCount++]);
+      when(
+        mockIDGenerator.call(),
+      ).thenAnswer((_) => ["sheet_id", "sheet_id2"][idGeneratorCallCount++]);
       firestoreIDGenerator = mockIDGenerator;
 
       final batchFactory = MockBatchFactory();
@@ -368,9 +507,7 @@ void main() {
       final pillSheet = PillSheet.v1(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginDate: mockToday.subtract(
-          const Duration(days: 28),
-        ),
+        beginDate: mockToday.subtract(const Duration(days: 28)),
         groupIndex: 0,
         lastTakenDate: DateTime.parse("2020-09-18"),
         createdAt: now(),
@@ -394,21 +531,31 @@ void main() {
         pillSheetAppearanceMode: PillSheetAppearanceMode.date,
       );
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-      when(batchSetPillSheetGroup(batch, pillSheetGroup)).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
+      when(
+        batchSetPillSheetGroup(batch, pillSheetGroup),
+      ).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
-      final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-        beforePillSheetGroup: null,
-        createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
-      );
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      final history =
+          PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+            beforePillSheetGroup: null,
+            createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
+          );
+      final batchSetPillSheetModifiedHistory =
+          MockBatchSetPillSheetModifiedHistory();
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
       const setting = Setting(
         pillNumberForFromMenstruation: 52,
         durationMenstruation: 4,
         isOnReminder: true,
-        reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
-        pillSheetTypes: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_21],
+        reminderTimes: [
+          ReminderTime(hour: 21, minute: 20),
+          ReminderTime(hour: 22, minute: 0),
+        ],
+        pillSheetTypes: [
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_21,
+        ],
         timezoneDatabaseName: null,
       );
       final batchSetSetting = MockBatchSetSetting();
@@ -419,14 +566,26 @@ void main() {
           endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
-          batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
-          batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
-          remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-          deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
-          registerReminderLocalNotificationRunnerProvider.overrideWithValue(registerReminderLocalNotificationRunner),
+          batchSetPillSheetModifiedHistoryProvider.overrideWith(
+            (ref) => batchSetPillSheetModifiedHistory,
+          ),
+          batchSetPillSheetGroupProvider.overrideWith(
+            (ref) => batchSetPillSheetGroup,
+          ),
+          remoteConfigParameterProvider.overrideWithValue(
+            RemoteConfigParameter(),
+          ),
+          deviceTimezoneNameProvider.overrideWith(
+            (ref) => Future.value("Asia/Tokyo"),
+          ),
+          registerReminderLocalNotificationRunnerProvider.overrideWithValue(
+            registerReminderLocalNotificationRunner,
+          ),
         ],
       );
-      final store = container.read(initialSettingStateNotifierProvider.notifier);
+      final store = container.read(
+        initialSettingStateNotifierProvider.notifier,
+      );
 
       store.selectedFirstPillSheetType(PillSheetType.pillsheet_28_0);
       store.addPillSheetType(PillSheetType.pillsheet_21);
@@ -444,14 +603,19 @@ void main() {
         pillNumberForFromMenstruation: 24,
         durationMenstruation: 4,
         isOnReminder: true,
-        reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
+        reminderTimes: [
+          ReminderTime(hour: 21, minute: 20),
+          ReminderTime(hour: 22, minute: 0),
+        ],
         pillSheetTypes: [PillSheetType.pillsheet_24_rest_4],
         timezoneDatabaseName: null,
       );
 
       final remoteConfigParameter = RemoteConfigParameter();
       final endInitialSetting = MockEndInitialSetting();
-      when(endInitialSetting(remoteConfigParameter)).thenAnswer((_) => Future.value());
+      when(
+        endInitialSetting(remoteConfigParameter),
+      ).thenAnswer((_) => Future.value());
 
       var mockTodayRepository = MockTodayService();
       final mockToday = DateTime.parse("2020-09-19");
@@ -482,13 +646,17 @@ void main() {
         pillSheetAppearanceMode: PillSheetAppearanceMode.date,
       );
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-      when(batchSetPillSheetGroup(batch, pillSheetGroup)).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
+      when(
+        batchSetPillSheetGroup(batch, pillSheetGroup),
+      ).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
-      final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-        beforePillSheetGroup: null,
-        createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
-      );
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      final history =
+          PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+            beforePillSheetGroup: null,
+            createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
+          );
+      final batchSetPillSheetModifiedHistory =
+          MockBatchSetPillSheetModifiedHistory();
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
       final batchSetSetting = MockBatchSetSetting();
@@ -499,14 +667,26 @@ void main() {
           endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
-          batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
-          batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
-          remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-          deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
-          registerReminderLocalNotificationRunnerProvider.overrideWithValue(registerReminderLocalNotificationRunner),
+          batchSetPillSheetModifiedHistoryProvider.overrideWith(
+            (ref) => batchSetPillSheetModifiedHistory,
+          ),
+          batchSetPillSheetGroupProvider.overrideWith(
+            (ref) => batchSetPillSheetGroup,
+          ),
+          remoteConfigParameterProvider.overrideWithValue(
+            RemoteConfigParameter(),
+          ),
+          deviceTimezoneNameProvider.overrideWith(
+            (ref) => Future.value("Asia/Tokyo"),
+          ),
+          registerReminderLocalNotificationRunnerProvider.overrideWithValue(
+            registerReminderLocalNotificationRunner,
+          ),
         ],
       );
-      final store = container.read(initialSettingStateNotifierProvider.notifier);
+      final store = container.read(
+        initialSettingStateNotifierProvider.notifier,
+      );
 
       store.selectedFirstPillSheetType(PillSheetType.pillsheet_24_rest_4);
       store.removePillSheetType(1);

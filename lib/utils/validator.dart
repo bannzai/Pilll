@@ -6,6 +6,8 @@
 /// - サブドメイン: user@mail.example.com
 /// - アンダースコア、ドット、ハイフン含む: user_name.test-1@example.co.jp
 bool isValidEmail(String email) {
-  final emailRegex = RegExp(r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$');
+  final emailRegex = RegExp(
+    r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$',
+  );
   return emailRegex.hasMatch(email);
 }

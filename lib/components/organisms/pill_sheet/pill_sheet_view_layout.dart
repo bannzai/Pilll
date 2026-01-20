@@ -11,13 +11,23 @@ class PillSheetViewLayout extends StatelessWidget {
   static const double bottomSpace = 24;
   static const double componentWidth = 37;
 
-  static double calcHeight(int numberOfLineInPillSheet, bool isHideWeekdayLine) {
-    const verticalSpacing = PillSheetViewLayout.topSpace + PillSheetViewLayout.bottomSpace;
-    final pillMarkListHeight = PillSheetViewLayout.lineHeight * numberOfLineInPillSheet + verticalSpacing;
-    return isHideWeekdayLine ? pillMarkListHeight : pillMarkListHeight + WeekdayBadgeConst.height;
+  static double calcHeight(
+    int numberOfLineInPillSheet,
+    bool isHideWeekdayLine,
+  ) {
+    const verticalSpacing =
+        PillSheetViewLayout.topSpace + PillSheetViewLayout.bottomSpace;
+    final pillMarkListHeight =
+        PillSheetViewLayout.lineHeight * numberOfLineInPillSheet +
+        verticalSpacing;
+    return isHideWeekdayLine
+        ? pillMarkListHeight
+        : pillMarkListHeight + WeekdayBadgeConst.height;
   }
 
-  static PillSheetType mostLargePillSheetType(List<PillSheetType> pillSheetTypes) {
+  static PillSheetType mostLargePillSheetType(
+    List<PillSheetType> pillSheetTypes,
+  ) {
     final copied = [...pillSheetTypes];
     copied.sort((a, b) => b.totalCount.compareTo(a.totalCount));
     return copied.first;
@@ -26,20 +36,38 @@ class PillSheetViewLayout extends StatelessWidget {
   final Widget? weekdayLines;
   final List<Widget> pillMarkLines;
 
-  const PillSheetViewLayout({super.key, required this.weekdayLines, required this.pillMarkLines});
+  const PillSheetViewLayout({
+    super.key,
+    required this.weekdayLines,
+    required this.pillMarkLines,
+  });
 
   @override
   Widget build(BuildContext context) {
     final weekdayLines = this.weekdayLines;
     return Container(
-      height: PillSheetViewLayout.calcHeight(pillMarkLines.length, weekdayLines == null),
+      height: PillSheetViewLayout.calcHeight(
+        pillMarkLines.length,
+        weekdayLines == null,
+      ),
       width: PillSheetViewLayout.width,
       decoration: BoxDecoration(
         color: AppColors.pillSheet,
         borderRadius: BorderRadius.circular(10),
-        boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 6.0, offset: Offset(0, 2))],
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.black26,
+            blurRadius: 6.0,
+            offset: Offset(0, 2),
+          ),
+        ],
       ),
-      padding: const EdgeInsets.fromLTRB(22, 0, 22, PillSheetViewLayout.bottomSpace),
+      padding: const EdgeInsets.fromLTRB(
+        22,
+        0,
+        22,
+        PillSheetViewLayout.bottomSpace,
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -53,7 +81,10 @@ class PillSheetViewLayout extends StatelessWidget {
                   if (index + 1 == pillMarkLines.length) {
                     return MapEntry(index, [pillMarkLine]);
                   }
-                  return MapEntry(index, [pillMarkLine, SvgPicture.asset('images/pill_sheet_dot_line.svg')]);
+                  return MapEntry(index, [
+                    pillMarkLine,
+                    SvgPicture.asset('images/pill_sheet_dot_line.svg'),
+                  ]);
                 })
                 .entries
                 .expand((element) => element.value)

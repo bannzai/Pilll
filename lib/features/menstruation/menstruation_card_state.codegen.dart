@@ -8,12 +8,19 @@ part 'menstruation_card_state.codegen.freezed.dart';
 @freezed
 class MenstruationCardState with _$MenstruationCardState {
   const MenstruationCardState._();
-  const factory MenstruationCardState({required String title, required DateTime scheduleDate, required String countdownString}) =
-      _MenstruationCardState;
+  const factory MenstruationCardState({
+    required String title,
+    required DateTime scheduleDate,
+    required String countdownString,
+  }) = _MenstruationCardState;
 
   factory MenstruationCardState.future({required DateTime nextSchedule}) {
     final diff = daysBetween(today(), nextSchedule);
-    return MenstruationCardState(title: L.menstruationScheduleDate, scheduleDate: nextSchedule, countdownString: L.menstruationRemainingDay(diff));
+    return MenstruationCardState(
+      title: L.menstruationScheduleDate,
+      scheduleDate: nextSchedule,
+      countdownString: L.menstruationRemainingDay(diff),
+    );
   }
 
   factory MenstruationCardState.inTheMiddle({required DateTime scheduledDate}) {
@@ -25,9 +32,12 @@ class MenstruationCardState with _$MenstruationCardState {
     );
   }
 
-  factory MenstruationCardState.record({required Menstruation menstruation}) => MenstruationCardState(
-    title: L.menstruationStartDate,
-    scheduleDate: menstruation.beginDate,
-    countdownString: L.menstruationProgressingDay(daysBetween(menstruation.beginDate, today()) + 1),
-  );
+  factory MenstruationCardState.record({required Menstruation menstruation}) =>
+      MenstruationCardState(
+        title: L.menstruationStartDate,
+        scheduleDate: menstruation.beginDate,
+        countdownString: L.menstruationProgressingDay(
+          daysBetween(menstruation.beginDate, today()) + 1,
+        ),
+      );
 }

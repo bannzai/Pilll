@@ -9,7 +9,22 @@ part 'diary_setting.codegen.freezed.dart';
 /// ユーザーの日記機能で使用可能な体調項目のデフォルトリスト
 /// ユーザーは日記画面でこれらの項目から体調を選択して記録できる
 /// 各項目は日本語で記述され、ユーザーに表示される
-const List<String> defaultPhysicalConditions = ['頭痛', '腹痛', '吐き気', '貧血', '下痢', '便秘', 'ほてり', '眠気', '腰痛', '動悸', '不正出血', '食欲不振', '胸の張り', '不眠'];
+const List<String> defaultPhysicalConditions = [
+  '頭痛',
+  '腹痛',
+  '吐き気',
+  '貧血',
+  '下痢',
+  '便秘',
+  'ほてり',
+  '眠気',
+  '腰痛',
+  '動悸',
+  '不正出血',
+  '食欲不振',
+  '胸の張り',
+  '不眠',
+];
 // TODO: [Localizations] const にしないとfreezedでエラー
 // final List<String> defaultPhysicalConditions = [
 //   L.headache,
@@ -43,9 +58,13 @@ class DiarySetting with _$DiarySetting {
 
     /// 設定が作成された日時
     /// Firestoreのタイムスタンプ形式で保存され、読み書き時に自動変換される
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
     required DateTime createdAt,
   }) = _DiarySetting;
 
-  factory DiarySetting.fromJson(Map<String, dynamic> json) => _$DiarySettingFromJson(json);
+  factory DiarySetting.fromJson(Map<String, dynamic> json) =>
+      _$DiarySettingFromJson(json);
 }

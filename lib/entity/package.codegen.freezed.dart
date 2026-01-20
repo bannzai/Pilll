@@ -52,13 +52,20 @@ mixin _$Package {
 
 /// @nodoc
 abstract class $PackageCopyWith<$Res> {
-  factory $PackageCopyWith(Package value, $Res Function(Package) then) = _$PackageCopyWithImpl<$Res, Package>;
+  factory $PackageCopyWith(Package value, $Res Function(Package) then) =
+      _$PackageCopyWithImpl<$Res, Package>;
   @useResult
-  $Res call({String latestOS, String appName, String appVersion, String buildNumber});
+  $Res call({
+    String latestOS,
+    String appName,
+    String appVersion,
+    String buildNumber,
+  });
 }
 
 /// @nodoc
-class _$PackageCopyWithImpl<$Res, $Val extends Package> implements $PackageCopyWith<$Res> {
+class _$PackageCopyWithImpl<$Res, $Val extends Package>
+    implements $PackageCopyWith<$Res> {
   _$PackageCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -68,7 +75,12 @@ class _$PackageCopyWithImpl<$Res, $Val extends Package> implements $PackageCopyW
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? latestOS = null, Object? appName = null, Object? appVersion = null, Object? buildNumber = null}) {
+  $Res call({
+    Object? latestOS = null,
+    Object? appName = null,
+    Object? appVersion = null,
+    Object? buildNumber = null,
+  }) {
     return _then(
       _value.copyWith(
             latestOS: null == latestOS
@@ -95,19 +107,37 @@ class _$PackageCopyWithImpl<$Res, $Val extends Package> implements $PackageCopyW
 
 /// @nodoc
 abstract class _$$PackageImplCopyWith<$Res> implements $PackageCopyWith<$Res> {
-  factory _$$PackageImplCopyWith(_$PackageImpl value, $Res Function(_$PackageImpl) then) = __$$PackageImplCopyWithImpl<$Res>;
+  factory _$$PackageImplCopyWith(
+    _$PackageImpl value,
+    $Res Function(_$PackageImpl) then,
+  ) = __$$PackageImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String latestOS, String appName, String appVersion, String buildNumber});
+  $Res call({
+    String latestOS,
+    String appName,
+    String appVersion,
+    String buildNumber,
+  });
 }
 
 /// @nodoc
-class __$$PackageImplCopyWithImpl<$Res> extends _$PackageCopyWithImpl<$Res, _$PackageImpl> implements _$$PackageImplCopyWith<$Res> {
-  __$$PackageImplCopyWithImpl(_$PackageImpl _value, $Res Function(_$PackageImpl) _then) : super(_value, _then);
+class __$$PackageImplCopyWithImpl<$Res>
+    extends _$PackageCopyWithImpl<$Res, _$PackageImpl>
+    implements _$$PackageImplCopyWith<$Res> {
+  __$$PackageImplCopyWithImpl(
+    _$PackageImpl _value,
+    $Res Function(_$PackageImpl) _then,
+  ) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? latestOS = null, Object? appName = null, Object? appVersion = null, Object? buildNumber = null}) {
+  $Res call({
+    Object? latestOS = null,
+    Object? appName = null,
+    Object? appVersion = null,
+    Object? buildNumber = null,
+  }) {
     return _then(
       _$PackageImpl(
         latestOS: null == latestOS
@@ -135,9 +165,15 @@ class __$$PackageImplCopyWithImpl<$Res> extends _$PackageCopyWithImpl<$Res, _$Pa
 
 @JsonSerializable(explicitToJson: true)
 class _$PackageImpl implements _Package {
-  const _$PackageImpl({required this.latestOS, required this.appName, required this.appVersion, required this.buildNumber});
+  const _$PackageImpl({
+    required this.latestOS,
+    required this.appName,
+    required this.appVersion,
+    required this.buildNumber,
+  });
 
-  factory _$PackageImpl.fromJson(Map<String, dynamic> json) => _$$PackageImplFromJson(json);
+  factory _$PackageImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PackageImplFromJson(json);
 
   /// 端末の最新OS種別
   ///
@@ -177,20 +213,25 @@ class _$PackageImpl implements _Package {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PackageImpl &&
-            (identical(other.latestOS, latestOS) || other.latestOS == latestOS) &&
+            (identical(other.latestOS, latestOS) ||
+                other.latestOS == latestOS) &&
             (identical(other.appName, appName) || other.appName == appName) &&
-            (identical(other.appVersion, appVersion) || other.appVersion == appVersion) &&
-            (identical(other.buildNumber, buildNumber) || other.buildNumber == buildNumber));
+            (identical(other.appVersion, appVersion) ||
+                other.appVersion == appVersion) &&
+            (identical(other.buildNumber, buildNumber) ||
+                other.buildNumber == buildNumber));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, latestOS, appName, appVersion, buildNumber);
+  int get hashCode =>
+      Object.hash(runtimeType, latestOS, appName, appVersion, buildNumber);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PackageImplCopyWith<_$PackageImpl> get copyWith => __$$PackageImplCopyWithImpl<_$PackageImpl>(this, _$identity);
+  _$$PackageImplCopyWith<_$PackageImpl> get copyWith =>
+      __$$PackageImplCopyWithImpl<_$PackageImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -234,5 +275,6 @@ abstract class _Package implements Package {
   String get buildNumber;
   @override
   @JsonKey(ignore: true)
-  _$$PackageImplCopyWith<_$PackageImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$PackageImplCopyWith<_$PackageImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

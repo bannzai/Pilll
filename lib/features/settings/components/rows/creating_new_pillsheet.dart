@@ -15,7 +15,13 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
   final bool isPremium;
   final DateTime? trialDeadlineDate;
 
-  const CreatingNewPillSheetRow({super.key, required this.setting, required this.isTrial, required this.isPremium, required this.trialDeadlineDate});
+  const CreatingNewPillSheetRow({
+    super.key,
+    required this.setting,
+    required this.isTrial,
+    required this.isPremium,
+    required this.trialDeadlineDate,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -25,14 +31,22 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
         children: [
           Text(
             L.autoAddPillSheetGroup,
-            style: const TextStyle(fontFamily: FontFamily.roboto, fontWeight: FontWeight.w300, fontSize: 16),
+            style: const TextStyle(
+              fontFamily: FontFamily.roboto,
+              fontWeight: FontWeight.w300,
+              fontSize: 16,
+            ),
           ),
           if (!isPremium) ...[const SizedBox(width: 8), const PremiumBadge()],
         ],
       ),
       subtitle: Text(
         L.autoAddNewSheetAfterCurrentEnds,
-        style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14),
+        style: const TextStyle(
+          fontFamily: FontFamily.japanese,
+          fontWeight: FontWeight.w300,
+          fontSize: 14,
+        ),
       ),
       activeThumbColor: AppColors.secondary,
       onChanged: (bool value) async {
@@ -40,8 +54,15 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
         if (isPremium || isTrial) {
           final messenger = ScaffoldMessenger.of(context);
           messenger.hideCurrentSnackBar();
-          await setSetting(setting.copyWith(isAutomaticallyCreatePillSheet: value));
-          messenger.showSnackBar(SnackBar(duration: const Duration(seconds: 2), content: Text("ピルシートグループの自動追加を${value ? "ON" : "OFF"}にしました")));
+          await setSetting(
+            setting.copyWith(isAutomaticallyCreatePillSheet: value),
+          );
+          messenger.showSnackBar(
+            SnackBar(
+              duration: const Duration(seconds: 2),
+              content: Text("ピルシートグループの自動追加を${value ? "ON" : "OFF"}にしました"),
+            ),
+          );
         } else if (!isPremium) {
           showPremiumIntroductionSheet(context);
         }

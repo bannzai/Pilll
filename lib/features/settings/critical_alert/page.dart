@@ -18,17 +18,27 @@ class CriticalAlertPage extends HookConsumerWidget {
     final useCriticalAlert = useState(setting.useCriticalAlert);
     final criticalAlertVolume = useState(setting.criticalAlertVolume);
     final setSetting = ref.watch(setSettingProvider);
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final registerReminderLocalNotification = ref.watch(
+      registerReminderLocalNotificationProvider,
+    );
 
     void updateSetting() async {
-      await setSetting(setting.copyWith(useCriticalAlert: useCriticalAlert.value, criticalAlertVolume: criticalAlertVolume.value));
+      await setSetting(
+        setting.copyWith(
+          useCriticalAlert: useCriticalAlert.value,
+          criticalAlertVolume: criticalAlertVolume.value,
+        ),
+      );
       await registerReminderLocalNotification();
     }
 
     return Scaffold(
       appBar: AppBar(
         title: Text(L.enableNotificationInSilentModeSetting),
-        leading: IconButton(onPressed: () => Navigator.of(context).pop(), icon: const Icon(Icons.arrow_back)),
+        leading: IconButton(
+          onPressed: () => Navigator.of(context).pop(),
+          icon: const Icon(Icons.arrow_back),
+        ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -39,7 +49,8 @@ class CriticalAlertPage extends HookConsumerWidget {
                 SwitchListTile(
                   value: useCriticalAlert.value,
                   onChanged: (value) async {
-                    final granted = await localNotificationService.requestPermissionWithCriticalAlert();
+                    final granted = await localNotificationService
+                        .requestPermissionWithCriticalAlert();
                     if (granted == true) {
                       useCriticalAlert.value = value;
                       updateSetting();
@@ -50,11 +61,21 @@ class CriticalAlertPage extends HookConsumerWidget {
                   },
                   title: Text(
                     L.enableNotificationInSilentMode,
-                    style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontWeight: FontWeight.bold, fontSize: 16),
+                    style: const TextStyle(
+                      color: TextColor.main,
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                    ),
                   ),
                   subtitle: Text(
                     L.silentModeNotificationDescription,
-                    style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400, fontSize: 14),
+                    style: const TextStyle(
+                      color: TextColor.main,
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 14,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 20),
@@ -67,7 +88,12 @@ class CriticalAlertPage extends HookConsumerWidget {
                         alignment: Alignment.topLeft,
                         child: Text(
                           L.criticalAlertVolume,
-                          style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontWeight: FontWeight.bold, fontSize: 16),
+                          style: const TextStyle(
+                            color: TextColor.main,
+                            fontFamily: FontFamily.japanese,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
                         ),
                       ),
                     ),
@@ -90,11 +116,17 @@ class CriticalAlertPage extends HookConsumerWidget {
                 const SizedBox(height: 20),
                 TextButton(
                   onPressed: () {
-                    localNotificationService.testCriticalAlert(volume: criticalAlertVolume.value);
+                    localNotificationService.testCriticalAlert(
+                      volume: criticalAlertVolume.value,
+                    );
                   },
                   child: const Text(
                     'テスト通知を送信',
-                    style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.bold, color: TextColor.danger),
+                    style: TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.bold,
+                      color: TextColor.danger,
+                    ),
                   ),
                 ),
               ],

@@ -15,7 +15,10 @@ class SharedPreferencesState<T> {
 @Riverpod(keepAlive: true, dependencies: [sharedPreferences])
 class BoolSharedPreferences extends _$BoolSharedPreferences {
   @override
-  SharedPreferencesState<bool?> build(String key) => SharedPreferencesState(key, ref.read(sharedPreferencesProvider).getBool(key));
+  SharedPreferencesState<bool?> build(String key) => SharedPreferencesState(
+    key,
+    ref.read(sharedPreferencesProvider).getBool(key),
+  );
 
   Future<void> set(bool value) async {
     await ref.read(sharedPreferencesProvider).setBool(state.key, value);
@@ -26,7 +29,10 @@ class BoolSharedPreferences extends _$BoolSharedPreferences {
 @Riverpod(keepAlive: true, dependencies: [sharedPreferences])
 class IntSharedPreferences extends _$IntSharedPreferences {
   @override
-  SharedPreferencesState<int?> build(String key) => SharedPreferencesState(key, ref.read(sharedPreferencesProvider).getInt(key));
+  SharedPreferencesState<int?> build(String key) => SharedPreferencesState(
+    key,
+    ref.read(sharedPreferencesProvider).getInt(key),
+  );
 
   Future<void> set(int value) async {
     await ref.read(sharedPreferencesProvider).setInt(state.key, value);
@@ -37,7 +43,10 @@ class IntSharedPreferences extends _$IntSharedPreferences {
 @Riverpod(keepAlive: true, dependencies: [sharedPreferences])
 class StringSharedPreferences extends _$StringSharedPreferences {
   @override
-  SharedPreferencesState<String?> build(String key) => SharedPreferencesState(key, ref.read(sharedPreferencesProvider).getString(key));
+  SharedPreferencesState<String?> build(String key) => SharedPreferencesState(
+    key,
+    ref.read(sharedPreferencesProvider).getString(key),
+  );
 
   Future<void> set(String value) async {
     await ref.read(sharedPreferencesProvider).setString(state.key, value);

@@ -29,8 +29,12 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return AsyncValueGroup.group2(ref.watch(purchaseOfferingsProvider), ref.watch(userProvider)).when(
-      data: (data) => PremiumIntroductionSheetBody(offerings: data.$1, user: data.$2),
+    return AsyncValueGroup.group2(
+      ref.watch(purchaseOfferingsProvider),
+      ref.watch(userProvider),
+    ).when(
+      data: (data) =>
+          PremiumIntroductionSheetBody(offerings: data.$1, user: data.$2),
       error: (error, stackTrace) => UniversalErrorPage(
         error: error,
         reload: () {
@@ -48,7 +52,11 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
   final Offerings offerings;
   final User user;
 
-  const PremiumIntroductionSheetBody({super.key, required this.offerings, required this.user});
+  const PremiumIntroductionSheetBody({
+    super.key,
+    required this.offerings,
+    required this.user,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -77,9 +85,16 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                   Container(
                     decoration: const BoxDecoration(
                       color: Colors.transparent,
-                      image: DecorationImage(image: AssetImage('images/premium_background.png'), fit: BoxFit.cover),
+                      image: DecorationImage(
+                        image: AssetImage('images/premium_background.png'),
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                    padding: const EdgeInsets.only(left: 40, right: 40, bottom: 40),
+                    padding: const EdgeInsets.only(
+                      left: 40,
+                      right: 40,
+                      bottom: 40,
+                    ),
                     width: MediaQuery.of(context).size.width,
                   ),
                   SingleChildScrollView(
@@ -89,16 +104,22 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         const PremiumIntroductionHeader(),
-                        if (user.isPremium) ...[const SizedBox(height: 32), const PremiumUserThanksRow()],
+                        if (user.isPremium) ...[
+                          const SizedBox(height: 32),
+                          const PremiumUserThanksRow(),
+                        ],
                         if (!user.isPremium) ...[
                           if (user.hasDiscountEntitlement)
                             if (monthlyPremiumPackage != null)
                               PremiumIntroductionDiscountRow(
                                 monthlyPremiumPackage: monthlyPremiumPackage,
-                                discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate,
+                                discountEntitlementDeadlineDate:
+                                    user.discountEntitlementDeadlineDate,
                               ),
                           const SizedBox(height: 12),
-                          if (monthlyPremiumPackage != null && monthlyPackage != null && annualPackage != null)
+                          if (monthlyPremiumPackage != null &&
+                              monthlyPackage != null &&
+                              annualPackage != null)
                             PurchaseButtons(
                               offeringType: offeringType,
                               monthlyPackage: monthlyPackage,
@@ -113,7 +134,9 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                         const SizedBox(height: 24),
                         AlertButton(
                           onPressed: () async {
-                            analytics.logEvent(name: 'pressed_premium_functions_on_sheet');
+                            analytics.logEvent(
+                              name: 'pressed_premium_functions_on_sheet',
+                            );
                             await launchUrl(Uri.parse(preimumLink));
                           },
                           text: L.viewPremiumFeatures,

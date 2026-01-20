@@ -44,12 +44,20 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                     const SizedBox(height: 24),
                     Text(
                       L.selectTodayPillNumber(todayString()),
-                      style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main),
+                      style: const TextStyle(
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 20,
+                        color: TextColor.main,
+                      ),
                       textAlign: TextAlign.center,
                     ),
                     const SizedBox(height: 44),
                     Center(
-                      child: SelectTodayPillNumberPillSheetList(state: state, store: store),
+                      child: SelectTodayPillNumberPillSheetList(
+                        state: state,
+                        store: store,
+                      ),
                     ),
                     const SizedBox(height: 24),
                     ExplainPillNumber(today: todayString()),
@@ -57,8 +65,12 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                     InconspicuousButton(
                       onPressed: () async {
                         store.unsetTodayPillNumber();
-                        analytics.logEvent(name: 'unknown_number_initial_setting');
-                        Navigator.of(context).push(InitialSettingReminderTimesPageRoute.route());
+                        analytics.logEvent(
+                          name: 'unknown_number_initial_setting',
+                        );
+                        Navigator.of(
+                          context,
+                        ).push(InitialSettingReminderTimesPageRoute.route());
                       },
                       text: L.notYetKnown,
                     ),
@@ -76,8 +88,12 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                       onPressed: state.todayPillNumber == null
                           ? null
                           : () async {
-                              analytics.logEvent(name: 'done_today_number_initial_setting');
-                              Navigator.of(context).push(InitialSettingReminderTimesPageRoute.route());
+                              analytics.logEvent(
+                                name: 'done_today_number_initial_setting',
+                              );
+                              Navigator.of(context).push(
+                                InitialSettingReminderTimesPageRoute.route(),
+                              );
                             },
                     ),
                   ),
@@ -92,10 +108,13 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
   }
 }
 
-extension InitialSettingSelectTodayPillNumberPageRoute on InitialSettingSelectTodayPillNumberPage {
+extension InitialSettingSelectTodayPillNumberPageRoute
+    on InitialSettingSelectTodayPillNumberPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: 'InitialSettingSelectTodayPillNumberPage'),
+      settings: const RouteSettings(
+        name: 'InitialSettingSelectTodayPillNumberPage',
+      ),
       builder: (_) => const InitialSettingSelectTodayPillNumberPage(),
     );
   }

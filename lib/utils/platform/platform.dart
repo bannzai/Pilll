@@ -17,5 +17,7 @@ String get forceUpdateStoreURL {
 }
 
 String get subscriptionManagementURL {
-  return Platform.isIOS ? 'https://apps.apple.com/account/subscriptions' : 'https://play.google.com/store/account/subscriptions';
+  return Platform.isIOS
+      ? 'https://apps.apple.com/account/subscriptions'
+      : 'https://play.google.com/store/account/subscriptions';
 }

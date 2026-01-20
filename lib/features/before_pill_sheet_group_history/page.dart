@@ -25,11 +25,18 @@ class BeforePillSheetGroupHistoryPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return AsyncValueGroup.group2(ref.watch(beforePillSheetGroupProvider), ref.watch(settingProvider)).when(
+    return AsyncValueGroup.group2(
+      ref.watch(beforePillSheetGroupProvider),
+      ref.watch(settingProvider),
+    ).when(
       data: (data) {
         return _Page(pillSheetGroup: data.$1, setting: data.$2);
       },
-      error: (error, stackTrace) => UniversalErrorPage(error: error, reload: () => ref.refresh(refreshAppProvider), child: null),
+      error: (error, stackTrace) => UniversalErrorPage(
+        error: error,
+        reload: () => ref.refresh(refreshAppProvider),
+        child: null,
+      ),
       loading: () => const Indicator(),
     );
   }
@@ -62,7 +69,11 @@ class _Page extends HookConsumerWidget {
     }
 
     final currentPillSheet = useState(pillSheetGroup.pillSheets[0]);
-    final pageController = usePageController(initialPage: 0, viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width);
+    final pageController = usePageController(
+      initialPage: 0,
+      viewportFraction:
+          (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width,
+    );
     pageController.addListener(() {
       final page = pageController.page?.toInt();
       if (page == null) {
@@ -71,8 +82,12 @@ class _Page extends HookConsumerWidget {
       final pillSheet = pillSheetGroup.pillSheets[page];
       currentPillSheet.value = pillSheet;
     });
-    final begin = DateTimeFormatter.slashYearAndMonthAndDay(currentPillSheet.value.beginDate);
-    final end = DateTimeFormatter.slashYearAndMonthAndDay(currentPillSheet.value.estimatedEndTakenDate);
+    final begin = DateTimeFormatter.slashYearAndMonthAndDay(
+      currentPillSheet.value.beginDate,
+    );
+    final end = DateTimeFormatter.slashYearAndMonthAndDay(
+      currentPillSheet.value.estimatedEndTakenDate,
+    );
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -94,12 +109,21 @@ class _Page extends HookConsumerWidget {
             Text(
               '$begin ~ $end',
               textAlign: TextAlign.center,
-              style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 17, fontWeight: FontWeight.w600, color: TextColor.main),
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontSize: 17,
+                fontWeight: FontWeight.w600,
+                color: TextColor.main,
+              ),
             ),
             const SizedBox(height: 20),
             SizedBox(
               height: PillSheetViewLayout.calcHeight(
-                PillSheetViewLayout.mostLargePillSheetType(pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList()).numberOfLineInPillSheet,
+                PillSheetViewLayout.mostLargePillSheetType(
+                  pillSheetGroup.pillSheets
+                      .map((e) => e.pillSheetType)
+                      .toList(),
+                ).numberOfLineInPillSheet,
                 false,
               ),
               child: PageView(
@@ -110,7 +134,11 @@ class _Page extends HookConsumerWidget {
                   for (final pillSheet in pillSheetGroup.pillSheets)
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: HistoricalPillsheetGroupPagePillSheet(pillSheetGroup: pillSheetGroup, pillSheet: pillSheet, setting: setting),
+                      child: HistoricalPillsheetGroupPagePillSheet(
+                        pillSheetGroup: pillSheetGroup,
+                        pillSheet: pillSheet,
+                        setting: setting,
+                      ),
                     ),
                 ],
               ),
@@ -121,13 +149,20 @@ class _Page extends HookConsumerWidget {
                 controller: pageController,
                 itemCount: pillSheetGroup.pillSheets.length,
                 onDotTapped: (page) {
-                  pageController.animateToPage(page, duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
+                  pageController.animateToPage(
+                    page,
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.easeInOut,
+                  );
                 },
               ),
             ],
             Padding(
               padding: const EdgeInsets.only(left: 24, right: 24),
-              child: BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList(pillSheet: currentPillSheet.value),
+              child:
+                  BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList(
+                    pillSheet: currentPillSheet.value,
+                  ),
             ),
           ],
         ),
@@ -136,7 +171,8 @@ class _Page extends HookConsumerWidget {
   }
 }
 
-extension BeforePillSheetGroupHistoryPageRoute on BeforePillSheetGroupHistoryPage {
+extension BeforePillSheetGroupHistoryPageRoute
+    on BeforePillSheetGroupHistoryPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: 'BeforePillSheetGroupHistoryPage'),

@@ -19,7 +19,12 @@ class PremiumCompleteDialog extends StatelessWidget {
         children: [
           Text(
             L.premiumRegistrationComplete,
-            style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 16),
+            style: const TextStyle(
+              color: TextColor.main,
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w700,
+              fontSize: 16,
+            ),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 24),
@@ -27,7 +32,12 @@ class PremiumCompleteDialog extends StatelessWidget {
           const SizedBox(height: 24),
           Text(
             L.thankYouForRegistration,
-            style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400, fontSize: 14),
+            style: const TextStyle(
+              color: TextColor.main,
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w400,
+              fontSize: 14,
+            ),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 24),

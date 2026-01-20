@@ -23,7 +23,9 @@ Future<bool> healthKitRequestAuthorizationIsUnnecessary() async {
     throw FormatException(L.healthKitDoesNotSupport);
   }
 
-  final result = await methodChannel.invokeMethod('healthKitRequestAuthorizationIsUnnecessary');
+  final result = await methodChannel.invokeMethod(
+    'healthKitRequestAuthorizationIsUnnecessary',
+  );
   return result['healthKitRequestAuthorizationIsUnnecessary'] == true;
 }
 
@@ -38,7 +40,9 @@ Future<bool> healthKitAuthorizationStatusIsSharingAuthorized() async {
     throw FormatException(L.enableHealthKitFromSettings);
   }
 
-  final result = await methodChannel.invokeMethod('healthKitAuthorizationStatusIsSharingAuthorized');
+  final result = await methodChannel.invokeMethod(
+    'healthKitAuthorizationStatusIsSharingAuthorized',
+  );
   return result['healthKitAuthorizationStatusIsSharingAuthorized'] == true;
 }
 
@@ -50,7 +54,9 @@ Future<bool> shouldRequestForAccessToHealthKitData() async {
     return false;
   }
 
-  dynamic response = await methodChannel.invokeMethod('shouldRequestForAccessToHealthKitData');
+  dynamic response = await methodChannel.invokeMethod(
+    'shouldRequestForAccessToHealthKitData',
+  );
 
   if (response['result'] == 'success') {
     return response['shouldRequestForAccessToHealthKitData'] == true;
@@ -69,7 +75,9 @@ Future<bool> requestWriteMenstrualFlowHealthKitDataPermission() async {
     return false;
   }
 
-  dynamic response = await methodChannel.invokeMethod('requestWriteMenstrualFlowHealthKitDataPermission');
+  dynamic response = await methodChannel.invokeMethod(
+    'requestWriteMenstrualFlowHealthKitDataPermission',
+  );
 
   if (response['result'] == 'success') {
     return response['isSuccess'] == true;
@@ -80,7 +88,9 @@ Future<bool> requestWriteMenstrualFlowHealthKitDataPermission() async {
   }
 }
 
-Future<String> addMenstruationFlowHealthKitData(Menstruation menstruation) async {
+Future<String> addMenstruationFlowHealthKitData(
+  Menstruation menstruation,
+) async {
   if (!Platform.isIOS) {
     throw FormatException(L.onlySupportiOS);
   }
@@ -101,7 +111,10 @@ Future<String> addMenstruationFlowHealthKitData(Menstruation menstruation) async
     }
   }
 
-  dynamic response = await methodChannel.invokeMethod('addMenstruationFlowHealthKitData', {'menstruation': json});
+  dynamic response = await methodChannel.invokeMethod(
+    'addMenstruationFlowHealthKitData',
+    {'menstruation': json},
+  );
 
   if (response['result'] == 'success') {
     return response['healthKitSampleDataUUID'] as String;
@@ -112,7 +125,9 @@ Future<String> addMenstruationFlowHealthKitData(Menstruation menstruation) async
   }
 }
 
-Future<String> updateOrAddMenstruationFlowHealthKitData(Menstruation menstruation) async {
+Future<String> updateOrAddMenstruationFlowHealthKitData(
+  Menstruation menstruation,
+) async {
   if (!Platform.isIOS) {
     throw FormatException(L.onlySupportiOS);
   }
@@ -133,7 +148,10 @@ Future<String> updateOrAddMenstruationFlowHealthKitData(Menstruation menstruatio
     }
   }
 
-  dynamic response = await methodChannel.invokeMethod('updateOrAddMenstruationFlowHealthKitData', {'menstruation': json});
+  dynamic response = await methodChannel.invokeMethod(
+    'updateOrAddMenstruationFlowHealthKitData',
+    {'menstruation': json},
+  );
 
   if (response['result'] == 'success') {
     return response['healthKitSampleDataUUID'] as String;
@@ -144,7 +162,9 @@ Future<String> updateOrAddMenstruationFlowHealthKitData(Menstruation menstruatio
   }
 }
 
-Future<void> deleteMenstruationFlowHealthKitData(Menstruation menstruation) async {
+Future<void> deleteMenstruationFlowHealthKitData(
+  Menstruation menstruation,
+) async {
   if (!Platform.isIOS) {
     throw FormatException(L.onlySupportiOS);
   }
@@ -165,7 +185,10 @@ Future<void> deleteMenstruationFlowHealthKitData(Menstruation menstruation) asyn
     }
   }
 
-  dynamic response = await methodChannel.invokeMethod('deleteMenstrualFlowHealthKitData', {'menstruation': json});
+  dynamic response = await methodChannel.invokeMethod(
+    'deleteMenstrualFlowHealthKitData',
+    {'menstruation': json},
+  );
 
   if (response['result'] == 'success') {
     return;

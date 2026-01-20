@@ -28,7 +28,10 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
 
     return Container(
       decoration: const BoxDecoration(
-        borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(10),
+          topRight: Radius.circular(10),
+        ),
         color: AppColors.white,
       ),
       padding: const EdgeInsets.fromLTRB(16, 20, 16, 20),
@@ -49,7 +52,10 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
   }
 
   Widget _withContentSpacer(Widget content) {
-    return Container(padding: const EdgeInsets.only(top: 10, bottom: 10), child: content);
+    return Container(
+      padding: const EdgeInsets.only(top: 10, bottom: 10),
+      child: content,
+    );
   }
 
   Widget _title(BuildContext context, DeleteDiary deleteDiary, Diary diary) {
@@ -58,13 +64,20 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
       children: [
         Text(
           DateTimeFormatter.yearAndMonthAndDay(diary.date),
-          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main),
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w500,
+            fontSize: 20,
+            color: TextColor.main,
+          ),
         ),
         const Spacer(),
         IconButton(
           icon: SvgPicture.asset('images/edit.svg'),
           onPressed: () {
-            Navigator.of(context).push(DiaryPostPageRoute.route(diary.date, diary));
+            Navigator.of(
+              context,
+            ).push(DiaryPostPageRoute.route(diary.date, diary));
           },
         ),
         const SizedBox(width: 12),
@@ -78,7 +91,12 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
                   title: L.deleteDiary,
                   message: Text(
                     L.deletedDiaryCannotBeRestored,
-                    style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                      color: TextColor.main,
+                    ),
                   ),
                   actions: [
                     AlertButton(
@@ -112,9 +130,21 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
   Widget _physicalConditionImage(PhysicalConditionStatus? status) {
     switch (status) {
       case PhysicalConditionStatus.fine:
-        return SvgPicture.asset('images/laugh.svg', colorFilter: const ColorFilter.mode(AppColors.primary, BlendMode.srcIn));
+        return SvgPicture.asset(
+          'images/laugh.svg',
+          colorFilter: const ColorFilter.mode(
+            AppColors.primary,
+            BlendMode.srcIn,
+          ),
+        );
       case PhysicalConditionStatus.bad:
-        return SvgPicture.asset('images/angry.svg', colorFilter: const ColorFilter.mode(AppColors.primary, BlendMode.srcIn));
+        return SvgPicture.asset(
+          'images/angry.svg',
+          colorFilter: const ColorFilter.mode(
+            AppColors.primary,
+            BlendMode.srcIn,
+          ),
+        );
       default:
         return Container();
     }
@@ -125,7 +155,12 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
       children: [
         Text(
           L.physicalCondition,
-          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 16, color: TextColor.black),
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w300,
+            fontSize: 16,
+            color: TextColor.black,
+          ),
         ),
         const SizedBox(width: 16),
         _physicalConditionImage(diary.physicalConditionStatus),
@@ -143,7 +178,12 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
               .map(
                 (e) => ChoiceChip(
                   label: Text(e),
-                  labelStyle: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.white),
+                  labelStyle: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 14,
+                    color: TextColor.white,
+                  ),
                   selectedColor: AppColors.primary,
                   selected: true,
                   onSelected: (selected) {},
@@ -160,8 +200,14 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
       padding: const EdgeInsets.all(4),
       width: 32,
       height: 32,
-      decoration: BoxDecoration(shape: BoxShape.circle, color: AppColors.thinSecondary),
-      child: SvgPicture.asset('images/heart.svg', colorFilter: const ColorFilter.mode(AppColors.primary, BlendMode.srcIn)),
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: AppColors.thinSecondary,
+      ),
+      child: SvgPicture.asset(
+        'images/heart.svg',
+        colorFilter: const ColorFilter.mode(AppColors.primary, BlendMode.srcIn),
+      ),
     );
   }
 

@@ -30,7 +30,8 @@ class ReminderTime with _$ReminderTime {
     required int minute,
   }) = _ReminderTime;
 
-  factory ReminderTime.fromJson(Map<String, dynamic> json) => _$ReminderTimeFromJson(json);
+  factory ReminderTime.fromJson(Map<String, dynamic> json) =>
+      _$ReminderTimeFromJson(json);
 
   /// 現在日付を基準にしたDateTime型の時刻を生成する
   ///
@@ -38,7 +39,16 @@ class ReminderTime with _$ReminderTime {
   /// リマインダー通知のスケジュール設定で使用されます。
   DateTime dateTime() {
     var t = DateTime.now().toLocal();
-    return DateTime(t.year, t.month, t.day, hour, minute, t.second, t.millisecond, t.microsecond);
+    return DateTime(
+      t.year,
+      t.month,
+      t.day,
+      hour,
+      minute,
+      t.second,
+      t.millisecond,
+      t.microsecond,
+    );
   }
 
   /// 設定可能な最大リマインダー時刻数
@@ -128,7 +138,8 @@ class Setting with _$Setting {
     ///
     /// 通知タイトル、メッセージ、表示項目などのカスタマイズ設定です。
     /// デフォルトでReminderNotificationCustomizationの初期値が設定されます。
-    @Default(ReminderNotificationCustomization()) ReminderNotificationCustomization reminderNotificationCustomization,
+    @Default(ReminderNotificationCustomization())
+    ReminderNotificationCustomization reminderNotificationCustomization,
 
     /// 緊急アラート機能の有効フラグ
     ///
@@ -156,7 +167,8 @@ class Setting with _$Setting {
     required String? timezoneDatabaseName,
   }) = _Setting;
 
-  factory Setting.fromJson(Map<String, dynamic> json) => _$SettingFromJson(json);
+  factory Setting.fromJson(Map<String, dynamic> json) =>
+      _$SettingFromJson(json);
 
   // NOTE: v3.9.6 で PillSheetType.pillsheet_24_rest_4 を含めた状態でのコード生成をしていなかった
   // 本来初期設定でpillsheet_24_rest_4を選択したユーザーの pillSheetTypes の値が null が入ってしまっている
@@ -196,6 +208,10 @@ class Setting with _$Setting {
 /// List<PillSheetType?>からList<PillSheetType>に変換し、
 /// null要素をPillSheetType.pillsheet_24_rest_4で置換します。
 /// v3.9.6での不具合により発生したnull値への対処として実装されています。
-List<PillSheetType> backportPillSheetTypes(List<PillSheetType?> pillSheetTypes) {
-  return pillSheetTypes.map((e) => e ?? PillSheetType.pillsheet_24_rest_4).toList();
+List<PillSheetType> backportPillSheetTypes(
+  List<PillSheetType?> pillSheetTypes,
+) {
+  return pillSheetTypes
+      .map((e) => e ?? PillSheetType.pillsheet_24_rest_4)
+      .toList();
 }

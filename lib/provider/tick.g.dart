@@ -13,7 +13,9 @@ String _$tickHash() => r'686abe45d9c3fcc30740691654bd6533752d671e';
 final tickProvider = AutoDisposeNotifierProvider<Tick, DateTime>.internal(
   Tick.new,
   name: r'tickProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$tickHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$tickHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

@@ -40,10 +40,14 @@ class Inquiry with _$Inquiry {
     required String content,
 
     /// 作成日時
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
     required DateTime createdAt,
   }) = _Inquiry;
   const Inquiry._();
 
-  factory Inquiry.fromJson(Map<String, dynamic> json) => _$InquiryFromJson(json);
+  factory Inquiry.fromJson(Map<String, dynamic> json) =>
+      _$InquiryFromJson(json);
 }

@@ -12,7 +12,8 @@ class CalendarScheduledMenstruationBandModel extends CalendarBandModel {
 
 class CalendarMenstruationBandModel extends CalendarBandModel {
   final Menstruation menstruation;
-  CalendarMenstruationBandModel(this.menstruation) : super(menstruation.beginDate, menstruation.endDate);
+  CalendarMenstruationBandModel(this.menstruation)
+    : super(menstruation.beginDate, menstruation.endDate);
 }
 
 class CalendarNextPillSheetBandModel extends CalendarBandModel {

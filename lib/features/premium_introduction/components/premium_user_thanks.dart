@@ -13,7 +13,12 @@ class PremiumUserThanksRow extends StatelessWidget {
       children: [
         Text(
           L.youArePremiumMember,
-          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 16, color: TextColor.main),
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w700,
+            fontSize: 16,
+            color: TextColor.main,
+          ),
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 32),
@@ -21,7 +26,12 @@ class PremiumUserThanksRow extends StatelessWidget {
         const SizedBox(height: 24),
         Text(
           L.thankYouMessage,
-          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400, fontSize: 14, color: TextColor.main),
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w400,
+            fontSize: 14,
+            color: TextColor.main,
+          ),
           textAlign: TextAlign.center,
         ),
       ],

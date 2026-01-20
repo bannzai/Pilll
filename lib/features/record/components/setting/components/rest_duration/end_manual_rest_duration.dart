@@ -25,11 +25,18 @@ class EndManualRestDuration extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final endRestDuration = ref.watch(endRestDurationProvider);
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final registerReminderLocalNotification = ref.watch(
+      registerReminderLocalNotificationProvider,
+    );
 
     void didEndRestDuration(PillSheetGroup endedRestDurationPillSheetGroup) {
       Navigator.of(context).popUntil((route) => route.isFirst);
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(duration: const Duration(seconds: 2), content: Text(L.pauseTakingPeriodEnded)));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          duration: const Duration(seconds: 2),
+          content: Text(L.pauseTakingPeriodEnded),
+        ),
+      );
     }
 
     return ListTile(

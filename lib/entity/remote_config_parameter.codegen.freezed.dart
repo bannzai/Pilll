@@ -15,7 +15,9 @@ final _privateConstructorUsedError = UnsupportedError(
   'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
 );
 
-RemoteConfigParameter _$RemoteConfigParameterFromJson(Map<String, dynamic> json) {
+RemoteConfigParameter _$RemoteConfigParameterFromJson(
+  Map<String, dynamic> json,
+) {
   return _RemoteConfigParameter.fromJson(json);
 }
 
@@ -47,33 +49,41 @@ mixin _$RemoteConfigParameter {
 
   /// プレミアム紹介画面でApp Storeレビューカードを表示するか
   /// trueの場合、プレミアム機能紹介時にレビュー促進カードも表示
-  bool get premiumIntroductionShowsAppStoreReviewCard => throw _privateConstructorUsedError;
+  bool get premiumIntroductionShowsAppStoreReviewCard =>
+      throw _privateConstructorUsedError;
 
   /// 特別オファー対象ユーザー作成日時の基準オフセット値（分単位）
   /// ユーザー登録からこの分数経過したユーザーが特別オファーの対象となる
-  int get specialOfferingUserCreationDateTimeOffset => throw _privateConstructorUsedError;
+  int get specialOfferingUserCreationDateTimeOffset =>
+      throw _privateConstructorUsedError;
 
   /// 特別オファー開始の基準オフセット値（分単位）
   /// 特別オファーの表示開始タイミングを制御する
-  int get specialOfferingUserCreationDateTimeOffsetSince => throw _privateConstructorUsedError;
+  int get specialOfferingUserCreationDateTimeOffsetSince =>
+      throw _privateConstructorUsedError;
 
   /// 特別オファー終了の基準オフセット値（分単位）
   /// 特別オファーの表示終了タイミングを制御する
-  int get specialOfferingUserCreationDateTimeOffsetUntil => throw _privateConstructorUsedError;
+  int get specialOfferingUserCreationDateTimeOffsetUntil =>
+      throw _privateConstructorUsedError;
 
   /// 特別オファー2で代替テキストを使用するかどうか
   /// trueの場合、特別オファー2画面で異なるテキスト表現を使用する
-  bool get specialOffering2UseAlternativeText => throw _privateConstructorUsedError;
+  bool get specialOffering2UseAlternativeText =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RemoteConfigParameterCopyWith<RemoteConfigParameter> get copyWith => throw _privateConstructorUsedError;
+  $RemoteConfigParameterCopyWith<RemoteConfigParameter> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $RemoteConfigParameterCopyWith<$Res> {
-  factory $RemoteConfigParameterCopyWith(RemoteConfigParameter value, $Res Function(RemoteConfigParameter) then) =
-      _$RemoteConfigParameterCopyWithImpl<$Res, RemoteConfigParameter>;
+  factory $RemoteConfigParameterCopyWith(
+    RemoteConfigParameter value,
+    $Res Function(RemoteConfigParameter) then,
+  ) = _$RemoteConfigParameterCopyWithImpl<$Res, RemoteConfigParameter>;
   @useResult
   $Res call({
     bool isPaywallFirst,
@@ -91,7 +101,11 @@ abstract class $RemoteConfigParameterCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParameter> implements $RemoteConfigParameterCopyWith<$Res> {
+class _$RemoteConfigParameterCopyWithImpl<
+  $Res,
+  $Val extends RemoteConfigParameter
+>
+    implements $RemoteConfigParameterCopyWith<$Res> {
   _$RemoteConfigParameterCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -140,23 +154,28 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
                 ? _value.premiumIntroductionPattern
                 : premiumIntroductionPattern // ignore: cast_nullable_to_non_nullable
                       as String,
-            premiumIntroductionShowsAppStoreReviewCard: null == premiumIntroductionShowsAppStoreReviewCard
+            premiumIntroductionShowsAppStoreReviewCard:
+                null == premiumIntroductionShowsAppStoreReviewCard
                 ? _value.premiumIntroductionShowsAppStoreReviewCard
                 : premiumIntroductionShowsAppStoreReviewCard // ignore: cast_nullable_to_non_nullable
                       as bool,
-            specialOfferingUserCreationDateTimeOffset: null == specialOfferingUserCreationDateTimeOffset
+            specialOfferingUserCreationDateTimeOffset:
+                null == specialOfferingUserCreationDateTimeOffset
                 ? _value.specialOfferingUserCreationDateTimeOffset
                 : specialOfferingUserCreationDateTimeOffset // ignore: cast_nullable_to_non_nullable
                       as int,
-            specialOfferingUserCreationDateTimeOffsetSince: null == specialOfferingUserCreationDateTimeOffsetSince
+            specialOfferingUserCreationDateTimeOffsetSince:
+                null == specialOfferingUserCreationDateTimeOffsetSince
                 ? _value.specialOfferingUserCreationDateTimeOffsetSince
                 : specialOfferingUserCreationDateTimeOffsetSince // ignore: cast_nullable_to_non_nullable
                       as int,
-            specialOfferingUserCreationDateTimeOffsetUntil: null == specialOfferingUserCreationDateTimeOffsetUntil
+            specialOfferingUserCreationDateTimeOffsetUntil:
+                null == specialOfferingUserCreationDateTimeOffsetUntil
                 ? _value.specialOfferingUserCreationDateTimeOffsetUntil
                 : specialOfferingUserCreationDateTimeOffsetUntil // ignore: cast_nullable_to_non_nullable
                       as int,
-            specialOffering2UseAlternativeText: null == specialOffering2UseAlternativeText
+            specialOffering2UseAlternativeText:
+                null == specialOffering2UseAlternativeText
                 ? _value.specialOffering2UseAlternativeText
                 : specialOffering2UseAlternativeText // ignore: cast_nullable_to_non_nullable
                       as bool,
@@ -167,9 +186,12 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
 }
 
 /// @nodoc
-abstract class _$$RemoteConfigParameterImplCopyWith<$Res> implements $RemoteConfigParameterCopyWith<$Res> {
-  factory _$$RemoteConfigParameterImplCopyWith(_$RemoteConfigParameterImpl value, $Res Function(_$RemoteConfigParameterImpl) then) =
-      __$$RemoteConfigParameterImplCopyWithImpl<$Res>;
+abstract class _$$RemoteConfigParameterImplCopyWith<$Res>
+    implements $RemoteConfigParameterCopyWith<$Res> {
+  factory _$$RemoteConfigParameterImplCopyWith(
+    _$RemoteConfigParameterImpl value,
+    $Res Function(_$RemoteConfigParameterImpl) then,
+  ) = __$$RemoteConfigParameterImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({
@@ -188,10 +210,14 @@ abstract class _$$RemoteConfigParameterImplCopyWith<$Res> implements $RemoteConf
 }
 
 /// @nodoc
-class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigParameterCopyWithImpl<$Res, _$RemoteConfigParameterImpl>
+class __$$RemoteConfigParameterImplCopyWithImpl<$Res>
+    extends
+        _$RemoteConfigParameterCopyWithImpl<$Res, _$RemoteConfigParameterImpl>
     implements _$$RemoteConfigParameterImplCopyWith<$Res> {
-  __$$RemoteConfigParameterImplCopyWithImpl(_$RemoteConfigParameterImpl _value, $Res Function(_$RemoteConfigParameterImpl) _then)
-    : super(_value, _then);
+  __$$RemoteConfigParameterImplCopyWithImpl(
+    _$RemoteConfigParameterImpl _value,
+    $Res Function(_$RemoteConfigParameterImpl) _then,
+  ) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -234,23 +260,28 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigPara
             ? _value.premiumIntroductionPattern
             : premiumIntroductionPattern // ignore: cast_nullable_to_non_nullable
                   as String,
-        premiumIntroductionShowsAppStoreReviewCard: null == premiumIntroductionShowsAppStoreReviewCard
+        premiumIntroductionShowsAppStoreReviewCard:
+            null == premiumIntroductionShowsAppStoreReviewCard
             ? _value.premiumIntroductionShowsAppStoreReviewCard
             : premiumIntroductionShowsAppStoreReviewCard // ignore: cast_nullable_to_non_nullable
                   as bool,
-        specialOfferingUserCreationDateTimeOffset: null == specialOfferingUserCreationDateTimeOffset
+        specialOfferingUserCreationDateTimeOffset:
+            null == specialOfferingUserCreationDateTimeOffset
             ? _value.specialOfferingUserCreationDateTimeOffset
             : specialOfferingUserCreationDateTimeOffset // ignore: cast_nullable_to_non_nullable
                   as int,
-        specialOfferingUserCreationDateTimeOffsetSince: null == specialOfferingUserCreationDateTimeOffsetSince
+        specialOfferingUserCreationDateTimeOffsetSince:
+            null == specialOfferingUserCreationDateTimeOffsetSince
             ? _value.specialOfferingUserCreationDateTimeOffsetSince
             : specialOfferingUserCreationDateTimeOffsetSince // ignore: cast_nullable_to_non_nullable
                   as int,
-        specialOfferingUserCreationDateTimeOffsetUntil: null == specialOfferingUserCreationDateTimeOffsetUntil
+        specialOfferingUserCreationDateTimeOffsetUntil:
+            null == specialOfferingUserCreationDateTimeOffsetUntil
             ? _value.specialOfferingUserCreationDateTimeOffsetUntil
             : specialOfferingUserCreationDateTimeOffsetUntil // ignore: cast_nullable_to_non_nullable
                   as int,
-        specialOffering2UseAlternativeText: null == specialOffering2UseAlternativeText
+        specialOffering2UseAlternativeText:
+            null == specialOffering2UseAlternativeText
             ? _value.specialOffering2UseAlternativeText
             : specialOffering2UseAlternativeText // ignore: cast_nullable_to_non_nullable
                   as bool,
@@ -264,19 +295,34 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigPara
 class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
   _$RemoteConfigParameterImpl({
     this.isPaywallFirst = RemoteConfigParameterDefaultValues.isPaywallFirst,
-    this.skipInitialSetting = RemoteConfigParameterDefaultValues.skipInitialSetting,
-    this.trialDeadlineDateOffsetDay = RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,
-    this.discountEntitlementOffsetDay = RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay,
-    this.discountCountdownBoundaryHour = RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
-    this.premiumIntroductionPattern = RemoteConfigParameterDefaultValues.premiumIntroductionPattern,
-    this.premiumIntroductionShowsAppStoreReviewCard = RemoteConfigParameterDefaultValues.premiumIntroductionShowsAppStoreReviewCard,
-    this.specialOfferingUserCreationDateTimeOffset = RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffset,
-    this.specialOfferingUserCreationDateTimeOffsetSince = RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetSince,
-    this.specialOfferingUserCreationDateTimeOffsetUntil = RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil,
-    this.specialOffering2UseAlternativeText = RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
+    this.skipInitialSetting =
+        RemoteConfigParameterDefaultValues.skipInitialSetting,
+    this.trialDeadlineDateOffsetDay =
+        RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,
+    this.discountEntitlementOffsetDay =
+        RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay,
+    this.discountCountdownBoundaryHour =
+        RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
+    this.premiumIntroductionPattern =
+        RemoteConfigParameterDefaultValues.premiumIntroductionPattern,
+    this.premiumIntroductionShowsAppStoreReviewCard =
+        RemoteConfigParameterDefaultValues
+            .premiumIntroductionShowsAppStoreReviewCard,
+    this.specialOfferingUserCreationDateTimeOffset =
+        RemoteConfigParameterDefaultValues
+            .specialOfferingUserCreationDateTimeOffset,
+    this.specialOfferingUserCreationDateTimeOffsetSince =
+        RemoteConfigParameterDefaultValues
+            .specialOfferingUserCreationDateTimeOffsetSince,
+    this.specialOfferingUserCreationDateTimeOffsetUntil =
+        RemoteConfigParameterDefaultValues
+            .specialOfferingUserCreationDateTimeOffsetUntil,
+    this.specialOffering2UseAlternativeText =
+        RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
   }) : super._();
 
-  factory _$RemoteConfigParameterImpl.fromJson(Map<String, dynamic> json) => _$$RemoteConfigParameterImplFromJson(json);
+  factory _$RemoteConfigParameterImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RemoteConfigParameterImplFromJson(json);
 
   /// ペイウォール画面を最初に表示するかどうか
   /// trueの場合、アプリ起動時にプレミアム機能の課金画面を先に表示する
@@ -354,26 +400,64 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RemoteConfigParameterImpl &&
-            (identical(other.isPaywallFirst, isPaywallFirst) || other.isPaywallFirst == isPaywallFirst) &&
-            (identical(other.skipInitialSetting, skipInitialSetting) || other.skipInitialSetting == skipInitialSetting) &&
-            (identical(other.trialDeadlineDateOffsetDay, trialDeadlineDateOffsetDay) ||
-                other.trialDeadlineDateOffsetDay == trialDeadlineDateOffsetDay) &&
-            (identical(other.discountEntitlementOffsetDay, discountEntitlementOffsetDay) ||
-                other.discountEntitlementOffsetDay == discountEntitlementOffsetDay) &&
-            (identical(other.discountCountdownBoundaryHour, discountCountdownBoundaryHour) ||
-                other.discountCountdownBoundaryHour == discountCountdownBoundaryHour) &&
-            (identical(other.premiumIntroductionPattern, premiumIntroductionPattern) ||
-                other.premiumIntroductionPattern == premiumIntroductionPattern) &&
-            (identical(other.premiumIntroductionShowsAppStoreReviewCard, premiumIntroductionShowsAppStoreReviewCard) ||
-                other.premiumIntroductionShowsAppStoreReviewCard == premiumIntroductionShowsAppStoreReviewCard) &&
-            (identical(other.specialOfferingUserCreationDateTimeOffset, specialOfferingUserCreationDateTimeOffset) ||
-                other.specialOfferingUserCreationDateTimeOffset == specialOfferingUserCreationDateTimeOffset) &&
-            (identical(other.specialOfferingUserCreationDateTimeOffsetSince, specialOfferingUserCreationDateTimeOffsetSince) ||
-                other.specialOfferingUserCreationDateTimeOffsetSince == specialOfferingUserCreationDateTimeOffsetSince) &&
-            (identical(other.specialOfferingUserCreationDateTimeOffsetUntil, specialOfferingUserCreationDateTimeOffsetUntil) ||
-                other.specialOfferingUserCreationDateTimeOffsetUntil == specialOfferingUserCreationDateTimeOffsetUntil) &&
-            (identical(other.specialOffering2UseAlternativeText, specialOffering2UseAlternativeText) ||
-                other.specialOffering2UseAlternativeText == specialOffering2UseAlternativeText));
+            (identical(other.isPaywallFirst, isPaywallFirst) ||
+                other.isPaywallFirst == isPaywallFirst) &&
+            (identical(other.skipInitialSetting, skipInitialSetting) ||
+                other.skipInitialSetting == skipInitialSetting) &&
+            (identical(
+                  other.trialDeadlineDateOffsetDay,
+                  trialDeadlineDateOffsetDay,
+                ) ||
+                other.trialDeadlineDateOffsetDay ==
+                    trialDeadlineDateOffsetDay) &&
+            (identical(
+                  other.discountEntitlementOffsetDay,
+                  discountEntitlementOffsetDay,
+                ) ||
+                other.discountEntitlementOffsetDay ==
+                    discountEntitlementOffsetDay) &&
+            (identical(
+                  other.discountCountdownBoundaryHour,
+                  discountCountdownBoundaryHour,
+                ) ||
+                other.discountCountdownBoundaryHour ==
+                    discountCountdownBoundaryHour) &&
+            (identical(
+                  other.premiumIntroductionPattern,
+                  premiumIntroductionPattern,
+                ) ||
+                other.premiumIntroductionPattern ==
+                    premiumIntroductionPattern) &&
+            (identical(
+                  other.premiumIntroductionShowsAppStoreReviewCard,
+                  premiumIntroductionShowsAppStoreReviewCard,
+                ) ||
+                other.premiumIntroductionShowsAppStoreReviewCard ==
+                    premiumIntroductionShowsAppStoreReviewCard) &&
+            (identical(
+                  other.specialOfferingUserCreationDateTimeOffset,
+                  specialOfferingUserCreationDateTimeOffset,
+                ) ||
+                other.specialOfferingUserCreationDateTimeOffset ==
+                    specialOfferingUserCreationDateTimeOffset) &&
+            (identical(
+                  other.specialOfferingUserCreationDateTimeOffsetSince,
+                  specialOfferingUserCreationDateTimeOffsetSince,
+                ) ||
+                other.specialOfferingUserCreationDateTimeOffsetSince ==
+                    specialOfferingUserCreationDateTimeOffsetSince) &&
+            (identical(
+                  other.specialOfferingUserCreationDateTimeOffsetUntil,
+                  specialOfferingUserCreationDateTimeOffsetUntil,
+                ) ||
+                other.specialOfferingUserCreationDateTimeOffsetUntil ==
+                    specialOfferingUserCreationDateTimeOffsetUntil) &&
+            (identical(
+                  other.specialOffering2UseAlternativeText,
+                  specialOffering2UseAlternativeText,
+                ) ||
+                other.specialOffering2UseAlternativeText ==
+                    specialOffering2UseAlternativeText));
   }
 
   @JsonKey(ignore: true)
@@ -396,8 +480,12 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$RemoteConfigParameterImplCopyWith<_$RemoteConfigParameterImpl> get copyWith =>
-      __$$RemoteConfigParameterImplCopyWithImpl<_$RemoteConfigParameterImpl>(this, _$identity);
+  _$$RemoteConfigParameterImplCopyWith<_$RemoteConfigParameterImpl>
+  get copyWith =>
+      __$$RemoteConfigParameterImplCopyWithImpl<_$RemoteConfigParameterImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
@@ -421,7 +509,8 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
   }) = _$RemoteConfigParameterImpl;
   _RemoteConfigParameter._() : super._();
 
-  factory _RemoteConfigParameter.fromJson(Map<String, dynamic> json) = _$RemoteConfigParameterImpl.fromJson;
+  factory _RemoteConfigParameter.fromJson(Map<String, dynamic> json) =
+      _$RemoteConfigParameterImpl.fromJson;
 
   @override
   /// ペイウォール画面を最初に表示するかどうか
@@ -469,5 +558,6 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
   bool get specialOffering2UseAlternativeText;
   @override
   @JsonKey(ignore: true)
-  _$$RemoteConfigParameterImplCopyWith<_$RemoteConfigParameterImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$RemoteConfigParameterImplCopyWith<_$RemoteConfigParameterImpl>
+  get copyWith => throw _privateConstructorUsedError;
 }

@@ -31,7 +31,10 @@ class CancelButton extends HookConsumerWidget {
       onPressed: () async {
         analytics.logEvent(
           name: 'cancel_taken_button_pressed',
-          parameters: {'last_taken_pill_number': activePillSheet.lastTakenOrZeroPillNumber, 'today_pill_number': activePillSheet.todayPillNumber},
+          parameters: {
+            'last_taken_pill_number': activePillSheet.lastTakenOrZeroPillNumber,
+            'today_pill_number': activePillSheet.todayPillNumber,
+          },
         );
 
         final updatedPillSheetGroup = await _cancelTaken(revertTakePill);
@@ -54,7 +57,8 @@ class CancelButton extends HookConsumerWidget {
     return await revertTakePill(
       pillSheetGroup: pillSheetGroup,
       pageIndex: activePillSheet.groupIndex,
-      targetRevertPillNumberIntoPillSheet: activePillSheet.lastTakenOrZeroPillNumber,
+      targetRevertPillNumberIntoPillSheet:
+          activePillSheet.lastTakenOrZeroPillNumber,
     );
   }
 }

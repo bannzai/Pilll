@@ -28,7 +28,11 @@ class Schedule with _$Schedule {
 
     /// 予定日時。ユーザーがカレンダーUIで選択した日付
     /// Firestoreのタイムスタンプ形式で保存される
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required DateTime date,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+    required DateTime date,
 
     /// ローカル通知の設定。nullの場合は通知なし
     /// 予定前にリマインドを送るための設定
@@ -36,12 +40,16 @@ class Schedule with _$Schedule {
 
     /// 予定作成日時。レコード作成時の記録用
     /// データの管理やソート処理で使用される
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
     required DateTime createdDateTime,
   }) = _Schedule;
   const Schedule._();
 
-  factory Schedule.fromJson(Map<String, dynamic> json) => _$ScheduleFromJson(json);
+  factory Schedule.fromJson(Map<String, dynamic> json) =>
+      _$ScheduleFromJson(json);
 }
 
 /// スケジュールに関連付けられるローカル通知の設定
@@ -56,10 +64,14 @@ class LocalNotification with _$LocalNotification {
 
     /// 通知を送信する日時
     /// ユーザーが設定したリマインド時刻に基づいて計算される
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
     required DateTime remindDateTime,
   }) = _LocalNotification;
   const LocalNotification._();
 
-  factory LocalNotification.fromJson(Map<String, dynamic> json) => _$LocalNotificationFromJson(json);
+  factory LocalNotification.fromJson(Map<String, dynamic> json) =>
+      _$LocalNotificationFromJson(json);
 }

@@ -29,7 +29,12 @@ class MenstruationListPage extends HookConsumerWidget {
         centerTitle: false,
         title: Text(
           L.menstruationHistory,
-          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main),
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w500,
+            fontSize: 20,
+            color: TextColor.main,
+          ),
         ),
         backgroundColor: AppColors.white,
         elevation: 0,
@@ -43,7 +48,9 @@ class MenstruationListPage extends HookConsumerWidget {
               for (var i = 0; i < menstruations.length; i++) ...[
                 MenstruationListRow(
                   menstruation: menstruations[i],
-                  previousMenstruation: menstruations.length - 1 <= i ? null : menstruations[i + 1],
+                  previousMenstruation: menstruations.length - 1 <= i
+                      ? null
+                      : menstruations[i + 1],
                 ),
                 const SizedBox(height: 8),
               ],

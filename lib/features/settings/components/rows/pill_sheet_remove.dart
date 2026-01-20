@@ -18,16 +18,26 @@ class PillSheetRemoveRow extends HookConsumerWidget {
   final PillSheetGroup latestPillSheetGroup;
   final PillSheet activePillSheet;
 
-  const PillSheetRemoveRow({super.key, required this.latestPillSheetGroup, required this.activePillSheet});
+  const PillSheetRemoveRow({
+    super.key,
+    required this.latestPillSheetGroup,
+    required this.activePillSheet,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final deletePillSheetGroup = ref.watch(deletePillSheetGroupProvider);
-    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
+    final cancelReminderLocalNotification = ref.watch(
+      cancelReminderLocalNotificationProvider,
+    );
     return ListTile(
       title: Text(
         L.discardAllPillSheets,
-        style: const TextStyle(fontFamily: FontFamily.roboto, fontWeight: FontWeight.w300, fontSize: 16),
+        style: const TextStyle(
+          fontFamily: FontFamily.roboto,
+          fontWeight: FontWeight.w300,
+          fontSize: 16,
+        ),
       ),
       onTap: () {
         analytics.logEvent(name: 'did_select_remove_pill_sheet');
@@ -43,15 +53,30 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                     // TODO: [Localizations]
                     TextSpan(
                       text: L.currentlyDisplayed,
-                      style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
+                      style: const TextStyle(
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w300,
+                        fontSize: 14,
+                        color: TextColor.main,
+                      ),
                     ),
                     TextSpan(
                       text: L.allPillSheets,
-                      style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 14, color: TextColor.main),
+                      style: const TextStyle(
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 14,
+                        color: TextColor.main,
+                      ),
                     ),
                     TextSpan(
                       text: L.willBeDiscarded,
-                      style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
+                      style: const TextStyle(
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w300,
+                        fontSize: 14,
+                        color: TextColor.main,
+                      ),
                     ),
                   ],
                 ),
@@ -69,12 +94,20 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                     try {
                       // NOTE: リモートのDBに書き込む時間がかかるので事前にバッジを0にする。楽観的UI更新
                       FlutterAppBadger.removeBadge();
-                      await deletePillSheetGroup(latestPillSheetGroup: latestPillSheetGroup, activePillSheet: activePillSheet);
+                      await deletePillSheetGroup(
+                        latestPillSheetGroup: latestPillSheetGroup,
+                        activePillSheet: activePillSheet,
+                      );
                       await cancelReminderLocalNotification();
                       navigatorKey.currentState?.pop();
                       ScaffoldMessenger.of(
                         navigatorKey.currentContext!,
-                      ).showSnackBar(SnackBar(duration: const Duration(seconds: 2), content: Text(L.pillSheetDiscarded)));
+                      ).showSnackBar(
+                        SnackBar(
+                          duration: const Duration(seconds: 2),
+                          content: Text(L.pillSheetDiscarded),
+                        ),
+                      );
                     } catch (error) {
                       showErrorAlert(navigatorKey.currentContext, error);
                     }

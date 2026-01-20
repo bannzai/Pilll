@@ -55,7 +55,8 @@ class PillSheetTypeInfo with _$PillSheetTypeInfo {
     required int dosingPeriod,
   }) = _PillSheetTypeInfo;
 
-  factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) => _$PillSheetTypeInfoFromJson(json);
+  factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
+      _$PillSheetTypeInfoFromJson(json);
 }
 
 /// ピル服用の休薬期間を表現するクラス
@@ -72,24 +73,35 @@ class RestDuration with _$RestDuration {
 
     /// 休薬開始日
     /// ユーザーがピル服用を停止した日付
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
     required DateTime beginDate,
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
     /// 休薬終了日（継続中の場合はnull）
     /// 服用を再開した日付、まだ再開していない場合はnull
     DateTime? endDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
     /// 休薬期間レコードの作成日時
     /// このデータが作成された日時（ユーザーが休薬を開始した日とは異なる場合がある）
     required DateTime createdDate,
   }) = _RestDuration;
   const RestDuration._();
 
-  factory RestDuration.fromJson(Map<String, dynamic> json) => _$RestDurationFromJson(json);
+  factory RestDuration.fromJson(Map<String, dynamic> json) =>
+      _$RestDurationFromJson(json);
 
   /// 休薬期間のDateTimeRange表現
   /// endDateがnullの場合（継続中）はnullを返す
-  DateTimeRange? get dateTimeRange => endDate == null ? null : DateTimeRange(start: beginDate, end: endDate!);
+  DateTimeRange? get dateTimeRange =>
+      endDate == null ? null : DateTimeRange(start: beginDate, end: endDate!);
 }
 
 /// ピルシートのメインエンティティクラス
@@ -120,19 +132,32 @@ sealed class PillSheet with _$PillSheet {
 
     /// ピルシート開始日
     /// このシートでピル服用を開始した日付
-    @JsonKey(name: 'beginingDate', fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      name: 'beginingDate',
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
     required DateTime beginDate,
 
     // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
     /// 最後にピルを服用した日付
     /// まだ一度も服用していない場合はnull
     required DateTime? lastTakenDate,
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
     /// ピルシートの作成日時
     /// このデータがFirestoreに作成された日時
     required DateTime? createdAt,
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
     /// ピルシートの削除日時
     /// 削除されていない場合はnull
     DateTime? deletedAt,
@@ -164,13 +189,22 @@ sealed class PillSheet with _$PillSheet {
 
     /// ピルシート開始日
     /// このシートでピル服用を開始した日付
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
     required DateTime beginDate,
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
     /// ピルシートの作成日時
     /// このデータがFirestoreに作成された日時
     required DateTime? createdAt,
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
     /// ピルシートの削除日時
     /// 削除されていない場合はnull
     DateTime? deletedAt,
@@ -199,7 +233,12 @@ sealed class PillSheet with _$PillSheet {
   /// テスト用のピルシート作成ファクトリメソッド
   /// pillTakenCount > 1 の場合は v2、それ以外は v1 を返す
   @visibleForTesting
-  factory PillSheet.create(PillSheetType type, {required DateTime beginDate, required DateTime? lastTakenDate, required int pillTakenCount}) {
+  factory PillSheet.create(
+    PillSheetType type, {
+    required DateTime beginDate,
+    required DateTime? lastTakenDate,
+    required int pillTakenCount,
+  }) {
     if (pillTakenCount > 1) {
       return PillSheet.v2(
         id: firestoreIDGenerator(),
@@ -208,10 +247,21 @@ sealed class PillSheet with _$PillSheet {
         createdAt: now(),
         groupIndex: 0,
         restDurations: [],
-        pills: Pill.generateAndFillTo(pillSheetType: type, fromDate: beginDate, lastTakenDate: lastTakenDate, pillTakenCount: pillTakenCount),
+        pills: Pill.generateAndFillTo(
+          pillSheetType: type,
+          fromDate: beginDate,
+          lastTakenDate: lastTakenDate,
+          pillTakenCount: pillTakenCount,
+        ),
       );
     }
-    return PillSheet.v1(id: firestoreIDGenerator(), typeInfo: type.typeInfo, beginDate: beginDate, lastTakenDate: lastTakenDate, createdAt: now());
+    return PillSheet.v1(
+      id: firestoreIDGenerator(),
+      typeInfo: type.typeInfo,
+      beginDate: beginDate,
+      lastTakenDate: lastTakenDate,
+      createdAt: now(),
+    );
   }
 
   /// カスタム fromJson で version フィールドを見て分岐
@@ -233,7 +283,8 @@ sealed class PillSheet with _$PillSheet {
 
   /// ピルシートの種類オブジェクト
   /// typeInfoから変換されたPillSheetType列挙値
-  PillSheetType get pillSheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
+  PillSheetType get pillSheetType =>
+      PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
   /// 最後にピルを服用した日付
@@ -337,7 +388,9 @@ sealed class PillSheet with _$PillSheet {
 
   /// ピルシートの服用が開始されているかどうか
   /// 開始日が現在時刻より前の場合にtrueを返す
-  bool get isBegan => beginDate.date().toUtc().millisecondsSinceEpoch < now().toUtc().millisecondsSinceEpoch;
+  bool get isBegan =>
+      beginDate.date().toUtc().millisecondsSinceEpoch <
+      now().toUtc().millisecondsSinceEpoch;
 
   /// 現在が休薬期間中かどうか
   /// 今日のピル番号が服用期間を超えている場合にtrueを返す
@@ -345,7 +398,8 @@ sealed class PillSheet with _$PillSheet {
 
   /// ピルシートが休薬期間または偽薬期間を持つかどうか
   /// 28日型シート（偽薬7日）などの場合にtrueを返す
-  bool get pillSheetHasRestOrFakeDuration => pillSheetType.hasRestOrFakeDuration;
+  bool get pillSheetHasRestOrFakeDuration =>
+      pillSheetType.hasRestOrFakeDuration;
 
   /// ピルシートが現在アクティブ（有効）かどうか
   /// 現在日付がピルシートの有効期間内の場合にtrueを返す
@@ -361,7 +415,12 @@ sealed class PillSheet with _$PillSheet {
   /// 開始日、総ピル数、休薬期間を考慮して計算される完了予定日
   DateTime get estimatedEndTakenDate => beginDate
       .addDays(pillSheetType.totalCount - 1)
-      .addDays(summarizedRestDuration(restDurations: restDurations, upperDate: today()))
+      .addDays(
+        summarizedRestDuration(
+          restDurations: restDurations,
+          upperDate: today(),
+        ),
+      )
       .date()
       .add(const Duration(days: 1))
       .subtract(const Duration(seconds: 1));
@@ -374,7 +433,8 @@ sealed class PillSheet with _$PillSheet {
     if (restDurations.isEmpty) {
       return null;
     } else {
-      if (restDurations.last.endDate == null && !restDurations.last.beginDate.date().isAfter(today())) {
+      if (restDurations.last.endDate == null &&
+          !restDurations.last.beginDate.date().isAfter(today())) {
         return restDurations.last;
       } else {
         return null;
@@ -396,7 +456,15 @@ sealed class PillSheet with _$PillSheet {
   /// 開始日からの経過日数と休薬期間を考慮してピル番号を算出
   /// 最小値は1を保証
   int pillNumberFor({required DateTime targetDate}) {
-    return max(daysBetween(beginDate.date(), targetDate) - summarizedRestDuration(restDurations: restDurations, upperDate: targetDate) + 1, 1);
+    return max(
+      daysBetween(beginDate.date(), targetDate) -
+          summarizedRestDuration(
+            restDurations: restDurations,
+            upperDate: targetDate,
+          ) +
+          1,
+      1,
+    );
   }
 
   /// ピルシート内の各ピルの服用予定日リスト
@@ -414,10 +482,12 @@ sealed class PillSheet with _$PillSheet {
       var date = beginDate.addDays(index + offset).date();
 
       for (final restDuration in restDurations) {
-        if (restDuration.beginDate.isBefore(date) || isSameDay(restDuration.beginDate, date)) {
+        if (restDuration.beginDate.isBefore(date) ||
+            isSameDay(restDuration.beginDate, date)) {
           // estimatedEventCausingDateに値がある場合は、服用履歴のスナップショットの日付を返したい。 estimatedEventCausingDate もしくは today をこのメソッドでの計算式の上限の日付とする
           final upperDate = estimatedEventCausingDate ?? today().date();
-          final restDurationEndDateOrUpperDate = restDuration.endDate ?? upperDate;
+          final restDurationEndDateOrUpperDate =
+              restDuration.endDate ?? upperDate;
           if (restDurationEndDateOrUpperDate.isAfter(date)) {
             final diff = daysBetween(date, restDurationEndDateOrUpperDate);
             date = date.addDays(diff);
@@ -451,7 +521,9 @@ extension PillSheetV2Extension on PillSheetV2 {
   /// 最後に服用完了したピルの番号（0または1以上）
   /// 各ピルのtakenCount回すべて服用したピルの番号を返す
   int get lastCompletedPillNumber {
-    final lastCompletedPill = pills.lastWhereOrNull((element) => element.isCompleted);
+    final lastCompletedPill = pills.lastWhereOrNull(
+      (element) => element.isCompleted,
+    );
     if (lastCompletedPill == null) {
       return 0;
     }
@@ -492,19 +564,26 @@ extension PillSheetV2Extension on PillSheetV2 {
     if (newPills.isEmpty) {
       return pills;
     }
-    assert(newPills.first.index >= 0 && newPills.last.index < pills.length, 'newPills indices are out of bounds');
+    assert(
+      newPills.first.index >= 0 && newPills.last.index < pills.length,
+      'newPills indices are out of bounds',
+    );
     // indexがはみ出た場合は早期リターン
     if (newPills.first.index < 0 || newPills.last.index >= pills.length) {
       return pills;
     }
-    return [...pills]..replaceRange(newPills.first.index, newPills.last.index + 1, newPills);
+    return [...pills]
+      ..replaceRange(newPills.first.index, newPills.last.index + 1, newPills);
   }
 }
 
 /// 指定日までの総休薬日数を計算
 /// lastTakenDateやtodayなどの基準日までの累積休薬期間を集計
 /// ピル番号計算時の日数調整に使用される
-int summarizedRestDuration({required List<RestDuration> restDurations, required DateTime upperDate}) {
+int summarizedRestDuration({
+  required List<RestDuration> restDurations,
+  required DateTime upperDate,
+}) {
   if (restDurations.isEmpty) {
     return 0;
   }

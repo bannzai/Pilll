@@ -9,7 +9,12 @@ class OKDialog extends StatelessWidget {
   final String message;
   final void Function()? ok;
 
-  const OKDialog({super.key, required this.title, required this.message, required this.ok});
+  const OKDialog({
+    super.key,
+    required this.title,
+    required this.message,
+    required this.ok,
+  });
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
@@ -21,13 +26,23 @@ class OKDialog extends StatelessWidget {
           if (title.isNotEmpty) ...[
             Text(
               title,
-              style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 16, color: TextColor.main),
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w600,
+                fontSize: 16,
+                color: TextColor.main,
+              ),
             ),
             const SizedBox(height: 15),
           ],
           Text(
             message,
-            style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w300,
+              fontSize: 14,
+              color: TextColor.main,
+            ),
           ),
         ],
       ),
@@ -48,7 +63,12 @@ class OKDialog extends StatelessWidget {
   }
 }
 
-Future<void> showOKDialog(BuildContext context, {required String title, required String message, void Function()? ok}) async {
+Future<void> showOKDialog(
+  BuildContext context, {
+  required String title,
+  required String message,
+  void Function()? ok,
+}) async {
   return showDialog(
     context: context,
     builder: (context) => OKDialog(title: title, message: message, ok: ok),

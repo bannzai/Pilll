@@ -9,7 +9,11 @@ class QuickRecordRow extends StatelessWidget {
   final bool isTrial;
   final DateTime? trialDeadlineDate;
 
-  const QuickRecordRow({super.key, required this.isTrial, required this.trialDeadlineDate});
+  const QuickRecordRow({
+    super.key,
+    required this.isTrial,
+    required this.trialDeadlineDate,
+  });
   @override
   Widget build(BuildContext context) {
     return ListTile(
@@ -18,7 +22,11 @@ class QuickRecordRow extends StatelessWidget {
         children: [
           Text(
             L.quickRecord,
-            style: const TextStyle(fontFamily: FontFamily.roboto, fontWeight: FontWeight.w300, fontSize: 16),
+            style: const TextStyle(
+              fontFamily: FontFamily.roboto,
+              fontWeight: FontWeight.w300,
+              fontSize: 16,
+            ),
           ),
           const SizedBox(width: 7),
           const PremiumBadge(),

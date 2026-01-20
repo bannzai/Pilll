@@ -10,7 +10,10 @@ import 'package:pilll/utils/datetime/day.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
-  const PremiumTrialLimitAnnouncementBar({super.key, required this.premiumTrialLimit});
+  const PremiumTrialLimitAnnouncementBar({
+    super.key,
+    required this.premiumTrialLimit,
+  });
 
   final String premiumTrialLimit;
 
@@ -19,7 +22,11 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
     return GestureDetector(
       onTap: () async {
         analytics.logEvent(name: 'pressed_trial_limited_announcement_bar');
-        await launchUrl(Uri.parse('https://pilll.notion.site/3abd690f501549c48f813fd310b5f242'));
+        await launchUrl(
+          Uri.parse(
+            'https://pilll.notion.site/3abd690f501549c48f813fd310b5f242',
+          ),
+        );
       },
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
@@ -31,11 +38,24 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
             const Spacer(),
             Text(
               premiumTrialLimit,
-              style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 14, color: TextColor.white),
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w600,
+                fontSize: 14,
+                color: TextColor.white,
+              ),
               textAlign: TextAlign.center,
             ),
             const Spacer(),
-            SvgPicture.asset('images/arrow_right.svg', colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn), width: 16, height: 16),
+            SvgPicture.asset(
+              'images/arrow_right.svg',
+              colorFilter: const ColorFilter.mode(
+                Colors.white,
+                BlendMode.srcIn,
+              ),
+              width: 16,
+              height: 16,
+            ),
             const SizedBox(width: 8),
           ],
         ),

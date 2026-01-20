@@ -44,7 +44,10 @@ class UserSetup extends HookConsumerWidget {
           }
         } catch (e, st) {
           errorLogger.recordError(e, st);
-          error.value = LaunchException(L.launchError(ErrorMessages.connection), e);
+          error.value = LaunchException(
+            L.launchError(ErrorMessages.connection),
+            e,
+          );
         }
         // **** END: Do not break the sequence. ****
       }

@@ -23,13 +23,21 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStateNotifierProvider.notifier);
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
-    final didEndInitialSettingNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting).notifier);
+    final registerReminderLocalNotification = ref.watch(
+      registerReminderLocalNotificationProvider,
+    );
+    final didEndInitialSettingNotifier = ref.watch(
+      boolSharedPreferencesProvider(BoolKey.didEndInitialSetting).notifier,
+    );
     final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
 
     return Scaffold(
       backgroundColor: AppColors.background,
-      appBar: AppBar(leading: Container(), backgroundColor: AppColors.background, elevation: 0),
+      appBar: AppBar(
+        leading: Container(),
+        backgroundColor: AppColors.background,
+        elevation: 0,
+      ),
       body: SafeArea(
         child: Column(
           children: [
@@ -37,7 +45,10 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
             Column(
               children: [
                 Container(
-                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 44.5),
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 16,
+                    horizontal: 44.5,
+                  ),
                   color: AppColors.mat,
                   child: Column(
                     children: [
@@ -57,12 +68,20 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                         ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 24.5, right: 24.5, top: 24),
+                        padding: const EdgeInsets.only(
+                          left: 24.5,
+                          right: 24.5,
+                          top: 24,
+                        ),
                         child: Stack(
                           clipBehavior: Clip.none,
                           alignment: AlignmentDirectional.topEnd,
                           children: [
-                            Image.asset(Platform.isIOS ? 'images/ios-quick-record.gif' : 'images/android-quick-record.gif'),
+                            Image.asset(
+                              Platform.isIOS
+                                  ? 'images/ios-quick-record.gif'
+                                  : 'images/android-quick-record.gif',
+                            ),
                             Positioned(
                               right: -27,
                               top: -27,
@@ -89,7 +108,12 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                       const SizedBox(height: 12),
                       Text(
                         '${L.pressAndHoldNotificationToRecordPillTaking}\n${L.letsTryIt}',
-                        style: const TextStyle(color: TextColor.main, fontSize: 14, fontFamily: FontFamily.japanese, fontWeight: FontWeight.normal),
+                        style: const TextStyle(
+                          color: TextColor.main,
+                          fontSize: 14,
+                          fontFamily: FontFamily.japanese,
+                          fontWeight: FontWeight.normal,
+                        ),
                         textAlign: TextAlign.center,
                       ),
                     ],
@@ -97,8 +121,15 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                 ),
                 const SizedBox(height: 16),
                 Text(
-                  L.trialDeadlineDateOffsetDay(remoteConfigParameter.trialDeadlineDateOffsetDay),
-                  style: const TextStyle(color: TextColor.main, fontWeight: FontWeight.w700, fontFamily: FontFamily.japanese, fontSize: 12),
+                  L.trialDeadlineDateOffsetDay(
+                    remoteConfigParameter.trialDeadlineDateOffsetDay,
+                  ),
+                  style: const TextStyle(
+                    color: TextColor.main,
+                    fontWeight: FontWeight.w700,
+                    fontFamily: FontFamily.japanese,
+                    fontSize: 12,
+                  ),
                   textAlign: TextAlign.center,
                 ),
               ],
@@ -114,9 +145,13 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                     final navigator = Navigator.of(context);
                     await store.register();
                     await registerReminderLocalNotification();
-                    await AppRouter.endInitialSetting(navigator, didEndInitialSettingNotifier);
+                    await AppRouter.endInitialSetting(
+                      navigator,
+                      didEndInitialSettingNotifier,
+                    );
                   } catch (error) {
-                    if (context.mounted) showErrorAlert(context, error.toString());
+                    if (context.mounted)
+                      showErrorAlert(context, error.toString());
                   }
                 },
               ),
@@ -129,10 +164,13 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
   }
 }
 
-extension IntiialSettingPremiumTrialStartPageRoute on IntiialSettingPremiumTrialStartPage {
+extension IntiialSettingPremiumTrialStartPageRoute
+    on IntiialSettingPremiumTrialStartPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: 'IntiialSettingPremiumTrialStartPage'),
+      settings: const RouteSettings(
+        name: 'IntiialSettingPremiumTrialStartPage',
+      ),
       builder: (_) => const IntiialSettingPremiumTrialStartPage(),
     );
   }

@@ -11,7 +11,10 @@ import 'package:pilll/features/localizations/l.dart';
 
 abstract class SettingMenstruationDynamicDescriptionConstants {
   // NOTE: 30日という上限値は特に医学的根拠があるわけではなく、十分な選択肢を提供するための適当な値です
-  static final List<String> durationList = ['-', ...List<String>.generate(30, (index) => (index + 1).toString())];
+  static final List<String> durationList = [
+    '-',
+    ...List<String>.generate(30, (index) => (index + 1).toString()),
+  ];
 }
 
 class SettingMenstruationDynamicDescription extends StatelessWidget {
@@ -42,28 +45,51 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
           children: <Widget>[
             Text(
               '${L.pillNumber} ',
-              style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+                color: TextColor.main,
+              ),
             ),
             GestureDetector(onTap: () => _showPicker(context), child: _from()),
             Text(
               ' ${L.perNumber}',
-              style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+                color: TextColor.main,
+              ),
             ),
           ],
         ),
         Text(
           L.howManyDaysDoesMenstruationLast,
-          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 14, color: TextColor.main),
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w600,
+            fontSize: 14,
+            color: TextColor.main,
+          ),
         ),
         const SizedBox(height: 4),
         // TODO: [Localizations]
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            GestureDetector(onTap: () => _showDurationModalSheet(context), child: _duration()),
+            GestureDetector(
+              onTap: () => _showDurationModalSheet(context),
+              child: _duration(),
+            ),
             Text(
               ' ${L.daysMenstruationLasts}',
-              style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+                color: TextColor.main,
+              ),
             ),
           ],
         ),
@@ -88,7 +114,12 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
       child: Center(
         child: Text(
           fromString,
-          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 16, color: TextColor.gray),
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w700,
+            fontSize: 16,
+            color: TextColor.gray,
+          ),
         ),
       ),
     );
@@ -111,14 +142,21 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
       child: Center(
         child: Text(
           durationString,
-          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 16, color: TextColor.gray),
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w700,
+            fontSize: 16,
+            color: TextColor.gray,
+          ),
         ),
       ),
     );
   }
 
   void _showPicker(BuildContext context) {
-    final maximumCount = pillSheetTypes.map((e) => e.totalCount).reduce((value, element) => value + element);
+    final maximumCount = pillSheetTypes
+        .map((e) => e.totalCount)
+        .reduce((value, element) => value + element);
     int keepSelectedFromMenstruation = min(fromMenstruation, maximumCount);
     showModalBottomSheet(
       context: context,
@@ -147,7 +185,9 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
                   onSelectedItemChanged: (index) {
                     keepSelectedFromMenstruation = index;
                   },
-                  scrollController: FixedExtentScrollController(initialItem: keepSelectedFromMenstruation),
+                  scrollController: FixedExtentScrollController(
+                    initialItem: keepSelectedFromMenstruation,
+                  ),
                   children: List.generate(maximumCount + 1, (index) {
                     if (index == 0) {
                       return '-';
@@ -192,8 +232,13 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
                   onSelectedItemChanged: (index) {
                     keepSelectedDurationMenstruation = index;
                   },
-                  scrollController: FixedExtentScrollController(initialItem: keepSelectedDurationMenstruation),
-                  children: SettingMenstruationDynamicDescriptionConstants.durationList.map(_pickerItem).toList(),
+                  scrollController: FixedExtentScrollController(
+                    initialItem: keepSelectedDurationMenstruation,
+                  ),
+                  children: SettingMenstruationDynamicDescriptionConstants
+                      .durationList
+                      .map(_pickerItem)
+                      .toList(),
                 ),
               ),
             ),

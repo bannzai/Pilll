@@ -27,13 +27,18 @@ class UserDelete extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
-    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
+    final cancelReminderLocalNotification = ref.watch(
+      cancelReminderLocalNotificationProvider,
+    );
     final firebaseAuthUser = ref.watch(firebaseUserStateProvider);
 
     useEffect(() {
       if (firebaseAuthUser.asData?.value == null) {
         WidgetsBinding.instance.addPostFrameCallback((_) {
-          showDialog(context: context, builder: (context) => const _CompletedDialog());
+          showDialog(
+            context: context,
+            builder: (context) => const _CompletedDialog(),
+          );
         });
       }
       return null;
@@ -42,7 +47,11 @@ class UserDelete extends HookConsumerWidget {
     return ListTile(
       title: Text(
         L.withdraw,
-        style: const TextStyle(color: AppColors.danger, fontSize: 16, fontFamily: FontFamily.japanese),
+        style: const TextStyle(
+          color: AppColors.danger,
+          fontSize: 16,
+          fontFamily: FontFamily.japanese,
+        ),
       ),
       trailing: const Icon(Icons.delete, color: AppColors.danger),
       horizontalTitleGap: 4,
@@ -63,7 +72,14 @@ class UserDelete extends HookConsumerWidget {
               text: L.withdraw,
               onPressed: () async {
                 analytics.logEvent(name: 'pressed_delete_user_button');
-                await (_delete(context, isAppleLinked: isAppleLinked, isGoogleLinked: isGoogleLinked), cancelReminderLocalNotification()).wait;
+                await (
+                  _delete(
+                    context,
+                    isAppleLinked: isAppleLinked,
+                    isGoogleLinked: isGoogleLinked,
+                  ),
+                  cancelReminderLocalNotification(),
+                ).wait;
               },
             ),
           ],
@@ -72,7 +88,11 @@ class UserDelete extends HookConsumerWidget {
     );
   }
 
-  Future<void> _delete(BuildContext context, {required bool isAppleLinked, required bool isGoogleLinked}) async {
+  Future<void> _delete(
+    BuildContext context, {
+    required bool isAppleLinked,
+    required bool isGoogleLinked,
+  }) async {
     try {
       final sharedPreferences = await SharedPreferences.getInstance();
       sharedPreferences.setBool(BoolKey.didEndInitialSetting, false);
@@ -105,7 +125,11 @@ class UserDelete extends HookConsumerWidget {
                 }
                 navigator.pop();
                 // ignore: use_build_context_synchronously
-                await _delete(context, isAppleLinked: isAppleLinked, isGoogleLinked: isGoogleLinked);
+                await _delete(
+                  context,
+                  isAppleLinked: isAppleLinked,
+                  isGoogleLinked: isGoogleLinked,
+                );
               },
             ),
           ],
@@ -132,13 +156,23 @@ class _CompletedDialog extends StatelessWidget {
         children: [
           Text(
             L.withdrawalCompleted,
-            style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 16),
+            style: const TextStyle(
+              color: TextColor.main,
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w700,
+              fontSize: 16,
+            ),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 24),
           Text(
             L.appExitMessage,
-            style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400, fontSize: 14),
+            style: const TextStyle(
+              color: TextColor.main,
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w400,
+              fontSize: 14,
+            ),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 24),

@@ -31,7 +31,9 @@ enum AlarmKitAuthorizationStatus {
 /// iOS 26+でのみ利用可能なAlarmKitの機能をFlutterから使用するためのラッパーです。
 /// Method Channelを通してiOSネイティブのAlarmKitManagerと通信します。
 class AlarmKitService {
-  static const MethodChannel _channel = MethodChannel('method.channel.MizukiOhashi.Pilll');
+  static const MethodChannel _channel = MethodChannel(
+    'method.channel.MizukiOhashi.Pilll',
+  );
 
   /// AlarmKitが利用可能かどうかを確認する
   ///
@@ -43,13 +45,18 @@ class AlarmKitService {
     }
 
     try {
-      final result = await _channel.invokeMethod<Map<dynamic, dynamic>>('isAlarmKitAvailable');
+      final result = await _channel.invokeMethod<Map<dynamic, dynamic>>(
+        'isAlarmKitAvailable',
+      );
       if (result?['result'] == 'success') {
         return result?['isAlarmKitAvailable'] ?? false;
       }
       return false;
     } catch (e) {
-      analytics.debug(name: 'alarm_kit_availability_check_error', parameters: {'error': e.toString()});
+      analytics.debug(
+        name: 'alarm_kit_availability_check_error',
+        parameters: {'error': e.toString()},
+      );
       return false;
     }
   }
@@ -67,14 +74,20 @@ class AlarmKitService {
     }
 
     try {
-      final result = await _channel.invokeMethod<Map<dynamic, dynamic>>('getAlarmKitAuthorizationStatus');
+      final result = await _channel.invokeMethod<Map<dynamic, dynamic>>(
+        'getAlarmKitAuthorizationStatus',
+      );
       if (result?['result'] == 'success') {
-        final statusString = result?['authorizationStatus'] as String? ?? 'notAvailable';
+        final statusString =
+            result?['authorizationStatus'] as String? ?? 'notAvailable';
         return AlarmKitAuthorizationStatus.fromString(statusString);
       }
       return AlarmKitAuthorizationStatus.notAvailable;
     } catch (e) {
-      analytics.debug(name: 'alarm_kit_authorization_status_check_error', parameters: {'error': e.toString()});
+      analytics.debug(
+        name: 'alarm_kit_authorization_status_check_error',
+        parameters: {'error': e.toString()},
+      );
       return AlarmKitAuthorizationStatus.notAvailable;
     }
   }
@@ -91,13 +104,18 @@ class AlarmKitService {
     }
 
     try {
-      final result = await _channel.invokeMethod<Map<dynamic, dynamic>>('requestAlarmKitPermission');
+      final result = await _channel.invokeMethod<Map<dynamic, dynamic>>(
+        'requestAlarmKitPermission',
+      );
       if (result?['result'] == 'success') {
         return result?['authorized'] ?? false;
       }
       return false;
     } catch (e) {
-      analytics.debug(name: 'alarm_kit_permission_request_error', parameters: {'error': e.toString()});
+      analytics.debug(
+        name: 'alarm_kit_permission_request_error',
+        parameters: {'error': e.toString()},
+      );
       return false;
     }
   }
@@ -122,11 +140,12 @@ class AlarmKitService {
     }
 
     try {
-      final result = await _channel.invokeMethod<Map<dynamic, dynamic>>('scheduleAlarmKitReminder', {
-        'localNotificationID': localNotificationID,
-        'title': title,
-        'scheduledTimeMs': reminderDateTime.millisecondsSinceEpoch,
-      });
+      final result = await _channel
+          .invokeMethod<Map<dynamic, dynamic>>('scheduleAlarmKitReminder', {
+            'localNotificationID': localNotificationID,
+            'title': title,
+            'scheduledTimeMs': reminderDateTime.millisecondsSinceEpoch,
+          });
 
       if (result?['result'] != 'success') {
         throw Exception(result?['message'] ?? 'Failed to schedule alarm');
@@ -134,7 +153,11 @@ class AlarmKitService {
 
       analytics.debug(
         name: 'alarm_kit_reminder_scheduled',
-        parameters: {'localNotificationID': localNotificationID, 'title': title, 'scheduledTimeMs': reminderDateTime.millisecondsSinceEpoch},
+        parameters: {
+          'localNotificationID': localNotificationID,
+          'title': title,
+          'scheduledTimeMs': reminderDateTime.millisecondsSinceEpoch,
+        },
       );
     } catch (e) {
       analytics.debug(
@@ -162,7 +185,9 @@ class AlarmKitService {
     }
 
     try {
-      final result = await _channel.invokeMethod<Map<dynamic, dynamic>>('cancelAllAlarmKitReminders');
+      final result = await _channel.invokeMethod<Map<dynamic, dynamic>>(
+        'cancelAllAlarmKitReminders',
+      );
 
       if (result?['result'] != 'success') {
         throw Exception(result?['message'] ?? 'Failed to cancel all alarms');
@@ -170,7 +195,10 @@ class AlarmKitService {
 
       analytics.debug(name: 'alarm_kit_all_reminders_cancelled');
     } catch (e) {
-      analytics.debug(name: 'alarm_kit_cancel_all_error', parameters: {'error': e.toString()});
+      analytics.debug(
+        name: 'alarm_kit_cancel_all_error',
+        parameters: {'error': e.toString()},
+      );
       rethrow;
     }
   }
@@ -187,7 +215,9 @@ class AlarmKitService {
     }
 
     try {
-      final result = await _channel.invokeMethod<Map<dynamic, dynamic>>('stopAllAlarmKitAlarms');
+      final result = await _channel.invokeMethod<Map<dynamic, dynamic>>(
+        'stopAllAlarmKitAlarms',
+      );
 
       if (result?['result'] != 'success') {
         throw Exception(result?['message'] ?? 'Failed to stop all alarms');
@@ -195,7 +225,10 @@ class AlarmKitService {
 
       analytics.debug(name: 'alarm_kit_all_alarms_stopped');
     } catch (e) {
-      analytics.debug(name: 'alarm_kit_stop_all_error', parameters: {'error': e.toString()});
+      analytics.debug(
+        name: 'alarm_kit_stop_all_error',
+        parameters: {'error': e.toString()},
+      );
       rethrow;
     }
   }

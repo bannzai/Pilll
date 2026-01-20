@@ -33,9 +33,18 @@ extension OfferingTypeFunction on OfferingType {
 }
 
 final _purchaseServiceProvider = Provider((ref) => PurchaseService());
-final purchaseOfferingsProvider = FutureProvider((ref) => ref.watch(_purchaseServiceProvider).fetchOfferings());
-final currentOfferingTypeProvider = Provider.family.autoDispose((ref, User user) {
-  final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate));
+final purchaseOfferingsProvider = FutureProvider(
+  (ref) => ref.watch(_purchaseServiceProvider).fetchOfferings(),
+);
+final currentOfferingTypeProvider = Provider.family.autoDispose((
+  ref,
+  User user,
+) {
+  final isOverDiscountDeadline = ref.watch(
+    isOverDiscountDeadlineProvider(
+      discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate,
+    ),
+  );
   if (!user.hasDiscountEntitlement) {
     return OfferingType.premium;
   }
@@ -45,65 +54,106 @@ final currentOfferingTypeProvider = Provider.family.autoDispose((ref, User user)
     return OfferingType.discount;
   }
 });
-final currentOfferingPackagesProvider = Provider.family.autoDispose<List<Package>, User>((ref, User user) {
-  final currentOfferingType = ref.watch(currentOfferingTypeProvider(user));
-  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[currentOfferingType.identifier];
-  if (offering != null) {
-    return offering.availablePackages;
-  }
-  return [];
-});
+final currentOfferingPackagesProvider = Provider.family
+    .autoDispose<List<Package>, User>((ref, User user) {
+      final currentOfferingType = ref.watch(currentOfferingTypeProvider(user));
+      final offering = ref
+          .watch(purchaseOfferingsProvider)
+          .valueOrNull
+          ?.all[currentOfferingType.identifier];
+      if (offering != null) {
+        return offering.availablePackages;
+      }
+      return [];
+    });
 final annualPackageProvider = Provider.family.autoDispose((ref, User user) {
-  final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(user));
-  return currentOfferingPackages.firstWhereOrNull((element) => element.packageType == PackageType.annual);
+  final currentOfferingPackages = ref.watch(
+    currentOfferingPackagesProvider(user),
+  );
+  return currentOfferingPackages.firstWhereOrNull(
+    (element) => element.packageType == PackageType.annual,
+  );
 });
 final monthlyPackageProvider = Provider.family.autoDispose((ref, User user) {
-  final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(user));
-  return currentOfferingPackages.firstWhereOrNull((element) => element.packageType == PackageType.monthly);
+  final currentOfferingPackages = ref.watch(
+    currentOfferingPackagesProvider(user),
+  );
+  return currentOfferingPackages.firstWhereOrNull(
+    (element) => element.packageType == PackageType.monthly,
+  );
 });
 final lifetimePackageProvider = Provider.family.autoDispose((ref, User user) {
-  final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(user));
-  return currentOfferingPackages.firstWhereOrNull((element) => element.packageType == PackageType.lifetime);
+  final currentOfferingPackages = ref.watch(
+    currentOfferingPackagesProvider(user),
+  );
+  return currentOfferingPackages.firstWhereOrNull(
+    (element) => element.packageType == PackageType.lifetime,
+  );
 });
 final monthlyPremiumPackageProvider = Provider.autoDispose((ref) {
   const premiumPackageOfferingType = OfferingType.premium;
-  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[premiumPackageOfferingType.identifier];
+  final offering = ref
+      .watch(purchaseOfferingsProvider)
+      .valueOrNull
+      ?.all[premiumPackageOfferingType.identifier];
   if (offering == null) {
     return null;
   }
-  return offering.availablePackages.firstWhereOrNull((element) => element.packageType == PackageType.monthly);
+  return offering.availablePackages.firstWhereOrNull(
+    (element) => element.packageType == PackageType.monthly,
+  );
 });
 final annualSpecialOfferingPackageProvider = Provider.autoDispose((ref) {
   const specialOfferingPackageOfferingType = OfferingType.specialOffering;
-  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[specialOfferingPackageOfferingType.identifier];
+  final offering = ref
+      .watch(purchaseOfferingsProvider)
+      .valueOrNull
+      ?.all[specialOfferingPackageOfferingType.identifier];
   if (offering == null) {
     return null;
   }
-  return offering.availablePackages.firstWhereOrNull((element) => element.packageType == PackageType.annual);
+  return offering.availablePackages.firstWhereOrNull(
+    (element) => element.packageType == PackageType.annual,
+  );
 });
 final monthlySpecialOfferingPackageProvider = Provider.autoDispose((ref) {
   const specialOfferingPackageOfferingType = OfferingType.specialOffering;
-  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[specialOfferingPackageOfferingType.identifier];
+  final offering = ref
+      .watch(purchaseOfferingsProvider)
+      .valueOrNull
+      ?.all[specialOfferingPackageOfferingType.identifier];
   if (offering == null) {
     return null;
   }
-  return offering.availablePackages.firstWhereOrNull((element) => element.packageType == PackageType.monthly);
+  return offering.availablePackages.firstWhereOrNull(
+    (element) => element.packageType == PackageType.monthly,
+  );
 });
 final lifetimeDiscountPackageProvider = Provider.autoDispose((ref) {
   const limitedPackageOfferingType = OfferingType.discount;
-  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[limitedPackageOfferingType.identifier];
+  final offering = ref
+      .watch(purchaseOfferingsProvider)
+      .valueOrNull
+      ?.all[limitedPackageOfferingType.identifier];
   if (offering == null) {
     return null;
   }
-  return offering.availablePackages.firstWhereOrNull((element) => element.packageType == PackageType.lifetime);
+  return offering.availablePackages.firstWhereOrNull(
+    (element) => element.packageType == PackageType.lifetime,
+  );
 });
 final lifetimePremiumPackageProvider = Provider.autoDispose((ref) {
   const premiumPackageOfferingType = OfferingType.premium;
-  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[premiumPackageOfferingType.identifier];
+  final offering = ref
+      .watch(purchaseOfferingsProvider)
+      .valueOrNull
+      ?.all[premiumPackageOfferingType.identifier];
   if (offering == null) {
     return null;
   }
-  return offering.availablePackages.firstWhereOrNull((element) => element.packageType == PackageType.lifetime);
+  return offering.availablePackages.firstWhereOrNull(
+    (element) => element.packageType == PackageType.lifetime,
+  );
 });
 final lifetimeDiscountRateProvider = Provider.autoDispose<double?>((ref) {
   final appIsReleased = ref.watch(appIsReleasedProvider).valueOrNull ?? false;
@@ -138,7 +188,8 @@ class Purchase {
   Future<bool> call(Package package) async {
     try {
       final purchaserInfo = await Purchases.purchasePackage(package);
-      final premiumEntitlement = purchaserInfo.entitlements.all[premiumEntitlements];
+      final premiumEntitlement =
+          purchaserInfo.entitlements.all[premiumEntitlements];
       if (premiumEntitlement == null) {
         throw AssertionError(L.unexpectedPremiumEntitlementsIsNotExists);
       }
@@ -150,7 +201,11 @@ class Purchase {
     } on PlatformException catch (exception, stack) {
       analytics.logEvent(
         name: 'catched_purchase_exception',
-        parameters: {'code': exception.code, 'details': exception.details.toString(), 'message': exception.message},
+        parameters: {
+          'code': exception.code,
+          'details': exception.details.toString(),
+          'message': exception.message,
+        },
       );
       final newException = mapToDisplayedException(exception);
       if (newException == null) {
@@ -159,7 +214,10 @@ class Purchase {
       errorLogger.recordError(exception, stack);
       throw newException;
     } catch (exception, stack) {
-      analytics.logEvent(name: 'catched_purchase_anonymous', parameters: {'exception_type': exception.runtimeType.toString()});
+      analytics.logEvent(
+        name: 'catched_purchase_anonymous',
+        parameters: {'exception_type': exception.runtimeType.toString()},
+      );
       errorLogger.recordError(exception, stack);
       rethrow;
     }
@@ -186,7 +244,10 @@ Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
   analytics.logEvent(name: 'start_update_purchase_info');
   final uid = firebase_auth.FirebaseAuth.instance.currentUser?.uid;
   if (uid == null) {
-    errorLogger.recordError('unexpected uid is not found when purchase info is update', StackTrace.current);
+    errorLogger.recordError(
+      'unexpected uid is not found when purchase info is update',
+      StackTrace.current,
+    );
     return;
   }
 
@@ -212,13 +273,19 @@ Future<void> syncPurchaseInfo() async {
   analytics.logEvent(name: 'start_sync_purchase_info');
   final uid = firebase_auth.FirebaseAuth.instance.currentUser?.uid;
   if (uid == null) {
-    errorLogger.recordError('unexpected uid is not found when purchase info to sync', StackTrace.current);
+    errorLogger.recordError(
+      'unexpected uid is not found when purchase info to sync',
+      StackTrace.current,
+    );
     return;
   }
 
   final purchaserInfo = await Purchases.getCustomerInfo();
-  final premiumEntitlement = purchaserInfo.entitlements.all[premiumEntitlements];
-  final isActivated = premiumEntitlement == null ? false : premiumEntitlement.isActive;
+  final premiumEntitlement =
+      purchaserInfo.entitlements.all[premiumEntitlements];
+  final isActivated = premiumEntitlement == null
+      ? false
+      : premiumEntitlement.isActive;
 
   try {
     final syncPurchaseInfo = SyncPurchaseInfo(DatabaseConnection(uid));
@@ -231,17 +298,24 @@ Future<void> syncPurchaseInfo() async {
 }
 
 Future<void> initializePurchase(String uid) async {
-  await Purchases.setLogLevel(Environment.isDevelopment ? LogLevel.debug : LogLevel.info);
-  Purchases.configure(PurchasesConfiguration(Secret.revenueCatPublicAPIKey)..appUserID = uid);
+  await Purchases.setLogLevel(
+    Environment.isDevelopment ? LogLevel.debug : LogLevel.info,
+  );
+  Purchases.configure(
+    PurchasesConfiguration(Secret.revenueCatPublicAPIKey)..appUserID = uid,
+  );
   Purchases.addCustomerInfoUpdateListener(callUpdatePurchaseInfo);
   await syncPurchaseInfo();
 }
 
 /// RevenueCatのEntitlementInfo.productIdentifierに"lifetime"が含まれるかで判定するProvider
-final isLifetimePurchasedProvider = FutureProvider.autoDispose<bool>((ref) async {
+final isLifetimePurchasedProvider = FutureProvider.autoDispose<bool>((
+  ref,
+) async {
   try {
     final customerInfo = await Purchases.getCustomerInfo();
-    final premiumEntitlement = customerInfo.entitlements.all[premiumEntitlements];
+    final premiumEntitlement =
+        customerInfo.entitlements.all[premiumEntitlements];
     if (premiumEntitlement == null || !premiumEntitlement.isActive) {
       return false;
     }

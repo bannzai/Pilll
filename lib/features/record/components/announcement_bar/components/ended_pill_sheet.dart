@@ -11,16 +11,25 @@ class EndedPillSheet extends StatelessWidget {
   final bool isTrial;
   final bool isPremium;
 
-  const EndedPillSheet({super.key, required this.isTrial, required this.isPremium});
+  const EndedPillSheet({
+    super.key,
+    required this.isTrial,
+    required this.isPremium,
+  });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        analytics.logEvent(name: 'pill_ended_sheet_tap', parameters: {'isTrial': isTrial, 'isPremium': isPremium});
+        analytics.logEvent(
+          name: 'pill_ended_sheet_tap',
+          parameters: {'isTrial': isTrial, 'isPremium': isPremium},
+        );
 
         if (isPremium || isTrial) {
-          Navigator.of(context).push(PillSheetModifiedHistoriesPageRoute.route());
+          Navigator.of(
+            context,
+          ).push(PillSheetModifiedHistoriesPageRoute.route());
         } else {
           showPremiumIntroductionSheet(context);
         }
@@ -33,7 +42,12 @@ class EndedPillSheet extends StatelessWidget {
             children: [
               Text(
                 L.pillSheetEnded,
-                style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 14, color: TextColor.white),
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                  color: TextColor.white,
+                ),
               ),
               Text(
                 L.checkLastTakenDate,

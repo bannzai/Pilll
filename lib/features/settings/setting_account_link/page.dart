@@ -38,7 +38,10 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
                 icon: const Icon(Icons.arrow_back, color: Colors.black),
                 onPressed: () => Navigator.of(context).pop(),
               ),
-              title: Text(L.accountSettings, style: const TextStyle(color: TextColor.main)),
+              title: Text(
+                L.accountSettings,
+                style: const TextStyle(color: TextColor.main),
+              ),
               backgroundColor: AppColors.white,
             ),
             body: ListView(
@@ -47,7 +50,12 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
                   padding: const EdgeInsets.only(top: 16, left: 15, right: 16),
                   child: Text(
                     L.registerAccount,
-                    style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.primary),
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                      color: TextColor.primary,
+                    ),
                   ),
                 ),
                 SettingAccountCooperationRow(
@@ -80,11 +88,18 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
                             try {
                               final messenger = ScaffoldMessenger.of(context);
                               final navigator = Navigator.of(context);
-                              analytics.logEvent(name: 'a_c_l_apple_long_press_result');
+                              analytics.logEvent(
+                                name: 'a_c_l_apple_long_press_result',
+                              );
 
                               await appleReauthentification();
 
-                              messenger.showSnackBar(SnackBar(duration: const Duration(seconds: 2), content: Text(L.authenticationInfoUpdated)));
+                              messenger.showSnackBar(
+                                SnackBar(
+                                  duration: const Duration(seconds: 2),
+                                  content: Text(L.authenticationInfoUpdated),
+                                ),
+                              );
                               navigator.pop();
                             } catch (error) {
                               showErrorAlert(context, error);
@@ -125,11 +140,18 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
                             try {
                               final messenger = ScaffoldMessenger.of(context);
                               final navigator = Navigator.of(context);
-                              analytics.logEvent(name: 'a_c_l_google_long_press_result');
+                              analytics.logEvent(
+                                name: 'a_c_l_google_long_press_result',
+                              );
 
                               await googleReauthentification();
 
-                              messenger.showSnackBar(SnackBar(duration: const Duration(seconds: 2), content: Text(L.authenticationInfoUpdated)));
+                              messenger.showSnackBar(
+                                SnackBar(
+                                  duration: const Duration(seconds: 2),
+                                  content: Text(L.authenticationInfoUpdated),
+                                ),
+                              );
                               navigator.pop();
                             } catch (error) {
                               showErrorAlert(context, error);
@@ -144,7 +166,12 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
                   padding: const EdgeInsets.only(top: 16, left: 15, right: 16),
                   child: Text(
                     L.deleteAccount,
-                    style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.primary),
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                      color: TextColor.primary,
+                    ),
                   ),
                 ),
                 const Divider(indent: 16),
@@ -158,17 +185,23 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
   }
 
   void _showSignInSheet(BuildContext context) {
-    showSignInSheet(context, SignInSheetStateContext.setting, (accountType) async {
+    showSignInSheet(context, SignInSheetStateContext.setting, (
+      accountType,
+    ) async {
       const snackBarDuration = Duration(seconds: 1);
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(duration: snackBarDuration, content: Text(L.registeredWithProvider(accountType.providerName))));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          duration: snackBarDuration,
+          content: Text(L.registeredWithProvider(accountType.providerName)),
+        ),
+      );
       await Future.delayed(snackBarDuration);
     });
   }
 }
 
-extension SettingAccountCooperationListPageRoute on SettingAccountCooperationLinkPage {
+extension SettingAccountCooperationListPageRoute
+    on SettingAccountCooperationLinkPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: 'SettingAccountCooperationListPage'),
@@ -183,14 +216,24 @@ class SettingAccountCooperationRow extends StatelessWidget {
   final Future<void> Function() onTap;
   final Future<void> Function() onLongPress;
 
-  const SettingAccountCooperationRow({super.key, required this.accountType, required this.isLinked, required this.onTap, required this.onLongPress});
+  const SettingAccountCooperationRow({
+    super.key,
+    required this.accountType,
+    required this.isLinked,
+    required this.onTap,
+    required this.onLongPress,
+  });
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       title: Text(
         accountType.loginContentName,
-        style: const TextStyle(fontFamily: FontFamily.roboto, fontWeight: FontWeight.w300, fontSize: 16),
+        style: const TextStyle(
+          fontFamily: FontFamily.roboto,
+          fontWeight: FontWeight.w300,
+          fontSize: 16,
+        ),
       ),
       trailing: _trailing(),
       horizontalTitleGap: 4,
@@ -215,7 +258,12 @@ class SettingAccountCooperationRow extends StatelessWidget {
           const SizedBox(width: 6),
           Text(
             L.linked,
-            style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.darkGray),
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w300,
+              fontSize: 14,
+              color: TextColor.darkGray,
+            ),
           ),
         ],
       );

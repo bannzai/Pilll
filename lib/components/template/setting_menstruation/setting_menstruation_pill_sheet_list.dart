@@ -23,12 +23,20 @@ class SettingMenstruationPillSheetList extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final pageController = usePageController(viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width);
+    final pageController = usePageController(
+      viewportFraction:
+          (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width,
+    );
     return Column(
       children: [
         Container(
           constraints: BoxConstraints(
-            maxHeight: PillSheetViewLayout.calcHeight(PillSheetViewLayout.mostLargePillSheetType(pillSheetTypes).numberOfLineInPillSheet, true),
+            maxHeight: PillSheetViewLayout.calcHeight(
+              PillSheetViewLayout.mostLargePillSheetType(
+                pillSheetTypes,
+              ).numberOfLineInPillSheet,
+              true,
+            ),
           ),
           child: PageView(
             clipBehavior: Clip.none,
@@ -44,8 +52,11 @@ class SettingMenstruationPillSheetList extends HookConsumerWidget {
                       pageIndex: pageIndex,
                       appearanceMode: appearanceMode,
                       pillSheetTypes: pillSheetTypes,
-                      selectedPillNumberIntoPillSheet: selectedPillNumber(pageIndex),
-                      markSelected: (pageIndex, number) => markSelected(pageIndex, number),
+                      selectedPillNumberIntoPillSheet: selectedPillNumber(
+                        pageIndex,
+                      ),
+                      markSelected: (pageIndex, number) =>
+                          markSelected(pageIndex, number),
                     ),
                   ),
                   const Spacer(),
@@ -60,7 +71,11 @@ class SettingMenstruationPillSheetList extends HookConsumerWidget {
             controller: pageController,
             itemCount: pillSheetTypes.length,
             onDotTapped: (page) {
-              pageController.animateToPage(page, duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
+              pageController.animateToPage(
+                page,
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeInOut,
+              );
             },
           ),
         ],

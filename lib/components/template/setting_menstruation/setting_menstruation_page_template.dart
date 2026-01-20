@@ -43,7 +43,12 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
                   const SizedBox(height: 24),
                   Text(
                     L.selectPillNumberForMenstruationStart,
-                    style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main),
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 20,
+                      color: TextColor.main,
+                    ),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 59),
@@ -55,7 +60,10 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
               ),
             ),
             if (doneButton != null) ...[
-              Column(mainAxisAlignment: MainAxisAlignment.end, children: [doneButton, const SizedBox(height: 35)]),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [doneButton, const SizedBox(height: 35)],
+              ),
             ],
           ],
         ),

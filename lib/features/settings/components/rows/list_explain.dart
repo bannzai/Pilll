@@ -11,7 +11,12 @@ class ListExplainRow extends StatelessWidget {
     return ListTile(
       title: Text(
         text,
-        style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.darkGray),
+        style: const TextStyle(
+          fontFamily: FontFamily.japanese,
+          fontWeight: FontWeight.w300,
+          fontSize: 14,
+          color: TextColor.darkGray,
+        ),
       ),
     );
   }

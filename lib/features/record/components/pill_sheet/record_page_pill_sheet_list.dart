@@ -17,19 +17,28 @@ class RecordPagePillSheetList extends HookConsumerWidget {
   final Setting setting;
   final User user;
 
-  const RecordPagePillSheetList({super.key, required this.pillSheetGroup, required this.activePillSheet, required this.setting, required this.user});
+  const RecordPagePillSheetList({
+    super.key,
+    required this.pillSheetGroup,
+    required this.activePillSheet,
+    required this.setting,
+    required this.user,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final pageController = usePageController(
       initialPage: activePillSheet.groupIndex,
-      viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width,
+      viewportFraction:
+          (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width,
     );
     return Column(
       children: [
         SizedBox(
           height: PillSheetViewLayout.calcHeight(
-            PillSheetViewLayout.mostLargePillSheetType(pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList()).numberOfLineInPillSheet,
+            PillSheetViewLayout.mostLargePillSheetType(
+              pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
+            ).numberOfLineInPillSheet,
             false,
           ),
           child: PageView(
@@ -40,7 +49,12 @@ class RecordPagePillSheetList extends HookConsumerWidget {
               for (final pillSheet in pillSheetGroup.pillSheets)
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: RecordPagePillSheet(pillSheetGroup: pillSheetGroup, pillSheet: pillSheet, setting: setting, user: user),
+                  child: RecordPagePillSheet(
+                    pillSheetGroup: pillSheetGroup,
+                    pillSheet: pillSheet,
+                    setting: setting,
+                    user: user,
+                  ),
                 ),
             ],
           ),
@@ -51,7 +65,11 @@ class RecordPagePillSheetList extends HookConsumerWidget {
             controller: pageController,
             itemCount: pillSheetGroup.pillSheets.length,
             onDotTapped: (page) {
-              pageController.animateToPage(page, duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
+              pageController.animateToPage(
+                page,
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeInOut,
+              );
             },
           ),
         ],

@@ -17,7 +17,9 @@ final addPillSheetGroupProvider = Provider.autoDispose(
   (ref) => AddPillSheetGroup(
     batchFactory: ref.watch(batchFactoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
-    batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
+    batchSetPillSheetModifiedHistory: ref.watch(
+      batchSetPillSheetModifiedHistoryProvider,
+    ),
     batchSetSetting: ref.watch(batchSetSettingProvider),
   ),
 );
@@ -51,12 +53,16 @@ class AddPillSheetGroup {
       displayNumberSetting: displayNumberSetting,
       pillTakenCount: pillTakenCount,
     );
-    final createdPillSheetGroup = batchSetPillSheetGroup(batch, updatedPillSheetGroup);
-
-    final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-      beforePillSheetGroup: pillSheetGroup,
-      createdNewPillSheetGroup: createdPillSheetGroup,
+    final createdPillSheetGroup = batchSetPillSheetGroup(
+      batch,
+      updatedPillSheetGroup,
     );
+
+    final history =
+        PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+          beforePillSheetGroup: pillSheetGroup,
+          createdNewPillSheetGroup: createdPillSheetGroup,
+        );
     batchSetPillSheetModifiedHistory(batch, history);
 
     batchSetSetting(batch, setting.copyWith(pillSheetTypes: pillSheetTypes));
@@ -75,7 +81,10 @@ PillSheetGroup buildPillSheetGroup({
   final n = now();
   final createdPillSheets = pillSheetTypes.asMap().keys.map((pageIndex) {
     final pillSheetType = backportPillSheetTypes(pillSheetTypes)[pageIndex];
-    final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pageIndex);
+    final offset = summarizedPillCountWithPillSheetTypesToIndex(
+      pillSheetTypes: pillSheetTypes,
+      toIndex: pageIndex,
+    );
     final beginDate = n.add(Duration(days: offset));
 
     if (pillTakenCount > 1) {
@@ -86,7 +95,12 @@ PillSheetGroup buildPillSheetGroup({
         groupIndex: pageIndex,
         createdAt: now(),
         restDurations: [],
-        pills: Pill.generateAndFillTo(pillSheetType: pillSheetType, fromDate: beginDate, lastTakenDate: null, pillTakenCount: pillTakenCount),
+        pills: Pill.generateAndFillTo(
+          pillSheetType: pillSheetType,
+          fromDate: beginDate,
+          lastTakenDate: null,
+          pillTakenCount: pillTakenCount,
+        ),
       );
     }
 
@@ -104,14 +118,19 @@ PillSheetGroup buildPillSheetGroup({
   final updatedPillSheetGroup = PillSheetGroup(
     pillSheetIDs: pillSheetIDs,
     pillSheets: createdPillSheets,
-    pillSheetAppearanceMode: pillSheetGroup?.pillSheetAppearanceMode ?? PillSheetAppearanceMode.number,
+    pillSheetAppearanceMode:
+        pillSheetGroup?.pillSheetAppearanceMode ??
+        PillSheetAppearanceMode.number,
     displayNumberSetting: () {
       if (pillSheetGroup?.pillSheetAppearanceMode.isSequential == true) {
         if (displayNumberSetting != null) {
           return displayNumberSetting;
         }
         if (pillSheetGroup != null) {
-          return PillSheetGroupDisplayNumberSetting(beginPillNumber: pillSheetGroup.sequentialEstimatedEndPillNumber + 1);
+          return PillSheetGroupDisplayNumberSetting(
+            beginPillNumber:
+                pillSheetGroup.sequentialEstimatedEndPillNumber + 1,
+          );
         }
       }
       return null;

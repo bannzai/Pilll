@@ -34,9 +34,21 @@ class DiaryPostPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final diary = this.diary ?? Diary.fromDate(date);
 
-    return AsyncValueGroup.group2(ref.watch(userProvider), ref.watch(diarySettingProvider)).when(
-      data: (data) => DiaryPostPageBody(date: date, diary: diary, user: data.$1, diarySetting: data.$2),
-      error: (error, stackTrace) => UniversalErrorPage(error: error, reload: () => ref.refresh(refreshAppProvider), child: null),
+    return AsyncValueGroup.group2(
+      ref.watch(userProvider),
+      ref.watch(diarySettingProvider),
+    ).when(
+      data: (data) => DiaryPostPageBody(
+        date: date,
+        diary: diary,
+        user: data.$1,
+        diarySetting: data.$2,
+      ),
+      error: (error, stackTrace) => UniversalErrorPage(
+        error: error,
+        reload: () => ref.refresh(refreshAppProvider),
+        child: null,
+      ),
       loading: () => const Indicator(),
     );
   }
@@ -58,15 +70,25 @@ class DiaryPostPageBody extends HookConsumerWidget {
   final User user;
   final DiarySetting? diarySetting;
 
-  const DiaryPostPageBody({super.key, required this.date, required this.diary, required this.user, required this.diarySetting});
+  const DiaryPostPageBody({
+    super.key,
+    required this.date,
+    required this.diary,
+    required this.user,
+    required this.diarySetting,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final memoTextEditingController = useTextEditingController(text: diary.memo);
+    final memoTextEditingController = useTextEditingController(
+      text: diary.memo,
+    );
     final focusNode = useFocusNode();
     final scrollController = useScrollController();
 
-    final physicalCondition = useState<PhysicalConditionStatus?>(diary.physicalConditionStatus);
+    final physicalCondition = useState<PhysicalConditionStatus?>(
+      diary.physicalConditionStatus,
+    );
     final physicalConditionDetails = useState(diary.physicalConditions);
     final sex = useState(diary.hasSex);
 
@@ -116,15 +138,25 @@ class DiaryPostPageBody extends HookConsumerWidget {
           children: [
             Expanded(
               child: ListView(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 16,
+                ),
                 controller: scrollController,
                 children: [
                   Text(
                     DateTimeFormatter.yearAndMonthAndDay(date),
-                    style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main),
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 20,
+                      color: TextColor.main,
+                    ),
                   ),
                   const SizedBox(height: 20),
-                  DiaryPostPhysicalCondition(physicalCondition: physicalCondition),
+                  DiaryPostPhysicalCondition(
+                    physicalCondition: physicalCondition,
+                  ),
                   const SizedBox(height: 20),
                   DiaryPostPhysicalConditionDetails(
                     user: user,
@@ -135,7 +167,10 @@ class DiaryPostPageBody extends HookConsumerWidget {
                   const SizedBox(height: 20),
                   DiaryPostSex(sex: sex),
                   const SizedBox(height: 20),
-                  DiaryPostMemo(textEditingController: memoTextEditingController, focusNode: focusNode),
+                  DiaryPostMemo(
+                    textEditingController: memoTextEditingController,
+                    focusNode: focusNode,
+                  ),
                 ],
               ),
             ),

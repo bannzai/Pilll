@@ -25,7 +25,8 @@ class MenstruationFirestoreKey {
 /// HealthKitとの連携機能もサポートしている
 @freezed
 class Menstruation with _$Menstruation {
-  factory Menstruation.fromJson(Map<String, dynamic> json) => _$MenstruationFromJson(json);
+  factory Menstruation.fromJson(Map<String, dynamic> json) =>
+      _$MenstruationFromJson(json);
   const Menstruation._();
 
   @JsonSerializable(explicitToJson: true)
@@ -36,21 +37,34 @@ class Menstruation with _$Menstruation {
 
     /// 生理開始日
     /// 生理周期計算の基準となる重要な日付
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
     required DateTime beginDate,
 
     /// 生理終了日
     /// 生理期間の長さを決定する日付
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
     required DateTime endDate,
 
     /// 論理削除日時
     /// nullの場合は有効な記録、値がある場合は削除済み
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+    DateTime? deletedAt,
 
     /// 生理記録の作成日時
     /// データの作成順序や履歴管理に使用される
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
     required DateTime createdAt,
 
     /// HealthKitサンプルデータのUUID
@@ -64,7 +78,8 @@ class Menstruation with _$Menstruation {
 
   /// 生理期間をFlutterのDateTimeRange形式で取得する
   /// UI表示やカレンダー選択で使用される
-  DateTimeRange get dateTimeRange => DateTimeRange(start: beginDate, end: endDate);
+  DateTimeRange get dateTimeRange =>
+      DateTimeRange(start: beginDate, end: endDate);
 
   /// 現在生理中かどうかを判定する
   /// 今日の日付が生理期間内に含まれるかをチェック

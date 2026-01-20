@@ -45,7 +45,10 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
 
     // For linked user
     useEffect(() {
-      analytics.logEvent(name: 'initial_setting_signin_account', parameters: {'uid': FirebaseAuth.instance.currentUser?.uid});
+      analytics.logEvent(
+        name: 'initial_setting_signin_account',
+        parameters: {'uid': FirebaseAuth.instance.currentUser?.uid},
+      );
 
       final LinkAccountType? accountType = () {
         if (isAppleLinked) {
@@ -58,9 +61,12 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
       }();
       if (accountType != null) {
         Future.microtask(() {
-          ScaffoldMessenger.of(
-            context,
-          ).showSnackBar(SnackBar(duration: const Duration(seconds: 2), content: Text(L.loggedInWithProvider(accountType.providerName))));
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              duration: const Duration(seconds: 2),
+              content: Text(L.loggedInWithProvider(accountType.providerName)),
+            ),
+          );
         });
       }
 
@@ -86,10 +92,18 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                       const SizedBox(height: 24),
                       Text(
                         L.tellAboutPrescribedSheet,
-                        style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main),
+                        style: const TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 20,
+                          color: TextColor.main,
+                        ),
                         textAlign: TextAlign.center,
                       ),
-                      InitialSettingPillSheetGroupPageBody(state: state, store: store),
+                      InitialSettingPillSheetGroupPageBody(
+                        state: state,
+                        store: store,
+                      ),
                       const SizedBox(height: 200),
                     ],
                   ),
@@ -111,8 +125,12 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                             child: PrimaryButton(
                               text: L.next,
                               onPressed: () async {
-                                analytics.logEvent(name: 'next_to_today_pill_number');
-                                Navigator.of(context).push(InitialSettingSelectTodayPillNumberPageRoute.route());
+                                analytics.logEvent(
+                                  name: 'next_to_today_pill_number',
+                                );
+                                Navigator.of(context).push(
+                                  InitialSettingSelectTodayPillNumberPageRoute.route(),
+                                );
                               },
                             ),
                           ),
@@ -121,10 +139,16 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                         AlertButton(
                           text: L.existingAccountUsers,
                           onPressed: () async {
-                            analytics.logEvent(name: 'pressed_initial_setting_signin');
-                            showSignInSheet(context, SignInSheetStateContext.initialSetting, (accountType) async {
-                              store.showHUD();
-                            });
+                            analytics.logEvent(
+                              name: 'pressed_initial_setting_signin',
+                            );
+                            showSignInSheet(
+                              context,
+                              SignInSheetStateContext.initialSetting,
+                              (accountType) async {
+                                store.showHUD();
+                              },
+                            );
                           },
                         ),
                       ],
@@ -141,7 +165,11 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
 }
 
 class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
-  const InitialSettingPillSheetGroupPageBody({super.key, required this.state, required this.store});
+  const InitialSettingPillSheetGroupPageBody({
+    super.key,
+    required this.state,
+    required this.store,
+  });
 
   final InitialSettingState state;
   final InitialSettingStateNotifier store;
@@ -149,7 +177,10 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (state.pillSheetTypes.isEmpty) {
-      return AddPillSheetTypeEmpty(onSelect: (pillSheetType) => store.selectedFirstPillSheetType(pillSheetType));
+      return AddPillSheetTypeEmpty(
+        onSelect: (pillSheetType) =>
+            store.selectedFirstPillSheetType(pillSheetType),
+      );
     } else {
       return Column(
         children: [
@@ -157,18 +188,27 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
           SettingPillSheetGroup(
             pillSheetTypes: state.pillSheetTypes,
             onAdd: (pillSheetType) {
-              analytics.logEvent(name: 'initial_setting_add_pill_sheet_group', parameters: {'pill_sheet_type': pillSheetType.fullName});
+              analytics.logEvent(
+                name: 'initial_setting_add_pill_sheet_group',
+                parameters: {'pill_sheet_type': pillSheetType.fullName},
+              );
               store.addPillSheetType(pillSheetType);
             },
             onChange: (index, pillSheetType) {
               analytics.logEvent(
                 name: 'initial_setting_change_pill_sheet_group',
-                parameters: {'index': index, 'pill_sheet_type': pillSheetType.fullName},
+                parameters: {
+                  'index': index,
+                  'pill_sheet_type': pillSheetType.fullName,
+                },
               );
               store.changePillSheetType(index, pillSheetType);
             },
             onDelete: (index) {
-              analytics.logEvent(name: 'initial_setting_delete_pill_sheet_group', parameters: {'index': index});
+              analytics.logEvent(
+                name: 'initial_setting_delete_pill_sheet_group',
+                parameters: {'index': index},
+              );
               store.removePillSheetType(index);
             },
           ),
@@ -178,7 +218,8 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
   }
 }
 
-extension InitialSettingPillSheetGroupPageRoute on InitialSettingPillSheetGroupPage {
+extension InitialSettingPillSheetGroupPageRoute
+    on InitialSettingPillSheetGroupPage {
   static InitialSettingPillSheetGroupPage screen() {
     analytics.logScreenView(screenName: 'InitialSettingPillSheetGroupPage');
     return const InitialSettingPillSheetGroupPage();

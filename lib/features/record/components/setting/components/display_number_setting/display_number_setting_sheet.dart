@@ -23,22 +23,37 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final begin = useState(pillSheetGroup.displayNumberSetting?.beginPillNumber);
+    final begin = useState(
+      pillSheetGroup.displayNumberSetting?.beginPillNumber,
+    );
     final end = useState(pillSheetGroup.displayNumberSetting?.endPillNumber);
 
-    final beginTextFieldController = useTextEditingController(text: '${begin.value ?? 1}');
-    final endTextFieldController = useTextEditingController(text: '${end.value ?? pillSheetGroup.sequentialEstimatedEndPillNumber}');
+    final beginTextFieldController = useTextEditingController(
+      text: '${begin.value ?? 1}',
+    );
+    final endTextFieldController = useTextEditingController(
+      text: '${end.value ?? pillSheetGroup.sequentialEstimatedEndPillNumber}',
+    );
 
-    final beforePillSheetGroup = ref.watch(beforePillSheetGroupProvider).valueOrNull;
+    final beforePillSheetGroup = ref
+        .watch(beforePillSheetGroupProvider)
+        .valueOrNull;
 
     const estimatedKeyboardHeight = 216;
     const offset = 24;
-    final height = 1 - ((estimatedKeyboardHeight - offset) / MediaQuery.of(context).size.height);
+    final height =
+        1 -
+        ((estimatedKeyboardHeight - offset) /
+            MediaQuery.of(context).size.height);
 
     final batchFactory = ref.watch(batchFactoryProvider);
     final batchSetPillSheetGroup = ref.watch(batchSetPillSheetGroupProvider);
-    final batchSetPillSheetModifiedHistory = ref.watch(batchSetPillSheetModifiedHistoryProvider);
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final batchSetPillSheetModifiedHistory = ref.watch(
+      batchSetPillSheetModifiedHistoryProvider,
+    );
+    final registerReminderLocalNotification = ref.watch(
+      registerReminderLocalNotificationProvider,
+    );
 
     return DraggableScrollableSheet(
       initialChildSize: height,
@@ -46,7 +61,10 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
       builder: (context, scrollController) {
         return Container(
           decoration: const BoxDecoration(
-            borderRadius: BorderRadius.only(topLeft: Radius.circular(20.0), topRight: Radius.circular(20.0)),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(20.0),
+              topRight: Radius.circular(20.0),
+            ),
             color: AppColors.white,
           ),
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
@@ -57,27 +75,39 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                 children: [
                   Text(
                     L.changePillDaysForSheet,
-                    style: const TextStyle(color: TextColor.main, fontSize: 20, fontWeight: FontWeight.w500),
+                    style: const TextStyle(
+                      color: TextColor.main,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                    ),
                     textAlign: TextAlign.center,
                   ),
                   const Spacer(),
                   RedTextButton(
                     text: L.change,
                     onPressed: () async {
-                      analytics.logEvent(name: 'sheet_change_display_number_setting');
+                      analytics.logEvent(
+                        name: 'sheet_change_display_number_setting',
+                      );
                       await _submit(
                         batchFactory: batchFactory,
                         batchSetPillSheetGroup: batchSetPillSheetGroup,
-                        batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+                        batchSetPillSheetModifiedHistory:
+                            batchSetPillSheetModifiedHistory,
                         begin: begin,
                         end: end,
                       );
                       await registerReminderLocalNotification();
                       if (context.mounted) {
-                        ScaffoldMessenger.of(
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            duration: const Duration(seconds: 2),
+                            content: Text(L.changedStartAndEndNumbers),
+                          ),
+                        );
+                        Navigator.of(
                           context,
-                        ).showSnackBar(SnackBar(duration: const Duration(seconds: 2), content: Text(L.changedStartAndEndNumbers)));
-                        Navigator.of(context).popUntil((route) => route.isFirst);
+                        ).popUntil((route) => route.isFirst);
                       }
                     },
                   ),
@@ -93,11 +123,18 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                     children: [
                       Row(
                         children: [
-                          SvgPicture.asset('images/begin_display_number_setting.svg'),
+                          SvgPicture.asset(
+                            'images/begin_display_number_setting.svg',
+                          ),
                           const SizedBox(width: 4),
                           Text(
                             L.startOfPillDays,
-                            style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w700, color: TextColor.main),
+                            style: const TextStyle(
+                              fontFamily: FontFamily.japanese,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w700,
+                              color: TextColor.main,
+                            ),
                           ),
                         ],
                       ),
@@ -106,7 +143,12 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                         children: [
                           Text(
                             L.taking,
-                            style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 14, fontWeight: FontWeight.w400, color: TextColor.main),
+                            style: const TextStyle(
+                              fontFamily: FontFamily.japanese,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: TextColor.main,
+                            ),
                           ),
                           const SizedBox(width: 5),
                           SizedBox(
@@ -122,11 +164,16 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                               textAlign: TextAlign.center,
                               controller: beginTextFieldController,
                               keyboardType: TextInputType.number,
-                              inputFormatters: [FilteringTextInputFormatter.digitsOnly, AppTextFieldFormatter.greaterThanZero],
+                              inputFormatters: [
+                                FilteringTextInputFormatter.digitsOnly,
+                                AppTextFieldFormatter.greaterThanZero,
+                              ],
                               decoration: const InputDecoration(
                                 fillColor: AppColors.mat,
                                 filled: true,
-                                border: UnderlineInputBorder(borderSide: BorderSide(width: 1)),
+                                border: UnderlineInputBorder(
+                                  borderSide: BorderSide(width: 1),
+                                ),
                                 contentPadding: EdgeInsets.only(bottom: 8),
                               ),
                               onChanged: (text) {
@@ -139,7 +186,12 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                           const SizedBox(width: 5),
                           Text(
                             L.startFromNumber,
-                            style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 14, fontWeight: FontWeight.w400, color: TextColor.main),
+                            style: const TextStyle(
+                              fontFamily: FontFamily.japanese,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: TextColor.main,
+                            ),
                           ),
                         ],
                       ),
@@ -150,7 +202,10 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text(
-                              L.estimatedEndPillNumber(beforePillSheetGroup.sequentialEstimatedEndPillNumber),
+                              L.estimatedEndPillNumber(
+                                beforePillSheetGroup
+                                    .sequentialEstimatedEndPillNumber,
+                              ),
                               style: const TextStyle(
                                 fontFamily: FontFamily.japanese,
                                 fontSize: 12,
@@ -170,7 +225,12 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                       const SizedBox(width: 4),
                       Text(
                         L.changeEndOfPillDays,
-                        style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w700, color: TextColor.main),
+                        style: const TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
+                          color: TextColor.main,
+                        ),
                       ),
                     ],
                   ),
@@ -182,15 +242,25 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                         width: 42,
                         height: 40,
                         child: TextField(
-                          style: const TextStyle(color: TextColor.darkGray, fontSize: 15, fontFamily: FontFamily.number, fontWeight: FontWeight.w500),
+                          style: const TextStyle(
+                            color: TextColor.darkGray,
+                            fontSize: 15,
+                            fontFamily: FontFamily.number,
+                            fontWeight: FontWeight.w500,
+                          ),
                           textAlign: TextAlign.center,
                           controller: endTextFieldController,
                           keyboardType: TextInputType.number,
-                          inputFormatters: [FilteringTextInputFormatter.digitsOnly, AppTextFieldFormatter.greaterThanZero],
+                          inputFormatters: [
+                            FilteringTextInputFormatter.digitsOnly,
+                            AppTextFieldFormatter.greaterThanZero,
+                          ],
                           decoration: const InputDecoration(
                             fillColor: AppColors.mat,
                             filled: true,
-                            border: UnderlineInputBorder(borderSide: BorderSide(width: 1)),
+                            border: UnderlineInputBorder(
+                              borderSide: BorderSide(width: 1),
+                            ),
                             contentPadding: EdgeInsets.only(bottom: 8),
                           ),
                           onChanged: (text) {
@@ -203,7 +273,12 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                       const SizedBox(width: 5),
                       Text(
                         L.changedToNumber,
-                        style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 14, fontWeight: FontWeight.w400, color: TextColor.main),
+                        style: const TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: TextColor.main,
+                        ),
                       ),
                     ],
                   ),
@@ -227,13 +302,18 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
     if (begin.value == null && end.value == null) {
       updatedDisplayNumberSetting = null;
     } else {
-      updatedDisplayNumberSetting = PillSheetGroupDisplayNumberSetting(beginPillNumber: begin.value ?? 1, endPillNumber: end.value ?? 1);
+      updatedDisplayNumberSetting = PillSheetGroupDisplayNumberSetting(
+        beginPillNumber: begin.value ?? 1,
+        endPillNumber: end.value ?? 1,
+      );
     }
     if (updatedDisplayNumberSetting == null) {
       return;
     }
 
-    final updatedPillSheetGroup = pillSheetGroup.copyWith(displayNumberSetting: updatedDisplayNumberSetting);
+    final updatedPillSheetGroup = pillSheetGroup.copyWith(
+      displayNumberSetting: updatedDisplayNumberSetting,
+    );
     final batch = batchFactory.batch();
     if (begin.value != pillSheetGroup.displayNumberSetting?.beginPillNumber) {
       batchSetPillSheetModifiedHistory(
@@ -261,11 +341,15 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
   }
 }
 
-void showDisplayNumberSettingSheet(BuildContext context, {required PillSheetGroup pillSheetGroup}) {
+void showDisplayNumberSettingSheet(
+  BuildContext context, {
+  required PillSheetGroup pillSheetGroup,
+}) {
   analytics.logScreenView(screenName: 'DisplayNumberSettingSheet');
   showModalBottomSheet(
     context: context,
-    builder: (context) => DisplayNumberSettingSheet(pillSheetGroup: pillSheetGroup),
+    builder: (context) =>
+        DisplayNumberSettingSheet(pillSheetGroup: pillSheetGroup),
     backgroundColor: Colors.transparent,
     isScrollControlled: true,
   );

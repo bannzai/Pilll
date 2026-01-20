@@ -7,7 +7,12 @@ class DateAndTimePicker extends StatelessWidget {
   final DateTime? maximumDate;
   final void Function(DateTime datetime) done;
 
-  const DateAndTimePicker({super.key, required this.initialDateTime, this.maximumDate, required this.done});
+  const DateAndTimePicker({
+    super.key,
+    required this.initialDateTime,
+    this.maximumDate,
+    required this.done,
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -28,7 +28,11 @@ class ForceUpdate extends HookConsumerWidget {
       if (!Environment.isTest) {
         // Set global error page
         ErrorWidget.builder = (FlutterErrorDetails details) {
-          return UniversalErrorPage(error: details.exception.toString(), child: null, reload: () => ref.refresh(refreshAppProvider));
+          return UniversalErrorPage(
+            error: details.exception.toString(),
+            child: null,
+            reload: () => ref.refresh(refreshAppProvider),
+          );
         };
       }
 
@@ -56,7 +60,10 @@ class ForceUpdate extends HookConsumerWidget {
           title: L.forceUpdateTitle,
           message: L.forceUpdateMessage(storeName),
           ok: () async {
-            await launchUrl(Uri.parse(forceUpdateStoreURL), mode: LaunchMode.externalApplication);
+            await launchUrl(
+              Uri.parse(forceUpdateStoreURL),
+              mode: LaunchMode.externalApplication,
+            );
           },
         );
       });

@@ -11,13 +11,20 @@ class MenstruationListRow extends HookConsumerWidget {
   final Menstruation menstruation;
   final Menstruation? previousMenstruation;
 
-  const MenstruationListRow({super.key, required this.menstruation, required this.previousMenstruation});
+  const MenstruationListRow({
+    super.key,
+    required this.menstruation,
+    required this.previousMenstruation,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return GestureDetector(
       onTap: () {
-        showMenstruationEditSelectionSheet(context, MenstruationEditSelectionSheet(menstruation: menstruation));
+        showMenstruationEditSelectionSheet(
+          context,
+          MenstruationEditSelectionSheet(menstruation: menstruation),
+        );
       },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,14 +33,22 @@ class MenstruationListRow extends HookConsumerWidget {
             children: [
               Text(
                 _dateRange,
-                style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400, fontSize: 12, color: TextColor.main),
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 12,
+                  color: TextColor.main,
+                ),
               ),
             ],
           ),
           const SizedBox(height: 6),
           Container(
             width: _dotLineWidth,
-            decoration: BoxDecoration(color: AppColors.tinBackground, borderRadius: BorderRadius.circular(26)),
+            decoration: BoxDecoration(
+              color: AppColors.tinBackground,
+              borderRadius: BorderRadius.circular(26),
+            ),
             height: 20,
             child: Padding(
               padding: const EdgeInsets.only(left: 8.0),
@@ -46,7 +61,12 @@ class MenstruationListRow extends HookConsumerWidget {
                   Text(
                     _duration,
                     textAlign: TextAlign.end,
-                    style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.number, fontSize: 13, fontWeight: FontWeight.w400),
+                    style: const TextStyle(
+                      color: TextColor.main,
+                      fontFamily: FontFamily.number,
+                      fontSize: 13,
+                      fontWeight: FontWeight.w400,
+                    ),
                   ),
                   const SizedBox(width: 10),
                 ],
@@ -60,7 +80,10 @@ class MenstruationListRow extends HookConsumerWidget {
 
   Widget _circle() {
     return Container(
-      decoration: BoxDecoration(color: AppColors.menstruation, borderRadius: BorderRadius.circular(6)),
+      decoration: BoxDecoration(
+        color: AppColors.menstruation,
+        borderRadius: BorderRadius.circular(6),
+      ),
       width: 12,
       height: 12,
     );
@@ -87,5 +110,6 @@ class MenstruationListRow extends HookConsumerWidget {
     return widthForDay * menstruationDuration;
   }
 
-  int? get _menstruationDuration => menstruationsDiff(menstruation, previousMenstruation);
+  int? get _menstruationDuration =>
+      menstruationsDiff(menstruation, previousMenstruation);
 }

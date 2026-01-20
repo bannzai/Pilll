@@ -4,7 +4,11 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 class SkipInitialSetting extends HookConsumerWidget {
   final Widget Function(BuildContext) homePageBuilder;
   final Widget Function(BuildContext) initialSettingPageBuilder;
-  const SkipInitialSetting({super.key, required this.homePageBuilder, required this.initialSettingPageBuilder});
+  const SkipInitialSetting({
+    super.key,
+    required this.homePageBuilder,
+    required this.initialSettingPageBuilder,
+  });
 
   // 起動時にログインができなくなるユーザーがいてこれが起因している可能性がある。今は使用していないので一時的にコメントアウト
   @override

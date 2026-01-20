@@ -16,7 +16,9 @@ class PillTakenCountInput extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final textFieldController = useTextEditingController(text: '${pillTakenCount.value}');
+    final textFieldController = useTextEditingController(
+      text: '${pillTakenCount.value}',
+    );
 
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -24,18 +26,32 @@ class PillTakenCountInput extends HookConsumerWidget {
       children: [
         const Text(
           '1日に',
-          style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 14, fontWeight: FontWeight.w400, color: TextColor.main),
+          style: TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontSize: 14,
+            fontWeight: FontWeight.w400,
+            color: TextColor.main,
+          ),
         ),
         const SizedBox(width: 5),
         SizedBox(
           width: 42,
           height: 40,
           child: TextField(
-            style: const TextStyle(color: TextColor.darkGray, fontSize: 15, fontFamily: FontFamily.number, fontWeight: FontWeight.w500),
+            style: const TextStyle(
+              color: TextColor.darkGray,
+              fontSize: 15,
+              fontFamily: FontFamily.number,
+              fontWeight: FontWeight.w500,
+            ),
             textAlign: TextAlign.center,
             controller: textFieldController,
             keyboardType: TextInputType.number,
-            inputFormatters: [FilteringTextInputFormatter.digitsOnly, AppTextFieldFormatter.greaterThanZero, _MaxValueFormatter(2)],
+            inputFormatters: [
+              FilteringTextInputFormatter.digitsOnly,
+              AppTextFieldFormatter.greaterThanZero,
+              _MaxValueFormatter(2),
+            ],
             decoration: const InputDecoration(
               fillColor: AppColors.mat,
               filled: true,
@@ -53,7 +69,12 @@ class PillTakenCountInput extends HookConsumerWidget {
         const SizedBox(width: 5),
         const Text(
           '回服用する',
-          style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 14, fontWeight: FontWeight.w400, color: TextColor.main),
+          style: TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontSize: 14,
+            fontWeight: FontWeight.w400,
+            color: TextColor.main,
+          ),
         ),
       ],
     );
@@ -67,7 +88,10 @@ class _MaxValueFormatter extends TextInputFormatter {
   _MaxValueFormatter(this.maxValue);
 
   @override
-  TextEditingValue formatEditUpdate(TextEditingValue oldValue, TextEditingValue newValue) {
+  TextEditingValue formatEditUpdate(
+    TextEditingValue oldValue,
+    TextEditingValue newValue,
+  ) {
     if (newValue.text.isEmpty) {
       return newValue;
     }

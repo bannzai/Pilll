@@ -9,7 +9,9 @@ Exception? mapToDisplayedException(PlatformException exception) {
   final errorCode = PurchasesErrorHelper.getErrorCode(exception);
   switch (errorCode) {
     case PurchasesErrorCode.unknownError:
-      return FormatException(L.purchaseErrorUnknownError(exception.message ?? '', exception.details));
+      return FormatException(
+        L.purchaseErrorUnknownError(exception.message ?? '', exception.details),
+      );
     case PurchasesErrorCode.purchaseCancelledError:
       // NOTE: This exception indicates that the User has canceled.
       // See more details: https://docs.revenuecat.com/docs/errors#--purchase_cancelled
@@ -49,66 +51,185 @@ Exception? mapToDisplayedException(PlatformException exception) {
     case PurchasesErrorCode.invalidCredentialsError:
       // Maybe developer or store settings error
       // See more details: https://docs.revenuecat.com/docs/errors#---invalid_credentials
-      return FormatException(L.purchaseErrorInvalidCredentialsError(exception.message ?? '', exception.details));
+      return FormatException(
+        L.purchaseErrorInvalidCredentialsError(
+          exception.message ?? '',
+          exception.details,
+        ),
+      );
     case PurchasesErrorCode.unexpectedBackendResponseError:
       // Maybe RevenueCat incident
       // See more details: https://docs.revenuecat.com/docs/errors#-unexpected_backend_response_error
-      return FormatException(L.purchaseErrorUnexpectedBackendResponseError(exception.message ?? '', exception.details));
+      return FormatException(
+        L.purchaseErrorUnexpectedBackendResponseError(
+          exception.message ?? '',
+          exception.details,
+        ),
+      );
     case PurchasesErrorCode.receiptInUseByOtherSubscriberError:
-      return AlertError(L.purchaseErrorReceiptInUseByOtherSubscriberError(accountName));
+      return AlertError(
+        L.purchaseErrorReceiptInUseByOtherSubscriberError(accountName),
+      );
     case PurchasesErrorCode.invalidAppUserIdError:
-      return FormatException(L.purchaseErrorInvalidAppUserIdError(exception.message ?? '', exception.details));
+      return FormatException(
+        L.purchaseErrorInvalidAppUserIdError(
+          exception.message ?? '',
+          exception.details,
+        ),
+      );
     case PurchasesErrorCode.operationAlreadyInProgressError:
       return AlertError(L.purchaseErrorOperationAlreadyInProgressError);
     case PurchasesErrorCode.unknownBackendError:
       // Maybe RevenueCat incident
       // See more details: https://docs.revenuecat.com/docs/errors#-unknown_backend_error
-      return FormatException(L.purchaseErrorUnknownBackendError(exception.message ?? '', exception.details));
+      return FormatException(
+        L.purchaseErrorUnknownBackendError(
+          exception.message ?? '',
+          exception.details,
+        ),
+      );
     case PurchasesErrorCode.invalidAppleSubscriptionKeyError:
       // Maybe developer setting error on AppStore
       // See more details: https://docs.revenuecat.com/docs/errors#-invalid_apple_subscription_key
       // > In order to provide Subscription Offers you must first generate a subscription key.
-      return FormatException(L.purchaseErrorInvalidAppleSubscriptionKeyError(exception.message ?? '', exception.details));
+      return FormatException(
+        L.purchaseErrorInvalidAppleSubscriptionKeyError(
+          exception.message ?? '',
+          exception.details,
+        ),
+      );
     case PurchasesErrorCode.ineligibleError:
       // Invalidate user
       // See more details: https://docs.revenuecat.com/docs/errors#-ineligible_error
-      return FormatException(L.purchaseErrorIneligibleError(exception.message ?? '', exception.details));
+      return FormatException(
+        L.purchaseErrorIneligibleError(
+          exception.message ?? '',
+          exception.details,
+        ),
+      );
     case PurchasesErrorCode.insufficientPermissionsError:
-      return AlertError(L.purchaseErrorInsufficientPermissionsError(accountName));
+      return AlertError(
+        L.purchaseErrorInsufficientPermissionsError(accountName),
+      );
     case PurchasesErrorCode.paymentPendingError:
-      return AlertError(L.purchaseErrorPaymentPendingError(accountName, storeName));
+      return AlertError(
+        L.purchaseErrorPaymentPendingError(accountName, storeName),
+      );
     case PurchasesErrorCode.invalidSubscriberAttributesError:
       // See more details: https://docs.revenuecat.com/docs/errors#-invalid_subscriber_attributes
-      return FormatException(L.purchaseErrorInvalidSubscriberAttributesError(exception.message ?? '', exception.details));
-    case PurchasesErrorCode.logOutWithAnonymousUserError:
-      return FormatException(L.purchaseErrorLogOutWithAnonymousUserError(exception.message ?? '', exception.details));
-    case PurchasesErrorCode.configurationError:
-      return FormatException(L.purchaseErrorConfigurationError(exception.message ?? '', exception.details));
-    case PurchasesErrorCode.unsupportedError:
-      return FormatException(L.purchaseErrorUnsupportedError(exception.code, exception.message ?? '', exception.details));
-    case PurchasesErrorCode.emptySubscriberAttributesError:
-      return AlertError(L.purchaseErrorEmptySubscriberAttributesError(exception.message ?? '', exception.details));
-    case PurchasesErrorCode.productDiscountMissingIdentifierError:
-      return FormatException(L.purchaseErrorProductDiscountMissingIdentifierError(exception.code, exception.message ?? '', exception.details));
-    case PurchasesErrorCode.unknownNonNativeError:
-      return FormatException(L.purchaseErrorUnknownNonNativeError(exception.code, exception.message ?? '', exception.details));
-    case PurchasesErrorCode.productDiscountMissingSubscriptionGroupIdentifierError:
       return FormatException(
-        L.purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError(exception.code, exception.message ?? '', exception.details),
+        L.purchaseErrorInvalidSubscriberAttributesError(
+          exception.message ?? '',
+          exception.details,
+        ),
+      );
+    case PurchasesErrorCode.logOutWithAnonymousUserError:
+      return FormatException(
+        L.purchaseErrorLogOutWithAnonymousUserError(
+          exception.message ?? '',
+          exception.details,
+        ),
+      );
+    case PurchasesErrorCode.configurationError:
+      return FormatException(
+        L.purchaseErrorConfigurationError(
+          exception.message ?? '',
+          exception.details,
+        ),
+      );
+    case PurchasesErrorCode.unsupportedError:
+      return FormatException(
+        L.purchaseErrorUnsupportedError(
+          exception.code,
+          exception.message ?? '',
+          exception.details,
+        ),
+      );
+    case PurchasesErrorCode.emptySubscriberAttributesError:
+      return AlertError(
+        L.purchaseErrorEmptySubscriberAttributesError(
+          exception.message ?? '',
+          exception.details,
+        ),
+      );
+    case PurchasesErrorCode.productDiscountMissingIdentifierError:
+      return FormatException(
+        L.purchaseErrorProductDiscountMissingIdentifierError(
+          exception.code,
+          exception.message ?? '',
+          exception.details,
+        ),
+      );
+    case PurchasesErrorCode.unknownNonNativeError:
+      return FormatException(
+        L.purchaseErrorUnknownNonNativeError(
+          exception.code,
+          exception.message ?? '',
+          exception.details,
+        ),
+      );
+    case PurchasesErrorCode
+        .productDiscountMissingSubscriptionGroupIdentifierError:
+      return FormatException(
+        L.purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError(
+          exception.code,
+          exception.message ?? '',
+          exception.details,
+        ),
       );
     case PurchasesErrorCode.customerInfoError:
-      return FormatException(L.purchaseErrorCustomerInfoError(exception.code, exception.message ?? '', exception.details));
+      return FormatException(
+        L.purchaseErrorCustomerInfoError(
+          exception.code,
+          exception.message ?? '',
+          exception.details,
+        ),
+      );
     case PurchasesErrorCode.systemInfoError:
-      return FormatException(L.purchaseErrorSystemInfoError(exception.code, exception.message ?? '', exception.details));
+      return FormatException(
+        L.purchaseErrorSystemInfoError(
+          exception.code,
+          exception.message ?? '',
+          exception.details,
+        ),
+      );
     case PurchasesErrorCode.beginRefundRequestError:
-      return FormatException(L.purchaseErrorBeginRefundRequestError(exception.code, exception.message ?? '', exception.details));
+      return FormatException(
+        L.purchaseErrorBeginRefundRequestError(
+          exception.code,
+          exception.message ?? '',
+          exception.details,
+        ),
+      );
     case PurchasesErrorCode.productRequestTimeout:
-      return FormatException(L.purchaseErrorProductRequestTimeout(exception.message ?? '', exception.details));
+      return FormatException(
+        L.purchaseErrorProductRequestTimeout(
+          exception.message ?? '',
+          exception.details,
+        ),
+      );
     case PurchasesErrorCode.apiEndpointBlocked:
-      return FormatException(L.purchaseErrorApiEndpointBlocked(exception.code, exception.message ?? '', exception.details));
+      return FormatException(
+        L.purchaseErrorApiEndpointBlocked(
+          exception.code,
+          exception.message ?? '',
+          exception.details,
+        ),
+      );
     case PurchasesErrorCode.invalidPromotionalOfferError:
-      return FormatException(L.purchaseErrorInvalidPromotionalOfferError(exception.code, exception.message ?? '', exception.details));
+      return FormatException(
+        L.purchaseErrorInvalidPromotionalOfferError(
+          exception.code,
+          exception.message ?? '',
+          exception.details,
+        ),
+      );
     case PurchasesErrorCode.offlineConnectionError:
-      return FormatException(L.purchaseErrorOfflineConnectionError(exception.message ?? '', exception.details));
+      return FormatException(
+        L.purchaseErrorOfflineConnectionError(
+          exception.message ?? '',
+          exception.details,
+        ),
+      );
   }
 }

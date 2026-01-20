@@ -20,10 +20,15 @@ class MenstruationRow extends HookConsumerWidget {
         children: [
           Text(
             L.aboutMenstruation,
-            style: const TextStyle(fontFamily: FontFamily.roboto, fontWeight: FontWeight.w300, fontSize: 16),
+            style: const TextStyle(
+              fontFamily: FontFamily.roboto,
+              fontWeight: FontWeight.w300,
+              fontSize: 16,
+            ),
           ),
           const SizedBox(width: 8),
-          if (_hasError) SvgPicture.asset('images/alert_24.svg', width: 24, height: 24),
+          if (_hasError)
+            SvgPicture.asset('images/alert_24.svg', width: 24, height: 24),
         ],
       ),
       subtitle: _hasError ? Text(L.checkPillNumberForMenstruationStart) : null,
@@ -39,7 +44,9 @@ class MenstruationRow extends HookConsumerWidget {
       return false;
     }
 
-    final totalCount = setting.pillSheetEnumTypes.map((e) => e.totalCount).reduce((value, element) => value + element);
+    final totalCount = setting.pillSheetEnumTypes
+        .map((e) => e.totalCount)
+        .reduce((value, element) => value + element);
     return totalCount < setting.pillNumberForFromMenstruation;
   }
 }

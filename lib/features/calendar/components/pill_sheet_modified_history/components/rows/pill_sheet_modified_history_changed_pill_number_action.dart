@@ -12,7 +12,11 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
   final PillSheetModifiedHistory history;
 
-  const PillSheetModifiedHistoryChangedPillNumberAction({super.key, required this.estimatedEventCausingDate, required this.history});
+  const PillSheetModifiedHistoryChangedPillNumberAction({
+    super.key,
+    required this.estimatedEventCausingDate,
+    required this.history,
+  });
   @override
   Widget build(BuildContext context) {
     final beforePillSheetGroup = history.beforePillSheetGroup;
@@ -20,16 +24,18 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
     if (beforePillSheetGroup == null || afterPillSheetGroup == null) {
       return Text(L.failedToGetPillSheetHistory('changedPillNumber'));
     }
-    final beforeTodayPillNumber = beforePillSheetGroup.pillNumberWithoutDateOrZeroFromDate(
-      pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
-      targetDate: estimatedEventCausingDate,
-      estimatedEventCausingDate: estimatedEventCausingDate,
-    );
-    final afterTodayPillNumber = afterPillSheetGroup.pillNumberWithoutDateOrZeroFromDate(
-      pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
-      targetDate: estimatedEventCausingDate,
-      estimatedEventCausingDate: estimatedEventCausingDate,
-    );
+    final beforeTodayPillNumber = beforePillSheetGroup
+        .pillNumberWithoutDateOrZeroFromDate(
+          pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+          targetDate: estimatedEventCausingDate,
+          estimatedEventCausingDate: estimatedEventCausingDate,
+        );
+    final afterTodayPillNumber = afterPillSheetGroup
+        .pillNumberWithoutDateOrZeroFromDate(
+          pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+          targetDate: estimatedEventCausingDate,
+          estimatedEventCausingDate: estimatedEventCausingDate,
+        );
 
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
@@ -42,7 +48,12 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
       ),
       detail: Text(
         L.changedPillNumber,
-        style: const TextStyle(color: TextColor.main, fontSize: 12, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400),
+        style: const TextStyle(
+          color: TextColor.main,
+          fontSize: 12,
+          fontFamily: FontFamily.japanese,
+          fontWeight: FontWeight.w400,
+        ),
         textAlign: TextAlign.start,
       ),
     );

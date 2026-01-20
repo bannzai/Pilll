@@ -26,27 +26,57 @@ class MenstruationCard extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SvgPicture.asset('images/menstruation.svg', width: 24, colorFilter: const ColorFilter.mode(AppColors.red, BlendMode.srcIn)),
+                    SvgPicture.asset(
+                      'images/menstruation.svg',
+                      width: 24,
+                      colorFilter: const ColorFilter.mode(
+                        AppColors.red,
+                        BlendMode.srcIn,
+                      ),
+                    ),
                     Text(
                       state.title,
-                      style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.noshime),
+                      style: const TextStyle(
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w300,
+                        fontSize: 14,
+                        color: TextColor.noshime,
+                      ),
                     ),
                   ],
                 ),
                 const SizedBox(width: 12),
                 Text(
                   DateTimeFormatter.monthAndWeekday(state.scheduleDate),
-                  style: const TextStyle(color: TextColor.gray, fontSize: 20, fontWeight: FontWeight.w500, fontFamily: FontFamily.japanese),
+                  style: const TextStyle(
+                    color: TextColor.gray,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    fontFamily: FontFamily.japanese,
+                  ),
                 ),
               ],
             ),
             const SizedBox(height: 8),
             Container(
-              padding: const EdgeInsets.only(left: 32, right: 32, top: 2, bottom: 2),
-              decoration: BoxDecoration(color: AppColors.primary, borderRadius: BorderRadius.circular(30)),
+              padding: const EdgeInsets.only(
+                left: 32,
+                right: 32,
+                top: 2,
+                bottom: 2,
+              ),
+              decoration: BoxDecoration(
+                color: AppColors.primary,
+                borderRadius: BorderRadius.circular(30),
+              ),
               child: Text(
                 state.countdownString,
-                style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 14, color: TextColor.white),
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                  color: TextColor.white,
+                ),
               ),
             ),
           ],

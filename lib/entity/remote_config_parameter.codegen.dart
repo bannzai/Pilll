@@ -30,19 +30,24 @@ abstract class RemoteConfigKeys {
   static const premiumIntroductionPattern = 'premiumIntroductionPattern';
 
   /// プレミアム紹介でApp Storeレビューカードを表示するかのフラグキー
-  static const premiumIntroductionShowsAppStoreReviewCard = 'premiumIntroductionShowsAppStoreReviewCard';
+  static const premiumIntroductionShowsAppStoreReviewCard =
+      'premiumIntroductionShowsAppStoreReviewCard';
 
   /// 特別オファー対象ユーザー作成日時の基準オフセット値キー
-  static const specialOfferingUserCreationDateTimeOffset = 'specialOfferingUserCreationDateTimeOffset';
+  static const specialOfferingUserCreationDateTimeOffset =
+      'specialOfferingUserCreationDateTimeOffset';
 
   /// 特別オファー開始の基準オフセット値キー
-  static const specialOfferingUserCreationDateTimeOffsetSince = 'specialOfferingUserCreationDateTimeOffsetSince';
+  static const specialOfferingUserCreationDateTimeOffsetSince =
+      'specialOfferingUserCreationDateTimeOffsetSince';
 
   /// 特別オファー終了の基準オフセット値キー
-  static const specialOfferingUserCreationDateTimeOffsetUntil = 'specialOfferingUserCreationDateTimeOffsetUntil';
+  static const specialOfferingUserCreationDateTimeOffsetUntil =
+      'specialOfferingUserCreationDateTimeOffsetUntil';
 
   /// 特別オファー2で代替テキストを使用するかのフラグキー
-  static const specialOffering2UseAlternativeText = 'specialOffering2UseAlternativeText';
+  static const specialOffering2UseAlternativeText =
+      'specialOffering2UseAlternativeText';
 }
 
 /// Remote Configパラメータのデフォルト値定義
@@ -99,48 +104,74 @@ class RemoteConfigParameter with _$RemoteConfigParameter {
   factory RemoteConfigParameter({
     /// ペイウォール画面を最初に表示するかどうか
     /// trueの場合、アプリ起動時にプレミアム機能の課金画面を先に表示する
-    @Default(RemoteConfigParameterDefaultValues.isPaywallFirst) bool isPaywallFirst,
+    @Default(RemoteConfigParameterDefaultValues.isPaywallFirst)
+    bool isPaywallFirst,
 
     /// 初期設定画面をスキップするかどうか
     /// trueの場合、新規ユーザーでも初期設定をバイパスしてメイン画面へ遷移
-    @Default(RemoteConfigParameterDefaultValues.skipInitialSetting) bool skipInitialSetting,
+    @Default(RemoteConfigParameterDefaultValues.skipInitialSetting)
+    bool skipInitialSetting,
 
     /// トライアル期限日の基準日からのオフセット日数
     /// ユーザー登録日からこの日数後にトライアル期限が設定される
-    @Default(RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay) int trialDeadlineDateOffsetDay,
+    @Default(RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay)
+    int trialDeadlineDateOffsetDay,
 
     /// 割引プラン権利付与の基準日からのオフセット日数
     /// ユーザー登録日からこの日数後に割引プランの権利が付与される
-    @Default(RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay) int discountEntitlementOffsetDay,
+    @Default(RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay)
+    int discountEntitlementOffsetDay,
 
     /// 割引カウントダウン表示の境界時間（時間単位）
     /// この時間以内になったら割引期限のカウントダウンを表示する
-    @Default(RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour) int discountCountdownBoundaryHour,
+    @Default(RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour)
+    int discountCountdownBoundaryHour,
 
     /// プレミアム機能紹介パターンの識別子
     /// A/Bテスト用のパターン識別子（'default', 'A', 'B'等）
-    @Default(RemoteConfigParameterDefaultValues.premiumIntroductionPattern) String premiumIntroductionPattern,
+    @Default(RemoteConfigParameterDefaultValues.premiumIntroductionPattern)
+    String premiumIntroductionPattern,
 
     /// プレミアム紹介画面でApp Storeレビューカードを表示するか
     /// trueの場合、プレミアム機能紹介時にレビュー促進カードも表示
-    @Default(RemoteConfigParameterDefaultValues.premiumIntroductionShowsAppStoreReviewCard) bool premiumIntroductionShowsAppStoreReviewCard,
+    @Default(
+      RemoteConfigParameterDefaultValues
+          .premiumIntroductionShowsAppStoreReviewCard,
+    )
+    bool premiumIntroductionShowsAppStoreReviewCard,
 
     /// 特別オファー対象ユーザー作成日時の基準オフセット値（分単位）
     /// ユーザー登録からこの分数経過したユーザーが特別オファーの対象となる
-    @Default(RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffset) int specialOfferingUserCreationDateTimeOffset,
+    @Default(
+      RemoteConfigParameterDefaultValues
+          .specialOfferingUserCreationDateTimeOffset,
+    )
+    int specialOfferingUserCreationDateTimeOffset,
 
     /// 特別オファー開始の基準オフセット値（分単位）
     /// 特別オファーの表示開始タイミングを制御する
-    @Default(RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetSince) int specialOfferingUserCreationDateTimeOffsetSince,
+    @Default(
+      RemoteConfigParameterDefaultValues
+          .specialOfferingUserCreationDateTimeOffsetSince,
+    )
+    int specialOfferingUserCreationDateTimeOffsetSince,
 
     /// 特別オファー終了の基準オフセット値（分単位）
     /// 特別オファーの表示終了タイミングを制御する
-    @Default(RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil) int specialOfferingUserCreationDateTimeOffsetUntil,
+    @Default(
+      RemoteConfigParameterDefaultValues
+          .specialOfferingUserCreationDateTimeOffsetUntil,
+    )
+    int specialOfferingUserCreationDateTimeOffsetUntil,
 
     /// 特別オファー2で代替テキストを使用するかどうか
     /// trueの場合、特別オファー2画面で異なるテキスト表現を使用する
-    @Default(RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText) bool specialOffering2UseAlternativeText,
+    @Default(
+      RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
+    )
+    bool specialOffering2UseAlternativeText,
   }) = _RemoteConfigParameter;
   RemoteConfigParameter._();
-  factory RemoteConfigParameter.fromJson(Map<String, dynamic> json) => _$RemoteConfigParameterFromJson(json);
+  factory RemoteConfigParameter.fromJson(Map<String, dynamic> json) =>
+      _$RemoteConfigParameterFromJson(json);
 }

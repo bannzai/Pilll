@@ -11,7 +11,11 @@ class PillSheetModifiedHistoryEndedRestDuration extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
   final EndedRestDurationValue? value;
 
-  const PillSheetModifiedHistoryEndedRestDuration({super.key, required this.estimatedEventCausingDate, required this.value});
+  const PillSheetModifiedHistoryEndedRestDuration({
+    super.key,
+    required this.estimatedEventCausingDate,
+    required this.value,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +25,17 @@ class PillSheetModifiedHistoryEndedRestDuration extends StatelessWidget {
     }
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      pillNumbersOrHyphenOrDate: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.hyphen()),
+      pillNumbersOrHyphenOrDate: PillNumber(
+        pillNumber: PillSheetModifiedHistoryPillNumberOrDate.hyphen(),
+      ),
       detail: Text(
         L.resumeTaking,
-        style: const TextStyle(color: TextColor.main, fontSize: 12, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400),
+        style: const TextStyle(
+          color: TextColor.main,
+          fontSize: 12,
+          fontFamily: FontFamily.japanese,
+          fontWeight: FontWeight.w400,
+        ),
         textAlign: TextAlign.start,
       ),
     );

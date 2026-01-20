@@ -10,8 +10,14 @@ part 'remote_config_parameter.g.dart';
 RemoteConfigParameter remoteConfigParameter(RemoteConfigParameterRef ref) {
   // fetchAndActiveをentrypointで完了しているので値が取れる想定
   return RemoteConfigParameter(
-    isPaywallFirst: remoteConfig.getBoolOrDefault(RemoteConfigKeys.isPaywallFirst, RemoteConfigParameterDefaultValues.isPaywallFirst),
-    skipInitialSetting: remoteConfig.getBoolOrDefault(RemoteConfigKeys.skipInitialSetting, RemoteConfigParameterDefaultValues.skipInitialSetting),
+    isPaywallFirst: remoteConfig.getBoolOrDefault(
+      RemoteConfigKeys.isPaywallFirst,
+      RemoteConfigParameterDefaultValues.isPaywallFirst,
+    ),
+    skipInitialSetting: remoteConfig.getBoolOrDefault(
+      RemoteConfigKeys.skipInitialSetting,
+      RemoteConfigParameterDefaultValues.skipInitialSetting,
+    ),
     trialDeadlineDateOffsetDay: remoteConfig.getIntOrDefault(
       RemoteConfigKeys.trialDeadlineDateOffsetDay,
       RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,
@@ -26,20 +32,26 @@ RemoteConfigParameter remoteConfigParameter(RemoteConfigParameterRef ref) {
     ),
     premiumIntroductionShowsAppStoreReviewCard: remoteConfig.getBoolOrDefault(
       RemoteConfigKeys.premiumIntroductionShowsAppStoreReviewCard,
-      RemoteConfigParameterDefaultValues.premiumIntroductionShowsAppStoreReviewCard,
+      RemoteConfigParameterDefaultValues
+          .premiumIntroductionShowsAppStoreReviewCard,
     ),
     specialOfferingUserCreationDateTimeOffset: remoteConfig.getIntOrDefault(
       RemoteConfigKeys.specialOfferingUserCreationDateTimeOffset,
-      RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffset,
+      RemoteConfigParameterDefaultValues
+          .specialOfferingUserCreationDateTimeOffset,
     ),
-    specialOfferingUserCreationDateTimeOffsetSince: remoteConfig.getIntOrDefault(
-      RemoteConfigKeys.specialOfferingUserCreationDateTimeOffsetSince,
-      RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetSince,
-    ),
-    specialOfferingUserCreationDateTimeOffsetUntil: remoteConfig.getIntOrDefault(
-      RemoteConfigKeys.specialOfferingUserCreationDateTimeOffsetUntil,
-      RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil,
-    ),
+    specialOfferingUserCreationDateTimeOffsetSince: remoteConfig
+        .getIntOrDefault(
+          RemoteConfigKeys.specialOfferingUserCreationDateTimeOffsetSince,
+          RemoteConfigParameterDefaultValues
+              .specialOfferingUserCreationDateTimeOffsetSince,
+        ),
+    specialOfferingUserCreationDateTimeOffsetUntil: remoteConfig
+        .getIntOrDefault(
+          RemoteConfigKeys.specialOfferingUserCreationDateTimeOffsetUntil,
+          RemoteConfigParameterDefaultValues
+              .specialOfferingUserCreationDateTimeOffsetUntil,
+        ),
     specialOffering2UseAlternativeText: remoteConfig.getBoolOrDefault(
       RemoteConfigKeys.specialOffering2UseAlternativeText,
       RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,

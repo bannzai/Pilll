@@ -26,29 +26,54 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     final setting = ref.watch(settingProvider).requireValue;
 
     final word = useState(setting.reminderNotificationCustomization.word);
-    final dailyTakenMessage = useState(setting.reminderNotificationCustomization.dailyTakenMessage);
-    final missedTakenMessage = useState(setting.reminderNotificationCustomization.missedTakenMessage);
-    final wordTextFieldController = useTextEditingController(text: setting.reminderNotificationCustomization.word);
-    final dailyTakenMessageTextFieldController = useTextEditingController(text: setting.reminderNotificationCustomization.dailyTakenMessage);
-    final missedTakenMessageTextFieldController = useTextEditingController(text: setting.reminderNotificationCustomization.missedTakenMessage);
+    final dailyTakenMessage = useState(
+      setting.reminderNotificationCustomization.dailyTakenMessage,
+    );
+    final missedTakenMessage = useState(
+      setting.reminderNotificationCustomization.missedTakenMessage,
+    );
+    final wordTextFieldController = useTextEditingController(
+      text: setting.reminderNotificationCustomization.word,
+    );
+    final dailyTakenMessageTextFieldController = useTextEditingController(
+      text: setting.reminderNotificationCustomization.dailyTakenMessage,
+    );
+    final missedTakenMessageTextFieldController = useTextEditingController(
+      text: setting.reminderNotificationCustomization.missedTakenMessage,
+    );
     final wordFocusNode = useFocusNode();
     final dailyTakenMessageFocusNode = useFocusNode();
     final missedTakenMessageFocusNode = useFocusNode();
 
-    final isInVisibleReminderDate = useState(setting.reminderNotificationCustomization.isInVisibleReminderDate);
-    final isInVisiblePillNumber = useState(setting.reminderNotificationCustomization.isInVisiblePillNumber);
-    final isInVisibleDescription = useState(setting.reminderNotificationCustomization.isInVisibleDescription);
+    final isInVisibleReminderDate = useState(
+      setting.reminderNotificationCustomization.isInVisibleReminderDate,
+    );
+    final isInVisiblePillNumber = useState(
+      setting.reminderNotificationCustomization.isInVisiblePillNumber,
+    );
+    final isInVisibleDescription = useState(
+      setting.reminderNotificationCustomization.isInVisibleDescription,
+    );
 
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final registerReminderLocalNotification = ref.watch(
+      registerReminderLocalNotificationProvider,
+    );
 
     void wordSubmit() async {
       try {
         analytics.logEvent(name: 'submit_rnc_word');
 
-        var reminderNotificationCustomization = setting.reminderNotificationCustomization;
-        reminderNotificationCustomization = reminderNotificationCustomization.copyWith(word: word.value);
+        var reminderNotificationCustomization =
+            setting.reminderNotificationCustomization;
+        reminderNotificationCustomization = reminderNotificationCustomization
+            .copyWith(word: word.value);
 
-        await setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
+        await setSetting(
+          setting.copyWith(
+            reminderNotificationCustomization:
+                reminderNotificationCustomization,
+          ),
+        );
         await registerReminderLocalNotification();
 
         wordFocusNode.unfocus();
@@ -61,10 +86,17 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
       try {
         analytics.logEvent(name: 'submit_rnc_daily_message');
 
-        var reminderNotificationCustomization = setting.reminderNotificationCustomization;
-        reminderNotificationCustomization = reminderNotificationCustomization.copyWith(dailyTakenMessage: dailyTakenMessage.value);
+        var reminderNotificationCustomization =
+            setting.reminderNotificationCustomization;
+        reminderNotificationCustomization = reminderNotificationCustomization
+            .copyWith(dailyTakenMessage: dailyTakenMessage.value);
 
-        setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
+        setSetting(
+          setting.copyWith(
+            reminderNotificationCustomization:
+                reminderNotificationCustomization,
+          ),
+        );
         registerReminderLocalNotification();
 
         dailyTakenMessageFocusNode.unfocus();
@@ -77,10 +109,17 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
       try {
         analytics.logEvent(name: 'submit_rnc_missed_message');
 
-        var reminderNotificationCustomization = setting.reminderNotificationCustomization;
-        reminderNotificationCustomization = reminderNotificationCustomization.copyWith(missedTakenMessage: missedTakenMessage.value);
+        var reminderNotificationCustomization =
+            setting.reminderNotificationCustomization;
+        reminderNotificationCustomization = reminderNotificationCustomization
+            .copyWith(missedTakenMessage: missedTakenMessage.value);
 
-        setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
+        setSetting(
+          setting.copyWith(
+            reminderNotificationCustomization:
+                reminderNotificationCustomization,
+          ),
+        );
         registerReminderLocalNotification();
 
         missedTakenMessageFocusNode.unfocus();
@@ -96,7 +135,10 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: Text(L.customizeMedicationNotifications, style: const TextStyle(color: TextColor.black)),
+        title: Text(
+          L.customizeMedicationNotifications,
+          style: const TextStyle(color: TextColor.black),
+        ),
         backgroundColor: AppColors.background,
       ),
       body: SafeArea(
@@ -106,7 +148,10 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
               child: ListView(
                 children: [
                   Container(
-                    padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 20,
+                      horizontal: 16,
+                    ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -139,9 +184,12 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                                 ReminderPushNotificationPreview(
                                   word: word.value,
                                   message: dailyTakenMessage.value,
-                                  isInVisibleReminderDate: isInVisibleReminderDate.value,
-                                  isInvisiblePillNumber: isInVisiblePillNumber.value,
-                                  isInvisibleDescription: isInVisibleDescription.value,
+                                  isInVisibleReminderDate:
+                                      isInVisibleReminderDate.value,
+                                  isInvisiblePillNumber:
+                                      isInVisiblePillNumber.value,
+                                  isInvisibleDescription:
+                                      isInVisibleDescription.value,
                                 ),
                               ],
                             ),
@@ -162,9 +210,12 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                                 ReminderPushNotificationPreview(
                                   word: word.value,
                                   message: missedTakenMessage.value,
-                                  isInVisibleReminderDate: isInVisibleReminderDate.value,
-                                  isInvisiblePillNumber: isInVisiblePillNumber.value,
-                                  isInvisibleDescription: isInVisibleDescription.value,
+                                  isInVisibleReminderDate:
+                                      isInVisibleReminderDate.value,
+                                  isInvisiblePillNumber:
+                                      isInVisiblePillNumber.value,
+                                  isInvisibleDescription:
+                                      isInVisibleDescription.value,
                                 ),
                               ],
                             ),
@@ -183,7 +234,12 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                                 color: TextColor.primary,
                               ),
                             ),
-                            WordTextField(word: word, textFieldController: wordTextFieldController, focusNode: wordFocusNode, submit: wordSubmit),
+                            WordTextField(
+                              word: word,
+                              textFieldController: wordTextFieldController,
+                              focusNode: wordFocusNode,
+                              submit: wordSubmit,
+                            ),
                           ],
                         ),
                         const SizedBox(height: 20),
@@ -201,13 +257,15 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                             ),
                             DailyTakenMessageTextField(
                               dailyTakenMessage: dailyTakenMessage,
-                              textFieldController: dailyTakenMessageTextFieldController,
+                              textFieldController:
+                                  dailyTakenMessageTextFieldController,
                               focusNode: dailyTakenMessageFocusNode,
                             ),
                             const SizedBox(height: 10),
                             MissedTakenMessageTextField(
                               missedTakenMessage: missedTakenMessage,
-                              textFieldController: missedTakenMessageTextFieldController,
+                              textFieldController:
+                                  missedTakenMessageTextFieldController,
                               focusNode: missedTakenMessageFocusNode,
                             ),
                           ],
@@ -226,50 +284,74 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                               ),
                             ),
                             const SizedBox(height: 4),
-                            _switchRow(L.showsDate, !isInVisibleReminderDate.value, (value) async {
-                              analytics.logEvent(name: 'change_reminder_notification_date');
-                              try {
-                                await _setIsInVisibleReminderDate(
-                                  isInVisibleReminderDate: !value,
-                                  setting: setting,
-                                  setSetting: setSetting,
-                                  registerReminderLocalNotification: registerReminderLocalNotification,
+                            _switchRow(
+                              L.showsDate,
+                              !isInVisibleReminderDate.value,
+                              (value) async {
+                                analytics.logEvent(
+                                  name: 'change_reminder_notification_date',
                                 );
-                                isInVisibleReminderDate.value = !value;
-                              } catch (error) {
-                                if (context.mounted) showErrorAlert(context, error);
-                              }
-                            }),
+                                try {
+                                  await _setIsInVisibleReminderDate(
+                                    isInVisibleReminderDate: !value,
+                                    setting: setting,
+                                    setSetting: setSetting,
+                                    registerReminderLocalNotification:
+                                        registerReminderLocalNotification,
+                                  );
+                                  isInVisibleReminderDate.value = !value;
+                                } catch (error) {
+                                  if (context.mounted)
+                                    showErrorAlert(context, error);
+                                }
+                              },
+                            ),
                             const Divider(),
-                            _switchRow(L.showsPillNumber, !isInVisiblePillNumber.value, (value) async {
-                              analytics.logEvent(name: 'change_reminder_notification_number');
-                              try {
-                                await _setIsInVisiblePillNumber(
-                                  isInVisiblePillNumber: !value,
-                                  setting: setting,
-                                  setSetting: setSetting,
-                                  registerReminderLocalNotification: registerReminderLocalNotification,
+                            _switchRow(
+                              L.showsPillNumber,
+                              !isInVisiblePillNumber.value,
+                              (value) async {
+                                analytics.logEvent(
+                                  name: 'change_reminder_notification_number',
                                 );
-                                isInVisiblePillNumber.value = !value;
-                              } catch (error) {
-                                if (context.mounted) showErrorAlert(context, error);
-                              }
-                            }),
+                                try {
+                                  await _setIsInVisiblePillNumber(
+                                    isInVisiblePillNumber: !value,
+                                    setting: setting,
+                                    setSetting: setSetting,
+                                    registerReminderLocalNotification:
+                                        registerReminderLocalNotification,
+                                  );
+                                  isInVisiblePillNumber.value = !value;
+                                } catch (error) {
+                                  if (context.mounted)
+                                    showErrorAlert(context, error);
+                                }
+                              },
+                            ),
                             const Divider(),
-                            _switchRow(L.showsDescription, !isInVisibleDescription.value, (value) async {
-                              analytics.logEvent(name: 'change_reminder_notification_desc');
-                              try {
-                                await _setIsInVisibleDescription(
-                                  isInVisibleDescription: !value,
-                                  setting: setting,
-                                  setSetting: setSetting,
-                                  registerReminderLocalNotification: registerReminderLocalNotification,
+                            _switchRow(
+                              L.showsDescription,
+                              !isInVisibleDescription.value,
+                              (value) async {
+                                analytics.logEvent(
+                                  name: 'change_reminder_notification_desc',
                                 );
-                                isInVisibleDescription.value = !value;
-                              } catch (error) {
-                                if (context.mounted) showErrorAlert(context, error);
-                              }
-                            }),
+                                try {
+                                  await _setIsInVisibleDescription(
+                                    isInVisibleDescription: !value,
+                                    setting: setting,
+                                    setSetting: setSetting,
+                                    registerReminderLocalNotification:
+                                        registerReminderLocalNotification,
+                                  );
+                                  isInVisibleDescription.value = !value;
+                                } catch (error) {
+                                  if (context.mounted)
+                                    showErrorAlert(context, error);
+                                }
+                              },
+                            ),
                             const Divider(),
                           ],
                         ),
@@ -321,14 +403,23 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     );
   }
 
-  Widget _switchRow(String title, bool initialValue, ValueChanged<bool> onChanged) {
+  Widget _switchRow(
+    String title,
+    bool initialValue,
+    ValueChanged<bool> onChanged,
+  ) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 2),
       child: Row(
         children: [
           Text(
             title,
-            style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400, fontSize: 16),
+            style: const TextStyle(
+              color: TextColor.main,
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w400,
+              fontSize: 16,
+            ),
           ),
           const Spacer(),
           Switch(value: initialValue, onChanged: onChanged),
@@ -341,12 +432,19 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     required bool isInVisibleReminderDate,
     required Setting setting,
     required SetSetting setSetting,
-    required RegisterReminderLocalNotification registerReminderLocalNotification,
+    required RegisterReminderLocalNotification
+    registerReminderLocalNotification,
   }) async {
-    var reminderNotificationCustomization = setting.reminderNotificationCustomization;
-    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(isInVisibleReminderDate: isInVisibleReminderDate);
+    var reminderNotificationCustomization =
+        setting.reminderNotificationCustomization;
+    reminderNotificationCustomization = reminderNotificationCustomization
+        .copyWith(isInVisibleReminderDate: isInVisibleReminderDate);
 
-    setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
+    setSetting(
+      setting.copyWith(
+        reminderNotificationCustomization: reminderNotificationCustomization,
+      ),
+    );
     registerReminderLocalNotification();
   }
 
@@ -354,12 +452,19 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     required bool isInVisiblePillNumber,
     required Setting setting,
     required SetSetting setSetting,
-    required RegisterReminderLocalNotification registerReminderLocalNotification,
+    required RegisterReminderLocalNotification
+    registerReminderLocalNotification,
   }) async {
-    var reminderNotificationCustomization = setting.reminderNotificationCustomization;
-    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(isInVisiblePillNumber: isInVisiblePillNumber);
+    var reminderNotificationCustomization =
+        setting.reminderNotificationCustomization;
+    reminderNotificationCustomization = reminderNotificationCustomization
+        .copyWith(isInVisiblePillNumber: isInVisiblePillNumber);
 
-    setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
+    setSetting(
+      setting.copyWith(
+        reminderNotificationCustomization: reminderNotificationCustomization,
+      ),
+    );
     registerReminderLocalNotification();
   }
 
@@ -367,20 +472,30 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     required bool isInVisibleDescription,
     required Setting setting,
     required SetSetting setSetting,
-    required RegisterReminderLocalNotification registerReminderLocalNotification,
+    required RegisterReminderLocalNotification
+    registerReminderLocalNotification,
   }) async {
-    var reminderNotificationCustomization = setting.reminderNotificationCustomization;
-    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(isInVisibleDescription: isInVisibleDescription);
+    var reminderNotificationCustomization =
+        setting.reminderNotificationCustomization;
+    reminderNotificationCustomization = reminderNotificationCustomization
+        .copyWith(isInVisibleDescription: isInVisibleDescription);
 
-    await setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
+    await setSetting(
+      setting.copyWith(
+        reminderNotificationCustomization: reminderNotificationCustomization,
+      ),
+    );
     await registerReminderLocalNotification();
   }
 }
 
-extension ReminderNotificationCustomizeWordPageRoutes on ReminderNotificationCustomizeWordPage {
+extension ReminderNotificationCustomizeWordPageRoutes
+    on ReminderNotificationCustomizeWordPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: 'ReminderNotificationCustomizeWordPage'),
+      settings: const RouteSettings(
+        name: 'ReminderNotificationCustomizeWordPage',
+      ),
       builder: (_) => const ReminderNotificationCustomizeWordPage(),
     );
   }

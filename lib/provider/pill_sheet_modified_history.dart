@@ -7,16 +7,26 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'pill_sheet_modified_history.g.dart';
 
 @Riverpod(dependencies: [database])
-Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithLimit(PillSheetModifiedHistoriesWithLimitRef ref, {required int limit}) {
+Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithLimit(
+  PillSheetModifiedHistoriesWithLimitRef ref, {
+  required int limit,
+}) {
   return ref
       .watch(databaseProvider)
       .pillSheetModifiedHistoriesReference()
       .where(
         PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
         isLessThanOrEqualTo: today().add(const Duration(days: 1)),
-        isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
+        isGreaterThanOrEqualTo: today().subtract(
+          const Duration(
+            days: PillSheetModifiedHistoryServiceActionFactory.limitDays,
+          ),
+        ),
       )
-      .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
+      .orderBy(
+        PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
+        descending: true,
+      )
       .limit(limit)
       .snapshots()
       .map((reference) => reference.docs)
@@ -42,30 +52,47 @@ Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithRange(
         isLessThanOrEqualTo: end.endOfDay(),
         isGreaterThanOrEqualTo: begin.date(),
       )
-      .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
+      .orderBy(
+        PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
+        descending: true,
+      )
       .snapshots()
       .map((reference) => reference.docs)
       .map((docs) => docs.map((doc) => doc.data()).toList());
 }
 
-final batchSetPillSheetModifiedHistoryProvider = Provider((ref) => BatchSetPillSheetModifiedHistory(ref.watch(databaseProvider)));
+final batchSetPillSheetModifiedHistoryProvider = Provider(
+  (ref) => BatchSetPillSheetModifiedHistory(ref.watch(databaseProvider)),
+);
 
 class BatchSetPillSheetModifiedHistory {
   final DatabaseConnection databaseConnection;
   BatchSetPillSheetModifiedHistory(this.databaseConnection);
 
   void call(WriteBatch batch, PillSheetModifiedHistory history) async {
-    batch.set(databaseConnection.pillSheetModifiedHistoryReference(pillSheetModifiedHistoryID: null), history, SetOptions(merge: true));
+    batch.set(
+      databaseConnection.pillSheetModifiedHistoryReference(
+        pillSheetModifiedHistoryID: null,
+      ),
+      history,
+      SetOptions(merge: true),
+    );
   }
 }
 
-final setPillSheetModifiedHistoryProvider = Provider((ref) => SetPillSheetModifiedHistory(ref.watch(databaseProvider)));
+final setPillSheetModifiedHistoryProvider = Provider(
+  (ref) => SetPillSheetModifiedHistory(ref.watch(databaseProvider)),
+);
 
 class SetPillSheetModifiedHistory {
   final DatabaseConnection databaseConnection;
   SetPillSheetModifiedHistory(this.databaseConnection);
 
   Future<void> call(PillSheetModifiedHistory history) async {
-    await databaseConnection.pillSheetModifiedHistoryReference(pillSheetModifiedHistoryID: history.id).set(history, SetOptions(merge: true));
+    await databaseConnection
+        .pillSheetModifiedHistoryReference(
+          pillSheetModifiedHistoryID: history.id,
+        )
+        .set(history, SetOptions(merge: true));
   }
 }

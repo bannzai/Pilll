@@ -31,7 +31,12 @@ class RecordPagePillSheetSettingButton extends StatelessWidget {
         analytics.logEvent(name: 'did_tapped_record_page_setting');
         showPillSheetSettingSheet(
           context,
-          PillSheetSettingSheet(pillSheetGroup: pillSheetGroup, activePillSheet: activePillSheet, setting: setting, user: user),
+          PillSheetSettingSheet(
+            pillSheetGroup: pillSheetGroup,
+            activePillSheet: activePillSheet,
+            setting: setting,
+            user: user,
+          ),
         );
       },
       style: ButtonStyle(
@@ -45,7 +50,12 @@ class RecordPagePillSheetSettingButton extends StatelessWidget {
       ).merge(ElevatedButton.styleFrom(elevation: 0)),
       child: Text(
         L.pillSheetSettings,
-        style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w700, color: TextColor.main),
+        style: const TextStyle(
+          fontFamily: FontFamily.japanese,
+          fontSize: 12,
+          fontWeight: FontWeight.w700,
+          color: TextColor.main,
+        ),
       ),
     );
   }

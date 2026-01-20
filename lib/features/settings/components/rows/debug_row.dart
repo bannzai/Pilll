@@ -19,7 +19,10 @@ class DebugRow extends StatelessWidget {
       padding: const EdgeInsets.only(left: 10, right: 10, bottom: 20, top: 20),
       child: GestureDetector(
         child: Center(
-          child: Text(L.copyDebugInfo, style: const TextStyle(color: TextColor.primary)),
+          child: Text(
+            L.copyDebugInfo,
+            style: const TextStyle(color: TextColor.primary),
+          ),
         ),
         onTap: () async {
           Clipboard.setData(ClipboardData(text: await debugInfo('\n')));

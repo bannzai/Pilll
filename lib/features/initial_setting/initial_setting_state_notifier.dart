@@ -18,18 +18,22 @@ import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/local_notification.dart';
 import 'package:riverpod/riverpod.dart';
 
-final initialSettingStateNotifierProvider = StateNotifierProvider.autoDispose<InitialSettingStateNotifier, InitialSettingState>(
-  (ref) => InitialSettingStateNotifier(
-    ref.watch(endInitialSettingProvider),
-    ref.watch(batchFactoryProvider),
-    ref.watch(batchSetSettingProvider),
-    ref.watch(batchSetPillSheetModifiedHistoryProvider),
-    ref.watch(batchSetPillSheetGroupProvider),
-    ref.watch(remoteConfigParameterProvider),
-    ref.watch(registerReminderLocalNotificationRunnerProvider),
-    now(),
-  ),
-);
+final initialSettingStateNotifierProvider =
+    StateNotifierProvider.autoDispose<
+      InitialSettingStateNotifier,
+      InitialSettingState
+    >(
+      (ref) => InitialSettingStateNotifier(
+        ref.watch(endInitialSettingProvider),
+        ref.watch(batchFactoryProvider),
+        ref.watch(batchSetSettingProvider),
+        ref.watch(batchSetPillSheetModifiedHistoryProvider),
+        ref.watch(batchSetPillSheetGroupProvider),
+        ref.watch(remoteConfigParameterProvider),
+        ref.watch(registerReminderLocalNotificationRunnerProvider),
+        now(),
+      ),
+    );
 
 class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   final EndInitialSetting endInitialSetting;
@@ -38,7 +42,8 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
   final RemoteConfigParameter remoteConfigParameter;
-  final RegisterReminderLocalNotificationRunner registerReminderLocalNotificationRunner;
+  final RegisterReminderLocalNotificationRunner
+  registerReminderLocalNotificationRunner;
 
   InitialSettingStateNotifier(
     this.endInitialSetting,
@@ -59,11 +64,15 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
       );
 
   void selectedFirstPillSheetType(PillSheetType pillSheetType) {
-    state = state.copyWith(pillSheetTypes: [pillSheetType, pillSheetType, pillSheetType]);
+    state = state.copyWith(
+      pillSheetTypes: [pillSheetType, pillSheetType, pillSheetType],
+    );
   }
 
   void addPillSheetType(PillSheetType pillSheetType) {
-    state = state.copyWith(pillSheetTypes: [...state.pillSheetTypes, pillSheetType]);
+    state = state.copyWith(
+      pillSheetTypes: [...state.pillSheetTypes, pillSheetType],
+    );
   }
 
   void changePillSheetType(int index, PillSheetType pillSheetType) {
@@ -78,7 +87,11 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     state = state.copyWith(pillSheetTypes: copied);
   }
 
-  void setReminderTime({required int index, required int hour, required int minute}) {
+  void setReminderTime({
+    required int index,
+    required int hour,
+    required int minute,
+  }) {
     final copied = [...state.reminderTimes];
     if (index >= copied.length) {
       copied.add(ReminderTime(hour: hour, minute: minute));
@@ -88,9 +101,15 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     state = state.copyWith(reminderTimes: copied);
   }
 
-  void setTodayPillNumber({required int pageIndex, required int pillNumberInPillSheet}) {
+  void setTodayPillNumber({
+    required int pageIndex,
+    required int pillNumberInPillSheet,
+  }) {
     state = state.copyWith(
-      todayPillNumber: InitialSettingTodayPillNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
+      todayPillNumber: InitialSettingTodayPillNumber(
+        pageIndex: pageIndex,
+        pillNumberInPillSheet: pillNumberInPillSheet,
+      ),
     );
   }
 
@@ -108,7 +127,9 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     final todayPillNumber = state.todayPillNumber;
     PillSheetGroup? createdPillSheetGroup;
     if (todayPillNumber != null) {
-      final createdPillSheets = state.pillSheetTypes.asMap().keys.map((pageIndex) {
+      final createdPillSheets = state.pillSheetTypes.asMap().keys.map((
+        pageIndex,
+      ) {
         return InitialSettingState.buildPillSheet(
           pageIndex: pageIndex,
           todayPillNumber: todayPillNumber,
@@ -131,10 +152,11 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
         ),
       );
 
-      final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-        beforePillSheetGroup: null,
-        createdNewPillSheetGroup: createdPillSheetGroup,
-      );
+      final history =
+          PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+            beforePillSheetGroup: null,
+            createdNewPillSheetGroup: createdPillSheetGroup,
+          );
       batchSetPillSheetModifiedHistory(batch, history);
     }
 
@@ -165,7 +187,9 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   }
 }
 
-final registerReminderLocalNotificationRunnerProvider = Provider((ref) => RegisterReminderLocalNotificationRunner());
+final registerReminderLocalNotificationRunnerProvider = Provider(
+  (ref) => RegisterReminderLocalNotificationRunner(),
+);
 
 // MockができないのでWrapperを作る
 class RegisterReminderLocalNotificationRunner {

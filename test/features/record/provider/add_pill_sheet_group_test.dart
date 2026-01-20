@@ -44,19 +44,21 @@ void main() {
 
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: ["sheet_id"],
-        pillSheets: [
-          pillSheet.copyWith(id: "sheet_id"),
-        ],
+        pillSheets: [pillSheet.copyWith(id: "sheet_id")],
         createdAt: now(),
       );
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-      when(batchSetPillSheetGroup(batch, pillSheetGroup)).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
+      when(
+        batchSetPillSheetGroup(batch, pillSheetGroup),
+      ).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
-      final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-        beforePillSheetGroup: null,
-        createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
-      );
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      final history =
+          PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+            beforePillSheetGroup: null,
+            createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
+          );
+      final batchSetPillSheetModifiedHistory =
+          MockBatchSetPillSheetModifiedHistory();
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
       const setting = Setting(
@@ -64,20 +66,17 @@ void main() {
         durationMenstruation: 3,
         isOnReminder: true,
         timezoneDatabaseName: null,
-        reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
-        pillSheetTypes: [
-          PillSheetType.pillsheet_24_0,
+        reminderTimes: [
+          ReminderTime(hour: 21, minute: 20),
+          ReminderTime(hour: 22, minute: 0),
         ],
+        pillSheetTypes: [PillSheetType.pillsheet_24_0],
       );
       final batchSetSetting = MockBatchSetSetting();
       when(
         batchSetSetting(
           batch,
-          setting.copyWith(
-            pillSheetTypes: [
-              PillSheetType.pillsheet_28_0,
-            ],
-          ),
+          setting.copyWith(pillSheetTypes: [PillSheetType.pillsheet_28_0]),
         ),
       ).thenReturn(null);
 
@@ -105,7 +104,9 @@ void main() {
 
       var idGeneratorCallCount = 0;
       final mockIDGenerator = MockFirestoreIDGenerator();
-      when(mockIDGenerator.call()).thenAnswer((_) => ["sheet_id", "sheet_id2"][idGeneratorCallCount++]);
+      when(
+        mockIDGenerator.call(),
+      ).thenAnswer((_) => ["sheet_id", "sheet_id2"][idGeneratorCallCount++]);
       firestoreIDGenerator = mockIDGenerator;
 
       final batchFactory = MockBatchFactory();
@@ -138,13 +139,17 @@ void main() {
         createdAt: now(),
       );
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-      when(batchSetPillSheetGroup(batch, pillSheetGroup)).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
+      when(
+        batchSetPillSheetGroup(batch, pillSheetGroup),
+      ).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
-      final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-        beforePillSheetGroup: null,
-        createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
-      );
-      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      final history =
+          PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+            beforePillSheetGroup: null,
+            createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
+          );
+      final batchSetPillSheetModifiedHistory =
+          MockBatchSetPillSheetModifiedHistory();
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
       const setting = Setting(
@@ -152,8 +157,14 @@ void main() {
         durationMenstruation: 3,
         isOnReminder: true,
         timezoneDatabaseName: null,
-        reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
-        pillSheetTypes: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_24_0],
+        reminderTimes: [
+          ReminderTime(hour: 21, minute: 20),
+          ReminderTime(hour: 22, minute: 0),
+        ],
+        pillSheetTypes: [
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_24_0,
+        ],
       );
       final batchSetSetting = MockBatchSetSetting();
       when(
@@ -178,7 +189,10 @@ void main() {
       await addPillSheetGroup.call(
         setting: setting,
         pillSheetGroup: null,
-        pillSheetTypes: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_21],
+        pillSheetTypes: [
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_21,
+        ],
         displayNumberSetting: null,
         pillTakenCount: 1,
       );

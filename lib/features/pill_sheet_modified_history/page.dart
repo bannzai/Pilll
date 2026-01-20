@@ -18,12 +18,15 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final limit = useState(20);
-    final historiesAsync = ref.watch(pillSheetModifiedHistoriesWithLimitProvider(limit: limit.value));
+    final historiesAsync = ref.watch(
+      pillSheetModifiedHistoriesWithLimitProvider(limit: limit.value),
+    );
     final histories = useState(historiesAsync.asData?.value ?? []);
 
     useEffect(() {
       final fetchedHistories = historiesAsync.asData?.value ?? [];
-      if (fetchedHistories.isNotEmpty && fetchedHistories.length != histories.value.length) {
+      if (fetchedHistories.isNotEmpty &&
+          fetchedHistories.length != histories.value.length) {
         histories.value = fetchedHistories;
       }
       return null;
@@ -32,7 +35,11 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
     return ref
         .watch(userProvider)
         .when(
-          error: (error, _) => UniversalErrorPage(error: error, child: null, reload: () => ref.refresh(databaseProvider)),
+          error: (error, _) => UniversalErrorPage(
+            error: error,
+            child: null,
+            reload: () => ref.refresh(databaseProvider),
+          ),
           loading: () => const ScaffoldIndicator(),
           data: (user) {
             return Scaffold(
@@ -42,7 +49,10 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
                   icon: const Icon(Icons.arrow_back, color: Colors.black),
                   onPressed: () => Navigator.of(context).pop(),
                 ),
-                title: Text(L.medicationHistory, style: const TextStyle(color: TextColor.main)),
+                title: Text(
+                  L.medicationHistory,
+                  style: const TextStyle(color: TextColor.main),
+                ),
                 centerTitle: false,
                 backgroundColor: AppColors.white,
               ),
@@ -51,14 +61,19 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
                   onNotification: (notification) {
                     if (histories.value.isNotEmpty &&
                         histories.value.length == limit.value &&
-                        notification.metrics.pixels >= notification.metrics.maxScrollExtent) {
+                        notification.metrics.pixels >=
+                            notification.metrics.maxScrollExtent) {
                       print('[DEBUG] LoadNext: limit.value: ${limit.value}');
                       limit.value += 20;
                     }
                     return true;
                   },
                   child: Container(
-                    padding: const EdgeInsets.only(left: 24, right: 24, top: 24),
+                    padding: const EdgeInsets.only(
+                      left: 24,
+                      right: 24,
+                      top: 24,
+                    ),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
@@ -68,7 +83,10 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
                           child: SingleChildScrollView(
                             padding: const EdgeInsets.only(bottom: 20),
                             physics: const AlwaysScrollableScrollPhysics(),
-                            child: PillSheetModifiedHistoryList(pillSheetModifiedHistories: histories.value, premiumOrTrial: user.premiumOrTrial),
+                            child: PillSheetModifiedHistoryList(
+                              pillSheetModifiedHistories: histories.value,
+                              premiumOrTrial: user.premiumOrTrial,
+                            ),
                           ),
                         ),
                       ],
@@ -82,7 +100,8 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
   }
 }
 
-extension PillSheetModifiedHistoriesPageRoute on PillSheetModifiedHistoriesPage {
+extension PillSheetModifiedHistoriesPageRoute
+    on PillSheetModifiedHistoriesPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: 'PillSheetModifiedHistoriesPage'),

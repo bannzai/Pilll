@@ -15,8 +15,14 @@ class Analytics {
     }
   }
 
-  void logEvent({required String name, Map<String, Object?>? parameters}) async {
-    assert(name.length <= 40, 'firebase analytics log event name limit length up to 40');
+  void logEvent({
+    required String name,
+    Map<String, Object?>? parameters,
+  }) async {
+    assert(
+      name.length <= 40,
+      'firebase analytics log event name limit length up to 40',
+    );
     if (kDebugMode) {
       print('[INFO] logEvent name: $name, parameters: $parameters');
     }
@@ -30,10 +36,22 @@ class Analytics {
     Map<String, Object>? params = parameters != null ? {} : null;
     if (parameters != null) {
       for (final key in parameters.keys) {
-        assert(key.length <= 40, 'firebase analytics log event parameter name limit length up to 40');
-        assert(!key.startsWith('firebase_'), 'firebase analytics log event parameter name must not start with "firebase_"');
-        assert(!key.startsWith('google_'), 'firebase analytics log event parameter name must not start with "google_"');
-        assert(!key.startsWith('ga_'), 'firebase analytics log event parameter name must not start with "ga_"');
+        assert(
+          key.length <= 40,
+          'firebase analytics log event parameter name limit length up to 40',
+        );
+        assert(
+          !key.startsWith('firebase_'),
+          'firebase analytics log event parameter name must not start with "firebase_"',
+        );
+        assert(
+          !key.startsWith('google_'),
+          'firebase analytics log event parameter name must not start with "google_"',
+        );
+        assert(
+          !key.startsWith('ga_'),
+          'firebase analytics log event parameter name must not start with "ga_"',
+        );
 
         final param = parameters[key];
         if (param == null) {
@@ -56,9 +74,15 @@ class Analytics {
     }
   }
 
-  void logScreenView({required String screenName, String screenClass = 'Flutter'}) async {
+  void logScreenView({
+    required String screenName,
+    String screenClass = 'Flutter',
+  }) async {
     unawaited(firebaseAnalytics.logEvent(name: 'screen_$screenName'));
-    return firebaseAnalytics.logScreenView(screenName: screenName, screenClass: screenClass);
+    return firebaseAnalytics.logScreenView(
+      screenName: screenName,
+      screenClass: screenClass,
+    );
   }
 
   /// Up to 25 user property names are supported.
@@ -68,7 +92,10 @@ class Analytics {
     assert(name.toLowerCase() != 'age');
     assert(name.toLowerCase() != 'gender');
     assert(name.toLowerCase() != 'interest');
-    assert(name.length < 25, 'firebase setUserProperties name limit length up to 25');
+    assert(
+      name.length < 25,
+      'firebase setUserProperties name limit length up to 25',
+    );
     assert(!name.startsWith('firebase_'));
 
     if (kDebugMode) {

@@ -81,10 +81,7 @@ void main() {
         );
       }
 
-      final result = missedPillDays(
-        histories: histories,
-        maxDate: today,
-      );
+      final result = missedPillDays(histories: histories, maxDate: today);
       expect(result, 0);
     });
 
@@ -95,7 +92,9 @@ void main() {
         PillSheetModifiedHistory(
           id: 'history_1',
           actionType: PillSheetModifiedActionType.takenPill.name,
-          estimatedEventCausingDate: baseDate.subtract(const Duration(days: 15)),
+          estimatedEventCausingDate: baseDate.subtract(
+            const Duration(days: 15),
+          ),
           createdAt: baseDate.subtract(const Duration(days: 15)),
           value: const PillSheetModifiedHistoryValue(),
           beforePillSheetGroup: null,
@@ -103,10 +102,7 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(
-        histories: histories,
-        maxDate: today,
-      );
+      final result = missedPillDays(histories: histories, maxDate: today);
 
       // 15日前から今日までの15日間のうち、1日だけ服用記録があるので14日の飲み忘れ
       expect(result, 14);
@@ -127,7 +123,9 @@ void main() {
         ),
         PillSheetModifiedHistory(
           id: 'history_2',
-          actionType: PillSheetModifiedActionType.automaticallyRecordedLastTakenDate.name,
+          actionType: PillSheetModifiedActionType
+              .automaticallyRecordedLastTakenDate
+              .name,
           estimatedEventCausingDate: baseDate.subtract(const Duration(days: 3)),
           createdAt: baseDate.subtract(const Duration(days: 3)),
           value: const PillSheetModifiedHistoryValue(),
@@ -136,10 +134,7 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(
-        histories: histories,
-        maxDate: today,
-      );
+      final result = missedPillDays(histories: histories, maxDate: today);
 
       // 3日前から今日までの3日間のうち、2日分の服用記録があるので1日の飲み忘れ
       expect(result, 1);
@@ -180,10 +175,7 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(
-        histories: histories,
-        maxDate: today,
-      );
+      final result = missedPillDays(histories: histories, maxDate: today);
 
       // 4日前から今日までの5日間のうち：
       // - 服用記録: 1日（今日)
@@ -200,7 +192,9 @@ void main() {
         PillSheetModifiedHistory(
           id: 'history_1',
           actionType: PillSheetModifiedActionType.beganRestDuration.name,
-          estimatedEventCausingDate: baseDate.subtract(const Duration(days: 20)),
+          estimatedEventCausingDate: baseDate.subtract(
+            const Duration(days: 20),
+          ),
           createdAt: baseDate.subtract(const Duration(days: 20)),
           value: const PillSheetModifiedHistoryValue(),
           beforePillSheetGroup: null,
@@ -209,7 +203,9 @@ void main() {
         PillSheetModifiedHistory(
           id: 'history_2',
           actionType: PillSheetModifiedActionType.endedRestDuration.name,
-          estimatedEventCausingDate: baseDate.subtract(const Duration(days: 18)),
+          estimatedEventCausingDate: baseDate.subtract(
+            const Duration(days: 18),
+          ),
           createdAt: baseDate.subtract(const Duration(days: 18)),
           value: const PillSheetModifiedHistoryValue(),
           beforePillSheetGroup: null,
@@ -219,7 +215,9 @@ void main() {
         PillSheetModifiedHistory(
           id: 'history_3',
           actionType: PillSheetModifiedActionType.beganRestDuration.name,
-          estimatedEventCausingDate: baseDate.subtract(const Duration(days: 10)),
+          estimatedEventCausingDate: baseDate.subtract(
+            const Duration(days: 10),
+          ),
           createdAt: baseDate.subtract(const Duration(days: 10)),
           value: const PillSheetModifiedHistoryValue(),
           beforePillSheetGroup: null,
@@ -238,7 +236,9 @@ void main() {
         PillSheetModifiedHistory(
           id: 'history_5',
           actionType: PillSheetModifiedActionType.takenPill.name,
-          estimatedEventCausingDate: baseDate.subtract(const Duration(days: 17)),
+          estimatedEventCausingDate: baseDate.subtract(
+            const Duration(days: 17),
+          ),
           createdAt: baseDate.subtract(const Duration(days: 17)),
           value: const PillSheetModifiedHistoryValue(),
           beforePillSheetGroup: null,
@@ -255,10 +255,7 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(
-        histories: histories,
-        maxDate: today,
-      );
+      final result = missedPillDays(histories: histories, maxDate: today);
 
       // 20日前から今日までの20日間のうち：
       // - 服用お休み: 4日間（20-18日前、10-8日前）
@@ -303,10 +300,7 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(
-        histories: histories,
-        maxDate: today,
-      );
+      final result = missedPillDays(histories: histories, maxDate: today);
 
       // 5日前から今日までの6日間のうち、1日だけ服用記録があるので5日の飲み忘れ
       expect(result, 5);
@@ -328,10 +322,7 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(
-        histories: histories,
-        maxDate: today,
-      );
+      final result = missedPillDays(histories: histories, maxDate: today);
 
       // 今日から今日までの1日間で、服用記録があるので飲み忘れは0日
       expect(result, 0);
@@ -346,7 +337,9 @@ void main() {
         PillSheetModifiedHistory(
           id: 'history_1',
           actionType: PillSheetModifiedActionType.beganRestDuration.name,
-          estimatedEventCausingDate: baseDate.subtract(const Duration(days: 10)),
+          estimatedEventCausingDate: baseDate.subtract(
+            const Duration(days: 10),
+          ),
           createdAt: baseDate.subtract(const Duration(days: 10)),
           value: const PillSheetModifiedHistoryValue(),
           beforePillSheetGroup: null,
@@ -356,7 +349,9 @@ void main() {
         PillSheetModifiedHistory(
           id: 'history_2',
           actionType: PillSheetModifiedActionType.takenPill.name,
-          estimatedEventCausingDate: baseDate.subtract(const Duration(days: 11)),
+          estimatedEventCausingDate: baseDate.subtract(
+            const Duration(days: 11),
+          ),
           createdAt: baseDate.subtract(const Duration(days: 11)),
           value: const PillSheetModifiedHistoryValue(),
           beforePillSheetGroup: null,
@@ -364,10 +359,7 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(
-        histories: histories,
-        maxDate: today,
-      );
+      final result = missedPillDays(histories: histories, maxDate: today);
 
       // 11日前から今日までの12日間のうち：
       // - 服用記録: 1日（11日前）
@@ -414,10 +406,7 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(
-        histories: histories,
-        maxDate: today,
-      );
+      final result = missedPillDays(histories: histories, maxDate: today);
 
       // 5日前から今日までの5日間のうち、3日分の服用記録があるので2日の飲み忘れ
       expect(result, 2);
@@ -450,10 +439,7 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(
-        histories: histories,
-        maxDate: today,
-      );
+      final result = missedPillDays(histories: histories, maxDate: today);
 
       // 3日前から今日までの3日間、服用記録が0なので3日の飲み忘れ
       expect(result, 3);
@@ -496,10 +482,7 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(
-        histories: histories,
-        maxDate: today,
-      );
+      final result = missedPillDays(histories: histories, maxDate: today);
 
       // 5日前から今日までの5日間のうち：
       // - 服用記録: 1日（5日前）
@@ -523,10 +506,7 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(
-        histories: histories,
-        maxDate: today,
-      );
+      final result = missedPillDays(histories: histories, maxDate: today);
 
       // minDate == maxDate の場合、daysBetweenは0を返すのでallDatesは空
       // 結果として飲み忘れは0日
@@ -542,7 +522,9 @@ void main() {
         PillSheetModifiedHistory(
           id: 'history_1',
           actionType: PillSheetModifiedActionType.takenPill.name,
-          estimatedEventCausingDate: baseDate.subtract(const Duration(days: 10)),
+          estimatedEventCausingDate: baseDate.subtract(
+            const Duration(days: 10),
+          ),
           createdAt: baseDate.subtract(const Duration(days: 10)),
           value: const PillSheetModifiedHistoryValue(),
           beforePillSheetGroup: null,
@@ -588,10 +570,7 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(
-        histories: histories,
-        maxDate: today,
-      );
+      final result = missedPillDays(histories: histories, maxDate: today);
 
       // 10日前から今日までの期間（allDatesにはmaxDate当日は含まれない）：
       // - allDates: 10日前〜1日前の10日間
@@ -636,7 +615,9 @@ void main() {
         PillSheetModifiedHistory(
           id: 'history_1',
           actionType: PillSheetModifiedActionType.beganRestDuration.name,
-          estimatedEventCausingDate: baseDate.subtract(const Duration(days: 10)),
+          estimatedEventCausingDate: baseDate.subtract(
+            const Duration(days: 10),
+          ),
           createdAt: baseDate.subtract(const Duration(days: 10)),
           value: const PillSheetModifiedHistoryValue(),
           beforePillSheetGroup: null,
@@ -673,10 +654,7 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(
-        histories: histories,
-        maxDate: today,
-      );
+      final result = missedPillDays(histories: histories, maxDate: today);
 
       // 10日前から今日までの10日間のうち：
       // - 服用お休み: 6日間（10日前〜5日前）※7日前は両方のお休み期間でカバー、4日前のendedは含まない
@@ -722,10 +700,7 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(
-        histories: histories,
-        maxDate: today,
-      );
+      final result = missedPillDays(histories: histories, maxDate: today);
 
       // 5日前から今日までの5日間のうち：
       // - 服用記録: 1日（5日前）- takenDatesに追加される
@@ -753,7 +728,9 @@ void main() {
         PillSheetModifiedHistory(
           id: 'history_1',
           actionType: PillSheetModifiedActionType.beganRestDuration.name,
-          estimatedEventCausingDate: baseDate.subtract(const Duration(days: 10)),
+          estimatedEventCausingDate: baseDate.subtract(
+            const Duration(days: 10),
+          ),
           createdAt: baseDate.subtract(const Duration(days: 10)),
           value: const PillSheetModifiedHistoryValue(),
           beforePillSheetGroup: null,
@@ -761,10 +738,7 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(
-        histories: histories,
-        maxDate: today,
-      );
+      final result = missedPillDays(histories: histories, maxDate: today);
 
       // 10日前から今日までの10日間すべてが服用お休み
       // - allDates: 10日前〜1日前の10日間
@@ -802,14 +776,19 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 11),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-          isQuickRecord: false,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+              isQuickRecord: false,
+            );
 
         expect(history.actionType, PillSheetModifiedActionType.takenPill.name);
         expect(history.enumActionType, PillSheetModifiedActionType.takenPill);
@@ -839,14 +818,19 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 11),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-          isQuickRecord: true,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+              isQuickRecord: true,
+            );
 
         expect(history.value.takenPill?.isQuickRecord, true);
       });
@@ -866,14 +850,19 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 1),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-          isQuickRecord: false,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+              isQuickRecord: false,
+            );
 
         final takenPillValue = history.value.takenPill;
         expect(takenPillValue, isNotNull);
@@ -896,14 +885,19 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 13),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-          isQuickRecord: false,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+              isQuickRecord: false,
+            );
 
         final takenPillValue = history.value.takenPill;
         expect(takenPillValue, isNotNull);
@@ -926,14 +920,19 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 28),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-          isQuickRecord: false,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+              isQuickRecord: false,
+            );
 
         final takenPillValue = history.value.takenPill;
         expect(takenPillValue, isNotNull);
@@ -967,11 +966,12 @@ void main() {
           pillSheets: [beforePillSheet, afterPillSheet],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-          isQuickRecord: false,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+              isQuickRecord: false,
+            );
 
         // beforePillSheetID, afterPillSheetID は v2 で削除済み
         expect(history.value.takenPill, isNotNull);
@@ -993,14 +993,19 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 21),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-          isQuickRecord: false,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+              isQuickRecord: false,
+            );
 
         final takenPillValue = history.value.takenPill;
         expect(takenPillValue, isNotNull);
@@ -1027,14 +1032,19 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 11),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-          isQuickRecord: false,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+              isQuickRecord: false,
+            );
 
         expect(history.version, 'v2');
         expect(history.id, isNull);
@@ -1042,7 +1052,11 @@ void main() {
         expect(history.createdAt, isNotNull);
         expect(history.ttlExpiresDateTime, isNotNull);
         // ttlExpiresDateTime は createdAt から 180日後
-        final expectedTtl = history.createdAt.add(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays));
+        final expectedTtl = history.createdAt.add(
+          const Duration(
+            days: PillSheetModifiedHistoryServiceActionFactory.limitDays,
+          ),
+        );
         expect(history.ttlExpiresDateTime, expectedTtl);
       });
 
@@ -1072,17 +1086,22 @@ void main() {
           groupIndex: 2,
         );
         final beforePillSheetGroup = createPillSheetGroup(
-          pillSheets: [firstPillSheet, secondPillSheet, (thirdPillSheet as PillSheetV1).copyWith(lastTakenDate: null)],
+          pillSheets: [
+            firstPillSheet,
+            secondPillSheet,
+            (thirdPillSheet as PillSheetV1).copyWith(lastTakenDate: null),
+          ],
         );
         final afterPillSheetGroup = createPillSheetGroup(
           pillSheets: [firstPillSheet, secondPillSheet, thirdPillSheet],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-          isQuickRecord: false,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+              isQuickRecord: false,
+            );
 
         expect(history.beforePillSheetGroup, beforePillSheetGroup);
         expect(history.afterPillSheetGroup, afterPillSheetGroup);
@@ -1104,14 +1123,19 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 24),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-          isQuickRecord: false,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+              isQuickRecord: false,
+            );
 
         final takenPillValue = history.value.takenPill;
         expect(takenPillValue, isNotNull);
@@ -1149,16 +1173,27 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.actionType, PillSheetModifiedActionType.revertTakenPill.name);
-        expect(history.enumActionType, PillSheetModifiedActionType.revertTakenPill);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.revertTakenPill.name,
+        );
+        expect(
+          history.enumActionType,
+          PillSheetModifiedActionType.revertTakenPill,
+        );
         // pillSheetGroupID, beforePillSheetID, afterPillSheetID, before, after は v2 で削除済み
         expect(history.beforePillSheetGroup, beforePillSheetGroup);
         expect(history.afterPillSheetGroup, afterPillSheetGroup);
@@ -1185,13 +1220,18 @@ void main() {
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         final revertTakenPillValue = history.value.revertTakenPill;
         expect(revertTakenPillValue, isNotNull);
@@ -1214,13 +1254,18 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         final revertTakenPillValue = history.value.revertTakenPill;
         expect(revertTakenPillValue, isNotNull);
@@ -1243,13 +1288,18 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 27),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         final revertTakenPillValue = history.value.revertTakenPill;
         expect(revertTakenPillValue, isNotNull);
@@ -1289,10 +1339,11 @@ void main() {
           pillSheets: [firstPillSheet, afterSecondPillSheet],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         // beforePillSheetID, afterPillSheetID は v2 で削除済み
         expect(history.value.revertTakenPill, isNotNull);
@@ -1314,13 +1365,18 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 20),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         final revertTakenPillValue = history.value.revertTakenPill;
         expect(revertTakenPillValue, isNotNull);
@@ -1343,13 +1399,18 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 27),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         final revertTakenPillValue = history.value.revertTakenPill;
         expect(revertTakenPillValue, isNotNull);
@@ -1372,13 +1433,18 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 24),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         final revertTakenPillValue = history.value.revertTakenPill;
         expect(revertTakenPillValue, isNotNull);
@@ -1427,10 +1493,11 @@ void main() {
           pillSheets: [firstPillSheet, afterSecondPillSheet, thirdPillSheet],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         // beforePillSheetID, afterPillSheetID は v2 で削除済み
         expect(history.value.revertTakenPill, isNotNull);
@@ -1480,10 +1547,11 @@ void main() {
           pillSheets: [firstPillSheet, secondPillSheet, afterThirdPillSheet],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         // beforePillSheetID, afterPillSheetID は v2 で削除済み
         expect(history.value.revertTakenPill, isNotNull);
@@ -1522,14 +1590,21 @@ void main() {
           pillSheets: [pillSheet],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-          beforePillSheetGroup: null,
-          createdNewPillSheetGroup: createdNewPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+              beforePillSheetGroup: null,
+              createdNewPillSheetGroup: createdNewPillSheetGroup,
+            );
 
         // actionType の検証
-        expect(history.actionType, PillSheetModifiedActionType.createdPillSheet.name);
-        expect(history.enumActionType, PillSheetModifiedActionType.createdPillSheet);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.createdPillSheet.name,
+        );
+        expect(
+          history.enumActionType,
+          PillSheetModifiedActionType.createdPillSheet,
+        );
 
         // pillSheetGroupID, before, after, beforePillSheetID, afterPillSheetID は v2 で削除済み
 
@@ -1565,10 +1640,11 @@ void main() {
           pillSheets: [pillSheet1, pillSheet2],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-          beforePillSheetGroup: null,
-          createdNewPillSheetGroup: createdNewPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+              beforePillSheetGroup: null,
+              createdNewPillSheetGroup: createdNewPillSheetGroup,
+            );
 
         final createdPillSheetValue = history.value.createdPillSheet;
         expect(createdPillSheetValue, isNotNull);
@@ -1605,10 +1681,11 @@ void main() {
           pillSheets: [pillSheet1, pillSheet2, pillSheet3],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-          beforePillSheetGroup: null,
-          createdNewPillSheetGroup: createdNewPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+              beforePillSheetGroup: null,
+              createdNewPillSheetGroup: createdNewPillSheetGroup,
+            );
 
         final createdPillSheetValue = history.value.createdPillSheet;
         expect(createdPillSheetValue, isNotNull);
@@ -1642,15 +1719,19 @@ void main() {
           pillSheets: [existingPillSheet, newPillSheet],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          createdNewPillSheetGroup: createdNewPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              createdNewPillSheetGroup: createdNewPillSheetGroup,
+            );
 
         // beforePillSheetGroup が設定されていることを検証
         expect(history.beforePillSheetGroup, isNotNull);
         expect(history.beforePillSheetGroup!.pillSheets.length, 1);
-        expect(history.beforePillSheetGroup!.pillSheets[0].id, 'existing_pill_sheet_id');
+        expect(
+          history.beforePillSheetGroup!.pillSheets[0].id,
+          'existing_pill_sheet_id',
+        );
 
         // afterPillSheetGroup が設定されていることを検証
         expect(history.afterPillSheetGroup, isNotNull);
@@ -1673,13 +1754,20 @@ void main() {
           pillSheets: [pillSheet],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-          beforePillSheetGroup: null,
-          createdNewPillSheetGroup: createdNewPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+              beforePillSheetGroup: null,
+              createdNewPillSheetGroup: createdNewPillSheetGroup,
+            );
 
-        expect(history.actionType, PillSheetModifiedActionType.createdPillSheet.name);
-        expect(history.afterPillSheetGroup!.pillSheets[0].typeInfo.totalCount, 21);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.createdPillSheet.name,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].typeInfo.totalCount,
+          21,
+        );
         expect(history.value.createdPillSheet, isNotNull);
       });
 
@@ -1696,14 +1784,24 @@ void main() {
           pillSheets: [pillSheet],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-          beforePillSheetGroup: null,
-          createdNewPillSheetGroup: createdNewPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+              beforePillSheetGroup: null,
+              createdNewPillSheetGroup: createdNewPillSheetGroup,
+            );
 
-        expect(history.actionType, PillSheetModifiedActionType.createdPillSheet.name);
-        expect(history.afterPillSheetGroup!.pillSheets[0].typeInfo.totalCount, 28);
-        expect(history.afterPillSheetGroup!.pillSheets[0].typeInfo.dosingPeriod, 24);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.createdPillSheet.name,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].typeInfo.totalCount,
+          28,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].typeInfo.dosingPeriod,
+          24,
+        );
         expect(history.value.createdPillSheet, isNotNull);
       });
 
@@ -1721,12 +1819,16 @@ void main() {
           pillSheets: [pillSheet],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-          beforePillSheetGroup: null,
-          createdNewPillSheetGroup: createdNewPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+              beforePillSheetGroup: null,
+              createdNewPillSheetGroup: createdNewPillSheetGroup,
+            );
 
-        expect(history.actionType, PillSheetModifiedActionType.createdPillSheet.name);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.createdPillSheet.name,
+        );
         expect(history.value.createdPillSheet, isNotNull);
       });
 
@@ -1750,16 +1852,29 @@ void main() {
           pillSheets: [pillSheet],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-          beforePillSheetGroup: null,
-          createdNewPillSheetGroup: createdNewPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+              beforePillSheetGroup: null,
+              createdNewPillSheetGroup: createdNewPillSheetGroup,
+            );
 
         expect(history.afterPillSheetGroup, isNotNull);
-        expect(history.afterPillSheetGroup!.pillSheets[0].restDurations.length, 1);
-        expect(history.afterPillSheetGroup!.pillSheets[0].restDurations[0].id, 'rest_duration_id_1');
-        expect(history.afterPillSheetGroup!.pillSheets[0].restDurations[0].beginDate, DateTime(2020, 9, 10));
-        expect(history.afterPillSheetGroup!.pillSheets[0].restDurations[0].endDate, DateTime(2020, 9, 12));
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].restDurations.length,
+          1,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].restDurations[0].id,
+          'rest_duration_id_1',
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].restDurations[0].beginDate,
+          DateTime(2020, 9, 10),
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].restDurations[0].endDate,
+          DateTime(2020, 9, 12),
+        );
       });
 
       test('displayNumberSettingが設定されたPillSheetGroupの場合、履歴に保持される', () {
@@ -1781,15 +1896,22 @@ void main() {
           ),
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-          beforePillSheetGroup: null,
-          createdNewPillSheetGroup: createdNewPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+              beforePillSheetGroup: null,
+              createdNewPillSheetGroup: createdNewPillSheetGroup,
+            );
 
         expect(history.afterPillSheetGroup, isNotNull);
         expect(history.afterPillSheetGroup!.displayNumberSetting, isNotNull);
-        expect(history.afterPillSheetGroup!.displayNumberSetting!.beginPillNumber, 5);
-        expect(history.afterPillSheetGroup!.displayNumberSetting!.endPillNumber, 28);
+        expect(
+          history.afterPillSheetGroup!.displayNumberSetting!.beginPillNumber,
+          5,
+        );
+        expect(
+          history.afterPillSheetGroup!.displayNumberSetting!.endPillNumber,
+          28,
+        );
       });
 
       test('異なるPillSheetTypeの混在する複数ピルシートの場合', () {
@@ -1814,16 +1936,29 @@ void main() {
           pillSheets: [pillSheet21, pillSheet28],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-          beforePillSheetGroup: null,
-          createdNewPillSheetGroup: createdNewPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+              beforePillSheetGroup: null,
+              createdNewPillSheetGroup: createdNewPillSheetGroup,
+            );
 
         expect(history.afterPillSheetGroup!.pillSheets.length, 2);
-        expect(history.afterPillSheetGroup!.pillSheets[0].typeInfo.totalCount, 21);
-        expect(history.afterPillSheetGroup!.pillSheets[0].typeInfo.dosingPeriod, 21);
-        expect(history.afterPillSheetGroup!.pillSheets[1].typeInfo.totalCount, 28);
-        expect(history.afterPillSheetGroup!.pillSheets[1].typeInfo.dosingPeriod, 24);
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].typeInfo.totalCount,
+          21,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].typeInfo.dosingPeriod,
+          21,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[1].typeInfo.totalCount,
+          28,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[1].typeInfo.dosingPeriod,
+          24,
+        );
       });
     });
 
@@ -1841,10 +1976,11 @@ void main() {
           pillSheets: [pillSheet],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-          beforePillSheetGroup: null,
-          createdNewPillSheetGroup: createdNewPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+              beforePillSheetGroup: null,
+              createdNewPillSheetGroup: createdNewPillSheetGroup,
+            );
 
         expect(history.version, 'v2');
       });
@@ -1862,10 +1998,11 @@ void main() {
           pillSheets: [pillSheet],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-          beforePillSheetGroup: null,
-          createdNewPillSheetGroup: createdNewPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+              beforePillSheetGroup: null,
+              createdNewPillSheetGroup: createdNewPillSheetGroup,
+            );
 
         expect(history.id, isNull);
       });
@@ -1883,15 +2020,15 @@ void main() {
           pillSheets: [pillSheet],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-          beforePillSheetGroup: null,
-          createdNewPillSheetGroup: createdNewPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+              beforePillSheetGroup: null,
+              createdNewPillSheetGroup: createdNewPillSheetGroup,
+            );
 
         expect(history.estimatedEventCausingDate, isNotNull);
         expect(history.createdAt, isNotNull);
       });
-
     });
   });
 
@@ -1923,16 +2060,27 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.actionType, PillSheetModifiedActionType.changedPillNumber.name);
-        expect(history.enumActionType, PillSheetModifiedActionType.changedPillNumber);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.changedPillNumber.name,
+        );
+        expect(
+          history.enumActionType,
+          PillSheetModifiedActionType.changedPillNumber,
+        );
         // pillSheetGroupID, beforePillSheetID, afterPillSheetID, before, after は v2 で削除済み
         expect(history.beforePillSheetGroup, beforePillSheetGroup);
         expect(history.afterPillSheetGroup, afterPillSheetGroup);
@@ -1960,13 +2108,18 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         final changedPillNumberValue = history.value.changedPillNumber;
         expect(changedPillNumberValue, isNotNull);
@@ -1993,13 +2146,18 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         final changedPillNumberValue = history.value.changedPillNumber;
         expect(changedPillNumberValue, isNotNull);
@@ -2025,13 +2183,18 @@ void main() {
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 1,
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         final changedPillNumberValue = history.value.changedPillNumber;
         expect(changedPillNumberValue, isNotNull);
@@ -2053,16 +2216,27 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.actionType, PillSheetModifiedActionType.changedPillNumber.name);
-        expect(history.afterPillSheetGroup!.pillSheets[0].typeInfo.totalCount, 21);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.changedPillNumber.name,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].typeInfo.totalCount,
+          21,
+        );
 
         final changedPillNumberValue = history.value.changedPillNumber;
         expect(changedPillNumberValue, isNotNull);
@@ -2084,17 +2258,31 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.actionType, PillSheetModifiedActionType.changedPillNumber.name);
-        expect(history.afterPillSheetGroup!.pillSheets[0].typeInfo.totalCount, 28);
-        expect(history.afterPillSheetGroup!.pillSheets[0].typeInfo.dosingPeriod, 24);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.changedPillNumber.name,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].typeInfo.totalCount,
+          28,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].typeInfo.dosingPeriod,
+          24,
+        );
 
         final changedPillNumberValue = history.value.changedPillNumber;
         expect(changedPillNumberValue, isNotNull);
@@ -2134,10 +2322,11 @@ void main() {
           pillSheets: [firstPillSheet, afterSecondPillSheet],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.beforePillSheetGroup, beforePillSheetGroup);
         expect(history.afterPillSheetGroup, afterPillSheetGroup);
@@ -2168,10 +2357,11 @@ void main() {
           pillSheets: [firstPillSheet, secondPillSheet],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.beforePillSheetGroup, beforePillSheetGroup);
         expect(history.afterPillSheetGroup, afterPillSheetGroup);
@@ -2194,13 +2384,18 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.version, 'v2');
       });
@@ -2220,13 +2415,18 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.id, isNull);
       });
@@ -2246,18 +2446,22 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.estimatedEventCausingDate, isNotNull);
         expect(history.createdAt, isNotNull);
       });
-
     });
 
     // 異常系テスト削除: v2では FormatException や assert を投げなくなった（バリデーションロジック変更）
@@ -2285,13 +2489,18 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 9),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         final changedPillNumberValue = history.value.changedPillNumber;
         expect(changedPillNumberValue, isNotNull);
@@ -2320,13 +2529,18 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 30),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         final changedPillNumberValue = history.value.changedPillNumber;
         expect(changedPillNumberValue, isNotNull);
@@ -2355,13 +2569,18 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 9),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         // limitDays = 180
         final expectedTtl = mockNow.add(const Duration(days: 180));
@@ -2406,21 +2625,30 @@ void main() {
         );
         final beforePillSheetGroup = PillSheetGroup(
           id: 'group_id',
-          pillSheetIDs: ['pill_sheet_id_1', 'pill_sheet_id_2', 'pill_sheet_id_3'],
+          pillSheetIDs: [
+            'pill_sheet_id_1',
+            'pill_sheet_id_2',
+            'pill_sheet_id_3',
+          ],
           pillSheets: [firstPillSheet, secondPillSheet, beforeThirdPillSheet],
           createdAt: DateTime(2020, 9, 1),
         );
         final afterPillSheetGroup = PillSheetGroup(
           id: 'group_id',
-          pillSheetIDs: ['pill_sheet_id_1', 'pill_sheet_id_2', 'pill_sheet_id_3'],
+          pillSheetIDs: [
+            'pill_sheet_id_1',
+            'pill_sheet_id_2',
+            'pill_sheet_id_3',
+          ],
           pillSheets: [firstPillSheet, secondPillSheet, afterThirdPillSheet],
           createdAt: DateTime(2020, 9, 1),
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         // beforePillSheetID, afterPillSheetID は v2 で削除済み
 
@@ -2447,13 +2675,18 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         // beforePillSheetID, afterPillSheetID は v2 で削除済み
         expect(history.beforePillSheetGroup, beforePillSheetGroup);
@@ -2477,13 +2710,18 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 30),
           createdAt: DateTime(2020, 9, 15),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         final changedPillNumberValue = history.value.changedPillNumber;
         expect(changedPillNumberValue, isNotNull);
@@ -2505,13 +2743,18 @@ void main() {
           lastTakenDate: DateTime(2020, 12, 31),
           createdAt: DateTime(2020, 12, 15),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         final changedPillNumberValue = history.value.changedPillNumber;
         expect(changedPillNumberValue, isNotNull);
@@ -2533,13 +2776,18 @@ void main() {
           lastTakenDate: DateTime(2020, 2, 28),
           createdAt: DateTime(2020, 2, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         final changedPillNumberValue = history.value.changedPillNumber;
         expect(changedPillNumberValue, isNotNull);
@@ -2561,13 +2809,18 @@ void main() {
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         final changedPillNumberValue = history.value.changedPillNumber;
         expect(changedPillNumberValue, isNotNull);
@@ -2611,14 +2864,21 @@ void main() {
           deletedAt: DateTime(2020, 9, 15),
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          updatedPillSheetGroup: updatedPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              updatedPillSheetGroup: updatedPillSheetGroup,
+            );
 
         // actionType の検証
-        expect(history.actionType, PillSheetModifiedActionType.deletedPillSheet.name);
-        expect(history.enumActionType, PillSheetModifiedActionType.deletedPillSheet);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.deletedPillSheet.name,
+        );
+        expect(
+          history.enumActionType,
+          PillSheetModifiedActionType.deletedPillSheet,
+        );
 
         // pillSheetGroupID, before, after, beforePillSheetID, afterPillSheetID は v2 で削除済み
 
@@ -2662,10 +2922,11 @@ void main() {
           deletedAt: DateTime(2020, 10, 20),
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          updatedPillSheetGroup: updatedPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              updatedPillSheetGroup: updatedPillSheetGroup,
+            );
 
         final deletedPillSheetValue = history.value.deletedPillSheet;
         expect(deletedPillSheetValue, isNotNull);
@@ -2711,10 +2972,11 @@ void main() {
           deletedAt: DateTime(2020, 11, 15),
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          updatedPillSheetGroup: updatedPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              updatedPillSheetGroup: updatedPillSheetGroup,
+            );
 
         final deletedPillSheetValue = history.value.deletedPillSheet;
         expect(deletedPillSheetValue, isNotNull);
@@ -2739,13 +3001,20 @@ void main() {
           deletedAt: DateTime(2020, 9, 20),
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          updatedPillSheetGroup: updatedPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              updatedPillSheetGroup: updatedPillSheetGroup,
+            );
 
-        expect(history.actionType, PillSheetModifiedActionType.deletedPillSheet.name);
-        expect(history.beforePillSheetGroup!.pillSheets[0].typeInfo.totalCount, 21);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.deletedPillSheet.name,
+        );
+        expect(
+          history.beforePillSheetGroup!.pillSheets[0].typeInfo.totalCount,
+          21,
+        );
         expect(history.value.deletedPillSheet, isNotNull);
       });
 
@@ -2767,14 +3036,24 @@ void main() {
           deletedAt: DateTime(2020, 9, 25),
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          updatedPillSheetGroup: updatedPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              updatedPillSheetGroup: updatedPillSheetGroup,
+            );
 
-        expect(history.actionType, PillSheetModifiedActionType.deletedPillSheet.name);
-        expect(history.beforePillSheetGroup!.pillSheets[0].typeInfo.totalCount, 28);
-        expect(history.beforePillSheetGroup!.pillSheets[0].typeInfo.dosingPeriod, 24);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.deletedPillSheet.name,
+        );
+        expect(
+          history.beforePillSheetGroup!.pillSheets[0].typeInfo.totalCount,
+          28,
+        );
+        expect(
+          history.beforePillSheetGroup!.pillSheets[0].typeInfo.dosingPeriod,
+          24,
+        );
         expect(history.value.deletedPillSheet, isNotNull);
       });
 
@@ -2797,12 +3076,16 @@ void main() {
           deletedAt: DateTime(2020, 9, 15),
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          updatedPillSheetGroup: updatedPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              updatedPillSheetGroup: updatedPillSheetGroup,
+            );
 
-        expect(history.actionType, PillSheetModifiedActionType.deletedPillSheet.name);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.deletedPillSheet.name,
+        );
         expect(history.value.deletedPillSheet, isNotNull);
       });
 
@@ -2825,10 +3108,11 @@ void main() {
           deletedAt: deletedAt,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          updatedPillSheetGroup: updatedPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              updatedPillSheetGroup: updatedPillSheetGroup,
+            );
 
         // beforePillSheetGroup は削除前の状態
         expect(history.beforePillSheetGroup!.deletedAt, isNull);
@@ -2839,47 +3123,77 @@ void main() {
         expect(history.afterPillSheetGroup!.pillSheets[0].deletedAt, deletedAt);
       });
 
-      test('RestDurationを持つピルシートを削除する場合、RestDuration情報がbeforePillSheetGroupに保持される', () {
-        final restDuration = RestDuration(
-          id: 'rest_duration_id_1',
-          beginDate: DateTime(2020, 9, 10),
-          endDate: DateTime(2020, 9, 12),
-          createdDate: DateTime(2020, 9, 10),
-        );
-        final pillSheet = PillSheet.v1(
-          id: 'pill_sheet_id_1',
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginDate: DateTime(2020, 9, 1),
-          lastTakenDate: DateTime(2020, 9, 15),
-          createdAt: DateTime(2020, 9, 1),
-          restDurations: [restDuration],
-        );
-        final beforePillSheetGroup = createPillSheetGroup(
-          id: 'group_id',
-          pillSheets: [pillSheet],
-        );
-        final deletedAt = DateTime(2020, 9, 20);
-        final updatedPillSheetGroup = createPillSheetGroup(
-          id: 'group_id',
-          pillSheets: [pillSheet.copyWith(deletedAt: deletedAt)],
-          deletedAt: deletedAt,
-        );
+      test(
+        'RestDurationを持つピルシートを削除する場合、RestDuration情報がbeforePillSheetGroupに保持される',
+        () {
+          final restDuration = RestDuration(
+            id: 'rest_duration_id_1',
+            beginDate: DateTime(2020, 9, 10),
+            endDate: DateTime(2020, 9, 12),
+            createdDate: DateTime(2020, 9, 10),
+          );
+          final pillSheet = PillSheet.v1(
+            id: 'pill_sheet_id_1',
+            typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+            beginDate: DateTime(2020, 9, 1),
+            lastTakenDate: DateTime(2020, 9, 15),
+            createdAt: DateTime(2020, 9, 1),
+            restDurations: [restDuration],
+          );
+          final beforePillSheetGroup = createPillSheetGroup(
+            id: 'group_id',
+            pillSheets: [pillSheet],
+          );
+          final deletedAt = DateTime(2020, 9, 20);
+          final updatedPillSheetGroup = createPillSheetGroup(
+            id: 'group_id',
+            pillSheets: [pillSheet.copyWith(deletedAt: deletedAt)],
+            deletedAt: deletedAt,
+          );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          updatedPillSheetGroup: updatedPillSheetGroup,
-        );
+          final history =
+              PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+                beforePillSheetGroup: beforePillSheetGroup,
+                updatedPillSheetGroup: updatedPillSheetGroup,
+              );
 
-        // beforePillSheetGroup の RestDuration が保持されている
-        expect(history.beforePillSheetGroup!.pillSheets[0].restDurations.length, 1);
-        expect(history.beforePillSheetGroup!.pillSheets[0].restDurations[0].id, 'rest_duration_id_1');
-        expect(history.beforePillSheetGroup!.pillSheets[0].restDurations[0].beginDate, DateTime(2020, 9, 10));
-        expect(history.beforePillSheetGroup!.pillSheets[0].restDurations[0].endDate, DateTime(2020, 9, 12));
+          // beforePillSheetGroup の RestDuration が保持されている
+          expect(
+            history.beforePillSheetGroup!.pillSheets[0].restDurations.length,
+            1,
+          );
+          expect(
+            history.beforePillSheetGroup!.pillSheets[0].restDurations[0].id,
+            'rest_duration_id_1',
+          );
+          expect(
+            history
+                .beforePillSheetGroup!
+                .pillSheets[0]
+                .restDurations[0]
+                .beginDate,
+            DateTime(2020, 9, 10),
+          );
+          expect(
+            history
+                .beforePillSheetGroup!
+                .pillSheets[0]
+                .restDurations[0]
+                .endDate,
+            DateTime(2020, 9, 12),
+          );
 
-        // afterPillSheetGroup にも RestDuration が保持されている
-        expect(history.afterPillSheetGroup!.pillSheets[0].restDurations.length, 1);
-        expect(history.afterPillSheetGroup!.pillSheets[0].restDurations[0].id, 'rest_duration_id_1');
-      });
+          // afterPillSheetGroup にも RestDuration が保持されている
+          expect(
+            history.afterPillSheetGroup!.pillSheets[0].restDurations.length,
+            1,
+          );
+          expect(
+            history.afterPillSheetGroup!.pillSheets[0].restDurations[0].id,
+            'rest_duration_id_1',
+          );
+        },
+      );
     });
 
     group('生成されるプロパティの検証', () {
@@ -2901,10 +3215,11 @@ void main() {
           deletedAt: DateTime(2020, 9, 15),
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          updatedPillSheetGroup: updatedPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              updatedPillSheetGroup: updatedPillSheetGroup,
+            );
 
         expect(history.version, 'v2');
       });
@@ -2927,10 +3242,11 @@ void main() {
           deletedAt: DateTime(2020, 9, 15),
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          updatedPillSheetGroup: updatedPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              updatedPillSheetGroup: updatedPillSheetGroup,
+            );
 
         expect(history.id, isNull);
       });
@@ -2953,10 +3269,11 @@ void main() {
           deletedAt: DateTime(2020, 9, 15),
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          updatedPillSheetGroup: updatedPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              updatedPillSheetGroup: updatedPillSheetGroup,
+            );
 
         expect(history.estimatedEventCausingDate, isNotNull);
         expect(history.createdAt, isNotNull);
@@ -2982,16 +3299,22 @@ void main() {
           deletedAt: DateTime(2020, 9, 15),
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          updatedPillSheetGroup: updatedPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              updatedPillSheetGroup: updatedPillSheetGroup,
+            );
 
         expect(history.ttlExpiresDateTime, isNotNull);
         // ttlExpiresDateTimeはcreatedAtからlimitDays日後に設定される
         // now()が2回別々に呼ばれるためマイクロ秒の差異が生じる可能性があるので、差分で検証する
-        final difference = history.ttlExpiresDateTime!.difference(history.createdAt);
-        expect(difference.inDays, PillSheetModifiedHistoryServiceActionFactory.limitDays);
+        final difference = history.ttlExpiresDateTime!.difference(
+          history.createdAt,
+        );
+        expect(
+          difference.inDays,
+          PillSheetModifiedHistoryServiceActionFactory.limitDays,
+        );
       });
     });
   });
@@ -3024,16 +3347,24 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [restDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
-          restDuration: restDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.actionType, PillSheetModifiedActionType.beganRestDuration.name);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
+              restDuration: restDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.beganRestDuration.name,
+        );
       });
 
       test('beganRestDurationValue に restDuration が正しく設定されること', () {
@@ -3052,19 +3383,33 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [restDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
-          restDuration: restDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
+              restDuration: restDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
         expect(history.value.beganRestDurationValue, isNotNull);
-        expect(history.value.beganRestDurationValue!.restDuration.id, restDuration.id);
-        expect(history.value.beganRestDurationValue!.restDuration.beginDate, restDuration.beginDate);
-        expect(history.value.beganRestDurationValue!.restDuration.createdDate, restDuration.createdDate);
+        expect(
+          history.value.beganRestDurationValue!.restDuration.id,
+          restDuration.id,
+        );
+        expect(
+          history.value.beganRestDurationValue!.restDuration.beginDate,
+          restDuration.beginDate,
+        );
+        expect(
+          history.value.beganRestDurationValue!.restDuration.createdDate,
+          restDuration.createdDate,
+        );
       });
 
       test('beforePillSheetGroup と afterPillSheetGroup が正しく設定されること', () {
@@ -3083,19 +3428,23 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [restDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
-          restDuration: restDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
+              restDuration: restDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.beforePillSheetGroup, beforePillSheetGroup);
         expect(history.afterPillSheetGroup, afterPillSheetGroup);
       });
-
     });
 
     group('複数ピルシートがある場合', () {
@@ -3131,13 +3480,17 @@ void main() {
           pillSheets: [firstPillSheet, afterSecondPillSheet],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
-          restDuration: restDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
+              restDuration: restDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
-        expect(history.actionType, PillSheetModifiedActionType.beganRestDuration.name);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.beganRestDuration.name,
+        );
         // before, after, beforePillSheetID, afterPillSheetID は v2 で削除済み
         expect(history.beforePillSheetGroup, beforePillSheetGroup);
         expect(history.afterPillSheetGroup, afterPillSheetGroup);
@@ -3183,13 +3536,17 @@ void main() {
           pillSheets: [firstPillSheet, secondPillSheet, afterThirdPillSheet],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
-          restDuration: restDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
+              restDuration: restDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
-        expect(history.actionType, PillSheetModifiedActionType.beganRestDuration.name);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.beganRestDuration.name,
+        );
         // before, after, beforePillSheetID, afterPillSheetID は v2 で削除済み
         expect(history.beforePillSheetGroup, beforePillSheetGroup);
         expect(history.afterPillSheetGroup, afterPillSheetGroup);
@@ -3214,16 +3571,24 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [restDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
-          restDuration: restDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.value.beganRestDurationValue!.restDuration.endDate, isNull);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
+              restDuration: restDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.value.beganRestDurationValue!.restDuration.endDate,
+          isNull,
+        );
       });
     });
 
@@ -3244,14 +3609,19 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [restDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
-          restDuration: restDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
+              restDuration: restDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.estimatedEventCausingDate, isNotNull);
       });
@@ -3272,14 +3642,19 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [restDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
-          restDuration: restDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
+              restDuration: restDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.createdAt, isNotNull);
       });
@@ -3300,19 +3675,29 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [restDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
-          restDuration: restDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
+              restDuration: restDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.ttlExpiresDateTime, isNotNull);
         // now()が2回別々に呼ばれるためマイクロ秒の差異が生じる可能性があるので、差分で検証する
-        final difference = history.ttlExpiresDateTime!.difference(history.createdAt);
-        expect(difference.inDays, PillSheetModifiedHistoryServiceActionFactory.limitDays);
+        final difference = history.ttlExpiresDateTime!.difference(
+          history.createdAt,
+        );
+        expect(
+          difference.inDays,
+          PillSheetModifiedHistoryServiceActionFactory.limitDays,
+        );
       });
     });
 
@@ -3336,20 +3721,34 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [restDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
-          restDuration: restDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.actionType, PillSheetModifiedActionType.beganRestDuration.name);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
+              restDuration: restDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.beganRestDuration.name,
+        );
         // before, after は v2 で削除済み
         // PillSheetGroupからtypeInfoを確認
-        expect(history.beforePillSheetGroup!.pillSheets[0].typeInfo, PillSheetType.pillsheet_21.typeInfo);
-        expect(history.afterPillSheetGroup!.pillSheets[0].typeInfo, PillSheetType.pillsheet_21.typeInfo);
+        expect(
+          history.beforePillSheetGroup!.pillSheets[0].typeInfo,
+          PillSheetType.pillsheet_21.typeInfo,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].typeInfo,
+          PillSheetType.pillsheet_21.typeInfo,
+        );
       });
 
       test('24錠タイプ（pillsheet_28_4）で休薬期間を開始した場合', () {
@@ -3368,19 +3767,33 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [restDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
-          restDuration: restDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.actionType, PillSheetModifiedActionType.beganRestDuration.name);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
+              restDuration: restDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.beganRestDuration.name,
+        );
         // before, after は v2 で削除済み
-        expect(history.beforePillSheetGroup!.pillSheets[0].typeInfo, PillSheetType.pillsheet_28_4.typeInfo);
-        expect(history.afterPillSheetGroup!.pillSheets[0].typeInfo, PillSheetType.pillsheet_28_4.typeInfo);
+        expect(
+          history.beforePillSheetGroup!.pillSheets[0].typeInfo,
+          PillSheetType.pillsheet_28_4.typeInfo,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].typeInfo,
+          PillSheetType.pillsheet_28_4.typeInfo,
+        );
       });
     });
 
@@ -3408,19 +3821,33 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [existingRestDuration, newRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
-          restDuration: newRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.value.beganRestDurationValue!.restDuration.id, newRestDuration.id);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
+              restDuration: newRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.value.beganRestDurationValue!.restDuration.id,
+          newRestDuration.id,
+        );
         // before, after は v2 で削除済み
-        expect(history.beforePillSheetGroup!.pillSheets[0].restDurations.length, 1);
-        expect(history.afterPillSheetGroup!.pillSheets[0].restDurations.length, 2);
+        expect(
+          history.beforePillSheetGroup!.pillSheets[0].restDurations.length,
+          1,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].restDurations.length,
+          2,
+        );
       });
 
       test('既に2つの休薬期間がある状態で新しい休薬期間を開始した場合', () {
@@ -3450,21 +3877,39 @@ void main() {
           createdDate: DateTime(2020, 9, 11),
         );
         final afterPillSheet = beforePillSheet.copyWith(
-          restDurations: [existingRestDuration1, existingRestDuration2, newRestDuration],
+          restDurations: [
+            existingRestDuration1,
+            existingRestDuration2,
+            newRestDuration,
+          ],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
-          restDuration: newRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.value.beganRestDurationValue!.restDuration.id, newRestDuration.id);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
+              restDuration: newRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.value.beganRestDurationValue!.restDuration.id,
+          newRestDuration.id,
+        );
         // before, after は v2 で削除済み
-        expect(history.beforePillSheetGroup!.pillSheets[0].restDurations.length, 2);
-        expect(history.afterPillSheetGroup!.pillSheets[0].restDurations.length, 3);
+        expect(
+          history.beforePillSheetGroup!.pillSheets[0].restDurations.length,
+          2,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].restDurations.length,
+          3,
+        );
       });
     });
   });
@@ -3501,16 +3946,24 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [endedRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
-          restDuration: endedRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.actionType, PillSheetModifiedActionType.endedRestDuration.name);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
+              restDuration: endedRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.endedRestDuration.name,
+        );
       });
 
       test('endedRestDurationValue に restDuration が正しく設定されること', () {
@@ -3533,20 +3986,37 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [endedRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
-          restDuration: endedRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
+              restDuration: endedRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
         expect(history.value.endedRestDurationValue, isNotNull);
-        expect(history.value.endedRestDurationValue!.restDuration.id, endedRestDuration.id);
-        expect(history.value.endedRestDurationValue!.restDuration.beginDate, endedRestDuration.beginDate);
-        expect(history.value.endedRestDurationValue!.restDuration.endDate, endedRestDuration.endDate);
-        expect(history.value.endedRestDurationValue!.restDuration.createdDate, endedRestDuration.createdDate);
+        expect(
+          history.value.endedRestDurationValue!.restDuration.id,
+          endedRestDuration.id,
+        );
+        expect(
+          history.value.endedRestDurationValue!.restDuration.beginDate,
+          endedRestDuration.beginDate,
+        );
+        expect(
+          history.value.endedRestDurationValue!.restDuration.endDate,
+          endedRestDuration.endDate,
+        );
+        expect(
+          history.value.endedRestDurationValue!.restDuration.createdDate,
+          endedRestDuration.createdDate,
+        );
       });
 
       test('before と after の PillSheet が正しく設定されること', () {
@@ -3569,20 +4039,24 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [endedRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
-          restDuration: endedRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
+              restDuration: endedRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         // before, after, beforePillSheetID, afterPillSheetID は v2 で削除済み
         expect(history.beforePillSheetGroup, beforePillSheetGroup);
         expect(history.afterPillSheetGroup, afterPillSheetGroup);
       });
-
     });
 
     group('複数ピルシートがある場合', () {
@@ -3622,13 +4096,17 @@ void main() {
           pillSheets: [firstPillSheet, afterSecondPillSheet],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
-          restDuration: endedRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
+              restDuration: endedRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
-        expect(history.actionType, PillSheetModifiedActionType.endedRestDuration.name);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.endedRestDuration.name,
+        );
         // before, after, beforePillSheetID, afterPillSheetID は v2 で削除済み
         expect(history.beforePillSheetGroup, beforePillSheetGroup);
         expect(history.afterPillSheetGroup, afterPillSheetGroup);
@@ -3678,13 +4156,17 @@ void main() {
           pillSheets: [firstPillSheet, secondPillSheet, afterThirdPillSheet],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
-          restDuration: endedRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
+              restDuration: endedRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
-        expect(history.actionType, PillSheetModifiedActionType.endedRestDuration.name);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.endedRestDuration.name,
+        );
         // before, after, beforePillSheetID, afterPillSheetID は v2 で削除済み
         expect(history.beforePillSheetGroup!.pillSheets.length, 3);
         expect(history.afterPillSheetGroup!.pillSheets.length, 3);
@@ -3712,16 +4194,24 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [endedRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
-          restDuration: endedRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.value.endedRestDurationValue!.restDuration.endDate, DateTime(2020, 9, 14));
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
+              restDuration: endedRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.value.endedRestDurationValue!.restDuration.endDate,
+          DateTime(2020, 9, 14),
+        );
       });
 
       test('休薬期間が1日だけの場合（beginDate と endDate が同日）、正しく設定されること', () {
@@ -3744,17 +4234,28 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [endedRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
-          restDuration: endedRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.value.endedRestDurationValue!.restDuration.beginDate, DateTime(2020, 9, 11));
-        expect(history.value.endedRestDurationValue!.restDuration.endDate, DateTime(2020, 9, 11));
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
+              restDuration: endedRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.value.endedRestDurationValue!.restDuration.beginDate,
+          DateTime(2020, 9, 11),
+        );
+        expect(
+          history.value.endedRestDurationValue!.restDuration.endDate,
+          DateTime(2020, 9, 11),
+        );
       });
     });
 
@@ -3779,14 +4280,19 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [endedRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
-          restDuration: endedRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
+              restDuration: endedRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.estimatedEventCausingDate, isNotNull);
       });
@@ -3811,14 +4317,19 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [endedRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
-          restDuration: endedRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
+              restDuration: endedRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.createdAt, isNotNull);
       });
@@ -3843,19 +4354,29 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [endedRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
-          restDuration: endedRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
+              restDuration: endedRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.ttlExpiresDateTime, isNotNull);
         // now()が2回別々に呼ばれるためマイクロ秒の差異が生じる可能性があるので、差分で検証する
-        final difference = history.ttlExpiresDateTime!.difference(history.createdAt);
-        expect(difference.inDays, PillSheetModifiedHistoryServiceActionFactory.limitDays);
+        final difference = history.ttlExpiresDateTime!.difference(
+          history.createdAt,
+        );
+        expect(
+          difference.inDays,
+          PillSheetModifiedHistoryServiceActionFactory.limitDays,
+        );
       });
     });
 
@@ -3883,19 +4404,33 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [endedRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
-          restDuration: endedRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.actionType, PillSheetModifiedActionType.endedRestDuration.name);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
+              restDuration: endedRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.endedRestDuration.name,
+        );
         // before, after は v2 で削除済み
-        expect(history.beforePillSheetGroup!.pillSheets[0].typeInfo, PillSheetType.pillsheet_21.typeInfo);
-        expect(history.afterPillSheetGroup!.pillSheets[0].typeInfo, PillSheetType.pillsheet_21.typeInfo);
+        expect(
+          history.beforePillSheetGroup!.pillSheets[0].typeInfo,
+          PillSheetType.pillsheet_21.typeInfo,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].typeInfo,
+          PillSheetType.pillsheet_21.typeInfo,
+        );
       });
 
       test('24錠タイプ（pillsheet_28_4）で休薬期間を終了した場合', () {
@@ -3918,19 +4453,33 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [endedRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
-          restDuration: endedRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.actionType, PillSheetModifiedActionType.endedRestDuration.name);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
+              restDuration: endedRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.endedRestDuration.name,
+        );
         // before, after は v2 で削除済み
-        expect(history.beforePillSheetGroup!.pillSheets[0].typeInfo, PillSheetType.pillsheet_28_4.typeInfo);
-        expect(history.afterPillSheetGroup!.pillSheets[0].typeInfo, PillSheetType.pillsheet_28_4.typeInfo);
+        expect(
+          history.beforePillSheetGroup!.pillSheets[0].typeInfo,
+          PillSheetType.pillsheet_28_4.typeInfo,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].typeInfo,
+          PillSheetType.pillsheet_28_4.typeInfo,
+        );
       });
     });
 
@@ -3961,21 +4510,41 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [existingRestDuration, endedRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
-          restDuration: endedRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.value.endedRestDurationValue!.restDuration.id, endedRestDuration.id);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
+              restDuration: endedRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.value.endedRestDurationValue!.restDuration.id,
+          endedRestDuration.id,
+        );
         // before, after は v2 で削除済み
-        expect(history.beforePillSheetGroup!.pillSheets[0].restDurations.length, 2);
-        expect(history.afterPillSheetGroup!.pillSheets[0].restDurations.length, 2);
-        expect(history.beforePillSheetGroup!.pillSheets[0].restDurations[1].endDate, isNull);
-        expect(history.afterPillSheetGroup!.pillSheets[0].restDurations[1].endDate, DateTime(2020, 9, 14));
+        expect(
+          history.beforePillSheetGroup!.pillSheets[0].restDurations.length,
+          2,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].restDurations.length,
+          2,
+        );
+        expect(
+          history.beforePillSheetGroup!.pillSheets[0].restDurations[1].endDate,
+          isNull,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].restDurations[1].endDate,
+          DateTime(2020, 9, 14),
+        );
       });
     });
   });
@@ -4012,55 +4581,99 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.actionType, PillSheetModifiedActionType.changedRestDurationBeginDate.name);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.changedRestDurationBeginDate.name,
+        );
       });
 
-      test('changedRestDurationBeginDateValue に beforeRestDuration と afterRestDuration が正しく設定されること', () {
-        final beforeRestDuration = RestDuration(
-          id: 'rest_duration_id_1',
-          beginDate: DateTime(2020, 9, 11),
-          createdDate: DateTime(2020, 9, 11),
-        );
-        final afterRestDuration = beforeRestDuration.copyWith(
-          beginDate: DateTime(2020, 9, 10),
-        );
-        final beforePillSheet = PillSheet.v1(
-          id: 'pill_sheet_id_1',
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginDate: DateTime(2020, 9, 1),
-          lastTakenDate: DateTime(2020, 9, 10),
-          restDurations: [beforeRestDuration],
-          createdAt: DateTime(2020, 9, 1),
-        );
-        final afterPillSheet = beforePillSheet.copyWith(
-          restDurations: [afterRestDuration],
-        );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+      test(
+        'changedRestDurationBeginDateValue に beforeRestDuration と afterRestDuration が正しく設定されること',
+        () {
+          final beforeRestDuration = RestDuration(
+            id: 'rest_duration_id_1',
+            beginDate: DateTime(2020, 9, 11),
+            createdDate: DateTime(2020, 9, 11),
+          );
+          final afterRestDuration = beforeRestDuration.copyWith(
+            beginDate: DateTime(2020, 9, 10),
+          );
+          final beforePillSheet = PillSheet.v1(
+            id: 'pill_sheet_id_1',
+            typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+            beginDate: DateTime(2020, 9, 1),
+            lastTakenDate: DateTime(2020, 9, 10),
+            restDurations: [beforeRestDuration],
+            createdAt: DateTime(2020, 9, 1),
+          );
+          final afterPillSheet = beforePillSheet.copyWith(
+            restDurations: [afterRestDuration],
+          );
+          final beforePillSheetGroup = createPillSheetGroup(
+            pillSheets: [beforePillSheet],
+          );
+          final afterPillSheetGroup = createPillSheetGroup(
+            pillSheets: [afterPillSheet],
+          );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+          final history =
+              PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+                beforeRestDuration: beforeRestDuration,
+                afterRestDuration: afterRestDuration,
+                beforePillSheetGroup: beforePillSheetGroup,
+                afterPillSheetGroup: afterPillSheetGroup,
+              );
 
-        expect(history.value.changedRestDurationBeginDateValue, isNotNull);
-        expect(history.value.changedRestDurationBeginDateValue!.beforeRestDuration.id, beforeRestDuration.id);
-        expect(history.value.changedRestDurationBeginDateValue!.beforeRestDuration.beginDate, beforeRestDuration.beginDate);
-        expect(history.value.changedRestDurationBeginDateValue!.afterRestDuration.id, afterRestDuration.id);
-        expect(history.value.changedRestDurationBeginDateValue!.afterRestDuration.beginDate, afterRestDuration.beginDate);
-      });
+          expect(history.value.changedRestDurationBeginDateValue, isNotNull);
+          expect(
+            history
+                .value
+                .changedRestDurationBeginDateValue!
+                .beforeRestDuration
+                .id,
+            beforeRestDuration.id,
+          );
+          expect(
+            history
+                .value
+                .changedRestDurationBeginDateValue!
+                .beforeRestDuration
+                .beginDate,
+            beforeRestDuration.beginDate,
+          );
+          expect(
+            history
+                .value
+                .changedRestDurationBeginDateValue!
+                .afterRestDuration
+                .id,
+            afterRestDuration.id,
+          );
+          expect(
+            history
+                .value
+                .changedRestDurationBeginDateValue!
+                .afterRestDuration
+                .beginDate,
+            afterRestDuration.beginDate,
+          );
+        },
+      );
 
       test('before と after の PillSheet が正しく設定されること', () {
         final beforeRestDuration = RestDuration(
@@ -4082,21 +4695,25 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         // before, after, beforePillSheetID, afterPillSheetID は v2 で削除済み
         expect(history.beforePillSheetGroup, beforePillSheetGroup);
         expect(history.afterPillSheetGroup, afterPillSheetGroup);
       });
-
     });
 
     group('開始日の変更パターン', () {
@@ -4120,18 +4737,37 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.value.changedRestDurationBeginDateValue!.beforeRestDuration.beginDate, DateTime(2020, 9, 11));
-        expect(history.value.changedRestDurationBeginDateValue!.afterRestDuration.beginDate, DateTime(2020, 9, 10));
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history
+              .value
+              .changedRestDurationBeginDateValue!
+              .beforeRestDuration
+              .beginDate,
+          DateTime(2020, 9, 11),
+        );
+        expect(
+          history
+              .value
+              .changedRestDurationBeginDateValue!
+              .afterRestDuration
+              .beginDate,
+          DateTime(2020, 9, 10),
+        );
       });
 
       test('開始日を後にずらした場合（例：9/10 → 9/11）', () {
@@ -4154,18 +4790,37 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.value.changedRestDurationBeginDateValue!.beforeRestDuration.beginDate, DateTime(2020, 9, 10));
-        expect(history.value.changedRestDurationBeginDateValue!.afterRestDuration.beginDate, DateTime(2020, 9, 11));
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history
+              .value
+              .changedRestDurationBeginDateValue!
+              .beforeRestDuration
+              .beginDate,
+          DateTime(2020, 9, 10),
+        );
+        expect(
+          history
+              .value
+              .changedRestDurationBeginDateValue!
+              .afterRestDuration
+              .beginDate,
+          DateTime(2020, 9, 11),
+        );
       });
 
       test('開始日を大幅に変更した場合（例：9/11 → 9/5）', () {
@@ -4188,18 +4843,37 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.value.changedRestDurationBeginDateValue!.beforeRestDuration.beginDate, DateTime(2020, 9, 11));
-        expect(history.value.changedRestDurationBeginDateValue!.afterRestDuration.beginDate, DateTime(2020, 9, 5));
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history
+              .value
+              .changedRestDurationBeginDateValue!
+              .beforeRestDuration
+              .beginDate,
+          DateTime(2020, 9, 11),
+        );
+        expect(
+          history
+              .value
+              .changedRestDurationBeginDateValue!
+              .afterRestDuration
+              .beginDate,
+          DateTime(2020, 9, 5),
+        );
       });
     });
 
@@ -4240,19 +4914,37 @@ void main() {
           pillSheets: [firstPillSheet, afterSecondPillSheet],
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
-        expect(history.actionType, PillSheetModifiedActionType.changedRestDurationBeginDate.name);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.changedRestDurationBeginDate.name,
+        );
         // before, after, beforePillSheetID, afterPillSheetID は v2 で削除済み
         expect(history.beforePillSheetGroup, beforePillSheetGroup);
         expect(history.afterPillSheetGroup, afterPillSheetGroup);
-        expect(history.value.changedRestDurationBeginDateValue!.beforeRestDuration.beginDate, DateTime(2020, 10, 11));
-        expect(history.value.changedRestDurationBeginDateValue!.afterRestDuration.beginDate, DateTime(2020, 10, 10));
+        expect(
+          history
+              .value
+              .changedRestDurationBeginDateValue!
+              .beforeRestDuration
+              .beginDate,
+          DateTime(2020, 10, 11),
+        );
+        expect(
+          history
+              .value
+              .changedRestDurationBeginDateValue!
+              .afterRestDuration
+              .beginDate,
+          DateTime(2020, 10, 10),
+        );
       });
     });
 
@@ -4278,18 +4970,37 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.value.changedRestDurationBeginDateValue!.beforeRestDuration.endDate, DateTime(2020, 9, 14));
-        expect(history.value.changedRestDurationBeginDateValue!.afterRestDuration.endDate, DateTime(2020, 9, 14));
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history
+              .value
+              .changedRestDurationBeginDateValue!
+              .beforeRestDuration
+              .endDate,
+          DateTime(2020, 9, 14),
+        );
+        expect(
+          history
+              .value
+              .changedRestDurationBeginDateValue!
+              .afterRestDuration
+              .endDate,
+          DateTime(2020, 9, 14),
+        );
       });
 
       test('createdDate が保持されること', () {
@@ -4312,18 +5023,37 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.value.changedRestDurationBeginDateValue!.beforeRestDuration.createdDate, DateTime(2020, 9, 11, 10, 30));
-        expect(history.value.changedRestDurationBeginDateValue!.afterRestDuration.createdDate, DateTime(2020, 9, 11, 10, 30));
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history
+              .value
+              .changedRestDurationBeginDateValue!
+              .beforeRestDuration
+              .createdDate,
+          DateTime(2020, 9, 11, 10, 30),
+        );
+        expect(
+          history
+              .value
+              .changedRestDurationBeginDateValue!
+              .afterRestDuration
+              .createdDate,
+          DateTime(2020, 9, 11, 10, 30),
+        );
       });
     });
 
@@ -4348,15 +5078,20 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.estimatedEventCausingDate, isNotNull);
       });
@@ -4381,15 +5116,20 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.createdAt, isNotNull);
       });
@@ -4414,20 +5154,30 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.ttlExpiresDateTime, isNotNull);
         // now()が2回別々に呼ばれるためマイクロ秒の差異が生じる可能性があるので、差分で検証する
-        final difference = history.ttlExpiresDateTime!.difference(history.createdAt);
-        expect(difference.inDays, PillSheetModifiedHistoryServiceActionFactory.limitDays);
+        final difference = history.ttlExpiresDateTime!.difference(
+          history.createdAt,
+        );
+        expect(
+          difference.inDays,
+          PillSheetModifiedHistoryServiceActionFactory.limitDays,
+        );
       });
     });
 
@@ -4455,20 +5205,34 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.actionType, PillSheetModifiedActionType.changedRestDurationBeginDate.name);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.changedRestDurationBeginDate.name,
+        );
         // before, after は v2 で削除済み
-        expect(history.beforePillSheetGroup!.pillSheets[0].typeInfo, PillSheetType.pillsheet_21.typeInfo);
-        expect(history.afterPillSheetGroup!.pillSheets[0].typeInfo, PillSheetType.pillsheet_21.typeInfo);
+        expect(
+          history.beforePillSheetGroup!.pillSheets[0].typeInfo,
+          PillSheetType.pillsheet_21.typeInfo,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].typeInfo,
+          PillSheetType.pillsheet_21.typeInfo,
+        );
       });
 
       test('24錠タイプ（pillsheet_28_4）で休薬開始日を変更した場合', () {
@@ -4491,20 +5255,34 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.actionType, PillSheetModifiedActionType.changedRestDurationBeginDate.name);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.changedRestDurationBeginDate.name,
+        );
         // before, after は v2 で削除済み
-        expect(history.beforePillSheetGroup!.pillSheets[0].typeInfo, PillSheetType.pillsheet_28_4.typeInfo);
-        expect(history.afterPillSheetGroup!.pillSheets[0].typeInfo, PillSheetType.pillsheet_28_4.typeInfo);
+        expect(
+          history.beforePillSheetGroup!.pillSheets[0].typeInfo,
+          PillSheetType.pillsheet_28_4.typeInfo,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].typeInfo,
+          PillSheetType.pillsheet_28_4.typeInfo,
+        );
       });
     });
 
@@ -4535,23 +5313,54 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [existingRestDuration, afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.value.changedRestDurationBeginDateValue!.beforeRestDuration.id, beforeRestDuration.id);
-        expect(history.value.changedRestDurationBeginDateValue!.afterRestDuration.id, afterRestDuration.id);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history
+              .value
+              .changedRestDurationBeginDateValue!
+              .beforeRestDuration
+              .id,
+          beforeRestDuration.id,
+        );
+        expect(
+          history.value.changedRestDurationBeginDateValue!.afterRestDuration.id,
+          afterRestDuration.id,
+        );
         // before, after は v2 で削除済み
-        expect(history.beforePillSheetGroup!.pillSheets[0].restDurations.length, 2);
-        expect(history.afterPillSheetGroup!.pillSheets[0].restDurations.length, 2);
-        expect(history.beforePillSheetGroup!.pillSheets[0].restDurations[1].beginDate, DateTime(2020, 9, 11));
-        expect(history.afterPillSheetGroup!.pillSheets[0].restDurations[1].beginDate, DateTime(2020, 9, 10));
+        expect(
+          history.beforePillSheetGroup!.pillSheets[0].restDurations.length,
+          2,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].restDurations.length,
+          2,
+        );
+        expect(
+          history
+              .beforePillSheetGroup!
+              .pillSheets[0]
+              .restDurations[1]
+              .beginDate,
+          DateTime(2020, 9, 11),
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets[0].restDurations[1].beginDate,
+          DateTime(2020, 9, 10),
+        );
       });
     });
   });
@@ -4589,58 +5398,96 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.actionType, PillSheetModifiedActionType.changedRestDuration.name);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.changedRestDuration.name,
+        );
       });
 
-      test('changedRestDurationValue に beforeRestDuration と afterRestDuration が正しく設定されること', () {
-        final beforeRestDuration = RestDuration(
-          id: 'rest_duration_id_1',
-          beginDate: DateTime(2020, 9, 11),
-          endDate: DateTime(2020, 9, 14),
-          createdDate: DateTime(2020, 9, 11),
-        );
-        final afterRestDuration = beforeRestDuration.copyWith(
-          endDate: DateTime(2020, 9, 16),
-        );
-        final beforePillSheet = PillSheet.v1(
-          id: 'pill_sheet_id_1',
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginDate: DateTime(2020, 9, 1),
-          lastTakenDate: DateTime(2020, 9, 10),
-          restDurations: [beforeRestDuration],
-          createdAt: DateTime(2020, 9, 1),
-        );
-        final afterPillSheet = beforePillSheet.copyWith(
-          restDurations: [afterRestDuration],
-        );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+      test(
+        'changedRestDurationValue に beforeRestDuration と afterRestDuration が正しく設定されること',
+        () {
+          final beforeRestDuration = RestDuration(
+            id: 'rest_duration_id_1',
+            beginDate: DateTime(2020, 9, 11),
+            endDate: DateTime(2020, 9, 14),
+            createdDate: DateTime(2020, 9, 11),
+          );
+          final afterRestDuration = beforeRestDuration.copyWith(
+            endDate: DateTime(2020, 9, 16),
+          );
+          final beforePillSheet = PillSheet.v1(
+            id: 'pill_sheet_id_1',
+            typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+            beginDate: DateTime(2020, 9, 1),
+            lastTakenDate: DateTime(2020, 9, 10),
+            restDurations: [beforeRestDuration],
+            createdAt: DateTime(2020, 9, 1),
+          );
+          final afterPillSheet = beforePillSheet.copyWith(
+            restDurations: [afterRestDuration],
+          );
+          final beforePillSheetGroup = createPillSheetGroup(
+            pillSheets: [beforePillSheet],
+          );
+          final afterPillSheetGroup = createPillSheetGroup(
+            pillSheets: [afterPillSheet],
+          );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+          final history =
+              PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+                beforeRestDuration: beforeRestDuration,
+                afterRestDuration: afterRestDuration,
+                beforePillSheetGroup: beforePillSheetGroup,
+                afterPillSheetGroup: afterPillSheetGroup,
+              );
 
-        expect(history.value.changedRestDurationValue, isNotNull);
-        expect(history.value.changedRestDurationValue!.beforeRestDuration.id, beforeRestDuration.id);
-        expect(history.value.changedRestDurationValue!.beforeRestDuration.beginDate, beforeRestDuration.beginDate);
-        expect(history.value.changedRestDurationValue!.beforeRestDuration.endDate, beforeRestDuration.endDate);
-        expect(history.value.changedRestDurationValue!.afterRestDuration.id, afterRestDuration.id);
-        expect(history.value.changedRestDurationValue!.afterRestDuration.beginDate, afterRestDuration.beginDate);
-        expect(history.value.changedRestDurationValue!.afterRestDuration.endDate, afterRestDuration.endDate);
-      });
+          expect(history.value.changedRestDurationValue, isNotNull);
+          expect(
+            history.value.changedRestDurationValue!.beforeRestDuration.id,
+            beforeRestDuration.id,
+          );
+          expect(
+            history
+                .value
+                .changedRestDurationValue!
+                .beforeRestDuration
+                .beginDate,
+            beforeRestDuration.beginDate,
+          );
+          expect(
+            history.value.changedRestDurationValue!.beforeRestDuration.endDate,
+            beforeRestDuration.endDate,
+          );
+          expect(
+            history.value.changedRestDurationValue!.afterRestDuration.id,
+            afterRestDuration.id,
+          );
+          expect(
+            history.value.changedRestDurationValue!.afterRestDuration.beginDate,
+            afterRestDuration.beginDate,
+          );
+          expect(
+            history.value.changedRestDurationValue!.afterRestDuration.endDate,
+            afterRestDuration.endDate,
+          );
+        },
+      );
 
       test('before と after の PillSheet が正しく設定されること', () {
         final beforeRestDuration = RestDuration(
@@ -4663,15 +5510,20 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         // before, after, beforePillSheetID, afterPillSheetID は v2 で削除済み
         expect(history.beforePillSheetGroup, beforePillSheetGroup);
@@ -4699,15 +5551,20 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.version, 'v2');
       });
@@ -4735,18 +5592,29 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.value.changedRestDurationValue!.beforeRestDuration.endDate, DateTime(2020, 9, 14));
-        expect(history.value.changedRestDurationValue!.afterRestDuration.endDate, DateTime(2020, 9, 18));
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.value.changedRestDurationValue!.beforeRestDuration.endDate,
+          DateTime(2020, 9, 14),
+        );
+        expect(
+          history.value.changedRestDurationValue!.afterRestDuration.endDate,
+          DateTime(2020, 9, 18),
+        );
       });
 
       test('endDate を短縮した場合に正しく記録されること', () {
@@ -4770,18 +5638,29 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.value.changedRestDurationValue!.beforeRestDuration.endDate, DateTime(2020, 9, 18));
-        expect(history.value.changedRestDurationValue!.afterRestDuration.endDate, DateTime(2020, 9, 14));
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.value.changedRestDurationValue!.beforeRestDuration.endDate,
+          DateTime(2020, 9, 18),
+        );
+        expect(
+          history.value.changedRestDurationValue!.afterRestDuration.endDate,
+          DateTime(2020, 9, 14),
+        );
       });
     });
 
@@ -4807,18 +5686,29 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.value.changedRestDurationValue!.beforeRestDuration.beginDate, DateTime(2020, 9, 11));
-        expect(history.value.changedRestDurationValue!.afterRestDuration.beginDate, DateTime(2020, 9, 9));
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.value.changedRestDurationValue!.beforeRestDuration.beginDate,
+          DateTime(2020, 9, 11),
+        );
+        expect(
+          history.value.changedRestDurationValue!.afterRestDuration.beginDate,
+          DateTime(2020, 9, 9),
+        );
       });
 
       test('beginDate を繰り下げた場合に正しく記録されること', () {
@@ -4842,18 +5732,29 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.value.changedRestDurationValue!.beforeRestDuration.beginDate, DateTime(2020, 9, 9));
-        expect(history.value.changedRestDurationValue!.afterRestDuration.beginDate, DateTime(2020, 9, 11));
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.value.changedRestDurationValue!.beforeRestDuration.beginDate,
+          DateTime(2020, 9, 9),
+        );
+        expect(
+          history.value.changedRestDurationValue!.afterRestDuration.beginDate,
+          DateTime(2020, 9, 11),
+        );
       });
     });
 
@@ -4889,21 +5790,32 @@ void main() {
         final afterSecondPillSheet = beforeSecondPillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [firstPillSheet, beforeSecondPillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [firstPillSheet, afterSecondPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [firstPillSheet, beforeSecondPillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [firstPillSheet, afterSecondPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         // beforePillSheetID, afterPillSheetID, before, after は削除済み - beforePillSheetGroup/afterPillSheetGroup を使用
         expect(history.beforePillSheetGroup!.pillSheets[1].groupIndex, 1);
         expect(history.afterPillSheetGroup!.pillSheets[1].groupIndex, 1);
-        expect(history.value.changedRestDurationValue!.beforeRestDuration.endDate, DateTime(2020, 10, 10));
-        expect(history.value.changedRestDurationValue!.afterRestDuration.endDate, DateTime(2020, 10, 12));
+        expect(
+          history.value.changedRestDurationValue!.beforeRestDuration.endDate,
+          DateTime(2020, 10, 10),
+        );
+        expect(
+          history.value.changedRestDurationValue!.afterRestDuration.endDate,
+          DateTime(2020, 10, 12),
+        );
       });
 
       test('3枚目のピルシートの休薬期間を変更した場合に正しく記録されること', () {
@@ -4946,21 +5858,32 @@ void main() {
         final afterThirdPillSheet = beforeThirdPillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [firstPillSheet, secondPillSheet, beforeThirdPillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [firstPillSheet, secondPillSheet, afterThirdPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [firstPillSheet, secondPillSheet, beforeThirdPillSheet],
         );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [firstPillSheet, secondPillSheet, afterThirdPillSheet],
+        );
+
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         // beforePillSheetID, afterPillSheetID, before, after は削除済み - beforePillSheetGroup/afterPillSheetGroup を使用
         expect(history.beforePillSheetGroup!.pillSheets[2].groupIndex, 2);
         expect(history.afterPillSheetGroup!.pillSheets[2].groupIndex, 2);
-        expect(history.value.changedRestDurationValue!.beforeRestDuration.endDate, DateTime(2020, 11, 10));
-        expect(history.value.changedRestDurationValue!.afterRestDuration.endDate, DateTime(2020, 11, 14));
+        expect(
+          history.value.changedRestDurationValue!.beforeRestDuration.endDate,
+          DateTime(2020, 11, 10),
+        );
+        expect(
+          history.value.changedRestDurationValue!.afterRestDuration.endDate,
+          DateTime(2020, 11, 14),
+        );
         expect(history.beforePillSheetGroup!.pillSheets.length, 3);
         expect(history.afterPillSheetGroup!.pillSheets.length, 3);
       });
@@ -4994,23 +5917,56 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [existingRestDuration, afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.value.changedRestDurationValue!.beforeRestDuration.id, beforeRestDuration.id);
-        expect(history.value.changedRestDurationValue!.afterRestDuration.id, afterRestDuration.id);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.value.changedRestDurationValue!.beforeRestDuration.id,
+          beforeRestDuration.id,
+        );
+        expect(
+          history.value.changedRestDurationValue!.afterRestDuration.id,
+          afterRestDuration.id,
+        );
         // before, after は削除済み - beforePillSheetGroup/afterPillSheetGroup を使用
-        expect(history.beforePillSheetGroup!.pillSheets.first.restDurations.length, 2);
-        expect(history.afterPillSheetGroup!.pillSheets.first.restDurations.length, 2);
-        expect(history.beforePillSheetGroup!.pillSheets.first.restDurations[1].endDate, DateTime(2020, 9, 18));
-        expect(history.afterPillSheetGroup!.pillSheets.first.restDurations[1].endDate, DateTime(2020, 9, 20));
+        expect(
+          history.beforePillSheetGroup!.pillSheets.first.restDurations.length,
+          2,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets.first.restDurations.length,
+          2,
+        );
+        expect(
+          history
+              .beforePillSheetGroup!
+              .pillSheets
+              .first
+              .restDurations[1]
+              .endDate,
+          DateTime(2020, 9, 18),
+        );
+        expect(
+          history
+              .afterPillSheetGroup!
+              .pillSheets
+              .first
+              .restDurations[1]
+              .endDate,
+          DateTime(2020, 9, 20),
+        );
       });
     });
 
@@ -5036,20 +5992,34 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.actionType, PillSheetModifiedActionType.changedRestDuration.name);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.changedRestDuration.name,
+        );
         // before, after は削除済み - beforePillSheetGroup/afterPillSheetGroup を使用
-        expect(history.beforePillSheetGroup!.pillSheets.first.typeInfo.totalCount, 21);
-        expect(history.afterPillSheetGroup!.pillSheets.first.typeInfo.totalCount, 21);
+        expect(
+          history.beforePillSheetGroup!.pillSheets.first.typeInfo.totalCount,
+          21,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets.first.typeInfo.totalCount,
+          21,
+        );
       });
 
       test('24錠+4偽薬タイプのピルシートで休薬期間を変更した場合', () {
@@ -5073,22 +6043,42 @@ void main() {
         final afterPillSheet = beforePillSheet.copyWith(
           restDurations: [afterRestDuration],
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
-        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
-
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [beforePillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [afterPillSheet],
         );
 
-        expect(history.actionType, PillSheetModifiedActionType.changedRestDuration.name);
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
+
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.changedRestDuration.name,
+        );
         // before, after は削除済み - beforePillSheetGroup/afterPillSheetGroup を使用
-        expect(history.beforePillSheetGroup!.pillSheets.first.typeInfo.totalCount, 28);
-        expect(history.beforePillSheetGroup!.pillSheets.first.typeInfo.dosingPeriod, 24);
-        expect(history.afterPillSheetGroup!.pillSheets.first.typeInfo.totalCount, 28);
-        expect(history.afterPillSheetGroup!.pillSheets.first.typeInfo.dosingPeriod, 24);
+        expect(
+          history.beforePillSheetGroup!.pillSheets.first.typeInfo.totalCount,
+          28,
+        );
+        expect(
+          history.beforePillSheetGroup!.pillSheets.first.typeInfo.dosingPeriod,
+          24,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets.first.typeInfo.totalCount,
+          28,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets.first.typeInfo.dosingPeriod,
+          24,
+        );
       });
     });
 
@@ -5113,14 +6103,16 @@ void main() {
 
     group('正常ケース', () {
       test('actionType が changedBeginDisplayNumber であること', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 28,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 5,
-          endPillNumber: 28,
-        );
+        final beforeDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 28,
+            );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 5,
+              endPillNumber: 28,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -5138,54 +6130,65 @@ void main() {
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
-        expect(history.actionType, PillSheetModifiedActionType.changedBeginDisplayNumber.name);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.changedBeginDisplayNumber.name,
+        );
       });
 
-      test('changedBeginDisplayNumber に beforeDisplayNumberSetting と afterDisplayNumberSetting が正しく設定されること', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 28,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 10,
-          endPillNumber: 28,
-        );
-        final pillSheet = PillSheet.v1(
-          id: 'pill_sheet_id_1',
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginDate: DateTime(2020, 9, 1),
-          lastTakenDate: DateTime(2020, 9, 10),
-          restDurations: [],
-          createdAt: DateTime(2020, 9, 1),
-        );
-        final beforePillSheetGroup = createPillSheetGroup(
-          pillSheets: [pillSheet],
-          displayNumberSetting: beforeDisplayNumberSetting,
-        );
-        final afterPillSheetGroup = createPillSheetGroup(
-          pillSheets: [pillSheet],
-          displayNumberSetting: afterDisplayNumberSetting,
-        );
+      test(
+        'changedBeginDisplayNumber に beforeDisplayNumberSetting と afterDisplayNumberSetting が正しく設定されること',
+        () {
+          final beforeDisplayNumberSetting =
+              const PillSheetGroupDisplayNumberSetting(
+                beginPillNumber: 1,
+                endPillNumber: 28,
+              );
+          final afterDisplayNumberSetting =
+              const PillSheetGroupDisplayNumberSetting(
+                beginPillNumber: 10,
+                endPillNumber: 28,
+              );
+          final pillSheet = PillSheet.v1(
+            id: 'pill_sheet_id_1',
+            typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+            beginDate: DateTime(2020, 9, 1),
+            lastTakenDate: DateTime(2020, 9, 10),
+            restDurations: [],
+            createdAt: DateTime(2020, 9, 1),
+          );
+          final beforePillSheetGroup = createPillSheetGroup(
+            pillSheets: [pillSheet],
+            displayNumberSetting: beforeDisplayNumberSetting,
+          );
+          final afterPillSheetGroup = createPillSheetGroup(
+            pillSheets: [pillSheet],
+            displayNumberSetting: afterDisplayNumberSetting,
+          );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+          final history =
+              PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+                beforePillSheetGroup: beforePillSheetGroup,
+                afterPillSheetGroup: afterPillSheetGroup,
+              );
 
-        expect(history.value.changedBeginDisplayNumber, isNotNull);
-        expect(history.value.changedBeginDisplayNumber, isNotNull);
-      });
+          expect(history.value.changedBeginDisplayNumber, isNotNull);
+          expect(history.value.changedBeginDisplayNumber, isNotNull);
+        },
+      );
 
       test('before と after の PillSheet が null であること', () {
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 5,
-          endPillNumber: 28,
-        );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 5,
+              endPillNumber: 28,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -5194,16 +6197,19 @@ void main() {
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [pillSheet]);
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [pillSheet],
+        );
         final afterPillSheetGroup = createPillSheetGroup(
           pillSheets: [pillSheet],
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         // before, after, beforePillSheetID, afterPillSheetID は v2 で削除済み
         expect(history.beforePillSheetGroup, beforePillSheetGroup);
@@ -5211,14 +6217,16 @@ void main() {
       });
 
       test('beforePillSheetGroup と afterPillSheetGroup が正しく設定されること', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 28,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 5,
-          endPillNumber: 28,
-        );
+        final beforeDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 28,
+            );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 5,
+              endPillNumber: 28,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -5236,20 +6244,22 @@ void main() {
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.beforePillSheetGroup, beforePillSheetGroup);
         expect(history.afterPillSheetGroup, afterPillSheetGroup);
       });
 
       test('version が v2 であること', () {
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 5,
-          endPillNumber: 28,
-        );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 5,
+              endPillNumber: 28,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -5258,16 +6268,19 @@ void main() {
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [pillSheet]);
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [pillSheet],
+        );
         final afterPillSheetGroup = createPillSheetGroup(
           pillSheets: [pillSheet],
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.version, 'v2');
       });
@@ -5275,10 +6288,11 @@ void main() {
 
     group('beforeDisplayNumberSetting が null の場合（設定なし→設定ありへの変更）', () {
       test('初めて表示番号設定を追加する場合に正しく記録されること', () {
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 5,
-          endPillNumber: 28,
-        );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 5,
+              endPillNumber: 28,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -5287,24 +6301,26 @@ void main() {
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [pillSheet]);
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [pillSheet],
+        );
         final afterPillSheetGroup = createPillSheetGroup(
           pillSheets: [pillSheet],
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.value.changedBeginDisplayNumber, isNotNull);
       });
 
       test('beginPillNumber のみを設定した場合に正しく記録されること', () {
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 10,
-        );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(beginPillNumber: 10);
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -5313,35 +6329,46 @@ void main() {
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [pillSheet]);
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [pillSheet],
+        );
         final afterPillSheetGroup = createPillSheetGroup(
           pillSheets: [pillSheet],
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         // beforeDisplayNumberSetting, afterDisplayNumberSetting は v2 で削除済み
         // beforePillSheetGroup, afterPillSheetGroup から displayNumberSetting を取得する
         expect(history.beforePillSheetGroup?.displayNumberSetting, isNull);
-        expect(history.afterPillSheetGroup!.displayNumberSetting!.beginPillNumber, 10);
-        expect(history.afterPillSheetGroup!.displayNumberSetting!.endPillNumber, isNull);
+        expect(
+          history.afterPillSheetGroup!.displayNumberSetting!.beginPillNumber,
+          10,
+        );
+        expect(
+          history.afterPillSheetGroup!.displayNumberSetting!.endPillNumber,
+          isNull,
+        );
       });
     });
 
     group('beforeDisplayNumberSetting が設定済みの場合（設定変更）', () {
       test('beginPillNumber のみ変更した場合に正しく記録されること', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 28,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 5,
-          endPillNumber: 28,
-        );
+        final beforeDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 28,
+            );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 5,
+              endPillNumber: 28,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -5359,28 +6386,43 @@ void main() {
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         // beforeDisplayNumberSetting, afterDisplayNumberSetting は v2 で削除済み
-        expect(history.beforePillSheetGroup!.displayNumberSetting!.beginPillNumber, 1);
-        expect(history.afterPillSheetGroup!.displayNumberSetting!.beginPillNumber, 5);
+        expect(
+          history.beforePillSheetGroup!.displayNumberSetting!.beginPillNumber,
+          1,
+        );
+        expect(
+          history.afterPillSheetGroup!.displayNumberSetting!.beginPillNumber,
+          5,
+        );
         // endPillNumber は変わっていない
-        expect(history.beforePillSheetGroup!.displayNumberSetting!.endPillNumber, 28);
-        expect(history.afterPillSheetGroup!.displayNumberSetting!.endPillNumber, 28);
+        expect(
+          history.beforePillSheetGroup!.displayNumberSetting!.endPillNumber,
+          28,
+        );
+        expect(
+          history.afterPillSheetGroup!.displayNumberSetting!.endPillNumber,
+          28,
+        );
       });
 
       test('beginPillNumber を大きな値に変更した場合に正しく記録されること', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 120,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 85,
-          endPillNumber: 120,
-        );
+        final beforeDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 120,
+            );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 85,
+              endPillNumber: 120,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -5398,27 +6440,36 @@ void main() {
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         // beforeDisplayNumberSetting, afterDisplayNumberSetting は v2 で削除済み
-        expect(history.beforePillSheetGroup!.displayNumberSetting!.beginPillNumber, 1);
-        expect(history.afterPillSheetGroup!.displayNumberSetting!.beginPillNumber, 85);
+        expect(
+          history.beforePillSheetGroup!.displayNumberSetting!.beginPillNumber,
+          1,
+        );
+        expect(
+          history.afterPillSheetGroup!.displayNumberSetting!.beginPillNumber,
+          85,
+        );
       });
     });
 
     group('複数のピルシートがあるケース', () {
       test('PillSheetGroup に複数のピルシートがある場合に正しく記録されること', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 84,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 29,
-          endPillNumber: 84,
-        );
+        final beforeDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 84,
+            );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 29,
+              endPillNumber: 84,
+            );
         final firstPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -5455,29 +6506,38 @@ void main() {
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.beforePillSheetGroup!.pillSheets.length, 3);
         expect(history.afterPillSheetGroup!.pillSheets.length, 3);
         // beforeDisplayNumberSetting, afterDisplayNumberSetting は v2 で削除済み
-        expect(history.beforePillSheetGroup!.displayNumberSetting!.beginPillNumber, 1);
-        expect(history.afterPillSheetGroup!.displayNumberSetting!.beginPillNumber, 29);
+        expect(
+          history.beforePillSheetGroup!.displayNumberSetting!.beginPillNumber,
+          1,
+        );
+        expect(
+          history.afterPillSheetGroup!.displayNumberSetting!.beginPillNumber,
+          29,
+        );
       });
     });
 
     group('異なるPillSheetTypeのケース', () {
       test('21錠タイプ（pillsheet_21_0）のピルシートで表示番号設定を変更した場合', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 21,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 8,
-          endPillNumber: 21,
-        );
+        final beforeDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 21,
+            );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 8,
+              endPillNumber: 21,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
@@ -5495,25 +6555,37 @@ void main() {
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
-        expect(history.actionType, PillSheetModifiedActionType.changedBeginDisplayNumber.name);
-        expect(history.beforePillSheetGroup!.pillSheets.first.typeInfo.totalCount, 21);
-        expect(history.afterPillSheetGroup!.pillSheets.first.typeInfo.totalCount, 21);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.changedBeginDisplayNumber.name,
+        );
+        expect(
+          history.beforePillSheetGroup!.pillSheets.first.typeInfo.totalCount,
+          21,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets.first.typeInfo.totalCount,
+          21,
+        );
       });
 
       test('24錠+4偽薬タイプのピルシートで表示番号設定を変更した場合', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 28,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 10,
-          endPillNumber: 28,
-        );
+        final beforeDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 28,
+            );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 10,
+              endPillNumber: 28,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo,
@@ -5531,26 +6603,43 @@ void main() {
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
-        expect(history.actionType, PillSheetModifiedActionType.changedBeginDisplayNumber.name);
-        expect(history.beforePillSheetGroup!.pillSheets.first.typeInfo.totalCount, 28);
-        expect(history.beforePillSheetGroup!.pillSheets.first.typeInfo.dosingPeriod, 24);
-        expect(history.afterPillSheetGroup!.pillSheets.first.typeInfo.totalCount, 28);
-        expect(history.afterPillSheetGroup!.pillSheets.first.typeInfo.dosingPeriod, 24);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.changedBeginDisplayNumber.name,
+        );
+        expect(
+          history.beforePillSheetGroup!.pillSheets.first.typeInfo.totalCount,
+          28,
+        );
+        expect(
+          history.beforePillSheetGroup!.pillSheets.first.typeInfo.dosingPeriod,
+          24,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets.first.typeInfo.totalCount,
+          28,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets.first.typeInfo.dosingPeriod,
+          24,
+        );
       });
     });
 
     group('pillSheetGroupID が null の場合', () {
       test('pillSheetGroupID が null でも履歴が作成されること', () {
         // createChangedBeginDisplayNumberAction には assert がないため、null でも動作する
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 5,
-          endPillNumber: 28,
-        );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 5,
+              endPillNumber: 28,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -5559,28 +6648,35 @@ void main() {
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [pillSheet]);
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [pillSheet],
+        );
         final afterPillSheetGroup = createPillSheetGroup(
           pillSheets: [pillSheet],
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         // history.pillSheetGroupID は削除済み
-        expect(history.actionType, PillSheetModifiedActionType.changedBeginDisplayNumber.name);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.changedBeginDisplayNumber.name,
+        );
       });
     });
 
     group('タイムスタンプ関連', () {
       test('createdAt が設定されること', () {
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 5,
-          endPillNumber: 28,
-        );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 5,
+              endPillNumber: 28,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -5589,25 +6685,29 @@ void main() {
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [pillSheet]);
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [pillSheet],
+        );
         final afterPillSheetGroup = createPillSheetGroup(
           pillSheets: [pillSheet],
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.createdAt, isNotNull);
       });
 
       test('estimatedEventCausingDate が設定されること', () {
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 5,
-          endPillNumber: 28,
-        );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 5,
+              endPillNumber: 28,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -5616,25 +6716,29 @@ void main() {
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [pillSheet]);
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [pillSheet],
+        );
         final afterPillSheetGroup = createPillSheetGroup(
           pillSheets: [pillSheet],
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.estimatedEventCausingDate, isNotNull);
       });
 
       test('ttlExpiresDateTime が createdAt + limitDays で設定されること', () {
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 5,
-          endPillNumber: 28,
-        );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 5,
+              endPillNumber: 28,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -5643,70 +6747,126 @@ void main() {
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [pillSheet]);
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [pillSheet],
+        );
         final afterPillSheetGroup = createPillSheetGroup(
           pillSheets: [pillSheet],
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.ttlExpiresDateTime, isNotNull);
-        final difference = history.ttlExpiresDateTime!.difference(history.createdAt);
-        expect(difference.inDays, PillSheetModifiedHistoryServiceActionFactory.limitDays);
+        final difference = history.ttlExpiresDateTime!.difference(
+          history.createdAt,
+        );
+        expect(
+          difference.inDays,
+          PillSheetModifiedHistoryServiceActionFactory.limitDays,
+        );
       });
     });
 
     group('RestDurationを持つピルシートのケース', () {
-      test('RestDurationを持つピルシートで表示番号設定を変更した場合、RestDuration情報がbeforePillSheetGroupとafterPillSheetGroupに保持される', () {
-        final restDuration = RestDuration(
-          id: 'rest_duration_id',
-          beginDate: DateTime(2020, 9, 5),
-          createdDate: DateTime(2020, 9, 5),
-          endDate: DateTime(2020, 9, 8),
-        );
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 28,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 5,
-          endPillNumber: 28,
-        );
-        final pillSheet = PillSheet.v1(
-          id: 'pill_sheet_id_1',
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginDate: DateTime(2020, 9, 1),
-          lastTakenDate: DateTime(2020, 9, 10),
-          restDurations: [restDuration],
-          createdAt: DateTime(2020, 9, 1),
-        );
-        final beforePillSheetGroup = createPillSheetGroup(
-          pillSheets: [pillSheet],
-          displayNumberSetting: beforeDisplayNumberSetting,
-        );
-        final afterPillSheetGroup = createPillSheetGroup(
-          pillSheets: [pillSheet],
-          displayNumberSetting: afterDisplayNumberSetting,
-        );
+      test(
+        'RestDurationを持つピルシートで表示番号設定を変更した場合、RestDuration情報がbeforePillSheetGroupとafterPillSheetGroupに保持される',
+        () {
+          final restDuration = RestDuration(
+            id: 'rest_duration_id',
+            beginDate: DateTime(2020, 9, 5),
+            createdDate: DateTime(2020, 9, 5),
+            endDate: DateTime(2020, 9, 8),
+          );
+          final beforeDisplayNumberSetting =
+              const PillSheetGroupDisplayNumberSetting(
+                beginPillNumber: 1,
+                endPillNumber: 28,
+              );
+          final afterDisplayNumberSetting =
+              const PillSheetGroupDisplayNumberSetting(
+                beginPillNumber: 5,
+                endPillNumber: 28,
+              );
+          final pillSheet = PillSheet.v1(
+            id: 'pill_sheet_id_1',
+            typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+            beginDate: DateTime(2020, 9, 1),
+            lastTakenDate: DateTime(2020, 9, 10),
+            restDurations: [restDuration],
+            createdAt: DateTime(2020, 9, 1),
+          );
+          final beforePillSheetGroup = createPillSheetGroup(
+            pillSheets: [pillSheet],
+            displayNumberSetting: beforeDisplayNumberSetting,
+          );
+          final afterPillSheetGroup = createPillSheetGroup(
+            pillSheets: [pillSheet],
+            displayNumberSetting: afterDisplayNumberSetting,
+          );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+          final history =
+              PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+                beforePillSheetGroup: beforePillSheetGroup,
+                afterPillSheetGroup: afterPillSheetGroup,
+              );
 
-        // beforePillSheetGroup の RestDuration が保持されている
-        expect(history.beforePillSheetGroup!.pillSheets.first.restDurations.length, 1);
-        expect(history.beforePillSheetGroup!.pillSheets.first.restDurations.first.beginDate, DateTime(2020, 9, 5));
-        expect(history.beforePillSheetGroup!.pillSheets.first.restDurations.first.endDate, DateTime(2020, 9, 8));
-        // afterPillSheetGroup にも RestDuration が保持されている
-        expect(history.afterPillSheetGroup!.pillSheets.first.restDurations.length, 1);
-        expect(history.afterPillSheetGroup!.pillSheets.first.restDurations.first.beginDate, DateTime(2020, 9, 5));
-        expect(history.afterPillSheetGroup!.pillSheets.first.restDurations.first.endDate, DateTime(2020, 9, 8));
-      });
+          // beforePillSheetGroup の RestDuration が保持されている
+          expect(
+            history.beforePillSheetGroup!.pillSheets.first.restDurations.length,
+            1,
+          );
+          expect(
+            history
+                .beforePillSheetGroup!
+                .pillSheets
+                .first
+                .restDurations
+                .first
+                .beginDate,
+            DateTime(2020, 9, 5),
+          );
+          expect(
+            history
+                .beforePillSheetGroup!
+                .pillSheets
+                .first
+                .restDurations
+                .first
+                .endDate,
+            DateTime(2020, 9, 8),
+          );
+          // afterPillSheetGroup にも RestDuration が保持されている
+          expect(
+            history.afterPillSheetGroup!.pillSheets.first.restDurations.length,
+            1,
+          );
+          expect(
+            history
+                .afterPillSheetGroup!
+                .pillSheets
+                .first
+                .restDurations
+                .first
+                .beginDate,
+            DateTime(2020, 9, 5),
+          );
+          expect(
+            history
+                .afterPillSheetGroup!
+                .pillSheets
+                .first
+                .restDurations
+                .first
+                .endDate,
+            DateTime(2020, 9, 8),
+          );
+        },
+      );
     });
   });
 
@@ -5727,14 +6887,16 @@ void main() {
 
     group('正常ケース', () {
       test('actionType が changedEndDisplayNumber であること', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 28,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 56,
-        );
+        final beforeDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 28,
+            );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 56,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -5752,54 +6914,65 @@ void main() {
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
-        expect(history.actionType, PillSheetModifiedActionType.changedEndDisplayNumber.name);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.changedEndDisplayNumber.name,
+        );
       });
 
-      test('changedEndDisplayNumber に beforeDisplayNumberSetting と afterDisplayNumberSetting が正しく設定されること', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 28,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 84,
-        );
-        final pillSheet = PillSheet.v1(
-          id: 'pill_sheet_id_1',
-          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginDate: DateTime(2020, 9, 1),
-          lastTakenDate: DateTime(2020, 9, 10),
-          restDurations: [],
-          createdAt: DateTime(2020, 9, 1),
-        );
-        final beforePillSheetGroup = createPillSheetGroup(
-          pillSheets: [pillSheet],
-          displayNumberSetting: beforeDisplayNumberSetting,
-        );
-        final afterPillSheetGroup = createPillSheetGroup(
-          pillSheets: [pillSheet],
-          displayNumberSetting: afterDisplayNumberSetting,
-        );
+      test(
+        'changedEndDisplayNumber に beforeDisplayNumberSetting と afterDisplayNumberSetting が正しく設定されること',
+        () {
+          final beforeDisplayNumberSetting =
+              const PillSheetGroupDisplayNumberSetting(
+                beginPillNumber: 1,
+                endPillNumber: 28,
+              );
+          final afterDisplayNumberSetting =
+              const PillSheetGroupDisplayNumberSetting(
+                beginPillNumber: 1,
+                endPillNumber: 84,
+              );
+          final pillSheet = PillSheet.v1(
+            id: 'pill_sheet_id_1',
+            typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+            beginDate: DateTime(2020, 9, 1),
+            lastTakenDate: DateTime(2020, 9, 10),
+            restDurations: [],
+            createdAt: DateTime(2020, 9, 1),
+          );
+          final beforePillSheetGroup = createPillSheetGroup(
+            pillSheets: [pillSheet],
+            displayNumberSetting: beforeDisplayNumberSetting,
+          );
+          final afterPillSheetGroup = createPillSheetGroup(
+            pillSheets: [pillSheet],
+            displayNumberSetting: afterDisplayNumberSetting,
+          );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+          final history =
+              PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+                beforePillSheetGroup: beforePillSheetGroup,
+                afterPillSheetGroup: afterPillSheetGroup,
+              );
 
-        expect(history.value.changedEndDisplayNumber, isNotNull);
-        expect(history.value.changedEndDisplayNumber, isNotNull);
-      });
+          expect(history.value.changedEndDisplayNumber, isNotNull);
+          expect(history.value.changedEndDisplayNumber, isNotNull);
+        },
+      );
 
       test('before と after の PillSheet が null であること', () {
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 56,
-        );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 56,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -5808,16 +6981,19 @@ void main() {
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [pillSheet]);
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [pillSheet],
+        );
         final afterPillSheetGroup = createPillSheetGroup(
           pillSheets: [pillSheet],
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         // before, after, beforePillSheetID, afterPillSheetID は v2 で削除済み
         expect(history.beforePillSheetGroup, beforePillSheetGroup);
@@ -5825,14 +7001,16 @@ void main() {
       });
 
       test('beforePillSheetGroup と afterPillSheetGroup が正しく設定されること', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 28,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 56,
-        );
+        final beforeDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 28,
+            );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 56,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -5850,20 +7028,22 @@ void main() {
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.beforePillSheetGroup, beforePillSheetGroup);
         expect(history.afterPillSheetGroup, afterPillSheetGroup);
       });
 
       test('pillSheetGroupID が正しく設定されること', () {
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 56,
-        );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 56,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -5872,25 +7052,29 @@ void main() {
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [pillSheet]);
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [pillSheet],
+        );
         final afterPillSheetGroup = createPillSheetGroup(
           pillSheets: [pillSheet],
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.afterPillSheetGroup!.id, 'group_id');
       });
 
       test('version が v2 であること', () {
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 56,
-        );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 56,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -5899,16 +7083,19 @@ void main() {
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [pillSheet]);
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [pillSheet],
+        );
         final afterPillSheetGroup = createPillSheetGroup(
           pillSheets: [pillSheet],
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.version, 'v2');
       });
@@ -5916,10 +7103,11 @@ void main() {
 
     group('beforeDisplayNumberSetting が null の場合（設定なし→設定ありへの変更）', () {
       test('初めて表示終了番号設定を追加する場合に正しく記録されること', () {
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 56,
-        );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 56,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -5928,24 +7116,26 @@ void main() {
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [pillSheet]);
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [pillSheet],
+        );
         final afterPillSheetGroup = createPillSheetGroup(
           pillSheets: [pillSheet],
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.value.changedEndDisplayNumber, isNotNull);
       });
 
       test('endPillNumber のみを設定した場合に正しく記録されること', () {
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          endPillNumber: 84,
-        );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(endPillNumber: 84);
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -5954,16 +7144,19 @@ void main() {
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [pillSheet]);
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [pillSheet],
+        );
         final afterPillSheetGroup = createPillSheetGroup(
           pillSheets: [pillSheet],
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.value.changedEndDisplayNumber, isNotNull);
       });
@@ -5971,14 +7164,16 @@ void main() {
 
     group('beforeDisplayNumberSetting が設定済みの場合（設定変更）', () {
       test('endPillNumber のみ変更した場合に正しく記録されること', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 28,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 56,
-        );
+        final beforeDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 28,
+            );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 56,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -5996,10 +7191,11 @@ void main() {
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.value.changedEndDisplayNumber, isNotNull);
         // beginPillNumber は変わっていない
@@ -6007,14 +7203,16 @@ void main() {
       });
 
       test('endPillNumber を大きな値に変更した場合に正しく記録されること', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 28,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 120,
-        );
+        final beforeDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 28,
+            );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 120,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -6032,23 +7230,26 @@ void main() {
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.value.changedEndDisplayNumber, isNotNull);
       });
 
       test('endPillNumber を小さな値に変更した場合に正しく記録されること', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 84,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 28,
-        );
+        final beforeDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 84,
+            );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 28,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -6066,10 +7267,11 @@ void main() {
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.value.changedEndDisplayNumber, isNotNull);
       });
@@ -6077,14 +7279,16 @@ void main() {
 
     group('複数のピルシートがあるケース', () {
       test('PillSheetGroup に複数のピルシートがある場合に正しく記録されること', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 84,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 120,
-        );
+        final beforeDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 84,
+            );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 120,
+            );
         final firstPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -6121,10 +7325,11 @@ void main() {
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.beforePillSheetGroup!.pillSheets.length, 3);
         expect(history.afterPillSheetGroup!.pillSheets.length, 3);
@@ -6134,14 +7339,16 @@ void main() {
 
     group('異なるPillSheetTypeのケース', () {
       test('21錠タイプ（pillsheet_21_0）のピルシートで表示終了番号設定を変更した場合', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 21,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 42,
-        );
+        final beforeDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 21,
+            );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 42,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
@@ -6159,25 +7366,37 @@ void main() {
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
-        expect(history.actionType, PillSheetModifiedActionType.changedEndDisplayNumber.name);
-        expect(history.beforePillSheetGroup!.pillSheets.first.typeInfo.totalCount, 21);
-        expect(history.afterPillSheetGroup!.pillSheets.first.typeInfo.totalCount, 21);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.changedEndDisplayNumber.name,
+        );
+        expect(
+          history.beforePillSheetGroup!.pillSheets.first.typeInfo.totalCount,
+          21,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets.first.typeInfo.totalCount,
+          21,
+        );
       });
 
       test('24錠+4偽薬タイプのピルシートで表示終了番号設定を変更した場合', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 28,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 56,
-        );
+        final beforeDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 28,
+            );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 56,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo,
@@ -6195,24 +7414,35 @@ void main() {
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
-        expect(history.actionType, PillSheetModifiedActionType.changedEndDisplayNumber.name);
-        expect(history.beforePillSheetGroup!.pillSheets.first.typeInfo.totalCount, 28);
-        expect(history.afterPillSheetGroup!.pillSheets.first.typeInfo.totalCount, 28);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.changedEndDisplayNumber.name,
+        );
+        expect(
+          history.beforePillSheetGroup!.pillSheets.first.typeInfo.totalCount,
+          28,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets.first.typeInfo.totalCount,
+          28,
+        );
       });
     });
 
     group('pillSheetGroupID が null の場合', () {
       test('pillSheetGroupID が null でも履歴が作成されること', () {
         // createChangedEndDisplayNumberAction には assert がないため、null でも動作する
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 56,
-        );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 56,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -6221,32 +7451,40 @@ void main() {
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [pillSheet]);
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [pillSheet],
+        );
         final afterPillSheetGroup = createPillSheetGroup(
           pillSheets: [pillSheet],
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         // history.pillSheetGroupID は削除済み
-        expect(history.actionType, PillSheetModifiedActionType.changedEndDisplayNumber.name);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.changedEndDisplayNumber.name,
+        );
       });
     });
 
     group('createdAt と estimatedEventCausingDate', () {
       test('createdAt と estimatedEventCausingDate が設定されること', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 28,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 56,
-        );
+        final beforeDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 28,
+            );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 56,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -6264,10 +7502,11 @@ void main() {
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         // createdAt と estimatedEventCausingDate が設定されていること
         expect(history.createdAt, isNotNull);
@@ -6279,14 +7518,16 @@ void main() {
 
     group('RestDuration がある場合', () {
       test('RestDuration を持つ PillSheet がある場合に正しく記録されること', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 28,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 56,
-        );
+        final beforeDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 28,
+            );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 56,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -6311,26 +7552,38 @@ void main() {
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
-        expect(history.actionType, PillSheetModifiedActionType.changedEndDisplayNumber.name);
-        expect(history.beforePillSheetGroup!.pillSheets.first.restDurations.length, 1);
-        expect(history.afterPillSheetGroup!.pillSheets.first.restDurations.length, 1);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.changedEndDisplayNumber.name,
+        );
+        expect(
+          history.beforePillSheetGroup!.pillSheets.first.restDurations.length,
+          1,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets.first.restDurations.length,
+          1,
+        );
         expect(history.value.changedEndDisplayNumber, isNotNull);
       });
 
       test('複数の RestDuration を持つ PillSheet がある場合に正しく記録されること', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 28,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 84,
-        );
+        final beforeDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 28,
+            );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 84,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -6361,25 +7614,37 @@ void main() {
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
-        expect(history.actionType, PillSheetModifiedActionType.changedEndDisplayNumber.name);
-        expect(history.beforePillSheetGroup!.pillSheets.first.restDurations.length, 2);
-        expect(history.afterPillSheetGroup!.pillSheets.first.restDurations.length, 2);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.changedEndDisplayNumber.name,
+        );
+        expect(
+          history.beforePillSheetGroup!.pillSheets.first.restDurations.length,
+          2,
+        );
+        expect(
+          history.afterPillSheetGroup!.pillSheets.first.restDurations.length,
+          2,
+        );
       });
 
       test('終了していない RestDuration（endDate が null）を持つ PillSheet がある場合', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 28,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 1,
-          endPillNumber: 56,
-        );
+        final beforeDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 28,
+            );
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 1,
+              endPillNumber: 56,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -6404,26 +7669,48 @@ void main() {
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
-        expect(history.actionType, PillSheetModifiedActionType.changedEndDisplayNumber.name);
-        expect(history.beforePillSheetGroup!.pillSheets.first.restDurations.first.endDate, isNull);
-        expect(history.afterPillSheetGroup!.pillSheets.first.restDurations.first.endDate, isNull);
+        expect(
+          history.actionType,
+          PillSheetModifiedActionType.changedEndDisplayNumber.name,
+        );
+        expect(
+          history
+              .beforePillSheetGroup!
+              .pillSheets
+              .first
+              .restDurations
+              .first
+              .endDate,
+          isNull,
+        );
+        expect(
+          history
+              .afterPillSheetGroup!
+              .pillSheets
+              .first
+              .restDurations
+              .first
+              .endDate,
+          isNull,
+        );
       });
     });
 
     group('beginPillNumber のみ設定されている場合', () {
       test('beginPillNumber のみ設定されていて endPillNumber を追加する場合', () {
-        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 5,
-        );
-        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
-          beginPillNumber: 5,
-          endPillNumber: 84,
-        );
+        final beforeDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(beginPillNumber: 5);
+        final afterDisplayNumberSetting =
+            const PillSheetGroupDisplayNumberSetting(
+              beginPillNumber: 5,
+              endPillNumber: 84,
+            );
         final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -6441,10 +7728,11 @@ void main() {
           displayNumberSetting: afterDisplayNumberSetting,
         );
 
-        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
-          beforePillSheetGroup: beforePillSheetGroup,
-          afterPillSheetGroup: afterPillSheetGroup,
-        );
+        final history =
+            PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+              beforePillSheetGroup: beforePillSheetGroup,
+              afterPillSheetGroup: afterPillSheetGroup,
+            );
 
         expect(history.value.changedEndDisplayNumber, isNotNull);
       });

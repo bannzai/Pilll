@@ -19,7 +19,11 @@ class HealthCareRow extends StatelessWidget {
         children: [
           Text(
             L.healthCareIntegration,
-            style: const TextStyle(fontFamily: FontFamily.roboto, fontWeight: FontWeight.w300, fontSize: 16),
+            style: const TextStyle(
+              fontFamily: FontFamily.roboto,
+              fontWeight: FontWeight.w300,
+              fontSize: 16,
+            ),
           ),
         ],
       ),
@@ -29,7 +33,11 @@ class HealthCareRow extends StatelessWidget {
 
         try {
           if (await healthKitRequestAuthorizationIsUnnecessary()) {
-            launchUrl(Uri.parse('https://pilll.notion.site/9f689858e2a34cf6bc7c08ab85a192cf'));
+            launchUrl(
+              Uri.parse(
+                'https://pilll.notion.site/9f689858e2a34cf6bc7c08ab85a192cf',
+              ),
+            );
           } else {
             if (await shouldRequestForAccessToHealthKitData()) {
               await requestWriteMenstrualFlowHealthKitDataPermission();

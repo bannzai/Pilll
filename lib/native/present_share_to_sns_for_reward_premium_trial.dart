@@ -21,8 +21,14 @@ extension ShareToSNSKindExt on ShareToSNSKind {
   }
 }
 
-Future<void> presentShareToSNSForPremiumTrialReward(ShareToSNSKind shareToSNSKind, VoidCallback completionHandler) async {
-  final result = await methodChannel.invokeMethod('presentShareToSNSForPremiumTrialReward', {'shareToSNSKind': shareToSNSKind.rawValue});
+Future<void> presentShareToSNSForPremiumTrialReward(
+  ShareToSNSKind shareToSNSKind,
+  VoidCallback completionHandler,
+) async {
+  final result = await methodChannel.invokeMethod(
+    'presentShareToSNSForPremiumTrialReward',
+    {'shareToSNSKind': shareToSNSKind.rawValue},
+  );
   if (result['result'] == 'success') {
     completionHandler();
     return;

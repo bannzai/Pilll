@@ -33,14 +33,28 @@ class RecordPage extends HookConsumerWidget {
 
     useAutomaticKeepAlive(wantKeepAlive: true);
 
-    return AsyncValueGroup.group4(latestPillSheetGroup, user, setting, ref.watch(userProvider)).when(
+    return AsyncValueGroup.group4(
+      latestPillSheetGroup,
+      user,
+      setting,
+      ref.watch(userProvider),
+    ).when(
       data: (data) {
         final latestPillSheetGroup = data.$1;
         final user = data.$2;
         final setting = data.$3;
-        return RecordPageBody(pillSheetGroup: latestPillSheetGroup, setting: setting, user: user, isLinkedLoginProvider: isLinked);
+        return RecordPageBody(
+          pillSheetGroup: latestPillSheetGroup,
+          setting: setting,
+          user: user,
+          isLinkedLoginProvider: isLinked,
+        );
       },
-      error: (error, stackTrace) => UniversalErrorPage(error: error, reload: () => ref.refresh(refreshAppProvider), child: null),
+      error: (error, stackTrace) => UniversalErrorPage(
+        error: error,
+        reload: () => ref.refresh(refreshAppProvider),
+        child: null,
+      ),
       loading: () => const Indicator(),
     );
   }
@@ -52,7 +66,13 @@ class RecordPageBody extends HookConsumerWidget {
   final User user;
   final bool isLinkedLoginProvider;
 
-  const RecordPageBody({super.key, required this.pillSheetGroup, required this.setting, required this.user, required this.isLinkedLoginProvider});
+  const RecordPageBody({
+    super.key,
+    required this.pillSheetGroup,
+    required this.setting,
+    required this.user,
+    required this.isLinkedLoginProvider,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -65,11 +85,17 @@ class RecordPageBody extends HookConsumerWidget {
         titleSpacing: 0,
         backgroundColor: AppColors.white,
         toolbarHeight: RecordPageInformationHeaderConst.height,
-        title: RecordPageInformationHeader(today: DateTime.now(), pillSheetGroup: pillSheetGroup, user: user),
+        title: RecordPageInformationHeader(
+          today: DateTime.now(),
+          pillSheetGroup: pillSheetGroup,
+          user: user,
+        ),
       ),
       body: Builder(
         builder: (context) {
-          if (activePillSheet == null || pillSheetGroup == null || pillSheetGroup.isDeactived) {
+          if (activePillSheet == null ||
+              pillSheetGroup == null ||
+              pillSheetGroup.isDeactived) {
             return Column(
               children: [
                 Expanded(
@@ -77,7 +103,11 @@ class RecordPageBody extends HookConsumerWidget {
                     children: [
                       const AnnouncementBar(),
                       const SizedBox(height: 37),
-                      AddPillSheetGroupEmptyFrame(context: context, pillSheetGroup: pillSheetGroup, setting: setting),
+                      AddPillSheetGroupEmptyFrame(
+                        context: context,
+                        pillSheetGroup: pillSheetGroup,
+                        setting: setting,
+                      ),
                       const SizedBox(height: 20),
                     ],
                   ),
@@ -110,7 +140,12 @@ class RecordPageBody extends HookConsumerWidget {
                             ),
                           ),
                           const SizedBox(height: 16),
-                          RecordPagePillSheetList(pillSheetGroup: pillSheetGroup, activePillSheet: activePillSheet, setting: setting, user: user),
+                          RecordPagePillSheetList(
+                            pillSheetGroup: pillSheetGroup,
+                            activePillSheet: activePillSheet,
+                            setting: setting,
+                            user: user,
+                          ),
                         ],
                       ),
                       const SizedBox(height: 20),

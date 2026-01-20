@@ -11,7 +11,11 @@ class PillSheetGroupSelectPillSheetTypePage extends StatelessWidget {
   final PillSheetType? pillSheetType;
   final Function(PillSheetType) onSelect;
 
-  const PillSheetGroupSelectPillSheetTypePage({super.key, required this.pillSheetType, required this.onSelect});
+  const PillSheetGroupSelectPillSheetTypePage({
+    super.key,
+    required this.pillSheetType,
+    required this.onSelect,
+  });
   @override
   Widget build(BuildContext context) {
     return DraggableScrollableSheet(
@@ -22,7 +26,10 @@ class PillSheetGroupSelectPillSheetTypePage extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           decoration: const BoxDecoration(
             color: AppColors.background,
-            borderRadius: BorderRadius.only(topLeft: Radius.circular(20.0), topRight: Radius.circular(20.0)),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(20.0),
+              topRight: Radius.circular(20.0),
+            ),
           ),
           child: ListView(
             shrinkWrap: true,
@@ -35,14 +42,22 @@ class PillSheetGroupSelectPillSheetTypePage extends StatelessWidget {
                   const SizedBox(width: 16),
                   Text(
                     L.selectPillType,
-                    style: const TextStyle(color: TextColor.main, fontSize: 20, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600),
+                    style: const TextStyle(
+                      color: TextColor.main,
+                      fontSize: 20,
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ],
               ),
               const SizedBox(height: 24),
               PillSheetTypeSelectBodyTemplate(
                 onSelect: (e) {
-                  analytics.logEvent(name: 'initial_setting_selected_pill_sheet_type', parameters: {'pill_sheet_type': e.fullName});
+                  analytics.logEvent(
+                    name: 'initial_setting_selected_pill_sheet_type',
+                    parameters: {'pill_sheet_type': e.fullName},
+                  );
                   Navigator.of(context).pop();
                   onSelect(e);
                 },
@@ -66,6 +81,9 @@ void showSettingPillSheetGroupSelectPillSheetTypePage({
     context: context,
     isScrollControlled: true,
     backgroundColor: Colors.transparent,
-    builder: (_) => PillSheetGroupSelectPillSheetTypePage(pillSheetType: pillSheetType, onSelect: onSelect),
+    builder: (_) => PillSheetGroupSelectPillSheetTypePage(
+      pillSheetType: pillSheetType,
+      onSelect: onSelect,
+    ),
   );
 }

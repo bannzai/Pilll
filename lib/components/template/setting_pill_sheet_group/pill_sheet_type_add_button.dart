@@ -9,14 +9,22 @@ import 'package:pilll/features/localizations/l.dart';
 class PillSheetTypeAddButton extends StatelessWidget {
   final Function(PillSheetType) onAdd;
   final List<PillSheetType> pillSheetTypes;
-  const PillSheetTypeAddButton({super.key, required this.pillSheetTypes, required this.onAdd});
+  const PillSheetTypeAddButton({
+    super.key,
+    required this.pillSheetTypes,
+    required this.onAdd,
+  });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         if (pillSheetTypes.isEmpty) {
-          showSettingPillSheetGroupSelectPillSheetTypePage(context: context, pillSheetType: null, onSelect: (pillSheetType) => onAdd(pillSheetType));
+          showSettingPillSheetGroupSelectPillSheetTypePage(
+            context: context,
+            pillSheetType: null,
+            onSelect: (pillSheetType) => onAdd(pillSheetType),
+          );
         } else {
           onAdd(pillSheetTypes.last);
         }
@@ -31,7 +39,12 @@ class PillSheetTypeAddButton extends StatelessWidget {
             const SizedBox(width: 4),
             Text(
               L.addPillSheet,
-              style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400),
+              style: const TextStyle(
+                color: TextColor.main,
+                fontFamily: FontFamily.japanese,
+                fontSize: 12,
+                fontWeight: FontWeight.w400,
+              ),
             ),
           ],
         ),

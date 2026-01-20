@@ -22,7 +22,12 @@ class UniversalErrorPage extends StatefulWidget {
   final Widget? child;
   final VoidCallback? reload;
 
-  const UniversalErrorPage({super.key, required this.error, required this.child, required this.reload});
+  const UniversalErrorPage({
+    super.key,
+    required this.error,
+    required this.child,
+    required this.reload,
+  });
 
   @override
   UniversalErrorPageState createState() => UniversalErrorPageState();
@@ -69,18 +74,32 @@ class UniversalErrorPageState extends State<UniversalErrorPage> {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset('images/universal_error.png', width: 200, height: 190),
+                Image.asset(
+                  'images/universal_error.png',
+                  width: 200,
+                  height: 190,
+                ),
                 const SizedBox(height: 25),
                 Text(
                   message,
-                  style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 14,
+                    color: TextColor.main,
+                  ),
                 ),
                 const SizedBox(height: 25),
                 TextButton.icon(
                   icon: const Icon(Icons.refresh, size: 20),
                   label: Text(
                     L.reloadScreen,
-                    style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.black),
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                      color: TextColor.black,
+                    ),
                   ),
                   onPressed: () {
                     analytics.logEvent(name: 'reload_button_pressed');
@@ -97,10 +116,17 @@ class UniversalErrorPageState extends State<UniversalErrorPage> {
                   icon: const Icon(Icons.mail, size: 20),
                   label: Text(
                     L.contactIfNotResolved,
-                    style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.black),
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                      color: TextColor.black,
+                    ),
                   ),
                   onPressed: () {
-                    analytics.logEvent(name: 'problem_unresolved_button_pressed');
+                    analytics.logEvent(
+                      name: 'problem_unresolved_button_pressed',
+                    );
                     Navigator.of(context).push(InquiryPageRoute.route());
                   },
                 ),

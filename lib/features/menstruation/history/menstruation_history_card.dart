@@ -22,7 +22,12 @@ class MenstruationHistoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppCard(
       child: Padding(
-        padding: const EdgeInsets.only(top: 16, left: 16, bottom: 16, right: 16),
+        padding: const EdgeInsets.only(
+          top: 16,
+          left: 16,
+          bottom: 16,
+          right: 16,
+        ),
         child: GestureDetector(
           onTap: () {
             analytics.logEvent(name: 'menstruation_history_card_tapped');
@@ -92,15 +97,24 @@ class MenstruationHistoryCardList extends StatelessWidget {
       mainAxisSize: MainAxisSize.max,
       children: [
         if (activeMenstruation != null) ...[
-          MenstruationListRow(menstruation: activeMenstruation, previousMenstruation: previousMenstruation),
+          MenstruationListRow(
+            menstruation: activeMenstruation,
+            previousMenstruation: previousMenstruation,
+          ),
           const SizedBox(height: 20),
         ],
         if (previousMenstruation != null) ...[
-          MenstruationListRow(menstruation: previousMenstruation, previousMenstruation: secondPreviousMenstruation),
+          MenstruationListRow(
+            menstruation: previousMenstruation,
+            previousMenstruation: secondPreviousMenstruation,
+          ),
           const SizedBox(height: 20),
         ],
         if (secondPreviousMenstruation != null) ...[
-          MenstruationListRow(menstruation: secondPreviousMenstruation, previousMenstruation: thirdPreviousMenstruation),
+          MenstruationListRow(
+            menstruation: secondPreviousMenstruation,
+            previousMenstruation: thirdPreviousMenstruation,
+          ),
           const SizedBox(height: 20),
         ],
       ],
@@ -111,7 +125,10 @@ class MenstruationHistoryCardList extends StatelessWidget {
 class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
   final MenstruationHistoryCardState state;
 
-  const MenstruationHisotryCardAvarageInformation({super.key, required this.state});
+  const MenstruationHisotryCardAvarageInformation({
+    super.key,
+    required this.state,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -120,13 +137,24 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
         const Spacer(),
         CounterUnitLayout(
           title: L.averagePeriod,
-          number: (state.isPremium || state.isTrial) ? state.avalageMenstruationDuration : '🔒',
+          number: (state.isPremium || state.isTrial)
+              ? state.avalageMenstruationDuration
+              : '🔒',
           unit: L.days,
         ),
         const SizedBox(width: 30),
-        const SizedBox(height: 64, child: VerticalDivider(color: AppColors.divider, width: 3)),
+        const SizedBox(
+          height: 64,
+          child: VerticalDivider(color: AppColors.divider, width: 3),
+        ),
         const SizedBox(width: 30),
-        CounterUnitLayout(title: L.averageDays, number: (state.isPremium || state.isTrial) ? state.avalageMenstruationPeriod : '🔒', unit: L.days),
+        CounterUnitLayout(
+          title: L.averageDays,
+          number: (state.isPremium || state.isTrial)
+              ? state.avalageMenstruationPeriod
+              : '🔒',
+          unit: L.days,
+        ),
         const Spacer(),
       ],
     );
@@ -144,9 +172,17 @@ class MenstruationHistoryCardTitle extends StatelessWidget {
       children: [
         Text(
           L.menstruationHistory,
-          style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontSize: 20, fontWeight: FontWeight.w500),
+          style: const TextStyle(
+            color: TextColor.main,
+            fontFamily: FontFamily.japanese,
+            fontSize: 20,
+            fontWeight: FontWeight.w500,
+          ),
         ),
-        if (!state.isPremium) ...[const SizedBox(width: 8), const PremiumBadge()],
+        if (!state.isPremium) ...[
+          const SizedBox(width: 8),
+          const PremiumBadge(),
+        ],
       ],
     );
   }

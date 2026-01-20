@@ -8,17 +8,28 @@ final schedulesForDateProvider = StreamProvider.family((ref, DateTime date) {
   return ref
       .watch(databaseProvider)
       .schedulesReference()
-      .where(ScheduleFirestoreKey.date, isGreaterThanOrEqualTo: range.start, isLessThanOrEqualTo: range.end)
+      .where(
+        ScheduleFirestoreKey.date,
+        isGreaterThanOrEqualTo: range.start,
+        isLessThanOrEqualTo: range.end,
+      )
       .snapshots()
       .map((event) => event.docs.map((e) => e.data()).toList());
 });
 
-final schedulesForMonthProvider = StreamProvider.family((ref, DateTime dateForMonth) {
+final schedulesForMonthProvider = StreamProvider.family((
+  ref,
+  DateTime dateForMonth,
+) {
   final range = MonthDateTimeRange.monthRange(dateForMonth: dateForMonth);
   return ref
       .watch(databaseProvider)
       .schedulesReference()
-      .where(ScheduleFirestoreKey.date, isGreaterThanOrEqualTo: range.start, isLessThanOrEqualTo: range.end)
+      .where(
+        ScheduleFirestoreKey.date,
+        isGreaterThanOrEqualTo: range.start,
+        isLessThanOrEqualTo: range.end,
+      )
       .snapshots()
       .map((event) => event.docs.map((e) => e.data()).toList());
 });

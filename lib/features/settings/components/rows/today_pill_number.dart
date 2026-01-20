@@ -13,21 +13,39 @@ class TodayPllNumberRow extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activePillSheet;
 
-  const TodayPllNumberRow({super.key, required this.setting, required this.pillSheetGroup, required this.activePillSheet});
+  const TodayPllNumberRow({
+    super.key,
+    required this.setting,
+    required this.pillSheetGroup,
+    required this.activePillSheet,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return ListTile(
       title: Text(
         L.changePillNumberForToday,
-        style: const TextStyle(fontFamily: FontFamily.roboto, fontWeight: FontWeight.w300, fontSize: 16),
+        style: const TextStyle(
+          fontFamily: FontFamily.roboto,
+          fontWeight: FontWeight.w300,
+          fontSize: 16,
+        ),
       ),
       onTap: () => _onTap(context, setting, activePillSheet),
     );
   }
 
-  void _onTap(BuildContext context, Setting setting, PillSheet activePillSheet) {
+  void _onTap(
+    BuildContext context,
+    Setting setting,
+    PillSheet activePillSheet,
+  ) {
     analytics.logEvent(name: 'did_select_changing_pill_number');
-    Navigator.of(context).push(SettingTodayPillNumberPageRoute.route(pillSheetGroup: pillSheetGroup, activePillSheet: activePillSheet));
+    Navigator.of(context).push(
+      SettingTodayPillNumberPageRoute.route(
+        pillSheetGroup: pillSheetGroup,
+        activePillSheet: activePillSheet,
+      ),
+    );
   }
 }

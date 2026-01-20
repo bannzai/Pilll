@@ -7,7 +7,13 @@ import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 import 'package:pilll/features/localizations/l.dart';
 
 class CalendarNextPillSheetBand extends StatelessWidget {
-  const CalendarNextPillSheetBand({super.key, required this.begin, required this.end, required this.isLineBreak, required this.width});
+  const CalendarNextPillSheetBand({
+    super.key,
+    required this.begin,
+    required this.end,
+    required this.isLineBreak,
+    required this.width,
+  });
 
   final DateTime begin;
   final DateTime end;
@@ -21,14 +27,22 @@ class CalendarNextPillSheetBand extends StatelessWidget {
       child: Stack(
         children: [
           CustomPaint(
-            painter: DiagonalStripedLine(color: AppColors.duration, isNecessaryBorder: false),
+            painter: DiagonalStripedLine(
+              color: AppColors.duration,
+              isNecessaryBorder: false,
+            ),
             size: Size(width, CalendarBandConst.height),
           ),
           Container(
             padding: const EdgeInsets.only(left: 10),
             child: Text(
               isLineBreak ? '' : L.newPillSheetStart,
-              style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 10, color: TextColor.white),
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w600,
+                fontSize: 10,
+                color: TextColor.white,
+              ),
             ),
           ),
         ],

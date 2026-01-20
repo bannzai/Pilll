@@ -8,7 +8,11 @@ class PillSheetTypeSelectBodyTemplate extends StatelessWidget {
   final PillSheetType? selectedFirstPillSheetType;
   final void Function(PillSheetType type) onSelect;
 
-  const PillSheetTypeSelectBodyTemplate({super.key, required this.onSelect, required this.selectedFirstPillSheetType});
+  const PillSheetTypeSelectBodyTemplate({
+    super.key,
+    required this.onSelect,
+    required this.selectedFirstPillSheetType,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,17 +21,29 @@ class PillSheetTypeSelectBodyTemplate extends StatelessWidget {
         const SizedBox(height: 16),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [_pillSheet(PillSheetType.pillsheet_21), const SizedBox(width: 16), _pillSheet(PillSheetType.pillsheet_28_4)],
+          children: [
+            _pillSheet(PillSheetType.pillsheet_21),
+            const SizedBox(width: 16),
+            _pillSheet(PillSheetType.pillsheet_28_4),
+          ],
         ),
         const SizedBox(height: 16),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [_pillSheet(PillSheetType.pillsheet_28_7), const SizedBox(width: 16), _pillSheet(PillSheetType.pillsheet_28_0)],
+          children: [
+            _pillSheet(PillSheetType.pillsheet_28_7),
+            const SizedBox(width: 16),
+            _pillSheet(PillSheetType.pillsheet_28_0),
+          ],
         ),
         const SizedBox(height: 16),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [_pillSheet(PillSheetType.pillsheet_24_rest_4), const SizedBox(width: 16), _pillSheet(PillSheetType.pillsheet_21_0)],
+          children: [
+            _pillSheet(PillSheetType.pillsheet_24_rest_4),
+            const SizedBox(width: 16),
+            _pillSheet(PillSheetType.pillsheet_21_0),
+          ],
         ),
         const SizedBox(height: 16),
         Row(
@@ -45,10 +61,19 @@ class PillSheetTypeSelectBodyTemplate extends StatelessWidget {
   Widget _pillSheet(PillSheetType type) {
     return GestureDetector(
       onTap: () {
-        analytics.logEvent(name: 'pill_sheet_type_selected', parameters: {'pill_sheet_type': type.toString(), 'pill_sheet_name': type.fullName});
+        analytics.logEvent(
+          name: 'pill_sheet_type_selected',
+          parameters: {
+            'pill_sheet_type': type.toString(),
+            'pill_sheet_name': type.fullName,
+          },
+        );
         onSelect(type);
       },
-      child: PillSheetTypeColumn(pillSheetType: type, selected: selectedFirstPillSheetType == type),
+      child: PillSheetTypeColumn(
+        pillSheetType: type,
+        selected: selectedFirstPillSheetType == type,
+      ),
     );
   }
 }

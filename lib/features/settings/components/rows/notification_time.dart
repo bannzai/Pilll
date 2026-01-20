@@ -15,9 +15,17 @@ class NotificationTimeRow extends StatelessWidget {
     return ListTile(
       title: Text(
         L.notificationTime,
-        style: const TextStyle(fontFamily: FontFamily.roboto, fontWeight: FontWeight.w300, fontSize: 16),
+        style: const TextStyle(
+          fontFamily: FontFamily.roboto,
+          fontWeight: FontWeight.w300,
+          fontSize: 16,
+        ),
       ),
-      subtitle: Text(setting.reminderTimes.map((e) => DateTimeFormatter.militaryTime(e.dateTime())).join(', ')),
+      subtitle: Text(
+        setting.reminderTimes
+            .map((e) => DateTimeFormatter.militaryTime(e.dateTime()))
+            .join(', '),
+      ),
       onTap: () {
         analytics.logEvent(name: 'did_select_changing_reminder_times');
         Navigator.of(context).push(ReminderTimesPageRoute.route());

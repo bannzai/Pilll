@@ -13,7 +13,9 @@ class DisplayNumberSetting extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final begin = pillSheetGroup.displayNumberSetting?.beginPillNumber ?? 1;
-    final end = pillSheetGroup.displayNumberSetting?.endPillNumber ?? pillSheetGroup.sequentialEstimatedEndPillNumber;
+    final end =
+        pillSheetGroup.displayNumberSetting?.endPillNumber ??
+        pillSheetGroup.sequentialEstimatedEndPillNumber;
     return ListTile(
       leading: const Icon(Icons.change_circle_outlined),
       title: Text(L.changePillDays),

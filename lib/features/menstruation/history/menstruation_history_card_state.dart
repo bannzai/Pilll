@@ -18,7 +18,9 @@ class MenstruationHistoryCardState {
   });
 
   bool get moreButtonIsHidden =>
-      allMenstruations.firstWhereOrNull((element) => element.isActive) != null ? allMenstruations.length <= 3 : allMenstruations.length <= 2;
+      allMenstruations.firstWhereOrNull((element) => element.isActive) != null
+      ? allMenstruations.length <= 3
+      : allMenstruations.length <= 2;
   Menstruation? get activeMenstruation {
     if (latestMenstruation.isActive) {
       return latestMenstruation;
@@ -62,7 +64,10 @@ class MenstruationHistoryCardState {
         break;
       }
       final menstruation = allMenstruations[i];
-      final menstruationDuration = menstruationsDiff(menstruation, allMenstruations[i + 1]);
+      final menstruationDuration = menstruationsDiff(
+        menstruation,
+        allMenstruations[i + 1],
+      );
       if (menstruationDuration != null) {
         totalMenstruationDuration += menstruationDuration;
         count += 1;

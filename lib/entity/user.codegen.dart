@@ -104,7 +104,8 @@ extension UserFirestoreFieldKeys on String {
   static const trialDeadlineDate = 'trialDeadlineDate';
 
   /// 割引プラン利用期限日
-  static const discountEntitlementDeadlineDate = 'discountEntitlementDeadlineDate';
+  static const discountEntitlementDeadlineDate =
+      'discountEntitlementDeadlineDate';
 
   /// 解約理由を聞くかどうかのフラグ
   static const shouldAskCancelReason = 'shouldAskCancelReason';
@@ -160,14 +161,25 @@ class User with _$User {
     @Default(false) bool analyticsDebugIsEnabled,
 
     /// トライアル開始日（初回トライアル開始時にセット）
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beginTrialDate,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+    DateTime? beginTrialDate,
 
     /// トライアル期限日（トライアル期間の終了日時）
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? trialDeadlineDate,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+    DateTime? trialDeadlineDate,
 
     /// 割引プラン利用期限日（トライアル終了後の割引期間終了日時）
     /// 初期設定未完了または古いバージョンのアプリではnullの場合がある
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
     // 初期設定が完了していない or 古いバージョンのアプリではトライアル終了後にバックエンドの定期実行でdiscountEntitlementDeadlineDateの値が入るがそれより前のデータ(=トライアル中) の場合はdiscountEntitlementDeadlineDateがnullになる
     DateTime? discountEntitlementDeadlineDate,
 
@@ -183,7 +195,8 @@ class User with _$User {
   /// nullの場合はトライアル中として権限ありと判定
   /// 有効期限が現在時刻より後の場合に権限ありと判定
   bool get hasDiscountEntitlement {
-    final discountEntitlementDeadlineDate = this.discountEntitlementDeadlineDate;
+    final discountEntitlementDeadlineDate =
+        this.discountEntitlementDeadlineDate;
     if (discountEntitlementDeadlineDate == null) {
       return true;
     } else {
