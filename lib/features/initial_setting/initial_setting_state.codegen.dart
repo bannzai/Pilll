@@ -52,7 +52,10 @@ class InitialSettingState with _$InitialSettingState {
   Future<Setting> buildSetting() async {
     const menstruationDuration = 4;
     final maxPillCount = pillSheetTypes.map((e) => e.totalCount).fold(0, (previousValue, element) => previousValue + element);
-    final pillNumberForFromMenstruation = max(0, maxPillCount - menstruationDuration);
+    final pillNumberForFromMenstruation = max(
+      0,
+      maxPillCount - menstruationDuration,
+    );
 
     final setting = Setting(
       pillNumberForFromMenstruation: pillNumberForFromMenstruation,
@@ -126,10 +129,16 @@ class InitialSettingState with _$InitialSettingState {
       if (passedTotalCountElement.isEmpty) {
         passedTotalCount = 0;
       } else {
-        passedTotalCount = passedTotalCountElement.reduce((value, element) => value + element);
+        passedTotalCount = passedTotalCountElement.reduce(
+          (value, element) => value + element,
+        );
       }
 
-      return today().subtract(Duration(days: passedTotalCount + (todayPillNumber.pillNumberInPillSheet - 1)));
+      return today().subtract(
+        Duration(
+          days: passedTotalCount + (todayPillNumber.pillNumberInPillSheet - 1),
+        ),
+      );
     } else {
       // Right Side from todayPillNumber.pageIndex
       final beforePillSheetBeginDate = _beginDate(
@@ -174,7 +183,16 @@ class InitialSettingState with _$InitialSettingState {
   DateTime reminderDateTime(int index) {
     var t = DateTime.now();
     final reminderTime = reminderTimes[index];
-    return DateTime(t.year, t.month, t.day, reminderTime.hour, reminderTime.minute, t.second, t.millisecond, t.microsecond);
+    return DateTime(
+      t.year,
+      t.month,
+      t.day,
+      reminderTime.hour,
+      reminderTime.minute,
+      t.second,
+      t.millisecond,
+      t.microsecond,
+    );
   }
 
   int? selectedTodayPillNumberIntoPillSheet({required int pageIndex}) {

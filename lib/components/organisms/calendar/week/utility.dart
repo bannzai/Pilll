@@ -10,13 +10,25 @@ class WeekCalendarDateRangeCalculator {
   DateRange dateRangeOfLine(int line) {
     if (line == 1) {
       return DateRange(
-        DateTime(dateForMonth.year, dateForMonth.month, 1 - _previousMonthDayCount()),
-        DateTime(dateForMonth.year, dateForMonth.month, Weekday.values.length - _previousMonthDayCount()),
+        DateTime(
+          dateForMonth.year,
+          dateForMonth.month,
+          1 - _previousMonthDayCount(),
+        ),
+        DateTime(
+          dateForMonth.year,
+          dateForMonth.month,
+          Weekday.values.length - _previousMonthDayCount(),
+        ),
       );
     }
     if (line == weeklineCount()) {
       return DateRange(
-        DateTime(dateForMonth.year, dateForMonth.month, Weekday.values.length * (line - 1) + 1 - _previousMonthDayCount()),
+        DateTime(
+          dateForMonth.year,
+          dateForMonth.month,
+          Weekday.values.length * (line - 1) + 1 - _previousMonthDayCount(),
+        ),
         DateTime(dateForMonth.year, dateForMonth.month, _lastDay()),
       );
     }

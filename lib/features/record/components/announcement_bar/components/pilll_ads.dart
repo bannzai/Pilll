@@ -20,7 +20,11 @@ class PilllAdsAnnouncementBar extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final imageURL = pilllAds.imageURL;
     if (imageURL != null) {
-      return PilllAdsImageAnnouncementBar(imageURL: imageURL, pilllAds: pilllAds, onClose: onClose);
+      return PilllAdsImageAnnouncementBar(
+        imageURL: imageURL,
+        pilllAds: pilllAds,
+        onClose: onClose,
+      );
     } else {
       return PilllAdsTextAnnouncementBar(pilllAds: pilllAds, onClose: onClose);
     }
@@ -84,10 +88,7 @@ class PilllAdsImageAnnouncementBar extends StatelessWidget {
                 ),
               ],
             ),
-            Image.network(
-              imageURL,
-              height: 50,
-            ),
+            Image.network(imageURL, height: 50),
           ],
         ),
       ),
@@ -120,11 +121,7 @@ class PilllAdsTextAnnouncementBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
-              child: const Icon(
-                Icons.close,
-                color: Colors.white,
-                size: 24,
-              ),
+              child: const Icon(Icons.close, color: Colors.white, size: 24),
               onTap: () {
                 analytics.logEvent(name: 'pilll_ads_text_is_closed');
                 onClose();
@@ -152,7 +149,10 @@ class PilllAdsTextAnnouncementBar extends StatelessWidget {
             const SizedBox(width: 10),
             SvgPicture.asset(
               'images/arrow_right.svg',
-              colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+              colorFilter: const ColorFilter.mode(
+                Colors.white,
+                BlendMode.srcIn,
+              ),
               height: 20,
               width: 20,
             ),

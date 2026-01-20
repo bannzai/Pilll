@@ -23,7 +23,9 @@ Future<bool> healthKitRequestAuthorizationIsUnnecessary() async {
     throw FormatException(L.healthKitDoesNotSupport);
   }
 
-  final result = await methodChannel.invokeMethod('healthKitRequestAuthorizationIsUnnecessary');
+  final result = await methodChannel.invokeMethod(
+    'healthKitRequestAuthorizationIsUnnecessary',
+  );
   return result['healthKitRequestAuthorizationIsUnnecessary'] == true;
 }
 
@@ -38,7 +40,9 @@ Future<bool> healthKitAuthorizationStatusIsSharingAuthorized() async {
     throw FormatException(L.enableHealthKitFromSettings);
   }
 
-  final result = await methodChannel.invokeMethod('healthKitAuthorizationStatusIsSharingAuthorized');
+  final result = await methodChannel.invokeMethod(
+    'healthKitAuthorizationStatusIsSharingAuthorized',
+  );
   return result['healthKitAuthorizationStatusIsSharingAuthorized'] == true;
 }
 
@@ -97,8 +101,8 @@ Future<String> addMenstruationFlowHealthKitData(
     throw FormatException(L.enableHealthKitFromSettings);
   }
 
-// Avoid codec error
-// e.g) Unhandled Exception: Invalid argument: Instance of 'Timestamp'
+  // Avoid codec error
+  // e.g) Unhandled Exception: Invalid argument: Instance of 'Timestamp'
   var json = menstruation.toJson();
   for (final key in json.keys) {
     final value = json[key];
@@ -107,9 +111,10 @@ Future<String> addMenstruationFlowHealthKitData(
     }
   }
 
-  dynamic response = await methodChannel.invokeMethod('addMenstruationFlowHealthKitData', {
-    'menstruation': json,
-  });
+  dynamic response = await methodChannel.invokeMethod(
+    'addMenstruationFlowHealthKitData',
+    {'menstruation': json},
+  );
 
   if (response['result'] == 'success') {
     return response['healthKitSampleDataUUID'] as String;
@@ -133,8 +138,8 @@ Future<String> updateOrAddMenstruationFlowHealthKitData(
     throw FormatException(L.enableHealthKitFromSettings);
   }
 
-// Avoid codec error
-// e.g) Unhandled Exception: Invalid argument: Instance of 'Timestamp'
+  // Avoid codec error
+  // e.g) Unhandled Exception: Invalid argument: Instance of 'Timestamp'
   var json = menstruation.toJson();
   for (final key in json.keys) {
     final value = json[key];
@@ -143,9 +148,10 @@ Future<String> updateOrAddMenstruationFlowHealthKitData(
     }
   }
 
-  dynamic response = await methodChannel.invokeMethod('updateOrAddMenstruationFlowHealthKitData', {
-    'menstruation': json,
-  });
+  dynamic response = await methodChannel.invokeMethod(
+    'updateOrAddMenstruationFlowHealthKitData',
+    {'menstruation': json},
+  );
 
   if (response['result'] == 'success') {
     return response['healthKitSampleDataUUID'] as String;
@@ -169,8 +175,8 @@ Future<void> deleteMenstruationFlowHealthKitData(
     throw FormatException(L.enableHealthKitFromSettings);
   }
 
-// Avoid codec error
-// e.g) Unhandled Exception: Invalid argument: Instance of 'Timestamp'
+  // Avoid codec error
+  // e.g) Unhandled Exception: Invalid argument: Instance of 'Timestamp'
   var json = menstruation.toJson();
   for (final key in json.keys) {
     final value = json[key];
@@ -179,9 +185,10 @@ Future<void> deleteMenstruationFlowHealthKitData(
     }
   }
 
-  dynamic response = await methodChannel.invokeMethod('deleteMenstrualFlowHealthKitData', {
-    'menstruation': json,
-  });
+  dynamic response = await methodChannel.invokeMethod(
+    'deleteMenstrualFlowHealthKitData',
+    {'menstruation': json},
+  );
 
   if (response['result'] == 'success') {
     return;

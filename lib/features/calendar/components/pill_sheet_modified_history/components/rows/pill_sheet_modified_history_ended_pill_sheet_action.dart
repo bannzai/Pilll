@@ -28,10 +28,7 @@ class PillSheetModifiedHistoryEndedPillSheetAction extends StatelessWidget {
           child: const DottedLine(),
         ),
         const SizedBox(width: 12),
-        Text(
-          L.endPillSheet,
-          style: _textStyle,
-        ),
+        Text(L.endPillSheet, style: _textStyle),
         const SizedBox(width: 12),
         LimitedBox(
           maxWidth: MediaQuery.of(context).size.width / 4 - 1,

@@ -23,13 +23,17 @@ class SettingMenstruationPillSheetList extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final pageController = usePageController(viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width);
+    final pageController = usePageController(
+      viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width,
+    );
     return Column(
       children: [
         Container(
           constraints: BoxConstraints(
             maxHeight: PillSheetViewLayout.calcHeight(
-              PillSheetViewLayout.mostLargePillSheetType(pillSheetTypes).numberOfLineInPillSheet,
+              PillSheetViewLayout.mostLargePillSheetType(
+                pillSheetTypes,
+              ).numberOfLineInPillSheet,
               true,
             ),
           ),
@@ -47,7 +51,9 @@ class SettingMenstruationPillSheetList extends HookConsumerWidget {
                       pageIndex: pageIndex,
                       appearanceMode: appearanceMode,
                       pillSheetTypes: pillSheetTypes,
-                      selectedPillNumberIntoPillSheet: selectedPillNumber(pageIndex),
+                      selectedPillNumberIntoPillSheet: selectedPillNumber(
+                        pageIndex,
+                      ),
                       markSelected: (pageIndex, number) => markSelected(pageIndex, number),
                     ),
                   ),
@@ -69,8 +75,8 @@ class SettingMenstruationPillSheetList extends HookConsumerWidget {
                 curve: Curves.easeInOut,
               );
             },
-          )
-        ]
+          ),
+        ],
       ],
     );
   }

@@ -23,11 +23,17 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final begin = useState(pillSheetGroup.displayNumberSetting?.beginPillNumber);
+    final begin = useState(
+      pillSheetGroup.displayNumberSetting?.beginPillNumber,
+    );
     final end = useState(pillSheetGroup.displayNumberSetting?.endPillNumber);
 
-    final beginTextFieldController = useTextEditingController(text: '${begin.value ?? 1}');
-    final endTextFieldController = useTextEditingController(text: '${end.value ?? pillSheetGroup.sequentialEstimatedEndPillNumber}');
+    final beginTextFieldController = useTextEditingController(
+      text: '${begin.value ?? 1}',
+    );
+    final endTextFieldController = useTextEditingController(
+      text: '${end.value ?? pillSheetGroup.sequentialEstimatedEndPillNumber}',
+    );
 
     final beforePillSheetGroup = ref.watch(beforePillSheetGroupProvider).valueOrNull;
 
@@ -37,8 +43,12 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
 
     final batchFactory = ref.watch(batchFactoryProvider);
     final batchSetPillSheetGroup = ref.watch(batchSetPillSheetGroupProvider);
-    final batchSetPillSheetModifiedHistory = ref.watch(batchSetPillSheetModifiedHistoryProvider);
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final batchSetPillSheetModifiedHistory = ref.watch(
+      batchSetPillSheetModifiedHistoryProvider,
+    );
+    final registerReminderLocalNotification = ref.watch(
+      registerReminderLocalNotificationProvider,
+    );
 
     return DraggableScrollableSheet(
       initialChildSize: height,
@@ -56,45 +66,47 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Row(children: [
-                Text(
-                  L.changePillDaysForSheet,
-                  style: const TextStyle(
-                    color: TextColor.main,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
+              Row(
+                children: [
+                  Text(
+                    L.changePillDaysForSheet,
+                    style: const TextStyle(
+                      color: TextColor.main,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  textAlign: TextAlign.center,
-                ),
-                const Spacer(),
-                RedTextButton(
-                  text: L.change,
-                  onPressed: () async {
-                    analytics.logEvent(
-                      name: 'sheet_change_display_number_setting',
-                    );
-                    await _submit(
-                      batchFactory: batchFactory,
-                      batchSetPillSheetGroup: batchSetPillSheetGroup,
-                      batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
-                      begin: begin,
-                      end: end,
-                    );
-                    await registerReminderLocalNotification();
-                    if (context.mounted) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          duration: const Duration(
-                            seconds: 2,
-                          ),
-                          content: Text(L.changedStartAndEndNumbers),
-                        ),
+                  const Spacer(),
+                  RedTextButton(
+                    text: L.change,
+                    onPressed: () async {
+                      analytics.logEvent(
+                        name: 'sheet_change_display_number_setting',
                       );
-                      Navigator.of(context).popUntil((route) => route.isFirst);
-                    }
-                  },
-                )
-              ]),
+                      await _submit(
+                        batchFactory: batchFactory,
+                        batchSetPillSheetGroup: batchSetPillSheetGroup,
+                        batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+                        begin: begin,
+                        end: end,
+                      );
+                      await registerReminderLocalNotification();
+                      if (context.mounted) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            duration: const Duration(seconds: 2),
+                            content: Text(L.changedStartAndEndNumbers),
+                          ),
+                        );
+                        Navigator.of(
+                          context,
+                        ).popUntil((route) => route.isFirst);
+                      }
+                    },
+                  ),
+                ],
+              ),
               const SizedBox(height: 24),
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -105,7 +117,9 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                     children: [
                       Row(
                         children: [
-                          SvgPicture.asset('images/begin_display_number_setting.svg'),
+                          SvgPicture.asset(
+                            'images/begin_display_number_setting.svg',
+                          ),
                           const SizedBox(width: 4),
                           Text(
                             L.startOfPillDays,
@@ -182,7 +196,9 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text(
-                              L.estimatedEndPillNumber(beforePillSheetGroup.sequentialEstimatedEndPillNumber),
+                              L.estimatedEndPillNumber(
+                                beforePillSheetGroup.sequentialEstimatedEndPillNumber,
+                              ),
                               style: const TextStyle(
                                 fontFamily: FontFamily.japanese,
                                 fontSize: 12,
@@ -312,10 +328,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
       );
     }
 
-    batchSetPillSheetGroup(
-      batch,
-      updatedPillSheetGroup,
-    );
+    batchSetPillSheetGroup(batch, updatedPillSheetGroup);
 
     await batch.commit();
   }
@@ -328,9 +341,7 @@ void showDisplayNumberSettingSheet(
   analytics.logScreenView(screenName: 'DisplayNumberSettingSheet');
   showModalBottomSheet(
     context: context,
-    builder: (context) => DisplayNumberSettingSheet(
-      pillSheetGroup: pillSheetGroup,
-    ),
+    builder: (context) => DisplayNumberSettingSheet(pillSheetGroup: pillSheetGroup),
     backgroundColor: Colors.transparent,
     isScrollControlled: true,
   );

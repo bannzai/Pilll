@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 
 class _InheritedWidget extends InheritedWidget {
-  const _InheritedWidget({
-    required super.child,
-    required this.state,
-  });
+  const _InheritedWidget({required super.child, required this.state});
 
   final HUDState state;
 
@@ -59,10 +56,7 @@ class HUDState extends State<HUD> {
     }
     return Stack(
       alignment: AlignmentDirectional.bottomCenter,
-      children: [
-        child,
-        _hud(context),
-      ],
+      children: [child, _hud(context)],
     );
   }
 
@@ -75,9 +69,7 @@ class HUDState extends State<HUD> {
             if (widget.barrierEnabled)
               Visibility(
                 visible: shown,
-                child: ModalBarrier(
-                  color: Colors.black.withOpacity(0.08),
-                ),
+                child: ModalBarrier(color: Colors.black.withOpacity(0.08)),
               ),
             const Center(child: Indicator()),
           ],

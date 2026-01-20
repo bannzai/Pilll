@@ -15,7 +15,9 @@ PillSheetGroup? _filter(QuerySnapshot<PillSheetGroup> snapshot) {
 }
 
 // 最新のピルシートグループを取得する。ピルシートグループが初期設定で作られないパターンもあるのでNullable
-Future<PillSheetGroup?> fetchLatestPillSheetGroup(DatabaseConnection databaseConnection) async {
+Future<PillSheetGroup?> fetchLatestPillSheetGroup(
+  DatabaseConnection databaseConnection,
+) async {
   return (await databaseConnection.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(1).get())
       .docs
       .lastOrNull
@@ -30,7 +32,7 @@ AsyncValue<PillSheet?> activePillSheet(ActivePillSheetRef ref) {
 
 @Riverpod(dependencies: [database])
 Stream<PillSheetGroup?> latestPillSheetGroup(LatestPillSheetGroupRef ref) {
-// 最新のピルシートグループを取得する。ピルシートグループが初期設定で作られないパターンもあるのでNullable
+  // 最新のピルシートグループを取得する。ピルシートグループが初期設定で作られないパターンもあるのでNullable
   return ref
       .watch(databaseProvider)
       .pillSheetGroupsReference()
@@ -39,13 +41,17 @@ Stream<PillSheetGroup?> latestPillSheetGroup(LatestPillSheetGroupRef ref) {
       .snapshots(includeMetadataChanges: true)
       // 複数端末を使用しているユーザーもいるため、とりあえず実験的に hasPendingWrites の間はスキップする。明らかに動作が遅い等のフィードバックをもらったらまたオプションをつけたりするかを検討する
       // またサーバー側でPillSheetGroupの変更も行うことがあるので(自動服用等)、hasPendingWrites の間はスキップするは有用の可能性がある。問い合わせがいくつかきているのでこれで解決する可能性がある
-      .skipWhile((snapshot) => snapshot.metadata.hasPendingWrites || snapshot.metadata.isFromCache)
+      .skipWhile(
+        (snapshot) => snapshot.metadata.hasPendingWrites || snapshot.metadata.isFromCache,
+      )
       .map(((event) => _filter(event)));
 }
 
 // 一つ前のピルシートグループを取得する。破棄されたピルシートグループは現在含んでいるが含めないようにしても良い。インデックスを作成する必要があるので避けている
 @Riverpod(dependencies: [database])
-Future<PillSheetGroup?> beforePillSheetGroup(BeforePillSheetGroupRef ref) async {
+Future<PillSheetGroup?> beforePillSheetGroup(
+  BeforePillSheetGroupRef ref,
+) async {
   final database = ref.watch(databaseProvider);
   final snapshot = await database.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(2).get();
 

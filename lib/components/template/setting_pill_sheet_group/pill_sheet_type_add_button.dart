@@ -35,11 +35,7 @@ class PillSheetTypeAddButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(
-              Icons.add,
-              color: TextColor.noshime,
-              size: 20,
-            ),
+            const Icon(Icons.add, color: TextColor.noshime, size: 20),
             const SizedBox(width: 4),
             Text(
               L.addPillSheet,

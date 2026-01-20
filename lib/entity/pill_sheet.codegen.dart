@@ -415,7 +415,12 @@ sealed class PillSheet with _$PillSheet {
   /// 開始日、総ピル数、休薬期間を考慮して計算される完了予定日
   DateTime get estimatedEndTakenDate => beginDate
       .addDays(pillSheetType.totalCount - 1)
-      .addDays(summarizedRestDuration(restDurations: restDurations, upperDate: today()))
+      .addDays(
+        summarizedRestDuration(
+          restDurations: restDurations,
+          upperDate: today(),
+        ),
+      )
       .date()
       .add(const Duration(days: 1))
       .subtract(const Duration(seconds: 1));
@@ -450,7 +455,15 @@ sealed class PillSheet with _$PillSheet {
   /// 開始日からの経過日数と休薬期間を考慮してピル番号を算出
   /// 最小値は1を保証
   int pillNumberFor({required DateTime targetDate}) {
-    return max(daysBetween(beginDate.date(), targetDate) - summarizedRestDuration(restDurations: restDurations, upperDate: targetDate) + 1, 1);
+    return max(
+      daysBetween(beginDate.date(), targetDate) -
+          summarizedRestDuration(
+            restDurations: restDurations,
+            upperDate: targetDate,
+          ) +
+          1,
+      1,
+    );
   }
 
   /// ピルシート内の各ピルの服用予定日リスト
@@ -505,7 +518,9 @@ extension PillSheetV2Extension on PillSheetV2 {
   /// 最後に服用完了したピルの番号（0または1以上）
   /// 各ピルのtakenCount回すべて服用したピルの番号を返す
   int get lastCompletedPillNumber {
-    final lastCompletedPill = pills.lastWhereOrNull((element) => element.isCompleted);
+    final lastCompletedPill = pills.lastWhereOrNull(
+      (element) => element.isCompleted,
+    );
     if (lastCompletedPill == null) {
       return 0;
     }
@@ -546,7 +561,10 @@ extension PillSheetV2Extension on PillSheetV2 {
     if (newPills.isEmpty) {
       return pills;
     }
-    assert(newPills.first.index >= 0 && newPills.last.index < pills.length, 'newPills indices are out of bounds');
+    assert(
+      newPills.first.index >= 0 && newPills.last.index < pills.length,
+      'newPills indices are out of bounds',
+    );
     // indexがはみ出た場合は早期リターン
     if (newPills.first.index < 0 || newPills.last.index >= pills.length) {
       return pills;

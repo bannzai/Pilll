@@ -58,11 +58,7 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
               },
               child: Row(
                 children: [
-                  const Icon(
-                    Icons.edit,
-                    color: TextColor.main,
-                    size: 20,
-                  ),
+                  const Icon(Icons.edit, color: TextColor.main, size: 20),
                   const SizedBox(width: 16),
                   Text(
                     L.editMenstruation,
@@ -80,11 +76,7 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
               style: const ButtonStyle(alignment: Alignment.centerLeft),
               child: Row(
                 children: [
-                  const Icon(
-                    Icons.delete,
-                    color: TextColor.danger,
-                    size: 20,
-                  ),
+                  const Icon(Icons.delete, color: TextColor.danger, size: 20),
                   const SizedBox(width: 16),
                   Text(
                     L.delete,
@@ -107,7 +99,9 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
                       AlertButton(
                         text: L.cancel,
                         onPressed: () async {
-                          analytics.logEvent(name: 'cancelled_delete_menstruation');
+                          analytics.logEvent(
+                            name: 'cancelled_delete_menstruation',
+                          );
 
                           Navigator.of(context).pop();
                         },
@@ -115,7 +109,9 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
                       AlertButton(
                         text: L.doDelete,
                         onPressed: () async {
-                          analytics.logEvent(name: 'pressed_delete_menstruation');
+                          analytics.logEvent(
+                            name: 'pressed_delete_menstruation',
+                          );
 
                           final navigator = Navigator.of(context);
                           try {
@@ -139,7 +135,10 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
   }
 }
 
-void showMenstruationEditSelectionSheet(BuildContext context, MenstruationEditSelectionSheet menstruationEditSelectionSheet) {
+void showMenstruationEditSelectionSheet(
+  BuildContext context,
+  MenstruationEditSelectionSheet menstruationEditSelectionSheet,
+) {
   showModalBottomSheet(
     context: context,
     builder: (BuildContext context) {

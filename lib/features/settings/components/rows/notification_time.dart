@@ -8,10 +8,7 @@ import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 class NotificationTimeRow extends StatelessWidget {
   final Setting setting;
-  const NotificationTimeRow({
-    super.key,
-    required this.setting,
-  });
+  const NotificationTimeRow({super.key, required this.setting});
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +21,11 @@ class NotificationTimeRow extends StatelessWidget {
           fontSize: 16,
         ),
       ),
-      subtitle: Text(setting.reminderTimes.map((e) => DateTimeFormatter.militaryTime(e.dateTime())).join(', ')),
+      subtitle: Text(
+        setting.reminderTimes.map((e) => DateTimeFormatter.militaryTime(e.dateTime())).join(', '),
+      ),
       onTap: () {
-        analytics.logEvent(
-          name: 'did_select_changing_reminder_times',
-        );
+        analytics.logEvent(name: 'did_select_changing_reminder_times');
         Navigator.of(context).push(ReminderTimesPageRoute.route());
       },
     );

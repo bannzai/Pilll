@@ -16,11 +16,7 @@ import 'package:flutter/material.dart';
 class UserSetup extends HookConsumerWidget {
   final String userID;
   final Widget Function(BuildContext) builder;
-  const UserSetup({
-    super.key,
-    required this.userID,
-    required this.builder,
-  });
+  const UserSetup({super.key, required this.userID, required this.builder});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -48,7 +44,10 @@ class UserSetup extends HookConsumerWidget {
           }
         } catch (e, st) {
           errorLogger.recordError(e, st);
-          error.value = LaunchException(L.launchError(ErrorMessages.connection), e);
+          error.value = LaunchException(
+            L.launchError(ErrorMessages.connection),
+            e,
+          );
         }
         // **** END: Do not break the sequence. ****
       }

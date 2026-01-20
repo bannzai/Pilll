@@ -37,34 +37,30 @@ class DiaryPostPhysicalConditionDetails extends StatelessWidget {
       children: [
         Row(
           children: [
-            Text(
-              L.physicalConditionDetail,
-              style: sectionTitle,
-            ),
+            Text(L.physicalConditionDetail, style: sectionTitle),
             const SizedBox(width: 12),
             IconButton(
               onPressed: () {
                 analytics.logEvent(name: 'edit_physical_condition_detail');
                 if (user.isPremium || user.isTrial) {
                   showModalBottomSheet(
-                      context: context,
-                      isDismissible: true,
-                      isScrollControlled: true,
-                      backgroundColor: Colors.transparent,
-                      builder: (_) {
-                        return SizedBox(
-                          height: MediaQuery.of(context).size.height - 200,
-                          child: const DiarySettingPhysicalConditionDetailPage(),
-                        );
-                      });
+                    context: context,
+                    isDismissible: true,
+                    isScrollControlled: true,
+                    backgroundColor: Colors.transparent,
+                    builder: (_) {
+                      return SizedBox(
+                        height: MediaQuery.of(context).size.height - 200,
+                        child: const DiarySettingPhysicalConditionDetailPage(),
+                      );
+                    },
+                  );
                 } else {
                   showPremiumIntroductionSheet(context);
                 }
               },
               padding: const EdgeInsets.all(4),
-              icon: const Icon(
-                Icons.edit,
-              ),
+              icon: const Icon(Icons.edit),
               iconSize: 20,
               constraints: const BoxConstraints(minWidth: 20, minHeight: 20),
             ),
@@ -74,25 +70,32 @@ class DiaryPostPhysicalConditionDetails extends StatelessWidget {
         Wrap(
           spacing: 10,
           children: availablePhysicalConditionDetails
-              .map((e) => ChoiceChip(
-                    label: Text(e),
-                    labelStyle: TextStyle(
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w300,
-                      fontSize: 14,
-                      color: physicalConditionDetails.value.contains(e) ? TextColor.white : TextColor.darkGray,
-                    ),
-                    disabledColor: AppColors.disabledSheet,
-                    selectedColor: AppColors.primary,
-                    selected: physicalConditionDetails.value.contains(e),
-                    onSelected: (selected) {
-                      if (physicalConditionDetails.value.contains(e)) {
-                        physicalConditionDetails.value = [...physicalConditionDetails.value]..remove(e);
-                      } else {
-                        physicalConditionDetails.value = [...physicalConditionDetails.value, e];
-                      }
-                    },
-                  ))
+              .map(
+                (e) => ChoiceChip(
+                  label: Text(e),
+                  labelStyle: TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 14,
+                    color: physicalConditionDetails.value.contains(e) ? TextColor.white : TextColor.darkGray,
+                  ),
+                  disabledColor: AppColors.disabledSheet,
+                  selectedColor: AppColors.primary,
+                  selected: physicalConditionDetails.value.contains(e),
+                  onSelected: (selected) {
+                    if (physicalConditionDetails.value.contains(e)) {
+                      physicalConditionDetails.value = [
+                        ...physicalConditionDetails.value,
+                      ]..remove(e);
+                    } else {
+                      physicalConditionDetails.value = [
+                        ...physicalConditionDetails.value,
+                        e,
+                      ];
+                    }
+                  },
+                ),
+              )
               .toList(),
         ),
       ],

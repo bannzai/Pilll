@@ -25,14 +25,14 @@ class BeginManualRestDuration extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final beginRestDuration = ref.watch(beginRestDurationProvider);
-    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
+    final cancelReminderLocalNotification = ref.watch(
+      cancelReminderLocalNotificationProvider,
+    );
 
     void didBeginRestDuration() {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          duration: const Duration(
-            seconds: 2,
-          ),
+          duration: const Duration(seconds: 2),
           content: Text(L.startedPauseTaking),
         ),
       );
@@ -43,7 +43,10 @@ class BeginManualRestDuration extends HookConsumerWidget {
       leading: const Icon(Icons.dark_mode_outlined),
       title: Text(L.startPauseTaking),
       onTap: () {
-        analytics.logEvent(name: 'begin_manual_rest_duration_pressed', parameters: {'pill_sheet_id': activePillSheet.id});
+        analytics.logEvent(
+          name: 'begin_manual_rest_duration_pressed',
+          parameters: {'pill_sheet_id': activePillSheet.id},
+        );
 
         final todayPillAllTaken = switch (activePillSheet) {
           PillSheetV1 v1 => v1.todayPillIsAlreadyTaken,
@@ -60,9 +63,7 @@ class BeginManualRestDuration extends HookConsumerWidget {
               analytics.logEvent(name: 'done_rest_duration');
               // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
               FlutterAppBadger.removeBadge();
-              await beginRestDuration(
-                pillSheetGroup: pillSheetGroup,
-              );
+              await beginRestDuration(pillSheetGroup: pillSheetGroup);
               await cancelReminderLocalNotification();
               didBeginRestDuration();
             },

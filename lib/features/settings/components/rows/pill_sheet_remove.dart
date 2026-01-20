@@ -27,7 +27,9 @@ class PillSheetRemoveRow extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final deletePillSheetGroup = ref.watch(deletePillSheetGroupProvider);
-    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
+    final cancelReminderLocalNotification = ref.watch(
+      cancelReminderLocalNotificationProvider,
+    );
     return ListTile(
       title: Text(
         L.discardAllPillSheets,
@@ -38,9 +40,7 @@ class PillSheetRemoveRow extends HookConsumerWidget {
         ),
       ),
       onTap: () {
-        analytics.logEvent(
-          name: 'did_select_remove_pill_sheet',
-        );
+        analytics.logEvent(name: 'did_select_remove_pill_sheet');
         showDialog(
           context: context,
           builder: (_) {
@@ -94,10 +94,15 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                     try {
                       // NOTE: リモートのDBに書き込む時間がかかるので事前にバッジを0にする。楽観的UI更新
                       FlutterAppBadger.removeBadge();
-                      await deletePillSheetGroup(latestPillSheetGroup: latestPillSheetGroup, activePillSheet: activePillSheet);
+                      await deletePillSheetGroup(
+                        latestPillSheetGroup: latestPillSheetGroup,
+                        activePillSheet: activePillSheet,
+                      );
                       await cancelReminderLocalNotification();
                       navigatorKey.currentState?.pop();
-                      ScaffoldMessenger.of(navigatorKey.currentContext!).showSnackBar(
+                      ScaffoldMessenger.of(
+                        navigatorKey.currentContext!,
+                      ).showSnackBar(
                         SnackBar(
                           duration: const Duration(seconds: 2),
                           content: Text(L.pillSheetDiscarded),

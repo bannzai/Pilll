@@ -38,10 +38,13 @@ import 'package:pilll/utils/emoji/emoji.dart';
 
 // NOTE: 数字に特に意味はないが、ユーザーが過去のカレンダーも見たいということで十分な枠をとっている。Pilllの開始が2018年なので、それより後のデータが見れるくらいで良い
 const _calendarDataSourceLength = 120;
-final _calendarDataSource = List.generate(_calendarDataSourceLength, (index) => (index + 1) - (_calendarDataSourceLength ~/ 2))
-    .map((e) => DateTime(today().year, today().month + e, 1))
-    .toList();
-final _todayCalendarPageIndex = _calendarDataSource.lastIndexWhere((element) => isSameMonth(element, today()));
+final _calendarDataSource = List.generate(
+  _calendarDataSourceLength,
+  (index) => (index + 1) - (_calendarDataSourceLength ~/ 2),
+).map((e) => DateTime(today().year, today().month + e, 1)).toList();
+final _todayCalendarPageIndex = _calendarDataSource.lastIndexWhere(
+  (element) => isSameMonth(element, today()),
+);
 
 class CalendarPage extends HookConsumerWidget {
   const CalendarPage({super.key});
@@ -49,7 +52,9 @@ class CalendarPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final page = useState(_todayCalendarPageIndex);
-    final pageController = usePageController(initialPage: _todayCalendarPageIndex);
+    final pageController = usePageController(
+      initialPage: _todayCalendarPageIndex,
+    );
     pageController.addListener(() {
       final index = (pageController.page ?? pageController.initialPage).round();
       page.value = index;
@@ -58,7 +63,10 @@ class CalendarPage extends HookConsumerWidget {
     final displayedMonth = _calendarDataSource[page.value];
     return AsyncValueGroup.group6(
       ref.watch(
-          pillSheetModifiedHistoriesWithLimitProvider(limit: CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold + 1)),
+        pillSheetModifiedHistoriesWithLimitProvider(
+          limit: CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold + 1,
+        ),
+      ),
       ref.watch(userProvider),
       ref.watch(calendarMenstruationBandListProvider),
       ref.watch(calendarScheduledMenstruationBandListProvider),
@@ -121,7 +129,9 @@ class _CalendarPageBody extends StatelessWidget {
         child: FloatingActionButton(
           onPressed: () {
             analytics.logEvent(name: 'calendar_fab_pressed');
-            Navigator.of(context).push(DiaryPostPageRoute.route(today(), todayDiary));
+            Navigator.of(
+              context,
+            ).push(DiaryPostPageRoute.route(today(), todayDiary));
           },
           backgroundColor: AppColors.primary,
           child: const Icon(Icons.add, color: Colors.white),
@@ -149,24 +159,21 @@ class _CalendarPageBody extends StatelessWidget {
                 controller: pageController,
                 scrollDirection: Axis.horizontal,
                 physics: const PageScrollPhysics(),
-                children: List.generate(
-                  _calendarDataSourceLength,
-                  (index) {
-                    // NOTE: 生理タブ上部のカレンダーの90日のデータと合わせて3index分の表示をフリープランとする
-                    final withInFreePlanMonth = _todayCalendarPageIndex + 3 >= index && index >= _todayCalendarPageIndex - 3;
-                    return Stack(
-                      children: [
-                        MonthCalendarPager(
-                          displayedMonth: displayedMonth,
-                          calendarMenstruationBandModels: calendarMenstruationBandModels,
-                          calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
-                          calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
-                        ),
-                        if (!user.premiumOrTrial && !withInFreePlanMonth) const PremiumIntroductionOverlay(),
-                      ],
-                    );
-                  },
-                ),
+                children: List.generate(_calendarDataSourceLength, (index) {
+                  // NOTE: 生理タブ上部のカレンダーの90日のデータと合わせて3index分の表示をフリープランとする
+                  final withInFreePlanMonth = _todayCalendarPageIndex + 3 >= index && index >= _todayCalendarPageIndex - 3;
+                  return Stack(
+                    children: [
+                      MonthCalendarPager(
+                        displayedMonth: displayedMonth,
+                        calendarMenstruationBandModels: calendarMenstruationBandModels,
+                        calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
+                        calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
+                      ),
+                      if (!user.premiumOrTrial && !withInFreePlanMonth) const PremiumIntroductionOverlay(),
+                    ],
+                  );
+                }),
               ),
             ),
             const SizedBox(height: 30),
@@ -215,34 +222,41 @@ class MonthCalendarPager extends StatelessWidget {
       height: _monthlyCalendarHeight,
       width: MediaQuery.of(context).size.width,
       child: MonthCalendar(
-          dateForMonth: displayedMonth,
-          weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
-            return CalendarWeekLine(
-              dateRange: weekDateRange,
-              calendarMenstruationBandModels: calendarMenstruationBandModels,
-              calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
-              calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
-              horizontalPadding: 0,
-              day: (context, weekday, date) {
-                if (date.isPreviousMonth(displayedMonth)) {
-                  return CalendarDayTile.grayout(
-                    weekday: weekday,
-                    date: date,
+        dateForMonth: displayedMonth,
+        weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
+          return CalendarWeekLine(
+            dateRange: weekDateRange,
+            calendarMenstruationBandModels: calendarMenstruationBandModels,
+            calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
+            calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
+            horizontalPadding: 0,
+            day: (context, weekday, date) {
+              if (date.isPreviousMonth(displayedMonth)) {
+                return CalendarDayTile.grayout(weekday: weekday, date: date);
+              }
+              return CalendarDayTile(
+                weekday: weekday,
+                date: date,
+                diary: diaries.firstWhereOrNull((e) => isSameDay(e.date, date)),
+                schedule: schedules.firstWhereOrNull(
+                  (e) => isSameDay(e.date, date),
+                ),
+                onTap: (date) {
+                  analytics.logEvent(
+                    name: 'did_select_day_tile_on_calendar_card',
                   );
-                }
-                return CalendarDayTile(
-                  weekday: weekday,
-                  date: date,
-                  diary: diaries.firstWhereOrNull((e) => isSameDay(e.date, date)),
-                  schedule: schedules.firstWhereOrNull((e) => isSameDay(e.date, date)),
-                  onTap: (date) {
-                    analytics.logEvent(name: 'did_select_day_tile_on_calendar_card');
-                    transitionWhenCalendarDayTapped(context, date: date, diaries: diaries, schedules: schedules);
-                  },
-                );
-              },
-            );
-          }),
+                  transitionWhenCalendarDayTapped(
+                    context,
+                    date: date,
+                    diaries: diaries,
+                    schedules: schedules,
+                  );
+                },
+              );
+            },
+          );
+        },
+      ),
     );
   }
 }
@@ -258,9 +272,7 @@ class PremiumIntroductionOverlay extends StatelessWidget {
           children: [
             BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 6, sigmaY: 6),
-              child: Container(
-                color: Colors.black.withOpacity(0),
-              ),
+              child: Container(color: Colors.black.withOpacity(0)),
             ),
             Center(
               child: Column(

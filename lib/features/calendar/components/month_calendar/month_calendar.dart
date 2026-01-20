@@ -27,10 +27,26 @@ class MonthCalendar extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     useEffect(() {
       // Prefetch
-      ref.read(diariesForMonthProvider(DateTime(dateForMonth.year, dateForMonth.month + 1, 1)));
-      ref.read(diariesForMonthProvider(DateTime(dateForMonth.year, dateForMonth.month - 1, 1)));
-      ref.read(schedulesForMonthProvider(DateTime(dateForMonth.year, dateForMonth.month + 1, 1)));
-      ref.read(schedulesForMonthProvider(DateTime(dateForMonth.year, dateForMonth.month - 1, 1)));
+      ref.read(
+        diariesForMonthProvider(
+          DateTime(dateForMonth.year, dateForMonth.month + 1, 1),
+        ),
+      );
+      ref.read(
+        diariesForMonthProvider(
+          DateTime(dateForMonth.year, dateForMonth.month - 1, 1),
+        ),
+      );
+      ref.read(
+        schedulesForMonthProvider(
+          DateTime(dateForMonth.year, dateForMonth.month + 1, 1),
+        ),
+      );
+      ref.read(
+        schedulesForMonthProvider(
+          DateTime(dateForMonth.year, dateForMonth.month - 1, 1),
+        ),
+      );
       return null;
     }, [dateForMonth]);
     return AsyncValueGroup.group2(
@@ -49,9 +65,7 @@ class MonthCalendar extends HookConsumerWidget {
               children: List.generate(
                 Weekday.values.length,
                 (index) => Expanded(
-                  child: WeekdayBadge(
-                    weekday: Weekday.values[index],
-                  ),
+                  child: WeekdayBadge(weekday: Weekday.values[index]),
                 ),
               ),
             ),
@@ -66,13 +80,13 @@ class MonthCalendar extends HookConsumerWidget {
                 );
               }
 
-              final weekCalendar = weekCalendarBuilder(context, diaries, schedules, weeks[offset]);
-              return Column(
-                children: [
-                  weekCalendar,
-                  const Divider(height: 1),
-                ],
+              final weekCalendar = weekCalendarBuilder(
+                context,
+                diaries,
+                schedules,
+                weeks[offset],
               );
+              return Column(children: [weekCalendar, const Divider(height: 1)]);
             }),
           ],
         );
@@ -83,6 +97,8 @@ class MonthCalendar extends HookConsumerWidget {
   }
 
   WeekCalendarDateRangeCalculator get _calculator => WeekCalendarDateRangeCalculator(dateForMonth);
-  List<DateRange> get _weeks =>
-      List.generate(_calculator.weeklineCount(), (index) => index + 1).map((line) => _calculator.dateRangeOfLine(line)).toList();
+  List<DateRange> get _weeks => List.generate(
+        _calculator.weeklineCount(),
+        (index) => index + 1,
+      ).map((line) => _calculator.dateRangeOfLine(line)).toList();
 }

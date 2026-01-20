@@ -33,10 +33,7 @@ class CriticalAlert extends HookConsumerWidget {
               fontSize: 16,
             ),
           ),
-          if (!isPremium) ...[
-            const SizedBox(width: 8),
-            const PremiumBadge(),
-          ]
+          if (!isPremium) ...[const SizedBox(width: 8), const PremiumBadge()],
         ],
       ),
       subtitle: Text(
@@ -49,11 +46,11 @@ class CriticalAlert extends HookConsumerWidget {
       ),
       contentPadding: const EdgeInsets.fromLTRB(14, 4, 6, 0),
       onTap: () {
-        analytics.logEvent(
-          name: 'did_select_critical_alert_notification',
-        );
+        analytics.logEvent(name: 'did_select_critical_alert_notification');
         if (isTrial || isPremium) {
-          Navigator.of(context).push(CriticalAlertPageRoutes.route(setting: setting));
+          Navigator.of(
+            context,
+          ).push(CriticalAlertPageRoutes.route(setting: setting));
         } else {
           showPremiumIntroductionSheet(context);
         }

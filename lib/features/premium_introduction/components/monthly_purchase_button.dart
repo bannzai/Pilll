@@ -19,7 +19,10 @@ class MonthlyPurchaseButton extends StatelessWidget {
   Widget build(BuildContext context) {
     Locale locale = Localizations.localeOf(context);
     // NOTE: [DailyPrice] 日額を表示してみる。since: 2025-05-21。効果がなかったら dailyPriceString を表示しないようにする
-    final dailyPriceString = NumberFormat.simpleCurrency(locale: locale.toString(), decimalDigits: 2).format(monthlyPackage.storeProduct.price / 30);
+    final dailyPriceString = NumberFormat.simpleCurrency(
+      locale: locale.toString(),
+      decimalDigits: 2,
+    ).format(monthlyPackage.storeProduct.price / 30);
 
     return GestureDetector(
       onTap: () {
@@ -30,10 +33,7 @@ class MonthlyPurchaseButton extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.blueBackground,
           borderRadius: const BorderRadius.all(Radius.circular(4)),
-          border: Border.all(
-            width: 2,
-            color: AppColors.primary,
-          ),
+          border: Border.all(width: 2, color: AppColors.primary),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -60,9 +60,7 @@ class MonthlyPurchaseButton extends StatelessWidget {
             // NOTE: [DailyPrice] 日額を表示してみる。since: 2025-05-21。効果がなかったら dailyPriceString を表示しないようにする(Widget削除)
             Text(
               L.dailyPrice(dailyPriceString),
-              style: const TextStyle(
-                color: TextColor.main,
-              ),
+              style: const TextStyle(color: TextColor.main),
             ),
           ],
         ),

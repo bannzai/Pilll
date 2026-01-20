@@ -32,9 +32,7 @@ class MenstruationRow extends HookConsumerWidget {
       ),
       subtitle: _hasError ? Text(L.checkPillNumberForMenstruationStart) : null,
       onTap: () {
-        analytics.logEvent(
-          name: 'did_select_changing_about_menstruation',
-        );
+        analytics.logEvent(name: 'did_select_changing_about_menstruation');
         Navigator.of(context).push(SettingMenstruationPageRoute.route());
       },
     );

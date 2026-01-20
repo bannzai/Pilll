@@ -50,7 +50,7 @@ class PickerToolbar extends StatelessWidget {
                 color: TextColor.primary,
               ),
             ),
-          )
+          ),
         ],
       ),
     );

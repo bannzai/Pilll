@@ -22,7 +22,10 @@ class TakenPillActionOList extends StatelessWidget {
     final afterPillSheet = afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet;
     final int takenPillCount;
     if (beforePillSheet.groupIndex == afterPillSheet.groupIndex) {
-      takenPillCount = max(afterPillSheet.lastTakenOrZeroPillNumber - beforePillSheet.lastTakenOrZeroPillNumber, 1);
+      takenPillCount = max(
+        afterPillSheet.lastTakenOrZeroPillNumber - beforePillSheet.lastTakenOrZeroPillNumber,
+        1,
+      );
     } else {
       // beforePillSheet.groupIndex != afterPillSheet.groupIndex
       // groupIndexが異なる場合は、beforePillSheetの合計数 - 最後に飲んだ番号を beforePilSheetの服用した数。それにafterPillSheetで記録した番号を足すことで服用したピルの数を計算する
@@ -31,41 +34,48 @@ class TakenPillActionOList extends StatelessWidget {
           (beforePillSheet.pillSheetType.totalCount - beforePillSheet.lastTakenOrZeroPillNumber) + afterPillSheet.lastTakenOrZeroPillNumber;
     }
     return Row(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: List.generate(min(takenPillCount, 4), (index) {
-          final afterLastTakenPillNumber = afterPillSheet.lastTakenOrZeroPillNumber;
-          final inRestDuration = _inRestDuration(afterPillSheet, afterLastTakenPillNumber, index);
-          if (index == 0) {
-            return inRestDuration ? SvgPicture.asset('images/dash_o.svg') : SvgPicture.asset('images/o.svg');
-          } else if (index < 3) {
-            return _halfOWidgetWithTransform(
-                inRestDuration ? SvgPicture.asset('images/dash_half_o.svg') : SvgPicture.asset('images/half_o.svg'), index);
-          } else {
-            return _dotsWidgetWithTransform(SvgPicture.asset('images/dots.svg'));
-          }
-        }).toList());
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: List.generate(min(takenPillCount, 4), (index) {
+        final afterLastTakenPillNumber = afterPillSheet.lastTakenOrZeroPillNumber;
+        final inRestDuration = _inRestDuration(
+          afterPillSheet,
+          afterLastTakenPillNumber,
+          index,
+        );
+        if (index == 0) {
+          return inRestDuration ? SvgPicture.asset('images/dash_o.svg') : SvgPicture.asset('images/o.svg');
+        } else if (index < 3) {
+          return _halfOWidgetWithTransform(
+            inRestDuration ? SvgPicture.asset('images/dash_half_o.svg') : SvgPicture.asset('images/half_o.svg'),
+            index,
+          );
+        } else {
+          return _dotsWidgetWithTransform(SvgPicture.asset('images/dots.svg'));
+        }
+      }).toList(),
+    );
   }
 
   Widget _halfOWidgetWithTransform(Widget picture, int index) {
     return Container(
       transform: Matrix4.translationValues(-3.0 * index, 0, 0),
-      child: Container(
-        child: picture,
-      ),
+      child: Container(child: picture),
     );
   }
 
   Widget _dotsWidgetWithTransform(Widget picture) {
     return Container(
       transform: Matrix4.translationValues(-1.0 * 3, 0, 0),
-      child: Container(
-        child: picture,
-      ),
+      child: Container(child: picture),
     );
   }
 
-  bool _inRestDuration(PillSheet afterPillSheet, int afterLastTakenPillNumber, int index) {
+  bool _inRestDuration(
+    PillSheet afterPillSheet,
+    int afterLastTakenPillNumber,
+    int index,
+  ) {
     final pillNumber = afterLastTakenPillNumber - index;
     return afterPillSheet.pillSheetType.dosingPeriod < pillNumber;
   }

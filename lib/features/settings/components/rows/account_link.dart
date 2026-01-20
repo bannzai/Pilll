@@ -28,7 +28,9 @@ class AccountLinkRow extends HookConsumerWidget {
       trailing: _subtitle(isAppleLinked || isGoogleLinked),
       onTap: () {
         analytics.logEvent(name: 'did_select_setting_account_cooperation');
-        Navigator.of(context).push(SettingAccountCooperationListPageRoute.route());
+        Navigator.of(
+          context,
+        ).push(SettingAccountCooperationListPageRoute.route());
       },
     );
   }
@@ -40,13 +42,15 @@ class AccountLinkRow extends HookConsumerWidget {
         children: [
           SvgPicture.asset('images/checkmark_green.svg'),
           const SizedBox(width: 6),
-          Text(L.linked,
-              style: const TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w300,
-                fontSize: 14,
-                color: TextColor.darkGray,
-              )),
+          Text(
+            L.linked,
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w300,
+              fontSize: 14,
+              color: TextColor.darkGray,
+            ),
+          ),
         ],
       );
     } else {

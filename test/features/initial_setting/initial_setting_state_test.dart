@@ -17,42 +17,52 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
 
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(timezoneChannel, (MethodCall methodCall) async {
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(timezoneChannel, (
+      MethodCall methodCall,
+    ) async {
       return 'Asia/Tokyo';
     });
   });
 
   tearDown(() {
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(timezoneChannel, null);
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(timezoneChannel, null);
   });
   group("#InitialSettingState.buildPillSheet", () {
-    test("it is builded pillSheet.gropuIndex == todayPillNumber.pageIndex ", () {
-      final mockTodayRepository = MockTodayService();
-      final mockToday = DateTime.parse("2020-11-23");
-      todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(mockToday);
+    test(
+      "it is builded pillSheet.gropuIndex == todayPillNumber.pageIndex ",
+      () {
+        final mockTodayRepository = MockTodayService();
+        final mockToday = DateTime.parse("2020-11-23");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(mockToday);
 
-      final mockIDGenerator = MockFirestoreIDGenerator();
-      when(mockIDGenerator.call()).thenReturn("sheet_id");
-      firestoreIDGenerator = mockIDGenerator;
+        final mockIDGenerator = MockFirestoreIDGenerator();
+        when(mockIDGenerator.call()).thenReturn("sheet_id");
+        firestoreIDGenerator = mockIDGenerator;
 
-      final pillSheet = InitialSettingState.buildPillSheet(
-        pageIndex: 0,
-        todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 1),
-        pillSheetTypes: [PillSheetType.pillsheet_21],
-        pillTakenCount: 1,
-      );
+        final pillSheet = InitialSettingState.buildPillSheet(
+          pageIndex: 0,
+          todayPillNumber: const InitialSettingTodayPillNumber(
+            pageIndex: 0,
+            pillNumberInPillSheet: 1,
+          ),
+          pillSheetTypes: [PillSheetType.pillsheet_21],
+          pillTakenCount: 1,
+        );
 
-      final expected = PillSheet.v1(
-        id: firestoreIDGenerator(),
-        typeInfo: PillSheetType.pillsheet_21.typeInfo,
-        beginDate: DateTime.parse("2020-11-23"),
-        lastTakenDate: null,
-        createdAt: now(),
-      );
+        final expected = PillSheet.v1(
+          id: firestoreIDGenerator(),
+          typeInfo: PillSheetType.pillsheet_21.typeInfo,
+          beginDate: DateTime.parse("2020-11-23"),
+          lastTakenDate: null,
+          createdAt: now(),
+        );
 
-      expect(expected, pillSheet);
-    });
+        expect(expected, pillSheet);
+      },
+    );
     test("it is builded pillSheet.gropuIndex > todayPillNumber.pageIndex ", () {
       final mockTodayRepository = MockTodayService();
       final mockToday = DateTime.parse("2020-11-23");
@@ -65,7 +75,10 @@ void main() {
 
       final pillSheet = InitialSettingState.buildPillSheet(
         pageIndex: 1,
-        todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 1),
+        todayPillNumber: const InitialSettingTodayPillNumber(
+          pageIndex: 0,
+          pillNumberInPillSheet: 1,
+        ),
         pillSheetTypes: [
           PillSheetType.pillsheet_21,
           PillSheetType.pillsheet_24_0,
@@ -92,12 +105,17 @@ void main() {
 
       var idGeneratorCallCount = 0;
       final mockIDGenerator = MockFirestoreIDGenerator();
-      when(mockIDGenerator.call()).thenAnswer((_) => ["sheet_id", "sheet_id2"][idGeneratorCallCount++]);
+      when(
+        mockIDGenerator.call(),
+      ).thenAnswer((_) => ["sheet_id", "sheet_id2"][idGeneratorCallCount++]);
       firestoreIDGenerator = mockIDGenerator;
 
       final pillSheet = InitialSettingState.buildPillSheet(
         pageIndex: 0,
-        todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 1, pillNumberInPillSheet: 1),
+        todayPillNumber: const InitialSettingTodayPillNumber(
+          pageIndex: 1,
+          pillNumberInPillSheet: 1,
+        ),
         pillSheetTypes: [
           PillSheetType.pillsheet_21,
           PillSheetType.pillsheet_24_0,

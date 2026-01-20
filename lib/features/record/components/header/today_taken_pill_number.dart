@@ -64,18 +64,23 @@ class TodayTakenPillNumber extends StatelessWidget {
     final activePillSheet = this.pillSheetGroup?.activePillSheet;
     if (pillSheetGroup == null || activePillSheet == null || pillSheetGroup.isDeactived || pillSheetGroup.lastActiveRestDuration != null) {
       return const Padding(
-          padding: EdgeInsets.only(top: 8),
-          child: Text('-',
-              style: TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w300,
-                fontSize: 14,
-                color: TextColor.noshime,
-              )));
+        padding: EdgeInsets.only(top: 8),
+        child: Text(
+          '-',
+          style: TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w300,
+            fontSize: 14,
+            color: TextColor.noshime,
+          ),
+        ),
+      );
     }
     if (activePillSheet.inNotTakenDuration) {
       return Text(
-        L.withDay('${activePillSheet.pillSheetType.notTakenWord}${activePillSheet.todayPillNumber - activePillSheet.typeInfo.dosingPeriod}'),
+        L.withDay(
+          '${activePillSheet.pillSheetType.notTakenWord}${activePillSheet.todayPillNumber - activePillSheet.typeInfo.dosingPeriod}',
+        ),
         style: const TextStyle(
           fontFamily: FontFamily.japanese,
           fontWeight: FontWeight.w600,
@@ -90,52 +95,64 @@ class TodayTakenPillNumber extends StatelessWidget {
       textBaseline: TextBaseline.ideographic,
       children: <Widget>[
         if (_appearanceMode == PillSheetAppearanceMode.number) ...[
-          Text('${activePillSheet.todayPillNumber}',
-              style: const TextStyle(
-                fontFamily: FontFamily.number,
-                fontWeight: FontWeight.w500,
-                fontSize: 40,
-                color: TextColor.main,
-              )),
-          Text(L.number,
-              style: const TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w600,
-                fontSize: 14,
-                color: TextColor.noshime,
-              )),
+          Text(
+            '${activePillSheet.todayPillNumber}',
+            style: const TextStyle(
+              fontFamily: FontFamily.number,
+              fontWeight: FontWeight.w500,
+              fontSize: 40,
+              color: TextColor.main,
+            ),
+          ),
+          Text(
+            L.number,
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w600,
+              fontSize: 14,
+              color: TextColor.noshime,
+            ),
+          ),
         ],
         if (_appearanceMode == PillSheetAppearanceMode.date) ...[
-          Text('${activePillSheet.todayPillNumber}',
-              style: const TextStyle(
-                fontFamily: FontFamily.number,
-                fontWeight: FontWeight.w500,
-                fontSize: 40,
-                color: TextColor.main,
-              )),
-          Text(L.number,
-              style: const TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w600,
-                fontSize: 14,
-                color: TextColor.noshime,
-              )),
+          Text(
+            '${activePillSheet.todayPillNumber}',
+            style: const TextStyle(
+              fontFamily: FontFamily.number,
+              fontWeight: FontWeight.w500,
+              fontSize: 40,
+              color: TextColor.main,
+            ),
+          ),
+          Text(
+            L.number,
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w600,
+              fontSize: 14,
+              color: TextColor.noshime,
+            ),
+          ),
         ],
         if (_appearanceMode.isSequential) ...[
-          Text('${pillSheetGroup.sequentialTodayPillNumber}',
-              style: const TextStyle(
-                fontFamily: FontFamily.number,
-                fontWeight: FontWeight.w500,
-                fontSize: 40,
-                color: TextColor.main,
-              )),
-          Text(L.dayNumber,
-              style: const TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w600,
-                fontSize: 14,
-                color: TextColor.noshime,
-              )),
+          Text(
+            '${pillSheetGroup.sequentialTodayPillNumber}',
+            style: const TextStyle(
+              fontFamily: FontFamily.number,
+              fontWeight: FontWeight.w500,
+              fontSize: 40,
+              color: TextColor.main,
+            ),
+          ),
+          Text(
+            L.dayNumber,
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w600,
+              fontSize: 14,
+              color: TextColor.noshime,
+            ),
+          ),
         ],
       ],
     );

@@ -3,8 +3,9 @@ import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
-final todayCalendarPageIndex =
-    menstruationWeekCalendarDataSource.lastIndexWhere((element) => element.where((element) => isSameDay(element, today())).isNotEmpty);
+final todayCalendarPageIndex = menstruationWeekCalendarDataSource.lastIndexWhere(
+  (element) => element.where((element) => isSameDay(element, today())).isNotEmpty,
+);
 
 final List<List<DateTime>> menstruationWeekCalendarDataSource = () {
   final base = today();
@@ -24,5 +25,10 @@ final List<List<DateTime>> menstruationWeekCalendarDataSource = () {
     days.add(begin.addDays(i));
   }
   return List.generate(
-      ((diffDay) / Weekday.values.length).round(), (i) => days.sublist(i * Weekday.values.length, i * Weekday.values.length + Weekday.values.length));
+    ((diffDay) / Weekday.values.length).round(),
+    (i) => days.sublist(
+      i * Weekday.values.length,
+      i * Weekday.values.length + Weekday.values.length,
+    ),
+  );
 }();

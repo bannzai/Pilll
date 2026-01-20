@@ -12,14 +12,13 @@ import 'package:pilll/utils/formatter/text_input_formatter.dart';
 class PillTakenCountInput extends HookConsumerWidget {
   final ValueNotifier<int> pillTakenCount;
 
-  const PillTakenCountInput({
-    super.key,
-    required this.pillTakenCount,
-  });
+  const PillTakenCountInput({super.key, required this.pillTakenCount});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final textFieldController = useTextEditingController(text: '${pillTakenCount.value}');
+    final textFieldController = useTextEditingController(
+      text: '${pillTakenCount.value}',
+    );
 
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -56,9 +55,7 @@ class PillTakenCountInput extends HookConsumerWidget {
             decoration: const InputDecoration(
               fillColor: AppColors.mat,
               filled: true,
-              border: UnderlineInputBorder(
-                borderSide: BorderSide(width: 1),
-              ),
+              border: UnderlineInputBorder(borderSide: BorderSide(width: 1)),
               contentPadding: EdgeInsets.only(bottom: 8),
             ),
             onChanged: (text) {

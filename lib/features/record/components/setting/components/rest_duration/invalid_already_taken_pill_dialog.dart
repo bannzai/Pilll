@@ -13,11 +13,18 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      contentPadding: const EdgeInsets.only(left: 24, right: 24, top: 4, bottom: 24),
+      contentPadding: const EdgeInsets.only(
+        left: 24,
+        right: 24,
+        top: 4,
+        bottom: 24,
+      ),
       actionsPadding: const EdgeInsets.only(left: 24, right: 24, bottom: 32),
       titlePadding: const EdgeInsets.only(top: 32),
       title: SvgPicture.asset('images/alert_24.svg', width: 24, height: 24),
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20))),
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(20)),
+      ),
       content: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.min,
@@ -34,9 +41,7 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
           ),
           const SizedBox(height: 24),
           SvgPicture.asset('images/invalid_rest_duration.svg'),
-          const SizedBox(
-            height: 15,
-          ),
+          const SizedBox(height: 15),
           RichText(
             textAlign: TextAlign.center,
             text: TextSpan(
@@ -70,7 +75,11 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
         AppOutlinedButton(
           onPressed: () async {
             analytics.logEvent(name: 'invalid_already_taken_pill_faq');
-            launchUrl(Uri.parse('https://pilll.notion.site/467128e667ae4d6cbff4d61ee370cce5'));
+            launchUrl(
+              Uri.parse(
+                'https://pilll.notion.site/467128e667ae4d6cbff4d61ee370cce5',
+              ),
+            );
           },
           text: L.seeHowToUsePauseTakingFeature,
         ),
@@ -88,9 +97,7 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
   }
 }
 
-void showInvalidAlreadyTakenPillDialog(
-  BuildContext context,
-) {
+void showInvalidAlreadyTakenPillDialog(BuildContext context) {
   analytics.logScreenView(screenName: 'InvalidAlreadyTakenPillDialog');
   showDialog(
     context: context,

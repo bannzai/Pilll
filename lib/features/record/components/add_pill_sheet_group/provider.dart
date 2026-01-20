@@ -17,7 +17,9 @@ final addPillSheetGroupProvider = Provider.autoDispose(
   (ref) => AddPillSheetGroup(
     batchFactory: ref.watch(batchFactoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
-    batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
+    batchSetPillSheetModifiedHistory: ref.watch(
+      batchSetPillSheetModifiedHistoryProvider,
+    ),
     batchSetSetting: ref.watch(batchSetSettingProvider),
   ),
 );
@@ -62,11 +64,7 @@ class AddPillSheetGroup {
     );
     batchSetPillSheetModifiedHistory(batch, history);
 
-    batchSetSetting(
-        batch,
-        setting.copyWith(
-          pillSheetTypes: pillSheetTypes,
-        ));
+    batchSetSetting(batch, setting.copyWith(pillSheetTypes: pillSheetTypes));
 
     await batch.commit();
   }
@@ -82,7 +80,10 @@ PillSheetGroup buildPillSheetGroup({
   final n = now();
   final createdPillSheets = pillSheetTypes.asMap().keys.map((pageIndex) {
     final pillSheetType = backportPillSheetTypes(pillSheetTypes)[pageIndex];
-    final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pageIndex);
+    final offset = summarizedPillCountWithPillSheetTypesToIndex(
+      pillSheetTypes: pillSheetTypes,
+      toIndex: pageIndex,
+    );
     final beginDate = n.add(Duration(days: offset));
 
     if (pillTakenCount > 1) {

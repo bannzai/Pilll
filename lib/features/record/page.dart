@@ -91,75 +91,77 @@ class RecordPageBody extends HookConsumerWidget {
           user: user,
         ),
       ),
-      body: Builder(builder: (context) {
-        if (activePillSheet == null || pillSheetGroup == null || pillSheetGroup.isDeactived) {
-          return Column(
-            children: [
-              Expanded(
-                child: ListView(
-                  children: [
-                    const AnnouncementBar(),
-                    const SizedBox(height: 37),
-                    AddPillSheetGroupEmptyFrame(
-                      context: context,
-                      pillSheetGroup: pillSheetGroup,
-                      setting: setting,
-                    ),
-                    const SizedBox(height: 20),
-                  ],
+      body: Builder(
+        builder: (context) {
+          if (activePillSheet == null || pillSheetGroup == null || pillSheetGroup.isDeactived) {
+            return Column(
+              children: [
+                Expanded(
+                  child: ListView(
+                    children: [
+                      const AnnouncementBar(),
+                      const SizedBox(height: 37),
+                      AddPillSheetGroupEmptyFrame(
+                        context: context,
+                        pillSheetGroup: pillSheetGroup,
+                        setting: setting,
+                      ),
+                      const SizedBox(height: 20),
+                    ],
+                  ),
                 ),
-              ),
-            ],
-          );
-        } else {
-          return Column(
-            children: [
-              Expanded(
-                child: ListView(
-                  children: [
-                    const AnnouncementBar(),
-                    const SizedBox(height: 37),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          width: PillSheetViewLayout.width,
-                          child: Row(
-                            children: [
-                              const Spacer(),
-                              RecordPagePillSheetSettingButton(
-                                pillSheetGroup: pillSheetGroup,
-                                activePillSheet: activePillSheet,
-                                setting: setting,
-                                user: user,
-                              ),
-                            ],
+              ],
+            );
+          } else {
+            return Column(
+              children: [
+                Expanded(
+                  child: ListView(
+                    children: [
+                      const AnnouncementBar(),
+                      const SizedBox(height: 37),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            width: PillSheetViewLayout.width,
+                            child: Row(
+                              children: [
+                                const Spacer(),
+                                RecordPagePillSheetSettingButton(
+                                  pillSheetGroup: pillSheetGroup,
+                                  activePillSheet: activePillSheet,
+                                  setting: setting,
+                                  user: user,
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                        const SizedBox(height: 16),
-                        RecordPagePillSheetList(
-                          pillSheetGroup: pillSheetGroup,
-                          activePillSheet: activePillSheet,
-                          setting: setting,
-                          user: user,
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 20),
-                  ],
+                          const SizedBox(height: 16),
+                          RecordPagePillSheetList(
+                            pillSheetGroup: pillSheetGroup,
+                            activePillSheet: activePillSheet,
+                            setting: setting,
+                            user: user,
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 20),
+                    ],
+                  ),
                 ),
-              ),
-              RecordPageButton(
-                pillSheetGroup: pillSheetGroup,
-                currentPillSheet: activePillSheet,
-                userIsPremiumOtTrial: user.premiumOrTrial,
-                user: user,
-              ),
-              const SizedBox(height: 40),
-            ],
-          );
-        }
-      }),
+                RecordPageButton(
+                  pillSheetGroup: pillSheetGroup,
+                  currentPillSheet: activePillSheet,
+                  userIsPremiumOtTrial: user.premiumOrTrial,
+                  user: user,
+                ),
+                const SizedBox(height: 40),
+              ],
+            );
+          }
+        },
+      ),
     );
   }
 }

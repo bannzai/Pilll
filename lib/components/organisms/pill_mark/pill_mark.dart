@@ -72,7 +72,11 @@ class PillMarkState extends State<PillMark> with TickerProviderStateMixin {
               PillMarkType.selected => const SelectedPillMark(),
               PillMarkType.done => const LightGrayPillMark(),
             },
-            if (widget.showsCheckmark) const Align(alignment: Alignment.center, child: PillMarkDoneMark()),
+            if (widget.showsCheckmark)
+              const Align(
+                alignment: Alignment.center,
+                child: PillMarkDoneMark(),
+              ),
             if (widget.remainingPillTakenCount != null)
               Text(
                 '${widget.remainingPillTakenCount}',
@@ -91,11 +95,11 @@ class PillMarkState extends State<PillMark> with TickerProviderStateMixin {
             left: -30,
             top: -30,
             child: CustomPaint(
-              size: const Size(PillMarkConst.edgeOfRipple, PillMarkConst.edgeOfRipple),
-              painter: Ripple(
-                _controller,
-                color: AppColors.secondary,
+              size: const Size(
+                PillMarkConst.edgeOfRipple,
+                PillMarkConst.edgeOfRipple,
               ),
+              painter: Ripple(_controller, color: AppColors.secondary),
             ),
           ),
       ],

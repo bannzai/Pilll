@@ -8,10 +8,7 @@ import 'package:flutter/material.dart';
 
 class PillSheetModifiedHistoryMoreButton extends StatelessWidget {
   final User user;
-  const PillSheetModifiedHistoryMoreButton({
-    super.key,
-    required this.user,
-  });
+  const PillSheetModifiedHistoryMoreButton({super.key, required this.user});
 
   @override
   Widget build(BuildContext context) {
@@ -19,15 +16,18 @@ class PillSheetModifiedHistoryMoreButton extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         AlertButton(
-            text: L.viewMore,
-            onPressed: () async {
-              analytics.logEvent(name: 'pill_sheet_modified_history_more');
-              if (user.isPremium || user.isTrial) {
-                Navigator.of(context).push(PillSheetModifiedHistoriesPageRoute.route());
-              } else {
-                showPremiumIntroductionSheet(context);
-              }
-            }),
+          text: L.viewMore,
+          onPressed: () async {
+            analytics.logEvent(name: 'pill_sheet_modified_history_more');
+            if (user.isPremium || user.isTrial) {
+              Navigator.of(
+                context,
+              ).push(PillSheetModifiedHistoriesPageRoute.route());
+            } else {
+              showPremiumIntroductionSheet(context);
+            }
+          },
+        ),
       ],
     );
   }

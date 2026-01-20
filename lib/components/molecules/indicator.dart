@@ -3,23 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:pilll/utils/environment.dart';
 
 class Indicator extends StatelessWidget {
-  const Indicator({
-    super.key,
-  });
+  const Indicator({super.key});
 
   @override
   Widget build(BuildContext context) {
     if (Environment.disableWidgetAnimation) {
       return Center(
-        child: Container(
-          color: AppColors.secondary,
-          width: 40,
-          height: 40,
-        ),
+        child: Container(color: AppColors.secondary, width: 40, height: 40),
       );
     }
     return const Center(
-      child: CircularProgressIndicator(valueColor: AlwaysStoppedAnimation(AppColors.secondary)),
+      child: CircularProgressIndicator(
+        valueColor: AlwaysStoppedAnimation(AppColors.secondary),
+      ),
     );
   }
 }

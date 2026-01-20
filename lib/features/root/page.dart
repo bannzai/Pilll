@@ -18,39 +18,43 @@ class RootPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return AppLocalizationResolver(builder: (context) {
-      debugPrint('Resolved: AppLocalizationResolver');
-      return ForceUpdate(
-        builder: (_) {
-          debugPrint('Resolved: ForceUpdateResolver');
-          return FirebaseAuthResolver(
-            builder: (_, user) {
-              debugPrint('Resolved: FirebaseAuthResolver');
-              return UserSetup(
-                userID: user.uid,
-                builder: (_) {
-                  debugPrint('Resolved: UserSetup');
-                  return Stack(
-                    children: [
-                      UserStreamResolver(stream: (user) => analyticsDebugIsEnabled = user.analyticsDebugIsEnabled),
-                      const SyncDataResolver(),
-                      InitialSettingOrAppPage(
-                        initialSettingPageBuilder: (_) => ShowPaywallOnAppLaunch(
-                          builder: (_) => SkipInitialSetting(
-                            initialSettingPageBuilder: (context) => InitialSettingPillSheetGroupPageRoute.screen(),
-                            homePageBuilder: (_) => const HomePage(),
-                          ),
+    return AppLocalizationResolver(
+      builder: (context) {
+        debugPrint('Resolved: AppLocalizationResolver');
+        return ForceUpdate(
+          builder: (_) {
+            debugPrint('Resolved: ForceUpdateResolver');
+            return FirebaseAuthResolver(
+              builder: (_, user) {
+                debugPrint('Resolved: FirebaseAuthResolver');
+                return UserSetup(
+                  userID: user.uid,
+                  builder: (_) {
+                    debugPrint('Resolved: UserSetup');
+                    return Stack(
+                      children: [
+                        UserStreamResolver(
+                          stream: (user) => analyticsDebugIsEnabled = user.analyticsDebugIsEnabled,
                         ),
-                        homePageBuilder: (_) => const HomePage(),
-                      ),
-                    ],
-                  );
-                },
-              );
-            },
-          );
-        },
-      );
-    });
+                        const SyncDataResolver(),
+                        InitialSettingOrAppPage(
+                          initialSettingPageBuilder: (_) => ShowPaywallOnAppLaunch(
+                            builder: (_) => SkipInitialSetting(
+                              initialSettingPageBuilder: (context) => InitialSettingPillSheetGroupPageRoute.screen(),
+                              homePageBuilder: (_) => const HomePage(),
+                            ),
+                          ),
+                          homePageBuilder: (_) => const HomePage(),
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
+            );
+          },
+        );
+      },
+    );
   }
 }

@@ -38,7 +38,10 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
                 icon: const Icon(Icons.arrow_back, color: Colors.black),
                 onPressed: () => Navigator.of(context).pop(),
               ),
-              title: Text(L.accountSettings, style: const TextStyle(color: TextColor.main)),
+              title: Text(
+                L.accountSettings,
+                style: const TextStyle(color: TextColor.main),
+              ),
               backgroundColor: AppColors.white,
             ),
             body: ListView(
@@ -59,18 +62,14 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
                   accountType: LinkAccountType.apple,
                   isLinked: () => isAppleLinked,
                   onTap: () async {
-                    analytics.logEvent(
-                      name: 'a_c_l_apple_tapped',
-                    );
+                    analytics.logEvent(name: 'a_c_l_apple_tapped');
                     if (isAppleLinked) {
                       return;
                     }
                     _showSignInSheet(context);
                   },
                   onLongPress: () async {
-                    analytics.logEvent(
-                      name: 'a_c_l_apple_long_press',
-                    );
+                    analytics.logEvent(name: 'a_c_l_apple_long_press');
 
                     showDiscardDialog(
                       context,
@@ -89,7 +88,9 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
                             try {
                               final messenger = ScaffoldMessenger.of(context);
                               final navigator = Navigator.of(context);
-                              analytics.logEvent(name: 'a_c_l_apple_long_press_result');
+                              analytics.logEvent(
+                                name: 'a_c_l_apple_long_press_result',
+                              );
 
                               await appleReauthentification();
 
@@ -114,18 +115,14 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
                   accountType: LinkAccountType.google,
                   isLinked: () => isGoogleLinked,
                   onTap: () async {
-                    analytics.logEvent(
-                      name: 'a_c_l_google_tapped',
-                    );
+                    analytics.logEvent(name: 'a_c_l_google_tapped');
                     if (isGoogleLinked) {
                       return;
                     }
                     _showSignInSheet(context);
                   },
                   onLongPress: () async {
-                    analytics.logEvent(
-                      name: 'a_c_l_google_long_press',
-                    );
+                    analytics.logEvent(name: 'a_c_l_google_long_press');
                     showDiscardDialog(
                       context,
                       title: L.updateAuthenticationInformation,
@@ -143,7 +140,9 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
                             try {
                               final messenger = ScaffoldMessenger.of(context);
                               final navigator = Navigator.of(context);
-                              analytics.logEvent(name: 'a_c_l_google_long_press_result');
+                              analytics.logEvent(
+                                name: 'a_c_l_google_long_press_result',
+                              );
 
                               await googleReauthentification();
 
@@ -186,20 +185,18 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
   }
 
   void _showSignInSheet(BuildContext context) {
-    showSignInSheet(
-      context,
-      SignInSheetStateContext.setting,
-      (accountType) async {
-        const snackBarDuration = Duration(seconds: 1);
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            duration: snackBarDuration,
-            content: Text(L.registeredWithProvider(accountType.providerName)),
-          ),
-        );
-        await Future.delayed(snackBarDuration);
-      },
-    );
+    showSignInSheet(context, SignInSheetStateContext.setting, (
+      accountType,
+    ) async {
+      const snackBarDuration = Duration(seconds: 1);
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          duration: snackBarDuration,
+          content: Text(L.registeredWithProvider(accountType.providerName)),
+        ),
+      );
+      await Future.delayed(snackBarDuration);
+    });
   }
 }
 
@@ -229,12 +226,14 @@ class SettingAccountCooperationRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(accountType.loginContentName,
-          style: const TextStyle(
-            fontFamily: FontFamily.roboto,
-            fontWeight: FontWeight.w300,
-            fontSize: 16,
-          )),
+      title: Text(
+        accountType.loginContentName,
+        style: const TextStyle(
+          fontFamily: FontFamily.roboto,
+          fontWeight: FontWeight.w300,
+          fontSize: 16,
+        ),
+      ),
       trailing: _trailing(),
       horizontalTitleGap: 4,
       onTap: () async {

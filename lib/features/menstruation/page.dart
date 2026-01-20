@@ -122,7 +122,10 @@ class MenstruationPageBody extends HookConsumerWidget {
       backgroundColor: AppColors.background,
       appBar: AppBar(
         title: SizedBox(
-          child: Text(_displayMonth(page.value), style: const TextStyle(color: TextColor.black)),
+          child: Text(
+            _displayMonth(page.value),
+            style: const TextStyle(color: TextColor.black),
+          ),
         ),
         backgroundColor: AppColors.white,
         elevation: 0,

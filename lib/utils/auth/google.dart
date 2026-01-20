@@ -8,7 +8,9 @@ enum SignInWithGoogleState { determined, cancel }
 
 Future<UserCredential?> linkWithGoogle(User user) async {
   try {
-    final provider = GoogleAuthProvider().addScope('email').setCustomParameters({'prompt': 'select_account'});
+    final provider = GoogleAuthProvider().addScope('email').setCustomParameters(
+      {'prompt': 'select_account'},
+    );
     return await user.linkWithProvider(provider);
   } on FirebaseAuthException catch (e) {
     // sign-in-failed という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
@@ -27,7 +29,9 @@ Future<UserCredential?> signInWithGoogle() async {
       throw const FormatException('Anonymous User not found');
     }
 
-    final provider = GoogleAuthProvider().addScope('email').setCustomParameters({'prompt': 'select_account'});
+    final provider = GoogleAuthProvider().addScope('email').setCustomParameters(
+      {'prompt': 'select_account'},
+    );
     return await FirebaseAuth.instance.signInWithProvider(provider);
   } on FirebaseAuthException catch (e) {
     // sign-in-failed という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
@@ -55,7 +59,9 @@ bool isLinkedGoogleFor(User user) {
 Future<void> googleReauthentification() async {
   try {
     final provider = GoogleAuthProvider().addScope('email');
-    await FirebaseAuth.instance.currentUser?.reauthenticateWithProvider(provider);
+    await FirebaseAuth.instance.currentUser?.reauthenticateWithProvider(
+      provider,
+    );
   } on FirebaseAuthException catch (e) {
     // sign-in-failed という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
     // Appleのcodeとは違うので注意

@@ -15,7 +15,11 @@ final calendarMenstruationBandListProvider = Provider<AsyncValue<List<CalendarMe
 
   try {
     return AsyncValue.data(
-      allMenstruations.value!.map((menstruation) => CalendarMenstruationBandModel(menstruation)).toList(),
+      allMenstruations.value!
+          .map(
+            (menstruation) => CalendarMenstruationBandModel(menstruation),
+          )
+          .toList(),
     );
   } catch (error, stackTrace) {
     return AsyncValue.error(error, stackTrace);
@@ -28,15 +32,20 @@ final calendarScheduledMenstruationBandListProvider = Provider.autoDispose<Async
     ref.watch(settingProvider),
     ref.watch(allMenstruationProvider),
   ).whenData(
-    (t) => scheduledMenstruationDateRanges(
-      t.$1,
-      t.$2,
-      t.$3,
-    ).map((dateRange) => CalendarScheduledMenstruationBandModel(dateRange.begin, dateRange.end)).toList(),
+    (t) => scheduledMenstruationDateRanges(t.$1, t.$2, t.$3)
+        .map(
+          (dateRange) => CalendarScheduledMenstruationBandModel(
+            dateRange.begin,
+            dateRange.end,
+          ),
+        )
+        .toList(),
   );
 });
 
-final calendarNextPillSheetBandListProvider = Provider.autoDispose<AsyncValue<List<CalendarNextPillSheetBandModel>>>((ref) {
+final calendarNextPillSheetBandListProvider = Provider.autoDispose<AsyncValue<List<CalendarNextPillSheetBandModel>>>((
+  ref,
+) {
   final pillSheetGroup = ref.watch(latestPillSheetGroupProvider);
 
   if (pillSheetGroup is AsyncLoading) {
@@ -50,7 +59,14 @@ final calendarNextPillSheetBandListProvider = Provider.autoDispose<AsyncValue<Li
 
   try {
     return AsyncValue.data(
-      nextPillSheetDateRanges(pillSheetGroupValue, 15).map((dateRange) => CalendarNextPillSheetBandModel(dateRange.begin, dateRange.end)).toList(),
+      nextPillSheetDateRanges(pillSheetGroupValue, 15)
+          .map(
+            (dateRange) => CalendarNextPillSheetBandModel(
+              dateRange.begin,
+              dateRange.end,
+            ),
+          )
+          .toList(),
     );
   } catch (error, stackTrace) {
     return AsyncValue.error(error, stackTrace);

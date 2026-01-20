@@ -14,9 +14,7 @@ class MenstruationCardState with _$MenstruationCardState {
     required String countdownString,
   }) = _MenstruationCardState;
 
-  factory MenstruationCardState.future({
-    required DateTime nextSchedule,
-  }) {
+  factory MenstruationCardState.future({required DateTime nextSchedule}) {
     final diff = daysBetween(today(), nextSchedule);
     return MenstruationCardState(
       title: L.menstruationScheduleDate,
@@ -25,9 +23,7 @@ class MenstruationCardState with _$MenstruationCardState {
     );
   }
 
-  factory MenstruationCardState.inTheMiddle({
-    required DateTime scheduledDate,
-  }) {
+  factory MenstruationCardState.inTheMiddle({required DateTime scheduledDate}) {
     final diff = daysBetween(scheduledDate, today());
     return MenstruationCardState(
       title: L.menstruationScheduleDate,
@@ -36,12 +32,11 @@ class MenstruationCardState with _$MenstruationCardState {
     );
   }
 
-  factory MenstruationCardState.record({
-    required Menstruation menstruation,
-  }) =>
-      MenstruationCardState(
+  factory MenstruationCardState.record({required Menstruation menstruation}) => MenstruationCardState(
         title: L.menstruationStartDate,
         scheduleDate: menstruation.beginDate,
-        countdownString: L.menstruationProgressingDay(daysBetween(menstruation.beginDate, today()) + 1),
+        countdownString: L.menstruationProgressingDay(
+          daysBetween(menstruation.beginDate, today()) + 1,
+        ),
       );
 }

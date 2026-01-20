@@ -108,8 +108,12 @@ class CalendarWeekLine extends HookConsumerWidget {
   bool _contains(CalendarBandModel calendarBandModel) {
     // 週の期間と生理期間が重なるかどうかを判定
     // 週の開始が生理期間の終了より前 かつ 週の終了が生理期間の開始より後
-    final isOverlapping = dateRange.begin.isBefore(calendarBandModel.end.add(const Duration(days: 1))) &&
-        dateRange.end.isAfter(calendarBandModel.begin.subtract(const Duration(days: 1)));
+    final isOverlapping = dateRange.begin.isBefore(
+          calendarBandModel.end.add(const Duration(days: 1)),
+        ) &&
+        dateRange.end.isAfter(
+          calendarBandModel.begin.subtract(const Duration(days: 1)),
+        );
     return isOverlapping;
   }
 
@@ -120,7 +124,10 @@ class CalendarWeekLine extends HookConsumerWidget {
     required Widget Function(bool isLineBreak, double width) bandBuilder,
   }) {
     bool isLineBreak = isNecessaryLineBreak(calendarBandModel.begin, dateRange);
-    int start = offsetForStartPositionAtLine(calendarBandModel.begin, dateRange);
+    int start = offsetForStartPositionAtLine(
+      calendarBandModel.begin,
+      dateRange,
+    );
     final length = bandLength(dateRange, calendarBandModel, isLineBreak);
 
     return Positioned(
@@ -147,21 +154,25 @@ void transitionWhenCalendarDayTapped(
     return;
   }
 
-  final diary = diaries.lastWhereOrNull((element) => isSameDay(element.date, date));
+  final diary = diaries.lastWhereOrNull(
+    (element) => isSameDay(element.date, date),
+  );
   if (schedules.where((e) => isSameDay(e.date, date)).isNotEmpty) {
     if (diary == null) {
       showModalBottomSheet(
         context: context,
         builder: (context) => DiaryOrScheduleSheet(
-            showDiary: () => Navigator.of(context).push(DiaryPostPageRoute.route(date, null)),
-            showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date))),
+          showDiary: () => Navigator.of(context).push(DiaryPostPageRoute.route(date, null)),
+          showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date)),
+        ),
       );
     } else {
       showModalBottomSheet(
         context: context,
         builder: (context) => DiaryOrScheduleSheet(
-            showDiary: () => _showConfirmDiarySheet(context, diary),
-            showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date))),
+          showDiary: () => _showConfirmDiarySheet(context, diary),
+          showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date)),
+        ),
       );
     }
     return;

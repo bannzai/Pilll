@@ -8,9 +8,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/sign_in/sign_in_sheet.dart';
 
 class RecommendSignupForPremiumAnnouncementBar extends StatelessWidget {
-  const RecommendSignupForPremiumAnnouncementBar({
-    super.key,
-  });
+  const RecommendSignupForPremiumAnnouncementBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +33,10 @@ class RecommendSignupForPremiumAnnouncementBar extends StatelessWidget {
                         'images/alert_24.svg',
                         width: 16,
                         height: 16,
-                        colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                        colorFilter: const ColorFilter.mode(
+                          Colors.white,
+                          BlendMode.srcIn,
+                        ),
                       ),
                       const SizedBox(width: 5),
                       Text(
@@ -69,7 +70,10 @@ class RecommendSignupForPremiumAnnouncementBar extends StatelessWidget {
               child: IconButton(
                 icon: SvgPicture.asset(
                   'images/arrow_right.svg',
-                  colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                  colorFilter: const ColorFilter.mode(
+                    Colors.white,
+                    BlendMode.srcIn,
+                  ),
                 ),
                 onPressed: () {},
                 iconSize: 24,

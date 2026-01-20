@@ -35,10 +35,12 @@ class TodayPllNumberRow extends HookConsumerWidget {
     );
   }
 
-  void _onTap(BuildContext context, Setting setting, PillSheet activePillSheet) {
-    analytics.logEvent(
-      name: 'did_select_changing_pill_number',
-    );
+  void _onTap(
+    BuildContext context,
+    Setting setting,
+    PillSheet activePillSheet,
+  ) {
+    analytics.logEvent(name: 'did_select_changing_pill_number');
     Navigator.of(context).push(
       SettingTodayPillNumberPageRoute.route(
         pillSheetGroup: pillSheetGroup,

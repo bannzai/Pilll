@@ -44,10 +44,7 @@ class AlarmKitSetting extends HookConsumerWidget {
               fontSize: 16,
             ),
           ),
-          if (!isPremium) ...[
-            const SizedBox(width: 8),
-            const PremiumBadge(),
-          ]
+          if (!isPremium) ...[const SizedBox(width: 8), const PremiumBadge()],
         ],
       ),
       subtitle: const Text(
@@ -86,7 +83,9 @@ class AlarmKitSetting extends HookConsumerWidget {
                     final setSetting = ref.read(setSettingProvider);
                     await setSetting(setting.copyWith(useAlarmKit: true));
                     // 設定変更時に通知を再登録
-                    final registerReminderLocalNotification = ref.read(registerReminderLocalNotificationProvider);
+                    final registerReminderLocalNotification = ref.read(
+                      registerReminderLocalNotificationProvider,
+                    );
                     await registerReminderLocalNotification();
                   } else {
                     // 権限が拒否された場合はエラーメッセージ表示
@@ -103,16 +102,19 @@ class AlarmKitSetting extends HookConsumerWidget {
                   final setSetting = ref.read(setSettingProvider);
                   await setSetting(setting.copyWith(useAlarmKit: false));
                   // 設定変更時に通知を再登録
-                  final registerReminderLocalNotification = ref.read(registerReminderLocalNotificationProvider);
+                  final registerReminderLocalNotification = ref.read(
+                    registerReminderLocalNotificationProvider,
+                  );
                   await registerReminderLocalNotification();
                 }
               } catch (e) {
-                analytics.debug(name: 'alarm_kit_setting_error', parameters: {'error': e.toString()});
+                analytics.debug(
+                  name: 'alarm_kit_setting_error',
+                  parameters: {'error': e.toString()},
+                );
                 if (context.mounted) {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                      content: Text('設定の変更に失敗しました。もう一度お試しください。'),
-                    ),
+                    const SnackBar(content: Text('設定の変更に失敗しました。もう一度お試しください。')),
                   );
                 }
               } finally {
@@ -120,12 +122,7 @@ class AlarmKitSetting extends HookConsumerWidget {
               }
             },
           ),
-          if (isLoading.value)
-            const SizedBox(
-              width: 40,
-              height: 40,
-              child: Indicator(),
-            )
+          if (isLoading.value) const SizedBox(width: 40, height: 40, child: Indicator()),
         ],
       ),
     );

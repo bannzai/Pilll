@@ -27,7 +27,9 @@ class ReminderTimesPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final setSetting = ref.watch(setSettingProvider);
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final registerReminderLocalNotification = ref.watch(
+      registerReminderLocalNotificationProvider,
+    );
 
     return AsyncValueGroup.group2(
       ref.watch(settingProvider),
@@ -126,12 +128,15 @@ class ReminderTimesPageBody extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(left: 15, right: 15),
-                          child: Container(
-                            height: 1,
-                            color: AppColors.border,
-                          ),
+                          child: Container(height: 1, color: AppColors.border),
                         ),
-                        _component(context, setting: setting, reminderTime: reminderTime, setSetting: setSetting, number: offset + 1)
+                        _component(
+                          context,
+                          setting: setting,
+                          reminderTime: reminderTime,
+                          setSetting: setSetting,
+                          number: offset + 1,
+                        ),
                       ],
                     ),
                   ),
@@ -139,10 +144,7 @@ class ReminderTimesPageBody extends StatelessWidget {
                 .values,
             Padding(
               padding: const EdgeInsets.only(left: 15, right: 15),
-              child: Container(
-                height: 1,
-                color: AppColors.border,
-              ),
+              child: Container(height: 1, color: AppColors.border),
             ),
             _add(context, setting: setting, setSetting: setSetting),
           ],
@@ -161,7 +163,12 @@ class ReminderTimesPageBody extends StatelessWidget {
     Widget body = GestureDetector(
       onTap: () {
         analytics.logEvent(name: 'show_modify_reminder_time');
-        _showPicker(context, setting: setting, setSetting: setSetting, index: number - 1);
+        _showPicker(
+          context,
+          setting: setting,
+          setSetting: setSetting,
+          index: number - 1,
+        );
       },
       child: ListTile(
         title: Text(L.notificationNumber(number)),
@@ -210,14 +217,23 @@ class ReminderTimesPageBody extends StatelessWidget {
     );
   }
 
-  Widget _add(BuildContext context, {required Setting setting, required SetSetting setSetting}) {
+  Widget _add(
+    BuildContext context, {
+    required Setting setting,
+    required SetSetting setSetting,
+  }) {
     if (setting.reminderTimes.length >= ReminderTime.maximumCount) {
       return Container();
     }
     return GestureDetector(
       onTap: () {
         analytics.logEvent(name: 'pressed_add_reminder_time');
-        _showPicker(context, setSetting: setSetting, setting: setting, index: null);
+        _showPicker(
+          context,
+          setSetting: setSetting,
+          setting: setting,
+          index: null,
+        );
       },
       child: SizedBox(
         height: 64,
@@ -233,7 +249,7 @@ class ReminderTimesPageBody extends StatelessWidget {
                 fontSize: 14,
                 color: TextColor.main,
               ),
-            )
+            ),
           ],
         ),
       ),
@@ -255,19 +271,29 @@ class ReminderTimesPageBody extends StatelessWidget {
           done: (dateTime) {
             if (isEditing) {
               analytics.logEvent(name: 'edited_reminder_time');
-              unawaited(_editReminderTime(
-                index: index,
-                reminderTime: ReminderTime(hour: dateTime.hour, minute: dateTime.minute),
-                setting: setting,
-                setSetting: setSetting,
-              ).catchError((error) => showErrorAlert(context, error)));
+              unawaited(
+                _editReminderTime(
+                  index: index,
+                  reminderTime: ReminderTime(
+                    hour: dateTime.hour,
+                    minute: dateTime.minute,
+                  ),
+                  setting: setting,
+                  setSetting: setSetting,
+                ).catchError((error) => showErrorAlert(context, error)),
+              );
             } else {
               analytics.logEvent(name: 'added_reminder_time');
-              unawaited(_addReminderTimes(
-                reminderTime: ReminderTime(hour: dateTime.hour, minute: dateTime.minute),
-                setting: setting,
-                setSetting: setSetting,
-              ).catchError((error) => showErrorAlert(context, error)));
+              unawaited(
+                _addReminderTimes(
+                  reminderTime: ReminderTime(
+                    hour: dateTime.hour,
+                    minute: dateTime.minute,
+                  ),
+                  setting: setting,
+                  setSetting: setSetting,
+                ).catchError((error) => showErrorAlert(context, error)),
+              );
             }
 
             Navigator.pop(context);
@@ -284,7 +310,11 @@ class ReminderTimesPageBody extends StatelessWidget {
   }) async {
     List<ReminderTime> copied = [...setting.reminderTimes];
     copied.add(reminderTime);
-    await _modifyReminderTimes(setting: setting, reminderTimes: copied, setSetting: setSetting);
+    await _modifyReminderTimes(
+      setting: setting,
+      reminderTimes: copied,
+      setSetting: setSetting,
+    );
   }
 
   Future<void> _editReminderTime({
@@ -295,7 +325,11 @@ class ReminderTimesPageBody extends StatelessWidget {
   }) async {
     List<ReminderTime> copied = [...setting.reminderTimes];
     copied[index] = reminderTime;
-    await _modifyReminderTimes(setting: setting, reminderTimes: copied, setSetting: setSetting);
+    await _modifyReminderTimes(
+      setting: setting,
+      reminderTimes: copied,
+      setSetting: setSetting,
+    );
   }
 
   Future<void> _deleteReminderTimes({
@@ -305,7 +339,11 @@ class ReminderTimesPageBody extends StatelessWidget {
   }) async {
     List<ReminderTime> copied = [...setting.reminderTimes];
     copied.removeAt(index);
-    await _modifyReminderTimes(setting: setting, reminderTimes: copied, setSetting: setSetting);
+    await _modifyReminderTimes(
+      setting: setting,
+      reminderTimes: copied,
+      setSetting: setSetting,
+    );
   }
 
   Future<void> _modifyReminderTimes({
@@ -314,7 +352,9 @@ class ReminderTimesPageBody extends StatelessWidget {
     required SetSetting setSetting,
   }) async {
     if (reminderTimes.length > ReminderTime.maximumCount) {
-      throw Exception(L.reachedMaximumCountOfReminderTimes(ReminderTime.maximumCount));
+      throw Exception(
+        L.reachedMaximumCountOfReminderTimes(ReminderTime.maximumCount),
+      );
     }
     if (reminderTimes.length < ReminderTime.minimumCount) {
       throw Exception(L.minimumCountOfReminderTimes(ReminderTime.minimumCount));

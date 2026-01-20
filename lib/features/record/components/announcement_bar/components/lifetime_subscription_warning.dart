@@ -37,13 +37,11 @@ class LifetimeSubscriptionWarningAnnouncementBar extends HookConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
-              child: const Icon(
-                Icons.close,
-                color: Colors.white,
-                size: 24,
-              ),
+              child: const Icon(Icons.close, color: Colors.white, size: 24),
               onTap: () {
-                analytics.logEvent(name: 'lifetime_subscription_warning_closed');
+                analytics.logEvent(
+                  name: 'lifetime_subscription_warning_closed',
+                );
                 isClosed.value = true;
               },
             ),
@@ -64,7 +62,10 @@ class LifetimeSubscriptionWarningAnnouncementBar extends HookConsumerWidget {
             const SizedBox(width: 10),
             SvgPicture.asset(
               'images/arrow_right.svg',
-              colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+              colorFilter: const ColorFilter.mode(
+                Colors.white,
+                BlendMode.srcIn,
+              ),
               height: 16,
               width: 16,
             ),

@@ -32,9 +32,7 @@ class DotsIndicator extends AnimatedWidget {
           child: SizedBox(
             width: 8,
             height: 8,
-            child: InkWell(
-              onTap: () => onDotTapped(index),
-            ),
+            child: InkWell(onTap: () => onDotTapped(index)),
           ),
         ),
       ),

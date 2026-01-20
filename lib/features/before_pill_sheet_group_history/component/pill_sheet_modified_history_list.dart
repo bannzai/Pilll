@@ -18,7 +18,11 @@ class BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList extends HookCo
     final begin = pillSheet.beginDate;
     final end = pillSheet.estimatedEndTakenDate;
 
-    return ref.watch(pillSheetModifiedHistoriesWithRangeProvider(begin: begin, end: end)).when(
+    return ref
+        .watch(
+          pillSheetModifiedHistoriesWithRangeProvider(begin: begin, end: end),
+        )
+        .when(
           data: (pillSheetModifiedHistories) {
             return PillSheetModifiedHistoryList(
               pillSheetModifiedHistories: pillSheetModifiedHistories,

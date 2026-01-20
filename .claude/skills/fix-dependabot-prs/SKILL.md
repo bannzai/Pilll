@@ -56,7 +56,7 @@ dependabot PRはCIのcodegenステップで落ちていることが多いため�
 
 ```bash
 flutter pub run build_runner build --delete-conflicting-outputs
-dart format lib -l 150
+dart format lib
 ```
 
 変更があればコミット:

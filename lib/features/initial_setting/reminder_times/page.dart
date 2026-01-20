@@ -30,10 +30,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text(
-          '3/3',
-          style: TextStyle(color: TextColor.black),
-        ),
+        title: const Text('3/3', style: TextStyle(color: TextColor.black)),
         backgroundColor: AppColors.white,
       ),
       body: SafeArea(
@@ -57,10 +54,11 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 36),
                     child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: List.generate(3, (index) {
-                          return _form(context, store, state, index);
-                        })),
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: List.generate(3, (index) {
+                        return _form(context, store, state, index);
+                      }),
+                    ),
                   ),
                   Text(
                     L.setMultipleReminders,
@@ -91,7 +89,12 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                           ),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
-                              launchUrl(Uri.parse('https://bannzai.github.io/Pilll/PrivacyPolicy'), mode: LaunchMode.inAppBrowserView);
+                              launchUrl(
+                                Uri.parse(
+                                  'https://bannzai.github.io/Pilll/PrivacyPolicy',
+                                ),
+                                mode: LaunchMode.inAppBrowserView,
+                              );
                             },
                         ),
                         TextSpan(
@@ -113,7 +116,12 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                           ),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
-                              launchUrl(Uri.parse('https://bannzai.github.io/Pilll/Terms'), mode: LaunchMode.inAppBrowserView);
+                              launchUrl(
+                                Uri.parse(
+                                  'https://bannzai.github.io/Pilll/Terms',
+                                ),
+                                mode: LaunchMode.inAppBrowserView,
+                              );
                             },
                         ),
                         TextSpan(
@@ -134,8 +142,12 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                     child: PrimaryButton(
                       text: L.next,
                       onPressed: () async {
-                        analytics.logEvent(name: 'next_initial_setting_reminder_times');
-                        Navigator.of(context).push(IntiialSettingPremiumTrialStartPageRoute.route());
+                        analytics.logEvent(
+                          name: 'next_initial_setting_reminder_times',
+                        );
+                        Navigator.of(context).push(
+                          IntiialSettingPremiumTrialStartPageRoute.route(),
+                        );
                       },
                     ),
                   ),
@@ -165,8 +177,15 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
         return TimePicker(
           initialDateTime: initialDateTime,
           done: (dateTime) {
-            analytics.logEvent(name: 'selected_times_initial_setting', parameters: {'hour': dateTime.hour, 'minute': dateTime.minute});
-            store.setReminderTime(index: index, hour: dateTime.hour, minute: dateTime.minute);
+            analytics.logEvent(
+              name: 'selected_times_initial_setting',
+              parameters: {'hour': dateTime.hour, 'minute': dateTime.minute},
+            );
+            store.setReminderTime(
+              index: index,
+              hour: dateTime.hour,
+              minute: dateTime.minute,
+            );
             Navigator.pop(context);
           },
         );
@@ -198,7 +217,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                   fontSize: 14,
                   color: TextColor.main,
                 ),
-              )
+              ),
             ],
           ),
           const SizedBox(height: 8),
@@ -209,22 +228,21 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
               height: 48,
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.all(Radius.circular(4)),
-                border: Border.all(
-                  width: 1,
-                  color: AppColors.border,
-                ),
+                border: Border.all(width: 1, color: AppColors.border),
               ),
               child: Center(
-                child: Text(formValue,
-                    style: const TextStyle(
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 16,
-                      color: TextColor.gray,
-                    )),
+                child: Text(
+                  formValue,
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 16,
+                    color: TextColor.gray,
+                  ),
+                ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );

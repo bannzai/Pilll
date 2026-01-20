@@ -9,19 +9,31 @@ class DateTimeFormatter {
   }
 
   static String yearAndMonth(DateTime dateTime) {
-    return DateFormat(DateFormat.YEAR_ABBR_MONTH, Platform.localeName).format(dateTime);
+    return DateFormat(
+      DateFormat.YEAR_ABBR_MONTH,
+      Platform.localeName,
+    ).format(dateTime);
   }
 
   static String yearAndMonthAndDay(DateTime dateTime) {
-    return DateFormat(DateFormat.YEAR_ABBR_MONTH_DAY, Platform.localeName).format(dateTime);
+    return DateFormat(
+      DateFormat.YEAR_ABBR_MONTH_DAY,
+      Platform.localeName,
+    ).format(dateTime);
   }
 
   static String jaMonth(DateTime dateTime) {
-    return DateFormat(DateFormat.NUM_MONTH, Platform.localeName).format(dateTime);
+    return DateFormat(
+      DateFormat.NUM_MONTH,
+      Platform.localeName,
+    ).format(dateTime);
   }
 
   static String monthAndWeekday(DateTime dateTime) {
-    return DateFormat(DateFormat.NUM_MONTH_WEEKDAY_DAY, Platform.localeName).format(dateTime);
+    return DateFormat(
+      DateFormat.NUM_MONTH_WEEKDAY_DAY,
+      Platform.localeName,
+    ).format(dateTime);
   }
 
   // 9/1, 10/1, 11/10,

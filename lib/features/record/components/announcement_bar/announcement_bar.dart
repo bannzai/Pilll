@@ -51,35 +51,52 @@ class AnnouncementBar extends HookConsumerWidget {
     final user = ref.watch(userProvider).valueOrNull;
     final isLinkedLoginProvider = ref.watch(isLinkedProvider);
     final discountEntitlementDeadlineDate = user?.discountEntitlementDeadlineDate;
-    final hiddenCountdownDiscountDeadline =
-        ref.watch(hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
+    final hiddenCountdownDiscountDeadline = ref.watch(
+      hiddenCountdownDiscountDeadlineProvider(
+        discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
+      ),
+    );
     final isJaLocale = ref.watch(isJaLocaleProvider);
     final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
     final appIsReleased = ref.watch(appIsReleasedProvider).asData?.value == true;
-    final specialOfferingIsClosed = useState(sharedPreferences.getBool(BoolKey.specialOfferingIsClosed) ?? false);
-    final specialOfferingIsClosed2 = useState(sharedPreferences.getBool(BoolKey.specialOfferingIsClosed2) ?? false);
-    final lifetimeSubscriptionWarningIsClosed = useState(sharedPreferences.getBool(BoolKey.lifetimeSubscriptionWarningIsClosed) ?? false);
+    final specialOfferingIsClosed = useState(
+      sharedPreferences.getBool(BoolKey.specialOfferingIsClosed) ?? false,
+    );
+    final specialOfferingIsClosed2 = useState(
+      sharedPreferences.getBool(BoolKey.specialOfferingIsClosed2) ?? false,
+    );
+    final lifetimeSubscriptionWarningIsClosed = useState(
+      sharedPreferences.getBool(BoolKey.lifetimeSubscriptionWarningIsClosed) ?? false,
+    );
     final lifetimePurchaseStatus = ref.watch(isLifetimePurchasedProvider);
 
-    final historiesAsync = ref.watch(pillSheetModifiedHistoriesWithRangeProvider(
-      begin: today().subtract(const Duration(days: 30)),
-      end: today(),
-    ));
-    final histories = historiesAsync.asData?.value ?? [];
-    final missedDays = missedPillDays(
-      histories: histories,
-      maxDate: today(),
+    final historiesAsync = ref.watch(
+      pillSheetModifiedHistoriesWithRangeProvider(
+        begin: today().subtract(const Duration(days: 30)),
+        end: today(),
+      ),
     );
+    final histories = historiesAsync.asData?.value ?? [];
+    final missedDays = missedPillDays(histories: histories, maxDate: today());
 
     useEffect(() {
       specialOfferingIsClosed.addListener(() {
-        sharedPreferences.setBool(BoolKey.specialOfferingIsClosed, specialOfferingIsClosed.value);
+        sharedPreferences.setBool(
+          BoolKey.specialOfferingIsClosed,
+          specialOfferingIsClosed.value,
+        );
       });
       specialOfferingIsClosed2.addListener(() {
-        sharedPreferences.setBool(BoolKey.specialOfferingIsClosed2, specialOfferingIsClosed2.value);
+        sharedPreferences.setBool(
+          BoolKey.specialOfferingIsClosed2,
+          specialOfferingIsClosed2.value,
+        );
       });
       lifetimeSubscriptionWarningIsClosed.addListener(() {
-        sharedPreferences.setBool(BoolKey.lifetimeSubscriptionWarningIsClosed, lifetimeSubscriptionWarningIsClosed.value);
+        sharedPreferences.setBool(
+          BoolKey.lifetimeSubscriptionWarningIsClosed,
+          lifetimeSubscriptionWarningIsClosed.value,
+        );
       });
       return null;
     }, []);
@@ -120,12 +137,13 @@ class AnnouncementBar extends HookConsumerWidget {
           if (discountEntitlementDeadlineDate != null) {
             if (!hiddenCountdownDiscountDeadline) {
               return DiscountPriceDeadline(
-                  user: user,
-                  discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
-                  onTap: () {
-                    analytics.logEvent(name: 'pressed_discount_announcement_bar');
-                    showPremiumIntroductionSheet(context);
-                  });
+                user: user,
+                discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
+                onTap: () {
+                  analytics.logEvent(name: 'pressed_discount_announcement_bar');
+                  showPremiumIntroductionSheet(context);
+                },
+              );
             }
           }
         }
@@ -133,22 +151,24 @@ class AnnouncementBar extends HookConsumerWidget {
 
       if (latestPillSheetGroup != null && latestPillSheetGroup.activePillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
-        return EndedPillSheet(
-          isPremium: user.isPremium,
-          isTrial: user.isTrial,
-        );
+        return EndedPillSheet(isPremium: user.isPremium, isTrial: user.isTrial);
       }
 
       if (user.isTrial) {
         final premiumTrialLimit = PremiumTrialLimitAnnouncementBar.premiumTrialLimitMessage(user);
         if (premiumTrialLimit != null) {
-          return PremiumTrialLimitAnnouncementBar(premiumTrialLimit: premiumTrialLimit);
+          return PremiumTrialLimitAnnouncementBar(
+            premiumTrialLimit: premiumTrialLimit,
+          );
         }
       } else {
         // !isPremium && !isTrial
 
         if (!isAdsDisabled && pilllAds != null) {
-          return PilllAdsAnnouncementBar(pilllAds: pilllAds, onClose: () => showPremiumIntroductionSheet(context));
+          return PilllAdsAnnouncementBar(
+            pilllAds: pilllAds,
+            onClose: () => showPremiumIntroductionSheet(context),
+          );
         }
 
         if (userBeginDate != null &&
@@ -189,17 +209,18 @@ class AnnouncementBar extends HookConsumerWidget {
         return const RecommendSignupForPremiumAnnouncementBar();
       }
 
-      final restDurationNotification = RestDurationAnnouncementBar.retrieveRestDurationNotification(latestPillSheetGroup: latestPillSheetGroup);
+      final restDurationNotification = RestDurationAnnouncementBar.retrieveRestDurationNotification(
+        latestPillSheetGroup: latestPillSheetGroup,
+      );
       if (restDurationNotification != null) {
-        return RestDurationAnnouncementBar(restDurationNotification: restDurationNotification);
+        return RestDurationAnnouncementBar(
+          restDurationNotification: restDurationNotification,
+        );
       }
 
       if (latestPillSheetGroup != null && latestPillSheetGroup.activePillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
-        return EndedPillSheet(
-          isPremium: user.isPremium,
-          isTrial: user.isTrial,
-        );
+        return EndedPillSheet(isPremium: user.isPremium, isTrial: user.isTrial);
       }
     }
 

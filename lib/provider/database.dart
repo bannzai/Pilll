@@ -34,7 +34,11 @@ abstract class _CollectionPath {
   static String userPrivates(String userID) => '$users/$userID/privates';
   static String menstruations(String userID) => '$users/$userID/menstruations';
   static String pillSheetModifiedHistories(String userID) => '$users/$userID/pill_sheet_modified_histories';
-  static String schedule({required String userID, required String scheduleID}) => '$users/$userID/schedules/$scheduleID';
+  static String schedule({
+    required String userID,
+    required String scheduleID,
+  }) =>
+      '$users/$userID/schedules/$scheduleID';
   static String schedules({required String userID}) => '$users/$userID/schedules';
   static String inquiries(String userID) => '$users/$userID/inquiries';
   static String pilllAds() => 'globals/pilll_ads';
@@ -75,36 +79,43 @@ class DatabaseConnection {
 
   DocumentReference userPrivateRawReference() => FirebaseFirestore.instance.collection(_CollectionPath.userPrivates(userID)).doc(userID);
 
-  final FromFirestore<Menstruation> _menstruationFromFirestore =
-      (snapshot, options) => Menstruation.fromJson(snapshot.data()!..putIfAbsent('id', () => snapshot.id));
+  final FromFirestore<Menstruation> _menstruationFromFirestore = (snapshot, options) => Menstruation.fromJson(
+        snapshot.data()!..putIfAbsent('id', () => snapshot.id),
+      );
   final ToFirestore<Menstruation> _menstruationToFirestore = (menstruation, options) => menstruation.toJson();
   CollectionReference<Menstruation> menstruationsReference() =>
       FirebaseFirestore.instance.collection(_CollectionPath.menstruations(userID)).withConverter(
             fromFirestore: _menstruationFromFirestore,
             toFirestore: _menstruationToFirestore,
           );
-  DocumentReference<Menstruation> menstruationReference(String? menstruationID) =>
+  DocumentReference<Menstruation> menstruationReference(
+    String? menstruationID,
+  ) =>
       FirebaseFirestore.instance.collection(_CollectionPath.menstruations(userID)).doc(menstruationID).withConverter(
             fromFirestore: _menstruationFromFirestore,
             toFirestore: _menstruationToFirestore,
           );
 
-  final FromFirestore<PillSheetModifiedHistory> _pillSheetModifiedHistoryFromFirestore =
-      (snapshot, options) => PillSheetModifiedHistory.fromJson(snapshot.data()!..putIfAbsent('id', () => snapshot.id));
+  final FromFirestore<PillSheetModifiedHistory> _pillSheetModifiedHistoryFromFirestore = (snapshot, options) => PillSheetModifiedHistory.fromJson(
+        snapshot.data()!..putIfAbsent('id', () => snapshot.id),
+      );
   final ToFirestore<PillSheetModifiedHistory> _pillSheetModifiedHistoryToFirestore = (history, options) => history.toJson();
   CollectionReference<PillSheetModifiedHistory> pillSheetModifiedHistoriesReference() =>
       FirebaseFirestore.instance.collection(_CollectionPath.pillSheetModifiedHistories(userID)).withConverter(
             fromFirestore: _pillSheetModifiedHistoryFromFirestore,
             toFirestore: _pillSheetModifiedHistoryToFirestore,
           );
-  DocumentReference<PillSheetModifiedHistory> pillSheetModifiedHistoryReference({required String? pillSheetModifiedHistoryID}) =>
+  DocumentReference<PillSheetModifiedHistory> pillSheetModifiedHistoryReference({
+    required String? pillSheetModifiedHistoryID,
+  }) =>
       FirebaseFirestore.instance.collection(_CollectionPath.pillSheetModifiedHistories(userID)).doc(pillSheetModifiedHistoryID).withConverter(
             fromFirestore: _pillSheetModifiedHistoryFromFirestore,
             toFirestore: _pillSheetModifiedHistoryToFirestore,
           );
 
-  final FromFirestore<PillSheetGroup> _pillSheetGroupFromFirestore =
-      (snapshot, options) => PillSheetGroup.fromJson(snapshot.data()!..putIfAbsent('id', () => snapshot.id));
+  final FromFirestore<PillSheetGroup> _pillSheetGroupFromFirestore = (snapshot, options) => PillSheetGroup.fromJson(
+        snapshot.data()!..putIfAbsent('id', () => snapshot.id),
+      );
   final ToFirestore<PillSheetGroup> _pillSheetGroupToFirestore = (pillSheetGroup, options) => pillSheetGroup.toJson();
   CollectionReference<PillSheetGroup> pillSheetGroupsReference() =>
       FirebaseFirestore.instance.collection(_CollectionPath.pillSheetGroups(userID)).withConverter(
@@ -112,7 +123,9 @@ class DatabaseConnection {
             toFirestore: _pillSheetGroupToFirestore,
           );
 
-  DocumentReference<PillSheetGroup> pillSheetGroupReference(String? pillSheetGroupID) =>
+  DocumentReference<PillSheetGroup> pillSheetGroupReference(
+    String? pillSheetGroupID,
+  ) =>
       FirebaseFirestore.instance.collection(_CollectionPath.pillSheetGroups(userID)).doc(pillSheetGroupID).withConverter(
             fromFirestore: _pillSheetGroupFromFirestore,
             toFirestore: _pillSheetGroupToFirestore,

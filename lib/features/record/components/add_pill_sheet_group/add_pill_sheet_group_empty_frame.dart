@@ -28,36 +28,35 @@ class AddPillSheetGroupEmptyFrame extends StatelessWidget {
         height: 316,
         child: Stack(
           children: <Widget>[
+            Center(child: SvgPicture.asset('images/empty_frame.svg')),
             Center(
-              child: SvgPicture.asset(
-                'images/empty_frame.svg',
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  const Icon(Icons.add, color: TextColor.noshime),
+                  Text(
+                    L.addPillSheet,
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                      color: TextColor.noshime,
+                    ),
+                  ),
+                ],
               ),
             ),
-            Center(
-                child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                const Icon(Icons.add, color: TextColor.noshime),
-                Text(
-                  L.addPillSheet,
-                  style: const TextStyle(
-                    fontFamily: FontFamily.japanese,
-                    fontWeight: FontWeight.w300,
-                    fontSize: 14,
-                    color: TextColor.noshime,
-                  ),
-                ),
-              ],
-            )),
           ],
         ),
       ),
       onTap: () async {
         analytics.logEvent(name: 'adding_pill_sheet_tapped');
-        Navigator.of(context).push(AddPillSheetGroupPageRoute.route(
-          pillSheetGroup: pillSheetGroup,
-          setting: setting,
-        ));
+        Navigator.of(context).push(
+          AddPillSheetGroupPageRoute.route(
+            pillSheetGroup: pillSheetGroup,
+            setting: setting,
+          ),
+        );
       },
     );
   }

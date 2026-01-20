@@ -8,10 +8,7 @@ import 'package:pilll/utils/analytics.dart';
 class DisplayNumberSetting extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
 
-  const DisplayNumberSetting({
-    super.key,
-    required this.pillSheetGroup,
-  });
+  const DisplayNumberSetting({super.key, required this.pillSheetGroup});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

@@ -20,14 +20,20 @@ class DeletePillSheetGroup {
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
 
-  DeletePillSheetGroup(this.batchFactory, this.batchSetPillSheetModifiedHistory, this.batchSetPillSheetGroup);
+  DeletePillSheetGroup(
+    this.batchFactory,
+    this.batchSetPillSheetModifiedHistory,
+    this.batchSetPillSheetGroup,
+  );
 
   Future<void> call({
     required PillSheetGroup latestPillSheetGroup,
     required PillSheet activePillSheet,
   }) async {
     final batch = batchFactory.batch();
-    final updatedPillSheet = activePillSheet.copyWith(deletedAt: DateTime.now());
+    final updatedPillSheet = activePillSheet.copyWith(
+      deletedAt: DateTime.now(),
+    );
     final updatedPillSheetGroup = latestPillSheetGroup.replaced(updatedPillSheet).copyWith(deletedAt: DateTime.now());
     final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
       beforePillSheetGroup: latestPillSheetGroup,

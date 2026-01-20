@@ -31,11 +31,12 @@ Future<void> syncActivePillSheetValue({
   }
 }
 
-Future<void> syncUserStatus({
-  required User? user,
-}) async {
+Future<void> syncUserStatus({required User? user}) async {
   try {
-    await HomeWidget.saveWidgetData('userIsPremiumOrTrial', user?.premiumOrTrial);
+    await HomeWidget.saveWidgetData(
+      'userIsPremiumOrTrial',
+      user?.premiumOrTrial,
+    );
     await updateWidget();
   } catch (error) {
     debugPrint(error.toString());

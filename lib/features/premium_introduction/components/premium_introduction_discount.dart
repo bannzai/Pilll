@@ -28,7 +28,11 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
     final Duration? diff;
     final String? countdown;
     if (discountEntitlementDeadlineDate != null) {
-      final tmpDiff = ref.watch(durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
+      final tmpDiff = ref.watch(
+        durationToDiscountPriceDeadlineProvider(
+          discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
+        ),
+      );
       countdown = discountPriceDeadlineCountdownString(tmpDiff);
       diff = tmpDiff;
     } else {
@@ -69,7 +73,9 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
               ),
             ),
           const SizedBox(height: 20),
-          PremiumIntroductionDiscountAppeal(monthlyPremiumPackage: monthlyPremiumPackage),
+          PremiumIntroductionDiscountAppeal(
+            monthlyPremiumPackage: monthlyPremiumPackage,
+          ),
           const SizedBox(height: 8),
           SvgPicture.asset('images/arrow_down.svg'),
         ],

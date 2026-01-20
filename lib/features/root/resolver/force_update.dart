@@ -55,12 +55,17 @@ class ForceUpdate extends HookConsumerWidget {
     // For force update
     if (shouldForceUpdate.value) {
       Future.microtask(() async {
-        await showOKDialog(context, title: L.forceUpdateTitle, message: L.forceUpdateMessage(storeName), ok: () async {
-          await launchUrl(
-            Uri.parse(forceUpdateStoreURL),
-            mode: LaunchMode.externalApplication,
-          );
-        });
+        await showOKDialog(
+          context,
+          title: L.forceUpdateTitle,
+          message: L.forceUpdateMessage(storeName),
+          ok: () async {
+            await launchUrl(
+              Uri.parse(forceUpdateStoreURL),
+              mode: LaunchMode.externalApplication,
+            );
+          },
+        );
       });
       return const ScaffoldIndicator();
     }

@@ -6,14 +6,14 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
 class ChurnSurveyCompleteDialog extends StatelessWidget {
-  const ChurnSurveyCompleteDialog({
-    super.key,
-  });
+  const ChurnSurveyCompleteDialog({super.key});
 
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+      ),
       title: Text(
         L.thankYouForCooperation,
         style: const TextStyle(

@@ -44,7 +44,7 @@ enum PillSheetModifiedActionType {
   @JsonValue('changedBeginDisplayNumber')
   changedBeginDisplayNumber,
   @JsonValue('changedEndDisplayNumber')
-  changedEndDisplayNumber
+  changedEndDisplayNumber,
 }
 
 extension PillSheetModifiedActionTypeFunctions on PillSheetModifiedActionType {
@@ -97,8 +97,8 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
     // archivedDateTime isNull: false の条件だと、下記のエラーの条件に引っ掛かるため、archivedDateTime以外にもisArchivedを用意している。isArchived == true | isArchived == false の用途で使う
     // You can combine constraints with a logical AND by chaining multiple equality operators (== or array-contains). However, you must create a composite index to combine equality operators with the inequality operators, <, <=, >, and !=.
     @Default(false) bool isArchived,
-    // ============ END: Added since v2 ============
 
+    // ============ END: Added since v2 ============
     required PillSheetModifiedHistoryValue value,
   }) = _PillSheetModifiedHistory;
   const PillSheetModifiedHistory._();
@@ -139,9 +139,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     return _create(
       actionType: PillSheetModifiedActionType.takenPill,
       value: PillSheetModifiedHistoryValue(
-        takenPill: TakenPillValue(
-          isQuickRecord: isQuickRecord,
-        ),
+        takenPill: TakenPillValue(isQuickRecord: isQuickRecord),
       ),
       beforePillSheetGroup: beforePillSheetGroup,
       afterPillSheetGroup: afterPillSheetGroup,
@@ -315,7 +313,9 @@ int missedPillDays({
   }
 
   // 昇順に並べ替える。服用お休み期間の集計時に、服用お休みが開始された後の差分の日付を集計するために順番を整える必要がある
-  final orderedHistories = histories.sortedBy((history) => history.estimatedEventCausingDate);
+  final orderedHistories = histories.sortedBy(
+    (history) => history.estimatedEventCausingDate,
+  );
 
   final minDate = orderedHistories.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isBefore(b) ? a : b);
 
@@ -350,7 +350,9 @@ int missedPillDays({
       // 服用お休みが開始されて、次の履歴が服用お休み終了の場合は、服用お休みの日数を計算する
       // 服用お休みが開始されて、次の履歴が服用お休み以外の時は考慮パターンが多い。のでallDatesから除外するように計算に含めてしまう
       for (var i = 0; i < daysBetween(historyBeginRestDurationDate, date); i++) {
-        restDurationDates.add(historyBeginRestDurationDate.add(Duration(days: i)));
+        restDurationDates.add(
+          historyBeginRestDurationDate.add(Duration(days: i)),
+        );
       }
       historyBeginRestDurationDate = null;
     }
@@ -363,7 +365,9 @@ int missedPillDays({
   // 現在まで服用お休み中の場合には、差分の日付をrestDurationDatesに追加する
   if (historyBeginRestDurationDate != null) {
     for (var i = 0; i < daysBetween(historyBeginRestDurationDate, maxDate); i++) {
-      restDurationDates.add(historyBeginRestDurationDate.add(Duration(days: i)));
+      restDurationDates.add(
+        historyBeginRestDurationDate.add(Duration(days: i)),
+      );
     }
   }
 

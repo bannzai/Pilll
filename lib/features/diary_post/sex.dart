@@ -5,10 +5,7 @@ import 'package:pilll/features/diary_post/util.dart';
 
 class DiaryPostSex extends StatelessWidget {
   final ValueNotifier<bool> sex;
-  const DiaryPostSex({
-    super.key,
-    required this.sex,
-  });
+  const DiaryPostSex({super.key, required this.sex});
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +22,13 @@ class DiaryPostSex extends StatelessWidget {
             padding: const EdgeInsets.all(4),
             width: 32,
             height: 32,
-            decoration: BoxDecoration(shape: BoxShape.circle, color: sex.value ? AppColors.thinSecondary : AppColors.disabledSheet),
-            child: SvgPicture.asset(sex.value ? 'images/heart.svg' : 'images/heart-stroke.svg'),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: sex.value ? AppColors.thinSecondary : AppColors.disabledSheet,
+            ),
+            child: SvgPicture.asset(
+              sex.value ? 'images/heart.svg' : 'images/heart-stroke.svg',
+            ),
           ),
         ),
         const Spacer(),

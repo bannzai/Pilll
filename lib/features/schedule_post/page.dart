@@ -33,11 +33,20 @@ class SchedulePostPage extends HookConsumerWidget {
   const SchedulePostPage({super.key, required this.date});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return AsyncValueGroup.group2(ref.watch(userProvider), ref.watch(schedulesForDateProvider(date))).when(
+    return AsyncValueGroup.group2(
+      ref.watch(userProvider),
+      ref.watch(schedulesForDateProvider(date)),
+    ).when(
       data: (data) => _SchedulePostPage(
         date: date,
         user: data.$1,
-        schedule: data.$2.firstOrNull ?? Schedule(title: '', localNotification: null, date: date, createdDateTime: DateTime.now()),
+        schedule: data.$2.firstOrNull ??
+            Schedule(
+              title: '',
+              localNotification: null,
+              date: date,
+              createdDateTime: DateTime.now(),
+            ),
       ),
       error: (error, _) => UniversalErrorPage(
         error: error,
@@ -75,13 +84,15 @@ class _SchedulePostPage extends HookConsumerWidget {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         elevation: 0.0,
-        title: Text(DateTimeFormatter.yearAndMonthAndDay(date),
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w500,
-              fontSize: 20,
-              color: TextColor.main,
-            )),
+        title: Text(
+          DateTimeFormatter.yearAndMonthAndDay(date),
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w500,
+            fontSize: 20,
+            color: TextColor.main,
+          ),
+        ),
         leading: IconButton(
           icon: const Icon(Icons.close, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
@@ -168,7 +179,9 @@ class _SchedulePostPage extends HookConsumerWidget {
                           try {
                             final localNotificationID = schedule.localNotification?.localNotificationID;
                             if (localNotificationID != null) {
-                              await localNotificationService.cancelNotification(localNotificationID: localNotificationID);
+                              await localNotificationService.cancelNotification(
+                                localNotificationID: localNotificationID,
+                              );
                             }
 
                             final Schedule newSchedule;
@@ -176,11 +189,20 @@ class _SchedulePostPage extends HookConsumerWidget {
                               newSchedule = schedule.copyWith(
                                 title: title.value,
                                 localNotification: LocalNotification(
-                                  localNotificationID: Random().nextInt(scheduleNotificationIdentifierOffset),
-                                  remindDateTime: DateTime(date.year, date.month, date.day, 9),
+                                  localNotificationID: Random().nextInt(
+                                    scheduleNotificationIdentifierOffset,
+                                  ),
+                                  remindDateTime: DateTime(
+                                    date.year,
+                                    date.month,
+                                    date.day,
+                                    9,
+                                  ),
                                 ),
                               );
-                              await localNotificationService.scheduleCalendarScheduleNotification(schedule: newSchedule);
+                              await localNotificationService.scheduleCalendarScheduleNotification(
+                                schedule: newSchedule,
+                              );
                             } else {
                               newSchedule = schedule.copyWith(
                                 title: title.value,
@@ -188,10 +210,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                               );
                             }
 
-                            await ref.read(databaseProvider).schedulesReference().doc(newSchedule.id).set(
-                                  newSchedule,
-                                  SetOptions(merge: true),
-                                );
+                            await ref.read(databaseProvider).schedulesReference().doc(newSchedule.id).set(newSchedule, SetOptions(merge: true));
                             navigator.pop();
                           } catch (error) {
                             if (context.mounted) showErrorAlert(context, error);
@@ -223,7 +242,9 @@ class _SchedulePostPage extends HookConsumerWidget {
                             try {
                               final localNotificationID = schedule.localNotification?.localNotificationID;
                               if (localNotificationID != null) {
-                                await localNotificationService.cancelNotification(localNotificationID: localNotificationID);
+                                await localNotificationService.cancelNotification(
+                                  localNotificationID: localNotificationID,
+                                );
                               }
 
                               await ref.read(databaseProvider).schedulesReference().doc(scheduleID).delete();

@@ -16,7 +16,9 @@ import 'package:package_info_plus/package_info_plus.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final userProvider = StreamProvider((ref) => ref.watch(databaseProvider).userReference().snapshots().map((event) => event.data()!));
+final userProvider = StreamProvider(
+  (ref) => ref.watch(databaseProvider).userReference().snapshots().map((event) => event.data()!),
+);
 
 class UpdatePurchaseInfo {
   final DatabaseConnection databaseConnection;
@@ -30,9 +32,10 @@ class UpdatePurchaseInfo {
     required List<String> activeSubscriptions,
     required String? originalPurchaseDate,
   }) async {
-    await databaseConnection.userRawReference().set(
-        {if (isActivated != null) UserFirestoreFieldKeys.isPremium: isActivated, UserFirestoreFieldKeys.purchaseAppID: purchaseAppID},
-        SetOptions(merge: true));
+    await databaseConnection.userRawReference().set({
+      if (isActivated != null) UserFirestoreFieldKeys.isPremium: isActivated,
+      UserFirestoreFieldKeys.purchaseAppID: purchaseAppID,
+    }, SetOptions(merge: true));
     final privates = {
       if (premiumPlanIdentifier != null) UserPrivateFirestoreFieldKeys.latestPremiumPlanIdentifier: premiumPlanIdentifier,
       if (originalPurchaseDate != null) UserPrivateFirestoreFieldKeys.originalPurchaseDate: originalPurchaseDate,
@@ -40,7 +43,9 @@ class UpdatePurchaseInfo {
       if (entitlementIdentifier != null) UserPrivateFirestoreFieldKeys.entitlementIdentifier: entitlementIdentifier,
     };
     if (privates.isNotEmpty) {
-      await databaseConnection.userPrivateRawReference().set({...privates}, SetOptions(merge: true));
+      await databaseConnection.userPrivateRawReference().set({
+        ...privates,
+      }, SetOptions(merge: true));
     }
   }
 }
@@ -49,16 +54,16 @@ class SyncPurchaseInfo {
   final DatabaseConnection databaseConnection;
   SyncPurchaseInfo(this.databaseConnection);
 
-  Future<void> call({
-    required bool isActivated,
-  }) async {
+  Future<void> call({required bool isActivated}) async {
     await databaseConnection.userRawReference().set({
       UserFirestoreFieldKeys.isPremium: isActivated,
     }, SetOptions(merge: true));
   }
 }
 
-final fetchOrCreateUserProvider = Provider((ref) => FetchOrCreateUser(ref.watch(databaseProvider)));
+final fetchOrCreateUserProvider = Provider(
+  (ref) => FetchOrCreateUser(ref.watch(databaseProvider)),
+);
 
 class FetchOrCreateUser {
   final DatabaseConnection databaseConnection;
@@ -70,7 +75,9 @@ class FetchOrCreateUser {
       if (error is UserNotFound) {
         return _create(uid).then((_) => _fetch(uid));
       }
-      throw FormatException('Create user error: $error, stackTrace: ${StackTrace.current.toString()}');
+      throw FormatException(
+        'Create user error: $error, stackTrace: ${StackTrace.current.toString()}',
+      );
     });
     return user;
   }
@@ -93,18 +100,19 @@ class FetchOrCreateUser {
   Future<void> _create(String uid) async {
     debugPrint('#create $uid');
     final sharedPreferences = await SharedPreferences.getInstance();
-    final anonymousUserID = sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
-    return databaseConnection.userRawReference().set(
-      {
-        if (anonymousUserID != null) UserFirestoreFieldKeys.anonymousUserID: anonymousUserID,
-        UserFirestoreFieldKeys.userIDWhenCreateUser: uid,
-      },
-      SetOptions(merge: true),
+    final anonymousUserID = sharedPreferences.getString(
+      StringKey.lastSignInAnonymousUID,
     );
+    return databaseConnection.userRawReference().set({
+      if (anonymousUserID != null) UserFirestoreFieldKeys.anonymousUserID: anonymousUserID,
+      UserFirestoreFieldKeys.userIDWhenCreateUser: uid,
+    }, SetOptions(merge: true));
   }
 }
 
-final linkAppleProvider = Provider((ref) => LinkApple(ref.watch(databaseProvider)));
+final linkAppleProvider = Provider(
+  (ref) => LinkApple(ref.watch(databaseProvider)),
+);
 
 class LinkApple {
   final DatabaseConnection databaseConnection;
@@ -121,7 +129,9 @@ class LinkApple {
   }
 }
 
-final linkGoogleProvider = Provider((ref) => LinkGoogle(ref.watch(databaseProvider)));
+final linkGoogleProvider = Provider(
+  (ref) => LinkGoogle(ref.watch(databaseProvider)),
+);
 
 class LinkGoogle {
   final DatabaseConnection databaseConnection;
@@ -138,7 +148,9 @@ class LinkGoogle {
   }
 }
 
-final registerRemotePushNotificationTokenProvider = Provider((ref) => RegisterRemotePushNotificationToken(ref.watch(databaseProvider)));
+final registerRemotePushNotificationTokenProvider = Provider(
+  (ref) => RegisterRemotePushNotificationToken(ref.watch(databaseProvider)),
+);
 
 class RegisterRemotePushNotificationToken {
   final DatabaseConnection databaseConnection;
@@ -147,17 +159,16 @@ class RegisterRemotePushNotificationToken {
   Future<void> call({required String? fcmToken, required String? apnsToken}) {
     debugPrint('fcmToken: $fcmToken');
     debugPrint('apnsToken: $apnsToken');
-    return databaseConnection.userPrivateRawReference().set(
-      {
-        UserPrivateFirestoreFieldKeys.fcmToken: fcmToken,
-        UserPrivateFirestoreFieldKeys.apnsToken: apnsToken,
-      },
-      SetOptions(merge: true),
-    );
+    return databaseConnection.userPrivateRawReference().set({
+      UserPrivateFirestoreFieldKeys.fcmToken: fcmToken,
+      UserPrivateFirestoreFieldKeys.apnsToken: apnsToken,
+    }, SetOptions(merge: true));
   }
 }
 
-final saveUserLaunchInfoProvider = Provider((ref) => SaveUserLaunchInfo(ref.watch(databaseProvider)));
+final saveUserLaunchInfoProvider = Provider(
+  (ref) => SaveUserLaunchInfo(ref.watch(databaseProvider)),
+);
 
 class SaveUserLaunchInfo {
   final DatabaseConnection databaseConnection;
@@ -171,7 +182,9 @@ class SaveUserLaunchInfo {
     final sharedPreferences = await SharedPreferences.getInstance();
 
     // Stats
-    final lastLoginVersion = await PackageInfo.fromPlatform().then((value) => value.version);
+    final lastLoginVersion = await PackageInfo.fromPlatform().then(
+      (value) => value.version,
+    );
     String? beginVersion = sharedPreferences.getString(StringKey.beginVersion);
     if (beginVersion == null) {
       final v = lastLoginVersion;
@@ -188,7 +201,12 @@ class SaveUserLaunchInfo {
     // Package
     final packageInfo = await PackageInfo.fromPlatform();
     final os = Platform.operatingSystem;
-    final package = Package(latestOS: os, appName: packageInfo.appName, buildNumber: packageInfo.buildNumber, appVersion: packageInfo.version);
+    final package = Package(
+      latestOS: os,
+      appName: packageInfo.appName,
+      buildNumber: packageInfo.buildNumber,
+      appVersion: packageInfo.version,
+    );
 
     // UserIDs
     final userID = user.id!;
@@ -196,13 +214,17 @@ class SaveUserLaunchInfo {
     if (!userDocumentIDSets.contains(userID)) {
       userDocumentIDSets.add(userID);
     }
-    final lastSignInAnonymousUID = sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
+    final lastSignInAnonymousUID = sharedPreferences.getString(
+      StringKey.lastSignInAnonymousUID,
+    );
     List<String> anonymousUserIDSets = [...user.anonymousUserIDSets];
     if (lastSignInAnonymousUID != null && !anonymousUserIDSets.contains(lastSignInAnonymousUID)) {
       anonymousUserIDSets.add(lastSignInAnonymousUID);
     }
     final firebaseCurrentUserID = firebase_auth.FirebaseAuth.instance.currentUser?.uid;
-    List<String> firebaseCurrentUserIDSets = [...user.firebaseCurrentUserIDSets];
+    List<String> firebaseCurrentUserIDSets = [
+      ...user.firebaseCurrentUserIDSets,
+    ];
     if (firebaseCurrentUserID != null && !firebaseCurrentUserIDSets.contains(firebaseCurrentUserID)) {
       firebaseCurrentUserIDSets.add(firebaseCurrentUserID);
     }
@@ -235,7 +257,9 @@ class SaveUserLaunchInfo {
   }
 }
 
-final endInitialSettingProvider = Provider((ref) => EndInitialSetting(ref.watch(databaseProvider)));
+final endInitialSettingProvider = Provider(
+  (ref) => EndInitialSetting(ref.watch(databaseProvider)),
+);
 
 class EndInitialSetting {
   final DatabaseConnection databaseConnection;
@@ -246,13 +270,18 @@ class EndInitialSetting {
       UserFirestoreFieldKeys.isTrial: true,
       UserFirestoreFieldKeys.beginTrialDate: now(),
       UserFirestoreFieldKeys.trialDeadlineDate: now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay).endOfDay(),
-      UserFirestoreFieldKeys.discountEntitlementDeadlineDate:
-          now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay).endOfDay(),
+      UserFirestoreFieldKeys.discountEntitlementDeadlineDate: now()
+          .addDays(
+            remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay,
+          )
+          .endOfDay(),
     }, SetOptions(merge: true));
   }
 }
 
-final disableShouldAskCancelReasonProvider = Provider((ref) => DisableShouldAskCancelReason(ref.watch(databaseProvider)));
+final disableShouldAskCancelReasonProvider = Provider(
+  (ref) => DisableShouldAskCancelReason(ref.watch(databaseProvider)),
+);
 
 class DisableShouldAskCancelReason {
   final DatabaseConnection databaseConnection;

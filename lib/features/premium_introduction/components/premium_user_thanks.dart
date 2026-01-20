@@ -33,7 +33,7 @@ class PremiumUserThanksRow extends StatelessWidget {
             color: TextColor.main,
           ),
           textAlign: TextAlign.center,
-        )
+        ),
       ],
     );
   }

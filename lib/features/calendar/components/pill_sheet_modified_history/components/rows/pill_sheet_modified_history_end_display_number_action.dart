@@ -26,10 +26,11 @@ class PillSheetModifiedHistoryChangedEndDisplayNumberAction extends StatelessWid
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
       pillNumbersOrHyphenOrDate: PillNumber(
-          pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedEndDisplayNumberSetting(
-        beforePillSheetGroup: beforePillSheetGroup,
-        afterPillSheetGroup: afterPillSheetGroup,
-      )),
+        pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedEndDisplayNumberSetting(
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        ),
+      ),
       detail: Text(
         L.changeEndOfPillDays,
         style: const TextStyle(

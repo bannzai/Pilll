@@ -21,13 +21,15 @@ class EndedPillSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        analytics.logEvent(name: 'pill_ended_sheet_tap', parameters: {
-          'isTrial': isTrial,
-          'isPremium': isPremium,
-        });
+        analytics.logEvent(
+          name: 'pill_ended_sheet_tap',
+          parameters: {'isTrial': isTrial, 'isPremium': isPremium},
+        );
 
         if (isPremium || isTrial) {
-          Navigator.of(context).push(PillSheetModifiedHistoriesPageRoute.route());
+          Navigator.of(
+            context,
+          ).push(PillSheetModifiedHistoriesPageRoute.route());
         } else {
           showPremiumIntroductionSheet(context);
         }

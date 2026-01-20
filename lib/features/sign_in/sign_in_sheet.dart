@@ -55,23 +55,27 @@ class SignInSheet extends HookConsumerWidget {
                 const SizedBox(height: 14),
                 SvgPicture.asset('images/draggable_bar.svg', height: 6),
                 const SizedBox(height: 24),
-                Text(_title,
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 20,
-                      color: TextColor.main,
-                    )),
+                Text(
+                  _title,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 20,
+                    color: TextColor.main,
+                  ),
+                ),
                 const SizedBox(height: 16),
-                Text(_message,
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w300,
-                      fontSize: 14,
-                      color: TextColor.main,
-                    )),
+                Text(
+                  _message,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 14,
+                    color: TextColor.main,
+                  ),
+                ),
                 const SizedBox(height: 24),
                 _appleButton(context, linkApple, isLoading),
                 const SizedBox(height: 24),
@@ -94,9 +98,7 @@ class SignInSheet extends HookConsumerWidget {
       style: ButtonStyle(
         backgroundColor: WidgetStateProperty.all(AppColors.appleBlack),
         shape: WidgetStateProperty.all(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(6),
-          ),
+          RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
         ),
       ),
       onPressed: () async {
@@ -139,7 +141,7 @@ class SignInSheet extends HookConsumerWidget {
                     color: TextColor.white,
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
@@ -278,7 +280,9 @@ class SignInSheet extends HookConsumerWidget {
   Future<SignInWithAppleState> _handleApple(LinkApple linkApple) {
     if (_isLoginMode) {
       analytics.logEvent(name: 'signin_sheet_sign_in_apple');
-      return signInWithApple().then((value) => value == null ? SignInWithAppleState.cancel : SignInWithAppleState.determined);
+      return signInWithApple().then(
+        (value) => value == null ? SignInWithAppleState.cancel : SignInWithAppleState.determined,
+      );
     } else {
       analytics.logEvent(name: 'signin_sheet_link_with_apple');
       return callLinkWithApple(linkApple);
@@ -298,14 +302,15 @@ class SignInSheet extends HookConsumerWidget {
   }
 }
 
-void showSignInSheet(BuildContext context, SignInSheetStateContext stateContext, Function(LinkAccountType)? onSignIn) {
+void showSignInSheet(
+  BuildContext context,
+  SignInSheetStateContext stateContext,
+  Function(LinkAccountType)? onSignIn,
+) {
   analytics.logScreenView(screenName: 'SigninSheet');
   showModalBottomSheet(
     context: context,
-    builder: (context) => SignInSheet(
-      stateContext: stateContext,
-      onSignIn: onSignIn,
-    ),
+    builder: (context) => SignInSheet(stateContext: stateContext, onSignIn: onSignIn),
     backgroundColor: Colors.transparent,
   );
 }

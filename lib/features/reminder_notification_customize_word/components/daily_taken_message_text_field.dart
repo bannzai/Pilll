@@ -33,18 +33,30 @@ class DailyTakenMessageTextField extends StatelessWidget {
             fontWeight: FontWeight.w400,
           ),
         ),
-        counter: Row(children: [
-          Text(
-            L.changeDailyNotificationMessage,
-            style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
-          ),
-          const Spacer(),
-          if (dailyTakenMessage.value.characters.isNotEmpty)
+        counter: Row(
+          children: [
             Text(
-              '${dailyTakenMessage.value.characters.length}/100',
-              style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
+              L.changeDailyNotificationMessage,
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontSize: 12,
+                fontWeight: FontWeight.w400,
+                color: TextColor.darkGray,
+              ),
             ),
-        ]),
+            const Spacer(),
+            if (dailyTakenMessage.value.characters.isNotEmpty)
+              Text(
+                '${dailyTakenMessage.value.characters.length}/100',
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w400,
+                  color: TextColor.darkGray,
+                ),
+              ),
+          ],
+        ),
       ),
       onChanged: (value) {
         dailyTakenMessage.value = value;

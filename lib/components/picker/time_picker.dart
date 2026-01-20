@@ -33,18 +33,19 @@ class TimePicker extends StatelessWidget {
         SizedBox(
           height: MediaQuery.of(context).size.height / 3,
           child: GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: CupertinoDatePicker(
+              use24hFormat: true,
+              minuteInterval: minimumInterval,
+              initialDateTime: selectedDateTime,
+              mode: CupertinoDatePickerMode.time,
+              onDateTimeChanged: (DateTime value) {
+                selectedDateTime = value;
               },
-              child: CupertinoDatePicker(
-                use24hFormat: true,
-                minuteInterval: minimumInterval,
-                initialDateTime: selectedDateTime,
-                mode: CupertinoDatePickerMode.time,
-                onDateTimeChanged: (DateTime value) {
-                  selectedDateTime = value;
-                },
-              )),
+            ),
+          ),
         ),
       ],
     );

@@ -74,10 +74,7 @@ class AppStoreReviewCard extends HookWidget {
                 padding: const EdgeInsets.only(top: 4.0),
                 child: Text(
                   author,
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.grey[600],
-                  ),
+                  style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -145,10 +142,7 @@ class AppStoreReviewCard extends HookWidget {
                   padding: const EdgeInsets.only(top: 8.0),
                   child: Text(
                     author,
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: Colors.grey[600],
-                    ),
+                    style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                   ),
                 ),
 
@@ -156,10 +150,7 @@ class AppStoreReviewCard extends HookWidget {
               if (message.isNotEmpty)
                 Padding(
                   padding: const EdgeInsets.only(top: 16.0),
-                  child: Text(
-                    message,
-                    style: const TextStyle(fontSize: 14),
-                  ),
+                  child: Text(message, style: const TextStyle(fontSize: 14)),
                 ),
             ],
           ),

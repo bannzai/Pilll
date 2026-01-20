@@ -23,7 +23,10 @@ class SettingMenstruationPage extends HookConsumerWidget {
         pillSheetTypes: setting.pillSheetEnumTypes,
         appearanceMode: PillSheetAppearanceMode.cyclicSequential,
         selectedPillNumber: (pageIndex) {
-          final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: setting.pillSheetEnumTypes, toIndex: pageIndex);
+          final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(
+            pillSheetTypes: setting.pillSheetEnumTypes,
+            toIndex: pageIndex,
+          );
           if (passedTotalCount >= setting.pillNumberForFromMenstruation) {
             return setting.pillNumberForFromMenstruation;
           }
@@ -34,12 +37,17 @@ class SettingMenstruationPage extends HookConsumerWidget {
           return diff;
         },
         markSelected: (pageIndex, fromMenstruation) async {
-          analytics.logEvent(name: 'from_menstruation_setting', parameters: {
-            'number': fromMenstruation,
-            'page': pageIndex,
-          });
-          final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: setting.pillSheetEnumTypes, toIndex: pageIndex);
-          final updated = setting.copyWith(pillNumberForFromMenstruation: fromMenstruation + offset);
+          analytics.logEvent(
+            name: 'from_menstruation_setting',
+            parameters: {'number': fromMenstruation, 'page': pageIndex},
+          );
+          final offset = summarizedPillCountWithPillSheetTypesToIndex(
+            pillSheetTypes: setting.pillSheetEnumTypes,
+            toIndex: pageIndex,
+          );
+          final updated = setting.copyWith(
+            pillNumberForFromMenstruation: fromMenstruation + offset,
+          );
           await setSetting(updated);
         },
       ),
@@ -47,14 +55,24 @@ class SettingMenstruationPage extends HookConsumerWidget {
         pillSheetTypes: setting.pillSheetEnumTypes,
         fromMenstruation: setting.pillNumberForFromMenstruation,
         fromMenstructionDidDecide: (serializedPillNumberIntoGroup) async {
-          analytics.logEvent(name: 'from_menstruation_initial_setting', parameters: {'number': serializedPillNumberIntoGroup});
-          final updated = setting.copyWith(pillNumberForFromMenstruation: serializedPillNumberIntoGroup);
+          analytics.logEvent(
+            name: 'from_menstruation_initial_setting',
+            parameters: {'number': serializedPillNumberIntoGroup},
+          );
+          final updated = setting.copyWith(
+            pillNumberForFromMenstruation: serializedPillNumberIntoGroup,
+          );
           await setSetting(updated);
         },
         durationMenstruation: setting.durationMenstruation,
         durationMenstructionDidDecide: (durationMenstruation) {
-          analytics.logEvent(name: 'duration_menstruation_initial_setting', parameters: {'number': durationMenstruation});
-          final updated = setting.copyWith(durationMenstruation: durationMenstruation);
+          analytics.logEvent(
+            name: 'duration_menstruation_initial_setting',
+            parameters: {'number': durationMenstruation},
+          );
+          final updated = setting.copyWith(
+            durationMenstruation: durationMenstruation,
+          );
           setSetting(updated);
         },
       ),

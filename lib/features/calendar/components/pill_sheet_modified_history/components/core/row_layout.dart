@@ -27,26 +27,15 @@ class RowLayout extends StatelessWidget {
           const SizedBox(width: 8),
           const SizedBox(
             height: 26,
-            child: VerticalDivider(
-              color: AppColors.divider,
-              width: 0.5,
-            ),
+            child: VerticalDivider(color: AppColors.divider, width: 0.5),
           ),
           const SizedBox(width: 8),
-          SizedBox(
-            width: 79,
-            child: pillNumbersOrHyphenOrDate,
-          ),
+          SizedBox(width: 79, child: pillNumbersOrHyphenOrDate),
           const SizedBox(width: 8),
-          Expanded(
-            child: detail,
-          ),
+          Expanded(child: detail),
           if (takenPillActionOList != null) ...[
             const SizedBox(width: 8),
-            SizedBox(
-              width: 57,
-              child: takenPillActionOList,
-            ),
+            SizedBox(width: 57, child: takenPillActionOList),
           ],
         ],
       ),

@@ -32,19 +32,15 @@ class SettingPillSheetView extends StatelessWidget {
   Widget build(BuildContext context) {
     return PillSheetViewLayout(
       weekdayLines: null,
-      pillMarkLines: List.generate(
-        pillSheetType.numberOfLineInPillSheet,
-        (index) {
-          return PillMarkLine(pillMarks: _pillMarks(context, lineIndex: index));
-        },
-      ),
+      pillMarkLines: List.generate(pillSheetType.numberOfLineInPillSheet, (
+        index,
+      ) {
+        return PillMarkLine(pillMarks: _pillMarks(context, lineIndex: index));
+      }),
     );
   }
 
-  List<Widget> _pillMarks(
-    BuildContext context, {
-    required int lineIndex,
-  }) {
+  List<Widget> _pillMarks(BuildContext context, {required int lineIndex}) {
     final lineNumber = lineIndex + 1;
     int countOfPillMarksInLine = Weekday.values.length;
     if (lineNumber * Weekday.values.length > pillSheetType.totalCount) {
@@ -56,8 +52,14 @@ class SettingPillSheetView extends StatelessWidget {
         return Container(width: PillSheetViewLayout.componentWidth);
       }
 
-      final pillNumberInPillSheet = PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(index, lineIndex);
-      final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pageIndex);
+      final pillNumberInPillSheet = PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(
+        index,
+        lineIndex,
+      );
+      final offset = summarizedPillCountWithPillSheetTypesToIndex(
+        pillSheetTypes: pillSheetTypes,
+        toIndex: pageIndex,
+      );
 
       return SizedBox(
         width: PillSheetViewLayout.componentWidth,
@@ -82,10 +84,10 @@ class SettingPillSheetView extends StatelessWidget {
             remainingPillTakenCount: null,
           ),
           onTap: () {
-            analytics.logEvent(name: 'setting_pill_mark_tapped', parameters: {
-              'number': pillNumberInPillSheet,
-              'page': pageIndex,
-            });
+            analytics.logEvent(
+              name: 'setting_pill_mark_tapped',
+              parameters: {'number': pillNumberInPillSheet, 'page': pageIndex},
+            );
             markSelected(pageIndex, pillNumberInPillSheet);
           },
         ),
@@ -93,9 +95,7 @@ class SettingPillSheetView extends StatelessWidget {
     });
   }
 
-  PillMarkType _pillMarkTypeFor({
-    required int pillNumberInPillSheet,
-  }) {
+  PillMarkType _pillMarkTypeFor({required int pillNumberInPillSheet}) {
     if (selectedPillNumberIntoPillSheet == pillNumberInPillSheet) {
       return PillMarkType.selected;
     }

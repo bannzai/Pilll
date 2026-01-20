@@ -46,25 +46,25 @@ class RecordPageInformationHeader extends StatelessWidget {
                   const SizedBox(width: 28),
                   const SizedBox(
                     height: 64,
-                    child: VerticalDivider(
-                      width: 10,
-                      color: AppColors.divider,
-                    ),
+                    child: VerticalDivider(width: 10, color: AppColors.divider),
                   ),
                   const SizedBox(width: 28),
                   TodayTakenPillNumber(
-                      pillSheetGroup: pillSheetGroup,
-                      onPressed: () {
-                        analytics.logEvent(name: 'tapped_record_information_header');
-                        if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) {
-                          Navigator.of(context).push(
-                            SettingTodayPillNumberPageRoute.route(
-                              pillSheetGroup: pillSheetGroup,
-                              activePillSheet: activePillSheet,
-                            ),
-                          );
-                        }
-                      }),
+                    pillSheetGroup: pillSheetGroup,
+                    onPressed: () {
+                      analytics.logEvent(
+                        name: 'tapped_record_information_header',
+                      );
+                      if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) {
+                        Navigator.of(context).push(
+                          SettingTodayPillNumberPageRoute.route(
+                            pillSheetGroup: pillSheetGroup,
+                            activePillSheet: activePillSheet,
+                          ),
+                        );
+                      }
+                    },
+                  ),
                 ],
               ),
             ],

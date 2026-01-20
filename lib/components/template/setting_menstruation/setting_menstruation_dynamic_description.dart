@@ -11,7 +11,10 @@ import 'package:pilll/features/localizations/l.dart';
 
 abstract class SettingMenstruationDynamicDescriptionConstants {
   // NOTE: 30日という上限値は特に医学的根拠があるわけではなく、十分な選択肢を提供するための適当な値です
-  static final List<String> durationList = ['-', ...List<String>.generate(30, (index) => (index + 1).toString())];
+  static final List<String> durationList = [
+    '-',
+    ...List<String>.generate(30, (index) => (index + 1).toString()),
+  ];
 }
 
 class SettingMenstruationDynamicDescription extends StatelessWidget {
@@ -49,10 +52,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
                 color: TextColor.main,
               ),
             ),
-            GestureDetector(
-              onTap: () => _showPicker(context),
-              child: _from(),
-            ),
+            GestureDetector(onTap: () => _showPicker(context), child: _from()),
             Text(
               ' ${L.perNumber}',
               style: const TextStyle(
@@ -92,7 +92,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
               ),
             ),
           ],
-        )
+        ),
       ],
     );
   }
@@ -109,19 +109,18 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
       height: 48,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.circular(4)),
-        border: Border.all(
-          width: 1,
-          color: AppColors.border,
-        ),
+        border: Border.all(width: 1, color: AppColors.border),
       ),
       child: Center(
-        child: Text(fromString,
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w700,
-              fontSize: 16,
-              color: TextColor.gray,
-            )),
+        child: Text(
+          fromString,
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w700,
+            fontSize: 16,
+            color: TextColor.gray,
+          ),
+        ),
       ),
     );
   }
@@ -138,19 +137,18 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
       height: 48,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.circular(4)),
-        border: Border.all(
-          width: 1,
-          color: AppColors.border,
-        ),
+        border: Border.all(width: 1, color: AppColors.border),
       ),
       child: Center(
-        child: Text(durationString,
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w700,
-              fontSize: 16,
-              color: TextColor.gray,
-            )),
+        child: Text(
+          durationString,
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w700,
+            fontSize: 16,
+            color: TextColor.gray,
+          ),
+        ),
       ),
     );
   }
@@ -185,7 +183,9 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
                   onSelectedItemChanged: (index) {
                     keepSelectedFromMenstruation = index;
                   },
-                  scrollController: FixedExtentScrollController(initialItem: keepSelectedFromMenstruation),
+                  scrollController: FixedExtentScrollController(
+                    initialItem: keepSelectedFromMenstruation,
+                  ),
                   children: List.generate(maximumCount + 1, (index) {
                     if (index == 0) {
                       return '-';
@@ -230,7 +230,9 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
                   onSelectedItemChanged: (index) {
                     keepSelectedDurationMenstruation = index;
                   },
-                  scrollController: FixedExtentScrollController(initialItem: keepSelectedDurationMenstruation),
+                  scrollController: FixedExtentScrollController(
+                    initialItem: keepSelectedDurationMenstruation,
+                  ),
                   children: SettingMenstruationDynamicDescriptionConstants.durationList.map(_pickerItem).toList(),
                 ),
               ),

@@ -22,7 +22,12 @@ class MenstruationHistoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppCard(
       child: Padding(
-        padding: const EdgeInsets.only(top: 16, left: 16, bottom: 16, right: 16),
+        padding: const EdgeInsets.only(
+          top: 16,
+          left: 16,
+          bottom: 16,
+          right: 16,
+        ),
         child: GestureDetector(
           onTap: () {
             analytics.logEvent(name: 'menstruation_history_card_tapped');
@@ -50,10 +55,7 @@ class MenstruationHistoryCard extends StatelessWidget {
 }
 
 class MenstruationHistoryCardMoreButton extends StatelessWidget {
-  const MenstruationHistoryCardMoreButton({
-    super.key,
-    required this.state,
-  });
+  const MenstruationHistoryCardMoreButton({super.key, required this.state});
 
   final MenstruationHistoryCardState state;
 
@@ -64,25 +66,23 @@ class MenstruationHistoryCardMoreButton extends StatelessWidget {
       children: [
         if (!state.moreButtonIsHidden)
           AlertButton(
-              text: L.viewMore,
-              onPressed: () async {
-                analytics.logEvent(name: 'menstruation_more_button_pressed');
-                if (state.isPremium || state.isTrial) {
-                  Navigator.of(context).push(MenstruationListPageRoute.route());
-                } else {
-                  showPremiumIntroductionSheet(context);
-                }
-              }),
+            text: L.viewMore,
+            onPressed: () async {
+              analytics.logEvent(name: 'menstruation_more_button_pressed');
+              if (state.isPremium || state.isTrial) {
+                Navigator.of(context).push(MenstruationListPageRoute.route());
+              } else {
+                showPremiumIntroductionSheet(context);
+              }
+            },
+          ),
       ],
     );
   }
 }
 
 class MenstruationHistoryCardList extends StatelessWidget {
-  const MenstruationHistoryCardList({
-    super.key,
-    required this.state,
-  });
+  const MenstruationHistoryCardList({super.key, required this.state});
 
   final MenstruationHistoryCardState state;
 
@@ -142,11 +142,9 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
         ),
         const SizedBox(width: 30),
         const SizedBox(
-            height: 64,
-            child: VerticalDivider(
-              color: AppColors.divider,
-              width: 3,
-            )),
+          height: 64,
+          child: VerticalDivider(color: AppColors.divider, width: 3),
+        ),
         const SizedBox(width: 30),
         CounterUnitLayout(
           title: L.averageDays,
@@ -160,10 +158,7 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
 }
 
 class MenstruationHistoryCardTitle extends StatelessWidget {
-  const MenstruationHistoryCardTitle({
-    super.key,
-    required this.state,
-  });
+  const MenstruationHistoryCardTitle({super.key, required this.state});
 
   final MenstruationHistoryCardState state;
 

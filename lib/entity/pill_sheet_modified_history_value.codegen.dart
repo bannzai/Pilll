@@ -94,7 +94,10 @@ class AutomaticallyRecordedLastTakenDateValue with _$AutomaticallyRecordedLastTa
   @JsonSerializable(explicitToJson: true)
   const factory AutomaticallyRecordedLastTakenDateValue() = _AutomaticallyRecordedLastTakenDateValue;
 
-  factory AutomaticallyRecordedLastTakenDateValue.fromJson(Map<String, dynamic> json) => _$AutomaticallyRecordedLastTakenDateValueFromJson(json);
+  factory AutomaticallyRecordedLastTakenDateValue.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      _$AutomaticallyRecordedLastTakenDateValueFromJson(json);
 }
 
 /// ピルシート削除時の履歴情報を記録するクラス
@@ -281,7 +284,10 @@ class ChangedRestDurationBeginDateValue with _$ChangedRestDurationBeginDateValue
     required RestDuration afterRestDuration,
   }) = _ChangedRestDurationBeginDateValue;
 
-  factory ChangedRestDurationBeginDateValue.fromJson(Map<String, dynamic> json) => _$ChangedRestDurationBeginDateValueFromJson(json);
+  factory ChangedRestDurationBeginDateValue.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      _$ChangedRestDurationBeginDateValueFromJson(json);
 }
 
 /// 休薬期間の内容変更時の履歴情報を記録するクラス

@@ -21,11 +21,9 @@ extension FirebaseFunctionsExt on FirebaseFunctions {
   }
 
   Future<bool> startPromotion({required int promotionDayCount}) async {
-    final result = await httpsCallable('startPromotion').call(
-      {
-        'promotionDayCount': promotionDayCount,
-      },
-    );
+    final result = await httpsCallable(
+      'startPromotion',
+    ).call({'promotionDayCount': promotionDayCount});
     final response = mapToJSON(result.data);
     if (response['result'] != 'OK') {
       throw Exception(response['error']['message']);

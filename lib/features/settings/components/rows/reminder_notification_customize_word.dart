@@ -36,10 +36,7 @@ class ReminderNotificationCustomizeWord extends HookConsumerWidget {
               fontSize: 16,
             ),
           ),
-          if (!isPremium) ...[
-            const SizedBox(width: 8),
-            const PremiumBadge(),
-          ]
+          if (!isPremium) ...[const SizedBox(width: 8), const PremiumBadge()],
         ],
       ),
       subtitle: Text(
@@ -51,11 +48,11 @@ class ReminderNotificationCustomizeWord extends HookConsumerWidget {
         ),
       ),
       onTap: () {
-        analytics.logEvent(
-          name: 'did_notification_customize_word',
-        );
+        analytics.logEvent(name: 'did_notification_customize_word');
         if (isTrial || isPremium) {
-          Navigator.of(context).push(ReminderNotificationCustomizeWordPageRoutes.route());
+          Navigator.of(
+            context,
+          ).push(ReminderNotificationCustomizeWordPageRoutes.route());
         } else {
           showPremiumIntroductionSheet(context);
         }

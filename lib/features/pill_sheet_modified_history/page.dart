@@ -18,7 +18,9 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final limit = useState(20);
-    final historiesAsync = ref.watch(pillSheetModifiedHistoriesWithLimitProvider(limit: limit.value));
+    final historiesAsync = ref.watch(
+      pillSheetModifiedHistoriesWithLimitProvider(limit: limit.value),
+    );
     final histories = useState(historiesAsync.asData?.value ?? []);
 
     useEffect(() {
@@ -63,7 +65,11 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
                     return true;
                   },
                   child: Container(
-                    padding: const EdgeInsets.only(left: 24, right: 24, top: 24),
+                    padding: const EdgeInsets.only(
+                      left: 24,
+                      right: 24,
+                      top: 24,
+                    ),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [

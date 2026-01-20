@@ -45,7 +45,10 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
 
     // For linked user
     useEffect(() {
-      analytics.logEvent(name: 'initial_setting_signin_account', parameters: {'uid': FirebaseAuth.instance.currentUser?.uid});
+      analytics.logEvent(
+        name: 'initial_setting_signin_account',
+        parameters: {'uid': FirebaseAuth.instance.currentUser?.uid},
+      );
 
       final LinkAccountType? accountType = () {
         if (isAppleLinked) {
@@ -75,10 +78,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
       child: Scaffold(
         backgroundColor: AppColors.background,
         appBar: AppBar(
-          title: const Text(
-            '1/3',
-            style: TextStyle(color: TextColor.black),
-          ),
+          title: const Text('1/3', style: TextStyle(color: TextColor.black)),
           backgroundColor: AppColors.white,
         ),
         body: SafeArea(
@@ -100,7 +100,10 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                         ),
                         textAlign: TextAlign.center,
                       ),
-                      InitialSettingPillSheetGroupPageBody(state: state, store: store),
+                      InitialSettingPillSheetGroupPageBody(
+                        state: state,
+                        store: store,
+                      ),
                       const SizedBox(height: 200),
                     ],
                   ),
@@ -122,8 +125,12 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                             child: PrimaryButton(
                               text: L.next,
                               onPressed: () async {
-                                analytics.logEvent(name: 'next_to_today_pill_number');
-                                Navigator.of(context).push(InitialSettingSelectTodayPillNumberPageRoute.route());
+                                analytics.logEvent(
+                                  name: 'next_to_today_pill_number',
+                                );
+                                Navigator.of(context).push(
+                                  InitialSettingSelectTodayPillNumberPageRoute.route(),
+                                );
                               },
                             ),
                           ),
@@ -132,7 +139,9 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                         AlertButton(
                           text: L.existingAccountUsers,
                           onPressed: () async {
-                            analytics.logEvent(name: 'pressed_initial_setting_signin');
+                            analytics.logEvent(
+                              name: 'pressed_initial_setting_signin',
+                            );
                             showSignInSheet(
                               context,
                               SignInSheetStateContext.initialSetting,
@@ -168,26 +177,40 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (state.pillSheetTypes.isEmpty) {
-      return AddPillSheetTypeEmpty(onSelect: (pillSheetType) => store.selectedFirstPillSheetType(pillSheetType));
+      return AddPillSheetTypeEmpty(
+        onSelect: (pillSheetType) => store.selectedFirstPillSheetType(pillSheetType),
+      );
     } else {
       return Column(
         children: [
           const SizedBox(height: 6),
           SettingPillSheetGroup(
-              pillSheetTypes: state.pillSheetTypes,
-              onAdd: (pillSheetType) {
-                analytics.logEvent(name: 'initial_setting_add_pill_sheet_group', parameters: {'pill_sheet_type': pillSheetType.fullName});
-                store.addPillSheetType(pillSheetType);
-              },
-              onChange: (index, pillSheetType) {
-                analytics.logEvent(
-                    name: 'initial_setting_change_pill_sheet_group', parameters: {'index': index, 'pill_sheet_type': pillSheetType.fullName});
-                store.changePillSheetType(index, pillSheetType);
-              },
-              onDelete: (index) {
-                analytics.logEvent(name: 'initial_setting_delete_pill_sheet_group', parameters: {'index': index});
-                store.removePillSheetType(index);
-              }),
+            pillSheetTypes: state.pillSheetTypes,
+            onAdd: (pillSheetType) {
+              analytics.logEvent(
+                name: 'initial_setting_add_pill_sheet_group',
+                parameters: {'pill_sheet_type': pillSheetType.fullName},
+              );
+              store.addPillSheetType(pillSheetType);
+            },
+            onChange: (index, pillSheetType) {
+              analytics.logEvent(
+                name: 'initial_setting_change_pill_sheet_group',
+                parameters: {
+                  'index': index,
+                  'pill_sheet_type': pillSheetType.fullName,
+                },
+              );
+              store.changePillSheetType(index, pillSheetType);
+            },
+            onDelete: (index) {
+              analytics.logEvent(
+                name: 'initial_setting_delete_pill_sheet_group',
+                parameters: {'index': index},
+              );
+              store.removePillSheetType(index);
+            },
+          ),
         ],
       );
     }

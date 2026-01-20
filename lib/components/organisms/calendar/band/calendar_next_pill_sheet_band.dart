@@ -27,18 +27,23 @@ class CalendarNextPillSheetBand extends StatelessWidget {
       child: Stack(
         children: [
           CustomPaint(
-            painter: DiagonalStripedLine(color: AppColors.duration, isNecessaryBorder: false),
+            painter: DiagonalStripedLine(
+              color: AppColors.duration,
+              isNecessaryBorder: false,
+            ),
             size: Size(width, CalendarBandConst.height),
           ),
           Container(
             padding: const EdgeInsets.only(left: 10),
-            child: Text(isLineBreak ? '' : L.newPillSheetStart,
-                style: const TextStyle(
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 10,
-                  color: TextColor.white,
-                )),
+            child: Text(
+              isLineBreak ? '' : L.newPillSheetStart,
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w600,
+                fontSize: 10,
+                color: TextColor.white,
+              ),
+            ),
           ),
         ],
       ),

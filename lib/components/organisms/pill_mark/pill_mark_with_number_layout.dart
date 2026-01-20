@@ -17,12 +17,7 @@ class PillMarkWithNumberLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => onTap(),
-      child: Column(
-        children: <Widget>[
-          pillNumber,
-          pillMark,
-        ],
-      ),
+      child: Column(children: <Widget>[pillNumber, pillMark]),
     );
   }
 }

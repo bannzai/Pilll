@@ -23,7 +23,9 @@ class ChangeManualRestDuration extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final changeRestDurationBeginDate = ref.watch(changeRestDurationBeginDateProvider);
+    final changeRestDurationBeginDate = ref.watch(
+      changeRestDurationBeginDateProvider,
+    );
     final changeRestDuration = ref.watch(changeRestDurationProvider);
 
     String format(DateTime dateTime) {
@@ -36,9 +38,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
     void onChanged() {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          duration: const Duration(
-            seconds: 2,
-          ),
+          duration: const Duration(seconds: 2),
           content: Text(L.editPausePeriod),
         ),
       );
@@ -57,9 +57,10 @@ class ChangeManualRestDuration extends HookConsumerWidget {
         title: Text(L.editPausePeriod),
         subtitle: Text(begin),
         onTap: () async {
-          analytics.logEvent(name: 'change_manual_rest_duration_day', parameters: {
-            'rest_duration_id': restDuration.id,
-          });
+          analytics.logEvent(
+            name: 'change_manual_rest_duration_day',
+            parameters: {'rest_duration_id': restDuration.id},
+          );
 
           // NOTE: DatePickerの表示制御により、最後に服用記録をつけた日付+1以上の日付は選択できない
           // よって、lastTakenDateが変動することがない前提になる
@@ -106,9 +107,10 @@ class ChangeManualRestDuration extends HookConsumerWidget {
         title: Text(L.changePausePeriod),
         subtitle: Text('$begin - $end'),
         onTap: () async {
-          analytics.logEvent(name: 'change_manual_rest_duration_range', parameters: {
-            'rest_duration_id': restDuration.id,
-          });
+          analytics.logEvent(
+            name: 'change_manual_rest_duration_range',
+            parameters: {'rest_duration_id': restDuration.id},
+          );
 
           // NOTE: DatePickerの表示制御により、最後に服用記録をつけた日付+1以上の日付は選択できない
           // よって、lastTakenDateが変動することがない前提になる

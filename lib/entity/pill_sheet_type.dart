@@ -183,8 +183,12 @@ extension PillSheetTypeFunctions on PillSheetType {
   /// ピルシートタイプの基本情報をまとめたオブジェクトを取得する。
   /// Firestoreパス、名前、総錠数、服用期間を含む構造体。
   /// データ転送やAPI通信で使用される。
-  PillSheetTypeInfo get typeInfo =>
-      PillSheetTypeInfo(pillSheetTypeReferencePath: rawPath, name: fullName, totalCount: totalCount, dosingPeriod: dosingPeriod);
+  PillSheetTypeInfo get typeInfo => PillSheetTypeInfo(
+        pillSheetTypeReferencePath: rawPath,
+        name: fullName,
+        totalCount: totalCount,
+        dosingPeriod: dosingPeriod,
+      );
 
   /// 休薬期間または偽薬期間を持つかどうかを判定する。
   /// 総錠数と服用期間が異なる場合にtrueを返す。
@@ -224,7 +228,10 @@ extension PillSheetTypeFunctions on PillSheetType {
 /// 複数のピルシートタイプから指定インデックスまでの総ピル数を計算する関数。
 /// ピルシート履歴の中で、特定の位置までの累積服用数を求める。
 /// インデックスが0の場合は0を返し、それ以外は指定インデックス前までの合計数を返す。
-int summarizedPillCountWithPillSheetTypesToIndex({required List<PillSheetType> pillSheetTypes, required int toIndex}) {
+int summarizedPillCountWithPillSheetTypesToIndex({
+  required List<PillSheetType> pillSheetTypes,
+  required int toIndex,
+}) {
   if (toIndex == 0) {
     return 0;
   }

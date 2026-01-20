@@ -15,10 +15,12 @@ final remoteConfig = FirebaseRemoteConfig.instance;
 Future<void> setupRemoteConfig() async {
   try {
     await (
-      remoteConfig.setConfigSettings(RemoteConfigSettings(
-        fetchTimeout: const Duration(minutes: 1),
-        minimumFetchInterval: const Duration(hours: 1),
-      )),
+      remoteConfig.setConfigSettings(
+        RemoteConfigSettings(
+          fetchTimeout: const Duration(minutes: 1),
+          minimumFetchInterval: const Duration(hours: 1),
+        ),
+      ),
       // [RemoteConfigDefaultValues] でgrepした場所に全て設定する
       remoteConfig.setDefaults({
         RemoteConfigKeys.isPaywallFirst: RemoteConfigParameterDefaultValues.isPaywallFirst,
@@ -65,7 +67,9 @@ Future<bool> appIsReleased(AppIsReleasedRef ref) async {
   if (kDebugMode) {
     return true;
   }
-  final releasedVersion = Version.parse(remoteConfig.getString(RemoteConfigKeys.releasedVersion));
+  final releasedVersion = Version.parse(
+    remoteConfig.getString(RemoteConfigKeys.releasedVersion),
+  );
   final packageInfo = await PackageInfo.fromPlatform();
   final appVersion = Version.parse(packageInfo.version);
   return !appVersion.isGreaterThan(releasedVersion);

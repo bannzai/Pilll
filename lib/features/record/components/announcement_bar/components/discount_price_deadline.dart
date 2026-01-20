@@ -22,7 +22,11 @@ class DiscountPriceDeadline extends HookConsumerWidget {
   });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final difference = ref.watch(durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
+    final difference = ref.watch(
+      durationToDiscountPriceDeadlineProvider(
+        discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
+      ),
+    );
     final annualPackage = ref.watch(annualPackageProvider(user));
     final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider);
     if (difference.inSeconds <= 0 || annualPackage == null || monthlyPremiumPackage == null) {
@@ -59,7 +63,10 @@ class DiscountPriceDeadline extends HookConsumerWidget {
               child: IconButton(
                 icon: SvgPicture.asset(
                   'images/arrow_right.svg',
-                  colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                  colorFilter: const ColorFilter.mode(
+                    Colors.white,
+                    BlendMode.srcIn,
+                  ),
                 ),
                 onPressed: () {},
                 iconSize: 24,

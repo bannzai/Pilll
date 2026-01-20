@@ -17,9 +17,7 @@ class FirebaseAuthResolver extends HookConsumerWidget {
               return builder(context, user);
             }
 
-            return _FirebaseAuthSignInResolver(
-              builder: builder,
-            );
+            return _FirebaseAuthSignInResolver(builder: builder);
           },
           error: (e, st) => UniversalErrorPage(
             error: e,

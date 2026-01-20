@@ -43,7 +43,11 @@ class ReleaseNote extends StatelessWidget {
                     Align(
                       alignment: Alignment.center,
                       child: Container(
-                        padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
+                        padding: const EdgeInsets.only(
+                          top: 40,
+                          left: 40,
+                          right: 40,
+                        ),
                         child: const Text(
                           '服薬時刻に目覚ましアラームが鳴るようにしました',
                           style: TextStyle(
@@ -113,14 +117,20 @@ void showReleaseNotePreDialog(BuildContext context) async {
 
   if (context.mounted) {
     showDialog(
-        context: context,
-        builder: (context) {
-          return const ReleaseNote();
-        });
+      context: context,
+      builder: (context) {
+        return const ReleaseNote();
+      },
+    );
   }
 }
 
 void openReleaseNote() async {
   // NOTE: www.notion.so から始まっている場合は間違い
-  launchUrl(Uri.parse('https://pilll.notion.site/202509-20-x-273293831717809790f9e6cbd8f948c2?pvs=74'), mode: LaunchMode.inAppBrowserView);
+  launchUrl(
+    Uri.parse(
+      'https://pilll.notion.site/202509-20-x-273293831717809790f9e6cbd8f948c2?pvs=74',
+    ),
+    mode: LaunchMode.inAppBrowserView,
+  );
 }

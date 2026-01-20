@@ -48,7 +48,10 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
     );
   }
 
-  List<Widget> _monthlyHeaderAndRelativedHistories(WidgetRef ref, PillSheetModifiedHistoryListModel model) {
+  List<Widget> _monthlyHeaderAndRelativedHistories(
+    WidgetRef ref,
+    PillSheetModifiedHistoryListModel model,
+  ) {
     var dirtyIndex = 0;
 
     return [
@@ -60,7 +63,10 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
         var isNecessaryDots = false;
         if (dirtyIndex != 0) {
           final previousHistory = model.pillSheetModifiedHistories[dirtyIndex - 1];
-          final diff = daysBetween(previousHistory.estimatedEventCausingDate, history.estimatedEventCausingDate);
+          final diff = daysBetween(
+            previousHistory.estimatedEventCausingDate,
+            history.estimatedEventCausingDate,
+          );
           if (diff > 1) {
             isNecessaryDots = true;
           }
@@ -84,9 +90,12 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
                     history.beforePillSheetGroup?.pillSheets.reversed,
                   )
                   ?.lastTakenOrZeroPillNumber,
-              pillSheetAppearanceMode: history.afterPillSheetGroup?.pillSheetAppearanceMode ?? PillSheetAppearanceMode.number),
+              pillSheetAppearanceMode: history.afterPillSheetGroup?.pillSheetAppearanceMode ?? PillSheetAppearanceMode.number,
+            ),
           PillSheetModifiedActionType.deletedPillSheet => PillSheetModifiedHistoryDeletedPillSheetAction(
-              estimatedEventCausingDate: history.estimatedEventCausingDate, pillSheetIDs: history.afterPillSheetGroup?.pillSheetIDs),
+              estimatedEventCausingDate: history.estimatedEventCausingDate,
+              pillSheetIDs: history.afterPillSheetGroup?.pillSheetIDs,
+            ),
           PillSheetModifiedActionType.takenPill => PillSheetModifiedHistoryTakenPillAction(
               premiumOrTrial: premiumOrTrial,
               estimatedEventCausingDate: history.estimatedEventCausingDate,
@@ -146,7 +155,9 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
                 children: [
                   SizedBox(
                     width: 56,
-                    child: SvgPicture.asset('images/vertical_dash_line.svg'),
+                    child: SvgPicture.asset(
+                      'images/vertical_dash_line.svg',
+                    ),
                   ),
                   const Spacer(),
                 ],
@@ -192,7 +203,9 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
 
 extension on Iterable<PillSheet> {
   // NOTE: メソッドのレシーバーと引数のreversedの状態は基本揃える
-  PillSheet? findFirstDifferencePillSheet(Iterable<PillSheet>? otherPillSheets) {
+  PillSheet? findFirstDifferencePillSheet(
+    Iterable<PillSheet>? otherPillSheets,
+  ) {
     if (otherPillSheets == null) {
       return null;
     }

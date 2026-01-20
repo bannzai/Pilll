@@ -33,18 +33,30 @@ class MissedTakenMessageTextField extends StatelessWidget {
             fontWeight: FontWeight.w400,
           ),
         ),
-        counter: Row(children: [
-          Text(
-            L.changeMissedNotificationMessage,
-            style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
-          ),
-          const Spacer(),
-          if (missedTakenMessage.value.characters.isNotEmpty)
+        counter: Row(
+          children: [
             Text(
-              '${missedTakenMessage.value.characters.length}/100',
-              style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
+              L.changeMissedNotificationMessage,
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontSize: 12,
+                fontWeight: FontWeight.w400,
+                color: TextColor.darkGray,
+              ),
             ),
-        ]),
+            const Spacer(),
+            if (missedTakenMessage.value.characters.isNotEmpty)
+              Text(
+                '${missedTakenMessage.value.characters.length}/100',
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w400,
+                  color: TextColor.darkGray,
+                ),
+              ),
+          ],
+        ),
       ),
       onChanged: (value) {
         missedTakenMessage.value = value;

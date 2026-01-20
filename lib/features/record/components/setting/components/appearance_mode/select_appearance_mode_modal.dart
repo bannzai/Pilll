@@ -24,7 +24,9 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
     final setting = ref.watch(settingProvider).requireValue;
     final pillSheetGroup = ref.watch(latestPillSheetGroupProvider).asData?.value;
     final setPillSheetGroup = ref.watch(setPillSheetGroupProvider);
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final registerReminderLocalNotification = ref.watch(
+      registerReminderLocalNotificationProvider,
+    );
 
     if (pillSheetGroup == null) {
       return const SizedBox();
@@ -105,17 +107,24 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
       onTap: () async {
         analytics.logEvent(
           name: 'did_select_pill_sheet_appearance',
-          parameters: {'mode': mode.toString(), 'isPremiumFunction': isPremiumFunction},
+          parameters: {
+            'mode': mode.toString(),
+            'isPremiumFunction': isPremiumFunction,
+          },
         );
 
         if (user.isPremium || user.isTrial) {
-          await setPillSheetGroup(pillSheetGroup.copyWith(pillSheetAppearanceMode: mode));
+          await setPillSheetGroup(
+            pillSheetGroup.copyWith(pillSheetAppearanceMode: mode),
+          );
           await registerReminderLocalNotification();
         } else if (isPremiumFunction) {
           showPremiumIntroductionSheet(context);
         } else {
           // User selected non premium function mode
-          await setPillSheetGroup(pillSheetGroup.copyWith(pillSheetAppearanceMode: mode));
+          await setPillSheetGroup(
+            pillSheetGroup.copyWith(pillSheetAppearanceMode: mode),
+          );
           await registerReminderLocalNotification();
         }
       },
@@ -123,7 +132,9 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
         height: 48,
         child: Row(
           children: [
-            SelectCircle(isSelected: mode == pillSheetGroup.pillSheetAppearanceMode),
+            SelectCircle(
+              isSelected: mode == pillSheetGroup.pillSheetAppearanceMode,
+            ),
             const SizedBox(width: 34),
             Text(
               text,
@@ -136,7 +147,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
             if (isPremiumFunction) ...[
               const SizedBox(width: 12),
               const PremiumBadge(),
-            ]
+            ],
           ],
         ),
       ),
@@ -152,9 +163,7 @@ void showSelectAppearanceModeModal(
   analytics.logScreenView(screenName: 'SelectAppearanceModeModal');
   showModalBottomSheet(
     context: context,
-    builder: (context) => SelectAppearanceModeModal(
-      user: user,
-    ),
+    builder: (context) => SelectAppearanceModeModal(user: user),
     backgroundColor: Colors.transparent,
   );
 }

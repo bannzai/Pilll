@@ -28,12 +28,16 @@ class RecordPagePillSheetList extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final pageController = usePageController(
-        initialPage: activePillSheet.groupIndex, viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width);
+      initialPage: activePillSheet.groupIndex,
+      viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width,
+    );
     return Column(
       children: [
         SizedBox(
           height: PillSheetViewLayout.calcHeight(
-            PillSheetViewLayout.mostLargePillSheetType(pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList()).numberOfLineInPillSheet,
+            PillSheetViewLayout.mostLargePillSheetType(
+              pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
+            ).numberOfLineInPillSheet,
             false,
           ),
           child: PageView(
@@ -57,16 +61,17 @@ class RecordPagePillSheetList extends HookConsumerWidget {
         if (pillSheetGroup.pillSheets.length > 1) ...[
           const SizedBox(height: 16),
           DotsIndicator(
-              controller: pageController,
-              itemCount: pillSheetGroup.pillSheets.length,
-              onDotTapped: (page) {
-                pageController.animateToPage(
-                  page,
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.easeInOut,
-                );
-              })
-        ]
+            controller: pageController,
+            itemCount: pillSheetGroup.pillSheets.length,
+            onDotTapped: (page) {
+              pageController.animateToPage(
+                page,
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeInOut,
+              );
+            },
+          ),
+        ],
       ],
     );
   }

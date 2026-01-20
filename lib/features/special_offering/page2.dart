@@ -22,7 +22,10 @@ import 'package:url_launcher/url_launcher.dart';
 
 class SpecialOfferingPage2 extends HookConsumerWidget {
   final ValueNotifier<bool> specialOfferingIsClosed2;
-  const SpecialOfferingPage2({super.key, required this.specialOfferingIsClosed2});
+  const SpecialOfferingPage2({
+    super.key,
+    required this.specialOfferingIsClosed2,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -65,7 +68,9 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
 
     final purchase = ref.watch(purchaseProvider);
     final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider);
-    final monthlySpecialOfferingPackage = ref.watch(monthlySpecialOfferingPackageProvider);
+    final monthlySpecialOfferingPackage = ref.watch(
+      monthlySpecialOfferingPackageProvider,
+    );
 
     if (monthlySpecialOfferingPackage == null || monthlyPremiumPackage == null) {
       return const ScaffoldIndicator();
@@ -91,7 +96,9 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
               onPressed: isClosing.value
                   ? null
                   : () async {
-                      analytics.logEvent(name: 'special_offering_close_button_tapped2');
+                      analytics.logEvent(
+                        name: 'special_offering_close_button_tapped2',
+                      );
 
                       final shouldClose = await showDialog<bool>(
                         context: context,
@@ -116,14 +123,18 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                             actions: [
                               AlertButton(
                                 onPressed: () async {
-                                  analytics.logEvent(name: 'special_offering_alert_cancel2');
+                                  analytics.logEvent(
+                                    name: 'special_offering_alert_cancel2',
+                                  );
                                   Navigator.of(context).pop(false);
                                 },
                                 text: '閉じない',
                               ),
                               AlertButton(
                                 onPressed: () async {
-                                  analytics.logEvent(name: 'special_offering_alert_close2');
+                                  analytics.logEvent(
+                                    name: 'special_offering_alert_close2',
+                                  );
                                   specialOfferingIsClosed2.value = true;
                                   Navigator.of(context).pop(true);
                                 },
@@ -153,7 +164,11 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  padding: const EdgeInsets.only(left: 40, right: 40, bottom: 40),
+                  padding: const EdgeInsets.only(
+                    left: 40,
+                    right: 40,
+                    bottom: 40,
+                  ),
                   width: MediaQuery.of(context).size.width,
                 ),
                 SingleChildScrollView(
@@ -183,15 +198,19 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                           isLoading.value = true;
 
                           try {
-                            final shouldShowCompleteDialog = await purchase(package);
+                            final shouldShowCompleteDialog = await purchase(
+                              package,
+                            );
                             if (shouldShowCompleteDialog) {
                               if (context.mounted) {
                                 showDialog(
                                   context: context,
                                   builder: (_) {
-                                    return PremiumCompleteDialog(onClose: () {
-                                      Navigator.of(context).pop();
-                                    });
+                                    return PremiumCompleteDialog(
+                                      onClose: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                    );
                                   },
                                 );
                               }
@@ -209,7 +228,9 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                       const SizedBox(height: 20),
                       AlertButton(
                         onPressed: () async {
-                          analytics.logEvent(name: 'pressed_premium_functions_on_sheet2');
+                          analytics.logEvent(
+                            name: 'pressed_premium_functions_on_sheet2',
+                          );
                           await launchUrl(Uri.parse(preimumLink));
                         },
                         text: L.viewPremiumFeatures,
@@ -217,9 +238,7 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                       const SizedBox(height: 20),
                       const AppStoreReviewCards(),
                       const SizedBox(height: 24),
-                      PremiumIntroductionFooter(
-                        isLoading: isLoading,
-                      ),
+                      PremiumIntroductionFooter(isLoading: isLoading),
                     ],
                   ),
                 ),

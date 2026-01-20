@@ -30,10 +30,7 @@ class BeforePillSheetGroupHistoryPage extends HookConsumerWidget {
       ref.watch(settingProvider),
     ).when(
       data: (data) {
-        return _Page(
-          pillSheetGroup: data.$1,
-          setting: data.$2,
-        );
+        return _Page(pillSheetGroup: data.$1, setting: data.$2);
       },
       error: (error, stackTrace) => UniversalErrorPage(
         error: error,
@@ -49,10 +46,7 @@ class _Page extends HookConsumerWidget {
   final PillSheetGroup? pillSheetGroup;
   final Setting setting;
 
-  const _Page({
-    required this.pillSheetGroup,
-    required this.setting,
-  });
+  const _Page({required this.pillSheetGroup, required this.setting});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -75,7 +69,10 @@ class _Page extends HookConsumerWidget {
     }
 
     final currentPillSheet = useState(pillSheetGroup.pillSheets[0]);
-    final pageController = usePageController(initialPage: 0, viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width);
+    final pageController = usePageController(
+      initialPage: 0,
+      viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width,
+    );
     pageController.addListener(() {
       final page = pageController.page?.toInt();
       if (page == null) {
@@ -84,8 +81,12 @@ class _Page extends HookConsumerWidget {
       final pillSheet = pillSheetGroup.pillSheets[page];
       currentPillSheet.value = pillSheet;
     });
-    final begin = DateTimeFormatter.slashYearAndMonthAndDay(currentPillSheet.value.beginDate);
-    final end = DateTimeFormatter.slashYearAndMonthAndDay(currentPillSheet.value.estimatedEndTakenDate);
+    final begin = DateTimeFormatter.slashYearAndMonthAndDay(
+      currentPillSheet.value.beginDate,
+    );
+    final end = DateTimeFormatter.slashYearAndMonthAndDay(
+      currentPillSheet.value.estimatedEndTakenDate,
+    );
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -107,12 +108,19 @@ class _Page extends HookConsumerWidget {
             Text(
               '$begin ~ $end',
               textAlign: TextAlign.center,
-              style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 17, fontWeight: FontWeight.w600, color: TextColor.main),
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontSize: 17,
+                fontWeight: FontWeight.w600,
+                color: TextColor.main,
+              ),
             ),
             const SizedBox(height: 20),
             SizedBox(
               height: PillSheetViewLayout.calcHeight(
-                PillSheetViewLayout.mostLargePillSheetType(pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList()).numberOfLineInPillSheet,
+                PillSheetViewLayout.mostLargePillSheetType(
+                  pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
+                ).numberOfLineInPillSheet,
                 false,
               ),
               child: PageView(

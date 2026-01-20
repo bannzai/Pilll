@@ -74,22 +74,34 @@ class HomePageBody extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final registerRemotePushNotificationToken = ref.watch(registerRemotePushNotificationTokenProvider);
+    final registerRemotePushNotificationToken = ref.watch(
+      registerRemotePushNotificationTokenProvider,
+    );
     final tabIndex = useState(0);
     final ticker = useSingleTickerProvider();
-    final tabController = useTabController(initialLength: HomePageTabType.values.length, vsync: ticker);
+    final tabController = useTabController(
+      initialLength: HomePageTabType.values.length,
+      vsync: ticker,
+    );
     tabController.addListener(() {
       tabIndex.value = tabController.index;
       _screenTracking(tabController.index);
     });
 
     final isJaLocale = ref.watch(isJaLocaleProvider);
-    final isAlreadyAnsweredPreStoreReviewModal = sharedPreferences.getBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal) ?? false;
+    final isAlreadyAnsweredPreStoreReviewModal = sharedPreferences.getBool(
+          BoolKey.isAlreadyAnsweredPreStoreReviewModal,
+        ) ??
+        false;
     final totalCountOfActionForTakenPill = sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
-    final disableShouldAskCancelReason = ref.watch(disableShouldAskCancelReasonProvider);
+    final disableShouldAskCancelReason = ref.watch(
+      disableShouldAskCancelReasonProvider,
+    );
     final shouldAskCancelReason = user.shouldAskCancelReason;
-    final monthlyPremiumIntroductionSheetPresentedDateMilliSeconds =
-        sharedPreferences.getInt(IntKey.monthlyPremiumIntroductionSheetPresentedDateMilliSeconds) ?? 0;
+    final monthlyPremiumIntroductionSheetPresentedDateMilliSeconds = sharedPreferences.getInt(
+          IntKey.monthlyPremiumIntroductionSheetPresentedDateMilliSeconds,
+        ) ??
+        0;
     final isOneMonthPassedSinceLastDisplayedMonthlyPremiumIntroductionSheet =
         now().millisecondsSinceEpoch - monthlyPremiumIntroductionSheetPresentedDateMilliSeconds > 1000 * 60 * 60 * 24 * 30;
     final bool isOneMonthPassedTrialDeadline;
@@ -112,18 +124,27 @@ class HomePageBody extends HookConsumerWidget {
           );
           disableShouldAskCancelReason();
           // ignore: use_build_context_synchronously
-          showDialog(context: context, builder: (_) => const ChurnSurveyCompleteDialog());
+          showDialog(
+            context: context,
+            builder: (_) => const ChurnSurveyCompleteDialog(),
+          );
         } else if (!isAlreadyAnsweredPreStoreReviewModal && totalCountOfActionForTakenPill > 10 && isJaLocale) {
           showModalBottomSheet(
             context: context,
             backgroundColor: Colors.transparent,
             builder: (_) => const PreStoreReviewModal(),
           );
-          sharedPreferences.setBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal, true);
+          sharedPreferences.setBool(
+            BoolKey.isAlreadyAnsweredPreStoreReviewModal,
+            true,
+          );
         } else if (isOneMonthPassedTrialDeadline && isOneMonthPassedSinceLastDisplayedMonthlyPremiumIntroductionSheet && !user.premiumOrTrial) {
           if (!user.premiumOrTrial) {
             showPremiumIntroductionSheet(context);
-            sharedPreferences.setInt(IntKey.monthlyPremiumIntroductionSheetPresentedDateMilliSeconds, now().millisecondsSinceEpoch);
+            sharedPreferences.setInt(
+              IntKey.monthlyPremiumIntroductionSheetPresentedDateMilliSeconds,
+              now().millisecondsSinceEpoch,
+            );
           }
         }
       });
@@ -138,7 +159,9 @@ class HomePageBody extends HookConsumerWidget {
       Future<void> f() async {
         try {
           debugPrint('[DEBUG] PushNotificationResolver');
-          await requestNotificationPermissions(registerRemotePushNotificationToken);
+          await requestNotificationPermissions(
+            registerRemotePushNotificationToken,
+          );
         } catch (e, stack) {
           errorLogger.recordError(e, stack);
           error.value = e.toString();
@@ -183,24 +206,28 @@ class HomePageBody extends HookConsumerWidget {
                   Tab(
                     text: L.pill,
                     icon: SvgPicture.asset(
-                        tabIndex.value == HomePageTabType.record.index ? 'images/tab_icon_pill_enable.svg' : 'images/tab_icon_pill_disable.svg'),
+                      tabIndex.value == HomePageTabType.record.index ? 'images/tab_icon_pill_enable.svg' : 'images/tab_icon_pill_disable.svg',
+                    ),
                   ),
                   Tab(
                     text: L.menstruation,
                     icon: SvgPicture.asset(
-                        tabIndex.value == HomePageTabType.menstruation.index ? 'images/menstruation.svg' : 'images/menstruation_disable.svg'),
+                      tabIndex.value == HomePageTabType.menstruation.index ? 'images/menstruation.svg' : 'images/menstruation_disable.svg',
+                    ),
                   ),
                   Tab(
                     text: L.calendar,
-                    icon: SvgPicture.asset(tabIndex.value == HomePageTabType.calendar.index
-                        ? 'images/tab_icon_calendar_enable.svg'
-                        : 'images/tab_icon_calendar_disable.svg'),
+                    icon: SvgPicture.asset(
+                      tabIndex.value == HomePageTabType.calendar.index
+                          ? 'images/tab_icon_calendar_enable.svg'
+                          : 'images/tab_icon_calendar_disable.svg',
+                    ),
                   ),
                   Tab(
                     text: L.settings,
-                    icon: SvgPicture.asset(tabIndex.value == HomePageTabType.setting.index
-                        ? 'images/tab_icon_setting_enable.svg'
-                        : 'images/tab_icon_setting_disable.svg'),
+                    icon: SvgPicture.asset(
+                      tabIndex.value == HomePageTabType.setting.index ? 'images/tab_icon_setting_enable.svg' : 'images/tab_icon_setting_disable.svg',
+                    ),
                   ),
                 ],
               ),

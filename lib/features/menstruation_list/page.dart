@@ -29,7 +29,12 @@ class MenstruationListPage extends HookConsumerWidget {
         centerTitle: false,
         title: Text(
           L.menstruationHistory,
-          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main),
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w500,
+            fontSize: 20,
+            color: TextColor.main,
+          ),
         ),
         backgroundColor: AppColors.white,
         elevation: 0,

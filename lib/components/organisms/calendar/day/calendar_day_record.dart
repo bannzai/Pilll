@@ -31,7 +31,10 @@ class CalendarDayRecord extends StatelessWidget {
               SvgPicture.asset(
                 'images/laugh.svg',
                 height: 10,
-                colorFilter: const ColorFilter.mode(AppColors.green, BlendMode.srcIn),
+                colorFilter: const ColorFilter.mode(
+                  AppColors.green,
+                  BlendMode.srcIn,
+                ),
               ),
             );
           case PhysicalConditionStatus.bad:
@@ -39,36 +42,27 @@ class CalendarDayRecord extends StatelessWidget {
               SvgPicture.asset(
                 'images/angry.svg',
                 height: 10,
-                colorFilter: const ColorFilter.mode(AppColors.danger, BlendMode.srcIn),
+                colorFilter: const ColorFilter.mode(
+                  AppColors.danger,
+                  BlendMode.srcIn,
+                ),
               ),
             );
         }
       }
       if (diary.hasSex) {
         widgets.add(
-          const Icon(
-            Icons.favorite,
-            size: 10,
-            color: AppColors.pinkRed,
-          ),
+          const Icon(Icons.favorite, size: 10, color: AppColors.pinkRed),
         );
       }
       if (diary.physicalConditions.isNotEmpty) {
         widgets.add(
-          const Icon(
-            Icons.accessibility_new,
-            size: 10,
-            color: AppColors.gray,
-          ),
+          const Icon(Icons.accessibility_new, size: 10, color: AppColors.gray),
         );
       }
       if (diary.memo.isNotEmpty) {
         widgets.add(
-          const Icon(
-            Icons.description,
-            size: 10,
-            color: AppColors.gray,
-          ),
+          const Icon(Icons.description, size: 10, color: AppColors.gray),
         );
       }
     }
@@ -89,19 +83,20 @@ class CalendarDayRecord extends StatelessWidget {
             fontFamily: FontFamily.number,
             fontSize: 9,
             fontWeight: FontWeight.w400,
-            color: TextColor.highEmphasis(
-              TextColor.black,
-            ),
+            color: TextColor.highEmphasis(TextColor.black),
           ),
         ),
       );
     }
 
-    return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-      for (final element in widgets.indexed) ...[
-        element.$2,
-        if (element.$1 != widgets.indexed.last.$1) const SizedBox(width: 2),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        for (final element in widgets.indexed) ...[
+          element.$2,
+          if (element.$1 != widgets.indexed.last.$1) const SizedBox(width: 2),
+        ],
       ],
-    ]);
+    );
   }
 }

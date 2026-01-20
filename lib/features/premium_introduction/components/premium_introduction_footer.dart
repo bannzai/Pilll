@@ -32,56 +32,76 @@ class PremiumIntroductionFooter extends StatelessWidget {
             child: RichText(
               textAlign: TextAlign.start,
               text: TextSpan(
-                style: const TextStyle(fontWeight: FontWeight.w400, fontSize: 10, fontFamily: FontFamily.japanese, color: TextColor.gray),
+                style: const TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 10,
+                  fontFamily: FontFamily.japanese,
+                  color: TextColor.gray,
+                ),
                 children: [
                   TextSpan(text: L.premiumTermsNotice1),
                   const TextSpan(text: '・'),
                   TextSpan(
                     text: L.privacyPolicy,
-                    style: const TextStyle(decoration: TextDecoration.underline),
+                    style: const TextStyle(
+                      decoration: TextDecoration.underline,
+                    ),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        launchUrl(Uri.parse('https://bannzai.github.io/Pilll/PrivacyPolicy'), mode: LaunchMode.inAppBrowserView);
+                        launchUrl(
+                          Uri.parse(
+                            'https://bannzai.github.io/Pilll/PrivacyPolicy',
+                          ),
+                          mode: LaunchMode.inAppBrowserView,
+                        );
                       },
                   ),
-                  const TextSpan(
-                    text: ' / ',
-                  ),
+                  const TextSpan(text: ' / '),
                   TextSpan(
                     text: L.termsOfService,
-                    style: const TextStyle(decoration: TextDecoration.underline),
+                    style: const TextStyle(
+                      decoration: TextDecoration.underline,
+                    ),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        launchUrl(Uri.parse('https://bannzai.github.io/Pilll/Terms'), mode: LaunchMode.inAppBrowserView);
+                        launchUrl(
+                          Uri.parse('https://bannzai.github.io/Pilll/Terms'),
+                          mode: LaunchMode.inAppBrowserView,
+                        );
                       },
                   ),
-                  const TextSpan(
-                    text: ' / ',
-                  ),
+                  const TextSpan(text: ' / '),
                   TextSpan(
                     text: L.premiumTermsNotice2,
-                    style: const TextStyle(decoration: TextDecoration.underline),
+                    style: const TextStyle(
+                      decoration: TextDecoration.underline,
+                    ),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        launchUrl(Uri.parse('https://bannzai.github.io/Pilll/SpecifiedCommercialTransactionAct'), mode: LaunchMode.inAppBrowserView);
+                        launchUrl(
+                          Uri.parse(
+                            'https://bannzai.github.io/Pilll/SpecifiedCommercialTransactionAct',
+                          ),
+                          mode: LaunchMode.inAppBrowserView,
+                        );
                       },
                   ),
-                  TextSpan(
-                    text: L.premiumTermsNotice3,
-                  ),
-                  TextSpan(
-                    text: L.autoRenewNotice,
-                  ),
-                  TextSpan(
-                    text: L.cancelAutoRenewInfo(storeName),
-                  ),
+                  TextSpan(text: L.premiumTermsNotice3),
+                  TextSpan(text: L.autoRenewNotice),
+                  TextSpan(text: L.cancelAutoRenewInfo(storeName)),
                   TextSpan(
                     text: L.moreDetails,
-                    style: const TextStyle(decoration: TextDecoration.underline),
+                    style: const TextStyle(
+                      decoration: TextDecoration.underline,
+                    ),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        launchUrl(Uri.parse('https://pilll.notion.site/Pilll-b10fd76f1d2246d286ad5cff03f22940?pvs=25'),
-                            mode: LaunchMode.inAppBrowserView);
+                        launchUrl(
+                          Uri.parse(
+                            'https://pilll.notion.site/Pilll-b10fd76f1d2246d286ad5cff03f22940?pvs=25',
+                          ),
+                          mode: LaunchMode.inAppBrowserView,
+                        );
                       },
                   ),
                 ],
@@ -92,15 +112,25 @@ class PremiumIntroductionFooter extends StatelessWidget {
             padding: const EdgeInsets.only(left: 16, right: 16, top: 8),
             child: RichText(
               text: TextSpan(
-                style: const TextStyle(fontWeight: FontWeight.w400, fontSize: 10, fontFamily: FontFamily.japanese, color: TextColor.gray),
+                style: const TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 10,
+                  fontFamily: FontFamily.japanese,
+                  color: TextColor.gray,
+                ),
                 children: [
                   TextSpan(text: L.lifetimePurchaseNotice1),
                   TextSpan(
                     text: L.lifetimePurchaseNotice2,
-                    style: const TextStyle(decoration: TextDecoration.underline),
+                    style: const TextStyle(
+                      decoration: TextDecoration.underline,
+                    ),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        launchUrl(Uri.parse(subscriptionManagementURL), mode: LaunchMode.inAppBrowserView);
+                        launchUrl(
+                          Uri.parse(subscriptionManagementURL),
+                          mode: LaunchMode.inAppBrowserView,
+                        );
                       },
                   ),
                   TextSpan(text: L.lifetimePurchaseNotice3),
@@ -118,9 +148,7 @@ class PremiumIntroductionFooter extends StatelessWidget {
                 if (shouldShowSnackbar) {
                   messenger.showSnackBar(
                     SnackBar(
-                      duration: const Duration(
-                        seconds: 2,
-                      ),
+                      duration: const Duration(seconds: 2),
                       content: Text(L.restorePurchase),
                     ),
                   );
@@ -154,26 +182,38 @@ class PremiumIntroductionFooter extends StatelessWidget {
     try {
       final purchaserInfo = await Purchases.restorePurchases();
       final entitlements = purchaserInfo.entitlements.all[premiumEntitlements];
-      analytics.logEvent(name: 'proceed_restore_purchase_info', parameters: {
-        'entitlements': entitlements?.identifier,
-        'isActivated': entitlements?.isActive,
-      });
+      analytics.logEvent(
+        name: 'proceed_restore_purchase_info',
+        parameters: {
+          'entitlements': entitlements?.identifier,
+          'isActivated': entitlements?.isActive,
+        },
+      );
       if (entitlements != null && entitlements.isActive) {
-        analytics.logEvent(name: 'done_restore_purchase_info', parameters: {
-          'entitlements': entitlements.identifier,
-        });
+        analytics.logEvent(
+          name: 'done_restore_purchase_info',
+          parameters: {'entitlements': entitlements.identifier},
+        );
         await callUpdatePurchaseInfo(purchaserInfo);
         return Future.value(true);
       }
-      analytics.logEvent(name: 'undone_restore_purchase_info', parameters: {
-        'entitlements': entitlements?.identifier,
-        'isActivated': entitlements?.isActive,
-      });
+      analytics.logEvent(
+        name: 'undone_restore_purchase_info',
+        parameters: {
+          'entitlements': entitlements?.identifier,
+          'isActivated': entitlements?.isActive,
+        },
+      );
       throw AlertError(L.noPreviousPurchaseInfo);
     } on PlatformException catch (exception, stack) {
       analytics.logEvent(
-          name: 'catched_restore_exception',
-          parameters: {'code': exception.code, 'details': exception.details.toString(), 'message': exception.message});
+        name: 'catched_restore_exception',
+        parameters: {
+          'code': exception.code,
+          'details': exception.details.toString(),
+          'message': exception.message,
+        },
+      );
       final newException = mapToDisplayedException(exception);
       if (newException == null) {
         return Future.value(false);
@@ -181,9 +221,10 @@ class PremiumIntroductionFooter extends StatelessWidget {
       errorLogger.recordError(exception, stack);
       throw newException;
     } catch (exception, stack) {
-      analytics.logEvent(name: 'catched_restore_anonymous_exception', parameters: {
-        'exception_type': exception.runtimeType.toString(),
-      });
+      analytics.logEvent(
+        name: 'catched_restore_anonymous_exception',
+        parameters: {'exception_type': exception.runtimeType.toString()},
+      );
       errorLogger.recordError(exception, stack);
       rethrow;
     }

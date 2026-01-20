@@ -62,7 +62,10 @@ class MenstruationHistoryCardState {
         break;
       }
       final menstruation = allMenstruations[i];
-      final menstruationDuration = menstruationsDiff(menstruation, allMenstruations[i + 1]);
+      final menstruationDuration = menstruationsDiff(
+        menstruation,
+        allMenstruations[i + 1],
+      );
       if (menstruationDuration != null) {
         totalMenstruationDuration += menstruationDuration;
         count += 1;

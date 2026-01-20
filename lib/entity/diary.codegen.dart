@@ -26,7 +26,7 @@ enum PhysicalConditionStatus {
   fine,
 
   /// 体調不良な状態
-  bad
+  bad,
 }
 
 /// ユーザーの日記エンティティクラス
@@ -95,7 +95,13 @@ class Diary with _$Diary {
   ///
   /// 新規日記作成時の初期値を設定する
   /// メモは空文字、体調リストは空、性行為はfalseで初期化
-  factory Diary.fromDate(DateTime date) => Diary(date: date, memo: '', createdAt: now(), physicalConditions: [], hasSex: false);
+  factory Diary.fromDate(DateTime date) => Diary(
+        date: date,
+        memo: '',
+        createdAt: now(),
+        physicalConditions: [],
+        hasSex: false,
+      );
 
   factory Diary.fromJson(Map<String, dynamic> json) => _$DiaryFromJson(json);
 

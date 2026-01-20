@@ -123,23 +123,38 @@ class RemoteConfigParameter with _$RemoteConfigParameter {
 
     /// プレミアム紹介画面でApp Storeレビューカードを表示するか
     /// trueの場合、プレミアム機能紹介時にレビュー促進カードも表示
-    @Default(RemoteConfigParameterDefaultValues.premiumIntroductionShowsAppStoreReviewCard) bool premiumIntroductionShowsAppStoreReviewCard,
+    @Default(
+      RemoteConfigParameterDefaultValues.premiumIntroductionShowsAppStoreReviewCard,
+    )
+    bool premiumIntroductionShowsAppStoreReviewCard,
 
     /// 特別オファー対象ユーザー作成日時の基準オフセット値（分単位）
     /// ユーザー登録からこの分数経過したユーザーが特別オファーの対象となる
-    @Default(RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffset) int specialOfferingUserCreationDateTimeOffset,
+    @Default(
+      RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffset,
+    )
+    int specialOfferingUserCreationDateTimeOffset,
 
     /// 特別オファー開始の基準オフセット値（分単位）
     /// 特別オファーの表示開始タイミングを制御する
-    @Default(RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetSince) int specialOfferingUserCreationDateTimeOffsetSince,
+    @Default(
+      RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetSince,
+    )
+    int specialOfferingUserCreationDateTimeOffsetSince,
 
     /// 特別オファー終了の基準オフセット値（分単位）
     /// 特別オファーの表示終了タイミングを制御する
-    @Default(RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil) int specialOfferingUserCreationDateTimeOffsetUntil,
+    @Default(
+      RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil,
+    )
+    int specialOfferingUserCreationDateTimeOffsetUntil,
 
     /// 特別オファー2で代替テキストを使用するかどうか
     /// trueの場合、特別オファー2画面で異なるテキスト表現を使用する
-    @Default(RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText) bool specialOffering2UseAlternativeText,
+    @Default(
+      RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
+    )
+    bool specialOffering2UseAlternativeText,
   }) = _RemoteConfigParameter;
   RemoteConfigParameter._();
   factory RemoteConfigParameter.fromJson(Map<String, dynamic> json) => _$RemoteConfigParameterFromJson(json);

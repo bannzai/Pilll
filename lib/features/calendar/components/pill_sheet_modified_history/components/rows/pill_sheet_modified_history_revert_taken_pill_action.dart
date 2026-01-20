@@ -45,18 +45,19 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
       pillNumbersOrHyphenOrDate: PillNumber(
-          pillNumber: switch (afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet) {
-        PillSheetV1() => PillSheetModifiedHistoryPillNumberOrDate.revert(
-            beforeLastTakenPillNumber: beforeLastTakenPillNumber,
-            afterLastTakenPillNumber: afterLastTakenPillNumber,
-            pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
-          ),
-        PillSheetV2() => PillSheetModifiedHistoryPillNumberOrDate.revertV2(
-            beforeLastTakenPillNumber: beforeLastTakenPillNumber,
-            afterLastTakenPillNumber: afterLastTakenPillNumber,
-            pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
-          ),
-      }),
+        pillNumber: switch (afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet) {
+          PillSheetV1() => PillSheetModifiedHistoryPillNumberOrDate.revert(
+              beforeLastTakenPillNumber: beforeLastTakenPillNumber,
+              afterLastTakenPillNumber: afterLastTakenPillNumber,
+              pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+            ),
+          PillSheetV2() => PillSheetModifiedHistoryPillNumberOrDate.revertV2(
+              beforeLastTakenPillNumber: beforeLastTakenPillNumber,
+              afterLastTakenPillNumber: afterLastTakenPillNumber,
+              pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+            ),
+        },
+      ),
       detail: Text(
         L.cancelTaking,
         style: const TextStyle(

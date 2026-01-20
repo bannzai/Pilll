@@ -16,7 +16,9 @@ Future<String> debugInfo(String separator) async {
   final userID = auth.FirebaseAuth.instance.currentUser?.uid;
   if (userID == null) {
     final sharedPreferences = await SharedPreferences.getInstance();
-    return Future.value('DEBUG INFO user is not found. lastest last login id ${sharedPreferences.getString(StringKey.lastSignInAnonymousUID)}');
+    return Future.value(
+      'DEBUG INFO user is not found. lastest last login id ${sharedPreferences.getString(StringKey.lastSignInAnonymousUID)}',
+    );
   }
 
   DatabaseConnection databaseConnection = DatabaseConnection(userID);
@@ -33,7 +35,9 @@ Future<String> debugInfo(String separator) async {
 
   Setting? setting;
   try {
-    setting = await databaseConnection.userReference().get().then((event) => event.data()?.setting);
+    setting = await databaseConnection.userReference().get().then(
+          (event) => event.data()?.setting,
+        );
   } catch (_) {}
 
   PackageInfo? package;

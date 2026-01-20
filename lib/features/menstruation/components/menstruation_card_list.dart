@@ -32,8 +32,17 @@ class MenstruationCardList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final card = cardState(latestPillSheetGroup, latestMenstruation, setting, calendarScheduledMenstruationBandModels);
-    final historyCard = historyCardState(latestMenstruation, allMenstruation, user);
+    final card = cardState(
+      latestPillSheetGroup,
+      latestMenstruation,
+      setting,
+      calendarScheduledMenstruationBandModels,
+    );
+    final historyCard = historyCardState(
+      latestMenstruation,
+      allMenstruation,
+      user,
+    );
     return Expanded(
       child: Container(
         color: AppColors.background,
@@ -74,12 +83,18 @@ MenstruationCardState? cardState(
   final inTheMiddleDateRanges = menstruationDateRanges.map((e) => DateRange(e.begin, e.end)).where((element) => element.inRange(today()));
 
   if (inTheMiddleDateRanges.isNotEmpty) {
-    return MenstruationCardState.inTheMiddle(scheduledDate: inTheMiddleDateRanges.first.begin);
+    return MenstruationCardState.inTheMiddle(
+      scheduledDate: inTheMiddleDateRanges.first.begin,
+    );
   }
 
-  final futureDateRanges = menstruationDateRanges.where((element) => element.begin.isAfter(today()));
+  final futureDateRanges = menstruationDateRanges.where(
+    (element) => element.begin.isAfter(today()),
+  );
   if (futureDateRanges.isNotEmpty) {
-    return MenstruationCardState.future(nextSchedule: futureDateRanges.first.begin);
+    return MenstruationCardState.future(
+      nextSchedule: futureDateRanges.first.begin,
+    );
   }
 
   // 生理設定のfromMenstruationの値がすべてのピルシートタイプの合計よりも小さい場合に起こる

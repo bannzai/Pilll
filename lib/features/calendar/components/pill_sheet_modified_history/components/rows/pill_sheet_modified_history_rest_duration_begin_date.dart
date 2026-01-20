@@ -25,7 +25,11 @@ class PillSheetModifiedHistoryChangedRestDurationBeginDate extends StatelessWidg
     }
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      pillNumbersOrHyphenOrDate: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedRestDurationBeginDate(value)),
+      pillNumbersOrHyphenOrDate: PillNumber(
+        pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedRestDurationBeginDate(
+          value,
+        ),
+      ),
       detail: Text(
         L.changePauseStartDate,
         style: const TextStyle(

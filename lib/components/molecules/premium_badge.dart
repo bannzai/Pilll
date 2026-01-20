@@ -15,13 +15,15 @@ class PremiumBadge extends StatelessWidget {
         color: AppColors.gold,
         borderRadius: BorderRadius.circular(41),
       ),
-      child: const Text('Premium',
-          style: TextStyle(
-            color: TextColor.white,
-            fontFamily: FontFamily.number,
-            fontSize: 12,
-            fontWeight: FontWeight.w600,
-          )),
+      child: const Text(
+        'Premium',
+        style: TextStyle(
+          color: TextColor.white,
+          fontFamily: FontFamily.number,
+          fontSize: 12,
+          fontWeight: FontWeight.w600,
+        ),
+      ),
     );
   }
 }

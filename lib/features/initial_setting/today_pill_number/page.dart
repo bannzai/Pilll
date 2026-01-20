@@ -31,10 +31,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text(
-          '2/3',
-          style: TextStyle(color: TextColor.black),
-        ),
+        title: const Text('2/3', style: TextStyle(color: TextColor.black)),
         backgroundColor: AppColors.white,
       ),
       body: SafeArea(
@@ -68,8 +65,12 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                     InconspicuousButton(
                       onPressed: () async {
                         store.unsetTodayPillNumber();
-                        analytics.logEvent(name: 'unknown_number_initial_setting');
-                        Navigator.of(context).push(InitialSettingReminderTimesPageRoute.route());
+                        analytics.logEvent(
+                          name: 'unknown_number_initial_setting',
+                        );
+                        Navigator.of(
+                          context,
+                        ).push(InitialSettingReminderTimesPageRoute.route());
                       },
                       text: L.notYetKnown,
                     ),
@@ -87,8 +88,12 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                       onPressed: state.todayPillNumber == null
                           ? null
                           : () async {
-                              analytics.logEvent(name: 'done_today_number_initial_setting');
-                              Navigator.of(context).push(InitialSettingReminderTimesPageRoute.route());
+                              analytics.logEvent(
+                                name: 'done_today_number_initial_setting',
+                              );
+                              Navigator.of(context).push(
+                                InitialSettingReminderTimesPageRoute.route(),
+                              );
                             },
                     ),
                   ),
@@ -106,7 +111,9 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
 extension InitialSettingSelectTodayPillNumberPageRoute on InitialSettingSelectTodayPillNumberPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: 'InitialSettingSelectTodayPillNumberPage'),
+      settings: const RouteSettings(
+        name: 'InitialSettingSelectTodayPillNumberPage',
+      ),
       builder: (_) => const InitialSettingSelectTodayPillNumberPage(),
     );
   }

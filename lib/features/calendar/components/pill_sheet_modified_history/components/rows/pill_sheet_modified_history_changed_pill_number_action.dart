@@ -38,11 +38,12 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
       pillNumbersOrHyphenOrDate: PillNumber(
-          pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedPillNumber(
-        beforeTodayPillNumber: beforeTodayPillNumber,
-        afterTodayPillNumber: afterTodayPillNumber,
-        pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
-      )),
+        pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedPillNumber(
+          beforeTodayPillNumber: beforeTodayPillNumber,
+          afterTodayPillNumber: afterTodayPillNumber,
+          pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+        ),
+      ),
       detail: Text(
         L.changedPillNumber,
         style: const TextStyle(

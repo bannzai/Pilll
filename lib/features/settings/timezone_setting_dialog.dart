@@ -25,8 +25,15 @@ class TimezoneSettingDialog extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final setSetting = ref.watch(setSettingProvider);
     return AlertDialog(
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
-      contentPadding: const EdgeInsets.only(left: 24, right: 24, top: 32, bottom: 20),
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+      ),
+      contentPadding: const EdgeInsets.only(
+        left: 24,
+        right: 24,
+        top: 32,
+        bottom: 20,
+      ),
       actionsPadding: const EdgeInsets.only(left: 24, right: 24),
       title: Text(
         L.syncWithDeviceTimeZone(deviceTimezoneName),
@@ -75,7 +82,9 @@ class TimezoneSettingDialog extends HookConsumerWidget {
 
             final navigator = Navigator.of(context);
             try {
-              await setSetting(setting.copyWith(timezoneDatabaseName: deviceTimezoneName));
+              await setSetting(
+                setting.copyWith(timezoneDatabaseName: deviceTimezoneName),
+              );
               onDone(deviceTimezoneName);
             } catch (error) {
               if (context.mounted) showErrorAlert(context, error);

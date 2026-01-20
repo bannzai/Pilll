@@ -25,7 +25,9 @@ class PillSheetModifiedHistoryEndedRestDuration extends StatelessWidget {
     }
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      pillNumbersOrHyphenOrDate: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.hyphen()),
+      pillNumbersOrHyphenOrDate: PillNumber(
+        pillNumber: PillSheetModifiedHistoryPillNumberOrDate.hyphen(),
+      ),
       detail: Text(
         L.resumeTaking,
         style: const TextStyle(

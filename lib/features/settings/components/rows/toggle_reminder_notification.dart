@@ -12,16 +12,17 @@ import 'package:pilll/utils/local_notification.dart';
 class ToggleReminderNotification extends HookConsumerWidget {
   final Setting setting;
 
-  const ToggleReminderNotification({
-    super.key,
-    required this.setting,
-  });
+  const ToggleReminderNotification({super.key, required this.setting});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final setSetting = ref.watch(setSettingProvider);
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
-    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
+    final registerReminderLocalNotification = ref.watch(
+      registerReminderLocalNotificationProvider,
+    );
+    final cancelReminderLocalNotification = ref.watch(
+      cancelReminderLocalNotificationProvider,
+    );
 
     return SwitchListTile(
       title: Text(
@@ -34,9 +35,7 @@ class ToggleReminderNotification extends HookConsumerWidget {
       ),
       activeThumbColor: AppColors.secondary,
       onChanged: (bool value) async {
-        analytics.logEvent(
-          name: 'did_select_toggle_reminder',
-        );
+        analytics.logEvent(name: 'did_select_toggle_reminder');
         final messenger = ScaffoldMessenger.of(context);
         messenger.hideCurrentSnackBar();
         try {
@@ -49,9 +48,7 @@ class ToggleReminderNotification extends HookConsumerWidget {
           messenger.showSnackBar(
             SnackBar(
               duration: const Duration(seconds: 2),
-              content: Text(
-                L.pillReminderChanged(value ? 'ON' : 'OFF'),
-              ),
+              content: Text(L.pillReminderChanged(value ? 'ON' : 'OFF')),
             ),
           );
         } catch (error) {

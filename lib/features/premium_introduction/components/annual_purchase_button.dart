@@ -27,8 +27,10 @@ class AnnualPurchaseButton extends StatelessWidget {
     Locale locale = Localizations.localeOf(context);
     // NOTE: [DailyPrice] 日額を表示してみる。since: 2025-05-21。効果がなかったらmonthlyPriceString を表示するように戻す
     // final monthlyPriceString = NumberFormat.simpleCurrency(locale: locale.toString(), decimalDigits: 0).format(monthlyPrice);
-    final String dailyPriceString =
-        NumberFormat.simpleCurrency(locale: locale.toString(), decimalDigits: 2).format(annualPackage.storeProduct.price / 365);
+    final String dailyPriceString = NumberFormat.simpleCurrency(
+      locale: locale.toString(),
+      decimalDigits: 2,
+    ).format(annualPackage.storeProduct.price / 365);
 
     return GestureDetector(
       onTap: () {
@@ -42,10 +44,7 @@ class AnnualPurchaseButton extends StatelessWidget {
             decoration: BoxDecoration(
               color: AppColors.blueBackground,
               borderRadius: const BorderRadius.all(Radius.circular(4)),
-              border: Border.all(
-                width: 2,
-                color: AppColors.primary,
-              ),
+              border: Border.all(width: 2, color: AppColors.primary),
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -127,7 +126,9 @@ class _DiscountBadge extends StatelessWidget {
       ),
       child: Text(
         (offeringType == OfferingType.discount || offeringType == OfferingType.specialOffering)
-            ? L.offPercentForMonthlyPremiumPackage(offPercentForMonthlyPremiumPackage)
+            ? L.offPercentForMonthlyPremiumPackage(
+                offPercentForMonthlyPremiumPackage,
+              )
             : '$offPercentForMonthlyPackage％OFF',
         style: const TextStyle(
           fontWeight: FontWeight.w700,

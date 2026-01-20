@@ -18,10 +18,7 @@ class OKDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Icon(
-        Icons.help,
-        color: AppColors.primary,
-      ),
+      title: const Icon(Icons.help, color: AppColors.primary),
       content: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.min,
@@ -36,17 +33,17 @@ class OKDialog extends StatelessWidget {
                 color: TextColor.main,
               ),
             ),
-            const SizedBox(
-              height: 15,
-            ),
+            const SizedBox(height: 15),
           ],
-          Text(message,
-              style: const TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w300,
-                fontSize: 14,
-                color: TextColor.main,
-              )),
+          Text(
+            message,
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w300,
+              fontSize: 14,
+              color: TextColor.main,
+            ),
+          ),
         ],
       ),
       actions: <Widget>[
@@ -74,10 +71,6 @@ Future<void> showOKDialog(
 }) async {
   return showDialog(
     context: context,
-    builder: (context) => OKDialog(
-      title: title,
-      message: message,
-      ok: ok,
-    ),
+    builder: (context) => OKDialog(title: title, message: message, ok: ok),
   );
 }

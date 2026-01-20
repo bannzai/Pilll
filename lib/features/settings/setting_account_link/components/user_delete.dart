@@ -27,7 +27,9 @@ class UserDelete extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
-    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
+    final cancelReminderLocalNotification = ref.watch(
+      cancelReminderLocalNotificationProvider,
+    );
     final firebaseAuthUser = ref.watch(firebaseUserStateProvider);
 
     useEffect(() {
@@ -76,7 +78,7 @@ class UserDelete extends HookConsumerWidget {
                     isAppleLinked: isAppleLinked,
                     isGoogleLinked: isGoogleLinked,
                   ),
-                  cancelReminderLocalNotification()
+                  cancelReminderLocalNotification(),
                 ).wait;
               },
             ),
@@ -123,7 +125,11 @@ class UserDelete extends HookConsumerWidget {
                 }
                 navigator.pop();
                 // ignore: use_build_context_synchronously
-                await _delete(context, isAppleLinked: isAppleLinked, isGoogleLinked: isGoogleLinked);
+                await _delete(
+                  context,
+                  isAppleLinked: isAppleLinked,
+                  isGoogleLinked: isGoogleLinked,
+                );
               },
             ),
           ],

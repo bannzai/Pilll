@@ -4,9 +4,7 @@ import 'app_store_review_card.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
 class AppStoreReviewCards extends HookConsumerWidget {
-  const AppStoreReviewCards({
-    super.key,
-  });
+  const AppStoreReviewCards({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -59,10 +57,7 @@ class AppStoreReviewCards extends HookConsumerWidget {
       children: [
         const Text(
           'ストアの評価もご覧ください',
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.w600,
-          ),
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
         ),
         const SizedBox(height: 10),
         SizedBox(
@@ -75,7 +70,10 @@ class AppStoreReviewCards extends HookConsumerWidget {
             },
             itemBuilder: (context, index) {
               return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 8.0,
+                  vertical: 8.0,
+                ),
                 child: reviews[index],
               );
             },

@@ -19,7 +19,9 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorKey: navigatorKey,
-      navigatorObservers: [FirebaseAnalyticsObserver(analytics: firebaseAnalytics)],
+      navigatorObservers: [
+        FirebaseAnalyticsObserver(analytics: firebaseAnalytics),
+      ],
       theme: ThemeData(
         useMaterial3: false,
         appBarTheme: const AppBarTheme(
@@ -35,12 +37,14 @@ class App extends StatelessWidget {
         primaryColor: AppColors.secondary,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(
-            textTheme: CupertinoTextThemeData(
-                textStyle: TextStyle(
-          fontFamily: FontFamily.number,
-          fontWeight: FontWeight.w500,
-          fontSize: 24,
-        ))),
+          textTheme: CupertinoTextThemeData(
+            textStyle: TextStyle(
+              fontFamily: FontFamily.number,
+              fontWeight: FontWeight.w500,
+              fontSize: 24,
+            ),
+          ),
+        ),
         buttonTheme: const ButtonThemeData(
           buttonColor: AppColors.primary,
           disabledColor: AppColors.disable,
@@ -55,7 +59,9 @@ class App extends StatelessWidget {
           headerBackgroundColor: AppColors.primary,
         ),
         switchTheme: SwitchThemeData(
-          thumbColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
+          thumbColor: WidgetStateProperty.resolveWith<Color?>((
+            Set<WidgetState> states,
+          ) {
             if (states.contains(WidgetState.disabled)) {
               return null;
             }
@@ -64,7 +70,9 @@ class App extends StatelessWidget {
             }
             return null;
           }),
-          trackColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
+          trackColor: WidgetStateProperty.resolveWith<Color?>((
+            Set<WidgetState> states,
+          ) {
             if (states.contains(WidgetState.disabled)) {
               return null;
             }
@@ -75,7 +83,9 @@ class App extends StatelessWidget {
           }),
         ),
         radioTheme: RadioThemeData(
-          fillColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
+          fillColor: WidgetStateProperty.resolveWith<Color?>((
+            Set<WidgetState> states,
+          ) {
             if (states.contains(WidgetState.disabled)) {
               return null;
             }
@@ -87,7 +97,9 @@ class App extends StatelessWidget {
           }),
         ),
         checkboxTheme: CheckboxThemeData(
-          fillColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
+          fillColor: WidgetStateProperty.resolveWith<Color?>((
+            Set<WidgetState> states,
+          ) {
             if (states.contains(WidgetState.disabled)) {
               return null;
             }
@@ -98,9 +110,7 @@ class App extends StatelessWidget {
           }),
         ),
       ),
-      home: const ProviderScope(
-        child: RootPage(),
-      ),
+      home: const ProviderScope(child: RootPage()),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
     );

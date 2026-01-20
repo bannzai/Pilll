@@ -50,17 +50,11 @@ void main() {
         final end = DateTime.parse("2020-09-05");
         final dateRange = DateRange(begin, end);
         expect(
-          offsetForStartPositionAtLine(
-            DateTime.parse("2020-08-31"),
-            dateRange,
-          ),
+          offsetForStartPositionAtLine(DateTime.parse("2020-08-31"), dateRange),
           1,
         );
         expect(
-          offsetForStartPositionAtLine(
-            DateTime.parse("2020-09-01"),
-            dateRange,
-          ),
+          offsetForStartPositionAtLine(DateTime.parse("2020-09-01"), dateRange),
           2,
         );
       });

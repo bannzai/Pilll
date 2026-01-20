@@ -56,7 +56,6 @@ iOS・Androidアプリ両方を提供しております。Flutter製のアプリ
 - 関数、メソッドの引数は、{required} をつけましょう。引数ラベルがないとわかりづらいです
 
 ### Lintルール (analysis_options.yaml)
-- 1ラインは150行
 - その他は、 @analysis_options.yaml を参照
 
 ### ファイル構成・命名規則
@@ -70,7 +69,7 @@ iOS・Androidアプリ両方を提供しております。Flutter製のアプリ
 ### コード生成
 - `build_runner` を使用
 - 対象: freezed, json_serializable, riverpod_generator
-- 実行コマンド: `flutter pub run build_runner build --delete-conflicting-outputs;dart format lib -l 150`
+- 実行コマンド: `flutter pub run build_runner build --delete-conflicting-outputs;dart format lib`
 
 ### テスト
 - テストファイルは `test/` ディレクトリに配置

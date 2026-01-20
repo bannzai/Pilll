@@ -33,10 +33,7 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
       ref.watch(purchaseOfferingsProvider),
       ref.watch(userProvider),
     ).when(
-      data: (data) => PremiumIntroductionSheetBody(
-        offerings: data.$1,
-        user: data.$2,
-      ),
+      data: (data) => PremiumIntroductionSheetBody(offerings: data.$1, user: data.$2),
       error: (error, stackTrace) => UniversalErrorPage(
         error: error,
         reload: () {
@@ -92,7 +89,11 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                         fit: BoxFit.cover,
                       ),
                     ),
-                    padding: const EdgeInsets.only(left: 40, right: 40, bottom: 40),
+                    padding: const EdgeInsets.only(
+                      left: 40,
+                      right: 40,
+                      bottom: 40,
+                    ),
                     width: MediaQuery.of(context).size.width,
                   ),
                   SingleChildScrollView(
@@ -129,7 +130,9 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                         const SizedBox(height: 24),
                         AlertButton(
                           onPressed: () async {
-                            analytics.logEvent(name: 'pressed_premium_functions_on_sheet');
+                            analytics.logEvent(
+                              name: 'pressed_premium_functions_on_sheet',
+                            );
                             await launchUrl(Uri.parse(preimumLink));
                           },
                           text: L.viewPremiumFeatures,
@@ -140,9 +143,7 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                         const SizedBox(height: 24),
                         const AppStoreReviewCards(),
                         const SizedBox(height: 24),
-                        PremiumIntroductionFooter(
-                          isLoading: isLoading,
-                        ),
+                        PremiumIntroductionFooter(isLoading: isLoading),
                       ],
                     ),
                   ),

@@ -37,10 +37,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
               fontSize: 16,
             ),
           ),
-          if (!isPremium) ...[
-            const SizedBox(width: 8),
-            const PremiumBadge(),
-          ]
+          if (!isPremium) ...[const SizedBox(width: 8), const PremiumBadge()],
         ],
       ),
       subtitle: Text(
@@ -53,19 +50,19 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
       ),
       activeThumbColor: AppColors.secondary,
       onChanged: (bool value) async {
-        analytics.logEvent(
-          name: 'toggle_creating_new_pillsheet',
-        );
+        analytics.logEvent(name: 'toggle_creating_new_pillsheet');
         if (isPremium || isTrial) {
           final messenger = ScaffoldMessenger.of(context);
           messenger.hideCurrentSnackBar();
-          await setSetting(setting.copyWith(isAutomaticallyCreatePillSheet: value));
-          messenger.showSnackBar(SnackBar(
-            duration: const Duration(seconds: 2),
-            content: Text(
-              "ピルシートグループの自動追加を${value ? "ON" : "OFF"}にしました",
+          await setSetting(
+            setting.copyWith(isAutomaticallyCreatePillSheet: value),
+          );
+          messenger.showSnackBar(
+            SnackBar(
+              duration: const Duration(seconds: 2),
+              content: Text("ピルシートグループの自動追加を${value ? "ON" : "OFF"}にしました"),
             ),
-          ));
+          );
         } else if (!isPremium) {
           showPremiumIntroductionSheet(context);
         }

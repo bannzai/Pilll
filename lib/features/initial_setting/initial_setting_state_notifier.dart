@@ -50,22 +50,24 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     this.registerReminderLocalNotificationRunner,
     DateTime _now,
   ) : super(
-          InitialSettingState(reminderTimes: [
-            ReminderTime(hour: _now.hour, minute: 0),
-            ReminderTime(hour: _now.hour + 1, minute: 0),
-          ]),
+          InitialSettingState(
+            reminderTimes: [
+              ReminderTime(hour: _now.hour, minute: 0),
+              ReminderTime(hour: _now.hour + 1, minute: 0),
+            ],
+          ),
         );
 
   void selectedFirstPillSheetType(PillSheetType pillSheetType) {
-    state = state.copyWith(pillSheetTypes: [
-      pillSheetType,
-      pillSheetType,
-      pillSheetType,
-    ]);
+    state = state.copyWith(
+      pillSheetTypes: [pillSheetType, pillSheetType, pillSheetType],
+    );
   }
 
   void addPillSheetType(PillSheetType pillSheetType) {
-    state = state.copyWith(pillSheetTypes: [...state.pillSheetTypes, pillSheetType]);
+    state = state.copyWith(
+      pillSheetTypes: [...state.pillSheetTypes, pillSheetType],
+    );
   }
 
   void changePillSheetType(int index, PillSheetType pillSheetType) {
@@ -120,7 +122,9 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     final todayPillNumber = state.todayPillNumber;
     PillSheetGroup? createdPillSheetGroup;
     if (todayPillNumber != null) {
-      final createdPillSheets = state.pillSheetTypes.asMap().keys.map((pageIndex) {
+      final createdPillSheets = state.pillSheetTypes.asMap().keys.map((
+        pageIndex,
+      ) {
         return InitialSettingState.buildPillSheet(
           pageIndex: pageIndex,
           todayPillNumber: todayPillNumber,
@@ -177,7 +181,9 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   }
 }
 
-final registerReminderLocalNotificationRunnerProvider = Provider((ref) => RegisterReminderLocalNotificationRunner());
+final registerReminderLocalNotificationRunnerProvider = Provider(
+  (ref) => RegisterReminderLocalNotificationRunner(),
+);
 
 // MockができないのでWrapperを作る
 class RegisterReminderLocalNotificationRunner {

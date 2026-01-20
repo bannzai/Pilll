@@ -23,48 +23,64 @@ class DiaryPostPhysicalCondition extends StatelessWidget {
         Container(
           height: 48,
           decoration: BoxDecoration(
-            border: Border.all(
-              width: 1,
-              color: AppColors.divider,
-            ),
+            border: Border.all(width: 1, color: AppColors.divider),
             borderRadius: BorderRadius.circular(10),
           ),
           child: Row(
             children: [
               Container(
                 decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.only(topLeft: Radius.circular(8), bottomLeft: Radius.circular(8)),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(8),
+                    bottomLeft: Radius.circular(8),
+                  ),
                   color: physicalCondition.value == PhysicalConditionStatus.bad ? AppColors.thinSecondary : Colors.transparent,
                 ),
                 child: IconButton(
-                    icon: SvgPicture.asset('images/angry.svg',
-                        colorFilter: ColorFilter.mode(
-                            physicalCondition.value == PhysicalConditionStatus.bad ? AppColors.primary : TextColor.darkGray, BlendMode.srcIn)),
-                    onPressed: () {
-                      if (physicalCondition.value == PhysicalConditionStatus.bad) {
-                        physicalCondition.value = null;
-                      } else {
-                        physicalCondition.value = PhysicalConditionStatus.bad;
-                      }
-                    }),
+                  icon: SvgPicture.asset(
+                    'images/angry.svg',
+                    colorFilter: ColorFilter.mode(
+                      physicalCondition.value == PhysicalConditionStatus.bad ? AppColors.primary : TextColor.darkGray,
+                      BlendMode.srcIn,
+                    ),
+                  ),
+                  onPressed: () {
+                    if (physicalCondition.value == PhysicalConditionStatus.bad) {
+                      physicalCondition.value = null;
+                    } else {
+                      physicalCondition.value = PhysicalConditionStatus.bad;
+                    }
+                  },
+                ),
               ),
-              const SizedBox(height: 48, child: VerticalDivider(width: 1, color: AppColors.divider)),
+              const SizedBox(
+                height: 48,
+                child: VerticalDivider(width: 1, color: AppColors.divider),
+              ),
               Container(
                 decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.only(topRight: Radius.circular(8), bottomRight: Radius.circular(8)),
+                  borderRadius: const BorderRadius.only(
+                    topRight: Radius.circular(8),
+                    bottomRight: Radius.circular(8),
+                  ),
                   color: physicalCondition.value == PhysicalConditionStatus.fine ? AppColors.thinSecondary : Colors.transparent,
                 ),
                 child: IconButton(
-                    icon: SvgPicture.asset('images/laugh.svg',
-                        colorFilter: ColorFilter.mode(
-                            physicalCondition.value == PhysicalConditionStatus.fine ? AppColors.primary : TextColor.darkGray, BlendMode.srcIn)),
-                    onPressed: () {
-                      if (physicalCondition.value == PhysicalConditionStatus.fine) {
-                        physicalCondition.value = null;
-                      } else {
-                        physicalCondition.value = PhysicalConditionStatus.fine;
-                      }
-                    }),
+                  icon: SvgPicture.asset(
+                    'images/laugh.svg',
+                    colorFilter: ColorFilter.mode(
+                      physicalCondition.value == PhysicalConditionStatus.fine ? AppColors.primary : TextColor.darkGray,
+                      BlendMode.srcIn,
+                    ),
+                  ),
+                  onPressed: () {
+                    if (physicalCondition.value == PhysicalConditionStatus.fine) {
+                      physicalCondition.value = null;
+                    } else {
+                      physicalCondition.value = PhysicalConditionStatus.fine;
+                    }
+                  },
+                ),
               ),
             ],
           ),

@@ -33,7 +33,10 @@ Future<void> entrypoint() async {
   runZonedGuarded(() async {
     // [Locale:Setup] ほかのエントリーポイントでもよぶ必要がある
     // 日本語のフォーマットに頼っている部分があるので、jaは絶対に初期化しておく
-    await (initializeDateFormatting('ja'), initializeDateFormatting(Platform.localeName)).wait;
+    await (
+      initializeDateFormatting('ja'),
+      initializeDateFormatting(Platform.localeName),
+    ).wait;
     Intl.defaultLocale = 'ja';
 
     WidgetsFlutterBinding.ensureInitialized();
@@ -44,7 +47,9 @@ Future<void> entrypoint() async {
     // また、同じくQuickRecordの処理開始までにMethodChannelが確立されていてほしいのでこの処理はなるべく早く実行する
     definedChannel();
 
-    HomeWidget.setAppGroupId(Environment.isDevelopment ? 'group.com.mizuki.Ohashi.Pilll.dev' : 'group.com.mizuki.Ohashi.Pilll');
+    HomeWidget.setAppGroupId(
+      Environment.isDevelopment ? 'group.com.mizuki.Ohashi.Pilll.dev' : 'group.com.mizuki.Ohashi.Pilll',
+    );
 
     if (kDebugMode) {
       overrideDebugPrint();
@@ -67,23 +72,30 @@ Future<void> entrypoint() async {
 
     // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
-    runApp(ProviderScope(
-      overrides: [
-        sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-      ],
-      child: const App(),
-    ));
+    runApp(
+      ProviderScope(
+        overrides: [
+          sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+        ],
+        child: const App(),
+      ),
+    );
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
 }
 
 // iOSはmethodChannel経由の方が呼ばれる。iOSはネイティブの方のコードで上書きされる模様。現在はAndroidのために定義
 @pragma('vm:entry-point')
-Future<void> handleNotificationAction(NotificationResponse notificationResponse) async {
+Future<void> handleNotificationAction(
+  NotificationResponse notificationResponse,
+) async {
   if (notificationResponse.actionId == actionIdentifier) {
     // [Locale:Setup] LocaleDataException: Locale data has not been initialized, call initializeDateFormatting(<locale>)
     // UninitializedLocaleData._throwException (package:intl/src/intl_helpers.dart:80:5)
     // ロケールをinitializeしないとエラーになる。おそらくsetupTimeZoneの前に呼ぶ必要がある
-    await (initializeDateFormatting('ja'), initializeDateFormatting(Platform.localeName)).wait;
+    await (
+      initializeDateFormatting('ja'),
+      initializeDateFormatting(Platform.localeName),
+    ).wait;
     Intl.defaultLocale = 'ja';
 
     await LocalNotificationService.setupTimeZone();
@@ -107,7 +119,13 @@ Future<void> handleNotificationAction(NotificationResponse notificationResponse)
 
       // AlarmKit解除はRiverpodコンテナ内でのみ実行可能なため、ここではlocal notificationのみ解除
       final pendingNotifications = await localNotificationService.pendingReminderNotifications();
-      await Future.wait(pendingNotifications.map((p) => localNotificationService.cancelNotification(localNotificationID: p.id)));
+      await Future.wait(
+        pendingNotifications.map(
+          (p) => localNotificationService.cancelNotification(
+            localNotificationID: p.id,
+          ),
+        ),
+      );
 
       final activePillSheet = pillSheetGroup?.activePillSheet;
       final user = (await database.userReference().get()).data();

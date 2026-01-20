@@ -17,10 +17,18 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final createDiarySetting = ref.watch(createDiarySettingPhysicalConditionDetailProvider);
-    final addDiarySetting = ref.watch(addDiarySettingPhysicalConditionDetailProvider);
-    final deleteDiarySetting = ref.watch(deleteDiarySettingPhysicalConditionDetailProvider);
-    final state = ref.watch(diarySettingPhysicalConditionDetailAsyncStateProvider);
+    final createDiarySetting = ref.watch(
+      createDiarySettingPhysicalConditionDetailProvider,
+    );
+    final addDiarySetting = ref.watch(
+      addDiarySettingPhysicalConditionDetailProvider,
+    );
+    final deleteDiarySetting = ref.watch(
+      deleteDiarySettingPhysicalConditionDetailProvider,
+    );
+    final state = ref.watch(
+      diarySettingPhysicalConditionDetailAsyncStateProvider,
+    );
     final textFieldController = useTextEditingController();
     final scrollController = useScrollController();
 
@@ -47,13 +55,15 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
         }
         return Scaffold(
           appBar: AppBar(
-            title: Text(L.physicalConditionDetail,
-                style: const TextStyle(
-                  fontSize: 17,
-                  fontFamily: FontFamily.japanese,
-                  color: TextColor.main,
-                  fontWeight: FontWeight.w600,
-                )),
+            title: Text(
+              L.physicalConditionDetail,
+              style: const TextStyle(
+                fontSize: 17,
+                fontFamily: FontFamily.japanese,
+                color: TextColor.main,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
             shadowColor: Colors.transparent,
           ),
           body: ListView(
@@ -70,9 +80,15 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
                     hintText: L.inputAndAdd,
                   ),
                   onSubmitted: (physicalConditionDetail) async {
-                    analytics.logEvent(name: 'submit_physical_condition_detail', parameters: {'element': physicalConditionDetail});
+                    analytics.logEvent(
+                      name: 'submit_physical_condition_detail',
+                      parameters: {'element': physicalConditionDetail},
+                    );
                     try {
-                      await addDiarySetting(diarySetting: diarySetting, physicalConditionDetail: physicalConditionDetail);
+                      await addDiarySetting(
+                        diarySetting: diarySetting,
+                        physicalConditionDetail: physicalConditionDetail,
+                      );
                       textFieldController.text = '';
                     } catch (error) {
                       if (context.mounted) showErrorAlert(context, error);
@@ -86,11 +102,17 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
                   children: [
                     ListTile(
                       title: Text(p),
-                      contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
+                      contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 0,
+                      ),
                       trailing: IconButton(
                         icon: const Icon(Icons.delete),
                         onPressed: () async {
-                          await deleteDiarySetting(diarySetting: diarySetting, physicalConditionDetail: p);
+                          await deleteDiarySetting(
+                            diarySetting: diarySetting,
+                            physicalConditionDetail: p,
+                          );
                         },
                       ),
                     ),

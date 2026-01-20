@@ -23,20 +23,31 @@ final firebaseSignInOrCurrentUserProvider = FutureProvider<User>((ref) async {
   );
 
   if (currentUser != null) {
-    analytics.logEvent(name: 'cached_current_user_exists', parameters: _logginParameters(currentUser));
+    analytics.logEvent(
+      name: 'cached_current_user_exists',
+      parameters: _logginParameters(currentUser),
+    );
     return currentUser;
   } else {
     analytics.logEvent(name: 'cached_current_user_not_exists');
 
     final anonymousUserCredential = await FirebaseAuth.instance.signInAnonymously();
-    analytics.logEvent(name: 'signin_anonymously', parameters: _logginParameters(anonymousUserCredential.user));
+    analytics.logEvent(
+      name: 'signin_anonymously',
+      parameters: _logginParameters(anonymousUserCredential.user),
+    );
 
     final sharedPreferences = await SharedPreferences.getInstance();
-    final existsUID = sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
+    final existsUID = sharedPreferences.getString(
+      StringKey.lastSignInAnonymousUID,
+    );
     if (existsUID == null || existsUID.isEmpty) {
       final user = anonymousUserCredential.user;
       if (user != null) {
-        await sharedPreferences.setString(StringKey.lastSignInAnonymousUID, user.uid);
+        await sharedPreferences.setString(
+          StringKey.lastSignInAnonymousUID,
+          user.uid,
+        );
       }
     }
 
@@ -44,7 +55,9 @@ final firebaseSignInOrCurrentUserProvider = FutureProvider<User>((ref) async {
   }
 });
 
-final isLinkedProvider = Provider((ref) => ref.watch(isAppleLinkedProvider) || ref.watch(isGoogleLinkedProvider));
+final isLinkedProvider = Provider(
+  (ref) => ref.watch(isAppleLinkedProvider) || ref.watch(isGoogleLinkedProvider),
+);
 
 Map<String, dynamic> _logginParameters(User? currentUser) {
   if (currentUser == null) {

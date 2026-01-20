@@ -43,15 +43,16 @@ class SettingPillSheetGroupPillSheetTypeSelectRow extends StatelessWidget {
                 width: 20,
                 height: 20,
                 child: IconButton(
-                    padding: const EdgeInsets.all(0),
-                    onPressed: () {
-                      onDelete(index);
-                    },
-                    icon: SvgPicture.asset(
-                      'images/minus_icon.svg',
-                      width: 20,
-                      height: 20,
-                    )),
+                  padding: const EdgeInsets.all(0),
+                  onPressed: () {
+                    onDelete(index);
+                  },
+                  icon: SvgPicture.asset(
+                    'images/minus_icon.svg',
+                    width: 20,
+                    height: 20,
+                  ),
+                ),
               ),
             ],
           ],
@@ -60,15 +61,18 @@ class SettingPillSheetGroupPillSheetTypeSelectRow extends StatelessWidget {
         GestureDetector(
           onTap: () {
             showSettingPillSheetGroupSelectPillSheetTypePage(
-                context: context,
-                pillSheetType: pillSheetType,
-                onSelect: (pillSheetType) {
-                  onSelect(index, pillSheetType);
-                });
+              context: context,
+              pillSheetType: pillSheetType,
+              onSelect: (pillSheetType) {
+                onSelect(index, pillSheetType);
+              },
+            );
           },
           child: Container(
             padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-            constraints: BoxConstraints(minWidth: MediaQuery.of(context).size.width - 80),
+            constraints: BoxConstraints(
+              minWidth: MediaQuery.of(context).size.width - 80,
+            ),
             decoration: BoxDecoration(
               color: AppColors.white,
               borderRadius: BorderRadius.circular(4),

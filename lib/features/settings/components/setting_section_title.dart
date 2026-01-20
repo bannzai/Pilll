@@ -15,10 +15,7 @@ class SettingSectionTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        _section(),
-        ...children,
-      ],
+      children: [_section(), ...children],
     );
   }
 

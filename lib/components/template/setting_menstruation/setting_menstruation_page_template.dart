@@ -31,10 +31,7 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: Text(
-          title,
-          style: const TextStyle(color: TextColor.black),
-        ),
+        title: Text(title, style: const TextStyle(color: TextColor.black)),
         backgroundColor: AppColors.white,
       ),
       body: SafeArea(
@@ -65,12 +62,9 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
             if (doneButton != null) ...[
               Column(
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  doneButton,
-                  const SizedBox(height: 35),
-                ],
+                children: [doneButton, const SizedBox(height: 35)],
               ),
-            ]
+            ],
           ],
         ),
       ),

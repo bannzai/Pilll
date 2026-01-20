@@ -5,7 +5,11 @@ import 'package:pilll/features/localizations/l.dart';
 class DiaryPostMemo extends HookConsumerWidget {
   final TextEditingController textEditingController;
   final FocusNode focusNode;
-  const DiaryPostMemo({super.key, required this.textEditingController, required this.focusNode});
+  const DiaryPostMemo({
+    super.key,
+    required this.textEditingController,
+    required this.focusNode,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

@@ -17,7 +17,9 @@ class InquiryTypeSelector extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final otherTextController = useTextEditingController(text: otherTypeText.value);
+    final otherTextController = useTextEditingController(
+      text: otherTypeText.value,
+    );
 
     void onInquiryTypeChanged(InquiryType? value) {
       if (value != null) {

@@ -16,8 +16,12 @@ abstract class Environment {
   // Ref: https://github.com/flutter/flutter/issues/13203#issuecomment-430134157
   static bool get disableWidgetAnimation => const bool.fromEnvironment('DISABLE_WIDGET_ANIMATION') && isDevelopment;
 
-  static const siwaServiceIdentifier = String.fromEnvironment('SIWA_SERVICE_IDENTIFIIER');
-  static const androidSiwaRedirectURL = String.fromEnvironment('ANDROID_SIWA_REDIRECT_URL');
+  static const siwaServiceIdentifier = String.fromEnvironment(
+    'SIWA_SERVICE_IDENTIFIIER',
+  );
+  static const androidSiwaRedirectURL = String.fromEnvironment(
+    'ANDROID_SIWA_REDIRECT_URL',
+  );
 
   static Function()? deleteUser;
   static Function()? signOutUser;

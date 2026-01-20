@@ -17,8 +17,14 @@ class ShowPaywallOnAppLaunch extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
-    final shownPaywallWhenAppFirstLaunch = ref.watch(boolSharedPreferencesProvider(BoolKey.shownPaywallWhenAppFirstLaunch));
-    final shownPaywallWhenAppFirstLaunchNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.shownPaywallWhenAppFirstLaunch).notifier);
+    final shownPaywallWhenAppFirstLaunch = ref.watch(
+      boolSharedPreferencesProvider(BoolKey.shownPaywallWhenAppFirstLaunch),
+    );
+    final shownPaywallWhenAppFirstLaunchNotifier = ref.watch(
+      boolSharedPreferencesProvider(
+        BoolKey.shownPaywallWhenAppFirstLaunch,
+      ).notifier,
+    );
     if (!remoteConfigParameter.isPaywallFirst) {
       return builder(context);
     }

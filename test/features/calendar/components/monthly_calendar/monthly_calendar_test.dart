@@ -38,19 +38,27 @@ void main() {
   27   28  29  30  
     */
       var now = DateTime(2020, 09, 14);
-      var model = CalendarNextPillSheetBandModel(DateTime(2020, 09, 15), DateTime(2020, 09, 18));
+      var model = CalendarNextPillSheetBandModel(
+        DateTime(2020, 09, 15),
+        DateTime(2020, 09, 18),
+      );
       final diaries = [Diary.fromDate(now)];
 
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            diariesForMonthProvider.overrideWith((ref, arg) => Stream.value(diaries)),
-            schedulesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
+            diariesForMonthProvider.overrideWith(
+              (ref, arg) => Stream.value(diaries),
+            ),
+            schedulesForMonthProvider.overrideWith(
+              (ref, arg) => Stream.value([]),
+            ),
           ],
           child: MaterialApp(
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
-              weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
+              weekCalendarBuilder:
+                  (context, diaries, schedules, weekDateRange) {
                 return CalendarWeekLine(
                   dateRange: weekDateRange,
                   calendarMenstruationBandModels: const [],
@@ -69,11 +77,17 @@ void main() {
       expect(find.text(L.newPillSheetStart), findsOneWidget);
       expect(find.byType(CalendarNextPillSheetBand), findsOneWidget);
       expect(
-          find.byWidgetPredicate((widget) =>
-              (widget is CalendarNextPillSheetBand && DateRange.isSameDay(widget.begin, model.begin) && DateRange.isSameDay(widget.end, model.end))),
-          findsOneWidget);
+        find.byWidgetPredicate(
+          (widget) => (widget is CalendarNextPillSheetBand &&
+              DateRange.isSameDay(widget.begin, model.begin) &&
+              DateRange.isSameDay(widget.end, model.end)),
+        ),
+        findsOneWidget,
+      );
     });
-    testWidgets('when showing 新しいシート開始 ▶︎ with linebreak', (WidgetTester tester) async {
+    testWidgets('when showing 新しいシート開始 ▶︎ with linebreak', (
+      WidgetTester tester,
+    ) async {
       /*
   30   31   1   2   3   4   5  
 
@@ -86,19 +100,27 @@ void main() {
   27   28  29  30  
     */
       var now = DateTime(2020, 09, 14);
-      var model = CalendarNextPillSheetBandModel(DateTime(2020, 09, 19), DateTime(2020, 09, 21));
+      var model = CalendarNextPillSheetBandModel(
+        DateTime(2020, 09, 19),
+        DateTime(2020, 09, 21),
+      );
       final diaries = [Diary.fromDate(now)];
 
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            diariesForMonthProvider.overrideWith((ref, arg) => Stream.value(diaries)),
-            schedulesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
+            diariesForMonthProvider.overrideWith(
+              (ref, arg) => Stream.value(diaries),
+            ),
+            schedulesForMonthProvider.overrideWith(
+              (ref, arg) => Stream.value([]),
+            ),
           ],
           child: MaterialApp(
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
-              weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
+              weekCalendarBuilder:
+                  (context, diaries, schedules, weekDateRange) {
                 return CalendarWeekLine(
                   dateRange: weekDateRange,
                   calendarMenstruationBandModels: const [],
@@ -117,23 +139,37 @@ void main() {
       expect(find.text(L.newPillSheetStart), findsOneWidget);
       expect(find.byType(CalendarNextPillSheetBand), findsNWidgets(2));
       expect(
-          find.byWidgetPredicate((widget) =>
-              (widget is CalendarNextPillSheetBand && DateRange.isSameDay(widget.begin, model.begin) && DateRange.isSameDay(widget.end, model.end))),
-          findsNWidgets(2));
+        find.byWidgetPredicate(
+          (widget) => (widget is CalendarNextPillSheetBand &&
+              DateRange.isSameDay(widget.begin, model.begin) &&
+              DateRange.isSameDay(widget.end, model.end)),
+        ),
+        findsNWidgets(2),
+      );
     });
-    testWidgets('when showing new sheet label to next month', (WidgetTester tester) async {
-      final model = CalendarNextPillSheetBandModel(DateTime(2020, 10, 15), DateTime(2020, 10, 18));
+    testWidgets('when showing new sheet label to next month', (
+      WidgetTester tester,
+    ) async {
+      final model = CalendarNextPillSheetBandModel(
+        DateTime(2020, 10, 15),
+        DateTime(2020, 10, 18),
+      );
 
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            diariesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
-            schedulesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
+            diariesForMonthProvider.overrideWith(
+              (ref, arg) => Stream.value([]),
+            ),
+            schedulesForMonthProvider.overrideWith(
+              (ref, arg) => Stream.value([]),
+            ),
           ],
           child: MaterialApp(
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
-              weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
+              weekCalendarBuilder:
+                  (context, diaries, schedules, weekDateRange) {
                 return CalendarWeekLine(
                   dateRange: weekDateRange,
                   calendarMenstruationBandModels: const [],
@@ -150,19 +186,29 @@ void main() {
       expect(find.text(L.newPillSheetStart), isNot(findsWidgets));
       expect(find.byType(CalendarNextPillSheetBand), isNot(findsWidgets));
     });
-    testWidgets('when showing new sheet label to before month', (WidgetTester tester) async {
-      final model = CalendarNextPillSheetBandModel(DateTime(2020, 10, 15), DateTime(2020, 10, 18));
+    testWidgets('when showing new sheet label to before month', (
+      WidgetTester tester,
+    ) async {
+      final model = CalendarNextPillSheetBandModel(
+        DateTime(2020, 10, 15),
+        DateTime(2020, 10, 18),
+      );
 
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            diariesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
-            schedulesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
+            diariesForMonthProvider.overrideWith(
+              (ref, arg) => Stream.value([]),
+            ),
+            schedulesForMonthProvider.overrideWith(
+              (ref, arg) => Stream.value([]),
+            ),
           ],
           child: MaterialApp(
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
-              weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
+              weekCalendarBuilder:
+                  (context, diaries, schedules, weekDateRange) {
                 return CalendarWeekLine(
                   dateRange: weekDateRange,
                   calendarMenstruationBandModels: const [],

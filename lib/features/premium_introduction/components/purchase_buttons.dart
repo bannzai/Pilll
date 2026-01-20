@@ -80,7 +80,11 @@ class PurchaseButtons extends HookConsumerWidget {
     );
   }
 
-  Future<void> _purchase(BuildContext context, Package package, Purchase purchase) async {
+  Future<void> _purchase(
+    BuildContext context,
+    Package package,
+    Purchase purchase,
+  ) async {
     if (isLoading.value) {
       return;
     }
@@ -91,12 +95,15 @@ class PurchaseButtons extends HookConsumerWidget {
       if (shouldShowCompleteDialog) {
         // ignore: use_build_context_synchronously
         showDialog(
-            context: context,
-            builder: (_) {
-              return PremiumCompleteDialog(onClose: () {
+          context: context,
+          builder: (_) {
+            return PremiumCompleteDialog(
+              onClose: () {
                 Navigator.of(context).pop();
-              });
-            });
+              },
+            );
+          },
+        );
       }
     } catch (error) {
       debugPrint('caused purchase error for $error');

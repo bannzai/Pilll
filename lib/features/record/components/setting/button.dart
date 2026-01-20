@@ -44,15 +44,10 @@ class RecordPagePillSheetSettingButton extends StatelessWidget {
         shape: WidgetStateProperty.all(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
-            side: const BorderSide(
-              color: AppColors.primary,
-              width: 1,
-            ),
+            side: const BorderSide(color: AppColors.primary, width: 1),
           ),
         ),
-      ).merge(
-        ElevatedButton.styleFrom(elevation: 0),
-      ),
+      ).merge(ElevatedButton.styleFrom(elevation: 0)),
       child: Text(
         L.pillSheetSettings,
         style: const TextStyle(

@@ -21,37 +21,45 @@ class ExplainPillNumber extends HookConsumerWidget {
           final todayPillNumber = state.todayPillNumber;
           if (todayPillNumber == null) {
             return <Widget>[
-              const Text('',
-                  style: TextStyle(
-                    fontFamily: FontFamily.japanese,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 34,
-                    color: TextColor.main,
-                  )),
-            ];
-          }
-          return <Widget>[
-            Text(L.pillForToday(today),
-                style: const TextStyle(
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 12,
-                  color: TextColor.main,
-                )),
-            Text('${todayPillNumber.pillNumberInPillSheet}',
-                style: const TextStyle(
+              const Text(
+                '',
+                style: TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w500,
                   fontSize: 34,
                   color: TextColor.main,
-                )),
-            Text(L.number,
-                style: const TextStyle(
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 12,
-                  color: TextColor.main,
-                )),
+                ),
+              ),
+            ];
+          }
+          return <Widget>[
+            Text(
+              L.pillForToday(today),
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w400,
+                fontSize: 12,
+                color: TextColor.main,
+              ),
+            ),
+            Text(
+              '${todayPillNumber.pillNumberInPillSheet}',
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w500,
+                fontSize: 34,
+                color: TextColor.main,
+              ),
+            ),
+            Text(
+              L.number,
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w400,
+                fontSize: 12,
+                color: TextColor.main,
+              ),
+            ),
           ];
         }(),
       ),

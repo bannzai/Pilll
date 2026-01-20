@@ -22,16 +22,24 @@ import 'package:pilll/utils/local_notification.dart';
 class AddPillSheetGroupPage extends HookConsumerWidget {
   final PillSheetGroup? pillSheetGroup;
   final Setting setting;
-  const AddPillSheetGroupPage({super.key, required this.pillSheetGroup, required this.setting});
+  const AddPillSheetGroupPage({
+    super.key,
+    required this.pillSheetGroup,
+    required this.setting,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final pillSheetGroup = this.pillSheetGroup;
     final addPillSheetGroup = ref.watch(addPillSheetGroupProvider);
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final registerReminderLocalNotification = ref.watch(
+      registerReminderLocalNotificationProvider,
+    );
     final user = ref.watch(userProvider).valueOrNull;
     final pillSheetTypes = useState(setting.pillSheetEnumTypes);
-    final displayNumberSetting = useState<PillSheetGroupDisplayNumberSetting?>(null);
+    final displayNumberSetting = useState<PillSheetGroupDisplayNumberSetting?>(
+      null,
+    );
     final initialPillTakenCount = switch (pillSheetGroup?.pillSheets.firstOrNull) {
       PillSheetV1() => 1,
       PillSheetV2 v2 => v2.pills.first.takenCount,
@@ -59,9 +67,14 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
             children: [
               if (pillSheetTypes.value.isEmpty) ...[
                 const Spacer(),
-                AddPillSheetTypeEmpty(onSelect: (pillSheetType) {
-                  pillSheetTypes.value = [...pillSheetTypes.value, pillSheetType];
-                }),
+                AddPillSheetTypeEmpty(
+                  onSelect: (pillSheetType) {
+                    pillSheetTypes.value = [
+                      ...pillSheetTypes.value,
+                      pillSheetType,
+                    ];
+                  },
+                ),
                 const Spacer(flex: 3),
               ] else ...[
                 Expanded(
@@ -70,18 +83,34 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                       SettingPillSheetGroup(
                         pillSheetTypes: pillSheetTypes.value,
                         onAdd: (pillSheetType) {
-                          analytics.logEvent(name: 'setting_add_pill_sheet_group', parameters: {'pill_sheet_type': pillSheetType.fullName});
-                          pillSheetTypes.value = [...pillSheetTypes.value, pillSheetType];
+                          analytics.logEvent(
+                            name: 'setting_add_pill_sheet_group',
+                            parameters: {
+                              'pill_sheet_type': pillSheetType.fullName,
+                            },
+                          );
+                          pillSheetTypes.value = [
+                            ...pillSheetTypes.value,
+                            pillSheetType,
+                          ];
                         },
                         onChange: (index, pillSheetType) {
                           analytics.logEvent(
-                              name: 'setting_change_pill_sheet_group', parameters: {'index': index, 'pill_sheet_type': pillSheetType.fullName});
+                            name: 'setting_change_pill_sheet_group',
+                            parameters: {
+                              'index': index,
+                              'pill_sheet_type': pillSheetType.fullName,
+                            },
+                          );
                           final copied = [...pillSheetTypes.value];
                           copied[index] = pillSheetType;
                           pillSheetTypes.value = copied;
                         },
                         onDelete: (index) {
-                          analytics.logEvent(name: 'setting_delete_pill_sheet_group', parameters: {'index': index});
+                          analytics.logEvent(
+                            name: 'setting_delete_pill_sheet_group',
+                            parameters: {'index': index},
+                          );
                           pillSheetTypes.value = [...pillSheetTypes.value]..removeAt(index);
                         },
                       ),
@@ -102,10 +131,11 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                         ],
                         if (pillSheetGroup != null)
                           DisplayNumberSetting(
-                              pillSheetGroup: pillSheetGroup,
-                              onChanged: (value) {
-                                displayNumberSetting.value = value;
-                              }),
+                            pillSheetGroup: pillSheetGroup,
+                            onChanged: (value) {
+                              displayNumberSetting.value = value;
+                            },
+                          ),
                         const SizedBox(height: 24),
                         SizedBox(
                           width: 180,
@@ -114,7 +144,9 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                             onPressed: pillSheetTypes.value.isEmpty
                                 ? null
                                 : () async {
-                                    analytics.logEvent(name: 'pressed_add_pill_sheet_group');
+                                    analytics.logEvent(
+                                      name: 'pressed_add_pill_sheet_group',
+                                    );
                                     final navigator = Navigator.of(context);
                                     await addPillSheetGroup.call(
                                       setting: setting,
@@ -142,11 +174,17 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
 }
 
 extension AddPillSheetGroupPageRoute on AddPillSheetGroupPage {
-  static Route<dynamic> route({required PillSheetGroup? pillSheetGroup, required Setting setting}) {
+  static Route<dynamic> route({
+    required PillSheetGroup? pillSheetGroup,
+    required Setting setting,
+  }) {
     return MaterialPageRoute(
       fullscreenDialog: true,
       settings: const RouteSettings(name: 'RecordPageAddingPillSheetGroupPage'),
-      builder: (_) => AddPillSheetGroupPage(pillSheetGroup: pillSheetGroup, setting: setting),
+      builder: (_) => AddPillSheetGroupPage(
+        pillSheetGroup: pillSheetGroup,
+        setting: setting,
+      ),
     );
   }
 }

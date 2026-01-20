@@ -241,7 +241,7 @@ group("#someMethod", () {
 
 ```bash
 # フォーマット整形
-dart fix --apply lib && dart format lib -l 150
+dart fix --apply lib && dart format lib
 
 # 単体テスト実行（特定ファイル）
 flutter test test/entity/{entity_file}_test.dart

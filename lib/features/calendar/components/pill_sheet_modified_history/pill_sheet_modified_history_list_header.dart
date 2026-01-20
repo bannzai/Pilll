@@ -4,9 +4,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/localizations/l.dart';
 
 class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
-  const PillSheetModifiedHisotiryListHeader({
-    super.key,
-  });
+  const PillSheetModifiedHisotiryListHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -60,19 +58,11 @@ class _HeaderLayout extends StatelessWidget {
         children: [
           day,
           const SizedBox(width: 8),
-          SizedBox(
-            width: 79,
-            child: pillNumbersOrHyphen,
-          ),
+          SizedBox(width: 79, child: pillNumbersOrHyphen),
           const SizedBox(width: 8),
-          Expanded(
-            child: detail,
-          ),
+          Expanded(child: detail),
           const SizedBox(width: 8),
-          SizedBox(
-            width: 57,
-            child: takenPillActionOList,
-          ),
+          SizedBox(width: 57, child: takenPillActionOList),
         ],
       ),
     );

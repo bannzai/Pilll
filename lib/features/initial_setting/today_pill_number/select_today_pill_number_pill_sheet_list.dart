@@ -22,12 +22,16 @@ class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final pageController = usePageController(viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width);
+    final pageController = usePageController(
+      viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width,
+    );
     return Column(
       children: [
         SizedBox(
           height: PillSheetViewLayout.calcHeight(
-            PillSheetViewLayout.mostLargePillSheetType(state.pillSheetTypes).numberOfLineInPillSheet,
+            PillSheetViewLayout.mostLargePillSheetType(
+              state.pillSheetTypes,
+            ).numberOfLineInPillSheet,
             true,
           ),
           child: PageView(
@@ -44,12 +48,17 @@ class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
                       pageIndex: index,
                       appearanceMode: PillSheetAppearanceMode.number,
                       pillSheetTypes: state.pillSheetTypes,
-                      selectedPillNumberIntoPillSheet: state.selectedTodayPillNumberIntoPillSheet(pageIndex: index),
+                      selectedPillNumberIntoPillSheet: state.selectedTodayPillNumberIntoPillSheet(
+                        pageIndex: index,
+                      ),
                       markSelected: (pageIndex, number) {
-                        analytics.logEvent(name: 'selected_today_number_initial_setting', parameters: {
-                          'pill_number': number,
-                          'page': pageIndex,
-                        });
+                        analytics.logEvent(
+                          name: 'selected_today_number_initial_setting',
+                          parameters: {
+                            'pill_number': number,
+                            'page': pageIndex,
+                          },
+                        );
                         store.setTodayPillNumber(
                           pageIndex: pageIndex,
                           pillNumberInPillSheet: number,
@@ -75,8 +84,8 @@ class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
                 curve: Curves.easeInOut,
               );
             },
-          )
-        ]
+          ),
+        ],
       ],
     );
   }

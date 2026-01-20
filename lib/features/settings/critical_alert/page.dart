@@ -18,7 +18,9 @@ class CriticalAlertPage extends HookConsumerWidget {
     final useCriticalAlert = useState(setting.useCriticalAlert);
     final criticalAlertVolume = useState(setting.criticalAlertVolume);
     final setSetting = ref.watch(setSettingProvider);
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final registerReminderLocalNotification = ref.watch(
+      registerReminderLocalNotificationProvider,
+    );
 
     void updateSetting() async {
       await setSetting(
@@ -113,7 +115,9 @@ class CriticalAlertPage extends HookConsumerWidget {
                 const SizedBox(height: 20),
                 TextButton(
                   onPressed: () {
-                    localNotificationService.testCriticalAlert(volume: criticalAlertVolume.value);
+                    localNotificationService.testCriticalAlert(
+                      volume: criticalAlertVolume.value,
+                    );
                   },
                   child: const Text(
                     'テスト通知を送信',

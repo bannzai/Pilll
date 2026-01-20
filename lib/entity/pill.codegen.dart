@@ -97,17 +97,14 @@ class Pill with _$Pill {
         createdDateTime: currentDate,
         updatedDateTime: currentDate,
         pillTakens: lastTakenDate != null && (date.isBefore(lastTakenDate) || isSameDay(date, lastTakenDate))
-            ? List.generate(
-                pillTakenCount,
-                (i) {
-                  // ピルは複数飲む場合もあるので、dateでtakenDateTimeを更新するのではなく、引数でもらったlastTakenDateを使って値を埋める
-                  return PillTaken(
-                    recordedTakenDateTime: lastTakenDate,
-                    createdDateTime: currentDate,
-                    updatedDateTime: currentDate,
-                  );
-                },
-              )
+            ? List.generate(pillTakenCount, (i) {
+                // ピルは複数飲む場合もあるので、dateでtakenDateTimeを更新するのではなく、引数でもらったlastTakenDateを使って値を埋める
+                return PillTaken(
+                  recordedTakenDateTime: lastTakenDate,
+                  createdDateTime: currentDate,
+                  updatedDateTime: currentDate,
+                );
+              })
             : [],
       );
     });
@@ -130,17 +127,14 @@ class Pill with _$Pill {
         createdDateTime: now(),
         updatedDateTime: now(),
         pillTakens: lastTakenDate != null && (date.isBefore(lastTakenDate) || isSameDay(date, lastTakenDate))
-            ? List.generate(
-                pillTakenCount,
-                (i) {
-                  // generateAndFillToとの違いはここになる。lastTakenDateではなく、そのピルが通常服用する予定だった服用日がtakenDateTimeにセットされる
-                  return PillTaken(
-                    recordedTakenDateTime: date,
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  );
-                },
-              )
+            ? List.generate(pillTakenCount, (i) {
+                // generateAndFillToとの違いはここになる。lastTakenDateではなく、そのピルが通常服用する予定だった服用日がtakenDateTimeにセットされる
+                return PillTaken(
+                  recordedTakenDateTime: date,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                );
+              })
             : [],
       );
     });

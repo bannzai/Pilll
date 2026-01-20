@@ -11,7 +11,11 @@ class PillSheetGroupSelectPillSheetTypePage extends StatelessWidget {
   final PillSheetType? pillSheetType;
   final Function(PillSheetType) onSelect;
 
-  const PillSheetGroupSelectPillSheetTypePage({super.key, required this.pillSheetType, required this.onSelect});
+  const PillSheetGroupSelectPillSheetTypePage({
+    super.key,
+    required this.pillSheetType,
+    required this.onSelect,
+  });
   @override
   Widget build(BuildContext context) {
     return DraggableScrollableSheet(

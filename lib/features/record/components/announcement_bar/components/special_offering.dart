@@ -29,7 +29,9 @@ class SpecialOfferingAnnouncementBar extends HookConsumerWidget {
           analytics.logEvent(name: 'special_offering_announcement_bar_tap');
           showModalBottomSheet(
             context: context,
-            builder: (context) => SpecialOfferingPage(specialOfferingIsClosed: specialOfferingIsClosed),
+            builder: (context) => SpecialOfferingPage(
+              specialOfferingIsClosed: specialOfferingIsClosed,
+            ),
             backgroundColor: Colors.transparent,
             isScrollControlled: true,
             enableDrag: false,
@@ -56,7 +58,10 @@ class SpecialOfferingAnnouncementBar extends HookConsumerWidget {
               child: IconButton(
                 icon: SvgPicture.asset(
                   'images/arrow_right.svg',
-                  colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                  colorFilter: const ColorFilter.mode(
+                    Colors.white,
+                    BlendMode.srcIn,
+                  ),
                 ),
                 onPressed: () {},
                 iconSize: 24,

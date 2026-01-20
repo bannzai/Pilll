@@ -38,7 +38,16 @@ class ReminderTime with _$ReminderTime {
   /// リマインダー通知のスケジュール設定で使用されます。
   DateTime dateTime() {
     var t = DateTime.now().toLocal();
-    return DateTime(t.year, t.month, t.day, hour, minute, t.second, t.millisecond, t.microsecond);
+    return DateTime(
+      t.year,
+      t.month,
+      t.day,
+      hour,
+      minute,
+      t.second,
+      t.millisecond,
+      t.microsecond,
+    );
   }
 
   /// 設定可能な最大リマインダー時刻数
@@ -196,6 +205,8 @@ class Setting with _$Setting {
 /// List<PillSheetType?>からList<PillSheetType>に変換し、
 /// null要素をPillSheetType.pillsheet_24_rest_4で置換します。
 /// v3.9.6での不具合により発生したnull値への対処として実装されています。
-List<PillSheetType> backportPillSheetTypes(List<PillSheetType?> pillSheetTypes) {
+List<PillSheetType> backportPillSheetTypes(
+  List<PillSheetType?> pillSheetTypes,
+) {
   return pillSheetTypes.map((e) => e ?? PillSheetType.pillsheet_24_rest_4).toList();
 }

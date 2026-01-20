@@ -23,9 +23,7 @@ class MenstruationListRow extends HookConsumerWidget {
       onTap: () {
         showMenstruationEditSelectionSheet(
           context,
-          MenstruationEditSelectionSheet(
-            menstruation: menstruation,
-          ),
+          MenstruationEditSelectionSheet(menstruation: menstruation),
         );
       },
       child: Column(
@@ -33,8 +31,15 @@ class MenstruationListRow extends HookConsumerWidget {
         children: [
           Row(
             children: [
-              Text(_dateRange,
-                  style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400, fontSize: 12, color: TextColor.main)),
+              Text(
+                _dateRange,
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 12,
+                  color: TextColor.main,
+                ),
+              ),
             ],
           ),
           const SizedBox(height: 6),
@@ -49,12 +54,9 @@ class MenstruationListRow extends HookConsumerWidget {
               padding: const EdgeInsets.only(left: 8.0),
               child: Row(
                 children: [
-                  ...List.generate(
-                    menstruation.dateRange.days + 1,
-                    (index) {
-                      return [_circle(), const SizedBox(width: 4)];
-                    },
-                  ).expand((element) => element),
+                  ...List.generate(menstruation.dateRange.days + 1, (index) {
+                    return [_circle(), const SizedBox(width: 4)];
+                  }).expand((element) => element),
                   const Spacer(),
                   Text(
                     _duration,

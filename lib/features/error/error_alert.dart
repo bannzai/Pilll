@@ -11,7 +11,12 @@ class ErrorAlert extends StatelessWidget {
   final String errorMessage;
   final String? faqLinkURL;
 
-  const ErrorAlert({super.key, this.title, this.faqLinkURL, required this.errorMessage});
+  const ErrorAlert({
+    super.key,
+    this.title,
+    this.faqLinkURL,
+    required this.errorMessage,
+  });
   @override
   Widget build(BuildContext context) {
     final faq = faqLinkURL;
@@ -25,13 +30,15 @@ class ErrorAlert extends StatelessWidget {
           color: TextColor.black,
         ),
       ),
-      content: Text(errorMessage,
-          style: const TextStyle(
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w300,
-            fontSize: 14,
-            color: TextColor.black,
-          )),
+      content: Text(
+        errorMessage,
+        style: const TextStyle(
+          fontFamily: FontFamily.japanese,
+          fontWeight: FontWeight.w300,
+          fontSize: 14,
+          color: TextColor.black,
+        ),
+      ),
       actions: <Widget>[
         if (faq != null)
           AlertButton(

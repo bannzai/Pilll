@@ -80,12 +80,13 @@ class CalendarDayTile extends StatelessWidget {
             ),
           Positioned(
             child: Align(
-                alignment: Alignment.center,
-                child: Text(
-                  '${date.day}',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: _textColor()).merge(_font()),
-                )),
+              alignment: Alignment.center,
+              child: Text(
+                '${date.day}',
+                textAlign: TextAlign.center,
+                style: TextStyle(color: _textColor()).merge(_font()),
+              ),
+            ),
           ),
         ],
       ),
@@ -111,7 +112,7 @@ class CalendarDayTile extends StatelessWidget {
       Weekday.Wednesday => TextColor.main,
       Weekday.Thursday => TextColor.main,
       Weekday.Friday => TextColor.main,
-      Weekday.Saturday => weekday.weekdayColor()
+      Weekday.Saturday => weekday.weekdayColor(),
     };
     final onTap = this.onTap;
     final alpha = (255 * (onTap != null ? 1 : 0.4)).floor();

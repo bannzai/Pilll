@@ -40,10 +40,7 @@ class LifetimePurchaseButton extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: AppColors.blueBackground,
                   borderRadius: const BorderRadius.all(Radius.circular(4)),
-                  border: Border.all(
-                    width: 2,
-                    color: AppColors.primary,
-                  ),
+                  border: Border.all(width: 2, color: AppColors.primary),
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,

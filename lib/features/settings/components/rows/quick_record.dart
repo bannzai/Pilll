@@ -34,9 +34,7 @@ class QuickRecordRow extends StatelessWidget {
       ),
       subtitle: Text(L.quickRecordDescription),
       onTap: () {
-        analytics.logEvent(
-          name: 'did_select_quick_record_row',
-        );
+        analytics.logEvent(name: 'did_select_quick_record_row');
         if (isTrial) {
           return;
         }

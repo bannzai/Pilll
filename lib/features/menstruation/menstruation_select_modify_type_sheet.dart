@@ -31,7 +31,10 @@ extension _CellTypeFunction on MenstruationSelectModifyType {
       }
     }
 
-    return SvgPicture.asset(name(), colorFilter: const ColorFilter.mode(AppColors.primary, BlendMode.srcIn));
+    return SvgPicture.asset(
+      name(),
+      colorFilter: const ColorFilter.mode(AppColors.primary, BlendMode.srcIn),
+    );
   }
 }
 
@@ -68,11 +71,7 @@ class MenstruationSelectModifyTypeSheet extends StatelessWidget {
               height: _tileHeight * MenstruationSelectModifyType.values.length,
               child: ListView(
                 physics: const NeverScrollableScrollPhysics(),
-                children: MenstruationSelectModifyType.values
-                    .map(
-                      (e) => _tile(e),
-                    )
-                    .toList(),
+                children: MenstruationSelectModifyType.values.map((e) => _tile(e)).toList(),
               ),
             ),
           ],

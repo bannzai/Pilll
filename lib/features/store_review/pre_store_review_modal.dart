@@ -45,9 +45,15 @@ class PreStoreReviewModal extends HookConsumerWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _goodOrBad(target: PreStoreReviewModalSelection.good, selection: selection),
+                _goodOrBad(
+                  target: PreStoreReviewModalSelection.good,
+                  selection: selection,
+                ),
                 const SizedBox(width: 16),
-                _goodOrBad(target: PreStoreReviewModalSelection.bad, selection: selection),
+                _goodOrBad(
+                  target: PreStoreReviewModalSelection.bad,
+                  selection: selection,
+                ),
               ],
             ),
             if (selectionValue != null) ...[
@@ -56,11 +62,15 @@ class PreStoreReviewModal extends HookConsumerWidget {
                 onPressed: () async {
                   switch (selectionValue) {
                     case PreStoreReviewModalSelection.good:
-                      analytics.logEvent(name: 'submit_pre_store_review_modal_good');
+                      analytics.logEvent(
+                        name: 'submit_pre_store_review_modal_good',
+                      );
                       ref.read(sharedPreferencesProvider).setBool(BoolKey.isPreStoreReviewGoodAnswer, true);
                       break;
                     case PreStoreReviewModalSelection.bad:
-                      analytics.logEvent(name: 'submit_pre_store_review_modal_bad');
+                      analytics.logEvent(
+                        name: 'submit_pre_store_review_modal_bad',
+                      );
                       break;
                   }
 
@@ -79,7 +89,10 @@ class PreStoreReviewModal extends HookConsumerWidget {
     );
   }
 
-  Widget _goodOrBad({required PreStoreReviewModalSelection target, required ValueNotifier<PreStoreReviewModalSelection?> selection}) {
+  Widget _goodOrBad({
+    required PreStoreReviewModalSelection target,
+    required ValueNotifier<PreStoreReviewModalSelection?> selection,
+  }) {
     final isSelected = target == selection.value;
     return GestureDetector(
       onTap: () {
@@ -118,7 +131,11 @@ class PreStoreReviewModal extends HookConsumerWidget {
                 const SizedBox(height: 16),
                 Text(
                   target == PreStoreReviewModalSelection.good ? L.satisfied : L.notSatisfied,
-                  style: const TextStyle(color: AppColors.primary, fontWeight: FontWeight.bold, fontFamily: FontFamily.japanese),
+                  style: const TextStyle(
+                    color: AppColors.primary,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: FontFamily.japanese,
+                  ),
                 ),
               ],
             ),
@@ -132,19 +149,14 @@ class PreStoreReviewModal extends HookConsumerWidget {
 class _ThanksDialog extends StatelessWidget {
   final PreStoreReviewModalSelection goodOrBad;
 
-  const _ThanksDialog({
-    required this.goodOrBad,
-  });
+  const _ThanksDialog({required this.goodOrBad});
 
   @override
   Widget build(BuildContext context) {
     final navigator = Navigator.of(context);
 
     return AlertDialog(
-      title: const Icon(
-        Icons.thumb_up,
-        color: AppColors.primary,
-      ),
+      title: const Icon(Icons.thumb_up, color: AppColors.primary),
       content: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.min,
@@ -158,16 +170,16 @@ class _ThanksDialog extends StatelessWidget {
               color: TextColor.main,
             ),
           ),
-          const SizedBox(
-            height: 15,
+          const SizedBox(height: 15),
+          Text(
+            L.surveyForServiceImprovement,
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w300,
+              fontSize: 14,
+              color: TextColor.main,
+            ),
           ),
-          Text(L.surveyForServiceImprovement,
-              style: const TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w300,
-                fontSize: 14,
-                color: TextColor.main,
-              )),
         ],
       ),
       actions: <Widget>[
@@ -191,7 +203,10 @@ class _ThanksDialog extends StatelessWidget {
             );
 
             // ignore: use_build_context_synchronously
-            await showDialog(context: context, builder: (_) => const _CompleteDialog());
+            await showDialog(
+              context: context,
+              builder: (_) => const _CompleteDialog(),
+            );
             navigator.pop();
           },
         ),
@@ -212,7 +227,9 @@ class _CompleteDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+      ),
       title: Text(
         L.thankYouForCooperation,
         style: const TextStyle(
@@ -241,7 +258,9 @@ class _CompleteDialog extends StatelessWidget {
         AlertButton(
           text: L.close,
           onPressed: () async {
-            analytics.logEvent(name: 'close_pre_store_review_modal_complete_dialog');
+            analytics.logEvent(
+              name: 'close_pre_store_review_modal_complete_dialog',
+            );
             Navigator.of(context).pop();
           },
         ),

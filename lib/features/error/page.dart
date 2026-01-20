@@ -7,10 +7,7 @@ import 'package:pilll/features/inquiry/page.dart';
 import 'package:flutter/material.dart';
 
 class _InheritedWidget extends InheritedWidget {
-  const _InheritedWidget({
-    required super.child,
-    required this.state,
-  });
+  const _InheritedWidget({required super.child, required this.state});
 
   final UniversalErrorPageState state;
 
@@ -83,19 +80,18 @@ class UniversalErrorPageState extends State<UniversalErrorPage> {
                   height: 190,
                 ),
                 const SizedBox(height: 25),
-                Text(message,
-                    style: const TextStyle(
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w300,
-                      fontSize: 14,
-                      color: TextColor.main,
-                    )),
+                Text(
+                  message,
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 14,
+                    color: TextColor.main,
+                  ),
+                ),
                 const SizedBox(height: 25),
                 TextButton.icon(
-                  icon: const Icon(
-                    Icons.refresh,
-                    size: 20,
-                  ),
+                  icon: const Icon(Icons.refresh, size: 20),
                   label: Text(
                     L.reloadScreen,
                     style: const TextStyle(
@@ -117,10 +113,7 @@ class UniversalErrorPageState extends State<UniversalErrorPage> {
                   },
                 ),
                 TextButton.icon(
-                  icon: const Icon(
-                    Icons.mail,
-                    size: 20,
-                  ),
+                  icon: const Icon(Icons.mail, size: 20),
                   label: Text(
                     L.contactIfNotResolved,
                     style: const TextStyle(
@@ -131,10 +124,12 @@ class UniversalErrorPageState extends State<UniversalErrorPage> {
                     ),
                   ),
                   onPressed: () {
-                    analytics.logEvent(name: 'problem_unresolved_button_pressed');
+                    analytics.logEvent(
+                      name: 'problem_unresolved_button_pressed',
+                    );
                     Navigator.of(context).push(InquiryPageRoute.route());
                   },
-                )
+                ),
               ],
             ),
           ),
