@@ -51,13 +51,13 @@ Future<String> debugInfo(String separator) async {
   final platform = Platform.isIOS ? 'iOS' : 'Android';
 
   final activePillSheet = pillSheetGroup?.activePillSheet;
-  final Map<String, dynamic> activedPillSheetDebugInfo = <String, dynamic>{};
+  final Map<String, dynamic> activePillSheetDebugInfo = <String, dynamic>{};
   if (activePillSheet != null) {
-    activedPillSheetDebugInfo['id'] = activePillSheet.id;
-    activedPillSheetDebugInfo['beginingDate'] = activePillSheet.beginDate.toIso8601String();
-    activedPillSheetDebugInfo['lastTakenDate'] = activePillSheet.lastTakenDate?.toIso8601String();
-    activedPillSheetDebugInfo['createdAt'] = activePillSheet.createdAt?.toIso8601String();
-    activedPillSheetDebugInfo['deletedAt'] = activePillSheet.deletedAt?.toIso8601String();
+    activePillSheetDebugInfo['id'] = activePillSheet.id;
+    activePillSheetDebugInfo['beginingDate'] = activePillSheet.beginDate.toIso8601String();
+    activePillSheetDebugInfo['lastTakenDate'] = activePillSheet.lastTakenDate?.toIso8601String();
+    activePillSheetDebugInfo['createdAt'] = activePillSheet.createdAt?.toIso8601String();
+    activePillSheetDebugInfo['deletedAt'] = activePillSheet.deletedAt?.toIso8601String();
   }
 
   final contents = [
@@ -67,7 +67,7 @@ Future<String> debugInfo(String separator) async {
     'isPremium: ${user?.isPremium}',
     'isTrial: ${user?.isTrial}',
     'pillSheetGroupID: ${pillSheetGroup?.id}',
-    'activePillSheet: ${activedPillSheetDebugInfo.toString()}',
+    'activePillSheet: ${activePillSheetDebugInfo.toString()}',
     'reminderTimes: ${setting?.reminderTimes}',
   ];
   return contents.join(separator);

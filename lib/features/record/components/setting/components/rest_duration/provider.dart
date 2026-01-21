@@ -244,18 +244,18 @@ class ChangeRestDuration {
       }
     }
 
-    // beginingDateをアップデート
-    final updatedBeginingDatePillSheets = <PillSheet>[];
+    // beginningDateをアップデート
+    final updatedBeginningDatePillSheets = <PillSheet>[];
     for (final pillSheet in updatedRestDurationPillSheets) {
       if (pillSheet.id == updatedRestDurationPillSheets.first.id) {
-        updatedBeginingDatePillSheets.add(pillSheet);
+        updatedBeginningDatePillSheets.add(pillSheet);
         continue;
       }
 
-      /// このループ内でアップデートされた前のピルシートを用いてbeginingDateを算出するので、
-      /// [updatedBeginingDatePillSheets] から取得する
-      final beforePillSheet = updatedBeginingDatePillSheets[pillSheet.groupIndex - 1];
-      updatedBeginingDatePillSheets.add(
+      /// このループ内でアップデートされた前のピルシートを用いてbeginningDateを算出するので、
+      /// [updatedBeginningDatePillSheets] から取得する
+      final beforePillSheet = updatedBeginningDatePillSheets[pillSheet.groupIndex - 1];
+      updatedBeginningDatePillSheets.add(
         pillSheet.copyWith(
           beginDate: beforePillSheet.estimatedEndTakenDate.date().addDays(1),
         ),
@@ -264,14 +264,14 @@ class ChangeRestDuration {
 
     // lastTakenDateをクリアする
     final updatedPillSheets = <PillSheet>[];
-    for (final pillSheet in updatedBeginingDatePillSheets) {
+    for (final pillSheet in updatedBeginningDatePillSheets) {
       if (pillSheet.groupIndex <= updatedToRestDurationPillSheet.groupIndex) {
         updatedPillSheets.add(pillSheet);
         continue;
       }
 
       // updatedToRestDurationPillSheetよりも後ろのピルシートは、lastTakenDateをクリアしてしまう
-      // ピル番号の表示するロジックで、beginingDate > lastTakenDateのような状態になると困る
+      // ピル番号の表示するロジックで、beginningDate > lastTakenDateのような状態になると困る
       // 対象のピルシートにrestDurationsが含まれていない場合にlastTakenDateをクリアする
       if (pillSheet.restDurations.isEmpty) {
         // v1/v2で分岐: v2ではlastTakenDateはpillsから導出されるため、pillsをクリアする必要がある

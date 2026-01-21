@@ -7226,7 +7226,7 @@ void main() {
     });
   });
 
-  group("#isDeactived", () {
+  group("#isDeactivated", () {
     group("アクティブなピルシートがある場合", () {
       test("deletedAtがnullの場合はfalseを返す", () {
         final mockTodayRepository = MockTodayService();
@@ -7256,7 +7256,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, false);
+        expect(pillSheetGroup.isDeactivated, false);
       });
 
       test("deletedAtが設定されている場合はtrueを返す", () {
@@ -7287,7 +7287,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, true);
+        expect(pillSheetGroup.isDeactivated, true);
       });
     });
 
@@ -7320,7 +7320,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, true);
+        expect(pillSheetGroup.isDeactivated, true);
       });
 
       test("今日がピルシート終了日翌日の場合はtrueを返す（境界値）", () {
@@ -7352,7 +7352,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, true);
+        expect(pillSheetGroup.isDeactivated, true);
       });
 
       test("deletedAtも設定されている場合はtrueを返す（両条件）", () {
@@ -7383,7 +7383,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, true);
+        expect(pillSheetGroup.isDeactivated, true);
       });
     });
 
@@ -7416,7 +7416,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, false);
+        expect(pillSheetGroup.isDeactivated, false);
       });
 
       test("今日がピルシート終了日の場合はfalseを返す", () {
@@ -7448,7 +7448,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, false);
+        expect(pillSheetGroup.isDeactivated, false);
       });
     });
 
@@ -7496,7 +7496,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, false);
+        expect(pillSheetGroup.isDeactivated, false);
       });
 
       test("全ピルシートの期間外の場合はtrueを返す", () {
@@ -7542,7 +7542,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, true);
+        expect(pillSheetGroup.isDeactivated, true);
       });
 
       test("1枚目と2枚目の境界日（1枚目終了日）でdeletedAtがnullの場合はfalseを返す", () {
@@ -7588,7 +7588,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, false);
+        expect(pillSheetGroup.isDeactivated, false);
       });
 
       test("1枚目と2枚目の境界日（2枚目開始日）でdeletedAtがnullの場合はfalseを返す", () {
@@ -7634,7 +7634,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, false);
+        expect(pillSheetGroup.isDeactivated, false);
       });
     });
 
@@ -7676,7 +7676,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, false);
+        expect(pillSheetGroup.isDeactivated, false);
       });
 
       test("服用お休みにより終了日がずれた終了日の翌日はtrueを返す", () {
@@ -7716,7 +7716,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, true);
+        expect(pillSheetGroup.isDeactivated, true);
       });
     });
 
@@ -7749,7 +7749,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, false);
+        expect(pillSheetGroup.isDeactivated, false);
       });
 
       test("pillsheet_24_0（24錠）の終了日の場合はfalseを返す（境界値）", () {
@@ -7781,7 +7781,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, false);
+        expect(pillSheetGroup.isDeactivated, false);
       });
 
       test("pillsheet_24_0（24錠）の終了日翌日の場合はtrueを返す（境界値）", () {
@@ -7813,7 +7813,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, true);
+        expect(pillSheetGroup.isDeactivated, true);
       });
 
       test("pillsheet_21_0（21錠）の終了日の場合はfalseを返す（境界値）", () {
@@ -7845,7 +7845,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, false);
+        expect(pillSheetGroup.isDeactivated, false);
       });
 
       test("pillsheet_21_0（21錠）の終了日翌日の場合はtrueを返す（境界値）", () {
@@ -7877,7 +7877,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, true);
+        expect(pillSheetGroup.isDeactivated, true);
       });
     });
 
@@ -7940,7 +7940,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, false);
+        expect(pillSheetGroup.isDeactivated, false);
       });
 
       test("2枚目と3枚目の境界日（3枚目開始日）でfalseを返す", () {
@@ -7999,7 +7999,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, false);
+        expect(pillSheetGroup.isDeactivated, false);
       });
 
       test("3枚目終了日翌日の場合はtrueを返す", () {
@@ -8058,7 +8058,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, true);
+        expect(pillSheetGroup.isDeactivated, true);
       });
     });
 
@@ -8108,7 +8108,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, false);
+        expect(pillSheetGroup.isDeactivated, false);
       });
 
       test("21錠と24錠の組み合わせで1枚目終了日（21錠の終了日）でfalseを返す（境界値）", () {
@@ -8155,7 +8155,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, false);
+        expect(pillSheetGroup.isDeactivated, false);
       });
 
       test("21錠と24錠の組み合わせで2枚目開始日（24錠の開始日）でfalseを返す（境界値）", () {
@@ -8202,7 +8202,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, false);
+        expect(pillSheetGroup.isDeactivated, false);
       });
 
       test("21錠と24錠の組み合わせで全期間終了後はtrueを返す", () {
@@ -8249,7 +8249,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
-        expect(pillSheetGroup.isDeactived, true);
+        expect(pillSheetGroup.isDeactivated, true);
       });
     });
   });

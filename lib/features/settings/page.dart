@@ -168,7 +168,7 @@ class SettingPageBody extends StatelessWidget {
                     return SettingSectionTitle(
                       text: L.pillSheet,
                       children: [
-                        if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) ...[
+                        if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactivated) ...[
                           TodayPllNumberRow(
                             setting: setting,
                             pillSheetGroup: pillSheetGroup,

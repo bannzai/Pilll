@@ -125,7 +125,7 @@ class PillSheetGroup with _$PillSheetGroup {
 
   /// グループが非アクティブ状態かどうかを判定
   /// アクティブなピルシートがないか削除済みの場合はtrue
-  bool get isDeactived => activePillSheet == null || _isDeleted;
+  bool get isDeactivated => activePillSheet == null || _isDeleted;
 
   // NOTE: 0が返却される時は、過去のピルシートグループを参照しているときなど
   // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる

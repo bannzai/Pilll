@@ -93,7 +93,7 @@ class RecordPageBody extends HookConsumerWidget {
       ),
       body: Builder(
         builder: (context) {
-          if (activePillSheet == null || pillSheetGroup == null || pillSheetGroup.isDeactived) {
+          if (activePillSheet == null || pillSheetGroup == null || pillSheetGroup.isDeactivated) {
             return Column(
               children: [
                 Expanded(

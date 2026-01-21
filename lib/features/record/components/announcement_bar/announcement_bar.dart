@@ -219,7 +219,7 @@ class AnnouncementBar extends HookConsumerWidget {
       }
 
       if (latestPillSheetGroup != null && latestPillSheetGroup.activePillSheet == null) {
-        // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
+        // ピルシートグループが存在していてactivePillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
         return EndedPillSheet(isPremium: user.isPremium, isTrial: user.isTrial);
       }
     }

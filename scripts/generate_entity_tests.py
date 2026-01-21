@@ -26,7 +26,7 @@ ENTITY_METHODS: dict[str, list[str]] = {
     ],
     "PillSheetGroup": [
         # Getters
-        "activePillSheet", "isDeactived", "sequentialTodayPillNumber",
+        "activePillSheet", "isDeactivated", "sequentialTodayPillNumber",
         "sequentialLastTakenPillNumber", "sequentialEstimatedEndPillNumber",
         "lastTakenPillSheetOrFirstPillSheet", "lastTakenPillNumberWithoutDate",
         "pillSheetTypes", "restDurations", "pillNumbersInPillSheet", "pillNumbersForCyclicSequential",
