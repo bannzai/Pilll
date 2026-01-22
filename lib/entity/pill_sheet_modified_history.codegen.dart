@@ -152,7 +152,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   }) {
     return _create(
       actionType: PillSheetModifiedActionType.revertTakenPill,
-      value: PillSheetModifiedHistoryValue(
+      value: const PillSheetModifiedHistoryValue(
         revertTakenPill: RevertTakenPillValue(),
       ),
       beforePillSheetGroup: beforePillSheetGroup,
@@ -166,7 +166,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   }) {
     return _create(
       actionType: PillSheetModifiedActionType.createdPillSheet,
-      value: PillSheetModifiedHistoryValue(
+      value: const PillSheetModifiedHistoryValue(
         createdPillSheet: CreatedPillSheetValue(),
       ),
       beforePillSheetGroup: beforePillSheetGroup,
@@ -180,7 +180,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   }) {
     return _create(
       actionType: PillSheetModifiedActionType.changedPillNumber,
-      value: PillSheetModifiedHistoryValue(
+      value: const PillSheetModifiedHistoryValue(
         changedPillNumber: ChangedPillNumberValue(),
       ),
       beforePillSheetGroup: beforePillSheetGroup,
@@ -194,7 +194,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   }) {
     return _create(
       actionType: PillSheetModifiedActionType.deletedPillSheet,
-      value: PillSheetModifiedHistoryValue(
+      value: const PillSheetModifiedHistoryValue(
         deletedPillSheet: DeletedPillSheetValue(),
       ),
       beforePillSheetGroup: beforePillSheetGroup,
@@ -280,7 +280,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   }) {
     return _create(
       actionType: PillSheetModifiedActionType.changedBeginDisplayNumber,
-      value: PillSheetModifiedHistoryValue(
+      value: const PillSheetModifiedHistoryValue(
         changedBeginDisplayNumber: ChangedBeginDisplayNumberValue(),
       ),
       beforePillSheetGroup: beforePillSheetGroup,
@@ -294,7 +294,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   }) {
     return _create(
       actionType: PillSheetModifiedActionType.changedEndDisplayNumber,
-      value: PillSheetModifiedHistoryValue(
+      value: const PillSheetModifiedHistoryValue(
         changedEndDisplayNumber: ChangedEndDisplayNumberValue(),
       ),
       beforePillSheetGroup: beforePillSheetGroup,
