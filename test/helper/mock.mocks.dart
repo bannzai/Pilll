@@ -1456,19 +1456,23 @@ class MockFetchOrCreateUser extends _i1.Mock implements _i27.FetchOrCreateUser {
       ) as _i2.DatabaseConnection);
 
   @override
-  _i9.Future<_i4.User> call(String? uid) => (super.noSuchMethod(
+  _i9.Future<(_i4.User, {bool isNewlyCreated})> call(String? uid) =>
+      (super.noSuchMethod(
         Invocation.method(
           #call,
           [uid],
         ),
-        returnValue: _i9.Future<_i4.User>.value(_FakeUser_15(
-          this,
-          Invocation.method(
-            #call,
-            [uid],
+        returnValue: _i9.Future<(_i4.User, {bool isNewlyCreated})>.value((
+          _FakeUser_15(
+            this,
+            Invocation.method(
+              #call,
+              [uid],
+            ),
           ),
+          isNewlyCreated: false
         )),
-      ) as _i9.Future<_i4.User>);
+      ) as _i9.Future<(_i4.User, {bool isNewlyCreated})>);
 }
 
 /// A class which mocks [SaveUserLaunchInfo].
