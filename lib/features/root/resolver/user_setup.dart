@@ -25,6 +25,7 @@ class UserSetup extends HookConsumerWidget {
     final saveUserLaunchInfo = ref.watch(saveUserLaunchInfoProvider);
 
     final appUser = useState<User?>(null);
+    final isNewlyCreated = useState<bool>(false);
     final error = useState<LaunchException?>(null);
 
     // Setup user
@@ -36,8 +37,9 @@ class UserSetup extends HookConsumerWidget {
           final appUserValue = appUser.value;
           if (appUserValue == null) {
             // Retrieve user from app DB.
-            final user = await fetchOrCreateUser(userID);
-            appUser.value = user;
+            final result = await fetchOrCreateUser(userID);
+            appUser.value = result.$1;
+            isNewlyCreated.value = result.isNewlyCreated;
 
             // Register userID for each analytics libraries.
             setUserID(userID: userID);
@@ -58,7 +60,8 @@ class UserSetup extends HookConsumerWidget {
 
     useEffect(() {
       final appUserValue = appUser.value;
-      if (appUserValue != null) {
+      // 新規作成時はスキップ（_create()で既に保存済み）
+      if (appUserValue != null && !isNewlyCreated.value) {
         saveUserLaunchInfo(appUserValue);
       }
       return null;

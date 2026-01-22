@@ -69,17 +69,20 @@ class FetchOrCreateUser {
   final DatabaseConnection databaseConnection;
   FetchOrCreateUser(this.databaseConnection);
 
-  Future<User> call(String uid) async {
+  Future<(User, {bool isNewlyCreated})> call(String uid) async {
     debugPrint('call fetchOrCreate for $uid');
-    final user = await _fetch(uid).catchError((error) {
-      if (error is UserNotFound) {
-        return _create(uid).then((_) => _fetch(uid));
-      }
+    try {
+      final user = await _fetch(uid);
+      return (user, isNewlyCreated: false);
+    } on UserNotFound {
+      await _create(uid);
+      final user = await _fetch(uid);
+      return (user, isNewlyCreated: true);
+    } catch (error) {
       throw FormatException(
         'Create user error: $error, stackTrace: ${StackTrace.current.toString()}',
       );
-    });
-    return user;
+    }
   }
 
   Future<User> _fetch(String uid) async {
@@ -100,12 +103,55 @@ class FetchOrCreateUser {
   Future<void> _create(String uid) async {
     debugPrint('#create $uid');
     final sharedPreferences = await SharedPreferences.getInstance();
-    final anonymousUserID = sharedPreferences.getString(
-      StringKey.lastSignInAnonymousUID,
-    );
+    final anonymousUserID = sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
+
+    // Stats
+    final lastLoginVersion = await PackageInfo.fromPlatform().then((value) => value.version);
+    String? beginVersion = sharedPreferences.getString(StringKey.beginVersion);
+    if (beginVersion == null) {
+      await sharedPreferences.setString(StringKey.beginVersion, lastLoginVersion);
+      beginVersion = lastLoginVersion;
+    }
+
+    // Timezone
+    final now = DateTime.now().toLocal();
+    final timeZoneName = now.timeZoneName;
+    final timeZoneOffset = now.timeZoneOffset;
+    final timeZoneDatabaseName = await FlutterTimezone.getLocalTimezone();
+
+    // Package
+    final packageInfo = await PackageInfo.fromPlatform();
+    final os = Platform.operatingSystem;
+    final package = Package(latestOS: os, appName: packageInfo.appName, buildNumber: packageInfo.buildNumber, appVersion: packageInfo.version);
+
+    // UserIDs（初回なので初期値）
+    final userDocumentIDSets = [uid];
+    final anonymousUserIDSets = anonymousUserID != null ? [anonymousUserID] : <String>[];
+    final firebaseCurrentUserID = firebase_auth.FirebaseAuth.instance.currentUser?.uid;
+    final firebaseCurrentUserIDSets = firebaseCurrentUserID != null ? [firebaseCurrentUserID] : <String>[];
+
     return databaseConnection.userRawReference().set({
+      // 既存フィールド
       if (anonymousUserID != null) UserFirestoreFieldKeys.anonymousUserID: anonymousUserID,
       UserFirestoreFieldKeys.userIDWhenCreateUser: uid,
+      // 起動情報
+      'lastLoginAt': now,
+      'stats': {
+        'lastLoginAt': now,
+        'beginVersion': beginVersion,
+        'lastLoginVersion': lastLoginVersion,
+      },
+      'timezone': {
+        'name': timeZoneName,
+        'databaseName': timeZoneDatabaseName,
+        'offsetInHours': timeZoneOffset.inHours,
+        'offsetIsNegative': timeZoneOffset.isNegative,
+      },
+      UserFirestoreFieldKeys.packageInfo: package.toJson(),
+      UserFirestoreFieldKeys.userDocumentIDSets: userDocumentIDSets,
+      UserFirestoreFieldKeys.firebaseCurrentUserIDSets: firebaseCurrentUserIDSets,
+      UserFirestoreFieldKeys.anonymousUserIDSets: anonymousUserIDSets,
+      UserFirestoreFieldKeys.isTrial: false,
     }, SetOptions(merge: true));
   }
 }
