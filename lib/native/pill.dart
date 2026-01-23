@@ -6,8 +6,19 @@ import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/take_pill.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
+
+/// クイックレコードで服用済みかどうかを判定する
+/// v1: 1錠飲みなので todayPillIsAlreadyTaken で判定
+/// v2: 2錠飲み対応なので todayPillAllTaken で判定（両方完了している場合のみtrue）
+bool shouldSkipQuickRecord(PillSheet activePillSheet) {
+  return switch (activePillSheet) {
+    PillSheetV1() => activePillSheet.todayPillIsAlreadyTaken,
+    PillSheetV2() => activePillSheet.todayPillAllTaken,
+  };
+}
 
 Future<PillSheetGroup?> quickRecordTakePill(DatabaseConnection database) async {
   final pillSheetGroup = await fetchLatestPillSheetGroup(database);
@@ -18,7 +29,7 @@ Future<PillSheetGroup?> quickRecordTakePill(DatabaseConnection database) async {
   if (activePillSheet == null) {
     return pillSheetGroup;
   }
-  if (activePillSheet.todayPillIsAlreadyTaken) {
+  if (shouldSkipQuickRecord(activePillSheet)) {
     return pillSheetGroup;
   }
 
