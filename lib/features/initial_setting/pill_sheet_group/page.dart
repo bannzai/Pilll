@@ -151,6 +151,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                             );
                           },
                         ),
+                        const SizedBox(height: 35),
                       ],
                     ),
                   ),
