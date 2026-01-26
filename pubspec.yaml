@@ -38,7 +38,7 @@ dependencies:
   firebase_messaging:
   firebase_remote_config:
   firebase_crashlytics:
-  cloud_functions:
+  cloud_functions: 6.0.6
   cloud_firestore:
   url_launcher: ^6.3.2
   package_info_plus: ^8.0.2
