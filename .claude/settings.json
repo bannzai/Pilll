@@ -29,7 +29,8 @@
           },
           {
             "type": "command",
-            "command": "[ \"$CLAUDE_CODE_REMOTE\" = \"true\" ] && curl -fsSL https://gist.githubusercontent.com/bannzai/0b762d81d9d115bb1aa3b81037322478/raw/ccweb-flutter-install.sh | bash"
+            "command": "[ \"$CLAUDE_CODE_REMOTE\" = \"true\" ] && curl -fsSL https://gist.githubusercontent.com/bannzai/0b762d81d9d115bb1aa3b81037322478/raw/ccweb-flutter-install.sh | bash",
+            "timeout": 300
           }
         ]
       }
