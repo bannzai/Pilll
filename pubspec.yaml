@@ -60,7 +60,7 @@ dependencies:
   flutter_app_badger: ^1.2.0
   purchases_flutter: ^8.3.1
   flutter_local_notifications: ^19.5.0
-  webview_flutter: ^4.13.0
+  webview_flutter: ^4.13.1
   collection: ^1.18.0
   crypto: 3.0.7
   timezone: 0.10.1
