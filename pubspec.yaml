@@ -59,11 +59,11 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_app_badger: ^1.2.0
   purchases_flutter: ^8.3.1
-  flutter_local_notifications: ^19.5.0
+  flutter_local_notifications: ^21.0.0-dev.2
   webview_flutter: ^4.13.0
   collection: ^1.18.0
   crypto: 3.0.7
-  timezone: 0.10.1
+  timezone: 0.11.0
   google_mobile_ads: ^5.0.0
     # home_widget: ^0.5.0
   home_widget:
