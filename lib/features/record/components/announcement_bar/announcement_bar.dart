@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/feature_appeal/feature_appeal_bars_container.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/special_offering.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/special_offering2.dart';
@@ -18,6 +19,7 @@ import 'package:pilll/features/record/components/announcement_bar/components/lif
 import 'package:pilll/features/record/components/announcement_bar/components/pilll_ads.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/premium_trial_limit.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/recommend_signup_general.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/recommend_signup_premium.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/rest_duration.dart';
 import 'package:pilll/provider/locale.dart';
@@ -154,6 +156,17 @@ class AnnouncementBar extends HookConsumerWidget {
         return EndedPillSheet(isPremium: user.isPremium, isTrial: user.isTrial);
       }
 
+      // FeatureAppeal: 認証推奨 → 機能アピール (有料/無料 ローテ) → 既存フォールバック
+      if (!isLinkedLoginProvider) {
+        return const RecommendSignupGeneralAnnouncementBar();
+      }
+      if (FeatureAppealBarsContainer.hasAnyCandidate(
+        sharedPreferences: sharedPreferences,
+        appIsReleased: appIsReleased,
+      )) {
+        return FeatureAppealBarsContainer(appIsReleased: appIsReleased);
+      }
+
       if (user.isTrial) {
         final premiumTrialLimit = PremiumTrialLimitAnnouncementBar.premiumTrialLimitMessage(user);
         if (premiumTrialLimit != null) {
@@ -209,6 +222,7 @@ class AnnouncementBar extends HookConsumerWidget {
         return const RecommendSignupForPremiumAnnouncementBar();
       }
 
+      // 3. 実利用警告系 (RestDuration / EndedPillSheet) は FeatureAppeal より優先する
       final restDurationNotification = RestDurationAnnouncementBar.retrieveRestDurationNotification(
         latestPillSheetGroup: latestPillSheetGroup,
       );
@@ -221,6 +235,14 @@ class AnnouncementBar extends HookConsumerWidget {
       if (latestPillSheetGroup != null && latestPillSheetGroup.activePillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
         return EndedPillSheet(isPremium: user.isPremium, isTrial: user.isTrial);
+      }
+
+      // 4. FeatureAppeal: 上記実利用警告系がない場合のみ Premium ユーザーにも機能アピールを出す
+      if (FeatureAppealBarsContainer.hasAnyCandidate(
+        sharedPreferences: sharedPreferences,
+        appIsReleased: appIsReleased,
+      )) {
+        return FeatureAppealBarsContainer(appIsReleased: appIsReleased);
       }
     }
 
