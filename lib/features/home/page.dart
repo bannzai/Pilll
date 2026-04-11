@@ -32,6 +32,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 enum HomePageTabType { record, menstruation, calendar, setting }
 
+/// HomePage の TabController を外部から参照するための Provider。
+/// FeatureAppeal の無料機能ヘルプページから animateTo するために HomePageBody が build/dispose 時に値を出し入れする。
+final homeTabControllerProvider = StateProvider<TabController?>((ref) => null);
+
 class HomePage extends HookConsumerWidget {
   const HomePage({super.key});
 
@@ -87,6 +91,11 @@ class HomePageBody extends HookConsumerWidget {
       tabIndex.value = tabController.index;
       _screenTracking(tabController.index);
     });
+
+    useEffect(() {
+      ref.read(homeTabControllerProvider.notifier).state = tabController;
+      return () => ref.read(homeTabControllerProvider.notifier).state = null;
+    }, [tabController]);
 
     final isJaLocale = ref.watch(isJaLocaleProvider);
     final isAlreadyAnsweredPreStoreReviewModal = sharedPreferences.getBool(

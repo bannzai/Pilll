@@ -9,6 +9,30 @@ extension BoolKey on String {
   static const specialOfferingIsClosed = 'specialOfferingIsClosed';
   static const specialOfferingIsClosed2 = 'specialOfferingIsClosed2';
   static const lifetimeSubscriptionWarningIsClosed = 'lifetimeSubscriptionWarningIsClosed';
+
+  /// Critical Alert (サイレントモードでも通知を配信する有料機能) のアピール Bar を × で閉じたかどうか。
+  static const criticalAlertFeatureAppealIsClosed = 'criticalAlertFeatureAppealIsClosed';
+
+  /// 通知メッセージカスタマイズ (有料機能) のアピール Bar を × で閉じたかどうか。
+  static const reminderNotificationCustomizeWordFeatureAppealIsClosed = 'reminderNotificationCustomizeWordFeatureAppealIsClosed';
+
+  /// ピルシート外観モード(date) (有料機能) のアピール Bar を × で閉じたかどうか。
+  static const appearanceModeDateFeatureAppealIsClosed = 'appearanceModeDateFeatureAppealIsClosed';
+
+  /// ピル記録/服用履歴 (無料機能) のアピール Bar を × で閉じたかどうか。
+  static const recordPillFeatureAppealIsClosed = 'recordPillFeatureAppealIsClosed';
+
+  /// 生理記録 (無料機能) のアピール Bar を × で閉じたかどうか。
+  static const menstruationFeatureAppealIsClosed = 'menstruationFeatureAppealIsClosed';
+
+  /// カレンダーと日記 (無料機能) のアピール Bar を × で閉じたかどうか。
+  static const calendarDiaryFeatureAppealIsClosed = 'calendarDiaryFeatureAppealIsClosed';
+
+  /// 未来の予定 (無料機能) のアピール Bar を × で閉じたかどうか。
+  static const futureScheduleFeatureAppealIsClosed = 'futureScheduleFeatureAppealIsClosed';
+
+  /// ヘルスケア連携 (無料機能) のアピール Bar を × で閉じたかどうか。
+  static const healthCareIntegrationFeatureAppealIsClosed = 'healthCareIntegrationFeatureAppealIsClosed';
 }
 
 extension StringKey on String {

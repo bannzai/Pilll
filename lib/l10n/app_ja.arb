@@ -2418,5 +2418,145 @@
   "lifetimePurchaseNotice3": "から事前にキャンセルしてからお買い求めください。",
   "@lifetimePurchaseNotice3": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "実際に試す",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "アカウント登録をおすすめします",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "登録するとデータをバックアップできます",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "サイレントモードでも通知を受け取る",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "おやすみモードでも飲み忘れを防ごう",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "サイレントモードでも通知が届く",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alertを有効にすると、おやすみモードやマナーモード中でも服用通知を受け取れます。大事なピルの服用タイミングを逃さないために、ぜひ設定してみてください。",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "通知メッセージをカスタマイズ",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "あなたらしい言葉で通知を受け取ろう",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "服用通知のメッセージを自由に編集",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "標準の「ピルを飲む時間です」を、あなたの好きな言葉にカスタマイズできます。やる気が出る言葉や、ペットの名前など、毎日の服用がもっと楽しくなる文言に変えてみてください。",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "ピルシートに日付を表示",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "いつ飲むかを一目で確認",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "ピルシートに日付を表示できる",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "ピルシートのマスに日付を表示することで、過去の服用履歴と未来の服用予定を一目で確認できます。「番号」モードと「日付」モードを切り替えて、自分に合った表示を選びましょう。",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "服用履歴をかんたん記録",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "毎日の服用をワンタップで記録",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "ホーム画面でピルの服用を記録",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "ホーム画面のピルシートをタップするだけで、その日の服用を記録できます。間違えて記録した場合も、もう一度タップすれば取り消せます。服用履歴も後から確認できるので、安心して続けられます。",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "生理を記録・予測",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "生理開始日を記録して周期を把握",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "生理の記録と予測ができる",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "生理が来たら記録するだけで、過去の生理履歴を一覧できます。次の生理予定日も自動で予測されるので、計画的に過ごせます。",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "カレンダーで体調を記録",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "毎日の体調をカレンダーに残そう",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "日々の体調をカレンダーに記録",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "カレンダーから日付をタップして体調・気分・症状などを記録できます。服用記録や生理記録と一緒に確認できるので、自分の体のリズムを把握できます。",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "通院予定など未来の予定を管理",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "カレンダーに未来の予定を記録",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "通院予定や旅行の予定など、未来の予定をカレンダーに書き込めます。ピルの服用周期と合わせて確認できるので、生理の予定も考慮した計画を立てられます。",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "ヘルスケアと連携",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "生理記録をヘルスケアと共有",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilllで記録した生理データをヘルスケアアプリと自動連携できます。ヘルスケア上の他の健康データと一緒に確認したり、他のアプリでも生理データを使えるようになります。",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }

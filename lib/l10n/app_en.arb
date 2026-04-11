@@ -2402,5 +2402,145 @@
   "inquiryContentRequired": "Please enter your inquiry",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "featureAppealTryFeature": "Try this feature",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "Sign up to back up your data",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言"
+  },
+  "recommendSignupGeneralDescription": "Sign in to keep your records safe",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言"
+  },
+  "criticalAlertFeatureAppealTitle": "Get notified even in silent mode",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Never miss a dose, even on Do Not Disturb",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Receive notifications even in silent mode",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "When Critical Alert is enabled, you can receive medication reminders even while Do Not Disturb or silent mode is active. Try enabling it to make sure you never miss an important dose.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Customize your notification message",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Get reminders in your own words",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Edit the wording of your medication reminders",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Replace the default \"Time to take your pill\" with any message you like. Use motivational phrases or even your pet's name to make daily medication a little more enjoyable.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Show dates on your pill sheet",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "See at a glance when to take each pill",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Display dates on your pill sheet",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Show dates on each cell of your pill sheet so you can review past doses and upcoming schedules at a glance. Switch between Number mode and Date mode to find the layout that works best for you.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Record doses with one tap",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Log every dose with a single tap",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Record your pill on the home screen",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Just tap your pill sheet on the home screen to record today's dose. If you tapped by mistake, tap again to undo. You can review your full medication history any time.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Track and predict your period",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Log your period and understand your cycle",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Record and predict your period",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Record your period when it starts to keep a history of past cycles. The next predicted period date is calculated automatically so you can plan ahead with confidence.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Log how you feel on the calendar",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Capture your daily condition on the calendar",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Log your daily condition on the calendar",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Tap any date in the calendar to record your physical condition, mood, or symptoms. Combined with your medication and period records, it helps you understand the rhythm of your body.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Write down your future plans",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Manage upcoming appointments and trips",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Add future plans to your calendar",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Record upcoming events such as clinic appointments or trips on the calendar. View them alongside your pill schedule to plan around your predicted period as well.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Sync with Health",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Share your period records with Apple Health",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "Sync with Apple Health",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Automatically sync the period data you record in Pilll with the Apple Health app. View it together with your other health data, and reuse it across other apps that read from Health.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
