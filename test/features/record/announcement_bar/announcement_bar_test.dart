@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/feature_appeal/critical_alert/critical_alert_announcement_bar.dart';
 import 'package:pilll/features/feature_appeal/feature_appeal_bars_container.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/recommend_signup_general.dart';
@@ -2066,8 +2067,10 @@ void main() {
 
       debugDefaultTargetPlatformOverride = null;
 
+      // mockToday=epoch → daysBetween=0 → index 0 = CriticalAlertAnnouncementBar
+      // ローテーションロジック自体は feature_appeal_bars_container_test.dart で網羅的にテスト済み
       expect(
-        find.byWidgetPredicate((widget) => widget is FeatureAppealBarsContainer),
+        find.byWidgetPredicate((widget) => widget is CriticalAlertAnnouncementBar),
         findsOneWidget,
       );
     });
@@ -2176,8 +2179,10 @@ void main() {
 
       debugDefaultTargetPlatformOverride = null;
 
+      // mockToday=epoch → daysBetween=0 → index 0 = CriticalAlertAnnouncementBar
+      // ローテーションロジック自体は feature_appeal_bars_container_test.dart で網羅的にテスト済み
       expect(
-        find.byWidgetPredicate((widget) => widget is FeatureAppealBarsContainer),
+        find.byWidgetPredicate((widget) => widget is CriticalAlertAnnouncementBar),
         findsOneWidget,
       );
     });
