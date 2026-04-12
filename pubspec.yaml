@@ -31,6 +31,7 @@ dependencies:
     sdk: flutter
   flutter_svg: ^2.2.3
   shared_preferences: ^2.5.4
+  new_version_plus: ^1.0.1
   intl: ^0.20.2
   firebase_core: ^4.3.0
   firebase_analytics:
@@ -41,7 +42,7 @@ dependencies:
   cloud_functions:
   cloud_firestore:
   url_launcher: ^6.3.2
-  package_info_plus: ^8.0.2
+  package_info_plus: ^9.0.0
   json_annotation: ^4.9.0
   mockito: ^5.4.4
   freezed_annotation: ^2.4.4

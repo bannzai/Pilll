@@ -15,7 +15,7 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/database.dart';
-import 'package:pilll/utils/remote_config.dart';
+import 'package:pilll/provider/app_is_released.dart';
 
 enum OfferingType { discount, specialOffering, premium }
 

@@ -35,7 +35,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:pilll/utils/remote_config.dart';
+import 'package:pilll/provider/app_is_released.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
