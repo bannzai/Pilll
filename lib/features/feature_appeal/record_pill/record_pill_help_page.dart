@@ -75,8 +75,9 @@ class RecordPillHelpPage extends ConsumerWidget {
                     'is_paywall_shown': 0,
                   },
                 );
+                final tabController = ref.read(homeTabControllerProvider);
                 Navigator.of(context).popUntil((r) => r.isFirst);
-                ref.read(homeTabControllerProvider)?.animateTo(HomePageTabType.record.index);
+                tabController?.animateTo(HomePageTabType.record.index);
               },
             ),
           ),
