@@ -81,7 +81,7 @@ SharedPreferences key も機能ごとに個別の `const` で `BoolKey` extensio
 
 非Premiumユーザーの優先度を以下に変更:
 
-```
+```text
 DiscountPriceDeadline (実利用警告)
 → EndedPillSheet     (実利用警告)
 → RecommendSignupGeneralAnnouncementBar  (★ 新規・認証推奨)
@@ -92,7 +92,7 @@ DiscountPriceDeadline (実利用警告)
 
 Premiumユーザーの優先度:
 
-```
+```text
 LifetimeSubscriptionWarning  (既存)
 → RecommendSignupForPremium  (既存)
 → RestDuration               (実利用警告)
