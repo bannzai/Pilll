@@ -6,12 +6,12 @@ part of 'app_is_released.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$appIsReleasedHash() => r'94ec5d72bcf98ab428b6788176bef28735f98e3e';
+String _$appIsReleasedHash() => r'21463ba1d3ce5add8298b0bddb54bdb773ea8444';
 
 /// アプリの現在バージョンがストアに既に公開済みかどうかを返す。
 ///
-/// `true`: ストアに既に公開されている版。広告表示・割引計算ともに通常動作する。
-/// `false`: ストアにまだ出ていない未リリース版。広告を非表示、割引計算をスキップする。
+/// `true`: ストアに既に公開されている版。通常の告知表示・割引計算が動作する。
+/// `false`: ストアにまだ出ていない未リリース版。非プレミアムユーザーにAdMob広告を表示し、割引計算をスキップする。
 ///
 /// iOSは iTunes Search API、Android は Google Play Store のページ HTML から
 /// ストア側の最新バージョン文字列を取得し、端末のアプリバージョンと比較する。
@@ -22,7 +22,9 @@ String _$appIsReleasedHash() => r'94ec5d72bcf98ab428b6788176bef28735f98e3e';
 final appIsReleasedProvider = FutureProvider<bool>.internal(
   appIsReleased,
   name: r'appIsReleasedProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$appIsReleasedHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$appIsReleasedHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

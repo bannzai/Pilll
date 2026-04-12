@@ -27,7 +27,7 @@ Future<bool> appIsReleased(AppIsReleasedRef ref) async {
       androidId: packageInfo.packageName,
       iOSAppStoreCountry: 'jp',
       androidPlayStoreCountry: 'jp',
-    ).getVersionStatus();
+    ).getVersionStatus().timeout(const Duration(seconds: 8));
     if (status == null) {
       return false;
     }
