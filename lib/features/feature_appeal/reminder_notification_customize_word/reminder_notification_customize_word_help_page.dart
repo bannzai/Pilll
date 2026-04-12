@@ -19,7 +19,14 @@ class ReminderNotificationCustomizeWordHelpPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final user = ref.watch(userProvider).valueOrNull;
     if (user == null) {
-      return const Scaffold(backgroundColor: AppColors.background);
+      return Scaffold(
+        backgroundColor: AppColors.background,
+        appBar: AppBar(
+          title: Text(L.reminderNotificationCustomizeWordFeatureAppealTitle),
+          backgroundColor: AppColors.background,
+        ),
+        body: const Center(child: CircularProgressIndicator()),
+      );
     }
 
     return Scaffold(
@@ -75,16 +82,15 @@ class ReminderNotificationCustomizeWordHelpPage extends ConsumerWidget {
             child: PrimaryButton(
               text: L.featureAppealTryFeature,
               onPressed: () async {
-                final isPaywallShown = !user.premiumOrTrial;
                 analytics.logEvent(
                   name: 'feature_appeal_try_tapped',
                   parameters: {
                     'feature_key': 'reminder_notification_customize_word',
                     'feature_type': 'premium',
-                    'is_paywall_shown': isPaywallShown ? 1 : 0,
+                    'is_paywall_shown': !user.premiumOrTrial ? 1 : 0,
                   },
                 );
-                if (isPaywallShown) {
+                if (!user.premiumOrTrial) {
                   analytics.logEvent(
                     name: 'feature_appeal_paywall_shown',
                     parameters: {'feature_key': 'reminder_notification_customize_word'},
