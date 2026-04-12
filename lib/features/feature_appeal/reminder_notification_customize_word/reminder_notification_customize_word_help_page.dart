@@ -17,17 +17,7 @@ class ReminderNotificationCustomizeWordHelpPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final user = ref.watch(userProvider).valueOrNull;
-    if (user == null) {
-      return Scaffold(
-        backgroundColor: AppColors.background,
-        appBar: AppBar(
-          title: Text(L.reminderNotificationCustomizeWordFeatureAppealTitle),
-          backgroundColor: AppColors.background,
-        ),
-        body: const Center(child: CircularProgressIndicator()),
-      );
-    }
+    final user = ref.watch(userProvider).requireValue;
 
     return Scaffold(
       backgroundColor: AppColors.background,

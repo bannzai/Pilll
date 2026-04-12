@@ -18,18 +18,8 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final user = ref.watch(userProvider).valueOrNull;
+    final user = ref.watch(userProvider).requireValue;
     final pillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
-    if (user == null) {
-      return Scaffold(
-        backgroundColor: AppColors.background,
-        appBar: AppBar(
-          title: Text(L.appearanceModeDateFeatureAppealTitle),
-          backgroundColor: AppColors.background,
-        ),
-        body: const Center(child: CircularProgressIndicator()),
-      );
-    }
 
     return Scaffold(
       backgroundColor: AppColors.background,

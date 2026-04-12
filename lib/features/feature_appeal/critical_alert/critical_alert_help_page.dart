@@ -18,18 +18,8 @@ class CriticalAlertHelpPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final user = ref.watch(userProvider).valueOrNull;
-    final setting = ref.watch(settingProvider).valueOrNull;
-    if (user == null || setting == null) {
-      return Scaffold(
-        backgroundColor: AppColors.background,
-        appBar: AppBar(
-          title: Text(L.criticalAlertFeatureAppealTitle),
-          backgroundColor: AppColors.background,
-        ),
-        body: const Center(child: CircularProgressIndicator()),
-      );
-    }
+    final user = ref.watch(userProvider).requireValue;
+    final setting = ref.watch(settingProvider).requireValue;
 
     return Scaffold(
       backgroundColor: AppColors.background,
