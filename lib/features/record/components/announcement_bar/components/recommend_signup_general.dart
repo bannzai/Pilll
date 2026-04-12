@@ -67,15 +67,14 @@ class RecommendSignupGeneralAnnouncementBar extends StatelessWidget {
             ),
             Align(
               alignment: Alignment.centerRight,
-              child: IconButton(
-                icon: SvgPicture.asset(
+              child: Padding(
+                padding: const EdgeInsets.all(8),
+                child: SvgPicture.asset(
                   'images/arrow_right.svg',
                   colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                  height: 16,
+                  width: 16,
                 ),
-                onPressed: () {},
-                iconSize: 24,
-                padding: const EdgeInsets.all(8),
-                alignment: Alignment.centerRight,
               ),
             ),
           ],
