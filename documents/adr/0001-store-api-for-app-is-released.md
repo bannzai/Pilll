@@ -21,11 +21,11 @@ Accepted
 
 設計上のポイント:
 
-- **フォールバック**: ストア取得失敗時 (HTTP エラー / ネットワーク不通 / 例外 / `VersionStatus == null`) は `false` (未リリース扱い) を返す。`errorLogger.recordError` で Crashlytics に記録する。本番ユーザーがオフラインの際は広告が出ず割引 UI も表示されないが、ストア審査中の新版が誤ってリリース済み扱いされるよりは安全側と判断
+- **フォールバック**: ストア取得失敗時 (HTTP エラー / ネットワーク不通 / 例外 / タイムアウト / `VersionStatus == null`) は `false` (未リリース扱い) を返す。`errorLogger.recordError` で Crashlytics に記録する。本番ユーザーがオフラインの際は未リリース扱いとなるため非プレミアムユーザーにはAdMob広告が表示され割引計算はスキップされるが、ストア審査中の新版が誤ってリリース済み扱いされるよりは安全側と判断
 - **Riverpod キャッシュ**: `@Riverpod(keepAlive: true)` で単発 fetch とする。画面遷移のたびに iTunes / Play Store を叩くのを避け、認証系プロバイダーなど既存の `keepAlive: true` パターンと整合
 - **テスト容易性**: `@visibleForTesting bool appIsReleasedFromVersions({required String appVersion, required String? storeVersion})` を純粋関数として分離し、境界値 Unit Test を書けるようにする
 - **国コード**: Pilll は日本配信のみのため `iOSAppStoreCountry: 'jp'` / `androidPlayStoreCountry: 'jp'` を固定指定する
-- **`kDebugMode` は常に `true`**: デバッグビルドでは広告を出さない既存仕様を維持
+- **`kDebugMode` はデバッグビルドで `true`**: デバッグビルドでは広告を出さない既存仕様を維持
 - **RemoteConfig `releasedVersion` キーは完全削除**: `lib/utils/remote_config.dart` の `setDefaults` と `lib/entity/remote_config_parameter.codegen.dart` のキー定義・デフォルト値の両方から削除する。アプリ側が参照しなくなれば Firebase コンソール側キーの後始末はいつでも可能
 
 ### 選定候補の比較
@@ -61,7 +61,7 @@ Accepted
 ### Negative / Trade-off
 
 - Android は Google Play Store の HTML スクレイピングに依存するため、Google 側の HTML 構造変更で壊れる可能性がある (その場合はフォールバックで `false` に倒れる + Crashlytics 検知 + `new_version_plus` アップデート対応)
-- 本番ユーザーがオフライン時には広告非表示・割引 UI 非表示となる。`keepAlive: true` により再起動または通信回復で復元される
+- 本番ユーザーがオフライン時には未リリース扱いとなるため、非プレミアムユーザーにはAdMob広告が表示され割引計算はスキップされる。`keepAlive: true` により再起動または通信回復で復元される
 - ストア審査通過直後〜ストア API 反映までのラグ (数時間程度) により、新版が短時間「未リリース扱い」になる可能性がある。従来の手動 RemoteConfig 更新と比べて運用コストとのトレードオフで許容する
 - Gradle/AGP/Kotlin の連鎖アップグレードにより、Android ビルド環境全体に影響範囲が及ぶ。本 ADR で採用した各バージョン (Gradle 8.13 / AGP 8.12.1 / Kotlin 2.2.0) は既存プラグインと互換であることを `./gradlew --version` およびローカル `flutter build apk --debug` の `compileFlutterBuildDebug` 段階まで通ることで確認済み
 
