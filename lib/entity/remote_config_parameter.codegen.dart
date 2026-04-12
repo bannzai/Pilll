@@ -23,9 +23,6 @@ abstract class RemoteConfigKeys {
   /// 割引カウントダウン表示の境界時間（時間単位）キー
   static const discountCountdownBoundaryHour = 'discountCountdownBoundaryHour';
 
-  /// アプリのリリースバージョン文字列キー
-  static const releasedVersion = 'releasedVersion';
-
   /// プレミアム機能紹介パターンの識別子キー
   static const premiumIntroductionPattern = 'premiumIntroductionPattern';
 
@@ -66,8 +63,6 @@ abstract class RemoteConfigParameterDefaultValues {
   /// 割引カウントダウンを48時間で表示（デフォルト）
   static const discountCountdownBoundaryHour = 48;
 
-  /// デフォルトのリリースバージョン
-  static const releasedVersion = '202407.29.133308';
   // default(A) or B or C ...
   /// プレミアム紹介パターンのデフォルト値（A/Bテスト用）
   static const premiumIntroductionPattern = 'default';
