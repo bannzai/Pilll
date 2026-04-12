@@ -25,7 +25,7 @@ import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/auth.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
-import 'package:pilll/utils/remote_config.dart';
+import 'package:pilll/provider/app_is_released.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
