@@ -21,7 +21,14 @@ class CriticalAlertHelpPage extends ConsumerWidget {
     final user = ref.watch(userProvider).valueOrNull;
     final setting = ref.watch(settingProvider).valueOrNull;
     if (user == null || setting == null) {
-      return const Scaffold(backgroundColor: AppColors.background);
+      return Scaffold(
+        backgroundColor: AppColors.background,
+        appBar: AppBar(
+          title: Text(L.criticalAlertFeatureAppealTitle),
+          backgroundColor: AppColors.background,
+        ),
+        body: const Center(child: CircularProgressIndicator()),
+      );
     }
 
     return Scaffold(
@@ -77,16 +84,15 @@ class CriticalAlertHelpPage extends ConsumerWidget {
             child: PrimaryButton(
               text: L.featureAppealTryFeature,
               onPressed: () async {
-                final isPaywallShown = !user.premiumOrTrial;
                 analytics.logEvent(
                   name: 'feature_appeal_try_tapped',
                   parameters: {
                     'feature_key': 'critical_alert',
                     'feature_type': 'premium',
-                    'is_paywall_shown': isPaywallShown ? 1 : 0,
+                    'is_paywall_shown': !user.premiumOrTrial ? 1 : 0,
                   },
                 );
-                if (isPaywallShown) {
+                if (!user.premiumOrTrial) {
                   analytics.logEvent(
                     name: 'feature_appeal_paywall_shown',
                     parameters: {'feature_key': 'critical_alert'},
