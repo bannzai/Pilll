@@ -156,7 +156,6 @@ class AnnouncementBar extends HookConsumerWidget {
         return EndedPillSheet(isPremium: user.isPremium, isTrial: user.isTrial);
       }
 
-      // FeatureAppeal: 認証推奨 → 機能アピール (有料/無料 ローテ) → 既存フォールバック
       if (!isLinkedLoginProvider) {
         return const RecommendSignupGeneralAnnouncementBar();
       }
@@ -222,7 +221,6 @@ class AnnouncementBar extends HookConsumerWidget {
         return const RecommendSignupForPremiumAnnouncementBar();
       }
 
-      // 3. 実利用警告系 (RestDuration / EndedPillSheet) は FeatureAppeal より優先する
       final restDurationNotification = RestDurationAnnouncementBar.retrieveRestDurationNotification(
         latestPillSheetGroup: latestPillSheetGroup,
       );
@@ -237,7 +235,6 @@ class AnnouncementBar extends HookConsumerWidget {
         return EndedPillSheet(isPremium: user.isPremium, isTrial: user.isTrial);
       }
 
-      // 4. FeatureAppeal: 上記実利用警告系がない場合のみ Premium ユーザーにも機能アピールを出す
       if (FeatureAppealBarsContainer.hasAnyCandidate(
         sharedPreferences: sharedPreferences,
         appIsReleased: appIsReleased,

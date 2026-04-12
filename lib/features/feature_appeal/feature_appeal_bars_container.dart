@@ -15,12 +15,11 @@ import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// FeatureAppeal の index ローテーション計算の起点となる epoch 日付。
-/// 任意の固定日でよいが、変更すると既存ユーザーの「今日表示される Bar」がずれるため固定する。
+/// 変更すると既存ユーザーの「今日表示される Bar」がずれる。
 final DateTime _featureAppealEpoch = DateTime(2024, 1, 1);
 
-/// AnnouncementBar から呼び出される FeatureAppeal 専用コンテナ。
-/// 8 機能ぶんの dismissed フラグを useState で所有し、useEffect で SharedPreferences と同期する。
-/// 子 Bar に ValueNotifier を渡し、× ボタン押下で再描画して次の候補にフォールバックする。
+/// AnnouncementBar 領域に表示する FeatureAppeal 専用コンテナ。
+/// 候補 Bar のうち `daysBetween(epoch, today) % candidates.length` の 1 件だけを出す。
 class FeatureAppealBarsContainer extends HookConsumerWidget {
   /// 未リリース機能を非表示にするフラグ。
   final bool appIsReleased;
