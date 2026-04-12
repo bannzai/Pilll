@@ -21,7 +21,14 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
     final user = ref.watch(userProvider).valueOrNull;
     final pillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
     if (user == null) {
-      return const Scaffold(backgroundColor: AppColors.background);
+      return Scaffold(
+        backgroundColor: AppColors.background,
+        appBar: AppBar(
+          title: Text(L.appearanceModeDateFeatureAppealTitle),
+          backgroundColor: AppColors.background,
+        ),
+        body: const Center(child: CircularProgressIndicator()),
+      );
     }
 
     return Scaffold(
@@ -76,16 +83,15 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
             child: PrimaryButton(
               text: L.featureAppealTryFeature,
               onPressed: () async {
-                final isPaywallShown = !user.premiumOrTrial;
                 analytics.logEvent(
                   name: 'feature_appeal_try_tapped',
                   parameters: {
                     'feature_key': 'appearance_mode_date',
                     'feature_type': 'premium',
-                    'is_paywall_shown': isPaywallShown ? 1 : 0,
+                    'is_paywall_shown': !user.premiumOrTrial ? 1 : 0,
                   },
                 );
-                if (isPaywallShown) {
+                if (!user.premiumOrTrial) {
                   analytics.logEvent(
                     name: 'feature_appeal_paywall_shown',
                     parameters: {'feature_key': 'appearance_mode_date'},
