@@ -2,15 +2,38 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/button.dart';
+import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/feature_appeal/critical_alert/critical_alert_help_page.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/provider/setting.dart';
+import 'package:pilll/provider/user.dart';
 
 void main() {
   group('#CriticalAlertHelpPage', () {
+    /// build 内で watch される `userProvider` / `settingProvider` を
+    /// Firebase に触れないダミー値で満たすための override。
+    List<Override> helpPageProviderOverrides() {
+      return [
+        userProvider.overrideWith((ref) => Stream.value(const User())),
+        settingProvider.overrideWith(
+          (ref) => Stream.value(
+            const Setting(
+              pillNumberForFromMenstruation: 22,
+              durationMenstruation: 5,
+              isOnReminder: false,
+              timezoneDatabaseName: null,
+            ),
+          ),
+        ),
+      ];
+    }
+
     testWidgets('ヘッドライン文言が表示される', (tester) async {
       await tester.pumpWidget(
-        const ProviderScope(
-          child: MaterialApp(home: CriticalAlertHelpPage()),
+        ProviderScope(
+          overrides: helpPageProviderOverrides(),
+          child: const MaterialApp(home: CriticalAlertHelpPage()),
         ),
       );
       await tester.pump();
@@ -20,8 +43,9 @@ void main() {
 
     testWidgets('本文が表示される', (tester) async {
       await tester.pumpWidget(
-        const ProviderScope(
-          child: MaterialApp(home: CriticalAlertHelpPage()),
+        ProviderScope(
+          overrides: helpPageProviderOverrides(),
+          child: const MaterialApp(home: CriticalAlertHelpPage()),
         ),
       );
       await tester.pump();
@@ -31,8 +55,9 @@ void main() {
 
     testWidgets('「実際に試す」ボタン (PrimaryButton) が表示される', (tester) async {
       await tester.pumpWidget(
-        const ProviderScope(
-          child: MaterialApp(home: CriticalAlertHelpPage()),
+        ProviderScope(
+          overrides: helpPageProviderOverrides(),
+          child: const MaterialApp(home: CriticalAlertHelpPage()),
         ),
       );
       await tester.pump();
@@ -43,8 +68,9 @@ void main() {
 
     testWidgets('AppBar にタイトルが表示される', (tester) async {
       await tester.pumpWidget(
-        const ProviderScope(
-          child: MaterialApp(home: CriticalAlertHelpPage()),
+        ProviderScope(
+          overrides: helpPageProviderOverrides(),
+          child: const MaterialApp(home: CriticalAlertHelpPage()),
         ),
       );
       await tester.pump();

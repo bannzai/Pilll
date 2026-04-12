@@ -18,6 +18,19 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final user = ref.watch(userProvider).valueOrNull;
+    final pillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
+    if (user == null) {
+      return Scaffold(
+        backgroundColor: AppColors.background,
+        appBar: AppBar(
+          title: Text(L.appearanceModeDateFeatureAppealTitle),
+          backgroundColor: AppColors.background,
+        ),
+        body: const Center(child: CircularProgressIndicator()),
+      );
+    }
+
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -70,16 +83,15 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
             child: PrimaryButton(
               text: L.featureAppealTryFeature,
               onPressed: () async {
-                final user = ref.read(userProvider).requireValue;
+                analytics.logEvent(
+                  name: 'feature_appeal_try_tapped',
+                  parameters: {
+                    'feature_key': 'appearance_mode_date',
+                    'feature_type': 'premium',
+                    'is_paywall_shown': !user.premiumOrTrial ? 1 : 0,
+                  },
+                );
                 if (!user.premiumOrTrial) {
-                  analytics.logEvent(
-                    name: 'feature_appeal_try_tapped',
-                    parameters: {
-                      'feature_key': 'appearance_mode_date',
-                      'feature_type': 'premium',
-                      'is_paywall_shown': 1,
-                    },
-                  );
                   analytics.logEvent(
                     name: 'feature_appeal_paywall_shown',
                     parameters: {'feature_key': 'appearance_mode_date'},
@@ -87,15 +99,6 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
                   await showPremiumIntroductionSheet(context);
                   return;
                 }
-                analytics.logEvent(
-                  name: 'feature_appeal_try_tapped',
-                  parameters: {
-                    'feature_key': 'appearance_mode_date',
-                    'feature_type': 'premium',
-                    'is_paywall_shown': 0,
-                  },
-                );
-                final pillSheetGroup = ref.read(latestPillSheetGroupProvider).valueOrNull;
                 if (pillSheetGroup == null) {
                   return;
                 }

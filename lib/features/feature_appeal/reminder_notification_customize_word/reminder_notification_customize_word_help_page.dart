@@ -17,6 +17,18 @@ class ReminderNotificationCustomizeWordHelpPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final user = ref.watch(userProvider).valueOrNull;
+    if (user == null) {
+      return Scaffold(
+        backgroundColor: AppColors.background,
+        appBar: AppBar(
+          title: Text(L.reminderNotificationCustomizeWordFeatureAppealTitle),
+          backgroundColor: AppColors.background,
+        ),
+        body: const Center(child: CircularProgressIndicator()),
+      );
+    }
+
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -70,32 +82,23 @@ class ReminderNotificationCustomizeWordHelpPage extends ConsumerWidget {
             child: PrimaryButton(
               text: L.featureAppealTryFeature,
               onPressed: () async {
-                final user = ref.read(userProvider).requireValue;
-                if (user.premiumOrTrial) {
-                  analytics.logEvent(
-                    name: 'feature_appeal_try_tapped',
-                    parameters: {
-                      'feature_key': 'reminder_notification_customize_word',
-                      'feature_type': 'premium',
-                      'is_paywall_shown': 0,
-                    },
-                  );
-                  await Navigator.of(context).push(ReminderNotificationCustomizeWordPageRoutes.route());
-                  return;
-                }
                 analytics.logEvent(
                   name: 'feature_appeal_try_tapped',
                   parameters: {
                     'feature_key': 'reminder_notification_customize_word',
                     'feature_type': 'premium',
-                    'is_paywall_shown': 1,
+                    'is_paywall_shown': !user.premiumOrTrial ? 1 : 0,
                   },
                 );
-                analytics.logEvent(
-                  name: 'feature_appeal_paywall_shown',
-                  parameters: {'feature_key': 'reminder_notification_customize_word'},
-                );
-                await showPremiumIntroductionSheet(context);
+                if (!user.premiumOrTrial) {
+                  analytics.logEvent(
+                    name: 'feature_appeal_paywall_shown',
+                    parameters: {'feature_key': 'reminder_notification_customize_word'},
+                  );
+                  await showPremiumIntroductionSheet(context);
+                  return;
+                }
+                await Navigator.of(context).push(ReminderNotificationCustomizeWordPageRoutes.route());
               },
             ),
           ),
