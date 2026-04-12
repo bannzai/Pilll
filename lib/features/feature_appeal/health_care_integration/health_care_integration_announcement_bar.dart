@@ -29,9 +29,12 @@ class HealthCareIntegrationAnnouncementBar extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            GestureDetector(
-              child: const Icon(Icons.close, color: Colors.white, size: 24),
-              onTap: () {
+            IconButton(
+              tooltip: MaterialLocalizations.of(context).closeButtonTooltip,
+              icon: const Icon(Icons.close, color: Colors.white, size: 24),
+              padding: EdgeInsets.zero,
+              constraints: const BoxConstraints(),
+              onPressed: () {
                 analytics.logEvent(
                   name: 'feature_appeal_bar_dismissed',
                   parameters: {'feature_key': 'health_care_integration', 'feature_type': 'free'},
