@@ -40,35 +40,60 @@ class FeatureAppealBarsContainer extends HookConsumerWidget {
     final healthCareIntegrationIsClosed = useState(sharedPreferences.getBool(BoolKey.healthCareIntegrationFeatureAppealIsClosed) ?? false);
 
     useEffect(() {
-      criticalAlertIsClosed.addListener(() {
+      void onCriticalAlert() {
         sharedPreferences.setBool(BoolKey.criticalAlertFeatureAppealIsClosed, criticalAlertIsClosed.value);
-      });
-      reminderNotificationCustomizeWordIsClosed.addListener(() {
+      }
+
+      void onReminderNotificationCustomizeWord() {
         sharedPreferences.setBool(
           BoolKey.reminderNotificationCustomizeWordFeatureAppealIsClosed,
           reminderNotificationCustomizeWordIsClosed.value,
         );
-      });
-      appearanceModeDateIsClosed.addListener(() {
+      }
+
+      void onAppearanceModeDate() {
         sharedPreferences.setBool(BoolKey.appearanceModeDateFeatureAppealIsClosed, appearanceModeDateIsClosed.value);
-      });
-      recordPillIsClosed.addListener(() {
+      }
+
+      void onRecordPill() {
         sharedPreferences.setBool(BoolKey.recordPillFeatureAppealIsClosed, recordPillIsClosed.value);
-      });
-      menstruationIsClosed.addListener(() {
+      }
+
+      void onMenstruation() {
         sharedPreferences.setBool(BoolKey.menstruationFeatureAppealIsClosed, menstruationIsClosed.value);
-      });
-      calendarDiaryIsClosed.addListener(() {
+      }
+
+      void onCalendarDiary() {
         sharedPreferences.setBool(BoolKey.calendarDiaryFeatureAppealIsClosed, calendarDiaryIsClosed.value);
-      });
-      futureScheduleIsClosed.addListener(() {
+      }
+
+      void onFutureSchedule() {
         sharedPreferences.setBool(BoolKey.futureScheduleFeatureAppealIsClosed, futureScheduleIsClosed.value);
-      });
-      healthCareIntegrationIsClosed.addListener(() {
+      }
+
+      void onHealthCareIntegration() {
         sharedPreferences.setBool(BoolKey.healthCareIntegrationFeatureAppealIsClosed, healthCareIntegrationIsClosed.value);
-      });
-      return null;
-    }, []);
+      }
+
+      criticalAlertIsClosed.addListener(onCriticalAlert);
+      reminderNotificationCustomizeWordIsClosed.addListener(onReminderNotificationCustomizeWord);
+      appearanceModeDateIsClosed.addListener(onAppearanceModeDate);
+      recordPillIsClosed.addListener(onRecordPill);
+      menstruationIsClosed.addListener(onMenstruation);
+      calendarDiaryIsClosed.addListener(onCalendarDiary);
+      futureScheduleIsClosed.addListener(onFutureSchedule);
+      healthCareIntegrationIsClosed.addListener(onHealthCareIntegration);
+      return () {
+        criticalAlertIsClosed.removeListener(onCriticalAlert);
+        reminderNotificationCustomizeWordIsClosed.removeListener(onReminderNotificationCustomizeWord);
+        appearanceModeDateIsClosed.removeListener(onAppearanceModeDate);
+        recordPillIsClosed.removeListener(onRecordPill);
+        menstruationIsClosed.removeListener(onMenstruation);
+        calendarDiaryIsClosed.removeListener(onCalendarDiary);
+        futureScheduleIsClosed.removeListener(onFutureSchedule);
+        healthCareIntegrationIsClosed.removeListener(onHealthCareIntegration);
+      };
+    }, [sharedPreferences]);
 
     final candidates = <Widget>[
       if (!criticalAlertIsClosed.value) CriticalAlertAnnouncementBar(isClosed: criticalAlertIsClosed),
