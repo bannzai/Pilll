@@ -18,7 +18,9 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final user = ref.watch(userProvider).requireValue;
+    final userAsync = ref.watch(userProvider);
+    if (!userAsync.hasValue) return const SizedBox.shrink();
+    final user = userAsync.requireValue;
     final pillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
 
     return Scaffold(

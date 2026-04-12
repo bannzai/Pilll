@@ -17,7 +17,9 @@ class ReminderNotificationCustomizeWordHelpPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final user = ref.watch(userProvider).requireValue;
+    final userAsync = ref.watch(userProvider);
+    if (!userAsync.hasValue) return const SizedBox.shrink();
+    final user = userAsync.requireValue;
 
     return Scaffold(
       backgroundColor: AppColors.background,

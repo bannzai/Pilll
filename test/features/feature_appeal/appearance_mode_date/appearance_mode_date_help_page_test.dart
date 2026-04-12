@@ -10,8 +10,6 @@ import 'package:pilll/provider/user.dart';
 
 void main() {
   group('#AppearanceModeDateHelpPage', () {
-    /// build 内で watch される `userProvider` / `latestPillSheetGroupProvider` を
-    /// Firebase に触れないダミー値で満たすための override。
     List<Override> helpPageProviderOverrides() {
       return [
         userProvider.overrideWith((ref) => Stream.value(const User())),
@@ -28,7 +26,6 @@ void main() {
       );
       await tester.pumpAndSettle();
 
-      // 見出しと本文で少なくとも2つの Text が存在する
       expect(find.byType(Text), findsAtLeast(2));
     });
 

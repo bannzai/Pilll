@@ -18,8 +18,11 @@ class CriticalAlertHelpPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final user = ref.watch(userProvider).requireValue;
-    final setting = ref.watch(settingProvider).requireValue;
+    final userAsync = ref.watch(userProvider);
+    final settingAsync = ref.watch(settingProvider);
+    if (!userAsync.hasValue || !settingAsync.hasValue) return const SizedBox.shrink();
+    final user = userAsync.requireValue;
+    final setting = settingAsync.requireValue;
 
     return Scaffold(
       backgroundColor: AppColors.background,
