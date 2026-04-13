@@ -1,0 +1,20 @@
+appId: com.mizuki.Ohashi.Pilll
+---
+# × ボタンをタップすると現在の FeatureAppeal Bar が dismiss され、別の候補 Bar に切り替わることを確認する。
+# 前提: シミュレータ上で初期設定完了 & ログインプロバイダでサインイン済み (Keychain にセッションが残っている)。
+- launchApp:
+    clearState: true
+    clearKeychain: false
+    arguments:
+      flutter.isDidEndInitialSettingKey: "true"
+- waitForAnimationToEnd
+# 8 機能のうち 1 つが表示されていることを確認
+- assertVisible:
+    text: "サイレントモードでも通知を受け取る|通知メッセージをカスタマイズ|ピルシートに日付を表示|服用履歴をかんたん記録|生理を記録・予測|カレンダーで体調を記録|未来の予定を書き込もう|ヘルスケアと連携"
+# × ボタンを accessibilityIdentifier で安定的にタップ
+- tapOn:
+    id: "feature_appeal_dismiss_button"
+- waitForAnimationToEnd
+# dismiss 後も残り 7 候補のうち別の Bar が表示される
+- assertVisible:
+    text: "サイレントモードでも通知を受け取る|通知メッセージをカスタマイズ|ピルシートに日付を表示|服用履歴をかんたん記録|生理を記録・予測|カレンダーで体調を記録|未来の予定を書き込もう|ヘルスケアと連携"
