@@ -93,7 +93,9 @@ class HomePageBody extends HookConsumerWidget {
     });
 
     useEffect(() {
-      ref.read(homeTabControllerProvider.notifier).state = tabController;
+      WidgetsBinding.instance.addPostFrameCallback((timestamp) {
+        ref.read(homeTabControllerProvider.notifier).state = tabController;
+      });
       return () => ref.read(homeTabControllerProvider.notifier).state = null;
     }, [tabController]);
 
