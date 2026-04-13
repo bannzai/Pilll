@@ -109,7 +109,10 @@ class FeatureAppealBarsContainer extends HookConsumerWidget {
     if (candidates.isEmpty) {
       return const SizedBox.shrink();
     }
-    return candidates[daysBetween(_featureAppealEpoch, today()) % candidates.length];
+    return Semantics(
+      identifier: 'feature_appeal_bar',
+      child: candidates[daysBetween(_featureAppealEpoch, today()) % candidates.length],
+    );
   }
 
   /// AnnouncementBar の `_body()` で「FeatureAppeal を出すかフォールバックに進むか」を事前判定するためのヘルパー。

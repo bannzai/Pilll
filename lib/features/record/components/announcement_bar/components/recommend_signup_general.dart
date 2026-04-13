@@ -15,7 +15,9 @@ class RecommendSignupGeneralAnnouncementBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Semantics(
+      identifier: 'recommend_signup_general_bar',
+      child: Container(
       padding: const EdgeInsets.only(top: 10, bottom: 8, left: 8, right: 8),
       color: AppColors.primary,
       child: GestureDetector(
@@ -80,6 +82,7 @@ class RecommendSignupGeneralAnnouncementBar extends StatelessWidget {
           ],
         ),
       ),
+    ),
     );
   }
 }

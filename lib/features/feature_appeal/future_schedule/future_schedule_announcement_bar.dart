@@ -29,18 +29,21 @@ class FutureScheduleAnnouncementBar extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            IconButton(
-              tooltip: MaterialLocalizations.of(context).closeButtonTooltip,
-              icon: const Icon(Icons.close, color: Colors.white, size: 24),
-              padding: EdgeInsets.zero,
-              constraints: const BoxConstraints(),
-              onPressed: () {
-                analytics.logEvent(
-                  name: 'feature_appeal_bar_dismissed',
-                  parameters: {'feature_key': 'future_schedule', 'feature_type': 'free'},
-                );
-                isClosed.value = true;
-              },
+            Semantics(
+              identifier: 'feature_appeal_dismiss_button',
+              child: IconButton(
+                tooltip: MaterialLocalizations.of(context).closeButtonTooltip,
+                icon: const Icon(Icons.close, color: Colors.white, size: 24),
+                padding: EdgeInsets.zero,
+                constraints: const BoxConstraints(),
+                onPressed: () {
+                  analytics.logEvent(
+                    name: 'feature_appeal_bar_dismissed',
+                    parameters: {'feature_key': 'future_schedule', 'feature_type': 'free'},
+                  );
+                  isClosed.value = true;
+                },
+              ),
             ),
             const SizedBox(width: 10),
             Expanded(
