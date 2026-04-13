@@ -63,6 +63,15 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
     );
   }
 
+  /// トライアル期限までの残り日数。トライアル中でなければ null。
+  static int? remainingTrialDays(User user) {
+    if (user.isPremium) return null;
+    if (!user.isTrial) return null;
+    final trialDeadlineDate = user.trialDeadlineDate;
+    if (trialDeadlineDate == null) return null;
+    return daysBetween(now(), trialDeadlineDate);
+  }
+
   static String? premiumTrialLimitMessage(User user) {
     if (user.isPremium) {
       return null;
