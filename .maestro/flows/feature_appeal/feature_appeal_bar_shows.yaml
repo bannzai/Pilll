@@ -1,12 +1,17 @@
-appId: com.mizuki.Ohashi.Pilll
+appId: com.mizuki.Ohashi.Pilll.dev
 ---
-# FeatureAppeal Bar がホーム画面の AnnouncementBar 領域に表示されることを確認する。
-# 前提: シミュレータ上で初期設定完了 & ログインプロバイダでサインイン済み (Keychain にセッションが残っている)。
+# 初期設定完了後に AnnouncementBar 領域に PR #1782 の変更 (RecommendSignupGeneral) が表示されることを確認する。
+# 匿名ユーザー (ログインプロバイダ未連携) → RecommendSignupGeneral が FeatureAppeal より優先される。
 - launchApp:
     clearState: true
-    clearKeychain: false
-    arguments:
-      flutter.isDidEndInitialSettingKey: "true"
+    clearKeychain: true
+    permissions:
+      notifications: allow
 - waitForAnimationToEnd
+# 初期設定サブフローを実行
+- runFlow: subflows/initial_setup.yaml
+# ホーム画面到達後、データ読み込みを待つ
+- waitForAnimationToEnd
+# AnnouncementBar に RecommendSignupGeneral が表示されることを id セレクタで確認
 - assertVisible:
-    text: "サイレントモードでも通知を受け取る|通知メッセージをカスタマイズ|ピルシートに日付を表示|服用履歴をかんたん記録|生理を記録・予測|カレンダーで体調を記録|未来の予定を書き込もう|ヘルスケアと連携"
+    id: "recommend_signup_general_bar"
