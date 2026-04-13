@@ -5,7 +5,6 @@ import 'package:flutter/rendering.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/feature_appeal/critical_alert/critical_alert_announcement_bar.dart';
-import 'package:pilll/features/feature_appeal/feature_appeal_bars_container.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/recommend_signup_general.dart';
 import 'package:pilll/provider/purchase.dart';
@@ -1961,7 +1960,7 @@ void main() {
       };
     }
 
-    testWidgets('未認証 + 非Premium + トライアル中 → RecommendSignupGeneralAnnouncementBar が表示される', (tester) async {
+    testWidgets('未認証 + トライアル中 + FeatureAppeal 候補あり → FeatureAppeal が RecommendSignupGeneral より優先される', (tester) async {
       final mockTodayRepository = MockTodayService();
       final mockToday = DateTime(2024, 1, 1);
       when(mockTodayRepository.now()).thenReturn(mockToday);
@@ -1994,6 +1993,179 @@ void main() {
                 User(
                   isPremium: false,
                   trialDeadlineDate: mockToday.add(const Duration(days: 5)),
+                  beginTrialDate: mockToday.subtract(const Duration(days: 1)),
+                  discountEntitlementDeadlineDate: null,
+                ),
+              ),
+            ),
+            isLinkedProvider.overrideWithValue(false),
+            isJaLocaleProvider.overrideWithValue(true),
+            sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+            remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+          ],
+          child: const MaterialApp(home: Material(child: AnnouncementBar())),
+        ),
+      );
+      await tester.pump();
+
+      debugDefaultTargetPlatformOverride = null;
+
+      expect(
+        find.byWidgetPredicate((widget) => widget is CriticalAlertAnnouncementBar),
+        findsOneWidget,
+      );
+      expect(
+        find.byWidgetPredicate((widget) => widget is RecommendSignupGeneralAnnouncementBar),
+        findsNothing,
+      );
+    });
+
+    testWidgets('未認証 + トライアル中 + FeatureAppeal 全dismiss → RecommendSignupGeneralAnnouncementBar が表示される', (tester) async {
+      final mockTodayRepository = MockTodayService();
+      final mockToday = DateTime(2024, 1, 1);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+      todayRepository = mockTodayRepository;
+
+      final pillSheet = PillSheet.create(
+        PillSheetType.pillsheet_21,
+        lastTakenDate: mockToday,
+        beginDate: mockToday.subtract(const Duration(days: 5)),
+        pillTakenCount: 1,
+      );
+      final pillSheetGroup = PillSheetGroup(
+        pillSheetIDs: ['1'],
+        pillSheets: [pillSheet],
+        createdAt: mockToday,
+        pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+      );
+
+      SharedPreferences.setMockInitialValues(allFeatureAppealDismissedPrefs());
+      final sharedPreferences = await SharedPreferences.getInstance();
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            appIsReleasedProvider.overrideWith((ref) => true),
+            latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+            userProvider.overrideWith(
+              (ref) => Stream.value(
+                User(
+                  isPremium: false,
+                  trialDeadlineDate: mockToday.add(const Duration(days: 15)),
+                  beginTrialDate: mockToday.subtract(const Duration(days: 1)),
+                  discountEntitlementDeadlineDate: null,
+                ),
+              ),
+            ),
+            isLinkedProvider.overrideWithValue(false),
+            isJaLocaleProvider.overrideWithValue(true),
+            sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+            remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+          ],
+          child: const MaterialApp(home: Material(child: AnnouncementBar())),
+        ),
+      );
+      await tester.pump();
+
+      debugDefaultTargetPlatformOverride = null;
+
+      expect(
+        find.byWidgetPredicate((widget) => widget is RecommendSignupGeneralAnnouncementBar),
+        findsOneWidget,
+      );
+    });
+
+    testWidgets('未認証 + トライアル残り10日以内 + FeatureAppeal 全dismiss → PremiumTrialLimit が RecommendSignupGeneral より優先される', (tester) async {
+      final mockTodayRepository = MockTodayService();
+      final mockToday = DateTime(2024, 1, 1);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+      todayRepository = mockTodayRepository;
+
+      final pillSheet = PillSheet.create(
+        PillSheetType.pillsheet_21,
+        lastTakenDate: mockToday,
+        beginDate: mockToday.subtract(const Duration(days: 5)),
+        pillTakenCount: 1,
+      );
+      final pillSheetGroup = PillSheetGroup(
+        pillSheetIDs: ['1'],
+        pillSheets: [pillSheet],
+        createdAt: mockToday,
+        pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+      );
+
+      SharedPreferences.setMockInitialValues(allFeatureAppealDismissedPrefs());
+      final sharedPreferences = await SharedPreferences.getInstance();
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            appIsReleasedProvider.overrideWith((ref) => true),
+            latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+            userProvider.overrideWith(
+              (ref) => Stream.value(
+                User(
+                  isPremium: false,
+                  trialDeadlineDate: mockToday.add(const Duration(days: 5)),
+                  beginTrialDate: mockToday.subtract(const Duration(days: 1)),
+                  discountEntitlementDeadlineDate: null,
+                ),
+              ),
+            ),
+            isLinkedProvider.overrideWithValue(false),
+            isJaLocaleProvider.overrideWithValue(true),
+            sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+            remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+          ],
+          child: const MaterialApp(home: Material(child: AnnouncementBar())),
+        ),
+      );
+      await tester.pump();
+
+      debugDefaultTargetPlatformOverride = null;
+
+      expect(
+        find.byWidgetPredicate((widget) => widget is PremiumTrialLimitAnnouncementBar),
+        findsOneWidget,
+      );
+      expect(
+        find.byWidgetPredicate((widget) => widget is RecommendSignupGeneralAnnouncementBar),
+        findsNothing,
+      );
+    });
+
+    testWidgets('当日閉じ済み + 未認証 + トライアル残り15日 → RecommendSignupGeneral が表示される', (tester) async {
+      final mockTodayRepository = MockTodayService();
+      final mockToday = DateTime(2024, 1, 1);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+      todayRepository = mockTodayRepository;
+
+      final pillSheet = PillSheet.create(
+        PillSheetType.pillsheet_21,
+        lastTakenDate: mockToday,
+        beginDate: mockToday.subtract(const Duration(days: 5)),
+        pillTakenCount: 1,
+      );
+      final pillSheetGroup = PillSheetGroup(
+        pillSheetIDs: ['1'],
+        pillSheets: [pillSheet],
+        createdAt: mockToday,
+        pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+      );
+
+      SharedPreferences.setMockInitialValues({
+        IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+        StringKey.featureAppealLastDismissedDate: mockToday.toIso8601String(),
+      });
+      final sharedPreferences = await SharedPreferences.getInstance();
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            appIsReleasedProvider.overrideWith((ref) => true),
+            latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+            userProvider.overrideWith(
+              (ref) => Stream.value(
+                User(
+                  isPremium: false,
+                  trialDeadlineDate: mockToday.add(const Duration(days: 15)),
                   beginTrialDate: mockToday.subtract(const Duration(days: 1)),
                   discountEntitlementDeadlineDate: null,
                 ),
