@@ -2585,10 +2585,12 @@
   "calendarDiaryFeatureAppealPoint1": "カレンダーで記録を一覧",
   "calendarDiaryFeatureAppealPoint2": "体調をメモして振り返り",
   "calendarDiaryFeatureAppealPoint3": "過去の記録をかんたん検索",
+  "calendarDiaryFeatureAppealLocationHint": "日付をタップして体調を記録",
 
   "futureScheduleFeatureAppealPoint1": "カレンダーに予定を書き込み",
   "futureScheduleFeatureAppealPoint2": "通院日をかんたん管理",
   "futureScheduleFeatureAppealPoint3": "リマインダーで通知",
+  "futureScheduleFeatureAppealLocationHint": "日付をタップして予定を書き込み",
 
   "healthCareIntegrationFeatureAppealPoint1": "生理記録を自動でデータ連携",
   "healthCareIntegrationFeatureAppealPoint2": "ヘルスケアアプリに同期",

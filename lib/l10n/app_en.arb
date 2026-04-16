@@ -2542,5 +2542,7 @@
   "healthCareIntegrationFeatureAppealBody": "Automatically sync the period data you record in Pilll with the Apple Health app. View it together with your other health data, and reuse it across other apps that read from Health.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
-  }
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Tap a date to log how you feel",
+  "futureScheduleFeatureAppealLocationHint": "Tap a date to add a plan"
 }
