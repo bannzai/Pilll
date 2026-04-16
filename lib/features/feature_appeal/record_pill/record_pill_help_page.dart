@@ -69,22 +69,52 @@ class RecordPillHelpPage extends StatelessWidget {
               child: Center(child: Icon(Icons.arrow_downward, size: 28, color: AppColors.primary)),
             ),
             Container(
+              clipBehavior: Clip.none,
               decoration: BoxDecoration(
                 color: AppColors.white,
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(color: AppColors.primary, width: 1.5),
               ),
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+              padding: const EdgeInsets.fromLTRB(16, 14, 16, 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   for (var i = 0; i < 7; i++) ...[
                     if (i > 0) const SizedBox(width: 6),
-                    _mockPillMark(
-                      isDone: i < 3,
-                      isSelected: i == 3,
+                    Stack(
+                      clipBehavior: Clip.none,
+                      children: [
+                        _mockPillMark(isDone: i < 3, isSelected: i == 3),
+                        if (i == 3)
+                          const Positioned(
+                            bottom: 0,
+                            right: -6,
+                            child: Icon(Icons.touch_app, size: 22, color: AppColors.primary),
+                          ),
+                      ],
                     ),
                   ],
+                ],
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 6),
+              child: Center(child: Icon(Icons.arrow_downward, size: 28, color: AppColors.primary)),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                color: AppColors.white,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: AppColors.border),
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+              child: Column(
+                children: [
+                  _mockHistoryRow(day: DateTime.now().subtract(const Duration(days: 2)), pillNumber: 1, time: '19:00'),
+                  const Divider(height: 16),
+                  _mockHistoryRow(day: DateTime.now().subtract(const Duration(days: 1)), pillNumber: 2, time: '19:30'),
+                  const Divider(height: 16),
+                  _mockHistoryRow(day: DateTime.now(), pillNumber: 3, time: '20:00'),
                 ],
               ),
             ),
@@ -159,6 +189,40 @@ class RecordPillHelpPage extends StatelessWidget {
             ),
         ],
       ),
+    );
+  }
+
+  Widget _mockHistoryRow({required DateTime day, required int pillNumber, required String time}) {
+    return Row(
+      children: [
+        SizedBox(
+          width: 40,
+          child: Text(
+            '${day.month}/${day.day}',
+            style: const TextStyle(fontSize: 12, fontFamily: FontFamily.number, color: TextColor.main),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Container(height: 20, width: 0.5, color: AppColors.border),
+        const SizedBox(width: 8),
+        SizedBox(
+          width: 50,
+          child: Text(
+            '$pillNumber番',
+            style: const TextStyle(fontSize: 12, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, color: TextColor.main),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Text(
+          time,
+          style: const TextStyle(fontSize: 12, fontFamily: FontFamily.number, color: TextColor.darkGray),
+        ),
+        const Spacer(),
+        for (var i = 0; i < pillNumber; i++) ...[
+          if (i > 0) const SizedBox(width: 2),
+          Container(width: 8, height: 8, decoration: const BoxDecoration(color: AppColors.primary, shape: BoxShape.circle)),
+        ],
+      ],
     );
   }
 

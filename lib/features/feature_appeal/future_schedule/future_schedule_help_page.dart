@@ -70,23 +70,7 @@ class FutureScheduleHelpPage extends ConsumerWidget {
               padding: EdgeInsets.symmetric(vertical: 6),
               child: Center(child: Icon(Icons.arrow_downward, size: 28, color: AppColors.primary)),
             ),
-            Container(
-              decoration: BoxDecoration(
-                color: AppColors.white,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: AppColors.primary, width: 1.5),
-              ),
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-              child: Text(
-                L.futureScheduleFeatureAppealLocationHint,
-                style: const TextStyle(
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 14,
-                  color: TextColor.main,
-                ),
-              ),
-            ),
+            _mockCalendar(),
           ],
         ),
       ),
@@ -110,6 +94,87 @@ class FutureScheduleHelpPage extends ConsumerWidget {
             },
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _mockCalendar() {
+    final tomorrow = DateTime.now().add(const Duration(days: 1));
+    final tomorrowWeekday = tomorrow.weekday % 7;
+    final weekStart = tomorrow.subtract(Duration(days: tomorrowWeekday));
+    const dayLabels = ['日', '月', '火', '水', '木', '金', '土'];
+
+    return Container(
+      clipBehavior: Clip.none,
+      decoration: BoxDecoration(
+        color: AppColors.white,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: AppColors.primary, width: 1.5),
+      ),
+      padding: const EdgeInsets.fromLTRB(12, 14, 12, 20),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              for (var i = 0; i < 7; i++)
+                SizedBox(
+                  width: 36,
+                  child: Center(
+                    child: Text(
+                      dayLabels[i],
+                      style: TextStyle(
+                        fontSize: 11,
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w600,
+                        color: i == 0 ? Colors.red.shade300 : (i == 6 ? Colors.blue.shade300 : TextColor.darkGray),
+                      ),
+                    ),
+                  ),
+                ),
+            ],
+          ),
+          const SizedBox(height: 8),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              for (var i = 0; i < 7; i++)
+                SizedBox(
+                  width: 36,
+                  height: 40,
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      if (i == tomorrowWeekday)
+                        Container(
+                          width: 32,
+                          height: 32,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(color: AppColors.primary, width: 2),
+                          ),
+                        ),
+                      Text(
+                        '${weekStart.add(Duration(days: i)).day}',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontFamily: FontFamily.number,
+                          fontWeight: i == tomorrowWeekday ? FontWeight.w700 : FontWeight.w400,
+                          color: i == tomorrowWeekday ? AppColors.primary : TextColor.main,
+                        ),
+                      ),
+                      if (i == tomorrowWeekday)
+                        const Positioned(
+                          bottom: 0,
+                          right: -4,
+                          child: Icon(Icons.touch_app, size: 22, color: AppColors.primary),
+                        ),
+                    ],
+                  ),
+                ),
+            ],
+          ),
+        ],
       ),
     );
   }
