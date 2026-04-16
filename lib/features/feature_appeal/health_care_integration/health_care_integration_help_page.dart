@@ -65,23 +65,21 @@ class HealthCareIntegrationHelpPage extends ConsumerWidget {
       bottomNavigationBar: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16),
-          child: Center(
-            child: PrimaryButton(
-              text: L.featureAppealTryFeature,
-              onPressed: () async {
-                analytics.logEvent(
-                  name: 'feature_appeal_try_tapped',
-                  parameters: {
-                    'feature_key': 'health_care_integration',
-                    'feature_type': 'free',
-                    'is_paywall_shown': 0,
-                  },
-                );
-                final tabController = ref.read(homeTabControllerProvider);
-                Navigator.of(context).popUntil((r) => r.isFirst);
-                tabController?.animateTo(HomePageTabType.setting.index);
-              },
-            ),
+          child: PrimaryButton(
+            text: L.featureAppealTryFeature,
+            onPressed: () async {
+              analytics.logEvent(
+                name: 'feature_appeal_try_tapped',
+                parameters: {
+                  'feature_key': 'health_care_integration',
+                  'feature_type': 'free',
+                  'is_paywall_shown': 0,
+                },
+              );
+              final tabController = ref.read(homeTabControllerProvider);
+              Navigator.of(context).popUntil((r) => r.isFirst);
+              tabController?.animateTo(HomePageTabType.setting.index);
+            },
           ),
         ),
       ),

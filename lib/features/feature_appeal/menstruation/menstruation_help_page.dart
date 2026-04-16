@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/features/home/page.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/settings/menstruation/page.dart';
 import 'package:pilll/utils/analytics.dart';
 
 /// 生理記録 (無料機能) の説明と「実際に試す」導線を持つヘルプページ。
-class MenstruationHelpPage extends ConsumerWidget {
+class MenstruationHelpPage extends StatelessWidget {
   const MenstruationHelpPage({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -63,23 +62,19 @@ class MenstruationHelpPage extends ConsumerWidget {
       bottomNavigationBar: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16),
-          child: Center(
-            child: PrimaryButton(
-              text: L.featureAppealTryFeature,
-              onPressed: () async {
-                analytics.logEvent(
-                  name: 'feature_appeal_try_tapped',
-                  parameters: {
-                    'feature_key': 'menstruation',
-                    'feature_type': 'free',
-                    'is_paywall_shown': 0,
-                  },
-                );
-                final tabController = ref.read(homeTabControllerProvider);
-                Navigator.of(context).popUntil((r) => r.isFirst);
-                tabController?.animateTo(HomePageTabType.menstruation.index);
-              },
-            ),
+          child: PrimaryButton(
+            text: L.featureAppealTryFeature,
+            onPressed: () async {
+              analytics.logEvent(
+                name: 'feature_appeal_try_tapped',
+                parameters: {
+                  'feature_key': 'menstruation',
+                  'feature_type': 'free',
+                  'is_paywall_shown': 0,
+                },
+              );
+              Navigator.of(context).push(SettingMenstruationPageRoute.route());
+            },
           ),
         ),
       ),
