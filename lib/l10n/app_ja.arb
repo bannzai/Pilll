@@ -2558,5 +2558,39 @@
   "healthCareIntegrationFeatureAppealBody": "Pilllで記録した生理データをヘルスケアアプリと自動連携できます。ヘルスケア上の他の健康データと一緒に確認したり、他のアプリでも生理データを使えるようになります。",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
-  }
+  },
+
+  "featureAppealLocationLabel": "アプリ内の場所",
+
+  "criticalAlertFeatureAppealPoint1": "集中モード中でも通知が届く",
+  "criticalAlertFeatureAppealPoint2": "設定した時刻に確実にリマインド",
+  "criticalAlertFeatureAppealPoint3": "ワンタップでかんたん設定",
+
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "通知メッセージを自由に編集",
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "毎日の服用通知に反映",
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "自分だけの通知メッセージに",
+
+  "appearanceModeDateFeatureAppealPoint1": "ピルシートを日付で表示",
+  "appearanceModeDateFeatureAppealPoint2": "何日目か一目で把握できる",
+  "appearanceModeDateFeatureAppealPoint3": "ピルシート設定から変更可能",
+
+  "recordPillFeatureAppealPoint1": "ピルシートをタップで服用記録",
+  "recordPillFeatureAppealPoint2": "間違えてもかんたん取り消し",
+  "recordPillFeatureAppealPoint3": "服用履歴をいつでも確認",
+
+  "menstruationFeatureAppealPoint1": "生理開始日をかんたん記録",
+  "menstruationFeatureAppealPoint2": "周期を自動で把握",
+  "menstruationFeatureAppealPoint3": "設定をカスタマイズ",
+
+  "calendarDiaryFeatureAppealPoint1": "カレンダーで記録を一覧",
+  "calendarDiaryFeatureAppealPoint2": "体調をメモして振り返り",
+  "calendarDiaryFeatureAppealPoint3": "過去の記録をかんたん検索",
+
+  "futureScheduleFeatureAppealPoint1": "カレンダーに予定を書き込み",
+  "futureScheduleFeatureAppealPoint2": "通院日をかんたん管理",
+  "futureScheduleFeatureAppealPoint3": "リマインダーで通知",
+
+  "healthCareIntegrationFeatureAppealPoint1": "生理記録を自動でデータ連携",
+  "healthCareIntegrationFeatureAppealPoint2": "ヘルスケアアプリに同期",
+  "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応"
 }
