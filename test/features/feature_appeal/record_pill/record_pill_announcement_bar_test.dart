@@ -5,7 +5,8 @@ import 'package:pilll/features/feature_appeal/record_pill/record_pill_announceme
 
 void main() {
   group('#RecordPillAnnouncementBar', () {
-    testWidgets('isClosed=false の状態でタイトル・説明文の Text Widget が表示される', (tester) async {
+    testWidgets('isClosed=false の状態でタイトル・説明文の Text Widget が表示される',
+        (tester) async {
       final isClosed = ValueNotifier<bool>(false);
       await tester.pumpWidget(
         MaterialApp(
@@ -19,7 +20,8 @@ void main() {
       expect(find.byType(Text), findsAtLeast(2));
     });
 
-    testWidgets('isClosed=false の状態で × ボタン (Icons.close) が表示される', (tester) async {
+    testWidgets('isClosed=false の状態で × ボタン (Icons.close) が表示される',
+        (tester) async {
       final isClosed = ValueNotifier<bool>(false);
       await tester.pumpWidget(
         MaterialApp(

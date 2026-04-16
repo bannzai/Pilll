@@ -13,7 +13,8 @@ void main() {
     List<Override> helpPageProviderOverrides() {
       return [
         userProvider.overrideWith((ref) => Stream.value(const User())),
-        latestPillSheetGroupProvider.overrideWith((ref) => Stream<PillSheetGroup?>.value(null)),
+        latestPillSheetGroupProvider
+            .overrideWith((ref) => Stream<PillSheetGroup?>.value(null)),
       ];
     }
 

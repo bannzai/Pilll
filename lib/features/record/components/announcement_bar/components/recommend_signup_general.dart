@@ -18,71 +18,71 @@ class RecommendSignupGeneralAnnouncementBar extends StatelessWidget {
     return Semantics(
       identifier: 'recommend_signup_general_bar',
       child: Container(
-      padding: const EdgeInsets.only(top: 10, bottom: 8, left: 8, right: 8),
-      color: AppColors.primary,
-      child: GestureDetector(
-        onTap: () {
-          analytics.logEvent(name: 'feature_appeal_signup_recommend_tapped');
-          showSignInSheet(context, SignInSheetStateContext.recordPage, null);
-        },
-        child: Stack(
-          children: [
-            Align(
-              alignment: Alignment.center,
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset(
-                        'images/alert_24.svg',
-                        width: 16,
-                        height: 16,
-                        colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
-                      ),
-                      const SizedBox(width: 5),
-                      Text(
-                        L.recommendSignupGeneralTitle,
-                        style: const TextStyle(
-                          fontFamily: FontFamily.japanese,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 12,
-                          color: TextColor.white,
+        padding: const EdgeInsets.only(top: 10, bottom: 8, left: 8, right: 8),
+        color: AppColors.primary,
+        child: GestureDetector(
+          onTap: () {
+            analytics.logEvent(name: 'feature_appeal_signup_recommend_tapped');
+            showSignInSheet(context, SignInSheetStateContext.recordPage, null);
+          },
+          child: Stack(
+            children: [
+              Align(
+                alignment: Alignment.center,
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset(
+                          'images/alert_24.svg',
+                          width: 16,
+                          height: 16,
+                          colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
                         ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    L.recommendSignupGeneralDescription,
-                    style: const TextStyle(
-                      color: TextColor.white,
-                      fontFamily: FontFamily.japanese,
-                      fontSize: 10,
-                      fontWeight: FontWeight.w700,
+                        const SizedBox(width: 5),
+                        Text(
+                          L.recommendSignupGeneralTitle,
+                          style: const TextStyle(
+                            fontFamily: FontFamily.japanese,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 12,
+                            color: TextColor.white,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
                     ),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-            ),
-            Align(
-              alignment: Alignment.centerRight,
-              child: Padding(
-                padding: const EdgeInsets.all(8),
-                child: SvgPicture.asset(
-                  'images/arrow_right.svg',
-                  colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
-                  height: 16,
-                  width: 16,
+                    const SizedBox(height: 8),
+                    Text(
+                      L.recommendSignupGeneralDescription,
+                      style: const TextStyle(
+                        color: TextColor.white,
+                        fontFamily: FontFamily.japanese,
+                        fontSize: 10,
+                        fontWeight: FontWeight.w700,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
                 ),
               ),
-            ),
-          ],
+              Align(
+                alignment: Alignment.centerRight,
+                child: Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: SvgPicture.asset(
+                    'images/arrow_right.svg',
+                    colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                    height: 16,
+                    width: 16,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
-    ),
     );
   }
 }

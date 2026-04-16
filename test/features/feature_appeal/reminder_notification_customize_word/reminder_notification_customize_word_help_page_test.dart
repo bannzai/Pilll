@@ -18,7 +18,8 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: helpPageProviderOverrides(),
-          child: const MaterialApp(home: ReminderNotificationCustomizeWordHelpPage()),
+          child: const MaterialApp(
+              home: ReminderNotificationCustomizeWordHelpPage()),
         ),
       );
       await tester.pumpAndSettle();
@@ -30,7 +31,8 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: helpPageProviderOverrides(),
-          child: const MaterialApp(home: ReminderNotificationCustomizeWordHelpPage()),
+          child: const MaterialApp(
+              home: ReminderNotificationCustomizeWordHelpPage()),
         ),
       );
       await tester.pumpAndSettle();
@@ -42,7 +44,8 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: helpPageProviderOverrides(),
-          child: const MaterialApp(home: ReminderNotificationCustomizeWordHelpPage()),
+          child: const MaterialApp(
+              home: ReminderNotificationCustomizeWordHelpPage()),
         ),
       );
       await tester.pumpAndSettle();

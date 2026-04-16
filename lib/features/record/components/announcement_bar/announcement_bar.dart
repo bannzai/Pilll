@@ -166,9 +166,10 @@ class AnnouncementBar extends HookConsumerWidget {
       }
 
       if (FeatureAppealBarsContainer.hasAnyCandidate(
-        sharedPreferences: sharedPreferences,
-        appIsReleased: appIsReleased,
-      ) && !featureAppealDismissedToday.value) {
+            sharedPreferences: sharedPreferences,
+            appIsReleased: appIsReleased,
+          ) &&
+          !featureAppealDismissedToday.value) {
         return FeatureAppealBarsContainer(appIsReleased: appIsReleased, dismissedToday: featureAppealDismissedToday);
       }
 
@@ -257,9 +258,10 @@ class AnnouncementBar extends HookConsumerWidget {
       }
 
       if (FeatureAppealBarsContainer.hasAnyCandidate(
-        sharedPreferences: sharedPreferences,
-        appIsReleased: appIsReleased,
-      ) && !featureAppealDismissedToday.value) {
+            sharedPreferences: sharedPreferences,
+            appIsReleased: appIsReleased,
+          ) &&
+          !featureAppealDismissedToday.value) {
         return FeatureAppealBarsContainer(appIsReleased: appIsReleased, dismissedToday: featureAppealDismissedToday);
       }
     }

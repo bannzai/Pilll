@@ -5,12 +5,14 @@ import 'package:pilll/features/feature_appeal/reminder_notification_customize_wo
 
 void main() {
   group('#ReminderNotificationCustomizeWordAnnouncementBar', () {
-    testWidgets('isClosed=false の状態でタイトル・説明文の Text Widget が表示される', (tester) async {
+    testWidgets('isClosed=false の状態でタイトル・説明文の Text Widget が表示される',
+        (tester) async {
       final isClosed = ValueNotifier<bool>(false);
       await tester.pumpWidget(
         MaterialApp(
           home: Material(
-            child: ReminderNotificationCustomizeWordAnnouncementBar(isClosed: isClosed),
+            child: ReminderNotificationCustomizeWordAnnouncementBar(
+                isClosed: isClosed),
           ),
         ),
       );
@@ -19,12 +21,14 @@ void main() {
       expect(find.byType(Text), findsAtLeast(2));
     });
 
-    testWidgets('isClosed=false の状態で × ボタン (Icons.close) が表示される', (tester) async {
+    testWidgets('isClosed=false の状態で × ボタン (Icons.close) が表示される',
+        (tester) async {
       final isClosed = ValueNotifier<bool>(false);
       await tester.pumpWidget(
         MaterialApp(
           home: Material(
-            child: ReminderNotificationCustomizeWordAnnouncementBar(isClosed: isClosed),
+            child: ReminderNotificationCustomizeWordAnnouncementBar(
+                isClosed: isClosed),
           ),
         ),
       );
@@ -37,7 +41,8 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: Material(
-            child: ReminderNotificationCustomizeWordAnnouncementBar(isClosed: isClosed),
+            child: ReminderNotificationCustomizeWordAnnouncementBar(
+                isClosed: isClosed),
           ),
         ),
       );
