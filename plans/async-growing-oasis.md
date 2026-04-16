@@ -64,8 +64,12 @@ AppBar (機能名)
 
 ### 実装方針
 
-- **L10n**: Feature Cards のテキストは `app_ja.arb` / `app_en.arb` に追加（各ページ3個 × 8ページ = 24文字列）
-- **Location Preview**: 非インタラクティブな `ListTile` を `Container` + `BoxDecoration`（角丸 + ボーダー）で囲んで表示。`IgnorePointer` で操作を無効化
+- **L10n**: Feature Cards のテキストは `app_ja.arb` / `app_en.arb` に追加（各ページ3個 × 8ページ = 24文字列）→ 実装済み
+- **Location Preview**: ステップバイステップガイドとして実装:
+  1. モックタブバー（4タブ、対象に丸インジケーター）
+  2. `Icons.arrow_downward`（サイズ28、primary色）で次ステップへ
+  3. 実際の UI コンポーネントプレビュー（設定行 ListTile or ピルシートの pill mark 行）
+- **ピルシート行のモック**: `AppColors.potti`(20px円) × 未服用、`AppColors.lightGray` + ✓ × 服用済み、`AppColors.enable`(オレンジ) × 選択中 を並べて表現
 - **各 HelpPage に直接記述**: 共通コンポーネントは作らず、各ページの `body` 内の `Column` に直接 Widget を追加
 
 ---
