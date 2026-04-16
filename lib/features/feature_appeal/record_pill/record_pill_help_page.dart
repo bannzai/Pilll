@@ -63,35 +63,28 @@ class RecordPillHelpPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 8),
+            _mockTabBar(selectedIndex: 0),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 6),
+              child: Center(child: Icon(Icons.arrow_downward, size: 28, color: AppColors.primary)),
+            ),
             Container(
               decoration: BoxDecoration(
                 color: AppColors.white,
                 borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: AppColors.border),
+                border: Border.all(color: AppColors.primary, width: 1.5),
               ),
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SvgPicture.asset('images/tab_icon_pill_enable.svg', width: 28, height: 28),
-                  const SizedBox(width: 12),
-                  Text(
-                    L.pill,
-                    style: const TextStyle(
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 15,
-                      color: TextColor.main,
+                  for (var i = 0; i < 7; i++) ...[
+                    if (i > 0) const SizedBox(width: 6),
+                    _mockPillMark(
+                      isDone: i < 3,
+                      isSelected: i == 3,
                     ),
-                  ),
-                  const Spacer(),
-                  const Text(
-                    'タブ',
-                    style: TextStyle(
-                      fontFamily: FontFamily.japanese,
-                      fontSize: 12,
-                      color: TextColor.darkGray,
-                    ),
-                  ),
+                  ],
                 ],
               ),
             ),
@@ -117,6 +110,67 @@ class RecordPillHelpPage extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  Widget _mockTabBar({required int selectedIndex}) {
+    final tabs = [
+      (icon: 'images/tab_icon_pill_enable.svg', disabledIcon: 'images/tab_icon_pill_disable.svg', label: L.pill),
+      (icon: 'images/menstruation.svg', disabledIcon: 'images/menstruation_disable.svg', label: L.menstruation),
+      (icon: 'images/tab_icon_calendar_enable.svg', disabledIcon: 'images/tab_icon_calendar_disable.svg', label: L.calendar),
+      (icon: 'images/tab_icon_setting_enable.svg', disabledIcon: 'images/tab_icon_setting_disable.svg', label: L.settings),
+    ];
+    return Container(
+      decoration: BoxDecoration(
+        color: AppColors.white,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: AppColors.border),
+      ),
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          for (var i = 0; i < tabs.length; i++)
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(6),
+                  decoration: i == selectedIndex
+                      ? BoxDecoration(shape: BoxShape.circle, border: Border.all(color: AppColors.primary, width: 2))
+                      : null,
+                  child: SvgPicture.asset(
+                    i == selectedIndex ? tabs[i].icon : tabs[i].disabledIcon,
+                    width: 24,
+                    height: 24,
+                  ),
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  tabs[i].label,
+                  style: TextStyle(
+                    fontSize: 10,
+                    fontFamily: FontFamily.japanese,
+                    color: i == selectedIndex ? AppColors.primary : TextColor.darkGray,
+                    fontWeight: i == selectedIndex ? FontWeight.w600 : FontWeight.w400,
+                  ),
+                ),
+              ],
+            ),
+        ],
+      ),
+    );
+  }
+
+  Widget _mockPillMark({required bool isDone, required bool isSelected}) {
+    return Container(
+      width: 24,
+      height: 24,
+      decoration: BoxDecoration(
+        color: isDone ? AppColors.lightGray : (isSelected ? AppColors.enable : AppColors.potti),
+        shape: BoxShape.circle,
+      ),
+      child: isDone ? const Icon(Icons.check, size: 14, color: Colors.white) : null,
     );
   }
 

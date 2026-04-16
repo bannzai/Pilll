@@ -62,21 +62,17 @@ class MenstruationHelpPage extends StatelessWidget {
                 color: TextColor.darkGray,
               ),
             ),
-            const SizedBox(height: 4),
-            Text(
-              '${L.settings} > ${L.menstruation}',
-              style: const TextStyle(
-                fontSize: 12,
-                fontFamily: FontFamily.japanese,
-                color: TextColor.darkGray,
-              ),
-            ),
             const SizedBox(height: 8),
+            _mockTabBar(selectedIndex: 3),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 6),
+              child: Center(child: Icon(Icons.arrow_downward, size: 28, color: AppColors.primary)),
+            ),
             Container(
               decoration: BoxDecoration(
                 color: AppColors.white,
                 borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: AppColors.border),
+                border: Border.all(color: AppColors.primary, width: 1.5),
               ),
               child: IgnorePointer(
                 child: ListTile(
@@ -112,6 +108,55 @@ class MenstruationHelpPage extends StatelessWidget {
             },
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _mockTabBar({required int selectedIndex}) {
+    final tabs = [
+      (icon: 'images/tab_icon_pill_enable.svg', disabledIcon: 'images/tab_icon_pill_disable.svg', label: L.pill),
+      (icon: 'images/menstruation.svg', disabledIcon: 'images/menstruation_disable.svg', label: L.menstruation),
+      (icon: 'images/tab_icon_calendar_enable.svg', disabledIcon: 'images/tab_icon_calendar_disable.svg', label: L.calendar),
+      (icon: 'images/tab_icon_setting_enable.svg', disabledIcon: 'images/tab_icon_setting_disable.svg', label: L.settings),
+    ];
+    return Container(
+      decoration: BoxDecoration(
+        color: AppColors.white,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: AppColors.border),
+      ),
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          for (var i = 0; i < tabs.length; i++)
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(6),
+                  decoration: i == selectedIndex
+                      ? BoxDecoration(shape: BoxShape.circle, border: Border.all(color: AppColors.primary, width: 2))
+                      : null,
+                  child: SvgPicture.asset(
+                    i == selectedIndex ? tabs[i].icon : tabs[i].disabledIcon,
+                    width: 24,
+                    height: 24,
+                  ),
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  tabs[i].label,
+                  style: TextStyle(
+                    fontSize: 10,
+                    fontFamily: FontFamily.japanese,
+                    color: i == selectedIndex ? AppColors.primary : TextColor.darkGray,
+                    fontWeight: i == selectedIndex ? FontWeight.w600 : FontWeight.w400,
+                  ),
+                ),
+              ],
+            ),
+        ],
       ),
     );
   }
