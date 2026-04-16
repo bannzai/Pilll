@@ -1,17 +1,78 @@
-# FeatureAppeal HelpPage を正しく機能する状態にする
+# FeatureAppeal HelpPage を「機能説明ページ」として完成させる
 
 ## Context
 
-PR #1782 で追加した FeatureAppeal HelpPage 8ページに2つの問題がある:
+PR #1782 の HelpPage 8ページに以下の修正を行った（実装済み）:
+- `bottomNavigationBar` 内の `Center` が body 領域を奪う問題を修正
+- Premium系3ページの `SizedBox.shrink()` ガードを除去、`ref.read` をコールバック内に移動
+- 遷移先の修正（record_pill → 服用履歴、menstruation → 生理設定、calendar_diary/future_schedule → カレンダータブ）
 
-1. **Premium系3ページが表示されない**: `ref.watch(userProvider)` の `hasValue` ガードで `SizedBox.shrink()` を返しており、Provider のストリーム初回データ到着前にページ全体が空になる
-2. **無料機能5ページの「実際に試す」がタブ切替のみ**: `popUntil(isFirst)` → `animateTo(tab)` で特定の機能画面に遷移しない
-
-L10n文字列・SVG・レイアウト構造自体は正しい。修正は provider ガードの除去と遷移先の変更のみ。
+**次のステップ**: 各ページにビジュアルな機能説明を追加する。
+- アイコン付きのフィーチャーカード（2-3個/ページ）で機能のポイントをアピール
+- 実際のアプリUIコンポーネントを埋め込んで「どこからアクセスできるか」を視覚的に示す
 
 ---
 
-## Step 1: Premium系3ページの `SizedBox.shrink()` ガードを除去
+## Step 1 (実装済み): レンダリング修正・遷移先修正
+
+- `bottomNavigationBar` から `Center` ラッパー削除（全8ページ）
+- Premium系3ページの `hasValue` ガード削除、`ref.read` をコールバックに移動
+- 遷移先修正: record_pill→服用履歴, menstruation→生理設定, calendar_diary/future_schedule→カレンダータブ
+- テスト1386件全パス、`flutter analyze` error/warningなし、シミュレータでコンテンツ表示確認済み
+
+---
+
+## Step 2: ビジュアルな機能説明を追加
+
+### ページレイアウト構成
+
+```
+AppBar (機能名)
+─────────────────
+[SVG Icon]
+
+見出し (Headline)
+
+[Feature Cards]
+  ┌ Icon ─ ポイント1 ┐
+  ├ Icon ─ ポイント2 ├
+  └ Icon ─ ポイント3 ┘
+
+[Location Preview]  ← "アプリ内の場所"
+  パス: "設定 > 通知"
+  ┌──────────────────┐
+  │ 実際の設定行の    │
+  │ プレビュー        │
+  └──────────────────┘
+
+─────────────────
+[FAB] 実際に試す
+```
+
+### 各ページの Feature Cards + Location Preview
+
+| # | 機能 | Feature Cards (Icon + テキスト) | Location Preview |
+|---|---|---|---|
+| 1 | Critical Alert | `Icons.notifications_active` 集中モード中も通知 / `Icons.schedule` 設定時刻に確実リマインド / `Icons.touch_app` ワンタップで設定 | パス: 設定 > 通知 / プレビュー: `ListTile(title: L.enableNotificationInSilentModeSetting, subtitle: L.silentModeNotificationDescription)` + PremiumBadge |
+| 2 | 通知カスタマイズ | `Icons.edit` 通知メッセージを自由に編集 / `Icons.notifications` 毎日の通知に反映 / `Icons.favorite` 自分だけの通知に | パス: 設定 > 通知 / プレビュー: `ListTile(title: L.customizeMedicationNotifications)` + PremiumBadge |
+| 3 | 外観モード(date) | `Icons.calendar_today` 日付で表示 / `Icons.visibility` 何日目か一目で把握 / `Icons.settings` ピルシート設定から変更 | パス: 設定 > ピルシート / プレビュー: `ListTile(title: "ピルシートの自動追加", subtitle: "Premium")` |
+| 4 | ピル記録 | `Icons.touch_app` ピルシートをタップで記録 / `Icons.undo` 間違えても取り消し可能 / `Icons.history` 服用履歴を確認 | パス: ピルタブ / プレビュー: タブアイコン(tab_icon_pill_enable.svg) + 説明 |
+| 5 | 生理記録 | `Icons.edit_calendar` 生理開始日を記録 / `Icons.trending_up` 周期を自動で把握 / `Icons.tune` 設定をカスタマイズ | パス: 設定 > 生理 / プレビュー: `ListTile(title: L.aboutMenstruation)` |
+| 6 | カレンダー日記 | `Icons.calendar_month` カレンダーで一覧 / `Icons.note_add` 体調をメモ / `Icons.search` 過去の記録を振り返り | パス: カレンダータブ / プレビュー: タブアイコン(tab_icon_calendar_enable.svg) + 説明 |
+| 7 | 未来の予定 | `Icons.event` 予定を書き込み / `Icons.local_hospital` 通院日を管理 / `Icons.alarm` リマインダーで通知 | パス: カレンダータブ / プレビュー: タブアイコン(tab_icon_calendar_enable.svg) + 説明 |
+| 8 | ヘルスケア連携 | `Icons.sync` 自動でデータ連携 / `Icons.favorite` 生理記録をヘルスケアに同期 / `Icons.phone_iphone` Apple ヘルスケア対応 | パス: 設定 > 生理 / プレビュー: `ListTile(title: L.healthCareIntegration, subtitle: L.healthCareIntegrationDescription)` |
+
+### 実装方針
+
+- **L10n**: Feature Cards のテキストは `app_ja.arb` / `app_en.arb` に追加（各ページ3個 × 8ページ = 24文字列）
+- **Location Preview**: 非インタラクティブな `ListTile` を `Container` + `BoxDecoration`（角丸 + ボーダー）で囲んで表示。`IgnorePointer` で操作を無効化
+- **各 HelpPage に直接記述**: 共通コンポーネントは作らず、各ページの `body` 内の `Column` に直接 Widget を追加
+
+---
+
+## Step 1 (実装済み) の元の内容
+
+### Premium系3ページの `SizedBox.shrink()` ガードを除去
 
 コーディング規約に従い `requireValue` を使う。ただし `ref.watch` を build で呼ぶ必要はない（provider の値はボタンコールバックでのみ使う）ため、`ref.read` に変更する。
 
