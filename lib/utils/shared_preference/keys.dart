@@ -38,6 +38,9 @@ extension BoolKey on String {
 extension StringKey on String {
   static const String beginVersion = 'beginingVersion';
   static const String lastSignInAnonymousUID = 'lastSigninAnonymousUID';
+
+  /// FeatureAppeal の × ボタンが最後に押された日付 (ISO 8601)。当日中は再表示しない判定に使う。
+  static const String featureAppealLastDismissedDate = 'featureAppealLastDismissedDate';
 }
 
 extension ReleaseNoteKey on String {

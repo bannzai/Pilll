@@ -84,9 +84,10 @@ SharedPreferences key も機能ごとに個別の `const` で `BoolKey` extensio
 ```text
 DiscountPriceDeadline (実利用警告)
 → EndedPillSheet     (実利用警告)
-→ RecommendSignupGeneralAnnouncementBar  (★ 新規・認証推奨)
-→ FeatureAppealBarsContainer             (★ 新規・機能アピール)
-→ PremiumTrialLimitAnnouncementBar       (フォールバック)
+→ FeatureAppealBarsContainer             (★ 機能アピール・候補あり & 当日未閉じ)
+→ PremiumTrialLimitAnnouncementBar       (トライアル残り10日以内)
+→ RecommendSignupGeneralAnnouncementBar  (★ 認証推奨・未認証時)
+→ PremiumTrialLimitAnnouncementBar       (トライアル残り10日以上)
 → PilllAds / SpecialOffering / AdMob     (既存)
 ```
 
@@ -97,16 +98,26 @@ LifetimeSubscriptionWarning  (既存)
 → RecommendSignupForPremium  (既存)
 → RestDuration               (実利用警告)
 → EndedPillSheet             (実利用警告)
-→ FeatureAppealBarsContainer (★ 新規)
+→ FeatureAppealBarsContainer (★ 機能アピール・候補あり & 当日未閉じ)
 ```
-
-`DiscountPriceDeadline` / `EndedPillSheet` / `RestDuration` は実利用上の警告系として保護し、FeatureAppealより優先する。
 
 **Why:**
 
-- 要件に「認証推奨を上げる」「FeatureAppealを入れる」と明示されている
-- 実利用警告系 (DiscountPriceDeadline・EndedPillSheet・RestDuration) は「ユーザーが今すぐ何かするべき」というアクション要請であり、マーケティング目的のFeatureAppealより優先度が高い
-- Premium ユーザーにも有料/無料機能アピールを出す要件があるが、実利用警告系の方が常に上位にある
+- 機能訴求を最優先とし、全dismiss or 当日×で閉じた場合にのみ認証推奨にフォールバックする
+- トライアル期限が10日以内に迫っている場合は認証推奨より優先する (ユーザーがアクションすべき期限が近い)
+- トライアル期限まで余裕がある (10日以上) 場合は、認証推奨の方が優先度が高い
+- 実利用警告系 (DiscountPriceDeadline・EndedPillSheet・RestDuration) は「ユーザーが今すぐ何かするべき」というアクション要請であり、すべてのFeatureAppeal/認証推奨より優先度が高い
+
+### 6. 当日 dismiss 判定: FeatureAppeal を × で閉じたら残りの当日は再表示しない
+
+FeatureAppeal の Bar を × で閉じた際に `featureAppealLastDismissedDate` (ISO 8601) を SharedPreferences に保存する。
+AnnouncementBar 構築時に `isSameDay(featureAppealLastDismissedDate, today())` で当日かどうかを判定し、当日なら FeatureAppeal をスキップしてフォールバック (認証推奨 or トライアル期限) に進む。
+
+**Why:**
+
+- 「1日1種類」の設計意図に合致: × で閉じた後に別の機能訴求を即座に表示するのはユーザー体験として押し付けがましい
+- 翌日になると `isSameDay` が false になり、自動的に次の候補が表示される
+- グローバルな日付付き composite key を作るのではなく、シンプルな「最後に閉じた日付」1本で判定できる
 
 ## Consequences
 
@@ -117,6 +128,8 @@ LifetimeSubscriptionWarning  (既存)
 - HelpPage 側に `useEffect` がなく、実装が宣言的でテストしやすい
 - BigQueryクエリ (`feature_appeal_funnel.sql` など) も `STRUCT` の配列で featureKey と HelpPage 名を対応付けるだけで済む
 - 既存の実利用警告系の挙動が保護されているため、リグレッションが小さい
+- 当日 dismiss 判定が `featureAppealLastDismissedDate` 1本で済むため、「今日見たkey」と「dismiss key」の二重管理が不要
+- PremiumTrialLimit の10日閾値分割により、期限間近のユーザーには適切に緊急性を伝えつつ、余裕があるユーザーには機能訴求/認証推奨を優先できる
 
 ### Bad
 

@@ -58,7 +58,9 @@ void main() {
       );
     });
 
-    test('appIsReleased=false かつ appearanceModeDate のみ未 dismiss で他全 dismiss → false (appIsReleased ゲートが効く)', () async {
+    test(
+        'appIsReleased=false かつ appearanceModeDate のみ未 dismiss で他全 dismiss → false (appIsReleased ゲートが効く)',
+        () async {
       SharedPreferences.setMockInitialValues({
         BoolKey.criticalAlertFeatureAppealIsClosed: true,
         BoolKey.reminderNotificationCustomizeWordFeatureAppealIsClosed: true,
@@ -80,7 +82,9 @@ void main() {
       );
     });
 
-    test('appIsReleased=true かつ appearanceModeDate のみ未 dismiss で他全 dismiss → true', () async {
+    test(
+        'appIsReleased=true かつ appearanceModeDate のみ未 dismiss で他全 dismiss → true',
+        () async {
       SharedPreferences.setMockInitialValues({
         BoolKey.criticalAlertFeatureAppealIsClosed: true,
         BoolKey.reminderNotificationCustomizeWordFeatureAppealIsClosed: true,
@@ -103,6 +107,60 @@ void main() {
     });
   });
 
+  group('#wasDismissedToday', () {
+    test('prefs 空 → false を返す', () async {
+      final mockTodayRepository = MockTodayService();
+      when(mockTodayRepository.now()).thenReturn(DateTime(2024, 1, 1));
+      todayRepository = mockTodayRepository;
+
+      SharedPreferences.setMockInitialValues({});
+      final sharedPreferences = await SharedPreferences.getInstance();
+
+      expect(
+        FeatureAppealBarsContainer.wasDismissedToday(
+            sharedPreferences: sharedPreferences),
+        isFalse,
+      );
+    });
+
+    test('今日の日付が保存済み → true を返す', () async {
+      final mockTodayRepository = MockTodayService();
+      final mockToday = DateTime(2024, 4, 10);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+      todayRepository = mockTodayRepository;
+
+      SharedPreferences.setMockInitialValues({
+        StringKey.featureAppealLastDismissedDate: mockToday.toIso8601String(),
+      });
+      final sharedPreferences = await SharedPreferences.getInstance();
+
+      expect(
+        FeatureAppealBarsContainer.wasDismissedToday(
+            sharedPreferences: sharedPreferences),
+        isTrue,
+      );
+    });
+
+    test('昨日の日付が保存済み → false を返す', () async {
+      final mockTodayRepository = MockTodayService();
+      final mockToday = DateTime(2024, 4, 10);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+      todayRepository = mockTodayRepository;
+
+      SharedPreferences.setMockInitialValues({
+        StringKey.featureAppealLastDismissedDate:
+            mockToday.subtract(const Duration(days: 1)).toIso8601String(),
+      });
+      final sharedPreferences = await SharedPreferences.getInstance();
+
+      expect(
+        FeatureAppealBarsContainer.wasDismissedToday(
+            sharedPreferences: sharedPreferences),
+        isFalse,
+      );
+    });
+  });
+
   group('#FeatureAppealBarsContainer', () {
     /// 候補リスト (本実装と同じ並び順) のうち、appIsReleased=true で全 8 件存在する状態を想定。
     /// テストでは today を任意に固定して daysBetween(epoch, today) % 8 が想定の Bar に一致するかを確認する。
@@ -119,7 +177,8 @@ void main() {
       ][index];
     }
 
-    testWidgets('prefs 空 + appIsReleased=true → 当日 index に対応する Bar が表示される', (tester) async {
+    testWidgets('prefs 空 + appIsReleased=true → 当日 index に対応する Bar が表示される',
+        (tester) async {
       final mockTodayRepository = MockTodayService();
       final mockToday = DateTime(2024, 1, 1);
       when(mockTodayRepository.now()).thenReturn(mockToday);
@@ -133,9 +192,10 @@ void main() {
           overrides: [
             sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
           ],
-          child: const MaterialApp(
+          child: MaterialApp(
             home: Material(
-              child: FeatureAppealBarsContainer(appIsReleased: true),
+              child: FeatureAppealBarsContainer(
+                  appIsReleased: true, dismissedToday: ValueNotifier(false)),
             ),
           ),
         ),
@@ -147,7 +207,8 @@ void main() {
 
     testWidgets('today を翌日に進める → index が +1 ずれて別の Bar が表示される', (tester) async {
       final mockTodayRepository = MockTodayService();
-      when(mockTodayRepository.now()).thenReturn(_featureAppealEpoch.add(const Duration(days: 1)));
+      when(mockTodayRepository.now())
+          .thenReturn(_featureAppealEpoch.add(const Duration(days: 1)));
       todayRepository = mockTodayRepository;
 
       SharedPreferences.setMockInitialValues({});
@@ -158,9 +219,10 @@ void main() {
           overrides: [
             sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
           ],
-          child: const MaterialApp(
+          child: MaterialApp(
             home: Material(
-              child: FeatureAppealBarsContainer(appIsReleased: true),
+              child: FeatureAppealBarsContainer(
+                  appIsReleased: true, dismissedToday: ValueNotifier(false)),
             ),
           ),
         ),
@@ -170,7 +232,9 @@ void main() {
       expect(find.byType(expectedBarTypeForIndex(1)), findsOneWidget);
     });
 
-    testWidgets('criticalAlert を dismiss 済み → 残り 7 候補のうち index 0 (本来は criticalAlert) は表示されない', (tester) async {
+    testWidgets(
+        'criticalAlert を dismiss 済み → 残り 7 候補のうち index 0 (本来は criticalAlert) は表示されない',
+        (tester) async {
       final mockTodayRepository = MockTodayService();
       when(mockTodayRepository.now()).thenReturn(_featureAppealEpoch);
       todayRepository = mockTodayRepository;
@@ -185,9 +249,10 @@ void main() {
           overrides: [
             sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
           ],
-          child: const MaterialApp(
+          child: MaterialApp(
             home: Material(
-              child: FeatureAppealBarsContainer(appIsReleased: true),
+              child: FeatureAppealBarsContainer(
+                  appIsReleased: true, dismissedToday: ValueNotifier(false)),
             ),
           ),
         ),
@@ -195,13 +260,17 @@ void main() {
 
       // criticalAlert は除外。残り 7 候補で daysBetween=0 → index 0 = ReminderNotificationCustomizeWord
       expect(find.byType(CriticalAlertAnnouncementBar), findsNothing);
-      expect(find.byType(ReminderNotificationCustomizeWordAnnouncementBar), findsOneWidget);
+      expect(find.byType(ReminderNotificationCustomizeWordAnnouncementBar),
+          findsOneWidget);
     });
 
-    testWidgets('appIsReleased=false → AppearanceModeDateAnnouncementBar が候補から除外される', (tester) async {
+    testWidgets(
+        'appIsReleased=false → AppearanceModeDateAnnouncementBar が候補から除外される',
+        (tester) async {
       final mockTodayRepository = MockTodayService();
       // 通常 epoch から 2 日後なら index 2 (AppearanceModeDate) になるはず。除外されると 2 番目以降がずれる。
-      when(mockTodayRepository.now()).thenReturn(_featureAppealEpoch.add(const Duration(days: 2)));
+      when(mockTodayRepository.now())
+          .thenReturn(_featureAppealEpoch.add(const Duration(days: 2)));
       todayRepository = mockTodayRepository;
 
       SharedPreferences.setMockInitialValues({});
@@ -212,9 +281,10 @@ void main() {
           overrides: [
             sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
           ],
-          child: const MaterialApp(
+          child: MaterialApp(
             home: Material(
-              child: FeatureAppealBarsContainer(appIsReleased: false),
+              child: FeatureAppealBarsContainer(
+                  appIsReleased: false, dismissedToday: ValueNotifier(false)),
             ),
           ),
         ),
@@ -248,9 +318,10 @@ void main() {
           overrides: [
             sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
           ],
-          child: const MaterialApp(
+          child: MaterialApp(
             home: Material(
-              child: FeatureAppealBarsContainer(appIsReleased: true),
+              child: FeatureAppealBarsContainer(
+                  appIsReleased: true, dismissedToday: ValueNotifier(false)),
             ),
           ),
         ),
@@ -258,13 +329,42 @@ void main() {
 
       // 全 8 個の Bar が表示されないことを確認
       expect(find.byType(CriticalAlertAnnouncementBar), findsNothing);
-      expect(find.byType(ReminderNotificationCustomizeWordAnnouncementBar), findsNothing);
+      expect(find.byType(ReminderNotificationCustomizeWordAnnouncementBar),
+          findsNothing);
       expect(find.byType(AppearanceModeDateAnnouncementBar), findsNothing);
       expect(find.byType(RecordPillAnnouncementBar), findsNothing);
       expect(find.byType(MenstruationAnnouncementBar), findsNothing);
       expect(find.byType(CalendarDiaryAnnouncementBar), findsNothing);
       expect(find.byType(FutureScheduleAnnouncementBar), findsNothing);
       expect(find.byType(HealthCareIntegrationAnnouncementBar), findsNothing);
+    });
+
+    testWidgets('dismissedToday=true → 候補があっても SizedBox.shrink が表示される',
+        (tester) async {
+      final mockTodayRepository = MockTodayService();
+      when(mockTodayRepository.now()).thenReturn(_featureAppealEpoch);
+      todayRepository = mockTodayRepository;
+
+      SharedPreferences.setMockInitialValues({});
+      final sharedPreferences = await SharedPreferences.getInstance();
+
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+          ],
+          child: MaterialApp(
+            home: Material(
+              child: FeatureAppealBarsContainer(
+                  appIsReleased: true, dismissedToday: ValueNotifier(true)),
+            ),
+          ),
+        ),
+      );
+
+      expect(find.byType(CriticalAlertAnnouncementBar), findsNothing);
+      expect(find.byType(ReminderNotificationCustomizeWordAnnouncementBar),
+          findsNothing);
     });
   });
 }

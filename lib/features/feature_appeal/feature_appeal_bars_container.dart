@@ -10,6 +10,7 @@ import 'package:pilll/features/feature_appeal/menstruation/menstruation_announce
 import 'package:pilll/features/feature_appeal/record_pill/record_pill_announcement_bar.dart';
 import 'package:pilll/features/feature_appeal/reminder_notification_customize_word/reminder_notification_customize_word_announcement_bar.dart';
 import 'package:pilll/provider/shared_preferences.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -23,10 +24,17 @@ final DateTime _featureAppealEpoch = DateTime(2024, 1, 1);
 class FeatureAppealBarsContainer extends HookConsumerWidget {
   /// 未リリース機能を非表示にするフラグ。
   final bool appIsReleased;
-  const FeatureAppealBarsContainer({super.key, required this.appIsReleased});
+
+  /// 親 (AnnouncementBar) が所有する「当日 dismiss 済み」フラグ。
+  /// × ボタン押下で true にし、親の再ビルドでフォールバック表示に切り替える。
+  final ValueNotifier<bool> dismissedToday;
+
+  const FeatureAppealBarsContainer({super.key, required this.appIsReleased, required this.dismissedToday});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    if (dismissedToday.value) return const SizedBox.shrink();
+
     final sharedPreferences = ref.watch(sharedPreferencesProvider);
 
     final criticalAlertIsClosed = useState(sharedPreferences.getBool(BoolKey.criticalAlertFeatureAppealIsClosed) ?? false);
@@ -40,8 +48,14 @@ class FeatureAppealBarsContainer extends HookConsumerWidget {
     final healthCareIntegrationIsClosed = useState(sharedPreferences.getBool(BoolKey.healthCareIntegrationFeatureAppealIsClosed) ?? false);
 
     useEffect(() {
+      void markDismissedToday() {
+        sharedPreferences.setString(StringKey.featureAppealLastDismissedDate, today().toIso8601String());
+        dismissedToday.value = true;
+      }
+
       void onCriticalAlert() {
         sharedPreferences.setBool(BoolKey.criticalAlertFeatureAppealIsClosed, criticalAlertIsClosed.value);
+        if (criticalAlertIsClosed.value) markDismissedToday();
       }
 
       void onReminderNotificationCustomizeWord() {
@@ -49,30 +63,37 @@ class FeatureAppealBarsContainer extends HookConsumerWidget {
           BoolKey.reminderNotificationCustomizeWordFeatureAppealIsClosed,
           reminderNotificationCustomizeWordIsClosed.value,
         );
+        if (reminderNotificationCustomizeWordIsClosed.value) markDismissedToday();
       }
 
       void onAppearanceModeDate() {
         sharedPreferences.setBool(BoolKey.appearanceModeDateFeatureAppealIsClosed, appearanceModeDateIsClosed.value);
+        if (appearanceModeDateIsClosed.value) markDismissedToday();
       }
 
       void onRecordPill() {
         sharedPreferences.setBool(BoolKey.recordPillFeatureAppealIsClosed, recordPillIsClosed.value);
+        if (recordPillIsClosed.value) markDismissedToday();
       }
 
       void onMenstruation() {
         sharedPreferences.setBool(BoolKey.menstruationFeatureAppealIsClosed, menstruationIsClosed.value);
+        if (menstruationIsClosed.value) markDismissedToday();
       }
 
       void onCalendarDiary() {
         sharedPreferences.setBool(BoolKey.calendarDiaryFeatureAppealIsClosed, calendarDiaryIsClosed.value);
+        if (calendarDiaryIsClosed.value) markDismissedToday();
       }
 
       void onFutureSchedule() {
         sharedPreferences.setBool(BoolKey.futureScheduleFeatureAppealIsClosed, futureScheduleIsClosed.value);
+        if (futureScheduleIsClosed.value) markDismissedToday();
       }
 
       void onHealthCareIntegration() {
         sharedPreferences.setBool(BoolKey.healthCareIntegrationFeatureAppealIsClosed, healthCareIntegrationIsClosed.value);
+        if (healthCareIntegrationIsClosed.value) markDismissedToday();
       }
 
       criticalAlertIsClosed.addListener(onCriticalAlert);
@@ -113,6 +134,15 @@ class FeatureAppealBarsContainer extends HookConsumerWidget {
       identifier: 'feature_appeal_bar',
       child: candidates[daysBetween(_featureAppealEpoch, today()) % candidates.length],
     );
+  }
+
+  /// 当日中に FeatureAppeal が × で閉じられたかどうか。SharedPreferences を直接読む。
+  static bool wasDismissedToday({required SharedPreferences sharedPreferences}) {
+    final featureAppealLastDismissedDate = sharedPreferences.getString(StringKey.featureAppealLastDismissedDate);
+    if (featureAppealLastDismissedDate == null) return false;
+    final parsed = DateTime.tryParse(featureAppealLastDismissedDate);
+    if (parsed == null) return false;
+    return isSameDay(parsed, today());
   }
 
   /// AnnouncementBar の `_body()` で「FeatureAppeal を出すかフォールバックに進むか」を事前判定するためのヘルパー。
