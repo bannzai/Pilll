@@ -5,6 +5,7 @@ import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/features/settings/critical_alert/page.dart';
@@ -29,7 +30,7 @@ class CriticalAlertHelpPage extends ConsumerWidget {
         ),
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.fromLTRB(24, 24, 24, 120),
+        padding: const EdgeInsets.fromLTRB(24, 24, 24, 40),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -51,14 +52,63 @@ class CriticalAlertHelpPage extends ConsumerWidget {
                 color: TextColor.main,
               ),
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 20),
+            _featureCard(icon: Icons.notifications_active, text: L.criticalAlertFeatureAppealPoint1),
+            const SizedBox(height: 8),
+            _featureCard(icon: Icons.schedule, text: L.criticalAlertFeatureAppealPoint2),
+            const SizedBox(height: 8),
+            _featureCard(icon: Icons.touch_app, text: L.criticalAlertFeatureAppealPoint3),
+            const SizedBox(height: 28),
             Text(
-              L.criticalAlertFeatureAppealBody,
+              L.featureAppealLocationLabel,
               style: const TextStyle(
-                fontSize: 15,
-                height: 1.6,
+                fontSize: 13,
+                fontWeight: FontWeight.w600,
                 fontFamily: FontFamily.japanese,
-                color: TextColor.main,
+                color: TextColor.darkGray,
+              ),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              '${L.settings} > ${L.notification}',
+              style: const TextStyle(
+                fontSize: 12,
+                fontFamily: FontFamily.japanese,
+                color: TextColor.darkGray,
+              ),
+            ),
+            const SizedBox(height: 8),
+            Container(
+              decoration: BoxDecoration(
+                color: AppColors.white,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: AppColors.border),
+              ),
+              child: IgnorePointer(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      Text(
+                        L.enableNotificationInSilentModeSetting,
+                        style: const TextStyle(
+                          fontFamily: FontFamily.roboto,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 16,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      const PremiumBadge(),
+                    ],
+                  ),
+                  subtitle: Text(
+                    L.silentModeNotificationDescription,
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                    ),
+                  ),
+                ),
               ),
             ),
           ],
@@ -94,6 +144,34 @@ class CriticalAlertHelpPage extends ConsumerWidget {
             },
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _featureCard({required IconData icon, required String text}) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      decoration: BoxDecoration(
+        color: AppColors.white,
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: AppColors.border),
+      ),
+      child: Row(
+        children: [
+          Icon(icon, size: 22, color: AppColors.primary),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Text(
+              text,
+              style: const TextStyle(
+                fontSize: 14,
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w500,
+                color: TextColor.main,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
