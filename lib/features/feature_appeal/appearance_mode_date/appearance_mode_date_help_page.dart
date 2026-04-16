@@ -18,11 +18,6 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final userAsync = ref.watch(userProvider);
-    if (!userAsync.hasValue) return const SizedBox.shrink();
-    final user = userAsync.requireValue;
-    final pillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
-
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -71,36 +66,36 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
       bottomNavigationBar: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16),
-          child: Center(
-            child: PrimaryButton(
-              text: L.featureAppealTryFeature,
-              onPressed: () async {
+          child: PrimaryButton(
+            text: L.featureAppealTryFeature,
+            onPressed: () async {
+              final user = ref.read(userProvider).requireValue;
+              analytics.logEvent(
+                name: 'feature_appeal_try_tapped',
+                parameters: {
+                  'feature_key': 'appearance_mode_date',
+                  'feature_type': 'premium',
+                  'is_paywall_shown': !user.premiumOrTrial ? 1 : 0,
+                },
+              );
+              if (!user.premiumOrTrial) {
                 analytics.logEvent(
-                  name: 'feature_appeal_try_tapped',
-                  parameters: {
-                    'feature_key': 'appearance_mode_date',
-                    'feature_type': 'premium',
-                    'is_paywall_shown': !user.premiumOrTrial ? 1 : 0,
-                  },
+                  name: 'feature_appeal_paywall_shown',
+                  parameters: {'feature_key': 'appearance_mode_date'},
                 );
-                if (!user.premiumOrTrial) {
-                  analytics.logEvent(
-                    name: 'feature_appeal_paywall_shown',
-                    parameters: {'feature_key': 'appearance_mode_date'},
-                  );
-                  await showPremiumIntroductionSheet(context);
-                  return;
-                }
-                if (pillSheetGroup == null) {
-                  return;
-                }
-                showSelectAppearanceModeModal(
-                  context,
-                  user: user,
-                  pillSheetGroup: pillSheetGroup,
-                );
-              },
-            ),
+                await showPremiumIntroductionSheet(context);
+                return;
+              }
+              final pillSheetGroup = ref.read(latestPillSheetGroupProvider).valueOrNull;
+              if (pillSheetGroup == null) {
+                return;
+              }
+              showSelectAppearanceModeModal(
+                context,
+                user: user,
+                pillSheetGroup: pillSheetGroup,
+              );
+            },
           ),
         ),
       ),

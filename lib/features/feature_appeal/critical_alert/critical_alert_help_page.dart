@@ -18,12 +18,6 @@ class CriticalAlertHelpPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final userAsync = ref.watch(userProvider);
-    final settingAsync = ref.watch(settingProvider);
-    if (!userAsync.hasValue || !settingAsync.hasValue) return const SizedBox.shrink();
-    final user = userAsync.requireValue;
-    final setting = settingAsync.requireValue;
-
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -73,31 +67,31 @@ class CriticalAlertHelpPage extends ConsumerWidget {
       bottomNavigationBar: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16),
-          child: Center(
-            child: PrimaryButton(
-              text: L.featureAppealTryFeature,
-              onPressed: () async {
+          child: PrimaryButton(
+            text: L.featureAppealTryFeature,
+            onPressed: () async {
+              final user = ref.read(userProvider).requireValue;
+              final setting = ref.read(settingProvider).requireValue;
+              analytics.logEvent(
+                name: 'feature_appeal_try_tapped',
+                parameters: {
+                  'feature_key': 'critical_alert',
+                  'feature_type': 'premium',
+                  'is_paywall_shown': !user.premiumOrTrial ? 1 : 0,
+                },
+              );
+              if (!user.premiumOrTrial) {
                 analytics.logEvent(
-                  name: 'feature_appeal_try_tapped',
-                  parameters: {
-                    'feature_key': 'critical_alert',
-                    'feature_type': 'premium',
-                    'is_paywall_shown': !user.premiumOrTrial ? 1 : 0,
-                  },
+                  name: 'feature_appeal_paywall_shown',
+                  parameters: {'feature_key': 'critical_alert'},
                 );
-                if (!user.premiumOrTrial) {
-                  analytics.logEvent(
-                    name: 'feature_appeal_paywall_shown',
-                    parameters: {'feature_key': 'critical_alert'},
-                  );
-                  await showPremiumIntroductionSheet(context);
-                  return;
-                }
-                await Navigator.of(context).push(
-                  CriticalAlertPageRoutes.route(setting: setting),
-                );
-              },
-            ),
+                await showPremiumIntroductionSheet(context);
+                return;
+              }
+              await Navigator.of(context).push(
+                CriticalAlertPageRoutes.route(setting: setting),
+              );
+            },
           ),
         ),
       ),

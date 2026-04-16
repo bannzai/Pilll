@@ -17,10 +17,6 @@ class ReminderNotificationCustomizeWordHelpPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final userAsync = ref.watch(userProvider);
-    if (!userAsync.hasValue) return const SizedBox.shrink();
-    final user = userAsync.requireValue;
-
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -70,29 +66,28 @@ class ReminderNotificationCustomizeWordHelpPage extends ConsumerWidget {
       bottomNavigationBar: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16),
-          child: Center(
-            child: PrimaryButton(
-              text: L.featureAppealTryFeature,
-              onPressed: () async {
+          child: PrimaryButton(
+            text: L.featureAppealTryFeature,
+            onPressed: () async {
+              final user = ref.read(userProvider).requireValue;
+              analytics.logEvent(
+                name: 'feature_appeal_try_tapped',
+                parameters: {
+                  'feature_key': 'reminder_notification_customize_word',
+                  'feature_type': 'premium',
+                  'is_paywall_shown': !user.premiumOrTrial ? 1 : 0,
+                },
+              );
+              if (!user.premiumOrTrial) {
                 analytics.logEvent(
-                  name: 'feature_appeal_try_tapped',
-                  parameters: {
-                    'feature_key': 'reminder_notification_customize_word',
-                    'feature_type': 'premium',
-                    'is_paywall_shown': !user.premiumOrTrial ? 1 : 0,
-                  },
+                  name: 'feature_appeal_paywall_shown',
+                  parameters: {'feature_key': 'reminder_notification_customize_word'},
                 );
-                if (!user.premiumOrTrial) {
-                  analytics.logEvent(
-                    name: 'feature_appeal_paywall_shown',
-                    parameters: {'feature_key': 'reminder_notification_customize_word'},
-                  );
-                  await showPremiumIntroductionSheet(context);
-                  return;
-                }
-                await Navigator.of(context).push(ReminderNotificationCustomizeWordPageRoutes.route());
-              },
-            ),
+                await showPremiumIntroductionSheet(context);
+                return;
+              }
+              await Navigator.of(context).push(ReminderNotificationCustomizeWordPageRoutes.route());
+            },
           ),
         ),
       ),
