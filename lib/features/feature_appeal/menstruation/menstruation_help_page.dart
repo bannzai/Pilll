@@ -25,7 +25,7 @@ class MenstruationHelpPage extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.fromLTRB(24, 24, 24, 120),
+        padding: const EdgeInsets.fromLTRB(24, 24, 24, 40),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -46,14 +46,49 @@ class MenstruationHelpPage extends StatelessWidget {
                 color: TextColor.main,
               ),
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 20),
+            _featureCard(icon: Icons.edit_calendar, text: L.menstruationFeatureAppealPoint1),
+            const SizedBox(height: 8),
+            _featureCard(icon: Icons.trending_up, text: L.menstruationFeatureAppealPoint2),
+            const SizedBox(height: 8),
+            _featureCard(icon: Icons.tune, text: L.menstruationFeatureAppealPoint3),
+            const SizedBox(height: 28),
             Text(
-              L.menstruationFeatureAppealBody,
+              L.featureAppealLocationLabel,
               style: const TextStyle(
-                fontSize: 15,
-                height: 1.6,
+                fontSize: 13,
+                fontWeight: FontWeight.w600,
                 fontFamily: FontFamily.japanese,
-                color: TextColor.main,
+                color: TextColor.darkGray,
+              ),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              '${L.settings} > ${L.menstruation}',
+              style: const TextStyle(
+                fontSize: 12,
+                fontFamily: FontFamily.japanese,
+                color: TextColor.darkGray,
+              ),
+            ),
+            const SizedBox(height: 8),
+            Container(
+              decoration: BoxDecoration(
+                color: AppColors.white,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: AppColors.border),
+              ),
+              child: IgnorePointer(
+                child: ListTile(
+                  title: Text(
+                    L.aboutMenstruation,
+                    style: const TextStyle(
+                      fontFamily: FontFamily.roboto,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
               ),
             ),
           ],
@@ -77,6 +112,34 @@ class MenstruationHelpPage extends StatelessWidget {
             },
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _featureCard({required IconData icon, required String text}) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      decoration: BoxDecoration(
+        color: AppColors.white,
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: AppColors.border),
+      ),
+      child: Row(
+        children: [
+          Icon(icon, size: 22, color: AppColors.primary),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Text(
+              text,
+              style: const TextStyle(
+                fontSize: 14,
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w500,
+                color: TextColor.main,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
