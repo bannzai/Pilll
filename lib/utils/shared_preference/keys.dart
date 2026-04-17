@@ -33,6 +33,21 @@ extension BoolKey on String {
 
   /// ヘルスケア連携 (無料機能) のアピール Bar を × で閉じたかどうか。
   static const healthCareIntegrationFeatureAppealIsClosed = 'healthCareIntegrationFeatureAppealIsClosed';
+
+  /// クイックレコード (Premium機能: 通知アクションでの服用記録) のアピール Bar を × で閉じたかどうか。
+  static const quickRecordFeatureAppealIsClosed = 'quickRecordFeatureAppealIsClosed';
+
+  /// ピルシートグループ自動追加 (Premium機能) のアピール Bar を × で閉じたかどうか。
+  static const creatingNewPillSheetFeatureAppealIsClosed = 'creatingNewPillSheetFeatureAppealIsClosed';
+
+  /// AlarmKit (Premium機能: iOS 26+) のアピール Bar を × で閉じたかどうか。
+  static const alarmKitFeatureAppealIsClosed = 'alarmKitFeatureAppealIsClosed';
+
+  /// 今日の服用番号変更 (無料機能) のアピール Bar を × で閉じたかどうか。
+  static const todayPillNumberFeatureAppealIsClosed = 'todayPillNumberFeatureAppealIsClosed';
+
+  /// 服用おやすみ (無料機能) のアピール Bar を × で閉じたかどうか。
+  static const restDurationFeatureAppealIsClosed = 'restDurationFeatureAppealIsClosed';
 }
 
 extension StringKey on String {

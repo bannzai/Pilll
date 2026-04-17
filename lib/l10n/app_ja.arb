@@ -2419,7 +2419,7 @@
   "@lifetimePurchaseNotice3": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
   },
-  "featureAppealTryFeature": "実際に試す",
+  "featureAppealTryFeature": "確認する",
   "@featureAppealTryFeature": {
     "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
   },
@@ -2560,6 +2560,91 @@
     "description": "ヘルスケア連携機能のヘルプページの本文"
   },
 
+  "quickRecordFeatureAppealTitle": "通知からそのまま服用記録",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "アプリを開かず通知上で記録",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "通知画面でワンタップ服用記録",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "リマインダー通知を長押しすると「服用した」のアクションが表示され、アプリを開かずに服用を記録できます。",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+
+  "creatingNewPillSheetFeatureAppealTitle": "ピルシートを自動で追加",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "次のシートを自動生成",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "次のピルシートを自動で作成",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "現在のピルシートグループが終わると、新しいピルシートグループが自動で作成されます。手動の切り替え操作が不要で、記録の抜けが起きません。",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+
+  "alarmKitFeatureAppealTitle": "目覚ましのように鳴るアラーム",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "サイレントでも確実に鳴る通知",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "目覚まし同様の服用アラーム",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26以降で利用できるAlarmKitを使って、サイレントモードや集中モードでも確実に鳴るアラームでピルの服用を知らせます。",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+
+  "todayPillNumberFeatureAppealTitle": "今日の服用番号を合わせる",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "番号がずれたら設定で修正",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "今日飲むピル番号を変更できる",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "飲み忘れや取り違えでピルシート上の番号と実際の服用がずれたときに、今日飲むピル番号を手動で合わせ直せます。ホームのピル数字表示からも同じ画面を開けます。",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+
+  "restDurationFeatureAppealTitle": "服用お休み期間を記録",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "休薬・中断を正確に管理",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "ピルの服用をお休みする",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "しばらく服用をやめる期間をピルシートに記録できます。お休み中は服用番号が進まず、再開時にすぐ記録を再開できます。",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+
   "featureAppealLocationLabel": "アプリ内の場所",
 
   "criticalAlertFeatureAppealPoint1": "集中モード中でも通知が届く",
@@ -2571,7 +2656,7 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "自分だけの通知メッセージに",
 
   "appearanceModeDateFeatureAppealPoint1": "ピルシートを日付で表示",
-  "appearanceModeDateFeatureAppealPoint2": "何日目か一目で把握できる",
+  "appearanceModeDateFeatureAppealPoint2": "カレンダーを見なくても日付がわかる",
   "appearanceModeDateFeatureAppealPoint3": "ピルシート設定から変更可能",
 
   "recordPillFeatureAppealPoint1": "ピルシートをタップで服用記録",
@@ -2584,13 +2669,35 @@
 
   "calendarDiaryFeatureAppealPoint1": "カレンダーで記録を一覧",
   "calendarDiaryFeatureAppealPoint2": "体調をメモして振り返り",
-  "calendarDiaryFeatureAppealPoint3": "過去の記録をかんたん検索",
+  "calendarDiaryFeatureAppealPoint3": "過去の記録をカレンダーで振り返り",
+  "calendarDiaryFeatureAppealLocationHint": "日付をタップして体調を記録",
 
   "futureScheduleFeatureAppealPoint1": "カレンダーに予定を書き込み",
   "futureScheduleFeatureAppealPoint2": "通院日をかんたん管理",
   "futureScheduleFeatureAppealPoint3": "リマインダーで通知",
+  "futureScheduleFeatureAppealLocationHint": "日付をタップして予定を書き込み",
 
   "healthCareIntegrationFeatureAppealPoint1": "生理記録を自動でデータ連携",
   "healthCareIntegrationFeatureAppealPoint2": "ヘルスケアアプリに同期",
-  "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応"
+  "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応",
+
+  "quickRecordFeatureAppealPoint1": "通知のアクションで服用記録",
+  "quickRecordFeatureAppealPoint2": "アプリを開かずに完了",
+  "quickRecordFeatureAppealPoint3": "Premium加入でそのまま利用可能",
+
+  "creatingNewPillSheetFeatureAppealPoint1": "ピルシート終了で自動切り替え",
+  "creatingNewPillSheetFeatureAppealPoint2": "手動の作成操作が不要",
+  "creatingNewPillSheetFeatureAppealPoint3": "設定タブのスイッチで切り替え",
+
+  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "alarmKitFeatureAppealPoint2": "目覚まし同様のアラーム音",
+  "alarmKitFeatureAppealPoint3": "iOS 26以降・設定タブから有効化",
+
+  "todayPillNumberFeatureAppealPoint1": "無料で使える番号合わせ機能",
+  "todayPillNumberFeatureAppealPoint2": "設定タブから変更できる",
+  "todayPillNumberFeatureAppealPoint3": "ホームの数字タップでも開ける",
+
+  "restDurationFeatureAppealPoint1": "無料で使える休薬記録",
+  "restDurationFeatureAppealPoint2": "ピルシート右上の歯車から開始",
+  "restDurationFeatureAppealPoint3": "期間の編集・再開もかんたん"
 }

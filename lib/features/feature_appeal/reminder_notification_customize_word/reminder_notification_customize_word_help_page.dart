@@ -6,9 +6,9 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
+import 'package:pilll/features/home/page.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
-import 'package:pilll/features/reminder_notification_customize_word/page.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 
@@ -42,13 +42,15 @@ class ReminderNotificationCustomizeWordHelpPage extends ConsumerWidget {
               ),
             ),
             const SizedBox(height: 32),
-            Text(
-              L.reminderNotificationCustomizeWordFeatureAppealHeadline,
-              style: const TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.w700,
-                fontFamily: FontFamily.japanese,
-                color: TextColor.main,
+            Center(
+              child: Text(
+                L.reminderNotificationCustomizeWordFeatureAppealHeadline,
+                style: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.w700,
+                  fontFamily: FontFamily.japanese,
+                  color: TextColor.main,
+                ),
               ),
             ),
             const SizedBox(height: 20),
@@ -67,21 +69,17 @@ class ReminderNotificationCustomizeWordHelpPage extends ConsumerWidget {
                 color: TextColor.darkGray,
               ),
             ),
-            const SizedBox(height: 4),
-            Text(
-              '${L.settings} > ${L.notification}',
-              style: const TextStyle(
-                fontSize: 12,
-                fontFamily: FontFamily.japanese,
-                color: TextColor.darkGray,
-              ),
-            ),
             const SizedBox(height: 8),
+            _mockTabBar(selectedIndex: 3),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 6),
+              child: Center(child: Icon(Icons.arrow_downward, size: 28, color: AppColors.primary)),
+            ),
             Container(
               decoration: BoxDecoration(
                 color: AppColors.white,
                 borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: AppColors.border),
+                border: Border.all(color: AppColors.primary, width: 1.5),
               ),
               child: IgnorePointer(
                 child: ListTile(
@@ -136,10 +134,61 @@ class ReminderNotificationCustomizeWordHelpPage extends ConsumerWidget {
                 await showPremiumIntroductionSheet(context);
                 return;
               }
-              await Navigator.of(context).push(ReminderNotificationCustomizeWordPageRoutes.route());
+              final tabController = ref.read(homeTabControllerProvider);
+              Navigator.of(context).popUntil((r) => r.isFirst);
+              tabController?.animateTo(HomePageTabType.setting.index);
             },
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _mockTabBar({required int selectedIndex}) {
+    final tabs = [
+      (icon: 'images/tab_icon_pill_enable.svg', disabledIcon: 'images/tab_icon_pill_disable.svg', label: L.pill),
+      (icon: 'images/menstruation.svg', disabledIcon: 'images/menstruation_disable.svg', label: L.menstruation),
+      (icon: 'images/tab_icon_calendar_enable.svg', disabledIcon: 'images/tab_icon_calendar_disable.svg', label: L.calendar),
+      (icon: 'images/tab_icon_setting_enable.svg', disabledIcon: 'images/tab_icon_setting_disable.svg', label: L.settings),
+    ];
+    return Container(
+      decoration: BoxDecoration(
+        color: AppColors.white,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: AppColors.border),
+      ),
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          for (var i = 0; i < tabs.length; i++)
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(6),
+                  decoration: i == selectedIndex
+                      ? BoxDecoration(shape: BoxShape.circle, border: Border.all(color: AppColors.primary, width: 2))
+                      : null,
+                  child: SvgPicture.asset(
+                    i == selectedIndex ? tabs[i].icon : tabs[i].disabledIcon,
+                    width: 24,
+                    height: 24,
+                  ),
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  tabs[i].label,
+                  style: TextStyle(
+                    fontSize: 10,
+                    fontFamily: FontFamily.japanese,
+                    color: i == selectedIndex ? AppColors.primary : TextColor.darkGray,
+                    fontWeight: i == selectedIndex ? FontWeight.w600 : FontWeight.w400,
+                  ),
+                ),
+              ],
+            ),
+        ],
       ),
     );
   }
