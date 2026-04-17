@@ -7,20 +7,19 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/home/page.dart';
 import 'package:pilll/features/localizations/l.dart';
-import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
-import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 
-/// ピルシート外観モード(date) (有料機能) の説明と「実際に試す」導線を持つヘルプページ。
-class AppearanceModeDateHelpPage extends ConsumerWidget {
-  const AppearanceModeDateHelpPage({super.key});
+/// 服用おやすみ (無料機能) の説明と「実際に試す」導線を持つヘルプページ。
+/// 「実際に試す」ではピル記録タブへ案内する (ピルシート右上の歯車から「服用をお休みする」を開く動線)。
+class RestDurationHelpPage extends ConsumerWidget {
+  const RestDurationHelpPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: Text(L.appearanceModeDateFeatureAppealTitle),
+        title: Text(L.restDurationFeatureAppealTitle),
         backgroundColor: AppColors.background,
         leading: IconButton(
           onPressed: () => Navigator.of(context).pop(),
@@ -34,15 +33,15 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
           children: [
             Center(
               child: SvgPicture.asset(
-                'images/switching_appearance_mode.svg',
-                width: 120,
+                'images/explain_rest_duration_date.svg',
+                width: 80,
                 height: 80,
               ),
             ),
             const SizedBox(height: 32),
             Center(
               child: Text(
-                L.appearanceModeDateFeatureAppealHeadline,
+                L.restDurationFeatureAppealHeadline,
                 style: const TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.w700,
@@ -52,11 +51,11 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
               ),
             ),
             const SizedBox(height: 20),
-            _featureCard(icon: Icons.calendar_today, text: L.appearanceModeDateFeatureAppealPoint1),
+            _featureCard(icon: Icons.dark_mode_outlined, text: L.restDurationFeatureAppealPoint1),
             const SizedBox(height: 8),
-            _featureCard(icon: Icons.visibility, text: L.appearanceModeDateFeatureAppealPoint2),
+            _featureCard(icon: Icons.settings, text: L.restDurationFeatureAppealPoint2),
             const SizedBox(height: 8),
-            _featureCard(icon: Icons.settings, text: L.appearanceModeDateFeatureAppealPoint3),
+            _featureCard(icon: Icons.event_repeat, text: L.restDurationFeatureAppealPoint3),
             const SizedBox(height: 28),
             Text(
               L.featureAppealLocationLabel,
@@ -73,22 +72,24 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
               padding: EdgeInsets.symmetric(vertical: 6),
               child: Center(child: Icon(Icons.arrow_downward, size: 28, color: AppColors.primary)),
             ),
-            Center(
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                decoration: BoxDecoration(
-                  color: TextColor.white,
-                  borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: AppColors.primary, width: 1),
-                ),
-                child: Text(
-                  L.pillSheetSettings,
-                  style: const TextStyle(
-                    fontFamily: FontFamily.japanese,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w700,
-                    color: TextColor.main,
+            Container(
+              decoration: BoxDecoration(
+                color: AppColors.white,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: AppColors.primary, width: 1.5),
+              ),
+              child: IgnorePointer(
+                child: ListTile(
+                  leading: const Icon(Icons.settings, color: AppColors.primary),
+                  title: Text(
+                    L.startPauseTaking,
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 16,
+                    ),
                   ),
+                  trailing: const Icon(Icons.chevron_right),
                 ),
               ),
             ),
@@ -101,23 +102,14 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
           child: PrimaryButton(
             text: L.featureAppealTryFeature,
             onPressed: () async {
-              final user = ref.read(userProvider).requireValue;
               analytics.logEvent(
                 name: 'feature_appeal_try_tapped',
                 parameters: {
-                  'feature_key': 'appearance_mode_date',
-                  'feature_type': 'premium',
-                  'is_paywall_shown': !user.premiumOrTrial ? 1 : 0,
+                  'feature_key': 'rest_duration',
+                  'feature_type': 'free',
+                  'is_paywall_shown': 0,
                 },
               );
-              if (!user.premiumOrTrial) {
-                analytics.logEvent(
-                  name: 'feature_appeal_paywall_shown',
-                  parameters: {'feature_key': 'appearance_mode_date'},
-                );
-                await showPremiumIntroductionSheet(context);
-                return;
-              }
               final tabController = ref.read(homeTabControllerProvider);
               Navigator.of(context).popUntil((r) => r.isFirst);
               tabController?.animateTo(HomePageTabType.record.index);
@@ -151,8 +143,9 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
               children: [
                 Container(
                   padding: const EdgeInsets.all(6),
-                  decoration:
-                      i == selectedIndex ? BoxDecoration(shape: BoxShape.circle, border: Border.all(color: AppColors.primary, width: 2)) : null,
+                  decoration: i == selectedIndex
+                      ? BoxDecoration(shape: BoxShape.circle, border: Border.all(color: AppColors.primary, width: 2))
+                      : null,
                   child: SvgPicture.asset(
                     i == selectedIndex ? tabs[i].icon : tabs[i].disabledIcon,
                     width: 24,
@@ -207,9 +200,9 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
 
 /// FirebaseAnalyticsObserver が自動で screen_view を送信するため、
 /// RouteSettings.name は必ず設定する (lib/app.dart で MaterialApp に登録済み)。
-extension AppearanceModeDateHelpPageRoute on AppearanceModeDateHelpPage {
+extension RestDurationHelpPageRoute on RestDurationHelpPage {
   static Route<dynamic> route() => MaterialPageRoute(
-        settings: const RouteSettings(name: 'AppearanceModeDateHelpPage'),
-        builder: (_) => const AppearanceModeDateHelpPage(),
+        settings: const RouteSettings(name: 'RestDurationHelpPage'),
+        builder: (_) => const RestDurationHelpPage(),
       );
 }

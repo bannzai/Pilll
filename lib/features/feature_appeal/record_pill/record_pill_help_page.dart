@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/home/page.dart';
 import 'package:pilll/features/localizations/l.dart';
-import 'package:pilll/features/pill_sheet_modified_history/page.dart';
 import 'package:pilll/utils/analytics.dart';
 
-/// ピル記録/服用履歴 (無料機能) の説明と「実際に試す」導線を持つヘルプページ。
-class RecordPillHelpPage extends StatelessWidget {
+/// ピル記録/服用履歴 (無料機能) の説明と「確認する」導線を持つヘルプページ。
+class RecordPillHelpPage extends ConsumerWidget {
   const RecordPillHelpPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -99,27 +100,6 @@ class RecordPillHelpPage extends StatelessWidget {
                 ],
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 6),
-              child: Center(child: Icon(Icons.arrow_downward, size: 28, color: AppColors.primary)),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: AppColors.white,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: AppColors.border),
-              ),
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-              child: Column(
-                children: [
-                  _mockHistoryRow(day: DateTime.now().subtract(const Duration(days: 2)), pillNumber: 1, time: '19:00'),
-                  const Divider(height: 16),
-                  _mockHistoryRow(day: DateTime.now().subtract(const Duration(days: 1)), pillNumber: 2, time: '19:30'),
-                  const Divider(height: 16),
-                  _mockHistoryRow(day: DateTime.now(), pillNumber: 3, time: '20:00'),
-                ],
-              ),
-            ),
           ],
         ),
       ),
@@ -137,7 +117,9 @@ class RecordPillHelpPage extends StatelessWidget {
                   'is_paywall_shown': 0,
                 },
               );
-              Navigator.of(context).push(PillSheetModifiedHistoriesPageRoute.route());
+              final tabController = ref.read(homeTabControllerProvider);
+              Navigator.of(context).popUntil((r) => r.isFirst);
+              tabController?.animateTo(HomePageTabType.record.index);
             },
           ),
         ),
@@ -191,40 +173,6 @@ class RecordPillHelpPage extends StatelessWidget {
             ),
         ],
       ),
-    );
-  }
-
-  Widget _mockHistoryRow({required DateTime day, required int pillNumber, required String time}) {
-    return Row(
-      children: [
-        SizedBox(
-          width: 40,
-          child: Text(
-            '${day.month}/${day.day}',
-            style: const TextStyle(fontSize: 12, fontFamily: FontFamily.number, color: TextColor.main),
-          ),
-        ),
-        const SizedBox(width: 8),
-        Container(height: 20, width: 0.5, color: AppColors.border),
-        const SizedBox(width: 8),
-        SizedBox(
-          width: 50,
-          child: Text(
-            '$pillNumber番',
-            style: const TextStyle(fontSize: 12, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, color: TextColor.main),
-          ),
-        ),
-        const SizedBox(width: 8),
-        Text(
-          time,
-          style: const TextStyle(fontSize: 12, fontFamily: FontFamily.number, color: TextColor.darkGray),
-        ),
-        const Spacer(),
-        for (var i = 0; i < pillNumber; i++) ...[
-          if (i > 0) const SizedBox(width: 2),
-          Container(width: 8, height: 8, decoration: const BoxDecoration(color: AppColors.primary, shape: BoxShape.circle)),
-        ],
-      ],
     );
   }
 

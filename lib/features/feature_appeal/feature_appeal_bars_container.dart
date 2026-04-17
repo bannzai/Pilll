@@ -1,14 +1,21 @@
+import 'dart:io' show Platform;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/feature_appeal/alarm_kit/alarm_kit_announcement_bar.dart';
 import 'package:pilll/features/feature_appeal/appearance_mode_date/appearance_mode_date_announcement_bar.dart';
 import 'package:pilll/features/feature_appeal/calendar_diary/calendar_diary_announcement_bar.dart';
+import 'package:pilll/features/feature_appeal/creating_new_pillsheet/creating_new_pillsheet_announcement_bar.dart';
 import 'package:pilll/features/feature_appeal/critical_alert/critical_alert_announcement_bar.dart';
 import 'package:pilll/features/feature_appeal/future_schedule/future_schedule_announcement_bar.dart';
 import 'package:pilll/features/feature_appeal/health_care_integration/health_care_integration_announcement_bar.dart';
 import 'package:pilll/features/feature_appeal/menstruation/menstruation_announcement_bar.dart';
+import 'package:pilll/features/feature_appeal/quick_record/quick_record_announcement_bar.dart';
 import 'package:pilll/features/feature_appeal/record_pill/record_pill_announcement_bar.dart';
 import 'package:pilll/features/feature_appeal/reminder_notification_customize_word/reminder_notification_customize_word_announcement_bar.dart';
+import 'package:pilll/features/feature_appeal/rest_duration/rest_duration_announcement_bar.dart';
+import 'package:pilll/features/feature_appeal/today_pill_number/today_pill_number_announcement_bar.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -46,6 +53,11 @@ class FeatureAppealBarsContainer extends HookConsumerWidget {
     final calendarDiaryIsClosed = useState(sharedPreferences.getBool(BoolKey.calendarDiaryFeatureAppealIsClosed) ?? false);
     final futureScheduleIsClosed = useState(sharedPreferences.getBool(BoolKey.futureScheduleFeatureAppealIsClosed) ?? false);
     final healthCareIntegrationIsClosed = useState(sharedPreferences.getBool(BoolKey.healthCareIntegrationFeatureAppealIsClosed) ?? false);
+    final quickRecordIsClosed = useState(sharedPreferences.getBool(BoolKey.quickRecordFeatureAppealIsClosed) ?? false);
+    final creatingNewPillSheetIsClosed = useState(sharedPreferences.getBool(BoolKey.creatingNewPillSheetFeatureAppealIsClosed) ?? false);
+    final alarmKitIsClosed = useState(sharedPreferences.getBool(BoolKey.alarmKitFeatureAppealIsClosed) ?? false);
+    final todayPillNumberIsClosed = useState(sharedPreferences.getBool(BoolKey.todayPillNumberFeatureAppealIsClosed) ?? false);
+    final restDurationIsClosed = useState(sharedPreferences.getBool(BoolKey.restDurationFeatureAppealIsClosed) ?? false);
 
     useEffect(() {
       void markDismissedToday() {
@@ -96,6 +108,31 @@ class FeatureAppealBarsContainer extends HookConsumerWidget {
         if (healthCareIntegrationIsClosed.value) markDismissedToday();
       }
 
+      void onQuickRecord() {
+        sharedPreferences.setBool(BoolKey.quickRecordFeatureAppealIsClosed, quickRecordIsClosed.value);
+        if (quickRecordIsClosed.value) markDismissedToday();
+      }
+
+      void onCreatingNewPillSheet() {
+        sharedPreferences.setBool(BoolKey.creatingNewPillSheetFeatureAppealIsClosed, creatingNewPillSheetIsClosed.value);
+        if (creatingNewPillSheetIsClosed.value) markDismissedToday();
+      }
+
+      void onAlarmKit() {
+        sharedPreferences.setBool(BoolKey.alarmKitFeatureAppealIsClosed, alarmKitIsClosed.value);
+        if (alarmKitIsClosed.value) markDismissedToday();
+      }
+
+      void onTodayPillNumber() {
+        sharedPreferences.setBool(BoolKey.todayPillNumberFeatureAppealIsClosed, todayPillNumberIsClosed.value);
+        if (todayPillNumberIsClosed.value) markDismissedToday();
+      }
+
+      void onRestDuration() {
+        sharedPreferences.setBool(BoolKey.restDurationFeatureAppealIsClosed, restDurationIsClosed.value);
+        if (restDurationIsClosed.value) markDismissedToday();
+      }
+
       criticalAlertIsClosed.addListener(onCriticalAlert);
       reminderNotificationCustomizeWordIsClosed.addListener(onReminderNotificationCustomizeWord);
       appearanceModeDateIsClosed.addListener(onAppearanceModeDate);
@@ -104,6 +141,11 @@ class FeatureAppealBarsContainer extends HookConsumerWidget {
       calendarDiaryIsClosed.addListener(onCalendarDiary);
       futureScheduleIsClosed.addListener(onFutureSchedule);
       healthCareIntegrationIsClosed.addListener(onHealthCareIntegration);
+      quickRecordIsClosed.addListener(onQuickRecord);
+      creatingNewPillSheetIsClosed.addListener(onCreatingNewPillSheet);
+      alarmKitIsClosed.addListener(onAlarmKit);
+      todayPillNumberIsClosed.addListener(onTodayPillNumber);
+      restDurationIsClosed.addListener(onRestDuration);
       return () {
         criticalAlertIsClosed.removeListener(onCriticalAlert);
         reminderNotificationCustomizeWordIsClosed.removeListener(onReminderNotificationCustomizeWord);
@@ -113,11 +155,18 @@ class FeatureAppealBarsContainer extends HookConsumerWidget {
         calendarDiaryIsClosed.removeListener(onCalendarDiary);
         futureScheduleIsClosed.removeListener(onFutureSchedule);
         healthCareIntegrationIsClosed.removeListener(onHealthCareIntegration);
+        quickRecordIsClosed.removeListener(onQuickRecord);
+        creatingNewPillSheetIsClosed.removeListener(onCreatingNewPillSheet);
+        alarmKitIsClosed.removeListener(onAlarmKit);
+        todayPillNumberIsClosed.removeListener(onTodayPillNumber);
+        restDurationIsClosed.removeListener(onRestDuration);
       };
     }, [sharedPreferences]);
 
     final candidates = <Widget>[
-      if (!criticalAlertIsClosed.value) CriticalAlertAnnouncementBar(isClosed: criticalAlertIsClosed),
+      // CriticalAlert と AlarmKit の設定行は settings/page.dart で Platform.isIOS 配下にあるため、
+      // Bar も iOS に限定する (Android ユーザーが HelpPage から設定タブに飛んでも該当行がないため)。
+      if (Platform.isIOS && !criticalAlertIsClosed.value) CriticalAlertAnnouncementBar(isClosed: criticalAlertIsClosed),
       if (!reminderNotificationCustomizeWordIsClosed.value)
         ReminderNotificationCustomizeWordAnnouncementBar(isClosed: reminderNotificationCustomizeWordIsClosed),
       if (appIsReleased && !appearanceModeDateIsClosed.value) AppearanceModeDateAnnouncementBar(isClosed: appearanceModeDateIsClosed),
@@ -126,6 +175,11 @@ class FeatureAppealBarsContainer extends HookConsumerWidget {
       if (!calendarDiaryIsClosed.value) CalendarDiaryAnnouncementBar(isClosed: calendarDiaryIsClosed),
       if (!futureScheduleIsClosed.value) FutureScheduleAnnouncementBar(isClosed: futureScheduleIsClosed),
       if (!healthCareIntegrationIsClosed.value) HealthCareIntegrationAnnouncementBar(isClosed: healthCareIntegrationIsClosed),
+      if (!quickRecordIsClosed.value) QuickRecordAnnouncementBar(isClosed: quickRecordIsClosed),
+      if (!creatingNewPillSheetIsClosed.value) CreatingNewPillSheetAnnouncementBar(isClosed: creatingNewPillSheetIsClosed),
+      if (Platform.isIOS && !alarmKitIsClosed.value) AlarmKitAnnouncementBar(isClosed: alarmKitIsClosed),
+      if (!todayPillNumberIsClosed.value) TodayPillNumberAnnouncementBar(isClosed: todayPillNumberIsClosed),
+      if (!restDurationIsClosed.value) RestDurationAnnouncementBar(isClosed: restDurationIsClosed),
     ];
     if (candidates.isEmpty) {
       return const SizedBox.shrink();
@@ -152,7 +206,8 @@ class FeatureAppealBarsContainer extends HookConsumerWidget {
     required bool appIsReleased,
   }) {
     return [
-      !(sharedPreferences.getBool(BoolKey.criticalAlertFeatureAppealIsClosed) ?? false),
+      // CriticalAlert / AlarmKit は iOS 限定機能のため、Android では候補から除外する。
+      Platform.isIOS && !(sharedPreferences.getBool(BoolKey.criticalAlertFeatureAppealIsClosed) ?? false),
       !(sharedPreferences.getBool(BoolKey.reminderNotificationCustomizeWordFeatureAppealIsClosed) ?? false),
       appIsReleased && !(sharedPreferences.getBool(BoolKey.appearanceModeDateFeatureAppealIsClosed) ?? false),
       !(sharedPreferences.getBool(BoolKey.recordPillFeatureAppealIsClosed) ?? false),
@@ -160,6 +215,11 @@ class FeatureAppealBarsContainer extends HookConsumerWidget {
       !(sharedPreferences.getBool(BoolKey.calendarDiaryFeatureAppealIsClosed) ?? false),
       !(sharedPreferences.getBool(BoolKey.futureScheduleFeatureAppealIsClosed) ?? false),
       !(sharedPreferences.getBool(BoolKey.healthCareIntegrationFeatureAppealIsClosed) ?? false),
+      !(sharedPreferences.getBool(BoolKey.quickRecordFeatureAppealIsClosed) ?? false),
+      !(sharedPreferences.getBool(BoolKey.creatingNewPillSheetFeatureAppealIsClosed) ?? false),
+      Platform.isIOS && !(sharedPreferences.getBool(BoolKey.alarmKitFeatureAppealIsClosed) ?? false),
+      !(sharedPreferences.getBool(BoolKey.todayPillNumberFeatureAppealIsClosed) ?? false),
+      !(sharedPreferences.getBool(BoolKey.restDurationFeatureAppealIsClosed) ?? false),
     ].any((available) => available);
   }
 }

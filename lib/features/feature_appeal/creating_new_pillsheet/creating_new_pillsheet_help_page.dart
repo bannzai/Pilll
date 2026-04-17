@@ -5,22 +5,25 @@ import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/features/home/page.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 
-/// ピルシート外観モード(date) (有料機能) の説明と「実際に試す」導線を持つヘルプページ。
-class AppearanceModeDateHelpPage extends ConsumerWidget {
-  const AppearanceModeDateHelpPage({super.key});
+/// ピルシートグループ自動追加 (Premium機能) の説明と「実際に試す」導線を持つヘルプページ。
+/// 「実際に試す」では設定タブへ案内する (設定画面のピルシートグループ自動追加トグルから操作する)。
+/// 非 Premium / 非トライアルユーザーには PremiumIntroductionSheet を開く。
+class CreatingNewPillSheetHelpPage extends ConsumerWidget {
+  const CreatingNewPillSheetHelpPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: Text(L.appearanceModeDateFeatureAppealTitle),
+        title: Text(L.creatingNewPillSheetFeatureAppealTitle),
         backgroundColor: AppColors.background,
         leading: IconButton(
           onPressed: () => Navigator.of(context).pop(),
@@ -34,15 +37,16 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
           children: [
             Center(
               child: SvgPicture.asset(
-                'images/switching_appearance_mode.svg',
-                width: 120,
+                'images/empty_pill_sheet_type.svg',
+                width: 80,
                 height: 80,
+                colorFilter: const ColorFilter.mode(AppColors.primary, BlendMode.srcIn),
               ),
             ),
             const SizedBox(height: 32),
             Center(
               child: Text(
-                L.appearanceModeDateFeatureAppealHeadline,
+                L.creatingNewPillSheetFeatureAppealHeadline,
                 style: const TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.w700,
@@ -52,11 +56,11 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
               ),
             ),
             const SizedBox(height: 20),
-            _featureCard(icon: Icons.calendar_today, text: L.appearanceModeDateFeatureAppealPoint1),
+            _featureCard(icon: Icons.auto_awesome, text: L.creatingNewPillSheetFeatureAppealPoint1),
             const SizedBox(height: 8),
-            _featureCard(icon: Icons.visibility, text: L.appearanceModeDateFeatureAppealPoint2),
+            _featureCard(icon: Icons.autorenew, text: L.creatingNewPillSheetFeatureAppealPoint2),
             const SizedBox(height: 8),
-            _featureCard(icon: Icons.settings, text: L.appearanceModeDateFeatureAppealPoint3),
+            _featureCard(icon: Icons.toggle_on, text: L.creatingNewPillSheetFeatureAppealPoint3),
             const SizedBox(height: 28),
             Text(
               L.featureAppealLocationLabel,
@@ -68,26 +72,44 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
               ),
             ),
             const SizedBox(height: 8),
-            _mockTabBar(selectedIndex: 0),
+            _mockTabBar(selectedIndex: 3),
             const Padding(
               padding: EdgeInsets.symmetric(vertical: 6),
               child: Center(child: Icon(Icons.arrow_downward, size: 28, color: AppColors.primary)),
             ),
-            Center(
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                decoration: BoxDecoration(
-                  color: TextColor.white,
-                  borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: AppColors.primary, width: 1),
-                ),
-                child: Text(
-                  L.pillSheetSettings,
-                  style: const TextStyle(
-                    fontFamily: FontFamily.japanese,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w700,
-                    color: TextColor.main,
+            Container(
+              decoration: BoxDecoration(
+                color: AppColors.white,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: AppColors.primary, width: 1.5),
+              ),
+              child: IgnorePointer(
+                child: SwitchListTile(
+                  value: false,
+                  onChanged: (_) {},
+                  title: Row(
+                    children: [
+                      Flexible(
+                        child: Text(
+                          L.autoAddPillSheetGroup,
+                          style: const TextStyle(
+                            fontFamily: FontFamily.japanese,
+                            fontWeight: FontWeight.w300,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      const PremiumBadge(),
+                    ],
+                  ),
+                  subtitle: Text(
+                    L.autoAddNewSheetAfterCurrentEnds,
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                    ),
                   ),
                 ),
               ),
@@ -105,7 +127,7 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
               analytics.logEvent(
                 name: 'feature_appeal_try_tapped',
                 parameters: {
-                  'feature_key': 'appearance_mode_date',
+                  'feature_key': 'creating_new_pillsheet',
                   'feature_type': 'premium',
                   'is_paywall_shown': !user.premiumOrTrial ? 1 : 0,
                 },
@@ -113,14 +135,14 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
               if (!user.premiumOrTrial) {
                 analytics.logEvent(
                   name: 'feature_appeal_paywall_shown',
-                  parameters: {'feature_key': 'appearance_mode_date'},
+                  parameters: {'feature_key': 'creating_new_pillsheet'},
                 );
                 await showPremiumIntroductionSheet(context);
                 return;
               }
               final tabController = ref.read(homeTabControllerProvider);
               Navigator.of(context).popUntil((r) => r.isFirst);
-              tabController?.animateTo(HomePageTabType.record.index);
+              tabController?.animateTo(HomePageTabType.setting.index);
             },
           ),
         ),
@@ -151,8 +173,9 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
               children: [
                 Container(
                   padding: const EdgeInsets.all(6),
-                  decoration:
-                      i == selectedIndex ? BoxDecoration(shape: BoxShape.circle, border: Border.all(color: AppColors.primary, width: 2)) : null,
+                  decoration: i == selectedIndex
+                      ? BoxDecoration(shape: BoxShape.circle, border: Border.all(color: AppColors.primary, width: 2))
+                      : null,
                   child: SvgPicture.asset(
                     i == selectedIndex ? tabs[i].icon : tabs[i].disabledIcon,
                     width: 24,
@@ -207,9 +230,9 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
 
 /// FirebaseAnalyticsObserver が自動で screen_view を送信するため、
 /// RouteSettings.name は必ず設定する (lib/app.dart で MaterialApp に登録済み)。
-extension AppearanceModeDateHelpPageRoute on AppearanceModeDateHelpPage {
+extension CreatingNewPillSheetHelpPageRoute on CreatingNewPillSheetHelpPage {
   static Route<dynamic> route() => MaterialPageRoute(
-        settings: const RouteSettings(name: 'AppearanceModeDateHelpPage'),
-        builder: (_) => const AppearanceModeDateHelpPage(),
+        settings: const RouteSettings(name: 'CreatingNewPillSheetHelpPage'),
+        builder: (_) => const CreatingNewPillSheetHelpPage(),
       );
 }
