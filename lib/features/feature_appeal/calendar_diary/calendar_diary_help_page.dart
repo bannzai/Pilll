@@ -146,13 +146,15 @@ class CalendarDiaryHelpPage extends ConsumerWidget {
                   child: Stack(
                     alignment: Alignment.center,
                     children: [
+                      // 今日マーカー。lib/components/organisms/calendar/day/calendar_day_tile.dart
+                      // と同じ「AppColors.primary 塗りつぶし円 + 白文字」スタイル。
                       if (i == weekday)
                         Container(
                           width: 32,
                           height: 32,
                           decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(color: AppColors.primary, width: 2),
+                            color: AppColors.primary,
+                            borderRadius: BorderRadius.circular(16),
                           ),
                         ),
                       Text(
@@ -161,7 +163,7 @@ class CalendarDiaryHelpPage extends ConsumerWidget {
                           fontSize: 14,
                           fontFamily: FontFamily.number,
                           fontWeight: i == weekday ? FontWeight.w700 : FontWeight.w400,
-                          color: i == weekday ? AppColors.primary : TextColor.main,
+                          color: i == weekday ? AppColors.white : TextColor.main,
                         ),
                       ),
                       if (i == weekday)

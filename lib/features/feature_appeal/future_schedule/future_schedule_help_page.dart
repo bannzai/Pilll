@@ -101,9 +101,11 @@ class FutureScheduleHelpPage extends ConsumerWidget {
   }
 
   Widget _mockCalendar() {
-    final tomorrow = DateTime.now().add(const Duration(days: 1));
-    final tomorrowWeekday = tomorrow.weekday % 7;
-    final weekStart = tomorrow.subtract(Duration(days: tomorrowWeekday));
+    final today = DateTime.now();
+    final todayWeekday = today.weekday % 7;
+    final weekStart = today.subtract(Duration(days: todayWeekday));
+    // 明日が同じ週内に収まる場合のみ表示 (土曜日の場合 tomorrowWeekday=7 となり範囲外)。
+    final tomorrowWeekday = todayWeekday + 1;
     const dayLabels = ['日', '月', '火', '水', '木', '金', '土'];
 
     return Container(
@@ -147,6 +149,18 @@ class FutureScheduleHelpPage extends ConsumerWidget {
                   child: Stack(
                     alignment: Alignment.center,
                     children: [
+                      // 今日マーカー。lib/components/organisms/calendar/day/calendar_day_tile.dart
+                      // と同じ「AppColors.primary 塗りつぶし円 + 白文字」スタイル。
+                      if (i == todayWeekday)
+                        Container(
+                          width: 32,
+                          height: 32,
+                          decoration: BoxDecoration(
+                            color: AppColors.primary,
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                        ),
+                      // 明日マーカー。未来の予定を追加するタップ対象を示す「空洞円」。
                       if (i == tomorrowWeekday)
                         Container(
                           width: 32,
@@ -161,8 +175,8 @@ class FutureScheduleHelpPage extends ConsumerWidget {
                         style: TextStyle(
                           fontSize: 14,
                           fontFamily: FontFamily.number,
-                          fontWeight: i == tomorrowWeekday ? FontWeight.w700 : FontWeight.w400,
-                          color: i == tomorrowWeekday ? AppColors.primary : TextColor.main,
+                          fontWeight: (i == todayWeekday || i == tomorrowWeekday) ? FontWeight.w700 : FontWeight.w400,
+                          color: i == todayWeekday ? AppColors.white : (i == tomorrowWeekday ? AppColors.primary : TextColor.main),
                         ),
                       ),
                       if (i == tomorrowWeekday)
