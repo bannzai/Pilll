@@ -7,6 +7,7 @@ import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/settings/components/rows/alarm_kit.dart';
 import 'package:pilll/features/settings/components/rows/critical_alert.dart';
 import 'package:pilll/features/settings/components/rows/debug_row.dart';
+import 'package:pilll/features/settings/components/rows/feature_appeal_help_page_list_row.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -50,6 +51,7 @@ enum SettingSection {
   notification,
   menstruation,
   other,
+  developer,
 }
 
 class SettingPage extends HookConsumerWidget {
@@ -449,6 +451,15 @@ Android: https://onl.sc/c9xnQUk''';
                           _separator(),
                           const DebugRow(),
                         ],
+                      ],
+                    );
+                  case SettingSection.developer:
+                    if (!Environment.isDevelopment) return const SizedBox.shrink();
+                    return SettingSectionTitle(
+                      text: '開発者オプション',
+                      children: [
+                        const FeatureAppealHelpPageListRow(),
+                        _separator(),
                       ],
                     );
                 }
