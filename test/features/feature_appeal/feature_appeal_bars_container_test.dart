@@ -1,3 +1,5 @@
+import 'dart:io' show Platform;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -182,11 +184,12 @@ void main() {
   });
 
   group('#FeatureAppealBarsContainer', () {
-    /// 候補リスト (本実装と同じ並び順) のうち、appIsReleased=true で全 13 件存在する状態を想定。
-    /// テストでは today を任意に固定して daysBetween(epoch, today) % 13 が想定の Bar に一致するかを確認する。
+    /// 候補リスト (本実装と同じ並び順) のうち、appIsReleased=true で全件存在する状態を想定。
+    /// CriticalAlert / AlarmKit は Platform.isIOS=true の時だけ候補に含まれる。
+    /// テストでは today を任意に固定して daysBetween(epoch, today) % candidates.length が想定の Bar に一致するかを確認する。
     Type expectedBarTypeForIndex(int index) {
       return [
-        CriticalAlertAnnouncementBar,
+        if (Platform.isIOS) CriticalAlertAnnouncementBar,
         ReminderNotificationCustomizeWordAnnouncementBar,
         AppearanceModeDateAnnouncementBar,
         RecordPillAnnouncementBar,
@@ -196,7 +199,7 @@ void main() {
         HealthCareIntegrationAnnouncementBar,
         QuickRecordAnnouncementBar,
         CreatingNewPillSheetAnnouncementBar,
-        AlarmKitAnnouncementBar,
+        if (Platform.isIOS) AlarmKitAnnouncementBar,
         TodayPillNumberAnnouncementBar,
         RestDurationAnnouncementBar,
       ][index];
@@ -258,14 +261,17 @@ void main() {
     });
 
     testWidgets(
-        'criticalAlert を dismiss 済み → 残り 7 候補のうち index 0 (本来は criticalAlert) は表示されない',
+        'ReminderNotificationCustomizeWord を dismiss 済み → 当日 index には別の Bar が表示される',
         (tester) async {
+      // 本テストは macOS/Linux で実行される前提で Platform.isIOS=false となり、
+      // CriticalAlert / AlarmKit は初めから候補に含まれない。そのため dismiss の効果検証は
+      // Reminder を対象にする。
       final mockTodayRepository = MockTodayService();
       when(mockTodayRepository.now()).thenReturn(_featureAppealEpoch);
       todayRepository = mockTodayRepository;
 
       SharedPreferences.setMockInitialValues({
-        BoolKey.criticalAlertFeatureAppealIsClosed: true,
+        BoolKey.reminderNotificationCustomizeWordFeatureAppealIsClosed: true,
       });
       final sharedPreferences = await SharedPreferences.getInstance();
 
@@ -283,17 +289,16 @@ void main() {
         ),
       );
 
-      // criticalAlert は除外。残り 7 候補で daysBetween=0 → index 0 = ReminderNotificationCustomizeWord
-      expect(find.byType(CriticalAlertAnnouncementBar), findsNothing);
+      // Reminder は除外。Platform.isIOS=false の候補先頭は Reminder なので、次は AppearanceModeDate。
       expect(find.byType(ReminderNotificationCustomizeWordAnnouncementBar),
-          findsOneWidget);
+          findsNothing);
+      expect(find.byType(AppearanceModeDateAnnouncementBar), findsOneWidget);
     });
 
     testWidgets(
         'appIsReleased=false → AppearanceModeDateAnnouncementBar が候補から除外される',
         (tester) async {
       final mockTodayRepository = MockTodayService();
-      // 通常 epoch から 2 日後なら index 2 (AppearanceModeDate) になるはず。除外されると 2 番目以降がずれる。
       when(mockTodayRepository.now())
           .thenReturn(_featureAppealEpoch.add(const Duration(days: 2)));
       todayRepository = mockTodayRepository;
@@ -315,10 +320,10 @@ void main() {
         ),
       );
 
-      // appearance_mode_date が除外されているので、その日には別の Bar が表示される
+      // Platform.isIOS=false (macOS/Linux) かつ appIsReleased=false で候補は 10 件。
+      // epoch+2 日 → daysBetween=2 → index 2 = Menstruation (Reminder, RecordPill, Menstruation, ...)。
       expect(find.byType(AppearanceModeDateAnnouncementBar), findsNothing);
-      // 7 候補の中で index 2 = RecordPillAnnouncementBar (本来は AppearanceModeDate がいた位置)
-      expect(find.byType(RecordPillAnnouncementBar), findsOneWidget);
+      expect(find.byType(MenstruationAnnouncementBar), findsOneWidget);
     });
 
     testWidgets('13 機能全 dismiss → SizedBox.shrink が表示される', (tester) async {
