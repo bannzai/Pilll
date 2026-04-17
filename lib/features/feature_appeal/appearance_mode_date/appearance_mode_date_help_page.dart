@@ -18,6 +18,9 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final user = ref.watch(userProvider).requireValue;
+    final pillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
+
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -100,7 +103,6 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
           child: PrimaryButton(
             text: L.featureAppealTryFeature,
             onPressed: () async {
-              final user = ref.read(userProvider).requireValue;
               analytics.logEvent(
                 name: 'feature_appeal_try_tapped',
                 parameters: {
@@ -117,7 +119,6 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
                 await showPremiumIntroductionSheet(context);
                 return;
               }
-              final pillSheetGroup = ref.read(latestPillSheetGroupProvider).valueOrNull;
               if (pillSheetGroup == null) {
                 return;
               }

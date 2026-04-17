@@ -18,6 +18,8 @@ class ReminderNotificationCustomizeWordHelpPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final user = ref.watch(userProvider).requireValue;
+
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -115,7 +117,6 @@ class ReminderNotificationCustomizeWordHelpPage extends ConsumerWidget {
           child: PrimaryButton(
             text: L.featureAppealTryFeature,
             onPressed: () async {
-              final user = ref.read(userProvider).requireValue;
               analytics.logEvent(
                 name: 'feature_appeal_try_tapped',
                 parameters: {

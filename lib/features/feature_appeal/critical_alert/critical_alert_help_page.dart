@@ -19,6 +19,9 @@ class CriticalAlertHelpPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final user = ref.watch(userProvider).requireValue;
+    final setting = ref.watch(settingProvider).requireValue;
+
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -118,8 +121,6 @@ class CriticalAlertHelpPage extends ConsumerWidget {
           child: PrimaryButton(
             text: L.featureAppealTryFeature,
             onPressed: () async {
-              final user = ref.read(userProvider).requireValue;
-              final setting = ref.read(settingProvider).requireValue;
               analytics.logEvent(
                 name: 'feature_appeal_try_tapped',
                 parameters: {
