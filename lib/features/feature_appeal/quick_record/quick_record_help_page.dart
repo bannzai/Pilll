@@ -62,7 +62,7 @@ class QuickRecordHelpPage extends ConsumerWidget {
             const SizedBox(height: 8),
             _featureCard(icon: Icons.touch_app, text: L.quickRecordFeatureAppealPoint2),
             const SizedBox(height: 8),
-            _featureCard(icon: Icons.settings, text: L.quickRecordFeatureAppealPoint3),
+            _featureCard(icon: Icons.workspace_premium, text: L.quickRecordFeatureAppealPoint3),
             const SizedBox(height: 24),
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
