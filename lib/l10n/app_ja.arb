@@ -2419,7 +2419,7 @@
   "@lifetimePurchaseNotice3": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
   },
-  "featureAppealTryFeature": "実際に試す",
+  "featureAppealTryFeature": "確認する",
   "@featureAppealTryFeature": {
     "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
   },
@@ -2571,7 +2571,7 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "自分だけの通知メッセージに",
 
   "appearanceModeDateFeatureAppealPoint1": "ピルシートを日付で表示",
-  "appearanceModeDateFeatureAppealPoint2": "何日目か一目で把握できる",
+  "appearanceModeDateFeatureAppealPoint2": "カレンダーを見なくても日付がわかる",
   "appearanceModeDateFeatureAppealPoint3": "ピルシート設定から変更可能",
 
   "recordPillFeatureAppealPoint1": "ピルシートをタップで服用記録",
@@ -2584,7 +2584,7 @@
 
   "calendarDiaryFeatureAppealPoint1": "カレンダーで記録を一覧",
   "calendarDiaryFeatureAppealPoint2": "体調をメモして振り返り",
-  "calendarDiaryFeatureAppealPoint3": "過去の記録をかんたん検索",
+  "calendarDiaryFeatureAppealPoint3": "過去の記録をカレンダーで振り返り",
   "calendarDiaryFeatureAppealLocationHint": "日付をタップして体調を記録",
 
   "futureScheduleFeatureAppealPoint1": "カレンダーに予定を書き込み",

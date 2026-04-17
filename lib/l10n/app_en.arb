@@ -2403,7 +2403,7 @@
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
   },
-  "featureAppealTryFeature": "Try this feature",
+  "featureAppealTryFeature": "View",
   "@featureAppealTryFeature": {
     "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
   },
