@@ -1,183 +1,145 @@
-# FeatureAppeal HelpPage を正しく機能する状態にする
+# HelpPage の遷移をタブ移動に統一 + 文言齟齬修正 + CLAUDE.md 更新
 
 ## Context
 
-PR #1782 で追加した FeatureAppeal HelpPage 8ページに2つの問題がある:
+FeatureAppeal HelpPage について以下の方針変更:
 
-1. **Premium系3ページが表示されない**: `ref.watch(userProvider)` の `hasValue` ガードで `SizedBox.shrink()` を返しており、Provider のストリーム初回データ到着前にページ全体が空になる
-2. **無料機能5ページの「実際に試す」がタブ切替のみ**: `popUntil(isFirst)` → `animateTo(tab)` で特定の機能画面に遷移しない
+1. **ボタン文言**: "実際に試す" → "確認する"（履歴確認等「試す」でない機能もあるため）
+2. **遷移先を全てタブ移動に統一**: 個別ページ遷移をやめる（動線の判断コストを下げる）
+3. **実機能との齟齬修正**:
+   - `calendar_diary` Point3 "過去の記録をかんたん検索" → 検索機能は未実装
+   - `appearance_mode_date` Point2 "何日目か一目で把握できる" → date モードは「日付」表示であり「何日目か」は number モード。誤解を招く
+4. **CLAUDE.md に方針を追記**: 「遷移先は全てタブ移動に統一」
 
-L10n文字列・SVG・レイアウト構造自体は正しい。修正は provider ガードの除去と遷移先の変更のみ。
+## Step 1: L10n 文字列の修正（app_ja.arb / app_en.arb）
 
----
+### ボタン文言変更
+- `featureAppealTryFeature`: "実際に試す" → "確認する"（en: "Try feature" → "View"）
 
-## Step 1: Premium系3ページの `SizedBox.shrink()` ガードを除去
+### 齟齬修正
+- `calendarDiaryFeatureAppealPoint3`: "過去の記録をかんたん検索" → "過去の記録をカレンダーで振り返り"
+- `appearanceModeDateFeatureAppealPoint2`: "何日目か一目で把握できる" → "カレンダーを見なくても日付がわかる"
 
-コーディング規約に従い `requireValue` を使う。ただし `ref.watch` を build で呼ぶ必要はない（provider の値はボタンコールバックでのみ使う）ため、`ref.read` に変更する。
+実行後 `flutter gen-l10n` で生成。
 
-### 1-1. `critical_alert_help_page.dart`
+## Step 2: 全 HelpPage の遷移先をタブ移動に統一
 
-**まずデバッグ状態を HEAD に戻す**。その上で以下を変更:
+### 各ページの遷移先タブ
 
-- `ref.watch(userProvider)` / `ref.watch(settingProvider)` + `hasValue` ガード → 削除
-- ボタンコールバック内で `ref.read(userProvider).requireValue` / `ref.read(settingProvider).requireValue` を使う
-
-```dart
-// Before (build内)
-final userAsync = ref.watch(userProvider);
-final settingAsync = ref.watch(settingProvider);
-if (!userAsync.hasValue || !settingAsync.hasValue) return const SizedBox.shrink();
-final user = userAsync.requireValue;
-final setting = settingAsync.requireValue;
-
-// After (build内のガードを削除、ボタンコールバック内で read)
-onPressed: () async {
-  final user = ref.read(userProvider).requireValue;
-  final setting = ref.read(settingProvider).requireValue;
-  analytics.logEvent(...);
-  if (!user.premiumOrTrial) { ... return; }
-  await Navigator.of(context).push(CriticalAlertPageRoutes.route(setting: setting));
-},
-```
-
-### 1-2. `reminder_notification_customize_word_help_page.dart`
-
-同様に `ref.watch(userProvider)` + `hasValue` ガード → 削除、コールバック内で `ref.read`
-
-```dart
-// Before (build内)
-final userAsync = ref.watch(userProvider);
-if (!userAsync.hasValue) return const SizedBox.shrink();
-final user = userAsync.requireValue;
-
-// After (build内のガードを削除、ボタンコールバック内で read)
-onPressed: () async {
-  final user = ref.read(userProvider).requireValue;
-  analytics.logEvent(...);
-  if (!user.premiumOrTrial) { ... return; }
-  await Navigator.of(context).push(ReminderNotificationCustomizeWordPageRoutes.route());
-},
-```
-
-### 1-3. `appearance_mode_date_help_page.dart`
-
-`ref.watch(userProvider)` + `hasValue` ガード → 削除、コールバック内で `ref.read`。
-`ref.watch(latestPillSheetGroupProvider).valueOrNull` も `ref.read` に変更。
-
-```dart
-// Before (build内)
-final userAsync = ref.watch(userProvider);
-if (!userAsync.hasValue) return const SizedBox.shrink();
-final user = userAsync.requireValue;
-final pillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
-
-// After (build内のガードを削除、ボタンコールバック内で read)
-onPressed: () async {
-  final user = ref.read(userProvider).requireValue;
-  analytics.logEvent(...);
-  if (!user.premiumOrTrial) { ... return; }
-  final pillSheetGroup = ref.read(latestPillSheetGroupProvider).valueOrNull;
-  if (pillSheetGroup == null) return;
-  showSelectAppearanceModeModal(context, user: user, pillSheetGroup: pillSheetGroup);
-},
-```
-
----
-
-## Step 2: 無料機能ページの「実際に試す」遷移先を意味のある画面に変更
-
-全て `ref` 不要になるため `StatelessWidget` に変更。
-
-| ページ | 現在 | 変更後 |
+| ページ | タブ (selectedIndex) | Premium チェック |
 |---|---|---|
-| `record_pill_help_page.dart` | record タブ切替 | `PillSheetModifiedHistoriesPageRoute.route()` (服用履歴) |
-| `menstruation_help_page.dart` | ✅ 修正済み | `SettingMenstruationPageRoute.route()` |
-| `calendar_diary_help_page.dart` | calendar タブ切替 | `DiaryPostPageRoute.route(today(), null)` (日記入力) |
-| `future_schedule_help_page.dart` | calendar タブ切替 | `SchedulePostPageRoute.route(today().add(Duration(days: 1)))` (予定作成) |
-| `health_care_integration_help_page.dart` | setting タブ切替 | 設定タブ切替を維持 (専用ページが存在しない) |
+| critical_alert | 設定 (3) | あり → 非Premium: ペイウォール / Premium: 設定タブ |
+| reminder_notification_customize_word | 設定 (3) | あり → 非Premium: ペイウォール / Premium: 設定タブ |
+| appearance_mode_date | ピル (0) | あり → 非Premium: ペイウォール / Premium: ピルタブ |
+| record_pill | ピル (0) | なし |
+| menstruation | 設定 (3) | なし |
+| calendar_diary | カレンダー (2) | なし（現状維持） |
+| future_schedule | カレンダー (2) | なし（現状維持） |
+| health_care_integration | 設定 (3) | なし（現状維持） |
 
-### 具体的な変更
+### 実装変更
 
-**record_pill**: `ConsumerWidget` → `StatelessWidget`、import変更
+**遷移コードの共通パターン**:
 ```dart
-// Before
 final tabController = ref.read(homeTabControllerProvider);
 Navigator.of(context).popUntil((r) => r.isFirst);
-tabController?.animateTo(HomePageTabType.record.index);
-
-// After
-Navigator.of(context).push(PillSheetModifiedHistoriesPageRoute.route());
+tabController?.animateTo(HomePageTabType.{tab}.index);
 ```
 
-**calendar_diary**: `ConsumerWidget` → `StatelessWidget`、import変更
+### 変更箇所
+
+- `critical_alert_help_page.dart`: `CriticalAlertPageRoutes.route` → setting タブ
+  - import 削除: `pilll/features/settings/critical_alert/page.dart`, `pilll/provider/setting.dart`
+  - 不要になる: `ref.watch(settingProvider).requireValue`
+  - 追加: `ref.read(homeTabControllerProvider)`, `features/home/page.dart` import
+
+- `reminder_notification_customize_word_help_page.dart`: `ReminderNotificationCustomizeWordPageRoutes.route` → setting タブ
+  - import 削除: `features/reminder_notification_customize_word/page.dart`
+  - 追加: `ref.read(homeTabControllerProvider)`, `features/home/page.dart` import
+
+- `appearance_mode_date_help_page.dart`: `showSelectAppearanceModeModal` → pill タブ
+  - import 削除: `features/record/components/setting/components/appearance_mode/select_appearance_mode_modal.dart`, `provider/pill_sheet_group.dart`
+  - 不要になる: `ref.watch(latestPillSheetGroupProvider).valueOrNull`
+  - 追加: `ref.read(homeTabControllerProvider)`, `features/home/page.dart` import
+
+- `record_pill_help_page.dart`:
+  - `PillSheetModifiedHistoriesPageRoute.route()` → pill タブ
+  - import 削除: `features/pill_sheet_modified_history/page.dart`
+  - 追加: `features/home/page.dart` import, `ConsumerWidget` 化して `ref.read(homeTabControllerProvider)`
+  - **履歴リストプレビュー削除**: `_mockHistoryRow` メソッドと下向き矢印+履歴Container を削除（タブバー + 矢印 + pill mark 行 だけにする）
+
+- `menstruation_help_page.dart`: `SettingMenstruationPageRoute.route()` → setting タブ
+  - import 削除: `features/settings/menstruation/page.dart`
+  - 追加: `features/home/page.dart` import, `ConsumerWidget` 化
+  - モックタブバー `selectedIndex` を `3` (設定) に変更（現在は?）
+
+- `calendar_diary_help_page.dart`, `future_schedule_help_page.dart`, `health_care_integration_help_page.dart`: 既にタブ移動なので変更なし
+
+### Premium チェックの保持
+
+Premium ページ3つは `ref.watch(userProvider).requireValue` で user を取得し、`!user.premiumOrTrial` のときはペイウォール表示、そうでなければタブ移動。
+
+## Step 3: calendar_diary の Feature Card アイコン修正
+
+`Icons.search` (Point3) → 齟齬修正後の文言に合うアイコンに変更。`Icons.replay` or `Icons.history` が候補。
+
+## Step 4: CLAUDE.md 更新
+
+`lib/features/feature_appeal/CLAUDE.md` に以下を追記/修正:
+
+### 追記セクション: 「遷移先のルール」
+
+```markdown
+## 遷移先のルール
+
+「確認する」ボタンの遷移先は**タブ移動のみに統一**する。個別の機能ページへの直接遷移はしない。
+理由: 動線を機能ごとに判断するコストを下げる。まずは該当タブに飛ばしてユーザーに探索してもらう方針。
+
 ```dart
-// Before
 final tabController = ref.read(homeTabControllerProvider);
 Navigator.of(context).popUntil((r) => r.isFirst);
-tabController?.animateTo(HomePageTabType.calendar.index);
-
-// After
-Navigator.of(context).push(DiaryPostPageRoute.route(today(), null));
+tabController?.animateTo(HomePageTabType.{tab}.index);
 ```
 
-**future_schedule**: `ConsumerWidget` → `StatelessWidget`、import変更
-```dart
-// Before
-final tabController = ref.read(homeTabControllerProvider);
-Navigator.of(context).popUntil((r) => r.isFirst);
-tabController?.animateTo(HomePageTabType.calendar.index);
-
-// After
-Navigator.of(context).push(SchedulePostPageRoute.route(today().add(const Duration(days: 1))));
+Premium 機能の場合は `ref.watch(userProvider).requireValue` で user を取得し、非Premium のときは `showPremiumIntroductionSheet(context)` でペイウォール、Premium のときはタブ移動。
 ```
 
-**health_care_integration**: `ref` 不要なので `StatelessWidget` に変更するが、遷移先はそのまま維持…と思ったが、タブ切替に `ref.read(homeTabControllerProvider)` が必要。`ConsumerWidget` のまま維持。
+### 既存記述の更新
 
----
+- ページ構成セクション: bottomNavigationBar の PrimaryButton の text を「確認する」と明記
+- ステップバイステップガイドの表から「コンポーネントプレビュー」の個別具体例（服用履歴リスト等）を削除、シンプルに「タブバー + 矢印 + 機能画面の象徴的なUI（任意）」へ簡素化
+- L10n 命名規則は変更なし
 
-## Step 3: デバッグ残骸のクリーンアップ
+## 対象ファイル
 
-- `critical_alert_help_page.dart`: git checkout で HEAD に戻してから Step 1-1 の変更を適用
-- `tmp/` ディレクトリ内のスクリーンショット・デバッグファイルを削除
-
----
-
-## 変更対象ファイル
-
-| ファイル | 変更内容 |
+| ファイル | 操作 |
 |---|---|
-| `lib/features/feature_appeal/critical_alert/critical_alert_help_page.dart` | デバッグ状態を戻す → `hasValue` ガード除去、`ref.read` に変更 |
-| `lib/features/feature_appeal/reminder_notification_customize_word/reminder_notification_customize_word_help_page.dart` | `hasValue` ガード除去、`ref.read` に変更 |
-| `lib/features/feature_appeal/appearance_mode_date/appearance_mode_date_help_page.dart` | `hasValue` ガード除去、`ref.read` に変更 |
-| `lib/features/feature_appeal/record_pill/record_pill_help_page.dart` | `StatelessWidget` 化、遷移先を `PillSheetModifiedHistoriesPage` に |
-| `lib/features/feature_appeal/calendar_diary/calendar_diary_help_page.dart` | `StatelessWidget` 化、遷移先を `DiaryPostPage` に |
-| `lib/features/feature_appeal/future_schedule/future_schedule_help_page.dart` | `StatelessWidget` 化、遷移先を `SchedulePostPage` に |
-| `lib/features/feature_appeal/menstruation/menstruation_help_page.dart` | ✅ 修正済み (変更なし) |
-| `lib/features/feature_appeal/health_care_integration/health_care_integration_help_page.dart` | 変更なし (専用ページなし) |
-
----
+| `lib/l10n/app_ja.arb` | `featureAppealTryFeature`, `calendarDiaryFeatureAppealPoint3`, `appearanceModeDateFeatureAppealPoint2` 修正 |
+| `lib/l10n/app_en.arb` | 同上 |
+| `lib/features/feature_appeal/critical_alert/critical_alert_help_page.dart` | 遷移先を setting タブに |
+| `lib/features/feature_appeal/reminder_notification_customize_word/reminder_notification_customize_word_help_page.dart` | 遷移先を setting タブに |
+| `lib/features/feature_appeal/appearance_mode_date/appearance_mode_date_help_page.dart` | 遷移先を pill タブに、selectedIndex を 0 に |
+| `lib/features/feature_appeal/record_pill/record_pill_help_page.dart` | 遷移先を pill タブに、履歴リストプレビュー削除、ConsumerWidget化 |
+| `lib/features/feature_appeal/menstruation/menstruation_help_page.dart` | 遷移先を setting タブに、selectedIndex を 3 に、ConsumerWidget化 |
+| `lib/features/feature_appeal/calendar_diary/calendar_diary_help_page.dart` | Point3 アイコン修正 |
+| `lib/features/feature_appeal/CLAUDE.md` | 遷移先ルール追記、「確認する」ボタン文言明記 |
 
 ## 検証
 
-1. `flutter analyze` エラーなし
-2. `flutter test` 全件パス
-3. シミュレータでビルド・インストール
-4. 開発者オプション → HelpPage一覧 → 全8ページでコンテンツ（SVG + 見出し + 本文）が表示されることを確認
-5. 各ページの「実際に試す」が正しい画面に遷移することを確認
-
----
+1. `flutter gen-l10n` 成功
+2. `flutter analyze` error/warning なし
+3. `flutter test` 全件パス
+4. シミュレータで各ページを確認:
+   - ボタンテキストが「確認する」
+   - タップで該当タブに切り替わる
+   - Premium ページは非Premium の場合ペイウォール表示
 
 ## チェックリスト
 
-### 実装内容
 - [ ] 変更対象ファイルごとに具体的なコード提案をコードブロックで記載している
 - [ ] 既存コードのパターン・構成を確認し、同じパターンで実装している
-- [ ] コード生成: `dart run build_runner build` で生成ファイル更新
+- [ ] コード生成: `flutter gen-l10n` で生成ファイル更新
 - [ ] 静的解析: `flutter analyze` エラーなし
 - [ ] テスト: `flutter test` 全件パス
-- [ ] iOS ビルド: `flutter build ios` 成功
-- [ ] Android ビルド: `flutter build apk` 成功
-- [ ] 新規・変更機能に対するテストが存在する（なければ新規作成）
-- [ ] 引数: 関数・コンストラクタの引数に `{required}` あり（timestamp等メタデータ除く）
+- [ ] 引数: 関数・コンストラクタの引数に `{required}` あり
 - [ ] ref使い分け: build内は `ref.watch`、コールバック・操作は `ref.read`
-- [ ] エラーメッセージはそのまま表示（加工・プレフィックス除去なし）
