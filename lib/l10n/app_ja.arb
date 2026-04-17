@@ -2451,7 +2451,7 @@
   "@reminderNotificationCustomizeWordFeatureAppealTitle": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   },
-  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "あなたらしい言葉で通知を受け取ろう",
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "通知の文言をカスタマイズできます",
   "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
   },
@@ -2479,11 +2479,11 @@
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   },
-  "recordPillFeatureAppealTitle": "服用履歴をかんたん記録",
+  "recordPillFeatureAppealTitle": "服用履歴を簡単に振り返り",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   },
-  "recordPillFeatureAppealShortDescription": "毎日の服用をワンタップで記録",
+  "recordPillFeatureAppealShortDescription": "いつ服用したかがすぐにわかる",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   },
