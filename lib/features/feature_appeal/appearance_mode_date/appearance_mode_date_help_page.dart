@@ -5,10 +5,9 @@ import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/home/page.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
-import 'package:pilll/features/record/components/setting/components/appearance_mode/select_appearance_mode_modal.dart';
-import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 
@@ -18,9 +17,6 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final user = ref.watch(userProvider).requireValue;
-    final pillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
-
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -105,6 +101,7 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
           child: PrimaryButton(
             text: L.featureAppealTryFeature,
             onPressed: () async {
+              final user = ref.read(userProvider).requireValue;
               analytics.logEvent(
                 name: 'feature_appeal_try_tapped',
                 parameters: {
@@ -121,14 +118,9 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
                 await showPremiumIntroductionSheet(context);
                 return;
               }
-              if (pillSheetGroup == null) {
-                return;
-              }
-              showSelectAppearanceModeModal(
-                context,
-                user: user,
-                pillSheetGroup: pillSheetGroup,
-              );
+              final tabController = ref.read(homeTabControllerProvider);
+              Navigator.of(context).popUntil((r) => r.isFirst);
+              tabController?.animateTo(HomePageTabType.record.index);
             },
           ),
         ),
@@ -159,9 +151,8 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
               children: [
                 Container(
                   padding: const EdgeInsets.all(6),
-                  decoration: i == selectedIndex
-                      ? BoxDecoration(shape: BoxShape.circle, border: Border.all(color: AppColors.primary, width: 2))
-                      : null,
+                  decoration:
+                      i == selectedIndex ? BoxDecoration(shape: BoxShape.circle, border: Border.all(color: AppColors.primary, width: 2)) : null,
                   child: SvgPicture.asset(
                     i == selectedIndex ? tabs[i].icon : tabs[i].disabledIcon,
                     width: 24,
