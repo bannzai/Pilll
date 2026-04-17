@@ -42,24 +42,29 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../../helper/fake.dart';
 import '../../../helper/mock.mocks.dart';
 
+/// 全 FeatureAppeal をすべて閉じた状態の SharedPreferences 初期値。
+/// 既存の AnnouncementBar 優先度 (PilllAds / SpecialOffering / AdMob / PremiumTrialLimit)
+/// を期待するテストでは、FeatureAppeal が候補ゼロでなければそちらが優先されるため、本マップを spread で展開する。
+Map<String, Object> allFeatureAppealDismissedPrefs() {
+  return {
+    BoolKey.criticalAlertFeatureAppealIsClosed: true,
+    BoolKey.reminderNotificationCustomizeWordFeatureAppealIsClosed: true,
+    BoolKey.appearanceModeDateFeatureAppealIsClosed: true,
+    BoolKey.recordPillFeatureAppealIsClosed: true,
+    BoolKey.menstruationFeatureAppealIsClosed: true,
+    BoolKey.calendarDiaryFeatureAppealIsClosed: true,
+    BoolKey.futureScheduleFeatureAppealIsClosed: true,
+    BoolKey.healthCareIntegrationFeatureAppealIsClosed: true,
+    BoolKey.quickRecordFeatureAppealIsClosed: true,
+    BoolKey.creatingNewPillSheetFeatureAppealIsClosed: true,
+    BoolKey.alarmKitFeatureAppealIsClosed: true,
+    BoolKey.todayPillNumberFeatureAppealIsClosed: true,
+    BoolKey.restDurationFeatureAppealIsClosed: true,
+  };
+}
+
 void main() {
   const totalCountOfActionForTakenPillForLongTimeUser = 14;
-
-  /// 8 機能の FeatureAppeal をすべて閉じた状態の SharedPreferences 初期値。
-  /// 既存の AnnouncementBar 優先度 (PilllAds / SpecialOffering / AdMob / PremiumTrialLimit)
-  /// を期待するテストでは、FeatureAppeal が候補ゼロでなければそちらが優先されるため、本マップを spread で展開する。
-  Map<String, Object> allFeatureAppealDismissedPrefs() {
-    return {
-      BoolKey.criticalAlertFeatureAppealIsClosed: true,
-      BoolKey.reminderNotificationCustomizeWordFeatureAppealIsClosed: true,
-      BoolKey.appearanceModeDateFeatureAppealIsClosed: true,
-      BoolKey.recordPillFeatureAppealIsClosed: true,
-      BoolKey.menstruationFeatureAppealIsClosed: true,
-      BoolKey.calendarDiaryFeatureAppealIsClosed: true,
-      BoolKey.futureScheduleFeatureAppealIsClosed: true,
-      BoolKey.healthCareIntegrationFeatureAppealIsClosed: true,
-    };
-  }
 
   setUp(() {
     /// 下のコードはもう不要だが、iOSで固定しておく
@@ -1944,23 +1949,6 @@ void main() {
   });
 
   group('#FeatureAppealIntegration', () {
-    /// 8 機能の dismissed key をすべて true にした状態の SharedPreferences 初期値。
-    /// FeatureAppeal が候補ゼロの状態を作るために使う。
-    Map<String, Object> allFeatureAppealDismissedPrefs() {
-      return {
-        IntKey.totalCountOfActionForTakenPill:
-            totalCountOfActionForTakenPillForLongTimeUser,
-        BoolKey.criticalAlertFeatureAppealIsClosed: true,
-        BoolKey.reminderNotificationCustomizeWordFeatureAppealIsClosed: true,
-        BoolKey.appearanceModeDateFeatureAppealIsClosed: true,
-        BoolKey.recordPillFeatureAppealIsClosed: true,
-        BoolKey.menstruationFeatureAppealIsClosed: true,
-        BoolKey.calendarDiaryFeatureAppealIsClosed: true,
-        BoolKey.futureScheduleFeatureAppealIsClosed: true,
-        BoolKey.healthCareIntegrationFeatureAppealIsClosed: true,
-      };
-    }
-
     testWidgets(
         '未認証 + トライアル中 + FeatureAppeal 候補あり → FeatureAppeal が RecommendSignupGeneral より優先される',
         (tester) async {

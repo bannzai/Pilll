@@ -1,5 +1,4 @@
-import 'dart:io' show Platform;
-
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -163,10 +162,13 @@ class FeatureAppealBarsContainer extends HookConsumerWidget {
       };
     }, [sharedPreferences]);
 
+    final isIOS = defaultTargetPlatform == TargetPlatform.iOS;
     final candidates = <Widget>[
-      // CriticalAlert と AlarmKit の設定行は settings/page.dart で Platform.isIOS 配下にあるため、
+      // CriticalAlert と AlarmKit の設定行は settings/page.dart で iOS 配下にあるため、
       // Bar も iOS に限定する (Android ユーザーが HelpPage から設定タブに飛んでも該当行がないため)。
-      if (Platform.isIOS && !criticalAlertIsClosed.value) CriticalAlertAnnouncementBar(isClosed: criticalAlertIsClosed),
+      // dart:io の Platform.isIOS ではなく defaultTargetPlatform を使うのは、
+      // Widget テストで debugDefaultTargetPlatformOverride による iOS 扱いを効かせるため。
+      if (isIOS && !criticalAlertIsClosed.value) CriticalAlertAnnouncementBar(isClosed: criticalAlertIsClosed),
       if (!reminderNotificationCustomizeWordIsClosed.value)
         ReminderNotificationCustomizeWordAnnouncementBar(isClosed: reminderNotificationCustomizeWordIsClosed),
       if (appIsReleased && !appearanceModeDateIsClosed.value) AppearanceModeDateAnnouncementBar(isClosed: appearanceModeDateIsClosed),
@@ -177,7 +179,7 @@ class FeatureAppealBarsContainer extends HookConsumerWidget {
       if (!healthCareIntegrationIsClosed.value) HealthCareIntegrationAnnouncementBar(isClosed: healthCareIntegrationIsClosed),
       if (!quickRecordIsClosed.value) QuickRecordAnnouncementBar(isClosed: quickRecordIsClosed),
       if (!creatingNewPillSheetIsClosed.value) CreatingNewPillSheetAnnouncementBar(isClosed: creatingNewPillSheetIsClosed),
-      if (Platform.isIOS && !alarmKitIsClosed.value) AlarmKitAnnouncementBar(isClosed: alarmKitIsClosed),
+      if (isIOS && !alarmKitIsClosed.value) AlarmKitAnnouncementBar(isClosed: alarmKitIsClosed),
       if (!todayPillNumberIsClosed.value) TodayPillNumberAnnouncementBar(isClosed: todayPillNumberIsClosed),
       if (!restDurationIsClosed.value) RestDurationAnnouncementBar(isClosed: restDurationIsClosed),
     ];
@@ -205,9 +207,10 @@ class FeatureAppealBarsContainer extends HookConsumerWidget {
     required SharedPreferences sharedPreferences,
     required bool appIsReleased,
   }) {
+    final isIOS = defaultTargetPlatform == TargetPlatform.iOS;
     return [
       // CriticalAlert / AlarmKit は iOS 限定機能のため、Android では候補から除外する。
-      Platform.isIOS && !(sharedPreferences.getBool(BoolKey.criticalAlertFeatureAppealIsClosed) ?? false),
+      isIOS && !(sharedPreferences.getBool(BoolKey.criticalAlertFeatureAppealIsClosed) ?? false),
       !(sharedPreferences.getBool(BoolKey.reminderNotificationCustomizeWordFeatureAppealIsClosed) ?? false),
       appIsReleased && !(sharedPreferences.getBool(BoolKey.appearanceModeDateFeatureAppealIsClosed) ?? false),
       !(sharedPreferences.getBool(BoolKey.recordPillFeatureAppealIsClosed) ?? false),
@@ -217,7 +220,7 @@ class FeatureAppealBarsContainer extends HookConsumerWidget {
       !(sharedPreferences.getBool(BoolKey.healthCareIntegrationFeatureAppealIsClosed) ?? false),
       !(sharedPreferences.getBool(BoolKey.quickRecordFeatureAppealIsClosed) ?? false),
       !(sharedPreferences.getBool(BoolKey.creatingNewPillSheetFeatureAppealIsClosed) ?? false),
-      Platform.isIOS && !(sharedPreferences.getBool(BoolKey.alarmKitFeatureAppealIsClosed) ?? false),
+      isIOS && !(sharedPreferences.getBool(BoolKey.alarmKitFeatureAppealIsClosed) ?? false),
       !(sharedPreferences.getBool(BoolKey.todayPillNumberFeatureAppealIsClosed) ?? false),
       !(sharedPreferences.getBool(BoolKey.restDurationFeatureAppealIsClosed) ?? false),
     ].any((available) => available);

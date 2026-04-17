@@ -150,9 +150,8 @@ class RecordPillHelpPage extends ConsumerWidget {
               children: [
                 Container(
                   padding: const EdgeInsets.all(6),
-                  decoration: i == selectedIndex
-                      ? BoxDecoration(shape: BoxShape.circle, border: Border.all(color: AppColors.primary, width: 2))
-                      : null,
+                  decoration:
+                      i == selectedIndex ? BoxDecoration(shape: BoxShape.circle, border: Border.all(color: AppColors.primary, width: 2)) : null,
                   child: SvgPicture.asset(
                     i == selectedIndex ? tabs[i].icon : tabs[i].disabledIcon,
                     width: 24,

@@ -7,6 +7,7 @@ import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/settings/components/rows/alarm_kit.dart';
 import 'package:pilll/features/settings/components/rows/critical_alert.dart';
 import 'package:pilll/features/settings/components/rows/debug_row.dart';
+import 'package:pilll/features/settings/components/rows/feature_appeal_announcement_bar_list_row.dart';
 import 'package:pilll/features/settings/components/rows/feature_appeal_help_page_list_row.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -459,6 +460,8 @@ Android: https://onl.sc/c9xnQUk''';
                       text: '開発者オプション',
                       children: [
                         const FeatureAppealHelpPageListRow(),
+                        _separator(),
+                        const FeatureAppealAnnouncementBarListRow(),
                         _separator(),
                       ],
                     );
