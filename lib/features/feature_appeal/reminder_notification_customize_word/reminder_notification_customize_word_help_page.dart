@@ -44,13 +44,15 @@ class ReminderNotificationCustomizeWordHelpPage extends ConsumerWidget {
               ),
             ),
             const SizedBox(height: 32),
-            Text(
-              L.reminderNotificationCustomizeWordFeatureAppealHeadline,
-              style: const TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.w700,
-                fontFamily: FontFamily.japanese,
-                color: TextColor.main,
+            Center(
+              child: Text(
+                L.reminderNotificationCustomizeWordFeatureAppealHeadline,
+                style: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.w700,
+                  fontFamily: FontFamily.japanese,
+                  color: TextColor.main,
+                ),
               ),
             ),
             const SizedBox(height: 20),

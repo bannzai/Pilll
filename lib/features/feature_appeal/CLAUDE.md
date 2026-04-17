@@ -10,7 +10,7 @@ Scaffold
 ├─ body: SingleChildScrollView(padding: fromLTRB(24, 24, 24, 40))
 │  └─ Column
 │     ├─ SVG Icon (Center, 80x80)
-│     ├─ Headline (fontSize: 22, w700)
+│     ├─ Headline (Center, fontSize: 22, w700)
 │     ├─ Feature Cards × 3 (_featureCard)
 │     ├─ 「アプリ内の場所」ラベル (L.featureAppealLocationLabel)
 │     ├─ _mockTabBar(selectedIndex: N)
