@@ -168,20 +168,20 @@ class FeatureAppealBarsContainer extends HookConsumerWidget {
       // Bar も iOS に限定する (Android ユーザーが HelpPage から設定タブに飛んでも該当行がないため)。
       // dart:io の Platform.isIOS ではなく defaultTargetPlatform を使うのは、
       // Widget テストで debugDefaultTargetPlatformOverride による iOS 扱いを効かせるため。
-      if (isIOS && !criticalAlertIsClosed.value) CriticalAlertAnnouncementBar(isClosed: criticalAlertIsClosed),
+      if (!quickRecordIsClosed.value) QuickRecordAnnouncementBar(isClosed: quickRecordIsClosed),
       if (!reminderNotificationCustomizeWordIsClosed.value)
         ReminderNotificationCustomizeWordAnnouncementBar(isClosed: reminderNotificationCustomizeWordIsClosed),
+      if (!restDurationIsClosed.value) RestDurationAnnouncementBar(isClosed: restDurationIsClosed),
+      if (isIOS && !criticalAlertIsClosed.value) CriticalAlertAnnouncementBar(isClosed: criticalAlertIsClosed),
       if (appIsReleased && !appearanceModeDateIsClosed.value) AppearanceModeDateAnnouncementBar(isClosed: appearanceModeDateIsClosed),
       if (!recordPillIsClosed.value) RecordPillAnnouncementBar(isClosed: recordPillIsClosed),
       if (!menstruationIsClosed.value) MenstruationAnnouncementBar(isClosed: menstruationIsClosed),
       if (!calendarDiaryIsClosed.value) CalendarDiaryAnnouncementBar(isClosed: calendarDiaryIsClosed),
       if (!futureScheduleIsClosed.value) FutureScheduleAnnouncementBar(isClosed: futureScheduleIsClosed),
       if (!healthCareIntegrationIsClosed.value) HealthCareIntegrationAnnouncementBar(isClosed: healthCareIntegrationIsClosed),
-      if (!quickRecordIsClosed.value) QuickRecordAnnouncementBar(isClosed: quickRecordIsClosed),
       if (!creatingNewPillSheetIsClosed.value) CreatingNewPillSheetAnnouncementBar(isClosed: creatingNewPillSheetIsClosed),
       if (isIOS && !alarmKitIsClosed.value) AlarmKitAnnouncementBar(isClosed: alarmKitIsClosed),
       if (!todayPillNumberIsClosed.value) TodayPillNumberAnnouncementBar(isClosed: todayPillNumberIsClosed),
-      if (!restDurationIsClosed.value) RestDurationAnnouncementBar(isClosed: restDurationIsClosed),
     ];
     if (candidates.isEmpty) {
       return const SizedBox.shrink();
