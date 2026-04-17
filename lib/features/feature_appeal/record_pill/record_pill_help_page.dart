@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/home/page.dart';
 import 'package:pilll/features/localizations/l.dart';
-import 'package:pilll/features/pill_sheet_modified_history/page.dart';
 import 'package:pilll/utils/analytics.dart';
 
-/// ピル記録/服用履歴 (無料機能) の説明と「実際に試す」導線を持つヘルプページ。
-class RecordPillHelpPage extends StatelessWidget {
+/// ピル記録/服用履歴 (無料機能) の説明と「確認する」導線を持つヘルプページ。
+class RecordPillHelpPage extends ConsumerWidget {
   const RecordPillHelpPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -37,13 +38,15 @@ class RecordPillHelpPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 32),
-            Text(
-              L.recordPillFeatureAppealHeadline,
-              style: const TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.w700,
-                fontFamily: FontFamily.japanese,
-                color: TextColor.main,
+            Center(
+              child: Text(
+                L.recordPillFeatureAppealHeadline,
+                style: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.w700,
+                  fontFamily: FontFamily.japanese,
+                  color: TextColor.main,
+                ),
               ),
             ),
             const SizedBox(height: 20),
@@ -69,20 +72,29 @@ class RecordPillHelpPage extends StatelessWidget {
               child: Center(child: Icon(Icons.arrow_downward, size: 28, color: AppColors.primary)),
             ),
             Container(
+              clipBehavior: Clip.none,
               decoration: BoxDecoration(
                 color: AppColors.white,
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(color: AppColors.primary, width: 1.5),
               ),
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+              padding: const EdgeInsets.fromLTRB(16, 14, 16, 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   for (var i = 0; i < 7; i++) ...[
                     if (i > 0) const SizedBox(width: 6),
-                    _mockPillMark(
-                      isDone: i < 3,
-                      isSelected: i == 3,
+                    Stack(
+                      clipBehavior: Clip.none,
+                      children: [
+                        _mockPillMark(isDone: i < 3, isSelected: i == 3),
+                        if (i == 3)
+                          const Positioned(
+                            bottom: 0,
+                            right: -6,
+                            child: Icon(Icons.touch_app, size: 22, color: AppColors.primary),
+                          ),
+                      ],
                     ),
                   ],
                 ],
@@ -105,7 +117,9 @@ class RecordPillHelpPage extends StatelessWidget {
                   'is_paywall_shown': 0,
                 },
               );
-              Navigator.of(context).push(PillSheetModifiedHistoriesPageRoute.route());
+              final tabController = ref.read(homeTabControllerProvider);
+              Navigator.of(context).popUntil((r) => r.isFirst);
+              tabController?.animateTo(HomePageTabType.record.index);
             },
           ),
         ),

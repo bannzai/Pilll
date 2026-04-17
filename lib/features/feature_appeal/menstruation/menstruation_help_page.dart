@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/home/page.dart';
 import 'package:pilll/features/localizations/l.dart';
-import 'package:pilll/features/settings/menstruation/page.dart';
 import 'package:pilll/utils/analytics.dart';
 
-/// 生理記録 (無料機能) の説明と「実際に試す」導線を持つヘルプページ。
-class MenstruationHelpPage extends StatelessWidget {
+/// 生理記録 (無料機能) の説明と「確認する」導線を持つヘルプページ。
+class MenstruationHelpPage extends ConsumerWidget {
   const MenstruationHelpPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -37,13 +38,15 @@ class MenstruationHelpPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 32),
-            Text(
-              L.menstruationFeatureAppealHeadline,
-              style: const TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.w700,
-                fontFamily: FontFamily.japanese,
-                color: TextColor.main,
+            Center(
+              child: Text(
+                L.menstruationFeatureAppealHeadline,
+                style: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.w700,
+                  fontFamily: FontFamily.japanese,
+                  color: TextColor.main,
+                ),
               ),
             ),
             const SizedBox(height: 20),
@@ -104,7 +107,9 @@ class MenstruationHelpPage extends StatelessWidget {
                   'is_paywall_shown': 0,
                 },
               );
-              Navigator.of(context).push(SettingMenstruationPageRoute.route());
+              final tabController = ref.read(homeTabControllerProvider);
+              Navigator.of(context).popUntil((r) => r.isFirst);
+              tabController?.animateTo(HomePageTabType.setting.index);
             },
           ),
         ),

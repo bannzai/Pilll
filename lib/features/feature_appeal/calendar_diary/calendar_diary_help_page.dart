@@ -38,13 +38,15 @@ class CalendarDiaryHelpPage extends ConsumerWidget {
               ),
             ),
             const SizedBox(height: 32),
-            Text(
-              L.calendarDiaryFeatureAppealHeadline,
-              style: const TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.w700,
-                fontFamily: FontFamily.japanese,
-                color: TextColor.main,
+            Center(
+              child: Text(
+                L.calendarDiaryFeatureAppealHeadline,
+                style: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.w700,
+                  fontFamily: FontFamily.japanese,
+                  color: TextColor.main,
+                ),
               ),
             ),
             const SizedBox(height: 20),
@@ -52,7 +54,7 @@ class CalendarDiaryHelpPage extends ConsumerWidget {
             const SizedBox(height: 8),
             _featureCard(icon: Icons.note_add, text: L.calendarDiaryFeatureAppealPoint2),
             const SizedBox(height: 8),
-            _featureCard(icon: Icons.search, text: L.calendarDiaryFeatureAppealPoint3),
+            _featureCard(icon: Icons.history, text: L.calendarDiaryFeatureAppealPoint3),
             const SizedBox(height: 28),
             Text(
               L.featureAppealLocationLabel,
@@ -69,23 +71,7 @@ class CalendarDiaryHelpPage extends ConsumerWidget {
               padding: EdgeInsets.symmetric(vertical: 6),
               child: Center(child: Icon(Icons.arrow_downward, size: 28, color: AppColors.primary)),
             ),
-            Container(
-              decoration: BoxDecoration(
-                color: AppColors.white,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: AppColors.primary, width: 1.5),
-              ),
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-              child: Text(
-                L.calendarDiaryFeatureAppealLocationHint,
-                style: const TextStyle(
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 14,
-                  color: TextColor.main,
-                ),
-              ),
-            ),
+            _mockCalendar(),
           ],
         ),
       ),
@@ -109,6 +95,87 @@ class CalendarDiaryHelpPage extends ConsumerWidget {
             },
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _mockCalendar() {
+    final now = DateTime.now();
+    final weekday = now.weekday % 7;
+    final weekStart = now.subtract(Duration(days: weekday));
+    const dayLabels = ['日', '月', '火', '水', '木', '金', '土'];
+
+    return Container(
+      clipBehavior: Clip.none,
+      decoration: BoxDecoration(
+        color: AppColors.white,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: AppColors.primary, width: 1.5),
+      ),
+      padding: const EdgeInsets.fromLTRB(12, 14, 12, 20),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              for (var i = 0; i < 7; i++)
+                SizedBox(
+                  width: 36,
+                  child: Center(
+                    child: Text(
+                      dayLabels[i],
+                      style: TextStyle(
+                        fontSize: 11,
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w600,
+                        color: i == 0 ? Colors.red.shade300 : (i == 6 ? Colors.blue.shade300 : TextColor.darkGray),
+                      ),
+                    ),
+                  ),
+                ),
+            ],
+          ),
+          const SizedBox(height: 8),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              for (var i = 0; i < 7; i++)
+                SizedBox(
+                  width: 36,
+                  height: 40,
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      if (i == weekday)
+                        Container(
+                          width: 32,
+                          height: 32,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(color: AppColors.primary, width: 2),
+                          ),
+                        ),
+                      Text(
+                        '${weekStart.add(Duration(days: i)).day}',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontFamily: FontFamily.number,
+                          fontWeight: i == weekday ? FontWeight.w700 : FontWeight.w400,
+                          color: i == weekday ? AppColors.primary : TextColor.main,
+                        ),
+                      ),
+                      if (i == weekday)
+                        const Positioned(
+                          bottom: 0,
+                          right: -4,
+                          child: Icon(Icons.touch_app, size: 22, color: AppColors.primary),
+                        ),
+                    ],
+                  ),
+                ),
+            ],
+          ),
+        ],
       ),
     );
   }

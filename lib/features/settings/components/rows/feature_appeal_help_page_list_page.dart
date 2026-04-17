@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/features/feature_appeal/alarm_kit/alarm_kit_help_page.dart';
 import 'package:pilll/features/feature_appeal/appearance_mode_date/appearance_mode_date_help_page.dart';
 import 'package:pilll/features/feature_appeal/calendar_diary/calendar_diary_help_page.dart';
+import 'package:pilll/features/feature_appeal/creating_new_pillsheet/creating_new_pillsheet_help_page.dart';
 import 'package:pilll/features/feature_appeal/critical_alert/critical_alert_help_page.dart';
 import 'package:pilll/features/feature_appeal/future_schedule/future_schedule_help_page.dart';
 import 'package:pilll/features/feature_appeal/health_care_integration/health_care_integration_help_page.dart';
 import 'package:pilll/features/feature_appeal/menstruation/menstruation_help_page.dart';
+import 'package:pilll/features/feature_appeal/quick_record/quick_record_help_page.dart';
 import 'package:pilll/features/feature_appeal/record_pill/record_pill_help_page.dart';
 import 'package:pilll/features/feature_appeal/reminder_notification_customize_word/reminder_notification_customize_word_help_page.dart';
+import 'package:pilll/features/feature_appeal/rest_duration/rest_duration_help_page.dart';
+import 'package:pilll/features/feature_appeal/today_pill_number/today_pill_number_help_page.dart';
 
 /// FeatureAppeal の全 HelpPage への遷移リンクを一覧表示するページ。
 /// 開発者オプションからアクセスし、各ページの内容を確認・評価する用途。
@@ -25,6 +30,11 @@ class FeatureAppealHelpPageListPage extends StatelessWidget {
       (label: 'カレンダー・日記', type: 'free', routeFactory: CalendarDiaryHelpPageRoute.route),
       (label: '未来の予定', type: 'free', routeFactory: FutureScheduleHelpPageRoute.route),
       (label: 'ヘルスケア連携', type: 'free', routeFactory: HealthCareIntegrationHelpPageRoute.route),
+      (label: 'クイックレコード', type: 'premium', routeFactory: QuickRecordHelpPageRoute.route),
+      (label: 'ピルシート自動追加', type: 'premium', routeFactory: CreatingNewPillSheetHelpPageRoute.route),
+      (label: 'AlarmKit (iOS 26+)', type: 'premium', routeFactory: AlarmKitHelpPageRoute.route),
+      (label: '今日の服用番号変更', type: 'free', routeFactory: TodayPillNumberHelpPageRoute.route),
+      (label: '服用おやすみ', type: 'free', routeFactory: RestDurationHelpPageRoute.route),
     ];
 
     return Scaffold(
