@@ -38,13 +38,15 @@ class CalendarDiaryHelpPage extends ConsumerWidget {
               ),
             ),
             const SizedBox(height: 32),
-            Text(
-              L.calendarDiaryFeatureAppealHeadline,
-              style: const TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.w700,
-                fontFamily: FontFamily.japanese,
-                color: TextColor.main,
+            Center(
+              child: Text(
+                L.calendarDiaryFeatureAppealHeadline,
+                style: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.w700,
+                  fontFamily: FontFamily.japanese,
+                  color: TextColor.main,
+                ),
               ),
             ),
             const SizedBox(height: 20),
@@ -52,7 +54,7 @@ class CalendarDiaryHelpPage extends ConsumerWidget {
             const SizedBox(height: 8),
             _featureCard(icon: Icons.note_add, text: L.calendarDiaryFeatureAppealPoint2),
             const SizedBox(height: 8),
-            _featureCard(icon: Icons.search, text: L.calendarDiaryFeatureAppealPoint3),
+            _featureCard(icon: Icons.history, text: L.calendarDiaryFeatureAppealPoint3),
             const SizedBox(height: 28),
             Text(
               L.featureAppealLocationLabel,

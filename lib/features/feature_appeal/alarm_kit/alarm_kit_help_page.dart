@@ -5,20 +5,25 @@ import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/features/home/page.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 
-/// 未来の予定 (無料機能) の説明と「実際に試す」導線を持つヘルプページ。
-class FutureScheduleHelpPage extends ConsumerWidget {
-  const FutureScheduleHelpPage({super.key});
+/// AlarmKit (Premium機能: iOS 26+ で目覚ましアラームとして通知) の説明と「実際に試す」導線を持つヘルプページ。
+/// 「実際に試す」では設定タブへ案内する。iOS 26 未満 / Android では設定行が消えているが、訴求自体は行う。
+/// プレビューは設定行の文言がハードコード日本語のため、ここでも同一文言をハードコードで再現する。
+class AlarmKitHelpPage extends ConsumerWidget {
+  const AlarmKitHelpPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: Text(L.futureScheduleFeatureAppealTitle),
+        title: Text(L.alarmKitFeatureAppealTitle),
         backgroundColor: AppColors.background,
         leading: IconButton(
           onPressed: () => Navigator.of(context).pop(),
@@ -32,7 +37,7 @@ class FutureScheduleHelpPage extends ConsumerWidget {
           children: [
             Center(
               child: SvgPicture.asset(
-                'images/hospital.svg',
+                'images/alerm.svg',
                 width: 80,
                 height: 80,
                 colorFilter: const ColorFilter.mode(AppColors.primary, BlendMode.srcIn),
@@ -41,7 +46,7 @@ class FutureScheduleHelpPage extends ConsumerWidget {
             const SizedBox(height: 32),
             Center(
               child: Text(
-                L.futureScheduleFeatureAppealHeadline,
+                L.alarmKitFeatureAppealHeadline,
                 style: const TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.w700,
@@ -51,11 +56,11 @@ class FutureScheduleHelpPage extends ConsumerWidget {
               ),
             ),
             const SizedBox(height: 20),
-            _featureCard(icon: Icons.event, text: L.futureScheduleFeatureAppealPoint1),
+            _featureCard(icon: Icons.alarm, text: L.alarmKitFeatureAppealPoint1),
             const SizedBox(height: 8),
-            _featureCard(icon: Icons.local_hospital, text: L.futureScheduleFeatureAppealPoint2),
+            _featureCard(icon: Icons.volume_up, text: L.alarmKitFeatureAppealPoint2),
             const SizedBox(height: 8),
-            _featureCard(icon: Icons.alarm, text: L.futureScheduleFeatureAppealPoint3),
+            _featureCard(icon: Icons.phone_iphone, text: L.alarmKitFeatureAppealPoint3),
             const SizedBox(height: 28),
             Text(
               L.featureAppealLocationLabel,
@@ -67,12 +72,48 @@ class FutureScheduleHelpPage extends ConsumerWidget {
               ),
             ),
             const SizedBox(height: 8),
-            _mockTabBar(selectedIndex: 2),
+            _mockTabBar(selectedIndex: 3),
             const Padding(
               padding: EdgeInsets.symmetric(vertical: 6),
               child: Center(child: Icon(Icons.arrow_downward, size: 28, color: AppColors.primary)),
             ),
-            _mockCalendar(),
+            Container(
+              decoration: BoxDecoration(
+                color: AppColors.white,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: AppColors.primary, width: 1.5),
+              ),
+              child: const IgnorePointer(
+                // 設定行 (lib/features/settings/components/rows/alarm_kit.dart) 側が L10n 未整備のハードコード日本語のため、ここでも一貫性を保つために同一文言をハードコードで再現する。L10n 化は後続タスク。
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      Flexible(
+                        child: Text(
+                          'アラーム機能',
+                          style: TextStyle(
+                            fontFamily: FontFamily.japanese,
+                            fontWeight: FontWeight.w300,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 8),
+                      PremiumBadge(),
+                    ],
+                  ),
+                  subtitle: Text(
+                    '目覚まし同様の通知が鳴ります。サイレントモードや集中モード時でも確実に通知されます',
+                    style: TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                    ),
+                  ),
+                  trailing: Switch(value: false, onChanged: null),
+                ),
+              ),
+            ),
           ],
         ),
       ),
@@ -82,101 +123,29 @@ class FutureScheduleHelpPage extends ConsumerWidget {
           child: PrimaryButton(
             text: L.featureAppealTryFeature,
             onPressed: () async {
+              final user = ref.read(userProvider).requireValue;
               analytics.logEvent(
                 name: 'feature_appeal_try_tapped',
                 parameters: {
-                  'feature_key': 'future_schedule',
-                  'feature_type': 'free',
-                  'is_paywall_shown': 0,
+                  'feature_key': 'alarm_kit',
+                  'feature_type': 'premium',
+                  'is_paywall_shown': !user.premiumOrTrial ? 1 : 0,
                 },
               );
+              if (!user.premiumOrTrial) {
+                analytics.logEvent(
+                  name: 'feature_appeal_paywall_shown',
+                  parameters: {'feature_key': 'alarm_kit'},
+                );
+                await showPremiumIntroductionSheet(context);
+                return;
+              }
               final tabController = ref.read(homeTabControllerProvider);
               Navigator.of(context).popUntil((r) => r.isFirst);
-              tabController?.animateTo(HomePageTabType.calendar.index);
+              tabController?.animateTo(HomePageTabType.setting.index);
             },
           ),
         ),
-      ),
-    );
-  }
-
-  Widget _mockCalendar() {
-    final tomorrow = DateTime.now().add(const Duration(days: 1));
-    final tomorrowWeekday = tomorrow.weekday % 7;
-    final weekStart = tomorrow.subtract(Duration(days: tomorrowWeekday));
-    const dayLabels = ['日', '月', '火', '水', '木', '金', '土'];
-
-    return Container(
-      clipBehavior: Clip.none,
-      decoration: BoxDecoration(
-        color: AppColors.white,
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: AppColors.primary, width: 1.5),
-      ),
-      padding: const EdgeInsets.fromLTRB(12, 14, 12, 20),
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              for (var i = 0; i < 7; i++)
-                SizedBox(
-                  width: 36,
-                  child: Center(
-                    child: Text(
-                      dayLabels[i],
-                      style: TextStyle(
-                        fontSize: 11,
-                        fontFamily: FontFamily.japanese,
-                        fontWeight: FontWeight.w600,
-                        color: i == 0 ? Colors.red.shade300 : (i == 6 ? Colors.blue.shade300 : TextColor.darkGray),
-                      ),
-                    ),
-                  ),
-                ),
-            ],
-          ),
-          const SizedBox(height: 8),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              for (var i = 0; i < 7; i++)
-                SizedBox(
-                  width: 36,
-                  height: 40,
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      if (i == tomorrowWeekday)
-                        Container(
-                          width: 32,
-                          height: 32,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(color: AppColors.primary, width: 2),
-                          ),
-                        ),
-                      Text(
-                        '${weekStart.add(Duration(days: i)).day}',
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontFamily: FontFamily.number,
-                          fontWeight: i == tomorrowWeekday ? FontWeight.w700 : FontWeight.w400,
-                          color: i == tomorrowWeekday ? AppColors.primary : TextColor.main,
-                        ),
-                      ),
-                      if (i == tomorrowWeekday)
-                        const Positioned(
-                          bottom: 0,
-                          right: -4,
-                          child: Icon(Icons.touch_app, size: 22, color: AppColors.primary),
-                        ),
-                    ],
-                  ),
-                ),
-            ],
-          ),
-        ],
       ),
     );
   }
@@ -261,9 +230,9 @@ class FutureScheduleHelpPage extends ConsumerWidget {
 
 /// FirebaseAnalyticsObserver が自動で screen_view を送信するため、
 /// RouteSettings.name は必ず設定する (lib/app.dart で MaterialApp に登録済み)。
-extension FutureScheduleHelpPageRoute on FutureScheduleHelpPage {
+extension AlarmKitHelpPageRoute on AlarmKitHelpPage {
   static Route<dynamic> route() => MaterialPageRoute(
-        settings: const RouteSettings(name: 'FutureScheduleHelpPage'),
-        builder: (_) => const FutureScheduleHelpPage(),
+        settings: const RouteSettings(name: 'AlarmKitHelpPage'),
+        builder: (_) => const AlarmKitHelpPage(),
       );
 }

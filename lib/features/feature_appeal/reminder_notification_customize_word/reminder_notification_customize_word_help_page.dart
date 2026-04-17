@@ -6,9 +6,9 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
+import 'package:pilll/features/home/page.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
-import 'package:pilll/features/reminder_notification_customize_word/page.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 
@@ -42,13 +42,15 @@ class ReminderNotificationCustomizeWordHelpPage extends ConsumerWidget {
               ),
             ),
             const SizedBox(height: 32),
-            Text(
-              L.reminderNotificationCustomizeWordFeatureAppealHeadline,
-              style: const TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.w700,
-                fontFamily: FontFamily.japanese,
-                color: TextColor.main,
+            Center(
+              child: Text(
+                L.reminderNotificationCustomizeWordFeatureAppealHeadline,
+                style: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.w700,
+                  fontFamily: FontFamily.japanese,
+                  color: TextColor.main,
+                ),
               ),
             ),
             const SizedBox(height: 20),
@@ -132,7 +134,9 @@ class ReminderNotificationCustomizeWordHelpPage extends ConsumerWidget {
                 await showPremiumIntroductionSheet(context);
                 return;
               }
-              await Navigator.of(context).push(ReminderNotificationCustomizeWordPageRoutes.route());
+              final tabController = ref.read(homeTabControllerProvider);
+              Navigator.of(context).popUntil((r) => r.isFirst);
+              tabController?.animateTo(HomePageTabType.setting.index);
             },
           ),
         ),

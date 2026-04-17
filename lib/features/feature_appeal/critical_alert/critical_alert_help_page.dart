@@ -6,10 +6,9 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
+import 'package:pilll/features/home/page.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
-import 'package:pilll/features/settings/critical_alert/page.dart';
-import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 
@@ -43,13 +42,15 @@ class CriticalAlertHelpPage extends ConsumerWidget {
               ),
             ),
             const SizedBox(height: 32),
-            Text(
-              L.criticalAlertFeatureAppealHeadline,
-              style: const TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.w700,
-                fontFamily: FontFamily.japanese,
-                color: TextColor.main,
+            Center(
+              child: Text(
+                L.criticalAlertFeatureAppealHeadline,
+                style: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.w700,
+                  fontFamily: FontFamily.japanese,
+                  color: TextColor.main,
+                ),
               ),
             ),
             const SizedBox(height: 20),
@@ -119,7 +120,6 @@ class CriticalAlertHelpPage extends ConsumerWidget {
             text: L.featureAppealTryFeature,
             onPressed: () async {
               final user = ref.read(userProvider).requireValue;
-              final setting = ref.read(settingProvider).requireValue;
               analytics.logEvent(
                 name: 'feature_appeal_try_tapped',
                 parameters: {
@@ -136,9 +136,9 @@ class CriticalAlertHelpPage extends ConsumerWidget {
                 await showPremiumIntroductionSheet(context);
                 return;
               }
-              await Navigator.of(context).push(
-                CriticalAlertPageRoutes.route(setting: setting),
-              );
+              final tabController = ref.read(homeTabControllerProvider);
+              Navigator.of(context).popUntil((r) => r.isFirst);
+              tabController?.animateTo(HomePageTabType.setting.index);
             },
           ),
         ),
