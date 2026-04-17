@@ -97,3 +97,7 @@ extension XxxHelpPageRoute on XxxHelpPage {
 5. `flutter gen-l10n` で生成
 6. `lib/features/feature_appeal/feature_appeal_bars_container.dart` に AnnouncementBar を登録
 7. `lib/features/settings/components/rows/feature_appeal_help_page_list_page.dart` の `pages` リストにエントリを追加
+8. **PilllBackend (`~/ghq/github.com/bannzai/PilllBackend`) の BigQuery も同期更新** (Pilll リリース前 or 同時に PR を merge する。ズレるとデータ欠損)
+   - `bigquery/views/event_logs_feature_appeal.sql` の `firebaseScreen IN (...)` に新 HelpPage 名を追加
+   - `bigquery/queries/feature_appeal_funnel.sql` の `feature_help_page_map` STRUCT に `(featureKey, helpPageName, featureType)` を追加
+   - `bigquery/queries/feature_appeal_feature_usage.sql` の機能マッピングコメント / 利用判定 CTE / `all_used` UNION ALL に featureKey を追加
