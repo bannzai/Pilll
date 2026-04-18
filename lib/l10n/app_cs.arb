@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Přehled dávkování na první pohled",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Zobrazit datum na pilulkovém archu",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
