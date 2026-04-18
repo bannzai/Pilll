@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Կேալենդարから日付ըタップして体調・気分・症状などを記録できます。服用記録や生理記録と一緒に確認できるので、自分の体のリズムを把握できます。",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
