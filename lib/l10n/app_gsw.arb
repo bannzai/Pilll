@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Tipp uff 's Datum, um din Befinde ufzeschriibe",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Termini in Kalender iitrage",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
