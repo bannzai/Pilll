@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "Skráðu framtíðarplönin þín",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Stjórnaðu framtíðaráætlunum, t.d. læknisheimsóknum",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
