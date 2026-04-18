@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Alarmtone som en vækkeur",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 eller nyere・Aktiver fra fanen Indstillinger",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
