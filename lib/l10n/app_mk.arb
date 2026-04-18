@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealHeadline": "Следење и предвидување на менструацијата",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Само запишете го почетокот на менструацијата и ќе можете да ги прегледате сите претходни записи. Следниот очекуван датум на менструацијата се предвидува автоматски, па можете да планирате однапред.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
