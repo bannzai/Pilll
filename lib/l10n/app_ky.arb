@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Айдын башталган күнүн оңой жазып алыңыз",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Ай циклиңизди автоматтык түрдө аныктоо",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
