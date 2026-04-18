@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint3": "Personalizza le impostazioni",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Visualizza le registrazioni nel calendario",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
