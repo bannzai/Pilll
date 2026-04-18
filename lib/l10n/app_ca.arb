@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Si el número no és correcte, corregeix-lo a la configuració",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Podeu canviar el número de píndola d'avui",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
