@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "Itala ang inyong pang-araw-araw na kalusugan sa kalendaryo",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Maaari kang mag-tap ng petsa sa kalendaryo upang maitala ang iyong kondisyon ng katawan, mood, sintomas, at iba pa. Maaari mo itong suriin kasabay ng rekord ng paginom at rekord ng menstruwasyon, para mas maunawaan ang ritmo ng iyong katawan.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
