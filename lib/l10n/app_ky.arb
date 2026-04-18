@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Колдонмону ачпай эле билдирүүдөн жазып коюңуз",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Билдирме экранында бир тийүү менен ичкенди каттоо",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
