@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealBody": "જ્યારે વર્તમાન પિલ શીટ ગ્રૂપ સમાપ્ત થાય છે, ત્યારે આપોઆપ નવો પિલ શીટ ગ્રૂપ બનાવવામાં આવે છે. હાથે સ્વિચ કરવાની જરૂર નથી, અને રેકોર્ડમાં કોઈ ખૂટ નહીં પડે.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "ઘડિયાળ જેવો વાગતો એલાર્મ",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
