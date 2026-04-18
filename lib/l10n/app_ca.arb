@@ -2662,5 +2662,9 @@
   "criticalAlertFeatureAppealPoint3": "Configuració fàcil amb un sol toc",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Edita lliurement el missatge de notificació",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
