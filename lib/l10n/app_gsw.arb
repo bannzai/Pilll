@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "Bitte gäbed Sie Ihri Aafrag ii",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Danke fer Ihri Kauf vum Einmolkauf-Plan. Falls ihr no e Monats- oder Johresabo hänn, vergesst nit, des z'chündige.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
