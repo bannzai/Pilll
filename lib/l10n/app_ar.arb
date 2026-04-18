@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealShortDescription": "إشعارات تصل حتى في وضع الصامت",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "تنبيه تناول الدواء مثل المنبه",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
