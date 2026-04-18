@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealTitle": "Zapiši buduće planove",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Upravljajte budućim planovima poput ljekarskih termina",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
