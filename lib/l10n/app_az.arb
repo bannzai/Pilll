@@ -2750,5 +2750,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Sağlamlıq tətbiqinə sinxronizasiya",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Health dəstəyi",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
