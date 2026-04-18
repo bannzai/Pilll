@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple ഹെൽത്ത്കെയർ പിന്തുണ",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "അറിയിപ്പ് ആക്ഷൻ വഴി ഡോസ് ലോഗ്",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
