@@ -2698,5 +2698,9 @@
   "recordPillFeatureAppealPoint3": "Преглед на историята на приема по всяко време",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Лесно записване на началото на менструацията",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
