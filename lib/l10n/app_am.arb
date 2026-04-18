@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealShortDescription": "ዝምታም ቢሆን የሚጮህ ማሳወቂያ",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "እንደ መነቃቂያ ሰዓት ያለ የመድሃኒት አላርም",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
