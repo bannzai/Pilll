@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Fuldfør uden at åbne appen",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Tilgængelig med Premium-abonnement",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
