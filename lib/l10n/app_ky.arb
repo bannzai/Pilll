@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "Бүгүнкү кабыл алуу номерин орнотуу",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Сандар туура эмес болсо, Орнотуулардан түздөңүз.",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
