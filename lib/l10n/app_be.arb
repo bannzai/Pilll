@@ -2674,5 +2674,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Ваша ўласнае паведамленне для нагадванняў",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Паказваць аркуш таблетак па даце",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
