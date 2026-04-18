@@ -2696,5 +2696,9 @@
   "menstruationFeatureAppealPoint1": "Easily log your period start date",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Automatically track your cycle",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
