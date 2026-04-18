@@ -2614,5 +2614,9 @@
   "alarmKitFeatureAppealBody": "Utilitza AlarmKit, disponible a partir d'iOS 26, per avisar-te de prendre la píndola amb una alarma que sona de manera fiable fins i tot en mode silenci o mode de concentració.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Ajusta el número de la píndola d'avui",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
