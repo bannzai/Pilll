@@ -2502,5 +2502,9 @@
   "recordPillFeatureAppealBody": "হোম স্ক্রিনের পিল শিটে ট্যাপ করলেই সেদিনের সেবন রেকর্ড করা যায়। ভুলে রেকর্ড করলেও আবার ট্যাপ করলে বাতিল করা যাবে। সেবনের ইতিহাসও পরে দেখা যাবে, তাই নিশ্চিন্তে চালিয়ে যাওয়া যাবে।",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "মাসিক ট্র্যাক ও পূর্বাভাস",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
