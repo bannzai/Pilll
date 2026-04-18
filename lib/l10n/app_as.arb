@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "পিল শ্বীট শেষ হ'লে স্বয়ংক্ৰিয়ভাৱে সলনি",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "হাতেৰে তৈয়াৰ কৰাৰ প্ৰয়োজন নাই",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
