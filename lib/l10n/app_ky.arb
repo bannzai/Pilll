@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Акысыз дары ичүүнү токтотуу жазуусу",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Пилл барагынын оң жогорку бурчундагы тиштүү шестернядан баштаңыз.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
