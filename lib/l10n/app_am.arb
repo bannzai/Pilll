@@ -2514,5 +2514,9 @@
   "menstruationFeatureAppealHeadline": "የወር አበባን ይዝግቡ እና ይተንብዩ",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "ወርሃዊ ዑደትዎ ሲመጣ መዝግቡ ብቻ ያለፉ የወርሃዊ ዑደት ታሪኮችዎን ዝርዝር ማየት ይችላሉ። ቀጣዩ የሚጠበቀው የወርሃዊ ዑደት ቀንም በራስ ሰር ስለሚተነበይ፣ ሕይወትዎን በዕቅድ ማሳለፍ ይችላሉ።",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
