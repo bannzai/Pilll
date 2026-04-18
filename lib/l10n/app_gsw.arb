@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Ohni d'App ufzmache fertigstelle",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Mit em Premium-Abo direkt nutzbar",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
