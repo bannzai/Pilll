@@ -2738,5 +2738,9 @@
   "futureScheduleFeatureAppealPoint3": "Xatırlatma ilə bildiriş",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Tarixi toxunaraq qeyd yazın",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
