@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "Jika nomor pada lembar pil tidak sesuai dengan pil yang sebenarnya diminum karena lupa minum atau salah mengambil, Anda dapat menyesuaikan nomor pil yang harus diminum hari ini secara manual. Halaman yang sama juga dapat dibuka dari tampilan angka pil di Beranda.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Catat periode istirahat minum pil",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
