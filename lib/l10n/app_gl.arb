@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Anota o teu estado físico e revísao",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Revisar o rexistro pasado no calendario",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
