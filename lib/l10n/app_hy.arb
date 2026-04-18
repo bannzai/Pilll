@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Ավտոմատ կերպով ստեղծել հաջորդ պիլշիթը",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Երբ ընթացիկ հաբաթերթերի խումբը ավարտվում է, նոր հաբաթերթերի խումբը ավտոմատ կերպով ստեղծվում է։ Ձեռքի միջոցով փոխարինում անել հարկավոր չէ, ուստի գրառումների բացթողումներ չեն լինի։",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
