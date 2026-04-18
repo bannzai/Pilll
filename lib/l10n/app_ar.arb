@@ -2670,5 +2670,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "تطبيق على إشعارات الجرعة اليومية",
   "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "لرسالة إشعار خاصة بك",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
   }
 }
