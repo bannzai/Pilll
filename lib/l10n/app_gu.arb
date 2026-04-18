@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "આગળનો શીટ આપોઆપ બનાવો",
   "@creatingNewPillSheetFeatureAppealShortDescription": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "આગામી પિલ શીટ આપમેળે બનાવો",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
   }
 }
