@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Innahme-Alarm wie e Wecker",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "Mit em AlarmKit, wo ab iOS 26 verfiegbar isch, werde Sie mit emm Alarm, wo au im Stumm-Modus oder Fokus-Modus sicher lütet, dra eriineret, Ihri Pille z'nemme.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
