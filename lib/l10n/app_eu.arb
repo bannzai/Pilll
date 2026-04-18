@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "Jakinarazpenak jaso modu isil moduan ere",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Ez molestatu moduan ere pilulak hartzea ez ahaztu",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
