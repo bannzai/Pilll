@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "დაიწყეთ პილ-შიტის მარჯვენა ზედა კუთხეში მდებარე პარამეტრების ხატულიდან.",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "პერიოდის რედაქტირება და აღდგენა მარტივია",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
