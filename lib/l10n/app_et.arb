@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "Kui pillide unustamise või vahetamise tõttu ei vasta pillilehe number tegelikule tarbimisele, saate tänase pilli numbri käsitsi korrigeerida. Sama ekraani saab avada ka avakuva pilli numbri kuvalt.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Salvesta ravimipuhkuse periood",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
