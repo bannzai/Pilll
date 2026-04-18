@@ -2630,5 +2630,9 @@
   "todayPillNumberFeatureAppealBody": "Когато номерът на хапчето в листа и действителното приемане се разминат поради пропускане или объркване, можете ръчно да коригирате номера на хапчето, което трябва да приемете днес. Можете да отворите същия екран и от показването на номера на хапчето на началния екран.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Записване на почивката от приема",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
