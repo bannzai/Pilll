@@ -2762,5 +2762,9 @@
   "quickRecordFeatureAppealPoint2": "Completar sense obrir l'aplicació",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Disponible directament amb la subscripció Premium",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
