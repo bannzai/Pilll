@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Ձեռքով ստեղծելու անհրաժեշտություն չկա",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Պարամետրերի вкладկայով անցուղճեք դիսպիչով",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
