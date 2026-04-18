@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Сануулагчаар мэдэгдэл",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Огноог дарж хуваарь бичих",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
