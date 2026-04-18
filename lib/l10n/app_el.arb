@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Δωρεάν καταγραφή διαλείμματος",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Έναρξη από το γρανάζι πάνω δεξιά στο φύλλο χαπιών",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
