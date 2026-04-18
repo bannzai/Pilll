@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Dlouhým stisknutím oznámení připomenutí se zobrazí akce „Užito\" a můžete zaznamenat užití léku bez otevření aplikace.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Automaticky přidat pilulkový arch",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
