@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "უფასო ნომრების შეთავსების ფუნქცია",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "პარამეტრების ჩანართიდან შეგიძლიათ შეცვალოთ",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
