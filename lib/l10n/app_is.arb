@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Þú getur líka opnað með því að banka á töluna á heimaskjánum.",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Ókeypis skrá yfir hlé frá pillunni",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
