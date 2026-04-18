@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Hurrengo pilula-orria automatikoki sortu",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Uneko pilula-fitxen taldea amaitzen denean, pilula-fitxen talde berri bat automatikoki sortzen da. Ez da eskuzko aldaketarik egin behar, eta erregistroetan ez dago hutsunerik.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
