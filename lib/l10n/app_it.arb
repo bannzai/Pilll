@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "Quando il numero sul blister e il numero della pillola effettivamente assunta si sono spostati a causa di dimenticanze o scambi, puoi correggere manualmente il numero della pillola da prendere oggi. Puoi aprire la stessa schermata anche dalla visualizzazione del numero della pillola nella schermata principale.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Registra una pausa dall'assunzione",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
