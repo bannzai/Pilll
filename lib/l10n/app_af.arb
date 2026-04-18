@@ -2674,5 +2674,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Jou eie kennisgewingboodskap",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Wys pilblad volgens datum",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
