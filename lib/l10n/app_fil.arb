@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Libreng rekord ng pahinga sa gamot",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Magsimula mula sa gear sa kanang itaas ng pill sheet",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
