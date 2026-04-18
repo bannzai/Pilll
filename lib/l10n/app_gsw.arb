@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Eifach de Aafang vun de Periode ufschriibe",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Zyklus automatisch erkenne",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
