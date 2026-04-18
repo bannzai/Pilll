@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint1": "ፒል ሉህን ነካ ወሰዳን ይዝግቡ",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "ስህተት ቢፈጸምም በቀላሉ ሰርዝ",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
