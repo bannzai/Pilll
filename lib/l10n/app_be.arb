@@ -2630,5 +2630,9 @@
   "todayPillNumberFeatureAppealBody": "Калі з-за прапушчанага прыёму або памылкі нумар на лісце таблетак не супадае з фактычным прыёмам, вы можаце ўручную наладзіць нумар таблеткі, якую трэба прыняць сёння. Тую ж экранную форму можна адкрыць таксама праз адлюстраванне нумара таблеткі на галоўным экране.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Запісаць перапынак у прыёме таблетак",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
