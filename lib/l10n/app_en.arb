@@ -2628,5 +2628,9 @@
   "lifetimeSubscriptionWarning": "Thank you for your purchase of the lifetime plan. If you are subscribed to a monthly or annual plan, please don't forget to cancel it.",
   "@lifetimeSubscriptionWarning": {
     "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "・Purchasing the \"Lifetime Plan\" will not automatically cancel your \"Monthly/Annual Plan\".",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
   }
 }
