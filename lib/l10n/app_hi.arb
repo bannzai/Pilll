@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "ऐप खोले बिना नोटिफिकेशन पर रिकॉर्ड करें",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "नोटिफिकेशन स्क्रीन पर एक-टैप में सेवन दर्ज करें",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
