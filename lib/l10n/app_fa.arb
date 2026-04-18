@@ -2457,5 +2457,9 @@
   "appearanceModeDateFeatureAppealTitle": "نمایش تاریخ روی برگه قرص",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "مشاهده زمان مصرف با یک نگاه",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
