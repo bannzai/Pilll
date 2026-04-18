@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "Автоматично генериране на следващия лист",
   "@creatingNewPillSheetFeatureAppealShortDescription": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "Автоматично създаване на следващия лист с таблетки",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
   }
 }
