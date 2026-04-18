@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Klingt auch im Lautlos-/Fokusmodus",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Weckton-ähnlicher Alarmton",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
