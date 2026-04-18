@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple Health-ի հետ համատեղելի",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "通知のアクションで服用記録",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
