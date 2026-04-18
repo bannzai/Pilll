@@ -2698,5 +2698,9 @@
   "recordPillFeatureAppealPoint3": "İstənilən vaxt qəbul tarixçəsini yoxlayın",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Adet başlama tarixini asanlıqla qeyd et",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
