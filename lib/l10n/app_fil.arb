@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "Itala ang pahinga sa pag-inom",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Pamahalaan nang tumpak ang pahinga at pagtigil",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
