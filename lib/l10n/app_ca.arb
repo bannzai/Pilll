@@ -2530,5 +2530,9 @@
   "calendarDiaryFeatureAppealHeadline": "Registra el teu benestar diari al calendari",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Toqueu una data al calendari per registrar el vostre estat físic, humor, símptomes i altres dades. Com que podeu consultar-ho juntament amb els registres de presa de medicació i els registres menstruals, podreu entendre millor el ritme del vostre cos.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
