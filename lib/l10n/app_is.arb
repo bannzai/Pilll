@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "Skrá framtíðarviðburði í dagatalið",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Þú getur skráð framtíðarviðburði í dagatalið, til dæmis læknisheimsóknir eða ferðalög. Þar sem þau sjást samhliða töku getnaðarvarnarpíls og hringrás þinni, geturðu skipulagt með tilliti til væntanlegra blæðinga.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
