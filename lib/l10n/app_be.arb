@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealTitle": "Запісаць перапынак у прыёме таблетак",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Дакладнае кіраванне перапынкамі ў прыёме",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
