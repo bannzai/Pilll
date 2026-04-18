@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Γνωρίζεις την ημερομηνία χωρίς να κοιτάς το ημερολόγιο",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Μπορεί να αλλαχθεί από τις ρυθμίσεις φύλλου χαπιών",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
