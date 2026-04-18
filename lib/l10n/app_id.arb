@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "Terima notifikasi bahkan dalam mode senyap",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Cegah lupa minum pil meski dalam Mode Jangan Ganggu",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
