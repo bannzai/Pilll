@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Užregistruoti vartojimą per pranešimo veiksmą",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Atlikta be programėlės atidarymo",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
