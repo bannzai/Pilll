@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Canvi automàtic en finalitzar el full de píndoles",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "No cal creació manual",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
