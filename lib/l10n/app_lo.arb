@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "ສະຫຼຸບສີດອັນສົບຜົນທີ່ບັນຍັດແລ້ວ",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "ບໍ່ຈຳເປັນຕ້ອງສ້າງດ້ວຍມື",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
