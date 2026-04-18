@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "პილის მიღების შესვენება",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "წყეულება ვიღოთ",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
