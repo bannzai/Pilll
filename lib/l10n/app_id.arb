@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Tahu tanggal tanpa membuka kalender",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Dapat diubah melalui pengaturan Lembar Pil",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
