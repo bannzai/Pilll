@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "Au im Lautlos-Modus Benachrichtigunge empfange",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Schlof ruhig – vergiss dini Pille trotzdem nid",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
