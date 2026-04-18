@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Notificaciones que suenan incluso en silencio",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Alarma de toma como un despertador",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
