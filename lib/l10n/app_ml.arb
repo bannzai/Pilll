@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealBody": "കലണ്ടറിൽ തീയതി ടാപ്പ് ചെയ്ത് ശാരീരിക അവസ്ഥ, മാനസിക നില, ലക്ഷണങ്ങൾ തുടങ്ങിയവ രേഖപ്പെടുത്താൻ കഴിയും. ഗുളിക കഴിക്കൽ രേഖകളും ആർത്തവ രേഖകളും ഒന്നിച്ച് പരിശോധിക്കാൻ കഴിയുന്നതിനാൽ, സ്വന്തം ശരീരത്തിന്റെ താളം മനസ്സിലാക്കാൻ കഴിയും.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "ഭാവി പദ്ധതികൾ കുറിക്കൂ",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
