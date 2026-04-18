@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "ホーム画面でピルの服用を記録 -> 홈 화면에서 피임약 복용을 기록",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "홈 화면의 피임약 시트를 탭하기만 하면 그날의 복용을 기록할 수 있습니다. 잘못 기록한 경우에는 한 번 더 탭해서 취소할 수 있습니다. 복용 기록은 나중에 언제든 확인할 수 있으니 안심하고 꾸준히 사용할 수 있습니다.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
