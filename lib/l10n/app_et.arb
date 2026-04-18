@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "Salvesta pillide võtmine avakuval",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Puudutage avakuval lihtsalt pillilehte, et salvestada selle päeva tabletivõtmine. Kui tegite vea, puudutage uuesti – kirje tühistatakse. Võtmise ajalugu on alati hiljem vaadatav, nii saate muretult jätkata.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
