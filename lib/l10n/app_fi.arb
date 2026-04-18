@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Lääkehälytys kuin herätyskello",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26:ssa ja uudemmissa käytettävissä olevan AlarmKitin avulla pillerin ottamisesta muistutetaan hälytyksellä, joka soi varmasti myös äänettömässä tilassa ja Keskitystilassa.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
