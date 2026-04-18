@@ -2394,5 +2394,9 @@
   "inquiryContentRequired": "Harap masukkan isi pertanyaan",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "number": "ke",
+  "@number": {
+    "description": "ピルシートUI上でピルの位置・順番を示す番号のラベルです。「1番」「2番」のように表示される際の「番」部分に相当します。"
   }
 }
