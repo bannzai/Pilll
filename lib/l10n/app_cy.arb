@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "Gallwch newid rhif y bilsen ar gyfer heddiw",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Pan fo'r rhif ar y daflen bilsen a'r dos gwirioneddol yn mynd allan o gydamseru oherwydd anghofio cymryd dos neu gymysgu, gallwch ailosod rhif y bilsen i'w chymryd heddiw â llaw. Gallwch hefyd agor yr un sgrin o arddangosiad rhif y bilsen ar y sgrin hafan.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
