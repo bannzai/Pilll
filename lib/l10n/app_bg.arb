@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Показване на таблетния лист по дата",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Знайте датата, без да поглеждате в календара",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
