@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Қолданбаны ашпай-ақ аяқтау",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Премиум жазылымымен дереу пайдалануға болады",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
