@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Kostenlose Nummernabgleich-Funktion",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Im Einstellungs-Tab änderbar",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
