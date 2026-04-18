@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Ketuk tanggal untuk mencatat kondisi tubuh",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Tambahkan jadwal ke kalender",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
