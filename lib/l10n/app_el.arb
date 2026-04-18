@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Επισκόπηση παλαιότερων καταγραφών στο ημερολόγιο",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Πατήστε σε ημερομηνία για να καταγράψετε την κατάσταση υγείας σας",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
