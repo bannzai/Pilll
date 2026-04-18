@@ -2530,5 +2530,9 @@
   "calendarDiaryFeatureAppealHeadline": "Bilježite dnevno zdravstveno stanje u kalendaru",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Možete dodirnuti datum u kalendaru kako biste zabilježili fizičko stanje, raspoloženje, simptome i ostalo. Budući da to možete pregledati zajedno s evidencijom uzimanja tableta i menstrualnim zapisima, možete pratiti ritam svog tijela.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
