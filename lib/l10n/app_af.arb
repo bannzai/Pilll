@@ -2706,5 +2706,9 @@
   "menstruationFeatureAppealPoint2": "Siklus outomaties bepaal",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Pasmaak instellings",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
