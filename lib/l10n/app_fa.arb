@@ -2629,5 +2629,9 @@
   "restDurationFeatureAppealBody": "می‌توانید دوره‌ای را که برای مدتی مصرف قرص را متوقف می‌کنید در برگه قرص ثبت کنید. در طول استراحت، شماره مصرف پیش نمی‌رود و هنگام از سرگیری می‌توانید فوراً ثبت را از سر بگیرید.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "مکان در برنامه",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
