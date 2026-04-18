@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "周周期を自動で把握",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಹೊಂದಿಸಿ",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
