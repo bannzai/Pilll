@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "D Periodedaate, wo du in Pilll ufgzeichnet hesch, chönd automatisch mit de Gsundheits-App synchronisiert werde. Du chasch d Daate zämme mit angere Gsundheitsdaate in de Gsundheits-App aaluege oder d Periodedaate au in angerne Apps verwende.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Direkt vun dr Benachrichtigung ufzeichne",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
