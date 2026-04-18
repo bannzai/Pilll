@@ -2614,5 +2614,9 @@
   "alarmKitFeatureAppealBody": "С помощта на AlarmKit, наличен за iOS 26 и по-нови версии, ще получавате известия за приема на хапчето чрез аларма, която звъни надеждно дори в тих режим или режим на фокусиране.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Задайте номера на таблетката за днес",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
