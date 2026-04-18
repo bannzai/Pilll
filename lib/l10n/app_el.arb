@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Δείτε με μια ματιά πότε να το πάρετε",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Μπορείτε να εμφανίσετε ημερομηνίες στο φύλλο χαπιών",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
