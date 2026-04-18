@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Mag-record at Mahulaan ng Menstruwasyon",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Itala ang simula ng regla at alamin ang siklo",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
