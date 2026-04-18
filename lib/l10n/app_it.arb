@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint2": "Annotare lo stato di salute e riflettere",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Rivedi le registrazioni passate nel calendario",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
