@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Medikamenteneinnahme per Tipp direkt in der Benachrichtigung erfassen",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Wenn Sie die Erinnerungsbenachrichtigung lange gedrückt halten, wird die Aktion „Eingenommen\" angezeigt, und Sie können die Einnahme aufzeichnen, ohne die App zu öffnen.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
