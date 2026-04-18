@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "Kohanda tänase pilli numbrit",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Kui number on vale, paranda seadetes",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
