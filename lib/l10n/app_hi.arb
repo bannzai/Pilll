@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "रिमाइंडर द्वारा सूचित करें",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "तारीख पर टैप करके अपनी योजना लिखें",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
