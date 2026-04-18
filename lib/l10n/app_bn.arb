@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint1": "সাইলেন্ট/ফোকাস মোডেও বাজবে",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "অ্যালার্ম ঘড়ির মতো অ্যালার্ম শব্দ",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
