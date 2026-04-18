@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "Хабарландырудан тікелей қабылдауды жазу",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Қосымшаны ашпай-ақ хабарландырудан жазу",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
