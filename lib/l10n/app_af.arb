@@ -2694,5 +2694,9 @@
   "recordPillFeatureAppealPoint2": "Maklik ongedaan maak, selfs by foute",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Bekyk inname-geskiedenis enige tyd",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
