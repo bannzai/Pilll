@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Zikloa automatikoki detektatu",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Ezarpenak pertsonalizatu",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
