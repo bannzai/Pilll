@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Aplikazioa ireki gabe osatu",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Premium harpidetza izanez gero, zuzenean erabilgarri",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
