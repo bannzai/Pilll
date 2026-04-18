@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Befinden notieren und zurückblicken",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Vergangene Aufzeichnungen im Kalender überblicken",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
