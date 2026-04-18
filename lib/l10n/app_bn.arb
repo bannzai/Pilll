@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealShortDescription": "নম্বর ভুল হলে সেটিংসে ঠিক করুন",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "আজকের গ্রহণ নম্বর পরিবর্তন করা যাবে",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
