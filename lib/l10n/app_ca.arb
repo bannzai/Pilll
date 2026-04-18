@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint1": "Registre de descans de pastilles gratuït",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Comença des de l'engranatge a la cantonada superior dreta del full de píndoles",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
