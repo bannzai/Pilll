@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Төвлөрлийн горимд байхдаа ч мэдэгдэл ирнэ",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Тогтоосон цагт найдвартай сануулна",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
