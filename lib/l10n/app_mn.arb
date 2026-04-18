@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Аппликейшн дотрох байршил",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Төвлөрлийн горимд байхдаа ч мэдэгдэл ирнэ",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
