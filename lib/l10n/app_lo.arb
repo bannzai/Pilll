@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "ເບິ່ງບັນທຶກທີ່ຜ່ານມາໃນປະຕິທິນ",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "{\n  \"@@locale\": \"lo\",\n  \"tapDateToRecordCondition\": \"ແຕະວັນທີ່ເພື່ອບັນທຶກສຸຂະພາບ\",\n  \"@tapDateToRecordCondition\": {\n    \"description\": \"日付をタップして体調を記録\"\n  }\n}",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
