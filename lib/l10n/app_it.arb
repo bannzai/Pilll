@@ -2514,5 +2514,9 @@
   "calendarDiaryFeatureAppealTitle": "Calendario per registrare il tuo stato di salute",
   "@calendarDiaryFeatureAppealTitle": {
     "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Registra il tuo stato di salute quotidiano nel calendario",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
   }
 }
