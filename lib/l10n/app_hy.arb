@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Բժշկական այցելությունների օրերը հեշտությամբ կառավարեք",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Ծանուցում՝ հիշեցման միջոցով",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
