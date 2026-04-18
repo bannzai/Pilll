@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Einfach rückgängig machen, auch bei Fehlern",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Einnahmehistorie jederzeit einsehen",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
