@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Чимээгүй горимд ч эм уухаа мартахаас сэргийлье",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Чимээгүй горимд ч мэдэгдэл ирдэг",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
