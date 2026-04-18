@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Απλή ρύθμιση με ένα άγγιγμα",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Ελεύθερη επεξεργασία μηνύματος ειδοποίησης",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
