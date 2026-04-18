@@ -2466,5 +2466,9 @@
   "appearanceModeDateFeatureAppealTitle": "Mostrar fecha en la hoja de pastillas",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Consulta de un vistazo cuándo tomarlo",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
