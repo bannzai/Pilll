@@ -2718,5 +2718,9 @@
   "futureScheduleFeatureAppealPoint1": "Aggiungi un evento al calendario",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Gestisci facilmente i giorni di visita",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
