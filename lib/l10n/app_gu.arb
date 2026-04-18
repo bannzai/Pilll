@@ -2662,5 +2662,9 @@
   "appearanceModeDateFeatureAppealPoint1": "તારીખ પ્રમાણે પિલ શીટ દર્શાવો",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "કૅલેન્ડર જોયા વિના તારીખ ખ્યાલ આવે",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
