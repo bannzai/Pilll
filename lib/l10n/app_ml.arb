@@ -2466,5 +2466,9 @@
   "appearanceModeDateFeatureAppealTitle": "ഗുളിക ഷീറ്റിൽ തീയതി പ്രദർശിപ്പിക്കുക",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "എപ്പോൾ കഴിക്കണമെന്ന് ഒറ്റനോട്ടത്തിൽ അറിയാം",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
