@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Personalizza il messaggio di notifica",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Mostra la scheda della pillola per data",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
