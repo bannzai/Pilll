@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "როდესაც მიმდინარე აბების ფურცლების ჯგუფი დასრულდება, ახალი აბების ფურცლების ჯგუფი ავტომატურად შეიქმნება. ხელით გადართვა არ არის საჭირო და ჩანაწერის გამოტოვება არ მოხდება.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "მაღვიძარას მსგავსი ზარი",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
