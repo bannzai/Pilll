@@ -2762,5 +2762,9 @@
   "quickRecordFeatureAppealPoint2": "መተግበሪያውን ሳይከፍቱ ይጨርሱ",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "በፕሪሚየም ምዝገባ ቀጥታ ለመጠቀም ይቻላል",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
