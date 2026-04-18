@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "Alarma iratzargailuaren moduan jo",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Modu isilan ere ziurtasunez joko duten jakinarazpenak",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
