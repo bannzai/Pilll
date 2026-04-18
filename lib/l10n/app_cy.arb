@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Dim ond drwy dapio'r daflen bilsen ar y sgrin gartref, gallwch gofnodi'ch dos ar gyfer y diwrnod hwnnw. Hyd yn oed os ydych chi wedi cofnodi'n anghywir, gallwch ei ddadwneud drwy dapio unwaith eto. Gallwch hefyd wirio'ch hanes cymryd bilsen yn ddiweddarach, felly gallwch barhau'n dawel eich meddwl.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Cofnodi a rhagfynegi mislif",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
