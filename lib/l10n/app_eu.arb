@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Errore bat egin arren, erraz desegin",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Botika-historia edozein unetan kontsultatu",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
