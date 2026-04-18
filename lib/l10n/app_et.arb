@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Ühe puutega lihtne seadistus",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Redigeeri teavitussõnumeid vabalt",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
