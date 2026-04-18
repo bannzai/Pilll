@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Գլխավոր էջում թվին հպվելով նույնպես կարելի է բացել",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Անվճար դեղ չընդունելու օրերի գրանցում",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
