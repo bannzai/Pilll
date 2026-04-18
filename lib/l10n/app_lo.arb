@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "ບັນທຶກແລະຄາດໝາຍປະຈຳເດືອນ",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "ບັນທຶກວັນເລີ່ມຂອງປະຈຳເດືອນ ເພື່ອຕິດຕາມວົງຈອນ",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
