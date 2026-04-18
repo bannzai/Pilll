@@ -2706,5 +2706,9 @@
   "menstruationFeatureAppealPoint2": "Аўтаматычнае вызначэнне цыкла",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Наладзіць налады",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
