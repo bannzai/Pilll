@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Personalizza liberamente il messaggio di notifica per l'assunzione",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "La notifica predefinita \"È ora di prendere la pillola\" può essere personalizzata con le parole che preferisci. Prova a sostituirla con frasi che ti motivano, il nome del tuo animale domestico o qualsiasi testo che renda più piacevole l'assunzione quotidiana.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
