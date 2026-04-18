@@ -2406,5 +2406,9 @@
   "lifetimeSubscriptionWarning": "សូមអរគុណចំពោះការទិញផែនការទិញមួយលើក។ ប្រសិនបើអ្នកកំពុងជាវផែនការប្រចាំខែ ឬប្រចាំឆ្នាំ សូមកុំភ្លេចបោះបង់ការជាវនោះ។",
   "@lifetimeSubscriptionWarning": {
     "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "ការទិញផែនការបង់មួយដងនឹងមិនលុបចោលការជាវប្រចាំខែ/ប្រចាំឆ្នាំដោយស្វ័យប្រវត្តិ។",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
   }
 }
