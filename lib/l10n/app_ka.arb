@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "პილების ფურცლის ჩვენება თარიღის მიხედვით",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "კალენდრის ნახვის გარეშე თარიღის ცოდნა",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
