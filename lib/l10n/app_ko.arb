@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "진료일을 간편하게 관리",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "리마인더로 알림",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
