@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "Selaa merkintöjä kalenterissa",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Merkitse vointisi ja tarkastele",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
