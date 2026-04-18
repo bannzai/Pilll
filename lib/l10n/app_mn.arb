@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Сэрүүлэгтэй адилхан дохионы дуу",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 болон түүнээс дээш · Тохиргооны табаас идэвхжүүлэх",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
