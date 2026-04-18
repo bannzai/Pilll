@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Muutettavissa pilleriarkin asetuksista",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Kirjaa pillerin otto napauttamalla pilleriarkkia",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
