@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Қолданба ішіндегі бөлімдер",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Фокус режимінде де ескертулер жеткізіледі",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
