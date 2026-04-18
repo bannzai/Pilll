@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Luo seuraava pillerisivu automaattisesti",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Kun nykyinen pillerikorttisarja päättyy, uusi pillerikorttisarja luodaan automaattisesti. Manuaalista vaihtamista ei tarvita, eikä kirjauksiin tule aukkoja.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
