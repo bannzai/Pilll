@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealTitle": "የክኒን ዕረፍት ወቅት ይዝግቡ",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "ዕረፍትና ማቋረጥን በትክክል ያስተዳድሩ",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
