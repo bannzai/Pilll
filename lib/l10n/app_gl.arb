@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Só con tocar a folla de pílulas na pantalla de inicio, podes rexistrar a toma do día. Se rexistrastes por erro, podes cancelalo tocando de novo. Tamén podes consultar o historial de tomas máis adiante, polo que podes continuar tranquilamente.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Rexistrar e predicir a regra",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
