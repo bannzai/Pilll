@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Pille-Boge antippe zum Iinahme ufzeichne",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Eifach rückgängig mache, au wànn mr sich vertu het",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
