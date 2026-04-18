@@ -2686,5 +2686,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Kan gewysig word vanuit pilblad-instellings",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Teken pillgebruik aan deur op die pilblad te tik",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
