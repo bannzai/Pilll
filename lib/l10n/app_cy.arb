@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "Cofnodi eich cyflwr iechyd dyddiol ar y calendr",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Gallwch dapio dyddiad ar y calendr i gofnodi eich cyflwr corfforol, hwyliau, symptomau a mwy. Gan y gallwch eu gwirio gyda chofnodion cymryd tabledi a chofnodion mislif, gallwch ddeall rhythm eich corff.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
