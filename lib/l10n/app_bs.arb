@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealTitle": "Bilježi i predvidi menstruaciju",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Zabilježite početak menstruacije i pratite ciklus",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
