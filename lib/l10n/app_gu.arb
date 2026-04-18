@@ -2666,5 +2666,9 @@
   "appearanceModeDateFeatureAppealPoint2": "કૅલેન્ડર જોયા વિના તારીખ ખ્યાલ આવે",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "પિલ શીટ સેટિંગ્સથી બદલી શકાય છે",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
