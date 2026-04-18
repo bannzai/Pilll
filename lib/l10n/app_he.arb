@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "התאמת ההגדרות",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "הצג רשומות בלוח השנה",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
