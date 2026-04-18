@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Pildora-orria amaitzean aldaketa automatikoa",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Ez da eskuzko sorrera-eragiketarik behar",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
