@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "In de Pillblatt-Iistellige änderbar",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Pille-Boge antippe zum Iinahme ufzeichne",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
