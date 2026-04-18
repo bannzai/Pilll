@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Žadintuvo tipo vartojimo priminimas",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "Using AlarmKit available on iOS 26 and later, notify pill intake with alarms that reliably sound even in silent mode or Focus mode.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
