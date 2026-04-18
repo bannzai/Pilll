@@ -2610,5 +2610,9 @@
   "alarmKitFeatureAppealHeadline": "እንደ መነቃቂያ ሰዓት ያለ የመድሃኒት አላርም",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "በ iOS 26 እና ከዚህ በኋላ ሊጠቀሙበት የሚችሉትን AlarmKit በመጠቀም፣ ጸጥ ያለ ሁኔታ ወይም የትኩረት ሁኔታ ውስጥ ቢሆኑም እንኳ በእርግጠኝነት የሚጮህ ቅስቀሳ ክኒን መዋጥዎን ያሳውቅዎታል።",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
