@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Αυτόματη εναλλαγή στη λήξη φύλλου χαπιών",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Δεν απαιτείται χειροκίνητη δημιουργία",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
