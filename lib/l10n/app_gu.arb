@@ -2802,5 +2802,9 @@
   "featureAppealLocationLabel": "એપ્લિકેશનમાં સ્થાન",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "માસિક નોંધોને આપમેળે ડેટા સાથે સમન્વયિત કરો",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
