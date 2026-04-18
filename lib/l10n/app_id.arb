@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Menyusuri catatan masa lalu melalui kalender",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Ketuk tanggal untuk mencatat kondisi tubuh",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
