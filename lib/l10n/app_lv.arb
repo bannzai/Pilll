@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealHeadline": "Vienu pieskārienu reģistrēšana paziņojumu ekrānā",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Ilgi nospiežot atgādinājuma paziņojumu, parādīsies darbība „Atzīmēt kā lietotu”, kas ļauj reģistrēt tabletes lietošanu, neatverot lietotni.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
