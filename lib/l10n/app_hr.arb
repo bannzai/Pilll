@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Jednostavno upravljanje danima odlaska na pregled",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Obavijesti putem podsjetnika",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
