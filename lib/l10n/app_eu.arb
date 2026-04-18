@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "Mesedez, sartu kontsultaren edukia",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Eskerrik asko behin-betiko plana erosteagatik. Hileko edo urteko planean izena emanda bazaude, ez ahaztu harpidetza bertan behera uzten.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
