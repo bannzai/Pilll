@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "Cofnodi cynlluniau'r dyfodol ar y calendr",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Gallwch ysgrifennu cynlluniau yn y dyfodol ar y calendr, megis apwyntiadau meddyg a chynlluniau teithio. Gan y gallwch wirio hyn ochr yn ochr â chylch cymryd eich pilsen, gallwch wneud cynlluniau sy'n ystyried amserlen eich mislif hefyd.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
