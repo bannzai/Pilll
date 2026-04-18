@@ -2774,5 +2774,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Əl ilə yaratma əməliyyatına ehtiyac yoxdur",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Parametrlər tabındakı keçidlə dəyişdirin",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
