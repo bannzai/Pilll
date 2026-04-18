@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealBody": "Tablešu lapas šūnās attēlotie datumi ļauj uzreiz pārskatīt gan iepriekšējo lietošanas vēsturi, gan nākotnes lietošanas plānus. Pārslēdzieties starp \"Numura\" un \"Datuma\" režīmu, lai izvēlētos sev atbilstošāko skatu.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Vienkārši pārskatiet tablešu lietošanas vēsturi.",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
