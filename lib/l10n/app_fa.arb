@@ -2497,5 +2497,9 @@
   "menstruationFeatureAppealHeadline": "ثبت و پیش‌بینی قاعدگی",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "کافی است هر بار قاعدگی خود را ثبت کنید تا بتوانید تاریخچه قاعدگی‌های گذشته را به صورت فهرست مشاهده نمایید. تاریخ قاعدگی بعدی نیز به طور خودکار پیش‌بینی می‌شود، بنابراین می‌توانید برنامه‌ریزی بهتری داشته باشید.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
