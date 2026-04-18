@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Պարամետրերի вкладկայով անցուղճեք դիսպիչով",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Ձայն հնչելու է նույնիսկ լուռ կամ կենտրոնացման ռեժիմում",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
