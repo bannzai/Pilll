@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "No se requiere creación manual",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Cambiar con el interruptor de la pestaña de configuración",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
