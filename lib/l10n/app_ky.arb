@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Башкы экрандагы сандын үстүн тийүү менен да ачса болот",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Акысыз дары ичүүнү токтотуу жазуусу",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
