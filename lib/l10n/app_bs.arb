@@ -2566,5 +2566,9 @@
   "healthCareIntegrationFeatureAppealBody": "Podaci o menstruaciji zabilježeni u Pilll-u mogu se automatski sinkronizirati s aplikacijom Zdravlje. Možete ih pregledati zajedno s ostalim zdravstvenim podacima u aplikaciji Zdravlje, a podaci o menstruaciji postaju dostupni i u drugim aplikacijama.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Brzi zapis uzimanja iz obavijesti",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
