@@ -2734,5 +2734,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "ആർത്തവ രേഖകൾ സ്വയമേവ ഡാറ്റ സമന്വയം",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ഹെൽത്ത്കെയർ ആപ്പിലേക്ക് സമന്വയിപ്പിക്കുക",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
