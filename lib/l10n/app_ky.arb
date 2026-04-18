@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Дарынын таблетка барагын автоматтык түрдө кошуу",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Кийинки таблетка барагын автоматтык түрдө түзүү",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
