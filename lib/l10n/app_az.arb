@@ -2754,5 +2754,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple Health dəstəyi",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Bildiriş aksiyası ilə qəbul qeydi",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
