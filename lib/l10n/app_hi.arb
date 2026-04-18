@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "घड़ी की तरह दवा लेने की याद दिलाने वाला अलार्म",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 और उसके बाद के संस्करणों में उपलब्ध AlarmKit का उपयोग करके, साइलेंट मोड और फोकस मोड में भी निश्चित रूप से बजे वाले अलार्म के जरिए पिल लेने की याद दिलाता है।",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
