@@ -2690,5 +2690,9 @@
   "menstruationFeatureAppealPoint2": "ચક્ર આપોઆપ ઓળખો",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "સેટિંગ્સ કસ્ટમાઇઝ કરો",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
