@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Se o número está desaxustado, corríxeo na configuración",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Podes cambiar o número de pílula que tomas hoxe",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
