@@ -2658,5 +2658,9 @@
   "criticalAlertFeatureAppealPoint2": "تذكير موثوق في الوقت المحدد",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "إعداد سهل بنقرة واحدة",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
