@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "ഔഷധ ചരിത്രം എളുപ്പത്തിൽ അവലോകനം ചെയ്യൂ",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "എപ്പോൾ കഴിച്ചുവെന്ന് ഉടനടി അറിയാം",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
