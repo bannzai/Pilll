@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "ໃຊ້ AlarmKit ທີ່ມີໃນ iOS 26 ເພື່ອແຈ້ງເຕືອນເວລາກິນຢາດ້ວຍສຽງທີ່ຈະດັ່ງແມ່ນໃນໂມດ Silent ຫຼື Focus.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "ປັບຈຳນວນການກິນມື້ນີ້",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
