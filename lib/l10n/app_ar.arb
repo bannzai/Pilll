@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealTitle": "ضبط رقم الجرعة لليوم",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "إذا اختلف الرقم، صحّحه من الإعدادات",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
