@@ -2626,5 +2626,9 @@
   "todayPillNumberFeatureAppealHeadline": "Jy kan vandag se pilnommer verander",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Wanneer die nommer op die pilblad en u werklike inname nie ooreenstem nie weens vergeet of verwarring, kan u vandag se pilnommer handmatig aanpas. U kan ook dieselfde skerm oopmaak vanaf die pilnommervertoning op die tuisskerm.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
