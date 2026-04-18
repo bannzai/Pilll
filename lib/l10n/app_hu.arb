@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Beírhatod a naptárba a jövőbeli eseményeket, például orvosi viziteket vagy utazásokat. Mivel ezeket együtt láthatod a fogamzásgátló szedési ciklusával, olyan terveket készíthetsz, amelyek figyelembe veszik a várható menstruációs időszakodat.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Kapcsolódás az Egészség alkalmazáshoz",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
