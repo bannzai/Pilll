@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Einnahmealarm wie ein Wecker",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "Mit AlarmKit, das ab iOS 26 verfügbar ist, werden Sie durch einen Alarm, der auch im Stumm- und Fokusmodus zuverlässig ertönt, an die Einnahme Ihrer Pille erinnert.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
