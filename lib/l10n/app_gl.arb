@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "Xestión precisa de descansos e interrupcións",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Facer un descanso na toma da pílula",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
