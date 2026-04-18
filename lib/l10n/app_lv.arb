@@ -2526,5 +2526,9 @@
   "futureScheduleFeatureAppealTitle": "Pieraksti nākotnes plānus",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Pārvaldiet nākotnes notikumus, piemēram, ārsta vizītes",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
