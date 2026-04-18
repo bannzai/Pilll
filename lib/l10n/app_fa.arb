@@ -2609,5 +2609,9 @@
   "todayPillNumberFeatureAppealHeadline": "می‌توانید شماره قرص امروز را تغییر دهید",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "وقتی به دلیل فراموشی یا اشتباه، شماره روی برگه قرص با مصرف واقعی همخوانی ندارد، می‌توانید شماره قرص امروز را به‌صورت دستی تنظیم کنید. همچنین می‌توانید همین صفحه را از نمایش عدد قرص در صفحه اصلی باز کنید.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
