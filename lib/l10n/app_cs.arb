@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Klepněte na datum a zapište plán",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Automatická synchronizace dat o menstruaci",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
