@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealPoint2": "Anota el teu estat de salut i revisa-ho",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Revisa els registres passats al calendari",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
