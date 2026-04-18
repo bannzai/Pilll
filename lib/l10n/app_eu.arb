@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Ezarpen fitxako etengailuarekin aldatu",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Isileko/Arreta moduan ere jotzen du",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
