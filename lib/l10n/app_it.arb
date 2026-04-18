@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "Collegabile con Salute",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "I dati del ciclo mestruale registrati in Pilll possono essere sincronizzati automaticamente con le app per la salute. Potrai consultarli insieme ad altri dati sanitari e consentire ad altre app di utilizzarli.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
