@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "{\n  \"fixMisalignedNumbers\": \"Ef númerin eru röng, leiðréttu þau í Stillingum.\",\n  \"@fixMisalignedNumbers\": {\n    \"description\": \"今日の服用番号変更機能のFeatureAppeal Barの短い説明文\"\n  }\n}",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Þú getur breytt númeri pillunnar sem á að taka í dag",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
