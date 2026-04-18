@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "ಯಾವಾಗ ತೆಗೆದುಕೊಂಡಿದ್ದೀರೋ ಎಂಬುದನ್ನು ತಕ್ಷಣವೇ ನೋಡಬಹುದು",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "ಹೋಮ್ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ಪಿಲ್ ಸೇವೆಯನ್ನು ದಾಖಲಿಸಿ",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
