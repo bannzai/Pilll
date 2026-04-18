@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "ವೈದ್ಯರ ಭೇಟಿ ಅಥವಾ ಪ್ರಯಾಣದ ಯೋಜನೆಗಳಂತಹ ಭವಿಷ್ಯದ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ಕ್ಯಾಲೆಂಡರ್‌ಗೆ ದಾಖಲಿಸಬಹುದು. ಪಿಲ್ ಸೇವನೆಯ ಚಕ್ರದೊಂದಿಗೆ ಒಂದಾಗಿ ಅವುಗಳನ್ನು ಪರಿಶೀಲಿಸಬಹುದಾದ್ದರಿಂದ, ನಿಮ್ಮ ಮಾಸಿಕ ಚಕ್ರದ ವೇಳಾಪಟ್ಟಿಗಳನ್ನು ಪರಿಗಣಿಸಿ ಯೋಜನೆ ರೂಪಿಸಬಹುದು.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "ಆರೋಗ್ಯದೊಂದಿಗೆ ಸಂಪರ್ಕ",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
