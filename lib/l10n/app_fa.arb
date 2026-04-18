@@ -2777,5 +2777,9 @@
   "todayPillNumberFeatureAppealPoint1": "امکان تنظیم شماره به صورت رایگان",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "می‌توان از برگه تنظیمات تغییر داد",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
