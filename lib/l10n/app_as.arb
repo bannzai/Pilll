@@ -2810,5 +2810,9 @@
   "restDurationFeatureAppealPoint2": "পিল শ্বীটৰ ওপৰ সোঁফালৰ গিয়াৰ আইকনৰ পৰা আৰম্ভ কৰক",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "সময়কাল সম্পাদনা আৰু পুনৰাৰম্ভও সহজ",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
