@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "A Pilll-ben rögzített menstruációs adatokat automatikusan szinkronizálhatja az egészségügyi alkalmazással. Így a menstruációs adatokat más egészségügyi adatokkal együtt megtekintheti az Egészség alkalmazásban, illetve más alkalmazások is felhasználhatják ezeket az adatokat.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Értesítésből közvetlen rögzítés",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
