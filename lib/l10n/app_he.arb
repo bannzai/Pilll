@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "סנכרן עם אפליקציית הבריאות",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "תמיכה ב-Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
