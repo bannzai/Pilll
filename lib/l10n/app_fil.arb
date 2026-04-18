@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "Madaling suriin ang kasaysayan ng paginom",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Mabilis na malaman kung kailan ka uminom",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
