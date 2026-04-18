@@ -2810,5 +2810,9 @@
   "restDurationFeatureAppealPoint2": "Begin by die rataansig regs bo op die pilblad",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Maklike redigering en hervatting van tydperke",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
