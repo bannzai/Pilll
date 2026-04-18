@@ -2502,5 +2502,9 @@
   "menstruationFeatureAppealShortDescription": "Hileko hasiera-eguna erregistratu eta zikloa ezagutu",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Hilekoa erregistratu eta aurreikusi daiteke",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
