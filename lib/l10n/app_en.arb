@@ -2732,5 +2732,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Automatically sync period records",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Sync with Health App",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
