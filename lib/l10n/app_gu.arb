@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint3": "પિલ શીટ સેટિંગ્સથી બદલી શકાય છે",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "પિલ શીટ પર ટૅપ કરીને સેવન નોંધો",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
