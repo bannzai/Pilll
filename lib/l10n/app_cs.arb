@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Snadno zaznamenejte datum začátku menstruace",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Automatické sledování cyklu",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
