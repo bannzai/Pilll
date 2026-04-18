@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint2": "To var mainīt iestatījumu cilnē.",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Var atvērt arī, pieskaroties sākumlapas skaitlim.",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
