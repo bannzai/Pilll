@@ -2502,5 +2502,9 @@
   "menstruationFeatureAppealShortDescription": "생리 시작일을 기록해 생리 주기를 파악하세요",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "생리 기록 및 예측",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
