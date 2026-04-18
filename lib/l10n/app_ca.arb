@@ -2514,5 +2514,9 @@
   "menstruationFeatureAppealHeadline": "Registra i prediu la teva menstruació",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Simplement registra quan et vingui la regla per consultar l'historial dels teus cicles passats. La pròxima data prevista també es calcula automàticament, per ajudar-te a planificar-te millor.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
