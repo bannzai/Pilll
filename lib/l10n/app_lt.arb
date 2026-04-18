@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Tęsinys",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Peržiūrėkite vartojimo istoriją bet kada",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
