@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Սկսեք՝ սեղմելով պիլշիթի աջ վերին անկյունում գտնվող կարգավորումների պատկերակը։",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Մենստրուացիայի խմբագրումն ու վերսկսումը նույնպես հեշտ են",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
