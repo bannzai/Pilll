@@ -2756,5 +2756,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Auto-switch on pill sheet completion",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "No manual creation needed",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
