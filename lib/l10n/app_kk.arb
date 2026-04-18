@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "Бүгін ішетін таблетканың нөмірін өзгертуге болады",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "今日の服用番号を手動で合わせ直せます。ホームのピル数字表示からも同じ画面を開けます。",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
