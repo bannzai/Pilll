@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealShortDescription": "Odmah saznajte kada ste uzeli tabletu",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Evidentirajte uzimanje pilule na početnom ekranu",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
