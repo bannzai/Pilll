@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "ಯಾವುದೇ ಸಮಯದಲ್ಲೂ ನಿಮ್ಮ ಮದ್ದು ಸೇವನೆಯ ದಾಖಲೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "生理開始日をかんたん記録",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
