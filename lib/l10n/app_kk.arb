@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Параметрлер қойындысындағы қосқышпен ауыстырыңыз",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Сəйле́нт/зейі́н режимінде де дыбыстайды",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
