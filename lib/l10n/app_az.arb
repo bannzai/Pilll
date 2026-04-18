@@ -2674,5 +2674,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Özünüzə məxsus bildiriş mesajı üçün",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Həb cədvəlini tarixə görə göstər",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
