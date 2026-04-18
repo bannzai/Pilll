@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Допрете датум во календарот за да внесете информации за здравјето, расположението, симптомите и слично. Можете да ги прегледате заедно со записите за земање таблети и за менструацијата, па така полесно ќе го следите ритамот на вашето тело.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Запишете ги вашите идни планови",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
