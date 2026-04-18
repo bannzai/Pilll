@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Oznámení i v tichém režimu",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Povolením funkce Critical Alert budete dostávat upozornění na užití pilulky i v režimu Nerušit nebo tichém režimu. Nastavte si to, abyste nezmeškali důležitý okamžik pro užití svých pilulek.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
