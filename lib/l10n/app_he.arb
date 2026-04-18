@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "רישום נטילה דרך פעולת ההתראה",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "הושלם ללא פתיחת האפליקציה",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
