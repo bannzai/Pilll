@@ -2754,5 +2754,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Automatica commutazione alla fine della confezione di pillole",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Creazione manuale non necessaria",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
