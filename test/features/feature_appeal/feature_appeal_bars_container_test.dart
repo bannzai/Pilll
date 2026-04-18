@@ -189,19 +189,19 @@ void main() {
     /// テストでは today を任意に固定して daysBetween(epoch, today) % candidates.length が想定の Bar に一致するかを確認する。
     Type expectedBarTypeForIndex(int index) {
       return [
-        if (Platform.isIOS) CriticalAlertAnnouncementBar,
+        QuickRecordAnnouncementBar,
         ReminderNotificationCustomizeWordAnnouncementBar,
+        RestDurationAnnouncementBar,
+        if (Platform.isIOS) CriticalAlertAnnouncementBar,
         AppearanceModeDateAnnouncementBar,
         RecordPillAnnouncementBar,
         MenstruationAnnouncementBar,
         CalendarDiaryAnnouncementBar,
         FutureScheduleAnnouncementBar,
         HealthCareIntegrationAnnouncementBar,
-        QuickRecordAnnouncementBar,
         CreatingNewPillSheetAnnouncementBar,
         if (Platform.isIOS) AlarmKitAnnouncementBar,
         TodayPillNumberAnnouncementBar,
-        RestDurationAnnouncementBar,
       ][index];
     }
 
@@ -229,7 +229,7 @@ void main() {
         ),
       );
 
-      // epoch と同日 → daysBetween=0 → index 0 → CriticalAlertAnnouncementBar
+      // epoch と同日 → daysBetween=0 → index 0 → QuickRecordAnnouncementBar
       expect(find.byType(expectedBarTypeForIndex(0)), findsOneWidget);
     });
 
@@ -289,10 +289,11 @@ void main() {
         ),
       );
 
-      // Reminder は除外。Platform.isIOS=false の候補先頭は Reminder なので、次は AppearanceModeDate。
+      // Reminder は除外。Platform.isIOS=false の候補先頭は QuickRecord なので、
+      // daysBetween=0 → index 0 = QuickRecord がそのまま残る。
       expect(find.byType(ReminderNotificationCustomizeWordAnnouncementBar),
           findsNothing);
-      expect(find.byType(AppearanceModeDateAnnouncementBar), findsOneWidget);
+      expect(find.byType(QuickRecordAnnouncementBar), findsOneWidget);
     });
 
     testWidgets(
@@ -321,9 +322,10 @@ void main() {
       );
 
       // Platform.isIOS=false (macOS/Linux) かつ appIsReleased=false で候補は 10 件。
-      // epoch+2 日 → daysBetween=2 → index 2 = Menstruation (Reminder, RecordPill, Menstruation, ...)。
+      // 並び順: QuickRecord / Reminder / RestDuration / RecordPill / Menstruation / ...
+      // epoch+2 日 → daysBetween=2 → index 2 = RestDuration。
       expect(find.byType(AppearanceModeDateAnnouncementBar), findsNothing);
-      expect(find.byType(MenstruationAnnouncementBar), findsOneWidget);
+      expect(find.byType(RestDurationAnnouncementBar), findsOneWidget);
     });
 
     testWidgets('13 機能全 dismiss → SizedBox.shrink が表示される', (tester) async {
