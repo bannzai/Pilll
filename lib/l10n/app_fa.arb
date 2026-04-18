@@ -2621,5 +2621,9 @@
   "restDurationFeatureAppealShortDescription": "مدیریت دقیق وقفه و قطع مصرف",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "استراحت از مصرف قرص",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
