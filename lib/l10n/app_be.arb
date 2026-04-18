@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealShortDescription": "Адразу даведайцеся, калі прынялі таблетку",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Запісвайце прыём таблетак на галоўным экране",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
