@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Gellir ei newid o osodiadau'r daflen bilsen",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Cofnodi cymryd tabledi trwy dapio'r daflen bilsen",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
