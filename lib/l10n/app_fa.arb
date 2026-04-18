@@ -2773,5 +2773,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 به بالا・فعال‌سازی از تب تنظیمات",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "امکان تنظیم شماره به صورت رایگان",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
