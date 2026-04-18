@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Dodirnite datum u kalendaru da zabilježite svoje zdravstveno stanje, raspoloženje, simptome i slično. Možete to pregledati zajedno s evidencijom uzimanja kontracepcijskih pilula i zapisima o menstruaciji, pa ćete bolje razumjeti ritam svog tijela.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "{\n  \"@@locale\": \"hr\",\n  \"feature_appeal_future_plans\": \"Zapišite buduće planove\",\n  \"@feature_appeal_future_plans\": {\n    \"description\": \"未来の予定機能のFeatureAppeal Barタイトル\"\n  }\n}",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
