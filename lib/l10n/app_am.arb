@@ -2738,5 +2738,9 @@
   "futureScheduleFeatureAppealPoint3": "በሪማይንደር ማሳወቅ",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "ቀን ይንኩ እና ቀጠሮ ይጻፉ",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
