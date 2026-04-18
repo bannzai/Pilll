@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Το δικό σου μήνυμα ειδοποίησης",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Εμφάνιση φύλλου χαπιών κατά ημερομηνία",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
