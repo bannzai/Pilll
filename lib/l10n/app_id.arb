@@ -2418,5 +2418,9 @@
   "lifetimePurchaseNotice3": "Silakan batalkan terlebih dahulu sebelum melakukan pembelian.",
   "@lifetimePurchaseNotice3": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "Coba fitur ini",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
   }
 }
