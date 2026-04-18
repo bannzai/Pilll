@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint3": "Paziņot ar atgādinājumu",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Pieskarieties datumam, lai pievienotu ierakstu",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
