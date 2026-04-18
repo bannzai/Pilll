@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "मासिक धर्म रिकॉर्ड को स्वचालित रूप से समक्रमित करें",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "हेल्थ ऐप के साथ सिंक करें",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
