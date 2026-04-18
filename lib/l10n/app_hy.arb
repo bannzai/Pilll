@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Զարթուցիչի նման ընդունման հիշեցում",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 և ավելի ուշ հասանելի AlarmKit-ն օգտագործելով՝ հավելվածը կհիշեցնի պիլ վերցնելը՝ այնպիսի ազդարարումներով, որոնք վստահաբար կհնչեն նույնիսկ լուռ ռեժիմում կամ կենտրոնացման ռեժիմում։",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
