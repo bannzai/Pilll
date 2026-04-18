@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "\"healthCareIntegrationTitle\": \"Ден-соолук колдонмосу менен синхрондоштуруу\",\n\"@healthCareIntegrationTitle\": {\n  \"description\": \"ヘルスケア連携機能のFeatureAppeal Barタイトル\"\n}",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Айыздын жазууларын ден-соолук тиркемеси менен бөлүшүү",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
