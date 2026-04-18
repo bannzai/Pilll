@@ -2650,5 +2650,9 @@
   "featureAppealLocationLabel": "Ubicació a l'aplicació",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Rep notificacions fins i tot en mode de concentració",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
