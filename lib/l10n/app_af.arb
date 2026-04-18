@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Skakel met Gesondheidsorg",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Deel menstruasie-rekords met Gesondheid",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
