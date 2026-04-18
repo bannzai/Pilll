@@ -2706,5 +2706,9 @@
   "menstruationFeatureAppealPoint2": "Detecta el cicle automàticament",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Personalitza la configuració",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
