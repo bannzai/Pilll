@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "แก้ไขข้อความแจ้งเตือนการทานยาตามต้องการ",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "ທ່ານສາມາດປັບປຸງຂໍ້ຄວາມມາດຕະຖານ «ເວລາທີ່ຈະກິນຢາ» ເປັນຄຳທີ່ທ່ານມັກໄດ້ — ອາດເປັນຄຳທີ່ກະຕ້ືງໃຈ ຫຼືແມ່ນຊື່ສັດນ້ອຍຂອງທ່ານ. ລອງແປງຂໍ້ຄວາມເພື່ອໃຫ້ການຮັບຢາປະຈຳວັນຂອງທ່ານມີຄວາມສຶກມ່ວນຊື່ນຂື້ນ.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
