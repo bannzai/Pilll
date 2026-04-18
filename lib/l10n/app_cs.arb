@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Standardní zprávu „Je čas vzít pilulku\" si můžete přizpůsobit podle vlastního přání. Zkuste ji změnit na motivující slova, jméno svého mazlíčka nebo cokoliv jiného, co vám udělá každodenní užívání příjemnější.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Zobrazit datum na tabletovém archu",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
