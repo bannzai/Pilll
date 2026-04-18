@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Ao mostrar as datas nas celas da folla de pastillas, pode comprobar dun vistazo o historial de tomas pasadas e as tomas futuras previstas. Cambie entre o modo «Número» e o modo «Data» para escoller a visualización que máis lle conveña.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Revisar o historial de tomas facilmente",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
