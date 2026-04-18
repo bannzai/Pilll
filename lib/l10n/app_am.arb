@@ -2614,5 +2614,9 @@
   "alarmKitFeatureAppealBody": "በ iOS 26 እና ከዚህ በኋላ ሊጠቀሙበት የሚችሉትን AlarmKit በመጠቀም፣ ጸጥ ያለ ሁኔታ ወይም የትኩረት ሁኔታ ውስጥ ቢሆኑም እንኳ በእርግጠኝነት የሚጮህ ቅስቀሳ ክኒን መዋጥዎን ያሳውቅዎታል።",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "የዛሬን የዶዝ ቁጥር ያስተካክሉ",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
