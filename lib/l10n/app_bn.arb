@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealTitle": "ভবিষ্যতের পরিকল্পনা লিখে রাখুন",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "ভবিষ্যতের সময়সূচি পরিচালনা করুন যেমন ডাক্তারের অ্যাপয়েন্টমেন্ট",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
