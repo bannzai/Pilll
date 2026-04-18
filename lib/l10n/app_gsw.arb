@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Automatisch Wechsle bim Pillblatt-Ändi",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Kei manuelli Erstellig nötig",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
