@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Нүүр дэлгэцийн пил хуудасыг зөвхөн товшиход тухайн өдрийн хэрэглээг бүртгэж болно. Буруу бүртгэсэн тохиолдолд ч дахин товшиход цуцлах боломжтой. Хэрэглээний түүхийг хожим нь шалгах боломжтой тул итгэлтэйгээр үргэлжлүүлж болно.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Менструалиа бүртгэж таамаглах",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
