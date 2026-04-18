@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealPoint2": "Noteer gesondheid en kyk terug",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Beskou verlede rekords op die kalender",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
