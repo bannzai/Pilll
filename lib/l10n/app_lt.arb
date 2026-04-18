@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Nustatymų skirtuke galima pakeisti",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Taip pat galima atidaryti palietus skaičių pagrindiniame ekrane.",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
