@@ -2550,5 +2550,9 @@
   "futureScheduleFeatureAppealBody": "የሐኪም ቀጠሮዎችን፣ የጉዞ ዕቅዶችን እና ሌሎች የወደፊት ዕቅዶችን በቀን መቁጠሪያ ላይ መዝገብ ይችላሉ። ከፒል መውሰጃ ዑደት ጋር አብሮ ማረጋገጥ ስለሚቻል፣ የወር አበባን ታሳቢ ያደረገ ዕቅድ ማዘጋጀት ይቻላል።",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "ከጤና ክብካቤ ጋር ተቀናጅ",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
