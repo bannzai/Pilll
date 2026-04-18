@@ -2742,5 +2742,9 @@
   "futureScheduleFeatureAppealLocationHint": "তারিখে ট্যাপ করে পরিকল্পনা লিখুন",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "মাসিকের রেকর্ড স্বয়ংক্রিয়ভাবে ডেটা সংযুক্ত করুন",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
