@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Indem in de Felder vum Pilleschéiss Datume aagzeigt werre, kennt ihr d'vergangeni Éinnahmegeschicht un d'zukünftige Éinnahmepläne uf ene Blick kontrolliere. Wechselt zwische em «Nummerä»-Modus un em «Datum»-Modus, un wählt d'Aazäig, wu am beschte zu eich passt.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Einnahmehistori eifach überblicke",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
