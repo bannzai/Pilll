@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 და შემდეგ — პარამეტრების ჩანართიდან ჩართვა",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "უფასო ნომრების შეთავსების ფუნქცია",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
