@@ -2674,5 +2674,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "El teu missatge de notificació personalitzat",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Mostra el full de píndoles per data",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
