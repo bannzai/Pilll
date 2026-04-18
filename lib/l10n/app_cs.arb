@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "Pokud jste zapomněli užít tabletu nebo ji zaměnili a číslo na blistru se neshoduje se skutečně užitou tabletou, můžete ručně opravit číslo tablety pro dnešní den. Stejnou obrazovku lze otevřít také z číselného zobrazení tablet na domovské obrazovce.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Zaznamenat přestávku v užívání",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
