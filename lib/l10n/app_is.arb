@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 eða nýrri — virkja í Stillingarflipanum",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Ókeypis aðgerð til að samræma númer",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
