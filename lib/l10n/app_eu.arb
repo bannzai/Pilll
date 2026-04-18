@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Modu isilan ere ziurtasunez joko duten jakinarazpenak",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Esnatzeko alarma bezalako botika-alerta",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
