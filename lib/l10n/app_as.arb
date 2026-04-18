@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint1": "ফোকাছ মোডত থাকোঁতেও জাননী আহে",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "নিৰ্ধাৰিত সময়ত নিশ্চিতভাৱে সোঁৱৰাই দিয়া",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
