@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealTitle": "Podesite broj tablete za danas",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Ako je broj pomaknut, ispravite u postavkama",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
