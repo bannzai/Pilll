@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Revisa el historial pasado en el calendario",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Toca una fecha para registrar tu estado de salud",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
