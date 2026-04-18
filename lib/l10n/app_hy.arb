@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Ծանուցումները կհասչեն նաև լռակյաց ռեժիմում",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alert-ը միացնելով՝ կարող եք ստանալ դեղերի ընդունման ծանուցումներ նույնիսկ երբ սարքը «Չխանգարել» (Do Not Disturb) կամ «Լուռ» ռեժիմում է։ Որպեսզի չմոռանաք կարևոր դեղերի ընդունման ժամանակները, խորհուրդ ենք տալիս միացնել այն։",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
