@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Tilkynna með áminningu",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Ýttu á dagsetningu til að skrá áætlun",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
