@@ -2502,5 +2502,9 @@
   "menstruationFeatureAppealShortDescription": "Kirjaa kuukautisten alkamispäivä ja seuraa sykliäsi",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Voit tallentaa ja ennustaa kuukautisesi",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
