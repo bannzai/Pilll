@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealTitle": "ወደፊት ያሉ ዕቅዶችን ይጻፉ",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "የህክምና ቀጠሮና ሌሎች የወደፊት ዕቅዶችን ያስተዳድሩ",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
