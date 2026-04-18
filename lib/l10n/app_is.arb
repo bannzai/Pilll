@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Sjá við fyrstu sýn hvenær á að taka pilluna",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Sýna dagsetningar á pilluflipanum",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
