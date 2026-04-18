@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Dostupno odmah uz Premium pretplatu",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Automatsko prebacivanje nakon završetka lista s pilulama",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
