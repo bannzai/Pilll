@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "Termini in Kalender iitrage",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Arzttermine eifach verwalte",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
