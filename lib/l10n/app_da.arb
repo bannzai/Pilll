@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "Juster dagens dosisnummer",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Ret nummeret i indstillingerne, hvis det er forskudt",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
