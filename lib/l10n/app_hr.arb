@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealShortDescription": "Upravljanje budućim terminima, npr. posjetima liječniku",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Zabilježite buduće obaveze u kalendaru",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
