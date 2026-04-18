@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple Эрүүл мэнд дэмжлэг",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Мэдэгдлийн үйлдлээр эм уусан бүртгэх",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
