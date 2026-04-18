@@ -2750,5 +2750,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Сінхранізаваць з праграмай здароўя",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Падтрымка Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
