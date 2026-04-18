@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint1": "Kennisgewings word ontvang selfs tydens Fokus-modus",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Betroubaar herinner op die ingestelde tyd",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
