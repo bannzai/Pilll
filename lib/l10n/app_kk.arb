@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Қабылдау жазбаларын кез келген уақытта тексеріңіз",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Менструация басталған күнді оңай тіркеу",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
