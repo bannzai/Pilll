@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Орнотуулар табынан өзгөртсө болот",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Башкы экрандагы сандын үстүн тийүү менен да ачса болот",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
