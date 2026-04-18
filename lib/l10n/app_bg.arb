@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint1": "Функция за настройка на номера, безплатна за използване",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Може да се промени от раздела с настройки",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
