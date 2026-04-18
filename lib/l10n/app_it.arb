@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Mostra la data sul foglio delle pillole",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Mostrando la data nelle caselle della griglia delle pillole puoi controllare a colpo d'occhio sia la cronologia delle assunzioni passate sia le assunzioni programmate per il futuro. Passa dalla modalità \"Numero\" a quella \"Data\" e scegli la visualizzazione più adatta a te.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
