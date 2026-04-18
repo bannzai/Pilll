@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint3": "പ്രീമിയം അംഗത്വത്തോടെ അതേ രീതിയിൽ ഉപയോഗിക്കാം",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "പിൽ ഷീറ്റ് അവസാനിക്കുമ്പോൾ സ്വയമേവ മാറ്റം",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
