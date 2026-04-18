@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Snadná správa termínů návštěv lékaře",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Upozornění připomínkou",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
