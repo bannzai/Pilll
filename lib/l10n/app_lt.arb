@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "{\n  \"health_care_integration_help\": \"Pilll programoje įrašyti menstruacijų duomenys gali būti automatiškai sinchronizuojami su sveikatos programėle. Juos galėsite peržiūrėti kartu su kitais sveikatos duomenimis sveikatos programėlėje ir leisti kitoms programoms naudoti menstruacijų informaciją.\",\n  \"@health_care_integration_help\": {\n    \"description\": \"ヘルスケア連携機能のヘルプページの本文\",\n    \"type\": \"text\"\n  }\n}",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Įrašyti vartojimą tiesiai iš pranešimo",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
