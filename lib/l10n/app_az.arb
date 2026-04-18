@@ -2786,5 +2786,9 @@
   "alarmKitFeatureAppealPoint2": "Zəngli saat kimi alarm səsi",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 və sonrakı · Parametrlər tabından aktivləşdir",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
