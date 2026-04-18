@@ -2530,5 +2530,9 @@
   "calendarDiaryFeatureAppealHeadline": "سجّل حالتك الصحية اليومية في التقويم",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "يمكنك النقر على أي تاريخ في التقويم لتسجيل حالتك الصحية ومزاجك وأعراضك وغيرها. ويمكنك مراجعتها مع سجلات تناول الأقراص وسجلات الدورة الشهرية، مما يساعدك على فهم إيقاع جسمك.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
