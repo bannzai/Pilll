@@ -2418,5 +2418,9 @@
   "lifetimePurchaseNotice1": "・Нават калі вы набудзеце «план з разавай аплатай», «месячны/гадавы план» не будзе аўтаматычна скасаваны.",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "тут",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
