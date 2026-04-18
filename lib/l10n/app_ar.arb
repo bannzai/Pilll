@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint1": "عرض السجلات في التقويم",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "دوّن حالتك الصحية وراجعها",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
