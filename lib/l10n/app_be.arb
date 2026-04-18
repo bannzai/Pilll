@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint1": "Апавяшчэнні даходзяць нават у рэжыме засяроджанасці",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Надзейнае нагадванне ў зададзены час",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
