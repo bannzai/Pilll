@@ -2614,5 +2614,9 @@
   "alarmKitFeatureAppealBody": "iOS 26 və sonrakı versiyalarda mövcud olan AlarmKit-dən istifadə edərək, səssiz rejim və ya fokus rejimində belə mütləq çalan zəng vasitəsilə həbi qəbul etməyi xatırladır.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Bugünkü qəbul nömrəsini tənzimləyin",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
