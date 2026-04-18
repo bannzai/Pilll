@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 edo berriagoa · Ezarpen fitxatik gaitu",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Doako zenbaki-doikuntza eginbidea",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
