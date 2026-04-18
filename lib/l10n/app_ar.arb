@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealTitle": "إنذار يرن كالمنبه",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "إشعارات تصل حتى في وضع الصامت",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
