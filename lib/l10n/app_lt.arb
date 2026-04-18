@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Nemokama pertraukų nuo kontraceptinių tablečių registracija",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "\"Пилюля\" шиитийн баруун дээд булан дахь шестеренкаас эхлүүлнэ",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
