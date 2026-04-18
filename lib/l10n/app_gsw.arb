@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Mit de Gsundheitsapp synchronisiere",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Health-Unterstützig",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
