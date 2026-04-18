@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "कभी भी दवा सेवन का इतिहास देखें",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "माहवारी की शुरुआत की तारीख को आसानी से दर्ज करें",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
