@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Апп нээлгүйгээр мэдэгдэл дээрээс бүртгэх",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Мэдэгдлийн дэлгэцэд нэг товшилтоор хэрэглээг бүртгэх",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
