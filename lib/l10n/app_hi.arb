@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "प्रीमियम सदस्यता लेने पर तुरंत उपयोग कर सकते हैं",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "पिल शीट समाप्त होने पर स्वचालित रूप से बदलें",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
