@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple Health-understøttelse",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Registrer indtagelse via notifikationshandling",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
