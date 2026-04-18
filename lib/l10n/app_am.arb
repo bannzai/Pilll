@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint1": "በቀን መቁጠሪያ ላይ መዝገቦችን ዝርዝር",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "ጤናዎን ሁኔታ ይፃፉ እና ይፈትሹ",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
