@@ -2410,5 +2410,9 @@
   "lifetimePurchaseNotice1": "«Միանգամյա գնման պլանը» գնելիս «ամսական/տարեկան պլանները» ավտոմատ կերպով չեղարկված չեն։",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "Այստեղ",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
