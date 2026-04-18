@@ -2778,5 +2778,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Parametrlər tabındakı keçidlə dəyişdirin",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Səssiz/Fokus rejimində belə çalınır",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
