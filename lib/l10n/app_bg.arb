@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "Споделяне на менструалния запис с HealthCare",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "Може да се свърже с приложението Здраве",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
