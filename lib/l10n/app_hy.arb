@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "\"服用通知のメッセージを自由に編集\" の翻訳",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Դուք կարող եք սովորական «Ժամանակն է՝ դեղը ընդունելու» հաղորդագրությունը հարմարեցնել ձեր նախընտրած բառերին։ Փորձեք այն փոխել ոգեշնչող արտահայտությամբ կամ ձեր սիրելի կենդանու անվամբ՝ որպեսզի ամենօրյա ընդունումը ավելի հաճելի դառնա։",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
