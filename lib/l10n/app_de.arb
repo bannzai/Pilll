@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Das Datum kennen, ohne in den Kalender zu schauen",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "In den Pillenblatt-Einstellungen änderbar",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
