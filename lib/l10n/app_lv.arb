@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealHeadline": "Pauzēt tablešu lietošanu",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Jūs varat pierakstīt tablešu lapā periodus, kad uz laiku pārtraucat lietot tabletes. Pārtraukuma laikā tablešu numurs nepalielinās, un atsākot lietošanu, ierakstīšanu varēsiet atsākt nekavējoti.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
