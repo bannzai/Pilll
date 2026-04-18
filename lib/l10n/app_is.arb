@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Skrá inntöku úr tilkynningaraðgerð",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Klára án þess að opna appið",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
