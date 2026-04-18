@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Benachrichtigungen auch im Lautlosmodus",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Wenn Sie Critical Alerts aktivieren, erhalten Sie Einnahme-Erinnerungen auch bei aktiviertem „Nicht stören\"- oder Lautlos-Modus. Um keinen wichtigen Einnahmezeitpunkt Ihrer Pille zu verpassen, empfehlen wir Ihnen, diese Funktion zu aktivieren.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
