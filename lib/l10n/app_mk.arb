@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Бесплатна функција за усогласување на броеви",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Може да се промени во табот „Поставки“.",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
