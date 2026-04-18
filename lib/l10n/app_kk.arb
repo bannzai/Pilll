@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Параметрлер қойындысынан өзгертуге болады",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Басты беттегі нөмірді түрту арқылы да аша аласыз",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
