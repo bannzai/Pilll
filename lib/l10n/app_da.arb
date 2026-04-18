@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Automatisk skift ved afslutning af pilleark",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Ingen manuel oprettelse nødvendig",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
