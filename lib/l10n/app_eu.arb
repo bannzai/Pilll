@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "Egutegian erregistroak ikusi",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Osasun-egoera idatzi eta berrikusi",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
