@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Dangos taflen bilsen yn ôl dyddiad",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Gwybod y dyddiad heb edrych ar galendr",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
