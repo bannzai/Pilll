@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Sinhronizēt ar veselības lietotni",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Saderīgs ar Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
