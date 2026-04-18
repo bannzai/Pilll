@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Menstruasie-rekords word outomaties gesinkroniseer",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Sinkroniseer met gesondheidsapp",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
