@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealTitle": "Будзільнік, які гучыць як сапраўдны будзільнік",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Апавяшчэнні, якія гучаць нават у бясшумным рэжыме",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
