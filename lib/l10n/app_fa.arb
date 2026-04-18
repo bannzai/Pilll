@@ -2401,5 +2401,9 @@
   "lifetimePurchaseNotice1": "・حتی در صورت خرید «پلن خرید یکجا»، «پلن ماهانه/سالانه» به طور خودکار لغو نمی‌شود.",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "اینجا",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
