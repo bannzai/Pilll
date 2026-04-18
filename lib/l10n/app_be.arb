@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Інтэграцыя з аховай здароўя",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Абагуліць запісы аб цыкле з праграмай «Здароўе»",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
