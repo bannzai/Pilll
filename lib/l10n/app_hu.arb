@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Menstruáció rögzítése és előrejelzése",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Rögzítsd a menstruáció első napját a ciklus nyomon követéséhez",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
