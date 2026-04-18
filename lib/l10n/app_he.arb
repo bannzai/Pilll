@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "הגדרה קלה בלחיצה אחת",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "ערוך בחופשיות את הודעת ההתראה",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
