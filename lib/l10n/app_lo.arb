@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "ກຳນົດວົງຈັບມາເດືອນໂດຍອັດຕະໂນມັດ",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "ປັບແຕ່ງການຕັ້ງຄ່າ",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
