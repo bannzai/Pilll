@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint1": "ميزة مطابقة الأرقام المتاحة مجاناً",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "يمكن تغييره من تبويب الإعدادات",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
