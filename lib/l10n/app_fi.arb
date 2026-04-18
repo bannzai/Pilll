@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple Health -tuki",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Kirjaa lääkkeenotto ilmoituksesta",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
