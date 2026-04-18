@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Isikupärane teavitussõnum",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Kuva pillileht kuupäeva järgi",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
