@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "Registra l'assunzione della pillola nella schermata principale",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Tocca il pill sheet nella schermata principale per registrare l'assunzione per quel giorno. Se hai registrato per errore, toccalo di nuovo per annullare. Puoi anche consultare la cronologia delle assunzioni in seguito, così puoi continuare con tranquillità.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
