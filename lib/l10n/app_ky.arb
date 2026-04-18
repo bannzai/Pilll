@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Тынч режимде да эскертүү келет",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alertди иштетсеңиз, Уйку режиминде же үнсүз режимде болгондо да дарылоо жөнүндө эскертүүлөрдү аласыз. Маанилүү таблетканы туура убакта ичип калбоо үчүн, бул жөндөөнү активдештирип коюңуз.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
