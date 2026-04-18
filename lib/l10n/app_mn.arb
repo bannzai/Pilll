@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Сэрүүлэгтэй адил эм уух дохио",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 болон түүнээс дээш хувилбарт ашиглах боломжтой AlarmKit-ийг ашиглан, чимээгүй горим болон фокус горимд ч гэсэн заавал дуугарах сэрүүлгээр таблет уухыг сануулна.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
