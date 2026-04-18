@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Cofnodion egwyl y bilsen am ddim",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Dechrau o'r eicon gêr yng nghornel dde uchaf y daflen bilsen",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
