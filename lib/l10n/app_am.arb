@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealTitle": "እንደ ሰዓት ቀስቃሽ የሚጮህ ማንቂያ",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "ዝምታም ቢሆን የሚጮህ ማሳወቂያ",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
