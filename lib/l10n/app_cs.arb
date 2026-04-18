@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Alarm na užívání léků jako budík",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "Díky AlarmKit dostupnému od iOS 26 vás upozorníme na užití pilulky alarmem, který spolehlivě zazvoní i v tichém režimu nebo Režimu soustředění.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
