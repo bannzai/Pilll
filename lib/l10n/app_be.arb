@@ -2626,5 +2626,9 @@
   "todayPillNumberFeatureAppealHeadline": "Можна змяніць нумар таблеткі на сёння",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Калі з-за прапушчанага прыёму або памылкі нумар на лісце таблетак не супадае з фактычным прыёмам, вы можаце ўручную наладзіць нумар таблеткі, якую трэба прыняць сёння. Тую ж экранную форму можна адкрыць таксама праз адлюстраванне нумара таблеткі на галоўным экране.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
