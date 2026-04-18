@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Mostra la scheda della pillola per data",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Modificabile dalle impostazioni della scheda delle pillole.",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
