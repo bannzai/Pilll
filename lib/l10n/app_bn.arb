@@ -2754,5 +2754,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple হেলথকেয়ার সমর্থন",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "বিজ্ঞপ্তির অ্যাকশনে সেবন রেকর্ড",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
