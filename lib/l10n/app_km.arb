@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "កត់ត្រាថ្ងៃចាប់ផ្តើមរដូវខែបានយ៉ាងងាយ",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "ស្គាល់រង្វង់ដោយស្វ័យប្រវត្តិ",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
