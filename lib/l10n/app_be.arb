@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealTitle": "Наладзіць нумар прыёму на сёння",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Калі нумар збіўся, выправіце ў наладах",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
