@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "알림 화면에서 원터치로 복용 기록",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "알림을 길게 누르면 '복용 완료' 액션이 표시되어 앱을 열지 않고도 복용을 기록할 수 있습니다.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
