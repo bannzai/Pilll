@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "생리 시작일을 간편하게 기록",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "주기를 자동으로 파악",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
