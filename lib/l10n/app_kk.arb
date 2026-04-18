@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Денсаулық күйін жазу үшін күнді түртіңіз",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Күнтізбеге жоспар қосу",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
