@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Automatiškai nustato ciklą",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Nustatymų tinkinimas",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
