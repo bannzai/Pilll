@@ -2545,5 +2545,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "قابلیت همگام‌سازی با سلامت",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "می‌توانید داده‌های قاعدگی ثبت‌شده در Pilll را به‌طور خودکار با برنامه سلامت همگام‌سازی کنید. می‌توانید آن‌ها را در کنار سایر اطلاعات سلامت مشاهده کنید و از داده‌های قاعدگی در سایر برنامه‌ها نیز استفاده کنید.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
