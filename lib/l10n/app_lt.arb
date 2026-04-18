@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "集中モード中でも通知が届く",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Įsitikinkite, kad priminimas bus laiku pagal nustatytą laiką",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
