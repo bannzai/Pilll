@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "Tägliche Gesundheit im Kalender festhalten",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Tippen Sie im Kalender auf ein Datum, um Ihr Wohlbefinden, Ihre Stimmung, Symptome und mehr zu erfassen. Da Sie diese Einträge zusammen mit Ihren Einnahme- und Menstruationsprotokollen einsehen können, behalten Sie den Rhythmus Ihres Körpers im Überblick.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
