@@ -2802,5 +2802,9 @@
   "todayPillNumberFeatureAppealPoint3": "Može se otvoriti i tapkanjem broja na početnom ekranu",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Besplatni zapisi o pauzi od pilule",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
