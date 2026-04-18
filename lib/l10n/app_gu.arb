@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint3": "દવા લેવાનો ઇતિહાસ ગમે ત્યારે તપાસો",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "માસિક ધર્મ શરૂ થવાની તારીખ સરળ રીતે નોંધ કરો",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
