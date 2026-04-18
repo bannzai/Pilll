@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Al mantener presionada la notificación del recordatorio, aparecerá la acción «Tomé la pastilla», lo que te permite registrar la toma sin abrir la aplicación.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Agregar hoja de píldoras automáticamente",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
