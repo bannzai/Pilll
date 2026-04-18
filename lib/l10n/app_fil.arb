@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "I-record ang pag-inom ng pill sa home screen",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Sa simpleng pag-tap sa pill sheet sa home screen, maitala mo na ang iyong paginom para sa araw na iyon. Kung nagkamali kang nagtala, i-tap ulit ito para maibawas. Maaari mo ring tingnan ang kasaysayan ng paginom sa ibang pagkakataon, kaya maaari kang magpatuloy nang walang pangamba.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
