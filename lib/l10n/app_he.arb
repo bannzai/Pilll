@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "עיין ברשומות קודמות בלוח השנה",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "הקש/י על התאריך כדי לרשום את מצבך הבריאותי",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
