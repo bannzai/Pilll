@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealShortDescription": "অ্যাপ না খুলেই নোটিফিকেশনে রেকর্ড করুন",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "বিজ্ঞপ্তি স্ক্রিনে এক ট্যাপে ওষুধ গ্রহণ রেকর্ড",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
