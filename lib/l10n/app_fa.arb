@@ -2765,5 +2765,9 @@
   "alarmKitFeatureAppealPoint1": "حتی در حالت بی‌صدا/تمرکز هم پخش می‌شود",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "صدای زنگ هشدار مشابه ساعت بیداری",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
