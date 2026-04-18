@@ -2798,5 +2798,9 @@
   "todayPillNumberFeatureAppealPoint2": "সেটিংস ট্যাব থেকে পরিবর্তন করা যাবে",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "হোমের সংখ্যায় ট্যাপ করেও খোলা যায়",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
