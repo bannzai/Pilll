@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "អាចភ្ជាប់ទៅកាន់កម្មវិធីសុខភាព",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "អ្នកអាចធ្វើការសម្របសម្រួលដោយស្វ័យប្រវត្តិព័ត៌មាន​អំពី​ការ​មានរដូវ ដែលបានកត់ត្រាក្នុង Pilll ទៅកម្មវិធី Health។ អ្នកអាចពិនិត្យវារួម​ជាមួយ​ទិន្នន័យសុខភាពផ្សេងទៀត​នៅក្នុងកម្មវិធី Health ហើយធ្វើឲ្យកម្មវិធីផ្សេងទៀតអាចប្រើព័ត៌មាន​អំពី​ការ​មានរដូវនេះបានផងដែរ។",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
