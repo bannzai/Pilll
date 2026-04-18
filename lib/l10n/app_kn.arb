@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 ಅಥವಾ ನಂತರ — ಸೆಟ್ಟಿಂಗ್ಸ್ ಟ್ಯಾಬ್‌ನಿಂದ ಸಕ್ರಿಯಗೊಳಿಸಿ",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "ಉಚಿತ ಸಂಖ್ಯಾ ಹೊಂದಾಣಿಕೆ",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
