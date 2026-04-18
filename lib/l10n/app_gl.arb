@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Sabes a data sen mirar o calendario",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Modificable desde a configuración da folla de pílulas",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
