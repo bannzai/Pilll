@@ -2778,5 +2778,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "التبديل باستخدام المفتاح في علامة تبويب الإعدادات",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "يرن حتى في وضع الصامت/التركيز",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
