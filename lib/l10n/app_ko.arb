@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "설정한 시간에 확실히 알림",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "원터치로 간편 설정",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
