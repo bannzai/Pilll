@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "שילוב עם בריאות",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "שיתוף רישומי מחזור עם Health",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
