@@ -2421,5 +2421,9 @@
   "recommendSignupGeneralDescription": "با ثبت‌نام می‌توانید از اطلاعات خود نسخه پشتیبان تهیه کنید",
   "@recommendSignupGeneralDescription": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "دریافت اعلان‌ها حتی در حالت بی‌صدا",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
   }
 }
