@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint1": "Преглед на записите в календара",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Запис на самочувствието за преглед",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
