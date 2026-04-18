@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Ingyenesen használható számegyeztető funkció",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Beállítható a Beállítások fülről",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
