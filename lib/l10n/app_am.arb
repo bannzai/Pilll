@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint1": "በትኩረት ሁነታ ወቅትም ማሳወቂያዎች ይደርሳሉ",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "በተቀናጀ ሰዓት አስተማማኝ ማስታወሻ",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
