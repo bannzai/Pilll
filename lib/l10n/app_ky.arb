@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Ай циклин каттоо жана болжолдоо",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Айыздын башталган күнүн жазып, циклиңизди көзөмөлдөңүз",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
