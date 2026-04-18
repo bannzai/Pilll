@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Näyttämällä päivämäärät pilleriarkin ruuduissa voit tarkistaa yhdellä silmäyksellä sekä menneen lääkkeenottosi historian että tulevat lääkkeenottosi. Vaihda \"Numero\"- ja \"Päivämäärä\"-tilan välillä ja valitse itsellesi sopiva näyttötapa.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Tarkastele lääkityshistoriaa helposti",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
