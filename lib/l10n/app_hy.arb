@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Սխալ էլ լինի՝ հեշտությամբ կարող եք չեղարկել",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Միշտ կարող եք դիտել ընդունումների պատմությունը",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
