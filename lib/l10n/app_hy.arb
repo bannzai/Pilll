@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Պետք է փոխվի Pill-շիթ կարգավորումներից",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Պտղիկ թերթիկը սեղմելով գրանցել ընդունումը",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
