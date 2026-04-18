@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "ჯანმრთელობის მონაცემებთან სინქრონიზაცია",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "პერიოდის ჩანაწერების გაზიარება ჯანმრთელობის აპლიკაციასთან",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
