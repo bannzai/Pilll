@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Botika-historia edozein unetan kontsultatu",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Hilekoa hasierako eguna erraz erregistratu",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
