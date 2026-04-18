@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "ចាប់ផ្តើម​ពី​រូបតំណាង​កំណត់​នៅ​ខាងលើ​ស្តាំ​នៃ​សន្លឹកថ្នាំ",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "ពេលវេលាការកែសម្រួល និងការចាប់ផ្តើមឡើងវិញរបស់រយៈពេលក៏ធ្វើបានយ៉ាងងាយស្រួលផងដែរ",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
