@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "Καταγράψτε μελλοντικά σχέδια στο ημερολόγιο",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Μπορείτε να καταγράψετε μελλοντικά ραντεβού, όπως επισκέψεις στο γιατρό ή ταξίδια, στο ημερολόγιο. Καθώς μπορείτε να τα ελέγξετε παράλληλα με τον κύκλο λήψης του χαπιού, μπορείτε να κάνετε σχέδια λαμβάνοντας υπόψη και τον προγραμματισμό της περιόδου σας.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
