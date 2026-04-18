@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealTitle": "تسجيل الجرعة مباشرةً من الإشعار",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "التسجيل من الإشعار دون فتح التطبيق",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
