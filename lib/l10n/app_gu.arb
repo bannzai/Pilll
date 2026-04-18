@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealShortDescription": "સાઇલેન્ટ મોડમાં પણ ચોક્કસ વાગે એવી નોટિફિકેશન",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "અલાર્મ ઘડિયાળ જેવો ગોળી લેવાનો અલાર્મ",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
