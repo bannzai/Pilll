@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "הוספה אוטומטית של גיליון גלולות",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "יצירה אוטומטית של הגיליון הבא",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
