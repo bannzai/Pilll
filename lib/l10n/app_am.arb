@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "የወር አበባ ሪከርድን በራስ-ሰር ያስተሳስሩ",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ከጤና አጠባበቅ መተግበሪያ ጋር አመሳስል",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
