@@ -2426,5 +2426,9 @@
   "recommendSignupGeneralTitle": "Wir empfehlen Ihnen, ein Konto zu registrieren",
   "@recommendSignupGeneralTitle": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "Durch Registrierung können Sie Ihre Daten sichern",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
   }
 }
