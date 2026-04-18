@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "Listahan ng rekord sa kalendaryo",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "I-memo ang kalagayan at balikan",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
