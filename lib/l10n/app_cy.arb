@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Gwirio hanes cymryd meddyginiaeth ar unrhyw adeg",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Cofnodi dyddiad dechrau mislif yn hawdd",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
