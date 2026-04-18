@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "દવા લેવાની સૂચનાનો સંદેશ સ્વતંત્ર રીતે સંપાદિત કરો",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "સ્ટાન્ડર્ડ 'ગોળી લેવાનો સમય છે' સંદેશને, તમારા પ્રિય શબ્દોમાં કસ્ટમાઇઝ કરી શકો છો. પ્રેરણા આપતા શબ્દો, પાળેલા પ્રાણીનું નામ – જેવી ગમતી વાણીથી, રોજ ગોળી લેવાને વધુ આનંદદાયક બનાવી જુઓ.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
