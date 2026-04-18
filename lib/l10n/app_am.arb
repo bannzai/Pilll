@@ -2646,5 +2646,9 @@
   "restDurationFeatureAppealBody": "ለጊዜው ክኒን መውሰድ የሚያቆሙበትን ጊዜ በፒል ሉህ ላይ መዝግቦ ማስቀመጥ ይቻላል። በዕረፍት ወቅት የክኒን ቁጥር አይቀጥልም፣ እና ሲቀጥሉ ወዲያውኑ ምዝገባውን እንደገና መጀመር ይችላሉ።",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "በመተግበሪያ ውስጥ ያለ ቦታ",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
