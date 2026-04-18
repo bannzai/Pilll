@@ -2686,5 +2686,9 @@
   "menstruationFeatureAppealPoint1": "માસિક ધર્મ શરૂ થવાની તારીખ સરળ રીતે નોંધ કરો",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "ચક્ર આપોઆપ ઓળખો",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
