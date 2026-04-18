@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Auch durch Tippen auf die Zahl auf dem Startbildschirm öffenbar",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Kostenlose Aufzeichnung der Pillenpause",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
