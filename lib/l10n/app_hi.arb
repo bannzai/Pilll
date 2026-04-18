@@ -2450,5 +2450,9 @@
   "reminderNotificationCustomizeWordFeatureAppealTitle": "सूचना संदेश अनुकूलित करें",
   "@reminderNotificationCustomizeWordFeatureAppealTitle": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "आप सूचनाओं के संदेशों को अनुकूलित कर सकते हैं।",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
   }
 }
