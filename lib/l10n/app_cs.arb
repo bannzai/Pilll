@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Automatické sledování cyklu",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Přizpůsobit nastavení",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
