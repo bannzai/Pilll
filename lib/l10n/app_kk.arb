@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Планшетінің хабарламасының мәтінін еркін өзгерту",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Әдепкі «Таблетка ішу уақыты» деген ескертуді өзіңізге ұнайтын сөзге теңшей аласыз. Жігерлендіретін сөздерден немесе үй жануарыңыздың атына дейін — күнделікті қабылдауды анағұрлым жағымды әрі қызықты ететін мәтінге өзгертіп көріңіз.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
