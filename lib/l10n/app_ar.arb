@@ -2626,5 +2626,9 @@
   "todayPillNumberFeatureAppealHeadline": "يمكنك تغيير رقم الحبة لليوم",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "عندما يختلف الرقم الموجود على ورقة الحبوب عن الجرعة الفعلية بسبب النسيان أو الخطأ، يمكنك ضبط رقم الحبة التي ستتناولينها اليوم يدوياً. يمكنك أيضاً فتح نفس الشاشة من خلال عرض رقم الحبة في الصفحة الرئيسية.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
