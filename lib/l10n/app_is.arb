@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Ókeypis skrá yfir hlé frá pillunni",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Byrjaðu með tannhjólstáknið efst til hægri á pillublaðinu",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
