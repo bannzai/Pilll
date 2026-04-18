@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "អាចផ្លាស់ប្តូរបាននៅក្នុងការកំណត់សន្លឹកថ្នាំ",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "ចុចថតពីលើផ្ទាំងថ្នាំដើម្បីកត់ត្រាការទទួល",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
