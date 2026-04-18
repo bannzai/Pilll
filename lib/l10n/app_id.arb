@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Catat pemakaian dari notifikasi",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Selesaikan tanpa membuka aplikasi",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
