@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "ヘルスケアと連携",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "ແບ່ງປັນບັນທຶກການມີເດືອນກັບແອັບສຸຂະພາບ",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
