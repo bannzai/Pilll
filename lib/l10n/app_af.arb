@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealTitle": "Pas vandag se dosisnommer aan",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Korrigeer in instellings as die nommer verskuif",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
