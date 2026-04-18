@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "Við notum AlarmKit, sem er fáanlegt í iOS 26 og síðar, til að minna þig á að taka pilluna með vekjara sem hljómar örugglega jafnvel í þögnarham eða einbeitingarham (Focus).",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Stilla tölu dagsins",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
