@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Snadné zrušení i při chybě",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Kdykoli zkontrolujte historii užívání",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
