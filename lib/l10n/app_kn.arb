@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "ದಿನಾಂಕವನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ ಯೋಜನೆಯನ್ನು ಬರೆಯಿರಿ",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "ಮಾಸಿಕ ದಾಖಲೆಗಳನ್ನು ಡೇಟಾದೊಂದಿಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸಂಯೋಜಿಸಿ",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
