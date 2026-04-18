@@ -2502,5 +2502,9 @@
   "recordPillFeatureAppealBody": "Проста націсніце на ліст таблетак на галоўным экране, каб зафіксаваць прыём за гэты дзень. Нават калі вы зрабілі памылку пры запісе, вы зможаце адмяніць яе, націснуўшы яшчэ раз. Паколькі гісторыю прыёму можна праверыць пазней, вы можаце спакойна працягваць.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Запіс і прагноз менструацыі",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
