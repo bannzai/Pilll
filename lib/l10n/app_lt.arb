@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "Įrašykite įvykius į kalendorių",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Lengvai tvarkykite apsilankymų datas",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
