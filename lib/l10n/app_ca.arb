@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealTitle": "Revisa fàcilment l'historial de presa",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Sàpigues immediatament quan has pres la píndola",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
