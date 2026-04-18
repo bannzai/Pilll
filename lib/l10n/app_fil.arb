@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Tingnan ang mga nakaraang rekord sa kalendaryo",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "I-tap ang petsa para itala ang iyong kalagayan",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
