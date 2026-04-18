@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "Cando o número na folla de comprimidos e a toma real non coinciden por esquecer de tomar ou por confusión, pode axustar manualmente o número do comprimido que debe tomar hoxe. Tamén pode acceder á mesma pantalla desde a visualización do número de comprimido na pantalla de inicio.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Rexistrar período de descanso da medicación",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
