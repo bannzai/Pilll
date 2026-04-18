@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "Λήψη ειδοποιήσεων ακόμα και σε αθόρυβη λειτουργία",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Θυμήσου το χάπι σου ακόμα και σε λειτουργία «Μην ενοχλείτε»",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
