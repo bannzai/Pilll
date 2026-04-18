@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "ທ່ານສາມາດແຕະເລືອກວັນທີໃນປະຕິທິວັນເພື່ອບັນທຶກສຸຂະພາບ, ອາລົມ ແລະ ອາການຕ່າງໆ. ຂໍ້ມູນເຫຼົ່ານີ້ຈະສາມາດເບິ່ງພ້ອມກັນກັບບັນທຶກການເອົາຢາແລະບັນທຶກລະດູດ, ເພື່ອຊ່ວຍໃຫ້ທ່ານເຂົ້າໃຈຮອບເວລາຂອງຮ່າງກາຍຂອງຕົນເອງ.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "ຂຽນແຜນໃນອນາຄົດ",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
