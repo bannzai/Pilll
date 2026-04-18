@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealBody": "Bare registrer din menstruation, når den kommer, og du kan se en oversigt over din tidligere menstruationshistorik. Den næste forventede menstruationsdato forudsiges også automatisk, så du kan planlægge fremad.",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Registrer dit helbred i kalenderen",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
