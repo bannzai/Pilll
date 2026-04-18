@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Koppintson a tablettalapra a bevétel rögzítéséhez",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Ha hibázol, könnyen visszavonhatod.",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
