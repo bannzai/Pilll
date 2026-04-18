@@ -2694,5 +2694,9 @@
   "recordPillFeatureAppealPoint2": "Jednostavno poništavanje čak i uz grešku",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Provjerite historiju uzimanja u bilo koje vrijeme",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
