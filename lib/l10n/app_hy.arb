@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Պիլշիթի ավարտը ավտոմատ կերպով փոխարկում է",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Ձեռքով ստեղծելու անհրաժեշտություն չկա",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
