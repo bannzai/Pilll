@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "Pilleeinnahm uf em Homebildschirm ufzeichne",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Tippe eifach uff s'Pillblàtt uff em Hauptbildschirm, um d'Einnàhm vun dem Dàg ze erfàsse. Fàlls du aus Versehe eppis àgemerkt hesch, kànnsch es durch nochemol Tippe rückgängig mache. Du kànnsch au speter d'Einnàhme-Verlàuf àschaue, so dàss de ruhig witermache kànnsch.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
