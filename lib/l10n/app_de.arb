@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Zyklus automatisch erfassen",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Einstellungen anpassen",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
