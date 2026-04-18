@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealPoint2": "Лесно управление на посещенията при лекар",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Уведомяване с напомняне",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
