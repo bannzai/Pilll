@@ -2562,5 +2562,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "Можна інтэгравацца з дадаткам «Здароўе»",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Дадзеныя аб менструальным цыкле, запісаныя ў Pilll, можна аўтаматычна сінхранізаваць з праграмай «Здароўе». Вы зможаце праглядаць іх разам з іншымі дадзенымі аб здароўі ў «Здароўі», а таксама выкарыстоўваць дадзеныя аб менструацыі ў іншых праграмах.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
