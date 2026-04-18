@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint3": "ഉപഭോഗ ചരിത്രം ഏപ്പോഴും പരിശോധിക്കുക",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "ആർത്തവ ആരംഭ തീയതി എളുപ്പത്തിൽ രേഖപ്പെടുത്തുക",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
