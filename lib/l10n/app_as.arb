@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint1": "পিল শ্বীট টেপ কৰি সেৱন ৰেকৰ্ড কৰক",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "ভুল হ'লেও সহজে বাতিল কৰক",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
