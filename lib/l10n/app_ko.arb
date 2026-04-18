@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "나만의 알림 메시지로",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "\"ピルシートを日付で表示\" を指定の言語 ko に翻訳してください。",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
