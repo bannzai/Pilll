@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint2": "ആരോഗ്യ അവസ്ഥ കുറിച്ചിട്ട് തിരിഞ്ഞുനോക്കൽ",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "കലണ്ടറിൽ കഴിഞ്ഞ രേഖകൾ അവലോകനം ചെയ്യുക",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
