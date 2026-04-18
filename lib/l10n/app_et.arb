@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Teavitused saabuvad ka fookusrežiimi ajal",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Tuletan kindlasti määratud ajal meelde",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
