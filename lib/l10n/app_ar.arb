@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealShortDescription": "التسجيل من الإشعار دون فتح التطبيق",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "تسجيل الجرعة بنقرة واحدة من شاشة الإشعارات",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
