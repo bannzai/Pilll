@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "პარამეტრების ჩანართში გადამრთველით გადართეთ",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "სგრილენტ/კონცენტრაციის რეჟიმშიც რეკავს",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
