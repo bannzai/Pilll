@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Järgmise pillilehe automaatne loomine",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Kui praegune pillilehe grupp lõpeb, luuakse automaatselt uus pillilehe grupp. Käsitsi ümberlülitamine pole vajalik ning kirjetes ei teki lünki.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
