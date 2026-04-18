@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Pilll қолданбасында тіркелген етеккір деректерін Денсаулық қосымшасымен автоматты түрде синхрондауға болады. Бұл деректерді Денсаулық қосымшасындағы басқа денсаулық көрсеткіштерімен бірге көруге және басқа қолданбаларда пайдалануға мүмкіндік береді.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Хабарландырудан тікелей қабылдауды жазу",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
