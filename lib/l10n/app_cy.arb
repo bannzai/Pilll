@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Gallwch dapio dyddiad ar y calendr i gofnodi eich cyflwr corfforol, hwyliau, symptomau a mwy. Gan y gallwch eu gwirio gyda chofnodion cymryd tabledi a chofnodion mislif, gallwch ddeall rhythm eich corff.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Ysgrifenna gynlluniau'r dyfodol",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
