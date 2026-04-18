@@ -2750,5 +2750,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "પિલ શીટ સમાપ્ત થવા પર આપોઆપ સ્વિચ",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "મેન્યુઅલ બનાવટ ઑપરેશનની જરૂર નથી",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
