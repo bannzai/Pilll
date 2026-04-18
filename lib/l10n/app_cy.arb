@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Rheoli dyddiau apwyntiad yn hawdd",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Hysbysiad drwy atgoffwr",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
