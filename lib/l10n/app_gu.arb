@@ -2406,5 +2406,9 @@
   "lifetimeSubscriptionWarning": "એક વખત ખરીદી પ્લાન ખરીદવા બદલ આભાર. જો તમે માસિક અથવા વાર્ષિક પ્લાનના સભ્ય છો, તો કૃપા કરીને સબ્સ્ક્રિપ્શન રદ કરવાનું ભૂલશો નહીં.",
   "@lifetimeSubscriptionWarning": {
     "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "・\"એક-વખત ખરીદ પ્લાન\" ખરીદ્યા પછી પણ \"માસિક/વાર્ષિક પ્લાન\" આપોઆપ રદ થશે નહીં.",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
   }
 }
