@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Еске салғыш арқылы хабарландыру",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Күнді түртіп, жоспар жазыңыз",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
