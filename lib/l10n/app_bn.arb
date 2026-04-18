@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint1": "ক্যালেন্ডারে পরিকল্পনা লিখুন",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "ডাক্তার দেখানোর দিন সহজে পরিচালনা করুন",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
