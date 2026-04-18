@@ -2581,5 +2581,9 @@
   "creatingNewPillSheetFeatureAppealBody": "وقتی گروه برگه قرص فعلی به پایان می‌رسد، یک گروه برگه قرص جدید به‌طور خودکار ایجاد می‌شود. نیازی به تغییر دستی نیست و هیچ خلأی در ثبت‌ها ایجاد نمی‌شود.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "آلارمی که مثل ساعت بیداری زنگ می‌زند",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
