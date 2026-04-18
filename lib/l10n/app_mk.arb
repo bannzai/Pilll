@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Можете да ги прикажете датумите на листата со хапчиња.",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Прикажувајќи ја датата во полињата на табелата со пилули, можете со еден поглед да ги видите минатите записи за земање и идните планирани земања. Префрлете помеѓу режимите „Број“ и „Датум“ за да го изберете приказот што ви одговара.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
