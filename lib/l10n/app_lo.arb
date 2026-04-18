@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "ບໍ່ຈຳເປັນຕ້ອງສ້າງດ້ວຍມື",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "ສາມາດແປງໄດ້ດ້ວຍສະວິດໃນແຖບການຕັ້ງຄ່າ",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
