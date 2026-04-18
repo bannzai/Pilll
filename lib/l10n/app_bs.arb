@@ -2766,5 +2766,9 @@
   "quickRecordFeatureAppealPoint3": "Dostupno odmah uz Premium pretplatu",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Automatska promjena na kraju lista tableta",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
