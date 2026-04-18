@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "Καταχώριση προγράμματος στο ημερολόγιο",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Εύκολη διαχείριση ημερομηνιών επίσκεψης στον γιατρό",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
