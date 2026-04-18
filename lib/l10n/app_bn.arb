@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint1": "ফোকাস মোডেও বিজ্ঞপ্তি পাওয়া যাবে",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "নির্ধারিত সময়ে নিশ্চিতভাবে রিমাইন্ড",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
