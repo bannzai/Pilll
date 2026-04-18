@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Wys pilblad volgens datum",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Weet die datum sonder om na die kalender te kyk",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
