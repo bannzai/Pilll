@@ -2594,5 +2594,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "إنشاء ورقة الحبوب التالية تلقائيًا",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "عند انتهاء مجموعة ورقة الدواء الحالية، يتم إنشاء مجموعة ورقة دواء جديدة تلقائيًا. لا حاجة للتبديل اليدوي، ولن تكون هناك فجوات في سجلاتك.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
