@@ -2762,5 +2762,9 @@
   "alarmKitFeatureAppealPoint1": "સાઇલન્ટ/ફોકસ મોડમાં પણ વાગે છે",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "એલાર્મ ઘડિયાળ જેવો એલાર્મ અવાજ",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
