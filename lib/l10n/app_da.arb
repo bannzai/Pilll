@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Ingen manuel oprettelse nødvendig",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Skift via kontakten i indstillingsfanen",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
