@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "Jos olet unohtanut ottaa pillerin tai sekoittanut ne, jolloin pillerilevyn numero ja todellinen ottaminen eivät täsmää, voit säätää tänään otettavan pillerin numeron manuaalisesti. Voit avata saman näytön myös kotinäytön pillerinumeronäytöltä.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Kirjaa taukojakso",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
