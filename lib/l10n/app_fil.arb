@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Kapag na-enable ang Critical Alert, matatanggap mo ang mga notification ng paginom ng gamot kahit naka-Do Not Disturb o silent mode ang iyong telepono. Upang hindi mapalampas ang mahahalagang oras ng pag-inom ng iyong pill, subukan itong i-set up ngayon.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "I-customize ang Mensahe ng Abiso",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
