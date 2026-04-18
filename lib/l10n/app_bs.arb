@@ -2454,5 +2454,9 @@
   "criticalAlertFeatureAppealBody": "Ako omogućite Critical Alert, možete primati obavještenja o uzimanju pilule čak i tokom načina rada Ne uznemiravaj ili tihog načina rada. Preporučujemo da postavite ovu opciju kako ne biste propustili važan trenutak uzimanja pilule.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Prilagodi poruku obavijesti",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
