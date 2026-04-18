@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Registro de descanso de píldora gratuito",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Comience desde el ícono de engranaje en la parte superior derecha de la hoja de píldoras",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
