@@ -2742,5 +2742,9 @@
   "futureScheduleFeatureAppealLocationHint": "ቀን ይንኩ እና ቀጠሮ ይጻፉ",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "የወር አበባ ሪከርድን በራስ-ሰር ያስተሳስሩ",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
