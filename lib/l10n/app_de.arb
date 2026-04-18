@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "Pilleneinnahme auf dem Startbildschirm aufzeichnen",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Tippen Sie einfach auf das Pillenblatt auf dem Startbildschirm, um die Einnahme des Tages zu erfassen. Falls Sie versehentlich etwas aufgezeichnet haben, können Sie es durch erneutes Tippen rückgängig machen. Da Sie den Einnahmeverlauf auch nachträglich einsehen können, können Sie die Einnahme entspannt fortführen.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
