@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "Genera automàticament el full següent",
   "@creatingNewPillSheetFeatureAppealShortDescription": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "Crea automàticament el pròxim full de píndoles",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
   }
 }
