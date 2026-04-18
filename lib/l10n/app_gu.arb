@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealHeadline": "સૂચના સ્ક્રીન પર એક ટેપ વડે સેવન નોંધ",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "રીમાઇન્ડર નોટિફિકેશનને લાંબા સમય સુધી દબાવી રાખવાથી \"દવા લીધી\" નો વિકલ્પ દેખાય છે, અને તમે એપ ખોલ્યા વિના દવા લેવાનો રેકોર્ડ કરી શકો છો.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
