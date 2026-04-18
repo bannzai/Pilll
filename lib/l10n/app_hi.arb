@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "नोटिफिकेशन स्क्रीन पर एक-टैप में सेवन दर्ज करें",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "रिमाइंडर नोटिफिकेशन को लंबा दबाने पर \"दवा ली\" क्रिया दिखाई देती है, जिससे आप ऐप खोले बिना दवा लेने को रिकॉर्ड कर सकते हैं।",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
