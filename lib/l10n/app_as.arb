@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint1": "ঋতুস্ৰাৱ আৰম্ভৰ তাৰিখ সহজে ৰেকৰ্ড কৰক",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "স্বয়ংক্ৰিয়ভাৱে চক্ৰ বুজক",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
