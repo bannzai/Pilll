@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Sie können die Standard-Benachrichtigung „Zeit, die Pille zu nehmen\" nach Ihrem Geschmack anpassen. Versuchen Sie es mit motivierenden Worten, dem Namen Ihres Haustieres oder anderen Formulierungen, die die tägliche Einnahme angenehmer machen.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Datum auf dem Pillenblatt anzeigen",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
