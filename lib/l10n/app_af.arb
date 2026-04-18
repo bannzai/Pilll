@@ -2774,5 +2774,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Geen handmatige aanmaak nodig",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Skakel met die skakelaar op die instellings-oortjie",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
