@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Personalizirajte svoju poruku obavijesti",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Prikaži listu tableta prema datumu",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
