@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Buat pesan notifikasi pribadi",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Tampilkan lembar pil berdasarkan tanggal",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
