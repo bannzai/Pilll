@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealShortDescription": "የወር አበባ መጀመሪያ ቀን ይመዝግቡ እና ዑደቱን ይከታተሉ",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "የወር አበባን ይዝግቡ እና ይተንብዩ",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
