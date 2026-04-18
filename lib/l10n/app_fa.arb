@@ -2429,5 +2429,9 @@
   "criticalAlertFeatureAppealShortDescription": "حتی در حالت مزاحم نشوید، از فراموشی قرص جلوگیری کنید",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "دریافت اعلان حتی در حالت بی‌صدا",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
