@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Alarm pengingat minum pil seperti jam weker",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "Menggunakan AlarmKit yang tersedia di iOS 26 ke atas, akan mengingatkan Anda untuk minum pil dengan alarm yang tetap berbunyi meskipun dalam mode senyap atau mode Fokus.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
