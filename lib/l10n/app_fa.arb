@@ -2789,5 +2789,9 @@
   "restDurationFeatureAppealPoint1": "ثبت دوره استراحت دارو (رایگان)",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "از چرخ‌دنده بالا سمت راست برگه قرص شروع کنید",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
