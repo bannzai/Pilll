@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 pataas・I-enable mula sa Settings tab",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Libreng feature ng pagtutugma ng numero",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
