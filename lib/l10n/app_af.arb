@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint1": "Skryf afsprake in kalender",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Maklike bestuur van doktersbesoeke",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
