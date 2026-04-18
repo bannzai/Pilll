@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "ערוך בחופשיות את הודעת תזכורת נטילת הגלולה",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "באפשרותך להתאים אישית את ההודעה הסטנדרטית \"הגיע הזמן לקחת את הגלולה\" למילים שאת אוהבת. נסי לשנות אותה למילים שמעלות מוטיבציה, שם חיית המחמד שלך, או כל דבר אחר שיהפוך את נטילת הגלולה היומית למהנה יותר.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
