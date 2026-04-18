@@ -2546,5 +2546,9 @@
   "futureScheduleFeatureAppealHeadline": "Teken toekomstige planne op die kalender aan",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Jy kan toekomstige planne, soos doktersbesoeke en reisplanne, op die kalender inskryf. Aangesien jy dit saam met jou pil-innamesiklus kan nagaan, kan jy planne maak wat ook jou menstruasieskedule in ag neem.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
