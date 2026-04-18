@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Датага тийип абалыңызды каттаңыз",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Күнтүзмөгө окуя кошуу",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
