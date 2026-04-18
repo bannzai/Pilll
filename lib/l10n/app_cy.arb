@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Adolygu cofnodion blaenorol ar y calendr",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Tapiwch y dyddiad i gofnodi eich cyflwr iechyd",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
