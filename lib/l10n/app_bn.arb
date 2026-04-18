@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealPoint2": "ডাক্তার দেখানোর দিন সহজে পরিচালনা করুন",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "রিমাইন্ডার দিয়ে বিজ্ঞপ্তি",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
