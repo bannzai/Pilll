@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Quando tieni premuta la notifica di promemoria viene mostrata l'azione \"Ho preso\" che ti permette di registrare l'assunzione senza aprire l'app.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Aggiunta automatica del foglio delle pillole",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
