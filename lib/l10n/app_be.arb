@@ -2798,5 +2798,9 @@
   "todayPillNumberFeatureAppealPoint2": "Можна змяніць на ўкладцы налад",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Таксама можна адкрыць, націснуўшы на лічбу на галоўным экране",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
