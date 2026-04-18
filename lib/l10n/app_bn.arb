@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealTitle": "আজকের সেবন নম্বর মেলানো",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "নম্বর ভুল হলে সেটিংসে ঠিক করুন",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
