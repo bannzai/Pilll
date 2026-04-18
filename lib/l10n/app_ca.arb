@@ -2642,5 +2642,9 @@
   "restDurationFeatureAppealHeadline": "Fer un descans en la presa de la píndola",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Podeu registrar al full de píndoles un període d'interrupció en la presa. Durant el descans, el número de presa no avança i podeu reprendre el registre immediatament quan el repreneu.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
