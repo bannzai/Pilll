@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealTitle": "নীৰৱ মোডতো জাননী লাভ কৰক",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "ডু নট ডিস্টাৰ্ব মোডতো পিল খাবলৈ পাহৰা ৰোধ কৰক",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
