@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint2": "Sāciet, pieskaroties zobrata ikonai tablešu lapas labajā augšējā stūrī.",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Menstruāciju rediģēšana un atsākšana ir vienkārša.",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
