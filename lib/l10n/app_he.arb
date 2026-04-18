@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "באמצעות AlarmKit הזמין ב‑iOS 26 ומעלה, נודיע לך על נטילת הגלולה באמצעות התראה שתשמע באופן אמין גם במצב שקט או במצב ריכוז.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "התאם את מספר הנטילה של היום",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
