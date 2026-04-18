@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Огноог дарж хуваарь бичих",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Сарын тэмдгийн бичлэгийг автоматаар синхрончлох",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
