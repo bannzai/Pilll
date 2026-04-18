@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Алдаа гарсан ч хялбархан цуцлах",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Хэрэглэлтийн түүхийг хэдийд ч шалгах",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
