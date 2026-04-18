@@ -2589,5 +2589,9 @@
   "alarmKitFeatureAppealShortDescription": "اعلان‌های مطمئن حتی در حالت بی‌صدا",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "هشدار مصرف مانند زنگ بیدارباش",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
