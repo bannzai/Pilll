@@ -2626,5 +2626,9 @@
   "todayPillNumberFeatureAppealHeadline": "Možete promijeniti broj pilule za danas",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Kada se broj na listu tableta i stvarno uzimanje ne podudaraju zbog zaboravljanja ili zamjene tablete, možete ručno ponovo podesiti broj tablete koji uzimate danas. Isti ekran možete otvoriti i putem prikaza broja tableta na početnom ekranu.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
