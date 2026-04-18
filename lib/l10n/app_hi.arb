@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "डू नॉट डिस्टर्ब मोड में भी दवा लेना न भूलें",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "साइलेंट मोड में भी सूचनाएँ प्राप्त होंगी",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
