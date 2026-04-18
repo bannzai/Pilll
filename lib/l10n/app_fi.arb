@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Ilmoituksia saapuu myös Keskittymistilassa",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Muistutus varmasti asetettuun aikaan",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
