@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Бесплатна евиденција за пауза од таблети",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Почнете од иконата со зупчаник во горниот десен агол на листата со таблети.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
