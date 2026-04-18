@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "មើលកំណត់ត្រានៅក្នុងប្រតិទិន",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "កត់ត្រាស្ថានភាពសុខភាព ដើម្បីត្រលប់មើល",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
