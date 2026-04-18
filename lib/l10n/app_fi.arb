@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "Hallitse taukoja ja keskeytyksiä tarkasti",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Pitää taukoa pillerien ottamisesta",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
