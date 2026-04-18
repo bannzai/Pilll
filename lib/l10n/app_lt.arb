@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Spustelėkite datą ir įrašykite planą",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "生理記録を自動でデータ連携",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
