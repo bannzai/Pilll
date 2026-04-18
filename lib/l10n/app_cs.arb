@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Místo v aplikaci",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Oznámení dorazí i v režimu soustředění",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
