@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Може да се отвори и со тапнување на бројот на почетниот екран.",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Бесплатна евиденција за пауза од таблети",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
