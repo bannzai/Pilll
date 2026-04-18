@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "ಮುಖಪುಟದ ಸಂಖ್ಯೆಯನ್ನು ಟ್ಯಾಪ್ ಮಾಡುವುದರಿಂದ ಕೂಡ ತೆರೆಯಬಹುದು",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "FREEFORM",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
