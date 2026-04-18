@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "Завсарлага болон тасалдлыг нарийвчлан удирдах",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Эм уухаа завсарлах",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
