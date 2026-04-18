@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Μπορεί να αλλαχθεί από τις ρυθμίσεις φύλλου χαπιών",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Καταγραφή λήψης με πάτημα στο φύλλο χαπιών",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
