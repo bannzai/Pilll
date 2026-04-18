@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Sincronització automàtica de les dades del registre menstrual",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Sincronitza amb l'aplicació de salut",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
