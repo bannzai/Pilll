@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Voit näyttää päivämäärän pillerilehdessä",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Näyttämällä päivämäärät pilleriarkin ruuduissa voit tarkistaa yhdellä silmäyksellä sekä menneen lääkkeenottosi historian että tulevat lääkkeenottosi. Vaihda \"Numero\"- ja \"Päivämäärä\"-tilan välillä ja valitse itsellesi sopiva näyttötapa.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
