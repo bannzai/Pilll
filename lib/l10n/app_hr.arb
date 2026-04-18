@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "{\n  \"@@locale\": \"hr\",\n  \"feature_appeal_future_plans\": \"Zapišite buduće planove\",\n  \"@feature_appeal_future_plans\": {\n    \"description\": \"未来の予定機能のFeatureAppeal Barタイトル\"\n  }\n}",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Upravljanje budućim terminima, npr. posjetima liječniku",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
