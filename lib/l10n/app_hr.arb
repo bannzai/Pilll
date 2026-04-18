@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Pregledajte prethodne zapise u kalendaru",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Dodirnite datum da zabilježite svoje stanje.",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
