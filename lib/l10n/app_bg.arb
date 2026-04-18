@@ -2742,5 +2742,9 @@
   "futureScheduleFeatureAppealLocationHint": "Докоснете дата, за да запишете събитие",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Автоматично синхронизиране на данните за менструация",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
