@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Napauttamalla pilleriarkkia aloitusnäytöllä voit kirjata päivän lääkkeenoton. Jos kirjasit vahingossa väärin, napauta uudelleen peruuttaaksesi merkinnän. Voit myös tarkistaa lääkkeenottohistoriasi myöhemmin, joten voit jatkaa huoletta.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Kirjaa ja ennusta kuukautiset",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
