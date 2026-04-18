@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "A translation placeholder",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Ýttu á dagsetningu til að skrá líðan",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
