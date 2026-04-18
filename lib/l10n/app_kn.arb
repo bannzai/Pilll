@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "ಕ್ಯಾಲೆಂಡರ್ ನೋಡದೆ ದಿನಾಂಕವನ್ನು ತಿಳಿದುಕೊಳ್ಳಬಹುದು",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "ಪಿಲ್ ಶೀಟ್ ಸೆಟ್ಟಿಂಗ್ಗಳಿಂದ ಬದಲಾವಣೆ ಮಾಡಬಹುದಾಗಿದೆ",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
