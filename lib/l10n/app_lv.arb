@@ -2662,5 +2662,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Personalizējiet paziņojuma ziņojumu",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "{\n  \"@@locale\": \"lv\",\n  \"pillSheet_showByDate\": \"Rādīt tablešu lapu pēc datuma\",\n  \"@pillSheet_showByDate\": {\n    \"description\": \"ピルシートを日付で表示 — ピルシートを特定の日付で表示するためのラベルやボタン用のテキスト\"\n  }\n}",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
