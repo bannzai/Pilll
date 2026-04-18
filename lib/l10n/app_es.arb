@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Edita libremente el mensaje de notificación de toma",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Puedes personalizar el mensaje estándar «Es hora de tomar tu píldora» con las palabras que prefieras. Prueba con frases que te motiven, el nombre de tu mascota u otros mensajes que hagan tu rutina diaria más entretenida.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
