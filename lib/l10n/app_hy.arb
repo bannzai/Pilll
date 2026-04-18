@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Պիլշիթի վանդակներում ամսաթվերը ցուցադրելով՝ մեկ հայացքով կարող եք տեսնել անցյալում ընդունված դեղամիջոցների պատմությունը և ապագա ընդունումների նախատեսված ժամանակները։ Փոխեք «Համար» և «Ամսաթիվ» ռեժիմների միջև՝ ընտրելով այն ցուցադրման ձևը, որը ձեզ առավել հարմար է։",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "服用履歴を簡単に振り返り",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
