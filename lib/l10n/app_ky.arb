@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Башкы экрандагы таблетка барагын жөн гана тийип, ошол күндүн кабыл алынган таблеткасынын жазуусун кошсоңуз болот. Ката менен жазып койсоңуз, кайра тийгизип жокко чыгара аласыз. Кийинчерээк кабыл алуу тарыхын да текшерип, тынч жүрүп уланта берсеңиз болот.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Ай циклин каттоо жана болжолдоо",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
