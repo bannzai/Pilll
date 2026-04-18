@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Допрете ја датата за да внесете настан.",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Автоматска синхронизација на менструалните записи",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
