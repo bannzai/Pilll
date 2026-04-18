@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "Axustar o número de dose de hoxe",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Se o número está desaxustado, corríxeo na configuración",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
