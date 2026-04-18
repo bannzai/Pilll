@@ -2798,5 +2798,9 @@
   "todayPillNumberFeatureAppealPoint2": "Parametrlər nişanından dəyişdirilə bilər",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Ana ekrandakı rəqəmə toxunaraq da açıla bilər",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
