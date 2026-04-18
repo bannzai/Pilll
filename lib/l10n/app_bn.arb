@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "হেলথকেয়ারের সাথে মাসিক রেকর্ড শেয়ার করুন",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "স্বাস্থ্যসেবার সাথে সংযুক্ত করা যায়",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
