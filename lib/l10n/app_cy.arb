@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Dechrau o'r eicon gêr yng nghornel dde uchaf y daflen bilsen",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Mae golygu ac ailddechrau cyfnodau hefyd yn hawdd",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
