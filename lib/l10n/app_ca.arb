@@ -2626,5 +2626,9 @@
   "todayPillNumberFeatureAppealHeadline": "Podeu canviar el número de píndola d'avui",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Quan el número a la làmina de píndoles i la presa real no coincideixen per haver-se oblidat de prendre-la o per confusió, podeu ajustar manualment el número de la píndola que cal prendre avui. També podeu obrir la mateixa pantalla des de la visualització del número de píndola a l'inici.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
