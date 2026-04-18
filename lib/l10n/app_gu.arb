@@ -2766,5 +2766,9 @@
   "alarmKitFeatureAppealPoint2": "એલાર્મ ઘડિયાળ જેવો એલાર્મ અવાજ",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 અને ઉપર • સેટિંગ્સ ટૅબ દ્વારા સક્ષમ કરો",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
