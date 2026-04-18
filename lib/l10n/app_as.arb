@@ -2610,5 +2610,9 @@
   "alarmKitFeatureAppealHeadline": "এলাৰ্ম ঘড়ীৰ দৰে পিল সেৱনৰ এলাৰ্ম",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 বা তাতকৈ পাছৰ সংস্কৰণত উপলব্ধ AlarmKit ব্যৱহাৰ কৰি, চাইলেণ্ট মোড বা ফ'কাছ মোডতো নিশ্চিতভাৱে বাজিব পৰা এলাৰ্মেৰে পিল খোৱাৰ কথা জনায়।",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
