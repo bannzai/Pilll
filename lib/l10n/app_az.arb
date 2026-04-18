@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealTitle": "Təqvimdə sağlamlıq vəziyyətini qeyd edin",
   "@calendarDiaryFeatureAppealTitle": {
     "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Hər günün sağlamlığını təqvimə qeyd edək",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
   }
 }
