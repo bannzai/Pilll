@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "ແຈ້ງເຕືອນການກິນຢາ ຄ້າຍຄືນາມເຕືອນ",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "ໃຊ້ AlarmKit ທີ່ມີໃນ iOS 26 ເພື່ອແຈ້ງເຕືອນເວລາກິນຢາດ້ວຍສຽງທີ່ຈະດັ່ງແມ່ນໃນໂມດ Silent ຫຼື Focus.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
