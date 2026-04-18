@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Vaata ravimite võtmise ajalugu igal ajal",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Märgi menstruatsiooni alguspäev lihtsalt",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
