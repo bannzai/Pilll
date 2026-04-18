@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint1": "Llista de registres al calendari",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Anota el teu estat de salut i revisa-ho",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
