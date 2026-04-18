@@ -2798,5 +2798,9 @@
   "todayPillNumberFeatureAppealPoint2": "Može se promijeniti na kartici postavki",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Može se otvoriti i tapkanjem broja na početnom ekranu",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
