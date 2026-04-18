@@ -2514,5 +2514,9 @@
   "calendarDiaryFeatureAppealTitle": "კალენდარში ჯანმრთელობის მდგომარეობის ჩაწერა",
   "@calendarDiaryFeatureAppealTitle": {
     "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "ჩაწერეთ ყოველდღიური მდგომარეობა კალენდარში",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
   }
 }
