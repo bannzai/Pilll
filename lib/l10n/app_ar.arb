@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint1": "سجل فترة التوقف عن الحبوب مجانًا",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "ابدأ من أيقونة الترس في أعلى يمين ورقة الحبوب",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
