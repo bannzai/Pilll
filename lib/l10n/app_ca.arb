@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealShortDescription": "Registrar des de la notificació sense obrir l'app",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Registre de presa amb un toc des de la pantalla de notificació",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
