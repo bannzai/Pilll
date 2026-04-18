@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "החלפה אוטומטית בסוף גיליון הגלולה",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "אין צורך ביצירה ידנית",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
