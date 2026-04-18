@@ -2526,5 +2526,9 @@
   "futureScheduleFeatureAppealTitle": "ഭാവി പദ്ധതികൾ കുറിക്കൂ",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "ആശുപത്രി സന്ദർശനം പോലുള്ള ഭാവി ഷെഡ്യൂളുകൾ നിയന്ത്രിക്കുക",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
