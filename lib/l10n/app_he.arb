@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "הצג רשומות בלוח השנה",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "לתעד את מצבך ולסקור אותו",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
