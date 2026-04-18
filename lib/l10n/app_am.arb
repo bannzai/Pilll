@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint1": "ነፃ የቁጥር ማጣጣሚ ባህሪ",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "ከቅንብሮች ትር መቀየር ይቻላል",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
