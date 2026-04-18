@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Емханаға бару күндерін оңай басқару",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Еске салғыш арқылы хабарландыру",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
