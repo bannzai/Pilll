@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint3": "Modificare o riprendere il ciclo è semplice",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Conosci la data senza guardare il calendario",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
