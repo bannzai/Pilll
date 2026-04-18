@@ -2410,5 +2410,9 @@
   "lifetimePurchaseNotice1": "・Au wenn Sie de «Einmalkauf-Plan» chaufe, wird de «Monats-/Jahresplan» nöd automatisch abbestellt.",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "Do",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
