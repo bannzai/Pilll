@@ -2646,5 +2646,9 @@
   "restDurationFeatureAppealBody": "يمكنك تسجيل فترة توقف مؤقت عن تناول الحبوب في ورقة الحبوب. خلال فترة الراحة، لن يتقدم رقم الجرعة، ويمكنك استئناف التسجيل فورًا عند العودة.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "موقع داخل التطبيق",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
