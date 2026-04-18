@@ -2597,5 +2597,9 @@
   "alarmKitFeatureAppealBody": "با استفاده از AlarmKit که از iOS 26 به بعد در دسترس است، حتی در حالت بی‌صدا یا حالت تمرکز نیز آلارمی که به‌طور قطعی پخش می‌شود، زمان مصرف قرص را به شما یادآوری می‌کند.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "تنظیم شماره قرص امروز",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
