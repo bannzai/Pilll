@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Þú getur sjálfkrafa samstillt tíðaupplýsingar sem skráðar eru í Pilll við Heilsuforritið. Þannig getur þú skoðað þær með öðrum heilsugögnum í Heilsuforritinu og gert öðrum forritum kleift að nota tíðaupplýsingarnar.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Skrá inntöku beint úr tilkynningu",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
