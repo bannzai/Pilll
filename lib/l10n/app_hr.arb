@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Alarm za uzimanje – poput budilice",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "{\n  \"@@locale\": \"hr\",\n  \"alarmKitHelp\": \"AlarmKit, dostupan na iOS‑u 26 i novijim, koristi pouzdan alarm koji će se oglasiti čak i u tihom načinu rada ili u načinu Fokus kako bi vas podsjetio na uzimanje pilule.\",\n  \"@alarmKitHelp\": {\n    \"description\": \"Tekst za stranicu pomoći o značajci AlarmKit. Objašnjava da AlarmKit na iOS 26+ omogućuje alarm koji se oglašava i u tihom modu i u načinu Fokus.\"\n  }\n}",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
