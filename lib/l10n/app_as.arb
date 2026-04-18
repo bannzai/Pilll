@@ -2450,5 +2450,9 @@
   "criticalAlertFeatureAppealHeadline": "সাইলেণ্ট মোডতো জাননী আহিব",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alert সক্ষম কৰিলে, Do Not Disturb মোড বা নিৰৱ মোডৰ সময়তো আপুনি পিল সেৱনৰ জাননী পাব পাৰিব। গুৰুত্বপূৰ্ণ পিল সেৱনৰ সময় নেহেৰুৱাবলৈ, অনুগ্ৰহ কৰি এই সুবিধাটো সক্ষম কৰক।",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
