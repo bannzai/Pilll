@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Бір түртумен оңай баптау",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Хабарлама мәтінін қалауыңызша өңдеңіз",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
