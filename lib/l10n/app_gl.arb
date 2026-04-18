@@ -2410,5 +2410,9 @@
   "lifetimePurchaseNotice1": "・Aínda que adquirades o «Plan de compra única», os «Plans mensual e anual» non se cancelarán automaticamente.",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "Aquí",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
