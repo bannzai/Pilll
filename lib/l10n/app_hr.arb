@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "Dodaj događaj u kalendar",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Jednostavno upravljanje danima odlaska na pregled",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
