@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Vientyliukas nustatyti vienu bakstelėjimu",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Laisvai redaguokite pranešimo tekstą",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
