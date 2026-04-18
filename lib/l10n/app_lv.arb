@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealBody": "Kalendārā pieskarieties datumam, lai pierakstītu savu pašsajūtu, garastāvokli, simptomus u.c. Ierakstus var skatīt kopā ar tablešu lietošanas un menstruāciju ierakstiem, tādējādi labāk izprotot sava ķermeņa ritmu.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Pieraksti nākotnes plānus",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
