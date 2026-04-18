@@ -2738,5 +2738,9 @@
   "futureScheduleFeatureAppealPoint3": "Obavijest putem podsjetnika",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Tapnite datum za unos rasporeda",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
