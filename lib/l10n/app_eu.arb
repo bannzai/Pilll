@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Aplikazioko kokapena",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Fokus moduan ere jakinarazpenak jasotzen dira",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
