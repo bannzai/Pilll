@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealTitle": "Primajte obavještenja čak i u tihom načinu rada",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Spriječi zaboravljanje pilule čak i u tihom modu",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
