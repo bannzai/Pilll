@@ -2514,5 +2514,9 @@
   "calendarDiaryFeatureAppealTitle": "Tervise jälgimine kalendris",
   "@calendarDiaryFeatureAppealTitle": {
     "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Märgi igapäevane enesetunne kalendrisse",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
   }
 }
