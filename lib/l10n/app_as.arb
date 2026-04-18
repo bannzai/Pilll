@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealTitle": "সহজে ঔষধ সেৱনৰ ইতিহাস পৰ্যালোচনা কৰক",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "কেতিয়া সেৱন কৰিছিল তাৎক্ষণিকভাৱে জানক",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
