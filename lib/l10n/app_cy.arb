@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "Gweld ar unwaith pryd gwnaethoch chi gymryd eich pilsen",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Cofnodi cymryd piliau ar y sgrin gartref",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
