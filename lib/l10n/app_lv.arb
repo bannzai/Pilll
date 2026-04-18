@@ -2494,5 +2494,9 @@
   "menstruationFeatureAppealTitle": "Menstruāciju reģistrēšana un prognozēšana",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Pierakstiet menstruācijas sākuma datumu, lai saprastu savu ciklu.",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
