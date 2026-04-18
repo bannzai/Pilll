@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "បង្ហាញសន្លឹកថ្នាំតាមកាលបរិច្ឆេទ",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "ដឹងកាលបរិច្ឆេទបានដោយមិនចាំបាច់មើលប្រតិទិន",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
