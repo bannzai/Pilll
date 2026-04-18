@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealHeadline": "Gellir cofnodi a rhagweld mislif",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Dim ond cofnodi pan ddaw eich mislif, a gallwch weld rhestr o hanes mislifau'r gorffennol. Mae dyddiad disgwyliedig y mislif nesaf hefyd yn cael ei ragfynegi'n awtomatig, felly gallwch gynllunio ymlaen llaw.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
