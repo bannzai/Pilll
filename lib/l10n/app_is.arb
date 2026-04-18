@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Sjálfkrafa samstilling blæðingarskráa",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Samstilla við heilsuforrit",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
