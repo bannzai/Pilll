@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "ક્રિટિકલ એલર્ટ સક્ષમ કરવાથી, ડૂ નૉટ ડિસ્ટર્બ મોડ અથવા સાઇલન્ટ મોડ ચાલુ હોય ત્યારે પણ તમે ગોળી લેવાની સૂચનાઓ મેળવી શકો છો. મહત્વની ગોળી લેવાનો સમય ચૂકી ન જાય તે માટે, કૃપા કરીને આ સેટિંગ જરૂર ચાલુ કરો.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "સૂચના સંદેશ કસ્ટમાઇઝ કરો",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
