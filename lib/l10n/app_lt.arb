@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Galite į kalendorių įrašyti būsimus įvykius, pavyzdžiui, apsilankymus pas gydytoją ar keliones. Suderinę juos su jūsų kontraceptinių tablečių vartojimo ciklu, galėsite planuoti atsižvelgdami į numatomą mėnesinių laikotarpį.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Integracija su Sveikata",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
