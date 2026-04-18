@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "מיקום באפליקציה",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "התראות יתקבלו גם במצב מיקוד",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
