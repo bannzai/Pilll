@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "Со AlarmKit, достапен на iOS 26 и понатака, ќе ве потсетува да ја земете пилулата со сигнал што сигурно ќе се огласи дури и во тивок или во режимот за фокусирање.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Постави го денешниот број на земање",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
