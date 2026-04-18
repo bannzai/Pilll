@@ -2713,5 +2713,9 @@
   "futureScheduleFeatureAppealPoint1": "ثبت برنامه در تقویم",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "مدیریت آسان روزهای مراجعه به پزشک",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
