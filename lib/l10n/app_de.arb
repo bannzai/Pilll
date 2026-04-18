@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "Sie können einen Zeitraum, in dem Sie die Einnahme pausieren, im Pillenblatt festhalten. Während der Pause schreitet die Einnahmenummer nicht voran, und bei der Wiederaufnahme können Sie die Aufzeichnung sofort fortsetzen.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Ort in der App",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
