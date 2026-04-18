@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealShortDescription": "Bilježi putem obavještenja bez otvaranja aplikacije",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Evidentiranje uzimanja jednim dodirom na ekranu obavijesti",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
