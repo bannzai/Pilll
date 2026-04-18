@@ -2662,5 +2662,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "ສົມທຽບໃນແຈ້ງເຕືອນການຮັບຢາປະຈຳວັນ",
   "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "ກໍານົດຂໍ້ຄວາມແຈ້ງເຕືອນຂອງເຈົ້າເອງ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
   }
 }
