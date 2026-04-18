@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "ピルシート右上の歯車から開始",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "ಅವಧಿಯನ್ನು ಸಂಪಾದಿಸಲು ಮತ್ತು ಮರುಪ್ರಾರಂಭಿಸಲು ಸುಲಭ",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
