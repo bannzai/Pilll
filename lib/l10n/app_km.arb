@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "កត់ត្រារយៈពេលឈប់ទទួលថ្នាំ",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "គ្រប់គ្រងការសម្រាក និងការផ្អាកយ៉ាងត្រឹមត្រូវ",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
