@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "Nustatyti šiandienos dozės numerį",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Jei numeris neteisingas, pataisykite jį nustatymuose.",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
