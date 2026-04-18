@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "Pilula hartzea ahaztuta edo nahastuta, pilula-fitxan dagoen zenbakia eta benetako hartzearen artean desberdintasunik badago, gaur hartu beharreko pilula-zenbakia eskuz egokitu dezakezu. Hasierako pantailako pilula-zenbakiaren bistaratzetik ere pantaila bera ireki dezakezu.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Hartze-atseden aldia erregistratu",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
