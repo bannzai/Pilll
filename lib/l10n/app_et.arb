@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Ära unusta pillivõtmist isegi öörahul",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Märguanded saabuvad ka vaikses režiimis",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
