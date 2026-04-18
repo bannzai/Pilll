@@ -2454,5 +2454,9 @@
   "criticalAlertFeatureAppealBody": "Wanneer jy Critical Alert aktiveer, kan jy innameherinneringe ontvang selfs tydens Moenie Steur Nie- of Stil-modus. Stel dit asseblief in sodat jy nie 'n belangrike pil-innametyd mis nie.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Pasmaak jou kennisgewingboodskap aan",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
