@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealLocationHint": "തീയതി ടാപ്പ് ചെയ്ത് ഷെഡ്യൂൾ എഴുതുക",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "ആർത്തവ രേഖകൾ സ്വയമേവ ഡാറ്റ സമന്വയം",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
