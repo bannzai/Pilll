@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealShortDescription": "İstirahət və fasilələri dəqiq idarə edin",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Həbi qəbuluna fasilə vermək",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
