@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Nemokama funkcija \"Suderinimo numeris\"",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Nustatymų skirtuke galima pakeisti",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
