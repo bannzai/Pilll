@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "D'Einnahme-Nachrichte frei bearbeite",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Sie kenne d'Standard-Noochricht „Es isch Zitt, Ihri Pille z'näme\" noh Ihrem eige Gschmack aapaasse. Probiere Sie e motivierende Spruch oder de Name vun Ihrem Houstier yyzsetze – so wird d'täglichi Innähme viel schöner un spassiger!",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
