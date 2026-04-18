@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Mit em Premium-Abo direkt nutzbar",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Automatisch Wechsle bim Pillblatt-Ändi",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
