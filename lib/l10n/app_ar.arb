@@ -2710,5 +2710,9 @@
   "menstruationFeatureAppealPoint3": "تخصيص الإعدادات",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "عرض السجلات في التقويم",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
