@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "Ripercorri facilmente la cronologia delle assunzioni",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Vedi subito quando l'hai assunta",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
