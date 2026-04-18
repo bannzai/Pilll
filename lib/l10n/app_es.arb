@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Las notificaciones llegan incluso en modo de concentración",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Recordatorio garantizado a la hora programada",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
