@@ -2710,5 +2710,9 @@
   "menstruationFeatureAppealPoint3": "Personalitza la configuració",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Llista de registres al calendari",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
