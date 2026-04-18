@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Klára án þess að opna appið",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Fáanlegt strax með Premium-áskrift",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
