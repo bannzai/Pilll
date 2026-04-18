@@ -2754,5 +2754,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Падтрымка Apple Health",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Запіс прыёму праз дзеянне апавяшчэння",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
