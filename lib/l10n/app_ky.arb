@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "アプリを開かずに完了",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Premium жазылуусу менен дароо колдонууга болот",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
