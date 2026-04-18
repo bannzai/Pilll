@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Asukoht rakenduses",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Teavitused saabuvad ka fookusrežiimi ajal",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
