@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "ಪಿಲ್‌ಶೀಟ್‌ನಲ್ಲಿ ದಿನಾಂಕವನ್ನು ತೋರಿಸಬಹುದು",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "ಪಿಲ್‌ಶೀಟಿನ ಚೌಕಿಗಳಲ್ಲಿ ದಿನಾಂಕಗಳನ್ನು ತೋರಿಸುವ ಮೂಲಕ, ಹಿಂದಿನ ಪಿಲ್ ಸೇವನೆ ದಾಖಲಿಗಳು ಮತ್ತು ಭವಿಷ್ಯದ ಪಿಲ್ ಸೇವನೆ ಯೋಜನೆಗಳನ್ನು ಒಂದೇ ನೋಟದಲ್ಲಿ ಪರಿಶೀಲಿಸಬಹುದು. “ಸಂಖ್ಯೆ” ಮೋಡ್ ಮತ್ತು “ದಿನಾಂಕ” ಮೋಡ್ ಅನ್ನು ಪರಿವರ್ತಿಸಿ, ನಿಮ್ಮಿಗೆ ಸೂಕ್ತವಾದ ಪ್ರದರ್ಶನವನ್ನು ಆರಿಸಿಕೊಳ್ಳಿ.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
