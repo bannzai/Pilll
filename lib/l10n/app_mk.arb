@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealShortDescription": "Управувајте ги идните термини, како посети кај лекар",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Календар за запишување на идни настани",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
