@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Automatsko prebacivanje nakon završetka lista s pilulama",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Ručno stvaranje nije potrebno",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
