@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Pranešimai net ir tylos režimu",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Įgalinus Critical Alert, priminimai apie vaistų vartojimą bus gaunami net ir Miego režimo arba Tyliųjų pranešimų metu. Nustatykite šią funkciją, kad nepraleistumėte svarbių vaisto vartojimo laikų.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
