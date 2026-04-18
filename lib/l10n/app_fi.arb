@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Manuaalista luontia ei tarvita",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Vaihda asetukset-välilehden kytkimellä",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
