@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealTitle": "Zəng saatı kimi çalan alarm",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Səssiz rejimdə də mütləq çalınan bildirişlər",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
