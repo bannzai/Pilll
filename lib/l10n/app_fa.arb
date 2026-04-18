@@ -2657,5 +2657,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "پیام اعلان مخصوص خود",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "نمایش برگه قرص بر اساس تاریخ",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
