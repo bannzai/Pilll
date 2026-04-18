@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Modtag notifikationer selv i lydløs tilstand",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Når du aktiverer Critical Alert, kan du modtage påmindelser om at tage din pille, selv når Forstyr ikke-tilstand eller lydløs tilstand er aktiveret. For ikke at gå glip af vigtige tidspunkter for at tage din pille anbefaler vi, at du konfigurerer denne indstilling.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
