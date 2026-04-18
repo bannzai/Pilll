@@ -2622,5 +2622,9 @@
   "restDurationFeatureAppealTitle": "Reģistrēt pauzi lietošanā",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Precīza paužu un pārtraukumu vadība",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
