@@ -2550,5 +2550,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilll lietotnē reģistrētos menstruāciju datus var automātiski sinhronizēt ar veselības lietotni. Tos varēs apskatīt kopā ar citiem veselības datiem un izmantot arī citās lietotnēs.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
