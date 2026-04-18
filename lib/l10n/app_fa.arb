@@ -2469,5 +2469,9 @@
   "appearanceModeDateFeatureAppealBody": "با نمایش تاریخ در خانه‌های جدول قرص، می‌توانید تاریخچه مصرف گذشته و برنامه مصرف آینده را در یک نگاه مشاهده کنید. بین حالت «شماره» و حالت «تاریخ» جابجا شوید و نمایش مناسب خود را انتخاب کنید.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "مرور آسان تاریخچه مصرف",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
