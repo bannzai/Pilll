@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "앱을 열지 않고 완료",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "프리미엄 가입 시 바로 이용 가능",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
