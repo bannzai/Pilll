@@ -2710,5 +2710,9 @@
   "menstruationFeatureAppealPoint3": "ছেটিংছ কাষ্টমাইজ কৰক",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "কেলেণ্ডাৰত ৰেকৰ্ডৰ তালিকা",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
