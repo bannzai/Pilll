@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Modu isilean ere jakinarazpenak jasotzen dira",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alert aktibatuz gero, Ez molestatu moduan edo isilik moduan egon arren ere, pastillak hartzeko jakinarazpenak jaso ditzakezu. Pastillak hartzearen une garrantzitsua ez galtzeko, ezarri ezazu orain.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
