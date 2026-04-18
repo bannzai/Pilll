@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint3": "റിമൈൻഡർ വഴി അറിയിപ്പ്",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "തീയതി ടാപ്പ് ചെയ്ത് ഷെഡ്യൂൾ എഴുതുക",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
