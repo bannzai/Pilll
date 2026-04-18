@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "Móttaka tilkynninga þrátt fyrir þöglu stillingu",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Komdu í veg fyrir að þú gleymir tökunni, jafnvel í „Ekki trufla“-ham.",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
