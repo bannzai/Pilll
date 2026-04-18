@@ -2802,5 +2802,9 @@
   "todayPillNumberFeatureAppealPoint3": "Ana ekrandakı rəqəmə toxunaraq da açıla bilər",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Pulsuz istifadə edilə bilən dərman fasiləsi qeydi",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
