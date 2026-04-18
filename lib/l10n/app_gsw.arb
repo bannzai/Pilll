@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Benachrichtigung mit Reminder",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Tipp uf e Datum zum Vorhabe iischriibe",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
