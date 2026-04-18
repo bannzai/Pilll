@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "ಸೈಲೆಂಟ್ ಮೋಡ್‌ನಲ್ಲಿದ್ದರೂ ಸಹ ಖಚಿತವಾಗಿ ಕೇಳಿಸಿಕೊಳ್ಳುವ ಸೂಚನೆ",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "ಘಡಿಯ ಅಲಾರ್ಮ್‌ನಂತಹ ಔಷಧ ಸೇವನೆ ಎಚ್ಚರಿಕೆ",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
