@@ -2673,5 +2673,9 @@
   "recordPillFeatureAppealPoint1": "ثبت مصرف با ضربه زدن روی برگه قرص",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "لغو آسان حتی در صورت اشتباه",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
