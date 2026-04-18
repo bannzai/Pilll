@@ -2594,5 +2594,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Аўтаматычна стварыць наступны ліст піл",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Пасля заканчэння бягучай групы аркушаў таблетак новая група аркушаў таблетак ствараецца аўтаматычна. Ручное пераключэнне не патрабуецца, і прагалаў у запісах не будзе.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
