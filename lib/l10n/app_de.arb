@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Wenn Sie die Erinnerungsbenachrichtigung lange gedrückt halten, wird die Aktion „Eingenommen\" angezeigt, und Sie können die Einnahme aufzeichnen, ohne die App zu öffnen.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Pillenblatt automatisch hinzufügen",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
