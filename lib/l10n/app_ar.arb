@@ -2802,5 +2802,9 @@
   "todayPillNumberFeatureAppealPoint3": "يمكن فتحه أيضاً بالنقر على الرقم في الشاشة الرئيسية",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "سجل فترة التوقف عن الحبوب مجانًا",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
