@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "Prilagodite postavke",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Pregled zapisa u kalendaru",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
