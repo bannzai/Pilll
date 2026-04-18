@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "ທ່ານສາມາດບັນທຶກຊ່ວງເວລາທີ່ເປັນການຢຸດການຮັບຢາໄວ້ໃນຊີດຢາ. ໃນໄລຍະພັກ, ລຳດັບການຮັບຢາຈະບໍ່ຖືກນັບ, ແລະເມື່ອທ່ານເລີ່ມກັບມາອີກຄັ້ງ ການບັນທຶກຈະສາມາດດຳເນີນຕໍ່ໄດ້ທັນທີ.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "ຕຳແໜ່ງໃນແອັບ",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
