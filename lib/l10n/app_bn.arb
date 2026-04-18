@@ -2646,5 +2646,9 @@
   "restDurationFeatureAppealBody": "আপনি পিল শিটে কিছু সময়ের জন্য ওষুধ খাওয়া বন্ধ রাখার সময়কাল রেকর্ড করতে পারবেন। বিরতির সময় পিলের নম্বর এগোয় না, এবং পুনরায় শুরু করার সময় আপনি তাৎক্ষণিকভাবে রেকর্ড করা শুরু করতে পারবেন।",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "অ্যাপের মধ্যে অবস্থান",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
