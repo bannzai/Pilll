@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Դաշտանի սկսվելու օրը հեշտությամբ գրանցեք",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Պարբերությունը ավտոմատ կերպով հայտնաբերեք",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
