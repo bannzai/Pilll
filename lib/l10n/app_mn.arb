@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Мэдэгдлийн дэлгэцэд нэг товшилтоор хэрэглээг бүртгэх",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Сануулагч мэдэгдэл дээр удаан дарвал \"Уусан\" гэсэн үйлдэл гарч ирэх тул аппыг нээлгүйгээр эм уусанаа бүртгэж болно.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
