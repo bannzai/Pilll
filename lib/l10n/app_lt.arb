@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "自分だけの通知メッセージに",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Rodyti tabletes pagal datą",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
