@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Birgilista eftir dagsetningu",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "カレンダーを見なくても日付がわかる",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
