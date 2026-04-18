@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Pausar la toma de pastillas",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Puedes registrar en la ficha de píldoras un período de descanso en el que dejes de tomar las pastillas. Durante el descanso, el número de dosis no avanza y podrás reanudar el registro de inmediato cuando reinicies la toma.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
