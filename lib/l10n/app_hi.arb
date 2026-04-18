@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "होम स्क्रीन पर पिल शीट को सिर्फ टैप करने भर से आप उसी दिन की दवा लेने का रिकॉर्ड रख सकते हैं। गलती से रिकॉर्ड हो गया हो तो फिर से टैप करके उसे रद्द किया जा सकता है। दवा के रिकॉर्ड आप बाद में भी देख सकते हैं, इसलिए आप निश्चिंत होकर इसका उपयोग जारी रख सकते हैं।",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "生理を記録・予測",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
