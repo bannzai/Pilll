@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint3": "ഹോമിലെ നമ്പർ ടാപ്പ് ചെയ്തും തുറക്കാം",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "സൗജന്യമായി ഉപയോഗിക്കാവുന്ന ഗുളിക ഇടവേള രേഖ",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
