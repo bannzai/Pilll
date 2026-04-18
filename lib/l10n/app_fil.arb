@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "I-tap ang petsa para isulat ang iskedyul",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Awtomatikong pagkonekta ng data ng pagtatala ng regla",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
