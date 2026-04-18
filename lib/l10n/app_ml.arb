@@ -2582,5 +2582,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "അടുത്ത പിൽ ഷീറ്റ് സ്വയമേവ സൃഷ്ടിക്കുക",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "നിലവിലെ പിൽ ഷീറ്റ് ഗ്രൂപ്പ് അവസാനിക്കുമ്പോൾ, ഒരു പുതിയ പിൽ ഷീറ്റ് ഗ്രൂപ്പ് സ്വയമേ സൃഷ്ടിക്കപ്പെടും. മാനുവൽ മാറ്റൽ ആവശ്യമില്ല, കൂടാതെ രേഖകളിൽ വിടവ് ഉണ്ടാകില്ല.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
