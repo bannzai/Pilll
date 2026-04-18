@@ -2518,5 +2518,9 @@
   "menstruationFeatureAppealBody": "Проста запісвайце, калі пачынаецца менструацыя, і вы зможаце прагледзець поўную гісторыю менструацый за мінулы перыяд. Наступная чаканая дата менструацыі таксама вызначаецца аўтаматычна, таму вы можаце планаваць свой час загадзя.",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Запісвайце самаадчуванне ў каляндары",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
