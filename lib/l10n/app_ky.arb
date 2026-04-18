@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Азыркы таблетка барагы топтому аяктаганда, жаңы топтом автоматтык түрдө түзүлөт. Кол менен которууга кереги жок, ошондуктан жазуулардын унутулушу болбойт.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Будильниктей үн чыгарган эскертме",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
