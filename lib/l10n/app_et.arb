@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Saab avada ka kodus numbrit puudutades",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Tasuta ravimipause rekord",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
