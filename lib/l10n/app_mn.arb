@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Эрүүл мэндтэй холбох",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Сарын тэмдгийн бүртгэлийг Эрүүл мэндтэй хуваалцах",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
