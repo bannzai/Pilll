@@ -2706,5 +2706,9 @@
   "menstruationFeatureAppealPoint2": "স্বয়ংক্ৰিয়ভাৱে চক্ৰ বুজক",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "ছেটিংছ কাষ্টমাইজ কৰক",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
