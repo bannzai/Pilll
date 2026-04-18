@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Uneko pilula-fitxen taldea amaitzen denean, pilula-fitxen talde berri bat automatikoki sortzen da. Ez da eskuzko aldaketarik egin behar, eta erregistroetan ez dago hutsunerik.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Alarma iratzargailuaren moduan jo",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
