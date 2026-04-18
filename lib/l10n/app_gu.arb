@@ -2678,5 +2678,9 @@
   "recordPillFeatureAppealPoint2": "ભૂલ થઈ જાય તો પણ સરળતાથી રદ કરો",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "દવા લેવાનો ઇતિહાસ ગમે ત્યારે તપાસો",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
