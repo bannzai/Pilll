@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Sinkronizirajte s aplikacijom za zdravlje",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Podrška za Apple Zdravlje",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
