@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint1": "Rep notificacions fins i tot en mode de concentració",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Recordatoris fiables a l'hora configurada",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
