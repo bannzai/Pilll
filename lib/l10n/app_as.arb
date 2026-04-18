@@ -2642,5 +2642,9 @@
   "restDurationFeatureAppealHeadline": "পিল সেৱন বিৰতি লওক",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "আপুনি পিল শ্বীটত কিছু সময়ৰ বাবে পিল খোৱা বন্ধ ৰখাৰ সময়সীমা ৰেকৰ্ড কৰিব পাৰিব। বিশ্ৰামৰ সময়ত পিলৰ নম্বৰ আগবাঢ়ি নাযায়, আৰু পুনৰ আৰম্ভ কৰাৰ সময়ত আপুনি তৎক্ষণাৎ ৰেকৰ্ড পুনৰ আৰম্ভ কৰিব পাৰিব।",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
