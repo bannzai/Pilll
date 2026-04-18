@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Merkitse vointisi ja tarkastele",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Katso aiemmat merkinnät kalenterista",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
