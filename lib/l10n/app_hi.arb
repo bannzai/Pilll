@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "यदि आप दवा लेना भूल जाते हैं या गलती से दूसरी गोली ले लेते हैं जिससे पिल शीट पर संख्या और वास्तविक सेवन मेल नहीं खाते, तो आप आज की लेने वाली गोली का नंबर मैन्युअल रूप से समायोजित कर सकते हैं। होम स्क्रीन पर पिल नंबर दिखाने वाले हिस्से से भी आप वही स्क्रीन खोल सकते हैं।",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "दवा न लेने की अवधि दर्ज करें",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
