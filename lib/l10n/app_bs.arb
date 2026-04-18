@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint1": "Besplatni zapisi o pauzi od pilule",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Pokrenite putem ikone zupčanika u gornjem desnom uglu lista tableta",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
