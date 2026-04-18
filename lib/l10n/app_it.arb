@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "La notifica predefinita \"È ora di prendere la pillola\" può essere personalizzata con le parole che preferisci. Prova a sostituirla con frasi che ti motivano, il nome del tuo animale domestico o qualsiasi testo che renda più piacevole l'assunzione quotidiana.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Mostra le date sul foglio delle pillole",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
