@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "ಮುಂದಿನ ಪಿಲ್‌ಶೀಟ್‌ನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ರಚಿಸಿ",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "ಪ್ರಸ್ತುತ ಪಿಲ್‌ಶೀಟ್ ಗುಂಪು ಮುಗಿದಾಗ, ಹೊಸ ಪಿಲ್‌ಶೀಟ್ ಗುಂಪು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ರಚಿಸಲಾಗುತ್ತದೆ. ಕೈಯಿಂದ ಮ್ಯಾನುಯಲ್‌ ಬದಲಾವಣೆ ಮಾಡುವ ಅಗತ್ಯವಿಲ್ಲದಿರುವುದರಿಂದ ಯಾವುದೇ ದಾಖಲೆ ಕಳೆದುಹೋಗುವುದಿಲ್ಲ.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
