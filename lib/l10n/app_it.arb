@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint3": "Visualizza la cronologia delle assunzioni in qualsiasi momento",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Registra facilmente l'inizio del ciclo mestruale",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
