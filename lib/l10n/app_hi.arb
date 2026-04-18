@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 और उसके बाद — सेटिंग्स टैब से सक्षम करें",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "निःशुल्क नंबर मिलान सुविधा",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
