@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "ទទួលការជូនដំណឹងទោះបីនៅក្នុងម៉ូដស្ងាត់ក៏ដោយ",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "ទប់ស្កាត់ការភ្លេចពេលទទួលថ្នាំ ទោះបីនៅម៉ូដមិនរំខានក៏ដោយ",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
