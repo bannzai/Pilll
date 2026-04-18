@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Usa l'interruttore nella scheda Impostazioni per attivare o disattivare.",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Suona anche in modalità silenziosa/concentrazione",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
