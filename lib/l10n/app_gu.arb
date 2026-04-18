@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealShortDescription": "નંબર ખોટો હોય તો સેટિંગ્સમાં સુધારો",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "આજે લેવાની ગોળીનો નંબર બદલી શકાય છે",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
