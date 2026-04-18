@@ -2578,5 +2578,9 @@
   "quickRecordFeatureAppealHeadline": "Registre de presa amb un toc des de la pantalla de notificació",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Si manteniu premuda la notificació de recordatori, apareixerà l'acció «He pres la pastilla» i podreu registrar la presa sense obrir l'aplicació.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
