@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Sain larwm tebyg i gloc larwm",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 neu ddiweddarach・Galluogi o'r tab Gosodiadau",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
