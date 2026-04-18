@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Atal hysbysiadau hyd yn oed yn ystod y Modd Cwsg",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Derbyn hysbysiadau hyd yn oed yn y modd distaw",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
