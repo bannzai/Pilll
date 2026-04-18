@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealShortDescription": "ቁጥሩ ካልተስማማ በቅንብሮቹ ያስተካክሉ",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "የዛሬን ክኒን ቁጥር መቀየር ይቻላል",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
