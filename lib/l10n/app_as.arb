@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint1": "চাইলেণ্ট/ফোকাচ মোডতো বাজিব",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "এলাৰ্ম ঘড়ীৰ দৰে এলাৰ্ম শব্দ",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
