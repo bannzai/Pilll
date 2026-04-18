@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Известување преку потсетник",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Допрете ја датата за да внесете настан.",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
