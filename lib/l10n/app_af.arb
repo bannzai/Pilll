@@ -2486,5 +2486,9 @@
   "appearanceModeDateFeatureAppealBody": "Deur datums in die vakke van die pilblad te vertoon, kan jy jou verlede inname-geskiedenis en toekomstige inname-skedule in een oogopslag nagaan. Skakel tussen die 'Nommer'-modus en die 'Datum'-modus om die vertoning te kies wat die beste by jou pas.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Beskou jou pil-inname-geskiedenis maklik",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
