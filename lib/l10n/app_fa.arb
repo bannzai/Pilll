@@ -2781,5 +2781,9 @@
   "todayPillNumberFeatureAppealPoint2": "می‌توان از برگه تنظیمات تغییر داد",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "با ضربه زدن روی عدد در صفحه اصلی هم باز می‌شود",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
