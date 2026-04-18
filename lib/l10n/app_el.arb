@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Καταγραφή & Πρόβλεψη Περιόδου",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Καταγράψτε την ημερομηνία έναρξης περιόδου και παρακολουθήστε τον κύκλο σας",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
