@@ -2722,5 +2722,9 @@
   "calendarDiaryFeatureAppealPoint3": "Pregled prošlih zapisa u kalendaru",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Tapnite na datum da zabilježite zdravstveno stanje",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
