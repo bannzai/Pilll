@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Стандарт \"Эм уух цаг боллоо\" гэсэн мессежийг өөрт таалагдах үгээр тохируулах боломжтой. Урам зориг өгөх үг, тэжээвэр амьтнынхаа нэр гэх мэт өдөр бүрийн хэрэглээг илүү баясгалантай болгох үгс рүү өөрчилж үзээрэй.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Эмийн хуудсанд огноо харуулах",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
