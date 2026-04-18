@@ -2710,5 +2710,9 @@
   "menstruationFeatureAppealPoint3": "Pasmaak instellings",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Bekyk rekords op kalender",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
