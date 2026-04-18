@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Abisuhan sa pamamagitan ng Reminder",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "I-tap ang petsa para isulat ang iskedyul",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
