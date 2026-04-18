@@ -2574,5 +2574,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "ગોળીઓની શીટ આપોઆપ ઉમેરો",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "આગળનો શીટ આપોઆપ બનાવો",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
