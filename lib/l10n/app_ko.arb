@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "복용 기록을 간편하게 확인",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "언제 복용했는지 바로 확인할 수 있어요",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
