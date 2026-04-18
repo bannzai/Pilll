@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "दवा के सेवन में ब्रेक और रुकावटों को सटीक रूप से प्रबंधित करें",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "पिल का सेवन रोकें",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
