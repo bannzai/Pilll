@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "D'Pillnummere vun hütt ändere",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Wenn d Zahl uf em Pillblatt und di tatsächlich Iinnahm ussananderfallid – zum Bischpel wänn mer e Pille vergässe oder verwechslet het – chasch d Nummer vo de hüütige Pille manuell korrigiere. Dis glyche Fänster chasch au vo de Pillnummer-Aazeig uf em Homescreen öffne.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
