@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Cando o grupo de follas de pílulas actual remata, créase automaticamente un novo grupo de follas de pílulas. Non é necesaria a operación de cambio manual e non se producen lagoas nos rexistros.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Alarma que soa coma un espertar",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
