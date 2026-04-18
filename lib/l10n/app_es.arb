@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Toca una fecha para escribir tu agenda",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Sincronización automática de registros menstruales",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
