@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Jika nomor bergeser, koreksi di pengaturan",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Ubah nomor pil untuk hari ini",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
