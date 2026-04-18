@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint3": "കലണ്ടറിൽ കഴിഞ്ഞ രേഖകൾ അവലോകനം ചെയ്യുക",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "ആരോഗ്യ നില രേഖപ്പെടുത്താൻ തീയതി ടാപ്പ് ചെയ്യുക",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
