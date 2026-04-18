@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealShortDescription": "Zukünftigi Terminer wie Arztbesuech verwalte",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Zukünftigi Termin im Kalender ufzeichne",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
