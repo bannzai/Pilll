@@ -2662,5 +2662,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "ಪ್ರತಿದಿನದ ಔಷಧಿ ಸ್ಮರಣೆಗೆ ಅನ್ವಯ",
   "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "ಸ್ವಂತ ದಿನಾಂಕದ ಸೂಚನೆ ಸಂದೇಶ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
   }
 }
