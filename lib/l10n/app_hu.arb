@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "Esemény hozzáadása a naptárhoz",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Ügyintézési napok egyszerű kezelése",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
