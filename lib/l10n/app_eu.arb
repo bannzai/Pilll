@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Doan erabiltzeko pilula-eten erregistroa",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Pastilla-orriaren eskuineko goialdeko gurpil-hortzatik hasi",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
