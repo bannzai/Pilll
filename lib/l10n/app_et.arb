@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Varasema salvestuste ülevaatamine kalendris",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Puudutage kuupäeva tervisliku seisundi salvestamiseks",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
