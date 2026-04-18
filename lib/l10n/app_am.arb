@@ -2594,5 +2594,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "ቀጣዩን የክኒን ሉህ በራስ-ሰር ፍጠር",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "የአሁኑ የክኒን ሉህ ቡድን ሲያልቅ፣ አዲስ የክኒን ሉህ ቡድን በራስ-ሰር ይፈጠራል። እጅ ለእጅ የመቀያየር ስራ አያስፈልግም፣ እናም በምዝገባ ላይ ክፍተት አይኖርም።",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
