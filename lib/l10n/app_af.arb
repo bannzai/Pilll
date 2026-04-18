@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint1": "Teken pillgebruik aan deur op die pilblad te tik",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Maklik ongedaan maak, selfs by foute",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
