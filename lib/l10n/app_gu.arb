@@ -2718,5 +2718,9 @@
   "futureScheduleFeatureAppealPoint2": "ક્લિનિક મુલાકાત સહેલાઈથી મેનેજ કરો",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "રિમાઇન્ડર દ્વારા સૂચના",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
