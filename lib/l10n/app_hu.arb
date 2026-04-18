@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Értesítési üzenet szabad szerkesztése",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Az alapértelmezett „Ideje bevenni a tablettát” üzenetet testre szabhatod a saját szavaiddal. Válassz motiváló üzenetet, a háziállatod nevét, vagy bármilyen más szöveget, amely élvezetesebbé teszi a napi szedést.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
