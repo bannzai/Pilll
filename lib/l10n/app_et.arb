@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "Saa teavitusi ka vaikses režiimis",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Ära unusta pillivõtmist isegi öörahul",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
