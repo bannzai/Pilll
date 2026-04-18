@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "ყვედახედეთ წარსულ ჩანაწერებს კალენდარში",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "დააჭირეთ თარიღს თქვენი მდგომარეობის ჩაწერისთვის",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
