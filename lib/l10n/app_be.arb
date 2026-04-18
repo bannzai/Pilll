@@ -2802,5 +2802,9 @@
   "todayPillNumberFeatureAppealPoint3": "Таксама можна адкрыць, націснуўшы на лічбу на галоўным экране",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Бясплатны запіс перапынку прыёму таблетак",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
