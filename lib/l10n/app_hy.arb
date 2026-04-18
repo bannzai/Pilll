@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "Այսօր դեղը ընդունելու համար համարը տեղավորել",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Եթե համարները շեղվել են, կարգավորումների մեջ շտկեք",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
