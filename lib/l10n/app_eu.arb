@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "Jakinarazpenetik zuzenean hartzea erregistratu",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Erregistratu jakinarazpenean aplikazioa ireki gabe",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
