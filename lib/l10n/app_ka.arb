@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "კალენდრის ნახვის გარეშე თარიღის ცოდნა",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "შესაძლებელია შეცვლა პილ-შიტის პარამეტრებიდან",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
