@@ -2738,5 +2738,9 @@
   "quickRecordFeatureAppealPoint1": "સૂચના ક્રિયા દ્વારા સેવન નોંધ",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "એપ ખોલ્યા વિના પૂર્ણ કરો",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
