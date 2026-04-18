@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Přehled minulých záznamů v kalendáři",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Klepnutím na datum zaznamenejte zdravotní stav",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
