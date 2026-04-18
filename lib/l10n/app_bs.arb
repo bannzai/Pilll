@@ -2418,5 +2418,9 @@
   "lifetimePurchaseNotice1": "・Kupovinom „jednokratnog plana\" vaš „mjesečni/godišnji plan\" neće biti automatski otkazan.",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "Ovdje",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
