@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "അടുത്ത ഷീറ്റ് സ്വയമേവ സൃഷ്ടിക്കുക",
   "@creatingNewPillSheetFeatureAppealShortDescription": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "അടുത്ത പിൽ ഷീറ്റ് സ്വയമേവ സൃഷ്ടിക്കുക",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
   }
 }
