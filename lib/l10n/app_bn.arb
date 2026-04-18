@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealTitle": "অ্যালার্মের মতো বাজে এমন সতর্কতা",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "সাইলেন্ট মোডেও নিশ্চিতভাবে বাজে এমন নোটিফিকেশন",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
