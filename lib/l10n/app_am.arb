@@ -2802,5 +2802,9 @@
   "todayPillNumberFeatureAppealPoint3": "በቤት ማያ ቁጥሮቹን በመንካትም መክፈት ይቻላል",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "ነፃ የኪኒን ዕረፍት ምዝገባ",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
