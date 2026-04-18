@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "Μπορεί να συνδεθεί με το Health",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Τα δεδομένα εμμήνου ρύσης που καταγράφετε στο Pilll μπορούν να συγχρονιστούν αυτόματα με την εφαρμογή Υγεία. Μπορείτε να τα δείτε μαζί με άλλα δεδομένα υγείας σας ή να χρησιμοποιήσετε τα δεδομένα εμμήνου ρύσης και σε άλλες εφαρμογές.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
