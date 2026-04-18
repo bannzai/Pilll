@@ -2654,5 +2654,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "അറിയിപ്പ് സന്ദേശങ്ങൾ സ്വതന്ത്രമായി എഡിറ്റ് ചെയ്യുക",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "ദൈനംദിന ഡോസ് അറിയിപ്പുകളിൽ പ്രതിഫലിക്കുക",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
   }
 }
