@@ -2590,5 +2590,9 @@
   "alarmKitFeatureAppealTitle": "ઘડિયાળ જેવો વાગતો એલાર્મ",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "સાઇલેન્ટ મોડમાં પણ ચોક્કસ વાગે એવી નોટિફિકેશન",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
