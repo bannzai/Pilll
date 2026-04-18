@@ -2518,5 +2518,9 @@
   "menstruationFeatureAppealBody": "Просто записвайте менструацията си, когато дойде, и ще можете да преглеждате цялата история на минали менструации. Следващата очаквана дата на менструация се предвижда автоматично, така че можете да планирате живота си по-добре.",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Записвайте здравето си в календара",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
