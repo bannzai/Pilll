@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Értesítésből rögzítés az alkalmazás megnyitása nélkül",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Tabletta bevétele egy koppintással az értesítési képernyőn",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
