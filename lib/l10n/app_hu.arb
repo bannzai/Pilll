@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Beállítható a Beállítások fülről",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "A kezdőoldalon a számra koppintva is megnyitható.",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
