@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint2": "ചക്രം സ്വയമേ ട്രാക്ക് ചെയ്യുക",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "ക്രമീകരണങ്ങൾ ഇഷ്ടാനുസൃതമാക്കുക",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
