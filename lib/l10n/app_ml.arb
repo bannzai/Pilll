@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "ഹോം സ്ക്രീനിൽ ഗുളിക കഴിക്കൽ രേഖപ്പെടുത്തുക",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealTitle": "ആർത്തവം രേഖപ്പെടുത്തി പ്രവചിക്കുക",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
