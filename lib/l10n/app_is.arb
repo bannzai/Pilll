@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Tilkynningar þrátt fyrir þögla ham",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "When Critical Alert is enabled, you will receive medication reminders even in Do Not Disturb or Silent mode. Please enable it to avoid missing important pill-taking times.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
