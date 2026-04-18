@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "Registra l'assunzione direttamente dalla notifica",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Apri l'app e registra nella notifica",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
