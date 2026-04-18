@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "Registrer din daglige helbredstilstand i kalenderen",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Du kan trykke på en dato i kalenderen for at registrere din fysiske tilstand, humør, symptomer og mere. Da du kan se det sammen med indtagelses- og menstruationsregistreringer, kan du følge din krops rytme.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
