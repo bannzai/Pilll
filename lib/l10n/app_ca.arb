@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealTitle": "Registra el període de descans de la presa",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Gestió precisa de descansos i interrupcions",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
