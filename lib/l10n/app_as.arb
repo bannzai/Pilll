@@ -2518,5 +2518,9 @@
   "menstruationFeatureAppealBody": "ঋতুস্ৰাৱ আহিলে মাত্ৰ ৰেকৰ্ড কৰক, আৰু আপুনি অতীতৰ ঋতুস্ৰাৱৰ সম্পূৰ্ণ ইতিহাস চাব পাৰিব। পৰৱৰ্তী ঋতুস্ৰাৱৰ সম্ভাৱিত তাৰিখো স্বয়ংক্ৰিয়ভাৱে অনুমান কৰা হয়, যাৰ ফলত আপুনি পৰিকল্পনামূলকভাৱে জীৱন যাপন কৰিব পাৰিব।",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "কেলেণ্ডাৰত স্বাস্থ্যৰ অৱস্থা ৰেকৰ্ড কৰক",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
