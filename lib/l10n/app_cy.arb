@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Cywirwch yn y gosodiadau os yw'r rhif yn anghywir",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Gallwch newid rhif y bilsen ar gyfer heddiw",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
