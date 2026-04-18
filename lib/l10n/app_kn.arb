@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "ಹಸ್ತಚಾಲಿತವಾಗಿ ರಚಿಸುವ ಅಗತ್ಯವಿಲ್ಲ",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "ಸೆಟ್ಟಿಂಗ್ ಟ್ಯಾಬಿನ ಸ್ವಿಚ್ ಬಳಸಿ ಬದಲಿಸಿ",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
