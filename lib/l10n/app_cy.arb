@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Cysylltu data cofnodion mislif yn awtomatig",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Cydamseru ag ap iechyd",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
