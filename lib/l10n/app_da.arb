@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Ringer selv i lydløs/fokustilstand",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Alarmtone som en vækkeur",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
