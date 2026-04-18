@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "Можете да го запишете периодот кога привремено ќе престанете да ги земате таблетите во распоредот. За време на паузата бројот на земања не напредува, а при повторно започнување веднаш можете да продолжите да водите евиденција.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Место во апликацијата",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
