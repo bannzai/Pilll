@@ -2518,5 +2518,9 @@
   "calendarDiaryFeatureAppealShortDescription": "Κατέγραφε την καθημερινή σου υγεία στο ημερολόγιο",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Καταγράψτε την καθημερινή σας υγεία στο ημερολόγιο",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
