@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealTitle": "Skryf toekomstige planne neer",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Bestuur toekomstige afsprake soos doktersbesoeke",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
