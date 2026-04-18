@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Integrasi Kesehatan",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Bagikan catatan haid ke aplikasi Kesehatan",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
