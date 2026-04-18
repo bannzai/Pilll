@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Notifikationer der lyder, selv på lydløs",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Pillealarmer som et vækkeur",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
