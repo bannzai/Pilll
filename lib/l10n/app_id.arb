@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealHeadline": "Mencatat dan memprediksi menstruasi",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Hanya catat saat menstruasi datang, dan Anda dapat melihat daftar riwayat menstruasi sebelumnya. Tanggal perkiraan menstruasi berikutnya juga diprediksi secara otomatis sehingga Anda dapat merencanakan ke depan dengan lebih baik.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
