@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Durch die Anzeige von Daten in den Feldern des Pillenplans können Sie Ihre vergangene Einnahmehistorie und zukünftige Einnahmepläne auf einen Blick überprüfen. Wechseln Sie zwischen dem Modus „Nummer\" und dem Modus „Datum\", um die für Sie passende Anzeige auszuwählen.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Einnahmehistorie einfach nachverfolgen",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
