@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealBody": "ડૉક્ટરની મુલાકાત અને પ્રવાસ જેવી ભવિષ્યની યોજનાઓ કૅલેન્ડર પર નોંધી શકો છો. ગોળી લેવાની ચક્ર સાથે એકસાથે તપાસ કરી શકાય છે, તેથી માસિક ધર્મની અપેક્ષિત તારીખને ધ્યાનમાં રાખીને આયોજન કરી શકો છો.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "હેલ્થ ઍપ સાથે જોડો",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
