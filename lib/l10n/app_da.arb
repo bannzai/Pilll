@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "Med AlarmKit, der er tilgængeligt på iOS 26 og nyere, får du besked om at tage dine piller via en alarm, der lyder pålideligt selv i lydløs tilstand eller fokustilstand.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Juster dagens dosisnummer",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
