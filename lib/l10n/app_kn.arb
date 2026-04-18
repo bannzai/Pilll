@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "間違えてもかんたん取り消し",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "ಯಾವುದೇ ಸಮಯದಲ್ಲೂ ನಿಮ್ಮ ಮದ್ದು ಸೇವನೆಯ ದಾಖಲೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
