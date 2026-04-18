@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "\"Pilula hartzeko garaia da\" mezu estandarra zure hitz gogokoekin pertsonaliza dezakezu. Animatzeko esaldiak, maskotaren izena edo beste hitz batzuk erabiliz, egunero pilulak hartzea atseginagoa bihur dezakezu.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Pildora-fitxan data erakutsi",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
