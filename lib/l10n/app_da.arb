@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Se din medicineringshistorik når som helst",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Registrer menstruationens startdato nemt",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
