@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Cambia co interruptor da pestana de configuración",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Soa mesmo en modo silencioso/de concentración",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
