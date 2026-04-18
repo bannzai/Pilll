@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "შეტყობინება შეხსენებით",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "დააჭირეთ თარიღს და დაამატეთ ჩანაწერი",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
