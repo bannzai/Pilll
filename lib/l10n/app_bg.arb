@@ -2466,5 +2466,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Свободно редактирайте съобщението за известие за прием",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Можете да персонализирате стандартното „Време е да вземете хапчето\" с думи по ваш избор. Опитайте да го промените с мотивиращи думи, името на домашния ви любимец или друг израз, който прави ежедневния прием по-приятен.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
