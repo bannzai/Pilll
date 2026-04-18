@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealBody": "Kad iestājas mēnešreizes, vienkārši tās ierakstiet — jūs varēsiet skatīt iepriekšējo menstruāciju vēsturi sarakstā. Programma automātiski paredzēs nākamo menstruāciju datumu, ļaujot jums plānot savas dienas.",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Reģistrēt pašsajūtu kalendārā",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
