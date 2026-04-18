@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "Puedes conectarte con la aplicación Salud",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Puedes sincronizar automáticamente los datos menstruales registrados en Pilll con la app de Salud. Podrás consultarlos junto con otros datos de salud y utilizarlos en otras aplicaciones.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
