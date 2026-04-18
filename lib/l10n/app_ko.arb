@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "무음 모드에서도 확실히 울리는 알림",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "알람 시계 같은 복용 알림",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
