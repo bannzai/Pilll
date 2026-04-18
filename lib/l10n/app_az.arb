@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint1": "Adet başlama tarixini asanlıqla qeyd et",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Dövrü avtomatik müəyyən edin",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
