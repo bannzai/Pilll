@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Менструалиа бүртгэж таамаглах",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Сарын тэмдгийн эхлэх өдрийг бүртгэж мөчлөгийг тогтоо",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
