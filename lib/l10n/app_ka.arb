@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "პილ-შიტის უჯრებში თარიღების ჩვენებით შეგიძლიათ ერთი შეხედვით დაათვალიეროთ წარსული მიღებების ჩანაწერები და მომავალი მიღებების გრაფიკი. გადართეთ „ნომერი“ და „თარიღი“ რეჟიმებს შორის და შეარჩიეთ ის ჩვენება, რომელიც თქვენთვის მოსახერხებელია.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "პილების მიღების ისტორიის მარტივი მიმოხილვა",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
