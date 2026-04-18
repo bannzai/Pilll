@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "בדקי מתי ליקח במבט אחד",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "ניתן להציג תאריכים על גיליון הגלולות",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
