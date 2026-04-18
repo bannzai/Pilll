@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Registrer menstruationens startdato nemt",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Spor cyklus automatisk",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
