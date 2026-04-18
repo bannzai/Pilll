@@ -2410,5 +2410,9 @@
   "lifetimePurchaseNotice1": "일시불 플랜을 구매하더라도 월간·연간 플랜은 자동으로 해지되지 않습니다.",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "구독 관리",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
