@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "ສາມາດເປີດໄດ້ໂດຍການກົດເລກໃນໜ້າເຮືອນ",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "ບັນທຶກມື້ຫ່ອງຮັບຢາ ໃຊ້ໄດ້ຟຣີ",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
