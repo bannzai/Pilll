@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "ເລີ່ມຈາກປຸ່ມຕັ້ງຄ່າ ຢູ່ມຸງຂວາຂອງຊີດຢາ",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "ແກ້ໄຂ ແລະ ເລີ່ມອີກ ງ່າຍ",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
