@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Äratuskellaga sarnane pillide võtmise alarm",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 ja uuematel versioonidel saadaoleva AlarmKit-i abil teavitatakse teid pillide võtmisest häirega, mis kõlab kindlasti ka vaikse režiimi või fookusrežiimi korral.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
