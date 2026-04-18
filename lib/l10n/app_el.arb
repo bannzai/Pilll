@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Ενεργοποιώντας τις Κρίσιμες Ειδοποιήσεις, μπορείτε να λαμβάνετε ειδοποιήσεις λήψης χαπιού ακόμα και όταν είναι ενεργοποιημένη η λειτουργία «Μην ενοχλείτε» ή η αθόρυβη λειτουργία. Ρυθμίστε το για να μην χάσετε ποτέ τη στιγμή λήψης του σημαντικού σας χαπιού.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Προσαρμογή μηνύματος ειδοποίησης",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
