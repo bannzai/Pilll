@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Consulta de un vistazo cuándo tomarlo",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Puedes mostrar fechas en la hoja de píldoras",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
