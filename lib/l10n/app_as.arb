@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint1": "তাৰিখ অনুযায়ী পিল শ্বীট প্ৰদৰ্শন",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "কেলেণ্ডাৰ নোচোৱাকৈও তাৰিখ জানিব পাৰিব",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
