@@ -2722,5 +2722,9 @@
   "calendarDiaryFeatureAppealPoint3": "কেলেণ্ডাৰত অতীতৰ ৰেকৰ্ড চাওক",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "তাৰিখত টেপ কৰি স্বাস্থ্যৰ অৱস্থা লিপিবদ্ধ কৰক",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
