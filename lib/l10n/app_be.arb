@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Можна наладзіць тэкст апавяшчэнняў",
   "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Вольна рэдагуйце паведамленні аб прыёме таблетак",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
   }
 }
