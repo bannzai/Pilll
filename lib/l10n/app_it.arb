@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Evita di dimenticare la pillola anche in modalità Non disturbare",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Notifiche anche in modalità silenziosa",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
