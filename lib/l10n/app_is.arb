@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "Auðveld yfirsýn yfir tökuferilinn",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Sjáðu strax hvenær þú tókst pilluna",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
