@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Spustit pomocí ikony ozubeného kola v pravém horním rohu záznamu pilulek",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Snadná úprava a obnovení období",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
