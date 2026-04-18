@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Hawdd dadwneud camgymeriad",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Gwirio hanes cymryd meddyginiaeth ar unrhyw adeg",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
