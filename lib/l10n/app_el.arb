@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Εναλλαγή με τον διακόπτη στην καρτέλα ρυθμίσεων",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Ηχεί ακόμα και σε λειτουργία σίγασης/εστίασης",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
