@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealTitle": "Задайте номера на таблетката за днес",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Коригиране в настройките при несъответствие на номера",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
