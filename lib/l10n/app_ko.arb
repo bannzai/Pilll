@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "오늘 복용 번호 맞추기",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "번호가 어긋나면 설정에서 수정하세요",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
