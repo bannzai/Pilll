@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Sinkronisasi catatan menstruasi secara otomatis",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Sinkronkan dengan aplikasi Kesehatan",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
