@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Өнгөрсөн бичлэгийг календарт харах",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Огноог дарж биеийн байдлаа бүртгэнэ үү",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
