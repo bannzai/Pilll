@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "साइलेंट में भी निश्चित रूप से बजने वाली सूचनाएं",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "घड़ी की तरह दवा लेने की याद दिलाने वाला अलार्म",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
