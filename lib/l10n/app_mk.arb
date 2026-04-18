@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Известувања дури и во тивок режим",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Ако ја овозможите функцијата Critical Alert, ќе добивате потсетувања за земање дури и кога е вклучен „Не пречи“ или тивок режим. За да не ги пропуштите важните времиња за земање на пилулите, ве советуваме да ја вклучите.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
