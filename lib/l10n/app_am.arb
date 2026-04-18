@@ -2582,5 +2582,9 @@
   "quickRecordFeatureAppealBody": "የማስታወሻ ማሳወቂያውን ረጅም ጊዜ ሲጭኑ፣ \"ወሰድኩ\" የሚለው ድርጊት ይታያል፣ ይህም መተግበሪያውን ሳይከፍቱ ክኒን መውሰዱን እንዲመዘግቡ ያስችልዎታል።",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "ፒል ሰሌዳን በራስ-ሰር ጨምር",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
