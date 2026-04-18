@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26-നും അതിനു ശേഷവും · ക്രമീകരണ ടാബിൽ നിന്ന് പ്രവർത്തനക്ഷമമാക്കുക",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "സൗജന്യമായി ഉപയോഗിക്കാവുന്ന നമ്പർ ക്രമീകരണ ഫീച്ചർ",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
