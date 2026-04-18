@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Märgi menstruatsiooni alguspäev lihtsalt",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Tsükli automaatne tuvastamine",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
