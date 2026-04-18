@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "შეტყობინებები, რომლებიც გარანტირებულად რეკავენ სიჩუმის რეჟიმშიც კი",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "მაღვიძარას მსგავსი წამლის მიღების შეხსენება",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
