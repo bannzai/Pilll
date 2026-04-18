@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Будильник сыяктуу дары ичүүнү эскерткеч",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 жана андан кийинки нускааларда жеткиликтүү AlarmKit аркылуу үнсүз режимде же Фокус режиминде да иштеген, ишенимдүү ойготкучтар менен таблетканы ичүү убактын эскертет.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
