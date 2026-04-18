@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealTitle": "Rebre notificacions fins i tot en mode silenciós",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Evita oblidar la píndola fins i tot en mode No Molestar",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
