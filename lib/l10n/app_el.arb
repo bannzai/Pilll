@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Αυτόματη παρακολούθηση κύκλου",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Προσαρμογή ρυθμίσεων",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
