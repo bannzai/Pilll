@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Эскертүүдөгү аракет аркылуу ичкенди каттоо",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "アプリを開かずに完了",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
