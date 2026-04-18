@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "Hartze-atseden aldia erregistratu",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Atsedenaldiak eta etenak zehaztasunez kudeatu",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
