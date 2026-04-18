@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Prikaži datume na listi pilula",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Prikazom datuma u poljima tablice pilula možete na prvi pogled vidjeti povijest uzimanja i buduće planirane termine. Prebacite se između načina „Broj“ i načina „Datum“ kako biste odabrali prikaz koji vam najviše odgovara.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
