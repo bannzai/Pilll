@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint1": "Oglašava se čak i u tihom/fokus modu",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Zvuk alarma poput budilnika",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
