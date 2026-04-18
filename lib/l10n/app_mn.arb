@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Эмнэлэгт очих өдрийг хялбархан удирдах",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Сануулагчаар мэдэгдэл",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
