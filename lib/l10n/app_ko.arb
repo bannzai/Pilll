@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "몸 상태를 기록하고 되돌아보기",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "캘린더에서 지난 기록 보기",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
