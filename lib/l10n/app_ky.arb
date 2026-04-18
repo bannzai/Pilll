@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Ката кетсе да оңой жокко чыгаруу",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Дарыны кабыл алуу тарыхын каалаган убакта текшере аласыз",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
