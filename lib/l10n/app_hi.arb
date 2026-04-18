@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "हेल्थ ऐप के साथ सिंक करें",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Health के साथ संगत",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
