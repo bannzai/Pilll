@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "សម្លេងរោទ៍ដូចនាឡិកា",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "អាចប្រើបាននៅលើ iOS 26 ឡើងទៅ — បើកពីផ្ទាំងការកំណត់",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
