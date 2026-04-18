@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Добивај известувања и кога е вклучен режимот Фокус",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Потсетување точно во зададеното време",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
