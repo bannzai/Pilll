@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint1": "জাননীৰ কাৰ্যৰ জৰিয়তে সেৱন ৰেকৰ্ড",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "এপ নোখোলাকৈ সম্পূৰ্ণ কৰক",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
