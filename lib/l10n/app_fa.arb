@@ -2505,5 +2505,9 @@
   "calendarDiaryFeatureAppealTitle": "ثبت وضعیت سلامتی در تقویم",
   "@calendarDiaryFeatureAppealTitle": {
     "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "حال روزانه‌ات را در تقویم ثبت کن",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
   }
 }
