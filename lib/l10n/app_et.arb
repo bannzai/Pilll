@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Puudutage kuupäeva tervisliku seisundi salvestamiseks",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Kirjuta kalendrisse plaane",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
