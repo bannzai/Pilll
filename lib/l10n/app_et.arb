@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "Palun sisestage päringusisu",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Täname teid ühekordse ostu plaani soetamise eest. Kui teil on kuu- või aastatellimus, ärge unustage see tühistada.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
