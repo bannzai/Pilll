@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Critical Alert सक्रिय करने पर, आप डू नॉट डिस्टर्ब (Do Not Disturb) या साइलेंट मोड में होने पर भी पिल लेने की सूचनाएँ प्राप्त कर पाएँगे। महत्वपूर्ण पिल लेने के समय न चूकने के लिए, कृपया इसे सक्षम करें।",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "सूचना संदेश अनुकूलित करें",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
