@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Näytä pillerisivu päivämäärän mukaan",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Tiedät päivämäärän katsomatta kalenteriin",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
