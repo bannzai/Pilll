@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Sincronizza con l'app Salute",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
