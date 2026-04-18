@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Έναρξη από το γρανάζι πάνω δεξιά στο φύλλο χαπιών",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Εύκολη επεξεργασία και επανέναρξη περιόδου",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
