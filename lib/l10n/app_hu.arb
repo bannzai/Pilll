@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Értesítések akkor is megérkeznek, ha a Fókusz mód be van kapcsolva",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "A beállított időpontban biztosan emlékeztet",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
