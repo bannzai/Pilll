@@ -2794,5 +2794,9 @@
   "restDurationFeatureAppealPoint1": "സൗജന്യമായി ഉപയോഗിക്കാവുന്ന ഗുളിക ഇടവേള രേഖ",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "പിൽ ഷീറ്റിന്റെ മുകളിൽ വലത് ഭാഗത്തുള്ള ഗിയർ ഐക്കണിൽ നിന്ന് ആരംഭിക്കുക",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
