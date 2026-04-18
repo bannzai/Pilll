@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "לקחת הפסקה מנטילת גלולות",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "ניתן לתעד בגליון הגלולות תקופת הפסקת נטילה. במהלך ההפסקה מספר הנטילה אינו מתקדם, וברגע שחוזרים לנטילה ניתן לחדש את הרישום מיד.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
