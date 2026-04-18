@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Дәрі парақтарын автоматты түрде қосу",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Келесі парақты автоматты түрде қосу",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
