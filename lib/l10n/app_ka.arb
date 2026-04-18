@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "დღევანდელი მიღების ნომრის შესწორება",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "ნომერი არასწორია? შეასწორეთ პარამეტრებში",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
