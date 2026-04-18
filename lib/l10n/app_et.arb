@@ -2518,5 +2518,9 @@
   "calendarDiaryFeatureAppealShortDescription": "Märgi igapäevane enesetunne kalendrisse",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Märgi oma igapäevane enesetunne kalendrisse",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
