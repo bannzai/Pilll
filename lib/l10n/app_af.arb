@@ -2562,5 +2562,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "Kan sinkroniseer met gesondheidsorg",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "U kan menstruasiedata wat in Pilll aangeteken is, outomaties sinkroniseer met die Gesondheid-toepassing. U kan dit saam met ander gesondheidsdata op Gesondheid nagaan, en die menstruasiedata kan ook in ander toepassings gebruik word.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
