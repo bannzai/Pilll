@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Registra fácilmente la fecha de inicio de tu período",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Seguimiento automático del ciclo",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
