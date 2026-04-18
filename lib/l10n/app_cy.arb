@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Tapiwch y dyddiad i gofnodi eich cyflwr iechyd",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Ysgrifennu apwyntiad yn y calendr",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
