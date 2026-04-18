@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Kriitiliste teavituste lubamisel saate tableti võtmise meeldetuletusi ka siis, kui „Mitte segada\" või vaikne režiim on aktiveeritud. Seadistage see kindlasti, et mitte jätta vahele ühtegi olulist tableti võtmise hetke.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Kohanda teavitussõnumeid",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
