@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Запишување и предвидување на менструацијата",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Запишете го почетокот на менструацијата за да го следите циклусот",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
