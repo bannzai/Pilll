@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealHeadline": "Maitala at hulaan ang regla",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "I-record lang kapag dumating ang iyong regla at makikita mo ang buong listahan ng iyong nakaraang kasaysayan ng regla. Awtomatiko ring hinuhulaan ang susunod na inaasahang petsa ng regla, kaya makakapagsaplano ka nang mas maayos.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
