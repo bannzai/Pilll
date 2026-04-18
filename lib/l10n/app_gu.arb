@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "ક્યારે ગોળી લીધી તે તરત જ જાણો",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "હોમ સ્ક્રીન પર ગોળી લેવાની નોંધ કરો",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
