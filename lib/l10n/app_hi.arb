@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "आप कुछ समय के लिए दवा लेना रोकने की अवधि को पिल शीट में रिकॉर्ड कर सकते हैं। रुकने के दौरान खुराक की गिनती आगे नहीं बढ़ेगी, और फिर से शुरू करने पर रिकॉर्डिंग तुरंत दोबारा चालू हो जाएगी।",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "ऐप के भीतर का स्थान",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
