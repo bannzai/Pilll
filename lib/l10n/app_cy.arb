@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "Gan ddefnyddio AlarmKit sydd ar gael ar iOS 26 ac uwch, byddwch yn cael eich atgoffa i gymryd eich pilsen gyda larwm sy'n canu yn sicr hyd yn oed yn y modd tawel neu'r modd ffocws.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Addasu rhif dos heddiw",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
