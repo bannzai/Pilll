@@ -2566,5 +2566,9 @@
   "healthCareIntegrationFeatureAppealBody": "Дадзеныя аб менструальным цыкле, запісаныя ў Pilll, можна аўтаматычна сінхранізаваць з праграмай «Здароўе». Вы зможаце праглядаць іх разам з іншымі дадзенымі аб здароўі ў «Здароўі», а таксама выкарыстоўваць дадзеныя аб менструацыі ў іншых праграмах.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Запіс прыёму проста з апавяшчэння",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
