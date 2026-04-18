@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "Muistutus varmasti asetettuun aikaan",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Yhdellä napautuksella helppo asetus",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
