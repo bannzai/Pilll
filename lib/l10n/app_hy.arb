@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Ծանուցում՝ հիշեցման միջոցով",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Ամսաթվին հպեք և գրեք ձեր ծրագիրը",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
