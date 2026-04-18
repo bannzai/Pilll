@@ -2782,5 +2782,9 @@
   "todayPillNumberFeatureAppealPoint3": "હોમ પર નંબર ટેપ કરીને પણ ખોલી શકાય છે",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "મફત ઉપલબ્ધ ઓષધ-વિરામ નોંધ",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
