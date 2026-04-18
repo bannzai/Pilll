@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint3": "Viegla iestatīšana ar vienu pieskārienu",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Brīvi rediģēt paziņojumus",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
