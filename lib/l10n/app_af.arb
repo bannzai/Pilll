@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint1": "Lui selfs in stil/fokus modus",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Wekkersoortgelyke alarmklank",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
