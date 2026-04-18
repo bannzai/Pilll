@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "ಆರೋಗ್ಯ ಅಪ್ಲಿಕೇಶನ್‌ಗಳೊಂದಿಗೆ ಸಂಯೋಜಿಸಬಹುದು",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilll ನಲ್ಲಿ ದಾಖಲಿಸಿದ ಮಾಸಿಕ ದತ್ತಾಂಶವನ್ನು ಆರೋಗ್ಯ ಅಪ್ಲಿಕೇಶನ್ಗಳೊಂದಿಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸಮನ್ವಯಗೊಳಿಸಬಹುದು. ಆರೋಗ್ಯ ಅಪ್ಲಿಕೇಶನಿನ ಇತರ ಆರೋಗ್ಯ ದತ್ತಾಂಶಗಳೊಡನೆ ಒಟ್ಟಿಗೆ ಪರಿಶೀಲಿಸಬಹುದು ಮತ್ತು ಇತರ ಅಪ್ಲಿಕೇಶನ್ಗಳಲ್ಲೂ ಈ ಮಾಸಿಕ ದತ್ತಾಂಶವನ್ನು ಬಳಸಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ。",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
