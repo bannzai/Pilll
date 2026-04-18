@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "ಸ್ವಂತ ದಿನಾಂಕದ ಸೂಚನೆ ಸಂದೇಶ",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "ಪಿಲ್‌ಶೀಟನ್ನು ದಿನಾಂಕದಂತೆ ತೋರಿಸಿ",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
