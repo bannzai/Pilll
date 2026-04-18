@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Ha hosszan megnyomod az emlékeztető-értesítést, megjelenik a „Bevettem” művelet, így az alkalmazás megnyitása nélkül is rögzítheted a bevételt.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Fogamzásgátló lapok automatikus hozzáadása",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
