@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Canfod y gylchred yn awtomatig",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Addasu gosodiadau",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
