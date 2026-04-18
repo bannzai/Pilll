@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Dodirnite listu tableta za evidentiranje uzimanja",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Jednostavno poništi pogrešku",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
