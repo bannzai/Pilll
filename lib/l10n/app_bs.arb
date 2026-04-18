@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Brzi pregled rasporeda uzimanja",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Prikaz datuma na listu pilula",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
