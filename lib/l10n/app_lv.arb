@@ -2638,5 +2638,9 @@
   "featureAppealLocationLabel": "Vieta lietotnē",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Paziņojumi tiek saņemti arī fokusēšanas režīmā",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
