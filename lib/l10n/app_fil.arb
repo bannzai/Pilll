@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Pigilan ang pagkalimot uminom ng gamot kahit nasa Do Not Disturb mode",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Makatanggap ng notification kahit nasa Silent Mode",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
