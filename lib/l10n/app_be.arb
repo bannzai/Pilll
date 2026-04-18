@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealPoint2": "Занатоўвайце самаадчуванне і аналізуйце яго",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Прагляд мінулых запісаў у календары",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
