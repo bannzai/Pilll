@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Notifikationer leveres selv i Fokus-tilstand",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Pålidelig påmindelse på det indstillede tidspunkt",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
