@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Хэрэглэлтийн түүхийг хэдийд ч шалгах",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Сарын тэмдэгний эхлэх өдрийг хялбархан бүртгэх",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
