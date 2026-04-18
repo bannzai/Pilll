@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealTitle": "Лесен преглед на историята на приема",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Веднага разберете кога сте приели хапчето",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
