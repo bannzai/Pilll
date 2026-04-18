@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "સાઇલન્ટ મોડમાં પણ સૂચનાઓ મેળવો",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "ડૂ નૉટ ડિસ્ટર્બ મોડમાં પણ ગોળી લેવાનું ન ભૂલો",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
