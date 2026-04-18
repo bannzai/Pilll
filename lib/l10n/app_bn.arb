@@ -2686,5 +2686,9 @@
   "appearanceModeDateFeatureAppealPoint3": "পিল শিট সেটিংস থেকে পরিবর্তনযোগ্য",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "পিল শিট ট্যাপ করে সেবন রেকর্ড",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
