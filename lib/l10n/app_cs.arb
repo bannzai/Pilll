@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Vlastní zpráva s upozorněním",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Zobrazit pilulkový arch podle data",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
