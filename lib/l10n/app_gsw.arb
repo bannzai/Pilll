@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Pillblaatt automatisch hinzuefüege",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Nächschts Blatt automatisch erstelle",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
