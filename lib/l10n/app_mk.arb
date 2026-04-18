@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "На почетниот екран, само допрете ја листата со пилули за да го забележите земањето за тој ден. Ако грешно сте го забележале, допрете повторно за да го поништите. Исто така можете подоцна да ја проверите историјата на земања, па може да продолжите со мир во душата.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Запишување и предвидување на менструацијата",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
