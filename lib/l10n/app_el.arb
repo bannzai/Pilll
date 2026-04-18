@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Ήχος ξυπνητηριού",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 και νεότερο · Ενεργοποίηση από την καρτέλα Ρυθμίσεις",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
