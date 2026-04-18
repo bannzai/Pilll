@@ -2730,5 +2730,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "હેલ્થ કેર એપ સાથે સિંક કરો",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple હેલ્થ સપોર્ટ",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
