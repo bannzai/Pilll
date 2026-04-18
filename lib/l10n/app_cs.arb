@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Data o menstruaci zaznamenaná v aplikaci Pilll lze automaticky propojit s aplikací Zdraví. Můžete je prohlížet společně s dalšími zdravotními údaji nebo je používat i v jiných aplikacích.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Zaznamenat dávku přímo z notifikace",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
