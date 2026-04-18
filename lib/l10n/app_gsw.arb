@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Arzttermine eifach verwalte",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Benachrichtigung mit Reminder",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
