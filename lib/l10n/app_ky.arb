@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Premium жазылуусу менен дароо колдонууга болот",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Таблетка барагы бүткөндө автоматтык алмаштыруу",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
