@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealTitle": "Una alarma que sona com un despertador",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Notificacions que sonen fins i tot en silenci",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
