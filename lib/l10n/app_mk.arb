@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Ќе звучи дури и во режим без звук или во режим Фокус",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Звук на аларм како кај будилник",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
