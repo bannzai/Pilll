@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Hljómar jafnvel þótt síminn sé í þögn eða einbeitingarham.",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Vekjarahljóð svipað og vekjaraklukku",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
