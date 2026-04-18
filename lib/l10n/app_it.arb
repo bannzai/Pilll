@@ -2802,5 +2802,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Conosci la data senza guardare il calendario",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Disponibile con l'abbonamento Premium",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
