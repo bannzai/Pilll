@@ -2764,5 +2764,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Toggle with the switch in the Settings tab",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Rings even in Silent/Focus Mode",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
