@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "Du kan registrere en pause fra pilleindtagelse på dit pillark. Under pausen skrider pillenummeret ikke frem, og du kan hurtigt genoptage registreringen, når du starter igen.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Sted i appen",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
