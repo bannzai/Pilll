@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Αν ο αριθμός δεν είναι σωστός, διορθώστε τον στις ρυθμίσεις",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Μπορείτε να αλλάξετε τον αριθμό του χαπιού που πρέπει να πάρετε σήμερα",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
