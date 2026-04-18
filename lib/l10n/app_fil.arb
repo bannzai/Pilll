@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Madaling bawiin kahit magkamali",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Suriin ang kasaysayan ng gamot anumang oras",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
