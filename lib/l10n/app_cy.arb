@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Gallwch addasu'r neges safonol \"Mae hi'n amser cymryd eich pilsen\" i eiriau o'ch dewis chi. Rhowch gynnig ar newid y testun i eiriau sy'n eich ysgogi, fel enw eich anifail anwes, i wneud cymryd eich dos dyddiol yn fwy hwyl.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Dangos dyddiad ar daflen y bilsen",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
