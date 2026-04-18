@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint2": "ആപ്പ് തുറക്കാതെ പൂർത്തിയാക്കുക",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "പ്രീമിയം അംഗത്വത്തോടെ അതേ രീതിയിൽ ഉപയോഗിക്കാം",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
