@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "ಒಂದು ಟ್ಯಾಪ್‌ನಲ್ಲಿ ಸುಲಭ ಸೆಟ್‌ಅಪ್",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "ಸೂಚನೆ ಸಂದೇಶವನ್ನು ಇಚ್ಛೆಯಂತೆ ಸಂಪಾದಿಸಿ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
