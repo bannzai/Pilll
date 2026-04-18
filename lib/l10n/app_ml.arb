@@ -2550,5 +2550,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "ഹെൽത്ത്‌കെയറുമായി സംയോജിക്കാം",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilll-ൽ രേഖപ്പെടുത്തിയ ആർത്തവ ഡേറ്റ ഹെൽത്ത്‌കെയർ ആപ്പുമായി സ്വയമേവ സമന്വയിപ്പിക്കാൻ കഴിയും. ഹെൽത്ത്‌കെയറിലെ മറ്റ് ആരോഗ്യ ഡേറ്റകളോടൊപ്പം ഇത് പരിശോധിക്കാനും, മറ്റ് ആപ്പുകളിലും ആർത്തവ ഡേറ്റ ഉപയോഗിക്കാനും സാധിക്കും.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
