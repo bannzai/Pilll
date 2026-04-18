@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Critical Alert engedélyezésével még alvó vagy némított módban is megkaphatja a szedésről szóló értesítéseket. Ne maradjon le a fontos fogamzásgátló bevételéről — kapcsolja be ezt a beállítást!",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Értesítési üzenet testreszabása",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
