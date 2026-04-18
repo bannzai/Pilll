@@ -2510,5 +2510,9 @@
   "calendarDiaryFeatureAppealTitle": "Reģistrēt pašsajūtu kalendārā",
   "@calendarDiaryFeatureAppealTitle": {
     "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Ieraksti ikdienas pašsajūtu kalendārā",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
   }
 }
