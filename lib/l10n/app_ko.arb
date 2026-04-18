@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "오늘 복용할 알약 번호를 변경할 수 있습니다",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "복용을 잊거나 착각으로 인해 피임약 시트의 번호와 실제 복용이 어긋났을 때, 오늘 복용할 약의 번호를 수동으로 맞출 수 있습니다. 홈 화면의 피임약 숫자 표시에서 동일한 화면을 열 수 있습니다.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
