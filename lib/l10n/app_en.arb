@@ -2788,5 +2788,9 @@
   "todayPillNumberFeatureAppealPoint3": "Also accessible by tapping the number on the home screen",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Free pill break tracking",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
