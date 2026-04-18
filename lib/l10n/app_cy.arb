@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "Ysgrifenna gynlluniau'r dyfodol",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Rheoli cynlluniau'r dyfodol fel apwyntiadau meddygol",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
