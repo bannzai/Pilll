@@ -2738,5 +2738,9 @@
   "futureScheduleFeatureAppealPoint3": "রিমাইন্ডার দিয়ে বিজ্ঞপ্তি",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "তারিখে ট্যাপ করে পরিকল্পনা লিখুন",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
