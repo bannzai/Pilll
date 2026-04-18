@@ -2792,5 +2792,9 @@
   "restDurationFeatureAppealPoint1": "Free pill break tracking",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Start from the gear icon at the top right of the pill sheet",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
