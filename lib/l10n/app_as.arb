@@ -2410,5 +2410,9 @@
   "inquiryContentRequired": "অনুগ্ৰহ কৰি যোগাযোগৰ বিষয়বস্তু দিয়ক",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "এককালীন ক্ৰয় পৰিকল্পনা ক্ৰয় কৰাৰ বাবে আপোনাক ধন্যবাদ। মাহেকীয়া/বাৰ্ষিক পৰিকল্পনাৰ সদস্য হোৱাসকলে, অনুগ্ৰহ কৰি আপোনাৰ চাবস্ক্ৰিপচন বাতিল কৰতে নাপাহৰিব।",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
