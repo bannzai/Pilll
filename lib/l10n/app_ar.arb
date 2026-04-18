@@ -2482,5 +2482,9 @@
   "appearanceModeDateFeatureAppealHeadline": "يمكن عرض التواريخ على لوحة الحبوب",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "من خلال عرض التواريخ في خانات ورقة الحبوب، يمكنك مراجعة سجل تناول الدواء في الماضي وجدول الجرعات المستقبلية بنظرة واحدة. قم بالتبديل بين وضع «الرقم» ووضع «التاريخ» لاختيار العرض الذي يناسبك.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
