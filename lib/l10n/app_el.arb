@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Πατήστε μια ημερομηνία για να γράψετε ένα πρόγραμμα",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Αυτόματη συγχρονισμός δεδομένων περιόδου",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
