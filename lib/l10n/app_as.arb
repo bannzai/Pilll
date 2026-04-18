@@ -2502,5 +2502,9 @@
   "recordPillFeatureAppealBody": "ঘৰুৱা স্ক্ৰীনৰ পিল শ্বীট টেপ কৰিলেই সেইদিনৰ সেৱন ৰেকৰ্ড কৰিব পাৰিব। ভুলকৈ ৰেকৰ্ড কৰিলেও, আকৌ এবাৰ টেপ কৰিলেই বাতিল কৰিব পাৰিব। সেৱনৰ ইতিহাসো পিছত চাব পৰা যায়, গতিকে নিশ্চিন্তে অব্যাহত ৰাখিব পাৰিব।",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "ঋতুস্ৰাৱ ৰেকৰ্ড আৰু পূৰ্বানুমান",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
