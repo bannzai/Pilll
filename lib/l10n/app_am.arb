@@ -2694,5 +2694,9 @@
   "recordPillFeatureAppealPoint2": "ስህተት ቢፈጸምም በቀላሉ ሰርዝ",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "የመድሃኒት ታሪክን በማንኛውም ጊዜ ያረጋግጡ",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
