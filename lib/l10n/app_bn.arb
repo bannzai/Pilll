@@ -2698,5 +2698,9 @@
   "recordPillFeatureAppealPoint3": "যেকোনো সময় সেবনের ইতিহাস দেখুন",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "মাসিক শুরুর তারিখ সহজে রেকর্ড করুন",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
