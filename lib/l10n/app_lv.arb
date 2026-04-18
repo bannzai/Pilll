@@ -2678,5 +2678,9 @@
   "recordPillFeatureAppealPoint1": "{\n  \"tapPillSheetToRecord\": \"Pieskarieties tablešu lapai, lai reģistrētu lietošanu.\",\n  \"@tapPillSheetToRecord\": {\n    \"description\": \"Instruction shown on the pill sheet UI indicating that tapping the pill sheet records pill intake.\"\n  }\n}",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Ja kļūdāties — viegli atsaukt",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
