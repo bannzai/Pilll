@@ -2706,5 +2706,9 @@
   "menstruationFeatureAppealPoint2": "ዑደቱን በራስ-ሰር ተከታተል",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "ቅንብሮችን ያብጁ",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
