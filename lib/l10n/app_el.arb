@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Εύκολη καταγραφή ημερομηνίας έναρξης περιόδου",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Αυτόματη παρακολούθηση κύκλου",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
