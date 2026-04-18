@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "D'Einnahmegeschicht jederziit abruefe",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Eifach de Aafang vun de Periode ufschriibe",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
