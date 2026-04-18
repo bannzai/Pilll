@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "Registra quotidianamente il tuo stato di salute nel calendario",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Puoi toccare una data nel calendario per registrare il tuo stato fisico, umore e sintomi. Puoi verificare queste informazioni insieme ai record di assunzione della pillola e del ciclo mestruale per comprendere meglio i ritmi del tuo corpo.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
