@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Auðveld uppsetning með einum smelli",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Sérsníddu tilkynningarskilaboðin",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
