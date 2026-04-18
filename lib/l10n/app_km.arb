@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealHeadline": "កត់ត្រា និងប៉ាន់ប្រមាណរយៈពេលមានរដូវ",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "គ្រាន់តែកត់ត្រាពេលដែលអ្នកមានរយៈពេលខែ ហើយអ្នកអាចមើលបញ្ជីប្រវត្តិរយៈពេលខែចាស់ៗបាន។ កាលបរិច្ឆេទរំពឹងទុកនៃរយៈពេលខែបន្ទាប់ត្រូវបានទាយដោយស្វ័យប្រវត្តិ ដូច្នេះអ្នកអាចរៀបចំផែនការបានយ៉ាងមានប្រសិទ្ធភាព។",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
