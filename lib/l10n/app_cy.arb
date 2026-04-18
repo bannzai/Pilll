@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Ar gael fel ag y mae gydag aelodaeth Premiwm",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Newid awtomatig ar ddiwedd y daflen bilsen",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
