@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Sie chönne zukünftige Terminn wie Arztbesuech oder Reisetemminn im Kalender iischriibe. Well Sie die zsämme mit Ihrem Pilleeinnahme-Zyklus aaluege chönne, chönne Sie Plänn mache, wo au d'Regelblutungs-Terminn iibeziehe.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Mit Health verknüpfe",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
