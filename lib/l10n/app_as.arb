@@ -2550,5 +2550,9 @@
   "futureScheduleFeatureAppealBody": "চিকিৎসালয়ত যোৱাৰ পৰিকল্পনা বা ভ্ৰমণৰ পৰিকল্পনাৰ দৰে ভৱিষ্যতৰ পৰিকল্পনাসমূহ কেলেণ্ডাৰত লিখিব পাৰিব। পিলৰ সেৱনৰ চক্ৰৰ সৈতে একেলগে পৰীক্ষা কৰিব পৰা যায় বাবে, ঋতুস্ৰাৱৰ সময়সূচীও বিবেচনা কৰি পৰিকল্পনা কৰিব পাৰিব।",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "স্বাস্থ্যসেৱাৰ সৈতে সংযোগ",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
