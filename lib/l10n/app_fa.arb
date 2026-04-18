@@ -2745,5 +2745,9 @@
   "quickRecordFeatureAppealPoint2": "تکمیل بدون باز کردن برنامه",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "با اشتراک پریمیوم قابل استفاده است",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
