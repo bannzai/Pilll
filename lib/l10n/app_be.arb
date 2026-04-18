@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint1": "Бясплатны запіс перапынку прыёму таблетак",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Пачніце з шасцярні ў правым верхнім куце карткі таблетак",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
