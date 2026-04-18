@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "Лесно прегледајте ја историјата на земање",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Веднаш ќе видите кога сте го земале",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
