@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Персонализирайте съобщенията за известия",
   "@reminderNotificationCustomizeWordFeatureAppealTitle": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Можете да персонализирате текста на известията",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
   }
 }
