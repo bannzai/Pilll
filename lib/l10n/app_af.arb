@@ -2390,5 +2390,9 @@
   "inquirySent": "U navraag is gestuur",
   "@inquirySent": {
     "description": "お問い合わせフォームの送信が完了した際にSnackbarで表示される確認メッセージです。"
+  },
+  "sendInquiry": "Stuur",
+  "@sendInquiry": {
+    "description": "お問い合わせフォームの送信ボタンのラベルです。"
   }
 }
