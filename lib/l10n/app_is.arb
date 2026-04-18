@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "体調をメモして振り返り",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "A translation placeholder",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
