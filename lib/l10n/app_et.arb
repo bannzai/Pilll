@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Alusta pillilehe paremas ülanurgas asuvast hammasrattast",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Perioodide muutmine ja jätkamine on lihtne",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
