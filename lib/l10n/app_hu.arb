@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Bármikor megtekintheted a bevételi előzményeket.",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Menstruáció kezdőnapjának egyszerű rögzítése",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
