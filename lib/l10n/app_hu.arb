@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Emlékeztető értesítés",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Érintsd meg a dátumot a bejegyzés hozzáadásához.",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
