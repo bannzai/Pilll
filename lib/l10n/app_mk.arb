@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "Додај во календарот",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Едноставно управување со деновите за посети",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
