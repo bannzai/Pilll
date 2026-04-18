@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "Einnahme direkt aus der Benachrichtigung erfassen",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Aufzeichnung per Benachrichtigung ohne App-Öffnung",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
