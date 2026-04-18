@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealShortDescription": "Kennisgewings wat selfs op stil seker sal klink",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Inneem-alarm soos 'n wekker",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
