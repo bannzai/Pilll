@@ -2694,5 +2694,9 @@
   "recordPillFeatureAppealPoint2": "ভুল হলেও সহজেই বাতিল করুন",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "যেকোনো সময় সেবনের ইতিহাস দেখুন",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
