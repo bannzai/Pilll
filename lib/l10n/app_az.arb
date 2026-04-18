@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint1": "Pulsuz istifadə edilə bilən dərman fasiləsi qeydi",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Həb vərəqinin sağ yuxarı küncündəki dişli çarxdan başlayın",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
