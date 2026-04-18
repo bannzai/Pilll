@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Dengan menampilkan tanggal di kotak pada lembar pil, Anda dapat melihat riwayat pemakaian di masa lalu dan jadwal pemakaian di masa depan sekilas. Beralih antara mode “Nomor” dan mode “Tanggal” untuk memilih tampilan yang paling sesuai bagi Anda.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Tinjau riwayat pemakaian dengan mudah",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
