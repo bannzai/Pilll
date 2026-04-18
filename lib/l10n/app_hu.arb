@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "Napi közérzet rögzítése a naptárban",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "A naptárban koppintson egy dátumra, és rögzítheti az állapotát, hangulatát vagy tüneteit. Mivel ezeket együtt láthatja a gyógyszerbevételi és a menstruációs feljegyzésekkel, könnyebben megismerheti teste ritmusát.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
