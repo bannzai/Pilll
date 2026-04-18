@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Запишување на земањето со едно тапнување во известувањето",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Ако долго притиснете на известувањето за потсетник, ќе се појави акцијата „Земено“, што ви овозможува да го запишете земањето на пилулата без да ја отворите апликацијата.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
