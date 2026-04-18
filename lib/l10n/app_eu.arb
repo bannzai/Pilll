@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Osasunarekin sinkronizatu",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Hilekoko erregistroak Osasunarekin partekatu",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
