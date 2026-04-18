@@ -2750,5 +2750,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "স্বাস্থ্যসেবা অ্যাপে সিঙ্ক করুন",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple হেলথকেয়ার সমর্থন",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
