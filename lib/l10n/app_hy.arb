@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Կարող եք փոխել «Կարգավորություններ» ներդիրից։",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Գլխավոր էջում թվին հպվելով նույնպես կարելի է բացել",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
