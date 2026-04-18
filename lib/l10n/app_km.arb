@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "បញ្ចូលផែនការអនាគត",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "គ្រប់គ្រងកាលវិភាគអនាគត (ដូចជា ការណាត់ពេទ្យ)",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
