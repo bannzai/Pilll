@@ -2686,5 +2686,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Може да се промени от настройките на листчето с хапчета",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Докоснете листа с хапчета за запис на приема",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
