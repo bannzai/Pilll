@@ -2641,5 +2641,9 @@
   "criticalAlertFeatureAppealPoint2": "یادآوری قطعی در زمان تعیین‌شده",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "تنظیم آسان با یک ضربه",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
