@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealBody": "Hilekoa heltzean erregistratu besterik ez duzu, eta iraganeko hileko historia osoa ikusi ahal izango duzu. Hurrengo hilekoa noiz izango den ere automatikoki aurreikusten da, eta horrela planifikatuta bizi ahal izango zara.",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Egutegian gorputz-egoera erregistratu",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
