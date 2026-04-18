@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint1": "سجّل تناول الحبوب بالنقر على جدول الأقراص",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "إلغاء سهل حتى لو أخطأت",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
