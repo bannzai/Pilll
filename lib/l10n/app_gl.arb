@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Evita esquecer as pastillas mesmo en modo non molestar",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Recibe notificacións incluso en modo silencioso",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
