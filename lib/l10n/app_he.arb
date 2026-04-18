@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "ניתן לשנות את מספר הגלולה של היום",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "אם המספר בגליון הגלולות אינו תואם את מה שלקחת בפועל — בגלל ששכחת או שבלבלת בין הגלולות — ניתן להתאים ידנית את מספר הגלולה של היום. ניתן גם לפתוח את אותו מסך מתצוגת המספר של הגלולה בדף הבית.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
