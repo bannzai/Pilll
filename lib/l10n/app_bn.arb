@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealShortDescription": "মাসিক শুরুর তারিখ রেকর্ড করে চক্র জানুন",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "মাসিকের রেকর্ড ও পূর্বাভাস করা যায়",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
