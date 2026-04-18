@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Անվճար համարների համընկման ֆունկցիա",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Կարող եք փոխել «Կարգավորություններ» ներդիրից։",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
