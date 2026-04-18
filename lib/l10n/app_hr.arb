@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Jednim pogledom provjerite kada uzeti",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Prikaži datume na listi pilula",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
