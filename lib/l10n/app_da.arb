@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Gratis nummerjusteringsfunktion",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Kan ændres fra fanen Indstillinger",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
