@@ -2758,5 +2758,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "പിൽ ഷീറ്റ് അവസാനിക്കുമ്പോൾ സ്വയമേവ മാറ്റം",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "സ്വമേധയായ നിർമ്മാണം ആവശ്യമില്ല",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
