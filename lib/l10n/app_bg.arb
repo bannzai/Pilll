@@ -2774,5 +2774,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Не е необходима ръчна операция за създаване",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Превключете с превключвателя в раздела Настройки",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
