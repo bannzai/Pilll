@@ -2802,5 +2802,9 @@
   "todayPillNumberFeatureAppealPoint3": "হোমৰ নম্বৰ টেপ কৰিও খোলিব পাৰি",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "বিনামূলীয়াকৈ ব্যৱহাৰযোগ্য ঔষধ বিৰতিৰ অভিলেখ",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
