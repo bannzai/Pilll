@@ -2790,5 +2790,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 і вышэй · уключыць з укладкі «Налады»",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Бясплатная функцыя падбору нумароў",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
