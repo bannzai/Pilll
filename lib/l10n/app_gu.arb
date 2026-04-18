@@ -2794,5 +2794,9 @@
   "restDurationFeatureAppealPoint3": "સમયગાળો સંપાદિત કરવો અને ફરી શરૂ કરવો પણ સરળ",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealShortDescription": "ડૉક્ટરની મુલાકાત અથવા અન્ય આવનારી યોજનાઓનું સંચાલન",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
