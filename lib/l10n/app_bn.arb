@@ -2762,5 +2762,9 @@
   "quickRecordFeatureAppealPoint2": "অ্যাপ না খুলে সম্পন্ন",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "প্রিমিয়াম সাবস্ক্রিপশনে সরাসরি ব্যবহারযোগ্য",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
