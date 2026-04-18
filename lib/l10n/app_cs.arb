@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Po skončení aktuální skupiny pilulkových listů se automaticky vytvoří nová skupina. Není potřeba ručního přepínání a v záznamech nevznikají mezery.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Budík, který zvoní jako probouzení",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
