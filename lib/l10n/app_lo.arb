@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "ຈັດການມື້ທີ່ຈະໄປແພດຢ່າງງ່າຍ",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "ແຈ້ງເຕືອນ",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
