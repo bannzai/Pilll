@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Doako zenbaki-doikuntza eginbidea",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Ezarpen fitxatik alda daiteke",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
