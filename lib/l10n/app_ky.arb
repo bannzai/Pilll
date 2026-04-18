@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Будильникке окшош эскертүү үнү",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 жана андан кийинки версияларда Жөндөөлөр табынан күйгүзүңүз",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
