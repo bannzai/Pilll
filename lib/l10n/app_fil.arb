@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Tunog ng alarma na katulad ng alarm clock",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 pataas・I-enable mula sa Settings tab",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
