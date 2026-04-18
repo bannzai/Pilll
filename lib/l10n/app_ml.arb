@@ -2718,5 +2718,9 @@
   "futureScheduleFeatureAppealPoint1": "കലണ്ടറിൽ ഷെഡ്യൂൾ ചേർക്കുക",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "ഡോക്ടർ സന്ദർശന ദിവസങ്ങൾ എളുപ്പത്തിൽ കൈകാര്യം ചെയ്യൂ",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
