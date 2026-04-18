@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Дараагийн эмийн хуудасыг автоматаар үүсгэх",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Одоогийн эмийн хуудасны бүлэг дуусахад шинэ эмийн хуудасны бүлэг автоматаар үүсгэгдэнэ. Гараар шилжүүлэх үйлдэл хийх шаардлагагүй бөгөөд бүртгэлд алдагдал гарахгүй.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
