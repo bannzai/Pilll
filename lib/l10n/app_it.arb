@@ -2794,5 +2794,9 @@
   "restDurationFeatureAppealPoint2": "Inizia dal pulsante a forma di ingranaggio in alto a destra della scheda delle pillole",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Modificare o riprendere il ciclo è semplice",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
