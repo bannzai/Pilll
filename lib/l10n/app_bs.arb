@@ -2682,5 +2682,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Znate datum i bez gledanja u kalendar",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Može se promijeniti u postavkama lista pilula",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
