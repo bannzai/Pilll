@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Rexistrar e predicir a regra",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Rexistra o primeiro día da menstruación e coñece o teu ciclo",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
