@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "ຟັງຊັນຈັບຄູ່ໝາຍເລກ ໃຊ້ຟຣີ",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "ສາມາດປ່ຽນໄດ້ຈາກແທັບການຕັ້ງຄ່າ",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
