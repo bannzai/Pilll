@@ -2637,5 +2637,9 @@
   "criticalAlertFeatureAppealPoint1": "اعلان‌ها حتی در حالت تمرکز هم دریافت می‌شوند",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "یادآوری قطعی در زمان تعیین‌شده",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
