@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Započnite klikom na ikonu zupčanika u gornjem desnom kutu lista pilula.",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Jednostavno uređivanje i ponovno pokretanje ciklusa",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
