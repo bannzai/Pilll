@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "Zaznamenat dávku přímo z notifikace",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Zaznamenat bez otevření aplikace",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
