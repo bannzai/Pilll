@@ -2682,5 +2682,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Saps la data sense mirar el calendari",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Es pot canviar des de la configuració del full de píndoles",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
