@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Автоматско додавање на лист од таблети",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Следниот лист се генерира автоматски",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
