@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint1": "মাসিক শুরুর তারিখ সহজে রেকর্ড করুন",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "স্বয়ংক্রিয়ভাবে চক্র বোঝা",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
