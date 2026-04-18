@@ -2566,5 +2566,9 @@
   "healthCareIntegrationFeatureAppealBody": "Pilll-də qeydə aldığınız menstruasiya məlumatlarını sağlamlıq tətbiqi ilə avtomatik sinxronizasiya edə bilərsiniz. Digər sağlamlıq məlumatları ilə birlikdə yoxlaya və digər tətbiqlərdə də menstruasiya məlumatlarından istifadə edə bilərsiniz.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Bildirişdən birbaşa qəbul qeydi",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
