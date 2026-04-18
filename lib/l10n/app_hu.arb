@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Ne hagyd ki a tablettát még a „Ne zavarjanak” módban sem",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Értesítések némított módban is",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
