@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "iOS 26 և ավելի ուշ հասանելի AlarmKit-ն օգտագործելով՝ հավելվածը կհիշեցնի պիլ վերցնելը՝ այնպիսի ազդարարումներով, որոնք վստահաբար կհնչեն նույնիսկ լուռ ռեժիմում կամ կենտրոնացման ռեժիմում։",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Այսօր դեղը ընդունելու համար համարը տեղավորել",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
