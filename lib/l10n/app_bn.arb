@@ -2566,5 +2566,9 @@
   "healthCareIntegrationFeatureAppealBody": "Pilllে রেকর্ড করা মাসিক ডেটা স্বয়ংক্রিয়ভাবে হেলথকেয়ার অ্যাপের সাথে সংযুক্ত করা যাবে। হেলথকেয়ারে থাকা অন্যান্য স্বাস্থ্য ডেটার সাথে একসাথে দেখতে পারবেন এবং অন্যান্য অ্যাপেও মাসিক ডেটা ব্যবহার করতে পারবেন।",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "নোটিফিকেশন থেকে সরাসরি সেবন রেকর্ড",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
