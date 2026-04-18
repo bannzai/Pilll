@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Záznam užití přes akci oznámení",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Dokončit bez otevření aplikace",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
