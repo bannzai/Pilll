@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Тұлғaлaу бойынша жазба жүргізіп, артқа қарап ой жүгiрту",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Календа арқылы өткен жазбаларды қайта қарау",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
