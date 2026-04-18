@@ -2598,5 +2598,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Cari həb listi qrupu bitdikdə, yeni həb listi qrupu avtomatik olaraq yaradılır. Manual keçid əməliyyatına ehtiyac yoxdur və qeydlərdə boşluq əmələ gəlmir.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Zəng saatı kimi çalan alarm",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
