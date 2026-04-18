@@ -2802,5 +2802,9 @@
   "todayPillNumberFeatureAppealPoint3": "Kan ook oopgemaak word deur op die syfer op die tuisskerm te tik",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Gratis pil-pouse rekords",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
