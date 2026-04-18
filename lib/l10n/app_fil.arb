@@ -2466,5 +2466,9 @@
   "appearanceModeDateFeatureAppealTitle": "Ipakita ang petsa sa pill sheet",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Tingnan kung kailan iinom sa isang sulyap",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
