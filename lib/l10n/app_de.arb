@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Einnahme durch Tippen auf das Pillenblatt erfassen",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Einfach rückgängig machen, auch bei Fehlern",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
