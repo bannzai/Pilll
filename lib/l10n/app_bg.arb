@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint1": "Известяванията пристигат дори в режим на концентрация",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Сигурно напомняне в зададения час",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
