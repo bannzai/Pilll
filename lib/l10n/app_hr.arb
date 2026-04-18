@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Obavijesti stižu čak i u tihom načinu rada",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Omogućavanjem Critical Alert-a primit ćete podsjetnike za uzimanje čak i kad su uređaj u načinu Ne ometaj ili u tihom načinu rada. Preporučujemo da ga uključite kako ne biste propustili važne termine za uzimanje pilula.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
