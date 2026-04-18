@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "目覚まし同様のアラーム音",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 और उसके बाद — सेटिंग्स टैब से सक्षम करें",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
