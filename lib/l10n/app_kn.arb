@@ -2466,5 +2466,9 @@
   "appearanceModeDateFeatureAppealTitle": "ಪಿಲ್‌ಶೀಟ್‌ನಲ್ಲಿ ದಿನಾಂಕಗಳನ್ನು ತೋರಿಸುವುದು",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "ಯಾವಾಗ ಸೇವಿಸುವುದು ಎಂದು ತಕ್ಷಣ ತಿಳಿದುಕೊಳ್ಳಿ",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
