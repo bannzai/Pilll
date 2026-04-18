@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "ಅಧಿಸೂಚನಾ ಪರದಿಯಲ್ಲಿ ಒಂದೇ ಟ್ಯಾಪ್‌ನಲ್ಲಿ ಔಷಧಿ ಸೇವನೆಯ ದಾಖಲೆ",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "リマインダー通知を長押しすると「服用した」のアクションが表示され、アプリを開かずに服用を記録できます。",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
