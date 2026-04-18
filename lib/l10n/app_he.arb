@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "ניתן להתחבר לאפליקציית הבריאות",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "ניתן לסנכרן אוטומטית את נתוני המחזור שנרשמו ב-Pilll עם אפליקציית הבריאות. תוכלי לצפות בהם יחד עם נתוני בריאות אחרים באפליקציית הבריאות, ולהשתמש בנתוני המחזור גם באפליקציות אחרות.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
