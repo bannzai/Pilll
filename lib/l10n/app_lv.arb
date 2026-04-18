@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Ieslēdzot Critical Alert, jūs varēsiet saņemt paziņojumus par tabletes lietošanu pat tad, kad ir ieslēgts “Netraucēt” vai klusuma režīms. Lai nepalaistu garām svarīgu tabletes lietošanas laiku, lūdzu, aktivizējiet šo iestatījumu.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Pielāgot paziņojuma tekstu",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
