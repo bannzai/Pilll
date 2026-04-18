@@ -2626,5 +2626,9 @@
   "todayPillNumberFeatureAppealHeadline": "Bu gün qəbul ediləcək həb nömrəsini dəyişdirə bilərsiniz",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Həb vərəqəsindəki nömrə ilə faktiki qəbul arasında uyğunsuzluq baş verdikdə (həb içməyi unutduqda və ya səhv həb götürdükdə), bu günün həb nömrəsini əl ilə düzəltmək mümkündür. Eyni ekranı ana ekrandakı həb rəqəmi göstəricisindən də açmaq olar.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
