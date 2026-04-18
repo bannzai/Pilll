@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "ನಿದ್ರಾ ಮೋಡ್‌ನಲ್ಲಿದ್ದರೂ ಮದ್ದು ತೆಗೆದುಕೊಳ್ಳಲು ಮರೆಯುವುದನ್ನು ತಡೆಯಿರಿ",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "ಸೈಲೆಂಟ್ ಮೋಡ್‌ನಲ್ಲಿದ್ದರೂ ಅಧಿಸೂಚನೆಗಳು ತಲುಪುತ್ತವೆ",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
