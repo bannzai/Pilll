@@ -2738,5 +2738,9 @@
   "futureScheduleFeatureAppealPoint3": "Уведомяване с напомняне",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Докоснете дата, за да запишете събитие",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
