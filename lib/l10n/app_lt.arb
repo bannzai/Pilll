@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Galima naudoti iš karto su Premium prenumerata",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Pill sheet automatic switch on completion",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
