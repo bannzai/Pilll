@@ -2712,5 +2712,9 @@
   "calendarDiaryFeatureAppealPoint2": "Log and reflect on how you feel",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Review past records on the calendar",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
