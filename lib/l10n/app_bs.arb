@@ -2754,5 +2754,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Podrška za Apple Health",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Evidencija uzimanja putem akcije obavijesti",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
