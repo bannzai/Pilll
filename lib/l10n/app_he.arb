@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "ניתן לשנות בהגדרות גליון הגלולות",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "הקש/י על גליון הגלולות כדי לרשום נטילה",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
