@@ -2430,5 +2430,9 @@
   "recommendSignupGeneralDescription": "Durch Registrierung können Sie Ihre Daten sichern",
   "@recommendSignupGeneralDescription": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "Benachrichtigungen auch im Lautlos-Modus erhalten",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
   }
 }
