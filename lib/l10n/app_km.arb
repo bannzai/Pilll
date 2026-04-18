@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "ពិនិត្យប្រវត្តិការទទួលថ្នាំបានយ៉ាងងាយស្រួល",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "ដឹងបានភ្លាមៗថាអ្នកបានយកគ្រាប់ថ្នាំនៅពេលណា",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
