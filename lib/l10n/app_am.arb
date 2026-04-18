@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealShortDescription": "ዕረፍትና ማቋረጥን በትክክል ያስተዳድሩ",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "ኪኒን ወሰዳ ለጊዜው ማቆም",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
