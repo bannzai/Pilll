@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "A tablettarács celláiban dátumok megjelenítésével egy pillantással áttekintheti a múltbeli bevételeket és a jövőbeli bevételi időpontokat. Váltson a „sorszám” és a „dátum” nézet között, és válassza ki az Önnek legmegfelelőbbet.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Szedési előzmények egyszerű áttekintése",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
