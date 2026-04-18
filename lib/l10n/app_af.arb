@@ -2722,5 +2722,9 @@
   "calendarDiaryFeatureAppealPoint3": "Beskou verlede rekords op die kalender",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Tik op die datum om jou gesondheid op te teken",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
