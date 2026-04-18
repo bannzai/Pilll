@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Néma/fókusz módban is megszólal",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Ébresztőhöz hasonló riasztóhang",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
