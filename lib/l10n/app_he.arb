@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "התראה בתזכורת",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "הקש/י לתאריך כדי להזין תזכורת",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
