@@ -2762,5 +2762,9 @@
   "quickRecordFeatureAppealPoint2": "أكمل دون فتح التطبيق",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "متاح للاستخدام فورًا باشتراك بريميوم",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
