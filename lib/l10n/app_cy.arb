@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Cofnodi dyddiad dechrau mislif yn hawdd",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Canfod y gylchred yn awtomatig",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
