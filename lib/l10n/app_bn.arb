@@ -2662,5 +2662,9 @@
   "criticalAlertFeatureAppealPoint3": "এক ট্যাপে সহজ সেটআপ",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "বিজ্ঞপ্তি বার্তা স্বাধীনভাবে সম্পাদনা করুন",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
