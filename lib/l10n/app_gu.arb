@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealBody": "iOS 26 અને તેથી વધુ પર ઉપલબ્ધ AlarmKit નો ઉપયોગ કરીને, સાઇલન્ટ મોડ અને ફોકસ મોડમાં પણ ચોક્કસ રીતે વાગતા એલાર્મ દ્વારા ગોળી લેવાની યાદ અપાવે છે.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "આજની ગોળીનો નંબર ગોઠવો",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
