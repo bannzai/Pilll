@@ -2514,5 +2514,9 @@
   "menstruationFeatureAppealHeadline": "Menstruasie kan aangeteken en voorspel word",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Sodra jou menstruasie begin, hoef jy dit net aan te teken om 'n lys van jou vorige menstruasiegeskiedenis te sien. Die volgende verwagte menstruasiedatum word ook outomaties bereken, sodat jy jou dae strategies kan beplan.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
