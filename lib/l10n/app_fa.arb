@@ -2733,5 +2733,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "همگام‌سازی با برنامه سلامت",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "پشتیبانی از Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
