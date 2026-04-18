@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealShortDescription": "Noukrag & onderbreking presies bestuur",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Neem 'n Pouse van Pillinname",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
