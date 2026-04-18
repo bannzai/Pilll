@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Silakan terjemahkan teks ini ke dalam bahasa sasaran",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Lihat riwayat pemakaian kapan saja",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
