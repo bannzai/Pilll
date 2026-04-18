@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Може да се промени во табот „Поставки“.",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Може да се отвори и со тапнување на бројот на почетниот екран.",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
