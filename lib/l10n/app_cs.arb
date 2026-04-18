@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Záznamy přestávek v užívání zdarma",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Spustit pomocí ikony ozubeného kola v pravém horním rohu záznamu pilulek",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
