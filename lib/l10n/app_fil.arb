@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Libreng feature ng pagtutugma ng numero",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Maaari baguhin mula sa tab na Mga Setting",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
