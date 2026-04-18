@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint3": "Apri anche toccando il numero sulla home",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Registro gratuito delle pause della pillola",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
