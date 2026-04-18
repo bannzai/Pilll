@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "תיעוד נטילה בהקשה אחת ממסך ההתראות",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "לחיצה ארוכה על התראת התזכורת מציגה את הפעולה \"נלקחה\", המאפשרת לרשום נטילת גלולה מבלי לפתוח את האפליקציה.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
