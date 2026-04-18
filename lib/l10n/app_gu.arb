@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealBody": "પિલ શીટ પર થોડા સમય માટે ગોળી લેવાનું બંધ કરવાનો સમયગાળો નોંધી શકાય છે. વિરામ દરમિયાન ગોળી નંબર આગળ વધતો નથી, અને ફરીથી શરૂ કરતી વખતે તરત જ નોંધ ફરી શરૂ કરી શકાય છે.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "criticalAlertFeatureAppealPoint1": "ફોકસ મોડ દરમિયાન પણ સૂચનાઓ મળે છે",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
