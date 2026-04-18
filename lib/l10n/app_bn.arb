@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint1": "পিল শিট ট্যাপ করে সেবন রেকর্ড",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "ভুল হলেও সহজেই বাতিল করুন",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
