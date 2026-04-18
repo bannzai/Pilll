@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "Addasu gosodiadau",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Rhestr cofnodion ar y calendr",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
