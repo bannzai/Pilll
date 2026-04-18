@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Zvuk alarma sličan budilici",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 i novije — omogućite u kartici Postavke",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
