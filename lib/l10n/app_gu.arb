@@ -2702,5 +2702,9 @@
   "calendarDiaryFeatureAppealPoint2": "સ્વાસ્થ્ય નોંધ કરો અને સમીક્ષા કરો",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "કૅલેન્ડર વડે ભૂતકાળના રેકોર્ડ જુઓ",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
