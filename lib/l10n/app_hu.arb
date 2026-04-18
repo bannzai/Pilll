@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Némített módban is biztosan megszólaló értesítések",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Ébresztő-szerű szedési emlékeztető",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
