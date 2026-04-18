@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Καταγραφή από την ειδοποίηση χωρίς να ανοίξετε την εφαρμογή",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Καταγραφή λήψης με ένα άγγιγμα από την οθόνη ειδοποιήσεων",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
