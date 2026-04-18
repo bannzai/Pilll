@@ -2498,5 +2498,9 @@
   "recordPillFeatureAppealHeadline": "Ana ekranda həbin qeydiyyatını aparın",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Ana ekrandakı həb vərəqəsinə sadəcə toxunmaqla həmin günün qəbulunu qeyd edə bilərsiniz. Səhvən qeyd etdiyiniz halda, bir daha toxunmaqla ləğv edə bilərsiniz. Qəbul tarixçəsini sonradan da yoxlaya bildiyiniz üçün, arxayın davam edə bilərsiniz.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
