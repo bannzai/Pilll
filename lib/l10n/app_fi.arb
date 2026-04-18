@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Tiedät päivämäärän katsomatta kalenteriin",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Muutettavissa pilleriarkin asetuksista",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
