@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Registra l'assunzione con un solo tap dalla schermata delle notifiche",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Quando tieni premuta la notifica di promemoria viene mostrata l'azione \"Ho preso\" che ti permette di registrare l'assunzione senza aprire l'app.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
