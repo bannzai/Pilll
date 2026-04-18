@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "إنشاء الورقة التالية تلقائيًا",
   "@creatingNewPillSheetFeatureAppealShortDescription": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "إنشاء ورقة الحبوب التالية تلقائيًا",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
   }
 }
