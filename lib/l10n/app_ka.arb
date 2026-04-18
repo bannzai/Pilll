@@ -2502,5 +2502,9 @@
   "menstruationFeatureAppealShortDescription": "生理開始日を記録して周期を把握",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "მენსტრუაციის ჩანაწერა და პროგნოზი",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
