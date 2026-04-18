@@ -2578,5 +2578,9 @@
   "quickRecordFeatureAppealHeadline": "Запіс прыёму адным дотыкам з экрана апавяшчэнняў",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Калі доўга націснуць на нагадванне, з'явіцца дзеянне «Прыняла», і можна запісаць прыём, не адкрываючы прыкладання.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
