@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Configuración sinxela cun toque",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Editar libremente as mensaxes de notificación",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
