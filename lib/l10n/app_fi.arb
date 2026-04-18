@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Tarkista milloin ottaa yhdellä silmäyksellä",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Voit näyttää päivämäärän pillerilehdessä",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
