@@ -2514,5 +2514,9 @@
   "menstruationFeatureAppealHeadline": "Menstruasiya qeydiyyatı və proqnozu mümkündür",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Aybaşınız gəldikdə sadəcə qeyd edin və keçmiş aybaşı tarixçənizi siyahı şəklində görə bilərsiniz. Növbəti aybaşı tarixi də avtomatik olaraq proqnozlaşdırılır, buna görə planlı şəkildə yaşaya bilərsiniz.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
