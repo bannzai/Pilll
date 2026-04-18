@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Гараар үүсгэх үйлдэл шаардлагагүй",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Тохиргооны табын шилжүүлэгчээр сэлгэх",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
