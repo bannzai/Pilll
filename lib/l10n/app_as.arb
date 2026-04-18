@@ -2686,5 +2686,9 @@
   "appearanceModeDateFeatureAppealPoint3": "পিল শ্বীট ছেটিংছৰ পৰা পৰিৱৰ্তন কৰিব পাৰি",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "পিল শ্বীট টেপ কৰি সেৱন ৰেকৰ্ড কৰক",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
