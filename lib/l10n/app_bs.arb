@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "Automatski generiši sljedeći list",
   "@creatingNewPillSheetFeatureAppealShortDescription": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "Automatsko kreiranje sljedećeg lista tableta",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
   }
 }
