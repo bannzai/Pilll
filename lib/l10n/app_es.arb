@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Puedes personalizar el mensaje estándar «Es hora de tomar tu píldora» con las palabras que prefieras. Prueba con frases que te motiven, el nombre de tu mascota u otros mensajes que hagan tu rutina diaria más entretenida.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Mostrar fecha en la hoja de pastillas",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
