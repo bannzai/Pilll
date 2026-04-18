@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Still need to call translate function",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Pikkaðu á pillublaðið til að skrá töku",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
