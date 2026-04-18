@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "აპლიკაციის გახსნის გარეშე ჩაწერა შეტყობინებიდან",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "შეტყობინების ეკრანიდან მიღების ჩაწერა ერთი დაწკაპუნებით",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
