@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Колдонмонун ичиндеги жай",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Фокус режими учурунда да билдирүүлөр келет",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
