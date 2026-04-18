@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealBody": "ആർത്തവം വരുമ്പോൾ രേഖപ്പെടുത്തിയാൽ മതി, കഴിഞ്ഞ ആർത്തവ ചരിത്രം മുഴുവൻ ഒറ്റ നോട്ടത്തിൽ കാണാൻ കഴിയും. അടുത്ത ആർത്തവ തീയതി സ്വയം പ്രവചിക്കപ്പെടുന്നതിനാൽ, ജീവിതം കൂടുതൽ ആസൂത്രണം ചെയ്യാൻ സഹായിക്കും.",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "കലണ്ടറിൽ ആരോഗ്യ നില രേഖപ്പെടുത്തുക",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
