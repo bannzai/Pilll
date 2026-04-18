@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Коригиране в настройките при несъответствие на номера",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Можете да промените номера на хапчето, което приемате днес",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
