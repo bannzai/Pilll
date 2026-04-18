@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealShortDescription": "ആപ്പ് തുറക്കാതെ നോട്ടിഫിക്കേഷനിൽ രേഖപ്പെടുത്തുക",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "നോട്ടിഫിക്കേഷൻ സ്ക്രീനിൽ ഒറ്റ ടാപ്പിൽ ഗുളിക കഴിച്ചത് രേഖപ്പെടുത്തുക",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
