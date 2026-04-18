@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealShortDescription": "Gecə rejimində belə həb içməyi unutma",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Səssiz rejimdə də bildirişlər gəlir",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
