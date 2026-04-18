@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealShortDescription": "Bilježi svakodnevno zdravlje u kalendaru",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Bilježite dnevno zdravstveno stanje u kalendaru",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
