@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "Deel menstruasie-rekords met Gesondheid",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "Kan sinkroniseer met gesondheidsorg",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
