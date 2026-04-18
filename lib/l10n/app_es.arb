@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "También puedes abrir tocando el número en el inicio",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Registro de descanso de píldora gratuito",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
