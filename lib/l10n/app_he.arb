@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "ניתן לתעד בגליון הגלולות תקופת הפסקת נטילה. במהלך ההפסקה מספר הנטילה אינו מתקדם, וברגע שחוזרים לנטילה ניתן לחדש את הרישום מיד.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "מיקום באפליקציה",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
