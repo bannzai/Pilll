@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "{\n  \"@@locale\": \"id\",\n  \"future_schedule_help\": \"Anda dapat menambahkan jadwal di masa mendatang, seperti kunjungan ke dokter atau rencana perjalanan, ke kalender. Karena jadwal tersebut bisa dilihat bersamaan dengan siklus pemakaian pil, Anda dapat merencanakan dengan mempertimbangkan perkiraan menstruasi.\",\n  \"@future_schedule_help\": {\n    \"description\": \"未来の予定機能のヘルプページの本文。通院予定や旅行予定をカレンダーに書き込めること、生理の予定と合わせて確認できることを説明。\"\n  }\n}",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Integrasi Kesehatan",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
