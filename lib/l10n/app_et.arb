@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Saate kalendrisse märkida tulevasi plaane, nagu arstituvastused ja reisiplaanid. Kuna saate neid koos pillide tarvitamise tsükliga vaadata, saate koostada plaane, mis arvestavad ka menstruatsiooni ajakava.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Ühendus tervishoiuga",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
