@@ -2786,5 +2786,9 @@
   "alarmKitFeatureAppealPoint2": "صوت منبه مشابه لساعة الإيقاظ",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 وما بعده · التفعيل من تبويب الإعدادات",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
