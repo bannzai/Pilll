@@ -2514,5 +2514,9 @@
   "calendarDiaryFeatureAppealTitle": "תיעוד מצב הגוף ביומן",
   "@calendarDiaryFeatureAppealTitle": {
     "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "תעד את מצב הבריאות היומי שלך בלוח השנה",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
   }
 }
