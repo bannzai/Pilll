@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "무음 모드에서도 알림을 받을 수 있습니다",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alert을 활성화하면 방해금지 모드나 매너 모드 중에도 복용 알림을 받을 수 있습니다. 중요한 피임약 복용 시간을 놓치지 않도록 꼭 설정해 보세요.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
