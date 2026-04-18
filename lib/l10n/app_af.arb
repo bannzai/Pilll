@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealTitle": "Rekordeer inname direk vanaf kennisgewing",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Teken op via kennisgewing sonder om die app oop te maak",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
