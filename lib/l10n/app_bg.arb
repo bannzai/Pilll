@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint1": "Добавяне на планове в календара",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Лесно управление на посещенията при лекар",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
