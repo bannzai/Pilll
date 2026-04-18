@@ -2674,5 +2674,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "لرسالة إشعار خاصة بك",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "عرض ورقة الحبوب حسب التاريخ",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
