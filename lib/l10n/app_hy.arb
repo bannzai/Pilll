@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Պարբերությունը ավտոմատ կերպով հայտնաբերեք",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Հարմարեցրեք կարգավորումները",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
