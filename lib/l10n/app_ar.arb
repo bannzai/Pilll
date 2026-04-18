@@ -2614,5 +2614,9 @@
   "alarmKitFeatureAppealBody": "يستخدم AlarmKit المتاح على iOS 26 والإصدارات الأحدث لإعلامك بموعد تناول الحبوب عبر تنبيه يُصدر صوتًا بشكل موثوق حتى في وضع الصامت أو وضع التركيز.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "ضبط رقم الجرعة لليوم",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
