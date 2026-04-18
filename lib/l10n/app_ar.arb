@@ -2686,5 +2686,9 @@
   "appearanceModeDateFeatureAppealPoint3": "يمكن التغيير من إعدادات ورقة الحبوب",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "سجّل تناول الحبوب بالنقر على جدول الأقراص",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
