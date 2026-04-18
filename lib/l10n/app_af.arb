@@ -2778,5 +2778,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Skakel met die skakelaar op die instellings-oortjie",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Lui selfs in stil/fokus modus",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
