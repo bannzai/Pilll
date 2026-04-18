@@ -2466,5 +2466,9 @@
   "appearanceModeDateFeatureAppealTitle": "Tampilkan tanggal pada lembar pil",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Lihat sekilas kapan harus diminum",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
