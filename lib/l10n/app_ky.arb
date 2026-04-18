@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilllде сакталган менструациялык маалыматтарды ден-соолук колдонмосу менен автоматтык түрдө синхрондоштура аласыз. Бул маалыматтарды ден соолуктагы башка маалыматтар менен бирге көрүп же башка колдонмолордо колдонсоңуз болот.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
