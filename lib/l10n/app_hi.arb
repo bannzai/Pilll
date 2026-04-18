@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "कैलेंडर में रिकॉर्ड देखें",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "हिंदी अनुवाद",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
