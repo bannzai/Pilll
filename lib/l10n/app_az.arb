@@ -2466,5 +2466,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Bildiriş mesajını sərbəst redaktə edin",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Standart \"Həb içmə vaxtıdır\" mesajını sevdiyiniz sözlərə uyğunlaşdıra bilərsiniz. Hər gün həb qəbulunu daha əyləncəli etmək üçün motivasiya verici ifadələr, ev heyvanınızın adı və ya istədiyiniz hər hansı bir söz seçin.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
