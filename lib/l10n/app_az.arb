@@ -2578,5 +2578,9 @@
   "quickRecordFeatureAppealHeadline": "Bildiriş ekranında bir toxunuşla dərman qeydi",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Xatırlatma bildirişini uzun basıb saxlasanız \"Qəbul edildi\" əməliyyatı görünür və tətbiqi açmadan dərman qəbulunu qeyd edə bilərsiniz.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
