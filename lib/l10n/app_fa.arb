@@ -2493,5 +2493,9 @@
   "menstruationFeatureAppealShortDescription": "ثبت تاریخ شروع قاعدگی و پیگیری چرخه",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "ثبت و پیش‌بینی قاعدگی",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
