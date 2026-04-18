@@ -2802,5 +2802,9 @@
   "todayPillNumberFeatureAppealPoint3": "Може да се отвори и чрез докосване на числата на началния екран",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Безплатна регистрация на почивки от хапчета",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
