@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Teavitused, mis helisevad kindlasti ka vaikses režiimis",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Äratuskellaga sarnane pillide võtmise alarm",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
