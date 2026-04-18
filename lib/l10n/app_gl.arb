@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Podes mostrar datas na folla de pílulas",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Ao mostrar as datas nas celas da folla de pastillas, pode comprobar dun vistazo o historial de tomas pasadas e as tomas futuras previstas. Cambie entre o modo «Número» e o modo «Data» para escoller a visualización que máis lle conveña.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
