@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Ýttu á dagsetningu til að skrá líðan",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Skrá viðburð í dagatalið",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
