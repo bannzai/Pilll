@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "Cofnodi dos yn syth o'r hysbysiad",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Cofnodi ar yr hysbysiad heb agor yr ap",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
