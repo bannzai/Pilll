@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Newid awtomatig ar ddiwedd y daflen bilsen",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Dim angen creu â llaw",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
