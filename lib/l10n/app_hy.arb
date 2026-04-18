@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Անվճար դեղ չընդունելու օրերի գրանցում",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Սկսեք՝ սեղմելով պիլշիթի աջ վերին անկյունում գտնվող կարգավորումների պատկերակը։",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
