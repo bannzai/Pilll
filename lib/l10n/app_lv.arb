@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Rādīt datumus tablešu lapā",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Tablešu lapas šūnās attēlotie datumi ļauj uzreiz pārskatīt gan iepriekšējo lietošanas vēsturi, gan nākotnes lietošanas plānus. Pārslēdzieties starp \"Numura\" un \"Datuma\" režīmu, lai izvēlētos sev atbilstošāko skatu.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
