@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Peržiūrėkite vartojimo istoriją bet kada",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Lengvai užfiksuokite mėnesinių pradžios datą",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
