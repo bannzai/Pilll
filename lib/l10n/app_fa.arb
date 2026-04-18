@@ -2633,5 +2633,9 @@
   "featureAppealLocationLabel": "مکان در برنامه",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "اعلان‌ها حتی در حالت تمرکز هم دریافت می‌شوند",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
