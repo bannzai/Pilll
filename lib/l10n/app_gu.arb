@@ -2742,5 +2742,9 @@
   "quickRecordFeatureAppealPoint2": "એપ ખોલ્યા વિના પૂર્ણ કરો",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "પ્રીમિયમ સભ્યપદ સાથે સીધો ઉપયોગ શક્ય",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
