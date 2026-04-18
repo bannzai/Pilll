@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Mga notification na tumutunog kahit naka-silent",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Alarma sa Pag-inom Tulad ng Alarm Clock",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
