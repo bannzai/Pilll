@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Kun nykyinen pillerikorttisarja päättyy, uusi pillerikorttisarja luodaan automaattisesti. Manuaalista vaihtamista ei tarvita, eikä kirjauksiin tule aukkoja.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Herätyskellon tavoin soiva hälytys",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
