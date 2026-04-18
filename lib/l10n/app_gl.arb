@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "Alarma que soa coma un espertar",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Notificacións que soan con seguridade, mesmo en silencio",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
