@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Ապլիկացիայի ներսում",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Ստացեք ծանուցումներ նաև կենտրոնացման ռեժիմում",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
