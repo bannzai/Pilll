@@ -2574,5 +2574,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "ഗുളിക ഷീറ്റ് സ്വയമേ ചേർക്കുക",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "അടുത്ത ഷീറ്റ് സ്വയമേവ സൃഷ്ടിക്കുക",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
