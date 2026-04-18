@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "ჯანმრთელობის აპლიკაციასთან სინქრონიზაცია",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Health-ის მხარდაჭერა",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
