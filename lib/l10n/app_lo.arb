@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "ບັນທຶກແຜນອນາຄົດໃນປະຕິທິນ",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "ເພີ່ມເວລານັດທີ່ກ່ອນໄວ້ເວລາຫຼັງຈາກນີ້",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
