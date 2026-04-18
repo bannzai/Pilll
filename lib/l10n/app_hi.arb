@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "तिथि पर टैप करके अपनी स्थिति दर्ज करें",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "कैलेंडर में कार्यक्रम जोड़ें",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
