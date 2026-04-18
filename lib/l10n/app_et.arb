@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Arsti arstivisiitide päevi hõlpsalt",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Meeldetuletuse teavitus",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
