@@ -2614,5 +2614,9 @@
   "alarmKitFeatureAppealBody": "З дапамогай AlarmKit, даступнага на iOS 26 і больш позніх версіях, праграма паведамляе вам аб прыёме таблеткі праз будільнік, які надзейна спрацоўвае нават у рэжыме бязгучнасці або рэжыме фокусу.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Наладзіць нумар прыёму на сёння",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
