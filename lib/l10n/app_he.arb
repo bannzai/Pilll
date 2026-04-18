@@ -2550,5 +2550,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "שיתוף רישומי מחזור עם Health",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "ניתן להתחבר לאפליקציית הבריאות",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
