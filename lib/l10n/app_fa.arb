@@ -2617,5 +2617,9 @@
   "restDurationFeatureAppealTitle": "ثبت دوره استراحت مصرف",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "مدیریت دقیق وقفه و قطع مصرف",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
