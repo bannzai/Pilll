@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Μπορείτε να το ανοίξετε και πατώντας τον αριθμό στην αρχική σελίδα",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Δωρεάν καταγραφή διαλείμματος",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
