@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 neu ddiweddarach・Galluogi o'r tab Gosodiadau",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Nodwedd cyfateb rhifau ar gael am ddim",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
