@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "רישום ימי הפסקה מהגלולה בחינם",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "התחל מהסמל של גלגל השיניים בפינה העליונה הימנית של גיליון הגלולות",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
