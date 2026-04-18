@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealShortDescription": "{\n  \"@@locale\": \"lv\",\n  \"alarmkitFeatureAppealBar\": \"Paziņojums, kas skanēs pat klusā režīmā\",\n  \"@alarmkitFeatureAppealBar\": {\n    \"description\": \"AlarmKit機能のFeatureAppeal Barの短い説明文\",\n    \"type\": \"text\"\n  }\n}",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "{\n  \"@@locale\": \"lv\",\n  \"alarmKitHeadline\": \"Tablešu lietošanas atgādinājums modinātāja stilā\",\n  \"@alarmKitHeadline\": {\n    \"description\": \"AlarmKit機能のヘルプページのヘッドライン\",\n    \"type\": \"text\"\n  }\n}",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
