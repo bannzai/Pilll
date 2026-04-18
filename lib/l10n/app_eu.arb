@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Ezarpen erraza ukitu batean",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Jakinarazpen mezuak askatasunez editatu",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
