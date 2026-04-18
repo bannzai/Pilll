@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "អាឡាមដែលដូចម៉ោងរោទ",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "ការជូនដំណឹងដែលធានាថានឹងមានសំឡេង ទោះបីនៅម៉ូដស្ងាត់ក៏ដោយ",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
