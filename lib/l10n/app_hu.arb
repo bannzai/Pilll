@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "A mai bevétel sorszámának beállítása",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Ha a szám elcsúszott, javítsd a Beállításokban.",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
