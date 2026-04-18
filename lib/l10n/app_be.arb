@@ -2686,5 +2686,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Можна змяніць у наладах ліста таблетак",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Запіс прыёму таблетак націскам на картку",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
