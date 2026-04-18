@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "I-customize ang mga setting",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Listahan ng rekord sa kalendaryo",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
