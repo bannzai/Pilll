@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Isileko/Arreta moduan ere jotzen du",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Iratzargailu bezalako alarma soinua",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
