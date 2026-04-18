@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Rexistra facilmente a data de inicio da menstruación",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Detectar automaticamente o ciclo",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
