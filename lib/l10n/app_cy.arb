@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Cydamseru ag ap iechyd",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Cymorth Iechyd Apple",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
