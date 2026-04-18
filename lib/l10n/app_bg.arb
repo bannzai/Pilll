@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealTitle": "Аларм, звънящ като будилник",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Известия, звучащи дори в тих режим",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
