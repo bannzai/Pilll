@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Afegeix la fitxa de píndoles automàticament",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Genera automàticament el full següent",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
