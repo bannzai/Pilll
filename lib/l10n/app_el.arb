@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Ειδοποιήσεις που ηχούν ακόμα και σε σίγαση",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Συναγερμός λήψης φαρμάκου σαν ξυπνητήρι",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
