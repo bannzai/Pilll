@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Kohandage meeldetuletuse sõnumit vabalt",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Saate muuta vaikimisi teadet „On aeg tabletti võtta\" oma lemmikuteks sõnadeks. Proovige asendada see millegi motiveerivaga – näiteks oma lemmiklooma nimega –, et muuta igapäevane tableti võtmine lõbusamaks.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
