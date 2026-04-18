@@ -2534,5 +2534,9 @@
   "calendarDiaryFeatureAppealBody": "ከቀን መቁጠሪያ ቀኑን ነክቶ የጤና ሁኔታ፣ ስሜት፣ ምልክቶች እና ሌሎችን መዝግብ ይቻላል። ከመድሃኒት ምዝገባ እና ወርሃዊ ዑደት ምዝገባ ጋር አብሮ ማረጋገጥ ስለሚቻል፣ የሰውነት ምት ሊረዱ ይቻላሉ።",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "ወደፊት ያሉ ዕቅዶችን ይጻፉ",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
