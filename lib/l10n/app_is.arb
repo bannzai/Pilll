@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Handvirk sköpun er ekki nauðsynleg",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Notaðu rofann í Stillingarflipanum til að kveikja eða slökkva á því",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
