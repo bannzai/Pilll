@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "Sie kenne im Pillazoddel e Zitt ufzeichne, wu Sie d'Iinnahm vorübergehend ufhöre. Wärenddem de Pause gaht d'Iinnähmenummere nit wiider, un Sie kenne bim Wiederaafonge sofort widder ufzeichne.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Ort in de App",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
