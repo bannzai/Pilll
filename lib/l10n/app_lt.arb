@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Rodyti tabletes pagal datą",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Galite sužinoti datą nežiūrėdami į kalendorių",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
