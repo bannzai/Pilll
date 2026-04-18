@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Pillliin tallentamasi kuukautistiedot voidaan synkronoida automaattisesti Terveys-sovelluksen kanssa. Voit tarkastella niitä yhdessä muiden terveystietojesi kanssa ja käyttää kuukautistietojasi myös muissa sovelluksissa.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Kirjaa suoraan ilmoituksesta",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
