@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "수동으로 생성할 필요가 없습니다",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "설정 탭에서 스위치를 전환하세요",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
