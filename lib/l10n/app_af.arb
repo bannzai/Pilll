@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealShortDescription": "Hou elke dag se gesondheid op die kalender by",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Teken daaglikse gesondheid op die kalender aan",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
