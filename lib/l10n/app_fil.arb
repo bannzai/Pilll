@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Malalaman ang petsa nang hindi tinitingnan ang kalendaryo",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Maaaring baguhin mula sa mga setting ng pill sheet",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
