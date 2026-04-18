@@ -2662,5 +2662,9 @@
   "criticalAlertFeatureAppealPoint3": "Лесна настройка с едно докосване",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Редактирайте свободно съобщението за известие",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
