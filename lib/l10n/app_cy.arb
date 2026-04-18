@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Cwblhau heb agor yr ap",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Ar gael fel ag y mae gydag aelodaeth Premiwm",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
