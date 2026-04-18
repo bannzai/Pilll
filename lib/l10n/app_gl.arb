@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Cancelación sinxela mesmo se te equivocas",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Consulta o historial de toma en calquera momento",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
