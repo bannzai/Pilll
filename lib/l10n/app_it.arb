@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint2": "周周期を自動で把握",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Personalizza le impostazioni",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
