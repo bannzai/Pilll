@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Þegar núverandi pillublöðuhópur klárast verður nýr hópur sjálfkrafa búinn til. Þú þarft ekki að skipta handvirkt, þannig að engar færslur týnast.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Hringir eins og vekjaraklukka",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
