@@ -2774,5 +2774,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "No cal creació manual",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Canvieu-ho amb el commutador de la pestanya de configuració",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
