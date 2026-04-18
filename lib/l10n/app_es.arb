@@ -2582,5 +2582,9 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "Añadir hoja automáticamente",
   "@creatingNewPillSheetFeatureAppealShortDescription": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "Crear automáticamente la siguiente hoja de píldoras",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
   }
 }
