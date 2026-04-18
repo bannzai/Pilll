@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "A kezdőoldalon a számra koppintva is megnyitható.",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Ingyenesen használható szünetnapok nyilvántartása",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
