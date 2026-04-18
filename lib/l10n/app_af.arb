@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint1": "Gratis nommerpassing-funksie",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Kan van die instellings-oortjie verander word",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
