@@ -2710,5 +2710,9 @@
   "menstruationFeatureAppealPoint3": "Parametrləri fərdiləşdir",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Təqvimdə qeydlərə baxış",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
