@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Можете да ја проверите историјата на земањата во секое време",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Лесно запишете го почетокот на менструацијата",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
