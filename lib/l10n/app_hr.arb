@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Prikaži listu tableta prema datumu",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Možete vidjeti datum bez provjere kalendara.",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
