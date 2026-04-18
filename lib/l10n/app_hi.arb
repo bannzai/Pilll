@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "माहवारी की शुरुआत की तारीख को आसानी से दर्ज करें",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "चक्रों का स्वचालित पता लगाना",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
