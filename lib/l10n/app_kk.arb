@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Календа арқылы өткен жазбаларды қайта қарау",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Денсаулық күйін жазу үшін күнді түртіңіз",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
