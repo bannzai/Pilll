@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "Параметрлерді теңшеу",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Күнтізбеде жазбаларды көру",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
