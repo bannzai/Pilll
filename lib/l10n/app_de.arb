@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Datum antippen, um einen Termin einzutragen",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Periodendaten automatisch synchronisieren",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
