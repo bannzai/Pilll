@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "Adolygu hanes cymryd meddyginiaeth yn hawdd",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Gweld ar unwaith pryd gwnaethoch chi gymryd eich pilsen",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
