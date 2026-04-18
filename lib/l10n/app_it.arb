@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Pausa dall'assunzione della pillola",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Puoi registrare sul foglio delle pillole un periodo in cui interrompi l'assunzione. Durante la pausa il numero di assunzioni non avanza e, al momento della ripresa, potrai riprendere subito la registrazione.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
