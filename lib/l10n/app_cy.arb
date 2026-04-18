@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Cofnodi ar yr hysbysiad heb agor yr ap",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Cofnodi dos ag un tap ar sgrin hysbysiad",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
