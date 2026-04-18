@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealTitle": "Атрымліваць апавяшчэнні нават у рэжыме цішыні",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Не забывайце пра таблеткі нават у рэжыме «Не турбаваць»",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
