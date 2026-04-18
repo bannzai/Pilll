@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "Билдирмеден түздөн-түз дары ичкенди каттоо",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Колдонмону ачпай эле билдирүүдөн жазып коюңуз",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
