@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealShortDescription": "ভবিষ্যতের সময়সূচি পরিচালনা করুন যেমন ডাক্তারের অ্যাপয়েন্টমেন্ট",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "ক্যালেন্ডারে ভবিষ্যতের পরিকল্পনা রেকর্ড করুন",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
