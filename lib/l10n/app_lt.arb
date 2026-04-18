@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "Using AlarmKit available on iOS 26 and later, notify pill intake with alarms that reliably sound even in silent mode or Focus mode.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Nustatyti šiandienos dozės numerį",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
