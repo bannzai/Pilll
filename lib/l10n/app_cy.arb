@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Drwy arddangos dyddiadau yng nghelloedd y dalen bilsen, gallwch wirio eich hanes cymryd meddyginiaeth yn y gorffennol a'ch amserlen cymryd meddyginiaeth yn y dyfodol ar yr olwg gyntaf. Newidiwch rhwng modd 「Rhif」 a modd 「Dyddiad」 i ddewis yr arddangosiad sy'n addas i chi.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Adolygu hanes cymryd meddyginiaeth yn hawdd",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
