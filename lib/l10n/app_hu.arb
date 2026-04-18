@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "Jegyezd fel a jövőbeli terveidet",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Jövőbeli események kezelése (pl. orvosi időpontok)",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
