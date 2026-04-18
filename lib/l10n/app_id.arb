@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "カレンダーで記録を一覧",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Catat kondisi dan tinjau kembali",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
