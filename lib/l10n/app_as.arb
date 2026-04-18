@@ -2726,5 +2726,9 @@
   "calendarDiaryFeatureAppealLocationHint": "তাৰিখত টেপ কৰি স্বাস্থ্যৰ অৱস্থা লিপিবদ্ধ কৰক",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "কেলেণ্ডাৰত পৰিকল্পনা লিখক",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
