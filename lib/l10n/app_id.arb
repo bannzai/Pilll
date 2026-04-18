@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Fitur pencocokan nomor gratis",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Dapat diubah dari tab Pengaturan",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
