@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "Эрүүл мэндтэй холбогдох боломжтой",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilll-д бүртгэсэн сарын тэмдгийн өгөгдлийг эрүүл мэндийн аппликейшнтай автоматаар синхрончлах боломжтой. Эрүүл мэндийн бусад өгөгдлийн хамт харах, мөн бусад аппликейшнд сарын тэмдгийн өгөгдлийг ашиглах боломжтой болно.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
