@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Napauta päivämäärää kirjataksesi voinnin",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Lisää tapahtumia kalenteriin",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
