@@ -2582,5 +2582,9 @@
   "quickRecordFeatureAppealBody": "عند الضغط المطول على إشعار التذكير، يظهر إجراء \"تم التناول\"، مما يتيح لك تسجيل الجرعة دون فتح التطبيق.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "إضافة ورقة الحبوب تلقائيًا",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
