@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealShortDescription": "সাইলেন্ট মোডেও নিশ্চিতভাবে বাজে এমন নোটিফিকেশন",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "অ্যালার্ম ঘড়ির মতো ওষুধ সেবনের অ্যালার্ম",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
