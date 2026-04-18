@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "הקש/י על התאריך כדי לרשום את מצבך הבריאותי",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "הוסף אירוע ליומן",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
