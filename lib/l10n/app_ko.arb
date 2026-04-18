@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "문의 내용을 입력해 주세요",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "일시불 플랜을 구매해 주셔서 감사합니다. 월간·연간 구독을 이용 중이시면 구독 해지를 잊지 마세요.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
