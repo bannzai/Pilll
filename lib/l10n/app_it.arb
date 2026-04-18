@@ -2758,5 +2758,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Creazione manuale non necessaria",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Usa l'interruttore nella scheda Impostazioni per attivare o disattivare.",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
