@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "ສຽບສະເໝີການບັນທຶກການກິນຢາເມື່ອໃດກໍ່ໄດ້",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "生理開始日をかんたん記録",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
