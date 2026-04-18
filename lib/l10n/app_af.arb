@@ -2662,5 +2662,9 @@
   "criticalAlertFeatureAppealPoint3": "Maklike opstelling met een tik",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Wysig kennisgewingboodskappe vrylik",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
