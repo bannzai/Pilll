@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealShortDescription": "Teken op via kennisgewing sonder om die app oop te maak",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Eentik dosisrekord op kennisgewingskerm",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
