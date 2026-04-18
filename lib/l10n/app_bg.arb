@@ -2726,5 +2726,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Докоснете дата, за да запишете самочувствието си",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Добавяне на планове в календара",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
