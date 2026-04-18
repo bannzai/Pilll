@@ -2454,5 +2454,9 @@
   "criticalAlertFeatureAppealBody": "Калі ўключыць Critical Alert, вы зможаце атрымліваць апавяшчэнні аб прыёме таблетак нават у рэжыме «Не турбаваць» або бясшумным рэжыме. Каб не прапусціць важны момант прыёму таблеткі, абавязкова паспрабуйце ўключыць гэту функцыю.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Наладзіць паведамленні апавяшчэнняў",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
