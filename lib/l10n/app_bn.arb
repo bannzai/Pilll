@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "বিজ্ঞপ্তির বার্তা কাস্টমাইজ করতে পারবেন",
   "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "সেবন বিজ্ঞপ্তির বার্তা স্বাধীনভাবে সম্পাদনা করুন",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
   }
 }
