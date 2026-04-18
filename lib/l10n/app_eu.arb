@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Gogorarazlearekin jakinarazi",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Sakatu data bat agenda idazteko",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
