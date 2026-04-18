@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Registrer med ét tryk fra notifikationsskærmen",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Hold nede på påmindelsesnotifikationen for at se handlingen \"Taget\", og registrer din indtagelse uden at åbne appen.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
