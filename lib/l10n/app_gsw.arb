@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Uf ene Blick sehn, wann m'r's nimmt",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Datums uff em Pillblatt azeige",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
