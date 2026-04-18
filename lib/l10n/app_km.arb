@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "នឹងបញ្ចេញសំឡេង ទោះបីនៅក្នុង ម៉ូដ​ស្ងាត់ ឬ ម៉ូដផ្តោតក៏ដោយ",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "សម្លេងរោទ៍ដូចនាឡិកា",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
