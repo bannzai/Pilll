@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealPoint2": "Bilježi zdravlje i pregledaj",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Pregled prošlih zapisa u kalendaru",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
