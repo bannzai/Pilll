@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Pan byddwch chi'n pwyso a dal yr hysbysiad atgoffa, bydd y weithred 'Wedi cymryd' yn ymddangos, a gallwch gofnodi cymryd eich pillen heb agor yr ap.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Ychwanegu taflen bilsen yn awtomatig",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
