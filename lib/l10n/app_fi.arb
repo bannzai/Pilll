@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "Mukauta asetuksia",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Selaa merkintöjä kalenterissa",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
