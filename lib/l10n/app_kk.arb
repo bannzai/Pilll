@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Сəйле́нт/зейі́н режимінде де дыбыстайды",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Қызғылт дыбысы",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
