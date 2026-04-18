@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Ստեղծեք ձեր սեփական հիշեցման հաղորդագրությունը",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Պիլշիթը ցուցադրել ըստ ամսաթվի",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
