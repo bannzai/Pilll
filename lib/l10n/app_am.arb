@@ -2766,5 +2766,9 @@
   "quickRecordFeatureAppealPoint3": "በፕሪሚየም ምዝገባ ቀጥታ ለመጠቀም ይቻላል",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "ፒል ሉህ ሲጠናቀቅ ራስ-ሰር መቀያየር",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
