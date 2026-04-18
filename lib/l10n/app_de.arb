@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "In den Pillenblatt-Einstellungen änderbar",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Einnahme durch Tippen auf das Pillenblatt erfassen",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
