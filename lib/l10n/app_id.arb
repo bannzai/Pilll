@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Berbunyi bahkan dalam mode diam/fokus",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Suara alarm seperti jam weker",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
