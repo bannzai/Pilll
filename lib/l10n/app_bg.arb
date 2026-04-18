@@ -2762,5 +2762,9 @@
   "quickRecordFeatureAppealPoint2": "Завърши без отваряне на приложението",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Достъпно веднага с Premium абонамент",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
