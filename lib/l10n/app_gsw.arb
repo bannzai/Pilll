@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Wänn Sie Critical Alert aktivierä, chönnä Sie Innahme-Erinnerigä au im Nit-störä-Modus oder im Lautlos-Modus empfangä. Damit Sie kein wichtigä Pille-Innahmezitpunkt verpassed, probierä Sie's doch us.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Benachrichtigungsnachrichte aapassä",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
