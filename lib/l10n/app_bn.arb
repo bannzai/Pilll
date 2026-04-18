@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealTitle": "পিল শীটে তারিখ দেখান",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "কখন খাবেন তা এক নজরে দেখুন",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
