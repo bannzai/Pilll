@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint1": "Apunta cites al calendari",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Gestiona fàcilment les visites mèdiques",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
