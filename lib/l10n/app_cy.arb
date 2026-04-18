@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Cofnodi dos ag un tap ar sgrin hysbysiad",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Pan byddwch chi'n pwyso a dal yr hysbysiad atgoffa, bydd y weithred 'Wedi cymryd' yn ymddangos, a gallwch gofnodi cymryd eich pillen heb agor yr ap.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
