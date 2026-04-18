@@ -2558,5 +2558,9 @@
   "quickRecordFeatureAppealTitle": "നോട്ടിഫിക്കേഷനിൽ നിന്ന് നേരിട്ട് കഴിക്കൽ രേഖപ്പെടുത്തൽ",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "ആപ്പ് തുറക്കാതെ നോട്ടിഫിക്കേഷനിൽ രേഖപ്പെടുത്തുക",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
