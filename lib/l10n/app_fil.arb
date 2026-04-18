@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Awtomatikong Lumikha ng Susunod na Pill Sheet",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Kapag natapos ang kasalukuyang pill sheet group, awtomatikong malilikha ang bagong pill sheet group. Hindi na kailangan ng manu-manong pagpapalit, kaya walang magiging kakulangan sa mga rekord.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
