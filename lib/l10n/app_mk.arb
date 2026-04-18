@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "Веднаш ќе видите кога сте го земале",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Запишете го земањето на пилулата од почетниот екран",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
