@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "Vastaanota ilmoituksia myös äänettömässä tilassa",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Estä pillerin unohtaminen myös Älä häiritse -tilassa",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
