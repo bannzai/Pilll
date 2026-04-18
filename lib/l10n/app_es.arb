@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Registrar sin abrir la app",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Registro de toma con un toque en la pantalla de notificaciones",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
