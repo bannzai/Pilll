@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "ຖ້າໝາຍເລກບໍ່ຕົງ ກະລຸນາແກ້ໄຂໃນການຕັ້ງຄ່າ",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "ສາມາດປ່ຽນໝາຍເລກຢາທີ່ຈະກິນມື້ນີ້",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
