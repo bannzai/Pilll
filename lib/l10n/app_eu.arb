@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "Egutegian planak idatzi",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Mediku-bisitak erraz kudeatu",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
