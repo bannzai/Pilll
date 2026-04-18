@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Alarma de toma como un despertador",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "Con AlarmKit, disponible en iOS 26 y versiones posteriores, recibirás una alarma que suena incluso en modo silencio o modo de enfoque para recordarte que tomes tu píldora.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
