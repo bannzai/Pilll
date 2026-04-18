@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealTitle": "የዛሬን የዶዝ ቁጥር ያስተካክሉ",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "ቁጥሩ ካልተስማማ በቅንብሮቹ ያስተካክሉ",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
