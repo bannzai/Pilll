@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "Alarm yang berbunyi seperti jam weker",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Notifikasi yang tetap berbunyi meskipun dalam mode senyap",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
