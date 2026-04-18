@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple Health bateragarria",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Jakinarazpenaren ekintzan hartzea erregistratu",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
