@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Klepnutím na datum zaznamenejte zdravotní stav",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Zapsat plán do kalendáře",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
