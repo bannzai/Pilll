@@ -2726,5 +2726,9 @@
   "calendarDiaryFeatureAppealLocationHint": "اضغط على التاريخ لتسجيل حالتك الصحية",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "تدوين المواعيد في التقويم",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
