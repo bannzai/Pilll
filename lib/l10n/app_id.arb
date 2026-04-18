@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Catat pemakaian dengan sekali ketuk di layar notifikasi",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Jika Anda menekan dan menahan notifikasi pengingat, tindakan \"Sudah minum\" akan muncul sehingga Anda dapat mencatat pemakaian tanpa membuka aplikasi.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
