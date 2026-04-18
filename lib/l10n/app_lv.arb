@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint3": "Var atvērt arī, pieskaroties sākumlapas skaitlim.",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Bezmaksas pārtraukumu uzskaite",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
