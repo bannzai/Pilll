@@ -2740,5 +2740,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple Health Integration",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Record dose from notification action",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
