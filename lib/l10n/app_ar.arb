@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealTitle": "دوّن مواعيدك المستقبلية",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "إدارة المواعيد المستقبلية كمواعيد الطبيب وغيرها",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
