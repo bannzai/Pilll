@@ -2470,5 +2470,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Možete prilagoditi standardnu poruku „Vrijeme je za uzimanje pilule\" riječima koje volite. Pokušajte je zamijeniti motivirajućim riječima, imenom svog ljubimca ili bilo kojom frazom koja će vaše svakodnevno uzimanje lijekova učiniti ugodnijim.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Prikaži datum na listu tableta",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
