@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Wann d'Nummer nit stimmt, in de Yystellige korrigiere",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "D'Pillnummere vun hütt ändere",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
