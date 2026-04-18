@@ -2414,5 +2414,9 @@
   "lifetimePurchaseNotice2": "ទីនេះ",
   "@lifetimePurchaseNotice2": {
     "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "សូមបោះបង់ការជាវដែលមានស្រាប់ (បើមាន) មុនធ្វើការទិញ។",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
   }
 }
