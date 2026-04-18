@@ -2662,5 +2662,9 @@
   "criticalAlertFeatureAppealPoint3": "በአንድ ጠቅታ ቀላል ቅንብር",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "የማሳወቂያ መልዕክቶችን በነፃነት አርትዕ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
