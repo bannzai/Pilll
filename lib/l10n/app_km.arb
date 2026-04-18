@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "ភ្ជាប់ជាមួយកម្មវិធីសុខភាព",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "ចែករំលែកកំណត់ត្រាការមកខែទៅកាន់កម្មវិធីសុខភាព",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
