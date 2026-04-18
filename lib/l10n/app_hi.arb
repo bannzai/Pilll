@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "पिल शीट के ऊपर-दाएँ कॉग आइकन से शुरू करें",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "माहवारी का संपादन और फिर से शुरू करना भी आसान है",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
