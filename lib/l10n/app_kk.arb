@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Пилл парақшасының баптауларынан өзгертуге болады",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Пилшағын түртіңіз және қабылдауды жазып алыңыз",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
