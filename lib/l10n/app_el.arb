@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Εύκολη διαχείριση ημερομηνιών επίσκεψης στον γιατρό",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Ειδοποίηση υπενθύμισης",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
