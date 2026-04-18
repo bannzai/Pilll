@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint1": "Registra fàcilment la data d'inici del període",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Detecta el cicle automàticament",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
