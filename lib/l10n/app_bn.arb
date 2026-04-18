@@ -2706,5 +2706,9 @@
   "menstruationFeatureAppealPoint2": "স্বয়ংক্রিয়ভাবে চক্র বোঝা",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "সেটিংস কাস্টমাইজ করুন",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
