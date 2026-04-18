@@ -2686,5 +2686,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Həb vərəqi ayarlarından dəyişdirilə bilər",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Həb vərəqəsinə toxunaraq qəbul qeydi",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
