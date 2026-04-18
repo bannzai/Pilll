@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Lisää pillerisivu automaattisesti",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Luo seuraava arkki automaattisesti",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
