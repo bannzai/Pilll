@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Napauta päivämäärää kirjoittaaksesi tapahtuman",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Kuukautistietojen automaattinen synkronointi",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
