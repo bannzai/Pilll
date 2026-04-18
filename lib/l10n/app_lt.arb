@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Netrukdymo režime nepraleiskite tabletės",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Pranešimai net ir tylos režimu",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
