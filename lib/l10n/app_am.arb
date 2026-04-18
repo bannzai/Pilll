@@ -2682,5 +2682,9 @@
   "appearanceModeDateFeatureAppealPoint2": "ቀን መቁጠሪያ ሳያዩ ቀኑን ማወቅ ይቻላል",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "ከፒል ሺት ቅንብሮች መቀየር ይቻላል",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
