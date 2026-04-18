@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "התראות מגיעות גם במצב שקט",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "הפעלת Critical Alert מאפשרת לך לקבל התראות נטילת גלולות גם במצב ״אל תפריע״ או במצב שקט. כדי לא לפספס את זמן נטילת הגלולה החשוב, כדאי להגדיר זאת.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
