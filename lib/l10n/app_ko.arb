@@ -2550,5 +2550,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "생리 기록을 건강 앱과 공유",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "건강 앱과 연동할 수 있습니다",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
