@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint1": "বিনামূল্যে ব্যবহারযোগ্য নম্বর মেলানোর ফিচার",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "সেটিংস ট্যাব থেকে পরিবর্তন করা যাবে",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
