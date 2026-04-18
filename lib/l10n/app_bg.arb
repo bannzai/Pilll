@@ -2706,5 +2706,9 @@
   "menstruationFeatureAppealPoint2": "Автоматично разпознаване на цикъла",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Персонализиране на настройките",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
