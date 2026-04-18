@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Μπορεί να αλλαχθεί από την καρτέλα ρυθμίσεων",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Μπορείτε να το ανοίξετε και πατώντας τον αριθμό στην αρχική σελίδα",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
