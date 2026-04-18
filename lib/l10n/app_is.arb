@@ -2466,5 +2466,9 @@
   "appearanceModeDateFeatureAppealTitle": "Sýna dagsetningar á pillublaði",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Sjá við fyrstu sýn hvenær á að taka pilluna",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
