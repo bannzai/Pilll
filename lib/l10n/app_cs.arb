@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Lze otevřít také klepnutím na číslo na domovské obrazovce",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Záznamy přestávek v užívání zdarma",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
