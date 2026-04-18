@@ -2697,5 +2697,9 @@
   "calendarDiaryFeatureAppealPoint1": "مشاهده سوابق در تقویم",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "یادداشت وضعیت جسمی و مرور آن",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
