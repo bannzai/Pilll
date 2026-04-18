@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Hysbysiad drwy atgoffwr",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Tapiwch ddyddiad i ysgrifennu cynllun",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
