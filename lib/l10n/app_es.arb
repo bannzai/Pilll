@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Ubicación en la app",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Las notificaciones llegan incluso en modo de concentración",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
