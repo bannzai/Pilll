@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Tarkista lääkkeenottohistoria milloin tahansa",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Kirjaa kuukautisten alkamispäivä helposti",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
