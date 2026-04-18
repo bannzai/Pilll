@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Suriin ang kasaysayan ng gamot anumang oras",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Madaling itala ang petsa ng simula ng regla",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
