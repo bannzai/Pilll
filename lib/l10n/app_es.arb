@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Completar sin abrir la aplicación",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Disponible con suscripción Premium",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
