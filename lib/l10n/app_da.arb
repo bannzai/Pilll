@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Til din egen notifikationsbesked",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Vis pilleark efter dato",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
