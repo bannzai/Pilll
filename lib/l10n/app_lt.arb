@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "Kalendoriuje įrašykite būsimas įvykių datas",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Galite į kalendorių įrašyti būsimus įvykius, pavyzdžiui, apsilankymus pas gydytoją ar keliones. Suderinę juos su jūsų kontraceptinių tablečių vartojimo ciklu, galėsite planuoti atsižvelgdami į numatomą mėnesinių laikotarpį.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
