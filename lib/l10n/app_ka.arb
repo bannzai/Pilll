@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "პილშიტზე თარიღის ჩვენება",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "პილ-შიტის უჯრებში თარიღების ჩვენებით შეგიძლიათ ერთი შეხედვით დაათვალიეროთ წარსული მიღებების ჩანაწერები და მომავალი მიღებების გრაფიკი. გადართეთ „ნომერი“ და „თარიღი“ რეჟიმებს შორის და შეარჩიეთ ის ჩვენება, რომელიც თქვენთვის მოსახერხებელია.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
