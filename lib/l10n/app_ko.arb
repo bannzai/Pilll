@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "캘린더에서 기록 보기",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "몸 상태를 기록하고 되돌아보기",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
