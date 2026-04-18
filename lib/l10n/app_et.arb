@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Meeldetuletusteatist pikalt vajutades kuvatakse toiming „Võetud\" ja saate tableti võtmise registreerida rakendust avamata.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Lisa pillileht automaatselt",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
