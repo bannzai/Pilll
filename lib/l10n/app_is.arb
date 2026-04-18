@@ -2450,5 +2450,9 @@
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Sérsníddu tilkynningaskilaboðin",
   "@reminderNotificationCustomizeWordFeatureAppealTitle": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Þú getur sérsniðið tilkynningaskilaboðin",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
   }
 }
