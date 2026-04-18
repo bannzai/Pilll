@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Таблетка барагында күндү көрсөтүүгө болот",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Препарат барагындагы клеткаларга күндөрдү көрсөтүү аркылуу өткөн колдонуу жазууларыңды жана келечектеги колдонуу пландарыңды бир көз ирмемде көрө аласың. «Номер» режими менен «Күн» режимин которуп, өзүңө ылайыктуу көрүнүштү танда.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
