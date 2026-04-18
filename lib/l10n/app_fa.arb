@@ -2681,5 +2681,9 @@
   "recordPillFeatureAppealPoint3": "مشاهده تاریخچه مصرف در هر زمان",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "ثبت آسان تاریخ شروع قاعدگی",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
