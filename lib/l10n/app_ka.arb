@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple Health-ის მხარდაჭერა",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "ჩაწერა შეტყობინების მოქმედებით",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
