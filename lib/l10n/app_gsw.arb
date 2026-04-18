@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Befinde notiere un zruegluege",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Vergangeni Ufzeichnige im Kalender aaluege",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
