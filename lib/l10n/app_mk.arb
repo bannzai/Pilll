@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Место во апликацијата",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Добивај известувања и кога е вклучен режимот Фокус",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
