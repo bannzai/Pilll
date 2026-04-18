@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "ບັນທຶກສະຖານະຮ່າງກາຍແລະກັບມາທົດສອບ",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "ເບິ່ງບັນທຶກທີ່ຜ່ານມາໃນປະຕິທິນ",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
