@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Suderinama su Apple Health",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Užregistruoti vartojimą per pranešimo veiksmą",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
