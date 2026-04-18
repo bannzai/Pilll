@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "អាចផ្លាស់ប្តូរលេខថ្នាំសម្រាប់ថ្ងៃនេះបាន",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "បើលេខលើសន្លឹកថ្នាំ និងការស៊ីពិតប្រាកដមិនត្រូវគ្នា ដោយសារ​ភ្លេចស៊ី ឬ​យកថ្នាំខុស អ្នកអាចកែសំរួលលេខថ្នាំសម្រាប់ថ្ងៃនេះដោយដៃ។ អ្នកក៏អាចបើកផ្ទាំងដូចគ្នានេះពីការបង្ហាញលេខថ្នាំនៅផ្ទះផងដែរ។",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
