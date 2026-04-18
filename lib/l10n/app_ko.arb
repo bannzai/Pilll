@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "일시적으로 복용을 중단한 기간을 피임약 시트에 기록할 수 있습니다. 쉬는 기간에는 복용 번호가 증가하지 않으며, 복용을 재개하면 즉시 기록을 다시 시작할 수 있습니다.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "앱 내 위치",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
