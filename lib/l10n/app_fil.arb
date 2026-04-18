@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "I-adjust ang numero ng pill ngayon",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Ayusin sa settings kung mali ang numero",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
