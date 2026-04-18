@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "Skrá inntöku beint úr tilkynningu",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Skráðu beint úr tilkynningu án þess að opna appið",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
