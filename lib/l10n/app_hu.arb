@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Automatikus váltás tablettacsomag végén",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Kézi létrehozásra nincs szükség.",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
