@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "自动切换于药片卡完成",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Handvirk sköpun er ekki nauðsynleg",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
