@@ -2778,5 +2778,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "সেটিংস ট্যাবের সুইচ দিয়ে পরিবর্তন করুন",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "সাইলেন্ট/ফোকাস মোডেও বাজবে",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
