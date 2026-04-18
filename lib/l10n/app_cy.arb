@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Nodio cyflwr iechyd ac edrych yn ôl",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Adolygu cofnodion blaenorol ar y calendr",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
