@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Makakatanggap ng notification kahit nasa Focus Mode",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Maaalala nang sigurado sa oras na itinakda",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
