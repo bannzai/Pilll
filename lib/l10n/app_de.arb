@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Nummer abweichend? In Einstellungen korrigieren",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Heutige Pillennummer ändern",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
