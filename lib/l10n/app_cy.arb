@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Cofnodi a rhagfynegi mislif",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Cofnodi dyddiad dechrau mislif a deall y cylch",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
