@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Hap vərəqi bitdikdə avtomatik keçid",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Əl ilə yaratma əməliyyatına ehtiyac yoxdur",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
