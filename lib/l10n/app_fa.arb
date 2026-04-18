@@ -2481,5 +2481,9 @@
   "recordPillFeatureAppealHeadline": "ثبت مصرف قرص در صفحه اصلی",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "با ضربه زدن روی برگه قرص در صفحه اصلی، می‌توانید مصرف قرص آن روز را ثبت کنید. اگر اشتباهاً ثبت کردید، با ضربه زدن دوباره می‌توانید آن را لغو کنید. از آنجا که تاریخچه مصرف را می‌توانید بعداً مشاهده کنید، می‌توانید با خیال راحت ادامه دهید.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
