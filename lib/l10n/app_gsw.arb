@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Zyklus automatisch erkenne",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Iistellige anpasse",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
