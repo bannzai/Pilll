@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Rexistro de toma tocando a folla de pílulas",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Cancelación sinxela mesmo se te equivocas",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
