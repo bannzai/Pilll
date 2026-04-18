@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealShortDescription": "Stjórnaðu framtíðaráætlunum, t.d. læknisheimsóknum",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Skrá framtíðarviðburði í dagatalið",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
