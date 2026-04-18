@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "הקש/י לתאריך כדי להזין תזכורת",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "סנכרון אוטומטי של רישומי הווסת",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
