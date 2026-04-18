@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Զարթուցիչի նման ծանուցման ձայն",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26以降・設定タブから有効化",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
