@@ -2760,5 +2760,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "No manual creation needed",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Toggle with the switch in the Settings tab",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
