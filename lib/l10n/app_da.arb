@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Automatisk synkronisering af menstruationsdata",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Synkroniser med Sundhedsapp",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
