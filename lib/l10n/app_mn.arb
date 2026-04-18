@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Эмийн хуудасны тохиргооноос өөрчлөх боломжтой",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Пиллийн хуудсыг дарж хэрэглэлт бүртгэх",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
