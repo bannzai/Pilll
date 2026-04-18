@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Ayusin sa settings kung mali ang numero",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Maaaring baguhin ang numero ng pill na iinom ngayon",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
