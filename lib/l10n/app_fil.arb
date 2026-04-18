@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Kapag pinindot nang matagal ang reminder notification, lalabas ang aksyon na \"Nainom na\", na nagbibigay-daan sa iyong i-record ang pag-inom nang hindi kailangang buksan ang app.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Awtomatikong Magdagdag ng Pill Sheet",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
