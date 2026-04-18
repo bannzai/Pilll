@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "앱 내 위치",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "집중 모드 중에도 알림이 도착합니다",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
