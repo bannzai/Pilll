@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Ao activar Critical Alert, poderás recibir notificacións de toma aínda co modo Non molestar ou o modo silencioso activados. Para non perder o momento importante de tomar a túa pílula, non dubides en configuralo.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Personalizar mensaxes de notificación",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
