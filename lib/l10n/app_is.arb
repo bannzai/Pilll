@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "集中モード中でも通知が届く",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Áreiðanleg áminning á þeim tíma sem þú stillir",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
