@@ -2518,5 +2518,9 @@
   "calendarDiaryFeatureAppealShortDescription": "Rexistra o teu estado de saúde diario no calendario",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Rexistrar o estado de saúde diario no calendario",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
