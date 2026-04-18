@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint1": "Funció d'ajust de números gratuïta",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Es pot canviar des de la pestanya de configuració",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
