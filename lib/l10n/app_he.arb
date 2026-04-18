@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "לחיצה ארוכה על התראת התזכורת מציגה את הפעולה \"נלקחה\", המאפשרת לרשום נטילת גלולה מבלי לפתוח את האפליקציה.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "הוספה אוטומטית של גיליון גלולות",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
