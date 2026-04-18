@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealTitle": "Lako pregledajte historiju uzimanja",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Odmah saznajte kada ste uzeli tabletu",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
