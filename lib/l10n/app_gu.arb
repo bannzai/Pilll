@@ -2774,5 +2774,9 @@
   "todayPillNumberFeatureAppealPoint1": "મફ્તમાં ઉપલબ્ધ નંબર મેળ ખાવાની સુવિધા",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "સેટિંગ્સ ટૅબ પરથી બદલી શકાય છે",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
