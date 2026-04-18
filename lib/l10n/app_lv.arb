@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Neaizmirstiet tableti arī Netraucēt režīmā",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Tīklājā klusuma režīmā paziņojumi tiks saņemti",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
