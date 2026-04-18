@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "Isulat ang iskedyul sa kalendaryo",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Madaling pamahalaan ang mga araw ng pagpunta sa klinika",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
