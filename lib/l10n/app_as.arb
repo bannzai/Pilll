@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealShortDescription": "বিৰতি আৰু বন্ধ সঠিকভাৱে পৰিচালনা কৰক",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "পিল সেৱন বিৰতি লওক",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
