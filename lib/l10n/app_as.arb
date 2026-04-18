@@ -2562,5 +2562,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "স্বাস্থ্য সেৱাৰ সৈতে সংযোগ কৰিব পাৰি",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilllত ৰেকৰ্ড কৰা ঋতুস্ৰাৱৰ তথ্য স্বাস্থ্যসেৱা এপৰ সৈতে স্বয়ংক্ৰিয়ভাৱে সংযুক্ত কৰিব পাৰি। স্বাস্থ্যসেৱাত থকা অন্যান্য স্বাস্থ্য তথ্যৰ সৈতে একেলগে পৰীক্ষা কৰিব পাৰি, আৰু অন্য এপতো ঋতুস্ৰাৱৰ তথ্য ব্যৱহাৰ কৰিব পৰা যাব।",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
