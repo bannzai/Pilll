@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Hilekoa hasierako eguna erraz erregistratu",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Zikloa automatikoki detektatu",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
