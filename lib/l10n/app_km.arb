@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "ការជូនដំណឹងដែលធានាថានឹងមានសំឡេង ទោះបីនៅម៉ូដស្ងាត់ក៏ដោយ",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "រំលឹកការទទួលថ្នាំដូចនាឡិកា",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
