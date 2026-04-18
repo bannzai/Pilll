@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "Zapsat plán do kalendáře",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Snadná správa termínů návštěv lékaře",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
