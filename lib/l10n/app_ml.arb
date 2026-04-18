@@ -2638,5 +2638,9 @@
   "featureAppealLocationLabel": "ആപ്പിലെ സ്ഥലം",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "ഫോക്കസ് മോഡിലും അറിയിപ്പുകൾ ലഭിക്കും",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
