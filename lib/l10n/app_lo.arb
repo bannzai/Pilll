@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "{\n  \"recordIntakeFromNotificationAction\": \"ບັນທຶກການກິນຢາຜ່ານປຸ່ມໃນແຈ້ງເຕືອນ\",\n  \"@recordIntakeFromNotificationAction\": {\n    \"description\": \"通知に表示されるアクション（ボタン）からピルの服用を記録するラベル。短く、通知内で表示される。\"\n  }\n}",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "ສຳເລັດບໍ່ຕ້ອງເປີດແອັບ",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
