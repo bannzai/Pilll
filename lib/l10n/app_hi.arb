@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "अपना निजी नोटिफिकेशन संदेश सेट करें",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "पिल शीट को तारीख के अनुसार प्रदर्शित करें",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
