@@ -2578,5 +2578,9 @@
   "quickRecordFeatureAppealHeadline": "Evidentiranje uzimanja jednim dodirom na ekranu obavijesti",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Dugim pritiskom na obavještenje podsjetnika prikazat će se akcija \"Uzeto\", i možete zabilježiti uzimanje lijeka bez otvaranja aplikacije.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
