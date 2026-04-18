@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Alarma de espertador",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 ou posterior · Activar dende a lapela de configuración",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
