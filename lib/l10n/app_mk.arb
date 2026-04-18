@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Кога тековната група листови со таблети ќе заврши, автоматски ќе се креира нова група листови со таблети. Не е потребна рачна промена и нема да има пропусти во евиденцијата.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Аларм што ѕвони како будилник",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
