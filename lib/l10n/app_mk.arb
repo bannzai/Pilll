@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Превклучете го преку прекинувачот во јазичето „Поставки“.",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Ќе звучи дури и во режим без звук или во режим Фокус",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
