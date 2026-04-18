@@ -2762,5 +2762,9 @@
   "quickRecordFeatureAppealPoint2": "Završi bez otvaranja aplikacije",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Dostupno odmah uz Premium pretplatu",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
