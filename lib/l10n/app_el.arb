@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Ηχεί ακόμα και σε λειτουργία σίγασης/εστίασης",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Ήχος ξυπνητηριού",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
