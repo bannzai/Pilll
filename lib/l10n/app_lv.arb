@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealHeadline": "Mainīt šodienas tabletes numuru",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Ja tablešu loksnē redzamie numuri nesakrīt ar faktisko lietošanu (piemēram, ja esat kādu tableti aizmirsis vai sajaucis), jūs varat manuāli pielāgot šodien lietojamās tabletes numuru. To pašu ekrānu varat atvērt arī no sākuma ekrāna, pieskaroties tabletes numura rādījumam.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
