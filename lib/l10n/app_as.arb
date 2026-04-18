@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealShortDescription": "কেতিয়া সেৱন কৰিছিল তাৎক্ষণিকভাৱে জানক",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "হোম স্ক্ৰীণত পিলৰ সেৱন ৰেকৰ্ড কৰক",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
