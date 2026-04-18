@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Хэзээ уухаа нэг харцаар шалгах",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Пилл хуудсан дээр огноог харуулах боломжтой",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
