@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Crear automáticamente la siguiente hoja de píldoras",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Cuando el grupo de hojas de píldoras actual finaliza, se crea automáticamente un nuevo grupo de hojas de píldoras. No es necesario realizar ningún cambio manual, por lo que no se producirán omisiones en los registros.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
