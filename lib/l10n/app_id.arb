@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Dapat diubah dari tab Pengaturan",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Bisa dibuka juga dengan mengetuk angka di beranda",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
