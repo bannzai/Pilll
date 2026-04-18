@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "निश्चित समय पर याद दिलाना",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "ワンタップでかんたん設定",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
