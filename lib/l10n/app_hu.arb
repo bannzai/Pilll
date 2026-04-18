@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Jegyezd fel az állapotodat, és nézd vissza",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Korábbi feljegyzések megtekintése a naptárban",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
