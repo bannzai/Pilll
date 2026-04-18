@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "Mabilis na malaman kung kailan ka uminom",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "I-record ang pag-inom ng pill sa home screen",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
