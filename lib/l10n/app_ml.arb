@@ -2454,5 +2454,9 @@
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "നോട്ടിഫിക്കേഷൻ സന്ദേശം ഇഷ്ടാനുസരണം ക്രമീകരിക്കാം",
   "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "ഗുളിക കഴിക്കൽ അറിയിപ്പ് സന്ദേശം സ്വതന്ത്രമായി എഡിറ്റ് ചെയ്യുക",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
   }
 }
