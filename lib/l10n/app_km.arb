@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "ស្គាល់រង្វង់ដោយស្វ័យប្រវត្តិ",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "កែតម្រូវការកំណត់",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
