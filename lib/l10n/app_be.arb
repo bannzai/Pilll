@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Аўтаматычнае пераключэнне пры заканчэнні аркуша таблетак",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Ручнае стварэнне не патрэбна",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
