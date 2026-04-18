@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Gratis nutzbaari Nummere-Aapassigsfunktion",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Cha vum Iistellige-Tab gändert wärde",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
