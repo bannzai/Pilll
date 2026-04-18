@@ -2598,5 +2598,9 @@
   "creatingNewPillSheetFeatureAppealBody": "বৰ্তমানৰ পিল শ্বীট গ্ৰুপ শেষ হ'লে, এটা নতুন পিল শ্বীট গ্ৰুপ স্বয়ংক্ৰিয়ভাৱে সৃষ্টি হয়। হাতেৰে সলনি কৰাৰ প্ৰয়োজন নাই আৰু ৰেকৰ্ডত কোনো ফাঁক নপৰে।",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "ঘড়ীৰ দৰে বাজিব পৰা এলাৰ্ম",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
