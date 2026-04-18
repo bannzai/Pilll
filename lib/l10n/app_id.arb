@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Catat pemakaian dari notifikasi",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
