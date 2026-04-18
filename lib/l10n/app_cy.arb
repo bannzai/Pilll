@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Gellir ei agor hefyd trwy dapio'r rhif ar yr hafan",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Cofnodion egwyl y bilsen am ddim",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
