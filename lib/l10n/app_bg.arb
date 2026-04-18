@@ -2610,5 +2610,9 @@
   "alarmKitFeatureAppealHeadline": "Аларма за прием като будилник",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "С помощта на AlarmKit, наличен за iOS 26 и по-нови версии, ще получавате известия за приема на хапчето чрез аларма, която звъни надеждно дори в тих режим или режим на фокусиране.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
