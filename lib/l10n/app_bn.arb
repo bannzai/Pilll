@@ -2722,5 +2722,9 @@
   "calendarDiaryFeatureAppealPoint3": "অতীতের রেকর্ড ক্যালেন্ডারে পর্যালোচনা করুন",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "তারিখ ট্যাপ করে শারীরিক অবস্থা রেকর্ড করুন",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
