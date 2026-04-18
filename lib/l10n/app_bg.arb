@@ -2658,5 +2658,9 @@
   "criticalAlertFeatureAppealPoint2": "Сигурно напомняне в зададения час",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Лесна настройка с едно докосване",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
