@@ -2598,5 +2598,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Когато текущата група с таблетки приключи, автоматично се създава нова група с таблетки. Не е необходимо ръчно превключване и не се допускат пропуски в записите.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Аларм, звънящ като будилник",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
