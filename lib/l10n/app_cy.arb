@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Tapiwch ddyddiad i ysgrifennu cynllun",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Cysylltu data cofnodion mislif yn awtomatig",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
