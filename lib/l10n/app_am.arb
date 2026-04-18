@@ -2790,5 +2790,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 ወይም ከዚያ በኋላ・ከቅንብሮች ትር ያብሩ",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "ነፃ የቁጥር ማጣጣሚ ባህሪ",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
