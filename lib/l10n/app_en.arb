@@ -2660,5 +2660,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Customize notification messages",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "Reflect in daily dose notifications",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
   }
 }
