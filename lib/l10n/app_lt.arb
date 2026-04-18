@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "Įsitikinkite, kad priminimas bus laiku pagal nustatytą laiką",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Vientyliukas nustatyti vienu bakstelėjimu",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
