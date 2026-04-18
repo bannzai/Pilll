@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Ohni d'App z'öffne diräkt uf dr Mäldig ufzeichne",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Mit eme Tipp uf dr Benachrichtigsig d'Innahm ufzeichne",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
