@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "ერთი დაჭერით მარტივი დაყენება",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "შეტყობინების ტექსტის თავისუფალი რედაქტირება",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
