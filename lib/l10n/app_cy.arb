@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Toglo gyda switsh yn y tab gosodiadau",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Yn canu hyd yn oed yn y modd tawel/ffocws",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
