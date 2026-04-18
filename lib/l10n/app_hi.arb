@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealBody": "पीरियड शुरू होने पर बस उसे रिकॉर्ड करें — आप पिछले पीरियड का इतिहास सूचीबद्ध रूप में देख सकते हैं। अगली अनुमानित पीरियड तारीखें भी स्वचालित रूप से अनुमानित की जाती हैं, ताकि आप बेहतर तरीके से योजना बना सकें।",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "कैलेंडर में अपना स्वास्थ्य रिकॉर्ड करें",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
