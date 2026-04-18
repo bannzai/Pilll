@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Quando il gruppo di pillole corrente termina, viene creato automaticamente un nuovo gruppo. Non è necessario eseguire alcuna operazione di cambio manuale e non si verificheranno lacune nelle registrazioni.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Allarme che suona come una sveglia",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
