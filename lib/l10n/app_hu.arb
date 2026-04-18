@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Az alapértelmezett „Ideje bevenni a tablettát” üzenetet testre szabhatod a saját szavaiddal. Válassz motiváló üzenetet, a háziállatod nevét, vagy bármilyen más szöveget, amely élvezetesebbé teszi a napi szedést.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Dátumok megjelenítése a tablettalapon",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
