@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealShortDescription": "কখন খেয়েছেন তা সঙ্গে সঙ্গে জানা যায়",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "হোম স্ক্রিনে পিল সেবন রেকর্ড করুন",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
