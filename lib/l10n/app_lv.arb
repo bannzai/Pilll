@@ -2558,5 +2558,9 @@
   "quickRecordFeatureAppealTitle": "Reģistrēt lietošanu tieši no paziņojuma",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Ierakstīt paziņojumā, neatverot lietotni",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
