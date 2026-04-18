@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "Direkt vun dr Benachrichtigung ufzeichne",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Ohni d'App z'öffne diräkt uf dr Mäldig ufzeichne",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
