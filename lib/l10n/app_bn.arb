@@ -2650,5 +2650,9 @@
   "featureAppealLocationLabel": "অ্যাপের মধ্যে অবস্থান",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "ফোকাস মোডেও বিজ্ঞপ্তি পাওয়া যাবে",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
