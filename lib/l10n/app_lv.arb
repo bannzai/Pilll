@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealHeadline": "{\n  \"@@locale\": \"lv\",\n  \"home_record_pill\": \"Reģistrēt tablešu lietošanu sākuma ekrānā\",\n  \"@home_record_pill\": {\n    \"description\": \"ピル記録/服用履歴機能のヘルプページのヘッドライン\"\n  }\n}",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Mājas ekrānā pietiek vienreiz pieskarties tablešu lapiņai, lai atzīmētu tabletes lietošanu šai dienai. Ja ieraksts izrādās kļūdains, pieskaroties vēlreiz to var atcelt. Lietošanas vēsturi var pārskatīt vēlāk, tāpēc vari turpināt bez raizēm.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
