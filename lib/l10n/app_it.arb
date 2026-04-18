@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Registrare e prevedere il ciclo mestruale",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Registra il giorno d'inizio delle mestruazioni per monitorare il ciclo.",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
