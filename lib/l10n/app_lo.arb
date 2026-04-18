@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "間違えてもかんたん取り消し",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "ສຽບສະເໝີການບັນທຶກການກິນຢາເມື່ອໃດກໍ່ໄດ້",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
