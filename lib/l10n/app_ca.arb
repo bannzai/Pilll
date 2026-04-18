@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "Comparteix l'historial menstrual amb Salut",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "Es pot integrar amb Salut",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
