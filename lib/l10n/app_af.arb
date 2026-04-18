@@ -2766,5 +2766,9 @@
   "quickRecordFeatureAppealPoint3": "Beskikbaar met Premium-lidmaatskap",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Outomatiese omskakeling by pilblad-einde",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
