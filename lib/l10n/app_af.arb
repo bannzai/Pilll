@@ -2470,5 +2470,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "U kan die standaard \"Dit is tyd om u pil te neem\" aanpas na woorde van u keuse. Probeer dit verander na iets wat u motiveer, soos u troeteldier se naam, om u daaglikse inname nog aangenamer te maak.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Wys datum op pilblad",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
