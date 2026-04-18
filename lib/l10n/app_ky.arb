@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Акысыз номер дал келтирүү функциясы",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Орнотуулар табынан өзгөртсө болот",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
