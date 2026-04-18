@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint3": "Menstruāciju rediģēšana un atsākšana ir vienkārša.",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Vieglā skatā redzams, kad lietot",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
