@@ -2558,5 +2558,9 @@
   "quickRecordFeatureAppealTitle": "સૂચનામાંથી સીધું ડોઝ નોંધો",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "એપ ખોલ્યા વિના સૂચના પર રેકોર્ડ કરો",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
