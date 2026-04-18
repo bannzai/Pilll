@@ -2720,5 +2720,9 @@
   "futureScheduleFeatureAppealPoint1": "Add events to calendar",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Easily manage your clinic visit schedule",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
