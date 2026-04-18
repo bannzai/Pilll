@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "רשום נטילת גלולה במסך הבית",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "פשוט הקישי על גיליון הגלולות במסך הבית כדי לתעד את נטילת הגלולה של אותו יום. אם רשמת בטעות, הקישי שוב כדי לבטל. תוכלי גם לבדוק את היסטוריית הנטילה מאוחר יותר, כך שתוכלי להמשיך בביטחון.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
