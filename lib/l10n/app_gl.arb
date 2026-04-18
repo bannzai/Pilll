@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "Usando AlarmKit, dispoñible en iOS 26 ou posterior, avisarache de tomar a pílula cunha alarma que soa de forma fiable mesmo en modo silencioso ou en modo de concentración.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Axustar o número de dose de hoxe",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
