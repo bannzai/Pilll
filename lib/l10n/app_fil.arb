@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "I-tap ang petsa para itala ang iyong kalagayan",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Isulat ang iskedyul sa kalendaryo",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
