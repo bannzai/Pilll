@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "Запишете ги вашите идни планови",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Управувајте ги идните термини, како посети кај лекар",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
