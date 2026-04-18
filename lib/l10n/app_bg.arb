@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealShortDescription": "Точно управление на почивки и прекъсвания",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Почивка от приема на хапчета",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
