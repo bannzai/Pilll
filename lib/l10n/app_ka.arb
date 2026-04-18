@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilll-ში ჩაწერილი მენსტრუაციის მონაცემები შესაძლებელია ავტომატურად სინქრონიზირდეს ჯანმრთელობის აპლიკაციასთან. ჯანმრთელობის აპლიკაციაში შეგიძლიათ დაათვალიეროთ ისინი სხვა ჯანმრთელობის მონაცემებთან ერთად და სხვა აპლიკაციებსაც მისცეთ უფლება გამოიყენონ ეს მონაცემები.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
