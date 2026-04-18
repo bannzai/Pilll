@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Kézi létrehozásra nincs szükség.",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "A Beállítások fül kapcsolójával váltható",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
