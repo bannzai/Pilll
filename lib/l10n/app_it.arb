@@ -2790,5 +2790,9 @@
   "restDurationFeatureAppealPoint1": "Registro gratuito delle pause della pillola",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Inizia dal pulsante a forma di ingranaggio in alto a destra della scheda delle pillole",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
