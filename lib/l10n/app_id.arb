@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Tidak perlu membuat secara manual",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Alihkan dengan sakelar di tab Pengaturan",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
