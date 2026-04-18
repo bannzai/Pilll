@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "Okamžitě víte, kdy jste pilulku užili",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Zaznamenejte užívání pilulek na domovské obrazovce",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
