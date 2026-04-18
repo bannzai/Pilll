@@ -2605,5 +2605,9 @@
   "todayPillNumberFeatureAppealShortDescription": "اگر شماره اشتباه است، در تنظیمات اصلاح کنید",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "می‌توانید شماره قرص امروز را تغییر دهید",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
