@@ -2698,5 +2698,9 @@
   "recordPillFeatureAppealPoint3": "Bekyk inname-geskiedenis enige tyd",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Maklike aantekeninge van menstruasiebegindatum",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
