@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Notér og se tilbage på dit helbred",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Gennemse tidligere registreringer i kalenderen",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
