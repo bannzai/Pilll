@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "ចុចលើកាលបរិច្ឆេទ ដើម្បីកត់ត្រាស្ថានភាពរាងកាយ",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "បន្ថែមព្រឹត្តិការណ៍ទៅប្រតិទិន",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
