@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Zvuk alarmu podobný budíku",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 a novější · Aktivovat na záložce Nastavení",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
