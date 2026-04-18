@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Bevétel rögzítése értesítésből",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Alkalmazás megnyitása nélkül befejezve",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
