@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Fáanlegt strax með Premium-áskrift",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "自动切换于药片卡完成",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
