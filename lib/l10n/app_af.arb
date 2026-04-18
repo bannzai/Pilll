@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint1": "Maklike aantekeninge van menstruasiebegindatum",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Siklus outomaties bepaal",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
