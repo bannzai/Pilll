@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "Zuverlässigi Erinnrig zur iigstellte Zit",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Eifachi Iistellig mit eim Tipp",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
