@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Käsitsi loomine pole vajalik",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Lülita seadete vahekaardi lülitiga",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
