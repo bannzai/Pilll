@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "A naptárban koppintson egy dátumra, és rögzítheti az állapotát, hangulatát vagy tüneteit. Mivel ezeket együtt láthatja a gyógyszerbevételi és a menstruációs feljegyzésekkel, könnyebben megismerheti teste ritmusát.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Jegyezd fel a jövőbeli terveidet",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
