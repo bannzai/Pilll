@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Heliseb ka vaikse/fookuse režiimis",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Äratuskella sarnane häälsignaal",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
