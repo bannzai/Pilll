@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Ավարտել առանց հավելվածը բացելու",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Premium բաժանորդագրությամբ անմիջապես հասանելի է",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
