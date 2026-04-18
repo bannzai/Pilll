@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Առողջության հետ համաժամացում",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Կիսվեք ձեր դաշտանային գրառումներն Health հավելվածի հետ",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
