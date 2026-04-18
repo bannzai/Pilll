@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Tipp uf e Datum zum Vorhabe iischriibe",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Periodendate automatisch synchronisiere",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
