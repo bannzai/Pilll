@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Įrašyti per pranešimą neatsidarant programos",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Vieno palietimo vartojimo įrašymas pranešimų ekrane",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
