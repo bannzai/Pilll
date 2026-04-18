@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "Etorkizuneko planak egutegian erregistratu",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Etorkizuneko hitzorduak, hala nola medikuarengana joateko bisitaldiak eta bidaia-planak, egutegian idatz ditzakezu. Pilula hartzeko zikloarekin batera ikusi daitezkeenez, hilekoen egutegia ere kontuan hartuta planak egin ditzakezu.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
