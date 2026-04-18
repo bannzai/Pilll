@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "I-sync sa Healthcare App",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Suporta sa Apple Healthcare",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
