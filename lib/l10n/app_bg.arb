@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Автоматично превключване при край на листа с хапчета",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Не е необходима ръчна операция за създаване",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
