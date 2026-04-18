@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Συγχρονισμός με εφαρμογή Υγείας",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Υποστήριξη Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
