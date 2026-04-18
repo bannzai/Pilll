@@ -2498,5 +2498,9 @@
   "recordPillFeatureAppealHeadline": "Registra la presa de píndoles a la pantalla d'inici",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Només cal tocar el full de píndoles a la pantalla d'inici per registrar la presa del dia. Si has registrat per error, pots desfer-ho tornant a tocar. També pots consultar l'historial de preses més tard, de manera que pots continuar sense preocupacions.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
