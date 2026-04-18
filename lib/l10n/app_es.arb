@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Toca una fecha para registrar tu estado de salud",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Anotar eventos en el calendario",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
