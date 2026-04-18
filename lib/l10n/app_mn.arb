@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Нэг товшилтоор хялбар тохиргоо",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Мэдэгдлийн мессежийг чөлөөтэй засварлах",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
