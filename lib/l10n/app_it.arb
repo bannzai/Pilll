@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Modificabile dalle impostazioni della scheda delle pillole.",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Tocca il foglio delle pillole per registrare l'assunzione",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
