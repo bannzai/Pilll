@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Taka pásu frá pillunni",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Þú getur skráð tímabil þar sem þú tekur hlé frá töku pillna í pílublaðinu. Á meðan á hléi stendur færast pillunúmerin ekki áfram, og þegar þú byrjar aftur geturðu haldið skráningu áfram strax.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
