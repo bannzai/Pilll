@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Meeldetuletuse teavitus",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Puudutage kuupäeva, et kirjutada plaan",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
