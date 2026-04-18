@@ -2682,5 +2682,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Təqvimə baxmadan tarixi bilmək olar",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Həb vərəqi ayarlarından dəyişdirilə bilər",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
