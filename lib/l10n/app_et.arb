@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "Salvesta ravimivõtt otse teavitusest",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Salvesta teavitusest, rakendust avamata",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
