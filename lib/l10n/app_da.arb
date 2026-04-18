@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "Pålidelig påmindelse på det indstillede tidspunkt",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Nem opsætning med ét tryk",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
