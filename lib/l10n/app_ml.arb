@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "ഡു നോട്ട് ഡിസ്റ്റർബ് മോഡിലും ഗുളിക കഴിക്കാൻ മറക്കാതിരിക്കൂ",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "സൈലന്റ് മോഡിലും അറിയിപ്പുകൾ ലഭിക്കും",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
