@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Kan ændres fra indstillingerne for pilleark",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Tryk på pillearket for at registrere piller",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
