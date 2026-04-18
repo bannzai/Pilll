@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Al activar las Alertas Críticas, podrás recibir notificaciones de toma de pastillas incluso en modo No Molestar o en modo silencio. Para no perderte ninguna toma importante de tu píldora, te recomendamos configurarlo.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Personalizar mensaje de notificación",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
