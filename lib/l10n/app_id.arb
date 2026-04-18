@@ -2402,5 +2402,9 @@
   "dayNumber": "Hari ke",
   "@dayNumber": {
     "description": "服用日数モードで使用される単位です。「1日目」「2日目」のように表示される際の「日目」部分に相当します。"
+  },
+  "lifetimeSubscriptionWarning": "Terima kasih telah membeli paket sekali bayar. Jika Anda berlangganan paket bulanan atau tahunan, harap batalkan langganan tersebut.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
