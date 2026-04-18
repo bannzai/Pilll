@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Iraganeko erregistroak egutegian berrikusi",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Datetan sakatu osasun egoera erregistratzeko",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
