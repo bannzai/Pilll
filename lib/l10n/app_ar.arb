@@ -2698,5 +2698,9 @@
   "recordPillFeatureAppealPoint3": "تحقق من سجل تناول الدواء في أي وقت",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "تسجيل يوم بداية الدورة الشهرية بسهولة",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
