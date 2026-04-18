@@ -2578,5 +2578,9 @@
   "quickRecordFeatureAppealHeadline": "Запис на приема с едно докосване от известието",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "При продължително натискане върху напомнянето се показва действието „Приех\", което ви позволява да записвате приема, без да отваряте приложението.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
