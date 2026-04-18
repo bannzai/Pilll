@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26以降・設定タブから有効化",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Ingyenesen használható számegyeztető funkció",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
