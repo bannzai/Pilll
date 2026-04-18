@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Ja numuri ir nobīdīti, labojiet tos iestatījumos.",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Mainīt šodienas tabletes numuru",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
