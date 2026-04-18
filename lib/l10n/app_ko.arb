@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "복용 알림 메시지를 자유롭게 편집하세요",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "기본 문구인 '피임약 복용 시간입니다'를 좋아하는 말로 바꿀 수 있습니다. 의욕을 돋우는 문구나 반려동물 이름 등, 매일 복용이 더 즐거워지도록 문구를 변경해 보세요.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
