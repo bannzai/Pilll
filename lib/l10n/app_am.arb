@@ -2630,5 +2630,9 @@
   "todayPillNumberFeatureAppealBody": "ክኒን መውሰድ ሲዘነጉ ወይም ሲቀላቀሉ የክኒን ሉህ ቁጥር ከተወሰደው ክኒን ጋር ሲለያይ፣ ዛሬ መውሰድ የሚያስፈልጉዎትን የክኒን ቁጥር በእጅ ማስተካከል ይችላሉ። ከዋናው ማያ ገጽ የክኒን ቁጥር ማሳያ ወደ ተመሳሳዩ ማያ ገጽ ሊሄዱ ይችላሉ።",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "የክኒን ዕረፍት ወቅት ይዝግቡ",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
