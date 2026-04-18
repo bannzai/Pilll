@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "Vaata kirjeid kalendris",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Märgi oma enesetunne üles ja vaata tagasi",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
