@@ -2766,5 +2766,9 @@
   "quickRecordFeatureAppealPoint3": "Достъпно веднага с Premium абонамент",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Автоматично превключване при край на листа с хапчета",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
