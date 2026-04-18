@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "Registra la toma de píldoras en la pantalla de inicio",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Solo con tocar la hoja de pastillas en la pantalla de inicio puedes registrar la toma del día. Si la registras por error, puedes cancelarla tocando de nuevo. Como también puedes revisar el historial de tomas más tarde, puedes continuar con tranquilidad.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
