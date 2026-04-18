@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Персонализирајте ја пораката за известување",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Прикажи го листот со таблети по датум",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
