@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealShortDescription": "Rheoli cynlluniau'r dyfodol fel apwyntiadau meddygol",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Cofnodi cynlluniau'r dyfodol ar y calendr",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
