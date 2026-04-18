@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Bakstelėkite datą, kad įrašytumėte savo savijautą",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Įrašykite įvykius į kalendorių",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
