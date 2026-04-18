@@ -2578,5 +2578,9 @@
   "quickRecordFeatureAppealHeadline": "জাননী স্ক্ৰীনত এক টেপত ঔষধ গ্ৰহণৰ ৰেকৰ্ড",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "ৰিমাইণ্ডাৰ জাননীটো দীঘলকৈ টিপিলে 'সেৱন কৰিলোঁ' কাৰ্য্য দেখুৱাব, আৰু আপুনি এপটো নোখোলাকৈয়ে সেৱন ৰেকৰ্ড কৰিব পাৰিব।",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
