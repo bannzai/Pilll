@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Видете со еден поглед кога да го земете",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Можете да ги прикажете датумите на листата со хапчиња.",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
