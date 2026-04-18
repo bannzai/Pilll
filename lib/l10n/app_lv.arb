@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Tīklājā klusuma režīmā paziņojumi tiks saņemti",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Ieslēdzot Critical Alert, jūs varēsiet saņemt paziņojumus par tabletes lietošanu pat tad, kad ir ieslēgts “Netraucēt” vai klusuma režīms. Lai nepalaistu garām svarīgu tabletes lietošanas laiku, lūdzu, aktivizējiet šo iestatījumu.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
