@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "यदि संख्या गड़बड़ा गई है तो सेटिंग्स में जाकर ठीक करें",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "आज लेने वाली गोली का नंबर बदल सकते हैं",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
