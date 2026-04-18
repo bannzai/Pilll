@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Staðsetning í forriti",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "集中モード中でも通知が届く",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
