@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "ເມື່ອເກີດການລືມຫຼືກິນຢາຜິດເຮັດໃຫ້ໝາຍເລກໃນແຜ່ນຢາບໍ່ກົງກັບການທີ່ທ່ານຈິງ, ທ່ານສາມາດປັບໝາຍເລກຢາທີ່ຈະທຳໃນມື້ນີ້ດ້ວຍຕົນເອງ. ທ່ານສາມາດເປີດຫນ້ານີ້ຈາກການແສດງໝາຍເລກຢາໃນຫນ້າຫຼັກໄດ້.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "ບັນທຶກຊ່ວງຢຸດກິນຢາ",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
