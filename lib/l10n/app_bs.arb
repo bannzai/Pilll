@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Ako je broj pomaknut, ispravite u postavkama",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Možete promijeniti broj pilule za danas",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
