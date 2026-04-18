@@ -2594,5 +2594,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "পরবর্তী পিল শিট স্বয়ংক্রিয়ভাবে তৈরি করুন",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "বর্তমান পিল শিট গ্রুপ শেষ হলে, একটি নতুন পিল শিট গ্রুপ স্বয়ংক্রিয়ভাবে তৈরি হয়। ম্যানুয়াল স্যুইচিং অপারেশনের প্রয়োজন নেই, এবং রেকর্ডে কোনো ফাঁক থাকবে না।",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
