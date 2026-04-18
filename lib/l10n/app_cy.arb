@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Cofnodi cymryd drwy weithred hysbysiad",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Cwblhau heb agor yr ap",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
