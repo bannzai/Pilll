@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "iOS 26 ja uuematel versioonidel saadaoleva AlarmKit-i abil teavitatakse teid pillide võtmisest häirega, mis kõlab kindlasti ka vaikse režiimi või fookusrežiimi korral.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Kohanda tänase pilli numbrit",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
