@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Provjerite povijest uzimanja u bilo kojem trenutku",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Jednostavno zabilježite datum početka menstruacije",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
