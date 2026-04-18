@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Μπορείτε να εμφανίσετε ημερομηνίες στο φύλλο χαπιών",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Εμφανίζοντας ημερομηνίες στα κελιά του φύλλου χαπιών, μπορείτε να ελέγξετε με μια ματιά το ιστορικό λήψης στο παρελθόν και το πρόγραμμα λήψης στο μέλλον. Εναλλάξτε μεταξύ της λειτουργίας «Αριθμός» και της λειτουργίας «Ημερομηνία» για να επιλέξετε την εμφάνιση που σας ταιριάζει.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
