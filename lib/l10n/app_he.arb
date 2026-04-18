@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "רשמי תוכניות לעתיד",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "ניהול תוכניות עתידיות כגון ביקורי רופא",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
