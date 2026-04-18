@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "Gestiona con precisión las pausas e interrupciones",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Pausar la toma de pastillas",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
