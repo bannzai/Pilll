@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "अगली पिल शीट को स्वचालित रूप से बनाएं",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "वर्तमान पिल शीट समूह खत्म होने पर नया पिल शीट समूह स्वचालित रूप से बन जाएगा। इससे मैन्युअल रूप से स्विच करने की आवश्यकता नहीं रहती और रिकॉर्ड छूटने की समस्या नहीं होती।",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
