@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Anota y revisa tu estado de salud",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Revisa el historial pasado en el calendario",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
