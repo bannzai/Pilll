@@ -2762,5 +2762,9 @@
   "quickRecordFeatureAppealPoint2": "Tətbiqi açmadan tamamla",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Premium abunəliklə olduğu kimi istifadə edilə bilər",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
