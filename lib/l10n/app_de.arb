@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Im Einstellungs-Tab änderbar",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Auch durch Tippen auf die Zahl auf dem Startbildschirm öffenbar",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
