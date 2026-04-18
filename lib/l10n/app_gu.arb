@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealHeadline": "માસિક ધર્મ ટ્રૅક અને આગાહી કરો",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "જ્યારે માસિક આવે ત્યારે માત્ર નોંધ કરો, અને ભૂતકાળના માસિકના ઇતિહાસની સૂચિ જોઈ શકો છો. આગામી માસિકની અપેક્ષિત તારીખ પણ આપોઆપ આગાહી કરવામાં આવે છે, તેથી તમે આયોજનપૂર્વક જીવન જીવી શકો છો。",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
