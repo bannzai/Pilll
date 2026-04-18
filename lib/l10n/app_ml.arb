@@ -2746,5 +2746,9 @@
   "quickRecordFeatureAppealPoint1": "അറിയിപ്പ് ആക്ഷൻ വഴി ഡോസ് ലോഗ്",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "ആപ്പ് തുറക്കാതെ പൂർത്തിയാക്കുക",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
