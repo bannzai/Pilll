@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealBody": "Ilgi nospiežot atgādinājuma paziņojumu, parādīsies darbība „Atzīmēt kā lietotu”, kas ļauj reģistrēt tabletes lietošanu, neatverot lietotni.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Automātiska tablešu plāksnes pievienošana",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
