@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint3": "Pārskatīt iepriekšējos ierakstus kalendārā",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Klikšķiniet uz datuma, lai ierakstītu savu pašsajūtu",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
