@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "ສ້າງແຜ່ນຢາຕໍ່ໄປໂດຍອັດຕະໂນມັດ",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "ເມື່ອກຸ່ມແຜ່ນຢາປີລປິດສິ້ນ, ລະບົບຈະສ້າງກຸ່ມແຜ່ນຢາປີລໃໝ່ໂດຍອັດຕະໂນມັດ. ທ່ານບໍ່ຕ້ອງປ່ຽນດ້ວຍມືແລະບັນທຶກຈະບໍ່ຂາດ.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
