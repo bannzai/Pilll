@@ -2658,5 +2658,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "તમારો પોતાનો સૂચના સંદેશ",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "તારીખ પ્રમાણે પિલ શીટ દર્શાવો",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
