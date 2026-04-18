@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Catat kondisi dan tinjau kembali",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Menyusuri catatan masa lalu melalui kalender",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
