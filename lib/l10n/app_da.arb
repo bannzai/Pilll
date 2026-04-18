@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "Registrer pilleindtagelse på startskærmen",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Du kan registrere din daglige pilleindtagelse ved blot at trykke på pillearket på startskærmen. Hvis du ved en fejl registrerer noget forkert, kan du fortryde det ved at trykke igen. Du kan også gennemse din indtagelseshistorik efterfølgende, så du trygt kan fortsætte.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
