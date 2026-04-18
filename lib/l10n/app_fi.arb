@@ -2514,5 +2514,9 @@
   "calendarDiaryFeatureAppealTitle": "Tallenna terveystietoja kalenteriin",
   "@calendarDiaryFeatureAppealTitle": {
     "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Kirjaa päivittäinen vointisi kalenteriin",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
   }
 }
