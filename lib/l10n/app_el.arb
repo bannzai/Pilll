@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Λήψη ειδοποιήσεων ακόμα και σε λειτουργία εστίασης",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Σίγουρη υπενθύμιση στην καθορισμένη ώρα",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
