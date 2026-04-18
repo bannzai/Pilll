@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint1": "Докоснете листа с хапчета за запис на приема",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Лесно отмяна при грешка",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
