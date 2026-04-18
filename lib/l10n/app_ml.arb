@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "സ്വമേധയായ നിർമ്മാണം ആവശ്യമില്ല",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "ക്രമീകരണ ടാബിലെ സ്വിച്ച് ഉപയോഗിച്ച് മാറ്റുക",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
