@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Ағымдағы таблетка парақшаларының тобы аяқталғаннан кейін жаңа топ автоматты түрде құрылады. Қолмен ауыстыру қажет емес, жазбалардың жіберіліп қалуы болмайды.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Будильник сияқты естілетін ескерту",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
