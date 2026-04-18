@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "Ичилген дарылар боюнча тарыхты оңой карап чыгуу",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Качан ичкениңизди дароо билсеңиз болот",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
