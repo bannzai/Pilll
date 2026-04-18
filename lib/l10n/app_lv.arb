@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealShortDescription": "Precīza paužu un pārtraukumu vadība",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Pauzēt tablešu lietošanu",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
