@@ -2742,5 +2742,9 @@
   "futureScheduleFeatureAppealLocationHint": "Дакраніцеся да даты, каб запісаць планы",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Аўтаматычная сінхранізацыя дадзеных аб цыкле",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
