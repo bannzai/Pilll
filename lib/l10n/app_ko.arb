@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "캘린더에서 지난 기록 보기",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "날짜를 탭하여 컨디션을 기록하세요",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
