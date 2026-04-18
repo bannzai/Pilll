@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint1": "Təqvimə planlar yazın",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Həkim ziyarəti günlərini asanlıqla idarə edin",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
