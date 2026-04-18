@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint2": "Fiksējiet pašsajūtu un pārskatiet",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Pārskatīt iepriekšējos ierakstus kalendārā",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
