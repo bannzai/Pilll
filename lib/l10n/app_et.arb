@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Pillilehe puudutamisega annuse salvestamine",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Lihtne tühistamine isegi vea korral",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
