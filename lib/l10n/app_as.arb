@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealShortDescription": "চাইলেণ্টতো নিশ্চিতকৈ বাজিব পৰা জাননী",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "এলাৰ্ম ঘড়ীৰ দৰে পিল সেৱনৰ এলাৰ্ম",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
