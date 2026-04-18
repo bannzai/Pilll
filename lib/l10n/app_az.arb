@@ -2810,5 +2810,9 @@
   "restDurationFeatureAppealPoint2": "Həb vərəqinin sağ yuxarı küncündəki dişli çarxdan başlayın",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Dövrün redaktəsi və bərpası da asandır",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
