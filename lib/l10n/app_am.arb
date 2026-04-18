@@ -2778,5 +2778,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "በቅንብሮቹ ትር ላይ ያለውን ቀናቂ ቀይሩ",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "በጸጥታ/ትኩረት ሞድ ላይም ይጮኻል",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
