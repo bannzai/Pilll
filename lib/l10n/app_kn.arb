@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "番号がずれたら設定で修正",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "ಇಂದು ತೆಗೆದುಕೊಳ್ಳುವ ಪಿಲ್ ಸಂಖ್ಯೆಯನ್ನು ಬದಲಾಯಿಸಬಹುದು",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
