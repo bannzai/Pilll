@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Bildiriş mətnini fərdiləşdirə bilərsiniz",
   "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Bildiriş mesajını sərbəst redaktə edin",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
   }
 }
