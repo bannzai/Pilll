@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Oma henkilökohtainen ilmoitusviesti",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Näytä pillerisivu päivämäärän mukaan",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
