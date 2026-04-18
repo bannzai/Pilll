@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Prikazom datuma u poljima tablice pilula možete na prvi pogled vidjeti povijest uzimanja i buduće planirane termine. Prebacite se između načina „Broj“ i načina „Datum“ kako biste odabrali prikaz koji vam najviše odgovara.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Jednostavno pregledajte povijest uzimanja",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
