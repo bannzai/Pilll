@@ -2650,5 +2650,9 @@
   "featureAppealLocationLabel": "Местоположение в приложението",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Известяванията пристигат дори в режим на концентрация",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
