@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "ຫາກກົດຍາວທີ່ແຈ້ງເຕືອນ ຈະມີການກະທຳ «ກິນແລ້ວ» ປາກກະທົບຂຶ້ນ ເຮັດໃຫ້ທ່ານສາມາດບັນທຶກການກິນໄດ້ໂດຍບໍ່ຕ້ອງເປີດແອັບ.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "ເພີ່ມແຜ່ນຢາໂດຍອັດຕະໂນມັດ",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
