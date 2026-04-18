@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "סנכרון אוטומטי של רישומי הווסת",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "סנכרן עם אפליקציית הבריאות",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
