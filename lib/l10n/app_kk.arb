@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Қолмен жасау қажет емес",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Параметрлер қойындысындағы қосқышпен ауыстырыңыз",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
