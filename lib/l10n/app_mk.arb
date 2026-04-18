@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealBody": "Само запишете го почетокот на менструацијата и ќе можете да ги прегледате сите претходни записи. Следниот очекуван датум на менструацијата се предвидува автоматски, па можете да планирате однапред.",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Запишете го како се чувствувате во календарот",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
