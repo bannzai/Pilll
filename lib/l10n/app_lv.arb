@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Klikšķiniet uz datuma, lai ierakstītu savu pašsajūtu",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Pievienot ierakstu kalendārā",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
