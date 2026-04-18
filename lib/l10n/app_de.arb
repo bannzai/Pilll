@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Über das Zahnrad oben rechts auf dem Pillenblatt starten",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Zeitraum bearbeiten und fortsetzen – ganz einfach",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
