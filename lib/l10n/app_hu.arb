@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Személyre szabott értesítés",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Tablettalapok megjelenítése dátum szerint",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
