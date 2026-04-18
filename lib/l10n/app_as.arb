@@ -2626,5 +2626,9 @@
   "todayPillNumberFeatureAppealHeadline": "আজি লʼবলগীয়া পিল নম্বৰ সলনি কৰিব পাৰি",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "পিল খাবলৈ পাহৰি যোৱা বা ভুল কৰাৰ বাবে পিল শ্বীটৰ নম্বৰ আৰু প্ৰকৃত সেৱনৰ মাজত পাৰ্থক্য হ'লে, আজি খাব লগা পিলৰ নম্বৰ হাতেৰে মিলাব পাৰিব। হোমৰ পিল নম্বৰ প্ৰদৰ্শনৰ পৰাও একেটা স্ক্ৰীণ খুলিব পাৰিব।",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
