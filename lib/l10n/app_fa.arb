@@ -2705,5 +2705,9 @@
   "calendarDiaryFeatureAppealPoint3": "مرور تاریخچه با تقویم",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "روی تاریخ ضربه بزنید تا وضعیت سلامتی را ثبت کنید",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
