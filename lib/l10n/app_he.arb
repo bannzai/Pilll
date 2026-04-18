@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "קבל התראות גם במצב שקט",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "מנעי שכחת גלולה גם במצב שקט",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
