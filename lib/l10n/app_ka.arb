@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "პარამეტრების მორგება",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "კალენდარში ჩანაწერების სია",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
