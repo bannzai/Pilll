@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealPoint2": "চিকিৎসালয় যোৱাৰ দিন সহজে পৰিচালনা",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "ৰিমাইণ্ডাৰেৰে জাননী",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
