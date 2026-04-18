@@ -2550,5 +2550,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "Dalinkitės menstruacijų įrašais su Sveikata",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "Helps with healthcare integration",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
