@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "Үнсіз режимде де хабарландыру алу",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Ұйықтау режимінде де дәрі қабылдауды ұмытпаңыз",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
