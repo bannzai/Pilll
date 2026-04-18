@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Osasun aplikazioarekin sinkronizatu",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Health bateragarria",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
