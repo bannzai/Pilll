@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "ჩაწერა შეტყობინების მოქმედებით",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "აპის გახსნის გარეშე დასრულება",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
