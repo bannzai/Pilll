@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Näe ühe pilguga, millal võtta",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Pillilehel saab kuupäevi kuvada",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
