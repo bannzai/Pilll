@@ -2550,5 +2550,9 @@
   "futureScheduleFeatureAppealBody": "يمكنك تدوين مواعيدك المستقبلية في التقويم، كمواعيد زيارة الطبيب والرحلات وغيرها. ويمكنك مراجعتها جنبًا إلى جنب مع دورة تناول الحبوب، مما يتيح لك وضع خطط تأخذ في الاعتبار موعد الدورة الشهرية أيضًا.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "التكامل مع الرعاية الصحية",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
