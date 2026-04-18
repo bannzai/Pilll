@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Sa zvukom u tihom/načinom fokusa",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Zvuk alarma sličan budilici",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
