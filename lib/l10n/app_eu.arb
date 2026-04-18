@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Fokus moduan ere jakinarazpenak jasotzen dira",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Ezarritako orduan gogorarazpen ziurra",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
