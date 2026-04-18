@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint1": "Запіс прыёму таблетак націскам на картку",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Лёгкае адмяненне нават пры памылцы",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
