@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Dostupné s předplatným Premium",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Automatické přepnutí po skončení arch tabletek",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
