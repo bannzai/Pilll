@@ -2704,5 +2704,9 @@
   "menstruationFeatureAppealPoint3": "Customize Settings",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "View records in calendar",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
