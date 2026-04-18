@@ -2562,5 +2562,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "يمكن التزامن مع الرعاية الصحية",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "يمكنك ربط بيانات الدورة الشهرية المسجلة في Pilll تلقائيًا مع تطبيق الصحة. يمكنك مراجعتها مع بيانات الصحة الأخرى في تطبيق الصحة، أو استخدام بيانات الدورة الشهرية في تطبيقات أخرى أيضًا.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
