@@ -2662,5 +2662,9 @@
   "criticalAlertFeatureAppealPoint3": "Лёгкая наладка ў адзін дотык",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Свабодна рэдагаваць паведамленні апавяшчэнняў",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
