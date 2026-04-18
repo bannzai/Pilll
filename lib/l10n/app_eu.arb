@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Pilula-orria sakatuz erregistratu hartzeak",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Errore bat egin arren, erraz desegin",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
