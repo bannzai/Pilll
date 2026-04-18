@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "אין צורך ביצירה ידנית",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "החלף באמצעות המתג בלשונית ההגדרות.",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
