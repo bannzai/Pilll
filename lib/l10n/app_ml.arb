@@ -2678,5 +2678,9 @@
   "recordPillFeatureAppealPoint1": "ഗുളിക ഷീറ്റ് ടാപ്പ് ചെയ്ത് കഴിക്കൽ രേഖപ്പെടുത്തുക",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "തെറ്റ് പറ്റിയാലും എളുപ്പം പഴയപടിയാക്കാം",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
