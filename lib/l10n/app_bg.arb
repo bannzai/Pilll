@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint1": "Звъни дори в тих/режим на фокус",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Звук на аларма като будилник",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
