@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint1": "বিনামূলীয়াকৈ ব্যৱহাৰযোগ্য ঔষধ বিৰতিৰ অভিলেখ",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "পিল শ্বীটৰ ওপৰ সোঁফালৰ গিয়াৰ আইকনৰ পৰা আৰম্ভ কৰক",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
