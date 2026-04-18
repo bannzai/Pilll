@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 болон түүнээс дээш · Тохиргооны табаас идэвхжүүлэх",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Үнэгүй ашиглах боломжтой дугаар тааруулах функц",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
