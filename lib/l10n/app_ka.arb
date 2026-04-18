@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "დღეს მიღებადი აბის ნომრის შეცვლა",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "თუ დაგავიწყებისა ან შეცდომით მიღების გამო პილ-ფურცელზე ნაჩვენები ნომერი რეალურ მიღებას არ ემთხვევა, შეგიძლიათ დღეს მიღების პილის ნომერი ხელით დაარეგულიროთ. იგივე ეკრანი ხელმისაწვდომია მთავარი ეკრანის პილის ნომრის ჩვენებიდანაც.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
