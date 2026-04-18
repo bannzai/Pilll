@@ -2742,5 +2742,9 @@
   "futureScheduleFeatureAppealLocationHint": "اضغط على التاريخ لكتابة موعد",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "مزامنة بيانات الدورة الشهرية تلقائياً",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
