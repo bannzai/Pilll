@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint2": "ഡോക്ടർ സന്ദർശന ദിവസങ്ങൾ എളുപ്പത്തിൽ കൈകാര്യം ചെയ്യൂ",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "റിമൈൻഡർ വഴി അറിയിപ്പ്",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
