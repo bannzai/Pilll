@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint1": "Sona fins i tot en mode silenci/concentració",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "So d'alarma similar al despertador",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
