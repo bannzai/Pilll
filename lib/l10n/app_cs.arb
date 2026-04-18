@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Oznámení zazní spolehlivě i v tichém režimu",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Alarm na užívání léků jako budík",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
