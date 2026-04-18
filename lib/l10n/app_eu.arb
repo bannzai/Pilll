@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "Eguneroko osasun-egoera egutegian erregistratu",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Egutegian data ukituz, osasun-egoera, aldartea, sintomak eta abar erregistra ditzakezu. Pastilla-erregistroarekin eta hileko-erregistroarekin batera ikus daitekeenez, zure gorputzaren erritmoa ulertzeko aukera duzu.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
