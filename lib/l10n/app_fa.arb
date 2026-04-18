@@ -2473,5 +2473,9 @@
   "recordPillFeatureAppealTitle": "مرور آسان تاریخچه مصرف",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "به سرعت بدانید چه زمانی دارو مصرف کرده‌اید",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
