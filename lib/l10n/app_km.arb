@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "កត់ត្រាការប្រើថ្នាំដោយចុចមួយនៅផ្ទាំងជូនដំណឹង",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "ចុចយូរលើសារជូនដំណឹង នឹងបង្ហាញសកម្មភាព «បានយកថ្នាំ» ហើយអ្នកអាចកត់ត្រាការយកថ្នាំដោយមិនចាំបាច់បើកកម្មវិធី។",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
