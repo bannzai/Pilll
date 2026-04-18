@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "पिल ब्रेक का निःशुल्क रिकॉर्ड",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "पिल शीट के ऊपर-दाएँ कॉग आइकन से शुरू करें",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
