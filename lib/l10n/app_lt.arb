@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Automatiškai sukurti kitą tablečių lapelį",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Kai dabartinė tablečių lapelių grupė pasibaigia, automatiškai sukuriama nauja. Nereikia rankinio perjungimo, todėl nebus praleistų įrašų.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
