@@ -2646,5 +2646,9 @@
   "restDurationFeatureAppealBody": "U kan 'n tydperk waartydens u met die inname van pille ophou, op die pilblad aanteken. Tydens die pouse vorder die inname-nommer nie, en u kan dadelik die rekord hervat wanneer u weer begin.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Plek in die app",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
