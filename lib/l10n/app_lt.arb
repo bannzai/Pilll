@@ -2658,5 +2658,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Laisvai redaguokite pranešimo tekstą",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "Taikyti kasdieniams priminimams",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
   }
 }
