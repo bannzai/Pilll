@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Όταν ολοκληρωθεί η τρέχουσα ομάδα φύλλων χαπιών, δημιουργείται αυτόματα μια νέα ομάδα. Δεν απαιτείται χειροκίνητη εναλλαγή και δεν υπάρχουν κενά στις καταγραφές σας.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Συναγερμός που χτυπά σαν ξυπνητήρι",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
