@@ -2650,5 +2650,9 @@
   "featureAppealLocationLabel": "موقع داخل التطبيق",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "تصلك الإشعارات حتى أثناء وضع التركيز",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
