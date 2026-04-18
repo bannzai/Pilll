@@ -2513,5 +2513,9 @@
   "calendarDiaryFeatureAppealHeadline": "ثبت وضعیت روزانه در تقویم",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "می‌توانید با ضربه زدن روی تاریخ در تقویم، وضعیت جسمانی، خلق‌وخو، علائم و موارد دیگر را ثبت کنید. از آنجایی که می‌توانید این اطلاعات را همراه با سوابق مصرف قرص و سوابق قاعدگی مشاهده کنید، می‌توانید ریتم بدن خود را درک کنید.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
