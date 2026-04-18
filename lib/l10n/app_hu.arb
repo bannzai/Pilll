@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Kapcsolódás az Egészség alkalmazáshoz",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Menstruációs feljegyzések megosztása az Egészség alkalmazással",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
