@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Alkalmazáson belüli hely",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Értesítések akkor is megérkeznek, ha a Fókusz mód be van kapcsolva",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
