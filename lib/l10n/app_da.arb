@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Skift via kontakten i indstillingsfanen",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Ringer selv i lydløs/fokustilstand",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
