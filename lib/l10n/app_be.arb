@@ -2482,5 +2482,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Адлюстраванне дат на таблеткавым лісце",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Адлюстроўваючы даты ў ячэйках бланка таблетак, вы можаце адным поглядам праверыць гісторыю прыёму ў мінулым і расклад прыёму ў будучыні. Пераключайцеся паміж рэжымам «Нумар» і рэжымам «Дата», каб выбраць адлюстраванне, якое вам падыходзіць.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
