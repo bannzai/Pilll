@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Automatska sinkronizacija podataka o menstruaciji",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Sinkronizacija s aplikacijom zdravlja",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
