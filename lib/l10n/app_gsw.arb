@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "S Datum kenne ohni en Kalender z'luege",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "In de Pillblatt-Iistellige änderbar",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
