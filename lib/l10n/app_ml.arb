@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealLocationHint": "ആരോഗ്യ നില രേഖപ്പെടുത്താൻ തീയതി ടാപ്പ് ചെയ്യുക",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "കലണ്ടറിൽ ഷെഡ്യൂൾ ചേർക്കുക",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
