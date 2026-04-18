@@ -2710,5 +2710,9 @@
   "menstruationFeatureAppealPoint3": "Наладзіць налады",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Спіс запісаў у календары",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
