@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "कृपया चौकशी विषय प्रविष्ट करा",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "एक-वेळ खरेदी योजना खरेदी केल्याबद्दल धन्यवाद. मासिक किंवा वार्षिक योजनेची सदस्यता असल्यास, रद्द करणे विसरू नका.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
