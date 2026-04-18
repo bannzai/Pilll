@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Промени поракa за потсетување за земање на пилула по твоја желба",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Можете да ја прилагодите стандардната порака „Време е да ја земете пилулата“ со зборови кои вам ви се допаѓаат. Променете ја во мотивирачка порака, во името на вашето домашно милениче или во која било друга фраза што ќе го направи секојдневното земање поинтересно.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
