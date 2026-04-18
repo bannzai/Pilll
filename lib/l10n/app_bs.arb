@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealTitle": "Brzi zapis uzimanja iz obavijesti",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Bilježi putem obavještenja bez otvaranja aplikacije",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
