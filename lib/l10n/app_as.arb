@@ -2742,5 +2742,9 @@
   "futureScheduleFeatureAppealLocationHint": "তাৰিখত টেপ কৰি পৰিকল্পনা লিখক",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "মাহেকীয়া তথ্য স্বয়ংক্ৰিয়ভাৱে ডেটা সংযোগ কৰক",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
