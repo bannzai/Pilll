@@ -2656,5 +2656,9 @@
   "criticalAlertFeatureAppealPoint3": "Easy one-tap setup",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Customize notification messages",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
