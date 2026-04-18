@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint1": "বিজ্ঞপ্তির অ্যাকশনে সেবন রেকর্ড",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "অ্যাপ না খুলে সম্পন্ন",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
