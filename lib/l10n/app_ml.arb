@@ -2770,5 +2770,9 @@
   "alarmKitFeatureAppealPoint1": "സൈലന്റ്/ഫോക്കസ് മോഡിലും ശബ്ദിക്കും",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "ഉണർത്തൽ ഘടികാരം പോലെയുള്ള അലാറം ശബ്ദം",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
