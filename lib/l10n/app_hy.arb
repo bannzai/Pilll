@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "Զարթուցիչի նման զանգող ահազանգ",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Լռության ռեժիմում նույնպես վստահաբար հնչող ծանուցումներ",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
