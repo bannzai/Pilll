@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Kend datoen uden at kigge i kalenderen",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Kan ændres fra indstillingerne for pilleark",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
