@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Чимээгүй горимд ч заавал дуугарах мэдэгдэл",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Сэрүүлэгтэй адил эм уух дохио",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
