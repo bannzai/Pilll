@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Огноог дарж биеийн байдлаа бүртгэнэ үү",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Календарт хуваарь бичих",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
