@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "Primajte obavijesti čak i u tihom načinu rada",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Ne propustite dozu ni u načinu 'Ne ometaj'.",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
