@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 이상 · 설정 탭에서 활성화",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "무료로 이용 가능한 번호 맞춤 기능",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
