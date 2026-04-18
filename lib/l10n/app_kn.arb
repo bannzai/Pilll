@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "ಪಿಲ್ ಶೀಟ್ ಮುಗಿದಾಗ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಬದಲಾಯಿಸಿ",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "ಹಸ್ತಚಾಲಿತವಾಗಿ ರಚಿಸುವ ಅಗತ್ಯವಿಲ್ಲ",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
