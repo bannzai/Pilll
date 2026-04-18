@@ -2486,5 +2486,9 @@
   "appearanceModeDateFeatureAppealBody": "Prikazivanjem datuma u ćelijama lista tableta možete jednim pogledom provjeriti historiju uzimanja u prošlosti i buduće planove uzimanja. Prebacujte između načina „Broj\" i „Datum\" i odaberite prikaz koji vam odgovara.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Lako pregledajte historiju uzimanja",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
