@@ -2658,5 +2658,9 @@
   "criticalAlertFeatureAppealPoint2": "নির্ধারিত সময়ে নিশ্চিতভাবে রিমাইন্ড",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "এক ট্যাপে সহজ সেটআপ",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
