@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Hasierako pantailako zenbakia ukituta ere ireki daiteke",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Doan erabiltzeko pilula-eten erregistroa",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
