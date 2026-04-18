@@ -2729,5 +2729,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "همگام‌سازی خودکار داده‌های قاعدگی",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "همگام‌سازی با برنامه سلامت",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
