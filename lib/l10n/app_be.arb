@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealShortDescription": "Запіс даты пачатку менструацыі і адсочванне цыкла",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Можна запісваць і прагназаваць менструацыю",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
