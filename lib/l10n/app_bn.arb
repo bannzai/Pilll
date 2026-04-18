@@ -2774,5 +2774,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "ম্যানুয়ালি তৈরি করার প্রয়োজন নেই",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "সেটিংস ট্যাবের সুইচ দিয়ে পরিবর্তন করুন",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
