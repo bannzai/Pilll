@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Gellir arddangos dyddiadau ar y daflen bilsen",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Drwy arddangos dyddiadau yng nghelloedd y dalen bilsen, gallwch wirio eich hanes cymryd meddyginiaeth yn y gorffennol a'ch amserlen cymryd meddyginiaeth yn y dyfodol ar yr olwg gyntaf. Newidiwch rhwng modd 「Rhif」 a modd 「Dyddiad」 i ddewis yr arddangosiad sy'n addas i chi.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
