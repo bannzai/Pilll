@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Оятқыш сияқты қабылдау ескертуі",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 және одан кейінгі нұсқаларда қолжетімді AlarmKit қолданылып, үнсіз режимде немесе шоғырлану режимінде болса да дыбыс шығаратын ескерту арқылы таблетка қабылдау уақытын дәл ескертіп отырады.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
