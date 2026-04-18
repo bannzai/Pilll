@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint1": "Gratis pil-pouse rekords",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Begin by die rataansig regs bo op die pilblad",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
