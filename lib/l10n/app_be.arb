@@ -2694,5 +2694,9 @@
   "recordPillFeatureAppealPoint2": "Лёгкае адмяненне нават пры памылцы",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Праверайце гісторыю прыёму ў любы час",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
