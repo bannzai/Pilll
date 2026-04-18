@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Érints egy dátumot az állapotod rögzítéséhez",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Esemény hozzáadása a naptárhoz",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
