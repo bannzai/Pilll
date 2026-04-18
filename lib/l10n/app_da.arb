@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Opret automatisk det næste pilleark",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Når den nuværende pillearkgruppe slutter, oprettes en ny pillearkgruppe automatisk. Manuel omskiftning er ikke nødvendig, og der opstår ingen huller i registreringerne.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
