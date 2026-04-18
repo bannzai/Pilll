@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "ಘಂಟೆಯಂತೆ ಎಚ್ಚರಿಸುವ ಅಲಾರ್ಮ್",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "ಸೈಲೆಂಟ್ ಮೋಡ್‌ನಲ್ಲಿದ್ದರೂ ಸಹ ಖಚಿತವಾಗಿ ಕೇಳಿಸಿಕೊಳ್ಳುವ ಸೂಚನೆ",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
