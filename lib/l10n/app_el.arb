@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Τοποθεσία εντός εφαρμογής",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Λήψη ειδοποιήσεων ακόμα και σε λειτουργία εστίασης",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
