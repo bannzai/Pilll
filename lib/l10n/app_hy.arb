@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Ամսաթիվը պարզ է՝ առանց օրացույցին նայելու",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Պետք է փոխվի Pill-շիթ կարգավորումներից",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
