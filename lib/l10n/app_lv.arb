@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealShortDescription": "Ierakstīt paziņojumā, neatverot lietotni",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Vienu pieskārienu reģistrēšana paziņojumu ekrānā",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
