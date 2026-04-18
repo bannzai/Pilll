@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealHeadline": "{\n  \"@@locale\": \"lv\",\n  \"alarmKitHeadline\": \"Tablešu lietošanas atgādinājums modinātāja stilā\",\n  \"@alarmKitHeadline\": {\n    \"description\": \"AlarmKit機能のヘルプページのヘッドライン\",\n    \"type\": \"text\"\n  }\n}",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26以降で利用できるAlarmKitを使って、サイレントモードや集中モードでも確実に鳴るアラームでピルの服用を知らせます。",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
