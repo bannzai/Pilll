@@ -2648,5 +2648,9 @@
   "criticalAlertFeatureAppealPoint1": "Receive notifications even in Focus mode",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Reliable reminders at your scheduled time",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
