@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealPoint2": "إدارة مواعيد زيارة الطبيب بسهولة",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "إشعار بالتذكير",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
