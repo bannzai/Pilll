@@ -2454,5 +2454,9 @@
   "criticalAlertFeatureAppealBody": "عند تفعيل التنبيهات الحرجة (Critical Alert)، ستتلقى إشعارات تناول الدواء حتى في وضع عدم الإزعاج أو الوضع الصامت. لا تفوّت مواعيد تناول حبوبك المهمة، لذا ننصحك بتفعيل هذه الميزة.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "تخصيص رسالة الإشعار",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
