@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "មុខងារ​ផ្គូផ្គង​លេខ​ដែល​អាច​ប្រើ​បាន​ដោយ​ឥតគិត​ថ្លៃ",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "អាចផ្លាស់ប្តូរបានពីផ្ទាំងការកំណត់",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
