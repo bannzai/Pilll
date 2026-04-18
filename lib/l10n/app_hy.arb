@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "Գրանցել ընդունումը անմիջապես ծանուցումից",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Ծանուցումից գրանցում՝ առանց հավելվածը բացելու",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
