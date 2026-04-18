@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "무료로 이용 가능한 번호 맞춤 기능",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "설정 탭에서 변경할 수 있습니다",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
