@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint1": "تسجيل يوم بداية الدورة الشهرية بسهولة",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "تتبع الدورة تلقائيًا",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
