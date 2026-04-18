@@ -2738,5 +2738,9 @@
   "futureScheduleFeatureAppealPoint3": "إشعار بالتذكير",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "اضغط على التاريخ لكتابة موعد",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
