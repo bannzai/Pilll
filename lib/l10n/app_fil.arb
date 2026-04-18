@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Maaari kang magsulat ng mga planong panghinaharap sa kalendaryo, tulad ng mga appointment sa doktor o mga plano sa paglalakbay. Dahil maaari mo itong tingnan kasama ang iyong cycle ng pag-inom ng pill, maaari kang gumawa ng mga plano na isinasaalang-alang din ang iyong inaasahang regla.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Mag-link sa HealthCare",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
