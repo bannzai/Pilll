@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "ចុចថតពីលើផ្ទាំងថ្នាំដើម្បីកត់ត្រាការទទួល",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "បើធ្វើខុស អាចបោះបង់វិញបានយ៉ាងងាយ",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
