@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Әдепкі «Таблетка ішу уақыты» деген ескертуді өзіңізге ұнайтын сөзге теңшей аласыз. Жігерлендіретін сөздерден немесе үй жануарыңыздың атына дейін — күнделікті қабылдауды анағұрлым жағымды әрі қызықты ететін мәтінге өзгертіп көріңіз.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Пилл парағында күнді көрсету",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
