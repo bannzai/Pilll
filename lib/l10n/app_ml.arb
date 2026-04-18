@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "എപ്പോൾ കഴിക്കണമെന്ന് ഒറ്റനോട്ടത്തിൽ അറിയാം",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "പിൽ ഷീറ്റിൽ തീയതി പ്രദർശിപ്പിക്കാം",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
