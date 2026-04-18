@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Saderīgs ar Apple Health",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Reģistrēt lietošanu, izmantojot paziņojuma darbību",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
