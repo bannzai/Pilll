@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Slobodno uredite poruku obavijesti",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "Primijeni na dnevne obavijesti o uzimanju",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
   }
 }
