@@ -2545,7 +2545,6 @@
   },
   "calendarDiaryFeatureAppealLocationHint": "Tap a date to log how you feel",
   "futureScheduleFeatureAppealLocationHint": "Tap a date to add a plan",
-
   "quickRecordFeatureAppealTitle": "Record from the notification",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
@@ -2562,7 +2561,6 @@
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
   },
-
   "creatingNewPillSheetFeatureAppealTitle": "Automatically add a new pill sheet",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
@@ -2579,7 +2577,6 @@
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
   },
-
   "alarmKitFeatureAppealTitle": "Wake-up style medication alarm",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
@@ -2596,7 +2593,6 @@
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
   },
-
   "todayPillNumberFeatureAppealTitle": "Align today's pill number",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
@@ -2613,7 +2609,6 @@
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
   },
-
   "restDurationFeatureAppealTitle": "Log a pause in your medication",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
@@ -2629,5 +2624,9 @@
   "restDurationFeatureAppealBody": "Record a pause in your medication. The pill number stops advancing while you're on break and resumes the moment you restart.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "lifetimeSubscriptionWarning": "Thank you for your purchase of the lifetime plan. If you are subscribed to a monthly or annual plan, please don't forget to cancel it.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
