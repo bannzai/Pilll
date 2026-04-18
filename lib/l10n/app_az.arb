@@ -2662,5 +2662,9 @@
   "criticalAlertFeatureAppealPoint3": "Bir toxunuşla asan quraşdırma",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Bildiriş mesajını azad şəkildə redaktə et",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
