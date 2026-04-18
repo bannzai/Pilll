@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint2": "Pabeigt bez lietotnes atvēršanas",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Pieejams uzreiz ar Premium abonementu",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
