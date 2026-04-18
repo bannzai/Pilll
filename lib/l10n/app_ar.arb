@@ -2790,5 +2790,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 وما بعده · التفعيل من تبويب الإعدادات",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "ميزة مطابقة الأرقام المتاحة مجاناً",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
