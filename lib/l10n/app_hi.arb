@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "今日の服用番号を合わせる",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "यदि संख्या गड़बड़ा गई है तो सेटिंग्स में जाकर ठीक करें",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
