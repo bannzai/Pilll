@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "通知のアクションで服用記録",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Ավարտել առանց հավելվածը բացելու",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
