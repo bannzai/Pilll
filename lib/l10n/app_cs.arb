@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Klepnutím na arch pilulek zaznamenejte užití",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Snadné zrušení i při chybě",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
