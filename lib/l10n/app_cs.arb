@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "Zaznamenávejte svůj každodenní zdravotní stav do kalendáře",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Klepnutím na datum v kalendáři můžete zaznamenat svůj zdravotní stav, náladu, příznaky a další. Protože si je můžete prohlédnout společně se záznamy o užívání léků a záznamy o menstruaci, dokážete pochopit rytmus svého těla.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
