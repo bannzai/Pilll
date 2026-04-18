@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint1": "Pulsuz istifadə edilə bilən nömrə uyğunlaşdırma funksiyası",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Parametrlər nişanından dəyişdirilə bilər",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
