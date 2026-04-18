@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "Tulevaste plaanide märkimine kalendrisse",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Saate kalendrisse märkida tulevasi plaane, nagu arstituvastused ja reisiplaanid. Kuna saate neid koos pillide tarvitamise tsükliga vaadata, saate koostada plaane, mis arvestavad ka menstruatsiooni ajakava.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
