@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint1": "Безплатна регистрация на почивки от хапчета",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Започнете от иконата с зъбно колело в горния десен ъгъл на листа с хапчета",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
