@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Мэдэгдлийн үйлдлээр эм уусан бүртгэх",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Апп нээлгүйгээр дуусгах",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
