@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Alihkan dengan sakelar di tab Pengaturan",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Berbunyi bahkan dalam mode diam/fokus",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
