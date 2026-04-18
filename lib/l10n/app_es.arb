@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Comience desde el ícono de engranaje en la parte superior derecha de la hoja de píldoras",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Editar y reanudar el período también es sencillo",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
