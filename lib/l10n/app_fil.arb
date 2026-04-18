@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "I-record sa notification nang hindi binubuksan ang app",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Isang tapik lang para sa rekord ng paginom sa screen ng notipikasyon",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
