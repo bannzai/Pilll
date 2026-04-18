@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Hilekoen erregistroen datu-sinkronizazio automatikoa",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Osasun aplikazioarekin sinkronizatu",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
