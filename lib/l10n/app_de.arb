@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Deine eigene Benachrichtigungsnachricht",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Pillenblatt nach Datum anzeigen",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
