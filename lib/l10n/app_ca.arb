@@ -2810,5 +2810,9 @@
   "restDurationFeatureAppealPoint2": "Comença des de l'engranatge a la cantonada superior dreta del full de píndoles",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Editar i reprendre el període també és fàcil",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
