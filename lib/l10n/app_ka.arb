@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "პერიოდის ჩანაწერების ავტომატური სინქრონიზაცია",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ჯანმრთელობის აპლიკაციასთან სინქრონიზაცია",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
