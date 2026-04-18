@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Емханаға бару сияқты дәрігерге бару жоспарлары немесе саяхат сияқты болашақтағы жоспарларды күнтізбеге енгізе аласыз. Оларды таблетка қабылдау циклымен бірге қарап шыға аласыз, сондықтан етеккірдің жоспарларын ескере отырып жоспар құра аласыз.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Денсаулықпен синхрондау",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
