@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Անցյալ գրառումները դիտել օրացույցում",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Սեղմեք ամսաթվին՝ ձեր ինքնազգացողությունը գրանցելու համար",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
