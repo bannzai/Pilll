@@ -2550,5 +2550,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "HealthCare સાથે સંકલન કરી શકો છો",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilllમાં રેકોર્ડ કરેલ માસિક સ્રાવ ડેટાને હેલ્થ એપ સાથે આપોઆપ સિંક કરી શકાય છે. હેલ્થ એપ પરના અન્ય સ્વાસ્થ્ય ડેટા સાથે તેને જોઈ શકો છો, તેમ જ અન્ય એપ્સમાં પણ માસિક સ્રાવ ડેટાનો ઉપયોગ કરી શકાશે.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
