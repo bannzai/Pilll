@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealBody": "iOS 26-ഉം അതിനു ശേഷവും ലഭ്യമായ AlarmKit ഉപയോഗിച്ച്, സൈലന്റ് മോഡിലും ഫോക്കസ് മോഡിലും ആണെങ്കിലും ഉറപ്പായും ശബ്ദിക്കുന്ന അലാറം വഴി ഗുളിക കഴിക്കാൻ ഓർമ്മിപ്പിക്കുന്നു.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "ഇന്നത്തെ ഡോസ് നമ്പർ ക്രമീകരിക്കുക",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
