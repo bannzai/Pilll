@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "បន្ថែមសន្លឹកថ្នាំដោយស្វ័យប្រវត្តិ",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "បង្កើតសន្លឹកបន្ទាប់ដោយស្វ័យប្រវត្តិ",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
