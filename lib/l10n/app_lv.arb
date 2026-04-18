@@ -2718,5 +2718,9 @@
   "futureScheduleFeatureAppealPoint1": "Pievienot ierakstu kalendārā",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Vienkārši pārvaldiet ārsta apmeklējumu datumus",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
