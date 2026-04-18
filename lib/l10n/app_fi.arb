@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Kirjaa lääkkeenotto ilmoituksesta",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Valmis avaamatta sovellusta",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
