@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "ჩაწერე შენი მდგომარეობა და გადახედე",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "ყვედახედეთ წარსულ ჩანაწერებს კალენდარში",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
