@@ -2810,5 +2810,9 @@
   "restDurationFeatureAppealPoint2": "ከፒል ሰሌዳው ላይኛ ቀኝ ጥግ ካለው ማርሽ ጀምር",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "ጊዜን ማርትዕ እና ዳግም መጀመርም ቀላል ነው",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
