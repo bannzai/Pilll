@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint1": "ነፃ የኪኒን ዕረፍት ምዝገባ",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "ከፒል ሰሌዳው ላይኛ ቀኝ ጥግ ካለው ማርሽ ጀምር",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
