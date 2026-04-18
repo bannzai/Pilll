@@ -2774,5 +2774,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "لا حاجة لعمليات الإنشاء اليدوي",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "التبديل باستخدام المفتاح في علامة تبويب الإعدادات",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
