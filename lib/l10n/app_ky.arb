@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Бир тийүү менен оңой орнотуу",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "通知メッセージを自由に編集",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
