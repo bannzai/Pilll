@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "Ακριβής διαχείριση διαλειμμάτων & διακοπών",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Παύση λήψης χαπιού",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
