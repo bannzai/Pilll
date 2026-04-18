@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Дарыны кабыл алуу тарыхын каалаган убакта текшере аласыз",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Айдын башталган күнүн оңой жазып алыңыз",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
