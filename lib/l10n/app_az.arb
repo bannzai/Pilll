@@ -2650,5 +2650,9 @@
   "featureAppealLocationLabel": "Tətbiq daxilindəki yer",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Fokus rejimində belə bildirişlər gəlir",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
