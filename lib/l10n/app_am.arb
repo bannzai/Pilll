@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "የወር አበባ መዝገቦችን ከጤና አጠባበቅ ጋር ያጋሩ",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "ከጤና አጠባበቅ ጋር ማስተሳሰር ይቻላል",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
