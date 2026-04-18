@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Калі нумар збіўся, выправіце ў наладах",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Можна змяніць нумар таблеткі на сёння",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
