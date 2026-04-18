@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Obavijesti putem podsjetnika",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Dodirnite datum za unos plana",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
