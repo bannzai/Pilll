@@ -2430,5 +2430,9 @@
   "recommendSignupGeneralDescription": "Regisztráció után biztonsági mentést készíthet az adatairól",
   "@recommendSignupGeneralDescription": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "Értesítések fogadása néma módban is",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
   }
 }
