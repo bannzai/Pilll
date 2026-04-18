@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealPoint2": "دوّن حالتك الصحية وراجعها",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "مراجعة السجلات السابقة عبر التقويم",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
