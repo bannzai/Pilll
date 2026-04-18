@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealHeadline": "നോട്ടിഫിക്കേഷൻ സ്ക്രീനിൽ ഒറ്റ ടാപ്പിൽ ഗുളിക കഴിച്ചത് രേഖപ്പെടുത്തുക",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "റിമൈൻഡർ അറിയിപ്പ് ദീർഘനേരം അമർത്തിപ്പിടിക്കുമ്പോൾ \"കഴിച്ചു\" എന്ന ഓപ്ഷൻ കാണിക്കും, ആപ്പ് തുറക്കാതെ തന്നെ ഗുളിക കഴിച്ചത് രേഖപ്പെടുത്താം.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
