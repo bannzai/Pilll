@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಹೊಂದಿಸಿ",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ದಾಖಲೆಯನ್ನು ಪಟ್ಟಿ ಮಾಡಿ",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
