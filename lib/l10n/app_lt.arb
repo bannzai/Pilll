@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "Užfiksuoti vartojimo pertrauką",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Tikslus vartojimo pertraukų ir nutraukimų valdymas",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
