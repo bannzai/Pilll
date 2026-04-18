@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "服用履歴を簡単に振り返り",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Արագ կարելի է տեսնել, երբ եք ընդունել",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
