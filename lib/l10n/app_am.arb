@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "መቼ እንደሚወሰድ በአንድ እይታ ያረጋግጡ",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "በፒል ሺት ላይ ቀን ማሳየት ይቻላል",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
