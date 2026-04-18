@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "Zukünftige Termine im Kalender aufzeichnen",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Sie können zukünftige Termine wie Arztbesuche oder Reisepläne im Kalender eintragen. Da Sie diese zusammen mit Ihrem Pillen-Einnahmezyklus einsehen können, lässt sich die Planung auch unter Berücksichtigung Ihrer Periodenvorhersage gestalten.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
