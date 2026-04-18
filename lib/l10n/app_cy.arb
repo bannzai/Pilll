@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "Addasu rhif dos heddiw",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Cywirwch yn y gosodiadau os yw'r rhif yn anghywir",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
