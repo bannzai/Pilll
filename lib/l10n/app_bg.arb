@@ -2790,5 +2790,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 и по-нови версии • Активирайте от раздел Настройки",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Функция за настройка на номера, безплатна за използване",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
