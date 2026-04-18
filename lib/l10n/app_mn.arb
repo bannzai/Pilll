@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Биеийн байдлаа тэмдэглэж эргэн харах",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Өнгөрсөн бичлэгийг календарт харах",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
