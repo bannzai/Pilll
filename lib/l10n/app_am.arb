@@ -2498,5 +2498,9 @@
   "recordPillFeatureAppealHeadline": "በዋናው ማያ ገጽ ላይ ክኒን መዋጥን ይዝግቡ",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "በዋናው ማያ ገጽ ላይ ያለውን የክኒን ሉህ ብቻ ሲነኩ፣ ለዚያ ቀን የወሰዱትን ክኒን መዝግቦ ማስቀመጥ ይቻላል። በስህተት ከዘገቡ፣ ዳግም ሲነኩ ሊሰርዙ ይችላሉ። የወሰዱዋቸው ታሪክ ከዚህ ቀጥሎ ሊፈትሹ ስለሚቻል፣ ያለምንም ሥጋት ሊቀጥሉ ይችላሉ።",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
