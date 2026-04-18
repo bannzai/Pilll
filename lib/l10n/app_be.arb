@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint1": "Запіс планаў у каляндар",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Лёгкае кіраванне датамі наведвання лекара",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
