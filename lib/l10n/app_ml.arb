@@ -2406,5 +2406,9 @@
   "lifetimeSubscriptionWarning": "ഒറ്റത്തവണ പ്ലാൻ വാങ്ങിയതിന് നന്ദി. മാസ/വാർഷിക പ്ലാനിൽ അംഗത്വമുള്ളവർ, ദയവായി അത് റദ്ദാക്കാൻ മറക്കരുത്.",
   "@lifetimeSubscriptionWarning": {
     "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "・「ഒറ്റത്തവണ പ്ലാൻ」 വാങ്ങിയാലും 「മാസ/വാർഷിക പ്ലാൻ」 ഓട്ടോമാറ്റിക്കായി റദ്ദ് ചെയ്യപ്പെടില്ല.",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
   }
 }
