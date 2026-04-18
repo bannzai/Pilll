@@ -2610,5 +2610,9 @@
   "alarmKitFeatureAppealHeadline": "অ্যালার্ম ঘড়ির মতো ওষুধ সেবনের অ্যালার্ম",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 বা তার পরবর্তী সংস্করণে উপলব্ধ AlarmKit ব্যবহার করে, সাইলেন্ট মোড বা ফোকাস মোডেও নিশ্চিতভাবে বেজে ওঠা অ্যালার্মের মাধ্যমে পিল সেবনের কথা মনে করিয়ে দেয়।",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
