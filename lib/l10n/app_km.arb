@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "ប្ដូរដោយស្វ័យប្រវត្តិពេលសន្លឹកថ្នាំបញ្ចប់",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "មិនចាំបាច់បង្កើតដោយដៃ",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
