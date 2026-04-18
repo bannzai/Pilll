@@ -2790,5 +2790,9 @@
   "restDurationFeatureAppealPoint2": "પિલ શીટના ઉપર જમણી બાજુના ગિયર આઇકનથી શરૂ કરો",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "સમયગાળો સંપાદિત કરવો અને ફરી શરૂ કરવો પણ સરળ",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
