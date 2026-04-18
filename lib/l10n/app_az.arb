@@ -2470,5 +2470,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Standart \"Həb içmə vaxtıdır\" mesajını sevdiyiniz sözlərə uyğunlaşdıra bilərsiniz. Hər gün həb qəbulunu daha əyləncəli etmək üçün motivasiya verici ifadələr, ev heyvanınızın adı və ya istədiyiniz hər hansı bir söz seçin.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Həb vərəqəsində tarixi göstər",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
