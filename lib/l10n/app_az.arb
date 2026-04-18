@@ -2706,5 +2706,9 @@
   "menstruationFeatureAppealPoint2": "Dövrü avtomatik müəyyən edin",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Parametrləri fərdiləşdir",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
