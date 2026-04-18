@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "Přizpůsobit nastavení",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Přehled záznamů v kalendáři",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
