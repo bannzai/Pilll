@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "क्लिनिक जाने के दिनों का प्रबंधन आसान बनाएं",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "रिमाइंडर द्वारा सूचित करें",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
