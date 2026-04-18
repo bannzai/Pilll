@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "홈 화면의 숫자를 탭해도 열 수 있습니다.",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "무료로 이용 가능한 휴약 기록",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
