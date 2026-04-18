@@ -2769,5 +2769,9 @@
   "alarmKitFeatureAppealPoint2": "صدای زنگ هشدار مشابه ساعت بیداری",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 به بالا・فعال‌سازی از تب تنظیمات",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
