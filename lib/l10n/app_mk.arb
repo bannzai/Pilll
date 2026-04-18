@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Лесно поставување со еден допир",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Слободно уредувајте ги пораките за известување",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
