@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Quando prendere la pillola a colpo d'occhio",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Mostra la data sul foglio delle pillole",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
