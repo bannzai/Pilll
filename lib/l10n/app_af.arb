@@ -2650,5 +2650,9 @@
   "featureAppealLocationLabel": "Plek in die app",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Kennisgewings word ontvang selfs tydens Fokus-modus",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
