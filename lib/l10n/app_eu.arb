@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Noiz hartu begirada batean",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Pilula-orrian datak bistaratu daitezke",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
