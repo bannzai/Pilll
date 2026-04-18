@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "រំញឹកអ្នកយ៉ាងប្រាកដនៅពេលកំណត់",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "កំណត់បានយ៉ាងងាយស្រួលដោយចុចមួយ",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
