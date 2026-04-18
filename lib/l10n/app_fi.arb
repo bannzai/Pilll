@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Ilmoitukset saapuvat myös äänettömässä tilassa",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Kun otat Critical Alertin käyttöön, voit vastaanottaa pillereiden ottamisilmoituksia myös Älä häiritse -tilan tai äänettömän tilan aikana. Jotta et missaa tärkeitä pillereiden ottoaikoja, suosittelemme ottamaan tämän ominaisuuden käyttöön.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
