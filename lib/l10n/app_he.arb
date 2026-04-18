@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "תיעוד מההתראה ללא פתיחת האפליקציה",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "תיעוד נטילה בהקשה אחת ממסך ההתראות",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
