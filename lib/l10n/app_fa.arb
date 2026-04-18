@@ -2397,5 +2397,9 @@
   "lifetimeSubscriptionWarning": "از خرید پلن یکبار پرداخت شما متشکریم. اگر مشترک پلن ماهانه یا سالانه هستید، لطفاً فراموش نکنید که اشتراک خود را لغو کنید.",
   "@lifetimeSubscriptionWarning": {
     "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "・حتی در صورت خرید «پلن خرید یکجا»، «پلن ماهانه/سالانه» به طور خودکار لغو نمی‌شود.",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
   }
 }
