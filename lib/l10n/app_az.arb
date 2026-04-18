@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealShortDescription": "Tətbiqi açmadan bildiriş üzərindən qeyd edin",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Bildiriş ekranında bir toxunuşla dərman qeydi",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
