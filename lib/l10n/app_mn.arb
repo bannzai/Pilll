@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Нүүр дэлгэцийн тоог товшиж нээж болно",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Үнэгүй ашиглах боломжтой завсарлагааны бүртгэл",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
