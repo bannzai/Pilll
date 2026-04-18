@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Når den nuværende pillearkgruppe slutter, oprettes en ny pillearkgruppe automatisk. Manuel omskiftning er ikke nødvendig, og der opstår ingen huller i registreringerne.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Alarm, der ringer som en vækkeur",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
