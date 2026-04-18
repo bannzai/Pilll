@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Etorkizuneko hitzorduak, hala nola medikuarengana joateko bisitaldiak eta bidaia-planak, egutegian idatz ditzakezu. Pilula hartzeko zikloarekin batera ikusi daitezkeenez, hilekoen egutegia ere kontuan hartuta planak egin ditzakezu.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Osasunarekin sinkronizatu",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
