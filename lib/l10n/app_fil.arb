@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "Alarma na Tumutunog Tulad ng Alarm Clock",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Mga notification na tumutunog kahit naka-silent",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
