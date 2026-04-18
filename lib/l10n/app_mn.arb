@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Эм хуудасны баруун дээд буланд байгаа шүдэт дугуйгаас эхлэх",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Хугацааг засах, дахин эхлүүлэх нь ч хялбар",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
