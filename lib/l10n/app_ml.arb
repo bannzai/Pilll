@@ -2666,5 +2666,9 @@
   "appearanceModeDateFeatureAppealPoint1": "തീയതി അനുസരിച്ച് പിൽ ഷീറ്റ് പ്രദർശിപ്പിക്കുക",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "കലണ്ടർ നോക്കാതെ തന്നെ തീയതി അറിയാം",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
