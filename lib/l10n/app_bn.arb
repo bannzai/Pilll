@@ -2534,5 +2534,9 @@
   "calendarDiaryFeatureAppealBody": "ক্যালেন্ডার থেকে তারিখে ট্যাপ করে শারীরিক অবস্থা, মেজাজ, উপসর্গ ইত্যাদি রেকর্ড করতে পারবেন। ওষুধ সেবনের রেকর্ড এবং মাসিকের রেকর্ডের সাথে একসাথে দেখা যায়, তাই নিজের শরীরের ছন্দ বুঝতে পারবেন।",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "ভবিষ্যতের পরিকল্পনা লিখে রাখুন",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
