@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "תכונת התאמת מספרים חינמית",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "ניתן לשנות מהכרטיסייה 'הגדרות'",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
