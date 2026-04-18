@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Календардан күндү түртүү менен ден-соолугуңузду, маанайыңызды, симптомдорду жана башка маалыматтарды жазып калтыра аласыз. Бул жазууларды таблетка кабыл алуу жазуулары жана менструация жазуулары менен бирге көрө алып, денеңиздин ритмин жакшыраак түшүнөсүз.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Келерки пландарды жазып коюңуз",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
