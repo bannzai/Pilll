@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint2": "Atgādinās precīzi iestatītajā laikā",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Viegla iestatīšana ar vienu pieskārienu",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
