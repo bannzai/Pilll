@@ -2410,5 +2410,9 @@
   "lifetimePurchaseNotice1": "・Az egyszeri megvásárlásos csomag megvásárlása esetén a havi vagy éves előfizetés nem kerül automatikusan lemondásra.",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "Előfizetés kezelése",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
