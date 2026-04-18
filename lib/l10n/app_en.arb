@@ -2724,5 +2724,9 @@
   "futureScheduleFeatureAppealPoint2": "Easily manage your clinic visit schedule",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Notify with reminder",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
