@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 ir naujesnėse versijose – įjungti Nustatymų skirtuke",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Nemokama funkcija \"Suderinimo numeris\"",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
