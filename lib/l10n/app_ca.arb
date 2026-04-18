@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealTitle": "Escriu les teves properes cites",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Gestiona els plans futurs, com ara cites mèdiques",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
