@@ -2610,5 +2610,9 @@
   "alarmKitFeatureAppealHeadline": "Inneem-alarm soos 'n wekker",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "Gebruik AlarmKit, beskikbaar vanaf iOS 26 en later, om jou met 'n alarm wat selfs in Stil-modus of Fokus-modus sal lui, te herinner om jou pil in te neem.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
