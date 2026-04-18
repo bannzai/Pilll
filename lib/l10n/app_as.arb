@@ -2738,5 +2738,9 @@
   "futureScheduleFeatureAppealPoint3": "ৰিমাইণ্ডাৰেৰে জাননী",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "তাৰিখত টেপ কৰি পৰিকল্পনা লিখক",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
