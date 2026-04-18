@@ -2509,5 +2509,9 @@
   "calendarDiaryFeatureAppealShortDescription": "حال روزانه‌ات را در تقویم ثبت کن",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "ثبت وضعیت روزانه در تقویم",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
