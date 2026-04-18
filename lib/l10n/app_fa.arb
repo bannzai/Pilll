@@ -2785,5 +2785,9 @@
   "todayPillNumberFeatureAppealPoint3": "با ضربه زدن روی عدد در صفحه اصلی هم باز می‌شود",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "ثبت دوره استراحت دارو (رایگان)",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
