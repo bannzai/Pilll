@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "Wenn die Nummer auf dem Pillenblatt aufgrund einer vergessenen oder falsch eingenommenen Pille nicht mehr mit der tatsächlichen Einnahme übereinstimmt, können Sie die heutige Pillennummer manuell korrigieren. Denselben Bildschirm können Sie auch über die Pillenanzeige auf dem Startbildschirm öffnen.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Einnahmepause erfassen",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
