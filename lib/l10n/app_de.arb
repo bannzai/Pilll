@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Auf einen Blick sehen, wann Sie einnehmen sollen",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Datum auf dem Pillenblatt anzeigen",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
