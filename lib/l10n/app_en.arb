@@ -2680,5 +2680,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Can be changed from pill sheet settings",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Tap the pill sheet to record your pill intake",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
