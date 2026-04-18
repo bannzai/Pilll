@@ -2668,5 +2668,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Personalize your notification message",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Display pill sheet by date",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
