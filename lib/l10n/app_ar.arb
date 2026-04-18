@@ -2662,5 +2662,9 @@
   "criticalAlertFeatureAppealPoint3": "إعداد سهل بنقرة واحدة",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "تحرير رسائل الإشعارات بحرية",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
