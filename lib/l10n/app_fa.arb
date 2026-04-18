@@ -2753,5 +2753,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "جابجایی خودکار هنگام اتمام برگه قرص",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "بدون نیاز به ایجاد دستی",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
