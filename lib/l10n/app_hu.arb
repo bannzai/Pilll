@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealShortDescription": "Jövőbeli események kezelése (pl. orvosi időpontok)",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Jövőbeli események rögzítése a naptárban",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
