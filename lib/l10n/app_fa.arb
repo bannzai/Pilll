@@ -2537,5 +2537,9 @@
   "healthCareIntegrationFeatureAppealTitle": "اتصال به سلامت",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "اشتراک‌گذاری سوابق قاعدگی با سلامت",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
