@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "הצלצול גם במצב שקט/ריכוז",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "צליל התראה כמו של שעון מעורר",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
