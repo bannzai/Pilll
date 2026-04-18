@@ -2690,5 +2690,9 @@
   "menstruationFeatureAppealPoint1": "Vienkārši pierakstiet menstruācijas sākuma datumu",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Automātiski nosaka ciklu",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
