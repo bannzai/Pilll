@@ -2502,5 +2502,9 @@
   "menstruationFeatureAppealShortDescription": "ಮಾಸಿಕದ ಆರಂಭದ ದಿನಾಂಕವನ್ನು ದಾಖಲಿಸಿ ಮತ್ತು ಚಕ್ರವನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "ಮಾಸಿಕ ಚಕ್ರದ ದಾಖಲೆ ಮತ್ತು ಪೂರ್ವಾನುಮಾನ",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
