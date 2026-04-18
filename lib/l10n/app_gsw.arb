@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "S nächscht Pilleblatt automatisch erstelle",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Wànn d'aktuell Pilleblattgrupp zù End isch, wird automatisch e neji Pilleblattgrupp erstellt. Es brùcht kei manuelli Umschaltigsaktion, un es gìbt kei Lücke in de Ufzeichnunge.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
