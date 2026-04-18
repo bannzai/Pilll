@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealTitle": "Bildirişdən birbaşa qəbul qeydi",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Tətbiqi açmadan bildiriş üzərindən qeyd edin",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
