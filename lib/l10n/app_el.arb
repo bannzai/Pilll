@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Πατήστε σε ημερομηνία για να καταγράψετε την κατάσταση υγείας σας",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Καταχώριση προγράμματος στο ημερολόγιο",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
