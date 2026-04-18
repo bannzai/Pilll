@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealShortDescription": "প্ৰতিদিনৰ স্বাস্থ্যৰ অৱস্থা কেলেণ্ডাৰত লিখি ৰাখো",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "প্ৰতিদিনৰ স্বাস্থ্য অৱস্থা কেলেণ্ডাৰত লিপিবদ্ধ কৰক",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
