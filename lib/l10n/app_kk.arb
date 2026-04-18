@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Пилл парағы ұяшықтарына күндерді көрсету арқылы өткен қабылдаулар тарихын және алдағы қабылдау кестесін бір қарағаннан-ақ көруге болады. «Нөмір» режимі мен «Күн» режимі арасында ауыстырып, өзіңізге ыңғайлы көріністі таңдаңыз.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Қабылдау тарихын оңай шолу",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
