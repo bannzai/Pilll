@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Nodwedd cyfateb rhifau ar gael am ddim",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Gellir ei newid o'r tab gosodiadau",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
