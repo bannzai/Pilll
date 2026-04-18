@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealHeadline": "Menstruacijų įrašymas ir prognozavimas",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Užfiksavę menstruacijų pradžią galėsite peržiūrėti ankstesnių menstruacijų istoriją. Programa taip pat automatiškai prognozuoja kitą menstruacijų pradžios datą, todėl galėsite planuoti iš anksto.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
