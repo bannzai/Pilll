@@ -2530,5 +2530,9 @@
   "calendarDiaryFeatureAppealHeadline": "Teken daaglikse gesondheid op die kalender aan",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Jy kan op 'n datum in die kalender tik om jou liggaamlike toestand, bui, simptome en meer aan te teken. Aangesien jy dit saam met jou inname-rekords en menstruasierekords kan nagaan, kan jy jou liggaam se ritme verstaan.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
