@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Τα δεδομένα εμμήνου ρύσης που καταγράφετε στο Pilll μπορούν να συγχρονιστούν αυτόματα με την εφαρμογή Υγεία. Μπορείτε να τα δείτε μαζί με άλλα δεδομένα υγείας σας ή να χρησιμοποιήσετε τα δεδομένα εμμήνου ρύσης και σε άλλες εφαρμογές.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Καταγραφή λήψης απευθείας από την ειδοποίηση",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
