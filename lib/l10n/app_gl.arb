@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Podes personalizar a mensaxe estándar «É a hora de tomar a pílula» coas palabras que prefiras. Proba a cambiala por palabras motivadoras, o nome da túa mascota ou calquera outra frase que faga que tomar a pílula cada día sexa máis agradable.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Mostrar datas na folla de comprimidos",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
