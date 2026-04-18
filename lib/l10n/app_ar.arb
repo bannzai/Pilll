@@ -2514,5 +2514,9 @@
   "menstruationFeatureAppealHeadline": "تسجيل الدورة الشهرية والتنبؤ بها",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "ما عليكِ سوى تسجيل دورتكِ الشهرية عند بدئها، وستتمكنين من عرض سجل الدورات السابقة. كما يتم التنبؤ تلقائياً بموعد دورتكِ القادمة، مما يساعدكِ على التخطيط بصورة أفضل.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
