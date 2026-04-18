@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Пилл қабылдауды уақытша тоқтату",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Таблетка парағында қабылдауды біраз уақытқа тоқтату кезеңін жазып қоюға болады. Демалыс кезінде қабылдау нөмірі жылжымайды, қайта бастағанда жазбаны дереу жалғастыра аласыз.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
