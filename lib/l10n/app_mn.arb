@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Эм уухаа завсарлах",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Та пиллийн хуудсанд эм уулахаа түр зогсоосон хугацааг тэмдэглэж болно. Амралтын үед эм уулгах дугаар ахихгүй бөгөөд дахин эхлэхэд тэмдэглэлийг шууд үргэлжлүүлж болно.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
