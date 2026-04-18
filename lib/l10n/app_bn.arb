@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealTitle": "সাইলেন্ট মোডেও বিজ্ঞপ্তি পান",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "ডু নট ডিস্টার্ব মোডেও পিল খেতে ভুলবেন না",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
