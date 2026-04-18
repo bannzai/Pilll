@@ -2662,5 +2662,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "អនុវត្តទៅក្នុងការជូនដំណឹងថ្នាំប្រចាំថ្ងៃ",
   "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "កំណត់សារជូនដំណឹងផ្ទាល់ខ្លួន",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
   }
 }
