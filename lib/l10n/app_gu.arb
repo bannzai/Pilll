@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "પિલ શીટ પર તારીખ પ્રદર્શિત કરી શકાય છે",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "પિલ શીટના ખાનામાં તારીખ બતાવવાથી, ભૂતકાળના સેવનના ઇતિહાસ અને ભવિષ્યના સેવન સમયપત્રકને એક નજરે ચકાસી શકાય છે。「નંબર」 મોડ અને 「તારીખ」 મોડ વચ્ચે સ્વિચ કરીને, તમને અનુકૂળ ડિસ્પ્લે પસંદ કરો。",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
