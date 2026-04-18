@@ -2562,5 +2562,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "ከጤና አጠባበቅ ጋር ማስተሳሰር ይቻላል",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "በPilll ውስጥ የተቀዳውን የወር አበባ ውሂብ ከጤና እንክብካቤ መተግበሪያ ጋር በራስ-ሰር ማስተሳሰር ይችላሉ። በጤና እንክብካቤ ላይ ካሉ ሌሎች የጤና ውሂቦች ጋር አብሮ ሊታዩ ወይም ሌሎች መተግበሪያዎችም የወር አበባ ውሂቡን መጠቀም ይቻላል።",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
