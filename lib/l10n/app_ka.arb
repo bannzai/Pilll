@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "უფასო წამლის მიღების შესვენების ჩანაწერი",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "დაიწყეთ პილ-შიტის მარჯვენა ზედა კუთხეში მდებარე პარამეტრების ხატულიდან.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
