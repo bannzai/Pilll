@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint1": "تدوين المواعيد في التقويم",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "إدارة مواعيد زيارة الطبيب بسهولة",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
