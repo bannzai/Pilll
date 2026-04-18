@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Tasuta kasutatav numbrite sobitamise funktsioon",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Saab muuta seadete vahekaardilt",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
