@@ -2450,5 +2450,9 @@
   "criticalAlertFeatureAppealHeadline": "সাইলেন্ট মোডেও বিজ্ঞপ্তি আসে",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alert চালু করলে, ঘুমের মোড বা সাইলেন্ট মোডেও আপনি পিল সেবনের বিজ্ঞপ্তি পাবেন। গুরুত্বপূর্ণ পিল সেবনের সময় মিস না করতে, অবশ্যই সেটিং করে নিন।",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
