@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealShortDescription": "ডু নট ডিস্টাৰ্ব মোডতো পিল খাবলৈ পাহৰা ৰোধ কৰক",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "সাইলেণ্ট মোডতো জাননী আহিব",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
