@@ -2746,5 +2746,9 @@
   "quickRecordFeatureAppealPoint1": "Reģistrēt lietošanu, izmantojot paziņojuma darbību",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Pabeigt bez lietotnes atvēršanas",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
