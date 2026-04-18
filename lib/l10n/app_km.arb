@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "យើងប្រើ AlarmKit ដែលអាចប្រើបាននៅលើ iOS 26 ឡើងទៅ ដើម្បីជូនដំណឹងអំពីការយកថ្នាំជាមួយអាឡាមដែលនឹងប្រាកដលឺ ទោះបីនៅក្នុងម៉ូដស្ងាត់ ឬម៉ូដផ្តោតក៏ដោយ។",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "កំណត់លេខទទួលថ្នាំសម្រាប់ថ្ងៃនេះ",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
