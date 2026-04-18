@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "ແຈ້ງເຕືອນ",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "ແຕະວັນທີເພື່ອເພີ່ມແຜນການ",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
