@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "អាចប្រើបាននៅលើ iOS 26 ឡើងទៅ — បើកពីផ្ទាំងការកំណត់",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "មុខងារ​ផ្គូផ្គង​លេខ​ដែល​អាច​ប្រើ​បាន​ដោយ​ឥតគិត​ថ្លៃ",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
