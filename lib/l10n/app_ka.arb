@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "საილენტო რეჟიმშიც მიიღე შეტყობინებები",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "თუნდაც 'არ შემაწუხოთ' რეჟიმში, არ გამოტოვოთ წამლის მიღება",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
