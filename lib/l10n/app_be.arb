@@ -2810,5 +2810,9 @@
   "restDurationFeatureAppealPoint2": "Пачніце з шасцярні ў правым верхнім куце карткі таблетак",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Рэдагаванне і аднаўленне перыяду таксама проста",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
