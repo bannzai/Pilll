@@ -2701,5 +2701,9 @@
   "calendarDiaryFeatureAppealPoint2": "یادداشت وضعیت جسمی و مرور آن",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "مرور تاریخچه با تقویم",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
