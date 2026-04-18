@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Au dür's Antippe vun de Zahl im Home öffenbar",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Koschtelos Pillenpaus-Ufzeichning",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
