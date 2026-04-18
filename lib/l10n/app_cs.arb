@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Snadné nastavení jedním klepnutím",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Volně upravit zprávu oznámení",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
