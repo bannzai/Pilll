@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "„Pill sheet“ nustatymuose galima pakeisti",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Tap pill sheet to record taking",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
