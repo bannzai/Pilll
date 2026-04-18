@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "អ្នកអាចប្ដូរពាក្យសម្រាប់សារ​រំលឹក​ផ្ទាល់ «ពេលត្រូវយកថ្នាំ» ទៅជា​ពាក្យ​ដែល​អ្នក​ចូលចិត្ត។ អ្នកអាចប្រើពាក្យលើកទឹកចិត្ត ឈ្មោះសត្វចិញ្ចឹម ឬពាក្យផ្សេងៗ ដើម្បីធ្វើឲ្យការយកថ្នាំប្រចាំថ្ងៃរបស់អ្នកកាន់តែរីករាយ។",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "បង្ហាញកាលបរិច្ឆេទនៅលើសន្លឹកគ្រាប់ថ្នាំ",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
