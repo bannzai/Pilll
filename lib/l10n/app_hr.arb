@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "Precizno upravljanje prekidima u uzimanju",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Pauza u uzimanju pilule",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
