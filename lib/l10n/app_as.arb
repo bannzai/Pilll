@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "পিল শ্বীট স্বয়ংক্ৰিয়ভাৱে যোগ কৰক",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "পৰৱৰ্তী শ্বীট স্বয়ংক্ৰিয়ভাৱে সৃষ্টি কৰক",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
