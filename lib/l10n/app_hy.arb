@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "\"カレンダーに予定を書き込み\" を hy に翻訳してください。",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Բժշկական այցելությունների օրերը հեշտությամբ կառավարեք",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
