@@ -2454,5 +2454,9 @@
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "ניתן להתאים אישית את הודעות ההתראות",
   "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "ערוך בחופשיות את הודעת תזכורת נטילת הגלולה",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
   }
 }
