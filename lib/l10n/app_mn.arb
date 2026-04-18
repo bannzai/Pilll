@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealHeadline": "Сарын тэмдгийг бүртгэж, таамаглах боломжтой",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Сарын тэмдэг ирэх бүрт бүртгэхэд л хангалттай бөгөөд өнгөрсөн сарын тэмдгийн түүхийг жагсаалтаар харах боломжтой. Дараагийн сарын тэмдгийн хүлээгдэж буй огноо автоматаар тооцоологддог тул амьдралаа төлөвлөлттэй зохицуулах боломжтой.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
