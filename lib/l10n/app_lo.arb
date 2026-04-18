@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "ສາມາດປ່ຽນໄດ້ຈາກແທັບການຕັ້ງຄ່າ",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "ສາມາດເປີດໄດ້ໂດຍການກົດເລກໃນໜ້າເຮືອນ",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
