@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Vergangeni Ufzeichnige im Kalender aaluege",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Tipp uff 's Datum, um din Befinde ufzeschriibe",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
