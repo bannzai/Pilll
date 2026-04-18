@@ -2502,5 +2502,9 @@
   "recordPillFeatureAppealBody": "Просто докоснете листа с хапчета на началния екран, за да запишете приема за деня. Ако сте записали погрешно, докоснете отново, за да отмените. Историята на приема може да се провери по-късно, така че можете да продължите спокойно.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Записване и прогнозиране на менструацията",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
