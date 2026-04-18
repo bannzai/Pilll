@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "{\n  \"@@locale\": \"hr\",\n  \"pill_sheet_help\": \"Na početnom zaslonu jednostavno dodirnite prikaz pilula da zabilježite uzimanje za taj dan. Ako ste pogrešno zabilježili, ponovno dodirnite da poništite zapis. Povijest uzimanja možete kasnije pregledati, pa možete nastaviti bez brige.\",\n  \"@pill_sheet_help\": {\n    \"description\": \"ピル記録/服用履歴機能のヘルプページの本文\"\n  }\n}",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Bilježenje i predviđanje menstruacije",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
