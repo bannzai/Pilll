@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "জাননীৰ বার্তা স্বাধীনভাৱে সম্পাদনা কৰক",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "প্ৰতিদিনৰ ঔষধ সেৱনৰ জাননীত প্ৰতিফলিত",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
   }
 }
