@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Saab muuta seadete vahekaardilt",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Saab avada ka kodus numbrit puudutades",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
