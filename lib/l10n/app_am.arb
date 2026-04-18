@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "የማሳወቂያ መልዕክቶችን በነፃነት አርትዕ",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "በዕለታዊ የመድሃኒት ማሳወቂያ ላይ ይንፀባርቃል",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
   }
 }
