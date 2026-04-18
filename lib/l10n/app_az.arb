@@ -2722,5 +2722,9 @@
   "calendarDiaryFeatureAppealPoint3": "Keçmiş qeydlərə təqvimlə baxın",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Tarixi toxunaraq sağlamlıq vəziyyətinizi qeyd edin",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
