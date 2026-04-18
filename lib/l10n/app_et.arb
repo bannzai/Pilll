@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Märgi oma enesetunne üles ja vaata tagasi",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Varasema salvestuste ülevaatamine kalendris",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
