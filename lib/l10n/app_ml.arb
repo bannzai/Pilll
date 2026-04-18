@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint2": "ക്രമീകരണ ടാബിൽ നിന്ന് മാറ്റാൻ കഴിയും",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "ഹോമിലെ നമ്പർ ടാപ്പ് ചെയ്തും തുറക്കാം",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
