@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Vergiss deine Pille auch im Nicht-stören-Modus nicht",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Benachrichtigungen auch im Lautlosmodus",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
