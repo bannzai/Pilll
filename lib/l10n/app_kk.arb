@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Қызғылт дыбысы",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 және одан кейінгі нұсқаларда: Параметрлер (Settings) қойындысынан қосыңыз",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
