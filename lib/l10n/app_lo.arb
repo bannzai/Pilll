@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "ピルシートを日付で表示",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "ບໍ່ຕ້ອງເບິ່ງປະຕິທິດເພື່ອຮູ້ວັນທີ",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
