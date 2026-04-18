@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "Հիշողության արձանագրություն՝ դեղաչափով դադարող ժամանակի նշում",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Ճշգրիտ կառավարեք դադարները և դեղի ընդունման ընդհատումները",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
