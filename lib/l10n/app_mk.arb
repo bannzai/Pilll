@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Можете да ја видите датата и без да го отворите календарот.",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Може да се промени во поставките на листата со таблети",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
