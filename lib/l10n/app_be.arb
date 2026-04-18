@@ -2786,5 +2786,9 @@
   "alarmKitFeatureAppealPoint2": "Гук сігналу, падобны да будзільніка",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 і вышэй · уключыць з укладкі «Налады»",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
