@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Тегін нөмірді сәйкестендіру функциясы",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Параметрлер қойындысынан өзгертуге болады",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
