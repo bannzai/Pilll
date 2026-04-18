@@ -2692,5 +2692,9 @@
   "recordPillFeatureAppealPoint3": "Check your pill-taking history anytime",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Easily log your period start date",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
