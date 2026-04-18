@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Obavijest koja pouzdano zvoni čak i u tihom načinu",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Alarm za uzimanje – poput budilice",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
