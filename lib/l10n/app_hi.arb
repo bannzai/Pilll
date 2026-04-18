@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "दवा लेने के रिकॉर्ड को आसानी से देखें",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "कब लिया था यह तुरंत पता चलता है",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
