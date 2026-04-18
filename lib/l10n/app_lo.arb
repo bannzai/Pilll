@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "アプリを開かず通知上で記録",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "ແຕະໜຶ່ງບັນທຶກການຮັບຢາໃນໜ້າແຈ້ງ",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
