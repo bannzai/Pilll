@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Може да се промени во поставките на листата со таблети",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Допрете ја таблата со таблети за да го забележите земањето",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
