@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Funkce přizpůsobení číslování zdarma",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Lze změnit na kartě Nastavení",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
