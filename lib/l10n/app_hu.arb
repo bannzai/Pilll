@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple Health támogatása",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Bevétel rögzítése értesítésből",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
