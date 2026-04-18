@@ -2410,5 +2410,9 @@
   "lifetimePurchaseNotice1": "ಒಮ್ಮೆ ಖರೀದಿಸುವ ಯೋಜನೆಯನ್ನು ಖರೀದಿಸಿದರೂ ಮಾಸಿಕ/ವಾರ್ಷಿಕ ಯೋಜನೆಗಳು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ರದ್ದುಪಡಿಸಲಾಗುವುದಿಲ್ಲ.",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "ಇಲ್ಲಿ",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
