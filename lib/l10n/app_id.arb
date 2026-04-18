@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Di layar utama, cukup ketuk lembar pil untuk mencatat pemakaian hari itu. Jika Anda salah mencatat, ketuk lagi untuk membatalkannya. Riwayat pemakaian juga dapat dilihat di kemudian hari, sehingga Anda bisa melanjutkannya dengan tenang.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Catat dan prediksi menstruasi",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
