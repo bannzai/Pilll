@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint1": "يرن حتى في وضع الصامت/التركيز",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "صوت منبه مشابه لساعة الإيقاظ",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
