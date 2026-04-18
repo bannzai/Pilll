@@ -2482,5 +2482,9 @@
   "appearanceModeDateFeatureAppealHeadline": "পিল শিটে তারিখ প্রদর্শন করা যায়",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "পিল শিটের প্রতিটি ঘরে তারিখ দেখিয়ে আপনি অতীতের সেবনের ইতিহাস ও ভবিষ্যতের সেবনের পরিকল্পনা এক নজরে দেখতে পারবেন। \"নম্বর\" মোড ও \"তারিখ\" মোডের মধ্যে পরিবর্তন করে আপনার পছন্দমতো প্রদর্শনী বেছে নিন।",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
