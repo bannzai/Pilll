@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Ελεύθερη επεξεργασία μηνύματος ειδοποίησης λήψης",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Μπορείτε να προσαρμόσετε το προεπιλεγμένο μήνυμα «Ώρα να πάρετε το χάπι σας» με τις δικές σας λέξεις. Δοκιμάστε να το αλλάξετε σε κάτι που σας δίνει κίνητρο, το όνομα του κατοικίδιου σας ή οτιδήποτε άλλο που κάνει την καθημερινή σας λήψη πιο διασκεδαστική.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
