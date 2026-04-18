@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "ទីតាំងក្នុងកម្មវិធី",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "ទទួលបានការជូនដំណឹងទោះបីនៅក្នុងម៉ូដផ្តោតក៏ដោយ",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
