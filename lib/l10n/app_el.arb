@@ -2430,5 +2430,9 @@
   "recommendSignupGeneralDescription": "Εγγραφείτε για να δημιουργήσετε αντίγραφο ασφαλείας των δεδομένων σας",
   "@recommendSignupGeneralDescription": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "Λήψη ειδοποιήσεων ακόμα και σε αθόρυβη λειτουργία",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
   }
 }
