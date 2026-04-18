@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "על ידי הצגת תאריכים בתאי גיליון הכדורים, תוכלו לראות בבת אחת את היסטוריית הנטילה שעברה ואת לוח הנטילה העתידי. עברו בין מצב \"מספר\" למצב \"תאריך\" ובחרו את התצוגה המתאימה לכם.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "סקירה קלה של היסטוריית הנטילה",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
