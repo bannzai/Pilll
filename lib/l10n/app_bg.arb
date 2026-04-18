@@ -2810,5 +2810,9 @@
   "restDurationFeatureAppealPoint2": "Започнете от иконата с зъбно колело в горния десен ъгъл на листа с хапчета",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Лесно редактиране и възобновяване на периода",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
