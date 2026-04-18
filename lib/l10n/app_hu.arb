@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Szünet a fogamzásgátló szedésében",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "A tablettasorban rögzítheti a szedés szüneteltetésének időszakát. A szünet alatt a tabletta sorszáma nem halad előre, és újrakezdéskor a rögzítést azonnal folytathatja.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
