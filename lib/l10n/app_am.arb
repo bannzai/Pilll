@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealShortDescription": "መቼ እንደወሰዱ ወዲያው ይታወቃል",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "በዋናው ማያ ገጽ ላይ ክኒን መዋጥን ይዝግቡ",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
