@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Mag-link sa HealthCare",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Ibahagi ang rekord ng regla sa HealthCare",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
