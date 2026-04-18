@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Mit em Schalter im Yystellige-Tab umschalte",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Lütet au im Stille-/Fokusmodus",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
