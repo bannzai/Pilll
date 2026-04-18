@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Басты беттегі нөмірді түрту арқылы да аша аласыз",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Тегін пайдалануға болатын таблетканы қабылдамаған күндердің жазбасы",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
