@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint2": "Segna come assunto senza aprire l'app",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Automatica commutazione alla fine della confezione di pillole",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
