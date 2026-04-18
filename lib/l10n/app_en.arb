@@ -2772,5 +2772,9 @@
   "alarmKitFeatureAppealPoint2": "Alarm clock-style alert sound",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 or later · Enable from Settings tab",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
