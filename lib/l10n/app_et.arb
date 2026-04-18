@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Automaatne ümberlülitus pillilehe lõppemisel",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Käsitsi loomine pole vajalik",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
