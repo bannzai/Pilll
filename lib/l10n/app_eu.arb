@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Iratzargailu bezalako alarma soinua",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 edo berriagoa · Ezarpen fitxatik gaitu",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
