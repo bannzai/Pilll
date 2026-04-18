@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Szinkronizálás az egészségügyi alkalmazással",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Health támogatása",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
