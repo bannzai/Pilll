@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "Օրացույցում գրառումները դիտել",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Գրառեք ձեր ինքնազգացողությունը և վերանայեք դրանք",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
