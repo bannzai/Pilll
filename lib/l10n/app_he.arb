@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "ניתן להציג תאריכים על גיליון הגלולות",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "על ידי הצגת תאריכים בתאי גיליון הכדורים, תוכלו לראות בבת אחת את היסטוריית הנטילה שעברה ואת לוח הנטילה העתידי. עברו בין מצב \"מספר\" למצב \"תאריך\" ובחרו את התצוגה המתאימה לכם.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
