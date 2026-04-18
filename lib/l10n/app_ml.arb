@@ -2690,5 +2690,9 @@
   "menstruationFeatureAppealPoint1": "ആർത്തവ ആരംഭ തീയതി എളുപ്പത്തിൽ രേഖപ്പെടുത്തുക",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "ചക്രം സ്വയമേ ട്രാക്ക് ചെയ്യുക",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
