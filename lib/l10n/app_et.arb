@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Puudutage avakuval lihtsalt pillilehte, et salvestada selle päeva tabletivõtmine. Kui tegite vea, puudutage uuesti – kirje tühistatakse. Võtmise ajalugu on alati hiljem vaadatav, nii saate muretult jätkata.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Menstruatsiooni jälgimine ja prognoosimine",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
