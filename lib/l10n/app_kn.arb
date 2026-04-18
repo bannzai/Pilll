@@ -2518,5 +2518,9 @@
   "calendarDiaryFeatureAppealShortDescription": "ಪ್ರತಿದಿನದ ಆರೋಗ್ಯವನ್ನು ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ದಾಖಲೆ ಮಾಡೋಣ",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "ದೈನಂದಿನ ಆರೋಗ್ಯವನ್ನು ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ದಾಖಲಿಸಿ",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
