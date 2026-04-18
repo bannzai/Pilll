@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "អ្នកអាចបញ្ចូលកាលវិភាគអនាគត ទៅក្នុងប្រតិទិន ដូចជា ការណាត់ពេទ្យ ឬការធ្វើដំណើរ។ ពីព្រោះអ្នកអាចមើលវារួមជាមួយវដ្តការទទួលថ្នាំ អ្នកអាចរៀបចំផែនការដែលគិតទាំងថ្ងៃដែលអ្នកអាចមានឈាមខែបាន។",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "ភ្ជាប់ជាមួយកម្មវិធីសុខភាព",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
