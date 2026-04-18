@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Vergangene Aufzeichnungen im Kalender überblicken",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Tippe auf ein Datum, um dein Befinden aufzuzeichnen",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
