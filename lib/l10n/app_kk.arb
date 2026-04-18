@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Үнсіз режимде де ескертулер жеткізіледі",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alert-ты қоссаңыз, ұйықтап жатқан режимде немесе үнсіз режимде болғанда да қабылдау туралы ескертулер аласыз. Маңызды таблетканы қабылдау уақытын өткізіп алмау үшін міндетті түрде орнатып көріңіз.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
