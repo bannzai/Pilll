@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint3": "Pieejams uzreiz ar Premium abonementu",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Automātiski pārslēgties, kad beidzas tablešu lapa.",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
