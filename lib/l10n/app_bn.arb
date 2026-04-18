@@ -2466,5 +2466,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "সেবন বিজ্ঞপ্তির বার্তা স্বাধীনভাবে সম্পাদনা করুন",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "ডিফল্ট \"পিল খাওয়ার সময় হয়েছে\" বার্তাটি আপনার পছন্দমতো কাস্টমাইজ করতে পারবেন। উৎসাহমূলক কোনো কথা, আপনার পোষা প্রাণীর নাম বা এমন কিছু লিখুন যা প্রতিদিনের পিল সেবনকে আরও আনন্দদায়ক করে তুলবে।",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
