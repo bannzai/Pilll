@@ -2582,5 +2582,9 @@
   "quickRecordFeatureAppealBody": "При продължително натискане върху напомнянето се показва действието „Приех\", което ви позволява да записвате приема, без да отваряте приложението.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Автоматично добавяне на листа с хапчета",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
