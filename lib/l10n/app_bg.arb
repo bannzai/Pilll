@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint1": "Запис на приемане чрез действие в известие",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Завърши без отваряне на приложението",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
