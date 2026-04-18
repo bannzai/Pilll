@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "Zapište si budoucí plány",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Správa budoucích plánů, jako jsou návštěvy lékaře",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
