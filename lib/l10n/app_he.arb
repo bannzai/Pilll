@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "התראה לנטילה בדומה לשעון מעורר",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "באמצעות AlarmKit הזמין ב‑iOS 26 ומעלה, נודיע לך על נטילת הגלולה באמצעות התראה שתשמע באופן אמין גם במצב שקט או במצב ריכוז.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
