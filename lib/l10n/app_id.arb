@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "Dapat terhubung dengan aplikasi Kesehatan",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Anda dapat menyinkronkan secara otomatis data menstruasi yang dicatat di Pilll dengan aplikasi Kesehatan. Dengan begitu, Anda dapat melihatnya bersama data kesehatan lain di aplikasi Kesehatan, dan data menstruasi tersebut juga dapat digunakan oleh aplikasi lain.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
