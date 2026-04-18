@@ -2778,5 +2778,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Canvieu-ho amb el commutador de la pestanya de configuració",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Sona fins i tot en mode silenci/concentració",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
