@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Cysylltu â Gofal Iechyd",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Rhannu cofnodion mislif gyda Gofal Iechyd",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
