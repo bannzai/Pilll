@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "កំណត់បានយ៉ាងងាយស្រួលដោយចុចមួយ",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "កែសម្រួលសារជូនដំណឹងដោយសេរី",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
