@@ -2742,5 +2742,9 @@
   "futureScheduleFeatureAppealLocationHint": "Tik op 'n datum om 'n afspraak in te skryf",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Menstruasie-rekords word outomaties gesinkroniseer",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
