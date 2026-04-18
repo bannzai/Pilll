@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "ທ່ານສາມາດບັນທຶກການທິບຢາຂອງມື້ນັ້ນໄດ້ງ່າຍໆ ໂດຍກະທັບແຜ່ນພິລໃນໜ້າຫຼັກ. ຖ້າທ່ານບັນທຶກຜິດ, ກະທັບອີກຄັ້ງເພື່ອຍົກເລີກ. ທ່ານສາມາດເບິ່ງປະຫວັດການທິບໄດ້ພາຍຫຼັງ, ເພື່ອໃຫ້ທ່ານຮູ້ສ�ຶກສະຫວັດໃຈແລະສາມາດດຳເນີນຕໍ່ໄດ້.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "ບັນທຶກແລະຄາດໝາຍປະຈຳເດືອນ",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
