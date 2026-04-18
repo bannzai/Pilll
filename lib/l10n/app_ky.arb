@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Айыз жазууларын автоматтык түрдө синхрондоштуруу",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Ден соолук тиркемеси менен синхрондоо",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
