@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "I-tap ang pill sheet para itala ang paginom ng tableta",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Madaling bawiin kahit magkamali",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
