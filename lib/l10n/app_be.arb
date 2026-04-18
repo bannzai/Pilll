@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint1": "Лёгкі запіс даты пачатку менструацыі",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Аўтаматычнае вызначэнне цыкла",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
