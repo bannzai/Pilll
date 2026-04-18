@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Integracija su Sveikata",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Dalinkitės menstruacijų įrašais su Sveikata",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
