@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Yn canu hyd yn oed yn y modd tawel/ffocws",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Sain larwm tebyg i gloc larwm",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
