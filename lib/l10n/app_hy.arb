@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "Ճշգրիտ կառավարեք դադարները և դեղի ընդունման ընդհատումները",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Պիլերի ընդունումը դադարեցնել",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
