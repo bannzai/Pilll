@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Registra tu toma tocando la ficha de píldoras",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Cancela fácilmente aunque te equivoques",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
