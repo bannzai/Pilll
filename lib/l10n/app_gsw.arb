@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Vo'm Kalender us kenne Sie uf e Datum drücke un Ihr körperliche Befinde, Stimmung, Symptome un anderi Sache ufzeichne. Well des zämme mit de Medikamänte-Ufzeichnunge un de Periodenufzeichnunge abrüefbar isch, kenne Sie de Rhythmus vum eigene Körper besser verstehe.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Trag dini zukünftigi Termins ii",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
