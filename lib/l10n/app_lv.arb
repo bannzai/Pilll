@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Nav nepieciešama manuāla izveide",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "{\n  \"@@locale\": \"lv\",\n  \"settings_tab_switch_label\": \"Pārslēdziet, izmantojot iestatījumu cilnē esošo slēdzi\",\n  \"@settings_tab_switch_label\": {\n    \"description\": \"Norāda, ka funkciju var ieslēgt vai izslēgt, izmantojot slēdzi iestatījumu cilnē\",\n    \"type\": \"text\"\n  }\n}",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
