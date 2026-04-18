@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "הצג את גיליון הגלולות לפי תאריך",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "אין צורך להסתכל בלוח השנה כדי לדעת את התאריך",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
