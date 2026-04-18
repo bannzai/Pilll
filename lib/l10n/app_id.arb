@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Tampilkan tanggal di lembar pil",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Dengan menampilkan tanggal di kotak pada lembar pil, Anda dapat melihat riwayat pemakaian di masa lalu dan jadwal pemakaian di masa depan sekilas. Beralih antara mode “Nomor” dan mode “Tanggal” untuk memilih tampilan yang paling sesuai bagi Anda.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
