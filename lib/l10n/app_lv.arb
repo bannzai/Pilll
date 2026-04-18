@@ -2590,5 +2590,9 @@
   "alarmKitFeatureAppealTitle": "Zvana kā modinātājs",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "{\n  \"@@locale\": \"lv\",\n  \"alarmkitFeatureAppealBar\": \"Paziņojums, kas skanēs pat klusā režīmā\",\n  \"@alarmkitFeatureAppealBar\": {\n    \"description\": \"AlarmKit機能のFeatureAppeal Barの短い説明文\",\n    \"type\": \"text\"\n  }\n}",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
