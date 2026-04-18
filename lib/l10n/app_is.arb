@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Sýna dagsetningar á pilluflipanum",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Með því að sýna dagsetningar í reitum pillublaðsins geturðu séð fyrri inntöku og framtíðarinntökur við eina sýn. Skiptu á milli stillinganna „Númer“ og „Dagsetning“ og veldu þann birtingarhátt sem hentar þér.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
