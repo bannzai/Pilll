@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Registrer via notifikationer uden at åbne appen",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Registrer med ét tryk fra notifikationsskærmen",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
