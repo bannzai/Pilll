@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Atlikta be programėlės atidarymo",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Galima naudoti iš karto su Premium prenumerata",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
