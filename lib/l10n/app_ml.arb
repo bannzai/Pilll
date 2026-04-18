@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint2": "നിശ്ചിത സമയത്ത് ഉറപ്പായും ഓർമ്മിപ്പിക്കും",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "ഒരു ടാപ്പിൽ എളുപ്പ സജ്ജീകരണം",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
