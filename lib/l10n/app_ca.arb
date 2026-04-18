@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealTitle": "Ajusta el número de la píndola d'avui",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Si el número no és correcte, corregeix-lo a la configuració",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
