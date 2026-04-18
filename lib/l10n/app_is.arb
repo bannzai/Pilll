@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Byrjaðu með tannhjólstáknið efst til hægri á pillublaðinu",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Tímabil breytist og endurtekning auðvelt",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
