@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "ხელით შექმნა საჭირო არ არის",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "პარამეტრების ჩანართში გადამრთველით გადართეთ",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
