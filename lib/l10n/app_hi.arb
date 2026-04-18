@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "होम के नंबर टैप से भी खोलें",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "पिल ब्रेक का निःशुल्क रिकॉर्ड",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
