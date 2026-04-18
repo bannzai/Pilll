@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Creu'r daflen bilsen nesaf yn awtomatig",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Pan ddaw'r grŵp taflen bilsen bresennol i ben, caiff grŵp taflen bilsen newydd ei greu'n awtomatig. Nid oes angen newid â llaw, ac ni fydd bylchau yn y cofnodion.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
