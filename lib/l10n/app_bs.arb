@@ -2778,5 +2778,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Prebaci pomoću prekidača u kartici postavki",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Oglašava se čak i u tihom/fokus modu",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
