@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealShortDescription": "መተግበሪያ ሳይከፍቱ በማሳወቂያ ይመዝግቡ",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "በማሳወቂያ ማያ ገጽ ላይ በአንድ ነካ የመድሃኒት ወሰዳ ምዝገባ",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
