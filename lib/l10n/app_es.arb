@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "No olvides tu píldora incluso en modo no molestar",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Notificaciones activas incluso en modo silencio",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
