@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "Sérsníða stillingar",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Skrá yfir færslur í dagatalinu",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
