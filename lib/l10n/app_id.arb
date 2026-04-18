@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Catat dan prediksi menstruasi",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Catat hari mulai haid untuk memantau siklus",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
