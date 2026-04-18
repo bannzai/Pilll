@@ -2530,5 +2530,9 @@
   "calendarDiaryFeatureAppealHeadline": "Запісвайце штодзённае самаадчуванне ў каляндар",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Націскаючы на дату ў календары, вы можаце запісваць самаадчуванне, настрой, сімптомы і іншае. Паколькі гэта можна праглядаць разам з запісамі аб прыёме таблетак і менструальнымі запісамі, вы зможаце адсочваць рытм свайго цела.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
