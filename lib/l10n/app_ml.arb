@@ -2494,5 +2494,9 @@
   "menstruationFeatureAppealTitle": "ആർത്തവം രേഖപ്പെടുത്തി പ്രവചിക്കുക",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "ആർത്തവ ആരംഭ തീയതി രേഖപ്പെടുത്തി ചക്രം മനസ്സിലാക്കൂ",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
