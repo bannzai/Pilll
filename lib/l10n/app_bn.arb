@@ -2578,5 +2578,9 @@
   "quickRecordFeatureAppealHeadline": "বিজ্ঞপ্তি স্ক্রিনে এক ট্যাপে ওষুধ গ্রহণ রেকর্ড",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "রিমাইন্ডার বিজ্ঞপ্তিটি দীর্ঘ চাপ দিলে \"গ্রহণ করা হয়েছে\" অ্যাকশনটি প্রদর্শিত হয় এবং অ্যাপ না খুলেই সেবন রেকর্ড করা যায়।",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
