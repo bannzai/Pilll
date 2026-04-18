@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Lülita seadete vahekaardi lülitiga",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Heliseb ka vaikse/fookuse režiimis",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
