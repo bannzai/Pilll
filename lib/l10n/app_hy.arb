@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Ծանուցման էկրանին՝ մեկ հպումով ընդունման գրառում",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Եթե երկար սեղմեք հիշեցման ծանուցումը, կհայտնվի «Ընդունել» գործողությունը, որը թույլ է տալիս առանց հավելվածը բացելու գրանցել, որ դուք ընդունել եք դեղը։",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
