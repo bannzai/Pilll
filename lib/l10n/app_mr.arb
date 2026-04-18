@@ -2410,5 +2410,9 @@
   "lifetimePurchaseNotice1": "・\"एकवेळ खरेदी योजना\" खरेदी केली तरी \"मासिक/वार्षिक योजना\" आपोआप रद्द केली जाणार नाही.",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "येथे",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
