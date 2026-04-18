@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "Ajustar el número de toma de hoy",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Ajusta el número en ajustes si no coincide",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
