@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Skoðaðu inntökuferilinn hvenær sem er",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Blæðingar byrjunar dag auðveldlega skráð",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
