@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 e versioni successive · Abilita dalla scheda Impostazioni",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Feature per abbinamento numerico utilizzabile gratuitamente",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
