@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Өткөн жазууларды күнтүзмөдө карап чыгуу",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Датага тийип абалыңызды каттаңыз",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
