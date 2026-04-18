@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "ການຊັ້ນຂໍ້ມູນອັດຕະໂນມັດ ສໍາລັບບັນທຶກການມີເດືອນ",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ສັງຄົມຂໍ້ມູນກັບແອັບສຸຂະພາບ",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
