@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Valmis avaamatta sovellusta",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Käytettävissä sellaisenaan Premium-tilauksella",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
