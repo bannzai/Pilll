@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "ກະລຸນາປ້ອນເນື້ອຫາການສອບຖາມ",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "ຂອບໃຈທີ່ທ່ານໄດ້ຊື້ແຜນຄັ້ງດຽວ. ຖ້າທ່ານຍັງສະມາຊິກແຜນລາຄາປະຈໍາເດືອນ ຫຼື ປະຈໍາປີ, ກະລຸນາຢ່າລືມຍົກເລີກການສະມາຊິກ",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
