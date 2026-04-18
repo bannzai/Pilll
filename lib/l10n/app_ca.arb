@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint1": "Registrar presa des de la notificació",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Completar sense obrir l'aplicació",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
