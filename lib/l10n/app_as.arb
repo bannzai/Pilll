@@ -2614,5 +2614,9 @@
   "alarmKitFeatureAppealBody": "iOS 26 বা তাতকৈ পাছৰ সংস্কৰণত উপলব্ধ AlarmKit ব্যৱহাৰ কৰি, চাইলেণ্ট মোড বা ফ'কাছ মোডতো নিশ্চিতভাৱে বাজিব পৰা এলাৰ্মেৰে পিল খোৱাৰ কথা জনায়।",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "আজিৰ বড়ি নম্বৰ মিলাওক",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
