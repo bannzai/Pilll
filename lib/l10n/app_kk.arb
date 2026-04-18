@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Басты экрандағы таблетка парағын түрту арқылы сол күнгі қабылдауды жазып алуға болады. Қате жазып қойсаңыз, қайта түрту арқылы жоюға болады. Қабылдау тарихын кейін қарап шығуға болады, сондықтан сенімді түрде жалғастыра аласыз.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "生理を記録・予測",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
