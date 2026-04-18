@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Tocando nunha data do calendario, podes rexistrar o teu estado físico, humor, síntomas e máis. Como podes consultalo xunto cos rexistros de toma de medicación e os rexistros menstruais, podes comprender o ritmo do teu propio corpo.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Apunta os teus plans futuros",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
