@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealShortDescription": "Notifikacije koje zvone čak i u tihom načinu",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Alarm za uzimanje tableta poput budilnika",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
