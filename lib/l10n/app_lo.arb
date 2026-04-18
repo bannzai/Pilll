@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "ເຫັນໄດ້ທັນທີວ່າໄດ້ຮັບຢາເມື່ອໃດ",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "ບັນທຶກການຮັບຢາໃນໜ້າເຮືອນ",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
