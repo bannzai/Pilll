@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "ಹೋಮ್ ಸ್ಕ್ರೀನಿನ ಪಿಲ್‌ಶೀಟ್ ಅನ್ನು ಕೇವಲ ಟ್ಯಾಪ್ ಮಾಡುವ ಮೂಲಕ ಆ ದಿನದ ಪಿಲ್ ಸೇವೆಯನ್ನು ದಾಖಲಿಸಬಹುದು. ತಪ್ಪಾಗಿ ದಾಖಲಿಸಿದ್ದರೆ, ಮತ್ತೊಮ್ಮೆ ಟ್ಯಾಪ್ ಮಾಡುವುದು ಅದನ್ನು ರದ್ದುಮಾಡುತ್ತದೆ. ಸೇವಾ ಇತಿಹಾಸವನ್ನು ನಂತರದಲ್ಲಿಯೂ ಪರಿಶೀಲಿಸಬಹುದು, ಆದ್ದರಿಂದ ಮನಸ್ಸು ಶಾಂತವಾಗಿ ಮುಂದುವರಿಸಬಹುದು.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "生理を記録・予測",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
