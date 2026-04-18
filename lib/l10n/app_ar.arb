@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealShortDescription": "امنع نسيان الحبوب حتى في وضع عدم الإزعاج",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "تصلك الإشعارات حتى في وضع الصمت",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
