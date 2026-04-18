@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint1": "Besplatna funkcija usklađivanja broja",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Može se promijeniti na kartici postavki",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
