@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Sonido de alarma similar al despertador",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 o posterior · Activar desde la pestaña de Ajustes",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
