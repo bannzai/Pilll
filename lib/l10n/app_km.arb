@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "គ្រប់គ្រងការសម្រាក និងការផ្អាកយ៉ាងត្រឹមត្រូវ",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "ផ្អាកការយកគ្រាប់ថ្នាំ",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
