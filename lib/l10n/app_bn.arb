@@ -2674,5 +2674,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "আপনার নিজস্ব বিজ্ঞপ্তি বার্তায়",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "তারিখ অনুযায়ী পিল শিট প্রদর্শন করুন",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
