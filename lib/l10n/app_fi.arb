@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Soi myös äänettömässä/Fokus-tilassa",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Herätyskelloa vastaava hälytysääni",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
