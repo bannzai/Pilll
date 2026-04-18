@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "Szedési előzmények egyszerű áttekintése",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Azonnal láthatod, mikor szedted be.",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
