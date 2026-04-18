@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "ទទួលបានការជូនដំណឹងទោះបីនៅក្នុងម៉ូដផ្តោតក៏ដោយ",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "រំញឹកអ្នកយ៉ាងប្រាកដនៅពេលកំណត់",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
