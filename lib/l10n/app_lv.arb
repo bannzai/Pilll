@@ -2466,5 +2466,9 @@
   "appearanceModeDateFeatureAppealTitle": "Rādīt datumus tablešu lapā",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Rādīt datumus tablešu lapā",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
