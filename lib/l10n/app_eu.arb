@@ -2550,5 +2550,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "Hilekoko erregistroak Osasunarekin partekatu",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "Osasun aplikazioarekin integratu daiteke",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
