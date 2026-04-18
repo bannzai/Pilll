@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealShortDescription": "ຈັດການແຜນອະນາຄົດ ເຊັ່ນ ການໄປແພດ",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "ບັນທຶກແຜນອນາຄົດໃນປະຕິທິນ",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
