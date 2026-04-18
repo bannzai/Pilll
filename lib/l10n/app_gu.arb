@@ -2430,5 +2430,9 @@
   "recommendSignupGeneralDescription": "નોંધણી કરવાથી તમે તમારો ડેટા બેકઅપ કરી શકો છો",
   "@recommendSignupGeneralDescription": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "સાઇલન્ટ મોડમાં પણ સૂચનાઓ મેળવો",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
   }
 }
