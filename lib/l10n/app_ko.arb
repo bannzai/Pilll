@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "휴약·중단을 정확하게 관리",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "피임약 복용 쉬기",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
