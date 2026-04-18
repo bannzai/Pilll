@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Weckton-ähnlicher Alarmton",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "Ab iOS 26 · Im Einstellungs-Tab aktivieren",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
