@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "ປັບຈຳນວນການກິນມື້ນີ້",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "ຖ້າໝາຍເລກບໍ່ຕົງ ກະລຸນາແກ້ໄຂໃນການຕັ້ງຄ່າ",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
