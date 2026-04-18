@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "הוסף אירוע ליומן",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "ניהול קל של תאריכי ביקור במרפאה",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
