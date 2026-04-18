@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "Märgi oma igapäevane enesetunne kalendrisse",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Puudutage kalendris kuupäeva, et salvestada oma enesetunne, meeleolu, sümptomid ja muu. Kuna saate seda vaadata koos ravimite võtmise ja menstruatsiooniandmetega, saate paremini mõista oma keha rütmi.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
