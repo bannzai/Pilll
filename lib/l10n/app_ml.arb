@@ -2426,5 +2426,9 @@
   "recommendSignupGeneralTitle": "അക്കൗണ്ട് രജിസ്ട്രേഷൻ ശുപാർശ ചെയ്യുന്നു",
   "@recommendSignupGeneralTitle": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "രജിസ്റ്റർ ചെയ്‌താൽ ഡേറ്റ ബാക്കപ്പ് ചെയ്യാൻ കഴിയും",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
   }
 }
