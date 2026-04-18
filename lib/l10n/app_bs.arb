@@ -2662,5 +2662,9 @@
   "criticalAlertFeatureAppealPoint3": "Jednostavno postavljanje jednim dodirom",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Slobodno uredite poruku obavijesti",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
