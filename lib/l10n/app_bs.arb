@@ -2562,5 +2562,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "Može se integrirati sHealthCareom",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Podaci o menstruaciji zabilježeni u Pilll-u mogu se automatski sinkronizirati s aplikacijom Zdravlje. Možete ih pregledati zajedno s ostalim zdravstvenim podacima u aplikaciji Zdravlje, a podaci o menstruaciji postaju dostupni i u drugim aplikacijama.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
