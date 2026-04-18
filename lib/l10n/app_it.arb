@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Notifiche anche in modalità silenziosa",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Abilitando gli Avvisi critici, riceverai le notifiche per l'assunzione anche quando il dispositivo è in modalità Non disturbare o in modalità silenziosa. Per non perdere i momenti importanti per l'assunzione della pillola, attivalo.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
