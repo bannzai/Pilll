@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Alarma de toma como un espertador",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "Usando AlarmKit, dispoñible en iOS 26 ou posterior, avisarache de tomar a pílula cunha alarma que soa de forma fiable mesmo en modo silencioso ou en modo de concentración.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
