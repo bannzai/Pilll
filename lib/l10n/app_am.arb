@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint1": "በማሳወቂያ ድርጊት መድሃኒት ምዝገባ",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "መተግበሪያውን ሳይከፍቱ ይጨርሱ",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
