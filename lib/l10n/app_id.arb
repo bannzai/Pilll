@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Mulai dari roda gigi kanan atas lembar pil",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "編集 dan melanjutkan periode mudah",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
