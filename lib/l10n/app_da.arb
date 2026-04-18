@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Nem fortrydelse, selv ved fejl",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Se din medicineringshistorik når som helst",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
