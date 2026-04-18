@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealShortDescription": "Nə vaxt qəbul etdiyinizi dərhal bilin",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Ana ekranda həbin qeydiyyatını aparın",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
