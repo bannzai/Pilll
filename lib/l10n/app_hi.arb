@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "रिमाइंडर नोटिफिकेशन को लंबा दबाने पर \"दवा ली\" क्रिया दिखाई देती है, जिससे आप ऐप खोले बिना दवा लेने को रिकॉर्ड कर सकते हैं।",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "पिल शीट स्वचालित रूप से जोड़ें",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
