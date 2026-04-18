@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Jakinarazpenaren ekintzan hartzea erregistratu",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Aplikazioa ireki gabe osatu",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
