@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "התאם אישית את הודעת ההתראה שלך",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "הצג את גיליון הגלולות לפי תאריך",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
