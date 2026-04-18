@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealHeadline": "കലണ്ടറിൽ ഭാവി പദ്ധതികൾ രേഖപ്പെടുത്തുക",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "ഡോക്ടർ സന്ദർശനം, യാത്ര തുടങ്ങിയ ഭാവി പദ്ധതികൾ കലണ്ടറിൽ കുറിക്കാൻ കഴിയും. ഗുളിക കഴിക്കുന്ന ചക്രവുമായി ഒത്തുനോക്കി പരിശോധിക്കാൻ സാധിക്കുന്നതിനാൽ, ആർത്തവ ഷെഡ്യൂളും കണക്കിലെടുത്ത് ആസൂത്രണം ചെയ്യാൻ കഴിയും.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
