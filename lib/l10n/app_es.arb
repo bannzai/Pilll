@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Al mostrar las fechas en las casillas del pastillero, podrás verificar de un vistazo el historial de tomas pasadas y las tomas futuras programadas. Cambia entre el modo «Número» y el modo «Fecha» para elegir la visualización que mejor se adapte a ti.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Revisa fácilmente tu historial de tomas",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
