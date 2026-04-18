@@ -2774,5 +2774,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "የእጅ ፍጥረት ስራ አያስፈልግም",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "በቅንብሮቹ ትር ላይ ያለውን ቀናቂ ቀይሩ",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
