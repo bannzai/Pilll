@@ -2642,5 +2642,9 @@
   "restDurationFeatureAppealHeadline": "Həbi qəbuluna fasilə vermək",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Həb cədvəlinizə dərman qəbulunu müvəqqəti dayandırdığınız dövrü qeyd edə bilərsiniz. İstirahət dövründə dərman nömrəsi irəliləmir, yenidən başladıqda isə qeydi dərhal bərpa edə bilərsiniz.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
