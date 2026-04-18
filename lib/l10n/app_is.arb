@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Ýttu á dagsetningu til að skrá áætlun",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Sjálfkrafa samstilling blæðingarskráa",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
