@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "Saate pillilehele märkida perioodi, millal te tablettide võtmise ajutiselt katkestite. Pausi ajal annuse number ei edene ning jätkamisel saate kohe kirjete tegemist taasalustada.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Asukoht rakenduses",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
