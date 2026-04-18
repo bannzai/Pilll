@@ -2574,5 +2574,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Automātiska tablešu plāksnes pievienošana",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Automātiski izveidot nākamo tablešu lapu",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
