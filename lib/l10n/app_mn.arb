@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Сарын тэмдгийн бичлэгийг автоматаар синхрончлох",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Эрүүл мэндийн апптай синхрончлох",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
