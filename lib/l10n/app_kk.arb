@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Фокус режимінде де ескертулер жеткізіледі",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Белгіленген уақытта сенімді түрде еске салу",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
