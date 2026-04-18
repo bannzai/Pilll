@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Həb vərəqini avtomatik əlavə et",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Növbəti vərəqi avtomatik yarat",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
