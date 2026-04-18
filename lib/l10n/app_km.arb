@@ -2454,5 +2454,9 @@
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "អ្នក​អាច​កែសម្រួល​អត្ថបទ​នៃ​ការ​ជូន​ដំណឹង​បាន",
   "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "កែសម្រួលសារ​ជូនដំណឹង​សម្រាប់​ការ​ទទួលថ្នាំ​របស់អ្នក",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
   }
 }
