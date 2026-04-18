@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "ፒል ሰሌዳን በራስ-ሰር ጨምር",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "ቀጣዩን ሉህ በራስ-ሰር ፍጠር",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
