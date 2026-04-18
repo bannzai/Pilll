@@ -2790,5 +2790,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 বা তাৰ পিছৰ সংস্কৰণ・ছেটিংছ টেবৰ পৰা সক্ষম কৰক",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "বিনামূলীয়াকৈ ব্যৱহাৰ কৰিব পৰা নম্বৰ মিলোৱা সুবিধা",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
