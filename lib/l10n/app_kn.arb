@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "ಅಪ್ ತೆರೆಯದೆ ಅಧಿಸೂಚನೆಯಲ್ಲಿ ದಾಖಲಿಸಿ",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "ಅಧಿಸೂಚನಾ ಪರದಿಯಲ್ಲಿ ಒಂದೇ ಟ್ಯಾಪ್‌ನಲ್ಲಿ ಔಷಧಿ ಸೇವನೆಯ ದಾಖಲೆ",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
