@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "ಇಂದಿನ ಪಿಲ್ ಸಂಖ್ಯೆಯನ್ನು ಹೊಂದಿಸಿ",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "番号がずれたら設定で修正",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
