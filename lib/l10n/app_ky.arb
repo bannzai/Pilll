@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Пил таалонду күнгө карап көрсөтүү",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Календарды карабай эле датаны биле аласыз",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
