@@ -2518,5 +2518,9 @@
   "menstruationFeatureAppealBody": "মাসিক এলে শুধু রেকর্ড করলেই অতীতের মাসিকের ইতিহাস তালিকায় দেখতে পাবেন। পরবর্তী মাসিকের প্রত্যাশিত তারিখও স্বয়ংক্রিয়ভাবে অনুমান করা হয়, তাই পরিকল্পনামতো সময় কাটাতে পারবেন।",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "ক্যালেন্ডারে স্বাস্থ্য রেকর্ড করুন",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
