@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Kuupäevade kuvamine pilliplangi lahtrites võimaldab teil ühel pilgul näha nii varasemat ravimivõtmise ajalugu kui ka tulevasi manustamiskordi. Lülitage „Numbri\" ja „Kuupäeva\" režiimi vahel, et valida endale sobiv kuva.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Ravimivõtmise ajaloo lihtne ülevaatamine",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
