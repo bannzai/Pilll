@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 және одан кейінгі нұсқаларда: Параметрлер (Settings) қойындысынан қосыңыз",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Тегін нөмірді сәйкестендіру функциясы",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
