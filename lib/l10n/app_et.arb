@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Ravimi võtmise registreerimine teavituse toiminguga",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Lõpeta rakendust avamata",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
