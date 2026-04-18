@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "Pantaila nagusian pilulak hartzea erregistratu",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Hasierako pantailako pilula-orria sakatu besterik ez duzu behar egun horretako hartzea erregistratzeko. Oker erregistratu baduzu, berriro sakatu eta desegin dezakezu. Hartzeen historia ere geroago ikusi dezakezu, beraz, lasai jarrai dezakezu.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
