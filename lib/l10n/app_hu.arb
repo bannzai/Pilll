@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "Értesítésből közvetlen rögzítés",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Értesítésből rögzítés az alkalmazás megnyitása nélkül",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
