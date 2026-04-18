@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Awtomatikong Alamin ang Siklo",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "I-customize ang mga setting",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
