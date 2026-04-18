@@ -2482,5 +2482,9 @@
   "appearanceModeDateFeatureAppealHeadline": "በፒል ሺት ላይ ቀን ማሳየት ይቻላል",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "በፒል ሉህ ሕዋሶች ላይ ቀናትን በማሳየት፣ ያለፈውን የፒል ታሪክ እና የወደፊቱን የፒል መርሃ ግብር በቀላሉ ማረጋገጥ ይችላሉ። ለእርስዎ የሚስማማ ማሳያ ለመምረጥ «ቁጥር» ሁነታ እና «ቀን» ሁነታ መካከል ይቀያይሩ።",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
