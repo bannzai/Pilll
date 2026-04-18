@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealShortDescription": "এপ্ নোখোলাকৈ জাননীত ৰেকৰ্ড কৰক",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "জাননী স্ক্ৰীনত এক টেপত ঔষধ গ্ৰহণৰ ৰেকৰ্ড",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
