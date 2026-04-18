@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Katso aiemmat merkinnät kalenterista",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Napauta päivämäärää kirjataksesi voinnin",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
