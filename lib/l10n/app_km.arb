@@ -2466,5 +2466,9 @@
   "appearanceModeDateFeatureAppealTitle": "បង្ហាញកាលបរិច្ឆេទនៅលើសន្លឹកគ្រាប់ថ្នាំ",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "មើលឃើញភ្លាមៗពេលដែលត្រូវញ៉ាំថ្នាំ",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
