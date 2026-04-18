@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Kuva pillileht kuupäeva järgi",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Tead kuupäeva ilma kalendrit vaatamata",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
