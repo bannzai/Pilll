@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Skráðu beint úr tilkynningu án þess að opna appið",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Skráning með einum smelli í tilkynningum",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
