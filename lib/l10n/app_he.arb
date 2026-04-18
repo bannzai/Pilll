@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "דעי מיד מתי נטלת",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "רשום נטילת גלולה במסך הבית",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
