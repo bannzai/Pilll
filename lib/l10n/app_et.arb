@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Lihtne tühistamine isegi vea korral",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Vaata ravimite võtmise ajalugu igal ajal",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
