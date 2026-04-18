@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "ಮಾಸಿಕ ದಾಖಲೆಗಳನ್ನು ಡೇಟಾದೊಂದಿಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸಂಯೋಜಿಸಿ",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ಹೆಲ್ತ್ ಕ್ಯಾರೆ ಅಪ್ಲಿಕೇಶನ್‌ಗೆ ಸಮಕಾಲೀನಗೊಳಿಸಿ",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
