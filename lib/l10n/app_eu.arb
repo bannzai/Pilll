@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Pilula-orriaren gelaxketan datak bistaratuz, iraganeko pilula-hartze historia eta etorkizuneko hartzeen egutegia begirada batean ikusi ditzakezu. Aldatu «zenbakia» eta «data» moduen artean, eta aukeratu zuretzat egokiena den bistaratzea.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Botiken historia erraz berrikusi",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
