@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "매일의 컨디션을 캘린더에 기록",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "캘린더에서 날짜를 탭하여 컨디션, 기분, 증상 등을 기록할 수 있습니다. 복용 기록이나 생리 기록과 함께 확인할 수 있어 자신의 몸의 리듬을 파악할 수 있습니다.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
