@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealShortDescription": "Sàpigues immediatament quan has pres la píndola",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Registra la presa de píndoles a la pantalla d'inici",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
