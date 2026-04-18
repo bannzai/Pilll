@@ -2534,5 +2534,9 @@
   "calendarDiaryFeatureAppealBody": "Можете да записвате здравословното си състояние, настроение, симптоми и др., като докоснете дата в календара. Тъй като можете да ги преглеждате заедно с историята на приема на хапчета и менструалните записи, можете да разберете ритъма на тялото си.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Запишете бъдещите си планове",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
