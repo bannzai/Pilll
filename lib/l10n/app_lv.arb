@@ -2758,5 +2758,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Automātiski pārslēgties, kad beidzas tablešu lapa.",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Nav nepieciešama manuāla izveide",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
