@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Következő bliszter automatikus létrehozása",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Amikor a jelenlegi tabletta-csoport véget ér, az alkalmazás automatikusan létrehoz egy újat. Nincs szükség kézi váltásra, így nem maradnak ki bejegyzések.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
