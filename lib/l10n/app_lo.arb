@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "ໂດຍສະແດງວັນທີໃນແຖວແຜ່ນຢາ, ທ່ານສາມາດເບິ່ງປະຫວັດການທຳຢາໃນອະດີດ ແລະ ແຜນການໃນອະນາຄົດໄດ້ຢ່າງຊັດເຈນ. ທ່ານສາມາດສະຫນອງລະຫວ່າງໂໝດ \"ໝາຍເລກ\" ແລະ \"ວັນທີ\" ເພື່ອເລືອກຮູບແບບການສະແດງທີ່ເໝາະກັບທ່ານ.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "ຍ້ອນຄືນປະຫວັດການຮັບຢາຢ່າງງ່າຍ",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
