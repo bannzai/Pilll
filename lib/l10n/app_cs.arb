@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "Nastavit číslo dnešní tablety",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Pokud číslo nesedí, opravte v nastavení",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
