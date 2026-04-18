@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "Spolehlivá připomínka ve stanovenou dobu",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Snadné nastavení jedním klepnutím",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
