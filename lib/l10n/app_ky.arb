@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Кол менен түзүү талап кылынбайт",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Параметрлер табындагы которгуч менен алмаштырыңыз",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
