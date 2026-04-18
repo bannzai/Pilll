@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "{\n  \"@@locale\": \"kk\",\n  \"pillSheet_start_from_gear\": \"Пилл парағының оң жақ жоғарғы бұрышындағы шестеренка белгішесінен бастаңыз\",\n  \"@pillSheet_start_from_gear\": {\n    \"description\": \"Пилл парағында көрсетіледі: пайдаланушыға парақтың оң жақ жоғарғы бұрышындағы шестеренка (параметрлер) белгішесінен бастауды нұсқау.\"\n  }\n}",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Айлықты өңдеу мен қайта бастау да оңай",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
