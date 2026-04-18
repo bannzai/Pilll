@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "피임약 시트를 탭해 복용을 기록",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "실수해도 간편하게 되돌리기",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
