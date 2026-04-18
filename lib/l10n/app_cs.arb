@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Zapisujte si zdravotní stav a zpětně ho hodnoťte",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Přehled minulých záznamů v kalendáři",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
