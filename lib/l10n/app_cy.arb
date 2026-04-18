@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Lleoliad yn yr ap",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Hysbysiadau'n cyrraedd hyd yn oed yn ystod y Modd Ffocws",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
