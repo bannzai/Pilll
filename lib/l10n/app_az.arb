@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint1": "Səssiz/Fokus rejimində belə çalınır",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Zəngli saat kimi alarm səsi",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
