@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Մի հպումով հեշտ կարգավորում",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Ծանուցման հաղորդագրությունը ազատորեն խմբագրեք",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
