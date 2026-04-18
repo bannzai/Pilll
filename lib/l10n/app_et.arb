@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Menstruatsiooni jälgimine ja prognoosimine",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Salvesta menstruatsiooni alguskuupäev ja jälgi tsüklit",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
