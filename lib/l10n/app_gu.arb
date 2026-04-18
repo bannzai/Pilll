@@ -2778,5 +2778,9 @@
   "todayPillNumberFeatureAppealPoint2": "સેટિંગ્સ ટૅબ પરથી બદલી શકાય છે",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "હોમ પર નંબર ટેપ કરીને પણ ખોલી શકાય છે",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
