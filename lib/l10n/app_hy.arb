@@ -2658,5 +2658,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Ծանուցման հաղորդագրությունը ազատորեն խմբագրեք",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "Արտացոլվում է ամենօրյա ընդունման հիշեցումներում",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
   }
 }
