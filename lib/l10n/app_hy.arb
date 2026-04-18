@@ -2466,5 +2466,9 @@
   "appearanceModeDateFeatureAppealTitle": "Ամսաթվերը ցույց տալ պիլշիթում",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Մեկ հայացքով պարզեք, երբ պետք է ընդունել",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
