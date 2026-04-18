@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Допрете датум за да ја запишете својата состојба",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Додај во календарот",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
