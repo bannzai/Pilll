@@ -2453,5 +2453,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "می‌توانید پیام استاندارد «وقت خوردن قرص است» را به کلماتی که دوست دارید تغییر دهید. سعی کنید آن را به کلمات انگیزه‌بخش، نام حیوان خانگی‌تان یا هر عبارتی که مصرف روزانه را لذت‌بخش‌تر می‌کند، تبدیل کنید.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "نمایش تاریخ روی برگه قرص",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
