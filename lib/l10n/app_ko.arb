@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "캘린더에 미래 일정을 기록",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "병원 방문 예정이나 여행 일정 등 미래의 일정을 캘린더에 기록할 수 있습니다. 피임약 복용 주기와 함께 확인할 수 있어 생리 예정까지 고려한 계획을 세울 수 있습니다.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
