@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Тынч режимде да дарыны унутпоого жардам берет",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Тынч режимде да эскертүү келет",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
