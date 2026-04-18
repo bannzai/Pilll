@@ -2761,5 +2761,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "تغییر با سوئیچ در تب تنظیمات",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "حتی در حالت بی‌صدا/تمرکز هم پخش می‌شود",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
