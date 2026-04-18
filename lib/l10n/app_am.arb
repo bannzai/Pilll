@@ -2750,5 +2750,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "ከጤና አጠባበቅ መተግበሪያ ጋር አመሳስል",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "አፕል ጤና ድጋፍ",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
