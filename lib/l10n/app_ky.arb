@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Стандарттык «Дарыны ичүү убактысы» билдирүүсүн өзүңүзгө жаккан сөздөргө ылайыктап ыңгайлаштыра аласыз. Мотивация берген сөздөрдү, үй жаныбарыңыздын атын же күнүмдүк дары ичүүнү кызыктуу жана жагымдуу кылган башка билдирүүлөрдү колдонуп көрүңүз.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Пилл барагында датаны көрсөтүү",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
