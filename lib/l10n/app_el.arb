@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Ολοκλήρωση χωρίς άνοιγμα εφαρμογής",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Διαθέσιμο με συνδρομή Premium",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
