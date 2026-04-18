@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Գլխավոր էկրանին գտնվող դեղաթերթիկին պարզապես հպվելով կարող եք գրանցել տվյալ օրվա դեղի ընդունումը։ Եթե սխալմամբ գրանցել եք, կրկին հպվելով կարող եք դա չեղարկել։ Դուք նաև կարող եք հետագայում ստուգել ընդունումների պատմությունը, ուստի կարող եք հանգիստ շարունակել։",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Դաշտանության գրանցում և կանխատեսում",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
