@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealBody": "Samo zabilježite početak menstruacije i moći ćete pregledati povijest ciklusa. Sljedeći očekivani datum menstruacije automatski se predviđa, pa ćete moći planirati unaprijed.",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Zabilježite svoje stanje u kalendaru",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
