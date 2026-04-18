@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Tryk på pillearket for at registrere piller",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Nem fortrydelse, selv ved fejl",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
