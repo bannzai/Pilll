@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "{\n  \"@@locale\": \"hu\",\n  \"pill_sheet_show_date\": \"Dátumok megjelenítése a tablettalapon\",\n  \"@pill_sheet_show_date\": {\n    \"description\": \"ピルシート外観モード(date)機能のヘルプページのヘッドライン\",\n    \"type\": \"text\"\n  }\n}",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "A tablettarács celláiban dátumok megjelenítésével egy pillantással áttekintheti a múltbeli bevételeket és a jövőbeli bevételi időpontokat. Váltson a „sorszám” és a „dátum” nézet között, és válassza ki az Önnek legmegfelelőbbet.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
