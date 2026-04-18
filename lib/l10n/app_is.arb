@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "Stilla tölu dagsins",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "{\n  \"fixMisalignedNumbers\": \"Ef númerin eru röng, leiðréttu þau í Stillingum.\",\n  \"@fixMisalignedNumbers\": {\n    \"description\": \"今日の服用番号変更機能のFeatureAppeal Barの短い説明文\"\n  }\n}",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
