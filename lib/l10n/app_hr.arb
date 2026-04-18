@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Ne propustite dozu ni u načinu 'Ne ometaj'.",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Obavijesti stižu čak i u tihom načinu rada",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
