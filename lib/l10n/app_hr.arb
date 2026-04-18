@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "{\n  \"quick_record_help_long_press\": \"Ako pritisnete i držite obavijest podsjetnika, pojavit će se akcija \\\"Označi kao uzeto\\\" i možete zabilježiti uzimanje bez otvaranja aplikacije.\",\n  \"@quick_record_help_long_press\": {\n    \"description\": \"クイックレコード機能のヘルプページの本文。リマインダー通知を長押しすると表示されるアクションについて説明する。\"\n  }\n}",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Automatsko dodavanje listića pilula",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
