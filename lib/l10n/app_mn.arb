@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "Өнөөдөр уух эмийн дугаарыг өөрчлөх боломжтой",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Эм уухаа мартсан эсвэл андуурснаас болж эмийн хуудас дахь дугаар болон бодит хэрэглээ зөрсөн үед өнөөдөр уух эмийн дугаарыг гараар засч тохируулах боломжтой. Нүүр хуудасны эмийн дугаарын харагдацаас ч мөн адил дэлгэцийг нээж болно。",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
