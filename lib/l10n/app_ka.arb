@@ -2658,5 +2658,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "შეტყობინების ტექსტის თავისუფალი რედაქტირება",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "ყველა დღე შეხსენებებთან იქნება დაკავშირებული",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
   }
 }
