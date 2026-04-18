@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Ειδοποίηση υπενθύμισης",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Πατήστε μια ημερομηνία για να γράψετε ένα πρόγραμμα",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
