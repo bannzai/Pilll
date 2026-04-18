@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint1": "বিনামূলীয়াকৈ ব্যৱহাৰ কৰিব পৰা নম্বৰ মিলোৱা সুবিধা",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "ছেটিংছ টেবৰ পৰা সলনি কৰিব পাৰি",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
