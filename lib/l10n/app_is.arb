@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Taka upp blæðingar og spá fyrir þær",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Skráðu upphafsdag tímabilsins til að fylgjast með tíðahringnum",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
