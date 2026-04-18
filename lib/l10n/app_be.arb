@@ -2774,5 +2774,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Ручнае стварэнне не патрэбна",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Пераключэнне пераключальнікам ва ўкладцы налад",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
