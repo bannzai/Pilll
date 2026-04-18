@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Премиум гишүүнчлэлтэйгээр шууд ашиглах боломжтой",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Пиллийн хуудас дуусахад автоматаар шилжих",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
