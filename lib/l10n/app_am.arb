@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealShortDescription": "በጸጥታ ሁነታም ቢሆን ክኒን መውሰዱን አትርሳ",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "በጸጥታ ሁነታ ውስጥም ማሳወቂያዎች ይደርሳሉ",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
