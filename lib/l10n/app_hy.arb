@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "Ձեր կողմից մատչար կամ սխալ վերցնելու պատճառով պտղա թերթիկի վրա նշված թվերը և իրական ընդունումը տարբերվելիս կարող եք ձեռքով համադրել՝ այսօր ընդունելի նշանակվող պտղայի համար։ Դուք կարող եք նույն էկրանին բացել նաև գլխավորի պտուղների թվանշան ցույց տալուց։",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Հիշողության արձանագրություն՝ դեղաչափով դադարող ժամանակի նշում",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
