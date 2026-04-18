@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "პლასტინის sheet-ის დასრულების დროს ავტომატურად გადართვა",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "ხელით შექმნა საჭირო არ არის",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
