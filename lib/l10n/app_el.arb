@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Δεν απαιτείται χειροκίνητη δημιουργία",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Εναλλαγή με τον διακόπτη στην καρτέλα ρυθμίσεων",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
