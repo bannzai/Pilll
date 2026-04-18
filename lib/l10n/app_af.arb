@@ -2498,5 +2498,9 @@
   "recordPillFeatureAppealHeadline": "Teken pillinname op die tuisskerm aan",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "By net op die pilblad op die tuisskerm te tik, kan u die inname vir daardie dag aanteken. As u per ongeluk aangeteken het, kan u dit ongedaan maak deur weer te tik. U kan ook die innamegeskiedenis later nagaan, sodat u met gemoedsrus kan voortgaan.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
