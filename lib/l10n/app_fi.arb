@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Kun painat muistutusilmoitusta pitkään, näkyviin tulee \"Otettu\"-toiminto, jonka avulla voit kirjata pillerin otetuksi avaamatta sovellusta.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Lisää pillerisivu automaattisesti",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
