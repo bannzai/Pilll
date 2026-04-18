@@ -2502,5 +2502,9 @@
   "recordPillFeatureAppealBody": "Ana ekrandakı həb vərəqəsinə sadəcə toxunmaqla həmin günün qəbulunu qeyd edə bilərsiniz. Səhvən qeyd etdiyiniz halda, bir daha toxunmaqla ləğv edə bilərsiniz. Qəbul tarixçəsini sonradan da yoxlaya bildiyiniz üçün, arxayın davam edə bilərsiniz.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Adet qeydiyyatı və proqnozu",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
