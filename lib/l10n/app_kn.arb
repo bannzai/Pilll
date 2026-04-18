@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "ಸೂಚನೆಯ ಕ್ರಿಯೆಯಿಂದ ಸೇವೆ ದಾಖಲಿಸಿ",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "アプリを開かずに完了",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
