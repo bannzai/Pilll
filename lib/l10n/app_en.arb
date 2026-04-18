@@ -2728,5 +2728,9 @@
   "futureScheduleFeatureAppealPoint3": "Notify with reminder",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Automatically sync period records",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
