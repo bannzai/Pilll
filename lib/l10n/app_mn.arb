@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Өөрийн гэсэн мэдэгдлийн мессеж",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Эмийн хуудасыг огноогоор харуулах",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
