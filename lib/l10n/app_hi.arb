@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "नोटिफिकेशन से सीधे दवा लेने का रिकॉर्ड",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "ऐप खोले बिना नोटिफिकेशन पर रिकॉर्ड करें",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
