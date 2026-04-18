@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Herätyskelloa vastaava hälytysääni",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 tai uudempi・Ota käyttöön Asetukset-välilehdeltä",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
