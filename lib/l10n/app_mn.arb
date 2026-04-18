@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Сарын тэмдэгний эхлэх өдрийг хялбархан бүртгэх",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Мөчлөгийг автоматаар тодорхойлох",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
