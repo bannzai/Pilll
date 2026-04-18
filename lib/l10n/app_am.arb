@@ -2722,5 +2722,9 @@
   "calendarDiaryFeatureAppealPoint3": "ያለፉ መዝገቦችን በቀን መቁጠሪያ ይፈትሹ",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "ቀኑን ጠቅ ያድርጉ ጤናዊ ሁኔታዎን ለመቅዳት",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
