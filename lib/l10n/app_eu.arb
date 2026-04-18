@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Ez da eskuzko sorrera-eragiketarik behar",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Ezarpen fitxako etengailuarekin aldatu",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
