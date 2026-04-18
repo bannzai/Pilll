@@ -2410,5 +2410,9 @@
   "inquiryContentRequired": "Si us plau, introduïu el contingut de la consulta",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Gràcies per la vostra compra del pla de pagament únic. Si teniu una subscripció mensual o anual activa, recordeu cancel·lar-la.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
