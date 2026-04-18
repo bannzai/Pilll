@@ -2742,5 +2742,9 @@
   "futureScheduleFeatureAppealLocationHint": "Tapnite datum za unos rasporeda",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Automatska sinkronizacija podataka o menstruaciji",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
