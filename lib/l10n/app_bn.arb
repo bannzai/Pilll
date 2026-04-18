@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealPoint2": "স্বাস্থ্যের অবস্থা নোট করুন ও পর্যালোচনা করুন",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "অতীতের রেকর্ড ক্যালেন্ডারে পর্যালোচনা করুন",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
