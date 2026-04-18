@@ -2594,5 +2594,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Skep outomaties die volgende pilblad",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Wanneer die huidige pilbladgroep eindig, word 'n nuwe pilbladgroep outomaties geskep. Geen handmatige wisseling is nodig nie, en daar sal geen gapings in die rekords wees nie.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
