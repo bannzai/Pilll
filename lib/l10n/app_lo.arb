@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "ບັນທຶກຊ່ວງຢຸດກິນຢາ",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "ຄວບຄຸມການຢຸດການຮັບຢາແລະການຂາດຕໍ່ໄດ້ຢ່າງແນ່ນອນ",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
