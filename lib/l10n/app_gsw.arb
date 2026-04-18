@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Mit eme Tipp uf dr Benachrichtigsig d'Innahm ufzeichne",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Wann mr d'Erinnerigsbenachrichtigung lang druckt, erscheint d'Aktioon «Inghenumme» un mr kann d'Innahm ufzeichne, ohni d'App ufzmache.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
