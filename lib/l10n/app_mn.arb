@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "Календарт бичлэгүүдийг харах",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Биеийн байдлаа тэмдэглэж эргэн харах",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
