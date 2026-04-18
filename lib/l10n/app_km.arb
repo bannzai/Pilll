@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "បើធ្វើខុស អាចបោះបង់វិញបានយ៉ាងងាយ",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "មើលប្រវត្តិការទទួលថ្នាំបានគ្រប់ពេល",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
