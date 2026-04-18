@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Σύνδεση με Υγεία",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Κοινοποίηση εγγραφών περιόδου με το Healthcare",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
