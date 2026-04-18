@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealTitle": "Gələcək planlarını qeyd et",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Həkim ziyarəti kimi gələcək planları idarə edin",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
