@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "आने वाली नियुक्तियाँ और अन्य भविष्य की योजनाएँ प्रबंधित करें",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
