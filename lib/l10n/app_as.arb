@@ -2486,5 +2486,9 @@
   "appearanceModeDateFeatureAppealBody": "পিল শ্বীটৰ কোষসমূহত তাৰিখ প্ৰদৰ্শন কৰি, আপুনি অতীতৰ সেৱন ইতিহাস আৰু ভৱিষ্যতৰ সেৱনৰ কাৰ্যসূচী এক দৃষ্টিতে পৰীক্ষা কৰিব পাৰিব। 'নম্বৰ' মোড আৰু 'তাৰিখ' মোডৰ মাজত সলনি কৰি, আপোনাৰ বাবে উপযুক্ত প্ৰদৰ্শন বাছি লওক।",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "সহজে ঔষধ সেৱনৰ ইতিহাস পৰ্যালোচনা কৰক",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
