@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "បង្ហាញកាលបរិច្ឆេទ​នៅលើសន្លឹកថ្នាំ",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "ដោយបង្ហាញកាលបរិច្ឆេទលើប្រអប់ក្នុងសន្លឹកថ្នាំ អ្នកអាចមើលទាំងប្រវត្តិនៃការយកថ្នាំនៅមុន និងកាលវិភាគសម្រាប់ការយកនៅអនាគតបានក្នុងមួយទិដ្ឋភាព។ ប្ដូររវាងម៉ូដ «លេខ» និងម៉ូដ «កាលបរិច្ឆេទ» ដើម្បីជ្រើសរើសរបៀបបង្ហាញដែលត្រូវសម្រាប់អ្នក។",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
