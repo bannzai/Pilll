@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Ricevi notifiche anche durante la Modalità Concentrazione",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Promemoria puntuali all'orario impostato",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
