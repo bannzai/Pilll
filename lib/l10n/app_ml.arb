@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint2": "തെറ്റ് പറ്റിയാലും എളുപ്പം പഴയപടിയാക്കാം",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "ഉപഭോഗ ചരിത്രം ഏപ്പോഴും പരിശോധിക്കുക",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
