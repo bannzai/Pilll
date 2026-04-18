@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Dim angen creu â llaw",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Toglo gyda switsh yn y tab gosodiadau",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
