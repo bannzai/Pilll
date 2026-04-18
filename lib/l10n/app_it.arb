@@ -2778,5 +2778,9 @@
   "todayPillNumberFeatureAppealPoint1": "Feature per abbinamento numerico utilizzabile gratuitamente",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Impostazioni disponibili nella scheda Impostazioni",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
