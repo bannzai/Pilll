@@ -2766,5 +2766,9 @@
   "quickRecordFeatureAppealPoint3": "Premium abunəliklə olduğu kimi istifadə edilə bilər",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Hap vərəqi bitdikdə avtomatik keçid",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
