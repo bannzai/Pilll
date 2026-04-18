@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Catat melalui notifikasi tanpa membuka aplikasi",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Catat pemakaian dengan sekali ketuk di layar notifikasi",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
