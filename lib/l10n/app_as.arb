@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint1": "কেলেণ্ডাৰত পৰিকল্পনা লিখক",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "চিকিৎসালয় যোৱাৰ দিন সহজে পৰিচালনা",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
