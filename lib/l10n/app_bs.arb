@@ -2810,5 +2810,9 @@
   "restDurationFeatureAppealPoint2": "Pokrenite putem ikone zupčanika u gornjem desnom uglu lista tableta",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Lako uređivanje i nastavak perioda",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
