@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Nömrə yanlışdırsa, parametrlərdə düzəldin",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Bu gün qəbul ediləcək həb nömrəsini dəyişdirə bilərsiniz",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
