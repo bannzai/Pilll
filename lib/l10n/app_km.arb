@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "ដោយបង្ហាញកាលបរិច្ឆេទលើប្រអប់ក្នុងសន្លឹកថ្នាំ អ្នកអាចមើលទាំងប្រវត្តិនៃការយកថ្នាំនៅមុន និងកាលវិភាគសម្រាប់ការយកនៅអនាគតបានក្នុងមួយទិដ្ឋភាព។ ប្ដូររវាងម៉ូដ «លេខ» និងម៉ូដ «កាលបរិច្ឆេទ» ដើម្បីជ្រើសរើសរបៀបបង្ហាញដែលត្រូវសម្រាប់អ្នក។",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "ពិនិត្យប្រវត្តិការទទួលថ្នាំបានយ៉ាងងាយស្រួល",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
