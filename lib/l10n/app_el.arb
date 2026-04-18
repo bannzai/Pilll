@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "Προσαρμογή ρυθμίσεων",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Λίστα εγγραφών στο ημερολόγιο",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
