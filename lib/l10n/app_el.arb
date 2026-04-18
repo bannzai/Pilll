@@ -2502,5 +2502,9 @@
   "menstruationFeatureAppealShortDescription": "Καταγράψτε την ημερομηνία έναρξης περιόδου και παρακολουθήστε τον κύκλο σας",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Μπορείτε να καταγράψετε και να προβλέψετε την περίοδό σας",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
