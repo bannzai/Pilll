@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "ບັນທຶກມື້ຫ່ອງຮັບຢາ ໃຊ້ໄດ້ຟຣີ",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "ເລີ່ມຈາກປຸ່ມຕັ້ງຄ່າ ຢູ່ມຸງຂວາຂອງຊີດຢາ",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
