@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "ಸೇವನೆ ವಿರಾಮ ಅವಧಿಯನ್ನು ದಾಖಲಿಸಿ",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "ಔಷಧಿ ವಿರಾಮ ಮತ್ತು ಮಧ್ಯಂತರ ನಿಲ್ಲುವಿಕೆಯನ್ನು ನಿಖರವಾಗಿ ನಿರ್ವಹಿಸಿ",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
