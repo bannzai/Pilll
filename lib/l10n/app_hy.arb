@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Դուք կարող եք օրացույցում գրանցել ապագա նշանակումները՝ օրինակ՝ բժշկի այցերը կամ ճանապարհորդությունները։ Օրացույցը հնարավոր է համադրել ձեր պիլերի ընդունման ցիկլի հետ, այնպես որ կարող եք պլանավորել՝ հաշվի առնելով նաև սպասվող դաշտանային օրերը։",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Առողջության հետ համաժամացում",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
