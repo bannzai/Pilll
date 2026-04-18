@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "ເບິ່ງໄດ້ເລັກດຽວວ່າຕ້ອງກິນເມື່ອໃດ",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "ສາມາດສະແດງວັນທີໃນແຜ່ນຢາ",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
