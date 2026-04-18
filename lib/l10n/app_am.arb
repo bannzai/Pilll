@@ -2658,5 +2658,9 @@
   "criticalAlertFeatureAppealPoint2": "በተቀናጀ ሰዓት አስተማማኝ ማስታወሻ",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "በአንድ ጠቅታ ቀላል ቅንብር",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
