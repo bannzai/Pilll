@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "Gaurko pastilla-zenbakia egokitu",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Zenbakia desegokia bada, ezarpenetan zuzendu",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
