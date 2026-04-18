@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealShortDescription": "নম্বৰ বেলেগ হ'লে ছেটিংত সংশোধন কৰক",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "আজি লʼবলগীয়া পিল নম্বৰ সলনি কৰিব পাৰি",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
