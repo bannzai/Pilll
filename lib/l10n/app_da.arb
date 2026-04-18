@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Gratis pauseregistrering",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Start fra tandhjulet øverst til højre på pillearket",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
