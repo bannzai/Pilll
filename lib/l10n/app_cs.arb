@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Nezapomeňte na pilulku ani v režimu Nerušit",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Oznámení i v tichém režimu",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
