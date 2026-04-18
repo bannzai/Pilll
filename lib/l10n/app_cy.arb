@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Gellir ei newid o'r tab gosodiadau",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Gellir ei agor hefyd trwy dapio'r rhif ar yr hafan",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
