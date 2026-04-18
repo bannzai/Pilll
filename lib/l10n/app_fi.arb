@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Vaihda asetukset-välilehden kytkimellä",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Soi myös äänettömässä/Fokus-tilassa",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
