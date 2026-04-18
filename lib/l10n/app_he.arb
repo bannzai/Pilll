@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "ניתן לרשום תוכניות עתידיות בלוח השנה, כגון תורים אצל הרופא או טיולים. מכיוון שניתן לבדוק זאת לצד מחזור נטילת הגלולה, תוכלי לתכנן תוכניות תוך התחשבות בלוח הווסת שלך.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "שילוב עם בריאות",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
