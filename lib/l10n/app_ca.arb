@@ -2726,5 +2726,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Toca una data per registrar el teu estat de salut",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Apunta cites al calendari",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
