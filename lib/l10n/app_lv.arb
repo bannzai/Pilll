@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint3": "Pārskatiet lietošanas vēsturi jebkurā laikā",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Vienkārši pierakstiet menstruācijas sākuma datumu",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
