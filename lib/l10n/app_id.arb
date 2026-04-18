@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Ketika grup lembar pil saat ini berakhir, grup lembar pil baru akan dibuat secara otomatis. Anda tidak perlu mengganti secara manual, sehingga tidak ada catatan yang terlewat.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Alarm yang berbunyi seperti jam weker",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
