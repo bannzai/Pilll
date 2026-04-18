@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "მთავარ ეკრანზე პილ-შიტს უბრალოდ შეეხეთ, რომ დააფიქსიროთ იმ დღის მიღება. თუ შემთხვევით ჩაიწერა, შეეხეთ კვლავ და ჩანაწერი გაუქმდება. მიღებების ისტორია შემდგომშიც ხელმისაწვდომია, ამიტომ მშვიდად შეგიძლიათ გააგრძელოთ.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "პერიოდის ჩანაწერი და პროგნოზი",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
