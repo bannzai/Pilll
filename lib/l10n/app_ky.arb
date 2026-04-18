@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Ай циклиңизди автоматтык түрдө аныктоо",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Жөндөөлөрдү ыңгайлаштыр",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
