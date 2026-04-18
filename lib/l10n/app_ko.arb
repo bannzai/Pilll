@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "무료로 이용 가능한 휴약 기록",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "피임약 시트 오른쪽 상단의 설정(톱니바퀴)에서 시작하세요",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
