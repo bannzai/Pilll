@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealPoint2": "ጤናዎን ሁኔታ ይፃፉ እና ይፈትሹ",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "ያለፉ መዝገቦችን በቀን መቁጠሪያ ይፈትሹ",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
