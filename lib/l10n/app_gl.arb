@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Soa mesmo en modo silencioso/de concentración",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Alarma de espertador",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
