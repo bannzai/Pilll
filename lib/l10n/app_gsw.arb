@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "En Alarm wie e Wecker",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Benachrichtigunge, wu au im Stumm-Modus sicher ringe",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
