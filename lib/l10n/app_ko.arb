@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "방해 금지 모드에서도 복용을 놓치지 마세요",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "무음 모드에서도 알림을 받을 수 있습니다",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
