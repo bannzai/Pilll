@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "ಔಷಧಿ ವಿರಾಮ ಮತ್ತು ಮಧ್ಯಂತರ ನಿಲ್ಲುವಿಕೆಯನ್ನು ನಿಖರವಾಗಿ ನಿರ್ವಹಿಸಿ",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "ಗೋಳಿ ಸೇವೆಯನ್ನು ವಿರಾಮಗೊಳಿಸುವುದು",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
