@@ -2741,5 +2741,9 @@
   "quickRecordFeatureAppealPoint1": "ثبت مصرف از طریق اقدام اعلان",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "تکمیل بدون باز کردن برنامه",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
