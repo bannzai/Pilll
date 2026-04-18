@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealTitle": "ঘড়ীৰ দৰে বাজিব পৰা এলাৰ্ম",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "চাইলেণ্টতো নিশ্চিতকৈ বাজিব পৰা জাননী",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
