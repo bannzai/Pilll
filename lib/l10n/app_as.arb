@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint1": "কেলেণ্ডাৰত ৰেকৰ্ডৰ তালিকা",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "স্বাস্থ্যৰ অৱস্থা টোকা কৰি পুনৰ চাওক",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
