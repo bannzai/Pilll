@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "Galite pakeisti šiandien vartojamos tabletės numerį",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Jei dėl pamiršimo ar klaidos numeris ant tablečių lapelio nesutampa su tuo, ką iš tikrųjų suvartojote, galite rankiniu būdu suderinti šiandien vartojamos tabletės numerį. Tą patį ekraną taip pat galite atidaryti paspaudę tablečių numerį pagrindiniame ekrane.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
