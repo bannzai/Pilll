@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "កំណត់លេខទទួលថ្នាំសម្រាប់ថ្ងៃនេះ",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "ប្រសិនបើលេខផ្លាស់ចេញ សូមទៅកែប្រែ​នៅក្នុងការកំណត់",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
