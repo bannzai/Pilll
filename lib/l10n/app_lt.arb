@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Lengvai užfiksuokite mėnesinių pradžios datą",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Automatiškai nustato ciklą",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
