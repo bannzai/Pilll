@@ -2649,5 +2649,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "ویرایش آزادانه پیام‌های اعلان",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "اعمال در اعلان‌های روزانه مصرف دارو",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
   }
 }
