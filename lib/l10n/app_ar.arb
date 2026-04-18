@@ -2630,5 +2630,9 @@
   "todayPillNumberFeatureAppealBody": "عندما يختلف الرقم الموجود على ورقة الحبوب عن الجرعة الفعلية بسبب النسيان أو الخطأ، يمكنك ضبط رقم الحبة التي ستتناولينها اليوم يدوياً. يمكنك أيضاً فتح نفس الشاشة من خلال عرض رقم الحبة في الصفحة الرئيسية.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "تسجيل فترة توقف تناول الدواء",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
