@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "Күнделікті жағдайыңызды күнтізбеге жазу",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Күнтізбеден күнді түртіп, денсаулық жағдайы, көңіл-күй, симптомдар және т.б. туралы жазбалар енгізуге болады. Бұл жазбаларды дәрі қабылдау және етеккір жазбаларымен бірге қарап, өз денеңіздің ырғақтарын бақылап отыра аласыз.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
