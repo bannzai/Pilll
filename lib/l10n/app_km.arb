@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "អាចផ្លាស់ប្តូរបានពីផ្ទាំងការកំណត់",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "អាចបើកបានដោយចុចលើលេខលើទំព័រដើម",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
