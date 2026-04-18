@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Διαθέσιμο με συνδρομή Premium",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Αυτόματη εναλλαγή στη λήξη φύλλου χαπιών",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
