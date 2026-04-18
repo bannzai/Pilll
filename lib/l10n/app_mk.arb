@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Достапно веднаш со Премиум претплата",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Автоматски премин кога ќе заврши листата со пилули",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
