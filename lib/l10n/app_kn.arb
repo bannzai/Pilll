@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ದಾಖಲೆಯನ್ನು ಪಟ್ಟಿ ಮಾಡಿ",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "ಶರೀರದ ಸ್ಥಿತಿಯನ್ನು ದಾಖಲಿಸಿ ಮತ್ತು ಪರಿಶೀಲಿಸಿ",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
