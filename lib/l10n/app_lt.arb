@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "Nustatymų tinkinimas",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Kalendoriuje peržiūrėti įrašus",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
