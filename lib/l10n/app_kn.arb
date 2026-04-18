@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "ಅಧಿಸೂಚನೆಯಿಂದ ನೇರವಾಗಿ ದಾಖಲಿಸಿ",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "ಅಪ್ ತೆರೆಯದೆ ಅಧಿಸೂಚನೆಯಲ್ಲಿ ದಾಖಲಿಸಿ",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
