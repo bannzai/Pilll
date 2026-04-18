@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "Белгиленген убакта сөзсүз эскертет",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Бир тийүү менен оңой орнотуу",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
