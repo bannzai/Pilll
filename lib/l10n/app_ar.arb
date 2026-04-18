@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint1": "عرض ورقة الحبوب حسب التاريخ",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "يمكنك معرفة التاريخ دون النظر إلى التقويم",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
