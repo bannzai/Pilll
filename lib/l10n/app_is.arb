@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Hægt er að breyta því í Stillingarflipunni.",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Þú getur líka opnað með því að banka á töluna á heimaskjánum.",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
