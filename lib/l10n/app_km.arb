@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "ចុចយូរលើសារជូនដំណឹង នឹងបង្ហាញសកម្មភាព «បានយកថ្នាំ» ហើយអ្នកអាចកត់ត្រាការយកថ្នាំដោយមិនចាំបាច់បើកកម្មវិធី។",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "បន្ថែមសន្លឹកថ្នាំដោយស្វ័យប្រវត្តិ",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
