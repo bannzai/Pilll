@@ -2682,5 +2682,9 @@
   "appearanceModeDateFeatureAppealPoint2": "ক্যালেন্ডার না দেখেও তারিখ জানা যায়",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "পিল শিট সেটিংস থেকে পরিবর্তনযোগ্য",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
