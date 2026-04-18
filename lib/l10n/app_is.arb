@@ -2518,5 +2518,9 @@
   "calendarDiaryFeatureAppealShortDescription": "{\n  \"@@locale\": \"is\",\n  \"calendarFeatureAppeal\": \"Skráðu daglega líðan þína í dagatalið.\",\n  \"@calendarFeatureAppeal\": {\n    \"description\": \"カレンダー・日記機能のFeatureAppeal Barの短い説明文\"\n  }\n}",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Skráðu daglega líðan þína í dagatalið",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
