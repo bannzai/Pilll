@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "Skrá yfir færslur í dagatalinu",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "体調をメモして振り返り",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
