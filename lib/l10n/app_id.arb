@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Mudah mencatat tanggal mulai menstruasi",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Identifikasi siklus secara otomatis",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
