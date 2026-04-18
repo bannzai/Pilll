@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Periodendaten automatisch synchronisieren",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Mit Gesundheits-App synchronisieren",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
