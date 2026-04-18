@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint1": "Obavještenja stižu čak i tokom načina fokusiranja",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Podsjetnik u tačno zakazano vrijeme",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
