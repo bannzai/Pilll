@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Tsükli automaatne tuvastamine",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Kohanda seadeid",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
