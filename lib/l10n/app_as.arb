@@ -2754,5 +2754,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple স্বাস্থ্যসেৱা সমৰ্থন",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "জাননীৰ কাৰ্যৰ জৰিয়তে সেৱন ৰেকৰ্ড",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
