@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Ամսաթվին հպեք և գրեք ձեր ծրագիրը",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Մենստրուացիայի գրառումների ավտոմատ համաժամացում",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
