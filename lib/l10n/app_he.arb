@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "הפעל דרך לשונית 'הגדרות' ב-iOS 26 ומעלה",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "תכונת התאמת מספרים חינמית",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
