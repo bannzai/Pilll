@@ -2658,5 +2658,9 @@
   "criticalAlertFeatureAppealPoint2": "Recordatoris fiables a l'hora configurada",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Configuració fàcil amb un sol toc",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
