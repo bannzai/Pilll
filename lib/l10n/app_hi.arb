@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Pilll में दर्ज आपके मासिक धर्म डेटा को हेल्थ ऐप के साथ स्वचालित रूप से सिंक किया जा सकता है। आप इसे हेल्थ ऐप में अन्य स्वास्थ्य डेटा के साथ देख सकते हैं, और अन्य ऐप्स में भी मासिक धर्म डेटा का उपयोग कर पाएँगे।",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "नोटिफिकेशन से सीधे दवा लेने का रिकॉर्ड",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
