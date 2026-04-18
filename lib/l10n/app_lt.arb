@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Ilgai paspaudus priminimo pranešimą, bus rodoma veiksmo parinktis „Vartojau“, kuri leidžia užregistruoti vartojimą neatidarant programėlės.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Automatiškai pridėti tablečių lapelius",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
