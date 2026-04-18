@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "피임약 시트의 칸에 날짜를 표시하면 과거 복용 기록과 앞으로의 복용 예정일을 한눈에 확인할 수 있습니다. '번호' 모드와 '날짜' 모드를 전환하여 자신에게 맞는 표시를 선택하세요.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "복용 기록을 간편하게 확인",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
