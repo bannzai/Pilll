@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Эмийн хуудасыг огноогоор харуулах",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Календарь харахгүйгээр огноог мэдэж болно",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
