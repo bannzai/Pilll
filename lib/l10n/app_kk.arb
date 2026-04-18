@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "间違えてもかんたん取り消し",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Қабылдау жазбаларын кез келген уақытта тексеріңіз",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
