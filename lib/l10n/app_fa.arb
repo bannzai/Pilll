@@ -2645,5 +2645,9 @@
   "criticalAlertFeatureAppealPoint3": "تنظیم آسان با یک ضربه",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "ویرایش آزادانه پیام‌های اعلان",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
