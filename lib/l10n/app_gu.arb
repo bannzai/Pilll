@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "હોમ સ્ક્રીન પર ગોળી લેવાની નોંધ કરો",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "હોમ સ્ક્રીન પર પિલ શીટ ટૅપ કરીને, તે દિવસની દવા લેવાનો રેકોર્ડ કરી શકો છો. ભૂલથી રેકોર્ડ કર્યો હોય, તો ફરીથી ટૅપ કરીને રદ કરી શકો છો. દવા લેવાનો ઇતિહાસ પણ પછીથી ચેક કરી શકાય છે, તેથી નિશ્ચિંત થઈને આગળ વધી શકો છો।",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
