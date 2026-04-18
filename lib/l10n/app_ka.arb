@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "თუ დაგავიწყებისა ან შეცდომით მიღების გამო პილ-ფურცელზე ნაჩვენები ნომერი რეალურ მიღებას არ ემთხვევა, შეგიძლიათ დღეს მიღების პილის ნომერი ხელით დაარეგულიროთ. იგივე ეკრანი ხელმისაწვდომია მთავარი ეკრანის პილის ნომრის ჩვენებიდანაც.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "მიღების შესვენების პერიოდის ჩანაწერა",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
