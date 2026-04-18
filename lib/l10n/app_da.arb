@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "Skriv dine fremtidige aftaler",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Administrer fremtidige aftaler som lægebesøg",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
