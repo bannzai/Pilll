@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "ભવિષ્યની યોજનાઓ લખો",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealHeadline": "કૅલેન્ડર પર ભવિષ્યની યોજનાઓ નોંધો",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
