@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealTitle": "Zabilježi period odmora od uzimanja",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Precizno upravljanje pauzama i prekidima",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
