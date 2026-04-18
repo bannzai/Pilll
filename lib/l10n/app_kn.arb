@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "ಪ್ರೀಮಿಯಂ ಸದಸ್ಯರಾಗಿ ಸೇರಿದಾಗ ತಕ್ಷಣ ಬಳಸಬಹುದು",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "ಪಿಲ್ ಶೀಟ್ ಮುಗಿದಾಗ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಬದಲಾಯಿಸಿ",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
