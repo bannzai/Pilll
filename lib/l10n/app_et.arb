@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Äratuskella sarnane häälsignaal",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 ja uuem · aktiveerige seadetest",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
