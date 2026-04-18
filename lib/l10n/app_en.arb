@@ -2736,5 +2736,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Sync with Health App",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Health Integration",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
