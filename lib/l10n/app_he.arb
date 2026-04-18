@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "ניתן להקיש על תאריך בלוח השנה כדי לתעד את מצב הגוף, מצב הרוח, התסמינים ועוד. מאחר שניתן לצפות בהם יחד עם רשומות הנטילה ורשומות המחזור, תוכלי להבין את קצב גופך.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "רשמי תוכניות לעתיד",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
