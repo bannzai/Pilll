@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "Přesná správa přestávek a přerušení",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Přerušit užívání pilulky",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
