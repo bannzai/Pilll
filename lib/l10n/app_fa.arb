@@ -2677,5 +2677,9 @@
   "recordPillFeatureAppealPoint2": "لغو آسان حتی در صورت اشتباه",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "مشاهده تاریخچه مصرف در هر زمان",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
