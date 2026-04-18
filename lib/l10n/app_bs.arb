@@ -2706,5 +2706,9 @@
   "menstruationFeatureAppealPoint2": "Automatsko praćenje ciklusa",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Prilagodi postavke",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
