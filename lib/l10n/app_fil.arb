@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Madaling itala ang petsa ng simula ng regla",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Awtomatikong Alamin ang Siklo",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
