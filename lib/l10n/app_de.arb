@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "Bitte geben Sie Ihre Anfrage ein",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Vielen Dank für den Kauf des Einmalkaufplans. Falls Sie ein Monats- oder Jahresabonnement abgeschlossen haben, vergessen Sie bitte nicht, dieses zu kündigen.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
