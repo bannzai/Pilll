@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "नोटिफिकेशन की क्रिया से सेवन दर्ज करें",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "ऐप खोले बिना पूरा करें",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
