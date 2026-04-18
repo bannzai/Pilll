@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealShortDescription": "Не пропускайте хапчетата дори в режим „Не безпокой\"",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Уведомленията пристигат дори в безшумен режим",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
