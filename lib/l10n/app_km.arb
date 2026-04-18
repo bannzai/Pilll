@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "ជូនដំណឹងតាមការរំឮក",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "ចុចលើកាលបរិច្ឆេទ ដើម្បីបញ្ចូលកាលវិភាគ",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
