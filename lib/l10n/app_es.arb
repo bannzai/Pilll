@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Seguimiento automático del ciclo",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Personalizar configuración",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
