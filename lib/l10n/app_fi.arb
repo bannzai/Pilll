@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Ilmaiseksi käytettävä numeroiden sovitusominaisuus",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Voidaan muuttaa asetukset-välilehdeltä",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
