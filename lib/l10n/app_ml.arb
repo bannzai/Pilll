@@ -2590,5 +2590,9 @@
   "alarmKitFeatureAppealTitle": "അലാറം ക്ലോക്കിനെപ്പോലെ മുഴങ്ങുന്ന അലാറം",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "സൈലന്റ് മോഡിലും ഉറപ്പായി മുഴങ്ങുന്ന അറിയിപ്പ്",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
