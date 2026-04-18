@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealLocationHint": "Tocca una data per aggiungere un evento",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "生理記録を自動でデータ連携",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
