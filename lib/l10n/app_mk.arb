@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Едноставно управување со деновите за посети",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Известување преку потсетник",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
