@@ -2778,5 +2778,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Пераключэнне пераключальнікам ва ўкладцы налад",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Гучыць нават у рэжыме цішыні/засяроджанасці",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
