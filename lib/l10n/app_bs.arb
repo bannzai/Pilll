@@ -2658,5 +2658,9 @@
   "criticalAlertFeatureAppealPoint2": "Podsjetnik u tačno zakazano vrijeme",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Jednostavno postavljanje jednim dodirom",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
