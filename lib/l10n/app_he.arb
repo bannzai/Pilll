@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "ניתן גם לפתוח על ידי לחיצה על המספר במסך הבית",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "רישום ימי הפסקה מהגלולה בחינם",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
