@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Үнэгүй ашиглах боломжтой завсарлагааны бүртгэл",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Эм хуудасны баруун дээд буланд байгаа шүдэт дугуйгаас эхлэх",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
