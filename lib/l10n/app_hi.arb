@@ -2414,5 +2414,9 @@
   "lifetimePurchaseNotice2": "{\n  \"subscription_management_link\": \"यहाँ\",\n  \"@subscription_management_link\": {\n    \"description\": \"サブスクリプション管理ページへのリンクテキスト\"\n  },\n  \"@@locale\": \"hi\"\n}",
   "@lifetimePurchaseNotice2": {
     "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "कृपया खरीदने से पहले अपनी मौजूदा सदस्यता रद्द कर लें।",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
   }
 }
