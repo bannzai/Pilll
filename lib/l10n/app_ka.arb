@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "თქვენი პირადი შეტყობინება",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "პილების ფურცლის ჩვენება თარიღის მიხედვით",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
