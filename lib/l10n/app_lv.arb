@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint3": "Pielāgot iestatījumus",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Skatīt ierakstus kalendārā",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
