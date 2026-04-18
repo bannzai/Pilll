@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Kirjaa kuukautisten alkamispäivä helposti",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Seuraa sykliä automaattisesti",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
