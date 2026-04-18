@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Automatska promjena na kraju lista tableta",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Nije potrebno ručno kreiranje",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
