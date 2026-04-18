@@ -2762,5 +2762,9 @@
   "quickRecordFeatureAppealPoint2": "Voltooi sonder om die app oop te maak",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Beskikbaar met Premium-lidmaatskap",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
