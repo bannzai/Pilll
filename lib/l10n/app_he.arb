@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "הקש/י על גליון הגלולות כדי לרשום נטילה",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "ניתן לבטל בקלות גם במקרה של טעות",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
