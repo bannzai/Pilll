@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "Oggi, allinea il numero di assunzione",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Se i numeri sono sbagliati, correggili nelle impostazioni.",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
