@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "អាចបើកបានដោយចុចលើលេខលើទំព័រដើម",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "កំណត់ត្រាការឈប់ប្រើថ្នាំដែលใช้ฟรี",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
