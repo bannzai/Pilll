@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "Anna yhteydenoton sisältö",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Kiitos kertaostosuunnitelman hankinnasta. Jos sinulla on kuukausi- tai vuositilaus, muistathan peruuttaa se.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
