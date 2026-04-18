@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealShortDescription": "চিকিৎসালয়ৰ নিযুক্তি আদি ভৱিষ্যতৰ পৰিকল্পনা পৰিচালনা কৰক",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "কেলেণ্ডাৰত ভৱিষ্যতৰ পৰিকল্পনা ৰেকৰ্ড কৰক",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
