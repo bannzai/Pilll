@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "Dijeli zapise menstrualnog ciklusa s aplikacijom Health",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "Može se integrirati sHealthCareom",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
