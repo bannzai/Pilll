@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "מנעי שכחת גלולה גם במצב שקט",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "התראות מגיעות גם במצב שקט",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
