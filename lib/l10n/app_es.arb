@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "Puedes cambiar el número de píldora que tomas hoy",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Cuando el número en la hoja de pastillas y la toma real no coinciden debido a un olvido o una confusión, puede ajustar manualmente el número de la pastilla que debe tomar hoy. También puede abrir la misma pantalla desde la visualización del número de pastilla en la pantalla de inicio.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
