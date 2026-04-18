@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Käytettävissä sellaisenaan Premium-tilauksella",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Automaattinen vaihto pillerikortin päätyttyä",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
