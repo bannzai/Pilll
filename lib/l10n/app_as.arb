@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealTitle": "ঔষধ সেৱনৰ বিৰতিৰ সময় ৰেকৰ্ড কৰক",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "বিৰতি আৰু বন্ধ সঠিকভাৱে পৰিচালনা কৰক",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
