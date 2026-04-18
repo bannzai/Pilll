@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint1": "Гучыць нават у рэжыме цішыні/засяроджанасці",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Гук сігналу, падобны да будзільніка",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
