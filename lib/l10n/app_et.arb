@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Lõpeta rakendust avamata",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Saadaval Premiumi tellimusega",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
