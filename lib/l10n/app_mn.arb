@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "Өдөр тутмын биеийн байдлыг календарт бүртгэх",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Хуанлинаас огноог дарж биеийн байдал, сэтгэлийн хөдөлгөөн, шинж тэмдэг зэргийг бүртгэж болно. Эм уух бүртгэл болон сарын тэмдгийн бүртгэлтэй хамт харах боломжтой тул өөрийн биеийн хэмнэлийг ойлгох боломжтой.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
