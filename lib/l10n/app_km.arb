@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "គាំទ្រ Apple Health",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "កត់ត្រាការទទួលថ្នាំពីការជូនដំណឹង",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
