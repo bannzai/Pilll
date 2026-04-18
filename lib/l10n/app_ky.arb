@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Үнсүз/Фокус режиминде да үн чыгат",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Будильникке окшош эскертүү үнү",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
