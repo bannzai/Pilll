@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "A mai tabletta sorszámának módosítása",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Ha a bliszteren szereplő szám és a tényleges bevétel eltolódott (például elfelejtés vagy összekeverés miatt), manuálisan beállíthatja, melyik tablettát kell ma bevennie. Ugyanezt a képernyőt megnyithatja a Kezdőlap tablettaszám‑kijelzéséről is.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
