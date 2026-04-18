@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "התחל מהסמל של גלגל השיניים בפינה העליונה הימנית של גיליון הגלולות",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "עריכת המחזור / חידוש בקלות",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
