@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "ទប់ស្កាត់ការភ្លេចពេលទទួលថ្នាំ ទោះបីនៅម៉ូដមិនរំខានក៏ដោយ",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "サイレントモードでも通知が届く",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
