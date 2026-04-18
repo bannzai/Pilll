@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple Health के साथ संगत",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "नोटिफिकेशन की क्रिया से सेवन दर्ज करें",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
