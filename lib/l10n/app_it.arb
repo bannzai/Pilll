@@ -2766,5 +2766,9 @@
   "alarmKitFeatureAppealPoint1": "Suona anche in modalità silenziosa/concentrazione",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Suono di sveglia",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
