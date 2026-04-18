@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Եթե համարները շեղվել են, կարգավորումների մեջ շտկեք",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Կարող եք փոխել այսօր ընդունվող պիլուլի համարը",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
