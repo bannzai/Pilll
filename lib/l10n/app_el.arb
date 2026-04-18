@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Παύση λήψης χαπιού",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Μπορείτε να καταγράψετε μια περίοδο διακοπής λήψης του χαπιού στο φύλλο χαπιών. Κατά τη διάρκεια της παύσης, ο αριθμός δόσης δεν προχωρά και μπορείτε να συνεχίσετε αμέσως την καταγραφή όταν επαναλάβετε τη λήψη.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
