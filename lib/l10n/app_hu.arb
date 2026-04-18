@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Korábbi feljegyzések megtekintése a naptárban",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Érints egy dátumot az állapotod rögzítéséhez",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
