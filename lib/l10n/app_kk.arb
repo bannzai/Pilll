@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Күнтізбеге қарамай-ақ күнді біліңіз",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Пилл парақшасының баптауларынан өзгертуге болады",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
