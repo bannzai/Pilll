@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Critical Alert ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿದರೆ, ನಿದ್ರೆ ಮೋಡ್ ಅಥವಾ ಮ್ಯಾನರ್ ಮೋಡ್‌ನಲ್ಲಿ ಇದ್ದರೂ ಕೂಡ ಪಿಲ್ ಸೇವಿಸುವ ಕುರಿತು ನೆನಪಿಸುವ ಸೂಚನೆಗಳನ್ನು ಪಡೆಯಬಹುದು. ಪ್ರಮುಖ ಪಿಲ್ ಸೇವಿಸುವ ಸಮಯವನ್ನು ತಪ್ಪಿಸಿಕೊಳ್ಳದಿರಲು, ದಯವಿಟ್ಟು ಈ ಸೆಟ್ಟಿಂಗ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "通知メッセージをカスタマイズ",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
