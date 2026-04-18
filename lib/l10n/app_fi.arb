@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Sijainti sovelluksessa",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Ilmoituksia saapuu myös Keskittymistilassa",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
