@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealPoint2": "Gestiona fàcilment les visites mèdiques",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Notificació per recordatori",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
