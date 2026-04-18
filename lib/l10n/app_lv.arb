@@ -2542,5 +2542,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Sinhronizācija ar Veselību",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Kopīgot menstruāciju ierakstus ar Veselību",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
