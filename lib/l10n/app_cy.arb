@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Pan fyddwch chi'n galluogi Rhybuddion Critigol, gallwch dderbyn hysbysiadau cymryd meddyginiaeth hyd yn oed yn ystod Modd Peidiwch â Tharfu neu Modd Tawel. Rhowch gynnig ar ei osod fel na fyddwch yn methu amseroedd cymryd eich pils pwysig.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Addasu neges hysbysiad",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
