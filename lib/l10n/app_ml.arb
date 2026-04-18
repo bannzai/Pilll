@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealShortDescription": "സൈലന്റ് മോഡിലും ഉറപ്പായി മുഴങ്ങുന്ന അറിയിപ്പ്",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "അലാറം ക്ലോക്ക് പോലുള്ള ഡോസ് അലാറം",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
