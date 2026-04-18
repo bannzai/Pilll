@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "Beállítások testreszabása",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Feljegyzések megtekintése a naptárban",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
