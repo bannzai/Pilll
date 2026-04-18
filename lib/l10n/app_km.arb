@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "អ្នកអាចកត់ត្រារយៈពេលដែលអ្នកឈប់ទទួលថ្នាំប៊ិលនៅលើសន្លឹកប៊ិល។ នៅពេលឈប់ លេខលំដាប់ការទទួលថ្នាំនឹងមិនបន្ត ហើយពេលអ្នកចាប់ផ្តើមវិញ អ្នកអាចបន្តកត់ត្រាបានភ្លាមៗ។",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "ទីតាំងក្នុងកម្មវិធី",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
