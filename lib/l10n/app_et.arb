@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Ühendus tervishoiuga",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Jaga menstruaalregistrit tervishoiuga",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
