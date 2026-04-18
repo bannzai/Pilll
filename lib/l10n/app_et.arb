@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "Teate, millal võtsid pillid",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Salvesta pillide võtmine avakuval",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
