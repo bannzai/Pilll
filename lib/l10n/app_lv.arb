@@ -2794,5 +2794,9 @@
   "restDurationFeatureAppealPoint1": "Bezmaksas pārtraukumu uzskaite",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Sāciet, pieskaroties zobrata ikonai tablešu lapas labajā augšējā stūrī.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
