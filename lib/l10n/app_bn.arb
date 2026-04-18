@@ -2582,5 +2582,9 @@
   "quickRecordFeatureAppealBody": "রিমাইন্ডার বিজ্ঞপ্তিটি দীর্ঘ চাপ দিলে \"গ্রহণ করা হয়েছে\" অ্যাকশনটি প্রদর্শিত হয় এবং অ্যাপ না খুলেই সেবন রেকর্ড করা যায়।",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "স্বয়ংক্রিয়ভাবে পিল শিট যোগ করুন",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
