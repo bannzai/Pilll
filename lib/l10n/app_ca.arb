@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealTitle": "Registra i prediu la menstruació",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Registra el primer dia de la regla i controla el teu cicle",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
