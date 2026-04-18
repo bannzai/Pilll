@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "દરરોજની તબિયત કૅલેન્ડરમાં નોંધો",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "કૅલેન્ડર પર તારીખ ટૅપ કરીને તમે તમારી તબિયત, મૂડ, લક્ષણો વગેરે નોંધ કરી શકો છો। દવા સેવન રેકૉર્ડ અને માસિક ધર્મ રેકૉર્ડ સાથે તપાસ કરી શકાય છે, જેથી તમે તમારા શરીરના ચક્રને સમજી શકો છો।",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
