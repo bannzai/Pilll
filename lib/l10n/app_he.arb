@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "תיעוד נטילת תרופות ישירות מההתראה",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "תיעוד מההתראה ללא פתיחת האפליקציה",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
