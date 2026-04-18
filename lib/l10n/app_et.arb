@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple Healthi tugi",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Ravimi võtmise registreerimine teavituse toiminguga",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
