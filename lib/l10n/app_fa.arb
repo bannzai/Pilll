@@ -2477,5 +2477,9 @@
   "recordPillFeatureAppealShortDescription": "به سرعت بدانید چه زمانی دارو مصرف کرده‌اید",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "ثبت مصرف قرص در صفحه اصلی",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
