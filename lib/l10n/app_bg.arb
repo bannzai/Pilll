@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealTitle": "Записване на почивката от приема",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Точно управление на почивки и прекъсвания",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
