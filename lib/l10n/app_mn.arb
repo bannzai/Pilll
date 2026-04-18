@@ -2502,5 +2502,9 @@
   "menstruationFeatureAppealShortDescription": "Сарын тэмдгийн эхлэх өдрийг бүртгэж мөчлөгийг тогтоо",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Сарын тэмдгийг бүртгэж, таамаглах боломжтой",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
