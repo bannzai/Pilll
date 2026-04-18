@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "दैनिक स्वास्थ्य को कैलेंडर में रिकॉर्ड करें",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "कैलेंडर में किसी तारीख़ को टैप करके आप अपनी सेहत, मूड और लक्षण आदि दर्ज कर सकते हैं। आप इन्हें दवा लेने के रिकॉर्ड और मासिक धर्म के रिकॉर्ड के साथ एक साथ देख सकते हैं, जिससे अपने शरीर के चक्र को समझना आसान हो जाता है।",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
