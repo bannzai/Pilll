@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Прикажи го листот со таблети по датум",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Можете да ја видите датата и без да го отворите календарот.",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
