@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "I-memo ang kalagayan at balikan",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Tingnan ang mga nakaraang rekord sa kalendaryo",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
