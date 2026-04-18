@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Maaari mong i-customize ang karaniwang mensahe na \"Oras na para uminom ng pill\" sa iyong mga paboritong salita. Subukan mong palitan ito ng mga salitang nagbibigay-inspirasyon, pangalan ng iyong alagang hayop, o anumang parirala na gagawing mas masaya ang iyong pag-inom ng gamot araw-araw.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Ipakita ang petsa sa pill sheet",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
