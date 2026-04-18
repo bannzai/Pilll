@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "માસિક રેકોર્ડ્સ હેલ્થ સાથે શેર કરો",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "HealthCare સાથે સંકલન કરી શકો છો",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
