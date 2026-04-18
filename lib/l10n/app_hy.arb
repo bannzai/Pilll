@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "Հարմարեցրեք կարգավորումները",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Օրացույցում գրառումները դիտել",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
