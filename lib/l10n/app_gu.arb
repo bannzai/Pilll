@@ -2754,5 +2754,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "મેન્યુઅલ બનાવટ ઑપરેશનની જરૂર નથી",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "સેટિંગ ટૅબના સ્વિચ વડે ટૉગલ કરો",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
