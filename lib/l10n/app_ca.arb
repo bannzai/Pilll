@@ -2454,5 +2454,9 @@
   "criticalAlertFeatureAppealBody": "Si activeu les Alertes crítiques, podreu rebre notificacions de presa de medicació fins i tot en mode No molestar o mode silenciós. Configureu-les per no perdre cap moment important de presa de la píndola.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Personalitza el missatge de notificació",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
