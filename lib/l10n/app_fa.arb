@@ -2541,5 +2541,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "اشتراک‌گذاری سوابق قاعدگی با سلامت",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "قابلیت همگام‌سازی با سلامت",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
