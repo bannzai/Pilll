@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint2": "間違えてもかんたん取り消し",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Visualizza la cronologia delle assunzioni in qualsiasi momento",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
