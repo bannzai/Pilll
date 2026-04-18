@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "過去の記録をカレンダーで振り返り",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "ದಿನಾಂಕವನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ ನಿಮ್ಮ ಆರೋಗ್ಯವನ್ನು ದಾಖಲಿಸಿ",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
