@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Notifiche che suonano anche in modalità silenziosa",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Promemoria per l'assunzione, come una sveglia",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
