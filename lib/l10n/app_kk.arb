@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Күнтізбеден күнді түртіп, денсаулық жағдайы, көңіл-күй, симптомдар және т.б. туралы жазбалар енгізуге болады. Бұл жазбаларды дәрі қабылдау және етеккір жазбаларымен бірге қарап, өз денеңіздің ырғақтарын бақылап отыра аласыз.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
