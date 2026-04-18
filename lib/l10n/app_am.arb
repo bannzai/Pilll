@@ -2686,5 +2686,9 @@
   "appearanceModeDateFeatureAppealPoint3": "ከፒል ሺት ቅንብሮች መቀየር ይቻላል",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "ፒል ሉህን ነካ ወሰዳን ይዝግቡ",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
