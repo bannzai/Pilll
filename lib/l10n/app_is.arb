@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Vekjarahljóð svipað og vekjaraklukku",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 eða nýrri — virkja í Stillingarflipanum",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
