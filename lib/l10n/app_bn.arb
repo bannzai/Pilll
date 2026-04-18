@@ -2786,5 +2786,9 @@
   "alarmKitFeatureAppealPoint2": "অ্যালার্ম ঘড়ির মতো অ্যালার্ম শব্দ",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 বা তার পরে・সেটিংস ট্যাব থেকে সক্ষম করুন",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
