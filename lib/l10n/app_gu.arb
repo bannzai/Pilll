@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealHeadline": "આજે લેવાની ગોળીનો નંબર બદલી શકાય છે",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "જ્યારે ભૂલી જવાથી અથવા ભૂલ થવાથી પિલ શીટ પરની સંખ્યા અને વાસ્તવિક સેવન વચ્ચે અંતર પડી જાય, ત્યારે આજે લેવાના પિલ નંબરને મેન્યુઅલી ઠીક કરી શકાય છે. હોમ પરના પિલ નંબર ડિસ્પ્લેમાંથી પણ આ જ સ્ક્રીન ખોલી શકાય છે.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
