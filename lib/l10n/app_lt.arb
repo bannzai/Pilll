@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Numatytąją žinutę „Laikas išgerti tabletę“ galite suasmeninti pagal savo skonį. Pakeiskite ją motyvuojančiu posakiu, mylimo augintinio vardu arba kitu tekstu, kad kasdienis vartojimas taptų malonesnis.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Rodyti datas tablečių lapelyje",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
