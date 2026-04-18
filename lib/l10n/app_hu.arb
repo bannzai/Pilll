@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Premium-előfizetéssel azonnal használható",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Automatikus váltás tablettacsomag végén",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
