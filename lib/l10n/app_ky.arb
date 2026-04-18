@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Пилл барагынын оң жогорку бурчундагы тиштүү шестернядан баштаңыз.",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Айыз мөөнөтүн түзөтүү жана кайра баштоо да оңой",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
