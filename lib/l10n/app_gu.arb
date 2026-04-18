@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealLocationHint": "તારીખ ટૅપ કરીને શેડ્યૂલ લખો",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "હેલ્થ કેર એપ સાથે સિંક કરો",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
