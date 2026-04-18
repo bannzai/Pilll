@@ -2798,5 +2798,9 @@
   "todayPillNumberFeatureAppealPoint2": "يمكن تغييره من تبويب الإعدادات",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "يمكن فتحه أيضاً بالنقر على الرقم في الشاشة الرئيسية",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
