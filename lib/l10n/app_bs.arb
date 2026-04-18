@@ -2726,5 +2726,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Tapnite na datum da zabilježite zdravstveno stanje",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Upiši raspored u kalendar",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
