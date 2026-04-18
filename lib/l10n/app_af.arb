@@ -2786,5 +2786,9 @@
   "alarmKitFeatureAppealPoint2": "Wekkersoortgelyke alarmklank",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 of later • Aktiveer vanaf die Instellings-oortjie",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
