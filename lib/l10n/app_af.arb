@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealTitle": "Alarm wat soos 'n wekker lui",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Kennisgewings wat selfs op stil seker sal klink",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
