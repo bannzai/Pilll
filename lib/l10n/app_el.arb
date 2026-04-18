@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "Σίγουρη υπενθύμιση στην καθορισμένη ώρα",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Απλή ρύθμιση με ένα άγγιγμα",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
