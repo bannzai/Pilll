@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "Uskladi današnji broj uzimanja",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Ako je redni broj pomaknut, ispravite to u postavkama.",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
