@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "ពេលក្រុមសន្លឹកថ្នាំបច្ចុប្បន្នបញ្ចប់ ក្រុមសន្លឹកថ្នាំថ្មីនឹងត្រូវបង្កើតឡើងដោយស្វ័យប្រវត្តិ។ អ្នកមិនចាំបាច់ប្តូរដោយដៃ ហើយនឹងមិនមានការខ្វះខាតក្នុងកំណត់ត្រា។",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "អាឡាមដែលដូចម៉ោងរោទ",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
