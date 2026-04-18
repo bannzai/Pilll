@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Хуанлинаас огноог дарж биеийн байдал, сэтгэлийн хөдөлгөөн, шинж тэмдэг зэргийг бүртгэж болно. Эм уух бүртгэл болон сарын тэмдгийн бүртгэлтэй хамт харах боломжтой тул өөрийн биеийн хэмнэлийг ойлгох боломжтой.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Ирээдүйн төлөвлөгөөгөө тэмдэглэе",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
