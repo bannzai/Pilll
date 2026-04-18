@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Zobrazit pilulkový arch podle data",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Datum zjistíte bez pohledu do kalendáře",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
