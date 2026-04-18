@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "Registrar eventos futuros en el calendario",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Puedes anotar en el calendario citas médicas, viajes y otros planes futuros. Al poder consultarlos junto con tu ciclo de toma de píldoras, podrás hacer planes teniendo en cuenta también tus períodos menstruales.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
