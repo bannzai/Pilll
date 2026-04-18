@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "Hringir eins og vekjaraklukka",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Tilkynning sem hljómar örugglega, jafnvel þegar síminn er á þögn.",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
