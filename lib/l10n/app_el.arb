@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 και νεότερο · Ενεργοποίηση από την καρτέλα Ρυθμίσεις",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Δωρεάν λειτουργία αντιστοίχισης αριθμών",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
