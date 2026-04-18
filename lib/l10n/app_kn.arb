@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "リマインダーで通知",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "ದಿನಾಂಕವನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ ಯೋಜನೆಯನ್ನು ಬರೆಯಿರಿ",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
