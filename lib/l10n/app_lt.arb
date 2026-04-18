@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Galite paliesti datą kalendoriuje, kad užfiksuotumėte savo savijautą, nuotaiką ir simptomus. Šiuos įrašus galite peržiūrėti kartu su vartojimo ir menstruacijų įrašais, todėl galėsite geriau suprasti savo kūno ciklą.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Užsirašykite ateities planus",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
