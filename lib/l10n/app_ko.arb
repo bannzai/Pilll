@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "집중 모드 중에도 알림이 도착합니다",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "설정한 시간에 확실히 알림",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
