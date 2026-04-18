@@ -2418,5 +2418,9 @@
   "lifetimePurchaseNotice1": "・「এককালীন ক্ৰয় পৰিকল্পনা」ক্ৰয় কৰিলেও「মাহেকীয়া/বাৰ্ষিক পৰিকল্পনা」স্বয়ংক্ৰিয়ভাৱে বাতিল নহ'ব।",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "ইয়াত",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
