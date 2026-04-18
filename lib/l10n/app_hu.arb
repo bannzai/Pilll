@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Tabletta bevétele egy koppintással az értesítési képernyőn",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Ha hosszan megnyomod az emlékeztető-értesítést, megjelenik a „Bevettem” művelet, így az alkalmazás megnyitása nélkül is rögzítheted a bevételt.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
