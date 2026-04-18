@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Gestión sencilla de citas médicas",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Notificar con recordatorio",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
