@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Automatické přepnutí po skončení arch tabletek",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Ruční vytváření není nutné",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
