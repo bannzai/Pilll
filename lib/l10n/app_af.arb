@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealShortDescription": "Bestuur toekomstige afsprake soos doktersbesoeke",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Teken toekomstige planne op die kalender aan",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
