@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealShortDescription": "ዕለታዊ ጤና ሁኔታዎን በቀን መቁጠሪያ ላይ ያስቀምጡ",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "የዕለት ተዕለት ጤናዎን በቀን መቁጠሪያ ላይ ይመዝግቡ",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
