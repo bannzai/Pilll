@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Ծանուցումից գրանցում՝ առանց հավելվածը բացելու",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Ծանուցման էկրանին՝ մեկ հպումով ընդունման գրառում",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
