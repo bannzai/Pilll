@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "Larwm sy'n canu fel cloc larwm",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Hysbysiadau sy'n canu'n sicr hyd yn oed ar fodd tawel",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
