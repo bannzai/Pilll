@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "Saber cuándo tomaste tu píldora de un vistazo",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Registra la toma de píldoras en la pantalla de inicio",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
