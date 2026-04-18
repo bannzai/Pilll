@@ -2593,5 +2593,9 @@
   "alarmKitFeatureAppealHeadline": "هشدار مصرف مانند زنگ بیدارباش",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "با استفاده از AlarmKit که از iOS 26 به بعد در دسترس است، حتی در حالت بی‌صدا یا حالت تمرکز نیز آلارمی که به‌طور قطعی پخش می‌شود، زمان مصرف قرص را به شما یادآوری می‌کند.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
