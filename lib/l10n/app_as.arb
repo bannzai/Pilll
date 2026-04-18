@@ -2438,5 +2438,9 @@
   "recommendSignupGeneralDescription": "পঞ্জীয়ন কৰিলে ডেটা বেকআপ কৰিব পাৰিব",
   "@recommendSignupGeneralDescription": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "নীৰৱ মোডতো জাননী লাভ কৰক",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
   }
 }
