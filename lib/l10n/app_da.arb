@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Registrer indtagelse via notifikationshandling",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Fuldfør uden at åbne appen",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
