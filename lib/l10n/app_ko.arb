@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealBody": "생리가 시작되면 기록하기만 하면 과거 생리 기록을 한눈에 확인할 수 있습니다. 다음 생리 예정일도 자동으로 예측되므로 계획적으로 준비할 수 있습니다.",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "캘린더에 몸 상태 기록",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
