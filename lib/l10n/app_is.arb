@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Ókeypis aðgerð til að samræma númer",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Hægt er að breyta því í Stillingarflipunni.",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
