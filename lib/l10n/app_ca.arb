@@ -2694,5 +2694,9 @@
   "recordPillFeatureAppealPoint2": "Cancel·lació senzilla fins i tot si t'equivoques",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Consulta l'historial de presa en qualsevol moment",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
