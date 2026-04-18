@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealTitle": "تلقي الإشعارات حتى في الوضع الصامت",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "امنع نسيان الحبوب حتى في وضع عدم الإزعاج",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
