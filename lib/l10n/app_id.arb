@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "Catat konsumsi langsung dari notifikasi",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Catat melalui notifikasi tanpa membuka aplikasi",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
