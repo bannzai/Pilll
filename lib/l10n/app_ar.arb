@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "مزامنة بيانات الدورة الشهرية تلقائياً",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "مزامنة مع تطبيق الرعاية الصحية",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
