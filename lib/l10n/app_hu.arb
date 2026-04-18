@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Amikor a jelenlegi tabletta-csoport véget ér, az alkalmazás automatikusan létrehoz egy újat. Nincs szükség kézi váltásra, így nem maradnak ki bejegyzések.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Ébresztőóra-szerű riasztás",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
