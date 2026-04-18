@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "പിൽ ഷീറ്റിൽ തീയതി പ്രദർശിപ്പിക്കാം",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "ഗുളിക ഷീറ്റിലെ ഓരോ ഘടകത്തിലും തീയതി പ്രദർശിപ്പിക്കുന്നതിലൂടെ, കഴിഞ്ഞ ഗുളിക കഴിക്കൽ ചരിത്രവും ഭാവിയിലെ ഗുളിക കഴിക്കൽ ഷെഡ്യൂളും ഒറ്റ നോട്ടത്തിൽ പരിശോധിക്കാൻ കഴിയും. \"നമ്പർ\" മോഡും \"തീയതി\" മോഡും തമ്മിൽ മാറ്റം വരുത്തി, നിങ്ങൾക്ക് ഏറ്റവും അനുയോജ്യമായ ഡിസ്‌പ്ലേ തിരഞ്ഞെടുക്കൂ.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
