@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Synchronizovat s aplikací Zdraví",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Podpora Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
