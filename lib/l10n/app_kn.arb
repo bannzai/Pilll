@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "ಘಡಿಯ ಅಲಾರ್ಮ್‌ನಂತಹ ಔಷಧ ಸೇವನೆ ಎಚ್ಚರಿಕೆ",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 ಮತ್ತು ನಂತರದ ಆವೃತ್ತಿಗಳಲ್ಲಿ ಲಭ್ಯವಿರುವ AlarmKit ಅನ್ನು ಬಳಸಿಕೊಂಡು, ಸೈಲೆಂಟ್ ಮೋಡ್ ಅಥವಾ ಫೋಕಸ್ ಮೋಡ್‌ನಲ್ಲಿದ್ದರೂ ಸಹ ಖಚಿತವಾಗಿ ಕೇಳಿಬರುವ ಎಚ್ಚರಿಕೆ ಆಲಾರ್ಮ್ ಮೂಲಕ ಗೋಳಿ ಸೇವಿಸುವ ಸಮಯವನ್ನು ಸೂಚಿಸುತ್ತದೆ.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
