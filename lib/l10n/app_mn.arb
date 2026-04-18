@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Чимээгүй горимд ч мэдэгдэл ирдэг",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alert-ийг идэвхжүүлбэл, нойрны горим эсвэл чимээгүй горимд байхдаа ч эм уух тухай мэдэгдэл хүлээн авах боломжтой болно. Чухал эмийн уух цагийг алдахгүйн тулд заавал тохируулж үзээрэй。",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
