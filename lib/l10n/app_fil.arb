@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Maaaring ipakita ang petsa sa pill sheet",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Sa pamamagitan ng pagpapakita ng petsa sa bawat kahon ng pill sheet, maaari mong makita sa isang tingin ang nakaraang kasaysayan ng pag-inom ng gamot at ang mga nakatakdang pag-inom sa hinaharap. Lumipat sa pagitan ng mode na \"Numero\" at mode na \"Petsa\" upang piliin ang display na pinaka-angkop sa iyo.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
