@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Жымжырт режиминде да сөзсүз угула турган эскертме",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Будильник сыяктуу дары ичүүнү эскерткеч",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
