@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "Cofnodi cyfnod gorffwys cymryd",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Rheoli seibiau a thoriadau meddyginiaeth yn fanwl gywir",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
