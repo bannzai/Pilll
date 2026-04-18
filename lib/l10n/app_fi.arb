@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Voit kirjata tulevat suunnitelmat kalenteriin, kuten lääkärikäynnit ja matkat. Voit tarkastella niitä yhdessä pillereiden ottosyklin kanssa, joten voit suunnitella myös kuukautisten ajankohdan huomioiden.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Terveyden integraatio",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
