@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Паказваць аркуш таблетак па даце",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Можна даведацца дату, не гледзячы на каляндар",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
