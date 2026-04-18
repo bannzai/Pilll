@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "Γράψτε τα μελλοντικά σας σχέδια",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Διαχείριση μελλοντικών ραντεβού, όπως ιατρικές επισκέψεις",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
