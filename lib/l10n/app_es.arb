@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Mostrar hoja de píldoras por fecha",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Conoce la fecha sin necesidad de mirar el calendario",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
