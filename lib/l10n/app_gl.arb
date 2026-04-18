@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "Ver rexistros no calendario",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Anota o teu estado físico e revísao",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
