@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Comproba cando tomar dunha ollada",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Podes mostrar datas na folla de pílulas",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
