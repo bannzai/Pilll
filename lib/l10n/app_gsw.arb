@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "Iistellige anpasse",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Ufzeichnige im Kalender aaluege",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
