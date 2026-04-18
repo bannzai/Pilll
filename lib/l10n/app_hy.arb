@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Ձայն հնչելու է նույնիսկ լուռ կամ կենտրոնացման ռեժիմում",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Զարթուցիչի նման ծանուցման ձայն",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
