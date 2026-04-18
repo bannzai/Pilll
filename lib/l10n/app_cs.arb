@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Přepínejte pomocí přepínače v záložce Nastavení",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Zvoní i v tichém/soustředěném režimu",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
