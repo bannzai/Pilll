@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "មើលប្រវត្តិការទទួលថ្នាំបានគ្រប់ពេល",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "កត់ត្រាថ្ងៃចាប់ផ្តើមរដូវខែបានយ៉ាងងាយ",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
