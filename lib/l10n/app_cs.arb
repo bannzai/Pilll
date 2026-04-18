@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Upozornění připomínkou",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Klepněte na datum a zapište plán",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
