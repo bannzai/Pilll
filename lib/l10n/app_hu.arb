@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Egyszerű beállítás egy koppintással",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Értesítési üzenet testreszabása",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
