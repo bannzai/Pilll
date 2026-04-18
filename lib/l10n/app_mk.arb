@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Можете да ги внесувате во календар идните планови, како на пример посети кај лекар или патувања. Бидејќи можете да ги прегледувате заедно со циклусот на земање пилули, ќе можете да планирате земајќи ја предвид и очекуваната менструација.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Поврзување со здравствени податоци",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
