@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Pilll-д бүртгэсэн сарын тэмдгийн өгөгдлийг эрүүл мэндийн аппликейшнтай автоматаар синхрончлах боломжтой. Эрүүл мэндийн бусад өгөгдлийн хамт харах, мөн бусад аппликейшнд сарын тэмдгийн өгөгдлийг ашиглах боломжтой болно.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Мэдэгдлээс шууд уух тэмдэглэл",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
