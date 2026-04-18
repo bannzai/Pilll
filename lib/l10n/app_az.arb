@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint1": "Həb vərəqəsinə toxunaraq qəbul qeydi",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Səhv etsəniz də asanlıqla ləğv edin",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
