@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Синхронизирај со апликацијата за здравје",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Поддршка за Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
