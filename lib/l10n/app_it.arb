@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Puoi toccare una data nel calendario per registrare il tuo stato fisico, umore e sintomi. Puoi verificare queste informazioni insieme ai record di assunzione della pillola e del ciclo mestruale per comprendere meglio i ritmi del tuo corpo.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
