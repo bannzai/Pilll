@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "შეგიძლიათ შეხსენების შეტყობინება თავისუფლად დაარედაქტიროთ",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "სტანდარტულ შეტყობინებას „პილის მიღების დროა“ შეგიძლიათ მოარგოთ თქვენთვის სასურველი ტექსტით. გამოიყენეთ მოტივაციური ფრაზა ან შინაური ცხოველის სახელი — ასე ყოველდღიური მიღება უფრო სასიამოვნო და მხიარული იქნება.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
