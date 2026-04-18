@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Εύκολη αναίρεση ακόμα και αν κάνετε λάθος",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Ελέγξτε το ιστορικό λήψης ανά πάσα στιγμή",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
