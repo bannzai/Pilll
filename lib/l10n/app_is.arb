@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Notaðu rofann í Stillingarflipanum til að kveikja eða slökkva á því",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Hljómar jafnvel þótt síminn sé í þögn eða einbeitingarham.",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
