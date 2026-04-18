@@ -2662,5 +2662,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "In de tägliche Innähmebenachrichtiging übernahme",
   "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "Für dini eigeni Benachrichtigungsnachricht",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
   }
 }
