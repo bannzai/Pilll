@@ -2674,5 +2674,9 @@
   "recordPillFeatureAppealPoint1": "પિલ શીટ પર ટૅપ કરીને સેવન નોંધો",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "ભૂલ થઈ જાય તો પણ સરળતાથી રદ કરો",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
