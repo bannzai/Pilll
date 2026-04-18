@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Тохиргооны табын шилжүүлэгчээр сэлгэх",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Чимээгүй/Төвлөрлийн горимд ч дуугарна",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
