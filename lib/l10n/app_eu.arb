@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Pilula-orria dataren arabera erakutsi",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Egutegia ikusi gabe data jakin dezakezu",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
