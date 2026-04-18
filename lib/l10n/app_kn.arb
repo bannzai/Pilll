@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "ಮೂಲ 'ಗೋಳಿ ಸೇವಿಸುವ ಸಮಯ' ಎಂಬ ಸೂಚನೆಯನ್ನು ನಿಮ್ಮ ಇಷ್ಟದ ಪದಗಳಿಗೆ ಕಸ್ಟಮೈಸ್ ಮಾಡಬಹುದು. ಪ್ರೇರಣೆಯಿಂದ ತುಂಬಿದ ವಾಕ್ಯಗಳು, ನಿಮ್ಮ ಪೇಟಿನ ಹೆಸರು ಮುಂತಾದವುಗಳನ್ನು ಬಳಸಿ ಪ್ರತಿದಿನದ ಔಷಧ ಸೇವನೆಯನ್ನು ಇನ್ನಷ್ಟು ಆನಂದಮಯವಾಗಿಸಲು ಪರಿವರ್ತಿಸಿ.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "ಪಿಲ್‌ಶೀಟ್‌ನಲ್ಲಿ ದಿನಾಂಕಗಳನ್ನು ತೋರಿಸುವುದು",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
