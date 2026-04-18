@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Допрете ја таблата со таблети за да го забележите земањето",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Лесно поништување при грешка",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
