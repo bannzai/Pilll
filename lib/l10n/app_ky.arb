@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Билдирме экранында бир тийүү менен ичкенди каттоо",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Эскертүү билдирүүсүн узак басканда «Ичилди» деген аракет пайда болуп, колдонмону ачпай эле ичкенди каттай аласыз.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
