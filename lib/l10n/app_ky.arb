@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Таблетканы ичүүнү убактылуу токтотуу",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Кыска мөөнөттүү тыныгуу учурун пилл баракчасына жазып коё аласыз. Тыныгуу учурунда ичүү номери жылбайт, кайра баштаганга дароо жазып уланта аласыз.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
