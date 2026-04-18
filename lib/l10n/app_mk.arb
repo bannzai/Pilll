@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "Постави го денешниот број на земање",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Ако бројот е поместен, коригирајте го во поставките.",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
