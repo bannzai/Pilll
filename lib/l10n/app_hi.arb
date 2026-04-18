@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "साइलेंट मोड में भी सूचनाएँ प्राप्त होंगी",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alert सक्रिय करने पर, आप डू नॉट डिस्टर्ब (Do Not Disturb) या साइलेंट मोड में होने पर भी पिल लेने की सूचनाएँ प्राप्त कर पाएँगे। महत्वपूर्ण पिल लेने के समय न चूकने के लिए, कृपया इसे सक्षम करें।",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
