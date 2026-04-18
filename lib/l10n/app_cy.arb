@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "Gellir cysylltu ag Iechyd",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Gallwch gysylltu data mislif a gofnodwyd yn Pilll ag ap Iechyd yn awtomatig. Gallwch ei wirio gyda data iechyd arall ar Iechyd, a defnyddio'r data mislif mewn apiau eraill hefyd.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
