@@ -2786,5 +2786,9 @@
   "alarmKitFeatureAppealPoint2": "এলাৰ্ম ঘড়ীৰ দৰে এলাৰ্ম শব্দ",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 বা তাৰ পিছৰ সংস্কৰণ・ছেটিংছ টেবৰ পৰা সক্ষম কৰক",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
