@@ -2486,5 +2486,9 @@
   "appearanceModeDateFeatureAppealBody": "Həb vərəqinin xanalarında tarixləri göstərməklə keçmiş qəbul tarixçəsini və gələcək qəbul cədvəlini bir baxışda yoxlaya bilərsiniz. Özünüzə uyğun ekranı seçmək üçün \"Nömrə\" rejimi ilə \"Tarix\" rejimi arasında keçid edin.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Qəbul tarixçəsini asanlıqla nəzərdən keçirin",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
