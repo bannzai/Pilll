@@ -2466,5 +2466,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "የመድሃኒት ማሳወቂያ መልዕክትን እንደፈለጉ ያርትዑ",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "\"ፒልዎን የሚወስዱበት ጊዜ ነው\" የሚለውን መደበኛ መልዕክት እንደ ፍላጎትዎ ማስተካከል ይችላሉ። ተነሳሽነት የሚሰጥ ቃል፣ የቤት እንስሳዎ ስም ወይም ሌሎች ቃላትን በመጠቀም ዕለታዊ ሕክምናዎን ይበልጥ አስደሳች ያድርጉት።",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
