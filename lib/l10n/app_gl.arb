@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Rexistro de descanso gratuíto",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Comezar dende a roda dentada na parte superior dereita da folla de comprimidos",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
