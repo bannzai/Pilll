@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Registro de toma con un toque en la pantalla de notificaciones",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Al mantener presionada la notificación del recordatorio, aparecerá la acción «Tomé la pastilla», lo que te permite registrar la toma sin abrir la aplicación.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
