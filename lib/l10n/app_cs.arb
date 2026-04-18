@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Zaznamenat bez otevření aplikace",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Záznam užití jedním klepnutím z obrazovky oznámení",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
