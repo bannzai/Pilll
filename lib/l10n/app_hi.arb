@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "पिल शीट पर टैप करके सेवन दर्ज करें",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "गलती होने पर भी आसान रद्द करें",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
