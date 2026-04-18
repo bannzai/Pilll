@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "Pausen & Unterbrechungen genau verwalten",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Einnahme pausieren",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
