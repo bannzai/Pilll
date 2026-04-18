@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealTitle": "ঋতুস্ৰাৱ ৰেকৰ্ড আৰু পূৰ্বানুমান",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "ঋতুস্ৰাৱৰ আৰম্ভণিৰ তাৰিখ লিপিবদ্ধ কৰক আৰু চক্ৰ অনুসৰণ কৰক",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
