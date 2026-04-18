@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Starte vum Zahnrad obbe rechts im Pilleschéin",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "D'Bearbeitig un d'Wiederufnahm vun de Periode isch au eifach",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
