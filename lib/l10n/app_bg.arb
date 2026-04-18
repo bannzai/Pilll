@@ -2642,5 +2642,9 @@
   "restDurationFeatureAppealHeadline": "Почивка от приема на хапчета",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Можете да записвате период на временно спиране на приема на хапчета в листа с хапчета. По време на почивката номерът на таблетката не напредва и при подновяване можете веднага да продължите записването.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
