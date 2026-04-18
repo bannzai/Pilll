@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Teatise ekraanilt ühe puudutusega tarbimise registreerimine",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Meeldetuletusteatist pikalt vajutades kuvatakse toiming „Võetud\" ja saate tableti võtmise registreerida rakendust avamata.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
