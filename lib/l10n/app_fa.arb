@@ -2653,5 +2653,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "اعمال در اعلان‌های روزانه مصرف دارو",
   "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "پیام اعلان مخصوص خود",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
   }
 }
