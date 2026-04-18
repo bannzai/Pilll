@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Du kan skrive fremtidige aftaler som hospitalsbesøg og rejser i kalenderen. Da du kan se dem i kombination med din pilleindtagelsescyklus, kan du lægge planer, der også tager hensyn til din menstruationsplan.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Synk med sundhedsdata",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
