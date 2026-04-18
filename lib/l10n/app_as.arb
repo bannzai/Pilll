@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealTitle": "জাননীৰ পৰা পোনপটীয়াকৈ সেৱনৰ তথ্য",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "এপ্ নোখোলাকৈ জাননীত ৰেকৰ্ড কৰক",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
