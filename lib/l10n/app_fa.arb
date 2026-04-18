@@ -2573,5 +2573,9 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "تولید خودکار برگه بعدی",
   "@creatingNewPillSheetFeatureAppealShortDescription": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "ایجاد خودکار برگه قرص بعدی",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
   }
 }
