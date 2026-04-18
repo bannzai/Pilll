@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint3": "Notifica tramite promemoria",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Tocca una data per aggiungere un evento",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
