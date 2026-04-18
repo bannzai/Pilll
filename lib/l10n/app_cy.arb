@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Cymorth Iechyd Apple",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Cofnodi cymryd drwy weithred hysbysiad",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
