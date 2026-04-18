@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint3": "പില്‍ ഷീറ്റ് ക്രമീകരണത്തില്‍ നിന്ന് മാറ്റാം",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "ഗുളിക ഷീറ്റ് ടാപ്പ് ചെയ്ത് കഴിക്കൽ രേഖപ്പെടുത്തുക",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
