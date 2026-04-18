@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Haltu inni á áminningunni til að birta aðgerðina „Tekið“ og skrá töku án þess að opna appið.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Bæta pillublaði sjálfkrafa",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
