@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Dodirnite datum za unos plana",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Automatsko sinkroniziranje zapisa o menstruaciji",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
