@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Alkalmazás megnyitása nélkül befejezve",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Premium-előfizetéssel azonnal használható",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
