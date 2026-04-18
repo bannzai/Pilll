@@ -2778,5 +2778,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "ছেটিংছ টেবৰ ছুইচেৰে সলনি কৰক",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "চাইলেণ্ট/ফোকাচ মোডতো বাজিব",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
