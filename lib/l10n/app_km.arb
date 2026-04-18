@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "គ្រាប់ថ្នាំនៅលើអេក្រង់ផ្ទះ — គ្រាន់តែចុចលើវា អ្នកអាចកត់ត្រាការប្រើថ្នាំសម្រាប់ថ្ងៃនោះបាន។ ប្រសិនបើបានកត់ត្រាខុស អ្នកអាចចុចម្តងទៀតដើម្បីដកចេញ។ អ្នកអាចមើលប្រវត្តិកំណត់ត្រាការប្រើថ្នាំនៅពេលក្រោយបាន ដូច្នេះអ្នកអាចបន្តប្រើដោយមានចិត្តស្រួល។",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "កត់ត្រា និង ព្យាករណ៍រដូវប្រចាំខែ",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
