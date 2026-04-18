@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Samhæft við Apple Health",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Skrá inntöku úr tilkynningaraðgerð",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
