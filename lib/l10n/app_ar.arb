@@ -2706,5 +2706,9 @@
   "menstruationFeatureAppealPoint2": "تتبع الدورة تلقائيًا",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "تخصيص الإعدادات",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
