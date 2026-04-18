@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Über den Schalter im Einstellungs-Tab umschalten",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Klingt auch im Lautlos-/Fokusmodus",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
