@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Start fra tandhjulet øverst til højre på pillearket",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Nem redigering og genoptagelse af perioder",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
