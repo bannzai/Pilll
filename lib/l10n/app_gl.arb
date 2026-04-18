@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Se manteñes premida a notificación de recordatorio, aparecerá a acción «Tomado» e poderás rexistrar a toma sen abrir a aplicación.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Engadir ficha de pílulas automaticamente",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
