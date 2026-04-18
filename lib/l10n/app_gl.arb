@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealHeadline": "Rexistra e predí o teu ciclo menstrual",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Só rexistrando cando che vén a regra, podes consultar o historial dos teus ciclos anteriores. A próxima data prevista tamén se calcula automaticamente, para que poidas planificar con antelación.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
