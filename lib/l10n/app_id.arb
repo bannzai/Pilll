@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Catatan jeda minum pil gratis",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Mulai dari roda gigi kanan atas lembar pil",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
