@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealShortDescription": "Weet dadelik wanneer u pil ingeneem is",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Teken pillinname op die tuisskerm aan",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
