@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealTitle": "Wys datum op pilblad",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Sien wanneer om in te neem in 'n oogopslag",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
