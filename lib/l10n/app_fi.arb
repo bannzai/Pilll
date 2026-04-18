@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Muokkaa lääkkeidenottomuistutuksen viestiä vapaasti",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Voit mukauttaa oletusviestin \"On aika ottaa pillerisi\" haluamallasi tavalla. Kokeile motivoivaa lausetta, lemmikkisi nimeä tai muuta inspiroivaa tekstiä – tee päivittäisestä pillerin ottamisesta entistä mukavampaa!",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
