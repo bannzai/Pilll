@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Kirjaa ja ennusta kuukautiset",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Kirjaa kuukautisten alkamispäivä ja seuraa sykliäsi",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
