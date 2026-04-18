@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealTitle": "ከማሳወቂያ ቀጥታ ወሰዳ ይቁጠሩ",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "መተግበሪያ ሳይከፍቱ በማሳወቂያ ይመዝግቡ",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
