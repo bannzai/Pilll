@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Эскертүү билдирүүсүн узак басканда «Ичилди» деген аракет пайда болуп, колдонмону ачпай эле ичкенди каттай аласыз.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Дарынын таблетка барагын автоматтык түрдө кошуу",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
