@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "Rexistrar o estado de saúde diario no calendario",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Tocando nunha data do calendario, podes rexistrar o teu estado físico, humor, síntomas e máis. Como podes consultalo xunto cos rexistros de toma de medicación e os rexistros menstruais, podes comprender o ritmo do teu propio corpo.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
