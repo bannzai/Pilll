@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Αρκεί να πατήσετε στο φύλλο χαπιών στην αρχική οθόνη για να καταγράψετε τη λήψη της ημέρας. Αν καταχωρίσετε κατά λάθος, μπορείτε να το αναιρέσετε πατώντας ξανά. Μπορείτε επίσης να ελέγξετε το ιστορικό λήψης αργότερα, οπότε μπορείτε να συνεχίσετε με ηρεμία.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Καταγραφή & Πρόβλεψη Περιόδου",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
