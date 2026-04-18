@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Podpora Apple Health",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Záznam užití přes akci oznámení",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
