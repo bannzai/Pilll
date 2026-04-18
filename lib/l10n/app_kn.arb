@@ -2658,5 +2658,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "ಸೂಚನೆ ಸಂದೇಶವನ್ನು ಇಚ್ಛೆಯಂತೆ ಸಂಪಾದಿಸಿ",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "ಪ್ರತಿದಿನದ ಔಷಧಿ ಸ್ಮರಣೆಗೆ ಅನ್ವಯ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
   }
 }
