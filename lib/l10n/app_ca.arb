@@ -2562,5 +2562,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "Es pot integrar amb Salut",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Podeu sincronitzar automàticament les dades menstruals registrades a Pilll amb l'aplicació de Salut. Podreu consultar-les juntament amb les altres dades de salut i fer servir les dades menstruals en d'altres aplicacions.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
