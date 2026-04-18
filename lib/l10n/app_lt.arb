@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "\"Пилюля\" шиитийн баруун дээд булан дахь шестеренкаас эхлүүлнэ",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Lengva redaguoti arba vėl pradėti laikotarpį",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
