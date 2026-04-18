@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "날짜를 탭하여 일정을 작성하세요",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "생리 기록을 자동으로 연동",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
