@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Función de axuste de números gratuíta",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Pódese cambiar desde a pestana de configuración",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
