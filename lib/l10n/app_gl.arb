@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "Recordatorio garantido á hora programada",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Configuración sinxela cun toque",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
