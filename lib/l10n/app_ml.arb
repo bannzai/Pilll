@@ -2502,5 +2502,9 @@
   "menstruationFeatureAppealHeadline": "ആർത്തവം രേഖപ്പെടുത്താനും പ്രവചിക്കാനും കഴിയും",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "ആർത്തവം വരുമ്പോൾ രേഖപ്പെടുത്തിയാൽ മതി, കഴിഞ്ഞ ആർത്തവ ചരിത്രം മുഴുവൻ ഒറ്റ നോട്ടത്തിൽ കാണാൻ കഴിയും. അടുത്ത ആർത്തവ തീയതി സ്വയം പ്രവചിക്കപ്പെടുന്നതിനാൽ, ജീവിതം കൂടുതൽ ആസൂത്രണം ചെയ്യാൻ സഹായിക്കും.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
