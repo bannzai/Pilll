@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Blæðingar byrjunar dag auðveldlega skráð",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Perioðan reiknað sjálfkrafa",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
