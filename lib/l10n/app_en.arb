@@ -2768,5 +2768,9 @@
   "alarmKitFeatureAppealPoint1": "Rings even in Silent/Focus Mode",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Alarm clock-style alert sound",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
