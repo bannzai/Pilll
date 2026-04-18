@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "Хэзээ уусан болохыг шууд мэдэж болно",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Нүүр дэлгэцэн дээр эм уусан бүртгэл хийх",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
