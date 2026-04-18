@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Դաշտանության գրանցում և կանխատեսում",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Ցիկլը հետևելու համար սկսվելու օրվա նշում",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
