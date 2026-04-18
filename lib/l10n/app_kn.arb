@@ -2550,5 +2550,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "ಹೆಲ್ತ್‌ಕೇರ್‌ ಜೊತೆಗೆ ಮಾಸಿಕ ಚಕ್ರದ ದಾಖಲೆಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳಿ",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "ಆರೋಗ್ಯ ಅಪ್ಲಿಕೇಶನ್‌ಗಳೊಂದಿಗೆ ಸಂಯೋಜಿಸಬಹುದು",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
