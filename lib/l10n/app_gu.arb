@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "માસિક ધર્મ નોંધો અને આગાહી કરો",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "માસિક ધર્મ શરૂ થવાની તારીખ નોંધો અને ચક્ર ટ્રૅક કરો",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
