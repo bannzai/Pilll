@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "აპლიკაციის ადგილები",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "შეტყობინებები მიიღება, თუნდაც ფოკუს რეჟიმში",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
