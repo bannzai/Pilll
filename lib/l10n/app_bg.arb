@@ -2674,5 +2674,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Вашето лично известие",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Показване на таблетния лист по дата",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
