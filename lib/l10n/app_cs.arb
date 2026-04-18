@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Stačí klepnout na přehled tablet na domovské obrazovce a zaznamenat dnešní užití. Pokud jste záznam udělali omylem, klepněte znovu a bude zrušen. Historii užívání si můžete kdykoli zkontrolovat zpětně, takže můžete pokračovat bez obav.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Zaznamenat a předpovědět menstruaci",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
