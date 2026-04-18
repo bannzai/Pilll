@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "\"ピルシートを日付で表示\" を指定の言語 ko に翻訳してください。",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "캘린더를 보지 않아도 날짜를 알 수 있어요",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
