@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Kuukautistietojen automaattinen synkronointi",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Synkronoi terveyssovellukseen",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
