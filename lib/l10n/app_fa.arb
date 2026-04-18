@@ -2661,5 +2661,9 @@
   "appearanceModeDateFeatureAppealPoint1": "نمایش برگه قرص بر اساس تاریخ",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "بدون نگاه کردن به تقویم، تاریخ را بدانید",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
