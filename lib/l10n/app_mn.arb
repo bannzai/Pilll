@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Дугаар зөрвөл тохиргоонд засах",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Өнөөдөр уух эмийн дугаарыг өөрчлөх боломжтой",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
