@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Gweld pryd i'w gymryd ar unwaith",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Gellir arddangos dyddiadau ar y daflen bilsen",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
