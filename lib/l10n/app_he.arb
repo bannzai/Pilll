@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "התאם את מספר הנטילה של היום",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "אם המספר אינו תואם, תקנו אותו בהגדרות.",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
