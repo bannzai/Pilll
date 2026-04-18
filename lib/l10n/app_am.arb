@@ -2786,5 +2786,9 @@
   "alarmKitFeatureAppealPoint2": "እንደ ሰዓት ቀስቃሽ ያለ የማንቂያ ድምፅ",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 ወይም ከዚያ በኋላ・ከቅንብሮች ትር ያብሩ",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
