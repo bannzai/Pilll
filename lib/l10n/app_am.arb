@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "ፒል ሉህ ሲጠናቀቅ ራስ-ሰር መቀያየር",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "የእጅ ፍጥረት ስራ አያስፈልግም",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
