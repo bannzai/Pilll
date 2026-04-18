@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Jednim dodirom jednostavno postavljanje",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Uredi poruku obavijesti po želji",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
