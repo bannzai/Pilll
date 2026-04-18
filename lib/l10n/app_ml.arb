@@ -2542,5 +2542,9 @@
   "healthCareIntegrationFeatureAppealTitle": "ഹെൽത്ത്കെയറുമായി സമന്വയിപ്പിക്കുക",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "ആർത്തവ രേഖകൾ ഹെൽത്ത്‌കെയറുമായി പങ്കിടുക",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
