@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Θυμήσου το χάπι σου ακόμα και σε λειτουργία «Μην ενοχλείτε»",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Λαμβάνετε ειδοποιήσεις ακόμα και σε αθόρυβη λειτουργία",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
