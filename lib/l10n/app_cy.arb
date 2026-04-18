@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "Ysgrifennu apwyntiad yn y calendr",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Rheoli dyddiau apwyntiad yn hawdd",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
