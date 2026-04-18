@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "Äratuskellana helisev alarm",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Teavitused, mis helisevad kindlasti ka vaikses režiimis",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
