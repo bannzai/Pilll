@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "Достапно на iOS 26 и понатаму — вклучете го преку табот „Поставки“.",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Бесплатна функција за усогласување на броеви",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
