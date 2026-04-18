@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint1": "Bildiriş aksiyası ilə qəbul qeydi",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Tətbiqi açmadan tamamla",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
