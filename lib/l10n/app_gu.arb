@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealShortDescription": "વિરામ અને વિક્ષેપ ચોક્કસ રીતે સંચાલિત કરો",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "ગોળીઓ લેવાનો વિરામ",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
