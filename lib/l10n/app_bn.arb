@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealTitle": "ওষুধ বিরতির সময়কাল রেকর্ড করুন",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "বিরতি ও বন্ধ সঠিকভাবে পরিচালনা করুন",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
