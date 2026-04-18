@@ -2486,5 +2486,9 @@
   "appearanceModeDateFeatureAppealBody": "من خلال عرض التواريخ في خانات ورقة الحبوب، يمكنك مراجعة سجل تناول الدواء في الماضي وجدول الجرعات المستقبلية بنظرة واحدة. قم بالتبديل بين وضع «الرقم» ووضع «التاريخ» لاختيار العرض الذي يناسبك.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "مراجعة سجل الجرعات بسهولة",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
