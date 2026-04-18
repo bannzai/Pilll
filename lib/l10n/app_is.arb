@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Skráning með einum smelli í tilkynningum",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Haltu inni á áminningunni til að birta aðgerðina „Tekið“ og skrá töku án þess að opna appið.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
