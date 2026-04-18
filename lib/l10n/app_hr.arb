@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Besplatno praćenje pauze u uzimanju pilule",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Započnite klikom na ikonu zupčanika u gornjem desnom kutu lista pilula.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
