@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Buat lembar pil berikutnya secara otomatis",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Ketika grup lembar pil saat ini berakhir, grup lembar pil baru akan dibuat secara otomatis. Anda tidak perlu mengganti secara manual, sehingga tidak ada catatan yang terlewat.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
