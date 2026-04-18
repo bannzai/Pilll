@@ -2410,5 +2410,9 @@
   "lifetimePurchaseNotice1": "・Kahit bilhin ang 「One-time Plan」, ang 「Buwanang・Taunang Plano」 ay hindi awtomatikong makakansela.",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "Dito",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
