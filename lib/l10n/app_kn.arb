@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "\"設定タブから変更できる\" を kn に翻訳してください。",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "ಮುಖಪುಟದ ಸಂಖ್ಯೆಯನ್ನು ಟ್ಯಾಪ್ ಮಾಡುವುದರಿಂದ ಕೂಡ ತೆರೆಯಬಹುದು",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
