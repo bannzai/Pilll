@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Fogamzásgátló lapok automatikus hozzáadása",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Következő lap automatikus létrehozása",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
