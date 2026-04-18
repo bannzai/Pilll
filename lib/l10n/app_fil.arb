@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "I-edit nang malaya ang mensahe ng notification sa paginom",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Maaari mong i-customize ang karaniwang mensahe na \"Oras na para uminom ng pill\" sa iyong mga paboritong salita. Subukan mong palitan ito ng mga salitang nagbibigay-inspirasyon, pangalan ng iyong alagang hayop, o anumang parirala na gagawing mas masaya ang iyong pag-inom ng gamot araw-araw.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
