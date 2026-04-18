@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Lokasi dalam aplikasi",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Notifikasi akan tetap dikirim meskipun dalam Mode Fokus",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
