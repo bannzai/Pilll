@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Berpindah otomatis saat lembar pil berakhir",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Tidak perlu membuat secara manual",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
