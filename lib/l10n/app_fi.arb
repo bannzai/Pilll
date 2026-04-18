@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Tallenna ilmoituksesta avaamatta sovellusta",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Merkitse annos napauttamalla ilmoitusta",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
