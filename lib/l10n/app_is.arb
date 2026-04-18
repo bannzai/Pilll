@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Þú getur skráð framtíðarviðburði í dagatalið, til dæmis læknisheimsóknir eða ferðalög. Þar sem þau sjást samhliða töku getnaðarvarnarpíls og hringrás þinni, geturðu skipulagt með tilliti til væntanlegra blæðinga.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Samþætting við Heilsu",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
