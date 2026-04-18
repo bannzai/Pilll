@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Registrer og forudsig menstruation",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Registrer menstruationens startdato og følg din cyklus",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
