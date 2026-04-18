@@ -2694,5 +2694,9 @@
   "recordPillFeatureAppealPoint2": "Səhv etsəniz də asanlıqla ləğv edin",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "İstənilən vaxt qəbul tarixçəsini yoxlayın",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
