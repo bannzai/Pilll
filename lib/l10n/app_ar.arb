@@ -2498,5 +2498,9 @@
   "recordPillFeatureAppealHeadline": "تسجيل تناول الحبوب من الشاشة الرئيسية",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "يمكنك تسجيل جرعة اليوم بمجرد النقر على لوحة الحبوب في الشاشة الرئيسية. إذا سجّلت بالخطأ، يمكنك التراجع بالنقر مرة أخرى. كما يمكنك مراجعة سجل تناول الحبوب لاحقاً، مما يتيح لك الاستمرار بثقة واطمئنان.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
