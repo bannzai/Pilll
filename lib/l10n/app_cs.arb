@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Zobrazit datum na pilulkovém archu",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Zobrazením dat v buňkách pilulkového archu můžete na první pohled zkontrolovat historii předchozího užívání i plán budoucího užívání. Přepínejte mezi režimem „Číslo\" a režimem „Datum\" a vyberte si zobrazení, které vám nejlépe vyhovuje.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
