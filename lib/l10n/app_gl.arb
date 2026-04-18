@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Toca unha data para escribir un evento",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Sincronización automática dos rexistros menstruais",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
