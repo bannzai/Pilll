@@ -2658,5 +2658,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Benachrichtigungsnachrichte frei bearbeite",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "In de tägliche Innähmebenachrichtiging übernahme",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
   }
 }
