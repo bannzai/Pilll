@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Забележи како земено",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Завршено без отворање на апликацијата",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
