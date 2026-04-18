@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Salvesta teavitusest, rakendust avamata",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Teatise ekraanilt ühe puudutusega tarbimise registreerimine",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
