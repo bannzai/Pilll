@@ -2766,5 +2766,9 @@
   "quickRecordFeatureAppealPoint3": "متاح للاستخدام فورًا باشتراك بريميوم",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "التبديل التلقائي عند انتهاء ورقة الحبوب",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
