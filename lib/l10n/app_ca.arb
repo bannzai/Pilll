@@ -2698,5 +2698,9 @@
   "recordPillFeatureAppealPoint3": "Consulta l'historial de presa en qualsevol moment",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Registra fàcilment la data d'inici del període",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
