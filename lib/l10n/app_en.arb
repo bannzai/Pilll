@@ -2752,5 +2752,9 @@
   "quickRecordFeatureAppealPoint3": "Available with Premium subscription",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Auto-switch on pill sheet completion",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
