@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Почнете од иконата со зупчаник во горниот десен агол на листата со таблети.",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Лесно е да го уредите и повторно да го започнете периодот",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
