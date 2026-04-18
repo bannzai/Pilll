@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "ແຕະວັນທີເພື່ອເພີ່ມແຜນການ",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "ການຊັ້ນຂໍ້ມູນອັດຕະໂນມັດ ສໍາລັບບັນທຶກການມີເດືອນ",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
