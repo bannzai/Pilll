@@ -2726,5 +2726,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Tarixi toxunaraq sağlamlıq vəziyyətinizi qeyd edin",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Təqvimə planlar yazın",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
