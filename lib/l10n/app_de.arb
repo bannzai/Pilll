@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Die in Pilll aufgezeichneten Periodendaten können automatisch mit der Health-App synchronisiert werden. Sie können diese Daten zusammen mit anderen Gesundheitsdaten in der Health-App einsehen oder Ihre Periodendaten auch in anderen Apps verwenden.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Einnahme direkt aus der Benachrichtigung erfassen",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
