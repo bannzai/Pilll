@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint1": "Бясплатная функцыя падбору нумароў",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Можна змяніць на ўкладцы налад",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
