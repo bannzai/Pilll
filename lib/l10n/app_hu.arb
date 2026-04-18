@@ -2466,5 +2466,9 @@
   "appearanceModeDateFeatureAppealTitle": "Dátumok megjelenítése a tablettalapon",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Egy pillantással lásd, mikor kell bevenni",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
