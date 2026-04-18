@@ -2430,5 +2430,9 @@
   "recommendSignupGeneralDescription": "Daftar untuk mengaktifkan pencadangan data.",
   "@recommendSignupGeneralDescription": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "Terima notifikasi bahkan dalam mode senyap",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
   }
 }
