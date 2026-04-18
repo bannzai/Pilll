@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "កត់ត្រាស្ថានភាពសុខភាព ដើម្បីត្រលប់មើល",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "過去の記録をカレンダーで振り返り",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
