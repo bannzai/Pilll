@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "התראות יתקבלו גם במצב מיקוד",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "תזכורת מהימנה בשעה שקבעת",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
