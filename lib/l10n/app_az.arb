@@ -2658,5 +2658,9 @@
   "criticalAlertFeatureAppealPoint2": "Təyin olunmuş vaxtda mütləq xatırlatma",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Bir toxunuşla asan quraşdırma",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
