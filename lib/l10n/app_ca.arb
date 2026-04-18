@@ -2546,5 +2546,9 @@
   "futureScheduleFeatureAppealHeadline": "Registra els plans futurs al calendari",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Podeu anotar al calendari els vostres plans futurs, com ara cites mèdiques o viatges. Podeu consultar-los conjuntament amb el vostre cicle de presa de píndoles, de manera que podeu fer plans tenint en compte la previsió de la menstruació.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
