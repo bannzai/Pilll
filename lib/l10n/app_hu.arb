@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Ha a szám elcsúszott, javítsd a Beállításokban.",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "A mai tabletta sorszámának módosítása",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
