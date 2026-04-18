@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint1": "Спіс запісаў у календары",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Занатоўвайце самаадчуванне і аналізуйце яго",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
