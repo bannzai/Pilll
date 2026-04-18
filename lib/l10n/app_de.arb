@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple Health-Unterstützung",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Einnahme über Benachrichtigungsaktion erfassen",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
