@@ -2802,5 +2802,9 @@
   "todayPillNumberFeatureAppealPoint3": "হোমের সংখ্যায় ট্যাপ করেও খোলা যায়",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "বিনামূল্যে ব্যবহারযোগ্য পিল বিরতির রেকর্ড",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
