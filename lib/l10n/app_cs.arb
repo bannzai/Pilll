@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "Propojení se Zdravím",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Data o menstruaci zaznamenaná v aplikaci Pilll lze automaticky propojit s aplikací Zdraví. Můžete je prohlížet společně s dalšími zdravotními údaji nebo je používat i v jiných aplikacích.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
