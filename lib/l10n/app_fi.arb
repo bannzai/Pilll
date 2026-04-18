@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Helppo peruuttaa virhe",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Tarkista lääkkeenottohistoria milloin tahansa",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
