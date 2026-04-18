@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "알람 시계와 같은 알림 소리",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 이상 · 설정 탭에서 활성화",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
