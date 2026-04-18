@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "កត់ត្រា និង ព្យាករណ៍រដូវប្រចាំខែ",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "កត់ត្រាថ្ងៃចាប់ផ្តើមនៃការមានដងខែ ដើម្បីតាមដានរង្វិល",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
