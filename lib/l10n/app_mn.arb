@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "Эм уухаа завсарлах хугацааг бүртгэх",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Завсарлага болон тасалдлыг нарийвчлан удирдах",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
