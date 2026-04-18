@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "זמין לשימוש מיד לאחר הצטרפות למנוי פרימיום",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "החלפה אוטומטית בסוף גיליון הגלולה",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
