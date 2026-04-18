@@ -2674,5 +2674,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "কেৱল আপোনাৰ নিজৰ জাননী বাৰ্তা",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "তাৰিখ অনুযায়ী পিল শ্বীট প্ৰদৰ্শন",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
