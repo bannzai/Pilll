@@ -2684,5 +2684,9 @@
   "recordPillFeatureAppealPoint1": "Tap the pill sheet to record your pill intake",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Easy to undo mistakes",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
