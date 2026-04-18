@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "স্বাস্থ্য সেৱাৰ সৈতে ঋতুস্ৰাৱৰ তথ্য শ্বেয়াৰ কৰক",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "স্বাস্থ্য সেৱাৰ সৈতে সংযোগ কৰিব পাৰি",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
