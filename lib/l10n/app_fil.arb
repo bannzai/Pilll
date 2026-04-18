@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealBody": "I-record lang kapag dumating ang iyong regla at makikita mo ang buong listahan ng iyong nakaraang kasaysayan ng regla. Awtomatiko ring hinuhulaan ang susunod na inaasahang petsa ng regla, kaya makakapagsaplano ka nang mas maayos.",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "I-record ang kalagayan sa kalendaryo",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
