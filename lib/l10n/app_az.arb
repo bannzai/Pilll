@@ -2450,5 +2450,9 @@
   "criticalAlertFeatureAppealHeadline": "Səssiz rejimdə də bildirişlər gəlir",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alert-i aktivləşdirdikdə, \"Rahatsız etmə\" və ya səssiz rejim zamanı belə qəbul bildirişlərini ala bilərsiniz. Vacib həb qəbulunun vaxtını qaçırmamaq üçün bu funksiyanı mütləq qurmağa çalışın.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
