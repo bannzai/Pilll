@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint1": "በጸጥታ/ትኩረት ሞድ ላይም ይጮኻል",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "እንደ ሰዓት ቀስቃሽ ያለ የማንቂያ ድምፅ",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
