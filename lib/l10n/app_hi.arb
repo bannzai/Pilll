@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "ऐप के भीतर का स्थान",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "फोकस मोड में भी सूचनाएँ मिलेंगी",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
