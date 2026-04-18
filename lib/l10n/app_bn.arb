@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint1": "বিনামূল্যে ব্যবহারযোগ্য পিল বিরতির রেকর্ড",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "পিল শীটের উপরের ডানদিকের গিয়ার থেকে শুরু করুন",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
