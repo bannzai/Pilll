@@ -2410,5 +2410,9 @@
   "lifetimePurchaseNotice1": "・「ഒറ്റത്തവണ പ്ലാൻ」 വാങ്ങിയാലും 「മാസ/വാർഷിക പ്ലാൻ」 ഓട്ടോമാറ്റിക്കായി റദ്ദ് ചെയ്യപ്പെടില്ല.",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "ഇവിടെ",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
