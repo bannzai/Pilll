@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "ສັງຄົມຂໍ້ມູນກັບແອັບສຸຂະພາບ",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "ຮັບຮອງ Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
