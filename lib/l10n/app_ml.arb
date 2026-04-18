@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint3": "ഒരു ടാപ്പിൽ എളുപ്പ സജ്ജീകരണം",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "അറിയിപ്പ് സന്ദേശങ്ങൾ സ്വതന്ത്രമായി എഡിറ്റ് ചെയ്യുക",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
