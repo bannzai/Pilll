@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "Zukünftige Termine eintragen",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Arzttermine und zukünftige Pläne verwalten",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
