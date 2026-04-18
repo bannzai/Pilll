@@ -2686,5 +2686,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Es pot canviar des de la configuració del full de píndoles",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Registra la presa de píndoles tocant el full",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
