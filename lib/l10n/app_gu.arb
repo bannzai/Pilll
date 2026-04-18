@@ -2786,5 +2786,9 @@
   "restDurationFeatureAppealPoint1": "મફત ઉપલબ્ધ ઓષધ-વિરામ નોંધ",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "પિલ શીટના ઉપર જમણી બાજુના ગિયર આઇકનથી શરૂ કરો",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
