@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint1": "ቀን መቁጠሪያ ላይ ቀጠሮ ጻፍ",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "የሐኪም ቀጠሮዎችን በቀላሉ ያስተዳድሩ",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
