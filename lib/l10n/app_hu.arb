@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "A beállított időpontban biztosan emlékeztet",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Egyszerű beállítás egy koppintással",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
