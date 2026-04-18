@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealShortDescription": "Notificacions que sonen fins i tot en silenci",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Alarma de medicació com un despertador",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
