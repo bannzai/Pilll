@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "Эгер даары барагынын (пилл шити) номерлери менен чындап ичкен даарыңыздын номери унутуп калуу же алмашуу сыяктуу себептерден улам дал келбей калса, бүгүн ичүүчү даарынын номерин кол менен тууралай аласыз. Башкы экрандагы пилл санын көрсөтүү бөлүмүнөн да ошол эле баракты ача аласыз.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Дарыны ичүүнү токтотуу мөөнөтүн жазуу",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
