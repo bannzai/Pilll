@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Voit avata myös napauttamalla numeroa aloitusnäytöllä",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Lääketauon merkinnät ilmaiseksi",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
