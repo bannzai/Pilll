@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Perioðan reiknað sjálfkrafa",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Sérsníða stillingar",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
