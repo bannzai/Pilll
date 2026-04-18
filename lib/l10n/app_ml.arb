@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealShortDescription": "നമ്പർ തെറ്റിയാൽ ക്രമീകരണത്തിൽ ശരിയാക്കുക",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "ഇന്ന് കഴിക്കേണ്ട ഗുളിക നമ്പർ മാറ്റാം",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
