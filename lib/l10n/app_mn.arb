@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Эмнэлгийн цаг захиалга, аялалын төлөвлөгөө зэрэг ирээдүйн төлөвлөгөөгөө календарт бичиж болно. Эмийн уух мөчлөгтэй хамт харах боломжтой тул сарын тэмдгийн хуваарийг харгалзан төлөвлөгөө гаргаж болно.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Эрүүл мэндтэй холбох",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
