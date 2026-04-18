@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Қашан ішу керектігін бір қарағанда біліңіз",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Пилл парағында күндерді көрсетуге болады",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
