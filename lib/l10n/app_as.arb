@@ -2798,5 +2798,9 @@
   "todayPillNumberFeatureAppealPoint2": "ছেটিংছ টেবৰ পৰা সলনি কৰিব পাৰি",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "হোমৰ নম্বৰ টেপ কৰিও খোলিব পাৰি",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
