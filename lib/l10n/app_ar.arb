@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "مشاركة سجلات الدورة الشهرية مع تطبيق الصحة",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "يمكن التزامن مع الرعاية الصحية",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
