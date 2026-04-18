@@ -2518,5 +2518,9 @@
   "calendarDiaryFeatureAppealShortDescription": "Halte dini täglichi Verfassig im Kalender fescht",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Täglich Befinde uf em Kalender uftrage",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
