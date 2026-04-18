@@ -2606,5 +2606,9 @@
   "todayPillNumberFeatureAppealTitle": "ഇന്നത്തെ ഡോസ് നമ്പർ ക്രമീകരിക്കുക",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "നമ്പർ തെറ്റിയാൽ ക്രമീകരണത്തിൽ ശരിയാക്കുക",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
