@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Hysbysiadau'n cyrraedd hyd yn oed yn ystod y Modd Ffocws",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Atgoffa'n sicr ar yr amser a osodwyd",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
