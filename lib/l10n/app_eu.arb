@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "iOS 26 eta bertsio berriagoetan eskuragarri dagoen AlarmKit erabiliz, isilik moduan edo kontzentrazio moduan ere segurtasunez joko duen alarma batekin jakinarazten dizu pilula hartzeko ordua.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Gaurko pastilla-zenbakia egokitu",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
