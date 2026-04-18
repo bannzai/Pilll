@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "ピルシートのマスに日付を表示することで、過去の服用履歴と未来の服用予定を一目で確認できます。「番号」モードと「日付」モードを切り替えて、自分に合った表示を選びましょう。",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "दवा लेने के रिकॉर्ड को आसानी से देखें",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
