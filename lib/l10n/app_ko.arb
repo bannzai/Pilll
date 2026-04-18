@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "현재의 피임약 시트 그룹이 끝나면 새로운 피임약 시트 그룹이 자동으로 생성됩니다. 수동으로 전환할 필요가 없어 기록이 누락되지 않습니다.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "모닝콜처럼 울리는 알람",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
