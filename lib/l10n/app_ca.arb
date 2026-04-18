@@ -2754,5 +2754,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Compatible amb Apple Health",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Registrar presa des de la notificació",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
