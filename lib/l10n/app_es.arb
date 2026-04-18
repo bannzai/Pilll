@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Registrar toma desde notificación",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Completar sin abrir la aplicación",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
