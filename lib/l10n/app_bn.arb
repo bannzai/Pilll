@@ -2418,5 +2418,9 @@
   "lifetimePurchaseNotice1": "・「এককালীন ক্রয় প্ল্যান」কিনলেও「মাসিক/বার্ষিক প্ল্যান」স্বয়ংক্রিয়ভাবে বাতিল হবে না।",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "এখানে",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
