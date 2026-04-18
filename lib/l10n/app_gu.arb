@@ -2606,5 +2606,9 @@
   "todayPillNumberFeatureAppealTitle": "આજની ગોળીનો નંબર ગોઠવો",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "નંબર ખોટો હોય તો સેટિંગ્સમાં સુધારો",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
