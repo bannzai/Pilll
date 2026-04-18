@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "ສາມາດສະແດງວັນທີໃນແຜ່ນຢາ",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "ໂດຍສະແດງວັນທີໃນແຖວແຜ່ນຢາ, ທ່ານສາມາດເບິ່ງປະຫວັດການທຳຢາໃນອະດີດ ແລະ ແຜນການໃນອະນາຄົດໄດ້ຢ່າງຊັດເຈນ. ທ່ານສາມາດສະຫນອງລະຫວ່າງໂໝດ \"ໝາຍເລກ\" ແລະ \"ວັນທີ\" ເພື່ອເລືອກຮູບແບບການສະແດງທີ່ເໝາະກັບທ່ານ.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
