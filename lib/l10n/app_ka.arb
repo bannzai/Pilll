@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealShortDescription": "კლინიკაში ვიზიტების და სხვა მომავალი გეგმების მართვა",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "კალენდარში მომავლის გეგმების ჩანაწერი",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
