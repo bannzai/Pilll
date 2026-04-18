@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Մենստրուացիայի գրառումների ավտոմատ համաժամացում",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Համաժամեցնել առողջության հավելվածի հետ",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
