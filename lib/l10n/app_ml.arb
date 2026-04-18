@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "ഹെൽത്ത്കെയർ ആപ്പിലേക്ക് സമന്വയിപ്പിക്കുക",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple ഹെൽത്ത്കെയർ പിന്തുണ",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
