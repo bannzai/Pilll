@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Yhdellä napautuksella helppo asetus",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Muokkaa ilmoitusviestejä vapaasti",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
