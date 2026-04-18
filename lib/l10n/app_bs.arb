@@ -2594,5 +2594,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Automatsko kreiranje sljedećeg lista tableta",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Kada se završi trenutna grupa listova pilula, automatski se kreira nova grupa listova pilula. Ručno prebacivanje nije potrebno, a ne dolazi do propuštanja u evidenciji.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
