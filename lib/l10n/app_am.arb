@@ -2578,5 +2578,9 @@
   "quickRecordFeatureAppealHeadline": "በማሳወቂያ ማያ ገጽ ላይ በአንድ ነካ የመድሃኒት ወሰዳ ምዝገባ",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "የማስታወሻ ማሳወቂያውን ረጅም ጊዜ ሲጭኑ፣ \"ወሰድኩ\" የሚለው ድርጊት ይታያል፣ ይህም መተግበሪያውን ሳይከፍቱ ክኒን መውሰዱን እንዲመዘግቡ ያስችልዎታል።",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
