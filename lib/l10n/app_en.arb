@@ -2644,5 +2644,9 @@
   "featureAppealLocationLabel": "In-App Location",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Receive notifications even in Focus mode",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
