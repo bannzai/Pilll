@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "मैन्युअल रूप से बनाना आवश्यक नहीं है",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "設定タブのスイッチで切り替え",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
