@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Пил парағын күн бойынша көрсету",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Күнтізбеге қарамай-ақ күнді біліңіз",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
