@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Սեղմեք ամսաթվին՝ ձեր ինքնազգացողությունը գրանցելու համար",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "\"カレンダーに予定を書き込み\" を hy に翻訳してください。",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
