@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint1": "Upiši raspored u kalendar",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Lako upravljanje danima posjeta liječniku",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
