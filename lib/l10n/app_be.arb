@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealShortDescription": "Не забывайце пра таблеткі нават у рэжыме «Не турбаваць»",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Апавяшчэнні даходзяць нават у рэжыме бязгучнасці",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
