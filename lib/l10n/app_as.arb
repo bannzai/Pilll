@@ -2650,5 +2650,9 @@
   "featureAppealLocationLabel": "এপৰ ভিতৰৰ স্থান",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "ফোকাছ মোডত থাকোঁতেও জাননী আহে",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
