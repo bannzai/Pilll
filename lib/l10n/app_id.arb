@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Ketuk tanggal di kalender untuk mencatat kondisi fisik, suasana hati, gejala, dan lain-lain. Catatan ini dapat dilihat bersama riwayat pemakaian pil dan catatan menstruasi, sehingga Anda bisa memahami ritme tubuh Anda.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Tulis rencana mendatang",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
