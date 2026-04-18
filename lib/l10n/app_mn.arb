@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Пилл хуудсан дээр огноог харуулах боломжтой",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Эмийн хуудасны нүдэнд огноо харуулснаар өнгөрсөн үеийн уусан эмийн түүх болон ирээдүйн уух эмийн хуваарийг нэг харцаар шалгах боломжтой. «Дугаар» горим болон «Огноо» горимын хооронд шилжиж, өөрт тохирсон харагдах байдлыг сонгоорой.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
