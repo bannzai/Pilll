@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Δωρεάν λειτουργία αντιστοίχισης αριθμών",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Μπορεί να αλλαχθεί από την καρτέλα ρυθμίσεων",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
