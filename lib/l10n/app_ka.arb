@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "წყეულება ვიღოთ",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "აპლიკაციის ადგილები",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
