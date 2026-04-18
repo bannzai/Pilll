@@ -2550,5 +2550,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "मासिक चक्र के रिकॉर्ड को स्वास्थ्य ऐप के साथ साझा करें",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "हेल्थकेयर के साथ जुड़ सकता है",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
