@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Notifikasi melalui pengingat",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Ketuk tanggal untuk menulis rencana",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
