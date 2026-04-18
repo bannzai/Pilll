@@ -2626,5 +2626,9 @@
   "todayPillNumberFeatureAppealHeadline": "আজকের গ্রহণ নম্বর পরিবর্তন করা যাবে",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "ভুলে যাওয়া বা ভুল করে নেওয়ার কারণে পিল শিটের নম্বর এবং প্রকৃত সেবনের মধ্যে পার্থক্য হলে, আজকে সেবন করার পিল নম্বরটি ম্যানুয়ালি ঠিক করতে পারবেন। হোমের পিল নম্বর প্রদর্শন থেকেও একই স্ক্রিনটি খোলা যাবে।",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
