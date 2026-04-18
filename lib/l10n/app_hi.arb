@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "कैलेंडर में कार्यक्रम जोड़ें",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "क्लिनिक जाने के दिनों का प्रबंधन आसान बनाएं",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
