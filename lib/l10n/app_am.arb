@@ -2710,5 +2710,9 @@
   "menstruationFeatureAppealPoint3": "ቅንብሮችን ያብጁ",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "በቀን መቁጠሪያ ላይ መዝገቦችን ዝርዝር",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
