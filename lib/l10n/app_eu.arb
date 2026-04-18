@@ -2410,5 +2410,9 @@
   "lifetimePurchaseNotice1": "・「Behin betiko plana」erosten baduzu ere, «hileko/urteko plana» ez da automatikoki bertan behera utziko.",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "Hemen",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
