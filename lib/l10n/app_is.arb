@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Auðvelt að hætta við ef þú gerir mistök",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Skoðaðu inntökuferilinn hvenær sem er",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
