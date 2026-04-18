@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "iOS 26:ssa ja uudemmissa käytettävissä olevan AlarmKitin avulla pillerin ottamisesta muistutetaan hälytyksellä, joka soi varmasti myös äänettömässä tilassa ja Keskitystilassa.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Aseta tämän päivän pillerinumero",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
