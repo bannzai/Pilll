@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple 건강 앱 연동",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "알림에서 복용 기록하기",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
