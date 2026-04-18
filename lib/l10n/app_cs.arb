@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Klepnutím na datum v kalendáři můžete zaznamenat svůj zdravotní stav, náladu, příznaky a další. Protože si je můžete prohlédnout společně se záznamy o užívání léků a záznamy o menstruaci, dokážete pochopit rytmus svého těla.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Zapište si budoucí plány",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
