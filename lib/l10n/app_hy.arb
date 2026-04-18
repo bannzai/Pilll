@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Ավտոմատ ավելացնել հաբերի թերթիկները",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Ավտոմատ կերպով ստեղծել հաջորդ պիլշիթը",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
