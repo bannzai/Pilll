@@ -2514,5 +2514,9 @@
   "menstruationFeatureAppealHeadline": "Може да записвате и прогнозирате менструалния си цикъл",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Просто записвайте менструацията си, когато дойде, и ще можете да преглеждате цялата история на минали менструации. Следващата очаквана дата на менструация се предвижда автоматично, така че можете да планирате живота си по-добре.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
