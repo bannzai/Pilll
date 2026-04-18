@@ -2610,5 +2610,9 @@
   "alarmKitFeatureAppealHeadline": "Alarma de medicació com un despertador",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "Utilitza AlarmKit, disponible a partir d'iOS 26, per avisar-te de prendre la píndola amb una alarma que sona de manera fiable fins i tot en mode silenci o mode de concentració.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
