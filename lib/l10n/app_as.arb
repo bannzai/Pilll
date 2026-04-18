@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "জাননীৰ বাক্য কাষ্টমাইজ কৰিব পাৰিব",
   "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "ঔষধ সেৱনৰ জাননীৰ বাৰ্তা স্বাধীনভাৱে সম্পাদনা কৰক",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
   }
 }
