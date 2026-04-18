@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealBody": "Jūs varat ierakstīt nākotnes notikumus kalendārā, piemēram, ārsta apmeklējumus vai ceļojumus. Tie parādīsies kopā ar jūsu tablešu lietošanas ciklu, lai varētu plānot, ņemot vērā arī paredzamās menstruācijas.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Sinhronizācija ar Veselību",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
