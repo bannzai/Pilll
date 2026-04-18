@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Jakinarazpen-pantailan ukitu bakarrarekin hartzea erregistratu",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Gogoratzeko jakinarazpena luze sakatuz gero, «hartuta» ekintza agertuko da, eta aplikazioa ireki gabe hartzea erregistra dezakezu.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
