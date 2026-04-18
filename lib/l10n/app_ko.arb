@@ -2430,5 +2430,9 @@
   "recommendSignupGeneralDescription": "등록하면 데이터를 백업할 수 있습니다",
   "@recommendSignupGeneralDescription": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "무음 모드에서도 알림 받기",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
   }
 }
