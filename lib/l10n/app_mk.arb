@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Автоматска синхронизација на менструалните записи",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Синхронизирај со апликацијата за здравје",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
