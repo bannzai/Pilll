@@ -2770,5 +2770,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 અને ઉપર • સેટિંગ્સ ટૅબ દ્વારા સક્ષમ કરો",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "મફ્તમાં ઉપલબ્ધ નંબર મેળ ખાવાની સુવિધા",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
