@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "चक्रों का स्वचालित पता लगाना",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "設定をカスタマイズ",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
