@@ -2786,5 +2786,9 @@
   "alarmKitFeatureAppealPoint2": "Звук на аларма като будилник",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 и по-нови версии • Активирайте от раздел Настройки",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
