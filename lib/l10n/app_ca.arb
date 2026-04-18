@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Comprova d'un cop d'ull quan prendre-la",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Podeu mostrar les dates a la fitxa de pastilles",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
