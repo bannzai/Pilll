@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Modificable desde la configuración de la hoja de píldoras",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Registra tu toma tocando la ficha de píldoras",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
