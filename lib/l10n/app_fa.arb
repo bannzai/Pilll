@@ -2689,5 +2689,9 @@
   "menstruationFeatureAppealPoint2": "تشخیص خودکار چرخه",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "سفارشی‌سازی تنظیمات",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
