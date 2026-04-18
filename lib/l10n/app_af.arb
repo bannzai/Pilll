@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealShortDescription": "Voorkom vergeet van jou pil, selfs in stilmodus",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Kennisgewings word gelewer, selfs in stilmodus",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
