@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "ನೀವು ಕೆಲವು ಕಾಲದವರೆಗೆ ಔಷಧಿ ಸೇವನೆ ನಿಲ್ಲಿಸಿದ ಅವಧಿಯನ್ನು ಪಿಲ್‌ಶೀಟ್‌ನಲ್ಲಿ ದಾಖಲಿಸಬಹುದು. ವಿರಾಮದ ಸಮಯದಲ್ಲಿ ಪಿಲ್ ಸಂಖ್ಯೆ ಮುಂದುವರೆಯುವುದಿಲ್ಲ ಮತ್ತು ಮತ್ತೆ ಆರಂಭಿಸಿದಾಗ ತಕ್ಷಣ ದಾಖಲೆಗಳನ್ನು ಮುಂದುವರೆಸಬಹುದು.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "ಆಪ್ ಒಳಗಿನ ಸ್ಥಳ",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
