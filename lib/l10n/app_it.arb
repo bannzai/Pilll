@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "Vedi subito quando l'hai assunta",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Registra l'assunzione della pillola nella schermata principale",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
