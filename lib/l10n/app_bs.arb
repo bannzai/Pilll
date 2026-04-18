@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint1": "Evidencija uzimanja putem akcije obavijesti",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Završi bez otvaranja aplikacije",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
