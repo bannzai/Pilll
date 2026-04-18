@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Lütet au im Stille-/Fokusmodus",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Alarmton wie bim Wecker",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
