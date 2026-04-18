@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Kan vise datoer på pillearket",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Ved at vise datoer i pillearkets felter kan du på et øjeblik se din tidligere medicinhistorik og fremtidige medicinplan. Skift mellem \"nummer\"-tilstand og \"dato\"-tilstand for at vælge den visning, der passer dig bedst.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
