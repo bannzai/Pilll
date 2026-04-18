@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "건강 앱과 동기화",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple 건강 앱 연동",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
