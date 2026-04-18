@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "החלף באמצעות המתג בלשונית ההגדרות.",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "הצלצול גם במצב שקט/ריכוז",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
