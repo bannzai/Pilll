@@ -2534,5 +2534,9 @@
   "calendarDiaryFeatureAppealBody": "কেলেণ্ডাৰৰ পৰা তাৰিখ টেপ কৰি আপোনাৰ শাৰীৰিক অৱস্থা, মনৰ ভাৱ, উপসৰ্গ আদি লিখি ৰাখিব পাৰিব। পিল সেৱনৰ ৰেকৰ্ড আৰু মাহেকীয়াৰ ৰেকৰ্ডৰ সৈতে একেলগে চাব পাৰিব, যাৰ ফলত আপোনাৰ শৰীৰৰ ছন্দ ভালদৰে বুজিব পাৰিব।",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "ভৱিষ্যতৰ পৰিকল্পনা লিখি ৰাখক",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
