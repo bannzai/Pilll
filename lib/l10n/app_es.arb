@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Registra y predice tu período",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Registra el inicio de tu menstruación y conoce tu ciclo",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
