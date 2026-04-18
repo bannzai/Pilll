@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Ved at vise datoer i pillearkets felter kan du på et øjeblik se din tidligere medicinhistorik og fremtidige medicinplan. Skift mellem \"nummer\"-tilstand og \"dato\"-tilstand for at vælge den visning, der passer dig bedst.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Se nemt tilbage på din medicinhistorik",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
