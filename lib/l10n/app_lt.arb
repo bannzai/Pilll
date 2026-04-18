@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Taip pat galima atidaryti palietus skaičių pagrindiniame ekrane.",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Nemokama pertraukų nuo kontraceptinių tablečių registracija",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
