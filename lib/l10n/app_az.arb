@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Sağlamlıq tətbiqi ilə inteqrasiya",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Menstruasiya qeydlərini Sağlamlıq ilə paylaşın",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
