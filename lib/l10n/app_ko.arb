@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "알림에서 바로 복용 기록",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "앱을 열지 않고 알림에서 기록",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
