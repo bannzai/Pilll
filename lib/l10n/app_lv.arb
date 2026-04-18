@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealBody": "Mājas ekrānā pietiek vienreiz pieskarties tablešu lapiņai, lai atzīmētu tabletes lietošanu šai dienai. Ja ieraksts izrādās kļūdains, pieskaroties vēlreiz to var atcelt. Lietošanas vēsturi var pārskatīt vēlāk, tāpēc vari turpināt bez raizēm.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Menstruāciju reģistrēšana un prognozēšana",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
