@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "Osasun aplikazioarekin integratu daiteke",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilll-en erregistratutako hileko-datuak automatikoki sinkroniza daitezke Osasun aplikazioarekin. Osasuneko beste datu batzuekin batera ikusi ahal izango dituzu, eta beste aplikazioetan ere hileko-datuak erabil ditzakezu.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
