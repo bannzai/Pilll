@@ -2690,5 +2690,9 @@
   "menstruationFeatureAppealPoint1": "Registra facilmente l'inizio del ciclo mestruale",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "周周期を自動で把握",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
