@@ -2594,5 +2594,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Crea automàticament el pròxim full de píndoles",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Quan el grup de fulls de pastilles actual acabi, es crearà automàticament un nou grup de fulls de pastilles. No cal cap operació de canvi manual i no es produiran buits en els registres.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
