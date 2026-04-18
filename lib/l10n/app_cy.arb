@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Peidio â chymryd y bilsen",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Gallwch gofnodi cyfnod o roi'r gorau i gymryd y bilsen am sbel ar eich dalen bilsen. Yn ystod y seibiant, nid yw rhif y dos yn symud ymlaen, a gallwch ailddechrau cofnodi ar unwaith pan ailddechreuwch chi.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
