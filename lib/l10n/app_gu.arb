@@ -2698,5 +2698,9 @@
   "calendarDiaryFeatureAppealPoint1": "કૅલેન્ડરમાં નોંધ જુઓ",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "સ્વાસ્થ્ય નોંધ કરો અને સમીક્ષા કરો",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
