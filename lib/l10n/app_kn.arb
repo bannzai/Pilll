@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "FREEFORM",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "ピルシート右上の歯車から開始",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
