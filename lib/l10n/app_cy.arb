@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Eich neges hysbysiad eich hun",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Dangos taflen bilsen yn ôl dyddiad",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
