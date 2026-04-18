@@ -2650,5 +2650,9 @@
   "featureAppealLocationLabel": "Месца ў дадатку",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Апавяшчэнні даходзяць нават у рэжыме засяроджанасці",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
