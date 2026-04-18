@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Ipahinga ang pag-inom ng pill",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Maaari mong i-rekord sa pill sheet ang panahon ng pansamantalang paghinto ng pag-inom ng tableta. Sa panahon ng pahinga, hindi sumusulong ang numero ng dosis, at maaari kang agad na magpatuloy ng pagtatala kapag nag-resume ka.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
