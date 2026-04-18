@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Oznámení dorazí i v režimu soustředění",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Spolehlivá připomínka ve stanovenou dobu",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
