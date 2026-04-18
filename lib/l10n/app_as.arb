@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "কেতিয়া খাব লাগে এক নজৰতে নিশ্চিত কৰক",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "পিল শ্বীটত তাৰিখ প্ৰদৰ্শন কৰিব পাৰি",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
