@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Պիլշիթում ամսաթվի ցուցադրում",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Պիլշիթի վանդակներում ամսաթվերը ցուցադրելով՝ մեկ հայացքով կարող եք տեսնել անցյալում ընդունված դեղամիջոցների պատմությունը և ապագա ընդունումների նախատեսված ժամանակները։ Փոխեք «Համար» և «Ամսաթիվ» ռեժիմների միջև՝ ընտրելով այն ցուցադրման ձևը, որը ձեզ առավել հարմար է։",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
