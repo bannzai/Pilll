@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealTitle": "Запишете бъдещите си планове",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Управление на бъдещи планове като медицински прегледи",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
