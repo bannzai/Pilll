@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Þú getur snert dagsetningu í dagatalinu til að skrá líðan, skap, einkenni o.s.frv. Þessar færslur sjást ásamt töku- og tíðarupplýsingum, svo þú getur fylgst með líkams- og tíðahringnum þínum.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Skráðu framtíðarplönin þín",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
