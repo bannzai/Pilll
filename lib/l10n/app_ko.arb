@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "설정 사용자 지정",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "캘린더에서 기록 보기",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
