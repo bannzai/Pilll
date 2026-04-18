@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Lihat riwayat pemakaian kapan saja",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Mudah mencatat tanggal mulai menstruasi",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
