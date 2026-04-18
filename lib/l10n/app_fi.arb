@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "Voit merkitä taukojakson pillereiden ottamisesta pilleriarkkiin. Tauon aikana pillerin numero ei etene, ja voit jatkaa kirjaamista heti tauon päätyttyä.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Sijainti sovelluksessa",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
