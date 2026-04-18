@@ -2430,5 +2430,9 @@
   "recommendSignupGeneralDescription": "Registreerimine võimaldab teil andmeid varundada",
   "@recommendSignupGeneralDescription": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "Saa teavitusi ka vaikses režiimis",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
   }
 }
