@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "Možete promijeniti broj pilule koju ćete uzeti danas",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "{\n  \"@@locale\": \"hr\",\n  \"pillSheetNumberSyncHelp\": \"Kad se zbog zaborava ili zamjene brojevi na pilulnom listiću i stvarni unos ne poklapaju, možete ručno uskladiti broj pilule koji trebate uzeti danas. Isti zaslon možete otvoriti i iz prikaza broja pilule na početnom zaslonu.\",\n  \"@pillSheetNumberSyncHelp\": {\n    \"description\": \"今日の服用番号変更機能のヘルプページの本文\"\n  }\n}",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
