@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "დააჭირეთ თარიღს და დაამატეთ ჩანაწერი",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "პერიოდის ჩანაწერების ავტომატური სინქრონიზაცია",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
