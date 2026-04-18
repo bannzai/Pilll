@@ -2433,5 +2433,9 @@
   "criticalAlertFeatureAppealHeadline": "دریافت اعلان حتی در حالت بی‌صدا",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "با فعال کردن Critical Alert، می‌توانید اعلان‌های مصرف قرص را حتی در حالت مزاحم نشوید یا سکوت نیز دریافت کنید. برای اینکه زمان مهم مصرف قرص را از دست ندهید، حتماً این قابلیت را تنظیم کنید.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
