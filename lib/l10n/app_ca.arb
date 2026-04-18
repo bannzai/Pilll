@@ -2742,5 +2742,9 @@
   "futureScheduleFeatureAppealLocationHint": "Toca una data per escriure una cita",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Sincronització automàtica de les dades del registre menstrual",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
