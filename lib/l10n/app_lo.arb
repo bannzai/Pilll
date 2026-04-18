@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "ເພີ່ມເຫດການໃສ່ປະຕິທິນ",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "ຈັດການມື້ທີ່ຈະໄປແພດຢ່າງງ່າຍ",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
