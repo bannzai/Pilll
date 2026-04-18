@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "អ្នកអាចចុចលើថ្ងៃក្នុងប្រតិទិន ដើម្បីកត់ត្រាសុខភាព អារម្មណ៍ និងរោគសញ្ញាផ្សេងៗ។ អ្នកអាចមើលកំណត់ត្រាទាំងនេះរួមជាមួយកំណត់ត្រាការទទួលថ្នាំ និងកំណត់ត្រារដូវកាល ដើម្បីឱ្យយល់ពីចង្វាក់នៃរាងកាយខ្លួន។",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "បញ្ចូលផែនការអនាគត",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
