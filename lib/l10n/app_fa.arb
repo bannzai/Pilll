@@ -2449,5 +2449,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "ویرایش آزادانه پیام یادآوری مصرف دارو",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "می‌توانید پیام استاندارد «وقت خوردن قرص است» را به کلماتی که دوست دارید تغییر دهید. سعی کنید آن را به کلمات انگیزه‌بخش، نام حیوان خانگی‌تان یا هر عبارتی که مصرف روزانه را لذت‌بخش‌تر می‌کند، تبدیل کنید.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
