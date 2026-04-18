@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "Saab integreerida tervishoiurakendusega",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilll'is salvestatud menstruatsiooniandmeid saab automaatselt sünkroniseerida tervishoiurakendusega. Saate neid koos teiste terviseandmetega vaadata ning kasutada menstruatsiooniandmeid ka teistes rakendustes.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
