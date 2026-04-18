@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Suena incluso en modo silencio/concentración",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Sonido de alarma similar al despertador",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
