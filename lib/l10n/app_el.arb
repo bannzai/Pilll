@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Αυτόματη προσθήκη φύλλου χαπιών",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Αυτόματη δημιουργία επόμενου φύλλου",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
