@@ -2746,5 +2746,9 @@
   "quickRecordFeatureAppealPoint1": "Registra assunzione dalle azioni delle notifiche",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Segna come assunto senza aprire l'app",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
