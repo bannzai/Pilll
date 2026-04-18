@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "Будильниктей үн чыгарган эскертме",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Жымжырт режиминде да сөзсүз угула турган эскертме",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
