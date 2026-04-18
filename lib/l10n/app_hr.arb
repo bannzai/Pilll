@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Automatsko dodavanje listića pilula",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Automatski generiraj sljedeći listić",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
