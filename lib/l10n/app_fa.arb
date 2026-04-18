@@ -2709,5 +2709,9 @@
   "calendarDiaryFeatureAppealLocationHint": "روی تاریخ ضربه بزنید تا وضعیت سلامتی را ثبت کنید",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "ثبت برنامه در تقویم",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
