@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "ಉಚಿತ ಸಂಖ್ಯಾ ಹೊಂದಾಣಿಕೆ",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "\"設定タブから変更できる\" を kn に翻訳してください。",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
