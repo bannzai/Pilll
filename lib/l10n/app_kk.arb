@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Күнді түртіп, жоспар жазыңыз",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Етеккір жазбаларын деректермен автоматты түрде синхрондау",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
