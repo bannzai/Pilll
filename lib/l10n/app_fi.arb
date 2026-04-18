@@ -2518,5 +2518,9 @@
   "calendarDiaryFeatureAppealShortDescription": "Kirjaa päivittäinen vointisi kalenteriin",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Kirjaa päivittäinen vointisi kalenteriin",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
