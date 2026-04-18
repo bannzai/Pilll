@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 tai uudempi・Ota käyttöön Asetukset-välilehdeltä",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Ilmaiseksi käytettävä numeroiden sovitusominaisuus",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
