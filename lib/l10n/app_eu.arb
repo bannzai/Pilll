@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Pastilla-orriaren eskuineko goialdeko gurpil-hortzatik hasi",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Aldia editatzea eta berrekitea ere erraza",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
