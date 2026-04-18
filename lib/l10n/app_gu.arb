@@ -2654,5 +2654,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "દૈનિક સેવન સૂચનામાં પ્રતિબિંબ",
   "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "તમારો પોતાનો સૂચના સંદેશ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
   }
 }
