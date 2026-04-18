@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "ברגע שקבוצת גיליונות הגלולה הנוכחית מסתיימת, תיווצר באופן אוטומטי קבוצת גיליונות גלולות חדשה. אין צורך בהחלפה ידנית, וכך לא ייווצרו פערים ברישומים.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "התראה שנשמעת כמו שעון מעורר",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
