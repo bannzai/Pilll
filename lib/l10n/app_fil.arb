@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "I-toggle sa switch ng Settings tab",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Tumutunog kahit nasa Silent/Focus Mode",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
