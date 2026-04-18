@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Pranešti priminimu",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Spustelėkite datą ir įrašykite planą",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
