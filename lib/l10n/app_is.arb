@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "Þú getur breytt númeri pillunnar sem á að taka í dag",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Ef númerið á pillublaðinu og raunveruleg inntaka eru ekki samstillt vegna þess að þú gleymdir töku eða tókst ranga pillu, getur þú handvirkt stillt hvaða pillunúmer á að taka í dag. Sama skjá er einnig hægt að opna úr pillunúmerasýningunni á heimaskjánum.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
