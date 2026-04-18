@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "サイレントモードでも通知が届く",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "បើ​អ្នក​បើក Critical Alert អ្នក​នឹង​ទទួល​ការ​រំលឹក​ពេល​ទទួលថ្នាំ ទោះបី​នៅ​ក្នុង​ម៉ូដ​មិនរំខាន (Do Not Disturb) ឬ​ម៉ូដ​ស្ងាត់​ក៏ដោយ។ សូមកំណត់​មុខងារ​នេះ ដើម្បី​មិន​ឲ្យ​អ្នក​ភ្លេច​ពេលវេលាទទួលថ្នាំ​សំខាន់ៗ។",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
