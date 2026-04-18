@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Terveyden integraatio",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Jaa kuukautistiedot Health-sovellukseen",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
