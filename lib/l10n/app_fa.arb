@@ -2529,5 +2529,9 @@
   "futureScheduleFeatureAppealHeadline": "ثبت رویدادهای آینده در تقویم",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "می‌توانید برنامه‌های آینده مانند نوبت پزشک و سفر را در تقویم ثبت کنید. از آنجا که می‌توانید این برنامه‌ها را در کنار چرخه مصرف قرص بررسی کنید، می‌توانید برنامه‌ریزی‌هایی داشته باشید که زمان قاعدگی را نیز در نظر بگیرد.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
