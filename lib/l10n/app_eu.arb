@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Ezarpen fitxatik alda daiteke",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Hasierako pantailako zenbakia ukituta ere ireki daiteke",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
