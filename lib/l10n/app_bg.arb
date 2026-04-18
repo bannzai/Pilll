@@ -2410,5 +2410,9 @@
   "inquiryContentRequired": "Моля, въведете съдържанието на запитването",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Благодарим ви за закупуването на пожизнения план. Ако сте абонирани за месечен или годишен план, не забравяйте да го отмените.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
