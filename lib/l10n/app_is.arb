@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "Skrá viðburð í dagatalið",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "通院日をかんたん管理",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
