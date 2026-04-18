@@ -2553,5 +2553,9 @@
   "quickRecordFeatureAppealTitle": "ثبت مصرف مستقیم از اعلان",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "ثبت از طریق اعلان بدون باز کردن برنامه",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
