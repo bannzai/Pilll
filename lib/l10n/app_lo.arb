@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "ບັນທຶກການກິນຢາຈາກແຈ້ງເຕືອນ",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "アプリを開かず通知上で記録",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
