@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "ניהול קל של תאריכי ביקור במרפאה",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "התראה בתזכורת",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
