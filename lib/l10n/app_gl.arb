@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Comezar dende a roda dentada na parte superior dereita da folla de comprimidos",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Tamén é doado editar e retomar o período",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
