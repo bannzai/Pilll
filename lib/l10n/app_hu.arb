@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Ingyenesen használható szünetnapok nyilvántartása",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Kezdje a tabletta nézet jobb felső sarkában lévő fogaskeréknél.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
