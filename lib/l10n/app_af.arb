@@ -2582,5 +2582,9 @@
   "quickRecordFeatureAppealBody": "As jy die herinneringskennisgewing lank druk, verskyn die 'Ingeneem'-aksie, en jy kan jou inname opteken sonder om die toep te open.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Voeg pilblad outomaties by",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
