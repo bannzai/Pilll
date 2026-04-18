@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Puudutage kalendris kuupäeva, et salvestada oma enesetunne, meeleolu, sümptomid ja muu. Kuna saate seda vaadata koos ravimite võtmise ja menstruatsiooniandmetega, saate paremini mõista oma keha rütmi.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Kirjuta tulevikuplaanid üles",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
