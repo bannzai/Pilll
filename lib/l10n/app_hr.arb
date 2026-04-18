@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Kada trenutna grupa listića pilula završi, nova grupa će se automatski stvoriti. Nije potrebna ručna promjena, pa neće doći do propuštanja zapisa.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Alarm koji zvoni kao budilica",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
