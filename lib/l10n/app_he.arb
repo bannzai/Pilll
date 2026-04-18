@@ -2466,5 +2466,9 @@
   "appearanceModeDateFeatureAppealTitle": "הצג תאריך על גיליון הגלולות",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "בדקי מתי ליקח במבט אחד",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
