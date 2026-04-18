@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "Catat pemakaian pil di layar Beranda",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Di layar utama, cukup ketuk lembar pil untuk mencatat pemakaian hari itu. Jika Anda salah mencatat, ketuk lagi untuk membatalkannya. Riwayat pemakaian juga dapat dilihat di kemudian hari, sehingga Anda bisa melanjutkannya dengan tenang.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
