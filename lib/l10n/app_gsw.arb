@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Pillenblatt nach Datum azeige",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "S Datum kenne ohni en Kalender z'luege",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
