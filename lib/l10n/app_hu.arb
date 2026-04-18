@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "A tablettatábla beállításaiból módosítható",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Koppintson a tablettalapra a bevétel rögzítéséhez",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
