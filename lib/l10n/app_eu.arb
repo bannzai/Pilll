@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "Pilula-orrian erregistra dezakezu pilulak denbora batez hartzeari uzteko aldia. Atseden bitartean, pilula-zenbakia ez da aurreratuko, eta berriro hastean erregistroa berehala berrekin dezakezu.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Aplikazioko kokapena",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
