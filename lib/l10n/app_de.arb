@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Automatischer Wechsel bei Pill-Sheet-Ende",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Keine manuelle Erstellung erforderlich",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
