@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "{\n  \"pillSheetTapToRecord\": \"Þú getur einfaldlega slegið á pillublaðið á aðalskjánum til að skrá töku dagsins. Ef þú hefur slegið inn vitlausa skráningu geturðu afturkallað hana með því að smella aftur. Þú getur einnig skoðað fyrri skráningar í töku­sögu, svo þú getir haldið áfram með öryggi.\",\n  \"@pillSheetTapToRecord\": {\n    \"description\": \"Help text for the pill record / intake history feature. Explains that tapping the pill sheet on the home screen records the day's intake, tapping again undoes it, and history can be reviewed later.\",\n    \"type\": \"text\"\n  }\n}",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Taka upp blæðingar og spá fyrir þær",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
