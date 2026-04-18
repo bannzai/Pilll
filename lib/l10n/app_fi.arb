@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Seuraa sykliä automaattisesti",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Mukauta asetuksia",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
