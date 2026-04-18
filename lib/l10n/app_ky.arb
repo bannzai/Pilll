@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealBody": "Айыз келгенде аны гана жазып коюңуз — өткөн айыздар тууралуу жазууларды тизмеден көрө аласыз. Кийинки айыздын келүү датасы да автоматтык түрдө болжолдонуп, алдын ала пландаштыра аласыз.",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Календарда абалыңызды каттоо",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
