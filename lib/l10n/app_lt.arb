@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Laikinai nutraukti kontraceptinių tablečių vartojimą",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Shibarakufu yō no karu kikan o pirushīto ni kiroku dekimasu. Oyasumi-chū wa fukuyō bangō ga susumazu, saikai-ji ni sugu kiroku o saikai dekimasu.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
