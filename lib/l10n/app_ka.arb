@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "კალენდარში მომავლის გეგმების ჩანაწერი",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "მომავლში დაგეგმილი ვიზიტები, მოგზაურობები და სხვა გეგმები შეგიძლიათ კალენდარში ჩაწეროთ. პილის მიღების ციკლის თანმიმდევრობით ეს შეუძლიათ ერთად შეამოწმოთ, რათა მენსტრუაციის პროგნოზი გათვალოთ და შესაბამისი გეგმები ღონისძიების ფარგლებში დაგეგმოთ.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
