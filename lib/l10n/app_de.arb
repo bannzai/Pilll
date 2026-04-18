@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Mit Premium weiterhin verfügbar",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Automatischer Wechsel bei Pill-Sheet-Ende",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
