@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Həb cədvəlini tarixə görə göstər",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Təqvimə baxmadan tarixi bilmək olar",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
