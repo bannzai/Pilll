@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "Na pilulkovém listu lze zaznamenat dobu, po kterou dočasně přestanete pilulky užívat. Během přestávky se číslo dávky neposouvá dopředu a po obnovení užívání můžete okamžitě pokračovat v záznamu.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Místo v aplikaci",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
