@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealTitle": "Qəbul tarixçəsini asanlıqla nəzərdən keçirin",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Nə vaxt qəbul etdiyinizi dərhal bilin",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
