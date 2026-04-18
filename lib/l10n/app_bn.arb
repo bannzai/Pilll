@@ -2670,5 +2670,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "প্রতিদিনের সেবন বিজ্ঞপ্তিতে প্রতিফলিত",
   "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "আপনার নিজস্ব বিজ্ঞপ্তি বার্তায়",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
   }
 }
