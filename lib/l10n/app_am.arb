@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint1": "ፒል ሺቱን በቀን አሳይ",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "ቀን መቁጠሪያ ሳያዩ ቀኑን ማወቅ ይቻላል",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
