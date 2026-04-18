@@ -2780,5 +2780,9 @@
   "todayPillNumberFeatureAppealPoint1": "Free pill number adjustment feature",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Can be changed from the settings tab",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
