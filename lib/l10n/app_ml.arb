@@ -2662,5 +2662,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "നിങ്ങൾക്കു മാത്രമുള്ള അറിയിപ്പ് സന്ദേശം",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "തീയതി അനുസരിച്ച് പിൽ ഷീറ്റ് പ്രദർശിപ്പിക്കുക",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
