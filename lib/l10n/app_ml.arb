@@ -2642,5 +2642,9 @@
   "criticalAlertFeatureAppealPoint1": "ഫോക്കസ് മോഡിലും അറിയിപ്പുകൾ ലഭിക്കും",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "നിശ്ചിത സമയത്ത് ഉറപ്പായും ഓർമ്മിപ്പിക്കും",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
