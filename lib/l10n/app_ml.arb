@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "ക്രമീകരണ ടാബിലെ സ്വിച്ച് ഉപയോഗിച്ച് മാറ്റുക",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "സൈലന്റ്/ഫോക്കസ് മോഡിലും ശബ്ദിക്കും",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
