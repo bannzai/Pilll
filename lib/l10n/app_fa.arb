@@ -2793,5 +2793,9 @@
   "restDurationFeatureAppealPoint2": "از چرخ‌دنده بالا سمت راست برگه قرص شروع کنید",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "ویرایش و از سرگیری دوره‌ها هم آسان است",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
