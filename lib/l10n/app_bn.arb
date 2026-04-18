@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "মাসিকের রেকর্ড স্বয়ংক্রিয়ভাবে ডেটা সংযুক্ত করুন",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "স্বাস্থ্যসেবা অ্যাপে সিঙ্ক করুন",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
