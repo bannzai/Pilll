@@ -2652,5 +2652,9 @@
   "criticalAlertFeatureAppealPoint2": "Reliable reminders at your scheduled time",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Easy one-tap setup",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
