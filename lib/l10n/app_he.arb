@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "צפה בהיסטוריית הנטילה בכל עת",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "הקלדת תחילת המחזור בקלות",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
