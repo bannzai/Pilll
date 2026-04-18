@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "Күнтізбеде жазбаларды көру",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Тұлғaлaу бойынша жазба жүргізіп, артқа қарап ой жүгiрту",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
