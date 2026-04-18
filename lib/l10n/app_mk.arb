@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "Може да се поврзе со Здравје",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Можете автоматски да ги синхронизирате податоците за менструацијата што ги запишавте во Pilll со апликацијата за здравје. Ќе можете да ги прегледате заедно со другите здравствени податоци во апликацијата за здравје и да ги користите податоците за менструацијата во други апликации.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
