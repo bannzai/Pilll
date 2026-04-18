@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Pilula-orriaren ezarpenetatik aldatu daiteke",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Pilula-orria sakatuz erregistratu hartzeak",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
