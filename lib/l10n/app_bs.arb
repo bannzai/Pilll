@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint1": "Evidencija uzimanja dodirom na raspored pilula",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Jednostavno poništavanje čak i uz grešku",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
