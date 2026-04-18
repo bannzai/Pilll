@@ -2502,5 +2502,9 @@
   "menstruationFeatureAppealShortDescription": "Zabilježite prvi dan menstruacije i pratite svoj ciklus",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Zabilježavanje i predviđanje menstruacije",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
