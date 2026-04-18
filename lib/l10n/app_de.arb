@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "Im Kalender anzeigen",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Befinden notieren und zurückblicken",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
