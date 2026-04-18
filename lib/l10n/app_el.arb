@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Καταγραφή λήψης με ένα άγγιγμα από την οθόνη ειδοποιήσεων",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Πατώντας παρατεταμένα την ειδοποίηση υπενθύμισης, εμφανίζεται η ενέργεια «Έλαβα», και μπορείτε να καταγράψετε τη λήψη χωρίς να ανοίξετε την εφαρμογή.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
