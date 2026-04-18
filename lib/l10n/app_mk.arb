@@ -2502,5 +2502,9 @@
   "menstruationFeatureAppealShortDescription": "Запишете го почетокот на менструацијата за да го следите циклусот",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Следење и предвидување на менструацијата",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
