@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Rodyti datas tablečių lapelyje",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Pilll aplikacijoje piktogramose parodydami datos rodymą galima vienu žvilgsniu peržiūrėti praeities vartojimo įrašus ir būsimus vartojimo planus. Pereikite tarp „Numerio“ režimo ir „Datos“ režimo, kad pasirinktumėte jums tinkamiausią rodymą.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
