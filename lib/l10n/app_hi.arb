@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "आप \"पिल लेने का समय है\" जैसे डिफ़ॉल्ट संदेश को अपनी पसंद के शब्दों से कस्टमाइज़ कर सकते हैं। प्रेरणादायी वाक्य या पालतू के नाम जैसे व्यक्तिगत संदेश चुनें ताकि रोज़ाना दवा लेना और भी मजेदार हो सके।",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "पिल शीट पर तारीखें दिखाएँ",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
