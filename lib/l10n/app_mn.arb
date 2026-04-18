@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Тохиргооны табаас өөрчлөх боломжтой",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Нүүр дэлгэцийн тоог товшиж нээж болно",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
