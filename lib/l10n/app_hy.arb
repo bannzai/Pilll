@@ -2426,5 +2426,9 @@
   "recommendSignupGeneralTitle": "Խորհուրդ ենք տալիս գրանցվել",
   "@recommendSignupGeneralTitle": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "Գրանցվելով՝ կարող եք պահուստավորել ձեր տվյալները։",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
   }
 }
