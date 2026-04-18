@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "언제 복용했는지 바로 확인할 수 있어요",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "ホーム画面でピルの服用を記録 -> 홈 화면에서 피임약 복용을 기록",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
