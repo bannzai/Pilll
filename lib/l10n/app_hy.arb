@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Չմոռանաք դեղը՝ նույնիսկ «Մի խանգարել» ռեժիմում",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Ծանուցումները կհասչեն նաև լռակյաց ռեժիմում",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
