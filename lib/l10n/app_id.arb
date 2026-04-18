@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Notifikasi yang tetap berbunyi meskipun dalam mode senyap",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Alarm pengingat minum pil seperti jam weker",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
