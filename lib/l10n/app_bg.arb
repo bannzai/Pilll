@@ -2778,5 +2778,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Превключете с превключвателя в раздела Настройки",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Звъни дори в тих/режим на фокус",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
