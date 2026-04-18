@@ -2418,5 +2418,9 @@
   "lifetimePurchaseNotice1": "・حتى لو اشتريت «خطة الشراء مرة واحدة»، لن يتم إلغاء «الخطة الشهرية/السنوية» تلقائياً.",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "هنا",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
