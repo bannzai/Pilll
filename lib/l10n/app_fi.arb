@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Voit tallentaa voinnin, mielialan, oireet ja muuta napauttamalla päivämäärää kalenterista. Koska voit tarkastella tietoja yhdessä lääkkeenottohistorian ja kuukautishistorian kanssa, voit seurata kehosi rytmiä.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Kirjaa tulevat tapahtumat",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
