@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Dokončit bez otevření aplikace",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Dostupné s předplatným Premium",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
