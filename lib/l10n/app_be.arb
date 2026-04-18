@@ -2670,5 +2670,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "Адлюстраваць у штодзённых апавяшчэннях аб прыёме",
   "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "Ваша ўласнае паведамленне для нагадванняў",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
   }
 }
