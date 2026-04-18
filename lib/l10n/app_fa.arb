@@ -2441,5 +2441,9 @@
   "reminderNotificationCustomizeWordFeatureAppealTitle": "سفارشی‌سازی پیام اعلان",
   "@reminderNotificationCustomizeWordFeatureAppealTitle": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "می‌توانید متن اعلان را سفارشی کنید",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
   }
 }
