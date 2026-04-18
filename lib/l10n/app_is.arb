@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Eigin tilkynningaskilaboð",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Birgilista eftir dagsetningu",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
