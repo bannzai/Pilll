@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "კალენდარში ჩანაწერების სია",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "ჩაწერე შენი მდგომარეობა და გადახედე",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
