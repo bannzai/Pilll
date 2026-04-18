@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Sünkroonimine tervishoiurakendusega",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Healthi tugi",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
