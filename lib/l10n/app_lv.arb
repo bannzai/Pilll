@@ -2734,5 +2734,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Menstruāciju ierakstu automātiska datu sinhronizācija",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Sinhronizēt ar veselības lietotni",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
