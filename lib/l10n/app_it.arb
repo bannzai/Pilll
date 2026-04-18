@@ -2678,5 +2678,9 @@
   "recordPillFeatureAppealPoint1": "Tocca il foglio delle pillole per registrare l'assunzione",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "間違えてもかんたん取り消し",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
