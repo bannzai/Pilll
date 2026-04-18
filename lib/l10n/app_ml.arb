@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealBody": "ഗുളിക കഴിക്കാൻ മറക്കുകയോ തെറ്റായ ഗുളിക കഴിക്കുകയോ ചെയ്‌ത് ഗുളിക ഷീറ്റിലെ നമ്പറും യഥാർത്ഥ കഴിക്കലും തമ്മിൽ പൊരുത്തക്കേട് ഉണ്ടാകുമ്പോൾ, ഇന്ന് കഴിക്കേണ്ട ഗുളിക നമ്പർ സ്വമേധയാ ക്രമീകരിക്കാൻ കഴിയും. ഹോം സ്‌ക്രീനിലെ ഗുളിക നമ്പർ ഡിസ്‌പ്ലേ വഴിയും ഇതേ സ്‌ക്രീൻ തുറക്കാൻ സാധിക്കും.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "ഗുളിക ഇടവേള കാലം രേഖപ്പെടുത്തുക",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
