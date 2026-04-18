@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "무음/집중 모드에서도 울립니다",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "알람 시계와 같은 알림 소리",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
