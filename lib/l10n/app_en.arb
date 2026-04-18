@@ -2676,5 +2676,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Know the date without checking the calendar",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Can be changed from pill sheet settings",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
