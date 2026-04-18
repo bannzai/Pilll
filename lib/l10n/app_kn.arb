@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "ಪಿಲ್‌ಶೀಟನ್ನು ದಿನಾಂಕದಂತೆ ತೋರಿಸಿ",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "ಕ್ಯಾಲೆಂಡರ್ ನೋಡದೆ ದಿನಾಂಕವನ್ನು ತಿಳಿದುಕೊಳ್ಳಬಹುದು",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
