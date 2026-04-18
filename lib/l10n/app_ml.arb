@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "ഗുളിക കഴിക്കൽ അറിയിപ്പ് സന്ദേശം സ്വതന്ത്രമായി എഡിറ്റ് ചെയ്യുക",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "\"ഗുളിക കഴിക്കാൻ സമയമായി\" എന്ന ഡിഫോൾട്ട് സന്ദേശം നിങ്ങൾ ഇഷ്ടപ്പെടുന്ന വാക്കുകൾ ഉപയോഗിച്ച് കസ്റ്റമൈസ് ചെയ്യാൻ കഴിയും. ഉൽസാഹം ജനിപ്പിക്കുന്ന വാക്കുകളോ, നിങ്ങളുടെ വളർത്തുമൃഗത്തിന്റെ പേരോ ഉപയോഗിച്ച്, ദിവസേനയുള്ള ഗുളിക കഴിക്കൽ കൂടുതൽ ആനന്ദദായകമാക്കി മാറ്റൂ.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
