@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "កត់ត្រាការទទួលថ្នាំពីការជូនដំណឹង",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "បញ្ចប់ដោយមិនបើកកម្មវិធី",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
