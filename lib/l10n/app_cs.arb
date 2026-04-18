@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 a novější · Aktivovat na záložce Nastavení",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Funkce přizpůsobení číslování zdarma",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
