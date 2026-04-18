@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Ստացեք ծանուցումներ նաև կենտրոնացման ռեժիմում",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "設定した時刻に確実にリマインド",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
