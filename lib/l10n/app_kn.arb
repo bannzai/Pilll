@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealBody": "ಮಾಸಿಕ ರಕ್ತಸ್ರಾವ ಆರಂಭವಾದಾಗ ಅದನ್ನು ಮಾತ್ರ ದಾಖಲಿಸಿದರೆ ಸಾಕು — ಹಳೆಯ ಮಾಸಿಕ ದಾಖಲೆಗಳನ್ನು ಪಟ್ಟಿ ರೂಪದಲ್ಲಿ ನೋಡಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ. ಮುಂದಿನ ನಿರೀಕ್ಷಿತ ಮಾಸಿಕ ದಿನಾಂಕವನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಊಹಿಸಲಾಗುತ್ತದೆ, ಆದ್ದರಿಂದ ನೀವು ಯೋಜಿತವಾಗಿ ನಡೆದುಕೊಳ್ಳಬಹುದು.",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ಆರೋಗ್ಯವನ್ನು ದಾಖಲಿಸಿ",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
