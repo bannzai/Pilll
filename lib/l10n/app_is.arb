@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Bæta pillublaði sjálfkrafa",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Bæta næsta blaði við sjálfkrafa",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
