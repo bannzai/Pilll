@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "ເມື່ອເປີດໃຊ້ Critical Alert, ທ່ານຈະຍັງຄົງຮັບການແຈ້ງເຕືອນການທາບຢາໄດ້ເຖິງແມ່ນໃນໂມດ Do Not Disturb ຫຼືໂມດ Silent. ເພື່ອບໍ່ໃຫ້ທ່ານພາດເວລາການທາບຢາທີ່ສຳຄັນ, ຂໍແນະນໍາໃຫ້ທ່ານລອງເປີດການຕັ້ງຄ່ານີ້.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "ປັບແຕ່ງຂໍ້ຄວາມແຈ້ງເຕືອນ",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
