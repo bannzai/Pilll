@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint1": "Лесно записване на началото на менструацията",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Автоматично разпознаване на цикъла",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
