@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealShortDescription": "إدارة دقيقة لفترات التوقف والانقطاع",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "أخذ استراحة من تناول الحبوب",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
