@@ -2561,5 +2561,9 @@
   "quickRecordFeatureAppealHeadline": "ثبت مصرف دارو با یک ضربه از صفحه اعلان‌ها",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "با فشار طولانی روی اعلان یادآور، گزینه «مصرف کردم» نمایش داده می‌شود و می‌توانید بدون باز کردن برنامه، مصرف قرص را ثبت کنید.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
