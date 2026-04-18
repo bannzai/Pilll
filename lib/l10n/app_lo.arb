@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "ປ້ອງກັນການລືມກິນຢາເຖິງແມ່ນໃນໂມດຫ້າມຮ້ອງ (Do Not Disturb).",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "ຮັບແຈ້ງເຕືອນໄດ້ເຖິງໃນໂມດງຽບ",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
