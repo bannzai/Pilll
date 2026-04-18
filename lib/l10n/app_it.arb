@@ -2410,5 +2410,9 @@
   "lifetimePurchaseNotice1": "L'acquisto del piano a pagamento una tantum non annullerà automaticamente l'abbonamento mensile o annuale.",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "Qui",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
