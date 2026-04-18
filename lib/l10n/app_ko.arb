@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "주기를 자동으로 파악",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "설정 사용자 지정",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
