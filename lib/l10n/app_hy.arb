@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Երբ ընթացիկ հաբաթերթերի խումբը ավարտվում է, նոր հաբաթերթերի խումբը ավտոմատ կերպով ստեղծվում է։ Ձեռքի միջոցով փոխարինում անել հարկավոր չէ, ուստի գրառումների բացթողումներ չեն լինի։",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Զարթուցիչի նման զանգող ահազանգ",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
