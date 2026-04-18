@@ -2530,5 +2530,9 @@
   "calendarDiaryFeatureAppealHeadline": "Gündəlik sağlamlığı təqvimə qeyd edin",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Təqvimdən tarix üzərinə toxunaraq özünüzü necə hiss etdiyinizi, əhvalınızı, simptomlarınızı və s. qeyd edə bilərsiniz. Qəbul qeydləri və menstruasiya qeydləri ilə birlikdə yoxlaya bildiyiniz üçün öz bədəninizin ritmini anlaya bilərsiniz.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
