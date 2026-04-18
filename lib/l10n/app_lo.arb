@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "ແຕະໜຶ່ງບັນທຶກການຮັບຢາໃນໜ້າແຈ້ງ",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "ຫາກກົດຍາວທີ່ແຈ້ງເຕືອນ ຈະມີການກະທຳ «ກິນແລ້ວ» ປາກກະທົບຂຶ້ນ ເຮັດໃຫ້ທ່ານສາມາດບັນທຶກການກິນໄດ້ໂດຍບໍ່ຕ້ອງເປີດແອັບ.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
