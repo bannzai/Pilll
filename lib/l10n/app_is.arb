@@ -2406,5 +2406,9 @@
   "lifetimeSubscriptionWarning": "Takk fyrir að kaupa ævilangan aðgang. Ef þú ert áskrifandi að mánaðar- eða ársáskrift, vinsamlegast mundu að segja hana upp.",
   "@lifetimeSubscriptionWarning": {
     "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "Þó að þú kaupir lífstíðaráætlun mun mánaðar- eða ársáskrift ekki vera sagt upp sjálfkrafa.",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
   }
 }
