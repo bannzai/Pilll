@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint2": "ഉണർത്തൽ ഘടികാരം പോലെയുള്ള അലാറം ശബ്ദം",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26-നും അതിനു ശേഷവും · ക്രമീകരണ ടാബിൽ നിന്ന് പ്രവർത്തനക്ഷമമാക്കുക",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
