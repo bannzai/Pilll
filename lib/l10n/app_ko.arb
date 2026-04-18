@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "설정 탭에서 스위치를 전환하세요",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "무음/집중 모드에서도 울립니다",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
