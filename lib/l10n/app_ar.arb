@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "التبديل التلقائي عند انتهاء ورقة الحبوب",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "لا حاجة لعمليات الإنشاء اليدوي",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
