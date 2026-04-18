@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Tumutunog kahit nasa Silent/Focus Mode",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Tunog ng alarma na katulad ng alarm clock",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
