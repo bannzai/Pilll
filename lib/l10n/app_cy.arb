@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Hysbysiadau sy'n canu'n sicr hyd yn oed ar fodd tawel",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Larwm cymryd tabledi fel cloc larwm",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
