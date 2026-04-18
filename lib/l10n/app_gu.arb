@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealShortDescription": "એપ ખોલ્યા વિના સૂચના પર રેકોર્ડ કરો",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "સૂચના સ્ક્રીન પર એક ટેપ વડે સેવન નોંધ",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
