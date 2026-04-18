@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Звук на аларм како кај будилник",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "Достапно на iOS 26 и понатаму — вклучете го преку табот „Поставки“.",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
