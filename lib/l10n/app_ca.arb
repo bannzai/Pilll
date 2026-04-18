@@ -2466,5 +2466,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Edita lliurement el missatge de notificació de presa",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Pots personalitzar el missatge estàndard «És hora de prendre la píndola» amb les paraules que t'agradin. Canvia'l per frases que et motivin, el nom de la teva mascota o qualsevol text que faci que prendre la medicació cada dia sigui més agradable.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
