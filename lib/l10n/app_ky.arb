@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "iOS 26 жана андан кийинки нускааларда жеткиликтүү AlarmKit аркылуу үнсүз режимде же Фокус режиминде да иштеген, ишенимдүү ойготкучтар менен таблетканы ичүү убактын эскертет.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Бүгүнкү кабыл алуу номерин орнотуу",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
