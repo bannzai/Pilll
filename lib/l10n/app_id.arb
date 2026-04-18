@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Notifikasi akan tetap dikirim meskipun dalam Mode Fokus",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Terjemahkan ke bahasa Indonesia: '設定した時刻に確実にリマインド'",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
