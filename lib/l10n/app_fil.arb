@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Awtomatikong Magdagdag ng Pill Sheet",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Awtomatikong likhain ang susunod na sheet",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
