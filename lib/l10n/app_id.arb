@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Edit bebas pesan pengingat minum",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Anda dapat menyesuaikan teks bawaan “Waktunya minum pil” dengan kata-kata yang Anda sukai. Cobalah menggantinya dengan kata-kata yang memotivasi, nama hewan peliharaan, atau ucapan lain agar rutinitas minum pil sehari-hari menjadi lebih menyenangkan.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
