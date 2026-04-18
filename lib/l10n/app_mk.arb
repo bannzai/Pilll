@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Завршено без отворање на апликацијата",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Достапно веднаш со Премиум претплата",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
