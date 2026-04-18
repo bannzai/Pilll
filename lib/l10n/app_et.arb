@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Tasuta ravimipause rekord",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Alusta pillilehe paremas ülanurgas asuvast hammasrattast",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
