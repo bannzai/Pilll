@@ -2489,5 +2489,9 @@
   "menstruationFeatureAppealTitle": "ثبت و پیش‌بینی قاعدگی",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "ثبت تاریخ شروع قاعدگی و پیگیری چرخه",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
