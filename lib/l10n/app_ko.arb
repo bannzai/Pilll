@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "피임약 시트 오른쪽 상단의 설정(톱니바퀴)에서 시작하세요",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "생리 기간의 편집 및 재개도 간편합니다.",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
