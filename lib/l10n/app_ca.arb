@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint1": "Registra la presa de píndoles tocant el full",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Cancel·lació senzilla fins i tot si t'equivoques",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
