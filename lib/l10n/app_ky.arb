@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Абалыңызды жазып, кийинчерээк карап чыгыңыз",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Өткөн жазууларды күнтүзмөдө карап чыгуу",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
