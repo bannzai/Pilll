@@ -2470,5 +2470,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "ডিফল্ট \"পিল খোৱাৰ সময় হৈছে\" বাৰ্তাটো আপোনাৰ পছন্দৰ শব্দেৰে কাষ্টমাইজ কৰিব পাৰিব। প্ৰতিদিনৰ সেৱন আৰু আনন্দময় কৰিবলৈ উৎসাহজনক কথা বা আপোনাৰ পোহনীয়া জন্তুৰ নামলৈ সলনি কৰি চাওক।",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "পিল শ্বীটত তাৰিখ দেখুৱাওক",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
