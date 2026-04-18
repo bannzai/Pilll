@@ -2672,5 +2672,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Display pill sheet by date",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Know the date without checking the calendar",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
