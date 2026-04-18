@@ -2770,5 +2770,9 @@
   "alarmKitFeatureAppealPoint1": "Skanēs arī klusajā/fokusa režīmā",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Modinātāja tipa trauksmes skaņa",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
