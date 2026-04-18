@@ -2802,5 +2802,9 @@
   "todayPillNumberFeatureAppealPoint3": "També es pot obrir tocant el número a l'inici",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Registre de descans de pastilles gratuït",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
