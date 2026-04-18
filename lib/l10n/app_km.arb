@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "ប្រសិនបើលេខផ្លាស់ចេញ សូមទៅកែប្រែ​នៅក្នុងការកំណត់",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "អាចផ្លាស់ប្តូរលេខថ្នាំសម្រាប់ថ្ងៃនេះបាន",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
