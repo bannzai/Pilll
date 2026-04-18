@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Sincronizar con la app de salud",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Compatible con Salud de Apple",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
