@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Disponible con suscripción Premium",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Cambio automático al finalizar la hoja de pastillas",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
