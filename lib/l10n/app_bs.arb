@@ -2650,5 +2650,9 @@
   "featureAppealLocationLabel": "Mjesto u aplikaciji",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Obavještenja stižu čak i tokom načina fokusiranja",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
