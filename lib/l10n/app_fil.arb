@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Madaling pamahalaan ang mga araw ng pagpunta sa klinika",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Abisuhan sa pamamagitan ng Reminder",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
