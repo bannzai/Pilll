@@ -2410,5 +2410,9 @@
   "lifetimePurchaseNotice1": "Membeli paket sekali bayar tidak akan otomatis membatalkan langganan bulanan atau tahunan Anda.",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "Kelola langganan",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
