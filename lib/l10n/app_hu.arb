@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Ciklus automatikus felismerése",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Beállítások testreszabása",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
