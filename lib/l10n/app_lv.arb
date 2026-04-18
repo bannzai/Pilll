@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint2": "Automātiski nosaka ciklu",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Pielāgot iestatījumus",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
