@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "Қашан қабылдағаныңызды бірден біле аласыз",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Басты бетте таблетка қабылдауды жазу",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
