@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Pikkaðu á pillublaðið til að skrá töku",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Auðvelt að hætta við ef þú gerir mistök",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
