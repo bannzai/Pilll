@@ -2810,5 +2810,9 @@
   "restDurationFeatureAppealPoint2": "পিল শীটের উপরের ডানদিকের গিয়ার থেকে শুরু করুন",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "সময়কাল সম্পাদনা ও পুনরায় শুরু করাও সহজ",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
