@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "אם המספר אינו תואם, תקנו אותו בהגדרות.",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "ניתן לשנות את מספר הגלולה של היום",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
