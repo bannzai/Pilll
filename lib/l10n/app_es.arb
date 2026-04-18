@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "Registra tu estado de salud diario en el calendario",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Toca una fecha en el calendario para registrar tu estado físico, humor, síntomas y más. Al poder consultarlo junto con el historial de tomas y el registro menstrual, podrás entender mejor el ritmo de tu cuerpo.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
