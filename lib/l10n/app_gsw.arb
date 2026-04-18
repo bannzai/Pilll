@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Kei manuelli Erstellig nötig",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Mit em Schalter im Yystellige-Tab umschalte",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
