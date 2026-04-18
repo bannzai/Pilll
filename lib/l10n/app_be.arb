@@ -2534,5 +2534,9 @@
   "calendarDiaryFeatureAppealBody": "Націскаючы на дату ў календары, вы можаце запісваць самаадчуванне, настрой, сімптомы і іншае. Паколькі гэта можна праглядаць разам з запісамі аб прыёме таблетак і менструальнымі запісамі, вы зможаце адсочваць рытм свайго цела.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Запісвай будучыя планы",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
