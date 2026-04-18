@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Համաժամեցնել առողջության հավելվածի հետ",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Health-ի հետ համատեղելի",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
