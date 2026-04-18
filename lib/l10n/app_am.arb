@@ -2674,5 +2674,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "ለራስዎ ብቻ የሆነ የማሳወቂያ መልዕክት",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "ፒል ሺቱን በቀን አሳይ",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
