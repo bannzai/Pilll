@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Podeu personalitzar el text de les notificacions",
   "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Edita lliurement el missatge de notificació de presa",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
   }
 }
