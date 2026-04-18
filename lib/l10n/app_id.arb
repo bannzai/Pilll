@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Tap pil sheet to record pill intake",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Silakan terjemahkan teks ini ke dalam bahasa sasaran",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
