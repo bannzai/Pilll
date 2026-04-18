@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Eifachi Iistellig mit eim Tipp",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Benachrichtigungsnachrichte frei bearbeite",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
