@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Berhenti minum pil",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Anda dapat mencatat periode ketika berhenti minum pada lembar pil. Selama masa istirahat, nomor pemakaian tidak akan maju, dan saat Anda melanjutkan, pencatatan akan langsung dilanjutkan.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
