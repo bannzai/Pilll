@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Ort in de App",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Benachrichtigunge chömme au im Fokusmodus aa",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
