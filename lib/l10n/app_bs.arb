@@ -2598,5 +2598,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Kada se završi trenutna grupa listova pilula, automatski se kreira nova grupa listova pilula. Ručno prebacivanje nije potrebno, a ne dolazi do propuštanja u evidenciji.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Alarm koji zvoni kao budilnik",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
