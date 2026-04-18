@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "เตือนตรงตามเวลาที่ตั้งไว้",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "ຕັ້ງຄ່າງ່າຍໆ ດ້ວຍການກົດຄັ້ງດຽວ",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
