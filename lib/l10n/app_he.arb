@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "תיעוד וחיזוי מחזור",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "תעדי את תאריך תחילת המחזור ועקבי אחר המחזוריות",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
