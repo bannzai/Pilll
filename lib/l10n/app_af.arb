@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint1": "Innamerekord via kennisgewing-aksie",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Voltooi sonder om die app oop te maak",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
