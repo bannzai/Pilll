@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "დააჭირეთ თარიღს თქვენი მდგომარეობის ჩაწერისთვის",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "კალენდარში გეგმების დამატება",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
