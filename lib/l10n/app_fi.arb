@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Muistutusilmoitus",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Napauta päivämäärää kirjoittaaksesi tapahtuman",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
