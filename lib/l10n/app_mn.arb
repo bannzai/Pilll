@@ -2466,5 +2466,9 @@
   "appearanceModeDateFeatureAppealTitle": "Эмийн хуудсанд огноо харуулах",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Хэзээ уухаа нэг харцаар шалгах",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
