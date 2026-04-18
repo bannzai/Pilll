@@ -2646,5 +2646,9 @@
   "restDurationFeatureAppealBody": "Вы можаце запісаць у таблетачны ліст перыяд, калі часова спыняеце прыём таблетак. Падчас перапынку нумар прыёму не прасоўваецца, і пры аднаўленні вы адразу зможаце прыступіць да запісу.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Месца ў дадатку",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
