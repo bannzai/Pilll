@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Toca a data para rexistrar o teu estado de saúde",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Escribir citas no calendario",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
