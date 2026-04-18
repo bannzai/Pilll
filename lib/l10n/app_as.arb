@@ -2530,5 +2530,9 @@
   "calendarDiaryFeatureAppealHeadline": "প্ৰতিদিনৰ স্বাস্থ্য অৱস্থা কেলেণ্ডাৰত লিপিবদ্ধ কৰক",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "কেলেণ্ডাৰৰ পৰা তাৰিখ টেপ কৰি আপোনাৰ শাৰীৰিক অৱস্থা, মনৰ ভাৱ, উপসৰ্গ আদি লিখি ৰাখিব পাৰিব। পিল সেৱনৰ ৰেকৰ্ড আৰু মাহেকীয়াৰ ৰেকৰ্ডৰ সৈতে একেলগে চাব পাৰিব, যাৰ ফলত আপোনাৰ শৰীৰৰ ছন্দ ভালদৰে বুজিব পাৰিব।",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
