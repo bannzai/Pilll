@@ -2642,5 +2642,9 @@
   "criticalAlertFeatureAppealPoint1": "Paziņojumi tiek saņemti arī fokusēšanas režīmā",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Atgādinās precīzi iestatītajā laikā",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
