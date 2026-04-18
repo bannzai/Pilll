@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "ಪ್ರಸ್ತುತ ಪಿಲ್‌ಶೀಟ್ ಗುಂಪು ಮುಗಿದಾಗ, ಹೊಸ ಪಿಲ್‌ಶೀಟ್ ಗುಂಪು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ರಚಿಸಲಾಗುತ್ತದೆ. ಕೈಯಿಂದ ಮ್ಯಾನುಯಲ್‌ ಬದಲಾವಣೆ ಮಾಡುವ ಅಗತ್ಯವಿಲ್ಲದಿರುವುದರಿಂದ ಯಾವುದೇ ದಾಖಲೆ ಕಳೆದುಹೋಗುವುದಿಲ್ಲ.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "ಘಂಟೆಯಂತೆ ಎಚ್ಚರಿಸುವ ಅಲಾರ್ಮ್",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
