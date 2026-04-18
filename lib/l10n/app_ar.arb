@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint1": "تصلك الإشعارات حتى أثناء وضع التركيز",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "تذكير موثوق في الوقت المحدد",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
