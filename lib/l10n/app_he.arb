@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "הקלדת תחילת המחזור בקלות",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "周期を自動で把握",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
