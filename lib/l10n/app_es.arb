@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 o posterior · Activar desde la pestaña de Ajustes",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Función de ajuste de número disponible gratuitamente",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
