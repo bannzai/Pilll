@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Pillenblatt nach Datum anzeigen",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Das Datum kennen, ohne in den Kalender zu schauen",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
