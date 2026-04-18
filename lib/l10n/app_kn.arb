@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "ಭವಿಷ್ಯದ ಯೋಜನೆಗಳನ್ನು ದಾಖಲಿಸಿ",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "ದವಾಖಾನೆ/ಕ್ಲಿನಿಕ್ ಭೇಟಿ ಮುಂತಾದ ಭವಿಷ್ಯದ ನಿಯೋಜನೆಗಳನ್ನು ನಿರ್ವಹಿಸಿ",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
