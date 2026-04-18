@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Rankinis kūrimas nebūtinas",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Perjunkite nustatymų skirtuko jungiklį.",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
