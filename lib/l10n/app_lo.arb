@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "ບໍ່ຕ້ອງເບິ່ງປະຕິທິດເພື່ອຮູ້ວັນທີ",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "ສາມາດປ່ຽນແປງໄດ້ໃນການຕັ້ງຄ່າແຜ່ນຢາ",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
