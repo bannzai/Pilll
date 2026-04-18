@@ -2798,5 +2798,9 @@
   "todayPillNumberFeatureAppealPoint2": "ከቅንብሮች ትር መቀየር ይቻላል",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "በቤት ማያ ቁጥሮቹን በመንካትም መክፈት ይቻላል",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
