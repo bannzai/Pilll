@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint2": "Gestisci facilmente i giorni di visita",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Notifica tramite promemoria",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
