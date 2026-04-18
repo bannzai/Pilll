@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Gosodiad hawdd ag un tap",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Golygu neges hysbysu yn rhydd",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
