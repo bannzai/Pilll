@@ -2550,5 +2550,9 @@
   "futureScheduleFeatureAppealBody": "Možete unositi buduće planove u kalendar, poput posjeta ljekaru ili putovanja. Budući da ih možete pregledati zajedno s ciklusom uzimanja pilule, možete praviti planove uzimajući u obzir i termine menstruacije.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Integracija sa zdravljem",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
