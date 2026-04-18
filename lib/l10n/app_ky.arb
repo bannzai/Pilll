@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Качан ичүү керектигин бир караганда билип алыңыз.",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Таблетка барагында күндү көрсөтүүгө болот",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
