@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "პილების მიღების ისტორიას ნებისმიერ დროს შეგიძლიათ ნახოთ",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "მენსტრუაციის დაწყების თარიღის მარტივი ჩაწერა",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
