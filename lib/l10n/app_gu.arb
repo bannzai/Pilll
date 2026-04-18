@@ -2734,5 +2734,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple હેલ્થ સપોર્ટ",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "સૂચના ક્રિયા દ્વારા સેવન નોંધ",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
