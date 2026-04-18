@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Καταγραφή λήψης μέσω ειδοποίησης",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Ολοκλήρωση χωρίς άνοιγμα εφαρμογής",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
