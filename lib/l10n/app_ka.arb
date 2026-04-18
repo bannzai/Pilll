@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "გთხოვთ შეიყვანოთ მიმართვის შინაარსი",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "გმადლობთ ერთჯერადი გეგმის შეძენისთვის. თუ თქვენ გაქვთ მიმდინარე ყოველთვიური ან წლიური გამოწერა, გთხოვთ არ დაგავიწყდეთ მისი გაუქმება.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
