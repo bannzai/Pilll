@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Samstilla við heilsuforrit",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Samhæft við Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
