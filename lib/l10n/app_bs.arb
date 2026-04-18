@@ -2790,5 +2790,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 i noviji · Omogući u kartici Postavke",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Besplatna funkcija usklađivanja broja",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
