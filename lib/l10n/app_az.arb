@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint1": "Fokus rejimində belə bildirişlər gəlir",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Təyin olunmuş vaxtda mütləq xatırlatma",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
