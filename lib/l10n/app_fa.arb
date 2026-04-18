@@ -2517,5 +2517,9 @@
   "calendarDiaryFeatureAppealBody": "می‌توانید با ضربه زدن روی تاریخ در تقویم، وضعیت جسمانی، خلق‌وخو، علائم و موارد دیگر را ثبت کنید. از آنجایی که می‌توانید این اطلاعات را همراه با سوابق مصرف قرص و سوابق قاعدگی مشاهده کنید، می‌توانید ریتم بدن خود را درک کنید.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "برنامه‌های آینده‌ات را ثبت کن",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
