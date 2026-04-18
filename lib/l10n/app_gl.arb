@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Cambio automático ao remate da folla de píldoras",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Non é necesaria a creación manual",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
