@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Érintsd meg a dátumot a bejegyzés hozzáadásához.",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Menstruációs feljegyzések automatikus szinkronizálása",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
