@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Premium harpidetza izanez gero, zuzenean erabilgarri",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Pildora-orria amaitzean aldaketa automatikoa",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
