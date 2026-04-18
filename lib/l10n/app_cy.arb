@@ -2466,5 +2466,9 @@
   "appearanceModeDateFeatureAppealTitle": "Dangos dyddiad ar daflen y bilsen",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Gweld pryd i'w gymryd ar unwaith",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
