@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Identifikasi siklus secara otomatis",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Sesuaikan pengaturan",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
