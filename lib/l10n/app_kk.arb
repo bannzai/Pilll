@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Қосымшаны ашпай-ақ хабарландырудан жазу",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Хабарлама экранында бір түрту арқылы таблетка қабылдауды тіркеу",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
