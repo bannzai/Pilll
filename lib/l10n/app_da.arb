@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Undgå glemte piller selv i forstyrrelsesfri tilstand",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Modtag notifikationer selv i lydløs tilstand",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
