@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "Качан ичкениңизди дароо билсеңиз болот",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Башкы беттен таблетка ичүүнү каттоо",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
