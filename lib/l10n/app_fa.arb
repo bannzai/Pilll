@@ -2565,5 +2565,9 @@
   "quickRecordFeatureAppealBody": "با فشار طولانی روی اعلان یادآور، گزینه «مصرف کردم» نمایش داده می‌شود و می‌توانید بدون باز کردن برنامه، مصرف قرص را ثبت کنید.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "افزودن خودکار برگه قرص",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
