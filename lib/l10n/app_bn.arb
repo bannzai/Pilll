@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealTitle": "মাসিক ট্র্যাক ও পূর্বাভাস",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "মাসিক শুরুর তারিখ রেকর্ড করে চক্র জানুন",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
