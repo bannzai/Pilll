@@ -2766,5 +2766,9 @@
   "quickRecordFeatureAppealPoint3": "প্রিমিয়াম সাবস্ক্রিপশনে সরাসরি ব্যবহারযোগ্য",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "পিল শিট শেষ হলে স্বয়ংক্রিয় পরিবর্তন",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
