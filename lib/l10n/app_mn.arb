@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Эрүүл мэндийн апптай синхрончлох",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Эрүүл мэнд дэмжлэг",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
