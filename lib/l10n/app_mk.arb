@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Поддршка за Apple Health",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Забележи како земено",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
