@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "Jövőbeli események rögzítése a naptárban",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Beírhatod a naptárba a jövőbeli eseményeket, például orvosi viziteket vagy utazásokat. Mivel ezeket együtt láthatod a fogamzásgátló szedési ciklusával, olyan terveket készíthetsz, amelyek figyelembe veszik a várható menstruációs időszakodat.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
