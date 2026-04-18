@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "निःशुल्क नंबर मिलान सुविधा",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "सेटिंग्स टैब से बदला जा सकता है",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
