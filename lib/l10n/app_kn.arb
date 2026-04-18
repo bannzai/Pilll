@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "ದಿನಾಂಕವನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ ನಿಮ್ಮ ಆರೋಗ್ಯವನ್ನು ದಾಖಲಿಸಿ",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "ಕ್ಯಾಲೆಂಡರ್‌ಗೆ ಕಾರ್ಯಕ್ರಮವನ್ನು ಸೇರಿಸಿ",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
