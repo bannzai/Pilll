@@ -2702,5 +2702,9 @@
   "calendarDiaryFeatureAppealPoint1": "Skatīt ierakstus kalendārā",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Fiksējiet pašsajūtu un pārskatiet",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
