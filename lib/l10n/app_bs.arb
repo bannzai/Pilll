@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealTitle": "Alarm koji zvoni kao budilnik",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Notifikacije koje zvone čak i u tihom načinu",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
