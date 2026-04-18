@@ -2738,5 +2738,9 @@
   "futureScheduleFeatureAppealPoint3": "Kennisgewing via herinnering",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Tik op 'n datum om 'n afspraak in te skryf",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
