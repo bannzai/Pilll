@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint1": "তারিখ অনুযায়ী পিল শিট প্রদর্শন করুন",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "ক্যালেন্ডার না দেখেও তারিখ জানা যায়",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
