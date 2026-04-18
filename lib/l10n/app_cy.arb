@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Gwybod y dyddiad heb edrych ar galendr",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Gellir ei newid o osodiadau'r daflen bilsen",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
