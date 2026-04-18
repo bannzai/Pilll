@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealShortDescription": "Gestió precisa de descansos i interrupcions",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Fer un descans en la presa de la píndola",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
