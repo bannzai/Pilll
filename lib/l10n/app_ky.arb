@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Таблетка барагы бүткөндө автоматтык алмаштыруу",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Кол менен түзүү талап кылынбайт",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
