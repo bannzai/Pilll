@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "生理記録を自動でデータ連携",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ធ្វើការសមមូលជាមួយកម្មវិធីសុខភាព",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
