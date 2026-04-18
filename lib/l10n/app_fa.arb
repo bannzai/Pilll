@@ -2693,5 +2693,9 @@
   "menstruationFeatureAppealPoint3": "سفارشی‌سازی تنظیمات",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "مشاهده سوابق در تقویم",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
