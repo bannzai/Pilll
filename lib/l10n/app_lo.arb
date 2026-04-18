@@ -2410,5 +2410,9 @@
   "lifetimePurchaseNotice1": "ເຖິງຈ່າຍເງິນແຜນຊື້ເທົ່າຄັ້ງ (買い切りプラン) ການສະມັກແຜນລາຍເດືອນ/ລາຍປີຈະບໍ່ຖືກຍົກເລີກໂດຍອັດຕະໂນມັດ。",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "ທີ່ນີ້",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
