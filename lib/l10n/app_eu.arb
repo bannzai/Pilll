@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "Atsedenaldiak eta etenak zehaztasunez kudeatu",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Pildora hartzeari atseden ematea",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
