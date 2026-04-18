@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Поврзување со здравствени податоци",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Споделување на податоците за менструација со апликацијата за здравје",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
