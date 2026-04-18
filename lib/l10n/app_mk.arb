@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Прикажувајќи ја датата во полињата на табелата со пилули, можете со еден поглед да ги видите минатите записи за земање и идните планирани земања. Префрлете помеѓу режимите „Број“ и „Датум“ за да го изберете приказот што ви одговара.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Лесно прегледајте ја историјата на земање",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
