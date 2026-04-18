@@ -2582,5 +2582,9 @@
   "quickRecordFeatureAppealBody": "ৰিমাইণ্ডাৰ জাননীটো দীঘলকৈ টিপিলে 'সেৱন কৰিলোঁ' কাৰ্য্য দেখুৱাব, আৰু আপুনি এপটো নোখোলাকৈয়ে সেৱন ৰেকৰ্ড কৰিব পাৰিব।",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "পিল শ্বীট স্বয়ংক্ৰিয়ভাৱে যোগ কৰক",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
