@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Εμφανίζοντας ημερομηνίες στα κελιά του φύλλου χαπιών, μπορείτε να ελέγξετε με μια ματιά το ιστορικό λήψης στο παρελθόν και το πρόγραμμα λήψης στο μέλλον. Εναλλάξτε μεταξύ της λειτουργίας «Αριθμός» και της λειτουργίας «Ημερομηνία» για να επιλέξετε την εμφάνιση που σας ταιριάζει.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Εύκολη ανασκόπηση ιστορικού λήψης",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
