@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Cha vum Iistellige-Tab gändert wärde",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Au dür's Antippe vun de Zahl im Home öffenbar",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
