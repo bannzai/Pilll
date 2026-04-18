@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Engadir ficha de pílulas automaticamente",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Xeración automática da seguinte folla",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
