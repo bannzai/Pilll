@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "A kezdőképernyőn lévő tablettalapra koppintva egyszerűen rögzítheted az aznapi bevételt. Ha véletlenül rögzítettél valamit, egy újabb koppintással visszavonhatod. A bevételi előzmények később is megtekinthetők, így nyugodtan folytathatod a szedést.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Menstruáció rögzítése és előrejelzése",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
