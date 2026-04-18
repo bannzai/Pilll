@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Tead kuupäeva ilma kalendrit vaatamata",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Muudetav pillilehe seadetest",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
