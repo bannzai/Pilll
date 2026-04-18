@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint1": "Təqvimdə qeydlərə baxış",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Sağlamlığı qeyd edin və nəzərdən keçirin",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
