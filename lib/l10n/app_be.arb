@@ -2762,5 +2762,9 @@
   "quickRecordFeatureAppealPoint2": "Гатова без адкрыцця прыкладання",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Даступна з падпіскай Premium",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
