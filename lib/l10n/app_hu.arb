@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Menstruáció kezdőnapjának egyszerű rögzítése",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Ciklus automatikus felismerése",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
