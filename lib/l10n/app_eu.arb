@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Osasun-egoera idatzi eta berrikusi",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Iraganeko erregistroak egutegian berrikusi",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
