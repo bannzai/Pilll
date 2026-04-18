@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "알림을 길게 누르면 '복용 완료' 액션이 표시되어 앱을 열지 않고도 복용을 기록할 수 있습니다.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "피임약 시트 자동 추가",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
