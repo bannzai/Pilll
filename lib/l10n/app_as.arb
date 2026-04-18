@@ -2762,5 +2762,9 @@
   "quickRecordFeatureAppealPoint2": "এপ নোখোলাকৈ সম্পূৰ্ণ কৰক",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "প্ৰিমিয়াম যোগদানৰ সৈতে সৰাসৰি ব্যৱহাৰযোগ্য",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
