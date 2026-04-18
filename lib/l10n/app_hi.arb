@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "कैलेंडर देखे बिना भी तारीख पता चलती है",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "पिल शीट सेटिंग्स से बदला जा सकता है",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
