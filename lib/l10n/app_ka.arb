@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "ნომერი არასწორია? შეასწორეთ პარამეტრებში",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "დღეს მიღებადი აბის ნომრის შეცვლა",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
