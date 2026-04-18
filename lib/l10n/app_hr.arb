@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Ručno stvaranje nije potrebno",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Prebacite pomoću prekidača na kartici Postavke",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
