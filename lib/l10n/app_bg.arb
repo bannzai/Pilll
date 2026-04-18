@@ -2546,5 +2546,9 @@
   "futureScheduleFeatureAppealHeadline": "Записвайте бъдещи планове в календара",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Можете да записвате бъдещи планове в календара, като посещения при лекар и пътувания. Тъй като можете да ги преглеждате заедно с цикъла на приема на хапчета, можете да правите планове, които вземат предвид и менструалния ви цикъл.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
