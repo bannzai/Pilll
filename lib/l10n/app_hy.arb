@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Պիլշիթը ցուցադրել ըստ ամսաթվի",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Ամսաթիվը պարզ է՝ առանց օրացույցին նայելու",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
