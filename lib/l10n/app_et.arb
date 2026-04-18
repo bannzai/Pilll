@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealHeadline": "Menstruatsiooni saab salvestada ja prognoosida",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Lihtsalt registreerige menstruatsioon, kui see algab, ja saate vaadata oma varasemat menstruatsiooniajalugu. Järgmine eeldatav menstruatsioonikuupäev ennustatakse automaatselt, mis võimaldab teil paremini planeerida.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
