@@ -2810,5 +2810,9 @@
   "restDurationFeatureAppealPoint2": "ابدأ من أيقونة الترس في أعلى يمين ورقة الحبوب",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "تعديل الفترة واستئنافها أمر سهل أيضًا",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
