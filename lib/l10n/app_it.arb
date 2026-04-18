@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "Inserisci il contenuto della richiesta",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Grazie per aver acquistato il piano a pagamento una tantum. Se sei iscritto a un piano mensile o annuale, non dimenticare di annullarlo.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
