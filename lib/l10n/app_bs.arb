@@ -2614,5 +2614,9 @@
   "alarmKitFeatureAppealBody": "Koristeći AlarmKit dostupan na iOS 26 i novijim verzijama, obavještava vas o uzimanju pilule alarmom koji se pouzdano oglašava čak i u tihom načinu rada i načinu fokusa.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Podesite broj tablete za danas",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
