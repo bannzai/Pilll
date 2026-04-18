@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "התראות שישמעו גם במצב שקט",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "התראה לנטילה בדומה לשעון מעורר",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
