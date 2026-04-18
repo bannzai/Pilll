@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealBody": "જ્યારે માસિક આવે ત્યારે માત્ર નોંધ કરો, અને ભૂતકાળના માસિકના ઇતિહાસની સૂચિ જોઈ શકો છો. આગામી માસિકની અપેક્ષિત તારીખ પણ આપોઆપ આગાહી કરવામાં આવે છે, તેથી તમે આયોજનપૂર્વક જીવન જીવી શકો છો。",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "કૅલેન્ડર પર સ્વાસ્થ્ય નોંધો",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
