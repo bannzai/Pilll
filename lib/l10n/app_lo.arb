@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "{\n  \"healthIntegration\": \"ສາມາດເຊື່ອມຕໍ່ກັບການດູແລສຸຂະພາບ\",\n  \"@healthIntegration\": {\n    \"description\": \"ヘルスケア連携機能のヘルプページのヘッドライン\",\n    \"type\": \"text\"\n  }\n}",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "{\n  \"@@locale\": \"lo\",\n  \"period_data_healthcare_sync\": \"ຂໍ້ມູນການເປັນປະຈຳເດືອນທີ່ທ່ານບັນທຶກໃນ Pilll ສາມາດຖືກເຊື່ອມຕໍ່ອັດຕະໂນມັດກັບແອັບສຸຂະພາບ. ທ່ານຈະສາມາດເບິ່ງຂໍ້ມູນພ້ອມກັບຂໍ້ມູນສຸຂະພາບອື່ນໆໃນແອັບດຽວກັນ ແລະເຮັດໃຫ້ແອັບອື່ນໆນຳໄປໃຊ້ຂໍ້ມູນເຫຼົ່ານີ້ໄດ້.\",\n  \"@period_data_healthcare_sync\": {\n    \"description\": \"ヘルスケア連携機能のヘルプページの本文\"\n  }\n}",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
