@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealShortDescription": "Teken menstruasiebegin aan en volg jou siklus",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Menstruasie kan aangeteken en voorspel word",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
