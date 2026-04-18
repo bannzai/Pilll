@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "Zaznamenejte budoucí plány do kalendáře",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Do kalendáře si můžete zapisovat budoucí plány, jako jsou návštěvy lékaře nebo cestovní plány. Protože je můžete kontrolovat spolu s cyklem užívání pilulek, můžete si sestavit plány, které zohledňují i termín menstruace.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
