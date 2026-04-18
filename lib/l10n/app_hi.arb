@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "サイレントモードでも通知を受け取る",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "डू नॉट डिस्टर्ब मोड में भी दवा लेना न भूलें",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
