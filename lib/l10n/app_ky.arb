@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Ден соолук тиркемеси менен синхрондоо",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Health колдоосу",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
