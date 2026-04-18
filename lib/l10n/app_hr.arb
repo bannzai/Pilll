@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Zabilježite simptome i pregledajte ih kasnije",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Pregledajte prethodne zapise u kalendaru",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
