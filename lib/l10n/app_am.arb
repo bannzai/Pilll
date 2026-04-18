@@ -2454,5 +2454,9 @@
   "criticalAlertFeatureAppealBody": "Critical Alert ን ሲያንቁ፣ «አትረብሹኝ» ወይም ፀጥታ ሁኔታ ላይ ቢሆኑም የክኒን ማስታወሻ ይደርስዎታል። አስፈላጊ ክኒን የሚወስዱበት ሰዓት እንዳያመልጥዎ፣ አሁኑኑ ያዘጋጁ።",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "የማሳወቂያ መልዕክቶችን አብጅ",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
