@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Awtomatikong pagkonekta ng data ng pagtatala ng regla",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "I-sync sa Healthcare App",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
