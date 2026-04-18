@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Alarmton wie bim Wecker",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "Ab iOS 26 – im Yschtellunge-Tab aktiviere",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
