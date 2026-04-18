@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "Tersedia di iOS 26 ke atas — aktifkan dari tab Pengaturan",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Fitur pencocokan nomor gratis",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
