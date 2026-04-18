@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Notifikation via påmindelse",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Tryk på en dato for at tilføje en aftale",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
