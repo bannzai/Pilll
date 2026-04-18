@@ -2669,5 +2669,9 @@
   "appearanceModeDateFeatureAppealPoint3": "قابل تغییر از تنظیمات برگه قرص",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "ثبت مصرف با ضربه زدن روی برگه قرص",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
