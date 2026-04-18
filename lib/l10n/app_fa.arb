@@ -2749,5 +2749,9 @@
   "quickRecordFeatureAppealPoint3": "با اشتراک پریمیوم قابل استفاده است",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "جابجایی خودکار هنگام اتمام برگه قرص",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
