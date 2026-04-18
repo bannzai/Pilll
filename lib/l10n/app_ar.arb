@@ -2470,5 +2470,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "يمكنك تخصيص الرسالة الافتراضية «حان وقت تناول حبة منع الحمل» بالكلمات التي تفضلها. جرّب تغييرها إلى كلمات تحفيزية أو اسم حيوانك الأليف أو أي عبارة تجعل تناول دوائك اليومي أكثر متعة.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "عرض التاريخ على ورقة الحبوب",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
