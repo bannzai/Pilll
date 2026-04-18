@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "Преглед на записи во календарот",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Запишете го својот здравствен статус и прегледајте го",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
