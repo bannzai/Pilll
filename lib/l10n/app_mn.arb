@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Мөчлөгийг автоматаар тодорхойлох",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Тохиргоог тохируулах",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
