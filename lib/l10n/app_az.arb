@@ -2742,5 +2742,9 @@
   "futureScheduleFeatureAppealLocationHint": "Tarixi toxunaraq qeyd yazın",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Menstruasiya qeydlərinin avtomatik məlumat sinxronizasiyası",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
