@@ -2670,5 +2670,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "Отразяване в ежедневните известия за прием",
   "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "Вашето лично известие",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
   }
 }
