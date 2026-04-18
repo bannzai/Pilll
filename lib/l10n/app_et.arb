@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Puudutage kuupäeva, et kirjutada plaan",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Menstruatsiooni andmete automaatne sünkroonimine",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
