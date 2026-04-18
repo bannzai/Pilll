@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Datum zjistíte bez pohledu do kalendáře",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Lze změnit v nastavení pilulkového listu",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
