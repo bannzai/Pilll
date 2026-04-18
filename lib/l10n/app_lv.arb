@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealLocationHint": "Pieskarieties datumam, lai pievienotu ierakstu",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Menstruāciju ierakstu automātiska datu sinhronizācija",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
