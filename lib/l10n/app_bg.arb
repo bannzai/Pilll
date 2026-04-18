@@ -2694,5 +2694,9 @@
   "recordPillFeatureAppealPoint2": "Лесно отмяна при грешка",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Преглед на историята на приема по всяко време",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
