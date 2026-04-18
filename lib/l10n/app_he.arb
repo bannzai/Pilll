@@ -2518,5 +2518,9 @@
   "calendarDiaryFeatureAppealShortDescription": "תעד את מצב הבריאות היומי שלך בלוח השנה",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "תעד את מצב הבריאות היומי שלך בלוח השנה",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
