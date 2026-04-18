@@ -2726,5 +2726,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Націсніце на дату, каб запісаць самаадчуванне",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Запіс планаў у каляндар",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
