@@ -2721,5 +2721,9 @@
   "futureScheduleFeatureAppealPoint3": "اطلاع‌رسانی از طریق یادآور",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "با ضربه زدن روی تاریخ، برنامه خود را وارد کنید",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
