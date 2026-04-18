@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Einnahme über Benachrichtigungsaktion erfassen",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Ohne App öffnen abschließen",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
