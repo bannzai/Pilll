@@ -2482,5 +2482,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Podeu mostrar les dates a la fitxa de pastilles",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "En mostrar la data a les caselles del full de píndoles, podeu consultar d'un cop d'ull l'historial de preses passades i el programa de preses futures. Canvieu entre el mode «número» i el mode «data» per triar la visualització que millor s'adapti a vosaltres.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
