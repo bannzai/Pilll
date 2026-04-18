@@ -2557,5 +2557,9 @@
   "quickRecordFeatureAppealShortDescription": "ثبت از طریق اعلان بدون باز کردن برنامه",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "ثبت مصرف دارو با یک ضربه از صفحه اعلان‌ها",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
