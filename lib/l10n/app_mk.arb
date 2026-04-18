@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Запишете преку известување без да ја отворите апликацијата",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Запишување на земањето со едно тапнување во известувањето",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
