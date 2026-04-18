@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "ធ្វើការសមមូលជាមួយកម្មវិធីសុខភាព",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "គាំទ្រ Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
