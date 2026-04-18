@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "프리미엄 가입 시 바로 이용 가능",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "ピルシート終了で自動切り替え",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
