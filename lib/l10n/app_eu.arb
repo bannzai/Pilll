@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Datetan sakatu osasun egoera erregistratzeko",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Egutegian planak idatzi",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
