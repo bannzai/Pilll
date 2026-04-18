@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Komdu í veg fyrir að þú gleymir tökunni, jafnvel í „Ekki trufla“-ham.",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Tilkynningar þrátt fyrir þögla ham",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
