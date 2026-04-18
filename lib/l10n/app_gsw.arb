@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "Hütige Innahmenummere aaglîche",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Wann d'Nummer nit stimmt, in de Yystellige korrigiere",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
