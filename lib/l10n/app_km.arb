@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "កែតម្រូវការកំណត់",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "មើលកំណត់ត្រានៅក្នុងប្រតិទិន",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
