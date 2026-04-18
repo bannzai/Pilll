@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Кийинки таблетка барагын автоматтык түрдө түзүү",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Азыркы таблетка барагы топтому аяктаганда, жаңы топтом автоматтык түрдө түзүлөт. Кол менен которууга кереги жок, ошондуктан жазуулардын унутулушу болбойт.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
