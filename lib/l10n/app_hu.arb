@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Ügyintézési napok egyszerű kezelése",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Emlékeztető értesítés",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
