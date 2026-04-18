@@ -2774,5 +2774,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "হাতেৰে তৈয়াৰ কৰাৰ প্ৰয়োজন নাই",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "ছেটিংছ টেবৰ ছুইচেৰে সলনি কৰক",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
