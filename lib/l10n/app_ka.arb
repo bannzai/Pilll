@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "შემდეგი პილშიტის ავტომატური შექმნა",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "როდესაც მიმდინარე აბების ფურცლების ჯგუფი დასრულდება, ახალი აბების ფურცლების ჯგუფი ავტომატურად შეიქმნება. ხელით გადართვა არ არის საჭირო და ჩანაწერის გამოტოვება არ მოხდება.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
