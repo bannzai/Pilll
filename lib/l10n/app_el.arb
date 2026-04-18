@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Καταγράψτε και ανασκοπήστε την κατάστασή σας",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Επισκόπηση παλαιότερων καταγραφών στο ημερολόγιο",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
