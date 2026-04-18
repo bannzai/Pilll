@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Qəbul vaxtını bir baxışda görün",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Həb vərəqinə tarix göstərmək olar",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
