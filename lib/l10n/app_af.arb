@@ -2798,5 +2798,9 @@
   "todayPillNumberFeatureAppealPoint2": "Kan van die instellings-oortjie verander word",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Kan ook oopgemaak word deur op die syfer op die tuisskerm te tik",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
