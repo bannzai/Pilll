@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint3": "કૅલેન્ડર વડે ભૂતકાળના રેકોર્ડ જુઓ",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "તારીખ ટૅપ કરીને આરોગ્ય સ્થિતિ નોંધો",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
