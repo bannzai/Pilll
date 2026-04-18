@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint1": "تسجيل تناول الدواء عبر إجراء الإشعار",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "أكمل دون فتح التطبيق",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
