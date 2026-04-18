@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "ಸೂಚನೆಯ ಕ್ರಿಯೆಯಿಂದ ಸೇವೆ ದಾಖಲಿಸಿ",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
