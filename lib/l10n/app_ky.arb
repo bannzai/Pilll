@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Пилл барагын таптаңыз — колдонгонду каттоо",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Ката кетсе да оңой жокко чыгаруу",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
