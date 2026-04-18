@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Rexistro de toma cun un toque na pantalla de notificación",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Se manteñes premida a notificación de recordatorio, aparecerá a acción «Tomado» e poderás rexistrar a toma sen abrir a aplicación.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
