@@ -2726,5 +2726,9 @@
   "calendarDiaryFeatureAppealLocationHint": "তারিখ ট্যাপ করে শারীরিক অবস্থা রেকর্ড করুন",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "ক্যালেন্ডারে পরিকল্পনা লিখুন",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
