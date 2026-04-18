@@ -2717,5 +2717,9 @@
   "futureScheduleFeatureAppealPoint2": "مدیریت آسان روزهای مراجعه به پزشک",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "اطلاع‌رسانی از طریق یادآور",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
