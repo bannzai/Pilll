@@ -2534,5 +2534,9 @@
   "calendarDiaryFeatureAppealBody": "Možete dodirnuti datum u kalendaru kako biste zabilježili fizičko stanje, raspoloženje, simptome i ostalo. Budući da to možete pregledati zajedno s evidencijom uzimanja tableta i menstrualnim zapisima, možete pratiti ritam svog tijela.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Zapiši buduće planove",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
