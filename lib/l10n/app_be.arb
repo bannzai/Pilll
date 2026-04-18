@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealTitle": "Запіс прыёму проста з апавяшчэння",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Запіс у апавяшчэннях без адкрыцця прыкладання",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
