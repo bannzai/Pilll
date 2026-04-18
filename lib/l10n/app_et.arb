@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "Kirjuta tulevikuplaanid üles",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Halda tulevasi plaane, näiteks arsti vastuvõtte",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
