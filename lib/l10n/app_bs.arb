@@ -2514,5 +2514,9 @@
   "menstruationFeatureAppealHeadline": "Praćenje i predviđanje menstrualnog ciklusa",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Samo zabilježite kada dobijete menstruaciju i moći ćete pregledati historiju prošlih menstruacija. Sljedeći očekivani datum menstruacije se automatski predviđa, tako da možete planirati unaprijed.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
