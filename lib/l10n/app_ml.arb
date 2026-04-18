@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealHeadline": "ഗുളിക കഴിക്കൽ ഇടവേള നൽകുക",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "കുറച്ചു കാലത്തേക്ക് മരുന്ന് കഴിക്കുന്നത് നിർത്തുന്ന കാലഘട്ടം പിൽ ഷീറ്റിൽ രേഖപ്പെടുത്താൻ കഴിയും. ഒഴിവ് കാലത്ത് ഡോസ് നമ്പർ മുന്നോട്ട് പോകില്ല, പുനരാരംഭിക്കുമ്പോൾ ഉടൻ തന്നെ രേഖപ്പെടുത്തൽ തുടരാൻ കഴിയും.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
