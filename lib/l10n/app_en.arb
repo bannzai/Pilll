@@ -2700,5 +2700,9 @@
   "menstruationFeatureAppealPoint2": "Automatically track your cycle",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Customize Settings",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
