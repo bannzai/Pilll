@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "ເພີ່ມເວລານັດທີ່ກ່ອນໄວ້ເວລາຫຼັງຈາກນີ້",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "ヘルスケアと連携",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
