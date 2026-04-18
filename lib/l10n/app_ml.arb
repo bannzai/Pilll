@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "എപ്പോൾ കഴിച്ചുവെന്ന് ഉടനടി അറിയാം",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "ഹോം സ്ക്രീനിൽ ഗുളിക കഴിക്കൽ രേഖപ്പെടുത്തുക",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
