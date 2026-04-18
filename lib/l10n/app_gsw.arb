@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Eifach rückgängig mache, au wànn mr sich vertu het",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "D'Einnahmegeschicht jederziit abruefe",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
