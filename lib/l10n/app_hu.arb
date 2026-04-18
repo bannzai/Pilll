@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Ébresztőhöz hasonló riasztóhang",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26以降・設定タブから有効化",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
