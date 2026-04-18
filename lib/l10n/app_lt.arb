@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "過去の記録をカレンダーで振り返り",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Bakstelėkite datą, kad įrašytumėte savo savijautą",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
