@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint2": "പിൽ ഷീറ്റിന്റെ മുകളിൽ വലത് ഭാഗത്തുള്ള ഗിയർ ഐക്കണിൽ നിന്ന് ആരംഭിക്കുക",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "കാലയളവ് എഡിറ്റ് ചെയ്യലും പുനരാരംഭിക്കലും എളുപ്പം",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
