@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "ສາມາດປ່ຽນແປງໄດ້ໃນການຕັ້ງຄ່າແຜ່ນຢາ",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "ແຕະແຜ່ນຢາເພື່ອບັນທຶກການຮັບຢາ",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
