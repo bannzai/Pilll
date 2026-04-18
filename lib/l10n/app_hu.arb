@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "A Beállítások fül kapcsolójával váltható",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Néma/fókusz módban is megszólal",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
