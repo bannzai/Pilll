@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "הושלם ללא פתיחת האפליקציה",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "זמין לשימוש מיד לאחר הצטרפות למנוי פרימיום",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
