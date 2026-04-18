@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "設定タブのスイッチで切り替え",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
