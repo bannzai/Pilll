@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Maaari ring buksan sa pamamagitan ng pag-tap sa numero sa Home",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Libreng rekord ng pahinga sa gamot",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
