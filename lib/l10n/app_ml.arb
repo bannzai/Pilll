@@ -2702,5 +2702,9 @@
   "calendarDiaryFeatureAppealPoint1": "കലണ്ടറിൽ രേഖകൾ കാണുക",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "ആരോഗ്യ അവസ്ഥ കുറിച്ചിട്ട് തിരിഞ്ഞുനോക്കൽ",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
