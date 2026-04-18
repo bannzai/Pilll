@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Wenn die aktuelle Pillenblistergruppe endet, wird automatisch eine neue Pillenblistergruppe erstellt. Ein manueller Wechsel ist nicht erforderlich, sodass keine Lücken in der Aufzeichnung entstehen.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Alarm wie ein Wecker",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
