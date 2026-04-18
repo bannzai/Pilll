@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "បញ្ចប់ដោយមិនបើកកម្មវិធី",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "អាចប្រើបានភ្លាមៗជាមួយការជាវ Premium",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
