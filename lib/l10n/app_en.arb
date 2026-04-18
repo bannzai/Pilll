@@ -2776,5 +2776,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 or later · Enable from Settings tab",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Free pill number adjustment feature",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
