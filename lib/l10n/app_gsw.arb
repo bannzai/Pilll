@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Wànn d'aktuell Pilleblattgrupp zù End isch, wird automatisch e neji Pilleblattgrupp erstellt. Es brùcht kei manuelli Umschaltigsaktion, un es gìbt kei Lücke in de Ufzeichnunge.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "En Alarm wie e Wecker",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
