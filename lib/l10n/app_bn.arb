@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealTitle": "নোটিফিকেশন থেকে সরাসরি সেবন রেকর্ড",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "অ্যাপ না খুলেই নোটিফিকেশনে রেকর্ড করুন",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
