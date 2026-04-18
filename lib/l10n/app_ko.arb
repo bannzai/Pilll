@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Pilll에 기록한 생리 데이터를 헬스케어 앱과 자동으로 연동할 수 있습니다. 헬스케어 앱의 다른 건강 데이터와 함께 확인하거나, 다른 앱에서도 생리 데이터를 사용할 수 있게 됩니다.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "알림에서 바로 복용 기록",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
