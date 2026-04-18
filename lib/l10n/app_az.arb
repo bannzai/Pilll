@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Menstruasiya qeydlərinin avtomatik məlumat sinxronizasiyası",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Sağlamlıq tətbiqinə sinxronizasiya",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
