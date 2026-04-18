@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealLocationHint": "તારીખ ટૅપ કરીને આરોગ્ય સ્થિતિ નોંધો",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "કૅલેન્ડરમાં કાર્યક્રમ લખો",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
