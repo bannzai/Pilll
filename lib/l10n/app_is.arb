@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Tökuáminning eins og vekjaraklukka",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "Við notum AlarmKit, sem er fáanlegt í iOS 26 og síðar, til að minna þig á að taka pilluna með vekjara sem hljómar örugglega jafnvel í þögnarham eða einbeitingarham (Focus).",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
