@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Aufzeichnung per Benachrichtigung ohne App-Öffnung",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Medikamenteneinnahme per Tipp direkt in der Benachrichtigung erfassen",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
