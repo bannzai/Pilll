@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "Díky AlarmKit dostupnému od iOS 26 vás upozorníme na užití pilulky alarmem, který spolehlivě zazvoní i v tichém režimu nebo Režimu soustředění.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Nastavit číslo dnešní tablety",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
