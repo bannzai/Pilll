@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Ort in der App",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Benachrichtigungen werden auch im Fokusmodus empfangen",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
