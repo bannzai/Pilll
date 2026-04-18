@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Keine manuelle Erstellung erforderlich",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Über den Schalter im Einstellungs-Tab umschalten",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
