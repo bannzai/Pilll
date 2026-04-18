@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint1": "Запіс прыёму праз дзеянне апавяшчэння",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Гатова без адкрыцця прыкладання",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
