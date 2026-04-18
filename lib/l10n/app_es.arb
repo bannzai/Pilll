@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "Revisa fácilmente tu historial de tomas",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Saber cuándo tomaste tu píldora de un vistazo",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
