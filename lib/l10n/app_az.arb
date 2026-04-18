@@ -2534,5 +2534,9 @@
   "calendarDiaryFeatureAppealBody": "Təqvimdən tarix üzərinə toxunaraq özünüzü necə hiss etdiyinizi, əhvalınızı, simptomlarınızı və s. qeyd edə bilərsiniz. Qəbul qeydləri və menstruasiya qeydləri ilə birlikdə yoxlaya bildiyiniz üçün öz bədəninizin ritmini anlaya bilərsiniz.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Gələcək planlarını qeyd et",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
