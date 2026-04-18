@@ -2670,5 +2670,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "প্ৰতিদিনৰ ঔষধ সেৱনৰ জাননীত প্ৰতিফলিত",
   "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "কেৱল আপোনাৰ নিজৰ জাননী বাৰ্তা",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
   }
 }
