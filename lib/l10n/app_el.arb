@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Αυτόματη συγχρονισμός δεδομένων περιόδου",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Συγχρονισμός με εφαρμογή Υγείας",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
