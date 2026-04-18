@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Synkronoi terveyssovellukseen",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Health -tuki",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
