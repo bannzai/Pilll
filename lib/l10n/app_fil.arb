@@ -2514,5 +2514,9 @@
   "calendarDiaryFeatureAppealTitle": "I-record ang kalagayan sa kalendaryo",
   "@calendarDiaryFeatureAppealTitle": {
     "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Itala ang iyong pang-araw-araw na kalusugan sa kalendaryo",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
   }
 }
