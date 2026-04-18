@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Facer un descanso na toma da pílula",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Podes rexistrar na folla de pílulas os períodos nos que deixas de tomalas temporalmente. Durante o descanso, o número de toma non avanza e, cando retomes, podes reiniciar o rexistro de inmediato.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
