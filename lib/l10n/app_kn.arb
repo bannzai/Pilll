@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "飲み忘れや取り違えでピルシート上の番号と実際の服用がずれたときに、今日飲むピル番号を手動で合わせ直せます。ホームのピル数字表示からも同じ画面を開けます。",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "ಸೇವನೆ ವಿರಾಮ ಅವಧಿಯನ್ನು ದಾಖಲಿಸಿ",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
