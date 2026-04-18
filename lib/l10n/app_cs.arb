@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Zvoní i v tichém/soustředěném režimu",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Zvuk alarmu podobný budíku",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
