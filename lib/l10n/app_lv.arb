@@ -2782,5 +2782,9 @@
   "todayPillNumberFeatureAppealPoint1": "Bezmaksas numuru saskaņošanas funkcija",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "To var mainīt iestatījumu cilnē.",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
