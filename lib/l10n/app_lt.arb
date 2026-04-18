@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Vienu žvilgsniu sužinokite, kada vartoti",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Rodyti datas tablečių lapelyje",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
