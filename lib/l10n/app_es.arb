@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Tu propio mensaje de notificación",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Mostrar hoja de píldoras por fecha",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
