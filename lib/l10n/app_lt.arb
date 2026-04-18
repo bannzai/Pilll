@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Vieno palietimo vartojimo įrašymas pranešimų ekrane",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Ilgai paspaudus priminimo pranešimą, bus rodoma veiksmo parinktis „Vartojau“, kuri leidžia užregistruoti vartojimą neatidarant programėlės.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
