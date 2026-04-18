@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Gogoratzeko jakinarazpena luze sakatuz gero, «hartuta» ekintza agertuko da, eta aplikazioa ireki gabe hartzea erregistra dezakezu.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Pilula-orria automatikoki gehitu",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
