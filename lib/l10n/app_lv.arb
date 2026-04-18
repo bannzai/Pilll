@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Datumu var redzēt, neatverot kalendāru.",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Var mainīt tablešu loksnes iestatījumos.",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
