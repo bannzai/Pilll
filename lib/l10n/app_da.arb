@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Sted i appen",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Notifikationer leveres selv i Fokus-tilstand",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
