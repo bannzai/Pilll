@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint3": "સેટિંગ્સ કસ્ટમાઇઝ કરો",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "કૅલેન્ડરમાં નોંધ જુઓ",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
