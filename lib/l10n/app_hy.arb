@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "設定した時刻に確実にリマインド",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Մի հպումով հեշտ կարգավորում",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
