@@ -2414,5 +2414,9 @@
   "lifetimeSubscriptionWarning": "Hvala vam na kupovini jednokratnog plana. Ako ste pretplaćeni na mjesečni ili godišnji plan, ne zaboravite otkazati pretplatu.",
   "@lifetimeSubscriptionWarning": {
     "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "・Kupovinom „jednokratnog plana\" vaš „mjesečni/godišnji plan\" neće biti automatski otkazan.",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
   }
 }
