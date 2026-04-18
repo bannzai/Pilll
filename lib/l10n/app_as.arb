@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealTitle": "আজিৰ বড়ি নম্বৰ মিলাওক",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "নম্বৰ বেলেগ হ'লে ছেটিংত সংশোধন কৰক",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
