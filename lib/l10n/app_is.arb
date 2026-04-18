@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Bætir næsta pillublað við sjálfkrafa",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Þegar núverandi pillublöðuhópur klárast verður nýr hópur sjálfkrafa búinn til. Þú þarft ekki að skipta handvirkt, þannig að engar færslur týnast.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
