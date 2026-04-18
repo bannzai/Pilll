@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "Možete zabilježiti razdoblje privremenog prekida uzimanja u pilulskom listu. Tijekom pauze brojač doza neće napredovati, a pri ponovnom početku uzimanja bilježenje će se odmah nastaviti.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Mjesto u aplikaciji",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
