@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "កំណត់សារជូនដំណឹងផ្ទាល់ខ្លួន",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "បង្ហាញសន្លឹកថ្នាំតាមកាលបរិច្ឆេទ",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
