@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Aloita pilleriarkin oikeassa yläkulmassa olevasta hammasrattaasta",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Myös jakson muokkaaminen ja jatkaminen on helppoa",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
