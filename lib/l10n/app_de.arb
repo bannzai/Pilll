@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Erinnerung per Benachrichtigung",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Datum antippen, um einen Termin einzutragen",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
