@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "មិនចាំបាច់បង្កើតដោយដៃ",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "ប្ដូរដោយស្វិចនៅផ្ទាំងការកំណត់",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
