@@ -2726,5 +2726,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Tik op die datum om jou gesondheid op te teken",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Skryf afsprake in kalender",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
