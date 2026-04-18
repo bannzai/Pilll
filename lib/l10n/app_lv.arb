@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 un jaunākās versijās — aktivizējiet to Iestatījumu cilnē",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Bezmaksas numuru saskaņošanas funkcija",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
