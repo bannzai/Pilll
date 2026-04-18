@@ -2550,5 +2550,9 @@
   "futureScheduleFeatureAppealBody": "ডাক্তারের অ্যাপয়েন্টমেন্ট বা ভ্রমণের পরিকল্পনার মতো ভবিষ্যতের সময়সূচি ক্যালেন্ডারে লিখে রাখতে পারবেন। পিলের সেবনচক্রের সাথে একসাথে দেখতে পারবেন, তাই মাসিকের সময়সূচিও বিবেচনা করে পরিকল্পনা করা যাবে।",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "হেলথকেয়ারের সাথে সংযুক্ত",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
