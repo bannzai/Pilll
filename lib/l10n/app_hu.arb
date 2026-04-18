@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Kezdje a tabletta nézet jobb felső sarkában lévő fogaskeréknél.",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Az időszak szerkesztése és újraindítása is egyszerű.",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
