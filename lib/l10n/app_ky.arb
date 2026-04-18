@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Календарды карабай эле датаны биле аласыз",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Пилл баракчасынын жөндөөлөрүнөн өзгөртүүгө болот",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
