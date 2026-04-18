@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Tiesiog palietę pagrindinio ekrano tablečių lapelį galite pažymėti tos dienos vartojimą. Jei klaidingai pažymėjote, dar kartą palietę galite atšaukti įrašą. Vėliau taip pat galite peržiūrėti vartojimo istoriją, todėl galite tęsti be rūpesčių.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Menstruacijų įrašymas ir prognozavimas",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
