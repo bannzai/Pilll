@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealPoint2": "Lako upravljanje danima posjeta liječniku",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Obavijest putem podsjetnika",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
