@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "ಆಪ್ ಒಳಗಿನ ಸ್ಥಳ",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "ಫೋಕಸ್ ಮೋಡ್‌ನಲ್ಲಿ ಸಹ ಸೂಚನೆಗಳು ಬರುತ್ತವೆ",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
