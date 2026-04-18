@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Notificar con recordatorio",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Toca una fecha para escribir tu agenda",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
