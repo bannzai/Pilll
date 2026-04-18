@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Lääketauon merkinnät ilmaiseksi",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Aloita pilleriarkin oikeassa yläkulmassa olevasta hammasrattaasta",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
