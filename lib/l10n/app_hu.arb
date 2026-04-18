@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Menstruációs feljegyzések automatikus szinkronizálása",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Szinkronizálás az egészségügyi alkalmazással",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
