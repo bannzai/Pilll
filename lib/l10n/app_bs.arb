@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint1": "Lako bilježenje datuma početka menstruacije",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Automatsko praćenje ciklusa",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
