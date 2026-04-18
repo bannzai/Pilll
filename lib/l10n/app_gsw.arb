@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Koschtelos Pillenpaus-Ufzeichning",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Starte vum Zahnrad obbe rechts im Pilleschéin",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
