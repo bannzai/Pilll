@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Jei numeris neteisingas, pataisykite jį nustatymuose.",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Galite pakeisti šiandien vartojamos tabletės numerį",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
