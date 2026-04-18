@@ -2534,5 +2534,9 @@
   "calendarDiaryFeatureAppealBody": "يمكنك النقر على أي تاريخ في التقويم لتسجيل حالتك الصحية ومزاجك وأعراضك وغيرها. ويمكنك مراجعتها مع سجلات تناول الأقراص وسجلات الدورة الشهرية، مما يساعدك على فهم إيقاع جسمك.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "دوّن مواعيدك المستقبلية",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
