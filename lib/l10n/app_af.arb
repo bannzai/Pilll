@@ -2430,5 +2430,9 @@
   "featureAppealTryFeature": "Bevestig",
   "@featureAppealTryFeature": {
     "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "Ons beveel aan dat u 'n rekening registreer",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
   }
 }
