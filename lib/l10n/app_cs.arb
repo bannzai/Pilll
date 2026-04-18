@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Automatická synchronizace dat o menstruaci",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Synchronizovat s aplikací Zdraví",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
