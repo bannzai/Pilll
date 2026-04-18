@@ -2466,5 +2466,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Вольна рэдагуйце паведамленні аб прыёме таблетак",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Вы можаце наладзіць стандартнае паведамленне «Час прыняць таблетку» на любыя словы па вашаму жаданню. Паспрабуйце замяніць яго на матывавальныя фразы, імя вашага хатняга жывёлы ці любыя іншыя словы, якія зробяць штодзённы прыём таблетак больш прыемным.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
