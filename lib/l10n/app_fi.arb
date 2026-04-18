@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "Voit muuttaa tänään otettavan pillerin numeroa",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Jos olet unohtanut ottaa pillerin tai sekoittanut ne, jolloin pillerilevyn numero ja todellinen ottaminen eivät täsmää, voit säätää tänään otettavan pillerin numeron manuaalisesti. Voit avata saman näytön myös kotinäytön pillerinumeronäytöltä.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
