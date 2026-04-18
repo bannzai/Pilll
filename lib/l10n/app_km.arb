@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "過去の記録をカレンダーで振り返り",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "ចុចលើកាលបរិច្ឆេទ ដើម្បីកត់ត្រាស្ថានភាពរាងកាយ",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
