@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Kad pašreizējā tablešu plākšņu grupa beidzas, tiek automātiski izveidota jauna tablešu plākšņu grupa. Nav nepieciešama manuāla pārslēgšana, tādējādi ieraksti netiks palaisti garām.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Zvana kā modinātājs",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
