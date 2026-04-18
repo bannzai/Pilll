@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Þú getur sérsniðið staðlaða 'Það er kominn tími til að taka pilluna' með orðunum sem þér líkar. Breyttu textanum í hvetjandi orð, nafn gæludýrsins eða eitthvað annað sem gerir daglega töku skemmtilegri.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Sýna dagsetningar á pillublaði",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
