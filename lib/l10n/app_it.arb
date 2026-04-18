@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Puoi annotare sul calendario appuntamenti futuri come visite mediche o viaggi. Poiché puoi visualizzare queste note insieme al ciclo di assunzione della pillola, puoi pianificare tenendo conto anche delle previste mestruazioni.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Integrazione con Salute",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
