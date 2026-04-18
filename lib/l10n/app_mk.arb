@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Лесно запишете го почетокот на менструацијата",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Автоматско следење на циклусот",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
