@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint3": "ക്രമീകരണങ്ങൾ ഇഷ്ടാനുസൃതമാക്കുക",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "കലണ്ടറിൽ രേഖകൾ കാണുക",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
