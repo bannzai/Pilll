@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Benachrichtigunge chömme au im Stummodus aa",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Wänn Sie Critical Alert aktivierä, chönnä Sie Innahme-Erinnerigä au im Nit-störä-Modus oder im Lautlos-Modus empfangä. Damit Sie kein wichtigä Pille-Innahmezitpunkt verpassed, probierä Sie's doch us.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
