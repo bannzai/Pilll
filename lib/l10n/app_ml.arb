@@ -2622,5 +2622,9 @@
   "restDurationFeatureAppealTitle": "ഗുളിക ഇടവേള കാലം രേഖപ്പെടുത്തുക",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "ഒഴിവും തടസ്സവും കൃത്യമായി നിയന്ത്രിക്കുക",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
