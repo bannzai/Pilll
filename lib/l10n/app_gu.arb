@@ -2758,5 +2758,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "સેટિંગ ટૅબના સ્વિચ વડે ટૉગલ કરો",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "સાઇલન્ટ/ફોકસ મોડમાં પણ વાગે છે",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
