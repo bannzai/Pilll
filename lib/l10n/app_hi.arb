@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "आप चिकित्सकीय अपॉइंटमेंट या यात्रा जैसी आने वाली योजनाओं को कैलेंडर में दर्ज कर सकते हैं। यह पिल के सेवन चक्र के साथ एक साथ दिखता है, जिससे आप मासिक धर्म की संभावित तिथियों को ध्यान में रखते हुए योजनाएँ बना सकते हैं।",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "हेल्थकेयर से कनेक्ट",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
