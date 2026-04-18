@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Benachrichtigunge chömme au im Fokusmodus aa",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Zuverlässigi Erinnrig zur iigstellte Zit",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
