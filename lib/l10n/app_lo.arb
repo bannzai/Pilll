@@ -2658,5 +2658,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "ສາມາດແກ້ໄຂຂໍ້ຄວາມແຈ້ງເຕືອນໄດ້ຕາມຕ້ອງການ",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "ສົມທຽບໃນແຈ້ງເຕືອນການຮັບຢາປະຈຳວັນ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
   }
 }
