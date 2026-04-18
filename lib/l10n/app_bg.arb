@@ -2486,5 +2486,9 @@
   "appearanceModeDateFeatureAppealBody": "Като показвате дати в клетките на листа с хапчета, можете да видите с един поглед историята на приема си и бъдещия график за прием. Превключете между режим „Номер\" и режим „Дата\", за да изберете подходящото за вас показване.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Лесен преглед на историята на приема",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
