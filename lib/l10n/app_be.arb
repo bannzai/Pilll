@@ -2658,5 +2658,9 @@
   "criticalAlertFeatureAppealPoint2": "Надзейнае нагадванне ў зададзены час",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Лёгкая наладка ў адзін дотык",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
