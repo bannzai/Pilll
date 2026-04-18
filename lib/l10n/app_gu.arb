@@ -2622,5 +2622,9 @@
   "restDurationFeatureAppealTitle": "દવા વિરામ સમયગાળો નોંધો",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "વિરામ અને વિક્ષેપ ચોક્કસ રીતે સંચાલિત કરો",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
