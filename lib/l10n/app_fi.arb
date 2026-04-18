@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Automaattinen vaihto pillerikortin päätyttyä",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Manuaalista luontia ei tarvita",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
