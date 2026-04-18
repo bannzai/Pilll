@@ -2414,5 +2414,9 @@
   "lifetimePurchaseNotice2": "כאן",
   "@lifetimePurchaseNotice2": {
     "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "יש לבטל מראש ולאחר מכן לבצע את הרכישה.",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
   }
 }
