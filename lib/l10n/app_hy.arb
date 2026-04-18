@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Դուք կարող եք սովորական «Ժամանակն է՝ դեղը ընդունելու» հաղորդագրությունը հարմարեցնել ձեր նախընտրած բառերին։ Փորձեք այն փոխել ոգեշնչող արտահայտությամբ կամ ձեր սիրելի կենդանու անվամբ՝ որպեսզի ամենօրյա ընդունումը ավելի հաճելի դառնա։",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Ամսաթվերը ցույց տալ պիլշիթում",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
