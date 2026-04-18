@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "리마인더로 알림",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "날짜를 탭하여 일정을 작성하세요",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
