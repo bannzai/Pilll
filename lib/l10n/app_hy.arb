@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Premium բաժանորդագրությամբ անմիջապես հասանելի է",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Պիլշիթի ավարտը ավտոմատ կերպով փոխարկում է",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
