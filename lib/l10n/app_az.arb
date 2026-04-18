@@ -2546,5 +2546,9 @@
   "futureScheduleFeatureAppealHeadline": "Gələcək planları təqvimdə qeyd edin",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Həkim ziyarəti, səyahət və digər gələcək planlarınızı təqvimə yaza bilərsiniz. Həb qəbulu dövrü ilə birlikdə yoxlaya bildiyiniz üçün, adet dövrünüzü də nəzərə alaraq planlar qura bilərsiniz.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
