@@ -2784,5 +2784,9 @@
   "todayPillNumberFeatureAppealPoint2": "Can be changed from the settings tab",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Also accessible by tapping the number on the home screen",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
