@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Propojení se Zdravím",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Sdílet záznamy menstruace se Zdravím",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
