@@ -2638,5 +2638,9 @@
   "criticalAlertFeatureAppealPoint1": "ફોકસ મોડ દરમિયાન પણ સૂચનાઓ મળે છે",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "નિર્ધારિત સમયે ચોક્કસ રિમાઇન્ડ",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
