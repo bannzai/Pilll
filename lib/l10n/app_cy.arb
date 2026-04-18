@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "Rhestr cofnodion ar y calendr",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Nodio cyflwr iechyd ac edrych yn ôl",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
