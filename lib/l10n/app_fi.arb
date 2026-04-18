@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Voidaan muuttaa asetukset-välilehdeltä",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Voit avata myös napauttamalla numeroa aloitusnäytöllä",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
