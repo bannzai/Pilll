@@ -2521,5 +2521,9 @@
   "futureScheduleFeatureAppealTitle": "برنامه‌های آینده‌ات را ثبت کن",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "مدیریت برنامه‌های آینده مانند نوبت پزشک",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
