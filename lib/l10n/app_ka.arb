@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "შეტყობინებაზე ხანგრძლივად დაჭერისას გამოჩნდება მოქმედება „მიიღე“, რაც საშუალებას მოგცემთ დაარეგისტრიროთ აბის მიღება აპლიკაციის გახსნის გარეშე.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "ტაბლეტების ფურცლის ავტომატური დამატება",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
