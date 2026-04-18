@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Чимээгүй/Төвлөрлийн горимд ч дуугарна",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Сэрүүлэгтэй адилхан дохионы дуу",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
