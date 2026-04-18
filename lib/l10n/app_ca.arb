@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Mostra el full de píndoles per data",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Saps la data sense mirar el calendari",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
