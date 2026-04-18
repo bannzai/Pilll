@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Einnahmehistorie jederzeit einsehen",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Periodenstart einfach erfassen",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
