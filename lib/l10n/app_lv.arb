@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Varat pielāgot noklusējuma paziņojumu \"Laiks iedzert tableti\" pēc savas izvēles. Izvēlieties motivējošu frāzi, mīļvārdu vai pat mājdzīvnieka vārdu — tas var padarīt ikdienas lietošanu patīkamāku.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Rādīt datumus tablešu lapā",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
