@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Пилийн хуудасыг автоматаар нэмэх",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Дараагийн хүснэгтийг автоматаар үүсгэх",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
