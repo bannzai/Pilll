@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Periodenstart einfach erfassen",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Zyklus automatisch erfassen",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
