@@ -2698,5 +2698,9 @@
   "recordPillFeatureAppealPoint3": "የመድሃኒት ታሪክን በማንኛውም ጊዜ ያረጋግጡ",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "የወር አበባ መጀመሪያ ቀንን በቀላሉ ይመዝግቡ",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
