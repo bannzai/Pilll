@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Одоогийн эмийн хуудасны бүлэг дуусахад шинэ эмийн хуудасны бүлэг автоматаар үүсгэгдэнэ. Гараар шилжүүлэх үйлдэл хийх шаардлагагүй бөгөөд бүртгэлд алдагдал гарахгүй.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Будильник шиг дуугардаг сэрэмжлүүлэг",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
