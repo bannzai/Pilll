@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealShortDescription": "Известия, звучащи дори в тих режим",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Аларма за прием като будилник",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
