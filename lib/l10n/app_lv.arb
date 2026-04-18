@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealShortDescription": "Varat uzreiz redzēt, kad to lietojāt.",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "{\n  \"@@locale\": \"lv\",\n  \"home_record_pill\": \"Reģistrēt tablešu lietošanu sākuma ekrānā\",\n  \"@home_record_pill\": {\n    \"description\": \"ピル記録/服用履歴機能のヘルプページのヘッドライン\"\n  }\n}",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
