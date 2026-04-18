@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Автоматско следење на циклусот",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "設定をカスタマイズ",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
