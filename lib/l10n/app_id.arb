@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Dapat diubah melalui pengaturan Lembar Pil",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Tap pil sheet to record pill intake",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
