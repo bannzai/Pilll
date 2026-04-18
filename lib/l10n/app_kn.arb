@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "ಪಿಲ್ ಶೀಟ್ ಸೆಟ್ಟಿಂಗ್ಗಳಿಂದ ಬದಲಾವಣೆ ಮಾಡಬಹುದಾಗಿದೆ",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "ピルシートをタップで服用記録",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
