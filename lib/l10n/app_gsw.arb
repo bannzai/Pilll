@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Für dini eigeni Benachrichtigungsnachricht",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Pillenblatt nach Datum azeige",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
