@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Cyclus automatisch bijhouden",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Instellingen aanpassen",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
