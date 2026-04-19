@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "Tulis jadual dalam kalendar",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Urus tarikh lawatan hospital dengan mudah",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
