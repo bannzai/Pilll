@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Boleh diubah dari tetapan helaian pil",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Rekod pengambilan dengan mengetuk helaian pil",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
