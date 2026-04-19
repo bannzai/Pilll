@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "පිල් භාවිතා කළ ඉතිහාසය පහසුවෙන් සමාලෝචනය කරන්න",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "ඔබ කවදා එය ගත්ද වහාම දැනගත හැක",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
