@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "அமைப்புகள் தாவிலுள்ள சுவிட்சை இயக்கி மாற்றவும்",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
