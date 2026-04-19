@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "Registrar compromissos futuros no calendário",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Você pode registrar compromissos futuros no calendário, como consultas médicas e planos de viagem. Como é possível visualizá-los junto com o ciclo de uso da pílula, você pode fazer planos levando em consideração também a previsão da menstruação.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
