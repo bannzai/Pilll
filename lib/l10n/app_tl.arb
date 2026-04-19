@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "Madaling balikan ang iyong talaan ng pag-inom",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Madaling makita kung kailan mo ito ininom",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
