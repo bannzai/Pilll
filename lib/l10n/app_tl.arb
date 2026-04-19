@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Makakatanggap pa rin ng mga abiso kahit naka-Focus mode",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Siguradong ipapaalala sa itinakdang oras",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
