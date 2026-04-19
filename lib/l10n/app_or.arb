@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealShortDescription": "ଡୁ ନଟ ଡିଷ୍ଟର୍ବ ମୋଡ୍‌ରେ ମଧ୍ୟ ଗୋଳି ଖାଇବା ଭୁଲ ଯିବ ନାହିଁ",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "ସାଇଲେଣ୍ଟ ମୋଡ୍‌ରେ ମଧ୍ୟ ବିଜ୍ଞପ୍ତି ଆସିଥାଏ",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
