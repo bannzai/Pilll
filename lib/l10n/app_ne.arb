@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "महिनावारी रेकर्ड र पूर्वानुमान",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "महिनावारी शुरू मिति रेकर्ड गरी चक्र बुझ्नुहोस्",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
