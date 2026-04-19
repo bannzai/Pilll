@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "カレンダーに予定を書き込み",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "sl translation placeholder",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
