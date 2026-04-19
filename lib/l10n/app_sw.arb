@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "Inaweza kuunganishwa na huduma za afya",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Data za hedhi ulizorekodi katika Pilll zinaweza kuunganishwa kiotomatiki na programu ya afya. Unaweza kuziona pamoja na data nyingine za kiafya kwenye programu ya afya, na pia kuruhusu programu nyingine kutumia data hizi za hedhi.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
