@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint2": "Bhala amanothi ngesimo sakho somzimba bese uwabukeza",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "過去の記録をカレンダーで振り返り",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
