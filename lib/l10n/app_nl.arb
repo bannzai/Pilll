@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Te wijzigen via het tabblad Instellingen",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Ook te openen door op de cijfers op het startscherm te tikken",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
