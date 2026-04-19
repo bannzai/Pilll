@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Maaaring awtomatikong i-sync ang mga datos ng iyong regla na naitala sa Pilll sa app ng Kalusugan. Makikita mo ito kasama ng iba pang data ng kalusugan sa app ng Kalusugan, at magagamit din ang iyong datos ng regla sa ibang mga app.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
