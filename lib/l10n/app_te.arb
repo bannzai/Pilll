@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "మీ వ్యక్తిగత నోటిఫికేషన్ సందేశంగా",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "\"ピルシートを日付で表示\" の Telugu 翻訳",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
