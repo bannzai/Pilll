@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Wyświetl arkusz tabletek według daty",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Znaj datę bez patrzenia w kalendarz",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
