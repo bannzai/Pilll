@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Magagamit agad kapag naka-subscribe sa Premium",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Automaikong paglipat kapag natapos ang sheet ng pill",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
