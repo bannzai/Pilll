@@ -2658,5 +2658,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "通知メッセージを自由に編集",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "இதை தினசரி மருந்து எடுத்தல் அறிவிப்புகளில் பிரதிபலிக்க",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
   }
 }
