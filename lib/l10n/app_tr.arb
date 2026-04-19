@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Sessiz moddayken bile bildirim alırsınız",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Kritik Uyarıyı etkinleştirdiğinizde, Rahatsız Etmeyin veya Sessiz modunda olsanız bile doz alma bildirimleri alabilirsiniz. Önemli hap alma zamanlarını kaçırmamak için lütfen bu ayarı etkinleştirin.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
