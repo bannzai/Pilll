@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "Gdy numer na opakowaniu tabletek nie zgadza się z rzeczywistym przyjęciem z powodu zapomnianej lub pomylonej tabletki, możesz ręcznie skorygować numer tabletki przyjmowanej dzisiaj. Tę samą stronę możesz otworzyć również z wyświetlacza numeru tabletki na ekranie głównym.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Rejestruj przerwy w przyjmowaniu tabletek",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
