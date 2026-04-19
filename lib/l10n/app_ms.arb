@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Rekod pengambilan melalui tindakan notifikasi",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Selesai tanpa membuka apl",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
