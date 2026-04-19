@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 ke atas・Aktifkan dari tab Tetapan",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Ciri padanan nombor yang boleh digunakan secara percuma",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
