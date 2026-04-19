@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "அடுத்த பில் ஷீட்டை தானாக உருவாக்கவும்",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "தற்போதைய பில் ஷீட் குழு முடிவடையும் போது புதிய பில் ஷீட் குழு தானாகவே உருவாக்கப்படும். கைமுறை மாற்றம் தேவையில்லை; இதனால் பில் எடுப்புப் பதிவுகள் மிஸ்ஸாகும் அபாயம் இல்லை.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
