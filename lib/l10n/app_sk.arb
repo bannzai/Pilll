@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealHeadline": "Zaznamenávanie a predpovedanie menštruácie",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Keď začne menštruácia, jednoducho ju zaznačte a môžete si prezerať zoznam minulých záznamov o menštruácii. Dátum ďalšej očakávanej menštruácie sa tiež automaticky predpovedá, takže si môžete plánovať s predstihom.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
