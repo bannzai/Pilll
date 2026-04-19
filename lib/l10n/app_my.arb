@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint2": "ဆက်တင်တဘ်မှ ပြောင်းလဲနိုင်သည်",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "ပင်မစာမျက်နှာရှိ နံပါတ်ကို နှိပ်၍လည်း ဖွင့်နိုင်သည်",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
