@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "Налаштувати параметри",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Календар для перегляду записів",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
