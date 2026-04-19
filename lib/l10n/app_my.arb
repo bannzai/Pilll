@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "သောက်ချိန်ကို တစ်ချက်ကြည့်ရုံနဲ့ စစ်ဆေးနိုင်",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "ပြားစာရင်းတွင် ရက်စွဲများ ပြသနိုင်သည်",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
