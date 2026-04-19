@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "خاموش موڈ میں بھی نوٹیفیکیشن وصول کریں",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "خاموشی موڈ میں بھی دوا لینے میں بھولنے سے بچیں",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
