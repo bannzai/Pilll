@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "手動の作成操作が不要",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Shintsha usebenzisa iswishi kuthebhu yezilungiselelo.",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
