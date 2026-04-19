@@ -2554,5 +2554,9 @@
   "quickRecordFeatureAppealTitle": "ବିଜ୍ଞପ୍ତିରୁ ସିଧାସଳଖ ଔଷଧ ସେବନ ରେକର୍ଡ",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "ଆପ୍ ନ ଖୋଲି ବିଜ୍ଞପ୍ତି ମାଧ୍ୟମରେ ରେକର୍ଡ କରନ୍ତୁ",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
