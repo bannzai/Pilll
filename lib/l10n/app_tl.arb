@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Madaling bawiin kahit magkamali",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "I WILL REPLACE THIS",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
