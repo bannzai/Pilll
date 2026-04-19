@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "Revisar o histórico de comprimidos facilmente",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Saiba imediatamente quando tomou",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
