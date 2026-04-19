@@ -2466,5 +2466,9 @@
   "appearanceModeDateFeatureAppealTitle": "Paparkan tarikh pada helaian pil",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Semak bila perlu minum sekilas pandang",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
