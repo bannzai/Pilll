@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Pilll-da yozilgan hayz ma'lumotlarini Sog'liqni saqlash ilovasi bilan avtomatik ravishda sinxronlashtirishingiz mumkin. Bu orqali hayz ma'lumotlarini boshqa sog'liq ma'lumotlari bilan birgalikda ko'rishingiz va boshqa ilovalarda ham foydalanishingiz mumkin.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Bildirishnomadan to'g'ridan-to'g'ri qayd etish",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
