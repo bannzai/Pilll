@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealShortDescription": "Pålitliga notiser som hörs även i tyst läge",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Väckarklocksliknande påminnelse för att ta piller",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
