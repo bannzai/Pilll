@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint2": "Kan ändras i inställningsfliken.",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Går även att öppna genom att trycka på siffran på startsidan.",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
