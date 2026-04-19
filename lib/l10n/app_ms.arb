@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Penggera pengambilan ubat seperti jam penggera",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "Menggunakan AlarmKit yang tersedia pada iOS 26 dan ke atas, anda akan diberitahu untuk mengambil pil melalui penggera yang pasti berbunyi walaupun dalam mod senyap atau mod Fokus.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
