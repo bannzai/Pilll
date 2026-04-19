@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Automatically switch when pill sheet ends",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Hakuna haja ya hatua za kuunda kwa mkono",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
