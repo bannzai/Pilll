@@ -2502,5 +2502,9 @@
   "menstruationFeatureAppealShortDescription": "ဓမ္မတာ စတင်သည့်ရက်ကို မှတ်တမ်းတင်ပြီး ကာလပတ်လည်ကို သိရှိပါ",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "ရာသီလာချိန်ကို မှတ်တမ်းတင်ပြီး ကြိုတင်ခန့်မှန်းနိုင်သည်",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
