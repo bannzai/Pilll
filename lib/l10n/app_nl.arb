@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Jouw eigen meldingsbericht",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Pillenblad op datum weergeven",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
