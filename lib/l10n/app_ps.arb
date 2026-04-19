@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "د خبرتیا پر سکرین د یوه ټچ سره د دوا د اخیستلو ثبتول",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "که تاسو د یادونې خبرتیا اوږده فشار ورکړئ، د 'دوا واخیستله' عمل ښکاره کیږي، او تاسو کولی شئ پرته له اپلیکیشن پرانیستلو د دوا اخیستل ثبت کړئ.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
