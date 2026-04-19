@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint3": "Enkel inställning med ett tryck",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Notis meddelandet fritt",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
