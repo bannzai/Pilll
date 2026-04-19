@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Pansamantalang itigil ang pag-inom ng pill",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Iba't ibang teksto placeholder",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
