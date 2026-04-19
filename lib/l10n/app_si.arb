@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "කැලේන්ඩරයෙහි නියමිත කාලයය ලියා දමන්න",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "රෝහලට යන දින පහසුවෙන් කළමනාකරණය",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
