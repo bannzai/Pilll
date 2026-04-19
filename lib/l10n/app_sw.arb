@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "Rekodi moja kwa moja kutoka arifa",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Rekodi kutoka arifa bila kufungua programu",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
