@@ -2410,5 +2410,9 @@
   "lifetimePurchaseNotice1": "・「ਇੱਕ ਵਾਰੀ ਖਰੀਦ ਯੋਜਨਾ」ਖਰੀਦਣ ਤੋਂ ਬਾਅਦ ਵੀ「ਮਾਸਿਕ/ਸਾਲਾਨਾ ਯੋਜਨਾ」ਆਪਣੇ ਆਪ ਰੱਦ ਨਹੀਂ ਹੋਵੇਗੀ।",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "ਇੱਥੇ",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
