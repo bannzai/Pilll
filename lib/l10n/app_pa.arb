@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "ਇੱਕ ਟੈਪ ਨਾਲ ਆਸਾਨ ਸੈਟਿੰਗ",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "ਸੂਚਨਾ ਸੁਨੇਹਾ ਆਜ਼ਾਦੀ ਨਾਲ ਸੰਪਾਦਿਤ ਕਰੋ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
