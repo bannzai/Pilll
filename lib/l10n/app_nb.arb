@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 eller nyere · Aktiver fra Innstillinger-fanen",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Gratis nummerjusteringsfunksjon",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
