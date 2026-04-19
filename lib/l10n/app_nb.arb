@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Registrer og forutsi mensen",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Registrer mensens startdato og hold oversikt over syklusen",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
