@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "即使在静音/专注模式也会响",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "闹钟般的提醒音",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
