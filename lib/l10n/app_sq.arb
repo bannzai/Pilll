@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Regjistro pa hapur aplikacionin, direkt nga njoftimi",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Regjistrim me një trokitje nga njoftimet",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
