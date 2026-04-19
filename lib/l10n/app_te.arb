@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "చక్రాన్ని ఆటోమేటిక్‌గా గుర్తించడం",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "సెటింగ్స్‌ను అనుకూలీకరించండి",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
