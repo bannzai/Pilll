@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Одним поглядом дізнаєтесь, коли приймати",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "{\n  \"pillSheetShowDate\": \"Показувати дати на аркуші таблеток\",\n  \"@pillSheetShowDate\": {\n    \"description\": \"ピルシート外観モード(date)機能のヘルプページのヘッドライン\",\n    \"type\": \"text\"\n  }\n}",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
