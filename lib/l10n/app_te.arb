@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "పిల్ షీట్ సెట్టింగుల నుంచి మార్చవచ్చు",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "పిల్ షీట్‌ను ట్యాప్ చేసి తీసుకున్నట్లు నమోదు చేయండి",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
