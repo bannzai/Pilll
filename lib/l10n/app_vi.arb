@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Nhắc uống thuốc như báo thức",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "Sử dụng AlarmKit (có sẵn từ iOS 26 trở lên) để thông báo việc uống thuốc bằng báo thức sẽ chắc chắn kêu ngay cả khi ở chế độ im lặng hoặc chế độ Tập trung.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
