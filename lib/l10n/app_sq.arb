@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealHeadline": "Regjistroni dhe parashikoni menstruacionet",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Thjesht regjistro kur të të vijë menstruacioni, dhe do të mund të shikosh historikun e kaluar të menstruacioneve në një listë. Data e ardhshme e pritshme parashikohet automatikisht, kështu që mund të organizohesh më mirë.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
