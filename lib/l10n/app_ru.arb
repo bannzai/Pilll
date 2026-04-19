@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Будильник для приёма таблеток",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "С помощью AlarmKit, доступного в iOS 26 и новее, вы получите уведомление о приёме таблетки через будильник, который срабатывает даже в беззвучном режиме и режиме фокусировки.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
