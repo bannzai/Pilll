@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealBody": "သောက်ဖို့မေ့သွားခြင်း သို့မဟုတ် မှားသောက်မိခြင်းကြောင့် ပြားရွက်ပေါ်ရှိ နံပါတ်နှင့် အမှန်တကယ်သောက်ထားသောနံပါတ်တို့ မကိုက်ညီသောအခါ ယနေ့သောက်ရမည့် ပြားနံပါတ်ကို ကိုယ်တိုင်ပြင်ဆင်နိုင်သည်။ ပင်မမျက်နှာပြင်ရှိ ပြားနံပါတ်ပြသမှုကနေလည်း ထိုမျက်နှာပြင်ကို ဖွင့်နိုင်သည်။",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "ဆေးသောက်ရပ်နားချိန်ကို မှတ်တမ်းတင်ပါ",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
