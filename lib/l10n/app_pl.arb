@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Dźwięk alarmu jak budzik",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 lub nowszy・Włącz w zakładce Ustawienia",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
