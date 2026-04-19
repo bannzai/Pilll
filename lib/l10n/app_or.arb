@@ -2522,5 +2522,9 @@
   "futureScheduleFeatureAppealTitle": "ଆସନ୍ତା ଯୋଜନା ଲେଖ",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "ଡାକ୍ତର ଦର୍ଶନ ଭଳି ଭବିଷ୍ୟ ଯୋଜନା ପରିଚାଳନା",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
