@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Samodejno zaznavanje cikla",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Prilagodite nastavitve",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
