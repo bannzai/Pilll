@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "ਮਿਤੀ ਦੁਆਰਾ ਪਿੱਲ ਸ਼ੀਟ ਪ੍ਰਦਰਸ਼ਿਤ ਕਰੋ",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "ਕੈਲੰਡਰ ਦੇਖੇ ਬਿਨਾਂ ਤਾਰੀਖ਼ ਪਤਾ ਲੱਗਦੀ ਹੈ",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
