@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "ਦਵਾਈ ਦਾ ਇਤਿਹਾਸ ਆਸਾਨੀ ਨਾਲ ਦੇਖੋ",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "ਕਦੋਂ ਲਈ ਦਵਾਈ ਤੁਰੰਤ ਪਤਾ ਲੱਗਦਾ ਹੈ",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
