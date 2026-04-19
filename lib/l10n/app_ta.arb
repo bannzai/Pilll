@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "ஆரோக்கியச் செயலியுடன் ஒத்திசைவு",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
