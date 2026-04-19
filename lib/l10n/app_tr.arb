@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Ana ekrandaki sayıya dokunarak da açabilirsiniz.",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Ücretsiz kullanılabilen ara/ilaçsız kayıt",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
