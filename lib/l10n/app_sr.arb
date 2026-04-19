@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Jednim dodirom u obaveštenju zabeležite uzimanje",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Ako dugo pritisnete obaveštenje podsetnika, pojaviće se akcija „Uzeto“ koja vam omogućava da zabeležite uzimanje bez otvaranja aplikacije.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
