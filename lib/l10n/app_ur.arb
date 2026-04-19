@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "ایپ کھولے بغیر نوٹیفیکیشن سے ریکارڈ کریں",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "نوٹیفیکیشن اسکرین پر ایک ٹیپ کر کے گولی لینے کا اندراج",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
