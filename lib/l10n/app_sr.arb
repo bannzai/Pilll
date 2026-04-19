@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Obaveštenja stižu i kada je aktiviran režim fokusa.",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Наведено је подешено време за поуздано подсећање",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
