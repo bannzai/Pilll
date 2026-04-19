@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Shintsha usebenzisa iswishi kuthebhu yezilungiselelo.",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Izokwazisa noma ngabe imodi ithule noma imodi yokugxila ivuliwe.",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
