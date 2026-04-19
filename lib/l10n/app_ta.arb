@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "服用通知のメッセージを自由に編集",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "முன்னமைக்கப்பட்ட 'மாத்திரைகளை எடுக்கும் நேரம்' என்ற செய்தியை உங்கள் விருப்பமான சொல்லுக்களால் தனிப்பயனாக்கலாம். உங்களை ஊக்குவிக்கும் சொற்கள் அல்லது உங்கள் செல்லப்பிராணியின் பெயர் போன்றவற்றைப் பயன்படுத்தி, தினசரி மாத்திரை எடுப்பதை மேலும் மகிழ்ச்சியாக மாற்றிப் பாருங்கள்。",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
