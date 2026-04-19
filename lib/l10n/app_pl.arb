@@ -2550,5 +2550,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "Udostępniaj zapisy menstruacyjne w aplikacji Zdrowie",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "Może się synchronizować z aplikacją Zdrowie",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
