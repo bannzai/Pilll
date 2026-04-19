@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "Tùy chỉnh cài đặt",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Xem các bản ghi trên lịch",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
