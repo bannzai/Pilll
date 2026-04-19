@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Trokitni mbi fletën e pilulave për të regjistruar marrjen",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Mund ta anuloni lehtësisht edhe nëse bëni gabim",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
