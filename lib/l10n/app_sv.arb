@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Kalendern visar datum utan att du behöver titta på den",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "翻訳してください",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
