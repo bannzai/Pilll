@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "ਅੱਜ ਲੈਣ ਵਾਲੀ ਗੋਲੀ ਦਾ ਨੰਬਰ ਬਦਲ ਸਕਦੇ ਹੋ",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "ਜਦੋਂ ਭੁੱਲਣ ਜਾਂ ਗਲਤੀ ਨਾਲ ਲੈਣ ਕਾਰਨ ਪਿੱਲ ਸ਼ੀਟ 'ਤੇ ਨੰਬਰ ਅਤੇ ਅਸਲ ਵਿੱਚ ਲਈ ਗਈ ਗੋਲੀ ਵਿੱਚ ਫ਼ਰਕ ਆ ਜਾਵੇ, ਤਾਂ ਤੁਸੀਂ ਅੱਜ ਲੈਣ ਵਾਲੀ ਗੋਲੀ ਦਾ ਨੰਬਰ ਹੱਥੀਂ ਠੀਕ ਕਰ ਸਕਦੇ ਹੋ। ਹੋਮ ਸਕਰੀਨ 'ਤੇ ਗੋਲੀ ਨੰਬਰ ਡਿਸਪਲੇ ਤੋਂ ਵੀ ਉਹੀ ਸਕਰੀਨ ਖੋਲ੍ਹੀ ਜਾ ਸਕਦੀ ਹੈ।",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
