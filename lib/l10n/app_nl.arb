@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 of hoger・inschakelen via het tabblad Instellingen",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Gratis te gebruiken nummerinstelfunctie",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
