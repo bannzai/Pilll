@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Če v poljih pilulnega lista prikažete datume, lahko na prvi pogled preverite pretekle vnose in prihodnje načrte jemanja. Preklopite med načinoma »Številka« in »Datum« ter izberite prikaz, ki vam najbolj ustreza.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Enostavno preglejte zgodovino jemanja",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
