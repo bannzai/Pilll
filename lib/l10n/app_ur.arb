@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "اطلاع سے براہِ راست دوائی لینے کا اندراج",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "ایپ کھولے بغیر نوٹیفیکیشن سے ریکارڈ کریں",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
