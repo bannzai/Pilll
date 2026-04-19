@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Du kan registrere dagens inntak ved å bare trykke på pillearket på startskjermen. Hvis du registrerte ved en feil, kan du angre ved å trykke én gang til. Du kan også sjekke inntakshistorikken i etterkant, så du kan fortsette i ro og mak.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Registrer og forutsi mensen",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
