@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple ਹੈਲਥਕੇਅਰ ਅਨੁਕੂਲਤਾ",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "ਸੂਚਨਾ ਐਕਸ਼ਨ ਤੋਂ ਦਵਾਈ ਦਾ ਰਿਕਾਰਡ",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
