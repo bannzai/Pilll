@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "د نیټې له مخې د حبوبو پاڼه ښکاره کړئ",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "د کیلنڈر لیدلو پرته نیټه پوهیدلی شئ",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
