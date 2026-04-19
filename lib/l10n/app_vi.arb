@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Có thể thay đổi từ tab Cài đặt",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Có thể mở bằng cách chạm vào số trên màn hình chính",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
