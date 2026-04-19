@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "రిమైండర్ నోటిఫికేషన్‌ను దీర్ఘంగా నొక్కితే 'తీసుకున్నది' అనే చర్య కనిపించి, యాప్‌ను తెరవకుండానే తీసుకున్నట్లు రికార్డు చేయవచ్చు.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "పిల్ షీట్‌లను స్వయంచాలకంగా జోడించండి",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
