@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Obvestila boste prejeli tudi med načinom osredotočenosti.",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Naredba za klicanje prevajalske funkcije (zahtevano s strani razvijalca).",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
