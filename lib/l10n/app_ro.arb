@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Configurare simplă cu o singură atingere",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Editare liberă a mesajelor de notificare",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
