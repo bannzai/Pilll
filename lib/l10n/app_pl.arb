@@ -2502,5 +2502,9 @@
   "menstruationFeatureAppealShortDescription": "Zapisuj datę początku miesiączki i śledź swój cykl",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Rejestruj i przewiduj miesiączkę",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
