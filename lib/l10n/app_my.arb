@@ -2678,5 +2678,9 @@
   "recordPillFeatureAppealPoint1": "ပြားချပ်ကို တို့ပြီး ဆေးသောက်မှတ်တမ်းတင်ပါ",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "မှားယွင်းလျှင်လည်း လွယ်ကူစွာ ပြန်ဖျက်နိုင်",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
