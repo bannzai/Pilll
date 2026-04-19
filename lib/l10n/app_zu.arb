@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint3": "Hlola umlando wokuthatha amaphilisi nganoma yisiphi isikhathi",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "生理開始日をかんたん記録",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
