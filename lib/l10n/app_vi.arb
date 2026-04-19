@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Bắt đầu từ biểu tượng bánh răng ở góc trên bên phải của vỉ thuốc",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Dễ dàng chỉnh sửa hoặc tiếp tục kỳ kinh",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
