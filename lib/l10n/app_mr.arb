@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "कधीही सेवन इतिहास तपासा",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "मासिक पाळीची सुरुवात सहज नोंदवा",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
