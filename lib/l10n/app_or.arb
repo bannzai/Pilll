@@ -2462,5 +2462,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "ଏକ ନଜରରେ ଦେଖନ୍ତୁ କେବେ ପିଇବେ",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "ପିଲ ସିଟ୍‌ରେ ତାରିଖ ପ୍ରଦର୍ଶନ କରିହେବ",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
