@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Onyesha tarehe kwenye karatasi ya vidonge",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Kwa kuonyesha tarehe kwenye seli za karatasi ya vidonge, unaweza kukagua kwa muhtasari rekodi za matumizi ya zamani na ratiba za matumizi za siku zijazo. Badilisha kati ya modi ya \"Nambari\" na modi ya \"Tarehe\" ili kuchagua muonekano unaokufaa.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
