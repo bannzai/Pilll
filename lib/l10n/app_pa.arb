@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "ਪਿੱਲ ਸ਼ੀਟ ਸੈਟਿੰਗਾਂ ਤੋਂ ਬਦਲਿਆ ਜਾ ਸਕਦਾ ਹੈ",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "ਪਿੱਲ ਸ਼ੀਟ ਨੂੰ ਟੈਪ ਕਰਕੇ ਦਵਾਈ ਰਿਕਾਰਡ ਕਰੋ",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
