@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Hap varaqasini avtomatik qo‘shish",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Keyingi varaqni avtomatik yaratish",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
