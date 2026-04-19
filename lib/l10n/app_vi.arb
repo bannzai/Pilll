@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "Ghi lại tình trạng sức khỏe hàng ngày trên lịch",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Bạn có thể chạm vào ngày trên lịch để ghi lại tình trạng cơ thể, tâm trạng, triệu chứng và các thông tin liên quan. Những ghi chép này có thể được xem cùng với lịch sử dùng thuốc và lịch sử kinh nguyệt, giúp bạn nắm được nhịp điệu cơ thể.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
