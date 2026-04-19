@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Locație în aplicație",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Notificările ajung chiar și în modul Focus",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
