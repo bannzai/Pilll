@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "अलार्म घडी जस्तै अलार्म आवाज",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 वा माथि・सेटिङ ट्याबबाट सक्षम गर्नुहोस्",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
