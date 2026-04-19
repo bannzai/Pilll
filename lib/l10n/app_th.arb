@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "บันทึกและคาดการณ์ประจำเดือน",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "บันทึกวันแรกของประจำเดือนเพื่อทราบรอบเดือน",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
