@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Registro de dose com um toque na tela de notificação",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Ao pressionar e segurar a notificação de lembrete, a ação \"Tomei\" é exibida, permitindo registrar a ingestão sem abrir o aplicativo.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
