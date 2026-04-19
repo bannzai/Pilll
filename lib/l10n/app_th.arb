@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "บันทึกสภาพร่างกายประจำวันลงในปฏิทิน",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "{\n  \"@@locale\": \"th\",\n  \"calendarDiaryHelpBody\": \"แตะวันที่บนปฏิทินเพื่อบันทึกสภาพร่างกาย อารมณ์ หรืออาการต่างๆ คุณสามารถดูข้อมูลเหล่านี้พร้อมกับประวัติการรับประทานยาและประวัติรอบเดือน เพื่อช่วยให้เข้าใจจังหวะของร่างกายของคุณ\",\n  \"@calendarDiaryHelpBody\": {\n    \"description\": \"カレンダー・日記機能のヘルプページの本文\"\n  }\n}",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
