@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Înregistrează din notificare fără a deschide aplicația",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Înregistrare cu un singur tap din ecranul notificărilor",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
