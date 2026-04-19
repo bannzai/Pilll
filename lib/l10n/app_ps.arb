@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "د روغتیا حالت ثبتولو لپاره نیټه ټاپ کړئ",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "د کیلنډر کې مهالویش ولیکئ",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
