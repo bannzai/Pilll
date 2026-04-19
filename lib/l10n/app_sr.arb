@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Prikaz datuma na pilulskom listiću",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Приказивањем датума у пољима табеле пилула можете на први поглед видети претходну историју узимања и будуће заказане узимања. Пребацивањем између режима „број“ и „датум“ одаберите приказ који вам најбоље одговара.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
