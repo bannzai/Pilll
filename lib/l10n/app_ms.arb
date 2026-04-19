@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Ketik tarikh pada kalendar untuk merekodkan keadaan fizikal, mood, gejala dan sebagainya. Anda boleh menyemaknya bersama rekod pengambilan pil dan rekod kitaran haid, supaya dapat memahami irama badan anda sendiri.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Catat Rancangan Masa Depan",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
