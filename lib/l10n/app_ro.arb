@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Mesajul tău personal de notificare",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Afișare foaie de pastile după dată",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
