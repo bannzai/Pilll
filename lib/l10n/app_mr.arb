@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "रिमाइंडर सूचना लाँग प्रेस केल्यावर \"घेतले\" हा पर्याय दिसतो, आणि अ‍ॅप न उघडता गोळी घेतल्याची नोंद करता येते.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "पिल शीट आपोआप जोडा",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
