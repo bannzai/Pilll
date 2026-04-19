@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "Saiba imediatamente quando tomou",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Registre o uso de pílulas na tela inicial",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
