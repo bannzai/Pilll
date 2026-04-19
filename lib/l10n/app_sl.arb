@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "Zabeležite svoje dnevno počutje v koledarju",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "V koledarju tapnite datum, da zabeležite svoje počutje, razpoloženje, simptome itd. Zapise o jemanju tablet in menstruaciji si lahko ogledate skupaj, zato lažje razumete ritem svojega telesa.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
