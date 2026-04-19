@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "اپنی روز مرہ کی صحت کو کیلنڈر میں ریکارڈ کریں",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "آپ کیلنڈر میں کسی تاریخ کو ٹیپ کر کے اپنی جسمانی حالت، مزاج، علامات وغیرہ ریکارڈ کر سکتے ہیں۔ آپ انہیں گولی لینے کے ریکارڈ اور حیض کے ریکارڈ کے ساتھ ایک ساتھ دیکھ سکتے ہیں، اس طرح آپ اپنے جسم کے سائیکل کو سمجھ سکتے ہیں۔",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
