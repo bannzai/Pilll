@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "ป้องกันการลืมกินยาทั้งในโหมดห้ามรบกวน",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "サイレントモードでも通知が届く",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
