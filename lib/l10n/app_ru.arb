@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Одно касание — запись приёма прямо с экрана уведомлений",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Нажмите и удерживайте уведомление-напоминание, чтобы появилось действие «Принято» — это позволяет записать приём таблетки без открытия приложения.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
