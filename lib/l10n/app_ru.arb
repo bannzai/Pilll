@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Вы можете настроить стандартное сообщение «Время принять таблетку» по своему вкусу. Попробуйте изменить его на вдохновляющую фразу, имя питомца или любые слова, которые сделают ежедневный приём таблеток более приятным.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Отображение дат на листке таблеток",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
