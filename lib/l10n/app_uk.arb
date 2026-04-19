@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Навіть якщо помилися — легко скасувати",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Переглядайте історію прийому пігулок будь-коли",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
