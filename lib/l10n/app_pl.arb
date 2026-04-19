@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "Dokładne zarządzanie przerwami i odstawieniem",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Zrób przerwę w przyjmowaniu pigułki",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
