@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "通过通知操作记录服药",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "无需打开应用即可完成",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
