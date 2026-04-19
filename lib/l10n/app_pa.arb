@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "ਪਿੱਲ ਸ਼ੀਟ 'ਤੇ ਤਾਰੀਖ਼ ਦਿਖਾਈ ਜਾ ਸਕਦੀ ਹੈ",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "ਪਿੱਲ ਸ਼ੀਟ ਦੇ ਖਾਨਿਆਂ ਵਿੱਚ ਤਾਰੀਖ਼ਾਂ ਦਿਖਾਉਣ ਨਾਲ, ਤੁਸੀਂ ਪਿਛਲੀ ਦਵਾਈ ਲੈਣ ਦੀ ਇਤਿਹਾਸ ਅਤੇ ਆਉਣ ਵਾਲੀ ਦਵਾਈ ਲੈਣ ਦੀ ਯੋਜਨਾ ਨੂੰ ਇੱਕ ਨਜ਼ਰੇ ਦੇਖ ਸਕਦੇ ਹੋ। \"ਨੰਬਰ\" ਮੋਡ ਅਤੇ \"ਤਾਰੀਖ਼\" ਮੋਡ ਵਿਚਕਾਰ ਸਵਿਚ ਕਰਕੇ, ਆਪਣੇ ਲਈ ਢੁਕਵਾਂ ਡਿਸਪਲੇ ਚੁਣੋ।",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
