@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "ਪਿੱਲ ਸ਼ੀਟ ਖਤਮ ਹੋਣ 'ਤੇ ਆਪਣੇ ਆਪ ਬਦਲੋ",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "ਦਸਤੀ ਬਣਾਉਣ ਦੀ ਕਾਰਵਾਈ ਦੀ ਲੋੜ ਨਹੀਂ",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
