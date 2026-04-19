@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "रिमाइन्डरद्वारा सूचना",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "मिति ट्याप गरेर तालिका लेख्नुहोस्",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
