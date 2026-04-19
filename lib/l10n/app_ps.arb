@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "د درملو د مکث وړیا ریکارډ",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "د حبوبو مخکتب د ښي پورتنۍ ګیر له لارې پیل کړئ",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
