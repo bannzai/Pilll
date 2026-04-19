@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "ਹੈਲਥਕੇਅਰ ਐਪ ਨਾਲ ਸਿੰਕ ਕਰੋ",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple ਹੈਲਥਕੇਅਰ ਅਨੁਕੂਲਤਾ",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
