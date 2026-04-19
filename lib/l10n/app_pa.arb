@@ -2662,5 +2662,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "ਰੋਜ਼ਾਨਾ ਦਵਾਈ ਸੂਚਨਾਵਾਂ ਵਿੱਚ ਲਾਗੂ ਕਰੋ",
   "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "ਆਪਣਾ ਖੁਦ ਦਾ ਸੂਚਨਾ ਸੁਨੇਹਾ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
   }
 }
