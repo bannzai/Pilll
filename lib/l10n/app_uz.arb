@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Xatolarni oson bekor qilish",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Istalgan vaqtda qabul qilish tarixini ko'ring",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
