@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "เริ่มจากการแตะไอคอนรูปเฟืองที่มุมบนขวาของแผ่นยา",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "แก้ไขหรือเริ่มรอบประจำเดือนได้อย่างง่ายดาย",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
