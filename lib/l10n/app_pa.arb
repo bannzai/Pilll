@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "ਕੈਲੰਡਰ ਵਿੱਚ ਯੋਜਨਾ ਲਿਖੋ",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "ਕਲੀਨਿਕ ਦੇ ਦੌਰਿਆਂ ਨੂੰ ਆਸਾਨੀ ਨਾਲ ਪ੍ਰਬੰਧਿਤ ਕਰੋ",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
