@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Nëse numrat janë të zhvendosur, rregullo në Cilësimet.",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Mund të ndryshoni numrin e pilulës për sot",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
