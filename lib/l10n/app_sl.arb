@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "Zabeležite jemanje tablete na domačem zaslonu",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Dnevne vnose kontracepcijske tablete na domačem zaslonu lahko zabeležite le s tapom na tableto na prikazu tablete. Če ste pomotoma zabeležili, lahko tapnete znova in prekličete vnos. Zgodovino vnosa lahko kasneje preverite, zato lahko brez skrbi nadaljujete.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
