@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Alarmpåminnelse for pille-inntak, som en vekkerklokke",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "Med AlarmKit, tilgjengelig på iOS 26 og nyere, varsles du om å ta pillen din med en alarm som ringer pålitelig selv i stillemodus eller fokusmodus.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
