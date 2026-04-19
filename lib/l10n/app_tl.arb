@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Automaikong paglipat kapag natapos ang sheet ng pill",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Hindi kinakailangan ang manu-manong paglikha.",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
