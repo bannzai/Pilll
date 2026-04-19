@@ -2582,5 +2582,9 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "Gjenero automatikisht fletën e ardhshme",
   "@creatingNewPillSheetFeatureAppealShortDescription": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "Krijo automatikisht fletën e pilulave të ardhshme",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
   }
 }
