@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "I-tap ang petsa upang magdagdag ng iskedyul",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "AUTOMATIC_TRANSLATION_PLACEHOLDER",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
