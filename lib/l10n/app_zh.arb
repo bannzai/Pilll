@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "请输入咨询内容",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "感谢您购买买断版。若您仍订阅月度或年度计划，请务必记得取消订阅。",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
