@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Jednoduché zrušenie pri omyle",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Históriu užívania si môžete pozrieť kedykoľvek.",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
