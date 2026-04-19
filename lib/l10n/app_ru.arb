@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "Звонит как настоящий будильник",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Уведомления, работающие даже в беззвучном режиме",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
