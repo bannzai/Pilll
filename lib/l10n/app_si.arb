@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "සාමාන්‍ය 'පිල් ගන්නා වේලාවයි' පණිවිඩය ඔබ කැමති වචන වලට අභිරුචි කළ හැක. උද්යෝගය දෙන වචනක් හෝ ඔබේ සත්ත්වයාගේ නම වැනි දේක් දාලා, දිනපතා පිල් ගැනීම තවදුරටත් රසවත් සහ සුවපහසු කරගන්න.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "පිල් පත්‍රිකාවේ දිනයන් පෙන්වන්න",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
