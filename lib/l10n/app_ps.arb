@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "ترتیبات دودیز کول",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "د کالنداری سره د ثبتونو لیست",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
