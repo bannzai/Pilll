@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Anulare ușoară chiar și în caz de greșeală",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Verificați istoricul administrării oricând",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
