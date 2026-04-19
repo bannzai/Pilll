@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "د کلندار کې د راتلونکو پلانونو ثبتول",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "تاسو کولی شئ راتلونکي پلانونه، لکه د ډاکتر لیدنې او د سفر مهالویش، کالنډر کې ثبت کړئ. ځکه چې دا د پیل د خوراک دورې سره یوځای کتل کیدای شي، تاسو کولی شئ هغه پلانونه جوړ کړئ چې ستاسو د حیض وخت هم پکې شامل وي.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
