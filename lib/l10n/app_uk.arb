@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "Календар для перегляду записів",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Фіксуйте самопочуття та переглядайте",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
