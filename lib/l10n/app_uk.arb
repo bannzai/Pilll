@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Персоналізуйте повідомлення нагадування",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Показати аркуш прийому пігулок за датою",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
