@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Kumpletuhin nang hindi binubuksan ang app",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Magagamit agad kapag naka-subscribe sa Premium",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
