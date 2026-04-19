@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "గోళీలు తినడం ఆపిన కాలాన్ని నమోదు చేయండి",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "విరామాలు మరియు నిలిపివేతలను ఖచ్చితంగా నిర్వహించండి",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
