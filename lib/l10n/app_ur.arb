@@ -2582,5 +2582,9 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "اگلی شیٹ کو خودکار طریقے سے بنائیں",
   "@creatingNewPillSheetFeatureAppealShortDescription": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "اگلی پِل شیٹ خود بخود بنائیں",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
   }
 }
