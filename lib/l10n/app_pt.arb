@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Alternar pelo botão na aba Configurações",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Toca mesmo no modo silencioso/foco",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
