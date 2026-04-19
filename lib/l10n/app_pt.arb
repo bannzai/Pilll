@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Personalize sua mensagem de notificação",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Mostrar bula por data",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
