@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealShortDescription": "Hantera uppehåll och avbrott noggrant",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Ta uppehåll från p‑piller",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
