@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "この文章はすでにアプリ内で使われている翻訳済みの日本語です",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Kumpletuhin nang hindi binubuksan ang app",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
