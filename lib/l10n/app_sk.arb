@@ -2406,5 +2406,9 @@
   "lifetimeSubscriptionWarning": "Ďakujeme za zakúpenie jednorazového plánu. Ak máte aktívne mesačné alebo ročné predplatné, nezabudnite ho zrušiť.",
   "@lifetimeSubscriptionWarning": {
     "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "Zakúpením jednorazového plánu sa mesačné alebo ročné predplatné automaticky nezruší.",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
   }
 }
