@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Можна також відкрити, торкнувшись цифри на головному екрані",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Безкоштовний запис перерв у прийомі таблеток",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
