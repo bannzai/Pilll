@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Tiada operasi penciptaan manual diperlukan",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Togol dengan suis dalam tab tetapan",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
