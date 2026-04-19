@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealHeadline": "மாதவிடாய் பதிவு மற்றும் கணிப்பு",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "生理が来たら記録するだけで、過去の生理履歴を一覧できます。次の生理予定日も自動で予測されるので、計画的に過ごせます。",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
