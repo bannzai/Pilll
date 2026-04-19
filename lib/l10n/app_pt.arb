@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Ao ativar o Alerta Crítico, você pode receber notificações de dose mesmo durante o modo Não Perturbe ou no modo silencioso. Para não perder o horário importante de tomar seu anticoncepcional, experimente configurar agora.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Personalizar mensagem de notificação",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
