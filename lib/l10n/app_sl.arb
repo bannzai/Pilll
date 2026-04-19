@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Enostavno razveljavi, če se zmotite",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Zgodovino jemanja si oglejte kadarkoli",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
