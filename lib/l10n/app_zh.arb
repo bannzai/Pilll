@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "点击药片表记录服药",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "误操作也可轻松撤销",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
