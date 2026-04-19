@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "ரிமைண்டர் அறிவிப்பை நீண்ட நேரம் அழுத்தினால் \"மருந்து எடுத்துவிட்டேன்\" என்ற செயல் தோன்றும்; செயலியைத் திறக்காமலே மருந்து எடுத்ததை பதிவு செய்ய முடியும்.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "பில் சீட்டை தானாகச் சேர்க்க",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
