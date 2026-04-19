@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Легко запишите дату начала менструации",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Автоматическое определение цикла",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
