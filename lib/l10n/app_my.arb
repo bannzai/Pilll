@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint2": "ဆေးရုံသွားရက်ကို လွယ်ကူစွာ စီမံ",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "သတိပေးချက်ဖြင့် အကြောင်းကြားရန်",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
