@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Preložte túto vetu do slovenčiny.",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Ťuknite na dátum a zaznamenajte svoj stav",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
