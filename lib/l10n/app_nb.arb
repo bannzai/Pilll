@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Kan endres fra innstillingsfanen",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Du kan også åpne ved å trykke på tallet på startskjermen",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
