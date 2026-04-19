@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "அறிவிப்பு தடை செயல்பட்டாலும், மருந்து மறக்கப்படாமல் இருக்க உதவுகிறோம்",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "சைலெண்ட் முறையிலும் அறிவிப்புகள் கிடைக்கும்",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
