@@ -2730,5 +2730,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "ଋତୁସ୍ରାବ ରେକର୍ଡ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ଡାଟା ସଂଯୋଗ",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ହେଲ୍ଥ୍‌କେୟାର ଆପ୍ ସହ ସିଙ୍କ୍",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
