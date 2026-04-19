@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Sincronizare cu aplicația de sănătate",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Compatibil cu Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
