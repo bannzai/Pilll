@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "Quando o número na cartela de pílulas não corresponder à ingestão real devido a esquecimentos ou trocas, você pode ajustar manualmente o número da pílula a tomar hoje. A mesma tela também pode ser aberta a partir da exibição do número de pílula na tela inicial.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Registrar período de pausa na ingestão",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
