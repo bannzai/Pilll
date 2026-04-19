@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "ప్రీమియం సభ్యత్వం తీసుకుంటే వెంటనే ఉపయోగించవచ్చు",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "{\"@@locale\":\"te\",\"pill_sheet_auto_switch\":\"పిల్ షీట్ ముగిసినందున ఆటోమేటిక్‌గా మారుతుంది\"}",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
