@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "د iOS 26 او وروستیو نسخو کې د AlarmKit له کارولو سره، د خاموش حالت یا د تمرکز حالت کې هم د ډاډمن اعلام له لارې د حبو د استعمال یادونه کوو.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "د نن ورځې د دوا شمیره سمول",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
