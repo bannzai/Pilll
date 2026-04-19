@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "महिनावारी सुरु मिति सजिलै रेकर्ड गर्नुहोस्",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "चक्र स्वतः पहिचान",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
