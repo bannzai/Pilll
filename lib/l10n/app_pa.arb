@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "ਕੈਲੰਡਰ ਦੇਖੇ ਬਿਨਾਂ ਤਾਰੀਖ਼ ਪਤਾ ਲੱਗਦੀ ਹੈ",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "ਪਿੱਲ ਸ਼ੀਟ ਸੈਟਿੰਗਾਂ ਤੋਂ ਬਦਲਿਆ ਜਾ ਸਕਦਾ ਹੈ",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
