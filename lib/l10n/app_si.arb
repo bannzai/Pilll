@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "කරුණාකර විමසීමේ අන්තර්ගතය ඇතුළත් කරන්න",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "එක්වර ගෙවීම් සැලැස්මක් මිලදී ගැනීමට ඔබට ස්තූතියි. ඔබ මාසික හෝ වාර්ෂික සබ්ස්ක්‍රිප්ෂන් සඳහා දැනටමත් දායක වී ඇත්නම්, කරුණාකර එය අවලංගු කිරීමට අමතක නොවන්න.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
