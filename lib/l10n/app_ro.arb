@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Înregistrare gratuită a pauzelor de medicamente",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Porniți din roata dințată din dreapta sus a foii de pilule",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
