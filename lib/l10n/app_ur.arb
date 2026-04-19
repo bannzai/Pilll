@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "پِل شیٹ کے اختتام پر خودکار تبدیلی",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "دستی تخلیق کی ضرورت نہیں ہے",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
