@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Zvok, podoben zvoku budilke",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 ali novejši — omogočite v zavihku Nastavitve",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
