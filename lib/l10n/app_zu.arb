@@ -2402,5 +2402,9 @@
         "type": "String"
       }
     }
+  },
+  "lifetimeSubscriptionWarning": "Siyabonga ngokuthenga uhlelo lokukhokha okukodwa. Uma ubhalisiwe kuhlelo lwenyanga noma lonyaka, sicela ungakhohlwa ukukhansela ukubhalisa kwakho.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
