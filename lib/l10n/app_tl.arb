@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "通知からそのまま服用記録",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Mag-record mula sa abiso nang hindi binubuksan ang app",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
