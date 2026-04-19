@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "क्यालेन्डरमा तालिका लेख्नुहोस्",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "अस्पताल भ्रमण दिन सजिलै व्यवस्थापन",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
