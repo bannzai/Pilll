@@ -2466,5 +2466,9 @@
   "appearanceModeDateFeatureAppealTitle": "ਪਿੱਲ ਸ਼ੀਟ ਵਿੱਚ ਤਾਰੀਖ਼ ਦਿਖਾਓ",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "ਇੱਕ ਨਜ਼ਰ ਵਿੱਚ ਕਦੋਂ ਪੀਣੀ ਹੈ ਦੇਖੋ",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
