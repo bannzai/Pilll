@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "{\n  \"@@locale\": \"sk\",\n  \"customizeSettings\": \"Prispôsobiť nastavenia\",\n  \"@customizeSettings\": {\n    \"description\": \"アプリ内ラベル: 設定をカスタマイズ\"\n  }\n}",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Zobraziť záznamy v kalendári",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
