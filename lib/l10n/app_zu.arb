@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint2": "Kuphothuliwe ngaphandle kokuvula uhlelo lokusebenza",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Iyatholakala ngokushesha uma ubhalisele i-Premium",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
