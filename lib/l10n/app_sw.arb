@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "Pokea arifa hata ukiwa kwenye hali ya kimya",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Zuia kusahau kuchukua vidonge hata ukiwa kwenye hali ya 'Usisumbuliwe' (Do Not Disturb).",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
