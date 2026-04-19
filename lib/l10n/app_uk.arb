@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Сигнал лунає навіть у беззвучному/режимі концентрації",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Звук будильника",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
