@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "सेटिंग्ज टॅबवरील स्विचने बदलणे",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "सायलेंट/फोकस मोडमध्येही वाजते",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
