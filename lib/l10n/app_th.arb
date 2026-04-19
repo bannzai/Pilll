@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "กรุณากรอกเนื้อหาที่ต้องการสอบถาม",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "ซื้อแผนแบบซื้อขาดเรียบร้อยแล้ว ขอบคุณครับ/ค่ะ โปรดอย่าลืมยกเลิกแผนรายเดือน/รายปีหากคุณเคยสมัครใช้งานไว้",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
