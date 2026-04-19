@@ -2446,5 +2446,9 @@
   "reminderNotificationCustomizeWordFeatureAppealTitle": "ବିଜ୍ଞପ୍ତି ବାର୍ତ୍ତା କଷ୍ଟମାଇଜ୍ କରନ୍ତୁ",
   "@reminderNotificationCustomizeWordFeatureAppealTitle": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "ଆପଣ ବିଜ୍ଞପ୍ତି ବାର୍ତ୍ତା କଷ୍ଟୋମାଇଜ୍ କରିପାରିବେ",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
   }
 }
