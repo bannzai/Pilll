@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "පිල් පත්‍රය ටැප් කර ඔබ ගත් බව සටහන් කරන්න",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "වැරදි කළත් පහසුවෙන් අවලංගු කරන්න",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
