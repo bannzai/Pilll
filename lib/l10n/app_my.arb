@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint3": "ပင်မစာမျက်နှာရှိ နံပါတ်ကို နှိပ်၍လည်း ဖွင့်နိုင်သည်",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "အခမဲ့ အသုံးပြုနိုင်သည့် ဆေးရပ်ကာလ မှတ်တမ်း",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
