@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Uma inombolo ingahambelani, lungisa ezilungiselelweni.",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Ungashintsha inombolo yephilisi ozoyithatha namuhla",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
