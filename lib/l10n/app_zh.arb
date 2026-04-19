@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "自动掌握生理周期",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "自定义设置",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
