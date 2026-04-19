@@ -2502,5 +2502,9 @@
   "menstruationFeatureAppealShortDescription": "మాసికం ప్రారంభ తేదీని నమోదు చేసి మీ చక్రాన్ని గమనించండి",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "మాసికం నమోదు చేయడం మరియు అంచనా వేయడం",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
