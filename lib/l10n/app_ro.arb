@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Înregistrare administrare prin acțiunea notificării",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Finalizat fără a deschide aplicația",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
