@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint2": "Umsindo we-alamu ofana newashi lokuvusa",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "Ku-iOS 26 nangaphezulu — yenza kusebenze kuthebhu yezilungiselelo",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
