@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Zabeleži jemanje prek obvestila",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Opravljeno brez odpiranja aplikacije",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
