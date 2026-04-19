@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Kan vise datoer på pillearket",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Ved å vise datoer i pillearkfeltene kan du enkelt se din tidligere inntakshistorikk og fremtidige inntaksplan med ett blikk. Bytt mellom «nummer»-modus og «dato»-modus for å velge visningen som passer deg best.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
