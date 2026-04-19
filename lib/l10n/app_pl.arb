@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Obsługa Apple Health",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Zarejestruj przyjęcie przez powiadomienie",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
