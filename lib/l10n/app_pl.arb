@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Nie wymaga ręcznego tworzenia",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Przełącz za pomocą przełącznika w karcie Ustawienia",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
