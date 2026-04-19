@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Keyingi dori varaqasini avtomatik yaratish",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Joriy dori varaqalari guruhi tugagach, yangi dori varaqalari guruhi avtomatik ravishda yaratiladi. Qo'lda almashish talab etilmaydi, shuning uchun yozuvlar o'tkazib yuborilmaydi.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
