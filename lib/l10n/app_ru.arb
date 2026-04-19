@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Интеграция с Здоровьем",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Синхронизация менструальных записей с приложением «Здоровье»",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
