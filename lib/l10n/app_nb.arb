@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "Se gjennom doseringshistorikken din enkelt",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Se raskt når du tok pillen",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
