@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "ਮੁਫ਼ਤ ਵਿੱਚ ਵਰਤੋਂ ਯੋਗ ਦਵਾਈ ਬ੍ਰੇਕ ਰਿਕਾਰਡ",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "ਪਿੱਲ ਸ਼ੀਟ ਦੇ ਉੱਪਰ ਸੱਜੇ ਕੋਨੇ ਵਿੱਚ ਗੇਅਰ ਆਈਕਨ ਤੋਂ ਸ਼ੁਰੂ ਕਰੋ",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
