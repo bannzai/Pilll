@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Bepul raqamni moslashtirish funksiyasi",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Sozlamalar bo'limidan o'zgartirishingiz mumkin.",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
