@@ -2658,5 +2658,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "ଆପଣଙ୍କ ନିଜସ୍ବ ବିଜ୍ଞପ୍ତି ବାର୍ତ୍ତା",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "ତାରିଖ ଅନୁଯାୟୀ ପିଲ ସିଟ ଦେଖାନ୍ତୁ",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
