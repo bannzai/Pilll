@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealBody": "Du kan registrera en period då du pausar pillertagningen på pillerarket. Under pausen kommer tablettnumret inte att avanceras, och när du återupptar kan du genast fortsätta registrera intag.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Plats i appen",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
