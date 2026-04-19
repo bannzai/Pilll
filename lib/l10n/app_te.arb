@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "రిమైండర్ ద్వారా తెలియజేయండి",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "తేదీని ట్యాప్ చేసి ప్లాన్‌ను నమోదు చేయండి",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
