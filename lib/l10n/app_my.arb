@@ -2398,5 +2398,9 @@
   "inquiryContentRequired": "မေးမြန်းလိုသည့်အကြောင်းအရာ ထည့်သွင်းပေးပါ",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "inquiryContent": "မေးမြန်းချက် အကြောင်းအရာ",
+  "@inquiryContent": {
+    "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
   }
 }
