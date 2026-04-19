@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "ఉచితంగా ఉపయోగించుకునే విరామ రికార్డు",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "పిల్ షీట్‌పై ఉన్న పై కుడి గేర్ చిహ్నం ద్వారా ప్రారంభించండి",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
