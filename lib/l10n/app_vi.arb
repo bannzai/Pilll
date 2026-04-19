@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Bạn có thể liên kết tự động dữ liệu kinh nguyệt đã ghi trong Pilll với ứng dụng chăm sóc sức khỏe. Bạn có thể xem dữ liệu này cùng các dữ liệu sức khỏe khác trên ứng dụng đó, và cũng có thể cho phép các ứng dụng khác sử dụng dữ liệu kinh nguyệt.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Ghi nhận uống thuốc ngay từ thông báo",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
