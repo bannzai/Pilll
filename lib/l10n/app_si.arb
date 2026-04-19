@@ -2658,5 +2658,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "නිවේදන පණිවිඩය ඔබ කැමති පරිදි සංස්කරණය කරන්න",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "දෛනික ඖෂධ මතකදැනුම්වලට පෙන්වනු ලැබේ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
   }
 }
