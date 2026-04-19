@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Odpre se tudi, če na začetnem zaslonu tapnete številko.",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Brezplačni zapisi prekinitve jemanja tablet",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
