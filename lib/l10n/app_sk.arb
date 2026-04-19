@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Domov — otvoríte aj klepnutím na číslo",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Bezplatné sledovanie prestávok v užívaní piluliek",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
