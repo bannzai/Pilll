@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "कालेन्डरमा रेकर्डहरूको सूची",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "स्वास्थ्य अवस्था नोट गरी समीक्षा गर्नुहोस्",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
