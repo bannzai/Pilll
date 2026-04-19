@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "Alarmă care sună ca un ceas deșteptător",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Notificări care sună sigur chiar și pe silențios",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
