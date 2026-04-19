@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "\"体調をメモして振り返り\" - 日本語からシンハラ語への翻訳",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "කැලෙන්ඩරයෙන් පසුගිය සටහන් නැවත බලන්න",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
