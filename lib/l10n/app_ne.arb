@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "चक्र स्वतः पहिचान",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "सेटिङ अनुकूलन गर्नुहोस्",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
