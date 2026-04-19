@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealBody": "När den nuvarande pillerkopsgruppen avslutas skapas automatiskt en ny pillerkopsgrupp. Manuella växlingar behövs inte och inga poster går förlorade.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Låter som en väckarklocka",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
