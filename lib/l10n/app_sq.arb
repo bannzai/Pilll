@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Pauzë në marrjen e pilulave",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Mund të regjistroni në fletën e pilulave një periudhë pushimi gjatë së cilës ndaloni marrjen e pilulave. Gjatë pushimit, numri i ditëve të marrjes nuk përparon, dhe kur e rifilloni, regjistrimi mund të vazhdojë menjëherë.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
