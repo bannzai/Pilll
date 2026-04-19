@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Tazama rekodi za matumizi wakati wowote",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Rekodi kwa urahisi tarehe ya kuanza kwa hedhi",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
