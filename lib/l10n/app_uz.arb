@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Pill varaqasida sanani ko‘rsatish mumkin",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Pill sheetdagi katakchalarda sanani ko‘rsatish orqali o‘tgan qabul yozuvlari va kelajakdagi qabul rejalari bir qarashda ko‘rinadi. “Raqam” rejimi va “Sana” rejimi o‘rtasida almashib, o‘zingizga mos keladigan ko‘rinishni tanlang.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
