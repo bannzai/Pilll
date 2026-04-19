@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Звук будильника",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
