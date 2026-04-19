@@ -2514,5 +2514,9 @@
   "calendarDiaryFeatureAppealTitle": "कॅलेंडरवर प्रकृती नोंदवा",
   "@calendarDiaryFeatureAppealTitle": {
     "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "दररोजची तब्येत कॅलेंडरवर नोंदवूया",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
   }
 }
