@@ -2550,5 +2550,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "मासिक पाळीची नोंद हेल्थकेअरसह सामायिक करा",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "हेल्थकेअरशी जोडता येते",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
