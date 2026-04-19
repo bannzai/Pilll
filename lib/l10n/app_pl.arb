@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Dotknij daty, aby zapisać swoje samopoczucie",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Wpisz plan w kalendarzu",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
