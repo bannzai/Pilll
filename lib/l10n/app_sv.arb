@@ -2702,5 +2702,9 @@
   "calendarDiaryFeatureAppealPoint1": "Visa posterade anteckningar i kalendern",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Skriv anteckningar om ditt välbefinnande och reflektera över dem",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
