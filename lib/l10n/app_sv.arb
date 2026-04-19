@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint3": "Se din intagshistorik när som helst",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "sv translation placeholder",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
