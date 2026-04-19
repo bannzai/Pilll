@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "د روغتیا اپ سره همغږي",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "د اپل روغتیا ملاتړ",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
