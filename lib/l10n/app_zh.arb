@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "无需打开应用即可在通知上记录",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "通知画面でワンタップ服用記録",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
