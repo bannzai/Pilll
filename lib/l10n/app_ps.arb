@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "د ورځني روغتیا حالت کلنداریز کې ثبت کول",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "تاسو کولی شئ د کالنۍ نه د نیټې پر ټک کولو سره خپل روغتیایي حالت، مزاج، نښې او نور ثبت کړئ. ځکه چې تاسو کولی شئ دا د درمل اخیستلو ریکارډونو او د میاشتني ریکارډونو سره یوځای وګورئ، نو تاسو کولی شئ د خپل بدن ریتم وپیژنئ.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
