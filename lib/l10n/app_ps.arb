@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "د پریمیم غړیتوب سره مستقیم کارولو وړ",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "د پیل شیټ د پای کیدو سره اتوماتیک بدلون",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
