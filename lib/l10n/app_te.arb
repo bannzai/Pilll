@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "{\n  \"nextPillSheetAutoCreate\": \"తదుపరి పిల్‌షీట్‌ను స్వయంచాలకంగా సృష్టించండి\",\n  \"@nextPillSheetAutoCreate\": {\n    \"description\": \"ピルシート自動追加機能のヘルプページのヘッドライン\"\n  }\n}",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "ప్రస్తుత పిల్ షీట్ గ్రూప్ ముగిసిన తర్వాత, కొత్త పిల్ షీట్ గ్రూప్ ఆటోమేటిగ్గా సృష్టించబడుతుంది. మాన్యువల్‌గా మార్పిడి చేయాల్సిన అవసరం లేదు, అందువల్ల రికార్డింగ్ మిస్ కావడం జరగదు.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
