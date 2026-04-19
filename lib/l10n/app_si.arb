@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "පිල් පත්‍රිකාව අවසන් වූ විට ස්වයංක්‍රීයව මාරු කරන්න",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "අතින් සාදන ක්‍රියාවලිය අවශ්‍ය නොවේ",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
