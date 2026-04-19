@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealShortDescription": "Kelgusi tashriflar va boshqa rejalaringizni boshqarish",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Kalendarga kelajakdagi rejalaringizni yozib qo'ying",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
