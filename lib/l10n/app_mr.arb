@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "चूक झाली तरी सहज रद्द करा",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "कधीही सेवन इतिहास तपासा",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
