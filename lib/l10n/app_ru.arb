@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "Список записей в календаре",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Фиксируйте самочувствие и просматривайте записи",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
