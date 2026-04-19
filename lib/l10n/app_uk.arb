@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "Зафіксувати прийом прямо зі сповіщення",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Запис через сповіщення без відкриття додатка",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
