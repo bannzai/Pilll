@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Een pauze nemen van de pil",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Je kunt een periode van het stoppen met de pil vastleggen in je pillenblad. Tijdens de pauze loopt het inname-nummer niet verder, en je kunt de registratie direct hervatten wanneer je weer begint.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
