@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Dori varaqasining yuqori o'ng burchagidagi tishli belgisidan boshlang.",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Hayz davrini tahrirlash va qayta boshlash ham oson",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
