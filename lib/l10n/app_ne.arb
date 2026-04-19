@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "सेटिङ ट्याबको स्विचले टगल गर्नुहोस्",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "साइलेन्ट/फोकस मोडमा पनि बज्छ",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
