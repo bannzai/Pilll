@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Zbulim automatik i ciklit",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Personalizo cilësimet",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
