@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "විරාම සහ අස්වීම් නිවැරදිව කළමනාකරණය කරන්න",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "පිල් භාවිතය අත්හිටුවන්න",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
