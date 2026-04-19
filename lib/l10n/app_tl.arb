@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Home screen pill sheet tap only to record that day's intake. If recorded by mistake, tap again to cancel. You can also check take history later, so you can continue with peace of mind.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "I will translate now",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
