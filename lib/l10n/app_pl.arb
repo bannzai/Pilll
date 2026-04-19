@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Rozpocznij od ikony koła zębatego w prawym górnym rogu karty tabletek",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Edycja i wznawianie okresu też są łatwe",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
