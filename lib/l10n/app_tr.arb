@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "Belirlediğiniz saatte kesin olarak hatırlatır",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Tek dokunuşla kolay kurulum",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
