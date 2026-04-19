@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "హోమ్‌లోని సంఖ్యను తాకితే కూడా తెరవవచ్చు",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "ఉచితంగా ఉపయోగించుకునే విరామ రికార్డు",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
