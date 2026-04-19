@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Powiadomienia docierają nawet w trybie skupienia",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Niezawodne przypomnienie o ustawionej godzinie",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
