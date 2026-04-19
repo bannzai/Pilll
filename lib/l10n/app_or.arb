@@ -2550,5 +2550,9 @@
   "healthCareIntegrationFeatureAppealBody": "Pilll-ରେ ରେକର୍ଡ ହୋଇଥିବା ଋତୁସ୍ରାବ ତଥ୍ୟ ସ୍ୱାସ୍ଥ୍ୟ ଆପ୍ ସହ ସ୍ୱୟଂଚାଳିତ ଭାବେ ସଂଯୁକ୍ତ ହୋଇପାରିବ। ସ୍ୱାସ୍ଥ୍ୟ ଆପ୍‌ରେ ଥିବା ଅନ୍ୟ ସ୍ୱାସ୍ଥ୍ୟ ତଥ୍ୟ ସହ ଏକ ସାଥରେ ଦେଖିପାରିବେ, ଏବଂ ଅନ୍ୟ ଆପ୍‌ଗୁଡ଼ିକରେ ମଧ୍ୟ ଋତୁସ୍ରାବ ତଥ୍ୟ ବ୍ୟବହାର କରିପାରିବେ।",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "ବିଜ୍ଞପ୍ତିରୁ ସିଧାସଳଖ ଔଷଧ ସେବନ ରେକର୍ଡ",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
