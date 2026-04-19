@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "เตือนเหมือนนาฬิกาปลุก",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "แจ้งเตือนแม้เครื่องอยู่ในโหมดเงียบ",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
