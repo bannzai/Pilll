@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "மாதச்சுழற்சி பதிவுகளை தானாக ஒத்திசைவு",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ஆரோக்கியச் செயலியுடன் ஒத்திசைவு",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
