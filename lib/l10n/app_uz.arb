@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "Pill varağıga bir muddat dori qabul qilishni to‘xtatgan davrni yozib qo‘yishingiz mumkin. Dam olish davomida qabul qilish raqami oshmaydi, va qayta boshlaganda yozuvni darhol davom ettirishingiz mumkin.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Ilova ichidagi joy",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
