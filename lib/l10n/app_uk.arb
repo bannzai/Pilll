@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Ви можете заносити до календаря майбутні події, наприклад візити до лікаря чи поїздки. Узгодивши їх із циклом прийому пігулок, ви зможете планувати, враховуючи очікувані дні менструації.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Синхронізація зі Здоров'ям",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
