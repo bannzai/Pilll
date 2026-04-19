@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "ピルシートをタップで服用記録",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "間違えてもかんたん取り消し",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
