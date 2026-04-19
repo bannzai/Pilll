@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealBody": "I will translate the provided Japanese to zu.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Bukeza kalula umlando wakho wokuthatha amaphilisi",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
