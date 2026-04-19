@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "请从“设置”选项卡更改",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "「ホームの数字タップでも開ける」",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
