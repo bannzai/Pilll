@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Kritik Uyarıyı etkinleştirdiğinizde, Rahatsız Etmeyin veya Sessiz modunda olsanız bile doz alma bildirimleri alabilirsiniz. Önemli hap alma zamanlarını kaçırmamak için lütfen bu ayarı etkinleştirin.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Bildirim mesajını özelleştir",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
