@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Нажмите на дату в календаре, чтобы записать своё самочувствие, настроение, симптомы и многое другое. Поскольку записи можно просматривать вместе с историей приёма таблеток и менструальным календарём, вы сможете лучше понять ритм своего тела.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Запланируй будущие события",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
