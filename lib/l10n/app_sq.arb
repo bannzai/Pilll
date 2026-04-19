@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Mund të hapet edhe duke trokitur mbi numrin në faqen kryesore",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Regjistrimi i ditëve pa pilulë — falas",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
