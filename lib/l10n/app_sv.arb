@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint3": "Anpassa inställningar",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Visa posterade anteckningar i kalendern",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
