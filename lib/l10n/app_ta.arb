@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "போக்கஸ் மோடு செயல்பாட்டில் இருந்தாலும் அறிவிப்புகள் வரும்",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "設定した時刻に確実にリマインド",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
