@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Critical Alert-ni yoqish orqali uyqu rejimi yoki jim rejimda bo'lsangiz ham dori qabul qilish eslatmalarini olasiz. Muhim tabletkalarni qabul qilish vaqtini o'tkazib yubormaslik uchun, iltimos, ushbu funksiyani yoqib ko'ring.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Bildirishnoma xabarini sozlash",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
