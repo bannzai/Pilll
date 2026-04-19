@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "د دورې اتوماتیک پیژندنه",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "ترتیبات دودیز کول",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
