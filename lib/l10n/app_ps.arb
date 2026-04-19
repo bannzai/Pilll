@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "پرته له اپ خلاصولو د خبرتیا له لارې ثبت کړئ",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "د خبرتیا پر سکرین د یوه ټچ سره د دوا د اخیستلو ثبتول",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
