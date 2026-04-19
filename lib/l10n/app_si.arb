@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "නිශ්ශබ්ද මෝඩයේදීමත් නියතිව ඇහෙන දැනුම්දීම්",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "ඇලාර්ම් ක්ලොක් වැනි පිල් ගැනීමේ අනතුරු ඇඟවීම",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
