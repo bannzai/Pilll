@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Ročno ustvarjanje ni potrebno",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Uporabite stikalo na zavihku Nastavitve",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
