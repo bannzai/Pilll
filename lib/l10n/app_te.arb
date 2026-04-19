@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealBody": "{\n  \"@@locale\": \"te\",\n  \"menstruation_help\": \"పీరియడ్ వచ్చినప్పుడు దాన్ని నమోదు చేయడం మాత్రమె సరిపోతుంది — గత పీరియడ్‌ల రికార్డులను జాబితాగా చూడవచ్చు. తదుపరి పీరియడ్ తేదీని ఆటోమేటిక్‌గా అంచనా వేస్తుంది, అందువల్ల మీరు ముందుగానే ప్లాన్ చేసుకోవచ్చు.\",\n  \"@menstruation_help\": {\n    \"description\": \"సహాయ పేజీ본문: వినియోగదారు పీరియడ్ నమోదు చేసే పద్ధతి మరియు స్వయంచాలకంగా తదుపరి తేదీ ఎప్పటికప్పుడు అంచనా వేయబడతుందని వివరిస్తుంది\"\n  }\n}",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "క్యాలెండర్‌లో మీ ఆరోగ్యాన్ని నమోదు చేయండి",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
