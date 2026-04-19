@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "हेल्थकेअर अॅपशी समक्रमित करा",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple हेल्थकेअर सुसंगत",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
