@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Opravljeno brez odpiranja aplikacije",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Na voljo takoj z naročnino Premium",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
