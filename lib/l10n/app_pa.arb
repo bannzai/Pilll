@@ -2430,5 +2430,9 @@
   "recommendSignupGeneralDescription": "ਰਜਿਸਟਰ ਕਰਨ ਨਾਲ ਤੁਸੀਂ ਆਪਣਾ ਡੇਟਾ ਬੈਕਅੱਪ ਕਰ ਸਕਦੇ ਹੋ",
   "@recommendSignupGeneralDescription": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "ਚੁੱਪ ਮੋਡ ਵਿੱਚ ਵੀ ਸੂਚਨਾਵਾਂ ਪ੍ਰਾਪਤ ਕਰੋ",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
   }
 }
