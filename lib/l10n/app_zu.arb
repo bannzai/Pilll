@@ -2558,5 +2558,9 @@
   "quickRecordFeatureAppealTitle": "Qopha ukuthatha ipilisi ngqo kusukela esazisweni",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Qopha kusaziso ngaphandle kokuvula uhlelo lokusebenza",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
