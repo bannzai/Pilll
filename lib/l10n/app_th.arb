@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "ใช้ AlarmKit ที่มีใน iOS 26 ขึ้นไป เพื่อแจ้งเตือนการทานยาด้วยเสียงเตือนซึ่งจะดังแน่นอนแม้ในโหมดเงียบหรือโหมดโฟกัส",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "ปรับหมายเลขการทานวันนี้",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
