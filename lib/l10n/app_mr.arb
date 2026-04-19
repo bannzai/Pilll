@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "अधिसूचना स्क्रीनवरून एक टॅपमध्ये औषध नोंद",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "रिमाइंडर सूचना लाँग प्रेस केल्यावर \"घेतले\" हा पर्याय दिसतो, आणि अ‍ॅप न उघडता गोळी घेतल्याची नोंद करता येते.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
