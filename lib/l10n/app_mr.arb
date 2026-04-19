@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "पिल शीटवर तारीख दाखवता येते",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "पिल शीटमधील चौकोनांमध्ये तारीख दर्शवल्याने, मागील गोळ्या घेण्याचा इतिहास आणि भविष्यातील गोळ्या घेण्याचे वेळापत्रक एका नजरेत तपासता येते. \"क्रमांक\" मोड आणि \"तारीख\" मोड दरम्यान बदल करा आणि तुम्हाला अनुकूल असे प्रदर्शन निवडा.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
