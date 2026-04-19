@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "ඔබට කාලයකට පිල් ගැනීම අත්හිටුවා තිබේද? ඒක පිල් ශීට් එකට සටහන් කළ හැක. නිවාඩුවේදී, පිල් අංකය ඉදිරිපත් නොවේ, නැවත ආරම්භ කළ පසු සටහන නැවත ආරම්භ කළ හැක.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "යෙදුම තුළ ස්ථානය",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
