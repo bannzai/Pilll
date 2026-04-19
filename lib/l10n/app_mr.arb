@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "कॅलेंडरमध्ये नोंदी पहा",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "आरोग्य स्थिती नोंदवा आणि आढावा घ्या",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
