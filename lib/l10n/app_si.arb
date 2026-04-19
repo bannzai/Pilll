@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "රිමයින්ඩරයෙන් දැනුම්දීම",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "දිනයක් ටැප් කර ඔබගේ සැළසුම ඇතුලත් කරන්න",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
