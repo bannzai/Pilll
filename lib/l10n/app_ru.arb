@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "Если из-за пропущенного приёма или ошибки номер на листке таблеток не совпадает с фактическим приёмом, вы можете вручную скорректировать номер таблетки на сегодня. Этот же экран можно открыть через отображение номера таблетки на главном экране.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Записать перерыв в приёме таблеток",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
