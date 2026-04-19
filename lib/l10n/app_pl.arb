@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealBody": "Wystarczy zarejestrować miesiączkę, gdy nadejdzie, aby przeglądać historię poprzednich cykli. Następna przewidywana data miesiączki jest obliczana automatycznie, co pozwala lepiej planować swój czas.",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Zapisuj samopoczucie w kalendarzu",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
