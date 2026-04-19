@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "Registre sua saúde diária no calendário",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "翻訳は既に上で出力済みです。これはコード実装を伴わない翻訳出力タスクのため、プランは不要です。",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
