@@ -2622,5 +2622,9 @@
   "restDurationFeatureAppealTitle": "Rekhoda isikhathi sokuyeka ukuthatha amaphilisi",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Lawula ngokunembile ukuphumula nokumiswa kokuthatha amaphilisi",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
