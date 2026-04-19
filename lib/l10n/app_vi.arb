@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "カレンダーを見なくても日付がわかる",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "ピルシート設定から変更可能",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
