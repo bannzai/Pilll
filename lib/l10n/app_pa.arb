@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "ਰਿਮਾਈਂਡਰ ਨੋਟੀਫਿਕੇਸ਼ਨ ਨੂੰ ਲੰਮਾ ਦਬਾਉਣ ਨਾਲ \"ਲੈ ਲਿਆ\" ਦੀ ਕਾਰਵਾਈ ਦਿਖਾਈ ਦਿੰਦੀ ਹੈ, ਅਤੇ ਤੁਸੀਂ ਐਪ ਖੋਲ੍ਹੇ ਬਿਨਾਂ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਕਰ ਸਕਦੇ ਹੋ।",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "ਪਿੱਲ ਸ਼ੀਟ ਆਪਣੇ ਆਪ ਜੋੜੋ",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
