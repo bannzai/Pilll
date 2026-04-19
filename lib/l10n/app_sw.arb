@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "Binafsisha mipangilio",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Orodha ya rekodi kwenye kalenda",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
