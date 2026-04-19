@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "Merr njoftime edhe në modalitetin pa zë",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Edhe me 'Mos t'i shqetësoni' aktiv, mos harroni pilulën.",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
