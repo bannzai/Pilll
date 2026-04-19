@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "ਅਲਾਰਮ ਘੜੀ ਵਾਂਗ ਵੱਜਣ ਵਾਲਾ ਅਲਾਰਮ",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "ਚੁੱਪ ਮੋਡ ਵਿੱਚ ਵੀ ਯਕੀਨੀ ਤੌਰ 'ਤੇ ਵੱਜਣ ਵਾਲੀਆਂ ਸੂਚਨਾਵਾਂ",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
