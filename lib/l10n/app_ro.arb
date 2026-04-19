@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Înregistrează și prognozează menstruația",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Înregistrează data de început a menstruației și urmărește ciclul",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
