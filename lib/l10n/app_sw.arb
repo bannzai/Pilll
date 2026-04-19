@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Rekodi kwa bonyeza moja kwenye skrini ya arifa",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Kama utabofya kwa muda arifa ya ukumbusho, kitendo 'Nimetumia' kitaonekana, na utaweza kurekodi kwamba umechukua dawa bila kufungua programu.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
