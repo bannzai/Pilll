@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "ਹੋਮ 'ਤੇ ਨੰਬਰ ਟੈਪ ਕਰਕੇ ਵੀ ਖੋਲ੍ਹਿਆ ਜਾ ਸਕਦਾ ਹੈ",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "ਮੁਫ਼ਤ ਵਿੱਚ ਵਰਤੋਂ ਯੋਗ ਦਵਾਈ ਬ੍ਰੇਕ ਰਿਕਾਰਡ",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
