@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "长按提醒通知时，会出现“已服用”操作，您可以在不打开应用的情况下记录服药。",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "自动添加药片表",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
