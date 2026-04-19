@@ -2654,5 +2654,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "သတိပေးချက် မက်ဆေ့ချ်ကို လွတ်လပ်စွာ တည်းဖြတ်ပါ",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "နေ့စဉ် ဆေးသောက်သတိပေးချက်တွင် ထင်ဟပ်မည်",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
   }
 }
