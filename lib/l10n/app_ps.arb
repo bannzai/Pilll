@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "د کور پاڼې شمیرو ټک کولو سره هم خلاصیدای شي",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "د درملو د مکث وړیا ریکارډ",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
