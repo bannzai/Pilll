@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Registrer medisininntak med ett trykk fra varslingsskjermen",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Hold inne påminnelsesvarselet for å vise handlingen «Tatt», slik at du kan registrere inntak uten å åpne appen.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
