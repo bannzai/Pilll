@@ -2622,5 +2622,9 @@
   "restDurationFeatureAppealTitle": "Registrera uppehållsperiod",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Hantera uppehåll och avbrott noggrant",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
