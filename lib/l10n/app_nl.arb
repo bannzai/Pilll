@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Datums weergeven op het pillenblad",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Door datums weer te geven in de vakjes van het pillenblad, kunt u uw medicatiegeschiedenis uit het verleden en uw geplande toekomstige innames in één oogopslag bekijken. Schakel tussen de modus \"Nummer\" en de modus \"Datum\" om de weergave te kiezen die het beste bij u past.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
