@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Переключите с помощью переключателя на вкладке «Настройки».",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
