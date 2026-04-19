@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "Ak sa číslo na blistri nezhoduje so skutočne užitou pilulkou (napríklad kvôli zabudnutiu alebo zámene), môžete ručne nastaviť, ktorú pilulku máte dnes užiť. Rovnakú obrazovku otvoríte aj z domovskej obrazovky cez zobrazenie čísel piluliek.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Zaznamenať prestávku v užívaní",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
