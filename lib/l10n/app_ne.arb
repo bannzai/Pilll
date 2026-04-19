@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "सूचना स्क्रिनमा एक ट्यापले सेवन रेकर्ड",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "रिमाइन्डर सूचनालाई लामो थिच्नुहोस् भने 'सेवन गरियो' को कार्य देखिन्छ, र एप नखोलीकन सेवन रेकर्ड गर्न सकिन्छ।",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
