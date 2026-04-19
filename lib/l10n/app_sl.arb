@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "Prosimo, vnesite vsebino poizvedbe",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Hvala za nakup paketa za enkratno plačilo. Če ste naročeni na mesečni ali letni načrt, ne pozabite preklicati svoje naročnine.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
