@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "ปรับหมายเลขการทานวันนี้",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "หากหมายเลขไม่ตรง ให้แก้ไขได้ที่การตั้งค่า",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
