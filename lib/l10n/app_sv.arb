@@ -2690,5 +2690,9 @@
   "menstruationFeatureAppealPoint1": "sv translation placeholder",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Spåra cykeln automatiskt",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
