@@ -2662,5 +2662,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "Odzwierciedlone w codziennych powiadomieniach o dawkowaniu",
   "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "Twoja własna wiadomość powiadomienia",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
   }
 }
