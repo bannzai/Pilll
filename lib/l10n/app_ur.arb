@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "آپ فوراً دیکھ سکتے ہیں کہ آپ نے کب لی تھی",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "ہوم اسکرین پر گولی لینے کا اندراج کریں",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
