@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "अॅप न उघडता पूर्ण करा",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "प्रीमियम सदस्यतेसह थेट वापरण्यायोग्य",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
