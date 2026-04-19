@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Nie przegap dawki nawet w trybie Nie przeszkadzać",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Powiadomienia docierają nawet w trybie cichym",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
