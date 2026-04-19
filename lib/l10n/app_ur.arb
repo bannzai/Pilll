@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "اپنا نوٹیفکیشن پیغام",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "پِل شیٹ کو تاریخ کے مطابق دکھائیں",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
