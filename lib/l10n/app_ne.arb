@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 वा माथि・सेटिङ ट्याबबाट सक्षम गर्नुहोस्",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "निःशुल्क प्रयोग गर्न सकिने नम्बर मिलाउने सुविधा",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
