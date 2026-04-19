@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "Kapag nagkaiba ang numero sa pill sheet at ang aktwal na pag-inom dahil sa nakalimutan o maling pagkakuha, maaari mong mano-manong itugma ang numero ng pill na iinumin ngayong araw. Maaari mo ring buksan ang parehong screen mula sa ipinapakitang numero ng pill sa home.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Itala ang panahon ng pagtigil sa pag-inom",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
