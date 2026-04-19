@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Mostrar bula por data",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Saiba a data sem olhar o calendário",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
