@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Brezplačni zapisi prekinitve jemanja tablet",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Začnite klikom na ikono zobnika v zgornjem desnem kotu lista s tabletami.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
