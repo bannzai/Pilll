@@ -2514,5 +2514,9 @@
   "calendarDiaryFeatureAppealTitle": "Zaznamenajte svoj zdravotný stav v kalendári",
   "@calendarDiaryFeatureAppealTitle": {
     "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Zaznamenajte si, ako sa cítite každý deň v kalendári.",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
   }
 }
