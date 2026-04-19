@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "ہوم کے نمبر کو ٹیپ کر کے بھی کھولا جا سکتا ہے",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "دوا چھوڑنے کے وقفے کا مفت ریکارڈ",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
