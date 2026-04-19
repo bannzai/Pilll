@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Tự động tạo vỉ thuốc tiếp theo",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Khi nhóm vỉ thuốc hiện tại kết thúc, nhóm vỉ mới sẽ được tạo tự động. Bạn không cần thao tác chuyển đổi thủ công nên sẽ không bỏ sót việc ghi nhận.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
