@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint3": "翻訳してください",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Pillerark: tryck för att registrera intag",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
