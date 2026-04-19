@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealHeadline": "ଆଜି ନେବାର ପିଲ ନମ୍ବର ପରିବର୍ତ୍ତନ କରିପାରିବେ",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "ଯଦି ଖାଇବା ଭୁଲ ଯିବା ବା ଭୁଲ ଖୁଆଇ ଦେବା କାରଣରୁ ପିଲ୍ ସିଟ୍ ଉପରେ ଥିବା ନମ୍ବର ଏବଂ ପ୍ରକୃତ ସେବନ ମଧ୍ୟରେ ଅସଙ୍ଗତି ହୋଇଯାଏ, ତେବେ ଆଜି ଖାଇବାକୁ ଥିବା ପିଲ୍ ନମ୍ବରକୁ ଆପଣ ମ୍ୟାନୁଆଲ ଭାବରେ ଠିକ୍ କରି ପାରିବେ। ହୋମ ସ୍କ୍ରୀନ ର ପିଲ ସଂଖ୍ୟା ଡିସ୍‌ପ୍ଲେ ରୁ ମଧ୍ୟ ଏହି ଏକା ସ୍କ୍ରୀନ ଖୋଲି ହୋଇ ପାରିବ।",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
