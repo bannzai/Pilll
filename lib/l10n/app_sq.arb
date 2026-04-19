@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Njoftime që patjetër do të tingëllojnë edhe në modalitetin heshtjeje",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Alarm për marrjen e pilulave, si një zgjues",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
