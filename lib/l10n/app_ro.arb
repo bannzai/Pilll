@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Notificările ajung chiar și în modul Focus",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Reamintire garantată la ora setată",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
