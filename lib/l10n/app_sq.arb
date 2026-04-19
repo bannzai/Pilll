@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Trokitni mbi një datë në kalendar për të regjistruar gjendjen e trupit, humorin, simptomat, etj. Duke i parë së bashku me regjistrimet e marrjes së pilulave dhe regjistrimet e ciklit menstrual, mund të kuptoni më mirë ritmin e trupit tuaj.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Shkruani planet e ardhshme",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
