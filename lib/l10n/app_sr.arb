@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Moguće izmeniti u podešavanjima lista pilula",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Dodirnite listu pilula da zabeležite uzimanje",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
