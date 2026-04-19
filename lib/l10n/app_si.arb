@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "ඊළඟ පිල් පත්‍රය ස්වයංක්‍රීයව සාදන්න",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "වත්මන් පිල්ශීට් කණ්ඩායම අවසන් වන විට, නව පිල්ශීට් කණ්ඩායම ස්වයංක්‍රීයව නිර්මාණය වේ. අතින් මාරුවක් අවශ්‍ය නොවන බැවින්, ලේඛන හිඟ වීමක් සිදුවන්නේ නැත.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
