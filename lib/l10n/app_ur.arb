@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "تاریخ پر ٹیپ کر کے اپنی حالت درج کریں",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "کیلنڈر میں شیڈول شامل کریں",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
