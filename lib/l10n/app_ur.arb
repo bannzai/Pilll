@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "گولی لینے سے وقفہ لیں",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "کرسیاں پر رکھیں",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
