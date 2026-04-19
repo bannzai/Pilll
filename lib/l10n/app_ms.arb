@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Semak rekod lalu di kalendar",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Ketik tarikh untuk merekod keadaan kesihatan",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
