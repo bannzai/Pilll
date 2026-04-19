@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "अलार्म घड्याळासारखा औषध सेवन अलार्म",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 आणि त्यानंतरच्या आवृत्त्यांमध्ये उपलब्ध AlarmKit वापरून, सायलेंट मोड किंवा फोकस मोडमध्येही निश्चितपणे वाजणाऱ्या अलार्मद्वारे गोळी घेण्याची आठवण करून दिली जाते.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
