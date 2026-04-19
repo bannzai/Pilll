@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Aanpasbaar via de pilbladinstellingen",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Tik op het pillenblad om inname te registreren",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
