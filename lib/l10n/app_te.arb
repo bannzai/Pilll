@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "కేలెండర్‌లో రికార్డులను జాబితా చేయండి",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "ఆరోగ్య స్థితి గురించి నోట్ చేసి తిరిగి చూడండి",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
