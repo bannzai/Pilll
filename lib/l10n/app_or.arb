@@ -2754,5 +2754,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "ପିଲ୍ ସିଟ୍ ଶେଷ ହେଲେ ସ୍ୱୟଂଚାଳିତ ପରିବର୍ତ୍ତନ",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "ମାନୁଆଲ ସୃଷ୍ଟି ଅପରେଶନ ଆବଶ୍ୟକ ନୁହେଁ",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
