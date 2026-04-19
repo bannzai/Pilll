@@ -2430,5 +2430,9 @@
   "recommendSignupGeneralDescription": "नोंदणी केल्यावर डेटा बॅकअप करता येतो",
   "@recommendSignupGeneralDescription": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "सायलेंट मोडमध्येही सूचना प्राप्त करा",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
   }
 }
