@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "จัดการวันนัดได้อย่างง่าย",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "แจ้งเตือนด้วยการเตือนความจำ",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
