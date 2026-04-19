@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "{\n  \"todayPillNumberHelpBody\": \"İlaç paketindeki numara ile gerçekte aldığınız hapın numarası, unutma veya karıştırma nedeniyle uyumsuzsa, bugün almanız gereken hap numarasını elle düzeltebilirsiniz. Ana ekranın hap numarası göstergesinden de aynı ekrana erişebilirsiniz.\",\n  \"@todayPillNumberHelpBody\": {\n    \"description\": \"今日の服用番号変更機能のヘルプページの本文\"\n  }\n}",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Hap alma molasını kaydet",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
