@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealBody": "Critical Alert ସକ୍ଷମ କଲେ, 'ଡୁ ନଟ ଡିଷ୍ଟର୍ବ' ମୋଡ୍ ବା ସାଇଲେଣ୍ଟ ମୋଡ୍‌ ସମୟରେ ମଧ୍ୟ ଆପଣ ଔଷଧ ସେବନ ସୂଚନା ପ୍ରାପ୍ତ କରିପାରିବେ। ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ପିଲ୍ ସେବନ ସମୟ ଭୁଲ ନ ହେବ ପାଇଁ, ଏହି ସେଟ୍ଟିଂ ଅବଶ୍ୟ ଚେଷ୍ଟା କରନ୍ତୁ।",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "ବିଜ୍ଞପ୍ତି ବାର୍ତ୍ତା କଷ୍ଟମାଇଜ୍ କରନ୍ତୁ",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
