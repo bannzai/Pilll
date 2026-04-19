@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Kan endres fra pilleark-innstillinger",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Trykk på pillearket for å registrere inntak",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
