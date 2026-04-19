@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Bonisa usuku eshidini lamapilisi.",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "I will translate the provided Japanese to zu.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
