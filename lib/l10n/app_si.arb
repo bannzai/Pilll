@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "යෙදුම තුළ ස්ථානය",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Focus Mode ක්‍රියාත්මකව තිබුණත් දැනුම්දීම් ලැබේ",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
