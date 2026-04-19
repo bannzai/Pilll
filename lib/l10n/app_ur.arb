@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "سیٹنگز ٹیب میں سوئچ کے ذریعے تبدیل کریں",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
