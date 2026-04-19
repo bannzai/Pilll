@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Exibir datas na cartela de pílulas",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Ao exibir as datas nas células da cartela de comprimidos, você pode verificar de relance o histórico de uso passado e os planos futuros de uso. Alterne entre o modo \"Número\" e o modo \"Data\" para escolher a visualização que mais combina com você.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
