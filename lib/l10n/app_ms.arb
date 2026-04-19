@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "Ketahui dengan segera bila pil diminum",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Rekod pengambilan pil di skrin utama",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
