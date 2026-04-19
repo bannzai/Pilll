@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "لاسي جوړولو عملیات اړین نه دي",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "د ترتیباتو ټب کې د سویچ له لارې بدلول",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
