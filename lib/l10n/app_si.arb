@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Focus Mode ක්‍රියාත්මකව තිබුණත් දැනුම්දීම් ලැබේ",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "සැකසූ වේලාවට විශ්වාසවන්තව මතක් කරයි",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
