@@ -2478,5 +2478,9 @@
   "recordPillFeatureAppealTitle": "Bukeza kalula umlando wakho wokuthatha amaphilisi",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Uyokwazi ngokushesha ukuthi wawuthathe nini",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
