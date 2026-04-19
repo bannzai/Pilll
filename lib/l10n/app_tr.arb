@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealShortDescription": "Muayene randevuları gibi gelecekteki planları yönetin",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "\"カレンダーに未来の予定を記録\" を tr（トルコ語）に翻訳してください。",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
