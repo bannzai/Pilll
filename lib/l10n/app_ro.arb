@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "Folosind AlarmKit, disponibil pe iOS 26 și versiunile ulterioare, vă reamintim să luați pilula printr-o alarmă care sună cu certitudine chiar și în modul silențios sau în modul Focus.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Ajustează numărul dozei de astăzi",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
