@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "పిల్ షీట్‌లను స్వయంచాలకంగా జోడించండి",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "తదుపరి షీట్‌ను స్వయంచాలకంగా జోడించండి",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
