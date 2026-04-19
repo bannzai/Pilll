@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Khi bật Thông báo Quan Trọng (Critical Alert), bạn sẽ nhận được thông báo nhắc uống thuốc ngay cả khi đang ở chế độ không làm phiền hoặc chế độ im lặng. Hãy cấu hình chức năng này để không bỏ lỡ thời điểm uống viên thuốc quan trọng.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Tùy chỉnh nội dung thông báo",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
