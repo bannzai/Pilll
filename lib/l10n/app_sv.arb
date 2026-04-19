@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint3": "Aktivera från fliken Inställningar på iOS 26 eller senare",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Gratis funktion för att synka nummer",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
