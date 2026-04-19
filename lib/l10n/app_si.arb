@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "ඔසන් වාර්තා කරන්න සහ අපේක්ෂාවන් සිතා ගන්න",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "මසික ආරම්භ දිනය සටහන් කර චක්‍රය අවබෝධ කරන්න",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
