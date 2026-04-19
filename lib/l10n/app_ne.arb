@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "एप नखोली सम्पन्न",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "प्रिमियम सदस्यतामा सामेल भई सिधै प्रयोग गर्न सकिन्छ",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
