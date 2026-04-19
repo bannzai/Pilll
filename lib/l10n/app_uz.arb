@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Kalendar orqali sanani bosib, sog‘lig‘ingiz, kayfiyatingiz va alomatlaringizni yozib qo‘yishingiz mumkin. Bu yozuvlarni dori qabul qilish va hayz yozuvlari bilan birgalikda ko‘rish mumkin, shuning uchun tanangiz ritmini yaxshiroq tushunishingiz mumkin.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Kelajakdagi rejalaringizni yozib qo'ying",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
