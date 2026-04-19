@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Varsler leveres også i fokusmodus",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Pålitelig påminnelse til angitt tid",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
