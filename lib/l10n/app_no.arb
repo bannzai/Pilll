@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Din egen varslingsmelding",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Vis pilleplate etter dato",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
