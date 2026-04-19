@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "කැලෙන්ඩරයෙන් පසුගිය සටහන් නැවත බලන්න",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "දිනයක් ටැප් කර ඔබේ සෞඛ්‍ය තත්ත්වය සටහන් කරන්න",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
