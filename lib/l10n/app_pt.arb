@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Registre e revise seu estado de saúde",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Reveja registros passados no calendário",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
