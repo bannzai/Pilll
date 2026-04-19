@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "{\n  \"@@locale\": \"sl\",\n  \"todayPillNumberHelp\": \"Če zaradi pozabljanja ali zamenjave pride do premika med številko na listu tabletk in dejanskim jemanjem, lahko ročno prilagodite številko tablete za današnji vnos. Enak zaslon lahko odprete tudi s prikaza številke tablete na domačem zaslonu.\",\n  \"@todayPillNumberHelp\": {\n    \"description\": \"今日の服用番号変更機能のヘルプページの本文\"\n  }\n}",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Zabeležite premor pri jemanju",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
