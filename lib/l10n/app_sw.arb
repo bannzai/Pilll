@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Ghairi kwa urahisi hata ukikosea",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Tazama rekodi za matumizi wakati wowote",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
