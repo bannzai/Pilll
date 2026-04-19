@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealBody": "iOS 26 နှင့်အထက်တွင် ရရှိနိုင်သော AlarmKit ကိုအသုံးပြု၍ ဆိုင်းငံ့မုဒ် သို့မဟုတ် အာရုံစူးစိုက်မုဒ်တွင်ပင် သေချာပေါက် မြည်သော အချိန်ကိုက်နှိုးစက်ဖြင့် ဆေးသောက်ချိန်ကို အကြောင်းကြားပေးပါသည်။",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "ယနေ့ဆေးသောက်နံပါတ်ချိန်ညှိပါ",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
