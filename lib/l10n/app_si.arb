@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "පිල් පත්‍රිකාව දිනය අනුව පෙන්වන්න",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "කැලැන්ඩරය නොබලුවත් දිනය දැනගත හැක",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
