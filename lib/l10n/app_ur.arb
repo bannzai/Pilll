@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "ہیلتھ کیئر کے ساتھ ہم آہنگ کریں",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "ماہواری کے ریکارڈز کو ہیلتھ ایپ کے ساتھ شیئر کریں",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
