@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "د ټاکل شوي وخت کې د باور وړ یادونه",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "د یو ټپ سره اسانه تنظیمات",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
