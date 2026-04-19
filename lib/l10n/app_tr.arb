@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "生理記録を自動でデータ連携",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ヘルスケアアプリに同期",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
