@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "Lista zapisów w kalendarzu",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Notuj samopoczucie i przeglądaj historię",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
