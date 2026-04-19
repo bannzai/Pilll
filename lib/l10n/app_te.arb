@@ -2582,5 +2582,9 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "తదుపరి షీట్‌ను స్వయంచాలకంగా జోడించండి",
   "@creatingNewPillSheetFeatureAppealShortDescription": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "{\n  \"nextPillSheetAutoCreate\": \"తదుపరి పిల్‌షీట్‌ను స్వయంచాలకంగా సృష్టించండి\",\n  \"@nextPillSheetAutoCreate\": {\n    \"description\": \"ピルシート自動追加機能のヘルプページのヘッドライン\"\n  }\n}",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
   }
 }
