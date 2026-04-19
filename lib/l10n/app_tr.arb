@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "次のピルシートを自動で作成",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Mevcut hap şeridi grubu sona erdiğinde, yeni bir hap şeridi grubu otomatik olarak oluşturulur. Manuel geçiş işlemi gerekmez; kayıt atlaması yaşanmaz.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
