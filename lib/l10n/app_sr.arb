@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Dovoljno je da dodirnete raspored pilula na početnom ekranu da zabeležite uzimanje tog dana. Ako ste pogrešno zabeležili, ponovnim dodirom možete poništiti unos. Istoriju uzimanja možete kasnije pregledati, pa možete nastaviti bez brige.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Praćenje i predviđanje menstruacije",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
