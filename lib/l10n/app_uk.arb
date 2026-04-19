@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Показати аркуш прийому пігулок за датою",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Календаря не потрібно, щоб знати дату",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
