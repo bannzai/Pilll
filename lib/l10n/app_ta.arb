@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "カレンダーに未来の予定を記録",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "将来の予約や旅行など、カレンダーに将来の予定を書き込むことができます。ピルの服用サイクルと一緒に確認できるので、生理の予定も考慮した計画が立てられます。",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
