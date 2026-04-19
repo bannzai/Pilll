@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Bezplatné sledovanie prestávok v užívaní piluliek",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Začnite kliknutím na ikonu ozubeného kolesa v pravom hornom rohu pilulového listu.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
