@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "即使在免打扰模式下也能防止漏服",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "即使在静音模式下也能收到提醒",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
