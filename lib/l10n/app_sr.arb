@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Prevedi na srpski: 設定タブのスイッチで切り替え",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Zvoni čak i kada je telefon u tihom ili 'Fokus' režimu.",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
