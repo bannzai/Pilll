@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Inaunga mkono Apple Health",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Rekodi kuchukua kidonge kupitia kitendo cha arifa",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
