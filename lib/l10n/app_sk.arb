@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "Zaznamenať prestávku v užívaní",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Presné spravovanie prestávok a prerušenia užívania",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
