@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "ਕੈਲੰਡਰ ਵਿੱਚ ਭਵਿੱਖ ਦੀਆਂ ਯੋਜਨਾਵਾਂ ਦਰਜ ਕਰੋ",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "ਤੁਸੀਂ ਕੈਲੰਡਰ ਵਿੱਚ ਭਵਿੱਖ ਦੀਆਂ ਯੋਜਨਾਵਾਂ ਜਿਵੇਂ ਕਿ ਡਾਕਟਰੀ ਮੁਲਾਕਾਤਾਂ ਅਤੇ ਯਾਤਰਾ ਦੀਆਂ ਯੋਜਨਾਵਾਂ ਲਿਖ ਸਕਦੇ ਹੋ। ਕਿਉਂਕਿ ਤੁਸੀਂ ਇਸਨੂੰ ਗੋਲੀ ਲੈਣ ਦੇ ਚੱਕਰ ਦੇ ਨਾਲ ਮਿਲਾ ਕੇ ਦੇਖ ਸਕਦੇ ਹੋ, ਤੁਸੀਂ ਮਾਹਵਾਰੀ ਦੇ ਸਮੇਂ ਨੂੰ ਧਿਆਨ ਵਿੱਚ ਰੱਖਦੇ ਹੋਏ ਯੋਜਨਾਵਾਂ ਬਣਾ ਸਕਦੇ ਹੋ।",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
