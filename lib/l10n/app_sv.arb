@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "Ta emot aviseringar även i tyst läge",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Missa inte din dos — även i Stör ej-läge",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
