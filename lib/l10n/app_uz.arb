@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Premium obunasiga o'tsangiz, darhol foydalanishingiz mumkin",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Tabletkalar varaqasi tugagach avtomatik almashtirish",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
