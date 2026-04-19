@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "Alarm që tingëllon si një orë zgjimi",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Njoftime që patjetër do të tingëllojnë edhe në modalitetin heshtjeje",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
