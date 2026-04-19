@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "{\"manageClinicDays\": \"Простое управление датами посещений\"}",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Напоминание",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
