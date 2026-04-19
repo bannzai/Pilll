@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Melding die zeker afgaat, ook in stille modus",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Wekkermelding voor innemen",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
