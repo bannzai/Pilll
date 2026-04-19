@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "{\"@@locale\":\"te\",\"pill_sheet_auto_switch\":\"పిల్ షీట్ ముగిసినందున ఆటోమేటిక్‌గా మారుతుంది\"}",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "చేతితో సృష్టించడం అవసరం లేదు",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
