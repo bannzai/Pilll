@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Rekodi kuchukua kidonge kupitia kitendo cha arifa",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Kamilisha bila kufungua programu",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
