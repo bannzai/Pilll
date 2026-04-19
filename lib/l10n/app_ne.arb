@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "आजको खुराक नम्बर मिलाउनुहोस्",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "नम्बर गलत भएमा सेटिङमा सच्याउनुहोस्",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
