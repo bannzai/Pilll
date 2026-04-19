@@ -2746,5 +2746,9 @@
   "quickRecordFeatureAppealPoint1": "Registrera intag via aviseringens åtgärd",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Appen behöver inte öppnas för att slutföra",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
