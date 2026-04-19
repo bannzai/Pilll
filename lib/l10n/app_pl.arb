@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Łatwo zapisz datę początku miesiączki",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Automatyczne śledzenie cyklu",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
