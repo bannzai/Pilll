@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Synkroniser med helseappen",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Helse-støtte",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
