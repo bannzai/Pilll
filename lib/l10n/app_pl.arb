@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Automatyczna synchronizacja danych menstruacyjnych",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Synchronizuj z aplikacją zdrowotną",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
