@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "क्यालेन्डर नहेरी पनि मिति थाहा हुन्छ",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "पिल सिट सेटिङबाट परिवर्तन गर्न सकिन्छ",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
