@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint2": "ကျန်းမာရေးအခြေအနေကို မှတ်တမ်းတင်ပြီး ပြန်ကြည့်ပါ",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "ပြက္ခဒိန်ဖြင့် ယခင်မှတ်တမ်းများ ပြန်ကြည့်ရန်",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
