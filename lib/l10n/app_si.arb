@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "ක්ෂණිකව කවදා ගන්නද බලන්න",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "පිල් පත්‍රයේ දිනය පෙන්විය හැක",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
