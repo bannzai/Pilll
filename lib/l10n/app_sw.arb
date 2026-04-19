@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "Unaweza kurekodi kipindi cha kusitisha matumizi kwenye karatasi ya vidonge. Wakati wa mapumziko, nambari ya kuchukua haitasogea, na unaporejea matumizi, utaweza kuanza kurekodi mara moja.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Mahali ndani ya programu",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
