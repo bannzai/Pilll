@@ -2502,5 +2502,9 @@
   "menstruationFeatureAppealHeadline": "{\n  \"@@locale\": \"sv\",\n  \"period_record_and_prediction\": \"Registrera och förutsäga din mens\",\n  \"@period_record_and_prediction\": {\n    \"description\": \"ヘルプページのヘッドライン - 生理記録機能\",\n    \"type\": \"text\"\n  }\n}",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "När mensen kommer räcker det att du registrerar den för att få en översikt över tidigare menstruationshistorik. Nästa beräknade mensdatum förutsägs automatiskt, så att du kan planera i förväg.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
