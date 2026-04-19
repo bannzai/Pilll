@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "पिल खान बिर्सिएमा वा गलत पिल खाइयो भने पिल शीटको नम्बर र वास्तविक सेवनमा भिन्नता आउँदा, आज खानुपर्ने पिल नम्बर हातले मिलाउन सकिन्छ। गृहपृष्ठको पिल नम्बर प्रदर्शनबाट पनि उही स्क्रिन खोल्न सकिन्छ।",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "गोली नखाने अवधि रेकर्ड गर्नुहोस्",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
