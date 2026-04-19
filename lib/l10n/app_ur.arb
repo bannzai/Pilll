@@ -2518,5 +2518,9 @@
   "calendarDiaryFeatureAppealShortDescription": "روزانہ اپنی طبیعت کو کیلنڈر میں درج کریں",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "اپنی روز مرہ کی صحت کو کیلنڈر میں ریکارڈ کریں",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
