@@ -2426,5 +2426,9 @@
   "recommendSignupGeneralTitle": "खाते नोंदणी करण्याची शिफारस आहे",
   "@recommendSignupGeneralTitle": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "नोंदणी केल्यावर डेटा बॅकअप करता येतो",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
   }
 }
