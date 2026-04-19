@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "دستی تخلیق کی ضرورت نہیں ہے",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "سیٹنگز ٹیب میں سوئچ کے ذریعے تبدیل کریں",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
