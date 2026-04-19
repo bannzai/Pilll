@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Ghi ngay từ thông báo mà không cần mở ứng dụng",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Ghi nhận uống thuốc bằng một chạm từ màn hình thông báo",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
