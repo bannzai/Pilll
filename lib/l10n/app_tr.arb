@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "Çalar saat gibi çalan alarm",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Sessiz modda bile kesinlikle çalan bildirim",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
