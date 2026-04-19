@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "Sozlagan vaqtingizda albatta eslatadi",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Bir bosish bilan oson sozlash",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
