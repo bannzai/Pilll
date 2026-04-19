@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "எதிர்கால திட்டங்களை பதிவு செய்யுங்கள்",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "மருத்துவ சந்திப்புகள் போன்ற எதிர்கால திட்டங்களை நிர்வகிக்க",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
