@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealBody": "သွေးဆင်းချိန် ရောက်လာတိုင်း မှတ်တမ်းတင်ရုံဖြင့် ယခင်ကာလ သွေးဆင်းမှု မှတ်တမ်းများကို စာရင်းကြည့်ရှုနိုင်ပါသည်။ နောက်တစ်ကြိမ် သွေးဆင်းရမည့်ရက်ကိုလည်း အလိုအလျောက် ခန့်မှန်းပေးသောကြောင့် စီစဉ်ကျကျ နေထိုင်နိုင်ပါသည်။",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "ပြက္ခဒိန်တွင် ကျန်းမာရေးအခြေအနေ မှတ်တမ်းတင်ပါ",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
