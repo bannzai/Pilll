@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Të dhënat e menstruacioneve të regjistruara në Pilll mund të sinkronizohen automatikisht me aplikacionin e kujdesit shëndetësor. Kështu mund t’i shihni ato së bashku me të dhënat e tjera shëndetësore në aplikacionin e kujdesit shëndetësor dhe t’i bëni të disponueshme për aplikacione të tjera.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Regjistro direkt nga njoftimi",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
