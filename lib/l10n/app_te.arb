@@ -2658,5 +2658,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "నోటిఫికేషన్ సందేశాన్ని స్వేచ్ఛగా సవరించండి",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "రోజువారీ గుర్తింపుల్లో ప్రతిబింబించబడుతుంది",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
   }
 }
