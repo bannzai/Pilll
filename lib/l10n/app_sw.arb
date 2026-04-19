@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Rekodi kutoka arifa bila kufungua programu",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Rekodi kwa bonyeza moja kwenye skrini ya arifa",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
