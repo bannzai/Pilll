@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "کرسیاں پر رکھیں",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "{\n  \"@@locale\": \"ur\",\n  \"app_location\": \"ایپ میں مقام\",\n  \"@app_location\": {\n    \"description\": \"アプリ内の場所\"\n  }\n}",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
