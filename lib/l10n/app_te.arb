@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "ఫోకస్ మోడ్‌లో ఉన్నప్పటికీ నోటిఫికేషన్లు అందుతాయి",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "సెట్టుచేసిన సమయంలో ఖచ్చితంగా గుర్తుచేస్తుంది",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
