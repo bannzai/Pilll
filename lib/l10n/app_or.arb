@@ -2678,5 +2678,9 @@
   "recordPillFeatureAppealPoint2": "ଭୁଲ ହୋଇଗଲେ ମଧ୍ୟ ସହଜରେ ବାତିଲ",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "ଯେକୌଣସି ସମୟରେ ସେବନ ଇତିହାସ ଦେଖନ୍ତୁ",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
