@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Mag-record mula sa abiso nang hindi binubuksan ang app",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Isang-tap na pagtatala ng pag-inom mula sa screen ng abiso",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
