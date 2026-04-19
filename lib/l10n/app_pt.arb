@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Você pode registrar compromissos futuros no calendário, como consultas médicas e planos de viagem. Como é possível visualizá-los junto com o ciclo de uso da pílula, você pode fazer planos levando em consideração também a previsão da menstruação.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Integrar com Saúde",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
