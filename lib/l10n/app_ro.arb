@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "Înregistrează starea de sănătate zilnică în calendar",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Atingând o dată în calendar, puteți înregistra starea fizică, dispoziția, simptomele și altele. Deoarece le puteți vizualiza împreună cu înregistrările de administrare a pilulelor și înregistrările menstruale, puteți înțelege ritmul propriului corp.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
