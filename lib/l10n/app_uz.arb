@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Hayzni qayd etish va taxmin qilish",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Hayz boshlanish kunini yozib, davringizni kuzating",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
