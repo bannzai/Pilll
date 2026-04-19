@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "ਅਲਾਰਮ ਘੜੀ ਵਰਗੀ ਅਲਾਰਮ ਧੁਨੀ",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 ਜਾਂ ਬਾਅਦ ਵਿੱਚ · ਸੈਟਿੰਗ ਟੈਬ ਤੋਂ ਸਮਰੱਥ ਕਰੋ",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
