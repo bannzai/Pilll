@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Menstruatiestartdatum eenvoudig vastleggen",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Cyclus automatisch bijhouden",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
