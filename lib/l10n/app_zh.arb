@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "在日历中查看记录",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "体調をメモして振り返り",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
