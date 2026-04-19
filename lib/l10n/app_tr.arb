@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "Ana ekranda hap kullanımını kaydedin",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Ana ekrandaki hap sayfasına dokunarak o günün alımını kaydedebilirsiniz. Yanlışlıkla kaydettiyseniz, tekrar dokunarak geri alabilirsiniz. Alım geçmişi daha sonra görüntülenebilir, böylece rahatça devam edebilirsiniz.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
