@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "Отримувати сповіщення навіть у беззвучному режимі",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Не пропускайте прийом навіть у режимі «Не турбувати»",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
