@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "确保在设定的时间准时提醒",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "一键轻松设置",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
