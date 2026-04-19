@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Pilll मध्ये नोंदवलेला मासिक पाळीचा डेटा हेल्थकेअर अ‍ॅपशी आपोआप समक्रमित केला जाऊ शकतो. हेल्थकेअरवरील इतर आरोग्य डेटासह तो एकत्र पाहता येतो आणि इतर अ‍ॅप्समध्येही मासिक पाळीचा डेटा वापरता येऊ शकतो.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "सूचनेतून थेट सेवन नोंद",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
