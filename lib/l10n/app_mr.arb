@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "तुमचा स्वतःचा सूचना संदेश",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "तारखेनुसार पिल शीट दर्शवा",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
