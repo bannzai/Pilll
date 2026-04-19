@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Notuj samopoczucie i przeglądaj historię",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Przeglądaj historię w kalendarzu",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
