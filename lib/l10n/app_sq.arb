@@ -2430,5 +2430,9 @@
   "recommendSignupGeneralDescription": "Duke u regjistruar, mund të bëni kopje rezervë të të dhënave tuaja",
   "@recommendSignupGeneralDescription": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "Merr njoftime edhe në modalitetin pa zë",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
   }
 }
