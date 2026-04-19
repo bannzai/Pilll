@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Pantau kitaran secara automatik",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Sesuaikan Tetapan",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
