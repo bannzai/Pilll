@@ -2622,5 +2622,9 @@
   "restDurationFeatureAppealShortDescription": "ଔଷଧ ବ୍ରେକ ଏବଂ ବିଚ୍ଛେଦ ସଠିକ ଭାବରେ ପରିଚାଳନା",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "ପିଲ ସେବନ ବିରତି ନେବା",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
