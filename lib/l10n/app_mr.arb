@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealHeadline": "मासिक पाळीची नोंद आणि अंदाज करता येतो",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "मासिक पाळी आल्यावर फक्त नोंद करा आणि मागील मासिक पाळीचा इतिहास यादीत पाहा. पुढील मासिक पाळीची अपेक्षित तारीखही आपोआप अंदाज केली जाते, त्यामुळे तुम्ही नियोजनपूर्वक राहू शकता.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
