@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "ਜਦੋਂ ਮੌਜੂਦਾ ਪਿੱਲ ਸ਼ੀਟ ਗਰੁੱਪ ਖਤਮ ਹੁੰਦਾ ਹੈ, ਤਾਂ ਇੱਕ ਨਵਾਂ ਪਿੱਲ ਸ਼ੀਟ ਗਰੁੱਪ ਆਪਣੇ ਆਪ ਬਣਾਇਆ ਜਾਂਦਾ ਹੈ। ਹੱਥੀਂ ਬਦਲਣ ਦੀ ਕੋਈ ਲੋੜ ਨਹੀਂ, ਅਤੇ ਰਿਕਾਰਡ ਵਿੱਚ ਕੋਈ ਖਾਮੀ ਨਹੀਂ ਆਵੇਗੀ।",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "ਅਲਾਰਮ ਘੜੀ ਵਾਂਗ ਵੱਜਣ ਵਾਲਾ ਅਲਾਰਮ",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
