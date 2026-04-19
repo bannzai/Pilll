@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "பில் சீட்டை தானாகச் சேர்க்க",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "அடுத்த ஷீட்டை தானாக உருவாக்கவும்",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
