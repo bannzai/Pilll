@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "Niezawodne przypomnienie o ustawionej godzinie",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Łatwa konfiguracja jednym dotknięciem",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
