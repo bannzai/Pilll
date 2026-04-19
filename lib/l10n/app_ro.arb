@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Creare manuală nu este necesară",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Comutați din fila Setări",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
