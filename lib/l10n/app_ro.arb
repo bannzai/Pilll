@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Atingeți foaia de pastile de pe ecranul principal pentru a înregistra administrarea din ziua respectivă. Dacă ați înregistrat din greșeală, puteți anula atingând din nou. Puteți verifica istoricul administrărilor ulterior, astfel că puteți continua fără griji.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Înregistrează și prognozează menstruația",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
