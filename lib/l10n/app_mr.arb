@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealShortDescription": "दवाखाना भेटीसारख्या भविष्यातील योजना व्यवस्थापित करा",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "कॅलेंडरवर भविष्यातील योजना नोंदवा",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
