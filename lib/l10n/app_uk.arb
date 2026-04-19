@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Доступно відразу після оформлення підписки Premium",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Переход після закінчення блістера",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
