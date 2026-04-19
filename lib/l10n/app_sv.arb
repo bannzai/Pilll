@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint3": "Går även att öppna genom att trycka på siffran på startsidan.",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Gratis logg för pilleruppehåll",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
