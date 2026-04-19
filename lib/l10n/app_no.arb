@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "Skriv inn avtaler i kalenderen",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Enkel administrasjon av legetimer",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
