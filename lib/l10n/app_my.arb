@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint3": "သတိပေးချက်ဖြင့် အကြောင်းကြားရန်",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "ရက်စွဲကို တို့နှိပ်၍ အစီအစဉ်ရေးချပါ",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
