@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "د راتلونکي د حبوبو پاڼه اتوماتیک جوړول",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "کله چې اوسنی پیل شیټ ګروپ پای ته ورسیږي، نوی پیل شیټ ګروپ به اتوماتیک جوړ شي. د لاسي بدلون ته اړتیا نشته، او د ریکارډونو کې هیڅ خلا نه پیدا کیږي.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
