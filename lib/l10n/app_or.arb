@@ -2634,5 +2634,9 @@
   "featureAppealLocationLabel": "ଆପ୍ ଭିତରର ସ୍ଥାନ",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "ଫୋକସ୍ ମୋଡ୍ ଥିଲେ ମଧ୍ୟ ବିଜ୍ଞପ୍ତି ପ୍ରାପ୍ତ ହୁଏ",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
