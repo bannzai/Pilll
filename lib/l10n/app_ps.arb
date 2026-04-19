@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "د ویښولو زنګ غوندې الارم",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "خبرتیاوې چې د خاموشۍ حالت کې هم باوري ډول غږیږي",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
