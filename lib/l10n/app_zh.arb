@@ -2518,5 +2518,9 @@
   "calendarDiaryFeatureAppealShortDescription": "把每日的身体状况记在日历里",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "将每日身体状况记录到日历",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
