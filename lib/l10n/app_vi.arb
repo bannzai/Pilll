@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "Thêm sự kiện vào lịch",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Quản lý ngày khám dễ dàng",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
