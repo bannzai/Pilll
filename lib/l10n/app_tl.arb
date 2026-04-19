@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Kung pinindot nang matagal ang abiso ng paalala, lalabas ang aksyong \"Ininom na\" at maaaring mairekord ang pag-inom nang hindi binubuksan ang app.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Awtomatikong idagdag ang pill sheet",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
