@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "होम स्क्रिनको नम्बर ट्याप गरेर पनि खोल्न सकिन्छ",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "निःशुल्क उपलब्ध औषधि-विराम रेकर्ड",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
