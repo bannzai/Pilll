@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Tạm dừng uống thuốc tránh thai",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Bạn có thể ghi lại khoảng thời gian tạm ngưng uống trên tờ thuốc. Khi đang tạm nghỉ, số uống sẽ không tiến lên và bạn có thể tiếp tục ghi lại ngay khi bắt đầu lại.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
