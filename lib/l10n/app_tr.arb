@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Sağlık uygulamalarıyla entegrasyon",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Adet kayıtlarını Sağlık uygulamasıyla paylaş",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
