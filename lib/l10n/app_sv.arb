@@ -2590,5 +2590,9 @@
   "alarmKitFeatureAppealTitle": "Låter som en väckarklocka",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Pålitliga notiser som hörs även i tyst läge",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
