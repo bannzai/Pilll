@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Prispôsobte si notifikačnú správu",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Zobraziť pilulkový list podľa dátumu",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
