@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "轻松管理就诊日",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "通过提醒通知",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
