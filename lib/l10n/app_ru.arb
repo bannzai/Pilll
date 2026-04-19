@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Поддержка Apple Health",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Отметить прием из уведомления",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
