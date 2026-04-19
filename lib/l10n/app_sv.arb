@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Tryck på ett datum för att registrera hur du mår",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Kalender: lägg till händelser",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
