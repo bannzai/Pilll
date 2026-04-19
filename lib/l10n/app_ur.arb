@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "خاموش حالت میں بھی یقینی طور پر بجنے والی اطلاع",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "جاگنے والے الارم جیسی دوائی لینے کی یاد دہانی",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
