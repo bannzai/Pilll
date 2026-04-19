@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Lokasi dalam apl",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Notifikasi diterima walaupun dalam Mod Fokus",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
