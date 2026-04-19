@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "Mag-record ng mga paplanong kaganapan sa kalendaryo",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Maaari mong isulat sa kalendaryo ang mga hinaharap na plano tulad ng pagbisita sa doktor o paglalakbay. Maaari mo itong tingnan kasabay ng iyong cycle ng pag-inom ng pill, kaya makakagawa ka ng mga plano na isinasaalang-alang din ang inaasahang regla.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
