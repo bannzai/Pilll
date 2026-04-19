@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "आरोग्य स्थिती नोंदवा आणि आढावा घ्या",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "कॅलेंडरवर मागील नोंदी पाहा",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
