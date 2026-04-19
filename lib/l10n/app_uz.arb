@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Pil varaqchasini sanaga ko'ra ko'rsatish",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Taqvimga qaramasdan ham sanani bilishingiz mumkin",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
