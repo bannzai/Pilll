@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "அப் திறக்காமலே முடிக்கவும்",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "ப்ரீமியம் சந்தாவுடன் உடனே பயன்படுத்த முடியும்",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
