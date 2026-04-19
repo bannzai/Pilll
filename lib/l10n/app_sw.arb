@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Kusimamisha matumizi ya vidonge",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Unaweza kurekodi kipindi cha kusitisha matumizi kwenye karatasi ya vidonge. Wakati wa mapumziko, nambari ya kuchukua haitasogea, na unaporejea matumizi, utaweza kuanza kurekodi mara moja.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
