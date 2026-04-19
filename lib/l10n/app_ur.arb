@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "ہوم اسکرین پر موجود پِل شیٹ کو صرف ٹیپ کرنے سے اسی دن کا استعمال ریکارڈ ہو جاتا ہے۔ اگر آپ نے غلطی سے ریکارڈ کر دیا ہو تو دوبارہ ٹیپ کر کے اسے منسوخ کیا جا سکتا ہے۔ آپ بعد میں بھی استعمال کے ریکارڈ دیکھ سکتے ہیں، اس لیے آپ پر سکون ہو کر جاری رکھ سکتے ہیں۔",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "生理を記録・予測",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
