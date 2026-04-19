@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "Uskladite današnji številki odmerka",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Številke se ne ujemajo? Popravite jih v nastavitvah.",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
