@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealShortDescription": "နံပါတ်ကွဲလွဲလျှင် ဆက်တင်တွင် ပြင်ဆင်ပါ",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "ယနေ့သောက်သည့် ဆေးပြားနံပါတ်ကို ပြောင်းလဲနိုင်သည်",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
