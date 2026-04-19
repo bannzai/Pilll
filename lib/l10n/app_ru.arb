@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Отображая даты в ячейках таблетного листа, вы можете сразу увидеть историю приёма таблеток в прошлом и запланированные приёмы в будущем. Переключайтесь между режимом «Номер» и режимом «Дата», чтобы выбрать наиболее удобный вариант отображения.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Легко просматривайте историю приёма",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
