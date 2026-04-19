@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Automatyczne śledzenie cyklu",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Dostosuj ustawienia",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
