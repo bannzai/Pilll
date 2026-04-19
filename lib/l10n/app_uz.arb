@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Salomatlik ilovasi bilan sinxronlash",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Health bilan integratsiyalashgan",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
