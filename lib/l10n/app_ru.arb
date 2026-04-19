@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Бесплатный учёт дней без приёма таблеток",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Начните с значка шестерёнки в правом верхнем углу листа таблеток.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
