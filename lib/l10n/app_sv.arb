@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint2": "Börja från kugghjulet uppe till höger på pillerarket.",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "{\n  \"period_edit_resume\": \"Enkelt att redigera eller återuppta mensperioden\",\n  \"@period_edit_resume\": {\n    \"description\": \"生理期間を編集・再開する操作のラベルや説明に使用\",\n    \"type\": \"text\"\n  }\n}",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
