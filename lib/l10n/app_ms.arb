@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Rekod rehat ubat percuma",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Mulakan dari gear di bahagian kanan atas helaian pil",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
