@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "دوا چھوڑنے کے وقفے کا مفت ریکارڈ",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "پیج شیٹ کے اوپری دائیں کونے سے گیئر آئیکن پر کلک کریں",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
