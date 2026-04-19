@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "යෙදුම විවෘත නොකර දැනුම්දීම් පණිවිඩයෙන්ම සටහන් කරන්න",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "නිවේදන තිරයෙන් එක් ටැප් කර බෙහෙත් ගත් බව සටහන් කරන්න",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
