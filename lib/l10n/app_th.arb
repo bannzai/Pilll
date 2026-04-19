@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "ตั้งเป็นข้อความแจ้งเตือนส่วนตัวของคุณ",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "แสดงตารางยาคุมตามวันที่",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
