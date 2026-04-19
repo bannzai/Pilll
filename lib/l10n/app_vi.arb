@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Có thể hoàn tác dễ dàng khi nhầm",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Xem lịch sử dùng thuốc bất cứ lúc nào",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
