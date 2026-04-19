@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Standardno sporočilo „Čas za jemanje kontracepcijske tablete“ lahko prilagodite po svojih željah. Spremenite ga v motivacijski stavek, ime hišnega ljubljenčka ali katero koli drugo besedilo, ki bo vsakodnevno jemanje naredilo prijetnejše.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Prikaži datume na listu tabletk",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
