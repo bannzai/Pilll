@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "अॅपमधील स्थान",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "फोकस मोड दरम्यान देखील सूचना मिळतात",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
