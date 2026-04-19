@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Funcție de ajustare a numerelor disponibilă gratuit",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Poate fi modificat din fila Setări",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
