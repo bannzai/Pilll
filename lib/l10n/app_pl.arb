@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Automatyczne tworzenie następnego blister pack tabletek",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Po zakończeniu bieżącej grupy kart tabletek automatycznie tworzona jest nowa grupa. Nie jest wymagane ręczne przełączanie, dzięki czemu nie ma przerw w zapisach.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
