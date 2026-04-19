@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "Menggunakan AlarmKit yang tersedia pada iOS 26 dan ke atas, anda akan diberitahu untuk mengambil pil melalui penggera yang pasti berbunyi walaupun dalam mod senyap atau mod Fokus.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Sesuaikan nombor pengambilan hari ini",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
