@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "మీ మందు తీసిన చరిత్రను సులభంగా చూడండి",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "ఎప్పుడు తీసుకున్నారో వెంటనే తెలుసుకోవచ్చు",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
