@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint3": "ପ୍ରିମିୟମ୍ ସଦସ୍ୟତା ସହ ସିଧାସଳଖ ଉପଲବ୍ଧ",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "ପିଲ୍ ସିଟ୍ ଶେଷ ହେଲେ ସ୍ୱୟଂଚାଳିତ ପରିବର୍ତ୍ତନ",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
