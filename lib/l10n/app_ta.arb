@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "முகப்பு திரையில் உள்ள எண்ணை தட்டுவதன் மூலம் கூட திறக்கலாம்",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "இலவச மாத்திரை ஓய்வு பதிவு",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
