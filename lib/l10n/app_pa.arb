@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "ਨਿਰਧਾਰਿਤ ਸਮੇਂ 'ਤੇ ਪੱਕਾ ਰੀਮਾਈਂਡਰ",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "ਇੱਕ ਟੈਪ ਨਾਲ ਆਸਾਨ ਸੈਟਿੰਗ",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
