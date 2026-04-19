@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "Taqvimga voqeani qo'shish",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Tashrif kunlarini oson boshqarish",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
