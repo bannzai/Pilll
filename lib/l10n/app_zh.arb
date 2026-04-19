@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "无需打开应用即可完成",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "订阅 Premium 后即可使用",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
