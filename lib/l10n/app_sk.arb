@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Údaje o menštruácii zaznamenané v aplikácii Pilll sa dajú automaticky synchronizovať s aplikáciou Zdravie. Môžete si ich prezerať spolu s ďalšími zdravotnými údajmi v aplikácii Zdravie a sprístupniť údaje o menštruácii aj iným aplikáciám.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Zaznamenať užitie priamo z upozornenia",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
