@@ -2702,5 +2702,9 @@
   "calendarDiaryFeatureAppealPoint2": "ସ୍ୱାସ୍ଥ୍ୟ ଅବସ୍ଥା ଟିପ୍ପଣ ଓ ସମୀକ୍ଷା",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "କ୍ୟାଲେଣ୍ଡରରେ ଅତୀତ ରେକର୍ଡ ସମୀକ୍ଷା",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
