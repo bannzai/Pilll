@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Anda boleh mencatat jadual masa hadapan seperti temujanji hospital dan rancangan perjalanan dalam kalendar. Oleh kerana ia boleh disemak bersama kitaran pengambilan pil, anda boleh membuat perancangan yang mengambil kira jadual haid anda.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Padu dengan Kesihatan",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
