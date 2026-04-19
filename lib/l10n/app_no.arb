@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Trykk og hold på påminnelsesvarselet for å vise handlingen «Tatt», slik at du kan registrere inntaket uten å åpne appen.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Legg til pilleark automatisk",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
