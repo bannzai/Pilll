@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "جاگنے والی گھڑی جیسی الارم کی آواز",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 یا اس کے بعد — سیٹنگز ٹیب سے فعال کریں",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
