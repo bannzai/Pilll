@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Tashrif kunlarini oson boshqarish",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Eslatma orqali ogohlantirish",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
