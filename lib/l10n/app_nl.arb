@@ -2466,5 +2466,9 @@
   "appearanceModeDateFeatureAppealTitle": "Datum op pilblad weergeven",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "In één oogopslag zien wanneer je de pil moet innemen",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
