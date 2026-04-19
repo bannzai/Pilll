@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "मिति ट्याप गरेर तालिका लेख्नुहोस्",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "मासिक धर्म रेकर्डको स्वचालित डेटा सिङ्क",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
