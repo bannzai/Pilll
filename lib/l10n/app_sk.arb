@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Upravte text upozornenia na voľne zvolené pripomenutie užívania liekov",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Štandardnú správu „Je čas vziať si pilulku“ si môžete prispôsobiť podľa seba. Nahraďte ju povzbudivou vetou, menom domáceho miláčika alebo čímkoľvek, čo spríjemní každodenné užívanie.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
