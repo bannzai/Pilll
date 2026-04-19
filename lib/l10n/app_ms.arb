@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealBody": "Sekadar rekodkan setiap kali haid tiba, dan anda boleh melihat semua sejarah haid yang lalu dalam senarai. Tarikh haid seterusnya turut dijangkakan secara automatik, membolehkan anda merancang kehidupan dengan lebih sistematik.",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Rekod kesihatan di kalendar",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
