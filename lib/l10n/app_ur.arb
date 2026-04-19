@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "سیٹنگ ٹیب سے تبدیل کیا جا سکتا ہے",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "ہوم کے نمبر کو ٹیپ کر کے بھی کھولا جا سکتا ہے",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
