@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Oʻtgan yozuvlarni taqvimda ko‘zdan kechirish",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Holatingizni yozish uchun sanani bosing",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
