@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 ขึ้นไป・เปิดใช้งานได้จากแท็บการตั้งค่า",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "หมายเลขจับคู่ที่ใช้ได้ฟรี",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
