@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "සාමාන්‍ය ඇලර්ම් වැනි ශබ්දය",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 and later · Enable from Settings tab",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
