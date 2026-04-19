@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "د پیل شیټ ترتیباتو څخه د بدلون وړ",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "د پیل شیټ ټچ کولو سره د دوا اخیستلو ثبت",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
