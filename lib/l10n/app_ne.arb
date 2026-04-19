@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "स्वास्थ्य सेवासँग जडान",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "मासिक धर्म रेकर्ड स्वास्थ्य सेवासँग साझा गर्नुहोस्",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
