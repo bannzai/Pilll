@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Ungakushintsha kusuka kuzilungiselelo zeshidi lamaphilisi.",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Thinta ishidi lamaphilisi ukuze ubhale ukuthi uwawathathile",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
