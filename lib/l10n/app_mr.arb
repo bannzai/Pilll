@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "दवाखाना भेटींचे सोपे व्यवस्थापन",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "रिमाइंडरद्वारे सूचना",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
