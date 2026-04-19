@@ -2430,5 +2430,9 @@
   "recommendSignupGeneralDescription": "Registrer deg for å sikkerhetskopiere dataene dine",
   "@recommendSignupGeneralDescription": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "Motta varsler selv i stillemodus",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
   }
 }
