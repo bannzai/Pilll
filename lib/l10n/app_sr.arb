@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Mesto u aplikaciji",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Obaveštenja stižu i kada je aktiviran režim fokusa.",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
