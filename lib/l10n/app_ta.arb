@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "பில்‌ஷீட்டில் உள்ள செல்லங்களில் தேதிகளை காட்டுவதன் மூலம், கடந்த服用履歴 மற்றும் எதிர்கால服用予定-ஐ ஒரே பார்வையிலேயே பார்க்க முடியும். \"எண்\" முறையும் \"தேதி\" முறையும் மாறுபடுத்தி, உங்களுக்கு ஏற்ற தமிழ் பா??",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "{\n  \"@@locale\": \"ta\",\n  \"pillHistoryFeatureAppealTitle\": \"உங்கள் மாத்திரை எடுத்த பதிவுகளை எளிதில் திரும்பிப் பார்க்கவும்\",\n  \"@pillHistoryFeatureAppealTitle\": {\n    \"description\": \"ピル記録/服用履歴機能のFeatureAppeal Barタイトル\",\n    \"type\": \"text\"\n  }\n}",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
