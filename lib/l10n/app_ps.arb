@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "خبرتیاوې چې د خاموشۍ حالت کې هم باوري ډول غږیږي",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "د بیدارۍ الارم غوندې د درملو اخیستلو الارم",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
