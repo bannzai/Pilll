@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "පිල් ගැනීමේ විරාම කාලය සටහන් කරන්න",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "විරාම සහ අස්වීම් නිවැරදිව කළමනාකරණය කරන්න",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
