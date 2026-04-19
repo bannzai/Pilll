@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "{\"quickRecord_help_body\":\"Če obvestilo opomnika pritisnete in zadržite, se prikaže možnost »Vzeto« in lahko zabeležite jemanje brez odpiranja aplikacije.\",\"@quickRecord_help_body\":{\"description\":\"クイックレコード機能のヘルプページの本文\",\"placeholders\":{}}}",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Samodejno dodaj listo tabletk",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
