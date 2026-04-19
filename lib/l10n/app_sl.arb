@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Vzeti premor pri jemanju tablet",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Med opombo lahko zabeležite obdobja, ko prenehate jemati kontracepcijske tablete. Med počitkom se številke odmerkov ne premikajo, ob ponovnem začetku pa lahko takoj nadaljujete z beleženjem.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
