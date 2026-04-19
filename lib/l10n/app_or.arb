@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealHeadline": "ବିଜ୍ଞପ୍ତି ସ୍କ୍ରିନ୍‌ରେ ଏକ-ଟ୍ୟାପ୍ ଡୋଜ୍ ରେକର୍ଡ",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "ରିମାଇଣ୍ଡର ବିଜ୍ଞପ୍ତିକୁ ଲଙ୍ଗ ପ୍ରେସ୍ କଲେ \"ସେବନ କଲି\" ଆକ୍ସନ୍ ଦେଖାଯିବ, ଏବଂ ଆପ୍ ଖୋଲିବା ବିନା ଆପଣ ଔଷଧ ସେବନ ରେକର୍ଡ କରିପାରିବେ।",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
