@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Siklingizni avtomatik aniqlash",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Sozlamalarni moslashtirish",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
