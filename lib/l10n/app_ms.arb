@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Boleh memaparkan tarikh pada helaian pil",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Dengan memaparkan tarikh pada setiap petak helaian pil, anda boleh melihat sejarah pengambilan ubat yang lalu dan jadual pengambilan ubat pada masa hadapan dengan sekali pandang. Tukar antara mod \"Nombor\" dan mod \"Tarikh\" untuk memilih paparan yang sesuai dengan anda.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
