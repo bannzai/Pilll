@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "ピルシートをタップで服用記録",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "غلطی ہو جائے تو آسانی سے واپس لیں",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
