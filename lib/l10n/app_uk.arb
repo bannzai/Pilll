@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Перемикайте за допомогою перемикача на вкладці «Налаштування»",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Сигнал лунає навіть у беззвучному/режимі концентрації",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
