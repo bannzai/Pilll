@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealShortDescription": "Qopha kusaziso ngaphandle kokuvula uhlelo lokusebenza",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Qopha ukuthatha iphilisi ngokuthinta okukodwa esikrinini sezaziso",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
