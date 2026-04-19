@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Chạm vào vỉ thuốc để ghi nhận việc uống",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Có thể hoàn tác dễ dàng khi nhầm",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
