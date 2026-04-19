@@ -2502,5 +2502,9 @@
   "menstruationFeatureAppealShortDescription": "Rekodi tarehe ya kuanza kwa hedhi ili kufuatilia mzunguko.",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Rekodi na utabiri wa hedhi",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
