@@ -2398,5 +2398,9 @@
   "premiumRegistrationComplete": "Pilll ପ୍ରିମିୟମ୍ ପଞ୍ଜୀକରଣ ସମ୍ପୂର୍ଣ୍ଣ",
   "@premiumRegistrationComplete": {
     "description": "有料プラン「Pilll Premium」への登録が正常に完了したことをユーザーに知らせる成功メッセージです。アプリ名「Pilll」は翻訳せずそのまま使用してください。"
+  },
+  "lifetimeSubscriptionWarning": "ଏକ-ସମୟ ଖରିଦ ପ୍ଲାନ କ୍ରୟ କରିଥିବାରୁ ଆପଣଙ୍କୁ ଧନ୍ୟବାଦ। ଯଦି ଆପଣ ମାସିକ ବା ବାର୍ଷିକ ପ୍ଲାନରେ ସଦସ୍ୟ ଅଛନ୍ତି, ଦୟାକରି ତାହା ବାତିଲ କରିବାକୁ ଭୁଲନ୍ତୁ ନାହିଁ।",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
