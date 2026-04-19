@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "डाक्टरको भेट, यात्राको योजना लगायत भविष्यका कार्यक्रमहरू क्यालेन्डरमा लेख्न सकिन्छ। चक्कीको सेवन चक्रसँगै जाँच गर्न सकिने भएकाले, महिनावारीको कार्यक्रम पनि ध्यानमा राखेर योजना बनाउन सकिन्छ।",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "स्वास्थ्य सेवासँग जडान",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
