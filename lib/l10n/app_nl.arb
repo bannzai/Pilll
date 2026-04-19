@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "Direct registreren vanuit melding",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Registreren via melding zonder de app te openen",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
