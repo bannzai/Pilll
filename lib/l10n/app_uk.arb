@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "Будь ласка, введіть текст звернення",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "{\n  \"@@locale\": \"uk\",\n  \"purchase_thanks_lifetime\": \"Дякуємо за придбання довічного плану. Якщо ви підписані на місячний або річний план, будь ласка, не забудьте скасувати підписку.\",\n  \"purchase_thanks_lifetime@description\": \"買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。\"\n}",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
