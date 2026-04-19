@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Mund ta dini datën pa parë kalendarin.",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Mund të ndryshohet nga cilësimet e fletës së pilulave.",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
