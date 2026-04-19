@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Shqip: Shikoni shënimet e mëparshme në kalendar",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Trokitni në datë për të regjistruar gjendjen tuaj",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
