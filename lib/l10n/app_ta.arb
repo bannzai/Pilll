@@ -2430,5 +2430,9 @@
   "recommendSignupGeneralDescription": "பதிவு செய்தால் உங்கள் தரவுகள் காப்புப்பிரதியாக சேமிக்கப்படும்",
   "@recommendSignupGeneralDescription": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "சைலென்டு மோடிலும் அறிவிப்புகளைப் பெறுங்கள்",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
   }
 }
