@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "د حبو پاڼه اتوماتیک اضافه کړئ",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "د راتلونکي شیټ اتوماتیک جوړول",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
