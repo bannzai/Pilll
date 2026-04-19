@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "దయచేసి విచారణ వివరాలను నమోదు చేయండి",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "ఒక్కసారిగా కొనుగోలు చేసే ప్లాన్‌ను కొనుగోలుచేసినందుకు ధన్యవాదాలు. మీరు మాసిక లేదా వార్షిక ప్లాన్‌కు సభ్యులైతే, దయచేసి అవి రద్దు చేయడాన్ని మర్చిపోకండి.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
