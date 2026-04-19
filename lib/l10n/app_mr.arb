@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "एका टॅपने सहज सेटअप",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "सूचना संदेश मुक्तपणे संपादित करा",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
