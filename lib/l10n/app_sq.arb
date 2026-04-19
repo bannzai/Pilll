@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Ndërrim automatik kur mbaron paketa e pilulave",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Krijimi manual nuk është i nevojshëm.",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
