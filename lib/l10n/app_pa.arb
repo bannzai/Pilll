@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "ਅਗਲੀ ਪਿੱਲ ਸ਼ੀਟ ਆਪਣੇ ਆਪ ਬਣਾਓ",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "ਜਦੋਂ ਮੌਜੂਦਾ ਪਿੱਲ ਸ਼ੀਟ ਗਰੁੱਪ ਖਤਮ ਹੁੰਦਾ ਹੈ, ਤਾਂ ਇੱਕ ਨਵਾਂ ਪਿੱਲ ਸ਼ੀਟ ਗਰੁੱਪ ਆਪਣੇ ਆਪ ਬਣਾਇਆ ਜਾਂਦਾ ਹੈ। ਹੱਥੀਂ ਬਦਲਣ ਦੀ ਕੋਈ ਲੋੜ ਨਹੀਂ, ਅਤੇ ਰਿਕਾਰਡ ਵਿੱਚ ਕੋਈ ਖਾਮੀ ਨਹੀਂ ਆਵੇਗੀ।",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
