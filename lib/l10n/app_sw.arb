@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "Ongeza tukio kwenye kalenda",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Simamia kwa urahisi siku za kutembelea kliniki",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
