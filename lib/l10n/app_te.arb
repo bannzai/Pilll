@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "పీరియడ్ రికార్డులను స్వయంచాలకంగా డేటాతో అనుసంధానించండి",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ఆరోగ్య యాప్‌తో సమకాలీకరించు",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
