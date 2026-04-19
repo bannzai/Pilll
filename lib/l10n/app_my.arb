@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealLocationHint": "ရက်စွဲကို တို့နှိပ်၍ အစီအစဉ်ရေးချပါ",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "ရာသီသွေးမှတ်တမ်းကို အလိုအလျောက် ဒေတာချိတ်ဆက်ခြင်း",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
