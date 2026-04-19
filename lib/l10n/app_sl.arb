@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Vidite datum, tudi če ne odprete koledarja.",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Možno spremeniti v nastavitvah lista tablet.",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
