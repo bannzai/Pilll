@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 आणि नंतर · सेटिंग्ज टॅबमधून सक्रिय करा",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "मोफत वापरता येणारी क्रमांक जुळवण्याची सुविधा",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
