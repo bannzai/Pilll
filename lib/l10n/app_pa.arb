@@ -2502,5 +2502,9 @@
   "menstruationFeatureAppealShortDescription": "ਮਾਹਵਾਰੀ ਦੀ ਸ਼ੁਰੂਆਤੀ ਤਾਰੀਖ਼ ਰਿਕਾਰਡ ਕਰੋ ਅਤੇ ਚੱਕਰ ਨੂੰ ਸਮਝੋ",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "ਮਾਹਵਾਰੀ ਦੀ ਰਿਕਾਰਡਿੰਗ ਅਤੇ ਭਵਿੱਖਬਾਣੀ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
