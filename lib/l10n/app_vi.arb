@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Xem lịch sử dùng thuốc bất cứ lúc nào",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Ghi nhanh ngày bắt đầu kinh nguyệt",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
