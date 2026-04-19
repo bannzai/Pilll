@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Rekod tanpa membuka aplikasi melalui pemberitahuan",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Rekod Pengambilan Ubat Satu Ketik di Skrin Pemberitahuan",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
