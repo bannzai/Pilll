@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 and later · Enable from Settings tab",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "නොමිලේ භාවිතා කළ හැකි අංක ගැලපීමේ විශේෂාංගය",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
