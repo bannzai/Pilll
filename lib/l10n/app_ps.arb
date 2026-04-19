@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "د خاموشۍ حالت کې هم د دارو د هیرولو مخه ونیسئ",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "د خاموشۍ حالت کې هم خبرتیاوې رارسیږي",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
