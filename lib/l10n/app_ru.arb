@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Отметить прием из уведомления",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Отклонено",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
