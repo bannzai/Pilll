@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "Z AlarmKitom (na voljo v iOS 26 in novejših) vas opomnimo na jemanju kontracepcijske tablete z alarmom, ki zveni tudi v načinu tišine ali v načinu osredotočenja.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Uskladite današnji številki odmerka",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
