@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "หากหมายเลขบนแผ่นยาหรือการนับเม็ดไม่ตรงกับการกินจริง เนื่องจากการลืมกินหรือการสลับเม็ด คุณสามารถปรับหมายเลขเม็ดยาสำหรับวันนี้ด้วยตนเองได้ นอกจากนี้ คุณยังสามารถเปิดหน้าจอเดียวกันนี้จากการแสดงหมายเลขเม็ดบนหน้าหลักได้",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "บันทึกช่วงหยุดทานยา",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
