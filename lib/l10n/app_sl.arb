@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "V koledar lahko vnesete prihodnje dogodke, na primer termine za obisk zdravnika ali potovanja. Ker jih lahko pregledate skupaj z vašim ciklom jemanja tablet, lahko pri načrtovanju upoštevate tudi pričakovani začetek menstruacije.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Povezava z zdravstvenimi podatki",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
