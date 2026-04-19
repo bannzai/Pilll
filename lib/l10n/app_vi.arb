@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Ghi nhận uống thuốc bằng một chạm từ màn hình thông báo",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Nhấn giữ thông báo nhắc uống thuốc sẽ hiện hành động \"Đã uống\", cho phép bạn ghi lại việc đã uống mà không cần mở ứng dụng.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
