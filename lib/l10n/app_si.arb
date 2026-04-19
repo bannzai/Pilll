@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "රෝහලට යන දින පහසුවෙන් කළමනාකරණය",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "රිමයින්ඩරයෙන් දැනුම්දීම",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
