@@ -2410,5 +2410,9 @@
   "lifetimePurchaseNotice1": "・При покупке «плана с единовременной оплатой» «ежемесячный/годовой план» не будет автоматически отменён.",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "Здесь",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
