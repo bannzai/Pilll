@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Bëje mesazhin e njoftimit tënd.",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Shfaq fletën e pilulave sipas datës",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
