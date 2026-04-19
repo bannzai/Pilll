@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Mahali ndani ya programu",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Arifa zitawafikia hata ukiwa katika hali ya Kuzingatia",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
