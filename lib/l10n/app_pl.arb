@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Alarm przyjmowania tabletek jak budzik",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "Korzystając z AlarmKit dostępnego w systemie iOS 26 i nowszych, powiadamia Cię o przyjęciu pigułki za pomocą alarmu, który niezawodnie dzwoni nawet w trybie cichym lub trybie skupienia.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
