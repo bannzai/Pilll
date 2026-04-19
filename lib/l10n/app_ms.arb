@@ -2518,5 +2518,9 @@
   "calendarDiaryFeatureAppealShortDescription": "Rekod kesihatan harian anda dalam kalendar",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Rekod kesihatan harian dalam kalendar",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
