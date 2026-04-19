@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Сделать перерыв в приёме таблеток",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Вы можете записать в листок таблеток период временного перерыва в приёме. Во время перерыва номер дозы не продвигается, и при возобновлении приёма запись можно сразу продолжить.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
