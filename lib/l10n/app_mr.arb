@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "औषध सेवन सूचनेचा संदेश मुक्तपणे संपादित करा",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "\"पिल घेण्याची वेळ झाली\" हा मानक संदेश तुमच्या आवडत्या शब्दांमध्ये कस्टमाइझ करता येतो. प्रेरणादायी शब्द किंवा तुमच्या पाळीव प्राण्याचे नाव यांसारख्या शब्दांनी, दररोजचे सेवन अधिक आनंददायी बनवा.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
