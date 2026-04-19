@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "అలారం‌లా వినిపించే హెచ్చరిక",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "サイレントでも確実に鳴る通知 -> placeholder",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
