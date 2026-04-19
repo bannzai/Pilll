@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "خپل ځانګړی خبرتیا پیغام",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "د نیټې له مخې د حبوبو پاڼه ښکاره کړئ",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
