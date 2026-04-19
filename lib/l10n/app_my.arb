@@ -2770,5 +2770,9 @@
   "alarmKitFeatureAppealPoint1": "တိတ်ဆိတ်/အာရုံစူးစိုက်မုဒ်တွင်လည်း မြည်သည်",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "နိုးထချိန် နှိုးစက်ကဲ့သို့သော အချက်ပေးသံ",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
