@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Unngå å glemme pillen selv i stillemodus",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Varsler leveres selv i stillemodus",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
