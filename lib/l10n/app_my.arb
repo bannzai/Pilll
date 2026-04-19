@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint2": "မှားယွင်းလျှင်လည်း လွယ်ကူစွာ ပြန်ဖျက်နိုင်",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "ဆေးသောက်မှတ်တမ်းကို အချိန်မရွေးကြည့်ရှုနိုင်",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
