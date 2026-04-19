@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "将与健康应用同步",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "支持 Apple 健康",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
