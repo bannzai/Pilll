@@ -2606,5 +2606,9 @@
   "todayPillNumberFeatureAppealShortDescription": "ନମ୍ବର ଭୁଲ ହେଲେ ସେଟିଂରେ ଠିକ କରନ୍ତୁ",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "ଆଜି ନେବାର ପିଲ ନମ୍ବର ପରିବର୍ତ୍ତନ କରିପାରିବେ",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
