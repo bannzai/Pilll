@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealShortDescription": "ဆိုင်လင့်မုဒ်တွင်ပင် သေချာစွာ မြည်သည့် သတိပေးချက်",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "နှိုးဆ်ချိန်နာရီကဲ့သို့ ဆေးသောက်သတိပေး",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
