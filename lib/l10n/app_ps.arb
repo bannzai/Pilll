@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "د ایپ پرانیستلو پرته بشپړول",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "د پریمیم غړیتوب سره مستقیم کارولو وړ",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
