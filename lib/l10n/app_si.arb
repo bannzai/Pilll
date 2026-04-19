@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "කැලෙන්ඩරයෙන් දිනයක් තට්ටු කිරීමෙන් ඔබට ශරීර තත්ත්වය, මානසික හැඟීම් සහ රෝග ලක්ෂණ වැනි දේ සටහන් කළ හැක. මෙම සටහන් බෙහෙත් ගැනීමේ වාර්තා සහ මාසික වාර්තා සමඟ එකට බැලිය හැකි නිසා, ඔබේ ශරීර රිද්මය හොඳින් අවබෝධ කරගත හැක.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
