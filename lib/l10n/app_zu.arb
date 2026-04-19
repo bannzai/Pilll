@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealHeadline": "Qopha ukuthatha iphilisi ngokuthinta okukodwa esikrinini sezaziso",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "長押し通知 \"服用した\" アクションが表示され、アプリを開かずに服用が記録できます。",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
