@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Funksion falas për përputhjen e numrave",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Mund të ndryshohet nga skeda e Cilësimeve.",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
