@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Ak sa číslo posunulo, opravte ho v nastaveniach.",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Môžete zmeniť číslo tabletky na dnes",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
