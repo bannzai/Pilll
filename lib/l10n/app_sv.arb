@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint2": "\"は\"",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "sv translation placeholder",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
