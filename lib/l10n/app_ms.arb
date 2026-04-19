@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Ciri padanan nombor yang boleh digunakan secara percuma",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Boleh diubah dari tab Tetapan",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
