@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint3": "Khumbuza ngesaziso",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Thepha usuku ukuze ubhale uhlelo",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
