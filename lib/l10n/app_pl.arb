@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "Łatwo przeglądaj historię przyjmowania",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Kiedy zażyłaś pigułkę – widać na pierwszy rzut oka",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
