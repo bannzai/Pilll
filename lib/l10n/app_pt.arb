@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Inicie pelo ícone de engrenagem no canto superior direito da cartela de pílulas",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Editar e retomar o período também é simples",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
