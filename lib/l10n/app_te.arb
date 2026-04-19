@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "డిఫాల్ట్ “పిల్ తీసుకునే సమయం” అనే సందేశాన్ని మీ ఇష్టమైన పదజాలంతో అనుకూలీకరించవచ్చు. మీ మోటివేషన్ పెంచే మాటలు, లేదా మీ పెంపుడు జంతువు పేరును వాడి, ప్రతి రోజు మాత్ర తీసుకోవడాన్ని మరింత ఆనందదాయకంగా మార్చండి.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "పిల్ షీట్‌లో తేదీని చూపించు",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
