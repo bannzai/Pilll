@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealHeadline": "Registrera intag med ett tryck i aviseringen",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Om du långtrycker på påminnelsen i aviseringen visas åtgärden \"Tagit\", så att du kan registrera intaget utan att öppna appen.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
