@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "โปรดแปลข้อความจากภาษาญี่ปุ่นเป็นภาษาไทยตามคำขอของผู้ใช้",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "เชื่อมต่อกับแอปสุขภาพ",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
