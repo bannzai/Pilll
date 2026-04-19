@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "වත්මන් පිල්ශීට් කණ්ඩායම අවසන් වන විට, නව පිල්ශීට් කණ්ඩායම ස්වයංක්‍රීයව නිර්මාණය වේ. අතින් මාරුවක් අවශ්‍ය නොවන බැවින්, ලේඛන හිඟ වීමක් සිදුවන්නේ නැත.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "උදේ නැගවීමට මෙන් ඇහෙන ඇලාර්ම්",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
