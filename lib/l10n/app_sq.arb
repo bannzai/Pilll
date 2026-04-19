@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "Mund të ndryshoni numrin e pilulës për sot",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Nëse numri në fletën e pilulave dhe marrja reale nuk përputhen për shkak të harresës ose ngatërrimit, mund ta rregulloni manualisht numrin e pilulës për sot. Mund të hapni të njëjtin ekran edhe nga shfaqja e numrit të pilulës në faqen kryesore.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
