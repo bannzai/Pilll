@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Ved å vise datoer i pillarkenes felt kan du raskt se tidligere inntak og fremtidige planlagte doser. Bytt mellom «nummer»-modus og «dato»-modus for å velge visningen som passer best for deg.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Se gjennom doseringshistorikken din enkelt",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
