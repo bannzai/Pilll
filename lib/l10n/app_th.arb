@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "รองรับ Apple Health",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "บันทึกการทานจากการแจ้งเตือน",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
