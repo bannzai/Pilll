@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Compatível com Apple Health",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Registrar dose por ação de notificação",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
