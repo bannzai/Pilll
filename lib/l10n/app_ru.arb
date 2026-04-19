@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Можно изменить в настройках блистера",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Нажмите на схему таблеток, чтобы зафиксировать прием",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
