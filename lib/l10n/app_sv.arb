@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint2": "Appen behöver inte öppnas för att slutföra",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Premium加入でそのまま利用可能",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
