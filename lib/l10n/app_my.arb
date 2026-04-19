@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint3": "ဆေးပြားစာရင်း ဆက်တင်မှ ပြောင်းလဲနိုင်သည်",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "ပြားချပ်ကို တို့ပြီး ဆေးသောက်မှတ်တမ်းတင်ပါ",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
