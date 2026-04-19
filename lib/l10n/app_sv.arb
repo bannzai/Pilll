@@ -2662,5 +2662,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Gör meddelandet personligt",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Visa pillerblad efter datum",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
