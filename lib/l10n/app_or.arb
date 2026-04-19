@@ -2478,5 +2478,9 @@
   "recordPillFeatureAppealShortDescription": "ଯେତେବେଳେ ଖାଇଲେ ତୁରନ୍ତ ଜାଣି ପାରିବେ",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "ହୋମ ସ୍କ୍ରିନ୍‌ରେ ପିଲ୍ ସେବନ ରେକର୍ଡ କରନ୍ତୁ",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
