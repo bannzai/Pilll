@@ -2494,5 +2494,9 @@
   "menstruationFeatureAppealTitle": "生理を記録・予測",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Registrera mensens startdag för att hålla koll på din cykel",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
