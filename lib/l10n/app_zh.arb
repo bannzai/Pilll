@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "点击日期记录身体状况",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "在日历中添加日程",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
