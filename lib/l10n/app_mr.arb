@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "तुम्ही काही काळ गोळ्या घेणे बंद केलेला कालावधी पिल शीटवर नोंदवू शकता. विश्रांतीच्या काळात सेवन क्रमांक पुढे जात नाही, आणि पुन्हा सुरू करताना लगेच नोंद सुरू करता येते.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "अॅपमधील स्थान",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
