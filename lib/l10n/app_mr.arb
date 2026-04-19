@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "होम स्क्रीनवर गोळ्या घेण्याची नोंद करा",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "होम स्क्रीनवरील पिल शीटवर फक्त टॅप करून, त्या दिवसाचे सेवन नोंदवता येते. चुकून नोंद झाली असल्यास, पुन्हा एकदा टॅप केल्याने ती रद्द करता येते. सेवन इतिहास नंतरही तपासता येतो, त्यामुळे निश्चिंतपणे सुरू ठेवता येते.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
