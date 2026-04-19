@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Je kunt menstruatiegegevens die je in Pilll hebt vastgelegd automatisch synchroniseren met de Gezondheid-app. Je kunt deze gegevens samen met andere gezondheidsgegevens in Gezondheid bekijken, en je menstruatiegegevens worden ook beschikbaar in andere apps.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Direct registreren vanuit melding",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
