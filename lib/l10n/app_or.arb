@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealLocationHint": "ତାରିଖ ଟ୍ୟାପ୍ କରି ଯୋଜନା ଲେଖନ୍ତୁ",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "ଋତୁସ୍ରାବ ରେକର୍ଡ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ଡାଟା ସଂଯୋଗ",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
