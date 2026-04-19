@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Jedným pohľadom zistíte, kedy užiť",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Zobraziť dátumy na pilulkovom hárku",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
