@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "แปล",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "คุณสามารถบันทึกช่วงเวลาที่หยุดรับประทานยาบนแผ่นยา ในช่วงพักจะไม่เลื่อนไปยังหมายเลขเม็ดยาถัดไป และเมื่อกลับมาเริ่มอีกครั้งจะสามารถบันทึกต่อได้ทันที",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
