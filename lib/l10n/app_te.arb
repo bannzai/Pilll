@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "భూగత రికార్డులను క్యాలెండర్‌లో పునఃసమీక్షించండి",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "{VAL}",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
