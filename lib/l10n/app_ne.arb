@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "पिल सेवन बिराम गर्ने",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "तपाईंले पिल शिटमा केही समयका लागि पिल खान बन्द गर्ने अवधि रेकर्ड गर्न सक्नुहुन्छ। बिदाको समयमा सेवन नम्बर अघि बढ्दैन, र पुनः सुरु गर्दा तुरुन्त रेकर्ड जारी राख्न सकिन्छ।",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
