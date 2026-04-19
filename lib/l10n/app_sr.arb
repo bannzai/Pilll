@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Zvoni čak i kada je telefon u tihom ili 'Fokus' režimu.",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Звук аларма попут будилице",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
