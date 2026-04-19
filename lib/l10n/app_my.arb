@@ -2658,5 +2658,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "နေ့စဉ် ဆေးသောက်သတိပေးချက်တွင် ထင်ဟပ်မည်",
   "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "မိမိ၏ကိုယ်ပိုင်အကြောင်းကြားချက်မက်ဆေ့ချ်",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
   }
 }
