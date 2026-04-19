@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Joriy dori varaqalari guruhi tugagach, yangi dori varaqalari guruhi avtomatik ravishda yaratiladi. Qo'lda almashish talab etilmaydi, shuning uchun yozuvlar o'tkazib yuborilmaydi.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Soat kabi chalinadigan signal",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
