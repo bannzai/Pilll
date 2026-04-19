@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "اپنی دوا لینے کی تاریخ آسانی سے دیکھیں",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "آپ فوراً دیکھ سکتے ہیں کہ آپ نے کب لی تھی",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
