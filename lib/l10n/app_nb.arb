@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Varsle med påminnelse",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Trykk på en dato for å skrive inn en avtale",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
