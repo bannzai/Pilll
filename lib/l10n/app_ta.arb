@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "生理を記録・予測",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "மாதவிடை தொடக்கத் தேதியை பதிவு செய்து சுழற்சியை அறியுங்கள்",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
