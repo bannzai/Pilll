@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Varsler som alltid lyder, selv på lydløs",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Alarmpåminnelse for pille-inntak, som en vekkerklokke",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
