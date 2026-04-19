@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Melding via herinnering",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Tik op een datum om een afspraak in te voeren",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
