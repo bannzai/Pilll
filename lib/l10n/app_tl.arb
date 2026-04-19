@@ -2414,5 +2414,9 @@
   "lifetimePurchaseNotice2": "I will translate the provided Japanese text into Tagalog (tl) following the l10n/*.arb format. I will preserve placeholders like {VAL} and adapt translations to cultural context of the target language for use in the Pilll app. The input text to translate: \"こちら\" with context: \"サブスクリプション管理ページへのリンクテキスト\"",
   "@lifetimePurchaseNotice2": {
     "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "Mangyaring kanselahin muna nang maaga bago bumili.",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
   }
 }
