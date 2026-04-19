@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Bytt med bryteren i innstillingsfanen",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Ringer selv i stille/fokus-modus",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
