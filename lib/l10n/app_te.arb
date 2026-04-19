@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "ఆరోగ్య స్థితి గురించి నోట్ చేసి తిరిగి చూడండి",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "భూగత రికార్డులను క్యాలెండర్‌లో పునఃసమీక్షించండి",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
