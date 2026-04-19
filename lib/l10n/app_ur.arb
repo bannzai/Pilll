@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "ایپ کھولے بغیر مکمل کریں",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "پریمیم میں شامل ہونے پر فوراً استعمال ممکن ہے",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
