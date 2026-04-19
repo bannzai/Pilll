@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Зауставити узимање пилуле",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Možete da zabeležite period kada privremeno prekidate uzimanje pilula na listi pilula. Tokom pauze broj uzetih pilula se ne povećava i možete odmah da nastavite sa evidentiranjem kada se vratite.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
