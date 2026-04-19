@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Arifa zitawafikia hata ukiwa katika hali ya Kuzingatia",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Hakiki kukumbusha kwa wakati uliowekwa",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
