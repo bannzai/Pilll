@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealHeadline": "Adet kaydı ve tahmin",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "{\n  \"@@locale\": \"tr\",\n  \"period_help_body\": \"Adet başladığında kaydetmeniz yeterlidir; geçmiş adet kayıtlarını liste halinde görüntüleyebilirsiniz. Bir sonraki adet tarihiniz de otomatik olarak tahmin edilir, böylece planlı bir şekilde hareket edebilirsiniz.\",\n  \"@period_help_body\": {\n    \"description\": \"生理記録機能のヘルプページの本文\"\n  }\n}",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
