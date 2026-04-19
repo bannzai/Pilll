@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "Запись приёма прямо из уведомлений",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Запись через уведомление без открытия приложения",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
