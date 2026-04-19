@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Formulimin standard „Është koha për të marrë pilulën” mund ta personalizoni me fjalët që ju pëlqejnë. Përdorni fjalë motivuese, emrin e kafshës suaj shtëpiake, etj., për ta bërë marrjen e pilulës më të këndshme çdo ditë.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Shfaq datën në fletën e barnave",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
