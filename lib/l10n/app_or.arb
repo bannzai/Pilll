@@ -2690,5 +2690,9 @@
   "menstruationFeatureAppealPoint2": "ଚକ୍ର ସ୍ୱୟଂଚାଳିତ ଭାବରେ ଜାଣନ୍ତୁ",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "ସେଟିଂ କଷ୍ଟୋମାଇଜ୍ କରନ୍ତୁ",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
