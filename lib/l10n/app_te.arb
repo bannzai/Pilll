@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "\"ピルシートを日付で表示\" の Telugu 翻訳",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "క్యాలెండర్ చూడకుండానే తేదీ తెలుసుకోవచ్చు",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
