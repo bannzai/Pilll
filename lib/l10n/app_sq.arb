@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Dëgjohet edhe kur pajisja është në modalitetin Heshtje ose Fokus",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Tingull alarmi si ai i orës së zgjimit",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
