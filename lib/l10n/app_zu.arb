@@ -2734,5 +2734,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Vumelanisa ngokuzenzakalelayo amarekhodi okuya esikhathini",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Vumelanisa nohlelo lwezempilo",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
