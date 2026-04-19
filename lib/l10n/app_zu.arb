@@ -2518,5 +2518,9 @@
   "calendarDiaryFeatureAppealHeadline": "Qopha isimo somzimba sakho nsuku zonke kukhalenda",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Thepha usuku kukhalenda ukuze ubhalise isimo somzimba, imizwa, nezimpawu njll. Ungazibuka ndawonye nerekhodi lokuthatha amaphilisi kanye nerekhodi lomjikelezo wokuya esikhathini, ukuze uqonde kahle umjikelezo womzimba wakho.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
