@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Vị trí trong ứng dụng",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Nhận thông báo ngay cả khi đang ở Chế độ Tập trung",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
