@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "د یادونکي له لارې خبرتیا",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "نیټه ټک کړئ او خپله موعده ولیکئ",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
