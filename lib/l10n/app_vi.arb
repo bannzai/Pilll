@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "Dễ dàng xem lại lịch sử uống thuốc",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Biết ngay khi nào đã uống",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
