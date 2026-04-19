@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "iOS 26 یا بعد کے ورژنز میں دستیاب AlarmKit کو استعمال کر کے، ایک ایسا الارم جو خاموش موڈ یا فوکس موڈ میں بھی یقینی طور پر بجتا ہے، آپ کو گولی لینے کی یاد دہانی کراتا ہے۔",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "آج کا خوراک نمبر سیٹ کریں",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
