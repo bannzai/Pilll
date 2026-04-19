@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "सायलेंट मोडमध्येही सूचना प्राप्त करा",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "झोप मोडमध्येही गोळ्या घेण्यास विसरू नका",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
