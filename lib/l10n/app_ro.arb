@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Apasați pe dată pentru a scrie un eveniment",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Sincronizare automată a datelor înregistrărilor menstruale",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
