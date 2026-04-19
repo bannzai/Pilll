@@ -2618,5 +2618,9 @@
   "restDurationFeatureAppealTitle": "ଔଷଧ ଅବକାଶ ସମୟ ରେକର୍ଡ",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "ଔଷଧ ବ୍ରେକ ଏବଂ ବିଚ୍ଛେଦ ସଠିକ ଭାବରେ ପରିଚାଳନା",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
