@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "جاگنے والے الارم جیسی دوائی لینے کی یاد دہانی",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 یا بعد کے ورژنز میں دستیاب AlarmKit کو استعمال کر کے، ایک ایسا الارم جو خاموش موڈ یا فوکس موڈ میں بھی یقینی طور پر بجتا ہے، آپ کو گولی لینے کی یاد دہانی کراتا ہے۔",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
