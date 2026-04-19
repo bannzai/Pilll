@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Shikoni historikun e marrjes së pilulave në çdo kohë",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Regjistro lehtë datën e fillimit të menstruacioneve",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
