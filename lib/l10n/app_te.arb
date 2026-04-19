@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "క్యాలెండర్‌లో భవిష్యత్తు షెడ్యూల్‌ను నమోదు చేయండి",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "మీరు వైద్య అపాయింట్‌మెంట్‌లు లేదా ప్రయాణాల వంటి రాబోయే కార్యక్రమాలను క్యాలెండర్‌లో నమోదు చేయవచ్చు. అవి పిల్ తీసుకునే చక్రంతో కలిసి చూడగలిగే విధంగా ఉండట వలన, మీ పీరియడ్ షెడ్యూల్‌ను కూడా పరిగణనలోకి తీసుకుని ప్రణాళికలు రూపొందించుకోవచ్చు.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
