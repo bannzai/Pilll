@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "பயன்பாட்டில் உள்ள இடம்",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "போக்கஸ் மோடு செயல்பாட்டில் இருந்தாலும் அறிவிப்புகள் வரும்",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
