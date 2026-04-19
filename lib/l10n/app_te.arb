@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "క్యాలెండర్‌లో తేదీని నొక్కి మీ శారీరక పరిస్థితి, మనోవైకలం, లక్షణాలు వంటి అంశాలను నమోదు చేయవచ్చు. ఈ సమాచారాన్ని పిల్ల్స్ తీసుకున్న రికార్డులు మరియు మాసిక రికార్డులతో ఒకే చోట చూడగలుగుతారు, కాబట్టి మీ శరీర చక్రాన్ని బాగా అర్థం చేసుకోగలుగుతారు.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
