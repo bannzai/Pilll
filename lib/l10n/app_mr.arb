@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "मासिक पाळीची नोंद आपोआप डेटा समन्वय",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "हेल्थकेअर अॅपशी समक्रमित करा",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
