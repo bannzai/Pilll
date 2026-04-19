@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "සැකසුම් ටැබයේ ස්විච් එකෙන් මාරු කරන්න",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
