@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "ਪ੍ਰੀਮੀਅਮ ਮੈਂਬਰਸ਼ਿਪ ਨਾਲ ਸਿੱਧਾ ਵਰਤੋਂ ਯੋਗ",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "ਪਿੱਲ ਸ਼ੀਟ ਖਤਮ ਹੋਣ 'ਤੇ ਆਪਣੇ ਆਪ ਬਦਲੋ",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
