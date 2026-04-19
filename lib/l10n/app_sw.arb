@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Unaweza kubadilisha ujumbe chaguomsingi 'Wakati wa kuchukua kidonge' kwa maneno unayopendelea. Tumia maneno yanayokutia moyo, jina la mnyama wako kipenzi, au sentensi fupi zitakazofanya kuchukua kidonge kila siku kuwa ya kufurahisha zaidi.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Onyesha tarehe kwenye karatasi ya vidonge",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
