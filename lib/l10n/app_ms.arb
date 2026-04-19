@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "Anda boleh merekodkan tempoh berhenti mengambil pil pada helaian pil. Semasa waktu rehat, nombor dos tidak akan bertambah, dan anda boleh meneruskan rekod dengan segera apabila memulakan semula.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Lokasi dalam apl",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
