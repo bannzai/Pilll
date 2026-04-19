@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Ücretsiz numara eşleştirme özelliği",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Ayarlar sekmesinden değiştirilebilir",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
