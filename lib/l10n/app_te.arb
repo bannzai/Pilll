@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "క్యాలెండర్‌లో షెడ్యూల్‌ను జోడించండి",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "చికిత్సకు వెళ్లాల్సిన రోజులను సులభంగా నిర్వహించండి",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
