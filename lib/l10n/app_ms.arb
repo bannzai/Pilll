@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Padu dengan Kesihatan",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Kongsi rekod haid dengan Kesihatan",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
