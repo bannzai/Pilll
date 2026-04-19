@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Można zmienić w ustawieniach arkusza tabletek",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Dotknij arkusza tabletek, aby zarejestrować przyjęcie",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
