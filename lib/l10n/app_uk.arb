@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "Запишіть майбутні плани",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Керуйте майбутніми подіями, наприклад візитами до лікаря.",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
