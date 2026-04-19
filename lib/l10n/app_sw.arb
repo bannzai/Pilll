@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Unaweza kujua tarehe bila kuangalia kalenda.",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Inaweza kubadilishwa kupitia mipangilio ya karatasi ya vidonge",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
