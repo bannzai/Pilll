@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Hatırlatıcı ile bildirim",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Tarihe dokunarak plan ekleyin",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
