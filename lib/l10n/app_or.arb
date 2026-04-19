@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint3": "ପିଲ୍ ସିଟ୍ ସେଟିଂରୁ ପରିବର୍ତ୍ତନ କରାଯାଇ ପାରିବ",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "ପିଲ ସିଟ ଟ୍ୟାପ କରି ଔଷଧ ସେବନ ରେକର୍ଡ",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
