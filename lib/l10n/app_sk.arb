@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Automatická synchronizácia záznamov menštruácie",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Synchronizovať s aplikáciou Zdravie",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
