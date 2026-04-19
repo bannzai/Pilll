@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "{\"@@locale\":\"tr\",\"pill_taken_recently\":\"Ne zaman aldığınızı hemen görün\"}",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Ana ekranda hap kullanımını kaydedin",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
