@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "د حبو د خوړلو وقفه کول",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "تاسو کولی شئ د پیل شیټ کې د یوې مودې لپاره د حبوبو اخیستلو درولو دوره ثبت کړئ. د وقفې پر مهال، د حبوبو شمیره مخ نه ځي، او کله چې بیا پیل کړئ، سمدلاسه کولی شئ ثبتول بیا پیل کړئ.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
