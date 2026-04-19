@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Klepnite na pilulkový list pre zaznamenanie užitia",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Jednoduché zrušenie pri omyle",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
