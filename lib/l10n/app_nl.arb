@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Automatisch wisselen bij einde pilblad",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Geen handmatige aanmaak nodig",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
