@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "ਚੁੱਪ ਮੋਡ ਵਿੱਚ ਵੀ ਯਕੀਨੀ ਤੌਰ 'ਤੇ ਵੱਜਣ ਵਾਲੀਆਂ ਸੂਚਨਾਵਾਂ",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "ਅਲਾਰਮ ਘੜੀ ਵਾਂਗੂ ਦਵਾਈ ਲੈਣ ਦਾ ਅਲਾਰਮ",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
