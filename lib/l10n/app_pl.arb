@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Możesz dostosować standardowe „Czas wziąć pigułkę\" do dowolnych słów, które lubisz. Spróbuj zmienić treść powiadomienia na coś motywującego, imię swojego pupila lub cokolwiek, co sprawi, że codzienne przyjmowanie tabletek stanie się przyjemniejsze.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Wyświetl daty na arkuszu tabletek",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
