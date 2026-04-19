@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Bezpłatna rejestracja przerwy w przyjmowaniu tabletek",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Rozpocznij od ikony koła zębatego w prawym górnym rogu karty tabletek",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
