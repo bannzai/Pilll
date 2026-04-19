@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Kur shtypni gjatë njoftimin e kujtuesit, do të shfaqet veprimi „E kam marrë\" që ju lejon të regjistroni marrjen pa hapur aplikacionin.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Shtim automatik i fletave të pilulave",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
