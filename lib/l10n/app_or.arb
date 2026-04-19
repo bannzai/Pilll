@@ -2790,5 +2790,9 @@
   "restDurationFeatureAppealPoint1": "ବିନାମୂଲ୍ୟ ଔଷଧ ବ୍ୟବଧାନ ରେକର୍ଡ",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "ପିଲ୍ ସିଟ୍ ର ଉପର ଡାହାଣ ଦିଗର ଗିଅରରୁ ଆରମ୍ଭ କରନ୍ତୁ",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
