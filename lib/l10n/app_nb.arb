@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "Med AlarmKit, tilgjengelig på iOS 26 og nyere, varsles du om å ta pillene dine med en alarm som alltid ringer – selv i stillemodus eller fokusmodus.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Juster dagens dosenummer",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
