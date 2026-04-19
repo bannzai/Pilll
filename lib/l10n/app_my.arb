@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "ပြက္ခဒိန်မှ ရက်စွဲတစ်ခုကို တို့ထိ၍ ကိုယ်ခံအားအခြေအနေ၊ စိတ်ခံစားချက်၊ လက္ခဏာများ စသည်တို့ကို မှတ်တမ်းတင်နိုင်ပါသည်။ ဆေးသောက်မှတ်တမ်းနှင့် ဓမ္မတာမှတ်တမ်းများနှင့်အတူ စစ်ဆေးကြည့်ရှုနိုင်သောကြောင့် မိမိ၏ ခန္ဓာကိုယ်ရစ်သမ်ကို ပိုမိုနားလည်နိုင်မည်ဖြစ်သည်။",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "အနာဂတ် အစီအစဉ်များကို ရေးမှတ်ကြစို့",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
