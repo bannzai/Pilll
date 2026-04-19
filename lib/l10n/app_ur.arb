@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "پریمیم میں شامل ہونے پر فوراً استعمال ممکن ہے",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "پِل شیٹ کے اختتام پر خودکار تبدیلی",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
