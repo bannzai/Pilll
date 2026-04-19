@@ -2638,5 +2638,9 @@
   "criticalAlertFeatureAppealPoint1": "ଫୋକସ୍ ମୋଡ୍ ଥିଲେ ମଧ୍ୟ ବିଜ୍ଞପ୍ତି ପ୍ରାପ୍ତ ହୁଏ",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "ନିର୍ଧାରିତ ସମୟରେ ନିଶ୍ଚିତ ଭାବରେ ରିମାଇଣ୍ଡ",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
