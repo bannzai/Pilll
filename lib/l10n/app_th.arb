@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "รับการแจ้งเตือนแม้ในโหมดเงียบ",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "ป้องกันการลืมกินยาทั้งในโหมดห้ามรบกวน",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
