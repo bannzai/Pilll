@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "Gelecek planlarını yaz",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Muayene randevuları gibi gelecekteki planları yönetin",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
