@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Przeglądaj historię w kalendarzu",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Dotknij daty, aby zapisać swoje samopoczucie",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
