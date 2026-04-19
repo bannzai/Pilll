@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Сповіщення, що пролунає навіть у беззвучному режимі",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Нагадування про прийом таблеток, як будильник",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
