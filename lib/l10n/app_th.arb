@@ -2514,5 +2514,9 @@
   "calendarDiaryFeatureAppealTitle": "บันทึกสภาพร่างกายในปฏิทิน",
   "@calendarDiaryFeatureAppealTitle": {
     "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "บันทึกสภาพร่างกายประจำวันไว้ในปฏิทิน",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
   }
 }
