@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "Skriv inn fremtidige planer",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Administrer fremtidige avtaler som legekontrolltimer",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
