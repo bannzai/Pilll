@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Thepha usuku ukuze ubhale isimo sakho",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Engeza umcimbi kukhalenda",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
