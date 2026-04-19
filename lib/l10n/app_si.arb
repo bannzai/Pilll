@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "උදේ නැගවීමට මෙන් ඇහෙන ඇලාර්ම්",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "නිශ්ශබ්ද මෝඩයේදීමත් නියතිව ඇහෙන දැනුම්දීම්",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
