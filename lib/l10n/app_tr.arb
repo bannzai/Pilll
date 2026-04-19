@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Odak Modu etkin olsa bile bildirimler alınır",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Belirlediğiniz saatte kesin olarak hatırlatır",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
