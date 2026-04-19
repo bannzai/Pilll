@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "ஆப் திறக்காமல் அறிவிப்பில் பதிவு",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "அறிவிப்பு திரையில் ஒரே தொடுதலால் மாத்திரை எடுத்ததை பதிவு",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
