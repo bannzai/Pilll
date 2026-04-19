@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 ଓ ତଦୁର୍ଦ୍ଧ・ସେଟିଂ ଟ୍ୟାବ୍‌ରୁ ସକ୍ରିୟ କରନ୍ତୁ",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "ବିନାମୂଲ୍ୟ ବ୍ୟବହାରଯୋଗ୍ୟ ନମ୍ବର ମ୍ୟାଚିଂ ଫିଚର୍",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
