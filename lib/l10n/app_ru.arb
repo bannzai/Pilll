@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "Сразу видно, когда принята таблетка",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Записывайте приём таблеток на главном экране",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
