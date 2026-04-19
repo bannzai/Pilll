@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Bir bosish bilan oson sozlash",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Bildirishnoma xabarini erkin tahrirlash",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
