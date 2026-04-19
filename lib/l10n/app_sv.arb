@@ -2550,5 +2550,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Du kan automatiskt synkronisera menstruationsdata som du har registrerat i Pilll med din hälsoapp. På så sätt kan du se dem tillsammans med andra hälsouppgifter i hälsoappen och göra dem tillgängliga för andra appar.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
