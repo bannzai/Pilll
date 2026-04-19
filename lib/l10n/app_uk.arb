@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Можна змінити на вкладці «Налаштування»",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Можна також відкрити, торкнувшись цифри на головному екрані",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
