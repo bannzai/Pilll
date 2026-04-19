@@ -2422,5 +2422,9 @@
   "featureAppealTryFeature": "पुष्टि गर्नुहोस्",
   "@featureAppealTryFeature": {
     "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "खाता दर्ता गर्न सिफारिस गरिन्छ",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
   }
 }
