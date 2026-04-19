@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "د ترتیباتو ټب څخه بدلول کیدای شي",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "د کور پاڼې شمیرو ټک کولو سره هم خلاصیدای شي",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
