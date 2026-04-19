@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "गल्ती गरे पनि सजिलै रद्द गर्नुहोस्",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "जुनसुकै बेला औषधि सेवन इतिहास हेर्नुहोस्",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
