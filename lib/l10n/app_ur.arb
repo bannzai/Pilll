@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "ワンタップでかんたん設定",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "اطلاع کا پیغام اپنی مرضی کے مطابق تبدیل کریں",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
