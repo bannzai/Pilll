@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Відображення дати в клітинках аркуша прийому дозволяє одним поглядом побачити минулі записи про прийом та заплановані прийоми в майбутньому. Перемикайтеся між режимами «Номер» і «Дата», щоб обрати відображення, яке вам підходить.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Легко переглядайте історію прийому",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
