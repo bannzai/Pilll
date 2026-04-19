@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealBody": "ହୋମ ସ୍କ୍ରିନ୍‌ର ପିଲ ସିଟ୍‌କୁ ଟ୍ୟାପ୍ କଲେ ସେଦିନର ଔଷଧ ସେବନ ରେକର୍ଡ ହୋଇଯିବ। ଭୁଲ୍‌ରେ ରେକର୍ଡ ହୋଇଗଲେ ମଧ୍ୟ, ଆଉ ଥରେ ଟ୍ୟାପ୍ କଲେ ତାହା ବାତିଲ ହୋଇଯିବ। ଔଷଧ ସେବନ ଇତିହାସ ପରେ ଦେଖିହେବ, ତେଣୁ ନିଶ୍ଚିନ୍ତରେ ଜାରି ରଖିପାରିବେ।",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "ଋତୁସ୍ରାବ ରେକର୍ଡ ଓ ପୂର୍ବାନୁମାନ",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
