@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Синхронізація зі Здоров'ям",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Ділитися записами про менструацію з додатком «Здоров'я»",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
