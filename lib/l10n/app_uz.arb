@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Sog'liq holatini yozib, qayta ko'rib chiqing",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Oʻtgan yozuvlarni taqvimda ko‘zdan kechirish",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
