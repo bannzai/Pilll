@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Gaat ook af in stille/focusmodus",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Alarmgeluid zoals een wekker",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
