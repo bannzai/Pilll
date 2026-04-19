@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "Vui lòng nhập nội dung liên hệ",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Cảm ơn bạn đã mua gói mua trọn đời. Nếu bạn đang đăng ký gói hàng tháng hoặc hàng năm, vui lòng hủy đăng ký đó.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
