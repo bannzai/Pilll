@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "Hvis pillenummeret på pillearket ikke stemmer overens med det faktiske inntaket på grunn av glemte eller forvekslede piller, kan du justere pillenummeret for i dag manuelt. Du kan også åpne samme skjerm fra pillenummervisningen på hjemskjermen.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Registrer pillefri periode",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
