@@ -2674,5 +2674,9 @@
   "recordPillFeatureAppealPoint1": "ପିଲ ସିଟ ଟ୍ୟାପ କରି ଔଷଧ ସେବନ ରେକର୍ଡ",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "ଭୁଲ ହୋଇଗଲେ ମଧ୍ୟ ସହଜରେ ବାତିଲ",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
