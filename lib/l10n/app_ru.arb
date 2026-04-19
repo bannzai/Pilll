@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Уведомления, работающие даже в беззвучном режиме",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Будильник для приёма таблеток",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
