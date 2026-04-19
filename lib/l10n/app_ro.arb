@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Modificabil din setările foii de pilule",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Înregistrați administrarea atingând foaia de pilule",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
