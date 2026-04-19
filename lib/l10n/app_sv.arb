@@ -2654,5 +2654,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Notis meddelandet fritt",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "Varje dags påminnelser",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
   }
 }
