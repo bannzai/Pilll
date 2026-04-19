@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint2": "Lawula kalula izinsuku zokuya kudokotela",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Khumbuza ngesaziso",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
