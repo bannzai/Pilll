@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "हेल्थकेयर एपमा सिंक",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple स्वास्थ्य सेवा समर्थन",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
