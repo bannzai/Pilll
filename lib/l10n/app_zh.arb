@@ -2410,5 +2410,9 @@
   "lifetimePurchaseNotice1": "购买“买断计划”不会自动取消您当前的月度或年度订阅。",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "こちら",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
