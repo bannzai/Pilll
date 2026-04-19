@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "ਪਿਛਲੇ ਰਿਕਾਰਡਾਂ ਨੂੰ ਕੈਲੰਡਰ ਤੋਂ ਵੇਖੋ",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "ਸਿਹਤ ਦਰਜ ਕਰਨ ਲਈ ਤਾਰੀਖ਼ ਟੈਪ ਕਰੋ",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
