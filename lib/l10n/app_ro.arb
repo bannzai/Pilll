@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "Înregistrați administrarea pastilelor pe ecranul principal",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Atingeți foaia de pastile de pe ecranul principal pentru a înregistra administrarea din ziua respectivă. Dacă ați înregistrat din greșeală, puteți anula atingând din nou. Puteți verifica istoricul administrărilor ulterior, astfel că puteți continua fără griji.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
