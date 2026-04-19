@@ -2450,5 +2450,9 @@
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Tùy chỉnh nội dung thông báo",
   "@reminderNotificationCustomizeWordFeatureAppealTitle": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Bạn có thể tùy chỉnh nội dung thông báo",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
   }
 }
