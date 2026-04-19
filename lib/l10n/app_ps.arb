@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "د روغتیا پاملرنې سره یوځای کول",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "د حیض ریکارډونه د روغتیا پاملرنې سره شریک کول",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
