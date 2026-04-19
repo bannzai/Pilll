@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Tinch qo'yish rejimida ham dorini unutmaslikka yordam beradi",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Sukut rejimida ham bildirishnomalar yetib boradi",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
