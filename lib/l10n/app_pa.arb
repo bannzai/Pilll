@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "ਗਲਤੀ ਹੋਵੇ ਤਾਂ ਵੀ ਆਸਾਨੀ ਨਾਲ ਰੱਦ ਕਰੋ",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "ਦਵਾਈ ਲੈਣ ਦਾ ਇਤਿਹਾਸ ਕਿਸੇ ਵੀ ਸਮੇਂ ਦੇਖੋ",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
