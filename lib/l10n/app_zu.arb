@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealHeadline": "Thatha ikhefu ekuthatheni amaphilisi",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Ungaqopha eshidini lamaphilisi isikhathi lapho uzoyeka ukusebenzisa amaphilisi. Ngesikhathi sokuphumula, inombolo yokuthatha ayihambi, futhi lapho uqala kabusha ungaphinde urekhode ngokushesha.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
