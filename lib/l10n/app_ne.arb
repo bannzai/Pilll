@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "नम्बर गलत भएमा सेटिङमा सच्याउनुहोस्",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "आज खाने चक्कीको नम्बर परिवर्तन गर्न सकिन्छ",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
