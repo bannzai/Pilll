@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "సెట్టింగ్స్ ట్యాబ్ నుంచే మార్చవచ్చు",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "హోమ్‌లోని సంఖ్యను తాకితే కూడా తెరవవచ్చు",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
