@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "အပ်မဖွင့်ဘဲ နိုတီပေါ်မှ မှတ်တမ်းတင်",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "အကြောင်းကြားချက်မျက်နှာပြင်မှ တစ်ချက်နှိပ်ဖြင့် ဆေးသောက်မှတ်တမ်းတင်ပါ",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
