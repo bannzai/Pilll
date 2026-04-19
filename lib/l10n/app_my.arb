@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "ကျန်းမာရေးအက်ပ်နှင့် ထပ်တူကြ",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple ကျန်းမာရေး ပံ့ပိုးမှု",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
