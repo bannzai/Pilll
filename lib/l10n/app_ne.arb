@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "मिति अनुसार पिल सिट देखाउनुस्",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "क्यालेन्डर नहेरी पनि मिति थाहा हुन्छ",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
