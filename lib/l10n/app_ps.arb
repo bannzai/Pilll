@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "د حبوبو مخکتب د ښي پورتنۍ ګیر له لارې پیل کړئ",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "د موده سمول او بیا پیل کول هم اسانه دي",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
