@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Boleh diubah dari tab Tetapan",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Boleh dibuka juga dengan mengetuk nombor di skrin utama",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
