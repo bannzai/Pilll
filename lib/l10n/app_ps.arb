@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "د اپلیکیشن دننه ځای",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "د تمرکز حالت کې هم خبرتیاوې رسیږي",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
