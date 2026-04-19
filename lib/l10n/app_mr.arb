@@ -2466,5 +2466,9 @@
   "appearanceModeDateFeatureAppealTitle": "पिल शीटवर तारीख दाखवा",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "एका नजरेत कधी घ्यायचे ते पाहा",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
