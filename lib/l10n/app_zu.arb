@@ -2642,5 +2642,9 @@
   "criticalAlertFeatureAppealPoint1": "集中モード中でも通知が届く",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Uzokhunjuzwa ngokuqinisekile ngesikhathi osibekile.",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
