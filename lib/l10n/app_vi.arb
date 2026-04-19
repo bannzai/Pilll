@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Thông báo bằng lời nhắc",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Nhấn vào ngày để ghi chú",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
