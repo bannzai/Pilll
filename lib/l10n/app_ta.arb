@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 அல்லது அதற்கு மேல் — அமைப்புகள் தாவலில் இருந்து இயலுமைப்படுத்தவும்",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "இலவசமாகப் பயன்படுத்தக்கூடிய எண் பொருத்தும் வசதி",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
