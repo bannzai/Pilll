@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Прегледајте претходне записе у календару",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Tap the date to record your condition",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
