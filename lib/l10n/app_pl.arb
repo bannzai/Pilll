@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Zarejestruj przyjęcie przez powiadomienie",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Zakończ bez otwierania aplikacji",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
