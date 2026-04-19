@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Çalar saat gibi alarm sesi",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 ve sonrası · Ayarlar sekmesinden etkinleştir",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
