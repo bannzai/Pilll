@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint2": "Landelela umjikelezo ngokuzenzakalelayo",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Lungisa izilungiselelo",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
