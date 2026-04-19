@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "सेटिंग्ज टॅबमधून बदलता येऊ शकते",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "होमवरील संख्या टॅप करूनही उघडता येते",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
