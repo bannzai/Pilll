@@ -2466,5 +2466,9 @@
   "appearanceModeDateFeatureAppealTitle": "د پیل شیټ پر مخ نیټې ښکاره کول",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "یو نظر کې وګورئ چې کله دوا وخورئ",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
