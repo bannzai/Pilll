@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "体調をメモして振り返り",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "回顾日历中的历史记录",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
