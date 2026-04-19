@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "د حیض ریکارډونو اتوماتیک ډیټا همغږي",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "د روغتیا اپ سره همغږي",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
