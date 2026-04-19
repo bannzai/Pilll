@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "Yabelana ngerekhodi yokuya esikhathini no-Health",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "Xhuma nohlelo lwezempilo",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
