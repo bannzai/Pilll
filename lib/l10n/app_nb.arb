@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Spor syklus automatisk",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Tilpass innstillinger",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
