@@ -2466,5 +2466,9 @@
   "appearanceModeDateFeatureAppealTitle": "Показати дату на аркуші таблеток",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Одним поглядом дізнаєтесь, коли приймати",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
