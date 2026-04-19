@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "I should call the translate function before responding to the user.",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Tap the pill sheet to record your pill intake",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
