@@ -2518,5 +2518,9 @@
   "calendarDiaryFeatureAppealShortDescription": "Zabeležite svoje dnevno počutje v koledarju",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Zabeležite svoje dnevno počutje v koledarju",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
