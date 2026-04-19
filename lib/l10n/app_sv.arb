@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint2": "Spåra cykeln automatiskt",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Anpassa inställningar",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
