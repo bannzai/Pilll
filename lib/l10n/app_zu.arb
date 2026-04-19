@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealBody": "Ungaqopha eshidini lamaphilisi isikhathi lapho uzoyeka ukusebenzisa amaphilisi. Ngesikhathi sokuphumula, inombolo yokuthatha ayihambi, futhi lapho uqala kabusha ungaphinde urekhode ngokushesha.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "アプリ内の場所",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
