@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Unganisha rekodi za hedhi kiotomatiki",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Linganisha na programu ya afya",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
