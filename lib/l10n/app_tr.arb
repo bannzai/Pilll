@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Hap çizelgesinin sağ üst köşesindeki dişli simgesinden başlayın",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Dönemi düzenlemek veya yeniden başlatmak da kolay.",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
