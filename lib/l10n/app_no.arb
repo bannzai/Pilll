@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "Kan integreres med Helse",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Du kan automatisk synkronisere menstruasjonsdata registrert i Pilll med Helse-appen. Du kan se dem sammen med annen helsedata i Helse-appen, og menstruasjonsdataene kan også brukes i andre apper.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
