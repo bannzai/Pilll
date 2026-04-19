@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "Zapisuj codzienne samopoczucie w kalendarzu",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Stuknij datę w kalendarzu, aby zapisać swoje samopoczucie, nastrój, objawy i inne informacje. Możesz je przeglądać razem z historią przyjmowania tabletek i zapisami cyklu, co pozwala lepiej poznać rytm swojego ciała.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
