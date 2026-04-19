@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealShortDescription": "管理未来日程（如就医预约）",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "カレンダーに未来の予定を記録",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
