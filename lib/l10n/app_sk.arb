@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Začnite kliknutím na ikonu ozubeného kolesa v pravom hornom rohu pilulového listu.",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Úprava a obnovenie obdobia sú jednoduché",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
