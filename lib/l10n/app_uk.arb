@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Автоматичне додавання аркуша для таблеток",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Наступний аркуш буде створено автоматично",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
