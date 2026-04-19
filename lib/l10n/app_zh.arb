@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "在日历中点选日期即可记录体况、心情与症状等。您可以与服药记录和生理记录一起查看，从而更好地掌握自身的身体节律。",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "写下未来的安排",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
