@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Ako dugo pritisnete obaveštenje podsetnika, pojaviće se akcija „Uzeto“ koja vam omogućava da zabeležite uzimanje bez otvaranja aplikacije.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Automatsko dodavanje liste pilula",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
