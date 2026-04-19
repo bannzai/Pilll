@@ -2430,5 +2430,9 @@
   "criticalAlertFeatureAppealTitle": "ସାଇଲେଣ୍ଟ ମୋଡ୍‌ରେ ମଧ୍ୟ ବିଜ୍ଞପ୍ତି ପ୍ରାପ୍ତ କରନ୍ତୁ",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "ଡୁ ନଟ ଡିଷ୍ଟର୍ବ ମୋଡ୍‌ରେ ମଧ୍ୟ ଗୋଳି ଖାଇବା ଭୁଲ ଯିବ ନାହିଁ",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
