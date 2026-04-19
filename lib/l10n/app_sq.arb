@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "Ju lutemi shkruani përmbajtjen e pyetjes",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Faleminderit që keni blerë planin me pagesë të njëhershme. Nëse jeni abonuar në planin mujor ose vjetor, mos harroni ta anuloni.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
