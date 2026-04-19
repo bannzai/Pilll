@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 یا اس کے بعد — سیٹنگز ٹیب سے فعال کریں",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "مفت استعمال کے لیے نمبر ملاپ کی خصوصیت",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
