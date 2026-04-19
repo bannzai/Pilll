@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "یو نظر کې وګورئ چې کله دوا وخورئ",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "د پیل شیټ پر نیټه ښودل کیدای شي",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
