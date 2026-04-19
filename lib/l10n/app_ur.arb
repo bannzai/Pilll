@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "日付をタップして予定を書き込み",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "حیض کے ریکارڈز کو خودکار طور پر ڈیٹا کے ساتھ مربوط کریں",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
