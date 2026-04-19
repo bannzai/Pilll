@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Prilagojeno sporočilo obvestila",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Pokaži listke zdravil po datumu",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
