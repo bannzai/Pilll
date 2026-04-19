@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "เมื่อกลุ่มแผงยาคุมในปัจจุบันสิ้นสุดลง ระบบจะสร้างกลุ่มแผงยาใหม่ให้อัตโนมัติ ไม่ต้องสลับด้วยตนเอง และจะไม่มีการขาดตอนของการบันทึก",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "เตือนเหมือนนาฬิกาปลุก",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
