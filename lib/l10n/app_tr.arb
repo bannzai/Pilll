@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Hap çizelgesinde tarihleri gösterme",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Hap çizelgesindeki kutucuklarda tarihleri göstererek geçmiş kullanım kayıtlarını ve gelecekteki kullanım planlarını tek bakışta görebilirsiniz. 'Numara' modu ile 'Tarih' modu arasında geçiş yaparak size uygun görüntülemeyi seçin.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
