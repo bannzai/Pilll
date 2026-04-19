@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Notificare prin reminder",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Apasați pe dată pentru a scrie un eveniment",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
