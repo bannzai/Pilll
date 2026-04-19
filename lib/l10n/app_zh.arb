@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "在药丸表上显示日期",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "通过在药片表格的格子中显示日期，您可以一目了然地查看过去的服药记录和未来的服药计划。可以在“编号”模式和“日期”模式之间切换，选择最适合自己的显示方式。",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
