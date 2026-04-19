@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "Itala ang panahon ng pagtigil sa pag-inom",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Tumpak na pamamahala ng paghinto at pansamantalang pagtigil ng pag-inom",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
