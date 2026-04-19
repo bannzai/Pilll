@@ -2698,5 +2698,9 @@
   "calendarDiaryFeatureAppealPoint1": "କ୍ୟାଲେଣ୍ଡରରେ ରେକର୍ଡ ତାଲିକା",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "ସ୍ୱାସ୍ଥ୍ୟ ଅବସ୍ଥା ଟିପ୍ପଣ ଓ ସମୀକ୍ଷା",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
