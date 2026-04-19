@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "पिल शीट सेटिंग्जमधून बदलता येते",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "पिल शीटवर टॅप करून सेवन नोंद करा",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
