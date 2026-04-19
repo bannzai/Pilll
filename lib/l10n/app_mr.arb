@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "तारीखेवर टॅप करून नियोजन नोंदवा",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "मासिक पाळीची नोंद आपोआप डेटा समन्वय",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
