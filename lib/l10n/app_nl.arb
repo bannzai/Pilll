@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "In één oogopslag zien wanneer je de pil moet innemen",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Datums weergeven op het pillenblad",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
