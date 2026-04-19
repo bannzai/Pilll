@@ -2590,5 +2590,9 @@
   "alarmKitFeatureAppealShortDescription": "ସାଇଲେଣ୍ଟ ମୋଡ୍‌ରେ ମଧ୍ୟ ନିଶ୍ଚିତ ଭାବରେ ବାଜୁଥିବା ବିଜ୍ଞପ୍ତି",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "ଆଲାର୍ମ ଘଣ୍ଟା ପରି ଔଷଧ ସେବନ ଆଲାର୍ମ",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
