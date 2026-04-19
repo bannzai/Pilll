@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Nhấn vào ngày để ghi chú",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "生理記録を自動でデータ連携",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
