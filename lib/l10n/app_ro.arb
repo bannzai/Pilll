@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "Puteți înregistra în fișa de pilule o perioadă în care opriți temporar administrarea. În timpul pauzei, numărul dozei nu avansează, iar la reluare puteți relua imediat înregistrarea.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Locație în aplicație",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
