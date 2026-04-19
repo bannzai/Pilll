@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "ப்ரீமியம் சந்தாவுடன் உடனே பயன்படுத்த முடியும்",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "பில் சீட் முடியும் போது தானாக மாற்றம்",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
