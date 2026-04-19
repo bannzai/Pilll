@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealBody": "ପିଲ୍ ସିଟ୍‌ର ଘରରେ ତାରିଖ ପ୍ରଦର୍ଶନ କରି, ଆପଣ ଅତୀତ ସେବନ ଇତିହାସ ଏବଂ ଭବିଷ୍ୟତ ସେବନ ଯୋଜନା ଏକ ନଜରରେ ଯାଞ୍ଚ କରିପାରିବେ। ନିଜ ପାଇଁ ଉପଯୁକ୍ତ ପ୍ରଦର୍ଶନ ବାଛିବାକୁ \"ସଂଖ୍ୟା\" ମୋଡ୍ ଏବଂ \"ତାରିଖ\" ମୋଡ୍ ମଧ୍ୟରେ ପରିବର୍ତ୍ତନ କରନ୍ତୁ।",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "ସହଜରେ ସେବନ ଇତିହାସ ଦେଖନ୍ତୁ",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
