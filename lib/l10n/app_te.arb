@@ -2430,5 +2430,9 @@
   "recommendSignupGeneralDescription": "నమోదు చేస్తే మీ డేటాను బ్యాకప్ చేయవచ్చు",
   "@recommendSignupGeneralDescription": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "సైలెంట్ మోడ్‌లోనూ నోటిఫికేషన్లు అందుకోండి",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
   }
 }
