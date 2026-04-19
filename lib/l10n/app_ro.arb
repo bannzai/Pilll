@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Gestionează simplu zilele de consultații medicale",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Notificare prin reminder",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
