@@ -2430,5 +2430,9 @@
   "recommendSignupGeneralDescription": "Maaari mong i-backup ang iyong data kapag nagparehistro ka",
   "@recommendSignupGeneralDescription": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "Tumanggap ng mga abiso kahit nasa silent mode",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
   }
 }
