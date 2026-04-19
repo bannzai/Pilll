@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Om numreringen är fel, rätta till det i inställningarna.",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Du kan ändra numret på dagens piller",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
