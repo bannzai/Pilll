@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Registrer startdato for mensen enkelt",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Spor syklus automatisk",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
