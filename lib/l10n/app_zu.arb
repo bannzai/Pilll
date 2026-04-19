@@ -2690,5 +2690,9 @@
   "menstruationFeatureAppealPoint1": "生理開始日をかんたん記録",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Landelela umjikelezo ngokuzenzakalelayo",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
