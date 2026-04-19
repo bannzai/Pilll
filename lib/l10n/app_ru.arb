@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Место в приложении",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Уведомления приходят даже в режиме фокусировки",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
