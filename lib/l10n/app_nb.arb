@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Du kan tilpasse standard-meldingen «Det er på tide å ta pillen» med dine egne ord. Prøv noe som motiverer deg, kjæledyrets navn eller andre setninger som gjør det daglige inntaket morsommere.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Vis dato på pilleark",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
