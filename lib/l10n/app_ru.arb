@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Запись и прогноз менструации",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Записывайте дату начала и отслеживайте менструальный цикл",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
