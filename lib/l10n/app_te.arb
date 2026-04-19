@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "పొరపాటున చేసినా సులభంగా రద్దు చేయొచ్చు",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "మీ తీసుకున్న చరిత్రను ఎప్పుడైనా చూడండి",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
