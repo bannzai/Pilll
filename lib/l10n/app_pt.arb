@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Consulte o histórico de uso a qualquer momento",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Registre facilmente a data de início da menstruação",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
