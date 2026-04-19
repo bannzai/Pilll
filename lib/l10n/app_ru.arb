@@ -2518,5 +2518,9 @@
   "calendarDiaryFeatureAppealShortDescription": "Записывай ежедневное самочувствие в календарь",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Записывайте самочувствие в календарь каждый день",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
