@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Xem ngay thời điểm uống",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Hiển thị ngày trên vỉ thuốc",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
