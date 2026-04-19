@@ -2758,5 +2758,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "ମାନୁଆଲ ସୃଷ୍ଟି ଅପରେଶନ ଆବଶ୍ୟକ ନୁହେଁ",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "ସେଟିଂ ଟ୍ୟାବ୍‌ର ସ୍ୱିଚ୍ ଦ୍ୱାରା ପ୍ରବର୍ତ୍ତନ",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
