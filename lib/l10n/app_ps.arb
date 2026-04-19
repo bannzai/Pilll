@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "د پیل شیټ ټچ کولو سره د دوا اخیستلو ثبت",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "که هم غلطي وشي، اسانه لغوه کول",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
