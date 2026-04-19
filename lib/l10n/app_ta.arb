@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "கைமுறை உருவாக்கம் தேவையில்லை",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "அமைப்புகள் தாவிலுள்ள சுவிட்சை இயக்கி மாற்றவும்",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
