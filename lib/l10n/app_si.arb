@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "පිල් පත්‍රිකාව ස්වයංක්‍රීයව එක් කරන්න",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "ඊළඟ පත්‍රය ස්වයංක්‍රීයව ජනනය කරන්න",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
