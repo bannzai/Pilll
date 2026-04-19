@@ -2642,5 +2642,9 @@
   "criticalAlertFeatureAppealPoint2": "ନିର୍ଧାରିତ ସମୟରେ ନିଶ୍ଚିତ ଭାବରେ ରିମାଇଣ୍ଡ",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "ଏକ ଟ୍ୟାପ୍‌ରେ ସହଜ ସେଟଅପ୍",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
