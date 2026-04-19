@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "Biết ngay khi nào đã uống",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Ghi lại việc uống thuốc trên màn hình chính",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
