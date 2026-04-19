@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint2": "Ungakushintsha kuthebhu yezilungiselelo",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Ungavula futhi ngokuthinta inombolo ekhasini lasekhaya.",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
