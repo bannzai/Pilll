@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Enkelt oppsett med ett trykk",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Rediger varslingsmeldinger fritt",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
