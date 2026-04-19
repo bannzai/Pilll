@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "पिल सिट स्वतः थप्नुहोस्",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "अर्को सिट स्वतः सिर्जना गर्नुहोस्",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
