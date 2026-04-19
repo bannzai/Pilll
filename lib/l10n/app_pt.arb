@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Sem necessidade de criação manual",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Alternar pelo botão na aba Configurações",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
