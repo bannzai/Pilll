@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealBody": "Koledar menstrualnega ciklusa si lahko ogledate z enim samim postopkom — preprosto zabeležite začetek menstruacije in seznam preteklih ciklov bo samodejno prikazan. Datum naslednje pričakovane menstruacije je samodejno napovedan, kar vam pomaga načrtovati prihodnje aktivnosti brez presenečenj.",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Zabeležite počutje v koledarju",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
