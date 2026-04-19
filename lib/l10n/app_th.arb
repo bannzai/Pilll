@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "ซิงค์กับแอปสุขภาพ",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "รองรับ Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
