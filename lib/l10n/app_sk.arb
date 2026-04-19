@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Keď sa aktuálna skupina piluliek skončí, automaticky sa vytvorí nová skupina piluliek. Manuálne prepínanie nie je potrebné, takže v záznamoch nevznikajú medzery.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "目覚ましのように鳴るアラーム",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
