@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "වැරදි කළත් පහසුවෙන් අවලංගු කරන්න",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "ඔබේ බෙහෙත් ගැනීමේ ඉතිහාසය ඕනෑම වෙලාවක බලන්න",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
