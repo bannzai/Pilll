@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "Motta varsler selv i stillemodus",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Unngå å glemme pillen selv i stillemodus",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
