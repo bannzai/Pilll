@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Zaznamenať užitie pomocou akcie upozornenia",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Otvorené aplikácie bez dokončenia",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
