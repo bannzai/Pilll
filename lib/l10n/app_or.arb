@@ -2794,5 +2794,9 @@
   "restDurationFeatureAppealPoint2": "ପିଲ୍ ସିଟ୍ ର ଉପର ଡାହାଣ ଦିଗର ଗିଅରରୁ ଆରମ୍ଭ କରନ୍ତୁ",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "ସମୟ ସୀମା ସଂଶୋଧନ ଏବଂ ପୁନଃଆରମ୍ଭ ମଧ୍ୟ ସହଜ",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
