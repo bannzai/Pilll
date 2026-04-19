@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "පිල් පත්‍රයේ ඉහළ දකුණේ ඇති ගියර් ආයිකනයෙන් ආරම්භ කරන්න",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "මාසික කාලය සංස්කරණය කිරීම හා නැවත ආරම්භ කිරීම පහසුයි",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
