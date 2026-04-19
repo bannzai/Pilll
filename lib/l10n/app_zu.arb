@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealHeadline": "Ungashintsha inombolo yephilisi ozoyithatha namuhla",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Uzoba nethuba lokulungisa inombolo yepilisi ozoyiphuza namuhla ngesandla uma inombolo lephepha lepilisi neyakho impela yokuthatha ziyehluka ngenxa yokukhohlwa noma ukuxubana. Ungavula esikrinini esifanayo kusukela kumboniso wenombolo yepilisi ekhasini lasekhaya.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
