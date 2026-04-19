@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Данные о менструальном цикле, записанные в Pilll, можно автоматически синхронизировать с приложением Здоровье. Вы сможете просматривать их вместе с другими данными о здоровье, а также использовать данные о цикле в других приложениях.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Запись приёма прямо из уведомлений",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
