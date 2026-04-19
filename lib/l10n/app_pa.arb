@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "ਤੁਸੀਂ ਕੁਝ ਸਮੇਂ ਲਈ ਦਵਾਈ ਲੈਣਾ ਬੰਦ ਕਰਨ ਦੀ ਮਿਆਦ ਨੂੰ ਪਿੱਲ ਸ਼ੀਟ ਵਿੱਚ ਦਰਜ ਕਰ ਸਕਦੇ ਹੋ। ਛੁੱਟੀ ਦੌਰਾਨ ਦਵਾਈ ਦਾ ਨੰਬਰ ਅੱਗੇ ਨਹੀਂ ਵਧਦਾ, ਅਤੇ ਦੁਬਾਰਾ ਸ਼ੁਰੂ ਕਰਨ ਵੇਲੇ ਤੁਸੀਂ ਤੁਰੰਤ ਰਿਕਾਰਡ ਕਰਨਾ ਮੁੜ ਸ਼ੁਰੂ ਕਰ ਸਕਦੇ ਹੋ।",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "ਐਪ ਵਿੱਚ ਸਥਾਨ",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
