@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "பில் சீட்டில் தேதிகளை காட்ட முடியும்",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "பில்‌ஷீட்டில் உள்ள செல்லங்களில் தேதிகளை காட்டுவதன் மூலம், கடந்த服用履歴 மற்றும் எதிர்கால服用予定-ஐ ஒரே பார்வையிலேயே பார்க்க முடியும். \"எண்\" முறையும் \"தேதி\" முறையும் மாறுபடுத்தி, உங்களுக்கு ஏற்ற தமிழ் பா??",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
