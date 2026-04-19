@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "காலத்தைத் தட்டி திட்டத்தை எழுதுங்கள்",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "மாதச்சுழற்சி பதிவுகளை தானாக ஒத்திசைவு",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
