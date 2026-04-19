@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Saiba a data sem olhar o calendário",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Pode ser alterado nas configurações da cartela de comprimidos",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
