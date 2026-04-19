@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "د پیل شیټ د پای کیدو سره اتوماتیک بدلون",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "لاسي جوړولو عملیات اړین نه دي",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
