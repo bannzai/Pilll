@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 pataas・Paganahin mula sa tab na Mga Setting",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Libre gamitin ang feature na tumutugma ng numero",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
