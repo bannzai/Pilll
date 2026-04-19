@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Simamia kwa urahisi siku za kutembelea kliniki",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Taarifa za kumbusho",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
