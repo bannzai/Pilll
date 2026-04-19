@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "在静音模式下也接收通知",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "即使在免打扰模式下也能防止漏服",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
