@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "Bosh ekranda dorini qabul qilganingizni qayd eting",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Bosh ekrandagi dori varaqchasini bosish kifoya — shu bilan o'sha kunning dori qabulini yozib qo'yasiz. Agar noto'g'ri yozgan bo'lsangiz, yana bir bor bosib uni bekor qilishingiz mumkin. Qabul tarixini keyinroq ham ko'rib chiqishingiz mumkin, shuning uchun xotirjam bo'lib davom ettirishingiz mumkin.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
