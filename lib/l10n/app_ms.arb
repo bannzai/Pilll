@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Bunyi penggera seperti jam loceng",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 ke atas・Aktifkan dari tab Tetapan",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
