@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "Dori qabul qilishdagi tanaffus va uzilishlarni aniq boshqarish",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Pil qabul qilishni to'xtatish",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
