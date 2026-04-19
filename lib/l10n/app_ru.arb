@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Можно открыть, коснувшись числа на главном экране",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Бесплатный учёт дней без приёма таблеток",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
