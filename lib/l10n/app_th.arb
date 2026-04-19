@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "แจ้งเตือนด้วยการเตือนความจำ",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "แตะวันที่เพื่อเพิ่มกำหนดการ",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
