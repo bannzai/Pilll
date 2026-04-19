@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "Voer de inhoud van uw bericht in",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Bedankt voor uw aankoop van het eenmalige plan. Als u een maandelijks of jaarlijks abonnement heeft, vergeet dan niet dit op te zeggen.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
