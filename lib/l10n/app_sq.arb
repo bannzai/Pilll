@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Regjistrimi i ditëve pa pilulë — falas",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Nisni nga ikona e ingranazhit në këndin e sipërm të djathtë të fletës së pilulave.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
