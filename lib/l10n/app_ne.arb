@@ -2430,5 +2430,9 @@
   "recommendSignupGeneralDescription": "दर्ता गर्नाले डेटा ब्याकअप गर्न सकिन्छ",
   "@recommendSignupGeneralDescription": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "साइलेन्ट मोडमा पनि सूचना प्राप्त गर्नुहोस्",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
   }
 }
