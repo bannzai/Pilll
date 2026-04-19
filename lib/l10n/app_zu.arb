@@ -2794,5 +2794,9 @@
   "restDurationFeatureAppealPoint1": "Ukurekhoda kwamahhala kokungathathi amaphilisi",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Qala kusithonjana sezilungiselelo (i-gear) phezulu kwesokudla kwephepha lamaphilisi.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
