@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "अलार्म घडीजस्तै बज्ने अलार्म",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "साइलेन्टमा पनि निश्चित रूपमा बज्ने सूचना",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
