@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Znaj datę bez patrzenia w kalendarz",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Można zmienić w ustawieniach arkusza tabletek",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
