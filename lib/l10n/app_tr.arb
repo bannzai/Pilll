@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Uygulamayı açmadan tamamla",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Premium加入でそのまま利用可能",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
