@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Нажмите на дату, чтобы записать самочувствие",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Добавить событие в календарь",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
