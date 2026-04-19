@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Kết nối với Sức khỏe",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Chia sẻ ghi chép kinh nguyệt với ứng dụng Sức khỏe",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
