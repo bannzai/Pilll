@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Unaweza kubonyeza tarehe kwenye kalenda ili kurekodi hali yako ya mwili, hisia, dalili, na mengineyo. Rekodi hizi zinaweza kutazamwa pamoja na rekodi za kunywa dawa na za hedhi, hivyo utaweza kufahamu mzunguko wa mwili wako.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Andika mipango yako ya baadaye",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
