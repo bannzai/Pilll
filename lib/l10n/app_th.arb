@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "แตะครั้งเดียวบนหน้าการแจ้งเตือนเพื่อบันทึกการรับประทาน",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "เมื่อกดค้างที่การแจ้งเตือน จะมีตัวเลือก 'ทานแล้ว' ให้เลือก ซึ่งช่วยให้คุณบันทึกการรับประทานยาได้โดยไม่ต้องเปิดแอป",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
