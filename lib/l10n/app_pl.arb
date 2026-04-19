@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Miejsce w aplikacji",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Powiadomienia docierają nawet w trybie skupienia",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
