@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Kapag natapos ang kasalukuyang grupo ng pill sheet, awtomatikong gagawa ng bagong grupo ng pill sheet. Hindi na kailangan ang manu-manong paglipat, kaya hindi magkakaroon ng pagkukulang sa mga tala.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Alarm na tumutunog na parang alarm clock",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
