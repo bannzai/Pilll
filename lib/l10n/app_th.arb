@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "บันทึกอาการและทบทวน",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "ดูบันทึกย้อนหลังในปฏิทิน",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
