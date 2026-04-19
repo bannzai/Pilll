@@ -2550,5 +2550,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "Zdieľať záznamy o menštruácii so službou Zdravie",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "Integrácia so Zdravím",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
