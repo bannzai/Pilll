@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "เปิดแอปไม่ต้องเสร็จ",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "ใช้งานได้ทันทีเมื่อเป็นสมาชิก Premium",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
