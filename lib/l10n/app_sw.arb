@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Rekodi ya mapumziko ya vidonge (bure)",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Anza kwa kugonga ikoni ya gia (mipangilio) juu-kulia kwenye shidi ya vidonge.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
