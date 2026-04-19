@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "ਅੱਜ ਦਾ ਖੁਰਾਕ ਨੰਬਰ ਮਿਲਾਓ",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "ਜੇ ਨੰਬਰ ਗ਼ਲਤ ਹੋਵੇ ਤਾਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਠੀਕ ਕਰੋ",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
