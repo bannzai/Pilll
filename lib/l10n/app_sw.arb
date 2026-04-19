@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealHeadline": "Rekodi na utabiri wa hedhi",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "{\n  \"@@locale\": \"sw\",\n  \"periodHelpBody\": \"Rekodi tu unapoanza hedhi, na utaweza kuona orodha ya rekodi zako za hedhi za zamani. Tarehe inayotarajiwa ya hedhi ijayo inakadirishwa kiotomatiki, hivyo unaweza kupanga mapema.\",\n  \"@periodHelpBody\": {\n    \"description\": \"生理記録機能のヘルプページの本文\",\n    \"type\": \"text\"\n  }\n}",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
