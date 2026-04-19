@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "Itala araw-araw ang iyong kalagayan sa kalendaryo",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Kalendaryo: Maaari mong pindutin ang petsa sa kalendaryo upang magtala ng kondisyon ng katawan, damdamin, o sintomas. Dahil maaari mong suriin ito kasabay ng mga tala ng pag-inom at tala ng regla, makakatulong ito sa iyo na maunawaan ang ritmo ng iyong katawan.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
