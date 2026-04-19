@@ -2638,5 +2638,9 @@
   "featureAppealLocationLabel": "အက်ပ်တွင်းနေရာ",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "အာရုံစူးစိုက်မုဒ်တွင်လည်း အကြောင်းကြားချက်များ ရောက်ရှိနိုင်သည်",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
