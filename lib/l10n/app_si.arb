@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "生理開始日をかんたん記録",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "චක්‍රිකාව ස්වයංක්‍රීයව හඳුනාගැනීම",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
