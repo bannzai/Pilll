@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "Bugungi qabul raqamini sozlash",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Raqamlar siljigan bo'lsa, sozlamalarda to'g'rilang",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
