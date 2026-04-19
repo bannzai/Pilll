@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "ਨੋਟੀਫਿਕੇਸ਼ਨ ਸਕਰੀਨ ਤੋਂ ਇੱਕ ਟੈਪ ਨਾਲ ਦਵਾਈ ਰਿਕਾਰਡ ਕਰੋ",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "ਰਿਮਾਈਂਡਰ ਨੋਟੀਫਿਕੇਸ਼ਨ ਨੂੰ ਲੰਮਾ ਦਬਾਉਣ ਨਾਲ \"ਲੈ ਲਿਆ\" ਦੀ ਕਾਰਵਾਈ ਦਿਖਾਈ ਦਿੰਦੀ ਹੈ, ਅਤੇ ਤੁਸੀਂ ਐਪ ਖੋਲ੍ਹੇ ਬਿਨਾਂ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਕਰ ਸਕਦੇ ਹੋ।",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
