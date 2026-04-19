@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Ручное создание не требуется",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Переключите с помощью переключателя на вкладке «Настройки».",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
