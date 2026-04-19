@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "ఆరోగ్య యాప్‌తో సమకాలీకరించు",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Healthకి అనుకూలం",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
