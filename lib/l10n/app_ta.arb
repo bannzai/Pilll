@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "பில் சீட்டை தேதிக்கேற்பக் காட்டு",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "கேரண்டரைப் பார்ப்பதற்குள் தேதியை தெரிந்துகொள்ளலாம்",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
