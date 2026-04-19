@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Переглядайте історію прийому пігулок будь-коли",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Легко зафіксуйте дату початку менструації",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
