@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Напоминание",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Нажмите на дату, чтобы добавить событие",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
