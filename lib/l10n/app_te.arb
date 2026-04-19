@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "సెట్టింగ్స్ టాబ్‌లోని స్విచ్ ఉపయోగించి మార్చండి",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
