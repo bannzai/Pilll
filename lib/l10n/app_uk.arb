@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "На головному екрані достатньо торкнутися пілюльної таблиці, щоб зафіксувати прийом за цей день. Якщо ви помилилися, торкніться ще раз — запис буде скасовано. Історію прийомів можна переглянути пізніше, тож ви зможете спокійно продовжувати користуватися.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Вести та передбачати менструації",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
