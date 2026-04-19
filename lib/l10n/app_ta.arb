@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "இலவசமாகப் பயன்படுத்தக்கூடிய எண் பொருத்தும் வசதி",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "அமைப்புகள் தாவில் மாற்றலாம்",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
