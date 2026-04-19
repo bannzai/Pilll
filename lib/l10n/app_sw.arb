@@ -2410,5 +2410,9 @@
   "lifetimePurchaseNotice1": "Hata ukinunua mpango wa malipo mara moja, mpango wa kila mwezi au wa kila mwaka hautaghairiwa kiotomatiki.",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "Hapa",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
