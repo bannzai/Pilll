@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Začnite klikom na ikono zobnika v zgornjem desnem kotu lista s tabletami.",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Enostavno je urediti ali ponovno začeti obdobje.",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
