@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "บันทึกผ่านการแจ้งเตือนโดยไม่ต้องเปิดแอป",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "แตะครั้งเดียวบนหน้าการแจ้งเตือนเพื่อบันทึกการรับประทาน",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
