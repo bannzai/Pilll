@@ -2518,5 +2518,9 @@
   "calendarDiaryFeatureAppealShortDescription": "Kunlik ahvolingizni taqvimda saqlang",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Kunlik holatingizni taqvimda qayd eting",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
