@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "සැකසුම් අභිරුචි කරන්න",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "කැලැන්ඩරයේ වාර්තා බලන්න",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
