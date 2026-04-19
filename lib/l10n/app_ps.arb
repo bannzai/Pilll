@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "د روغتون د مراجعې ورځو اسانه مدیریت",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "د یادونکي له لارې خبرتیا",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
