@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "ฟรีสำหรับการบันทึกวันหยุดยาคุม",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "เริ่มจากการแตะไอคอนรูปเฟืองที่มุมบนขวาของแผ่นยา",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
