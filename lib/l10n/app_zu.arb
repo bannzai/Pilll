@@ -2666,5 +2666,9 @@
   "appearanceModeDateFeatureAppealPoint1": "ピルシートを日付で表示",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Kalendari ukubona ngaphandle kosuku olwaziwayo",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
