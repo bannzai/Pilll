@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "చేతితో సృష్టించడం అవసరం లేదు",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "సెట్టింగ్స్ టాబ్‌లోని స్విచ్ ఉపయోగించి మార్చండి",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
