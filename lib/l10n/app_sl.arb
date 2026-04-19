@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "Med opombo lahko zabeležite obdobja, ko prenehate jemati kontracepcijske tablete. Med počitkom se številke odmerkov ne premikajo, ob ponovnem začetku pa lahko takoj nadaljujete z beleženjem.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Lokacija v aplikaciji",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
