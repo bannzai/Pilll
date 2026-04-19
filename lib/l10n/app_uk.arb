@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "Ви можете зафіксувати в таблиці прийому таблеток період тимчасової перерви. Під час перерви номер прийому не просувається, а після відновлення прийому записи одразу продовжаться.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Місця в додатку",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
