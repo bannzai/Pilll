@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Prikaži raspored pilula po datumu",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Не морате да гледате календар да бисте знали датум",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
