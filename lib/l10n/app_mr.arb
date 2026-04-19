@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "तारखेनुसार पिल शीट दर्शवा",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "कॅलेंडर न पाहताही तारीख कळते",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
