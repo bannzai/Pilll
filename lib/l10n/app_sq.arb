@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Njoftimet vijnë edhe gjatë modalitetit Fokus",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Të përkujton me siguri në orën e caktuar",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
