@@ -2514,5 +2514,9 @@
   "calendarDiaryFeatureAppealTitle": "Записуйте самопочуття в календарі",
   "@calendarDiaryFeatureAppealTitle": {
     "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Щоденний стан залишайте в календарі",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
   }
 }
