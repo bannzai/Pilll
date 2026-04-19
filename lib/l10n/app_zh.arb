@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "回顾日历中的历史记录",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "点击日期记录身体状况",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
