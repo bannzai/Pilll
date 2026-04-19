@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "कॅलेंडरवर कार्यक्रम लिहा",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "दवाखाना भेटींचे सोपे व्यवस्थापन",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
