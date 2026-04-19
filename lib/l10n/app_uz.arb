@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Diqqat rejimida ham bildirishnomalar keladi",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Sozlagan vaqtingizda albatta eslatadi",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
