@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Mbani shënime për gjendjen tuaj dhe rishikoni",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Shqip: Shikoni shënimet e mëparshme në kalendar",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
