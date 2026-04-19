@@ -2690,5 +2690,9 @@
   "menstruationFeatureAppealPoint1": "ရာသီစတင်ရက် လွယ်ကူစွာမှတ်သားပါ",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "စက်ဝန်းကို အလိုအလျောက် ခြေရာခံပါ",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
