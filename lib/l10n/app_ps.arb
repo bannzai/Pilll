@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "د ترتیباتو ټب کې د سویچ له لارې بدلول",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "د خاموش/فوکس حالت کې هم غږ کوي",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
