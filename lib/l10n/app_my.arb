@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint3": "ကာလကို တည်းဖြတ်ခြင်းနှင့် ပြန်လည်စတင်ခြင်းလည်း လွယ်ကူပါသည်",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealBody": "လက်ရှိဆေးပက်အုပ်စု သတ်မှတ်ထားသော ကာလ ပြီးဆုံးသည့်အချိန်တွင် အုပ်စုအသစ်ကို အလိုအလျောက် ဖန်တီးပေးပါသည်။ လက်ဖြင့် ပြောင်းရန် လိုအပ်မှုမရှိတော့ဘဲ မှတ်တမ်း ပျက်ကွက်မှုများ မဖြစ်ပေါ်စေပါ။",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
