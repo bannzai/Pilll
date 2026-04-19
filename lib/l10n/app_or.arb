@@ -2406,5 +2406,9 @@
   "lifetimePurchaseNotice1": "・\"ଏକକାଳୀନ ଯୋଜନା\" କ୍ରୟ କଲେ ମଧ୍ୟ \"ମାସିକ/ବାର୍ଷିକ ଯୋଜନା\" ସ୍ୱୟଂଚାଳିତ ଭାବରେ ବାତିଲ ହୁଏ ନାହିଁ।",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "ଏଠାରେ",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
