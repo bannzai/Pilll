@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "To lahko spremenite v zavihku »Nastavitve«.",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Odpre se tudi, če na začetnem zaslonu tapnete številko.",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
