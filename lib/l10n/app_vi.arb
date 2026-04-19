@@ -2454,5 +2454,9 @@
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Bạn có thể tùy chỉnh nội dung thông báo",
   "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Tùy chỉnh nội dung thông báo nhắc uống thuốc",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
   }
 }
