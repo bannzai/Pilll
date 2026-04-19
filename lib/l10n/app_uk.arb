@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Увімкнувши Критичні сповіщення (Critical Alert), ви отримуватимете нагадування про прийом навіть під час режиму «Не турбувати» або беззвучного режиму. Щоб не пропустити важливий час прийому пігулки, обов'язково увімкніть цю опцію.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Сповіщення: налаштуйте повідомлення",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
