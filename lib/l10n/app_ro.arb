@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Porniți din roata dințată din dreapta sus a foii de pilule",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Editarea și reluarea perioadei sunt ușoare",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
