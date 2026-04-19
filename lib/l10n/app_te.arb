@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "మాసికం ప్రారంభ తేదీని సులభంగా నమోదు చేయండి",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "చక్రాన్ని ఆటోమేటిక్‌గా గుర్తించడం",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
