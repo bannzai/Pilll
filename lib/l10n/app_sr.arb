@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Prilagodite poruku obaveštenja",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Prikaži raspored pilula po datumu",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
