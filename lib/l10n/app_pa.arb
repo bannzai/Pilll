@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "ਦਵਾਈ ਲੈਣ ਦੀ ਸੂਚਨਾ ਦਾ ਸੁਨੇਹਾ ਆਜ਼ਾਦੀ ਨਾਲ ਸੋਧੋ",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "ਮਿਆਰੀ \"ਗੋਲੀ ਲੈਣ ਦਾ ਸਮਾਂ ਹੈ\" ਨੂੰ ਤੁਸੀਂ ਆਪਣੀ ਮਨਪਸੰਦ ਗੱਲ ਵਿੱਚ ਬਦਲ ਸਕਦੇ ਹੋ। ਕੋਈ ਉਤਸ਼ਾਹ ਦੇਣ ਵਾਲਾ ਸੁਨੇਹਾ, ਆਪਣੇ ਪਾਲਤੂ ਜਾਨਵਰ ਦਾ ਨਾਮ, ਜਾਂ ਕੋਈ ਵੀ ਅਜਿਹੀ ਗੱਲ ਲਿਖੋ ਜੋ ਹਰ ਰੋਜ਼ ਗੋਲੀ ਲੈਣ ਨੂੰ ਹੋਰ ਖੁਸ਼ਹਾਲ ਬਣਾਵੇ।",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
