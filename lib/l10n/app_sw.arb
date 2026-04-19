@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Taarifa za kumbusho",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Tafadhali bonyeza tarehe kuandika ratiba",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
