@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealShortDescription": "Urus jadual masa hadapan seperti temu janji perubatan",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Rekod jadual masa depan dalam kalendar",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
