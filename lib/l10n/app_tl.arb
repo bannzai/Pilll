@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Hindi kinakailangan ang manu-manong paglikha.",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "I-toggle gamit ang switch sa tab na Mga Setting",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
