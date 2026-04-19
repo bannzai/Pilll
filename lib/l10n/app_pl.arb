@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Łatwe cofanie, nawet po pomyłce",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Sprawdzaj historię przyjmowania w dowolnym momencie",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
