@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "Alarm that rings like an alarm clock",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Thông báo vang lên ngay cả khi ở chế độ im lặng",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
