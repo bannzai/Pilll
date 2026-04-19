@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "サイレントモードでも通知が届く",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alertを有効にすると、おやすみモードやマナーモード中でも服用通知を受け取れます。大事なピルの服用タイミングを逃さないために、ぜひ設定してみてください。",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
