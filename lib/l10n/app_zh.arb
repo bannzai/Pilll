@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "将每日身体状况记录到日历",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "在日历中点选日期即可记录体况、心情与症状等。您可以与服药记录和生理记录一起查看，从而更好地掌握自身的身体节律。",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
