@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Isang-tap na pagtatala ng pag-inom mula sa screen ng abiso",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Kung pinindot nang matagal ang abiso ng paalala, lalabas ang aksyong \"Ininom na\" at maaaring mairekord ang pag-inom nang hindi binubuksan ang app.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
