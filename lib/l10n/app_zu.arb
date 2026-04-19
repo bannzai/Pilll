@@ -2502,5 +2502,9 @@
   "menstruationFeatureAppealHeadline": "Qopha futhi ubikezele ukuya kwakho esikhathini",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Uma uya esikhathini, vele urekhode; uzokwazi ukubuka uhlu lwemijikelezo yakho yangaphambilini. Usuku olulandelayo olulindelwe lokuya esikhathini luyabikezelwa ngokuzenzakalelayo, ukuze ukwazi ukuhlela kusengaphambili.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
