@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 နှင့်အထက်・ဆက်တင်တက်ဘ်မှ ဖွင့်ပါ",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "အခမဲ့ အသုံးပြုနိုင်သည့် နံပါတ်ချိန်ညှိ လုပ်ဆောင်ချက်",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
