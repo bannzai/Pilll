@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Gusa tarehe ili kurekodi hali yako ya mwili",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Ongeza tukio kwenye kalenda",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
