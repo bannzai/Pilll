@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Możesz zapisywać przyszłe plany w kalendarzu, takie jak wizyty lekarskie czy podróże. Ponieważ możesz je przeglądać razem z cyklem przyjmowania tabletek, możesz tworzyć plany uwzględniające również termin miesiączki.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Synchronizacja ze Zdrowiem",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
