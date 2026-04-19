@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "Isulat ang mga plano sa hinaharap",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Pamahalaan ang mga darating na appointment, gaya ng pagpunta sa doktor.",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
