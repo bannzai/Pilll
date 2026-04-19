@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "启用 Critical Alert 后，即使在勿扰模式或静音模式下也能收到服药提醒。为了不错过重要的服药时间，建议开启此设置。",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "自定义提醒消息",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
