@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "مهرباني وکړئ د تماس متن دننه کړئ",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "د یو ځل د پیرود پلان اخیستلو لپاره مننه. که چیری تاسو د میاشتني یا کلني پلان ګډون کړی یاست، نو د لغوه کولو هیر مه کوئ.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
