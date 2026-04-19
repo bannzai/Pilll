@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "暂停服用避孕药",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "您可以在药片表中记录暂时停止服用的期间。休药期间服药编号不会前进，恢复服用时可立即继续记录。",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
