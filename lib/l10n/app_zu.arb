@@ -2782,5 +2782,9 @@
   "todayPillNumberFeatureAppealPoint1": "Isici sokuhambisana kwezinombolo esingasetshenziswa mahhala",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Ungakushintsha kuthebhu yezilungiselelo",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
