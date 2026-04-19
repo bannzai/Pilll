@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Toque em uma data para adicionar um compromisso",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Sincronização automática de dados menstruais",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
