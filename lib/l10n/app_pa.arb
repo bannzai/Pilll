@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "ਸੈਟਿੰਗਾਂ ਕਸਟਮਾਈਜ਼ ਕਰੋ",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "ਕੈਲੰਡਰ ਵਿੱਚ ਰਿਕਾਰਡਾਂ ਦੀ ਸੂਚੀ",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
