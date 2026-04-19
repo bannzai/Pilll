@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Takvimde geçmiş kayıtları gözden geçirin",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Bir tarihe dokunarak durumunu kaydet",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
