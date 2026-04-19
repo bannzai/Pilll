@@ -2658,5 +2658,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "ਸੂਚਨਾ ਸੁਨੇਹਾ ਆਜ਼ਾਦੀ ਨਾਲ ਸੰਪਾਦਿਤ ਕਰੋ",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "ਰੋਜ਼ਾਨਾ ਦਵਾਈ ਸੂਚਨਾਵਾਂ ਵਿੱਚ ਲਾਗੂ ਕਰੋ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
   }
 }
