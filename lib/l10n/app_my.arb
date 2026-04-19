@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Silent mode တွင်လည်း သတိပေးချက်များ ရောက်ရှိနိုင်သည်",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alert ကို ဖွင့်ထားလျှင်၊ မနှောင့်မယှက်မုဒ် သို့မဟုတ် အသံတိတ်မုဒ်တွင်ပင် ဆေးသောက်ရမည့် အကြောင်းကြားချက်များကို လက်ခံနိုင်မည်ဖြစ်သည်။ အရေးကြီးသောဆေးသောက်ချိန်ကို မမေ့မလျော့စေရန်၊ ကျေးဇူးပြု၍ ချိန်ညှိပေးပါ။",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
