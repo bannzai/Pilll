@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "ਸਿਹਤ ਦਰਜ ਕਰਨ ਲਈ ਤਾਰੀਖ਼ ਟੈਪ ਕਰੋ",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "ਕੈਲੰਡਰ ਵਿੱਚ ਯੋਜਨਾ ਲਿਖੋ",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
