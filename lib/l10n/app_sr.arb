@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Ne zaboravite pilulu ni u režimu 'Ne ometaj'.",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Obaveštenja stižu čak i u tihom režimu",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
