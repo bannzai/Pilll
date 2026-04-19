@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealHeadline": "ଆଲାର୍ମ ଘଣ୍ଟା ପରି ଔଷଧ ସେବନ ଆଲାର୍ମ",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 ଓ ତଦୁର୍ଦ୍ଧ୍ବ ସଂସ୍କରଣରେ ଉପଲବ୍ଧ AlarmKit ବ୍ୟବହାର କରି, ସାଇଲେଣ୍ଟ ମୋଡ୍ ଓ ଫୋକସ ମୋଡ୍ ରେ ମଧ୍ୟ ନିଶ୍ଚିତ ଭାବରେ ବାଜୁଥିବା ଆଲାର୍ମ ଦ୍ୱାରା ପିଲ ସେବନ ବିଷୟରେ ଜଣାଇ ଦିଆଯାଏ।",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
