@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "通院予定や旅行の予定など、未来の予定をカレンダーに書き込めます。ピルの服用周期と合わせて確認できるので、生理の予定も考慮した計画を立てられます。",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "සෞඛ්‍ය සමඟ සම්බන්ධ කිරීම",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
