@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple Gezondheid-ondersteuning",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Inname registreren via meldingsactie",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
