@@ -2794,5 +2794,9 @@
   "restDurationFeatureAppealPoint1": "Gratis logg för pilleruppehåll",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Börja från kugghjulet uppe till höger på pillerarket.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
