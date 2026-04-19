@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "คุณสามารถปรับข้อความเริ่มต้น 'ถึงเวลาทานยาแล้ว' ให้เป็นคำที่คุณชอบได้ ลองเปลี่ยนเป็นคำที่ช่วยสร้างแรงจูงใจ หรือชื่อสัตว์เลี้ยง เพื่อทำให้การทานยาประจำวันสนุกขึ้น",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "แสดงวันที่บนแผ่นยา",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
