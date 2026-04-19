@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint3": "ဆေးသောက်မှတ်တမ်းကို အချိန်မရွေးကြည့်ရှုနိုင်",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "ရာသီစတင်ရက် လွယ်ကူစွာမှတ်သားပါ",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
