@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Înregistrare cu un singur tap din ecranul notificărilor",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Apăsați lung pe notificarea de memento pentru a afișa acțiunea „Am luat pastila\" și înregistrați administrarea fără a deschide aplicația.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
