@@ -2662,5 +2662,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "မိမိ၏ကိုယ်ပိုင်အကြောင်းကြားချက်မက်ဆေ့ချ်",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "ဆေးပြားစာရင်းကို ရက်စွဲဖြင့် ပြသ",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
