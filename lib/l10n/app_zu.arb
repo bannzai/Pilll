@@ -2770,5 +2770,9 @@
   "alarmKitFeatureAppealPoint1": "Izokwazisa noma ngabe imodi ithule noma imodi yokugxila ivuliwe.",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Umsindo we-alamu ofana newashi lokuvusa",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
