@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Når du aktiverer Critical Alert, kan du motta varsler om å ta pillen selv under Ikke forstyrr-modus eller stillemodus. Aktiver dette for å unngå å gå glipp av viktige tidspunkt for å ta pillen din.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Tilpass varslingsmeldingen",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
