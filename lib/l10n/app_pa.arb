@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "ਚੱਕਰ ਨੂੰ ਆਪਣੇ ਆਪ ਸਮਝੋ",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "ਸੈਟਿੰਗਾਂ ਕਸਟਮਾਈਜ਼ ਕਰੋ",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
