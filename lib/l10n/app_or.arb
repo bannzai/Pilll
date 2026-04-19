@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealBody": "ରିମାଇଣ୍ଡର ବିଜ୍ଞପ୍ତିକୁ ଲଙ୍ଗ ପ୍ରେସ୍ କଲେ \"ସେବନ କଲି\" ଆକ୍ସନ୍ ଦେଖାଯିବ, ଏବଂ ଆପ୍ ଖୋଲିବା ବିନା ଆପଣ ଔଷଧ ସେବନ ରେକର୍ଡ କରିପାରିବେ।",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "ପିଲ୍ ସିଟ୍ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ଯୋଡ଼ନ୍ତୁ",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
