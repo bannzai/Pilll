@@ -2502,5 +2502,9 @@
   "menstruationFeatureAppealShortDescription": "Adetin başlangıç tarihini kaydederek döngünü takip et",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Adet kaydı ve tahmin",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
