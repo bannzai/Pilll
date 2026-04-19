@@ -2570,5 +2570,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "ପିଲ୍ ସିଟ୍ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ଯୋଡ଼ନ୍ତୁ",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "ପରବର୍ତ୍ତୀ ସିଟ୍ ସ୍ୱୟଂଚାଳିତ ଭାବେ ତିଆରି କରନ୍ତୁ",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
