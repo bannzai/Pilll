@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "支持 Apple 健康",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "通过通知操作记录服药",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
