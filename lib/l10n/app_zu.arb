@@ -2654,5 +2654,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Hlela umyalezo wesaziso ngokwezifiso",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "Faka kuzaziso zansuku zonke zokuthatha umuthi",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
   }
 }
