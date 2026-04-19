@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Bir tarihe dokunarak durumunu kaydet",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "カレンダーに予定を書き込み",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
