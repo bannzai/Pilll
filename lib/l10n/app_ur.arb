@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "موجودہ پِل شیٹ گروپ ختم ہوتے ہی نیا پِل شیٹ گروپ خود بخود بنا دیا جاتا ہے۔ آپ کو دستی طور پر سوئچ کرنے کی ضرورت نہیں پڑتی، اس لیے ریکارڈ چھوٹنے کا خدشہ نہیں رہتا۔",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "جاگانے والا الارم",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
