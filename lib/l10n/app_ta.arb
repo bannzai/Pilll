@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "சுகாதாரத் தரவுகளுடன் இணைப்பு",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "மாதவிடாய் பதிவுகளை ஹெல்த் செயலியுடன் பகிரவும்",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
