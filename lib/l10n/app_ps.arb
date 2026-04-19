@@ -2550,5 +2550,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "د حیض ریکارډونه د روغتیا پاملرنې سره شریک کول",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "له HealthCare سره یوځای کیدلی شئ",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
