@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint2": "စက်ဝန်းကို အလိုအလျောက် ခြေရာခံပါ",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "ဆက်တင်ကို စိတ်ကြိုက်ပြင်ဆင်ပါ",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
