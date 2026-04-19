@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "आफ्नै सूचना सन्देशमा",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "मिति अनुसार पिल सिट देखाउनुस्",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
