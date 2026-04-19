@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Fuatilia mzunguko kiotomatiki",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Binafsisha mipangilio",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
