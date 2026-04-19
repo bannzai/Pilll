@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Menaxhoni lehtësisht datat e vizitave mjekësore",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Njoftim i kujtesës",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
