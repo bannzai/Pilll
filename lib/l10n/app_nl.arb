@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Eenvoudig doktersbezoeken beheren",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Melding via herinnering",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
