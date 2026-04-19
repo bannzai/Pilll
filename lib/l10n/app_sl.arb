@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Enostavna nastavitev z enim dotikom",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Prosto uredite sporočilo obvestila",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
