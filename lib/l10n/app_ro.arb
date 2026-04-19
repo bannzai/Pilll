@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealShortDescription": "Gestionați programările viitoare, cum ar fi vizitele la medic",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Înregistrați programările viitoare în calendar",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
