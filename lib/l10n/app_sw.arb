@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Tafadhali bonyeza tarehe kuandika ratiba",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Unganisha rekodi za hedhi kiotomatiki",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
