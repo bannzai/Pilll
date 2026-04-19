@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "Змінити номер таблетки на сьогодні",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Можна вручну відкоригувати номер пігулки на сьогодні, якщо через пропуск прийому або помилку номери на блістері не відповідають фактично прийнятим. Той самий екран також можна відкрити з відображення номера пігулки на головному екрані.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
