@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Arifa zinazosikika kwa uhakika hata wakati kifaa kiko kwenye hali ya kimya",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Kengele ya kukumbusha kuchukua dawa kama kengele ya kuamka",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
