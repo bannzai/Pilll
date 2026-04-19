@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Raqamlar siljigan bo'lsa, sozlamalarda to'g'rilang",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Bugun ichiladigan tableta raqamini o'zgartirishingiz mumkin",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
