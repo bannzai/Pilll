@@ -2794,5 +2794,9 @@
   "restDurationFeatureAppealPoint1": "အခမဲ့ အသုံးပြုနိုင်သည့် ဆေးရပ်ကာလ မှတ်တမ်း",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "ပီးလ်ရှစ်၏ ညာဘက်အပေါ်ရှိ ဂီယာမှ စတင်ပါ",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
