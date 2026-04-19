@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Notificări care sună sigur chiar și pe silențios",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Alarmă de administrare similară cu cea de trezire",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
