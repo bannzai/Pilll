@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "रिमाइन्डर सूचनालाई लामो थिच्नुहोस् भने 'सेवन गरियो' को कार्य देखिन्छ, र एप नखोलीकन सेवन रेकर्ड गर्न सकिन्छ।",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "पिल सिट स्वतः थप्नुहोस्",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
