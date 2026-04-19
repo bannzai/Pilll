@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "ඔබට අද ගන්නා පිල් අංකය වෙනස් කළ හැකිය",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "කඩපාඩුවකින් හෝ වෙනත් හේතුවක් නිසා පිල් ශීට්上的 අංකය සහ සැබැවින් ගත් පිළිවිල සූමුනු වූ විට, අද ගන්නේ කුමන පිල් අංකය යැයි ඔබට අතින් සකසගත හැකිය. ඔබට ගෘహ පිටුයේ පිල් අංකය පෙන්වීමෙන්ද ඒම ආකෘතිය මෙම තිරය විවෘත කළ හැකිය.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
