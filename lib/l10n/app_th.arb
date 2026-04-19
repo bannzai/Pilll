@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "มาจดแผนในอนาคตกันเถอะ",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "จัดการตารางนัดหมายในอนาคต เช่น นัดไปคลินิก",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
