@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Tukar automatik apabila helaian pil tamat",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Tiada operasi penciptaan manual diperlukan",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
