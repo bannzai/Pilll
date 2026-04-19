@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Du kan registrere helse, humør, symptomer og mer ved å trykke på en dato i kalenderen. Siden du kan se det sammen med medisinregistreringer og menstruasjonsregistreringer, kan du holde oversikt over kroppens rytme.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Skriv inn fremtidige avtaler",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
