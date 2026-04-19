@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Dodirnite datum u kalendaru da zabeležite stanje, raspoloženje, simptome i slično. Moći ćete da ih pregledate zajedno sa zapisima o uzimanju pilula i zapisima o menstruaciji, pa ćete lakše razumeti ritam svog tela.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Zabeležite buduće planove",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
