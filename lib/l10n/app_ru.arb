@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Бесплатная функция сопоставления номеров",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Можно изменить на вкладке «Настройки».",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
