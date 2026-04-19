@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Uygulamayı açmadan bildirim üzerinden kaydet",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Bildirim ekranında tek dokunuşla hap kullanım kaydı",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
