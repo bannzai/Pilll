@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Inname registreren via meldingsactie",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Voltooien zonder app te openen",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
