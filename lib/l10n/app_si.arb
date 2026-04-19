@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "පිල් ෂීට් සැකසුම්වලින් වෙනස් කළ හැකිය",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "පිල් පත්‍රය ටැප් කර ඔබ ගත් බව සටහන් කරන්න",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
