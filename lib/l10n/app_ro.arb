@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Afișare foaie de pastile după dată",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Știi data fără să te uiți la calendar",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
