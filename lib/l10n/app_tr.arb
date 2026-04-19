@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Ücretsiz kullanılabilen ara/ilaçsız kayıt",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Hap çizelgesinin sağ üst köşesindeki dişli simgesinden başlayın",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
