@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "உடல்நிலையை பதிவு செய்து மீள்பாருங்கள்",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "காலண்டரில் கடந்த பதிவுகளைப் பார்க்கவும்",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
