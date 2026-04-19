@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Basta tocar na cartela de pílulas na tela inicial para registrar a dose do dia. Caso registre por engano, toque novamente para desfazer. Você também pode verificar o histórico de doses posteriormente, para continuar com tranquilidade.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Registrar e prever a menstruação",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
