@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "ดูประวัติการทานยาได้ทุกเมื่อ",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "บันทึกวันเริ่มประจำเดือนอย่างง่าย",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
