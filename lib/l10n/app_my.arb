@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "ဆေးပြားကို အလိုအလျောက် ထည့်သွင်းပါ",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "နောက်ရှမ်းကို အလိုအလျောက်ဖန်တီးပါ",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
