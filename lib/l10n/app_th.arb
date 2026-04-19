@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "สามารถเปลี่ยนได้จากแท็บการตั้งค่า",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "แตะตัวเลขบนหน้าหลักก็เปิดได้",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
