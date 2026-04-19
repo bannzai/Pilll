@@ -2746,5 +2746,9 @@
   "quickRecordFeatureAppealPoint1": "通知のアクションで服用記録",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Kuphothuliwe ngaphandle kokuvula uhlelo lokusebenza",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
