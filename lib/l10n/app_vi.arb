@@ -2430,5 +2430,9 @@
   "recommendSignupGeneralDescription": "Đăng ký để sao lưu dữ liệu của bạn",
   "@recommendSignupGeneralDescription": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "Nhận thông báo ngay cả khi ở chế độ im lặng",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
   }
 }
