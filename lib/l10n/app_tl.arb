@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "ピルシート右上の歯車から開始",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Madali ring i-edit at ipagpatuloy ang iyong regla",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
