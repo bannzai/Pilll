@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "ヘルスケアアプリに同期",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
