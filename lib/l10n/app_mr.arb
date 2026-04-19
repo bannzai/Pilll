@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "औषध विश्रांती कालावधी नोंदवा",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "विश्रांती व व्यत्यय अचूकपणे व्यवस्थापित करा",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
