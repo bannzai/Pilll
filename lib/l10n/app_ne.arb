@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "गोली नखाने अवधि रेकर्ड गर्नुहोस्",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "विराम र अवरोधको सटीक व्यवस्थापन",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
