@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Makkelijk ongedaan maken, ook bij vergissingen",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Bekijk de inname-geschiedenis op elk moment",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
