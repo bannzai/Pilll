@@ -2550,5 +2550,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "හෙල්ත් කෙයාර් සමඟ රජින වාර්තා බෙදා ගැනීම",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "සෞඛ්‍ය ඇප් සමඟ සම්බන්ධ විය හැක",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
