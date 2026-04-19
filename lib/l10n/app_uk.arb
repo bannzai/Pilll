@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Безкоштовний запис перерв у прийомі таблеток",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Розпочніть зі значка шестерні у правому верхньому куті аркуша пігул.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
