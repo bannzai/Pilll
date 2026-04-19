@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Автоматичне створення наступного листа таблеток",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Коли поточна група упаковок таблеток закінчиться, нова група буде створена автоматично. Ручне перемикання не потрібне, тому не буде пропусків у записах.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
