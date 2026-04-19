@@ -2622,5 +2622,9 @@
   "restDurationFeatureAppealTitle": "ဆေးသောက်ရပ်နားချိန်ကို မှတ်တမ်းတင်ပါ",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "ဆေးနားချိန်နှင့် ရပ်ဆိုင်းချိန်ကို တိကျစွာ စီမံပါ",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
