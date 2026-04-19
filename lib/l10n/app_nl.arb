@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "Vandaag het pilnummer aanpassen",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Nummer onjuist? Pas aan in instellingen",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
