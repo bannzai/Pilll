@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "که هم غلطي وشي، اسانه لغوه کول",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "د دوا د کارولو تاریخچه هر وخت وګورئ",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
