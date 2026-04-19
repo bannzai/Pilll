@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "హెల్త్‌కేర్‌తో అనుసంధానం",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "మీ మాసిక రికార్డులను Health (హెల్త్)తో పంచుకోండి",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
