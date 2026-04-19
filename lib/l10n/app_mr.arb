@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "गजरासारखा वाजणारा अलार्म",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "सायलेंट असतानाही नक्की वाजणाऱ्या सूचना",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
