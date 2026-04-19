@@ -2574,5 +2574,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Faka amashidi wamaphilisi ngokuzenzakalelayo",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Dala ishidi elilandelayo ngokuzenzakalelayo",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
