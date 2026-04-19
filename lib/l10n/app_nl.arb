@@ -2514,5 +2514,9 @@
   "calendarDiaryFeatureAppealTitle": "Gezondheid bijhouden in agenda",
   "@calendarDiaryFeatureAppealTitle": {
     "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Leg je dagelijkse gezondheid vast in de agenda",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
   }
 }
