@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Wekkermelding voor innemen",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "Met AlarmKit, beschikbaar vanaf iOS 26, wordt u via een alarm dat zelfs in de stille modus of focusmodus altijd afgaat, herinnerd aan het innemen van uw pil.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
