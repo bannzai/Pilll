@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "အကြောင်းကြားချက်မျက်နှာပြင်မှ တစ်ချက်နှိပ်ဖြင့် ဆေးသောက်မှတ်တမ်းတင်ပါ",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "သတိပေးချက်ကို ကြာကြာနှိပ်ထားလျှင် \"သောက်ပြီးပြီ\" လုပ်ဆောင်ချက် ပေါ်လာပြီး အက်ပ်ကိုမဖွင့်ဘဲ ဆေးသောက်မှတ်တမ်းကို မှတ်သားနိုင်သည်။",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
