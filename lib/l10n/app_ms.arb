@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Mulakan dari gear di bahagian kanan atas helaian pil",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Mengedit dan meneruskan tempoh juga mudah",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
