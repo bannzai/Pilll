@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Автоматична синхронізація записів про менструацію",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Синхронізувати з додатком «Здоров'я»",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
