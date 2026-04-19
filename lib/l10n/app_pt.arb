@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealShortDescription": "Gerencie compromissos futuros, como consultas médicas",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Registrar compromissos futuros no calendário",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
