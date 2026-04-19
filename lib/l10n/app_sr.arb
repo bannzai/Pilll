@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Povezivanje sa Zdravljem",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Deljenje podataka o menstrualnom ciklusu sa Zdravljem",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
