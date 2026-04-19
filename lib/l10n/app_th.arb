@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "แตะวันที่เพื่อเพิ่มกำหนดการ",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "เชื่อมต่อข้อมูลบันทึกประจำเดือนโดยอัตโนมัติ",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
