@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "Rejestruj przyjęcie leku bezpośrednio z powiadomienia",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Zapisuj z powiadomień bez otwierania aplikacji",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
