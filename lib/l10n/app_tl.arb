@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Lokasyon sa loob ng app",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Makakatanggap pa rin ng mga abiso kahit naka-Focus mode",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
