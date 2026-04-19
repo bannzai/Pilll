@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "ਦਵਾਈ ਦੇ ਆਰਾਮ ਦੀ ਮਿਆਦ ਰਿਕਾਰਡ ਕਰੋ",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "ਦਵਾਈ ਦੀ ਛੁੱਟੀ ਅਤੇ ਰੁਕਾਵਟ ਦਾ ਸਟੀਕ ਪ੍ਰਬੰਧਨ",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
