@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "误操作也可轻松撤销",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "随时查看服药记录",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
