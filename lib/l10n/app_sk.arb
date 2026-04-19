@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Prepnite pomocou prepínača na záložke Nastavenia.",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Tento text je už v japončine preložený v aplikácii",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
