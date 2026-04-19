@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "ਦਵਾਈ ਲੈਣ ਦਾ ਇਤਿਹਾਸ ਕਿਸੇ ਵੀ ਸਮੇਂ ਦੇਖੋ",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "ਮਾਹਵਾਰੀ ਸ਼ੁਰੂ ਹੋਣ ਦੀ ਤਾਰੀਖ਼ ਆਸਾਨੀ ਨਾਲ ਦਰਜ ਕਰੋ",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
