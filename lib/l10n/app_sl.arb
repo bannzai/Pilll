@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Zabeležite neposredno v obvestilu, brez odpiranja aplikacije.",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Zabeležite jemanje z enim dotikom iz obvestilnega zaslona",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
