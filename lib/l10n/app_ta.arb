@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "மணித்தட்டம் போல ஒலிக்கும் அலாரம்",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "மௌன நிலையில் இருந்தாலும் நிச்சயமாக ஒலிக்கும் அறிவிப்பு",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
