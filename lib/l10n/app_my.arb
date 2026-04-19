@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint3": "တစ်ချက်နှိပ်ရုံဖြင့် လွယ်ကူစွာ ဆက်တင်နိုင်",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "သတိပေးချက် မက်ဆေ့ချ်ကို လွတ်လပ်စွာ တည်းဖြတ်ပါ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
