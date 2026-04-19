@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealShortDescription": "Isaziso esizovakala ngokuqinisekile ngisho nangesikhathi imodi ethule ivuliwe.",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "I-alamu yokuthatha amaphilisi efana neyokuvusa",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
