@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Uma sekuqedile iqembu lamanani wamaphilisi lamanje, iqembu elisha lamanani wamaphilisi lizokwakhiwa ngokuzenzakalelayo. Akudingeki ukuthi uguqule ngesandla, futhi akukho okushodayo emlandweni wokurekhoda.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Isixwayiso esishaya njengowashi lokuvusa",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
