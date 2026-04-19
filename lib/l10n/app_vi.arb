@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Ghi chép nghỉ uống thuốc miễn phí",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Bắt đầu từ biểu tượng bánh răng ở góc trên bên phải của vỉ thuốc",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
