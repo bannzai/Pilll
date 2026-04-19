@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Brezplačna funkcija ujemanja številk",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "To lahko spremenite v zavihku »Nastavitve«.",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
