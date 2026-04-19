@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Inaweza kubadilishwa kupitia mipangilio ya karatasi ya vidonge",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Gusa karatasi ya vidonge ili kurekodi ulivyotumia",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
