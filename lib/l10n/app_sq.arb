@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Tingull alarmi si ai i orës së zgjimit",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "Në iOS 26 e më vonë · aktivizoni nga skeda Cilësimet",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
