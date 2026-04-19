@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Njoftimet do të shfaqen edhe në modalitetin pa zë",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Nëse aktivizoni Critical Alert, do të merrni njoftimet për marrjen e pilulës edhe kur telefoni është në modalitetin 'Mos shqetësoni' ose në modalitetin pa zë. Aktivizojeni për të mos humbur kohët e rëndësishme të marrjes së pilulës.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
