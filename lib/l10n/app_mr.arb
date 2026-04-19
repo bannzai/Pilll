@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "फोकस मोड दरम्यान देखील सूचना मिळतात",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "सेट केलेल्या वेळी निश्चितपणे स्मरणपत्र",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
