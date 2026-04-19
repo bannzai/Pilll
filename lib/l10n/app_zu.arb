@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealShortDescription": "Qopha usuku lokuqala lwenyanga ukuze ulandele futhi uqonde ijikelezo lakho.",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Qopha futhi ubikezele ukuya kwakho esikhathini",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
