@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Ručno kreiranje nije potrebno.",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Prevedi na srpski: 設定タブのスイッチで切り替え",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
