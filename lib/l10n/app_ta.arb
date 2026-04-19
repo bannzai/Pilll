@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "சில காலத்திற்கு மாத்திரை எடுப்பதை நிறுத்திய காலத்தை பில்‌ஷீட்டில் பதிவு செய்யலாம். ஓய்வில் இருக்கும் போது மாத்திரை எண்ணு முன்னேறாமல் இருக்கும், மீண்டும் தொடங்கும்போது பதிவை உடனே தொடரலாம்.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "பயன்பாட்டில் உள்ள இடம்",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
