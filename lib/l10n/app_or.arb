@@ -2518,5 +2518,9 @@
   "calendarDiaryFeatureAppealBody": "କ୍ୟାଲେଣ୍ଡରରୁ ଏକ ତାରିଖ ଟ୍ୟାପ୍ କରି ଆପଣ ଆପଣଙ୍କ ଶାରୀରିକ ଅବସ୍ଥା, ମନୋଭାବ, ଲକ୍ଷଣ ଆଦି ରେକର୍ଡ କରିପାରିବେ। ଔଷଧ ସେବନ ରେକର୍ଡ ଏବଂ ଋତୁସ୍ରାବ ରେକର୍ଡ ସହ ଏକାସାଙ୍ଗରେ ଯାଞ୍ଚ କରିହେଉଥିବାରୁ, ଆପଣ ନିଜ ଶରୀରର ଲୟ ବୁଝିପାରିବେ।",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "ଆସନ୍ତା ଯୋଜନା ଲେଖ",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
