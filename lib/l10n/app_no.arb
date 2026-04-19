@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Trykk på en dato for å registrere helsetilstanden din",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Skriv inn avtaler i kalenderen",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
