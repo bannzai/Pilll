@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "Наведено је подешено време за поуздано подсећање",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "ワンタップでかんたん設定",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
