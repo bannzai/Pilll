@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Перегляд минулих записів у календарі",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Торкніться дати, щоб записати самопочуття",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
