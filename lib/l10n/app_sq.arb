@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Regjistro dhe parashiko menstruacionet",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Regjistroni datën e fillimit të menstruacioneve për të ndjekur ciklin.",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
