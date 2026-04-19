@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple Helse-støtte",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Registrer medisininntak via varslingshandling",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
