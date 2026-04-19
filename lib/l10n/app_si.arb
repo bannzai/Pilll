@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "ඔබටම විශේෂිත දැනුම්දීමේ පණිවිඩයක්",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "පිල් පත්‍රිකාව දිනය අනුව පෙන්වන්න",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
