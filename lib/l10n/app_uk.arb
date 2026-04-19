@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Налаштуйте текст повідомлення нагадування про прийом пігулок",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "{\n  \"notification_message_customization_help\": \"Можна налаштувати стандартне повідомлення «Час прийняти пігулку» на будь‑який текст, який вам до вподоби. Спробуйте змінити його на слова, що мотивують, або на ім'я вашого улюбленця — так щоденний прийом стане приємнішим.\",\n  \"@notification_message_customization_help\": {\n    \"description\": \"通知メッセージカスタマイズ機能のヘルプページの本文\"\n  }\n}",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
