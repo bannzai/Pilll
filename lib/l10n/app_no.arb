@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealHeadline": "Registrer og forutsi mensen din",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Bare registrer når mensen din kommer, så kan du se en oversikt over din tidligere menshistorikk. Neste forventede mensdato beregnes også automatisk, slik at du kan planlegge dagene dine på forhånd.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
