@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Якщо натиснути й утримувати сповіщення-нагадування, з’явиться дія «Прийнято», яка дозволить зафіксувати прийом без відкриття додатка.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Автоматичне додавання аркуша для таблеток",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
