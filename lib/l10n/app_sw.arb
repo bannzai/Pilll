@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Linganisha na programu ya afya",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Inaunga mkono Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
