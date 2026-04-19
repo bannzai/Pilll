@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "యాప్ తెరవకుండానే నోటిఫికేషన్‌లోనే నమోదు",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "నోటిఫికేషన్ స్క్రీన్‌లో ఒక ట్యాప్‌తో పిల్ తీసుకున్నట్లు నమోదు",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
