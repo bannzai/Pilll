@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "د روغتیا احوال یادداشت کړئ او بیاکتنه یې وکړئ",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "د تقویم له لارې د تیرو ریکارډونو بیاکتنه",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
