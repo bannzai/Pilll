@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Poate afișa data pe foaia de pastile",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Afișând datele în celulele foii de pastile, puteți verifica dintr-o privire istoricul de administrare trecut și programul de administrare viitor. Comutați între modul „Număr\" și modul „Dată\" pentru a alege afișajul care vi se potrivește.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
