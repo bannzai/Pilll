@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Tự động xác định chu kỳ",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Tùy chỉnh cài đặt",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
