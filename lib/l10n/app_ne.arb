@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "पिल शिट समाप्त हुँदा स्वचालित परिवर्तन",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "म्यानुअल सिर्जना कार्य आवश्यक छैन",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
