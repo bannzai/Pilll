@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "तारीखेवर टॅप करून प्रकृती नोंदवा",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "कॅलेंडरवर कार्यक्रम लिहा",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
