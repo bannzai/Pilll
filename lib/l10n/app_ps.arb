@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "نن د حبې شمیره بدلولی شئ",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "کله چې د هیرولو یا غلطۍ له امله د پیل شیټ پر شمیره او اصلي مصرف ترمینځ توپیر رامنځته شي، تاسو کولی شئ د نن ورځې د پیل شمیره لاسي سمه کړئ. همدا پرده د کور د پیل شمیرې ښودنې له لارې هم خلاصولی شئ.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
