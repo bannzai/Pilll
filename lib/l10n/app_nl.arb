@@ -2550,5 +2550,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "Menstruatiegegevens delen met Gezondheid",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "Koppelen met Gezondheid",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
