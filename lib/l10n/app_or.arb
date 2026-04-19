@@ -2526,5 +2526,9 @@
   "futureScheduleFeatureAppealShortDescription": "ଡାକ୍ତର ଦର୍ଶନ ଭଳି ଭବିଷ୍ୟ ଯୋଜନା ପରିଚାଳନା",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "କ୍ୟାଲେଣ୍ଡରରେ ଭବିଷ୍ୟତ ଯୋଜନା ରେକର୍ଡ କରନ୍ତୁ",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
