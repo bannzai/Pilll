@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Receba notificações mesmo durante o Modo Foco",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Lembrete garantido no horário definido",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
