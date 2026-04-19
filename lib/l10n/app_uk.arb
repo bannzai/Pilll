@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Місця в додатку",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Сповіщення надходять навіть у режимі фокусування",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
