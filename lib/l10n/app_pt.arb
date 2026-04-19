@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Ao exibir as datas nas células da cartela de comprimidos, você pode verificar de relance o histórico de uso passado e os planos futuros de uso. Alterne entre o modo \"Número\" e o modo \"Data\" para escolher a visualização que mais combina com você.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Revisar o histórico de comprimidos facilmente",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
