@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "Përdor AlarmKit të disponueshëm në iOS 26 e më lart për t'ju kujtuar të merrni pilulën me një alarm që do të tingëllojë patjetër edhe në modalitetin pa zë dhe në modalitetin Fokus.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Rregullo numrin e marrjes për sot",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
