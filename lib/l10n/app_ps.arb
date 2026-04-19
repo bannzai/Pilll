@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "د کور سکرین کې د حبوبو د مصرف ثبتول",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "د کور سکرین پر د پیل شیټ یوازې د لمسولو سره، تاسو کولی شئ د هغه ورځې د دوا اخیستل ثبت کړئ. که چیرې غلطي وشي، بیا یو ځل ولمسئ ترڅو لغوه کړئ. د دوا اخیستلو تاریخچه هم وروسته کتلی کیدای شي، نو تاسو کولی شئ د آرامۍ سره دوام ورکړئ.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
