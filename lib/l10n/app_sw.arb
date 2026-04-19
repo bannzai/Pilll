@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Anza kwa kugonga ikoni ya gia (mipangilio) juu-kulia kwenye shidi ya vidonge.",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Uhariri na kuanza tena kipindi cha hedhi ni rahisi pia",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
