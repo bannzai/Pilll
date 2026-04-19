@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "காலண்டரில் கடந்த பதிவுகளைப் பார்க்கவும்",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "{\n  \"tapDateToRecordCondition\": \"திகதியைத் தட்டவும், உடல்நிலையை பதிவு செய்யவும்\",\n  \"@tapDateToRecordCondition\": {\n    \"description\": \"カレンダー画面で、日付をタップして体調を記録するよう促す文言。\"\n  }\n}",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
