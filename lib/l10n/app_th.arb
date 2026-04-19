@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "แตะวันที่เพื่อบันทึกสภาพร่างกาย",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "เพิ่มรายการในปฏิทิน",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
