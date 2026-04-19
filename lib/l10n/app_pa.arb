@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "ਕੈਲੰਡਰ ਵਿੱਚ ਰਿਕਾਰਡਾਂ ਦੀ ਸੂਚੀ",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "ਸਿਹਤ ਨੋਟ ਕਰੋ ਅਤੇ ਸਮੀਖਿਆ ਕਰੋ",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
