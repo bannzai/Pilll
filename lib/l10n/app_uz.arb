@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Sozlamalar bo'limidagi kalit bilan almashtiring",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Sukut/Diqqat rejimida ham chalinadi",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
