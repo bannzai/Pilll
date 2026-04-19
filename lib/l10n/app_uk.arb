@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Завершити без відкриття програми",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Доступно відразу після оформлення підписки Premium",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
