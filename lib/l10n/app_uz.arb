@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Ilovani ochmasdan yakunlash",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Premium obunasiga o'tsangiz, darhol foydalanishingiz mumkin",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
