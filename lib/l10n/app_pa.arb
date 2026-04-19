@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "ਕੈਲੰਡਰ ਤੋਂ ਤਾਰੀਖ਼ ਟੈਪ ਕਰਕੇ ਸਿਹਤ, ਮੂਡ, ਲੱਛਣ ਆਦਿ ਦਰਜ ਕਰ ਸਕਦੇ ਹੋ। ਦਵਾਈ ਲੈਣ ਦੇ ਰਿਕਾਰਡ ਅਤੇ ਮਾਹਵਾਰੀ ਦੇ ਰਿਕਾਰਡ ਦੇ ਨਾਲ ਮਿਲ ਕੇ ਦੇਖ ਸਕਦੇ ਹੋ, ਜਿਸ ਨਾਲ ਆਪਣੇ ਸਰੀਰ ਦੀ ਲੈਅ ਨੂੰ ਸਮਝਿਆ ਜਾ ਸਕਦਾ ਹੈ।",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "ਭਵਿੱਖ ਦੀਆਂ ਯੋਜਨਾਵਾਂ ਲਿਖੋ",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
