@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "క్యాలెండర్ చూడకుండానే తేదీ తెలుసుకోవచ్చు",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "పిల్ షీట్ సెట్టింగుల నుంచి మార్చవచ్చు",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
