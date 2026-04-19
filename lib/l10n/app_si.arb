@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "කැලැන්ඩරයේ වාර්තා බලන්න",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "\"体調をメモして振り返り\" - 日本語からシンハラ語への翻訳",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
