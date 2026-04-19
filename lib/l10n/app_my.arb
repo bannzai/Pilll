@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint2": "ပြက္ခဒိန်မကြည့်ဘဲ ရက်စွဲကိုသိနိုင်သည်",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "ဆေးပြားစာရင်း ဆက်တင်မှ ပြောင်းလဲနိုင်သည်",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
