@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Зафіксувати прийом через дію у сповіщенні",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Завершити без відкриття програми",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
