@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "无需手动创建",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "通过“设置”选项卡的开关切换",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
