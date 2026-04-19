@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Preveniți uitarea pastilelor chiar și în modul Nu deranja",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Notificări chiar și în modul silențios",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
