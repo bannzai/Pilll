@@ -2746,5 +2746,9 @@
   "quickRecordFeatureAppealPoint1": "အကြောင်းကြားချက်မှ ဆေးသောက်မှတ်တမ်းရေး",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "အက်ပ်မဖွင့်ဘဲ ပြီးစီးပါ",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
