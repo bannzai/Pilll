@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Pokaži listke zdravil po datumu",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Vidite datum, tudi če ne odprete koledarja.",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
