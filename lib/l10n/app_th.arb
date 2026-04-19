@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "ตั้งค่าได้ง่ายเพียงแตะครั้งเดียว",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "แก้ไขข้อความการแจ้งเตือนได้ตามต้องการ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
