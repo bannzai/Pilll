@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Unaweza kurekodi matumizi ya siku hiyo kwa kubofya tu karatasi ya vidonge kwenye skrini ya nyumbani. Ikiwa umeirekodi kwa bahati mbaya, bonyeza tena ili kuifuta. Unaweza pia kuangalia historia ya matumizi baadaye, hivyo unaweza kuendelea bila wasiwasi.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Rekodi na utabiri wa hedhi",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
