@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Đồng bộ với ứng dụng Sức khỏe",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Tương thích với Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
