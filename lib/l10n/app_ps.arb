@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "د خاموش/فوکس حالت کې هم غږ کوي",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "د بیدارۍ زنګ غوندې الارم غږ",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
