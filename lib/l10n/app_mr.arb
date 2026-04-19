@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "सायलेंट असतानाही नक्की वाजणाऱ्या सूचना",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "अलार्म घड्याळासारखा औषध सेवन अलार्म",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
