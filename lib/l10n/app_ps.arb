@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "د خبرتیا د عمل له لارې د دارو خوراک ثبتول",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "د ایپ پرانیستلو پرته بشپړول",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
