@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Maaaring baguhin mula sa tab na Mga setting.",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Maaari ring buksan mula sa Home screen sa pamamagitan ng pag-tap sa numero.",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
