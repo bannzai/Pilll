@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "ピルシートを日付で表示",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Unaweza kujua tarehe bila kuangalia kalenda.",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
