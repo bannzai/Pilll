@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "د بیدارۍ زنګ غوندې الارم غږ",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "د iOS 26 یا وروسته · د ترتیباتو ټب څخه فعاله کړئ",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
