@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "తేదీని ట్యాప్ చేసి ప్లాన్‌ను నమోదు చేయండి",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "పీరియడ్ రికార్డులను స్వయంచాలకంగా డేటాతో అనుసంధానించండి",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
