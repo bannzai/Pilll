@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "मासिक धर्म रेकर्डको स्वचालित डेटा सिङ्क",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "हेल्थकेयर एपमा सिंक",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
