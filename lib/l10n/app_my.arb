@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealLocationHint": "ရက်စွဲကို နှိပ်၍ ကျန်းမာရေးအခြေအနေ မှတ်တမ်းတင်ပါ",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "ပြက္ခဒိန်တွင် အစီအစဉ်ရေးသွင်းရန်",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
