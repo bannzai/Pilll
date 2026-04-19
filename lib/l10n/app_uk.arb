@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "Встановити номер прийому на сьогодні",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Налаштуйте у встановленнях, якщо номер збився",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
