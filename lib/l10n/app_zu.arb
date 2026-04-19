@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint3": "Ku-iOS 26 nangaphezulu — yenza kusebenze kuthebhu yezilungiselelo",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Isici sokuhambisana kwezinombolo esingasetshenziswa mahhala",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
