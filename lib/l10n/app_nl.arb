@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Gratis te gebruiken rustweekregistratie",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Starten via het tandwielpictogram rechtsboven op het pillenblad",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
