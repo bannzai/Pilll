@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Starten via het tandwielpictogram rechtsboven op het pillenblad",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Periode bewerken en hervatten is ook eenvoudig",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
