@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "ホーム画面でピルの服用を記録",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "முகப்பு திரையில் உள்ள பில் ஷீட்டை தொட்டால் அந்த day's எடுத்தது பதிவாகும். தவறாக பதிவு செய்திருந்தால் மீண்டும் தொட்டால் அது ரத்து செய்யப்படும். பின்னர் மருந்து எடுத்த வரலாறையும் பார்க்க முடியும், அதனால் நிம்மதியுடன் தொடரலாம்。",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
