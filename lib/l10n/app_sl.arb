@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Povezava z zdravstvenimi podatki",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Delite zapise o menstruaciji z aplikacijo Zdravje",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
