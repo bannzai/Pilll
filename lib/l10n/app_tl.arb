@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Tingnan agad kung kailan iinumin",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Ipakita ang petsa sa pill sheet",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
