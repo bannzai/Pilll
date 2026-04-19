@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Nhận thông báo ngay cả khi đang ở Chế độ Tập trung",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "設定した時刻に確実にリマインド",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
