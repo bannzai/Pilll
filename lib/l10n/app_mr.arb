@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "आजचा गोळी क्रमांक जुळवा",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "क्रमांक चुकला तर सेटिंग्जमध्ये दुरुस्त करा",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
