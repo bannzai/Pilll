@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "ఎప్పుడు తీసుకోవాలో ఒక చూపులో తెలుసుకోండి",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "పిల్ షీట్‌లో తేదీలు చూపించవచ్చు",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
