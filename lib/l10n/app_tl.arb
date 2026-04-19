@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Libreng tala ng pahinga sa pag-inom ng tableta",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "ピルシート右上の歯車から開始",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
