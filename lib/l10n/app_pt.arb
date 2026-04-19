@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "Alarme que toca como um despertador",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Notificação garantida mesmo no modo silencioso",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
