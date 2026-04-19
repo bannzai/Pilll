@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Tapnite datum, da dodate dogodek.",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Samodejno sinhroniziranje zapisov menstruacije",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
