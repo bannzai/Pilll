@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "I would translate here",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "过去の記録をカレンダーで振り返り",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
