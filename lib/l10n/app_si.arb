@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "නිවේදනයෙන් සෘජුවම බෙහෙත් ගත් බව සටහන් කරන්න",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "යෙදුම විවෘත නොකර දැනුම්දීම් පණිවිඩයෙන්ම සටහන් කරන්න",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
