@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "集中モード中でも通知が届く",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "确保在设定的时间准时提醒",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
