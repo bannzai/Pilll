@@ -2582,5 +2582,9 @@
   "creatingNewPillSheetFeatureAppealBody": "ବର୍ତ୍ତମାନ ପିଲ୍ ସିଟ୍ ଗ୍ରୁପ୍ ଶେଷ ହେଲେ, ଏକ ନୂତନ ପିଲ୍ ସିଟ୍ ଗ୍ରୁପ୍ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ସୃଷ୍ଟି ହୋଇଯାଏ। ହସ୍ତଚାଳିତ ପରିବର୍ତ୍ତନ ଅପ୍ରେସନ ଆବଶ୍ୟକ ନୁହେଁ, ଏବଂ ରେକର୍ଡରେ ଫାଙ୍କ ପଡ଼େ ନାହିଁ।",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "ଆଲାର୍ମ ଘଣ୍ଟା ପରି ବାଜୁଥିବା ଅ୍ୟାଲାର୍ମ",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
