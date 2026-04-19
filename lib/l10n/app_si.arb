@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "මාසික වාර්තා ස්වයංක්‍රීයව දත්ත සමඟ සම්බන්ධ කිරීම",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "සෞඛ්‍ය යෙදුම සමඟ සමකාලීන කරන්න",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
