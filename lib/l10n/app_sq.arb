@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "Shkruani planet e ardhshme",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Menaxho planet e ardhshme, si vizitat tek mjeku.",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
