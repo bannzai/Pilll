@@ -2526,5 +2526,9 @@
   "futureScheduleFeatureAppealTitle": "Skriv ner framtida planer",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Hantera framtida planer, t.ex. läkarbesök.",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
