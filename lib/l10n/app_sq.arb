@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealShortDescription": "Menaxho planet e ardhshme, si vizitat tek mjeku.",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Regjistroni planet e ardhshme në kalendar",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
