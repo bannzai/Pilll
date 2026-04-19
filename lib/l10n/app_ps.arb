@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "د اپل روغتیا ملاتړ",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "د خبرتیا د عمل له لارې د دارو خوراک ثبتول",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
