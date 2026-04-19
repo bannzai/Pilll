@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "サイレントモードでも通知を受け取る",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "නිද්‍රා මෝඩ්හිදිත් බෙහෙත් ගැනීම අමතක වීම වැළැක්වන්න",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
