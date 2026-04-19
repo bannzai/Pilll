@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "Klepnite na dátum v kalendári a môžete zaznamenať svoj zdravotný stav, náladu alebo príznaky. Tieto záznamy si môžete prezerať spolu s históriou užívania piluliek a záznamami menštruácie, takže lepšie pochopíte rytmus svojho tela.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Zaznamenajte svoje budúce plány",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
