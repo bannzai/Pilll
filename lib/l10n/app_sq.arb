@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Prekni datën për të shtuar një plan",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Biçim: l10n/*.arb, manter placeholders como {VAL}, traduzir para shqip (sq). Contexto: app Pilll - gerenciamento de pílulas, lembretes, histórico, menstruação, iOS/Android Flutter. Input: 日本語: 生理記録を自動でデータ連携 補助情報: ",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
