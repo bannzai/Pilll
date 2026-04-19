@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Door op het pillenblad op het startscherm te tikken, kunt u de inname van die dag registreren. Als u per ongeluk een registratie heeft gemaakt, tikt u nogmaals om dit ongedaan te maken. U kunt uw innamegeschiedenis ook later terugkijken, zodat u gerust kunt doorgaan.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Menstruatie bijhouden & voorspellen",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
