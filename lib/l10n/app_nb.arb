@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Registrer fra varsler uten å åpne appen",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Registrer medisininntak med ett trykk fra varslingsskjermen",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
