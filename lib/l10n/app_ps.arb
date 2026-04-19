@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "د خاموشۍ حالت کې هم خبرتیاوې رارسیږي",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "که چیرې Critical Alert فعال کړئ، نو د آرامۍ حالت (Do Not Disturb) یا د خاموشۍ حالت کې هم د دوا د خوړلو خبرتیاوې ترلاسه کولی شئ. د مهمو پیلونو د خوړلو وخت له لاسه مه ورکوئ، نو خامخا یې ترتیب کړئ.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
