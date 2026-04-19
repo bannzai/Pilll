@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Ingen manuell oppretting nødvendig",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Bytt med bryteren i innstillingsfanen",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
