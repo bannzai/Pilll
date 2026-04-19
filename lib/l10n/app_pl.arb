@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Twoja własna wiadomość powiadomienia",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Wyświetl arkusz tabletek według daty",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
