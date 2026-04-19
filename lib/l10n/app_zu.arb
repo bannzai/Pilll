@@ -2582,5 +2582,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Dala ngokuzenzakalelayo ishidi lamapilisi elilandelayo",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Uma sekuqedile iqembu lamanani wamaphilisi lamanje, iqembu elisha lamanani wamaphilisi lizokwakhiwa ngokuzenzakalelayo. Akudingeki ukuthi uguqule ngesandla, futhi akukho okushodayo emlandweni wokurekhoda.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
