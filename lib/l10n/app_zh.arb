@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "闹钟般的提醒音",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "在 iOS 26 及更高版本，从“设置”选项卡启用",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
