@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Нажмите и удерживайте уведомление-напоминание, чтобы появилось действие «Принято» — это позволяет записать приём таблетки без открытия приложения.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Автодобавление таблеток",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
