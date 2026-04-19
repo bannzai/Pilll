@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Tik op het pillenblad om inname te registreren",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Makkelijk ongedaan maken, ook bij vergissingen",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
