@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Registro de pausa gratuito",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Inicie pelo ícone de engrenagem no canto superior direito da cartela de pílulas",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
