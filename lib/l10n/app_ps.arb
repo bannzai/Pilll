@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "د حیض ثبتول او وړاندوینه",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "د حیض د پیل نیټه ثبت کړئ او دوره وپیژنئ",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
