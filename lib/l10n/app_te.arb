@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "ఒక ట్యాప్‌తో సులభ సెటప్",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "నోటిఫికేషన్ సందేశాన్ని స్వేచ్ఛగా సవరించండి",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
