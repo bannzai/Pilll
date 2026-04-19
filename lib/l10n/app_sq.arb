@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Kur përfundon grupi aktual i fletës së pilulave, krijohet automatikisht një grup i ri. Ndërrimi manual nuk është i nevojshëm, kështu që nuk do të ketë mungesa në regjistrime.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Alarm që tingëllon si një orë zgjimi",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
