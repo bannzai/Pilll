@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "Peringatan tepat pada masa yang ditetapkan",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Tetapan mudah dengan satu ketukan",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
