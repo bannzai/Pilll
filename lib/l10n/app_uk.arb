@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Можна змінити в налаштуваннях аркуша таблеток",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Торкніться клітинки аркуша таблеток, щоб зафіксувати прийом",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
