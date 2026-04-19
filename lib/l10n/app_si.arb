@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "හෝම් තිරයේ පිල් ශීට් එක ටැප් කිරීම පමණක් කරමැන, එම දිනයේ ඔබ ගත් කපු බෙහෙත් සුරක්ෂිතව සටහන් කරගත හැක. වැරදිව සටහන් කළහොත් නැවත ටැප් කිරීමෙන් එය ආපසු අහෝසි කළ හැක. පසුකාලයේම ඔබ ගත් බෙහෙත් ඉතිහාසය බැලිය හැකි නිසා, ආරක්ෂිතවත් ප්‍රවේශයත් සමඟ පවත්වාගෙන යා හැක.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "ඔසන් වාර්තා කරන්න සහ අපේක්ෂාවන් සිතා ගන්න",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
