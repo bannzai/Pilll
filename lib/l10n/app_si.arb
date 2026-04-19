@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "ワンタップでかんたん設定",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "නිවේදන පණිවිඩය ඔබ කැමති පරිදි සංස්කරණය කරන්න",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
