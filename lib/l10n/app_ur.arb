@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "دوائی کے وقفے اور تعطل کا درست انتظام",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "گولی لینے سے وقفہ لیں",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
