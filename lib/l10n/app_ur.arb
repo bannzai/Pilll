@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "کیلنڈر دیکھے بغیر تاریخ معلوم ہوتی ہے",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "پِل شیٹ کی ترتیبات سے تبدیل کیا جا سکتا ہے",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
