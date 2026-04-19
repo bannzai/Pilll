@@ -2506,5 +2506,9 @@
   "calendarDiaryFeatureAppealTitle": "କ୍ୟାଲେଣ୍ଡରରେ ସ୍ୱାସ୍ଥ୍ୟ ଅବସ୍ଥା ରେକର୍ଡ କରନ୍ତୁ",
   "@calendarDiaryFeatureAppealTitle": {
     "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "ପ୍ରତିଦିନର ଶାରୀରିକ ଅବସ୍ଥା କ୍ୟାଲେଣ୍ଡରରେ ଲେଖ",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
   }
 }
