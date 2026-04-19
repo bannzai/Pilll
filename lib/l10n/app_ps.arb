@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "له خبرتیا نه مستقیم د دوا ثبت",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "پرته له اپ خلاصولو د خبرتیا له لارې ثبت کړئ",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
