@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "Có thể thay đổi số thứ tự viên thuốc cho hôm nay",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Khi số trên vỉ thuốc và việc uống thực tế bị lệch do quên uống hoặc nhầm lẫn, bạn có thể điều chỉnh thủ công số viên cần uống hôm nay. Bạn cũng có thể mở cùng màn hình này từ phần hiển thị số viên trên trang chủ.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
