@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Нотификације које поуздано звоне чак и у тихом режиму",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Подсетник за узимање, као будилица",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
