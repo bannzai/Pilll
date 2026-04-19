@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Mudah dibatalkan walaupun tersilap",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Semak sejarah pengambilan pada bila-bila masa",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
