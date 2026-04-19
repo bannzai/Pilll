@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Atingeți data pentru a înregistra starea de sănătate",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Adaugă programări în calendar",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
