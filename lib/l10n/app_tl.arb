@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Kapag pinagana ang Critical Alert, matatanggap mo ang mga paalala sa pag-inom kahit naka \"Do Not Disturb\" o silent/manner mode ang telepono. I-on ito upang hindi mo makalimutang uminom sa tamang oras ng mahalagang pill.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Ipasadya ang mensahe ng paalala",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
