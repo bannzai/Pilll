@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "නිවේදන ක්‍රියාවෙන් ගත් බව සටහන් කිරීම",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "යෙදුම විවෘත නොකර සම්පූර්ණ කරන්න",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
