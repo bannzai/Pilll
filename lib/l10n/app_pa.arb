@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "ਭਵਿੱਖ ਦੀਆਂ ਯੋਜਨਾਵਾਂ ਲਿਖੋ",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "ਹਸਪਤਾਲ ਦੀਆਂ ਮੁਲਾਕਾਤਾਂ ਆਦਿ ਭਵਿੱਖ ਦੀਆਂ ਯੋਜਨਾਵਾਂ ਦਾ ਪ੍ਰਬੰਧ ਕਰੋ",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
