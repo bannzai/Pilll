@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Tiho/način osredotočanja: tudi v načinu tiho/osredotočeno bo zazvonilo",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Zvok, podoben zvoku budilke",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
