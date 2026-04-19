@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "Revizuire ușoară a istoricului administrării",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Știi imediat când ai luat pastila",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
