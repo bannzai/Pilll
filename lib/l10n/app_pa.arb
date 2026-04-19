@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "ਐਪ ਖੋਲ੍ਹੇ ਬਿਨਾਂ ਸੂਚਨਾ 'ਤੇ ਰਿਕਾਰਡ ਕਰੋ",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "ਨੋਟੀਫਿਕੇਸ਼ਨ ਸਕਰੀਨ ਤੋਂ ਇੱਕ ਟੈਪ ਨਾਲ ਦਵਾਈ ਰਿਕਾਰਡ ਕਰੋ",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
