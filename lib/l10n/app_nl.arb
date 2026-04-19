@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Registreren via melding zonder de app te openen",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Meldingen scherm één tik inname registratie",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
