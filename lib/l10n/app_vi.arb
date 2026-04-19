@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Bạn có thể ghi các kế hoạch tương lai như lịch hẹn khám hoặc chuyến đi vào lịch. Vì có thể kiểm tra cùng với chu kỳ dùng thuốc tránh thai, bạn có thể lập kế hoạch sao cho phù hợp với ngày có kinh.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Kết nối với Sức khỏe",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
