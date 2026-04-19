@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "Alarm som ringer som en vekkerklokke",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Varsler som ringer selv i stillemodus",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
