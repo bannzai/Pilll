@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealBody": "Hayz boshlanganda uni yozib qo'ying — o'tgan hayz yozuvlarini ro'yxat tarzida ko'rishingiz mumkin. Keyingi hayz boshlanish sanasi ham avtomatik ravishda taxmin qilinadi, shuning uchun oldindan rejalashtirishingiz oson bo'ladi.",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Kalendarda sog'liq holatingizni qayd eting",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
