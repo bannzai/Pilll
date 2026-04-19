@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Arifa zinakufikia hata ukiwa kwenye hali ya kimya",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Ikiwa utawezeshwa 'Critical Alert', utapokea arifa za kuchukua kidonge hata wakati simu yako iko katika hali ya 'Do Not Disturb' au kwenye mode ya kimya. Ili usikose wakati muhimu wa kuchukua kidonge, tafadhali iwashe.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
