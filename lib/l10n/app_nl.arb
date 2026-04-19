@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Pillenblad op datum weergeven",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Weet de datum zonder naar de kalender te kijken",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
