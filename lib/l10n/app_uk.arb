@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Дані про менструацію, записані в Pilll, можна автоматично синхронізувати з додатком для здоров'я. Ви зможете переглядати їх разом з іншими показниками здоров'я в цьому додатку, а також використовувати ці дані в інших програмах.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Зафіксувати прийом прямо зі сповіщення",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
