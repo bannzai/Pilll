@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "คุณสามารถซิงค์ข้อมูลรอบเดือนที่บันทึกใน Pilll กับแอปสุขภาพโดยอัตโนมัติ เพื่อดูร่วมกับข้อมูลสุขภาพอื่นๆ บนแอปสุขภาพ หรือเพื่อให้แอปอื่นๆ สามารถเข้าถึงข้อมูลรอบเดือนได้",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "บันทึกทันทีจากการแจ้งเตือน",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
