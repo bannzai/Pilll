@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Sinkronizim me Shëndetin",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Ndani regjistrimet e menstruacioneve me aplikacionin Health",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
