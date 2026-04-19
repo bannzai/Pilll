@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "Registrer inntak direkte fra varsel",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Registrer i varslingen uten å åpne appen",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
