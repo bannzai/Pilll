@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "Alarm brzmiący jak budzik",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Powiadomienia działające niezawodnie nawet w trybie cichym",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
