@@ -2734,5 +2734,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "ହେଲ୍ଥ୍‌କେୟାର ଆପ୍ ସହ ସିଙ୍କ୍",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple HealthKit ସହାୟତା",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
