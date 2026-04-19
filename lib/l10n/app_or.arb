@@ -2746,5 +2746,9 @@
   "quickRecordFeatureAppealPoint2": "ଆପ୍ ଖୋଲିବା ବିନା ସମ୍ପୂର୍ଣ୍ଣ",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "ପ୍ରିମିୟମ୍ ସଦସ୍ୟତା ସହ ସିଧାସଳଖ ଉପଲବ୍ଧ",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
