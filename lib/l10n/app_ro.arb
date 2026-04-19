@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "Se poate integra cu Health",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Datele menstruale înregistrate în Pilll pot fi sincronizate automat cu aplicația Health. Le puteți vizualiza împreună cu alte date de sănătate din Health și puteți utiliza datele menstruale și în alte aplicații.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
