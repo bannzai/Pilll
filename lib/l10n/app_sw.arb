@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Kipengele cha kulinganisha nambari kinachotumika bure",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Inaweza kubadilishwa kutoka kwenye kichupo cha mipangilio",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
