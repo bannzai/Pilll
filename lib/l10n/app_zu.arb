@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint2": "Uzokhunjuzwa ngokuqinisekile ngesikhathi osibekile.",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Setha kalula ngokuthinta okukodwa",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
