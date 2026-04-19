@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Wystarczy dotknąć arkusza tabletek na ekranie głównym, aby zarejestrować dzisiejsze przyjęcie. Jeśli przez pomyłkę zaznaczysz dawkę, dotknij ponownie, aby cofnąć. Historia przyjmowania jest dostępna w dowolnym momencie, dzięki czemu możesz spokojnie kontynuować.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Rejestruj i przewiduj miesiączkę",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
