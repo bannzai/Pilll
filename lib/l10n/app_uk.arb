@@ -2662,5 +2662,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "Відображається у щоденних нагадуваннях про прийом",
   "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "Персоналізуйте повідомлення нагадування",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
   }
 }
