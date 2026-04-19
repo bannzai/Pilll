@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "د بیدارۍ الارم غوندې د درملو اخیستلو الارم",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "د iOS 26 او وروستیو نسخو کې د AlarmKit له کارولو سره، د خاموش حالت یا د تمرکز حالت کې هم د ډاډمن اعلام له لارې د حبو د استعمال یادونه کوو.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
