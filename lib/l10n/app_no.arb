@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Ringer selv i stille/fokus-modus",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Vekkerklokklignende alarmlyd",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
