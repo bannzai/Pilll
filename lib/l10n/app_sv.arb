@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Genom att visa datum i rutorna på pillerarket kan du snabbt få en överblick över tidigare intag och framtida planerade intag. Växla mellan \"Nummer\"-läget och \"Datum\"-läget för att välja det visningssätt som passar dig.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Enkel överblick över din intagshistorik",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
