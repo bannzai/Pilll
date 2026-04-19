@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "Soat kabi chalinadigan signal",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Jim rejimida ham ishonchli bildirishnoma",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
