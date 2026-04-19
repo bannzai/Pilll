@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Mund ta anuloni lehtësisht edhe nëse bëni gabim",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Shikoni historikun e marrjes së pilulave në çdo kohë",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
