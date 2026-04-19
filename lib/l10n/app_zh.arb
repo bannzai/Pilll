@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "点击日期并输入日程",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "自动同步生理记录",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
