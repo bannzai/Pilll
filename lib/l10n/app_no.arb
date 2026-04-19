@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Registrer pilleinntak ved å trykke på pillearket",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Enkelt å angre selv om du gjør en feil",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
