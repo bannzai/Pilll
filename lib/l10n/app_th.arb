@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "ไม่จำเป็นต้องสร้างด้วยตนเอง",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "สลับโดยใช้สวิตช์ในแท็บการตั้งค่า",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
