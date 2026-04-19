@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Tekan lama pada pemberitahuan peringatan untuk memaparkan tindakan 'Sudah diambil', membolehkan anda merekod pengambilan ubat tanpa membuka aplikasi.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Tambah helaian pil secara automatik",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
