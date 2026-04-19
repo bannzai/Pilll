@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "Naplňte plán do kalendára",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Jednoduchá správa dní návštev u lekára",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
