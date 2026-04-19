@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "Może się synchronizować z aplikacją Zdrowie",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Dane menstruacyjne zarejestrowane w Pilll mogą być automatycznie synchronizowane z aplikacją Zdrowie. Możesz przeglądać je razem z innymi danymi zdrowotnymi w aplikacji Zdrowie lub korzystać z danych menstruacyjnych w innych aplikacjach.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
