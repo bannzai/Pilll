@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Sună și în modul silențios/concentrare",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Sunet de alarmă similar cu cel al unui ceas deșteptător",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
