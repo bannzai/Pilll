@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "Puteți modifica numărul pilulei de astăzi",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Când numărul de pe fișa de pastile nu corespunde cu administrarea reală, din cauza uitării sau confuziei, puteți ajusta manual numărul pastilei pe care trebuie să o luați astăzi. Același ecran poate fi deschis și din afișajul numărului de pastile de pe ecranul principal.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
