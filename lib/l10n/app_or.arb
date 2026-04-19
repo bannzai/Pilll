@@ -2474,5 +2474,9 @@
   "recordPillFeatureAppealTitle": "ସହଜରେ ସେବନ ଇତିହାସ ଦେଖନ୍ତୁ",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "ଯେତେବେଳେ ଖାଇଲେ ତୁରନ୍ତ ଜାଣି ପାରିବେ",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
