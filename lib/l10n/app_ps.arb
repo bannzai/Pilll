@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "د تقویم له لارې د تیرو ریکارډونو بیاکتنه",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "د روغتیا حالت ثبتولو لپاره نیټه ټاپ کړئ",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
