@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "د iOS 26 یا وروسته · د ترتیباتو ټب څخه فعاله کړئ",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "د شمیرو د سمولو وړیا ځانګړتیا",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
