@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Ketik tarikh untuk merekod keadaan kesihatan",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Tulis jadual dalam kalendar",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
