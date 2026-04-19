@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealHeadline": "ਮਾਹਵਾਰੀ ਦੀ ਰਿਕਾਰਡਿੰਗ ਅਤੇ ਭਵਿੱਖਬਾਣੀ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "ਜਦੋਂ ਮਾਹਵਾਰੀ ਆਵੇ ਤਾਂ ਸਿਰਫ਼ ਰਿਕਾਰਡ ਕਰਨ ਨਾਲ ਤੁਸੀਂ ਪਿਛਲੀ ਮਾਹਵਾਰੀ ਦਾ ਇਤਿਹਾਸ ਦੇਖ ਸਕਦੇ ਹੋ। ਅਗਲੀ ਮਾਹਵਾਰੀ ਦੀ ਅਨੁਮਾਨਿਤ ਮਿਤੀ ਵੀ ਆਪਣੇ ਆਪ ਦੱਸ ਦਿੱਤੀ ਜਾਂਦੀ ਹੈ, ਇਸ ਲਈ ਤੁਸੀਂ ਯੋਜਨਾਬੱਧ ਤਰੀਕੇ ਨਾਲ ਸਮਾਂ ਬਿਤਾ ਸਕਦੇ ਹੋ।",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
