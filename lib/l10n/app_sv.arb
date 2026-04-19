@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Ingen manuell skapandeåtgärd behövs.",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Växla med reglaget på fliken Inställningar.",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
