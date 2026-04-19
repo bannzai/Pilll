@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Tik op een datum om een afspraak in te voeren",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Automatische synchronisatie van menstruatiegegevens",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
