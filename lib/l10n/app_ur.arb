@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "معیاری 'اب گولی لینے کا وقت ہے' پیغام کو آپ اپنی پسند کے الفاظ سے حسبِ منشا بدل سکتے ہیں۔ حوصلہ افزا جملے، اپنے پالتو کا نام یا روزانہ گولی لینے کے عمل کو مزید خوشگوار بنانے والا کوئی بھی متن آزما کر دیکھیں۔",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "پِل شیٹ پر تاریخ دکھائیں",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
