@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "Të përkujton me siguri në orën e caktuar",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Konfigurim i thjeshtë me një trokitje",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
