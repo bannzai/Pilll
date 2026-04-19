@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint3": "Setha kalula ngokuthinta okukodwa",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Hlela umyalezo wesaziso ngokwezifiso",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
