@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "Registre o uso de pílulas na tela inicial",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Basta tocar na cartela de pílulas na tela inicial para registrar a dose do dia. Caso registre por engano, toque novamente para desfazer. Você também pode verificar o histórico de doses posteriormente, para continuar com tranquilidade.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
