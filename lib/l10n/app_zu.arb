@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint3": "Lungisa izilungiselelo",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Buka amarekhodi ekhalendeni",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
