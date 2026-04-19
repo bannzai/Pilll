@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Možno zmeniť na karte Nastavenia",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Domov — otvoríte aj klepnutím na číslo",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
