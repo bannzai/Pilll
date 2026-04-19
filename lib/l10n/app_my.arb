@@ -2718,5 +2718,9 @@
   "futureScheduleFeatureAppealPoint1": "ပြက္ခဒိန်တွင် အစီအစဉ်ရေးသွင်းရန်",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "ဆေးရုံသွားရက်ကို လွယ်ကူစွာ စီမံ",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
