@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Pilll තුළ සටහන් කළ මාසික දත්ත ස්වයංක්‍රීයව සෞඛ්‍යය යෙදුම සමඟ සම්බන්ධ කළ හැක. එම දත්ත සෞඛ්‍යය ඇප් තුළ ඇති අනෙක් සෞඛ්‍ය දත්ත සමඟ එක්ව පරීක්ෂා කළ හැකි අතර, අනික අපේ යෙදුම්වලටද මාසික දත්ත භාවිතයට හැකි වේ.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "නිවේදනයෙන් සෘජුවම බෙහෙත් ගත් බව සටහන් කරන්න",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
