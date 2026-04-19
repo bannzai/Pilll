@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Detectare automată a ciclului",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Personalizați setările",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
