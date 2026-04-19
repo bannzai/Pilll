@@ -2778,5 +2778,9 @@
   "todayPillNumberFeatureAppealPoint1": "ବିନାମୂଲ୍ୟ ବ୍ୟବହାରଯୋଗ୍ୟ ନମ୍ବର ମ୍ୟାଚିଂ ଫିଚର୍",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "ସେଟିଂସ ଟ୍ୟାବ୍‌ରୁ ପରିବର୍ତ୍ତନ କରାଯାଇ ପାରିବ",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
