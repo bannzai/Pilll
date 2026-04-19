@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Tap the date to record your condition",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Креирајте догађај у календару",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
