@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Notifikasi diterima walaupun dalam Mod Fokus",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Peringatan tepat pada masa yang ditetapkan",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
