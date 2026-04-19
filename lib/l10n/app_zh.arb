@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "从药片表右上角的齿轮开始",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "轻松编辑或重新开始经期",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
