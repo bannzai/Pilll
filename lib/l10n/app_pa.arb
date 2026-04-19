@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "ਸੈਟਿੰਗਜ਼ ਟੈਬ ਵਿੱਚ ਸਵਿੱਚ ਨਾਲ ਬਦਲੋ",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "ਸਾਈਲੈਂਟ/ਫੋਕਸ ਮੋਡ ਵਿੱਚ ਵੀ ਵੱਜਦਾ ਹੈ",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
