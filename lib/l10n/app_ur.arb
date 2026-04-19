@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "غلطی ہو جائے تو آسانی سے واپس لیں",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "اپنی دوا لینے کا ریکارڈ جب چاہیں دیکھیں",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
