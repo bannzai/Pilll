@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "Możesz zapisać w arkuszu pigułek okres tymczasowego zaprzestania przyjmowania tabletek. W czasie przerwy numer dawki nie jest zwiększany, a po wznowieniu możesz od razu kontynuować rejestrację.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Miejsce w aplikacji",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
