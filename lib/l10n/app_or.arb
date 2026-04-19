@@ -2542,5 +2542,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "ସ୍ୱାସ୍ଥ୍ୟ ସେବା ସହ ଋତୁ ରେକର୍ଡ ଅଂଶୀଦାର କରନ୍ତୁ",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "ହେଲ୍ଥ୍‌କେୟାର ସହ ସଂଯୋଗ କରିହେବ",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
