@@ -2518,5 +2518,9 @@
   "calendarDiaryFeatureAppealShortDescription": "Înregistrează starea de sănătate zilnică în calendar",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Înregistrează starea de sănătate zilnică în calendar",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
