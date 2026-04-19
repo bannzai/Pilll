@@ -2454,5 +2454,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "ଔଷଧ ସେବନ ବିଜ୍ଞପ୍ତି ସନ୍ଦେଶ ମୁକ୍ତଭାବରେ ସମ୍ପାଦନ କରନ୍ତୁ",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealTitle": "ପିଲ୍ ସିଟ୍‌ରେ ତାରିଖ ଦେଖାନ୍ତୁ",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
