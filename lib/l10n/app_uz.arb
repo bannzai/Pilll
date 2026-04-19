@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple Health bilan integratsiyalashgan",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Bildirishnomadagi amal orqali qabulni qayd etish",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
