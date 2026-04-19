@@ -2766,5 +2766,9 @@
   "alarmKitFeatureAppealPoint1": "ସାଇଲେଣ୍ଟ/ଫୋକସ୍ ମୋଡ଼ରେ ମଧ୍ୟ ବାଜେ",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "ଅଲାର୍ମ ଘଣ୍ଟା ପରି ଆଲାର୍ମ ଶବ୍ଦ",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
