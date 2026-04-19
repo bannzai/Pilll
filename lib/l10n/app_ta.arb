@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "ஹெல்த் செயலியுடன் இணைக்கலாம்",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilll-ல் பதிவு செய்த மாதவிடாய் தரவுகளை சுகாதார செயலியுடன் தானாக ஒத்திசைக்கலாம். இவற்றை சுகாதார செயலியில் உள்ள பிற உடல்நலத் தரவுகளுடன் ஒரே இடத்தில் பார்க்கவோ, மேலும் பிற செயலிகளும் இந்த மாதவிடாய் தரவுகளைப் பயன்படுத்தவோ முடியும்.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
