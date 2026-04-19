@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Evite esquecer de tomar o remédio mesmo no modo Não Perturbe",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Receba notificações mesmo no modo silencioso",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
