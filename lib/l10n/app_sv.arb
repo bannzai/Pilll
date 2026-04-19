@@ -2666,5 +2666,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Visa pillerblad efter datum",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Kalendern visar datum utan att du behöver titta på den",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
