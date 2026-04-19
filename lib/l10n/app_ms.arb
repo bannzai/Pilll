@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Tahu tarikh tanpa melihat kalendar",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Boleh diubah dari tetapan helaian pil",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
