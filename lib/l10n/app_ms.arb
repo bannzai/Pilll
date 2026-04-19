@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Rekod tarikh mula haid dengan mudah",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Pantau kitaran secara automatik",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
