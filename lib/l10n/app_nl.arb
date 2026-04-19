@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Eenvoudig instellen met één tik",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Meldingstekst vrij bewerken",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
