@@ -2558,5 +2558,9 @@
   "quickRecordFeatureAppealShortDescription": "ଆପ୍ ନ ଖୋଲି ବିଜ୍ଞପ୍ତି ମାଧ୍ୟମରେ ରେକର୍ଡ କରନ୍ତୁ",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "ବିଜ୍ଞପ୍ତି ସ୍କ୍ରିନ୍‌ରେ ଏକ-ଟ୍ୟାପ୍ ଡୋଜ୍ ରେକର୍ଡ",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
