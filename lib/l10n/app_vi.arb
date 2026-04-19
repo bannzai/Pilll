@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Tùy chỉnh thông báo của riêng bạn",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Hi",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
