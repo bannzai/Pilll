@@ -2662,5 +2662,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "Zahrnúť do denných upozornení na užitie.",
   "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "Prispôsobte si notifikačnú správu",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
   }
 }
