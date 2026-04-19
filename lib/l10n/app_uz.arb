@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "Sozlamalarni moslashtirish",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Kalendar orqali yozuvlarni ko'rish",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
