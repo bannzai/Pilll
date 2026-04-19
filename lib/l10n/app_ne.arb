@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "सूचना कार्यबाट सेवन रेकर्ड",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "एप नखोली सम्पन्न",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
