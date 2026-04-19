@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "နောက်ဆေးပြားစာချပ်ကို အလိုအလျောက် ဖန်တီးပါ",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealTitle": "နှိုးစက်ကဲ့သို့မြည်ဟောင်းသောသတိပေးချက်",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
