@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Registrar dose por ação de notificação",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Concluir sem abrir o aplicativo",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
