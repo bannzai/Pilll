@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "Uzun süreli ara verme dönemleri pil şeridine kaydedilebilir. Ara verdiğiniz süre boyunca hap numarası ilerlemez ve yeniden başlarken kaydı hemen yeniden başlatabilirsiniz.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Uygulama içi konum",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
