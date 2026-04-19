@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "ဆရာဝန်စစ်ဆေးမည့်ချိန်း၊ ခရီးသွားမည့်အစီအစဉ် ကဲ့သို့သော အနာဂတ်အစီအစဉ်များကို ပြက္ခဒိန်တွင် မှတ်သားနိုင်ပါသည်။ ဆေးသောက်သည့်ကာလနှင့် တွဲဖက်၍ စစ်ဆေးနိုင်သောကြောင့် ရာသီလာချိန်အစီအစဉ်ကိုပါ ထည့်သွင်းစဉ်းစားကာ စီမံချက်ဆွဲနိုင်ပါသည်။",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "ကျန်းမာရေးနှင့် ချိတ်ဆက်ပါ",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
