@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "Orodha ya rekodi kwenye kalenda",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Andika kumbukumbu za hali yako ya mwili na uzirudie",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
