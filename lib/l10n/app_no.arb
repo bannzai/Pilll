@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Registrer og se tilbake på helsetilstanden din",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Se tilbake på tidligere oppføringer i kalenderen",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
