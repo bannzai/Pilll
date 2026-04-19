@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "کریٹیکل الرٹ کو فعال کرنے سے آپ خاموشی یا وائبریشن موڈ (مثلاً Do Not Disturb) کے دوران بھی گولی لینے کی یاددہانی وصول کر سکیں گے۔ اہم گولی لینے کے وقت سے محروم نہ رہنے کے لیے براہِ کرم اسے فعال کریں۔",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "اطلاع پیغام کو حسبِ ضرورت بنائیں",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
