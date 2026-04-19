@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Ilovani ochmasdan bildirishnomada qayd etish",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Bildirishnoma ekranida bitta teginish bilan qabulni qayd etish",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
