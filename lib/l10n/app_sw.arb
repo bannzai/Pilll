@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Unaweza pia kufungua kwa kugusa nambari kwenye skrini ya nyumbani.",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Rekodi ya mapumziko ya vidonge (bure)",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
