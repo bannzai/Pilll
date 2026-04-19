@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Notificar por lembrete",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Toque em uma data para adicionar um compromisso",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
