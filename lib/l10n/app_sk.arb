@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Ak povolíte Kritické upozornenia (Critical Alert), budete dostávať pripomienky na užitie pilulky aj v režime Nerušiť alebo v tichom režime. Aby ste nepremeškali dôležitý čas na užitie pilulky, odporúčame túto možnosť zapnúť.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Prispôsobiť text upozornenia",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
