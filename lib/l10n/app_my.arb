@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "ဆက်တင်တက်ဘ်ရှိ ခလုတ်ဖြင့် ပြောင်းလဲပါ",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "တိတ်ဆိတ်/အာရုံစူးစိုက်မုဒ်တွင်လည်း မြည်သည်",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
