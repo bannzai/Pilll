@@ -2686,5 +2686,9 @@
   "menstruationFeatureAppealPoint1": "ଋତୁସ୍ରାବ ଆରମ୍ଭ ତାରିଖ ସହଜରେ ରେକର୍ଡ କରନ୍ତୁ",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "ଚକ୍ର ସ୍ୱୟଂଚାଳିତ ଭାବରେ ଜାଣନ୍ତୁ",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
