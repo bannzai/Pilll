@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Ao pressionar e segurar a notificação de lembrete, a ação \"Tomei\" é exibida, permitindo registrar a ingestão sem abrir o aplicativo.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Adicionar folha de pílulas automaticamente",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
