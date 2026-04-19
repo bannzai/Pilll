@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Запис прийому одним дотиком на екрані сповіщень",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Якщо натиснути й утримувати сповіщення-нагадування, з’явиться дія «Прийнято», яка дозволить зафіксувати прийом без відкриття додатка.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
