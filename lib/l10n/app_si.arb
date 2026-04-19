@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "අතින් සාදන ක්‍රියාවලිය අවශ්‍ය නොවේ",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "සැකසුම් ටැබයේ ස්විච් එකෙන් මාරු කරන්න",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
