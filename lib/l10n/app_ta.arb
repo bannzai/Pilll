@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "உங்கள் சொந்த அறிவிப்பு செய்தி",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "பில் சீட்டை தேதிக்கேற்பக் காட்டு",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
