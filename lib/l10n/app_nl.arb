@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "Medicatiegeschiedenis eenvoudig bekijken",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Direct zien wanneer je de pil hebt genomen",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
