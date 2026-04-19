@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "Hakiki kukumbusha kwa wakati uliowekwa",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Usanidi rahisi kwa kubonyeza mara moja",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
