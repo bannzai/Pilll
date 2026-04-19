@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Отображать лист приёма по дате",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Узнавайте дату, не заглядывая в календарь",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
