@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "บันทึกทันทีจากการแจ้งเตือน",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "บันทึกผ่านการแจ้งเตือนโดยไม่ต้องเปิดแอป",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
