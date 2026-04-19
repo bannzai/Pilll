@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealShortDescription": "Управление будущими планами, например визитами к врачу",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Записывайте будущие события в календарь",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
