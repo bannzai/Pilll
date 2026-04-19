@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Rejestrowanie przyjęcia jednym kliknięciem na ekranie powiadomień",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Długie naciśnięcie powiadomienia o przypomnieniu wyświetla akcję „Przyjęto\", dzięki czemu możesz zapisać przyjęcie tabletki bez otwierania aplikacji.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
