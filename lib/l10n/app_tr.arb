@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Bildirim eylemiyle hap alımını kaydet",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Uygulamayı açmadan tamamla",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
