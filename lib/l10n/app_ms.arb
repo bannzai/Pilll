@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Terima pemberitahuan walaupun dalam mod senyap",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Dengan mengaktifkan Critical Alert, anda boleh menerima pemberitahuan pengambilan ubat walaupun dalam mod Jangan Ganggu atau Mod Senyap. Sila aktifkan tetapan ini untuk memastikan anda tidak terlepas masa penting untuk mengambil pil anda.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
