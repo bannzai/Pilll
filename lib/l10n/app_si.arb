@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "ප්‍රිමියම් දායකත්වය ලබාගත් වහාම භාවිතයට පුළුවන්",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "පිල් පත්‍රිකාව අවසන් වූ විට ස්වයංක්‍රීයව මාරු කරන්න",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
