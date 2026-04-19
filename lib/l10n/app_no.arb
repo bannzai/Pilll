@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "Registrer fremtidige planer i kalenderen",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Du kan skrive fremtidige planer i kalenderen, for eksempel legetime og reiseplaner. Siden du kan se dem i sammenheng med pilleinntak-syklusen din, kan du lage planer som også tar hensyn til menstruasjonen din.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
