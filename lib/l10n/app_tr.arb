@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Rahatsız Etmeyin modunda bile ilaç almayı unutmayın",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Sessiz moddayken bile bildirim alırsınız",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
