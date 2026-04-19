@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "ସେଟିଂ ଟ୍ୟାବ୍‌ର ସ୍ୱିଚ୍ ଦ୍ୱାରା ପ୍ରବର୍ତ୍ତନ",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "ସାଇଲେଣ୍ଟ/ଫୋକସ୍ ମୋଡ଼ରେ ମଧ୍ୟ ବାଜେ",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
