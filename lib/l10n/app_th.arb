@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "ピルシート終了で自動切り替え",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "ไม่จำเป็นต้องสร้างด้วยตนเอง",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
