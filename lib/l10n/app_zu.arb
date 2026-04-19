@@ -2393,5 +2393,14 @@
   "inquiryContentRequired": "Sicela ufake okuqukethwe kombuzo",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "afterLastTakenPillNumber": "Inombolo {afterLastTakenPillNumber}",
+  "@afterLastTakenPillNumber": {
+    "description": "ピルシートUI上で、最後に服用したピルの次に飲むべきピルの番号を表示するテキストです。数字の後に付ける序数詞（日本語では「番」、英語では「th」など）を各言語に適した形で翻訳してください。",
+    "placeholders": {
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
   }
 }
