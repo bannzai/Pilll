@@ -2502,5 +2502,9 @@
   "menstruationFeatureAppealBody": "ଋତୁସ୍ରାବ ଆସିଲେ କେବଳ ରେକର୍ଡ କରନ୍ତୁ, ଏବଂ ଅତୀତ ଋତୁସ୍ରାବ ଇତିହାସ ଦେଖିପାରିବେ। ପରବର୍ତ୍ତୀ ଋତୁସ୍ରାବ ତାରିଖ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ଅନୁମାନ କରାଯାଏ, ତେଣୁ ଆପଣ ଯୋଜନାବଦ୍ଧ ଭାବରେ ଜୀବନ ଯାପନ କରିପାରିବେ।",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "କ୍ୟାଲେଣ୍ଡରରେ ସ୍ୱାସ୍ଥ୍ୟ ଅବସ୍ଥା ରେକର୍ଡ କରନ୍ତୁ",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
