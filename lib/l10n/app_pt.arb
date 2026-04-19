@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Recurso de ajuste de número gratuito",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Pode ser alterado na aba Configurações",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
