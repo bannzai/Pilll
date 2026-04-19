@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Besplatna funkcija uparivanja brojeva",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Podešavanja kartice se mogu promeniti",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
