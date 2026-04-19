@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Združljiv z Apple Health",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Zabeleži jemanje prek obvestila",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
