@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Không cần tạo thủ công",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Chuyển đổi bằng công tắc trong tab Cài đặt",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
