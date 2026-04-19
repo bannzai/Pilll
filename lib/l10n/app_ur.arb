@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "مفت استعمال کے لیے نمبر ملاپ کی خصوصیت",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "سیٹنگ ٹیب سے تبدیل کیا جا سکتا ہے",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
