@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "නොමිලේ භාවිතා කළ හැකි විරාම සටහන",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "පිල් පත්‍රයේ ඉහළ දකුණේ ඇති ගියර් ආයිකනයෙන් ආරම්භ කරන්න",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
