@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "పిల్ షీట్‌ను ట్యాప్ చేసి తీసుకున్నట్లు నమోదు చేయండి",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "పొరపాటున చేసినా సులభంగా రద్దు చేయొచ్చు",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
