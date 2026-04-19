@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealHeadline": "କ୍ୟାଲେଣ୍ଡରରେ ଭବିଷ୍ୟତ ଯୋଜନା ରେକର୍ଡ କରନ୍ତୁ",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "ଡାକ୍ତରଖାନା ଯାଇବା ଯୋଜନା ଏବଂ ଭ୍ରମଣ ଯୋଜନା ଭଳି ଭବିଷ୍ୟତ ଯୋଜନାଗୁଡ଼ିକ କ୍ୟାଲେଣ୍ଡରରେ ଲେଖାଯାଇ ପାରିବ। ପିଲ ଖାଇବାର ଚକ୍ର ସହ ଏକତ୍ରେ ଯାଞ୍ଚ କରିହେଉଥିବାରୁ, ଋତୁସ୍ରାବ ଯୋଜନା ଦୃଷ୍ଟିରେ ରଖି ଭବିଷ୍ୟତ ପରିକଳ୍ପନା ଗ୍ରହଣ କରିପାରିବ।",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
