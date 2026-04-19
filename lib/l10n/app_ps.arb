@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "د پیل شیټ پر نیټه ښودل کیدای شي",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "د پیل شیټ د خانو کې نیټې ښودلو سره، تاسې کولای شئ د تیرو دوا اخیستلو ریکارډ او د راتلونکو دوا اخیستلو مهالویش یوه کتنه کې وګورئ. د «شمیره» حالت او «نیټه» حالت تر مینځ بدلون راولئ او خپل لپاره مناسب ډول غوره کړئ.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
