@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "කැලැන්ඩරය නොබලුවත් දිනය දැනගත හැක",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "පිල් ෂීට් සැකසුම්වලින් වෙනස් කළ හැකිය",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
