@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "சுழற்சியை தானாக கண்டறிதல்",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "அமைப்புகளை தனிப்பயனாக்கவும்",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
