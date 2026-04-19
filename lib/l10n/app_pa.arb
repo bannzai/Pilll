@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "ਮਾਹਵਾਰੀ ਸ਼ੁਰੂ ਹੋਣ ਦੀ ਤਾਰੀਖ਼ ਆਸਾਨੀ ਨਾਲ ਦਰਜ ਕਰੋ",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "ਚੱਕਰ ਨੂੰ ਆਪਣੇ ਆਪ ਸਮਝੋ",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
