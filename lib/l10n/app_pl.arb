@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Powiadomienia docierają nawet w trybie cichym",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Włączenie Krytycznych Alertów umożliwia otrzymywanie powiadomień o przyjęciu tabletki nawet w trybie Nie przeszkadzać lub w trybie ciszy. Skonfiguruj tę opcję, aby nie przegapić ważnego momentu przyjęcia tabletki antykoncepcyjnej.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
