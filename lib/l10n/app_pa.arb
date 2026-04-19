@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "ਸਾਈਲੈਂਟ/ਫੋਕਸ ਮੋਡ ਵਿੱਚ ਵੀ ਵੱਜਦਾ ਹੈ",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "ਅਲਾਰਮ ਘੜੀ ਵਰਗੀ ਅਲਾਰਮ ਧੁਨੀ",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
