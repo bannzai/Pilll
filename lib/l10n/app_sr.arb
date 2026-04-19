@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Ако омогућите Critical Alert, добијаћете обавештења о узимању лекова чак и када је телефон у режиму „Не узнемиравај“ или у тихом режиму. Подесите га да не бисте пропустили важан тренутак за узимање пилуле.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Prilagodite poruke obaveštenja",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
