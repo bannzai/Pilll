@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Vis pilleplate etter dato",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Se datoen uten å sjekke kalenderen",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
