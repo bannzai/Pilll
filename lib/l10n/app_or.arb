@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint3": "ରିମାଇଣ୍ଡର ଦ୍ୱାରା ବିଜ୍ଞପ୍ତି",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "ତାରିଖ ଟ୍ୟାପ୍ କରି ଯୋଜନା ଲେଖନ୍ତୁ",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
