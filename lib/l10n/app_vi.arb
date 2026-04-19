@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "Quản lý chính xác việc tạm ngưng/gián đoạn uống thuốc",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Tạm dừng uống thuốc tránh thai",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
