@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "Nøyaktig administrasjon av pause og avbrudd",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Ta pause fra pilleinntak",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
