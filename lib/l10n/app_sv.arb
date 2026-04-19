@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint3": "sv translation placeholder",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Tryck på ett datum för att lägga till en händelse",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
