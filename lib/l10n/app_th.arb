@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "เชื่อมต่อข้อมูลบันทึกประจำเดือนโดยอัตโนมัติ",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ซิงค์กับแอปสุขภาพ",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
