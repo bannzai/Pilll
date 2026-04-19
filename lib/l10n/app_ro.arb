@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "Gestionare precisă a pauzelor și întreruperilor",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Pauza administrarea pilulelor",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
