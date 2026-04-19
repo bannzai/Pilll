@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Вести та передбачати менструації",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Записуйте дату початку місячних, щоб відстежувати свій цикл",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
