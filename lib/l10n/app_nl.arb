@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Voltooien zonder app te openen",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Direct beschikbaar met Premium-abonnement",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
