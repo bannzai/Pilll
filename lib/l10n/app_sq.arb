@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "Menaxho saktë pushimet dhe ndërprerjet",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Pauzë në marrjen e pilulave",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
