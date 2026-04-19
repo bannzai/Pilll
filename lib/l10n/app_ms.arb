@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Ketuk tarikh untuk menulis jadual",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Segerakkan data rekod haid secara automatik",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
