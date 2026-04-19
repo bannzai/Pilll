@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "ਸੂਚਨਾ ਐਕਸ਼ਨ ਤੋਂ ਦਵਾਈ ਦਾ ਰਿਕਾਰਡ",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "ਐਪ ਖੋਲ੍ਹੇ ਬਿਨਾਂ ਪੂਰਾ ਕਰੋ",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
