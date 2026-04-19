@@ -2414,5 +2414,9 @@
   "lifetimePurchaseNotice2": "Obunani boshqarish",
   "@lifetimePurchaseNotice2": {
     "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "Iltimos, sotib olishdan oldin mavjud obunani avval bekor qiling.",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
   }
 }
