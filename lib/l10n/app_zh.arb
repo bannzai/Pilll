@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "按日期显示服药表",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "カレンダーを見なくても日付がわかる",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
