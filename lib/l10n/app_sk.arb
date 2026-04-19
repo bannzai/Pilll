@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Tento text je už v japončine preložený v aplikácii",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Zvuk pripomínajúci budík",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
