@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "即使处于静音也能响的提醒",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "像闹钟一样的服药提醒",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
