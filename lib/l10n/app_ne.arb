@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "पिल सिट सेटिङबाट परिवर्तन गर्न सकिन्छ",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "पिल शिट ट्याप गरी सेवन रेकर्ड गर्नुहोस्",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
