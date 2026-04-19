@@ -2410,5 +2410,9 @@
   "lifetimePurchaseNotice1": "ஒருமுறை வாங்கும் திட்டத்தை வாங்கினாலும் மாதாந்திர/ஆண்டாந்திர திட்டங்கள் தானாக ரத்து செய்யப்படமாட்டாது.",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "இங்கே",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
