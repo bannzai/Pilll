@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Pjesët e aplikacionit",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Njoftimet vijnë edhe gjatë modalitetit Fokus",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
