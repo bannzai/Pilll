@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Apabila kumpulan helaian pil semasa tamat, kumpulan helaian pil baharu akan dicipta secara automatik. Tiada peralihan manual diperlukan, dan tiada rekod yang akan terlepas.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Penggera yang berbunyi seperti jam loceng",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
