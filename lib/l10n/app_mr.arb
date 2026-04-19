@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "पुढील पिल शीट आपोआप तयार करा",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "जेव्हा सध्याचा पिल शीट गट संपतो, तेव्हा नवीन पिल शीट गट आपोआप तयार केला जातो. हाताने बदलण्याची क्रिया आवश्यक नसते आणि नोंदींमध्ये खंड पडत नाही.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
