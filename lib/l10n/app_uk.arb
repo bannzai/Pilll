@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "У календарі торкніться дати, щоб зафіксувати свій стан, настрій та симптоми. Ці записи можна переглянути разом із записами прийому пігулок і менструацій, тож ви зможете краще розуміти ритми свого тіла.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Запишіть майбутні плани",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
