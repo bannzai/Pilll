@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Isang tap lang para sa madaling pag-setup",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "I-edit nang malaya ang mensahe ng paalala",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
