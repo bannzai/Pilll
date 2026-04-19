@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealBody": "長押し通知 \"服用した\" アクションが表示され、アプリを開かずに服用が記録できます。",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Faka amashidi wamaphilisi ngokuzenzakalelayo",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
