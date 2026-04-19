@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "Pauzes en onderbrekingen nauwkeurig beheren",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Een pauze nemen van de pil",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
