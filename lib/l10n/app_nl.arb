@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Menstruatie bijhouden & voorspellen",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Registreer de startdatum van je menstruatie en volg je cyclus",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
