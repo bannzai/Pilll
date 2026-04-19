@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "නිවේදන තිරයෙන් එක් ටැප් කර බෙහෙත් ගත් බව සටහන් කරන්න",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "リマインダー通知を長押しすると「服用した」のアクションが表示され、アプリを開かずに服用を記録できます。",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
