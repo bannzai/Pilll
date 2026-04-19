@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Rediger varslingsmeldingen for pilleinntak fritt",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Du kan tilpasse standard-meldingen «Det er på tide å ta pillen» med dine egne ord. Prøv noe som motiverer deg, kjæledyrets navn eller andre setninger som gjør det daglige inntaket morsommere.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
