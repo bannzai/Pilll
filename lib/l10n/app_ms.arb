@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Togol dengan suis dalam tab tetapan",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Berbunyi walaupun dalam mod senyap/fokus",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
