@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Aviseringar även i tyst läge",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Om du aktiverar Critical Alert kan du få påminnelser om att ta din p-piller även när mobilen är i Stör ej-läge eller Ljudlös. Ställ in detta så att du inte missar viktiga tider för att ta din p-piller.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
