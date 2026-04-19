@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "ਹੈਲਥਕੇਅਰ ਨਾਲ ਸਿੰਕ ਕਰੋ",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "ਮਾਹਵਾਰੀ ਰਿਕਾਰਡ ਸਿਹਤ ਸੰਭਾਲ ਨਾਲ ਸਾਂਝੇ ਕਰੋ",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
