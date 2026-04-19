@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Tilgjengelig med Premium-abonnement",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Automatisk bytte ved slutt på pilleark",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
