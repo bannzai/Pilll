@@ -2770,5 +2770,9 @@
   "alarmKitFeatureAppealPoint2": "ଅଲାର୍ମ ଘଣ୍ଟା ପରି ଆଲାର୍ମ ଶବ୍ଦ",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 ଓ ତଦୁର୍ଦ୍ଧ・ସେଟିଂ ଟ୍ୟାବ୍‌ରୁ ସକ୍ରିୟ କରନ୍ତୁ",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
