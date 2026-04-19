@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint3": "過去の記録をカレンダーで振り返り",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Thepha usuku ukuze ubhale isimo sakho",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
