@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Înregistrați administrarea atingând foaia de pilule",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Anulare ușoară chiar și în caz de greșeală",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
