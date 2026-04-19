@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Dotknij arkusza tabletek, aby zarejestrować przyjęcie",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Łatwe cofanie, nawet po pomyłce",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
