@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "I will translate now",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "I-record ang unang araw ng regla para subaybayan ang iyong siklo",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
