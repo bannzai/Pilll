@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Bildirishnomani o'zingizga moslashtiring",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Pil varaqchasini sanaga ko'ra ko'rsatish",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
