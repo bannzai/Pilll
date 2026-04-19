@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "मिति ट्याप गरेर स्वास्थ्य अवस्था रेकर्ड गर्नुहोस्",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "क्यालेन्डरमा तालिका लेख्नुहोस्",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
