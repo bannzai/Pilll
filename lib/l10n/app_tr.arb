@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Ayarlar sekmesinden değiştirilebilir",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Ana ekrandaki sayıya dokunarak da açabilirsiniz.",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
