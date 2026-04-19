@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "I WILL REPLACE THIS",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Madaling itala ang unang araw ng iyong regla",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
