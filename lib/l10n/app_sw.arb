@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 au baadaye · wezesha kutoka kwenye kichupo cha Mipangilio",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Kipengele cha kulinganisha nambari kinachotumika bure",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
