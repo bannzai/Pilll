@@ -2702,5 +2702,9 @@
   "calendarDiaryFeatureAppealPoint1": "Buka amarekhodi ekhalendeni",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Bhala amanothi ngesimo sakho somzimba bese uwabukeza",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
