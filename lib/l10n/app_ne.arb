@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "स्वास्थ्य सेवासँग जोड्न सकिन्छ",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilllमा रेकर्ड गरिएको महिनावारी डेटा स्वास्थ्य एपसँग स्वचालित रूपमा जोड्न सकिन्छ। स्वास्थ्य एपमा रहेका अन्य स्वास्थ्य डेटासँगै हेर्न सकिनुहुन्छ र अन्य एपहरूमा पनि महिनावारी डेटा प्रयोग गर्न सकिन्छ।",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
