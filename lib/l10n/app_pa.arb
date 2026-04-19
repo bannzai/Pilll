@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "ਆਪਣਾ ਖੁਦ ਦਾ ਸੂਚਨਾ ਸੁਨੇਹਾ",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "ਮਿਤੀ ਦੁਆਰਾ ਪਿੱਲ ਸ਼ੀਟ ਪ੍ਰਦਰਸ਼ਿਤ ਕਰੋ",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
