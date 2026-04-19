@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "పిల్ తీసుకోవడంలో విరామం తీసుకోండి",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "పిల్‌షీట్‌లో కొద్ది కాలం పాటు మాత్రలు తీసుకోవడం నిలిపివేసిన కాలాన్ని నమోదు చేయవచ్చు。ఆ విరామ సమయంలో తదుపరి పిల్ స్థానం (నంబర్) ముందుకు సాగదు, మళ్ళీ ప్రారంభించినప్పుడు వెంటనే నమోదు కొనసాగించవచ్చు。",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
