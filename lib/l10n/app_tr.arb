@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Varsayılan 'Hapını alma zamanı' ifadesini istediğiniz gibi özelleştirebilirsiniz. Motivasyon verici bir söz, evcil hayvanınızın adı veya sizi gülümseten başka bir ifade ekleyerek günlük hap alımınızı daha keyifli hale getirin.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Hap çizelgesinde tarihleri göster",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
