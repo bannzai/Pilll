@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "पिल शीटच्या उजव्या वरच्या कोपर्यातील गियरमधून सुरू करा",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "कालावधीचे संपादन आणि पुनरारंभ सुद्धा सोपे",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
