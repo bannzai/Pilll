@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Сповіщення надходять навіть у режимі фокусування",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Надійне нагадування у встановлений час",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
