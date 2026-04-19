@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Du kan også åpne ved å trykke på tallet på startskjermen",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Gratis pauseregistrering",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
