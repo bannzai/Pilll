@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "ピルシート設定から変更可能",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Chạm vào vỉ thuốc để ghi nhận việc uống",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
