@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Terugkijken op eerdere records via de kalender",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Tik op een datum om je lichamelijke toestand vast te leggen",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
