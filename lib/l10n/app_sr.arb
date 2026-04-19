@@ -2454,5 +2454,9 @@
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Можете да прилагодите текст обавештења",
   "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Slobodno uredite poruku podsetnika o uzimanju pilule",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
   }
 }
