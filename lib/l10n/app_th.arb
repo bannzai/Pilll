@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "สลับโดยใช้สวิตช์ในแท็บการตั้งค่า",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
