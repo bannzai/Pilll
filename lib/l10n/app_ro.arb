@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Se poate deschide și apăsând cifrele de pe ecranul principal",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Înregistrare gratuită a pauzelor de medicamente",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
