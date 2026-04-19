@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Przełącz za pomocą przełącznika w karcie Ustawienia",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Dzwoni nawet w trybie cichym/skupienia",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
