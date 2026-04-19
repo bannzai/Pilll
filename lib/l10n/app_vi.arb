@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Tap ngày để ghi lại tình trạng sức khỏe",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Thêm sự kiện vào lịch",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
