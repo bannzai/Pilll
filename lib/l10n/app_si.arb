@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "දිනයක් ටැප් කර ඔබගේ සැළසුම ඇතුලත් කරන්න",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "මාසික වාර්තා ස්වයංක්‍රීයව දත්ත සමඟ සම්බන්ධ කිරීම",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
