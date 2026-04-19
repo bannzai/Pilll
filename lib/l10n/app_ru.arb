@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Начните с значка шестерёнки в правом верхнем углу листа таблеток.",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Редактирование и возобновление периода — просто",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
