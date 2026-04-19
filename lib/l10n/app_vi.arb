@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Nếu số bị lệch, hãy sửa trong Cài đặt",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Có thể thay đổi số thứ tự viên thuốc cho hôm nay",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
