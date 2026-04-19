@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "次のピルシートを自動で作成",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Ko se trenutna skupina lističev za končajo, se samodejno ustvari nova skupina lističev. Ročnega preklapljanja ni treba izvajati, zato ne pride do izpustov pri vodenju evidenc.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
