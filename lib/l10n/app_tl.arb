@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "I-sync sa app ng kalusugan",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
