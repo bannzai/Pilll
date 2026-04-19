@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "मॅन्युअल तयार करण्याची क्रिया आवश्यक नाही",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "सेटिंग्ज टॅबवरील स्विचने बदलणे",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
