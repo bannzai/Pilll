@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "පිල් පත්‍රයේ දිනය පෙන්විය හැක",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "පිල් ෂීට් හි කොටු වල දින නිරූපණය කිරීමෙන්, පසුගිය බෙහෙත් වාර්තා හා අනාගත බෙහෙත් සැලසුම් එකම නරඹුමකින් ඉක්මනින් බලගත හැක. “අංකය” මාදිලිය හා “දිනය” මාදිලිය අතර මාරු කර ඔබට ගැලපෙන පෙන්වීම තෝරන්න.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
