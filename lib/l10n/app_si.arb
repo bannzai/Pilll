@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealShortDescription": "රෝහලට යාම වැනි අනාගත සැලසුම් කළමනාකරණය",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "කැලවන්දර්යට භවිෂ්‍යයේ සැලසුම් සටහන් තබන්න",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
