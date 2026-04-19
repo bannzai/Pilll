@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Торкніться клітинки аркуша таблеток, щоб зафіксувати прийом",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Навіть якщо помилися — легко скасувати",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
