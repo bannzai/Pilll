@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "หมายเลขจับคู่ที่ใช้ได้ฟรี",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "สามารถเปลี่ยนได้จากแท็บการตั้งค่า",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
