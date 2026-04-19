@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Chỉ cần chạm vào tấm lịch viên thuốc trên màn hình chính để ghi lại việc uống thuốc trong ngày. Nếu bạn ghi nhầm, chạm lại một lần nữa để hủy. Bạn cũng có thể xem lịch sử uống thuốc sau đó, nên có thể yên tâm tiếp tục.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "生理を記録・予測",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
