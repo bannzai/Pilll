@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Wakati kundi la karatasi za vidonge la sasa linapoisha, kundi jipya la karatasi za vidonge litaundwa kiotomatiki. Hakutakuwa na haja ya kubadili kwa mkono, na hakutakuwa na upotezaji wa rekodi.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Kengele inayopiga kama ile ya kuamka",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
