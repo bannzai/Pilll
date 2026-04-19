@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "பில் சீட் முடியும் போது தானாக மாற்றம்",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "கைமுறை உருவாக்கம் தேவையில்லை",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
