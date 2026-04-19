@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Itatoa sauti hata wakati simu iko kimya au katika hali ya kuzingatia",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Sauti kama ile ya kengele ya kuamka",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
