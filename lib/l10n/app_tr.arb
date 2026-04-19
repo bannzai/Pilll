@@ -2406,5 +2406,9 @@
   "lifetimeSubscriptionWarning": "Tek seferlik satın alma için teşekkür ederiz. Aylık veya yıllık bir plana aboneyseniz, lütfen mevcut aboneliğinizi iptal etmeyi unutmayın.",
   "@lifetimeSubscriptionWarning": {
     "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "Tek seferlik satın alma planını satın alırsanız bile aylık/yıllık plan otomatik olarak iptal edilmez.",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
   }
 }
