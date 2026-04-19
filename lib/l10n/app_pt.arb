@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Pode ser alterado nas configurações da cartela de comprimidos",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Registre a dose tocando na cartela",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
