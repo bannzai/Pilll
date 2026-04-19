@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "कहिले सेवन गर्नुभयो तुरुन्त थाहा पाउनुस्",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "होम स्क्रिनमा पिल सेवन रेकर्ड गर्नुहोस्",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
