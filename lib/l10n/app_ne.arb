@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "एक नजरमा कहिले खाने हो जाँच्नुहोस्",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "पिल शीटमा मिति देखाउन सकिन्छ",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
