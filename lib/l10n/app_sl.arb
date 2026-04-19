@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Obvestila, ki zanesljivo zazvenijo tudi v tihem načinu",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Opomnik za jemanje – deluje kot budilka",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
