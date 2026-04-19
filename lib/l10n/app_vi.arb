@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Ghi nhận uống thuốc từ hành động thông báo",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Hoàn tất mà không mở ứng dụng",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
