@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Bepul tanaffus yozuvi",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Dori varaqasining yuqori o'ng burchagidagi tishli belgisidan boshlang.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
