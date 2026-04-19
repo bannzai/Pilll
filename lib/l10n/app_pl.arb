@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Można też otworzyć, dotykając cyfry na ekranie głównym",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Bezpłatna rejestracja przerwy w przyjmowaniu tabletek",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
