@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "免费停药记录",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "从药片表右上角的齿轮开始",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
