@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Hanya dengan mengetuk helaian pil di skrin utama, anda boleh merekodkan pengambilan pil untuk hari tersebut. Sekiranya anda tersalah rekod, ketuk sekali lagi untuk membatalkannya. Anda juga boleh menyemak sejarah pengambilan kemudian, jadi anda boleh meneruskannya dengan tenang.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Rekod & Ramal Haid",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
