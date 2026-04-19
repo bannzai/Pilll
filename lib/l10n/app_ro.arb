@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Datele menstruale înregistrate în Pilll pot fi sincronizate automat cu aplicația Health. Le puteți vizualiza împreună cu alte date de sănătate din Health și puteți utiliza datele menstruale și în alte aplicații.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Înregistrare directă din notificare",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
