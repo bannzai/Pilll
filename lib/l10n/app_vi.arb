@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Xem lại các bản ghi trước đây trên lịch",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Tap ngày để ghi lại tình trạng sức khỏe",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
