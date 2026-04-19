@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Besplatan zapis o prekidu uzimanja pilula",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Почните са иконе зупчаника у горњем десном углу листе пилула.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
