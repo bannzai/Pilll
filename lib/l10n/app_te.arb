@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple Healthకి అనుకూలం",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "నోటిఫికేషన్ ద్వారా తీసుకున్నట్లుగా నమోదు చేయండి",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
