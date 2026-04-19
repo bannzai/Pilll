@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Activând Critical Alert, puteți primi notificări de administrare a pilulelor chiar și în modul Nu deranjați sau modul silențios. Vă recomandăm să configurați această funcție pentru a nu rata momentele importante de administrare a pilulelor.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Personalizați mesajul de notificare",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
