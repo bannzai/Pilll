@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Kama utabofya kwa muda arifa ya ukumbusho, kitendo 'Nimetumia' kitaonekana, na utaweza kurekodi kwamba umechukua dawa bila kufungua programu.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Ongeza karatasi za vidonge moja kwa moja",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
