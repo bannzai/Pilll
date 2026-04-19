@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Quản lý ngày khám dễ dàng",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Thông báo bằng lời nhắc",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
