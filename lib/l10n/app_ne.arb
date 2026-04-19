@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "फोकस मोडमा पनि सूचनाहरू आउँछन्",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "तय गरिएको समयमा निश्चित रिमाइन्डर",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
