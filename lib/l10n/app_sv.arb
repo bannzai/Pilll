@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint2": "Påminn exakt vid inställd tid",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Enkel inställning med ett tryck",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
