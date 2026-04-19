@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "د شمیرو د سمولو وړیا ځانګړتیا",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "د ترتیباتو ټب څخه بدلول کیدای شي",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
