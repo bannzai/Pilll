@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Local no aplicativo",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Receba notificações mesmo durante o Modo Foco",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
