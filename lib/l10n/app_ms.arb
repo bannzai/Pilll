@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Semak sejarah pengambilan pada bila-bila masa",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Rekod tarikh mula haid dengan mudah",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
