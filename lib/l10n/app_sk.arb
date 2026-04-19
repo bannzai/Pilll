@@ -2490,5 +2490,9 @@
   "recordPillFeatureAppealHeadline": "Zaznamenanie užitia pilulky na domovskej obrazovke",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Na domovskej obrazovke stačí klepnúť na plán užívania piluliek, aby ste zaznamenali užitie za daný deň. Ak ste omylom zaznamenali užitie, môžete ho zrušiť opätovným klepnutím. Záznamy o užívaní si môžete kedykoľvek neskôr prezrieť, takže môžete pokračovať bez obáv.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
