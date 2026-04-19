@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "स्वयंचलितपणे चक्र ओळखा",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "सेटिंग्ज सानुकूलित करा",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
