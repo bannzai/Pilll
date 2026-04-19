@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Sukut/Diqqat rejimida ham chalinadi",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "目覚まし同様のアラーム音",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
