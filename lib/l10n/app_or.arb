@@ -2662,5 +2662,9 @@
   "appearanceModeDateFeatureAppealPoint1": "ତାରିଖ ଅନୁଯାୟୀ ପିଲ ସିଟ ଦେଖାନ୍ତୁ",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "କ୍ୟାଲେଣ୍ଡର ନଦେଖି ତାରିଖ ଜାଣିପାରିବ",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
