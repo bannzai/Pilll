@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "サイレントモードでも通知が届く",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alert‌ను సక్రియం చేస్తే, డూ-నాట్-డిస్టర్బ్ లేదా మానర్ మోడ్‌లో ఉన్నప్పటికీ మాత్ర తీసుకునే నోటిఫికేషన్లు మీకు లభ్యమవుతాయి. ముఖ్యమైన మాత్ర తీసుకునే సమయాన్ని మిస్ కాకుండా ఉండేందుకు, దయచేసి దీన్ని సెట్ చేయండి。",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
