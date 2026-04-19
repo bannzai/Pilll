@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Ook te openen door op de cijfers op het startscherm te tikken",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Gratis te gebruiken rustweekregistratie",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
