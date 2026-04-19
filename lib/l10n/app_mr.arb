@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "प्रीमियम सदस्यतेसह थेट वापरण्यायोग्य",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "पिल शीट संपल्यावर स्वयंचलित स्विच",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
