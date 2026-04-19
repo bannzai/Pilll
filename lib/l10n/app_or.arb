@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint3": "ଯେକୌଣସି ସମୟରେ ସେବନ ଇତିହାସ ଦେଖନ୍ତୁ",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "ଋତୁସ୍ରାବ ଆରମ୍ଭ ତାରିଖ ସହଜରେ ରେକର୍ଡ କରନ୍ତୁ",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
