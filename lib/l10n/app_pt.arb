@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "翻訳は既に上で出力済みです。これはコード実装を伴わない翻訳出力タスクのため、プランは不要です。",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Anote seus planos futuros",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
