@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "నోటిఫికేషన్‌ నుండి నేరుగా తీసుకున్నట్టు నమోదు చేయండి",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "యాప్ తెరవకుండానే నోటిఫికేషన్‌లోనే నమోదు",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
