@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "ပိုလ်ရှိပ်ရဲ့ ကွက်လပ်များတွင် ရက်စွဲများကို ပြသခြင်းဖြင့် ယခင်ဆေးသောက်မှတ်တမ်းနှင့် အနာဂတ်ဆေးသောက်ရမည့် အချိန်များကို တစ်ချက်တည်းဖြင့် ကြည့်ရှုနိုင်ပါသည်။ \"နံပါတ်\" မုဒ်နှင့် \"ရက်စွဲ\" မုဒ်ကို ပြောင်းလဲ၍ သင်နှစ်သက်သော ပြသပုံကို ရွေးချယ်ပါ။",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "ဆေးသောက်မှတ်တမ်းကို လွယ်ကူစွာ ပြန်ကြည့်",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
