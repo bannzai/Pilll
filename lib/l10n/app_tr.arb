@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Hap paketi bittiğinde otomatik geçiş",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Elle oluşturma işlemi gerekmiyor",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
