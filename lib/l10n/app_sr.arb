@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Obavesti putem podsetnika",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Додирните датум да унесете планове",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
