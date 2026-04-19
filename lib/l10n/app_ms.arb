@@ -2502,5 +2502,9 @@
   "menstruationFeatureAppealShortDescription": "Rekod tarikh mula haid dan pantau kitaran",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Rekod dan Ramalkan Kitaran Haid",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
