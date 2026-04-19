@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Catat & tinjau semula kesihatan",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Semak rekod lalu di kalendar",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
