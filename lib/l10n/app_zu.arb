@@ -2454,5 +2454,9 @@
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Ungakwazi ukwenza ngezifiso imiyalezo yezaziso",
   "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Ungakwazi ukwenza ngokwezifiso umyalezo ojwayelekile othi 'Isikhathi sokuthatha iphilisi' ube ngamazwi ongawathanda. Shintsha ube amazwi akhuthazayo, igama lesilwane sakho, noma okunye, ukuze kwenze ukuthatha amaphilisi akho nsuku zonke kube mnandi kakhulu.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
