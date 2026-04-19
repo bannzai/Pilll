@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealHeadline": "Qopha ukusetshenziswa kwamaphilisi kusikrini sasekhaya",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Ikhasi lasekhaya le-pill sheet lingacindezelwa nje kuphela ukuze ubhalise ukuthathwa kwalelo langa. Uma ubhale iphutha, cindezela futhi ukuze ususe ukubhalisa. Ungabuyekeza umlando wokuthathwa ngemuva kwesikhathi, ngakho-ke ungalokothi ukhathazeke futhi uqhubeke.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
