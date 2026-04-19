@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Zabraňte vynechaniu dávky aj v režime Nerušiť",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Upozornenia sa zobrazia aj v tichom režime",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
