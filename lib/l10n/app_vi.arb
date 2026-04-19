@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "Bạn có thể ghi lại khoảng thời gian tạm ngưng uống trên tờ thuốc. Khi đang tạm nghỉ, số uống sẽ không tiến lên và bạn có thể tiếp tục ghi lại ngay khi bắt đầu lại.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Vị trí trong ứng dụng",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
