@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "ਅਲਾਰਮ ਘੜੀ ਵਾਂਗੂ ਦਵਾਈ ਲੈਣ ਦਾ ਅਲਾਰਮ",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 ਅਤੇ ਇਸ ਤੋਂ ਬਾਅਦ ਦੇ ਵਰਜ਼ਨਾਂ ਵਿੱਚ ਉਪਲਬਧ AlarmKit ਦੀ ਵਰਤੋਂ ਕਰਕੇ, ਸਾਈਲੈਂਟ ਮੋਡ ਜਾਂ ਫੋਕਸ ਮੋਡ ਵਿੱਚ ਵੀ ਨਿਸ਼ਚਿਤ ਰੂਪ ਨਾਲ ਵੱਜਣ ਵਾਲੇ ਅਲਾਰਮ ਰਾਹੀਂ ਗੋਲੀ ਲੈਣ ਦੀ ਸੂਚਨਾ ਦਿੱਤੀ ਜਾਂਦੀ ਹੈ।",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
