@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "ਤਾਰੀਖ਼ ਟੈਪ ਕਰਕੇ ਯੋਜਨਾ ਲਿਖੋ",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "ਮਾਹਵਾਰੀ ਰਿਕਾਰਡ ਨੂੰ ਆਟੋਮੈਟਿਕ ਤੌਰ 'ਤੇ ਡੇਟਾ ਸਿੰਕ ਕਰੋ",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
