@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Запис через сповіщення без відкриття додатка",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Запис прийому одним дотиком на екрані сповіщень",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
