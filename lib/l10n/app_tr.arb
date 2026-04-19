@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Hap çizelgesindeki kutucuklarda tarihleri göstererek geçmiş kullanım kayıtlarını ve gelecekteki kullanım planlarını tek bakışta görebilirsiniz. 'Numara' modu ile 'Tarih' modu arasında geçiş yaparak size uygun görüntülemeyi seçin.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "服用履歴を簡単に振り返り",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
