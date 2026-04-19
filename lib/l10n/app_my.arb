@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "ကျန်းမာရေးနှင့် ချိတ်ဆက်ပါ",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "ရာသီဆိုင်ရာ မှတ်တမ်းများကို ကျန်းမာရေးနှင့် မျှဝေပါ",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
