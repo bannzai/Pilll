@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "免费使用的编号对齐功能",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "请从“设置”选项卡更改",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
