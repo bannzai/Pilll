@@ -2514,5 +2514,9 @@
   "calendarDiaryFeatureAppealTitle": "Regjistro gjendjen shëndetësore në kalendar",
   "@calendarDiaryFeatureAppealTitle": {
     "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Regjistro gjendjen tënde ditore në kalendar",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
   }
 }
