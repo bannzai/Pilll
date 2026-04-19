@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "सायलेंट मोडमध्येही सूचना मिळतात",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alert सक्षम केल्यावर, Do Not Disturb मोड किंवा सायलेंट मोड चालू असतानाही तुम्हाला पिल घेण्याची सूचना मिळू शकते. महत्त्वाची पिल घेण्याची वेळ चुकवू नये म्हणून, हे सेटिंग नक्की वापरून पाहा.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
