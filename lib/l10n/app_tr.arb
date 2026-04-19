@@ -2410,5 +2410,9 @@
   "lifetimePurchaseNotice1": "Tek seferlik satın alma planını satın alırsanız bile aylık/yıllık plan otomatik olarak iptal edilmez.",
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "Aboneliği yönet",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
