@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "Bildirimden doğrudan ilaç kaydı",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Uygulamayı açmadan bildirim üzerinden kaydet",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
