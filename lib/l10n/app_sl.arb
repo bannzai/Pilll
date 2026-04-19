@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Zabeležite jemanje z enim dotikom iz obvestilnega zaslona",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "{\"quickRecord_help_body\":\"Če obvestilo opomnika pritisnete in zadržite, se prikaže možnost »Vzeto« in lahko zabeležite jemanje brez odpiranja aplikacije.\",\"@quickRecord_help_body\":{\"description\":\"クイックレコード機能のヘルプページの本文\",\"placeholders\":{}}}",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
