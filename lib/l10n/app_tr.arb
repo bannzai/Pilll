@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Elle oluşturma işlemi gerekmiyor",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Ayarlar sekmesindeki geçiş düğmesiyle açıp kapatın",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
