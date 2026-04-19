@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "ପରବର୍ତ୍ତୀ ପିଲ୍ ସିଟ୍ ସ୍ୱୟଂଚାଳିତ ଭାବେ ସୃଷ୍ଟି କରନ୍ତୁ",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "ବର୍ତ୍ତମାନ ପିଲ୍ ସିଟ୍ ଗ୍ରୁପ୍ ଶେଷ ହେଲେ, ଏକ ନୂତନ ପିଲ୍ ସିଟ୍ ଗ୍ରୁପ୍ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ସୃଷ୍ଟି ହୋଇଯାଏ। ହସ୍ତଚାଳିତ ପରିବର୍ତ୍ତନ ଅପ୍ରେସନ ଆବଶ୍ୟକ ନୁହେଁ, ଏବଂ ରେକର୍ଡରେ ଫାଙ୍କ ପଡ଼େ ନାହିଁ।",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
