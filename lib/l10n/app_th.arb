@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "เสียงแจ้งเตือนแบบเดียวกับนาฬิกาปลุก",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 ขึ้นไป・เปิดใช้งานได้จากแท็บการตั้งค่า",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
