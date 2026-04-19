@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "在 iOS 26 及更高版本，从“设置”选项卡启用",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "免费使用的编号对齐功能",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
