@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "Njoftim i kujtesës",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Prekni datën për të shtuar një plan",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
