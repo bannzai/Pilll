@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "कॅलेंडरवर भविष्यातील योजना नोंदवा",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "डॉक्टरांच्या भेटीचे किंवा प्रवासाचे वेळापत्रक यांसारख्या भविष्यातील योजना कॅलेंडरमध्ये नोंदवू शकता. गोळ्या घेण्याच्या चक्रासह एकत्र पाहता येत असल्याने, मासिक पाळीचे वेळापत्रक लक्षात घेऊन योजना आखता येते.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
