@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Розпочніть зі значка шестерні у правому верхньому куті аркуша пігул.",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Редагувати й поновити період — просто",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
