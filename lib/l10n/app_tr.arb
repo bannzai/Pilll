@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Premium加入でそのまま利用可能",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Hap paketi bittiğinde otomatik geçiş",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
