@@ -2702,5 +2702,9 @@
   "calendarDiaryFeatureAppealPoint1": "ပြကဒ္ဒါးတွင် မှတ်တမ်းများ ကြည့်ရှုပါ",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "ကျန်းမာရေးအခြေအနေကို မှတ်တမ်းတင်ပြီး ပြန်ကြည့်ပါ",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
