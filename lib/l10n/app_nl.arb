@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Door datums weer te geven in de vakjes van het pillenblad, kunt u uw medicatiegeschiedenis uit het verleden en uw geplande toekomstige innames in één oogopslag bekijken. Schakel tussen de modus \"Nummer\" en de modus \"Datum\" om de weergave te kiezen die het beste bij u past.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Medicatiegeschiedenis eenvoudig bekijken",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
