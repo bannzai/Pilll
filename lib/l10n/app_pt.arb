@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Quando o grupo de cartelas atual termina, um novo grupo de cartelas é criado automaticamente. Não é necessária nenhuma operação manual de troca, evitando lacunas no registro.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Alarme que toca como um despertador",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
