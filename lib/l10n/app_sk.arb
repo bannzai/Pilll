@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "次のピルシートを自動で作成",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Keď sa aktuálna skupina piluliek skončí, automaticky sa vytvorí nová skupina piluliek. Manuálne prepínanie nie je potrebné, takže v záznamoch nevznikajú medzery.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
