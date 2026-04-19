@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "ਚੁੱਪ ਮੋਡ ਵਿੱਚ ਵੀ ਸੂਚਨਾਵਾਂ ਪ੍ਰਾਪਤ ਕਰੋ",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "ਡੂ ਨਾਟ ਡਿਸਟਰਬ ਮੋਡ ਵਿੱਚ ਵੀ ਗੋਲੀ ਲੈਣਾ ਨਾ ਭੁੱਲੋ",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
