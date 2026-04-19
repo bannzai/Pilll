@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealBody": "Om du långtrycker på påminnelsen i aviseringen visas åtgärden \"Tagit\", så att du kan registrera intaget utan att öppna appen.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "ピルシートを自動で追加",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
