@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Pilllတွင် မှတ်တမ်းတင်ထားသော ရာသီသွေးဒေတာများကို ကျန်းမာရေးအက်ပ်နှင့် အလိုအလျောက် ချိတ်ဆက်နိုင်သည်။ ကျန်းမာရေးအပေါ် အခြားသော ကျန်းမာရေးဒေတာများနှင့် အတူတကွ စစ်ဆေးနိုင်ပြီး၊ အခြားသော အက်ပ်များတွင်လည်း ရာသီသွေးဒေတာကို အသုံးပြုနိုင်မည်ဖြစ်သည်။",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "အကြောင်းကြားချက်မှ တိုက်ရိုက် ဆေးသောက်မှတ်တမ်း",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
