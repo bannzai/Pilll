@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "Kengele inayopiga kama ile ya kuamka",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Arifa zinazosikika kwa uhakika hata wakati kifaa kiko kwenye hali ya kimya",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
