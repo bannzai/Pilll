@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "通过“设置”选项卡的开关切换",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "即使在静音/专注模式也会响",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
