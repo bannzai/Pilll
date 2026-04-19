@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Нажмите на схему таблеток, чтобы зафиксировать прием",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Легко отменить, даже если ошиблись",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
