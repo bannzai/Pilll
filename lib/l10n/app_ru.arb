@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Не пропускайте приём таблеток даже в режиме «Не беспокоить»",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Уведомления приходят даже в беззвучном режиме",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
