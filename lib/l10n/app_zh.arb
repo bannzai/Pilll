@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "通过提醒通知",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "点击日期并输入日程",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
