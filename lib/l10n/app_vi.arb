@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "Đặt số viên đã uống hôm nay",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Nếu số bị lệch, hãy sửa trong Cài đặt",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
