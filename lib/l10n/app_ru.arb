@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Отклонено",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Доступно по подписке Premium",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
