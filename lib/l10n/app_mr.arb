@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "कॅलेंडरवर मागील नोंदी पाहा",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "तारीखेवर टॅप करून प्रकृती नोंदवा",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
