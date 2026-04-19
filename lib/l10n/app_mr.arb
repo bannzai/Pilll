@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple हेल्थकेअर सुसंगत",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "सूचना क्रियेद्वारे सेवन नोंद",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
