@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Papar helaian pil mengikut tarikh",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Tahu tarikh tanpa melihat kalendar",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
