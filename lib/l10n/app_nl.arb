@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "Direct beschikbaar met Premium-abonnement",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Automatisch wisselen bij einde pilblad",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
