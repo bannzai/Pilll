@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "Regjistro periudhën e pushimit të marrjes",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Menaxho saktë pushimet dhe ndërprerjet",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
