@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Sa madaling malaman ang petsa kahit hindi tumitingin sa kalendaryo",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "I should call the translate function before responding to the user.",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
