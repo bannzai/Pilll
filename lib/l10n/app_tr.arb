@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Gelecekteki randevular veya seyahat planları gibi etkinlikleri takvime kaydedebilirsiniz. Hap kullanım döngünüzle birlikte görüntüleyerek regl tarihlerinizle uyumlu planlar yapabilirsiniz.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Sağlık uygulamalarıyla entegrasyon",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
