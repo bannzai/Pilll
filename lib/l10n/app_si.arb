@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealBody": "මසිකය පැමිණුන විට එය සටහන් කිරීම පමණක් කළහොත්, පෙර මසික වාර්තා සියල්ල ලැයිස්තුවක් ලෙස බලන්න පුළුවන්. ලබන මසිකයේ අනුමානිත දිනයද ස්වයංක්‍රීයව අනාවරණය වෙයි, ඒනිසා ඔබට වඩා සැලසුම්ගතව ජීවත් විය හැක.",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "දින දර්ශනයේ ඔබේ තත්ත්වය සටහන් කරන්න",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
