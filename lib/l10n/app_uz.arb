@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Dori qabul qilish eslatmasi matnini erkin tahrirlash",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Standart «Dori ichish vaqti» bildirishnomasini o'zingiz yoqtirgan so'zlarga moslab sozlashingiz mumkin. Motivatsiya beruvchi iboralar, uy hayvoningizning ismi yoki boshqa yoqimli matnlarni tanlab, har kungi dori ichishni yanada zavqli qiling.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
