@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint1": "Overzicht in kalender",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Noteer je gezondheid en kijk terug",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
