@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Segerak dengan Apl Penjagaan Kesihatan",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Sokongan Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
