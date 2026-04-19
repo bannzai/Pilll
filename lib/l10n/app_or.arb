@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple HealthKit ସହାୟତା",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "ବିଜ୍ଞପ୍ତି କ୍ରିୟା ଦ୍ୱାରା ସେବନ ରେକର୍ଡ",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
