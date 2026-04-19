@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint2": "နိုးထချိန် နှိုးစက်ကဲ့သို့သော အချက်ပေးသံ",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 နှင့်အထက်・ဆက်တင်တက်ဘ်မှ ဖွင့်ပါ",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
