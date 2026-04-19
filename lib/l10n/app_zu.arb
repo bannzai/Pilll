@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint3": "Ungavula futhi ngokuthinta inombolo ekhasini lasekhaya.",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Ukurekhoda kwamahhala kokungathathi amaphilisi",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
