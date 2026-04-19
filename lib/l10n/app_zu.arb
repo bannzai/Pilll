@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Uzothola izaziso ngisho nalapho imodi ethule ivuliwe",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Uma wenza i-'Isixwayiso Esibalulekile' (Critical Alert) isebenze, uzothola izaziso zokuthatha imithi ngisho noma imodi yokungaphazamiseki (Do Not Disturb) noma imodi yokuthula isebenza. Sicela uyilungise ukuze ungaphuthelwa isikhathi esibalulekile sokuthatha iphilisi.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
