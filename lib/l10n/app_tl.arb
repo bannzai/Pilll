@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Paalalang pag-inom na tulad ng alarm clock",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "Gamit ang AlarmKit na magagamit mula sa iOS 26 pataas, ipapaalala ng app ang pag-inom ng pill gamit ang alarm na tutunog kahit nasa silent mode o focus mode.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
