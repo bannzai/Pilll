@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "تاسو کولی شئ چې معیاري \"د حبوبو د خوړلو وخت دی\" خپلې خوښې کلمو ته بدل کړئ. هڅوونکې کلمې، د خپل ګرانپیژندلي ژوي نوم، یا نورې جملې هڅه وکړئ چې ستاسو ورځنۍ دوا اخیستل ډیر خوندور کوي.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "د پیل شیټ پر مخ نیټې ښکاره کول",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
