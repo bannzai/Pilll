@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint3": "Premium အသင်းဝင်ဖြင့် ဆက်လက်အသုံးပြုနိုင်သည်",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "ဆေးပြားစာရွက်ပြီးဆုံးသည့်အခါ အလိုအလျောက်ပြောင်းလဲ",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
