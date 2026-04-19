@@ -2714,5 +2714,9 @@
   "futureScheduleFeatureAppealPoint1": "ପଞ୍ଜିକାରେ ଯୋଜନା ଲେଖ",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "ଡାକ୍ତରଖାନା ଯିବା ଦିନ ସହଜ ପରିଚାଳନା",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
