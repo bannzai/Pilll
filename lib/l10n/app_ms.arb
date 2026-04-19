@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Berbunyi walaupun dalam mod senyap/fokus",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Bunyi penggera seperti jam loceng",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
