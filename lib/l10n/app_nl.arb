@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Meldingbericht voor inname vrij aanpassen",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Je kunt de standaardmelding \"Het is tijd om je pil te nemen\" aanpassen naar woorden die jij leuk vindt. Verander het in een motiverende zin, de naam van je huisdier, of iets anders waardoor je dagelijkse inname leuker wordt.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
