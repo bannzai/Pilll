@@ -2530,5 +2530,9 @@
   "futureScheduleFeatureAppealTitle": "Anote seus planos futuros",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Gerencie compromissos futuros, como consultas médicas",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
