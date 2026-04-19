@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Jeśli numer się rozjechał, popraw w ustawieniach",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Możesz zmienić numer tabletki do wzięcia dzisiaj",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
