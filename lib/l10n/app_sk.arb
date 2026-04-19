@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Zobraziť dátumy na pilulkovom hárku",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Zobrazením dátumov v políčkach pilulkového listu môžete na prvý pohľad vidieť históriu užívania a budúce plánované užitia. Prepnite medzi režimami „Číslo“ a „Dátum“ a zvoľte zobrazenie, ktoré vám vyhovuje.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
