@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Sessiz modda bile kesinlikle çalan bildirim",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Çalar saate benzer ilaç alma alarmı",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
