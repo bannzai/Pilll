@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Ilova ichidagi joy",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Diqqat rejimida ham bildirishnomalar keladi",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
