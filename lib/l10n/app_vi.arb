@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Ngăn bạn quên uống ngay cả khi ở chế độ Không làm phiền",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Nhận thông báo ngay cả khi ở chế độ im lặng",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
