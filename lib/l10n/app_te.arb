@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "పిల్ షీట్‌లో తేదీలు చూపించవచ్చు",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "పిల్ షీట్‌లోని కాట్గులలో తేదీని ప్రదర్శించడం ద్వారా, గత తీసుకున్న രേഖలు మరియు భవిష్యత్తు తీసుకునే షెడ్యూల్‌ను ఒక नजरతో చూసుకోవచ్చు. \"సంఖ్య\" మోడ్ మరియు \"తేదీ\" మోడ్‌ను మార్చుకొని, మీకు సరిపోయే చూపును ఎంచుకోండి.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
