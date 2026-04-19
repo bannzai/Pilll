@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Unganisha na Afya",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Shiriki rekodi za hedhi na programu ya Afya",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
