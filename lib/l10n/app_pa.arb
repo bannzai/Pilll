@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "ਦਵਾਈ ਦੀ ਛੁੱਟੀ ਅਤੇ ਰੁਕਾਵਟ ਦਾ ਸਟੀਕ ਪ੍ਰਬੰਧਨ",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "ਪਿੱਲ ਲੈਣਾ ਬੰਦ ਕਰਨਾ",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
