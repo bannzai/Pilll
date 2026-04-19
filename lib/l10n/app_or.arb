@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint3": "ଏକ ଟ୍ୟାପ୍‌ରେ ସହଜ ସେଟଅପ୍",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "ବିଜ୍ଞପ୍ତି ବାର୍ତ୍ତା ମୁକ୍ତ ଭାବେ ସଂପାଦନ କରନ୍ତୁ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
