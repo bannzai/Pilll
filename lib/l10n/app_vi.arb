@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Tự động thêm vỉ thuốc",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Tự động thêm vỉ thuốc tiếp theo",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
