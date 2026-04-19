@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "मानक \"पिल खाने समय भयो\" लाई तपाईंले मन पर्ने शब्दमा अनुकूलित गर्न सकिन्छ। उत्प्रेरक शब्दहरू, आफ्नो पाल्तु जनावरको नाम, वा दैनिक सेवन झन् रमाइलो बनाउने कुनै पनि वाक्यांशमा परिवर्तन गरेर हेर्नुस्।",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "पिल शिटमा मिति देखाउनुहोस्",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
