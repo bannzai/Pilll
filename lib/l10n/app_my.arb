@@ -2642,5 +2642,9 @@
   "criticalAlertFeatureAppealPoint1": "အာရုံစူးစိုက်မုဒ်တွင်လည်း အကြောင်းကြားချက်များ ရောက်ရှိနိုင်သည်",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "သတ်မှတ်ထားသောအချိန်တွင် သေချာပေါက်သတိပေးပါမည်",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
