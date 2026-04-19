@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "Shihni menjëherë se kur e keni marrë",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Regjistrimi i marrjes së pilulës në ekranin kryesor",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
