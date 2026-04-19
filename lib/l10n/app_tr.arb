@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "iOS 26 ve sonrası için kullanılabilen AlarmKit'i kullanarak, sessiz modda veya Odak modunda olsa bile kesinlikle çalan alarmlarla hap alımınızı hatırlatır.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Bugünün hap sırasını ayarla",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
