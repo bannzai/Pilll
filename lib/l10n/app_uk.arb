@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "Автоматичне визначення циклу",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Налаштувати параметри",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
