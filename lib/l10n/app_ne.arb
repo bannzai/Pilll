@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "निःशुल्क उपलब्ध औषधि-विराम रेकर्ड",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "पिल शिटको माथिल्लो दायाँ कुनाको गियरबाट सुरु गर्नुहोस्",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
