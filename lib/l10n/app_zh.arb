@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "カレンダーに未来の予定を記録",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "可以在日历中记录就诊预约、旅行等未来计划。可将这些与服药周期一并查看，便于在制定计划时考虑经期安排。",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
