@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Anda boleh menyesuaikan mesej standard \"Masa untuk minum pil\" dengan perkataan kegemaran anda. Cuba tukar kepada kata-kata yang memberi motivasi, nama haiwan peliharaan anda, atau sebarang ungkapan yang menjadikan pengambilan ubat harian lebih menyeronokkan.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Paparkan tarikh pada helaian pil",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
