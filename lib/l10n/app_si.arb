@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "දෛනික සෞඛ්‍ය තත්ත්වය දිනදර්ශනයට සටහන් කරන්න",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "කැලෙන්ඩරයෙන් දිනයක් තට්ටු කිරීමෙන් ඔබට ශරීර තත්ත්වය, මානසික හැඟීම් සහ රෝග ලක්ෂණ වැනි දේ සටහන් කළ හැක. මෙම සටහන් බෙහෙත් ගැනීමේ වාර්තා සහ මාසික වාර්තා සමඟ එකට බැලිය හැකි නිසා, ඔබේ ශරීර රිද්මය හොඳින් අවබෝධ කරගත හැක.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
