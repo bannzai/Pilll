@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "Als het nummer op de pillenstrip niet meer overeenkomt met de werkelijke inname door het vergeten of verwisselen van een pil, kunt u het pilnummer voor vandaag handmatig aanpassen. U kunt hetzelfde scherm ook openen via de pilnummerweergave op het startscherm.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Rustperiode bijhouden",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
