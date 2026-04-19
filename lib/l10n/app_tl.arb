@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "Gamit ang AlarmKit na magagamit mula sa iOS 26 pataas, ipapaalala ng app ang pag-inom ng pill gamit ang alarm na tutunog kahit nasa silent mode o focus mode.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "I will provide the translation for \"今日の服用番号を合わせる\" into tl (Tagalog).",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
