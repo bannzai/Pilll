@@ -2454,5 +2454,9 @@
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "ਨੋਟੀਫਿਕੇਸ਼ਨ ਦੀ ਭਾਸ਼ਾ ਨੂੰ ਅਨੁਕੂਲਿਤ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ",
   "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "ਦਵਾਈ ਲੈਣ ਦੀ ਸੂਚਨਾ ਦਾ ਸੁਨੇਹਾ ਆਜ਼ਾਦੀ ਨਾਲ ਸੋਧੋ",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
   }
 }
