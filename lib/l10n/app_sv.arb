@@ -2606,5 +2606,9 @@
   "todayPillNumberFeatureAppealTitle": "今日の服用番号を合わせる",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Om numreringen är fel, rätta till det i inställningarna.",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
