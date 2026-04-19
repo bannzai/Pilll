@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "Adicionar compromissos ao calendário",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Gestão fácil de consultas médicas",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
