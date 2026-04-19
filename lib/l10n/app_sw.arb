@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Hakuna haja ya hatua za kuunda kwa mkono",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Badilisha kwa kutumia swichi kwenye kichupo cha Mipangilio.",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
