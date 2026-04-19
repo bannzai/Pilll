@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Adicionar folha de pílulas automaticamente",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Gerar próxima cartela automaticamente",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
