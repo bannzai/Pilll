@@ -2454,5 +2454,9 @@
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "सूचनेचा मजकूर सानुकूलित करता येतो",
   "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "औषध सेवन सूचनेचा संदेश मुक्तपणे संपादित करा",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
   }
 }
