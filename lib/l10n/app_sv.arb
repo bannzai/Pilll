@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint3": "Gå igenom tidigare poster i kalendern",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Tryck på ett datum för att registrera hur du mår",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
