@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "当前的药片组结束后，将自动创建新的药片组。无需手动切换操作，可避免记录遗漏。",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "像闹钟一样响的提醒",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
