@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "ఈ రోజు తాగవలసిన గోలి సంఖ్యను మార్చవచ్చు",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "ఈ వాక్యాన్ని అనువదించండి",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
