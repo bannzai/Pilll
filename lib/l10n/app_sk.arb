@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Zobrazením dátumov v políčkach pilulkového listu môžete na prvý pohľad vidieť históriu užívania a budúce plánované užitia. Prepnite medzi režimami „Číslo“ a „Dátum“ a zvoľte zobrazenie, ktoré vám vyhovuje.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Jednoduchý prehľad histórie užívania",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
