@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Je kunt toekomstige afspraken, zoals ziekenhuisbezoeken en reisplannen, op de kalender noteren. Omdat je deze kunt bekijken in combinatie met je pilinnaamcyclus, kun je plannen maken waarbij je ook rekening houdt met je menstruatieplanning.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Koppelen met Gezondheid",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
