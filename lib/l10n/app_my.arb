@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealBody": "ဆေးသောက်ခြင်းကို ခေတ္တရပ်ထားသည့် ကာလများကို ပီးလ်ရှိပ်တွင် မှတ်တမ်းတင်နိုင်သည်။ အနားယူနေစဉ်တွင် ဆေးသောက်အမှတ်စဉ်သည် ဆက်မတိုးဘဲ ပြန်လည်စတင်သောအခါ မှတ်တမ်းတင်ခြင်းကို ချက်ချင်းပြန်လုပ်နိုင်သည်။",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "အက်ပ်တွင်းနေရာ",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
