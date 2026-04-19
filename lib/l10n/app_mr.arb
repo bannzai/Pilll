@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "अॅप न उघडता नोटिफिकेशनवर नोंद करा",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "अधिसूचना स्क्रीनवरून एक टॅपमध्ये औषध नोंद",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
