@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "हालको पिल शीट समूह समाप्त भएपछि, नयाँ पिल शीट समूह स्वचालित रूपमा सिर्जना हुन्छ। म्यानुअल रूपमा स्विच गर्ने आवश्यकता पर्दैन र रेकर्डमा कुनै खाली ठाउँ हुँदैन।",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "अलार्म घडीजस्तै बज्ने अलार्म",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
