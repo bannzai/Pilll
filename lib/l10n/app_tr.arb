@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Ana ekrandaki hap sayfasına dokunarak o günün alımını kaydedebilirsiniz. Yanlışlıkla kaydettiyseniz, tekrar dokunarak geri alabilirsiniz. Alım geçmişi daha sonra görüntülenebilir, böylece rahatça devam edebilirsiniz.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Adetleri kaydet ve tahmin et",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
