@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "सूचनाबाट सिधै सेवन रेकर्ड",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "एप नखोलिकन सूचनामै रेकर्ड गर्नुहोस्",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
