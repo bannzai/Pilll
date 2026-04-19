@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Bildirim ekranında tek dokunuşla hap kullanım kaydı",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "{\n  \"@@locale\": \"tr\",\n  \"quickRecord_help\": \"Hatırlatıcı bildirimine uzun basarsanız 'Alındı' eylemi görünür ve uygulamayı açmadan ilacı aldığınızı kaydedebilirsiniz.\",\n  \"@quickRecord_help\": {\n    \"description\": \"クイックレコード機能のヘルプページの本文\"\n  }\n}",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
