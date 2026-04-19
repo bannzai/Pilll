@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Ipakita ang pill sheet ayon sa petsa",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Sa madaling malaman ang petsa kahit hindi tumitingin sa kalendaryo",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
