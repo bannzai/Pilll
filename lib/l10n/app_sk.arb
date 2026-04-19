@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Zaznamenanie užitia jedným ťuknutím priamo v notifikácii",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Pri dlhom stlačení upozornenia sa zobrazí akcia \"Označiť ako užité\", vďaka čomu si môžete zaznamenať užitie bez otvorenia aplikácie.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
