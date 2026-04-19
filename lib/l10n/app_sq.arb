@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "Në iOS 26 e më vonë · aktivizoni nga skeda Cilësimet",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Funksion falas për përputhjen e numrave",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
