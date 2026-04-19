@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "Natančno upravljanje odmorov in prekinitev jemanja",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Vzeti premor pri jemanju tablet",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
