@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Rekodi kwa urahisi tarehe ya kuanza kwa hedhi",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Fuatilia mzunguko kiotomatiki",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
