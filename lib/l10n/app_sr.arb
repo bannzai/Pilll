@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Započnite jednostavno praćenje prvog dana menstruacije",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Automatsko praćenje ciklusa",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
