@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Wanneer de huidige pilvellengroep eindigt, wordt automatisch een nieuwe pilvellengroep aangemaakt. Handmatig omschakelen is niet nodig en er ontstaan geen hiaten in de registratie.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Alarm die klinkt als een wekker",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
