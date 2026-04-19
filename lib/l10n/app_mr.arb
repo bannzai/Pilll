@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "मासिक पाळी नोंद व अंदाज",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "मासिक पाळीची सुरुवात नोंदवून चक्र समजून घ्या",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
