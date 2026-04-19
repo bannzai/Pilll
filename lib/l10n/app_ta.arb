@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "பில் சீட்டின் வலது மேல் மூலையில் உள்ள கியர் ஐகானிலிருந்து தொடங்கு",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "மாதவிடாய் காலத்தைத் திருத்தமோ மீண்டும் தொடக்கமோ செய்ய எளிது",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
