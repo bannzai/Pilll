@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "දිනයක් ටැප් කර ඔබේ සෞඛ්‍ය තත්ත්වය සටහන් කරන්න",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "කැලේන්ඩරයෙහි නියමිත කාලයය ලියා දමන්න",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
