@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Opomnik za jemanje – deluje kot budilka",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "Z AlarmKitom (na voljo v iOS 26 in novejših) vas opomnimo na jemanju kontracepcijske tablete z alarmom, ki zveni tudi v načinu tišine ali v načinu osredotočenja.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
