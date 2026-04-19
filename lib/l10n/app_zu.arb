@@ -2718,5 +2718,9 @@
   "futureScheduleFeatureAppealPoint1": "Engeza umcimbi kukhalenda",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Lawula kalula izinsuku zokuya kudokotela",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
