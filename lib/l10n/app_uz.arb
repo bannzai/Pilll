@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Qo'lda yaratish shart emas",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Sozlamalar bo'limidagi kalit bilan almashtiring",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
