@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Легко отменить, даже если ошиблись",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Проверяйте историю приёма в любое время",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
