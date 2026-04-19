@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "د تمرکز حالت کې هم خبرتیاوې رسیږي",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "د ټاکل شوي وخت کې د باور وړ یادونه",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
