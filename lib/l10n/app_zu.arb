@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealHeadline": "Qopha izinhlelo ezizayo kukhalenda",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Ncoma uhumusho walokhu kuhlelo lokusebenza lwekusasa, ezifana nezibhedlela noma uhambo. Ungakwazi ukufaka lezi zinhlelo ku-akalenda. Njengoba zihambisana nenqubo yakho yokuthatha amaphilisi, ungakwazi ukuhlela futhi ubikelele izinsuku zokugeleza kwegazi ukuze wenze izinhlelo ezifanele.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
