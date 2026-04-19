@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint3": "ହୋମ୍‌ ର ନମ୍ବରରେ ଟ୍ୟାପ୍ କରି ମଧ୍ୟ ଖୋଲାଯାଇପାରିବ",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "ବିନାମୂଲ୍ୟ ଔଷଧ ବ୍ୟବଧାନ ରେକର୍ଡ",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
