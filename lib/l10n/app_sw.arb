@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "Rekodi kipindi cha kusitisha matumizi",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Dhibiti kwa usahihi mapumziko na kusitishwa kwa matumizi",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
