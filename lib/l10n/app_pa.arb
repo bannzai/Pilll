@@ -2582,5 +2582,9 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "ਅਗਲੀ ਸ਼ੀਟ ਆਟੋ-ਜਨਰੇਟ",
   "@creatingNewPillSheetFeatureAppealShortDescription": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "ਅਗਲੀ ਪਿੱਲ ਸ਼ੀਟ ਆਪਣੇ ਆਪ ਬਣਾਓ",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
   }
 }
