@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "نیټه ټک کړئ او خپله موعده ولیکئ",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "د حیض ریکارډونو اتوماتیک ډیټا همغږي",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
