@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Também pode ser aberto tocando no número na tela inicial",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Registro de pausa gratuito",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
