@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "చికిత్సకు వెళ్లాల్సిన రోజులను సులభంగా నిర్వహించండి",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "రిమైండర్ ద్వారా తెలియజేయండి",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
