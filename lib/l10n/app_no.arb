@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Sted i appen",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Varsler leveres selv i Fokus-modus",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
