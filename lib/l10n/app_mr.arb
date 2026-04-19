@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "विनामूल्य वापरता येणारी विश्रांती नोंद",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "पिल शीटच्या उजव्या वरच्या कोपर्यातील गियरमधून सुरू करा",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
