@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "Bezplatná funkcia zladenia čísel",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Možno zmeniť na karte Nastavenia",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
