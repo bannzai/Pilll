@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "Ghi lại thời gian nghỉ uống thuốc",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Quản lý chính xác việc tạm ngưng/gián đoạn uống thuốc",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
