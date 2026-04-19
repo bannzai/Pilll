@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "Ако се, због заборављања или погрешног узимања, број на листи пилула и стварно узимање разликују, можете ручно прилагодити који број пилуле треба да узмете данас. Исти екран можете отворити и преко приказа броја пилуле на почетном екрану.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Zabeležite period prekida uzimanja",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
