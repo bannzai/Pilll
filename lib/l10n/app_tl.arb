@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Please translate the input text into Tagalog (tl).",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Maaari mong i-customize ang karaniwang 'Panahon na para inumin ang iyong pildora' sa anumang salitang gusto mo. Palitan ito ng mga salita na magbibigay ng sigla o ng pangalan ng iyong alaga upang maging mas masaya ang iyong araw-araw na pag-inom.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
