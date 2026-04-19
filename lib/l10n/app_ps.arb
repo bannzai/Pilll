@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "د کیلنډر کې مهالویش ولیکئ",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "د روغتون د مراجعې ورځو اسانه مدیریت",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
