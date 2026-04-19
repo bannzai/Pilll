@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Có thể mở bằng cách chạm vào số trên màn hình chính",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Ghi chép nghỉ uống thuốc miễn phí",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
