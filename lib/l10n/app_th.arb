@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "จัดการการหยุดยาและการขัดจังหวะอย่างแม่นยำ",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "แปล",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
