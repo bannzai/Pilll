@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "บันทึกช่วงหยุดทานยา",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "จัดการการหยุดยาและการขัดจังหวะอย่างแม่นยำ",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
