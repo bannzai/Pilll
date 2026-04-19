@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "ติดตามรอบเดือนโดยอัตโนมัติ",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "ปรับแต่งการตั้งค่า",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
