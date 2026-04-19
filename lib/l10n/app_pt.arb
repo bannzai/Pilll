@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Integrar com Saúde",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Compartilhar registro menstrual com o HealthCare",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
