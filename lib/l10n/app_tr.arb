@@ -2466,5 +2466,9 @@
   "appearanceModeDateFeatureAppealTitle": "Hap çizelgesinde tarihleri göster",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Ne zaman alacağınızı bir bakışta görün",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
   }
 }
