@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Karatasi inayofuata ya vidonge itaundwa kiotomatiki.",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Wakati kundi la karatasi za vidonge la sasa linapoisha, kundi jipya la karatasi za vidonge litaundwa kiotomatiki. Hakutakuwa na haja ya kubadili kwa mkono, na hakutakuwa na upotezaji wa rekodi.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
