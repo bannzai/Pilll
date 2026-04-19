@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "Gratis registrering av pillefri periode",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Start fra tannhjulet øverst til høyre på pillearket",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
