@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Maaari ring buksan mula sa Home screen sa pamamagitan ng pag-tap sa numero.",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Libreng tala ng pahinga sa pag-inom ng tableta",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
