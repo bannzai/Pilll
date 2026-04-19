@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "Rishikoni lehtësisht historikun e përdorimit",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Shihni menjëherë se kur e keni marrë",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
