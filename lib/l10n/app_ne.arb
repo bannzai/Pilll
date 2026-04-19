@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "पिल शीटमा मिति देखाउन सकिन्छ",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "पिल शिटका खानाहरूमा मिति देखाउँदा, विगतको औषधि सेवन इतिहास र भविष्यको सेवन तालिका एकै नजरमा जाँच गर्न सकिन्छ। \"नम्बर\" मोड र \"मिति\" मोड बीच स्विच गरेर, आफ्नो सुविधा अनुसारको प्रदर्शन छान्नुहोस्।",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
