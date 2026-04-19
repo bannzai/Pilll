@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Узнавайте дату, не заглядывая в календарь",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Можно изменить в настройках блистера",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
