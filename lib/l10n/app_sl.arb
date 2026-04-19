@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Uporabite stikalo na zavihku Nastavitve",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Tiho/način osredotočanja: tudi v načinu tiho/osredotočeno bo zazvonilo",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
