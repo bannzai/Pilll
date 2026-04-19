@@ -2422,5 +2422,9 @@
   "recommendSignupGeneralTitle": "ଆକାଉଣ୍ଟ ପଞ୍ଜୀକରଣ ଅନୁଶଂସା",
   "@recommendSignupGeneralTitle": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "ପଞ୍ଜୀକରଣ କଲେ ଆପଣ ଡାଟା ବ୍ୟାକଅପ୍ କରିପାରିବେ",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
   }
 }
