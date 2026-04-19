@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Sauti kama ile ya kengele ya kuamka",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 au baadaye · wezesha kutoka kwenye kichupo cha Mipangilio",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
