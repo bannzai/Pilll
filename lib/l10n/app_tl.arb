@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "Maaari mong baguhin ang numero ng pill na iinumin ngayong araw",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Kapag nagkaiba ang numero sa pill sheet at ang aktwal na pag-inom dahil sa nakalimutan o maling pagkakuha, maaari mong mano-manong itugma ang numero ng pill na iinumin ngayong araw. Maaari mo ring buksan ang parehong screen mula sa ipinapakitang numero ng pill sa home.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
