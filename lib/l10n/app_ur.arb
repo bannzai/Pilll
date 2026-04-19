@@ -2698,5 +2698,9 @@
   "menstruationFeatureAppealPoint2": "ماہواری کے چکر کو خودکار طور پر معلوم کریں",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "ترجم کریں",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
