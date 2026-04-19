@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "د ماهوارې د پیل نیټه اسانه ثبت کړئ",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "د دورې اتوماتیک پیژندنه",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
