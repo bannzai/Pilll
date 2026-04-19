@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealBody": "{\n  \"@@locale\": \"sv\",\n  \"calendar.record.help\": \"I kalendern kan du trycka på ett datum för att registrera hälsotillstånd, humör och symtom. Eftersom du kan se detta tillsammans med dina pillerintag och mensanteckningar kan du få bättre förståelse för din kropps rytm.\",\n  \"@calendar.record.help\": {\n    \"description\": \"Hjälpsidan för kalender- och dagboksfunktionen; förklarar att man kan trycka på ett datum för att registrera tillstånd, humör och symtom och att detta kan ses tillsammans med pillerintag och menstruationsanteckningar.\",\n    \"type\": \"text\"\n  }\n}",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Skriv ner framtida planer",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
