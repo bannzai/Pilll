@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "ဆေးသောက်မှတ်တမ်းကို လွယ်ကူစွာ ပြန်ကြည့်",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "မည်သည့်အချိန်တွင် သောက်သုံးသည်ကို ချက်ချင်းသိနိုင်",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
