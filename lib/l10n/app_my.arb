@@ -2782,5 +2782,9 @@
   "todayPillNumberFeatureAppealPoint1": "အခမဲ့ အသုံးပြုနိုင်သည့် နံပါတ်ချိန်ညှိ လုပ်ဆောင်ချက်",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "ဆက်တင်တဘ်မှ ပြောင်းလဲနိုင်သည်",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
