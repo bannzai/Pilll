@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Hayz yozuvlarini avtomatik ravishda sinxronlashtirish",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Salomatlik ilovasi bilan sinxronlash",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
