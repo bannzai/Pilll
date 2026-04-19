@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "Tumpak na pamamahala ng paghinto at pansamantalang pagtigil ng pag-inom",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Pansamantalang itigil ang pag-inom ng pill",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
