@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Volgende pillenstrip automatisch aanmaken",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Wanneer de huidige pilvellengroep eindigt, wordt automatisch een nieuwe pilvellengroep aangemaakt. Handmatig omschakelen is niet nodig en er ontstaan geen hiaten in de registratie.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
