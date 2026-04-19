@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "Thola izaziso ngisho noma imodi ithule",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Gwema ukukhohlwa ukuthatha amaphilisi ngisho nangesikhathi imodi yokungaphazanyiswa ivuliwe.",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
