@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Фіксуйте самопочуття та переглядайте",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Перегляд минулих записів у календарі",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
