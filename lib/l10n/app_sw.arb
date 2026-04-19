@@ -2578,5 +2578,9 @@
   "creatingNewPillSheetFeatureAppealTitle": "Ongeza karatasi za vidonge moja kwa moja",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Unda kiotomatiki karatasi inayofuata",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
