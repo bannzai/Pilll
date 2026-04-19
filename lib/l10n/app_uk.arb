@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Коли поточна група упаковок таблеток закінчиться, нова група буде створена автоматично. Ручне перемикання не потрібне, тому не буде пропусків у записах.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Сигнал, що звучить як будильник",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
