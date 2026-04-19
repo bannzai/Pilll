@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Pil varaqasini sozlamalardan o'zgartirish mumkin.",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Dori varaqasini bosib qabulni qayd eting",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
