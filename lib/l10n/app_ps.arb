@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "د دوا د کارولو تاریخچه هر وخت وګورئ",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "د ماهوارې د پیل نیټه اسانه ثبت کړئ",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
