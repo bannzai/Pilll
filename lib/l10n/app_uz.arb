@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Holatingizni yozish uchun sanani bosing",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Taqvimga voqeani qo'shish",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
