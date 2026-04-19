@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "தற்போதைய பில் ஷீட் குழு முடிவடையும் போது புதிய பில் ஷீட் குழு தானாகவே உருவாக்கப்படும். கைமுறை மாற்றம் தேவையில்லை; இதனால் பில் எடுப்புப் பதிவுகள் மிஸ்ஸாகும் அபாயம் இல்லை.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "மணித்தட்டம் போல ஒலிக்கும் அலாரம்",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
