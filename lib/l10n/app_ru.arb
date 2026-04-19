@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Нажмите на дату, чтобы добавить событие",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Автоматическая синхронизация данных о менструации",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
