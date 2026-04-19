@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "แสดงวันที่บนตารางยาคุม",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "หน้าตารางเม็ดยาแสดงวันที่ในช่อง ทำให้คุณสามารถดูประวัติการทานยาในอดีตและกำหนดการทานยาในอนาคตได้ในครั้งเดียว เปลี่ยนสลับระหว่างโหมด \"หมายเลข\" และโหมด \"วันที่\" เพื่อเลือกการแสดงผลที่เหมาะกับคุณ",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
