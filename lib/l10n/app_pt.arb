@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "Você pode registrar na cartela de comprimidos o período em que parou de tomar por algum tempo. Durante a pausa, o número de doses não avança e, ao retomar, você pode reiniciar o registro imediatamente.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Local no aplicativo",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
