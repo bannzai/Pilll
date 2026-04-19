@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint2": "အက်ပ်မဖွင့်ဘဲ ပြီးစီးပါ",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Premium အသင်းဝင်ဖြင့် ဆက်လက်အသုံးပြုနိုင်သည်",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
