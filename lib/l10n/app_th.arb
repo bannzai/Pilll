@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "บันทึกวันเริ่มประจำเดือนอย่างง่าย",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "ติดตามรอบเดือนโดยอัตโนมัติ",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
