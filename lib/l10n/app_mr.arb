@@ -2526,5 +2526,9 @@
   "calendarDiaryFeatureAppealBody": "कॅलेंडरमधील तारखेवर टॅप करून तुम्ही शारीरिक स्थिती, मनस्थिती, लक्षणे इत्यादी नोंद करू शकता. औषध सेवनाच्या नोंदी आणि मासिक पाळीच्या नोंदींसह एकत्र पाहता येत असल्याने, स्वतःच्या शरीराची लय समजून घेता येते.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "भविष्यातील योजना नोंदवा",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   }
 }
