@@ -2510,5 +2510,9 @@
   "calendarDiaryFeatureAppealShortDescription": "ପ୍ରତିଦିନର ଶାରୀରିକ ଅବସ୍ଥା କ୍ୟାଲେଣ୍ଡରରେ ଲେଖ",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "କ୍ୟାଲେଣ୍ଡରରେ ଦୈନିକ ସ୍ୱାସ୍ଥ୍ୟ ଅବସ୍ଥା ଲିଖନ୍ତୁ",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
