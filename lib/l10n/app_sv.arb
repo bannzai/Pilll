@@ -2770,5 +2770,9 @@
   "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Alarmljud som liknar en väckarklocka",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
