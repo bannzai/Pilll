@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "Du kan endre pillenummeret du tar i dag",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Hvis pillenummeret på pillearket ikke stemmer overens med det faktiske inntaket på grunn av glemte eller forvekslede piller, kan du justere pillenummeret for i dag manuelt. Du kan også åpne samme skjerm fra pillenummervisningen på hjemskjermen.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
