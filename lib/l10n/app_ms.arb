@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Data haid yang direkodkan dalam Pilll boleh disegerakkan secara automatik dengan aplikasi Kesihatan. Anda boleh menyemaknya bersama data kesihatan lain dalam aplikasi Kesihatan, dan data haid juga boleh digunakan dalam aplikasi lain.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Rekod Pengambilan Terus dari Notifikasi",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
