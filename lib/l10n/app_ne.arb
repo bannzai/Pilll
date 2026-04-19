@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "साइलेन्ट मोडमा पनि पिल खान नभुल्नुहोस्",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "साइलेंट मोडमा पनि सूचना प्राप्त हुन्छ",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
