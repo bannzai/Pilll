@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Notificação garantida mesmo no modo silencioso",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Alarme de medicação como despertador",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
