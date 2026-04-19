@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Verifică dintr-o privire când să iei pastila",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Poate afișa data pe foaia de pastile",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
