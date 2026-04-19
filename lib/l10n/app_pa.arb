@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "ਨੋਟੀਫਿਕੇਸ਼ਨ ਤੋਂ ਸਿੱਧਾ ਸੇਵਨ ਰਿਕਾਰਡ",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "ਐਪ ਖੋਲ੍ਹੇ ਬਿਨਾਂ ਸੂਚਨਾ 'ਤੇ ਰਿਕਾਰਡ ਕਰੋ",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
