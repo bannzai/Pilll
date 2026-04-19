@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealBody": "ਜਦੋਂ ਮਾਹਵਾਰੀ ਆਵੇ ਤਾਂ ਸਿਰਫ਼ ਰਿਕਾਰਡ ਕਰਨ ਨਾਲ ਤੁਸੀਂ ਪਿਛਲੀ ਮਾਹਵਾਰੀ ਦਾ ਇਤਿਹਾਸ ਦੇਖ ਸਕਦੇ ਹੋ। ਅਗਲੀ ਮਾਹਵਾਰੀ ਦੀ ਅਨੁਮਾਨਿਤ ਮਿਤੀ ਵੀ ਆਪਣੇ ਆਪ ਦੱਸ ਦਿੱਤੀ ਜਾਂਦੀ ਹੈ, ਇਸ ਲਈ ਤੁਸੀਂ ਯੋਜਨਾਬੱਧ ਤਰੀਕੇ ਨਾਲ ਸਮਾਂ ਬਿਤਾ ਸਕਦੇ ਹੋ।",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "ਕੈਲੰਡਰ 'ਤੇ ਸਿਹਤ ਦਰਜ ਕਰੋ",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
