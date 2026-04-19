@@ -2514,5 +2514,9 @@
   "calendarDiaryFeatureAppealTitle": "क्यालेन्डरमा स्वास्थ्य स्थिति रेकर्ड गर्नुहोस्",
   "@calendarDiaryFeatureAppealTitle": {
     "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "हरेक दिनको स्वास्थ्य अवस्था क्यालेन्डरमा राखौं",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
   }
 }
