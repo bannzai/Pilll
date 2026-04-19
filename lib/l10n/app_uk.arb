@@ -2518,5 +2518,9 @@
   "calendarDiaryFeatureAppealShortDescription": "Щоденний стан залишайте в календарі",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Фіксуйте щоденний стан у календарі",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   }
 }
