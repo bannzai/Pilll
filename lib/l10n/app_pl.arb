@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Wyświetlając daty w polach tabletki, możesz jednym rzutem oka sprawdzić historię przyjmowania leków i zaplanowane dawki w przyszłości. Przełączaj między trybem „numer\" a trybem „data\", aby wybrać wyświetlanie odpowiednie dla siebie.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Łatwo przeglądaj historię przyjmowania",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
