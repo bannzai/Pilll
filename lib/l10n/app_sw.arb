@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Tengeneza ujumbe wako binafsi wa arifa",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "ピルシートを日付で表示",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
