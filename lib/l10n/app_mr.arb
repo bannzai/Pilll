@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "सूचनेतून थेट सेवन नोंद",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "अॅप न उघडता नोटिफिकेशनवर नोंद करा",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
