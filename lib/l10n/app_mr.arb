@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "होमवरील संख्या टॅप करूनही उघडता येते",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "विनामूल्य वापरता येणारी विश्रांती नोंद",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
