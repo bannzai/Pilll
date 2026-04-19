@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "I will provide the translation for \"今日の服用番号を合わせる\" into tl (Tagalog).",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Kung nagkakaiba ang numero, ayusin ito sa mga setting",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
