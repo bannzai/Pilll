@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint1": "Rekod pengambilan dengan mengetuk helaian pil",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Mudah dibatalkan walaupun tersilap",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
