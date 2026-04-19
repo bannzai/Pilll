@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Desfaça facilmente mesmo que erre",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Consulte o histórico de uso a qualquer momento",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
