@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Notează și urmărește starea de sănătate",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Revizuiește înregistrările trecute în calendar",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
