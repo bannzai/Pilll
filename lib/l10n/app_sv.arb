@@ -2558,5 +2558,9 @@
   "quickRecordFeatureAppealTitle": "Logga intag direkt från aviseringen",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Registrera från aviseringen utan att öppna appen",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
