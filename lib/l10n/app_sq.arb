@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Shihni me një vështrim se kur duhet ta merrni",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Shfaq datat në fletën e pilulave",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
