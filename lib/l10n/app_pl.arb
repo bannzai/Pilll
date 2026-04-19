@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "Dzwoni nawet w trybie cichym/skupienia",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Dźwięk alarmu jak budzik",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
