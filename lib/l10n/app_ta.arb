@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "அமைப்புகள் தாவில் மாற்றலாம்",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "முகப்பு திரையில் உள்ள எண்ணை தட்டுவதன் மூலம் கூட திறக்கலாம்",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
