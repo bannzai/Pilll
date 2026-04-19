@@ -2678,5 +2678,9 @@
   "appearanceModeDateFeatureAppealPoint3": "Možno zmeniť v nastaveniach pilulkového listu.",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Klepnite na pilulkový list pre zaznamenanie užitia",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
   }
 }
