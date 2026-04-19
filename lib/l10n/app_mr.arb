@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "मासिक पाळीची सुरुवात सहज नोंदवा",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "स्वयंचलितपणे चक्र ओळखा",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
