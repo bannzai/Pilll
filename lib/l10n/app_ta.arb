@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "சைலென்டு மோடிலும் அறிவிப்புகளைப் பெறுங்கள்",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "அறிவிப்பு தடை செயல்பட்டாலும், மருந்து மறக்கப்படாமல் இருக்க உதவுகிறோம்",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
