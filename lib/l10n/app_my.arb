@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "'ဆေးသောက်ရမည့်အချိန်ရောက်ပါပြီ' ဆိုသော ပုံသေသတင်းပို့ချက်ကို သင်နှစ်သက်ရာ စကားလုံးများဖြင့် ကိုယ်ပိုင်ပြင်ဆင်နိုင်ပါသည်။ အားအင်ပေးသောစကားများ၊ သင့်အိမ်မွေးတိရစ္ဆာန်အမည် စသည်တို့ဖြင့် ပြောင်းလဲ၍ နေ့တိုင်းဆေးသောက်ခြင်းကို ပိုမိုပျော်ရွှင်စေပါ။",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "ဆေးပြားစာရင်းတွင် ရက်စွဲများပြသပါ",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
