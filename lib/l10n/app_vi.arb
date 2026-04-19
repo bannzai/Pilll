@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "Sử dụng AlarmKit (có sẵn từ iOS 26 trở lên) để thông báo việc uống thuốc bằng báo thức sẽ chắc chắn kêu ngay cả khi ở chế độ im lặng hoặc chế độ Tập trung.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Đặt số viên đã uống hôm nay",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
