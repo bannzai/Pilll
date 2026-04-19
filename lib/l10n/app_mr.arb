@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "जेव्हा सध्याचा पिल शीट गट संपतो, तेव्हा नवीन पिल शीट गट आपोआप तयार केला जातो. हाताने बदलण्याची क्रिया आवश्यक नसते आणि नोंदींमध्ये खंड पडत नाही.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "गजरासारखा वाजणारा अलार्म",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
