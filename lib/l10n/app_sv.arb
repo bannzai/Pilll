@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint2": "Alarmljud som liknar en väckarklocka",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "Aktivera från fliken Inställningar på iOS 26 eller senare",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
