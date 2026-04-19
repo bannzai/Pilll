@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Voorkom vergeten, ook in de stille modus",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Meldingen ontvangen, ook in stille modus",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
