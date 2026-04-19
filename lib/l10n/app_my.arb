@@ -2734,5 +2734,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "ရာသီသွေးမှတ်တမ်းကို အလိုအလျောက် ဒေတာချိတ်ဆက်ခြင်း",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ကျန်းမာရေးအက်ပ်နှင့် ထပ်တူကြ",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
