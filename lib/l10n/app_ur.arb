@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "پِل شیٹ کو تاریخ کے مطابق دکھائیں",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "کیلنڈر دیکھے بغیر تاریخ معلوم ہوتی ہے",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
