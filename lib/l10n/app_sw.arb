@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealShortDescription": "Simamia mipango ya baadaye, kama miadi ya kliniki",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "\"Kurekodi matukio ya baadaye kwenye kalenda\"",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
