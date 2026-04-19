@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "iOS 26 తర్వాత అందుబాటులో ఉండే AlarmKitను ఉపయోగించి, సైలెంట్ మోడ్ లేదా ఫోకస్ మోడ్‌లో ఉండగా కూడా ఖచ్చితంగా కనిపించే అలారం ద్వారా మాత్రలు తీసుకోమని గుర్తుచేస్తుంది.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "ఈ రోజు తీసుకోవాల్సిన మాత్ర సంఖ్యను సరಿಹెయ్యండి",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
