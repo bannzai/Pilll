@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Pilll ਵਿੱਚ ਰਿਕਾਰਡ ਕੀਤਾ ਮਾਹਵਾਰੀ ਡੇਟਾ ਆਪਣੇ ਆਪ ਹੈਲਥਕੇਅਰ ਐਪ ਨਾਲ ਸਿੰਕ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ। ਤੁਸੀਂ ਇਸਨੂੰ ਹੈਲਥਕੇਅਰ ਉੱਤੇ ਹੋਰ ਸਿਹਤ ਡੇਟਾ ਦੇ ਨਾਲ ਦੇਖ ਸਕਦੇ ਹੋ, ਅਤੇ ਦੂਜੇ ਐਪਾਂ ਵਿੱਚ ਵੀ ਮਾਹਵਾਰੀ ਡੇਟਾ ਵਰਤ ਸਕਦੇ ਹੋ।",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "ਨੋਟੀਫਿਕੇਸ਼ਨ ਤੋਂ ਸਿੱਧਾ ਸੇਵਨ ਰਿਕਾਰਡ",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
