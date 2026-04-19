@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Çalar saate benzer ilaç alma alarmı",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 ve sonrası için kullanılabilen AlarmKit'i kullanarak, sessiz modda veya Odak modunda olsa bile kesinlikle çalan alarmlarla hap alımınızı hatırlatır.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
