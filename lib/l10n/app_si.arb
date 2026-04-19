@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "සැකසුම් ටැබයෙන් වෙනස් කළ හැක.",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "හෝම් තිරයේ සංඛ්‍යාව ටැප් කිරීමෙන්ද විවෘත කළ හැක.",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
