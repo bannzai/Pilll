@@ -2682,5 +2682,9 @@
   "recordPillFeatureAppealPoint2": "Ångra enkelt vid misstag",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Se din intagshistorik när som helst",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
