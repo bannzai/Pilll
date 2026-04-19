@@ -2438,5 +2438,9 @@
   "criticalAlertFeatureAppealShortDescription": "Iwasang makalimutan ang pag-inom kahit naka-Do Not Disturb.",
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Makakatanggap ng mga abiso kahit naka-silent mode",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
   }
 }
