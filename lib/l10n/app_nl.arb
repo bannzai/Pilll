@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Schakel in de instellingentab",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Gaat ook af in stille/focusmodus",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
