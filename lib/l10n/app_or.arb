@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint3": "ସେଟିଂ କଷ୍ଟୋମାଇଜ୍ କରନ୍ତୁ",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "କ୍ୟାଲେଣ୍ଡରରେ ରେକର୍ଡ ତାଲିକା",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
