@@ -2450,5 +2450,9 @@
   "reminderNotificationCustomizeWordFeatureAppealTitle": "အကြောင်းကြားချက် မက်ဆေ့ချ်ကို စိတ်တိုင်းကျပြင်ဆင်ပါ",
   "@reminderNotificationCustomizeWordFeatureAppealTitle": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "အကြောင်းကြားချက် စာသားကို စိတ်ကြိုက်ပြင်ဆင်နိုင်သည်",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
   }
 }
