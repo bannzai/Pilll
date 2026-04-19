@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Comutați din fila Setări",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Sună și în modul silențios/concentrare",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
