@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "Leg je dagelijkse gezondheid vast in de kalender",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Tik op een datum in de kalender om je lichamelijke gesteldheid, stemming, symptomen en meer te registreren. Omdat je dit samen met je inname- en menstruatieregistraties kunt bekijken, kun je het ritme van je eigen lichaam bijhouden.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
