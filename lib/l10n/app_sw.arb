@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Inaweza kubadilishwa kutoka kwenye kichupo cha mipangilio",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Unaweza pia kufungua kwa kugusa nambari kwenye skrini ya nyumbani.",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
