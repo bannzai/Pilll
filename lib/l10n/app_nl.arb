@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Tik op een datum om je lichamelijke toestand vast te leggen",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Afspraken in agenda schrijven",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
