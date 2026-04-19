@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "ဆိုင်လင့်မုဒ်တွင်ပင် အကြောင်းကြားချက်များ လက်ခံရယူပါ",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Do Not Disturb မုဒ်တွင်လည်း ဆေးသောက်ရန် မမေ့ပါစေနှင့်",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
