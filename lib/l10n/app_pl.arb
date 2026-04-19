@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "Kiedy zażyłaś pigułkę – widać na pierwszy rzut oka",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Rejestruj zażycie tabletek na ekranie głównym",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
