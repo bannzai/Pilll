@@ -2446,5 +2446,9 @@
   "criticalAlertFeatureAppealBody": "Aktivirajte Critical Alert, da boste prejeli opomnike o jemanju zdravil tudi med načinom Ne moti ali tihim načinom. Prosimo, omogočite to nastavitev, da ne bi zamudili pomembnega časa za jemanje tablet.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Prilagodite sporočilo obvestila",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   }
 }
