@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "ਦਸਤੀ ਬਣਾਉਣ ਦੀ ਕਾਰਵਾਈ ਦੀ ਲੋੜ ਨਹੀਂ",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "ਸੈਟਿੰਗਜ਼ ਟੈਬ ਵਿੱਚ ਸਵਿੱਚ ਨਾਲ ਬਦਲੋ",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
