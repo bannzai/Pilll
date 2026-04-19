@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "Boleh tukar nombor pil yang diminum hari ini",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Apabila nombor pada helaian pil dan pengambilan sebenar tidak selari disebabkan terlupa atau tersalah ambil pil, anda boleh melaraskan semula nombor pil untuk hari ini secara manual. Anda juga boleh membuka skrin yang sama daripada paparan nombor pil di halaman utama.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
