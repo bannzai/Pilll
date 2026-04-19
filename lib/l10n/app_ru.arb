@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "Настроить параметры",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Список записей в календаре",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
