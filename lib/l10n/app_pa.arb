@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "ਮਾਹਵਾਰੀ ਰਿਕਾਰਡ ਅਤੇ ਭਵਿੱਖਬਾਣੀ ਕਰੋ",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "ਮਾਹਵਾਰੀ ਦੀ ਸ਼ੁਰੂਆਤੀ ਤਾਰੀਖ਼ ਰਿਕਾਰਡ ਕਰੋ ਅਤੇ ਚੱਕਰ ਨੂੰ ਸਮਝੋ",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
