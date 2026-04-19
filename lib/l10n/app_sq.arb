@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "Prekni fletën e pilulave në ekranin kryesor për të regjistruar marrjen e pilulës për atë ditë. Nëse e regjistruat gabimisht, prekni përsëri për ta anuluar. Mund të kontrolloni edhe historikun e marrjeve më vonë, kështu që mund ta vazhdoni me qetësi.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Regjistro dhe parashiko menstruacionet",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
