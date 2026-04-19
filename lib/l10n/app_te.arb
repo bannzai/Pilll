@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "సెట్టుచేసిన సమయంలో ఖచ్చితంగా గుర్తుచేస్తుంది",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "ఒక ట్యాప్‌తో సులభ సెటప్",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
