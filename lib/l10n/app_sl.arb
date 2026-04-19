@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "Prejemajte obvestila tudi v tihem načinu",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Preprečite pozabljanje jemanja tudi v načinu Ne moti",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
