@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Angalia mara moja lini kunywa",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Onyesha tarehe kwenye karatasi ya vidonge",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
