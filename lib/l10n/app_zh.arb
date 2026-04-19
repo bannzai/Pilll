@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "轻松回顾服药记录",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "可快速查看服用时间",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
