@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Ghi chú tình trạng sức khỏe để xem lại",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Xem lại các bản ghi trước đây trên lịch",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
