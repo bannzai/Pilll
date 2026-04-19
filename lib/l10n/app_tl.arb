@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "Ipasadya ang mga setting",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "I will translate the given Japanese text into Tagalog (tl) following the l10n/*.arb format, keeping placeholders like {VAL} intact. The input: \"カレンダーで記録を一覧\". The supplementary info is empty.",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
