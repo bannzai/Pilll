@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "ఈ రోజు తీసుకోవాల్సిన మాత్ర సంఖ్యను సరಿಹెయ్యండి",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "\"番号がずれたら設定で修正\" を te に翻訳してください。",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
