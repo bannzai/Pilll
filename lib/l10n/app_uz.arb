@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Shifoxona tashrifi yoki sayohat kabi kelajakdagi tadbirlarni taqvimga kiritishingiz mumkin. Ularni dori qabul qilish davri bilan birga ko'rib chiqish orqali hayz rejalaringizni ham inobatga olgan holda reja tuzishingiz mumkin.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "ヘルスケアと連携",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
