@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "म्यानुअल सिर्जना कार्य आवश्यक छैन",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "सेटिङ ट्याबको स्विचले टगल गर्नुहोस्",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
