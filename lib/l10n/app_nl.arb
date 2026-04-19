@@ -2510,5 +2510,9 @@
   "menstruationFeatureAppealBody": "Door simpelweg je menstruatie te registreren wanneer die komt, kun je een overzicht zien van je eerdere menstruatiegeschiedenis. De volgende verwachte menstruatiedatum wordt ook automatisch voorspeld, zodat je goed kunt plannen.",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Gezondheid bijhouden in agenda",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   }
 }
