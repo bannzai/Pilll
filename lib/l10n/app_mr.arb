@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "पिल शीट संपल्यावर स्वयंचलित स्विच",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "मॅन्युअल तयार करण्याची क्रिया आवश्यक नाही",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
