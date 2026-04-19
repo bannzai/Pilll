@@ -2718,5 +2718,9 @@
   "futureScheduleFeatureAppealPoint1": "Kalender: lägg till händelser",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "\"は\"",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
