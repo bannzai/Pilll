@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Ko se trenutna skupina lističev za končajo, se samodejno ustvari nova skupina lističev. Ročnega preklapljanja ni treba izvajati, zato ne pride do izpustov pri vodenju evidenc.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Alarm, ki zvoni kot budilka",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
