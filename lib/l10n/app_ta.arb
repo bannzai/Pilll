@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "அமைப்புகளை தனிப்பயனாக்கவும்",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "カレンダーで記録を一覧",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
