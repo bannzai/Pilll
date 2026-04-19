@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "自定义设置",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "在日历中查看记录",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
