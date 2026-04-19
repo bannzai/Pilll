@@ -2742,5 +2742,9 @@
   "quickRecordFeatureAppealPoint1": "ବିଜ୍ଞପ୍ତି କ୍ରିୟା ଦ୍ୱାରା ସେବନ ରେକର୍ଡ",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "ଆପ୍ ଖୋଲିବା ବିନା ସମ୍ପୂର୍ଣ୍ଣ",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
