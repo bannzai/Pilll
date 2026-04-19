@@ -2502,5 +2502,9 @@
   "menstruationFeatureAppealShortDescription": "حیض کے آغاز کی تاریخ ریکارڈ کریں اور اپنے ماہواری کے چکر کو سمجھیں",
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "حیض کا اندراج اور پیشگوئی",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
