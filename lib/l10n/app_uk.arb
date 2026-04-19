@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Переход після закінчення блістера",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Не потрібно створювати вручну",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
