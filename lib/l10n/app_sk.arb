@@ -2634,5 +2634,9 @@
   "restDurationFeatureAppealHeadline": "Prestávka v užívaní piluliek",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Možno zaznamenať obdobie, počas ktorého dočasne prestanete užívať liek, na pilulovom hárku. Počas prestávky sa poradové číslo užívania neposúva, a po obnovení užívania je možné okamžite pokračovať v zázname.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
