@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "ఈ వాక్యాన్ని అనువదించండి",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "గోళీలు తినడం ఆపిన కాలాన్ని నమోదు చేయండి",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
