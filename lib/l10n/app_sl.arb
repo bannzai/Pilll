@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Lokacija v aplikaciji",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Obvestila boste prejeli tudi med načinom osredotočenosti.",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
