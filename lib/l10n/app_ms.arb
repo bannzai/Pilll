@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Urus tarikh lawatan hospital dengan mudah",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Notifikasi dengan peringatan",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
