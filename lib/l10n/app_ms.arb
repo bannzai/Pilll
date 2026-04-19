@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Cipta helaian pil seterusnya secara automatik",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Apabila kumpulan helaian pil semasa tamat, kumpulan helaian pil baharu akan dicipta secara automatik. Tiada peralihan manual diperlukan, dan tiada rekod yang akan terlepas.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
