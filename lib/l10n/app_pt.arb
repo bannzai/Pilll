@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "Usando o AlarmKit disponível no iOS 26 ou posterior, você será notificado para tomar sua pílula com um alarme que toca de forma confiável mesmo no Modo Silencioso ou no Modo de Foco.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Ajustar o número do comprimido de hoje",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
