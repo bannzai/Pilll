@@ -2510,5 +2510,9 @@
   "calendarDiaryFeatureAppealTitle": "Qopha isimo sakho kukhalenda",
   "@calendarDiaryFeatureAppealTitle": {
     "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Qopha isimo sakho sansuku zonke ekhalendeni",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
   }
 }
