@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "သတိပေးချက်ကို ကြာကြာနှိပ်ထားလျှင် \"သောက်ပြီးပြီ\" လုပ်ဆောင်ချက် ပေါ်လာပြီး အက်ပ်ကိုမဖွင့်ဘဲ ဆေးသောက်မှတ်တမ်းကို မှတ်သားနိုင်သည်။",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "ဆေးပြားကို အလိုအလျောက် ထည့်သွင်းပါ",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
