@@ -2470,5 +2470,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Sjekk med ett blikk når du skal ta pillen",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Kan vise datoer på pillearket",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
