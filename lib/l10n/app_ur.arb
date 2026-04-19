@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "آپ Pilll میں درج شدہ حیض کے ڈیٹا کو ہیلتھ کیئر ایپ کے ساتھ خودکار طور پر ہم آہنگ کر سکتے ہیں۔ اس طرح آپ وہ ڈیٹا ہیلتھ کیئر میں موجود دیگر صحت کے ڈیٹا کے ساتھ بیک وقت دیکھ سکیں گے اور یہ ڈیٹا دیگر ایپس میں بھی استعمال کے لیے دستیاب ہو جائے گا۔",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
