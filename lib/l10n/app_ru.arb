@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Вы можете записывать в календарь будущие планы — например, визиты к врачу или поездки. Поскольку их можно просматривать вместе с циклом приёма таблеток, вы можете строить планы с учётом предполагаемых дней менструации.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Интеграция с Здоровьем",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
