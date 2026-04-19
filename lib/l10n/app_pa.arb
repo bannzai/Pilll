@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "ਐਪ ਵਿੱਚ ਸਥਾਨ",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "ਫੋਕਸ ਮੋਡ ਦੌਰਾਨ ਵੀ ਸੂਚਨਾਵਾਂ ਮਿਲਦੀਆਂ ਹਨ",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
