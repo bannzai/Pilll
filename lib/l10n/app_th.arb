@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "บันทึกการทานจากการแจ้งเตือน",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "เปิดแอปไม่ต้องเสร็จ",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
