@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "แจ้งเตือนตรงตามเวลาที่ตั้งไว้",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "ตั้งค่าได้ง่ายเพียงแตะครั้งเดียว",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
