@@ -2554,5 +2554,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "له HealthCare سره یوځای کیدلی شئ",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "تاسو کولای شئ چې د Pilll نه ثبت شوي د حیض معلومات د روغتیا اپلیکیشن سره اوتومات یوځای کړئ. تاسو کولای شئ دا د روغتیا اپلیکیشن کې د نورو روغتیا معلوماتو سره یوځای وګورئ، او د نورو اپلیکیشنونو کې هم د حیض معلومات کارولای شئ.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
