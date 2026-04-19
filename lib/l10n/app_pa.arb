@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "ਸਿਹਤ ਨੋਟ ਕਰੋ ਅਤੇ ਸਮੀਖਿਆ ਕਰੋ",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "ਪਿਛਲੇ ਰਿਕਾਰਡਾਂ ਨੂੰ ਕੈਲੰਡਰ ਤੋਂ ਵੇਖੋ",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
