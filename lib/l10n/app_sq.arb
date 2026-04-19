@@ -2722,5 +2722,9 @@
   "futureScheduleFeatureAppealPoint1": "Shkruani një ngjarje në kalendar",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Menaxhoni lehtësisht datat e vizitave mjekësore",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
