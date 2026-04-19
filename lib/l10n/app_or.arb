@@ -2706,5 +2706,9 @@
   "calendarDiaryFeatureAppealPoint3": "କ୍ୟାଲେଣ୍ଡରରେ ଅତୀତ ରେକର୍ଡ ସମୀକ୍ଷା",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "ତାରିଖ ଟ୍ୟାପ୍ କରି ଶାରୀରିକ ଅବସ୍ଥା ରେକର୍ଡ କରନ୍ତୁ",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
