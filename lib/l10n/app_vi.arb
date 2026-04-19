@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Hiển thị ngày trên từng ô của vỉ thuốc giúp bạn nắm ngay lịch sử uống thuốc trong quá khứ và lịch uống dự kiến trong tương lai. Chuyển đổi giữa chế độ 「番号」 (Số) và 「日付」 (Ngày) để chọn cách hiển thị phù hợp với bạn.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Dễ dàng xem lại lịch sử uống thuốc",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
