@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Slobodno uredite poruku podsetnika o uzimanju pilule",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Можете прилагодити подразумевану поруку „Време је да попијете пилулу“ по свом укусу. Покушајте да је замените мотивационим порукама или именом кућног љубимца како би свакодневно узимање било пријатније.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
