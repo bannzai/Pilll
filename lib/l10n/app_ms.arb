@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Selesai tanpa membuka apl",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Boleh digunakan terus dengan langganan Premium",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
