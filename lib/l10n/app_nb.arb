@@ -2686,5 +2686,9 @@
   "recordPillFeatureAppealPoint2": "Enkelt å angre selv om du gjør feil",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Se inntakshistorikk når som helst",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
   }
 }
