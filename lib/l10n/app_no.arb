@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "Registrer pillefri periode",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Nøyaktig administrasjon av pause og avbrudd",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
