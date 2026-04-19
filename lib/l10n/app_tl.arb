@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "Siguradong ipapaalala sa itinakdang oras",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Isang tap lang para sa madaling pag-setup",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
