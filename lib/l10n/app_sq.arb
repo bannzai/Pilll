@@ -2770,5 +2770,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Ndrysho duke përdorur ndërprerësin në skedën Cilësimet.",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Dëgjohet edhe kur pajisja është në modalitetin Heshtje ose Fokus",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
   }
 }
