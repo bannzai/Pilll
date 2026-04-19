@@ -2442,5 +2442,9 @@
   "criticalAlertFeatureAppealHeadline": "Уведомления приходят даже в беззвучном режиме",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "При включении Critical Alert вы будете получать уведомления о приёме таблеток даже в режиме «Не беспокоить» или беззвучном режиме. Чтобы не пропустить важный момент приёма таблеток, обязательно настройте эту функцию.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   }
 }
