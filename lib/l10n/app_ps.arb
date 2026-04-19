@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "د کیلنڈر لیدلو پرته نیټه پوهیدلی شئ",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "د پیل شیټ ترتیباتو څخه د بدلون وړ",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
