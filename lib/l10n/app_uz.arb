@@ -2674,5 +2674,9 @@
   "appearanceModeDateFeatureAppealPoint2": "Taqvimga qaramasdan ham sanani bilishingiz mumkin",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Pil varaqasini sozlamalardan o'zgartirish mumkin.",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
   }
 }
