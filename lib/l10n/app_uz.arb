@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Sana ustiga bosing va reja kiriting",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Hayz yozuvlarini avtomatik ravishda sinxronlashtirish",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
