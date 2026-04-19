@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Durumunu not al ve gözden geçir",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Takvimde geçmiş kayıtları gözden geçirin",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
