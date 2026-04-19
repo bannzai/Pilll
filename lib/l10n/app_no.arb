@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "Kan også åpnes ved å trykke på tallene på startskjermen",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Gratis registrering av pillefri periode",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
