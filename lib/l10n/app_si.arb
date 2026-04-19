@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "හෝම් තිරයේ සංඛ්‍යාව ටැප් කිරීමෙන්ද විවෘත කළ හැක.",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "නොමිලේ භාවිතා කළ හැකි විරාම සටහන",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
