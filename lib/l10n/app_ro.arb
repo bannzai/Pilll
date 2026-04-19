@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Poate fi modificat din fila Setări",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Se poate deschide și apăsând cifrele de pe ecranul principal",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
