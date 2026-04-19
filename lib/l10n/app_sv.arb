@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealLocationHint": "Tryck på ett datum för att lägga till en händelse",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Automatisk synkronisering av mensdata",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
