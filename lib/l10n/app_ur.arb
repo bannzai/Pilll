@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "جاگانے والا الارم",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "خاموش حالت میں بھی یقینی طور پر بجنے والی اطلاع",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
