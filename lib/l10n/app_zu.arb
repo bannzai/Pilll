@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint2": "Qala kusithonjana sezilungiselelo (i-gear) phezulu kwesokudla kwephepha lamaphilisi.",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Kulula ukuhlela noma ukuqala kabusha isikhathi sokuya esikhathini",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
