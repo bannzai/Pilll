@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Tetapan mudah dengan satu ketukan",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Sunting mesej pemberitahuan secara bebas",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
