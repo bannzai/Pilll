@@ -2610,5 +2610,9 @@
   "todayPillNumberFeatureAppealTitle": "Rregullo numrin e marrjes për sot",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Nëse numrat janë të zhvendosur, rregullo në Cilësimet.",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
