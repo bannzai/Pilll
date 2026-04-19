@@ -2646,5 +2646,9 @@
   "criticalAlertFeatureAppealPoint1": "Meldingen worden ook tijdens de focusmodus bezorgd",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Betrouwbare herinnering op de ingestelde tijd",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
   }
 }
