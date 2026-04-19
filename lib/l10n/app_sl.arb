@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "Naredba za klicanje prevajalske funkcije (zahtevano s strani razvijalca).",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Enostavna nastavitev z enim dotikom",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
