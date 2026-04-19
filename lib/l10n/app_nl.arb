@@ -2690,5 +2690,9 @@
   "recordPillFeatureAppealPoint3": "Bekijk de inname-geschiedenis op elk moment",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Menstruatiestartdatum eenvoudig vastleggen",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
   }
 }
