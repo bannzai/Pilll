@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Торкніться дати, щоб додати запис",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Автоматична синхронізація записів про менструацію",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
