@@ -2746,5 +2746,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple स्वास्थ्य सेवा समर्थन",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "सूचना कार्यबाट सेवन रेकर्ड",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
