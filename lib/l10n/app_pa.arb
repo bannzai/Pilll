@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "ਪਿੱਲ ਸ਼ੀਟ ਦੇ ਉੱਪਰ ਸੱਜੇ ਕੋਨੇ ਵਿੱਚ ਗੇਅਰ ਆਈਕਨ ਤੋਂ ਸ਼ੁਰੂ ਕਰੋ",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "ਮਿਆਦ ਦੀ ਸੰਪਾਦਨਾ ਅਤੇ ਮੁੜ ਸ਼ੁਰੂ ਕਰਨਾ ਵੀ ਆਸਾਨ",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
