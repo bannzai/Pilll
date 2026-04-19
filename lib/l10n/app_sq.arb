@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Konfigurim i thjeshtë me një trokitje",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Personalizo mesazhin e njoftimit",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
