@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "Apabila nombor pada helaian pil dan pengambilan sebenar tidak selari disebabkan terlupa atau tersalah ambil pil, anda boleh melaraskan semula nombor pil untuk hari ini secara manual. Anda juga boleh membuka skrin yang sama daripada paparan nombor pil di halaman utama.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Rekod tempoh rehat pengambilan",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
