@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "పిల్ షీట్‌పై ఉన్న పై కుడి గేర్ చిహ్నం ద్వారా ప్రారంభించండి",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "మాసికాన్ని సవరించడం లేదా పునఃప్రారంభించడం సులభం",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
