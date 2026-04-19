@@ -2506,5 +2506,9 @@
   "menstruationFeatureAppealHeadline": "生理の記録と予測ができる",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "仅需在生理来时记录，便可查看过去的生理历史记录列表。应用还会自动预测下次生理日期，帮助你提前规划安排。",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
