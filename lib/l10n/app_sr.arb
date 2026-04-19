@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "Почните са иконе зупчаника у горњем десном углу листе пилула.",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Lako uređivanje i nastavak ciklusa",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
