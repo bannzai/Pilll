@@ -2558,5 +2558,9 @@
   "healthCareIntegrationFeatureAppealBody": "Pilll-ом забележене податке о менструацији можете аутоматски синхронизовати са апликацијом за здравље. Биће могуће да их видите заједно са другим здравственим подацима у тој апликацији и да омогућите другим апликацијама да користе те податке.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Zabeleži uzimanje iz obaveštenja",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
