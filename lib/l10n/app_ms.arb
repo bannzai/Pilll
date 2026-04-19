@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "Sila masukkan kandungan pertanyaan",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Terima kasih kerana membeli pelan sekali beli. Jika anda melanggan pelan bulanan atau tahunan, sila jangan lupa untuk membatalkan langganan tersebut.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
