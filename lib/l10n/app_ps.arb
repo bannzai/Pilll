@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "که تاسو د یادونې خبرتیا اوږده فشار ورکړئ، د 'دوا واخیستله' عمل ښکاره کیږي، او تاسو کولی شئ پرته له اپلیکیشن پرانیستلو د دوا اخیستل ثبت کړئ.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "د حبو پاڼه اتوماتیک اضافه کړئ",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
