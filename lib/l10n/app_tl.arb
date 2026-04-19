@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "リマインダーで通知",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "I-tap ang petsa upang magdagdag ng iskedyul",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
