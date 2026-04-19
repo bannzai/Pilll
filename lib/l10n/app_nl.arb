@@ -2650,5 +2650,9 @@
   "criticalAlertFeatureAppealPoint2": "Betrouwbare herinnering op de ingestelde tijd",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Eenvoudig instellen met één tik",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
   }
 }
