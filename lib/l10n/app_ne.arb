@@ -2774,5 +2774,9 @@
   "alarmKitFeatureAppealPoint1": "साइलेन्ट/फोकस मोडमा पनि बज्छ",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "अलार्म घडी जस्तै अलार्म आवाज",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
   }
 }
