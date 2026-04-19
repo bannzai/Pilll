@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Se tilbake på tidligere registreringer i kalenderen",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Trykk på en dato for å registrere helsetilstanden din",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
