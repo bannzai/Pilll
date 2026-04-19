@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "Puteți nota în calendar programări viitoare, cum ar fi vizite la medic sau călătorii. Le puteți verifica împreună cu ciclul de administrare a pilulelor, astfel încât să puteți face planuri luând în considerare și perioada menstruală.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Integrare cu Sănătatea",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
