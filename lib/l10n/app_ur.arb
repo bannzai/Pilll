@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "ریماینڈر نوٹیفیکیشن کو لمبا دبانے سے 'لیا' ایکشن ظاہر ہوگا، اور آپ ایپ کھولے بغیر دوا لینے کا ریکارڈ کر سکتے ہیں۔",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "پِل شیٹ خود بخود شامل کریں",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
