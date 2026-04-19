@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "Urus rehat & henti ubat dengan tepat",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Berehat daripada pengambilan pil",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
