@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "Meldingen scherm één tik inname registratie",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Door de herinneringsmelding lang ingedrukt te houden, verschijnt de actie 'Ingenomen', waarmee je je inname kunt registreren zonder de app te openen.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
