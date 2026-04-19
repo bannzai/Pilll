@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealShortDescription": "Lawula ngokunembile ukuphumula nokumiswa kokuthatha amaphilisi",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Thatha ikhefu ekuthatheni amaphilisi",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
