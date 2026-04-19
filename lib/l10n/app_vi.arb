@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Tự động chuyển khi kết thúc tờ viên",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Không cần tạo thủ công",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
