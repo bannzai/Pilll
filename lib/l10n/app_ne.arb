@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "iOS 26 वा पछिको संस्करणमा उपलब्ध AlarmKit प्रयोग गरी, साइलेन्ट मोड वा फोकस मोडमा पनि निश्चित रूपमा बज्ने अलार्मले पिल सेवनको समय सूचित गर्दछ।",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "आजको खुराक नम्बर मिलाउनुहोस्",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
