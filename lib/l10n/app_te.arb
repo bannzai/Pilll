@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "アプリを開かずに完了",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "ప్రీమియం సభ్యత్వం తీసుకుంటే వెంటనే ఉపయోగించవచ్చు",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
