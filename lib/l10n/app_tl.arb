@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "过去の記録をカレンダーで振り返り",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Pindutin ang petsa upang itala ang iyong kondisyon",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
