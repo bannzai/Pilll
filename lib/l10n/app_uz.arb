@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "Unutish yoki tabletkalarni aralashtirish tufayli pill varaqasidagi raqamlar va amalda qabul qilingan tabletka mos kelmay qolsa, bugungi ichishingiz kerak bo'lgan pillaning raqamini qo'lda to'g'irlashingiz mumkin. Bosh sahifadagi pill raqami ko'rsatkichi orqali ham xuddi shu oynani ochishingiz mumkin.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Qabulni to'xtatish davrini qayd eting",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
