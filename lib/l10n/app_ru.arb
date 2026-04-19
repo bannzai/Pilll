@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Простая настройка одним нажатием",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Свободно редактировать сообщения уведомлений",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
