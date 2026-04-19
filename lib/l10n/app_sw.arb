@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Rekodi na utabiri wa hedhi",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Rekodi tarehe ya kuanza kwa hedhi ili kufuatilia mzunguko.",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
