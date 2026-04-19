@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Schimbare automată la sfârșitul foii de pilule",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Creare manuală nu este necesară",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
