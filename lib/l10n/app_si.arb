@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "නොමිලේ භාවිතා කළ හැකි අංක ගැලපීමේ විශේෂාංගය",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "සැකසුම් ටැබයෙන් වෙනස් කළ හැක.",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
