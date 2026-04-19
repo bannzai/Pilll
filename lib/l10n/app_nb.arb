@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "Du kan registrere en pause i pillearket når du slutter å ta pillene for en periode. Under pausen vil ikke pillnummeret gå fremover, og du kan gjenoppta registreringen umiddelbart når du begynner igjen.",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Sted i appen",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
