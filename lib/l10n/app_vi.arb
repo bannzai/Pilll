@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "ワンタップでかんたん設定",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Tùy chỉnh nội dung thông báo",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
