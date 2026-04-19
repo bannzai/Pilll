@@ -2394,5 +2394,9 @@
   "inquiryContentRequired": "ଦୟାକରି ଅନୁସନ୍ଧାନ ବିଷୟବସ୍ତୁ ପ୍ରବେଶ କରନ୍ତୁ",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "premiumRegistrationComplete": "Pilll ପ୍ରିମିୟମ୍ ପଞ୍ଜୀକରଣ ସମ୍ପୂର୍ଣ୍ଣ",
+  "@premiumRegistrationComplete": {
+    "description": "有料プラン「Pilll Premium」への登録が正常に完了したことをユーザーに知らせる成功メッセージです。アプリ名「Pilll」は翻訳せずそのまま使用してください。"
   }
 }
