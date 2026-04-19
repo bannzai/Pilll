@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Ťuknite na dátum a zaznamenajte svoj stav",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Naplňte plán do kalendára",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
