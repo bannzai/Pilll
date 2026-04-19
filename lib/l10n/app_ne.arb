@@ -2522,5 +2522,9 @@
   "calendarDiaryFeatureAppealHeadline": "दैनिक स्वास्थ्य स्थिति क्यालेन्डरमा रेकर्ड गर्नुहोस्",
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "क्यालेन्डरबाट मिति ट्याप गरेर शारीरिक अवस्था, मनस्थिति, लक्षण आदि रेकर्ड गर्न सकिन्छ। सेवन रेकर्ड र महिनावारी रेकर्डसँगै हेर्न सकिने भएकाले आफ्नो शरीरको लय बुझ्न सकिन्छ।",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
   }
 }
