@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Sa pamamagitan ng pagpapakita ng petsa sa bawat kahon ng pill sheet, makikita mo agad ang mga nakaraang tala ng pag-inom at ang mga naka-schedule na pag-inom sa hinaharap. Lumipat sa pagitan ng \"Numero\" na mode at \"Petsa\" na mode upang piliin ang pagpapakita na pinakanaaangkop sa iyo.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Madaling balikan ang iyong talaan ng pag-inom",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
