@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Înregistrați ușor data de început a menstruației",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Detectare automată a ciclului",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
