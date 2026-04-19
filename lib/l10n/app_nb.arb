@@ -2734,5 +2734,9 @@
   "futureScheduleFeatureAppealLocationHint": "Trykk på en dato for å skrive inn en avtale",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Automatisk synkronisering av menstruasjonsdata",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
