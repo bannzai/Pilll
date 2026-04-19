@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealPoint3": "रिमाइंडरद्वारे सूचना",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "तारीखेवर टॅप करून नियोजन नोंदवा",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
   }
 }
