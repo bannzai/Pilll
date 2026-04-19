@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Sunet de alarmă similar cu cel al unui ceas deșteptător",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 sau mai nou · Activați din fila Setări",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
