@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealTitle": "Записать перерыв в приёме таблеток",
   "@restDurationFeatureAppealTitle": {
     "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Точное управление перерывами и прекращением приёма",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
   }
 }
