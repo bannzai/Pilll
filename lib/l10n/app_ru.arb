@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "С помощью AlarmKit, доступного в iOS 26 и новее, вы получите уведомление о приёме таблетки через будильник, который срабатывает даже в беззвучном режиме и режиме фокусировки.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Настроить номер приёма на сегодня",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
