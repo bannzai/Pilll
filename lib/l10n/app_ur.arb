@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "پیج شیٹ کے اوپری دائیں کونے سے گیئر آئیکن پر کلک کریں",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "مدت کی ترمیم اور دوبارہ شروع کرنا بھی آسان ہے",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
