@@ -2542,5 +2542,9 @@
   "futureScheduleFeatureAppealBody": "آپ مستقبل کے شیڈولز، جیسے ڈاکٹری ملاقاتیں یا سفر کے منصوبے، کیلنڈر میں درج کر سکتے ہیں۔ انہیں آپ کی گولی کھانے کے سائیکل کے ساتھ ایک ساتھ دیکھ کر، آپ حیض کے امکان کو مدنظر رکھتے ہوئے منصوبہ بندی کر سکتے ہیں۔",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "ہیلتھ کیئر کے ساتھ ہم آہنگ کریں",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
