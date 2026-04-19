@@ -2462,5 +2462,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Standardmeddelandet \"Dags att ta pillret\" kan du anpassa efter eget tycke. Använd uppmuntrande fraser, ditt husdjurs namn eller något annat som gör det roligare att ta din dos varje dag.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Visa datum på pillerarken",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   }
 }
