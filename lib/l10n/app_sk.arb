@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Upozornenia, ktoré spoľahlivo zaznejú aj v tichom režime",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Pripomienka na užitie ako budík",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
