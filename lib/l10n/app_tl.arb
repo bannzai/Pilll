@@ -2738,5 +2738,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "AUTOMATIC_TRANSLATION_PLACEHOLDER",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "I-sync sa app ng kalusugan",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
   }
 }
