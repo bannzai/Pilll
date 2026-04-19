@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Gestão fácil de consultas médicas",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Notificar por lembrete",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
