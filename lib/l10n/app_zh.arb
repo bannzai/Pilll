@@ -2794,5 +2794,9 @@
   "todayPillNumberFeatureAppealPoint3": "「ホームの数字タップでも開ける」",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "免费停药记录",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
   }
 }
