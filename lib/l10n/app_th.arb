@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "แจ้งเตือนแม้เครื่องอยู่ในโหมดเงียบ",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "{\n  \"alarmKit.headline\": \"แจ้งเตือนการทานยาเหมือนนาฬิกาปลุก\",\n  \"@alarmKit.headline\": {\n    \"description\": \"AlarmKit機能のヘルプページのヘッドライン — ピルの服用アラームを説明する短い見出し\",\n    \"type\": \"text\"\n  }\n}",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
