@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "ప్రస్తుత పిల్ షీట్ గ్రూప్ ముగిసిన తర్వాత, కొత్త పిల్ షీట్ గ్రూప్ ఆటోమేటిగ్గా సృష్టించబడుతుంది. మాన్యువల్‌గా మార్పిడి చేయాల్సిన అవసరం లేదు, అందువల్ల రికార్డింగ్ మిస్ కావడం జరగదు.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "అలారం‌లా వినిపించే హెచ్చరిక",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
