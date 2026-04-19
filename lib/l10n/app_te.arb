@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "యాప్‌లోని స్థానం",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "ఫోకస్ మోడ్‌లో ఉన్నప్పటికీ నోటిఫికేషన్లు అందుతాయి",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
