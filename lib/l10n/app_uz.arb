@@ -2562,5 +2562,9 @@
   "quickRecordFeatureAppealTitle": "Bildirishnomadan to'g'ridan-to'g'ri qayd etish",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Ilovani ochmasdan bildirishnomada qayd etish",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   }
 }
