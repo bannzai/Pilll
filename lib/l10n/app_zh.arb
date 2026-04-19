@@ -2606,5 +2606,9 @@
   "alarmKitFeatureAppealBody": "使用可在 iOS 26 及以上版本中使用的 AlarmKit，即使在静音或集中模式下也能通过可靠响铃的闹钟提醒服药。",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "今日の服用番号を合わせる",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   }
 }
