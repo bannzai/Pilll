@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 ਜਾਂ ਬਾਅਦ ਵਿੱਚ · ਸੈਟਿੰਗ ਟੈਬ ਤੋਂ ਸਮਰੱਥ ਕਰੋ",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "ਮੁਫ਼ਤ ਵਿੱਚ ਵਰਤੋਂ ਯੋਗ ਨੰਬਰ ਮੇਲਾਣ ਵਿਸ਼ੇਸ਼ਤਾ",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
