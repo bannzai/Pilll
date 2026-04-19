@@ -2758,5 +2758,9 @@
   "quickRecordFeatureAppealPoint3": "订阅 Premium 后即可使用",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "ピルシート終了で自動切り替え",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
