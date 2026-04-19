@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "Gawing sarili mong mensahe ng paalala",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Ipakita ang pill sheet ayon sa petsa",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
