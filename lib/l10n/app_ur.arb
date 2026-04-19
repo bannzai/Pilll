@@ -2622,5 +2622,9 @@
   "todayPillNumberFeatureAppealBody": "اگر گولی شیٹ پر دکھایا گیا نمبر اور حقیقت میں لی گئی گولی میں بھول یا غلطی کی وجہ سے عدم مطابقت ہو جائے تو آپ آج لینے والی گولی کا نمبر دستی طور پر درست کر سکتے ہیں۔ آپ ہوم کے گولی نمبر کے ڈسپلے سے بھی اسی اسکرین کو کھول سکتے ہیں۔",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "گولیاں نہ لینے کی مدت درج کریں",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
   }
 }
