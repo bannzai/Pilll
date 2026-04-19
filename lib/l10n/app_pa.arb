@@ -2494,5 +2494,9 @@
   "recordPillFeatureAppealBody": "ਹੋਮ ਸਕਰੀਨ 'ਤੇ ਪਿੱਲ ਸ਼ੀਟ ਨੂੰ ਟੈਪ ਕਰਕੇ, ਤੁਸੀਂ ਉਸ ਦਿਨ ਦੀ ਦਵਾਈ ਲੈਣ ਨੂੰ ਰਿਕਾਰਡ ਕਰ ਸਕਦੇ ਹੋ। ਜੇ ਤੁਸੀਂ ਗਲਤੀ ਨਾਲ ਰਿਕਾਰਡ ਕਰ ਲਿਆ ਹੈ, ਤਾਂ ਦੁਬਾਰਾ ਟੈਪ ਕਰਕੇ ਰੱਦ ਕਰ ਸਕਦੇ ਹੋ। ਦਵਾਈ ਲੈਣ ਦਾ ਇਤਿਹਾਸ ਵੀ ਬਾਅਦ ਵਿੱਚ ਦੇਖਿਆ ਜਾ ਸਕਦਾ ਹੈ, ਇਸ ਲਈ ਤੁਸੀਂ ਨਿਸ਼ਚਿੰਤ ਹੋ ਕੇ ਜਾਰੀ ਰੱਖ ਸਕਦੇ ਹੋ।",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "ਮਾਹਵਾਰੀ ਰਿਕਾਰਡ ਅਤੇ ਭਵਿੱਖਬਾਣੀ ਕਰੋ",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
