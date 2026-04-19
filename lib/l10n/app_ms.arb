@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "Penggera yang berbunyi seperti jam loceng",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Pemberitahuan yang pasti berbunyi walaupun dalam mod senyap",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
