@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "Lütfen mesajınızı girin",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Tek seferlik satın alma için teşekkür ederiz. Aylık veya yıllık bir plana aboneyseniz, lütfen mevcut aboneliğinizi iptal etmeyi unutmayın.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
