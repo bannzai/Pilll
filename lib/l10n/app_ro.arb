@@ -2590,5 +2590,9 @@
   "creatingNewPillSheetFeatureAppealBody": "Când grupul curent de foi de pastile se termină, un nou grup de foi de pastile este creat automat. Nu este necesară nicio comutare manuală și nu vor exista înregistrări lipsă.",
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Alarmă care sună ca un ceas deșteptător",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   }
 }
