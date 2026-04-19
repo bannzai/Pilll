@@ -2790,5 +2790,9 @@
   "todayPillNumberFeatureAppealPoint2": "Mund të ndryshohet nga skeda e Cilësimeve.",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Mund të hapet edhe duke trokitur mbi numrin në faqen kryesore",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
   }
 }
