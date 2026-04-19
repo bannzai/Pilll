@@ -2638,5 +2638,9 @@
   "restDurationFeatureAppealBody": "Iba't ibang teksto placeholder",
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Lokasyon sa loob ng app",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
