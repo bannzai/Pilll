@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealShortDescription": "د راتلونکو مهالونو اداره کول لکه د ډاکټر ليدو مهال",
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "د کلندار کې د راتلونکو پلانونو ثبتول",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
   }
 }
