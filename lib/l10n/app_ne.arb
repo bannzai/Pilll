@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint2": "पिल शिटको माथिल्लो दायाँ कुनाको गियरबाट सुरु गर्नुहोस्",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "अवधि सम्पादन र पुन: सुरु गर्न पनि सजिलो",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
