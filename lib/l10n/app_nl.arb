@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Alarmgeluid zoals een wekker",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 of hoger・inschakelen via het tabblad Instellingen",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
