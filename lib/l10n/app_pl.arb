@@ -2574,5 +2574,9 @@
   "quickRecordFeatureAppealBody": "Długie naciśnięcie powiadomienia o przypomnieniu wyświetla akcję „Przyjęto\", dzięki czemu możesz zapisać przyjęcie tabletki bez otwierania aplikacji.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Automatyczne dodawanie kart tabletek",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   }
 }
