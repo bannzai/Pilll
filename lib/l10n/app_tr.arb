@@ -2642,5 +2642,9 @@
   "featureAppealLocationLabel": "Uygulama içi konum",
   "@featureAppealLocationLabel": {
     "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Odak Modu etkin olsa bile bildirimler alınır",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
   }
 }
