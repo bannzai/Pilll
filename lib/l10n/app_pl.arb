@@ -2762,5 +2762,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Automatyczne przełączanie po zakończeniu blisterki",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Nie wymaga ręcznego tworzenia",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
   }
 }
