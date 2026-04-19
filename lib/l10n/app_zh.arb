@@ -2586,5 +2586,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "自动创建下一个药片表",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "当前的药片组结束后，将自动创建新的药片组。无需手动切换操作，可避免记录遗漏。",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }
