@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 sau mai nou · Activați din fila Setări",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Funcție de ajustare a numerelor disponibilă gratuit",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
