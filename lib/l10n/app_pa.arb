@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "ਐਪ ਖੋਲ੍ਹੇ ਬਿਨਾਂ ਪੂਰਾ ਕਰੋ",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "ਪ੍ਰੀਮੀਅਮ ਮੈਂਬਰਸ਼ਿਪ ਨਾਲ ਸਿੱਧਾ ਵਰਤੋਂ ਯੋਗ",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
