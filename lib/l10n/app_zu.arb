@@ -2526,5 +2526,9 @@
   "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Phatha izinhlelo zesikhathi esizayo ezifana nezikhathi zokuvakasha kudokotela.",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   }
 }
