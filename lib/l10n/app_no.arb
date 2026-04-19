@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "Enkel administrasjon av legetimer",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Varsle med påminnelse",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
