@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint2": "Синхронизировать с приложением «Здоровье»",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Поддержка Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
   }
 }
