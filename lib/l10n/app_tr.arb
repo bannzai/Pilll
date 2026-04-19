@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Tek dokunuşla kolay kurulum",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Bildirim mesajını istediğiniz gibi düzenleyin",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
