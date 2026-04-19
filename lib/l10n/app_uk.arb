@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "{\n  \"pillSheetShowDate\": \"Показувати дати на аркуші таблеток\",\n  \"@pillSheetShowDate\": {\n    \"description\": \"ピルシート外観モード(date)機能のヘルプページのヘッドライン\",\n    \"type\": \"text\"\n  }\n}",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Відображення дати в клітинках аркуша прийому дозволяє одним поглядом побачити минулі записи про прийом та заплановані прийоми в майбутньому. Перемикайтеся між режимами «Номер» і «Дата», щоб обрати відображення, яке вам підходить.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
