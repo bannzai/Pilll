@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "Kamilisha bila kufungua programu",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Inapatika mara moja kwa wanachama wa Premium",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
