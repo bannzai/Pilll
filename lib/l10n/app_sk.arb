@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealPoint2": "Zaznamenajte svoj zdravotný stav a neskôr ho prehodnoťte",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Preložte túto vetu do slovenčiny.",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
   }
 }
