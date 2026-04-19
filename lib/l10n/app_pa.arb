@@ -2786,5 +2786,9 @@
   "todayPillNumberFeatureAppealPoint1": "ਮੁਫ਼ਤ ਵਿੱਚ ਵਰਤੋਂ ਯੋਗ ਨੰਬਰ ਮੇਲਾਣ ਵਿਸ਼ੇਸ਼ਤਾ",
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "ਸੈਟਿੰਗ ਟੈਬ ਤੋਂ ਬਦਲਿਆ ਜਾ ਸਕਦਾ ਹੈ",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
   }
 }
