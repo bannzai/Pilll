@@ -2546,5 +2546,9 @@
   "healthCareIntegrationFeatureAppealTitle": "เชื่อมต่อกับแอปสุขภาพ",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "แชร์บันทึกประจำเดือนกับแอปสุขภาพ",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
