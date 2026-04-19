@@ -2458,5 +2458,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Tùy chỉnh nội dung thông báo nhắc uống thuốc",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Bạn có thể tùy chỉnh thông báo mặc định “Đã đến giờ uống thuốc” theo bất kỳ câu nào bạn thích. Hãy thử đổi thành một câu tiếp thêm động lực, tên thú cưng, hoặc một lời nhắc vui nhộn để việc uống thuốc hằng ngày trở nên thú vị hơn.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
