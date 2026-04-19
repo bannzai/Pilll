@@ -2534,5 +2534,9 @@
   "futureScheduleFeatureAppealHeadline": "Save future events to the calendar",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Planera framtida händelser som läkarbesök eller resor i din kalender. Eftersom du kan se dem tillsammans med dina p-pillercykler kan du planera med hänsyn till din väntade menstruation.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
