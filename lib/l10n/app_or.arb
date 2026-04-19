@@ -2626,5 +2626,9 @@
   "restDurationFeatureAppealHeadline": "ପିଲ ସେବନ ବିରତି ନେବା",
   "@restDurationFeatureAppealHeadline": {
     "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "ଆପଣ ଅଳ୍ପ ସମୟ ପାଇଁ ଔଷଧ ସେବନ ବନ୍ଦ ରଖିବାର ସମୟ ପିଲ୍ ସିଟ୍‌ରେ ରେକର୍ଡ କରିପାରିବେ। ବିରତି ସମୟରେ ସେବନ ସଂଖ୍ୟା ଆଗକୁ ବଢ଼ିବ ନାହିଁ, ଏବଂ ପୁନର୍ବାର ଆରମ୍ଭ ହେଲେ ତୁରନ୍ତ ରେକର୍ଡ ପୁନଃ ଶୁରୁ କରିହେବ।",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
   }
 }
