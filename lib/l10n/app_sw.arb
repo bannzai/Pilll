@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "\"Kurekodi matukio ya baadaye kwenye kalenda\"",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Unaweza kuandika kwenye kalenda mipango ya baadaye kama miadi ya kliniki au safari. Kwa kuwa unaweza kuzikagua pamoja na mzunguko wa matumizi ya kidonge, unaweza kupanga kwa kuzingatia pia tarehe za hedhi.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
