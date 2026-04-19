@@ -2670,5 +2670,9 @@
   "appearanceModeDateFeatureAppealPoint1": "Shfaq fletën e pilulave sipas datës",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Mund ta dini datën pa parë kalendarin.",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
   }
 }
