@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Thông báo vang lên ngay cả khi ở chế độ im lặng",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Nhắc uống thuốc như báo thức",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
