@@ -2718,5 +2718,9 @@
   "calendarDiaryFeatureAppealLocationHint": "Trokitni në datë për të regjistruar gjendjen tuaj",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Shkruani një ngjarje në kalendar",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
