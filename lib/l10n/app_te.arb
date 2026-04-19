@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "సైలెంట్ మోడ్‌లోనూ నోటిఫికేషన్లు అందుకోండి",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "నిశ్శబ్ధ మోడ్‌లో అయినా మాత్రలు మర్చిపోకుండా ఉండండి",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
