@@ -2782,5 +2782,9 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 మరియు తరువాత: సెట్టింగ్స్ టాబ్ నుండి సక్రియం చేయండి",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "ఉచిత సంఖ్య సరిపోలింపు ఫీచర్",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
   }
 }
