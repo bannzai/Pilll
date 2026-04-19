@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "సెటింగ్స్‌ను అనుకూలీకరించండి",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "కేలెండర్‌లో రికార్డులను జాబితా చేయండి",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
