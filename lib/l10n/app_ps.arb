@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "که شمیره ناسمه وي، د ترتیباتو له لارې سمه کړئ",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "نن د حبې شمیره بدلولی شئ",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
