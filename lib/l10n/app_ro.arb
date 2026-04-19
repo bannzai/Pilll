@@ -2714,5 +2714,9 @@
   "calendarDiaryFeatureAppealPoint3": "Revizuiește înregistrările trecute în calendar",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Atingeți data pentru a înregistra starea de sănătate",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
