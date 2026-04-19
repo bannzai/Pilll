@@ -2594,5 +2594,9 @@
   "alarmKitFeatureAppealTitle": "像闹钟一样响的提醒",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "即使处于静音也能响的提醒",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
