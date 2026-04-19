@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "இன்று எடுக்கும் மாத்திரையின் எண்ணை மாற்றலாம்",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "மறந்ததால் அல்லது தவறாக எடுத்ததால் மாத்திரை தாளில் உள்ள எண் மற்றும் உண்மையான உட்கொள்ளுதல் வெவ்வேறாகி விட்டால், இன்றைய மாத்திரை எண்ணை கைமுறையாகச் சரிசெய்யலாம். முகப்பு பக்கத்தில் உள்ள மாத்திரை எண் காட்சியிலிருந்தும் அதே திரையை திறக்க முடியும்。",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
