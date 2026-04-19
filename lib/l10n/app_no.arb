@@ -2778,5 +2778,9 @@
   "alarmKitFeatureAppealPoint2": "Vekkerklokklignende alarmlyd",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 eller nyere · Aktiver fra Innstillinger-fanen",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
   }
 }
