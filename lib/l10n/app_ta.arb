@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint1": "இலவச மாத்திரை ஓய்வு பதிவு",
   "@restDurationFeatureAppealPoint1": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "பில் சீட்டின் வலது மேல் மூலையில் உள்ள கியர் ஐகானிலிருந்து தொடங்கு",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
