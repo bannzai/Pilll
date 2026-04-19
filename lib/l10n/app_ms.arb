@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "Terima pemberitahuan walaupun dalam mod senyap",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Elak terlupa minum pil walaupun dalam mod Jangan Ganggu",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
