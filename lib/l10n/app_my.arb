@@ -2742,5 +2742,9 @@
   "healthCareIntegrationFeatureAppealPoint3": "Apple ကျန်းမာရေး ပံ့ပိုးမှု",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "အကြောင်းကြားချက်မှ ဆေးသောက်မှတ်တမ်းရေး",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
