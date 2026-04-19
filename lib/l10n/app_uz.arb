@@ -2434,5 +2434,9 @@
   "criticalAlertFeatureAppealTitle": "Jim rejimida ham bildirishnoma olish",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Tinch qo'yish rejimida ham dorini unutmaslikka yordam beradi",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   }
 }
