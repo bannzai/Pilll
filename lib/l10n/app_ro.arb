@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "Personalizați setările",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Vizualizați înregistrările în calendar",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
