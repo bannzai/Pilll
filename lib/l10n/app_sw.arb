@@ -2654,5 +2654,9 @@
   "criticalAlertFeatureAppealPoint3": "Usanidi rahisi kwa kubonyeza mara moja",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Hariri ujumbe wa arifa kwa uhuru",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
   }
 }
