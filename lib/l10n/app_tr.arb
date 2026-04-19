@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "İlaç molalarını ve kesintileri doğru yönetin",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Hap alımını ara",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
