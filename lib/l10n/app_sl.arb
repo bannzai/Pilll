@@ -2726,5 +2726,9 @@
   "futureScheduleFeatureAppealPoint2": "sl translation placeholder",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Obvestilo prek opomnika",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
   }
 }
