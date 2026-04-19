@@ -2730,5 +2730,9 @@
   "futureScheduleFeatureAppealLocationHint": "Thepha usuku ukuze ubhale uhlelo",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Vumelanisa ngokuzenzakalelayo amarekhodi okuya esikhathini",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
