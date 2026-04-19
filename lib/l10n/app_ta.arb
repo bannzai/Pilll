@@ -2482,5 +2482,9 @@
   "recordPillFeatureAppealTitle": "{\n  \"@@locale\": \"ta\",\n  \"pillHistoryFeatureAppealTitle\": \"உங்கள் மாத்திரை எடுத்த பதிவுகளை எளிதில் திரும்பிப் பார்க்கவும்\",\n  \"@pillHistoryFeatureAppealTitle\": {\n    \"description\": \"ピル記録/服用履歴機能のFeatureAppeal Barタイトル\",\n    \"type\": \"text\"\n  }\n}",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "எப்போது எடுத்தது உடனே தெரியும்",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
