@@ -2538,5 +2538,9 @@
   "futureScheduleFeatureAppealHeadline": "क्यालेन्डरमा भविष्यका योजनाहरू रेकर्ड गर्नुहोस्",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "डाक्टरको भेट, यात्राको योजना लगायत भविष्यका कार्यक्रमहरू क्यालेन्डरमा लेख्न सकिन्छ। चक्कीको सेवन चक्रसँगै जाँच गर्न सकिने भएकाले, महिनावारीको कार्यक्रम पनि ध्यानमा राखेर योजना बनाउन सकिन्छ।",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
