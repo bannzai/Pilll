@@ -2766,5 +2766,9 @@
   "creatingNewPillSheetFeatureAppealPoint2": "Nie je potrebné ručné vytvorenie.",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Prepnite pomocou prepínača na záložke Nastavenia.",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
