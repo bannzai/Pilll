@@ -2570,5 +2570,9 @@
   "quickRecordFeatureAppealHeadline": "نوٹیفیکیشن اسکرین پر ایک ٹیپ کر کے گولی لینے کا اندراج",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "ریماینڈر نوٹیفیکیشن کو لمبا دبانے سے 'لیا' ایکشن ظاہر ہوگا، اور آپ ایپ کھولے بغیر دوا لینے کا ریکارڈ کر سکتے ہیں۔",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
