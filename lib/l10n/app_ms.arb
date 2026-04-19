@@ -2498,5 +2498,9 @@
   "menstruationFeatureAppealTitle": "Rekod & Ramal Haid",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Rekod tarikh mula haid dan pantau kitaran",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   }
 }
