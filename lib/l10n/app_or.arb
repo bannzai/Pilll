@@ -2650,5 +2650,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "ବିଜ୍ଞପ୍ତି ବାର୍ତ୍ତା ମୁକ୍ତ ଭାବେ ସଂପାଦନ କରନ୍ତୁ",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "ଦୈନିକ ଔଷଧ ସେବନ ବିଜ୍ଞପ୍ତିରେ ପ୍ରତିଫଳିତ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
   }
 }
