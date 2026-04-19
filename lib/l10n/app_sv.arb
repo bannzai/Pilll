@@ -2678,5 +2678,9 @@
   "recordPillFeatureAppealPoint1": "Pillerark: tryck för att registrera intag",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Ångra enkelt vid misstag",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
   }
 }
