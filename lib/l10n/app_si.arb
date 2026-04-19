@@ -2754,5 +2754,9 @@
   "quickRecordFeatureAppealPoint2": "යෙදුම විවෘත නොකර සම්පූර්ණ කරන්න",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "ප්‍රිමියම් දායකත්වය ලබාගත් වහාම භාවිතයට පුළුවන්",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
   }
 }
