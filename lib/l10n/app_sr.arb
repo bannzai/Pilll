@@ -2486,5 +2486,9 @@
   "recordPillFeatureAppealShortDescription": "Odmah možete videti kada ste je uzeli.",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Zabeležite uzimanje pilule na početnom ekranu",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
