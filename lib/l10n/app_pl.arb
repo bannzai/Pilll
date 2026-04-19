@@ -2566,5 +2566,9 @@
   "quickRecordFeatureAppealShortDescription": "Zapisuj z powiadomień bez otwierania aplikacji",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Rejestrowanie przyjęcia jednym kliknięciem na ekranie powiadomień",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
   }
 }
