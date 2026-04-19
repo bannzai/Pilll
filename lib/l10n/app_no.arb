@@ -2750,5 +2750,9 @@
   "quickRecordFeatureAppealPoint1": "Registrer inntak via varslingshandling",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Fullfør uten å åpne appen",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
   }
 }
