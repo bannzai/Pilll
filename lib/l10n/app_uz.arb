@@ -2478,5 +2478,9 @@
   "appearanceModeDateFeatureAppealBody": "Pill sheetdagi katakchalarda sanani ko‘rsatish orqali o‘tgan qabul yozuvlari va kelajakdagi qabul rejalari bir qarashda ko‘rinadi. “Raqam” rejimi va “Sana” rejimi o‘rtasida almashib, o‘zingizga mos keladigan ko‘rinishni tanlang.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Qabul tarixini osonlik bilan ko‘rib chiqing",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   }
 }
