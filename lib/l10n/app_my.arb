@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint2": "ပီးလ်ရှစ်၏ ညာဘက်အပေါ်ရှိ ဂီယာမှ စတင်ပါ",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "ကာလကို တည်းဖြတ်ခြင်းနှင့် ပြန်လည်စတင်ခြင်းလည်း လွယ်ကူပါသည်",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
