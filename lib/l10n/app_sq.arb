@@ -2474,5 +2474,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Shfaq datat në fletën e pilulave",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Duke shfaqur datën në çdo qelizë të fletës së pilulave, mund të shikoni me një vështrim historikun e marrjes së mëparshme dhe oraret e ardhshme të marrjes. Ndërroni midis modalitetit «Numër» dhe «Datë» për të zgjedhur pamjen që ju përshtatet.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
