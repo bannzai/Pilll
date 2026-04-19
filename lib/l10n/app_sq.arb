@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Regjistro lehtë datën e fillimit të menstruacioneve",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Zbulim automatik i ciklit",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
