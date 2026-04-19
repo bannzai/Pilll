@@ -2454,5 +2454,9 @@
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "د خبرتیا متن دودیز کولی شئ",
   "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "د دوا د خبرتیا پیغام آزادانه سمول",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
   }
 }
