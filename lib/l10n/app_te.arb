@@ -2630,5 +2630,9 @@
   "restDurationFeatureAppealShortDescription": "విరామాలు మరియు నిలిపివేతలను ఖచ్చితంగా నిర్వహించండి",
   "@restDurationFeatureAppealShortDescription": {
     "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "పిల్ తీసుకోవడంలో విరామం తీసుకోండి",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
   }
 }
