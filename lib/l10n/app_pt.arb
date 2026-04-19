@@ -2602,5 +2602,9 @@
   "alarmKitFeatureAppealHeadline": "Alarme de medicação como despertador",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "Usando o AlarmKit disponível no iOS 26 ou posterior, você será notificado para tomar sua pílula com um alarme que toca de forma confiável mesmo no Modo Silencioso ou no Modo de Foco.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
   }
 }
