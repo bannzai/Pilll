@@ -2694,5 +2694,9 @@
   "menstruationFeatureAppealPoint1": "Registre facilmente a data de início da menstruação",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Rastrear ciclo automaticamente",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
   }
 }
