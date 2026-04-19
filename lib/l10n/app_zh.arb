@@ -2666,5 +2666,9 @@
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "自定义通知消息",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "按日期显示服药表",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
