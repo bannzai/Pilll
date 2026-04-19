@@ -2618,5 +2618,9 @@
   "todayPillNumberFeatureAppealHeadline": "आजचा घेण्याचा पिल क्रमांक बदलता येतो",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "गोळी घेणे विसरल्यामुळे किंवा चुकीची गोळी घेतल्यामुळे पिल शीटवरील क्रमांक आणि प्रत्यक्ष सेवन यात तफावत झाल्यास, आज घ्यायच्या गोळीचा क्रमांक हाताने दुरुस्त करता येतो. होमवरील गोळी क्रमांक प्रदर्शनावरूनही हीच स्क्रीन उघडता येते.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
