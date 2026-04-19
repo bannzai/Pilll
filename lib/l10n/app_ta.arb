@@ -2614,5 +2614,9 @@
   "todayPillNumberFeatureAppealShortDescription": "எண் தவறியிருந்தால் அமைப்பில் சரிசெய்க",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "இன்று எடுக்கும் மாத்திரையின் எண்ணை மாற்றலாம்",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   }
 }
