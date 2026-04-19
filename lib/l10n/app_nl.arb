@@ -2702,5 +2702,9 @@
   "menstruationFeatureAppealPoint3": "Instellingen aanpassen",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Overzicht in kalender",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
