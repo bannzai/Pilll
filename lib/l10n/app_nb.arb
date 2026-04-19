@@ -2598,5 +2598,9 @@
   "alarmKitFeatureAppealShortDescription": "Varsler som ringer selv i stillemodus",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Medisinalarm som en vekkerklokke",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
