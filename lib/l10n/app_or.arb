@@ -2710,5 +2710,9 @@
   "calendarDiaryFeatureAppealLocationHint": "ତାରିଖ ଟ୍ୟାପ୍ କରି ଶାରୀରିକ ଅବସ୍ଥା ରେକର୍ଡ କରନ୍ତୁ",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "ପଞ୍ଜିକାରେ ଯୋଜନା ଲେଖ",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
