@@ -2797,5 +2797,14 @@
   "restDurationFeatureAppealPoint3": "Periode bewerken en hervatten is ook eenvoudig",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "launchError": "Deze foutmelding wordt aan de gebruiker getoond wanneer bij het starten van de app (op het moment dat u de app opent) een technische fout optreedt. De melding kan ook details bevatten, zoals verbindingsfouten, dus vertaal hem zodat de gebruiker de situatie duidelijk begrijpt.",
+  "@launchError": {
+    "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
   }
 }
