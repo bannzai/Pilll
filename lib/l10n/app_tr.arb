@@ -2402,5 +2402,409 @@
   "inquiryContentRequired": "Lütfen mesajınızı girin",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Tek seferlik satın alma için teşekkür ederiz. Aylık veya yıllık bir plana aboneyseniz, lütfen mevcut aboneliğinizi iptal etmeyi unutmayın.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "Tek seferlik satın alma planını satın alırsanız bile aylık/yıllık plan otomatik olarak iptal edilmez.",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "Aboneliği yönet",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "Satın almadan önce lütfen mevcut aboneliğinizi iptal edin.",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "Deneyin",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "Hesap oluşturmanızı öneririz",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "Kaydolursanız verilerinizi yedekleyebilirsiniz",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "Sessiz modda bile bildirim alın",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Rahatsız Etmeyin modunda bile ilaç almayı unutmayın",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Sessiz moddayken bile bildirim alırsınız",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Kritik Uyarıyı etkinleştirdiğinizde, Rahatsız Etmeyin veya Sessiz modunda olsanız bile doz alma bildirimleri alabilirsiniz. Önemli hap alma zamanlarını kaçırmamak için lütfen bu ayarı etkinleştirin.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Bildirim mesajını özelleştir",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Bildirim metnini özelleştirebilirsiniz",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Hatırlatma mesajını istediğiniz gibi düzenleyin",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Varsayılan 'Hapını alma zamanı' ifadesini istediğiniz gibi özelleştirebilirsiniz. Motivasyon verici bir söz, evcil hayvanınızın adı veya sizi gülümseten başka bir ifade ekleyerek günlük hap alımınızı daha keyifli hale getirin.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Hap çizelgesinde tarihleri göster",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Ne zaman alacağınızı bir bakışta görün",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Hap çizelgesinde tarihleri gösterme",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Hap çizelgesindeki kutucuklarda tarihleri göstererek geçmiş kullanım kayıtlarını ve gelecekteki kullanım planlarını tek bakışta görebilirsiniz. 'Numara' modu ile 'Tarih' modu arasında geçiş yaparak size uygun görüntülemeyi seçin.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "服用履歴を簡単に振り返り",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealHeadline": "Ana ekranda hap kullanımını kaydedin",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Ana ekrandaki hap sayfasına dokunarak o günün alımını kaydedebilirsiniz. Yanlışlıkla kaydettiyseniz, tekrar dokunarak geri alabilirsiniz. Alım geçmişi daha sonra görüntülenebilir, böylece rahatça devam edebilirsiniz.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Adetleri kaydet ve tahmin et",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Adetin başlangıç tarihini kaydederek döngünü takip et",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Adet kaydı ve tahmin",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealTitle": "Takvimde sağlık durumunu kaydet",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Günlük hâlinizi takvime kaydedin",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Günlük sağlık durumunuzu takvime kaydedin",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "カレンダーから日付をタップして体調・気分・症状などを記録できます。服用記録や生理記録と一緒に確認できるので、自分の体のリズムを把握できます。",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Gelecek planlarını yaz",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Muayene randevuları gibi gelecekteki planları yönetin",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "\"カレンダーに未来の予定を記録\" を tr（トルコ語）に翻訳してください。",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Gelecekteki randevular veya seyahat planları gibi etkinlikleri takvime kaydedebilirsiniz. Hap kullanım döngünüzle birlikte görüntüleyerek regl tarihlerinizle uyumlu planlar yapabilirsiniz.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Sağlık uygulamalarıyla entegrasyon",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Adet kayıtlarını Sağlık uygulamasıyla paylaş",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "Sağlık uygulamalarıyla entegre olabilir",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilllで記録した生理データをヘルスケアアプリと自動連携できます。ヘルスケア上の他の健康データと一緒に確認したり、他のアプリでも生理データを使えるようになります。",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Bildirimden doğrudan ilaç kaydı",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Uygulamayı açmadan bildirim üzerinden kaydet",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Bildirim ekranında tek dokunuşla hap kullanım kaydı",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Hap şemasını otomatik ekle",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "次のシートを自動生成",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "次のピルシートを自動で作成",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Mevcut hap şeridi grubu sona erdiğinde, yeni bir hap şeridi grubu otomatik olarak oluşturulur. Manuel geçiş işlemi gerekmez; kayıt atlaması yaşanmaz.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Çalar saat gibi çalan alarm",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Sessiz modda bile kesinlikle çalan bildirim",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Çalar saate benzer ilaç alma alarmı",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 ve sonrası için kullanılabilen AlarmKit'i kullanarak, sessiz modda veya Odak modunda olsa bile kesinlikle çalan alarmlarla hap alımınızı hatırlatır.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Bugünün hap sırasını ayarla",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "番号がずれたら設定で修正",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Bugün alınacak hap numarasını değiştirebilirsiniz",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealTitle": "Hap alma molasını kaydet",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "İlaç molalarını ve kesintileri doğru yönetin",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Hap alımını ara",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Uzun süreli ara verme dönemleri pil şeridine kaydedilebilir. Ara verdiğiniz süre boyunca hap numarası ilerlemez ve yeniden başlarken kaydı hemen yeniden başlatabilirsiniz.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Uygulama içi konum",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Odak Modu etkin olsa bile bildirimler alınır",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Belirlediğiniz saatte kesin olarak hatırlatır",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Tek dokunuşla kolay kurulum",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Bildirim mesajını istediğiniz gibi düzenleyin",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "Günlük hatırlatmalara uygula",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "Kendinize özel bildirim mesajı",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "ピルシートを日付で表示",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Takvime bakmadan tarihi görebilirsiniz",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "\"ピルシート設定から変更可能\" のトルコ語訳",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "ピルシートをタップで服用記録",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "間違えてもかんたん取り消し",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "İstediğiniz zaman kullanım geçmişinizi görüntüleyin",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "生理開始日をかんたん記録",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "周期を自動で把握",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Ayarları özelleştir",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "カレンダーで記録を一覧",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Durumunu not al ve gözden geçir",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Takvimde geçmiş kayıtları gözden geçirin",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Bir tarihe dokunarak durumunu kaydet",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "カレンダーに予定を書き込み",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Muayene günlerini kolayca yönetin",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Hatırlatıcı ile bildirim",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Tarihe dokunarak plan ekleyin",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "生理記録を自動でデータ連携",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ヘルスケアアプリに同期",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Bildirim eylemiyle hap alımını kaydet",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Uygulamayı açmadan tamamla",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Premium加入でそのまま利用可能",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Hap paketi bittiğinde otomatik geçiş",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Elle oluşturma işlemi gerekmiyor",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Ayarlar sekmesindeki geçiş düğmesiyle açıp kapatın",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Çalar saat gibi alarm sesi",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 ve sonrası · Ayarlar sekmesinden etkinleştir",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Ücretsiz numara eşleştirme özelliği",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Ayarlar sekmesinden değiştirilebilir",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Ana ekrandaki sayıya dokunarak da açabilirsiniz.",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Ücretsiz kullanılabilen ara/ilaçsız kayıt",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Hap çizelgesinin sağ üst köşesindeki dişli simgesinden başlayın",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Dönemi düzenlemek veya yeniden başlatmak da kolay.",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealShortDescription": "Ne zaman aldığınızı hemen görün",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealBody": "Adetiniz başladığında bunu kaydetmeniz yeterlidir; geçmiş adet kayıtlarını liste halinde görüntüleyebilir ve bir sonraki adet tarihinin otomatik tahmini sayesinde planlı hareket edebilirsiniz.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealBody": "Hatırlatıcı bildirimine uzun bastığınızda 'Kullandım' seçeneği görünür; uygulamayı açmadan ilacı aldığınızı kaydedebilirsiniz.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealBody": "Eğer unutma veya karışıklık nedeniyle hap şeridindeki numara ile gerçek alınan hap farklıysa, bugünkü hap numarasını elle ayarlayabilirsiniz. Ana ekrandaki hap numarası gösteriminden de aynı ekrana erişebilirsiniz.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }

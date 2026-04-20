@@ -2393,5 +2393,418 @@
   "inquiryContentRequired": "لطفاً محتوای درخواست خود را وارد کنید",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "از خرید پلن یکبار پرداخت شما متشکریم. اگر مشترک پلن ماهانه یا سالانه هستید، لطفاً فراموش نکنید که اشتراک خود را لغو کنید.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "・حتی در صورت خرید «پلن خرید یکجا»، «پلن ماهانه/سالانه» به طور خودکار لغو نمی‌شود.",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "اینجا",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "لطفاً از قبل لغو کرده و سپس خریداری نمایید.",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "تأیید",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "ثبت‌نام حساب کاربری توصیه می‌شود",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "با ثبت‌نام می‌توانید از اطلاعات خود نسخه پشتیبان تهیه کنید",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "دریافت اعلان‌ها حتی در حالت بی‌صدا",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "حتی در حالت مزاحم نشوید، از فراموشی قرص جلوگیری کنید",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "دریافت اعلان حتی در حالت بی‌صدا",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "با فعال کردن Critical Alert، می‌توانید اعلان‌های مصرف قرص را حتی در حالت مزاحم نشوید یا سکوت نیز دریافت کنید. برای اینکه زمان مهم مصرف قرص را از دست ندهید، حتماً این قابلیت را تنظیم کنید.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "سفارشی‌سازی پیام اعلان",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "می‌توانید متن اعلان را سفارشی کنید",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "ویرایش آزادانه پیام یادآوری مصرف دارو",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "می‌توانید پیام استاندارد «وقت خوردن قرص است» را به کلماتی که دوست دارید تغییر دهید. سعی کنید آن را به کلمات انگیزه‌بخش، نام حیوان خانگی‌تان یا هر عبارتی که مصرف روزانه را لذت‌بخش‌تر می‌کند، تبدیل کنید.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "نمایش تاریخ روی برگه قرص",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "مشاهده زمان مصرف با یک نگاه",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "نمایش تاریخ در برگه قرص",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "با نمایش تاریخ در خانه‌های جدول قرص، می‌توانید تاریخچه مصرف گذشته و برنامه مصرف آینده را در یک نگاه مشاهده کنید. بین حالت «شماره» و حالت «تاریخ» جابجا شوید و نمایش مناسب خود را انتخاب کنید.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "مرور آسان تاریخچه مصرف",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "به سرعت بدانید چه زمانی دارو مصرف کرده‌اید",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "ثبت مصرف قرص در صفحه اصلی",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "با ضربه زدن روی برگه قرص در صفحه اصلی، می‌توانید مصرف قرص آن روز را ثبت کنید. اگر اشتباهاً ثبت کردید، با ضربه زدن دوباره می‌توانید آن را لغو کنید. از آنجا که تاریخچه مصرف را می‌توانید بعداً مشاهده کنید، می‌توانید با خیال راحت ادامه دهید.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "ثبت و پیش‌بینی قاعدگی",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "ثبت تاریخ شروع قاعدگی و پیگیری چرخه",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "ثبت و پیش‌بینی قاعدگی",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "کافی است هر بار قاعدگی خود را ثبت کنید تا بتوانید تاریخچه قاعدگی‌های گذشته را به صورت فهرست مشاهده نمایید. تاریخ قاعدگی بعدی نیز به طور خودکار پیش‌بینی می‌شود، بنابراین می‌توانید برنامه‌ریزی بهتری داشته باشید.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "ثبت وضعیت سلامتی در تقویم",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "حال روزانه‌ات را در تقویم ثبت کن",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "ثبت وضعیت روزانه در تقویم",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "می‌توانید با ضربه زدن روی تاریخ در تقویم، وضعیت جسمانی، خلق‌وخو، علائم و موارد دیگر را ثبت کنید. از آنجایی که می‌توانید این اطلاعات را همراه با سوابق مصرف قرص و سوابق قاعدگی مشاهده کنید، می‌توانید ریتم بدن خود را درک کنید.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "برنامه‌های آینده‌ات را ثبت کن",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "مدیریت برنامه‌های آینده مانند نوبت پزشک",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "ثبت رویدادهای آینده در تقویم",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "می‌توانید برنامه‌های آینده مانند نوبت پزشک و سفر را در تقویم ثبت کنید. از آنجا که می‌توانید این برنامه‌ها را در کنار چرخه مصرف قرص بررسی کنید، می‌توانید برنامه‌ریزی‌هایی داشته باشید که زمان قاعدگی را نیز در نظر بگیرد.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "اتصال به سلامت",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "اشتراک‌گذاری سوابق قاعدگی با سلامت",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "قابلیت همگام‌سازی با سلامت",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "می‌توانید داده‌های قاعدگی ثبت‌شده در Pilll را به‌طور خودکار با برنامه سلامت همگام‌سازی کنید. می‌توانید آن‌ها را در کنار سایر اطلاعات سلامت مشاهده کنید و از داده‌های قاعدگی در سایر برنامه‌ها نیز استفاده کنید.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "ثبت مصرف مستقیم از اعلان",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "ثبت از طریق اعلان بدون باز کردن برنامه",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "ثبت مصرف دارو با یک ضربه از صفحه اعلان‌ها",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "با فشار طولانی روی اعلان یادآور، گزینه «مصرف کردم» نمایش داده می‌شود و می‌توانید بدون باز کردن برنامه، مصرف قرص را ثبت کنید.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "افزودن خودکار برگه قرص",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "تولید خودکار برگه بعدی",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "ایجاد خودکار برگه قرص بعدی",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "وقتی گروه برگه قرص فعلی به پایان می‌رسد، یک گروه برگه قرص جدید به‌طور خودکار ایجاد می‌شود. نیازی به تغییر دستی نیست و هیچ خلأی در ثبت‌ها ایجاد نمی‌شود.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "آلارمی که مثل ساعت بیداری زنگ می‌زند",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "اعلان‌های مطمئن حتی در حالت بی‌صدا",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "هشدار مصرف مانند زنگ بیدارباش",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "با استفاده از AlarmKit که از iOS 26 به بعد در دسترس است، حتی در حالت بی‌صدا یا حالت تمرکز نیز آلارمی که به‌طور قطعی پخش می‌شود، زمان مصرف قرص را به شما یادآوری می‌کند.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "تنظیم شماره قرص امروز",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "اگر شماره اشتباه است، در تنظیمات اصلاح کنید",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "می‌توانید شماره قرص امروز را تغییر دهید",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "وقتی به دلیل فراموشی یا اشتباه، شماره روی برگه قرص با مصرف واقعی همخوانی ندارد، می‌توانید شماره قرص امروز را به‌صورت دستی تنظیم کنید. همچنین می‌توانید همین صفحه را از نمایش عدد قرص در صفحه اصلی باز کنید.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "ثبت دوره استراحت مصرف",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "مدیریت دقیق وقفه و قطع مصرف",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "استراحت از مصرف قرص",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "می‌توانید دوره‌ای را که برای مدتی مصرف قرص را متوقف می‌کنید در برگه قرص ثبت کنید. در طول استراحت، شماره مصرف پیش نمی‌رود و هنگام از سرگیری می‌توانید فوراً ثبت را از سر بگیرید.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "مکان در برنامه",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "اعلان‌ها حتی در حالت تمرکز هم دریافت می‌شوند",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "یادآوری قطعی در زمان تعیین‌شده",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "تنظیم آسان با یک ضربه",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "ویرایش آزادانه پیام‌های اعلان",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "اعمال در اعلان‌های روزانه مصرف دارو",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "پیام اعلان مخصوص خود",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "نمایش برگه قرص بر اساس تاریخ",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "بدون نگاه کردن به تقویم، تاریخ را بدانید",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "قابل تغییر از تنظیمات برگه قرص",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "ثبت مصرف با ضربه زدن روی برگه قرص",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "لغو آسان حتی در صورت اشتباه",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "مشاهده تاریخچه مصرف در هر زمان",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "ثبت آسان تاریخ شروع قاعدگی",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "تشخیص خودکار چرخه",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "سفارشی‌سازی تنظیمات",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "مشاهده سوابق در تقویم",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "یادداشت وضعیت جسمی و مرور آن",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "مرور تاریخچه با تقویم",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "روی تاریخ ضربه بزنید تا وضعیت سلامتی را ثبت کنید",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "ثبت برنامه در تقویم",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "مدیریت آسان روزهای مراجعه به پزشک",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "اطلاع‌رسانی از طریق یادآور",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "با ضربه زدن روی تاریخ، برنامه خود را وارد کنید",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "همگام‌سازی خودکار داده‌های قاعدگی",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "همگام‌سازی با برنامه سلامت",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "پشتیبانی از Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "ثبت مصرف از طریق اقدام اعلان",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "تکمیل بدون باز کردن برنامه",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "با اشتراک پریمیوم قابل استفاده است",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "جابجایی خودکار هنگام اتمام برگه قرص",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "بدون نیاز به ایجاد دستی",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "تغییر با سوئیچ در تب تنظیمات",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "حتی در حالت بی‌صدا/تمرکز هم پخش می‌شود",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "صدای زنگ هشدار مشابه ساعت بیداری",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 به بالا・فعال‌سازی از تب تنظیمات",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "امکان تنظیم شماره به صورت رایگان",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "می‌توان از برگه تنظیمات تغییر داد",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "با ضربه زدن روی عدد در صفحه اصلی هم باز می‌شود",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "ثبت دوره استراحت دارو (رایگان)",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "از چرخ‌دنده بالا سمت راست برگه قرص شروع کنید",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "ویرایش و از سرگیری دوره‌ها هم آسان است",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumber": "قرص شماره {todayPillNumberPillNumberInPillSheet}",
+  "@todayPillNumber": {
+    "description": "ピルシート上で今日服用すべきピルの番号（例：1錠目、15錠目など）を表示する際に使用されます。リマインダー通知やログ記録でも参照される重要な値です。",
+    "placeholders": {
+      "todayPillNumberPillNumberInPillSheet": {
+        "type": "String"
+      }
+    }
   }
 }

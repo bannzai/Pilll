@@ -2402,5 +2402,409 @@
   "inquiryContentRequired": "ກະລຸນາປ້ອນເນື້ອຫາການສອບຖາມ",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "ຂອບໃຈທີ່ທ່ານໄດ້ຊື້ແຜນຄັ້ງດຽວ. ຖ້າທ່ານຍັງສະມາຊິກແຜນລາຄາປະຈໍາເດືອນ ຫຼື ປະຈໍາປີ, ກະລຸນາຢ່າລືມຍົກເລີກການສະມາຊິກ",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "ເຖິງຈ່າຍເງິນແຜນຊື້ເທົ່າຄັ້ງ (買い切りプラン) ການສະມັກແຜນລາຍເດືອນ/ລາຍປີຈະບໍ່ຖືກຍົກເລີກໂດຍອັດຕະໂນມັດ。",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "ທີ່ນີ້",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "ກະລຸນາຍົກເລີກການສະມັກກ່ອນການຊື້।",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "recommendSignupGeneralTitle": "ແນະນຳໃຫ້ລົງທະບຽນບັນຊີ",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "ລົງທະບຽນເພື່ອສໍາເກັບຂໍ້ມູນ",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "ຮັບການແຈ້ງເຕືອນໄດ້ເຖິງໃນໂມດງຽບ",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "ປ້ອງກັນການລືມກິນຢາເຖິງແມ່ນໃນໂມດຫ້າມຮ້ອງ (Do Not Disturb).",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "ຮັບແຈ້ງເຕືອນໄດ້ເຖິງໃນໂມດງຽບ",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "ເມື່ອເປີດໃຊ້ Critical Alert, ທ່ານຈະຍັງຄົງຮັບການແຈ້ງເຕືອນການທາບຢາໄດ້ເຖິງແມ່ນໃນໂມດ Do Not Disturb ຫຼືໂມດ Silent. ເພື່ອບໍ່ໃຫ້ທ່ານພາດເວລາການທາບຢາທີ່ສຳຄັນ, ຂໍແນະນໍາໃຫ້ທ່ານລອງເປີດການຕັ້ງຄ່ານີ້.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "ປັບແຕ່ງຂໍ້ຄວາມແຈ້ງເຕືອນ",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "ທ່ານສາມາດປັບແກ້ຂໍ້ຄວາມແຈ້ງເຕືອນໄດ້",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "แก้ไขข้อความแจ้งเตือนการทานยาตามต้องการ",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "ທ່ານສາມາດປັບປຸງຂໍ້ຄວາມມາດຕະຖານ «ເວລາທີ່ຈະກິນຢາ» ເປັນຄຳທີ່ທ່ານມັກໄດ້ — ອາດເປັນຄຳທີ່ກະຕ້ືງໃຈ ຫຼືແມ່ນຊື່ສັດນ້ອຍຂອງທ່ານ. ລອງແປງຂໍ້ຄວາມເພື່ອໃຫ້ການຮັບຢາປະຈຳວັນຂອງທ່ານມີຄວາມສຶກມ່ວນຊື່ນຂື້ນ.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "ສະແດງວັນທີໃນແຜ່ນຢາ",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "ເບິ່ງໄດ້ເລັກດຽວວ່າຕ້ອງກິນເມື່ອໃດ",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "ສາມາດສະແດງວັນທີໃນແຜ່ນຢາ",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "ໂດຍສະແດງວັນທີໃນແຖວແຜ່ນຢາ, ທ່ານສາມາດເບິ່ງປະຫວັດການທຳຢາໃນອະດີດ ແລະ ແຜນການໃນອະນາຄົດໄດ້ຢ່າງຊັດເຈນ. ທ່ານສາມາດສະຫນອງລະຫວ່າງໂໝດ \"ໝາຍເລກ\" ແລະ \"ວັນທີ\" ເພື່ອເລືອກຮູບແບບການສະແດງທີ່ເໝາະກັບທ່ານ.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "ຍ້ອນຄືນປະຫວັດການຮັບຢາຢ່າງງ່າຍ",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "ເຫັນໄດ້ທັນທີວ່າໄດ້ຮັບຢາເມື່ອໃດ",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "ບັນທຶກການຮັບຢາໃນໜ້າເຮືອນ",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "ທ່ານສາມາດບັນທຶກການທິບຢາຂອງມື້ນັ້ນໄດ້ງ່າຍໆ ໂດຍກະທັບແຜ່ນພິລໃນໜ້າຫຼັກ. ຖ້າທ່ານບັນທຶກຜິດ, ກະທັບອີກຄັ້ງເພື່ອຍົກເລີກ. ທ່ານສາມາດເບິ່ງປະຫວັດການທິບໄດ້ພາຍຫຼັງ, ເພື່ອໃຫ້ທ່ານຮູ້ສ�ຶກສະຫວັດໃຈແລະສາມາດດຳເນີນຕໍ່ໄດ້.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "ບັນທຶກແລະຄາດໝາຍປະຈຳເດືອນ",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "ບັນທຶກວັນເລີ່ມຂອງປະຈຳເດືອນ ເພື່ອຕິດຕາມວົງຈອນ",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "ບັນທຶກແລະຄາດການມາຂອງລະດູ",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "ເພຽງບັນທຶກເມື່ອມາຮອດ, ທ່ານຈະເບິ່ງປະຫວັດການມີລະດູຕົກທີ່ຜ່ານມາໄດ້. ວັນທີຄາດວ່າຈະມາຮອດຕໍ່ໄປຈະຖືກຄາດຫວັງໂດຍອັດຕະໂນມັດ, ເພື່ອໃຫ້ທ່ານສາມາດວາງແຜນແລະຈັດການເວລາໄດ້.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "ບັນທຶກສຸຂະພາບໃນປະຕິທັນ",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "ບັນທຶກສຸຂະພາບປະຈຳວັນໃນປະຕິທິພາບ",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "ບັນທຶກສະພາບຮ່າງກາຍທຸກມື້ໃນປະຕິທິ",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "ທ່ານສາມາດແຕະເລືອກວັນທີໃນປະຕິທິວັນເພື່ອບັນທຶກສຸຂະພາບ, ອາລົມ ແລະ ອາການຕ່າງໆ. ຂໍ້ມູນເຫຼົ່ານີ້ຈະສາມາດເບິ່ງພ້ອມກັນກັບບັນທຶກການເອົາຢາແລະບັນທຶກລະດູດ, ເພື່ອຊ່ວຍໃຫ້ທ່ານເຂົ້າໃຈຮອບເວລາຂອງຮ່າງກາຍຂອງຕົນເອງ.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "ຂຽນແຜນໃນອນາຄົດ",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "ຈັດການແຜນອະນາຄົດ ເຊັ່ນ ການໄປແພດ",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "ບັນທຶກແຜນອນາຄົດໃນປະຕິທິນ",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "ເພີ່ມເວລານັດທີ່ກ່ອນໄວ້ເວລາຫຼັງຈາກນີ້",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "ヘルスケアと連携",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "ແບ່ງປັນບັນທຶກການມີເດືອນກັບແອັບສຸຂະພາບ",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealTitle": "ບັນທຶກການກິນຢາຈາກແຈ້ງເຕືອນ",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "アプリを開かず通知上で記録",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "ແຕະໜຶ່ງບັນທຶກການຮັບຢາໃນໜ້າແຈ້ງ",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "ຫາກກົດຍາວທີ່ແຈ້ງເຕືອນ ຈະມີການກະທຳ «ກິນແລ້ວ» ປາກກະທົບຂຶ້ນ ເຮັດໃຫ້ທ່ານສາມາດບັນທຶກການກິນໄດ້ໂດຍບໍ່ຕ້ອງເປີດແອັບ.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "ເພີ່ມແຜ່ນຢາໂດຍອັດຕະໂນມັດ",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "ສ້າງຊີດຕໍ່ໄປໂດຍອັດຕະໂນມັດ",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "ສ້າງແຜ່ນຢາຕໍ່ໄປໂດຍອັດຕະໂນມັດ",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "ເມື່ອກຸ່ມແຜ່ນຢາປີລປິດສິ້ນ, ລະບົບຈະສ້າງກຸ່ມແຜ່ນຢາປີລໃໝ່ໂດຍອັດຕະໂນມັດ. ທ່ານບໍ່ຕ້ອງປ່ຽນດ້ວຍມືແລະບັນທຶກຈະບໍ່ຂາດ.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "ແຈ້ງເຕືອນສຽງເຫມືອນນາລິກາປຸກ",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "ແຈ້ງເຕືອນທີ່ຍັງສຽງເມື່ອຢູ່ໃນໂມດງຽບ",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "ແຈ້ງເຕືອນການກິນຢາ ຄ້າຍຄືນາມເຕືອນ",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "ໃຊ້ AlarmKit ທີ່ມີໃນ iOS 26 ເພື່ອແຈ້ງເຕືອນເວລາກິນຢາດ້ວຍສຽງທີ່ຈະດັ່ງແມ່ນໃນໂມດ Silent ຫຼື Focus.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "ປັບຈຳນວນການກິນມື້ນີ້",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "ຖ້າໝາຍເລກບໍ່ຕົງ ກະລຸນາແກ້ໄຂໃນການຕັ້ງຄ່າ",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "ສາມາດປ່ຽນໝາຍເລກຢາທີ່ຈະກິນມື້ນີ້",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "ເມື່ອເກີດການລືມຫຼືກິນຢາຜິດເຮັດໃຫ້ໝາຍເລກໃນແຜ່ນຢາບໍ່ກົງກັບການທີ່ທ່ານຈິງ, ທ່ານສາມາດປັບໝາຍເລກຢາທີ່ຈະທຳໃນມື້ນີ້ດ້ວຍຕົນເອງ. ທ່ານສາມາດເປີດຫນ້ານີ້ຈາກການແສດງໝາຍເລກຢາໃນຫນ້າຫຼັກໄດ້.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "ບັນທຶກຊ່ວງຢຸດກິນຢາ",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "ຄວບຄຸມການຢຸດການຮັບຢາແລະການຂາດຕໍ່ໄດ້ຢ່າງແນ່ນອນ",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "ຢຸດການກິນຢາ",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "ທ່ານສາມາດບັນທຶກຊ່ວງເວລາທີ່ເປັນການຢຸດການຮັບຢາໄວ້ໃນຊີດຢາ. ໃນໄລຍະພັກ, ລຳດັບການຮັບຢາຈະບໍ່ຖືກນັບ, ແລະເມື່ອທ່ານເລີ່ມກັບມາອີກຄັ້ງ ການບັນທຶກຈະສາມາດດຳເນີນຕໍ່ໄດ້ທັນທີ.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "ຕຳແໜ່ງໃນແອັບ",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "集中モード中でも通知が届く",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "เตือนตรงตามเวลาที่ตั้งไว้",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "ຕັ້ງຄ່າງ່າຍໆ ດ້ວຍການກົດຄັ້ງດຽວ",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "ສາມາດແກ້ໄຂຂໍ້ຄວາມແຈ້ງເຕືອນໄດ້ຕາມຕ້ອງການ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "ສົມທຽບໃນແຈ້ງເຕືອນການຮັບຢາປະຈຳວັນ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "ກໍານົດຂໍ້ຄວາມແຈ້ງເຕືອນຂອງເຈົ້າເອງ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "ピルシートを日付で表示",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "ບໍ່ຕ້ອງເບິ່ງປະຕິທິດເພື່ອຮູ້ວັນທີ",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "ສາມາດປ່ຽນແປງໄດ້ໃນການຕັ້ງຄ່າແຜ່ນຢາ",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "ແຕະແຜ່ນຢາເພື່ອບັນທຶກການຮັບຢາ",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "間違えてもかんたん取り消し",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "ສຽບສະເໝີການບັນທຶກການກິນຢາເມື່ອໃດກໍ່ໄດ້",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "生理開始日をかんたん記録",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "ກຳນົດວົງຈັບມາເດືອນໂດຍອັດຕະໂນມັດ",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "ປັບແຕ່ງການຕັ້ງຄ່າ",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "カレンダーで記録を一覧",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "ບັນທຶກສະຖານະຮ່າງກາຍແລະກັບມາທົດສອບ",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "ເບິ່ງບັນທຶກທີ່ຜ່ານມາໃນປະຕິທິນ",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "ເພີ່ມເຫດການໃສ່ປະຕິທິນ",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "ຈັດການມື້ທີ່ຈະໄປແພດຢ່າງງ່າຍ",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "ແຈ້ງເຕືອນ",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "ແຕະວັນທີເພື່ອເພີ່ມແຜນການ",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "ການຊັ້ນຂໍ້ມູນອັດຕະໂນມັດ ສໍາລັບບັນທຶກການມີເດືອນ",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ສັງຄົມຂໍ້ມູນກັບແອັບສຸຂະພາບ",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "ຮັບຮອງ Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "ສຳເລັດບໍ່ຕ້ອງເປີດແອັບ",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Premium加入でそのまま利用可能",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "ສະຫຼຸບສີດອັນສົບຜົນທີ່ບັນຍັດແລ້ວ",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "ບໍ່ຈຳເປັນຕ້ອງສ້າງດ້ວຍມື",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "ສາມາດແປງໄດ້ດ້ວຍສະວິດໃນແຖບການຕັ້ງຄ່າ",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "ສຽງແຈ້ງເຕືອນເຊັ່ນເຄື່ອງຕື່ນ",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26以降・設定タブから有効化",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "ຟັງຊັນຈັບຄູ່ໝາຍເລກ ໃຊ້ຟຣີ",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "ສາມາດປ່ຽນໄດ້ຈາກແທັບການຕັ້ງຄ່າ",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "ສາມາດເປີດໄດ້ໂດຍການກົດເລກໃນໜ້າເຮືອນ",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "ບັນທຶກມື້ຫ່ອງຮັບຢາ ໃຊ້ໄດ້ຟຣີ",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "ເລີ່ມຈາກປຸ່ມຕັ້ງຄ່າ ຢູ່ມຸງຂວາຂອງຊີດຢາ",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "ແກ້ໄຂ ແລະ ເລີ່ມອີກ ງ່າຍ",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "featureAppealTryFeature": "ລອງໃຊ້",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "ສາມາດເຊື່ອມຕໍ່ກັບແອັບສຸຂະພາບ",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "ຂໍ້ມູນວັນເດືອນທີ່ທ່ານບັນທຶກໃນ Pilll ສາມາດປະສານກັບແອັບສຸຂະພາບອື່ນໆໄດ້ໂດຍອັດຕະໂນມັດ. ທ່ານຈະສາມາດເບິ່ງຂໍ້ມູນນັ້ນຮ່ວມກັບຂໍ້ມູນສຸຂະພາບອື່ນໆ ແລະໃຫ້ແອັບອື່ນໆເຂົ້າໃຊ້ໄດ້",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealLocationHint": "ແຕະວັນທີ່ເພື່ອບັນທຶກສະຖານະຮ່າງກາຍ",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "ບັນທຶກການກິນຢາຜ່ານແຈ້ງເຕືອນ",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }

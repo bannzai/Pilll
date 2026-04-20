@@ -2402,5 +2402,409 @@
   "inquiryContentRequired": "გთხოვთ შეიყვანოთ მიმართვის შინაარსი",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "გმადლობთ ერთჯერადი გეგმის შეძენისთვის. თუ თქვენ გაქვთ მიმდინარე ყოველთვიური ან წლიური გამოწერა, გთხოვთ არ დაგავიწყდეთ მისი გაუქმება.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "「一回の購入」プランを購入しても、月額や年額のプランは自動でキャンセルされません。",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "აქ",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "ყიდვამდე, გთხოვთ წინასწარ გაუქმოთ მიმდინარე გამოწერები.",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "სცადე",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "გირჩევთ ანგარიშის შექმნას",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "რეგისტრაციის შემდეგ შეძლებთ მონაცემების სარეზერვო ასლის შექმნას.",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "საილენტო რეჟიმშიც მიიღე შეტყობინებები",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "თუნდაც 'არ შემაწუხოთ' რეჟიმში, არ გამოტოვოთ წამლის მიღება",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "შეტყობინებები სიჩუმე რეჟიმშიც მიიღება",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alert-ის ჩართვის შემთხვევაში, წამლის მიღების შეტყობინებებს მიიღებთ 'არ შემაწუხო' (Do Not Disturb) და ჩუმი რეჟიმების დროსაც. რათა არ გამოტოვოთ მნიშვნელოვანი წამლის მიღების დრო, გთხოვთ, ჩართოთ ეს ფუნქცია.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "通知メッセージをカスタマイズ",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "შეგიძლიათ შეცვალოთ შეხსენების ტექსტი",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "შეგიძლიათ შეხსენების შეტყობინება თავისუფლად დაარედაქტიროთ",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "სტანდარტულ შეტყობინებას „პილის მიღების დროა“ შეგიძლიათ მოარგოთ თქვენთვის სასურველი ტექსტით. გამოიყენეთ მოტივაციური ფრაზა ან შინაური ცხოველის სახელი — ასე ყოველდღიური მიღება უფრო სასიამოვნო და მხიარული იქნება.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "ピルシートに日付を表示",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "როდის უნდა მიიღოთ — ერთი შეხედვით",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "პილშიტზე თარიღის ჩვენება",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "პილ-შიტის უჯრებში თარიღების ჩვენებით შეგიძლიათ ერთი შეხედვით დაათვალიეროთ წარსული მიღებების ჩანაწერები და მომავალი მიღებების გრაფიკი. გადართეთ „ნომერი“ და „თარიღი“ რეჟიმებს შორის და შეარჩიეთ ის ჩვენება, რომელიც თქვენთვის მოსახერხებელია.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "პილების მიღების ისტორიის მარტივი მიმოხილვა",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "いつ服用したかがすぐにわかる",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "მთავარ ეკრანზე პილულის მიღების ჩანაწერი",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "მთავარ ეკრანზე პილ-შიტს უბრალოდ შეეხეთ, რომ დააფიქსიროთ იმ დღის მიღება. თუ შემთხვევით ჩაიწერა, შეეხეთ კვლავ და ჩანაწერი გაუქმდება. მიღებების ისტორია შემდგომშიც ხელმისაწვდომია, ამიტომ მშვიდად შეგიძლიათ გააგრძელოთ.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "პერიოდის ჩანაწერი და პროგნოზი",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "生理開始日を記録して周期を把握",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "მენსტრუაციის ჩანაწერა და პროგნოზი",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "生理が来たら記録するだけで、過去の生理履歴を一覧できます。次の生理予定日も自動で予測されるので、計画的に過ごせます。",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "კალენდარში ჯანმრთელობის მდგომარეობის ჩაწერა",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "ჩაწერეთ ყოველდღიური მდგომარეობა კალენდარში",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "ყოველდღიური ჯანმრთელობის ჩანაწერი კალენდარში",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "კალენდარზე თარიღზე დაჭერით შეგიძლიათ ჩაიწეროთ თქვენი მდგომარეობა, განწყობა, სიმპტომები და სხვა. ამ ჩანაწერებს პილების მიღების ჩანაწერებთან და მენსტრუაციის ჩანაწერებთან ერთად შეგიძლიათ გადაამოწმოთ, რაც დაგეხმარებათ შეისწავლოთ და უკეთ გაიაზროთ თქვენი სხეულის რიტმი.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "კლინიკაში ვიზიტების და სხვა მომავალი გეგმების მართვა",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "კალენდარში მომავლის გეგმების ჩანაწერი",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "მომავლში დაგეგმილი ვიზიტები, მოგზაურობები და სხვა გეგმები შეგიძლიათ კალენდარში ჩაწეროთ. პილის მიღების ციკლის თანმიმდევრობით ეს შეუძლიათ ერთად შეამოწმოთ, რათა მენსტრუაციის პროგნოზი გათვალოთ და შესაბამისი გეგმები ღონისძიების ფარგლებში დაგეგმოთ.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "ჯანმრთელობის მონაცემებთან სინქრონიზაცია",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "პერიოდის ჩანაწერების გაზიარება ჯანმრთელობის აპლიკაციასთან",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilll-ში ჩაწერილი მენსტრუაციის მონაცემები შესაძლებელია ავტომატურად სინქრონიზირდეს ჯანმრთელობის აპლიკაციასთან. ჯანმრთელობის აპლიკაციაში შეგიძლიათ დაათვალიეროთ ისინი სხვა ჯანმრთელობის მონაცემებთან ერთად და სხვა აპლიკაციებსაც მისცეთ უფლება გამოიყენონ ეს მონაცემები.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "შეტყობინებიდან პირდაპირ მიღების აღრიცხვა",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "აპლიკაციის გახსნის გარეშე ჩაწერა შეტყობინებიდან",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "შეტყობინების ეკრანიდან მიღების ჩაწერა ერთი დაწკაპუნებით",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "შეტყობინებაზე ხანგრძლივად დაჭერისას გამოჩნდება მოქმედება „მიიღე“, რაც საშუალებას მოგცემთ დაარეგისტრიროთ აბის მიღება აპლიკაციის გახსნის გარეშე.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "ტაბლეტების ფურცლის ავტომატური დამატება",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "次のシートを自動生成",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "შემდეგი პილშიტის ავტომატური შექმნა",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "როდესაც მიმდინარე აბების ფურცლების ჯგუფი დასრულდება, ახალი აბების ფურცლების ჯგუფი ავტომატურად შეიქმნება. ხელით გადართვა არ არის საჭირო და ჩანაწერის გამოტოვება არ მოხდება.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "მაღვიძარას მსგავსი ზარი",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "შეტყობინებები, რომლებიც გარანტირებულად რეკავენ სიჩუმის რეჟიმშიც კი",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "მაღვიძარას მსგავსი წამლის მიღების შეხსენება",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26以降で利用できるAlarmKitを使って、サイレントモードや集中モードでも確実に鳴るアラームでピルの服用を知らせます。",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "დღევანდელი მიღების ნომრის შესწორება",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "ნომერი არასწორია? შეასწორეთ პარამეტრებში",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "დღეს მიღებადი აბის ნომრის შეცვლა",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "თუ დაგავიწყებისა ან შეცდომით მიღების გამო პილ-ფურცელზე ნაჩვენები ნომერი რეალურ მიღებას არ ემთხვევა, შეგიძლიათ დღეს მიღების პილის ნომერი ხელით დაარეგულიროთ. იგივე ეკრანი ხელმისაწვდომია მთავარი ეკრანის პილის ნომრის ჩვენებიდანაც.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "მიღების შესვენების პერიოდის ჩანაწერა",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "დასვენებისა და შეჩერებების ზუსტი კონტროლი",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "პილის მიღების შესვენება",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "წყეულება ვიღოთ",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "აპლიკაციის ადგილები",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "შეტყობინებები მიიღება, თუნდაც ფოკუს რეჟიმში",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "設定した時刻に確実にリマインド",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "ერთი დაჭერით მარტივი დაყენება",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "შეტყობინების ტექსტის თავისუფალი რედაქტირება",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "ყველა დღე შეხსენებებთან იქნება დაკავშირებული",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "თქვენი პირადი შეტყობინება",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "პილების ფურცლის ჩვენება თარიღის მიხედვით",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "კალენდრის ნახვის გარეშე თარიღის ცოდნა",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "შესაძლებელია შეცვლა პილ-შიტის პარამეტრებიდან",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "პილების ფურცელზე დააჭირეთ მიღების ჩაწერისთვის",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "間違えてもかんたん取り消し",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "პილების მიღების ისტორიას ნებისმიერ დროს შეგიძლიათ ნახოთ",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "მენსტრუაციის დაწყების თარიღის მარტივი ჩაწერა",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "周期を自動で把握",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "პარამეტრების მორგება",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "კალენდარში ჩანაწერების სია",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "ჩაწერე შენი მდგომარეობა და გადახედე",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "ყვედახედეთ წარსულ ჩანაწერებს კალენდარში",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "დააჭირეთ თარიღს თქვენი მდგომარეობის ჩაწერისთვის",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "კალენდარში გეგმების დამატება",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "ექიმთან ვიზიტების მარტივი მართვა",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "შეტყობინება შეხსენებით",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "დააჭირეთ თარიღს და დაამატეთ ჩანაწერი",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "პერიოდის ჩანაწერების ავტომატური სინქრონიზაცია",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ჯანმრთელობის აპლიკაციასთან სინქრონიზაცია",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Health-ის მხარდაჭერა",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "ჩაწერა შეტყობინების მოქმედებით",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "აპის გახსნის გარეშე დასრულება",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Premium加入でそのまま利用可能",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "პლასტინის sheet-ის დასრულების დროს ავტომატურად გადართვა",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "ხელით შექმნა საჭირო არ არის",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "პარამეტრების ჩანართში გადამრთველით გადართეთ",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "სგრილენტ/კონცენტრაციის რეჟიმშიც რეკავს",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "目覚まし同様のアラーム音",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 და შემდეგ — პარამეტრების ჩანართიდან ჩართვა",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "უფასო ნომრების შეთავსების ფუნქცია",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "პარამეტრების ჩანართიდან შეგიძლიათ შეცვალოთ",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "ホームの数字タップでも開ける",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "უფასო წამლის მიღების შესვენების ჩანაწერი",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "დაიწყეთ პილ-შიტის მარჯვენა ზედა კუთხეში მდებარე პარამეტრების ხატულიდან.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "პერიოდის რედაქტირება და აღდგენა მარტივია",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }

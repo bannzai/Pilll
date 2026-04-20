@@ -11,3 +11,4 @@ paths:
 - コンストラクタの引数も nullable であっても `required` をつける。ただしtimestamp等のメタデータフィールドは除く
 - `ref.watch` は状態の同期に使う（例: `userProvider` 等のデータ/状態Provider）。`ref.read` は機能・操作を提供するProvider（`call` クラス等、アプリの表示に関係ないもの）に限定する
 - エラーメッセージについては、基本的にそのまま表示する（`e.toString()` の加工・プレフィックス除去等はしない）
+- `userProvider` / `settingProvider` など画面描画に必要な Provider は `requireValue` を使う（`valueOrNull` + null チェック + ローディング UI のパターンは使わない）

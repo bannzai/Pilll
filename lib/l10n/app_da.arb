@@ -2402,5 +2402,409 @@
   "inquiryContentRequired": "Indtast venligst indholdet af din henvendelse",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Tak for dit køb af engangspakken. Hvis du er tilmeldt en månedlig eller årlig plan, må du ikke glemme at afmelde dig.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "・Selv hvis du køber \"Engangskøbsplanen\", annulleres \"Måneds-/Årsplanen\" ikke automatisk.",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "Her",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "skal du på forhånd annullere, inden du køber.",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "Bekræft",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "Vi anbefaler at oprette en konto",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "Registrer dig for at sikkerhedskopiere dine data",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "Modtag notifikationer selv i lydløs tilstand",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Undgå glemte piller selv i forstyrrelsesfri tilstand",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Modtag notifikationer selv i lydløs tilstand",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Når du aktiverer Critical Alert, kan du modtage påmindelser om at tage din pille, selv når Forstyr ikke-tilstand eller lydløs tilstand er aktiveret. For ikke at gå glip af vigtige tidspunkter for at tage din pille anbefaler vi, at du konfigurerer denne indstilling.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Tilpas beskednotifikation",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Du kan tilpasse ordlyden i notifikationer",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Rediger din påmindelsesbesked om piller frit",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Du kan tilpasse standardbeskeden \"Det er tid til at tage din pille\" med ord, du selv vælger. Prøv at ændre den til noget motiverende, dit kæledyrs navn eller en anden tekst, der gør din daglige indtagelse lidt sjovere.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Vis dato på pillearket",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Se med ét blik, hvornår du skal tage din pille",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Kan vise datoer på pillearket",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Ved at vise datoer i pillearkets felter kan du på et øjeblik se din tidligere medicinhistorik og fremtidige medicinplan. Skift mellem \"nummer\"-tilstand og \"dato\"-tilstand for at vælge den visning, der passer dig bedst.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Se nemt tilbage på din medicinhistorik",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Se hurtigt hvornår du tog din pille",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Registrer pilleindtagelse på startskærmen",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Du kan registrere din daglige pilleindtagelse ved blot at trykke på pillearket på startskærmen. Hvis du ved en fejl registrerer noget forkert, kan du fortryde det ved at trykke igen. Du kan også gennemse din indtagelseshistorik efterfølgende, så du trygt kan fortsætte.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Registrer og forudsig menstruation",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Registrer menstruationens startdato og følg din cyklus",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Registrér og forudsig din menstruation",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Bare registrer din menstruation, når den kommer, og du kan se en oversigt over din tidligere menstruationshistorik. Den næste forventede menstruationsdato forudsiges også automatisk, så du kan planlægge fremad.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Registrer dit helbred i kalenderen",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Registrer din daglige helbredstilstand i kalenderen",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Registrer din daglige helbredstilstand i kalenderen",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Du kan trykke på en dato i kalenderen for at registrere din fysiske tilstand, humør, symptomer og mere. Da du kan se det sammen med indtagelses- og menstruationsregistreringer, kan du følge din krops rytme.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Skriv dine fremtidige aftaler",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Administrer fremtidige aftaler som lægebesøg",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Registrer fremtidige aftaler i kalenderen",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Du kan skrive fremtidige aftaler som hospitalsbesøg og rejser i kalenderen. Da du kan se dem i kombination med din pilleindtagelsescyklus, kan du lægge planer, der også tager hensyn til din menstruationsplan.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Synk med sundhedsdata",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Del menstruationsdata med Sundhed",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "Kan integreres med Sundhed",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Du kan automatisk synkronisere menstruationsdata registreret i Pilll med Sundhed-appen. Du kan se dem sammen med andre sundhedsdata i Sundhed og bruge menstruationsdataene i andre apps.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Registrer direkte fra notifikation",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Registrer via notifikationer uden at åbne appen",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Registrer med ét tryk fra notifikationsskærmen",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Hold nede på påmindelsesnotifikationen for at se handlingen \"Taget\", og registrer din indtagelse uden at åbne appen.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Tilføj pilleark automatisk",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Generer næste ark automatisk",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "Opret automatisk det næste pilleark",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Når den nuværende pillearkgruppe slutter, oprettes en ny pillearkgruppe automatisk. Manuel omskiftning er ikke nødvendig, og der opstår ingen huller i registreringerne.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Alarm, der ringer som en vækkeur",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Notifikationer der lyder, selv på lydløs",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Pillealarmer som et vækkeur",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "Med AlarmKit, der er tilgængeligt på iOS 26 og nyere, får du besked om at tage dine piller via en alarm, der lyder pålideligt selv i lydløs tilstand eller fokustilstand.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Juster dagens dosisnummer",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Ret nummeret i indstillingerne, hvis det er forskudt",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Du kan ændre nummeret på den pille, du tager i dag",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Hvis nummeret på pillekortet ikke stemmer overens med den faktiske indtagelse på grund af glemte piller eller forveksling, kan du manuelt justere dagens pillenummer. Du kan også åbne den samme skærm fra pillenummervisningen på startskærmen.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Registrer pillepause",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Præcis styring af pauser og afbrydelser",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Sæt pilleindtagelse på pause",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Du kan registrere en pause fra pilleindtagelse på dit pillark. Under pausen skrider pillenummeret ikke frem, og du kan hurtigt genoptage registreringen, når du starter igen.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Sted i appen",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Notifikationer leveres selv i Fokus-tilstand",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Pålidelig påmindelse på det indstillede tidspunkt",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Nem opsætning med ét tryk",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Rediger notifikationsbesked frit",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "Afspejlet i daglige doseringsnotifikationer",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "Til din egen notifikationsbesked",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Vis pilleark efter dato",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Kend datoen uden at kigge i kalenderen",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Kan ændres fra indstillingerne for pilleark",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Tryk på pillearket for at registrere piller",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Nem fortrydelse, selv ved fejl",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Se din medicineringshistorik når som helst",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Registrer menstruationens startdato nemt",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Spor cyklus automatisk",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Tilpas indstillinger",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Se registreringer i kalender",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Notér og se tilbage på dit helbred",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Gennemse tidligere registreringer i kalenderen",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Tryk på en dato for at registrere din helbredstilstand",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Skriv aftaler i kalenderen",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Nem styring af lægebesøg",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Notifikation via påmindelse",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Tryk på en dato for at tilføje en aftale",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Automatisk synkronisering af menstruationsdata",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Synkroniser med Sundhedsapp",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Health-understøttelse",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Registrer indtagelse via notifikationshandling",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Fuldfør uden at åbne appen",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Tilgængelig med Premium-abonnement",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Automatisk skift ved afslutning af pilleark",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Ingen manuel oprettelse nødvendig",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Skift via kontakten i indstillingsfanen",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Ringer selv i lydløs/fokustilstand",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Alarmtone som en vækkeur",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 eller nyere・Aktiver fra fanen Indstillinger",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Gratis nummerjusteringsfunktion",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Kan ændres fra fanen Indstillinger",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Kan også åbnes ved at trykke på tallet på startskærmen",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Gratis pauseregistrering",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Start fra tandhjulet øverst til højre på pillearket",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Nem redigering og genoptagelse af perioder",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }

@@ -22,9 +22,7 @@ String _$appIsReleasedHash() => r'21463ba1d3ce5add8298b0bddb54bdb773ea8444';
 final appIsReleasedProvider = FutureProvider<bool>.internal(
   appIsReleased,
   name: r'appIsReleasedProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$appIsReleasedHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$appIsReleasedHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

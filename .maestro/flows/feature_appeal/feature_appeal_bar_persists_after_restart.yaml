@@ -1,0 +1,24 @@
+appId: com.mizuki.Ohashi.Pilll.dev
+---
+# アプリ再起動後も RecommendSignupGeneral Bar が表示され続けることを確認する。
+# 初期設定の永続化と AnnouncementBar の表示ロジックが正しく動作していることを検証。
+- launchApp:
+    clearState: true
+    clearKeychain: true
+    permissions:
+      notifications: allow
+- waitForAnimationToEnd
+- runFlow: subflows/initial_setup.yaml
+- waitForAnimationToEnd
+# 初回起動時に Bar が表示される
+- assertVisible:
+    id: "recommend_signup_general_bar"
+# アプリを停止して再起動 (clearState なし = 状態維持)
+- stopApp
+- launchApp:
+    clearState: false
+    clearKeychain: false
+- waitForAnimationToEnd
+# 再起動後も Bar が表示される (初期設定済み + 匿名ユーザー = RecommendSignupGeneral)
+- assertVisible:
+    id: "recommend_signup_general_bar"

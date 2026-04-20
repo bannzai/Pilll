@@ -2402,5 +2402,409 @@
   "inquiryContentRequired": "ਕਿਰਪਾ ਕਰਕੇ ਪੁੱਛਗਿੱਛ ਦੀ ਸਮੱਗਰੀ ਦਰਜ ਕਰੋ",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "ਸਾਡੇ ਇੱਕ-ਵਾਰ ਦੀ ਖਰੀਦ ਯੋਜਨਾ ਖਰੀਦਣ ਲਈ ਧੰਨਵਾਦ। ਜੇਕਰ ਤੁਸੀਂ ਮਹੀਨਾਵਾਰ ਜਾਂ ਸਾਲਾਨਾ ਯੋਜਨਾ ਦੇ ਗਾਹਕ ਹੋ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਗਾਹਕੀ ਰੱਦ ਕਰਨਾ ਨਾ ਭੁੱਲੋ।",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "・「ਇੱਕ ਵਾਰੀ ਖਰੀਦ ਯੋਜਨਾ」ਖਰੀਦਣ ਤੋਂ ਬਾਅਦ ਵੀ「ਮਾਸਿਕ/ਸਾਲਾਨਾ ਯੋਜਨਾ」ਆਪਣੇ ਆਪ ਰੱਦ ਨਹੀਂ ਹੋਵੇਗੀ।",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "ਇੱਥੇ",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "ਤੋਂ ਪਹਿਲਾਂ ਰੱਦ ਕਰਕੇ ਖਰੀਦਾਰੀ ਕਰੋ।",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "ਜਾਂਚ ਕਰੋ",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "ਖਾਤਾ ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਦੀ ਸਿਫ਼ਾਰਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "ਰਜਿਸਟਰ ਕਰਨ ਨਾਲ ਤੁਸੀਂ ਆਪਣਾ ਡੇਟਾ ਬੈਕਅੱਪ ਕਰ ਸਕਦੇ ਹੋ",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "ਚੁੱਪ ਮੋਡ ਵਿੱਚ ਵੀ ਸੂਚਨਾਵਾਂ ਪ੍ਰਾਪਤ ਕਰੋ",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "ਡੂ ਨਾਟ ਡਿਸਟਰਬ ਮੋਡ ਵਿੱਚ ਵੀ ਗੋਲੀ ਲੈਣਾ ਨਾ ਭੁੱਲੋ",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "ਸਾਈਲੈਂਟ ਮੋਡ ਵਿੱਚ ਵੀ ਸੂਚਨਾਵਾਂ ਮਿਲਦੀਆਂ ਹਨ",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "ਜੇਕਰ ਤੁਸੀਂ Critical Alert ਨੂੰ ਸਮਰੱਥ ਕਰਦੇ ਹੋ, ਤਾਂ ਤੁਸੀਂ ਅਰਾਮ ਮੋਡ ਜਾਂ ਮੌਨ ਮੋਡ ਦੌਰਾਨ ਵੀ ਗੋਲੀ ਲੈਣ ਦੀਆਂ ਸੂਚਨਾਵਾਂ ਪ੍ਰਾਪਤ ਕਰ ਸਕਦੇ ਹੋ। ਗੋਲੀ ਲੈਣ ਦੇ ਮਹੱਤਵਪੂਰਨ ਸਮੇਂ ਨੂੰ ਖੁੰਝਣ ਤੋਂ ਬਚਾਉਣ ਲਈ, ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਸੈਟਿੰਗ ਨੂੰ ਜ਼ਰੂਰ ਅਜ਼ਮਾਓ।",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "ਸੂਚਨਾ ਸੁਨੇਹਾ ਕਸਟਮਾਈਜ਼ ਕਰੋ",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "ਨੋਟੀਫਿਕੇਸ਼ਨ ਦੀ ਭਾਸ਼ਾ ਨੂੰ ਅਨੁਕੂਲਿਤ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "ਦਵਾਈ ਲੈਣ ਦੀ ਸੂਚਨਾ ਦਾ ਸੁਨੇਹਾ ਆਜ਼ਾਦੀ ਨਾਲ ਸੋਧੋ",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "ਮਿਆਰੀ \"ਗੋਲੀ ਲੈਣ ਦਾ ਸਮਾਂ ਹੈ\" ਨੂੰ ਤੁਸੀਂ ਆਪਣੀ ਮਨਪਸੰਦ ਗੱਲ ਵਿੱਚ ਬਦਲ ਸਕਦੇ ਹੋ। ਕੋਈ ਉਤਸ਼ਾਹ ਦੇਣ ਵਾਲਾ ਸੁਨੇਹਾ, ਆਪਣੇ ਪਾਲਤੂ ਜਾਨਵਰ ਦਾ ਨਾਮ, ਜਾਂ ਕੋਈ ਵੀ ਅਜਿਹੀ ਗੱਲ ਲਿਖੋ ਜੋ ਹਰ ਰੋਜ਼ ਗੋਲੀ ਲੈਣ ਨੂੰ ਹੋਰ ਖੁਸ਼ਹਾਲ ਬਣਾਵੇ।",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "ਪਿੱਲ ਸ਼ੀਟ ਵਿੱਚ ਤਾਰੀਖ਼ ਦਿਖਾਓ",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "ਇੱਕ ਨਜ਼ਰ ਵਿੱਚ ਕਦੋਂ ਪੀਣੀ ਹੈ ਦੇਖੋ",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "ਪਿੱਲ ਸ਼ੀਟ 'ਤੇ ਤਾਰੀਖ਼ ਦਿਖਾਈ ਜਾ ਸਕਦੀ ਹੈ",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "ਪਿੱਲ ਸ਼ੀਟ ਦੇ ਖਾਨਿਆਂ ਵਿੱਚ ਤਾਰੀਖ਼ਾਂ ਦਿਖਾਉਣ ਨਾਲ, ਤੁਸੀਂ ਪਿਛਲੀ ਦਵਾਈ ਲੈਣ ਦੀ ਇਤਿਹਾਸ ਅਤੇ ਆਉਣ ਵਾਲੀ ਦਵਾਈ ਲੈਣ ਦੀ ਯੋਜਨਾ ਨੂੰ ਇੱਕ ਨਜ਼ਰੇ ਦੇਖ ਸਕਦੇ ਹੋ। \"ਨੰਬਰ\" ਮੋਡ ਅਤੇ \"ਤਾਰੀਖ਼\" ਮੋਡ ਵਿਚਕਾਰ ਸਵਿਚ ਕਰਕੇ, ਆਪਣੇ ਲਈ ਢੁਕਵਾਂ ਡਿਸਪਲੇ ਚੁਣੋ।",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "ਦਵਾਈ ਦਾ ਇਤਿਹਾਸ ਆਸਾਨੀ ਨਾਲ ਦੇਖੋ",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "ਕਦੋਂ ਲਈ ਦਵਾਈ ਤੁਰੰਤ ਪਤਾ ਲੱਗਦਾ ਹੈ",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "ਘਰੇਲੂ ਸਕਰੀਨ 'ਤੇ ਪਿੱਲ ਲੈਣ ਦੀ ਰਿਕਾਰਡਿੰਗ ਕਰੋ",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "ਹੋਮ ਸਕਰੀਨ 'ਤੇ ਪਿੱਲ ਸ਼ੀਟ ਨੂੰ ਟੈਪ ਕਰਕੇ, ਤੁਸੀਂ ਉਸ ਦਿਨ ਦੀ ਦਵਾਈ ਲੈਣ ਨੂੰ ਰਿਕਾਰਡ ਕਰ ਸਕਦੇ ਹੋ। ਜੇ ਤੁਸੀਂ ਗਲਤੀ ਨਾਲ ਰਿਕਾਰਡ ਕਰ ਲਿਆ ਹੈ, ਤਾਂ ਦੁਬਾਰਾ ਟੈਪ ਕਰਕੇ ਰੱਦ ਕਰ ਸਕਦੇ ਹੋ। ਦਵਾਈ ਲੈਣ ਦਾ ਇਤਿਹਾਸ ਵੀ ਬਾਅਦ ਵਿੱਚ ਦੇਖਿਆ ਜਾ ਸਕਦਾ ਹੈ, ਇਸ ਲਈ ਤੁਸੀਂ ਨਿਸ਼ਚਿੰਤ ਹੋ ਕੇ ਜਾਰੀ ਰੱਖ ਸਕਦੇ ਹੋ।",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "ਮਾਹਵਾਰੀ ਰਿਕਾਰਡ ਅਤੇ ਭਵਿੱਖਬਾਣੀ ਕਰੋ",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "ਮਾਹਵਾਰੀ ਦੀ ਸ਼ੁਰੂਆਤੀ ਤਾਰੀਖ਼ ਰਿਕਾਰਡ ਕਰੋ ਅਤੇ ਚੱਕਰ ਨੂੰ ਸਮਝੋ",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "ਮਾਹਵਾਰੀ ਦੀ ਰਿਕਾਰਡਿੰਗ ਅਤੇ ਭਵਿੱਖਬਾਣੀ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "ਜਦੋਂ ਮਾਹਵਾਰੀ ਆਵੇ ਤਾਂ ਸਿਰਫ਼ ਰਿਕਾਰਡ ਕਰਨ ਨਾਲ ਤੁਸੀਂ ਪਿਛਲੀ ਮਾਹਵਾਰੀ ਦਾ ਇਤਿਹਾਸ ਦੇਖ ਸਕਦੇ ਹੋ। ਅਗਲੀ ਮਾਹਵਾਰੀ ਦੀ ਅਨੁਮਾਨਿਤ ਮਿਤੀ ਵੀ ਆਪਣੇ ਆਪ ਦੱਸ ਦਿੱਤੀ ਜਾਂਦੀ ਹੈ, ਇਸ ਲਈ ਤੁਸੀਂ ਯੋਜਨਾਬੱਧ ਤਰੀਕੇ ਨਾਲ ਸਮਾਂ ਬਿਤਾ ਸਕਦੇ ਹੋ।",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "ਕੈਲੰਡਰ 'ਤੇ ਸਿਹਤ ਦਰਜ ਕਰੋ",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "ਰੋਜ਼ਾਨਾ ਆਪਣੀ ਸਿਹਤ ਕੈਲੰਡਰ ਵਿੱਚ ਦਰਜ ਕਰੋ",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "ਕੈਲੰਡਰ 'ਤੇ ਰੋਜ਼ਾਨਾ ਸਿਹਤ ਸਥਿਤੀ ਦਰਜ ਕਰੋ",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "ਕੈਲੰਡਰ ਤੋਂ ਤਾਰੀਖ਼ ਟੈਪ ਕਰਕੇ ਸਿਹਤ, ਮੂਡ, ਲੱਛਣ ਆਦਿ ਦਰਜ ਕਰ ਸਕਦੇ ਹੋ। ਦਵਾਈ ਲੈਣ ਦੇ ਰਿਕਾਰਡ ਅਤੇ ਮਾਹਵਾਰੀ ਦੇ ਰਿਕਾਰਡ ਦੇ ਨਾਲ ਮਿਲ ਕੇ ਦੇਖ ਸਕਦੇ ਹੋ, ਜਿਸ ਨਾਲ ਆਪਣੇ ਸਰੀਰ ਦੀ ਲੈਅ ਨੂੰ ਸਮਝਿਆ ਜਾ ਸਕਦਾ ਹੈ।",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "ਭਵਿੱਖ ਦੀਆਂ ਯੋਜਨਾਵਾਂ ਲਿਖੋ",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "ਹਸਪਤਾਲ ਦੀਆਂ ਮੁਲਾਕਾਤਾਂ ਆਦਿ ਭਵਿੱਖ ਦੀਆਂ ਯੋਜਨਾਵਾਂ ਦਾ ਪ੍ਰਬੰਧ ਕਰੋ",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "ਕੈਲੰਡਰ ਵਿੱਚ ਭਵਿੱਖ ਦੀਆਂ ਯੋਜਨਾਵਾਂ ਦਰਜ ਕਰੋ",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "ਤੁਸੀਂ ਕੈਲੰਡਰ ਵਿੱਚ ਭਵਿੱਖ ਦੀਆਂ ਯੋਜਨਾਵਾਂ ਜਿਵੇਂ ਕਿ ਡਾਕਟਰੀ ਮੁਲਾਕਾਤਾਂ ਅਤੇ ਯਾਤਰਾ ਦੀਆਂ ਯੋਜਨਾਵਾਂ ਲਿਖ ਸਕਦੇ ਹੋ। ਕਿਉਂਕਿ ਤੁਸੀਂ ਇਸਨੂੰ ਗੋਲੀ ਲੈਣ ਦੇ ਚੱਕਰ ਦੇ ਨਾਲ ਮਿਲਾ ਕੇ ਦੇਖ ਸਕਦੇ ਹੋ, ਤੁਸੀਂ ਮਾਹਵਾਰੀ ਦੇ ਸਮੇਂ ਨੂੰ ਧਿਆਨ ਵਿੱਚ ਰੱਖਦੇ ਹੋਏ ਯੋਜਨਾਵਾਂ ਬਣਾ ਸਕਦੇ ਹੋ।",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "ਹੈਲਥਕੇਅਰ ਨਾਲ ਸਿੰਕ ਕਰੋ",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "ਮਾਹਵਾਰੀ ਰਿਕਾਰਡ ਸਿਹਤ ਸੰਭਾਲ ਨਾਲ ਸਾਂਝੇ ਕਰੋ",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "ਹੈਲਥਕੇਅਰ ਨਾਲ ਸਿੰਕ ਕਰ ਸਕਦੇ ਹੋ",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilll ਵਿੱਚ ਰਿਕਾਰਡ ਕੀਤਾ ਮਾਹਵਾਰੀ ਡੇਟਾ ਆਪਣੇ ਆਪ ਹੈਲਥਕੇਅਰ ਐਪ ਨਾਲ ਸਿੰਕ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ। ਤੁਸੀਂ ਇਸਨੂੰ ਹੈਲਥਕੇਅਰ ਉੱਤੇ ਹੋਰ ਸਿਹਤ ਡੇਟਾ ਦੇ ਨਾਲ ਦੇਖ ਸਕਦੇ ਹੋ, ਅਤੇ ਦੂਜੇ ਐਪਾਂ ਵਿੱਚ ਵੀ ਮਾਹਵਾਰੀ ਡੇਟਾ ਵਰਤ ਸਕਦੇ ਹੋ।",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "ਨੋਟੀਫਿਕੇਸ਼ਨ ਤੋਂ ਸਿੱਧਾ ਸੇਵਨ ਰਿਕਾਰਡ",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "ਐਪ ਖੋਲ੍ਹੇ ਬਿਨਾਂ ਸੂਚਨਾ 'ਤੇ ਰਿਕਾਰਡ ਕਰੋ",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "ਨੋਟੀਫਿਕੇਸ਼ਨ ਸਕਰੀਨ ਤੋਂ ਇੱਕ ਟੈਪ ਨਾਲ ਦਵਾਈ ਰਿਕਾਰਡ ਕਰੋ",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "ਰਿਮਾਈਂਡਰ ਨੋਟੀਫਿਕੇਸ਼ਨ ਨੂੰ ਲੰਮਾ ਦਬਾਉਣ ਨਾਲ \"ਲੈ ਲਿਆ\" ਦੀ ਕਾਰਵਾਈ ਦਿਖਾਈ ਦਿੰਦੀ ਹੈ, ਅਤੇ ਤੁਸੀਂ ਐਪ ਖੋਲ੍ਹੇ ਬਿਨਾਂ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਕਰ ਸਕਦੇ ਹੋ।",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "ਪਿੱਲ ਸ਼ੀਟ ਆਪਣੇ ਆਪ ਜੋੜੋ",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "ਅਗਲੀ ਸ਼ੀਟ ਆਟੋ-ਜਨਰੇਟ",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "ਅਗਲੀ ਪਿੱਲ ਸ਼ੀਟ ਆਪਣੇ ਆਪ ਬਣਾਓ",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "ਜਦੋਂ ਮੌਜੂਦਾ ਪਿੱਲ ਸ਼ੀਟ ਗਰੁੱਪ ਖਤਮ ਹੁੰਦਾ ਹੈ, ਤਾਂ ਇੱਕ ਨਵਾਂ ਪਿੱਲ ਸ਼ੀਟ ਗਰੁੱਪ ਆਪਣੇ ਆਪ ਬਣਾਇਆ ਜਾਂਦਾ ਹੈ। ਹੱਥੀਂ ਬਦਲਣ ਦੀ ਕੋਈ ਲੋੜ ਨਹੀਂ, ਅਤੇ ਰਿਕਾਰਡ ਵਿੱਚ ਕੋਈ ਖਾਮੀ ਨਹੀਂ ਆਵੇਗੀ।",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "ਅਲਾਰਮ ਘੜੀ ਵਾਂਗ ਵੱਜਣ ਵਾਲਾ ਅਲਾਰਮ",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "ਚੁੱਪ ਮੋਡ ਵਿੱਚ ਵੀ ਯਕੀਨੀ ਤੌਰ 'ਤੇ ਵੱਜਣ ਵਾਲੀਆਂ ਸੂਚਨਾਵਾਂ",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "ਅਲਾਰਮ ਘੜੀ ਵਾਂਗੂ ਦਵਾਈ ਲੈਣ ਦਾ ਅਲਾਰਮ",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 ਅਤੇ ਇਸ ਤੋਂ ਬਾਅਦ ਦੇ ਵਰਜ਼ਨਾਂ ਵਿੱਚ ਉਪਲਬਧ AlarmKit ਦੀ ਵਰਤੋਂ ਕਰਕੇ, ਸਾਈਲੈਂਟ ਮੋਡ ਜਾਂ ਫੋਕਸ ਮੋਡ ਵਿੱਚ ਵੀ ਨਿਸ਼ਚਿਤ ਰੂਪ ਨਾਲ ਵੱਜਣ ਵਾਲੇ ਅਲਾਰਮ ਰਾਹੀਂ ਗੋਲੀ ਲੈਣ ਦੀ ਸੂਚਨਾ ਦਿੱਤੀ ਜਾਂਦੀ ਹੈ।",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "ਅੱਜ ਦਾ ਖੁਰਾਕ ਨੰਬਰ ਮਿਲਾਓ",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "ਜੇ ਨੰਬਰ ਗ਼ਲਤ ਹੋਵੇ ਤਾਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਠੀਕ ਕਰੋ",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "ਅੱਜ ਲੈਣ ਵਾਲੀ ਗੋਲੀ ਦਾ ਨੰਬਰ ਬਦਲ ਸਕਦੇ ਹੋ",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "ਜਦੋਂ ਭੁੱਲਣ ਜਾਂ ਗਲਤੀ ਨਾਲ ਲੈਣ ਕਾਰਨ ਪਿੱਲ ਸ਼ੀਟ 'ਤੇ ਨੰਬਰ ਅਤੇ ਅਸਲ ਵਿੱਚ ਲਈ ਗਈ ਗੋਲੀ ਵਿੱਚ ਫ਼ਰਕ ਆ ਜਾਵੇ, ਤਾਂ ਤੁਸੀਂ ਅੱਜ ਲੈਣ ਵਾਲੀ ਗੋਲੀ ਦਾ ਨੰਬਰ ਹੱਥੀਂ ਠੀਕ ਕਰ ਸਕਦੇ ਹੋ। ਹੋਮ ਸਕਰੀਨ 'ਤੇ ਗੋਲੀ ਨੰਬਰ ਡਿਸਪਲੇ ਤੋਂ ਵੀ ਉਹੀ ਸਕਰੀਨ ਖੋਲ੍ਹੀ ਜਾ ਸਕਦੀ ਹੈ।",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "ਦਵਾਈ ਦੇ ਆਰਾਮ ਦੀ ਮਿਆਦ ਰਿਕਾਰਡ ਕਰੋ",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "ਦਵਾਈ ਦੀ ਛੁੱਟੀ ਅਤੇ ਰੁਕਾਵਟ ਦਾ ਸਟੀਕ ਪ੍ਰਬੰਧਨ",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "ਪਿੱਲ ਲੈਣਾ ਬੰਦ ਕਰਨਾ",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "ਤੁਸੀਂ ਕੁਝ ਸਮੇਂ ਲਈ ਦਵਾਈ ਲੈਣਾ ਬੰਦ ਕਰਨ ਦੀ ਮਿਆਦ ਨੂੰ ਪਿੱਲ ਸ਼ੀਟ ਵਿੱਚ ਦਰਜ ਕਰ ਸਕਦੇ ਹੋ। ਛੁੱਟੀ ਦੌਰਾਨ ਦਵਾਈ ਦਾ ਨੰਬਰ ਅੱਗੇ ਨਹੀਂ ਵਧਦਾ, ਅਤੇ ਦੁਬਾਰਾ ਸ਼ੁਰੂ ਕਰਨ ਵੇਲੇ ਤੁਸੀਂ ਤੁਰੰਤ ਰਿਕਾਰਡ ਕਰਨਾ ਮੁੜ ਸ਼ੁਰੂ ਕਰ ਸਕਦੇ ਹੋ।",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "ਐਪ ਵਿੱਚ ਸਥਾਨ",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "ਫੋਕਸ ਮੋਡ ਦੌਰਾਨ ਵੀ ਸੂਚਨਾਵਾਂ ਮਿਲਦੀਆਂ ਹਨ",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "ਨਿਰਧਾਰਿਤ ਸਮੇਂ 'ਤੇ ਪੱਕਾ ਰੀਮਾਈਂਡਰ",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "ਇੱਕ ਟੈਪ ਨਾਲ ਆਸਾਨ ਸੈਟਿੰਗ",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "ਸੂਚਨਾ ਸੁਨੇਹਾ ਆਜ਼ਾਦੀ ਨਾਲ ਸੰਪਾਦਿਤ ਕਰੋ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "ਰੋਜ਼ਾਨਾ ਦਵਾਈ ਸੂਚਨਾਵਾਂ ਵਿੱਚ ਲਾਗੂ ਕਰੋ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "ਆਪਣਾ ਖੁਦ ਦਾ ਸੂਚਨਾ ਸੁਨੇਹਾ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "ਮਿਤੀ ਦੁਆਰਾ ਪਿੱਲ ਸ਼ੀਟ ਪ੍ਰਦਰਸ਼ਿਤ ਕਰੋ",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "ਕੈਲੰਡਰ ਦੇਖੇ ਬਿਨਾਂ ਤਾਰੀਖ਼ ਪਤਾ ਲੱਗਦੀ ਹੈ",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "ਪਿੱਲ ਸ਼ੀਟ ਸੈਟਿੰਗਾਂ ਤੋਂ ਬਦਲਿਆ ਜਾ ਸਕਦਾ ਹੈ",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "ਪਿੱਲ ਸ਼ੀਟ ਨੂੰ ਟੈਪ ਕਰਕੇ ਦਵਾਈ ਰਿਕਾਰਡ ਕਰੋ",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "ਗਲਤੀ ਹੋਵੇ ਤਾਂ ਵੀ ਆਸਾਨੀ ਨਾਲ ਰੱਦ ਕਰੋ",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "ਦਵਾਈ ਲੈਣ ਦਾ ਇਤਿਹਾਸ ਕਿਸੇ ਵੀ ਸਮੇਂ ਦੇਖੋ",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "ਮਾਹਵਾਰੀ ਸ਼ੁਰੂ ਹੋਣ ਦੀ ਤਾਰੀਖ਼ ਆਸਾਨੀ ਨਾਲ ਦਰਜ ਕਰੋ",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "ਚੱਕਰ ਨੂੰ ਆਪਣੇ ਆਪ ਸਮਝੋ",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "ਸੈਟਿੰਗਾਂ ਕਸਟਮਾਈਜ਼ ਕਰੋ",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "ਕੈਲੰਡਰ ਵਿੱਚ ਰਿਕਾਰਡਾਂ ਦੀ ਸੂਚੀ",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "ਸਿਹਤ ਨੋਟ ਕਰੋ ਅਤੇ ਸਮੀਖਿਆ ਕਰੋ",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "ਪਿਛਲੇ ਰਿਕਾਰਡਾਂ ਨੂੰ ਕੈਲੰਡਰ ਤੋਂ ਵੇਖੋ",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "ਸਿਹਤ ਦਰਜ ਕਰਨ ਲਈ ਤਾਰੀਖ਼ ਟੈਪ ਕਰੋ",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "ਕੈਲੰਡਰ ਵਿੱਚ ਯੋਜਨਾ ਲਿਖੋ",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "ਕਲੀਨਿਕ ਦੇ ਦੌਰਿਆਂ ਨੂੰ ਆਸਾਨੀ ਨਾਲ ਪ੍ਰਬੰਧਿਤ ਕਰੋ",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "ਰੀਮਾਈਂਡਰ ਨਾਲ ਸੂਚਨਾ",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "ਤਾਰੀਖ਼ ਟੈਪ ਕਰਕੇ ਯੋਜਨਾ ਲਿਖੋ",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "ਮਾਹਵਾਰੀ ਰਿਕਾਰਡ ਨੂੰ ਆਟੋਮੈਟਿਕ ਤੌਰ 'ਤੇ ਡੇਟਾ ਸਿੰਕ ਕਰੋ",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ਹੈਲਥਕੇਅਰ ਐਪ ਨਾਲ ਸਿੰਕ ਕਰੋ",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple ਹੈਲਥਕੇਅਰ ਅਨੁਕੂਲਤਾ",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "ਸੂਚਨਾ ਐਕਸ਼ਨ ਤੋਂ ਦਵਾਈ ਦਾ ਰਿਕਾਰਡ",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "ਐਪ ਖੋਲ੍ਹੇ ਬਿਨਾਂ ਪੂਰਾ ਕਰੋ",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "ਪ੍ਰੀਮੀਅਮ ਮੈਂਬਰਸ਼ਿਪ ਨਾਲ ਸਿੱਧਾ ਵਰਤੋਂ ਯੋਗ",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "ਪਿੱਲ ਸ਼ੀਟ ਖਤਮ ਹੋਣ 'ਤੇ ਆਪਣੇ ਆਪ ਬਦਲੋ",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "ਦਸਤੀ ਬਣਾਉਣ ਦੀ ਕਾਰਵਾਈ ਦੀ ਲੋੜ ਨਹੀਂ",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "ਸੈਟਿੰਗਜ਼ ਟੈਬ ਵਿੱਚ ਸਵਿੱਚ ਨਾਲ ਬਦਲੋ",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "ਸਾਈਲੈਂਟ/ਫੋਕਸ ਮੋਡ ਵਿੱਚ ਵੀ ਵੱਜਦਾ ਹੈ",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "ਅਲਾਰਮ ਘੜੀ ਵਰਗੀ ਅਲਾਰਮ ਧੁਨੀ",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 ਜਾਂ ਬਾਅਦ ਵਿੱਚ · ਸੈਟਿੰਗ ਟੈਬ ਤੋਂ ਸਮਰੱਥ ਕਰੋ",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "ਮੁਫ਼ਤ ਵਿੱਚ ਵਰਤੋਂ ਯੋਗ ਨੰਬਰ ਮੇਲਾਣ ਵਿਸ਼ੇਸ਼ਤਾ",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "ਸੈਟਿੰਗ ਟੈਬ ਤੋਂ ਬਦਲਿਆ ਜਾ ਸਕਦਾ ਹੈ",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "ਹੋਮ 'ਤੇ ਨੰਬਰ ਟੈਪ ਕਰਕੇ ਵੀ ਖੋਲ੍ਹਿਆ ਜਾ ਸਕਦਾ ਹੈ",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "ਮੁਫ਼ਤ ਵਿੱਚ ਵਰਤੋਂ ਯੋਗ ਦਵਾਈ ਬ੍ਰੇਕ ਰਿਕਾਰਡ",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "ਪਿੱਲ ਸ਼ੀਟ ਦੇ ਉੱਪਰ ਸੱਜੇ ਕੋਨੇ ਵਿੱਚ ਗੇਅਰ ਆਈਕਨ ਤੋਂ ਸ਼ੁਰੂ ਕਰੋ",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "ਮਿਆਦ ਦੀ ਸੰਪਾਦਨਾ ਅਤੇ ਮੁੜ ਸ਼ੁਰੂ ਕਰਨਾ ਵੀ ਆਸਾਨ",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }

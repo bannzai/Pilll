@@ -2398,5 +2398,413 @@
   "inquiryContentRequired": "မေးမြန်းလိုသည့်အကြောင်းအရာ ထည့်သွင်းပေးပါ",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "inquiryContent": "မေးမြန်းချက် အကြောင်းအရာ",
+  "@inquiryContent": {
+    "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
+  },
+  "lifetimeSubscriptionWarning": "ကြိုတင်ဝယ်ယူသောအစီအစဉ်ကို ဝယ်ယူပေးသည့်အတွက် ကျေးဇူးတင်ပါသည်။ လစဉ် သို့မဟုတ် နှစ်စဉ် အစီအစဉ်တွင် စာရင်းသွင်းထားသူများ ပယ်ဖျက်ရန် မမေ့ပါနှင့်။",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "・「တစ်ကြိမ်ဝယ်ယူပလန်」ကို ဝယ်ယူသော်လည်း「လစဉ်/နှစ်စဉ်ပလန်」ကို အလိုအလျောက် ပယ်ဖျက်မည် မဟုတ်ပါ။",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "ဤနေရာ",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "မှ ကြိုတင်ပယ်ဖျက်ပြီးမှ ဝယ်ယူပါ။",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "အတည်ပြုရန်",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "အကောင့်မှတ်ပုံတင်ရန် အကြံပြုပါသည်",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "မှတ်ပုံတင်ခြင်းဖြင့် ဒေတာကို အရန်သိမ်းဆည်းနိုင်သည်",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "ဆိုင်လင့်မုဒ်တွင်ပင် အကြောင်းကြားချက်များ လက်ခံရယူပါ",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Do Not Disturb မုဒ်တွင်လည်း ဆေးသောက်ရန် မမေ့ပါစေနှင့်",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Silent mode တွင်လည်း သတိပေးချက်များ ရောက်ရှိနိုင်သည်",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alert ကို ဖွင့်ထားလျှင်၊ မနှောင့်မယှက်မုဒ် သို့မဟုတ် အသံတိတ်မုဒ်တွင်ပင် ဆေးသောက်ရမည့် အကြောင်းကြားချက်များကို လက်ခံနိုင်မည်ဖြစ်သည်။ အရေးကြီးသောဆေးသောက်ချိန်ကို မမေ့မလျော့စေရန်၊ ကျေးဇူးပြု၍ ချိန်ညှိပေးပါ။",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "အကြောင်းကြားချက် မက်ဆေ့ချ်ကို စိတ်တိုင်းကျပြင်ဆင်ပါ",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "အကြောင်းကြားချက် စာသားကို စိတ်ကြိုက်ပြင်ဆင်နိုင်သည်",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "ဆေးသောက်ရန် အကြောင်းကြားချက် မက်ဆေ့ချ်ကို လွတ်လပ်စွာ တည်းဖြတ်ပါ",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "'ဆေးသောက်ရမည့်အချိန်ရောက်ပါပြီ' ဆိုသော ပုံသေသတင်းပို့ချက်ကို သင်နှစ်သက်ရာ စကားလုံးများဖြင့် ကိုယ်ပိုင်ပြင်ဆင်နိုင်ပါသည်။ အားအင်ပေးသောစကားများ၊ သင့်အိမ်မွေးတိရစ္ဆာန်အမည် စသည်တို့ဖြင့် ပြောင်းလဲ၍ နေ့တိုင်းဆေးသောက်ခြင်းကို ပိုမိုပျော်ရွှင်စေပါ။",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "ဆေးပြားစာရင်းတွင် ရက်စွဲများပြသပါ",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "သောက်ချိန်ကို တစ်ချက်ကြည့်ရုံနဲ့ စစ်ဆေးနိုင်",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "ပြားစာရင်းတွင် ရက်စွဲများ ပြသနိုင်သည်",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "ပိုလ်ရှိပ်ရဲ့ ကွက်လပ်များတွင် ရက်စွဲများကို ပြသခြင်းဖြင့် ယခင်ဆေးသောက်မှတ်တမ်းနှင့် အနာဂတ်ဆေးသောက်ရမည့် အချိန်များကို တစ်ချက်တည်းဖြင့် ကြည့်ရှုနိုင်ပါသည်။ \"နံပါတ်\" မုဒ်နှင့် \"ရက်စွဲ\" မုဒ်ကို ပြောင်းလဲ၍ သင်နှစ်သက်သော ပြသပုံကို ရွေးချယ်ပါ။",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "ဆေးသောက်မှတ်တမ်းကို လွယ်ကူစွာ ပြန်ကြည့်",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "မည်သည့်အချိန်တွင် သောက်သုံးသည်ကို ချက်ချင်းသိနိုင်",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "ပင်မ မျက်နှာတွင် ဆေးပြားသောက်မှုကို မှတ်တမ်းတင်ပါ",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "မူလစာမျက်နှာပေါ်ရှိ ပိုးဆေးပြားစာမျက်နှာကို နှိပ်ရုံဖြင့် ထိုနေ့၏ သောက်မှတ်တမ်းကို မှတ်တမ်းတင်နိုင်သည်။ မှားယွင်းမှတ်တမ်းတင်မိပါကလည်း ထပ်မံနှိပ်ခြင်းဖြင့် ပြန်ဖျက်နိုင်သည်။ သောက်မှတ်တမ်းကို နောက်မှ ပြန်လည်စစ်ဆေးနိုင်သောကြောင့် စိတ်ချမ်းသာစွာ ဆက်လက်သောက်သုံးနိုင်သည်။",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "ဓမ္မတာ မှတ်တမ်းတင်ပြီး ခန့်မှန်းရန်",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "ဓမ္မတာ စတင်သည့်ရက်ကို မှတ်တမ်းတင်ပြီး ကာလပတ်လည်ကို သိရှိပါ",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "ရာသီလာချိန်ကို မှတ်တမ်းတင်ပြီး ကြိုတင်ခန့်မှန်းနိုင်သည်",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "သွေးဆင်းချိန် ရောက်လာတိုင်း မှတ်တမ်းတင်ရုံဖြင့် ယခင်ကာလ သွေးဆင်းမှု မှတ်တမ်းများကို စာရင်းကြည့်ရှုနိုင်ပါသည်။ နောက်တစ်ကြိမ် သွေးဆင်းရမည့်ရက်ကိုလည်း အလိုအလျောက် ခန့်မှန်းပေးသောကြောင့် စီစဉ်ကျကျ နေထိုင်နိုင်ပါသည်။",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "ပြက္ခဒိန်တွင် ကျန်းမာရေးအခြေအနေ မှတ်တမ်းတင်ပါ",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "နေ့စဉ် ကျန်းမာရေး အခြေအနေကို ပြက္ခဒိန်တွင် မှတ်တမ်းတင်ကြစို့",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "နေ့စဉ် ကျန်းမာရေးအခြေအနေကို ပြက္ခဒိန်တွင် မှတ်တမ်းတင်ပါ",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "ပြက္ခဒိန်မှ ရက်စွဲတစ်ခုကို တို့ထိ၍ ကိုယ်ခံအားအခြေအနေ၊ စိတ်ခံစားချက်၊ လက္ခဏာများ စသည်တို့ကို မှတ်တမ်းတင်နိုင်ပါသည်။ ဆေးသောက်မှတ်တမ်းနှင့် ဓမ္မတာမှတ်တမ်းများနှင့်အတူ စစ်ဆေးကြည့်ရှုနိုင်သောကြောင့် မိမိ၏ ခန္ဓာကိုယ်ရစ်သမ်ကို ပိုမိုနားလည်နိုင်မည်ဖြစ်သည်။",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "အနာဂတ် အစီအစဉ်များကို ရေးမှတ်ကြစို့",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "ဆေးရုံချိန်းနှင့် အနာဂတ်စီစဉ်ချက်များကို စီမံပါ",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "ပြက္ခဒိန်တွင် အနာဂတ်အစီအစဉ်များ မှတ်တမ်းတင်ပါ",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "ဆရာဝန်စစ်ဆေးမည့်ချိန်း၊ ခရီးသွားမည့်အစီအစဉ် ကဲ့သို့သော အနာဂတ်အစီအစဉ်များကို ပြက္ခဒိန်တွင် မှတ်သားနိုင်ပါသည်။ ဆေးသောက်သည့်ကာလနှင့် တွဲဖက်၍ စစ်ဆေးနိုင်သောကြောင့် ရာသီလာချိန်အစီအစဉ်ကိုပါ ထည့်သွင်းစဉ်းစားကာ စီမံချက်ဆွဲနိုင်ပါသည်။",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "ကျန်းမာရေးနှင့် ချိတ်ဆက်ပါ",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "ရာသီဆိုင်ရာ မှတ်တမ်းများကို ကျန်းမာရေးနှင့် မျှဝေပါ",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "ကျန်းမာရေးနှင့် ချိတ်ဆက်နိုင်သည်",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilllတွင် မှတ်တမ်းတင်ထားသော ရာသီသွေးဒေတာများကို ကျန်းမာရေးအက်ပ်နှင့် အလိုအလျောက် ချိတ်ဆက်နိုင်သည်။ ကျန်းမာရေးအပေါ် အခြားသော ကျန်းမာရေးဒေတာများနှင့် အတူတကွ စစ်ဆေးနိုင်ပြီး၊ အခြားသော အက်ပ်များတွင်လည်း ရာသီသွေးဒေတာကို အသုံးပြုနိုင်မည်ဖြစ်သည်။",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "အကြောင်းကြားချက်မှ တိုက်ရိုက် ဆေးသောက်မှတ်တမ်း",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "အပ်မဖွင့်ဘဲ နိုတီပေါ်မှ မှတ်တမ်းတင်",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "အကြောင်းကြားချက်မျက်နှာပြင်မှ တစ်ချက်နှိပ်ဖြင့် ဆေးသောက်မှတ်တမ်းတင်ပါ",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "သတိပေးချက်ကို ကြာကြာနှိပ်ထားလျှင် \"သောက်ပြီးပြီ\" လုပ်ဆောင်ချက် ပေါ်လာပြီး အက်ပ်ကိုမဖွင့်ဘဲ ဆေးသောက်မှတ်တမ်းကို မှတ်သားနိုင်သည်။",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "ဆေးပြားကို အလိုအလျောက် ထည့်သွင်းပါ",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "နောက်ရှမ်းကို အလိုအလျောက်ဖန်တီးပါ",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "နောက်ဆေးပြားစာချပ်ကို အလိုအလျောက် ဖန်တီးပါ",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealTitle": "နှိုးစက်ကဲ့သို့မြည်ဟောင်းသောသတိပေးချက်",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "ဆိုင်လင့်မုဒ်တွင်ပင် သေချာစွာ မြည်သည့် သတိပေးချက်",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "နှိုးဆ်ချိန်နာရီကဲ့သို့ ဆေးသောက်သတိပေး",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 နှင့်အထက်တွင် ရရှိနိုင်သော AlarmKit ကိုအသုံးပြု၍ ဆိုင်းငံ့မုဒ် သို့မဟုတ် အာရုံစူးစိုက်မုဒ်တွင်ပင် သေချာပေါက် မြည်သော အချိန်ကိုက်နှိုးစက်ဖြင့် ဆေးသောက်ချိန်ကို အကြောင်းကြားပေးပါသည်။",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "ယနေ့ဆေးသောက်နံပါတ်ချိန်ညှိပါ",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "နံပါတ်ကွဲလွဲလျှင် ဆက်တင်တွင် ပြင်ဆင်ပါ",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "ယနေ့သောက်သည့် ဆေးပြားနံပါတ်ကို ပြောင်းလဲနိုင်သည်",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "သောက်ဖို့မေ့သွားခြင်း သို့မဟုတ် မှားသောက်မိခြင်းကြောင့် ပြားရွက်ပေါ်ရှိ နံပါတ်နှင့် အမှန်တကယ်သောက်ထားသောနံပါတ်တို့ မကိုက်ညီသောအခါ ယနေ့သောက်ရမည့် ပြားနံပါတ်ကို ကိုယ်တိုင်ပြင်ဆင်နိုင်သည်။ ပင်မမျက်နှာပြင်ရှိ ပြားနံပါတ်ပြသမှုကနေလည်း ထိုမျက်နှာပြင်ကို ဖွင့်နိုင်သည်။",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "ဆေးသောက်ရပ်နားချိန်ကို မှတ်တမ်းတင်ပါ",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "ဆေးနားချိန်နှင့် ရပ်ဆိုင်းချိန်ကို တိကျစွာ စီမံပါ",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "ဆေးသောက်ခြင်းကို နားနေမည်",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "ဆေးသောက်ခြင်းကို ခေတ္တရပ်ထားသည့် ကာလများကို ပီးလ်ရှိပ်တွင် မှတ်တမ်းတင်နိုင်သည်။ အနားယူနေစဉ်တွင် ဆေးသောက်အမှတ်စဉ်သည် ဆက်မတိုးဘဲ ပြန်လည်စတင်သောအခါ မှတ်တမ်းတင်ခြင်းကို ချက်ချင်းပြန်လုပ်နိုင်သည်။",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "အက်ပ်တွင်းနေရာ",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "အာရုံစူးစိုက်မုဒ်တွင်လည်း အကြောင်းကြားချက်များ ရောက်ရှိနိုင်သည်",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "သတ်မှတ်ထားသောအချိန်တွင် သေချာပေါက်သတိပေးပါမည်",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "တစ်ချက်နှိပ်ရုံဖြင့် လွယ်ကူစွာ ဆက်တင်နိုင်",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "သတိပေးချက် မက်ဆေ့ချ်ကို လွတ်လပ်စွာ တည်းဖြတ်ပါ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "နေ့စဉ် ဆေးသောက်သတိပေးချက်တွင် ထင်ဟပ်မည်",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "မိမိ၏ကိုယ်ပိုင်အကြောင်းကြားချက်မက်ဆေ့ချ်",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "ဆေးပြားစာရင်းကို ရက်စွဲဖြင့် ပြသ",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "ပြက္ခဒိန်မကြည့်ဘဲ ရက်စွဲကိုသိနိုင်သည်",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "ဆေးပြားစာရင်း ဆက်တင်မှ ပြောင်းလဲနိုင်သည်",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "ပြားချပ်ကို တို့ပြီး ဆေးသောက်မှတ်တမ်းတင်ပါ",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "မှားယွင်းလျှင်လည်း လွယ်ကူစွာ ပြန်ဖျက်နိုင်",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "ဆေးသောက်မှတ်တမ်းကို အချိန်မရွေးကြည့်ရှုနိုင်",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "ရာသီစတင်ရက် လွယ်ကူစွာမှတ်သားပါ",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "စက်ဝန်းကို အလိုအလျောက် ခြေရာခံပါ",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "ဆက်တင်ကို စိတ်ကြိုက်ပြင်ဆင်ပါ",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "ပြကဒ္ဒါးတွင် မှတ်တမ်းများ ကြည့်ရှုပါ",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "ကျန်းမာရေးအခြေအနေကို မှတ်တမ်းတင်ပြီး ပြန်ကြည့်ပါ",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "ပြက္ခဒိန်ဖြင့် ယခင်မှတ်တမ်းများ ပြန်ကြည့်ရန်",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "ရက်စွဲကို နှိပ်၍ ကျန်းမာရေးအခြေအနေ မှတ်တမ်းတင်ပါ",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "ပြက္ခဒိန်တွင် အစီအစဉ်ရေးသွင်းရန်",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "ဆေးရုံသွားရက်ကို လွယ်ကူစွာ စီမံ",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "သတိပေးချက်ဖြင့် အကြောင်းကြားရန်",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "ရက်စွဲကို တို့နှိပ်၍ အစီအစဉ်ရေးချပါ",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "ရာသီသွေးမှတ်တမ်းကို အလိုအလျောက် ဒေတာချိတ်ဆက်ခြင်း",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ကျန်းမာရေးအက်ပ်နှင့် ထပ်တူကြ",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple ကျန်းမာရေး ပံ့ပိုးမှု",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "အကြောင်းကြားချက်မှ ဆေးသောက်မှတ်တမ်းရေး",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "အက်ပ်မဖွင့်ဘဲ ပြီးစီးပါ",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Premium အသင်းဝင်ဖြင့် ဆက်လက်အသုံးပြုနိုင်သည်",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "ဆေးပြားစာရွက်ပြီးဆုံးသည့်အခါ အလိုအလျောက်ပြောင်းလဲ",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "ကိုယ်တိုင် ဖန်တီးသည့် လုပ်ဆောင်ချက် မလိုအပ်ပါ",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "ဆက်တင်တက်ဘ်ရှိ ခလုတ်ဖြင့် ပြောင်းလဲပါ",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "တိတ်ဆိတ်/အာရုံစူးစိုက်မုဒ်တွင်လည်း မြည်သည်",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "နိုးထချိန် နှိုးစက်ကဲ့သို့သော အချက်ပေးသံ",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 နှင့်အထက်・ဆက်တင်တက်ဘ်မှ ဖွင့်ပါ",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "အခမဲ့ အသုံးပြုနိုင်သည့် နံပါတ်ချိန်ညှိ လုပ်ဆောင်ချက်",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "ဆက်တင်တဘ်မှ ပြောင်းလဲနိုင်သည်",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "ပင်မစာမျက်နှာရှိ နံပါတ်ကို နှိပ်၍လည်း ဖွင့်နိုင်သည်",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "အခမဲ့ အသုံးပြုနိုင်သည့် ဆေးရပ်ကာလ မှတ်တမ်း",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "ပီးလ်ရှစ်၏ ညာဘက်အပေါ်ရှိ ဂီယာမှ စတင်ပါ",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "ကာလကို တည်းဖြတ်ခြင်းနှင့် ပြန်လည်စတင်ခြင်းလည်း လွယ်ကူပါသည်",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealBody": "လက်ရှိဆေးပက်အုပ်စု သတ်မှတ်ထားသော ကာလ ပြီးဆုံးသည့်အချိန်တွင် အုပ်စုအသစ်ကို အလိုအလျောက် ဖန်တီးပေးပါသည်။ လက်ဖြင့် ပြောင်းရန် လိုအပ်မှုမရှိတော့ဘဲ မှတ်တမ်း ပျက်ကွက်မှုများ မဖြစ်ပေါ်စေပါ။",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
   }
 }

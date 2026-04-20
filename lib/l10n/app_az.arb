@@ -2410,5 +2410,409 @@
   "inquiryContentRequired": "Müraciət məzmununu daxil edin",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Birdəfəlik planı satın aldığınız üçün təşəkkür edirik. Aylıq və ya illik plana abunə olanlar, abunəliyi ləğv etməyi unutmayın.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "・\"Bir dəfəlik plan\"ı satın alsanız belə, \"aylıq/illik plan\" avtomatik olaraq ləğv edilməyəcək.",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "Bura",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "dan əvvəlcədən ləğv edərək satın alın.",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "Yoxla",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "Hesab qeydiyyatı tövsiyə edilir",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "Qeydiyyatdan keçsəniz məlumatlarınızı ehtiyat nüsxəsinə ala bilərsiniz",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "Səssiz rejimdə də bildiriş alın",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Gecə rejimində belə həb içməyi unutma",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Səssiz rejimdə də bildirişlər gəlir",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alert-i aktivləşdirdikdə, \"Rahatsız etmə\" və ya səssiz rejim zamanı belə qəbul bildirişlərini ala bilərsiniz. Vacib həb qəbulunun vaxtını qaçırmamaq üçün bu funksiyanı mütləq qurmağa çalışın.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Bildiriş mesajını fərdiləşdir",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Bildiriş mətnini fərdiləşdirə bilərsiniz",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Bildiriş mesajını sərbəst redaktə edin",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Standart \"Həb içmə vaxtıdır\" mesajını sevdiyiniz sözlərə uyğunlaşdıra bilərsiniz. Hər gün həb qəbulunu daha əyləncəli etmək üçün motivasiya verici ifadələr, ev heyvanınızın adı və ya istədiyiniz hər hansı bir söz seçin.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Həb vərəqəsində tarixi göstər",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Qəbul vaxtını bir baxışda görün",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Həb vərəqinə tarix göstərmək olar",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Həb vərəqinin xanalarında tarixləri göstərməklə keçmiş qəbul tarixçəsini və gələcək qəbul cədvəlini bir baxışda yoxlaya bilərsiniz. Özünüzə uyğun ekranı seçmək üçün \"Nömrə\" rejimi ilə \"Tarix\" rejimi arasında keçid edin.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Qəbul tarixçəsini asanlıqla nəzərdən keçirin",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Nə vaxt qəbul etdiyinizi dərhal bilin",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Ana ekranda həbin qeydiyyatını aparın",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Ana ekrandakı həb vərəqəsinə sadəcə toxunmaqla həmin günün qəbulunu qeyd edə bilərsiniz. Səhvən qeyd etdiyiniz halda, bir daha toxunmaqla ləğv edə bilərsiniz. Qəbul tarixçəsini sonradan da yoxlaya bildiyiniz üçün, arxayın davam edə bilərsiniz.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Adet qeydiyyatı və proqnozu",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Adet başlanğıcını qeyd edərək dövrü izləyin",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Menstruasiya qeydiyyatı və proqnozu mümkündür",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Aybaşınız gəldikdə sadəcə qeyd edin və keçmiş aybaşı tarixçənizi siyahı şəklində görə bilərsiniz. Növbəti aybaşı tarixi də avtomatik olaraq proqnozlaşdırılır, buna görə planlı şəkildə yaşaya bilərsiniz.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Təqvimdə sağlamlıq vəziyyətini qeyd edin",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Hər günün sağlamlığını təqvimə qeyd edək",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Gündəlik sağlamlığı təqvimə qeyd edin",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Təqvimdən tarix üzərinə toxunaraq özünüzü necə hiss etdiyinizi, əhvalınızı, simptomlarınızı və s. qeyd edə bilərsiniz. Qəbul qeydləri və menstruasiya qeydləri ilə birlikdə yoxlaya bildiyiniz üçün öz bədəninizin ritmini anlaya bilərsiniz.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Gələcək planlarını qeyd et",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Həkim ziyarəti kimi gələcək planları idarə edin",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Gələcək planları təqvimdə qeyd edin",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Həkim ziyarəti, səyahət və digər gələcək planlarınızı təqvimə yaza bilərsiniz. Həb qəbulu dövrü ilə birlikdə yoxlaya bildiyiniz üçün, adet dövrünüzü də nəzərə alaraq planlar qura bilərsiniz.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Sağlamlıq tətbiqi ilə inteqrasiya",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Menstruasiya qeydlərini Sağlamlıq ilə paylaşın",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "Sağlamlıq tətbiqi ilə inteqrasiya edilə bilər",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilll-də qeydə aldığınız menstruasiya məlumatlarını sağlamlıq tətbiqi ilə avtomatik sinxronizasiya edə bilərsiniz. Digər sağlamlıq məlumatları ilə birlikdə yoxlaya və digər tətbiqlərdə də menstruasiya məlumatlarından istifadə edə bilərsiniz.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Bildirişdən birbaşa qəbul qeydi",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Tətbiqi açmadan bildiriş üzərindən qeyd edin",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Bildiriş ekranında bir toxunuşla dərman qeydi",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Xatırlatma bildirişini uzun basıb saxlasanız \"Qəbul edildi\" əməliyyatı görünür və tətbiqi açmadan dərman qəbulunu qeyd edə bilərsiniz.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Həb vərəqini avtomatik əlavə et",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Növbəti vərəqi avtomatik yarat",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "Növbəti həb cədvəlini avtomatik yarat",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Cari həb listi qrupu bitdikdə, yeni həb listi qrupu avtomatik olaraq yaradılır. Manual keçid əməliyyatına ehtiyac yoxdur və qeydlərdə boşluq əmələ gəlmir.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Zəng saatı kimi çalan alarm",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Səssiz rejimdə də mütləq çalınan bildirişlər",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Zəng saatı kimi dərman qəbulu siqnalı",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 və sonrakı versiyalarda mövcud olan AlarmKit-dən istifadə edərək, səssiz rejim və ya fokus rejimində belə mütləq çalan zəng vasitəsilə həbi qəbul etməyi xatırladır.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Bugünkü qəbul nömrəsini tənzimləyin",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Nömrə yanlışdırsa, parametrlərdə düzəldin",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Bu gün qəbul ediləcək həb nömrəsini dəyişdirə bilərsiniz",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Həb vərəqəsindəki nömrə ilə faktiki qəbul arasında uyğunsuzluq baş verdikdə (həb içməyi unutduqda və ya səhv həb götürdükdə), bu günün həb nömrəsini əl ilə düzəltmək mümkündür. Eyni ekranı ana ekrandakı həb rəqəmi göstəricisindən də açmaq olar.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Qəbul fasiləsini qeyd edin",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "İstirahət və fasilələri dəqiq idarə edin",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Həbi qəbuluna fasilə vermək",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Həb cədvəlinizə dərman qəbulunu müvəqqəti dayandırdığınız dövrü qeyd edə bilərsiniz. İstirahət dövründə dərman nömrəsi irəliləmir, yenidən başladıqda isə qeydi dərhal bərpa edə bilərsiniz.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Tətbiq daxilindəki yer",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Fokus rejimində belə bildirişlər gəlir",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Təyin olunmuş vaxtda mütləq xatırlatma",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Bir toxunuşla asan quraşdırma",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Bildiriş mesajını azad şəkildə redaktə et",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "Gündəlik qəbul bildirişlərində əks etdir",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "Özünüzə məxsus bildiriş mesajı üçün",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Həb cədvəlini tarixə görə göstər",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Təqvimə baxmadan tarixi bilmək olar",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Həb vərəqi ayarlarından dəyişdirilə bilər",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Həb vərəqəsinə toxunaraq qəbul qeydi",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Səhv etsəniz də asanlıqla ləğv edin",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "İstənilən vaxt qəbul tarixçəsini yoxlayın",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Adet başlama tarixini asanlıqla qeyd et",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Dövrü avtomatik müəyyən edin",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Parametrləri fərdiləşdir",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Təqvimdə qeydlərə baxış",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Sağlamlığı qeyd edin və nəzərdən keçirin",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Keçmiş qeydlərə təqvimlə baxın",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Tarixi toxunaraq sağlamlıq vəziyyətinizi qeyd edin",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Təqvimə planlar yazın",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Həkim ziyarəti günlərini asanlıqla idarə edin",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Xatırlatma ilə bildiriş",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Tarixi toxunaraq qeyd yazın",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Menstruasiya qeydlərinin avtomatik məlumat sinxronizasiyası",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Sağlamlıq tətbiqinə sinxronizasiya",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Health dəstəyi",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Bildiriş aksiyası ilə qəbul qeydi",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Tətbiqi açmadan tamamla",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Premium abunəliklə olduğu kimi istifadə edilə bilər",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Hap vərəqi bitdikdə avtomatik keçid",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Əl ilə yaratma əməliyyatına ehtiyac yoxdur",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Parametrlər tabındakı keçidlə dəyişdirin",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Səssiz/Fokus rejimində belə çalınır",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Zəngli saat kimi alarm səsi",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 və sonrakı · Parametrlər tabından aktivləşdir",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Pulsuz istifadə edilə bilən nömrə uyğunlaşdırma funksiyası",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Parametrlər nişanından dəyişdirilə bilər",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Ana ekrandakı rəqəmə toxunaraq da açıla bilər",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Pulsuz istifadə edilə bilən dərman fasiləsi qeydi",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Həb vərəqinin sağ yuxarı küncündəki dişli çarxdan başlayın",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Dövrün redaktəsi və bərpası da asandır",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }

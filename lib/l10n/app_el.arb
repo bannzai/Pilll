@@ -2402,5 +2402,409 @@
   "inquiryContentRequired": "Παρακαλώ εισάγετε το περιεχόμενο του ερωτήματος",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Ευχαριστούμε για την αγορά του εφάπαξ πλάνου. Εάν είστε συνδρομητές σε μηνιαίο ή ετήσιο πλάνο, μην ξεχάσετε να ακυρώσετε τη συνδρομή σας.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "・Η αγορά του «εφάπαξ πλάνου» δεν ακυρώνει αυτόματα το «μηνιαίο/ετήσιο πλάνο».",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "Εδώ",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "ακυρώστε εκ των προτέρων πριν προχωρήσετε στην αγορά.",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "Επιβεβαίωση",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "Συνιστούμε εγγραφή λογαριασμού",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "Εγγραφείτε για να δημιουργήσετε αντίγραφο ασφαλείας των δεδομένων σας",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "Λήψη ειδοποιήσεων ακόμα και σε αθόρυβη λειτουργία",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Θυμήσου το χάπι σου ακόμα και σε λειτουργία «Μην ενοχλείτε»",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Λαμβάνετε ειδοποιήσεις ακόμα και σε αθόρυβη λειτουργία",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Ενεργοποιώντας τις Κρίσιμες Ειδοποιήσεις, μπορείτε να λαμβάνετε ειδοποιήσεις λήψης χαπιού ακόμα και όταν είναι ενεργοποιημένη η λειτουργία «Μην ενοχλείτε» ή η αθόρυβη λειτουργία. Ρυθμίστε το για να μην χάσετε ποτέ τη στιγμή λήψης του σημαντικού σας χαπιού.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Προσαρμογή μηνύματος ειδοποίησης",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Μπορείτε να προσαρμόσετε το μήνυμα ειδοποίησης",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Ελεύθερη επεξεργασία μηνύματος ειδοποίησης λήψης",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Μπορείτε να προσαρμόσετε το προεπιλεγμένο μήνυμα «Ώρα να πάρετε το χάπι σας» με τις δικές σας λέξεις. Δοκιμάστε να το αλλάξετε σε κάτι που σας δίνει κίνητρο, το όνομα του κατοικίδιου σας ή οτιδήποτε άλλο που κάνει την καθημερινή σας λήψη πιο διασκεδαστική.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Εμφάνιση ημερομηνίας στο φύλλο χαπιών",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Δείτε με μια ματιά πότε να το πάρετε",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Μπορείτε να εμφανίσετε ημερομηνίες στο φύλλο χαπιών",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Εμφανίζοντας ημερομηνίες στα κελιά του φύλλου χαπιών, μπορείτε να ελέγξετε με μια ματιά το ιστορικό λήψης στο παρελθόν και το πρόγραμμα λήψης στο μέλλον. Εναλλάξτε μεταξύ της λειτουργίας «Αριθμός» και της λειτουργίας «Ημερομηνία» για να επιλέξετε την εμφάνιση που σας ταιριάζει.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Εύκολη ανασκόπηση ιστορικού λήψης",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Μάθε αμέσως πότε πήρες το χάπι",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Καταγραφή λήψης χαπιού στην αρχική οθόνη",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Αρκεί να πατήσετε στο φύλλο χαπιών στην αρχική οθόνη για να καταγράψετε τη λήψη της ημέρας. Αν καταχωρίσετε κατά λάθος, μπορείτε να το αναιρέσετε πατώντας ξανά. Μπορείτε επίσης να ελέγξετε το ιστορικό λήψης αργότερα, οπότε μπορείτε να συνεχίσετε με ηρεμία.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Καταγραφή & Πρόβλεψη Περιόδου",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Καταγράψτε την ημερομηνία έναρξης περιόδου και παρακολουθήστε τον κύκλο σας",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Μπορείτε να καταγράψετε και να προβλέψετε την περίοδό σας",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Απλώς καταγράψτε πότε έρχεται η περίοδός σας για να δείτε το ιστορικό όλων των προηγούμενων περιόδων σας. Η επόμενη αναμενόμενη ημερομηνία περιόδου προβλέπεται αυτόματα, ώστε να μπορείτε να προγραμματίσετε τον χρόνο σας.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Καταγράψτε την υγεία σας στο ημερολόγιο",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Κατέγραφε την καθημερινή σου υγεία στο ημερολόγιο",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Καταγράψτε την καθημερινή σας υγεία στο ημερολόγιο",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Μπορείτε να πατήσετε μια ημερομηνία στο ημερολόγιο για να καταγράψετε την κατάστασή σας, τη διάθεσή σας, τα συμπτώματά σας και άλλα. Καθώς μπορείτε να τα δείτε μαζί με τα αρχεία λήψης χαπιών και τα αρχεία εμμήνου ρύσης, μπορείτε να κατανοήσετε τον ρυθμό του σώματός σας.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Γράψτε τα μελλοντικά σας σχέδια",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Διαχείριση μελλοντικών ραντεβού, όπως ιατρικές επισκέψεις",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Καταγράψτε μελλοντικά σχέδια στο ημερολόγιο",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Μπορείτε να καταγράψετε μελλοντικά ραντεβού, όπως επισκέψεις στο γιατρό ή ταξίδια, στο ημερολόγιο. Καθώς μπορείτε να τα ελέγξετε παράλληλα με τον κύκλο λήψης του χαπιού, μπορείτε να κάνετε σχέδια λαμβάνοντας υπόψη και τον προγραμματισμό της περιόδου σας.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Σύνδεση με Υγεία",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Κοινοποίηση εγγραφών περιόδου με το Healthcare",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "Μπορεί να συνδεθεί με το Health",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Τα δεδομένα εμμήνου ρύσης που καταγράφετε στο Pilll μπορούν να συγχρονιστούν αυτόματα με την εφαρμογή Υγεία. Μπορείτε να τα δείτε μαζί με άλλα δεδομένα υγείας σας ή να χρησιμοποιήσετε τα δεδομένα εμμήνου ρύσης και σε άλλες εφαρμογές.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Καταγραφή λήψης απευθείας από την ειδοποίηση",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Καταγραφή από την ειδοποίηση χωρίς να ανοίξετε την εφαρμογή",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Καταγραφή λήψης με ένα άγγιγμα από την οθόνη ειδοποιήσεων",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Πατώντας παρατεταμένα την ειδοποίηση υπενθύμισης, εμφανίζεται η ενέργεια «Έλαβα», και μπορείτε να καταγράψετε τη λήψη χωρίς να ανοίξετε την εφαρμογή.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Αυτόματη προσθήκη φύλλου χαπιών",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Αυτόματη δημιουργία επόμενου φύλλου",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "Αυτόματη δημιουργία επόμενου φύλλου χαπιών",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Όταν ολοκληρωθεί η τρέχουσα ομάδα φύλλων χαπιών, δημιουργείται αυτόματα μια νέα ομάδα. Δεν απαιτείται χειροκίνητη εναλλαγή και δεν υπάρχουν κενά στις καταγραφές σας.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Συναγερμός που χτυπά σαν ξυπνητήρι",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Ειδοποιήσεις που ηχούν ακόμα και σε σίγαση",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Συναγερμός λήψης φαρμάκου σαν ξυπνητήρι",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "Χρησιμοποιώντας το AlarmKit που είναι διαθέσιμο σε iOS 26 και νεότερες εκδόσεις, σας ειδοποιεί για τη λήψη του χαπιού σας με έναν συναγερμό που χτυπά αξιόπιστα ακόμα και σε λειτουργία Σίγασης ή λειτουργία Εστίασης.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Συγχρονισμός αριθμού δόσης σήμερα",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Αν ο αριθμός δεν είναι σωστός, διορθώστε τον στις ρυθμίσεις",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Μπορείτε να αλλάξετε τον αριθμό του χαπιού που πρέπει να πάρετε σήμερα",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Όταν ο αριθμός στη συσκευασία χαπιών δεν συμφωνεί με την πραγματική σας λήψη λόγω ξεχασμένης δόσης ή λάθους, μπορείτε να ρυθμίσετε χειροκίνητα τον αριθμό χαπιού που πρέπει να λάβετε σήμερα. Μπορείτε επίσης να ανοίξετε την ίδια οθόνη από την ένδειξη αριθμού χαπιού στην αρχική σελίδα.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Καταγραφή περιόδου διακοπής λήψης",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Ακριβής διαχείριση διαλειμμάτων & διακοπών",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Παύση λήψης χαπιού",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Μπορείτε να καταγράψετε μια περίοδο διακοπής λήψης του χαπιού στο φύλλο χαπιών. Κατά τη διάρκεια της παύσης, ο αριθμός δόσης δεν προχωρά και μπορείτε να συνεχίσετε αμέσως την καταγραφή όταν επαναλάβετε τη λήψη.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Τοποθεσία εντός εφαρμογής",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Λήψη ειδοποιήσεων ακόμα και σε λειτουργία εστίασης",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Σίγουρη υπενθύμιση στην καθορισμένη ώρα",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Απλή ρύθμιση με ένα άγγιγμα",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Ελεύθερη επεξεργασία μηνύματος ειδοποίησης",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "Αντικατοπτρίζεται στις καθημερινές ειδοποιήσεις λήψης",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "Το δικό σου μήνυμα ειδοποίησης",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Εμφάνιση φύλλου χαπιών κατά ημερομηνία",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Γνωρίζεις την ημερομηνία χωρίς να κοιτάς το ημερολόγιο",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Μπορεί να αλλαχθεί από τις ρυθμίσεις φύλλου χαπιών",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Καταγραφή λήψης με πάτημα στο φύλλο χαπιών",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Εύκολη αναίρεση ακόμα και αν κάνετε λάθος",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Ελέγξτε το ιστορικό λήψης ανά πάσα στιγμή",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Εύκολη καταγραφή ημερομηνίας έναρξης περιόδου",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Αυτόματη παρακολούθηση κύκλου",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Προσαρμογή ρυθμίσεων",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Λίστα εγγραφών στο ημερολόγιο",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Καταγράψτε και ανασκοπήστε την κατάστασή σας",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Επισκόπηση παλαιότερων καταγραφών στο ημερολόγιο",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Πατήστε σε ημερομηνία για να καταγράψετε την κατάσταση υγείας σας",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Καταχώριση προγράμματος στο ημερολόγιο",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Εύκολη διαχείριση ημερομηνιών επίσκεψης στον γιατρό",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Ειδοποίηση υπενθύμισης",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Πατήστε μια ημερομηνία για να γράψετε ένα πρόγραμμα",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Αυτόματη συγχρονισμός δεδομένων περιόδου",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Συγχρονισμός με εφαρμογή Υγείας",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Υποστήριξη Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Καταγραφή λήψης μέσω ειδοποίησης",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Ολοκλήρωση χωρίς άνοιγμα εφαρμογής",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Διαθέσιμο με συνδρομή Premium",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Αυτόματη εναλλαγή στη λήξη φύλλου χαπιών",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Δεν απαιτείται χειροκίνητη δημιουργία",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Εναλλαγή με τον διακόπτη στην καρτέλα ρυθμίσεων",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Ηχεί ακόμα και σε λειτουργία σίγασης/εστίασης",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Ήχος ξυπνητηριού",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 και νεότερο · Ενεργοποίηση από την καρτέλα Ρυθμίσεις",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Δωρεάν λειτουργία αντιστοίχισης αριθμών",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Μπορεί να αλλαχθεί από την καρτέλα ρυθμίσεων",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Μπορείτε να το ανοίξετε και πατώντας τον αριθμό στην αρχική σελίδα",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Δωρεάν καταγραφή διαλείμματος",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Έναρξη από το γρανάζι πάνω δεξιά στο φύλλο χαπιών",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Εύκολη επεξεργασία και επανέναρξη περιόδου",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }

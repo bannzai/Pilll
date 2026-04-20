@@ -14,7 +14,8 @@ paths:
 
 ## パラメータ
 - parameters にはスコープ内で自然に取得できるIDを含める
-- key は value と同じ変数名にしましょう
+- key の命名は snake_case にする (Firebase/BigQuery の慣習に合わせる)
+- value に動的な変数を渡す場合、key 名はその変数名を snake_case に変換したものにする (例: `final pillSheetID = ...;` → `{'pill_sheet_id': pillSheetID}`)
 
 ## 目的
 - ユーザーの行動調査・不具合時の調査

@@ -2393,5 +2393,418 @@
   "inquiryContentRequired": "Sicela ufake okuqukethwe kombuzo",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "afterLastTakenPillNumber": "Inombolo {afterLastTakenPillNumber}",
+  "@afterLastTakenPillNumber": {
+    "description": "ピルシートUI上で、最後に服用したピルの次に飲むべきピルの番号を表示するテキストです。数字の後に付ける序数詞（日本語では「番」、英語では「th」など）を各言語に適した形で翻訳してください。",
+    "placeholders": {
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "lifetimeSubscriptionWarning": "Siyabonga ngokuthenga uhlelo lokukhokha okukodwa. Uma ubhalisiwe kuhlelo lwenyanga noma lonyaka, sicela ungakhohlwa ukukhansela ukubhalisa kwakho.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "Uma uthenge uhlelo lokuthenga okukodwa (buyout), izinhlelo zenyanga noma zonyaka ngeke zikhanselwe ngokuzenzakalela.",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "Lapha",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "Sicela ukhansele kusengaphambili ngaphambi kokuthenga.",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "Zama lesi sici",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "Kunconywa ukuthi ubhalise i-akhawunti",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "Bhalisa ukuze ukwazi ukugcina isipele sedatha yakho",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "Thola izaziso ngisho noma imodi ithule",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Gwema ukukhohlwa ukuthatha amaphilisi ngisho nangesikhathi imodi yokungaphazanyiswa ivuliwe.",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Uzothola izaziso ngisho nalapho imodi ethule ivuliwe",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Uma wenza i-'Isixwayiso Esibalulekile' (Critical Alert) isebenze, uzothola izaziso zokuthatha imithi ngisho noma imodi yokungaphazamiseki (Do Not Disturb) noma imodi yokuthula isebenza. Sicela uyilungise ukuze ungaphuthelwa isikhathi esibalulekile sokuthatha iphilisi.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Hlela umlayezo wesaziso",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Ungakwazi ukwenza ngezifiso imiyalezo yezaziso",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Ungakwazi ukwenza ngokwezifiso umyalezo ojwayelekile othi 'Isikhathi sokuthatha iphilisi' ube ngamazwi ongawathanda. Shintsha ube amazwi akhuthazayo, igama lesilwane sakho, noma okunye, ukuze kwenze ukuthatha amaphilisi akho nsuku zonke kube mnandi kakhulu.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Khombisa usuku kushidi lamaphilisi",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Bheka ngokushesha ukuthi uzowathatha nini",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Bonisa usuku eshidini lamapilisi.",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealTitle": "Bukeza kalula umlando wakho wokuthatha amaphilisi",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Uyokwazi ngokushesha ukuthi wawuthathe nini",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Qopha ukusetshenziswa kwamaphilisi kusikrini sasekhaya",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Ikhasi lasekhaya le-pill sheet lingacindezelwa nje kuphela ukuze ubhalise ukuthathwa kwalelo langa. Uma ubhale iphutha, cindezela futhi ukuze ususe ukubhalisa. Ungabuyekeza umlando wokuthathwa ngemuva kwesikhathi, ngakho-ke ungalokothi ukhathazeke futhi uqhubeke.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "生理を記録・予測",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Qopha usuku lokuqala lwenyanga ukuze ulandele futhi uqonde ijikelezo lakho.",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Qopha futhi ubikezele ukuya kwakho esikhathini",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Uma uya esikhathini, vele urekhode; uzokwazi ukubuka uhlu lwemijikelezo yakho yangaphambilini. Usuku olulandelayo olulindelwe lokuya esikhathini luyabikezelwa ngokuzenzakalelayo, ukuze ukwazi ukuhlela kusengaphambili.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Qopha isimo sakho kukhalenda",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Qopha isimo sakho sansuku zonke ekhalendeni",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Qopha isimo somzimba sakho nsuku zonke kukhalenda",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Thepha usuku kukhalenda ukuze ubhalise isimo somzimba, imizwa, nezimpawu njll. Ungazibuka ndawonye nerekhodi lokuthatha amaphilisi kanye nerekhodi lomjikelezo wokuya esikhathini, ukuze uqonde kahle umjikelezo womzimba wakho.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Phatha izinhlelo zesikhathi esizayo ezifana nezikhathi zokuvakasha kudokotela.",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Qopha izinhlelo ezizayo kukhalenda",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Ncoma uhumusho walokhu kuhlelo lokusebenza lwekusasa, ezifana nezibhedlela noma uhambo. Ungakwazi ukufaka lezi zinhlelo ku-akalenda. Njengoba zihambisana nenqubo yakho yokuthatha amaphilisi, ungakwazi ukuhlela futhi ubikelele izinsuku zokugeleza kwegazi ukuze wenze izinhlelo ezifanele.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Xhuma nohlelo lwezempilo",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Yabelana ngerekhodi yokuya esikhathini no-Health",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "Xhuma nohlelo lwezempilo",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilllで記録した生理データをヘルスケアアプリと自動連携できます。ヘルスケア上の他の健康データと一緒に確認したり、他のアプリでも生理データを使えるようになります。",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Qopha ukuthatha ipilisi ngqo kusukela esazisweni",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Qopha kusaziso ngaphandle kokuvula uhlelo lokusebenza",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Qopha ukuthatha iphilisi ngokuthinta okukodwa esikrinini sezaziso",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "長押し通知 \"服用した\" アクションが表示され、アプリを開かずに服用が記録できます。",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Faka amashidi wamaphilisi ngokuzenzakalelayo",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Dala ishidi elilandelayo ngokuzenzakalelayo",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "Dala ngokuzenzakalelayo ishidi lamapilisi elilandelayo",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Uma sekuqedile iqembu lamanani wamaphilisi lamanje, iqembu elisha lamanani wamaphilisi lizokwakhiwa ngokuzenzakalelayo. Akudingeki ukuthi uguqule ngesandla, futhi akukho okushodayo emlandweni wokurekhoda.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Isixwayiso esishaya njengowashi lokuvusa",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Isaziso esizovakala ngokuqinisekile ngisho nangesikhathi imodi ethule ivuliwe.",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "I-alamu yokuthatha amaphilisi efana neyokuvusa",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26以降で利用できるAlarmKitを使って、サイレントモードや集中モードでも確実に鳴るアラームでピルの服用を知らせます。",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Lungisa inombolo yokuthatha yanamuhla",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Uma inombolo ingahambelani, lungisa ezilungiselelweni.",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Ungashintsha inombolo yephilisi ozoyithatha namuhla",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Uzoba nethuba lokulungisa inombolo yepilisi ozoyiphuza namuhla ngesandla uma inombolo lephepha lepilisi neyakho impela yokuthatha ziyehluka ngenxa yokukhohlwa noma ukuxubana. Ungavula esikrinini esifanayo kusukela kumboniso wenombolo yepilisi ekhasini lasekhaya.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Rekhoda isikhathi sokuyeka ukuthatha amaphilisi",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Lawula ngokunembile ukuphumula nokumiswa kokuthatha amaphilisi",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Thatha ikhefu ekuthatheni amaphilisi",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Ungaqopha eshidini lamaphilisi isikhathi lapho uzoyeka ukusebenzisa amaphilisi. Ngesikhathi sokuphumula, inombolo yokuthatha ayihambi, futhi lapho uqala kabusha ungaphinde urekhode ngokushesha.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "アプリ内の場所",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "集中モード中でも通知が届く",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Uzokhunjuzwa ngokuqinisekile ngesikhathi osibekile.",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Setha kalula ngokuthinta okukodwa",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Hlela umyalezo wesaziso ngokwezifiso",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "Faka kuzaziso zansuku zonke zokuthatha umuthi",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "自分だけの通知メッセージに",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "ピルシートを日付で表示",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Kalendari ukubona ngaphandle kosuku olwaziwayo",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Ungakushintsha kusuka kuzilungiselelo zeshidi lamaphilisi.",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Thinta ishidi lamaphilisi ukuze ubhale ukuthi uwawathathile",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "間違えてもかんたん取り消し",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Hlola umlando wokuthatha amaphilisi nganoma yisiphi isikhathi",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "生理開始日をかんたん記録",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Landelela umjikelezo ngokuzenzakalelayo",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Lungisa izilungiselelo",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Buka amarekhodi ekhalendeni",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Bhala amanothi ngesimo sakho somzimba bese uwabukeza",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "過去の記録をカレンダーで振り返り",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Thepha usuku ukuze ubhale isimo sakho",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Engeza umcimbi kukhalenda",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Lawula kalula izinsuku zokuya kudokotela",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Khumbuza ngesaziso",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Thepha usuku ukuze ubhale uhlelo",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Vumelanisa ngokuzenzakalelayo amarekhodi okuya esikhathini",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Vumelanisa nohlelo lwezempilo",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Ihambisana ne-Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "通知のアクションで服用記録",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Kuphothuliwe ngaphandle kokuvula uhlelo lokusebenza",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Iyatholakala ngokushesha uma ubhalisele i-Premium",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "ピルシート終了で自動切り替え",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "手動の作成操作が不要",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Shintsha usebenzisa iswishi kuthebhu yezilungiselelo.",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Izokwazisa noma ngabe imodi ithule noma imodi yokugxila ivuliwe.",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Umsindo we-alamu ofana newashi lokuvusa",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "Ku-iOS 26 nangaphezulu — yenza kusebenze kuthebhu yezilungiselelo",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Isici sokuhambisana kwezinombolo esingasetshenziswa mahhala",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Ungakushintsha kuthebhu yezilungiselelo",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Ungavula futhi ngokuthinta inombolo ekhasini lasekhaya.",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Ukurekhoda kwamahhala kokungathathi amaphilisi",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Qala kusithonjana sezilungiselelo (i-gear) phezulu kwesokudla kwephepha lamaphilisi.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Kulula ukuhlela noma ukuqala kabusha isikhathi sokuya esikhathini",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Hlela ngokukhululekile umyalezo wesikhumbuzi sokuthatha amaphilisi",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "display the translated text here",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }

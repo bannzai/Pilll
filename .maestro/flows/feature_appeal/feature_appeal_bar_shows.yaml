@@ -1,0 +1,17 @@
+appId: com.mizuki.Ohashi.Pilll.dev
+---
+# 初期設定完了後に AnnouncementBar 領域に PR #1782 の変更 (RecommendSignupGeneral) が表示されることを確認する。
+# 匿名ユーザー (ログインプロバイダ未連携) → RecommendSignupGeneral が FeatureAppeal より優先される。
+- launchApp:
+    clearState: true
+    clearKeychain: true
+    permissions:
+      notifications: allow
+- waitForAnimationToEnd
+# 初期設定サブフローを実行
+- runFlow: subflows/initial_setup.yaml
+# ホーム画面到達後、データ読み込みを待つ
+- waitForAnimationToEnd
+# AnnouncementBar に RecommendSignupGeneral が表示されることを id セレクタで確認
+- assertVisible:
+    id: "recommend_signup_general_bar"

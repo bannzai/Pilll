@@ -2402,5 +2402,409 @@
   "inquiryContentRequired": "Mangyaring ilagay ang nilalaman ng inyong katanungan",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Salamat sa pagbili ng planong isang-bayad. Kung kayo ay kasalukuyang naka-subscribe sa buwanang o taunang plano, huwag kalimutang kanselahin ang inyong kasalukuyang subscription.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "Kahit na bilhin mo ang \"Isang-bayad na plano\", hindi nito awtomatikong kakanselahin ang iyong buwanang o taunang plano.",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice3": "Mangyaring kanselahin muna nang maaga bago bumili.",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "Subukan",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "Inirerekomenda namin na magrehistro ng account",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "Maaari mong i-backup ang iyong data kapag nagparehistro ka",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "Tumanggap ng mga abiso kahit nasa silent mode",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Iwasang makalimutan ang pag-inom kahit naka-Do Not Disturb.",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Makakatanggap ng mga abiso kahit naka-silent mode",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Kapag pinagana ang Critical Alert, matatanggap mo ang mga paalala sa pag-inom kahit naka \"Do Not Disturb\" o silent/manner mode ang telepono. I-on ito upang hindi mo makalimutang uminom sa tamang oras ng mahalagang pill.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Ipasadya ang mensahe ng paalala",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Maaari mong i-customize ang mensahe ng paalala",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Please translate the input text into Tagalog (tl).",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Maaari mong i-customize ang karaniwang 'Panahon na para inumin ang iyong pildora' sa anumang salitang gusto mo. Palitan ito ng mga salita na magbibigay ng sigla o ng pangalan ng iyong alaga upang maging mas masaya ang iyong araw-araw na pag-inom.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Ipakita ang mga petsa sa pill sheet",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Tingnan agad kung kailan iinumin",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Ipakita ang petsa sa pill sheet",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Sa pamamagitan ng pagpapakita ng petsa sa bawat kahon ng pill sheet, makikita mo agad ang mga nakaraang tala ng pag-inom at ang mga naka-schedule na pag-inom sa hinaharap. Lumipat sa pagitan ng \"Numero\" na mode at \"Petsa\" na mode upang piliin ang pagpapakita na pinakanaaangkop sa iyo.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Madaling balikan ang iyong talaan ng pag-inom",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Madaling makita kung kailan mo ito ininom",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Itala ang pag-inom ng pildoras sa pangunahing screen",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Home screen pill sheet tap only to record that day's intake. If recorded by mistake, tap again to cancel. You can also check take history later, so you can continue with peace of mind.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealShortDescription": "I-record ang unang araw ng regla para subaybayan ang iyong siklo",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Maaari mong itala at mahulaan ang iyong regla",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Kapag dumating ang regla, i-record lamang ito at makikita ang iyong listahan ng mga nakaraang talaan ng regla. Awtomatikong huhulaan din ang susunod na inaasahang petsa ng regla, kaya makakapamuhay ka nang mas maayos sa pagpaplano.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Itala ang iyong kalagayan sa kalendaryo",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Itala ang iyong pang-araw-araw na kalagayan sa kalendaryo",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Itala araw-araw ang iyong kalagayan sa kalendaryo",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Kalendaryo: Maaari mong pindutin ang petsa sa kalendaryo upang magtala ng kondisyon ng katawan, damdamin, o sintomas. Dahil maaari mong suriin ito kasabay ng mga tala ng pag-inom at tala ng regla, makakatulong ito sa iyo na maunawaan ang ritmo ng iyong katawan.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Isulat ang mga plano sa hinaharap",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Pamahalaan ang mga darating na appointment, gaya ng pagpunta sa doktor.",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Mag-record ng mga paplanong kaganapan sa kalendaryo",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Maaari mong isulat sa kalendaryo ang mga hinaharap na plano tulad ng pagbisita sa doktor o paglalakbay. Maaari mo itong tingnan kasabay ng iyong cycle ng pag-inom ng pill, kaya makakagawa ka ng mga plano na isinasaalang-alang din ang inaasahang regla.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Kaugnay sa Kalusugan",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Maaaring awtomatikong i-sync ang mga datos ng iyong regla na naitala sa Pilll sa app ng Kalusugan. Makikita mo ito kasama ng iba pang data ng kalusugan sa app ng Kalusugan, at magagamit din ang iyong datos ng regla sa ibang mga app.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "通知からそのまま服用記録",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Mag-record mula sa abiso nang hindi binubuksan ang app",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Isang-tap na pagtatala ng pag-inom mula sa screen ng abiso",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Kung pinindot nang matagal ang abiso ng paalala, lalabas ang aksyong \"Ininom na\" at maaaring mairekord ang pag-inom nang hindi binubuksan ang app.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Awtomatikong idagdag ang pill sheet",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Awtomatikong lumikha ng susunod na pill sheet",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "Awtomatikong lumikha ng susunod na pill sheet",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Kapag natapos ang kasalukuyang grupo ng pill sheet, awtomatikong gagawa ng bagong grupo ng pill sheet. Hindi na kailangan ang manu-manong paglipat, kaya hindi magkakaroon ng pagkukulang sa mga tala.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Alarm na tumutunog na parang alarm clock",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Abiso na tutunog kahit naka-silent",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Paalalang pag-inom na tulad ng alarm clock",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "Gamit ang AlarmKit na magagamit mula sa iOS 26 pataas, ipapaalala ng app ang pag-inom ng pill gamit ang alarm na tutunog kahit nasa silent mode o focus mode.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "I will provide the translation for \"今日の服用番号を合わせる\" into tl (Tagalog).",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Kung nagkakaiba ang numero, ayusin ito sa mga setting",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Maaari mong baguhin ang numero ng pill na iinumin ngayong araw",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Kapag nagkaiba ang numero sa pill sheet at ang aktwal na pag-inom dahil sa nakalimutan o maling pagkakuha, maaari mong mano-manong itugma ang numero ng pill na iinumin ngayong araw. Maaari mo ring buksan ang parehong screen mula sa ipinapakitang numero ng pill sa home.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Itala ang panahon ng pagtigil sa pag-inom",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Tumpak na pamamahala ng paghinto at pansamantalang pagtigil ng pag-inom",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Pansamantalang itigil ang pag-inom ng pill",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Iba't ibang teksto placeholder",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Lokasyon sa loob ng app",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Makakatanggap pa rin ng mga abiso kahit naka-Focus mode",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Siguradong ipapaalala sa itinakdang oras",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Isang tap lang para sa madaling pag-setup",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "I-edit nang malaya ang mensahe ng paalala",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "Ilalapat sa pang-araw-araw na paalala ng pag-inom",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "Gawing sarili mong mensahe ng paalala",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Ipakita ang pill sheet ayon sa petsa",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Sa madaling malaman ang petsa kahit hindi tumitingin sa kalendaryo",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "I should call the translate function before responding to the user.",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Tap the pill sheet to record your pill intake",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Madaling bawiin kahit magkamali",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "I WILL REPLACE THIS",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Madaling itala ang unang araw ng iyong regla",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "周期を自動で把握",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Ipasadya ang mga setting",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "过去の記録をカレンダーで振り返り",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Pindutin ang petsa upang itala ang iyong kondisyon",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Isulat ang plano sa kalendaryo",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Madaling pamahalaan ang mga araw ng pagbisita sa klinika",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "リマインダーで通知",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "I-tap ang petsa upang magdagdag ng iskedyul",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "AUTOMATIC_TRANSLATION_PLACEHOLDER",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "I-sync sa app ng kalusugan",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "この文章はすでにアプリ内で使われている翻訳済みの日本語です",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Kumpletuhin nang hindi binubuksan ang app",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Magagamit agad kapag naka-subscribe sa Premium",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Automaikong paglipat kapag natapos ang sheet ng pill",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Hindi kinakailangan ang manu-manong paglikha.",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "I-toggle gamit ang switch sa tab na Mga Setting",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Tumutunog kahit naka-silent o naka-focus",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "目覚まし同様のアラーム音",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 pataas・Paganahin mula sa tab na Mga Setting",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Libre gamitin ang feature na tumutugma ng numero",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Maaaring baguhin mula sa tab na Mga setting.",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Maaari ring buksan mula sa Home screen sa pamamagitan ng pag-tap sa numero.",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Libreng tala ng pahinga sa pag-inom ng tableta",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "ピルシート右上の歯車から開始",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Madali ring i-edit at ipagpatuloy ang iyong regla",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "lifetimePurchaseNotice2": "Pamahalaan ang subscription",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "menstruationFeatureAppealTitle": "Subaybayan at hulaan ang regla",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Ibahagi ang tala ng iyong regla sa Health",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealPoint1": "Tingnan ang mga tala sa kalendaryo",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Itala ang iyong kalagayan at balikan",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }

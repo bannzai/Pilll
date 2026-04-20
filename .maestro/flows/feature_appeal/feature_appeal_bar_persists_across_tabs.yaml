@@ -1,0 +1,25 @@
+appId: com.mizuki.Ohashi.Pilll.dev
+---
+# 初期設定完了後にタブ切替が正常に動作し、ピルタブに戻ると Bar が表示されていることを確認する。
+- launchApp:
+    clearState: true
+    clearKeychain: true
+    permissions:
+      notifications: allow
+- waitForAnimationToEnd
+- runFlow: subflows/initial_setup.yaml
+- waitForAnimationToEnd
+# ホーム画面 (ピルタブ) で Bar が表示される
+- assertVisible:
+    id: "recommend_signup_general_bar"
+# 設定タブに切替 (タブは Image 型で text 検出不可のため座標タップ)
+- tapOn:
+    point: "88%,95%"
+- waitForAnimationToEnd
+# ピルタブに戻る
+- tapOn:
+    point: "12%,95%"
+- waitForAnimationToEnd
+# ピルタブに戻っても Bar が表示されている
+- assertVisible:
+    id: "recommend_signup_general_bar"

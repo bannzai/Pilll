@@ -2410,5 +2410,409 @@
   "inquiryContentRequired": "অনুগ্ৰহ কৰি যোগাযোগৰ বিষয়বস্তু দিয়ক",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "এককালীন ক্ৰয় পৰিকল্পনা ক্ৰয় কৰাৰ বাবে আপোনাক ধন্যবাদ। মাহেকীয়া/বাৰ্ষিক পৰিকল্পনাৰ সদস্য হোৱাসকলে, অনুগ্ৰহ কৰি আপোনাৰ চাবস্ক্ৰিপচন বাতিল কৰতে নাপাহৰিব।",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "・「এককালীন ক্ৰয় পৰিকল্পনা」ক্ৰয় কৰিলেও「মাহেকীয়া/বাৰ্ষিক পৰিকল্পনা」স্বয়ংক্ৰিয়ভাৱে বাতিল নহ'ব।",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "ইয়াত",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "ৰ পৰা আগতীয়াকৈ বাতিল কৰি তাৰ পিছতহে ক্ৰয় কৰক।",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "নিশ্চিত কৰক",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "একাউণ্ট পঞ্জীয়ন কৰাৰ পৰামৰ্শ দিওঁ",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "পঞ্জীয়ন কৰিলে ডেটা বেকআপ কৰিব পাৰিব",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "নীৰৱ মোডতো জাননী লাভ কৰক",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "ডু নট ডিস্টাৰ্ব মোডতো পিল খাবলৈ পাহৰা ৰোধ কৰক",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "সাইলেণ্ট মোডতো জাননী আহিব",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alert সক্ষম কৰিলে, Do Not Disturb মোড বা নিৰৱ মোডৰ সময়তো আপুনি পিল সেৱনৰ জাননী পাব পাৰিব। গুৰুত্বপূৰ্ণ পিল সেৱনৰ সময় নেহেৰুৱাবলৈ, অনুগ্ৰহ কৰি এই সুবিধাটো সক্ষম কৰক।",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "জাননী বাৰ্তা কাষ্টমাইজ কৰক",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "জাননীৰ বাক্য কাষ্টমাইজ কৰিব পাৰিব",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "ঔষধ সেৱনৰ জাননীৰ বাৰ্তা স্বাধীনভাৱে সম্পাদনা কৰক",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "ডিফল্ট \"পিল খোৱাৰ সময় হৈছে\" বাৰ্তাটো আপোনাৰ পছন্দৰ শব্দেৰে কাষ্টমাইজ কৰিব পাৰিব। প্ৰতিদিনৰ সেৱন আৰু আনন্দময় কৰিবলৈ উৎসাহজনক কথা বা আপোনাৰ পোহনীয়া জন্তুৰ নামলৈ সলনি কৰি চাওক।",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "পিল শ্বীটত তাৰিখ দেখুৱাওক",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "কেতিয়া খাব লাগে এক নজৰতে নিশ্চিত কৰক",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "পিল শ্বীটত তাৰিখ প্ৰদৰ্শন কৰিব পাৰি",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "পিল শ্বীটৰ কোষসমূহত তাৰিখ প্ৰদৰ্শন কৰি, আপুনি অতীতৰ সেৱন ইতিহাস আৰু ভৱিষ্যতৰ সেৱনৰ কাৰ্যসূচী এক দৃষ্টিতে পৰীক্ষা কৰিব পাৰিব। 'নম্বৰ' মোড আৰু 'তাৰিখ' মোডৰ মাজত সলনি কৰি, আপোনাৰ বাবে উপযুক্ত প্ৰদৰ্শন বাছি লওক।",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "সহজে ঔষধ সেৱনৰ ইতিহাস পৰ্যালোচনা কৰক",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "কেতিয়া সেৱন কৰিছিল তাৎক্ষণিকভাৱে জানক",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "হোম স্ক্ৰীণত পিলৰ সেৱন ৰেকৰ্ড কৰক",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "ঘৰুৱা স্ক্ৰীনৰ পিল শ্বীট টেপ কৰিলেই সেইদিনৰ সেৱন ৰেকৰ্ড কৰিব পাৰিব। ভুলকৈ ৰেকৰ্ড কৰিলেও, আকৌ এবাৰ টেপ কৰিলেই বাতিল কৰিব পাৰিব। সেৱনৰ ইতিহাসো পিছত চাব পৰা যায়, গতিকে নিশ্চিন্তে অব্যাহত ৰাখিব পাৰিব।",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "ঋতুস্ৰাৱ ৰেকৰ্ড আৰু পূৰ্বানুমান",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "ঋতুস্ৰাৱৰ আৰম্ভণিৰ তাৰিখ লিপিবদ্ধ কৰক আৰু চক্ৰ অনুসৰণ কৰক",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "ঋতুস্ৰাৱৰ ৰেকৰ্ড আৰু পূৰ্বানুমান কৰিব পাৰি",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "ঋতুস্ৰাৱ আহিলে মাত্ৰ ৰেকৰ্ড কৰক, আৰু আপুনি অতীতৰ ঋতুস্ৰাৱৰ সম্পূৰ্ণ ইতিহাস চাব পাৰিব। পৰৱৰ্তী ঋতুস্ৰাৱৰ সম্ভাৱিত তাৰিখো স্বয়ংক্ৰিয়ভাৱে অনুমান কৰা হয়, যাৰ ফলত আপুনি পৰিকল্পনামূলকভাৱে জীৱন যাপন কৰিব পাৰিব।",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "কেলেণ্ডাৰত স্বাস্থ্যৰ অৱস্থা ৰেকৰ্ড কৰক",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "প্ৰতিদিনৰ স্বাস্থ্যৰ অৱস্থা কেলেণ্ডাৰত লিখি ৰাখো",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "প্ৰতিদিনৰ স্বাস্থ্য অৱস্থা কেলেণ্ডাৰত লিপিবদ্ধ কৰক",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "কেলেণ্ডাৰৰ পৰা তাৰিখ টেপ কৰি আপোনাৰ শাৰীৰিক অৱস্থা, মনৰ ভাৱ, উপসৰ্গ আদি লিখি ৰাখিব পাৰিব। পিল সেৱনৰ ৰেকৰ্ড আৰু মাহেকীয়াৰ ৰেকৰ্ডৰ সৈতে একেলগে চাব পাৰিব, যাৰ ফলত আপোনাৰ শৰীৰৰ ছন্দ ভালদৰে বুজিব পাৰিব।",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "ভৱিষ্যতৰ পৰিকল্পনা লিখি ৰাখক",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "চিকিৎসালয়ৰ নিযুক্তি আদি ভৱিষ্যতৰ পৰিকল্পনা পৰিচালনা কৰক",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "কেলেণ্ডাৰত ভৱিষ্যতৰ পৰিকল্পনা ৰেকৰ্ড কৰক",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "চিকিৎসালয়ত যোৱাৰ পৰিকল্পনা বা ভ্ৰমণৰ পৰিকল্পনাৰ দৰে ভৱিষ্যতৰ পৰিকল্পনাসমূহ কেলেণ্ডাৰত লিখিব পাৰিব। পিলৰ সেৱনৰ চক্ৰৰ সৈতে একেলগে পৰীক্ষা কৰিব পৰা যায় বাবে, ঋতুস্ৰাৱৰ সময়সূচীও বিবেচনা কৰি পৰিকল্পনা কৰিব পাৰিব।",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "স্বাস্থ্যসেৱাৰ সৈতে সংযোগ",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "স্বাস্থ্য সেৱাৰ সৈতে ঋতুস্ৰাৱৰ তথ্য শ্বেয়াৰ কৰক",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "স্বাস্থ্য সেৱাৰ সৈতে সংযোগ কৰিব পাৰি",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilllত ৰেকৰ্ড কৰা ঋতুস্ৰাৱৰ তথ্য স্বাস্থ্যসেৱা এপৰ সৈতে স্বয়ংক্ৰিয়ভাৱে সংযুক্ত কৰিব পাৰি। স্বাস্থ্যসেৱাত থকা অন্যান্য স্বাস্থ্য তথ্যৰ সৈতে একেলগে পৰীক্ষা কৰিব পাৰি, আৰু অন্য এপতো ঋতুস্ৰাৱৰ তথ্য ব্যৱহাৰ কৰিব পৰা যাব।",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "জাননীৰ পৰা পোনপটীয়াকৈ সেৱনৰ তথ্য",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "এপ্ নোখোলাকৈ জাননীত ৰেকৰ্ড কৰক",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "জাননী স্ক্ৰীনত এক টেপত ঔষধ গ্ৰহণৰ ৰেকৰ্ড",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "ৰিমাইণ্ডাৰ জাননীটো দীঘলকৈ টিপিলে 'সেৱন কৰিলোঁ' কাৰ্য্য দেখুৱাব, আৰু আপুনি এপটো নোখোলাকৈয়ে সেৱন ৰেকৰ্ড কৰিব পাৰিব।",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "পিল শ্বীট স্বয়ংক্ৰিয়ভাৱে যোগ কৰক",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "পৰৱৰ্তী শ্বীট স্বয়ংক্ৰিয়ভাৱে সৃষ্টি কৰক",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "পৰৱৰ্তী পিল শ্বীট স্বয়ংক্ৰিয়ভাৱে তৈয়াৰ কৰক",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "বৰ্তমানৰ পিল শ্বীট গ্ৰুপ শেষ হ'লে, এটা নতুন পিল শ্বীট গ্ৰুপ স্বয়ংক্ৰিয়ভাৱে সৃষ্টি হয়। হাতেৰে সলনি কৰাৰ প্ৰয়োজন নাই আৰু ৰেকৰ্ডত কোনো ফাঁক নপৰে।",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "ঘড়ীৰ দৰে বাজিব পৰা এলাৰ্ম",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "চাইলেণ্টতো নিশ্চিতকৈ বাজিব পৰা জাননী",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "এলাৰ্ম ঘড়ীৰ দৰে পিল সেৱনৰ এলাৰ্ম",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 বা তাতকৈ পাছৰ সংস্কৰণত উপলব্ধ AlarmKit ব্যৱহাৰ কৰি, চাইলেণ্ট মোড বা ফ'কাছ মোডতো নিশ্চিতভাৱে বাজিব পৰা এলাৰ্মেৰে পিল খোৱাৰ কথা জনায়।",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "আজিৰ বড়ি নম্বৰ মিলাওক",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "নম্বৰ বেলেগ হ'লে ছেটিংত সংশোধন কৰক",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "আজি লʼবলগীয়া পিল নম্বৰ সলনি কৰিব পাৰি",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "পিল খাবলৈ পাহৰি যোৱা বা ভুল কৰাৰ বাবে পিল শ্বীটৰ নম্বৰ আৰু প্ৰকৃত সেৱনৰ মাজত পাৰ্থক্য হ'লে, আজি খাব লগা পিলৰ নম্বৰ হাতেৰে মিলাব পাৰিব। হোমৰ পিল নম্বৰ প্ৰদৰ্শনৰ পৰাও একেটা স্ক্ৰীণ খুলিব পাৰিব।",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "ঔষধ সেৱনৰ বিৰতিৰ সময় ৰেকৰ্ড কৰক",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "বিৰতি আৰু বন্ধ সঠিকভাৱে পৰিচালনা কৰক",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "পিল সেৱন বিৰতি লওক",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "আপুনি পিল শ্বীটত কিছু সময়ৰ বাবে পিল খোৱা বন্ধ ৰখাৰ সময়সীমা ৰেকৰ্ড কৰিব পাৰিব। বিশ্ৰামৰ সময়ত পিলৰ নম্বৰ আগবাঢ়ি নাযায়, আৰু পুনৰ আৰম্ভ কৰাৰ সময়ত আপুনি তৎক্ষণাৎ ৰেকৰ্ড পুনৰ আৰম্ভ কৰিব পাৰিব।",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "এপৰ ভিতৰৰ স্থান",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "ফোকাছ মোডত থাকোঁতেও জাননী আহে",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "নিৰ্ধাৰিত সময়ত নিশ্চিতভাৱে সোঁৱৰাই দিয়া",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "এক টেপতে সহজ ছেটআপ",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "জাননীৰ বার্তা স্বাধীনভাৱে সম্পাদনা কৰক",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "প্ৰতিদিনৰ ঔষধ সেৱনৰ জাননীত প্ৰতিফলিত",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "কেৱল আপোনাৰ নিজৰ জাননী বাৰ্তা",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "তাৰিখ অনুযায়ী পিল শ্বীট প্ৰদৰ্শন",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "কেলেণ্ডাৰ নোচোৱাকৈও তাৰিখ জানিব পাৰিব",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "পিল শ্বীট ছেটিংছৰ পৰা পৰিৱৰ্তন কৰিব পাৰি",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "পিল শ্বীট টেপ কৰি সেৱন ৰেকৰ্ড কৰক",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "ভুল হ'লেও সহজে বাতিল কৰক",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "যিকোনো সময়তে সেৱনৰ ইতিহাস চাওক",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "ঋতুস্ৰাৱ আৰম্ভৰ তাৰিখ সহজে ৰেকৰ্ড কৰক",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "স্বয়ংক্ৰিয়ভাৱে চক্ৰ বুজক",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "ছেটিংছ কাষ্টমাইজ কৰক",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "কেলেণ্ডাৰত ৰেকৰ্ডৰ তালিকা",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "স্বাস্থ্যৰ অৱস্থা টোকা কৰি পুনৰ চাওক",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "কেলেণ্ডাৰত অতীতৰ ৰেকৰ্ড চাওক",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "তাৰিখত টেপ কৰি স্বাস্থ্যৰ অৱস্থা লিপিবদ্ধ কৰক",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "কেলেণ্ডাৰত পৰিকল্পনা লিখক",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "চিকিৎসালয় যোৱাৰ দিন সহজে পৰিচালনা",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "ৰিমাইণ্ডাৰেৰে জাননী",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "তাৰিখত টেপ কৰি পৰিকল্পনা লিখক",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "মাহেকীয়া তথ্য স্বয়ংক্ৰিয়ভাৱে ডেটা সংযোগ কৰক",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "স্বাস্থ্যসেৱা এপৰ সৈতে সিঙ্ক কৰক",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple স্বাস্থ্যসেৱা সমৰ্থন",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "জাননীৰ কাৰ্যৰ জৰিয়তে সেৱন ৰেকৰ্ড",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "এপ নোখোলাকৈ সম্পূৰ্ণ কৰক",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "প্ৰিমিয়াম যোগদানৰ সৈতে সৰাসৰি ব্যৱহাৰযোগ্য",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "পিল শ্বীট শেষ হ'লে স্বয়ংক্ৰিয়ভাৱে সলনি",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "হাতেৰে তৈয়াৰ কৰাৰ প্ৰয়োজন নাই",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "ছেটিংছ টেবৰ ছুইচেৰে সলনি কৰক",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "চাইলেণ্ট/ফোকাচ মোডতো বাজিব",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "এলাৰ্ম ঘড়ীৰ দৰে এলাৰ্ম শব্দ",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 বা তাৰ পিছৰ সংস্কৰণ・ছেটিংছ টেবৰ পৰা সক্ষম কৰক",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "বিনামূলীয়াকৈ ব্যৱহাৰ কৰিব পৰা নম্বৰ মিলোৱা সুবিধা",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "ছেটিংছ টেবৰ পৰা সলনি কৰিব পাৰি",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "হোমৰ নম্বৰ টেপ কৰিও খোলিব পাৰি",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "বিনামূলীয়াকৈ ব্যৱহাৰযোগ্য ঔষধ বিৰতিৰ অভিলেখ",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "পিল শ্বীটৰ ওপৰ সোঁফালৰ গিয়াৰ আইকনৰ পৰা আৰম্ভ কৰক",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "সময়কাল সম্পাদনা আৰু পুনৰাৰম্ভও সহজ",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }

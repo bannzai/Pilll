@@ -2410,5 +2410,409 @@
   "inquiryContentRequired": "እባክዎን የጥያቄ ይዘትን ያስገቡ",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "አንድ ጊዜ ክፍያ ፕላን ስለ ገዙ እናመሰግናለን። ወርሃዊ ወይም ዓመታዊ ፕላን ደንበኛ ከሆኑ፣ ደንበኝነት ምዝገባዎን ለመሰረዝ አይርሱ።",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "・«የአንድ ጊዜ ግዢ እቅድ»ን ቢገዙ እንኳን፣ «ወርሃዊ/ዓመታዊ እቅድ» በራስ-ሰር አይሰረዝም።",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "እዚህ",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "ቀደም ብሎ ሰርዘው ከዚያ ይግዙ።",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "ያረጋግጡ",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "አካውንት ለመፍጠር እንመክርዎታለን",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "ሲመዘገቡ ዳታዎን ምትኬ ማድረግ ይችላሉ",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "ጸጥ ባለ ሁነታም ቢሆን ማሳወቂያ ይቀበሉ",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "በጸጥታ ሁነታም ቢሆን ክኒን መውሰዱን አትርሳ",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "በጸጥታ ሁነታ ውስጥም ማሳወቂያዎች ይደርሳሉ",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alert ን ሲያንቁ፣ «አትረብሹኝ» ወይም ፀጥታ ሁኔታ ላይ ቢሆኑም የክኒን ማስታወሻ ይደርስዎታል። አስፈላጊ ክኒን የሚወስዱበት ሰዓት እንዳያመልጥዎ፣ አሁኑኑ ያዘጋጁ።",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "የማሳወቂያ መልዕክቶችን አብጅ",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "የማሳወቂያ ጽሑፍን ማበጀት ይችላሉ",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "የመድሃኒት ማሳወቂያ መልዕክትን እንደፈለጉ ያርትዑ",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "\"ፒልዎን የሚወስዱበት ጊዜ ነው\" የሚለውን መደበኛ መልዕክት እንደ ፍላጎትዎ ማስተካከል ይችላሉ። ተነሳሽነት የሚሰጥ ቃል፣ የቤት እንስሳዎ ስም ወይም ሌሎች ቃላትን በመጠቀም ዕለታዊ ሕክምናዎን ይበልጥ አስደሳች ያድርጉት።",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "በፒል ሺት ላይ ቀን ማሳየት",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "መቼ እንደሚወሰድ በአንድ እይታ ያረጋግጡ",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "በፒል ሺት ላይ ቀን ማሳየት ይቻላል",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "በፒል ሉህ ሕዋሶች ላይ ቀናትን በማሳየት፣ ያለፈውን የፒል ታሪክ እና የወደፊቱን የፒል መርሃ ግብር በቀላሉ ማረጋገጥ ይችላሉ። ለእርስዎ የሚስማማ ማሳያ ለመምረጥ «ቁጥር» ሁነታ እና «ቀን» ሁነታ መካከል ይቀያይሩ።",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "የመድሃኒት ታሪክዎን በቀላሉ ይከልሱ",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "መቼ እንደወሰዱ ወዲያው ይታወቃል",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "በዋናው ማያ ገጽ ላይ ክኒን መዋጥን ይዝግቡ",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "በዋናው ማያ ገጽ ላይ ያለውን የክኒን ሉህ ብቻ ሲነኩ፣ ለዚያ ቀን የወሰዱትን ክኒን መዝግቦ ማስቀመጥ ይቻላል። በስህተት ከዘገቡ፣ ዳግም ሲነኩ ሊሰርዙ ይችላሉ። የወሰዱዋቸው ታሪክ ከዚህ ቀጥሎ ሊፈትሹ ስለሚቻል፣ ያለምንም ሥጋት ሊቀጥሉ ይችላሉ።",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "የወር አበባን ይዝግቡ እና ይተነብዩ",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "የወር አበባ መጀመሪያ ቀን ይመዝግቡ እና ዑደቱን ይከታተሉ",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "የወር አበባን ይዝግቡ እና ይተንብዩ",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "ወርሃዊ ዑደትዎ ሲመጣ መዝግቡ ብቻ ያለፉ የወርሃዊ ዑደት ታሪኮችዎን ዝርዝር ማየት ይችላሉ። ቀጣዩ የሚጠበቀው የወርሃዊ ዑደት ቀንም በራስ ሰር ስለሚተነበይ፣ ሕይወትዎን በዕቅድ ማሳለፍ ይችላሉ።",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "በቀን መቁጠሪያ ጤናዎን ይመዝግቡ",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "ዕለታዊ ጤና ሁኔታዎን በቀን መቁጠሪያ ላይ ያስቀምጡ",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "የዕለት ተዕለት ጤናዎን በቀን መቁጠሪያ ላይ ይመዝግቡ",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "ከቀን መቁጠሪያ ቀኑን ነክቶ የጤና ሁኔታ፣ ስሜት፣ ምልክቶች እና ሌሎችን መዝግብ ይቻላል። ከመድሃኒት ምዝገባ እና ወርሃዊ ዑደት ምዝገባ ጋር አብሮ ማረጋገጥ ስለሚቻል፣ የሰውነት ምት ሊረዱ ይቻላሉ።",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "ወደፊት ያሉ ዕቅዶችን ይጻፉ",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "የህክምና ቀጠሮና ሌሎች የወደፊት ዕቅዶችን ያስተዳድሩ",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "በቀን አቆጣጠር ላይ የወደፊት ዕቅዶችን ይመዝግቡ",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "የሐኪም ቀጠሮዎችን፣ የጉዞ ዕቅዶችን እና ሌሎች የወደፊት ዕቅዶችን በቀን መቁጠሪያ ላይ መዝገብ ይችላሉ። ከፒል መውሰጃ ዑደት ጋር አብሮ ማረጋገጥ ስለሚቻል፣ የወር አበባን ታሳቢ ያደረገ ዕቅድ ማዘጋጀት ይቻላል።",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "ከጤና ክብካቤ ጋር ተቀናጅ",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "የወር አበባ መዝገቦችን ከጤና አጠባበቅ ጋር ያጋሩ",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "ከጤና አጠባበቅ ጋር ማስተሳሰር ይቻላል",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "በPilll ውስጥ የተቀዳውን የወር አበባ ውሂብ ከጤና እንክብካቤ መተግበሪያ ጋር በራስ-ሰር ማስተሳሰር ይችላሉ። በጤና እንክብካቤ ላይ ካሉ ሌሎች የጤና ውሂቦች ጋር አብሮ ሊታዩ ወይም ሌሎች መተግበሪያዎችም የወር አበባ ውሂቡን መጠቀም ይቻላል።",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "ከማሳወቂያ ቀጥታ ወሰዳ ይቁጠሩ",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "መተግበሪያ ሳይከፍቱ በማሳወቂያ ይመዝግቡ",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "በማሳወቂያ ማያ ገጽ ላይ በአንድ ነካ የመድሃኒት ወሰዳ ምዝገባ",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "የማስታወሻ ማሳወቂያውን ረጅም ጊዜ ሲጭኑ፣ \"ወሰድኩ\" የሚለው ድርጊት ይታያል፣ ይህም መተግበሪያውን ሳይከፍቱ ክኒን መውሰዱን እንዲመዘግቡ ያስችልዎታል።",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "ፒል ሰሌዳን በራስ-ሰር ጨምር",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "ቀጣዩን ሉህ በራስ-ሰር ፍጠር",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "ቀጣዩን የክኒን ሉህ በራስ-ሰር ፍጠር",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "የአሁኑ የክኒን ሉህ ቡድን ሲያልቅ፣ አዲስ የክኒን ሉህ ቡድን በራስ-ሰር ይፈጠራል። እጅ ለእጅ የመቀያየር ስራ አያስፈልግም፣ እናም በምዝገባ ላይ ክፍተት አይኖርም።",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "እንደ ሰዓት ቀስቃሽ የሚጮህ ማንቂያ",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "ዝምታም ቢሆን የሚጮህ ማሳወቂያ",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "እንደ መነቃቂያ ሰዓት ያለ የመድሃኒት አላርም",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "በ iOS 26 እና ከዚህ በኋላ ሊጠቀሙበት የሚችሉትን AlarmKit በመጠቀም፣ ጸጥ ያለ ሁኔታ ወይም የትኩረት ሁኔታ ውስጥ ቢሆኑም እንኳ በእርግጠኝነት የሚጮህ ቅስቀሳ ክኒን መዋጥዎን ያሳውቅዎታል።",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "የዛሬን የዶዝ ቁጥር ያስተካክሉ",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "ቁጥሩ ካልተስማማ በቅንብሮቹ ያስተካክሉ",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "የዛሬን ክኒን ቁጥር መቀየር ይቻላል",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "ክኒን መውሰድ ሲዘነጉ ወይም ሲቀላቀሉ የክኒን ሉህ ቁጥር ከተወሰደው ክኒን ጋር ሲለያይ፣ ዛሬ መውሰድ የሚያስፈልጉዎትን የክኒን ቁጥር በእጅ ማስተካከል ይችላሉ። ከዋናው ማያ ገጽ የክኒን ቁጥር ማሳያ ወደ ተመሳሳዩ ማያ ገጽ ሊሄዱ ይችላሉ።",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "የክኒን ዕረፍት ወቅት ይዝግቡ",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "ዕረፍትና ማቋረጥን በትክክል ያስተዳድሩ",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "ኪኒን ወሰዳ ለጊዜው ማቆም",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "ለጊዜው ክኒን መውሰድ የሚያቆሙበትን ጊዜ በፒል ሉህ ላይ መዝግቦ ማስቀመጥ ይቻላል። በዕረፍት ወቅት የክኒን ቁጥር አይቀጥልም፣ እና ሲቀጥሉ ወዲያውኑ ምዝገባውን እንደገና መጀመር ይችላሉ።",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "በመተግበሪያ ውስጥ ያለ ቦታ",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "በትኩረት ሁነታ ወቅትም ማሳወቂያዎች ይደርሳሉ",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "በተቀናጀ ሰዓት አስተማማኝ ማስታወሻ",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "በአንድ ጠቅታ ቀላል ቅንብር",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "የማሳወቂያ መልዕክቶችን በነፃነት አርትዕ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "በዕለታዊ የመድሃኒት ማሳወቂያ ላይ ይንፀባርቃል",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "ለራስዎ ብቻ የሆነ የማሳወቂያ መልዕክት",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "ፒል ሺቱን በቀን አሳይ",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "ቀን መቁጠሪያ ሳያዩ ቀኑን ማወቅ ይቻላል",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "ከፒል ሺት ቅንብሮች መቀየር ይቻላል",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "ፒል ሉህን ነካ ወሰዳን ይዝግቡ",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "ስህተት ቢፈጸምም በቀላሉ ሰርዝ",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "የመድሃኒት ታሪክን በማንኛውም ጊዜ ያረጋግጡ",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "የወር አበባ መጀመሪያ ቀንን በቀላሉ ይመዝግቡ",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "ዑደቱን በራስ-ሰር ተከታተል",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "ቅንብሮችን ያብጁ",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "በቀን መቁጠሪያ ላይ መዝገቦችን ዝርዝር",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "ጤናዎን ሁኔታ ይፃፉ እና ይፈትሹ",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "ያለፉ መዝገቦችን በቀን መቁጠሪያ ይፈትሹ",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "ቀኑን ጠቅ ያድርጉ ጤናዊ ሁኔታዎን ለመቅዳት",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "ቀን መቁጠሪያ ላይ ቀጠሮ ጻፍ",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "የሐኪም ቀጠሮዎችን በቀላሉ ያስተዳድሩ",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "በሪማይንደር ማሳወቅ",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "ቀን ይንኩ እና ቀጠሮ ይጻፉ",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "የወር አበባ ሪከርድን በራስ-ሰር ያስተሳስሩ",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ከጤና አጠባበቅ መተግበሪያ ጋር አመሳስል",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "አፕል ጤና ድጋፍ",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "በማሳወቂያ ድርጊት መድሃኒት ምዝገባ",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "መተግበሪያውን ሳይከፍቱ ይጨርሱ",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "በፕሪሚየም ምዝገባ ቀጥታ ለመጠቀም ይቻላል",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "ፒል ሉህ ሲጠናቀቅ ራስ-ሰር መቀያየር",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "የእጅ ፍጥረት ስራ አያስፈልግም",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "በቅንብሮቹ ትር ላይ ያለውን ቀናቂ ቀይሩ",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "በጸጥታ/ትኩረት ሞድ ላይም ይጮኻል",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "እንደ ሰዓት ቀስቃሽ ያለ የማንቂያ ድምፅ",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 ወይም ከዚያ በኋላ・ከቅንብሮች ትር ያብሩ",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "ነፃ የቁጥር ማጣጣሚ ባህሪ",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "ከቅንብሮች ትር መቀየር ይቻላል",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "በቤት ማያ ቁጥሮቹን በመንካትም መክፈት ይቻላል",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "ነፃ የኪኒን ዕረፍት ምዝገባ",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "ከፒል ሰሌዳው ላይኛ ቀኝ ጥግ ካለው ማርሽ ጀምር",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "ጊዜን ማርትዕ እና ዳግም መጀመርም ቀላል ነው",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }

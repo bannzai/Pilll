@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/feature_appeal/feature_appeal_bars_container.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/special_offering.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/special_offering2.dart';
@@ -18,6 +19,7 @@ import 'package:pilll/features/record/components/announcement_bar/components/lif
 import 'package:pilll/features/record/components/announcement_bar/components/pilll_ads.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/premium_trial_limit.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/recommend_signup_general.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/recommend_signup_premium.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/rest_duration.dart';
 import 'package:pilll/provider/locale.dart';
@@ -29,13 +31,18 @@ import 'package:pilll/provider/app_is_released.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AnnouncementBar extends HookConsumerWidget {
   const AnnouncementBar({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final body = _body(context, ref);
+    final sharedPreferences = ref.watch(sharedPreferencesProvider);
+    final featureAppealDismissedToday = useState(
+      FeatureAppealBarsContainer.wasDismissedToday(sharedPreferences: sharedPreferences),
+    );
+    final body = _body(context, ref, featureAppealDismissedToday: featureAppealDismissedToday, sharedPreferences: sharedPreferences);
     if (body != null) {
       return body;
     }
@@ -43,8 +50,12 @@ class AnnouncementBar extends HookConsumerWidget {
     return Container();
   }
 
-  Widget? _body(BuildContext context, WidgetRef ref) {
-    final sharedPreferences = ref.watch(sharedPreferencesProvider);
+  Widget? _body(
+    BuildContext context,
+    WidgetRef ref, {
+    required ValueNotifier<bool> featureAppealDismissedToday,
+    required SharedPreferences sharedPreferences,
+  }) {
     final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
     final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
     final firebaseAuthUser = ref.watch(firebaseUserStateProvider).valueOrNull;
@@ -154,6 +165,27 @@ class AnnouncementBar extends HookConsumerWidget {
         return EndedPillSheet(isPremium: user.isPremium, isTrial: user.isTrial);
       }
 
+      if (FeatureAppealBarsContainer.hasAnyCandidate(
+            sharedPreferences: sharedPreferences,
+            appIsReleased: appIsReleased,
+          ) &&
+          !featureAppealDismissedToday.value) {
+        return FeatureAppealBarsContainer(appIsReleased: appIsReleased, dismissedToday: featureAppealDismissedToday);
+      }
+
+      if (user.isTrial) {
+        final remainingTrialDays = PremiumTrialLimitAnnouncementBar.remainingTrialDays(user);
+        if (remainingTrialDays != null && remainingTrialDays <= 10) {
+          return PremiumTrialLimitAnnouncementBar(
+            premiumTrialLimit: PremiumTrialLimitAnnouncementBar.premiumTrialLimitMessage(user)!,
+          );
+        }
+      }
+
+      if (!isLinkedLoginProvider) {
+        return const RecommendSignupGeneralAnnouncementBar();
+      }
+
       if (user.isTrial) {
         final premiumTrialLimit = PremiumTrialLimitAnnouncementBar.premiumTrialLimitMessage(user);
         if (premiumTrialLimit != null) {
@@ -161,7 +193,9 @@ class AnnouncementBar extends HookConsumerWidget {
             premiumTrialLimit: premiumTrialLimit,
           );
         }
-      } else {
+      }
+
+      if (!user.isTrial) {
         // !isPremium && !isTrial
 
         if (!isAdsDisabled && pilllAds != null) {
@@ -221,6 +255,14 @@ class AnnouncementBar extends HookConsumerWidget {
       if (latestPillSheetGroup != null && latestPillSheetGroup.activePillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
         return EndedPillSheet(isPremium: user.isPremium, isTrial: user.isTrial);
+      }
+
+      if (FeatureAppealBarsContainer.hasAnyCandidate(
+            sharedPreferences: sharedPreferences,
+            appIsReleased: appIsReleased,
+          ) &&
+          !featureAppealDismissedToday.value) {
+        return FeatureAppealBarsContainer(appIsReleased: appIsReleased, dismissedToday: featureAppealDismissedToday);
       }
     }
 

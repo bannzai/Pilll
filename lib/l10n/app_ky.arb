@@ -2402,5 +2402,409 @@
   "inquiryContentRequired": "Кайрылуу мазмунун киргизиңиз",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Бир жолку сатып алуу планын сатып алгандыгыңыз үчүн рахмат. Эгер сиз айлык же жылдык жазылууга катталган болсоңуз, мурдагы жазылууну токтотууну унутпаңыз.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "«Бир жолку сатып алуу планы» сатып алынса да, айлык/жылдык жазылуу автоматтык түрдө жокко чыгарылбайт.",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "Жазылууну башкаруу",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "Сатып алуудан мурун, учурдагы жазылууңузду алдын ала жокко чыгарыңыз.",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "recommendSignupGeneralTitle": "Каттоо эсебиңизди түзүүнү сунуштайбыз",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "Катталсаңыз, маалыматтарыңызды резервдик көчүрмөдө сактай аласыз.",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "Тынч режимде да билдирүүлөрдү алуу",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Тынч режимде да дарыны унутпоого жардам берет",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Тынч режимде да эскертүү келет",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alertди иштетсеңиз, Уйку режиминде же үнсүз режимде болгондо да дарылоо жөнүндө эскертүүлөрдү аласыз. Маанилүү таблетканы туура убакта ичип калбоо үчүн, бул жөндөөнү активдештирип коюңуз.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Эскертме билдирүүсүн ыңгайлаштыруу",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Билдирүүлөрдүн текстин ыңгайлаштыра аласыз",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Иштин эскертиш билдирүүсүн эркин түзөтүңүз",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Стандарттык «Дарыны ичүү убактысы» билдирүүсүн өзүңүзгө жаккан сөздөргө ылайыктап ыңгайлаштыра аласыз. Мотивация берген сөздөрдү, үй жаныбарыңыздын атын же күнүмдүк дары ичүүнү кызыктуу жана жагымдуу кылган башка билдирүүлөрдү колдонуп көрүңүз.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Пилл барагында датаны көрсөтүү",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Качан ичүү керектигин бир караганда билип алыңыз.",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Таблетка барагында күндү көрсөтүүгө болот",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Препарат барагындагы клеткаларга күндөрдү көрсөтүү аркылуу өткөн колдонуу жазууларыңды жана келечектеги колдонуу пландарыңды бир көз ирмемде көрө аласың. «Номер» режими менен «Күн» режимин которуп, өзүңө ылайыктуу көрүнүштү танда.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Ичилген дарылар боюнча тарыхты оңой карап чыгуу",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Качан ичкениңизди дароо билсеңиз болот",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Башкы беттен таблетка ичүүнү каттоо",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Башкы экрандагы таблетка барагын жөн гана тийип, ошол күндүн кабыл алынган таблеткасынын жазуусун кошсоңуз болот. Ката менен жазып койсоңуз, кайра тийгизип жокко чыгара аласыз. Кийинчерээк кабыл алуу тарыхын да текшерип, тынч жүрүп уланта берсеңиз болот.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Ай циклин каттоо жана болжолдоо",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Айыздын башталган күнүн жазып, циклиңизди көзөмөлдөңүз",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Айызды каттоо жана болжолдоо",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Айыз келгенде аны гана жазып коюңуз — өткөн айыздар тууралуу жазууларды тизмеден көрө аласыз. Кийинки айыздын келүү датасы да автоматтык түрдө болжолдонуп, алдын ала пландаштыра аласыз.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Календарда абалыңызды каттоо",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Ар бир күндөгү абалыңды күнтүзбөдө сакта",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Күнүмдүк абалыңызды күнтүзгөгө жазып коюңуз",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Календардан күндү түртүү менен ден-соолугуңузду, маанайыңызды, симптомдорду жана башка маалыматтарды жазып калтыра аласыз. Бул жазууларды таблетка кабыл алуу жазуулары жана менструация жазуулары менен бирге көрө алып, денеңиздин ритмин жакшыраак түшүнөсүз.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Келерки пландарды жазып коюңуз",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Дарыгерге баруу сыяктуу келечектеги пландарды башкаруу",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Календарга келечектеги пландарды каттоо",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Айыздын жазууларын ден-соолук тиркемеси менен бөлүшүү",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilllде сакталган менструациялык маалыматтарды ден-соолук колдонмосу менен автоматтык түрдө синхрондоштура аласыз. Бул маалыматтарды ден соолуктагы башка маалыматтар менен бирге көрүп же башка колдонмолордо колдонсоңуз болот.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Билдирмеден түздөн-түз дары ичкенди каттоо",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Колдонмону ачпай эле билдирүүдөн жазып коюңуз",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Билдирме экранында бир тийүү менен ичкенди каттоо",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Эскертүү билдирүүсүн узак басканда «Ичилди» деген аракет пайда болуп, колдонмону ачпай эле ичкенди каттай аласыз.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Дарынын таблетка барагын автоматтык түрдө кошуу",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Кийинки таблетка барагын автоматтык түрдө түзүү",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "Кийинки таблетка барагын автоматтык түрдө түзүү",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Азыркы таблетка барагы топтому аяктаганда, жаңы топтом автоматтык түрдө түзүлөт. Кол менен которууга кереги жок, ошондуктан жазуулардын унутулушу болбойт.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Будильниктей үн чыгарган эскертме",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Жымжырт режиминде да сөзсүз угула турган эскертме",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Будильник сыяктуу дары ичүүнү эскерткеч",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 жана андан кийинки нускааларда жеткиликтүү AlarmKit аркылуу үнсүз режимде же Фокус режиминде да иштеген, ишенимдүү ойготкучтар менен таблетканы ичүү убактын эскертет.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Бүгүнкү кабыл алуу номерин орнотуу",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Сандар туура эмес болсо, Орнотуулардан түздөңүз.",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Бүгүн ичүүчү таблетканын номерин өзгөртө аласыз",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Эгер даары барагынын (пилл шити) номерлери менен чындап ичкен даарыңыздын номери унутуп калуу же алмашуу сыяктуу себептерден улам дал келбей калса, бүгүн ичүүчү даарынын номерин кол менен тууралай аласыз. Башкы экрандагы пилл санын көрсөтүү бөлүмүнөн да ошол эле баракты ача аласыз.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Дарыны ичүүнү токтотуу мөөнөтүн жазуу",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Дары ичүүнү убактылуу токтотуу жана үзгүлтүктөрдү так башкаруу",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Таблетканы ичүүнү убактылуу токтотуу",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Кыска мөөнөттүү тыныгуу учурун пилл баракчасына жазып коё аласыз. Тыныгуу учурунда ичүү номери жылбайт, кайра баштаганга дароо жазып уланта аласыз.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Колдонмонун ичиндеги жай",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Фокус режими учурунда да билдирүүлөр келет",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Белгиленген убакта сөзсүз эскертет",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Бир тийүү менен оңой орнотуу",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "通知メッセージを自由に編集",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "Күнүмдүк эскертмелерге чагылдырылат",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "自分だけの通知メッセージに",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Пил таалонду күнгө карап көрсөтүү",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Календарды карабай эле датаны биле аласыз",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Пилл баракчасынын жөндөөлөрүнөн өзгөртүүгө болот",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Пилл барагын таптаңыз — колдонгонду каттоо",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Ката кетсе да оңой жокко чыгаруу",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Дарыны кабыл алуу тарыхын каалаган убакта текшере аласыз",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Айдын башталган күнүн оңой жазып алыңыз",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Ай циклиңизди автоматтык түрдө аныктоо",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Жөндөөлөрдү ыңгайлаштыр",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "カレンダーで記録を一覧",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Абалыңызды жазып, кийинчерээк карап чыгыңыз",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Өткөн жазууларды күнтүзмөдө карап чыгуу",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Датага тийип абалыңызды каттаңыз",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Күнтүзмөгө окуя кошуу",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Клиникага баруу күндөрүн оңой башкаруу",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Эскертүү аркылуу кабарлоо",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "日付をタップして予定を書き込み",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Айыз жазууларын автоматтык түрдө синхрондоштуруу",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Ден соолук тиркемеси менен синхрондоо",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Health колдоосу",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Эскертүүдөгү аракет аркылуу ичкенди каттоо",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "アプリを開かずに完了",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Premium жазылуусу менен дароо колдонууга болот",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Таблетка барагы бүткөндө автоматтык алмаштыруу",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Кол менен түзүү талап кылынбайт",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Параметрлер табындагы которгуч менен алмаштырыңыз",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Үнсүз/Фокус режиминде да үн чыгат",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Будильникке окшош эскертүү үнү",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 жана андан кийинки версияларда Жөндөөлөр табынан күйгүзүңүз",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Акысыз номер дал келтирүү функциясы",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Орнотуулар табынан өзгөртсө болот",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Башкы экрандагы сандын үстүн тийүү менен да ачса болот",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Акысыз дары ичүүнү токтотуу жазуусу",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Пилл барагынын оң жогорку бурчундагы тиштүү шестернядан баштаңыз.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Айыз мөөнөтүн түзөтүү жана кайра баштоо да оңой",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "featureAppealTryFeature": "Сынап көрүү",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Ден соолук менен туташуу",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealBody": "Дарыгерге баруу же саякаттоо сыяктуу келечектеги пландарды күнтүзөгө киргизе аласыз. Таблетканы ичүү циклиңиз менен бирге текшерсеңиз болот, ошондуктан айлык (менструация) графигин эске алган пландарды түзө аласыз.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }

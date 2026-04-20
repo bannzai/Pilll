@@ -2394,5 +2394,417 @@
   "inquiryContentRequired": "Tafadhali ingiza maudhui ya maombi yako",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "number": "nambari",
+  "@number": {
+    "description": "ピルシートUI上でピルの位置・順番を示す番号のラベルです。「1番」「2番」のように表示される際の「番」部分に相当します。"
+  },
+  "lifetimeSubscriptionWarning": "Asante kwa kununua mpango wa malipo ya mara moja. Ikiwa umejiunga na mpango wa kila mwezi au wa kila mwaka, tafadhali usisahau kubatilisha usajili huo.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "Hata ukinunua mpango wa malipo mara moja, mpango wa kila mwezi au wa kila mwaka hautaghairiwa kiotomatiki.",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "Hapa",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "Tafadhali kansela usajili wako mapema kabla ya kununua.",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "Jaribu",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "Tunapendekeza kujiandikisha",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "Sajili ili kuwezesha chelezo la data zako.",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "Pokea arifa hata ukiwa kwenye hali ya kimya",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Zuia kusahau kuchukua vidonge hata ukiwa kwenye hali ya 'Usisumbuliwe' (Do Not Disturb).",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Arifa zinakufikia hata ukiwa kwenye hali ya kimya",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Ikiwa utawezeshwa 'Critical Alert', utapokea arifa za kuchukua kidonge hata wakati simu yako iko katika hali ya 'Do Not Disturb' au kwenye mode ya kimya. Ili usikose wakati muhimu wa kuchukua kidonge, tafadhali iwashe.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Binafsisha ujumbe wa arifa",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Unaweza kubinafsisha ujumbe wa arifa",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Hariri ujumbe wa ukumbusho wa kuchukua pilisi",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Unaweza kubadilisha ujumbe chaguomsingi 'Wakati wa kuchukua kidonge' kwa maneno unayopendelea. Tumia maneno yanayokutia moyo, jina la mnyama wako kipenzi, au sentensi fupi zitakazofanya kuchukua kidonge kila siku kuwa ya kufurahisha zaidi.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Onyesha tarehe kwenye karatasi ya vidonge",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Angalia mara moja lini kunywa",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Onyesha tarehe kwenye karatasi ya vidonge",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Kwa kuonyesha tarehe kwenye seli za karatasi ya vidonge, unaweza kukagua kwa muhtasari rekodi za matumizi ya zamani na ratiba za matumizi za siku zijazo. Badilisha kati ya modi ya \"Nambari\" na modi ya \"Tarehe\" ili kuchagua muonekano unaokufaa.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Pitia kwa urahisi historia ya matumizi",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Unaweza kuona kwa urahisi lini uliotumia",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Rekodi matumizi ya kidonge kwenye skrini ya nyumbani",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Unaweza kurekodi matumizi ya siku hiyo kwa kubofya tu karatasi ya vidonge kwenye skrini ya nyumbani. Ikiwa umeirekodi kwa bahati mbaya, bonyeza tena ili kuifuta. Unaweza pia kuangalia historia ya matumizi baadaye, hivyo unaweza kuendelea bila wasiwasi.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Rekodi na utabiri wa hedhi",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Rekodi tarehe ya kuanza kwa hedhi ili kufuatilia mzunguko.",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Rekodi na utabiri wa hedhi",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealTitle": "Rekodi hali yako kwenye kalenda",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Rekodi hali yako ya kila siku kwenye kalenda",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Rekodi hali yako ya kila siku kwenye kalenda",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Unaweza kubonyeza tarehe kwenye kalenda ili kurekodi hali yako ya mwili, hisia, dalili, na mengineyo. Rekodi hizi zinaweza kutazamwa pamoja na rekodi za kunywa dawa na za hedhi, hivyo utaweza kufahamu mzunguko wa mwili wako.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Andika mipango yako ya baadaye",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Simamia mipango ya baadaye, kama miadi ya kliniki",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "\"Kurekodi matukio ya baadaye kwenye kalenda\"",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Unaweza kuandika kwenye kalenda mipango ya baadaye kama miadi ya kliniki au safari. Kwa kuwa unaweza kuzikagua pamoja na mzunguko wa matumizi ya kidonge, unaweza kupanga kwa kuzingatia pia tarehe za hedhi.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Unganisha na Afya",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Shiriki rekodi za hedhi na programu ya Afya",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "Inaweza kuunganishwa na huduma za afya",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Data za hedhi ulizorekodi katika Pilll zinaweza kuunganishwa kiotomatiki na programu ya afya. Unaweza kuziona pamoja na data nyingine za kiafya kwenye programu ya afya, na pia kuruhusu programu nyingine kutumia data hizi za hedhi.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Rekodi moja kwa moja kutoka arifa",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Rekodi kutoka arifa bila kufungua programu",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Rekodi kwa bonyeza moja kwenye skrini ya arifa",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Kama utabofya kwa muda arifa ya ukumbusho, kitendo 'Nimetumia' kitaonekana, na utaweza kurekodi kwamba umechukua dawa bila kufungua programu.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Ongeza karatasi za vidonge moja kwa moja",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Unda kiotomatiki karatasi inayofuata",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "Karatasi inayofuata ya vidonge itaundwa kiotomatiki.",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Wakati kundi la karatasi za vidonge la sasa linapoisha, kundi jipya la karatasi za vidonge litaundwa kiotomatiki. Hakutakuwa na haja ya kubadili kwa mkono, na hakutakuwa na upotezaji wa rekodi.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Kengele inayopiga kama ile ya kuamka",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Arifa zinazosikika kwa uhakika hata wakati kifaa kiko kwenye hali ya kimya",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Kengele ya kukumbusha kuchukua dawa kama kengele ya kuamka",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26以降で利用できるAlarmKitを使って、サイレントモードや集中モードでも確実に鳴るアラームでピルの服用を知らせます。",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Rekebisha nambari ya dozi ya leo",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "番号がずれたら設定で修正",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Unaweza kubadilisha nambari ya kidonge utakayochukua leo.",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealTitle": "Rekodi kipindi cha kusitisha matumizi",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Dhibiti kwa usahihi mapumziko na kusitishwa kwa matumizi",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Kusimamisha matumizi ya vidonge",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Unaweza kurekodi kipindi cha kusitisha matumizi kwenye karatasi ya vidonge. Wakati wa mapumziko, nambari ya kuchukua haitasogea, na unaporejea matumizi, utaweza kuanza kurekodi mara moja.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Mahali ndani ya programu",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Arifa zitawafikia hata ukiwa katika hali ya Kuzingatia",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Hakiki kukumbusha kwa wakati uliowekwa",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Usanidi rahisi kwa kubonyeza mara moja",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Hariri ujumbe wa arifa kwa uhuru",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "Ionyeshwe kwenye arifa za kila siku za kuchukua dawa",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "Tengeneza ujumbe wako binafsi wa arifa",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "ピルシートを日付で表示",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Unaweza kujua tarehe bila kuangalia kalenda.",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Inaweza kubadilishwa kupitia mipangilio ya karatasi ya vidonge",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Gusa karatasi ya vidonge ili kurekodi ulivyotumia",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Ghairi kwa urahisi hata ukikosea",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Tazama rekodi za matumizi wakati wowote",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Rekodi kwa urahisi tarehe ya kuanza kwa hedhi",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Fuatilia mzunguko kiotomatiki",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Binafsisha mipangilio",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Orodha ya rekodi kwenye kalenda",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Andika kumbukumbu za hali yako ya mwili na uzirudie",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "過去の記録をカレンダーで振り返り",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Gusa tarehe ili kurekodi hali yako ya mwili",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Ongeza tukio kwenye kalenda",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Simamia kwa urahisi siku za kutembelea kliniki",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Taarifa za kumbusho",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Tafadhali bonyeza tarehe kuandika ratiba",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Unganisha rekodi za hedhi kiotomatiki",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Linganisha na programu ya afya",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Inaunga mkono Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Rekodi kuchukua kidonge kupitia kitendo cha arifa",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Kamilisha bila kufungua programu",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Inapatika mara moja kwa wanachama wa Premium",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Automatically switch when pill sheet ends",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Hakuna haja ya hatua za kuunda kwa mkono",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Badilisha kwa kutumia swichi kwenye kichupo cha Mipangilio.",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Itatoa sauti hata wakati simu iko kimya au katika hali ya kuzingatia",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Sauti kama ile ya kengele ya kuamka",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 au baadaye · wezesha kutoka kwenye kichupo cha Mipangilio",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Kipengele cha kulinganisha nambari kinachotumika bure",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Inaweza kubadilishwa kutoka kwenye kichupo cha mipangilio",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Unaweza pia kufungua kwa kugusa nambari kwenye skrini ya nyumbani.",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Rekodi ya mapumziko ya vidonge (bure)",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Anza kwa kugonga ikoni ya gia (mipangilio) juu-kulia kwenye shidi ya vidonge.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Uhariri na kuanza tena kipindi cha hedhi ni rahisi pia",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealBody": "Ingiza tu wakati hedhi zinapokuja ili kurekodi, na utaweza kuona orodha ya rekodi zako za hedhi zilizopita. Tarehe inayoweza kuwa ya hedhi inayofuata itabashiriwa kiotomatiki, kwa hivyo unaweza kupanga maisha yako kwa ufanisi.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealBody": "Iwapo nambari kwenye karatasi ya vidonge inapotoshwa na ulivyotumia kwa sababu ya kusahau au kuchanganya, unaweza kurekebisha kwa mkono nambari ya kidonge cha leo. Unaweza pia kufungua skrini ile ile kutoka kwenye onyesho la nambari za vidonge kwenye ukurasa wa nyumbani.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "dayNumber": "siku",
+  "@dayNumber": {
+    "description": "服用日数モードで使用される単位です。「1日目」「2日目」のように表示される際の「日目」部分に相当します。"
   }
 }
