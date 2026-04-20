@@ -2782,5 +2782,9 @@
   "appearanceModeDateFeatureAppealShortDescription": "Vieglā skatā redzams, kad lietot",
   "@appearanceModeDateFeatureAppealShortDescription": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Reģistrēt tablešu lietošanu mājas ekrānā",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   }
 }
