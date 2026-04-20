@@ -2802,5 +2802,9 @@
   "calendarDiaryFeatureAppealBody": "Du kan trycka på ett datum i kalendern för att registrera hur du mår, ditt humör och eventuella symtom. Eftersom du kan se detta tillsammans med dina pillerintag och mensanteckningar får du bättre koll på kroppens rytm.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealPoint3": "Enkelt att redigera och återuppta mensperioder",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }
