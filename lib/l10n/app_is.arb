@@ -2794,5 +2794,9 @@
   "restDurationFeatureAppealPoint3": "Tímabil breytist og endurtekning auðvelt",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealBody": "Á heimaskjánum geturðu einfaldlega pikkað á pillublaðið til að skrá töku dagsins. Ef þú skráðir rangt geturðu pikkað aftur til að afturkalla. Þú getur líka séð tökuferilinn síðar, svo þú getur haldið áfram með hugarró.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
