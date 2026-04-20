@@ -2802,5 +2802,9 @@
   "creatingNewPillSheetFeatureAppealPoint1": "పిల్‌షీట్ ముగిసినప్పుడు స్వయంగా మార్చు",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "తేదీపై ట్యాప్ చేసి మీ ఆరోగ్యాన్ని నమోదు చేయండి",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
