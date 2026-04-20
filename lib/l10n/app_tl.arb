@@ -2798,5 +2798,9 @@
   "healthCareIntegrationFeatureAppealShortDescription": "Ibahagi ang tala ng iyong regla sa Health",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealPoint1": "Tingnan ang mga tala sa kalendaryo",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
   }
 }
