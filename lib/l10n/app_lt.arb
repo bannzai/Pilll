@@ -2802,5 +2802,9 @@
   "lifetimePurchaseNotice2": "Tvarkyti prenumeratą",
   "@lifetimePurchaseNotice2": {
     "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilll programoje įvestus menstruacijų duomenis galite automatiškai sinchronizuoti su sveikatos programėle. Juos galėsite peržiūrėti kartu su kitais sveikatos duomenimis ir taip pat panaudoti kitose programėlėse.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
