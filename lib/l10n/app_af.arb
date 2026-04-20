@@ -2298,5 +2298,14 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorStoreProblemError": "'n fout het by {storeName} voorgekom. Wag asseblief 'n rukkie en probeer weer.",
+  "@purchaseErrorStoreProblemError": {
+    "description": "アプリ内課金の購入時にApp StoreやGoogle Playなどのストアで問題が発生した際のエラーメッセージです。{storeName}には各プラットフォームのストア名が入ります。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
   }
 }
