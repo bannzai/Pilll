@@ -2790,5 +2790,9 @@
   "alarmKitFeatureAppealShortDescription": "Paziņojumi, kas skanēs pat klusajā režīmā",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Atgādinājums par lietošanu — gluži kā modinātājs",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
