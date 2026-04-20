@@ -2697,5 +2697,14 @@
         "type": "int"
       }
     }
+  },
+  "trialDeadlineDateOffsetDay": "Geniet alle funksies vir {number} dae!",
+  "@trialDeadlineDateOffsetDay": {
+    "description": "プレミアム機能の無料トライアル期間中にすべての機能が利用可能であることをユーザーに伝える励ましのメッセージです。ポジティブで親しみやすい表現で翻訳してください。",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
   }
 }
