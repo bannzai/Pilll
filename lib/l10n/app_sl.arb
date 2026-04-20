@@ -2794,5 +2794,9 @@
   "lifetimePurchaseNotice2": "Upravljanje naročnine",
   "@lifetimePurchaseNotice2": {
     "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "menstruationFeatureAppealHeadline": "Beleženje in napovedovanje menstruacije",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
