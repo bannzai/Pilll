@@ -2803,7 +2803,7 @@
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
   },
-  "dayNumber": "Siku ya {VAL}",
+  "dayNumber": "siku",
   "@dayNumber": {
     "description": "服用日数モードで使用される単位です。「1日目」「2日目」のように表示される際の「日目」部分に相当します。"
   }

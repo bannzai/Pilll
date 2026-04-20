@@ -4,7 +4,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
-import 'package:pilll/features/feature_appeal/critical_alert/critical_alert_announcement_bar.dart';
 import 'package:pilll/features/feature_appeal/quick_record/quick_record_announcement_bar.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/recommend_signup_general.dart';
