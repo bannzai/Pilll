@@ -2794,5 +2794,9 @@
   "recordPillFeatureAppealBody": "Try",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealHeadline": "Spåra och förutsäg din mens",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
   }
 }
