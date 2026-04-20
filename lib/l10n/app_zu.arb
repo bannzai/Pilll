@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint3": "Kulula ukuhlela noma ukuqala kabusha isikhathi sokuya esikhathini",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Hlela ngokukhululekile umyalezo wesikhumbuzi sokuthatha amaphilisi",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
   }
 }
