@@ -2592,5 +2592,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorApiEndpointBlocked": "Onbekende fout. Werk asseblief die app op na die nuutste weergawe en probeer weer. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Kontak. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
