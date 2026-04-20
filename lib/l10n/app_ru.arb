@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint3": "Редактирование и возобновление периода — просто",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Простое управление днями посещения клиники",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
   }
 }
