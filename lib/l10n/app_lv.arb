@@ -2794,5 +2794,9 @@
   "alarmKitFeatureAppealHeadline": "Atgādinājums par lietošanu — gluži kā modinātājs",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Rādīt tablešu lapu pēc datuma",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
   }
 }
