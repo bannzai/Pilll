@@ -2794,5 +2794,9 @@
   "recordPillFeatureAppealShortDescription": "Ne zaman aldığınızı hemen görün",
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealBody": "Adetiniz başladığında bunu kaydetmeniz yeterlidir; geçmiş adet kayıtlarını liste halinde görüntüleyebilir ve bir sonraki adet tarihinin otomatik tahmini sayesinde planlı hareket edebilirsiniz.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
