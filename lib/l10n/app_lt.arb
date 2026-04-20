@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint3": "Lengva redaguoti arba vėl pradėti laikotarpį",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "lifetimePurchaseNotice2": "Tvarkyti prenumeratą",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
