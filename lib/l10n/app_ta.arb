@@ -2707,10 +2707,6 @@
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
   },
-  "futureScheduleFeatureAppealPoint1": "{VAL}",
-  "@futureScheduleFeatureAppealPoint1": {
-    "description": ""
-  },
   "futureScheduleFeatureAppealPoint2": "மருத்துக்குச் செல்லும் நாட்களை எளிதாக நிர்வகிக்க",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""

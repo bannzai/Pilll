@@ -2707,10 +2707,6 @@
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
   },
-  "calendarDiaryFeatureAppealLocationHint": "{VAL}",
-  "@calendarDiaryFeatureAppealLocationHint": {
-    "description": ""
-  },
   "futureScheduleFeatureAppealPoint1": "క్యాలెండర్‌లో షెడ్యూల్‌ను జోడించండి",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
