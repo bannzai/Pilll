@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint3": "Айыз мөөнөтүн түзөтүү жана кайра баштоо да оңой",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "featureAppealTryFeature": "Сынап көрүү",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
   }
 }
