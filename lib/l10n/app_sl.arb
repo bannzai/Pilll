@@ -2790,5 +2790,9 @@
   "restDurationFeatureAppealPoint3": "Enostavno je urediti ali ponovno začeti obdobje.",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "lifetimePurchaseNotice2": "Upravljanje naročnine",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
