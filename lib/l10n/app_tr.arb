@@ -2798,5 +2798,9 @@
   "menstruationFeatureAppealBody": "Adetiniz başladığında bunu kaydetmeniz yeterlidir; geçmiş adet kayıtlarını liste halinde görüntüleyebilir ve bir sonraki adet tarihinin otomatik tahmini sayesinde planlı hareket edebilirsiniz.",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealBody": "Hatırlatıcı bildirimine uzun bastığınızda 'Kullandım' seçeneği görünür; uygulamayı açmadan ilacı aldığınızı kaydedebilirsiniz.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
