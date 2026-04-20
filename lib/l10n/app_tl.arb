@@ -2790,5 +2790,9 @@
   "lifetimePurchaseNotice2": "Pamahalaan ang subscription",
   "@lifetimePurchaseNotice2": {
     "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "menstruationFeatureAppealTitle": "Subaybayan at hulaan ang regla",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
   }
 }
