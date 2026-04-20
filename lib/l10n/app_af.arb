@@ -2325,5 +2325,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidCredentialsError": "Aankoop kon nie voltooi word nie. Probeer asseblief later weer. As dit nie opgelos word nie, gaan na Instellings > Kontak om ondersteuning te kry. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "アプリ内課金（プレミアムプラン購入）時に無効な認証情報が原因で購入が失敗した場合に表示されるエラーメッセージです。ユーザーに時間をおいて再試行を促し、解決しない場合はサポートへの連絡を案内する内容で翻訳してください。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
