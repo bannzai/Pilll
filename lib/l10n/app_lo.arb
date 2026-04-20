@@ -2790,5 +2790,9 @@
   "featureAppealTryFeature": "ລອງໃຊ້",
   "@featureAppealTryFeature": {
     "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "ສາມາດເຊື່ອມຕໍ່ກັບແອັບສຸຂະພາບ",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   }
 }
