@@ -2797,5 +2797,14 @@
   "restDurationFeatureAppealPoint3": "Snadná úprava a obnovení období",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "launchError": "Toto chybové hlášení se zobrazí uživateli, pokud při spuštění aplikace (v okamžiku jejího otevření) nastane nějaká technická chyba. Zahrnuje i podrobnosti, například chyby připojení, proto jej přeložte tak, aby uživatel situaci porozuměl.",
+  "@launchError": {
+    "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
   }
 }
