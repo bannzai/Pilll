@@ -2797,5 +2797,14 @@
   "quickRecordFeatureAppealPoint3": "Disponibile con l'abbonamento Premium",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
+  },
+  "launchError": "Questo testo è un messaggio di errore mostrato all'utente se si verifica un errore tecnico all'avvio dell'app (nel momento in cui viene aperta). Poiché può contenere dettagli come errori di connessione, traduci in modo che l'utente riesca a capire la situazione.",
+  "@launchError": {
+    "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
   }
 }
