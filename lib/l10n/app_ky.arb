@@ -2802,5 +2802,9 @@
   "healthCareIntegrationFeatureAppealTitle": "Ден соолук менен туташуу",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealBody": "Дарыгерге баруу же саякаттоо сыяктуу келечектеги пландарды күнтүзөгө киргизе аласыз. Таблетканы ичүү циклиңиз менен бирге текшерсеңиз болот, ошондуктан айлык (менструация) графигин эске алган пландарды түзө аласыз.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
