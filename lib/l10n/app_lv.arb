@@ -2786,5 +2786,9 @@
   "recordPillFeatureAppealHeadline": "Reģistrēt tablešu lietošanu mājas ekrānā",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealShortDescription": "Paziņojumi, kas skanēs pat klusajā režīmā",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   }
 }
