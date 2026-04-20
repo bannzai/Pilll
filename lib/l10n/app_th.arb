@@ -2802,5 +2802,9 @@
   "calendarDiaryFeatureAppealBody": "แตะวันที่ในปฏิทินเพื่อบันทึกสภาพร่างกาย อารมณ์ อาการต่างๆ ฯลฯ เมื่อดูร่วมกับบันทึกการทานยาและบันทึกประจำเดือน จะช่วยให้คุณเข้าใจจังหวะของร่างกายได้ดีขึ้น",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealHeadline": "การแจ้งเตือนการกินยาคล้ายนาฬิกาปลุก",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }
