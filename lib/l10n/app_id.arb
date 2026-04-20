@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint3": "編集 dan melanjutkan periode mudah",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealBody": "Anda dapat menuliskan jadwal mendatang seperti janji kunjungan ke dokter atau rencana perjalanan ke kalender. Karena dapat dilihat bersama siklus pemakaian pil, Anda bisa merencanakan dengan mempertimbangkan perkiraan haid juga.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
   }
 }
