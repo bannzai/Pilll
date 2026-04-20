@@ -2794,5 +2794,9 @@
   "healthCareIntegrationFeatureAppealHeadline": "ສາມາດເຊື່ອມຕໍ່ກັບແອັບສຸຂະພາບ",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "ຂໍ້ມູນວັນເດືອນທີ່ທ່ານບັນທຶກໃນ Pilll ສາມາດປະສານກັບແອັບສຸຂະພາບອື່ນໆໄດ້ໂດຍອັດຕະໂນມັດ. ທ່ານຈະສາມາດເບິ່ງຂໍ້ມູນນັ້ນຮ່ວມກັບຂໍ້ມູນສຸຂະພາບອື່ນໆ ແລະໃຫ້ແອັບອື່ນໆເຂົ້າໃຊ້ໄດ້",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
   }
 }
