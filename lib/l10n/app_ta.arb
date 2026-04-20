@@ -2802,5 +2802,9 @@
   "quickRecordFeatureAppealTitle": "அறிவிப்பிலிருந்து உடனடியாக மருந்து எடுத்ததை பதிவு",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealLocationHint": "தேதியைத் தட்டிப் உங்கள் உடல்நிலையை பதிவு செய்யவும்",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
   }
 }
