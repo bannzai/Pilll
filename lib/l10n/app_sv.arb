@@ -2790,5 +2790,9 @@
   "restDurationFeatureAppealPoint2": "Börja från kugghjulet uppe till höger på pillerarket.",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
+  },
+  "recordPillFeatureAppealBody": "Try",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
