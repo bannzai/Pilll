@@ -2802,5 +2802,9 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Ви можете налаштувати стандартне повідомлення «Час приймати таблетку» на будь-який інший текст. Спробуйте змінити його на мотивуючі слова, ім'я домашнього улюбленця або інші фрази, які зроблять щоденний прийом ліків приємнішим.",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Відображення дат на схемі таблеток",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
