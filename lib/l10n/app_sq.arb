@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint3": "Ndryshimi dhe rinisja e periudhës janë të lehta.",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Sinkronizim automatik i regjistrimeve të menstruacioneve",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
   }
 }
