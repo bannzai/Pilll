@@ -2798,5 +2798,9 @@
   "recordPillFeatureAppealTitle": "மருந்து எடுத்த பதிவுகளை எளிதாகப் பார்க்கலாம்",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealTitle": "அறிவிப்பிலிருந்து உடனடியாக மருந்து எடுத்ததை பதிவு",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   }
 }
