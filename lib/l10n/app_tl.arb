@@ -2802,5 +2802,9 @@
   "calendarDiaryFeatureAppealPoint1": "Tingnan ang mga tala sa kalendaryo",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Itala ang iyong kalagayan at balikan",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
   }
 }
