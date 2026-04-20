@@ -2802,5 +2802,9 @@
   "calendarDiaryFeatureAppealLocationHint": "தேதியைத் தட்டிப் உங்கள் உடல்நிலையை பதிவு செய்யவும்",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "காலண்டரில் நிகழ்வைச் சேர்க்கவும்",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
   }
 }
