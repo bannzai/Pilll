@@ -2802,5 +2802,9 @@
   "todayPillNumberFeatureAppealBody": "Iwapo nambari kwenye karatasi ya vidonge inapotoshwa na ulivyotumia kwa sababu ya kusahau au kuchanganya, unaweza kurekebisha kwa mkono nambari ya kidonge cha leo. Unaweza pia kufungua skrini ile ile kutoka kwenye onyesho la nambari za vidonge kwenye ukurasa wa nyumbani.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "dayNumber": "Siku ya {VAL}",
+  "@dayNumber": {
+    "description": "服用日数モードで使用される単位です。「1日目」「2日目」のように表示される際の「日目」部分に相当します。"
   }
 }
