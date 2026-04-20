@@ -2786,5 +2786,9 @@
   "restDurationFeatureAppealPoint3": "Madali ring i-edit at ipagpatuloy ang iyong regla",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "lifetimePurchaseNotice2": "Pamahalaan ang subscription",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
