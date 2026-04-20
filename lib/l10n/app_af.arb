@@ -2643,5 +2643,17 @@
         "type": "String"
       }
     }
+  },
+  "accountAlreadyLinked": "Hierdie {accountTypeProviderName}-rekening is reeds aan u bestaande Pilll-rekening gekoppel. Probeer asseblief die skerm te verfris en kyk na die FAQ. Besonderhede: {exceptionMessage}",
+  "@accountAlreadyLinked": {
+    "description": "ソーシャルログイン（Google、Apple等）のアカウントが既にユーザーのPilllアカウントと連携済みの場合に表示されるエラーメッセージです。アカウント連携時の重複エラーを説明し、画面更新やFAQ確認による解決方法を案内しています。",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
   }
 }
