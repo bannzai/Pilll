@@ -2794,5 +2794,9 @@
   "futureScheduleFeatureAppealTitle": "Zapišite buduće planove",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealBody": "If you long-press the reminder notification, the \"Taken\" action will appear and you can record the dose without opening the app.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
