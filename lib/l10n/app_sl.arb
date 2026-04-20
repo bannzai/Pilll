@@ -2797,5 +2797,14 @@
   "todayPillNumberFeatureAppealBody": "Če se zaradi pozabljanja ali zamenjave številke na listu tabletk in dejanskega jemanja pojavijo neskladja, lahko ročno uskladite številko tablete za današnji vnos. Enak zaslon lahko odprete tudi z zaslona s številko tablete na domači strani.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "launchError": "To je sporočilo o napaki, ki se prikaže uporabniku, če se ob zagonu aplikacije (ko aplikacijo odprete) pojavi tehnična napaka. Vključuje tudi podrobnosti, na primer napake povezave, zato naj bo prevod tak, da uporabnik razume situacijo.",
+  "@launchError": {
+    "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
   }
 }
