@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint3": "Az időszak szerkesztése és újraindítása is egyszerű.",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Dátumok megjelenítése a tablettalapon",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   }
 }
