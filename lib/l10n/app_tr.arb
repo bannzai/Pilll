@@ -2802,5 +2802,9 @@
   "quickRecordFeatureAppealBody": "Hatırlatıcı bildirimine uzun bastığınızda 'Kullandım' seçeneği görünür; uygulamayı açmadan ilacı aldığınızı kaydedebilirsiniz.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealBody": "Eğer unutma veya karışıklık nedeniyle hap şeridindeki numara ile gerçek alınan hap farklıysa, bugünkü hap numarasını elle ayarlayabilirsiniz. Ana ekrandaki hap numarası gösteriminden de aynı ekrana erişebilirsiniz.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
