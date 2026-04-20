@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint3": "माहवारी का संपादन और फिर से शुरू करना भी आसान है",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "lifetimePurchaseNotice2": "सदस्यता प्रबंधित करें",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
