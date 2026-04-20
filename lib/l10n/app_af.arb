@@ -2478,5 +2478,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorEmptySubscriberAttributesError": "Onbekende fout. Kon die aankoopinligting nie vooraf verkry nie. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorEmptySubscriberAttributesError": {
+    "description": "アプリ内課金でプレミアムプラン購入時に、ユーザー情報の取得に失敗した場合に表示される技術的なエラーメッセージです。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
