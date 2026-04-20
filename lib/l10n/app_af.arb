@@ -2463,5 +2463,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnsupportedError": "Dit is 'n onbekende fout. Werk asseblief die app by na die jongste weergawe en probeer weer. Indien dit nie opgelos word nie, kontak ons asseblief via Instellings > Kontak. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
