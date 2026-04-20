@@ -2802,5 +2802,9 @@
   "quickRecordFeatureAppealBody": "Pritisnite in pridržite obvestilo opomnika, da se prikaže dejanje »Vzeto«, s katerim lahko zabeležite vnos brez odpiranja aplikacije.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealBody": "Če se zaradi pozabljanja ali zamenjave številke na listu tabletk in dejanskega jemanja pojavijo neskladja, lahko ročno uskladite številko tablete za današnji vnos. Enak zaslon lahko odprete tudi z zaslona s številko tablete na domači strani.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
