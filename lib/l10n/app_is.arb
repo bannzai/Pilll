@@ -2802,5 +2802,9 @@
   "calendarDiaryFeatureAppealShortDescription": "Skráðu daglega líðan í dagatalinu",
   "@calendarDiaryFeatureAppealShortDescription": {
     "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Ef númerin eru úr takti, lagaðu þau í stillingunum.",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   }
 }
