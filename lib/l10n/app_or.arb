@@ -2799,10 +2799,6 @@
   "@restDurationFeatureAppealPoint3": {
     "description": ""
   },
-  "lifetimePlanSpecialOffer": "{\n  \"@@locale\": \"or\",\n  \"buyout_plan\": \"ଗୋଟିଏଥର ଖରିଦ ପ୍ଲାନ\",\n  \"@buyout_plan\": {\n    \"description\": \"買い切り型プレミアムプランの名称。アプリ内で“買い切りプラン”と表示されます。\"\n  },\n  \"limited_time_special_price\": \"ସୀମିତ ସମୟ ପାଇଁ ବିଶେଷ ମୂଲ୍ୟ\",\n  \"@limited_time_special_price\": {\n    \"description\": \"買い切り型プレミアムプランの期間限定特別価格オファーを表示するタイトルテキスト。課金画面で通常価格より安い特別価格を示します。\"\n  }\n}",
-  "@lifetimePlanSpecialOffer": {
-    "description": "買い切り型プレミアムプランの期間限定特別価格オファーを表示するタイトルテキストです。課金画面で通常価格より安い特別価格で提供される際に使用されます。"
-  },
   "reminderNotificationCustomizeWordFeatureAppealBody": "ଆପଣ ପ୍ରତ୍ୟକ୍ଷ \"ପିଲ୍ ନେବାର ସମୟ ହେଲା\" ବୋଲି ଥିବା ଡିଫଲ୍ଟ ସନ୍ଦେଶକୁ ଆପଣଙ୍କର ପସନ୍ଦର ଶବ୍ଦରେ କଷ୍ଟମାଇଜ୍ କରିପାରିବେ। ପ୍ରେରଣାଦାୟକ କଥାବାର୍ତ୍ତା, ପାଲତୁ ପଶୁର ନାମ କିମ୍ବା ଆପଣଙ୍କୁ ଖୁସି କରିବା ପାଇଁ ଯେଉଁ ଯୋଗ୍ୟ ଶବ୍ଦ ବା ଅଭିବ୍ୟକ୍ତି ଯୋଗ କରନ୍ତୁ — ପ୍ରତ୍ୟେକ ଦିନର ଔଷଧ ନେବାକାଳୀନ ଅନୁଭୂତିକୁ ଅଧିକ ହସ୍ତକୀୟ ଏବଂ ମଜେଦାର କରନ୍ତୁ।",
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"

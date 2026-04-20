@@ -2507,10 +2507,6 @@
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
   },
-  "menstruationFeatureAppealBody": "{\n  \"@@locale\": \"te\",\n  \"menstruation_help\": \"పీరియడ్ వచ్చినప్పుడు దాన్ని నమోదు చేయడం మాత్రమె సరిపోతుంది — గత పీరియడ్‌ల రికార్డులను జాబితాగా చూడవచ్చు. తదుపరి పీరియడ్ తేదీని ఆటోమేటిక్‌గా అంచనా వేస్తుంది, అందువల్ల మీరు ముందుగానే ప్లాన్ చేసుకోవచ్చు.\",\n  \"@menstruation_help\": {\n    \"description\": \"సహాయ పేజీ본문: వినియోగదారు పీరియడ్ నమోదు చేసే పద్ధతి మరియు స్వయంచాలకంగా తదుపరి తేదీ ఎప్పటికప్పుడు అంచనా వేయబడతుందని వివరిస్తుంది\"\n  }\n}",
-  "@menstruationFeatureAppealBody": {
-    "description": "生理記録機能のヘルプページの本文"
-  },
   "calendarDiaryFeatureAppealTitle": "క్యాలెండర్‌లో మీ ఆరోగ్యాన్ని నమోదు చేయండి",
   "@calendarDiaryFeatureAppealTitle": {
     "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
@@ -2582,10 +2578,6 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "తదుపరి షీట్‌ను స్వయంచాలకంగా జోడించండి",
   "@creatingNewPillSheetFeatureAppealShortDescription": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
-  },
-  "creatingNewPillSheetFeatureAppealHeadline": "{\n  \"nextPillSheetAutoCreate\": \"తదుపరి పిల్‌షీట్‌ను స్వయంచాలకంగా సృష్టించండి\",\n  \"@nextPillSheetAutoCreate\": {\n    \"description\": \"ピルシート自動追加機能のヘルプページのヘッドライン\"\n  }\n}",
-  "@creatingNewPillSheetFeatureAppealHeadline": {
-    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
   },
   "creatingNewPillSheetFeatureAppealBody": "ప్రస్తుత పిల్ షీట్ గ్రూప్ ముగిసిన తర్వాత, కొత్త పిల్ షీట్ గ్రూప్ ఆటోమేటిగ్గా సృష్టించబడుతుంది. మాన్యువల్‌గా మార్పిడి చేయాల్సిన అవసరం లేదు, అందువల్ల రికార్డింగ్ మిస్ కావడం జరగదు.",
   "@creatingNewPillSheetFeatureAppealBody": {
@@ -2757,10 +2749,6 @@
   },
   "quickRecordFeatureAppealPoint3": "ప్రీమియం సభ్యత్వం తీసుకుంటే వెంటనే ఉపయోగించవచ్చు",
   "@quickRecordFeatureAppealPoint3": {
-    "description": ""
-  },
-  "creatingNewPillSheetFeatureAppealPoint1": "{\"@@locale\":\"te\",\"pill_sheet_auto_switch\":\"పిల్ షీట్ ముగిసినందున ఆటోమేటిక్‌గా మారుతుంది\"}",
-  "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
   },
   "creatingNewPillSheetFeatureAppealPoint2": "చేతితో సృష్టించడం అవసరం లేదు",

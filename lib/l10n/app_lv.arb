@@ -2483,10 +2483,6 @@
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   },
-  "recordPillFeatureAppealHeadline": "{\n  \"@@locale\": \"lv\",\n  \"home_record_pill\": \"Reģistrēt tablešu lietošanu sākuma ekrānā\",\n  \"@home_record_pill\": {\n    \"description\": \"ピル記録/服用履歴機能のヘルプページのヘッドライン\"\n  }\n}",
-  "@recordPillFeatureAppealHeadline": {
-    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
-  },
   "recordPillFeatureAppealBody": "Mājas ekrānā pietiek vienreiz pieskarties tablešu lapiņai, lai atzīmētu tabletes lietošanu šai dienai. Ja ieraksts izrādās kļūdains, pieskaroties vēlreiz to var atcelt. Lietošanas vēsturi var pārskatīt vēlāk, tāpēc vari turpināt bez raizēm.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
@@ -2591,14 +2587,6 @@
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   },
-  "alarmKitFeatureAppealShortDescription": "{\n  \"@@locale\": \"lv\",\n  \"alarmkitFeatureAppealBar\": \"Paziņojums, kas skanēs pat klusā režīmā\",\n  \"@alarmkitFeatureAppealBar\": {\n    \"description\": \"AlarmKit機能のFeatureAppeal Barの短い説明文\",\n    \"type\": \"text\"\n  }\n}",
-  "@alarmKitFeatureAppealShortDescription": {
-    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
-  },
-  "alarmKitFeatureAppealHeadline": "{\n  \"@@locale\": \"lv\",\n  \"alarmKitHeadline\": \"Tablešu lietošanas atgādinājums modinātāja stilā\",\n  \"@alarmKitHeadline\": {\n    \"description\": \"AlarmKit機能のヘルプページのヘッドライン\",\n    \"type\": \"text\"\n  }\n}",
-  "@alarmKitFeatureAppealHeadline": {
-    "description": "AlarmKit機能のヘルプページのヘッドライン"
-  },
   "alarmKitFeatureAppealBody": "iOS 26以降で利用できるAlarmKitを使って、サイレントモードや集中モードでも確実に鳴るアラームでピルの服用を知らせます。",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
@@ -2663,20 +2651,12 @@
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
   },
-  "appearanceModeDateFeatureAppealPoint1": "{\n  \"@@locale\": \"lv\",\n  \"pillSheet_showByDate\": \"Rādīt tablešu lapu pēc datuma\",\n  \"@pillSheet_showByDate\": {\n    \"description\": \"ピルシートを日付で表示 — ピルシートを特定の日付で表示するためのラベルやボタン用のテキスト\"\n  }\n}",
-  "@appearanceModeDateFeatureAppealPoint1": {
-    "description": ""
-  },
   "appearanceModeDateFeatureAppealPoint2": "Datumu var redzēt, neatverot kalendāru.",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
   },
   "appearanceModeDateFeatureAppealPoint3": "Var mainīt tablešu loksnes iestatījumos.",
   "@appearanceModeDateFeatureAppealPoint3": {
-    "description": ""
-  },
-  "recordPillFeatureAppealPoint1": "{\n  \"tapPillSheetToRecord\": \"Pieskarieties tablešu lapai, lai reģistrētu lietošanu.\",\n  \"@tapPillSheetToRecord\": {\n    \"description\": \"Instruction shown on the pill sheet UI indicating that tapping the pill sheet records pill intake.\"\n  }\n}",
-  "@recordPillFeatureAppealPoint1": {
     "description": ""
   },
   "recordPillFeatureAppealPoint2": "Ja kļūdāties — viegli atsaukt",
@@ -2761,10 +2741,6 @@
   },
   "creatingNewPillSheetFeatureAppealPoint2": "Nav nepieciešama manuāla izveide",
   "@creatingNewPillSheetFeatureAppealPoint2": {
-    "description": ""
-  },
-  "creatingNewPillSheetFeatureAppealPoint3": "{\n  \"@@locale\": \"lv\",\n  \"settings_tab_switch_label\": \"Pārslēdziet, izmantojot iestatījumu cilnē esošo slēdzi\",\n  \"@settings_tab_switch_label\": {\n    \"description\": \"Norāda, ka funkciju var ieslēgt vai izslēgt, izmantojot slēdzi iestatījumu cilnē\",\n    \"type\": \"text\"\n  }\n}",
-  "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
   },
   "alarmKitFeatureAppealPoint1": "Skanēs arī klusajā/fokusa režīmā",

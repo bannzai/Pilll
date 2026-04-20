@@ -2483,10 +2483,6 @@
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   },
-  "recordPillFeatureAppealShortDescription": "{\"@@locale\":\"tr\",\"pill_taken_recently\":\"Ne zaman aldığınızı hemen görün\"}",
-  "@recordPillFeatureAppealShortDescription": {
-    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
-  },
   "recordPillFeatureAppealHeadline": "Ana ekranda hap kullanımını kaydedin",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
@@ -2506,10 +2502,6 @@
   "menstruationFeatureAppealHeadline": "Adet kaydı ve tahmin",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
-  },
-  "menstruationFeatureAppealBody": "{\n  \"@@locale\": \"tr\",\n  \"period_help_body\": \"Adet başladığında kaydetmeniz yeterlidir; geçmiş adet kayıtlarını liste halinde görüntüleyebilirsiniz. Bir sonraki adet tarihiniz de otomatik olarak tahmin edilir, böylece planlı bir şekilde hareket edebilirsiniz.\",\n  \"@period_help_body\": {\n    \"description\": \"生理記録機能のヘルプページの本文\"\n  }\n}",
-  "@menstruationFeatureAppealBody": {
-    "description": "生理記録機能のヘルプページの本文"
   },
   "calendarDiaryFeatureAppealTitle": "Takvimde sağlık durumunu kaydet",
   "@calendarDiaryFeatureAppealTitle": {
@@ -2571,10 +2563,6 @@
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
   },
-  "quickRecordFeatureAppealBody": "{\n  \"@@locale\": \"tr\",\n  \"quickRecord_help\": \"Hatırlatıcı bildirimine uzun basarsanız 'Alındı' eylemi görünür ve uygulamayı açmadan ilacı aldığınızı kaydedebilirsiniz.\",\n  \"@quickRecord_help\": {\n    \"description\": \"クイックレコード機能のヘルプページの本文\"\n  }\n}",
-  "@quickRecordFeatureAppealBody": {
-    "description": "クイックレコード機能のヘルプページの本文"
-  },
   "creatingNewPillSheetFeatureAppealTitle": "Hap şemasını otomatik ekle",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
@@ -2618,10 +2606,6 @@
   "todayPillNumberFeatureAppealHeadline": "Bugün alınacak hap numarasını değiştirebilirsiniz",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
-  },
-  "todayPillNumberFeatureAppealBody": "{\n  \"todayPillNumberHelpBody\": \"İlaç paketindeki numara ile gerçekte aldığınız hapın numarası, unutma veya karıştırma nedeniyle uyumsuzsa, bugün almanız gereken hap numarasını elle düzeltebilirsiniz. Ana ekranın hap numarası göstergesinden de aynı ekrana erişebilirsiniz.\",\n  \"@todayPillNumberHelpBody\": {\n    \"description\": \"今日の服用番号変更機能のヘルプページの本文\"\n  }\n}",
-  "@todayPillNumberFeatureAppealBody": {
-    "description": "今日の服用番号変更機能のヘルプページの本文"
   },
   "restDurationFeatureAppealTitle": "Hap alma molasını kaydet",
   "@restDurationFeatureAppealTitle": {

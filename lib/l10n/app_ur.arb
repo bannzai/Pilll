@@ -2639,10 +2639,6 @@
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
   },
-  "featureAppealLocationLabel": "{\n  \"@@locale\": \"ur\",\n  \"app_location\": \"ایپ میں مقام\",\n  \"@app_location\": {\n    \"description\": \"アプリ内の場所\"\n  }\n}",
-  "@featureAppealLocationLabel": {
-    "description": ""
-  },
   "criticalAlertFeatureAppealPoint1": "فوکس موڈ کے دوران بھی اطلاعات موصول ہوں گی",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""

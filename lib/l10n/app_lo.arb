@@ -2419,10 +2419,6 @@
   "@lifetimePurchaseNotice3": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
   },
-  "featureAppealTryFeature": "{\n  \"@@locale\": \"lo\",\n  \"confirm\": \"ລອງໃຊ້ຟັງຊັນນີ້\",\n  \"@confirm\": {\n    \"description\": \"FeatureAppealヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル\"\n  }\n}",
-  "@featureAppealTryFeature": {
-    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
-  },
   "recommendSignupGeneralTitle": "ແນະນຳໃຫ້ລົງທະບຽນບັນຊີ",
   "@recommendSignupGeneralTitle": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
@@ -2550,14 +2546,6 @@
   "healthCareIntegrationFeatureAppealShortDescription": "ແບ່ງປັນບັນທຶກການມີເດືອນກັບແອັບສຸຂະພາບ",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
-  },
-  "healthCareIntegrationFeatureAppealHeadline": "{\n  \"healthIntegration\": \"ສາມາດເຊື່ອມຕໍ່ກັບການດູແລສຸຂະພາບ\",\n  \"@healthIntegration\": {\n    \"description\": \"ヘルスケア連携機能のヘルプページのヘッドライン\",\n    \"type\": \"text\"\n  }\n}",
-  "@healthCareIntegrationFeatureAppealHeadline": {
-    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
-  },
-  "healthCareIntegrationFeatureAppealBody": "{\n  \"@@locale\": \"lo\",\n  \"period_data_healthcare_sync\": \"ຂໍ້ມູນການເປັນປະຈຳເດືອນທີ່ທ່ານບັນທຶກໃນ Pilll ສາມາດຖືກເຊື່ອມຕໍ່ອັດຕະໂນມັດກັບແອັບສຸຂະພາບ. ທ່ານຈະສາມາດເບິ່ງຂໍ້ມູນພ້ອມກັບຂໍ້ມູນສຸຂະພາບອື່ນໆໃນແອັບດຽວກັນ ແລະເຮັດໃຫ້ແອັບອື່ນໆນຳໄປໃຊ້ຂໍ້ມູນເຫຼົ່ານີ້ໄດ້.\",\n  \"@period_data_healthcare_sync\": {\n    \"description\": \"ヘルスケア連携機能のヘルプページの本文\"\n  }\n}",
-  "@healthCareIntegrationFeatureAppealBody": {
-    "description": "ヘルスケア連携機能のヘルプページの本文"
   },
   "quickRecordFeatureAppealTitle": "ບັນທຶກການກິນຢາຈາກແຈ້ງເຕືອນ",
   "@quickRecordFeatureAppealTitle": {
@@ -2715,10 +2703,6 @@
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
   },
-  "calendarDiaryFeatureAppealLocationHint": "{\n  \"@@locale\": \"lo\",\n  \"tapDateToRecordCondition\": \"ແຕະວັນທີ່ເພື່ອບັນທຶກສຸຂະພາບ\",\n  \"@tapDateToRecordCondition\": {\n    \"description\": \"日付をタップして体調を記録\"\n  }\n}",
-  "@calendarDiaryFeatureAppealLocationHint": {
-    "description": ""
-  },
   "futureScheduleFeatureAppealPoint1": "ເພີ່ມເຫດການໃສ່ປະຕິທິນ",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
@@ -2745,10 +2729,6 @@
   },
   "healthCareIntegrationFeatureAppealPoint3": "ຮັບຮອງ Apple Health",
   "@healthCareIntegrationFeatureAppealPoint3": {
-    "description": ""
-  },
-  "quickRecordFeatureAppealPoint1": "{\n  \"recordIntakeFromNotificationAction\": \"ບັນທຶກການກິນຢາຜ່ານປຸ່ມໃນແຈ້ງເຕືອນ\",\n  \"@recordIntakeFromNotificationAction\": {\n    \"description\": \"通知に表示されるアクション（ボタン）からピルの服用を記録するラベル。短く、通知内で表示される。\"\n  }\n}",
-  "@quickRecordFeatureAppealPoint1": {
     "description": ""
   },
   "quickRecordFeatureAppealPoint2": "ສຳເລັດບໍ່ຕ້ອງເປີດແອັບ",

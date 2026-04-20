@@ -2491,10 +2491,6 @@
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   },
-  "recordPillFeatureAppealBody": "{\n  \"@@locale\": \"hr\",\n  \"pill_sheet_help\": \"Na početnom zaslonu jednostavno dodirnite prikaz pilula da zabilježite uzimanje za taj dan. Ako ste pogrešno zabilježili, ponovno dodirnite da poništite zapis. Povijest uzimanja možete kasnije pregledati, pa možete nastaviti bez brige.\",\n  \"@pill_sheet_help\": {\n    \"description\": \"ピル記録/服用履歴機能のヘルプページの本文\"\n  }\n}",
-  "@recordPillFeatureAppealBody": {
-    "description": "ピル記録/服用履歴機能のヘルプページの本文"
-  },
   "menstruationFeatureAppealTitle": "Bilježenje i predviđanje menstruacije",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
@@ -2526,10 +2522,6 @@
   "calendarDiaryFeatureAppealBody": "Dodirnite datum u kalendaru da zabilježite svoje zdravstveno stanje, raspoloženje, simptome i slično. Možete to pregledati zajedno s evidencijom uzimanja kontracepcijskih pilula i zapisima o menstruaciji, pa ćete bolje razumjeti ritam svog tijela.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
-  },
-  "futureScheduleFeatureAppealTitle": "{\n  \"@@locale\": \"hr\",\n  \"feature_appeal_future_plans\": \"Zapišite buduće planove\",\n  \"@feature_appeal_future_plans\": {\n    \"description\": \"未来の予定機能のFeatureAppeal Barタイトル\"\n  }\n}",
-  "@futureScheduleFeatureAppealTitle": {
-    "description": "未来の予定機能のFeatureAppeal Barタイトル"
   },
   "futureScheduleFeatureAppealShortDescription": "Upravljanje budućim terminima, npr. posjetima liječniku",
   "@futureScheduleFeatureAppealShortDescription": {
@@ -2571,10 +2563,6 @@
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
   },
-  "quickRecordFeatureAppealBody": "{\n  \"quick_record_help_long_press\": \"Ako pritisnete i držite obavijest podsjetnika, pojavit će se akcija \\\"Označi kao uzeto\\\" i možete zabilježiti uzimanje bez otvaranja aplikacije.\",\n  \"@quick_record_help_long_press\": {\n    \"description\": \"クイックレコード機能のヘルプページの本文。リマインダー通知を長押しすると表示されるアクションについて説明する。\"\n  }\n}",
-  "@quickRecordFeatureAppealBody": {
-    "description": "クイックレコード機能のヘルプページの本文"
-  },
   "creatingNewPillSheetFeatureAppealTitle": "Automatsko dodavanje listića pilula",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
@@ -2603,10 +2591,6 @@
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
   },
-  "alarmKitFeatureAppealBody": "{\n  \"@@locale\": \"hr\",\n  \"alarmKitHelp\": \"AlarmKit, dostupan na iOS‑u 26 i novijim, koristi pouzdan alarm koji će se oglasiti čak i u tihom načinu rada ili u načinu Fokus kako bi vas podsjetio na uzimanje pilule.\",\n  \"@alarmKitHelp\": {\n    \"description\": \"Tekst za stranicu pomoći o značajci AlarmKit. Objašnjava da AlarmKit na iOS 26+ omogućuje alarm koji se oglašava i u tihom modu i u načinu Fokus.\"\n  }\n}",
-  "@alarmKitFeatureAppealBody": {
-    "description": "AlarmKit機能のヘルプページの本文"
-  },
   "todayPillNumberFeatureAppealTitle": "Uskladi današnji broj uzimanja",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
@@ -2618,10 +2602,6 @@
   "todayPillNumberFeatureAppealHeadline": "Možete promijeniti broj pilule koju ćete uzeti danas",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
-  },
-  "todayPillNumberFeatureAppealBody": "{\n  \"@@locale\": \"hr\",\n  \"pillSheetNumberSyncHelp\": \"Kad se zbog zaborava ili zamjene brojevi na pilulnom listiću i stvarni unos ne poklapaju, možete ručno uskladiti broj pilule koji trebate uzeti danas. Isti zaslon možete otvoriti i iz prikaza broja pilule na početnom zaslonu.\",\n  \"@pillSheetNumberSyncHelp\": {\n    \"description\": \"今日の服用番号変更機能のヘルプページの本文\"\n  }\n}",
-  "@todayPillNumberFeatureAppealBody": {
-    "description": "今日の服用番号変更機能のヘルプページの本文"
   },
   "restDurationFeatureAppealTitle": "Zabilježi razdoblje prekida uzimanja",
   "@restDurationFeatureAppealTitle": {

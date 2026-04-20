@@ -2411,10 +2411,6 @@
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
   },
-  "lifetimePurchaseNotice2": "{\n  \"@@locale\": \"sl\",\n  \"subscriptionManagementLink\": \"Upravljanje naročnine\",\n  \"@subscriptionManagementLink\": {\n    \"description\": \"サブスクリプション管理ページへのリンクテキスト\",\n    \"type\": \"text\"\n  }\n}",
-  "@lifetimePurchaseNotice2": {
-    "description": "サブスクリプション管理ページへのリンクテキスト"
-  },
   "lifetimePurchaseNotice3": "Prosimo, pred nakupom prekličite obstoječe naročnine.",
   "@lifetimePurchaseNotice3": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
@@ -2503,10 +2499,6 @@
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   },
-  "menstruationFeatureAppealHeadline": "{\n  \"@@locale\": \"sl\",\n  \"menstruation_help_headline\": \"Sledenje in napoved menstrualnega cikla\",\n  \"@menstruation_help_headline\": {\n    \"description\": \"生理記録機能のヘルプページのヘッドライン\"\n  }\n}",
-  "@menstruationFeatureAppealHeadline": {
-    "description": "生理記録機能のヘルプページのヘッドライン"
-  },
   "menstruationFeatureAppealBody": "Koledar menstrualnega ciklusa si lahko ogledate z enim samim postopkom — preprosto zabeležite začetek menstruacije in seznam preteklih ciklov bo samodejno prikazan. Datum naslednje pričakovane menstruacije je samodejno napovedan, kar vam pomaga načrtovati prihodnje aktivnosti brez presenečenj.",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
@@ -2571,10 +2563,6 @@
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
   },
-  "quickRecordFeatureAppealBody": "{\"quickRecord_help_body\":\"Če obvestilo opomnika pritisnete in zadržite, se prikaže možnost »Vzeto« in lahko zabeležite jemanje brez odpiranja aplikacije.\",\"@quickRecord_help_body\":{\"description\":\"クイックレコード機能のヘルプページの本文\",\"placeholders\":{}}}",
-  "@quickRecordFeatureAppealBody": {
-    "description": "クイックレコード機能のヘルプページの本文"
-  },
   "creatingNewPillSheetFeatureAppealTitle": "Samodejno dodaj listo tabletk",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
@@ -2618,10 +2606,6 @@
   "todayPillNumberFeatureAppealHeadline": "Sprememba številke tablete za danes",
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
-  },
-  "todayPillNumberFeatureAppealBody": "{\n  \"@@locale\": \"sl\",\n  \"todayPillNumberHelp\": \"Če zaradi pozabljanja ali zamenjave pride do premika med številko na listu tabletk in dejanskim jemanjem, lahko ročno prilagodite številko tablete za današnji vnos. Enak zaslon lahko odprete tudi s prikaza številke tablete na domačem zaslonu.\",\n  \"@todayPillNumberHelp\": {\n    \"description\": \"今日の服用番号変更機能のヘルプページの本文\"\n  }\n}",
-  "@todayPillNumberFeatureAppealBody": {
-    "description": "今日の服用番号変更機能のヘルプページの本文"
   },
   "restDurationFeatureAppealTitle": "Zabeležite premor pri jemanju",
   "@restDurationFeatureAppealTitle": {

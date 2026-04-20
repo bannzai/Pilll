@@ -2451,10 +2451,6 @@
   "@reminderNotificationCustomizeWordFeatureAppealTitle": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   },
-  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "{\n  \"@@locale\": \"ko\",\n  \"notification_message_customizable\": \"알림 문구를 맞춤 설정할 수 있습니다\",\n  \"@notification_message_customizable\": {\n    \"description\": \"通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文\",\n    \"type\": \"text\"\n  }\n}",
-  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
-    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
-  },
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "복용 알림 메시지를 자유롭게 편집하세요",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
