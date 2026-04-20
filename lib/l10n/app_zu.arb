@@ -2802,5 +2802,9 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Hlela ngokukhululekile umyalezo wesikhumbuzi sokuthatha amaphilisi",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "display the translated text here",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   }
 }
