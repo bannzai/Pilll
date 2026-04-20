@@ -2178,5 +2178,14 @@
         "type": "String"
       }
     }
+  },
+  "selectTodayPillNumber": "Vandag({todayString})\nTik die nommer van die pil wat jy gaan neem of al geneem het",
+  "@selectTodayPillNumber": {
+    "description": "ピルシート画面で、今日服用予定または服用済みのピルの番号をタップするよう促すユーザー向けの操作説明です。服用記録を行うためのUI要素に表示されます。",
+    "placeholders": {
+      "todayString": {
+        "type": "String"
+      }
+    }
   }
 }
