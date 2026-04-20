@@ -2794,5 +2794,9 @@
   "menstruationFeatureAppealTitle": "Subaybayan at hulaan ang regla",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Ibahagi ang tala ng iyong regla sa Health",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   }
 }
