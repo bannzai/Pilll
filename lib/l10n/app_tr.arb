@@ -2790,5 +2790,9 @@
   "restDurationFeatureAppealPoint3": "Dönemi düzenlemek veya yeniden başlatmak da kolay.",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealShortDescription": "Ne zaman aldığınızı hemen görün",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   }
 }
