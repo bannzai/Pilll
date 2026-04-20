@@ -2798,5 +2798,9 @@
   "recordPillFeatureAppealBody": "Á heimaskjánum geturðu einfaldlega pikkað á pillublaðið til að skrá töku dagsins. Ef þú skráðir rangt geturðu pikkað aftur til að afturkalla. Þú getur líka séð tökuferilinn síðar, svo þú getur haldið áfram með hugarró.",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Skráðu daglega líðan í dagatalinu",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
   }
 }
