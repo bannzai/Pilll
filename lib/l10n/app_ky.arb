@@ -2802,5 +2802,9 @@
   "featureAppealTryFeature": "Сынап көрүү",
   "@featureAppealTryFeature": {
     "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Ден соолук менен туташуу",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   }
 }
