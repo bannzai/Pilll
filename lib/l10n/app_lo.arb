@@ -2786,5 +2786,9 @@
   "restDurationFeatureAppealPoint3": "ແກ້ໄຂ ແລະ ເລີ່ມອີກ ງ່າຍ",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "featureAppealTryFeature": "ລອງໃຊ້",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
   }
 }
