@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint3": "مدت کی ترمیم اور دوبارہ شروع کرنا بھی آسان ہے",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "featureAppealLocationLabel": "ایپ کے اندر مقام",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }
