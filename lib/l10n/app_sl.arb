@@ -2798,5 +2798,9 @@
   "menstruationFeatureAppealHeadline": "Beleženje in napovedovanje menstruacije",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Pritisnite in pridržite obvestilo opomnika, da se prikaže dejanje »Vzeto«, s katerim lahko zabeležite vnos brez odpiranja aplikacije.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
   }
 }
