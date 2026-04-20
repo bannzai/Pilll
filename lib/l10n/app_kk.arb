@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint3": "Айлықты өңдеу мен қайта бастау да оңай",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "lifetimePurchaseNotice2": "Мұнда",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
   }
 }
