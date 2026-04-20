@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint3": "Úprava a obnovenie obdobia sú jednoduché",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Prispôsobiť nastavenia",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
   }
 }
