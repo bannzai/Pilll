@@ -2802,5 +2802,9 @@
   "recordPillFeatureAppealPoint1": "Pieskarieties tablešu lapai, lai reģistrētu lietošanu",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Pārslēdziet, izmantojot iestatījumu cilnes slēdzi.",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }
