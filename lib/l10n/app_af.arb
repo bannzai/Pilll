@@ -2550,5 +2550,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorSystemInfoError": "Daar is ’n probleem met die toestelinstellings. Kontroleer dit en probeer weer. Indien dit nie opgelos word nie, kontak ons via Instellings > Kontak. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
