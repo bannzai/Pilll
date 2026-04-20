@@ -2786,5 +2786,9 @@
   "restDurationFeatureAppealPoint3": "Jednostavno uređivanje i ponovno pokretanje ciklusa",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "recordPillFeatureAppealBody": "Na početnom zaslonu možete evidentirati uzimanje tablete toga dana jednostavnim dodirom pilula. Ako ste pogriješili, dodirom ponovno možete poništiti evidentiranje. Također možete kasnije provjeriti povijest uzimanja, što vam omogućuje da nastavite bez brige.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
