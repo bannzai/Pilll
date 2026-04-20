@@ -2794,5 +2794,9 @@
   "restDurationFeatureAppealPoint3": "Редагувати й поновити період — просто",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "lifetimeSubscriptionWarning": "Дякуємо за придбання одноразового плану. Якщо ви підписані на місячний або річний план, будь ласка, не забудьте скасувати підписку.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
