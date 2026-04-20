@@ -2535,5 +2535,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorCustomerInfoError": "Kon nie kliëntinligting kry nie. Probeer asseblief later weer. As dit steeds nie opgelos word nie, kontak ons via Instellings > Kontak. Besonderhede: Kode: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
