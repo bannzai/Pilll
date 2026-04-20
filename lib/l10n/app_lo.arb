@@ -2802,5 +2802,9 @@
   "calendarDiaryFeatureAppealLocationHint": "ແຕະວັນທີ່ເພື່ອບັນທຶກສະຖານະຮ່າງກາຍ",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "ບັນທຶກການກິນຢາຜ່ານແຈ້ງເຕືອນ",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
   }
 }
