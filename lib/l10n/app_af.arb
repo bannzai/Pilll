@@ -2349,5 +2349,14 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Die aankoopinligting word reeds deur 'n ander gebruiker gebruik. Kontroleer asseblief die {accountName} wat op hierdie toestel aangemeld is.",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "アプリ内課金（プレミアムプラン）で、同じ購入レシートが別のユーザーアカウントで既に使用されている場合に表示されるエラーメッセージです。ユーザーにデバイスにログインしているアカウント名を確認するよう促しています。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
