@@ -2802,5 +2802,9 @@
   "creatingNewPillSheetFeatureAppealHeadline": "తరువాతి పిల్‌షీట్‌ను స్వయంచాలకంగా సృష్టించండి",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "పిల్‌షీట్ ముగిసినప్పుడు స్వయంగా మార్చు",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
   }
 }
