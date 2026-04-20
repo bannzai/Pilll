@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint3": "Lako uređivanje i nastavak ciklusa",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Аутоматски креирај следећи лист",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   }
 }
