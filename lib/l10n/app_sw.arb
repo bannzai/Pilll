@@ -2798,5 +2798,9 @@
   "restDurationFeatureAppealPoint3": "Uhariri na kuanza tena kipindi cha hedhi ni rahisi pia",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealBody": "Ingiza tu wakati hedhi zinapokuja ili kurekodi, na utaweza kuona orodha ya rekodi zako za hedhi zilizopita. Tarehe inayoweza kuwa ya hedhi inayofuata itabashiriwa kiotomatiki, kwa hivyo unaweza kupanga maisha yako kwa ufanisi.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
