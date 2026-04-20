@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint3": "轻松编辑或重新开始经期",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "todayPillNumberFeatureAppealBody": "如果因为忘记服用或服用错而导致药片表上的编号与实际服用不一致，您可以手动调整今天要服用的药片编号。也可以从主屏幕的药片数字显示打开同一页面。",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
   }
 }
