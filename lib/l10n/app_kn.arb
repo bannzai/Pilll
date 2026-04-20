@@ -2402,5 +2402,409 @@
   "inquiryContentRequired": "ದಯವಿಟ್ಟು ವಿಚಾರಣೆಯ ವಿಷಯವನ್ನು ನಮೂದಿಸಿ",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "ಒಮ್ಮೆ ಖರೀದಿಸುವ ಯೋಜನೆಯನ್ನು ಖರೀದಿಸಿದ್ದಕ್ಕಾಗಿ ಧನ್ಯವಾದಗಳು. ನೀವು ಮಾಸಿಕ ಅಥವಾ ವಾರ್ಷಿಕ ಚಂದಾ ಯೋಜನೆಗೆ ಈಗಾಗಲೇ ಸದಸ್ಯರಾಗಿದ್ದರೆ, ದಯವಿಟ್ಟು ಅದನ್ನು ರದ್ದುಪಡಿಸಲು ಮರೆಯಬೇಡಿ.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "ಒಮ್ಮೆ ಖರೀದಿಸುವ ಯೋಜನೆಯನ್ನು ಖರೀದಿಸಿದರೂ ಮಾಸಿಕ/ವಾರ್ಷಿಕ ಯೋಜನೆಗಳು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ರದ್ದುಪಡಿಸಲಾಗುವುದಿಲ್ಲ.",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "ಇಲ್ಲಿ",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "ದಯವಿಟ್ಟು ಖರೀದಿಸುವ ಮೊದಲು ಮುಂಚಿತವಾಗಿ ರದ್ದುಪಡಿಸಿ.",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "ಪರೀಕ್ಷಿಸಿ",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "ಖಾತೆ ಸೃಷ್ಟಿಸುವುದನ್ನು ನಾವು ಶಿಫಾರಸು ಮಾಡುತ್ತೇವೆ",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "ನೋಂದಾಯಿಸಿದರೆ ನಿಮ್ಮ ಡೇಟಾವನ್ನು ಬ್ಯಾಕಪ್ ಮಾಡಬಹುದು",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "サイレントモードでも通知を受け取る",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "ನಿದ್ರಾ ಮೋಡ್‌ನಲ್ಲಿದ್ದರೂ ಮದ್ದು ತೆಗೆದುಕೊಳ್ಳಲು ಮರೆಯುವುದನ್ನು ತಡೆಯಿರಿ",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "ಸೈಲೆಂಟ್ ಮೋಡ್‌ನಲ್ಲಿದ್ದರೂ ಅಧಿಸೂಚನೆಗಳು ತಲುಪುತ್ತವೆ",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alert ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿದರೆ, ನಿದ್ರೆ ಮೋಡ್ ಅಥವಾ ಮ್ಯಾನರ್ ಮೋಡ್‌ನಲ್ಲಿ ಇದ್ದರೂ ಕೂಡ ಪಿಲ್ ಸೇವಿಸುವ ಕುರಿತು ನೆನಪಿಸುವ ಸೂಚನೆಗಳನ್ನು ಪಡೆಯಬಹುದು. ಪ್ರಮುಖ ಪಿಲ್ ಸೇವಿಸುವ ಸಮಯವನ್ನು ತಪ್ಪಿಸಿಕೊಳ್ಳದಿರಲು, ದಯವಿಟ್ಟು ಈ ಸೆಟ್ಟಿಂಗ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "通知メッセージをカスタマイズ",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "ಅಧಿಸೂಚನೆಯ ಸಂದೇಶವನ್ನು ಕಸ್ಟಮೈಸ್ ಮಾಡಬಹುದು",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "服用通知のメッセージを自由に編集",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "ಮೂಲ 'ಗೋಳಿ ಸೇವಿಸುವ ಸಮಯ' ಎಂಬ ಸೂಚನೆಯನ್ನು ನಿಮ್ಮ ಇಷ್ಟದ ಪದಗಳಿಗೆ ಕಸ್ಟಮೈಸ್ ಮಾಡಬಹುದು. ಪ್ರೇರಣೆಯಿಂದ ತುಂಬಿದ ವಾಕ್ಯಗಳು, ನಿಮ್ಮ ಪೇಟಿನ ಹೆಸರು ಮುಂತಾದವುಗಳನ್ನು ಬಳಸಿ ಪ್ರತಿದಿನದ ಔಷಧ ಸೇವನೆಯನ್ನು ಇನ್ನಷ್ಟು ಆನಂದಮಯವಾಗಿಸಲು ಪರಿವರ್ತಿಸಿ.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "ಪಿಲ್‌ಶೀಟ್‌ನಲ್ಲಿ ದಿನಾಂಕಗಳನ್ನು ತೋರಿಸುವುದು",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "ಯಾವಾಗ ಸೇವಿಸುವುದು ಎಂದು ತಕ್ಷಣ ತಿಳಿದುಕೊಳ್ಳಿ",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "ಪಿಲ್‌ಶೀಟ್‌ನಲ್ಲಿ ದಿನಾಂಕವನ್ನು ತೋರಿಸಬಹುದು",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "ಪಿಲ್‌ಶೀಟಿನ ಚೌಕಿಗಳಲ್ಲಿ ದಿನಾಂಕಗಳನ್ನು ತೋರಿಸುವ ಮೂಲಕ, ಹಿಂದಿನ ಪಿಲ್ ಸೇವನೆ ದಾಖಲಿಗಳು ಮತ್ತು ಭವಿಷ್ಯದ ಪಿಲ್ ಸೇವನೆ ಯೋಜನೆಗಳನ್ನು ಒಂದೇ ನೋಟದಲ್ಲಿ ಪರಿಶೀಲಿಸಬಹುದು. “ಸಂಖ್ಯೆ” ಮೋಡ್ ಮತ್ತು “ದಿನಾಂಕ” ಮೋಡ್ ಅನ್ನು ಪರಿವರ್ತಿಸಿ, ನಿಮ್ಮಿಗೆ ಸೂಕ್ತವಾದ ಪ್ರದರ್ಶನವನ್ನು ಆರಿಸಿಕೊಳ್ಳಿ.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "ಔಷಧ ಸೇವನೆಯ ಇತಿಹಾಸವನ್ನು ಸುಲಭವಾಗಿ ಪರಿಶೀಲಿಸಿ",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "ಯಾವಾಗ ತೆಗೆದುಕೊಂಡಿದ್ದೀರೋ ಎಂಬುದನ್ನು ತಕ್ಷಣವೇ ನೋಡಬಹುದು",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "ಹೋಮ್ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ಪಿಲ್ ಸೇವೆಯನ್ನು ದಾಖಲಿಸಿ",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "ಹೋಮ್ ಸ್ಕ್ರೀನಿನ ಪಿಲ್‌ಶೀಟ್ ಅನ್ನು ಕೇವಲ ಟ್ಯಾಪ್ ಮಾಡುವ ಮೂಲಕ ಆ ದಿನದ ಪಿಲ್ ಸೇವೆಯನ್ನು ದಾಖಲಿಸಬಹುದು. ತಪ್ಪಾಗಿ ದಾಖಲಿಸಿದ್ದರೆ, ಮತ್ತೊಮ್ಮೆ ಟ್ಯಾಪ್ ಮಾಡುವುದು ಅದನ್ನು ರದ್ದುಮಾಡುತ್ತದೆ. ಸೇವಾ ಇತಿಹಾಸವನ್ನು ನಂತರದಲ್ಲಿಯೂ ಪರಿಶೀಲಿಸಬಹುದು, ಆದ್ದರಿಂದ ಮನಸ್ಸು ಶಾಂತವಾಗಿ ಮುಂದುವರಿಸಬಹುದು.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "生理を記録・予測",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "ಮಾಸಿಕದ ಆರಂಭದ ದಿನಾಂಕವನ್ನು ದಾಖಲಿಸಿ ಮತ್ತು ಚಕ್ರವನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "ಮಾಸಿಕ ಚಕ್ರದ ದಾಖಲೆ ಮತ್ತು ಪೂರ್ವಾನುಮಾನ",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "ಮಾಸಿಕ ರಕ್ತಸ್ರಾವ ಆರಂಭವಾದಾಗ ಅದನ್ನು ಮಾತ್ರ ದಾಖಲಿಸಿದರೆ ಸಾಕು — ಹಳೆಯ ಮಾಸಿಕ ದಾಖಲೆಗಳನ್ನು ಪಟ್ಟಿ ರೂಪದಲ್ಲಿ ನೋಡಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ. ಮುಂದಿನ ನಿರೀಕ್ಷಿತ ಮಾಸಿಕ ದಿನಾಂಕವನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಊಹಿಸಲಾಗುತ್ತದೆ, ಆದ್ದರಿಂದ ನೀವು ಯೋಜಿತವಾಗಿ ನಡೆದುಕೊಳ್ಳಬಹುದು.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ಆರೋಗ್ಯವನ್ನು ದಾಖಲಿಸಿ",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "ಪ್ರತಿದಿನದ ಆರೋಗ್ಯವನ್ನು ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ದಾಖಲೆ ಮಾಡೋಣ",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "ದೈನಂದಿನ ಆರೋಗ್ಯವನ್ನು ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ದಾಖಲಿಸಿ",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ದಿನಾಂಕವನ್ನು ಟ್ಯಾಪ್‌ ಮಾಡಿ ಆರೋಗ್ಯದ ಸ್ಥಿತಿ, ಮನೋಭಾವ ಮತ್ತು ಲಕ್ಷಣಗಳನ್ನು ದಾಖಲಿಸಬಹುದು. ಈ ದಾಖಲೆಯನ್ನು ಸೇವನ ದಾಖಲಾತಿ ಮತ್ತು ಮಾಸಿಕ ಚಕ್ರದ ದಾಖಲಾತಿಯೊಂದಿಗೆ ಒಟ್ಟಿಗೆ ಪರಿಶೀಲಿಸಬಹುದು, ಆದ್ದರಿಂದ ನಿಮ್ಮ ಶರೀರದ ಚಟುವಟಿಕೆಗಳನ್ನು ಒಡ್ಡಿಕೊಂಡು ತೋಚಿಕೊಳ್ಳಬಹುದು.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "ಭವಿಷ್ಯದ ಯೋಜನೆಗಳನ್ನು ದಾಖಲಿಸಿ",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "ದವಾಖಾನೆ/ಕ್ಲಿನಿಕ್ ಭೇಟಿ ಮುಂತಾದ ಭವಿಷ್ಯದ ನಿಯೋಜನೆಗಳನ್ನು ನಿರ್ವಹಿಸಿ",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ಭವಿಷ್ಯದ ಯೋಜನೆಗಳನ್ನು ದಾಖಲಿಸಿ",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "ವೈದ್ಯರ ಭೇಟಿ ಅಥವಾ ಪ್ರಯಾಣದ ಯೋಜನೆಗಳಂತಹ ಭವಿಷ್ಯದ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ಕ್ಯಾಲೆಂಡರ್‌ಗೆ ದಾಖಲಿಸಬಹುದು. ಪಿಲ್ ಸೇವನೆಯ ಚಕ್ರದೊಂದಿಗೆ ಒಂದಾಗಿ ಅವುಗಳನ್ನು ಪರಿಶೀಲಿಸಬಹುದಾದ್ದರಿಂದ, ನಿಮ್ಮ ಮಾಸಿಕ ಚಕ್ರದ ವೇಳಾಪಟ್ಟಿಗಳನ್ನು ಪರಿಗಣಿಸಿ ಯೋಜನೆ ರೂಪಿಸಬಹುದು.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "ಆರೋಗ್ಯದೊಂದಿಗೆ ಸಂಪರ್ಕ",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "ಹೆಲ್ತ್‌ಕೇರ್‌ ಜೊತೆಗೆ ಮಾಸಿಕ ಚಕ್ರದ ದಾಖಲೆಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳಿ",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "ಆರೋಗ್ಯ ಅಪ್ಲಿಕೇಶನ್‌ಗಳೊಂದಿಗೆ ಸಂಯೋಜಿಸಬಹುದು",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilll ನಲ್ಲಿ ದಾಖಲಿಸಿದ ಮಾಸಿಕ ದತ್ತಾಂಶವನ್ನು ಆರೋಗ್ಯ ಅಪ್ಲಿಕೇಶನ್ಗಳೊಂದಿಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸಮನ್ವಯಗೊಳಿಸಬಹುದು. ಆರೋಗ್ಯ ಅಪ್ಲಿಕೇಶನಿನ ಇತರ ಆರೋಗ್ಯ ದತ್ತಾಂಶಗಳೊಡನೆ ಒಟ್ಟಿಗೆ ಪರಿಶೀಲಿಸಬಹುದು ಮತ್ತು ಇತರ ಅಪ್ಲಿಕೇಶನ್ಗಳಲ್ಲೂ ಈ ಮಾಸಿಕ ದತ್ತಾಂಶವನ್ನು ಬಳಸಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ。",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "ಅಧಿಸೂಚನೆಯಿಂದ ನೇರವಾಗಿ ದಾಖಲಿಸಿ",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "ಅಪ್ ತೆರೆಯದೆ ಅಧಿಸೂಚನೆಯಲ್ಲಿ ದಾಖಲಿಸಿ",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "ಅಧಿಸೂಚನಾ ಪರದಿಯಲ್ಲಿ ಒಂದೇ ಟ್ಯಾಪ್‌ನಲ್ಲಿ ಔಷಧಿ ಸೇವನೆಯ ದಾಖಲೆ",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "リマインダー通知を長押しすると「服用した」のアクションが表示され、アプリを開かずに服用を記録できます。",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "ಪಿಲ್‌ಶೀಟ್‌ಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸೇರಿಸಿ",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "ಮುಂದಿನ ಶೀಟ್ ಅನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ರಚಿಸಿ",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "ಮುಂದಿನ ಪಿಲ್‌ಶೀಟ್‌ನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ರಚಿಸಿ",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "ಪ್ರಸ್ತುತ ಪಿಲ್‌ಶೀಟ್ ಗುಂಪು ಮುಗಿದಾಗ, ಹೊಸ ಪಿಲ್‌ಶೀಟ್ ಗುಂಪು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ರಚಿಸಲಾಗುತ್ತದೆ. ಕೈಯಿಂದ ಮ್ಯಾನುಯಲ್‌ ಬದಲಾವಣೆ ಮಾಡುವ ಅಗತ್ಯವಿಲ್ಲದಿರುವುದರಿಂದ ಯಾವುದೇ ದಾಖಲೆ ಕಳೆದುಹೋಗುವುದಿಲ್ಲ.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "ಘಂಟೆಯಂತೆ ಎಚ್ಚರಿಸುವ ಅಲಾರ್ಮ್",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "ಸೈಲೆಂಟ್ ಮೋಡ್‌ನಲ್ಲಿದ್ದರೂ ಸಹ ಖಚಿತವಾಗಿ ಕೇಳಿಸಿಕೊಳ್ಳುವ ಸೂಚನೆ",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "ಘಡಿಯ ಅಲಾರ್ಮ್‌ನಂತಹ ಔಷಧ ಸೇವನೆ ಎಚ್ಚರಿಕೆ",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 ಮತ್ತು ನಂತರದ ಆವೃತ್ತಿಗಳಲ್ಲಿ ಲಭ್ಯವಿರುವ AlarmKit ಅನ್ನು ಬಳಸಿಕೊಂಡು, ಸೈಲೆಂಟ್ ಮೋಡ್ ಅಥವಾ ಫೋಕಸ್ ಮೋಡ್‌ನಲ್ಲಿದ್ದರೂ ಸಹ ಖಚಿತವಾಗಿ ಕೇಳಿಬರುವ ಎಚ್ಚರಿಕೆ ಆಲಾರ್ಮ್ ಮೂಲಕ ಗೋಳಿ ಸೇವಿಸುವ ಸಮಯವನ್ನು ಸೂಚಿಸುತ್ತದೆ.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "ಇಂದಿನ ಪಿಲ್ ಸಂಖ್ಯೆಯನ್ನು ಹೊಂದಿಸಿ",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "番号がずれたら設定で修正",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "ಇಂದು ತೆಗೆದುಕೊಳ್ಳುವ ಪಿಲ್ ಸಂಖ್ಯೆಯನ್ನು ಬದಲಾಯಿಸಬಹುದು",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "飲み忘れや取り違えでピルシート上の番号と実際の服用がずれたときに、今日飲むピル番号を手動で合わせ直せます。ホームのピル数字表示からも同じ画面を開けます。",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "ಸೇವನೆ ವಿರಾಮ ಅವಧಿಯನ್ನು ದಾಖಲಿಸಿ",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "ಔಷಧಿ ವಿರಾಮ ಮತ್ತು ಮಧ್ಯಂತರ ನಿಲ್ಲುವಿಕೆಯನ್ನು ನಿಖರವಾಗಿ ನಿರ್ವಹಿಸಿ",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "ಗೋಳಿ ಸೇವೆಯನ್ನು ವಿರಾಮಗೊಳಿಸುವುದು",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "ನೀವು ಕೆಲವು ಕಾಲದವರೆಗೆ ಔಷಧಿ ಸೇವನೆ ನಿಲ್ಲಿಸಿದ ಅವಧಿಯನ್ನು ಪಿಲ್‌ಶೀಟ್‌ನಲ್ಲಿ ದಾಖಲಿಸಬಹುದು. ವಿರಾಮದ ಸಮಯದಲ್ಲಿ ಪಿಲ್ ಸಂಖ್ಯೆ ಮುಂದುವರೆಯುವುದಿಲ್ಲ ಮತ್ತು ಮತ್ತೆ ಆರಂಭಿಸಿದಾಗ ತಕ್ಷಣ ದಾಖಲೆಗಳನ್ನು ಮುಂದುವರೆಸಬಹುದು.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "ಆಪ್ ಒಳಗಿನ ಸ್ಥಳ",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "ಫೋಕಸ್ ಮೋಡ್‌ನಲ್ಲಿ ಸಹ ಸೂಚನೆಗಳು ಬರುತ್ತವೆ",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "設定した時刻に確実にリマインド",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "ಒಂದು ಟ್ಯಾಪ್‌ನಲ್ಲಿ ಸುಲಭ ಸೆಟ್‌ಅಪ್",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "ಸೂಚನೆ ಸಂದೇಶವನ್ನು ಇಚ್ಛೆಯಂತೆ ಸಂಪಾದಿಸಿ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "ಪ್ರತಿದಿನದ ಔಷಧಿ ಸ್ಮರಣೆಗೆ ಅನ್ವಯ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "ಸ್ವಂತ ದಿನಾಂಕದ ಸೂಚನೆ ಸಂದೇಶ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "ಪಿಲ್‌ಶೀಟನ್ನು ದಿನಾಂಕದಂತೆ ತೋರಿಸಿ",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "ಕ್ಯಾಲೆಂಡರ್ ನೋಡದೆ ದಿನಾಂಕವನ್ನು ತಿಳಿದುಕೊಳ್ಳಬಹುದು",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "ಪಿಲ್ ಶೀಟ್ ಸೆಟ್ಟಿಂಗ್ಗಳಿಂದ ಬದಲಾವಣೆ ಮಾಡಬಹುದಾಗಿದೆ",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "ピルシートをタップで服用記録",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "間違えてもかんたん取り消し",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "ಯಾವುದೇ ಸಮಯದಲ್ಲೂ ನಿಮ್ಮ ಮದ್ದು ಸೇವನೆಯ ದಾಖಲೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "生理開始日をかんたん記録",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "周周期を自動で把握",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಹೊಂದಿಸಿ",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ದಾಖಲೆಯನ್ನು ಪಟ್ಟಿ ಮಾಡಿ",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "ಶರೀರದ ಸ್ಥಿತಿಯನ್ನು ದಾಖಲಿಸಿ ಮತ್ತು ಪರಿಶೀಲಿಸಿ",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "過去の記録をカレンダーで振り返り",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "ದಿನಾಂಕವನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ ನಿಮ್ಮ ಆರೋಗ್ಯವನ್ನು ದಾಖಲಿಸಿ",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "ಕ್ಯಾಲೆಂಡರ್‌ಗೆ ಕಾರ್ಯಕ್ರಮವನ್ನು ಸೇರಿಸಿ",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "通院日をかんたん管理",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "リマインダーで通知",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "ದಿನಾಂಕವನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ ಯೋಜನೆಯನ್ನು ಬರೆಯಿರಿ",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "ಮಾಸಿಕ ದಾಖಲೆಗಳನ್ನು ಡೇಟಾದೊಂದಿಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸಂಯೋಜಿಸಿ",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ಹೆಲ್ತ್ ಕ್ಯಾರೆ ಅಪ್ಲಿಕೇಶನ್‌ಗೆ ಸಮಕಾಲೀನಗೊಳಿಸಿ",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "ಸೂಚನೆಯ ಕ್ರಿಯೆಯಿಂದ ಸೇವೆ ದಾಖಲಿಸಿ",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "アプリを開かずに完了",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "ಪ್ರೀಮಿಯಂ ಸದಸ್ಯರಾಗಿ ಸೇರಿದಾಗ ತಕ್ಷಣ ಬಳಸಬಹುದು",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "ಪಿಲ್ ಶೀಟ್ ಮುಗಿದಾಗ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಬದಲಾಯಿಸಿ",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "ಹಸ್ತಚಾಲಿತವಾಗಿ ರಚಿಸುವ ಅಗತ್ಯವಿಲ್ಲ",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "ಸೆಟ್ಟಿಂಗ್ ಟ್ಯಾಬಿನ ಸ್ವಿಚ್ ಬಳಸಿ ಬದಲಿಸಿ",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "目覚まし同様のアラーム音",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 ಅಥವಾ ನಂತರ — ಸೆಟ್ಟಿಂಗ್ಸ್ ಟ್ಯಾಬ್‌ನಿಂದ ಸಕ್ರಿಯಗೊಳಿಸಿ",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "ಉಚಿತ ಸಂಖ್ಯಾ ಹೊಂದಾಣಿಕೆ",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "\"設定タブから変更できる\" を kn に翻訳してください。",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "ಮುಖಪುಟದ ಸಂಖ್ಯೆಯನ್ನು ಟ್ಯಾಪ್ ಮಾಡುವುದರಿಂದ ಕೂಡ ತೆರೆಯಬಹುದು",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "FREEFORM",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "ピルシート右上の歯車から開始",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "ಅವಧಿಯನ್ನು ಸಂಪಾದಿಸಲು ಮತ್ತು ಮರುಪ್ರಾರಂಭಿಸಲು ಸುಲಭ",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }

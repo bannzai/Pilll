@@ -2402,5 +2402,409 @@
   "inquiryContentRequired": "Խնդրում ենք մուտքագրել հարցման բովանդակությունը",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Շնորհակալություն մեկանգամյա պլանի գնման համար։ Եթե դուք բաժանորդագրված եք ամսական կամ տարեկան պլանին, խնդրում ենք չմոռանալ չեղարկել ձեր բաժանորդագրությունը։",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "«Միանգամյա գնման պլանը» գնելիս «ամսական/տարեկան պլանները» ավտոմատ կերպով չեղարկված չեն։",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "Այստեղ",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "Խնդրում ենք նախապես չեղարկել, ապա գնեք:",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "確認する",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "Խորհուրդ ենք տալիս գրանցվել",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "Գրանցվելով՝ կարող եք պահուստավորել ձեր տվյալները։",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "Ծանուցումներ ստանալ նաև լռության ռեժիմում",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Չմոռանաք դեղը՝ նույնիսկ «Մի խանգարել» ռեժիմում",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Ծանուցումները կհասչեն նաև լռակյաց ռեժիմում",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alert-ը միացնելով՝ կարող եք ստանալ դեղերի ընդունման ծանուցումներ նույնիսկ երբ սարքը «Չխանգարել» (Do Not Disturb) կամ «Լուռ» ռեժիմում է։ Որպեսզի չմոռանաք կարևոր դեղերի ընդունման ժամանակները, խորհուրդ ենք տալիս միացնել այն։",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "通知メッセージをカスタマイズ",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Կարող եք հարմարեցնել ծանուցման տեքտը",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "\"服用通知のメッセージを自由に編集\" の翻訳",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Դուք կարող եք սովորական «Ժամանակն է՝ դեղը ընդունելու» հաղորդագրությունը հարմարեցնել ձեր նախընտրած բառերին։ Փորձեք այն փոխել ոգեշնչող արտահայտությամբ կամ ձեր սիրելի կենդանու անվամբ՝ որպեսզի ամենօրյա ընդունումը ավելի հաճելի դառնա։",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Ամսաթվերը ցույց տալ պիլշիթում",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Մեկ հայացքով պարզեք, երբ պետք է ընդունել",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Պիլշիթում ամսաթվի ցուցադրում",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Պիլշիթի վանդակներում ամսաթվերը ցուցադրելով՝ մեկ հայացքով կարող եք տեսնել անցյալում ընդունված դեղամիջոցների պատմությունը և ապագա ընդունումների նախատեսված ժամանակները։ Փոխեք «Համար» և «Ամսաթիվ» ռեժիմների միջև՝ ընտրելով այն ցուցադրման ձևը, որը ձեզ առավել հարմար է։",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "服用履歴を簡単に振り返り",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Արագ կարելի է տեսնել, երբ եք ընդունել",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Գրանցեք հաբերի ընդունումը՝ գլխավոր էկրանից",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "Գլխավոր էկրանին գտնվող դեղաթերթիկին պարզապես հպվելով կարող եք գրանցել տվյալ օրվա դեղի ընդունումը։ Եթե սխալմամբ գրանցել եք, կրկին հպվելով կարող եք դա չեղարկել։ Դուք նաև կարող եք հետագայում ստուգել ընդունումների պատմությունը, ուստի կարող եք հանգիստ շարունակել։",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Դաշտանության գրանցում և կանխատեսում",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Ցիկլը հետևելու համար սկսվելու օրվա նշում",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Ամսաթվերի գրառում և կանխատեսում",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Պարզապես գրանցեք դաշտանը, և կարող եք դիտել ամբողջ անցյալ դաշտանային պատմությունը: Հաջորդ դաշտանի օրերը նույնպես ավտոմատ կերպով կանխատեսվում են, որպեսզի կարողանաք պլանավորել ձեր օրերը:",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Օրացույցում գրանցեք ձեր վիճակը",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Ամեն օր նշիր քո ինքնազգացողությունը օրացույցում",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Գրանցեք ձեր օրական ինքնազգացողությունը օրացույցում",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Կேալենդարから日付ըタップして体調・気分・症状などを記録できます。服用記録や生理記録と一緒に確認できるので、自分の体のリズムを把握できます。",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Կառավարեք ապագա հանդիպումները՝ օրինակ՝ բժշկական այցելությունները",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Տվյալ մուտքագրման թարգմանություն՝ kalendaran miri tavajri nkaragacum",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Դուք կարող եք օրացույցում գրանցել ապագա նշանակումները՝ օրինակ՝ բժշկի այցերը կամ ճանապարհորդությունները։ Օրացույցը հնարավոր է համադրել ձեր պիլերի ընդունման ցիկլի հետ, այնպես որ կարող եք պլանավորել՝ հաշվի առնելով նաև սպասվող դաշտանային օրերը։",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Առողջության հետ համաժամացում",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Կիսվեք ձեր դաշտանային գրառումներն Health հավելվածի հետ",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "Առողջապահության հետ համաժամեցում",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilllで記録した生理データをヘルスケアアプリと自動連携できます。ヘルスケア上の他の健康データと一緒に確認したり、他のアプリでも生理データを使えるようになります。",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Գրանցել ընդունումը անմիջապես ծանուցումից",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Ծանուցումից գրանցում՝ առանց հավելվածը բացելու",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Ծանուցման էկրանին՝ մեկ հպումով ընդունման գրառում",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Եթե երկար սեղմեք հիշեցման ծանուցումը, կհայտնվի «Ընդունել» գործողությունը, որը թույլ է տալիս առանց հավելվածը բացելու գրանցել, որ դուք ընդունել եք դեղը։",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Ավտոմատ ավելացնել հաբերի թերթիկները",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Ավտոմատ կերպով ստեղծել հաջորդ պիլշիթը",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "Ավտոմատ կերպով ստեղծել հաջորդ պիլշիթը",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Երբ ընթացիկ հաբաթերթերի խումբը ավարտվում է, նոր հաբաթերթերի խումբը ավտոմատ կերպով ստեղծվում է։ Ձեռքի միջոցով փոխարինում անել հարկավոր չէ, ուստի գրառումների բացթողումներ չեն լինի։",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Զարթուցիչի նման զանգող ահազանգ",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "Լռության ռեժիմում նույնպես վստահաբար հնչող ծանուցումներ",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Զարթուցիչի նման ընդունման հիշեցում",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 և ավելի ուշ հասանելի AlarmKit-ն օգտագործելով՝ հավելվածը կհիշեցնի պիլ վերցնելը՝ այնպիսի ազդարարումներով, որոնք վստահաբար կհնչեն նույնիսկ լուռ ռեժիմում կամ կենտրոնացման ռեժիմում։",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "Այսօր դեղը ընդունելու համար համարը տեղավորել",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Եթե համարները շեղվել են, կարգավորումների մեջ շտկեք",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Կարող եք փոխել այսօր ընդունվող պիլուլի համարը",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Ձեր կողմից մատչար կամ սխալ վերցնելու պատճառով պտղա թերթիկի վրա նշված թվերը և իրական ընդունումը տարբերվելիս կարող եք ձեռքով համադրել՝ այսօր ընդունելի նշանակվող պտղայի համար։ Դուք կարող եք նույն էկրանին բացել նաև գլխավորի պտուղների թվանշան ցույց տալուց։",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Հիշողության արձանագրություն՝ դեղաչափով դադարող ժամանակի նշում",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Ճշգրիտ կառավարեք դադարները և դեղի ընդունման ընդհատումները",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Պիլերի ընդունումը դադարեցնել",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Դուք կարող եք պիլշիթում (դեղաթերթիկում) նշում կատարել այն ժամանակահատվածի մասին, երբ ժամանակավորապես դադար եք վերցնում ընդունումից։ Դադարելու ընթացքում ընդունման համարը չի առաջընթացի, իսկ ընդունումն վերսկսելիս կարող եք անմիջապես շարունակել գրառումները։",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Ապլիկացիայի ներսում",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Ստացեք ծանուցումներ նաև կենտրոնացման ռեժիմում",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "設定した時刻に確実にリマインド",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Մի հպումով հեշտ կարգավորում",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Ծանուցման հաղորդագրությունը ազատորեն խմբագրեք",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "Արտացոլվում է ամենօրյա ընդունման հիշեցումներում",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "Ստեղծեք ձեր սեփական հիշեցման հաղորդագրությունը",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Պիլշիթը ցուցադրել ըստ ամսաթվի",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Ամսաթիվը պարզ է՝ առանց օրացույցին նայելու",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Պետք է փոխվի Pill-շիթ կարգավորումներից",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Պտղիկ թերթիկը սեղմելով գրանցել ընդունումը",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Սխալ էլ լինի՝ հեշտությամբ կարող եք չեղարկել",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Միշտ կարող եք դիտել ընդունումների պատմությունը",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Դաշտանի սկսվելու օրը հեշտությամբ գրանցեք",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Պարբերությունը ավտոմատ կերպով հայտնաբերեք",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Հարմարեցրեք կարգավորումները",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Օրացույցում գրառումները դիտել",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Գրառեք ձեր ինքնազգացողությունը և վերանայեք դրանք",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Անցյալ գրառումները դիտել օրացույցում",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Սեղմեք ամսաթվին՝ ձեր ինքնազգացողությունը գրանցելու համար",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "\"カレンダーに予定を書き込み\" を hy に翻訳してください。",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Բժշկական այցելությունների օրերը հեշտությամբ կառավարեք",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Ծանուցում՝ հիշեցման միջոցով",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Ամսաթվին հպեք և գրեք ձեր ծրագիրը",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Մենստրուացիայի գրառումների ավտոմատ համաժամացում",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Համաժամեցնել առողջության հավելվածի հետ",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Health-ի հետ համատեղելի",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "通知のアクションで服用記録",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Ավարտել առանց հավելվածը բացելու",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Premium բաժանորդագրությամբ անմիջապես հասանելի է",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Պիլշիթի ավարտը ավտոմատ կերպով փոխարկում է",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Ձեռքով ստեղծելու անհրաժեշտություն չկա",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Պարամետրերի вкладկայով անցուղճեք դիսպիչով",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Ձայն հնչելու է նույնիսկ լուռ կամ կենտրոնացման ռեժիմում",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Զարթուցիչի նման ծանուցման ձայն",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26以降・設定タブから有効化",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Անվճար համարների համընկման ֆունկցիա",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "Կարող եք փոխել «Կարգավորություններ» ներդիրից։",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Գլխավոր էջում թվին հպվելով նույնպես կարելի է բացել",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Անվճար դեղ չընդունելու օրերի գրանցում",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Սկսեք՝ սեղմելով պիլշիթի աջ վերին անկյունում գտնվող կարգավորումների պատկերակը։",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Մենստրուացիայի խմբագրումն ու վերսկսումը նույնպես հեշտ են",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }

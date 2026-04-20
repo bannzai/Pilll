@@ -2402,5 +2402,409 @@
   "inquiryContentRequired": "කරුණාකර විමසීමේ අන්තර්ගතය ඇතුළත් කරන්න",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "එක්වර ගෙවීම් සැලැස්මක් මිලදී ගැනීමට ඔබට ස්තූතියි. ඔබ මාසික හෝ වාර්ෂික සබ්ස්ක්‍රිප්ෂන් සඳහා දැනටමත් දායක වී ඇත්නම්, කරුණාකර එය අවලංගු කිරීමට අමතක නොවන්න.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "එක් වරක් ගෙවන සැලැස්මක් මිලදීගත් විටත්, මාසික/වාර්ෂික සැලැස්ම ස්වයංක්‍රීයව අවලංගු නොවේ。",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "මෙතැනින්",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "කරුණාකර මිලදී ගැනීමට පෙර අවලංගු කරන්න。",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "පරීක්ෂා කරන්න",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "ගිණුමක් ලියාපදිංචි කිරීමට අපි ඔබට යෝජනා කරමු",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "ලියාපදිංචි වීමෙන් ඔබේ දත්ත පිටපත් කළ හැක.",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "サイレントモードでも通知を受け取る",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "නිද්‍රා මෝඩ්හිදිත් බෙහෙත් ගැනීම අමතක වීම වැළැක්වන්න",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "නිහඬ මාදිලියේද දැනුම්දීම් ලැබේ",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alertを有効にすると、おやすみモードやマナーモード中でも服用通知を受け取れます。大事なピルの服用タイミングを逃さないために、ぜひ設定してみてください。",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "ඇඟවීම් පණිවිඩය සකසන්න",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "දැනුම්දීමේ පණිවුඩ අභිරුචි කළ හැකිය",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "පිල් මතක් කිරීමේ පණිවිඩය ඔබට කැමති පරිදි සංස්කරණය කරන්න",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "සාමාන්‍ය 'පිල් ගන්නා වේලාවයි' පණිවිඩය ඔබ කැමති වචන වලට අභිරුචි කළ හැක. උද්යෝගය දෙන වචනක් හෝ ඔබේ සත්ත්වයාගේ නම වැනි දේක් දාලා, දිනපතා පිල් ගැනීම තවදුරටත් රසවත් සහ සුවපහසු කරගන්න.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "පිල් පත්‍රිකාවේ දිනයන් පෙන්වන්න",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "ක්ෂණිකව කවදා ගන්නද බලන්න",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "පිල් පත්‍රයේ දිනය පෙන්විය හැක",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "පිල් ෂීට් හි කොටු වල දින නිරූපණය කිරීමෙන්, පසුගිය බෙහෙත් වාර්තා හා අනාගත බෙහෙත් සැලසුම් එකම නරඹුමකින් ඉක්මනින් බලගත හැක. “අංකය” මාදිලිය හා “දිනය” මාදිලිය අතර මාරු කර ඔබට ගැලපෙන පෙන්වීම තෝරන්න.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "පිල් භාවිතා කළ ඉතිහාසය පහසුවෙන් සමාලෝචනය කරන්න",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "ඔබ කවදා එය ගත්ද වහාම දැනගත හැක",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "මුල් තිරයෙන් පිල් ගත් බව සටහන් කරන්න",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "හෝම් තිරයේ පිල් ශීට් එක ටැප් කිරීම පමණක් කරමැන, එම දිනයේ ඔබ ගත් කපු බෙහෙත් සුරක්ෂිතව සටහන් කරගත හැක. වැරදිව සටහන් කළහොත් නැවත ටැප් කිරීමෙන් එය ආපසු අහෝසි කළ හැක. පසුකාලයේම ඔබ ගත් බෙහෙත් ඉතිහාසය බැලිය හැකි නිසා, ආරක්ෂිතවත් ප්‍රවේශයත් සමඟ පවත්වාගෙන යා හැක.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "ඔසන් වාර්තා කරන්න සහ අපේක්ෂාවන් සිතා ගන්න",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "මසික ආරම්භ දිනය සටහන් කර චක්‍රය අවබෝධ කරන්න",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "මාසික කාලය සටහන් කර, අනාවැකි බලාගත හැක.",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "මසිකය පැමිණුන විට එය සටහන් කිරීම පමණක් කළහොත්, පෙර මසික වාර්තා සියල්ල ලැයිස්තුවක් ලෙස බලන්න පුළුවන්. ලබන මසිකයේ අනුමානිත දිනයද ස්වයංක්‍රීයව අනාවරණය වෙයි, ඒනිසා ඔබට වඩා සැලසුම්ගතව ජීවත් විය හැක.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "දින දර්ශනයේ ඔබේ තත්ත්වය සටහන් කරන්න",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "දිනපතා ඔබේ සෞඛ්‍ය තත්ත්වය දිනදර්ශනයට සටහන් කරගන්න",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "දෛනික සෞඛ්‍ය තත්ත්වය දිනදර්ශනයට සටහන් කරන්න",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "කැලෙන්ඩරයෙන් දිනයක් තට්ටු කිරීමෙන් ඔබට ශරීර තත්ත්වය, මානසික හැඟීම් සහ රෝග ලක්ෂණ වැනි දේ සටහන් කළ හැක. මෙම සටහන් බෙහෙත් ගැනීමේ වාර්තා සහ මාසික වාර්තා සමඟ එකට බැලිය හැකි නිසා, ඔබේ ශරීර රිද්මය හොඳින් අවබෝධ කරගත හැක.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "රෝහලට යාම වැනි අනාගත සැලසුම් කළමනාකරණය",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "කැලවන්දර්යට භවිෂ්‍යයේ සැලසුම් සටහන් තබන්න",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "通院予定や旅行の予定など、未来の予定をカレンダーに書き込めます。ピルの服用周期と合わせて確認できるので、生理の予定も考慮した計画を立てられます。",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "සෞඛ්‍ය සමඟ සම්බන්ධ කිරීම",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "හෙල්ත් කෙයාර් සමඟ රජින වාර්තා බෙදා ගැනීම",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "සෞඛ්‍ය ඇප් සමඟ සම්බන්ධ විය හැක",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilll තුළ සටහන් කළ මාසික දත්ත ස්වයංක්‍රීයව සෞඛ්‍යය යෙදුම සමඟ සම්බන්ධ කළ හැක. එම දත්ත සෞඛ්‍යය ඇප් තුළ ඇති අනෙක් සෞඛ්‍ය දත්ත සමඟ එක්ව පරීක්ෂා කළ හැකි අතර, අනික අපේ යෙදුම්වලටද මාසික දත්ත භාවිතයට හැකි වේ.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "නිවේදනයෙන් සෘජුවම බෙහෙත් ගත් බව සටහන් කරන්න",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "යෙදුම විවෘත නොකර දැනුම්දීම් පණිවිඩයෙන්ම සටහන් කරන්න",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "නිවේදන තිරයෙන් එක් ටැප් කර බෙහෙත් ගත් බව සටහන් කරන්න",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "リマインダー通知を長押しすると「服用した」のアクションが表示され、アプリを開かずに服用を記録できます。",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "පිල් පත්‍රිකාව ස්වයංක්‍රීයව එක් කරන්න",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "ඊළඟ පත්‍රය ස්වයංක්‍රීයව ජනනය කරන්න",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "ඊළඟ පිල් පත්‍රය ස්වයංක්‍රීයව සාදන්න",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "වත්මන් පිල්ශීට් කණ්ඩායම අවසන් වන විට, නව පිල්ශීට් කණ්ඩායම ස්වයංක්‍රීයව නිර්මාණය වේ. අතින් මාරුවක් අවශ්‍ය නොවන බැවින්, ලේඛන හිඟ වීමක් සිදුවන්නේ නැත.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "උදේ නැගවීමට මෙන් ඇහෙන ඇලාර්ම්",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "නිශ්ශබ්ද මෝඩයේදීමත් නියතිව ඇහෙන දැනුම්දීම්",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "ඇලාර්ම් ක්ලොක් වැනි පිල් ගැනීමේ අනතුරු ඇඟවීම",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26以降で利用できるAlarmKitを使って、サイレントモードや集中モードでも確実に鳴るアラームでピルの服用を知らせます。",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "今日の服用番号を合わせる",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "番号がずれたら設定で修正",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "ඔබට අද ගන්නා පිල් අංකය වෙනස් කළ හැකිය",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "කඩපාඩුවකින් හෝ වෙනත් හේතුවක් නිසා පිල් ශීට්上的 අංකය සහ සැබැවින් ගත් පිළිවිල සූමුනු වූ විට, අද ගන්නේ කුමන පිල් අංකය යැයි ඔබට අතින් සකසගත හැකිය. ඔබට ගෘహ පිටුයේ පිල් අංකය පෙන්වීමෙන්ද ඒම ආකෘතිය මෙම තිරය විවෘත කළ හැකිය.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "පිල් ගැනීමේ විරාම කාලය සටහන් කරන්න",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "විරාම සහ අස්වීම් නිවැරදිව කළමනාකරණය කරන්න",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "පිල් භාවිතය අත්හිටුවන්න",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "ඔබට කාලයකට පිල් ගැනීම අත්හිටුවා තිබේද? ඒක පිල් ශීට් එකට සටහන් කළ හැක. නිවාඩුවේදී, පිල් අංකය ඉදිරිපත් නොවේ, නැවත ආරම්භ කළ පසු සටහන නැවත ආරම්භ කළ හැක.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "යෙදුම තුළ ස්ථානය",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Focus Mode ක්‍රියාත්මකව තිබුණත් දැනුම්දීම් ලැබේ",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "සැකසූ වේලාවට විශ්වාසවන්තව මතක් කරයි",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "ワンタップでかんたん設定",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "නිවේදන පණිවිඩය ඔබ කැමති පරිදි සංස්කරණය කරන්න",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "දෛනික ඖෂධ මතකදැනුම්වලට පෙන්වනු ලැබේ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "ඔබටම විශේෂිත දැනුම්දීමේ පණිවිඩයක්",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "පිල් පත්‍රිකාව දිනය අනුව පෙන්වන්න",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "කැලැන්ඩරය නොබලුවත් දිනය දැනගත හැක",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "පිල් ෂීට් සැකසුම්වලින් වෙනස් කළ හැකිය",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "පිල් පත්‍රය ටැප් කර ඔබ ගත් බව සටහන් කරන්න",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "වැරදි කළත් පහසුවෙන් අවලංගු කරන්න",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "ඔබේ බෙහෙත් ගැනීමේ ඉතිහාසය ඕනෑම වෙලාවක බලන්න",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "生理開始日をかんたん記録",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "චක්‍රිකාව ස්වයංක්‍රීයව හඳුනාගැනීම",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "සැකසුම් අභිරුචි කරන්න",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "කැලැන්ඩරයේ වාර්තා බලන්න",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "\"体調をメモして振り返り\" - 日本語からシンハラ語への翻訳",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "කැලෙන්ඩරයෙන් පසුගිය සටහන් නැවත බලන්න",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "දිනයක් ටැප් කර ඔබේ සෞඛ්‍ය තත්ත්වය සටහන් කරන්න",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "කැලේන්ඩරයෙහි නියමිත කාලයය ලියා දමන්න",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "රෝහලට යන දින පහසුවෙන් කළමනාකරණය",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "රිමයින්ඩරයෙන් දැනුම්දීම",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "දිනයක් ටැප් කර ඔබගේ සැළසුම ඇතුලත් කරන්න",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "මාසික වාර්තා ස්වයංක්‍රීයව දත්ත සමඟ සම්බන්ධ කිරීම",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "සෞඛ්‍ය යෙදුම සමඟ සමකාලීන කරන්න",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "නිවේදන ක්‍රියාවෙන් ගත් බව සටහන් කිරීම",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "යෙදුම විවෘත නොකර සම්පූර්ණ කරන්න",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "ප්‍රිමියම් දායකත්වය ලබාගත් වහාම භාවිතයට පුළුවන්",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "පිල් පත්‍රිකාව අවසන් වූ විට ස්වයංක්‍රීයව මාරු කරන්න",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "අතින් සාදන ක්‍රියාවලිය අවශ්‍ය නොවේ",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "සැකසුම් ටැබයේ ස්විච් එකෙන් මාරු කරන්න",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "සාමාන්‍ය ඇලර්ම් වැනි ශබ්දය",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 and later · Enable from Settings tab",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "නොමිලේ භාවිතා කළ හැකි අංක ගැලපීමේ විශේෂාංගය",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "සැකසුම් ටැබයෙන් වෙනස් කළ හැක.",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "හෝම් තිරයේ සංඛ්‍යාව ටැප් කිරීමෙන්ද විවෘත කළ හැක.",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "නොමිලේ භාවිතා කළ හැකි විරාම සටහන",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "පිල් පත්‍රයේ ඉහළ දකුණේ ඇති ගියර් ආයිකනයෙන් ආරම්භ කරන්න",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "මාසික කාලය සංස්කරණය කිරීම හා නැවත ආරම්භ කිරීම පහසුයි",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }

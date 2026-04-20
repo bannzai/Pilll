@@ -2402,5 +2402,409 @@
   "inquiryContentRequired": "กรุณากรอกเนื้อหาที่ต้องการสอบถาม",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "ซื้อแผนแบบซื้อขาดเรียบร้อยแล้ว ขอบคุณครับ/ค่ะ โปรดอย่าลืมยกเลิกแผนรายเดือน/รายปีหากคุณเคยสมัครใช้งานไว้",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "แม้ว่าคุณจะซื้อแผนซื้อขาดแล้ว การสมัครแบบรายเดือนหรือรายปีจะไม่ถูกยกเลิกโดยอัตโนมัติ",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "จัดการการสมัครสมาชิก",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "กรุณายกเลิกล่วงหน้าก่อนทำการซื้อ",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "ลองใช้",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "แนะนำให้ลงทะเบียนบัญชี",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "เมื่อลงทะเบียน จะสามารถสำรองข้อมูลได้",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "รับการแจ้งเตือนแม้ในโหมดเงียบ",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "ป้องกันการลืมกินยาทั้งในโหมดห้ามรบกวน",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "サイレントモードでも通知が届く",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alertを有効にすると、おやすみモードやマナーモード中でも服用通知を受け取れます。大事なピルの服用タイミングを逃さないために、ぜひ設定してみてください。",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "แจ้งเตือนข้อความที่กำหนดเอง",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "คุณสามารถปรับแต่งข้อความการแจ้งเตือนได้",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "แก้ไขข้อความเตือนการ服用ได้อย่างอิสระ",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "คุณสามารถปรับข้อความเริ่มต้น 'ถึงเวลาทานยาแล้ว' ให้เป็นคำที่คุณชอบได้ ลองเปลี่ยนเป็นคำที่ช่วยสร้างแรงจูงใจ หรือชื่อสัตว์เลี้ยง เพื่อทำให้การทานยาประจำวันสนุกขึ้น",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "แสดงวันที่บนแผ่นยา",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "ดูเวลาในการทานได้ทันที",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "แสดงวันที่บนตารางยาคุม",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "หน้าตารางเม็ดยาแสดงวันที่ในช่อง ทำให้คุณสามารถดูประวัติการทานยาในอดีตและกำหนดการทานยาในอนาคตได้ในครั้งเดียว เปลี่ยนสลับระหว่างโหมด \"หมายเลข\" และโหมด \"วันที่\" เพื่อเลือกการแสดงผลที่เหมาะกับคุณ",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "ย้อนดูประวัติการรับประทานยาได้อย่างง่ายดาย",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "คุณจะทราบได้ทันทีว่าได้ทานเมื่อไหร่",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "บันทึกการรับประทานยาคุมกำเนิดที่หน้าหลัก",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "ホーム画面のピルシートをタップするだけで、その日の服用を記録できます。間違えて記録した場合も、もう一度タップすれば取り消せます。服用履歴も後から確認できるので、安心して続けられます。",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "บันทึกและคาดการณ์ประจำเดือน",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "บันทึกวันแรกของประจำเดือนเพื่อทราบรอบเดือน",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "บันทึกและทำนายรอบเดือนได้",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "เมื่อประจำเดือนมาบันทึกไว้เพียงอย่างเดียว คุณก็สามารถดูประวัติการมีประจำเดือนย้อนหลังเป็นรายการได้ ระบบยังคาดการณ์วันประจำเดือนครั้งถัดไปให้โดยอัตโนมัติ ช่วยให้คุณวางแผนล่วงหน้าได้",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "บันทึกสภาพร่างกายในปฏิทิน",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "บันทึกสภาพร่างกายประจำวันไว้ในปฏิทิน",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "บันทึกสภาพร่างกายประจำวันลงในปฏิทิน",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealTitle": "มาจดแผนในอนาคตกันเถอะ",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "จัดการตารางนัดหมายในอนาคต เช่น นัดไปคลินิก",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "บันทึกกำหนดการในอนาคตลงในปฏิทิน",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "โปรดแปลข้อความจากภาษาญี่ปุ่นเป็นภาษาไทยตามคำขอของผู้ใช้",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "เชื่อมต่อกับแอปสุขภาพ",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "แชร์บันทึกประจำเดือนกับแอปสุขภาพ",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "คุณสามารถซิงค์ข้อมูลรอบเดือนที่บันทึกใน Pilll กับแอปสุขภาพโดยอัตโนมัติ เพื่อดูร่วมกับข้อมูลสุขภาพอื่นๆ บนแอปสุขภาพ หรือเพื่อให้แอปอื่นๆ สามารถเข้าถึงข้อมูลรอบเดือนได้",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "บันทึกทันทีจากการแจ้งเตือน",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "บันทึกผ่านการแจ้งเตือนโดยไม่ต้องเปิดแอป",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "แตะครั้งเดียวบนหน้าการแจ้งเตือนเพื่อบันทึกการรับประทาน",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "เมื่อกดค้างที่การแจ้งเตือน จะมีตัวเลือก 'ทานแล้ว' ให้เลือก ซึ่งช่วยให้คุณบันทึกการรับประทานยาได้โดยไม่ต้องเปิดแอป",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "เพิ่มแผงยาคุมอัตโนมัติ",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "สร้างแผ่นยาถัดไปโดยอัตโนมัติ",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "สร้างแผ่นยาคุมถัดไปโดยอัตโนมัติ",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "เมื่อกลุ่มแผงยาคุมในปัจจุบันสิ้นสุดลง ระบบจะสร้างกลุ่มแผงยาใหม่ให้อัตโนมัติ ไม่ต้องสลับด้วยตนเอง และจะไม่มีการขาดตอนของการบันทึก",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "เตือนเหมือนนาฬิกาปลุก",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "แจ้งเตือนแม้เครื่องอยู่ในโหมดเงียบ",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealBody": "ใช้ AlarmKit ที่มีใน iOS 26 ขึ้นไป เพื่อแจ้งเตือนการทานยาด้วยเสียงเตือนซึ่งจะดังแน่นอนแม้ในโหมดเงียบหรือโหมดโฟกัส",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "ปรับหมายเลขการทานวันนี้",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "หากหมายเลขไม่ตรง ให้แก้ไขได้ที่การตั้งค่า",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "เปลี่ยนหมายเลขเม็ดยาที่จะทานวันนี้",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "หากหมายเลขบนแผ่นยาหรือการนับเม็ดไม่ตรงกับการกินจริง เนื่องจากการลืมกินหรือการสลับเม็ด คุณสามารถปรับหมายเลขเม็ดยาสำหรับวันนี้ด้วยตนเองได้ นอกจากนี้ คุณยังสามารถเปิดหน้าจอเดียวกันนี้จากการแสดงหมายเลขเม็ดบนหน้าหลักได้",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "บันทึกช่วงหยุดทานยา",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "จัดการการหยุดยาและการขัดจังหวะอย่างแม่นยำ",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "แปล",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "คุณสามารถบันทึกช่วงเวลาที่หยุดรับประทานยาบนแผ่นยา ในช่วงพักจะไม่เลื่อนไปยังหมายเลขเม็ดยาถัดไป และเมื่อกลับมาเริ่มอีกครั้งจะสามารถบันทึกต่อได้ทันที",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "สถานที่ภายในแอป",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "集中モード中でも通知が届く",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "แจ้งเตือนตรงตามเวลาที่ตั้งไว้",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "ตั้งค่าได้ง่ายเพียงแตะครั้งเดียว",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "แก้ไขข้อความการแจ้งเตือนได้ตามต้องการ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "ทุกวันในการแจ้งเตือนการทานยา",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "ตั้งเป็นข้อความแจ้งเตือนส่วนตัวของคุณ",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "แสดงตารางยาคุมตามวันที่",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "カレンダーを見なくても日付がわかる",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "สามารถเปลี่ยนได้จากการตั้งค่าแผ่นยา",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "ピルシートをタップで服用記録",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "間違えてもかんたん取り消し",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "ดูประวัติการทานยาได้ทุกเมื่อ",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "บันทึกวันเริ่มประจำเดือนอย่างง่าย",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "ติดตามรอบเดือนโดยอัตโนมัติ",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "ปรับแต่งการตั้งค่า",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "カレンダーで記録を一覧",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "บันทึกอาการและทบทวน",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "ดูบันทึกย้อนหลังในปฏิทิน",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "แตะวันที่เพื่อบันทึกสภาพร่างกาย",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "เพิ่มรายการในปฏิทิน",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "จัดการวันนัดได้อย่างง่าย",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "แจ้งเตือนด้วยการเตือนความจำ",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "แตะวันที่เพื่อเพิ่มกำหนดการ",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "เชื่อมต่อข้อมูลบันทึกประจำเดือนโดยอัตโนมัติ",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ซิงค์กับแอปสุขภาพ",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "รองรับ Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "บันทึกการทานจากการแจ้งเตือน",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "เปิดแอปไม่ต้องเสร็จ",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "ใช้งานได้ทันทีเมื่อเป็นสมาชิก Premium",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "ピルシート終了で自動切り替え",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "ไม่จำเป็นต้องสร้างด้วยตนเอง",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "สลับโดยใช้สวิตช์ในแท็บการตั้งค่า",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "เสียงแจ้งเตือนแบบเดียวกับนาฬิกาปลุก",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 ขึ้นไป・เปิดใช้งานได้จากแท็บการตั้งค่า",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "หมายเลขจับคู่ที่ใช้ได้ฟรี",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "สามารถเปลี่ยนได้จากแท็บการตั้งค่า",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "แตะตัวเลขบนหน้าหลักก็เปิดได้",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "ฟรีสำหรับการบันทึกวันหยุดยาคุม",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "เริ่มจากการแตะไอคอนรูปเฟืองที่มุมบนขวาของแผ่นยา",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "แก้ไขหรือเริ่มรอบประจำเดือนได้อย่างง่ายดาย",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealBody": "แตะวันที่ในปฏิทินเพื่อบันทึกสภาพร่างกาย อารมณ์ อาการต่างๆ ฯลฯ เมื่อดูร่วมกับบันทึกการทานยาและบันทึกประจำเดือน จะช่วยให้คุณเข้าใจจังหวะของร่างกายได้ดีขึ้น",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealHeadline": "การแจ้งเตือนการกินยาคล้ายนาฬิกาปลุก",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
   }
 }

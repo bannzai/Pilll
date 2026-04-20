@@ -2402,5 +2402,409 @@
   "inquiryContentRequired": "Lūdzu, ievadiet ziņojuma saturu",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "Paldies, ka iegādājāties vienreizējā pirkuma plānu. Ja jums ir aktīvs mēneša vai gada abonements, lūdzu, neaizmirstiet to atcelt.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "Pat ja iegādājaties vienreizējo plānu, jūsu mēneša vai gada abonements netiks automātiski atcelts.",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "Pārvaldīt abonementu",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "Lūdzu atceliet esošo abonementu pirms iegādes.",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "Izmēģināt",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "Iesakām izveidot kontu",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "Reģistrējoties, varēsit datus dublēt.",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "Saņemt paziņojumus pat klusajā režīmā",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "Neaizmirstiet tableti arī Netraucēt režīmā",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "Tīklājā klusuma režīmā paziņojumi tiks saņemti",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Ieslēdzot Critical Alert, jūs varēsiet saņemt paziņojumus par tabletes lietošanu pat tad, kad ir ieslēgts “Netraucēt” vai klusuma režīms. Lai nepalaistu garām svarīgu tabletes lietošanas laiku, lūdzu, aktivizējiet šo iestatījumu.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Pielāgot paziņojuma tekstu",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Varat pielāgot paziņojumu tekstu.",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Brīvi rediģējiet zāļu lietošanas atgādinājuma ziņojumu",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Varat pielāgot noklusējuma paziņojumu \"Laiks iedzert tableti\" pēc savas izvēles. Izvēlieties motivējošu frāzi, mīļvārdu vai pat mājdzīvnieka vārdu — tas var padarīt ikdienas lietošanu patīkamāku.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "Rādīt datumus tablešu lapā",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "Rādīt datumus tablešu lapā",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "Tablešu lapas šūnās attēlotie datumi ļauj uzreiz pārskatīt gan iepriekšējo lietošanas vēsturi, gan nākotnes lietošanas plānus. Pārslēdzieties starp \"Numura\" un \"Datuma\" režīmu, lai izvēlētos sev atbilstošāko skatu.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "Vienkārši pārskatiet tablešu lietošanas vēsturi.",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "Varat uzreiz redzēt, kad to lietojāt.",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealBody": "Mājas ekrānā pietiek vienreiz pieskarties tablešu lapiņai, lai atzīmētu tabletes lietošanu šai dienai. Ja ieraksts izrādās kļūdains, pieskaroties vēlreiz to var atcelt. Lietošanas vēsturi var pārskatīt vēlāk, tāpēc vari turpināt bez raizēm.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "Menstruāciju reģistrēšana un prognozēšana",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "Pierakstiet menstruācijas sākuma datumu, lai saprastu savu ciklu.",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "Menstruāciju ierakstīšana un prognozēšana",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "Kad iestājas mēnešreizes, vienkārši tās ierakstiet — jūs varēsiet skatīt iepriekšējo menstruāciju vēsturi sarakstā. Programma automātiski paredzēs nākamo menstruāciju datumu, ļaujot jums plānot savas dienas.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "Reģistrēt pašsajūtu kalendārā",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "Ieraksti ikdienas pašsajūtu kalendārā",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "Reģistrējiet ikdienas pašsajūtu kalendārā",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "Kalendārā pieskarieties datumam, lai pierakstītu savu pašsajūtu, garastāvokli, simptomus u.c. Ierakstus var skatīt kopā ar tablešu lietošanas un menstruāciju ierakstiem, tādējādi labāk izprotot sava ķermeņa ritmu.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "Pieraksti nākotnes plānus",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "Pārvaldiet nākotnes notikumus, piemēram, ārsta vizītes",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "Kalendārā ierakstiet nākotnes notikumus",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "Jūs varat ierakstīt nākotnes notikumus kalendārā, piemēram, ārsta apmeklējumus vai ceļojumus. Tie parādīsies kopā ar jūsu tablešu lietošanas ciklu, lai varētu plānot, ņemot vērā arī paredzamās menstruācijas.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "Sinhronizācija ar Veselību",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "Kopīgot menstruāciju ierakstus ar Veselību",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilll lietotnē reģistrētos menstruāciju datus var automātiski sinhronizēt ar veselības lietotni. Tos varēs apskatīt kopā ar citiem veselības datiem un izmantot arī citās lietotnēs.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "Reģistrēt lietošanu tieši no paziņojuma",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "Ierakstīt paziņojumā, neatverot lietotni",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "Vienu pieskārienu reģistrēšana paziņojumu ekrānā",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "Ilgi nospiežot atgādinājuma paziņojumu, parādīsies darbība „Atzīmēt kā lietotu”, kas ļauj reģistrēt tabletes lietošanu, neatverot lietotni.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "Automātiska tablešu plāksnes pievienošana",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "Automātiski izveidot nākamo tablešu lapu",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "Automātiski izveidot nākamo tablešu loksni",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "Kad pašreizējā tablešu plākšņu grupa beidzas, tiek automātiski izveidota jauna tablešu plākšņu grupa. Nav nepieciešama manuāla pārslēgšana, tādējādi ieraksti netiks palaisti garām.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "Zvana kā modinātājs",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26以降で利用できるAlarmKitを使って、サイレントモードや集中モードでも確実に鳴るアラームでピルの服用を知らせます。",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "今日の服用番号を合わせる",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "Ja numuri ir nobīdīti, labojiet tos iestatījumos.",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "Mainīt šodienas tabletes numuru",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "Ja tablešu loksnē redzamie numuri nesakrīt ar faktisko lietošanu (piemēram, ja esat kādu tableti aizmirsis vai sajaucis), jūs varat manuāli pielāgot šodien lietojamās tabletes numuru. To pašu ekrānu varat atvērt arī no sākuma ekrāna, pieskaroties tabletes numura rādījumam.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "Reģistrēt pauzi lietošanā",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "Precīza paužu un pārtraukumu vadība",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "Pauzēt tablešu lietošanu",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "Jūs varat pierakstīt tablešu lapā periodus, kad uz laiku pārtraucat lietot tabletes. Pārtraukuma laikā tablešu numurs nepalielinās, un atsākot lietošanu, ierakstīšanu varēsiet atsākt nekavējoti.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "Vieta lietotnē",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "Paziņojumi tiek saņemti arī fokusēšanas režīmā",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "Atgādinās precīzi iestatītajā laikā",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "Viegla iestatīšana ar vienu pieskārienu",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Brīvi rediģēt paziņojumus",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "Tiks atspoguļots ikdienas atgādinājumos",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "Personalizējiet paziņojuma ziņojumu",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "Datumu var redzēt, neatverot kalendāru.",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "Var mainīt tablešu loksnes iestatījumos.",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "Ja kļūdāties — viegli atsaukt",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "Pārskatiet lietošanas vēsturi jebkurā laikā",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "Vienkārši pierakstiet menstruācijas sākuma datumu",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "Automātiski nosaka ciklu",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "Pielāgot iestatījumus",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "Skatīt ierakstus kalendārā",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "Fiksējiet pašsajūtu un pārskatiet",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "Pārskatīt iepriekšējos ierakstus kalendārā",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "Klikšķiniet uz datuma, lai ierakstītu savu pašsajūtu",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "Pievienot ierakstu kalendārā",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "Vienkārši pārvaldiet ārsta apmeklējumu datumus",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "Paziņot ar atgādinājumu",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "Pieskarieties datumam, lai pievienotu ierakstu",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "Menstruāciju ierakstu automātiska datu sinhronizācija",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "Sinhronizēt ar veselības lietotni",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Saderīgs ar Apple Health",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "Reģistrēt lietošanu, izmantojot paziņojuma darbību",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "Pabeigt bez lietotnes atvēršanas",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "Pieejams uzreiz ar Premium abonementu",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "Automātiski pārslēgties, kad beidzas tablešu lapa.",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "Nav nepieciešama manuāla izveide",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "Skanēs arī klusajā/fokusa režīmā",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "Modinātāja tipa trauksmes skaņa",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 un jaunākās versijās — aktivizējiet to Iestatījumu cilnē",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "Bezmaksas numuru saskaņošanas funkcija",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "To var mainīt iestatījumu cilnē.",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "Var atvērt arī, pieskaroties sākumlapas skaitlim.",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "Bezmaksas pārtraukumu uzskaite",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "Sāciet, pieskaroties zobrata ikonai tablešu lapas labajā augšējā stūrī.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "Menstruāciju rediģēšana un atsākšana ir vienkārša.",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "Vieglā skatā redzams, kad lietot",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "Reģistrēt tablešu lietošanu mājas ekrānā",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealShortDescription": "Paziņojumi, kas skanēs pat klusajā režīmā",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "Atgādinājums par lietošanu — gluži kā modinātājs",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealPoint1": "Rādīt tablešu lapu pēc datuma",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "Pieskarieties tablešu lapai, lai reģistrētu lietošanu",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "Pārslēdziet, izmantojot iestatījumu cilnes slēdzi.",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
   }
 }

@@ -2402,5 +2402,409 @@
   "inquiryContentRequired": "مهرباني وکړئ د تماس متن دننه کړئ",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "د یو ځل د پیرود پلان اخیستلو لپاره مننه. که چیری تاسو د میاشتني یا کلني پلان ګډون کړی یاست، نو د لغوه کولو هیر مه کوئ.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "・که د «یو ځل پیرودنې پلان» واخلئ، «میاشتنی/کلنی پلان» به اتوماتیک لغوه نه کیږي.",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "دلته",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "له مخکې لغوه کړئ او بیا یې واخلئ۔",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "تایید کړئ",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "د حساب ثبت نام سپارښتنه کیږي",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "که ثبت نام وکړئ، ستاسو ډاټا بیک اپ کیدی شي",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "د خاموش حالت کې هم خبرتیاوې ترلاسه کړئ",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "د خاموشۍ حالت کې هم د دارو د هیرولو مخه ونیسئ",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "د خاموشۍ حالت کې هم خبرتیاوې رارسیږي",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "که چیرې Critical Alert فعال کړئ، نو د آرامۍ حالت (Do Not Disturb) یا د خاموشۍ حالت کې هم د دوا د خوړلو خبرتیاوې ترلاسه کولی شئ. د مهمو پیلونو د خوړلو وخت له لاسه مه ورکوئ، نو خامخا یې ترتیب کړئ.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "د خبرتیا پیغام دودیز کړئ",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "د خبرتیا متن دودیز کولی شئ",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "د دوا د خبرتیا پیغام آزادانه سمول",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "تاسو کولی شئ چې معیاري \"د حبوبو د خوړلو وخت دی\" خپلې خوښې کلمو ته بدل کړئ. هڅوونکې کلمې، د خپل ګرانپیژندلي ژوي نوم، یا نورې جملې هڅه وکړئ چې ستاسو ورځنۍ دوا اخیستل ډیر خوندور کوي.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "د پیل شیټ پر مخ نیټې ښکاره کول",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "یو نظر کې وګورئ چې کله دوا وخورئ",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "د پیل شیټ پر نیټه ښودل کیدای شي",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "د پیل شیټ د خانو کې نیټې ښودلو سره، تاسې کولای شئ د تیرو دوا اخیستلو ریکارډ او د راتلونکو دوا اخیستلو مهالویش یوه کتنه کې وګورئ. د «شمیره» حالت او «نیټه» حالت تر مینځ بدلون راولئ او خپل لپاره مناسب ډول غوره کړئ.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "د درملو د کارولو تاریخچه اسانه وګورئ",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "د دوا د خوړلو وخت سمدستي وپیژنئ",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "د کور سکرین کې د حبوبو د مصرف ثبتول",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "د کور سکرین پر د پیل شیټ یوازې د لمسولو سره، تاسو کولی شئ د هغه ورځې د دوا اخیستل ثبت کړئ. که چیرې غلطي وشي، بیا یو ځل ولمسئ ترڅو لغوه کړئ. د دوا اخیستلو تاریخچه هم وروسته کتلی کیدای شي، نو تاسو کولی شئ د آرامۍ سره دوام ورکړئ.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "د حیض ثبتول او وړاندوینه",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "د حیض د پیل نیټه ثبت کړئ او دوره وپیژنئ",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "د حیض ثبت او وړاندوینه",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "کله چې ستاسو د میاشتنۍ دورې راشي، یوازې د ثبتولو سره، تاسو کولی شئ د تیرو میاشتنیو دورو بشپړه لیست وګورئ. د راتلونکې میاشتنۍ دورې تمه شوې نیټه هم اتوماتیک وړاندوینه کیږي، نو تاسو کولی شئ چې پلان جوړ کړئ.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "د کیلنڈر سره روغتیا ثبت کړئ",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "د هرې ورځې روغتیا تقویم کې ثبت کړئ",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "د ورځني روغتیا حالت کلنداریز کې ثبت کول",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "تاسو کولی شئ د کالنۍ نه د نیټې پر ټک کولو سره خپل روغتیایي حالت، مزاج، نښې او نور ثبت کړئ. ځکه چې تاسو کولی شئ دا د درمل اخیستلو ریکارډونو او د میاشتني ریکارډونو سره یوځای وګورئ، نو تاسو کولی شئ د خپل بدن ریتم وپیژنئ.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "راتلونکي پلانونه ولیکئ",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "د راتلونکو مهالونو اداره کول لکه د ډاکټر ليدو مهال",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "د کلندار کې د راتلونکو پلانونو ثبتول",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "تاسو کولی شئ راتلونکي پلانونه، لکه د ډاکتر لیدنې او د سفر مهالویش، کالنډر کې ثبت کړئ. ځکه چې دا د پیل د خوراک دورې سره یوځای کتل کیدای شي، تاسو کولی شئ هغه پلانونه جوړ کړئ چې ستاسو د حیض وخت هم پکې شامل وي.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "د روغتیا پاملرنې سره یوځای کول",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "د حیض ریکارډونه د روغتیا پاملرنې سره شریک کول",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "له HealthCare سره یوځای کیدلی شئ",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "تاسو کولای شئ چې د Pilll نه ثبت شوي د حیض معلومات د روغتیا اپلیکیشن سره اوتومات یوځای کړئ. تاسو کولای شئ دا د روغتیا اپلیکیشن کې د نورو روغتیا معلوماتو سره یوځای وګورئ، او د نورو اپلیکیشنونو کې هم د حیض معلومات کارولای شئ.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "له خبرتیا نه مستقیم د دوا ثبت",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "پرته له اپ خلاصولو د خبرتیا له لارې ثبت کړئ",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "د خبرتیا پر سکرین د یوه ټچ سره د دوا د اخیستلو ثبتول",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "که تاسو د یادونې خبرتیا اوږده فشار ورکړئ، د 'دوا واخیستله' عمل ښکاره کیږي، او تاسو کولی شئ پرته له اپلیکیشن پرانیستلو د دوا اخیستل ثبت کړئ.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "د حبو پاڼه اتوماتیک اضافه کړئ",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "د راتلونکي شیټ اتوماتیک جوړول",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "د راتلونکي د حبوبو پاڼه اتوماتیک جوړول",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "کله چې اوسنی پیل شیټ ګروپ پای ته ورسیږي، نوی پیل شیټ ګروپ به اتوماتیک جوړ شي. د لاسي بدلون ته اړتیا نشته، او د ریکارډونو کې هیڅ خلا نه پیدا کیږي.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "د ویښولو زنګ غوندې الارم",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "خبرتیاوې چې د خاموشۍ حالت کې هم باوري ډول غږیږي",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "د بیدارۍ الارم غوندې د درملو اخیستلو الارم",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "د iOS 26 او وروستیو نسخو کې د AlarmKit له کارولو سره، د خاموش حالت یا د تمرکز حالت کې هم د ډاډمن اعلام له لارې د حبو د استعمال یادونه کوو.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "د نن ورځې د دوا شمیره سمول",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "که شمیره ناسمه وي، د ترتیباتو له لارې سمه کړئ",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "نن د حبې شمیره بدلولی شئ",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "کله چې د هیرولو یا غلطۍ له امله د پیل شیټ پر شمیره او اصلي مصرف ترمینځ توپیر رامنځته شي، تاسو کولی شئ د نن ورځې د پیل شمیره لاسي سمه کړئ. همدا پرده د کور د پیل شمیرې ښودنې له لارې هم خلاصولی شئ.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "د دوا اخیستو د وقفې موده ثبت کول",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "د دوا د وقفې او بندولو دقیق مدیریت",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "د حبو د خوړلو وقفه کول",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "تاسو کولی شئ د پیل شیټ کې د یوې مودې لپاره د حبوبو اخیستلو درولو دوره ثبت کړئ. د وقفې پر مهال، د حبوبو شمیره مخ نه ځي، او کله چې بیا پیل کړئ، سمدلاسه کولی شئ ثبتول بیا پیل کړئ.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "د اپلیکیشن دننه ځای",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "د تمرکز حالت کې هم خبرتیاوې رسیږي",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "د ټاکل شوي وخت کې د باور وړ یادونه",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "د یو ټپ سره اسانه تنظیمات",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "د خبرتیا پیغامونه آزادانه سمول",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "د هره ورځ د دوا د اخیستلو خبرتیاونو کې انعکاس",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "خپل ځانګړی خبرتیا پیغام",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "د نیټې له مخې د حبوبو پاڼه ښکاره کړئ",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "د کیلنڈر لیدلو پرته نیټه پوهیدلی شئ",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "د پیل شیټ ترتیباتو څخه د بدلون وړ",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "د پیل شیټ ټچ کولو سره د دوا اخیستلو ثبت",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "که هم غلطي وشي، اسانه لغوه کول",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "د دوا د کارولو تاریخچه هر وخت وګورئ",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "د ماهوارې د پیل نیټه اسانه ثبت کړئ",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "د دورې اتوماتیک پیژندنه",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "ترتیبات دودیز کول",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "د کالنداری سره د ثبتونو لیست",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "د روغتیا احوال یادداشت کړئ او بیاکتنه یې وکړئ",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "د تقویم له لارې د تیرو ریکارډونو بیاکتنه",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "د روغتیا حالت ثبتولو لپاره نیټه ټاپ کړئ",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "د کیلنډر کې مهالویش ولیکئ",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "د روغتون د مراجعې ورځو اسانه مدیریت",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "د یادونکي له لارې خبرتیا",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "نیټه ټک کړئ او خپله موعده ولیکئ",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "د حیض ریکارډونو اتوماتیک ډیټا همغږي",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "د روغتیا اپ سره همغږي",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "د اپل روغتیا ملاتړ",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "د خبرتیا د عمل له لارې د دارو خوراک ثبتول",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "د ایپ پرانیستلو پرته بشپړول",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "د پریمیم غړیتوب سره مستقیم کارولو وړ",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "د پیل شیټ د پای کیدو سره اتوماتیک بدلون",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "لاسي جوړولو عملیات اړین نه دي",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "د ترتیباتو ټب کې د سویچ له لارې بدلول",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "د خاموش/فوکس حالت کې هم غږ کوي",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "د بیدارۍ زنګ غوندې الارم غږ",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "د iOS 26 یا وروسته · د ترتیباتو ټب څخه فعاله کړئ",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "د شمیرو د سمولو وړیا ځانګړتیا",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "د ترتیباتو ټب څخه بدلول کیدای شي",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "د کور پاڼې شمیرو ټک کولو سره هم خلاصیدای شي",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "د درملو د مکث وړیا ریکارډ",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "د حبوبو مخکتب د ښي پورتنۍ ګیر له لارې پیل کړئ",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "د موده سمول او بیا پیل کول هم اسانه دي",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
   }
 }

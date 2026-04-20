@@ -2402,5 +2402,409 @@
   "inquiryContentRequired": "براہ کرم استفسار کا مواد درج کریں",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "خریداری کے لیے شکریہ۔ اگر آپ ماہانہ یا سالانہ منصوبے کے رکن ہیں تو براہِ کرم اپنی رکنیت منسوخ کرنا نہ بھولیں۔",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "・اگر آپ 'ایک بار خریداری' پلان خریدتے ہیں تو 'ماہانہ/سالانہ' پلان خودکار طور پر منسوخ نہیں ہوگا۔",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "یہاں",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "から事前にキャンセルしてからお買い求めください。",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "آزما کر دیکھیں",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "اکاؤنٹ بنائیں",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "رجسٹر کرنے سے آپ اپنا ڈیٹا بیک اپ کر سکتے ہیں",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "خاموش موڈ میں بھی نوٹیفیکیشن وصول کریں",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "خاموشی موڈ میں بھی دوا لینے میں بھولنے سے بچیں",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "خاموش موڈ میں بھی اطلاعات موصول ہوں گی",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "کریٹیکل الرٹ کو فعال کرنے سے آپ خاموشی یا وائبریشن موڈ (مثلاً Do Not Disturb) کے دوران بھی گولی لینے کی یاددہانی وصول کر سکیں گے۔ اہم گولی لینے کے وقت سے محروم نہ رہنے کے لیے براہِ کرم اسے فعال کریں۔",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "اطلاع پیغام کو حسبِ ضرورت بنائیں",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "آپ اطلاعات کے متن کو اپنی مرضی کے مطابق تبدیل کر سکتے ہیں",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "یاددہانی کے پیغام کو اپنی مرضی کے مطابق بنائیں",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "معیاری 'اب گولی لینے کا وقت ہے' پیغام کو آپ اپنی پسند کے الفاظ سے حسبِ منشا بدل سکتے ہیں۔ حوصلہ افزا جملے، اپنے پالتو کا نام یا روزانہ گولی لینے کے عمل کو مزید خوشگوار بنانے والا کوئی بھی متن آزما کر دیکھیں۔",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "پِل شیٹ پر تاریخ دکھائیں",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "ایک نظر میں دیکھیں کہ کب لینا ہے",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "پِل شیٹ پر تاریخ دکھائی جا سکتی ہے",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "ピルシートのマスに日付を表示することで、過去の服用履歴と未来の服用予定を一目で確認できます。「番号」モードと「日付」モードを切り替えて、自分に合った表示を選びましょう。",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "اپنی دوا لینے کی تاریخ آسانی سے دیکھیں",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "آپ فوراً دیکھ سکتے ہیں کہ آپ نے کب لی تھی",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "ہوم اسکرین پر گولی لینے کا اندراج کریں",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "recordPillFeatureAppealBody": "ہوم اسکرین پر موجود پِل شیٹ کو صرف ٹیپ کرنے سے اسی دن کا استعمال ریکارڈ ہو جاتا ہے۔ اگر آپ نے غلطی سے ریکارڈ کر دیا ہو تو دوبارہ ٹیپ کر کے اسے منسوخ کیا جا سکتا ہے۔ آپ بعد میں بھی استعمال کے ریکارڈ دیکھ سکتے ہیں، اس لیے آپ پر سکون ہو کر جاری رکھ سکتے ہیں۔",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
+  },
+  "menstruationFeatureAppealTitle": "生理を記録・予測",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "حیض کے آغاز کی تاریخ ریکارڈ کریں اور اپنے ماہواری کے چکر کو سمجھیں",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "حیض کا اندراج اور پیشگوئی",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "جب حیض آئے تو اسے صرف ریکارڈ کریں، آپ ماضی کے حیض کے ریکارڈز کی فہرست دیکھ سکتے ہیں۔ اگلی متوقع حیض کی تاریخ خود بخود پیش گوئی کر دی جاتی ہے، لہٰذا آپ منصوبہ بندی کے ساتھ گزار سکتے ہیں۔",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "カレンダーで体調を記録",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "روزانہ اپنی طبیعت کو کیلنڈر میں درج کریں",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "اپنی روز مرہ کی صحت کو کیلنڈر میں ریکارڈ کریں",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "آپ کیلنڈر میں کسی تاریخ کو ٹیپ کر کے اپنی جسمانی حالت، مزاج، علامات وغیرہ ریکارڈ کر سکتے ہیں۔ آپ انہیں گولی لینے کے ریکارڈ اور حیض کے ریکارڈ کے ساتھ ایک ساتھ دیکھ سکتے ہیں، اس طرح آپ اپنے جسم کے سائیکل کو سمجھ سکتے ہیں۔",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "طبی ملاقاتوں جیسے آئندہ کے شیڈولز کا انتظام کریں",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "تقویم میں مستقبل کے شیڈولز ریکارڈ کریں",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "آپ مستقبل کے شیڈولز، جیسے ڈاکٹری ملاقاتیں یا سفر کے منصوبے، کیلنڈر میں درج کر سکتے ہیں۔ انہیں آپ کی گولی کھانے کے سائیکل کے ساتھ ایک ساتھ دیکھ کر، آپ حیض کے امکان کو مدنظر رکھتے ہوئے منصوبہ بندی کر سکتے ہیں۔",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "ہیلتھ کیئر کے ساتھ ہم آہنگ کریں",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "ماہواری کے ریکارڈز کو ہیلتھ ایپ کے ساتھ شیئر کریں",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "آپ Pilll میں درج شدہ حیض کے ڈیٹا کو ہیلتھ کیئر ایپ کے ساتھ خودکار طور پر ہم آہنگ کر سکتے ہیں۔ اس طرح آپ وہ ڈیٹا ہیلتھ کیئر میں موجود دیگر صحت کے ڈیٹا کے ساتھ بیک وقت دیکھ سکیں گے اور یہ ڈیٹا دیگر ایپس میں بھی استعمال کے لیے دستیاب ہو جائے گا۔",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "اطلاع سے براہِ راست دوائی لینے کا اندراج",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "ایپ کھولے بغیر نوٹیفیکیشن سے ریکارڈ کریں",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "نوٹیفیکیشن اسکرین پر ایک ٹیپ کر کے گولی لینے کا اندراج",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "ریماینڈر نوٹیفیکیشن کو لمبا دبانے سے 'لیا' ایکشن ظاہر ہوگا، اور آپ ایپ کھولے بغیر دوا لینے کا ریکارڈ کر سکتے ہیں۔",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "پِل شیٹ خود بخود شامل کریں",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "اگلی شیٹ کو خودکار طریقے سے بنائیں",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "اگلی پِل شیٹ خود بخود بنائیں",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "موجودہ پِل شیٹ گروپ ختم ہوتے ہی نیا پِل شیٹ گروپ خود بخود بنا دیا جاتا ہے۔ آپ کو دستی طور پر سوئچ کرنے کی ضرورت نہیں پڑتی، اس لیے ریکارڈ چھوٹنے کا خدشہ نہیں رہتا۔",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "جاگانے والا الارم",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "خاموش حالت میں بھی یقینی طور پر بجنے والی اطلاع",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "جاگنے والے الارم جیسی دوائی لینے کی یاد دہانی",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26 یا بعد کے ورژنز میں دستیاب AlarmKit کو استعمال کر کے، ایک ایسا الارم جو خاموش موڈ یا فوکس موڈ میں بھی یقینی طور پر بجتا ہے، آپ کو گولی لینے کی یاد دہانی کراتا ہے۔",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "آج کا خوراک نمبر سیٹ کریں",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "番号がずれたら設定で修正",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "آج لینے والی گولی کا نمبر تبدیل کریں",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "اگر گولی شیٹ پر دکھایا گیا نمبر اور حقیقت میں لی گئی گولی میں بھول یا غلطی کی وجہ سے عدم مطابقت ہو جائے تو آپ آج لینے والی گولی کا نمبر دستی طور پر درست کر سکتے ہیں۔ آپ ہوم کے گولی نمبر کے ڈسپلے سے بھی اسی اسکرین کو کھول سکتے ہیں۔",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "گولیاں نہ لینے کی مدت درج کریں",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "دوائی کے وقفے اور تعطل کا درست انتظام",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "گولی لینے سے وقفہ لیں",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "کرسیاں پر رکھیں",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "criticalAlertFeatureAppealPoint1": "فوکس موڈ کے دوران بھی اطلاعات موصول ہوں گی",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "設定した時刻に確実にリマインド",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "ワンタップでかんたん設定",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "اطلاع کا پیغام اپنی مرضی کے مطابق تبدیل کریں",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "روزانہ کی یاددہانی میں شامل کریں",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "اپنا نوٹیفکیشن پیغام",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "پِل شیٹ کو تاریخ کے مطابق دکھائیں",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "کیلنڈر دیکھے بغیر تاریخ معلوم ہوتی ہے",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "پِل شیٹ کی ترتیبات سے تبدیل کیا جا سکتا ہے",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "ピルシートをタップで服用記録",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "غلطی ہو جائے تو آسانی سے واپس لیں",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "اپنی دوا لینے کا ریکارڈ جب چاہیں دیکھیں",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "生理開始日をかんたん記録",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "ماہواری کے چکر کو خودکار طور پر معلوم کریں",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "ترجم کریں",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "カレンダーで記録を一覧",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "体調をメモして振り返り",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "過去の記録をカレンダーで振り返り",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "تاریخ پر ٹیپ کر کے اپنی حالت درج کریں",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "کیلنڈر میں شیڈول شامل کریں",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "ملاقات کے دن آسانی سے منظم کریں",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "リマインダーで通知",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "日付をタップして予定を書き込み",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "حیض کے ریکارڈز کو خودکار طور پر ڈیٹا کے ساتھ مربوط کریں",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ヘルスケアアプリに同期",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "通知のアクションで服用記録",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "ایپ کھولے بغیر مکمل کریں",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "پریمیم میں شامل ہونے پر فوراً استعمال ممکن ہے",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "پِل شیٹ کے اختتام پر خودکار تبدیلی",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "دستی تخلیق کی ضرورت نہیں ہے",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "سیٹنگز ٹیب میں سوئچ کے ذریعے تبدیل کریں",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "جاگنے والی گھڑی جیسی الارم کی آواز",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26 یا اس کے بعد — سیٹنگز ٹیب سے فعال کریں",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "مفت استعمال کے لیے نمبر ملاپ کی خصوصیت",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "سیٹنگ ٹیب سے تبدیل کیا جا سکتا ہے",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "ہوم کے نمبر کو ٹیپ کر کے بھی کھولا جا سکتا ہے",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "دوا چھوڑنے کے وقفے کا مفت ریکارڈ",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "پیج شیٹ کے اوپری دائیں کونے سے گیئر آئیکن پر کلک کریں",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "مدت کی ترمیم اور دوبارہ شروع کرنا بھی آسان ہے",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "featureAppealLocationLabel": "ایپ کے اندر مقام",
+  "@featureAppealLocationLabel": {
+    "description": ""
   }
 }

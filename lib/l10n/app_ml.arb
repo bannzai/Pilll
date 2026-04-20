@@ -2402,5 +2402,409 @@
   "inquiryContentRequired": "ദയവായി അന്വേഷണ ഉള്ളടക്കം നൽകുക",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "ഒറ്റത്തവണ പ്ലാൻ വാങ്ങിയതിന് നന്ദി. മാസ/വാർഷിക പ്ലാനിൽ അംഗത്വമുള്ളവർ, ദയവായി അത് റദ്ദാക്കാൻ മറക്കരുത്.",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "lifetimePurchaseNotice1": "・「ഒറ്റത്തവണ പ്ലാൻ」 വാങ്ങിയാലും 「മാസ/വാർഷിക പ്ലാൻ」 ഓട്ടോമാറ്റിക്കായി റദ്ദ് ചെയ്യപ്പെടില്ല.",
+  "@lifetimePurchaseNotice1": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
+  },
+  "lifetimePurchaseNotice2": "ഇവിടെ",
+  "@lifetimePurchaseNotice2": {
+    "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "lifetimePurchaseNotice3": "ൽ നിന്ന് മുൻകൂട്ടി റദ്ദാക്കിയ ശേഷം വാങ്ങുക.",
+  "@lifetimePurchaseNotice3": {
+    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
+  },
+  "featureAppealTryFeature": "സ്ഥിരീകരിക്കുക",
+  "@featureAppealTryFeature": {
+    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
+  },
+  "recommendSignupGeneralTitle": "അക്കൗണ്ട് രജിസ്ട്രേഷൻ ശുപാർശ ചെയ്യുന്നു",
+  "@recommendSignupGeneralTitle": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
+  },
+  "recommendSignupGeneralDescription": "രജിസ്റ്റർ ചെയ്‌താൽ ഡേറ്റ ബാക്കപ്പ് ചെയ്യാൻ കഴിയും",
+  "@recommendSignupGeneralDescription": {
+    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
+  },
+  "criticalAlertFeatureAppealTitle": "സൈലന്റ് മോഡിലും അറിയിപ്പുകൾ ലഭിക്കും",
+  "@criticalAlertFeatureAppealTitle": {
+    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
+  },
+  "criticalAlertFeatureAppealShortDescription": "ഡു നോട്ട് ഡിസ്റ്റർബ് മോഡിലും ഗുളിക കഴിക്കാൻ മറക്കാതിരിക്കൂ",
+  "@criticalAlertFeatureAppealShortDescription": {
+    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
+  },
+  "criticalAlertFeatureAppealHeadline": "സൈലന്റ് മോഡിലും അറിയിപ്പുകൾ ലഭിക്കും",
+  "@criticalAlertFeatureAppealHeadline": {
+    "description": "Critical Alert機能のヘルプページのヘッドライン"
+  },
+  "criticalAlertFeatureAppealBody": "Critical Alert പ്രവർത്തനക്ഷമമാക്കുമ്പോൾ, Do Not Disturb മോഡ് അല്ലെങ്കിൽ Silent മോഡ് ആണെങ്കിലും ഗുളിക കഴിക്കാനുള്ള അറിയിപ്പ് ലഭിക്കും. പ്രധാനപ്പെട്ട ഗുളിക കഴിക്കേണ്ട സമയം നഷ്ടപ്പെടാതിരിക്കാൻ, ഇപ്പോൾ തന്നെ ഇത് സജ്ജീകരിക്കൂ.",
+  "@criticalAlertFeatureAppealBody": {
+    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "അറിയിപ്പ് സന്ദേശം ഇഷ്ടാനുസൃതമാക്കുക",
+  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "നോട്ടിഫിക്കേഷൻ സന്ദേശം ഇഷ്ടാനുസരണം ക്രമീകരിക്കാം",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "ഗുളിക കഴിക്കൽ അറിയിപ്പ് സന്ദേശം സ്വതന്ത്രമായി എഡിറ്റ് ചെയ്യുക",
+  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "\"ഗുളിക കഴിക്കാൻ സമയമായി\" എന്ന ഡിഫോൾട്ട് സന്ദേശം നിങ്ങൾ ഇഷ്ടപ്പെടുന്ന വാക്കുകൾ ഉപയോഗിച്ച് കസ്റ്റമൈസ് ചെയ്യാൻ കഴിയും. ഉൽസാഹം ജനിപ്പിക്കുന്ന വാക്കുകളോ, നിങ്ങളുടെ വളർത്തുമൃഗത്തിന്റെ പേരോ ഉപയോഗിച്ച്, ദിവസേനയുള്ള ഗുളിക കഴിക്കൽ കൂടുതൽ ആനന്ദദായകമാക്കി മാറ്റൂ.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
+  },
+  "appearanceModeDateFeatureAppealTitle": "ഗുളിക ഷീറ്റിൽ തീയതി പ്രദർശിപ്പിക്കുക",
+  "@appearanceModeDateFeatureAppealTitle": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
+  },
+  "appearanceModeDateFeatureAppealShortDescription": "എപ്പോൾ കഴിക്കണമെന്ന് ഒറ്റനോട്ടത്തിൽ അറിയാം",
+  "@appearanceModeDateFeatureAppealShortDescription": {
+    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
+  },
+  "appearanceModeDateFeatureAppealHeadline": "പിൽ ഷീറ്റിൽ തീയതി പ്രദർശിപ്പിക്കാം",
+  "@appearanceModeDateFeatureAppealHeadline": {
+    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
+  },
+  "appearanceModeDateFeatureAppealBody": "ഗുളിക ഷീറ്റിലെ ഓരോ ഘടകത്തിലും തീയതി പ്രദർശിപ്പിക്കുന്നതിലൂടെ, കഴിഞ്ഞ ഗുളിക കഴിക്കൽ ചരിത്രവും ഭാവിയിലെ ഗുളിക കഴിക്കൽ ഷെഡ്യൂളും ഒറ്റ നോട്ടത്തിൽ പരിശോധിക്കാൻ കഴിയും. \"നമ്പർ\" മോഡും \"തീയതി\" മോഡും തമ്മിൽ മാറ്റം വരുത്തി, നിങ്ങൾക്ക് ഏറ്റവും അനുയോജ്യമായ ഡിസ്‌പ്ലേ തിരഞ്ഞെടുക്കൂ.",
+  "@appearanceModeDateFeatureAppealBody": {
+    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
+  },
+  "recordPillFeatureAppealTitle": "ഔഷധ ചരിത്രം എളുപ്പത്തിൽ അവലോകനം ചെയ്യൂ",
+  "@recordPillFeatureAppealTitle": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
+  },
+  "recordPillFeatureAppealShortDescription": "എപ്പോൾ കഴിച്ചുവെന്ന് ഉടനടി അറിയാം",
+  "@recordPillFeatureAppealShortDescription": {
+    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
+  },
+  "recordPillFeatureAppealHeadline": "ഹോം സ്ക്രീനിൽ ഗുളിക കഴിക്കൽ രേഖപ്പെടുത്തുക",
+  "@recordPillFeatureAppealHeadline": {
+    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealTitle": "ആർത്തവം രേഖപ്പെടുത്തി പ്രവചിക്കുക",
+  "@menstruationFeatureAppealTitle": {
+    "description": "生理記録機能のFeatureAppeal Barタイトル"
+  },
+  "menstruationFeatureAppealShortDescription": "ആർത്തവ ആരംഭ തീയതി രേഖപ്പെടുത്തി ചക്രം മനസ്സിലാക്കൂ",
+  "@menstruationFeatureAppealShortDescription": {
+    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
+  },
+  "menstruationFeatureAppealHeadline": "ആർത്തവം രേഖപ്പെടുത്താനും പ്രവചിക്കാനും കഴിയും",
+  "@menstruationFeatureAppealHeadline": {
+    "description": "生理記録機能のヘルプページのヘッドライン"
+  },
+  "menstruationFeatureAppealBody": "ആർത്തവം വരുമ്പോൾ രേഖപ്പെടുത്തിയാൽ മതി, കഴിഞ്ഞ ആർത്തവ ചരിത്രം മുഴുവൻ ഒറ്റ നോട്ടത്തിൽ കാണാൻ കഴിയും. അടുത്ത ആർത്തവ തീയതി സ്വയം പ്രവചിക്കപ്പെടുന്നതിനാൽ, ജീവിതം കൂടുതൽ ആസൂത്രണം ചെയ്യാൻ സഹായിക്കും.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
+  },
+  "calendarDiaryFeatureAppealTitle": "കലണ്ടറിൽ ആരോഗ്യ നില രേഖപ്പെടുത്തുക",
+  "@calendarDiaryFeatureAppealTitle": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
+  },
+  "calendarDiaryFeatureAppealShortDescription": "ദൈനംദിന ആരോഗ്യ നില കലണ്ടറിൽ രേഖപ്പെടുത്താം",
+  "@calendarDiaryFeatureAppealShortDescription": {
+    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
+  },
+  "calendarDiaryFeatureAppealHeadline": "ദൈനംദിന ആരോഗ്യം കലണ്ടറിൽ രേഖപ്പെടുത്തുക",
+  "@calendarDiaryFeatureAppealHeadline": {
+    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
+  },
+  "calendarDiaryFeatureAppealBody": "കലണ്ടറിൽ തീയതി ടാപ്പ് ചെയ്ത് ശാരീരിക അവസ്ഥ, മാനസിക നില, ലക്ഷണങ്ങൾ തുടങ്ങിയവ രേഖപ്പെടുത്താൻ കഴിയും. ഗുളിക കഴിക്കൽ രേഖകളും ആർത്തവ രേഖകളും ഒന്നിച്ച് പരിശോധിക്കാൻ കഴിയുന്നതിനാൽ, സ്വന്തം ശരീരത്തിന്റെ താളം മനസ്സിലാക്കാൻ കഴിയും.",
+  "@calendarDiaryFeatureAppealBody": {
+    "description": "カレンダー・日記機能のヘルプページの本文"
+  },
+  "futureScheduleFeatureAppealTitle": "ഭാവി പദ്ധതികൾ കുറിക്കൂ",
+  "@futureScheduleFeatureAppealTitle": {
+    "description": "未来の予定機能のFeatureAppeal Barタイトル"
+  },
+  "futureScheduleFeatureAppealShortDescription": "ആശുപത്രി സന്ദർശനം പോലുള്ള ഭാവി ഷെഡ്യൂളുകൾ നിയന്ത്രിക്കുക",
+  "@futureScheduleFeatureAppealShortDescription": {
+    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
+  },
+  "futureScheduleFeatureAppealHeadline": "കലണ്ടറിൽ ഭാവി പദ്ധതികൾ രേഖപ്പെടുത്തുക",
+  "@futureScheduleFeatureAppealHeadline": {
+    "description": "未来の予定機能のヘルプページのヘッドライン"
+  },
+  "futureScheduleFeatureAppealBody": "ഡോക്ടർ സന്ദർശനം, യാത്ര തുടങ്ങിയ ഭാവി പദ്ധതികൾ കലണ്ടറിൽ കുറിക്കാൻ കഴിയും. ഗുളിക കഴിക്കുന്ന ചക്രവുമായി ഒത്തുനോക്കി പരിശോധിക്കാൻ സാധിക്കുന്നതിനാൽ, ആർത്തവ ഷെഡ്യൂളും കണക്കിലെടുത്ത് ആസൂത്രണം ചെയ്യാൻ കഴിയും.",
+  "@futureScheduleFeatureAppealBody": {
+    "description": "未来の予定機能のヘルプページの本文"
+  },
+  "healthCareIntegrationFeatureAppealTitle": "ഹെൽത്ത്കെയറുമായി സമന്വയിപ്പിക്കുക",
+  "@healthCareIntegrationFeatureAppealTitle": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
+  },
+  "healthCareIntegrationFeatureAppealShortDescription": "ആർത്തവ രേഖകൾ ഹെൽത്ത്‌കെയറുമായി പങ്കിടുക",
+  "@healthCareIntegrationFeatureAppealShortDescription": {
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+  },
+  "healthCareIntegrationFeatureAppealHeadline": "ഹെൽത്ത്‌കെയറുമായി സംയോജിക്കാം",
+  "@healthCareIntegrationFeatureAppealHeadline": {
+    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
+  },
+  "healthCareIntegrationFeatureAppealBody": "Pilll-ൽ രേഖപ്പെടുത്തിയ ആർത്തവ ഡേറ്റ ഹെൽത്ത്‌കെയർ ആപ്പുമായി സ്വയമേവ സമന്വയിപ്പിക്കാൻ കഴിയും. ഹെൽത്ത്‌കെയറിലെ മറ്റ് ആരോഗ്യ ഡേറ്റകളോടൊപ്പം ഇത് പരിശോധിക്കാനും, മറ്റ് ആപ്പുകളിലും ആർത്തവ ഡേറ്റ ഉപയോഗിക്കാനും സാധിക്കും.",
+  "@healthCareIntegrationFeatureAppealBody": {
+    "description": "ヘルスケア連携機能のヘルプページの本文"
+  },
+  "quickRecordFeatureAppealTitle": "നോട്ടിഫിക്കേഷനിൽ നിന്ന് നേരിട്ട് കഴിക്കൽ രേഖപ്പെടുത്തൽ",
+  "@quickRecordFeatureAppealTitle": {
+    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
+  },
+  "quickRecordFeatureAppealShortDescription": "ആപ്പ് തുറക്കാതെ നോട്ടിഫിക്കേഷനിൽ രേഖപ്പെടുത്തുക",
+  "@quickRecordFeatureAppealShortDescription": {
+    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
+  },
+  "quickRecordFeatureAppealHeadline": "നോട്ടിഫിക്കേഷൻ സ്ക്രീനിൽ ഒറ്റ ടാപ്പിൽ ഗുളിക കഴിച്ചത് രേഖപ്പെടുത്തുക",
+  "@quickRecordFeatureAppealHeadline": {
+    "description": "クイックレコード機能のヘルプページのヘッドライン"
+  },
+  "quickRecordFeatureAppealBody": "റിമൈൻഡർ അറിയിപ്പ് ദീർഘനേരം അമർത്തിപ്പിടിക്കുമ്പോൾ \"കഴിച്ചു\" എന്ന ഓപ്ഷൻ കാണിക്കും, ആപ്പ് തുറക്കാതെ തന്നെ ഗുളിക കഴിച്ചത് രേഖപ്പെടുത്താം.",
+  "@quickRecordFeatureAppealBody": {
+    "description": "クイックレコード機能のヘルプページの本文"
+  },
+  "creatingNewPillSheetFeatureAppealTitle": "ഗുളിക ഷീറ്റ് സ്വയമേ ചേർക്കുക",
+  "@creatingNewPillSheetFeatureAppealTitle": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
+  },
+  "creatingNewPillSheetFeatureAppealShortDescription": "അടുത്ത ഷീറ്റ് സ്വയമേവ സൃഷ്ടിക്കുക",
+  "@creatingNewPillSheetFeatureAppealShortDescription": {
+    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
+  },
+  "creatingNewPillSheetFeatureAppealHeadline": "അടുത്ത പിൽ ഷീറ്റ് സ്വയമേവ സൃഷ്ടിക്കുക",
+  "@creatingNewPillSheetFeatureAppealHeadline": {
+    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
+  },
+  "creatingNewPillSheetFeatureAppealBody": "നിലവിലെ പിൽ ഷീറ്റ് ഗ്രൂപ്പ് അവസാനിക്കുമ്പോൾ, ഒരു പുതിയ പിൽ ഷീറ്റ് ഗ്രൂപ്പ് സ്വയമേ സൃഷ്ടിക്കപ്പെടും. മാനുവൽ മാറ്റൽ ആവശ്യമില്ല, കൂടാതെ രേഖകളിൽ വിടവ് ഉണ്ടാകില്ല.",
+  "@creatingNewPillSheetFeatureAppealBody": {
+    "description": "ピルシート自動追加機能のヘルプページの本文"
+  },
+  "alarmKitFeatureAppealTitle": "അലാറം ക്ലോക്കിനെപ്പോലെ മുഴങ്ങുന്ന അലാറം",
+  "@alarmKitFeatureAppealTitle": {
+    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
+  },
+  "alarmKitFeatureAppealShortDescription": "സൈലന്റ് മോഡിലും ഉറപ്പായി മുഴങ്ങുന്ന അറിയിപ്പ്",
+  "@alarmKitFeatureAppealShortDescription": {
+    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
+  },
+  "alarmKitFeatureAppealHeadline": "അലാറം ക്ലോക്ക് പോലുള്ള ഡോസ് അലാറം",
+  "@alarmKitFeatureAppealHeadline": {
+    "description": "AlarmKit機能のヘルプページのヘッドライン"
+  },
+  "alarmKitFeatureAppealBody": "iOS 26-ഉം അതിനു ശേഷവും ലഭ്യമായ AlarmKit ഉപയോഗിച്ച്, സൈലന്റ് മോഡിലും ഫോക്കസ് മോഡിലും ആണെങ്കിലും ഉറപ്പായും ശബ്ദിക്കുന്ന അലാറം വഴി ഗുളിക കഴിക്കാൻ ഓർമ്മിപ്പിക്കുന്നു.",
+  "@alarmKitFeatureAppealBody": {
+    "description": "AlarmKit機能のヘルプページの本文"
+  },
+  "todayPillNumberFeatureAppealTitle": "ഇന്നത്തെ ഡോസ് നമ്പർ ക്രമീകരിക്കുക",
+  "@todayPillNumberFeatureAppealTitle": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
+  },
+  "todayPillNumberFeatureAppealShortDescription": "നമ്പർ തെറ്റിയാൽ ക്രമീകരണത്തിൽ ശരിയാക്കുക",
+  "@todayPillNumberFeatureAppealShortDescription": {
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+  },
+  "todayPillNumberFeatureAppealHeadline": "ഇന്ന് കഴിക്കേണ്ട ഗുളിക നമ്പർ മാറ്റാം",
+  "@todayPillNumberFeatureAppealHeadline": {
+    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
+  },
+  "todayPillNumberFeatureAppealBody": "ഗുളിക കഴിക്കാൻ മറക്കുകയോ തെറ്റായ ഗുളിക കഴിക്കുകയോ ചെയ്‌ത് ഗുളിക ഷീറ്റിലെ നമ്പറും യഥാർത്ഥ കഴിക്കലും തമ്മിൽ പൊരുത്തക്കേട് ഉണ്ടാകുമ്പോൾ, ഇന്ന് കഴിക്കേണ്ട ഗുളിക നമ്പർ സ്വമേധയാ ക്രമീകരിക്കാൻ കഴിയും. ഹോം സ്‌ക്രീനിലെ ഗുളിക നമ്പർ ഡിസ്‌പ്ലേ വഴിയും ഇതേ സ്‌ക്രീൻ തുറക്കാൻ സാധിക്കും.",
+  "@todayPillNumberFeatureAppealBody": {
+    "description": "今日の服用番号変更機能のヘルプページの本文"
+  },
+  "restDurationFeatureAppealTitle": "ഗുളിക ഇടവേള കാലം രേഖപ്പെടുത്തുക",
+  "@restDurationFeatureAppealTitle": {
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+  },
+  "restDurationFeatureAppealShortDescription": "ഒഴിവും തടസ്സവും കൃത്യമായി നിയന്ത്രിക്കുക",
+  "@restDurationFeatureAppealShortDescription": {
+    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
+  },
+  "restDurationFeatureAppealHeadline": "ഗുളിക കഴിക്കൽ ഇടവേള നൽകുക",
+  "@restDurationFeatureAppealHeadline": {
+    "description": "服用おやすみ機能のヘルプページのヘッドライン"
+  },
+  "restDurationFeatureAppealBody": "കുറച്ചു കാലത്തേക്ക് മരുന്ന് കഴിക്കുന്നത് നിർത്തുന്ന കാലഘട്ടം പിൽ ഷീറ്റിൽ രേഖപ്പെടുത്താൻ കഴിയും. ഒഴിവ് കാലത്ത് ഡോസ് നമ്പർ മുന്നോട്ട് പോകില്ല, പുനരാരംഭിക്കുമ്പോൾ ഉടൻ തന്നെ രേഖപ്പെടുത്തൽ തുടരാൻ കഴിയും.",
+  "@restDurationFeatureAppealBody": {
+    "description": "服用おやすみ機能のヘルプページの本文"
+  },
+  "featureAppealLocationLabel": "ആപ്പിലെ സ്ഥലം",
+  "@featureAppealLocationLabel": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint1": "ഫോക്കസ് മോഡിലും അറിയിപ്പുകൾ ലഭിക്കും",
+  "@criticalAlertFeatureAppealPoint1": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint2": "നിശ്ചിത സമയത്ത് ഉറപ്പായും ഓർമ്മിപ്പിക്കും",
+  "@criticalAlertFeatureAppealPoint2": {
+    "description": ""
+  },
+  "criticalAlertFeatureAppealPoint3": "ഒരു ടാപ്പിൽ എളുപ്പ സജ്ജീകരണം",
+  "@criticalAlertFeatureAppealPoint3": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "അറിയിപ്പ് സന്ദേശങ്ങൾ സ്വതന്ത്രമായി എഡിറ്റ് ചെയ്യുക",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "ദൈനംദിന ഡോസ് അറിയിപ്പുകളിൽ പ്രതിഫലിക്കുക",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "നിങ്ങൾക്കു മാത്രമുള്ള അറിയിപ്പ് സന്ദേശം",
+  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint1": "തീയതി അനുസരിച്ച് പിൽ ഷീറ്റ് പ്രദർശിപ്പിക്കുക",
+  "@appearanceModeDateFeatureAppealPoint1": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint2": "കലണ്ടർ നോക്കാതെ തന്നെ തീയതി അറിയാം",
+  "@appearanceModeDateFeatureAppealPoint2": {
+    "description": ""
+  },
+  "appearanceModeDateFeatureAppealPoint3": "പില്‍ ഷീറ്റ് ക്രമീകരണത്തില്‍ നിന്ന് മാറ്റാം",
+  "@appearanceModeDateFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint1": "ഗുളിക ഷീറ്റ് ടാപ്പ് ചെയ്ത് കഴിക്കൽ രേഖപ്പെടുത്തുക",
+  "@recordPillFeatureAppealPoint1": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint2": "തെറ്റ് പറ്റിയാലും എളുപ്പം പഴയപടിയാക്കാം",
+  "@recordPillFeatureAppealPoint2": {
+    "description": ""
+  },
+  "recordPillFeatureAppealPoint3": "ഉപഭോഗ ചരിത്രം ഏപ്പോഴും പരിശോധിക്കുക",
+  "@recordPillFeatureAppealPoint3": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint1": "ആർത്തവ ആരംഭ തീയതി എളുപ്പത്തിൽ രേഖപ്പെടുത്തുക",
+  "@menstruationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint2": "ചക്രം സ്വയമേ ട്രാക്ക് ചെയ്യുക",
+  "@menstruationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "menstruationFeatureAppealPoint3": "ക്രമീകരണങ്ങൾ ഇഷ്ടാനുസൃതമാക്കുക",
+  "@menstruationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint1": "കലണ്ടറിൽ രേഖകൾ കാണുക",
+  "@calendarDiaryFeatureAppealPoint1": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint2": "ആരോഗ്യ അവസ്ഥ കുറിച്ചിട്ട് തിരിഞ്ഞുനോക്കൽ",
+  "@calendarDiaryFeatureAppealPoint2": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealPoint3": "കലണ്ടറിൽ കഴിഞ്ഞ രേഖകൾ അവലോകനം ചെയ്യുക",
+  "@calendarDiaryFeatureAppealPoint3": {
+    "description": ""
+  },
+  "calendarDiaryFeatureAppealLocationHint": "ആരോഗ്യ നില രേഖപ്പെടുത്താൻ തീയതി ടാപ്പ് ചെയ്യുക",
+  "@calendarDiaryFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint1": "കലണ്ടറിൽ ഷെഡ്യൂൾ ചേർക്കുക",
+  "@futureScheduleFeatureAppealPoint1": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint2": "ഡോക്ടർ സന്ദർശന ദിവസങ്ങൾ എളുപ്പത്തിൽ കൈകാര്യം ചെയ്യൂ",
+  "@futureScheduleFeatureAppealPoint2": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealPoint3": "റിമൈൻഡർ വഴി അറിയിപ്പ്",
+  "@futureScheduleFeatureAppealPoint3": {
+    "description": ""
+  },
+  "futureScheduleFeatureAppealLocationHint": "തീയതി ടാപ്പ് ചെയ്ത് ഷെഡ്യൂൾ എഴുതുക",
+  "@futureScheduleFeatureAppealLocationHint": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint1": "ആർത്തവ രേഖകൾ സ്വയമേവ ഡാറ്റ സമന്വയം",
+  "@healthCareIntegrationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint2": "ഹെൽത്ത്കെയർ ആപ്പിലേക്ക് സമന്വയിപ്പിക്കുക",
+  "@healthCareIntegrationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "healthCareIntegrationFeatureAppealPoint3": "Apple ഹെൽത്ത്കെയർ പിന്തുണ",
+  "@healthCareIntegrationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint1": "അറിയിപ്പ് ആക്ഷൻ വഴി ഡോസ് ലോഗ്",
+  "@quickRecordFeatureAppealPoint1": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint2": "ആപ്പ് തുറക്കാതെ പൂർത്തിയാക്കുക",
+  "@quickRecordFeatureAppealPoint2": {
+    "description": ""
+  },
+  "quickRecordFeatureAppealPoint3": "പ്രീമിയം അംഗത്വത്തോടെ അതേ രീതിയിൽ ഉപയോഗിക്കാം",
+  "@quickRecordFeatureAppealPoint3": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint1": "പിൽ ഷീറ്റ് അവസാനിക്കുമ്പോൾ സ്വയമേവ മാറ്റം",
+  "@creatingNewPillSheetFeatureAppealPoint1": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint2": "സ്വമേധയായ നിർമ്മാണം ആവശ്യമില്ല",
+  "@creatingNewPillSheetFeatureAppealPoint2": {
+    "description": ""
+  },
+  "creatingNewPillSheetFeatureAppealPoint3": "ക്രമീകരണ ടാബിലെ സ്വിച്ച് ഉപയോഗിച്ച് മാറ്റുക",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint1": "സൈലന്റ്/ഫോക്കസ് മോഡിലും ശബ്ദിക്കും",
+  "@alarmKitFeatureAppealPoint1": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint2": "ഉണർത്തൽ ഘടികാരം പോലെയുള്ള അലാറം ശബ്ദം",
+  "@alarmKitFeatureAppealPoint2": {
+    "description": ""
+  },
+  "alarmKitFeatureAppealPoint3": "iOS 26-നും അതിനു ശേഷവും · ക്രമീകരണ ടാബിൽ നിന്ന് പ്രവർത്തനക്ഷമമാക്കുക",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint1": "സൗജന്യമായി ഉപയോഗിക്കാവുന്ന നമ്പർ ക്രമീകരണ ഫീച്ചർ",
+  "@todayPillNumberFeatureAppealPoint1": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint2": "ക്രമീകരണ ടാബിൽ നിന്ന് മാറ്റാൻ കഴിയും",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": ""
+  },
+  "todayPillNumberFeatureAppealPoint3": "ഹോമിലെ നമ്പർ ടാപ്പ് ചെയ്തും തുറക്കാം",
+  "@todayPillNumberFeatureAppealPoint3": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint1": "സൗജന്യമായി ഉപയോഗിക്കാവുന്ന ഗുളിക ഇടവേള രേഖ",
+  "@restDurationFeatureAppealPoint1": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint2": "പിൽ ഷീറ്റിന്റെ മുകളിൽ വലത് ഭാഗത്തുള്ള ഗിയർ ഐക്കണിൽ നിന്ന് ആരംഭിക്കുക",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
+  },
+  "restDurationFeatureAppealPoint3": "കാലയളവ് എഡിറ്റ് ചെയ്യലും പുനരാരംഭിക്കലും എളുപ്പം",
+  "@restDurationFeatureAppealPoint3": {
+    "description": ""
+  },
+  "recordPillFeatureAppealBody": "ഹോം സ്ക്രീനിലെ പിൽഷീറ്റ് ടാപ്പ് ചെയ്യുക മാത്രം കൊണ്ട് ആ ദിവസത്തെ ഗുളിക ഉപയോഗം രേഖപ്പെടുത്താൻ സാധിക്കും. തെറ്റായി രേഖപ്പെടുത്തിയാൽ വീണ്ടും ടാപ്പ് ചെയ്യുന്നതിലൂടെ അത് റദ്ദാക്കാം. ഉപയോഗത്തിന്റെ ചരിത്രം പിന്നീട് പരിശോധിക്കാനാകുന്നതിനാൽ, നിങ്ങൾ ആശ്വസിച്ച് തുടർന്നേ പോകാം.",
+  "@recordPillFeatureAppealBody": {
+    "description": "ピル記録/服用履歴機能のヘルプページの本文"
   }
 }
