@@ -2802,5 +2802,9 @@
   "restDurationFeatureAppealPoint3": "생리 기간의 편집 및 재개도 간편합니다.",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "알림 메시지를 사용자 지정할 수 있습니다",
+  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
+    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
   }
 }
