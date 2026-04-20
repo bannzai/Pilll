@@ -2802,5 +2802,9 @@
   "lifetimePurchaseNotice2": "Мұнда",
   "@lifetimePurchaseNotice2": {
     "description": "サブスクリプション管理ページへのリンクテキスト"
+  },
+  "restDurationFeatureAppealPoint2": "Пилл парағының оң жақ жоғарғы бұрышындағы параметрлер белгішесінен бастаңыз.",
+  "@restDurationFeatureAppealPoint2": {
+    "description": ""
   }
 }
