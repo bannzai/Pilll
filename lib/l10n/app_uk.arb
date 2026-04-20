@@ -2798,5 +2798,9 @@
   "lifetimeSubscriptionWarning": "Дякуємо за придбання одноразового плану. Якщо ви підписані на місячний або річний план, будь ласка, не забудьте скасувати підписку.",
   "@lifetimeSubscriptionWarning": {
     "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
+  },
+  "reminderNotificationCustomizeWordFeatureAppealBody": "Ви можете налаштувати стандартне повідомлення «Час приймати таблетку» на будь-який інший текст. Спробуйте змінити його на мотивуючі слова, ім'я домашнього улюбленця або інші фрази, які зроблять щоденний прийом ліків приємнішим.",
+  "@reminderNotificationCustomizeWordFeatureAppealBody": {
+    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   }
 }
