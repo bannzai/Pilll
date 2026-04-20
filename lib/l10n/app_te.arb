@@ -2794,5 +2794,9 @@
   "restDurationFeatureAppealPoint3": "మాసికాన్ని సవరించడం లేదా పునఃప్రారంభించడం సులభం",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "menstruationFeatureAppealBody": "పీరియడ్ వచ్చినప్పుడు దాన్ని నమోదు చేయడం మాత్రమే చేయండి — గత పీరియడ్ రికార్డులను ఒక జాబితాగా చూడవచ్చు. తదుపరి పీరియడ్ తేదీ ఆటోమేటిగ్గా అంచనా వేయబడుతుంది, కాబట్టి మీరు ముందుగా ప్లాన్ చేయగలరు.",
+  "@menstruationFeatureAppealBody": {
+    "description": "生理記録機能のヘルプページの本文"
   }
 }
