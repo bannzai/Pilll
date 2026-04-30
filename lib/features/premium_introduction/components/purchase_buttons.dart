@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/premium_introduction/components/lifetime_purchase_button.dart';
+import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/premium_introduction/components/annual_purchase_button.dart';
 import 'package:pilll/features/premium_introduction/components/monthly_purchase_button.dart';
@@ -10,6 +11,7 @@ import 'package:pilll/provider/purchase.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
 class PurchaseButtons extends HookConsumerWidget {
+  final PaywallSource source;
   final OfferingType offeringType;
   final Package monthlyPackage;
   final Package annualPackage;
@@ -22,6 +24,7 @@ class PurchaseButtons extends HookConsumerWidget {
 
   const PurchaseButtons({
     super.key,
+    required this.source,
     required this.offeringType,
     required this.monthlyPackage,
     required this.annualPackage,
@@ -45,7 +48,10 @@ class PurchaseButtons extends HookConsumerWidget {
             MonthlyPurchaseButton(
               monthlyPackage: monthlyPackage,
               onTap: (monthlyPackage) async {
-                analytics.logEvent(name: 'pressed_monthly_purchase_button');
+                analytics.logEvent(
+                  name: 'pressed_monthly_purchase_button',
+                  parameters: {'paywall_source': source.value},
+                );
                 await _purchase(context, monthlyPackage, purchase);
               },
             ),
@@ -56,7 +62,10 @@ class PurchaseButtons extends HookConsumerWidget {
               monthlyPremiumPackage: monthlyPremiumPackage,
               offeringType: offeringType,
               onTap: (annualPackage) async {
-                analytics.logEvent(name: 'pressed_annual_purchase_button');
+                analytics.logEvent(
+                  name: 'pressed_annual_purchase_button',
+                  parameters: {'paywall_source': source.value},
+                );
                 await _purchase(context, annualPackage, purchase);
               },
             ),
@@ -71,7 +80,10 @@ class PurchaseButtons extends HookConsumerWidget {
             discountRate: lifetimeDiscountRate,
             offeringType: offeringType,
             onTap: (lifetimePackage) async {
-              analytics.logEvent(name: 'pressed_lifetime_purchase_button');
+              analytics.logEvent(
+                name: 'pressed_lifetime_purchase_button',
+                parameters: {'paywall_source': source.value},
+              );
               await _purchase(context, lifetimePackage, purchase);
             },
           ),
@@ -91,7 +103,7 @@ class PurchaseButtons extends HookConsumerWidget {
 
     isLoading.value = true;
     try {
-      final shouldShowCompleteDialog = await purchase(package);
+      final shouldShowCompleteDialog = await purchase(package, source: source);
       if (shouldShowCompleteDialog) {
         // ignore: use_build_context_synchronously
         showDialog(

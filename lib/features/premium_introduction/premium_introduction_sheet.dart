@@ -16,6 +16,7 @@ import 'package:pilll/features/premium_introduction/components/premium_introduct
 import 'package:pilll/features/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/features/premium_introduction/components/premium_user_thanks.dart';
 import 'package:pilll/features/premium_introduction/components/purchase_buttons.dart';
+import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/error/page.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/root.dart';
@@ -25,7 +26,9 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PremiumIntroductionSheet extends HookConsumerWidget {
-  const PremiumIntroductionSheet({super.key});
+  const PremiumIntroductionSheet({super.key, required this.source});
+
+  final PaywallSource source;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -33,7 +36,7 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
       ref.watch(purchaseOfferingsProvider),
       ref.watch(userProvider),
     ).when(
-      data: (data) => PremiumIntroductionSheetBody(offerings: data.$1, user: data.$2),
+      data: (data) => PremiumIntroductionSheetBody(offerings: data.$1, user: data.$2, source: source),
       error: (error, stackTrace) => UniversalErrorPage(
         error: error,
         reload: () {
@@ -50,11 +53,13 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
 class PremiumIntroductionSheetBody extends HookConsumerWidget {
   final Offerings offerings;
   final User user;
+  final PaywallSource source;
 
   const PremiumIntroductionSheetBody({
     super.key,
     required this.offerings,
     required this.user,
+    required this.source,
   });
 
   @override
@@ -117,6 +122,7 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                           const SizedBox(height: 12),
                           if (monthlyPremiumPackage != null && monthlyPackage != null && annualPackage != null)
                             PurchaseButtons(
+                              source: source,
                               offeringType: offeringType,
                               monthlyPackage: monthlyPackage,
                               annualPackage: annualPackage,
@@ -165,12 +171,19 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
   }
 }
 
-Future<void> showPremiumIntroductionSheet(BuildContext context) async {
+Future<void> showPremiumIntroductionSheet(
+  BuildContext context, {
+  required PaywallSource source,
+}) async {
   analytics.logScreenView(screenName: 'PremiumIntroductionSheet');
+  analytics.logEvent(
+    name: 'paywall_viewed',
+    parameters: {'paywall_source': source.value},
+  );
 
   await showModalBottomSheet(
     context: context,
-    builder: (_) => const PremiumIntroductionSheet(),
+    builder: (_) => PremiumIntroductionSheet(source: source),
     backgroundColor: Colors.transparent,
     isScrollControlled: true,
   );

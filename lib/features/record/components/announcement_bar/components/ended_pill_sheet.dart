@@ -5,6 +5,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/pill_sheet_modified_history/page.dart';
+import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 
 class EndedPillSheet extends StatelessWidget {
@@ -31,7 +32,7 @@ class EndedPillSheet extends StatelessWidget {
             context,
           ).push(PillSheetModifiedHistoriesPageRoute.route());
         } else {
-          showPremiumIntroductionSheet(context);
+          showPremiumIntroductionSheet(context, source: PaywallSource.endedPillSheetBar);
         }
       },
       child: Container(

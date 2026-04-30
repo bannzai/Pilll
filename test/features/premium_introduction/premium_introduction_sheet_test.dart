@@ -5,6 +5,7 @@ import 'package:pilll/provider/locale.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/features/premium_introduction/components/premium_user_thanks.dart';
+import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/provider/user.dart';
@@ -116,7 +117,7 @@ void main() {
             fakeDiscountEntitlementDeadlineDate: null,
           );
 
-          const sheet = PremiumIntroductionSheet();
+          const sheet = PremiumIntroductionSheet(source: PaywallSource.appLaunch);
           await tester.pumpWidget(
             MaterialApp(
               home: ProviderScope(
@@ -178,7 +179,7 @@ void main() {
           fakeDiscountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
         );
 
-        const sheet = PremiumIntroductionSheet();
+        const sheet = PremiumIntroductionSheet(source: PaywallSource.appLaunch);
         await tester.pumpWidget(
           MaterialApp(
             home: ProviderScope(
@@ -242,7 +243,7 @@ void main() {
           ),
         );
 
-        const sheet = PremiumIntroductionSheet();
+        const sheet = PremiumIntroductionSheet(source: PaywallSource.appLaunch);
         await tester.pumpWidget(
           MaterialApp(
             home: ProviderScope(
@@ -307,7 +308,7 @@ void main() {
           ),
         );
 
-        const sheet = PremiumIntroductionSheet();
+        const sheet = PremiumIntroductionSheet(source: PaywallSource.appLaunch);
         await tester.pumpWidget(
           MaterialApp(
             home: ProviderScope(
@@ -368,7 +369,7 @@ void main() {
           fakeDiscountEntitlementDeadlineDate: null,
         );
 
-        const sheet = PremiumIntroductionSheet();
+        const sheet = PremiumIntroductionSheet(source: PaywallSource.appLaunch);
         await tester.pumpWidget(
           MaterialApp(
             home: ProviderScope(

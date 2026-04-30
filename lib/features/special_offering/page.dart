@@ -11,6 +11,7 @@ import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_footer.dart';
+import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/app_store/app_store_review_cards.dart';
 import 'package:pilll/features/premium_introduction/components/annual_purchase_button.dart';
@@ -22,7 +23,12 @@ import 'package:url_launcher/url_launcher.dart';
 
 class SpecialOfferingPage extends HookConsumerWidget {
   final ValueNotifier<bool> specialOfferingIsClosed;
-  const SpecialOfferingPage({super.key, required this.specialOfferingIsClosed});
+  final PaywallSource source;
+  const SpecialOfferingPage({
+    super.key,
+    required this.specialOfferingIsClosed,
+    required this.source,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -31,6 +37,7 @@ class SpecialOfferingPage extends HookConsumerWidget {
             return SpecialOfferingPageBody(
               user: user,
               specialOfferingIsClosed: specialOfferingIsClosed,
+              source: source,
             );
           },
           error: (error, stack) => AlertDialog(
@@ -51,11 +58,13 @@ class SpecialOfferingPage extends HookConsumerWidget {
 class SpecialOfferingPageBody extends HookConsumerWidget {
   final User user;
   final ValueNotifier<bool> specialOfferingIsClosed;
+  final PaywallSource source;
 
   const SpecialOfferingPageBody({
     super.key,
     required this.user,
     required this.specialOfferingIsClosed,
+    required this.source,
   });
 
   @override
@@ -198,9 +207,7 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                           isLoading.value = true;
 
                           try {
-                            final shouldShowCompleteDialog = await purchase(
-                              package,
-                            );
+                            final shouldShowCompleteDialog = await purchase(package, source: source);
                             if (shouldShowCompleteDialog) {
                               if (context.mounted) {
                                 showDialog(
@@ -249,4 +256,28 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
       },
     );
   }
+}
+
+Future<void> showSpecialOfferingPage(
+  BuildContext context, {
+  required PaywallSource source,
+  required ValueNotifier<bool> specialOfferingIsClosed,
+}) async {
+  analytics.logScreenView(screenName: 'SpecialOfferingPage');
+  analytics.logEvent(
+    name: 'paywall_viewed',
+    parameters: {'paywall_source': source.value},
+  );
+
+  await showModalBottomSheet(
+    context: context,
+    builder: (_) => SpecialOfferingPage(
+      source: source,
+      specialOfferingIsClosed: specialOfferingIsClosed,
+    ),
+    backgroundColor: Colors.transparent,
+    isScrollControlled: true,
+    enableDrag: false,
+    isDismissible: false,
+  );
 }

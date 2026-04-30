@@ -3,6 +3,7 @@ import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
+import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 
 class QuickRecordRow extends StatelessWidget {
@@ -38,7 +39,7 @@ class QuickRecordRow extends StatelessWidget {
         if (isTrial) {
           return;
         }
-        showPremiumIntroductionSheet(context);
+        showPremiumIntroductionSheet(context, source: PaywallSource.settingsQuickRecordRow);
       },
     );
   }
