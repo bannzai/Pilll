@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -19,7 +20,7 @@ class PremiumIntroductionRow extends StatelessWidget {
     return ListTile(
       onTap: () {
         analytics.logEvent(name: 'tapped_premium_introduction_row');
-        showPremiumIntroductionSheet(context);
+        showPremiumIntroductionSheet(context, source: PaywallSource.settingsPremiumIntroductionRow);
       },
       title: Row(
         children: [

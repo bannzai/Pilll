@@ -4,6 +4,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/features/settings/critical_alert/page.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -52,7 +53,7 @@ class CriticalAlert extends HookConsumerWidget {
             context,
           ).push(CriticalAlertPageRoutes.route(setting: setting));
         } else {
-          showPremiumIntroductionSheet(context);
+          showPremiumIntroductionSheet(context, source: PaywallSource.settingsCriticalAlertRow);
         }
       },
     );

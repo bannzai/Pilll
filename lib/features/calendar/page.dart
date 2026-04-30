@@ -11,6 +11,7 @@ import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/calendar/components/const.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/features/record/weekday_badge.dart';
 import 'package:pilll/provider/diary.dart';
@@ -298,7 +299,7 @@ class PremiumIntroductionOverlay extends StatelessWidget {
                         analytics.logEvent(
                           name: 'pressed_premium_overlay_monthly_calendar',
                         );
-                        showPremiumIntroductionSheet(context);
+                        showPremiumIntroductionSheet(context, source: PaywallSource.calendarOverlay);
                       },
                     ),
                   ),

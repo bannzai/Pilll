@@ -7,6 +7,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/home/page.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -115,7 +116,7 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
                   name: 'feature_appeal_paywall_shown',
                   parameters: {'feature_key': 'appearance_mode_date'},
                 );
-                await showPremiumIntroductionSheet(context);
+                await showPremiumIntroductionSheet(context, source: PaywallSource.featureAppealAppearanceMode);
                 return;
               }
               final tabController = ref.read(homeTabControllerProvider);

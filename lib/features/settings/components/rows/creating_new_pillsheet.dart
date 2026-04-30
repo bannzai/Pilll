@@ -5,6 +5,7 @@ import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
+import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/setting.dart';
@@ -64,7 +65,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
             ),
           );
         } else if (!isPremium) {
-          showPremiumIntroductionSheet(context);
+          showPremiumIntroductionSheet(context, source: PaywallSource.settingsCreatingNewPillSheetRow);
         }
       },
       value: setting.isAutomaticallyCreatePillSheet && (isPremium || isTrial),

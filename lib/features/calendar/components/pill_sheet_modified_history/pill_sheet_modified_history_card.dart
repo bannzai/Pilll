@@ -12,6 +12,7 @@ import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_more_button.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list_header.dart';
+import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/utils/emoji/emoji.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
@@ -149,7 +150,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                                           analytics.logEvent(
                                             name: 'pressed_show_detail_pill_sheet_history',
                                           );
-                                          showPremiumIntroductionSheet(context);
+                                          showPremiumIntroductionSheet(context, source: PaywallSource.pillSheetModifiedHistoryCard);
                                         },
                                       ),
                                     ),

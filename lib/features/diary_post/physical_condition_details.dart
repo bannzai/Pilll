@@ -3,6 +3,7 @@ import 'package:pilll/features/diary_post/util.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/diary_setting_physical_condtion_detail/page.dart';
+import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -56,7 +57,7 @@ class DiaryPostPhysicalConditionDetails extends StatelessWidget {
                     },
                   );
                 } else {
-                  showPremiumIntroductionSheet(context);
+                  showPremiumIntroductionSheet(context, source: PaywallSource.diaryPhysicalConditionDetail);
                 }
               },
               padding: const EdgeInsets.all(4),

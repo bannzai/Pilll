@@ -8,6 +8,7 @@ import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/error/page.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/features/settings/components/churn/churn_survey_complete_dialog.dart';
 import 'package:pilll/features/store_review/pre_store_review_modal.dart';
@@ -151,7 +152,7 @@ class HomePageBody extends HookConsumerWidget {
           );
         } else if (isOneMonthPassedTrialDeadline && isOneMonthPassedSinceLastDisplayedMonthlyPremiumIntroductionSheet && !user.premiumOrTrial) {
           if (!user.premiumOrTrial) {
-            showPremiumIntroductionSheet(context);
+            showPremiumIntroductionSheet(context, source: PaywallSource.homeMonthly);
             sharedPreferences.setInt(
               IntKey.monthlyPremiumIntroductionSheetPresentedDateMilliSeconds,
               now().millisecondsSinceEpoch,

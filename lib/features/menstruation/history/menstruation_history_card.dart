@@ -11,6 +11,7 @@ import 'package:pilll/features/menstruation/history/menstruation_history_card_st
 import 'package:pilll/features/menstruation_list/menstruation_list_row.dart';
 import 'package:pilll/features/menstruation_list/page.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 
 class MenstruationHistoryCard extends StatelessWidget {
@@ -35,7 +36,7 @@ class MenstruationHistoryCard extends StatelessWidget {
               return;
             }
 
-            showPremiumIntroductionSheet(context);
+            showPremiumIntroductionSheet(context, source: PaywallSource.menstruationHistoryCard);
           },
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -72,7 +73,7 @@ class MenstruationHistoryCardMoreButton extends StatelessWidget {
               if (state.isPremium || state.isTrial) {
                 Navigator.of(context).push(MenstruationListPageRoute.route());
               } else {
-                showPremiumIntroductionSheet(context);
+                showPremiumIntroductionSheet(context, source: PaywallSource.menstruationHistoryMore);
               }
             },
           ),

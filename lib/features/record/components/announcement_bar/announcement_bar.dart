@@ -11,6 +11,7 @@ import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pilll_ads.dart';
+import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/discount_price_deadline.dart';
@@ -152,7 +153,7 @@ class AnnouncementBar extends HookConsumerWidget {
                 discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
                 onTap: () {
                   analytics.logEvent(name: 'pressed_discount_announcement_bar');
-                  showPremiumIntroductionSheet(context);
+                  showPremiumIntroductionSheet(context, source: PaywallSource.discountAnnouncementBar);
                 },
               );
             }
@@ -201,7 +202,7 @@ class AnnouncementBar extends HookConsumerWidget {
         if (!isAdsDisabled && pilllAds != null) {
           return PilllAdsAnnouncementBar(
             pilllAds: pilllAds,
-            onClose: () => showPremiumIntroductionSheet(context),
+            onClose: () => showPremiumIntroductionSheet(context, source: PaywallSource.pilllAdsAnnouncementBarClose),
           );
         }
 
