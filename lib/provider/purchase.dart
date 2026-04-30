@@ -5,6 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/secret/secret.dart';
+import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/features/premium_introduction/util/map_to_error.dart';
 import 'package:pilll/features/error/alert_error.dart';
@@ -166,7 +167,7 @@ class Purchase {
   /// Return true indicates end of regularllly pattern.
   /// Return false indicates not regulally pattern.
   /// Return value is used to display the completion page
-  Future<bool> call(Package package) async {
+  Future<bool> call(Package package, {required PaywallSource source}) async {
     try {
       final purchaserInfo = await Purchases.purchasePackage(package);
       final premiumEntitlement = purchaserInfo.entitlements.all[premiumEntitlements];
@@ -176,6 +177,14 @@ class Purchase {
       if (!premiumEntitlement.isActive) {
         throw AlertError(L.purchaseErrorPurchasePendingError);
       }
+      analytics.logEvent(
+        name: 'purchase_succeeded',
+        parameters: {
+          'paywall_source': source.value,
+          'package_type': package.packageType.name,
+          'product_identifier': package.storeProduct.identifier,
+        },
+      );
       await callUpdatePurchaseInfo(purchaserInfo);
       return Future.value(true);
     } on PlatformException catch (exception, stack) {

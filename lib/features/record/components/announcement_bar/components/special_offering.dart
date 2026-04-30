@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/special_offering/page.dart';
 import 'package:pilll/utils/analytics.dart';
 
@@ -27,15 +28,10 @@ class SpecialOfferingAnnouncementBar extends HookConsumerWidget {
       child: GestureDetector(
         onTap: () {
           analytics.logEvent(name: 'special_offering_announcement_bar_tap');
-          showModalBottomSheet(
-            context: context,
-            builder: (context) => SpecialOfferingPage(
-              specialOfferingIsClosed: specialOfferingIsClosed,
-            ),
-            backgroundColor: Colors.transparent,
-            isScrollControlled: true,
-            enableDrag: false,
-            isDismissible: false,
+          showSpecialOfferingPage(
+            context,
+            source: PaywallSource.specialOfferingBar,
+            specialOfferingIsClosed: specialOfferingIsClosed,
           );
         },
         child: Stack(
