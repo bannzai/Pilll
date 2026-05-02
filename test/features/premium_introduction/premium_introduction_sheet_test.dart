@@ -117,7 +117,8 @@ void main() {
             fakeDiscountEntitlementDeadlineDate: null,
           );
 
-          const sheet = PremiumIntroductionSheet(source: PaywallSource.appLaunch);
+          const sheet =
+              PremiumIntroductionSheet(source: PaywallSource.appLaunch);
           await tester.pumpWidget(
             MaterialApp(
               home: ProviderScope(
