@@ -5,7 +5,8 @@ import 'package:pilll/features/feature_appeal/today_pill_number/today_pill_numbe
 
 void main() {
   group('#TodayPillNumberAnnouncementBar', () {
-    testWidgets('isClosed=false の状態でタイトル・説明文の Text Widget が表示される', (tester) async {
+    testWidgets('isClosed=false の状態でタイトル・説明文の Text Widget が表示される',
+        (tester) async {
       final isClosed = ValueNotifier<bool>(false);
       await tester.pumpWidget(
         MaterialApp(
@@ -18,7 +19,8 @@ void main() {
       expect(find.byType(Text), findsAtLeast(2));
     });
 
-    testWidgets('isClosed=false の状態で × ボタン (Icons.close) が表示される', (tester) async {
+    testWidgets('isClosed=false の状態で × ボタン (Icons.close) が表示される',
+        (tester) async {
       final isClosed = ValueNotifier<bool>(false);
       await tester.pumpWidget(
         MaterialApp(
