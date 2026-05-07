@@ -8,35 +8,6 @@ import 'package:pilll/entity/pilll_ads.codegen.dart';
 import 'package:pilll/utils/color.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-/// pilll_ads の Analytics parameters を組み立てる
-/// すべてのイベント (viewed/tapped/is_closed) で同じ値を載せて
-/// BigQuery 側で広告ごとの CTR/CVR を出せるようにする
-Map<String, Object?> _pilllAdsAnalyticsParameters(PilllAds pilllAds) {
-  return {
-    'pilll_ad_id': pilllAds.pilllAdID,
-    'destination_url': pilllAds.destinationURL,
-    'image_url': pilllAds.imageURL,
-  };
-}
-
-/// destinationURL に UTM パラメータを付与した Uri を返す
-/// 既存の query parameters は残し、運用者が destinationURL に直接書いた値を優先する
-Uri _pilllAdsLaunchURL(PilllAds pilllAds) {
-  final base = Uri.parse(pilllAds.destinationURL);
-  return base.replace(
-    queryParameters: {
-      'utm_source': 'pilll',
-      'utm_medium': 'announcement_bar',
-      'utm_campaign': pilllAds.pilllAdID ?? 'pilll_ads',
-      ...base.queryParameters,
-    },
-  );
-}
-
-/// 単体テスト用に _pilllAdsLaunchURL を公開するエントリポイント
-@visibleForTesting
-Uri pilllAdsLaunchURLForTest(PilllAds pilllAds) => _pilllAdsLaunchURL(pilllAds);
-
 class PilllAdsAnnouncementBar extends ConsumerWidget {
   final PilllAds pilllAds;
   final VoidCallback onClose;
@@ -77,7 +48,11 @@ class PilllAdsImageAnnouncementBar extends HookWidget {
     useEffect(() {
       analytics.logEvent(
         name: 'pilll_ads_image_viewed',
-        parameters: _pilllAdsAnalyticsParameters(pilllAds),
+        parameters: {
+          'pilll_ad_id': pilllAds.pilllAdID,
+          'destination_url': pilllAds.destinationURL,
+          'image_url': pilllAds.imageURL,
+        },
       );
       return null;
     }, const []);
@@ -89,9 +64,23 @@ class PilllAdsImageAnnouncementBar extends HookWidget {
         onTap: () {
           analytics.logEvent(
             name: 'pilll_ads_image_tapped',
-            parameters: _pilllAdsAnalyticsParameters(pilllAds),
+            parameters: {
+              'pilll_ad_id': pilllAds.pilllAdID,
+              'destination_url': pilllAds.destinationURL,
+              'image_url': pilllAds.imageURL,
+            },
           );
-          launchUrl(_pilllAdsLaunchURL(pilllAds));
+          final base = Uri.parse(pilllAds.destinationURL);
+          launchUrl(
+            base.replace(
+              queryParameters: {
+                'utm_source': 'pilll',
+                'utm_medium': 'announcement_bar',
+                'utm_campaign': pilllAds.pilllAdID ?? 'pilll_ads',
+                ...base.queryParameters,
+              },
+            ),
+          );
         },
         child: Stack(
           alignment: Alignment.center,
@@ -110,7 +99,11 @@ class PilllAdsImageAnnouncementBar extends HookWidget {
                   onPressed: () {
                     analytics.logEvent(
                       name: 'pilll_ads_image_is_closed',
-                      parameters: _pilllAdsAnalyticsParameters(pilllAds),
+                      parameters: {
+                        'pilll_ad_id': pilllAds.pilllAdID,
+                        'destination_url': pilllAds.destinationURL,
+                        'image_url': pilllAds.imageURL,
+                      },
                     );
                     onClose();
                   },
@@ -152,7 +145,11 @@ class PilllAdsTextAnnouncementBar extends HookWidget {
     useEffect(() {
       analytics.logEvent(
         name: 'pilll_ads_text_viewed',
-        parameters: _pilllAdsAnalyticsParameters(pilllAds),
+        parameters: {
+          'pilll_ad_id': pilllAds.pilllAdID,
+          'destination_url': pilllAds.destinationURL,
+          'image_url': pilllAds.imageURL,
+        },
       );
       return null;
     }, const []);
@@ -164,9 +161,23 @@ class PilllAdsTextAnnouncementBar extends HookWidget {
         onTap: () {
           analytics.logEvent(
             name: 'pilll_ads_text_tapped',
-            parameters: _pilllAdsAnalyticsParameters(pilllAds),
+            parameters: {
+              'pilll_ad_id': pilllAds.pilllAdID,
+              'destination_url': pilllAds.destinationURL,
+              'image_url': pilllAds.imageURL,
+            },
           );
-          launchUrl(_pilllAdsLaunchURL(pilllAds));
+          final base = Uri.parse(pilllAds.destinationURL);
+          launchUrl(
+            base.replace(
+              queryParameters: {
+                'utm_source': 'pilll',
+                'utm_medium': 'announcement_bar',
+                'utm_campaign': pilllAds.pilllAdID ?? 'pilll_ads',
+                ...base.queryParameters,
+              },
+            ),
+          );
         },
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -177,7 +188,11 @@ class PilllAdsTextAnnouncementBar extends HookWidget {
               onTap: () {
                 analytics.logEvent(
                   name: 'pilll_ads_text_is_closed',
-                  parameters: _pilllAdsAnalyticsParameters(pilllAds),
+                  parameters: {
+                    'pilll_ad_id': pilllAds.pilllAdID,
+                    'destination_url': pilllAds.destinationURL,
+                    'image_url': pilllAds.imageURL,
+                  },
                 );
                 onClose();
               },
