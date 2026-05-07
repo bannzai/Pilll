@@ -558,6 +558,7 @@ void main() {
                   pilllAdsProvider.overrideWith(
                     (ref) => Stream.value(
                       PilllAds(
+                        pilllAdID: null,
                         description: 'これは広告用のテキスト',
                         destinationURL: 'https://github.com/bannzai',
                         endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
@@ -640,6 +641,7 @@ void main() {
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
+                      pilllAdID: null,
                       description: 'これは広告用のテキスト',
                       destinationURL: 'https://github.com/bannzai',
                       endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
@@ -722,6 +724,7 @@ void main() {
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
+                      pilllAdID: null,
                       description: 'これは広告用のテキスト',
                       destinationURL: 'https://github.com/bannzai',
                       endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
@@ -804,6 +807,7 @@ void main() {
                   pilllAdsProvider.overrideWith(
                     (ref) => Stream.value(
                       PilllAds(
+                        pilllAdID: null,
                         description: 'これは広告用のテキスト',
                         destinationURL: 'https://github.com/bannzai',
                         endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
@@ -886,6 +890,7 @@ void main() {
                   pilllAdsProvider.overrideWith(
                     (ref) => Stream.value(
                       PilllAds(
+                        pilllAdID: null,
                         description: 'これは広告用のテキスト',
                         destinationURL: 'https://github.com/bannzai',
                         endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
@@ -1286,6 +1291,7 @@ void main() {
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
+                      pilllAdID: null,
                       description: 'これは広告用のテキスト',
                       destinationURL: 'https://github.com/bannzai',
                       endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
@@ -1369,6 +1375,7 @@ void main() {
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
+                      pilllAdID: null,
                       description: 'これは広告用のテキスト',
                       destinationURL: 'https://github.com/bannzai',
                       endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
@@ -1452,6 +1459,7 @@ void main() {
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
+                      pilllAdID: null,
                       description: 'これは広告用のテキスト',
                       destinationURL: 'https://github.com/bannzai',
                       endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
@@ -1535,6 +1543,7 @@ void main() {
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
+                      pilllAdID: null,
                       description: 'これは広告用のテキスト',
                       destinationURL: 'https://github.com/bannzai',
                       endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
@@ -1620,6 +1629,7 @@ void main() {
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
+                      pilllAdID: null,
                       description: 'これは広告用のテキスト',
                       destinationURL: 'https://github.com/bannzai',
                       endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
@@ -1703,6 +1713,7 @@ void main() {
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
+                      pilllAdID: null,
                       description: 'これは広告用のテキスト',
                       destinationURL: 'https://github.com/bannzai',
                       endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
