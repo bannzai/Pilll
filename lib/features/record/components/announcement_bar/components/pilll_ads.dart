@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -7,7 +8,36 @@ import 'package:pilll/entity/pilll_ads.codegen.dart';
 import 'package:pilll/utils/color.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class PilllAdsAnnouncementBar extends HookConsumerWidget {
+/// pilll_ads の Analytics parameters を組み立てる
+/// すべてのイベント (viewed/tapped/is_closed) で同じ値を載せて
+/// BigQuery 側で広告ごとの CTR/CVR を出せるようにする
+Map<String, Object?> _pilllAdsAnalyticsParameters(PilllAds pilllAds) {
+  return {
+    'pilll_ad_id': pilllAds.pilllAdID,
+    'destination_url': pilllAds.destinationURL,
+    'image_url': pilllAds.imageURL,
+  };
+}
+
+/// destinationURL に UTM パラメータを付与した Uri を返す
+/// 既存の query parameters は残し、運用者が destinationURL に直接書いた値を優先する
+Uri _pilllAdsLaunchURL(PilllAds pilllAds) {
+  final base = Uri.parse(pilllAds.destinationURL);
+  return base.replace(
+    queryParameters: {
+      'utm_source': 'pilll',
+      'utm_medium': 'announcement_bar',
+      'utm_campaign': pilllAds.pilllAdID ?? 'pilll_ads',
+      ...base.queryParameters,
+    },
+  );
+}
+
+/// 単体テスト用に _pilllAdsLaunchURL を公開するエントリポイント
+@visibleForTesting
+Uri pilllAdsLaunchURLForTest(PilllAds pilllAds) => _pilllAdsLaunchURL(pilllAds);
+
+class PilllAdsAnnouncementBar extends ConsumerWidget {
   final PilllAds pilllAds;
   final VoidCallback onClose;
   const PilllAdsAnnouncementBar({
@@ -25,13 +55,12 @@ class PilllAdsAnnouncementBar extends HookConsumerWidget {
         pilllAds: pilllAds,
         onClose: onClose,
       );
-    } else {
-      return PilllAdsTextAnnouncementBar(pilllAds: pilllAds, onClose: onClose);
     }
+    return PilllAdsTextAnnouncementBar(pilllAds: pilllAds, onClose: onClose);
   }
 }
 
-class PilllAdsImageAnnouncementBar extends StatelessWidget {
+class PilllAdsImageAnnouncementBar extends HookWidget {
   final PilllAds pilllAds;
   final String imageURL;
   final VoidCallback onClose;
@@ -45,15 +74,24 @@ class PilllAdsImageAnnouncementBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final onClose = this.onClose;
+    useEffect(() {
+      analytics.logEvent(
+        name: 'pilll_ads_image_viewed',
+        parameters: _pilllAdsAnalyticsParameters(pilllAds),
+      );
+      return null;
+    }, const []);
 
     return Container(
       color: HexColor.fromHex(pilllAds.hexColor),
       padding: const EdgeInsets.symmetric(horizontal: 8),
       child: GestureDetector(
         onTap: () {
-          analytics.logEvent(name: 'pilll_ads_image_tapped');
-          launchUrl(Uri.parse(pilllAds.destinationURL));
+          analytics.logEvent(
+            name: 'pilll_ads_image_tapped',
+            parameters: _pilllAdsAnalyticsParameters(pilllAds),
+          );
+          launchUrl(_pilllAdsLaunchURL(pilllAds));
         },
         child: Stack(
           alignment: Alignment.center,
@@ -70,7 +108,10 @@ class PilllAdsImageAnnouncementBar extends StatelessWidget {
                     size: 24,
                   ),
                   onPressed: () {
-                    analytics.logEvent(name: 'pilll_ads_image_is_closed');
+                    analytics.logEvent(
+                      name: 'pilll_ads_image_is_closed',
+                      parameters: _pilllAdsAnalyticsParameters(pilllAds),
+                    );
                     onClose();
                   },
                   iconSize: 24,
@@ -96,7 +137,7 @@ class PilllAdsImageAnnouncementBar extends StatelessWidget {
   }
 }
 
-class PilllAdsTextAnnouncementBar extends StatelessWidget {
+class PilllAdsTextAnnouncementBar extends HookWidget {
   final PilllAds pilllAds;
   final VoidCallback onClose;
 
@@ -108,13 +149,24 @@ class PilllAdsTextAnnouncementBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    useEffect(() {
+      analytics.logEvent(
+        name: 'pilll_ads_text_viewed',
+        parameters: _pilllAdsAnalyticsParameters(pilllAds),
+      );
+      return null;
+    }, const []);
+
     return Container(
       color: HexColor.fromHex(pilllAds.hexColor),
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
       child: GestureDetector(
         onTap: () {
-          analytics.logEvent(name: 'pilll_ads_text_tapped');
-          launchUrl(Uri.parse(pilllAds.destinationURL));
+          analytics.logEvent(
+            name: 'pilll_ads_text_tapped',
+            parameters: _pilllAdsAnalyticsParameters(pilllAds),
+          );
+          launchUrl(_pilllAdsLaunchURL(pilllAds));
         },
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -123,7 +175,10 @@ class PilllAdsTextAnnouncementBar extends StatelessWidget {
             GestureDetector(
               child: const Icon(Icons.close, color: Colors.white, size: 24),
               onTap: () {
-                analytics.logEvent(name: 'pilll_ads_text_is_closed');
+                analytics.logEvent(
+                  name: 'pilll_ads_text_is_closed',
+                  parameters: _pilllAdsAnalyticsParameters(pilllAds),
+                );
                 onClose();
               },
             ),
