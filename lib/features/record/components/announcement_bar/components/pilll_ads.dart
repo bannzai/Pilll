@@ -55,7 +55,7 @@ class PilllAdsImageAnnouncementBar extends HookWidget {
         },
       );
       return null;
-    }, const []);
+    }, [pilllAds]);
 
     return Container(
       color: HexColor.fromHex(pilllAds.hexColor),
@@ -152,7 +152,7 @@ class PilllAdsTextAnnouncementBar extends HookWidget {
         },
       );
       return null;
-    }, const []);
+    }, [pilllAds]);
 
     return Container(
       color: HexColor.fromHex(pilllAds.hexColor),
