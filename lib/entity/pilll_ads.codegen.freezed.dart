@@ -20,6 +20,10 @@ PilllAds _$PilllAdsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PilllAds {
+  /// 広告の識別子。キャンペーン別の集計や UTM 付与に使われる
+  /// 既存ドキュメントには無いため nullable。Firestore 側で運用者が手動セットする
+  String? get pilllAdID => throw _privateConstructorUsedError;
+
   /// 広告の表示開始日時
   /// この時刻以降に広告が表示される
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -64,8 +68,8 @@ abstract class $PilllAdsCopyWith<$Res> {
   factory $PilllAdsCopyWith(PilllAds value, $Res Function(PilllAds) then) = _$PilllAdsCopyWithImpl<$Res, PilllAds>;
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      DateTime startDateTime,
+      {String? pilllAdID,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime startDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime endDateTime,
       String description,
       String? imageURL,
@@ -87,6 +91,7 @@ class _$PilllAdsCopyWithImpl<$Res, $Val extends PilllAds> implements $PilllAdsCo
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? pilllAdID = freezed,
     Object? startDateTime = null,
     Object? endDateTime = null,
     Object? description = null,
@@ -97,6 +102,10 @@ class _$PilllAdsCopyWithImpl<$Res, $Val extends PilllAds> implements $PilllAdsCo
     Object? chevronRightColor = null,
   }) {
     return _then(_value.copyWith(
+      pilllAdID: freezed == pilllAdID
+          ? _value.pilllAdID
+          : pilllAdID // ignore: cast_nullable_to_non_nullable
+              as String?,
       startDateTime: null == startDateTime
           ? _value.startDateTime
           : startDateTime // ignore: cast_nullable_to_non_nullable
@@ -139,8 +148,8 @@ abstract class _$$PilllAdsImplCopyWith<$Res> implements $PilllAdsCopyWith<$Res> 
   @override
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      DateTime startDateTime,
+      {String? pilllAdID,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime startDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime endDateTime,
       String description,
       String? imageURL,
@@ -157,6 +166,7 @@ class __$$PilllAdsImplCopyWithImpl<$Res> extends _$PilllAdsCopyWithImpl<$Res, _$
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? pilllAdID = freezed,
     Object? startDateTime = null,
     Object? endDateTime = null,
     Object? description = null,
@@ -167,6 +177,10 @@ class __$$PilllAdsImplCopyWithImpl<$Res> extends _$PilllAdsCopyWithImpl<$Res, _$
     Object? chevronRightColor = null,
   }) {
     return _then(_$PilllAdsImpl(
+      pilllAdID: freezed == pilllAdID
+          ? _value.pilllAdID
+          : pilllAdID // ignore: cast_nullable_to_non_nullable
+              as String?,
       startDateTime: null == startDateTime
           ? _value.startDateTime
           : startDateTime // ignore: cast_nullable_to_non_nullable
@@ -208,7 +222,8 @@ class __$$PilllAdsImplCopyWithImpl<$Res> extends _$PilllAdsCopyWithImpl<$Res, _$
 @JsonSerializable(explicitToJson: true)
 class _$PilllAdsImpl extends _PilllAds {
   _$PilllAdsImpl(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      {required this.pilllAdID,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required this.startDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required this.endDateTime,
@@ -221,6 +236,11 @@ class _$PilllAdsImpl extends _PilllAds {
       : super._();
 
   factory _$PilllAdsImpl.fromJson(Map<String, dynamic> json) => _$$PilllAdsImplFromJson(json);
+
+  /// 広告の識別子。キャンペーン別の集計や UTM 付与に使われる
+  /// 既存ドキュメントには無いため nullable。Firestore 側で運用者が手動セットする
+  @override
+  final String? pilllAdID;
 
   /// 広告の表示開始日時
   /// この時刻以降に広告が表示される
@@ -268,7 +288,7 @@ class _$PilllAdsImpl extends _PilllAds {
 
   @override
   String toString() {
-    return 'PilllAds(startDateTime: $startDateTime, endDateTime: $endDateTime, description: $description, imageURL: $imageURL, destinationURL: $destinationURL, hexColor: $hexColor, closeButtonColor: $closeButtonColor, chevronRightColor: $chevronRightColor)';
+    return 'PilllAds(pilllAdID: $pilllAdID, startDateTime: $startDateTime, endDateTime: $endDateTime, description: $description, imageURL: $imageURL, destinationURL: $destinationURL, hexColor: $hexColor, closeButtonColor: $closeButtonColor, chevronRightColor: $chevronRightColor)';
   }
 
   @override
@@ -276,6 +296,7 @@ class _$PilllAdsImpl extends _PilllAds {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PilllAdsImpl &&
+            (identical(other.pilllAdID, pilllAdID) || other.pilllAdID == pilllAdID) &&
             (identical(other.startDateTime, startDateTime) || other.startDateTime == startDateTime) &&
             (identical(other.endDateTime, endDateTime) || other.endDateTime == endDateTime) &&
             (identical(other.description, description) || other.description == description) &&
@@ -288,8 +309,8 @@ class _$PilllAdsImpl extends _PilllAds {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, startDateTime, endDateTime, description, imageURL, destinationURL, hexColor, closeButtonColor, chevronRightColor);
+  int get hashCode => Object.hash(
+      runtimeType, pilllAdID, startDateTime, endDateTime, description, imageURL, destinationURL, hexColor, closeButtonColor, chevronRightColor);
 
   @JsonKey(ignore: true)
   @override
@@ -306,7 +327,8 @@ class _$PilllAdsImpl extends _PilllAds {
 
 abstract class _PilllAds extends PilllAds {
   factory _PilllAds(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      {required final String? pilllAdID,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required final DateTime startDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required final DateTime endDateTime,
@@ -320,6 +342,11 @@ abstract class _PilllAds extends PilllAds {
 
   factory _PilllAds.fromJson(Map<String, dynamic> json) = _$PilllAdsImpl.fromJson;
 
+  @override
+
+  /// 広告の識別子。キャンペーン別の集計や UTM 付与に使われる
+  /// 既存ドキュメントには無いため nullable。Firestore 側で運用者が手動セットする
+  String? get pilllAdID;
   @override
 
   /// 広告の表示開始日時

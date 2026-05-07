@@ -13,6 +13,10 @@ part 'pilll_ads.codegen.g.dart';
 class PilllAds with _$PilllAds {
   @JsonSerializable(explicitToJson: true)
   factory PilllAds({
+    /// 広告の識別子。キャンペーン別の集計や UTM 付与に使われる
+    /// 既存ドキュメントには無いため nullable。Firestore 側で運用者が手動セットする
+    required String? pilllAdID,
+
     /// 広告の表示開始日時
     /// この時刻以降に広告が表示される
     @JsonKey(

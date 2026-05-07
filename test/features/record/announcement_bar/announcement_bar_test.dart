@@ -558,6 +558,7 @@ void main() {
                   pilllAdsProvider.overrideWith(
                     (ref) => Stream.value(
                       PilllAds(
+                        pilllAdID: null,
                         description: 'これは広告用のテキスト',
                         destinationURL: 'https://github.com/bannzai',
                         endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
@@ -640,6 +641,7 @@ void main() {
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
+                      pilllAdID: null,
                       description: 'これは広告用のテキスト',
                       destinationURL: 'https://github.com/bannzai',
                       endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
@@ -722,6 +724,7 @@ void main() {
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
+                      pilllAdID: null,
                       description: 'これは広告用のテキスト',
                       destinationURL: 'https://github.com/bannzai',
                       endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
@@ -804,6 +807,7 @@ void main() {
                   pilllAdsProvider.overrideWith(
                     (ref) => Stream.value(
                       PilllAds(
+                        pilllAdID: null,
                         description: 'これは広告用のテキスト',
                         destinationURL: 'https://github.com/bannzai',
                         endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
@@ -886,6 +890,7 @@ void main() {
                   pilllAdsProvider.overrideWith(
                     (ref) => Stream.value(
                       PilllAds(
+                        pilllAdID: null,
                         description: 'これは広告用のテキスト',
                         destinationURL: 'https://github.com/bannzai',
                         endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
@@ -1286,6 +1291,7 @@ void main() {
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
+                      pilllAdID: null,
                       description: 'これは広告用のテキスト',
                       destinationURL: 'https://github.com/bannzai',
                       endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
@@ -1369,6 +1375,7 @@ void main() {
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
+                      pilllAdID: null,
                       description: 'これは広告用のテキスト',
                       destinationURL: 'https://github.com/bannzai',
                       endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
@@ -1452,6 +1459,7 @@ void main() {
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
+                      pilllAdID: null,
                       description: 'これは広告用のテキスト',
                       destinationURL: 'https://github.com/bannzai',
                       endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
@@ -1535,6 +1543,7 @@ void main() {
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
+                      pilllAdID: null,
                       description: 'これは広告用のテキスト',
                       destinationURL: 'https://github.com/bannzai',
                       endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
@@ -1620,6 +1629,7 @@ void main() {
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
+                      pilllAdID: null,
                       description: 'これは広告用のテキスト',
                       destinationURL: 'https://github.com/bannzai',
                       endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
@@ -1703,6 +1713,7 @@ void main() {
                 pilllAdsProvider.overrideWith(
                   (ref) => Stream.value(
                     PilllAds(
+                      pilllAdID: null,
                       description: 'これは広告用のテキスト',
                       destinationURL: 'https://github.com/bannzai',
                       endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
@@ -1950,7 +1961,7 @@ void main() {
 
   group('#FeatureAppealIntegration', () {
     testWidgets(
-        '未認証 + トライアル中 + FeatureAppeal 候補あり → FeatureAppeal が RecommendSignupGeneral より優先される',
+        '未認証 + トライアル残り15日 + FeatureAppeal 候補あり → FeatureAppeal が RecommendSignupGeneral より優先される',
         (tester) async {
       final mockTodayRepository = MockTodayService();
       final mockToday = DateTime(2024, 1, 1);
@@ -1985,7 +1996,7 @@ void main() {
               (ref) => Stream.value(
                 User(
                   isPremium: false,
-                  trialDeadlineDate: mockToday.add(const Duration(days: 5)),
+                  trialDeadlineDate: mockToday.add(const Duration(days: 15)),
                   beginTrialDate: mockToday.subtract(const Duration(days: 1)),
                   discountEntitlementDeadlineDate: null,
                 ),
@@ -2202,7 +2213,7 @@ void main() {
     });
 
     testWidgets(
-        '認証済み + トライアル中 + FeatureAppeal 候補あり → FeatureAppealBarsContainer が表示される',
+        '認証済み + トライアル残り15日 + FeatureAppeal 候補あり → FeatureAppealBarsContainer が表示される',
         (tester) async {
       final mockTodayRepository = MockTodayService();
       final mockToday = DateTime(2024, 1, 1);
@@ -2237,7 +2248,7 @@ void main() {
               (ref) => Stream.value(
                 User(
                   isPremium: false,
-                  trialDeadlineDate: mockToday.add(const Duration(days: 5)),
+                  trialDeadlineDate: mockToday.add(const Duration(days: 15)),
                   beginTrialDate: mockToday.subtract(const Duration(days: 1)),
                   discountEntitlementDeadlineDate: null,
                 ),
@@ -2256,7 +2267,6 @@ void main() {
 
       debugDefaultTargetPlatformOverride = null;
 
-      // mockToday=epoch → daysBetween=0 → index 0 = QuickRecordAnnouncementBar
       // ローテーションロジック自体は feature_appeal_bars_container_test.dart で網羅的にテスト済み
       expect(
         find.byWidgetPredicate(
@@ -2649,6 +2659,78 @@ void main() {
         find.byWidgetPredicate(
             (widget) => widget is RecommendSignupGeneralAnnouncementBar),
         findsNothing,
+      );
+    });
+
+    testWidgets(
+        '非トライアル + 未認証 + FeatureAppeal 候補あり → FeatureAppeal も RecommendSignupGeneral も表示されない (トライアル中限定への変更のリグレッション防止)',
+        (tester) async {
+      final mockTodayRepository = MockTodayService();
+      final mockToday = DateTime(2024, 1, 1);
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+      todayRepository = mockTodayRepository;
+
+      final pillSheet = PillSheet.create(
+        PillSheetType.pillsheet_21,
+        lastTakenDate: mockToday,
+        beginDate: mockToday.subtract(const Duration(days: 5)),
+        pillTakenCount: 1,
+      );
+      final pillSheetGroup = PillSheetGroup(
+        pillSheetIDs: ['1'],
+        pillSheets: [pillSheet],
+        createdAt: mockToday,
+        pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+      );
+
+      SharedPreferences.setMockInitialValues({
+        IntKey.totalCountOfActionForTakenPill:
+            totalCountOfActionForTakenPillForLongTimeUser,
+      });
+      final sharedPreferences = await SharedPreferences.getInstance();
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            appIsReleasedProvider.overrideWith((ref) => true),
+            latestPillSheetGroupProvider
+                .overrideWith((ref) => Stream.value(pillSheetGroup)),
+            userProvider.overrideWith(
+              (ref) => Stream.value(
+                User(
+                  isPremium: false,
+                  trialDeadlineDate:
+                      mockToday.subtract(const Duration(days: 1)),
+                  beginTrialDate: mockToday.subtract(const Duration(days: 30)),
+                  discountEntitlementDeadlineDate: null,
+                ),
+              ),
+            ),
+            isLinkedProvider.overrideWithValue(false),
+            isJaLocaleProvider.overrideWithValue(true),
+            sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+            remoteConfigParameterProvider
+                .overrideWithValue(RemoteConfigParameter()),
+          ],
+          child: const MaterialApp(home: Material(child: AnnouncementBar())),
+        ),
+      );
+      await tester.pump();
+
+      debugDefaultTargetPlatformOverride = null;
+
+      expect(
+        find.byWidgetPredicate(
+            (widget) => widget is QuickRecordAnnouncementBar),
+        findsNothing,
+      );
+      expect(
+        find.byWidgetPredicate(
+            (widget) => widget is RecommendSignupGeneralAnnouncementBar),
+        findsNothing,
+      );
+      expect(
+        find.byWidgetPredicate((widget) => widget is AdMob),
+        findsOneWidget,
       );
     });
   });

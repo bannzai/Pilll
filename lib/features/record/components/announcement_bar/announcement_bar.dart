@@ -166,14 +166,6 @@ class AnnouncementBar extends HookConsumerWidget {
         return EndedPillSheet(isPremium: user.isPremium, isTrial: user.isTrial);
       }
 
-      if (FeatureAppealBarsContainer.hasAnyCandidate(
-            sharedPreferences: sharedPreferences,
-            appIsReleased: appIsReleased,
-          ) &&
-          !featureAppealDismissedToday.value) {
-        return FeatureAppealBarsContainer(appIsReleased: appIsReleased, dismissedToday: featureAppealDismissedToday);
-      }
-
       if (user.isTrial) {
         final remainingTrialDays = PremiumTrialLimitAnnouncementBar.remainingTrialDays(user);
         if (remainingTrialDays != null && remainingTrialDays <= 10) {
@@ -181,13 +173,19 @@ class AnnouncementBar extends HookConsumerWidget {
             premiumTrialLimit: PremiumTrialLimitAnnouncementBar.premiumTrialLimitMessage(user)!,
           );
         }
-      }
 
-      if (!isLinkedLoginProvider) {
-        return const RecommendSignupGeneralAnnouncementBar();
-      }
+        if (FeatureAppealBarsContainer.hasAnyCandidate(
+              sharedPreferences: sharedPreferences,
+              appIsReleased: appIsReleased,
+            ) &&
+            !featureAppealDismissedToday.value) {
+          return FeatureAppealBarsContainer(appIsReleased: appIsReleased, dismissedToday: featureAppealDismissedToday);
+        }
 
-      if (user.isTrial) {
+        if (!isLinkedLoginProvider) {
+          return const RecommendSignupGeneralAnnouncementBar();
+        }
+
         final premiumTrialLimit = PremiumTrialLimitAnnouncementBar.premiumTrialLimitMessage(user);
         if (premiumTrialLimit != null) {
           return PremiumTrialLimitAnnouncementBar(

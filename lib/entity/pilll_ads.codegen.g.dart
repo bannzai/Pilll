@@ -7,6 +7,7 @@ part of 'pilll_ads.codegen.dart';
 // **************************************************************************
 
 _$PilllAdsImpl _$$PilllAdsImplFromJson(Map<String, dynamic> json) => _$PilllAdsImpl(
+      pilllAdID: json['pilllAdID'] as String?,
       startDateTime: NonNullTimestampConverter.timestampToDateTime(json['startDateTime'] as Timestamp),
       endDateTime: NonNullTimestampConverter.timestampToDateTime(json['endDateTime'] as Timestamp),
       description: json['description'] as String,
@@ -18,6 +19,7 @@ _$PilllAdsImpl _$$PilllAdsImplFromJson(Map<String, dynamic> json) => _$PilllAdsI
     );
 
 Map<String, dynamic> _$$PilllAdsImplToJson(_$PilllAdsImpl instance) => <String, dynamic>{
+      'pilllAdID': instance.pilllAdID,
       'startDateTime': NonNullTimestampConverter.dateTimeToTimestamp(instance.startDateTime),
       'endDateTime': NonNullTimestampConverter.dateTimeToTimestamp(instance.endDateTime),
       'description': instance.description,
