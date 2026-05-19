@@ -20,7 +20,11 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/link_account_type.dart';
+import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/sign_in/sign_in_sheet.dart';
+import 'package:pilll/provider/typed_shared_preferences.dart';
+import 'package:pilll/utils/router.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
 
 class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   const InitialSettingPillSheetGroupPage({super.key});
@@ -31,6 +35,15 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
     final state = ref.watch(initialSettingStateNotifierProvider);
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
+    final didEndInitialSettingNotifier = ref.watch(
+      boolSharedPreferencesProvider(BoolKey.didEndInitialSetting).notifier,
+    );
+
+    // この画面で実際にユーザーがサインイン操作を完了したかどうか。
+    // Firebase Auth は iOS Keychain でセッションを保持するため、アプリ再インストール直後でも
+    // providerData が残ったまま isAppleLinked / isGoogleLinked が true になり得る。
+    // ユーザー操作によるサインイン完了と、Keychain 復元による自動ログイン状態を区別するために必要。
+    final didSignInThisSession = useState(false);
 
     // [Pill:TwoTaken] 2錠飲み機能 - 現在一部ユーザーにテスト解放中。初期設定では非表示
     // final pillTakenCount = useState<int>(state.pillTakenCount);
@@ -50,15 +63,11 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
         parameters: {'uid': FirebaseAuth.instance.currentUser?.uid},
       );
 
-      final LinkAccountType? accountType = () {
-        if (isAppleLinked) {
-          return LinkAccountType.apple;
-        } else if (isGoogleLinked) {
-          return LinkAccountType.google;
-        } else {
-          return null;
-        }
-      }();
+      final accountType = snackbarAccountTypeForLinkedUser(
+        didSignInThisSession: didSignInThisSession.value,
+        isAppleLinked: isAppleLinked,
+        isGoogleLinked: isGoogleLinked,
+      );
       if (accountType != null) {
         Future.microtask(() {
           ScaffoldMessenger.of(context).showSnackBar(
@@ -71,7 +80,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
       }
 
       return null;
-    }, [isAppleLinked, isGoogleLinked]);
+    }, [isAppleLinked, isGoogleLinked, didSignInThisSession.value]);
 
     return HUD(
       shown: state.isLoading,
@@ -142,11 +151,26 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                             analytics.logEvent(
                               name: 'pressed_initial_setting_signin',
                             );
+                            final navigator = Navigator.of(context);
                             showSignInSheet(
                               context,
                               SignInSheetStateContext.initialSetting,
                               (accountType) async {
+                                analytics.logEvent(
+                                  name: 'initial_setting_skip_after_signin',
+                                  parameters: {'account_type': accountType.providerName},
+                                );
+                                didSignInThisSession.value = true;
                                 store.showHUD();
+                                try {
+                                  // サインイン完了 → 初期設定オンボーディングをスキップしてホームへ。
+                                  // 再インストール時に既存ユーザーが PillSheetGroup の入力からやり直す必要を解消する。
+                                  await AppRouter.endInitialSetting(navigator, didEndInitialSettingNotifier);
+                                } catch (error) {
+                                  if (context.mounted) showErrorAlert(context, error.toString());
+                                } finally {
+                                  store.hideHUD();
+                                }
                               },
                             );
                           },
@@ -222,4 +246,25 @@ extension InitialSettingPillSheetGroupPageRoute on InitialSettingPillSheetGroupP
     analytics.logScreenView(screenName: 'InitialSettingPillSheetGroupPage');
     return const InitialSettingPillSheetGroupPage();
   }
+}
+
+/// 「{accountType}でログインしました」snackbar を表示すべき LinkAccountType を返す。
+/// この画面でユーザーがサインイン操作を完了していない場合 (didSignInThisSession=false) は null を返す。
+/// Firebase Auth の iOS Keychain による自動セッション復元のみの状態では発火させないことが目的。
+@visibleForTesting
+LinkAccountType? snackbarAccountTypeForLinkedUser({
+  required bool didSignInThisSession,
+  required bool isAppleLinked,
+  required bool isGoogleLinked,
+}) {
+  if (!didSignInThisSession) {
+    return null;
+  }
+  if (isAppleLinked) {
+    return LinkAccountType.apple;
+  }
+  if (isGoogleLinked) {
+    return LinkAccountType.google;
+  }
+  return null;
 }
