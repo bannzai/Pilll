@@ -87,5 +87,4 @@ extension ReleaseNoteKey on String {
 
 extension IntKey on String {
   static const String totalCountOfActionForTakenPill = 'totalPillCount';
-  static const String monthlyPremiumIntroductionSheetPresentedDateMilliSeconds = 'monthlyPremiumIntroductionSheetPresentedDateMilliSeconds';
 }
