@@ -8,8 +8,6 @@ import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/error/page.dart';
 import 'package:pilll/features/localizations/l.dart';
-import 'package:pilll/features/premium_introduction/paywall_source.dart';
-import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/features/settings/components/churn/churn_survey_complete_dialog.dart';
 import 'package:pilll/features/store_review/pre_store_review_modal.dart';
 import 'package:pilll/provider/locale.dart';
@@ -23,7 +21,6 @@ import 'package:pilll/features/record/page.dart';
 import 'package:pilll/features/settings/page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/utils/datetime/day.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/utils/error_log.dart';
@@ -110,19 +107,6 @@ class HomePageBody extends HookConsumerWidget {
       disableShouldAskCancelReasonProvider,
     );
     final shouldAskCancelReason = user.shouldAskCancelReason;
-    final monthlyPremiumIntroductionSheetPresentedDateMilliSeconds = sharedPreferences.getInt(
-          IntKey.monthlyPremiumIntroductionSheetPresentedDateMilliSeconds,
-        ) ??
-        0;
-    final isOneMonthPassedSinceLastDisplayedMonthlyPremiumIntroductionSheet =
-        now().millisecondsSinceEpoch - monthlyPremiumIntroductionSheetPresentedDateMilliSeconds > 1000 * 60 * 60 * 24 * 30;
-    final bool isOneMonthPassedTrialDeadline;
-    final trialDeadlineDate = user.trialDeadlineDate;
-    if (trialDeadlineDate != null) {
-      isOneMonthPassedTrialDeadline = now().millisecondsSinceEpoch - trialDeadlineDate.millisecondsSinceEpoch > 1000 * 60 * 60 * 24 * 30;
-    } else {
-      isOneMonthPassedTrialDeadline = false;
-    }
     final error = useState<String?>(null);
 
     useEffect(() {
@@ -150,14 +134,6 @@ class HomePageBody extends HookConsumerWidget {
             BoolKey.isAlreadyAnsweredPreStoreReviewModal,
             true,
           );
-        } else if (isOneMonthPassedTrialDeadline && isOneMonthPassedSinceLastDisplayedMonthlyPremiumIntroductionSheet && !user.premiumOrTrial) {
-          if (!user.premiumOrTrial) {
-            showPremiumIntroductionSheet(context, source: PaywallSource.homeMonthly);
-            sharedPreferences.setInt(
-              IntKey.monthlyPremiumIntroductionSheetPresentedDateMilliSeconds,
-              now().millisecondsSinceEpoch,
-            );
-          }
         }
       });
 
