@@ -1,0 +1,29 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Flutter(dev)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dev.dart",
+      "args": [
+        "--debug",
+        "--dart-define-from-file=./environment/dev.json",
+      ]
+    },
+    {
+      // Secret.xcconfigも生成し直す必要がある
+      "name": "Flutter(prod)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.prod.dart",
+      "args": [
+        "--debug",
+        "--dart-define-from-file=./environment/prod.json"
+      ]
+    }
+  ]
+}
