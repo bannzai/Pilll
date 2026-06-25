@@ -64,6 +64,10 @@ mixin _$RemoteConfigParameter {
   /// trueの場合、特別オファー2画面で異なるテキスト表現を使用する
   bool get specialOffering2UseAlternativeText => throw _privateConstructorUsedError;
 
+  /// ピルシート終了ダイアログの A/B バリアント識別子
+  /// 'history_blur' / 'summary_stats' / '' (非表示)。Firebase A/B Testing で配信する
+  String get endedPillSheetDialogVariant => throw _privateConstructorUsedError;
+
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $RemoteConfigParameterCopyWith<RemoteConfigParameter> get copyWith => throw _privateConstructorUsedError;
@@ -85,7 +89,8 @@ abstract class $RemoteConfigParameterCopyWith<$Res> {
       int specialOfferingUserCreationDateTimeOffset,
       int specialOfferingUserCreationDateTimeOffsetSince,
       int specialOfferingUserCreationDateTimeOffsetUntil,
-      bool specialOffering2UseAlternativeText});
+      bool specialOffering2UseAlternativeText,
+      String endedPillSheetDialogVariant});
 }
 
 /// @nodoc
@@ -111,6 +116,7 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
     Object? specialOfferingUserCreationDateTimeOffsetSince = null,
     Object? specialOfferingUserCreationDateTimeOffsetUntil = null,
     Object? specialOffering2UseAlternativeText = null,
+    Object? endedPillSheetDialogVariant = null,
   }) {
     return _then(_value.copyWith(
       isPaywallFirst: null == isPaywallFirst
@@ -157,6 +163,10 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
           ? _value.specialOffering2UseAlternativeText
           : specialOffering2UseAlternativeText // ignore: cast_nullable_to_non_nullable
               as bool,
+      endedPillSheetDialogVariant: null == endedPillSheetDialogVariant
+          ? _value.endedPillSheetDialogVariant
+          : endedPillSheetDialogVariant // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -178,7 +188,8 @@ abstract class _$$RemoteConfigParameterImplCopyWith<$Res> implements $RemoteConf
       int specialOfferingUserCreationDateTimeOffset,
       int specialOfferingUserCreationDateTimeOffsetSince,
       int specialOfferingUserCreationDateTimeOffsetUntil,
-      bool specialOffering2UseAlternativeText});
+      bool specialOffering2UseAlternativeText,
+      String endedPillSheetDialogVariant});
 }
 
 /// @nodoc
@@ -201,6 +212,7 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigPara
     Object? specialOfferingUserCreationDateTimeOffsetSince = null,
     Object? specialOfferingUserCreationDateTimeOffsetUntil = null,
     Object? specialOffering2UseAlternativeText = null,
+    Object? endedPillSheetDialogVariant = null,
   }) {
     return _then(_$RemoteConfigParameterImpl(
       isPaywallFirst: null == isPaywallFirst
@@ -247,6 +259,10 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigPara
           ? _value.specialOffering2UseAlternativeText
           : specialOffering2UseAlternativeText // ignore: cast_nullable_to_non_nullable
               as bool,
+      endedPillSheetDialogVariant: null == endedPillSheetDialogVariant
+          ? _value.endedPillSheetDialogVariant
+          : endedPillSheetDialogVariant // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -265,7 +281,8 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
       this.specialOfferingUserCreationDateTimeOffset = RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffset,
       this.specialOfferingUserCreationDateTimeOffsetSince = RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetSince,
       this.specialOfferingUserCreationDateTimeOffsetUntil = RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil,
-      this.specialOffering2UseAlternativeText = RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText})
+      this.specialOffering2UseAlternativeText = RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
+      this.endedPillSheetDialogVariant = RemoteConfigParameterDefaultValues.endedPillSheetDialogVariant})
       : super._();
 
   factory _$RemoteConfigParameterImpl.fromJson(Map<String, dynamic> json) => _$$RemoteConfigParameterImplFromJson(json);
@@ -336,9 +353,15 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
   @JsonKey()
   final bool specialOffering2UseAlternativeText;
 
+  /// ピルシート終了ダイアログの A/B バリアント識別子
+  /// 'history_blur' / 'summary_stats' / '' (非表示)。Firebase A/B Testing で配信する
+  @override
+  @JsonKey()
+  final String endedPillSheetDialogVariant;
+
   @override
   String toString() {
-    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, skipInitialSetting: $skipInitialSetting, trialDeadlineDateOffsetDay: $trialDeadlineDateOffsetDay, discountEntitlementOffsetDay: $discountEntitlementOffsetDay, discountCountdownBoundaryHour: $discountCountdownBoundaryHour, premiumIntroductionPattern: $premiumIntroductionPattern, premiumIntroductionShowsAppStoreReviewCard: $premiumIntroductionShowsAppStoreReviewCard, specialOfferingUserCreationDateTimeOffset: $specialOfferingUserCreationDateTimeOffset, specialOfferingUserCreationDateTimeOffsetSince: $specialOfferingUserCreationDateTimeOffsetSince, specialOfferingUserCreationDateTimeOffsetUntil: $specialOfferingUserCreationDateTimeOffsetUntil, specialOffering2UseAlternativeText: $specialOffering2UseAlternativeText)';
+    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, skipInitialSetting: $skipInitialSetting, trialDeadlineDateOffsetDay: $trialDeadlineDateOffsetDay, discountEntitlementOffsetDay: $discountEntitlementOffsetDay, discountCountdownBoundaryHour: $discountCountdownBoundaryHour, premiumIntroductionPattern: $premiumIntroductionPattern, premiumIntroductionShowsAppStoreReviewCard: $premiumIntroductionShowsAppStoreReviewCard, specialOfferingUserCreationDateTimeOffset: $specialOfferingUserCreationDateTimeOffset, specialOfferingUserCreationDateTimeOffsetSince: $specialOfferingUserCreationDateTimeOffsetSince, specialOfferingUserCreationDateTimeOffsetUntil: $specialOfferingUserCreationDateTimeOffsetUntil, specialOffering2UseAlternativeText: $specialOffering2UseAlternativeText, endedPillSheetDialogVariant: $endedPillSheetDialogVariant)';
   }
 
   @override
@@ -365,7 +388,9 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
             (identical(other.specialOfferingUserCreationDateTimeOffsetUntil, specialOfferingUserCreationDateTimeOffsetUntil) ||
                 other.specialOfferingUserCreationDateTimeOffsetUntil == specialOfferingUserCreationDateTimeOffsetUntil) &&
             (identical(other.specialOffering2UseAlternativeText, specialOffering2UseAlternativeText) ||
-                other.specialOffering2UseAlternativeText == specialOffering2UseAlternativeText));
+                other.specialOffering2UseAlternativeText == specialOffering2UseAlternativeText) &&
+            (identical(other.endedPillSheetDialogVariant, endedPillSheetDialogVariant) ||
+                other.endedPillSheetDialogVariant == endedPillSheetDialogVariant));
   }
 
   @JsonKey(ignore: true)
@@ -382,7 +407,8 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
       specialOfferingUserCreationDateTimeOffset,
       specialOfferingUserCreationDateTimeOffsetSince,
       specialOfferingUserCreationDateTimeOffsetUntil,
-      specialOffering2UseAlternativeText);
+      specialOffering2UseAlternativeText,
+      endedPillSheetDialogVariant);
 
   @JsonKey(ignore: true)
   @override
@@ -410,7 +436,8 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
       final int specialOfferingUserCreationDateTimeOffset,
       final int specialOfferingUserCreationDateTimeOffsetSince,
       final int specialOfferingUserCreationDateTimeOffsetUntil,
-      final bool specialOffering2UseAlternativeText}) = _$RemoteConfigParameterImpl;
+      final bool specialOffering2UseAlternativeText,
+      final String endedPillSheetDialogVariant}) = _$RemoteConfigParameterImpl;
   _RemoteConfigParameter._() : super._();
 
   factory _RemoteConfigParameter.fromJson(Map<String, dynamic> json) = _$RemoteConfigParameterImpl.fromJson;
@@ -470,6 +497,11 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
   /// 特別オファー2で代替テキストを使用するかどうか
   /// trueの場合、特別オファー2画面で異なるテキスト表現を使用する
   bool get specialOffering2UseAlternativeText;
+  @override
+
+  /// ピルシート終了ダイアログの A/B バリアント識別子
+  /// 'history_blur' / 'summary_stats' / '' (非表示)。Firebase A/B Testing で配信する
+  String get endedPillSheetDialogVariant;
   @override
   @JsonKey(ignore: true)
   _$$RemoteConfigParameterImplCopyWith<_$RemoteConfigParameterImpl> get copyWith => throw _privateConstructorUsedError;

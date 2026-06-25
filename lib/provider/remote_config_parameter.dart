@@ -50,6 +50,10 @@ RemoteConfigParameter remoteConfigParameter(RemoteConfigParameterRef ref) {
       RemoteConfigKeys.specialOffering2UseAlternativeText,
       RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
     ),
+    endedPillSheetDialogVariant: remoteConfig.getStringOrDefault(
+      RemoteConfigKeys.endedPillSheetDialogVariant,
+      RemoteConfigParameterDefaultValues.endedPillSheetDialogVariant,
+    ),
   );
 }
 
@@ -65,6 +69,14 @@ extension RemoteConfigExt on FirebaseRemoteConfig {
   int getIntOrDefault(String key, int defaultValue) {
     try {
       return getAll().containsKey(key) ? getInt(key) : defaultValue;
+    } catch (error) {
+      return defaultValue;
+    }
+  }
+
+  String getStringOrDefault(String key, String defaultValue) {
+    try {
+      return getAll().containsKey(key) ? getString(key) : defaultValue;
     } catch (error) {
       return defaultValue;
     }

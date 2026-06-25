@@ -31,6 +31,7 @@ Future<void> setupRemoteConfig() async {
         RemoteConfigKeys.specialOfferingUserCreationDateTimeOffsetUntil:
             RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil,
         RemoteConfigKeys.specialOffering2UseAlternativeText: RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
+        RemoteConfigKeys.endedPillSheetDialogVariant: RemoteConfigParameterDefaultValues.endedPillSheetDialogVariant,
       }),
     ).wait;
     // 項目が増えて来てfetchが重たくなっていてアプリが開かない説があるので非同期にする。計測はしてない。since: 2025-06-25
