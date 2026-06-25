@@ -48,6 +48,10 @@ extension BoolKey on String {
 
   /// 服用おやすみ (無料機能) のアピール Bar を × で閉じたかどうか。
   static const restDurationFeatureAppealIsClosed = 'restDurationFeatureAppealIsClosed';
+
+  /// ピルシート終了ダイアログを当該グループで表示済みかどうか。
+  /// pillSheetGroupID をサフィックスに付与し、終了グループごとに1回だけ表示する。
+  static String endedPillSheetDialogShown(String pillSheetGroupID) => 'endedPillSheetDialogShown_$pillSheetGroupID';
 }
 
 extension StringKey on String {
