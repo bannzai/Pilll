@@ -303,13 +303,15 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   }
 }
 
-/// 渡されたPillSheetModifiedHistory配列から飲み忘れ日数を計算する
-int missedPillDays({
+/// 渡されたPillSheetModifiedHistory配列から、服用予定日（履歴期間の全日 − 服用お休み日）と
+/// 服用記録のあった日の集合を構築する。履歴が空の場合は null を返す。
+/// missedPillDays / scheduledPillDays が共通で利用する。
+({Set<DateTime> scheduledDates, Set<DateTime> takenDates})? _buildPillTakenDateSets({
   required List<PillSheetModifiedHistory> histories,
   required DateTime maxDate,
 }) {
   if (histories.isEmpty) {
-    return 0;
+    return null;
   }
 
   // 昇順に並べ替える。服用お休み期間の集計時に、服用お休みが開始された後の差分の日付を集計するために順番を整える必要がある
@@ -371,7 +373,30 @@ int missedPillDays({
     }
   }
 
-  // 服用記録がない日数を計算
-  final missedDays = allDates.difference(takenDates).difference(restDurationDates).length;
-  return missedDays;
+  return (scheduledDates: allDates.difference(restDurationDates), takenDates: takenDates);
+}
+
+/// 渡されたPillSheetModifiedHistory配列から飲み忘れ日数を計算する
+int missedPillDays({
+  required List<PillSheetModifiedHistory> histories,
+  required DateTime maxDate,
+}) {
+  final sets = _buildPillTakenDateSets(histories: histories, maxDate: maxDate);
+  if (sets == null) {
+    return 0;
+  }
+  // 服用予定日のうち服用記録がない日数を計算
+  return sets.scheduledDates.difference(sets.takenDates).length;
+}
+
+/// 渡されたPillSheetModifiedHistory配列から服用予定日数（履歴期間の全日 − 服用お休み日）を計算する
+int scheduledPillDays({
+  required List<PillSheetModifiedHistory> histories,
+  required DateTime maxDate,
+}) {
+  final sets = _buildPillTakenDateSets(histories: histories, maxDate: maxDate);
+  if (sets == null) {
+    return 0;
+  }
+  return sets.scheduledDates.length;
 }
