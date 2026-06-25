@@ -32,6 +32,8 @@ enum PaywallSource {
   featureAppealReminderCustomize,
   specialOfferingBar,
   specialOfferingBar2,
+  endedPillSheetDialogHistory,
+  endedPillSheetDialogSummary,
 }
 
 extension PaywallSourceFunction on PaywallSource {
@@ -89,6 +91,10 @@ extension PaywallSourceFunction on PaywallSource {
         return 'special_offering_bar';
       case PaywallSource.specialOfferingBar2:
         return 'special_offering_bar2';
+      case PaywallSource.endedPillSheetDialogHistory:
+        return 'ended_pill_sheet_dialog_history';
+      case PaywallSource.endedPillSheetDialogSummary:
+        return 'ended_pill_sheet_dialog_summary';
     }
   }
 }
