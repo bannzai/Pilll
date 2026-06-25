@@ -2800,5 +2800,20 @@
   "restDurationFeatureAppealPoint3": "Easy to edit or resume your cycle",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+
+  "endedPillSheetDialogHistoryTitle": "Want to see your pill-taking history?",
+  "endedPillSheetDialogSummaryTitle": "Let's look back on this pill sheet",
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} days recorded, {missedDays} days missed",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
   }
 }
