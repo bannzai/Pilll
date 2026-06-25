@@ -16,6 +16,9 @@ import 'package:pilll/provider/locale.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/shared_preferences.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
+import 'package:pilll/features/ended_pill_sheet_dialog/ended_pill_sheet_dialog.dart';
+import 'package:pilll/features/ended_pill_sheet_dialog/ended_pill_sheet_dialog_variant.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/calendar/page.dart';
 import 'package:pilll/features/menstruation/page.dart';
@@ -124,6 +127,9 @@ class HomePageBody extends HookConsumerWidget {
       isOneMonthPassedTrialDeadline = false;
     }
     final error = useState<String?>(null);
+    // this.pillSheetGroup は field のため null promotion が効かない。useEffect 内で参照するためローカル変数化する
+    final pillSheetGroup = this.pillSheetGroup;
+    final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
 
     useEffect(() {
       WidgetsBinding.instance.addPostFrameCallback((timestamp) async {
@@ -157,6 +163,16 @@ class HomePageBody extends HookConsumerWidget {
               IntKey.monthlyPremiumIntroductionSheetPresentedDateMilliSeconds,
               now().millisecondsSinceEpoch,
             );
+          }
+        } else if (pillSheetGroup != null && pillSheetGroup.activePillSheet == null && !user.premiumOrTrial) {
+          // ピルシートが終了した free ユーザーに、課金転換ダイアログ(A/B)を終了グループにつき1回だけ表示する
+          final variant = endedPillSheetDialogVariantFromRemoteConfig(remoteConfigParameter.endedPillSheetDialogVariant);
+          final pillSheetGroupID = pillSheetGroup.id;
+          if (variant != null &&
+              pillSheetGroupID != null &&
+              !(sharedPreferences.getBool(BoolKey.endedPillSheetDialogShown(pillSheetGroupID)) ?? false)) {
+            await showEndedPillSheetDialog(context, variant: variant, pillSheetGroup: pillSheetGroup);
+            sharedPreferences.setBool(BoolKey.endedPillSheetDialogShown(pillSheetGroupID), true);
           }
         }
       });
