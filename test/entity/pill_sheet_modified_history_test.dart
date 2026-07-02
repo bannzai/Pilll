@@ -301,8 +301,9 @@ void main() {
 
       final result = missedPillDays(histories: histories, maxDate: today);
 
-      // 5日前から今日までの6日間のうち、1日だけ服用記録があるので5日の飲み忘れ
-      expect(result, 5);
+      // 5日前(9/23)〜昨日(9/27)の5日間のうち、9/23 に服用記録があるので4日の飲み忘れ。
+      // 同じ日に時刻違いの履歴が複数あっても、日付単位に正規化して集計される
+      expect(result, 4);
     });
 
     test("今日服用した場合は飲み忘れが0日", () {
@@ -745,65 +746,6 @@ void main() {
       // - 服用お休み: 10日間（10日前から今日まで継続中）
       // - 飲み忘れ: 0日
       expect(result, 0);
-    });
-  });
-
-  group('#scheduledPillDays', () {
-    test('履歴が空の場合は0を返す', () {
-      expect(scheduledPillDays(histories: [], maxDate: DateTime.parse('2020-09-28')), 0);
-    });
-
-    test('15日前に最初の記録がある場合、服用予定日数は15日', () {
-      final today = DateTime.parse('2020-09-28');
-      final baseDate = DateTime(today.year, today.month, today.day);
-      final histories = [
-        PillSheetModifiedHistory(
-          id: 'history_1',
-          actionType: PillSheetModifiedActionType.takenPill.name,
-          estimatedEventCausingDate: baseDate.subtract(const Duration(days: 15)),
-          createdAt: baseDate.subtract(const Duration(days: 15)),
-          value: const PillSheetModifiedHistoryValue(),
-          beforePillSheetGroup: null,
-          afterPillSheetGroup: null,
-        ),
-      ];
-      expect(scheduledPillDays(histories: histories, maxDate: today), 15);
-    });
-
-    test('服用お休み期間は服用予定日数から除外される', () {
-      final today = DateTime.parse('2020-09-28');
-      final baseDate = DateTime(today.year, today.month, today.day);
-      final histories = [
-        PillSheetModifiedHistory(
-          id: 'began',
-          actionType: PillSheetModifiedActionType.beganRestDuration.name,
-          estimatedEventCausingDate: baseDate.subtract(const Duration(days: 4)),
-          createdAt: baseDate.subtract(const Duration(days: 4)),
-          value: const PillSheetModifiedHistoryValue(),
-          beforePillSheetGroup: null,
-          afterPillSheetGroup: null,
-        ),
-        PillSheetModifiedHistory(
-          id: 'ended',
-          actionType: PillSheetModifiedActionType.endedRestDuration.name,
-          estimatedEventCausingDate: baseDate.subtract(const Duration(days: 2)),
-          createdAt: baseDate.subtract(const Duration(days: 2)),
-          value: const PillSheetModifiedHistoryValue(),
-          beforePillSheetGroup: null,
-          afterPillSheetGroup: null,
-        ),
-        PillSheetModifiedHistory(
-          id: 'taken',
-          actionType: PillSheetModifiedActionType.takenPill.name,
-          estimatedEventCausingDate: baseDate,
-          createdAt: baseDate,
-          value: const PillSheetModifiedHistoryValue(),
-          beforePillSheetGroup: null,
-          afterPillSheetGroup: null,
-        ),
-      ];
-      // allDates: 4日前〜1日前の4日間、休薬: 4日前・3日前の2日間 → 服用予定日数 = 4 - 2 = 2
-      expect(scheduledPillDays(histories: histories, maxDate: today), 2);
     });
   });
 

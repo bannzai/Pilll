@@ -15,16 +15,18 @@ class SummaryStatsTeaser extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final maxDate = pillSheetGroup.pillSheets.last.estimatedEndTakenDate;
+    final beginDate = pillSheetGroup.pillSheets.first.beginDate;
+    final endDate = pillSheetGroup.pillSheets.last.estimatedEndTakenDate;
     final summary = endedPillSheetTakenSummary(
       histories: ref
               .watch(pillSheetModifiedHistoriesWithRangeProvider(
-                begin: pillSheetGroup.pillSheets.first.beginDate,
-                end: maxDate,
+                begin: beginDate,
+                end: endDate,
               ))
               .valueOrNull ??
           [],
-      maxDate: maxDate,
+      beginDate: beginDate,
+      endDate: endDate,
     );
 
     return Column(

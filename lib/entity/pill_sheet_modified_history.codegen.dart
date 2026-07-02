@@ -303,26 +303,35 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   }
 }
 
-/// 渡されたPillSheetModifiedHistory配列から、服用予定日（履歴期間の全日 − 服用お休み日）と
-/// 服用記録のあった日の集合を構築する。履歴が空の場合は null を返す。
-/// missedPillDays / scheduledPillDays が共通で利用する。
-({Set<DateTime> scheduledDates, Set<DateTime> takenDates})? _buildPillTakenDateSets({
+/// 渡されたPillSheetModifiedHistory配列から、服用予定日（集計期間の全日 − 服用お休み日）と
+/// 服用記録のあった日の集合を構築する。集計対象が無い場合は null を返す。
+/// 日付はすべて日付のみ（午前0時）に正規化して集合化する。時刻付きのまま差分すると服用日が一致せず記録が漏れるため。
+/// [beginDate] を渡すと集計開始日として使い（シート開始日など）、省略時は最古の履歴日を開始日とする。
+({Set<DateTime> scheduledDates, Set<DateTime> takenDates})? pillTakenDateSets({
   required List<PillSheetModifiedHistory> histories,
   required DateTime maxDate,
+  DateTime? beginDate,
 }) {
-  if (histories.isEmpty) {
-    return null;
-  }
-
   // 昇順に並べ替える。服用お休み期間の集計時に、服用お休みが開始された後の差分の日付を集計するために順番を整える必要がある
   final orderedHistories = histories.sortedBy(
     (history) => history.estimatedEventCausingDate,
   );
 
-  final minDate = orderedHistories.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isBefore(b) ? a : b);
+  // 集計開始日: beginDate 指定があればそれを、なければ最古の履歴日を使う。時刻を持つと日付集合の差分がずれるため日付のみに正規化する
+  final DateTime minDate;
+  if (beginDate != null) {
+    minDate = DateTime(beginDate.year, beginDate.month, beginDate.day);
+  } else {
+    if (orderedHistories.isEmpty) {
+      return null;
+    }
+    final oldestDate = orderedHistories.first.estimatedEventCausingDate;
+    minDate = DateTime(oldestDate.year, oldestDate.month, oldestDate.day);
+  }
+  final normalizedMaxDate = DateTime(maxDate.year, maxDate.month, maxDate.day);
 
   final allDates = <DateTime>{};
-  final days = daysBetween(minDate, maxDate);
+  final days = daysBetween(minDate, normalizedMaxDate);
   for (var i = 0; i < days; i++) {
     allDates.add(minDate.add(Duration(days: i)));
   }
@@ -366,7 +375,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
 
   // 現在まで服用お休み中の場合には、差分の日付をrestDurationDatesに追加する
   if (historyBeginRestDurationDate != null) {
-    for (var i = 0; i < daysBetween(historyBeginRestDurationDate, maxDate); i++) {
+    for (var i = 0; i < daysBetween(historyBeginRestDurationDate, normalizedMaxDate); i++) {
       restDurationDates.add(
         historyBeginRestDurationDate.add(Duration(days: i)),
       );
@@ -381,22 +390,10 @@ int missedPillDays({
   required List<PillSheetModifiedHistory> histories,
   required DateTime maxDate,
 }) {
-  final sets = _buildPillTakenDateSets(histories: histories, maxDate: maxDate);
+  final sets = pillTakenDateSets(histories: histories, maxDate: maxDate);
   if (sets == null) {
     return 0;
   }
   // 服用予定日のうち服用記録がない日数を計算
   return sets.scheduledDates.difference(sets.takenDates).length;
-}
-
-/// 渡されたPillSheetModifiedHistory配列から服用予定日数（履歴期間の全日 − 服用お休み日）を計算する
-int scheduledPillDays({
-  required List<PillSheetModifiedHistory> histories,
-  required DateTime maxDate,
-}) {
-  final sets = _buildPillTakenDateSets(histories: histories, maxDate: maxDate);
-  if (sets == null) {
-    return 0;
-  }
-  return sets.scheduledDates.length;
 }
