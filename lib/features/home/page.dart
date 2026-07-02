@@ -172,7 +172,11 @@ class HomePageBody extends HookConsumerWidget {
               pillSheetGroupID != null &&
               !(sharedPreferences.getBool(BoolKey.endedPillSheetDialogShown(pillSheetGroupID)) ?? false)) {
             await showEndedPillSheetDialog(context, variant: variant, pillSheetGroup: pillSheetGroup);
-            sharedPreferences.setBool(BoolKey.endedPillSheetDialogShown(pillSheetGroupID), true);
+            final saved = await sharedPreferences.setBool(BoolKey.endedPillSheetDialogShown(pillSheetGroupID), true);
+            if (!saved) {
+              // 保存に失敗すると同じ終了グループで再表示される可能性があるため、失敗をログに残す
+              debugPrint('Failed to persist endedPillSheetDialogShown for $pillSheetGroupID');
+            }
           }
         }
       });
