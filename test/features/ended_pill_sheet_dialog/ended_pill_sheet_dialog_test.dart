@@ -27,12 +27,15 @@ PillSheetGroup _dummyPillSheetGroup() => PillSheetGroup(
     );
 
 void main() {
-  group('EndedPillSheetDialog', () {
-    testWidgets('variant=historyBlur のとき HistoryBlurTeaser を表示し SummaryStatsTeaser は表示しない', (tester) async {
+  group('#EndedPillSheetDialog', () {
+    testWidgets(
+        'variant=historyBlur のとき HistoryBlurTeaser を表示し SummaryStatsTeaser は表示しない',
+        (tester) async {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            pillSheetModifiedHistoriesWithLimitProvider(limit: 30).overrideWith((ref) => Stream.value(<PillSheetModifiedHistory>[])),
+            pillSheetModifiedHistoriesWithLimitProvider(limit: 30).overrideWith(
+                (ref) => Stream.value(<PillSheetModifiedHistory>[])),
           ],
           child: MaterialApp(
             home: EndedPillSheetDialog(
@@ -48,7 +51,9 @@ void main() {
       expect(find.byType(SummaryStatsTeaser), findsNothing);
     });
 
-    testWidgets('variant=summaryStats のとき SummaryStatsTeaser を表示し HistoryBlurTeaser は表示しない', (tester) async {
+    testWidgets(
+        'variant=summaryStats のとき SummaryStatsTeaser を表示し HistoryBlurTeaser は表示しない',
+        (tester) async {
       final pillSheetGroup = _dummyPillSheetGroup();
       await tester.pumpWidget(
         ProviderScope(
