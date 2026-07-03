@@ -40,6 +40,15 @@ abstract class RemoteConfigKeys {
 
   /// 特別オファー2で代替テキストを使用するかのフラグキー
   static const specialOffering2UseAlternativeText = 'specialOffering2UseAlternativeText';
+
+  /// 買い切りオファーを有効にするかのフラグキー
+  static const lifetimeOfferEnabled = 'lifetimeOfferEnabled';
+
+  /// 買い切りオファー表示開始の利用日数（排他境界）キー
+  static const lifetimeOfferUserCreationDaysSince = 'lifetimeOfferUserCreationDaysSince';
+
+  /// 買い切りオファー表示終了の利用日数（排他境界）キー
+  static const lifetimeOfferUserCreationDaysUntil = 'lifetimeOfferUserCreationDaysUntil';
 }
 
 /// Remote Configパラメータのデフォルト値定義
@@ -81,6 +90,15 @@ abstract class RemoteConfigParameterDefaultValues {
 
   /// 特別オファー2で代替テキストを使用する（デフォルト）
   static const specialOffering2UseAlternativeText = true;
+
+  /// 買い切りオファーを無効にする（デフォルト）
+  static const lifetimeOfferEnabled = false;
+
+  /// 買い切りオファー表示開始の利用日数（排他境界。この日数を超えたら表示対象）
+  static const lifetimeOfferUserCreationDaysSince = 335;
+
+  /// 買い切りオファー表示終了の利用日数（排他境界。1年(≈365日)の年会費更新と重なる課金トラブルを避けるため更新直前で打ち切る）
+  static const lifetimeOfferUserCreationDaysUntil = 355;
 }
 
 // [RemoteConfigDefaultValues] でgrepした場所に全て設定する
@@ -150,6 +168,24 @@ class RemoteConfigParameter with _$RemoteConfigParameter {
       RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
     )
     bool specialOffering2UseAlternativeText,
+
+    /// 買い切りオファーを有効にするかどうか
+    /// trueの場合、利用日数が対象範囲のユーザーに買い切りオファーのバー・起動時モーダルを表示する
+    @Default(RemoteConfigParameterDefaultValues.lifetimeOfferEnabled) bool lifetimeOfferEnabled,
+
+    /// 買い切りオファー表示開始の利用日数（排他境界）
+    /// 利用日数がこの値を超えた（>）ユーザーが表示対象となる
+    @Default(
+      RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysSince,
+    )
+    int lifetimeOfferUserCreationDaysSince,
+
+    /// 買い切りオファー表示終了の利用日数（排他境界）
+    /// 利用日数がこの値未満（<）のユーザーが表示対象となる。1年の年会費更新直前を避ける意図の上限
+    @Default(
+      RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysUntil,
+    )
+    int lifetimeOfferUserCreationDaysUntil,
   }) = _RemoteConfigParameter;
   RemoteConfigParameter._();
   factory RemoteConfigParameter.fromJson(Map<String, dynamic> json) => _$RemoteConfigParameterFromJson(json);

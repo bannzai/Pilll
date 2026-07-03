@@ -50,6 +50,18 @@ RemoteConfigParameter remoteConfigParameter(RemoteConfigParameterRef ref) {
       RemoteConfigKeys.specialOffering2UseAlternativeText,
       RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
     ),
+    lifetimeOfferEnabled: remoteConfig.getBoolOrDefault(
+      RemoteConfigKeys.lifetimeOfferEnabled,
+      RemoteConfigParameterDefaultValues.lifetimeOfferEnabled,
+    ),
+    lifetimeOfferUserCreationDaysSince: remoteConfig.getIntOrDefault(
+      RemoteConfigKeys.lifetimeOfferUserCreationDaysSince,
+      RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysSince,
+    ),
+    lifetimeOfferUserCreationDaysUntil: remoteConfig.getIntOrDefault(
+      RemoteConfigKeys.lifetimeOfferUserCreationDaysUntil,
+      RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysUntil,
+    ),
   );
 }
 
