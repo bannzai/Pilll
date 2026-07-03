@@ -21,15 +21,6 @@ import 'package:pilll/utils/links.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-/// 買い切りオファー画面のゴールドアクセントカラー（濃）。CTAグラデーションとバッジに使用する
-const _goldDark = Color(0xFFB8913F);
-
-/// 買い切りオファー画面のゴールドアクセントカラー（淡）。CTAグラデーションと見出しに使用する
-const _goldLight = Color(0xFFE0BC6E);
-
-/// 買い切りオファー画面の背景のフォールバックカラー。背景画像の読み込み前後の隙間を埋める
-const _navyBackground = Color(0xFF2E3E5C);
-
 /// 利用開始から約1年になる約1ヶ月前のユーザーへ、割引版の買い切りプランを一度だけ訴求するオファー画面
 class LifetimeOfferPage extends HookConsumerWidget {
   /// お知らせバーの閉じるフラグ。バー経由で開いたときのみ渡され、閉じる確認でtrueにするとバーが永続的に非表示になる。
@@ -97,13 +88,13 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
     }
 
     return Scaffold(
-      backgroundColor: _navyBackground,
+      backgroundColor: AppColors.background,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.close, color: Colors.white),
+          icon: const Icon(Icons.close, color: TextColor.main),
           onPressed: isClosing.value
               ? null
               : () async {
@@ -187,24 +178,23 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
               children: [
                 const SizedBox(height: 32),
                 const Text(
-                  'Pilllのご利用がまもなく1年',
+                  'いつもご利用ありがとうございます',
                   style: TextStyle(
-                    color: _goldLight,
+                    color: TextColor.primary,
                     fontFamily: FontFamily.japanese,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w700,
                     fontSize: 14,
-                    letterSpacing: 2,
                   ),
                 ),
                 if (usageDays != null) ...[
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 12),
                   Text.rich(
                     TextSpan(
                       children: [
                         const TextSpan(
                           text: 'Pilllを使い始めて',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: TextColor.main,
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w600,
                             fontSize: 18,
@@ -213,7 +203,7 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
                         TextSpan(
                           text: '$usageDays',
                           style: const TextStyle(
-                            color: _goldLight,
+                            color: TextColor.primary,
                             fontFamily: FontFamily.number,
                             fontWeight: FontWeight.w700,
                             fontSize: 48,
@@ -222,7 +212,7 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
                         const TextSpan(
                           text: '日',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: TextColor.main,
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w600,
                             fontSize: 20,
@@ -232,12 +222,12 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
                     ),
                   ),
                 ],
-                const SizedBox(height: 16),
+                const SizedBox(height: 12),
                 const Text(
-                  '長くご愛顧いただいている方に\n買い切りプランのご案内をしております',
+                  '長く使ってくださっている方へ\n買い切りプランのご案内です',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: TextColor.main,
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w400,
                     fontSize: 15,
@@ -246,9 +236,9 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
                 ),
                 const SizedBox(height: 8),
                 const Text(
-                  '今回限りのスペシャル価格です',
+                  '今回限りの特別価格です！',
                   style: TextStyle(
-                    color: _goldLight,
+                    color: TextColor.primary,
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w700,
                     fontSize: 16,
@@ -267,109 +257,60 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
                 const SizedBox(height: 24),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
-                  child: GestureDetector(
-                    onTap: () async {
-                      analytics.logEvent(
-                        name: 'pressed_lifetime_purchase_button',
-                        parameters: {'paywall_source': source.value},
-                      );
-                      if (isLoading.value) return;
-                      isLoading.value = true;
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: PrimaryButton(
+                      text: '今回限りの価格で購入する',
+                      onPressed: () async {
+                        analytics.logEvent(
+                          name: 'pressed_lifetime_purchase_button',
+                          parameters: {'paywall_source': source.value},
+                        );
+                        if (isLoading.value) return;
+                        isLoading.value = true;
 
-                      try {
-                        final shouldShowCompleteDialog = await purchase(lifetimeDiscountPackage, source: source);
-                        if (shouldShowCompleteDialog) {
-                          if (context.mounted) {
-                            showDialog(
-                              context: context,
-                              builder: (_) {
-                                return PremiumCompleteDialog(
-                                  onClose: () {
-                                    Navigator.of(context).pop();
-                                  },
-                                );
-                              },
-                            );
+                        try {
+                          final shouldShowCompleteDialog = await purchase(lifetimeDiscountPackage, source: source);
+                          if (shouldShowCompleteDialog) {
+                            if (context.mounted) {
+                              showDialog(
+                                context: context,
+                                builder: (_) {
+                                  return PremiumCompleteDialog(
+                                    onClose: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                  );
+                                },
+                              );
+                            }
                           }
+                        } catch (error) {
+                          debugPrint('caused purchase error for $error');
+                          if (context.mounted) {
+                            showErrorAlert(context, error);
+                          }
+                        } finally {
+                          isLoading.value = false;
                         }
-                      } catch (error) {
-                        debugPrint('caused purchase error for $error');
-                        if (context.mounted) {
-                          showErrorAlert(context, error);
-                        }
-                      } finally {
-                        isLoading.value = false;
-                      }
-                    },
-                    child: Container(
-                      width: double.infinity,
-                      height: 56,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [_goldLight, _goldDark],
-                        ),
-                        borderRadius: BorderRadius.circular(28),
-                        boxShadow: [
-                          BoxShadow(
-                            color: _goldDark.withValues(alpha: 0.4),
-                            blurRadius: 12,
-                            offset: const Offset(0, 4),
-                          ),
-                        ],
-                      ),
-                      child: isLoading.value
-                          ? const SizedBox(
-                              width: 24,
-                              height: 24,
-                              child: CircularProgressIndicator(
-                                color: Colors.white,
-                                strokeWidth: 2.5,
-                              ),
-                            )
-                          : const Text(
-                              '今回限りの価格で購入する',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: FontFamily.japanese,
-                                fontWeight: FontWeight.w700,
-                                fontSize: 16,
-                              ),
-                            ),
+                      },
                     ),
                   ),
                 ),
                 const SizedBox(height: 40),
-                Container(
-                  width: double.infinity,
-                  decoration: const BoxDecoration(
-                    color: AppColors.white,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(24),
-                      topRight: Radius.circular(24),
-                    ),
-                  ),
-                  padding: const EdgeInsets.only(top: 32),
-                  child: Column(
-                    children: [
-                      const AppStoreReviewCards(),
-                      const SizedBox(height: 24),
-                      AlertButton(
-                        onPressed: () async {
-                          analytics.logEvent(
-                            name: 'pressed_premium_functions_on_sheet',
-                          );
-                          await launchUrl(Uri.parse(preimumLink));
-                        },
-                        text: L.viewPremiumFeatures,
-                      ),
-                      const SizedBox(height: 16),
-                      PremiumIntroductionFooter(isLoading: isLoading),
-                    ],
-                  ),
+                const AppStoreReviewCards(),
+                const SizedBox(height: 24),
+                AlertButton(
+                  onPressed: () async {
+                    analytics.logEvent(
+                      name: 'pressed_premium_functions_on_sheet',
+                    );
+                    await launchUrl(Uri.parse(preimumLink));
+                  },
+                  text: L.viewPremiumFeatures,
                 ),
+                const SizedBox(height: 16),
+                PremiumIntroductionFooter(isLoading: isLoading, backgroundColor: Colors.transparent),
               ],
             ),
           ),
@@ -402,7 +343,7 @@ class LifetimeOfferPriceCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.white,
         borderRadius: const BorderRadius.all(Radius.circular(16)),
-        border: Border.all(width: 1.5, color: _goldDark),
+        border: Border.all(width: 2, color: AppColors.primary),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -424,7 +365,7 @@ class LifetimeOfferPriceCard extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                   decoration: const BoxDecoration(
-                    color: _goldDark,
+                    color: AppColors.secondary,
                     borderRadius: BorderRadius.all(Radius.circular(12)),
                   ),
                   child: Text(

@@ -3,6 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/button.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
@@ -242,7 +243,7 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                       const SizedBox(height: 20),
                       const AppStoreReviewCards(),
                       const SizedBox(height: 24),
-                      PremiumIntroductionFooter(isLoading: isLoading),
+                      PremiumIntroductionFooter(isLoading: isLoading, backgroundColor: AppColors.white),
                     ],
                   ),
                 ),
