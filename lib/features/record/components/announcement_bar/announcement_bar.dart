@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/feature_appeal/feature_appeal_bars_container.dart';
+import 'package:pilll/features/lifetime_offer/provider.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/lifetime_offer.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/special_offering.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/special_offering2.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
@@ -80,7 +82,11 @@ class AnnouncementBar extends HookConsumerWidget {
     final lifetimeSubscriptionWarningIsClosed = useState(
       sharedPreferences.getBool(BoolKey.lifetimeSubscriptionWarningIsClosed) ?? false,
     );
+    final lifetimeOfferIsClosed = useState(
+      sharedPreferences.getBool(BoolKey.lifetimeOfferIsClosed) ?? false,
+    );
     final lifetimePurchaseStatus = ref.watch(isLifetimePurchasedProvider);
+    final shouldShowLifetimeOffer = ref.watch(shouldShowLifetimeOfferProvider);
 
     final historiesAsync = ref.watch(
       pillSheetModifiedHistoriesWithRangeProvider(
@@ -108,6 +114,12 @@ class AnnouncementBar extends HookConsumerWidget {
         sharedPreferences.setBool(
           BoolKey.lifetimeSubscriptionWarningIsClosed,
           lifetimeSubscriptionWarningIsClosed.value,
+        );
+      });
+      lifetimeOfferIsClosed.addListener(() {
+        sharedPreferences.setBool(
+          BoolKey.lifetimeOfferIsClosed,
+          lifetimeOfferIsClosed.value,
         );
       });
       return null;
@@ -204,6 +216,12 @@ class AnnouncementBar extends HookConsumerWidget {
           );
         }
 
+        if (shouldShowLifetimeOffer && !lifetimeOfferIsClosed.value) {
+          return LifetimeOfferAnnouncementBar(
+            lifetimeOfferIsClosed: lifetimeOfferIsClosed,
+          );
+        }
+
         if (userBeginDate != null &&
             daysBetween(userBeginDate, today()) >= remoteConfigParameter.specialOfferingUserCreationDateTimeOffset &&
             !specialOfferingIsClosed.value) {
@@ -234,6 +252,13 @@ class AnnouncementBar extends HookConsumerWidget {
       if (isLifetimePurchased && !lifetimeSubscriptionWarningIsClosed.value) {
         return LifetimeSubscriptionWarningAnnouncementBar(
           isClosed: lifetimeSubscriptionWarningIsClosed,
+        );
+      }
+
+      // 買い切りオファーは課金/非課金問わず全ユーザー対象のためプレミアム側にも表示する
+      if (shouldShowLifetimeOffer && !lifetimeOfferIsClosed.value) {
+        return LifetimeOfferAnnouncementBar(
+          lifetimeOfferIsClosed: lifetimeOfferIsClosed,
         );
       }
 
