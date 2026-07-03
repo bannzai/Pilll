@@ -13,7 +13,21 @@
       "Bash(gh pr comment:*)",
       "Bash(gh pr create:*)",
       "Bash(flutter:*)",
-      "mcp__github_inline_comment__create_inline_comment"
+      "mcp__github_inline_comment__create_inline_comment",
+      "Bash(gh-r2-image:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(mkdir:*)",
+      "Bash(ls:*)",
+      "Bash(date:*)",
+      "Bash(bash /Users/bannzai/.claude/skills/run-qa/scripts/affected_features.sh:*)",
+      "Bash(bash /Users/bannzai/.claude/skills/run-qa/scripts/mark_verified.sh:*)",
+      "Bash(sim-boot:*)",
+      "Bash(sim-list:*)",
+      "Bash(sim-shutdown:*)",
+      "Bash(xcrun simctl:*)",
+      "Bash(maestro:*)",
+      "mcp__mobile",
+      "Bash(dart:*)"
     ],
     "deny": []
   },
