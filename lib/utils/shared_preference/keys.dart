@@ -10,6 +10,12 @@ extension BoolKey on String {
   static const specialOfferingIsClosed2 = 'specialOfferingIsClosed2';
   static const lifetimeSubscriptionWarningIsClosed = 'lifetimeSubscriptionWarningIsClosed';
 
+  /// 買い切りオファーのバーを閉じたかどうか。閉じたら永続的に非表示。
+  static const lifetimeOfferIsClosed = 'lifetimeOfferIsClosed';
+
+  /// 買い切りオファーの起動時自動モーダルを表示済みかどうか。永続的に1回のみ表示する。
+  static const lifetimeOfferAutoModalShown = 'lifetimeOfferAutoModalShown';
+
   /// Critical Alert (サイレントモードでも通知を配信する有料機能) のアピール Bar を × で閉じたかどうか。
   static const criticalAlertFeatureAppealIsClosed = 'criticalAlertFeatureAppealIsClosed';
 
