@@ -8,6 +8,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
+import 'package:pilll/features/error/page.dart';
 import 'package:pilll/features/lifetime_offer/provider.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_footer.dart';
@@ -15,6 +16,7 @@ import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/app_store/app_store_review_cards.dart';
 import 'package:pilll/provider/purchase.dart';
+import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/features/premium_introduction/premium_complete_dialog.dart';
 import 'package:pilll/utils/links.dart';
@@ -38,17 +40,14 @@ class LifetimeOfferPage extends HookConsumerWidget {
               source: source,
             );
           },
-          error: (error, stack) => AlertDialog(
-            title: const Text('エラー'),
-            content: Text(error.toString()),
-            actions: [
-              TextButton(
-                onPressed: () => Navigator.of(context).pop(),
-                child: const Text('閉じる'),
-              ),
-            ],
+          error: (error, stackTrace) => UniversalErrorPage(
+            error: error,
+            reload: () {
+              ref.invalidate(refreshAppProvider);
+            },
+            child: null,
           ),
-          loading: () => const Center(child: CircularProgressIndicator()),
+          loading: () => const Indicator(),
         );
   }
 }
