@@ -82,9 +82,6 @@ class AnnouncementBar extends HookConsumerWidget {
     final lifetimeSubscriptionWarningIsClosed = useState(
       sharedPreferences.getBool(BoolKey.lifetimeSubscriptionWarningIsClosed) ?? false,
     );
-    final lifetimeOfferIsClosed = useState(
-      sharedPreferences.getBool(BoolKey.lifetimeOfferIsClosed) ?? false,
-    );
     final lifetimePurchaseStatus = ref.watch(isLifetimePurchasedProvider);
     final shouldShowLifetimeOffer = ref.watch(shouldShowLifetimeOfferProvider);
 
@@ -114,12 +111,6 @@ class AnnouncementBar extends HookConsumerWidget {
         sharedPreferences.setBool(
           BoolKey.lifetimeSubscriptionWarningIsClosed,
           lifetimeSubscriptionWarningIsClosed.value,
-        );
-      });
-      lifetimeOfferIsClosed.addListener(() {
-        sharedPreferences.setBool(
-          BoolKey.lifetimeOfferIsClosed,
-          lifetimeOfferIsClosed.value,
         );
       });
       return null;
@@ -216,10 +207,8 @@ class AnnouncementBar extends HookConsumerWidget {
           );
         }
 
-        if (shouldShowLifetimeOffer && !lifetimeOfferIsClosed.value) {
-          return LifetimeOfferAnnouncementBar(
-            lifetimeOfferIsClosed: lifetimeOfferIsClosed,
-          );
+        if (shouldShowLifetimeOffer) {
+          return const LifetimeOfferAnnouncementBar();
         }
 
         if (userBeginDate != null &&
@@ -256,10 +245,8 @@ class AnnouncementBar extends HookConsumerWidget {
       }
 
       // 買い切りオファーは課金/非課金問わず全ユーザー対象のためプレミアム側にも表示する
-      if (shouldShowLifetimeOffer && !lifetimeOfferIsClosed.value) {
-        return LifetimeOfferAnnouncementBar(
-          lifetimeOfferIsClosed: lifetimeOfferIsClosed,
-        );
+      if (shouldShowLifetimeOffer) {
+        return const LifetimeOfferAnnouncementBar();
       }
 
       // 2. アカウント登録推奨

@@ -10,9 +10,6 @@ extension BoolKey on String {
   static const specialOfferingIsClosed2 = 'specialOfferingIsClosed2';
   static const lifetimeSubscriptionWarningIsClosed = 'lifetimeSubscriptionWarningIsClosed';
 
-  /// 買い切りオファーのバーを閉じたかどうか。閉じたら永続的に非表示。
-  static const lifetimeOfferIsClosed = 'lifetimeOfferIsClosed';
-
   /// 買い切りオファーの起動時自動モーダルを表示済みかどうか。永続的に1回のみ表示する。
   static const lifetimeOfferAutoModalShown = 'lifetimeOfferAutoModalShown';
 
@@ -62,6 +59,9 @@ extension StringKey on String {
 
   /// FeatureAppeal の × ボタンが最後に押された日付 (ISO 8601)。当日中は再表示しない判定に使う。
   static const String featureAppealLastDismissedDate = 'featureAppealLastDismissedDate';
+
+  /// 買い切りオファーが初めて画面に表示された日時 (ISO 8601)。オファーの表示期限の起点になる。
+  static const String lifetimeOfferFirstDisplayedDateTime = 'lifetimeOfferFirstDisplayedDateTime';
 }
 
 extension ReleaseNoteKey on String {

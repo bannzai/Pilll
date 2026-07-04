@@ -37,11 +37,12 @@ class ShowLifetimeOfferOnAppLaunch extends HookConsumerWidget {
         WidgetsBinding.instance.addPostFrameCallback((_) async {
           // 表示条件の再評価等でcallbackが複数回走っても二重表示しないよう、表示前にフラグを立てる
           await lifetimeOfferAutoModalShownNotifier.set(true);
+          // 表示期限の起点となる初回表示時刻を記録する
+          await setLifetimeOfferFirstDisplayedDateTimeIfAbsent(ref);
           if (context.mounted) {
             await showLifetimeOfferPage(
               context,
               source: PaywallSource.lifetimeOfferAppLaunch,
-              lifetimeOfferIsClosed: null,
             );
           }
         });

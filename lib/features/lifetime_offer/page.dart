@@ -21,15 +21,11 @@ import 'package:pilll/utils/links.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-/// 利用開始から約1年になる約1ヶ月前のユーザーへ、割引版の買い切りプランを一度だけ訴求するオファー画面
+/// 利用開始から約1年になる約1ヶ月前のユーザーへ、割引版の買い切りプランを期間限定で訴求するオファー画面
 class LifetimeOfferPage extends HookConsumerWidget {
-  /// お知らせバーの閉じるフラグ。バー経由で開いたときのみ渡され、閉じる確認でtrueにするとバーが永続的に非表示になる。
-  /// 起動時自動モーダル経由（null）では確認なしで閉じられる。モーダルを閉じてもオファー自体は失われず、バーから再度開ける。
-  final ValueNotifier<bool>? lifetimeOfferIsClosed;
   final PaywallSource source;
   const LifetimeOfferPage({
     super.key,
-    required this.lifetimeOfferIsClosed,
     required this.source,
   });
 
@@ -39,7 +35,6 @@ class LifetimeOfferPage extends HookConsumerWidget {
           data: (user) {
             return LifetimeOfferPageBody(
               user: user,
-              lifetimeOfferIsClosed: lifetimeOfferIsClosed,
               source: source,
             );
           },
@@ -60,20 +55,17 @@ class LifetimeOfferPage extends HookConsumerWidget {
 
 class LifetimeOfferPageBody extends HookConsumerWidget {
   final User user;
-  final ValueNotifier<bool>? lifetimeOfferIsClosed;
   final PaywallSource source;
 
   const LifetimeOfferPageBody({
     super.key,
     required this.user,
-    required this.lifetimeOfferIsClosed,
     required this.source,
   });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isLoading = useState(false);
-    final isClosing = useState(false);
 
     final purchase = ref.watch(purchaseProvider);
     final lifetimeDiscountPackage = ref.watch(lifetimeDiscountPackageProvider);
@@ -95,71 +87,13 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.close, color: TextColor.main),
-          onPressed: isClosing.value
-              ? null
-              : () async {
-                  analytics.logEvent(
-                    name: 'lifetime_offer_close_button_tapped',
-                  );
-
-                  // 起動時自動モーダル経由では閉じてもバーから再度開けるため、確認なしで閉じる
-                  final lifetimeOfferIsClosed = this.lifetimeOfferIsClosed;
-                  if (lifetimeOfferIsClosed == null) {
-                    Navigator.of(context).pop();
-                    return;
-                  }
-
-                  final shouldClose = await showDialog<bool>(
-                    context: context,
-                    builder: (context) {
-                      return AlertDialog(
-                        title: const Text(
-                          '本当に閉じますか？',
-                          style: TextStyle(
-                            color: TextColor.main,
-                            fontFamily: FontFamily.japanese,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                          ),
-                        ),
-                        content: const Text(
-                          'この特典は今回限りです。閉じると今後受け取ることができません。本当に閉じてもよろしいですか？',
-                          style: TextStyle(
-                            color: TextColor.main,
-                            fontSize: 16,
-                          ),
-                        ),
-                        actions: [
-                          AlertButton(
-                            onPressed: () async {
-                              analytics.logEvent(
-                                name: 'lifetime_offer_alert_cancel',
-                              );
-                              Navigator.of(context).pop(false);
-                            },
-                            text: '閉じない',
-                          ),
-                          AlertButton(
-                            onPressed: () async {
-                              analytics.logEvent(
-                                name: 'lifetime_offer_alert_close',
-                              );
-                              lifetimeOfferIsClosed.value = true;
-                              Navigator.of(context).pop(true);
-                            },
-                            text: '閉じる',
-                          ),
-                        ],
-                      );
-                    },
-                  );
-                  if (shouldClose == true) {
-                    isClosing.value = true;
-                    if (context.mounted) {
-                      Navigator.of(context).pop();
-                    }
-                  }
-                },
+          onPressed: () {
+            analytics.logEvent(
+              name: 'lifetime_offer_close_button_tapped',
+            );
+            // オファーは表示期限まで有効でバーから再度開けるため、確認なしで閉じる
+            Navigator.of(context).pop();
+          },
         ),
       ),
       body: Container(
@@ -236,7 +170,7 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
                 ),
                 const SizedBox(height: 8),
                 const Text(
-                  '今回限りの特別価格です！',
+                  '期間限定の特別価格です！',
                   style: TextStyle(
                     color: TextColor.primary,
                     fontFamily: FontFamily.japanese,
@@ -244,6 +178,8 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
                     fontSize: 16,
                   ),
                 ),
+                const SizedBox(height: 8),
+                const LifetimeOfferCountdownText(),
                 const SizedBox(height: 28),
                 if (isActiveSubscriber) ...[
                   const LifetimeOfferSubscriptionCancelNotice(),
@@ -260,7 +196,7 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
                   child: SizedBox(
                     width: double.infinity,
                     child: PrimaryButton(
-                      text: '今回限りの価格で購入する',
+                      text: '期間限定の価格で購入する',
                       onPressed: () async {
                         analytics.logEvent(
                           name: 'pressed_lifetime_purchase_button',
@@ -315,6 +251,30 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+/// 表示期限までの残り時間を毎秒更新でカウントダウン表示するテキスト
+///
+/// ページ全体の毎秒再ビルドを避けるため、tick由来のProviderはこのWidget内でのみwatchする。
+class LifetimeOfferCountdownText extends ConsumerWidget {
+  const LifetimeOfferCountdownText({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final remainingDuration = ref.watch(lifetimeOfferRemainingDurationProvider);
+    if (remainingDuration.inSeconds <= 0) {
+      return Container();
+    }
+    return Text(
+      '残り ${lifetimeOfferCountdownString(remainingDuration)}',
+      style: const TextStyle(
+        color: TextColor.primary,
+        fontFamily: FontFamily.number,
+        fontWeight: FontWeight.w700,
+        fontSize: 20,
       ),
     );
   }
@@ -450,7 +410,6 @@ class LifetimeOfferSubscriptionCancelNotice extends StatelessWidget {
 Future<void> showLifetimeOfferPage(
   BuildContext context, {
   required PaywallSource source,
-  required ValueNotifier<bool>? lifetimeOfferIsClosed,
 }) async {
   analytics.logScreenView(screenName: 'LifetimeOfferPage');
   analytics.logEvent(
@@ -463,7 +422,6 @@ Future<void> showLifetimeOfferPage(
       fullscreenDialog: true,
       builder: (_) => LifetimeOfferPage(
         source: source,
-        lifetimeOfferIsClosed: lifetimeOfferIsClosed,
       ),
     ),
   );
