@@ -18,7 +18,37 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **シート表示**: 設定画面のプレミアム紹介行など任意の起動経路からタップすると、`PremiumIntroductionSheet` が画面下からモーダル(DraggableScrollableSheet)で表示される
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **ヘッダーロゴ表示**: シート上部に pilll premium のロゴ画像(`pillll_premium_logo.svg`)が表示される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **閉じるボタン**: シート左上の×アイコンをタップするとシートが閉じてもとの画面に戻る
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **フッター法的リンク表示**: フッターにプライバシーポリシー・利用規約・特定商取引法・詳細ページへのリンクが表示され、各リンクをタップすると inAppBrowser で対応する外部ページが開く
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>
 
@@ -35,7 +65,37 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **月額/年額ボタン表示**: 非プレミアムユーザーがシートを開くと、月額プラン・年額プランのボタンが価格と日割り額付きで表示される
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **年額の割引バッジ表示**: 年額プランボタンの右上に月額比の割引率バッジ(例: 「◯％OFF」)が表示される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **買い切りプラン表示 (iOSのみ)**: iOS では月額・年額に加えて買い切り(lifetime)プランのボタンが表示される。Android では買い切りボタンが表示されないことを確認する
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **プレミアム会員時の表示切り替え**: 既にプレミアムのユーザーでシートを開くと購入ボタン一式が表示されず、代わりにジュエル画像と「プレミアム会員です」の感謝メッセージが表示される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>
 
@@ -53,7 +113,37 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **購入ボタンタップでローディング表示**: 月額/年額/買い切りボタンのいずれかをタップすると HUD ローディングが表示され、StoreKit の購入シートが起動する
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **購入完了ダイアログ**: 購入成功時に「登録が完了しました」ダイアログがジュエル画像付きで表示され、OKタップでダイアログとシートの両方が閉じる
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **購入エラー時のアラート表示**: 購入失敗(Sandbox でのキャンセル操作等)時にエラーアラートが表示され、シートは閉じずに操作をやり直せる
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **復元購入**: フッターの「以前に購入した内容を復元」をタップし、購入履歴がない Sandbox アカウントではエラーアラートが表示されることを確認する。有効な購入がある場合は復元成功のスナックバーが表示される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>
 
@@ -70,6 +160,28 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **プレミアム機能一覧へのリンク**: 「プレミアム機能を見る」ボタンをタップすると外部ブラウザでプレミアム機能紹介ページが開く
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **期間限定割引の表示 (該当ユーザーのみ)**: 割引権限(`hasDiscountEntitlement`)を持つユーザーでは、通常価格に取り消し線を引いた割引訴求と期限までのカウントダウンが月額プランボタンの上部に表示される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **オファリング取得失敗時のエラー画面**: 機内モード等でオファリング取得に失敗した状態でシートを開くと、エラーページが表示され、再読み込み操作でオファリング再取得を試みられる
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>

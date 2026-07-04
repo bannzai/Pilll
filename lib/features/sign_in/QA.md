@@ -18,7 +18,37 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **初期設定からの表示**: 初期設定1/3画面で「すでにアカウントをお持ちの方はこちら」をタップすると下からシートが表示され、タイトルが「ログイン」、ボタンの文言が「〜でサインイン」になる
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **記録画面からの表示**: 記録画面のアカウント登録案内バーをタップすると、タイトルが「アカウント登録」のシートが表示され、ボタンの文言が「〜で登録」になる
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **設定画面からの表示**: 設定画面のアカウント設定で未連携の項目の「連携する」をタップすると、タイトル「アカウント登録」のシートが表示される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **共通UI要素**: シート上部にドラッグバー、タイトル、説明文、Apple/Googleの2つのボタンが表示される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>
 
@@ -35,7 +65,37 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **Appleボタンタップ**: 「Appleでサインイン/登録」ボタンをタップするとApple認証フローが起動する。実Apple IDでの認証成功可否はSimulatorでは確認できないため実機で確認し、Simulatorでは認証UIが起動しローディング（HUD）が表示されることまでを確認する
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **Googleボタンタップ**: 「Googleでサインイン/登録」ボタンをタップするとGoogle認証フローが起動する。実アカウントでの認証結果は実機で確認し、Simulatorでは認証UI起動までを確認する
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **認証キャンセル時の挙動**: 認証フローを途中でキャンセルすると、シートは閉じたままにならずローディング表示が解除され、エラーも表示されない
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **認証エラー時の挙動**: 認証中にエラーが発生した場合、エラーアラートが表示されローディングが解除される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>
 
@@ -50,6 +110,20 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **初期設定からのログイン完了**: 初期設定からログインが成功するとシートが閉じ、ピルシート選択画面に「〜でログインしました」のSnackBarが表示される
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **設定画面からの登録完了**: 設定画面から連携が成功するとシートが閉じ、「〜で登録しました」のSnackBarが表示され、アカウント連携画面の表示が「連携済み」に更新される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>

@@ -18,7 +18,37 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **画面表示**: 設定画面の「お問い合わせ」からお問い合わせ画面を開くと、タイトル「お問い合わせ」と左上に閉じる（バツ）ボタンが表示される
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **お問い合わせ種別の初期状態**: 「不具合報告」「ご意見・ご要望」「その他」の3種別がラジオボタンで表示され、デフォルトで「不具合報告」が選択されている
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **その他選択時の入力欄**: 「その他」を選択すると自由入力欄（最大100文字）が表示される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **注意文言の表示**: メールアドレス欄の下に受信設定の注意文（オレンジ文字）とiCloudメール利用不可の注意文（赤文字）が表示される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>
 
@@ -35,7 +65,37 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **不正なメールアドレス**: メールアドレス欄に不正な形式を入力すると入力欄下にエラーメッセージが表示され、送信ボタンが無効化される
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **お問い合わせ内容未入力**: 内容欄が空のままだと送信ボタンが無効化されている
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **その他の自由入力未入力**: 「その他」選択時に自由入力欄が空だと送信ボタンが無効化される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **入力完了で送信ボタン活性化**: 種別・メールアドレス（正しい形式）・内容（「その他」選択時は自由入力も）をすべて入力すると送信ボタンが有効になる
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>
 
@@ -50,7 +110,21 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **送信成功**: 送信ボタンをタップすると「お問い合わせを送信しました」のSnackBarが表示され画面が閉じる。実際にメールが届くかどうかはSimulatorでは確認できないため、Firebase Functions呼び出しが成功しSnackBarが表示されることまでを確認対象とする
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **送信失敗時のエラー表示**: 通信エラー等で送信に失敗した場合、エラーアラートが表示され画面は閉じない
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>
 
@@ -65,6 +139,20 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **キーボードツールバー**: メールアドレス欄または内容欄にフォーカスすると画面下部に「完了」ボタン付きツールバーが表示され、タップでキーボードが閉じる
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **画面を閉じる**: 左上のバツボタンをタップするとお問い合わせ画面が閉じる
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>

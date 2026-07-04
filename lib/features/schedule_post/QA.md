@@ -15,7 +15,13 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **タイトルの入力**: 未来日の予定登録画面でタイトル欄（ヒント「病院に行く」相当）に文字を入力できる。60文字を超える入力はできず、複数行入力にも対応する
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
 
 </details>
 
@@ -29,7 +35,13 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **通知トグルの切り替え**: 「9時に通知を受け取る」のスイッチをタップするとON/OFFが切り替わる
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
 
 </details>
 
@@ -46,7 +58,29 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **保存ボタンの表示条件**: 保存ボタンは日付が今日より後（未来日）の場合のみ表示される
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **保存ボタンの活性化条件**: タイトルが未入力の状態では保存ボタンが無効（タップ不可）になり、1文字でも入力すると有効になる
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **予定の保存**: タイトルを入力し保存ボタンをタップすると画面が閉じてカレンダーに戻り、該当日に予定アイコン（時計マーク）が表示される。通知ONで保存した場合はローカル通知がスケジュールされる
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>
 
@@ -61,7 +95,21 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **削除ボタンの表示条件**: 削除ボタンは既に登録済みの予定を開いた場合のみ表示され、新規作成時は表示されない
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **予定の削除**: 削除ボタンをタップすると確認ダイアログが表示され、「削除」をタップすると予定が削除されカレンダー画面（先頭）まで戻る。「キャンセル」をタップするとダイアログのみ閉じ予定は保持される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>
 
@@ -75,6 +123,12 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **過去日の既存予定を開いた場合**: 過去日または当日に登録済みの予定を開くと保存ボタンは表示されず、削除ボタンのみ操作可能な状態になる
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
 
 </details>

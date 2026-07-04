@@ -20,7 +20,45 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **画面遷移**: カレンダー画面の服薬変更履歴カードで「もっと見る」をタップすると本画面に遷移し、AppBarに戻るボタンとタイトル「服用履歴」が表示される
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **列見出しの表示**: リスト上部に「服用時間」「服用済み」の列見出しが表示される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **月ごとのグルーピング表示**: 履歴が発生月ごとにヘッダー（例:「7月」）で区切られて表示される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **日付間隔の区切り線表示**: 前の履歴と1日以上間隔が空いている履歴の直前に、区切りの点線が表示される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **記録が0件の場合**: 服薬変更履歴が1件もない場合、画面がエラーにならず空の状態で表示される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>
 
@@ -35,7 +73,21 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **追加読み込み**: 一覧を最下部までスクロールすると、表示件数が20件ずつ追加され、それに応じて古い履歴が表示される
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **末尾到達後の追加スクロール**: 追加読み込み後さらに最下部までスクロールすると、履歴が尽きるまで20件単位で読み込みが続く
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>
 
@@ -52,7 +104,37 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **服用記録行の表示**: 「服用」の履歴行に服用番号の変化（前番号→後番号）と服用時刻が表示される
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **服用記録の時刻編集**: 服用記録行をタップすると日時ピッカーが開き、時刻を変更して確定すると履歴が更新され「◯◯に変更しました」のスナックバーが表示されピッカーが閉じる
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **服用取り消し行の表示**: 服用を取り消した履歴行に「服用取り消し」の文言と番号変化が表示される（タップしても編集は開かない）
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **その他アクション行の表示**: ピルシート作成・削除・休薬開始/終了・番号変更など、服用・取り消し以外の履歴行もそれぞれ内容欠損なく表示される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>
 
@@ -66,6 +148,12 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **戻るボタン**: AppBar左上の戻るボタンをタップするとカレンダー画面に戻る
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
 
 </details>

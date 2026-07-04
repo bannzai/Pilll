@@ -19,7 +19,45 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **一覧画面への遷移**: 生理タブの生理履歴カードで「もっと見る」をタップすると本画面に遷移し、AppBarに戻るボタンとタイトル「生理履歴」が表示される
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **全件表示**: 記録されている生理記録が開始日の新しい順に全件一覧表示される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **周期日数表示**: 各行に前回記録との開始日差分が「N日周期」の形式で表示される。一覧の最後（最も古い）行など前回記録がない場合は「-」と表示される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **ドット・帯の表示**: 各行に生理期間の日数分のドットが表示され、周期日数に応じて帯の横幅が変化する
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **記録が0件の場合**: 生理記録が1件もない場合、一覧は空の状態で表示されエラーにならない
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>
 
@@ -35,7 +73,29 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **行タップで選択シート表示**: 一覧の行をタップすると、その記録の編集/削除選択シート（期間表示＋「生理期間を編集」「削除」ボタン）が開く
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **編集結果の一覧への反映**: 選択シートから日付を編集して保存すると、一覧画面に戻った際に該当行の日付・周期日数表示が更新されている
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **削除結果の一覧への反映**: 選択シートから削除を実行すると、一覧画面に戻った際に該当行が消えており、前後の行の周期日数表示も再計算されている
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>
 
@@ -49,6 +109,12 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **戻るボタン**: AppBar左上の戻るボタンをタップすると生理タブ（menstruation画面）に戻る
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
 
 </details>

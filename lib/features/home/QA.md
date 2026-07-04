@@ -19,7 +19,45 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **起動時の初期タブ**: ホーム画面を開くと「ピル」タブ（服薬記録画面）が選択された状態で表示される
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **4タブの表示**: 画面下部に「ピル」「生理」「カレンダー」「設定」の4タブがアイコン付きで表示される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **タブ切り替え**: 各タブをタップすると対応する画面（服薬記録／生理／カレンダー／設定）に切り替わる
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **選択状態の見た目**: 選択中のタブはアイコンが有効色（プライマリカラー）で表示され、非選択タブはグレー表示になる
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **スワイプ無効**: 画面を左右にスワイプしてもタブは切り替わらず、タブタップのみで切り替えられる
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>
 
@@ -34,6 +72,20 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **通知権限リクエスト**: 通知権限が未許可の端末でホーム画面を開くと、通知許可を求めるダイアログが表示される（許可済み端末では表示されないのが正常）
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **累計服薬記録に応じたストアレビュー促進・退会アンケート表示**: 服薬記録が一定回数を超えたユーザーには事前ストアレビューモーダルが、解約手続き中のユーザーには退会理由アンケート（WebView）が表示される。表示条件はユーザーの解約フラグやSharedPreferencesの記録回数といった特殊な状態が必要なため、Simulatorで通常操作のみでは再現が難しい。代替手段としてコードレビューで発火条件（`shouldAskCancelReason` / `totalCountOfActionForTakenPill`）を確認する
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>

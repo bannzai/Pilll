@@ -27,7 +27,8 @@
       "Bash(xcrun simctl:*)",
       "Bash(maestro:*)",
       "mcp__mobile",
-      "Bash(dart:*)"
+      "Bash(dart:*)",
+      "Bash(bash /Users/bannzai/.claude/skills/setup-qa/scripts/sync_evidence.sh:*)"
     ],
     "deny": []
   },

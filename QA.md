@@ -69,7 +69,21 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **服用記録**: `record` からピルの服用記録・取り消しができ、ピルシートの表示に反映される
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **生理記録**: `menstruation` から生理の記録・編集ができる
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>
 

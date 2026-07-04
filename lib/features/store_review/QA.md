@@ -18,7 +18,29 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **条件成立時に自動表示**: 服薬記録アクション回数(`totalCountOfActionForTakenPill`)が10回を超え、かつ未回答(`isAlreadyAnsweredPreStoreReviewModal` が false)、かつ日本語ロケールの3条件が揃った状態でホーム画面を開くと、`PreStoreReviewModal` がボトムシートで自動表示される
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **一度回答すると再表示されない**: モーダルで「満足」または「不満」を選び確認ボタンを押すと `isAlreadyAnsweredPreStoreReviewModal` が true になり、以後ホーム画面を開いてもモーダルが再表示されない
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **非日本語ロケールでは表示されない**: 端末言語を日本語以外に設定していると、条件を満たしていてもモーダルが表示されない
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>
 
@@ -36,7 +58,37 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **満足カードの選択**: 「満足」(good)カードをタップすると選択枠がハイライトされ、確認ボタンが表示される
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **満足確定でお礼ダイアログ表示**: 確認ボタンをタップすると「ご協力ありがとうございます」ダイアログが表示される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **アンケートへの遷移**: お礼ダイアログの「参加する」をタップすると満足用のGoogleフォームがWebView画面で開く。フォーム画面を閉じると完了ダイアログが表示され、閉じるとモーダル全体が閉じる
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **満足回答でストアレビュー許可フラグが保存される**: 満足を選択すると `isPreStoreReviewGoodAnswer` が true で保存され、以後の服薬記録アクション時にネイティブストアレビューのリクエスト対象になる
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>
 
@@ -52,6 +104,28 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **不満カードの選択**: 「不満」(bad)カードをタップすると選択枠がハイライトされ、確認ボタンが表示される
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **不満確定でもお礼ダイアログ表示**: 確認ボタンをタップすると同様にお礼ダイアログが表示され、「参加する」をタップすると不満用の別URLのGoogleフォームがWebViewで開く
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **「力になれない」選択時は何もせず閉じる**: お礼ダイアログで「力になれない」をタップすると、フォームを開かずにダイアログとモーダルが閉じる
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>

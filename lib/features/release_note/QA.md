@@ -18,7 +18,29 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **初回表示 (iOS)**: 対象バージョンの既読フラグ(SharedPreferences の `ReleaseNoteKey.version20250920`)が立っていない状態でアプリを起動すると、リリースノートダイアログが自動表示される
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **Androidでは表示されない**: Android端末では `Platform.isAndroid` の判定により、フラグの状態に関わらずダイアログが表示されない
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **2回目以降は再表示されない**: 一度ダイアログが表示されるとフラグが保存され、アプリを再起動しても同一バージョンでは再表示されない
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>
 
@@ -35,6 +57,28 @@ last_verified_at: null
 <details>
 <summary>動作確認エビデンス</summary>
 
+### **タイトル・本文表示**: 「服薬時刻に目覚ましアラームが鳴るようにしました」というタイトルと、集中モード/消音時でもアラームが鳴る旨の説明文が表示される
+
+<details><summary>動作確認スクショ</summary>
+
 （未実行）
+
+</details>
+
+### **閉じるボタン**: ダイアログ左上の×アイコンをタップするとダイアログが閉じる
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
+
+### **詳しく見るボタン**: 「詳しく見る」ボタンをタップするとダイアログが閉じ、外部ブラウザ(inAppBrowser)で Notion のリリースノートページが開く
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+</details>
 
 </details>
