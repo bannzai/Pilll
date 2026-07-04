@@ -4,15 +4,18 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
+import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/lifetime_offer/page.dart';
+import 'package:pilll/features/lifetime_offer/provider.dart';
 import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/provider/auth.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/shared_preferences.dart';
+import 'package:pilll/provider/tick.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:intl/date_symbol_data_local.dart';
@@ -57,18 +60,22 @@ void main() {
       required User user,
       bool isLifetimePurchased = false,
       bool hasLifetimeDiscountPackage = true,
+      Map<String, Object> initialSharedPreferencesValues = const {},
     }) async {
       final mockTodayRepository = MockTodayService();
       when(mockTodayRepository.now()).thenReturn(DateTime(2026, 7, 3));
       todayRepository = mockTodayRepository;
 
-      SharedPreferences.setMockInitialValues({});
+      SharedPreferences.setMockInitialValues(initialSharedPreferencesValues);
       final sharedPreferences = await SharedPreferences.getInstance();
 
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
             sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+            // 本物のTickはTimer.periodicを作りpending timerでテストが失敗するためFakeに差し替える
+            tickProvider.overrideWith(
+                () => FakeTick(fakeDateTime: DateTime(2026, 7, 3))),
             remoteConfigParameterProvider
                 .overrideWithValue(RemoteConfigParameter()),
             lifetimeDiscountPackageProvider.overrideWith(
@@ -245,6 +252,67 @@ void main() {
           findsOneWidget,
         );
         expect(find.text('残り 24:00:00'), findsOneWidget);
+      });
+    });
+
+    group('購入ボタンの無効化', () {
+      testWidgets('表示期限切れの場合は購入ボタンが無効化され、終了メッセージが表示される',
+          (WidgetTester tester) async {
+        // 初回表示時刻: 2026-07-01 09:00 → 期限は+24時間の2026-07-02 09:00。現在時刻(tick)は2026-07-03で期限切れ
+        await pumpLifetimeOfferPageBody(
+          tester,
+          user: const User(
+            isPremium: false,
+            trialDeadlineDate: null,
+            beginTrialDate: null,
+            discountEntitlementDeadlineDate: null,
+          ),
+          initialSharedPreferencesValues: {
+            lifetimeOfferFirstDisplayedDateTimeKey(cycle: 0):
+                DateTime(2026, 7, 1, 9, 0, 0).toIso8601String(),
+          },
+        );
+
+        expect(
+          tester.widget<PrimaryButton>(find.byType(PrimaryButton)).onPressed,
+          isNull,
+        );
+        expect(find.text('このオファーは終了しました'), findsOneWidget);
+      });
+
+      testWidgets('買い切り購入済みの場合は購入ボタンが無効化される', (WidgetTester tester) async {
+        await pumpLifetimeOfferPageBody(
+          tester,
+          user: const User(
+            isPremium: true,
+            trialDeadlineDate: null,
+            beginTrialDate: null,
+            discountEntitlementDeadlineDate: null,
+          ),
+          isLifetimePurchased: true,
+        );
+
+        expect(
+          tester.widget<PrimaryButton>(find.byType(PrimaryButton)).onPressed,
+          isNull,
+        );
+      });
+
+      testWidgets('期限内かつ未購入の場合は購入ボタンが有効', (WidgetTester tester) async {
+        await pumpLifetimeOfferPageBody(
+          tester,
+          user: const User(
+            isPremium: false,
+            trialDeadlineDate: null,
+            beginTrialDate: null,
+            discountEntitlementDeadlineDate: null,
+          ),
+        );
+
+        expect(
+          tester.widget<PrimaryButton>(find.byType(PrimaryButton)).onPressed,
+          isNotNull,
+        );
       });
     });
   });

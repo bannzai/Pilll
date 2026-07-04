@@ -71,8 +71,11 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
     final lifetimePremiumPackage = ref.watch(lifetimePremiumPackageProvider);
     final lifetimeDiscountRate = ref.watch(lifetimeDiscountRateProvider);
     final usageDays = ref.watch(lifetimeOfferUsageDaysProvider);
+    final isLifetimePurchased = ref.watch(isLifetimePurchasedProvider).valueOrNull == true;
     // 買い切り購入後もサブスクリプションの自動更新は止まらないため、月額・年額で課金中のユーザーには事前の解約を促す
-    final isActiveSubscriber = user.isPremium && ref.watch(isLifetimePurchasedProvider).valueOrNull != true;
+    final isActiveSubscriber = user.isPremium && !isLifetimePurchased;
+    // ページを開いたまま表示期限を迎えた場合に購入導線を無効化するための判定。false→trueの変化時のみ再ビルドされる
+    final isOverLifetimeOfferDeadline = ref.watch(isOverLifetimeOfferDeadlineProvider);
 
     if (lifetimeDiscountPackage == null) {
       return const ScaffoldIndicator();
@@ -196,42 +199,48 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
                     width: double.infinity,
                     child: PrimaryButton(
                       text: '期間限定の価格で購入する',
-                      onPressed: () async {
-                        analytics.logEvent(
-                          name: 'pressed_lifetime_purchase_button',
-                          parameters: {'paywall_source': source.value},
-                        );
-                        if (isLoading.value) return;
-                        isLoading.value = true;
-
-                        try {
-                          final shouldShowCompleteDialog = await purchase.call(lifetimeDiscountPackage, source: source);
-                          if (shouldShowCompleteDialog) {
-                            // isLifetimePurchasedProviderは一発取得でwatch中はキャッシュが残り続けるため、
-                            // 購入完了を反映してオファーバーの非表示・解約警告バーの表示を再起動なしで切り替える
-                            ref.invalidate(isLifetimePurchasedProvider);
-                            if (context.mounted) {
-                              showDialog(
-                                context: context,
-                                builder: (_) {
-                                  return PremiumCompleteDialog(
-                                    onClose: () {
-                                      Navigator.of(context).pop();
-                                    },
-                                  );
-                                },
+                      // 表示期限切れ・購入済みの場合は割引価格での(再)購入導線を無効化する
+                      onPressed: isOverLifetimeOfferDeadline || isLifetimePurchased
+                          ? null
+                          : () async {
+                              analytics.logEvent(
+                                name: 'pressed_lifetime_purchase_button',
+                                parameters: {'paywall_source': source.value},
                               );
-                            }
-                          }
-                        } catch (error) {
-                          debugPrint('caused purchase error for $error');
-                          if (context.mounted) {
-                            showErrorAlert(context, error);
-                          }
-                        } finally {
-                          isLoading.value = false;
-                        }
-                      },
+                              if (isLoading.value) return;
+                              isLoading.value = true;
+
+                              try {
+                                final shouldShowCompleteDialog = await purchase.call(lifetimeDiscountPackage, source: source);
+                                if (shouldShowCompleteDialog) {
+                                  // isLifetimePurchasedProviderは一発取得でwatch中はキャッシュが残り続けるため、
+                                  // 購入完了を反映してオファーバーの非表示・解約警告バーの表示を再起動なしで切り替える
+                                  ref.invalidate(isLifetimePurchasedProvider);
+                                  if (context.mounted) {
+                                    showDialog(
+                                      context: context,
+                                      builder: (_) {
+                                        return PremiumCompleteDialog(
+                                          onClose: () {
+                                            // 購入完了後は再購入導線を残さないため、完了ダイアログと一緒にオファーページも閉じる
+                                            Navigator.of(context)
+                                              ..pop()
+                                              ..pop();
+                                          },
+                                        );
+                                      },
+                                    );
+                                  }
+                                }
+                              } catch (error) {
+                                debugPrint('caused purchase error for $error');
+                                if (context.mounted) {
+                                  showErrorAlert(context, error);
+                                }
+                              } finally {
+                                isLoading.value = false;
+                              }
+                            },
                     ),
                   ),
                 ),
@@ -258,7 +267,7 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
   }
 }
 
-/// 表示期限までの残り時間を毎秒更新でカウントダウン表示するテキスト
+/// 表示期限までの残り時間を毎秒更新でカウントダウン表示するテキスト。期限切れ後は終了メッセージを表示する
 ///
 /// ページ全体の毎秒再ビルドを避けるため、tick由来のProviderはこのWidget内でのみwatchする。
 class LifetimeOfferCountdownText extends ConsumerWidget {
@@ -268,7 +277,16 @@ class LifetimeOfferCountdownText extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final remainingDuration = ref.watch(lifetimeOfferRemainingDurationProvider);
     if (remainingDuration.inSeconds <= 0) {
-      return Container();
+      // ページを開いたまま期限を迎えた場合、購入ボタンが無効化された理由をユーザーに伝える
+      return const Text(
+        'このオファーは終了しました',
+        style: TextStyle(
+          color: TextColor.gray,
+          fontFamily: FontFamily.japanese,
+          fontWeight: FontWeight.w600,
+          fontSize: 14,
+        ),
+      );
     }
     return Text(
       '残り ${lifetimeOfferCountdownString(remainingDuration)}',
