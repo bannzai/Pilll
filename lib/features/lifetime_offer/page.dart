@@ -296,6 +296,7 @@ class LifetimeOfferPriceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final lifetimeDiscountRate = this.lifetimeDiscountRate;
+    final lifetimePremiumPackage = this.lifetimePremiumPackage;
     return Container(
       width: double.infinity,
       margin: const EdgeInsets.symmetric(horizontal: 24),
@@ -342,9 +343,10 @@ class LifetimeOfferPriceCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 12),
-          if (lifetimeDiscountRate != null) ...[
+          // 通常価格が取得できない場合、通貨が異なるユーザーへ日本円のフォールバック値を出すと誤解を招くため非表示にする
+          if (lifetimeDiscountRate != null && lifetimePremiumPackage != null) ...[
             Text(
-              '通常価格 ${lifetimePremiumPackage?.storeProduct.priceString ?? "¥20,000"}',
+              '通常価格 ${lifetimePremiumPackage.storeProduct.priceString}',
               style: const TextStyle(
                 color: TextColor.gray,
                 fontFamily: FontFamily.japanese,
