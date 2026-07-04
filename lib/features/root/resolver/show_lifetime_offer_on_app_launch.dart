@@ -35,10 +35,15 @@ class ShowLifetimeOfferOnAppLaunch extends HookConsumerWidget {
       // マウント時1回ではなく値の変化を契機に判定する
       if (shouldShowLifetimeOffer && !shownPaywallOnThisAppLaunch && lifetimeOfferAutoModalShown.value != true) {
         WidgetsBinding.instance.addPostFrameCallback((_) async {
-          // 表示条件の再評価等でcallbackが複数回走っても二重表示しないよう、表示前にフラグを立てる
-          await lifetimeOfferAutoModalShownNotifier.set(true);
+          // フレーム描画前にunmountされた場合、モーダルを一度も表示しないまま表示済みフラグだけが永続化され
+          // 二度と表示されなくなるため、フラグを立てる前にmountedを確認する
+          if (!context.mounted) {
+            return;
+          }
           // 表示期限の起点となる初回表示時刻を記録する
           await setLifetimeOfferFirstDisplayedDateTimeIfAbsent(ref);
+          // 表示条件の再評価等でcallbackが複数回走っても二重表示しないよう、表示前にフラグを立てる
+          await lifetimeOfferAutoModalShownNotifier.set(true);
           if (context.mounted) {
             await showLifetimeOfferPage(
               context,
