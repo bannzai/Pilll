@@ -62,6 +62,10 @@ RemoteConfigParameter remoteConfigParameter(RemoteConfigParameterRef ref) {
       RemoteConfigKeys.lifetimeOfferUserCreationDaysUntil,
       RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysUntil,
     ),
+    lifetimeOfferDurationHours: remoteConfig.getIntOrDefault(
+      RemoteConfigKeys.lifetimeOfferDurationHours,
+      RemoteConfigParameterDefaultValues.lifetimeOfferDurationHours,
+    ),
   );
 }
 

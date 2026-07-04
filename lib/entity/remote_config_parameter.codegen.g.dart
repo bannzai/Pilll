@@ -31,6 +31,8 @@ _$RemoteConfigParameterImpl _$$RemoteConfigParameterImplFromJson(Map<String, dyn
           (json['lifetimeOfferUserCreationDaysSince'] as num?)?.toInt() ?? RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysSince,
       lifetimeOfferUserCreationDaysUntil:
           (json['lifetimeOfferUserCreationDaysUntil'] as num?)?.toInt() ?? RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysUntil,
+      lifetimeOfferDurationHours:
+          (json['lifetimeOfferDurationHours'] as num?)?.toInt() ?? RemoteConfigParameterDefaultValues.lifetimeOfferDurationHours,
     );
 
 Map<String, dynamic> _$$RemoteConfigParameterImplToJson(_$RemoteConfigParameterImpl instance) => <String, dynamic>{
@@ -48,4 +50,5 @@ Map<String, dynamic> _$$RemoteConfigParameterImplToJson(_$RemoteConfigParameterI
       'lifetimeOfferEnabled': instance.lifetimeOfferEnabled,
       'lifetimeOfferUserCreationDaysSince': instance.lifetimeOfferUserCreationDaysSince,
       'lifetimeOfferUserCreationDaysUntil': instance.lifetimeOfferUserCreationDaysUntil,
+      'lifetimeOfferDurationHours': instance.lifetimeOfferDurationHours,
     };

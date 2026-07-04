@@ -49,6 +49,9 @@ abstract class RemoteConfigKeys {
 
   /// 買い切りオファー表示終了の利用日数（排他境界）キー
   static const lifetimeOfferUserCreationDaysUntil = 'lifetimeOfferUserCreationDaysUntil';
+
+  /// 買い切りオファーの表示期間（時間単位）キー
+  static const lifetimeOfferDurationHours = 'lifetimeOfferDurationHours';
 }
 
 /// Remote Configパラメータのデフォルト値定義
@@ -99,6 +102,9 @@ abstract class RemoteConfigParameterDefaultValues {
 
   /// 買い切りオファー表示終了の利用日数（排他境界。1年(≈365日)の年会費更新と重なる課金トラブルを避けるため更新直前で打ち切る）
   static const lifetimeOfferUserCreationDaysUntil = 355;
+
+  /// 買い切りオファーを初回表示から24時間表示する
+  static const lifetimeOfferDurationHours = 24;
 }
 
 // [RemoteConfigDefaultValues] でgrepした場所に全て設定する
@@ -186,6 +192,13 @@ class RemoteConfigParameter with _$RemoteConfigParameter {
       RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysUntil,
     )
     int lifetimeOfferUserCreationDaysUntil,
+
+    /// 買い切りオファーの表示期間（時間単位）
+    /// 初回表示時刻からこの時間が経過するとバー・起動時モーダルが自動で非表示になる
+    @Default(
+      RemoteConfigParameterDefaultValues.lifetimeOfferDurationHours,
+    )
+    int lifetimeOfferDurationHours,
   }) = _RemoteConfigParameter;
   RemoteConfigParameter._();
   factory RemoteConfigParameter.fromJson(Map<String, dynamic> json) => _$RemoteConfigParameterFromJson(json);

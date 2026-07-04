@@ -76,6 +76,10 @@ mixin _$RemoteConfigParameter {
   /// 利用日数がこの値未満（<）のユーザーが表示対象となる。1年の年会費更新直前を避ける意図の上限
   int get lifetimeOfferUserCreationDaysUntil => throw _privateConstructorUsedError;
 
+  /// 買い切りオファーの表示期間（時間単位）
+  /// 初回表示時刻からこの時間が経過するとバー・起動時モーダルが自動で非表示になる
+  int get lifetimeOfferDurationHours => throw _privateConstructorUsedError;
+
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $RemoteConfigParameterCopyWith<RemoteConfigParameter> get copyWith => throw _privateConstructorUsedError;
@@ -100,7 +104,8 @@ abstract class $RemoteConfigParameterCopyWith<$Res> {
       bool specialOffering2UseAlternativeText,
       bool lifetimeOfferEnabled,
       int lifetimeOfferUserCreationDaysSince,
-      int lifetimeOfferUserCreationDaysUntil});
+      int lifetimeOfferUserCreationDaysUntil,
+      int lifetimeOfferDurationHours});
 }
 
 /// @nodoc
@@ -129,6 +134,7 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
     Object? lifetimeOfferEnabled = null,
     Object? lifetimeOfferUserCreationDaysSince = null,
     Object? lifetimeOfferUserCreationDaysUntil = null,
+    Object? lifetimeOfferDurationHours = null,
   }) {
     return _then(_value.copyWith(
       isPaywallFirst: null == isPaywallFirst
@@ -187,6 +193,10 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
           ? _value.lifetimeOfferUserCreationDaysUntil
           : lifetimeOfferUserCreationDaysUntil // ignore: cast_nullable_to_non_nullable
               as int,
+      lifetimeOfferDurationHours: null == lifetimeOfferDurationHours
+          ? _value.lifetimeOfferDurationHours
+          : lifetimeOfferDurationHours // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -211,7 +221,8 @@ abstract class _$$RemoteConfigParameterImplCopyWith<$Res> implements $RemoteConf
       bool specialOffering2UseAlternativeText,
       bool lifetimeOfferEnabled,
       int lifetimeOfferUserCreationDaysSince,
-      int lifetimeOfferUserCreationDaysUntil});
+      int lifetimeOfferUserCreationDaysUntil,
+      int lifetimeOfferDurationHours});
 }
 
 /// @nodoc
@@ -237,6 +248,7 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigPara
     Object? lifetimeOfferEnabled = null,
     Object? lifetimeOfferUserCreationDaysSince = null,
     Object? lifetimeOfferUserCreationDaysUntil = null,
+    Object? lifetimeOfferDurationHours = null,
   }) {
     return _then(_$RemoteConfigParameterImpl(
       isPaywallFirst: null == isPaywallFirst
@@ -295,6 +307,10 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigPara
           ? _value.lifetimeOfferUserCreationDaysUntil
           : lifetimeOfferUserCreationDaysUntil // ignore: cast_nullable_to_non_nullable
               as int,
+      lifetimeOfferDurationHours: null == lifetimeOfferDurationHours
+          ? _value.lifetimeOfferDurationHours
+          : lifetimeOfferDurationHours // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -316,7 +332,8 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
       this.specialOffering2UseAlternativeText = RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
       this.lifetimeOfferEnabled = RemoteConfigParameterDefaultValues.lifetimeOfferEnabled,
       this.lifetimeOfferUserCreationDaysSince = RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysSince,
-      this.lifetimeOfferUserCreationDaysUntil = RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysUntil})
+      this.lifetimeOfferUserCreationDaysUntil = RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysUntil,
+      this.lifetimeOfferDurationHours = RemoteConfigParameterDefaultValues.lifetimeOfferDurationHours})
       : super._();
 
   factory _$RemoteConfigParameterImpl.fromJson(Map<String, dynamic> json) => _$$RemoteConfigParameterImplFromJson(json);
@@ -405,9 +422,15 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
   @JsonKey()
   final int lifetimeOfferUserCreationDaysUntil;
 
+  /// 買い切りオファーの表示期間（時間単位）
+  /// 初回表示時刻からこの時間が経過するとバー・起動時モーダルが自動で非表示になる
+  @override
+  @JsonKey()
+  final int lifetimeOfferDurationHours;
+
   @override
   String toString() {
-    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, skipInitialSetting: $skipInitialSetting, trialDeadlineDateOffsetDay: $trialDeadlineDateOffsetDay, discountEntitlementOffsetDay: $discountEntitlementOffsetDay, discountCountdownBoundaryHour: $discountCountdownBoundaryHour, premiumIntroductionPattern: $premiumIntroductionPattern, premiumIntroductionShowsAppStoreReviewCard: $premiumIntroductionShowsAppStoreReviewCard, specialOfferingUserCreationDateTimeOffset: $specialOfferingUserCreationDateTimeOffset, specialOfferingUserCreationDateTimeOffsetSince: $specialOfferingUserCreationDateTimeOffsetSince, specialOfferingUserCreationDateTimeOffsetUntil: $specialOfferingUserCreationDateTimeOffsetUntil, specialOffering2UseAlternativeText: $specialOffering2UseAlternativeText, lifetimeOfferEnabled: $lifetimeOfferEnabled, lifetimeOfferUserCreationDaysSince: $lifetimeOfferUserCreationDaysSince, lifetimeOfferUserCreationDaysUntil: $lifetimeOfferUserCreationDaysUntil)';
+    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, skipInitialSetting: $skipInitialSetting, trialDeadlineDateOffsetDay: $trialDeadlineDateOffsetDay, discountEntitlementOffsetDay: $discountEntitlementOffsetDay, discountCountdownBoundaryHour: $discountCountdownBoundaryHour, premiumIntroductionPattern: $premiumIntroductionPattern, premiumIntroductionShowsAppStoreReviewCard: $premiumIntroductionShowsAppStoreReviewCard, specialOfferingUserCreationDateTimeOffset: $specialOfferingUserCreationDateTimeOffset, specialOfferingUserCreationDateTimeOffsetSince: $specialOfferingUserCreationDateTimeOffsetSince, specialOfferingUserCreationDateTimeOffsetUntil: $specialOfferingUserCreationDateTimeOffsetUntil, specialOffering2UseAlternativeText: $specialOffering2UseAlternativeText, lifetimeOfferEnabled: $lifetimeOfferEnabled, lifetimeOfferUserCreationDaysSince: $lifetimeOfferUserCreationDaysSince, lifetimeOfferUserCreationDaysUntil: $lifetimeOfferUserCreationDaysUntil, lifetimeOfferDurationHours: $lifetimeOfferDurationHours)';
   }
 
   @override
@@ -439,7 +462,9 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
             (identical(other.lifetimeOfferUserCreationDaysSince, lifetimeOfferUserCreationDaysSince) ||
                 other.lifetimeOfferUserCreationDaysSince == lifetimeOfferUserCreationDaysSince) &&
             (identical(other.lifetimeOfferUserCreationDaysUntil, lifetimeOfferUserCreationDaysUntil) ||
-                other.lifetimeOfferUserCreationDaysUntil == lifetimeOfferUserCreationDaysUntil));
+                other.lifetimeOfferUserCreationDaysUntil == lifetimeOfferUserCreationDaysUntil) &&
+            (identical(other.lifetimeOfferDurationHours, lifetimeOfferDurationHours) ||
+                other.lifetimeOfferDurationHours == lifetimeOfferDurationHours));
   }
 
   @JsonKey(ignore: true)
@@ -459,7 +484,8 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
       specialOffering2UseAlternativeText,
       lifetimeOfferEnabled,
       lifetimeOfferUserCreationDaysSince,
-      lifetimeOfferUserCreationDaysUntil);
+      lifetimeOfferUserCreationDaysUntil,
+      lifetimeOfferDurationHours);
 
   @JsonKey(ignore: true)
   @override
@@ -490,7 +516,8 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
       final bool specialOffering2UseAlternativeText,
       final bool lifetimeOfferEnabled,
       final int lifetimeOfferUserCreationDaysSince,
-      final int lifetimeOfferUserCreationDaysUntil}) = _$RemoteConfigParameterImpl;
+      final int lifetimeOfferUserCreationDaysUntil,
+      final int lifetimeOfferDurationHours}) = _$RemoteConfigParameterImpl;
   _RemoteConfigParameter._() : super._();
 
   factory _RemoteConfigParameter.fromJson(Map<String, dynamic> json) = _$RemoteConfigParameterImpl.fromJson;
@@ -565,6 +592,11 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
   /// 買い切りオファー表示終了の利用日数（排他境界）
   /// 利用日数がこの値未満（<）のユーザーが表示対象となる。1年の年会費更新直前を避ける意図の上限
   int get lifetimeOfferUserCreationDaysUntil;
+  @override
+
+  /// 買い切りオファーの表示期間（時間単位）
+  /// 初回表示時刻からこの時間が経過するとバー・起動時モーダルが自動で非表示になる
+  int get lifetimeOfferDurationHours;
   @override
   @JsonKey(ignore: true)
   _$$RemoteConfigParameterImplCopyWith<_$RemoteConfigParameterImpl> get copyWith => throw _privateConstructorUsedError;
