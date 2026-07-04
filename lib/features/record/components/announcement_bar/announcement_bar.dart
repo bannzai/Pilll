@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/feature_appeal/feature_appeal_bars_container.dart';
+import 'package:pilll/features/lifetime_offer/provider.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/lifetime_offer.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/special_offering.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/special_offering2.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
@@ -81,6 +83,7 @@ class AnnouncementBar extends HookConsumerWidget {
       sharedPreferences.getBool(BoolKey.lifetimeSubscriptionWarningIsClosed) ?? false,
     );
     final lifetimePurchaseStatus = ref.watch(isLifetimePurchasedProvider);
+    final shouldShowLifetimeOffer = ref.watch(shouldShowLifetimeOfferProvider);
 
     final historiesAsync = ref.watch(
       pillSheetModifiedHistoriesWithRangeProvider(
@@ -204,6 +207,10 @@ class AnnouncementBar extends HookConsumerWidget {
           );
         }
 
+        if (shouldShowLifetimeOffer) {
+          return const LifetimeOfferAnnouncementBar();
+        }
+
         if (userBeginDate != null &&
             daysBetween(userBeginDate, today()) >= remoteConfigParameter.specialOfferingUserCreationDateTimeOffset &&
             !specialOfferingIsClosed.value) {
@@ -235,6 +242,11 @@ class AnnouncementBar extends HookConsumerWidget {
         return LifetimeSubscriptionWarningAnnouncementBar(
           isClosed: lifetimeSubscriptionWarningIsClosed,
         );
+      }
+
+      // 買い切りオファーは課金/非課金問わず全ユーザー対象のためプレミアム側にも表示する
+      if (shouldShowLifetimeOffer) {
+        return const LifetimeOfferAnnouncementBar();
       }
 
       // 2. アカウント登録推奨

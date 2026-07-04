@@ -1,7 +1,9 @@
 import 'dart:math';
 
+import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/provider/tick.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/error_log.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
@@ -71,4 +73,38 @@ class FakeRevenueCatPackage extends Fake implements Package {
 class FakeStoreProduct extends Fake implements StoreProduct {
   @override
   double get price => Random().nextDouble();
+
+  @override
+  String get priceString => '';
+}
+
+/// firebaseAuthUser.metadata.creationTime（利用開始日）を差し替えるためのFake
+class FakeFirebaseAuthUser extends Fake implements firebase_auth.User {
+  FakeFirebaseAuthUser({required this.fakeCreationTime});
+  final DateTime? fakeCreationTime;
+
+  @override
+  firebase_auth.UserMetadata get metadata =>
+      FakeUserMetadata(fakeCreationTime: fakeCreationTime);
+}
+
+/// creationTimeのみを返すUserMetadataのFake
+class FakeUserMetadata extends Fake implements firebase_auth.UserMetadata {
+  FakeUserMetadata({required this.fakeCreationTime});
+  final DateTime? fakeCreationTime;
+
+  @override
+  DateTime? get creationTime => fakeCreationTime;
+}
+
+/// tickProviderのFake。Timerを作らず固定時刻を返し続ける
+///
+/// 本物のTickはTimer.periodicを作るため、testWidgetsでは
+/// テスト終了時にpending timerとして失敗する。それを避けるために使う
+class FakeTick extends Tick {
+  FakeTick({required this.fakeDateTime});
+  final DateTime fakeDateTime;
+
+  @override
+  DateTime build() => fakeDateTime;
 }

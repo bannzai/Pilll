@@ -149,7 +149,7 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                         const SizedBox(height: 24),
                         const AppStoreReviewCards(),
                         const SizedBox(height: 24),
-                        PremiumIntroductionFooter(isLoading: isLoading),
+                        PremiumIntroductionFooter(isLoading: isLoading, backgroundColor: AppColors.white),
                       ],
                     ),
                   ),
