@@ -11,7 +11,6 @@ import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/provider/tick.dart';
 import 'package:pilll/utils/datetime/day.dart';
-import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/fake.dart';
@@ -75,6 +74,32 @@ void main() {
 
       test('利用日数が355日（終了境界と同値）の場合は表示されない', () async {
         expect(await readShouldShowLifetimeOffer(usageDays: 355), isFalse);
+      });
+
+      group('2年目以降（365日周期で毎年同じ時期に表示される）', () {
+        test('利用日数が700日（2年目の開始境界と同値: 700 % 365 = 335）の場合は表示されない', () async {
+          expect(await readShouldShowLifetimeOffer(usageDays: 700), isFalse);
+        });
+
+        test('利用日数が701日（2年目の開始境界+1: 701 % 365 = 336）の場合は表示される', () async {
+          expect(await readShouldShowLifetimeOffer(usageDays: 701), isTrue);
+        });
+
+        test('利用日数が719日（2年目の終了境界-1: 719 % 365 = 354）の場合は表示される', () async {
+          expect(await readShouldShowLifetimeOffer(usageDays: 719), isTrue);
+        });
+
+        test('利用日数が720日（2年目の終了境界と同値: 720 % 365 = 355）の場合は表示されない', () async {
+          expect(await readShouldShowLifetimeOffer(usageDays: 720), isFalse);
+        });
+
+        test('利用日数が1066日（3年目: 1066 % 365 = 336）の場合は表示される', () async {
+          expect(await readShouldShowLifetimeOffer(usageDays: 1066), isTrue);
+        });
+
+        test('利用日数が400日（2年目だが周期内の日数が範囲外: 400 % 365 = 35）の場合は表示されない', () async {
+          expect(await readShouldShowLifetimeOffer(usageDays: 400), isFalse);
+        });
       });
     });
 
@@ -167,10 +192,13 @@ void main() {
     });
 
     group('表示期限', () {
-      // 表示期限以外の表示条件をすべて満たした状態で、初回表示時刻と現在時刻(tick)を操作して判定結果を返す
+      // 表示期限以外の表示条件をすべて満たした状態で、初回表示時刻と現在時刻(tick)を操作して判定結果を返す。
+      // firstDisplayedDateTimeは firstDisplayedCycle の周期番号付きキーに保存する
       Future<bool> readShouldShowLifetimeOffer({
         required String? firstDisplayedDateTime,
         required DateTime tick,
+        int firstDisplayedCycle = 0,
+        int usageDays = 340,
         int lifetimeOfferDurationHours =
             RemoteConfigParameterDefaultValues.lifetimeOfferDurationHours,
       }) async {
@@ -180,7 +208,7 @@ void main() {
 
         SharedPreferences.setMockInitialValues({
           if (firstDisplayedDateTime != null)
-            StringKey.lifetimeOfferFirstDisplayedDateTime:
+            lifetimeOfferFirstDisplayedDateTimeKey(cycle: firstDisplayedCycle):
                 firstDisplayedDateTime,
         });
         final sharedPreferences = await SharedPreferences.getInstance();
@@ -203,7 +231,7 @@ void main() {
               (ref) => Stream.value(
                 FakeFirebaseAuthUser(
                   fakeCreationTime:
-                      DateTime(2026, 7, 3).subtract(const Duration(days: 340)),
+                      DateTime(2026, 7, 3).subtract(Duration(days: usageDays)),
                 ),
               ),
             ),
@@ -273,19 +301,53 @@ void main() {
           isFalse,
         );
       });
+
+      test('前周期（1年目）の初回表示時刻は今周期（2年目）の表示期限に影響しない', () async {
+        // 1年目のキー(_0)に期限切れの初回表示時刻が残っていても、2年目(usageDays: 705 → cycle 1)では未表示扱いになる
+        expect(
+          await readShouldShowLifetimeOffer(
+            firstDisplayedDateTime:
+                DateTime(2025, 7, 1, 9, 0, 0).toIso8601String(),
+            firstDisplayedCycle: 0,
+            usageDays: 705,
+            tick: DateTime(2026, 7, 3, 9, 0, 0),
+          ),
+          isTrue,
+        );
+      });
+
+      test('今周期（2年目）の初回表示時刻が期限切れの場合は表示されない', () async {
+        expect(
+          await readShouldShowLifetimeOffer(
+            firstDisplayedDateTime:
+                DateTime(2026, 7, 1, 9, 0, 0).toIso8601String(),
+            firstDisplayedCycle: 1,
+            usageDays: 705,
+            tick: DateTime(2026, 7, 3, 9, 0, 0),
+          ),
+          isFalse,
+        );
+      });
     });
   });
 
   group('#lifetimeOfferDeadlineProvider', () {
-    // 初回表示時刻とRemote Configの表示期間を操作して表示期限を返す
+    // 初回表示時刻（firstDisplayedCycleの周期番号付きキーに保存）とRemote Configの表示期間を操作して表示期限を返す
     Future<DateTime?> readDeadline({
       required String? firstDisplayedDateTime,
+      int firstDisplayedCycle = 0,
+      int usageDays = 340,
       int lifetimeOfferDurationHours =
           RemoteConfigParameterDefaultValues.lifetimeOfferDurationHours,
     }) async {
+      final mockTodayRepository = MockTodayService();
+      when(mockTodayRepository.now()).thenReturn(DateTime(2026, 7, 3));
+      todayRepository = mockTodayRepository;
+
       SharedPreferences.setMockInitialValues({
         if (firstDisplayedDateTime != null)
-          StringKey.lifetimeOfferFirstDisplayedDateTime: firstDisplayedDateTime,
+          lifetimeOfferFirstDisplayedDateTimeKey(cycle: firstDisplayedCycle):
+              firstDisplayedDateTime,
       });
       final sharedPreferences = await SharedPreferences.getInstance();
 
@@ -297,11 +359,22 @@ void main() {
               lifetimeOfferDurationHours: lifetimeOfferDurationHours,
             ),
           ),
+          firebaseUserStateProvider.overrideWith(
+            (ref) => Stream.value(
+              FakeFirebaseAuthUser(
+                fakeCreationTime:
+                    DateTime(2026, 7, 3).subtract(Duration(days: usageDays)),
+              ),
+            ),
+          ),
         ],
       );
       addTearDown(container.dispose);
 
-      return container.read(lifetimeOfferDeadlineProvider);
+      final subscription =
+          container.listen(lifetimeOfferDeadlineProvider, (_, __) {});
+      await container.read(firebaseUserStateProvider.future);
+      return subscription.read();
     }
 
     test('初回表示時刻が未セットの場合はnullを返す', () async {
@@ -328,17 +401,46 @@ void main() {
         DateTime(2026, 7, 4, 9, 0, 0),
       );
     });
+
+    test('前周期（1年目）の初回表示時刻は参照せず、今周期（2年目）が未表示ならnullを返す', () async {
+      expect(
+        await readDeadline(
+          firstDisplayedDateTime:
+              DateTime(2025, 7, 1, 9, 0, 0).toIso8601String(),
+          firstDisplayedCycle: 0,
+          usageDays: 705,
+        ),
+        isNull,
+      );
+    });
+
+    test('今周期（2年目）の初回表示時刻から期限を返す', () async {
+      expect(
+        await readDeadline(
+          firstDisplayedDateTime:
+              DateTime(2026, 7, 2, 9, 0, 0).toIso8601String(),
+          firstDisplayedCycle: 1,
+          usageDays: 705,
+        ),
+        DateTime(2026, 7, 3, 9, 0, 0),
+      );
+    });
   });
 
   group('#lifetimeOfferRemainingDurationProvider', () {
-    // 初回表示時刻と現在時刻(tick)を操作して残り時間を返す
+    // 初回表示時刻（周期0のキーに保存）と現在時刻(tick)を操作して残り時間を返す
     Future<Duration> readRemainingDuration({
       required String? firstDisplayedDateTime,
       required DateTime tick,
     }) async {
+      final mockTodayRepository = MockTodayService();
+      when(mockTodayRepository.now()).thenReturn(DateTime(2026, 7, 3));
+      todayRepository = mockTodayRepository;
+
       SharedPreferences.setMockInitialValues({
         if (firstDisplayedDateTime != null)
-          StringKey.lifetimeOfferFirstDisplayedDateTime: firstDisplayedDateTime,
+          lifetimeOfferFirstDisplayedDateTimeKey(cycle: 0):
+              firstDisplayedDateTime,
       });
       final sharedPreferences = await SharedPreferences.getInstance();
 
@@ -348,11 +450,22 @@ void main() {
           tickProvider.overrideWith(() => FakeTick(fakeDateTime: tick)),
           remoteConfigParameterProvider
               .overrideWithValue(RemoteConfigParameter()),
+          firebaseUserStateProvider.overrideWith(
+            (ref) => Stream.value(
+              FakeFirebaseAuthUser(
+                fakeCreationTime:
+                    DateTime(2026, 7, 3).subtract(const Duration(days: 340)),
+              ),
+            ),
+          ),
         ],
       );
       addTearDown(container.dispose);
 
-      return container.read(lifetimeOfferRemainingDurationProvider);
+      final subscription =
+          container.listen(lifetimeOfferRemainingDurationProvider, (_, __) {});
+      await container.read(firebaseUserStateProvider.future);
+      return subscription.read();
     }
 
     test('初回表示前（初回表示時刻が未セット）は満額の残り時間を返す', () async {

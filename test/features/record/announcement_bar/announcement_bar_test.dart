@@ -15,6 +15,7 @@ import 'package:pilll/provider/pilll_ads.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/discount_price_deadline.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/ended_pill_sheet.dart';
+import 'package:pilll/features/lifetime_offer/provider.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/lifetime_offer.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/lifetime_subscription_warning.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/pilll_ads.dart';
@@ -2866,7 +2867,7 @@ void main() {
 
       expect(
         sharedPreferences
-            .getString(StringKey.lifetimeOfferFirstDisplayedDateTime),
+            .getString(lifetimeOfferFirstDisplayedDateTimeKey(cycle: 0)),
         DateTime(2026, 7, 3).toIso8601String(),
       );
     });
@@ -2882,7 +2883,7 @@ void main() {
           discountEntitlementDeadlineDate: null,
         ),
         initialSharedPreferencesValues: {
-          StringKey.lifetimeOfferFirstDisplayedDateTime:
+          lifetimeOfferFirstDisplayedDateTimeKey(cycle: 0):
               DateTime(2026, 7, 2, 9, 0, 0).toIso8601String(),
         },
       );
@@ -2901,7 +2902,7 @@ void main() {
           discountEntitlementDeadlineDate: null,
         ),
         initialSharedPreferencesValues: {
-          StringKey.lifetimeOfferFirstDisplayedDateTime:
+          lifetimeOfferFirstDisplayedDateTimeKey(cycle: 0):
               DateTime(2026, 7, 1, 9, 0, 0).toIso8601String(),
         },
       );

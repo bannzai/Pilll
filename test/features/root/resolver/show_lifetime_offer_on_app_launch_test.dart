@@ -7,6 +7,7 @@ import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/lifetime_offer/page.dart';
+import 'package:pilll/features/lifetime_offer/provider.dart';
 import 'package:pilll/features/root/resolver/show_lifetime_offer_on_app_launch.dart';
 import 'package:pilll/features/root/resolver/show_paywall_on_app_launch.dart';
 import 'package:pilll/provider/app_is_released.dart';
@@ -19,7 +20,6 @@ import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
-import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -64,6 +64,7 @@ void main() {
       WidgetTester tester, {
       Map<String, Object> initialSharedPreferencesValues = const {},
       bool shownPaywallOnThisAppLaunch = false,
+      int usageDays = 340,
     }) async {
       final mockTodayRepository = MockTodayService();
       final mockToday = DateTime(2026, 7, 3);
@@ -98,7 +99,7 @@ void main() {
               (ref) => Stream.value(
                 FakeFirebaseAuthUser(
                   fakeCreationTime:
-                      mockToday.subtract(const Duration(days: 340)),
+                      mockToday.subtract(Duration(days: usageDays)),
                 ),
               ),
             ),
@@ -129,7 +130,7 @@ void main() {
       return sharedPreferences;
     }
 
-    testWidgets('表示条件を満たし未表示の場合は起動時にモーダルが表示され、表示済みフラグと初回表示時刻が記録される',
+    testWidgets('表示条件を満たし未表示の場合は起動時にモーダルが表示され、表示済みフラグと初回表示時刻が周期のキーに記録される',
         (WidgetTester tester) async {
       final sharedPreferences = await pumpShowLifetimeOfferOnAppLaunch(tester);
 
@@ -138,12 +139,12 @@ void main() {
         findsOneWidget,
       );
       expect(
-        sharedPreferences.getBool(BoolKey.lifetimeOfferAutoModalShown),
+        sharedPreferences.getBool(lifetimeOfferAutoModalShownKey(cycle: 0)),
         isTrue,
       );
       expect(
         sharedPreferences
-            .getString(StringKey.lifetimeOfferFirstDisplayedDateTime),
+            .getString(lifetimeOfferFirstDisplayedDateTimeKey(cycle: 0)),
         DateTime(2026, 7, 3).toIso8601String(),
       );
     });
@@ -153,14 +154,14 @@ void main() {
       final sharedPreferences = await pumpShowLifetimeOfferOnAppLaunch(
         tester,
         initialSharedPreferencesValues: {
-          StringKey.lifetimeOfferFirstDisplayedDateTime:
+          lifetimeOfferFirstDisplayedDateTimeKey(cycle: 0):
               DateTime(2026, 7, 2, 9, 0, 0).toIso8601String(),
         },
       );
 
       expect(
         sharedPreferences
-            .getString(StringKey.lifetimeOfferFirstDisplayedDateTime),
+            .getString(lifetimeOfferFirstDisplayedDateTimeKey(cycle: 0)),
         DateTime(2026, 7, 2, 9, 0, 0).toIso8601String(),
       );
     });
@@ -169,13 +170,40 @@ void main() {
       await pumpShowLifetimeOfferOnAppLaunch(
         tester,
         initialSharedPreferencesValues: {
-          BoolKey.lifetimeOfferAutoModalShown: true,
+          lifetimeOfferAutoModalShownKey(cycle: 0): true,
         },
       );
 
       expect(
         find.byWidgetPredicate((widget) => widget is LifetimeOfferPage),
         findsNothing,
+      );
+    });
+
+    testWidgets('前周期（1年目）で表示済みでも、新しい周期（2年目）では再度モーダルが表示され周期のキーにフラグが立つ',
+        (WidgetTester tester) async {
+      final sharedPreferences = await pumpShowLifetimeOfferOnAppLaunch(
+        tester,
+        usageDays: 705,
+        initialSharedPreferencesValues: {
+          lifetimeOfferAutoModalShownKey(cycle: 0): true,
+          lifetimeOfferFirstDisplayedDateTimeKey(cycle: 0):
+              DateTime(2025, 7, 1, 9, 0, 0).toIso8601String(),
+        },
+      );
+
+      expect(
+        find.byWidgetPredicate((widget) => widget is LifetimeOfferPage),
+        findsOneWidget,
+      );
+      expect(
+        sharedPreferences.getBool(lifetimeOfferAutoModalShownKey(cycle: 1)),
+        isTrue,
+      );
+      expect(
+        sharedPreferences
+            .getString(lifetimeOfferFirstDisplayedDateTimeKey(cycle: 1)),
+        DateTime(2026, 7, 3).toIso8601String(),
       );
     });
 
@@ -191,12 +219,12 @@ void main() {
         findsNothing,
       );
       expect(
-        sharedPreferences.getBool(BoolKey.lifetimeOfferAutoModalShown),
+        sharedPreferences.getBool(lifetimeOfferAutoModalShownKey(cycle: 0)),
         isNull,
       );
       expect(
         sharedPreferences
-            .getString(StringKey.lifetimeOfferFirstDisplayedDateTime),
+            .getString(lifetimeOfferFirstDisplayedDateTimeKey(cycle: 0)),
         isNull,
       );
     });
