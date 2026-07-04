@@ -108,6 +108,7 @@ void main() {
       Future<bool> readShouldShowLifetimeOffer({
         RemoteConfigParameter? remoteConfigParameter,
         FutureOr<bool>? isLifetimePurchased = false,
+        bool isLifetimePurchasedThrows = false,
         bool hasLifetimeDiscountPackage = true,
         bool hasUserCreationTime = true,
       }) async {
@@ -124,8 +125,10 @@ void main() {
             remoteConfigParameterProvider.overrideWithValue(
                 remoteConfigParameter ??
                     RemoteConfigParameter(lifetimeOfferEnabled: true)),
-            isLifetimePurchasedProvider
-                .overrideWith((ref) => isLifetimePurchased!),
+            isLifetimePurchasedProvider.overrideWith((ref) =>
+                isLifetimePurchasedThrows
+                    ? throw Exception('failed to fetch customer info')
+                    : isLifetimePurchased!),
             lifetimeDiscountPackageProvider.overrideWith((ref) =>
                 hasLifetimeDiscountPackage ? FakeRevenueCatPackage() : null),
             firebaseUserStateProvider.overrideWith(
@@ -173,6 +176,13 @@ void main() {
         expect(
           await readShouldShowLifetimeOffer(
               isLifetimePurchased: Completer<bool>().future),
+          isFalse,
+        );
+      });
+
+      test('買い切り購入状態の取得がエラーの場合は表示されない', () async {
+        expect(
+          await readShouldShowLifetimeOffer(isLifetimePurchasedThrows: true),
           isFalse,
         );
       });
