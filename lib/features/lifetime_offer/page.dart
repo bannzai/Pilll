@@ -205,8 +205,11 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
                         isLoading.value = true;
 
                         try {
-                          final shouldShowCompleteDialog = await purchase(lifetimeDiscountPackage, source: source);
+                          final shouldShowCompleteDialog = await purchase.call(lifetimeDiscountPackage, source: source);
                           if (shouldShowCompleteDialog) {
+                            // isLifetimePurchasedProviderは一発取得でwatch中はキャッシュが残り続けるため、
+                            // 購入完了を反映してオファーバーの非表示・解約警告バーの表示を再起動なしで切り替える
+                            ref.invalidate(isLifetimePurchasedProvider);
                             if (context.mounted) {
                               showDialog(
                                 context: context,
