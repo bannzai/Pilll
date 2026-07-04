@@ -34,6 +34,8 @@ class LifetimeOfferAnnouncementBar extends HookConsumerWidget {
       padding: const EdgeInsets.only(top: 10, bottom: 4, left: 8, right: 8),
       color: AppColors.primary,
       child: GestureDetector(
+        // 子のヒットテスト結果に依存せず、矢印や余白を含むバー全域をタップ可能にする
+        behavior: HitTestBehavior.opaque,
         onTap: () {
           analytics.logEvent(name: 'lifetime_offer_announcement_bar_tap');
           showLifetimeOfferPage(
@@ -56,20 +58,20 @@ class LifetimeOfferAnnouncementBar extends HookConsumerWidget {
                 textAlign: TextAlign.center,
               ),
             ),
+            // 装飾のインジケータ。IconButtonにするとジェスチャーアリーナでタップを奪い、外側のonTapが発火しなくなる
             Align(
               alignment: Alignment.centerRight,
-              child: IconButton(
-                icon: SvgPicture.asset(
+              child: Padding(
+                padding: const EdgeInsets.all(8),
+                child: SvgPicture.asset(
                   'images/arrow_right.svg',
+                  width: 24,
+                  height: 24,
                   colorFilter: const ColorFilter.mode(
                     Colors.white,
                     BlendMode.srcIn,
                   ),
                 ),
-                onPressed: () {},
-                iconSize: 24,
-                padding: const EdgeInsets.all(8),
-                alignment: Alignment.centerRight,
               ),
             ),
           ],
