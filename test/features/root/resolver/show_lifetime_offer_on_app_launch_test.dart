@@ -14,6 +14,7 @@ import 'package:pilll/provider/auth.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/shared_preferences.dart';
+import 'package:pilll/provider/tick.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -77,6 +78,8 @@ void main() {
         ProviderScope(
           overrides: [
             sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+            // 本物のTickはTimer.periodicを作りpumpAndSettleが完了しないためFakeに差し替える
+            tickProvider.overrideWith(() => FakeTick(fakeDateTime: mockToday)),
             remoteConfigParameterProvider.overrideWithValue(
               RemoteConfigParameter(lifetimeOfferEnabled: true),
             ),
@@ -126,7 +129,7 @@ void main() {
       return sharedPreferences;
     }
 
-    testWidgets('表示条件を満たし未表示の場合は起動時にモーダルが表示され、表示済みフラグが立つ',
+    testWidgets('表示条件を満たし未表示の場合は起動時にモーダルが表示され、表示済みフラグと初回表示時刻が記録される',
         (WidgetTester tester) async {
       final sharedPreferences = await pumpShowLifetimeOfferOnAppLaunch(tester);
 
@@ -137,6 +140,28 @@ void main() {
       expect(
         sharedPreferences.getBool(BoolKey.lifetimeOfferAutoModalShown),
         isTrue,
+      );
+      expect(
+        sharedPreferences
+            .getString(StringKey.lifetimeOfferFirstDisplayedDateTime),
+        DateTime(2026, 7, 3).toIso8601String(),
+      );
+    });
+
+    testWidgets('初回表示時刻がセット済みの場合は上書きされない（set-if-absent）',
+        (WidgetTester tester) async {
+      final sharedPreferences = await pumpShowLifetimeOfferOnAppLaunch(
+        tester,
+        initialSharedPreferencesValues: {
+          StringKey.lifetimeOfferFirstDisplayedDateTime:
+              DateTime(2026, 7, 2, 9, 0, 0).toIso8601String(),
+        },
+      );
+
+      expect(
+        sharedPreferences
+            .getString(StringKey.lifetimeOfferFirstDisplayedDateTime),
+        DateTime(2026, 7, 2, 9, 0, 0).toIso8601String(),
       );
     });
 
@@ -154,7 +179,7 @@ void main() {
       );
     });
 
-    testWidgets('同一起動で起動時ペイウォールが表示済みの場合はモーダルが表示されず、フラグも立たない',
+    testWidgets('同一起動で起動時ペイウォールが表示済みの場合はモーダルが表示されず、フラグも初回表示時刻も記録されない',
         (WidgetTester tester) async {
       final sharedPreferences = await pumpShowLifetimeOfferOnAppLaunch(
         tester,
@@ -167,6 +192,11 @@ void main() {
       );
       expect(
         sharedPreferences.getBool(BoolKey.lifetimeOfferAutoModalShown),
+        isNull,
+      );
+      expect(
+        sharedPreferences
+            .getString(StringKey.lifetimeOfferFirstDisplayedDateTime),
         isNull,
       );
     });

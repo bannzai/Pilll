@@ -27,6 +27,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/pilll_ads.codegen.dart';
 import 'package:pilll/provider/locale.dart';
+import 'package:pilll/provider/tick.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/auth.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -2738,7 +2739,7 @@ void main() {
 
   group('#LifetimeOfferAnnouncementBar', () {
     // 買い切りオファーの表示条件（RC有効・買い切り未購入・割引package取得済み・利用日数340日）を満たした状態でAnnouncementBarを表示する
-    Future<void> pumpAnnouncementBar(
+    Future<SharedPreferences> pumpAnnouncementBar(
       WidgetTester tester, {
       required User user,
       Map<String, Object> initialSharedPreferencesValues = const {},
@@ -2782,6 +2783,8 @@ void main() {
             sharedPreferencesProvider.overrideWith(
               (ref) => sharedPreferences,
             ),
+            // 本物のTickはTimer.periodicを作りpending timerでテストが失敗するためFakeに差し替える
+            tickProvider.overrideWith(() => FakeTick(fakeDateTime: mockToday)),
             remoteConfigParameterProvider.overrideWithValue(
               RemoteConfigParameter(lifetimeOfferEnabled: true),
             ),
@@ -2807,6 +2810,7 @@ void main() {
       await tester.pump();
 
       debugDefaultTargetPlatformOverride = null;
+      return sharedPreferences;
     }
 
     testWidgets('非プレミアム・非トライアルユーザーで表示条件を満たす場合は表示される',
@@ -2849,7 +2853,45 @@ void main() {
       );
     });
 
-    testWidgets('バーを閉じている場合は表示されない', (WidgetTester tester) async {
+    testWidgets('バーの初回表示時に表示期限の起点となる初回表示時刻が記録される', (WidgetTester tester) async {
+      final sharedPreferences = await pumpAnnouncementBar(
+        tester,
+        user: const User(
+          isPremium: false,
+          trialDeadlineDate: null,
+          beginTrialDate: null,
+          discountEntitlementDeadlineDate: null,
+        ),
+      );
+
+      expect(
+        sharedPreferences
+            .getString(StringKey.lifetimeOfferFirstDisplayedDateTime),
+        DateTime(2026, 7, 3).toIso8601String(),
+      );
+    });
+
+    testWidgets('表示期限までの残り時間がカウントダウン表示される', (WidgetTester tester) async {
+      // 初回表示時刻: 2026-07-02 09:00、現在時刻(tick): 2026-07-03 00:00 → 残り9時間
+      await pumpAnnouncementBar(
+        tester,
+        user: const User(
+          isPremium: false,
+          trialDeadlineDate: null,
+          beginTrialDate: null,
+          discountEntitlementDeadlineDate: null,
+        ),
+        initialSharedPreferencesValues: {
+          StringKey.lifetimeOfferFirstDisplayedDateTime:
+              DateTime(2026, 7, 2, 9, 0, 0).toIso8601String(),
+        },
+      );
+
+      expect(find.textContaining('残り 09:00:00'), findsOneWidget);
+    });
+
+    testWidgets('表示期限を過ぎている場合は表示されない', (WidgetTester tester) async {
+      // 初回表示時刻: 2026-07-01 09:00、現在時刻(tick): 2026-07-03 00:00 → 期限(24時間)超過
       await pumpAnnouncementBar(
         tester,
         user: const User(
@@ -2859,7 +2901,8 @@ void main() {
           discountEntitlementDeadlineDate: null,
         ),
         initialSharedPreferencesValues: {
-          BoolKey.lifetimeOfferIsClosed: true,
+          StringKey.lifetimeOfferFirstDisplayedDateTime:
+              DateTime(2026, 7, 1, 9, 0, 0).toIso8601String(),
         },
       );
 

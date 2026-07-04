@@ -5,15 +5,19 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/lifetime_offer/page.dart';
 import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/provider/auth.dart';
 import 'package:pilll/provider/purchase.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
+import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/fake.dart';
 import '../../helper/mock.mocks.dart';
@@ -58,9 +62,15 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime(2026, 7, 3));
       todayRepository = mockTodayRepository;
 
+      SharedPreferences.setMockInitialValues({});
+      final sharedPreferences = await SharedPreferences.getInstance();
+
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
+            sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+            remoteConfigParameterProvider
+                .overrideWithValue(RemoteConfigParameter()),
             lifetimeDiscountPackageProvider.overrideWith(
               (ref) =>
                   hasLifetimeDiscountPackage ? _LifetimeFakePackage() : null,
@@ -85,7 +95,6 @@ void main() {
             home: Material(
               child: LifetimeOfferPageBody(
                 user: user,
-                lifetimeOfferIsClosed: null,
                 source: PaywallSource.lifetimeOfferAppLaunch,
               ),
             ),
@@ -214,6 +223,28 @@ void main() {
 
         expect(
             find.text('Pilllを使い始めて340日', findRichText: true), findsOneWidget);
+      });
+    });
+
+    group('#LifetimeOfferCountdownText', () {
+      testWidgets('残り時間のカウントダウンが表示される（初回表示前は満額の24時間）',
+          (WidgetTester tester) async {
+        await pumpLifetimeOfferPageBody(
+          tester,
+          user: const User(
+            isPremium: false,
+            trialDeadlineDate: null,
+            beginTrialDate: null,
+            discountEntitlementDeadlineDate: null,
+          ),
+        );
+
+        expect(
+          find.byWidgetPredicate(
+              (widget) => widget is LifetimeOfferCountdownText),
+          findsOneWidget,
+        );
+        expect(find.text('残り 24:00:00'), findsOneWidget);
       });
     });
   });
