@@ -22,7 +22,7 @@
 
 ## 導線
 
-1. お知らせバー常設: `lib/features/record/components/announcement_bar/components/lifetime_offer.dart`。残り時間を毎秒カウントダウン表示し、表示期限を過ぎると自動で消える（閉じるボタンはない）
+1. お知らせバー常設: `lib/features/record/components/announcement_bar/components/lifetime_offer.dart`。残り時間を毎秒カウントダウン表示し、表示期限を過ぎると自動で消える（閉じるボタンはない）。非プレミアム・非トライアル側の分岐では純広告（`PilllAdsAnnouncementBar`）の配信中はそちらが優先される（意図した優先順位）
 2. 起動時自動モーダル: `lib/features/root/resolver/show_lifetime_offer_on_app_launch.dart`。周期番号付きキー（`lifetimeOfferAutoModalShownKey`）で周期ごとに1回のみ。起動時ペイウォール（`ShowPaywallOnAppLaunch`）と同一起動で重ならないよう制御する
 
 ## 開発者オプション
