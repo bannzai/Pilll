@@ -10,6 +10,7 @@ import 'package:pilll/entity/package.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/environment.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -290,6 +291,26 @@ class DisableShouldAskCancelReason {
   Future<void> call() async {
     await databaseConnection.userRawReference().set({
       UserFirestoreFieldKeys.shouldAskCancelReason: false,
+    }, SetOptions(merge: true));
+  }
+}
+
+final endTrialForDebugProvider = Provider(
+  (ref) => EndTrialForDebug(ref.watch(databaseProvider)),
+);
+
+/// 開発用: トライアルを強制終了し、無料ユーザー（非トライアル）状態での動作確認を可能にする
+class EndTrialForDebug {
+  final DatabaseConnection databaseConnection;
+  EndTrialForDebug(this.databaseConnection);
+
+  Future<void> call() async {
+    if (!Environment.isDevelopment) {
+      throw AssertionError('This method should not call out of development');
+    }
+    await databaseConnection.userRawReference().set({
+      UserFirestoreFieldKeys.isTrial: false,
+      UserFirestoreFieldKeys.trialDeadlineDate: now().subtract(const Duration(days: 1)),
     }, SetOptions(merge: true));
   }
 }
