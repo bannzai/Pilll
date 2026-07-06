@@ -7,6 +7,7 @@ import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/settings/components/rows/alarm_kit.dart';
 import 'package:pilll/features/settings/components/rows/critical_alert.dart';
 import 'package:pilll/features/settings/components/rows/debug_row.dart';
+import 'package:pilll/features/settings/components/rows/end_trial_for_debug.dart';
 import 'package:pilll/features/settings/components/rows/feature_appeal_announcement_bar_list_row.dart';
 import 'package:pilll/features/settings/components/rows/feature_appeal_help_page_list_row.dart';
 import 'package:pilll/provider/user.dart';
@@ -462,6 +463,8 @@ Android: https://onl.sc/c9xnQUk''';
                         const FeatureAppealHelpPageListRow(),
                         _separator(),
                         const FeatureAppealAnnouncementBarListRow(),
+                        _separator(),
+                        const EndTrialForDebugRow(),
                         _separator(),
                       ],
                     );
