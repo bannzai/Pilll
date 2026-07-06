@@ -1,0 +1,67 @@
+# iOS Simulator セッションを張る caller workflow。実体は bannzai/simtunnel の session.yml（reusable workflow）。
+# 参照: https://github.com/bannzai/simtunnel の PROJECT.md「各アプリ repo での実行」
+# 起動例（simtunnel リポジトリの CLI から）:
+#   SIMTUNNEL_REPO=bannzai/Pilll local/simtunnel up pilll --wait
+name: simulator-session
+# run-name は local/simtunnel CLI が run を特定するキーのためこの形式を維持する
+run-name: "session=${{ inputs.session }} device=${{ inputs.device }}"
+
+on:
+  workflow_dispatch: # fork PR に Secrets を渡さないため workflow_dispatch のみ
+    inputs:
+      session:
+        description: "セッション名。tailnet ホスト名 simtunnel-<session> になる（小文字英数字とハイフンのみ）"
+        required: true
+        default: pilll
+      device:
+        description: "Simulator のデバイス名"
+        required: true
+        default: iPhone 17
+      duration_minutes:
+        description: "セッション維持時間（分）"
+        required: true
+        default: "60"
+
+permissions:
+  id-token: write # Tailscale の OIDC (workload identity federation) 認証に必要
+  contents: read
+
+jobs:
+  # dev 環境の Simulator 用 .app をビルドして artifact に上げる（ci.yml の build-ios-debug と同じ手順の --simulator 版）
+  build:
+    runs-on: macos-26
+    timeout-minutes: 30
+    steps:
+      # simtunnel 経路の workflow は uses を commit SHA で固定する（simtunnel PROJECT.md「リポジトリ公開に耐える安全性」）
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
+      - name: Prepare firebase config
+        run: make secret
+        env:
+          FILE_FIREBASE_IOS: ${{ secrets.FILE_FIREBASE_IOS_DEVELOPMENT }}
+          DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
+          XCCONFIG_SECRET: ${{ secrets.XCCONFIG_SECRET_DEVELOPMENT }}
+          ANDROID_RES_VALUES: ${{ secrets.ANDROID_RES_VALUES }}
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
+        with:
+          flutter-version: '3.41.9'
+      - run: flutter pub get
+      - run: flutter build ios --simulator --debug --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
+      - uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+        with:
+          name: simulator-app
+          path: build/ios/iphonesimulator # .app の親ディレクトリ（.app 直指定は中身が flatten される）
+
+  session:
+    needs: build
+    # タグ運用はしないため commit SHA で固定する（更新時は SHA を書き換える）
+    uses: bannzai/simtunnel/.github/workflows/session.yml@bef66f669c01af47c69d7f10ba7dcb2a106761fb # app-artifact-input（simtunnel PR #15。検証後に main の SHA へ更新する）
+    with:
+      session: ${{ inputs.session }}
+      device: ${{ inputs.device }}
+      duration_minutes: ${{ inputs.duration_minutes }}
+      app_artifact: simulator-app
+    secrets:
+      TS_OIDC_CLIENT_ID: ${{ secrets.TS_OIDC_CLIENT_ID }}
+      TS_OIDC_AUDIENCE: ${{ secrets.TS_OIDC_AUDIENCE }}
