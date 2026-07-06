@@ -1,7 +1,5 @@
 # iOS Simulator セッションを張る caller workflow。実体は bannzai/simtunnel の session.yml（reusable workflow）。
 # 参照: https://github.com/bannzai/simtunnel の PROJECT.md「各アプリ repo での実行」
-# 起動例（simtunnel リポジトリの CLI から）:
-#   SIMTUNNEL_REPO=bannzai/Pilll local/simtunnel up pilll --wait
 name: simulator-session
 # run-name は local/simtunnel CLI が run を特定するキーのためこの形式を維持する
 run-name: "session=${{ inputs.session }} device=${{ inputs.device }}"
@@ -22,15 +20,13 @@ on:
         required: true
         default: "60"
 
-permissions:
-  id-token: write # Tailscale の OIDC (workload identity federation) 認証に必要
-  contents: read
-
 jobs:
   # dev 環境の Simulator 用 .app をビルドして artifact に上げる（ci.yml の build-ios-debug と同じ手順の --simulator 版）
   build:
     runs-on: macos-26
     timeout-minutes: 30
+    permissions:
+      contents: read # checkout のみ。OIDC token (id-token) は session job だけに与える
     steps:
       # simtunnel 経路の workflow は uses を commit SHA で固定する（simtunnel PROJECT.md「リポジトリ公開に耐える安全性」）
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
@@ -55,8 +51,12 @@ jobs:
 
   session:
     needs: build
+    # id-token: write が必要なのは reusable workflow を呼ぶこの job だけのため、job 単位で最小権限にする
+    permissions:
+      id-token: write # Tailscale の OIDC (workload identity federation) 認証に必要
+      contents: read
     # タグ運用はしないため commit SHA で固定する（更新時は SHA を書き換える）
-    uses: bannzai/simtunnel/.github/workflows/session.yml@bef66f669c01af47c69d7f10ba7dcb2a106761fb # app-artifact-input（simtunnel PR #15。検証後に main の SHA へ更新する）
+    uses: bannzai/simtunnel/.github/workflows/session.yml@2350cbd49b5ddc2359e7e393606f08b00db2b5d4 # main 2026-07-06
     with:
       session: ${{ inputs.session }}
       device: ${{ inputs.device }}
