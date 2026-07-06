@@ -1,19 +1,19 @@
 ---
 feature: calendar
 verification: mobile-mcp
-last_verified_commit: null
-last_verified_at: null
+last_verified_commit: 34b7e05eb0ed73e5ee0caa2a91a96147e2edaded
+last_verified_at: 2026-07-06
 ---
 
 # calendar QA
 
 ## 1. カレンダー表示
 
-- [ ] **カレンダータブ初期表示**: カレンダータブを開くと当月の月表示カレンダーが表示され、AppBar タイトルに「YYYY年M月」が表示される
-- [ ] **当日ハイライト**: 当日のセルの数字がプライマリカラーの丸背景でハイライトされる
-- [ ] **前月・翌月への移動**: AppBar タイトル両脇の矢印タップ、またはカレンダー本体の左右スワイプで前月・翌月に切り替わり、タイトルの年月表示が更新される
-- [ ] **前月の日付グレーアウト**: 月初が週の途中から始まる場合、前月分の日付セルはグレーアウト表示されタップしても反応しない
-- [ ] **記録アイコン表示**: 日記で体調（良い＝笑顔／悪い＝怒り顔）・セックス・症状・メモを記録した日、または予定を登録した日は、日付下にそれぞれ対応するアイコンが表示される
+- [x] **カレンダータブ初期表示**: カレンダータブを開くと当月の月表示カレンダーが表示され、AppBar タイトルに「YYYY年M月」が表示される
+- [x] **当日ハイライト**: 当日のセルの数字がプライマリカラーの丸背景でハイライトされる
+- [x] **前月・翌月への移動**: AppBar タイトル両脇の矢印タップ、またはカレンダー本体の左右スワイプで前月・翌月に切り替わり、タイトルの年月表示が更新される
+- [x] **前月の日付グレーアウト**: 月初が週の途中から始まる場合、前月分の日付セルはグレーアウト表示されタップしても反応しない
+- [x] **記録アイコン表示**: 日記で体調（良い＝笑顔／悪い＝怒り顔）・セックス・症状・メモを記録した日、または予定を登録した日は、日付下にそれぞれ対応するアイコンが表示される
 
 #### 動作確認
 <details>
@@ -23,7 +23,9 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/d7563046-db62-46de-b5e8-1dd7f8c0cc9c.png" width="320">
 
 </details>
 
@@ -31,7 +33,9 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/d7563046-db62-46de-b5e8-1dd7f8c0cc9c.png" width="320">
 
 </details>
 
@@ -39,7 +43,11 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+矢印タップで 6月→7月→8月 に切り替わり、その後左スワイプで9月、右スワイプで8月に戻ることを確認。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/db8cf0bb-879c-4a91-9bee-1bd0ad9cf7fa.png" width="320">
 
 </details>
 
@@ -47,7 +55,11 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+8月表示で前月(7月)分の27〜31がグレーアウト表示され、タップしても8月表示のまま遷移しないことを確認。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/7d1d3b79-3c76-4dc0-9e6d-bb3e9424c8df.png" width="320">
 
 </details>
 
@@ -55,7 +67,11 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+1日: sex(ハート)・症状・メモのアイコン、2日: 体調（悪い＝怒り顔）アイコン、6日/15日: 予定（時計）アイコンをそれぞれ確認。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/fb194df1-b39f-40f1-a2b0-0a188e54409a.png" width="320">
 
 </details>
 
@@ -65,11 +81,13 @@ last_verified_at: null
 
 ## 2. 日付タップ時の遷移
 
-- [ ] **未来日をタップ**: 今日より後の日付をタップすると予定登録画面（SchedulePostPage）に直接遷移する
-- [ ] **記録なしの当日/過去日をタップ**: 日記も予定も未登録の日をタップすると日記投稿画面（新規作成）に遷移する
+- [x] **未来日をタップ**: 今日より後の日付をタップすると予定登録画面（SchedulePostPage）に直接遷移する
+- [x] **記録なしの当日/過去日をタップ**: 日記も予定も未登録の日をタップすると日記投稿画面（新規作成）に遷移する
 - [ ] **予定のみある日をタップ**: 予定はあるが日記がない日をタップすると「日記を記録」「予定を記録」の選択ボトムシートが表示され、「日記を記録」で日記投稿画面（新規作成）、「予定を記録」で予定編集画面に遷移する
-- [ ] **日記のみある日をタップ**: 日記のみ登録済みの日をタップすると日記確認シート（内容表示・編集・削除導線）が表示される
+  - ⏭️ スキップ: `lib/components/organisms/calendar/week/week_calendar.dart` の `transitionWhenCalendarDayTapped`（146-186行目）は `date.date().isAfter(today())` が true の間は無条件で SchedulePostPage に直接遷移し、ボトムシート分岐は日付が今日以前になって初めて到達する。この分岐を実機で再現するには「未来日に予定を登録 → 日付が今日以前になるまで待つ（またはシステム時計を進める）」操作が必要だが、システム時計の変更はホストMac全体に影響し QA の作業範囲を超えるため実施しなかった。実装コードを確認した限りロジックは仕様通り（schedule はあるが diary が無い場合、showDiary→日記投稿画面/showSchedule→予定編集画面 の DiaryOrScheduleSheet を表示）。
+- [x] **日記のみある日をタップ**: 日記のみ登録済みの日をタップすると日記確認シート（内容表示・編集・削除導線）が表示される
 - [ ] **日記と予定が両方ある日をタップ**: 選択ボトムシートが表示され、「日記を記録」選択で日記確認シートが開き、「予定を記録」選択で予定編集画面が開く
+  - ⏭️ スキップ: 上記と同じ理由（未来日は無条件で SchedulePostPage に直接遷移するため、当日以前で予定と日記が両方存在する状態を作るにはシステム時計の変更が必要）。同ファンクションの diary != null 分岐（170-177行目）で showDiary→`_showConfirmDiarySheet`、showSchedule→SchedulePostPage となることをコードで確認済み。
 
 #### 動作確認
 <details>
@@ -79,7 +97,9 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/bb2edec6-0948-4a30-8449-a7a0430c6dee.png" width="320">
 
 </details>
 
@@ -87,7 +107,9 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/10978ce6-caf3-41d5-9a4b-06060bb5587a.png" width="320">
 
 </details>
 
@@ -103,7 +125,9 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/6727c85f-9965-4662-baff-d03e9f19704d.png" width="320">
 
 </details>
 
@@ -121,7 +145,7 @@ last_verified_at: null
 
 ## 3. FAB からの日記登録
 
-- [ ] **FABタップで当日の日記作成/編集**: 右下の＋ボタン（FloatingActionButton）をタップすると当日日付の日記投稿画面に遷移する。当日分の日記が既に存在する場合は既存内容が反映された編集状態で開く
+- [x] **FABタップで当日の日記作成/編集**: 右下の＋ボタン（FloatingActionButton）をタップすると当日日付の日記投稿画面に遷移する。当日分の日記が既に存在する場合は既存内容が反映された編集状態で開く
 
 #### 動作確認
 <details>
@@ -131,7 +155,12 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+未記録の状態でFABタップ→当日(7/5)の新規日記投稿画面が開くこと、体調を選択・保存後に再度FABタップ→保存済みの体調選択が反映された編集状態で開くことを確認。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/a31a09c0-e5b8-488b-ae10-84a735e212a0.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/6249f1cf-ba8e-4684-a441-0e28c24e7cdc.png" width="320">
 
 </details>
 
@@ -141,8 +170,8 @@ last_verified_at: null
 
 ## 4. 服薬変更履歴カード
 
-- [ ] **履歴カード表示**: カレンダー下部に「服薬記録」カードが表示され、履歴が月ごとのヘッダーでグルーピングされて並ぶ
-- [ ] **もっと見るボタン**: 履歴が6件を超える場合のみ「もっと見る」ボタンが表示され、押下するとプレミアム/トライアル中なら全履歴一覧ページに遷移し、無料ユーザーならプレミアム紹介シートが表示される
+- [x] **履歴カード表示**: カレンダー下部に「服薬記録」カードが表示され、履歴が月ごとのヘッダーでグルーピングされて並ぶ
+- [x] **もっと見るボタン**: 履歴が6件を超える場合のみ「もっと見る」ボタンが表示され、押下するとプレミアム/トライアル中なら全履歴一覧ページに遷移し、無料ユーザーならプレミアム紹介シートが表示される
 
 #### 動作確認
 <details>
@@ -152,7 +181,11 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+「7月」「6月」のヘッダーで履歴がグルーピングされて表示されることを確認。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/a6ace5da-abac-4da3-9a98-cc900ebf1ce0.png" width="320">
 
 </details>
 
@@ -160,7 +193,11 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+服用記録を追加して履歴を7件に増やしたところ「もっと見る」ボタンが表示され、タップすると（テストアカウントは isTrial: true のため）全履歴一覧ページに直接遷移することを確認。無料ユーザー時のプレミアム紹介シート表示は、5.のプレミアム制限確認と合わせて別途確認。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/7503656e-c7ff-4311-8928-6bf7910c11bc.png" width="320">
 
 </details>
 
@@ -170,10 +207,9 @@ last_verified_at: null
 
 ## 5. プレミアム制限（フリープラン）
 
-- [ ] **カレンダー月ロック表示**: 無料ユーザーが当月から前後3ヶ月を超える月にページングすると、カレンダー全体にぼかし＋鍵アイコン＋「詳しく見る」ボタンのオーバーレイが表示され、ボタン押下でプレミアム紹介シートが開く
-  - Note: フリープラン状態での確認が必要。テストアカウントの課金状態を無料に切り替えて確認する
+- [x] **カレンダー月ロック表示**: 無料ユーザーが当月から前後3ヶ月を超える月にページングすると、カレンダー全体にぼかし＋鍵アイコン＋「詳しく見る」ボタンのオーバーレイが表示され、ボタン押下でプレミアム紹介シートが開く
 - [ ] **服薬履歴カードのロック表示**: 無料ユーザーは履歴カードタイトル横にプレミアムバッジが表示され、リスト部分がぼかされて「詳しく見る」ボタンが重畳表示される
-  - Note: 上記と同様、無料アカウントでの確認が必要
+  - ❌ 失敗: 服薬変更履歴の件数が少ない無料ユーザー（今回は1件のみ）でカレンダーの履歴カードを表示すると、ロックオーバーレイ（🔒アイコン・説明文・「詳しく見る」ボタン）が `pill_sheet_modified_history_card.dart:127` の Column で RenderFlex オーバーフロー（68px）を起こし、「詳しく見る」ボタンが実質非表示・タップ不可になる。プレミアムバッジ表示・リストのぼかし自体は仕様通り。再現手順・詳細は issue 参照。 https://github.com/bannzai/PilllBackend/issues/390
 
 #### 動作確認
 <details>
@@ -183,7 +219,21 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-06**
+
+設定→開発者オプション→「トライアル解除」で無料ユーザー状態にした上で、カレンダーを当月（2026年7月）から4ヶ月先（2026年11月、`_todayCalendarPageIndex ± 3`の無料範囲を超える月）までページングし、カレンダー全体にぼかし＋🔒アイコン＋「これ以上の閲覧はプレミアム機能になります」＋「くわしくみる」ボタンのオーバーレイが表示されることを確認。「くわしくみる」タップでプレミアム紹介シート（premium_introduction）が正しく開くことも確認した。
+
+トライアル解除前:
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/2aa4d7e3-9c0c-4296-9a0b-dd2c30132c15.png" width="320">
+
+トライアル解除後（無料ユーザー状態、設定画面「Pilllプレミアム」欄が「プレミアムプランを見る」に変化）:
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/e71cb1e5-2c6a-4a41-8b01-f6112a2d3ca1.png" width="320">
+
+2026年11月でのカレンダー月ロックオーバーレイ:
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/2a9bf509-9b55-4364-8043-30fbaf266b30.png" width="320">
+
+「くわしくみる」タップ後のプレミアム紹介シート:
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/5a047809-56d9-4c3a-96de-a9096a8f16bb.png" width="320">
 
 </details>
 
@@ -191,7 +241,11 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-06**
+
+無料ユーザー状態でカレンダー下部の「服用履歴」カードを表示。タイトル横にプレミアムバッジが表示され、リスト部分がぼかされて🔒アイコンが重畳表示されることは確認できたが、「詳しく見る」ボタンが RenderFlex オーバーフロー（68px）により実質非表示・タップ不可になっている不具合を確認した（該当箇所をタップしてもプレミアム紹介シートが開かないことも確認済み）。詳細は issue 参照: https://github.com/bannzai/PilllBackend/issues/390
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/d88bff8f-741d-47b9-be9d-617e0251cd6b.png" width="320">
 
 </details>
 

@@ -1,8 +1,8 @@
 ---
 feature: before_pill_sheet_group_history
 verification: mobile-mcp
-last_verified_commit: null
-last_verified_at: null
+last_verified_commit: 34b7e05eb0ed73e5ee0caa2a91a96147e2edaded
+last_verified_at: 2026-07-06
 ---
 
 # before_pill_sheet_group_history QA
@@ -26,6 +26,8 @@ last_verified_at: null
 
 （未実行）
 
+- ⏭️ スキップ: 本画面への遷移導線は `lib/features/record/components/header/record_page_header.dart:73-92` で現在もコメントアウトされており（TODO: `[PillSheetModifiedHistory-V2-BeforePillSheetGroupHistory] 2024-05-01`）、通常操作では到達不可。コメントアウト解除はコード変更にあたるため QA セッション内では行わない
+
 </details>
 
 ### **表示内容が「前回」のものであることの確認**: 上部の期間表示・ピルシートの服用済みマークが、現在記録画面で使用中の最新グループの内容ではなく、直前に破棄したグループの開始日・終了予定日・服用済み状態と一致していることを確認する（`beforePillSheetGroupProvider` の実装上、最新グループと同じ内容が誤って表示されていないか要注意）
@@ -34,6 +36,8 @@ last_verified_at: null
 
 （未実行）
 
+- ❌ 失敗: 画面遷移導線がなく実機確認は不可のため、代わりに `beforePillSheetGroupProvider`（`lib/provider/pill_sheet_group.dart:50-69`）をコードリーディングで検証したところ、実際にバグを発見した。ピルシートグループが2件以上存在する場合、`orderBy(createdAt).limitToLast(2)` は昇順のまま末尾2件を返すため `snapshot.docs.last` は「最新グループ」を指す（同ファイルの `latestPillSheetGroupProvider` と同一取得結果）。つまり `beforePillSheetGroupProvider` は「前回グループ」ではなく「最新グループ」を返してしまう。issue: https://github.com/bannzai/PilllBackend/issues/389
+
 </details>
 
 ### **戻る操作**: AppBar 左上の戻るボタン（矢印アイコン）をタップすると前の画面（記録画面）に戻る
@@ -41,6 +45,8 @@ last_verified_at: null
 <details><summary>動作確認スクショ</summary>
 
 （未実行）
+
+- ⏭️ スキップ: 本画面への遷移導線がなく到達不可のため未実行
 
 </details>
 
@@ -64,6 +70,8 @@ last_verified_at: null
 
 （未実行）
 
+- ⏭️ スキップ: 本画面への遷移導線がなく到達不可のため未実行。コードリーディングでは `lib/features/before_pill_sheet_group_history/component/pill_sheet_modified_history_list.dart` が表示中ピルシートの `beginDate`〜`estimatedEndTakenDate` を `pillSheetModifiedHistoriesWithRangeProvider` に渡し、共通コンポーネント `PillSheetModifiedHistoryList` に委譲しており、ロジック上の問題は見当たらなかった
+
 </details>
 
 ### **履歴取得エラー時の表示**: 履歴取得に失敗した場合、一覧の代わりに「服用履歴情報の取得に失敗しました。」というエラーメッセージが表示される
@@ -71,6 +79,8 @@ last_verified_at: null
 <details><summary>動作確認スクショ</summary>
 
 （未実行）
+
+- ⏭️ スキップ: 本画面への遷移導線がなく到達不可、かつ意図的な再現も難しいため未実行
 
 </details>
 
@@ -94,6 +104,8 @@ last_verified_at: null
 
 （未実行）
 
+- ⏭️ スキップ: 本画面への遷移導線がなく到達不可のため未実行
+
 </details>
 
 ### **ドットインジケーターの表示・タップ**: グループ内のピルシートが2つ以上の場合のみ画面下部にドットインジケーターが表示され、任意のドットをタップするとそのページへ直接ジャンプする。ピルシートが1つのみの場合はドットインジケーターが表示されない
@@ -101,6 +113,8 @@ last_verified_at: null
 <details><summary>動作確認スクショ</summary>
 
 （未実行）
+
+- ⏭️ スキップ: 本画面への遷移導線がなく到達不可のため未実行
 
 </details>
 
@@ -123,6 +137,8 @@ last_verified_at: null
 
 （未実行）
 
+- ⏭️ スキップ: 本画面への遷移導線がなく到達不可のため未実行。コードリーディングでは `lib/features/before_pill_sheet_group_history/page.dart:53-68` で `pillSheetGroup == null` の場合に `L.previousPillSheetGroupNotFound` を中央表示する分岐があることを確認した
+
 </details>
 
 ### **ピルマークタップの無反応**: 表示されているピルシート上の丸いピルマークをタップしても服用記録の変更・画面遷移などの反応が起きない（本画面は閲覧専用で編集機能を持たない）
@@ -130,6 +146,8 @@ last_verified_at: null
 <details><summary>動作確認スクショ</summary>
 
 （未実行）
+
+- ⏭️ スキップ: 本画面への遷移導線がなく到達不可のため未実行。コードリーディングでは `lib/features/before_pill_sheet_group_history/component/pill_sheet.dart:121` で `PillMarkWithNumberLayout` の `onTap` が `() {}`（no-op）であることを確認した
 
 </details>
 

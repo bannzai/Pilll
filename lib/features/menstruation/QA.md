@@ -1,16 +1,16 @@
 ---
 feature: menstruation
 verification: mobile-mcp
-last_verified_commit: null
-last_verified_at: null
+last_verified_commit: 34b7e05eb0ed73e5ee0caa2a91a96147e2edaded
+last_verified_at: 2026-07-05
 ---
 
 # menstruation QA
 
 ## 1. カレンダー表示
 
-- [ ] **カレンダー初期表示**: 生理タブを開くと当日を含む週がカレンダーに表示され、AppBarタイトルに表示中の月（例:「7月」）が表示される
-- [ ] **カレンダーの左右スワイプ**: カレンダーを左右にスワイプして週を切り替えると、AppBarタイトルの月表示が表示中の週に連動して変わる
+- [x] **カレンダー初期表示**: 生理タブを開くと当日を含む週がカレンダーに表示され、AppBarタイトルに表示中の月（例:「7月」）が表示される
+- [x] **カレンダーの左右スワイプ**: カレンダーを左右にスワイプして週を切り替えると、AppBarタイトルの月表示が表示中の週に連動して変わる
 
 #### 動作確認
 <details>
@@ -20,7 +20,9 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/f04452c3-a1ab-4c32-833c-47fc0db47760.png" width="320">
 
 </details>
 
@@ -28,7 +30,9 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/93a1dbff-a89f-4b21-9940-36569e71e43c.png" width="320">
 
 </details>
 
@@ -39,9 +43,9 @@ last_verified_at: null
 ## 2. 生理記録（新規作成）
 
 - [ ] **生理期間未設定時の記録**: 生理記録も予定もない状態では下部ボタンに「生理を記録」と表示され、設定画面で「生理期間」を0日（未設定）にしている場合はタップすると選択シートを経由せず日付範囲ピッカーが直接開く
-- [ ] **生理期間設定済み時の選択シート**: 生理期間を設定済みの場合、記録ボタンをタップすると「今日から生理」「昨日から生理」「生理開始日を選択」の3択シートが表示される
-- [ ] **「今日から生理」記録**: 「今日から生理」を選ぶと当日開始・設定日数分の生理記録が作成され、「◯月◯日から生理開始で記録しました」のスナックバーが表示されシートが閉じる
-- [ ] **「生理開始日を選択」記録**: 「生理開始日を選択」でカレンダーから任意の開始日を選ぶと、その日開始の生理記録が作成される。ピッカーをキャンセルした場合は記録が作成されない
+- [x] **生理期間設定済み時の選択シート**: 生理期間を設定済みの場合、記録ボタンをタップすると「今日から生理」「昨日から生理」「生理開始日を選択」の3択シートが表示される
+- [x] **「今日から生理」記録**: 「今日から生理」を選ぶと当日開始・設定日数分の生理記録が作成され、「◯月◯日から生理開始で記録しました」のスナックバーが表示されシートが閉じる
+- [x] **「生理開始日を選択」記録**: 「生理開始日を選択」でカレンダーから任意の開始日を選ぶと、その日開始の生理記録が作成される。ピッカーをキャンセルした場合は記録が作成されない
 
 #### 動作確認
 <details>
@@ -51,7 +55,7 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+❌ 失敗: 設定画面「生理について」の「何日間生理が続く？」を「-」（0日/未設定）に変更して「完了」をタップしても値が保存されず「4」のまま表示される。同様に「ピル番号」も変更が保存されない。この保存不具合のため、生理期間を0日にした状態を作れず本項目を検証できなかった。issue: https://github.com/bannzai/PilllBackend/issues/387
 
 </details>
 
@@ -59,7 +63,9 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/74f908b4-50f3-4787-b0df-70847cde987f.png" width="320">
 
 </details>
 
@@ -67,7 +73,11 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/0575e8be-b316-4276-8258-d7cbfffc749a.png" width="320">
+
+今日(7/5)開始・設定日数(4日)分の期間（7/5-7/8）で記録が作成されたことを確認した。スナックバー表示は撮影タイミングの都合で画像として捕捉できなかったが、`lib/l10n/app_ja.arb` の `recordedMenstruationStartDate: "{DateTimeFormatterMonthAndDay}から生理開始で記録しました"` の文言定義を確認し、コード上は正しく実装されていることを確認した。
 
 </details>
 
@@ -75,7 +85,11 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/bb490b96-c0b2-40ce-a3b6-a1289e52e1a2.png" width="320">
+
+ピッカーをキャンセルした場合は選択シートに戻り記録が作成されないこと、7/6を選択した場合は7/6開始で記録が作成されることの両方を確認した。
 
 </details>
 
@@ -85,10 +99,10 @@ last_verified_at: null
 
 ## 3. 生理期間中の編集・削除
 
-- [ ] **進行中ボタン表示の切り替わり**: 生理記録の期間内（当日を含む）になると、下部ボタンのラベルが「生理期間を編集」に変わる
-- [ ] **編集/削除選択シート表示**: 進行中に記録ボタンをタップすると、記録中の期間（開始日 - 終了日）と、アイコン付きの「生理期間を編集」「削除」ボタンが表示される
-- [ ] **編集操作**: 選択シートの「生理期間を編集」をタップすると日付範囲ピッカーが開き、日付を変更して保存すると「生理期間を編集しました」のスナックバーが表示され、シートが閉じる
-- [ ] **削除操作とキャンセル**: 選択シートの「削除」をタップすると「生理期間を削除しますか？」の確認ダイアログが出る。「キャンセル」では削除されず、「削除する」を選ぶと記録が削除され「生理期間を削除しました」のスナックバーが表示される
+- [x] **進行中ボタン表示の切り替わり**: 生理記録の期間内（当日を含む）になると、下部ボタンのラベルが「生理期間を編集」に変わる
+- [x] **編集/削除選択シート表示**: 進行中に記録ボタンをタップすると、記録中の期間（開始日 - 終了日）と、アイコン付きの「生理期間を編集」「削除」ボタンが表示される
+- [x] **編集操作**: 選択シートの「生理期間を編集」をタップすると日付範囲ピッカーが開き、日付を変更して保存すると「生理期間を編集しました」のスナックバーが表示され、シートが閉じる
+- [x] **削除操作とキャンセル**: 選択シートの「削除」をタップすると「生理期間を削除しますか？」の確認ダイアログが出る。「キャンセル」では削除されず、「削除する」を選ぶと記録が削除され「生理期間を削除しました」のスナックバーが表示される
 
 #### 動作確認
 <details>
@@ -98,7 +112,9 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/0575e8be-b316-4276-8258-d7cbfffc749a.png" width="320">
 
 </details>
 
@@ -106,7 +122,9 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/1cd4d0e1-7a79-47c4-bb41-af4c67dcccc3.png" width="320">
 
 </details>
 
@@ -114,7 +132,11 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/eefd35a2-f54a-4e79-abd6-88a2e17dc4a7.png" width="320">
+
+日付範囲ピッカーで7/5-7/8から7/9-7/12に変更・保存し、記録の期間が正しく更新されたことを確認した。スナックバー表示は撮影タイミングの都合で画像として捕捉できなかったが、`lib/l10n/app_ja.arb` の `menstruationEdited: "生理期間を編集しました"` の文言定義を確認済み。
 
 </details>
 
@@ -122,7 +144,15 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+確認ダイアログ表示:
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/60dbf0c3-e8f8-451f-8e6b-a3272490c10e.png" width="320">
+
+削除実行後（記録が消え「生理を記録」に戻る）:
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/5d93ad5f-1261-417f-82e1-e22a3197e6f6.png" width="320">
+
+「キャンセル」では記録が削除されず維持されることも確認した。スナックバー表示は撮影タイミングの都合で画像として捕捉できなかったが、`lib/l10n/app_ja.arb` の `menstruationDeleted: "生理期間を削除しました"` の文言定義を確認済み。
 
 </details>
 
@@ -132,11 +162,11 @@ last_verified_at: null
 
 ## 4. 生理履歴カード
 
-- [ ] **履歴カードの表示件数**: 過去の生理記録がある場合、生理履歴カードに進行中の記録＋直近の記録が最大3件、日付範囲・周期ドット表示付きで一覧表示される
-- [ ] **平均値の表示・鍵表示**: プレミアム/トライアルユーザーには「平均周期」「平均日数」に実数値が表示され、無料ユーザーには🔒が表示される。無料ユーザーには履歴カードタイトル横にプレミアムバッジも表示される
-- [ ] **もっと見るボタンの表示条件**: 記録が少ない（進行中含めて3件以下、進行中なしなら2件以下）場合は「もっと見る」ボタンが表示されない
-- [ ] **もっと見るタップ時の挙動**: プレミアム/トライアルユーザーが「もっと見る」をタップすると生理履歴の一覧画面（menstruation_list）に遷移し、無料ユーザーの場合はプレミアム訴求シートが表示される
-- [ ] **履歴行タップで編集シート**: 履歴カード内の記録行をタップすると、その記録の編集/削除選択シートが開く
+- [x] **履歴カードの表示件数**: 過去の生理記録がある場合、生理履歴カードに進行中の記録＋直近の記録が最大3件、日付範囲・周期ドット表示付きで一覧表示される
+- [x] **平均値の表示・鍵表示**: プレミアム/トライアルユーザーには「平均周期」「平均日数」に実数値が表示され、無料ユーザーには🔒が表示される。無料ユーザーには履歴カードタイトル横にプレミアムバッジも表示される
+- [x] **もっと見るボタンの表示条件**: 記録が少ない（進行中含めて3件以下、進行中なしなら2件以下）場合は「もっと見る」ボタンが表示されない
+- [x] **もっと見るタップ時の挙動**: プレミアム/トライアルユーザーが「もっと見る」をタップすると生理履歴の一覧画面（menstruation_list）に遷移し、無料ユーザーの場合はプレミアム訴求シートが表示される
+- [x] **履歴行タップで編集シート**: 履歴カード内の記録行をタップすると、その記録の編集/削除選択シートが開く
 
 #### 動作確認
 <details>
@@ -146,7 +176,11 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/5568d7f9-d147-4665-ac31-f30fd87cfcf2.png" width="320">
+
+`lib/features/menstruation/history/menstruation_history_card.dart` の `MenstruationHistoryCardList` は `activeMenstruation` / `previousMenstruation` / `secondPreviousMenstruation` の最大3行のみ表示する実装であることをコードで確認し、進行中なし・過去3件の記録がある状態で実機上も直近2件（3件目は周期日数計算にのみ使用され行としては表示されない）が日付範囲・周期日数付きで表示されることを確認した。
 
 </details>
 
@@ -154,7 +188,11 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/29a3045e-e840-4337-bcdc-5b55d646cec7.png" width="320">
+
+検証に使用したdevアカウントはトライアル状態（`isTrial: true`）だったため、平均周期・平均日数に実数値（例: 44日/4日）が表示され、`MenstruationHistoryCardTitle` の `if (!state.isPremium)` 条件によりプレミアムバッジも表示された（トライアル中でも `isPremium` は false のためバッジは表示される仕様で、コードと実機表示が一致）。無料（非トライアル）ユーザーでの🔒表示は、本QAセッションでは無料状態のアカウントを用意できず実機確認はできなかったが、`lib/features/menstruation/history/menstruation_history_card.dart` の `(state.isPremium || state.isTrial) ? 実数値 : '🔒'` の分岐により、無料ユーザーでは🔒が表示される実装になっていることをコードで確認した。
 
 </details>
 
@@ -162,7 +200,13 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+進行中なし・過去2件の状態（もっと見るボタンなし）:
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/29a3045e-e840-4337-bcdc-5b55d646cec7.png" width="320">
+
+進行中なし・過去3件の状態（もっと見るボタンが表示される）:
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/5568d7f9-d147-4665-ac31-f30fd87cfcf2.png" width="320">
 
 </details>
 
@@ -170,7 +214,11 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/cd01a7c2-7e51-4793-a495-3d634529ef7c.png" width="320">
+
+トライアル状態のアカウントで「もっと見る」をタップし、生理履歴一覧画面（menstruation_list）に遷移することを確認した。無料ユーザーでのプレミアム訴求シート表示は本QAセッションでは無料状態のアカウントを用意できず実機確認はできなかったが、`lib/features/menstruation/history/menstruation_history_card.dart` の `MenstruationHistoryCardMoreButton` の `if (state.isPremium || state.isTrial) { Navigator...push } else { showPremiumIntroductionSheet(...) }` の分岐をコードで確認した。
 
 </details>
 
@@ -178,7 +226,11 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/4c5bf2ea-7f49-4b32-8fc2-b5f87c81af72.png" width="320">
+
+履歴カード内の記録行をタップすると、その記録の期間（開始日 - 終了日）と「生理期間を編集」「削除」ボタンを持つ選択シートが開くことを確認した。
 
 </details>
 

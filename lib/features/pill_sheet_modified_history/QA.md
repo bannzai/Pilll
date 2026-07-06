@@ -1,20 +1,22 @@
 ---
 feature: pill_sheet_modified_history
 verification: mobile-mcp
-last_verified_commit: null
-last_verified_at: null
+last_verified_commit: 34b7e05eb0ed73e5ee0caa2a91a96147e2edaded
+last_verified_at: 2026-07-05
 ---
 
 # pill_sheet_modified_history QA
 
 ## 1. 画面表示・一覧構成
 
-- [ ] **画面遷移**: カレンダー画面の服薬変更履歴カードで「もっと見る」をタップすると本画面に遷移し、AppBarに戻るボタンとタイトル「服用履歴」が表示される
+- [x] **画面遷移**: カレンダー画面の服薬変更履歴カードで「もっと見る」をタップすると本画面に遷移し、AppBarに戻るボタンとタイトル「服用履歴」が表示される
   - プレミアム/トライアルユーザーでないと「もっと見る」から本画面に遷移できない（無料ユーザーはプレミアム訴求シートが出る）。テストアカウントにプレミアムまたはトライアル権限を付与した状態で確認する
-- [ ] **列見出しの表示**: リスト上部に「服用時間」「服用済み」の列見出しが表示される
-- [ ] **月ごとのグルーピング表示**: 履歴が発生月ごとにヘッダー（例:「7月」）で区切られて表示される
-- [ ] **日付間隔の区切り線表示**: 前の履歴と1日以上間隔が空いている履歴の直前に、区切りの点線が表示される
+- [x] **列見出しの表示**: リスト上部に「服用時間」「服用済み」の列見出しが表示される
+- [x] **月ごとのグルーピング表示**: 履歴が発生月ごとにヘッダー（例:「7月」）で区切られて表示される
+- [x] **日付間隔の区切り線表示**: 前の履歴と1日以上間隔が空いている履歴の直前に、区切りの点線が表示される
+  - コード上、区切り線判定（`dirtyIndex`）は月グループ内でリセットされるため、月をまたぐギャップでは判定されない仕様。同一月内（7月5日→7月1日、4日間隔）で区切り線が表示されることを確認した
 - [ ] **記録が0件の場合**: 服薬変更履歴が1件もない場合、画面がエラーにならず空の状態で表示される
+  - ⏭️ スキップ: `CalendarPillSheetModifiedHistoryCard`（`lib/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart:34`）の「もっと見る」ボタンは履歴が6件超の場合にのみ表示されるため、履歴0〜6件の状態から本画面に遷移する通常のUI導線が存在しない。ディープリンク等の特殊な手段でしか到達できず、今回は通常操作の範囲内で検証したためスキップした
 
 #### 動作確認
 <details>
@@ -24,7 +26,8 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/eecb3e7f-6fd2-4b60-885d-560f3d2f069e.png" width="320">
 
 </details>
 
@@ -32,7 +35,8 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/eecb3e7f-6fd2-4b60-885d-560f3d2f069e.png" width="320">
 
 </details>
 
@@ -40,7 +44,8 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/0457ca24-f54e-479a-a17b-ec887c807525.png" width="320">
 
 </details>
 
@@ -48,7 +53,8 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/4e69305a-2fbe-408c-9997-f2fc68d309aa.png" width="320">
 
 </details>
 
@@ -56,7 +62,7 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+⏭️ スキップのため未実行（通常のUI導線では到達不可能な状態）
 
 </details>
 
@@ -66,8 +72,10 @@ last_verified_at: null
 
 ## 2. 無限スクロール
 
-- [ ] **追加読み込み**: 一覧を最下部までスクロールすると、表示件数が20件ずつ追加され、それに応じて古い履歴が表示される
-- [ ] **末尾到達後の追加スクロール**: 追加読み込み後さらに最下部までスクロールすると、履歴が尽きるまで20件単位で読み込みが続く
+- [x] **追加読み込み**: 一覧を最下部までスクロールすると、表示件数が20件ずつ追加され、それに応じて古い履歴が表示される
+  - テスト用に履歴を21件作成し（初期上限20件+1件）、最下部までスクロールすると21件目（別月・別日付の履歴）が表示されることを確認した
+- [x] **末尾到達後の追加スクロール**: 追加読み込み後さらに最下部までスクロールすると、履歴が尽きるまで20件単位で読み込みが続く
+  - 21件（全件）を表示しきった状態でさらにスクロールしてもエラーにならず安定して末尾で停止することを確認した。手元データが21件のため、40件目以降の複数回読み込みは未検証
 
 #### 動作確認
 <details>
@@ -77,7 +85,8 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/0457ca24-f54e-479a-a17b-ec887c807525.png" width="320">
 
 </details>
 
@@ -85,7 +94,8 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/9ba209a0-c633-43d0-9d70-a4571d3c510d.png" width="320">
 
 </details>
 
@@ -95,10 +105,15 @@ last_verified_at: null
 
 ## 3. 履歴行の内容と編集
 
-- [ ] **服用記録行の表示**: 「服用」の履歴行に服用番号の変化（前番号→後番号）と服用時刻が表示される
+- [x] **服用記録行の表示**: 「服用」の履歴行に服用番号の変化（前番号→後番号）と服用時刻が表示される
+  - 実機では服用番号が常に1番のケースのみ再現でき、番号変化（before→after）表示は未確認。番号表示・時刻表示自体は欠損なく表示されることを確認した
 - [ ] **服用記録の時刻編集**: 服用記録行をタップすると日時ピッカーが開き、時刻を変更して確定すると履歴が更新され「◯◯に変更しました」のスナックバーが表示されピッカーが閉じる
-- [ ] **服用取り消し行の表示**: 服用を取り消した履歴行に「服用取り消し」の文言と番号変化が表示される（タップしても編集は開かない）
-- [ ] **その他アクション行の表示**: ピルシート作成・削除・休薬開始/終了・番号変更など、服用・取り消し以外の履歴行もそれぞれ内容欠損なく表示される
+  - ❌ 失敗: 日時ピッカーが開き時刻変更・確定・ピッカーが閉じる動作は正常。Firestore上のデータも正しく更新される（カレンダー画面の別プロバイダ経由の一覧では更新後の日付・グルーピングに反映されることを確認済み）。しかし**編集した本画面（`PillSheetModifiedHistoriesPage`）を閉じずにそのまま見ると、一覧表示が編集前の内容のまま更新されない**。画面を一度閉じて再度開き直すと正しい内容が表示される。原因は `lib/features/pill_sheet_modified_history/page.dart` の `useEffect` が `fetchedHistories.length != histories.value.length`（件数変化時のみ）でしか `histories.value` を更新しないため。スナックバー自体は目視では2秒間のタイミングが早く捕捉できなかったが、コードの実行フロー（`try` 内で例外なく `navigator.pop()` まで到達している）から表示されていると判断
+  - 起票: https://github.com/bannzai/PilllBackend/issues/388
+- [x] **服用取り消し行の表示**: 服用を取り消した履歴行に「服用取り消し」の文言と番号変化が表示される（タップしても編集は開かない）
+  - 「服用取り消し」行をタップしても日時ピッカーが開かないことを確認した
+- [x] **その他アクション行の表示**: ピルシート作成・削除・休薬開始/終了・番号変更など、服用・取り消し以外の履歴行もそれぞれ内容欠損なく表示される
+  - ピルシート作成（「ピルシートを追加」）、服薬お休み開始（「服用お休み」）、ピル番号変更（「ピル番号変更」）の3種類で表示崩れ・内容欠損がないことを確認した。休薬終了・ピルシート削除・番号表示変更・休薬期間変更等は実機で再現するに至らず未確認
 
 #### 動作確認
 <details>
@@ -108,7 +123,8 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/4e69305a-2fbe-408c-9997-f2fc68d309aa.png" width="320">
 
 </details>
 
@@ -116,7 +132,10 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/1a072dce-d718-4eba-b264-f85349942910.png" width="320">
+
+❌ 失敗（詳細はチェック項目欄参照、issue: https://github.com/bannzai/PilllBackend/issues/388）
 
 </details>
 
@@ -124,7 +143,8 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/4e69305a-2fbe-408c-9997-f2fc68d309aa.png" width="320">
 
 </details>
 
@@ -132,7 +152,8 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/2a0f29f3-e189-4ca0-9a3b-ec32389b47da.png" width="320">
 
 </details>
 
@@ -142,7 +163,7 @@ last_verified_at: null
 
 ## 4. 戻る操作
 
-- [ ] **戻るボタン**: AppBar左上の戻るボタンをタップするとカレンダー画面に戻る
+- [x] **戻るボタン**: AppBar左上の戻るボタンをタップするとカレンダー画面に戻る
 
 #### 動作確認
 <details>
@@ -152,7 +173,8 @@ last_verified_at: null
 
 <details><summary>動作確認スクショ</summary>
 
-（未実行）
+**確認日: 2026-07-05**
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/957b36f7-9274-4ef7-97ae-a433ca486ecc.png" width="320">
 
 </details>
 
