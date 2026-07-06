@@ -32,6 +32,8 @@ enum PaywallSource {
   featureAppealReminderCustomize,
   specialOfferingBar,
   specialOfferingBar2,
+  lifetimeOfferBar,
+  lifetimeOfferAppLaunch,
 }
 
 extension PaywallSourceFunction on PaywallSource {
@@ -89,6 +91,10 @@ extension PaywallSourceFunction on PaywallSource {
         return 'special_offering_bar';
       case PaywallSource.specialOfferingBar2:
         return 'special_offering_bar2';
+      case PaywallSource.lifetimeOfferBar:
+        return 'lifetime_offer_bar';
+      case PaywallSource.lifetimeOfferAppLaunch:
+        return 'lifetime_offer_app_launch';
     }
   }
 }

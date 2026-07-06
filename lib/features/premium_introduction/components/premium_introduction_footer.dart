@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
-import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/premium_introduction/util/map_to_error.dart';
@@ -17,14 +16,17 @@ import 'package:url_launcher/url_launcher.dart';
 
 class PremiumIntroductionFooter extends StatelessWidget {
   final ValueNotifier<bool> isLoading;
-  const PremiumIntroductionFooter({super.key, required this.isLoading});
+
+  /// フッターの背景色。白背景のシートでは白、背景画像のある画面では透過を指定する
+  final Color backgroundColor;
+  const PremiumIntroductionFooter({super.key, required this.isLoading, required this.backgroundColor});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(bottom: 24),
       width: MediaQuery.of(context).size.width,
-      color: AppColors.white,
+      color: backgroundColor,
       child: Column(
         children: [
           Padding(
