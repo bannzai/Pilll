@@ -1,1 +1,12 @@
-../feature_appeal/subflows/initial_setup.yaml
+appId: com.mizuki.Ohashi.Pilll.dev
+---
+# simtunnel セッション起動時にオンボーディングを自動突破してホーム画面まで進める。
+# runner の Simulator は英語ロケールでシステムダイアログの文言タップが通らないため、
+# permissions で通知を事前許可し、ダイアログ自体を出さずに launch し直す
+- launchApp:
+    clearState: true
+    clearKeychain: true
+    permissions:
+      notifications: allow
+- waitForAnimationToEnd
+- runFlow: ../feature_appeal/subflows/initial_setup.yaml
