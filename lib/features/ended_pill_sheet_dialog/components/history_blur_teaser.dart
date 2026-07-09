@@ -46,9 +46,12 @@ class HistoryBlurTeaser extends ConsumerWidget {
           }
           return Padding(
             padding: const EdgeInsets.only(bottom: 12),
-            child: ImageFiltered(
-              imageFilter: ImageFilter.blur(sigmaX: 6, sigmaY: 6),
-              child: row,
+            // blur で視覚的に隠した内容がスクリーンリーダーで読み上げられないよう、semantics ごと除外する
+            child: ExcludeSemantics(
+              child: ImageFiltered(
+                imageFilter: ImageFilter.blur(sigmaX: 6, sigmaY: 6),
+                child: row,
+              ),
             ),
           );
         }),
