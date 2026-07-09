@@ -17,8 +17,10 @@ void main() {
       expect(PaywallSource.featureAppealAlarmKit.value,
           'feature_appeal_alarm_kit');
       expect(PaywallSource.specialOfferingBar2.value, 'special_offering_bar2');
-      expect(PaywallSource.endedPillSheetDialogHistory.value, 'ended_pill_sheet_dialog_history');
-      expect(PaywallSource.endedPillSheetDialogSummary.value, 'ended_pill_sheet_dialog_summary');
+      expect(PaywallSource.endedPillSheetDialogHistory.value,
+          'ended_pill_sheet_dialog_history');
+      expect(PaywallSource.endedPillSheetDialogSummary.value,
+          'ended_pill_sheet_dialog_summary');
     });
   });
 }

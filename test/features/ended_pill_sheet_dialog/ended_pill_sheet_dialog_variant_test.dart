@@ -5,10 +5,12 @@ import 'package:pilll/features/premium_introduction/paywall_source.dart';
 void main() {
   group('#endedPillSheetDialogVariantFromRemoteConfig', () {
     test('history_blur は historyBlur に解決される', () {
-      expect(endedPillSheetDialogVariantFromRemoteConfig('history_blur'), EndedPillSheetDialogVariant.historyBlur);
+      expect(endedPillSheetDialogVariantFromRemoteConfig('history_blur'),
+          EndedPillSheetDialogVariant.historyBlur);
     });
     test('summary_stats は summaryStats に解決される', () {
-      expect(endedPillSheetDialogVariantFromRemoteConfig('summary_stats'), EndedPillSheetDialogVariant.summaryStats);
+      expect(endedPillSheetDialogVariantFromRemoteConfig('summary_stats'),
+          EndedPillSheetDialogVariant.summaryStats);
     });
     test('空文字は null（実験未参加=非表示）', () {
       expect(endedPillSheetDialogVariantFromRemoteConfig(''), isNull);
@@ -24,8 +26,10 @@ void main() {
       expect(EndedPillSheetDialogVariant.summaryStats.value, 'summary_stats');
     });
     test('paywallSource が各バリアントの source と一致', () {
-      expect(EndedPillSheetDialogVariant.historyBlur.paywallSource, PaywallSource.endedPillSheetDialogHistory);
-      expect(EndedPillSheetDialogVariant.summaryStats.paywallSource, PaywallSource.endedPillSheetDialogSummary);
+      expect(EndedPillSheetDialogVariant.historyBlur.paywallSource,
+          PaywallSource.endedPillSheetDialogHistory);
+      expect(EndedPillSheetDialogVariant.summaryStats.paywallSource,
+          PaywallSource.endedPillSheetDialogSummary);
     });
   });
 }
