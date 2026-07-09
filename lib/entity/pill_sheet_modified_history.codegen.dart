@@ -320,15 +320,14 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   // 集計開始日: beginDate 指定があればそれを、なければ最古の履歴日を使う。時刻を持つと日付集合の差分がずれるため日付のみに正規化する
   final DateTime minDate;
   if (beginDate != null) {
-    minDate = DateTime(beginDate.year, beginDate.month, beginDate.day);
+    minDate = beginDate.date();
   } else {
     if (orderedHistories.isEmpty) {
       return null;
     }
-    final oldestDate = orderedHistories.first.estimatedEventCausingDate;
-    minDate = DateTime(oldestDate.year, oldestDate.month, oldestDate.day);
+    minDate = orderedHistories.first.estimatedEventCausingDate.date();
   }
-  final normalizedMaxDate = DateTime(maxDate.year, maxDate.month, maxDate.day);
+  final normalizedMaxDate = maxDate.date();
 
   final allDates = <DateTime>{};
   final days = daysBetween(minDate, normalizedMaxDate);
@@ -344,14 +343,23 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   DateTime? historyBeginRestDurationDate;
   for (final history in orderedHistories) {
     // estimatedEventCausingDateの日付部分のみを使用
-    final date = DateTime(
-      history.estimatedEventCausingDate.year,
-      history.estimatedEventCausingDate.month,
-      history.estimatedEventCausingDate.day,
-    );
+    final date = history.estimatedEventCausingDate.date();
     if (history.actionType == PillSheetModifiedActionType.takenPill.name ||
         history.actionType == PillSheetModifiedActionType.automaticallyRecordedLastTakenDate.name) {
       takenDates.add(date);
+    }
+
+    // 服用記録の取り消しを反映する。取り消された日 = (取り消し後の最終服用日, 取り消し前の最終服用日] の範囲。
+    // 時系列順に処理しているため、取り消し後に再記録された日は後続の takenPill で再度追加される
+    if (history.actionType == PillSheetModifiedActionType.revertTakenPill.name) {
+      final beforeLastTakenDate = history.beforePillSheetGroup?.lastTakenPillSheetOrFirstPillSheet.lastTakenDate;
+      if (beforeLastTakenDate != null) {
+        final afterLastTakenDate = history.afterPillSheetGroup?.lastTakenPillSheetOrFirstPillSheet.lastTakenDate;
+        takenDates.removeWhere(
+          (takenDate) =>
+              (afterLastTakenDate == null || takenDate.isAfter(afterLastTakenDate.date())) && !takenDate.isAfter(beforeLastTakenDate.date()),
+        );
+      }
     }
 
     // 服用お休み中は記録されないので集計から除外
