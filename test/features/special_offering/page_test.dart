@@ -71,13 +71,13 @@ void main() {
           copyVariant: SpecialOfferingCopyVariant.defaultVariant);
 
       expect(find.text('今回だけの特別価格でプレミアム機能をゲット！'), findsOneWidget);
-      expect(find.text('このチャンスは今回限り。\n特別価格でプレミアム機能をゲット！'), findsNothing);
+      expect(find.text('このチャンスは今回限り。特別価格でプレミアム機能をゲット！'), findsNothing);
     });
 
     testWidgets('scarcityバリアントで希少性訴求のコピーが表示される', (WidgetTester tester) async {
       await pumpPage(tester, copyVariant: SpecialOfferingCopyVariant.scarcity);
 
-      expect(find.text('このチャンスは今回限り。\n特別価格でプレミアム機能をゲット！'), findsOneWidget);
+      expect(find.text('このチャンスは今回限り。特別価格でプレミアム機能をゲット！'), findsOneWidget);
       expect(find.text('今回だけの特別価格でプレミアム機能をゲット！'), findsNothing);
     });
   });
