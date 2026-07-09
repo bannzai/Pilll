@@ -37,9 +37,15 @@ class SummaryStatsTeaser extends ConsumerWidget {
             .when(
               data: (histories) {
                 // 日付範囲だけでは別グループ（削除して作り直した場合など）の履歴が混ざるため、対象グループの履歴に絞る
+                final groupHistories = histories.where((history) => history.afterPillSheetGroup?.id == pillSheetGroup.id).toList();
+                // 履歴は TTL（PillSheetModifiedHistoryServiceActionFactory.limitDays = 180日）で削除されるため、
+                // 終了から長期間経過したグループでは空になる。誤った「全日記録漏れ」を表示しないため集計メッセージを出さない
+                if (groupHistories.isEmpty) {
+                  return const SizedBox.shrink();
+                }
                 final summary = endedPillSheetTakenSummary(
                   pillSheetGroup: pillSheetGroup,
-                  histories: histories.where((history) => history.afterPillSheetGroup?.id == pillSheetGroup.id).toList(),
+                  histories: groupHistories,
                 );
                 return Text(
                   L.endedPillSheetDialogSummaryMessage(summary.recordedDays, summary.missedDays),
