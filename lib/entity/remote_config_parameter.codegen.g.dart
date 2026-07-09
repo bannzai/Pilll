@@ -26,6 +26,13 @@ _$RemoteConfigParameterImpl _$$RemoteConfigParameterImplFromJson(Map<String, dyn
           RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil,
       specialOffering2UseAlternativeText:
           json['specialOffering2UseAlternativeText'] as bool? ?? RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
+      lifetimeOfferEnabled: json['lifetimeOfferEnabled'] as bool? ?? RemoteConfigParameterDefaultValues.lifetimeOfferEnabled,
+      lifetimeOfferUserCreationDaysSince:
+          (json['lifetimeOfferUserCreationDaysSince'] as num?)?.toInt() ?? RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysSince,
+      lifetimeOfferUserCreationDaysUntil:
+          (json['lifetimeOfferUserCreationDaysUntil'] as num?)?.toInt() ?? RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysUntil,
+      lifetimeOfferDurationHours:
+          (json['lifetimeOfferDurationHours'] as num?)?.toInt() ?? RemoteConfigParameterDefaultValues.lifetimeOfferDurationHours,
       endedPillSheetDialogVariant: json['endedPillSheetDialogVariant'] as String? ?? RemoteConfigParameterDefaultValues.endedPillSheetDialogVariant,
     );
 
@@ -41,5 +48,9 @@ Map<String, dynamic> _$$RemoteConfigParameterImplToJson(_$RemoteConfigParameterI
       'specialOfferingUserCreationDateTimeOffsetSince': instance.specialOfferingUserCreationDateTimeOffsetSince,
       'specialOfferingUserCreationDateTimeOffsetUntil': instance.specialOfferingUserCreationDateTimeOffsetUntil,
       'specialOffering2UseAlternativeText': instance.specialOffering2UseAlternativeText,
+      'lifetimeOfferEnabled': instance.lifetimeOfferEnabled,
+      'lifetimeOfferUserCreationDaysSince': instance.lifetimeOfferUserCreationDaysSince,
+      'lifetimeOfferUserCreationDaysUntil': instance.lifetimeOfferUserCreationDaysUntil,
+      'lifetimeOfferDurationHours': instance.lifetimeOfferDurationHours,
       'endedPillSheetDialogVariant': instance.endedPillSheetDialogVariant,
     };

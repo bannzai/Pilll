@@ -64,6 +64,22 @@ mixin _$RemoteConfigParameter {
   /// trueの場合、特別オファー2画面で異なるテキスト表現を使用する
   bool get specialOffering2UseAlternativeText => throw _privateConstructorUsedError;
 
+  /// 買い切りオファーを有効にするかどうか
+  /// trueの場合、利用日数が対象範囲のユーザーに買い切りオファーのバー・起動時モーダルを表示する
+  bool get lifetimeOfferEnabled => throw _privateConstructorUsedError;
+
+  /// 買い切りオファー表示開始の利用日数（排他境界）
+  /// 利用日数がこの値を超えた（>）ユーザーが表示対象となる
+  int get lifetimeOfferUserCreationDaysSince => throw _privateConstructorUsedError;
+
+  /// 買い切りオファー表示終了の利用日数（排他境界）
+  /// 利用日数がこの値未満（<）のユーザーが表示対象となる。1年の年会費更新直前を避ける意図の上限
+  int get lifetimeOfferUserCreationDaysUntil => throw _privateConstructorUsedError;
+
+  /// 買い切りオファーの表示期間（時間単位）
+  /// 初回表示時刻からこの時間が経過するとバー・起動時モーダルが自動で非表示になる
+  int get lifetimeOfferDurationHours => throw _privateConstructorUsedError;
+
   /// ピルシート終了ダイアログの A/B バリアント識別子
   /// 'history_blur' / 'summary_stats' / '' (非表示)。Firebase A/B Testing で配信する
   String get endedPillSheetDialogVariant => throw _privateConstructorUsedError;
@@ -90,6 +106,10 @@ abstract class $RemoteConfigParameterCopyWith<$Res> {
       int specialOfferingUserCreationDateTimeOffsetSince,
       int specialOfferingUserCreationDateTimeOffsetUntil,
       bool specialOffering2UseAlternativeText,
+      bool lifetimeOfferEnabled,
+      int lifetimeOfferUserCreationDaysSince,
+      int lifetimeOfferUserCreationDaysUntil,
+      int lifetimeOfferDurationHours,
       String endedPillSheetDialogVariant});
 }
 
@@ -116,6 +136,10 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
     Object? specialOfferingUserCreationDateTimeOffsetSince = null,
     Object? specialOfferingUserCreationDateTimeOffsetUntil = null,
     Object? specialOffering2UseAlternativeText = null,
+    Object? lifetimeOfferEnabled = null,
+    Object? lifetimeOfferUserCreationDaysSince = null,
+    Object? lifetimeOfferUserCreationDaysUntil = null,
+    Object? lifetimeOfferDurationHours = null,
     Object? endedPillSheetDialogVariant = null,
   }) {
     return _then(_value.copyWith(
@@ -163,6 +187,22 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
           ? _value.specialOffering2UseAlternativeText
           : specialOffering2UseAlternativeText // ignore: cast_nullable_to_non_nullable
               as bool,
+      lifetimeOfferEnabled: null == lifetimeOfferEnabled
+          ? _value.lifetimeOfferEnabled
+          : lifetimeOfferEnabled // ignore: cast_nullable_to_non_nullable
+              as bool,
+      lifetimeOfferUserCreationDaysSince: null == lifetimeOfferUserCreationDaysSince
+          ? _value.lifetimeOfferUserCreationDaysSince
+          : lifetimeOfferUserCreationDaysSince // ignore: cast_nullable_to_non_nullable
+              as int,
+      lifetimeOfferUserCreationDaysUntil: null == lifetimeOfferUserCreationDaysUntil
+          ? _value.lifetimeOfferUserCreationDaysUntil
+          : lifetimeOfferUserCreationDaysUntil // ignore: cast_nullable_to_non_nullable
+              as int,
+      lifetimeOfferDurationHours: null == lifetimeOfferDurationHours
+          ? _value.lifetimeOfferDurationHours
+          : lifetimeOfferDurationHours // ignore: cast_nullable_to_non_nullable
+              as int,
       endedPillSheetDialogVariant: null == endedPillSheetDialogVariant
           ? _value.endedPillSheetDialogVariant
           : endedPillSheetDialogVariant // ignore: cast_nullable_to_non_nullable
@@ -189,6 +229,10 @@ abstract class _$$RemoteConfigParameterImplCopyWith<$Res> implements $RemoteConf
       int specialOfferingUserCreationDateTimeOffsetSince,
       int specialOfferingUserCreationDateTimeOffsetUntil,
       bool specialOffering2UseAlternativeText,
+      bool lifetimeOfferEnabled,
+      int lifetimeOfferUserCreationDaysSince,
+      int lifetimeOfferUserCreationDaysUntil,
+      int lifetimeOfferDurationHours,
       String endedPillSheetDialogVariant});
 }
 
@@ -212,6 +256,10 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigPara
     Object? specialOfferingUserCreationDateTimeOffsetSince = null,
     Object? specialOfferingUserCreationDateTimeOffsetUntil = null,
     Object? specialOffering2UseAlternativeText = null,
+    Object? lifetimeOfferEnabled = null,
+    Object? lifetimeOfferUserCreationDaysSince = null,
+    Object? lifetimeOfferUserCreationDaysUntil = null,
+    Object? lifetimeOfferDurationHours = null,
     Object? endedPillSheetDialogVariant = null,
   }) {
     return _then(_$RemoteConfigParameterImpl(
@@ -259,6 +307,22 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigPara
           ? _value.specialOffering2UseAlternativeText
           : specialOffering2UseAlternativeText // ignore: cast_nullable_to_non_nullable
               as bool,
+      lifetimeOfferEnabled: null == lifetimeOfferEnabled
+          ? _value.lifetimeOfferEnabled
+          : lifetimeOfferEnabled // ignore: cast_nullable_to_non_nullable
+              as bool,
+      lifetimeOfferUserCreationDaysSince: null == lifetimeOfferUserCreationDaysSince
+          ? _value.lifetimeOfferUserCreationDaysSince
+          : lifetimeOfferUserCreationDaysSince // ignore: cast_nullable_to_non_nullable
+              as int,
+      lifetimeOfferUserCreationDaysUntil: null == lifetimeOfferUserCreationDaysUntil
+          ? _value.lifetimeOfferUserCreationDaysUntil
+          : lifetimeOfferUserCreationDaysUntil // ignore: cast_nullable_to_non_nullable
+              as int,
+      lifetimeOfferDurationHours: null == lifetimeOfferDurationHours
+          ? _value.lifetimeOfferDurationHours
+          : lifetimeOfferDurationHours // ignore: cast_nullable_to_non_nullable
+              as int,
       endedPillSheetDialogVariant: null == endedPillSheetDialogVariant
           ? _value.endedPillSheetDialogVariant
           : endedPillSheetDialogVariant // ignore: cast_nullable_to_non_nullable
@@ -282,6 +346,10 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
       this.specialOfferingUserCreationDateTimeOffsetSince = RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetSince,
       this.specialOfferingUserCreationDateTimeOffsetUntil = RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil,
       this.specialOffering2UseAlternativeText = RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
+      this.lifetimeOfferEnabled = RemoteConfigParameterDefaultValues.lifetimeOfferEnabled,
+      this.lifetimeOfferUserCreationDaysSince = RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysSince,
+      this.lifetimeOfferUserCreationDaysUntil = RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysUntil,
+      this.lifetimeOfferDurationHours = RemoteConfigParameterDefaultValues.lifetimeOfferDurationHours,
       this.endedPillSheetDialogVariant = RemoteConfigParameterDefaultValues.endedPillSheetDialogVariant})
       : super._();
 
@@ -353,6 +421,30 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
   @JsonKey()
   final bool specialOffering2UseAlternativeText;
 
+  /// 買い切りオファーを有効にするかどうか
+  /// trueの場合、利用日数が対象範囲のユーザーに買い切りオファーのバー・起動時モーダルを表示する
+  @override
+  @JsonKey()
+  final bool lifetimeOfferEnabled;
+
+  /// 買い切りオファー表示開始の利用日数（排他境界）
+  /// 利用日数がこの値を超えた（>）ユーザーが表示対象となる
+  @override
+  @JsonKey()
+  final int lifetimeOfferUserCreationDaysSince;
+
+  /// 買い切りオファー表示終了の利用日数（排他境界）
+  /// 利用日数がこの値未満（<）のユーザーが表示対象となる。1年の年会費更新直前を避ける意図の上限
+  @override
+  @JsonKey()
+  final int lifetimeOfferUserCreationDaysUntil;
+
+  /// 買い切りオファーの表示期間（時間単位）
+  /// 初回表示時刻からこの時間が経過するとバー・起動時モーダルが自動で非表示になる
+  @override
+  @JsonKey()
+  final int lifetimeOfferDurationHours;
+
   /// ピルシート終了ダイアログの A/B バリアント識別子
   /// 'history_blur' / 'summary_stats' / '' (非表示)。Firebase A/B Testing で配信する
   @override
@@ -361,7 +453,7 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
 
   @override
   String toString() {
-    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, skipInitialSetting: $skipInitialSetting, trialDeadlineDateOffsetDay: $trialDeadlineDateOffsetDay, discountEntitlementOffsetDay: $discountEntitlementOffsetDay, discountCountdownBoundaryHour: $discountCountdownBoundaryHour, premiumIntroductionPattern: $premiumIntroductionPattern, premiumIntroductionShowsAppStoreReviewCard: $premiumIntroductionShowsAppStoreReviewCard, specialOfferingUserCreationDateTimeOffset: $specialOfferingUserCreationDateTimeOffset, specialOfferingUserCreationDateTimeOffsetSince: $specialOfferingUserCreationDateTimeOffsetSince, specialOfferingUserCreationDateTimeOffsetUntil: $specialOfferingUserCreationDateTimeOffsetUntil, specialOffering2UseAlternativeText: $specialOffering2UseAlternativeText, endedPillSheetDialogVariant: $endedPillSheetDialogVariant)';
+    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, skipInitialSetting: $skipInitialSetting, trialDeadlineDateOffsetDay: $trialDeadlineDateOffsetDay, discountEntitlementOffsetDay: $discountEntitlementOffsetDay, discountCountdownBoundaryHour: $discountCountdownBoundaryHour, premiumIntroductionPattern: $premiumIntroductionPattern, premiumIntroductionShowsAppStoreReviewCard: $premiumIntroductionShowsAppStoreReviewCard, specialOfferingUserCreationDateTimeOffset: $specialOfferingUserCreationDateTimeOffset, specialOfferingUserCreationDateTimeOffsetSince: $specialOfferingUserCreationDateTimeOffsetSince, specialOfferingUserCreationDateTimeOffsetUntil: $specialOfferingUserCreationDateTimeOffsetUntil, specialOffering2UseAlternativeText: $specialOffering2UseAlternativeText, lifetimeOfferEnabled: $lifetimeOfferEnabled, lifetimeOfferUserCreationDaysSince: $lifetimeOfferUserCreationDaysSince, lifetimeOfferUserCreationDaysUntil: $lifetimeOfferUserCreationDaysUntil, lifetimeOfferDurationHours: $lifetimeOfferDurationHours, endedPillSheetDialogVariant: $endedPillSheetDialogVariant)';
   }
 
   @override
@@ -389,6 +481,13 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
                 other.specialOfferingUserCreationDateTimeOffsetUntil == specialOfferingUserCreationDateTimeOffsetUntil) &&
             (identical(other.specialOffering2UseAlternativeText, specialOffering2UseAlternativeText) ||
                 other.specialOffering2UseAlternativeText == specialOffering2UseAlternativeText) &&
+            (identical(other.lifetimeOfferEnabled, lifetimeOfferEnabled) || other.lifetimeOfferEnabled == lifetimeOfferEnabled) &&
+            (identical(other.lifetimeOfferUserCreationDaysSince, lifetimeOfferUserCreationDaysSince) ||
+                other.lifetimeOfferUserCreationDaysSince == lifetimeOfferUserCreationDaysSince) &&
+            (identical(other.lifetimeOfferUserCreationDaysUntil, lifetimeOfferUserCreationDaysUntil) ||
+                other.lifetimeOfferUserCreationDaysUntil == lifetimeOfferUserCreationDaysUntil) &&
+            (identical(other.lifetimeOfferDurationHours, lifetimeOfferDurationHours) ||
+                other.lifetimeOfferDurationHours == lifetimeOfferDurationHours) &&
             (identical(other.endedPillSheetDialogVariant, endedPillSheetDialogVariant) ||
                 other.endedPillSheetDialogVariant == endedPillSheetDialogVariant));
   }
@@ -408,6 +507,10 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
       specialOfferingUserCreationDateTimeOffsetSince,
       specialOfferingUserCreationDateTimeOffsetUntil,
       specialOffering2UseAlternativeText,
+      lifetimeOfferEnabled,
+      lifetimeOfferUserCreationDaysSince,
+      lifetimeOfferUserCreationDaysUntil,
+      lifetimeOfferDurationHours,
       endedPillSheetDialogVariant);
 
   @JsonKey(ignore: true)
@@ -437,6 +540,10 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
       final int specialOfferingUserCreationDateTimeOffsetSince,
       final int specialOfferingUserCreationDateTimeOffsetUntil,
       final bool specialOffering2UseAlternativeText,
+      final bool lifetimeOfferEnabled,
+      final int lifetimeOfferUserCreationDaysSince,
+      final int lifetimeOfferUserCreationDaysUntil,
+      final int lifetimeOfferDurationHours,
       final String endedPillSheetDialogVariant}) = _$RemoteConfigParameterImpl;
   _RemoteConfigParameter._() : super._();
 
@@ -497,6 +604,26 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
   /// 特別オファー2で代替テキストを使用するかどうか
   /// trueの場合、特別オファー2画面で異なるテキスト表現を使用する
   bool get specialOffering2UseAlternativeText;
+  @override
+
+  /// 買い切りオファーを有効にするかどうか
+  /// trueの場合、利用日数が対象範囲のユーザーに買い切りオファーのバー・起動時モーダルを表示する
+  bool get lifetimeOfferEnabled;
+  @override
+
+  /// 買い切りオファー表示開始の利用日数（排他境界）
+  /// 利用日数がこの値を超えた（>）ユーザーが表示対象となる
+  int get lifetimeOfferUserCreationDaysSince;
+  @override
+
+  /// 買い切りオファー表示終了の利用日数（排他境界）
+  /// 利用日数がこの値未満（<）のユーザーが表示対象となる。1年の年会費更新直前を避ける意図の上限
+  int get lifetimeOfferUserCreationDaysUntil;
+  @override
+
+  /// 買い切りオファーの表示期間（時間単位）
+  /// 初回表示時刻からこの時間が経過するとバー・起動時モーダルが自動で非表示になる
+  int get lifetimeOfferDurationHours;
   @override
 
   /// ピルシート終了ダイアログの A/B バリアント識別子

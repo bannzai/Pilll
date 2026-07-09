@@ -10,6 +10,11 @@ extension BoolKey on String {
   static const specialOfferingIsClosed2 = 'specialOfferingIsClosed2';
   static const lifetimeSubscriptionWarningIsClosed = 'lifetimeSubscriptionWarningIsClosed';
 
+  /// 買い切りオファーの起動時自動モーダルを表示済みかどうか。
+  /// 周期番号（利用開始からの経過年数）を`_0`のように後置したキーで使い、周期ごとに1回のみ表示する。
+  /// 実際のキーは lifetimeOfferAutoModalShownKey で組み立てる。
+  static const lifetimeOfferAutoModalShown = 'lifetimeOfferAutoModalShown';
+
   /// Critical Alert (サイレントモードでも通知を配信する有料機能) のアピール Bar を × で閉じたかどうか。
   static const criticalAlertFeatureAppealIsClosed = 'criticalAlertFeatureAppealIsClosed';
 
@@ -60,6 +65,11 @@ extension StringKey on String {
 
   /// FeatureAppeal の × ボタンが最後に押された日付 (ISO 8601)。当日中は再表示しない判定に使う。
   static const String featureAppealLastDismissedDate = 'featureAppealLastDismissedDate';
+
+  /// 買い切りオファーがその周期で初めて画面に表示された日時 (ISO 8601)。オファーの表示期限の起点になる。
+  /// 周期番号（利用開始からの経過年数）を`_0`のように後置したキーで使い、周期が変わると新しい表示期限が始まる。
+  /// 実際のキーは lifetimeOfferFirstDisplayedDateTimeKey で組み立てる。
+  static const String lifetimeOfferFirstDisplayedDateTime = 'lifetimeOfferFirstDisplayedDateTime';
 }
 
 extension ReleaseNoteKey on String {
@@ -91,5 +101,4 @@ extension ReleaseNoteKey on String {
 
 extension IntKey on String {
   static const String totalCountOfActionForTakenPill = 'totalPillCount';
-  static const String monthlyPremiumIntroductionSheetPresentedDateMilliSeconds = 'monthlyPremiumIntroductionSheetPresentedDateMilliSeconds';
 }

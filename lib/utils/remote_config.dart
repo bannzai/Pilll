@@ -31,6 +31,10 @@ Future<void> setupRemoteConfig() async {
         RemoteConfigKeys.specialOfferingUserCreationDateTimeOffsetUntil:
             RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil,
         RemoteConfigKeys.specialOffering2UseAlternativeText: RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
+        RemoteConfigKeys.lifetimeOfferEnabled: RemoteConfigParameterDefaultValues.lifetimeOfferEnabled,
+        RemoteConfigKeys.lifetimeOfferUserCreationDaysSince: RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysSince,
+        RemoteConfigKeys.lifetimeOfferUserCreationDaysUntil: RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysUntil,
+        RemoteConfigKeys.lifetimeOfferDurationHours: RemoteConfigParameterDefaultValues.lifetimeOfferDurationHours,
         RemoteConfigKeys.endedPillSheetDialogVariant: RemoteConfigParameterDefaultValues.endedPillSheetDialogVariant,
       }),
     ).wait;

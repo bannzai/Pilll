@@ -11,6 +11,12 @@ import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 
+/// 同一起動内で起動時ペイウォールを表示済みかどうか
+///
+/// 他の起動時自動モーダル（例: ShowLifetimeOfferOnAppLaunch）が同一起動で重ねて表示されるのを避けるための、
+/// アプリプロセス内でのみ保持するフラグ。永続化はしない。
+final shownPaywallOnThisAppLaunchProvider = StateProvider<bool>((ref) => false);
+
 class ShowPaywallOnAppLaunch extends HookConsumerWidget {
   final Widget Function(BuildContext) builder;
   const ShowPaywallOnAppLaunch({super.key, required this.builder});
@@ -37,6 +43,7 @@ class ShowPaywallOnAppLaunch extends HookConsumerWidget {
     useEffect(() {
       if (shownPaywallWhenAppFirstLaunch.value != true) {
         WidgetsBinding.instance.addPostFrameCallback((_) async {
+          ref.read(shownPaywallOnThisAppLaunchProvider.notifier).state = true;
           await showPremiumIntroductionSheet(context, source: PaywallSource.appLaunch);
           shownPaywallWhenAppFirstLaunchNotifier.set(true);
         });

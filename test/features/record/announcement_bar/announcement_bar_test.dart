@@ -15,6 +15,8 @@ import 'package:pilll/provider/pilll_ads.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/discount_price_deadline.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/ended_pill_sheet.dart';
+import 'package:pilll/features/lifetime_offer/provider.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/lifetime_offer.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/lifetime_subscription_warning.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/pilll_ads.dart';
 import 'package:pilll/features/record/components/announcement_bar/announcement_bar.dart';
@@ -26,6 +28,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/pilll_ads.codegen.dart';
 import 'package:pilll/provider/locale.dart';
+import 'package:pilll/provider/tick.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/auth.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -2731,6 +2734,183 @@ void main() {
       expect(
         find.byWidgetPredicate((widget) => widget is AdMob),
         findsOneWidget,
+      );
+    });
+  });
+
+  group('#LifetimeOfferAnnouncementBar', () {
+    // 買い切りオファーの表示条件（RC有効・買い切り未購入・割引package取得済み・利用日数340日）を満たした状態でAnnouncementBarを表示する
+    Future<SharedPreferences> pumpAnnouncementBar(
+      WidgetTester tester, {
+      required User user,
+      Map<String, Object> initialSharedPreferencesValues = const {},
+    }) async {
+      final mockTodayRepository = MockTodayService();
+      final mockToday = DateTime(2026, 7, 3);
+
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+      todayRepository = mockTodayRepository;
+
+      var pillSheet = PillSheet.create(
+        PillSheetType.pillsheet_21,
+        lastTakenDate: mockToday,
+        beginDate: mockToday.subtract(const Duration(days: 10)),
+        pillTakenCount: 1,
+      );
+      final pillSheetGroup = PillSheetGroup(
+        pillSheetIDs: ['1'],
+        pillSheets: [pillSheet],
+        createdAt: now(),
+        pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+      );
+
+      SharedPreferences.setMockInitialValues({
+        IntKey.totalCountOfActionForTakenPill:
+            totalCountOfActionForTakenPillForLongTimeUser,
+        ...allFeatureAppealDismissedPrefs(),
+        ...initialSharedPreferencesValues,
+      });
+      final sharedPreferences = await SharedPreferences.getInstance();
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            appIsReleasedProvider.overrideWith((ref) => true),
+            latestPillSheetGroupProvider.overrideWith(
+              (ref) => Stream.value(pillSheetGroup),
+            ),
+            userProvider.overrideWith((ref) => Stream.value(user)),
+            isLinkedProvider.overrideWithValue(true),
+            isJaLocaleProvider.overrideWithValue(true),
+            sharedPreferencesProvider.overrideWith(
+              (ref) => sharedPreferences,
+            ),
+            // 本物のTickはTimer.periodicを作りpending timerでテストが失敗するためFakeに差し替える
+            tickProvider.overrideWith(() => FakeTick(fakeDateTime: mockToday)),
+            remoteConfigParameterProvider.overrideWithValue(
+              RemoteConfigParameter(lifetimeOfferEnabled: true),
+            ),
+            isLifetimePurchasedProvider.overrideWith(
+              (ref) => Future.value(false),
+            ),
+            lifetimeDiscountPackageProvider.overrideWith(
+              (ref) => FakeRevenueCatPackage(),
+            ),
+            firebaseUserStateProvider.overrideWith(
+              (ref) => Stream.value(
+                FakeFirebaseAuthUser(
+                  fakeCreationTime:
+                      mockToday.subtract(const Duration(days: 340)),
+                ),
+              ),
+            ),
+          ],
+          child: const MaterialApp(home: Material(child: AnnouncementBar())),
+        ),
+      );
+      await tester.pump();
+      await tester.pump();
+
+      debugDefaultTargetPlatformOverride = null;
+      return sharedPreferences;
+    }
+
+    testWidgets('非プレミアム・非トライアルユーザーで表示条件を満たす場合は表示される',
+        (WidgetTester tester) async {
+      await pumpAnnouncementBar(
+        tester,
+        user: User(
+          isPremium: false,
+          trialDeadlineDate:
+              DateTime(2026, 7, 3).subtract(const Duration(days: 290)),
+          beginTrialDate:
+              DateTime(2026, 7, 3).subtract(const Duration(days: 335)),
+          discountEntitlementDeadlineDate:
+              DateTime(2026, 7, 3).subtract(const Duration(days: 280)),
+        ),
+      );
+
+      expect(
+        find.byWidgetPredicate(
+            (widget) => widget is LifetimeOfferAnnouncementBar),
+        findsOneWidget,
+      );
+    });
+
+    testWidgets('プレミアム（買い切り未購入）ユーザーでも表示される', (WidgetTester tester) async {
+      await pumpAnnouncementBar(
+        tester,
+        user: const User(
+          isPremium: true,
+          trialDeadlineDate: null,
+          beginTrialDate: null,
+          discountEntitlementDeadlineDate: null,
+        ),
+      );
+
+      expect(
+        find.byWidgetPredicate(
+            (widget) => widget is LifetimeOfferAnnouncementBar),
+        findsOneWidget,
+      );
+    });
+
+    testWidgets('バーの初回表示時に表示期限の起点となる初回表示時刻が記録される', (WidgetTester tester) async {
+      final sharedPreferences = await pumpAnnouncementBar(
+        tester,
+        user: const User(
+          isPremium: false,
+          trialDeadlineDate: null,
+          beginTrialDate: null,
+          discountEntitlementDeadlineDate: null,
+        ),
+      );
+
+      expect(
+        sharedPreferences
+            .getString(lifetimeOfferFirstDisplayedDateTimeKey(cycle: 0)),
+        DateTime(2026, 7, 3).toIso8601String(),
+      );
+    });
+
+    testWidgets('表示期限までの残り時間がカウントダウン表示される', (WidgetTester tester) async {
+      // 初回表示時刻: 2026-07-02 09:00、現在時刻(tick): 2026-07-03 00:00 → 残り9時間
+      await pumpAnnouncementBar(
+        tester,
+        user: const User(
+          isPremium: false,
+          trialDeadlineDate: null,
+          beginTrialDate: null,
+          discountEntitlementDeadlineDate: null,
+        ),
+        initialSharedPreferencesValues: {
+          lifetimeOfferFirstDisplayedDateTimeKey(cycle: 0):
+              DateTime(2026, 7, 2, 9, 0, 0).toIso8601String(),
+        },
+      );
+
+      expect(find.textContaining('残り 09:00:00'), findsOneWidget);
+    });
+
+    testWidgets('表示期限を過ぎている場合は表示されない', (WidgetTester tester) async {
+      // 初回表示時刻: 2026-07-01 09:00、現在時刻(tick): 2026-07-03 00:00 → 期限(24時間)超過
+      await pumpAnnouncementBar(
+        tester,
+        user: const User(
+          isPremium: true,
+          trialDeadlineDate: null,
+          beginTrialDate: null,
+          discountEntitlementDeadlineDate: null,
+        ),
+        initialSharedPreferencesValues: {
+          lifetimeOfferFirstDisplayedDateTimeKey(cycle: 0):
+              DateTime(2026, 7, 1, 9, 0, 0).toIso8601String(),
+        },
+      );
+
+      expect(
+        find.byWidgetPredicate(
+            (widget) => widget is LifetimeOfferAnnouncementBar),
+        findsNothing,
       );
     });
   });

@@ -295,6 +295,9 @@ Future<void> initializePurchase(String uid) async {
 }
 
 /// RevenueCatのEntitlementInfo.productIdentifierに"lifetime"が含まれるかで判定するProvider
+///
+/// customerInfoの取得に失敗した場合はfalse（未購入が確定）に丸めずAsyncErrorにする。
+/// 購入済みかどうか判定できないため、参照側では非表示などの安全側に倒して扱うこと
 final isLifetimePurchasedProvider = FutureProvider.autoDispose<bool>((
   ref,
 ) async {
@@ -308,6 +311,6 @@ final isLifetimePurchasedProvider = FutureProvider.autoDispose<bool>((
     return productIdentifier.toLowerCase().contains('lifetime');
   } catch (e, stack) {
     errorLogger.recordError(e, stack);
-    return false;
+    rethrow;
   }
 });

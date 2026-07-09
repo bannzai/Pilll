@@ -41,6 +41,18 @@ abstract class RemoteConfigKeys {
   /// 特別オファー2で代替テキストを使用するかのフラグキー
   static const specialOffering2UseAlternativeText = 'specialOffering2UseAlternativeText';
 
+  /// 買い切りオファーを有効にするかのフラグキー
+  static const lifetimeOfferEnabled = 'lifetimeOfferEnabled';
+
+  /// 買い切りオファー表示開始の利用日数（排他境界）キー
+  static const lifetimeOfferUserCreationDaysSince = 'lifetimeOfferUserCreationDaysSince';
+
+  /// 買い切りオファー表示終了の利用日数（排他境界）キー
+  static const lifetimeOfferUserCreationDaysUntil = 'lifetimeOfferUserCreationDaysUntil';
+
+  /// 買い切りオファーの表示期間（時間単位）キー
+  static const lifetimeOfferDurationHours = 'lifetimeOfferDurationHours';
+
   /// ピルシート終了ダイアログの A/B バリアント識別子キー
   static const endedPillSheetDialogVariant = 'endedPillSheetDialogVariant';
 }
@@ -84,6 +96,18 @@ abstract class RemoteConfigParameterDefaultValues {
 
   /// 特別オファー2で代替テキストを使用する（デフォルト）
   static const specialOffering2UseAlternativeText = true;
+
+  /// 買い切りオファーを無効にする（デフォルト）
+  static const lifetimeOfferEnabled = false;
+
+  /// 買い切りオファー表示開始の利用日数（排他境界。この日数を超えたら表示対象）
+  static const lifetimeOfferUserCreationDaysSince = 335;
+
+  /// 買い切りオファー表示終了の利用日数（排他境界。1年(≈365日)の年会費更新と重なる課金トラブルを避けるため更新直前で打ち切る）
+  static const lifetimeOfferUserCreationDaysUntil = 355;
+
+  /// 買い切りオファーを初回表示から24時間表示する
+  static const lifetimeOfferDurationHours = 24;
 
   /// ピルシート終了ダイアログのバリアント（空文字 = 実験未参加 / 非表示）
   static const endedPillSheetDialogVariant = '';
@@ -156,6 +180,31 @@ class RemoteConfigParameter with _$RemoteConfigParameter {
       RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
     )
     bool specialOffering2UseAlternativeText,
+
+    /// 買い切りオファーを有効にするかどうか
+    /// trueの場合、利用日数が対象範囲のユーザーに買い切りオファーのバー・起動時モーダルを表示する
+    @Default(RemoteConfigParameterDefaultValues.lifetimeOfferEnabled) bool lifetimeOfferEnabled,
+
+    /// 買い切りオファー表示開始の利用日数（排他境界）
+    /// 利用日数がこの値を超えた（>）ユーザーが表示対象となる
+    @Default(
+      RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysSince,
+    )
+    int lifetimeOfferUserCreationDaysSince,
+
+    /// 買い切りオファー表示終了の利用日数（排他境界）
+    /// 利用日数がこの値未満（<）のユーザーが表示対象となる。1年の年会費更新直前を避ける意図の上限
+    @Default(
+      RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysUntil,
+    )
+    int lifetimeOfferUserCreationDaysUntil,
+
+    /// 買い切りオファーの表示期間（時間単位）
+    /// 初回表示時刻からこの時間が経過するとバー・起動時モーダルが自動で非表示になる
+    @Default(
+      RemoteConfigParameterDefaultValues.lifetimeOfferDurationHours,
+    )
+    int lifetimeOfferDurationHours,
 
     /// ピルシート終了ダイアログの A/B バリアント識別子
     /// 'history_blur' / 'summary_stats' / '' (非表示)。Firebase A/B Testing で配信する

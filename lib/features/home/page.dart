@@ -8,8 +8,6 @@ import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/error/page.dart';
 import 'package:pilll/features/localizations/l.dart';
-import 'package:pilll/features/premium_introduction/paywall_source.dart';
-import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/features/settings/components/churn/churn_survey_complete_dialog.dart';
 import 'package:pilll/features/store_review/pre_store_review_modal.dart';
 import 'package:pilll/provider/locale.dart';
@@ -26,7 +24,6 @@ import 'package:pilll/features/record/page.dart';
 import 'package:pilll/features/settings/page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/utils/datetime/day.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/utils/error_log.dart';
@@ -113,19 +110,6 @@ class HomePageBody extends HookConsumerWidget {
       disableShouldAskCancelReasonProvider,
     );
     final shouldAskCancelReason = user.shouldAskCancelReason;
-    final monthlyPremiumIntroductionSheetPresentedDateMilliSeconds = sharedPreferences.getInt(
-          IntKey.monthlyPremiumIntroductionSheetPresentedDateMilliSeconds,
-        ) ??
-        0;
-    final isOneMonthPassedSinceLastDisplayedMonthlyPremiumIntroductionSheet =
-        now().millisecondsSinceEpoch - monthlyPremiumIntroductionSheetPresentedDateMilliSeconds > 1000 * 60 * 60 * 24 * 30;
-    final bool isOneMonthPassedTrialDeadline;
-    final trialDeadlineDate = user.trialDeadlineDate;
-    if (trialDeadlineDate != null) {
-      isOneMonthPassedTrialDeadline = now().millisecondsSinceEpoch - trialDeadlineDate.millisecondsSinceEpoch > 1000 * 60 * 60 * 24 * 30;
-    } else {
-      isOneMonthPassedTrialDeadline = false;
-    }
     final error = useState<String?>(null);
     // this.pillSheetGroup は field のため null promotion が効かない。useEffect 内で参照するためローカル変数化する
     final pillSheetGroup = this.pillSheetGroup;
@@ -156,14 +140,6 @@ class HomePageBody extends HookConsumerWidget {
             BoolKey.isAlreadyAnsweredPreStoreReviewModal,
             true,
           );
-        } else if (isOneMonthPassedTrialDeadline && isOneMonthPassedSinceLastDisplayedMonthlyPremiumIntroductionSheet && !user.premiumOrTrial) {
-          if (!user.premiumOrTrial) {
-            showPremiumIntroductionSheet(context, source: PaywallSource.homeMonthly);
-            sharedPreferences.setInt(
-              IntKey.monthlyPremiumIntroductionSheetPresentedDateMilliSeconds,
-              now().millisecondsSinceEpoch,
-            );
-          }
         } else if (pillSheetGroup != null && pillSheetGroup.activePillSheet == null && !user.premiumOrTrial) {
           // ピルシートが終了した free ユーザーに、課金転換ダイアログ(A/B)を終了グループにつき1回だけ表示する
           final variant = endedPillSheetDialogVariantFromRemoteConfig(remoteConfigParameter.endedPillSheetDialogVariant);
