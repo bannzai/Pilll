@@ -79,10 +79,8 @@ void main() {
             // 本物のTickはTimer.periodicを作りpending timerでテストが失敗するためFakeに差し替える
             tickProvider.overrideWith(
                 () => FakeTick(fakeDateTime: DateTime(2026, 7, 3))),
-            remoteConfigParameterProvider.overrideWithValue(
-              RemoteConfigParameter(
-                  lifetimeOfferCopyVariant: copyVariant.value),
-            ),
+            remoteConfigParameterProvider
+                .overrideWithValue(RemoteConfigParameter()),
             lifetimeDiscountPackageProvider.overrideWith(
               (ref) =>
                   hasLifetimeDiscountPackage ? _LifetimeFakePackage() : null,
@@ -108,6 +106,7 @@ void main() {
               child: LifetimeOfferPageBody(
                 user: user,
                 source: PaywallSource.lifetimeOfferAppLaunch,
+                copyVariant: copyVariant,
               ),
             ),
           ),

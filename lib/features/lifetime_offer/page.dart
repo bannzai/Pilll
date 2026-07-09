@@ -17,7 +17,6 @@ import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/app_store/app_store_review_cards.dart';
 import 'package:pilll/provider/purchase.dart';
-import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/features/premium_introduction/premium_complete_dialog.dart';
@@ -28,9 +27,11 @@ import 'package:url_launcher/url_launcher.dart';
 /// 利用開始から約1年になる約1ヶ月前のユーザーへ、割引版の買い切りプランを期間限定で訴求するオファー画面
 class LifetimeOfferPage extends HookConsumerWidget {
   final PaywallSource source;
+  final LifetimeOfferCopyVariant copyVariant;
   const LifetimeOfferPage({
     super.key,
     required this.source,
+    required this.copyVariant,
   });
 
   @override
@@ -40,6 +41,7 @@ class LifetimeOfferPage extends HookConsumerWidget {
             return LifetimeOfferPageBody(
               user: user,
               source: source,
+              copyVariant: copyVariant,
             );
           },
           error: (error, stackTrace) => UniversalErrorPage(
@@ -57,11 +59,13 @@ class LifetimeOfferPage extends HookConsumerWidget {
 class LifetimeOfferPageBody extends HookConsumerWidget {
   final User user;
   final PaywallSource source;
+  final LifetimeOfferCopyVariant copyVariant;
 
   const LifetimeOfferPageBody({
     super.key,
     required this.user,
     required this.source,
+    required this.copyVariant,
   });
 
   @override
@@ -74,7 +78,6 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
     final lifetimeDiscountRate = ref.watch(lifetimeDiscountRateProvider);
     final usageDays = ref.watch(lifetimeOfferUsageDaysProvider);
     final isLifetimePurchased = ref.watch(isLifetimePurchasedProvider).valueOrNull == true;
-    final copyVariant = LifetimeOfferCopyVariant.fromString(ref.watch(remoteConfigParameterProvider).lifetimeOfferCopyVariant);
     // 買い切り購入後もサブスクリプションの自動更新は止まらないため、月額・年額で課金中のユーザーには事前の解約を促す
     final isActiveSubscriber = user.isPremium && !isLifetimePurchased;
     // ページを開いたまま表示期限を迎えた場合に購入導線を無効化するための判定。false→trueの変化時のみ再ビルドされる
@@ -453,6 +456,7 @@ Future<void> showLifetimeOfferPage(
       fullscreenDialog: true,
       builder: (_) => LifetimeOfferPage(
         source: source,
+        copyVariant: copyVariant,
       ),
     ),
   );
