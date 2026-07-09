@@ -8,7 +8,6 @@ import 'package:pilll/features/record/components/announcement_bar/components/adm
 import 'package:pilll/features/record/components/announcement_bar/components/lifetime_offer.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/special_offering.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/special_offering2.dart';
-import 'package:pilll/features/special_offering/special_offering_copy_variant.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -217,7 +216,6 @@ class AnnouncementBar extends HookConsumerWidget {
             !specialOfferingIsClosed.value) {
           return SpecialOfferingAnnouncementBar(
             specialOfferingIsClosed: specialOfferingIsClosed,
-            copyVariant: SpecialOfferingCopyVariant.fromString(remoteConfigParameter.specialOfferingCopyVariant),
           );
         }
 
@@ -230,7 +228,6 @@ class AnnouncementBar extends HookConsumerWidget {
             specialOfferingIsClosed2: specialOfferingIsClosed2,
             missedDays: missedDays,
             useAlternativeText: remoteConfigParameter.specialOffering2UseAlternativeText,
-            copyVariant: SpecialOfferingCopyVariant.fromString(remoteConfigParameter.specialOfferingCopyVariant),
           );
         }
 

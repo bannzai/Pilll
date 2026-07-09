@@ -6,27 +6,23 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/special_offering/page2.dart';
-import 'package:pilll/features/special_offering/special_offering_copy_variant.dart';
 import 'package:pilll/utils/analytics.dart';
 
 class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
   final ValueNotifier<bool> specialOfferingIsClosed2;
   final int missedDays;
   final bool useAlternativeText;
-  final SpecialOfferingCopyVariant copyVariant;
   const SpecialOfferingAnnouncementBar2({
     super.key,
     required this.specialOfferingIsClosed2,
     required this.missedDays,
     required this.useAlternativeText,
-    required this.copyVariant,
   });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     useEffect(() {
-      analytics.logEvent(name: 'special_offering_announcement_bar2_view', parameters: {'copy_variant': copyVariant.value});
-      analytics.setUserProperties('special_offer_variant', copyVariant.value);
+      analytics.logEvent(name: 'special_offering_announcement_bar2_view');
       return null;
     }, []);
     return Container(
@@ -34,12 +30,11 @@ class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
       color: AppColors.primary,
       child: GestureDetector(
         onTap: () {
-          analytics.logEvent(name: 'special_offering_announcement_bar2_tap', parameters: {'copy_variant': copyVariant.value});
+          analytics.logEvent(name: 'special_offering_announcement_bar2_tap');
           showSpecialOfferingPage2(
             context,
             source: PaywallSource.specialOfferingBar2,
             specialOfferingIsClosed2: specialOfferingIsClosed2,
-            copyVariant: copyVariant,
           );
         },
         child: Stack(
@@ -47,20 +42,15 @@ class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
             Align(
               alignment: Alignment.center,
               child: Text(
-                switch (copyVariant) {
-                  SpecialOfferingCopyVariant.defaultVariant => useAlternativeText
-                      ? '''
+                useAlternativeText
+                    ? '''
 飲み忘れの不安ありませんか？
 97.2%の人が「飲み忘れが減った」と回答！
 特別価格でプレミアムプランをゲット！'''
-                      : '''
+                    : '''
 過去30日間で$missedDays日記録がなかったようです
 97.2%の人が「飲み忘れが減った」と回答！
 特別価格でプレミアムプランをゲット！''',
-                  SpecialOfferingCopyVariant.scarcity => useAlternativeText
-                      ? '飲み忘れの不安ありませんか？\nこのオファーは今回限り。\n特別価格でプレミアムを始めるチャンス！'
-                      : '過去30日間で$missedDays日記録がなかったようです\nこのオファーは今回限り。\n特別価格でプレミアムを始めるチャンス！',
-                },
                 style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,

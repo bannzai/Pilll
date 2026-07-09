@@ -41,9 +41,6 @@ abstract class RemoteConfigKeys {
   /// 特別オファー2で代替テキストを使用するかのフラグキー
   static const specialOffering2UseAlternativeText = 'specialOffering2UseAlternativeText';
 
-  /// 特別オファーの訴求コピーのA/Bテストバリアント識別子キー
-  static const specialOfferingCopyVariant = 'specialOfferingCopyVariant';
-
   /// 買い切りオファーを有効にするかのフラグキー
   static const lifetimeOfferEnabled = 'lifetimeOfferEnabled';
 
@@ -96,10 +93,6 @@ abstract class RemoteConfigParameterDefaultValues {
 
   /// 特別オファー2で代替テキストを使用する（デフォルト）
   static const specialOffering2UseAlternativeText = true;
-
-  // default(A) or scarcity(B) ...
-  /// 特別オファーの訴求コピーバリアントのデフォルト値（A/Bテスト用）
-  static const specialOfferingCopyVariant = 'default';
 
   /// 買い切りオファーを無効にする（デフォルト）
   static const lifetimeOfferEnabled = false;
@@ -181,10 +174,6 @@ class RemoteConfigParameter with _$RemoteConfigParameter {
       RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
     )
     bool specialOffering2UseAlternativeText,
-
-    /// 特別オファーの訴求コピーのA/Bテストバリアント識別子
-    /// バー・オファー画面の文言を切り替える（'default', 'scarcity'等）
-    @Default(RemoteConfigParameterDefaultValues.specialOfferingCopyVariant) String specialOfferingCopyVariant,
 
     /// 買い切りオファーを有効にするかどうか
     /// trueの場合、利用日数が対象範囲のユーザーに買い切りオファーのバー・起動時モーダルを表示する
