@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/lifetime_offer/lifetime_offer_copy_variant.dart';
 import 'package:pilll/features/lifetime_offer/page.dart';
 import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/provider/purchase.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/user.dart';
 
 /// 開発者オプション内の行。タップすると買い切りオファーPaywallを解約誘導文言あり/なしの2パターンで確認できる。
@@ -36,6 +39,10 @@ class LifetimeOfferPaywallRow extends StatelessWidget {
         if (isActiveSubscriber == null || !context.mounted) {
           return;
         }
+        final copyVariant = await _selectLifetimeOfferCopyVariant(context);
+        if (copyVariant == null || !context.mounted) {
+          return;
+        }
         Navigator.of(context).push(
           MaterialPageRoute(
             fullscreenDialog: true,
@@ -54,6 +61,9 @@ class LifetimeOfferPaywallRow extends StatelessWidget {
                   ),
                 ),
                 isLifetimePurchasedProvider.overrideWith((ref) => Future.value(false)),
+                remoteConfigParameterProvider.overrideWithValue(
+                  RemoteConfigParameter(lifetimeOfferCopyVariant: copyVariant.value),
+                ),
               ],
               child: const LifetimeOfferPage(source: PaywallSource.lifetimeOfferBar),
             ),
@@ -62,4 +72,24 @@ class LifetimeOfferPaywallRow extends StatelessWidget {
       },
     );
   }
+}
+
+/// 表示する文言バリアントを選択するダイアログを表示する。キャンセル時はnullを返す。
+Future<LifetimeOfferCopyVariant?> _selectLifetimeOfferCopyVariant(BuildContext context) {
+  return showDialog<LifetimeOfferCopyVariant>(
+    context: context,
+    builder: (context) => SimpleDialog(
+      title: const Text('文言バリアントを選択'),
+      children: [
+        SimpleDialogOption(
+          onPressed: () => Navigator.of(context).pop(LifetimeOfferCopyVariant.defaultVariant),
+          child: const Text('default（現行文言）'),
+        ),
+        SimpleDialogOption(
+          onPressed: () => Navigator.of(context).pop(LifetimeOfferCopyVariant.ownership),
+          child: const Text('ownership（所有価値訴求）'),
+        ),
+      ],
+    ),
+  );
 }

@@ -8,6 +8,7 @@ import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/lifetime_offer/lifetime_offer_copy_variant.dart';
 import 'package:pilll/features/lifetime_offer/page.dart';
 import 'package:pilll/features/lifetime_offer/provider.dart';
 import 'package:pilll/features/premium_introduction/paywall_source.dart';
@@ -61,6 +62,8 @@ void main() {
       bool isLifetimePurchased = false,
       bool hasLifetimeDiscountPackage = true,
       Map<String, Object> initialSharedPreferencesValues = const {},
+      LifetimeOfferCopyVariant copyVariant =
+          LifetimeOfferCopyVariant.defaultVariant,
     }) async {
       final mockTodayRepository = MockTodayService();
       when(mockTodayRepository.now()).thenReturn(DateTime(2026, 7, 3));
@@ -76,8 +79,10 @@ void main() {
             // 本物のTickはTimer.periodicを作りpending timerでテストが失敗するためFakeに差し替える
             tickProvider.overrideWith(
                 () => FakeTick(fakeDateTime: DateTime(2026, 7, 3))),
-            remoteConfigParameterProvider
-                .overrideWithValue(RemoteConfigParameter()),
+            remoteConfigParameterProvider.overrideWithValue(
+              RemoteConfigParameter(
+                  lifetimeOfferCopyVariant: copyVariant.value),
+            ),
             lifetimeDiscountPackageProvider.overrideWith(
               (ref) =>
                   hasLifetimeDiscountPackage ? _LifetimeFakePackage() : null,
@@ -113,6 +118,41 @@ void main() {
 
       debugDefaultTargetPlatformOverride = null;
     }
+
+    group('訴求コピーのバリアント', () {
+      testWidgets('defaultバリアントで現行の訴求コピーが表示される', (WidgetTester tester) async {
+        await pumpLifetimeOfferPageBody(
+          tester,
+          user: const User(
+            isPremium: false,
+            trialDeadlineDate: null,
+            beginTrialDate: null,
+            discountEntitlementDeadlineDate: null,
+          ),
+          copyVariant: LifetimeOfferCopyVariant.defaultVariant,
+        );
+
+        expect(find.text('長く使ってくださっている方へ\n買い切りプランのご案内です'), findsOneWidget);
+        expect(find.text('一度の購入で、ずっとプレミアム。\n月々のお支払いは不要です'), findsNothing);
+      });
+
+      testWidgets('ownershipバリアントで所有価値訴求のコピーが表示される',
+          (WidgetTester tester) async {
+        await pumpLifetimeOfferPageBody(
+          tester,
+          user: const User(
+            isPremium: false,
+            trialDeadlineDate: null,
+            beginTrialDate: null,
+            discountEntitlementDeadlineDate: null,
+          ),
+          copyVariant: LifetimeOfferCopyVariant.ownership,
+        );
+
+        expect(find.text('一度の購入で、ずっとプレミアム。\n月々のお支払いは不要です'), findsOneWidget);
+        expect(find.text('長く使ってくださっている方へ\n買い切りプランのご案内です'), findsNothing);
+      });
+    });
 
     group('#LifetimeOfferSubscriptionCancelNotice', () {
       testWidgets('月額・年額プランで課金中（プレミアムかつ買い切り未購入）の場合は解約誘導文言が表示される',

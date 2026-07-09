@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/lifetime_offer/lifetime_offer_copy_variant.dart';
 import 'package:pilll/features/lifetime_offer/page.dart';
 import 'package:pilll/features/lifetime_offer/provider.dart';
 import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/root/resolver/show_paywall_on_app_launch.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/typed_shared_preferences.dart';
 
 /// アプリ起動時に買い切りオファーのモーダルを周期（利用開始からの経過年数）ごとに1回だけ自動表示するResolver
@@ -49,6 +51,7 @@ class ShowLifetimeOfferOnAppLaunch extends HookConsumerWidget {
             await showLifetimeOfferPage(
               context,
               source: PaywallSource.lifetimeOfferAppLaunch,
+              copyVariant: LifetimeOfferCopyVariant.fromString(ref.read(remoteConfigParameterProvider).lifetimeOfferCopyVariant),
             );
           }
         });

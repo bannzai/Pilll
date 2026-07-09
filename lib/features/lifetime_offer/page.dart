@@ -9,6 +9,7 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/error/page.dart';
+import 'package:pilll/features/lifetime_offer/lifetime_offer_copy_variant.dart';
 import 'package:pilll/features/lifetime_offer/provider.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_footer.dart';
@@ -16,6 +17,7 @@ import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/app_store/app_store_review_cards.dart';
 import 'package:pilll/provider/purchase.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/features/premium_introduction/premium_complete_dialog.dart';
@@ -72,6 +74,7 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
     final lifetimeDiscountRate = ref.watch(lifetimeDiscountRateProvider);
     final usageDays = ref.watch(lifetimeOfferUsageDaysProvider);
     final isLifetimePurchased = ref.watch(isLifetimePurchasedProvider).valueOrNull == true;
+    final copyVariant = LifetimeOfferCopyVariant.fromString(ref.watch(remoteConfigParameterProvider).lifetimeOfferCopyVariant);
     // 買い切り購入後もサブスクリプションの自動更新は止まらないため、月額・年額で課金中のユーザーには事前の解約を促す
     final isActiveSubscriber = user.isPremium && !isLifetimePurchased;
     // ページを開いたまま表示期限を迎えた場合に購入導線を無効化するための判定。false→trueの変化時のみ再ビルドされる
@@ -92,6 +95,7 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
           onPressed: () {
             analytics.logEvent(
               name: 'lifetime_offer_close_button_tapped',
+              parameters: {'copy_variant': copyVariant.value},
             );
             // オファーは表示期限まで有効でバーから再度開けるため、確認なしで閉じる
             Navigator.of(context).pop();
@@ -159,10 +163,13 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
                   ),
                 ],
                 const SizedBox(height: 12),
-                const Text(
-                  '長く使ってくださっている方へ\n買い切りプランのご案内です',
+                Text(
+                  switch (copyVariant) {
+                    LifetimeOfferCopyVariant.defaultVariant => '長く使ってくださっている方へ\n買い切りプランのご案内です',
+                    LifetimeOfferCopyVariant.ownership => '一度の購入で、ずっとプレミアム。\n月々のお支払いは不要です',
+                  },
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: TextColor.main,
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w400,
@@ -205,7 +212,7 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
                           : () async {
                               analytics.logEvent(
                                 name: 'pressed_lifetime_purchase_button',
-                                parameters: {'paywall_source': source.value},
+                                parameters: {'paywall_source': source.value, 'copy_variant': copyVariant.value},
                               );
                               if (isLoading.value) return;
                               isLoading.value = true;
@@ -432,12 +439,14 @@ class LifetimeOfferSubscriptionCancelNotice extends StatelessWidget {
 Future<void> showLifetimeOfferPage(
   BuildContext context, {
   required PaywallSource source,
+  required LifetimeOfferCopyVariant copyVariant,
 }) async {
   analytics.logScreenView(screenName: 'LifetimeOfferPage');
   analytics.logEvent(
     name: 'paywall_viewed',
-    parameters: {'paywall_source': source.value},
+    parameters: {'paywall_source': source.value, 'copy_variant': copyVariant.value},
   );
+  analytics.setUserProperties('lifetime_offer_variant', copyVariant.value);
 
   await Navigator.of(context).push(
     MaterialPageRoute(
