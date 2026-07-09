@@ -64,6 +64,10 @@ mixin _$RemoteConfigParameter {
   /// trueの場合、特別オファー2画面で異なるテキスト表現を使用する
   bool get specialOffering2UseAlternativeText => throw _privateConstructorUsedError;
 
+  /// 特別オファーの訴求コピーのA/Bテストバリアント識別子
+  /// バー・オファー画面の文言を切り替える（'default', 'scarcity'等）
+  String get specialOfferingCopyVariant => throw _privateConstructorUsedError;
+
   /// 買い切りオファーを有効にするかどうか
   /// trueの場合、利用日数が対象範囲のユーザーに買い切りオファーのバー・起動時モーダルを表示する
   bool get lifetimeOfferEnabled => throw _privateConstructorUsedError;
@@ -102,6 +106,7 @@ abstract class $RemoteConfigParameterCopyWith<$Res> {
       int specialOfferingUserCreationDateTimeOffsetSince,
       int specialOfferingUserCreationDateTimeOffsetUntil,
       bool specialOffering2UseAlternativeText,
+      String specialOfferingCopyVariant,
       bool lifetimeOfferEnabled,
       int lifetimeOfferUserCreationDaysSince,
       int lifetimeOfferUserCreationDaysUntil,
@@ -131,6 +136,7 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
     Object? specialOfferingUserCreationDateTimeOffsetSince = null,
     Object? specialOfferingUserCreationDateTimeOffsetUntil = null,
     Object? specialOffering2UseAlternativeText = null,
+    Object? specialOfferingCopyVariant = null,
     Object? lifetimeOfferEnabled = null,
     Object? lifetimeOfferUserCreationDaysSince = null,
     Object? lifetimeOfferUserCreationDaysUntil = null,
@@ -181,6 +187,10 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
           ? _value.specialOffering2UseAlternativeText
           : specialOffering2UseAlternativeText // ignore: cast_nullable_to_non_nullable
               as bool,
+      specialOfferingCopyVariant: null == specialOfferingCopyVariant
+          ? _value.specialOfferingCopyVariant
+          : specialOfferingCopyVariant // ignore: cast_nullable_to_non_nullable
+              as String,
       lifetimeOfferEnabled: null == lifetimeOfferEnabled
           ? _value.lifetimeOfferEnabled
           : lifetimeOfferEnabled // ignore: cast_nullable_to_non_nullable
@@ -219,6 +229,7 @@ abstract class _$$RemoteConfigParameterImplCopyWith<$Res> implements $RemoteConf
       int specialOfferingUserCreationDateTimeOffsetSince,
       int specialOfferingUserCreationDateTimeOffsetUntil,
       bool specialOffering2UseAlternativeText,
+      String specialOfferingCopyVariant,
       bool lifetimeOfferEnabled,
       int lifetimeOfferUserCreationDaysSince,
       int lifetimeOfferUserCreationDaysUntil,
@@ -245,6 +256,7 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigPara
     Object? specialOfferingUserCreationDateTimeOffsetSince = null,
     Object? specialOfferingUserCreationDateTimeOffsetUntil = null,
     Object? specialOffering2UseAlternativeText = null,
+    Object? specialOfferingCopyVariant = null,
     Object? lifetimeOfferEnabled = null,
     Object? lifetimeOfferUserCreationDaysSince = null,
     Object? lifetimeOfferUserCreationDaysUntil = null,
@@ -295,6 +307,10 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigPara
           ? _value.specialOffering2UseAlternativeText
           : specialOffering2UseAlternativeText // ignore: cast_nullable_to_non_nullable
               as bool,
+      specialOfferingCopyVariant: null == specialOfferingCopyVariant
+          ? _value.specialOfferingCopyVariant
+          : specialOfferingCopyVariant // ignore: cast_nullable_to_non_nullable
+              as String,
       lifetimeOfferEnabled: null == lifetimeOfferEnabled
           ? _value.lifetimeOfferEnabled
           : lifetimeOfferEnabled // ignore: cast_nullable_to_non_nullable
@@ -330,6 +346,7 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
       this.specialOfferingUserCreationDateTimeOffsetSince = RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetSince,
       this.specialOfferingUserCreationDateTimeOffsetUntil = RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil,
       this.specialOffering2UseAlternativeText = RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
+      this.specialOfferingCopyVariant = RemoteConfigParameterDefaultValues.specialOfferingCopyVariant,
       this.lifetimeOfferEnabled = RemoteConfigParameterDefaultValues.lifetimeOfferEnabled,
       this.lifetimeOfferUserCreationDaysSince = RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysSince,
       this.lifetimeOfferUserCreationDaysUntil = RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysUntil,
@@ -404,6 +421,12 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
   @JsonKey()
   final bool specialOffering2UseAlternativeText;
 
+  /// 特別オファーの訴求コピーのA/Bテストバリアント識別子
+  /// バー・オファー画面の文言を切り替える（'default', 'scarcity'等）
+  @override
+  @JsonKey()
+  final String specialOfferingCopyVariant;
+
   /// 買い切りオファーを有効にするかどうか
   /// trueの場合、利用日数が対象範囲のユーザーに買い切りオファーのバー・起動時モーダルを表示する
   @override
@@ -430,7 +453,7 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
 
   @override
   String toString() {
-    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, skipInitialSetting: $skipInitialSetting, trialDeadlineDateOffsetDay: $trialDeadlineDateOffsetDay, discountEntitlementOffsetDay: $discountEntitlementOffsetDay, discountCountdownBoundaryHour: $discountCountdownBoundaryHour, premiumIntroductionPattern: $premiumIntroductionPattern, premiumIntroductionShowsAppStoreReviewCard: $premiumIntroductionShowsAppStoreReviewCard, specialOfferingUserCreationDateTimeOffset: $specialOfferingUserCreationDateTimeOffset, specialOfferingUserCreationDateTimeOffsetSince: $specialOfferingUserCreationDateTimeOffsetSince, specialOfferingUserCreationDateTimeOffsetUntil: $specialOfferingUserCreationDateTimeOffsetUntil, specialOffering2UseAlternativeText: $specialOffering2UseAlternativeText, lifetimeOfferEnabled: $lifetimeOfferEnabled, lifetimeOfferUserCreationDaysSince: $lifetimeOfferUserCreationDaysSince, lifetimeOfferUserCreationDaysUntil: $lifetimeOfferUserCreationDaysUntil, lifetimeOfferDurationHours: $lifetimeOfferDurationHours)';
+    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, skipInitialSetting: $skipInitialSetting, trialDeadlineDateOffsetDay: $trialDeadlineDateOffsetDay, discountEntitlementOffsetDay: $discountEntitlementOffsetDay, discountCountdownBoundaryHour: $discountCountdownBoundaryHour, premiumIntroductionPattern: $premiumIntroductionPattern, premiumIntroductionShowsAppStoreReviewCard: $premiumIntroductionShowsAppStoreReviewCard, specialOfferingUserCreationDateTimeOffset: $specialOfferingUserCreationDateTimeOffset, specialOfferingUserCreationDateTimeOffsetSince: $specialOfferingUserCreationDateTimeOffsetSince, specialOfferingUserCreationDateTimeOffsetUntil: $specialOfferingUserCreationDateTimeOffsetUntil, specialOffering2UseAlternativeText: $specialOffering2UseAlternativeText, specialOfferingCopyVariant: $specialOfferingCopyVariant, lifetimeOfferEnabled: $lifetimeOfferEnabled, lifetimeOfferUserCreationDaysSince: $lifetimeOfferUserCreationDaysSince, lifetimeOfferUserCreationDaysUntil: $lifetimeOfferUserCreationDaysUntil, lifetimeOfferDurationHours: $lifetimeOfferDurationHours)';
   }
 
   @override
@@ -458,6 +481,8 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
                 other.specialOfferingUserCreationDateTimeOffsetUntil == specialOfferingUserCreationDateTimeOffsetUntil) &&
             (identical(other.specialOffering2UseAlternativeText, specialOffering2UseAlternativeText) ||
                 other.specialOffering2UseAlternativeText == specialOffering2UseAlternativeText) &&
+            (identical(other.specialOfferingCopyVariant, specialOfferingCopyVariant) ||
+                other.specialOfferingCopyVariant == specialOfferingCopyVariant) &&
             (identical(other.lifetimeOfferEnabled, lifetimeOfferEnabled) || other.lifetimeOfferEnabled == lifetimeOfferEnabled) &&
             (identical(other.lifetimeOfferUserCreationDaysSince, lifetimeOfferUserCreationDaysSince) ||
                 other.lifetimeOfferUserCreationDaysSince == lifetimeOfferUserCreationDaysSince) &&
@@ -482,6 +507,7 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
       specialOfferingUserCreationDateTimeOffsetSince,
       specialOfferingUserCreationDateTimeOffsetUntil,
       specialOffering2UseAlternativeText,
+      specialOfferingCopyVariant,
       lifetimeOfferEnabled,
       lifetimeOfferUserCreationDaysSince,
       lifetimeOfferUserCreationDaysUntil,
@@ -514,6 +540,7 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
       final int specialOfferingUserCreationDateTimeOffsetSince,
       final int specialOfferingUserCreationDateTimeOffsetUntil,
       final bool specialOffering2UseAlternativeText,
+      final String specialOfferingCopyVariant,
       final bool lifetimeOfferEnabled,
       final int lifetimeOfferUserCreationDaysSince,
       final int lifetimeOfferUserCreationDaysUntil,
@@ -577,6 +604,11 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
   /// 特別オファー2で代替テキストを使用するかどうか
   /// trueの場合、特別オファー2画面で異なるテキスト表現を使用する
   bool get specialOffering2UseAlternativeText;
+  @override
+
+  /// 特別オファーの訴求コピーのA/Bテストバリアント識別子
+  /// バー・オファー画面の文言を切り替える（'default', 'scarcity'等）
+  String get specialOfferingCopyVariant;
   @override
 
   /// 買い切りオファーを有効にするかどうか

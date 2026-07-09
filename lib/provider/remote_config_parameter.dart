@@ -50,6 +50,10 @@ RemoteConfigParameter remoteConfigParameter(RemoteConfigParameterRef ref) {
       RemoteConfigKeys.specialOffering2UseAlternativeText,
       RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
     ),
+    specialOfferingCopyVariant: remoteConfig.getStringOrDefault(
+      RemoteConfigKeys.specialOfferingCopyVariant,
+      RemoteConfigParameterDefaultValues.specialOfferingCopyVariant,
+    ),
     lifetimeOfferEnabled: remoteConfig.getBoolOrDefault(
       RemoteConfigKeys.lifetimeOfferEnabled,
       RemoteConfigParameterDefaultValues.lifetimeOfferEnabled,
@@ -81,6 +85,15 @@ extension RemoteConfigExt on FirebaseRemoteConfig {
   int getIntOrDefault(String key, int defaultValue) {
     try {
       return getAll().containsKey(key) ? getInt(key) : defaultValue;
+    } catch (error) {
+      return defaultValue;
+    }
+  }
+
+  String getStringOrDefault(String key, String defaultValue) {
+    try {
+      // getStringは未設定時に空文字を返すため、空文字ならデフォルトにフォールバックする
+      return getString(key).isEmpty ? defaultValue : getString(key);
     } catch (error) {
       return defaultValue;
     }

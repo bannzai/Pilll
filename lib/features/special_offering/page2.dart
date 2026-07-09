@@ -13,10 +13,12 @@ import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_footer.dart';
 import 'package:pilll/features/premium_introduction/paywall_source.dart';
+import 'package:pilll/features/special_offering/special_offering_copy_variant.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/app_store/app_store_review_cards.dart';
 import 'package:pilll/features/premium_introduction/components/monthly_purchase_button.dart';
 import 'package:pilll/provider/purchase.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/features/premium_introduction/premium_complete_dialog.dart';
 import 'package:pilll/utils/links.dart';
@@ -78,6 +80,7 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
     final monthlySpecialOfferingPackage = ref.watch(
       monthlySpecialOfferingPackageProvider,
     );
+    final copyVariant = SpecialOfferingCopyVariant.fromString(ref.watch(remoteConfigParameterProvider).specialOfferingCopyVariant);
 
     if (monthlySpecialOfferingPackage == null || monthlyPremiumPackage == null) {
       return const ScaffoldIndicator();
@@ -189,9 +192,12 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                       const SizedBox(height: 10),
                       SvgPicture.asset('images/arrow_down.svg'),
                       const SizedBox(height: 10),
-                      const Text(
-                        '今回だけの特別価格でプレミアム機能をゲット！',
-                        style: TextStyle(
+                      Text(
+                        switch (copyVariant) {
+                          SpecialOfferingCopyVariant.defaultVariant => '今回だけの特別価格でプレミアム機能をゲット！',
+                          SpecialOfferingCopyVariant.scarcity => 'このチャンスは今回限り。特別価格でプレミアム機能をゲット！',
+                        },
+                        style: const TextStyle(
                           color: TextColor.main,
                           fontWeight: FontWeight.w600,
                           fontSize: 16,
@@ -201,6 +207,10 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                       MonthlyPurchaseButton(
                         monthlyPackage: monthlySpecialOfferingPackage,
                         onTap: (package) async {
+                          analytics.logEvent(
+                            name: 'pressed_monthly_purchase_button',
+                            parameters: {'paywall_source': source.value, 'copy_variant': copyVariant.value},
+                          );
                           if (isLoading.value) return;
                           isLoading.value = true;
 
@@ -260,11 +270,12 @@ Future<void> showSpecialOfferingPage2(
   BuildContext context, {
   required PaywallSource source,
   required ValueNotifier<bool> specialOfferingIsClosed2,
+  required SpecialOfferingCopyVariant copyVariant,
 }) async {
   analytics.logScreenView(screenName: 'SpecialOfferingPage2');
   analytics.logEvent(
     name: 'paywall_viewed',
-    parameters: {'paywall_source': source.value},
+    parameters: {'paywall_source': source.value, 'copy_variant': copyVariant.value},
   );
 
   await showModalBottomSheet(
