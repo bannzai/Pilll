@@ -195,8 +195,9 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                       Text(
                         switch (copyVariant) {
                           SpecialOfferingCopyVariant.defaultVariant => '今回だけの特別価格でプレミアム機能をゲット！',
-                          SpecialOfferingCopyVariant.scarcity => 'このチャンスは今回限り。特別価格でプレミアム機能をゲット！',
+                          SpecialOfferingCopyVariant.scarcity => 'このチャンスは今回限り。\n特別価格でプレミアム機能をゲット！',
                         },
+                        textAlign: TextAlign.center,
                         style: const TextStyle(
                           color: TextColor.main,
                           fontWeight: FontWeight.w600,
