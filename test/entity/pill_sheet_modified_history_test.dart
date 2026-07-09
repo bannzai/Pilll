@@ -52,12 +52,147 @@ void main() {
   });
 
   group("#missedPillDays", () {
+    // revertTakenPill の before/after 用に lastTakenDate だけ異なる PillSheetGroup を作るヘルパー
+    PillSheetGroup createPillSheetGroupWithLastTakenDate(
+        DateTime? lastTakenDate) {
+      return PillSheetGroup(
+        id: 'group_id',
+        pillSheetIDs: ['pill_sheet_id_1'],
+        pillSheets: [
+          PillSheet.v1(
+            id: 'pill_sheet_id_1',
+            typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+            beginDate: DateTime.parse("2020-09-01"),
+            lastTakenDate: lastTakenDate,
+            createdAt: DateTime.parse("2020-09-01"),
+          ),
+        ],
+        createdAt: DateTime.parse("2020-09-01"),
+      );
+    }
+
+    PillSheetModifiedHistory createRevertHistory({
+      required DateTime estimatedEventCausingDate,
+      required DateTime beforeLastTakenDate,
+      required DateTime? afterLastTakenDate,
+    }) {
+      return PillSheetModifiedHistory(
+        id: 'revert',
+        actionType: PillSheetModifiedActionType.revertTakenPill.name,
+        estimatedEventCausingDate: estimatedEventCausingDate,
+        createdAt: estimatedEventCausingDate,
+        value: const PillSheetModifiedHistoryValue(
+            revertTakenPill: RevertTakenPillValue()),
+        beforePillSheetGroup:
+            createPillSheetGroupWithLastTakenDate(beforeLastTakenDate),
+        afterPillSheetGroup:
+            createPillSheetGroupWithLastTakenDate(afterLastTakenDate),
+      );
+    }
+
     test("履歴が空の場合は0を返す", () {
       final result = missedPillDays(
         histories: [],
         maxDate: DateTime.parse("2020-09-28"),
       );
       expect(result, 0);
+    });
+
+    test("服用記録を取り消してそのままの場合、取り消した日は飲み忘れとしてカウントされる", () {
+      final today = DateTime.parse("2020-09-05");
+      final baseDate = DateTime(today.year, today.month, today.day);
+      final histories = [
+        // 9/1〜9/4 の4日間服用
+        for (int i = 1; i <= 4; i++)
+          PillSheetModifiedHistory(
+            id: 'taken_$i',
+            actionType: PillSheetModifiedActionType.takenPill.name,
+            estimatedEventCausingDate: DateTime(2020, 9, i),
+            createdAt: DateTime(2020, 9, i),
+            value: const PillSheetModifiedHistoryValue(),
+            beforePillSheetGroup: null,
+            afterPillSheetGroup: null,
+          ),
+        // 9/4 の服用記録を取り消してそのまま（lastTakenDate: 9/4 → 9/3）
+        createRevertHistory(
+          estimatedEventCausingDate: DateTime(2020, 9, 4, 20),
+          beforeLastTakenDate: DateTime(2020, 9, 4),
+          afterLastTakenDate: DateTime(2020, 9, 3),
+        ),
+      ];
+
+      final result = missedPillDays(histories: histories, maxDate: baseDate);
+
+      // 集計期間は 9/1〜9/4 の4日間。9/4 は取り消されたので1日の飲み忘れ
+      expect(result, 1);
+    });
+
+    test("服用記録を取り消して同じ日に再記録した場合、飲み忘れにならない", () {
+      final today = DateTime.parse("2020-09-05");
+      final baseDate = DateTime(today.year, today.month, today.day);
+      final histories = [
+        // 9/1〜9/4 の4日間服用
+        for (int i = 1; i <= 4; i++)
+          PillSheetModifiedHistory(
+            id: 'taken_$i',
+            actionType: PillSheetModifiedActionType.takenPill.name,
+            estimatedEventCausingDate: DateTime(2020, 9, i),
+            createdAt: DateTime(2020, 9, i),
+            value: const PillSheetModifiedHistoryValue(),
+            beforePillSheetGroup: null,
+            afterPillSheetGroup: null,
+          ),
+        // 9/4 の服用記録を一度取り消す
+        createRevertHistory(
+          estimatedEventCausingDate: DateTime(2020, 9, 4, 20),
+          beforeLastTakenDate: DateTime(2020, 9, 4),
+          afterLastTakenDate: DateTime(2020, 9, 3),
+        ),
+        // 同じ日に再記録（取り消しより後の時刻）
+        PillSheetModifiedHistory(
+          id: 'retaken',
+          actionType: PillSheetModifiedActionType.takenPill.name,
+          estimatedEventCausingDate: DateTime(2020, 9, 4, 21),
+          createdAt: DateTime(2020, 9, 4, 21),
+          value: const PillSheetModifiedHistoryValue(),
+          beforePillSheetGroup: null,
+          afterPillSheetGroup: null,
+        ),
+      ];
+
+      final result = missedPillDays(histories: histories, maxDate: baseDate);
+
+      // 取り消し後に再記録しているので飲み忘れは0日
+      expect(result, 0);
+    });
+
+    test("複数日分の服用記録をまとめて取り消した場合、その全日が飲み忘れとしてカウントされる", () {
+      final today = DateTime.parse("2020-09-05");
+      final baseDate = DateTime(today.year, today.month, today.day);
+      final histories = [
+        // 9/1〜9/4 の4日間服用
+        for (int i = 1; i <= 4; i++)
+          PillSheetModifiedHistory(
+            id: 'taken_$i',
+            actionType: PillSheetModifiedActionType.takenPill.name,
+            estimatedEventCausingDate: DateTime(2020, 9, i),
+            createdAt: DateTime(2020, 9, i),
+            value: const PillSheetModifiedHistoryValue(),
+            beforePillSheetGroup: null,
+            afterPillSheetGroup: null,
+          ),
+        // 9/2〜9/4 の3日分をまとめて取り消し（lastTakenDate: 9/4 → 9/1）
+        createRevertHistory(
+          estimatedEventCausingDate: DateTime(2020, 9, 4, 20),
+          beforeLastTakenDate: DateTime(2020, 9, 4),
+          afterLastTakenDate: DateTime(2020, 9, 1),
+        ),
+      ];
+
+      final result = missedPillDays(histories: histories, maxDate: baseDate);
+
+      // 9/1 のみ服用記録が残り、9/2〜9/4 の3日が飲み忘れ
+      expect(result, 3);
     });
 
     test("30日間すべて服用記録がある場合は0を返す", () {
