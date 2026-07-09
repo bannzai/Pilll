@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/features/ended_pill_sheet_dialog/ended_pill_sheet_taken_summary.dart';
 import 'package:pilll/features/localizations/l.dart';
@@ -15,20 +16,6 @@ class SummaryStatsTeaser extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final beginDate = pillSheetGroup.pillSheets.first.beginDate;
-    final endDate = pillSheetGroup.pillSheets.last.estimatedEndTakenDate;
-    final summary = endedPillSheetTakenSummary(
-      histories: ref
-              .watch(pillSheetModifiedHistoriesWithRangeProvider(
-                begin: beginDate,
-                end: endDate,
-              ))
-              .valueOrNull ??
-          [],
-      beginDate: beginDate,
-      endDate: endDate,
-    );
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -42,15 +29,39 @@ class SummaryStatsTeaser extends ConsumerWidget {
           ),
         ),
         const SizedBox(height: 16),
-        Text(
-          L.endedPillSheetDialogSummaryMessage(summary.recordedDays, summary.missedDays),
-          style: const TextStyle(
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w400,
-            fontSize: 16,
-            color: TextColor.main,
-          ),
-        ),
+        ref
+            .watch(pillSheetModifiedHistoriesWithRangeProvider(
+              begin: pillSheetGroup.pillSheets.first.beginDate,
+              end: pillSheetGroup.pillSheets.last.estimatedEndTakenDate,
+            ))
+            .when(
+              data: (histories) {
+                // 日付範囲だけでは別グループ（削除して作り直した場合など）の履歴が混ざるため、対象グループの履歴に絞る
+                final summary = endedPillSheetTakenSummary(
+                  pillSheetGroup: pillSheetGroup,
+                  histories: histories.where((history) => history.afterPillSheetGroup?.id == pillSheetGroup.id).toList(),
+                );
+                return Text(
+                  L.endedPillSheetDialogSummaryMessage(summary.recordedDays, summary.missedDays),
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 16,
+                    color: TextColor.main,
+                  ),
+                );
+              },
+              error: (error, _) => Text(
+                error.toString(),
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 16,
+                  color: TextColor.main,
+                ),
+              ),
+              loading: () => const Center(child: Indicator()),
+            ),
       ],
     );
   }
