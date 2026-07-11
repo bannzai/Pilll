@@ -4,12 +4,15 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
+import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/lifetime_offer/lifetime_offer_plan.dart';
 import 'package:pilll/features/lifetime_offer/provider.dart';
 import 'package:pilll/provider/auth.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/provider/tick.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -19,6 +22,34 @@ import '../../helper/mock.mocks.dart';
 void main() {
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
+  });
+
+  group('#lifetimeOfferPlanProvider', () {
+    Future<LifetimeOfferPlan> readPlan({required int usageDays, required bool isPremium, bool hasMonthlyPackage = true}) async {
+      final container = ProviderContainer(
+        overrides: [
+          userProvider.overrideWith((ref) => Stream.value(User(isPremium: isPremium))),
+          lifetimeOfferUsageDaysProvider.overrideWith((ref) => usageDays),
+          monthlyDiscountPackageProvider.overrideWith((ref) => hasMonthlyPackage ? FakeRevenueCatPackage() : null),
+        ],
+      );
+      addTearDown(container.dispose);
+      await container.read(userProvider.future);
+      return container.read(lifetimeOfferPlanProvider)!;
+    }
+
+    test('無料ユーザーは利用1095日から月額300円プランを優先する', () async {
+      expect(await readPlan(usageDays: 1094, isPremium: false), LifetimeOfferPlan.lifetime);
+      expect(await readPlan(usageDays: 1095, isPremium: false), LifetimeOfferPlan.monthly300);
+    });
+
+    test('3年以上でもプレミアムユーザーには買い切りプランを提示する', () async {
+      expect(await readPlan(usageDays: 1095, isPremium: true), LifetimeOfferPlan.lifetime);
+    });
+
+    test('月額300円Packageを取得できない場合は買い切りプランへフォールバックする', () async {
+      expect(await readPlan(usageDays: 1095, isPremium: false, hasMonthlyPackage: false), LifetimeOfferPlan.lifetime);
+    });
   });
 
   group('#shouldShowLifetimeOfferProvider', () {

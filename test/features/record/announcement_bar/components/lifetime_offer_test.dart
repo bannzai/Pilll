@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/lifetime_offer/lifetime_offer_copy_variant.dart';
+import 'package:pilll/features/lifetime_offer/lifetime_offer_plan.dart';
 import 'package:pilll/features/lifetime_offer/provider.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/lifetime_offer.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -18,6 +19,7 @@ void main() {
     Future<void> pumpBar(
       WidgetTester tester, {
       required LifetimeOfferCopyVariant copyVariant,
+      LifetimeOfferPlan offerPlan = LifetimeOfferPlan.lifetime,
     }) async {
       await tester.pumpWidget(
         ProviderScope(
@@ -30,7 +32,7 @@ void main() {
           ],
           child: MaterialApp(
             home: Material(
-              child: LifetimeOfferAnnouncementBar(copyVariant: copyVariant),
+              child: LifetimeOfferAnnouncementBar(copyVariant: copyVariant, offerPlan: offerPlan),
             ),
           ),
         ),
@@ -51,6 +53,16 @@ void main() {
 
       expect(find.textContaining('一度の購入でずっとプレミアム！'), findsOneWidget);
       expect(find.textContaining('Pilllのご利用ありがとうございます！'), findsNothing);
+    });
+
+    testWidgets('月額300円プランで3年以上利用者向けの文言が表示される', (WidgetTester tester) async {
+      await pumpBar(
+        tester,
+        copyVariant: LifetimeOfferCopyVariant.defaultVariant,
+        offerPlan: LifetimeOfferPlan.monthly300,
+      );
+
+      expect(find.textContaining('3年以上ご利用の方へ、月額300円！'), findsOneWidget);
     });
   });
 }
