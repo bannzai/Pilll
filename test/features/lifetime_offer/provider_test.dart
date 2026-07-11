@@ -25,12 +25,17 @@ void main() {
   });
 
   group('#lifetimeOfferPlanProvider', () {
-    Future<LifetimeOfferPlan> readPlan({required int usageDays, required bool isPremium, bool hasMonthlyPackage = true}) async {
+    Future<LifetimeOfferPlan> readPlan(
+        {required int usageDays,
+        required bool isPremium,
+        bool hasMonthlyPackage = true}) async {
       final container = ProviderContainer(
         overrides: [
-          userProvider.overrideWith((ref) => Stream.value(User(isPremium: isPremium))),
+          userProvider
+              .overrideWith((ref) => Stream.value(User(isPremium: isPremium))),
           lifetimeOfferUsageDaysProvider.overrideWith((ref) => usageDays),
-          monthlyDiscountPackageProvider.overrideWith((ref) => hasMonthlyPackage ? FakeRevenueCatPackage() : null),
+          monthlyDiscountPackageProvider.overrideWith(
+              (ref) => hasMonthlyPackage ? FakeRevenueCatPackage() : null),
         ],
       );
       addTearDown(container.dispose);
@@ -39,16 +44,22 @@ void main() {
     }
 
     test('無料ユーザーは利用1095日から月額300円プランを優先する', () async {
-      expect(await readPlan(usageDays: 1094, isPremium: false), LifetimeOfferPlan.lifetime);
-      expect(await readPlan(usageDays: 1095, isPremium: false), LifetimeOfferPlan.monthly300);
+      expect(await readPlan(usageDays: 1094, isPremium: false),
+          LifetimeOfferPlan.lifetime);
+      expect(await readPlan(usageDays: 1095, isPremium: false),
+          LifetimeOfferPlan.monthly300);
     });
 
     test('3年以上でもプレミアムユーザーには買い切りプランを提示する', () async {
-      expect(await readPlan(usageDays: 1095, isPremium: true), LifetimeOfferPlan.lifetime);
+      expect(await readPlan(usageDays: 1095, isPremium: true),
+          LifetimeOfferPlan.lifetime);
     });
 
     test('月額300円Packageを取得できない場合は買い切りプランへフォールバックする', () async {
-      expect(await readPlan(usageDays: 1095, isPremium: false, hasMonthlyPackage: false), LifetimeOfferPlan.lifetime);
+      expect(
+          await readPlan(
+              usageDays: 1095, isPremium: false, hasMonthlyPackage: false),
+          LifetimeOfferPlan.lifetime);
     });
   });
 

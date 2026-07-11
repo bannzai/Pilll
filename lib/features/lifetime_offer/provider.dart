@@ -39,10 +39,7 @@ final lifetimeOfferPlanProvider = Provider.autoDispose<LifetimeOfferPlan?>((ref)
   if (usageDays >= monthly300OfferUsageDaysSince && user == null) {
     return null;
   }
-  if (user != null &&
-      !user.isPremium &&
-      usageDays >= monthly300OfferUsageDaysSince &&
-      ref.watch(monthlyDiscountPackageProvider) != null) {
+  if (user != null && !user.isPremium && usageDays >= monthly300OfferUsageDaysSince && ref.watch(monthlyDiscountPackageProvider) != null) {
     return LifetimeOfferPlan.monthly300;
   }
   return LifetimeOfferPlan.lifetime;

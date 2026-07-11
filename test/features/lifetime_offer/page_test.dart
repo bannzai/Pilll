@@ -166,7 +166,7 @@ void main() {
         offerPlan: LifetimeOfferPlan.monthly300,
       );
 
-      expect(find.text('3年以上使ってくださっている方へ\n月額プランのご案内です'), findsOneWidget);
+      expect(find.text('長くご愛顧いただいている皆様へ\n月額プランのご案内です'), findsOneWidget);
       expect(find.byType(Monthly300OfferPriceCard), findsOneWidget);
       expect(find.byType(LifetimeOfferPriceCard), findsNothing);
     });

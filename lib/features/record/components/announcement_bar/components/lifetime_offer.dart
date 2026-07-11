@@ -23,7 +23,8 @@ class LifetimeOfferAnnouncementBar extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     useEffect(() {
-      analytics.logEvent(name: 'lifetime_offer_announcement_bar_viewed', parameters: {'copy_variant': copyVariant.value, 'offer_plan': offerPlan.analyticsValue});
+      analytics.logEvent(
+          name: 'lifetime_offer_announcement_bar_viewed', parameters: {'copy_variant': copyVariant.value, 'offer_plan': offerPlan.analyticsValue});
       analytics.setUserProperties('lifetime_offer_variant', copyVariant.value);
       // 表示期限の起点となる初回表示時刻を記録する
       setLifetimeOfferFirstDisplayedDateTimeIfAbsent(ref);
@@ -42,7 +43,8 @@ class LifetimeOfferAnnouncementBar extends HookConsumerWidget {
         // 子のヒットテスト結果に依存せず、矢印や余白を含むバー全域をタップ可能にする
         behavior: HitTestBehavior.opaque,
         onTap: () {
-          analytics.logEvent(name: 'lifetime_offer_announcement_bar_tap', parameters: {'copy_variant': copyVariant.value, 'offer_plan': offerPlan.analyticsValue});
+          analytics.logEvent(
+              name: 'lifetime_offer_announcement_bar_tap', parameters: {'copy_variant': copyVariant.value, 'offer_plan': offerPlan.analyticsValue});
           showLifetimeOfferPage(
             context,
             source: PaywallSource.lifetimeOfferBar,
@@ -56,9 +58,10 @@ class LifetimeOfferAnnouncementBar extends HookConsumerWidget {
               alignment: Alignment.center,
               child: Text(
                 switch (offerPlan) {
-                  LifetimeOfferPlan.monthly300 => '3年以上ご利用の方へ、月額300円！\n期間限定の割引価格は残り ${lifetimeOfferCountdownString(remainingDuration)}',
+                  LifetimeOfferPlan.monthly300 => '長くご愛顧いただいている皆様へ！\n期間限定の割引価格は残り ${lifetimeOfferCountdownString(remainingDuration)}',
                   LifetimeOfferPlan.lifetime => switch (copyVariant) {
-                      LifetimeOfferCopyVariant.defaultVariant => 'Pilllのご利用ありがとうございます！\n期間限定の割引価格は残り ${lifetimeOfferCountdownString(remainingDuration)}',
+                      LifetimeOfferCopyVariant.defaultVariant =>
+                        'Pilllのご利用ありがとうございます！\n期間限定の割引価格は残り ${lifetimeOfferCountdownString(remainingDuration)}',
                       LifetimeOfferCopyVariant.ownership => '一度の購入でずっとプレミアム！\n期間限定の割引価格は残り ${lifetimeOfferCountdownString(remainingDuration)}',
                     },
                 },

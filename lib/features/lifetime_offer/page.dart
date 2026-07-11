@@ -179,7 +179,7 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
                 const SizedBox(height: 12),
                 Text(
                   switch (offerPlan) {
-                    LifetimeOfferPlan.monthly300 => '3年以上使ってくださっている方へ\n月額プランのご案内です',
+                    LifetimeOfferPlan.monthly300 => '長くご愛顧いただいている皆様へ\n月額プランのご案内です',
                     LifetimeOfferPlan.lifetime => switch (copyVariant) {
                         LifetimeOfferCopyVariant.defaultVariant => '長く使ってくださっている方へ\n買い切りプランのご案内です',
                         LifetimeOfferCopyVariant.ownership => '一度の購入で、ずっとプレミアム。\n月々のお支払いは不要です',
@@ -232,7 +232,11 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
                           : () async {
                               analytics.logEvent(
                                 name: 'pressed_lifetime_purchase_button',
-                                parameters: {'paywall_source': source.value, 'copy_variant': copyVariant.value, 'offer_plan': offerPlan.analyticsValue},
+                                parameters: {
+                                  'paywall_source': source.value,
+                                  'copy_variant': copyVariant.value,
+                                  'offer_plan': offerPlan.analyticsValue
+                                },
                               );
                               if (isLoading.value) return;
                               isLoading.value = true;
@@ -450,9 +454,11 @@ class Monthly300OfferPriceCard extends StatelessWidget {
         children: [
           const Text('月額プラン', style: TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 16)),
           const SizedBox(height: 12),
-          Text(monthlyDiscountPackage.storeProduct.priceString, style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.number, fontWeight: FontWeight.w800, fontSize: 40)),
+          Text(monthlyDiscountPackage.storeProduct.priceString,
+              style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.number, fontWeight: FontWeight.w800, fontSize: 40)),
           const SizedBox(height: 8),
-          const Text('1ヶ月ごとの自動更新', style: TextStyle(color: TextColor.gray, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400, fontSize: 13)),
+          const Text('1ヶ月ごとの自動更新',
+              style: TextStyle(color: TextColor.gray, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400, fontSize: 13)),
         ],
       ),
     );

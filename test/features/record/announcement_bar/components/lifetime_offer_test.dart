@@ -32,7 +32,8 @@ void main() {
           ],
           child: MaterialApp(
             home: Material(
-              child: LifetimeOfferAnnouncementBar(copyVariant: copyVariant, offerPlan: offerPlan),
+              child: LifetimeOfferAnnouncementBar(
+                  copyVariant: copyVariant, offerPlan: offerPlan),
             ),
           ),
         ),
@@ -62,7 +63,7 @@ void main() {
         offerPlan: LifetimeOfferPlan.monthly300,
       );
 
-      expect(find.textContaining('3年以上ご利用の方へ、月額300円！'), findsOneWidget);
+      expect(find.textContaining('長くご愛顧いただいている皆様へ！'), findsOneWidget);
     });
   });
 }
