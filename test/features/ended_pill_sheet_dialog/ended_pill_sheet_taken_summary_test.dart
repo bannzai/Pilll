@@ -1,10 +1,14 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/features/ended_pill_sheet_dialog/ended_pill_sheet_taken_summary.dart';
+import 'package:pilll/utils/datetime/day.dart';
+
+import '../../helper/mock.mocks.dart';
 
 PillSheetModifiedHistory _history(
     {required String actionType, required DateTime date}) {
@@ -153,6 +157,131 @@ void main() {
       // 9/1・9/2 の2日が記録済み。9/3 は取り消されたので記録漏れ側に入る
       expect(result.recordedDays, 2);
       expect(result.missedDays, 26);
+    });
+  });
+
+  group('#endedPillSheetTakenSummaryAvailable', () {
+    PillSheetModifiedHistory historyWithGroup({required String groupID, required DateTime date}) {
+      return PillSheetModifiedHistory(
+        id: 'taken_$date',
+        actionType: PillSheetModifiedActionType.takenPill.name,
+        estimatedEventCausingDate: date,
+        createdAt: date,
+        value: const PillSheetModifiedHistoryValue(takenPill: TakenPillValue()),
+        beforePillSheetGroup: null,
+        afterPillSheetGroup: PillSheetGroup(
+          id: groupID,
+          pillSheetIDs: ['pill_sheet_id_1'],
+          pillSheets: [
+            PillSheet.v1(
+              id: 'pill_sheet_id_1',
+              typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+              beginDate: DateTime(2020, 9, 1),
+              lastTakenDate: date,
+              createdAt: DateTime(2020, 9, 1),
+            ),
+          ],
+          createdAt: DateTime(2020, 9, 1),
+        ),
+      );
+    }
+
+    test('集計開始日が履歴TTL(180日)の窓内で対象グループの履歴がある場合はtrue', () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse('2020-10-01'));
+
+      final result = endedPillSheetTakenSummaryAvailable(
+        pillSheetGroup: _pillSheetGroup(
+          pillSheetType: PillSheetType.pillsheet_28_0,
+          beginDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 28),
+        ),
+        histories: [historyWithGroup(groupID: 'group_id', date: DateTime(2020, 9, 1, 10))],
+      );
+      expect(result, true);
+    });
+
+    test('集計開始日が履歴TTL(180日)の窓外の場合、履歴があってもfalse', () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse('2021-06-01'));
+
+      final result = endedPillSheetTakenSummaryAvailable(
+        pillSheetGroup: _pillSheetGroup(
+          pillSheetType: PillSheetType.pillsheet_28_0,
+          beginDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 28),
+        ),
+        histories: [historyWithGroup(groupID: 'group_id', date: DateTime(2020, 9, 20, 10))],
+      );
+      expect(result, false);
+    });
+
+    test('境界値: 集計開始日がちょうど180日前の場合、初日の履歴のTTL切れを保証できないためfalse', () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      // 2020-09-01 + 180日 = 2021-02-28
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse('2021-02-28'));
+
+      final result = endedPillSheetTakenSummaryAvailable(
+        pillSheetGroup: _pillSheetGroup(
+          pillSheetType: PillSheetType.pillsheet_28_0,
+          beginDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 28),
+        ),
+        histories: [historyWithGroup(groupID: 'group_id', date: DateTime(2020, 9, 20, 10))],
+      );
+      expect(result, false);
+    });
+
+    test('境界値: 集計開始日が179日前の場合はtrue', () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      // 2021-02-27 - 180日 = 2020-08-31 < beginDate(2020-09-01)
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse('2021-02-27'));
+
+      final result = endedPillSheetTakenSummaryAvailable(
+        pillSheetGroup: _pillSheetGroup(
+          pillSheetType: PillSheetType.pillsheet_28_0,
+          beginDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 28),
+        ),
+        histories: [historyWithGroup(groupID: 'group_id', date: DateTime(2020, 9, 20, 10))],
+      );
+      expect(result, true);
+    });
+
+    test('対象グループの履歴が無い場合（別グループの履歴のみ）はfalse', () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse('2020-10-01'));
+
+      final result = endedPillSheetTakenSummaryAvailable(
+        pillSheetGroup: _pillSheetGroup(
+          pillSheetType: PillSheetType.pillsheet_28_0,
+          beginDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 28),
+        ),
+        histories: [historyWithGroup(groupID: 'other_group_id', date: DateTime(2020, 9, 1, 10))],
+      );
+      expect(result, false);
+    });
+
+    test('履歴が空の場合はfalse', () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse('2020-10-01'));
+
+      final result = endedPillSheetTakenSummaryAvailable(
+        pillSheetGroup: _pillSheetGroup(
+          pillSheetType: PillSheetType.pillsheet_28_0,
+          beginDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 28),
+        ),
+        histories: [],
+      );
+      expect(result, false);
     });
   });
 }

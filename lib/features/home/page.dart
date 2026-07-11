@@ -17,6 +17,8 @@ import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/features/ended_pill_sheet_dialog/ended_pill_sheet_dialog.dart';
 import 'package:pilll/features/ended_pill_sheet_dialog/ended_pill_sheet_dialog_variant.dart';
+import 'package:pilll/features/ended_pill_sheet_dialog/ended_pill_sheet_taken_summary.dart';
+import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/calendar/page.dart';
 import 'package:pilll/features/menstruation/page.dart';
@@ -148,6 +150,26 @@ class HomePageBody extends HookConsumerWidget {
           if (variant != null &&
               pillSheetGroupID != null &&
               !(sharedPreferences.getBool(BoolKey.endedPillSheetDialogShown(pillSheetGroupID)) ?? false)) {
+            if (variant == EndedPillSheetDialogVariant.summaryStats) {
+              // 集計を提示できない場合（履歴TTL切れ・対象グループの履歴なし）、集計メッセージの無いダイアログで
+              // impression と表示済みフラグを消費しないよう表示自体を抑止する
+              try {
+                final histories = await ref.read(pillSheetModifiedHistoriesWithRangeProvider(
+                  begin: pillSheetGroup.pillSheets.first.beginDate,
+                  end: pillSheetGroup.pillSheets.last.estimatedEndTakenDate,
+                ).future);
+                if (!endedPillSheetTakenSummaryAvailable(pillSheetGroup: pillSheetGroup, histories: histories)) {
+                  return;
+                }
+              } catch (exception) {
+                // 集計可否を判定できないため表示しない。フラグ未保存のため次回起動時に再判定される
+                debugPrint('Failed to load histories for ended pill sheet dialog: $exception');
+                return;
+              }
+              if (!context.mounted) {
+                return;
+              }
+            }
             await showEndedPillSheetDialog(context, variant: variant, pillSheetGroup: pillSheetGroup);
             final saved = await sharedPreferences.setBool(BoolKey.endedPillSheetDialogShown(pillSheetGroupID), true);
             if (!saved) {
