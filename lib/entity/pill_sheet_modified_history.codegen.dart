@@ -303,44 +303,113 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   }
 }
 
-/// 渡されたPillSheetModifiedHistory配列から飲み忘れ日数を計算する
-int missedPillDays({
+/// takenPill / automaticallyRecordedLastTakenDate の履歴が記録対象としたピル日付
+/// （before/after の lastTakenDate 差分。日付のみに正規化）を返す。
+/// まとめ記録では1回の操作で複数日分のピルが記録され、履歴の日時は操作時刻になるため、
+/// 操作日ではなく記録対象日 = (記録前の最終服用日, 記録後の最終服用日] を展開する。
+/// 記録前の最終服用日が無い（初回記録）場合はシート開始日から展開する。
+/// 2錠飲み等で同じピル日に2回目を記録した履歴は lastTakenDate が変わらないため、その日を返す。
+/// グループ情報の無い過去の履歴は記録対象日を特定できないため履歴日時を記録日とみなす。
+List<DateTime> _takenPillLastTakenRangeDates(PillSheetModifiedHistory history) {
+  final afterPillSheet = history.afterPillSheetGroup?.lastTakenPillSheetOrFirstPillSheet;
+  final afterLastTakenDate = afterPillSheet?.lastTakenDate;
+  if (afterPillSheet == null || afterLastTakenDate == null) {
+    return [history.estimatedEventCausingDate.date()];
+  }
+  final exclusiveFloorDate =
+      (history.beforePillSheetGroup?.lastTakenPillSheetOrFirstPillSheet.lastTakenDate ?? afterPillSheet.beginDate.subtract(const Duration(days: 1)))
+          .date();
+  final rangeDates = [
+    for (var takenDate = afterLastTakenDate.date(); takenDate.isAfter(exclusiveFloorDate); takenDate = takenDate.subtract(const Duration(days: 1)))
+      takenDate,
+  ];
+  if (rangeDates.isEmpty) {
+    return [afterLastTakenDate.date()];
+  }
+  return rangeDates;
+}
+
+/// takenPill / automaticallyRecordedLastTakenDate の履歴が服用記録日として集計される日付（日付のみに正規化）を返す。
+/// 基本は記録対象のピル日付（[_takenPillLastTakenRangeDates]）。
+/// 服用日時が編集された履歴は before/after の lastTakenDate が編集前のままのため、編集後の履歴日時を記録日とみなす。
+List<DateTime> takenPillHistoryTargetDates(PillSheetModifiedHistory history) {
+  if (history.value.takenPill?.edited != null) {
+    return [history.estimatedEventCausingDate.date()];
+  }
+  return _takenPillLastTakenRangeDates(history);
+}
+
+/// 渡されたPillSheetModifiedHistory配列から、服用予定日（集計期間の全日 − 服用お休み日）と
+/// 服用記録のあった日の集合を構築する。集計対象が無い場合は null を返す。
+/// 日付はすべて日付のみ（午前0時）に正規化して集合化する。時刻付きのまま差分すると服用日が一致せず記録が漏れるため。
+/// [beginDate] を渡すと集計開始日として使い（シート開始日など）、省略時は最古の履歴日を開始日とする。
+({Set<DateTime> scheduledDates, Set<DateTime> takenDates})? pillTakenDateSets({
   required List<PillSheetModifiedHistory> histories,
   required DateTime maxDate,
+  DateTime? beginDate,
 }) {
-  if (histories.isEmpty) {
-    return 0;
-  }
-
   // 昇順に並べ替える。服用お休み期間の集計時に、服用お休みが開始された後の差分の日付を集計するために順番を整える必要がある
   final orderedHistories = histories.sortedBy(
     (history) => history.estimatedEventCausingDate,
   );
 
-  final minDate = orderedHistories.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isBefore(b) ? a : b);
+  // 集計開始日: beginDate 指定があればそれを、なければ最古の履歴日を使う。時刻を持つと日付集合の差分がずれるため日付のみに正規化する
+  final DateTime minDate;
+  if (beginDate != null) {
+    minDate = beginDate.date();
+  } else {
+    if (orderedHistories.isEmpty) {
+      return null;
+    }
+    minDate = orderedHistories.first.estimatedEventCausingDate.date();
+  }
+  final normalizedMaxDate = maxDate.date();
 
   final allDates = <DateTime>{};
-  final days = daysBetween(minDate, maxDate);
+  final days = daysBetween(minDate, normalizedMaxDate);
   for (var i = 0; i < days; i++) {
     allDates.add(minDate.add(Duration(days: i)));
   }
 
   // takenPill || automaticallyRecordedLastTakenDate アクションの日付を収集
   final takenDates = <DateTime>{};
+  // 服用日時が編集された履歴は編集後の日付で takenDates に入る一方、取り消しは元のピル日付を対象とするため、
+  // 元のピル日付 → 編集後の記録日の対応を保持して取り消し時に編集後の日付も除外できるようにする
+  final editedTakenDatesByOriginalDate = <DateTime, List<DateTime>>{};
   // beganRestDuration から endedRestDuration の間の日付を収集
   final restDurationDates = <DateTime>{};
 
   DateTime? historyBeginRestDurationDate;
   for (final history in orderedHistories) {
     // estimatedEventCausingDateの日付部分のみを使用
-    final date = DateTime(
-      history.estimatedEventCausingDate.year,
-      history.estimatedEventCausingDate.month,
-      history.estimatedEventCausingDate.day,
-    );
+    final date = history.estimatedEventCausingDate.date();
     if (history.actionType == PillSheetModifiedActionType.takenPill.name ||
         history.actionType == PillSheetModifiedActionType.automaticallyRecordedLastTakenDate.name) {
-      takenDates.add(date);
+      final targetDates = takenPillHistoryTargetDates(history);
+      takenDates.addAll(targetDates);
+      if (history.value.takenPill?.edited != null) {
+        for (final originalDate in _takenPillLastTakenRangeDates(history)) {
+          editedTakenDatesByOriginalDate.putIfAbsent(originalDate, () => []).addAll(targetDates);
+        }
+      }
+    }
+
+    // 服用記録の取り消しを反映する。取り消された日 = (取り消し後の最終服用日, 取り消し前の最終服用日] の範囲。
+    // 時系列順に処理しているため、取り消し後に再記録された日は後続の takenPill で再度追加される
+    if (history.actionType == PillSheetModifiedActionType.revertTakenPill.name) {
+      final beforeLastTakenDate = history.beforePillSheetGroup?.lastTakenPillSheetOrFirstPillSheet.lastTakenDate;
+      if (beforeLastTakenDate != null) {
+        final afterLastTakenDate = history.afterPillSheetGroup?.lastTakenPillSheetOrFirstPillSheet.lastTakenDate;
+        bool isRevertedDate(DateTime takenDate) =>
+            (afterLastTakenDate == null || takenDate.isAfter(afterLastTakenDate.date())) && !takenDate.isAfter(beforeLastTakenDate.date());
+        takenDates.removeWhere(isRevertedDate);
+        // 編集済み履歴の記録は編集後の日付で takenDates に入っているため、元のピル日付が取り消し範囲なら編集後の日付も除外する
+        for (final entry in editedTakenDatesByOriginalDate.entries) {
+          if (isRevertedDate(entry.key)) {
+            entry.value.forEach(takenDates.remove);
+          }
+        }
+      }
     }
 
     // 服用お休み中は記録されないので集計から除外
@@ -364,14 +433,25 @@ int missedPillDays({
 
   // 現在まで服用お休み中の場合には、差分の日付をrestDurationDatesに追加する
   if (historyBeginRestDurationDate != null) {
-    for (var i = 0; i < daysBetween(historyBeginRestDurationDate, maxDate); i++) {
+    for (var i = 0; i < daysBetween(historyBeginRestDurationDate, normalizedMaxDate); i++) {
       restDurationDates.add(
         historyBeginRestDurationDate.add(Duration(days: i)),
       );
     }
   }
 
-  // 服用記録がない日数を計算
-  final missedDays = allDates.difference(takenDates).difference(restDurationDates).length;
-  return missedDays;
+  return (scheduledDates: allDates.difference(restDurationDates), takenDates: takenDates);
+}
+
+/// 渡されたPillSheetModifiedHistory配列から飲み忘れ日数を計算する
+int missedPillDays({
+  required List<PillSheetModifiedHistory> histories,
+  required DateTime maxDate,
+}) {
+  final sets = pillTakenDateSets(histories: histories, maxDate: maxDate);
+  if (sets == null) {
+    return 0;
+  }
+  // 服用予定日のうち服用記録がない日数を計算
+  return sets.scheduledDates.difference(sets.takenDates).length;
 }

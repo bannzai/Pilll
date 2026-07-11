@@ -207,6 +207,16 @@ void main() {
       );
     });
 
+    testWidgets('モーダルを表示した起動では起動時自動モーダルの共有フラグ(shownPaywallOnThisAppLaunch)が立つ',
+        (WidgetTester tester) async {
+      await pumpShowLifetimeOfferOnAppLaunch(tester);
+
+      final container = ProviderScope.containerOf(
+        tester.element(find.byType(MaterialApp)),
+      );
+      expect(container.read(shownPaywallOnThisAppLaunchProvider), isTrue);
+    });
+
     testWidgets('同一起動で起動時ペイウォールが表示済みの場合はモーダルが表示されず、フラグも初回表示時刻も記録されない',
         (WidgetTester tester) async {
       final sharedPreferences = await pumpShowLifetimeOfferOnAppLaunch(

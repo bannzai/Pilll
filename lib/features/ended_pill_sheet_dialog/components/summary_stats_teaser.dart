@@ -1,0 +1,73 @@
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/features/ended_pill_sheet_dialog/ended_pill_sheet_taken_summary.dart';
+import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/provider/pill_sheet_modified_history.dart';
+
+/// Variant B: 服用記録の集計メッセージティーザー。
+/// 終了したピルシートグループの服用記録できた日数・記録漏れ日数を集計して表示する。
+class SummaryStatsTeaser extends ConsumerWidget {
+  final PillSheetGroup pillSheetGroup;
+  const SummaryStatsTeaser({super.key, required this.pillSheetGroup});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          L.endedPillSheetDialogSummaryTitle,
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w600,
+            fontSize: 18,
+            color: TextColor.main,
+          ),
+        ),
+        const SizedBox(height: 16),
+        ref
+            .watch(pillSheetModifiedHistoriesWithRangeProvider(
+              begin: pillSheetGroup.pillSheets.first.beginDate,
+              end: pillSheetGroup.pillSheets.last.estimatedEndTakenDate,
+            ))
+            .when(
+              data: (histories) {
+                // 集計を提示できない場合（履歴TTL切れ・対象グループの履歴なし）は集計メッセージを出さない。
+                // 表示トリガー側(home/page.dart)でも同条件で表示自体を抑止しており、こちらは表示中のデータ更新に対する防御
+                if (!endedPillSheetTakenSummaryAvailable(pillSheetGroup: pillSheetGroup, histories: histories)) {
+                  return const SizedBox.shrink();
+                }
+                final summary = endedPillSheetTakenSummary(
+                  pillSheetGroup: pillSheetGroup,
+                  // 日付範囲だけでは別グループ（削除して作り直した場合など）の履歴が混ざるため、対象グループの履歴に絞る
+                  histories: histories.where((history) => history.afterPillSheetGroup?.id == pillSheetGroup.id).toList(),
+                );
+                return Text(
+                  L.endedPillSheetDialogSummaryMessage(summary.recordedDays, summary.missedDays),
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 16,
+                    color: TextColor.main,
+                  ),
+                );
+              },
+              error: (error, _) => Text(
+                error.toString(),
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 16,
+                  color: TextColor.main,
+                ),
+              ),
+              loading: () => const Center(child: Indicator()),
+            ),
+      ],
+    );
+  }
+}

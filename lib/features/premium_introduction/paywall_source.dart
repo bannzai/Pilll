@@ -34,6 +34,8 @@ enum PaywallSource {
   specialOfferingBar2,
   lifetimeOfferBar,
   lifetimeOfferAppLaunch,
+  endedPillSheetDialogHistory,
+  endedPillSheetDialogSummary,
 }
 
 extension PaywallSourceFunction on PaywallSource {
@@ -95,6 +97,10 @@ extension PaywallSourceFunction on PaywallSource {
         return 'lifetime_offer_bar';
       case PaywallSource.lifetimeOfferAppLaunch:
         return 'lifetime_offer_app_launch';
+      case PaywallSource.endedPillSheetDialogHistory:
+        return 'ended_pill_sheet_dialog_history';
+      case PaywallSource.endedPillSheetDialogSummary:
+        return 'ended_pill_sheet_dialog_summary';
     }
   }
 }

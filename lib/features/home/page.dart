@@ -14,6 +14,13 @@ import 'package:pilll/provider/locale.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/shared_preferences.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
+import 'package:pilll/features/ended_pill_sheet_dialog/components/history_blur_teaser.dart';
+import 'package:pilll/features/ended_pill_sheet_dialog/ended_pill_sheet_dialog.dart';
+import 'package:pilll/features/ended_pill_sheet_dialog/ended_pill_sheet_dialog_variant.dart';
+import 'package:pilll/features/ended_pill_sheet_dialog/ended_pill_sheet_taken_summary.dart';
+import 'package:pilll/features/root/resolver/show_paywall_on_app_launch.dart';
+import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/calendar/page.dart';
 import 'package:pilll/features/menstruation/page.dart';
@@ -108,6 +115,9 @@ class HomePageBody extends HookConsumerWidget {
     );
     final shouldAskCancelReason = user.shouldAskCancelReason;
     final error = useState<String?>(null);
+    // this.pillSheetGroup は field のため null promotion が効かない。useEffect 内で参照するためローカル変数化する
+    final pillSheetGroup = this.pillSheetGroup;
+    final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
 
     useEffect(() {
       WidgetsBinding.instance.addPostFrameCallback((timestamp) async {
@@ -134,6 +144,54 @@ class HomePageBody extends HookConsumerWidget {
             BoolKey.isAlreadyAnsweredPreStoreReviewModal,
             true,
           );
+        } else if (pillSheetGroup != null && pillSheetGroup.deletedAt == null && pillSheetGroup.activePillSheet == null && !user.premiumOrTrial) {
+          // ピルシートが終了した free ユーザーに、課金転換ダイアログ(A/B)を終了グループにつき1回だけ表示する。
+          // 削除済みグループ(deletedAt != null)は activePillSheet == null でも「終了」ではないため対象外
+          final variant = endedPillSheetDialogVariantFromRemoteConfig(remoteConfigParameter.endedPillSheetDialogVariant);
+          final pillSheetGroupID = pillSheetGroup.id;
+          if (variant != null &&
+              pillSheetGroupID != null &&
+              !(sharedPreferences.getBool(BoolKey.endedPillSheetDialogShown(pillSheetGroupID)) ?? false) &&
+              // 買い切りオファー等の起動時自動モーダルと同一起動で重ねて表示しない
+              !ref.read(shownPaywallOnThisAppLaunchProvider)) {
+            // ティーザー内容を提示できない場合、内容の無いダイアログで impression と表示済みフラグを消費しないよう表示自体を抑止する。
+            // historyBlur: 表示できる服用記録なし / summaryStats: 履歴TTL切れ・対象グループの履歴なし
+            final bool teaserAvailable;
+            try {
+              teaserAvailable = switch (variant) {
+                EndedPillSheetDialogVariant.historyBlur => historyBlurTeaserHistories(
+                    pillSheetGroup: pillSheetGroup,
+                    histories: await ref.read(pillSheetModifiedHistoriesWithLimitProvider(limit: historyBlurTeaserHistoriesLimit).future),
+                  ).isNotEmpty,
+                EndedPillSheetDialogVariant.summaryStats => endedPillSheetTakenSummaryAvailable(
+                    pillSheetGroup: pillSheetGroup,
+                    histories: await ref.read(pillSheetModifiedHistoriesWithRangeProvider(
+                      begin: pillSheetGroup.pillSheets.first.beginDate,
+                      end: pillSheetGroup.pillSheets.last.estimatedEndTakenDate,
+                    ).future),
+                  ),
+              };
+            } catch (exception) {
+              // ティーザー内容の有無を判定できないため表示しない。フラグ未保存のため次回起動時に再判定される
+              debugPrint('Failed to load histories for ended pill sheet dialog: $exception');
+              return;
+            }
+            if (!teaserAvailable || !context.mounted) {
+              return;
+            }
+            // 履歴取得の await 中に別の起動時自動モーダルが表示された場合に重ならないよう、表示直前に共有フラグを再確認する
+            if (ref.read(shownPaywallOnThisAppLaunchProvider)) {
+              return;
+            }
+            // 同一起動で後続の起動時自動モーダル（買い切りオファー等）が重ねて表示されないよう共有フラグを立てる
+            ref.read(shownPaywallOnThisAppLaunchProvider.notifier).state = true;
+            await showEndedPillSheetDialog(context, variant: variant, pillSheetGroup: pillSheetGroup);
+            final saved = await sharedPreferences.setBool(BoolKey.endedPillSheetDialogShown(pillSheetGroupID), true);
+            if (!saved) {
+              // 保存に失敗すると同じ終了グループで再表示される可能性があるため、失敗をログに残す
+              debugPrint('Failed to persist endedPillSheetDialogShown for $pillSheetGroupID');
+            }
+          }
         }
       });
 

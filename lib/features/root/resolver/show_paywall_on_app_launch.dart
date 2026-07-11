@@ -11,10 +11,11 @@ import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 
-/// 同一起動内で起動時ペイウォールを表示済みかどうか
+/// 同一起動内で起動時の自動モーダル（起動時ペイウォール・買い切りオファー・ピルシート終了ダイアログ）を
+/// いずれか表示済みかどうか
 ///
-/// 他の起動時自動モーダル（例: ShowLifetimeOfferOnAppLaunch）が同一起動で重ねて表示されるのを避けるための、
-/// アプリプロセス内でのみ保持するフラグ。永続化はしない。
+/// 起動時自動モーダル同士が同一起動で重ねて表示されるのを避けるための、
+/// アプリプロセス内でのみ保持するフラグ。表示する側が表示直前に立てる。永続化はしない。
 final shownPaywallOnThisAppLaunchProvider = StateProvider<bool>((ref) => false);
 
 class ShowPaywallOnAppLaunch extends HookConsumerWidget {
