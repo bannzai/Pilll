@@ -303,25 +303,40 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   }
 }
 
-/// takenPill / automaticallyRecordedLastTakenDate の履歴が記録対象とした日付（日付のみに正規化）を返す。
+/// takenPill / automaticallyRecordedLastTakenDate の履歴が記録対象としたピル日付
+/// （before/after の lastTakenDate 差分。日付のみに正規化）を返す。
 /// まとめ記録では1回の操作で複数日分のピルが記録され、履歴の日時は操作時刻になるため、
 /// 操作日ではなく記録対象日 = (記録前の最終服用日, 記録後の最終服用日] を展開する。
 /// 記録前の最終服用日が無い（初回記録）場合はシート開始日から展開する。
-/// 服用日時が編集された履歴は before/after の lastTakenDate が編集前のままのため、編集後の履歴日時を記録日とみなす。
-/// グループ情報の無い過去の履歴も記録対象日を特定できないため履歴日時を記録日とみなす。
-List<DateTime> takenPillHistoryTargetDates(PillSheetModifiedHistory history) {
+/// 2錠飲み等で同じピル日に2回目を記録した履歴は lastTakenDate が変わらないため、その日を返す。
+/// グループ情報の無い過去の履歴は記録対象日を特定できないため履歴日時を記録日とみなす。
+List<DateTime> _takenPillLastTakenRangeDates(PillSheetModifiedHistory history) {
   final afterPillSheet = history.afterPillSheetGroup?.lastTakenPillSheetOrFirstPillSheet;
   final afterLastTakenDate = afterPillSheet?.lastTakenDate;
-  if (history.value.takenPill?.edited != null || afterPillSheet == null || afterLastTakenDate == null) {
+  if (afterPillSheet == null || afterLastTakenDate == null) {
     return [history.estimatedEventCausingDate.date()];
   }
   final exclusiveFloorDate = (history.beforePillSheetGroup?.lastTakenPillSheetOrFirstPillSheet.lastTakenDate ??
           afterPillSheet.beginDate.subtract(const Duration(days: 1)))
       .date();
-  return [
+  final rangeDates = [
     for (var takenDate = afterLastTakenDate.date(); takenDate.isAfter(exclusiveFloorDate); takenDate = takenDate.subtract(const Duration(days: 1)))
       takenDate,
   ];
+  if (rangeDates.isEmpty) {
+    return [afterLastTakenDate.date()];
+  }
+  return rangeDates;
+}
+
+/// takenPill / automaticallyRecordedLastTakenDate の履歴が服用記録日として集計される日付（日付のみに正規化）を返す。
+/// 基本は記録対象のピル日付（[_takenPillLastTakenRangeDates]）。
+/// 服用日時が編集された履歴は before/after の lastTakenDate が編集前のままのため、編集後の履歴日時を記録日とみなす。
+List<DateTime> takenPillHistoryTargetDates(PillSheetModifiedHistory history) {
+  if (history.value.takenPill?.edited != null) {
+    return [history.estimatedEventCausingDate.date()];
+  }
+  return _takenPillLastTakenRangeDates(history);
 }
 
 /// 渡されたPillSheetModifiedHistory配列から、服用予定日（集計期間の全日 − 服用お休み日）と
@@ -358,6 +373,9 @@ List<DateTime> takenPillHistoryTargetDates(PillSheetModifiedHistory history) {
 
   // takenPill || automaticallyRecordedLastTakenDate アクションの日付を収集
   final takenDates = <DateTime>{};
+  // 服用日時が編集された履歴は編集後の日付で takenDates に入る一方、取り消しは元のピル日付を対象とするため、
+  // 元のピル日付 → 編集後の記録日の対応を保持して取り消し時に編集後の日付も除外できるようにする
+  final editedTakenDatesByOriginalDate = <DateTime, List<DateTime>>{};
   // beganRestDuration から endedRestDuration の間の日付を収集
   final restDurationDates = <DateTime>{};
 
@@ -367,7 +385,13 @@ List<DateTime> takenPillHistoryTargetDates(PillSheetModifiedHistory history) {
     final date = history.estimatedEventCausingDate.date();
     if (history.actionType == PillSheetModifiedActionType.takenPill.name ||
         history.actionType == PillSheetModifiedActionType.automaticallyRecordedLastTakenDate.name) {
-      takenDates.addAll(takenPillHistoryTargetDates(history));
+      final targetDates = takenPillHistoryTargetDates(history);
+      takenDates.addAll(targetDates);
+      if (history.value.takenPill?.edited != null) {
+        for (final originalDate in _takenPillLastTakenRangeDates(history)) {
+          editedTakenDatesByOriginalDate.putIfAbsent(originalDate, () => []).addAll(targetDates);
+        }
+      }
     }
 
     // 服用記録の取り消しを反映する。取り消された日 = (取り消し後の最終服用日, 取り消し前の最終服用日] の範囲。
@@ -376,10 +400,15 @@ List<DateTime> takenPillHistoryTargetDates(PillSheetModifiedHistory history) {
       final beforeLastTakenDate = history.beforePillSheetGroup?.lastTakenPillSheetOrFirstPillSheet.lastTakenDate;
       if (beforeLastTakenDate != null) {
         final afterLastTakenDate = history.afterPillSheetGroup?.lastTakenPillSheetOrFirstPillSheet.lastTakenDate;
-        takenDates.removeWhere(
-          (takenDate) =>
-              (afterLastTakenDate == null || takenDate.isAfter(afterLastTakenDate.date())) && !takenDate.isAfter(beforeLastTakenDate.date()),
-        );
+        bool isRevertedDate(DateTime takenDate) =>
+            (afterLastTakenDate == null || takenDate.isAfter(afterLastTakenDate.date())) && !takenDate.isAfter(beforeLastTakenDate.date());
+        takenDates.removeWhere(isRevertedDate);
+        // 編集済み履歴の記録は編集後の日付で takenDates に入っているため、元のピル日付が取り消し範囲なら編集後の日付も除外する
+        for (final entry in editedTakenDatesByOriginalDate.entries) {
+          if (isRevertedDate(entry.key)) {
+            entry.value.forEach(takenDates.remove);
+          }
+        }
       }
     }
 

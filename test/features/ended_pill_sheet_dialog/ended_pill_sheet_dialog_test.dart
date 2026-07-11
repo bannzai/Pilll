@@ -198,6 +198,39 @@ void main() {
       expect(find.byType(PillSheetModifiedHistoryTakenPillAction), findsOneWidget);
     });
 
+    testWidgets('一部だけ取り消されたまとめ記録の行は表示されない', (tester) async {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse('2020-09-29'));
+
+      final histories = [
+        // 9/28 の記録だけを取り消し（lastTakenDate: 9/28 → 9/27）
+        _revertHistory(
+          groupID: 'group_id',
+          date: DateTime(2020, 9, 28, 20),
+          beforeLastTakenDate: DateTime(2020, 9, 28),
+          afterLastTakenDate: DateTime(2020, 9, 27),
+        ),
+        // 9/28 の操作で 9/26〜9/28 の3日分をまとめて記録（lastTakenDate: 9/25 → 9/28）
+        PillSheetModifiedHistory(
+          id: 'taken_bulk',
+          actionType: PillSheetModifiedActionType.takenPill.name,
+          estimatedEventCausingDate: DateTime(2020, 9, 28, 10),
+          createdAt: DateTime(2020, 9, 28, 10),
+          value: const PillSheetModifiedHistoryValue(takenPill: TakenPillValue()),
+          beforePillSheetGroup: _pillSheetGroup(id: 'group_id', lastTakenDate: DateTime(2020, 9, 25)),
+          afterPillSheetGroup: _pillSheetGroup(id: 'group_id', lastTakenDate: DateTime(2020, 9, 28)),
+        ),
+      ];
+
+      await tester.pumpWidget(buildTeaser(histories: histories, pillSheetGroup: _pillSheetGroup()));
+      await tester.pump();
+
+      // まとめ記録の行表示は afterPillSheetGroup（9/28 まで記録済み）ベースのため、
+      // 一部が取り消された状態では実態とずれる。記録対象日が全て残っている履歴のみ表示する
+      expect(find.byType(PillSheetModifiedHistoryTakenPillAction), findsNothing);
+    });
+
     testWidgets('履歴の読み込み中は服用記録行を表示せずインジケータを表示する', (tester) async {
       await tester.pumpWidget(
         ProviderScope(
