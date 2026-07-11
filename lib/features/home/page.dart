@@ -140,8 +140,9 @@ class HomePageBody extends HookConsumerWidget {
             BoolKey.isAlreadyAnsweredPreStoreReviewModal,
             true,
           );
-        } else if (pillSheetGroup != null && pillSheetGroup.activePillSheet == null && !user.premiumOrTrial) {
-          // ピルシートが終了した free ユーザーに、課金転換ダイアログ(A/B)を終了グループにつき1回だけ表示する
+        } else if (pillSheetGroup != null && pillSheetGroup.deletedAt == null && pillSheetGroup.activePillSheet == null && !user.premiumOrTrial) {
+          // ピルシートが終了した free ユーザーに、課金転換ダイアログ(A/B)を終了グループにつき1回だけ表示する。
+          // 削除済みグループ(deletedAt != null)は activePillSheet == null でも「終了」ではないため対象外
           final variant = endedPillSheetDialogVariantFromRemoteConfig(remoteConfigParameter.endedPillSheetDialogVariant);
           final pillSheetGroupID = pillSheetGroup.id;
           if (variant != null &&

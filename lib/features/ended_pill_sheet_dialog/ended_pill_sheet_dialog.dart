@@ -75,7 +75,7 @@ class EndedPillSheetDialog extends StatelessWidget {
               ),
             ),
             switch (variant) {
-              EndedPillSheetDialogVariant.historyBlur => const HistoryBlurTeaser(),
+              EndedPillSheetDialogVariant.historyBlur => HistoryBlurTeaser(pillSheetGroup: pillSheetGroup),
               EndedPillSheetDialogVariant.summaryStats => SummaryStatsTeaser(pillSheetGroup: pillSheetGroup),
             },
             const SizedBox(height: 20),

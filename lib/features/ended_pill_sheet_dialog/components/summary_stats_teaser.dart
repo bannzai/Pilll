@@ -4,9 +4,11 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/features/ended_pill_sheet_dialog/ended_pill_sheet_taken_summary.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
+import 'package:pilll/utils/datetime/day.dart';
 
 /// Variant B: 服用記録の集計メッセージティーザー。
 /// 終了したピルシートグループの服用記録できた日数・記録漏れ日数を集計して表示する。
@@ -36,6 +38,13 @@ class SummaryStatsTeaser extends ConsumerWidget {
             ))
             .when(
               data: (histories) {
+                // 履歴は作成から limitDays(180日) の TTL で削除される。集計開始日が TTL 窓の外にある場合、
+                // 期間前半の履歴だけが削除されている可能性があり、消えた服用日を記録漏れとして誤集計するため集計メッセージを出さない
+                if (!pillSheetGroup.pillSheets.first.beginDate
+                    .date()
+                    .isAfter(today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)))) {
+                  return const SizedBox.shrink();
+                }
                 // 日付範囲だけでは別グループ（削除して作り直した場合など）の履歴が混ざるため、対象グループの履歴に絞る
                 final groupHistories = histories.where((history) => history.afterPillSheetGroup?.id == pillSheetGroup.id).toList();
                 // 履歴は TTL（PillSheetModifiedHistoryServiceActionFactory.limitDays = 180日）で削除されるため、
