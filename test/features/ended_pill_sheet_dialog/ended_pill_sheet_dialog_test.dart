@@ -174,6 +174,30 @@ void main() {
       expect(find.byType(PillSheetModifiedHistoryTakenPillAction), findsNWidgets(2));
     });
 
+    testWidgets('過去日のピルを後から記録した履歴（操作日と記録対象日が異なる）も表示される', (tester) async {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse('2020-09-29'));
+
+      final histories = [
+        // 9/28 の操作で 9/27 分のピルを記録（lastTakenDate: 9/26 → 9/27）
+        PillSheetModifiedHistory(
+          id: 'taken_past_day',
+          actionType: PillSheetModifiedActionType.takenPill.name,
+          estimatedEventCausingDate: DateTime(2020, 9, 28, 10),
+          createdAt: DateTime(2020, 9, 28, 10),
+          value: const PillSheetModifiedHistoryValue(takenPill: TakenPillValue()),
+          beforePillSheetGroup: _pillSheetGroup(id: 'group_id', lastTakenDate: DateTime(2020, 9, 26)),
+          afterPillSheetGroup: _pillSheetGroup(id: 'group_id', lastTakenDate: DateTime(2020, 9, 27)),
+        ),
+      ];
+
+      await tester.pumpWidget(buildTeaser(histories: histories, pillSheetGroup: _pillSheetGroup()));
+      await tester.pump();
+
+      expect(find.byType(PillSheetModifiedHistoryTakenPillAction), findsOneWidget);
+    });
+
     testWidgets('履歴の読み込み中は服用記録行を表示せずインジケータを表示する', (tester) async {
       await tester.pumpWidget(
         ProviderScope(

@@ -179,6 +179,10 @@ class HomePageBody extends HookConsumerWidget {
             if (!teaserAvailable || !context.mounted) {
               return;
             }
+            // 履歴取得の await 中に別の起動時自動モーダルが表示された場合に重ならないよう、表示直前に共有フラグを再確認する
+            if (ref.read(shownPaywallOnThisAppLaunchProvider)) {
+              return;
+            }
             // 同一起動で後続の起動時自動モーダル（買い切りオファー等）が重ねて表示されないよう共有フラグを立てる
             ref.read(shownPaywallOnThisAppLaunchProvider.notifier).state = true;
             await showEndedPillSheetDialog(context, variant: variant, pillSheetGroup: pillSheetGroup);

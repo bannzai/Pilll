@@ -303,6 +303,27 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   }
 }
 
+/// takenPill / automaticallyRecordedLastTakenDate の履歴が記録対象とした日付（日付のみに正規化）を返す。
+/// まとめ記録では1回の操作で複数日分のピルが記録され、履歴の日時は操作時刻になるため、
+/// 操作日ではなく記録対象日 = (記録前の最終服用日, 記録後の最終服用日] を展開する。
+/// 記録前の最終服用日が無い（初回記録）場合はシート開始日から展開する。
+/// 服用日時が編集された履歴は before/after の lastTakenDate が編集前のままのため、編集後の履歴日時を記録日とみなす。
+/// グループ情報の無い過去の履歴も記録対象日を特定できないため履歴日時を記録日とみなす。
+List<DateTime> takenPillHistoryTargetDates(PillSheetModifiedHistory history) {
+  final afterPillSheet = history.afterPillSheetGroup?.lastTakenPillSheetOrFirstPillSheet;
+  final afterLastTakenDate = afterPillSheet?.lastTakenDate;
+  if (history.value.takenPill?.edited != null || afterPillSheet == null || afterLastTakenDate == null) {
+    return [history.estimatedEventCausingDate.date()];
+  }
+  final exclusiveFloorDate = (history.beforePillSheetGroup?.lastTakenPillSheetOrFirstPillSheet.lastTakenDate ??
+          afterPillSheet.beginDate.subtract(const Duration(days: 1)))
+      .date();
+  return [
+    for (var takenDate = afterLastTakenDate.date(); takenDate.isAfter(exclusiveFloorDate); takenDate = takenDate.subtract(const Duration(days: 1)))
+      takenDate,
+  ];
+}
+
 /// 渡されたPillSheetModifiedHistory配列から、服用予定日（集計期間の全日 − 服用お休み日）と
 /// 服用記録のあった日の集合を構築する。集計対象が無い場合は null を返す。
 /// 日付はすべて日付のみ（午前0時）に正規化して集合化する。時刻付きのまま差分すると服用日が一致せず記録が漏れるため。
@@ -346,22 +367,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     final date = history.estimatedEventCausingDate.date();
     if (history.actionType == PillSheetModifiedActionType.takenPill.name ||
         history.actionType == PillSheetModifiedActionType.automaticallyRecordedLastTakenDate.name) {
-      final afterPillSheet = history.afterPillSheetGroup?.lastTakenPillSheetOrFirstPillSheet;
-      final afterLastTakenDate = afterPillSheet?.lastTakenDate;
-      if (afterPillSheet != null && afterLastTakenDate != null) {
-        // まとめ記録では1回の操作で複数日分のピルが記録され、履歴の日時は操作時刻になるため、
-        // 操作日ではなく記録対象日 = (記録前の最終服用日, 記録後の最終服用日] を展開して集計する。
-        // 記録前の最終服用日が無い（初回記録）場合はシート開始日から展開する
-        final exclusiveFloorDate = (history.beforePillSheetGroup?.lastTakenPillSheetOrFirstPillSheet.lastTakenDate ??
-                afterPillSheet.beginDate.subtract(const Duration(days: 1)))
-            .date();
-        for (var takenDate = afterLastTakenDate.date(); takenDate.isAfter(exclusiveFloorDate); takenDate = takenDate.subtract(const Duration(days: 1))) {
-          takenDates.add(takenDate);
-        }
-      } else {
-        // グループ情報の無い過去の履歴では記録対象日を特定できないため、従来どおり履歴の日付を記録日とみなす
-        takenDates.add(date);
-      }
+      takenDates.addAll(takenPillHistoryTargetDates(history));
     }
 
     // 服用記録の取り消しを反映する。取り消された日 = (取り消し後の最終服用日, 取り消し前の最終服用日] の範囲。

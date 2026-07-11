@@ -27,9 +27,10 @@ List<PillSheetModifiedHistory> historyBlurTeaserHistories({
   // 取り消し(revertTakenPill)を反映した最終的な服用記録日の集合。取り消されたままの服用記録をティーザーに表示しないために使う。
   // maxDate は服用予定日(scheduledDates)の構築にのみ影響し takenDates には影響しない
   final takenDates = pillTakenDateSets(histories: groupHistories, maxDate: today())?.takenDates ?? {};
+  // 過去日のピルを後から記録した履歴は操作日と記録対象日が異なるため、記録対象日で照合する
   return groupHistories
       .where((history) =>
-          history.enumActionType == PillSheetModifiedActionType.takenPill && takenDates.contains(history.estimatedEventCausingDate.date()))
+          history.enumActionType == PillSheetModifiedActionType.takenPill && takenPillHistoryTargetDates(history).any(takenDates.contains))
       .take(3)
       .toList();
 }
