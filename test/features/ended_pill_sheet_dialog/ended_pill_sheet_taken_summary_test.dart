@@ -158,6 +158,41 @@ void main() {
       expect(result.recordedDays, 2);
       expect(result.missedDays, 26);
     });
+
+    test('複数日分をまとめて記録した場合、記録対象の全日が recordedDays に含まれる', () {
+      final begin = DateTime(2020, 9, 1);
+      final result = endedPillSheetTakenSummary(
+        pillSheetGroup: _pillSheetGroup(
+          pillSheetType: PillSheetType.pillsheet_28_0,
+          beginDate: begin,
+          lastTakenDate: DateTime(2020, 9, 3),
+        ),
+        histories: [
+          // 9/3 の操作で 9/1〜9/3 の3日分を初回まとめ記録（lastTakenDate: null → 9/3）。
+          // 履歴の日時は操作時刻なので、記録対象日は before/after の lastTakenDate 差分から展開される
+          PillSheetModifiedHistory(
+            id: 'taken_bulk',
+            actionType: PillSheetModifiedActionType.takenPill.name,
+            estimatedEventCausingDate: DateTime(2020, 9, 3, 21),
+            createdAt: DateTime(2020, 9, 3, 21),
+            value: const PillSheetModifiedHistoryValue(takenPill: TakenPillValue()),
+            beforePillSheetGroup: _pillSheetGroup(
+              pillSheetType: PillSheetType.pillsheet_28_0,
+              beginDate: begin,
+              lastTakenDate: null,
+            ),
+            afterPillSheetGroup: _pillSheetGroup(
+              pillSheetType: PillSheetType.pillsheet_28_0,
+              beginDate: begin,
+              lastTakenDate: DateTime(2020, 9, 3),
+            ),
+          ),
+        ],
+      );
+      // 9/1〜9/3 の3日が記録済み、残り25日が記録漏れ
+      expect(result.recordedDays, 3);
+      expect(result.missedDays, 25);
+    });
   });
 
   group('#endedPillSheetTakenSummaryAvailable', () {

@@ -15,9 +15,11 @@ import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
+import 'package:pilll/features/ended_pill_sheet_dialog/components/history_blur_teaser.dart';
 import 'package:pilll/features/ended_pill_sheet_dialog/ended_pill_sheet_dialog.dart';
 import 'package:pilll/features/ended_pill_sheet_dialog/ended_pill_sheet_dialog_variant.dart';
 import 'package:pilll/features/ended_pill_sheet_dialog/ended_pill_sheet_taken_summary.dart';
+import 'package:pilll/features/root/resolver/show_paywall_on_app_launch.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/calendar/page.dart';
@@ -149,27 +151,36 @@ class HomePageBody extends HookConsumerWidget {
           final pillSheetGroupID = pillSheetGroup.id;
           if (variant != null &&
               pillSheetGroupID != null &&
-              !(sharedPreferences.getBool(BoolKey.endedPillSheetDialogShown(pillSheetGroupID)) ?? false)) {
-            if (variant == EndedPillSheetDialogVariant.summaryStats) {
-              // 集計を提示できない場合（履歴TTL切れ・対象グループの履歴なし）、集計メッセージの無いダイアログで
-              // impression と表示済みフラグを消費しないよう表示自体を抑止する
-              try {
-                final histories = await ref.read(pillSheetModifiedHistoriesWithRangeProvider(
-                  begin: pillSheetGroup.pillSheets.first.beginDate,
-                  end: pillSheetGroup.pillSheets.last.estimatedEndTakenDate,
-                ).future);
-                if (!endedPillSheetTakenSummaryAvailable(pillSheetGroup: pillSheetGroup, histories: histories)) {
-                  return;
-                }
-              } catch (exception) {
-                // 集計可否を判定できないため表示しない。フラグ未保存のため次回起動時に再判定される
-                debugPrint('Failed to load histories for ended pill sheet dialog: $exception');
-                return;
-              }
-              if (!context.mounted) {
-                return;
-              }
+              !(sharedPreferences.getBool(BoolKey.endedPillSheetDialogShown(pillSheetGroupID)) ?? false) &&
+              // 買い切りオファー等の起動時自動モーダルと同一起動で重ねて表示しない
+              !ref.read(shownPaywallOnThisAppLaunchProvider)) {
+            // ティーザー内容を提示できない場合、内容の無いダイアログで impression と表示済みフラグを消費しないよう表示自体を抑止する。
+            // historyBlur: 表示できる服用記録なし / summaryStats: 履歴TTL切れ・対象グループの履歴なし
+            final bool teaserAvailable;
+            try {
+              teaserAvailable = switch (variant) {
+                EndedPillSheetDialogVariant.historyBlur => historyBlurTeaserHistories(
+                    pillSheetGroup: pillSheetGroup,
+                    histories: await ref.read(pillSheetModifiedHistoriesWithLimitProvider(limit: historyBlurTeaserHistoriesLimit).future),
+                  ).isNotEmpty,
+                EndedPillSheetDialogVariant.summaryStats => endedPillSheetTakenSummaryAvailable(
+                    pillSheetGroup: pillSheetGroup,
+                    histories: await ref.read(pillSheetModifiedHistoriesWithRangeProvider(
+                      begin: pillSheetGroup.pillSheets.first.beginDate,
+                      end: pillSheetGroup.pillSheets.last.estimatedEndTakenDate,
+                    ).future),
+                  ),
+              };
+            } catch (exception) {
+              // ティーザー内容の有無を判定できないため表示しない。フラグ未保存のため次回起動時に再判定される
+              debugPrint('Failed to load histories for ended pill sheet dialog: $exception');
+              return;
             }
+            if (!teaserAvailable || !context.mounted) {
+              return;
+            }
+            // 同一起動で後続の起動時自動モーダル（買い切りオファー等）が重ねて表示されないよう共有フラグを立てる
+            ref.read(shownPaywallOnThisAppLaunchProvider.notifier).state = true;
             await showEndedPillSheetDialog(context, variant: variant, pillSheetGroup: pillSheetGroup);
             final saved = await sharedPreferences.setBool(BoolKey.endedPillSheetDialogShown(pillSheetGroupID), true);
             if (!saved) {

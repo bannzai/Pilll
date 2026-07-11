@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
+import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
@@ -171,6 +172,26 @@ void main() {
 
       // 取り消された 9/28 は表示されず、9/27・9/26 の2件のみ表示される
       expect(find.byType(PillSheetModifiedHistoryTakenPillAction), findsNWidgets(2));
+    });
+
+    testWidgets('履歴の読み込み中は服用記録行を表示せずインジケータを表示する', (tester) async {
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
+            // 値を流さない Stream でローディング状態を維持する
+            pillSheetModifiedHistoriesWithLimitProvider(limit: historyBlurTeaserHistoriesLimit)
+                .overrideWith((ref) => const Stream<List<PillSheetModifiedHistory>>.empty()),
+          ],
+          child: MaterialApp(
+            home: Scaffold(body: HistoryBlurTeaser(pillSheetGroup: _pillSheetGroup())),
+          ),
+        ),
+      );
+      await tester.pump();
+
+      expect(find.byType(Indicator), findsOneWidget);
+      expect(find.byType(PillSheetModifiedHistoryTakenPillAction), findsNothing);
     });
   });
 

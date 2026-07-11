@@ -258,6 +258,70 @@ void main() {
       expect(result, 0);
     });
 
+    test("複数日分をまとめて記録した場合、記録対象の全日が服用済みとして扱われる", () {
+      final today = DateTime.parse("2020-09-05");
+      final baseDate = DateTime(today.year, today.month, today.day);
+      final histories = [
+        // 9/1 に通常記録（グループ情報なし = 履歴の日付がそのまま記録日）
+        PillSheetModifiedHistory(
+          id: 'taken_1',
+          actionType: PillSheetModifiedActionType.takenPill.name,
+          estimatedEventCausingDate: DateTime(2020, 9, 1),
+          createdAt: DateTime(2020, 9, 1),
+          value: const PillSheetModifiedHistoryValue(),
+          beforePillSheetGroup: null,
+          afterPillSheetGroup: null,
+        ),
+        // 9/4 の操作で 9/2〜9/4 の3日分をまとめて記録（lastTakenDate: 9/1 → 9/4）
+        PillSheetModifiedHistory(
+          id: 'taken_bulk',
+          actionType: PillSheetModifiedActionType.takenPill.name,
+          estimatedEventCausingDate: DateTime(2020, 9, 4, 20),
+          createdAt: DateTime(2020, 9, 4, 20),
+          value: const PillSheetModifiedHistoryValue(takenPill: TakenPillValue()),
+          beforePillSheetGroup: createPillSheetGroupWithLastTakenDate(DateTime(2020, 9, 1)),
+          afterPillSheetGroup: createPillSheetGroupWithLastTakenDate(DateTime(2020, 9, 4)),
+        ),
+      ];
+
+      final result = missedPillDays(histories: histories, maxDate: baseDate);
+
+      // 集計期間 9/1〜9/4 のうち、9/1 は通常記録・9/2〜9/4 はまとめ記録の対象なので飲み忘れは0日
+      expect(result, 0);
+    });
+
+    test("初回からまとめて記録した場合（記録前の最終服用日がnull）、シート開始日から記録対象日が展開される", () {
+      final today = DateTime.parse("2020-09-04");
+      final baseDate = DateTime(today.year, today.month, today.day);
+      final histories = [
+        // 集計期間の起点となる履歴（シート作成。服用記録ではない）
+        PillSheetModifiedHistory(
+          id: 'created',
+          actionType: PillSheetModifiedActionType.createdPillSheet.name,
+          estimatedEventCausingDate: DateTime(2020, 9, 1),
+          createdAt: DateTime(2020, 9, 1),
+          value: const PillSheetModifiedHistoryValue(),
+          beforePillSheetGroup: null,
+          afterPillSheetGroup: null,
+        ),
+        // 9/3 の操作で 9/1〜9/3 の3日分を初回まとめ記録（lastTakenDate: null → 9/3）
+        PillSheetModifiedHistory(
+          id: 'taken_bulk',
+          actionType: PillSheetModifiedActionType.takenPill.name,
+          estimatedEventCausingDate: DateTime(2020, 9, 3, 21),
+          createdAt: DateTime(2020, 9, 3, 21),
+          value: const PillSheetModifiedHistoryValue(takenPill: TakenPillValue()),
+          beforePillSheetGroup: createPillSheetGroupWithLastTakenDate(null),
+          afterPillSheetGroup: createPillSheetGroupWithLastTakenDate(DateTime(2020, 9, 3)),
+        ),
+      ];
+
+      final result = missedPillDays(histories: histories, maxDate: baseDate);
+
+      // 集計期間 9/1〜9/3 の全日がまとめ記録の対象（シート開始日 9/1 から展開）なので飲み忘れは0日
+      expect(result, 0);
+    });
+
     test("30日間すべて服用記録がある場合は0を返す", () {
       final today = DateTime.parse("2020-09-28");
       final baseDate = DateTime(today.year, today.month, today.day);

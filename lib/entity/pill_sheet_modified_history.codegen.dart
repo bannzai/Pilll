@@ -346,7 +346,22 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     final date = history.estimatedEventCausingDate.date();
     if (history.actionType == PillSheetModifiedActionType.takenPill.name ||
         history.actionType == PillSheetModifiedActionType.automaticallyRecordedLastTakenDate.name) {
-      takenDates.add(date);
+      final afterPillSheet = history.afterPillSheetGroup?.lastTakenPillSheetOrFirstPillSheet;
+      final afterLastTakenDate = afterPillSheet?.lastTakenDate;
+      if (afterPillSheet != null && afterLastTakenDate != null) {
+        // まとめ記録では1回の操作で複数日分のピルが記録され、履歴の日時は操作時刻になるため、
+        // 操作日ではなく記録対象日 = (記録前の最終服用日, 記録後の最終服用日] を展開して集計する。
+        // 記録前の最終服用日が無い（初回記録）場合はシート開始日から展開する
+        final exclusiveFloorDate = (history.beforePillSheetGroup?.lastTakenPillSheetOrFirstPillSheet.lastTakenDate ??
+                afterPillSheet.beginDate.subtract(const Duration(days: 1)))
+            .date();
+        for (var takenDate = afterLastTakenDate.date(); takenDate.isAfter(exclusiveFloorDate); takenDate = takenDate.subtract(const Duration(days: 1))) {
+          takenDates.add(takenDate);
+        }
+      } else {
+        // グループ情報の無い過去の履歴では記録対象日を特定できないため、従来どおり履歴の日付を記録日とみなす
+        takenDates.add(date);
+      }
     }
 
     // 服用記録の取り消しを反映する。取り消された日 = (取り消し後の最終服用日, 取り消し前の最終服用日] の範囲。

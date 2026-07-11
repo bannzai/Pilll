@@ -41,6 +41,8 @@ class ShowLifetimeOfferOnAppLaunch extends HookConsumerWidget {
           if (!context.mounted) {
             return;
           }
+          // 同一起動で後続の起動時自動モーダル（ピルシート終了ダイアログ等）が重ねて表示されないよう共有フラグを立てる
+          ref.read(shownPaywallOnThisAppLaunchProvider.notifier).state = true;
           // 表示期限の起点となる初回表示時刻を記録する
           await setLifetimeOfferFirstDisplayedDateTimeIfAbsent(ref);
           // 表示条件の再評価等でcallbackが複数回走っても二重表示しないよう、表示前にフラグを立てる
