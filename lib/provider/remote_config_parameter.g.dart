@@ -6,7 +6,7 @@ part of 'remote_config_parameter.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$remoteConfigParameterHash() => r'd1bcaf0310d883e9769a1b4d2e35154eab26506d';
+String _$remoteConfigParameterHash() => r'b1c92c35885cfa20dd9d093446a3d25a1ecd93b4';
 
 /// See also [remoteConfigParameter].
 @ProviderFor(remoteConfigParameter)

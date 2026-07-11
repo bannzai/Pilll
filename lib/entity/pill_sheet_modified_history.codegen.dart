@@ -316,9 +316,9 @@ List<DateTime> _takenPillLastTakenRangeDates(PillSheetModifiedHistory history) {
   if (afterPillSheet == null || afterLastTakenDate == null) {
     return [history.estimatedEventCausingDate.date()];
   }
-  final exclusiveFloorDate = (history.beforePillSheetGroup?.lastTakenPillSheetOrFirstPillSheet.lastTakenDate ??
-          afterPillSheet.beginDate.subtract(const Duration(days: 1)))
-      .date();
+  final exclusiveFloorDate =
+      (history.beforePillSheetGroup?.lastTakenPillSheetOrFirstPillSheet.lastTakenDate ?? afterPillSheet.beginDate.subtract(const Duration(days: 1)))
+          .date();
   final rangeDates = [
     for (var takenDate = afterLastTakenDate.date(); takenDate.isAfter(exclusiveFloorDate); takenDate = takenDate.subtract(const Duration(days: 1)))
       takenDate,

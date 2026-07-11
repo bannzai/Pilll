@@ -31,6 +31,7 @@ import 'package:pilll/provider/locale.dart';
 import 'package:pilll/provider/tick.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/auth.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
@@ -76,6 +77,9 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
+    // 一部のバー(LifetimeOfferなど)は表示時にanalytics.setUserProperties(try/catch無し)を呼ぶため、
+    // Firebase未初期化のテストで例外にならないようFakeに差し替える
+    analytics = FakeAnalytics();
     for (var element in RendererBinding.instance.renderViews) {
       element.configuration = TestViewConfiguration.fromView(
         view: WidgetsBinding.instance.platformDispatcher.views.single,

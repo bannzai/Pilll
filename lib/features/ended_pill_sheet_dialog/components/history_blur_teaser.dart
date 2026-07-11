@@ -30,13 +30,16 @@ List<PillSheetModifiedHistory> historyBlurTeaserHistories({
   // 過去日のピルを後から記録した履歴は操作日と記録対象日が異なるため、記録対象日で照合する。
   // 一部だけ取り消されたまとめ記録は行表示（afterPillSheetGroup ベース）が実態とずれるため、
   // 記録対象日の全てが取り消されず残っている履歴だけを表示する
-  return groupHistories.where((history) {
-    if (history.enumActionType != PillSheetModifiedActionType.takenPill) {
-      return false;
-    }
-    final targetDates = takenPillHistoryTargetDates(history);
-    return targetDates.isNotEmpty && targetDates.every(takenDates.contains);
-  }).take(3).toList();
+  return groupHistories
+      .where((history) {
+        if (history.enumActionType != PillSheetModifiedActionType.takenPill) {
+          return false;
+        }
+        final targetDates = takenPillHistoryTargetDates(history);
+        return targetDates.isNotEmpty && targetDates.every(takenDates.contains);
+      })
+      .take(3)
+      .toList();
 }
 
 /// Variant A: ピルシート履歴のぼかしティーザー。

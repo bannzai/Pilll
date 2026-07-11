@@ -53,6 +53,9 @@ abstract class RemoteConfigKeys {
   /// 買い切りオファーの表示期間（時間単位）キー
   static const lifetimeOfferDurationHours = 'lifetimeOfferDurationHours';
 
+  /// 買い切りオファーの訴求コピーのA/Bテストバリアント識別子キー
+  static const lifetimeOfferCopyVariant = 'lifetimeOfferCopyVariant';
+
   /// ピルシート終了ダイアログの A/B バリアント識別子キー
   static const endedPillSheetDialogVariant = 'endedPillSheetDialogVariant';
 }
@@ -108,6 +111,10 @@ abstract class RemoteConfigParameterDefaultValues {
 
   /// 買い切りオファーを初回表示から24時間表示する
   static const lifetimeOfferDurationHours = 24;
+
+  // default(A) or ownership(B) ...
+  /// 買い切りオファーの訴求コピーバリアントのデフォルト値（A/Bテスト用）
+  static const lifetimeOfferCopyVariant = 'default';
 
   /// ピルシート終了ダイアログのバリアント（空文字 = 実験未参加 / 非表示）
   static const endedPillSheetDialogVariant = '';
@@ -205,6 +212,10 @@ class RemoteConfigParameter with _$RemoteConfigParameter {
       RemoteConfigParameterDefaultValues.lifetimeOfferDurationHours,
     )
     int lifetimeOfferDurationHours,
+
+    /// 買い切りオファーの訴求コピーのA/Bテストバリアント識別子
+    /// バー・オファー画面の文言を切り替える（'default', 'ownership'等）
+    @Default(RemoteConfigParameterDefaultValues.lifetimeOfferCopyVariant) String lifetimeOfferCopyVariant,
 
     /// ピルシート終了ダイアログの A/B バリアント識別子
     /// 'history_blur' / 'summary_stats' / '' (非表示)。Firebase A/B Testing で配信する

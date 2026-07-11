@@ -66,6 +66,10 @@ RemoteConfigParameter remoteConfigParameter(RemoteConfigParameterRef ref) {
       RemoteConfigKeys.lifetimeOfferDurationHours,
       RemoteConfigParameterDefaultValues.lifetimeOfferDurationHours,
     ),
+    lifetimeOfferCopyVariant: remoteConfig.getStringOrDefault(
+      RemoteConfigKeys.lifetimeOfferCopyVariant,
+      RemoteConfigParameterDefaultValues.lifetimeOfferCopyVariant,
+    ),
     endedPillSheetDialogVariant: remoteConfig.getStringOrDefault(
       RemoteConfigKeys.endedPillSheetDialogVariant,
       RemoteConfigParameterDefaultValues.endedPillSheetDialogVariant,
@@ -92,7 +96,8 @@ extension RemoteConfigExt on FirebaseRemoteConfig {
 
   String getStringOrDefault(String key, String defaultValue) {
     try {
-      return getAll().containsKey(key) ? getString(key) : defaultValue;
+      // getStringは未設定時に空文字を返すため、空文字ならデフォルトにフォールバックする
+      return getString(key).isEmpty ? defaultValue : getString(key);
     } catch (error) {
       return defaultValue;
     }
