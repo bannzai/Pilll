@@ -9,6 +9,7 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/error/page.dart';
+import 'package:pilll/features/lifetime_offer/lifetime_offer_copy_variant.dart';
 import 'package:pilll/features/lifetime_offer/provider.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_footer.dart';
@@ -26,9 +27,11 @@ import 'package:url_launcher/url_launcher.dart';
 /// 利用開始から約1年になる約1ヶ月前のユーザーへ、割引版の買い切りプランを期間限定で訴求するオファー画面
 class LifetimeOfferPage extends HookConsumerWidget {
   final PaywallSource source;
+  final LifetimeOfferCopyVariant copyVariant;
   const LifetimeOfferPage({
     super.key,
     required this.source,
+    required this.copyVariant,
   });
 
   @override
@@ -38,6 +41,7 @@ class LifetimeOfferPage extends HookConsumerWidget {
             return LifetimeOfferPageBody(
               user: user,
               source: source,
+              copyVariant: copyVariant,
             );
           },
           error: (error, stackTrace) => UniversalErrorPage(
@@ -55,11 +59,13 @@ class LifetimeOfferPage extends HookConsumerWidget {
 class LifetimeOfferPageBody extends HookConsumerWidget {
   final User user;
   final PaywallSource source;
+  final LifetimeOfferCopyVariant copyVariant;
 
   const LifetimeOfferPageBody({
     super.key,
     required this.user,
     required this.source,
+    required this.copyVariant,
   });
 
   @override
@@ -92,6 +98,7 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
           onPressed: () {
             analytics.logEvent(
               name: 'lifetime_offer_close_button_tapped',
+              parameters: {'copy_variant': copyVariant.value},
             );
             // オファーは表示期限まで有効でバーから再度開けるため、確認なしで閉じる
             Navigator.of(context).pop();
@@ -159,10 +166,13 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
                   ),
                 ],
                 const SizedBox(height: 12),
-                const Text(
-                  '長く使ってくださっている方へ\n買い切りプランのご案内です',
+                Text(
+                  switch (copyVariant) {
+                    LifetimeOfferCopyVariant.defaultVariant => '長く使ってくださっている方へ\n買い切りプランのご案内です',
+                    LifetimeOfferCopyVariant.ownership => '一度の購入で、ずっとプレミアム。\n月々のお支払いは不要です',
+                  },
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: TextColor.main,
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w400,
@@ -205,7 +215,7 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
                           : () async {
                               analytics.logEvent(
                                 name: 'pressed_lifetime_purchase_button',
-                                parameters: {'paywall_source': source.value},
+                                parameters: {'paywall_source': source.value, 'copy_variant': copyVariant.value},
                               );
                               if (isLoading.value) return;
                               isLoading.value = true;
@@ -432,18 +442,21 @@ class LifetimeOfferSubscriptionCancelNotice extends StatelessWidget {
 Future<void> showLifetimeOfferPage(
   BuildContext context, {
   required PaywallSource source,
+  required LifetimeOfferCopyVariant copyVariant,
 }) async {
   analytics.logScreenView(screenName: 'LifetimeOfferPage');
   analytics.logEvent(
     name: 'paywall_viewed',
-    parameters: {'paywall_source': source.value},
+    parameters: {'paywall_source': source.value, 'copy_variant': copyVariant.value},
   );
+  analytics.setUserProperties('lifetime_offer_variant', copyVariant.value);
 
   await Navigator.of(context).push(
     MaterialPageRoute(
       fullscreenDialog: true,
       builder: (_) => LifetimeOfferPage(
         source: source,
+        copyVariant: copyVariant,
       ),
     ),
   );

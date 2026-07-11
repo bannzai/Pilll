@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/feature_appeal/feature_appeal_bars_container.dart';
+import 'package:pilll/features/lifetime_offer/lifetime_offer_copy_variant.dart';
 import 'package:pilll/features/lifetime_offer/provider.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/lifetime_offer.dart';
@@ -208,7 +209,9 @@ class AnnouncementBar extends HookConsumerWidget {
         }
 
         if (shouldShowLifetimeOffer) {
-          return const LifetimeOfferAnnouncementBar();
+          return LifetimeOfferAnnouncementBar(
+            copyVariant: LifetimeOfferCopyVariant.fromString(remoteConfigParameter.lifetimeOfferCopyVariant),
+          );
         }
 
         if (userBeginDate != null &&
@@ -246,7 +249,9 @@ class AnnouncementBar extends HookConsumerWidget {
 
       // 買い切りオファーは課金/非課金問わず全ユーザー対象のためプレミアム側にも表示する
       if (shouldShowLifetimeOffer) {
-        return const LifetimeOfferAnnouncementBar();
+        return LifetimeOfferAnnouncementBar(
+          copyVariant: LifetimeOfferCopyVariant.fromString(remoteConfigParameter.lifetimeOfferCopyVariant),
+        );
       }
 
       // 2. アカウント登録推奨

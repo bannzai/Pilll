@@ -35,6 +35,7 @@ Future<void> setupRemoteConfig() async {
         RemoteConfigKeys.lifetimeOfferUserCreationDaysSince: RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysSince,
         RemoteConfigKeys.lifetimeOfferUserCreationDaysUntil: RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysUntil,
         RemoteConfigKeys.lifetimeOfferDurationHours: RemoteConfigParameterDefaultValues.lifetimeOfferDurationHours,
+        RemoteConfigKeys.lifetimeOfferCopyVariant: RemoteConfigParameterDefaultValues.lifetimeOfferCopyVariant,
       }),
     ).wait;
     // 項目が増えて来てfetchが重たくなっていてアプリが開かない説があるので非同期にする。計測はしてない。since: 2025-06-25

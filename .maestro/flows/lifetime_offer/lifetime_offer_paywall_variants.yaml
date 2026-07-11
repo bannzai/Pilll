@@ -1,0 +1,80 @@
+appId: com.mizuki.Ohashi.Pilll.dev
+---
+# 設定タブ > 開発者オプションの debug row から、買い切りオファー Paywall の
+# 文言バリアント(default/ownership)A/Bテストの表示を確認するフロー。
+# 対象実装:
+#   lib/features/settings/components/rows/lifetime_offer_paywall_row.dart (debug row / 2段階選択ダイアログ)
+#   lib/features/lifetime_offer/page.dart (買い切りオファー Paywall)
+#
+# 注意(未検証・要確認事項):
+# - オファー画面を閉じる×ボタンは AppBar leading の IconButton(icon: Icons.close) で
+#   tooltip/semanticLabel/accessibilityIdentifier が未設定のため、Maestroのtext/idセレクタでは
+#   検出できない。そのため座標タップで代用している(point: "8%,8%")。この座標は
+#   fullscreenDialog の Scaffold AppBar(extendBodyBehindAppBar: true)の左上、
+#   セーフエリア上端+ツールバー中央を加味した推定値であり、実機/シミュレータでの実行前に
+#   mobile-mcp 等で実座標を検証すること。閉じた後の assertVisible: "買い切りオファー Paywall.*"
+#   (設定画面に戻る)で座標ズレを検知できる。
+# - lifetime のオファー画面は確認ダイアログなしで×即閉じ(page.dart: 「確認なしで閉じる」)。
+#   スペシャルオファーのような「本当に閉じますか？」ダイアログは無い。
+# - debug row は「表示パターン選択(解約誘導あり/なし)」→「文言バリアント選択(default/ownership)」の
+#   2段階ダイアログ。両バリアントとも「解約誘導文言なし(非課金)」を選択して検証する。
+# - ListTile(title+subtitle)の行タップは、アクセシビリティツリー上で title と subtitle が
+#   1要素に結合される可能性を考慮し、末尾に ".*" を付けた正規表現でタップ対象を指定している。
+
+- launchApp:
+    clearState: true
+    clearKeychain: true
+    permissions:
+      notifications: allow
+- waitForAnimationToEnd
+- runFlow: ../feature_appeal/subflows/initial_setup.yaml
+- waitForAnimationToEnd
+
+# 設定タブに切替。タブはアイコン+ラベルの Tab だが、feature_appeal フローの慣習に合わせ座標タップする
+- tapOn:
+    point: "88%,95%"
+- waitForAnimationToEnd
+
+# --- 買い切りオファー Paywall: default バリアント ---
+- scrollUntilVisible:
+    element:
+      text: "買い切りオファー Paywall.*"
+    direction: DOWN
+    timeout: 20000
+- tapOn: "買い切りオファー Paywall.*"
+- waitForAnimationToEnd
+- assertVisible: "表示パターンを選択"
+- tapOn: "解約誘導文言なし（非課金）"
+- waitForAnimationToEnd
+- assertVisible: "文言バリアントを選択"
+- tapOn: "default（現行文言）"
+- extendedWaitUntil:
+    visible: "長く使ってくださっている方へ[\\s\\S]*ご案内です"
+    timeout: 20000
+- assertVisible: "いつもご利用ありがとうございます"
+- tapOn:
+    point: "8%,8%"
+- waitForAnimationToEnd
+- assertVisible: "買い切りオファー Paywall.*"
+
+# --- 買い切りオファー Paywall: ownership バリアント ---
+- scrollUntilVisible:
+    element:
+      text: "買い切りオファー Paywall.*"
+    direction: DOWN
+    timeout: 20000
+- tapOn: "買い切りオファー Paywall.*"
+- waitForAnimationToEnd
+- assertVisible: "表示パターンを選択"
+- tapOn: "解約誘導文言なし（非課金）"
+- waitForAnimationToEnd
+- assertVisible: "文言バリアントを選択"
+- tapOn: "ownership（所有価値訴求）"
+- extendedWaitUntil:
+    visible: "一度の購入で、ずっとプレミアム。[\\s\\S]*不要です"
+    timeout: 20000
+- assertVisible: "いつもご利用ありがとうございます"
+- tapOn:
+    point: "8%,8%"
+- waitForAnimationToEnd
+- assertVisible: "買い切りオファー Paywall.*"
