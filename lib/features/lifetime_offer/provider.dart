@@ -1,9 +1,11 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/lifetime_offer/lifetime_offer_plan.dart';
 import 'package:pilll/provider/auth.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/tick.dart';
 import 'package:pilll/provider/typed_shared_preferences.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
@@ -22,6 +24,29 @@ final lifetimeOfferUsageDaysProvider = Provider.autoDispose<int?>((ref) {
 
 /// 買い切りオファーの表示周期の日数。1年ごとに同じ時期へオファーを出すための固定値（うるう年による1日程度のずれは許容する）
 const _lifetimeOfferCycleDays = 365;
+
+/// 月額300円オファーを優先する利用日数。3年を365日/年として判定する。
+const monthly300OfferUsageDaysSince = _lifetimeOfferCycleDays * 3;
+
+/// 無料かつ3年以上の利用者にはDiscount offeringの月額プランを優先する。
+final lifetimeOfferPlanProvider = Provider.autoDispose<LifetimeOfferPlan?>((ref) {
+  final user = ref.watch(userProvider).valueOrNull;
+  final usageDays = ref.watch(lifetimeOfferUsageDaysProvider);
+  if (usageDays == null) {
+    return null;
+  }
+  // 3年以上はユーザーの課金状態が確定するまで待ち、月額オファーより先に買い切りを表示しない。
+  if (usageDays >= monthly300OfferUsageDaysSince && user == null) {
+    return null;
+  }
+  if (user != null &&
+      !user.isPremium &&
+      usageDays >= monthly300OfferUsageDaysSince &&
+      ref.watch(monthlyDiscountPackageProvider) != null) {
+    return LifetimeOfferPlan.monthly300;
+  }
+  return LifetimeOfferPlan.lifetime;
+});
 
 /// 買い切りオファーの周期番号（利用開始からの経過年数, 0始まり）を返すProvider
 ///
@@ -62,7 +87,13 @@ final shouldShowLifetimeOfferProvider = Provider.autoDispose<bool>((ref) {
   if (ref.watch(isLifetimePurchasedProvider).valueOrNull != false) {
     return false;
   }
-  if (ref.watch(lifetimeDiscountPackageProvider) == null) {
+  final offerPlan = ref.watch(lifetimeOfferPlanProvider);
+  final offerPackageExists = switch (offerPlan) {
+    LifetimeOfferPlan.lifetime => ref.watch(lifetimeDiscountPackageProvider) != null,
+    LifetimeOfferPlan.monthly300 => ref.watch(monthlyDiscountPackageProvider) != null,
+    null => false,
+  };
+  if (!offerPackageExists) {
     return false;
   }
   final usageDays = ref.watch(lifetimeOfferUsageDaysProvider);
