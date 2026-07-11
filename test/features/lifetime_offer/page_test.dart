@@ -9,6 +9,7 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/lifetime_offer/lifetime_offer_copy_variant.dart';
+import 'package:pilll/features/lifetime_offer/lifetime_offer_plan.dart';
 import 'package:pilll/features/lifetime_offer/page.dart';
 import 'package:pilll/features/lifetime_offer/provider.dart';
 import 'package:pilll/features/premium_introduction/paywall_source.dart';
@@ -64,6 +65,7 @@ void main() {
       Map<String, Object> initialSharedPreferencesValues = const {},
       LifetimeOfferCopyVariant copyVariant =
           LifetimeOfferCopyVariant.defaultVariant,
+      LifetimeOfferPlan offerPlan = LifetimeOfferPlan.lifetime,
     }) async {
       final mockTodayRepository = MockTodayService();
       when(mockTodayRepository.now()).thenReturn(DateTime(2026, 7, 3));
@@ -84,6 +86,9 @@ void main() {
             lifetimeDiscountPackageProvider.overrideWith(
               (ref) =>
                   hasLifetimeDiscountPackage ? _LifetimeFakePackage() : null,
+            ),
+            monthlyDiscountPackageProvider.overrideWith(
+              (ref) => _LifetimeFakePackage(),
             ),
             lifetimePremiumPackageProvider.overrideWith(
               (ref) => _LifetimeFakePackage(),
@@ -107,6 +112,7 @@ void main() {
                 user: user,
                 source: PaywallSource.lifetimeOfferAppLaunch,
                 copyVariant: copyVariant,
+                offerPlan: offerPlan,
               ),
             ),
           ),
@@ -151,6 +157,18 @@ void main() {
         expect(find.text('一度の購入で、ずっとプレミアム。\n月々のお支払いは不要です'), findsOneWidget);
         expect(find.text('長く使ってくださっている方へ\n買い切りプランのご案内です'), findsNothing);
       });
+    });
+
+    testWidgets('月額300円プランでは月額向け訴求と価格カードが表示される', (WidgetTester tester) async {
+      await pumpLifetimeOfferPageBody(
+        tester,
+        user: const User(isPremium: false),
+        offerPlan: LifetimeOfferPlan.monthly300,
+      );
+
+      expect(find.text('長くご愛顧いただいている皆様へ\n月額プランのご案内です'), findsOneWidget);
+      expect(find.byType(Monthly300OfferPriceCard), findsOneWidget);
+      expect(find.byType(LifetimeOfferPriceCard), findsNothing);
     });
 
     group('#LifetimeOfferSubscriptionCancelNotice', () {

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/lifetime_offer/lifetime_offer_copy_variant.dart';
+import 'package:pilll/features/lifetime_offer/lifetime_offer_plan.dart';
 import 'package:pilll/features/lifetime_offer/page.dart';
 import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/provider/purchase.dart';
@@ -41,6 +42,10 @@ class LifetimeOfferPaywallRow extends StatelessWidget {
         if (copyVariant == null || !context.mounted) {
           return;
         }
+        final offerPlan = await _selectLifetimeOfferPlan(context);
+        if (offerPlan == null || !context.mounted) {
+          return;
+        }
         Navigator.of(context).push(
           MaterialPageRoute(
             fullscreenDialog: true,
@@ -63,6 +68,7 @@ class LifetimeOfferPaywallRow extends StatelessWidget {
               child: LifetimeOfferPage(
                 source: PaywallSource.lifetimeOfferBar,
                 copyVariant: copyVariant,
+                offerPlan: offerPlan,
               ),
             ),
           ),
@@ -86,6 +92,26 @@ Future<LifetimeOfferCopyVariant?> _selectLifetimeOfferCopyVariant(BuildContext c
         SimpleDialogOption(
           onPressed: () => Navigator.of(context).pop(LifetimeOfferCopyVariant.ownership),
           child: const Text('ownership（所有価値訴求）'),
+        ),
+      ],
+    ),
+  );
+}
+
+/// 表示するオファープランを選択するダイアログを表示する。キャンセル時はnullを返す。
+Future<LifetimeOfferPlan?> _selectLifetimeOfferPlan(BuildContext context) {
+  return showDialog<LifetimeOfferPlan>(
+    context: context,
+    builder: (context) => SimpleDialog(
+      title: const Text('オファープランを選択'),
+      children: [
+        SimpleDialogOption(
+          onPressed: () => Navigator.of(context).pop(LifetimeOfferPlan.lifetime),
+          child: const Text('買い切りプラン'),
+        ),
+        SimpleDialogOption(
+          onPressed: () => Navigator.of(context).pop(LifetimeOfferPlan.monthly300),
+          child: const Text('月額300円プラン'),
         ),
       ],
     ),

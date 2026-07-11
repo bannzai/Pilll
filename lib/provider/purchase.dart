@@ -117,6 +117,16 @@ final monthlySpecialOfferingPackageProvider = Provider.autoDispose((ref) {
     (element) => element.packageType == PackageType.monthly,
   );
 });
+final monthlyDiscountPackageProvider = Provider.autoDispose((ref) {
+  const discountOfferingType = OfferingType.discount;
+  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[discountOfferingType.identifier];
+  if (offering == null) {
+    return null;
+  }
+  return offering.availablePackages.firstWhereOrNull(
+    (element) => element.packageType == PackageType.monthly,
+  );
+});
 final lifetimeDiscountPackageProvider = Provider.autoDispose((ref) {
   const limitedPackageOfferingType = OfferingType.discount;
   final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[limitedPackageOfferingType.identifier];

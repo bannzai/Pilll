@@ -85,6 +85,7 @@ class AnnouncementBar extends HookConsumerWidget {
     );
     final lifetimePurchaseStatus = ref.watch(isLifetimePurchasedProvider);
     final shouldShowLifetimeOffer = ref.watch(shouldShowLifetimeOfferProvider);
+    final lifetimeOfferPlan = ref.watch(lifetimeOfferPlanProvider);
 
     final historiesAsync = ref.watch(
       pillSheetModifiedHistoriesWithRangeProvider(
@@ -211,6 +212,7 @@ class AnnouncementBar extends HookConsumerWidget {
         if (shouldShowLifetimeOffer) {
           return LifetimeOfferAnnouncementBar(
             copyVariant: LifetimeOfferCopyVariant.fromString(remoteConfigParameter.lifetimeOfferCopyVariant),
+            offerPlan: lifetimeOfferPlan!,
           );
         }
 
@@ -251,6 +253,7 @@ class AnnouncementBar extends HookConsumerWidget {
       if (shouldShowLifetimeOffer) {
         return LifetimeOfferAnnouncementBar(
           copyVariant: LifetimeOfferCopyVariant.fromString(remoteConfigParameter.lifetimeOfferCopyVariant),
+          offerPlan: lifetimeOfferPlan!,
         );
       }
 
