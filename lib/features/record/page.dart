@@ -155,6 +155,7 @@ class RecordPageBody extends HookConsumerWidget {
                   currentPillSheet: activePillSheet,
                   userIsPremiumOtTrial: user.premiumOrTrial,
                   user: user,
+                  setting: setting,
                 ),
                 const SizedBox(height: 40),
               ],
