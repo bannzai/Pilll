@@ -28,7 +28,7 @@ const _lifetimeOfferCycleDays = 365;
 /// 月額300円オファーを優先する利用日数。3年を365日/年として判定する。
 const monthly300OfferUsageDaysSince = _lifetimeOfferCycleDays * 3;
 
-/// 無料かつ3年以上の利用者にはDiscount offeringの月額プランを優先する。
+/// 無料・3年以上・購入履歴なしの利用者にはDiscount offeringの月額プランを優先する。
 final lifetimeOfferPlanProvider = Provider.autoDispose<LifetimeOfferPlan?>((ref) {
   final user = ref.watch(userProvider).valueOrNull;
   final usageDays = ref.watch(lifetimeOfferUsageDaysProvider);
@@ -39,8 +39,14 @@ final lifetimeOfferPlanProvider = Provider.autoDispose<LifetimeOfferPlan?>((ref)
   if (usageDays >= monthly300OfferUsageDaysSince && user == null) {
     return null;
   }
-  if (user != null && !user.isPremium && usageDays >= monthly300OfferUsageDaysSince && ref.watch(monthlyDiscountPackageProvider) != null) {
-    return LifetimeOfferPlan.monthly300;
+  if (user != null && !user.isPremium && usageDays >= monthly300OfferUsageDaysSince) {
+    final hasPurchasedAnyProduct = ref.watch(hasPurchasedAnyProductProvider).valueOrNull;
+    if (hasPurchasedAnyProduct == null) {
+      return null;
+    }
+    if (!hasPurchasedAnyProduct && ref.watch(monthlyDiscountPackageProvider) != null) {
+      return LifetimeOfferPlan.monthly300;
+    }
   }
   return LifetimeOfferPlan.lifetime;
 });
