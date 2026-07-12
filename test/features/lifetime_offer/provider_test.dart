@@ -28,7 +28,8 @@ void main() {
     Future<LifetimeOfferPlan> readPlan(
         {required int usageDays,
         required bool isPremium,
-        bool hasMonthlyPackage = true}) async {
+        bool hasMonthlyPackage = true,
+        FutureOr<bool> hasPurchasedAnyProduct = false}) async {
       final container = ProviderContainer(
         overrides: [
           userProvider
@@ -36,10 +37,13 @@ void main() {
           lifetimeOfferUsageDaysProvider.overrideWith((ref) => usageDays),
           monthlyDiscountPackageProvider.overrideWith(
               (ref) => hasMonthlyPackage ? FakeRevenueCatPackage() : null),
+          hasPurchasedAnyProductProvider.overrideWith(
+              (ref) => hasPurchasedAnyProduct),
         ],
       );
       addTearDown(container.dispose);
       await container.read(userProvider.future);
+      await container.read(hasPurchasedAnyProductProvider.future);
       return container.read(lifetimeOfferPlanProvider)!;
     }
 
@@ -53,6 +57,33 @@ void main() {
     test('3年以上でもプレミアムユーザーには買い切りプランを提示する', () async {
       expect(await readPlan(usageDays: 1095, isPremium: true),
           LifetimeOfferPlan.lifetime);
+    });
+
+    test('3年以上でも購入履歴がある無料ユーザーには買い切りプランを提示する', () async {
+      expect(
+          await readPlan(
+              usageDays: 1095,
+              isPremium: false,
+              hasPurchasedAnyProduct: true),
+          LifetimeOfferPlan.lifetime);
+    });
+
+    test('購入履歴の取得中はオファープランを確定しない', () async {
+      final container = ProviderContainer(
+        overrides: [
+          userProvider.overrideWith(
+              (ref) => Stream.value(const User(isPremium: false))),
+          lifetimeOfferUsageDaysProvider.overrideWith((ref) => 1095),
+          monthlyDiscountPackageProvider
+              .overrideWith((ref) => FakeRevenueCatPackage()),
+          hasPurchasedAnyProductProvider.overrideWith(
+              (ref) => Completer<bool>().future),
+        ],
+      );
+      addTearDown(container.dispose);
+      await container.read(userProvider.future);
+
+      expect(container.read(lifetimeOfferPlanProvider), isNull);
     });
 
     test('月額300円Packageを取得できない場合は買い切りプランへフォールバックする', () async {
