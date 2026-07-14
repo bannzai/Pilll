@@ -12,18 +12,6 @@ import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-/// 深夜(0:00-2:00)服用記録の注意ダイアログの表示要否
-enum MidnightTakenWarningDialogDisplayMode {
-  /// 表示しない
-  none,
-
-  /// 初回の表示。「二度と表示しない」ボタンは表示しない
-  first,
-
-  /// 2回目以降の表示。「二度と表示しない」ボタンを表示する
-  repeated,
-}
-
 /// 記録操作時点でまだ届いていない当日の通知時刻を返す
 ///
 /// 通知時刻が0:00-2:00内(例: 1:00)に設定されているユーザーがその時刻より後に記録した場合、
@@ -38,11 +26,11 @@ List<ReminderTime> midnightTakenWarningRemainingReminderTimes({
       .toList();
 }
 
-/// 深夜(0:00-2:00)服用記録の注意ダイアログの表示要否を判定する
+/// 深夜(0:00-2:00)服用記録の注意ダイアログを表示すべきかどうかを判定する
 ///
 /// 日を跨いだことに気づかず服用記録をすると当日分まで記録され、
 /// 当日の通知が届かなくなる問い合わせへの対策として、30日に1回まで注意ダイアログを表示する
-MidnightTakenWarningDialogDisplayMode midnightTakenWarningDialogDisplayMode({
+bool shouldShowMidnightTakenWarningDialog({
   required SharedPreferences sharedPreferences,
   required DateTime takenDate,
   required DateTime recordedAt,
@@ -50,29 +38,26 @@ MidnightTakenWarningDialogDisplayMode midnightTakenWarningDialogDisplayMode({
 }) {
   // 0:00〜1:59の記録操作のみ対象
   if (recordedAt.hour >= 2) {
-    return MidnightTakenWarningDialogDisplayMode.none;
+    return false;
   }
   // 当日分まで服用記録された場合のみ対象。過去のピル番号タップ等、当日分が記録されない場合は当日の通知は届く
   if (takenDate.date() != recordedAt.date()) {
-    return MidnightTakenWarningDialogDisplayMode.none;
+    return false;
   }
   // 記録時点でこれから届く予定の当日通知がなければ「通知が届かない」という注意自体が成立しない
   if (midnightTakenWarningRemainingReminderTimes(reminderTimes: reminderTimes, recordedAt: recordedAt).isEmpty) {
-    return MidnightTakenWarningDialogDisplayMode.none;
+    return false;
   }
   // キーは「二度と表示しない」押下時にのみ保存されるため、未保存(null)は未押下として扱う
   if (sharedPreferences.getBool(BoolKey.midnightTakenWarningDialogNeverShowAgain) ?? false) {
-    return MidnightTakenWarningDialogDisplayMode.none;
+    return false;
   }
   final lastShownMilliseconds = sharedPreferences.getDouble(DoubleKey.midnightTakenWarningDialogLastShownDateTime);
-  if (lastShownMilliseconds == null) {
-    return MidnightTakenWarningDialogDisplayMode.first;
+  // 30日に1回まで: 前回表示から30日未満の場合は表示しない。未表示(null)なら無条件で表示する
+  if (lastShownMilliseconds != null && daysBetween(DateTime.fromMillisecondsSinceEpoch(lastShownMilliseconds.toInt()), recordedAt) < 30) {
+    return false;
   }
-  // 30日に1回まで: 前回表示から30日未満の場合は表示しない
-  if (daysBetween(DateTime.fromMillisecondsSinceEpoch(lastShownMilliseconds.toInt()), recordedAt) < 30) {
-    return MidnightTakenWarningDialogDisplayMode.none;
-  }
-  return MidnightTakenWarningDialogDisplayMode.repeated;
+  return true;
 }
 
 /// 深夜(0:00-2:00)にアプリ上で服用記録をした場合に、当日分まで服用記録されたことを知らせる注意ダイアログを表示する
@@ -85,13 +70,13 @@ void showMidnightTakenWarningDialogIfNeeded({
   required DateTime recordedAt,
   required Setting setting,
 }) async {
-  final displayMode = midnightTakenWarningDialogDisplayMode(
-    sharedPreferences: await SharedPreferences.getInstance(),
+  final sharedPreferences = await SharedPreferences.getInstance();
+  if (!shouldShowMidnightTakenWarningDialog(
+    sharedPreferences: sharedPreferences,
     takenDate: takenDate,
     recordedAt: recordedAt,
     reminderTimes: setting.reminderTimes,
-  );
-  if (displayMode == MidnightTakenWarningDialogDisplayMode.none) {
+  )) {
     return;
   }
 
@@ -104,7 +89,8 @@ void showMidnightTakenWarningDialogIfNeeded({
       builder: (context) => MidnightTakenWarningDialog(
         takenDate: takenDate,
         reminderTimes: midnightTakenWarningRemainingReminderTimes(reminderTimes: setting.reminderTimes, recordedAt: recordedAt),
-        showsNeverShowAgainButton: displayMode == MidnightTakenWarningDialogDisplayMode.repeated,
+        // 2回目以降(過去に「閉じる」で表示日時が保存済み)の表示でのみ「二度と表示しない」を出す
+        showsNeverShowAgainButton: sharedPreferences.containsKey(DoubleKey.midnightTakenWarningDialogLastShownDateTime),
       ),
     );
   }

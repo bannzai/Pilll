@@ -46,59 +46,59 @@ void main() {
     });
   });
 
-  group("#midnightTakenWarningDialogDisplayMode", () {
+  group("#shouldShowMidnightTakenWarningDialog", () {
     const reminderTimes = [ReminderTime(hour: 19, minute: 0)];
 
     group("記録操作時刻の境界値", () {
       test("23:59の記録操作の場合は表示しない", () async {
         SharedPreferences.setMockInitialValues({});
         expect(
-          midnightTakenWarningDialogDisplayMode(
+          shouldShowMidnightTakenWarningDialog(
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 10, 23, 59),
             recordedAt: DateTime(2026, 7, 10, 23, 59),
             reminderTimes: reminderTimes,
           ),
-          MidnightTakenWarningDialogDisplayMode.none,
+          false,
         );
       });
 
       test("0:00の記録操作の場合は表示する", () async {
         SharedPreferences.setMockInitialValues({});
         expect(
-          midnightTakenWarningDialogDisplayMode(
+          shouldShowMidnightTakenWarningDialog(
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 11, 0, 0),
             recordedAt: DateTime(2026, 7, 11, 0, 0),
             reminderTimes: reminderTimes,
           ),
-          MidnightTakenWarningDialogDisplayMode.first,
+          true,
         );
       });
 
       test("1:59の記録操作の場合は表示する", () async {
         SharedPreferences.setMockInitialValues({});
         expect(
-          midnightTakenWarningDialogDisplayMode(
+          shouldShowMidnightTakenWarningDialog(
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 11, 1, 59),
             recordedAt: DateTime(2026, 7, 11, 1, 59),
             reminderTimes: reminderTimes,
           ),
-          MidnightTakenWarningDialogDisplayMode.first,
+          true,
         );
       });
 
       test("2:00の記録操作の場合は表示しない", () async {
         SharedPreferences.setMockInitialValues({});
         expect(
-          midnightTakenWarningDialogDisplayMode(
+          shouldShowMidnightTakenWarningDialog(
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 11, 2, 0),
             recordedAt: DateTime(2026, 7, 11, 2, 0),
             reminderTimes: reminderTimes,
           ),
-          MidnightTakenWarningDialogDisplayMode.none,
+          false,
         );
       });
     });
@@ -107,26 +107,26 @@ void main() {
       test("過去のピル番号タップ等、当日分まで記録されない場合は表示しない", () async {
         SharedPreferences.setMockInitialValues({});
         expect(
-          midnightTakenWarningDialogDisplayMode(
+          shouldShowMidnightTakenWarningDialog(
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 10),
             recordedAt: DateTime(2026, 7, 11, 0, 30),
             reminderTimes: reminderTimes,
           ),
-          MidnightTakenWarningDialogDisplayMode.none,
+          false,
         );
       });
 
       test("当日のピル番号タップで当日分まで記録された場合は表示する", () async {
         SharedPreferences.setMockInitialValues({});
         expect(
-          midnightTakenWarningDialogDisplayMode(
+          shouldShowMidnightTakenWarningDialog(
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 11),
             recordedAt: DateTime(2026, 7, 11, 0, 30),
             reminderTimes: reminderTimes,
           ),
-          MidnightTakenWarningDialogDisplayMode.first,
+          true,
         );
       });
     });
@@ -135,39 +135,39 @@ void main() {
       test("通知時刻が未設定の場合は表示しない", () async {
         SharedPreferences.setMockInitialValues({});
         expect(
-          midnightTakenWarningDialogDisplayMode(
+          shouldShowMidnightTakenWarningDialog(
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 11, 0, 10),
             recordedAt: DateTime(2026, 7, 11, 0, 10),
             reminderTimes: const [],
           ),
-          MidnightTakenWarningDialogDisplayMode.none,
+          false,
         );
       });
 
       test("通知時刻1:00で0:30に記録した場合は表示する(1:00の通知はまだ届いていない)", () async {
         SharedPreferences.setMockInitialValues({});
         expect(
-          midnightTakenWarningDialogDisplayMode(
+          shouldShowMidnightTakenWarningDialog(
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 11, 0, 30),
             recordedAt: DateTime(2026, 7, 11, 0, 30),
             reminderTimes: const [ReminderTime(hour: 1, minute: 0)],
           ),
-          MidnightTakenWarningDialogDisplayMode.first,
+          true,
         );
       });
 
       test("通知時刻1:00で1:30に記録した場合は表示しない(通知は既に届いている)", () async {
         SharedPreferences.setMockInitialValues({});
         expect(
-          midnightTakenWarningDialogDisplayMode(
+          shouldShowMidnightTakenWarningDialog(
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 11, 1, 30),
             recordedAt: DateTime(2026, 7, 11, 1, 30),
             reminderTimes: const [ReminderTime(hour: 1, minute: 0)],
           ),
-          MidnightTakenWarningDialogDisplayMode.none,
+          false,
         );
       });
     });
@@ -178,13 +178,13 @@ void main() {
           BoolKey.midnightTakenWarningDialogNeverShowAgain: true,
         });
         expect(
-          midnightTakenWarningDialogDisplayMode(
+          shouldShowMidnightTakenWarningDialog(
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 11, 0, 10),
             recordedAt: DateTime(2026, 7, 11, 0, 10),
             reminderTimes: reminderTimes,
           ),
-          MidnightTakenWarningDialogDisplayMode.none,
+          false,
         );
       });
 
@@ -194,13 +194,13 @@ void main() {
               DateTime(2026, 6, 30, 0, 30).millisecondsSinceEpoch.toDouble(),
         });
         expect(
-          midnightTakenWarningDialogDisplayMode(
+          shouldShowMidnightTakenWarningDialog(
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 1, 0, 10),
             recordedAt: DateTime(2026, 7, 1, 0, 10),
             reminderTimes: reminderTimes,
           ),
-          MidnightTakenWarningDialogDisplayMode.none,
+          false,
         );
       });
 
@@ -210,29 +210,29 @@ void main() {
               DateTime(2026, 6, 12, 0, 30).millisecondsSinceEpoch.toDouble(),
         });
         expect(
-          midnightTakenWarningDialogDisplayMode(
+          shouldShowMidnightTakenWarningDialog(
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 11, 0, 10),
             recordedAt: DateTime(2026, 7, 11, 0, 10),
             reminderTimes: reminderTimes,
           ),
-          MidnightTakenWarningDialogDisplayMode.none,
+          false,
         );
       });
 
-      test("前回表示から30日後の場合は2回目以降として表示する", () async {
+      test("前回表示から30日後の場合は表示する", () async {
         SharedPreferences.setMockInitialValues({
           DoubleKey.midnightTakenWarningDialogLastShownDateTime:
               DateTime(2026, 6, 11, 0, 30).millisecondsSinceEpoch.toDouble(),
         });
         expect(
-          midnightTakenWarningDialogDisplayMode(
+          shouldShowMidnightTakenWarningDialog(
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 11, 0, 10),
             recordedAt: DateTime(2026, 7, 11, 0, 10),
             reminderTimes: reminderTimes,
           ),
-          MidnightTakenWarningDialogDisplayMode.repeated,
+          true,
         );
       });
 
@@ -242,13 +242,13 @@ void main() {
               DateTime(2026, 12, 10, 0, 30).millisecondsSinceEpoch.toDouble(),
         });
         expect(
-          midnightTakenWarningDialogDisplayMode(
+          shouldShowMidnightTakenWarningDialog(
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2027, 1, 9, 0, 10),
             recordedAt: DateTime(2027, 1, 9, 0, 10),
             reminderTimes: reminderTimes,
           ),
-          MidnightTakenWarningDialogDisplayMode.repeated,
+          true,
         );
       });
 
@@ -258,13 +258,13 @@ void main() {
               DateTime(2026, 12, 31, 0, 30).millisecondsSinceEpoch.toDouble(),
         });
         expect(
-          midnightTakenWarningDialogDisplayMode(
+          shouldShowMidnightTakenWarningDialog(
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2027, 1, 1, 0, 10),
             recordedAt: DateTime(2027, 1, 1, 0, 10),
             reminderTimes: reminderTimes,
           ),
-          MidnightTakenWarningDialogDisplayMode.none,
+          false,
         );
       });
     });
