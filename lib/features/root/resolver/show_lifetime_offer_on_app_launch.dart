@@ -20,7 +20,7 @@ class ShowLifetimeOfferOnAppLaunch extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final shouldShowLifetimeOffer = ref.watch(shouldShowLifetimeOfferProvider);
-    final lifetimeOfferPlan = ref.watch(lifetimeOfferPlanProvider);
+    final isMonthly300Offer = ref.watch(isMonthly300OfferProvider);
     // 周期番号が確定するまで（null）はshouldShowLifetimeOfferがfalseのため、仮のキー(cycle: 0)が使われることはない
     final lifetimeOfferCycle = ref.watch(lifetimeOfferCycleProvider);
     final lifetimeOfferAutoModalShown = ref.watch(
@@ -53,7 +53,7 @@ class ShowLifetimeOfferOnAppLaunch extends HookConsumerWidget {
               context,
               source: PaywallSource.lifetimeOfferAppLaunch,
               copyVariant: LifetimeOfferCopyVariant.fromString(ref.read(remoteConfigParameterProvider).lifetimeOfferCopyVariant),
-              offerPlan: lifetimeOfferPlan!,
+              isMonthly300Offer: isMonthly300Offer!,
             );
           }
         });
