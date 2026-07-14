@@ -60,6 +60,7 @@ MidnightTakenWarningDialogDisplayMode midnightTakenWarningDialogDisplayMode({
   if (midnightTakenWarningRemainingReminderTimes(reminderTimes: reminderTimes, recordedAt: recordedAt).isEmpty) {
     return MidnightTakenWarningDialogDisplayMode.none;
   }
+  // キーは「二度と表示しない」押下時にのみ保存されるため、未保存(null)は未押下として扱う
   if (sharedPreferences.getBool(BoolKey.midnightTakenWarningDialogNeverShowAgain) ?? false) {
     return MidnightTakenWarningDialogDisplayMode.none;
   }
@@ -84,9 +85,8 @@ void showMidnightTakenWarningDialogIfNeeded({
   required DateTime recordedAt,
   required Setting setting,
 }) async {
-  final sharedPreferences = await SharedPreferences.getInstance();
   final displayMode = midnightTakenWarningDialogDisplayMode(
-    sharedPreferences: sharedPreferences,
+    sharedPreferences: await SharedPreferences.getInstance(),
     takenDate: takenDate,
     recordedAt: recordedAt,
     reminderTimes: setting.reminderTimes,
