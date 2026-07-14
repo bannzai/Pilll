@@ -9,7 +9,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/utils/local_notification.dart';
 
-class RecordPageButton extends HookConsumerWidget {
+class RecordPageButton extends ConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet currentPillSheet;
   final bool userIsPremiumOtTrial;

@@ -17,7 +17,7 @@ import 'package:pilll/provider/take_pill.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/local_notification.dart';
 
-class TakenButton extends HookConsumerWidget {
+class TakenButton extends ConsumerWidget {
   final BuildContext parentContext;
   final PillSheetGroup pillSheetGroup;
   final PillSheet activePillSheet;

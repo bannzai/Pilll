@@ -60,7 +60,7 @@ class RecordPage extends HookConsumerWidget {
   }
 }
 
-class RecordPageBody extends HookConsumerWidget {
+class RecordPageBody extends ConsumerWidget {
   final PillSheetGroup? pillSheetGroup;
   final Setting setting;
   final User user;
