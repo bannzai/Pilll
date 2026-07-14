@@ -34,7 +34,7 @@ bool shouldShowMidnightTakenWarningDialog({
   required SharedPreferences sharedPreferences,
   required DateTime takenDate,
   required DateTime recordedAt,
-  required List<ReminderTime> reminderTimes,
+  required Setting setting,
 }) {
   // 0:00〜1:59の記録操作のみ対象
   if (recordedAt.hour >= 2) {
@@ -44,8 +44,13 @@ bool shouldShowMidnightTakenWarningDialog({
   if (takenDate.date() != recordedAt.date()) {
     return false;
   }
+  // リマインダー通知がOFFの場合は当日の通知が元々送信されない(LocalNotificationService.runが早期return)ため、
+  // 「通知が届かない」という注意自体が成立しない
+  if (!setting.isOnReminder) {
+    return false;
+  }
   // 記録時点でこれから届く予定の当日通知がなければ「通知が届かない」という注意自体が成立しない
-  if (midnightTakenWarningRemainingReminderTimes(reminderTimes: reminderTimes, recordedAt: recordedAt).isEmpty) {
+  if (midnightTakenWarningRemainingReminderTimes(reminderTimes: setting.reminderTimes, recordedAt: recordedAt).isEmpty) {
     return false;
   }
   // キーは「二度と表示しない」押下時にのみ保存されるため、未保存(null)は未押下として扱う
@@ -86,7 +91,7 @@ void showMidnightTakenWarningDialogIfNeeded({
       sharedPreferences: sharedPreferences,
       takenDate: takenDate,
       recordedAt: recordedAt,
-      reminderTimes: setting.reminderTimes,
+      setting: setting,
     )) {
       return;
     }

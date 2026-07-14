@@ -6,6 +6,23 @@ import 'package:pilll/features/record/components/button/midnight_taken_warning_d
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+/// 表示条件を満たす基本形のSettingを生成する
+///
+/// デフォルト値は「19:00のリマインダー通知がONで設定されている」状態。
+/// 深夜0:00-1:59の記録操作に対して通知が未到達になる、ダイアログ表示対象の典型ケースを表す
+Setting buildSetting({
+  List<ReminderTime> reminderTimes = const [ReminderTime(hour: 19, minute: 0)],
+  bool isOnReminder = true,
+}) {
+  return Setting(
+    pillNumberForFromMenstruation: 1,
+    durationMenstruation: 4,
+    reminderTimes: reminderTimes,
+    timezoneDatabaseName: null,
+    isOnReminder: isOnReminder,
+  );
+}
+
 void main() {
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
@@ -47,8 +64,6 @@ void main() {
   });
 
   group("#shouldShowMidnightTakenWarningDialog", () {
-    const reminderTimes = [ReminderTime(hour: 19, minute: 0)];
-
     group("記録操作時刻の境界値", () {
       test("23:59の記録操作の場合は表示しない", () async {
         SharedPreferences.setMockInitialValues({});
@@ -57,7 +72,7 @@ void main() {
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 10, 23, 59),
             recordedAt: DateTime(2026, 7, 10, 23, 59),
-            reminderTimes: reminderTimes,
+            setting: buildSetting(),
           ),
           false,
         );
@@ -70,7 +85,7 @@ void main() {
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 11, 0, 0),
             recordedAt: DateTime(2026, 7, 11, 0, 0),
-            reminderTimes: reminderTimes,
+            setting: buildSetting(),
           ),
           true,
         );
@@ -83,7 +98,7 @@ void main() {
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 11, 1, 59),
             recordedAt: DateTime(2026, 7, 11, 1, 59),
-            reminderTimes: reminderTimes,
+            setting: buildSetting(),
           ),
           true,
         );
@@ -96,7 +111,7 @@ void main() {
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 11, 2, 0),
             recordedAt: DateTime(2026, 7, 11, 2, 0),
-            reminderTimes: reminderTimes,
+            setting: buildSetting(),
           ),
           false,
         );
@@ -111,7 +126,7 @@ void main() {
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 10),
             recordedAt: DateTime(2026, 7, 11, 0, 30),
-            reminderTimes: reminderTimes,
+            setting: buildSetting(),
           ),
           false,
         );
@@ -124,7 +139,7 @@ void main() {
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 11),
             recordedAt: DateTime(2026, 7, 11, 0, 30),
-            reminderTimes: reminderTimes,
+            setting: buildSetting(),
           ),
           true,
         );
@@ -139,7 +154,7 @@ void main() {
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 11, 0, 10),
             recordedAt: DateTime(2026, 7, 11, 0, 10),
-            reminderTimes: const [],
+            setting: buildSetting(reminderTimes: const []),
           ),
           false,
         );
@@ -152,9 +167,23 @@ void main() {
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 11, 0, 30),
             recordedAt: DateTime(2026, 7, 11, 0, 30),
-            reminderTimes: const [ReminderTime(hour: 1, minute: 0)],
+            setting: buildSetting(
+                reminderTimes: const [ReminderTime(hour: 1, minute: 0)]),
           ),
           true,
+        );
+      });
+
+      test("リマインダー通知がOFFの場合は表示しない", () async {
+        SharedPreferences.setMockInitialValues({});
+        expect(
+          shouldShowMidnightTakenWarningDialog(
+            sharedPreferences: await SharedPreferences.getInstance(),
+            takenDate: DateTime(2026, 7, 11, 0, 10),
+            recordedAt: DateTime(2026, 7, 11, 0, 10),
+            setting: buildSetting(isOnReminder: false),
+          ),
+          false,
         );
       });
 
@@ -165,7 +194,8 @@ void main() {
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 11, 1, 30),
             recordedAt: DateTime(2026, 7, 11, 1, 30),
-            reminderTimes: const [ReminderTime(hour: 1, minute: 0)],
+            setting: buildSetting(
+                reminderTimes: const [ReminderTime(hour: 1, minute: 0)]),
           ),
           false,
         );
@@ -182,7 +212,7 @@ void main() {
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 11, 0, 10),
             recordedAt: DateTime(2026, 7, 11, 0, 10),
-            reminderTimes: reminderTimes,
+            setting: buildSetting(),
           ),
           false,
         );
@@ -198,7 +228,7 @@ void main() {
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 1, 0, 10),
             recordedAt: DateTime(2026, 7, 1, 0, 10),
-            reminderTimes: reminderTimes,
+            setting: buildSetting(),
           ),
           false,
         );
@@ -214,7 +244,7 @@ void main() {
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 11, 0, 10),
             recordedAt: DateTime(2026, 7, 11, 0, 10),
-            reminderTimes: reminderTimes,
+            setting: buildSetting(),
           ),
           false,
         );
@@ -230,7 +260,7 @@ void main() {
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2026, 7, 11, 0, 10),
             recordedAt: DateTime(2026, 7, 11, 0, 10),
-            reminderTimes: reminderTimes,
+            setting: buildSetting(),
           ),
           true,
         );
@@ -246,7 +276,7 @@ void main() {
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2027, 1, 9, 0, 10),
             recordedAt: DateTime(2027, 1, 9, 0, 10),
-            reminderTimes: reminderTimes,
+            setting: buildSetting(),
           ),
           true,
         );
@@ -262,7 +292,7 @@ void main() {
             sharedPreferences: await SharedPreferences.getInstance(),
             takenDate: DateTime(2027, 1, 1, 0, 10),
             recordedAt: DateTime(2027, 1, 1, 0, 10),
-            reminderTimes: reminderTimes,
+            setting: buildSetting(),
           ),
           false,
         );
