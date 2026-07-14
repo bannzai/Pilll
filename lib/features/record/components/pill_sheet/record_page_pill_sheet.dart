@@ -185,13 +185,15 @@ class RecordPagePillSheet extends ConsumerWidget {
                       pillSheet: pillSheet,
                     ) !=
                     null;
-                // 実際に服用記録された場合のみダイアログの表示判定をする
-                if (isRecorded && context.mounted) {
+                // 実際に服用記録された場合のみダイアログの表示判定をする。記録された場合activePillSheetは必ず存在する
+                final activePillSheet = pillSheetGroup.activePillSheet;
+                if (isRecorded && activePillSheet != null && context.mounted) {
                   showMidnightTakenWarningDialogIfNeeded(
                     context: context,
                     takenDate: pillSheet.displayPillTakeDate(pillNumberInPillSheet),
                     recordedAt: now(),
                     setting: setting,
+                    activePillSheet: activePillSheet,
                   );
                 }
               }

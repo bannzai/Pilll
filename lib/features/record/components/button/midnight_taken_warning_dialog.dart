@@ -3,6 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -35,6 +37,7 @@ bool shouldShowMidnightTakenWarningDialog({
   required DateTime takenDate,
   required DateTime recordedAt,
   required Setting setting,
+  required PillSheet activePillSheet,
 }) {
   // 0:00〜1:59の記録操作のみ対象
   if (recordedAt.hour >= 2) {
@@ -47,6 +50,11 @@ bool shouldShowMidnightTakenWarningDialog({
   // リマインダー通知がOFFの場合は当日の通知が元々送信されない(LocalNotificationService.runが早期return)ため、
   // 「通知が届かない」という注意自体が成立しない
   if (!setting.isOnReminder) {
+    return false;
+  }
+  // 偽薬/休薬期間の通知がOFFで当日が偽薬/休薬期間の場合、当日の通知は元々登録されない
+  // (RegisterReminderLocalNotification.runがdosingPeriod超のピル番号をスキップ)ため、注意自体が成立しない
+  if (!setting.isOnNotifyInNotTakenDuration && activePillSheet.pillSheetType.dosingPeriod < activePillSheet.pillNumberFor(targetDate: recordedAt)) {
     return false;
   }
   // 記録時点でこれから届く予定の当日通知がなければ「通知が届かない」という注意自体が成立しない
@@ -80,6 +88,7 @@ void showMidnightTakenWarningDialogIfNeeded({
   required DateTime takenDate,
   required DateTime recordedAt,
   required Setting setting,
+  required PillSheet activePillSheet,
 }) async {
   if (_midnightTakenWarningDialogIsShowing) {
     return;
@@ -92,6 +101,7 @@ void showMidnightTakenWarningDialogIfNeeded({
       takenDate: takenDate,
       recordedAt: recordedAt,
       setting: setting,
+      activePillSheet: activePillSheet,
     )) {
       return;
     }

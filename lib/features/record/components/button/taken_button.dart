@@ -68,6 +68,7 @@ class TakenButton extends ConsumerWidget {
               takenDate: takenDate,
               recordedAt: takenDate,
               setting: setting,
+              activePillSheet: activePillSheet,
             );
             final updatedPillSheetGroup = await updatedPillSheetGroupFuture;
             syncActivePillSheetValue(pillSheetGroup: updatedPillSheetGroup);
