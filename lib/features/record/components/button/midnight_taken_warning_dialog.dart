@@ -60,6 +60,12 @@ bool shouldShowMidnightTakenWarningDialog({
   return true;
 }
 
+/// 深夜(0:00-2:00)服用記録の注意ダイアログが表示中かどうか
+///
+/// 「飲んだ」ボタンとピルシートの番号タップの複数経路から短時間に呼ばれた場合に、
+/// 表示記録(SharedPreferences)の保存前に両方が表示可能と判定して二重表示されるのを防ぐ
+bool _midnightTakenWarningDialogIsShowing = false;
+
 /// 深夜(0:00-2:00)にアプリ上で服用記録をした場合に、当日分まで服用記録されたことを知らせる注意ダイアログを表示する
 ///
 /// [takenDate] は服用記録された最後の日、[recordedAt] は記録操作を行った日時。
@@ -70,19 +76,26 @@ void showMidnightTakenWarningDialogIfNeeded({
   required DateTime recordedAt,
   required Setting setting,
 }) async {
-  final sharedPreferences = await SharedPreferences.getInstance();
-  if (!shouldShowMidnightTakenWarningDialog(
-    sharedPreferences: sharedPreferences,
-    takenDate: takenDate,
-    recordedAt: recordedAt,
-    reminderTimes: setting.reminderTimes,
-  )) {
+  if (_midnightTakenWarningDialogIsShowing) {
     return;
   }
+  _midnightTakenWarningDialogIsShowing = true;
+  try {
+    final sharedPreferences = await SharedPreferences.getInstance();
+    if (!shouldShowMidnightTakenWarningDialog(
+      sharedPreferences: sharedPreferences,
+      takenDate: takenDate,
+      recordedAt: recordedAt,
+      reminderTimes: setting.reminderTimes,
+    )) {
+      return;
+    }
+    if (!context.mounted) {
+      return;
+    }
 
-  if (context.mounted) {
     analytics.logScreenView(screenName: 'MidnightTakenWarningDialog');
-    showDialog(
+    await showDialog(
       context: context,
       // 「閉じる」でSharedPreferencesに表示記録を残すため、ボタン以外で閉じられないようにする
       barrierDismissible: false,
@@ -93,6 +106,9 @@ void showMidnightTakenWarningDialogIfNeeded({
         showsNeverShowAgainButton: sharedPreferences.containsKey(DoubleKey.midnightTakenWarningDialogLastShownDateTime),
       ),
     );
+  } finally {
+    // ダイアログが閉じた時点で表示記録は保存済みのため、フラグ解除後の再表示は30日条件で防がれる
+    _midnightTakenWarningDialogIsShowing = false;
   }
 }
 
