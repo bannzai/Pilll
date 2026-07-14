@@ -53,6 +53,16 @@ extension BoolKey on String {
 
   /// 服用おやすみ (無料機能) のアピール Bar を × で閉じたかどうか。
   static const restDurationFeatureAppealIsClosed = 'restDurationFeatureAppealIsClosed';
+
+  /// 深夜(0:00-2:00)服用記録の注意ダイアログで「二度と表示しない」が押されたかどうか。
+  /// trueの場合、以降このダイアログは表示しない。
+  static const midnightTakenWarningDialogNeverShowAgain = 'midnightTakenWarningDialogNeverShowAgain';
+}
+
+extension DoubleKey on String {
+  /// 深夜(0:00-2:00)服用記録の注意ダイアログを「閉じる」で閉じた日時 (millisecondsSinceEpoch)。
+  /// 30日に1回まで表示する判定と、2回目以降の表示判定（「二度と表示しない」ボタンの出し分け）に使う。
+  static const midnightTakenWarningDialogLastShownDateTime = 'midnightTakenWarningDialogLastShownDateTime';
 }
 
 extension StringKey on String {

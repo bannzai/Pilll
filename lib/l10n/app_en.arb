@@ -2800,5 +2800,29 @@
   "restDurationFeatureAppealPoint3": "Easy to edit or resume your cycle",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
+  },
+  "midnightTakenWarningDialogTitle": "Please note",
+  "@midnightTakenWarningDialogTitle": {
+    "description": ""
+  },
+  "midnightTakenWarningDialogBody": "Your pills have been recorded as taken through {takenDate}. Today's ({takenDate}) reminder notification at {reminderTimes} will not be delivered.\nIf this was a mistake, please revert the taken record.",
+  "@midnightTakenWarningDialogBody": {
+    "description": "",
+    "placeholders": {
+      "takenDate": {
+        "type": "String"
+      },
+      "reminderTimes": {
+        "type": "String"
+      }
+    }
+  },
+  "midnightTakenWarningDialogSeeHowToRevert": "See how to revert a taken record",
+  "@midnightTakenWarningDialogSeeHowToRevert": {
+    "description": ""
+  },
+  "midnightTakenWarningDialogNeverShowAgain": "Don't show this again",
+  "@midnightTakenWarningDialogNeverShowAgain": {
+    "description": ""
   }
 }

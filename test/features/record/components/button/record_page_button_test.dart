@@ -2,6 +2,7 @@ import 'package:flutter/rendering.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/features/record/components/button/cancel_button.dart';
 import 'package:pilll/features/record/components/button/record_page_button.dart';
 import 'package:pilll/features/record/components/button/rest_duration_button.dart';
@@ -93,6 +94,13 @@ void main() {
                   currentPillSheet: activePillSheet,
                   userIsPremiumOtTrial: false,
                   user: FakeUser(),
+                  setting: const Setting(
+                    pillNumberForFromMenstruation: 1,
+                    durationMenstruation: 4,
+                    reminderTimes: [],
+                    timezoneDatabaseName: null,
+                    isOnReminder: true,
+                  ),
                 ),
               ),
             ),
@@ -172,6 +180,13 @@ void main() {
                   currentPillSheet: activePillSheet,
                   userIsPremiumOtTrial: false,
                   user: FakeUser(),
+                  setting: const Setting(
+                    pillNumberForFromMenstruation: 1,
+                    durationMenstruation: 4,
+                    reminderTimes: [],
+                    timezoneDatabaseName: null,
+                    isOnReminder: true,
+                  ),
                 ),
               ),
             ),
@@ -247,6 +262,13 @@ void main() {
                   currentPillSheet: activePillSheet,
                   userIsPremiumOtTrial: false,
                   user: FakeUser(),
+                  setting: const Setting(
+                    pillNumberForFromMenstruation: 1,
+                    durationMenstruation: 4,
+                    reminderTimes: [],
+                    timezoneDatabaseName: null,
+                    isOnReminder: true,
+                  ),
                 ),
               ),
             ),

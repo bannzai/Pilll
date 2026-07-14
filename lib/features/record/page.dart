@@ -60,7 +60,7 @@ class RecordPage extends HookConsumerWidget {
   }
 }
 
-class RecordPageBody extends HookConsumerWidget {
+class RecordPageBody extends ConsumerWidget {
   final PillSheetGroup? pillSheetGroup;
   final Setting setting;
   final User user;
@@ -155,6 +155,7 @@ class RecordPageBody extends HookConsumerWidget {
                   currentPillSheet: activePillSheet,
                   userIsPremiumOtTrial: user.premiumOrTrial,
                   user: user,
+                  setting: setting,
                 ),
                 const SizedBox(height: 40),
               ],

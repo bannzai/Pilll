@@ -7,6 +7,7 @@ import 'package:pilll/features/record/components/button/taken_button.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
@@ -55,6 +56,13 @@ void main() {
               currentPillSheet: pillSheet,
               userIsPremiumOtTrial: false,
               user: FakeUser(),
+              setting: const Setting(
+                pillNumberForFromMenstruation: 1,
+                durationMenstruation: 4,
+                reminderTimes: [],
+                timezoneDatabaseName: null,
+                isOnReminder: true,
+              ),
             ),
           ),
         ),
@@ -91,6 +99,13 @@ void main() {
             currentPillSheet: pillSheet,
             userIsPremiumOtTrial: false,
             user: FakeUser(),
+            setting: const Setting(
+              pillNumberForFromMenstruation: 1,
+              durationMenstruation: 4,
+              reminderTimes: [],
+              timezoneDatabaseName: null,
+              isOnReminder: true,
+            ),
           ),
         ),
       ),
