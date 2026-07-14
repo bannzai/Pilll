@@ -176,16 +176,17 @@ class RecordPagePillSheet extends ConsumerWidget {
                 requestInAppReview();
                 showReleaseNotePreDialog(context);
 
-                // _takeWithPillNumberは服用記録されないケースでnullを返すため、実際に記録された場合のみダイアログの表示判定をする
-                if (await _takeWithPillNumber(
-                          takePill,
-                          registerReminderLocalNotification,
-                          pillSheetGroup: pillSheetGroup,
-                          pillNumberInPillSheet: pillNumberInPillSheet,
-                          pillSheet: pillSheet,
-                        ) !=
-                        null &&
-                    context.mounted) {
+                // _takeWithPillNumberは服用記録されないケースでnullを返す
+                final isRecorded = await _takeWithPillNumber(
+                      takePill,
+                      registerReminderLocalNotification,
+                      pillSheetGroup: pillSheetGroup,
+                      pillNumberInPillSheet: pillNumberInPillSheet,
+                      pillSheet: pillSheet,
+                    ) !=
+                    null;
+                // 実際に服用記録された場合のみダイアログの表示判定をする
+                if (isRecorded && context.mounted) {
                   showMidnightTakenWarningDialogIfNeeded(
                     context: context,
                     takenDate: pillSheet.displayPillTakeDate(pillNumberInPillSheet),
