@@ -5,7 +5,6 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
-import 'package:pilll/features/lifetime_offer/lifetime_offer_plan.dart';
 import 'package:pilll/features/lifetime_offer/provider.dart';
 import 'package:pilll/provider/auth.dart';
 import 'package:pilll/provider/purchase.dart';
@@ -24,11 +23,12 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
   });
 
-  group('#lifetimeOfferPlanProvider', () {
-    Future<LifetimeOfferPlan> readPlan(
+  group('#isMonthly300OfferProvider', () {
+    Future<bool> readIsMonthly300Offer(
         {required int usageDays,
         required bool isPremium,
-        bool hasMonthlyPackage = true}) async {
+        bool hasMonthlyPackage = true,
+        FutureOr<bool> hasPurchasedAnyProduct = false}) async {
       final container = ProviderContainer(
         overrides: [
           userProvider
@@ -36,30 +36,58 @@ void main() {
           lifetimeOfferUsageDaysProvider.overrideWith((ref) => usageDays),
           monthlyDiscountPackageProvider.overrideWith(
               (ref) => hasMonthlyPackage ? FakeRevenueCatPackage() : null),
+          hasPurchasedAnyProductProvider
+              .overrideWith((ref) => hasPurchasedAnyProduct),
         ],
       );
       addTearDown(container.dispose);
       await container.read(userProvider.future);
-      return container.read(lifetimeOfferPlanProvider)!;
+      await container.read(hasPurchasedAnyProductProvider.future);
+      return container.read(isMonthly300OfferProvider)!;
     }
 
     test('無料ユーザーは利用1095日から月額300円プランを優先する', () async {
-      expect(await readPlan(usageDays: 1094, isPremium: false),
-          LifetimeOfferPlan.lifetime);
-      expect(await readPlan(usageDays: 1095, isPremium: false),
-          LifetimeOfferPlan.monthly300);
+      expect(await readIsMonthly300Offer(usageDays: 1094, isPremium: false),
+          isFalse);
+      expect(await readIsMonthly300Offer(usageDays: 1095, isPremium: false),
+          isTrue);
     });
 
     test('3年以上でもプレミアムユーザーには買い切りプランを提示する', () async {
-      expect(await readPlan(usageDays: 1095, isPremium: true),
-          LifetimeOfferPlan.lifetime);
+      expect(await readIsMonthly300Offer(usageDays: 1095, isPremium: true),
+          isFalse);
+    });
+
+    test('3年以上でも購入履歴がある無料ユーザーには買い切りプランを提示する', () async {
+      expect(
+          await readIsMonthly300Offer(
+              usageDays: 1095, isPremium: false, hasPurchasedAnyProduct: true),
+          isFalse);
+    });
+
+    test('購入履歴の取得中はオファープランを確定しない', () async {
+      final container = ProviderContainer(
+        overrides: [
+          userProvider.overrideWith(
+              (ref) => Stream.value(const User(isPremium: false))),
+          lifetimeOfferUsageDaysProvider.overrideWith((ref) => 1095),
+          monthlyDiscountPackageProvider
+              .overrideWith((ref) => FakeRevenueCatPackage()),
+          hasPurchasedAnyProductProvider
+              .overrideWith((ref) => Completer<bool>().future),
+        ],
+      );
+      addTearDown(container.dispose);
+      await container.read(userProvider.future);
+
+      expect(container.read(isMonthly300OfferProvider), isNull);
     });
 
     test('月額300円Packageを取得できない場合は買い切りプランへフォールバックする', () async {
       expect(
-          await readPlan(
+          await readIsMonthly300Offer(
               usageDays: 1095, isPremium: false, hasMonthlyPackage: false),
-          LifetimeOfferPlan.lifetime);
+          isFalse);
     });
   });
 

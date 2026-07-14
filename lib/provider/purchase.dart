@@ -324,3 +324,17 @@ final isLifetimePurchasedProvider = FutureProvider.autoDispose<bool>((
     rethrow;
   }
 });
+
+/// RevenueCatに購入済み商品が1件以上あるかを返すProvider。
+///
+/// 失効・解約済みを含む購入履歴で判定する。取得に失敗した場合は未購入扱いにせず、
+/// 参照側でオファーを表示しない安全側へ倒せるようAsyncErrorを維持する。
+final hasPurchasedAnyProductProvider = FutureProvider.autoDispose<bool>((ref) async {
+  try {
+    final customerInfo = await Purchases.getCustomerInfo();
+    return customerInfo.allPurchasedProductIdentifiers.isNotEmpty;
+  } catch (e, stack) {
+    errorLogger.recordError(e, stack);
+    rethrow;
+  }
+});
