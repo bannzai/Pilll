@@ -30,7 +30,7 @@ import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/local_notification.dart';
 
 // ここを編集する時は historical_pill_sheet_group/component/pill_sheet.dart も編集する
-class RecordPagePillSheet extends HookConsumerWidget {
+class RecordPagePillSheet extends ConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet pillSheet;
   final Setting setting;
@@ -176,15 +176,16 @@ class RecordPagePillSheet extends HookConsumerWidget {
                 requestInAppReview();
                 showReleaseNotePreDialog(context);
 
-                final updatedPillSheetGroup = await _takeWithPillNumber(
-                  takePill,
-                  registerReminderLocalNotification,
-                  pillSheetGroup: pillSheetGroup,
-                  pillNumberInPillSheet: pillNumberInPillSheet,
-                  pillSheet: pillSheet,
-                );
                 // _takeWithPillNumberは服用記録されないケースでnullを返すため、実際に記録された場合のみダイアログの表示判定をする
-                if (updatedPillSheetGroup != null && context.mounted) {
+                if (await _takeWithPillNumber(
+                          takePill,
+                          registerReminderLocalNotification,
+                          pillSheetGroup: pillSheetGroup,
+                          pillNumberInPillSheet: pillNumberInPillSheet,
+                          pillSheet: pillSheet,
+                        ) !=
+                        null &&
+                    context.mounted) {
                   showMidnightTakenWarningDialogIfNeeded(
                     context: context,
                     takenDate: pillSheet.displayPillTakeDate(pillNumberInPillSheet),
