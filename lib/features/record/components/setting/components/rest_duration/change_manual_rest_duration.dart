@@ -112,14 +112,13 @@ class ChangeManualRestDuration extends HookConsumerWidget {
             parameters: {'rest_duration_id': restDuration.id},
           );
 
-          // NOTE: DatePickerの表示制御により、最後に服用記録をつけた日付+1以上の日付は選択できない
-          // よって、lastTakenDateが変動することがない前提になる
+          // NOTE: 選択できる日付の上限の考え方はavailableRestDurationEndDateのドキュメントコメントを参照
           final dateTimeRange = await showDateRangePicker(
             context: context,
             initialEntryMode: DatePickerEntryMode.calendarOnly,
             initialDateRange: restDuration.dateTimeRange,
             firstDate: pillSheetGroup.pillSheets.first.beginDate,
-            lastDate: pillSheetGroup.availableRestDurationBeginDate,
+            lastDate: pillSheetGroup.availableRestDurationEndDate(restDuration: restDuration),
             helpText: L.selectPausePeriod,
             fieldStartHintText: L.pauseStartDate,
             fieldEndLabelText: L.pauseEndDate,

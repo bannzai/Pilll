@@ -661,6 +661,19 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
       return lastTakenDate.addDays(1);
     }
   }
+
+  /// 既存の服用お休み期間を変更する際に終了日として選択できる最終日を返す。ChangeManualRestDurationのDateRangePickerのlastDateに利用する
+  /// 休薬中や服用再開直後はlastTakenDateが休薬開始の前日のまま止まるため、availableRestDurationBeginDate（最終服用日の翌日）を
+  /// そのまま上限にすると休薬開始日と一致し、休薬開始日より後の日付=終了日が選択できなくなる
+  /// そのため「変更対象の既存の終了日」と「今日」も常に選択できるように3候補の中で最も遅い日付を返す
+  /// availableRestDurationBeginDateより後かつ今日以前の日付には服用記録が存在しないため、上限を広げてもlastTakenDateが変動することはない
+  DateTime availableRestDurationEndDate({required RestDuration restDuration}) {
+    return [
+      availableRestDurationBeginDate,
+      if (restDuration.endDate != null) restDuration.endDate!,
+      today(),
+    ].reduce((a, b) => a.isAfter(b) ? a : b);
+  }
 }
 
 /// ピルシートグループの表示番号設定を管理するデータクラス
