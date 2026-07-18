@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "د ایپ د پیل کولو په وخت کې (کله چې ایپ خلاصوې) د ټیکنالوجیکو ستونزو رامنځته کیدو په صورت کې کارونکو ته د اعلاناتو پیغام دی. د اتصال ستونزو او نورو تفصیلاتو راشاملولو له امله، د کارونکو د پوهیدو لپاره باید سمه ژباړه وشي.",
+  "launchError": "د اپلیکیشن پرانیستلو پر مهال تېروتنه رامنځته شوه.\n{ErrorMessagesConnection}\n\nتفصیلات: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint3": "د موده سمول او بیا پیل کول هم اسانه دي",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "ستاسو د ګولۍ اخیستل تر {takenDate} پورې ثبت شوي دي. نن ({takenDate}) د {reminderTimes} خبرتیا به تاسو ته ونه رسیږي.\nکه دا یوه تېروتنه وه، مهرباني وکړئ د اخیستلو ثبت لغوه کړئ",
+  "midnightTakenWarningDialogNeverShowAgain": "دا نور مه ښکاره کوئ",
+  "midnightTakenWarningDialogSeeHowToRevert": "د اخیستلو ثبت د لغوه کولو طریقه وګورئ",
+  "midnightTakenWarningDialogTitle": "پام وکړئ"
 }

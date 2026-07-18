@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "Під час запуску додатку виникла технічна помилка. Повідомлення про помилку може містити детальну інформацію про проблему з'єднання, щоб допомогти вам зрозуміти ситуацію.",
+  "launchError": "Під час запуску додатку сталася помилка.\n{ErrorMessagesConnection}\n\nДеталі: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2591,7 +2591,7 @@
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
   },
-  "alarmKitFeatureAppealBody": "iOS 26以降で利用できるAlarmKitを使って、サイレントモードや集中モードでも確実に鳴るアラームでピルの服用を知らせます。",
+  "alarmKitFeatureAppealBody": "Завдяки AlarmKit, доступному з iOS 26, сигнал пролунає навіть у беззвучному режимі чи режимі концентрації, щоб нагадати про прийом таблетки.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
   },
@@ -2767,7 +2767,7 @@
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint3": "iOS 26以降・設定タブから有効化",
+  "alarmKitFeatureAppealPoint3": "iOS 26 і новіше · Увімкніть у вкладці «Налаштування»",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Відображення дат на схемі таблеток",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
-  }
+  },
+  "midnightTakenWarningDialogBody": "Прийом таблеток зафіксовано до {takenDate} включно. Сьогоднішнє ({takenDate}) нагадування о {reminderTimes} не надійде.\nЯкщо це сталося помилково, будь ласка, скасуйте запис про прийом",
+  "midnightTakenWarningDialogNeverShowAgain": "Більше не показувати",
+  "midnightTakenWarningDialogSeeHowToRevert": "Як скасувати запис про прийом",
+  "midnightTakenWarningDialogTitle": "Зверніть увагу"
 }

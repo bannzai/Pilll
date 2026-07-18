@@ -1124,7 +1124,7 @@
       }
     }
   },
-  "todayPillNumber": "dagens pillenummer",
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "@todayPillNumber": {
     "description": "ピルシート上で今日服用すべきピルの番号（例：1錠目、15錠目など）を表示する際に使用されます。リマインダー通知やログ記録でも参照される重要な値です。",
     "placeholders": {
@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "翻訳すべき具体的な日本語のテキストが提供されていません。説明文のみが記載されています。\n\n翻訳したい日本語のテキストを教えてください。例えば：\n- 「アプリの起動に失敗しました」\n- 「接続エラーが発生しました」\n\nなどの具体的な日本語のメッセージをお聞かせください。",
+  "launchError": "Der opstod en fejl under start af appen.\n{ErrorMessagesConnection}\n\nDetaljer: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint3": "Nem redigering og genoptagelse af perioder",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "Dine piller er blevet registreret som taget frem til {takenDate}. Dagens ({takenDate}) påmindelse kl. {reminderTimes} bliver ikke sendt.\nHvis dette var en fejl, skal du annullere indtagelsesregistreringen.",
+  "midnightTakenWarningDialogNeverShowAgain": "Vis ikke dette igen",
+  "midnightTakenWarningDialogSeeHowToRevert": "Se hvordan du annullerer en indtagelsesregistrering",
+  "midnightTakenWarningDialogTitle": "Bemærk venligst"
 }

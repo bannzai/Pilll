@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "Ralat teknikal berlaku semasa aplikasi dimulakan (saat membuka aplikasi). Mesej ralat ini dipaparkan kepada pengguna termasuk maklumat terperinci seperti ralat sambungan supaya pengguna dapat memahami situasi tersebut.",
+  "launchError": "Ralat berlaku semasa melancarkan aplikasi.\n{ErrorMessagesConnection}\n\nButiran: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint3": "Mengedit dan meneruskan tempoh juga mudah",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogTitle": "Sila ambil perhatian",
+  "midnightTakenWarningDialogBody": "Rekod pengambilan pil anda telah disimpan sehingga {takenDate}. Pemberitahuan peringatan pada {reminderTimes} untuk hari ini ({takenDate}) tidak akan dihantar.\nJika ini adalah kesilapan, sila batalkan rekod pengambilan tersebut.",
+  "midnightTakenWarningDialogNeverShowAgain": "Jangan tunjukkan lagi",
+  "midnightTakenWarningDialogSeeHowToRevert": "Lihat cara membatalkan rekod pengambilan"
 }

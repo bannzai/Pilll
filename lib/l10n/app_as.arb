@@ -657,7 +657,7 @@
   "@pleaseRegisterAccount": {
     "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
   },
-  "cannotTransferPremiumWithoutAccount": "既存のアッサム語翻訳を確認しました。現在の翻訳と他の言語を比較して、適切なアッサム語翻訳を提供します。\n\nডিভাইস সলনি বা ফ'নৰ হেৰোৱাৰ সময়ত প্ৰিমিয়াম বৈশিষ্ট্যসমূহ স্থানান্তৰ কৰিব নোৱাৰিব",
+  "cannotTransferPremiumWithoutAccount": "ডিভাইচ সলনি বা স্মাৰ্টফোন হেৰাই যোৱাৰ সময়ত, প্ৰিমিয়াম বৈশিষ্ট্যসমূহ স্থানান্তৰ কৰিব নোৱাৰিব",
   "@cannotTransferPremiumWithoutAccount": {
     "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
   },
@@ -1870,7 +1870,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "英語のメッセージが見つかりました。これをアッサム語に翻訳します。\n\n英語メッセージ: \"An error occurred at startup\\n{ErrorMessagesConnection}\\nDetails:\"\n\nアッサム語翻訳:\n\nআৰম্ভণিতে এটা ত্ৰুটি ঘটিছে\n{ErrorMessagesConnection}\nবিৱৰণ:",
+  "launchError": "এপটো চালু হ'ওতে এটা ত্ৰুটি ঘটিছে।\n{ErrorMessagesConnection}\n\nবিৱৰণ: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2814,5 +2814,9 @@
   "restDurationFeatureAppealPoint3": "সময়কাল সম্পাদনা আৰু পুনৰাৰম্ভও সহজ",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "{takenDate} লৈকে সেৱন ৰেকৰ্ড কৰা হৈছে। {takenDate} অৰ্থাৎ আজিৰ {reminderTimes} ৰ জাননী আপোনাৰ ওচৰলৈ নাযাব।\nভুলক্ৰমে হ'লে, অনুগ্ৰহ কৰি সেৱনৰ ৰেকৰ্ড বাতিল কৰক",
+  "midnightTakenWarningDialogNeverShowAgain": "পুনৰ নেদেখুৱাব",
+  "midnightTakenWarningDialogSeeHowToRevert": "সেৱন বাতিলকৰণৰ পদ্ধতি চাওক",
+  "midnightTakenWarningDialogTitle": "সাৱধান হওক"
 }

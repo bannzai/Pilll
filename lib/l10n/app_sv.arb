@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "Ett fel uppstod när appen startade. Kontrollera din internetanslutning och försök igen.",
+  "launchError": "Ett fel uppstod när appen startades.\n{ErrorMessagesConnection}\n\nDetaljer: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2491,7 +2491,7 @@
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   },
-  "menstruationFeatureAppealTitle": "生理を記録・予測",
+  "menstruationFeatureAppealTitle": "Registrera och förutsäg din mens",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
   },
@@ -2539,7 +2539,7 @@
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   },
-  "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
+  "healthCareIntegrationFeatureAppealHeadline": "Synkronisering med Hälsa-appen",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   },
@@ -2563,7 +2563,7 @@
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
   },
-  "creatingNewPillSheetFeatureAppealTitle": "ピルシートを自動で追加",
+  "creatingNewPillSheetFeatureAppealTitle": "Lägg automatiskt till ett nytt p-pillerark",
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   },
@@ -2591,11 +2591,11 @@
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
   },
-  "alarmKitFeatureAppealBody": "iOS 26以降で利用できるAlarmKitを使って、サイレントモードや集中モードでも確実に鳴るアラームでピルの服用を知らせます。",
+  "alarmKitFeatureAppealBody": "Med AlarmKit, tillgängligt från iOS 26, ringer ett alarm som hörs även i tyst läge och fokusläge, så att du aldrig missar en dos p-piller.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
   },
-  "todayPillNumberFeatureAppealTitle": "今日の服用番号を合わせる",
+  "todayPillNumberFeatureAppealTitle": "Justera dagens pillernummer",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   },
@@ -2631,7 +2631,7 @@
   "@featureAppealLocationLabel": {
     "description": ""
   },
-  "criticalAlertFeatureAppealPoint1": "集中モード中でも通知が届く",
+  "criticalAlertFeatureAppealPoint1": "Ta emot aviseringar även i fokusläge",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
   },
@@ -2663,7 +2663,7 @@
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
   },
-  "appearanceModeDateFeatureAppealPoint3": "翻訳してください",
+  "appearanceModeDateFeatureAppealPoint3": "Kan ändras i pillerarkets inställningar",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
   },
@@ -2711,7 +2711,7 @@
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
   },
-  "futureScheduleFeatureAppealPoint2": "\"は\"",
+  "futureScheduleFeatureAppealPoint2": "Enkel hantering av läkarbesök",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
   },
@@ -2731,7 +2731,7 @@
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
   },
-  "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応",
+  "healthCareIntegrationFeatureAppealPoint3": "Fungerar med Apple Hälsa",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
   },
@@ -2743,7 +2743,7 @@
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
   },
-  "quickRecordFeatureAppealPoint3": "Premium加入でそのまま利用可能",
+  "quickRecordFeatureAppealPoint3": "Ingår i Premium-prenumerationen",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
   },
@@ -2759,7 +2759,7 @@
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "alarmKitFeatureAppealPoint1": "Hörs även i tyst läge/fokusläge",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint3": "Enkelt att redigera och återuppta mensperioder",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "Dina piller har registrerats som tagna till och med {takenDate}. Dagens påminnelse ({takenDate}) klockan {reminderTimes} kommer inte att skickas.\nOm detta var ett misstag, ångra registreringen av intaget.",
+  "midnightTakenWarningDialogNeverShowAgain": "Visa inte igen",
+  "midnightTakenWarningDialogSeeHowToRevert": "Se hur du ångrar en registrering",
+  "midnightTakenWarningDialogTitle": "Observera"
 }

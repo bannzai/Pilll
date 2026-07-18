@@ -408,7 +408,7 @@
   "@viewMore": {
     "description": "追加の詳細情報を表示するためのボタンテキストです。リストや概要表示で、さらに多くの項目や詳細を見たい時にタップするリンクとして使用されます。"
   },
-  "afterLastTakenPillNumber": "-րդ",
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-րդ",
   "@afterLastTakenPillNumber": {
     "description": "ピルシートUI上で、最後に服用したピルの次に飲むべきピルの番号を表示するテキストです。数字の後に付ける序数詞（日本語では「番」、英語では「th」など）を各言語に適した形で翻訳してください。",
     "placeholders": {
@@ -1882,7 +1882,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "Հավելվածի գործարկման ժամանակ տեխնիկական սխալ է տեղի ունեցել: Խնդրում ենք ստուգել ինտերնետ կապակցությունը և կրկին փորձել:",
+  "launchError": "Հավելվածի գործարկման ժամանակ սխալ է տեղի ունեցել:\n{ErrorMessagesConnection}\n\nՄանրամասներ: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2419,7 +2419,7 @@
   "@lifetimePurchaseNotice3": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
   },
-  "featureAppealTryFeature": "確認する",
+  "featureAppealTryFeature": "Դիտել",
   "@featureAppealTryFeature": {
     "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
   },
@@ -2447,7 +2447,7 @@
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   },
-  "reminderNotificationCustomizeWordFeatureAppealTitle": "通知メッセージをカスタマイズ",
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Ծանուցման հաղորդագրությունը հարմարեցնել",
   "@reminderNotificationCustomizeWordFeatureAppealTitle": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   },
@@ -2455,7 +2455,7 @@
   "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
   },
-  "reminderNotificationCustomizeWordFeatureAppealHeadline": "\"服用通知のメッセージを自由に編集\" の翻訳",
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Ձեր ընդունման ծանուցումների հաղորդագրությունը ազատորեն խմբագրեք",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
   },
@@ -2479,7 +2479,7 @@
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   },
-  "recordPillFeatureAppealTitle": "服用履歴を簡単に振り返り",
+  "recordPillFeatureAppealTitle": "Հեշտությամբ վերանայեք ձեր ընդունման պատմությունը",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   },
@@ -2523,11 +2523,11 @@
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   },
-  "calendarDiaryFeatureAppealBody": "Կேալենդարから日付ըタップして体調・気分・症状などを記録できます。服用記録や生理記録と一緒に確認できるので、自分の体のリズムを把握できます。",
+  "calendarDiaryFeatureAppealBody": "Օրացույցում ամսաթվին հպելով՝ կարող եք գրանցել ձեր առողջական վիճակը, տրամադրությունը կամ ախտանիշները։ Դա հնարավոր է դիտել ձեր ընդունման և դաշտանի գրառումների հետ միասին, ուստի կարող եք հասկանալ ձեր մարմնի ռիթմը։",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
   },
-  "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
+  "futureScheduleFeatureAppealTitle": "Գրի առեք ձեր ապագա ծրագրերը",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
   },
@@ -2555,7 +2555,7 @@
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   },
-  "healthCareIntegrationFeatureAppealBody": "Pilllで記録した生理データをヘルスケアアプリと自動連携できます。ヘルスケア上の他の健康データと一緒に確認したり、他のアプリでも生理データを使えるようになります。",
+  "healthCareIntegrationFeatureAppealBody": "Pilll-ում գրանցված ձեր դաշտանային տվյալները ավտոմատ համաժամացվում են Health հավելվածի հետ։ Կարող եք դրանք դիտել ձեր մյուս առողջական տվյալների հետ միասին, ինչպես նաև վերաօգտագործել այլ հավելվածներում, որոնք տվյալներ են կարդում Health-ից։",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
   },
@@ -2647,7 +2647,7 @@
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
   },
-  "criticalAlertFeatureAppealPoint2": "設定した時刻に確実にリマインド",
+  "criticalAlertFeatureAppealPoint2": "Հուսալի հիշեցում սահմանված ժամին",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
   },
@@ -2719,7 +2719,7 @@
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
   },
-  "futureScheduleFeatureAppealPoint1": "\"カレンダーに予定を書き込み\" を hy に翻訳してください。",
+  "futureScheduleFeatureAppealPoint1": "Օրացույցում նշանակումներ գրանցել",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
   },
@@ -2747,7 +2747,7 @@
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
   },
-  "quickRecordFeatureAppealPoint1": "通知のアクションで服用記録",
+  "quickRecordFeatureAppealPoint1": "Գրանցել ընդունումը ծանուցման գործողությամբ",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
   },
@@ -2779,7 +2779,7 @@
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint3": "iOS 26以降・設定タブから有効化",
+  "alarmKitFeatureAppealPoint3": "iOS 26 կամ ավելի ուշ · Միացնել Կարգավորումներ ներդիրից",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint3": "Մենստրուացիայի խմբագրումն ու վերսկսումը նույնպես հեշտ են",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "Ընդունման գրառումն արվել է մինչև {takenDate}-ը ներառյալ։ Այսօրվա՝ {takenDate}-ի, ժամը {reminderTimes}-ի ծանուցումն այլևս ձեզ չի հասնի։\nԵթե դա սխալմամբ է եղել, խնդրում ենք չեղարկել ընդունման գրառումը",
+  "midnightTakenWarningDialogNeverShowAgain": "Այլևս երբեք չցուցադրել",
+  "midnightTakenWarningDialogSeeHowToRevert": "Տեսնել՝ ինչպես չեղարկել ընդունման գրառումը",
+  "midnightTakenWarningDialogTitle": "Ուշադրություն դարձրեք"
 }

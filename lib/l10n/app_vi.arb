@@ -1882,7 +1882,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "実際に翻訳すべき具体的な日本語のエラーメッセージが提示されていないようです。アプリ起動時のエラーメッセージについての説明文のみが提供されています。\n\n翻訳対象となる具体的な日本語のエラーメッセージを教えてください。",
+  "launchError": "Đã xảy ra lỗi khi khởi động ứng dụng.\n{ErrorMessagesConnection}\n\nChi tiết: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2463,7 +2463,7 @@
   "@reminderNotificationCustomizeWordFeatureAppealBody": {
     "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
   },
-  "appearanceModeDateFeatureAppealTitle": "ピルシートに日付を表示",
+  "appearanceModeDateFeatureAppealTitle": "Hiển thị ngày trên vỉ thuốc",
   "@appearanceModeDateFeatureAppealTitle": {
     "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
   },
@@ -2475,7 +2475,7 @@
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   },
-  "appearanceModeDateFeatureAppealBody": "Hiển thị ngày trên từng ô của vỉ thuốc giúp bạn nắm ngay lịch sử uống thuốc trong quá khứ và lịch uống dự kiến trong tương lai. Chuyển đổi giữa chế độ 「番号」 (Số) và 「日付」 (Ngày) để chọn cách hiển thị phù hợp với bạn.",
+  "appearanceModeDateFeatureAppealBody": "Hiển thị ngày trên từng ô của vỉ thuốc giúp bạn nắm ngay lịch sử uống thuốc trong quá khứ và lịch uống dự kiến trong tương lai. Chuyển đổi giữa chế độ Số và chế độ Ngày để chọn cách hiển thị phù hợp với bạn.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   },
@@ -2495,7 +2495,7 @@
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
   },
-  "menstruationFeatureAppealTitle": "生理を記録・予測",
+  "menstruationFeatureAppealTitle": "Ghi chép và dự đoán kinh nguyệt",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
   },
@@ -2527,7 +2527,7 @@
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
   },
-  "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
+  "futureScheduleFeatureAppealTitle": "Ghi lại kế hoạch tương lai của bạn",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
   },
@@ -2535,7 +2535,7 @@
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   },
-  "futureScheduleFeatureAppealHeadline": "カレンダーに未来の予定を記録",
+  "futureScheduleFeatureAppealHeadline": "Ghi lại các kế hoạch tương lai vào lịch",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
   },
@@ -2647,11 +2647,11 @@
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
   },
-  "criticalAlertFeatureAppealPoint2": "設定した時刻に確実にリマインド",
+  "criticalAlertFeatureAppealPoint2": "Nhắc nhở chắc chắn đúng giờ đã đặt",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
   },
-  "criticalAlertFeatureAppealPoint3": "ワンタップでかんたん設定",
+  "criticalAlertFeatureAppealPoint3": "Cài đặt dễ dàng chỉ với một chạm",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
   },
@@ -2671,11 +2671,11 @@
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
   },
-  "appearanceModeDateFeatureAppealPoint2": "カレンダーを見なくても日付がわかる",
+  "appearanceModeDateFeatureAppealPoint2": "Biết ngày mà không cần xem lịch",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
   },
-  "appearanceModeDateFeatureAppealPoint3": "ピルシート設定から変更可能",
+  "appearanceModeDateFeatureAppealPoint3": "Có thể thay đổi từ cài đặt vỉ thuốc",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
   },
@@ -2735,7 +2735,7 @@
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
   },
-  "healthCareIntegrationFeatureAppealPoint1": "生理記録を自動でデータ連携",
+  "healthCareIntegrationFeatureAppealPoint1": "Tự động đồng bộ dữ liệu kinh nguyệt",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
   },
@@ -2771,7 +2771,7 @@
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "alarmKitFeatureAppealPoint1": "Vẫn kêu ngay cả khi ở chế độ Im lặng/Tập trung",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
   },
@@ -2779,7 +2779,7 @@
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint3": "iOS 26以降・設定タブから有効化",
+  "alarmKitFeatureAppealPoint3": "iOS 26 trở lên · Bật trong tab Cài đặt",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint3": "Dễ dàng chỉnh sửa hoặc tiếp tục kỳ kinh",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "Đã ghi nhận uống thuốc đến hết {takenDate}. Thông báo lúc {reminderTimes} của hôm nay ({takenDate}) sẽ không được gửi tới bạn.\nNếu đây là nhầm lẫn, vui lòng hủy ghi nhận uống thuốc.",
+  "midnightTakenWarningDialogNeverShowAgain": "Không hiển thị lại nữa",
+  "midnightTakenWarningDialogSeeHowToRevert": "Xem cách hủy ghi nhận uống thuốc",
+  "midnightTakenWarningDialogTitle": "Xin lưu ý"
 }

@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint3": "Edycja i wznawianie okresu też są łatwe",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogTitle": "Zwróć uwagę",
+  "midnightTakenWarningDialogBody": "Zarejestrowano przyjęcie pigułek do dnia {takenDate}. Dzisiejsze ({takenDate}) powiadomienie o godzinie {reminderTimes} nie zostanie dostarczone.\nJeśli to pomyłka, cofnij przyjęcie.",
+  "midnightTakenWarningDialogNeverShowAgain": "Nie pokazuj ponownie",
+  "midnightTakenWarningDialogSeeHowToRevert": "Zobacz, jak cofnąć przyjęcie"
 }

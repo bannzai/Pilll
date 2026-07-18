@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "Ez egy hibaüzenet, amely megjelenik a felhasználónak, ha valamilyen technikai hiba lép fel az alkalmazás indításakor (az alkalmazás megnyitásának pillanatában). Részletes információkat tartalmaz, például kapcsolódási hibákat, hogy a felhasználó megérthesse a helyzetet.",
+  "launchError": "Hiba történt az alkalmazás indításakor.\n{ErrorMessagesConnection}\n\nRészletek: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2507,7 +2507,7 @@
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
   },
-  "calendarDiaryFeatureAppealTitle": "カレンダーで体調を記録",
+  "calendarDiaryFeatureAppealTitle": "Közérzet rögzítése a naptárban",
   "@calendarDiaryFeatureAppealTitle": {
     "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   },
@@ -2599,7 +2599,7 @@
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
   },
-  "alarmKitFeatureAppealBody": "iOS 26以降で利用できるAlarmKitを使って、サイレントモードや集中モードでも確実に鳴るアラームでピルの服用を知らせます。",
+  "alarmKitFeatureAppealBody": "Az iOS 26-tól elérhető AlarmKit segítségével olyan riasztás jelzi a tabletta bevételét, amely néma és fókusz módban is biztosan megszólal.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
   },
@@ -2667,7 +2667,7 @@
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
   },
-  "appearanceModeDateFeatureAppealPoint2": "カレンダーを見なくても日付がわかる",
+  "appearanceModeDateFeatureAppealPoint2": "Dátum megtekintése naptár nélkül",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
   },
@@ -2775,7 +2775,7 @@
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint3": "iOS 26以降・設定タブから有効化",
+  "alarmKitFeatureAppealPoint3": "iOS 26 vagy újabb · Engedélyezés a Beállítások fülön",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "appearanceModeDateFeatureAppealHeadline": "Dátumok megjelenítése a tablettalapon",
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
-  }
+  },
+  "midnightTakenWarningDialogBody": "A bevétel rögzítve lett {takenDate}-ig bezárólag. A mai napi ({takenDate}) {reminderTimes} órakor esedékes értesítés emiatt nem fog megérkezni.\nHa ez tévedésből történt, kérjük, vonja vissza a bevétel rögzítését.",
+  "midnightTakenWarningDialogNeverShowAgain": "Ne jelenjen meg többé",
+  "midnightTakenWarningDialogSeeHowToRevert": "A bevétel visszavonásának módja",
+  "midnightTakenWarningDialogTitle": "Figyelem"
 }

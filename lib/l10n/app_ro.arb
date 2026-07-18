@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "Mesaj de eroare afișat utilizatorului în cazul în care apare o eroare tehnică la pornirea aplicației (în momentul deschiderii aplicației). Pentru că include și informații detaliate precum erori de conexiune, vă rugăm să traduceți astfel încât utilizatorul să poată înțelege situația.",
+  "launchError": "A apărut o eroare la pornirea aplicației.\n{ErrorMessagesConnection}\n\nDetalii: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint3": "Editarea și reluarea perioadei sunt ușoare",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogTitle": "Vă rugăm să rețineți",
+  "midnightTakenWarningDialogBody": "Administrarea pilulei a fost înregistrată ca fiind luată până în data de {takenDate}. Notificarea de reamintire de astăzi ({takenDate}), programată pentru ora {reminderTimes}, nu va fi trimisă.\nDacă aceasta este o greșeală, vă rugăm să anulați administrarea.",
+  "midnightTakenWarningDialogNeverShowAgain": "Nu mai afișa din nou",
+  "midnightTakenWarningDialogSeeHowToRevert": "Vezi cum să anulezi administrarea"
 }

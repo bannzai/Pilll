@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "एप्लिकेसन सुरु हुँदा (एप्लिकेसन खोलेको क्षणमा) कुनै प्राविधिक त्रुटि देखा परेमा प्रयोगकर्तालाई देखाइने त्रुटि सन्देश हो। जडान त्रुटि जस्ता विस्तृत जानकारी पनि समावेश गरिएको छ, त्यसैले प्रयोगकर्ताले स्थिति बुझ्न सकून् भनेर अनुवाद गर्नुहोस्।",
+  "launchError": "एप्लिकेसन सुरु हुँदा त्रुटि भयो।\n{ErrorMessagesConnection}\n\nविवरण: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint3": "अवधि सम्पादन र पुन: सुरु गर्न पनि सजिलो",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogTitle": "कृपया ध्यान दिनुहोस्",
+  "midnightTakenWarningDialogBody": "{takenDate} सम्मको सेवन रेकर्ड गरिसकिएको छ। आजको ({takenDate}) {reminderTimes} को सूचना तपाईंलाई प्राप्त हुनेछैन।\nयदि यो गल्तीले भएको हो भने, सेवन रद्द गर्नुहोस्",
+  "midnightTakenWarningDialogSeeHowToRevert": "सेवन रद्द गर्ने तरिका हेर्नुहोस्",
+  "midnightTakenWarningDialogNeverShowAgain": "फेरि नदेखाउनुहोस्"
 }

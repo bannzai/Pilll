@@ -1870,7 +1870,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "অ্যাপ চালু করার সময় (অ্যাপ খোলার মুহূর্তে) কোনো প্রযুক্তিগত ত্রুটি ঘটলে ব্যবহারকারীদের কাছে প্রদর্ষিত ত্রুটি বার্তা। সংযোগ ত্রুটির মতো বিস্তারিত তথ্যও অন্তর্ভুক্ত থাকে, তাই ব্যবহারকারীরা যেন পরিস্থিতি বুঝতে পারেন সেভাবে অনুবাদ করুন।",
+  "launchError": "অ্যাপ চালু করার সময় একটি ত্রুটি ঘটেছে।\n{ErrorMessagesConnection}\n\nবিস্তারিত: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2814,5 +2814,9 @@
   "restDurationFeatureAppealPoint3": "সময়কাল সম্পাদনা ও পুনরায় শুরু করাও সহজ",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogTitle": "অনুগ্রহ করে লক্ষ্য করুন",
+  "midnightTakenWarningDialogBody": "{takenDate} পর্যন্ত সেবনের রেকর্ড করা হয়ে গেছে। আজ, {takenDate}-এর {reminderTimes} সময়ের বিজ্ঞপ্তি আপনার কাছে পৌঁছাবে না।\nভুল হয়ে থাকলে সেবন বাতিল করুন",
+  "midnightTakenWarningDialogNeverShowAgain": "আর দেখাবেন না",
+  "midnightTakenWarningDialogSeeHowToRevert": "সেবন বাতিলের পদ্ধতি দেখুন"
 }
