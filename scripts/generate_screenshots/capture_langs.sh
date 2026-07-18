@@ -46,25 +46,41 @@ ios_language_id() {
 
 # 言語ごとに端末言語を切り替え、Maestro フローを実行して 5 ページ撮影。
 # カンマ区切りの LANGS を空白区切りへ変換して 1 言語ずつ確実に分割する。
+# 遅い環境(GitHub Actions Runner)では描画待ちでフローが落ちることがあるため、
+# 言語単位でアプリを再起動してリトライする。成否の最終判定は後段の寸法検証が行う
+# (フローが最終ページ撮影後に落ちても 5 枚揃っていれば成功として扱えるようにするため)。
+MAX_ATTEMPTS=3
+flaky_langs=""
 for lang in $(printf '%s' "$LANGS" | tr ',' ' '); do
   [ -z "$lang" ] && continue
   case "$lang" in
     *[!A-Za-z0-9_-]*) echo "invalid language code: $lang" >&2; exit 1 ;;
   esac
   lang_artifact_dir="$SCREENSHOT_ARTIFACT_DIR/simulator/$lang"
-  # この言語の生成物だけを作り直し、前回撮影のp*.pngが成功扱いになるのを防ぐ。
-  if [ -d "$lang_artifact_dir" ]; then
-    find "$lang_artifact_dir" -maxdepth 1 -type f -name 'p*.png' -delete
-  fi
   mkdir -p "$lang_artifact_dir"
   ios_lang="$(ios_language_id "$lang")"
   echo "capture: $lang (device language: $ios_lang)"
   xcrun simctl spawn "$DEVICE_UDID" defaults write .GlobalPreferences AppleLanguages -array "$ios_lang"
   xcrun simctl spawn "$DEVICE_UDID" defaults write .GlobalPreferences AppleLocale -string "$(printf '%s' "$ios_lang" | tr '-' '_')"
-  # 言語設定はアプリ起動時に読まれるため、切替後に必ずプロセスを終了して Maestro に再起動させる。
-  xcrun simctl terminate "$DEVICE_UDID" "$APP_ID" 2>/dev/null || true
-  maestro --device "$DEVICE_UDID" test .maestro/flows/appstore_screenshot/capture.yaml --env "LANG=$lang"
+  attempt=1
+  while [ "$attempt" -le "$MAX_ATTEMPTS" ]; do
+    # 各試行の前に前回・前試行のp*.pngを消し、途中まで撮れた残骸が成功扱いになるのを防ぐ。
+    find "$lang_artifact_dir" -maxdepth 1 -type f -name 'p*.png' -delete
+    # 言語設定はアプリ起動時に読まれるため、切替後に必ずプロセスを終了して Maestro に再起動させる。
+    xcrun simctl terminate "$DEVICE_UDID" "$APP_ID" 2>/dev/null || true
+    if maestro --device "$DEVICE_UDID" test .maestro/flows/appstore_screenshot/capture.yaml --env "LANG=$lang"; then
+      break
+    fi
+    echo "capture failed: $lang (attempt $attempt/$MAX_ATTEMPTS)" >&2
+    if [ "$attempt" -eq 1 ]; then
+      flaky_langs="$flaky_langs $lang"
+    fi
+    attempt=$((attempt + 1))
+  done
 done
+if [ -n "$flaky_langs" ]; then
+  echo "リトライが必要だった言語:$flaky_langs" >&2
+fi
 
 # 寸法検証（1290×2796 であること）。
 echo ""

@@ -130,8 +130,17 @@ jobs:
         env:
           CAPTURE_LANGS: ${{ matrix.langs }}
         run: bash scripts/generate_screenshots/capture_langs.sh --udid "${{ steps.sim.outputs.udid }}" -l "$CAPTURE_LANGS"
+      # 一部言語が失敗しても撮影済み言語の成果物は回収できるよう、失敗時もアップロードする
       - uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+        if: ${{ !cancelled() }}
         with:
           name: simulator-screenshots-${{ strategy.job-index }}
           path: scripts/generate_screenshots/artifacts/simulator
           if-no-files-found: error
+      # 失敗原因調査用に Maestro のデバッグ出力（スクリーンショット・ログ）を上げる
+      - uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+        if: ${{ failure() }}
+        with:
+          name: maestro-debug-${{ strategy.job-index }}
+          path: ~/.maestro/tests
+          if-no-files-found: ignore

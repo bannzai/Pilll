@@ -9,11 +9,14 @@ appId: com.mizuki.Ohashi.Pilll.dev
 ---
 - launchApp
 - waitForAnimationToEnd
+# 遅い環境(GitHub Actions Runner)でも見つけられるよう、timeout を長めに取り
+# スクロール間の描画安定待ちを入れる。
 - scrollUntilVisible:
     element:
       id: "${LANG}"
     direction: DOWN
-    timeout: 20000
+    timeout: 60000
+    waitToSettleTimeoutMs: 500
 - tapOn:
     id: "${LANG}"
 - waitForAnimationToEnd
