@@ -125,11 +125,6 @@
           "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/ro"
         },
         {
-          "locale": "ru",
-          "promotionalText": "Уведомление точно в момент приёма — и повторно, пока вы его не отметите. Экран повторяет блистер как есть, сразу видно, сколько таблеток принято.",
-          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/ru"
-        },
-        {
           "locale": "sk",
           "promotionalText": "Upozornenie presne v čase užitia – a znova, kým si pilulku nevezmete. Obrazovka verne kopíruje blister, takže hneď viete, kde v balení ste.",
           "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/sk"
@@ -285,11 +280,6 @@
           "locale": "ro",
           "promotionalText": "Notificările nu menționează pastila. Nimeni nu-ți ghicește conținutul pe ecranul blocat, nici familia, nici prietenii. Intimitatea ta e protejată, prevenim doar uitarea.",
           "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/ro"
-        },
-        {
-          "locale": "ru",
-          "promotionalText": "Уведомления никогда не упоминают название таблеток. Даже на экране блокировки не понять, о чём оно — приватность защищена, а приём не пропущен.",
-          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/ru"
         },
         {
           "locale": "sk",
@@ -449,11 +439,6 @@
           "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/ro"
         },
         {
-          "locale": "ru",
-          "promotionalText": "Приём таблеток и менструальный цикл — в одном приложении. Отмечайте месячные, и приложение само спрогнозирует следующие. Самочувствие и заметки — тоже в календаре.",
-          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/ru"
-        },
-        {
           "locale": "sk",
           "promotionalText": "Užívanie piluliek aj menštruácia v jednej aplikácii. Zaznamenajte cyklus a získajte automatickú predpoveď termínu. Stav a poznámky majte spolu v kalendári.",
           "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/sk"
@@ -609,11 +594,6 @@
           "locale": "ro",
           "promotionalText": "Abia ai început pastila? Vezi dintr-o privire ce iei azi, iar pauza dintre plachete e semnalată automat. O aplicație simplă, ușor de urmat de la prima zi.",
           "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/ro"
-        },
-        {
-          "locale": "ru",
-          "promotionalText": "Только начинаете пить противозачаточные таблетки? Pilll покажет, какую принять сегодня, и сам напомнит о неделе перерыва — просто с первого дня.",
-          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/ru"
         },
         {
           "locale": "sk",
