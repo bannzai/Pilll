@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 /// スクリーンショット用 Mock 画面で共有する部品と描画ヘルパー。
 ///
@@ -159,6 +160,148 @@ class CheckPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(CheckPainter oldDelegate) => oldDelegate.color != color || oldDelegate.strokeWidth != strokeWidth;
+}
+
+/// 本番のホーム画面（home/page.dart）に合わせた 4 タブのボトムバー。
+///
+/// 記録（ピル）・生理・カレンダー・設定。ラベルは [L] で国際化し、選択中のタブは
+/// AppColors.primary（本番の TabBar.labelColor）で示す。アイコンは自前描画。
+class MockBottomTabBar extends StatelessWidget {
+  const MockBottomTabBar({super.key, required this.activeIndex});
+
+  /// 選択中タブのインデックス（0:記録 1:生理 2:カレンダー 3:設定）。
+  final int activeIndex;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: const BoxDecoration(
+        color: AppColors.bottomBar,
+        border: Border(top: BorderSide(width: 1, color: AppColors.border)),
+      ),
+      padding: const EdgeInsets.only(top: 8, bottom: 18),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _tab(index: 0, icon: _pillIcon, label: L.pill),
+          _tab(index: 1, icon: _periodIcon, label: L.menstruation),
+          _tab(index: 2, icon: _calendarIcon, label: L.calendar),
+          _tab(index: 3, icon: _gearIcon, label: L.settings),
+        ],
+      ),
+    );
+  }
+
+  /// 1 タブ（アイコン＋ラベル）を組む。
+  Widget _tab({required int index, required Widget Function(Color) icon, required String label}) {
+    final color = index == activeIndex ? AppColors.primary : TextColor.gray;
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        SizedBox(width: 26, height: 26, child: Center(child: icon(color))),
+        const SizedBox(height: 3),
+        Text(label, style: TextStyle(fontSize: 11, fontWeight: FontWeight.w500, color: color)),
+      ],
+    );
+  }
+
+  Widget _pillIcon(Color color) => PillCapsule(width: 24, height: 12, color: color);
+
+  Widget _periodIcon(Color color) => CustomPaint(size: const Size(20, 24), painter: TeardropPainter(color: color));
+
+  Widget _calendarIcon(Color color) => Container(
+        width: 22,
+        height: 22,
+        decoration: BoxDecoration(border: Border.all(color: color, width: 2), borderRadius: BorderRadius.circular(4)),
+        child: Column(children: [Container(height: 5, color: color)]),
+      );
+
+  Widget _gearIcon(Color color) => CustomPaint(size: const Size(24, 24), painter: GearPainter(color: color));
+}
+
+/// しずく（生理タブのアイコン代替）を描く。
+class TeardropPainter extends CustomPainter {
+  const TeardropPainter({required this.color});
+
+  /// しずくの塗り色。
+  final Color color;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    canvas.drawPath(
+      Path()
+        ..moveTo(size.width * 0.5, 0)
+        ..cubicTo(size.width * 0.95, size.height * 0.5, size.width * 0.85, size.height, size.width * 0.5, size.height)
+        ..cubicTo(size.width * 0.15, size.height, size.width * 0.05, size.height * 0.5, size.width * 0.5, 0)
+        ..close(),
+      Paint()
+        ..color = color
+        ..style = PaintingStyle.fill,
+    );
+  }
+
+  @override
+  bool shouldRepaint(TeardropPainter oldDelegate) => oldDelegate.color != color;
+}
+
+/// 歯車（設定タブのアイコン代替）を描く。
+class GearPainter extends CustomPainter {
+  const GearPainter({required this.color});
+
+  /// 歯車の色。
+  final Color color;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final center = size.center(Offset.zero);
+    final paint = Paint()
+      ..color = color
+      ..style = PaintingStyle.fill;
+    // 8 枚の歯を放射状に描く。
+    for (var i = 0; i < 8; i++) {
+      canvas.save();
+      canvas.translate(center.dx, center.dy);
+      canvas.rotate(3.1415926 * i / 4);
+      canvas.drawRRect(
+        RRect.fromRectAndRadius(Rect.fromLTWH(-size.width * 0.09, -size.height * 0.5, size.width * 0.18, size.height * 0.22), const Radius.circular(1.5)),
+        paint,
+      );
+      canvas.restore();
+    }
+    canvas.drawCircle(center, size.width * 0.30, paint);
+    canvas.drawCircle(center, size.width * 0.13, Paint()..color = AppColors.bottomBar);
+  }
+
+  @override
+  bool shouldRepaint(GearPainter oldDelegate) => oldDelegate.color != color;
+}
+
+/// 送りチェブロン（服用済みマークの間の「▶」）を描く。
+class ChevronPainter extends CustomPainter {
+  const ChevronPainter({required this.color});
+
+  /// チェブロンの色。
+  final Color color;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    canvas.drawPath(
+      Path()
+        ..moveTo(size.width * 0.2, size.height * 0.15)
+        ..lineTo(size.width * 0.75, size.height * 0.5)
+        ..lineTo(size.width * 0.2, size.height * 0.85),
+      Paint()
+        ..color = color
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1.6
+        ..strokeCap = StrokeCap.round
+        ..strokeJoin = StrokeJoin.round,
+    );
+  }
+
+  @override
+  bool shouldRepaint(ChevronPainter oldDelegate) => oldDelegate.color != color;
 }
 
 /// ハートを描く。生理・お気に入りの表現に使う。

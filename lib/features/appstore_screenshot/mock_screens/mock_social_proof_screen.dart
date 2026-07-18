@@ -4,52 +4,60 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/appstore_screenshot/mock_screens/mock_components.dart';
 import 'package:pilll/features/appstore_screenshot/mock_screens/mock_record_screen.dart';
-import 'package:pilll/features/localizations/l.dart';
 
 /// スクリーンショット #1（社会的証明＋中核価値）の Mock。論理サイズ 430×932。
 ///
-/// ピルシート画面（[MockRecordScreen]）を土台に、Pilll の服用通知バナーと
-/// 「14万人が利用中」のサンバーストバッジを重ねる。中核 UI を見せながら
-/// 「多くの人に使われている飲み忘れ防止アプリ」を1枚で伝える（ストア1枚目の定石）。
-/// 通知本文は [L] の既存文言、バッジ文言は [lang] で切り替える。
+/// 実機ストア 1 枚目（tmp/research/screenshots/pilll/jp/01.png）に倣い、記録ページ
+/// （[MockRecordScreen]）を土台に、Pilll の服用通知バナーと「利用者数14万人突破」の
+/// スカラップバッジを重ねる。中核 UI を見せながら社会的証明を1枚で伝える。
+/// 文言は [lang] で切り替える（実機の通知本文・バッジは日本語固有表現のため）。
 class MockSocialProofScreen extends StatelessWidget {
   const MockSocialProofScreen({super.key, required this.lang});
 
-  /// バッジ文言・時刻表記の言語切替に使う arb 言語コード。
+  /// バッジ・通知文言の言語切替に使う arb 言語コード。
   final String lang;
 
-  /// 言語ごとのバッジ大見出し（利用者数）。未定義言語は en にフォールバック。
-  static const Map<String, String> _badgeNumber = {'ja': '14万', 'en': '140K+'};
-
-  /// 言語ごとのバッジ小見出し（単位）。
-  static const Map<String, String> _badgeLabel = {'ja': '人が利用中', 'en': 'users'};
+  /// 言語ごとの通知本文（実機は「💊 日付 N番」形式）。未定義言語は en にフォールバック。
+  static const Map<String, String> _notificationBody = {'ja': '💊 1/12 (火) 16番', 'en': '💊 Tue, Jan 12 · No. 16'};
 
   /// 言語ごとの通知時刻表記。
   static const Map<String, String> _nowLabel = {'ja': '今', 'en': 'now'};
+
+  /// バッジのバンド見出し（上段）。
+  static const Map<String, String> _badgeTop = {'ja': '利用者数', 'en': 'Trusted by'};
+
+  /// バッジの大見出し（利用者数）。
+  static const Map<String, String> _badgeNumber = {'ja': '14万', 'en': '140K+'};
+
+  /// バッジの単位（大見出しの後ろ）。
+  static const Map<String, String> _badgeUnit = {'ja': '人', 'en': ''};
+
+  /// バッジの下段。
+  static const Map<String, String> _badgeBottom = {'ja': '突破', 'en': 'users'};
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         MockRecordScreen(lang: lang),
-        // 上部に届く服用通知バナー。
+        // ピルシートの上に届く服用通知バナー。
         Positioned(
-          top: 74,
+          top: 168,
           left: 16,
-          right: 16,
-          child: NotificationBanner(message: L.takePillReminder, time: _nowLabel[lang] ?? _nowLabel['en']!),
+          right: 44,
+          child: NotificationBanner(message: _notificationBody[lang] ?? _notificationBody['en']!, time: _nowLabel[lang] ?? _nowLabel['en']!),
         ),
-        // 下部の空きに浮かせる「14万人が利用中」バッジ（ステッカー風に傾ける）。
+        // 右下に浮かせる「利用者数14万人突破」バッジ（ステッカー風に傾ける）。
         Positioned(
-          right: 20,
-          bottom: 150,
-          child: Transform.rotate(angle: -0.12, child: _badge(size: 178)),
+          right: 12,
+          bottom: 128,
+          child: Transform.rotate(angle: -0.1, child: _badge(size: 168)),
         ),
       ],
     );
   }
 
-  /// 「14万人が利用中」のサンバーストバッジ。
+  /// スカラップ（花形）の社会的証明バッジ。
   Widget _badge({required double size}) {
     return SizedBox(
       width: size,
@@ -57,19 +65,22 @@ class MockSocialProofScreen extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: [
-          CustomPaint(size: Size(size, size), painter: const _SunburstPainter()),
+          CustomPaint(size: Size(size, size), painter: const _ScallopPainter()),
           Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(
-                _badgeNumber[lang] ?? _badgeNumber['en']!,
-                style: TextStyle(fontSize: size * 0.24, fontWeight: FontWeight.w900, color: TextColor.primaryDarkBlue, height: 1.0),
+              Text(_badgeTop[lang] ?? _badgeTop['en']!, style: TextStyle(fontSize: size * 0.1, fontWeight: FontWeight.w700, color: TextColor.primaryDarkBlue)),
+              const SizedBox(height: 1),
+              Text.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(text: _badgeNumber[lang] ?? _badgeNumber['en']!, style: TextStyle(fontSize: size * 0.26, fontWeight: FontWeight.w900, color: TextColor.primaryDarkBlue)),
+                    TextSpan(text: _badgeUnit[lang] ?? _badgeUnit['en']!, style: TextStyle(fontSize: size * 0.11, fontWeight: FontWeight.w700, color: TextColor.primaryDarkBlue)),
+                  ],
+                ),
               ),
-              const SizedBox(height: 2),
-              Text(
-                _badgeLabel[lang] ?? _badgeLabel['en']!,
-                style: TextStyle(fontSize: size * 0.1, fontWeight: FontWeight.w700, color: TextColor.primaryDarkBlue),
-              ),
+              const SizedBox(height: 1),
+              Text(_badgeBottom[lang] ?? _badgeBottom['en']!, style: TextStyle(fontSize: size * 0.11, fontWeight: FontWeight.w700, color: TextColor.primaryDarkBlue)),
             ],
           ),
         ],
@@ -78,43 +89,30 @@ class MockSocialProofScreen extends StatelessWidget {
   }
 }
 
-/// 黄色系サンバースト（多数の光条を持つ星型バッジ）を描く。
-class _SunburstPainter extends CustomPainter {
-  const _SunburstPainter();
+/// スカラップ（外周が丸い花びら状）のバッジを描く。
+class _ScallopPainter extends CustomPainter {
+  const _ScallopPainter();
 
   @override
   void paint(Canvas canvas, Size size) {
     final center = size.center(Offset.zero);
-    // 光条の数。多すぎず賑やかに見える 20 本にする。
-    const points = 20;
-    final outerRadius = size.width / 2;
-    final innerRadius = outerRadius * 0.86;
-    final path = Path();
-    for (var i = 0; i < points * 2; i++) {
-      final radius = i.isEven ? outerRadius : innerRadius;
-      final angle = math.pi * i / points - math.pi / 2;
-      final point = center + Offset(math.cos(angle) * radius, math.sin(angle) * radius);
-      i == 0 ? path.moveTo(point.dx, point.dy) : path.lineTo(point.dx, point.dy);
+    final baseRadius = size.width * 0.40;
+    final bumpRadius = size.width * 0.075;
+    // 影を落として画面の上に浮くステッカー感を出す。
+    canvas.drawShadow(Path()..addOval(Rect.fromCircle(center: center, radius: baseRadius)), Colors.black.withValues(alpha: 0.35), 6, false);
+    // 外周に沿って小円を並べて花びら状の縁を作る。
+    const bumps = 16;
+    final bumpPaint = Paint()
+      ..color = const Color(0xFFF3C33F)
+      ..style = PaintingStyle.fill;
+    for (var i = 0; i < bumps; i++) {
+      final angle = 2 * math.pi * i / bumps;
+      canvas.drawCircle(center + Offset(math.cos(angle) * baseRadius, math.sin(angle) * baseRadius), bumpRadius, bumpPaint);
     }
-    path.close();
-    // 影を落としてアプリ画面の上に浮くステッカー感を出す。
-    canvas.drawShadow(path, Colors.black.withValues(alpha: 0.4), 6, false);
-    canvas.drawPath(
-      path,
-      Paint()
-        ..color = const Color(0xFFF6C544)
-        ..style = PaintingStyle.fill,
-    );
-    // 内側の円で落ち着いた面を作り、文字を読みやすくする。
-    canvas.drawCircle(
-      center,
-      innerRadius * 0.9,
-      Paint()
-        ..color = const Color(0xFFFFD86B)
-        ..style = PaintingStyle.fill,
-    );
+    canvas.drawCircle(center, baseRadius, Paint()..color = const Color(0xFFF3C33F));
+    canvas.drawCircle(center, baseRadius * 0.9, Paint()..color = const Color(0xFFFAD65E));
   }
 
   @override
-  bool shouldRepaint(_SunburstPainter oldDelegate) => false;
+  bool shouldRepaint(_ScallopPainter oldDelegate) => false;
 }
