@@ -39,8 +39,7 @@ class _FixedTodayService extends TodayService {
   DateTime now() => fixedDate;
 }
 
-/// Pilll のアプリアイコンを模した角丸スクエア。
-/// コーラル地に白のピルカプセルを重ねる。
+/// 通知バナーに表示する実際の Pilll アプリアイコン。
 class PilllAppIcon extends StatelessWidget {
   const PilllAppIcon({super.key, required this.size});
 
@@ -49,25 +48,20 @@ class PilllAppIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: size,
-      height: size,
-      decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [Color(0xFFF08A5D), AppColors.secondary],
-        ),
-        borderRadius: BorderRadius.circular(size * 0.24),
-      ),
-      child: Center(
-        child: PillCapsule(width: size * 0.5, height: size * 0.24, color: Colors.white),
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(size * 0.24),
+      child: Image.asset(
+        'images/pilll_icon.png',
+        width: size,
+        height: size,
+        fit: BoxFit.cover,
+        filterQuality: FilterQuality.high,
       ),
     );
   }
 }
 
-/// ピル錠を模した傾いたカプセル。アプリアイコンやタブアイコンに使う。
+/// ピル錠を模した傾いたカプセル。タブアイコンに使う。
 class PillCapsule extends StatelessWidget {
   const PillCapsule({super.key, required this.width, required this.height, required this.color});
 
