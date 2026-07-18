@@ -7,7 +7,7 @@ name: appstore-screenshots
 run-name: "appstore-screenshots langs=${{ inputs.langs || 'all' }}"
 
 on:
-  workflow_dispatch: # fork PR に Secrets を渡さないため workflow_dispatch のみ
+  workflow_dispatch: # fork PR に Secrets を渡さないため手動系トリガーのみ（下の push も自ブランチ限定）
     inputs:
       langs:
         description: "撮影する arb 言語コード（カンマ区切り）。空なら全対象言語"
@@ -17,6 +17,19 @@ on:
         description: "並列 Runner 数（言語をこの数に分割。Free プランの macOS 同時実行上限は 5）"
         required: false
         default: "5"
+  # workflow_dispatch は workflow ファイルが default ブランチに載るまで登録されないため、
+  # main へ merge されるまでの起動経路としてこの workflow ファイル自身の push でも起動する。
+  # 全言語・既定グループ数で実行される。再実行は gh run rerun でよい
+  push:
+    branches:
+      - issue-392
+    paths:
+      - .github/workflows/appstore-screenshots.yml
+
+# 同一ブランチで多重起動したら古い方を止める（macOS Runner 枠の浪費防止）
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   # カタログアプリを 1 回だけビルドして artifact 化し、撮影対象言語をグループへ分割する
@@ -52,7 +65,8 @@ jobs:
           if [ -z "$LANGS" ]; then
             LANGS="$(dart run scripts/generate_screenshots/print_langs.dart)"
           fi
-          lang_groups="$(printf '%s' "$LANGS" | tr ',' '\n' | awk -v groups="$GROUP_COUNT" '
+          # push トリガーでは inputs が空になるため既定値をここで補う
+          lang_groups="$(printf '%s' "$LANGS" | tr ',' '\n' | awk -v groups="${GROUP_COUNT:-5}" '
             NF { langs[n++] = $0 }
             END {
               if (groups + 0 < 1) groups = 1
