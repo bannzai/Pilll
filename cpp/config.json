@@ -20,6 +20,11 @@
           "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/en-US"
         },
         {
+          "locale": "fr-FR",
+          "promotionalText": "Pilule oubliée ? Pilll vous rappelle jusqu’à la prise et affiche votre plaquette pour suivre chaque comprimé en un coup d’œil.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/fr-FR"
+        },
+        {
           "locale": "ar-SA",
           "promotionalText": "إشعار بموعد حبوب منع الحمل، يتكرر حتى تتناوليها فلا تفوتك الجرعة أبدًا. شاشة تعرض شريط الحبوب كما هو لتعرفي أين وصلتِ بلمحة واحدة.",
           "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/ar-SA"
@@ -175,6 +180,11 @@
           "locale": "en-US",
           "promotionalText": "Discreet reminders that never mention pills. No one can tell what the notification is for — your privacy stays yours while you stay on track.",
           "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/en-US"
+        },
+        {
+          "locale": "fr-FR",
+          "promotionalText": "Des rappels discrets qui ne mentionnent jamais la pilule. Même sur l’écran verrouillé, votre vie privée reste protégée.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/fr-FR"
         },
         {
           "locale": "ar-SA",
@@ -334,6 +344,11 @@
           "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/en-US"
         },
         {
+          "locale": "fr-FR",
+          "promotionalText": "Pilule et règles dans une seule app. Notez vos règles, suivez votre cycle et obtenez automatiquement la date prévue des prochaines règles.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/fr-FR"
+        },
+        {
           "locale": "ar-SA",
           "promotionalText": "إدارة حبوب منع الحمل والدورة الشهرية في تطبيق واحد. سجّلي دورتك ليتوقع التطبيق موعدها القادم تلقائيًا، واحفظي حالتك اليومية وملاحظاتك في التقويم.",
           "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/ar-SA"
@@ -489,6 +504,11 @@
           "locale": "en-US",
           "promotionalText": "New to birth control pills? Pilll shows today's pill at a glance and tracks your break week automatically — simple guidance from day one.",
           "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/en-US"
+        },
+        {
+          "locale": "fr-FR",
+          "promotionalText": "Vous commencez la pilule ? Pilll affiche le comprimé du jour et suit la pause automatiquement, pour avancer sereinement dès le premier jour.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/fr-FR"
         },
         {
           "locale": "ar-SA",

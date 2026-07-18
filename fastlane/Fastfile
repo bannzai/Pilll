@@ -1,0 +1,31 @@
+default_platform(:ios)
+
+platform :ios do
+  desc 'メタデータとスクリーンショットだけをApp Store Connectの下書きへ反映する'
+  lane :store_assets_upload do
+    api_key = app_store_connect_api_key(
+      key_id: ENV.fetch('ASC_KEY_ID'),
+      issuer_id: ENV.fetch('ASC_ISSUER_ID'),
+      key_content: ENV.fetch('ASC_KEY_P8_BASE64'),
+      is_key_content_base64: true
+    )
+
+    pubspec = File.read(File.expand_path('../pubspec.yaml', __dir__))
+    app_version = pubspec.match(/^version:\s*([^\s+]+)/)&.captures&.first
+    UI.user_error!('pubspec.yamlからversionを取得できません') if app_version.nil? || app_version.empty?
+
+    sh('bash', 'scripts/metadata_check/check_all_metadata.sh')
+    deliver(
+      api_key: api_key,
+      app_identifier: 'com.mizuki.Ohashi.Pilll',
+      app_version: app_version,
+      metadata_path: 'fastlane/metadata',
+      screenshots_path: 'fastlane/screenshots',
+      skip_binary_upload: true,
+      overwrite_screenshots: true,
+      submit_for_review: false,
+      run_precheck_before_submit: false,
+      force: true
+    )
+  end
+end
