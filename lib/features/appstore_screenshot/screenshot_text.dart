@@ -871,5 +871,32 @@ class ScreenshotCopy {
         titleAccentWord: '一个App',
       ),
     },
+    'fr': {
+      1: ScreenshotCopy(
+        title: 'Déjà 140 000+ utilisatrices\nN’oubliez plus votre pilule',
+        subtitle: 'Un rappel à chaque prise. Note de 4,6★ sur l’App Store.',
+        titleAccentWord: '140 000+',
+      ),
+      2: ScreenshotCopy(
+        title: 'Ne vous demandez plus\nsi vous l’avez prise',
+        subtitle: 'Votre plaquette à l’écran, avec votre progression en un coup d’œil.',
+        titleAccentWord: 'Ne vous demandez plus',
+      ),
+      3: ScreenshotCopy(
+        title: 'Des rappels discrets,\nsans dévoiler leur objet',
+        subtitle: 'Même sur l’écran verrouillé, votre vie privée reste protégée.',
+        titleAccentWord: 'rappels discrets',
+      ),
+      4: ScreenshotCopy(
+        title: 'Vous avez oublié ?\nNous vous le rappellerons',
+        subtitle: 'Les rappels se répètent jusqu’à la prise de votre pilule.',
+        titleAccentWord: 'rappellerons',
+      ),
+      5: ScreenshotCopy(
+        title: 'Pilule et règles,\ntout au même endroit',
+        subtitle: 'Notez vos règles et suivez votre cycle automatiquement.',
+        titleAccentWord: 'au même endroit',
+      ),
+    },
   };
 }

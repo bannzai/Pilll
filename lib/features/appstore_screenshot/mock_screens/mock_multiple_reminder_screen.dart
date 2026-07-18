@@ -6,15 +6,13 @@ import 'package:pilll/features/localizations/l.dart';
 ///
 /// 服用通知が時刻を変えて何度も届く様子を、積み重なった通知バナーで表現する。
 /// 最新（最前面）のバナーは服用済みの確認にして「気づいて飲めた」までを1枚で見せる。
-/// 通知本文は [L] の既存文言、時刻表記は [lang] で切り替える。
+/// リマインダーの本文は [reminderNotificationSampleBody]（実装の本文生成に合わせた文言）、
+/// 時刻表記は [lang] で切り替える。
 class MockMultipleReminderScreen extends StatelessWidget {
   const MockMultipleReminderScreen({super.key, required this.lang});
 
   /// 時刻表記の言語切替に使う arb 言語コード。
   final String lang;
-
-  /// 言語ごとの最新通知の相対時刻表記。未定義言語は en にフォールバック。
-  static const Map<String, String> _nowLabel = {'ja': '今', 'en': 'now'};
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +38,7 @@ class MockMultipleReminderScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 18),
             child: NotificationBanner(
               message: _stripEmoji(L.taken),
-              time: _nowLabel[lang] ?? _nowLabel['en']!,
+              time: '9:41',
               showCheck: true,
             ),
           ),
@@ -58,7 +56,7 @@ class MockMultipleReminderScreen extends StatelessWidget {
         scale: scale,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 18),
-          child: NotificationBanner(message: L.takePillReminder, time: time),
+          child: NotificationBanner(message: reminderNotificationSampleBody(), time: time),
         ),
       ),
     );

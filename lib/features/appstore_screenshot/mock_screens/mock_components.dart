@@ -1,12 +1,43 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 /// スクリーンショット用 Mock 画面で共有する部品と描画ヘルパー。
 ///
 /// アイコン類は Material Icons を使わない。flutter test 環境では MaterialIcons
-/// フォントが解決されず豆腐になるため、記号は自前描画する。
+/// フォントが解決されず豆腐になるため、記号は自前描画する（本番 SVG を使うタブバー等を除く）。
+
+/// スクショ用に [todayRepository] を固定日時へ差し替え、intl の日付整形データを初期化する。
+///
+/// RecordPagePillSheet 等の本番コンポーネントは内部で `today()`/`now()`（lib/utils/datetime/day.dart）
+/// を参照するため、テストと同じ方式（`todayRepository = ...`）で固定する。また本番の
+/// DateTimeFormatter は `Platform.localeName`（Simulator のシステムロケール）で intl の DateFormat を
+/// 使うため、entrypoint() を通さないカタログでは未初期化のままだと LocaleDataException になる。
+/// そのため呼び出し時に毎回 initializeDateFormatting しておく（同じロケールへの再初期化は無害）。
+///
+/// 呼び出しは冪等（同じ [fixedDate] を渡す限り、todayRepository は同じ状態になる）。
+void applyFixedToday(DateTime fixedDate) {
+  todayRepository = _FixedTodayService(fixedDate);
+  initializeDateFormatting(Platform.localeName);
+}
+
+/// [applyFixedToday] が使う固定日時版の [TodayService]。
+class _FixedTodayService extends TodayService {
+  _FixedTodayService(this.fixedDate);
+
+  /// `now()` が常に返す固定日時。
+  final DateTime fixedDate;
+
+  @override
+  DateTime now() => fixedDate;
+}
 
 /// Pilll のアプリアイコンを模した角丸スクエア。
 /// コーラル地に白のピルカプセルを重ねる。
@@ -60,6 +91,19 @@ class PillCapsule extends StatelessWidget {
       ),
     );
   }
+}
+
+/// リマインド通知の見本本文（固定サンプル：7/18・16番）。
+///
+/// 実装の本文生成（lib/utils/local_notification.dart の
+/// `RegisterReminderLocalNotification.run` 内、`premiumOrTrial` 分岐のタイトル組み立て：
+/// `${word} ${month}/${day} (${weekday}) ${pillNumber}${L.number}`、
+/// デフォルト word は [pillEmoji]）に合わせた文言。DateTimeFormatter/L.number は
+/// `Platform.localeName`（Simulator のシステムロケール）と [L] を使うため、全撮影言語で
+/// 本番と同じ日付・曜日・番号単位になる。
+String reminderNotificationSampleBody() {
+  final date = DateTime(2026, 7, 18);
+  return '💊 ${DateTimeFormatter.monthAndDay(date)} (${DateTimeFormatter.shortWeekday(date)}) 16${L.number}';
 }
 
 /// iOS の通知バナーを模したカード。
@@ -162,146 +206,51 @@ class CheckPainter extends CustomPainter {
   bool shouldRepaint(CheckPainter oldDelegate) => oldDelegate.color != color || oldDelegate.strokeWidth != strokeWidth;
 }
 
-/// 本番のホーム画面（home/page.dart）に合わせた 4 タブのボトムバー。
+/// 本番のホーム画面（home/page.dart の HomePageBody）が組む 4 タブのボトムバーをそのまま流用する。
 ///
-/// 記録（ピル）・生理・カレンダー・設定。ラベルは [L] で国際化し、選択中のタブは
-/// AppColors.primary（本番の TabBar.labelColor）で示す。アイコンは自前描画。
+/// home/page.dart 側はこの TabBar を独立コンポーネントとして切り出しておらず HomePageBody.build に
+/// インライン記述されているため、ここでは同じアセットパス（images/tab_icon_*.svg 等）・ラベル（[L]）・
+/// 配色（labelColor 等）で同じ構成を再現する。自作 CustomPainter によるアイコン描画はしない。
+/// TabBar は表示用（タップ操作はしない）なので、ダミーの DefaultTabController で包むだけで良い。
 class MockBottomTabBar extends StatelessWidget {
   const MockBottomTabBar({super.key, required this.activeIndex});
 
-  /// 選択中タブのインデックス（0:記録 1:生理 2:カレンダー 3:設定）。
+  /// 選択中タブのインデックス（0:記録 1:生理 2:カレンダー 3:設定）。home/page.dart の
+  /// HomePageTabType の並び順と揃える。
   final int activeIndex;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        color: AppColors.bottomBar,
-        border: Border(top: BorderSide(width: 1, color: AppColors.border)),
+    return DefaultTabController(
+      length: 4,
+      initialIndex: activeIndex,
+      child: Container(
+        decoration: const BoxDecoration(
+          color: AppColors.bottomBar,
+          border: Border(top: BorderSide(width: 1, color: AppColors.border)),
+        ),
+        padding: const EdgeInsets.only(top: 8, bottom: 18),
+        child: TabBar(
+          labelColor: AppColors.primary,
+          labelStyle: const TextStyle(fontSize: 12),
+          indicatorColor: Colors.transparent,
+          unselectedLabelColor: TextColor.gray,
+          tabs: <Tab>[
+            Tab(text: L.pill, icon: SvgPicture.asset(activeIndex == 0 ? 'images/tab_icon_pill_enable.svg' : 'images/tab_icon_pill_disable.svg')),
+            Tab(text: L.menstruation, icon: SvgPicture.asset(activeIndex == 1 ? 'images/menstruation.svg' : 'images/menstruation_disable.svg')),
+            Tab(
+              text: L.calendar,
+              icon: SvgPicture.asset(activeIndex == 2 ? 'images/tab_icon_calendar_enable.svg' : 'images/tab_icon_calendar_disable.svg'),
+            ),
+            Tab(
+              text: L.settings,
+              icon: SvgPicture.asset(activeIndex == 3 ? 'images/tab_icon_setting_enable.svg' : 'images/tab_icon_setting_disable.svg'),
+            ),
+          ],
+        ),
       ),
-      padding: const EdgeInsets.only(top: 8, bottom: 18),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          _tab(index: 0, icon: _pillIcon, label: L.pill),
-          _tab(index: 1, icon: _periodIcon, label: L.menstruation),
-          _tab(index: 2, icon: _calendarIcon, label: L.calendar),
-          _tab(index: 3, icon: _gearIcon, label: L.settings),
-        ],
-      ),
     );
   }
-
-  /// 1 タブ（アイコン＋ラベル）を組む。
-  Widget _tab({required int index, required Widget Function(Color) icon, required String label}) {
-    final color = index == activeIndex ? AppColors.primary : TextColor.gray;
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        SizedBox(width: 26, height: 26, child: Center(child: icon(color))),
-        const SizedBox(height: 3),
-        Text(label, style: TextStyle(fontSize: 11, fontWeight: FontWeight.w500, color: color)),
-      ],
-    );
-  }
-
-  Widget _pillIcon(Color color) => PillCapsule(width: 24, height: 12, color: color);
-
-  Widget _periodIcon(Color color) => CustomPaint(size: const Size(20, 24), painter: TeardropPainter(color: color));
-
-  Widget _calendarIcon(Color color) => Container(
-        width: 22,
-        height: 22,
-        decoration: BoxDecoration(border: Border.all(color: color, width: 2), borderRadius: BorderRadius.circular(4)),
-        child: Column(children: [Container(height: 5, color: color)]),
-      );
-
-  Widget _gearIcon(Color color) => CustomPaint(size: const Size(24, 24), painter: GearPainter(color: color));
-}
-
-/// しずく（生理タブのアイコン代替）を描く。
-class TeardropPainter extends CustomPainter {
-  const TeardropPainter({required this.color});
-
-  /// しずくの塗り色。
-  final Color color;
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    canvas.drawPath(
-      Path()
-        ..moveTo(size.width * 0.5, 0)
-        ..cubicTo(size.width * 0.95, size.height * 0.5, size.width * 0.85, size.height, size.width * 0.5, size.height)
-        ..cubicTo(size.width * 0.15, size.height, size.width * 0.05, size.height * 0.5, size.width * 0.5, 0)
-        ..close(),
-      Paint()
-        ..color = color
-        ..style = PaintingStyle.fill,
-    );
-  }
-
-  @override
-  bool shouldRepaint(TeardropPainter oldDelegate) => oldDelegate.color != color;
-}
-
-/// 歯車（設定タブのアイコン代替）を描く。
-class GearPainter extends CustomPainter {
-  const GearPainter({required this.color});
-
-  /// 歯車の色。
-  final Color color;
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final center = size.center(Offset.zero);
-    final paint = Paint()
-      ..color = color
-      ..style = PaintingStyle.fill;
-    // 8 枚の歯を放射状に描く。
-    for (var i = 0; i < 8; i++) {
-      canvas.save();
-      canvas.translate(center.dx, center.dy);
-      canvas.rotate(3.1415926 * i / 4);
-      canvas.drawRRect(
-        RRect.fromRectAndRadius(Rect.fromLTWH(-size.width * 0.09, -size.height * 0.5, size.width * 0.18, size.height * 0.22), const Radius.circular(1.5)),
-        paint,
-      );
-      canvas.restore();
-    }
-    canvas.drawCircle(center, size.width * 0.30, paint);
-    canvas.drawCircle(center, size.width * 0.13, Paint()..color = AppColors.bottomBar);
-  }
-
-  @override
-  bool shouldRepaint(GearPainter oldDelegate) => oldDelegate.color != color;
-}
-
-/// 送りチェブロン（服用済みマークの間の「▶」）を描く。
-class ChevronPainter extends CustomPainter {
-  const ChevronPainter({required this.color});
-
-  /// チェブロンの色。
-  final Color color;
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    canvas.drawPath(
-      Path()
-        ..moveTo(size.width * 0.2, size.height * 0.15)
-        ..lineTo(size.width * 0.75, size.height * 0.5)
-        ..lineTo(size.width * 0.2, size.height * 0.85),
-      Paint()
-        ..color = color
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 1.6
-        ..strokeCap = StrokeCap.round
-        ..strokeJoin = StrokeJoin.round,
-    );
-  }
-
-  @override
-  bool shouldRepaint(ChevronPainter oldDelegate) => oldDelegate.color != color;
 }
 
 /// ハートを描く。生理・お気に入りの表現に使う。

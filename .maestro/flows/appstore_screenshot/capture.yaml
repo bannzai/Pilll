@@ -1,0 +1,53 @@
+appId: com.mizuki.Ohashi.Pilll.dev
+# App Store スクリーンショット撮影フロー（1 言語分）。
+# LANG は呼び出し側が必ず `--env LANG=<arbコード>` で渡す（flow に default を置くと
+# CLI 指定を上書きしてしまうため default は置かない）。
+# ScreenshotCatalogApp（SCREENSHOT_CATALOG=true でビルドしたアプリ）を起動し、
+# 言語一覧から ${LANG} をタップ → 各ページ(p1〜p5)を全画面表示して撮影 → 戻る。
+# 出力は 1290×2796 の OS スクリーンショット。呼び出し側 capture_screenshots.sh が
+# 言語ごとに LANG を差し替えて32回実行する。
+---
+- launchApp
+- waitForAnimationToEnd
+- scrollUntilVisible:
+    element:
+      id: "${LANG}"
+    direction: DOWN
+    timeout: 20000
+- tapOn:
+    id: "${LANG}"
+- waitForAnimationToEnd
+- tapOn:
+    id: "page_1"
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/generate_screenshots/artifacts/simulator/${LANG}/p1"
+- tapOn:
+    id: "back"
+- waitForAnimationToEnd
+- tapOn:
+    id: "page_2"
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/generate_screenshots/artifacts/simulator/${LANG}/p2"
+- tapOn:
+    id: "back"
+- waitForAnimationToEnd
+- tapOn:
+    id: "page_3"
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/generate_screenshots/artifacts/simulator/${LANG}/p3"
+- tapOn:
+    id: "back"
+- waitForAnimationToEnd
+- tapOn:
+    id: "page_4"
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/generate_screenshots/artifacts/simulator/${LANG}/p4"
+- tapOn:
+    id: "back"
+- waitForAnimationToEnd
+- tapOn:
+    id: "page_5"
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/generate_screenshots/artifacts/simulator/${LANG}/p5"
+- tapOn:
+    id: "back"

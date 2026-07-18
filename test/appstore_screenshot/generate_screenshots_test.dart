@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/features/appstore_screenshot/screenshot_device.dart';
 import 'package:pilll/features/appstore_screenshot/screenshot_locale.dart';
 import 'package:pilll/features/appstore_screenshot/screenshot_page.dart';
@@ -32,7 +33,10 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   const device = ScreenshotDevice.iPhone67;
-  final variant = (Platform.environment['SCREENSHOT_VARIANT'] ?? '').trim().isEmpty ? 'main' : Platform.environment['SCREENSHOT_VARIANT']!.trim();
+  final variant =
+      (Platform.environment['SCREENSHOT_VARIANT'] ?? '').trim().isEmpty
+          ? 'main'
+          : Platform.environment['SCREENSHOT_VARIANT']!.trim();
   final order = screenshotVariantOrder(variant: variant);
   final langs = _langsFromEnv();
   final pageFilter = _pageFilterFromEnv();
@@ -46,10 +50,12 @@ void main() {
     await _loadFonts(loadedFamilies);
   });
 
-  // 全31言語×5ページの生成は flutter test 既定の10分タイムアウトを超えるため無効化する。
-  testWidgets('App Store スクリーンショットを生成する', timeout: Timeout.none, (tester) async {
+  // 全32言語×5ページの生成は flutter test 既定の10分タイムアウトを超えるため無効化する。
+  testWidgets('App Store スクリーンショットを生成する', timeout: Timeout.none,
+      (tester) async {
     if (order == null) {
-      fail('未知のバリアントです: $variant（定義は lib/features/appstore_screenshot/screenshot_variant.dart）');
+      fail(
+          '未知のバリアントです: $variant（定義は lib/features/appstore_screenshot/screenshot_variant.dart）');
     }
 
     tester.view.physicalSize = Size(device.outputWidth, device.outputHeight);
@@ -91,7 +97,11 @@ List<String> _langsFromEnv() {
   if (value == null || value.trim().isEmpty) {
     return allScreenshotLanguages;
   }
-  return value.split(',').map((e) => e.trim()).where((e) => e.isNotEmpty).toList();
+  return value
+      .split(',')
+      .map((e) => e.trim())
+      .where((e) => e.isNotEmpty)
+      .toList();
 }
 
 /// SCREENSHOT_PAGES を解釈する。未指定なら null（バリアントの全ページを生成）。
@@ -127,15 +137,36 @@ String _primaryFamily(String lang) {
 Future<void> _loadFonts(List<String> outFamilies) async {
   final dir = Directory('scripts/generate_screenshots/fonts');
   final fontFiles = dir.existsSync()
-      ? dir.listSync().whereType<File>().where((f) => f.path.endsWith('.ttf') || f.path.endsWith('.otf')).toList()
+      ? dir
+          .listSync()
+          .whereType<File>()
+          .where((f) => f.path.endsWith('.ttf') || f.path.endsWith('.otf'))
+          .toList()
       : <File>[];
   if (fontFiles.isEmpty) {
-    fail('フォントが見つかりません。先に `bash scripts/generate_screenshots/fetch_fonts.sh` を実行してください: ${dir.absolute.path}');
+    fail(
+        'フォントが見つかりません。先に `bash scripts/generate_screenshots/fetch_fonts.sh` を実行してください: ${dir.absolute.path}');
   }
   for (final file in fontFiles) {
-    final family = file.uri.pathSegments.last.replaceAll(RegExp(r'\.(ttf|otf)$'), '');
+    final family =
+        file.uri.pathSegments.last.replaceAll(RegExp(r'\.(ttf|otf)$'), '');
     await (FontLoader(family)..addFont(_readAsByteData(file))).load();
     outFamilies.add(family);
+    // 本番コンポーネントはFontFamily.japanese（"Noto Sans CJK JP"）を明示する。
+    // 配布ファイル名由来のNotoSansJPだけではtest rendererがAhemへ落ちるため、
+    // 同じフォントを本番のfamily名でも登録して実機に近い文字メトリクスにする。
+    if (family == 'NotoSansJP') {
+      await (FontLoader(FontFamily.japanese)..addFont(_readAsByteData(file)))
+          .load();
+      outFamilies.add(FontFamily.japanese);
+    }
+    if (family == 'NotoSans') {
+      // flutter_testにはiOSシステムフォントのAvenir Nextが無い。未登録だとAhemの
+      // 大きな行高になり、ピル番号＋マークの固定レイアウトだけがdebug overflowする。
+      await (FontLoader(FontFamily.number)..addFont(_readAsByteData(file)))
+          .load();
+      outFamilies.add(FontFamily.number);
+    }
   }
 }
 
@@ -173,7 +204,15 @@ Future<void> _renderAndCapture(
         child: Center(
           child: RepaintBoundary(
             key: captureKey,
-            child: screenshotPage(lang: lang, page: page, device: device),
+            child: MediaQuery(
+              // Simulator正式経路では外側のFittedBox内でも端末の論理サイズ430×932が
+              // MediaQueryに入る。widget testも同じ条件にし、PageViewのviewportFractionを
+              // 1290px出力幅から誤計算しないようにする。
+              data: MediaQueryData(
+                  size: Size(device.logicalWidth, device.logicalHeight),
+                  devicePixelRatio: 3),
+              child: screenshotPage(lang: lang, page: page, device: device),
+            ),
           ),
         ),
       ),
@@ -183,14 +222,16 @@ Future<void> _renderAndCapture(
 
   // PNG エンコードは実 async が必要なため runAsync 内で行う。
   await tester.runAsync(() async {
-    final boundary = captureKey.currentContext!.findRenderObject()! as RenderRepaintBoundary;
+    final boundary =
+        captureKey.currentContext!.findRenderObject()! as RenderRepaintBoundary;
     final image = await boundary.toImage(pixelRatio: 1.0);
     final byteData = await image.toByteData(format: ui.ImageByteFormat.png);
     image.dispose();
     if (byteData == null) {
       fail('画像のエンコードに失敗しました: lang=$lang page=$page');
     }
-    final outputFile = File(_outputPath(variant: variant, lang: lang, index: index, device: device));
+    final outputFile = File(_outputPath(
+        variant: variant, lang: lang, index: index, device: device));
     await outputFile.create(recursive: true);
     await outputFile.writeAsBytes(byteData.buffer.asUint8List());
     // ignore: avoid_print

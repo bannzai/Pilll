@@ -1,6 +1,8 @@
 import 'dart:math' as math;
+import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/appstore_screenshot/mock_screens/mock_components.dart';
 import 'package:pilll/features/appstore_screenshot/mock_screens/mock_record_screen.dart';
@@ -17,24 +19,6 @@ class MockSocialProofScreen extends StatelessWidget {
   /// バッジ・通知文言の言語切替に使う arb 言語コード。
   final String lang;
 
-  /// 言語ごとの通知本文（実機は「💊 日付 N番」形式）。未定義言語は en にフォールバック。
-  static const Map<String, String> _notificationBody = {'ja': '💊 1/12 (火) 16番', 'en': '💊 Tue, Jan 12 · No. 16'};
-
-  /// 言語ごとの通知時刻表記。
-  static const Map<String, String> _nowLabel = {'ja': '今', 'en': 'now'};
-
-  /// バッジのバンド見出し（上段）。
-  static const Map<String, String> _badgeTop = {'ja': '利用者数', 'en': 'Trusted by'};
-
-  /// バッジの大見出し（利用者数）。
-  static const Map<String, String> _badgeNumber = {'ja': '14万', 'en': '140K+'};
-
-  /// バッジの単位（大見出しの後ろ）。
-  static const Map<String, String> _badgeUnit = {'ja': '人', 'en': ''};
-
-  /// バッジの下段。
-  static const Map<String, String> _badgeBottom = {'ja': '突破', 'en': 'users'};
-
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -45,13 +29,16 @@ class MockSocialProofScreen extends StatelessWidget {
           top: 168,
           left: 16,
           right: 44,
-          child: NotificationBanner(message: _notificationBody[lang] ?? _notificationBody['en']!, time: _nowLabel[lang] ?? _nowLabel['en']!),
+          child: NotificationBanner(
+            message: reminderNotificationSampleBody(),
+            time: '9:41',
+          ),
         ),
         // 右下に浮かせる「利用者数14万人突破」バッジ（ステッカー風に傾ける）。
         Positioned(
           right: 12,
-          bottom: 128,
-          child: Transform.rotate(angle: -0.1, child: _badge(size: 168)),
+          bottom: 204,
+          child: Transform.rotate(angle: -0.1, child: _badge(size: 148)),
         ),
       ],
     );
@@ -69,18 +56,12 @@ class MockSocialProofScreen extends StatelessWidget {
           Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(_badgeTop[lang] ?? _badgeTop['en']!, style: TextStyle(fontSize: size * 0.1, fontWeight: FontWeight.w700, color: TextColor.primaryDarkBlue)),
-              const SizedBox(height: 1),
-              Text.rich(
-                TextSpan(
-                  children: [
-                    TextSpan(text: _badgeNumber[lang] ?? _badgeNumber['en']!, style: TextStyle(fontSize: size * 0.26, fontWeight: FontWeight.w900, color: TextColor.primaryDarkBlue)),
-                    TextSpan(text: _badgeUnit[lang] ?? _badgeUnit['en']!, style: TextStyle(fontSize: size * 0.11, fontWeight: FontWeight.w700, color: TextColor.primaryDarkBlue)),
-                  ],
-                ),
+              Text(
+                NumberFormat.compact(locale: Platform.localeName).format(140000),
+                style: TextStyle(fontSize: size * 0.25, fontWeight: FontWeight.w900, color: TextColor.primaryDarkBlue),
               ),
               const SizedBox(height: 1),
-              Text(_badgeBottom[lang] ?? _badgeBottom['en']!, style: TextStyle(fontSize: size * 0.11, fontWeight: FontWeight.w700, color: TextColor.primaryDarkBlue)),
+              Text('★4.6', style: TextStyle(fontSize: size * 0.16, fontWeight: FontWeight.w800, color: TextColor.primaryDarkBlue)),
             ],
           ),
         ],

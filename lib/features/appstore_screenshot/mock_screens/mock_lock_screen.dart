@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/features/appstore_screenshot/mock_screens/mock_components.dart';
+import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 /// スクリーンショット #3（伏せた通知）の Mock。論理サイズ 430×932。
 ///
@@ -11,15 +13,6 @@ class MockLockScreen extends StatelessWidget {
 
   /// 文言の言語切替に使う arb 言語コード。
   final String lang;
-
-  /// 言語ごとの日付表記（固定の見本日）。未定義言語は en にフォールバック。
-  static const Map<String, String> _dateLabel = {'ja': '1月12日 金曜日', 'en': 'Friday, January 12'};
-
-  /// 言語ごとの、中身を明かさない中立的な通知本文。
-  static const Map<String, String> _discreetBody = {'ja': 'リマインダーがあります', 'en': 'You have a reminder'};
-
-  /// 言語ごとの通知時刻表記。
-  static const Map<String, String> _agoLabel = {'ja': '1分前', 'en': '1m ago'};
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +28,7 @@ class MockLockScreen extends StatelessWidget {
         children: [
           const SizedBox(height: 96),
           Text(
-            _dateLabel[lang] ?? _dateLabel['en']!,
+            DateTimeFormatter.yearAndMonthAndDay(DateTime(2026, 7, 18)),
             style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600, color: Colors.white.withValues(alpha: 0.85)),
           ),
           const SizedBox(height: 4),
@@ -44,8 +37,8 @@ class MockLockScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 18),
             child: NotificationBanner(
-              message: _discreetBody[lang] ?? _discreetBody['en']!,
-              time: _agoLabel[lang] ?? _agoLabel['en']!,
+              message: L.notification,
+              time: '9:41',
               opacity: 0.86,
             ),
           ),

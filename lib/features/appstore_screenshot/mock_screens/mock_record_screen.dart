@@ -1,50 +1,176 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
+import 'package:pilll/entity/firestore_id_generator.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/appstore_screenshot/mock_screens/mock_components.dart';
+import 'package:pilll/features/feature_appeal/menstruation/menstruation_announcement_bar.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/record/components/button/record_page_button.dart';
+import 'package:pilll/features/record/components/pill_sheet/record_page_pill_sheet_list.dart';
+import 'package:pilll/features/record/components/setting/button.dart';
+import 'package:pilll/provider/database.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 /// スクリーンショット用のピルシート画面 Mock（5-A の #2）。論理サイズ 430×932。
 ///
-/// 実機の記録ページ（tmp/research/screenshots/pilll/jp/01.png）に寄せて固定データで
-/// 再現する。上部に「日付」＋「今日飲むピル N番」ヘッダーと「服用お休み」ボタン、
-/// その下に月曜始まりの曜日ライン・錠番号付きピルシート（服用済みチェック＋送りチェブロン、
-/// 今日の錠はオレンジリング）を描く。下部は本番同様の 4 タブ。
+/// 実機の記録ページ（tmp/real_app/11_home.png）に寄せて固定データで再現する。上部に
+/// 「日付」＋「今日飲むピル N番」ヘッダーと本番の [RecordPagePillSheetSettingButton]
+/// （「ピルシートの設定」ボタン）、その下に本番の [RecordPagePillSheetList]（[RecordPagePillSheet]
+/// による服用済みチェック・送りチェブロン・今日の錠のオレンジリング・日付表示モードと、
+/// 複数ピルシート時の [DotsIndicator] ページインジケータを内包する本物の PageView）と
+/// 本番の [RecordPageButton]（「飲んだ」ボタン）を配置する。下部は本番同様の 4 タブ。
 ///
-/// 本番の RecordPagePillSheet は PillSheetGroup / Setting / 各種 Provider に強く依存するため、
-/// テストで安定して撮るには配線が重い。ここでは同じ見た目を固定データで再構成する。
-/// 見出しは [L] の既存ローカライズ文言、日付・番号単位・曜日は [lang] で切り替える。
+/// [DotsIndicator] は `PageController.page` の参照に実際の `PageView` へのアタッチを要求するため
+/// （アタッチ前に参照すると `positions.isNotEmpty` の assertion で例外になる）、単独では使えない。
+/// そのため実機同様に 3 ドット出すには、実機のように次以降のピルシートが実在する
+/// [PillSheetGroup]（pillSheets 3 枚）を組んで [RecordPagePillSheetList] に委ね、本番の
+/// PageView + DotsIndicator の組み合わせをそのまま利用する。
+///
+/// ヘッダーの日付・番号単位は本番 RecordPageInformationHeader と同じ [DateTimeFormatter]・
+/// [L.number] を使う。日付書式は Platform.localeName(=端末言語)由来のため、撮影時は
+/// capture_screenshots.sh が言語ごとに Simulator の言語を切り替える(ロケールの日付データは
+/// main.dev.dart のカタログ分岐で initializeDateFormatting 済み)。
 class MockRecordScreen extends StatelessWidget {
   const MockRecordScreen({super.key, required this.lang});
 
   /// 日付・曜日・番号単位の言語切替に使う arb 言語コード。
   final String lang;
 
-  /// 今日服用する錠番号。
+  /// 今日服用する錠番号。実機（tmp/real_app/11_home.png）の「今日飲むピル 16番」に合わせる。
   static const int todayPillNumber = 16;
 
-  /// 言語ごとの日付表記（固定の見本日 1/12 火曜）。
-  static const Map<String, String> _dateLabel = {'ja': '1/12 (火)', 'en': 'Tue, Jan 12'};
-
-  /// 言語ごとの錠番号の単位。ja は「番」、en は単位なし。
-  static const Map<String, String> _pillNumberUnit = {'ja': '番', 'en': ''};
+  /// 固定サンプルデータの基準日。実機の記録ページスクショ（tmp/real_app/11_home.png）が
+  /// 「7/18(土)」なので合わせる（2026-07-18は実際に土曜日）。
+  static final DateTime _fixedToday = DateTime(2026, 7, 18);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: AppColors.background,
-      child: Column(
-        children: [
-          _statusBar(),
-          const SizedBox(height: 8),
-          _header(),
-          const SizedBox(height: 12),
-          _restButton(),
-          const SizedBox(height: 24),
-          _MockPillSheet(lang: lang, todayPillNumber: todayPillNumber),
-          const Spacer(),
-          const MockBottomTabBar(activeIndex: 0),
-        ],
+    // RecordPagePillSheet は today()/now()（lib/utils/datetime/day.dart）に依存するため固定する。
+    applyFixedToday(_fixedToday);
+
+    final pillSheetID = firestoreIDGenerator();
+    // 28錠タイプ・today=16番になるよう15日前に開始・15番まで服用済み（=前日まで服用）。
+    final pillSheet = PillSheet.v1(
+      id: pillSheetID,
+      typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+      beginDate: _fixedToday.subtract(const Duration(days: todayPillNumber - 1)),
+      lastTakenDate: _fixedToday.subtract(const Duration(days: 1)),
+      createdAt: _fixedToday,
+    );
+    // 実機（tmp/real_app/11_home.png）のページインジケータは3ドット。自動作成設定で次の
+    // ピルシートが先読み作成された状態を再現するため、未服用の次シート2枚を続けて生成する。
+    final nextPillSheetID = firestoreIDGenerator();
+    final nextPillSheet = PillSheet.v1(
+      id: nextPillSheetID,
+      typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+      beginDate: pillSheet.beginDate.add(Duration(days: PillSheetType.pillsheet_28_0.typeInfo.totalCount)),
+      lastTakenDate: null,
+      createdAt: _fixedToday,
+      groupIndex: 1,
+    );
+    final secondNextPillSheetID = firestoreIDGenerator();
+    final secondNextPillSheet = PillSheet.v1(
+      id: secondNextPillSheetID,
+      typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+      beginDate: nextPillSheet.beginDate.add(Duration(days: PillSheetType.pillsheet_28_0.typeInfo.totalCount)),
+      lastTakenDate: null,
+      createdAt: _fixedToday,
+      groupIndex: 2,
+    );
+    final pillSheetGroup = PillSheetGroup(
+      pillSheets: [pillSheet, nextPillSheet, secondNextPillSheet],
+      createdAt: _fixedToday,
+      pillSheetIDs: [pillSheetID, nextPillSheetID, secondNextPillSheetID],
+      // 実機（tmp/real_app/11_home.png）はピルマークの上に日付（7/3, 7/4…）を表示するモード。
+      pillSheetAppearanceMode: PillSheetAppearanceMode.date,
+    );
+    const setting = Setting(
+      pillNumberForFromMenstruation: 1,
+      durationMenstruation: 4,
+      reminderTimes: [],
+      timezoneDatabaseName: null,
+      isOnReminder: true,
+    );
+    // マーケティング訴求のため、生理予定日ハイライト等が出るプレミアム状態で表示する。
+    const user = User(isPremium: true);
+
+    // RecordPagePillSheetSettingButton / RecordPagePillSheet / RecordPageButton は
+    // takePillProvider・registerReminderLocalNotificationProvider 等（databaseProvider 経由で
+    // FirebaseAuth に触れる）を watch するため ProviderScope で databaseProvider を差し替える。
+    // DatabaseConnection のコンストラクタは uid を保持するだけで Firebase に触れない。Firestore
+    // アクセスはタップ時のみでスクショではタップしないため呼ばれない。
+    return ProviderScope(
+      overrides: [
+        databaseProvider.overrideWith((ref) => DatabaseConnection('catalog-user')),
+      ],
+      child: Container(
+        color: AppColors.background,
+        child: Column(
+          children: [
+            // 実機は白背景の AppBar(toolbarHeight=130)がステータスバー領域ごと白帯になる。
+            Container(
+              color: AppColors.white,
+              child: Column(
+                children: [
+                  _statusBar(),
+                  _header(),
+                ],
+              ),
+            ),
+            MenstruationAnnouncementBar(isClosed: ValueNotifier(false)),
+            // 本番（lib/features/record/page.dart）の ListView 先頭の余白と同じ 37。
+            const SizedBox(height: 37),
+            // 実機（tmp/real_app/11_home.png）の「ピルシートの設定」ボタン。本番の配置
+            // （lib/features/record/page.dart）と同じく、ピルシート幅に右寄せする。
+            SizedBox(
+              width: PillSheetViewLayout.width,
+              child: Row(
+                children: [
+                  const Spacer(),
+                  Flexible(
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: RecordPagePillSheetSettingButton(
+                        pillSheetGroup: pillSheetGroup,
+                        activePillSheet: pillSheet,
+                        setting: setting,
+                        user: user,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 16),
+            // 本番 RecordPagePillSheetList。内部で RecordPagePillSheet（ピルシート本体）と
+            // pillSheets が複数の時だけ出す DotsIndicator（実機同様の3ドット）を両方描画する。
+            RecordPagePillSheetList(
+              pillSheetGroup: pillSheetGroup,
+              activePillSheet: pillSheet,
+              setting: setting,
+              user: user,
+            ),
+            const Spacer(),
+            // 実機の紺色の大ボタン「飲んだ」。本番 RecordPageButton をそのまま使う。
+            RecordPageButton(
+              pillSheetGroup: pillSheetGroup,
+              currentPillSheet: pillSheet,
+              userIsPremiumOtTrial: user.premiumOrTrial,
+              user: user,
+              setting: setting,
+            ),
+            // 本番（lib/features/record/page.dart）のボタン下余白と同じ 40。
+            const SizedBox(height: 40),
+            const MockBottomTabBar(activeIndex: 0),
+          ],
+        ),
       ),
     );
   }
@@ -104,197 +230,53 @@ class MockRecordScreen extends StatelessWidget {
     );
   }
 
-  /// 「日付」｜「今日飲むピル N番」ヘッダー。実機の記録ページ上部に対応。
+  /// 「日付」｜「今日飲むピル N番」ヘッダー。
+  ///
+  /// 寸法・スタイルは本番 RecordPageInformationHeader（lib/features/record/components/header/
+  /// record_page_header.dart, RecordPageInformationHeaderConst.height=130 / 上余白34 /
+  /// 日付 24pt w600 TextColor.gray / 縦線 64×10 と左右28 / ラベル 14pt w300 noshime /
+  /// 番号 40pt w500）に合わせる。文言だけ言語切替のため固定 Map を使う（class コメント参照）。
   Widget _header() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 28),
-      child: Row(
+    return SizedBox(
+      height: 130,
+      child: Column(
         children: [
-          Expanded(
-            child: Text(
-              _dateLabel[lang] ?? _dateLabel['en']!,
-              textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w600, color: TextColor.main),
-            ),
-          ),
-          Container(width: 1, height: 56, color: AppColors.divider),
-          Expanded(
-            child: Column(
-              children: [
-                Text(L.todayPillToTake, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: TextColor.main)),
-                const SizedBox(height: 2),
-                Text.rich(
-                  TextSpan(
+          const SizedBox(height: 34),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                // 本番 RecordPageInformationHeader._todayWidget と同じ組み立て。端末言語切替
+                // (capture_screenshots.sh) により全言語で実アプリと同じ書式になる。
+                '${DateTimeFormatter.monthAndDay(_fixedToday)} (${DateTimeFormatter.shortWeekday(_fixedToday)})',
+                style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w600, color: TextColor.gray),
+              ),
+              const SizedBox(width: 28),
+              const SizedBox(height: 64, child: VerticalDivider(width: 10, color: AppColors.divider)),
+              const SizedBox(width: 28),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(L.todayPillToTake, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w300, color: TextColor.noshime)),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.baseline,
+                    textBaseline: TextBaseline.ideographic,
                     children: [
-                      const TextSpan(text: '$todayPillNumber', style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700, color: TextColor.main)),
-                      TextSpan(
-                        text: _pillNumberUnit[lang] ?? _pillNumberUnit['en']!,
+                      const Text('$todayPillNumber', style: TextStyle(fontSize: 40, fontWeight: FontWeight.w500, color: TextColor.main)),
+                      Text(
+                        // 本番 TodayTakenPillNumber と同じ単位文言(L.number)。
+                        L.number,
                         style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: TextColor.main),
                       ),
                     ],
                   ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  /// 「服用お休み」ボタン（アウトライン、右寄せ）。
-  Widget _restButton() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 28),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 9),
-            decoration: BoxDecoration(
-              border: Border.all(color: AppColors.primary, width: 1.2),
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Text(L.pauseTaking, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.primary)),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-/// 実機のピルシート表示を固定データで再現する Mock。
-/// 月曜始まりの曜日ライン、錠番号（マーク上）、服用済みチェック＋送りチェブロン、
-/// 今日の錠のオレンジリングを描く。
-class _MockPillSheet extends StatelessWidget {
-  const _MockPillSheet({required this.lang, required this.todayPillNumber});
-
-  /// 曜日ラベルの言語切替に使う arb 言語コード。
-  final String lang;
-
-  /// 今日服用する錠番号（オレンジリングで強調）。
-  final int todayPillNumber;
-
-  /// 月曜始まりの曜日短縮ラベル。実機 01.png に合わせて月曜始まり。
-  static const Map<String, List<String>> _weekdayLabels = {
-    'ja': ['月', '火', '水', '木', '金', '土', '日'],
-    'en': ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-  };
-
-  @override
-  Widget build(BuildContext context) {
-    final labels = _weekdayLabels[lang] ?? _weekdayLabels['en']!;
-    return Container(
-      width: 372,
-      decoration: BoxDecoration(
-        color: AppColors.pillSheet,
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 8.0, offset: Offset(0, 3))],
-      ),
-      padding: const EdgeInsets.fromLTRB(20, 14, 20, 24),
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              for (var column = 0; column < 7; column++)
-                SizedBox(
-                  width: 40,
-                  child: Center(
-                    child: Text(
-                      labels[column],
-                      // 月曜始まりなので index 5=土(青), 6=日(赤)。
-                      style: TextStyle(
-                        fontSize: 11,
-                        fontWeight: FontWeight.w700,
-                        color: column == 5
-                            ? AppColors.saturday
-                            : column == 6
-                                ? AppColors.sunday
-                                : AppColors.weekday,
-                      ),
-                    ),
-                  ),
-                ),
+                ],
+              ),
             ],
           ),
-          const SizedBox(height: 10),
-          for (var line = 0; line < 4; line++) ...[
-            if (line > 0) const SizedBox(height: 8),
-            _pillLine(line),
-          ],
         ],
       ),
-    );
-  }
-
-  /// 1 行（7 錠）を、送りチェブロンを挟みつつ組む。
-  Widget _pillLine(int line) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        for (var column = 0; column < 7; column++) ...[
-          if (column > 0) _chevron(line * 7 + column),
-          _cell(line * 7 + column + 1),
-        ],
-      ],
-    );
-  }
-
-  /// セル間の送りチェブロン。左隣の錠が服用済み（今日より前）のときだけ出す。
-  Widget _chevron(int leftPillNumber) {
-    return SizedBox(
-      width: 10,
-      child: leftPillNumber < todayPillNumber ? const Center(child: CustomPaint(size: Size(7, 10), painter: ChevronPainter(color: AppColors.lightGray))) : null,
-    );
-  }
-
-  /// 1 錠分のセル（番号＋マーク）。
-  Widget _cell(int pillNumber) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Text('$pillNumber', style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w500, color: TextColor.gray)),
-        const SizedBox(height: 3),
-        _mark(pillNumber),
-      ],
-    );
-  }
-
-  /// 錠番号の状態に対応するマーク。
-  /// 今日より前＝服用済み（薄灰＋チェック）、今日＝薄灰＋オレンジリング、
-  /// 22番以降＝偽薬（白）、それ以外＝未服用の実薬（青灰）。
-  Widget _mark(int pillNumber) {
-    if (pillNumber < todayPillNumber) {
-      return Container(
-        width: 22,
-        height: 22,
-        decoration: const BoxDecoration(color: AppColors.lightGray, shape: BoxShape.circle),
-        child: const Center(child: CustomPaint(size: Size(11, 8.5), painter: CheckPainter(color: Colors.white))),
-      );
-    }
-    if (pillNumber == todayPillNumber) {
-      return Container(
-        width: 22,
-        height: 22,
-        decoration: BoxDecoration(
-          color: AppColors.lightGray,
-          shape: BoxShape.circle,
-          border: Border.all(color: AppColors.secondary, width: 2.5),
-        ),
-      );
-    }
-    if (pillNumber >= 22) {
-      return Container(
-        width: 22,
-        height: 22,
-        decoration: BoxDecoration(color: AppColors.blank, shape: BoxShape.circle, border: Border.all(color: AppColors.border)),
-      );
-    }
-    return Container(
-      width: 22,
-      height: 22,
-      decoration: const BoxDecoration(color: AppColors.potti, shape: BoxShape.circle),
     );
   }
 }

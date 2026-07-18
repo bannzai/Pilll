@@ -1,10 +1,58 @@
 # generate_screenshots
 
-App Store 用スクリーンショットを、シミュレータ・実機ビルドなしで生成・配置するスクリプト群。
+App Store 用スクリーンショットを生成・配置するスクリプト群。生成経路は 2 つある。
 
-`flutter test` の widget test で画面を描画し、`RepaintBoundary` を PNG 化して書き出す方式。
-描画に使う Widget は `lib/features/appstore_screenshot/`、撮影ハーネスは
-`test/appstore_screenshot/generate_screenshots_test.dart`。
+- **正式（ストア提出用）: Simulator 実描画キャプチャ** — `capture_screenshots.sh`。
+  実 iOS のフォント・絵文字で描画されるため見た目が実機と一致する。
+- **高速プレビュー: widget test レンダラ** — `generate_appstore_screenshots.sh`。
+  シミュレータ・実機ビルド不要で速いが、テスト用フォントで描画するため実機と細部が異なる。
+  レイアウト確認やコピー調整の反復に使う。
+
+描画に使う Widget は `lib/features/appstore_screenshot/`（両経路で共通）。
+Simulator 経路のカタログアプリは `lib/features/appstore_screenshot/screenshot_catalog_app.dart`、
+widget test 撮影ハーネスは `test/appstore_screenshot/generate_screenshots_test.dart`。
+
+## 正式経路: Simulator 実描画キャプチャ
+
+```
+capture_screenshots.sh
+  ├─ sim-boot で 1290×2796 の Simulator（iPhone 15 Pro Max）を起動
+  ├─ flutter build ios --simulator -t lib/main.dev.dart --dart-define=SCREENSHOT_CATALOG=true
+  │    → main.dev.dart が entrypoint() を通さず ScreenshotCatalogApp を runApp
+  ├─ simctl install
+  └─ 言語ごとに .maestro/flows/appstore_screenshot/capture.yaml を実行
+       言語一覧タップ → 各ページ全画面表示 → takeScreenshot(1290×2796) → 戻る
+       出力: artifacts/simulator/{arbコード}/p{N}.png
+
+organize_screenshots.dart（dart run）
+  └─ screenshot_variant.dart の並び順(SSOT)で simulator/{lang}/p{N}.png を
+     _variant-{variant}/{fastlaneロケール}/{idx}_APP_IPHONE_67_{idx}.png へ全6バリアント配置
+     （CPP は並び替えだけなので撮影は 1 回、ここでファイル並びとして表現）
+
+apply_variant.sh NAME
+  └─ _variant-{NAME}/{locale}/*.png を fastlane/screenshots/{locale}/ へ配置
+```
+
+**前提（この worktree に無い場合は用意が必要。すべて gitignore 済みのシークレット/設定）:**
+- `lib/secret/secret.dart`（`scripts/secret.sh` が secret.dart.sample と env から生成）
+- `ios/Flutter/Secret.xcconfig`（`ios/Flutter/Debug.xcconfig` が `#include`。bundle id 等を定義）
+- `ios/Runner/GoogleService-Info.plist`（Firebase）
+- `environment/dev.json`（`--dart-define-from-file`）
+- `ios/Pods`（worktree では `flutter-pod-warmup`。※このリポジトリでは `flutter build ... --config-only` で pod install 完走を確認済み）
+
+```sh
+bash scripts/generate_screenshots/capture_screenshots.sh -l ja            # ja だけ
+bash scripts/generate_screenshots/capture_screenshots.sh                  # 全32言語
+dart run scripts/generate_screenshots/organize_screenshots.dart           # 全6バリアントへ並べ替え
+bash scripts/generate_screenshots/apply_variant.sh main
+```
+
+通常商品ページは32言語の撮影元から地域別派生を含む37ロケールへ展開する。
+CPPはロシア語と地域別派生を除いた31代表ロケールを使用し、英語圏専用の
+`cpp-birthcontrol`だけは`en-US`のみを使用する。最終的な画像数は通常商品ページ185枚、
+CPP 5種625枚、合計810枚。
+
+## 高速プレビュー経路: widget test レンダラ
 
 ## データフロー
 
@@ -74,7 +122,11 @@ bash scripts/generate_screenshots/generate_appstore_screenshots.sh --variant cpp
 | `appstore_screenshot_env.sh` | 共通設定（バリアント既定値・各種パス）。他スクリプトから source する |
 | `fetch_fonts.sh` | Noto フォント一式を取得（冪等・検証付き） |
 | `generate_appstore_screenshots.sh` | `-l` / `-n` / `--variant` を解釈して撮影ハーネスを実行 |
-| `apply_variant.sh` | 生成物を `fastlane/screenshots/` へ配置 |
+| `capture_screenshots.sh` | Simulatorで全言語×5ページを正式撮影する |
+| `organize_screenshots.dart` | Simulator撮影結果を通常商品ページ・CPPのロケールへ展開する |
+| `print_langs.dart` | 撮影元となる全言語をSSOTから出力する |
+| `print_store_locales.dart` | 通常商品ページの全37ロケールをSSOTから出力する |
+| `apply_variant.sh` | 指定バリアントの生成物を`fastlane/screenshots/`へ配置する |
 
 ## SSOT
 
@@ -86,5 +138,6 @@ bash scripts/generate_screenshots/generate_appstore_screenshots.sh --variant cpp
 
 ## 生成物の扱い
 
-`fonts/` と `artifacts/` は `.gitignore` 対象（フォントは再取得可能、画像は再生成可能なため）。
-`fastlane/` 配下もリポジトリ全体で `.gitignore` 済み。
+`fonts/`、`artifacts/`、`fastlane/screenshots/`は`.gitignore`対象
+（フォントと画像は再生成可能なため）。`fastlane/Appfile`、`fastlane/Fastfile`、
+`fastlane/metadata/`はApp Store Connectへ反映する設定・メタデータとして追跡する。
