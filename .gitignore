@@ -61,3 +61,7 @@ android/app/src/prod/res/values/values.xml
 
 # run-qa の作業ファイル
 tmp/qa/
+
+# App Store スクリーンショット生成基盤の作業ファイル(取得フォント・生成画像)
+scripts/generate_screenshots/fonts/
+scripts/generate_screenshots/artifacts/
