@@ -25,6 +25,8 @@ on:
       - issue-392
     paths:
       - .github/workflows/appstore-screenshots.yml
+      - scripts/generate_screenshots/capture_langs.sh
+      - .maestro/flows/appstore_screenshot/**
 
 # 同一ブランチで多重起動したら古い方を止める（macOS Runner 枠の浪費防止）
 concurrency:

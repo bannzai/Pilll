@@ -82,7 +82,11 @@ if [ -n "$flaky_langs" ]; then
   echo "リトライが必要だった言語:$flaky_langs" >&2
 fi
 
-# 寸法検証（1290×2796 であること）。
+# 寸法検証（1290×2796 であること）と誤撮影検証。
+# 最小サイズ 200KB の根拠: 正常な合成ページは実測で 400KB 以上、画面遷移レースで
+# 誤撮影されたカタログの一覧画面は実測 92KB(実例: run 29665140744 の no/p1)のため、
+# その間に閾値を置いて誤撮影だけを機械的に弾く。
+MIN_PNG_BYTES=200000
 echo ""
 echo "verify dimensions:"
 bad=0
@@ -99,6 +103,10 @@ for lang in $(printf '%s' "$LANGS" | tr ',' ' '); do
     h="$(sips -g pixelHeight "$png" | awk '/pixelHeight/{print $2}')"
     if [ "$w" != "1290" ] || [ "$h" != "2796" ]; then
       echo "  NG ($w x $h): $png" >&2
+      bad=$((bad + 1))
+    fi
+    if [ "$(wc -c < "$png")" -lt "$MIN_PNG_BYTES" ]; then
+      echo "  NG (too small, 誤撮影の疑い): $png" >&2
       bad=$((bad + 1))
     fi
     verified=$((verified + 1))
