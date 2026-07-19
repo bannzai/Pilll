@@ -14,7 +14,8 @@ platform :ios do
     app_version = pubspec.match(/^version:\s*([^\s+]+)/)&.captures&.first
     UI.user_error!('pubspec.yamlからversionを取得できません') if app_version.nil? || app_version.empty?
 
-    sh('bash', 'scripts/metadata_check/check_all_metadata.sh')
+    # fastlane の sh は fastlane/ ディレクトリを cwd に実行するため、リポジトリルート相対で指定する。
+    sh('bash', '../scripts/metadata_check/check_all_metadata.sh')
     deliver(
       api_key: api_key,
       app_identifier: 'com.mizuki.Ohashi.Pilll',
