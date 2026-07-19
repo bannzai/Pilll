@@ -31,7 +31,10 @@ void main() {
       }
       final value = file.readAsStringSync().trim();
       final length = value.runes.length;
-      if (value.isEmpty || length > entry.value) {
+      // promotional_text は ASC 上も任意項目のため空を許容する
+      // （ja はライブ値が未設定のまま維持する方針。他は必須扱いのまま）。
+      final allowEmpty = entry.key == 'promotional_text.txt';
+      if ((value.isEmpty && !allowEmpty) || length > entry.value) {
         errors.add('文字数NG: ${file.path} ($length / ${entry.value})');
       }
       if (locale != 'ja' && RegExp(r'[ぁ-んァ-ヶ]').hasMatch(value)) {

@@ -33,6 +33,10 @@ apply_variant.sh NAME
   └─ _variant-{NAME}/{locale}/*.png を fastlane/screenshots/{locale}/ へ配置
 ```
 
+**ja の例外**: メイン商品ページの日本語は従来の App Store 掲載スクショ（横長4枚）を維持する方針のため、
+`apply_variant.sh main` の後に `fastlane/screenshots/ja/` の中身を `cpp/assets/ja-appstore-202607/` の
+4枚へ差し替えてからアップロードする。`fastlane/metadata/ja/` もライブ値のまま維持する（cpp/plan.md 参照）。
+
 **前提（この worktree に無い場合は用意が必要。すべて gitignore 済みのシークレット/設定）:**
 - `lib/secret/secret.dart`（`scripts/secret.sh` が secret.dart.sample と env から生成）
 - `ios/Flutter/Secret.xcconfig`（`ios/Flutter/Debug.xcconfig` が `#include`。bundle id 等を定義）
