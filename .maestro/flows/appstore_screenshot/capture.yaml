@@ -21,8 +21,16 @@ appId: com.mizuki.Ohashi.Pilll.dev
     direction: DOWN
     timeout: 60000
     waitToSettleTimeoutMs: 500
+# スクロールの残り慣性で座標がずれ、隣の言語行を誤タップした実例（run 29670019870 の
+# ja が it の内容で撮影された）への対策。タップ前に慣性を待ち、タップ後は
+# ページ一覧タイトル「<lang> pages」で正しい言語が開いたことを必ず検証する。
+- waitForAnimationToEnd
 - tapOn:
     id: "${LANG}"
+- extendedWaitUntil:
+    visible:
+      text: "${LANG} pages"
+    timeout: 15000
 - waitForAnimationToEnd
 - tapOn:
     id: "page_1"
