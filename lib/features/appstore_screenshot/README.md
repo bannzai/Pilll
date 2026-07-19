@@ -22,7 +22,7 @@ Maestroから1290×2796のPNGとして撮影する。widget test
 
 ## ページ構成（5-A）
 
-競合調査（`tmp/research/report.md` 5-A）の 5 枚構成に対応する。
+競合調査（`tmp/research/report.md` 5-A）の 5 枚構成 + 機能訴求 2 枚（カレンダー・服用履歴）に対応する。
 
 | # | 役割 | Mock 画面 |
 | --- | --- | --- |

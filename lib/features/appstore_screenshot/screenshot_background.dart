@@ -42,5 +42,9 @@ class ScreenshotBackground {
     4: ScreenshotBackground(topColor: Color(0xFF45608A), bottomColor: Color(0xFF2A3A57)),
     // #5 生理管理: ピンク。AppColors.menstruation 系。
     5: ScreenshotBackground(topColor: Color(0xFFE79AAE), bottomColor: Color(0xFFCB7089)),
+    // #6 カレンダー: 予定の見通しを表す明るめのブルーグレー。
+    6: ScreenshotBackground(topColor: Color(0xFF5B7BA6), bottomColor: Color(0xFF31456B)),
+    // #7 服用履歴: 安心・記録の蓄積を表す深めのティール寄りネイビー。
+    7: ScreenshotBackground(topColor: Color(0xFF3F6678), bottomColor: Color(0xFF23394A)),
   };
 }

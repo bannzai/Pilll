@@ -10,7 +10,7 @@ import 'package:pilll/features/appstore_screenshot/screenshot_variant.dart';
 /// 入力: scripts/generate_screenshots/artifacts/simulator/{arbコード}/p{N}.png
 /// 出力: scripts/generate_screenshots/artifacts/_variant-{variant}/{fastlaneロケール}/...
 ///
-/// CPP バリアントは同じ 5 枚の並び替えなので撮影は 1 回で済み、ここでファイル並びとして表現する。
+/// CPP バリアントは同じページ群の並び替えなので撮影は 1 回で済み、ここでファイル並びとして表現する。
 /// 実行: dart run scripts/generate_screenshots/organize_screenshots.dart
 void main() {
   final simRoot = Directory('scripts/generate_screenshots/artifacts/simulator');

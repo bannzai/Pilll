@@ -1,7 +1,7 @@
 /// App Store スクリーンショットのキャッチコピー定義。
 ///
 /// タイトル・サブタイトルを言語（arb 言語コード）×ページ番号で引く。
-/// コピー案は競合調査（tmp/research/report.md 5-A）の 5 枚構成に対応する。
+/// コピー案は競合調査（tmp/research/report.md 5-A）の 5 枚構成 + 機能訴求 2 枚に対応する。
 /// ja / en と ASC 対象の全言語を定義し、未定義の言語は en にフォールバックする。
 /// 言語を追加するときは [_copies] に 1 言語分の Map を追記するだけで済む。
 class ScreenshotCopy {
@@ -30,14 +30,14 @@ class ScreenshotCopy {
 
   /// 言語コード→ページ番号→コピーの対応表。
   ///
-  /// 5-A の 5 枚構成:
+  /// 5-A の 5 枚構成 + 機能訴求 2 枚:
   /// 1 社会的証明＋中核価値 / 2 ピルシート UI / 3 伏せた通知 /
   /// 4 複数回リマインド / 5 生理管理。
   static const Map<String, Map<int, ScreenshotCopy>> _copies = {
     'ja': {
       1: ScreenshotCopy(
         title: '14万人が使う\n飲み忘れ防止アプリ',
-        subtitle: '毎日の服用時刻に通知。App Store ★4.6 の安心。',
+        subtitle: '毎日の服用時刻に通知。App Store ★4.7 の安心。',
         titleAccentWord: '14万人',
       ),
       2: ScreenshotCopy(
@@ -60,11 +60,21 @@ class ScreenshotCopy {
         subtitle: '生理を記録すると、次の予定を自動で予測。',
         titleAccentWord: 'これひとつ',
       ),
+      6: ScreenshotCopy(
+        title: '生理も次のシートも、\n予定はカレンダーで',
+        subtitle: '生理予定日と次のシート開始日を自動で表示。',
+        titleAccentWord: 'カレンダー',
+      ),
+      7: ScreenshotCopy(
+        title: '服用履歴が残るから、\n見返して安心',
+        subtitle: 'いつ飲んだかをさかのぼって確認。飲み忘れチェックも簡単。',
+        titleAccentWord: '服用履歴',
+      ),
     },
     'en': {
       1: ScreenshotCopy(
         title: 'Trusted by 140K+ users\nNever miss your pill',
-        subtitle: 'A reminder at every dose time. Rated 4.6★ on the App Store.',
+        subtitle: 'A reminder at every dose time. Rated 4.7★ on the App Store.',
         titleAccentWord: '140K+',
       ),
       2: ScreenshotCopy(
@@ -87,11 +97,21 @@ class ScreenshotCopy {
         subtitle: 'Log your period and the next date is predicted.',
         titleAccentWord: 'all in one',
       ),
+      6: ScreenshotCopy(
+        title: 'Your month ahead,\nall on the calendar',
+        subtitle: 'Period forecasts and your next pack start, marked automatically.',
+        titleAccentWord: 'calendar',
+      ),
+      7: ScreenshotCopy(
+        title: 'Every pill you took,\nlogged for peace of mind',
+        subtitle: 'Look back anytime to check you haven\'t missed a dose.',
+        titleAccentWord: 'peace of mind',
+      ),
     },
     'ar': {
       1: ScreenshotCopy(
         title: '+140 ألف مستخدمة\nلن تفوّتي حبتك مجدداً',
-        subtitle: 'تذكير عند كل موعد جرعة، وتقييم 4.6★ في App Store',
+        subtitle: 'تذكير عند كل موعد جرعة، وتقييم 4.7★ في App Store',
         titleAccentWord: '140 ألف',
       ),
       2: ScreenshotCopy(
@@ -114,11 +134,21 @@ class ScreenshotCopy {
         subtitle: 'سجّلي دورتك، ويُتوقَّع موعدها القادم تلقائياً',
         titleAccentWord: 'تطبيق واحد',
       ),
+      6: ScreenshotCopy(
+        title: 'دورتك وشريطك القادم\nكلاهما في التقويم',
+        subtitle: 'موعد الدورة المتوقع وبداية الشريط القادم يظهران تلقائياً',
+        titleAccentWord: 'التقويم',
+      ),
+      7: ScreenshotCopy(
+        title: 'كل حبة تناولتها\nمسجّلة لتطمئني',
+        subtitle: 'راجعي سجلّك متى شئتِ للتأكد من عدم نسيان أي جرعة',
+        titleAccentWord: 'لتطمئني',
+      ),
     },
     'ca': {
       1: ScreenshotCopy(
         title: '140K+ usuàries\nno obliden la píndola',
-        subtitle: 'Recordatori a cada presa. 4,6★ a l\'App Store.',
+        subtitle: 'Recordatori a cada presa. 4,7★ a l\'App Store.',
         titleAccentWord: '140K+',
       ),
       2: ScreenshotCopy(
@@ -141,11 +171,21 @@ class ScreenshotCopy {
         subtitle: 'Registra el període i predim la propera data.',
         titleAccentWord: 'tot en un',
       ),
+      6: ScreenshotCopy(
+        title: 'El teu mes d\'un cop d\'ull\nal calendari',
+        subtitle: 'La regla prevista i l\'inici del següent blister, marcats automàticament.',
+        titleAccentWord: 'calendari',
+      ),
+      7: ScreenshotCopy(
+        title: 'Cada presa registrada,\nper a la teva tranquil·litat',
+        subtitle: 'Repassa quan vulguis que no t\'has saltat cap píndola.',
+        titleAccentWord: 'tranquil·litat',
+      ),
     },
     'cs': {
       1: ScreenshotCopy(
         title: 'Důvěřuje jí 140K+ lidí\nUž nikdy nezapomenete',
-        subtitle: 'Upozornění na každou dávku. Hodnocení ★4,6 na App Store.',
+        subtitle: 'Upozornění na každou dávku. Hodnocení ★4,7 na App Store.',
         titleAccentWord: '140K+',
       ),
       2: ScreenshotCopy(
@@ -168,11 +208,21 @@ class ScreenshotCopy {
         subtitle: 'Zaznamenejte menstruaci, další termín odhadneme sami.',
         titleAccentWord: 'vše na jednom místě',
       ),
+      6: ScreenshotCopy(
+        title: 'Co vás čeká, vidíte\nv kalendáři',
+        subtitle: 'Očekávaná menstruace i začátek dalšího blistru se zobrazí samy.',
+        titleAccentWord: 'v kalendáři',
+      ),
+      7: ScreenshotCopy(
+        title: 'Každá tabletka\nzůstává v historii',
+        subtitle: 'Kdykoli se podíváte zpět a ověříte, že žádná dávka nechybí.',
+        titleAccentWord: 'v historii',
+      ),
     },
     'da': {
       1: ScreenshotCopy(
         title: '140.000+ brugere\nGlem aldrig din pille',
-        subtitle: 'Påmindelse ved hver dosis. 4,6★ på App Store.',
+        subtitle: 'Påmindelse ved hver dosis. 4,7★ på App Store.',
         titleAccentWord: '140.000+',
       ),
       2: ScreenshotCopy(
@@ -195,11 +245,21 @@ class ScreenshotCopy {
         subtitle: 'Registrer din menstruation – næste dato forudsiges automatisk.',
         titleAccentWord: 'samlet ét sted',
       ),
+      6: ScreenshotCopy(
+        title: 'Se hele måneden\ni kalenderen',
+        subtitle: 'Forventet menstruation og næste pilleplade vises automatisk.',
+        titleAccentWord: 'kalenderen',
+      ),
+      7: ScreenshotCopy(
+        title: 'Hver pille du tager,\ngemmes i historikken',
+        subtitle: 'Se tilbage når som helst, og tjek at du ikke har misset en dosis.',
+        titleAccentWord: 'historikken',
+      ),
     },
     'de': {
       1: ScreenshotCopy(
         title: '140.000+ Nutzerinnen\nvergessen nie wieder',
-        subtitle: 'Erinnerung zu jeder Einnahmezeit. 4,6★ im App Store.',
+        subtitle: 'Erinnerung zu jeder Einnahmezeit. 4,7★ im App Store.',
         titleAccentWord: '140.000+',
       ),
       2: ScreenshotCopy(
@@ -222,11 +282,21 @@ class ScreenshotCopy {
         subtitle: 'Periode erfassen – nächster Termin automatisch vorhergesagt.',
         titleAccentWord: 'alles in einer App',
       ),
+      6: ScreenshotCopy(
+        title: 'Dein Monat auf einen Blick\nim Kalender',
+        subtitle: 'Erwartete Periode und Start des nächsten Blisters, automatisch markiert.',
+        titleAccentWord: 'Kalender',
+      ),
+      7: ScreenshotCopy(
+        title: 'Jede Einnahme im Verlauf,\nfür dein gutes Gefühl',
+        subtitle: 'Schau jederzeit nach, ob du eine Dosis verpasst hast.',
+        titleAccentWord: 'Verlauf',
+      ),
     },
     'el': {
       1: ScreenshotCopy(
         title: '140.000+ χρήστες\nμας εμπιστεύονται',
-        subtitle: 'Υπενθύμιση σε κάθε ώρα λήψης. 4.6★ στο App Store.',
+        subtitle: 'Υπενθύμιση σε κάθε ώρα λήψης. 4.7★ στο App Store.',
         titleAccentWord: '140.000+',
       ),
       2: ScreenshotCopy(
@@ -249,11 +319,21 @@ class ScreenshotCopy {
         subtitle: 'Κατέγραψε την περίοδό σου και μάθε πότε θα έρθει η επόμενη.',
         titleAccentWord: 'όλα σε μία εφαρμογή',
       ),
+      6: ScreenshotCopy(
+        title: 'Όλος ο μήνας σου\nστο ημερολόγιο',
+        subtitle: 'Η αναμενόμενη περίοδος και η επόμενη καρτέλα εμφανίζονται αυτόματα.',
+        titleAccentWord: 'ημερολόγιο',
+      ),
+      7: ScreenshotCopy(
+        title: 'Κάθε λήψη καταγράφεται\nγια να είσαι ήσυχη',
+        subtitle: 'Δες όποτε θες αν έχεις παραλείψει κάποιο χάπι.',
+        titleAccentWord: 'καταγράφεται',
+      ),
     },
     'es': {
       1: ScreenshotCopy(
         title: '140K+ usuarias\nnunca olvidan su píldora',
-        subtitle: 'Recordatorio en cada toma. 4.6★ en App Store.',
+        subtitle: 'Recordatorio en cada toma. 4.7★ en App Store.',
         titleAccentWord: '140K+',
       ),
       2: ScreenshotCopy(
@@ -276,11 +356,21 @@ class ScreenshotCopy {
         subtitle: 'Registra tu período y te predecimos la próxima fecha.',
         titleAccentWord: 'todo en una app',
       ),
+      6: ScreenshotCopy(
+        title: 'Tu mes de un vistazo\nen el calendario',
+        subtitle: 'La regla prevista y el inicio del próximo blíster, marcados automáticamente.',
+        titleAccentWord: 'calendario',
+      ),
+      7: ScreenshotCopy(
+        title: 'Cada toma registrada,\npara tu tranquilidad',
+        subtitle: 'Repasa cuando quieras que no se te escapó ninguna píldora.',
+        titleAccentWord: 'tranquilidad',
+      ),
     },
     'fi': {
       1: ScreenshotCopy(
         title: 'Yli 140 000 käyttäjää\nei unohda pilleriä',
-        subtitle: 'Muistutus jokaisella annosajalla. App Store ★4,6.',
+        subtitle: 'Muistutus jokaisella annosajalla. App Store ★4,7.',
         titleAccentWord: '140 000',
       ),
       2: ScreenshotCopy(
@@ -303,11 +393,21 @@ class ScreenshotCopy {
         subtitle: 'Kirjaa kuukautiset, seuraava ennustetaan automaattisesti.',
         titleAccentWord: 'yhdessä paikassa',
       ),
+      6: ScreenshotCopy(
+        title: 'Koko kuukausi\nyhdellä silmäyksellä',
+        subtitle: 'Ennustetut kuukautiset ja seuraavan liuskan aloitus näkyvät kalenterissa.',
+        titleAccentWord: 'yhdellä silmäyksellä',
+      ),
+      7: ScreenshotCopy(
+        title: 'Jokainen otettu pilleri\njää historiaan',
+        subtitle: 'Tarkista milloin vain, ettei yksikään annos jäänyt väliin.',
+        titleAccentWord: 'historiaan',
+      ),
     },
     'he': {
       1: ScreenshotCopy(
         title: '140,000+ משתמשות\nלא שוכחות לקחת גלולה',
-        subtitle: 'תזכורת בכל שעת נטילה. דירוג 4.6★ ב-App Store.',
+        subtitle: 'תזכורת בכל שעת נטילה. דירוג 4.7★ ב-App Store.',
         titleAccentWord: '140,000+',
       ),
       2: ScreenshotCopy(
@@ -330,11 +430,21 @@ class ScreenshotCopy {
         subtitle: 'תעדו מחזור וקבלו תחזית אוטומטית לתאריך הבא.',
         titleAccentWord: 'אפליקציה אחת',
       ),
+      6: ScreenshotCopy(
+        title: 'כל החודש שלך\nבלוח שנה אחד',
+        subtitle: 'המחזור הצפוי ותחילת הלוח הבא מסומנים אוטומטית.',
+        titleAccentWord: 'בלוח שנה',
+      ),
+      7: ScreenshotCopy(
+        title: 'כל גלולה שנטלת\nנשמרת בהיסטוריה',
+        subtitle: 'בדקו בכל רגע שלא פספסתן אף נטילה.',
+        titleAccentWord: 'בהיסטוריה',
+      ),
     },
     'hi': {
       1: ScreenshotCopy(
         title: '1.4 लाख+ का भरोसा\nकभी न छूटे गोली लेना',
-        subtitle: 'हर खुराक के समय रिमाइंडर। App Store पर ★4.6 रेटिंग।',
+        subtitle: 'हर खुराक के समय रिमाइंडर। App Store पर ★4.7 रेटिंग।',
         titleAccentWord: '1.4 लाख+',
       ),
       2: ScreenshotCopy(
@@ -357,11 +467,21 @@ class ScreenshotCopy {
         subtitle: 'पीरियड लॉग करें, अगली तारीख अपने आप पता चलेगी।',
         titleAccentWord: 'एक ऐप में',
       ),
+      6: ScreenshotCopy(
+        title: 'पूरा महीना एक नज़र में\nकैलेंडर पर',
+        subtitle: 'अगली पीरियड डेट और अगले पैक की शुरुआत अपने आप दिखती है।',
+        titleAccentWord: 'कैलेंडर',
+      ),
+      7: ScreenshotCopy(
+        title: 'हर ली गई गोली का\nरिकॉर्ड सुरक्षित',
+        subtitle: 'कभी भी देखें कि कोई खुराक छूटी तो नहीं।',
+        titleAccentWord: 'रिकॉर्ड',
+      ),
     },
     'hr': {
       1: ScreenshotCopy(
         title: '140.000+ korisnika\nNe zaboravi tabletu',
-        subtitle: 'Podsjetnik za svaku dozu. Ocjena 4,6★ na App Storeu.',
+        subtitle: 'Podsjetnik za svaku dozu. Ocjena 4,7★ na App Storeu.',
         titleAccentWord: '140.000+',
       ),
       2: ScreenshotCopy(
@@ -384,11 +504,21 @@ class ScreenshotCopy {
         subtitle: 'Bilježi menstruaciju, a sljedeći termin predviđamo automatski.',
         titleAccentWord: 'na jednom mjestu',
       ),
+      6: ScreenshotCopy(
+        title: 'Cijeli mjesec na dlanu\nu kalendaru',
+        subtitle: 'Očekivana menstruacija i početak sljedećeg blistera označeni automatski.',
+        titleAccentWord: 'u kalendaru',
+      ),
+      7: ScreenshotCopy(
+        title: 'Svaka uzeta tableta\nostaje u povijesti',
+        subtitle: 'U svakom trenutku provjeri da nijedna doza nije preskočena.',
+        titleAccentWord: 'u povijesti',
+      ),
     },
     'hu': {
       1: ScreenshotCopy(
         title: '140 000+ felhasználó\nSosem felejti a tablettát',
-        subtitle: 'Emlékeztető minden szedési időpontban. 4,6★ az App Store-on.',
+        subtitle: 'Emlékeztető minden szedési időpontban. 4,7★ az App Store-on.',
         titleAccentWord: '140 000+',
       ),
       2: ScreenshotCopy(
@@ -411,11 +541,21 @@ class ScreenshotCopy {
         subtitle: 'Rögzítsd a menstruációt, mi megjósoljuk a következőt.',
         titleAccentWord: 'mind egy helyen',
       ),
+      6: ScreenshotCopy(
+        title: 'Az egész hónap\negy naptárban',
+        subtitle: 'A várható menstruáció és a következő levél kezdete automatikusan megjelenik.',
+        titleAccentWord: 'naptárban',
+      ),
+      7: ScreenshotCopy(
+        title: 'Minden bevett tabletta\nmegmarad az előzményekben',
+        subtitle: 'Bármikor visszanézheted, hogy nem maradt-e ki adag.',
+        titleAccentWord: 'előzményekben',
+      ),
     },
     'id': {
       1: ScreenshotCopy(
         title: 'Dipercaya 140K+ Pengguna\nAnti Lupa Minum Pil',
-        subtitle: 'Pengingat di setiap jadwal minum. Rating ★4.6 di App Store.',
+        subtitle: 'Pengingat di setiap jadwal minum. Rating ★4.7 di App Store.',
         titleAccentWord: '140K+',
       ),
       2: ScreenshotCopy(
@@ -438,11 +578,21 @@ class ScreenshotCopy {
         subtitle: 'Catat haidmu, tanggal berikutnya diprediksi otomatis.',
         titleAccentWord: 'Satu Aplikasi',
       ),
+      6: ScreenshotCopy(
+        title: 'Sebulan ke Depan Terlihat\ndi Kalender',
+        subtitle: 'Prediksi haid dan awal strip berikutnya tampil otomatis.',
+        titleAccentWord: 'Kalender',
+      ),
+      7: ScreenshotCopy(
+        title: 'Riwayat Minum Tersimpan,\nBikin Hati Tenang',
+        subtitle: 'Cek kapan saja untuk memastikan tak ada dosis terlewat.',
+        titleAccentWord: 'Riwayat',
+      ),
     },
     'it': {
       1: ScreenshotCopy(
         title: '140.000+ ci scelgono\nNon dimenticarla mai più',
-        subtitle: 'Un promemoria a ogni dose. 4,6★ su App Store.',
+        subtitle: 'Un promemoria a ogni dose. 4,7★ su App Store.',
         titleAccentWord: '140.000+',
       ),
       2: ScreenshotCopy(
@@ -465,11 +615,21 @@ class ScreenshotCopy {
         subtitle: 'Registra il ciclo e prevediamo la prossima data.',
         titleAccentWord: 'tutto in un\'app sola',
       ),
+      6: ScreenshotCopy(
+        title: 'Il tuo mese a colpo d\'occhio\nsul calendario',
+        subtitle: 'Ciclo previsto e inizio del prossimo blister, segnati in automatico.',
+        titleAccentWord: 'calendario',
+      ),
+      7: ScreenshotCopy(
+        title: 'Ogni pillola presa\nresta nello storico',
+        subtitle: 'Controlla quando vuoi di non aver saltato nessuna dose.',
+        titleAccentWord: 'storico',
+      ),
     },
     'ko': {
       1: ScreenshotCopy(
         title: '14만 명이 사용하는\n복용 알림 앱',
-        subtitle: '매일 복용 시간에 알림. App Store ★4.6의 신뢰.',
+        subtitle: '매일 복용 시간에 알림. App Store ★4.7의 신뢰.',
         titleAccentWord: '14만 명',
       ),
       2: ScreenshotCopy(
@@ -492,11 +652,21 @@ class ScreenshotCopy {
         subtitle: '생리를 기록하면 다음 일정을 자동으로 예측해요.',
         titleAccentWord: '이 앱 하나로',
       ),
+      6: ScreenshotCopy(
+        title: '생리도 다음 시트도\n캘린더에서 한눈에',
+        subtitle: '생리 예정일과 다음 시트 시작일을 자동으로 표시해요.',
+        titleAccentWord: '캘린더',
+      ),
+      7: ScreenshotCopy(
+        title: '복용 기록이 남아서\n돌아보면 안심',
+        subtitle: '언제 먹었는지 확인하고 놓친 약이 없는지 체크해요.',
+        titleAccentWord: '복용 기록',
+      ),
     },
     'ms': {
       1: ScreenshotCopy(
         title: '140K+ pengguna percaya\nJangan lupa minum pil',
-        subtitle: 'Peringatan setiap waktu minum ubat. Dinilai 4.6★ di App Store.',
+        subtitle: 'Peringatan setiap waktu minum ubat. Dinilai 4.7★ di App Store.',
         titleAccentWord: '140K+',
       ),
       2: ScreenshotCopy(
@@ -519,11 +689,21 @@ class ScreenshotCopy {
         subtitle: 'Rekod haid anda, tarikh seterusnya diramal automatik.',
         titleAccentWord: 'semua dalam satu',
       ),
+      6: ScreenshotCopy(
+        title: 'Sebulan di hadapan\ndalam kalendar',
+        subtitle: 'Haid dijangka dan permulaan helaian seterusnya ditanda automatik.',
+        titleAccentWord: 'kalendar',
+      ),
+      7: ScreenshotCopy(
+        title: 'Setiap pil yang diambil\nkekal dalam sejarah',
+        subtitle: 'Semak bila-bila masa untuk pastikan tiada dos tertinggal.',
+        titleAccentWord: 'sejarah',
+      ),
     },
     'nl': {
       1: ScreenshotCopy(
         title: '140K+ gebruikers\nvertrouwen op Pilll',
-        subtitle: 'Herinnering bij elke innametijd. 4,6★ in de App Store.',
+        subtitle: 'Herinnering bij elke innametijd. 4,7★ in de App Store.',
         titleAccentWord: '140K+',
       ),
       2: ScreenshotCopy(
@@ -546,11 +726,21 @@ class ScreenshotCopy {
         subtitle: 'Registreer je menstruatie, de volgende datum wordt automatisch voorspeld.',
         titleAccentWord: 'in één app',
       ),
+      6: ScreenshotCopy(
+        title: 'Je hele maand in beeld\nop de kalender',
+        subtitle: 'Verwachte menstruatie en start van je volgende strip, automatisch gemarkeerd.',
+        titleAccentWord: 'kalender',
+      ),
+      7: ScreenshotCopy(
+        title: 'Elke ingenomen pil\nblijft in je historie',
+        subtitle: 'Kijk altijd terug of je geen dosis hebt gemist.',
+        titleAccentWord: 'historie',
+      ),
     },
     'no': {
       1: ScreenshotCopy(
         title: 'Brukt av 140K+\nGlem aldri pillen',
-        subtitle: 'Påminnelse ved hver dose. 4,6★ på App Store.',
+        subtitle: 'Påminnelse ved hver dose. 4,7★ på App Store.',
         titleAccentWord: '140K+',
       ),
       2: ScreenshotCopy(
@@ -573,11 +763,21 @@ class ScreenshotCopy {
         subtitle: 'Registrer mensen, og neste dato beregnes automatisk.',
         titleAccentWord: 'alt på ett sted',
       ),
+      6: ScreenshotCopy(
+        title: 'Hele måneden din\ni kalenderen',
+        subtitle: 'Forventet mens og start på neste brett vises automatisk.',
+        titleAccentWord: 'kalenderen',
+      ),
+      7: ScreenshotCopy(
+        title: 'Hver pille du tar,\nlagres i historikken',
+        subtitle: 'Se tilbake når som helst og sjekk at ingen dose mangler.',
+        titleAccentWord: 'historikken',
+      ),
     },
     'pl': {
       1: ScreenshotCopy(
         title: '140 tys. użytkowników\nNie zapomnisz tabletki',
-        subtitle: 'Przypomnienie o każdej porze przyjęcia. 4,6★ w App Store.',
+        subtitle: 'Przypomnienie o każdej porze przyjęcia. 4,7★ w App Store.',
         titleAccentWord: '140 tys.',
       ),
       2: ScreenshotCopy(
@@ -600,11 +800,21 @@ class ScreenshotCopy {
         subtitle: 'Zapisz swój okres, a kolejny termin przewidzimy automatycznie.',
         titleAccentWord: 'w jednej aplikacji',
       ),
+      6: ScreenshotCopy(
+        title: 'Cały miesiąc widoczny\nw kalendarzu',
+        subtitle: 'Przewidywany okres i początek kolejnego blistra oznaczane automatycznie.',
+        titleAccentWord: 'w kalendarzu',
+      ),
+      7: ScreenshotCopy(
+        title: 'Każda tabletka zapisana\nw historii przyjęć',
+        subtitle: 'W każdej chwili sprawdzisz, czy żadna dawka nie przepadła.',
+        titleAccentWord: 'w historii',
+      ),
     },
     'pt': {
       1: ScreenshotCopy(
         title: 'Mais de 140 mil usuárias\nnunca esquecem a pílula',
-        subtitle: 'Notificação em cada horário. Nota 4,6★ na App Store.',
+        subtitle: 'Notificação em cada horário. Nota 4,7★ na App Store.',
         titleAccentWord: '140 mil',
       ),
       2: ScreenshotCopy(
@@ -627,11 +837,21 @@ class ScreenshotCopy {
         subtitle: 'Registre sua menstruação e preveja a próxima data.',
         titleAccentWord: 'tudo em um só app',
       ),
+      6: ScreenshotCopy(
+        title: 'Seu mês inteiro\nno calendário',
+        subtitle: 'Menstruação prevista e início da próxima cartela, marcados automaticamente.',
+        titleAccentWord: 'calendário',
+      ),
+      7: ScreenshotCopy(
+        title: 'Cada pílula tomada\nfica no histórico',
+        subtitle: 'Confira quando quiser se nenhuma dose ficou para trás.',
+        titleAccentWord: 'histórico',
+      ),
     },
     'ro': {
       1: ScreenshotCopy(
         title: '140K+ utilizatoare\nnu uită pastila',
-        subtitle: 'Notificare la fiecare doză. Rating 4,6★ pe App Store.',
+        subtitle: 'Notificare la fiecare doză. Rating 4,7★ pe App Store.',
         titleAccentWord: '140K+',
       ),
       2: ScreenshotCopy(
@@ -654,11 +874,21 @@ class ScreenshotCopy {
         subtitle: 'Notează ciclul, iar următoarea dată e prezisă automat.',
         titleAccentWord: 'totul într-un loc',
       ),
+      6: ScreenshotCopy(
+        title: 'Toată luna ta,\nîn calendar',
+        subtitle: 'Menstruația estimată și începutul următorului blister apar automat.',
+        titleAccentWord: 'în calendar',
+      ),
+      7: ScreenshotCopy(
+        title: 'Fiecare pastilă luată\nrămâne în istoric',
+        subtitle: 'Verifică oricând că nu ai sărit nicio doză.',
+        titleAccentWord: 'în istoric',
+      ),
     },
     'ru': {
       1: ScreenshotCopy(
         title: '140 000+ пользователей\nуже не пропускают приём',
-        subtitle: 'Напоминание точно в момент приёма. Рейтинг 4.6★ в App Store.',
+        subtitle: 'Напоминание точно в момент приёма. Рейтинг 4.7★ в App Store.',
         titleAccentWord: '140 000+',
       ),
       2: ScreenshotCopy(
@@ -681,11 +911,21 @@ class ScreenshotCopy {
         subtitle: 'Запишите цикл — и мы предскажем следующую дату.',
         titleAccentWord: 'всё в одном',
       ),
+      6: ScreenshotCopy(
+        title: 'Весь месяц как на ладони —\nв календаре',
+        subtitle: 'Ожидаемые месячные и начало следующего блистера отмечаются автоматически.',
+        titleAccentWord: 'в календаре',
+      ),
+      7: ScreenshotCopy(
+        title: 'Каждая таблетка\nостаётся в истории',
+        subtitle: 'В любой момент проверьте, что ни одна доза не пропущена.',
+        titleAccentWord: 'в истории',
+      ),
     },
     'sk': {
       1: ScreenshotCopy(
         title: '140 000+ ľudí\nnikdy nezabudnú',
-        subtitle: 'Pripomienka pri každom užití. Hodnotenie 4,6★ na App Store.',
+        subtitle: 'Pripomienka pri každom užití. Hodnotenie 4,7★ na App Store.',
         titleAccentWord: '140 000+',
       ),
       2: ScreenshotCopy(
@@ -708,11 +948,21 @@ class ScreenshotCopy {
         subtitle: 'Zaznamenaj menštruáciu, ďalší termín predpovieme automaticky.',
         titleAccentWord: 'na jednom mieste',
       ),
+      6: ScreenshotCopy(
+        title: 'Celý mesiac prehľadne\nv kalendári',
+        subtitle: 'Očakávaná menštruácia aj začiatok ďalšieho blistra sa zobrazia samy.',
+        titleAccentWord: 'v kalendári',
+      ),
+      7: ScreenshotCopy(
+        title: 'Každá tabletka\nostáva v histórii',
+        subtitle: 'Kedykoľvek si overíte, že žiadna dávka nechýba.',
+        titleAccentWord: 'v histórii',
+      ),
     },
     'sv': {
       1: ScreenshotCopy(
         title: '140 000+ litar på oss\nMissa aldrig en tablett',
-        subtitle: 'En påminnelse varje dag. 4.6★ på App Store.',
+        subtitle: 'En påminnelse varje dag. 4.7★ på App Store.',
         titleAccentWord: '140 000+',
       ),
       2: ScreenshotCopy(
@@ -735,11 +985,21 @@ class ScreenshotCopy {
         subtitle: 'Logga mensen, så förutspår vi nästa datum.',
         titleAccentWord: 'allt på ett ställe',
       ),
+      6: ScreenshotCopy(
+        title: 'Hela din månad\ni kalendern',
+        subtitle: 'Väntad mens och nästa kartas start markeras automatiskt.',
+        titleAccentWord: 'kalendern',
+      ),
+      7: ScreenshotCopy(
+        title: 'Varje piller du tar\nsparas i historiken',
+        subtitle: 'Titta tillbaka när du vill och se att ingen dos missats.',
+        titleAccentWord: 'historiken',
+      ),
     },
     'th': {
       1: ScreenshotCopy(
         title: 'ผู้ใช้กว่า 140,000+ คน\nแอปเตือนกินยาคุม',
-        subtitle: 'แจ้งเตือนตรงเวลาทุกวัน มั่นใจด้วยคะแนน 4.6★ บน App Store',
+        subtitle: 'แจ้งเตือนตรงเวลาทุกวัน มั่นใจด้วยคะแนน 4.7★ บน App Store',
         titleAccentWord: '140,000+',
       ),
       2: ScreenshotCopy(
@@ -762,11 +1022,21 @@ class ScreenshotCopy {
         subtitle: 'บันทึกประจำเดือน แล้วแอปจะคาดการณ์รอบถัดไปให้อัตโนมัติ',
         titleAccentWord: 'แอปเดียว',
       ),
+      6: ScreenshotCopy(
+        title: 'เห็นทั้งเดือนล่วงหน้า\nในปฏิทินเดียว',
+        subtitle: 'วันที่คาดว่าประจำเดือนจะมาและวันเริ่มแผงถัดไป แสดงให้อัตโนมัติ',
+        titleAccentWord: 'ปฏิทิน',
+      ),
+      7: ScreenshotCopy(
+        title: 'ทุกเม็ดที่กิน\nถูกบันทึกไว้ให้อุ่นใจ',
+        subtitle: 'ย้อนดูได้ทุกเมื่อ เช็กว่าไม่มีมื้อไหนตกหล่น',
+        titleAccentWord: 'อุ่นใจ',
+      ),
     },
     'tr': {
       1: ScreenshotCopy(
         title: '140K+ kişinin tercihi\nHapını asla unutma',
-        subtitle: 'Her hap saatinde hatırlatma. App Store\'da 4,6 yıldız.',
+        subtitle: 'Her hap saatinde hatırlatma. App Store\'da 4,7 yıldız.',
         titleAccentWord: '140K+',
       ),
       2: ScreenshotCopy(
@@ -789,11 +1059,21 @@ class ScreenshotCopy {
         subtitle: 'Regl döngünü kaydet, sıradaki tarih otomatik tahmin edilir.',
         titleAccentWord: 'hepsi tek uygulamada',
       ),
+      6: ScreenshotCopy(
+        title: 'Tüm ayın planı\ntakvimde hazır',
+        subtitle: 'Beklenen regl ve sıradaki şeridin başlangıcı otomatik işaretlenir.',
+        titleAccentWord: 'takvimde',
+      ),
+      7: ScreenshotCopy(
+        title: 'Aldığın her hap\ngeçmişinde saklı',
+        subtitle: 'Dilediğin an dönüp bak, atlanan doz var mı kontrol et.',
+        titleAccentWord: 'geçmişinde',
+      ),
     },
     'uk': {
       1: ScreenshotCopy(
         title: '140 000+ користувачів\nне забувають пігулку',
-        subtitle: 'Нагадування щоразу в час прийому. Рейтинг 4,6★ в App Store.',
+        subtitle: 'Нагадування щоразу в час прийому. Рейтинг 4,7★ в App Store.',
         titleAccentWord: '140 000+',
       ),
       2: ScreenshotCopy(
@@ -816,11 +1096,21 @@ class ScreenshotCopy {
         subtitle: 'Занотуйте місячні — додаток передбачить наступну дату.',
         titleAccentWord: 'усе в одному',
       ),
+      6: ScreenshotCopy(
+        title: 'Увесь місяць наперед —\nу календарі',
+        subtitle: 'Очікувані місячні й початок наступного блістера позначаються автоматично.',
+        titleAccentWord: 'у календарі',
+      ),
+      7: ScreenshotCopy(
+        title: 'Кожна прийнята пігулка\nзалишається в історії',
+        subtitle: 'Будь-коли перевірте, що жодну дозу не пропущено.',
+        titleAccentWord: 'в історії',
+      ),
     },
     'vi': {
       1: ScreenshotCopy(
         title: '140.000+ người tin dùng\nỨng dụng nhắc uống thuốc',
-        subtitle: 'Nhắc đúng giờ mỗi ngày. 4,6★ trên App Store.',
+        subtitle: 'Nhắc đúng giờ mỗi ngày. 4,7★ trên App Store.',
         titleAccentWord: '140.000+',
       ),
       2: ScreenshotCopy(
@@ -843,11 +1133,21 @@ class ScreenshotCopy {
         subtitle: 'Ghi lại kỳ kinh, ứng dụng tự dự đoán ngày tiếp theo.',
         titleAccentWord: 'một ứng dụng',
       ),
+      6: ScreenshotCopy(
+        title: 'Cả tháng của bạn\ntrên một cuốn lịch',
+        subtitle: 'Kỳ kinh dự kiến và ngày bắt đầu vỉ mới hiển thị tự động.',
+        titleAccentWord: 'cuốn lịch',
+      ),
+      7: ScreenshotCopy(
+        title: 'Mỗi viên đã uống\nđều được lưu lại',
+        subtitle: 'Xem lại bất cứ lúc nào để chắc chắn không sót liều.',
+        titleAccentWord: 'lưu lại',
+      ),
     },
     'zh': {
       1: ScreenshotCopy(
         title: '14万人的选择\n防止忘记吃药',
-        subtitle: '每日服药时间提醒，App Store评分4.6★。',
+        subtitle: '每日服药时间提醒，App Store评分4.7★。',
         titleAccentWord: '14万人',
       ),
       2: ScreenshotCopy(
@@ -870,11 +1170,21 @@ class ScreenshotCopy {
         subtitle: '记录生理周期，自动预测下次日期。',
         titleAccentWord: '一个App',
       ),
+      6: ScreenshotCopy(
+        title: '整月安排，\n日历上一目了然',
+        subtitle: '预计经期和下一板开始日自动标注。',
+        titleAccentWord: '日历',
+      ),
+      7: ScreenshotCopy(
+        title: '每次服药都有记录，\n回看更安心',
+        subtitle: '随时回看服药记录，检查有没有漏服。',
+        titleAccentWord: '安心',
+      ),
     },
     'fr': {
       1: ScreenshotCopy(
         title: 'Déjà 140 000+ utilisatrices\nN’oubliez plus votre pilule',
-        subtitle: 'Un rappel à chaque prise. Note de 4,6★ sur l’App Store.',
+        subtitle: 'Un rappel à chaque prise. Note de 4,7★ sur l’App Store.',
         titleAccentWord: '140 000+',
       ),
       2: ScreenshotCopy(
@@ -896,6 +1206,16 @@ class ScreenshotCopy {
         title: 'Pilule et règles,\ntout au même endroit',
         subtitle: 'Notez vos règles et suivez votre cycle automatiquement.',
         titleAccentWord: 'au même endroit',
+      ),
+      6: ScreenshotCopy(
+        title: 'Vos prochaines dates,\nvisibles sur le calendrier',
+        subtitle: 'Règles prévues et début de la prochaine plaquette, affichés automatiquement.',
+        titleAccentWord: 'calendrier',
+      ),
+      7: ScreenshotCopy(
+        title: 'Chaque prise enregistrée,\npour votre tranquillité',
+        subtitle: 'Vérifiez à tout moment qu’aucune prise ne manque.',
+        titleAccentWord: 'tranquillité',
       ),
     },
   };

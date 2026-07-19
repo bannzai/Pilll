@@ -7,7 +7,7 @@ App ID: 1405931017。promotionalText の 170 文字制約・適用は appstore-c
 
 - CPP の name は `{訴求軸}-{作成年月}` 形式（App Analytics 上の内部識別名）
 - 全 CPP `visible: false` で作成し、審査承認後に流入元（Apple Search Ads・SNS・キーワード割当）ごとに有効化を判断する
-- スクリーンショットは scripts/generate_screenshots の CPP バリアント（`_variant-cpp-{軸}`）で全ロケール生成する。v1 は main バリアントと同じ 5 ページ・同じコピーのまま、各軸の主役ページを 1 枚目に並べ替える（軸ごとの差別化は promotionalText と表示順で行う）。コピーの軸専用差し替えは App Analytics の効果測定後に v2 として検討する
+- スクリーンショットは scripts/generate_screenshots の CPP バリアント（`_variant-cpp-{軸}`）で全ロケール生成する。v1 は main バリアントと同じ 7 ページ・同じコピーのまま、各軸の主役ページを 1 枚目に並べ替える（軸ごとの差別化は promotionalText と表示順で行う）。コピーの軸専用差し替えは App Analytics の効果測定後に v2 として検討する
 - ロケールは reminder / privacy / menstruation / beginner の 4 CPP が、fr-FR を含むスクショ基盤の全 31 代表 ASC ロケール（lib/features/appstore_screenshot/screenshot_locale.dart が SSOT）をカバーする。ru は撮影比較専用で ASC へは配置しない。birthcontrol は英語圏検索語（birth control）専用軸のため en-US のみとする
 
 ## CPP 一覧

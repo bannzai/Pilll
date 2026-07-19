@@ -61,7 +61,7 @@ class MockSocialProofScreen extends StatelessWidget {
                 style: TextStyle(fontSize: size * 0.25, fontWeight: FontWeight.w900, color: TextColor.primaryDarkBlue),
               ),
               const SizedBox(height: 1),
-              Text('★4.6', style: TextStyle(fontSize: size * 0.16, fontWeight: FontWeight.w800, color: TextColor.primaryDarkBlue)),
+              Text('★4.7', style: TextStyle(fontSize: size * 0.16, fontWeight: FontWeight.w800, color: TextColor.primaryDarkBlue)),
             ],
           ),
         ],

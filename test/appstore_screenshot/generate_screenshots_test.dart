@@ -50,7 +50,7 @@ void main() {
     await _loadFonts(loadedFamilies);
   });
 
-  // 全32言語×5ページの生成は flutter test 既定の10分タイムアウトを超えるため無効化する。
+  // 全32言語×全ページの生成は flutter test 既定の10分タイムアウトを超えるため無効化する。
   testWidgets('App Store スクリーンショットを生成する', timeout: Timeout.none,
       (tester) async {
     if (order == null) {

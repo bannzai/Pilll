@@ -74,7 +74,7 @@ class _LanguageListPage extends StatelessWidget {
   }
 }
 
-/// ページ一覧ページ（p1〜p5）。各行タップで全画面プレビューへ進む。
+/// ページ一覧ページ（p1〜p[allScreenshotPageCount]）。各行タップで全画面プレビューへ進む。
 class _PageListPage extends StatelessWidget {
   const _PageListPage({required this.lang});
 
@@ -87,7 +87,7 @@ class _PageListPage extends StatelessWidget {
       appBar: AppBar(title: Text('$lang pages')),
       body: ListView(
         children: [
-          for (var page = 1; page <= 5; page++)
+          for (var page = 1; page <= allScreenshotPageCount; page++)
             Semantics(
               identifier: 'page_$page',
               button: true,

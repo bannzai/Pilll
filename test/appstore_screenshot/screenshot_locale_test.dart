@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pilll/features/appstore_screenshot/screenshot_locale.dart';
+import 'package:pilll/features/appstore_screenshot/screenshot_page.dart';
 
 void main() {
   test('撮影元32言語・通常ページ37ロケール・CPP代表31ロケールを定義する', () {
@@ -24,13 +25,13 @@ void main() {
   });
 
   test('通常商品ページとCPPの出力枚数を計算できる', () {
-    const screenshotsPerLocale = 5;
+    const screenshotsPerLocale = allScreenshotPageCount;
     final mainCount = allStoreScreenshotLocales.length * screenshotsPerLocale;
     final cppCount =
         (allCppScreenshotLocales.length * 4 + 1) * screenshotsPerLocale;
 
-    expect(mainCount, 185);
-    expect(cppCount, 625);
-    expect(mainCount + cppCount, 810);
+    expect(mainCount, 259);
+    expect(cppCount, 875);
+    expect(mainCount + cppCount, 1134);
   });
 }

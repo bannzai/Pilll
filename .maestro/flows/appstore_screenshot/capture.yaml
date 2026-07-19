@@ -3,7 +3,7 @@ appId: com.mizuki.Ohashi.Pilll.dev
 # LANG は呼び出し側が必ず `--env LANG=<arbコード>` で渡す（flow に default を置くと
 # CLI 指定を上書きしてしまうため default は置かない）。
 # ScreenshotCatalogApp（SCREENSHOT_CATALOG=true でビルドしたアプリ）を起動し、
-# 言語一覧から ${LANG} をタップ → 各ページ(p1〜p5)を全画面表示して撮影 → 戻る。
+# 言語一覧から ${LANG} をタップ → 各ページ(p1〜p7)を全画面表示して撮影 → 戻る。
 # 出力は 1290×2796 の OS スクリーンショット。呼び出し側 capture_langs.sh が
 # 言語ごとに LANG を差し替えて32回実行する。
 #
@@ -88,6 +88,46 @@ appId: com.mizuki.Ohashi.Pilll.dev
     timeout: 15000
 - waitForAnimationToEnd
 - takeScreenshot: "scripts/generate_screenshots/artifacts/simulator/${LANG}/p5"
+- tapOn:
+    id: "back"
+- extendedWaitUntil:
+    notVisible:
+      id: "back"
+    timeout: 15000
+- scrollUntilVisible:
+    element:
+      id: "page_6"
+    direction: DOWN
+    timeout: 60000
+    waitToSettleTimeoutMs: 500
+- tapOn:
+    id: "page_6"
+- extendedWaitUntil:
+    visible:
+      id: "back"
+    timeout: 15000
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/generate_screenshots/artifacts/simulator/${LANG}/p6"
+- tapOn:
+    id: "back"
+- extendedWaitUntil:
+    notVisible:
+      id: "back"
+    timeout: 15000
+- scrollUntilVisible:
+    element:
+      id: "page_7"
+    direction: DOWN
+    timeout: 60000
+    waitToSettleTimeoutMs: 500
+- tapOn:
+    id: "page_7"
+- extendedWaitUntil:
+    visible:
+      id: "back"
+    timeout: 15000
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/generate_screenshots/artifacts/simulator/${LANG}/p7"
 - tapOn:
     id: "back"
 - extendedWaitUntil:

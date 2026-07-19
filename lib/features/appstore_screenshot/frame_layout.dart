@@ -47,9 +47,7 @@ class AppStoreScreenshotFrameLayout extends StatelessWidget {
   /// コピー文字列のスクリプトから文字方向を判定する。
   /// RTL スクリプト（ヘブライ・アラビア・シリア文字と各種表示形）を含めば RTL、無ければ LTR。
   static TextDirection _copyTextDirection(String text) {
-    return RegExp('[֐-׿؀-ۿ܀-ݏݐ-ݿࢠ-ࣿיִ-ﭏﭐ-﷿ﹰ-﻿]').hasMatch(text)
-        ? TextDirection.rtl
-        : TextDirection.ltr;
+    return RegExp('[֐-׿؀-ۿ܀-ݏݐ-ݿࢠ-ࣿיִ-ﭏﭐ-﷿ﹰ-﻿]').hasMatch(text) ? TextDirection.rtl : TextDirection.ltr;
   }
 
   @override

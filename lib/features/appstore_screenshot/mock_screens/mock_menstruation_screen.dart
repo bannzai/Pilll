@@ -5,9 +5,12 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/features/appstore_screenshot/mock_screens/mock_components.dart';
+import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/features/menstruation/components/calendar/menstruation_calendar_header.dart';
 import 'package:pilll/features/menstruation/components/menstruation_record_button.dart';
 import 'package:pilll/features/menstruation/data.dart';
+import 'package:pilll/features/menstruation/history/menstruation_history_card.dart';
+import 'package:pilll/features/menstruation/history/menstruation_history_card_state.dart';
 import 'package:pilll/features/menstruation/menstruation_card.dart';
 import 'package:pilll/features/menstruation/menstruation_card_state.codegen.dart';
 import 'package:pilll/provider/database.dart';
@@ -35,6 +38,13 @@ class MockMenstruationScreen extends StatelessWidget {
 
   /// 生理予定日。訴求画像内で日付と残り日数を読み取りやすい7日後に固定する。
   static final DateTime _scheduledMenstruationBegin = _fixedToday.add(const Duration(days: 7));
+
+  /// 過去の生理記録。予定日カードの下の生理履歴カード（平均周期・履歴一覧）に使う。
+  /// 予定日(7/25)から 28 日周期・4 日間で遡った 3 回分（履歴カードは直近 3 件を表示する）。
+  static final List<Menstruation> _pastMenstruations = List.generate(3, (index) {
+    final beginDate = _scheduledMenstruationBegin.subtract(Duration(days: 28 * (index + 1)));
+    return Menstruation(beginDate: beginDate, endDate: beginDate.add(const Duration(days: 3)), createdAt: beginDate);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -104,6 +114,18 @@ class MockMenstruationScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
                   children: [
                     MenstruationCard(MenstruationCardState.future(nextSchedule: _scheduledMenstruationBegin)),
+                    // 本番 MenstruationCardList と同じカード間隔 24 で生理履歴カードを続ける。
+                    const SizedBox(height: 24),
+                    MenstruationHistoryCard(
+                      state: MenstruationHistoryCardState(
+                        allMenstruations: _pastMenstruations,
+                        latestMenstruation: _pastMenstruations.first,
+                        // マーケティング訴求のため、履歴が伏せられないプレミアム状態で表示する。
+                        isPremium: true,
+                        isTrial: false,
+                        trialDeadlineDate: null,
+                      ),
+                    ),
                   ],
                 ),
               ),

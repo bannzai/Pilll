@@ -92,7 +92,7 @@ echo "verify dimensions:"
 bad=0
 verified=0
 for lang in $(printf '%s' "$LANGS" | tr ',' ' '); do
-  for page in 1 2 3 4 5; do
+  for page in 1 2 3 4 5 6 7; do
     png="$SCREENSHOT_ARTIFACT_DIR/simulator/$lang/p$page.png"
     if [ ! -f "$png" ]; then
       echo "  NG (missing): $png" >&2

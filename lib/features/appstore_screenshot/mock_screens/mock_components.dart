@@ -5,6 +5,12 @@ import 'package:flutter_svg/svg.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/entity/firestore_id_generator.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
+import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
@@ -270,4 +276,52 @@ class HeartPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(HeartPainter oldDelegate) => oldDelegate.color != color;
+}
+
+/// 服用履歴（takenPill）の固定データを [count] 日分、[fixedToday] から遡って生成する。
+/// カレンダー(#6)と服用履歴(#7)の Mock が同じ履歴を表示するために共有する。
+///
+/// 各履歴は「その日の服用番号まで飲んだ」before/after の [PillSheetGroup] を持ち、
+/// 本番の履歴行（PillSheetModifiedHistoryTakenPillAction）が服用番号・時刻を
+/// 実データと同じ導出経路で表示できるようにする。
+/// 服用番号は MockRecordScreen と同じ「今日=16番・28錠タイプ」に合わせる。
+List<PillSheetModifiedHistory> mockTakenPillHistories({required DateTime fixedToday, required int count}) {
+  const todayPillNumber = 16;
+  // 服用時刻。先頭(今日)はアップル慣例の 9:41、過去日は夜の服用でばらつかせて実データらしくする。
+  const takenTimes = [(9, 41), (21, 52), (22, 3), (21, 48), (22, 15), (21, 30), (21, 58)];
+  final beginDate = fixedToday.subtract(const Duration(days: todayPillNumber - 1));
+
+  PillSheetGroup groupWith({required DateTime lastTakenDate}) {
+    final pillSheetID = firestoreIDGenerator();
+    return PillSheetGroup(
+      pillSheets: [
+        PillSheet.v1(
+          id: pillSheetID,
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginDate: beginDate,
+          lastTakenDate: lastTakenDate,
+          createdAt: fixedToday,
+        ),
+      ],
+      createdAt: fixedToday,
+      pillSheetIDs: [pillSheetID],
+      // 履歴行に「N番」の番号表記を出すため番号モードにする。
+      pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+    );
+  }
+
+  return List.generate(count, (index) {
+    final day = fixedToday.subtract(Duration(days: index));
+    final takenTime = takenTimes[index % takenTimes.length];
+    final takenDateTime = DateTime(day.year, day.month, day.day, takenTime.$1, takenTime.$2);
+    return PillSheetModifiedHistory(
+      id: firestoreIDGenerator(),
+      actionType: PillSheetModifiedActionType.takenPill.name,
+      value: const PillSheetModifiedHistoryValue(takenPill: TakenPillValue(isQuickRecord: false)),
+      beforePillSheetGroup: groupWith(lastTakenDate: day.subtract(const Duration(days: 1))),
+      afterPillSheetGroup: groupWith(lastTakenDate: day),
+      estimatedEventCausingDate: takenDateTime,
+      createdAt: takenDateTime,
+    );
+  });
 }

@@ -2,7 +2,7 @@
 # App Store スクリーンショットを iOS Simulator の実描画から撮影する（正式な生成経路）。
 #
 # ScreenshotCatalogApp（lib/main.dev.dart の SCREENSHOT_CATALOG 分岐）を Simulator に載せ、
-# Maestro で「言語 × 5 ページ」を全画面表示して OS スクリーンショット（1290×2796）を撮る。
+# Maestro で「言語 × 全ページ」を全画面表示して OS スクリーンショット（1290×2796）を撮る。
 # widget test 方式（generate_appstore_screenshots.sh）は実 iOS フォントと見た目が異なるため
 # 高速プレビュー用に残すが、ストア提出用の正式な生成はこちらを使う。
 #
