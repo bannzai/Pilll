@@ -48,3 +48,15 @@ App ID: 1405931017。promotionalText の 170 文字制約・適用は appstore-c
 ## 効果測定
 
 App Analytics で CPP ごとの impressions / downloads / CVR を計測（初回 DL 5 件以上で表示）。aso-analytics-explorer skill での定点観測と往復する。
+
+## キーワード割当（2026-07-20 追加）
+
+方針: キーワードは原則設定する（bannzai/castle#197）。広告はほぼ出さないため、キーワードごとに
+見せ方を変えたページでオーガニック検索流入を広げることが CPP の主目的。
+
+- 割当プールは「最新の承認済みバージョンの keywords」のみ。割当は config.json の各 locale の
+  `keywords` が SSOT（新バージョン承認で割当がリセットされるため、承認後に config から再適用する）
+- 分類基準: 忘れ/リマインド/通知/アラーム/服薬系→reminder、生理/周期/カレンダー/PMS系→menstruation、
+  ピル銘柄名・避妊薬系→beginner、en-US の birth control 系→birthcontrol
+- 例外（未設定）: privacy はプールに関連語が無いため全ロケール未設定。fr-FR は承認済み
+  バージョンにローカライズ自体が無くプールが空のため、新バージョン承認後に検討する
