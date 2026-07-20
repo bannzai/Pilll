@@ -1060,6 +1060,11 @@
             "contraceptive",
             "ring"
           ]
+        },
+        {
+          "locale": "ja",
+          "promotionalText": "服用時刻に通知でお知らせ。飲むまで何度でもリマインドするので、うっかり飲み忘れを防げます。ピルシートそのままの画面で、どこまで飲んだかもひと目でわかります。",
+          "screenshot_dir": "cpp/assets/ja-appstore-202607"
         }
       ]
     }

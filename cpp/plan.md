@@ -44,6 +44,9 @@ App ID: 1405931017。promotionalText の 170 文字制約・適用は appstore-c
 - 仮説: Natural Cycles（医療権威）とは別軸の「シンプル服薬＋伏せ通知」で英語圏に入れる
 - ロケール: en-US のみ（英語圏検索語専用軸のため）
 - variant: `cpp-birthcontrol`
+- 例外: ja はアプリのプライマリロケールのため CPP から削除できない（ASC の制約、2026-07-20 実測）。
+  プレースホルダとして従来の App Store 掲載スクショ（cpp/assets/ja-appstore-202607）と
+  reminder と同じ promotionalText を設定している。日本からの流入導線は作らない
 
 ## 効果測定
 
