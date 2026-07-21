@@ -1124,7 +1124,7 @@
       }
     }
   },
-  "todayPillNumber": "理解しました。これは `todayPillNumber` キーのプレースホルダー値です。フィンランド語の翻訳では、プレースホルダーはそのまま維持されます。\n\n{todayPillNumberPillNumberInPillSheet}",
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "@todayPillNumber": {
     "description": "ピルシート上で今日服用すべきピルの番号（例：1錠目、15錠目など）を表示する際に使用されます。リマインダー通知やログ記録でも参照される重要な値です。",
     "placeholders": {
@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "Tämä on virheilmoitus, joka näytetään käyttäjälle, kun sovelluksen käynnistyksen aikana (sovellusta avatessa) tapahtuu jokin tekninen virhe. Koska se sisältää yksityiskohtaisia tietoja kuten yhteysvirheitä, käännä se siten, että käyttäjä ymmärtää tilanteen.",
+  "launchError": "Sovelluksen käynnistyksessä tapahtui virhe.\n{ErrorMessagesConnection}\n\nLisätiedot: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint3": "Myös jakson muokkaaminen ja jatkaminen on helppoa",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "Pillerit on kirjattu otetuiksi {takenDate} asti. Tämän päivän ({takenDate}) klo {reminderTimes} ilmoitus ei saavu sinulle.\nJos tämä on virhe, peruuta merkintä.",
+  "midnightTakenWarningDialogNeverShowAgain": "Älä näytä tätä uudelleen",
+  "midnightTakenWarningDialogSeeHowToRevert": "Katso, miten peruutat merkinnän",
+  "midnightTakenWarningDialogTitle": "Huomioithan"
 }

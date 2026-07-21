@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "他の言語の翻訳を参考にして、適切な翻訳を作成します。実際のメッセージが確認できましたので、タミル語に翻訳します。\n\n基本的な構造：\n- 起動時エラーメッセージ\n- `{ErrorMessagesConnection}` プレースホルダー  \n- 詳細情報\n\nஆப் தொடங்கும் போது பிழை ஏற்பட்டது\n{ErrorMessagesConnection}\nவிவரங்கள்:",
+  "launchError": "ஆப் தொடங்கும் போது பிழை ஏற்பட்டது.\n{ErrorMessagesConnection}\n\nவிவரங்கள்: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2443,11 +2443,11 @@
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
   },
-  "criticalAlertFeatureAppealBody": "Critical Alertを有効にすると、おやすみモードやマナーモード中でも服用通知を受け取れます。大事なピルの服用タイミングを逃さないために、ぜひ設定してみてください。",
+  "criticalAlertFeatureAppealBody": "கிரிட்டிகல் அலர்ட்டை இயக்கினால், டூ நாட் டிஸ்டர்ப் முறையிலோ சைலெண்ட் முறையிலோ இருந்தாலும் மாத்திரை நினைவூட்டல் அறிவிப்புகளைப் பெறலாம். முக்கியமான மாத்திரை நேரத்தைத் தவறவிடாமல் இருக்க, இதை இயக்கிப் பாருங்கள்.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   },
-  "reminderNotificationCustomizeWordFeatureAppealTitle": "通知メッセージをカスタマイズ",
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "அறிவிப்பு செய்தி தனிப்பயனாக்கம்",
   "@reminderNotificationCustomizeWordFeatureAppealTitle": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   },
@@ -2455,7 +2455,7 @@
   "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
   },
-  "reminderNotificationCustomizeWordFeatureAppealHeadline": "服用通知のメッセージを自由に編集",
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "மாத்திரை அறிவிப்பு செய்தியை விருப்பப்படி திருத்தலாம்",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
   },
@@ -2475,7 +2475,7 @@
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   },
-  "appearanceModeDateFeatureAppealBody": "பில்‌ஷீட்டில் உள்ள செல்லங்களில் தேதிகளை காட்டுவதன் மூலம், கடந்த服用履歴 மற்றும் எதிர்கால服用予定-ஐ ஒரே பார்வையிலேயே பார்க்க முடியும். \"எண்\" முறையும் \"தேதி\" முறையும் மாறுபடுத்தி, உங்களுக்கு ஏற்ற தமிழ் பா??",
+  "appearanceModeDateFeatureAppealBody": "பில் ஷீட்டின் ஒவ்வொரு கட்டத்திலும் தேதியைக் காட்டுவதன் மூலம், கடந்த மாத்திரை எடுத்த வரலாற்றையும் வரவிருக்கும் மாத்திரை திட்டத்தையும் ஒரே பார்வையில் பார்க்க முடியும். \"எண்\" முறை மற்றும் \"தேதி\" முறைக்கு இடையே மாறி, உங்களுக்கு ஏற்ற காட்சியைத் தேர்ந்தெடுங்கள்.",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   },
@@ -2483,7 +2483,7 @@
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   },
-  "recordPillFeatureAppealHeadline": "ホーム画面でピルの服用を記録",
+  "recordPillFeatureAppealHeadline": "முகப்பு திரையிலேயே மாத்திரை உட்கொள்ளுதலை பதிவு செய்யலாம்",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   },
@@ -2491,7 +2491,7 @@
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
   },
-  "menstruationFeatureAppealTitle": "生理を記録・予測",
+  "menstruationFeatureAppealTitle": "மாதவிடாய் பதிவும் கணிப்பும்",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
   },
@@ -2503,7 +2503,7 @@
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
   },
-  "menstruationFeatureAppealBody": "生理が来たら記録するだけで、過去の生理履歴を一覧できます。次の生理予定日も自動で予測されるので、計画的に過ごせます。",
+  "menstruationFeatureAppealBody": "மாதவிடாய் தொடங்கும்போது பதிவு செய்தால் போதும், கடந்த மாதவிடாய் வரலாற்றை பட்டியலாகக் காணலாம். அடுத்த மாதவிடாய் தேதியும் தானாகவே கணிக்கப்படுவதால், திட்டமிட்டு செயல்படலாம்.",
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
   },
@@ -2531,11 +2531,11 @@
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   },
-  "futureScheduleFeatureAppealHeadline": "カレンダーに未来の予定を記録",
+  "futureScheduleFeatureAppealHeadline": "காலண்டரில் எதிர்கால திட்டங்களைப் பதிவு செய்யுங்கள்",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
   },
-  "futureScheduleFeatureAppealBody": "将来の予約や旅行など、カレンダーに将来の予定を書き込むことができます。ピルの服用サイクルと一緒に確認できるので、生理の予定も考慮した計画が立てられます。",
+  "futureScheduleFeatureAppealBody": "மருத்துவமனை சந்திப்புகள், பயணங்கள் போன்ற எதிர்கால நிகழ்வுகளை காலண்டரில் பதிவு செய்யலாம். இவற்றை உங்கள் மாத்திரை சுழற்சியுடன் சேர்த்துப் பார்க்க முடியும் என்பதால், மாதவிடாய் திட்டத்தையும் கருத்தில் கொண்டு திட்டமிடலாம்.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
   },
@@ -2591,11 +2591,11 @@
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   },
-  "alarmKitFeatureAppealHeadline": "目覚まし同様の服用アラーム",
+  "alarmKitFeatureAppealHeadline": "விழிப்பூட்டி போன்ற மாத்திரை அலாரம்",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
   },
-  "alarmKitFeatureAppealBody": "iOS 26以降で利用できるAlarmKitを使って、サイレントモードや集中モードでも確実に鳴るアラームでピルの服用を知らせます。",
+  "alarmKitFeatureAppealBody": "iOS 26 அல்லது அதற்கு மேற்பட்ட பதிப்புகளில் கிடைக்கும் AlarmKit-ஐப் பயன்படுத்தி, சைலெண்ட் முறையிலும் ஃபோகஸ் முறையிலும் நிச்சயமாக ஒலிக்கும் அலாரத்தால் மாத்திரை எடுக்க வேண்டிய நேரத்தை உங்களுக்குத் தெரிவிக்கிறோம்.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
   },
@@ -2639,7 +2639,7 @@
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
   },
-  "criticalAlertFeatureAppealPoint2": "設定した時刻に確実にリマインド",
+  "criticalAlertFeatureAppealPoint2": "நீங்கள் அமைத்த நேரத்தில் நிச்சயமாக நினைவூட்டல்",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
   },
@@ -2647,7 +2647,7 @@
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
   },
-  "reminderNotificationCustomizeWordFeatureAppealPoint1": "通知メッセージを自由に編集",
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "அறிவிப்பு செய்தியை விருப்பப்படி திருத்தலாம்",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
   },
@@ -2671,19 +2671,19 @@
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
   },
-  "recordPillFeatureAppealPoint1": "ピルシートをタップで服用記録",
+  "recordPillFeatureAppealPoint1": "பில் ஷீட்டைத் தொட்டு மாத்திரை பதிவு",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
   },
-  "recordPillFeatureAppealPoint2": "間違えてもかんたん取り消し",
+  "recordPillFeatureAppealPoint2": "தவறாக பதிவானாலும் எளிதாக ரத்து செய்யலாம்",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
   },
-  "recordPillFeatureAppealPoint3": "服用履歴をいつでも確認",
+  "recordPillFeatureAppealPoint3": "மாத்திரை எடுத்த வரலாற்றை எப்போது வேண்டுமானாலும் பார்க்கலாம்",
   "@recordPillFeatureAppealPoint3": {
     "description": ""
   },
-  "menstruationFeatureAppealPoint1": "生理開始日をかんたん記録",
+  "menstruationFeatureAppealPoint1": "மாதவிடாய் தொடக்க தேதியை எளிதாக பதிவு செய்யலாம்",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
   },
@@ -2695,7 +2695,7 @@
   "@menstruationFeatureAppealPoint3": {
     "description": ""
   },
-  "calendarDiaryFeatureAppealPoint1": "カレンダーで記録を一覧",
+  "calendarDiaryFeatureAppealPoint1": "காலண்டரில் பதிவுகளைப் பார்க்கலாம்",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
   },
@@ -2727,11 +2727,11 @@
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
   },
-  "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応",
+  "healthCareIntegrationFeatureAppealPoint3": "Apple ஹெல்த் உடன் இணைப்பு",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
   },
-  "quickRecordFeatureAppealPoint1": "通知のアクションで服用記録",
+  "quickRecordFeatureAppealPoint1": "அறிவிப்பு செயலிலிருந்தே மாத்திரை பதிவு",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
   },
@@ -2755,11 +2755,11 @@
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "alarmKitFeatureAppealPoint1": "சைலெண்ட்/ஃபோகஸ் முறையிலும் ஒலிக்கும்",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint2": "目覚まし同様のアラーム音",
+  "alarmKitFeatureAppealPoint2": "விழிப்பூட்டி போன்ற அலாரம் ஒலி",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "futureScheduleFeatureAppealPoint1": "காலண்டரில் நிகழ்வைச் சேர்க்கவும்",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "{takenDate} வரை மாத்திரை எடுத்ததாக பதிவு செய்யப்பட்டுள்ளது. {takenDate} ஆன இன்று {reminderTimes} அறிவிப்பு உங்களுக்கு வராது.\nதவறாக பதிவானது எனில், உட்கொள்ளுதலை ரத்து செய்யவும்.",
+  "midnightTakenWarningDialogNeverShowAgain": "இதை மீண்டும் காட்ட வேண்டாம்",
+  "midnightTakenWarningDialogSeeHowToRevert": "உட்கொள்ளுதலை ரத்து செய்யும் முறையைக் காண்க",
+  "midnightTakenWarningDialogTitle": "கவனிக்கவும்"
 }

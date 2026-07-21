@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "他の言語のパターンを参考に、trの翻訳を作成します。アラビア語やベンガル語などの例から、トルコ語に適したアプリ起動時エラーメッセージを翻訳します。\n\nUygulama başlatılırken bir hata oluştu\n{ErrorMessagesConnection}\n\nAyrıntılar:",
+  "launchError": "Uygulama başlatılırken bir hata oluştu.\n{ErrorMessagesConnection}\n\nAyrıntılar: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2479,7 +2479,7 @@
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   },
-  "recordPillFeatureAppealTitle": "服用履歴を簡単に振り返り",
+  "recordPillFeatureAppealTitle": "Hap alım geçmişinizi kolayca gözden geçirin",
   "@recordPillFeatureAppealTitle": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
   },
@@ -2515,7 +2515,7 @@
   "@calendarDiaryFeatureAppealHeadline": {
     "description": "カレンダー・日記機能のヘルプページのヘッドライン"
   },
-  "calendarDiaryFeatureAppealBody": "カレンダーから日付をタップして体調・気分・症状などを記録できます。服用記録や生理記録と一緒に確認できるので、自分の体のリズムを把握できます。",
+  "calendarDiaryFeatureAppealBody": "Takvimde bir tarihe dokunarak fiziksel durumunuzu, ruh halinizi veya belirtilerinizi kaydedebilirsiniz. Hap kullanım kayıtlarınız ve adet kayıtlarınızla birlikte görüntüleyerek vücudunuzun ritmini anlayabilirsiniz.",
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
   },
@@ -2527,7 +2527,7 @@
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   },
-  "futureScheduleFeatureAppealHeadline": "\"カレンダーに未来の予定を記録\" を tr（トルコ語）に翻訳してください。",
+  "futureScheduleFeatureAppealHeadline": "Gelecek planlarınızı takvime kaydedin",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
   },
@@ -2547,7 +2547,7 @@
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   },
-  "healthCareIntegrationFeatureAppealBody": "Pilllで記録した生理データをヘルスケアアプリと自動連携できます。ヘルスケア上の他の健康データと一緒に確認したり、他のアプリでも生理データを使えるようになります。",
+  "healthCareIntegrationFeatureAppealBody": "Pilll'de kaydettiğiniz adet verilerini Sağlık uygulamasıyla otomatik olarak senkronize edebilirsiniz. Sağlık'taki diğer sağlık verilerinizle birlikte görüntüleyebilir, verilerinizi Sağlık'tan okuyan diğer uygulamalarda da kullanabilirsiniz.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
   },
@@ -2567,11 +2567,11 @@
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   },
-  "creatingNewPillSheetFeatureAppealShortDescription": "次のシートを自動生成",
+  "creatingNewPillSheetFeatureAppealShortDescription": "Sonraki şerit otomatik oluşturulur",
   "@creatingNewPillSheetFeatureAppealShortDescription": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   },
-  "creatingNewPillSheetFeatureAppealHeadline": "次のピルシートを自動で作成",
+  "creatingNewPillSheetFeatureAppealHeadline": "Bir sonraki hap şeridini otomatik oluşturun",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
   },
@@ -2599,7 +2599,7 @@
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   },
-  "todayPillNumberFeatureAppealShortDescription": "番号がずれたら設定で修正",
+  "todayPillNumberFeatureAppealShortDescription": "Numara kayarsa ayarlardan düzeltin",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   },
@@ -2651,7 +2651,7 @@
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
   },
-  "appearanceModeDateFeatureAppealPoint1": "ピルシートを日付で表示",
+  "appearanceModeDateFeatureAppealPoint1": "Hap çizelgesini tarihe göre görüntüleyin",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
   },
@@ -2659,15 +2659,15 @@
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
   },
-  "appearanceModeDateFeatureAppealPoint3": "\"ピルシート設定から変更可能\" のトルコ語訳",
+  "appearanceModeDateFeatureAppealPoint3": "Hap çizelgesi ayarlarından değiştirilebilir",
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
   },
-  "recordPillFeatureAppealPoint1": "ピルシートをタップで服用記録",
+  "recordPillFeatureAppealPoint1": "Hap sayfasına dokunarak alımınızı kaydedin",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
   },
-  "recordPillFeatureAppealPoint2": "間違えてもかんたん取り消し",
+  "recordPillFeatureAppealPoint2": "Yanlışlıkla kaydettiyseniz kolayca geri alın",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
   },
@@ -2675,11 +2675,11 @@
   "@recordPillFeatureAppealPoint3": {
     "description": ""
   },
-  "menstruationFeatureAppealPoint1": "生理開始日をかんたん記録",
+  "menstruationFeatureAppealPoint1": "Adet başlangıç tarihinizi kolayca kaydedin",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
   },
-  "menstruationFeatureAppealPoint2": "周期を自動で把握",
+  "menstruationFeatureAppealPoint2": "Döngünüzü otomatik olarak takip edin",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
   },
@@ -2687,7 +2687,7 @@
   "@menstruationFeatureAppealPoint3": {
     "description": ""
   },
-  "calendarDiaryFeatureAppealPoint1": "カレンダーで記録を一覧",
+  "calendarDiaryFeatureAppealPoint1": "Takvimde kayıtları görüntüleyin",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
   },
@@ -2703,7 +2703,7 @@
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
   },
-  "futureScheduleFeatureAppealPoint1": "カレンダーに予定を書き込み",
+  "futureScheduleFeatureAppealPoint1": "Takvime plan ekleyin",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
   },
@@ -2719,15 +2719,15 @@
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
   },
-  "healthCareIntegrationFeatureAppealPoint1": "生理記録を自動でデータ連携",
+  "healthCareIntegrationFeatureAppealPoint1": "Adet kayıtlarını otomatik olarak senkronize edin",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
   },
-  "healthCareIntegrationFeatureAppealPoint2": "ヘルスケアアプリに同期",
+  "healthCareIntegrationFeatureAppealPoint2": "Sağlık uygulamasıyla senkronize edin",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
   },
-  "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応",
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Sağlık entegrasyonu",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
   },
@@ -2739,7 +2739,7 @@
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
   },
-  "quickRecordFeatureAppealPoint3": "Premium加入でそのまま利用可能",
+  "quickRecordFeatureAppealPoint3": "Premium abonelikle kullanılabilir",
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
   },
@@ -2755,7 +2755,7 @@
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "alarmKitFeatureAppealPoint1": "Sessiz/Odak modunda bile çalar",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "todayPillNumberFeatureAppealBody": "Eğer unutma veya karışıklık nedeniyle hap şeridindeki numara ile gerçek alınan hap farklıysa, bugünkü hap numarasını elle ayarlayabilirsiniz. Ana ekrandaki hap numarası gösteriminden de aynı ekrana erişebilirsiniz.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
-  }
+  },
+  "midnightTakenWarningDialogBody": "{takenDate} tarihine kadar olan hap alım kayıtlarınız oluşturuldu. Bugün ({takenDate}) için {reminderTimes} saatindeki hatırlatma bildirimi gönderilmeyecek.\nBu bir hataysa lütfen alım kaydını geri alın.",
+  "midnightTakenWarningDialogNeverShowAgain": "Bir daha gösterme",
+  "midnightTakenWarningDialogSeeHowToRevert": "Alım kaydını geri alma yöntemini görüntüle",
+  "midnightTakenWarningDialogTitle": "Lütfen dikkat edin"
 }

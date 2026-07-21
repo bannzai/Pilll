@@ -1879,7 +1879,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "Колдонмону иштетүү учурунда (колдонмону ачкан учурда) кандайдыр бир техникалык ката пайда болгондо колдонуучуга көрсөтүлүүчү ката билдирүүсү. Туташуу каталары сыяктуу деталдуу маалыматтарды да камтыгандыктан, колдонуучу абалды түшүнө алышы үчүн котормо кылыңыз.",
+  "launchError": "Колдонмону иштетүү учурунда ката кетти.\n{ErrorMessagesConnection}\n\nМайда-чүйдөлөрү: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2539,7 +2539,7 @@
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   },
-  "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
+  "healthCareIntegrationFeatureAppealHeadline": "Ден-соолук колдонмосу менен синхрондоштурууга болот",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   },
@@ -2643,7 +2643,7 @@
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
   },
-  "reminderNotificationCustomizeWordFeatureAppealPoint1": "通知メッセージを自由に編集",
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Эскертме билдирүүсүн эркин түзөтүү",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
   },
@@ -2651,7 +2651,7 @@
   "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
     "description": ""
   },
-  "reminderNotificationCustomizeWordFeatureAppealPoint3": "自分だけの通知メッセージに",
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "Өзүңүзгө гана таандык эскертме билдирүүсү",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
   },
@@ -2691,7 +2691,7 @@
   "@menstruationFeatureAppealPoint3": {
     "description": ""
   },
-  "calendarDiaryFeatureAppealPoint1": "カレンダーで記録を一覧",
+  "calendarDiaryFeatureAppealPoint1": "Жазууларды күнтүзмөдөн көрүү",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
   },
@@ -2719,7 +2719,7 @@
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
   },
-  "futureScheduleFeatureAppealLocationHint": "日付をタップして予定を書き込み",
+  "futureScheduleFeatureAppealLocationHint": "Датага тийип планыңызды жазыңыз",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
   },
@@ -2739,7 +2739,7 @@
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
   },
-  "quickRecordFeatureAppealPoint2": "アプリを開かずに完了",
+  "quickRecordFeatureAppealPoint2": "Колдонмону ачпай эле аяктоо",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "futureScheduleFeatureAppealBody": "Дарыгерге баруу же саякаттоо сыяктуу келечектеги пландарды күнтүзөгө киргизе аласыз. Таблетканы ичүү циклиңиз менен бирге текшерсеңиз болот, ошондуктан айлык (менструация) графигин эске алган пландарды түзө аласыз.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
-  }
+  },
+  "midnightTakenWarningDialogBody": "{takenDate}күнгө чейинки дары ичүү катталды. Бүгүн ({takenDate}) {reminderTimes} убагындагы эскертүү сизге келбейт.\nЭгер ката менен болсо, дары ичкенди жокко чыгарыңыз",
+  "midnightTakenWarningDialogNeverShowAgain": "Экинчи көрсөтпөө",
+  "midnightTakenWarningDialogSeeHowToRevert": "Дары ичкенди жокко чыгаруу жолун көрүү",
+  "midnightTakenWarningDialogTitle": "Көңүл буруңуз"
 }

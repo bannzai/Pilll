@@ -1447,7 +1447,7 @@
   "@purchaseErrorProductNotAvailableForPurchaseError": {
     "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
-  "purchaseErrorProductAlreadyPurchasedError": "คุณได้ซื้อแผนแล้ว หากต้องการกู้คืนข้อมูลการซื้อในอุปกรณ์นี้ กรุณากู้คืนข้อมูลการซื้อจาก「以前購入した方はこちら」",
+  "purchaseErrorProductAlreadyPurchasedError": "คุณได้ซื้อแผนแล้ว หากต้องการกู้คืนข้อมูลการซื้อในอุปกรณ์นี้ กรุณากู้คืนข้อมูลการซื้อจาก \"สำหรับผู้ที่เคยซื้อแล้ว\"",
   "@purchaseErrorProductAlreadyPurchasedError": {
     "description": "すでにプレミアムプランを購入済みのユーザーが再度購入しようとした際に表示されるエラーメッセージです。購入情報の復元方法を案内する内容が含まれます。"
   },
@@ -2439,11 +2439,11 @@
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   },
-  "criticalAlertFeatureAppealHeadline": "サイレントモードでも通知が届く",
+  "criticalAlertFeatureAppealHeadline": "แจ้งเตือนมาถึงแม้อยู่ในโหมดเงียบ",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
   },
-  "criticalAlertFeatureAppealBody": "Critical Alertを有効にすると、おやすみモードやマナーモード中でも服用通知を受け取れます。大事なピルの服用タイミングを逃さないために、ぜひ設定してみてください。",
+  "criticalAlertFeatureAppealBody": "เมื่อเปิดใช้งาน Critical Alert คุณจะได้รับการแจ้งเตือนการรับประทานยาแม้อยู่ในโหมดห้ามรบกวนหรือโหมดเงียบ ลองเปิดใช้งานดูเพื่อไม่ให้พลาดเวลาสำคัญในการทานยาคุมกำเนิด",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   },
@@ -2455,7 +2455,7 @@
   "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
   },
-  "reminderNotificationCustomizeWordFeatureAppealHeadline": "แก้ไขข้อความเตือนการ服用ได้อย่างอิสระ",
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "แก้ไขข้อความแจ้งเตือนการทานยาได้อย่างอิสระ",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
   },
@@ -2491,7 +2491,7 @@
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   },
-  "recordPillFeatureAppealBody": "ホーム画面のピルシートをタップするだけで、その日の服用を記録できます。間違えて記録した場合も、もう一度タップすれば取り消せます。服用履歴も後から確認できるので、安心して続けられます。",
+  "recordPillFeatureAppealBody": "เพียงแตะแผงยาบนหน้าหลัก ก็สามารถบันทึกการรับประทานยาของวันนั้นได้ทันที หากแตะผิดพลาด สามารถแตะอีกครั้งเพื่อยกเลิกได้ ประวัติการรับประทานยาก็สามารถย้อนดูได้ภายหลัง ทำให้คุณรับประทานยาต่อเนื่องได้อย่างอุ่นใจ",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
   },
@@ -2547,7 +2547,7 @@
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   },
-  "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
+  "healthCareIntegrationFeatureAppealHeadline": "เชื่อมต่อกับแอปสุขภาพได้",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   },
@@ -2635,7 +2635,7 @@
   "@featureAppealLocationLabel": {
     "description": ""
   },
-  "criticalAlertFeatureAppealPoint1": "集中モード中でも通知が届く",
+  "criticalAlertFeatureAppealPoint1": "แจ้งเตือนมาถึงแม้อยู่ในโหมดโฟกัส",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
   },
@@ -2663,7 +2663,7 @@
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
   },
-  "appearanceModeDateFeatureAppealPoint2": "カレンダーを見なくても日付がわかる",
+  "appearanceModeDateFeatureAppealPoint2": "รู้วันที่ได้โดยไม่ต้องดูปฏิทิน",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
   },
@@ -2671,11 +2671,11 @@
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
   },
-  "recordPillFeatureAppealPoint1": "ピルシートをタップで服用記録",
+  "recordPillFeatureAppealPoint1": "แตะแผงยาเพื่อบันทึกการรับประทาน",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
   },
-  "recordPillFeatureAppealPoint2": "間違えてもかんたん取り消し",
+  "recordPillFeatureAppealPoint2": "แม้บันทึกผิดก็ยกเลิกได้ง่าย",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
   },
@@ -2695,7 +2695,7 @@
   "@menstruationFeatureAppealPoint3": {
     "description": ""
   },
-  "calendarDiaryFeatureAppealPoint1": "カレンダーで記録を一覧",
+  "calendarDiaryFeatureAppealPoint1": "ดูรายการบันทึกในปฏิทิน",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
   },
@@ -2751,7 +2751,7 @@
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
   },
-  "creatingNewPillSheetFeatureAppealPoint1": "ピルシート終了で自動切り替え",
+  "creatingNewPillSheetFeatureAppealPoint1": "สลับแผงยาคุมอัตโนมัติเมื่อแผงเดิมหมด",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
   },
@@ -2763,7 +2763,7 @@
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "alarmKitFeatureAppealPoint1": "ดังแม้อยู่ในโหมดเงียบ/โฟกัส",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "alarmKitFeatureAppealHeadline": "การแจ้งเตือนการกินยาคล้ายนาฬิกาปลุก",
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
-  }
+  },
+  "midnightTakenWarningDialogBody": "มีการบันทึกว่าคุณได้รับประทานยาจนถึงวันที่ {takenDate} แล้ว การแจ้งเตือนของวันนี้ ({takenDate}) เวลา {reminderTimes} จะไม่ถูกส่งถึงคุณ\nหากเป็นการบันทึกผิดพลาด กรุณายกเลิกการบันทึกการรับประทานยา",
+  "midnightTakenWarningDialogNeverShowAgain": "ไม่แสดงข้อความนี้อีก",
+  "midnightTakenWarningDialogSeeHowToRevert": "ดูวิธีการยกเลิกการบันทึกการรับประทานยา",
+  "midnightTakenWarningDialogTitle": "โปรดทราบ"
 }

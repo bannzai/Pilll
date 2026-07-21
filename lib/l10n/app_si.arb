@@ -1887,7 +1887,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "යෙදුම ආරම්භ වන අවස්ථාවේදී (යෙදුම විවෘත කරන මොහොතේ) තාක්‍ෂණික දෝෂයක් ඇති වූ විට පරිශීලකයින්ට පෙන්වන දෝෂ පණිවිඩයකි. සම්බන්ධතා දෝෂ වැනි සවිස්තර තොරතුරු ද ඇතුළත් වන බැවින්, පරිශීලකයින්ට තත්ත්වය අවබෝධ කර ගත හැකි ලෙස පරිවර්තනය කරන්න.",
+  "launchError": "යෙදුම ආරම්භ වන අවස්ථාවේ දෝෂයක් සිදු විය.\n{ErrorMessagesConnection}\n\nවිස්තර: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2431,7 +2431,7 @@
   "@recommendSignupGeneralDescription": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
   },
-  "criticalAlertFeatureAppealTitle": "サイレントモードでも通知を受け取る",
+  "criticalAlertFeatureAppealTitle": "නිහඬ මාදිලියේදීත් දැනුම්දීම් ලබාගන්න",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
   },
@@ -2443,7 +2443,7 @@
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
   },
-  "criticalAlertFeatureAppealBody": "Critical Alertを有効にすると、おやすみモードやマナーモード中でも服用通知を受け取れます。大事なピルの服用タイミングを逃さないために、ぜひ設定してみてください。",
+  "criticalAlertFeatureAppealBody": "Critical Alert සක්‍රීය කළහොත්, Do Not Disturb මාදිලියේ හෝ නිහඬ මාදිලියේ පවතින විටත් ඔබට පිල් ගැනීමේ දැනුම්දීම් ලැබේ. වැදගත් පිල් ගැනීමේ මොහොත මග නොහැරෙන පිණිස, කරුණාකර මෙය සකසා බලන්න.",
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   },
@@ -2527,7 +2527,7 @@
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
   },
-  "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
+  "futureScheduleFeatureAppealTitle": "අනාගත සැලසුම් ලියා තබමු",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
   },
@@ -2539,7 +2539,7 @@
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
   },
-  "futureScheduleFeatureAppealBody": "通院予定や旅行の予定など、未来の予定をカレンダーに書き込めます。ピルの服用周期と合わせて確認できるので、生理の予定も考慮した計画を立てられます。",
+  "futureScheduleFeatureAppealBody": "රෝහල් යාමේ සැලසුම් හෝ සංචාරක සැලසුම් වැනි අනාගත සිදුවීම් දිනදර්ශනයේ සටහන් කළ හැක. පිල් ගැනීමේ චක්‍රය සමඟ එකට බැලිය හැකි නිසා, ඔසප් චක්‍රයේ අනාවැකියද සැලකිල්ලට ගෙන සැලසුම් සකස් කළ හැක.",
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
   },
@@ -2571,7 +2571,7 @@
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
   },
-  "quickRecordFeatureAppealBody": "リマインダー通知を長押しすると「服用した」のアクションが表示され、アプリを開かずに服用を記録できます。",
+  "quickRecordFeatureAppealBody": "රිමයින්ඩර් නිවේදනය දිගින් ඔබා තබා ගැනීමෙන් 'ගත්තා' යන ක්‍රියාව පෙන්වන අතර, යෙදුම විවෘත නොකර ගැනීම සටහන් කළ හැක.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
   },
@@ -2603,15 +2603,15 @@
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
   },
-  "alarmKitFeatureAppealBody": "iOS 26以降で利用できるAlarmKitを使って、サイレントモードや集中モードでも確実に鳴るアラームでピルの服用を知らせます。",
+  "alarmKitFeatureAppealBody": "iOS 26 සහ ඉන් පසු අනුවාදවල ලැබෙන AlarmKit භාවිතයෙන්, නිහඬ මාදිලියේදී හෝ අවධානය යොමු කිරීමේ ප්‍රකාරයේදී වුවත් විශ්වාසවන්තව ඇහෙන ඇලාර්මයකින් පිල් ගැනීමේ වේලාව දන්වනු ලබයි.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
   },
-  "todayPillNumberFeatureAppealTitle": "今日の服用番号を合わせる",
+  "todayPillNumberFeatureAppealTitle": "අද ගන්නා පිල් අංකය ගළපා ගන්න",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   },
-  "todayPillNumberFeatureAppealShortDescription": "番号がずれたら設定で修正",
+  "todayPillNumberFeatureAppealShortDescription": "අංකය නොගැලපේ නම් සැකසුම්වලින් නිවැරදි කරන්න",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   },
@@ -2619,7 +2619,7 @@
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   },
-  "todayPillNumberFeatureAppealBody": "කඩපාඩුවකින් හෝ වෙනත් හේතුවක් නිසා පිල් ශීට්上的 අංකය සහ සැබැවින් ගත් පිළිවිල සූමුනු වූ විට, අද ගන්නේ කුමන පිල් අංකය යැයි ඔබට අතින් සකසගත හැකිය. ඔබට ගෘహ පිටුයේ පිල් අංකය පෙන්වීමෙන්ද ඒම ආකෘතිය මෙම තිරය විවෘත කළ හැකිය.",
+  "todayPillNumberFeatureAppealBody": "අමතක වීමකින් හෝ වැරදීමකින් පිල් ෂීට් එකේ අංකය හා ඇත්තටම ගත් පිළිවෙළ අතර පරතරයක් ඇති වූ විට, අද ගත යුතු පිල් අංකය අතින් නැවත සකසා ගත හැක. හෝම් තිරයේ පිල් අංකය ටැප් කිරීමෙන්ද මෙම තිරයම විවෘත කළ හැක.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
   },
@@ -2651,7 +2651,7 @@
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
   },
-  "criticalAlertFeatureAppealPoint3": "ワンタップでかんたん設定",
+  "criticalAlertFeatureAppealPoint3": "එක් තට්ටුවකින් පහසුවෙන් සකසන්න",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
   },
@@ -2691,7 +2691,7 @@
   "@recordPillFeatureAppealPoint3": {
     "description": ""
   },
-  "menstruationFeatureAppealPoint1": "生理開始日をかんたん記録",
+  "menstruationFeatureAppealPoint1": "ඔසප් ආරම්භක දිනය පහසුවෙන් සටහන් කරන්න",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
   },
@@ -2707,7 +2707,7 @@
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
   },
-  "calendarDiaryFeatureAppealPoint2": "\"体調をメモして振り返り\" - 日本語からシンハラ語への翻訳",
+  "calendarDiaryFeatureAppealPoint2": "ශරීර තත්ත්වය සටහන් කර නැවත සිහිපත් කරන්න",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
   },
@@ -2743,7 +2743,7 @@
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
   },
-  "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応",
+  "healthCareIntegrationFeatureAppealPoint3": "Apple සෞඛ්‍යය සමඟ ඒකාබද්ධ කිරීම",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
   },
@@ -2771,7 +2771,7 @@
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "alarmKitFeatureAppealPoint1": "නිහඬ/අවධානය මාදිලියේදීත් හඬ නගී",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint3": "මාසික කාලය සංස්කරණය කිරීම හා නැවත ආරම්භ කිරීම පහසුයි",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "{takenDate} දක්වා පිල් ගැනීම් සටහන් වී ඇත. අද දිනය {takenDate} බැවින්, අද {reminderTimes} හි දැනුම්දීම ඔබට නොලැබෙනු ඇත.\nවැරදීමකින් නම්, කරුණාකර ගැනීම අවලංගු කරන්න",
+  "midnightTakenWarningDialogNeverShowAgain": "නැවත මෙය නොපෙන්වන්න",
+  "midnightTakenWarningDialogSeeHowToRevert": "ගැනීම අවලංගු කරන ආකාරය බලන්න",
+  "midnightTakenWarningDialogTitle": "කරුණාකර සැලකිල්ලට ගන්න"
 }

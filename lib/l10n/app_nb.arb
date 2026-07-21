@@ -429,7 +429,7 @@
       }
     }
   },
-  "beforeLastTakenPillNumber": "既存のノルウェー語翻訳パターンを確認できました。ピル番号の表示では「nr.」（numberの略）を使用していることが分かります。\n\nnr. {beforeLastTakenPillNumber}",
+  "beforeLastTakenPillNumber": "nr. {beforeLastTakenPillNumber}",
   "@beforeLastTakenPillNumber": {
     "description": "最後に服用したピルの1つ前の番号を表示します。ピルシートのUI上で服用履歴の範囲表示に使用される番号です。",
     "placeholders": {
@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "En teknisk feil oppstod under oppstart av appen (i det øyeblikket du åpnet appen). Detaljert informasjon som tilkoblingsfeil er inkludert, slik at brukere kan forstå situasjonen.",
+  "launchError": "En feil oppstod under oppstart av appen.\n{ErrorMessagesConnection}\n\nDetaljer: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint3": "Enkel redigering og gjenoppstart av perioder",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "Pillene dine er registrert som tatt til og med {takenDate}. Dagens ({takenDate}) varsel kl. {reminderTimes} vil ikke bli sendt.\nHvis dette var en feil, kan du angre inntaksregistreringen.",
+  "midnightTakenWarningDialogNeverShowAgain": "Ikke vis dette igjen",
+  "midnightTakenWarningDialogSeeHowToRevert": "Se hvordan du angrer en inntaksregistrering",
+  "midnightTakenWarningDialogTitle": "Vær oppmerksom"
 }

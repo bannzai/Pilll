@@ -1124,7 +1124,7 @@
       }
     }
   },
-  "todayPillNumber": "{numeroPildoraHoy}",
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "@todayPillNumber": {
     "description": "ピルシート上で今日服用すべきピルの番号（例：1錠目、15錠目など）を表示する際に使用されます。リマインダー通知やログ記録でも参照される重要な値です。",
     "placeholders": {
@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "Este es un mensaje de error que se muestra al usuario cuando ocurre algún error técnico durante el inicio de la aplicación (en el momento de abrir la aplicación). Como incluye información detallada como errores de conexión, tradúzcalo para que el usuario pueda entender la situación.",
+  "launchError": "Se ha producido un error al iniciar la aplicación.\n{ErrorMessagesConnection}\n\nDetalles: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint3": "Editar y reanudar el período también es sencillo",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "Se ha registrado la toma hasta el {takenDate}. La notificación de hoy ({takenDate}) programada para las {reminderTimes} no se recibirá.\nSi esto fue un error, cancele el registro de toma.",
+  "midnightTakenWarningDialogNeverShowAgain": "No volver a mostrar esto",
+  "midnightTakenWarningDialogSeeHowToRevert": "Ver cómo cancelar el registro de toma",
+  "midnightTakenWarningDialogTitle": "Atención"
 }

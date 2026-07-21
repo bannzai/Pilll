@@ -710,7 +710,7 @@
   "@todayPillToTake": {
     "description": "ピル服用管理画面で、今日服用すべきピルを示すラベルです。ホーム画面やカレンダーなどで、今日飲む予定のピルがあることをユーザーに伝える際に使用されます。"
   },
-  "number": "Looking at this translation request, I need to translate the Japanese counter \"番\" used for indicating pill positions (like \"1番\", \"2番\") into Zulu.\n\nIn Zulu, position indicators in UI contexts typically don't use suffix classifiers like Japanese. The most natural and appropriate translation for this context would be to omit the suffix entirely, as Zulu speakers would simply use the number alone.\n\n(empty string)",
+  "number": "inombolo",
   "@number": {
     "description": "ピルシートUI上でピルの位置・順番を示す番号のラベルです。「1番」「2番」のように表示される際の「番」部分に相当します。"
   },
@@ -1106,7 +1106,7 @@
       }
     }
   },
-  "todayPillNumber": "Inombolo yephilisi yanamuhla",
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "@todayPillNumber": {
     "description": "ピルシート上で今日服用すべきピルの番号（例：1錠目、15錠目など）を表示する際に使用されます。リマインダー通知やログ記録でも参照される重要な値です。",
     "placeholders": {
@@ -1873,7 +1873,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "実際に翻訳すべき日本語のエラーメッセージテキストが提供されていないようです。現在提供されているのはエラーメッセージについての説明文です。\n\n実際にアプリでユーザーに表示される日本語のエラーメッセージテキストを教えていただけますか？そのテキストをズールー語に翻訳いたします。",
+  "launchError": "Kwenzeke iphutha ngesikhathi sokuqala uhlelo lokusebenza.\n{ErrorMessagesConnection}\n\nImininingwane: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2487,7 +2487,7 @@
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
   },
-  "menstruationFeatureAppealTitle": "生理を記録・予測",
+  "menstruationFeatureAppealTitle": "Qopha futhi ubikezele ukuya esikhathini",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
   },
@@ -2519,7 +2519,7 @@
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
   },
-  "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
+  "futureScheduleFeatureAppealTitle": "Bhala phansi izinhlelo zakho zesikhathi esizayo",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
   },
@@ -2547,7 +2547,7 @@
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   },
-  "healthCareIntegrationFeatureAppealBody": "Pilllで記録した生理データをヘルスケアアプリと自動連携できます。ヘルスケア上の他の健康データと一緒に確認したり、他のアプリでも生理データを使えるようになります。",
+  "healthCareIntegrationFeatureAppealBody": "Amadatha omjikelezo wokuya esikhathini owaqophe ku-Pilll angavumelaniswa ngokuzenzakalelayo ne-Apple Health. Ungawabuka kanye namanye amadatha akho ezempilo, futhi uwasebenzise nakwezinye izinhlelo ezifunda kusuka ku-Health.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
   },
@@ -2563,7 +2563,7 @@
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
   },
-  "quickRecordFeatureAppealBody": "長押し通知 \"服用した\" アクションが表示され、アプリを開かずに服用が記録できます。",
+  "quickRecordFeatureAppealBody": "Cindezela isaziso sesikhumbuzi isikhathi eside ukuze kuvele isenzo esithi 'Kuthathiwe', bese ungakwazi ukuqopha ukuthatha kwakho ngaphandle kokuvula uhlelo lokusebenza.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
   },
@@ -2595,7 +2595,7 @@
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
   },
-  "alarmKitFeatureAppealBody": "iOS 26以降で利用できるAlarmKitを使って、サイレントモードや集中モードでも確実に鳴るアラームでピルの服用を知らせます。",
+  "alarmKitFeatureAppealBody": "Ku-iOS 26 nangaphezulu, i-AlarmKit isikukhumbuza ukuthatha iphilisi ngesixwayiso esishaya ngokuqinisekile, ngisho noma imodi ithule noma imodi yokugxila ivuliwe.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
   },
@@ -2631,11 +2631,11 @@
   "@restDurationFeatureAppealBody": {
     "description": "服用おやすみ機能のヘルプページの本文"
   },
-  "featureAppealLocationLabel": "アプリ内の場所",
+  "featureAppealLocationLabel": "Indawo ngaphakathi kohlelo lokusebenza",
   "@featureAppealLocationLabel": {
     "description": ""
   },
-  "criticalAlertFeatureAppealPoint1": "集中モード中でも通知が届く",
+  "criticalAlertFeatureAppealPoint1": "Izaziso ziyafika ngisho noma imodi yokugxila isebenza",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
   },
@@ -2655,11 +2655,11 @@
   "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
     "description": ""
   },
-  "reminderNotificationCustomizeWordFeatureAppealPoint3": "自分だけの通知メッセージに",
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "Yenza umyalezo wesaziso ube ngowakho kuphela",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
   },
-  "appearanceModeDateFeatureAppealPoint1": "ピルシートを日付で表示",
+  "appearanceModeDateFeatureAppealPoint1": "Bonisa ishidi lamaphilisi ngosuku",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
   },
@@ -2675,7 +2675,7 @@
   "@recordPillFeatureAppealPoint1": {
     "description": ""
   },
-  "recordPillFeatureAppealPoint2": "間違えてもかんたん取り消し",
+  "recordPillFeatureAppealPoint2": "Kulula ukususa uma wenze iphutha",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
   },
@@ -2683,7 +2683,7 @@
   "@recordPillFeatureAppealPoint3": {
     "description": ""
   },
-  "menstruationFeatureAppealPoint1": "生理開始日をかんたん記録",
+  "menstruationFeatureAppealPoint1": "Qopha kalula usuku lokuqala kokuya esikhathini",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
   },
@@ -2703,7 +2703,7 @@
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
   },
-  "calendarDiaryFeatureAppealPoint3": "過去の記録をカレンダーで振り返り",
+  "calendarDiaryFeatureAppealPoint3": "Bukeza amarekhodi akudlule ekhalendeni",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
   },
@@ -2739,7 +2739,7 @@
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
   },
-  "quickRecordFeatureAppealPoint1": "通知のアクションで服用記録",
+  "quickRecordFeatureAppealPoint1": "Qopha ukuthatha ngesenzo sesaziso",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
   },
@@ -2751,11 +2751,11 @@
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
   },
-  "creatingNewPillSheetFeatureAppealPoint1": "ピルシート終了で自動切り替え",
+  "creatingNewPillSheetFeatureAppealPoint1": "Ukushintsha ngokuzenzakalelayo lapho ishidi lamaphilisi seliphelile",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
   },
-  "creatingNewPillSheetFeatureAppealPoint2": "手動の作成操作が不要",
+  "creatingNewPillSheetFeatureAppealPoint2": "Akudingeki ukudala ngesandla",
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "appearanceModeDateFeatureAppealBody": "display the translated text here",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
-  }
+  },
+  "midnightTakenWarningDialogBody": "Amaphilisi akho arekhodiwe njengokuthathiwe kuze kube ku-{takenDate}. Isaziso sanamuhla ({takenDate}) ngo-{reminderTimes} ngeke sifike.\nUma lokhu kwenzeke ngephutha, sicela ususe irekhodi lokuthatha.",
+  "midnightTakenWarningDialogNeverShowAgain": "Ungaphinde ukhombise lokhu",
+  "midnightTakenWarningDialogSeeHowToRevert": "Bona indlela yokususa irekhodi lokuthatha",
+  "midnightTakenWarningDialogTitle": "Sicela uqaphele"
 }

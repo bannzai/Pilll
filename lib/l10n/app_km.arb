@@ -1863,7 +1863,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "នេះជាសារកំហុសដែលបង្ហាញដល់អ្នកប្រើប្រាស់នៅពេលមានកំហុសបច្ចេកទេសណាមួយកើតឡើងនៅពេលចាប់ផ្តើមដំណើរការកម្មវិធី។ ព័ត៌មានលម្អិតដូចជាកំហុសការតភ្ជាប់ក៏ត្រូវបានរួមបញ្ចូលផងដែរ ដូច្នេះសូមបកប្រែឱ្យអ្នកប្រើប្រាស់អាចយល់ស្ថានការណ៍បាន។",
+  "launchError": "មានកំហុសកើតឡើងនៅពេលចាប់ផ្ដើមកម្មវិធី។\n{ErrorMessagesConnection}\n\nព័ត៌មានលម្អិត៖ ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2439,7 +2439,7 @@
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   },
-  "criticalAlertFeatureAppealHeadline": "サイレントモードでも通知が届く",
+  "criticalAlertFeatureAppealHeadline": "ទទួលការជូនដំណឹងទោះបីនៅក្នុងម៉ូដស្ងាត់ក៏ដោយ",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
   },
@@ -2563,7 +2563,7 @@
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   },
-  "quickRecordFeatureAppealShortDescription": "アプリを開かず通知上で記録",
+  "quickRecordFeatureAppealShortDescription": "កត់ត្រានៅលើការជូនដំណឹងដោយមិនបើកកម្មវិធី",
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   },
@@ -2711,7 +2711,7 @@
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
   },
-  "calendarDiaryFeatureAppealPoint3": "過去の記録をカレンダーで振り返り",
+  "calendarDiaryFeatureAppealPoint3": "ត្រលប់មើលកំណត់ត្រាកន្លងមកនៅក្នុងប្រតិទិន",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
   },
@@ -2735,7 +2735,7 @@
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
   },
-  "healthCareIntegrationFeatureAppealPoint1": "生理記録を自動でデータ連携",
+  "healthCareIntegrationFeatureAppealPoint1": "តភ្ជាប់ទិន្នន័យកំណត់ត្រាការមកខែដោយស្វ័យប្រវត្តិ",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint3": "ពេលវេលាការកែសម្រួល និងការចាប់ផ្តើមឡើងវិញរបស់រយៈពេលក៏ធ្វើបានយ៉ាងងាយស្រួលផងដែរ",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "កំណត់ត្រាការទទួលថ្នាំត្រូវបានធ្វើរហូតដល់ថ្ងៃ {takenDate}។ ដោយសារថ្ងៃនេះគឺ {takenDate} ការជូនដំណឹងម៉ោង {reminderTimes} នឹងមិនមកដល់ទេ។\nប្រសិនបើជាកំហុស សូមលុបចោលកំណត់ត្រាការទទួលថ្នាំ",
+  "midnightTakenWarningDialogNeverShowAgain": "កុំបង្ហាញម្តងទៀត",
+  "midnightTakenWarningDialogSeeHowToRevert": "មើលរបៀបលុបចោលកំណត់ត្រាការទទួលថ្នាំ",
+  "midnightTakenWarningDialogTitle": "សូមចំណាំ"
 }

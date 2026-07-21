@@ -1124,7 +1124,7 @@
       }
     }
   },
-  "todayPillNumber": "{jinTianYaoPianBianHao}",
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "@todayPillNumber": {
     "description": "ピルシート上で今日服用すべきピルの番号（例：1錠目、15錠目など）を表示する際に使用されます。リマインダー通知やログ記録でも参照される重要な値です。",
     "placeholders": {
@@ -2411,7 +2411,7 @@
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
   },
-  "lifetimePurchaseNotice2": "こちら",
+  "lifetimePurchaseNotice2": "点此管理",
   "@lifetimePurchaseNotice2": {
     "description": "サブスクリプション管理ページへのリンクテキスト"
   },
@@ -2455,7 +2455,7 @@
   "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
   },
-  "reminderNotificationCustomizeWordFeatureAppealHeadline": "自由編集服薬通知のメッセージを自由に編集",
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "自由编辑服药提醒消息",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
   },
@@ -2487,15 +2487,15 @@
   "@recordPillFeatureAppealShortDescription": {
     "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
   },
-  "recordPillFeatureAppealHeadline": "ホーム画面でピルの服用を記録",
+  "recordPillFeatureAppealHeadline": "在主屏幕记录服药",
   "@recordPillFeatureAppealHeadline": {
     "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
   },
-  "recordPillFeatureAppealBody": "ホーム画面のピルシートをタップするだけで、その日の服用を記録できます。間違えて記録した場合も、もう一度タップすれば取り消せます。服用履歴も後から確認できるので、安心して続けられます。",
+  "recordPillFeatureAppealBody": "只需点击主屏幕上的药片表，即可记录当天的服药情况。如果误操作记录，再次点击即可撤销。服药记录也可以随时查看，让您安心持续用药。",
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
   },
-  "menstruationFeatureAppealTitle": "生理を記録・予測",
+  "menstruationFeatureAppealTitle": "记录并预测生理",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
   },
@@ -2503,7 +2503,7 @@
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   },
-  "menstruationFeatureAppealHeadline": "生理の記録と予測ができる",
+  "menstruationFeatureAppealHeadline": "可记录并预测生理",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
   },
@@ -2535,7 +2535,7 @@
   "@futureScheduleFeatureAppealShortDescription": {
     "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
   },
-  "futureScheduleFeatureAppealHeadline": "カレンダーに未来の予定を記録",
+  "futureScheduleFeatureAppealHeadline": "在日历中记录未来安排",
   "@futureScheduleFeatureAppealHeadline": {
     "description": "未来の予定機能のヘルプページのヘッドライン"
   },
@@ -2551,7 +2551,7 @@
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   },
-  "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
+  "healthCareIntegrationFeatureAppealHeadline": "可与健康应用同步",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   },
@@ -2567,7 +2567,7 @@
   "@quickRecordFeatureAppealShortDescription": {
     "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
   },
-  "quickRecordFeatureAppealHeadline": "通知画面でワンタップ服用記録",
+  "quickRecordFeatureAppealHeadline": "在通知上一键记录服药",
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
   },
@@ -2607,11 +2607,11 @@
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
   },
-  "todayPillNumberFeatureAppealTitle": "今日の服用番号を合わせる",
+  "todayPillNumberFeatureAppealTitle": "对齐今日服用编号",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   },
-  "todayPillNumberFeatureAppealShortDescription": "番号がずれたら設定で修正",
+  "todayPillNumberFeatureAppealShortDescription": "编号错位时可在设置中修正",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   },
@@ -2639,7 +2639,7 @@
   "@featureAppealLocationLabel": {
     "description": ""
   },
-  "criticalAlertFeatureAppealPoint1": "集中モード中でも通知が届く",
+  "criticalAlertFeatureAppealPoint1": "即使在专注模式下也能收到通知",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
   },
@@ -2667,7 +2667,7 @@
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
   },
-  "appearanceModeDateFeatureAppealPoint2": "カレンダーを見なくても日付がわかる",
+  "appearanceModeDateFeatureAppealPoint2": "无需查看日历也能知道日期",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
   },
@@ -2687,7 +2687,7 @@
   "@recordPillFeatureAppealPoint3": {
     "description": ""
   },
-  "menstruationFeatureAppealPoint1": "生理開始日をかんたん記録",
+  "menstruationFeatureAppealPoint1": "轻松记录生理开始日",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
   },
@@ -2703,7 +2703,7 @@
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
   },
-  "calendarDiaryFeatureAppealPoint2": "体調をメモして振り返り",
+  "calendarDiaryFeatureAppealPoint2": "记录身体状况，随时回顾",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
   },
@@ -2755,7 +2755,7 @@
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
   },
-  "creatingNewPillSheetFeatureAppealPoint1": "ピルシート終了で自動切り替え",
+  "creatingNewPillSheetFeatureAppealPoint1": "药片表用完后自动切换",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
   },
@@ -2787,7 +2787,7 @@
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
   },
-  "todayPillNumberFeatureAppealPoint3": "「ホームの数字タップでも開ける」",
+  "todayPillNumberFeatureAppealPoint3": "点击主屏幕的数字也可打开",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "todayPillNumberFeatureAppealBody": "如果因为忘记服用或服用错而导致药片表上的编号与实际服用不一致，您可以手动调整今天要服用的药片编号。也可以从主屏幕的药片数字显示打开同一页面。",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
-  }
+  },
+  "midnightTakenWarningDialogBody": "已记录服用至{takenDate}。今天（{takenDate}）{reminderTimes}的提醒通知将不会推送。\n如果是误操作，请撤销服用记录。",
+  "midnightTakenWarningDialogNeverShowAgain": "不再提示",
+  "midnightTakenWarningDialogSeeHowToRevert": "查看取消服用记录的方法",
+  "midnightTakenWarningDialogTitle": "请注意"
 }

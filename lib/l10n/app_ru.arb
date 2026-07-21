@@ -230,7 +230,7 @@
   "@currentlyDisplayed": {
     "description": "画面上で現在表示されている項目やコンテンツを示すラベルです。ピルシートや履歴画面などで、表示中の内容を説明する際に使用されます。"
   },
-  "allPillSheets": "既存のロシア語翻訳ファイルで、ピルシートは「блистер」として翻訳されており、複数形は「блистеры」が使用されています。\n\nВсе блистеры",
+  "allPillSheets": "Все блистеры",
   "@allPillSheets": {
     "description": "ユーザーが使用している過去・現在のピルシート一覧を表示する画面やセクションのタイトルです。複数のピルシートを管理・閲覧する際に表示されるラベルとして使用されます。"
   },
@@ -1124,7 +1124,7 @@
       }
     }
   },
-  "todayPillNumber": "{nomerTabletkiSegodnyaVBlistere}",
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "@todayPillNumber": {
     "description": "ピルシート上で今日服用すべきピルの番号（例：1錠目、15錠目など）を表示する際に使用されます。リマインダー通知やログ記録でも参照される重要な値です。",
     "placeholders": {
@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "Это сообщение об ошибке, которое отображается пользователю при возникновении технической ошибки во время запуска приложения (в момент открытия приложения). Поскольку оно включает подробную информацию, такую как ошибки подключения, переведите его так, чтобы пользователь мог понять ситуацию.",
+  "launchError": "При запуске приложения произошла ошибка.\n{ErrorMessagesConnection}\n\nПодробности: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2663,7 +2663,7 @@
   "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
     "description": ""
   },
-  "reminderNotificationCustomizeWordFeatureAppealPoint3": "自分だけの通知メッセージに",
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "Персонализировать сообщение уведомления",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
   },
@@ -2767,7 +2767,7 @@
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "alarmKitFeatureAppealPoint1": "Звучит даже в беззвучном режиме и режиме фокусировки",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
   },
@@ -2775,7 +2775,7 @@
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint3": "iOS 26以降・設定タブから有効化",
+  "alarmKitFeatureAppealPoint3": "iOS 26 и новее · Включается на вкладке «Настройки»",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "futureScheduleFeatureAppealPoint2": "Простое управление днями посещения клиники",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "Приём таблеток отмечен как выполненный по {takenDate} включительно. Сегодняшнее ({takenDate}) уведомление-напоминание в {reminderTimes} не будет отправлено.\nЕсли это ошибка, отмените запись о приёме.",
+  "midnightTakenWarningDialogNeverShowAgain": "Больше не показывать",
+  "midnightTakenWarningDialogSeeHowToRevert": "Посмотреть, как отменить запись о приёме",
+  "midnightTakenWarningDialogTitle": "Обратите внимание"
 }

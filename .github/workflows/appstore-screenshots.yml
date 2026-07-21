@@ -1,0 +1,148 @@
+# App Store スクリーンショットを GitHub Actions の macOS Runner で並列撮影する。
+# ローカルの capture_screenshots.sh と同じ正式経路（SCREENSHOT_CATALOG=true のカタログアプリ +
+# .maestro/flows/appstore_screenshot/capture.yaml + capture_langs.sh）を、言語グループごとに
+# 並列 Runner で実行する。ローカル Mac の資源を使わずに全言語を撮影するための経路。
+# 生成物の回収方法は scripts/generate_screenshots/README.md を参照。
+name: appstore-screenshots
+run-name: "appstore-screenshots langs=${{ inputs.langs || 'all' }}"
+
+on:
+  workflow_dispatch: # fork PR に Secrets を渡さないため手動系トリガーのみ（下の push も自ブランチ限定）
+    inputs:
+      langs:
+        description: "撮影する arb 言語コード（カンマ区切り）。空なら全対象言語"
+        required: false
+        default: ""
+      group_count:
+        description: "並列 Runner 数（言語をこの数に分割。Free プランの macOS 同時実行上限は 5）"
+        required: false
+        default: "5"
+  # workflow_dispatch は workflow ファイルが default ブランチに載るまで登録されないため、
+  # main へ merge されるまでの起動経路としてこの workflow ファイル自身の push でも起動する。
+  # 全言語・既定グループ数で実行される。再実行は gh run rerun でよい
+  push:
+    branches:
+      - issue-392
+    paths:
+      - .github/workflows/appstore-screenshots.yml
+      - scripts/generate_screenshots/capture_langs.sh
+      - .maestro/flows/appstore_screenshot/**
+
+# 同一ブランチで多重起動したら古い方を止める（macOS Runner 枠の浪費防止）
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # カタログアプリを 1 回だけビルドして artifact 化し、撮影対象言語をグループへ分割する
+  build:
+    runs-on: macos-26
+    timeout-minutes: 60
+    permissions:
+      contents: read
+    outputs:
+      lang_groups: ${{ steps.plan.outputs.lang_groups }}
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
+      - name: Prepare firebase config
+        run: make secret
+        env:
+          FILE_FIREBASE_IOS: ${{ secrets.FILE_FIREBASE_IOS_DEVELOPMENT }}
+          DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
+          XCCONFIG_SECRET: ${{ secrets.XCCONFIG_SECRET_DEVELOPMENT }}
+          ANDROID_RES_VALUES: ${{ secrets.ANDROID_RES_VALUES }}
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
+        with:
+          flutter-version: '3.41.9'
+      - run: flutter pub get
+      - name: Split languages into runner groups
+        id: plan
+        env:
+          INPUT_LANGS: ${{ inputs.langs }}
+          GROUP_COUNT: ${{ inputs.group_count }}
+        run: |
+          LANGS="$INPUT_LANGS"
+          if [ -z "$LANGS" ]; then
+            LANGS="$(dart run scripts/generate_screenshots/print_langs.dart)"
+          fi
+          # push トリガーでは inputs が空になるため既定値をここで補う
+          lang_groups="$(printf '%s' "$LANGS" | tr ',' '\n' | awk -v groups="${GROUP_COUNT:-5}" '
+            NF { langs[n++] = $0 }
+            END {
+              if (groups + 0 < 1) groups = 1
+              if (groups + 0 > n) groups = n
+              base = int(n / groups); extra = n % groups
+              printf "["
+              idx = 0
+              for (g = 0; g < groups; g++) {
+                size = base + (g < extra ? 1 : 0)
+                if (g > 0) printf ","
+                printf "\""
+                for (i = 0; i < size; i++) {
+                  if (i > 0) printf ","
+                  printf "%s", langs[idx++]
+                }
+                printf "\""
+              }
+              printf "]"
+            }')"
+          echo "lang_groups=$lang_groups"
+          echo "lang_groups=$lang_groups" >> "$GITHUB_OUTPUT"
+      - run: flutter build ios --simulator --debug --target lib/main.dev.dart --dart-define=SCREENSHOT_CATALOG=true --dart-define-from-file=environment/dev.json
+      - uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+        with:
+          name: screenshot-catalog-app
+          path: build/ios/iphonesimulator
+
+  # 言語グループごとに Simulator を起動して Maestro で撮影し、言語別 PNG を artifact に上げる
+  capture:
+    needs: build
+    runs-on: macos-26
+    timeout-minutes: 90
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false # 1 グループの失敗で他グループの撮影を止めない
+      matrix:
+        langs: ${{ fromJSON(needs.build.outputs.lang_groups) }}
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5.0.0
+        with:
+          name: screenshot-catalog-app
+          path: build/ios/iphonesimulator
+      - name: Install Maestro
+        # ローカルと同じバージョンに固定して挙動差を避ける
+        run: |
+          curl -fsSL https://get.maestro.mobile.dev | MAESTRO_VERSION=2.6.0 bash
+          echo "$HOME/.maestro/bin" >> "$GITHUB_PATH"
+      - name: Boot simulator and install app
+        id: sim
+        # iPhone 15 Pro Max は 1290×2796（App Store 6.7"）。runtime 未指定で Runner 最新の iOS を使う
+        run: |
+          udid="$(xcrun simctl create screenshot-capture "iPhone 15 Pro Max")"
+          xcrun simctl bootstatus "$udid" -b
+          xcrun simctl install "$udid" build/ios/iphonesimulator/Runner.app
+          echo "udid=$udid" >> "$GITHUB_OUTPUT"
+      - name: Capture screenshots
+        env:
+          CAPTURE_LANGS: ${{ matrix.langs }}
+        run: bash scripts/generate_screenshots/capture_langs.sh --udid "${{ steps.sim.outputs.udid }}" -l "$CAPTURE_LANGS"
+      # 一部言語が失敗しても撮影済み言語の成果物は回収できるよう、失敗時もアップロードする
+      - uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+        if: ${{ !cancelled() }}
+        with:
+          name: simulator-screenshots-${{ strategy.job-index }}
+          path: scripts/generate_screenshots/artifacts/simulator
+          if-no-files-found: error
+      # 失敗原因調査用に Maestro のデバッグ出力（スクリーンショット・ログ）を上げる
+      - uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+        if: ${{ failure() }}
+        with:
+          name: maestro-debug-${{ strategy.job-index }}
+          path: ~/.maestro/tests
+          if-no-files-found: ignore

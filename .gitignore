@@ -49,7 +49,15 @@ scripts/venv
 
 translation_scripts/
 
-fastlane/
+fastlane/*
+!fastlane/Appfile
+!fastlane/Fastfile
+!fastlane/metadata/
+!fastlane/metadata/**
+fastlane/screenshots/
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/api_key.json
 
 android/app/src/dev/res/values/values.xml
 android/app/src/main/res/values/values.xml
@@ -61,3 +69,7 @@ android/app/src/prod/res/values/values.xml
 
 # run-qa の作業ファイル
 tmp/qa/
+
+# App Store スクリーンショット生成基盤の作業ファイル(取得フォント・生成画像)
+scripts/generate_screenshots/fonts/
+scripts/generate_screenshots/artifacts/

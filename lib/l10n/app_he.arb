@@ -2695,7 +2695,7 @@
   "@menstruationFeatureAppealPoint1": {
     "description": ""
   },
-  "menstruationFeatureAppealPoint2": "周期を自動で把握",
+  "menstruationFeatureAppealPoint2": "מעקב אוטומטי אחר המחזור",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint3": "עריכת המחזור / חידוש בקלות",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogTitle": "שים לב",
+  "midnightTakenWarningDialogBody": "נרשמה נטילת הגלולות עד {takenDate}. הודעת התזכורת של היום ({takenDate}) בשעה {reminderTimes} לא תישלח אליך.\nאם מדובר בטעות, אנא בטל את רישום הנטילה",
+  "midnightTakenWarningDialogNeverShowAgain": "אל תציג הודעה זו שוב",
+  "midnightTakenWarningDialogSeeHowToRevert": "לראות איך לבטל רישום נטילה"
 }

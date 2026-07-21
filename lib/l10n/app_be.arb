@@ -2814,5 +2814,9 @@
   "restDurationFeatureAppealPoint3": "Рэдагаванне і аднаўленне перыяду таксама проста",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogTitle": "Звярніце ўвагу",
+  "midnightTakenWarningDialogBody": "Прыём таблетак быў запісаны ўключна да {takenDate}. Сённяшняе паведамленне ({takenDate}) у {reminderTimes} не прыйдзе.\nКалі гэта памылка, скасуйце прыём.",
+  "midnightTakenWarningDialogNeverShowAgain": "Больш не паказваць",
+  "midnightTakenWarningDialogSeeHowToRevert": "Паглядзець, як скасаваць прыём"
 }

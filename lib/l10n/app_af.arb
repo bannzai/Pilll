@@ -1024,7 +1024,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "'n Tegniese fout het voorgekom tydens die opstartproses van die app (die oomblik toe die app geopen word). Aangesien gedetailleerde inligting soos konneksiefoute ook ingesluit word, vertaal asseblief sodat gebruikers die situasie kan verstaan.",
+  "launchError": "Daar was 'n fout tydens die aanskakel van die app.\n{ErrorMessagesConnection}\n\nBesonderhede: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2188,7 +2188,7 @@
       }
     }
   },
-  "pillForToday": "{today}に飲むピルは",
+  "pillForToday": "Pille vir {today}:",
   "@pillForToday": {
     "description": "特定の日付に服用予定のピルを表示する際のラベルテキストです。ピルシート画面やカレンダー表示で、その日に飲むべきピルの情報を示す前置きとして使用されます。",
     "placeholders": {
@@ -2814,5 +2814,9 @@
         "type": "String"
       }
     }
-  }
+  },
+  "midnightTakenWarningDialogBody": "Jou pille is aangeteken as geneem tot en met {takenDate}. Vandag se ({takenDate}) kennisgewing om {reminderTimes} sal nie afgelewer word nie.\nAs dit 'n fout was, keer asseblief die innameaantekening terug.",
+  "midnightTakenWarningDialogNeverShowAgain": "Moenie dit weer wys nie",
+  "midnightTakenWarningDialogSeeHowToRevert": "Sien hoe om 'n innameaantekening terug te keer",
+  "midnightTakenWarningDialogTitle": "Let asseblief op"
 }

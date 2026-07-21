@@ -1,0 +1,144 @@
+appId: com.mizuki.Ohashi.Pilll.dev
+# App Store スクリーンショット撮影フロー（1 言語分）。
+# LANG は呼び出し側が必ず `--env LANG=<arbコード>` で渡す（flow に default を置くと
+# CLI 指定を上書きしてしまうため default は置かない）。
+# ScreenshotCatalogApp（SCREENSHOT_CATALOG=true でビルドしたアプリ）を起動し、
+# 言語一覧から ${LANG} をタップ → 各ページ(p1〜p7)を全画面表示して撮影 → 戻る。
+# 出力は 1290×2796 の OS スクリーンショット。呼び出し側 capture_langs.sh が
+# 言語ごとに LANG を差し替えて32回実行する。
+#
+# id: back は全画面プレビュー(_FullScreenPage)にしか存在しないため、
+# 「back が見える = 全画面ページに遷移済み」「back が消えた = 一覧に戻った」の
+# マーカーとして使う。遅い環境(GitHub Actions Runner)ではタップ後の画面遷移が
+# 遅れて一覧画面を誤撮影することがあるため(実例: no/p1)、各撮影の前後で待つ。
+---
+- launchApp
+- waitForAnimationToEnd
+# 遅い環境でも見つけられるよう、timeout を長めに取りスクロール間の描画安定待ちを入れる。
+- scrollUntilVisible:
+    element:
+      id: "${LANG}"
+    direction: DOWN
+    timeout: 60000
+    waitToSettleTimeoutMs: 500
+# スクロールの残り慣性で座標がずれ、隣の言語行を誤タップした実例（run 29670019870 の
+# ja が it の内容で撮影された）への対策。タップ前に慣性を待ち、タップ後は
+# ページ一覧タイトル「<lang> pages」で正しい言語が開いたことを必ず検証する。
+- waitForAnimationToEnd
+- tapOn:
+    id: "${LANG}"
+- extendedWaitUntil:
+    visible:
+      text: "${LANG} pages"
+    timeout: 15000
+- waitForAnimationToEnd
+- tapOn:
+    id: "page_1"
+- extendedWaitUntil:
+    visible:
+      id: "back"
+    timeout: 15000
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/generate_screenshots/artifacts/simulator/${LANG}/p1"
+- tapOn:
+    id: "back"
+- extendedWaitUntil:
+    notVisible:
+      id: "back"
+    timeout: 15000
+- tapOn:
+    id: "page_2"
+- extendedWaitUntil:
+    visible:
+      id: "back"
+    timeout: 15000
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/generate_screenshots/artifacts/simulator/${LANG}/p2"
+- tapOn:
+    id: "back"
+- extendedWaitUntil:
+    notVisible:
+      id: "back"
+    timeout: 15000
+- tapOn:
+    id: "page_3"
+- extendedWaitUntil:
+    visible:
+      id: "back"
+    timeout: 15000
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/generate_screenshots/artifacts/simulator/${LANG}/p3"
+- tapOn:
+    id: "back"
+- extendedWaitUntil:
+    notVisible:
+      id: "back"
+    timeout: 15000
+- tapOn:
+    id: "page_4"
+- extendedWaitUntil:
+    visible:
+      id: "back"
+    timeout: 15000
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/generate_screenshots/artifacts/simulator/${LANG}/p4"
+- tapOn:
+    id: "back"
+- extendedWaitUntil:
+    notVisible:
+      id: "back"
+    timeout: 15000
+- tapOn:
+    id: "page_5"
+- extendedWaitUntil:
+    visible:
+      id: "back"
+    timeout: 15000
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/generate_screenshots/artifacts/simulator/${LANG}/p5"
+- tapOn:
+    id: "back"
+- extendedWaitUntil:
+    notVisible:
+      id: "back"
+    timeout: 15000
+- scrollUntilVisible:
+    element:
+      id: "page_6"
+    direction: DOWN
+    timeout: 60000
+    waitToSettleTimeoutMs: 500
+- tapOn:
+    id: "page_6"
+- extendedWaitUntil:
+    visible:
+      id: "back"
+    timeout: 15000
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/generate_screenshots/artifacts/simulator/${LANG}/p6"
+- tapOn:
+    id: "back"
+- extendedWaitUntil:
+    notVisible:
+      id: "back"
+    timeout: 15000
+- scrollUntilVisible:
+    element:
+      id: "page_7"
+    direction: DOWN
+    timeout: 60000
+    waitToSettleTimeoutMs: 500
+- tapOn:
+    id: "page_7"
+- extendedWaitUntil:
+    visible:
+      id: "back"
+    timeout: 15000
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/generate_screenshots/artifacts/simulator/${LANG}/p7"
+- tapOn:
+    id: "back"
+- extendedWaitUntil:
+    notVisible:
+      id: "back"
+    timeout: 15000

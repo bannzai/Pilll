@@ -1124,7 +1124,7 @@
       }
     }
   },
-  "todayPillNumber": "پل شیٹ میں آج کی گولی کا نمبر",
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "@todayPillNumber": {
     "description": "ピルシート上で今日服用すべきピルの番号（例：1錠目、15錠目など）を表示する際に使用されます。リマインダー通知やログ記録でも参照される重要な値です。",
     "placeholders": {
@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "ایپ شروع کرتے وقت (ایپ کھولنے کے فوری بعد) کسی تکنیکی خرابی کی صورت میں صارفین کو دکھایا جانے والا ایرر میسج۔ کنکشن ایرر جیسی تفصیلی معلومات بھی شامل ہیں تاکہ صارف صورتحال کو سمجھ سکے۔",
+  "launchError": "ایپ شروع کرتے وقت خرابی پیش آئی۔\n{ErrorMessagesConnection}\n\nتفصیلات: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2415,7 +2415,7 @@
   "@lifetimePurchaseNotice2": {
     "description": "サブスクリプション管理ページへのリンクテキスト"
   },
-  "lifetimePurchaseNotice3": "から事前にキャンセルしてからお買い求めください。",
+  "lifetimePurchaseNotice3": "سے پہلے سے منسوخ کر کے خریداری کریں۔",
   "@lifetimePurchaseNotice3": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
   },
@@ -2475,7 +2475,7 @@
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   },
-  "appearanceModeDateFeatureAppealBody": "ピルシートのマスに日付を表示することで、過去の服用履歴と未来の服用予定を一目で確認できます。「番号」モードと「日付」モードを切り替えて、自分に合った表示を選びましょう。",
+  "appearanceModeDateFeatureAppealBody": "پِل شیٹ کے ہر خانے میں تاریخ دکھا کر آپ ماضی کے استعمال کی تاریخ اور مستقبل کے شیڈول کو ایک نظر میں دیکھ سکتے ہیں۔ 'نمبر' موڈ اور 'تاریخ' موڈ کے درمیان تبدیل کر کے اپنے لیے موزوں ترین ڈسپلے منتخب کریں۔",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   },
@@ -2495,7 +2495,7 @@
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
   },
-  "menstruationFeatureAppealTitle": "生理を記録・予測",
+  "menstruationFeatureAppealTitle": "حیض کا ریکارڈ اور پیشگوئی کریں",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
   },
@@ -2511,7 +2511,7 @@
   "@menstruationFeatureAppealBody": {
     "description": "生理記録機能のヘルプページの本文"
   },
-  "calendarDiaryFeatureAppealTitle": "カレンダーで体調を記録",
+  "calendarDiaryFeatureAppealTitle": "کیلنڈر میں طبیعت ریکارڈ کریں",
   "@calendarDiaryFeatureAppealTitle": {
     "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
   },
@@ -2527,7 +2527,7 @@
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
   },
-  "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
+  "futureScheduleFeatureAppealTitle": "اپنے مستقبل کے شیڈول درج کریں",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
   },
@@ -2551,7 +2551,7 @@
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   },
-  "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
+  "healthCareIntegrationFeatureAppealHeadline": "ہیلتھ کیئر کے ساتھ ہم آہنگ کیا جا سکتا ہے",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   },
@@ -2611,7 +2611,7 @@
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   },
-  "todayPillNumberFeatureAppealShortDescription": "番号がずれたら設定で修正",
+  "todayPillNumberFeatureAppealShortDescription": "نمبر آگے پیچھے ہو جائے تو سیٹنگز میں درست کریں",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   },
@@ -2643,11 +2643,11 @@
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
   },
-  "criticalAlertFeatureAppealPoint2": "設定した時刻に確実にリマインド",
+  "criticalAlertFeatureAppealPoint2": "مقررہ وقت پر یقینی یاددہانی",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
   },
-  "criticalAlertFeatureAppealPoint3": "ワンタップでかんたん設定",
+  "criticalAlertFeatureAppealPoint3": "ایک ٹیپ سے آسان سیٹ اپ",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
   },
@@ -2675,7 +2675,7 @@
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
   },
-  "recordPillFeatureAppealPoint1": "ピルシートをタップで服用記録",
+  "recordPillFeatureAppealPoint1": "پِل شیٹ کو ٹیپ کر کے گولی لینے کا اندراج کریں",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
   },
@@ -2687,7 +2687,7 @@
   "@recordPillFeatureAppealPoint3": {
     "description": ""
   },
-  "menstruationFeatureAppealPoint1": "生理開始日をかんたん記録",
+  "menstruationFeatureAppealPoint1": "حیض کے آغاز کی تاریخ آسانی سے ریکارڈ کریں",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
   },
@@ -2699,15 +2699,15 @@
   "@menstruationFeatureAppealPoint3": {
     "description": ""
   },
-  "calendarDiaryFeatureAppealPoint1": "カレンダーで記録を一覧",
+  "calendarDiaryFeatureAppealPoint1": "کیلنڈر میں ریکارڈز دیکھیں",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
   },
-  "calendarDiaryFeatureAppealPoint2": "体調をメモして振り返り",
+  "calendarDiaryFeatureAppealPoint2": "طبیعت نوٹ کر کے جائزہ لیں",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
   },
-  "calendarDiaryFeatureAppealPoint3": "過去の記録をカレンダーで振り返り",
+  "calendarDiaryFeatureAppealPoint3": "ماضی کے ریکارڈز کو کیلنڈر میں دیکھیں",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
   },
@@ -2723,11 +2723,11 @@
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
   },
-  "futureScheduleFeatureAppealPoint3": "リマインダーで通知",
+  "futureScheduleFeatureAppealPoint3": "یاددہانی کے ذریعے اطلاع",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
   },
-  "futureScheduleFeatureAppealLocationHint": "日付をタップして予定を書き込み",
+  "futureScheduleFeatureAppealLocationHint": "تاریخ پر ٹیپ کر کے شیڈول درج کریں",
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
   },
@@ -2735,15 +2735,15 @@
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
   },
-  "healthCareIntegrationFeatureAppealPoint2": "ヘルスケアアプリに同期",
+  "healthCareIntegrationFeatureAppealPoint2": "ہیلتھ ایپ کے ساتھ ہم آہنگ کریں",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
   },
-  "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応",
+  "healthCareIntegrationFeatureAppealPoint3": "Apple ہیلتھ کیئر کی معاونت",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
   },
-  "quickRecordFeatureAppealPoint1": "通知のアクションで服用記録",
+  "quickRecordFeatureAppealPoint1": "اطلاع کے ایکشن سے دوائی لینے کا اندراج",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
   },
@@ -2767,7 +2767,7 @@
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "alarmKitFeatureAppealPoint1": "خاموش موڈ یا فوکس موڈ میں بھی بجے گا",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "featureAppealLocationLabel": "ایپ کے اندر مقام",
   "@featureAppealLocationLabel": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "{takenDate} تک کی خوراک ریکارڈ کر دی گئی ہے۔ آج، یعنی {takenDate}، کو {reminderTimes} پر ہونے والی اطلاع موصول نہیں ہوگی۔\nاگر یہ غلطی سے ہوا ہے تو براہِ کرم خوراک کا ریکارڈ منسوخ کریں",
+  "midnightTakenWarningDialogNeverShowAgain": "دوبارہ نہ دکھائیں",
+  "midnightTakenWarningDialogSeeHowToRevert": "خوراک منسوخ کرنے کا طریقہ دیکھیں",
+  "midnightTakenWarningDialogTitle": "براہِ کرم توجہ دیں"
 }

@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "Det oppstod en teknisk feil ved oppstart av appen. Feilmeldingen inneholder detaljert informasjon, inkludert tilkoblingsfeil, slik at du kan forstå situasjonen.",
+  "launchError": "Det oppstod en feil ved oppstart av appen.\n{ErrorMessagesConnection}\n\nDetaljer: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint3": "Enkel redigering og gjenopptakelse av perioder",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogTitle": "Vær oppmerksom",
+  "midnightTakenWarningDialogBody": "Pillene dine er registrert som tatt til og med {takenDate}. Dagens ({takenDate}) varsel klokken {reminderTimes} vil ikke bli sendt.\nHvis dette var en feil, kan du avbryte inntaksregistreringen.",
+  "midnightTakenWarningDialogSeeHowToRevert": "Se hvordan du avbryter en inntaksregistrering",
+  "midnightTakenWarningDialogNeverShowAgain": "Ikke vis dette igjen"
 }

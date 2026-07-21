@@ -1882,7 +1882,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "実際に翻訳すべき日本語の文言が提供されていないようです。「日本語」の部分には、エラーメッセージの説明文が入っていますが、実際にアプリで表示される具体的なエラーメッセージの文言をお教えください。\n\n例えば：\n- 「エラーが発生しました」\n- 「接続に失敗しました」\n- 「アプリの起動に失敗しました」\n\nのような、実際にユーザーに表示される具体的な文言をお願いします。",
+  "launchError": "Lietotnes palaišanas laikā radās kļūda.\n{ErrorMessagesConnection}\n\nDetaļas: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2543,7 +2543,7 @@
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   },
-  "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
+  "healthCareIntegrationFeatureAppealHeadline": "Sinhronizējiet ar Apple Health",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   },
@@ -2587,11 +2587,11 @@
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   },
-  "alarmKitFeatureAppealBody": "iOS 26以降で利用できるAlarmKitを使って、サイレントモードや集中モードでも確実に鳴るアラームでピルの服用を知らせます。",
+  "alarmKitFeatureAppealBody": "Izmantojot AlarmKit, kas pieejams sākot ar iOS 26, šis modinātājs atskanēs pat klusuma vai fokusēšanās režīmā, lai jūs nepalaistu garām tabletes lietošanas laiku.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
   },
-  "todayPillNumberFeatureAppealTitle": "今日の服用番号を合わせる",
+  "todayPillNumberFeatureAppealTitle": "Pielāgot šodienas tabletes numuru",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   },
@@ -2806,5 +2806,9 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Pārslēdziet, izmantojot iestatījumu cilnes slēdzi.",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "Tabletes ir atzīmētas kā lietotas līdz {takenDate}. Šodienas ({takenDate}) atgādinājuma paziņojums plkst. {reminderTimes} netiks nosūtīts.\nJa tā notika kļūdas dēļ, lūdzu, atceliet lietošanas atzīmi.",
+  "midnightTakenWarningDialogNeverShowAgain": "Vairs nerādīt",
+  "midnightTakenWarningDialogSeeHowToRevert": "Skatīt, kā atcelt lietošanas atzīmi",
+  "midnightTakenWarningDialogTitle": "Lūdzu, ņemiet vērā"
 }
