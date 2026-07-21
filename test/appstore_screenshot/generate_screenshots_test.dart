@@ -33,10 +33,7 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   const device = ScreenshotDevice.iPhone67;
-  final variant =
-      (Platform.environment['SCREENSHOT_VARIANT'] ?? '').trim().isEmpty
-          ? 'main'
-          : Platform.environment['SCREENSHOT_VARIANT']!.trim();
+  final variant = (Platform.environment['SCREENSHOT_VARIANT'] ?? '').trim().isEmpty ? 'main' : Platform.environment['SCREENSHOT_VARIANT']!.trim();
   final order = screenshotVariantOrder(variant: variant);
   final langs = _langsFromEnv();
   final pageFilter = _pageFilterFromEnv();
@@ -47,15 +44,21 @@ void main() {
   setUpAll(() async {
     // PillMark 等の本番部品がテスト中にアニメーションを回さないようにする。
     Environment.isTest = true;
-    await _loadFonts(loadedFamilies);
+    // フォント未取得の環境では生成テスト自体が skip されるが、テストランナーの実装差で
+    // setUpAll だけ走っても fail しないようにここでもガードする。
+    if (_fontsAvailable()) {
+      await _loadFonts(loadedFamilies);
+    }
   });
 
   // 全32言語×全ページの生成は flutter test 既定の10分タイムアウトを超えるため無効化する。
-  testWidgets('App Store スクリーンショットを生成する', timeout: Timeout.none,
-      (tester) async {
+  // これはロジック検証ではなく PNG 生成ハーネス（高速プレビュー経路）のため、フォント
+  // (gitignore 対象の scripts/generate_screenshots/fonts/)が無い環境(CI 等)では skip する。
+  // ロケール・枚数のロジック回帰はフォント不要の screenshot_locale_test.dart が担う。
+  // 実行するには先に `bash scripts/generate_screenshots/fetch_fonts.sh` でフォントを取得する。
+  testWidgets('App Store スクリーンショットを生成する', timeout: Timeout.none, skip: !_fontsAvailable(), (tester) async {
     if (order == null) {
-      fail(
-          '未知のバリアントです: $variant（定義は lib/features/appstore_screenshot/screenshot_variant.dart）');
+      fail('未知のバリアントです: $variant（定義は lib/features/appstore_screenshot/screenshot_variant.dart）');
     }
 
     tester.view.physicalSize = Size(device.outputWidth, device.outputHeight);
@@ -97,11 +100,7 @@ List<String> _langsFromEnv() {
   if (value == null || value.trim().isEmpty) {
     return allScreenshotLanguages;
   }
-  return value
-      .split(',')
-      .map((e) => e.trim())
-      .where((e) => e.isNotEmpty)
-      .toList();
+  return value.split(',').map((e) => e.trim()).where((e) => e.isNotEmpty).toList();
 }
 
 /// SCREENSHOT_PAGES を解釈する。未指定なら null（バリアントの全ページを生成）。
@@ -130,41 +129,41 @@ String _primaryFamily(String lang) {
   }
 }
 
+/// フォントディレクトリ（scripts/generate_screenshots/fonts）の ttf/otf 一覧を返す。
+List<File> _fontFiles() {
+  final dir = Directory('scripts/generate_screenshots/fonts');
+  return dir.existsSync() ? dir.listSync().whereType<File>().where((f) => f.path.endsWith('.ttf') || f.path.endsWith('.otf')).toList() : <File>[];
+}
+
+/// フォントが取得済みか（生成ハーネスを実行できる環境か）。
+bool _fontsAvailable() => _fontFiles().isNotEmpty;
+
 /// フォントディレクトリの ttf/otf を全てファミリー登録する。
 ///
 /// ファミリー名はファイル名（拡張子除く）とし、[outFamilies] に集める。
-/// 1 つも無ければ fetch_fonts.sh の実行を促して fail する。
+/// フォントの有無は呼び出し前に [_fontsAvailable] で判定し skip 済みの前提だが、
+/// 直接呼ばれた場合に備えて 1 つも無ければ fetch_fonts.sh の実行を促して fail する。
 Future<void> _loadFonts(List<String> outFamilies) async {
-  final dir = Directory('scripts/generate_screenshots/fonts');
-  final fontFiles = dir.existsSync()
-      ? dir
-          .listSync()
-          .whereType<File>()
-          .where((f) => f.path.endsWith('.ttf') || f.path.endsWith('.otf'))
-          .toList()
-      : <File>[];
+  final fontFiles = _fontFiles();
   if (fontFiles.isEmpty) {
     fail(
-        'フォントが見つかりません。先に `bash scripts/generate_screenshots/fetch_fonts.sh` を実行してください: ${dir.absolute.path}');
+        'フォントが見つかりません。先に `bash scripts/generate_screenshots/fetch_fonts.sh` を実行してください: ${Directory('scripts/generate_screenshots/fonts').absolute.path}');
   }
   for (final file in fontFiles) {
-    final family =
-        file.uri.pathSegments.last.replaceAll(RegExp(r'\.(ttf|otf)$'), '');
+    final family = file.uri.pathSegments.last.replaceAll(RegExp(r'\.(ttf|otf)$'), '');
     await (FontLoader(family)..addFont(_readAsByteData(file))).load();
     outFamilies.add(family);
     // 本番コンポーネントはFontFamily.japanese（"Noto Sans CJK JP"）を明示する。
     // 配布ファイル名由来のNotoSansJPだけではtest rendererがAhemへ落ちるため、
     // 同じフォントを本番のfamily名でも登録して実機に近い文字メトリクスにする。
     if (family == 'NotoSansJP') {
-      await (FontLoader(FontFamily.japanese)..addFont(_readAsByteData(file)))
-          .load();
+      await (FontLoader(FontFamily.japanese)..addFont(_readAsByteData(file))).load();
       outFamilies.add(FontFamily.japanese);
     }
     if (family == 'NotoSans') {
       // flutter_testにはiOSシステムフォントのAvenir Nextが無い。未登録だとAhemの
       // 大きな行高になり、ピル番号＋マークの固定レイアウトだけがdebug overflowする。
-      await (FontLoader(FontFamily.number)..addFont(_readAsByteData(file)))
-          .load();
+      await (FontLoader(FontFamily.number)..addFont(_readAsByteData(file))).load();
       outFamilies.add(FontFamily.number);
     }
   }
@@ -208,9 +207,7 @@ Future<void> _renderAndCapture(
               // Simulator正式経路では外側のFittedBox内でも端末の論理サイズ430×932が
               // MediaQueryに入る。widget testも同じ条件にし、PageViewのviewportFractionを
               // 1290px出力幅から誤計算しないようにする。
-              data: MediaQueryData(
-                  size: Size(device.logicalWidth, device.logicalHeight),
-                  devicePixelRatio: 3),
+              data: MediaQueryData(size: Size(device.logicalWidth, device.logicalHeight), devicePixelRatio: 3),
               child: screenshotPage(lang: lang, page: page, device: device),
             ),
           ),
@@ -222,16 +219,14 @@ Future<void> _renderAndCapture(
 
   // PNG エンコードは実 async が必要なため runAsync 内で行う。
   await tester.runAsync(() async {
-    final boundary =
-        captureKey.currentContext!.findRenderObject()! as RenderRepaintBoundary;
+    final boundary = captureKey.currentContext!.findRenderObject()! as RenderRepaintBoundary;
     final image = await boundary.toImage(pixelRatio: 1.0);
     final byteData = await image.toByteData(format: ui.ImageByteFormat.png);
     image.dispose();
     if (byteData == null) {
       fail('画像のエンコードに失敗しました: lang=$lang page=$page');
     }
-    final outputFile = File(_outputPath(
-        variant: variant, lang: lang, index: index, device: device));
+    final outputFile = File(_outputPath(variant: variant, lang: lang, index: index, device: device));
     await outputFile.create(recursive: true);
     await outputFile.writeAsBytes(byteData.buffer.asUint8List());
     // ignore: avoid_print
