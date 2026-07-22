@@ -2824,5 +2824,14 @@
   "midnightTakenWarningDialogNeverShowAgain": "Don't show this again",
   "@midnightTakenWarningDialogNeverShowAgain": {
     "description": ""
+  },
+  "pauseStartDateMustBeOnOrBefore": "Please select a pause start date on or before {date}",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
   }
 }
