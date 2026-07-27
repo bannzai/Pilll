@@ -4,6 +4,7 @@ import 'package:pilll/components/theme/date_range_picker.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/features/error/alert_error.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/record/components/setting/components/rest_duration/provider.dart';
@@ -112,14 +113,13 @@ class ChangeManualRestDuration extends HookConsumerWidget {
             parameters: {'rest_duration_id': restDuration.id},
           );
 
-          // NOTE: DatePickerの表示制御により、最後に服用記録をつけた日付+1以上の日付は選択できない
-          // よって、lastTakenDateが変動することがない前提になる
+          // NOTE: 選択できる日付の上限の考え方はavailableRestDurationEndDateのドキュメントコメントを参照
           final dateTimeRange = await showDateRangePicker(
             context: context,
             initialEntryMode: DatePickerEntryMode.calendarOnly,
             initialDateRange: restDuration.dateTimeRange,
             firstDate: pillSheetGroup.pillSheets.first.beginDate,
-            lastDate: pillSheetGroup.availableRestDurationBeginDate,
+            lastDate: pillSheetGroup.availableRestDurationEndDate(restDuration: restDuration),
             helpText: L.selectPausePeriod,
             fieldStartHintText: L.pauseStartDate,
             fieldEndLabelText: L.pauseEndDate,
@@ -129,6 +129,17 @@ class ChangeManualRestDuration extends HookConsumerWidget {
           );
 
           if (dateTimeRange == null) {
+            return;
+          }
+
+          // DateRangePickerでは開始日と終了日で別々の上限を設定できず、終了日のために広げたlastDateが開始日にも適用される
+          // 開始日は従来通り「最終服用日の翌日」までしか選べないように、選択後に検証する
+          if (dateTimeRange.start.isAfter(pillSheetGroup.availableRestDurationBeginDate.date())) {
+            analytics.logEvent(
+              name: 'change_rest_duration_invalid_begin',
+              parameters: {'rest_duration_id': restDuration.id},
+            );
+            onError(AlertError(L.pauseStartDateMustBeOnOrBefore(format(pillSheetGroup.availableRestDurationBeginDate))));
             return;
           }
 
