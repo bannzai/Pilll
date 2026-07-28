@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "ستاسو د ګولۍ اخیستل تر {takenDate} پورې ثبت شوي دي. نن ({takenDate}) د {reminderTimes} خبرتیا به تاسو ته ونه رسیږي.\nکه دا یوه تېروتنه وه، مهرباني وکړئ د اخیستلو ثبت لغوه کړئ",
   "midnightTakenWarningDialogNeverShowAgain": "دا نور مه ښکاره کوئ",
   "midnightTakenWarningDialogSeeHowToRevert": "د اخیستلو ثبت د لغوه کولو طریقه وګورئ",
-  "midnightTakenWarningDialogTitle": "پام وکړئ"
+  "midnightTakenWarningDialogTitle": "پام وکړئ",
+  "pauseStartDateMustBeOnOrBefore": "مهرباني وکړئ د ګولۍ تعطیل د پیل نیټه د {date} څخه مخکې وټاکئ",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
