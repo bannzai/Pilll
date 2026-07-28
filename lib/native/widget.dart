@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:home_widget/home_widget.dart';
@@ -12,7 +13,13 @@ Future<void> syncActivePillSheetValue({
 }) async {
   try {
     final map = {
-      'pillSheetLastTakenDate': pillSheetGroup?.activePillSheet?.lastTakenDate?.millisecondsSinceEpoch,
+      // ネイティブ実装(ios/Widget/Entry.swift, android/PilllAppWidget.kt)は「この日時が今日と同日なら服用済みチェック」を表示する。
+      // v2で部分服用(2回中1回)の時点でチェックが付かないよう、v2は服用完了したピルの日時を渡す
+      'pillSheetLastTakenDate': switch (pillSheetGroup?.activePillSheet) {
+        null => null,
+        PillSheetV1 v1 => v1.lastTakenDate?.millisecondsSinceEpoch,
+        PillSheetV2 v2 => v2.lastCompletedTakenDate?.millisecondsSinceEpoch,
+      },
       'pillSheetTodayPillNumber': pillSheetGroup?.activePillSheet?.todayPillNumber,
       'pillSheetGroupTodayPillNumber': pillSheetGroup?.sequentialTodayPillNumber,
       'pillSheetEndDisplayPillNumber': pillSheetGroup?.displayNumberSetting?.endPillNumber,
