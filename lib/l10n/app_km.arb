@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "កំណត់ត្រាការទទួលថ្នាំត្រូវបានធ្វើរហូតដល់ថ្ងៃ {takenDate}។ ដោយសារថ្ងៃនេះគឺ {takenDate} ការជូនដំណឹងម៉ោង {reminderTimes} នឹងមិនមកដល់ទេ។\nប្រសិនបើជាកំហុស សូមលុបចោលកំណត់ត្រាការទទួលថ្នាំ",
   "midnightTakenWarningDialogNeverShowAgain": "កុំបង្ហាញម្តងទៀត",
   "midnightTakenWarningDialogSeeHowToRevert": "មើលរបៀបលុបចោលកំណត់ត្រាការទទួលថ្នាំ",
-  "midnightTakenWarningDialogTitle": "សូមចំណាំ"
+  "midnightTakenWarningDialogTitle": "សូមចំណាំ",
+  "pauseStartDateMustBeOnOrBefore": "សូមជ្រើសរើសកាលបរិច្ឆេទដែលមុន {date} ជាថ្ងៃចាប់ផ្តើមឈប់ញ៉ាំថ្នាំ",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
