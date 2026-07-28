@@ -2818,5 +2818,14 @@
   "midnightTakenWarningDialogTitle": "Diqqət edin",
   "midnightTakenWarningDialogNeverShowAgain": "Bir daha göstərmə",
   "midnightTakenWarningDialogSeeHowToRevert": "Qəbul qeydinin necə ləğv ediləcəyini görün",
-  "midnightTakenWarningDialogBody": "Həb qəbulunuz {takenDate} tarixinədək qeydə alınıb. Bu günə ({takenDate}) aid saat {reminderTimes}-dəki bildiriş sizə çatmayacaq.\nSəhvən olubsa, zəhmət olmasa qəbul qeydini ləğv edin."
+  "midnightTakenWarningDialogBody": "Həb qəbulunuz {takenDate} tarixinədək qeydə alınıb. Bu günə ({takenDate}) aid saat {reminderTimes}-dəki bildiriş sizə çatmayacaq.\nSəhvən olubsa, zəhmət olmasa qəbul qeydini ləğv edin.",
+  "pauseStartDateMustBeOnOrBefore": "Xidarlıq başlama tarixi olaraq {date} tarixindən əvvəlki bir tarix seçin",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
