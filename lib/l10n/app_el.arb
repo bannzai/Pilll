@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogTitle": "Παρακαλώ προσέξτε",
   "midnightTakenWarningDialogBody": "Η λήψη έχει καταγραφεί έως {takenDate}. Η σημερινή ({takenDate}) ειδοποίηση υπενθύμισης στις {reminderTimes} δεν θα σας αποσταλεί.\nΕάν έγινε κατά λάθος, παρακαλώ ακυρώστε την καταγραφή λήψης.",
   "midnightTakenWarningDialogNeverShowAgain": "Να μην εμφανιστεί ξανά",
-  "midnightTakenWarningDialogSeeHowToRevert": "Δείτε τον τρόπο ακύρωσης της καταγραφής λήψης"
+  "midnightTakenWarningDialogSeeHowToRevert": "Δείτε τον τρόπο ακύρωσης της καταγραφής λήψης",
+  "pauseStartDateMustBeOnOrBefore": "Greek翻訳を出力します。\n\nΠαρακαλούμε επιλέξτε ημερομηνία πριν ή στις {date} για την ημερομηνία έναρξης της παύσης λήψης",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
