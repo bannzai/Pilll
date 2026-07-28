@@ -2818,5 +2818,14 @@
   "midnightTakenWarningDialogBody": "Zapisi o uzimanju su izvršeni zaključno sa {takenDate}. Današnje ({takenDate}) obavještenje u {reminderTimes} neće biti dostavljeno.\nAko je ovo greška, molimo poništite zapis o uzimanju.",
   "midnightTakenWarningDialogNeverShowAgain": "Ne prikazuj ponovo",
   "midnightTakenWarningDialogSeeHowToRevert": "Pogledajte kako poništiti zapis o uzimanju",
-  "midnightTakenWarningDialogTitle": "Napomena"
+  "midnightTakenWarningDialogTitle": "Napomena",
+  "pauseStartDateMustBeOnOrBefore": "Služba se izostavlja u periodu prije {date}, molimo odaberite taj datum",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
