@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "{takenDate} వరకు మాత్ర తీసుకున్నట్లు నమోదు చేయబడింది. {takenDate} అయిన ఈ రోజు {reminderTimes}కి వచ్చే నోటిఫికేషన్ మీకు అందదు.\nపొరపాటు జరిగితే, దయచేసి తీసుకున్న రికార్డును రద్దు చేయండి",
   "midnightTakenWarningDialogNeverShowAgain": "మళ్లీ చూపించవద్దు",
   "midnightTakenWarningDialogSeeHowToRevert": "తీసుకున్న రికార్డును ఎలా రద్దు చేయాలో చూడండి",
-  "midnightTakenWarningDialogTitle": "దయచేసి గమనించండి"
+  "midnightTakenWarningDialogTitle": "దయచేసి గమనించండి",
+  "pauseStartDateMustBeOnOrBefore": "మందు విరామం ప్రారంభ తేదీగా దయచేసి {date} కంటే ముందు తేదీని ఎంచుకోండి",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
