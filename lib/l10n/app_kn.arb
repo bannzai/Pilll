@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "{takenDate} ವರೆಗಿನ ಪಿಲ್ ಸೇವನೆ ದಾಖಲಾಗಿದೆ. ಇಂದು ({takenDate}) {reminderTimes} ಸಮಯದ ಸೂಚನೆ ನಿಮಗೆ ತಲುಪುವುದಿಲ್ಲ.\nಇದು ತಪ್ಪಾಗಿದ್ದರೆ, ದಯವಿಟ್ಟು ಸೇವನೆಯನ್ನು ರದ್ದುಗೊಳಿಸಿ",
   "midnightTakenWarningDialogNeverShowAgain": "ಇನ್ನು ಮುಂದೆ ತೋರಿಸಬೇಡಿ",
   "midnightTakenWarningDialogSeeHowToRevert": "ಸೇವನೆ ರದ್ದುಗೊಳಿಸುವ ವಿಧಾನವನ್ನು ನೋಡಿ",
-  "midnightTakenWarningDialogTitle": "ದಯವಿಟ್ಟು ಗಮನಿಸಿ"
+  "midnightTakenWarningDialogTitle": "ದಯವಿಟ್ಟು ಗಮನಿಸಿ",
+  "pauseStartDateMustBeOnOrBefore": "ಔಷಧಿ ವಿರಾಮದ ಪ್ರಾರಂಭ ದಿನಾಂಕವನ್ನು {date} ಅಥವಾ ಅದಕ್ಕಿಂತ ಮೊದಲಿನ ದಿನಾಂಕವಾಗಿ ಆಯ್ಕೆಮಾಡಿ",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
