@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "Đã ghi nhận uống thuốc đến hết {takenDate}. Thông báo lúc {reminderTimes} của hôm nay ({takenDate}) sẽ không được gửi tới bạn.\nNếu đây là nhầm lẫn, vui lòng hủy ghi nhận uống thuốc.",
   "midnightTakenWarningDialogNeverShowAgain": "Không hiển thị lại nữa",
   "midnightTakenWarningDialogSeeHowToRevert": "Xem cách hủy ghi nhận uống thuốc",
-  "midnightTakenWarningDialogTitle": "Xin lưu ý"
+  "midnightTakenWarningDialogTitle": "Xin lưu ý",
+  "pauseStartDateMustBeOnOrBefore": "Bạn nên chọn ngày trước {date} làm ngày bắt đầu kỳ nghỉ uống thuốc",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
