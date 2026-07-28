@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "Pilulat janë regjistruar si të marra deri më {takenDate}. Njoftimi i sotëm ({takenDate}) në orën {reminderTimes} nuk do të dërgohet.\nNëse ky ishte një gabim, ju lutemi anuloni regjistrimin e marrjes.",
   "midnightTakenWarningDialogNeverShowAgain": "Mos e shfaq më",
   "midnightTakenWarningDialogSeeHowToRevert": "Shiko si të anulosh regjistrimin e marrjes",
-  "midnightTakenWarningDialogTitle": "Kini parasysh"
+  "midnightTakenWarningDialogTitle": "Kini parasysh",
+  "pauseStartDateMustBeOnOrBefore": "Përjashto muajin e pushimit të marrjes duhet të zgjidhet një datë përpara ose deri më {date}",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
