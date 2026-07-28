@@ -2831,5 +2831,9 @@
   "pillTakenCountPrefix": "Dnevno",
   "@pillTakenCountPrefix": {
     "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の前に表示するテキストです。「1日に [2] 回服用する」のように、prefix + 数値入力欄 + pillTakenCountSuffix の順で横並びに表示されます。"
+  },
+  "pillTakenCountSuffix": "`bs.arb` には `pillTakenCountSuffix` キー自体がまだ存在しないことを確認しました。既存の prefix (`\"Dnevno\"` = 「毎日」) と、number 入力欄の後に続く形として、「回服用する」を訳します。\n\n翻訳結果:\n\nputa uzeti",
+  "@pillTakenCountSuffix": {
+    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の後に表示するテキストです。「1日に [2] 回服用する」のように、pillTakenCountPrefix + 数値入力欄 + suffix の順で横並びに表示されます。"
   }
 }
