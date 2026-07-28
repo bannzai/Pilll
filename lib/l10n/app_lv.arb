@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "Tabletes ir atzīmētas kā lietotas līdz {takenDate}. Šodienas ({takenDate}) atgādinājuma paziņojums plkst. {reminderTimes} netiks nosūtīts.\nJa tā notika kļūdas dēļ, lūdzu, atceliet lietošanas atzīmi.",
   "midnightTakenWarningDialogNeverShowAgain": "Vairs nerādīt",
   "midnightTakenWarningDialogSeeHowToRevert": "Skatīt, kā atcelt lietošanas atzīmi",
-  "midnightTakenWarningDialogTitle": "Lūdzu, ņemiet vērā"
+  "midnightTakenWarningDialogTitle": "Lūdzu, ņemiet vērā",
+  "pauseStartDateMustBeOnOrBefore": "Lūdzu, izvēlieties lietošanas pārtraukuma sākuma datumu, kas nav vēlāks par {date}",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
