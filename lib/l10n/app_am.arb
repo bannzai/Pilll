@@ -2818,5 +2818,14 @@
   "midnightTakenWarningDialogTitle": "እባክዎ ልብ ይበሉ",
   "midnightTakenWarningDialogBody": "እስከ {takenDate} ድረስ የመድሃኒት አወሳሰድ ተመዝግቧል። ዛሬ ({takenDate}) በ{reminderTimes} ሰዓት የሚደርስዎት ማሳወቂያ አይደርስዎትም።\nበስህተት ከሆነ፣ እባክዎ የመውሰድ መዝገቡን ይሰርዙ።",
   "midnightTakenWarningDialogNeverShowAgain": "እንደገና አያሳዩ",
-  "midnightTakenWarningDialogSeeHowToRevert": "የመውሰድ መዝገብን እንዴት እንደሚሰርዙ ይመልከቱ"
+  "midnightTakenWarningDialogSeeHowToRevert": "የመውሰድ መዝገብን እንዴት እንደሚሰርዙ ይመልከቱ",
+  "pauseStartDateMustBeOnOrBefore": "前の返答に文字化けがありました。訂正します。\n\n**Amharic訳:**\n\nየመድኃኒት እረፍት መጀመሪያ ቀን ከ{date} በፊት የሆነ ቀን ይምረጡ",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
