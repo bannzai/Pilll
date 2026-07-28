@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "Þú hefur skráð pillutöku til og með {takenDate}. Tilkynningin fyrir daginn í dag ({takenDate}) klukkan {reminderTimes} berst þér ekki.\nEf þetta voru mistök skaltu afturkalla tökuskráninguna.",
   "midnightTakenWarningDialogNeverShowAgain": "Ekki sýna þetta aftur",
   "midnightTakenWarningDialogSeeHowToRevert": "Skoða leiðbeiningar um að afturkalla tökuskráningu",
-  "midnightTakenWarningDialogTitle": "Athugið"
+  "midnightTakenWarningDialogTitle": "Athugið",
+  "pauseStartDateMustBeOnOrBefore": "Vinsamlegast veldu dagsetningu fyrir eða á {date} sem upphafsdag pilluhlés",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
