@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogTitle": "שים לב",
   "midnightTakenWarningDialogBody": "נרשמה נטילת הגלולות עד {takenDate}. הודעת התזכורת של היום ({takenDate}) בשעה {reminderTimes} לא תישלח אליך.\nאם מדובר בטעות, אנא בטל את רישום הנטילה",
   "midnightTakenWarningDialogNeverShowAgain": "אל תציג הודעה זו שוב",
-  "midnightTakenWarningDialogSeeHowToRevert": "לראות איך לבטל רישום נטילה"
+  "midnightTakenWarningDialogSeeHowToRevert": "לראות איך לבטל רישום נטילה",
+  "pauseStartDateMustBeOnOrBefore": "יש לבחור תאריך התחלה להפסקת הנטילה שחל בתאריך {date} או לפניו",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
