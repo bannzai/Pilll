@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "Naitala na ang pag-inom ng pill hanggang {takenDate}. Hindi maihahatid ang paalala ngayong {takenDate} sa oras na {reminderTimes}.\nKung pagkakamali ito, mangyaring bawiin ang naitalang pag-inom.",
   "midnightTakenWarningDialogNeverShowAgain": "Huwag nang ipakita muli",
   "midnightTakenWarningDialogSeeHowToRevert": "Tingnan kung paano bawiin ang pag-inom",
-  "midnightTakenWarningDialogTitle": "Mangyaring tandaan"
+  "midnightTakenWarningDialogTitle": "Mangyaring tandaan",
+  "pauseStartDateMustBeOnOrBefore": "Pumili ng petsa na {date} o mas maaga bilang petsa ng pagsisimula ng pahinga sa pag-inom",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
