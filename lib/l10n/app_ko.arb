@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "{takenDate}분까지 복용 기록이 완료되었습니다. {takenDate}인 오늘의 {reminderTimes} 알림은 전송되지 않습니다.\n실수하신 경우에는 복용 기록을 취소해 주세요",
   "midnightTakenWarningDialogNeverShowAgain": "다시 표시하지 않기",
   "midnightTakenWarningDialogSeeHowToRevert": "복용 취소 방법 보기",
-  "midnightTakenWarningDialogTitle": "확인해 주세요"
+  "midnightTakenWarningDialogTitle": "확인해 주세요",
+  "pauseStartDateMustBeOnOrBefore": "服용お休み시작일은 {date} 이전 날짜를 선택해 주세요",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
