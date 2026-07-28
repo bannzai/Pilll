@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "Приём таблеток отмечен как выполненный по {takenDate} включительно. Сегодняшнее ({takenDate}) уведомление-напоминание в {reminderTimes} не будет отправлено.\nЕсли это ошибка, отмените запись о приёме.",
   "midnightTakenWarningDialogNeverShowAgain": "Больше не показывать",
   "midnightTakenWarningDialogSeeHowToRevert": "Посмотреть, как отменить запись о приёме",
-  "midnightTakenWarningDialogTitle": "Обратите внимание"
+  "midnightTakenWarningDialogTitle": "Обратите внимание",
+  "pauseStartDateMustBeOnOrBefore": "Извините, дату для начала перерыва в приёме нужно выбрать не позднее {date}",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
