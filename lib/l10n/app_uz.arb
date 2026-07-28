@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "{takenDate} sanasigacha dorilaringiz qabul qilingan deb qayd etildi. Bugungi ({takenDate}) kuni soat {reminderTimes} dagi eslatma bildirishnomasi kelmaydi.\nAgar bu xato bo'lgan bo'lsa, iltimos, qabul yozuvini bekor qiling.",
   "midnightTakenWarningDialogNeverShowAgain": "Boshqa ko'rsatmaslik",
   "midnightTakenWarningDialogSeeHowToRevert": "Qabulni bekor qilish usulini ko'rish",
-  "midnightTakenWarningDialogTitle": "Ehtiyot bo'ling"
+  "midnightTakenWarningDialogTitle": "Ehtiyot bo'ling",
+  "pauseStartDateMustBeOnOrBefore": "Xizmatni boshlash sanasidan {date} oldingi sanani tanlang",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
