@@ -2818,5 +2818,14 @@
   "midnightTakenWarningDialogTitle": "يرجى الانتباه",
   "midnightTakenWarningDialogBody": "تم تسجيل تناول الحبوب حتى تاريخ {takenDate}. لن يصلك إشعار التذكير اليوم ({takenDate}) في {reminderTimes}.\nإذا كان هذا خطأً، يرجى إلغاء تسجيل التناول",
   "midnightTakenWarningDialogNeverShowAgain": "عدم العرض مرة أخرى",
-  "midnightTakenWarningDialogSeeHowToRevert": "عرض كيفية إلغاء تسجيل التناول"
+  "midnightTakenWarningDialogSeeHowToRevert": "عرض كيفية إلغاء تسجيل التناول",
+  "pauseStartDateMustBeOnOrBefore": "يُرجى اختيار تاريخ بدء استراحة تناول الدواء يسبق {date}",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
