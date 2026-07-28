@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "A bevétel rögzítve lett {takenDate}-ig bezárólag. A mai napi ({takenDate}) {reminderTimes} órakor esedékes értesítés emiatt nem fog megérkezni.\nHa ez tévedésből történt, kérjük, vonja vissza a bevétel rögzítését.",
   "midnightTakenWarningDialogNeverShowAgain": "Ne jelenjen meg többé",
   "midnightTakenWarningDialogSeeHowToRevert": "A bevétel visszavonásának módja",
-  "midnightTakenWarningDialogTitle": "Figyelem"
+  "midnightTakenWarningDialogTitle": "Figyelem",
+  "pauseStartDateMustBeOnOrBefore": "Hazai bevétele előtti szüneteltetés kezdő napjaként válasszon {date} előtti dátumot",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
