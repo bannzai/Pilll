@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "Ընդունման գրառումն արվել է մինչև {takenDate}-ը ներառյալ։ Այսօրվա՝ {takenDate}-ի, ժամը {reminderTimes}-ի ծանուցումն այլևս ձեզ չի հասնի։\nԵթե դա սխալմամբ է եղել, խնդրում ենք չեղարկել ընդունման գրառումը",
   "midnightTakenWarningDialogNeverShowAgain": "Այլևս երբեք չցուցադրել",
   "midnightTakenWarningDialogSeeHowToRevert": "Տեսնել՝ ինչպես չեղարկել ընդունման գրառումը",
-  "midnightTakenWarningDialogTitle": "Ուշադրություն դարձրեք"
+  "midnightTakenWarningDialogTitle": "Ուշադրություն դարձրեք",
+  "pauseStartDateMustBeOnOrBefore": "Ծովն ընդմիշտ սկսելու օրը պետք է լինի {date} ամսաթվից առաջ",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
