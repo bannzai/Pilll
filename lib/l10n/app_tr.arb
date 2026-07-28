@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "{takenDate} tarihine kadar olan hap alım kayıtlarınız oluşturuldu. Bugün ({takenDate}) için {reminderTimes} saatindeki hatırlatma bildirimi gönderilmeyecek.\nBu bir hataysa lütfen alım kaydını geri alın.",
   "midnightTakenWarningDialogNeverShowAgain": "Bir daha gösterme",
   "midnightTakenWarningDialogSeeHowToRevert": "Alım kaydını geri alma yöntemini görüntüle",
-  "midnightTakenWarningDialogTitle": "Lütfen dikkat edin"
+  "midnightTakenWarningDialogTitle": "Lütfen dikkat edin",
+  "pauseStartDateMustBeOnOrBefore": "Servis tatili başlangıç tarihi olarak {date} veya öncesi bir tarih seçin",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
