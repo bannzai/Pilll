@@ -2818,5 +2818,14 @@
   "midnightTakenWarningDialogTitle": "অনুগ্রহ করে লক্ষ্য করুন",
   "midnightTakenWarningDialogBody": "{takenDate} পর্যন্ত সেবনের রেকর্ড করা হয়ে গেছে। আজ, {takenDate}-এর {reminderTimes} সময়ের বিজ্ঞপ্তি আপনার কাছে পৌঁছাবে না।\nভুল হয়ে থাকলে সেবন বাতিল করুন",
   "midnightTakenWarningDialogNeverShowAgain": "আর দেখাবেন না",
-  "midnightTakenWarningDialogSeeHowToRevert": "সেবন বাতিলের পদ্ধতি দেখুন"
+  "midnightTakenWarningDialogSeeHowToRevert": "সেবন বাতিলের পদ্ধতি দেখুন",
+  "pauseStartDateMustBeOnOrBefore": "服用お休み開始日は{date}以前の日付を選択してください\n\nবিরতি শুরুর তারিখ হিসেবে {date} বা তার আগের একটি তারিখ নির্বাচন করুন",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
