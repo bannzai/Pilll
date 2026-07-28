@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogTitle": "ദയവായി ശ്രദ്ധിക്കുക",
   "midnightTakenWarningDialogBody": "{takenDate} വരെയുള്ള ഗുളിക സേവന രേഖ ചെയ്യപ്പെട്ടിരിക്കുന്നു. ഇന്ന് ({takenDate}) {reminderTimes}-ന് ലഭിക്കേണ്ട അറിയിപ്പ് നിങ്ങൾക്ക് ലഭിക്കില്ല.\nഇത് തെറ്റാണെങ്കിൽ, ദയവായി സേവന രേഖ റദ്ദാക്കുക",
   "midnightTakenWarningDialogSeeHowToRevert": "സേവനം റദ്ദാക്കുന്ന വിധം കാണുക",
-  "midnightTakenWarningDialogNeverShowAgain": "ഇനി ഇത് കാണിക്കരുത്"
+  "midnightTakenWarningDialogNeverShowAgain": "ഇനി ഇത് കാണിക്കരുത്",
+  "pauseStartDateMustBeOnOrBefore": "既存の ml.arb では「服用お休み」を「മരുന്ന് ഇടവേള」「സേവന വിശ്രമ」と訳しています。この用語と一貫性を保ちつつ翻訳します。\n\nദയവായി ഗുളിക ഇടവേള ആരംഭ തീയതിയായി {date}-നോ അതിനു മുമ്പോ ഉള്ള തീയതി തിരഞ്ഞെടുക്കുക",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
