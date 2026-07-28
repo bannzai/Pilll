@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "{takenDate} तक की गोलियां सेवन के रूप में दर्ज हो चुकी हैं। आज ({takenDate}) के {reminderTimes} बजे की सूचना आपको नहीं मिलेगी।\nअगर यह गलती से हुआ है, तो कृपया सेवन रद्द करें।",
   "midnightTakenWarningDialogNeverShowAgain": "दोबारा न दिखाएं",
   "midnightTakenWarningDialogSeeHowToRevert": "सेवन रद्द करने का तरीका देखें",
-  "midnightTakenWarningDialogTitle": "कृपया ध्यान दें"
+  "midnightTakenWarningDialogTitle": "कृपया ध्यान दें",
+  "pauseStartDateMustBeOnOrBefore": "服用お休み開始日は{date}以前के दिनांक का चयन करें",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
