@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "{takenDate} வரை மாத்திரை எடுத்ததாக பதிவு செய்யப்பட்டுள்ளது. {takenDate} ஆன இன்று {reminderTimes} அறிவிப்பு உங்களுக்கு வராது.\nதவறாக பதிவானது எனில், உட்கொள்ளுதலை ரத்து செய்யவும்.",
   "midnightTakenWarningDialogNeverShowAgain": "இதை மீண்டும் காட்ட வேண்டாம்",
   "midnightTakenWarningDialogSeeHowToRevert": "உட்கொள்ளுதலை ரத்து செய்யும் முறையைக் காண்க",
-  "midnightTakenWarningDialogTitle": "கவனிக்கவும்"
+  "midnightTakenWarningDialogTitle": "கவனிக்கவும்",
+  "pauseStartDateMustBeOnOrBefore": "மருந்து ஓய்வு தொடக்க தேதியாக {date} அல்லது அதற்கு முந்தைய தேதியைத் தேர்ந்தெடுக்கவும்",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
