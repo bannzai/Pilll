@@ -2819,5 +2819,9 @@
         "type": "String"
       }
     }
+  },
+  "pillTakenCountPrefix": "1 ရက်လျှင်",
+  "@pillTakenCountPrefix": {
+    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の前に表示するテキストです。「1日に [2] 回服用する」のように、prefix + 数値入力欄 + pillTakenCountSuffix の順で横並びに表示されます。"
   }
 }
