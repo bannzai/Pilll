@@ -2818,5 +2818,14 @@
   "midnightTakenWarningDialogBody": "{takenDate} লৈকে সেৱন ৰেকৰ্ড কৰা হৈছে। {takenDate} অৰ্থাৎ আজিৰ {reminderTimes} ৰ জাননী আপোনাৰ ওচৰলৈ নাযাব।\nভুলক্ৰমে হ'লে, অনুগ্ৰহ কৰি সেৱনৰ ৰেকৰ্ড বাতিল কৰক",
   "midnightTakenWarningDialogNeverShowAgain": "পুনৰ নেদেখুৱাব",
   "midnightTakenWarningDialogSeeHowToRevert": "সেৱন বাতিলকৰণৰ পদ্ধতি চাওক",
-  "midnightTakenWarningDialogTitle": "সাৱধান হওক"
+  "midnightTakenWarningDialogTitle": "সাৱধান হওক",
+  "pauseStartDateMustBeOnOrBefore": "服用お休み開始日は{date}以前の日付を選択してください",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
