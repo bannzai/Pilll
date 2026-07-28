@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "{takenDate} ਤੱਕ ਦੀ ਗੋਲੀ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਹੋ ਚੁੱਕਾ ਹੈ। ਅੱਜ ({takenDate}) {reminderTimes} ਦੀ ਸੂਚਨਾ ਤੁਹਾਨੂੰ ਨਹੀਂ ਮਿਲੇਗੀ।\nਜੇ ਇਹ ਗਲਤੀ ਨਾਲ ਹੋਇਆ ਹੈ ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਸੇਵਨ ਰਿਕਾਰਡ ਨੂੰ ਰੱਦ ਕਰੋ",
   "midnightTakenWarningDialogNeverShowAgain": "ਦੁਬਾਰਾ ਨਾ ਦਿਖਾਓ",
   "midnightTakenWarningDialogSeeHowToRevert": "ਸੇਵਨ ਰਿਕਾਰਡ ਰੱਦ ਕਰਨ ਦਾ ਤਰੀਕਾ ਦੇਖੋ",
-  "midnightTakenWarningDialogTitle": "ਕਿਰਪਾ ਕਰਕੇ ਧਿਆਨ ਦਿਓ"
+  "midnightTakenWarningDialogTitle": "ਕਿਰਪਾ ਕਰਕੇ ਧਿਆਨ ਦਿਓ",
+  "pauseStartDateMustBeOnOrBefore": "ਸੇਵਨ ਦੀ ਛੁੱਟੀ ਸ਼ੁਰੂ ਹੋਣ ਦੀ ਮਿਤੀ {date} ਜਾਂ ਇਸ ਤੋਂ ਪਹਿਲਾਂ ਦੀ ਚੁਣੋ",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
