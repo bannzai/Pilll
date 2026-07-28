@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogTitle": "Vă rugăm să rețineți",
   "midnightTakenWarningDialogBody": "Administrarea pilulei a fost înregistrată ca fiind luată până în data de {takenDate}. Notificarea de reamintire de astăzi ({takenDate}), programată pentru ora {reminderTimes}, nu va fi trimisă.\nDacă aceasta este o greșeală, vă rugăm să anulați administrarea.",
   "midnightTakenWarningDialogNeverShowAgain": "Nu mai afișa din nou",
-  "midnightTakenWarningDialogSeeHowToRevert": "Vezi cum să anulezi administrarea"
+  "midnightTakenWarningDialogSeeHowToRevert": "Vezi cum să anulezi administrarea",
+  "pauseStartDateMustBeOnOrBefore": "Vă rugăm să selectați o dată anterioară datei de {date} pentru începerea pauzei de administrare a pilulei",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
