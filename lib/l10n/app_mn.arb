@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "{takenDate}-ы хүртэлх уусан бүртгэл хийгдсэн байна. Өнөөдөр буюу {takenDate}-ны {reminderTimes} цагийн мэдэгдэл тань ирэхгүй.\nХэрэв алдаатай бол уусан бүртгэлээ цуцлана уу",
   "midnightTakenWarningDialogNeverShowAgain": "Дахин бүү харуул",
   "midnightTakenWarningDialogSeeHowToRevert": "Уусан бүртгэлийг цуцлах аргыг үзэх",
-  "midnightTakenWarningDialogTitle": "Анхаарна уу"
+  "midnightTakenWarningDialogTitle": "Анхаарна уу",
+  "pauseStartDateMustBeOnOrBefore": "Эм уухыг завсарлах эхлэх өдрийг {date}-ээс өмнөх огноогоор сонгоно уу",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
