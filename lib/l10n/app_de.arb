@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "Die Einnahme wurde bis einschließlich {takenDate} aufgezeichnet. Die heutige ({takenDate}) Benachrichtigung um {reminderTimes} wird nicht zugestellt.\nFalls dies ein Versehen war, stornieren Sie bitte die Einnahme.",
   "midnightTakenWarningDialogNeverShowAgain": "Nicht mehr anzeigen",
   "midnightTakenWarningDialogSeeHowToRevert": "Anleitung zum Stornieren der Einnahme ansehen",
-  "midnightTakenWarningDialogTitle": "Bitte beachten"
+  "midnightTakenWarningDialogTitle": "Bitte beachten",
+  "pauseStartDateMustBeOnOrBefore": "服用お休み開始日は{date}以前の日付を選択してください",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
