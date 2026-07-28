@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "{takenDate} දක්වා පිල් ගැනීම් සටහන් වී ඇත. අද දිනය {takenDate} බැවින්, අද {reminderTimes} හි දැනුම්දීම ඔබට නොලැබෙනු ඇත.\nවැරදීමකින් නම්, කරුණාකර ගැනීම අවලංගු කරන්න",
   "midnightTakenWarningDialogNeverShowAgain": "නැවත මෙය නොපෙන්වන්න",
   "midnightTakenWarningDialogSeeHowToRevert": "ගැනීම අවලංගු කරන ආකාරය බලන්න",
-  "midnightTakenWarningDialogTitle": "කරුණාකර සැලකිල්ලට ගන්න"
+  "midnightTakenWarningDialogTitle": "කරුණාකර සැලකිල්ලට ගන්න",
+  "pauseStartDateMustBeOnOrBefore": "කරුණාකර ඖෂධ සේවන විරාමයේ ආරම්භක දිනය ලෙස {date} හෝ ඊට පෙර දිනයක් තෝරන්න",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
