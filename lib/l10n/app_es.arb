@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "Se ha registrado la toma hasta el {takenDate}. La notificación de hoy ({takenDate}) programada para las {reminderTimes} no se recibirá.\nSi esto fue un error, cancele el registro de toma.",
   "midnightTakenWarningDialogNeverShowAgain": "No volver a mostrar esto",
   "midnightTakenWarningDialogSeeHowToRevert": "Ver cómo cancelar el registro de toma",
-  "midnightTakenWarningDialogTitle": "Atención"
+  "midnightTakenWarningDialogTitle": "Atención",
+  "pauseStartDateMustBeOnOrBefore": "Selecciona una fecha igual o anterior a {date} como fecha de inicio de la pausa de la toma",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
