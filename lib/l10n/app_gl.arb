@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "Rexistrouse a toma de píldoras ata o {takenDate}. A notificación de hoxe ({takenDate}) ás {reminderTimes} non chegará.\nSe foi un erro, cancela o rexistro de toma.",
   "midnightTakenWarningDialogNeverShowAgain": "Non mostrar isto de novo",
   "midnightTakenWarningDialogSeeHowToRevert": "Ver como cancelar o rexistro de toma",
-  "midnightTakenWarningDialogTitle": "Aviso"
+  "midnightTakenWarningDialogTitle": "Aviso",
+  "pauseStartDateMustBeOnOrBefore": "Vólvese antes de que remate para escoller a data de inicio da pausa de dose que remate {date} ou antes",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
