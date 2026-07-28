@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "已记录服用至{takenDate}。今天（{takenDate}）{reminderTimes}的提醒通知将不会推送。\n如果是误操作，请撤销服用记录。",
   "midnightTakenWarningDialogNeverShowAgain": "不再提示",
   "midnightTakenWarningDialogSeeHowToRevert": "查看取消服用记录的方法",
-  "midnightTakenWarningDialogTitle": "请注意"
+  "midnightTakenWarningDialogTitle": "请注意",
+  "pauseStartDateMustBeOnOrBefore": "停药开始日期请选择{date}以前的日期",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
