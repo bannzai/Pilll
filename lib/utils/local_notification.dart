@@ -297,7 +297,8 @@ class RegisterReminderLocalNotification {
     final tzNow = tz.TZDateTime.now(tz.local);
     final List<Future<void>> futures = [];
 
-    final badgeNumber = activePillSheet.todayPillNumber - activePillSheet.lastTakenOrZeroPillNumber;
+    // v2では部分服用(2回中1回)を服用済み扱いにしないよう、服用完了ピル番号で未服用日数を数える
+    final badgeNumber = activePillSheet.todayPillNumber - activePillSheet.lastCompletedOrZeroPillNumber;
     final todayPillAllTaken = switch (activePillSheet) {
       PillSheetV1 v1 => v1.todayPillIsAlreadyTaken,
       PillSheetV2 v2 => v2.todayPillAllTaken,
@@ -460,8 +461,9 @@ class RegisterReminderLocalNotification {
             if (setting.reminderNotificationCustomization.isInVisibleDescription) {
               return '';
             }
-            // 最後に飲んだ日付が数日前の場合は常にmissedTakenMessage
-            if (activePillSheet.todayPillNumber - activePillSheet.lastTakenOrZeroPillNumber > 1) {
+            // 最後に服用完了した日付が数日前の場合は常にmissedTakenMessage
+            // v2では部分服用(2回中1回)を服用済み扱いにしないよう、服用完了ピル番号で判定する
+            if (activePillSheet.todayPillNumber - activePillSheet.lastCompletedOrZeroPillNumber > 1) {
               return setting.reminderNotificationCustomization.missedTakenMessage;
             }
             // 本日分の服用記録がない場合で今日のループ(dayOffset==0)の時
