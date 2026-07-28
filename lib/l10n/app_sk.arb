@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "Záznam o užití bol vykonaný až do dňa {takenDate}. Dnešné upozornenie ({takenDate}) o {reminderTimes} preto nebude doručené.\nAk ide o omyl, zrušte prosím záznam o užití.",
   "midnightTakenWarningDialogNeverShowAgain": "Túto správu už nezobrazovať",
   "midnightTakenWarningDialogSeeHowToRevert": "Pozrieť návod na zrušenie záznamu o užití",
-  "midnightTakenWarningDialogTitle": "Upozornenie"
+  "midnightTakenWarningDialogTitle": "Upozornenie",
+  "pauseStartDateMustBeOnOrBefore": "Prišla ste na výberu dátumu skoršieho ako {date} pre začiatok prestávky v užívaní.",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
