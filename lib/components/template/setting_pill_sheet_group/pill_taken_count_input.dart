@@ -5,6 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/formatter/text_input_formatter.dart';
 
 /// 1日に何回服用するかを入力するウィジェット
@@ -24,9 +25,9 @@ class PillTakenCountInput extends HookConsumerWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text(
-          '1日に',
-          style: TextStyle(
+        Text(
+          L.pillTakenCountPrefix,
+          style: const TextStyle(
             fontFamily: FontFamily.japanese,
             fontSize: 14,
             fontWeight: FontWeight.w400,
@@ -67,9 +68,9 @@ class PillTakenCountInput extends HookConsumerWidget {
           ),
         ),
         const SizedBox(width: 5),
-        const Text(
-          '回服用する',
-          style: TextStyle(
+        Text(
+          L.pillTakenCountSuffix,
+          style: const TextStyle(
             fontFamily: FontFamily.japanese,
             fontSize: 14,
             fontWeight: FontWeight.w400,
