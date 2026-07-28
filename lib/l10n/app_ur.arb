@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "{takenDate} تک کی خوراک ریکارڈ کر دی گئی ہے۔ آج، یعنی {takenDate}، کو {reminderTimes} پر ہونے والی اطلاع موصول نہیں ہوگی۔\nاگر یہ غلطی سے ہوا ہے تو براہِ کرم خوراک کا ریکارڈ منسوخ کریں",
   "midnightTakenWarningDialogNeverShowAgain": "دوبارہ نہ دکھائیں",
   "midnightTakenWarningDialogSeeHowToRevert": "خوراک منسوخ کرنے کا طریقہ دیکھیں",
-  "midnightTakenWarningDialogTitle": "براہِ کرم توجہ دیں"
+  "midnightTakenWarningDialogTitle": "براہِ کرم توجہ دیں",
+  "pauseStartDateMustBeOnOrBefore": "براہ کرم گولی کے وقفے کی شروعات کی تاریخ کے لیے {date} یا اس سے پہلے کی تاریخ منتخب کریں",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
