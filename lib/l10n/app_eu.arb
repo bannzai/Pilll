@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "Zure pilulak hartu bezala erregistratu dira {takenDate} arte. Gaurko ({takenDate}) {reminderTimes}etako jakinarazpena ez zaizu bidaliko.\nOkerra bada, mesedez, ezeztatu hartzea.",
   "midnightTakenWarningDialogNeverShowAgain": "Ez erakutsi berriro",
   "midnightTakenWarningDialogSeeHowToRevert": "Hartzea ezeztatzeko modua ikusi",
-  "midnightTakenWarningDialogTitle": "Kontuan izan"
+  "midnightTakenWarningDialogTitle": "Kontuan izan",
+  "pauseStartDateMustBeOnOrBefore": "Zure eguna hasi baino lehen jarraibide bat aukeratu behar da: {date}",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
