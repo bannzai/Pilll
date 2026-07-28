@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogTitle": "သတိပြုပါ",
   "midnightTakenWarningDialogBody": "{takenDate} အထိ ဆေးသောက်မှတ်တမ်း ထည့်ပြီးဖြစ်ပါသည်။ ယနေ့ {takenDate} ၏ {reminderTimes} အချိန် သတိပေးချက်ကို လက်ခံရရှိမည်မဟုတ်ပါ။\nအမှားဖြစ်ပါက ဆေးသောက်မှတ်တမ်းကို ပယ်ဖျက်ပေးပါ",
   "midnightTakenWarningDialogSeeHowToRevert": "ဆေးသောက်မှတ်တမ်း ပယ်ဖျက်နည်းကို ကြည့်ရှုရန်",
-  "midnightTakenWarningDialogNeverShowAgain": "နောက်တစ်ဖန် မပြပါနှင့်"
+  "midnightTakenWarningDialogNeverShowAgain": "နောက်တစ်ဖန် မပြပါနှင့်",
+  "pauseStartDateMustBeOnOrBefore": "ရက်စွဲ {date} ​ မတိုင်မီ ဆေးမသောက်ဘဲ နားရက် စတင်ရက်ကို ရွေးချယ်ပါ",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
