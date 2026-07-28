@@ -2818,5 +2818,14 @@
   "midnightTakenWarningDialogTitle": "Tingueu-ho en compte",
   "midnightTakenWarningDialogBody": "S'ha registrat la presa de la píndola fins al {takenDate}. La notificació d'avui ({takenDate}) de les {reminderTimes} no arribarà.\nSi ha estat un error, cancel·leu el registre de presa.",
   "midnightTakenWarningDialogNeverShowAgain": "No tornis a mostrar-ho",
-  "midnightTakenWarningDialogSeeHowToRevert": "Veure com cancel·lar un registre de presa"
+  "midnightTakenWarningDialogSeeHowToRevert": "Veure com cancel·lar un registre de presa",
+  "pauseStartDateMustBeOnOrBefore": "Si la data límit per començar el període de descans és el {date}, seleccioneu una data anterior a aquesta",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
