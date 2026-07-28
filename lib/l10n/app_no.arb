@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogTitle": "Vær oppmerksom",
   "midnightTakenWarningDialogBody": "Pillene dine er registrert som tatt til og med {takenDate}. Dagens ({takenDate}) varsel klokken {reminderTimes} vil ikke bli sendt.\nHvis dette var en feil, kan du avbryte inntaksregistreringen.",
   "midnightTakenWarningDialogSeeHowToRevert": "Se hvordan du avbryter en inntaksregistrering",
-  "midnightTakenWarningDialogNeverShowAgain": "Ikke vis dette igjen"
+  "midnightTakenWarningDialogNeverShowAgain": "Ikke vis dette igjen",
+  "pauseStartDateMustBeOnOrBefore": "Startdatoen for pilletablett-pause bør velges før {date}",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
