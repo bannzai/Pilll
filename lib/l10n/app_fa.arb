@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogTitle": "لطفاً توجه کنید",
   "midnightTakenWarningDialogBody": "مصرف قرص تا تاریخ {takenDate} ثبت شده است. اعلان یادآوری امروز ({takenDate}) در ساعت {reminderTimes} برای شما ارسال نخواهد شد.\nدر صورت اشتباه بودن، لطفاً مصرف را لغو کنید.",
   "midnightTakenWarningDialogNeverShowAgain": "دیگر نمایش داده نشود",
-  "midnightTakenWarningDialogSeeHowToRevert": "مشاهده روش لغو ثبت مصرف"
+  "midnightTakenWarningDialogSeeHowToRevert": "مشاهده روش لغو ثبت مصرف",
+  "pauseStartDateMustBeOnOrBefore": "既存の用語（\"وقفه مصرف\" = 服用お休み）と表現スタイルを確認しました。\n\nلطفاً تاریخی قبل از {date} را برای تاریخ شروع وقفه مصرف انتخاب کنید",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
