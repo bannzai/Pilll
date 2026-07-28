@@ -2810,5 +2810,14 @@
   "midnightTakenWarningDialogBody": "Catatan konsumsi pil hingga {takenDate} telah dibuat. Notifikasi pengingat pukul {reminderTimes} untuk hari ini ({takenDate}) tidak akan dikirim.\nJika ini adalah kesalahan, silakan batalkan catatan konsumsi tersebut",
   "midnightTakenWarningDialogNeverShowAgain": "Jangan tampilkan lagi",
   "midnightTakenWarningDialogSeeHowToRevert": "Lihat cara membatalkan catatan konsumsi",
-  "midnightTakenWarningDialogTitle": "Perhatian"
+  "midnightTakenWarningDialogTitle": "Perhatian",
+  "pauseStartDateMustBeOnOrBefore": "服用お休み期間の開始日変更エラーで、開始日として選択できる最終日を{date}に示すメッセージをインドネシア語に翻訳します。\n\nSilakan pilih tanggal sebelum {date} sebagai tanggal mulai jeda minum obat",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
