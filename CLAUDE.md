@@ -91,6 +91,12 @@ iOS・Androidアプリ両方を提供しております。Flutter製のアプリ
 1. Firebaseの設定ファイルは環境ごとに分かれている（main.dev.dart/main.prod.dart）
 2. RemoteConfigでフィーチャーフラグを管理
 
+## issue の読み書き先
+このリポジトリ (bannzai/Pilll) は public で issue 機能が無効。issue は private の bannzai/PilllBackend で管理している。
+
+- 指示・skill に登場する issue のやりとり（作成・閲覧・コメント・ラベル操作など）は、すべて bannzai/PilllBackend の issue を読み書きする
+- `gh issue` 系コマンドは必ず `--repo bannzai/PilllBackend` を指定する
+
 ------------------------------------
 
 # プログラムテストについて

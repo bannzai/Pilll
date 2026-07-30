@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/lifetime_offer/lifetime_offer_copy_variant.dart';
-import 'package:pilll/features/lifetime_offer/lifetime_offer_plan.dart';
 import 'package:pilll/features/lifetime_offer/provider.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/lifetime_offer.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -19,7 +18,7 @@ void main() {
     Future<void> pumpBar(
       WidgetTester tester, {
       required LifetimeOfferCopyVariant copyVariant,
-      LifetimeOfferPlan offerPlan = LifetimeOfferPlan.lifetime,
+      bool isMonthly300Offer = false,
     }) async {
       await tester.pumpWidget(
         ProviderScope(
@@ -33,7 +32,8 @@ void main() {
           child: MaterialApp(
             home: Material(
               child: LifetimeOfferAnnouncementBar(
-                  copyVariant: copyVariant, offerPlan: offerPlan),
+                  copyVariant: copyVariant,
+                  isMonthly300Offer: isMonthly300Offer),
             ),
           ),
         ),
@@ -60,7 +60,7 @@ void main() {
       await pumpBar(
         tester,
         copyVariant: LifetimeOfferCopyVariant.defaultVariant,
-        offerPlan: LifetimeOfferPlan.monthly300,
+        isMonthly300Offer: true,
       );
 
       expect(find.textContaining('長くご愛顧いただいている皆様へ！'), findsOneWidget);

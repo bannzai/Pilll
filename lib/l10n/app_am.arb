@@ -1870,7 +1870,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "የመተግበሪያው ማስጀመሪያ ጊዜ (መተግበሪያውን በተከፈተበት ጊዜ) ማንኛውም ዓይነት ቴክኒካዊ ስህተት ሲከሰት ለተጠቃሚው የሚታየው የስህተት መልእክት ነው። የግንኙነት ስኬቶችን ጨምሮ የተጨማሪ መረጃ ስለያዘ፣ ተጠቃሚው ሁኔታውን እንዲረዳ እባክዎን ይተርጉሙ።",
+  "launchError": "መተግበሪያውን በሚያስጀምሩበት ጊዜ ስህተት ተከስቷል።\n{ErrorMessagesConnection}\n\nዝርዝር: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2814,5 +2814,9 @@
   "restDurationFeatureAppealPoint3": "ጊዜን ማርትዕ እና ዳግም መጀመርም ቀላል ነው",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogTitle": "እባክዎ ልብ ይበሉ",
+  "midnightTakenWarningDialogBody": "እስከ {takenDate} ድረስ የመድሃኒት አወሳሰድ ተመዝግቧል። ዛሬ ({takenDate}) በ{reminderTimes} ሰዓት የሚደርስዎት ማሳወቂያ አይደርስዎትም።\nበስህተት ከሆነ፣ እባክዎ የመውሰድ መዝገቡን ይሰርዙ።",
+  "midnightTakenWarningDialogNeverShowAgain": "እንደገና አያሳዩ",
+  "midnightTakenWarningDialogSeeHowToRevert": "የመውሰድ መዝገብን እንዴት እንደሚሰርዙ ይመልከቱ"
 }

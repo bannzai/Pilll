@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "翻訳すべき具体的なエラーメッセージテキストが提供されていません。説明文ではなく、実際にアプリで表示されるエラーメッセージの日本語テキストを教えてください。",
+  "launchError": "Rakenduse käivitamisel ilmnes viga.\n{ErrorMessagesConnection}\n\nÜksikasjad: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint3": "Perioodide muutmine ja jätkamine on lihtne",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "Teie tabletid on märgitud võetuks kuni {takenDate}. Tänase ({takenDate}) päeva teavitus kell {reminderTimes} jääb saatmata.\nKui see oli eksitus, palun tühistage võtmiskirje.",
+  "midnightTakenWarningDialogNeverShowAgain": "Ära näita seda enam",
+  "midnightTakenWarningDialogSeeHowToRevert": "Vaata, kuidas võtmiskirjet tühistada",
+  "midnightTakenWarningDialogTitle": "Pange tähele"
 }

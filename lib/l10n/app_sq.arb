@@ -1124,7 +1124,7 @@
       }
     }
   },
-  "todayPillNumber": "{numriPilulesSeSpot}",
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "@todayPillNumber": {
     "description": "ピルシート上で今日服用すべきピルの番号（例：1錠目、15錠目など）を表示する際に使用されます。リマインダー通知やログ記録でも参照される重要な値です。",
     "placeholders": {
@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "Një gabim teknik ndodhi gjatë nisjes së aplikacionit. Informacioni i detajuar, duke përfshirë gabimet e lidhjes, përfshihet që përdoruesi të kuptojë situatën.",
+  "launchError": "Ka ndodhur një gabim gjatë nisjes së aplikacionit.\n{ErrorMessagesConnection}\n\nDetajet: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2806,5 +2806,9 @@
   "healthCareIntegrationFeatureAppealPoint1": "Sinkronizim automatik i regjistrimeve të menstruacioneve",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "Pilulat janë regjistruar si të marra deri më {takenDate}. Njoftimi i sotëm ({takenDate}) në orën {reminderTimes} nuk do të dërgohet.\nNëse ky ishte një gabim, ju lutemi anuloni regjistrimin e marrjes.",
+  "midnightTakenWarningDialogNeverShowAgain": "Mos e shfaq më",
+  "midnightTakenWarningDialogSeeHowToRevert": "Shiko si të anulosh regjistrimin e marrjes",
+  "midnightTakenWarningDialogTitle": "Kini parasysh"
 }

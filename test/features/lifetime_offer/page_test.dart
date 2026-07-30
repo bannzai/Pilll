@@ -9,7 +9,6 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/lifetime_offer/lifetime_offer_copy_variant.dart';
-import 'package:pilll/features/lifetime_offer/lifetime_offer_plan.dart';
 import 'package:pilll/features/lifetime_offer/page.dart';
 import 'package:pilll/features/lifetime_offer/provider.dart';
 import 'package:pilll/features/premium_introduction/paywall_source.dart';
@@ -65,7 +64,7 @@ void main() {
       Map<String, Object> initialSharedPreferencesValues = const {},
       LifetimeOfferCopyVariant copyVariant =
           LifetimeOfferCopyVariant.defaultVariant,
-      LifetimeOfferPlan offerPlan = LifetimeOfferPlan.lifetime,
+      bool isMonthly300Offer = false,
     }) async {
       final mockTodayRepository = MockTodayService();
       when(mockTodayRepository.now()).thenReturn(DateTime(2026, 7, 3));
@@ -112,7 +111,7 @@ void main() {
                 user: user,
                 source: PaywallSource.lifetimeOfferAppLaunch,
                 copyVariant: copyVariant,
-                offerPlan: offerPlan,
+                isMonthly300Offer: isMonthly300Offer,
               ),
             ),
           ),
@@ -163,7 +162,7 @@ void main() {
       await pumpLifetimeOfferPageBody(
         tester,
         user: const User(isPremium: false),
-        offerPlan: LifetimeOfferPlan.monthly300,
+        isMonthly300Offer: true,
       );
 
       expect(find.text('長くご愛顧いただいている皆様へ\n月額プランのご案内です'), findsOneWidget);

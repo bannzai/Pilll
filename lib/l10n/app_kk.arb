@@ -1879,7 +1879,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "実際に翻訳すべき日本語のエラーメッセージテキストが提供されていないようです。\n\n提供された日本語は翻訳対象の説明文であり、実際にアプリで表示されるエラーメッセージではありません。\n\n翻訳するための具体的な日本語のエラーメッセージテキストを教えてください。",
+  "launchError": "Қолданбаны іске қосу кезінде қате орын алды.\n{ErrorMessagesConnection}\n\nТолық ақпарат: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2491,7 +2491,7 @@
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
   },
-  "menstruationFeatureAppealTitle": "生理を記録・予測",
+  "menstruationFeatureAppealTitle": "Етеккірді жазу және болжау",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
   },
@@ -2523,7 +2523,7 @@
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
   },
-  "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
+  "futureScheduleFeatureAppealTitle": "Болашақ жоспарларды жазыңыз",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
   },
@@ -2543,11 +2543,11 @@
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   },
-  "healthCareIntegrationFeatureAppealShortDescription": "生理記録をヘルスケアと共有",
+  "healthCareIntegrationFeatureAppealShortDescription": "Етеккір жазбаларын Денсаулық қосымшасымен бөлісу",
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   },
-  "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
+  "healthCareIntegrationFeatureAppealHeadline": "Денсаулық қосымшасымен синхрондауға болады",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   },
@@ -2567,7 +2567,7 @@
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
   },
-  "quickRecordFeatureAppealBody": "リマインダー通知を長押しすると「服用した」のアクションが表示され、アプリを開かずに服用を記録できます。",
+  "quickRecordFeatureAppealBody": "Еске салғыш хабарландыруын басып тұрсаңыз, «Ішілді» әрекеті көрінеді және қолданбаны ашпай-ақ қабылдауды жазуға болады.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
   },
@@ -2603,7 +2603,7 @@
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
   },
-  "todayPillNumberFeatureAppealTitle": "今日の服用番号を合わせる",
+  "todayPillNumberFeatureAppealTitle": "Бүгін ішетін таблетка нөмірін реттеу",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   },
@@ -2615,7 +2615,7 @@
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   },
-  "todayPillNumberFeatureAppealBody": "今日の服用番号を手動で合わせ直せます。ホームのピル数字表示からも同じ画面を開けます。",
+  "todayPillNumberFeatureAppealBody": "Ұмытып қалу немесе шатастыру салдарынан дәрі парағындағы нөмір нақты қабылдаудан ауытқыса, бүгін ішетін таблетканың нөмірін қолмен қайта реттей аласыз. Осы экранды басты беттегі нөмірді түрту арқылы да аша аласыз.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
   },
@@ -2679,7 +2679,7 @@
   "@recordPillFeatureAppealPoint1": {
     "description": ""
   },
-  "recordPillFeatureAppealPoint2": "间違えてもかんたん取り消し",
+  "recordPillFeatureAppealPoint2": "Қате жіберсеңіз де оңай болдырмауға болады",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
   },
@@ -2691,7 +2691,7 @@
   "@menstruationFeatureAppealPoint1": {
     "description": ""
   },
-  "menstruationFeatureAppealPoint2": "周期を自動で把握",
+  "menstruationFeatureAppealPoint2": "Циклды автоматты түрде бақылау",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
   },
@@ -2755,7 +2755,7 @@
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
   },
-  "creatingNewPillSheetFeatureAppealPoint1": "ピルシート終了で自動切り替え",
+  "creatingNewPillSheetFeatureAppealPoint1": "Дәрі парағы аяқталғанда автоматты ауысу",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint2": "Пилл парағының оң жақ жоғарғы бұрышындағы параметрлер белгішесінен бастаңыз.",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "{takenDate} дейінгі қабылдау жазбалары тіркелді. Бүгінгі ({takenDate}) {reminderTimes} хабарландыруы жеткізілмейді.\nҚате болса, қабылдауды болдырмаңыз",
+  "midnightTakenWarningDialogNeverShowAgain": "Қайта көрсетпеу",
+  "midnightTakenWarningDialogSeeHowToRevert": "Қабылдауды болдырмау тәсілін көру",
+  "midnightTakenWarningDialogTitle": "Назар аударыңыз"
 }

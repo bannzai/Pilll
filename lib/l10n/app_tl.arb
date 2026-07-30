@@ -2539,7 +2539,7 @@
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   },
-  "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
+  "healthCareIntegrationFeatureAppealHeadline": "Maaari itong ikonekta sa Health app",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   },
@@ -2547,7 +2547,7 @@
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
   },
-  "quickRecordFeatureAppealTitle": "通知からそのまま服用記録",
+  "quickRecordFeatureAppealTitle": "Direktang itala ang pag-inom mula sa abiso",
   "@quickRecordFeatureAppealTitle": {
     "description": "クイックレコード機能のFeatureAppeal Barタイトル"
   },
@@ -2595,7 +2595,7 @@
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
   },
-  "todayPillNumberFeatureAppealTitle": "I will provide the translation for \"今日の服用番号を合わせる\" into tl (Tagalog).",
+  "todayPillNumberFeatureAppealTitle": "Itugma ang numero ng pill ngayong araw",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   },
@@ -2683,7 +2683,7 @@
   "@menstruationFeatureAppealPoint1": {
     "description": ""
   },
-  "menstruationFeatureAppealPoint2": "周期を自動で把握",
+  "menstruationFeatureAppealPoint2": "Awtomatikong subaybayan ang iyong siklo",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
   },
@@ -2691,7 +2691,7 @@
   "@menstruationFeatureAppealPoint3": {
     "description": ""
   },
-  "calendarDiaryFeatureAppealPoint3": "过去の記録をカレンダーで振り返り",
+  "calendarDiaryFeatureAppealPoint3": "Balikan ang mga nakaraang tala sa kalendaryo",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
   },
@@ -2707,7 +2707,7 @@
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
   },
-  "futureScheduleFeatureAppealPoint3": "リマインダーで通知",
+  "futureScheduleFeatureAppealPoint3": "Abisuhan gamit ang paalala",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
   },
@@ -2723,11 +2723,11 @@
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
   },
-  "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応",
+  "healthCareIntegrationFeatureAppealPoint3": "Suportado ang Apple Health",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
   },
-  "quickRecordFeatureAppealPoint1": "この文章はすでにアプリ内で使われている翻訳済みの日本語です",
+  "quickRecordFeatureAppealPoint1": "Itala ang pag-inom gamit ang aksyon sa abiso",
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
   },
@@ -2755,7 +2755,7 @@
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint2": "目覚まし同様のアラーム音",
+  "alarmKitFeatureAppealPoint2": "Tunog ng alarm na tulad ng alarm clock",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
   },
@@ -2779,7 +2779,7 @@
   "@restDurationFeatureAppealPoint1": {
     "description": ""
   },
-  "restDurationFeatureAppealPoint2": "ピルシート右上の歯車から開始",
+  "restDurationFeatureAppealPoint2": "Simulan mula sa gear icon sa kanang itaas ng pill sheet",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "calendarDiaryFeatureAppealPoint2": "Itala ang iyong kalagayan at balikan",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "Naitala na ang pag-inom ng pill hanggang {takenDate}. Hindi maihahatid ang paalala ngayong {takenDate} sa oras na {reminderTimes}.\nKung pagkakamali ito, mangyaring bawiin ang naitalang pag-inom.",
+  "midnightTakenWarningDialogNeverShowAgain": "Huwag nang ipakita muli",
+  "midnightTakenWarningDialogSeeHowToRevert": "Tingnan kung paano bawiin ang pag-inom",
+  "midnightTakenWarningDialogTitle": "Mangyaring tandaan"
 }

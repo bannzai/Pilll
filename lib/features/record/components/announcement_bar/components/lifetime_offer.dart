@@ -6,7 +6,6 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/lifetime_offer/lifetime_offer_copy_variant.dart';
-import 'package:pilll/features/lifetime_offer/lifetime_offer_plan.dart';
 import 'package:pilll/features/lifetime_offer/page.dart';
 import 'package:pilll/features/lifetime_offer/provider.dart';
 import 'package:pilll/features/premium_introduction/paywall_source.dart';
@@ -17,14 +16,15 @@ import 'package:pilll/utils/analytics.dart';
 /// 初回表示から表示期限までの残り時間を毎秒更新でカウントダウン表示し、期限を過ぎると自動で消える。
 class LifetimeOfferAnnouncementBar extends HookConsumerWidget {
   final LifetimeOfferCopyVariant copyVariant;
-  final LifetimeOfferPlan offerPlan;
-  const LifetimeOfferAnnouncementBar({super.key, required this.copyVariant, required this.offerPlan});
+  final bool isMonthly300Offer;
+  const LifetimeOfferAnnouncementBar({super.key, required this.copyVariant, required this.isMonthly300Offer});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     useEffect(() {
       analytics.logEvent(
-          name: 'lifetime_offer_announcement_bar_viewed', parameters: {'copy_variant': copyVariant.value, 'offer_plan': offerPlan.analyticsValue});
+          name: 'lifetime_offer_announcement_bar_viewed',
+          parameters: {'copy_variant': copyVariant.value, 'offer_plan': isMonthly300Offer ? 'monthly_300' : 'lifetime'});
       analytics.setUserProperties('lifetime_offer_variant', copyVariant.value);
       // 表示期限の起点となる初回表示時刻を記録する
       setLifetimeOfferFirstDisplayedDateTimeIfAbsent(ref);
@@ -44,12 +44,13 @@ class LifetimeOfferAnnouncementBar extends HookConsumerWidget {
         behavior: HitTestBehavior.opaque,
         onTap: () {
           analytics.logEvent(
-              name: 'lifetime_offer_announcement_bar_tap', parameters: {'copy_variant': copyVariant.value, 'offer_plan': offerPlan.analyticsValue});
+              name: 'lifetime_offer_announcement_bar_tap',
+              parameters: {'copy_variant': copyVariant.value, 'offer_plan': isMonthly300Offer ? 'monthly_300' : 'lifetime'});
           showLifetimeOfferPage(
             context,
             source: PaywallSource.lifetimeOfferBar,
             copyVariant: copyVariant,
-            offerPlan: offerPlan,
+            isMonthly300Offer: isMonthly300Offer,
           );
         },
         child: Stack(
@@ -57,14 +58,13 @@ class LifetimeOfferAnnouncementBar extends HookConsumerWidget {
             Align(
               alignment: Alignment.center,
               child: Text(
-                switch (offerPlan) {
-                  LifetimeOfferPlan.monthly300 => '長くご愛顧いただいている皆様へ！\n期間限定の割引価格は残り ${lifetimeOfferCountdownString(remainingDuration)}',
-                  LifetimeOfferPlan.lifetime => switch (copyVariant) {
-                      LifetimeOfferCopyVariant.defaultVariant =>
-                        'Pilllのご利用ありがとうございます！\n期間限定の割引価格は残り ${lifetimeOfferCountdownString(remainingDuration)}',
-                      LifetimeOfferCopyVariant.ownership => '一度の購入でずっとプレミアム！\n期間限定の割引価格は残り ${lifetimeOfferCountdownString(remainingDuration)}',
-                    },
-                },
+                isMonthly300Offer
+                    ? '長くご愛顧いただいている皆様へ！\n期間限定の割引価格は残り ${lifetimeOfferCountdownString(remainingDuration)}'
+                    : switch (copyVariant) {
+                        LifetimeOfferCopyVariant.defaultVariant =>
+                          'Pilllのご利用ありがとうございます！\n期間限定の割引価格は残り ${lifetimeOfferCountdownString(remainingDuration)}',
+                        LifetimeOfferCopyVariant.ownership => '一度の購入でずっとプレミアム！\n期間限定の割引価格は残り ${lifetimeOfferCountdownString(remainingDuration)}',
+                      },
                 style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,

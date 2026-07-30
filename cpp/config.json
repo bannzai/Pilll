@@ -1,0 +1,1072 @@
+{
+  "appId": "1405931017",
+  "defaults": {
+    "fail_strategy": "fail-fast"
+  },
+  "cpps": [
+    {
+      "name": "reminder-202607",
+      "visible": false,
+      "comment": "検索/Search Ads「ピル リマインダー」「避妊薬 飲み忘れ」向け。複数回リマインドとピルシートで確実性を訴求。variant: cpp-reminder",
+      "locales": [
+        {
+          "locale": "ja",
+          "promotionalText": "服用時刻に通知でお知らせ。飲むまで何度でもリマインドするので、うっかり飲み忘れを防げます。ピルシートそのままの画面で、どこまで飲んだかもひと目でわかります。",
+          "screenshot_dir": "cpp/assets/ja-appstore-202607",
+          "keywords": [
+            "ピルリマインダー",
+            "薬飲み忘れ",
+            "服薬",
+            "通知",
+            "アラーム",
+            "服薬管理"
+          ]
+        },
+        {
+          "locale": "en-US",
+          "promotionalText": "Get notified at pill time — and again until you take it. Your pack on screen shows exactly where you are, so you never lose track.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/en-US",
+          "keywords": [
+            "medication"
+          ]
+        },
+        {
+          "locale": "fr-FR",
+          "promotionalText": "Pilule oubliée ? Pilll vous rappelle jusqu’à la prise et affiche votre plaquette pour suivre chaque comprimé en un coup d’œil.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/fr-FR"
+        },
+        {
+          "locale": "ar-SA",
+          "promotionalText": "إشعار بموعد حبوب منع الحمل، يتكرر حتى تتناوليها فلا تفوتك الجرعة أبدًا. شاشة تعرض شريط الحبوب كما هو لتعرفي أين وصلتِ بلمحة واحدة.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/ar-SA",
+          "keywords": [
+            "تذكير",
+            "نسيان",
+            "إشعار",
+            "منبه",
+            "دواء"
+          ]
+        },
+        {
+          "locale": "ca",
+          "promotionalText": "Rep un avís a l'hora de prendre la píndola, i se't recorda fins que la prenguis. La pantalla mostra el blister real, així veus sempre per on vas.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/ca",
+          "keywords": [
+            "recordatori",
+            "medicament",
+            "notificació",
+            "alarma"
+          ]
+        },
+        {
+          "locale": "cs",
+          "promotionalText": "Upozorníme vás přesně v čas užití a budeme připomínat, dokud si tabletku nevezmete. Obrazovka s blistrem vám na první pohled ukáže, kolik už jste užila.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/cs",
+          "keywords": [
+            "užívání",
+            "oznámení"
+          ]
+        },
+        {
+          "locale": "da",
+          "promotionalText": "Få besked, når det er tid til pillen – og igen, indtil du har taget den. Skærmen viser din pilleplade, så du på et øjeblik kan se, hvor langt du er nået.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/da",
+          "keywords": [
+            "pilreminder",
+            "medicin",
+            "notifikation",
+            "alarm"
+          ]
+        },
+        {
+          "locale": "de-DE",
+          "promotionalText": "Erinnerung zur Einnahmezeit – und so lange, bis du sie bestätigst. Der Blisterstreifen am Bildschirm zeigt dir auf einen Blick, wie weit du bist.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/de-DE",
+          "keywords": [
+            "Pill-Erinnerung",
+            "Einnahme",
+            "Alarm"
+          ]
+        },
+        {
+          "locale": "el",
+          "promotionalText": "Ειδοποίηση τη στιγμή της δόσης, και ξανά μέχρι να την πάρετε. Η οθόνη δείχνει το blister σας όπως είναι, ώστε να βλέπετε αμέσως πόσα χάπια έχετε πάρει.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/el",
+          "keywords": [
+            "υπενθύμιση",
+            "φάρμακο",
+            "ειδοποίηση"
+          ]
+        },
+        {
+          "locale": "es-ES",
+          "promotionalText": "Recibe un aviso a la hora de tu píldora, que se repite hasta que la tomes. Tu blíster en pantalla, tal cual, para ver de un vistazo por dónde vas y evitar olvidos.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/es-ES",
+          "keywords": [
+            "recordatorio",
+            "medicación",
+            "notificaciones",
+            "alarma pastilla"
+          ]
+        },
+        {
+          "locale": "fi",
+          "promotionalText": "Ilmoitus juuri oikeaan aikaan – ja muistutus yhä uudelleen, kunnes otat pillerin. Liuskanäkymä näyttää heti, missä kohdassa menet, joten et unohda annosta vahingossa.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/fi",
+          "keywords": [
+            "lääkkeet",
+            "lääkitys",
+            "ilmoitukset",
+            "e-pillerit muistutus"
+          ]
+        },
+        {
+          "locale": "he",
+          "promotionalText": "קבלי התראה בזמן נטילת הגלולה, ותזכורות נוספות עד שתיקחי אותה. מסך לוח הגלולות מראה במבט אחד עד היכן הגעת, כדי שלא תפספסי.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/he",
+          "keywords": [
+            "תזכורת",
+            "תרופה",
+            "שכחת תרופות",
+            "זמן גלולה"
+          ]
+        },
+        {
+          "locale": "hi",
+          "promotionalText": "पिल लेने के समय पर नोटिफिकेशन आएगा, और जब तक आप न लें तब तक बार-बार रिमाइंडर मिलेगा। पिल पैक जैसी दिखने वाली स्क्रीन पर एक नज़र में पता चलेगा कि कहाँ तक ली है।",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/hi",
+          "keywords": [
+            "रिमाइंडर",
+            "दवा",
+            "अलार्म"
+          ]
+        },
+        {
+          "locale": "hr",
+          "promotionalText": "Obavijest točno u vrijeme uzimanja tablete — i ponovno, sve dok je ne uzmete. Zaslon prikazuje blister pa uvijek znate dokle ste stigli.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/hr",
+          "keywords": [
+            "podsetnik",
+            "lekovi",
+            "uzimanje",
+            "obaveštenje"
+          ]
+        },
+        {
+          "locale": "hu",
+          "promotionalText": "Értesítést kapsz a tabletta bevételekor, és addig emlékeztetünk, amíg be nem veszed. A képernyőn a buborékcsomagod pontosan mutatja, hol tartasz, hogy sose maradj le.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/hu",
+          "keywords": [
+            "pirula emlékeztető",
+            "gyógyszer",
+            "értesítés",
+            "riasztás"
+          ]
+        },
+        {
+          "locale": "id",
+          "promotionalText": "Notifikasi saat waktunya minum pil, diulang sampai kamu meminumnya agar tidak lupa. Tampilan blister di layar langsung menunjukkan sejauh mana kamu sudah minum.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/id",
+          "keywords": [
+            "pengingat",
+            "pemberitahuan",
+            "alarm",
+            "pill reminder"
+          ]
+        },
+        {
+          "locale": "it",
+          "promotionalText": "Ricevi una notifica all'orario della pillola, ripetuta finché non la prendi: non dimentichi mai. La schermata riproduce il blister, per vedere subito a che punto sei.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/it",
+          "keywords": [
+            "reminder",
+            "farmaco",
+            "notifica"
+          ]
+        },
+        {
+          "locale": "ko",
+          "promotionalText": "복용 시간에 알림을 보내드리고, 드실 때까지 몇 번이고 다시 알려드려요. 실제 알약판 그대로의 화면이라 어디까지 먹었는지 한눈에 확인할 수 있어요.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/ko",
+          "keywords": [
+            "약 알림",
+            "미리알림",
+            "약 알람",
+            "약알림",
+            "피임약 까먹음",
+            "복약 알람",
+            "약 복용 알림"
+          ]
+        },
+        {
+          "locale": "ms",
+          "promotionalText": "Terima peringatan pada waktu minum pil anda, berulang sehingga anda mengambilnya. Paparan strip pil di skrin menunjukkan dengan jelas sejauh mana anda sudah mengambilnya.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/ms",
+          "keywords": [
+            "pengingat",
+            "ubat",
+            "terlupa",
+            "pemberitahuan",
+            "alarm"
+          ]
+        },
+        {
+          "locale": "nl-NL",
+          "promotionalText": "Krijg een melding op je pilmoment en net zo lang herinneringen tot je hem inneemt. Je pilstrip staat op het scherm, dus je ziet in één oogopslag hoever je bent.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/nl-NL",
+          "keywords": [
+            "pilherinnering",
+            "medicatie",
+            "alarm",
+            "de pil vergeten"
+          ]
+        },
+        {
+          "locale": "no",
+          "promotionalText": "Få varsel når det er tid for p-pillen, og påminnelser helt til du tar den. Skjermen viser p-pillebrettet ditt, så du ser nøyaktig hvor langt du har kommet.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/no",
+          "keywords": [
+            "lupa minum obat",
+            "pemberitahuan",
+            "alarm"
+          ]
+        },
+        {
+          "locale": "pl",
+          "promotionalText": "Powiadomienie dokładnie o porze tabletki – i kolejne przypomnienia, aż ją zażyjesz. Ekran w kształcie blistra pokazuje od razu, które tabletki już wzięłaś.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/pl",
+          "keywords": [
+            "przypomnienie",
+            "powiadomienie"
+          ]
+        },
+        {
+          "locale": "pt-BR",
+          "promotionalText": "Receba um aviso na hora de tomar a pílula — e outros lembretes até você confirmar. A tela mostra sua cartela real, então você vê na hora onde parou.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/pt-BR",
+          "keywords": [
+            "lembrete",
+            "medicação",
+            "notificações"
+          ]
+        },
+        {
+          "locale": "ro",
+          "promotionalText": "Primești notificare la ora pastilei, cu reamintiri repetate până o iei, ca să nu uiți niciodată. Vezi blisterul pe ecran și știi dintr-o privire câte ai luat deja.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/ro",
+          "keywords": [
+            "reminder",
+            "medicament",
+            "notificare"
+          ]
+        },
+        {
+          "locale": "sk",
+          "promotionalText": "Upozornenie presne v čase užitia – a znova, kým si pilulku nevezmete. Obrazovka verne kopíruje blister, takže hneď viete, kde v balení ste.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/sk",
+          "keywords": [
+            "pripomienka"
+          ]
+        },
+        {
+          "locale": "sv",
+          "promotionalText": "Få en påminnelse när det är dags att ta pillret – och igen tills du gör det. Pillerkartan visas direkt på skärmen så du alltid vet var du ligger till.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/sv",
+          "keywords": [
+            "påminnelse",
+            "läkemedel"
+          ]
+        },
+        {
+          "locale": "th",
+          "promotionalText": "รับการแจ้งเตือนเมื่อถึงเวลาทานยาคุม พร้อมเตือนซ้ำจนกว่าจะทาน ป้องกันการลืมทานยาได้อย่างมั่นใจ หน้าจอแผงยาเสมือนของจริงบอกได้ทันทีว่าทานถึงเม็ดไหนแล้ว",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/th",
+          "keywords": [
+            "เตือน",
+            "ลืมยา",
+            "การใช้ยา",
+            "แจ้งเตือน",
+            "pill reminder"
+          ]
+        },
+        {
+          "locale": "tr",
+          "promotionalText": "Hap saatinde bildirim alırsınız ve alana kadar tekrar tekrar hatırlatılırsınız. Ekrandaki blister görünümünde nereye kadar aldığınızı bir bakışta görürsünüz.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/tr",
+          "keywords": [
+            "hatırlatıcı",
+            "ilaç",
+            "unutma",
+            "bildirim"
+          ]
+        },
+        {
+          "locale": "uk",
+          "promotionalText": "Сповіщення точно у час прийому — і знову, поки не приймете таблетку. Екран показує вашу упаковку, тож завжди видно, скільки вже прийнято.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/uk",
+          "keywords": [
+            "pill reminder",
+            "notifications"
+          ]
+        },
+        {
+          "locale": "vi",
+          "promotionalText": "Thông báo đúng giờ uống thuốc và nhắc lại đến khi bạn uống, giúp không bao giờ quên uống thuốc tránh thai. Màn hình vỉ thuốc trực quan cho biết ngay bạn đã uống đến đâu.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/vi",
+          "keywords": [
+            "pill reminder free",
+            "contraceptive pill reminder",
+            "birth control pill reminder",
+            "pill tracker"
+          ]
+        },
+        {
+          "locale": "zh-Hans",
+          "promotionalText": "到点自动提醒服药，没吃就会持续提醒，再也不怕漏服。屏幕上的药板与实物一致，吃到第几粒一目了然。",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-reminder/zh-Hans",
+          "keywords": [
+            "服药提醒",
+            "忘记吃药",
+            "用药",
+            "通知",
+            "闹钟",
+            "吃避孕药提醒"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "privacy-202607",
+      "visible": false,
+      "comment": "家族・同居人にピル服用を知られたくない層(SNS流入・「ピル バレたくない」系検索)。伏せた通知を主役に。variant: cpp-privacy",
+      "locales": [
+        {
+          "locale": "ja",
+          "promotionalText": "通知にはピルの名前を出しません。ロック画面に出ても中身はわからないから、家族や友人の前でも安心。あなたのプライバシーを守りながら、飲み忘れだけを防ぎます。",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/ja"
+        },
+        {
+          "locale": "en-US",
+          "promotionalText": "Discreet reminders that never mention pills. No one can tell what the notification is for — your privacy stays yours while you stay on track.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/en-US"
+        },
+        {
+          "locale": "fr-FR",
+          "promotionalText": "Des rappels discrets qui ne mentionnent jamais la pilule. Même sur l’écran verrouillé, votre vie privée reste protégée.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/fr-FR"
+        },
+        {
+          "locale": "ar-SA",
+          "promotionalText": "تذكيرات لا تذكر اسم الدواء أبدًا، فلا يعرف أحد محتواها حتى لو ظهرت على شاشة القفل، فتطمئنين أمام العائلة والأصدقاء. نحافظ على خصوصيتك بينما نمنع عنك نسيان الجرعة فقط.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/ar-SA"
+        },
+        {
+          "locale": "ca",
+          "promotionalText": "Avisos discrets: mai esmenten la píndola. Ni a la pantalla de bloqueig se sap què diuen, així estàs tranquil·la davant família i amics, sense deixar mai de prendre-la.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/ca"
+        },
+        {
+          "locale": "cs",
+          "promotionalText": "Diskrétní upozornění, která nikdy nezmíní antikoncepci. Na zamčené obrazovce nikdo nepozná, o co jde – klidně i před rodinou nebo přáteli. Vaše soukromí zůstává jen vaše.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/cs"
+        },
+        {
+          "locale": "da",
+          "promotionalText": "Diskrete påmindelser, der aldrig nævner piller. Selv på låseskærmen kan ingen se, hvad det handler om. Dit privatliv er beskyttet, mens du undgår at glemme en pille.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/da"
+        },
+        {
+          "locale": "de-DE",
+          "promotionalText": "Diskrete Erinnerungen ohne Erwähnung der Pille. Auf dem Sperrbildschirm erkennt niemand den Inhalt, auch nicht Familie oder Freunde. Deine Privatsphäre bleibt geschützt.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/de-DE"
+        },
+        {
+          "locale": "el",
+          "promotionalText": "Διακριτικές υπενθυμίσεις χωρίς αναφορά στο χάπι. Ούτε στην οθόνη κλειδώματος φαίνεται τι είναι, ώστε να νιώθετε άνετα μπροστά σε άλλους, χωρίς να χάνετε ποτέ τη δόση σας.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/el"
+        },
+        {
+          "locale": "es-ES",
+          "promotionalText": "Avisos discretos que nunca mencionan la píldora: nadie sabe de qué trata ni en la pantalla bloqueada. Protege tu intimidad y evita solo los olvidos.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/es-ES"
+        },
+        {
+          "locale": "fi",
+          "promotionalText": "Muistutukset eivät koskaan mainitse pillereitä. Lukitusnäytölläkään ei näy, mistä on kyse, joten voit käyttää sovellusta huoletta muiden seurassa. Yksityisyytesi säilyy.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/fi"
+        },
+        {
+          "locale": "he",
+          "promotionalText": "התראות דיסקרטיות שלא מזכירות את שם הגלולה. גם במסך הנעילה איש לא יבין במה מדובר - אפשר להירגע גם ליד משפחה וחברים. הפרטיות שלך נשמרת, ורק השכחה נמנעת.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/he"
+        },
+        {
+          "locale": "hi",
+          "promotionalText": "नोटिफिकेशन में पिल का नाम नहीं आता, इसलिए लॉक स्क्रीन पर भी कोई अंदाज़ा नहीं लगा पाएगा। परिवार-दोस्तों के सामने बेझिझक रहें। प्राइवेसी बनी रहती है, बस भूलना नहीं होता।",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/hi"
+        },
+        {
+          "locale": "hr",
+          "promotionalText": "Diskretne obavijesti koje nikad ne spominju tablete. Nitko sa zaslona ne zna o čemu je riječ, pa ste mirni i pred obitelji i prijateljima, uz potpunu privatnost.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/hr"
+        },
+        {
+          "locale": "hu",
+          "promotionalText": "Az értesítések sosem említik a fogamzásgátlót, zárolt képernyőn sem derül ki tartalmuk. Nyugodt lehetsz családod, barátaid előtt – és nem feledkezel meg a bevételről.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/hu"
+        },
+        {
+          "locale": "id",
+          "promotionalText": "Notifikasi tidak menyebut nama pil. Isinya tetap rahasia di layar kunci, jadi aman di depan keluarga atau teman. Privasimu terjaga, kamu tetap tidak lupa minum.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/id"
+        },
+        {
+          "locale": "it",
+          "promotionalText": "Notifiche discrete che non nominano mai la pillola: sullo schermo bloccato nessuno capisce di cosa si tratta. La privacy è protetta, mentre eviti solo di dimenticarla.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/it"
+        },
+        {
+          "locale": "ko",
+          "promotionalText": "알림에 약 이름을 표시하지 않아요. 잠금 화면에 떠도 내용을 알 수 없어 가족이나 친구 앞에서도 안심이에요. 프라이버시는 지키면서 복용만 놓치지 않게 도와드려요.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/ko"
+        },
+        {
+          "locale": "ms",
+          "promotionalText": "Peringatan diskret tanpa nama pil. Kandungan notifikasi kekal rahsia walaupun di skrin kunci, jadi anda selesa di depan sesiapa. Privasi terjaga, tanpa terlupa minum pil.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/ms"
+        },
+        {
+          "locale": "nl-NL",
+          "promotionalText": "Discrete meldingen zonder pilnaam. Ook op je vergrendelscherm blijft onzichtbaar waar het om gaat, zelfs bij familie of vrienden. Jouw privacy blijft gewaarborgd.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/nl-NL"
+        },
+        {
+          "locale": "no",
+          "promotionalText": "Diskrete varsler som aldri nevner p-piller. Ingen kan se hva varselet gjelder – trygt foran familie og venner. Personvernet beskyttes, mens du holder styr på pillene.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/no"
+        },
+        {
+          "locale": "pl",
+          "promotionalText": "Powiadomienia nigdy nie wspominają o tabletkach – nikt nie odgadnie ich treści na ekranie blokady. Chronimy Twoją prywatność, Ty po prostu nie zapomnisz o dawce.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/pl"
+        },
+        {
+          "locale": "pt-BR",
+          "promotionalText": "Notificações discretas, sem citar o nome da pílula. Ninguém sabe do que se trata pela tela bloqueada, nem perto de família ou amigos. Sua privacidade fica só sua.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/pt-BR"
+        },
+        {
+          "locale": "ro",
+          "promotionalText": "Notificările nu menționează pastila. Nimeni nu-ți ghicește conținutul pe ecranul blocat, nici familia, nici prietenii. Intimitatea ta e protejată, prevenim doar uitarea.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/ro"
+        },
+        {
+          "locale": "sk",
+          "promotionalText": "Diskrétne upozornenia bez zmienky o pilulkách. Nikto na uzamknutej obrazovke nezistí, o čo ide – pokojne aj pred rodinou. Súkromie je vaše, riešime len zabúdanie.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/sk"
+        },
+        {
+          "locale": "sv",
+          "promotionalText": "Diskreta påminnelser som aldrig nämner piller. Ingen ser vad notisen gäller, inte ens på låsskärmen – tryggt även framför familj och vänner. Din integritet förblir din.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/sv"
+        },
+        {
+          "locale": "th",
+          "promotionalText": "การแจ้งเตือนไม่ระบุชื่อยาคุม แม้ขึ้นบนหน้าจอล็อกก็ไม่มีใครรู้ว่าคืออะไร อุ่นใจได้แม้อยู่ต่อหน้าครอบครัวหรือเพื่อน ปกป้องความเป็นส่วนตัว พร้อมป้องกันการลืมทานยา",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/th"
+        },
+        {
+          "locale": "tr",
+          "promotionalText": "Bildirimlerde hap adı geçmez; kilit ekranında bile içerik anlaşılmaz. Ailenizin, arkadaşlarınızın yanında rahat edersiniz. Gizliliğiniz korunurken unutmalar önlenir.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/tr"
+        },
+        {
+          "locale": "uk",
+          "promotionalText": "Делікатні сповіщення без згадки таблеток. На екрані блокування ніхто не здогадається, про що йдеться — приватність під захистом, а прийом під контролем.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/uk"
+        },
+        {
+          "locale": "vi",
+          "promotionalText": "Thông báo kín đáo, không nêu tên thuốc. Hiện trên màn hình khóa cũng chẳng ai biết là gì, an tâm dù ở bên gia đình, bạn bè. Bảo vệ sự riêng tư, chỉ ngừa quên uống thuốc.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/vi"
+        },
+        {
+          "locale": "zh-Hans",
+          "promotionalText": "通知中不会出现药物名称，即使显示在锁屏上也看不出内容，在家人朋友面前也能安心使用。在守护隐私的同时，帮你告别漏服烦恼。",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-privacy/zh-Hans"
+        }
+      ]
+    },
+    {
+      "name": "menstruation-202607",
+      "visible": false,
+      "comment": "「生理管理アプリ」検索の最大ボリュームゾーン。生理予測を前面にクロスセル。variant: cpp-menstruation",
+      "locales": [
+        {
+          "locale": "ja",
+          "promotionalText": "ピルの服薬管理と生理管理をこれひとつで。生理を記録すると次の予定日を自動で予測。体調や日記もカレンダーにまとめて残せます。",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/ja",
+          "keywords": [
+            "PMS"
+          ]
+        },
+        {
+          "locale": "en-US",
+          "promotionalText": "Manage your pill and your period in one app. Log your cycle to get automatic predictions, and keep symptoms and notes together on the calendar.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/en-US",
+          "keywords": [
+            "period",
+            "menstruation",
+            "ovulation",
+            "calendar",
+            "ttc",
+            "ttc app"
+          ]
+        },
+        {
+          "locale": "fr-FR",
+          "promotionalText": "Pilule et règles dans une seule app. Notez vos règles, suivez votre cycle et obtenez automatiquement la date prévue des prochaines règles.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/fr-FR"
+        },
+        {
+          "locale": "ar-SA",
+          "promotionalText": "إدارة حبوب منع الحمل والدورة الشهرية في تطبيق واحد. سجّلي دورتك ليتوقع التطبيق موعدها القادم تلقائيًا، واحفظي حالتك اليومية وملاحظاتك في التقويم.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/ar-SA",
+          "keywords": [
+            "الدورة",
+            "تقويم",
+            "متلازمة"
+          ]
+        },
+        {
+          "locale": "ca",
+          "promotionalText": "Gestiona la píndola i el cicle menstrual en una sola app. Registra la regla i obtén prediccions automàtiques de la propera data. Desa símptomes i notes al calendari.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/ca",
+          "keywords": [
+            "cicle",
+            "calendari",
+            "PMS"
+          ]
+        },
+        {
+          "locale": "cs",
+          "promotionalText": "Antikoncepci i menstruaci zvládnete v jedné aplikaci. Zaznamenejte cyklus a získejte automatický odhad příštího termínu, symptomy i poznámky si veďte v kalendáři.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/cs",
+          "keywords": [
+            "menstruace",
+            "kalendář",
+            "PMS"
+          ]
+        },
+        {
+          "locale": "da",
+          "promotionalText": "Hold styr på din p-pille og menstruation i én og samme app. Registrer din cyklus for automatiske forudsigelser, og saml symptomer og noter i kalenderen.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/da",
+          "keywords": [
+            "mens",
+            "kalender",
+            "PMS"
+          ]
+        },
+        {
+          "locale": "de-DE",
+          "promotionalText": "Pilleneinnahme und Periode in einer App verwalten. Trage deinen Zyklus ein und erhalte automatische Vorhersagen. Symptome und Notizen sammelst du im Kalender.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/de-DE",
+          "keywords": [
+            "Menstruation"
+          ]
+        },
+        {
+          "locale": "el",
+          "promotionalText": "Διαχειριστείτε το χάπι και την περίοδό σας σε μία εφαρμογή. Καταγράψτε τον κύκλο σας για αυτόματες προβλέψεις και κρατήστε συμπτώματα και σημειώσεις στο ημερολόγιο.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/el",
+          "keywords": [
+            "περίοδος",
+            "ημερολόγιο",
+            "PMS"
+          ]
+        },
+        {
+          "locale": "es-ES",
+          "promotionalText": "Controla tu píldora y tu regla en una sola app. Registra tu ciclo y predice automáticamente la próxima fecha. Guarda síntomas y notas juntos en el calendario.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/es-ES",
+          "keywords": [
+            "menstruación"
+          ]
+        },
+        {
+          "locale": "fi",
+          "promotionalText": "Pillerien ja kuukautisten seuranta samassa sovelluksessa. Kirjaa kuukautisesi, ja seuraava ajankohta ennustetaan automaattisesti. Vointi ja päiväkirja kalenterissa.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/fi",
+          "keywords": [
+            "kuukautiset",
+            "PMS"
+          ]
+        },
+        {
+          "locale": "he",
+          "promotionalText": "ניהול נטילת הגלולה והמחזור החודשי באפליקציה אחת. תיעוד המחזור מאפשר חיזוי אוטומטי של המועד הבא, ותוכלי לרכז תסמינים ורשימות יומן בלוח שנה אחד.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/he",
+          "keywords": [
+            "מחזור",
+            "לוח שנה"
+          ]
+        },
+        {
+          "locale": "hi",
+          "promotionalText": "पिल मैनेजमेंट और पीरियड ट्रैकिंग, दोनों एक ही ऐप में। पीरियड दर्ज करें और अगली तारीख का अनुमान अपने आप मिलेगा। सेहत और डायरी नोट्स भी कैलेंडर पर साथ में रखें।",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/hi",
+          "keywords": [
+            "मासिक धर्म",
+            "कैलेंडर",
+            "PMS"
+          ]
+        },
+        {
+          "locale": "hr",
+          "promotionalText": "Kontracepcijska tableta i menstruacija na jednom mjestu. Bilježite ciklus i dobijte automatsku prognozu, a simptome i bilješke pratite u kalendaru.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/hr",
+          "keywords": [
+            "menstruacija",
+            "kalendar",
+            "PMS"
+          ]
+        },
+        {
+          "locale": "hu",
+          "promotionalText": "Fogamzásgátló és ciklus egy helyen. Rögzítsd a menstruációdat a következő dátum automatikus előrejelzéséért, és gyűjtsd a naptárban a közérzeted és jegyzeteid.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/hu",
+          "keywords": [
+            "menstruáció",
+            "PMS"
+          ]
+        },
+        {
+          "locale": "id",
+          "promotionalText": "Kelola minum pil dan siklus menstruasi dalam satu aplikasi. Catat menstruasimu untuk prediksi tanggal berikutnya. Simpan kondisi tubuh dan catatan harian di kalender.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/id",
+          "keywords": [
+            "kalender",
+            "PMS"
+          ]
+        },
+        {
+          "locale": "it",
+          "promotionalText": "Gestisci pillola e ciclo mestruale in un'unica app. Registra il ciclo per previsioni automatiche sulla data successiva, e tieni sintomi e note insieme nel calendario.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/it",
+          "keywords": [
+            "mestruazione",
+            "calendario",
+            "PMS"
+          ]
+        },
+        {
+          "locale": "ko",
+          "promotionalText": "피임약 복용 관리와 생리 관리를 한 앱에서. 생리를 기록하면 다음 예정일을 자동으로 예측해 드려요. 컨디션과 일기도 캘린더에 함께 남길 수 있어요.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/ko",
+          "keywords": [
+            "생리",
+            "생리 주기",
+            "임신",
+            "그날",
+            "생리달력"
+          ]
+        },
+        {
+          "locale": "ms",
+          "promotionalText": "Urus jadual pil dan kitaran haid dalam satu aplikasi. Rekod kitaran untuk ramalan tarikh secara automatik, serta simpan gejala dan catatan harian dalam kalendar.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/ms",
+          "keywords": [
+            "haid",
+            "kalendar",
+            "PMS"
+          ]
+        },
+        {
+          "locale": "nl-NL",
+          "promotionalText": "Beheer je pil en je menstruatiecyclus in één app. Noteer je cyclus voor automatische voorspellingen en houd klachten en notities overzichtelijk bij in de kalender.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/nl-NL",
+          "keywords": [
+            "menstruatie",
+            "PMS"
+          ]
+        },
+        {
+          "locale": "no",
+          "promotionalText": "Administrer p-pillen og mensen i én app. Registrer syklusen din for automatiske prognoser, og samle symptomer og notater i kalenderen.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/no",
+          "keywords": [
+            "PMS"
+          ]
+        },
+        {
+          "locale": "pl",
+          "promotionalText": "Tabletki i cykl w jednej aplikacji. Zapisuj miesiączki, a Pilll sam przewidzi kolejny termin. Samopoczucie i notatki zbierzesz razem w kalendarzu.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/pl",
+          "keywords": [
+            "w okresie",
+            "kalendarz",
+            "PMS"
+          ]
+        },
+        {
+          "locale": "pt-BR",
+          "promotionalText": "Controle a pílula e o ciclo menstrual em um só app. Registre seu período e receba a previsão automática da próxima data. Sintomas e diário, tudo no calendário.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/pt-BR",
+          "keywords": [
+            "calendário",
+            "PMS"
+          ]
+        },
+        {
+          "locale": "ro",
+          "promotionalText": "Gestionezi pastila și ciclul menstrual într-o singură aplicație. Notează-ți ciclul pentru predicții automate, iar starea și jurnalul rămân împreună în calendar.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/ro",
+          "keywords": [
+            "menstruație",
+            "PMS"
+          ]
+        },
+        {
+          "locale": "sk",
+          "promotionalText": "Užívanie piluliek aj menštruácia v jednej aplikácii. Zaznamenajte cyklus a získajte automatickú predpoveď termínu. Stav a poznámky majte spolu v kalendári.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/sk",
+          "keywords": [
+            "menštruácia",
+            "kalendar",
+            "PMS"
+          ]
+        },
+        {
+          "locale": "sv",
+          "promotionalText": "Hantera p-piller och mens i en och samma app. Logga din cykel för automatiska prognoser, och samla symtom och anteckningar i kalendern.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/sv",
+          "keywords": [
+            "kalender",
+            "PMS"
+          ]
+        },
+        {
+          "locale": "th",
+          "promotionalText": "จัดการยาคุมและรอบเดือนได้ในแอปเดียว บันทึกรอบเดือนเพื่อคาดการณ์วันมาครั้งถัดไปโดยอัตโนมัติ พร้อมบันทึกอาการและบันทึกประจำวันไว้ในปฏิทินเดียวกัน",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/th",
+          "keywords": [
+            "ประจำเดือน",
+            "ปฏิทิน",
+            "PMS"
+          ]
+        },
+        {
+          "locale": "tr",
+          "promotionalText": "Hap takibi ve regl takibini tek uygulamada birleştirin. Döngünüzü kaydedin, sonraki tarih otomatik tahmin edilsin. Semptomlar ve günlük notlar takvimde bir arada.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/tr",
+          "keywords": [
+            "adet",
+            "takvim",
+            "PMS"
+          ]
+        },
+        {
+          "locale": "uk",
+          "promotionalText": "Контроль таблеток і менструального циклу в одному додатку. Записуйте цикл — дата наступної менструації прогнозується автоматично. Самопочуття й нотатки — в календарі.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/uk",
+          "keywords": [
+            "menstruation",
+            "PMS"
+          ]
+        },
+        {
+          "locale": "vi",
+          "promotionalText": "Quản lý thuốc tránh thai và chu kỳ kinh nguyệt chỉ trong một ứng dụng. Ghi lại chu kỳ để tự động dự đoán ngày tiếp theo, lưu tình trạng cơ thể và nhật ký trên lịch.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/vi"
+        },
+        {
+          "locale": "zh-Hans",
+          "promotionalText": "服药管理与生理周期管理二合一。记录经期，自动预测下次日期；身体状况和日记也能统一记录在日历中。",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-menstruation/zh-Hans",
+          "keywords": [
+            "月经",
+            "日历",
+            "PMS"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "beginner-202607",
+      "visible": false,
+      "comment": "ピル服用開始直後の不安層。シートUIで何番目・休薬がわかる安心を訴求。variant: cpp-beginner",
+      "locales": [
+        {
+          "locale": "ja",
+          "promotionalText": "ピルをはじめたばかりでも大丈夫。今日飲む番号がひと目でわかり、休薬期間も自動でお知らせ。迷わず続けられるシンプルな服薬管理アプリです。",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/ja",
+          "keywords": [
+            "フリウェル",
+            "ヤーズ",
+            "トリキュラー",
+            "ヤーズフレックス"
+          ]
+        },
+        {
+          "locale": "en-US",
+          "promotionalText": "New to birth control pills? Pilll shows today's pill at a glance and tracks your break week automatically — simple guidance from day one.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/en-US"
+        },
+        {
+          "locale": "fr-FR",
+          "promotionalText": "Vous commencez la pilule ? Pilll affiche le comprimé du jour et suit la pause automatiquement, pour avancer sereinement dès le premier jour.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/fr-FR"
+        },
+        {
+          "locale": "ar-SA",
+          "promotionalText": "بدأتِ حبوب منع الحمل للتو؟ لا مشكلة. يوضح التطبيق رقم حبة اليوم بلمحة، وينبهك تلقائيًا لفترة التوقف عن الحبوب. تطبيق بسيط لمتابعة دوائك دون تردد.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/ar-SA",
+          "keywords": [
+            "ياز",
+            "حبوب منع الحمل"
+          ]
+        },
+        {
+          "locale": "ca",
+          "promotionalText": "Acabes de començar amb la píndola? Pilll mostra d'un cop d'ull quina toca avui i avisa automàticament de la setmana de descans. Senzill des del primer dia.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/ca"
+        },
+        {
+          "locale": "cs",
+          "promotionalText": "Začínáte s antikoncepcí? Žádný problém. Na první pohled uvidíte, kterou tabletku užít dnes, a pauzu mezi baleními hlídá aplikace za vás. Jednoduché vedení od prvního dne.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/cs",
+          "keywords": [
+            "Yasmin",
+            "Trikera"
+          ]
+        },
+        {
+          "locale": "da",
+          "promotionalText": "Ny til p-piller? Pilll viser straks, hvilken pille du skal tage i dag, og husker dig automatisk på den pillefri uge. En enkel guide, der gør det nemt fra dag ét.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/da",
+          "keywords": [
+            "frivill"
+          ]
+        },
+        {
+          "locale": "de-DE",
+          "promotionalText": "Neu bei der Pille? Kein Problem. Pilll zeigt auf einen Blick, welche Pille heute dran ist, und erinnert automatisch an die Einnahmepause. Einfach von Anfang an.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/de-DE",
+          "keywords": [
+            "Yaz",
+            "Triquilar"
+          ]
+        },
+        {
+          "locale": "el",
+          "promotionalText": "Μόλις ξεκινήσατε το αντισυλληπτικό χάπι; Το Pilll δείχνει αμέσως το χάπι της ημέρας και ειδοποιεί αυτόματα για την εβδομάδα διακοπής. Απλή καθοδήγηση από την πρώτη μέρα.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/el"
+        },
+        {
+          "locale": "es-ES",
+          "promotionalText": "¿Empiezas con la píldora? Verás de un vistazo cuál toca hoy, y la semana de descanso se avisa sola. Una app sencilla para no perder el hilo desde el primer día.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/es-ES",
+          "keywords": [
+            "Yasmin"
+          ]
+        },
+        {
+          "locale": "fi",
+          "promotionalText": "Vasta aloittanut ehkäisypillerien käytön? Ei hätää. Näet heti tämän päivän pillerin, ja taukoviikosta muistutetaan automaattisesti. Yksinkertainen apu alusta asti.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/fi",
+          "keywords": [
+            "Freewell"
+          ]
+        },
+        {
+          "locale": "he",
+          "promotionalText": "רק התחלת לקחת גלולות למניעת הריון? במבט אחד תדעי איזה כדור להיום, ושבוע ההפסקה מסומן אוטומטית. אפליקציה פשוטה שמלווה אותך בלי בלבול מהיום הראשון.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/he"
+        },
+        {
+          "locale": "hi",
+          "promotionalText": "अभी-अभी पिल लेना शुरू किया है? कोई चिंता नहीं। आज की गोली का नंबर एक नज़र में दिखेगा और ब्रेक वीक की जानकारी अपने आप मिलेगी। शुरुआत से आसान और भरोसेमंद मैनेजमेंट।",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/hi",
+          "keywords": [
+            "फ्रीवेल",
+            "याज"
+          ]
+        },
+        {
+          "locale": "hr",
+          "promotionalText": "Tek počinjete s tabletom? Pilll uvijek pokazuje koju tabletu uzeti danas i sam prati pauzu, pa lako nastavljate bez brige.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/hr",
+          "keywords": [
+            "Yasmin",
+            "21 pilula"
+          ]
+        },
+        {
+          "locale": "hu",
+          "promotionalText": "Most kezdted a fogamzásgátlót? A Pilll egy pillantással mutatja a mai tablettát, és automatikusan jelzi a szünetet is. Egyszerű segítség az első naptól.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/hu",
+          "keywords": [
+            "Yasmin"
+          ]
+        },
+        {
+          "locale": "id",
+          "promotionalText": "Baru mulai minum pil KB? Tidak masalah. Nomor pil hari ini langsung terlihat, dan masa jeda minum diberitahu otomatis. Aplikasi sederhana agar kamu tetap konsisten.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/id",
+          "keywords": [
+            "friwel",
+            "yaz"
+          ]
+        },
+        {
+          "locale": "it",
+          "promotionalText": "Hai appena iniziato la pillola? Pilll mostra a colpo d'occhio quella di oggi e segnala automaticamente la settimana di pausa: una gestione semplice fin dal primo giorno.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/it",
+          "keywords": [
+            "Yaz"
+          ]
+        },
+        {
+          "locale": "ko",
+          "promotionalText": "피임약을 처음 시작해도 걱정 없어요. 오늘 먹을 번호를 한눈에 보여주고, 휴약 기간도 자동으로 알려드려요. 헷갈리지 않고 꾸준히 이어갈 수 있는 심플한 복용 관리 앱이에요.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/ko",
+          "keywords": [
+            "다이안느",
+            "다이안느 35",
+            "피임약"
+          ]
+        },
+        {
+          "locale": "ms",
+          "promotionalText": "Baru mula ambil pil perancang? Pilll tunjukkan nombor pil hari ini dengan jelas dan maklumkan tempoh rehat secara automatik — aplikasi urus pil yang mudah diikuti.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/ms",
+          "keywords": [
+            "pil KB"
+          ]
+        },
+        {
+          "locale": "nl-NL",
+          "promotionalText": "Net begonnen met de pil? Pilll toont in één oogopslag welke pil je vandaag moet nemen en herinnert je automatisch aan je stopweek. Simpel en overzichtelijk vanaf dag één.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/nl-NL",
+          "keywords": [
+            "yasmin"
+          ]
+        },
+        {
+          "locale": "no",
+          "promotionalText": "Ny på p-piller? Pilll viser dagens pille med ett blikk og varsler deg automatisk om den pillefrie uken – enkel veiledning fra dag én.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/no"
+        },
+        {
+          "locale": "pl",
+          "promotionalText": "Dopiero zaczynasz z tabletkami? Pilll pokazuje, którą wziąć dziś, i sam przypomina o przerwie w cyklu. Prosta aplikacja, która prowadzi Cię krok po kroku.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/pl",
+          "keywords": [
+            "Yasmin"
+          ]
+        },
+        {
+          "locale": "pt-BR",
+          "promotionalText": "Começando a tomar pílula agora? O Pilll mostra na hora o comprimido do dia e avisa a pausa automaticamente. Simples de seguir desde o primeiro dia.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/pt-BR",
+          "keywords": [
+            "Yasmin"
+          ]
+        },
+        {
+          "locale": "ro",
+          "promotionalText": "Abia ai început pastila? Vezi dintr-o privire ce iei azi, iar pauza dintre plachete e semnalată automat. O aplicație simplă, ușor de urmat de la prima zi.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/ro",
+          "keywords": [
+            "Yaz",
+            "contraceptiv"
+          ]
+        },
+        {
+          "locale": "sk",
+          "promotionalText": "Práve začínate s antikoncepčnými pilulkami? Pilll na prvý pohľad ukáže dnešné číslo a sám upozorní na prestávku v užívaní. Jednoducho, bez blúdenia.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/sk",
+          "keywords": [
+            "antikoncepčný"
+          ]
+        },
+        {
+          "locale": "sv",
+          "promotionalText": "Ny med p-piller? Pilll visar dagens tablett med ett ögonkast och håller automatiskt koll på din uppehållsvecka – enkel vägledning från dag ett.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/sv",
+          "keywords": [
+            "Yasmin"
+          ]
+        },
+        {
+          "locale": "th",
+          "promotionalText": "เพิ่งเริ่มทานยาคุมก็ไม่ต้องกังวล แอปแสดงเม็ดยาที่ต้องทานวันนี้ให้เห็นทันที และแจ้งเตือนช่วงหยุดยาให้อัตโนมัติ ใช้งานง่าย ทานต่อเนื่องได้ไม่มีพลาด",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/th",
+          "keywords": [
+            "Freewell",
+            "Yas"
+          ]
+        },
+        {
+          "locale": "tr",
+          "promotionalText": "Doğum kontrol hapına yeni mi başladınız? Bugünkü hapınızı bir bakışta görün, ara verme haftası otomatik hatırlatılsın. Basit ve şaşırtmayan bir takip uygulaması.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/tr",
+          "keywords": [
+            "doğum kontrol"
+          ]
+        },
+        {
+          "locale": "uk",
+          "promotionalText": "Тільки починаєте приймати таблетки? Pilll одразу показує, яку пити сьогодні, і сам нагадує про тиждень перерви. Простий помічник із перших днів.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/uk",
+          "keywords": [
+            "Yasmin",
+            "протизаплідні",
+            "21 таблетка"
+          ]
+        },
+        {
+          "locale": "vi",
+          "promotionalText": "Mới bắt đầu uống thuốc tránh thai cũng không lo. Biết ngay viên cần uống hôm nay, tự động báo kỳ nghỉ thuốc. Ứng dụng quản lý đơn giản, dễ duy trì mỗi ngày.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/vi"
+        },
+        {
+          "locale": "zh-Hans",
+          "promotionalText": "刚开始服药也不用担心。今天该吃第几粒一目了然，停药期也会自动提醒。简单好懂，让你轻松坚持服药管理。",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-beginner/zh-Hans",
+          "keywords": [
+            "避孕药",
+            "非凡药",
+            "雅思",
+            "三相避孕药",
+            "雅思灵活版",
+            "达英35"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "birthcontrol-202607",
+      "visible": false,
+      "comment": "en-US の birth control / pill reminder 検索専用軸。英語圏展開の起点。variant: cpp-birthcontrol",
+      "locales": [
+        {
+          "locale": "en-US",
+          "promotionalText": "Never miss your birth control pill. Trusted by 140K+ users — repeat reminders, a pill pack you can see, and discreet notifications.",
+          "screenshot_dir": "scripts/generate_screenshots/artifacts/_variant-cpp-birthcontrol/en-US",
+          "keywords": [
+            "birth control",
+            "contraceptive",
+            "ring"
+          ]
+        },
+        {
+          "locale": "ja",
+          "promotionalText": "服用時刻に通知でお知らせ。飲むまで何度でもリマインドするので、うっかり飲み忘れを防げます。ピルシートそのままの画面で、どこまで飲んだかもひと目でわかります。",
+          "screenshot_dir": "cpp/assets/ja-appstore-202607"
+        }
+      ]
+    }
+  ]
+}

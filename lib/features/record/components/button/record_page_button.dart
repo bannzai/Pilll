@@ -6,13 +6,17 @@ import 'package:pilll/features/record/components/button/rest_duration_button.dar
 import 'package:pilll/features/record/components/button/taken_button.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/utils/local_notification.dart';
 
-class RecordPageButton extends HookConsumerWidget {
+class RecordPageButton extends ConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet currentPillSheet;
   final bool userIsPremiumOtTrial;
   final User user;
+
+  /// TakenButtonの深夜(0:00-2:00)服用記録の注意ダイアログの表示判定・文言に使う
+  final Setting setting;
 
   const RecordPageButton({
     super.key,
@@ -20,6 +24,7 @@ class RecordPageButton extends HookConsumerWidget {
     required this.currentPillSheet,
     required this.userIsPremiumOtTrial,
     required this.user,
+    required this.setting,
   });
 
   @override
@@ -48,6 +53,7 @@ class RecordPageButton extends HookConsumerWidget {
         pillSheetGroup: pillSheetGroup,
         activePillSheet: currentPillSheet,
         userIsPremiumOtTrial: userIsPremiumOtTrial,
+        setting: setting,
         registerReminderLocalNotification: registerReminderLocalNotification,
       );
     }

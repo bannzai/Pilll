@@ -2518,7 +2518,7 @@
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
   },
-  "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
+  "futureScheduleFeatureAppealTitle": "Annota i tuoi appuntamenti futuri",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
   },
@@ -2594,7 +2594,7 @@
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
   },
-  "alarmKitFeatureAppealBody": "iOS 26以降で利用できるAlarmKitを使って、サイレントモードや集中モードでも確実に鳴るアラームでピルの服用を知らせます。",
+  "alarmKitFeatureAppealBody": "Grazie ad AlarmKit, disponibile da iOS 26, la sveglia suona con certezza anche in modalità silenziosa o Focus, per non dimenticare mai di prendere la pillola.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
   },
@@ -2646,7 +2646,7 @@
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
   },
-  "reminderNotificationCustomizeWordFeatureAppealPoint1": "通知メッセージを自由に編集",
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "Modifica liberamente il messaggio di notifica",
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
   },
@@ -2670,7 +2670,7 @@
   "@recordPillFeatureAppealPoint1": {
     "description": ""
   },
-  "recordPillFeatureAppealPoint2": "間違えてもかんたん取り消し",
+  "recordPillFeatureAppealPoint2": "Facile da annullare in caso di errore",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
   },
@@ -2682,7 +2682,7 @@
   "@menstruationFeatureAppealPoint1": {
     "description": ""
   },
-  "menstruationFeatureAppealPoint2": "周周期を自動で把握",
+  "menstruationFeatureAppealPoint2": "Monitora automaticamente il ciclo",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
   },
@@ -2722,7 +2722,7 @@
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
   },
-  "healthCareIntegrationFeatureAppealPoint1": "生理記録を自動でデータ連携",
+  "healthCareIntegrationFeatureAppealPoint1": "Sincronizza automaticamente i dati del ciclo mestruale",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
   },
@@ -2730,7 +2730,7 @@
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
   },
-  "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応",
+  "healthCareIntegrationFeatureAppealPoint3": "Compatibile con l'app Salute di Apple",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
   },
@@ -2798,7 +2798,7 @@
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
   },
-  "launchError": "Questo testo è un messaggio di errore mostrato all'utente se si verifica un errore tecnico all'avvio dell'app (nel momento in cui viene aperta). Poiché può contenere dettagli come errori di connessione, traduci in modo che l'utente riesca a capire la situazione.",
+  "launchError": "Si è verificato un errore durante l'avvio dell'app.\n{ErrorMessagesConnection}\n\nDettagli: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2806,5 +2806,9 @@
         "type": "String"
       }
     }
-  }
+  },
+  "midnightTakenWarningDialogBody": "Le pillole risultano registrate come assunte fino al {takenDate}. La notifica di oggi ({takenDate}) delle {reminderTimes} non ti verrà consegnata.\nSe si tratta di un errore, annulla l'assunzione registrata.",
+  "midnightTakenWarningDialogNeverShowAgain": "Non mostrare più questo messaggio",
+  "midnightTakenWarningDialogSeeHowToRevert": "Vedi come annullare l'assunzione registrata",
+  "midnightTakenWarningDialogTitle": "Attenzione"
 }

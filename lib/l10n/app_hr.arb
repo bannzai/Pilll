@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "Poruka o grešci koja se prikazuje korisniku kada se dogodi tehnička greška prilikom pokretanja aplikacije (u trenutku otvaranja aplikacije). Sadrži detaljne informacije poput grešaka povezivanja, pa molimo prevedite tako da korisnik može razumjeti situaciju.",
+  "launchError": "Došlo je do greške prilikom pokretanja aplikacije.\n{ErrorMessagesConnection}\n\nDetalji: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2447,7 +2447,7 @@
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   },
-  "reminderNotificationCustomizeWordFeatureAppealTitle": "通知メッセージをカスタマイズ",
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Prilagodi poruku obavijesti",
   "@reminderNotificationCustomizeWordFeatureAppealTitle": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   },
@@ -2623,7 +2623,7 @@
   "@featureAppealLocationLabel": {
     "description": ""
   },
-  "criticalAlertFeatureAppealPoint1": "集中モード中でも通知が届く",
+  "criticalAlertFeatureAppealPoint1": "Obavijesti stižu čak i u načinu fokusiranja",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
   },
@@ -2799,12 +2799,16 @@
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
   },
-  "alarmKitFeatureAppealBody": "iOS 26以降で利用できるAlarmKitを使って、サイレントモードや集中モードでも確実に鳴るアラームでピルの服用を知らせます。",
+  "alarmKitFeatureAppealBody": "Pomoću AlarmKita, dostupnog od iOS-a 26, alarm će zazvoniti čak i u tihom načinu rada ili u načinu fokusiranja, tako da nikada nećete propustiti dozu.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
   },
   "todayPillNumberFeatureAppealBody": "Ako su se zbog zaborava ili zamjene brojevi na listi pilula i stvarno uzimanje pomaknuli, možete ručno prilagoditi broj pilule koji ćete uzeti danas. Isti zaslon možete otvoriti i iz prikaza broja pilule na početnom zaslonu.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
-  }
+  },
+  "midnightTakenWarningDialogBody": "Zapisano je uzimanje pilula zaključno s {takenDate}. Obavijest za danas, {takenDate}, u {reminderTimes} neće stići.\nAko je ovo pogreška, poništite zapis o uzimanju.",
+  "midnightTakenWarningDialogNeverShowAgain": "Ne prikazuj ponovno",
+  "midnightTakenWarningDialogSeeHowToRevert": "Pogledaj kako poništiti zapis o uzimanju",
+  "midnightTakenWarningDialogTitle": "Napomena"
 }

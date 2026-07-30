@@ -1883,7 +1883,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "Þetta er villuboð sem birtist notendum þegar einhver tæknileg villa kemur upp við ræsingu forritsins (í augnablikinu þegar forritið er opnað). Þar sem það inniheldur nákvæmar upplýsingar eins og tengivillur, vinsamlegast þýðið svo að notendur geti skilið ástandið.",
+  "launchError": "Villa kom upp við ræsingu forritsins.\n{ErrorMessagesConnection}\n\nNánar: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2543,7 +2543,7 @@
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   },
-  "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
+  "healthCareIntegrationFeatureAppealHeadline": "Þú getur samstillt við Apple Health",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   },
@@ -2631,7 +2631,7 @@
   "@featureAppealLocationLabel": {
     "description": ""
   },
-  "criticalAlertFeatureAppealPoint1": "集中モード中でも通知が届く",
+  "criticalAlertFeatureAppealPoint1": "Tilkynningar berast jafnvel í einbeitingarham",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
   },
@@ -2659,7 +2659,7 @@
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
   },
-  "appearanceModeDateFeatureAppealPoint2": "カレンダーを見なくても日付がわかる",
+  "appearanceModeDateFeatureAppealPoint2": "Sjá dagsetningu án þess að skoða dagatalið",
   "@appearanceModeDateFeatureAppealPoint2": {
     "description": ""
   },
@@ -2695,7 +2695,7 @@
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
   },
-  "calendarDiaryFeatureAppealPoint2": "体調をメモして振り返り",
+  "calendarDiaryFeatureAppealPoint2": "Skrá líðan og rifja hana upp",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
   },
@@ -2711,7 +2711,7 @@
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
   },
-  "futureScheduleFeatureAppealPoint2": "通院日をかんたん管理",
+  "futureScheduleFeatureAppealPoint2": "Stjórna læknisheimsóknum auðveldlega",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
   },
@@ -2747,7 +2747,7 @@
   "@quickRecordFeatureAppealPoint3": {
     "description": ""
   },
-  "creatingNewPillSheetFeatureAppealPoint1": "自动切换于药片卡完成",
+  "creatingNewPillSheetFeatureAppealPoint1": "Skiptir sjálfkrafa þegar pillublaðinu lýkur",
   "@creatingNewPillSheetFeatureAppealPoint1": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "todayPillNumberFeatureAppealShortDescription": "Ef númerin eru úr takti, lagaðu þau í stillingunum.",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
-  }
+  },
+  "midnightTakenWarningDialogBody": "Þú hefur skráð pillutöku til og með {takenDate}. Tilkynningin fyrir daginn í dag ({takenDate}) klukkan {reminderTimes} berst þér ekki.\nEf þetta voru mistök skaltu afturkalla tökuskráninguna.",
+  "midnightTakenWarningDialogNeverShowAgain": "Ekki sýna þetta aftur",
+  "midnightTakenWarningDialogSeeHowToRevert": "Skoða leiðbeiningar um að afturkalla tökuskráningu",
+  "midnightTakenWarningDialogTitle": "Athugið"
 }

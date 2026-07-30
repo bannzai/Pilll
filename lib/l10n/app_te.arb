@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "యాప్ ప్రారంభంలో (యాప్ తెరిచిన క్షణంలో) ఏదైనా సాంకేతిక లోపం సంభవించినప్పుడు వినియోగదారులకు చూపబడే లోపం సందేశం. కనెక్షన్ లోపాలు వంటి వివరణాత్మక సమాచారం కూడా ఉంటుంది కాబట్టి, వినియోగదారులు పరిస్థితిని అర్థం చేసుకోగలిగేలా అనువదించండి.",
+  "launchError": "యాప్‌ను ప్రారంభించేటప్పుడు లోపం సంభవించింది.\n{ErrorMessagesConnection}\n\nవివరాలు: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2411,7 +2411,7 @@
   "@lifetimePurchaseNotice1": {
     "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
   },
-  "lifetimePurchaseNotice2": "こちら",
+  "lifetimePurchaseNotice2": "ఇక్కడ",
   "@lifetimePurchaseNotice2": {
     "description": "サブスクリプション管理ページへのリンクテキスト"
   },
@@ -2439,7 +2439,7 @@
   "@criticalAlertFeatureAppealShortDescription": {
     "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
   },
-  "criticalAlertFeatureAppealHeadline": "サイレントモードでも通知が届く",
+  "criticalAlertFeatureAppealHeadline": "సైలెంట్ మోడ్‌లో కూడా నోటిఫికేషన్లు అందుతాయి",
   "@criticalAlertFeatureAppealHeadline": {
     "description": "Critical Alert機能のヘルプページのヘッドライン"
   },
@@ -2455,7 +2455,7 @@
   "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
   },
-  "reminderNotificationCustomizeWordFeatureAppealHeadline": "服用通知のメッセージを自由に編集",
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "మాత్ర తీసుకునే నోటిఫికేషన్ సందేశాన్ని స్వేచ్ఛగా సవరించుకోవచ్చు",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
   },
@@ -2523,7 +2523,7 @@
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
   },
-  "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
+  "futureScheduleFeatureAppealTitle": "మీ భవిష్యత్తు ప్రణాళికలను నమోదు చేయండి",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
   },
@@ -2547,7 +2547,7 @@
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   },
-  "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
+  "healthCareIntegrationFeatureAppealHeadline": "హెల్త్‌కేర్‌తో అనుసంధానం చేసుకోవచ్చు",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   },
@@ -2587,7 +2587,7 @@
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   },
-  "alarmKitFeatureAppealShortDescription": "サイレントでも確実に鳴る通知 -> placeholder",
+  "alarmKitFeatureAppealShortDescription": "సైలెంట్‌లో ఉన్నా ఖచ్చితంగా మోగే నోటిఫికేషన్",
   "@alarmKitFeatureAppealShortDescription": {
     "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
   },
@@ -2603,7 +2603,7 @@
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   },
-  "todayPillNumberFeatureAppealShortDescription": "\"番号がずれたら設定で修正\" を te に翻訳してください。",
+  "todayPillNumberFeatureAppealShortDescription": "సంఖ్య తేడా వస్తే సెట్టింగ్స్‌లో సరిచేయండి",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   },
@@ -2659,7 +2659,7 @@
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
   },
-  "appearanceModeDateFeatureAppealPoint1": "\"ピルシートを日付で表示\" の Telugu 翻訳",
+  "appearanceModeDateFeatureAppealPoint1": "పిల్ షీట్‌ను తేదీలతో చూపుతుంది",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
   },
@@ -2739,7 +2739,7 @@
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
   },
-  "quickRecordFeatureAppealPoint2": "アプリを開かずに完了",
+  "quickRecordFeatureAppealPoint2": "యాప్‌ను తెరవకుండానే పూర్తవుతుంది",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
   },
@@ -2755,11 +2755,11 @@
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "alarmKitFeatureAppealPoint1": "సైలెంట్/ఫోకస్ మోడ్‌లో కూడా మోగుతుంది",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint2": "目覚まし同様のアラーム音",
+  "alarmKitFeatureAppealPoint2": "అలారం గడియారం లాంటి శబ్దం",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "calendarDiaryFeatureAppealLocationHint": "తేదీపై ట్యాప్ చేసి మీ ఆరోగ్యాన్ని నమోదు చేయండి",
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "{takenDate} వరకు మాత్ర తీసుకున్నట్లు నమోదు చేయబడింది. {takenDate} అయిన ఈ రోజు {reminderTimes}కి వచ్చే నోటిఫికేషన్ మీకు అందదు.\nపొరపాటు జరిగితే, దయచేసి తీసుకున్న రికార్డును రద్దు చేయండి",
+  "midnightTakenWarningDialogNeverShowAgain": "మళ్లీ చూపించవద్దు",
+  "midnightTakenWarningDialogSeeHowToRevert": "తీసుకున్న రికార్డును ఎలా రద్దు చేయాలో చూడండి",
+  "midnightTakenWarningDialogTitle": "దయచేసి గమనించండి"
 }

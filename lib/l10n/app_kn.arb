@@ -1870,7 +1870,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "ಅಪ್ಲಿಕೇಶನ್ ಪ್ರಾರಂಭದಲ್ಲಿ ದೋಷ ಸಂಭವಿಸಿದೆ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+  "launchError": "ಅಪ್ಲಿಕೇಶನ್ ಪ್ರಾರಂಭದಲ್ಲಿ ದೋಷ ಸಂಭವಿಸಿದೆ.\n{ErrorMessagesConnection}\n\nವಿವರಗಳು: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2431,7 +2431,7 @@
   "@recommendSignupGeneralDescription": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
   },
-  "criticalAlertFeatureAppealTitle": "サイレントモードでも通知を受け取る",
+  "criticalAlertFeatureAppealTitle": "ಸೈಲೆಂಟ್ ಮೋಡ್‌ನಲ್ಲಿಯೂ ಸೂಚನೆ ಪಡೆಯಿರಿ",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
   },
@@ -2447,7 +2447,7 @@
   "@criticalAlertFeatureAppealBody": {
     "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
   },
-  "reminderNotificationCustomizeWordFeatureAppealTitle": "通知メッセージをカスタマイズ",
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "ಸೂಚನೆ ಸಂದೇಶವನ್ನು ಕಸ್ಟಮೈಸ್ ಮಾಡಿ",
   "@reminderNotificationCustomizeWordFeatureAppealTitle": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
   },
@@ -2455,7 +2455,7 @@
   "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
     "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
   },
-  "reminderNotificationCustomizeWordFeatureAppealHeadline": "服用通知のメッセージを自由に編集",
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "ಸೇವನೆ ಸೂಚನೆಯ ಸಂದೇಶವನ್ನು ಮುಕ್ತವಾಗಿ ಸಂಪಾದಿಸಿ",
   "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
     "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
   },
@@ -2495,7 +2495,7 @@
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
   },
-  "menstruationFeatureAppealTitle": "生理を記録・予測",
+  "menstruationFeatureAppealTitle": "ಮಾಸಿಕವನ್ನು ದಾಖಲಿಸಿ ಮತ್ತು ಮುನ್ಸೂಚಿಸಿ",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
   },
@@ -2571,7 +2571,7 @@
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
   },
-  "quickRecordFeatureAppealBody": "リマインダー通知を長押しすると「服用した」のアクションが表示され、アプリを開かずに服用を記録できます。",
+  "quickRecordFeatureAppealBody": "ರಿಮೈಂಡರ್ ಸೂಚನೆಯನ್ನು ಒತ್ತಿ ಹಿಡಿದರೆ ‘ಸೇವಿಸಲಾಗಿದೆ’ ಎಂಬ ಕ್ರಿಯೆ ಕಾಣಿಸುತ್ತದೆ, ಅಪ್ಲಿಕೇಶನ್ ತೆರೆಯದೆಯೇ ಸೇವನೆಯನ್ನು ದಾಖಲಿಸಬಹುದು.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
   },
@@ -2611,7 +2611,7 @@
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   },
-  "todayPillNumberFeatureAppealShortDescription": "番号がずれたら設定で修正",
+  "todayPillNumberFeatureAppealShortDescription": "ಸಂಖ್ಯೆ ತಪ್ಪಿದರೆ ಸೆಟ್ಟಿಂಗ್‌ನಲ್ಲಿ ಸರಿಪಡಿಸಿ",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   },
@@ -2619,7 +2619,7 @@
   "@todayPillNumberFeatureAppealHeadline": {
     "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
   },
-  "todayPillNumberFeatureAppealBody": "飲み忘れや取り違えでピルシート上の番号と実際の服用がずれたときに、今日飲むピル番号を手動で合わせ直せます。ホームのピル数字表示からも同じ画面を開けます。",
+  "todayPillNumberFeatureAppealBody": "ಮರೆಯುವುದು ಅಥವಾ ತಪ್ಪಾಗುವುದರಿಂದ ಪಿಲ್‌ಶೀಟ್‌ನ ಸಂಖ್ಯೆ ಮತ್ತು ವಾಸ್ತವ ಸೇವನೆಯ ನಡುವೆ ವ್ಯತ್ಯಾಸ ಉಂಟಾದಾಗ, ಇಂದು ಸೇವಿಸುವ ಪಿಲ್ ಸಂಖ್ಯೆಯನ್ನು ಕೈಯಾರೆ ಸರಿಪಡಿಸಬಹುದು. ಹೋಮ್ ಸ್ಕ್ರೀನ್‌ನ ಪಿಲ್ ಸಂಖ್ಯೆ ಪ್ರದರ್ಶನದಿಂದಲೂ ಇದೇ ಪರದೆಯನ್ನು ತೆರೆಯಬಹುದು.",
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
   },
@@ -2647,7 +2647,7 @@
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
   },
-  "criticalAlertFeatureAppealPoint2": "設定した時刻に確実にリマインド",
+  "criticalAlertFeatureAppealPoint2": "ಸೆಟ್ ಮಾಡಿದ ಸಮಯಕ್ಕೆ ಖಚಿತವಾಗಿ ನೆನಪಿಸುತ್ತದೆ",
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
   },
@@ -2679,11 +2679,11 @@
   "@appearanceModeDateFeatureAppealPoint3": {
     "description": ""
   },
-  "recordPillFeatureAppealPoint1": "ピルシートをタップで服用記録",
+  "recordPillFeatureAppealPoint1": "ಪಿಲ್‌ಶೀಟ್ ಟ್ಯಾಪ್ ಮಾಡಿ ಸೇವನೆ ದಾಖಲಿಸಿ",
   "@recordPillFeatureAppealPoint1": {
     "description": ""
   },
-  "recordPillFeatureAppealPoint2": "間違えてもかんたん取り消し",
+  "recordPillFeatureAppealPoint2": "ತಪ್ಪಾದರೂ ಸುಲಭವಾಗಿ ರದ್ದುಗೊಳಿಸಿ",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
   },
@@ -2691,11 +2691,11 @@
   "@recordPillFeatureAppealPoint3": {
     "description": ""
   },
-  "menstruationFeatureAppealPoint1": "生理開始日をかんたん記録",
+  "menstruationFeatureAppealPoint1": "ಮಾಸಿಕ ಆರಂಭದ ದಿನಾಂಕವನ್ನು ಸುಲಭವಾಗಿ ದಾಖಲಿಸಿ",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
   },
-  "menstruationFeatureAppealPoint2": "周周期を自動で把握",
+  "menstruationFeatureAppealPoint2": "ಚಕ್ರವನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಗ್ರಹಿಸಿ",
   "@menstruationFeatureAppealPoint2": {
     "description": ""
   },
@@ -2711,7 +2711,7 @@
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
   },
-  "calendarDiaryFeatureAppealPoint3": "過去の記録をカレンダーで振り返り",
+  "calendarDiaryFeatureAppealPoint3": "ಹಿಂದಿನ ದಾಖಲೆಗಳನ್ನು ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ಮರುಪರಿಶೀಲಿಸಿ",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
   },
@@ -2723,11 +2723,11 @@
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
   },
-  "futureScheduleFeatureAppealPoint2": "通院日をかんたん管理",
+  "futureScheduleFeatureAppealPoint2": "ದವಾಖಾನೆ ಭೇಟಿಯ ದಿನಾಂಕವನ್ನು ಸುಲಭವಾಗಿ ನಿರ್ವಹಿಸಿ",
   "@futureScheduleFeatureAppealPoint2": {
     "description": ""
   },
-  "futureScheduleFeatureAppealPoint3": "リマインダーで通知",
+  "futureScheduleFeatureAppealPoint3": "ರಿಮೈಂಡರ್ ಮೂಲಕ ಸೂಚನೆ",
   "@futureScheduleFeatureAppealPoint3": {
     "description": ""
   },
@@ -2743,7 +2743,7 @@
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
   },
-  "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応",
+  "healthCareIntegrationFeatureAppealPoint3": "Apple ಹೆಲ್ತ್‌ಕೇರ್‌ಗೆ ಬೆಂಬಲ",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
   },
@@ -2751,7 +2751,7 @@
   "@quickRecordFeatureAppealPoint1": {
     "description": ""
   },
-  "quickRecordFeatureAppealPoint2": "アプリを開かずに完了",
+  "quickRecordFeatureAppealPoint2": "ಅಪ್ಲಿಕೇಶನ್ ತೆರೆಯದೆಯೇ ಪೂರ್ಣಗೊಳಿಸಿ",
   "@quickRecordFeatureAppealPoint2": {
     "description": ""
   },
@@ -2771,11 +2771,11 @@
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "alarmKitFeatureAppealPoint1": "ಸೈಲೆಂಟ್/ಫೋಕಸ್ ಮೋಡ್‌ನಲ್ಲಿಯೂ ಮೊಳಗುತ್ತದೆ",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint2": "目覚まし同様のアラーム音",
+  "alarmKitFeatureAppealPoint2": "ಗಡಿಯಾರದ ಅಲಾರ್ಮ್‌ನಂತಹ ಸೂಚನಾ ಶಬ್ದ",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
   },
@@ -2787,7 +2787,7 @@
   "@todayPillNumberFeatureAppealPoint1": {
     "description": ""
   },
-  "todayPillNumberFeatureAppealPoint2": "\"設定タブから変更できる\" を kn に翻訳してください。",
+  "todayPillNumberFeatureAppealPoint2": "ಸೆಟ್ಟಿಂಗ್ ಟ್ಯಾಬ್‌ನಿಂದ ಬದಲಾಯಿಸಬಹುದು",
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
   },
@@ -2799,12 +2799,16 @@
   "@restDurationFeatureAppealPoint1": {
     "description": ""
   },
-  "restDurationFeatureAppealPoint2": "ピルシート右上の歯車から開始",
+  "restDurationFeatureAppealPoint2": "ಪಿಲ್‌ಶೀಟ್‌ನ ಬಲ ಮೇಲ್ಭಾಗದ ಗೇರ್ ಐಕಾನ್‌ನಿಂದ ಪ್ರಾರಂಭಿಸಿ",
   "@restDurationFeatureAppealPoint2": {
     "description": ""
   },
   "restDurationFeatureAppealPoint3": "ಅವಧಿಯನ್ನು ಸಂಪಾದಿಸಲು ಮತ್ತು ಮರುಪ್ರಾರಂಭಿಸಲು ಸುಲಭ",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "{takenDate} ವರೆಗಿನ ಪಿಲ್ ಸೇವನೆ ದಾಖಲಾಗಿದೆ. ಇಂದು ({takenDate}) {reminderTimes} ಸಮಯದ ಸೂಚನೆ ನಿಮಗೆ ತಲುಪುವುದಿಲ್ಲ.\nಇದು ತಪ್ಪಾಗಿದ್ದರೆ, ದಯವಿಟ್ಟು ಸೇವನೆಯನ್ನು ರದ್ದುಗೊಳಿಸಿ",
+  "midnightTakenWarningDialogNeverShowAgain": "ಇನ್ನು ಮುಂದೆ ತೋರಿಸಬೇಡಿ",
+  "midnightTakenWarningDialogSeeHowToRevert": "ಸೇವನೆ ರದ್ದುಗೊಳಿಸುವ ವಿಧಾನವನ್ನು ನೋಡಿ",
+  "midnightTakenWarningDialogTitle": "ದಯವಿಟ್ಟು ಗಮನಿಸಿ"
 }

@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "翻訳対象の具体的な日本語のエラーメッセージが提供されていません。実際の日本語のテキストを提供してください。",
+  "launchError": "ਐਪ ਸ਼ੁਰੂ ਕਰਨ ਦੌਰਾਨ ਇੱਕ ਗਲਤੀ ਹੋਈ ਹੈ।\n{ErrorMessagesConnection}\n\nਵੇਰਵੇ: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint3": "ਮਿਆਦ ਦੀ ਸੰਪਾਦਨਾ ਅਤੇ ਮੁੜ ਸ਼ੁਰੂ ਕਰਨਾ ਵੀ ਆਸਾਨ",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "{takenDate} ਤੱਕ ਦੀ ਗੋਲੀ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਹੋ ਚੁੱਕਾ ਹੈ। ਅੱਜ ({takenDate}) {reminderTimes} ਦੀ ਸੂਚਨਾ ਤੁਹਾਨੂੰ ਨਹੀਂ ਮਿਲੇਗੀ।\nਜੇ ਇਹ ਗਲਤੀ ਨਾਲ ਹੋਇਆ ਹੈ ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਸੇਵਨ ਰਿਕਾਰਡ ਨੂੰ ਰੱਦ ਕਰੋ",
+  "midnightTakenWarningDialogNeverShowAgain": "ਦੁਬਾਰਾ ਨਾ ਦਿਖਾਓ",
+  "midnightTakenWarningDialogSeeHowToRevert": "ਸੇਵਨ ਰਿਕਾਰਡ ਰੱਦ ਕਰਨ ਦਾ ਤਰੀਕਾ ਦੇਖੋ",
+  "midnightTakenWarningDialogTitle": "ਕਿਰਪਾ ਕਰਕੇ ਧਿਆਨ ਦਿਓ"
 }

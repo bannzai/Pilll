@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint3": "D'Bearbeitig un d'Wiederufnahm vun de Periode isch au eifach",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogTitle": "Bitte beachten",
+  "midnightTakenWarningDialogBody": "D'Iinahm isch bis und mit {takenDate} als gnaa erfasst worde. D'Benachrichtigung vo hüt, am {takenDate}, um {reminderTimes} wird Ihne dromit nöd zuegstellt.\nFalls das aus Versehe passiert isch, mached Sie bitte d'Iinahm rückgängig.",
+  "midnightTakenWarningDialogSeeHowToRevert": "Aaleitig zum Rückgängigmache vo de Iinahm aaluege",
+  "midnightTakenWarningDialogNeverShowAgain": "Nie me aazeige"
 }

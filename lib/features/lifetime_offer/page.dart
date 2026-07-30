@@ -10,7 +10,6 @@ import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/error/page.dart';
 import 'package:pilll/features/lifetime_offer/lifetime_offer_copy_variant.dart';
-import 'package:pilll/features/lifetime_offer/lifetime_offer_plan.dart';
 import 'package:pilll/features/lifetime_offer/provider.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_footer.dart';
@@ -29,12 +28,12 @@ import 'package:url_launcher/url_launcher.dart';
 class LifetimeOfferPage extends HookConsumerWidget {
   final PaywallSource source;
   final LifetimeOfferCopyVariant copyVariant;
-  final LifetimeOfferPlan offerPlan;
+  final bool isMonthly300Offer;
   const LifetimeOfferPage({
     super.key,
     required this.source,
     required this.copyVariant,
-    required this.offerPlan,
+    required this.isMonthly300Offer,
   });
 
   @override
@@ -45,7 +44,7 @@ class LifetimeOfferPage extends HookConsumerWidget {
               user: user,
               source: source,
               copyVariant: copyVariant,
-              offerPlan: offerPlan,
+              isMonthly300Offer: isMonthly300Offer,
             );
           },
           error: (error, stackTrace) => UniversalErrorPage(
@@ -64,14 +63,14 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
   final User user;
   final PaywallSource source;
   final LifetimeOfferCopyVariant copyVariant;
-  final LifetimeOfferPlan offerPlan;
+  final bool isMonthly300Offer;
 
   const LifetimeOfferPageBody({
     super.key,
     required this.user,
     required this.source,
     required this.copyVariant,
-    required this.offerPlan,
+    required this.isMonthly300Offer,
   });
 
   @override
@@ -90,10 +89,7 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
     // ページを開いたまま表示期限を迎えた場合に購入導線を無効化するための判定。false→trueの変化時のみ再ビルドされる
     final isOverLifetimeOfferDeadline = ref.watch(isOverLifetimeOfferDeadlineProvider);
 
-    final offerPackage = switch (offerPlan) {
-      LifetimeOfferPlan.lifetime => lifetimeDiscountPackage,
-      LifetimeOfferPlan.monthly300 => monthlyDiscountPackage,
-    };
+    final offerPackage = isMonthly300Offer ? monthlyDiscountPackage : lifetimeDiscountPackage;
     if (offerPackage == null) {
       return const ScaffoldIndicator();
     }
@@ -178,13 +174,12 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
                 ],
                 const SizedBox(height: 12),
                 Text(
-                  switch (offerPlan) {
-                    LifetimeOfferPlan.monthly300 => '長くご愛顧いただいている皆様へ\n月額プランのご案内です',
-                    LifetimeOfferPlan.lifetime => switch (copyVariant) {
-                        LifetimeOfferCopyVariant.defaultVariant => '長く使ってくださっている方へ\n買い切りプランのご案内です',
-                        LifetimeOfferCopyVariant.ownership => '一度の購入で、ずっとプレミアム。\n月々のお支払いは不要です',
-                      },
-                  },
+                  isMonthly300Offer
+                      ? '長くご愛顧いただいている皆様へ\n月額プランのご案内です'
+                      : switch (copyVariant) {
+                          LifetimeOfferCopyVariant.defaultVariant => '長く使ってくださっている方へ\n買い切りプランのご案内です',
+                          LifetimeOfferCopyVariant.ownership => '一度の購入で、ずっとプレミアム。\n月々のお支払いは不要です',
+                        },
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     color: TextColor.main,
@@ -207,11 +202,11 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
                 const SizedBox(height: 8),
                 const LifetimeOfferCountdownText(),
                 const SizedBox(height: 28),
-                if (offerPlan == LifetimeOfferPlan.lifetime && isActiveSubscriber) ...[
+                if (!isMonthly300Offer && isActiveSubscriber) ...[
                   const LifetimeOfferSubscriptionCancelNotice(),
                   const SizedBox(height: 16),
                 ],
-                if (offerPlan == LifetimeOfferPlan.lifetime)
+                if (!isMonthly300Offer)
                   LifetimeOfferPriceCard(
                     lifetimeDiscountPackage: offerPackage,
                     lifetimePremiumPackage: lifetimePremiumPackage,
@@ -235,7 +230,7 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
                                 parameters: {
                                   'paywall_source': source.value,
                                   'copy_variant': copyVariant.value,
-                                  'offer_plan': offerPlan.analyticsValue
+                                  'offer_plan': isMonthly300Offer ? 'monthly_300' : 'lifetime'
                                 },
                               );
                               if (isLoading.value) return;
@@ -496,12 +491,12 @@ Future<void> showLifetimeOfferPage(
   BuildContext context, {
   required PaywallSource source,
   required LifetimeOfferCopyVariant copyVariant,
-  required LifetimeOfferPlan offerPlan,
+  required bool isMonthly300Offer,
 }) async {
   analytics.logScreenView(screenName: 'LifetimeOfferPage');
   analytics.logEvent(
     name: 'paywall_viewed',
-    parameters: {'paywall_source': source.value, 'copy_variant': copyVariant.value, 'offer_plan': offerPlan.analyticsValue},
+    parameters: {'paywall_source': source.value, 'copy_variant': copyVariant.value, 'offer_plan': isMonthly300Offer ? 'monthly_300' : 'lifetime'},
   );
   analytics.setUserProperties('lifetime_offer_variant', copyVariant.value);
 
@@ -511,7 +506,7 @@ Future<void> showLifetimeOfferPage(
       builder: (_) => LifetimeOfferPage(
         source: source,
         copyVariant: copyVariant,
-        offerPlan: offerPlan,
+        isMonthly300Offer: isMonthly300Offer,
       ),
     ),
   );

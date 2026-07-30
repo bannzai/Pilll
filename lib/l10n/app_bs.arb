@@ -1870,7 +1870,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "Došlo je do tehničke greške tokom pokretanja aplikacije. Molimo pokušajte ponovo kasnije.",
+  "launchError": "Došlo je do greške prilikom pokretanja aplikacije.\n{ErrorMessagesConnection}\n\nDetalji: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2814,5 +2814,9 @@
   "restDurationFeatureAppealPoint3": "Lako uređivanje i nastavak perioda",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "Zapisi o uzimanju su izvršeni zaključno sa {takenDate}. Današnje ({takenDate}) obavještenje u {reminderTimes} neće biti dostavljeno.\nAko je ovo greška, molimo poništite zapis o uzimanju.",
+  "midnightTakenWarningDialogNeverShowAgain": "Ne prikazuj ponovo",
+  "midnightTakenWarningDialogSeeHowToRevert": "Pogledajte kako poništiti zapis o uzimanju",
+  "midnightTakenWarningDialogTitle": "Napomena"
 }

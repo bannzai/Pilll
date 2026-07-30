@@ -2798,7 +2798,7 @@
   "@restDurationFeatureAppealPoint3": {
     "description": ""
   },
-  "launchError": "Toto chybové hlášení se zobrazí uživateli, pokud při spuštění aplikace (v okamžiku jejího otevření) nastane nějaká technická chyba. Zahrnuje i podrobnosti, například chyby připojení, proto jej přeložte tak, aby uživatel situaci porozuměl.",
+  "launchError": "Při spuštění aplikace došlo k chybě.\n{ErrorMessagesConnection}\n\nPodrobnosti: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2806,5 +2806,9 @@
         "type": "String"
       }
     }
-  }
+  },
+  "midnightTakenWarningDialogTitle": "Upozornění",
+  "midnightTakenWarningDialogBody": "Užití pilulek je zaznamenáno až do data {takenDate}. Dnešní ({takenDate}) upozornění na užití v {reminderTimes} vám proto nepřijde.\nPokud šlo o omyl, zrušte prosím záznam o užití.",
+  "midnightTakenWarningDialogNeverShowAgain": "Příště nezobrazovat",
+  "midnightTakenWarningDialogSeeHowToRevert": "Zobrazit návod, jak zrušit záznam o užití"
 }

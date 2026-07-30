@@ -2538,7 +2538,7 @@
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   },
-  "healthCareIntegrationFeatureAppealBody": "Pilllで記録した生理データをヘルスケアアプリと自動連携できます。ヘルスケア上の他の健康データと一緒に確認したり、他のアプリでも生理データを使えるようになります。",
+  "healthCareIntegrationFeatureAppealBody": "Podatke o menstruaciji, ki jih zabeležite v aplikaciji Pilll, lahko samodejno sinhronizirate z aplikacijo Zdravje. Ogledate si jih lahko skupaj z drugimi zdravstvenimi podatki, uporabljate pa jih lahko tudi v drugih aplikacijah, ki berejo podatke iz aplikacije Zdravje.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
   },
@@ -2562,7 +2562,7 @@
   "@creatingNewPillSheetFeatureAppealShortDescription": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   },
-  "creatingNewPillSheetFeatureAppealHeadline": "次のピルシートを自動で作成",
+  "creatingNewPillSheetFeatureAppealHeadline": "Samodejno ustvarite naslednji list tabletk",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
   },
@@ -2634,7 +2634,7 @@
   "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
     "description": ""
   },
-  "reminderNotificationCustomizeWordFeatureAppealPoint2": "每日の服用通知に反映",
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "Odraža se v vsakodnevnih obvestilih o jemanju",
   "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
     "description": ""
   },
@@ -2666,7 +2666,7 @@
   "@recordPillFeatureAppealPoint3": {
     "description": ""
   },
-  "menstruationFeatureAppealPoint1": "生理開始日をかんたん記録",
+  "menstruationFeatureAppealPoint1": "Preprost vnos datuma začetka menstruacije",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
   },
@@ -2678,7 +2678,7 @@
   "@menstruationFeatureAppealPoint3": {
     "description": ""
   },
-  "calendarDiaryFeatureAppealPoint1": "カレンダーで記録を一覧",
+  "calendarDiaryFeatureAppealPoint1": "Pregled zapisov v koledarju",
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
   },
@@ -2694,7 +2694,7 @@
   "@calendarDiaryFeatureAppealLocationHint": {
     "description": ""
   },
-  "futureScheduleFeatureAppealPoint1": "カレンダーに予定を書き込み",
+  "futureScheduleFeatureAppealPoint1": "Vnos dogodkov v koledar",
   "@futureScheduleFeatureAppealPoint1": {
     "description": ""
   },
@@ -2714,7 +2714,7 @@
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
   },
-  "healthCareIntegrationFeatureAppealPoint2": "同期ajte z aplikacijo za zdravje",
+  "healthCareIntegrationFeatureAppealPoint2": "Sinhronizacija z aplikacijo Zdravje",
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
   },
@@ -2798,7 +2798,7 @@
   "@todayPillNumberFeatureAppealBody": {
     "description": "今日の服用番号変更機能のヘルプページの本文"
   },
-  "launchError": "To je sporočilo o napaki, ki se prikaže uporabniku, če se ob zagonu aplikacije (ko aplikacijo odprete) pojavi tehnična napaka. Vključuje tudi podrobnosti, na primer napake povezave, zato naj bo prevod tak, da uporabnik razume situacijo.",
+  "launchError": "Med zagonom aplikacije je prišlo do napake.\n{ErrorMessagesConnection}\n\nPodrobnosti: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2806,5 +2806,9 @@
         "type": "String"
       }
     }
-  }
+  },
+  "midnightTakenWarningDialogBody": "Jemanje je zabeleženo do {takenDate}. Današnje ({takenDate}) obvestilo ob {reminderTimes} zato ne bo prejeto.\nČe je prišlo do napake, prosimo, razveljavite zapis o jemanju.",
+  "midnightTakenWarningDialogNeverShowAgain": "Ne prikaži več",
+  "midnightTakenWarningDialogSeeHowToRevert": "Poglejte, kako razveljaviti zapis o jemanju",
+  "midnightTakenWarningDialogTitle": "Bodite pozorni"
 }

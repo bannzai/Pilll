@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "Chybová správa zobrazená používateľovi v prípade, že pri spustení aplikácie (v momente otvorenia aplikácie) dôjde k nejakej technickej chybe. Obsahuje podrobné informácie ako napríklad chyby pripojenia, aby používateľ mohol pochopiť situáciu.",
+  "launchError": "Pri spustení aplikácie došlo k chybe.\n{ErrorMessagesConnection}\n\nPodrobnosti: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2583,7 +2583,7 @@
   "@creatingNewPillSheetFeatureAppealShortDescription": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   },
-  "creatingNewPillSheetFeatureAppealHeadline": "次のピルシートを自動で作成",
+  "creatingNewPillSheetFeatureAppealHeadline": "Ďalší pilulkový list sa vytvorí automaticky",
   "@creatingNewPillSheetFeatureAppealHeadline": {
     "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
   },
@@ -2591,7 +2591,7 @@
   "@creatingNewPillSheetFeatureAppealBody": {
     "description": "ピルシート自動追加機能のヘルプページの本文"
   },
-  "alarmKitFeatureAppealTitle": "目覚ましのように鳴るアラーム",
+  "alarmKitFeatureAppealTitle": "Alarm, ktorý znie ako budík",
   "@alarmKitFeatureAppealTitle": {
     "description": "AlarmKit機能のFeatureAppeal Barタイトル"
   },
@@ -2603,11 +2603,11 @@
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
   },
-  "alarmKitFeatureAppealBody": "iOS 26以降で利用できるAlarmKitを使って、サイレントモードや集中モードでも確実に鳴るアラームでピルの服用を知らせます。",
+  "alarmKitFeatureAppealBody": "Vďaka funkcii AlarmKit, ktorá je dostupná od iOS 26, vás na užitie pilulky upozorní budík, ktorý spoľahlivo zaznie aj v tichom režime alebo v režime sústredenosti.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
   },
-  "todayPillNumberFeatureAppealTitle": "今日の服用番号を合わせる",
+  "todayPillNumberFeatureAppealTitle": "Zosúladiť dnešné číslo pilulky",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   },
@@ -2643,7 +2643,7 @@
   "@featureAppealLocationLabel": {
     "description": ""
   },
-  "criticalAlertFeatureAppealPoint1": "集中モード中でも通知が届く",
+  "criticalAlertFeatureAppealPoint1": "Oznámenia dorazia aj v režime sústredenosti",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
   },
@@ -2739,7 +2739,7 @@
   "@healthCareIntegrationFeatureAppealPoint2": {
     "description": ""
   },
-  "healthCareIntegrationFeatureAppealPoint3": "Appleヘルスケア対応",
+  "healthCareIntegrationFeatureAppealPoint3": "Podporuje aplikáciu Zdravie",
   "@healthCareIntegrationFeatureAppealPoint3": {
     "description": ""
   },
@@ -2775,7 +2775,7 @@
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint3": "iOS 26以降・設定タブから有効化",
+  "alarmKitFeatureAppealPoint3": "iOS 26 alebo novšie · Zapnete na karte Nastavenia",
   "@alarmKitFeatureAppealPoint3": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "menstruationFeatureAppealPoint3": "Prispôsobiť nastavenia",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "Záznam o užití bol vykonaný až do dňa {takenDate}. Dnešné upozornenie ({takenDate}) o {reminderTimes} preto nebude doručené.\nAk ide o omyl, zrušte prosím záznam o užití.",
+  "midnightTakenWarningDialogNeverShowAgain": "Túto správu už nezobrazovať",
+  "midnightTakenWarningDialogSeeHowToRevert": "Pozrieť návod na zrušenie záznamu o užití",
+  "midnightTakenWarningDialogTitle": "Upozornenie"
 }

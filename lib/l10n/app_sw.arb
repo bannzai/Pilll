@@ -1116,7 +1116,7 @@
       }
     }
   },
-  "todayPillNumber": "{nambariYaDawaYaLeo}",
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "@todayPillNumber": {
     "description": "ピルシート上で今日服用すべきピルの番号（例：1錠目、15錠目など）を表示する際に使用されます。リマインダー通知やログ記録でも参照される重要な値です。",
     "placeholders": {
@@ -1883,7 +1883,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "Hii ni ujumbe wa hitilafu ambao unaonyeshwa kwa mtumiaji wakati hitilafu ya kiufundi yoyote inatokea wakati wa kuzindua programu (mara tu programu inapofunguliwa). Kwa kuwa inajumuisha maelezo ya kina kama vile hitilafu za muunganisho, tafsiri ili mtumiaji aweze kuelewa hali.",
+  "launchError": "Hitilafu imetokea wakati wa kuzindua programu.\n{ErrorMessagesConnection}\n\nMaelezo: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2595,7 +2595,7 @@
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
   },
-  "alarmKitFeatureAppealBody": "iOS 26以降で利用できるAlarmKitを使って、サイレントモードや集中モードでも確実に鳴るアラームでピルの服用を知らせます。",
+  "alarmKitFeatureAppealBody": "Kwa kutumia AlarmKit, inayopatikana kuanzia iOS 26, utapata kengele inayolia kwa uhakika hata wakati simu iko kimya au katika hali ya kuzingatia, ili kukukumbusha kuchukua kidonge.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
   },
@@ -2603,7 +2603,7 @@
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   },
-  "todayPillNumberFeatureAppealShortDescription": "番号がずれたら設定で修正",
+  "todayPillNumberFeatureAppealShortDescription": "Ikiwa nambari itapotoka, irekebishe kwenye mipangilio",
   "@todayPillNumberFeatureAppealShortDescription": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
   },
@@ -2655,7 +2655,7 @@
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
   },
-  "appearanceModeDateFeatureAppealPoint1": "ピルシートを日付で表示",
+  "appearanceModeDateFeatureAppealPoint1": "Onyesha karatasi ya vidonge kwa tarehe",
   "@appearanceModeDateFeatureAppealPoint1": {
     "description": ""
   },
@@ -2699,7 +2699,7 @@
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
   },
-  "calendarDiaryFeatureAppealPoint3": "過去の記録をカレンダーで振り返り",
+  "calendarDiaryFeatureAppealPoint3": "Pitia rekodi za zamani kwenye kalenda",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "dayNumber": "siku",
   "@dayNumber": {
     "description": "服用日数モードで使用される単位です。「1日目」「2日目」のように表示される際の「日目」部分に相当します。"
-  }
+  },
+  "midnightTakenWarningDialogBody": "Vidonge vimerekodiwa kama vimechukuliwa hadi {takenDate}. Arifa ya ukumbusho ya leo ({takenDate}) saa {reminderTimes} haitatumwa.\nIkiwa hii ni kosa, tafadhali batilisha rekodi ya kuchukua kidonge.",
+  "midnightTakenWarningDialogNeverShowAgain": "Usionyeshe tena",
+  "midnightTakenWarningDialogSeeHowToRevert": "Ona jinsi ya kubatilisha rekodi ya kuchukua",
+  "midnightTakenWarningDialogTitle": "Tafadhali zingatia"
 }

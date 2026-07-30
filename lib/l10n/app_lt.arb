@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "Tai klaidos pranešimas, rodomas vartotojui, kai paleidžiant programėlę (ją atidarant) įvyksta techninė klaida. Kadangi jame pateikiama išsami informacija, pvz., apie ryšio klaidas, prašome išversti taip, kad vartotojas galėtų suprasti situaciją.",
+  "launchError": "Paleidžiant programėlę įvyko klaida.\n{ErrorMessagesConnection}\n\nIšsami informacija: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2635,7 +2635,7 @@
   "@featureAppealLocationLabel": {
     "description": ""
   },
-  "criticalAlertFeatureAppealPoint1": "集中モード中でも通知が届く",
+  "criticalAlertFeatureAppealPoint1": "Gaukite pranešimus net veikiant Focus režimui",
   "@criticalAlertFeatureAppealPoint1": {
     "description": ""
   },
@@ -2655,7 +2655,7 @@
   "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
     "description": ""
   },
-  "reminderNotificationCustomizeWordFeatureAppealPoint3": "自分だけの通知メッセージに",
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "Susikurkite tik jums skirtą pranešimą",
   "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
     "description": ""
   },
@@ -2699,11 +2699,11 @@
   "@calendarDiaryFeatureAppealPoint1": {
     "description": ""
   },
-  "calendarDiaryFeatureAppealPoint2": "体調をメモして振り返り",
+  "calendarDiaryFeatureAppealPoint2": "Užsirašyti savijautą ir ją apmąstyti",
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
   },
-  "calendarDiaryFeatureAppealPoint3": "過去の記録をカレンダーで振り返り",
+  "calendarDiaryFeatureAppealPoint3": "Peržiūrėti ankstesnius įrašus kalendoriuje",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
   },
@@ -2727,7 +2727,7 @@
   "@futureScheduleFeatureAppealLocationHint": {
     "description": ""
   },
-  "healthCareIntegrationFeatureAppealPoint1": "生理記録を自動でデータ連携",
+  "healthCareIntegrationFeatureAppealPoint1": "Automatiškai sinchronizuoti menstruacijų įrašus",
   "@healthCareIntegrationFeatureAppealPoint1": {
     "description": ""
   },
@@ -2767,7 +2767,7 @@
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint2": "目覚まし同様のアラーム音",
+  "alarmKitFeatureAppealPoint2": "Žadintuvo tipo įspėjimo garsas",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "healthCareIntegrationFeatureAppealBody": "Pilll programoje įvestus menstruacijų duomenis galite automatiškai sinchronizuoti su sveikatos programėle. Juos galėsite peržiūrėti kartu su kitais sveikatos duomenimis ir taip pat panaudoti kitose programėlėse.",
   "@healthCareIntegrationFeatureAppealBody": {
     "description": "ヘルスケア連携機能のヘルプページの本文"
-  }
+  },
+  "midnightTakenWarningDialogBody": "Vartojimas užregistruotas iki {takenDate}. Šiandienos ({takenDate}) priminimas {reminderTimes} nebus pristatytas.\nJei tai klaida, atšaukite vartojimo įrašą.",
+  "midnightTakenWarningDialogNeverShowAgain": "Daugiau nerodyti",
+  "midnightTakenWarningDialogSeeHowToRevert": "Peržiūrėti, kaip atšaukti vartojimo įrašą",
+  "midnightTakenWarningDialogTitle": "Atkreipkite dėmesį"
 }

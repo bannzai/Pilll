@@ -12,6 +12,7 @@ import 'package:pilll/components/organisms/pill_mark/pill_mark_with_number_layou
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_weekday_line.dart';
 import 'package:pilll/features/release_note/release_note.dart';
+import 'package:pilll/features/record/components/button/midnight_taken_warning_dialog.dart';
 import 'package:pilll/features/record/components/pill_sheet/components/pill_number.dart';
 import 'package:pilll/features/record/util/request_in_app_review.dart';
 import 'package:pilll/provider/revert_take_pill.dart';
@@ -29,7 +30,7 @@ import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/local_notification.dart';
 
 // ここを編集する時は historical_pill_sheet_group/component/pill_sheet.dart も編集する
-class RecordPagePillSheet extends HookConsumerWidget {
+class RecordPagePillSheet extends ConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet pillSheet;
   final Setting setting;
@@ -175,13 +176,26 @@ class RecordPagePillSheet extends HookConsumerWidget {
                 requestInAppReview();
                 showReleaseNotePreDialog(context);
 
-                await _takeWithPillNumber(
-                  takePill,
-                  registerReminderLocalNotification,
-                  pillSheetGroup: pillSheetGroup,
-                  pillNumberInPillSheet: pillNumberInPillSheet,
-                  pillSheet: pillSheet,
-                );
+                // _takeWithPillNumberは服用記録されないケースでnullを返す
+                final isRecorded = await _takeWithPillNumber(
+                      takePill,
+                      registerReminderLocalNotification,
+                      pillSheetGroup: pillSheetGroup,
+                      pillNumberInPillSheet: pillNumberInPillSheet,
+                      pillSheet: pillSheet,
+                    ) !=
+                    null;
+                // 実際に服用記録された場合のみダイアログの表示判定をする。記録された場合activePillSheetは必ず存在する
+                final activePillSheet = pillSheetGroup.activePillSheet;
+                if (isRecorded && activePillSheet != null && context.mounted) {
+                  showMidnightTakenWarningDialogIfNeeded(
+                    context: context,
+                    takenDate: pillSheet.displayPillTakeDate(pillNumberInPillSheet),
+                    recordedAt: now(),
+                    setting: setting,
+                    activePillSheet: activePillSheet,
+                  );
+                }
               }
             } catch (exception, stack) {
               errorLogger.recordError(exception, stack);

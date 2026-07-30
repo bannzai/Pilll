@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "実際のメッセージテキストを確認できました。ウズベク語に翻訳します：\n\nIlovani ishga tushirishda xatolik yuz berdi\n{ErrorMessagesConnection}\n\nTafsilotlar:",
+  "launchError": "Ilovani ishga tushirishda xatolik yuz berdi.\n{ErrorMessagesConnection}\n\nTafsilotlar: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2543,7 +2543,7 @@
   "@futureScheduleFeatureAppealBody": {
     "description": "未来の予定機能のヘルプページの本文"
   },
-  "healthCareIntegrationFeatureAppealTitle": "ヘルスケアと連携",
+  "healthCareIntegrationFeatureAppealTitle": "Sog'liqni saqlash ilovasi bilan sinxronlash",
   "@healthCareIntegrationFeatureAppealTitle": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
   },
@@ -2551,7 +2551,7 @@
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   },
-  "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
+  "healthCareIntegrationFeatureAppealHeadline": "Apple Health bilan sinxronlashtirish mumkin",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   },
@@ -2571,7 +2571,7 @@
   "@quickRecordFeatureAppealHeadline": {
     "description": "クイックレコード機能のヘルプページのヘッドライン"
   },
-  "quickRecordFeatureAppealBody": "リマインダー通知を長押しすると「服用した」のアクションが表示され、アプリを開かずに服用を記録できます。",
+  "quickRecordFeatureAppealBody": "Eslatma bildirishnomasini uzoq bosib turing — \"Qabul qilindi\" amali ko'rinadi va ilovani ochmasdan dori qabulingizni qayd etishingiz mumkin.",
   "@quickRecordFeatureAppealBody": {
     "description": "クイックレコード機能のヘルプページの本文"
   },
@@ -2603,7 +2603,7 @@
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
   },
-  "alarmKitFeatureAppealBody": "iOS 26以降で利用できるAlarmKitを使って、サイレントモードや集中モードでも確実に鳴るアラームでピルの服用を知らせます。",
+  "alarmKitFeatureAppealBody": "iOS 26 va undan keyingi versiyalarda mavjud AlarmKit funksiyasi yordamida, sukut rejimida yoki diqqat rejimida bo'lsangiz ham albatta chalinadigan budilnik signali bilan dori ichish vaqtini eslatadi.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
   },
@@ -2691,7 +2691,7 @@
   "@recordPillFeatureAppealPoint3": {
     "description": ""
   },
-  "menstruationFeatureAppealPoint1": "生理開始日をかんたん記録",
+  "menstruationFeatureAppealPoint1": "Hayz boshlanish kunini oson qayd etish",
   "@menstruationFeatureAppealPoint1": {
     "description": ""
   },
@@ -2775,7 +2775,7 @@
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint2": "目覚まし同様のアラーム音",
+  "alarmKitFeatureAppealPoint2": "Budilnikka o'xshash signal ovozi",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
   },
@@ -2791,7 +2791,7 @@
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
   },
-  "todayPillNumberFeatureAppealPoint3": "ホームの数字タップでも開ける",
+  "todayPillNumberFeatureAppealPoint3": "Bosh ekrandagi raqamni bosib ham ochish mumkin",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "restDurationFeatureAppealPoint3": "Hayz davrini tahrirlash va qayta boshlash ham oson",
   "@restDurationFeatureAppealPoint3": {
     "description": ""
-  }
+  },
+  "midnightTakenWarningDialogBody": "{takenDate} sanasigacha dorilaringiz qabul qilingan deb qayd etildi. Bugungi ({takenDate}) kuni soat {reminderTimes} dagi eslatma bildirishnomasi kelmaydi.\nAgar bu xato bo'lgan bo'lsa, iltimos, qabul yozuvini bekor qiling.",
+  "midnightTakenWarningDialogNeverShowAgain": "Boshqa ko'rsatmaslik",
+  "midnightTakenWarningDialogSeeHowToRevert": "Qabulni bekor qilish usulini ko'rish",
+  "midnightTakenWarningDialogTitle": "Ehtiyot bo'ling"
 }

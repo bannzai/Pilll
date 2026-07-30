@@ -1124,7 +1124,7 @@
       }
     }
   },
-  "todayPillNumber": "{brojDanasnjiePilule}",
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "@todayPillNumber": {
     "description": "ピルシート上で今日服用すべきピルの番号（例：1錠目、15錠目など）を表示する際に使用されます。リマインダー通知やログ記録でも参照される重要な値です。",
     "placeholders": {
@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "Порука о грешци која се приказује кориснику када дође до неке техничке грешке при покретању апликације (у тренутку отварања апликације). Треба превести тако да корисник може да разуме ситуацију, јер садржи детаљне информације као што су грешке у вези.",
+  "launchError": "Došlo je do greške prilikom pokretanja aplikacije.\n{ErrorMessagesConnection}\n\nDetalji: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2551,7 +2551,7 @@
   "@healthCareIntegrationFeatureAppealShortDescription": {
     "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
   },
-  "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
+  "healthCareIntegrationFeatureAppealHeadline": "Sinhronizujte se sa aplikacijom Zdravlje",
   "@healthCareIntegrationFeatureAppealHeadline": {
     "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
   },
@@ -2599,11 +2599,11 @@
   "@alarmKitFeatureAppealHeadline": {
     "description": "AlarmKit機能のヘルプページのヘッドライン"
   },
-  "alarmKitFeatureAppealBody": "iOS 26以降で利用できるAlarmKitを使って、サイレントモードや集中モードでも確実に鳴るアラームでピルの服用を知らせます。",
+  "alarmKitFeatureAppealBody": "Uz AlarmKit, dostupan od iOS 26, alarm pouzdano zvoni čak i u tihom režimu i režimu fokusa, kako ne biste propustili uzimanje pilule.",
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
   },
-  "todayPillNumberFeatureAppealTitle": "今日の服用番号を合わせる",
+  "todayPillNumberFeatureAppealTitle": "Uskladite broj pilule za danas",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   },
@@ -2647,7 +2647,7 @@
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
   },
-  "criticalAlertFeatureAppealPoint3": "ワンタップでかんたん設定",
+  "criticalAlertFeatureAppealPoint3": "Jednostavno podešavanje jednim dodirom",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
   },
@@ -2679,7 +2679,7 @@
   "@recordPillFeatureAppealPoint1": {
     "description": ""
   },
-  "recordPillFeatureAppealPoint2": "間違えてもかんたん取り消し",
+  "recordPillFeatureAppealPoint2": "Lako poništite grešku",
   "@recordPillFeatureAppealPoint2": {
     "description": ""
   },
@@ -2763,7 +2763,7 @@
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
   },
-  "creatingNewPillSheetFeatureAppealPoint3": "Prevedi na srpski: 設定タブのスイッチで切り替え",
+  "creatingNewPillSheetFeatureAppealPoint3": "Uključite ili isključite prekidačem u kartici Podešavanja",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
   },
@@ -2787,7 +2787,7 @@
   "@todayPillNumberFeatureAppealPoint2": {
     "description": ""
   },
-  "todayPillNumberFeatureAppealPoint3": "ホームの数字タップでも開ける",
+  "todayPillNumberFeatureAppealPoint3": "Dostupno i dodirom na broj na početnom ekranu",
   "@todayPillNumberFeatureAppealPoint3": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "Аутоматски креирај следећи лист",
   "@creatingNewPillSheetFeatureAppealShortDescription": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
-  }
+  },
+  "midnightTakenWarningDialogBody": "Uzimanje pilula je zabeleženo zaključno sa {takenDate}. Današnje ({takenDate}) obaveštenje u {reminderTimes} neće biti isporučeno.\nAko je ovo greška, poništite zapis o uzimanju.",
+  "midnightTakenWarningDialogNeverShowAgain": "Ne prikazuj ponovo",
+  "midnightTakenWarningDialogSeeHowToRevert": "Pogledajte kako da poništite zapis o uzimanju",
+  "midnightTakenWarningDialogTitle": "Napomena"
 }

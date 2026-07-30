@@ -1891,7 +1891,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "एप्लिकेशन शुरू करते समय कोई तकनीकी त्रुटि हुई है। कनेक्शन त्रुटि सहित विस्तृत जानकारी भी शामिल हो सकती है।",
+  "launchError": "ऐप शुरू करते समय त्रुटि हुई।\n{ErrorMessagesConnection}\n\nविवरण: ",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -2427,7 +2427,7 @@
   "@recommendSignupGeneralDescription": {
     "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
   },
-  "criticalAlertFeatureAppealTitle": "サイレントモードでも通知を受け取る",
+  "criticalAlertFeatureAppealTitle": "साइलेंट मोड में भी सूचना पाएं",
   "@criticalAlertFeatureAppealTitle": {
     "description": "Critical Alert機能のFeatureAppeal Barタイトル"
   },
@@ -2471,7 +2471,7 @@
   "@appearanceModeDateFeatureAppealHeadline": {
     "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
   },
-  "appearanceModeDateFeatureAppealBody": "ピルシートのマスに日付を表示することで、過去の服用履歴と未来の服用予定を一目で確認できます。「番号」モードと「日付」モードを切り替えて、自分に合った表示を選びましょう。",
+  "appearanceModeDateFeatureAppealBody": "पिल शीट के हर ख़ाने में तारीख दिखाकर, आप पिछले सेवन के रिकॉर्ड और आने वाले सेवन की योजना को एक नज़र में देख सकते हैं। अपनी पसंद के अनुसार \"संख्या\" मोड और \"तारीख\" मोड के बीच स्विच करें।",
   "@appearanceModeDateFeatureAppealBody": {
     "description": "ピルシート外観モード(date)機能のヘルプページの本文"
   },
@@ -2491,7 +2491,7 @@
   "@recordPillFeatureAppealBody": {
     "description": "ピル記録/服用履歴機能のヘルプページの本文"
   },
-  "menstruationFeatureAppealTitle": "生理を記録・予測",
+  "menstruationFeatureAppealTitle": "पीरियड को रिकॉर्ड करें और अनुमान लगाएं",
   "@menstruationFeatureAppealTitle": {
     "description": "生理記録機能のFeatureAppeal Barタイトル"
   },
@@ -2499,7 +2499,7 @@
   "@menstruationFeatureAppealShortDescription": {
     "description": "生理記録機能のFeatureAppeal Barの短い説明文"
   },
-  "menstruationFeatureAppealHeadline": "生理の記録と予測ができる",
+  "menstruationFeatureAppealHeadline": "आप पीरियड को रिकॉर्ड कर सकते हैं और उसका अनुमान लगा सकते हैं",
   "@menstruationFeatureAppealHeadline": {
     "description": "生理記録機能のヘルプページのヘッドライン"
   },
@@ -2523,7 +2523,7 @@
   "@calendarDiaryFeatureAppealBody": {
     "description": "カレンダー・日記機能のヘルプページの本文"
   },
-  "futureScheduleFeatureAppealTitle": "未来の予定を書き込もう",
+  "futureScheduleFeatureAppealTitle": "अपनी भविष्य की योजनाएँ लिखें",
   "@futureScheduleFeatureAppealTitle": {
     "description": "未来の予定機能のFeatureAppeal Barタイトル"
   },
@@ -2575,7 +2575,7 @@
   "@creatingNewPillSheetFeatureAppealTitle": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
   },
-  "creatingNewPillSheetFeatureAppealShortDescription": "\"次のシートを自動生成\" のヒンディー語翻訳を生成してください。",
+  "creatingNewPillSheetFeatureAppealShortDescription": "अगली शीट अपने आप बन जाती है",
   "@creatingNewPillSheetFeatureAppealShortDescription": {
     "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
   },
@@ -2603,7 +2603,7 @@
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
   },
-  "todayPillNumberFeatureAppealTitle": "今日の服用番号を合わせる",
+  "todayPillNumberFeatureAppealTitle": "आज की गोली का नंबर सही करें",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
   },
@@ -2647,7 +2647,7 @@
   "@criticalAlertFeatureAppealPoint2": {
     "description": ""
   },
-  "criticalAlertFeatureAppealPoint3": "ワンタップでかんたん設定",
+  "criticalAlertFeatureAppealPoint3": "एक टैप में आसान सेटअप",
   "@criticalAlertFeatureAppealPoint3": {
     "description": ""
   },
@@ -2695,7 +2695,7 @@
   "@menstruationFeatureAppealPoint2": {
     "description": ""
   },
-  "menstruationFeatureAppealPoint3": "設定をカスタマイズ",
+  "menstruationFeatureAppealPoint3": "सेटिंग्स को कस्टमाइज़ करें",
   "@menstruationFeatureAppealPoint3": {
     "description": ""
   },
@@ -2707,7 +2707,7 @@
   "@calendarDiaryFeatureAppealPoint2": {
     "description": ""
   },
-  "calendarDiaryFeatureAppealPoint3": "過去の記録をカレンダーで振り返り",
+  "calendarDiaryFeatureAppealPoint3": "कैलेंडर पर पिछले रिकॉर्ड देखें",
   "@calendarDiaryFeatureAppealPoint3": {
     "description": ""
   },
@@ -2763,15 +2763,15 @@
   "@creatingNewPillSheetFeatureAppealPoint2": {
     "description": ""
   },
-  "creatingNewPillSheetFeatureAppealPoint3": "設定タブのスイッチで切り替え",
+  "creatingNewPillSheetFeatureAppealPoint3": "सेटिंग्स टैब के स्विच से बदलें",
   "@creatingNewPillSheetFeatureAppealPoint3": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
+  "alarmKitFeatureAppealPoint1": "साइलेंट/फोकस मोड में भी बजेगा",
   "@alarmKitFeatureAppealPoint1": {
     "description": ""
   },
-  "alarmKitFeatureAppealPoint2": "目覚まし同様のアラーム音",
+  "alarmKitFeatureAppealPoint2": "घड़ी जैसी अलार्म ध्वनि",
   "@alarmKitFeatureAppealPoint2": {
     "description": ""
   },
@@ -2806,5 +2806,9 @@
   "lifetimePurchaseNotice2": "सदस्यता प्रबंधित करें",
   "@lifetimePurchaseNotice2": {
     "description": "サブスクリプション管理ページへのリンクテキスト"
-  }
+  },
+  "midnightTakenWarningDialogBody": "{takenDate} तक की गोलियां सेवन के रूप में दर्ज हो चुकी हैं। आज ({takenDate}) के {reminderTimes} बजे की सूचना आपको नहीं मिलेगी।\nअगर यह गलती से हुआ है, तो कृपया सेवन रद्द करें।",
+  "midnightTakenWarningDialogNeverShowAgain": "दोबारा न दिखाएं",
+  "midnightTakenWarningDialogSeeHowToRevert": "सेवन रद्द करने का तरीका देखें",
+  "midnightTakenWarningDialogTitle": "कृपया ध्यान दें"
 }
