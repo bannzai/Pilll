@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "{takenDate}күнгө чейинки дары ичүү катталды. Бүгүн ({takenDate}) {reminderTimes} убагындагы эскертүү сизге келбейт.\nЭгер ката менен болсо, дары ичкенди жокко чыгарыңыз",
   "midnightTakenWarningDialogNeverShowAgain": "Экинчи көрсөтпөө",
   "midnightTakenWarningDialogSeeHowToRevert": "Дары ичкенди жокко чыгаруу жолун көрүү",
-  "midnightTakenWarningDialogTitle": "Көңүл буруңуз"
+  "midnightTakenWarningDialogTitle": "Көңүл буруңуз",
+
+  "endedPillSheetDialogHistoryTitle": "Дары ичүү тарыхын көргүңүз келеби?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Бул дары барагын карап чыгалы",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} күн жазылды, {missedDays} күн калтырылды",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Тыныгуунун башталуу күнүн {date} же андан мурун тандаңыз",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

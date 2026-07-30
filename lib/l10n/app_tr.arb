@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "{takenDate} tarihine kadar olan hap alım kayıtlarınız oluşturuldu. Bugün ({takenDate}) için {reminderTimes} saatindeki hatırlatma bildirimi gönderilmeyecek.\nBu bir hataysa lütfen alım kaydını geri alın.",
   "midnightTakenWarningDialogNeverShowAgain": "Bir daha gösterme",
   "midnightTakenWarningDialogSeeHowToRevert": "Alım kaydını geri alma yöntemini görüntüle",
-  "midnightTakenWarningDialogTitle": "Lütfen dikkat edin"
+  "midnightTakenWarningDialogTitle": "Lütfen dikkat edin",
+
+  "endedPillSheetDialogHistoryTitle": "Hap alma geçmişinizi görmek ister misiniz?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Bu hap tabakasına birlikte bakalım",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} gün kaydedildi, {missedDays} gün atlandı",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Lütfen ara başlangıç tarihini {date} veya öncesi olarak seçin",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

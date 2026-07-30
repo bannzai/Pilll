@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "Dine piller er blevet registreret som taget frem til {takenDate}. Dagens ({takenDate}) påmindelse kl. {reminderTimes} bliver ikke sendt.\nHvis dette var en fejl, skal du annullere indtagelsesregistreringen.",
   "midnightTakenWarningDialogNeverShowAgain": "Vis ikke dette igen",
   "midnightTakenWarningDialogSeeHowToRevert": "Se hvordan du annullerer en indtagelsesregistrering",
-  "midnightTakenWarningDialogTitle": "Bemærk venligst"
+  "midnightTakenWarningDialogTitle": "Bemærk venligst",
+
+  "endedPillSheetDialogHistoryTitle": "Vil du se din pillehistorik?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Lad os se tilbage på dette pilleark",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} dage registreret, {missedDays} dage sprunget over",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Vælg en startdato for pausen den {date} eller tidligere",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

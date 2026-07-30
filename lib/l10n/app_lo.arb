@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "ໄດ້ບັນທຶກການກິນຢາໃຫ້ຮອດວັນທີ {takenDate} ແລ້ວ. ການແຈ້ງເຕືອນເວລາ {reminderTimes} ຂອງມື້ນີ້ ({takenDate}) ຈະບໍ່ຖືກສົ່ງໄປຫາທ່ານ.\nຖ້າແມ່ນຄວາມຜິດພາດ, ກະລຸນາຍົກເລີກການບັນທຶກການກິນຢາ",
   "midnightTakenWarningDialogNeverShowAgain": "ບໍ່ຕ້ອງສະແດງອີກ",
   "midnightTakenWarningDialogSeeHowToRevert": "ເບິ່ງວິທີຍົກເລີກການບັນທຶກການກິນຢາ",
-  "midnightTakenWarningDialogTitle": "ກະລຸນາຮັບຊາບ"
+  "midnightTakenWarningDialogTitle": "ກະລຸນາຮັບຊາບ",
+
+  "endedPillSheetDialogHistoryTitle": "ຢາກເບິ່ງປະຫວັດການກິນຢາຂອງທ່ານບໍ?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "ມາເບິ່ງແຜງຢານີ້ຄືນກັນ",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "ບັນທຶກແລ້ວ {recordedDays} ມື້, ພາດ {missedDays} ມື້",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "ກະລຸນາເລືອກວັນເລີ່ມພັກຢາໃນ {date} ຫຼືກ່ອນໜ້ານັ້ນ",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

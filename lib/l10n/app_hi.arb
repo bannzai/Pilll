@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "{takenDate} तक की गोलियां सेवन के रूप में दर्ज हो चुकी हैं। आज ({takenDate}) के {reminderTimes} बजे की सूचना आपको नहीं मिलेगी।\nअगर यह गलती से हुआ है, तो कृपया सेवन रद्द करें।",
   "midnightTakenWarningDialogNeverShowAgain": "दोबारा न दिखाएं",
   "midnightTakenWarningDialogSeeHowToRevert": "सेवन रद्द करने का तरीका देखें",
-  "midnightTakenWarningDialogTitle": "कृपया ध्यान दें"
+  "midnightTakenWarningDialogTitle": "कृपया ध्यान दें",
+
+  "endedPillSheetDialogHistoryTitle": "क्या आप अपनी पिल लेने का इतिहास देखना चाहती हैं?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "आइए इस पिल शीट पर नज़र डालें",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} दिन दर्ज हुए, {missedDays} दिन छूट गए",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "कृपया {date} या उससे पहले की विराम शुरुआत तिथि चुनें",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

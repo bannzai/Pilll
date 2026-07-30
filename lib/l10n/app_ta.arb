@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "{takenDate} வரை மாத்திரை எடுத்ததாக பதிவு செய்யப்பட்டுள்ளது. {takenDate} ஆன இன்று {reminderTimes} அறிவிப்பு உங்களுக்கு வராது.\nதவறாக பதிவானது எனில், உட்கொள்ளுதலை ரத்து செய்யவும்.",
   "midnightTakenWarningDialogNeverShowAgain": "இதை மீண்டும் காட்ட வேண்டாம்",
   "midnightTakenWarningDialogSeeHowToRevert": "உட்கொள்ளுதலை ரத்து செய்யும் முறையைக் காண்க",
-  "midnightTakenWarningDialogTitle": "கவனிக்கவும்"
+  "midnightTakenWarningDialogTitle": "கவனிக்கவும்",
+
+  "endedPillSheetDialogHistoryTitle": "உங்கள் மாத்திரை எடுத்த வரலாற்றைப் பார்க்க விரும்புகிறீர்களா?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "இந்த மாத்திரை தாளை திரும்பிப் பார்ப்போம்",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} நாட்கள் பதிவாகின, {missedDays} நாட்கள் விடுபட்டன",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "தயவுசெய்து {date} அல்லது அதற்கு முந்தைய இடைவேளை தொடக்க தேதியைத் தேர்ந்தெடுக்கவும்",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

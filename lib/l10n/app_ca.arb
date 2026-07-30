@@ -2818,5 +2818,36 @@
   "midnightTakenWarningDialogTitle": "Tingueu-ho en compte",
   "midnightTakenWarningDialogBody": "S'ha registrat la presa de la píndola fins al {takenDate}. La notificació d'avui ({takenDate}) de les {reminderTimes} no arribarà.\nSi ha estat un error, cancel·leu el registre de presa.",
   "midnightTakenWarningDialogNeverShowAgain": "No tornis a mostrar-ho",
-  "midnightTakenWarningDialogSeeHowToRevert": "Veure com cancel·lar un registre de presa"
+  "midnightTakenWarningDialogSeeHowToRevert": "Veure com cancel·lar un registre de presa",
+
+  "endedPillSheetDialogHistoryTitle": "Vols veure l'historial de presa de píndoles?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Fem una ullada a aquest blíster",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} dies registrats, {missedDays} dies omesos",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Selecciona una data d'inici de la pausa el {date} o abans",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

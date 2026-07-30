@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogTitle": "Sylwch, os gwelwch yn dda",
   "midnightTakenWarningDialogBody": "Mae cofnod cymryd y bilsen wedi'i wneud hyd at {takenDate}. Ni fyddwch yn derbyn hysbysiad atgoffa heddiw ({takenDate}) am {reminderTimes}.\nOs camgymeriad oedd hyn, canslwch y cofnod cymryd os gwelwch yn dda.",
   "midnightTakenWarningDialogNeverShowAgain": "Peidiwch â dangos hwn eto",
-  "midnightTakenWarningDialogSeeHowToRevert": "Gweld sut i ganslo cofnod cymryd"
+  "midnightTakenWarningDialogSeeHowToRevert": "Gweld sut i ganslo cofnod cymryd",
+
+  "endedPillSheetDialogHistoryTitle": "Eisiau gweld eich hanes cymryd pils?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Gadewch i ni edrych yn ôl ar y ddalen bils hon",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} diwrnod wedi'u cofnodi, {missedDays} diwrnod wedi'u methu",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Dewiswch ddyddiad dechrau'r saib ar {date} neu cyn hynny",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

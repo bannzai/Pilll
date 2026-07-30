@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "O registro de tomada foi feito até {takenDate}. O lembrete de hoje ({takenDate}) às {reminderTimes} não será enviado.\nSe isso foi um engano, desfaça o registro de tomada.",
   "midnightTakenWarningDialogNeverShowAgain": "Não mostrar novamente",
   "midnightTakenWarningDialogSeeHowToRevert": "Ver como desfazer o registro de tomada",
-  "midnightTakenWarningDialogTitle": "Atenção"
+  "midnightTakenWarningDialogTitle": "Atenção",
+
+  "endedPillSheetDialogHistoryTitle": "Quer ver seu histórico de tomadas?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Vamos rever esta cartela",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} dias registrados, {missedDays} dias esquecidos",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Selecione uma data de início da pausa em {date} ou antes",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "Ընդունման գրառումն արվել է մինչև {takenDate}-ը ներառյալ։ Այսօրվա՝ {takenDate}-ի, ժամը {reminderTimes}-ի ծանուցումն այլևս ձեզ չի հասնի։\nԵթե դա սխալմամբ է եղել, խնդրում ենք չեղարկել ընդունման գրառումը",
   "midnightTakenWarningDialogNeverShowAgain": "Այլևս երբեք չցուցադրել",
   "midnightTakenWarningDialogSeeHowToRevert": "Տեսնել՝ ինչպես չեղարկել ընդունման գրառումը",
-  "midnightTakenWarningDialogTitle": "Ուշադրություն դարձրեք"
+  "midnightTakenWarningDialogTitle": "Ուշադրություն դարձրեք",
+
+  "endedPillSheetDialogHistoryTitle": "Ցանկանո՞ւմ եք տեսնել դեղահաբերի ընդունման պատմությունը",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Եկեք վերանայենք այս դեղաթերթիկը",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "Գրանցված է {recordedDays} օր, բաց է թողնվել {missedDays} օր",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Խնդրում ենք ընտրել դադարի մեկնարկի ամսաթիվ {date}-ը կամ ավելի վաղ",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

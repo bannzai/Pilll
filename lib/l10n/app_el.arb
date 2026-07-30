@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogTitle": "Παρακαλώ προσέξτε",
   "midnightTakenWarningDialogBody": "Η λήψη έχει καταγραφεί έως {takenDate}. Η σημερινή ({takenDate}) ειδοποίηση υπενθύμισης στις {reminderTimes} δεν θα σας αποσταλεί.\nΕάν έγινε κατά λάθος, παρακαλώ ακυρώστε την καταγραφή λήψης.",
   "midnightTakenWarningDialogNeverShowAgain": "Να μην εμφανιστεί ξανά",
-  "midnightTakenWarningDialogSeeHowToRevert": "Δείτε τον τρόπο ακύρωσης της καταγραφής λήψης"
+  "midnightTakenWarningDialogSeeHowToRevert": "Δείτε τον τρόπο ακύρωσης της καταγραφής λήψης",
+
+  "endedPillSheetDialogHistoryTitle": "Θέλετε να δείτε το ιστορικό λήψης χαπιών;",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Ας δούμε αυτό το φύλλο χαπιών",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} ημέρες καταγράφηκαν, {missedDays} ημέρες παραλείφθηκαν",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Επιλέξτε ημερομηνία έναρξης της παύσης στις {date} ή νωρίτερα",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

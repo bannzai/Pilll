@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "Đã ghi nhận uống thuốc đến hết {takenDate}. Thông báo lúc {reminderTimes} của hôm nay ({takenDate}) sẽ không được gửi tới bạn.\nNếu đây là nhầm lẫn, vui lòng hủy ghi nhận uống thuốc.",
   "midnightTakenWarningDialogNeverShowAgain": "Không hiển thị lại nữa",
   "midnightTakenWarningDialogSeeHowToRevert": "Xem cách hủy ghi nhận uống thuốc",
-  "midnightTakenWarningDialogTitle": "Xin lưu ý"
+  "midnightTakenWarningDialogTitle": "Xin lưu ý",
+
+  "endedPillSheetDialogHistoryTitle": "Bạn muốn xem lịch sử uống thuốc của mình?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Cùng nhìn lại vỉ thuốc này nhé",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "Đã ghi {recordedDays} ngày, bỏ lỡ {missedDays} ngày",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Vui lòng chọn ngày bắt đầu tạm ngưng vào {date} hoặc trước đó",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

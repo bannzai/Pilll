@@ -57,6 +57,10 @@ extension BoolKey on String {
   /// 深夜(0:00-2:00)服用記録の注意ダイアログで「二度と表示しない」が押されたかどうか。
   /// trueの場合、以降このダイアログは表示しない。
   static const midnightTakenWarningDialogNeverShowAgain = 'midnightTakenWarningDialogNeverShowAgain';
+
+  /// ピルシート終了ダイアログを当該グループで表示済みかどうか。
+  /// pillSheetGroupID をサフィックスに付与し、終了グループごとに1回だけ表示する。
+  static String endedPillSheetDialogShown(String pillSheetGroupID) => 'endedPillSheetDialogShown_$pillSheetGroupID';
 }
 
 extension DoubleKey on String {

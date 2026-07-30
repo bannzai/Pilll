@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "{takenDate} දක්වා පිල් ගැනීම් සටහන් වී ඇත. අද දිනය {takenDate} බැවින්, අද {reminderTimes} හි දැනුම්දීම ඔබට නොලැබෙනු ඇත.\nවැරදීමකින් නම්, කරුණාකර ගැනීම අවලංගු කරන්න",
   "midnightTakenWarningDialogNeverShowAgain": "නැවත මෙය නොපෙන්වන්න",
   "midnightTakenWarningDialogSeeHowToRevert": "ගැනීම අවලංගු කරන ආකාරය බලන්න",
-  "midnightTakenWarningDialogTitle": "කරුණාකර සැලකිල්ලට ගන්න"
+  "midnightTakenWarningDialogTitle": "කරුණාකර සැලකිල්ලට ගන්න",
+
+  "endedPillSheetDialogHistoryTitle": "ඔබේ පෙති ගැනීමේ ඉතිහාසය බලන්න කැමතිද?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "මෙම පෙති පත්‍රය දෙස ආපසු හැරී බලමු",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "දින {recordedDays}ක් සටහන් විය, දින {missedDays}ක් මඟ හැරුණි",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "කරුණාකර {date} හෝ ඊට පෙර විවේක ආරම්භක දිනයක් තෝරන්න",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

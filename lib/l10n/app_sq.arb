@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "Pilulat janë regjistruar si të marra deri më {takenDate}. Njoftimi i sotëm ({takenDate}) në orën {reminderTimes} nuk do të dërgohet.\nNëse ky ishte një gabim, ju lutemi anuloni regjistrimin e marrjes.",
   "midnightTakenWarningDialogNeverShowAgain": "Mos e shfaq më",
   "midnightTakenWarningDialogSeeHowToRevert": "Shiko si të anulosh regjistrimin e marrjes",
-  "midnightTakenWarningDialogTitle": "Kini parasysh"
+  "midnightTakenWarningDialogTitle": "Kini parasysh",
+
+  "endedPillSheetDialogHistoryTitle": "Dëshironi të shihni historikun e marrjes së pilulave?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Le t'i hedhim një sy kësaj flete pilulash",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} ditë të regjistruara, {missedDays} ditë të humbura",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Zgjidhni një datë fillimi të pushimit më {date} ose më herët",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

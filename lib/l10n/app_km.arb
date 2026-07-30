@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "កំណត់ត្រាការទទួលថ្នាំត្រូវបានធ្វើរហូតដល់ថ្ងៃ {takenDate}។ ដោយសារថ្ងៃនេះគឺ {takenDate} ការជូនដំណឹងម៉ោង {reminderTimes} នឹងមិនមកដល់ទេ។\nប្រសិនបើជាកំហុស សូមលុបចោលកំណត់ត្រាការទទួលថ្នាំ",
   "midnightTakenWarningDialogNeverShowAgain": "កុំបង្ហាញម្តងទៀត",
   "midnightTakenWarningDialogSeeHowToRevert": "មើលរបៀបលុបចោលកំណត់ត្រាការទទួលថ្នាំ",
-  "midnightTakenWarningDialogTitle": "សូមចំណាំ"
+  "midnightTakenWarningDialogTitle": "សូមចំណាំ",
+
+  "endedPillSheetDialogHistoryTitle": "ចង់មើលប្រវត្តិលេបថ្នាំរបស់អ្នកទេ?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "តោះមើលសន្លឹកថ្នាំនេះឡើងវិញ",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "បានកត់ត្រា {recordedDays} ថ្ងៃ ខកខាន {missedDays} ថ្ងៃ",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "សូមជ្រើសរើសកាលបរិច្ឆេទចាប់ផ្តើមសម្រាកនៅ {date} ឬមុននេះ",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

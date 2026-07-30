@@ -2824,5 +2824,36 @@
   "midnightTakenWarningDialogNeverShowAgain": "Ne montre plus ça",
   "@midnightTakenWarningDialogNeverShowAgain": {
     "description": ""
+  },
+
+  "endedPillSheetDialogHistoryTitle": "Envie de voir votre historique de prise de pilules ?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Faisons le point sur cette plaquette",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} jours enregistrés, {missedDays} jours manqués",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Veuillez choisir une date de début de pause le {date} ou avant",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
   }
 }

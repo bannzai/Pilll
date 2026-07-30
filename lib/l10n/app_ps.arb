@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "ستاسو د ګولۍ اخیستل تر {takenDate} پورې ثبت شوي دي. نن ({takenDate}) د {reminderTimes} خبرتیا به تاسو ته ونه رسیږي.\nکه دا یوه تېروتنه وه، مهرباني وکړئ د اخیستلو ثبت لغوه کړئ",
   "midnightTakenWarningDialogNeverShowAgain": "دا نور مه ښکاره کوئ",
   "midnightTakenWarningDialogSeeHowToRevert": "د اخیستلو ثبت د لغوه کولو طریقه وګورئ",
-  "midnightTakenWarningDialogTitle": "پام وکړئ"
+  "midnightTakenWarningDialogTitle": "پام وکړئ",
+
+  "endedPillSheetDialogHistoryTitle": "غواړئ د ګولۍ اخیستلو تاریخچه وګورئ؟",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "راځئ دې د ګولیو پاڼې ته یو ځل بیا وګورو",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} ورځې ثبت شوې، {missedDays} ورځې پاتې شوې",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "مهرباني وکړئ د وقفې د پیل نېټه {date} یا له هغې مخکې وټاکئ",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

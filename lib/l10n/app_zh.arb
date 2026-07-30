@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "已记录服用至{takenDate}。今天（{takenDate}）{reminderTimes}的提醒通知将不会推送。\n如果是误操作，请撤销服用记录。",
   "midnightTakenWarningDialogNeverShowAgain": "不再提示",
   "midnightTakenWarningDialogSeeHowToRevert": "查看取消服用记录的方法",
-  "midnightTakenWarningDialogTitle": "请注意"
+  "midnightTakenWarningDialogTitle": "请注意",
+
+  "endedPillSheetDialogHistoryTitle": "想查看您的服药记录吗？",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "回顾一下这板药吧",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "已记录 {recordedDays} 天，漏记 {missedDays} 天",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "请选择{date}或之前的日期作为停药开始日",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

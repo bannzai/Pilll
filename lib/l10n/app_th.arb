@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "มีการบันทึกว่าคุณได้รับประทานยาจนถึงวันที่ {takenDate} แล้ว การแจ้งเตือนของวันนี้ ({takenDate}) เวลา {reminderTimes} จะไม่ถูกส่งถึงคุณ\nหากเป็นการบันทึกผิดพลาด กรุณายกเลิกการบันทึกการรับประทานยา",
   "midnightTakenWarningDialogNeverShowAgain": "ไม่แสดงข้อความนี้อีก",
   "midnightTakenWarningDialogSeeHowToRevert": "ดูวิธีการยกเลิกการบันทึกการรับประทานยา",
-  "midnightTakenWarningDialogTitle": "โปรดทราบ"
+  "midnightTakenWarningDialogTitle": "โปรดทราบ",
+
+  "endedPillSheetDialogHistoryTitle": "อยากดูประวัติการกินยาของคุณไหม",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "มาย้อนดูแผงยานี้กัน",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "บันทึกแล้ว {recordedDays} วัน พลาดไป {missedDays} วัน",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "โปรดเลือกวันเริ่มพักยาเป็นวันที่ {date} หรือก่อนหน้านั้น",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

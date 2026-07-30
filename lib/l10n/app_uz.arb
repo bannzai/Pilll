@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "{takenDate} sanasigacha dorilaringiz qabul qilingan deb qayd etildi. Bugungi ({takenDate}) kuni soat {reminderTimes} dagi eslatma bildirishnomasi kelmaydi.\nAgar bu xato bo'lgan bo'lsa, iltimos, qabul yozuvini bekor qiling.",
   "midnightTakenWarningDialogNeverShowAgain": "Boshqa ko'rsatmaslik",
   "midnightTakenWarningDialogSeeHowToRevert": "Qabulni bekor qilish usulini ko'rish",
-  "midnightTakenWarningDialogTitle": "Ehtiyot bo'ling"
+  "midnightTakenWarningDialogTitle": "Ehtiyot bo'ling",
+
+  "endedPillSheetDialogHistoryTitle": "Dori ichish tarixingizni ko'rmoqchimisiz?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Ushbu dori varag'ini ko'rib chiqaylik",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} kun qayd etildi, {missedDays} kun o'tkazib yuborildi",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Iltimos, tanaffus boshlanish sanasini {date} yoki undan oldin tanlang",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

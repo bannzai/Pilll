@@ -70,6 +70,10 @@ RemoteConfigParameter remoteConfigParameter(RemoteConfigParameterRef ref) {
       RemoteConfigKeys.lifetimeOfferCopyVariant,
       RemoteConfigParameterDefaultValues.lifetimeOfferCopyVariant,
     ),
+    endedPillSheetDialogVariant: remoteConfig.getStringOrDefault(
+      RemoteConfigKeys.endedPillSheetDialogVariant,
+      RemoteConfigParameterDefaultValues.endedPillSheetDialogVariant,
+    ),
   );
 }
 

@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "Vidonge vimerekodiwa kama vimechukuliwa hadi {takenDate}. Arifa ya ukumbusho ya leo ({takenDate}) saa {reminderTimes} haitatumwa.\nIkiwa hii ni kosa, tafadhali batilisha rekodi ya kuchukua kidonge.",
   "midnightTakenWarningDialogNeverShowAgain": "Usionyeshe tena",
   "midnightTakenWarningDialogSeeHowToRevert": "Ona jinsi ya kubatilisha rekodi ya kuchukua",
-  "midnightTakenWarningDialogTitle": "Tafadhali zingatia"
+  "midnightTakenWarningDialogTitle": "Tafadhali zingatia",
+
+  "endedPillSheetDialogHistoryTitle": "Ungependa kuona historia yako ya kumeza vidonge?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Hebu tuangalie tena karatasi hii ya vidonge",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "Siku {recordedDays} zimerekodiwa, siku {missedDays} zimekosekana",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Tafadhali chagua tarehe ya kuanza mapumziko {date} au kabla yake",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

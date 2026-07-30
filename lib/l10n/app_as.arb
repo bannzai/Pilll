@@ -2818,5 +2818,36 @@
   "midnightTakenWarningDialogBody": "{takenDate} লৈকে সেৱন ৰেকৰ্ড কৰা হৈছে। {takenDate} অৰ্থাৎ আজিৰ {reminderTimes} ৰ জাননী আপোনাৰ ওচৰলৈ নাযাব।\nভুলক্ৰমে হ'লে, অনুগ্ৰহ কৰি সেৱনৰ ৰেকৰ্ড বাতিল কৰক",
   "midnightTakenWarningDialogNeverShowAgain": "পুনৰ নেদেখুৱাব",
   "midnightTakenWarningDialogSeeHowToRevert": "সেৱন বাতিলকৰণৰ পদ্ধতি চাওক",
-  "midnightTakenWarningDialogTitle": "সাৱধান হওক"
+  "midnightTakenWarningDialogTitle": "সাৱধান হওক",
+
+  "endedPillSheetDialogHistoryTitle": "আপোনাৰ পিল খোৱাৰ ইতিহাস চাব বিচাৰেনে?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "এই পিল শ্বীটখন পুনৰীক্ষণ কৰোঁ আহক",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} দিন লিপিবদ্ধ, {missedDays} দিন বাদ পৰিছে",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "অনুগ্ৰহ কৰি {date} বা তাৰ আগৰ বিৰতি আৰম্ভণিৰ তাৰিখ বাছনি কৰক",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

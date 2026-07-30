@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "{takenDate} ವರೆಗಿನ ಪಿಲ್ ಸೇವನೆ ದಾಖಲಾಗಿದೆ. ಇಂದು ({takenDate}) {reminderTimes} ಸಮಯದ ಸೂಚನೆ ನಿಮಗೆ ತಲುಪುವುದಿಲ್ಲ.\nಇದು ತಪ್ಪಾಗಿದ್ದರೆ, ದಯವಿಟ್ಟು ಸೇವನೆಯನ್ನು ರದ್ದುಗೊಳಿಸಿ",
   "midnightTakenWarningDialogNeverShowAgain": "ಇನ್ನು ಮುಂದೆ ತೋರಿಸಬೇಡಿ",
   "midnightTakenWarningDialogSeeHowToRevert": "ಸೇವನೆ ರದ್ದುಗೊಳಿಸುವ ವಿಧಾನವನ್ನು ನೋಡಿ",
-  "midnightTakenWarningDialogTitle": "ದಯವಿಟ್ಟು ಗಮನಿಸಿ"
+  "midnightTakenWarningDialogTitle": "ದಯವಿಟ್ಟು ಗಮನಿಸಿ",
+
+  "endedPillSheetDialogHistoryTitle": "ನಿಮ್ಮ ಮಾತ್ರೆ ಸೇವನೆಯ ಇತಿಹಾಸ ನೋಡಲು ಬಯಸುವಿರಾ?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "ಈ ಮಾತ್ರೆ ಶೀಟ್ ಅನ್ನು ಹಿಂತಿರುಗಿ ನೋಡೋಣ",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} ದಿನ ದಾಖಲಾಗಿದೆ, {missedDays} ದಿನ ತಪ್ಪಿದೆ",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "ದಯವಿಟ್ಟು {date} ಅಥವಾ ಅದಕ್ಕೂ ಮೊದಲಿನ ವಿರಾಮ ಆರಂಭ ದಿನಾಂಕ ಆಯ್ಕೆಮಾಡಿ",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

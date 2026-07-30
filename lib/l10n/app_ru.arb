@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "Приём таблеток отмечен как выполненный по {takenDate} включительно. Сегодняшнее ({takenDate}) уведомление-напоминание в {reminderTimes} не будет отправлено.\nЕсли это ошибка, отмените запись о приёме.",
   "midnightTakenWarningDialogNeverShowAgain": "Больше не показывать",
   "midnightTakenWarningDialogSeeHowToRevert": "Посмотреть, как отменить запись о приёме",
-  "midnightTakenWarningDialogTitle": "Обратите внимание"
+  "midnightTakenWarningDialogTitle": "Обратите внимание",
+
+  "endedPillSheetDialogHistoryTitle": "Хотите посмотреть историю приёма таблеток?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Давайте взглянем на этот блистер",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "Записано дней: {recordedDays}, пропущено: {missedDays}",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Выберите дату начала перерыва {date} или раньше",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

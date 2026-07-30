@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "Jemanje je zabeleženo do {takenDate}. Današnje ({takenDate}) obvestilo ob {reminderTimes} zato ne bo prejeto.\nČe je prišlo do napake, prosimo, razveljavite zapis o jemanju.",
   "midnightTakenWarningDialogNeverShowAgain": "Ne prikaži več",
   "midnightTakenWarningDialogSeeHowToRevert": "Poglejte, kako razveljaviti zapis o jemanju",
-  "midnightTakenWarningDialogTitle": "Bodite pozorni"
+  "midnightTakenWarningDialogTitle": "Bodite pozorni",
+
+  "endedPillSheetDialogHistoryTitle": "Želite videti zgodovino jemanja tablet?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Poglejmo nazaj na ta pretisni omot",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "Zabeleženih dni: {recordedDays}, izpuščenih: {missedDays}",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Izberite datum začetka premora {date} ali prej",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

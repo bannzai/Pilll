@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "Záznam o užití bol vykonaný až do dňa {takenDate}. Dnešné upozornenie ({takenDate}) o {reminderTimes} preto nebude doručené.\nAk ide o omyl, zrušte prosím záznam o užití.",
   "midnightTakenWarningDialogNeverShowAgain": "Túto správu už nezobrazovať",
   "midnightTakenWarningDialogSeeHowToRevert": "Pozrieť návod na zrušenie záznamu o užití",
-  "midnightTakenWarningDialogTitle": "Upozornenie"
+  "midnightTakenWarningDialogTitle": "Upozornenie",
+
+  "endedPillSheetDialogHistoryTitle": "Chcete si pozrieť históriu užívania tabletiek?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Pozrime sa späť na tento blister",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "Zaznamenané dni: {recordedDays}, vynechané: {missedDays}",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Vyberte dátum začiatku prestávky {date} alebo skorší",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

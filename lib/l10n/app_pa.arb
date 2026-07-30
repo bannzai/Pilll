@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "{takenDate} ਤੱਕ ਦੀ ਗੋਲੀ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਹੋ ਚੁੱਕਾ ਹੈ। ਅੱਜ ({takenDate}) {reminderTimes} ਦੀ ਸੂਚਨਾ ਤੁਹਾਨੂੰ ਨਹੀਂ ਮਿਲੇਗੀ।\nਜੇ ਇਹ ਗਲਤੀ ਨਾਲ ਹੋਇਆ ਹੈ ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਸੇਵਨ ਰਿਕਾਰਡ ਨੂੰ ਰੱਦ ਕਰੋ",
   "midnightTakenWarningDialogNeverShowAgain": "ਦੁਬਾਰਾ ਨਾ ਦਿਖਾਓ",
   "midnightTakenWarningDialogSeeHowToRevert": "ਸੇਵਨ ਰਿਕਾਰਡ ਰੱਦ ਕਰਨ ਦਾ ਤਰੀਕਾ ਦੇਖੋ",
-  "midnightTakenWarningDialogTitle": "ਕਿਰਪਾ ਕਰਕੇ ਧਿਆਨ ਦਿਓ"
+  "midnightTakenWarningDialogTitle": "ਕਿਰਪਾ ਕਰਕੇ ਧਿਆਨ ਦਿਓ",
+
+  "endedPillSheetDialogHistoryTitle": "ਕੀ ਤੁਸੀਂ ਆਪਣੀ ਗੋਲੀ ਲੈਣ ਦਾ ਇਤਿਹਾਸ ਦੇਖਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "ਆਓ ਇਸ ਗੋਲੀ ਸ਼ੀਟ 'ਤੇ ਝਾਤ ਮਾਰੀਏ",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} ਦਿਨ ਦਰਜ ਹੋਏ, {missedDays} ਦਿਨ ਖੁੰਝ ਗਏ",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "ਕਿਰਪਾ ਕਰਕੇ {date} ਜਾਂ ਇਸ ਤੋਂ ਪਹਿਲਾਂ ਦੀ ਵਿਰਾਮ ਸ਼ੁਰੂਆਤ ਮਿਤੀ ਚੁਣੋ",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

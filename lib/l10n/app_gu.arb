@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "{takenDate} સુધીની ગોળીઓ સેવન તરીકે નોંધાઈ ગઈ છે. આજે એટલે કે {takenDate} ના રોજ {reminderTimes} ની સૂચના તમને નહીં મળે.\nજો આ ભૂલથી થયું હોય, તો કૃપા કરીને સેવન રેકોર્ડ રદ કરો",
   "midnightTakenWarningDialogNeverShowAgain": "ફરીથી બતાવશો નહીં",
   "midnightTakenWarningDialogSeeHowToRevert": "સેવન રદ કરવાની રીત જુઓ",
-  "midnightTakenWarningDialogTitle": "કૃપા કરીને નોંધ લો"
+  "midnightTakenWarningDialogTitle": "કૃપા કરીને નોંધ લો",
+
+  "endedPillSheetDialogHistoryTitle": "તમારો પિલ લેવાનો ઇતિહાસ જોવા માંગો છો?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "ચાલો આ પિલ શીટ પર નજર કરીએ",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} દિવસ નોંધાયા, {missedDays} દિવસ ચૂકી ગયા",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "કૃપા કરીને {date} અથવા તે પહેલાંની વિરામ શરૂઆતની તારીખ પસંદ કરો",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "Die Einnahme wurde bis einschließlich {takenDate} aufgezeichnet. Die heutige ({takenDate}) Benachrichtigung um {reminderTimes} wird nicht zugestellt.\nFalls dies ein Versehen war, stornieren Sie bitte die Einnahme.",
   "midnightTakenWarningDialogNeverShowAgain": "Nicht mehr anzeigen",
   "midnightTakenWarningDialogSeeHowToRevert": "Anleitung zum Stornieren der Einnahme ansehen",
-  "midnightTakenWarningDialogTitle": "Bitte beachten"
+  "midnightTakenWarningDialogTitle": "Bitte beachten",
+
+  "endedPillSheetDialogHistoryTitle": "Möchtest du deinen Einnahmeverlauf sehen?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Blicken wir auf dieses Pillenblatt zurück",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} Tage erfasst, {missedDays} Tage verpasst",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Bitte wähle ein Startdatum der Pause am {date} oder davor",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

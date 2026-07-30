@@ -2818,5 +2818,36 @@
   "midnightTakenWarningDialogBody": "Записан е прием на хапчета до {takenDate}. Днешното ({takenDate}) напомняне в {reminderTimes} няма да бъде изпратено.\nАко това е грешка, моля отменете записа за приема.",
   "midnightTakenWarningDialogNeverShowAgain": "Не показвай отново",
   "midnightTakenWarningDialogSeeHowToRevert": "Вижте как да отмените записа за приема",
-  "midnightTakenWarningDialogTitle": "Внимание"
+  "midnightTakenWarningDialogTitle": "Внимание",
+
+  "endedPillSheetDialogHistoryTitle": "Искате ли да видите историята на приема на хапчета?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Да погледнем този блистер",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} дни записани, {missedDays} дни пропуснати",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Моля, изберете начална дата на паузата на {date} или по-рано",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "Þú hefur skráð pillutöku til og með {takenDate}. Tilkynningin fyrir daginn í dag ({takenDate}) klukkan {reminderTimes} berst þér ekki.\nEf þetta voru mistök skaltu afturkalla tökuskráninguna.",
   "midnightTakenWarningDialogNeverShowAgain": "Ekki sýna þetta aftur",
   "midnightTakenWarningDialogSeeHowToRevert": "Skoða leiðbeiningar um að afturkalla tökuskráningu",
-  "midnightTakenWarningDialogTitle": "Athugið"
+  "midnightTakenWarningDialogTitle": "Athugið",
+
+  "endedPillSheetDialogHistoryTitle": "Viltu sjá pillutökusöguna þína?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Lítum yfir þetta pilluspjald",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} dagar skráðir, {missedDays} dagar slepptir",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Veldu upphafsdag hlés {date} eða fyrr",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

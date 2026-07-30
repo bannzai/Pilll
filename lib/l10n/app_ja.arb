@@ -2701,6 +2701,21 @@
   "restDurationFeatureAppealPoint2": "ピルシート右上の歯車から開始",
   "restDurationFeatureAppealPoint3": "期間の編集・再開もかんたん",
 
+  "endedPillSheetDialogHistoryTitle": "ピルシートの履歴を見てみませんか？",
+  "endedPillSheetDialogSummaryTitle": "今回のピルシートをふりかえりましょう",
+  "endedPillSheetDialogSummaryMessage": "服用記録 {recordedDays} 件・記録漏れ {missedDays} 件でした",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "ピルシート終了ダイアログ(Variant B)で服用記録の集計を表示するメッセージ。recordedDaysは服用記録できた日数、missedDaysは記録漏れ日数。",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
   "midnightTakenWarningDialogTitle": "ご注意ください",
   "@midnightTakenWarningDialogTitle": {
     "description": "深夜0時〜2時にアプリで服用記録をした際に表示される注意ダイアログのタイトルです。日を跨いだことに気づかず当日分まで服用記録されたことをユーザーに知らせます。"

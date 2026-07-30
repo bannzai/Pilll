@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogTitle": "कृपया लक्ष द्या",
   "midnightTakenWarningDialogBody": "{takenDate} पर्यंतच्या सेवनाची नोंद झाली आहे. आज ({takenDate}) {reminderTimes} वाजताची सूचना तुम्हाला मिळणार नाही.\nचुकून नोंद झाली असल्यास, कृपया सेवन रद्द करा",
   "midnightTakenWarningDialogNeverShowAgain": "पुन्हा दाखवू नका",
-  "midnightTakenWarningDialogSeeHowToRevert": "सेवन रद्द करण्याची पद्धत पहा"
+  "midnightTakenWarningDialogSeeHowToRevert": "सेवन रद्द करण्याची पद्धत पहा",
+
+  "endedPillSheetDialogHistoryTitle": "तुमचा गोळी घेण्याचा इतिहास पाहायचा आहे का?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "या गोळी शीटकडे मागे वळून पाहूया",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} दिवस नोंदवले, {missedDays} दिवस चुकले",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "कृपया {date} किंवा त्यापूर्वीची विश्रांती सुरू होण्याची तारीख निवडा",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

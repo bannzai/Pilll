@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "{takenDate}-ы хүртэлх уусан бүртгэл хийгдсэн байна. Өнөөдөр буюу {takenDate}-ны {reminderTimes} цагийн мэдэгдэл тань ирэхгүй.\nХэрэв алдаатай бол уусан бүртгэлээ цуцлана уу",
   "midnightTakenWarningDialogNeverShowAgain": "Дахин бүү харуул",
   "midnightTakenWarningDialogSeeHowToRevert": "Уусан бүртгэлийг цуцлах аргыг үзэх",
-  "midnightTakenWarningDialogTitle": "Анхаарна уу"
+  "midnightTakenWarningDialogTitle": "Анхаарна уу",
+
+  "endedPillSheetDialogHistoryTitle": "Эм уусан түүхээ харахыг хүсэж байна уу?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Энэ эмийн хуудсыг эргэн харцгаая",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} өдөр бүртгэгдсэн, {missedDays} өдөр алгассан",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Завсарлагын эхлэх огноог {date} буюу түүнээс өмнө сонгоно уу",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
