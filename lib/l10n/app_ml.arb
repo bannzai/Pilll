@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogTitle": "ദയവായി ശ്രദ്ധിക്കുക",
   "midnightTakenWarningDialogBody": "{takenDate} വരെയുള്ള ഗുളിക സേവന രേഖ ചെയ്യപ്പെട്ടിരിക്കുന്നു. ഇന്ന് ({takenDate}) {reminderTimes}-ന് ലഭിക്കേണ്ട അറിയിപ്പ് നിങ്ങൾക്ക് ലഭിക്കില്ല.\nഇത് തെറ്റാണെങ്കിൽ, ദയവായി സേവന രേഖ റദ്ദാക്കുക",
   "midnightTakenWarningDialogSeeHowToRevert": "സേവനം റദ്ദാക്കുന്ന വിധം കാണുക",
-  "midnightTakenWarningDialogNeverShowAgain": "ഇനി ഇത് കാണിക്കരുത്"
+  "midnightTakenWarningDialogNeverShowAgain": "ഇനി ഇത് കാണിക്കരുത്",
+
+  "endedPillSheetDialogHistoryTitle": "നിങ്ങളുടെ ഗുളിക കഴിച്ച ചരിത്രം കാണണോ?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "ഈ ഗുളിക ഷീറ്റ് ഒന്ന് തിരിഞ്ഞുനോക്കാം",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} ദിവസം രേഖപ്പെടുത്തി, {missedDays} ദിവസം വിട്ടുപോയി",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "ദയവായി {date} അല്ലെങ്കിൽ അതിന് മുമ്പുള്ള ഇടവേള ആരംഭ തീയതി തിരഞ്ഞെടുക്കുക",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

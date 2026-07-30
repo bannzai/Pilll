@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "Dina piller har registrerats som tagna till och med {takenDate}. Dagens påminnelse ({takenDate}) klockan {reminderTimes} kommer inte att skickas.\nOm detta var ett misstag, ångra registreringen av intaget.",
   "midnightTakenWarningDialogNeverShowAgain": "Visa inte igen",
   "midnightTakenWarningDialogSeeHowToRevert": "Se hur du ångrar en registrering",
-  "midnightTakenWarningDialogTitle": "Observera"
+  "midnightTakenWarningDialogTitle": "Observera",
+
+  "endedPillSheetDialogHistoryTitle": "Vill du se din pillerhistorik?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Låt oss se tillbaka på den här pillerkartan",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} dagar registrerade, {missedDays} dagar missade",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Välj ett startdatum för pausen {date} eller tidigare",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

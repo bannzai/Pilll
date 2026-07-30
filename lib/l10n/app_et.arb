@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "Teie tabletid on märgitud võetuks kuni {takenDate}. Tänase ({takenDate}) päeva teavitus kell {reminderTimes} jääb saatmata.\nKui see oli eksitus, palun tühistage võtmiskirje.",
   "midnightTakenWarningDialogNeverShowAgain": "Ära näita seda enam",
   "midnightTakenWarningDialogSeeHowToRevert": "Vaata, kuidas võtmiskirjet tühistada",
-  "midnightTakenWarningDialogTitle": "Pange tähele"
+  "midnightTakenWarningDialogTitle": "Pange tähele",
+
+  "endedPillSheetDialogHistoryTitle": "Kas soovid näha tablettide võtmise ajalugu?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Vaatame sellele tabletilehele tagasi",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} päeva kirjas, {missedDays} päeva vahele jäänud",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Vali pausi alguskuupäev {date} või varasem",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

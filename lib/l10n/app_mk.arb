@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogTitle": "Внимание",
   "midnightTakenWarningDialogBody": "Земањето на пилулите е запишано до {takenDate}. Денешното известување ({takenDate}) закажано за {reminderTimes} нема да биде испратено.\nАко ова е грешка, Ве молиме откажете го записот за земање.",
   "midnightTakenWarningDialogNeverShowAgain": "Не прикажувај повторно",
-  "midnightTakenWarningDialogSeeHowToRevert": "Видете како да го откажете записот за земање"
+  "midnightTakenWarningDialogSeeHowToRevert": "Видете како да го откажете записот за земање",
+
+  "endedPillSheetDialogHistoryTitle": "Сакате да ја видите историјата на земање апчиња?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Да го разгледаме овој блистер",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "Забележани {recordedDays} дена, пропуштени {missedDays} дена",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Изберете датум на почеток на паузата на {date} или порано",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

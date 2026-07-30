@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "{takenDate} дейінгі қабылдау жазбалары тіркелді. Бүгінгі ({takenDate}) {reminderTimes} хабарландыруы жеткізілмейді.\nҚате болса, қабылдауды болдырмаңыз",
   "midnightTakenWarningDialogNeverShowAgain": "Қайта көрсетпеу",
   "midnightTakenWarningDialogSeeHowToRevert": "Қабылдауды болдырмау тәсілін көру",
-  "midnightTakenWarningDialogTitle": "Назар аударыңыз"
+  "midnightTakenWarningDialogTitle": "Назар аударыңыз",
+
+  "endedPillSheetDialogHistoryTitle": "Дәрі қабылдау тарихын көргіңіз келе ме?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Осы дәрі парағын шолып шығайық",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} күн жазылды, {missedDays} күн өткізілді",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Үзілістің басталу күнін {date} немесе одан бұрын таңдаңыз",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "Naitala na ang pag-inom ng pill hanggang {takenDate}. Hindi maihahatid ang paalala ngayong {takenDate} sa oras na {reminderTimes}.\nKung pagkakamali ito, mangyaring bawiin ang naitalang pag-inom.",
   "midnightTakenWarningDialogNeverShowAgain": "Huwag nang ipakita muli",
   "midnightTakenWarningDialogSeeHowToRevert": "Tingnan kung paano bawiin ang pag-inom",
-  "midnightTakenWarningDialogTitle": "Mangyaring tandaan"
+  "midnightTakenWarningDialogTitle": "Mangyaring tandaan",
+
+  "endedPillSheetDialogHistoryTitle": "Gusto mo bang makita ang history ng pag-inom ng pills mo?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Balikan natin ang pill sheet na ito",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} araw na naitala, {missedDays} araw na nakaligtaan",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Pumili ng start date ng pahinga sa {date} o mas maaga",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

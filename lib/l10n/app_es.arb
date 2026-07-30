@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "Se ha registrado la toma hasta el {takenDate}. La notificación de hoy ({takenDate}) programada para las {reminderTimes} no se recibirá.\nSi esto fue un error, cancele el registro de toma.",
   "midnightTakenWarningDialogNeverShowAgain": "No volver a mostrar esto",
   "midnightTakenWarningDialogSeeHowToRevert": "Ver cómo cancelar el registro de toma",
-  "midnightTakenWarningDialogTitle": "Atención"
+  "midnightTakenWarningDialogTitle": "Atención",
+
+  "endedPillSheetDialogHistoryTitle": "¿Quieres ver tu historial de tomas?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Repasemos este blíster",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} días registrados, {missedDays} días omitidos",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Selecciona una fecha de inicio de la pausa el {date} o antes",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

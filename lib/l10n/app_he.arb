@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogTitle": "שים לב",
   "midnightTakenWarningDialogBody": "נרשמה נטילת הגלולות עד {takenDate}. הודעת התזכורת של היום ({takenDate}) בשעה {reminderTimes} לא תישלח אליך.\nאם מדובר בטעות, אנא בטל את רישום הנטילה",
   "midnightTakenWarningDialogNeverShowAgain": "אל תציג הודעה זו שוב",
-  "midnightTakenWarningDialogSeeHowToRevert": "לראות איך לבטל רישום נטילה"
+  "midnightTakenWarningDialogSeeHowToRevert": "לראות איך לבטל רישום נטילה",
+
+  "endedPillSheetDialogHistoryTitle": "רוצה לראות את היסטוריית נטילת הגלולות שלך?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "בואי נסקור את מארז הגלולות הזה",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} ימים תועדו, {missedDays} ימים הוחמצו",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "יש לבחור תאריך התחלת הפסקה ב-{date} או לפני כן",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

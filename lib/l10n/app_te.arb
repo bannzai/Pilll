@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "{takenDate} వరకు మాత్ర తీసుకున్నట్లు నమోదు చేయబడింది. {takenDate} అయిన ఈ రోజు {reminderTimes}కి వచ్చే నోటిఫికేషన్ మీకు అందదు.\nపొరపాటు జరిగితే, దయచేసి తీసుకున్న రికార్డును రద్దు చేయండి",
   "midnightTakenWarningDialogNeverShowAgain": "మళ్లీ చూపించవద్దు",
   "midnightTakenWarningDialogSeeHowToRevert": "తీసుకున్న రికార్డును ఎలా రద్దు చేయాలో చూడండి",
-  "midnightTakenWarningDialogTitle": "దయచేసి గమనించండి"
+  "midnightTakenWarningDialogTitle": "దయచేసి గమనించండి",
+
+  "endedPillSheetDialogHistoryTitle": "మీ మాత్రల చరిత్రను చూడాలనుకుంటున్నారా?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "ఈ మాత్రల షీట్‌ను ఒకసారి చూద్దాం",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} రోజులు నమోదయ్యాయి, {missedDays} రోజులు తప్పిపోయాయి",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "దయచేసి {date} లేదా అంతకు ముందు విరామ ప్రారంభ తేదీని ఎంచుకోండి",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

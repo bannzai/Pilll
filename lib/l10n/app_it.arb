@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "Le pillole risultano registrate come assunte fino al {takenDate}. La notifica di oggi ({takenDate}) delle {reminderTimes} non ti verrà consegnata.\nSe si tratta di un errore, annulla l'assunzione registrata.",
   "midnightTakenWarningDialogNeverShowAgain": "Non mostrare più questo messaggio",
   "midnightTakenWarningDialogSeeHowToRevert": "Vedi come annullare l'assunzione registrata",
-  "midnightTakenWarningDialogTitle": "Attenzione"
+  "midnightTakenWarningDialogTitle": "Attenzione",
+
+  "endedPillSheetDialogHistoryTitle": "Vuoi vedere la cronologia delle tue assunzioni?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Ripercorriamo questo blister",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} giorni registrati, {missedDays} giorni mancati",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Seleziona una data di inizio pausa il {date} o prima",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

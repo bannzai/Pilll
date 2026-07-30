@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogTitle": "Vă rugăm să rețineți",
   "midnightTakenWarningDialogBody": "Administrarea pilulei a fost înregistrată ca fiind luată până în data de {takenDate}. Notificarea de reamintire de astăzi ({takenDate}), programată pentru ora {reminderTimes}, nu va fi trimisă.\nDacă aceasta este o greșeală, vă rugăm să anulați administrarea.",
   "midnightTakenWarningDialogNeverShowAgain": "Nu mai afișa din nou",
-  "midnightTakenWarningDialogSeeHowToRevert": "Vezi cum să anulezi administrarea"
+  "midnightTakenWarningDialogSeeHowToRevert": "Vezi cum să anulezi administrarea",
+
+  "endedPillSheetDialogHistoryTitle": "Vrei să vezi istoricul administrării pastilelor?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Să aruncăm o privire asupra acestui blister",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} zile înregistrate, {missedDays} zile omise",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Selectați o dată de început a pauzei pe {date} sau mai devreme",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

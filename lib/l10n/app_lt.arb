@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "Vartojimas užregistruotas iki {takenDate}. Šiandienos ({takenDate}) priminimas {reminderTimes} nebus pristatytas.\nJei tai klaida, atšaukite vartojimo įrašą.",
   "midnightTakenWarningDialogNeverShowAgain": "Daugiau nerodyti",
   "midnightTakenWarningDialogSeeHowToRevert": "Peržiūrėti, kaip atšaukti vartojimo įrašą",
-  "midnightTakenWarningDialogTitle": "Atkreipkite dėmesį"
+  "midnightTakenWarningDialogTitle": "Atkreipkite dėmesį",
+
+  "endedPillSheetDialogHistoryTitle": "Norite peržiūrėti tablečių vartojimo istoriją?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Apžvelkime šį tablečių lakštą",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "Užfiksuota dienų: {recordedDays}, praleista: {missedDays}",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Pasirinkite pertraukos pradžios datą {date} arba ankstesnę",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogTitle": "Zwróć uwagę",
   "midnightTakenWarningDialogBody": "Zarejestrowano przyjęcie pigułek do dnia {takenDate}. Dzisiejsze ({takenDate}) powiadomienie o godzinie {reminderTimes} nie zostanie dostarczone.\nJeśli to pomyłka, cofnij przyjęcie.",
   "midnightTakenWarningDialogNeverShowAgain": "Nie pokazuj ponownie",
-  "midnightTakenWarningDialogSeeHowToRevert": "Zobacz, jak cofnąć przyjęcie"
+  "midnightTakenWarningDialogSeeHowToRevert": "Zobacz, jak cofnąć przyjęcie",
+
+  "endedPillSheetDialogHistoryTitle": "Chcesz zobaczyć historię przyjmowania tabletek?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Spójrzmy na ten listek tabletek",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "Zapisane dni: {recordedDays}, pominięte: {missedDays}",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Wybierz datę rozpoczęcia przerwy {date} lub wcześniejszą",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

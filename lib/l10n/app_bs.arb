@@ -2818,5 +2818,36 @@
   "midnightTakenWarningDialogBody": "Zapisi o uzimanju su izvršeni zaključno sa {takenDate}. Današnje ({takenDate}) obavještenje u {reminderTimes} neće biti dostavljeno.\nAko je ovo greška, molimo poništite zapis o uzimanju.",
   "midnightTakenWarningDialogNeverShowAgain": "Ne prikazuj ponovo",
   "midnightTakenWarningDialogSeeHowToRevert": "Pogledajte kako poništiti zapis o uzimanju",
-  "midnightTakenWarningDialogTitle": "Napomena"
+  "midnightTakenWarningDialogTitle": "Napomena",
+
+  "endedPillSheetDialogHistoryTitle": "Želite li vidjeti historiju uzimanja pilula?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Osvrnimo se na ovu tablu pilula",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "Zabilježeno dana: {recordedDays}, propušteno: {missedDays}",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Odaberite datum početka pauze na dan {date} ili ranije",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

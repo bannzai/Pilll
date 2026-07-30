@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogTitle": "Upozornění",
   "midnightTakenWarningDialogBody": "Užití pilulek je zaznamenáno až do data {takenDate}. Dnešní ({takenDate}) upozornění na užití v {reminderTimes} vám proto nepřijde.\nPokud šlo o omyl, zrušte prosím záznam o užití.",
   "midnightTakenWarningDialogNeverShowAgain": "Příště nezobrazovat",
-  "midnightTakenWarningDialogSeeHowToRevert": "Zobrazit návod, jak zrušit záznam o užití"
+  "midnightTakenWarningDialogSeeHowToRevert": "Zobrazit návod, jak zrušit záznam o užití",
+
+  "endedPillSheetDialogHistoryTitle": "Chcete si zobrazit historii užívání pilulek?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Podívejme se zpět na tento blistr",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "Zaznamenáno dní: {recordedDays}, vynecháno: {missedDays}",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Vyberte datum začátku pauzy {date} nebo dřívější",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

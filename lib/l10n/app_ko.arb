@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "{takenDate}분까지 복용 기록이 완료되었습니다. {takenDate}인 오늘의 {reminderTimes} 알림은 전송되지 않습니다.\n실수하신 경우에는 복용 기록을 취소해 주세요",
   "midnightTakenWarningDialogNeverShowAgain": "다시 표시하지 않기",
   "midnightTakenWarningDialogSeeHowToRevert": "복용 취소 방법 보기",
-  "midnightTakenWarningDialogTitle": "확인해 주세요"
+  "midnightTakenWarningDialogTitle": "확인해 주세요",
+
+  "endedPillSheetDialogHistoryTitle": "복용 기록을 확인해 보시겠어요?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "이번 약 시트를 돌아봅시다",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "복용 기록 {recordedDays}일, 기록 누락 {missedDays}일",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "복용 중단 시작일은 {date} 이전 날짜를 선택해 주세요",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

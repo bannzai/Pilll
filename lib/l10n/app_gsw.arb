@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogTitle": "Bitte beachten",
   "midnightTakenWarningDialogBody": "D'Iinahm isch bis und mit {takenDate} als gnaa erfasst worde. D'Benachrichtigung vo hüt, am {takenDate}, um {reminderTimes} wird Ihne dromit nöd zuegstellt.\nFalls das aus Versehe passiert isch, mached Sie bitte d'Iinahm rückgängig.",
   "midnightTakenWarningDialogSeeHowToRevert": "Aaleitig zum Rückgängigmache vo de Iinahm aaluege",
-  "midnightTakenWarningDialogNeverShowAgain": "Nie me aazeige"
+  "midnightTakenWarningDialogNeverShowAgain": "Nie me aazeige",
+
+  "endedPillSheetDialogHistoryTitle": "Wotsch dini Pillene-Historie gseh?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Luege mer uf das Pilleblatt zrugg",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} Täg erfasst, {missedDays} Täg verpasst",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Bitte wähl es Startdatum vo de Pause am {date} oder dervor",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogTitle": "لطفاً توجه کنید",
   "midnightTakenWarningDialogBody": "مصرف قرص تا تاریخ {takenDate} ثبت شده است. اعلان یادآوری امروز ({takenDate}) در ساعت {reminderTimes} برای شما ارسال نخواهد شد.\nدر صورت اشتباه بودن، لطفاً مصرف را لغو کنید.",
   "midnightTakenWarningDialogNeverShowAgain": "دیگر نمایش داده نشود",
-  "midnightTakenWarningDialogSeeHowToRevert": "مشاهده روش لغو ثبت مصرف"
+  "midnightTakenWarningDialogSeeHowToRevert": "مشاهده روش لغو ثبت مصرف",
+
+  "endedPillSheetDialogHistoryTitle": "می‌خواهید تاریخچه مصرف قرص خود را ببینید؟",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "بیایید این ورق قرص را مرور کنیم",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} روز ثبت شده، {missedDays} روز ثبت نشده",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "لطفاً تاریخ شروع استراحت را {date} یا قبل از آن انتخاب کنید",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

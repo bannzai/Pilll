@@ -2818,5 +2818,36 @@
   "midnightTakenWarningDialogBody": "Jou pille is aangeteken as geneem tot en met {takenDate}. Vandag se ({takenDate}) kennisgewing om {reminderTimes} sal nie afgelewer word nie.\nAs dit 'n fout was, keer asseblief die innameaantekening terug.",
   "midnightTakenWarningDialogNeverShowAgain": "Moenie dit weer wys nie",
   "midnightTakenWarningDialogSeeHowToRevert": "Sien hoe om 'n innameaantekening terug te keer",
-  "midnightTakenWarningDialogTitle": "Let asseblief op"
+  "midnightTakenWarningDialogTitle": "Let asseblief op",
+
+  "endedPillSheetDialogHistoryTitle": "Wil jy jou pilgeskiedenis sien?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Kom ons kyk terug na hierdie pilvel",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} dae aangeteken, {missedDays} dae gemis",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Kies 'n begindatum vir die ruskans op of voor {date}",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

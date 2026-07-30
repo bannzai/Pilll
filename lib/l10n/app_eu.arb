@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "Zure pilulak hartu bezala erregistratu dira {takenDate} arte. Gaurko ({takenDate}) {reminderTimes}etako jakinarazpena ez zaizu bidaliko.\nOkerra bada, mesedez, ezeztatu hartzea.",
   "midnightTakenWarningDialogNeverShowAgain": "Ez erakutsi berriro",
   "midnightTakenWarningDialogSeeHowToRevert": "Hartzea ezeztatzeko modua ikusi",
-  "midnightTakenWarningDialogTitle": "Kontuan izan"
+  "midnightTakenWarningDialogTitle": "Kontuan izan",
+
+  "endedPillSheetDialogHistoryTitle": "Pilulak hartzearen historia ikusi nahi duzu?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Errepasa dezagun pilula-orri hau",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} egun erregistratuta, {missedDays} egun galduta",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Aukeratu atsedenaren hasiera-data {date} edo lehenago",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

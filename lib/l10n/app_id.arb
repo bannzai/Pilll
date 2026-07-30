@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "Catatan konsumsi pil hingga {takenDate} telah dibuat. Notifikasi pengingat pukul {reminderTimes} untuk hari ini ({takenDate}) tidak akan dikirim.\nJika ini adalah kesalahan, silakan batalkan catatan konsumsi tersebut",
   "midnightTakenWarningDialogNeverShowAgain": "Jangan tampilkan lagi",
   "midnightTakenWarningDialogSeeHowToRevert": "Lihat cara membatalkan catatan konsumsi",
-  "midnightTakenWarningDialogTitle": "Perhatian"
+  "midnightTakenWarningDialogTitle": "Perhatian",
+
+  "endedPillSheetDialogHistoryTitle": "Ingin melihat riwayat minum pil Anda?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Mari lihat kembali lembar pil ini",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} hari tercatat, {missedDays} hari terlewat",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Pilih tanggal mulai jeda pada {date} atau sebelumnya",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

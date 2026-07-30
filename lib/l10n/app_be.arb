@@ -2818,5 +2818,36 @@
   "midnightTakenWarningDialogTitle": "Звярніце ўвагу",
   "midnightTakenWarningDialogBody": "Прыём таблетак быў запісаны ўключна да {takenDate}. Сённяшняе паведамленне ({takenDate}) у {reminderTimes} не прыйдзе.\nКалі гэта памылка, скасуйце прыём.",
   "midnightTakenWarningDialogNeverShowAgain": "Больш не паказваць",
-  "midnightTakenWarningDialogSeeHowToRevert": "Паглядзець, як скасаваць прыём"
+  "midnightTakenWarningDialogSeeHowToRevert": "Паглядзець, як скасаваць прыём",
+
+  "endedPillSheetDialogHistoryTitle": "Хочаце паглядзець гісторыю прыёму таблетак?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Давайце азірнемся на гэты блістар",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "Запісана дзён: {recordedDays}, прапушчана: {missedDays}",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Выберыце дату пачатку перапынку не пазней за {date}",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

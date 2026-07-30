@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "A bevétel rögzítve lett {takenDate}-ig bezárólag. A mai napi ({takenDate}) {reminderTimes} órakor esedékes értesítés emiatt nem fog megérkezni.\nHa ez tévedésből történt, kérjük, vonja vissza a bevétel rögzítését.",
   "midnightTakenWarningDialogNeverShowAgain": "Ne jelenjen meg többé",
   "midnightTakenWarningDialogSeeHowToRevert": "A bevétel visszavonásának módja",
-  "midnightTakenWarningDialogTitle": "Figyelem"
+  "midnightTakenWarningDialogTitle": "Figyelem",
+
+  "endedPillSheetDialogHistoryTitle": "Szeretnéd látni a tablettaszedési előzményeidet?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Nézzük vissza ezt a tablettalevelet",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} nap rögzítve, {missedDays} nap kimaradt",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Válassz {date} vagy korábbi szünetkezdő dátumot",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "Amaphilisi akho arekhodiwe njengokuthathiwe kuze kube ku-{takenDate}. Isaziso sanamuhla ({takenDate}) ngo-{reminderTimes} ngeke sifike.\nUma lokhu kwenzeke ngephutha, sicela ususe irekhodi lokuthatha.",
   "midnightTakenWarningDialogNeverShowAgain": "Ungaphinde ukhombise lokhu",
   "midnightTakenWarningDialogSeeHowToRevert": "Bona indlela yokususa irekhodi lokuthatha",
-  "midnightTakenWarningDialogTitle": "Sicela uqaphele"
+  "midnightTakenWarningDialogTitle": "Sicela uqaphele",
+
+  "endedPillSheetDialogHistoryTitle": "Ufuna ukubona umlando wakho wokuphuza amaphilisi?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Ake sibheke leli shidi lamaphilisi",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "Kurekhodwe izinsuku ezingu-{recordedDays}, kwephuzwa ezingu-{missedDays}",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Sicela ukhethe usuku lokuqala kwekhefu ngo-{date} noma ngaphambili",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

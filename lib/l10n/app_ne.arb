@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogTitle": "कृपया ध्यान दिनुहोस्",
   "midnightTakenWarningDialogBody": "{takenDate} सम्मको सेवन रेकर्ड गरिसकिएको छ। आजको ({takenDate}) {reminderTimes} को सूचना तपाईंलाई प्राप्त हुनेछैन।\nयदि यो गल्तीले भएको हो भने, सेवन रद्द गर्नुहोस्",
   "midnightTakenWarningDialogSeeHowToRevert": "सेवन रद्द गर्ने तरिका हेर्नुहोस्",
-  "midnightTakenWarningDialogNeverShowAgain": "फेरि नदेखाउनुहोस्"
+  "midnightTakenWarningDialogNeverShowAgain": "फेरि नदेखाउनुहोस्",
+
+  "endedPillSheetDialogHistoryTitle": "आफ्नो चक्की खाएको इतिहास हेर्न चाहनुहुन्छ?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "यो चक्की पानालाई फर्केर हेरौं",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} दिन रेकर्ड भयो, {missedDays} दिन छुट्यो",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "कृपया {date} वा त्यसअघिको विश्राम सुरु मिति चयन गर्नुहोस्",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

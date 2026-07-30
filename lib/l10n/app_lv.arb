@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "Tabletes ir atzīmētas kā lietotas līdz {takenDate}. Šodienas ({takenDate}) atgādinājuma paziņojums plkst. {reminderTimes} netiks nosūtīts.\nJa tā notika kļūdas dēļ, lūdzu, atceliet lietošanas atzīmi.",
   "midnightTakenWarningDialogNeverShowAgain": "Vairs nerādīt",
   "midnightTakenWarningDialogSeeHowToRevert": "Skatīt, kā atcelt lietošanas atzīmi",
-  "midnightTakenWarningDialogTitle": "Lūdzu, ņemiet vērā"
+  "midnightTakenWarningDialogTitle": "Lūdzu, ņemiet vērā",
+
+  "endedPillSheetDialogHistoryTitle": "Vai vēlaties apskatīt tablešu lietošanas vēsturi?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Atskatīsimies uz šo tablešu plāksnīti",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "Reģistrētas {recordedDays} dienas, izlaistas {missedDays} dienas",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Lūdzu, izvēlieties pauzes sākuma datumu {date} vai agrāk",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

@@ -2818,5 +2818,36 @@
   "midnightTakenWarningDialogTitle": "يرجى الانتباه",
   "midnightTakenWarningDialogBody": "تم تسجيل تناول الحبوب حتى تاريخ {takenDate}. لن يصلك إشعار التذكير اليوم ({takenDate}) في {reminderTimes}.\nإذا كان هذا خطأً، يرجى إلغاء تسجيل التناول",
   "midnightTakenWarningDialogNeverShowAgain": "عدم العرض مرة أخرى",
-  "midnightTakenWarningDialogSeeHowToRevert": "عرض كيفية إلغاء تسجيل التناول"
+  "midnightTakenWarningDialogSeeHowToRevert": "عرض كيفية إلغاء تسجيل التناول",
+
+  "endedPillSheetDialogHistoryTitle": "هل تريدين الاطلاع على سجل تناول حبوبك؟",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "لنراجع شريط الحبوب هذا",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "تم تسجيل {recordedDays} يومًا، وفات تسجيل {missedDays} يومًا",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "يرجى اختيار تاريخ بدء الاستراحة في {date} أو قبله",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

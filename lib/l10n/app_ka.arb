@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "აბების მიღება ჩაწერილია {takenDate}-ის ჩათვლით. დღევანდელი ({takenDate}) შეხსენება {reminderTimes} საათზე არ მოგივათ.\nშეცდომის შემთხვევაში, გთხოვთ გააუქმოთ მიღების ჩანაწერი",
   "midnightTakenWarningDialogNeverShowAgain": "აღარ მაჩვენო ეს",
   "midnightTakenWarningDialogSeeHowToRevert": "მიღების გაუქმების მეთოდი იხილეთ",
-  "midnightTakenWarningDialogTitle": "გთხოვთ გაითვალისწინოთ"
+  "midnightTakenWarningDialogTitle": "გთხოვთ გაითვალისწინოთ",
+
+  "endedPillSheetDialogHistoryTitle": "გსურთ ნახოთ აბების მიღების ისტორია?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "მოდით გადავხედოთ ამ აბების ფურცელს",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "ჩაწერილია {recordedDays} დღე, გამოტოვებულია {missedDays} დღე",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "გთხოვთ, აირჩიოთ შესვენების დაწყების თარიღი {date} ან უფრო ადრე",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

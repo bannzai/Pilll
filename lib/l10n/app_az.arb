@@ -2818,5 +2818,36 @@
   "midnightTakenWarningDialogTitle": "Diqqət edin",
   "midnightTakenWarningDialogNeverShowAgain": "Bir daha göstərmə",
   "midnightTakenWarningDialogSeeHowToRevert": "Qəbul qeydinin necə ləğv ediləcəyini görün",
-  "midnightTakenWarningDialogBody": "Həb qəbulunuz {takenDate} tarixinədək qeydə alınıb. Bu günə ({takenDate}) aid saat {reminderTimes}-dəki bildiriş sizə çatmayacaq.\nSəhvən olubsa, zəhmət olmasa qəbul qeydini ləğv edin."
+  "midnightTakenWarningDialogBody": "Həb qəbulunuz {takenDate} tarixinədək qeydə alınıb. Bu günə ({takenDate}) aid saat {reminderTimes}-dəki bildiriş sizə çatmayacaq.\nSəhvən olubsa, zəhmət olmasa qəbul qeydini ləğv edin.",
+
+  "endedPillSheetDialogHistoryTitle": "Həb qəbulu tarixçənizə baxmaq istəyirsiniz?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Bu həb vərəqinə nəzər salaq",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} gün qeyd olunub, {missedDays} gün buraxılıb",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Zəhmət olmasa fasilənin başlama tarixini {date} və ya ondan əvvəl seçin",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

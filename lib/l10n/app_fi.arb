@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogBody": "Pillerit on kirjattu otetuiksi {takenDate} asti. Tämän päivän ({takenDate}) klo {reminderTimes} ilmoitus ei saavu sinulle.\nJos tämä on virhe, peruuta merkintä.",
   "midnightTakenWarningDialogNeverShowAgain": "Älä näytä tätä uudelleen",
   "midnightTakenWarningDialogSeeHowToRevert": "Katso, miten peruutat merkinnän",
-  "midnightTakenWarningDialogTitle": "Huomioithan"
+  "midnightTakenWarningDialogTitle": "Huomioithan",
+
+  "endedPillSheetDialogHistoryTitle": "Haluatko nähdä pillereiden ottohistoriasi?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Katsotaanpa tätä pilleriliuskaa",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} päivää kirjattu, {missedDays} päivää väliin",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "Valitse tauon aloituspäivä {date} tai aiemmin",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

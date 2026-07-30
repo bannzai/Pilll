@@ -2810,5 +2810,36 @@
   "midnightTakenWarningDialogTitle": "သတိပြုပါ",
   "midnightTakenWarningDialogBody": "{takenDate} အထိ ဆေးသောက်မှတ်တမ်း ထည့်ပြီးဖြစ်ပါသည်။ ယနေ့ {takenDate} ၏ {reminderTimes} အချိန် သတိပေးချက်ကို လက်ခံရရှိမည်မဟုတ်ပါ။\nအမှားဖြစ်ပါက ဆေးသောက်မှတ်တမ်းကို ပယ်ဖျက်ပေးပါ",
   "midnightTakenWarningDialogSeeHowToRevert": "ဆေးသောက်မှတ်တမ်း ပယ်ဖျက်နည်းကို ကြည့်ရှုရန်",
-  "midnightTakenWarningDialogNeverShowAgain": "နောက်တစ်ဖန် မပြပါနှင့်"
+  "midnightTakenWarningDialogNeverShowAgain": "နောက်တစ်ဖန် မပြပါနှင့်",
+
+  "endedPillSheetDialogHistoryTitle": "သောက်ဆေးမှတ်တမ်းကို ကြည့်လိုပါသလား။",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "ဒီဆေးပြားစာရွက်ကို ပြန်ကြည့်ကြရအောင်",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} ရက် မှတ်တမ်းတင်ပြီး၊ {missedDays} ရက် လွတ်သွားသည်",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+
+  "pauseStartDateMustBeOnOrBefore": "ကျေးဇူးပြု၍ {date} သို့မဟုတ် ယင်းမတိုင်မီ အနားယူစတင်မည့်ရက်ကို ရွေးပါ",
+  "@pauseStartDateMustBeOnOrBefore": {
+    "description": "",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }
