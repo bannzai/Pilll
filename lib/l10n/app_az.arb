@@ -2140,6 +2140,14 @@
   "@addPillSheet": {
     "description": "新しいピル（避妊薬・治療薬）のシート・パックを服用管理対象として追加する際のボタンやアクションのテキストです。ユーザーが新しい薬のパッケージを開始する時に表示されます。"
   },
+  "pillTakenCountPrefix": "Gündə",
+  "@pillTakenCountPrefix": {
+    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の前に表示するテキストです。「1日に [2] 回服用する」のように、prefix + 数値入力欄 + pillTakenCountSuffix の順で横並びに表示されます。"
+  },
+  "pillTakenCountSuffix": "dəfə qəbul edilir",
+  "@pillTakenCountSuffix": {
+    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の後に表示するテキストです。「1日に [2] 回服用する」のように、pillTakenCountPrefix + 数値入力欄 + suffix の順で横並びに表示されます。"
+  },
   "duringPauseTaking": "Qəbul fasiləsi",
   "@duringPauseTaking": {
     "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。"
@@ -2819,21 +2827,33 @@
   "midnightTakenWarningDialogNeverShowAgain": "Bir daha göstərmə",
   "midnightTakenWarningDialogSeeHowToRevert": "Qəbul qeydinin necə ləğv ediləcəyini görün",
   "midnightTakenWarningDialogBody": "Həb qəbulunuz {takenDate} tarixinədək qeydə alınıb. Bu günə ({takenDate}) aid saat {reminderTimes}-dəki bildiriş sizə çatmayacaq.\nSəhvən olubsa, zəhmət olmasa qəbul qeydini ləğv edin.",
-  "pauseStartDateMustBeOnOrBefore": "Xidarlıq başlama tarixi olaraq {date} tarixindən əvvəlki bir tarix seçin",
+  "endedPillSheetDialogHistoryTitle": "Həb qəbulu tarixçənizə baxmaq istəyirsiniz?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Bu həb vərəqinə nəzər salaq",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} gün qeyd olunub, {missedDays} gün buraxılıb",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+  "pauseStartDateMustBeOnOrBefore": "Zəhmət olmasa fasilənin başlama tarixini {date} və ya ondan əvvəl seçin",
   "@pauseStartDateMustBeOnOrBefore": {
-    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "description": "",
     "placeholders": {
       "date": {
         "type": "String"
       }
     }
-  },
-  "pillTakenCountPrefix": "Gündə",
-  "@pillTakenCountPrefix": {
-    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の前に表示するテキストです。「1日に [2] 回服用する」のように、prefix + 数値入力欄 + pillTakenCountSuffix の順で横並びに表示されます。"
-  },
-  "pillTakenCountSuffix": "dəfə qəbul edilir",
-  "@pillTakenCountSuffix": {
-    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の後に表示するテキストです。「1日に [2] 回服用する」のように、pillTakenCountPrefix + 数値入力欄 + suffix の順で横並びに表示されます。"
   }
 }

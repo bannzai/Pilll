@@ -2152,6 +2152,14 @@
   "@addPillSheet": {
     "description": "新しいピル（避妊薬・治療薬）のシート・パックを服用管理対象として追加する際のボタンやアクションのテキストです。ユーザーが新しい薬のパッケージを開始する時に表示されます。"
   },
+  "pillTakenCountPrefix": "Sa isang araw",
+  "@pillTakenCountPrefix": {
+    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の前に表示するテキストです。「1日に [2] 回服用する」のように、prefix + 数値入力欄 + pillTakenCountSuffix の順で横並びに表示されます。"
+  },
+  "pillTakenCountSuffix": "beses iinumin",
+  "@pillTakenCountSuffix": {
+    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の後に表示するテキストです。「1日に [2] 回服用する」のように、pillTakenCountPrefix + 数値入力欄 + suffix の順で横並びに表示されます。"
+  },
   "duringPauseTaking": "Nakatigil sa pag-inom",
   "@duringPauseTaking": {
     "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。"
@@ -2811,21 +2819,33 @@
   "midnightTakenWarningDialogNeverShowAgain": "Huwag nang ipakita muli",
   "midnightTakenWarningDialogSeeHowToRevert": "Tingnan ang paraan ng pag-cancel ng record ng pag-inom",
   "midnightTakenWarningDialogTitle": "Paalala",
-  "pauseStartDateMustBeOnOrBefore": "Ipili petsa bago o katumbas ng {date} para sa petsa ng simula ng pahinga sa pag-inom",
+  "endedPillSheetDialogHistoryTitle": "Gusto mo bang makita ang history ng pag-inom ng pills mo?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Balikan natin ang pill sheet na ito",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} araw na naitala, {missedDays} araw na nakaligtaan",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+  "pauseStartDateMustBeOnOrBefore": "Pumili ng start date ng pahinga sa {date} o mas maaga",
   "@pauseStartDateMustBeOnOrBefore": {
-    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "description": "",
     "placeholders": {
       "date": {
         "type": "String"
       }
     }
-  },
-  "pillTakenCountPrefix": "Sa isang araw",
-  "@pillTakenCountPrefix": {
-    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の前に表示するテキストです。「1日に [2] 回服用する」のように、prefix + 数値入力欄 + pillTakenCountSuffix の順で横並びに表示されます。"
-  },
-  "pillTakenCountSuffix": "beses iinumin",
-  "@pillTakenCountSuffix": {
-    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の後に表示するテキストです。「1日に [2] 回服用する」のように、pillTakenCountPrefix + 数値入力欄 + suffix の順で横並びに表示されます。"
   }
 }

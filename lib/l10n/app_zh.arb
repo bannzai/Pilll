@@ -2161,6 +2161,14 @@
   "@addPillSheet": {
     "description": "新しいピル（避妊薬・治療薬）のシート・パックを服用管理対象として追加する際のボタンやアクションのテキストです。ユーザーが新しい薬のパッケージを開始する時に表示されます。"
   },
+  "pillTakenCountPrefix": "每天",
+  "@pillTakenCountPrefix": {
+    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の前に表示するテキストです。「1日に [2] 回服用する」のように、prefix + 数値入力欄 + pillTakenCountSuffix の順で横並びに表示されます。"
+  },
+  "pillTakenCountSuffix": "服用回数",
+  "@pillTakenCountSuffix": {
+    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の後に表示するテキストです。「1日に [2] 回服用する」のように、pillTakenCountPrefix + 数値入力欄 + suffix の順で横並びに表示されます。"
+  },
   "duringPauseTaking": "暂停服用中",
   "@duringPauseTaking": {
     "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。"
@@ -2811,21 +2819,33 @@
   "midnightTakenWarningDialogNeverShowAgain": "不再提示",
   "midnightTakenWarningDialogSeeHowToRevert": "查看取消服用记录的方法",
   "midnightTakenWarningDialogTitle": "请注意",
-  "pauseStartDateMustBeOnOrBefore": "停药开始日期请选择{date}以前的日期",
+  "endedPillSheetDialogHistoryTitle": "想查看您的服药记录吗？",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "回顾一下这板药吧",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "已记录 {recordedDays} 天，漏记 {missedDays} 天",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+  "pauseStartDateMustBeOnOrBefore": "请选择{date}或之前的日期作为停药开始日",
   "@pauseStartDateMustBeOnOrBefore": {
-    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "description": "",
     "placeholders": {
       "date": {
         "type": "String"
       }
     }
-  },
-  "pillTakenCountPrefix": "每天",
-  "@pillTakenCountPrefix": {
-    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の前に表示するテキストです。「1日に [2] 回服用する」のように、prefix + 数値入力欄 + pillTakenCountSuffix の順で横並びに表示されます。"
-  },
-  "pillTakenCountSuffix": "服用回数",
-  "@pillTakenCountSuffix": {
-    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の後に表示するテキストです。「1日に [2] 回服用する」のように、pillTakenCountPrefix + 数値入力欄 + suffix の順で横並びに表示されます。"
   }
 }

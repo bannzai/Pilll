@@ -2161,6 +2161,14 @@
   "@addPillSheet": {
     "description": "新しいピル（避妊薬・治療薬）のシート・パックを服用管理対象として追加する際のボタンやアクションのテキストです。ユーザーが新しい薬のパッケージを開始する時に表示されます。"
   },
+  "pillTakenCountPrefix": "Sehari sekali",
+  "@pillTakenCountPrefix": {
+    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の前に表示するテキストです。「1日に [2] 回服用する」のように、prefix + 数値入力欄 + pillTakenCountSuffix の順で横並びに表示されます。"
+  },
+  "pillTakenCountSuffix": "Sehari [2] kali",
+  "@pillTakenCountSuffix": {
+    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の後に表示するテキストです。「1日に [2] 回服用する」のように、pillTakenCountPrefix + 数値入力欄 + suffix の順で横並びに表示されます。"
+  },
   "duringPauseTaking": "Sedang Berehat",
   "@duringPauseTaking": {
     "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。"
@@ -2811,21 +2819,33 @@
   "midnightTakenWarningDialogBody": "Rekod pengambilan pil anda telah disimpan sehingga {takenDate}. Pemberitahuan peringatan pada {reminderTimes} untuk hari ini ({takenDate}) tidak akan dihantar.\nJika ini adalah kesilapan, sila batalkan rekod pengambilan tersebut.",
   "midnightTakenWarningDialogNeverShowAgain": "Jangan tunjukkan lagi",
   "midnightTakenWarningDialogSeeHowToRevert": "Lihat cara membatalkan rekod pengambilan",
-  "pauseStartDateMustBeOnOrBefore": "Sila pilih tarikh sebelum {date} sebagai tarikh mula rehat pengambilan pil",
+  "endedPillSheetDialogHistoryTitle": "Mahu lihat sejarah pengambilan pil anda?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "Mari imbas kembali helaian pil ini",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} hari direkodkan, {missedDays} hari terlepas",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+  "pauseStartDateMustBeOnOrBefore": "Sila pilih tarikh mula rehat pada {date} atau sebelumnya",
   "@pauseStartDateMustBeOnOrBefore": {
-    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "description": "",
     "placeholders": {
       "date": {
         "type": "String"
       }
     }
-  },
-  "pillTakenCountPrefix": "Sehari sekali",
-  "@pillTakenCountPrefix": {
-    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の前に表示するテキストです。「1日に [2] 回服用する」のように、prefix + 数値入力欄 + pillTakenCountSuffix の順で横並びに表示されます。"
-  },
-  "pillTakenCountSuffix": "Sehari [2] kali",
-  "@pillTakenCountSuffix": {
-    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の後に表示するテキストです。「1日に [2] 回服用する」のように、pillTakenCountPrefix + 数値入力欄 + suffix の順で横並びに表示されます。"
   }
 }

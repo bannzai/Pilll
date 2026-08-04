@@ -2152,6 +2152,14 @@
   "@addPillSheet": {
     "description": "新しいピル（避妊薬・治療薬）のシート・パックを服用管理対象として追加する際のボタンやアクションのテキストです。ユーザーが新しい薬のパッケージを開始する時に表示されます。"
   },
+  "pillTakenCountPrefix": "ദിവസത്തിൽ",
+  "@pillTakenCountPrefix": {
+    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の前に表示するテキストです。「1日に [2] 回服用する」のように、prefix + 数値入力欄 + pillTakenCountSuffix の順で横並びに表示されます。"
+  },
+  "pillTakenCountSuffix": "തവണ കഴിക്കുന്നു",
+  "@pillTakenCountSuffix": {
+    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の後に表示するテキストです。「1日に [2] 回服用する」のように、pillTakenCountPrefix + 数値入力欄 + suffix の順で横並びに表示されます。"
+  },
   "duringPauseTaking": "പിൽ സേവനം വിശ്രമത്തിൽ",
   "@duringPauseTaking": {
     "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。"
@@ -2811,21 +2819,33 @@
   "midnightTakenWarningDialogBody": "{takenDate} വരെയുള്ള ഗുളിക സേവന രേഖ ചെയ്യപ്പെട്ടിരിക്കുന്നു. ഇന്ന് ({takenDate}) {reminderTimes}-ന് ലഭിക്കേണ്ട അറിയിപ്പ് നിങ്ങൾക്ക് ലഭിക്കില്ല.\nഇത് തെറ്റാണെങ്കിൽ, ദയവായി സേവന രേഖ റദ്ദാക്കുക",
   "midnightTakenWarningDialogSeeHowToRevert": "സേവനം റദ്ദാക്കുന്ന വിധം കാണുക",
   "midnightTakenWarningDialogNeverShowAgain": "ഇനി ഇത് കാണിക്കരുത്",
-  "pauseStartDateMustBeOnOrBefore": "既存の ml.arb では「服用お休み」を「മരുന്ന് ഇടവേള」「സേവന വിശ്രമ」と訳しています。この用語と一貫性を保ちつつ翻訳します。\n\nദയവായി ഗുളിക ഇടവേള ആരംഭ തീയതിയായി {date}-നോ അതിനു മുമ്പോ ഉള്ള തീയതി തിരഞ്ഞെടുക്കുക",
+  "endedPillSheetDialogHistoryTitle": "നിങ്ങളുടെ ഗുളിക കഴിച്ച ചരിത്രം കാണണോ?",
+  "@endedPillSheetDialogHistoryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryTitle": "ഈ ഗുളിക ഷീറ്റ് ഒന്ന് തിരിഞ്ഞുനോക്കാം",
+  "@endedPillSheetDialogSummaryTitle": {
+    "description": ""
+  },
+  "endedPillSheetDialogSummaryMessage": "{recordedDays} ദിവസം രേഖപ്പെടുത്തി, {missedDays} ദിവസം വിട്ടുപോയി",
+  "@endedPillSheetDialogSummaryMessage": {
+    "description": "",
+    "placeholders": {
+      "recordedDays": {
+        "type": "int"
+      },
+      "missedDays": {
+        "type": "int"
+      }
+    }
+  },
+  "pauseStartDateMustBeOnOrBefore": "ദയവായി {date} അല്ലെങ്കിൽ അതിന് മുമ്പുള്ള ഇടവേള ആരംഭ തീയതി തിരഞ്ഞെടുക്കുക",
   "@pauseStartDateMustBeOnOrBefore": {
-    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "description": "",
     "placeholders": {
       "date": {
         "type": "String"
       }
     }
-  },
-  "pillTakenCountPrefix": "ദിവസത്തിൽ",
-  "@pillTakenCountPrefix": {
-    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の前に表示するテキストです。「1日に [2] 回服用する」のように、prefix + 数値入力欄 + pillTakenCountSuffix の順で横並びに表示されます。"
-  },
-  "pillTakenCountSuffix": "തവണ കഴിക്കുന്നു",
-  "@pillTakenCountSuffix": {
-    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の後に表示するテキストです。「1日に [2] 回服用する」のように、pillTakenCountPrefix + 数値入力欄 + suffix の順で横並びに表示されます。"
   }
 }
