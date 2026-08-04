@@ -2148,6 +2148,14 @@
   "@addPillSheet": {
     "description": "新しいピル（避妊薬・治療薬）のシート・パックを服用管理対象として追加する際のボタンやアクションのテキストです。ユーザーが新しい薬のパッケージを開始する時に表示されます。"
   },
+  "pillTakenCountPrefix": "1 दिवसात",
+  "@pillTakenCountPrefix": {
+    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の前に表示するテキストです。「1日に [2] 回服用する」のように、prefix + 数値入力欄 + pillTakenCountSuffix の順で横並びに表示されます。"
+  },
+  "pillTakenCountSuffix": "वेळा घ्या",
+  "@pillTakenCountSuffix": {
+    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の後に表示するテキストです。「1日に [2] 回服用する」のように、pillTakenCountPrefix + 数値入力欄 + suffix の順で横並びに表示されます。"
+  },
   "duringPauseTaking": "सेवन विराम",
   "@duringPauseTaking": {
     "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。"
@@ -2811,7 +2819,6 @@
   "midnightTakenWarningDialogBody": "{takenDate} पर्यंतच्या सेवनाची नोंद झाली आहे. आज ({takenDate}) {reminderTimes} वाजताची सूचना तुम्हाला मिळणार नाही.\nचुकून नोंद झाली असल्यास, कृपया सेवन रद्द करा",
   "midnightTakenWarningDialogNeverShowAgain": "पुन्हा दाखवू नका",
   "midnightTakenWarningDialogSeeHowToRevert": "सेवन रद्द करण्याची पद्धत पहा",
-
   "endedPillSheetDialogHistoryTitle": "तुमचा गोळी घेण्याचा इतिहास पाहायचा आहे का?",
   "@endedPillSheetDialogHistoryTitle": {
     "description": ""
@@ -2832,7 +2839,6 @@
       }
     }
   },
-
   "pauseStartDateMustBeOnOrBefore": "कृपया {date} किंवा त्यापूर्वीची विश्रांती सुरू होण्याची तारीख निवडा",
   "@pauseStartDateMustBeOnOrBefore": {
     "description": "",

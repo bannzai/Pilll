@@ -385,9 +385,21 @@ sealed class PillSheet with _$PillSheet {
     return lastTakenDate.isAfter(today()) || isSameDay(lastTakenDate, today());
   }
 
+  /// 最後に「服用完了」したピルの番号（0または1以上）
+  /// v1: 1錠飲みなので服用=完了であり lastTakenOrZeroPillNumber と同じ
+  /// v2: takenCount回すべて服用したピルの番号。1回でも服用があれば服用済み扱いになる
+  ///     lastTakenOrZeroPillNumber とは異なり、部分服用(2回中1回)を完了とみなさない
+  int get lastCompletedOrZeroPillNumber {
+    return switch (this) {
+      PillSheetV1() => lastTakenOrZeroPillNumber,
+      PillSheetV2 v2 => v2.lastCompletedPillNumber,
+    };
+  }
+
   /// ピルシートの全てのピルを服用完了したかどうか
-  /// 総ピル数と最終服用ピル番号を比較して判定
-  bool get isTakenAll => typeInfo.totalCount == lastTakenOrZeroPillNumber;
+  /// 総ピル数と最終服用完了ピル番号を比較して判定
+  /// v2では最終ピルを部分服用(2回中1回)しただけの状態はfalse
+  bool get isTakenAll => typeInfo.totalCount == lastCompletedOrZeroPillNumber;
 
   /// ピルシートの服用が開始されているかどうか
   /// 開始日が現在時刻より前の場合にtrueを返す
@@ -534,6 +546,14 @@ extension PillSheetV2Extension on PillSheetV2 {
     // 休薬期間を考慮したdatesプロパティを使用してピルの正確な日付を取得
     final dateOfLastCompletedPill = dates[lastCompletedPill.index];
     return pillNumberFor(targetDate: dateOfLastCompletedPill);
+  }
+
+  // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
+  /// 最後に服用完了（takenCount回すべて服用）したピルの、最後の服用日時
+  /// まだ完了したピルがない場合はnull
+  /// ホーム画面ウィジェットの「本日服用済み」判定に使用する。lastTakenDateと異なり部分服用(2回中1回)では更新されない
+  DateTime? get lastCompletedTakenDate {
+    return pills.lastWhereOrNull((element) => element.isCompleted)?.pillTakens.last.recordedTakenDateTime;
   }
 
   /// 今日のピルがすべて服用完了したかどうか

@@ -2138,6 +2138,14 @@
   "@addPillSheet": {
     "description": "新しいピル（避妊薬・治療薬）のシート・パックを服用管理対象として追加する際のボタンやアクションのテキストです。ユーザーが新しい薬のパッケージを開始する時に表示されます。"
   },
+  "pillTakenCountPrefix": "하루에",
+  "@pillTakenCountPrefix": {
+    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の前に表示するテキストです。「1日に [2] 回服用する」のように、prefix + 数値入力欄 + pillTakenCountSuffix の順で横並びに表示されます。"
+  },
+  "pillTakenCountSuffix": "하루에 [2]회 복용합니다",
+  "@pillTakenCountSuffix": {
+    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の後に表示するテキストです。「1日に [2] 回服用する」のように、pillTakenCountPrefix + 数値入力欄 + suffix の順で横並びに表示されます。"
+  },
   "duringPauseTaking": "복용 휴식 중",
   "@duringPauseTaking": {
     "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。"
@@ -2811,7 +2819,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "다시 표시하지 않기",
   "midnightTakenWarningDialogSeeHowToRevert": "복용 취소 방법 보기",
   "midnightTakenWarningDialogTitle": "확인해 주세요",
-
   "endedPillSheetDialogHistoryTitle": "복용 기록을 확인해 보시겠어요?",
   "@endedPillSheetDialogHistoryTitle": {
     "description": ""
@@ -2832,7 +2839,6 @@
       }
     }
   },
-
   "pauseStartDateMustBeOnOrBefore": "복용 중단 시작일은 {date} 이전 날짜를 선택해 주세요",
   "@pauseStartDateMustBeOnOrBefore": {
     "description": "",

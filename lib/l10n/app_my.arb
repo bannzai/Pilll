@@ -2161,6 +2161,14 @@
   "@addPillSheet": {
     "description": "新しいピル（避妊薬・治療薬）のシート・パックを服用管理対象として追加する際のボタンやアクションのテキストです。ユーザーが新しい薬のパッケージを開始する時に表示されます。"
   },
+  "pillTakenCountPrefix": "1 ရက်လျှင်",
+  "@pillTakenCountPrefix": {
+    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の前に表示するテキストです。「1日に [2] 回服用する」のように、prefix + 数値入力欄 + pillTakenCountSuffix の順で横並びに表示されます。"
+  },
+  "pillTakenCountSuffix": "回服用する",
+  "@pillTakenCountSuffix": {
+    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の後に表示するテキストです。「1日に [2] 回服用する」のように、pillTakenCountPrefix + 数値入力欄 + suffix の順で横並びに表示されます。"
+  },
   "duringPauseTaking": "သောက်ခြင်း နားနေသည်",
   "@duringPauseTaking": {
     "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。"
@@ -2811,7 +2819,6 @@
   "midnightTakenWarningDialogBody": "{takenDate} အထိ ဆေးသောက်မှတ်တမ်း ထည့်ပြီးဖြစ်ပါသည်။ ယနေ့ {takenDate} ၏ {reminderTimes} အချိန် သတိပေးချက်ကို လက်ခံရရှိမည်မဟုတ်ပါ။\nအမှားဖြစ်ပါက ဆေးသောက်မှတ်တမ်းကို ပယ်ဖျက်ပေးပါ",
   "midnightTakenWarningDialogSeeHowToRevert": "ဆေးသောက်မှတ်တမ်း ပယ်ဖျက်နည်းကို ကြည့်ရှုရန်",
   "midnightTakenWarningDialogNeverShowAgain": "နောက်တစ်ဖန် မပြပါနှင့်",
-
   "endedPillSheetDialogHistoryTitle": "သောက်ဆေးမှတ်တမ်းကို ကြည့်လိုပါသလား။",
   "@endedPillSheetDialogHistoryTitle": {
     "description": ""
@@ -2832,7 +2839,6 @@
       }
     }
   },
-
   "pauseStartDateMustBeOnOrBefore": "ကျေးဇူးပြု၍ {date} သို့မဟုတ် ယင်းမတိုင်မီ အနားယူစတင်မည့်ရက်ကို ရွေးပါ",
   "@pauseStartDateMustBeOnOrBefore": {
     "description": "",
