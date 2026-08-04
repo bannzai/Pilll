@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
@@ -49,7 +47,7 @@ class ReleaseNote extends StatelessWidget {
                           right: 40,
                         ),
                         child: const Text(
-                          '服薬時刻に目覚ましアラームが鳴るようにしました',
+                          '1日2回服用するお薬に対応しました',
                           style: TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w600,
@@ -69,7 +67,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-集中モードがONまたはデバイスが消音時でも、目覚ましのようにアラームが鳴らせるオプションを追加しました
+ジエノゲストなど、1日に2回服用するお薬の記録に対応しました。ピルシートの追加時に「1日に2回服用する」と設定すると、1回ごとに服用記録ができ、シート上で残りの服用回数も確認できます
                         ''',
                         style: TextStyle(
                           fontFamily: FontFamily.japanese,
@@ -103,13 +101,9 @@ class ReleaseNote extends StatelessWidget {
 }
 
 void showReleaseNotePreDialog(BuildContext context) async {
-  const String key = ReleaseNoteKey.version20250920;
+  const String key = ReleaseNoteKey.version20260804;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
-    return;
-  }
-  // iOSのみのリリースノート
-  if (Platform.isAndroid) {
     return;
   }
 
@@ -129,7 +123,7 @@ void openReleaseNote() async {
   // NOTE: www.notion.so から始まっている場合は間違い
   launchUrl(
     Uri.parse(
-      'https://pilll.notion.site/202509-20-x-273293831717809790f9e6cbd8f948c2?pvs=74',
+      'https://pilll.notion.site/3b229383171780d781c9fec4f4fffcdc',
     ),
     mode: LaunchMode.inAppBrowserView,
   );
