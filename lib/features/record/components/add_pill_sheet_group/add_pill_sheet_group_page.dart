@@ -16,7 +16,6 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/local_notification.dart';
 
 class AddPillSheetGroupPage extends HookConsumerWidget {
@@ -35,7 +34,6 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
     final registerReminderLocalNotification = ref.watch(
       registerReminderLocalNotificationProvider,
     );
-    final user = ref.watch(userProvider).valueOrNull;
     final pillSheetTypes = useState(setting.pillSheetEnumTypes);
     final displayNumberSetting = useState<PillSheetGroupDisplayNumberSetting?>(
       null,
@@ -124,11 +122,8 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        // [Pill:TwoTaken] 2錠飲み機能 - 現在一部ユーザーにテスト解放中
-                        if (user?.isTwoPillsTakenEnabled == true) ...[
-                          PillTakenCountInput(pillTakenCount: pillTakenCount),
-                          const SizedBox(height: 16),
-                        ],
+                        PillTakenCountInput(pillTakenCount: pillTakenCount),
+                        const SizedBox(height: 16),
                         if (pillSheetGroup != null)
                           DisplayNumberSetting(
                             pillSheetGroup: pillSheetGroup,

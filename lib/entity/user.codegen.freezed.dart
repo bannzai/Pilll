@@ -62,10 +62,7 @@ mixin _$User {
   /// 割引プラン利用期限日（トライアル終了後の割引期間終了日時）
   /// 初期設定未完了または古いバージョンのアプリではnullの場合がある
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get discountEntitlementDeadlineDate => throw _privateConstructorUsedError; // [Pill:TwoTaken] 2錠飲み機能 - 現在一部ユーザーにテスト解放中
-  /// 2錠飲み機能が有効かどうか
-  /// 運営がFirestoreで直接trueに変更して特定ユーザーに解放
-  bool get isTwoPillsTakenEnabled => throw _privateConstructorUsedError;
+  DateTime? get discountEntitlementDeadlineDate => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -90,8 +87,7 @@ abstract class $UserCopyWith<$Res> {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beginTrialDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? trialDeadlineDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-      DateTime? discountEntitlementDeadlineDate,
-      bool isTwoPillsTakenEnabled});
+      DateTime? discountEntitlementDeadlineDate});
 
   $SettingCopyWith<$Res>? get setting;
 }
@@ -121,7 +117,6 @@ class _$UserCopyWithImpl<$Res, $Val extends User> implements $UserCopyWith<$Res>
     Object? beginTrialDate = freezed,
     Object? trialDeadlineDate = freezed,
     Object? discountEntitlementDeadlineDate = freezed,
-    Object? isTwoPillsTakenEnabled = null,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -176,10 +171,6 @@ class _$UserCopyWithImpl<$Res, $Val extends User> implements $UserCopyWith<$Res>
           ? _value.discountEntitlementDeadlineDate
           : discountEntitlementDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      isTwoPillsTakenEnabled: null == isTwoPillsTakenEnabled
-          ? _value.isTwoPillsTakenEnabled
-          : isTwoPillsTakenEnabled // ignore: cast_nullable_to_non_nullable
-              as bool,
     ) as $Val);
   }
 
@@ -215,8 +206,7 @@ abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beginTrialDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? trialDeadlineDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-      DateTime? discountEntitlementDeadlineDate,
-      bool isTwoPillsTakenEnabled});
+      DateTime? discountEntitlementDeadlineDate});
 
   @override
   $SettingCopyWith<$Res>? get setting;
@@ -242,7 +232,6 @@ class __$$UserImplCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$UserImpl
     Object? beginTrialDate = freezed,
     Object? trialDeadlineDate = freezed,
     Object? discountEntitlementDeadlineDate = freezed,
-    Object? isTwoPillsTakenEnabled = null,
   }) {
     return _then(_$UserImpl(
       id: freezed == id
@@ -297,10 +286,6 @@ class __$$UserImplCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$UserImpl
           ? _value.discountEntitlementDeadlineDate
           : discountEntitlementDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      isTwoPillsTakenEnabled: null == isTwoPillsTakenEnabled
-          ? _value.isTwoPillsTakenEnabled
-          : isTwoPillsTakenEnabled // ignore: cast_nullable_to_non_nullable
-              as bool,
     ));
   }
 }
@@ -322,8 +307,8 @@ class _$UserImpl extends _User {
       this.analyticsDebugIsEnabled = false,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.beginTrialDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.trialDeadlineDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.discountEntitlementDeadlineDate,
-      this.isTwoPillsTakenEnabled = false})
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+      this.discountEntitlementDeadlineDate})
       : _userDocumentIDSets = userDocumentIDSets,
         _anonymousUserIDSets = anonymousUserIDSets,
         _firebaseCurrentUserIDSets = firebaseCurrentUserIDSets,
@@ -414,16 +399,10 @@ class _$UserImpl extends _User {
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? discountEntitlementDeadlineDate;
-// [Pill:TwoTaken] 2錠飲み機能 - 現在一部ユーザーにテスト解放中
-  /// 2錠飲み機能が有効かどうか
-  /// 運営がFirestoreで直接trueに変更して特定ユーザーに解放
-  @override
-  @JsonKey()
-  final bool isTwoPillsTakenEnabled;
 
   @override
   String toString() {
-    return 'User(id: $id, setting: $setting, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium, shouldAskCancelReason: $shouldAskCancelReason, analyticsDebugIsEnabled: $analyticsDebugIsEnabled, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate, isTwoPillsTakenEnabled: $isTwoPillsTakenEnabled)';
+    return 'User(id: $id, setting: $setting, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium, shouldAskCancelReason: $shouldAskCancelReason, analyticsDebugIsEnabled: $analyticsDebugIsEnabled, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate)';
   }
 
   @override
@@ -444,8 +423,7 @@ class _$UserImpl extends _User {
             (identical(other.beginTrialDate, beginTrialDate) || other.beginTrialDate == beginTrialDate) &&
             (identical(other.trialDeadlineDate, trialDeadlineDate) || other.trialDeadlineDate == trialDeadlineDate) &&
             (identical(other.discountEntitlementDeadlineDate, discountEntitlementDeadlineDate) ||
-                other.discountEntitlementDeadlineDate == discountEntitlementDeadlineDate) &&
-            (identical(other.isTwoPillsTakenEnabled, isTwoPillsTakenEnabled) || other.isTwoPillsTakenEnabled == isTwoPillsTakenEnabled));
+                other.discountEntitlementDeadlineDate == discountEntitlementDeadlineDate));
   }
 
   @JsonKey(ignore: true)
@@ -464,8 +442,7 @@ class _$UserImpl extends _User {
       analyticsDebugIsEnabled,
       beginTrialDate,
       trialDeadlineDate,
-      discountEntitlementDeadlineDate,
-      isTwoPillsTakenEnabled);
+      discountEntitlementDeadlineDate);
 
   @JsonKey(ignore: true)
   @override
@@ -495,8 +472,7 @@ abstract class _User extends User {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? beginTrialDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? trialDeadlineDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-      final DateTime? discountEntitlementDeadlineDate,
-      final bool isTwoPillsTakenEnabled}) = _$UserImpl;
+      final DateTime? discountEntitlementDeadlineDate}) = _$UserImpl;
   const _User._() : super._();
 
   factory _User.fromJson(Map<String, dynamic> json) = _$UserImpl.fromJson;
@@ -558,10 +534,6 @@ abstract class _User extends User {
   /// 初期設定未完了または古いバージョンのアプリではnullの場合がある
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get discountEntitlementDeadlineDate;
-  @override // [Pill:TwoTaken] 2錠飲み機能 - 現在一部ユーザーにテスト解放中
-  /// 2錠飲み機能が有効かどうか
-  /// 運営がFirestoreで直接trueに変更して特定ユーザーに解放
-  bool get isTwoPillsTakenEnabled;
   @override
   @JsonKey(ignore: true)
   _$$UserImplCopyWith<_$UserImpl> get copyWith => throw _privateConstructorUsedError;
