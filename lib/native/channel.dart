@@ -7,6 +7,7 @@ import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/utils/local_notification.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:pilll/utils/firebase_app_check.dart';
 import 'package:pilll/provider/database.dart';
 
 const methodChannel = MethodChannel('method.channel.MizukiOhashi.Pilll');
@@ -19,6 +20,7 @@ void definedChannel() {
         // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る
         if (Firebase.apps.isEmpty) {
           await Firebase.initializeApp();
+          await activateAppCheck();
         }
         final firebaseUser = FirebaseAuth.instance.currentUser;
         if (firebaseUser == null) {
