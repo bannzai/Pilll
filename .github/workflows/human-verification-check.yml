@@ -1,0 +1,31 @@
+name: human-verification-check
+
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+
+permissions: {}
+
+jobs:
+  human-verification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 「## 人間が確認」の未チェック項目を検出する
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          # PR body の行末には CRLF が混入するため、先に CR を除去してから行単位で照合する
+          body=$(printf '%s\n' "$PR_BODY" | tr -d '\r')
+          # セクションが無い PR (dependabot 等、テンプレートを通らない自動生成 PR) は対象外として成功させる
+          section=$(printf '%s\n' "$body" | awk '/^## 人間が確認 *$/{flag=1; next} /^## /{flag=0} flag')
+          if [ -z "$section" ]; then
+            echo "「## 人間が確認」セクションが無いためチェック対象外です"
+            exit 0
+          fi
+          unchecked=$(printf '%s\n' "$section" | grep -Ec '^[[:space:]]*[-*] \[ \]' || true)
+          if [ "$unchecked" -gt 0 ]; then
+            printf '%s\n' "$section" | grep -En '^[[:space:]]*[-*] \[ \]'
+            echo "::error::「## 人間が確認」に未チェック項目が ${unchecked} 件あります。人間が確認してチェックを入れてください"
+            exit 1
+          fi
+          echo "「## 人間が確認」の項目はすべてチェック済みです"
