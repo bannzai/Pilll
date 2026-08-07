@@ -23,6 +23,7 @@ import 'package:pilll/utils/local_notification.dart';
 import 'package:pilll/utils/datetime/debug_print.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:pilll/utils/firebase_app_check.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -42,6 +43,7 @@ Future<void> entrypoint() async {
     WidgetsFlutterBinding.ensureInitialized();
 
     await Firebase.initializeApp();
+    await activateAppCheck();
     await MobileAds.instance.initialize();
     // QuickRecordの処理などFirebaseを使用するのでFirebase.initializeApp()の後に時刻する
     // また、同じくQuickRecordの処理開始までにMethodChannelが確立されていてほしいのでこの処理はなるべく早く実行する
@@ -103,6 +105,7 @@ Future<void> handleNotificationAction(
     // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る
     if (Firebase.apps.isEmpty) {
       await Firebase.initializeApp();
+      await activateAppCheck();
     }
     final firebaseUser = FirebaseAuth.instance.currentUser;
     if (firebaseUser == null) {
