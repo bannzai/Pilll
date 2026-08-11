@@ -23,6 +23,7 @@ import 'package:pilll/features/settings/components/rows/list_explain.dart';
 import 'package:pilll/features/settings/components/rows/reminder_notification_customize_word.dart';
 import 'package:pilll/features/settings/components/rows/notification_in_rest_duration.dart';
 import 'package:pilll/features/settings/components/rows/notification_time.dart';
+import 'package:pilll/features/settings/components/rows/oss_license.dart';
 import 'package:pilll/features/settings/components/rows/pill_sheet_remove.dart';
 import 'package:pilll/features/settings/components/rows/premium_introduction.dart';
 import 'package:pilll/features/settings/components/rows/quick_record.dart';
@@ -333,6 +334,8 @@ Android: https://onl.sc/c9xnQUk''';
                             );
                           },
                         ),
+                        _separator(),
+                        const OSSLicenseRow(),
                         _separator(),
                         ListTile(
                           title: Text(
