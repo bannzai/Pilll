@@ -637,10 +637,6 @@
   "@pillNumber": {
     "description": "ピル番号"
   },
-  "pillDays": "পিল গ্রহণের দিন",
-  "@pillDays": {
-    "description": "服用日数"
-  },
   "pillDaysCycle": "সেবনের দিন",
   "@pillDaysCycle": {
     "description": "1つの服用周期において、実際にピルを服用する日数を表示する項目です。通常のピルでは21日間服用、7日間休薬という28日周期が一般的です。"
@@ -1014,10 +1010,6 @@
   "viewPremiumFeatures": "প্রিমিয়াম ফিচার দেখুন",
   "@viewPremiumFeatures": {
     "description": "プレミアム機能（有料機能）の詳細や内容を確認するためのボタンやリンクテキストとして使用されます。ユーザーをプレミアム機能の紹介画面に誘導する際の行動を促すテキストです。"
-  },
-  "addedDisplayModePillDaysCycle": "প্রদর্শন মোডে গ্রহণের দিন সংখ্যার(চক্র) যোগ করা হয়েছে",
-  "@addedDisplayModePillDaysCycle": {
-    "description": "表示モード服用日数(周期)が追加されました"
   },
   "seeDetails": "বিস্তারিত দেখুন",
   "@seeDetails": {
