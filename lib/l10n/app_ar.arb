@@ -637,10 +637,6 @@
   "@pillNumber": {
     "description": "ピル番号"
   },
-  "pillDays": "عدد أيام الاستخدام",
-  "@pillDays": {
-    "description": "服用日数"
-  },
   "pillDaysCycle": "أيام التناول",
   "@pillDaysCycle": {
     "description": "1つの服用周期において、実際にピルを服用する日数を表示する項目です。通常のピルでは21日間服用、7日間休薬という28日周期が一般的です。"
@@ -1014,10 +1010,6 @@
   "viewPremiumFeatures": "عرض الميزات المميزة",
   "@viewPremiumFeatures": {
     "description": "プレミアム機能（有料機能）の詳細や内容を確認するためのボタンやリンクテキストとして使用されます。ユーザーをプレミアム機能の紹介画面に誘導する際の行動を促すテキストです。"
-  },
-  "addedDisplayModePillDaysCycle": "تم إضافة وضع العرض لعدد أيام الاستخدام (الدورة)",
-  "@addedDisplayModePillDaysCycle": {
-    "description": "表示モード服用日数(周期)が追加されました"
   },
   "seeDetails": "عرض التفاصيل",
   "@seeDetails": {

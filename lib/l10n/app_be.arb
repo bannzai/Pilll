@@ -637,10 +637,6 @@
   "@pillNumber": {
     "description": "ピル番号"
   },
-  "pillDays": "Дні прыёму",
-  "@pillDays": {
-    "description": "服用日数"
-  },
   "pillDaysCycle": "Дні прыёму",
   "@pillDaysCycle": {
     "description": "1つの服用周期において、実際にピルを服用する日数を表示する項目です。通常のピルでは21日間服用、7日間休薬という28日周期が一般的です。"
@@ -1014,10 +1010,6 @@
   "viewPremiumFeatures": "Паглядзець прэміум-функцыі",
   "@viewPremiumFeatures": {
     "description": "プレミアム機能（有料機能）の詳細や内容を確認するためのボタンやリンクテキストとして使用されます。ユーザーをプレミアム機能の紹介画面に誘導する際の行動を促すテキストです。"
-  },
-  "addedDisplayModePillDaysCycle": "Рэшым працы добавлены дні прыёму таблетак (цыкл)",
-  "@addedDisplayModePillDaysCycle": {
-    "description": "表示モード服用日数(周期)が追加されました"
   },
   "seeDetails": "Паглядзець дэталі",
   "@seeDetails": {

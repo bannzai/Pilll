@@ -77,7 +77,7 @@ iOS・Androidアプリ両方を提供しております。Flutter製のアプリ
 
 ### その他の重要事項
 - **ライセンス**: 独自ライセンス（著作権保持、個人利用・PR許可）
-- **多言語対応**: 70以上の言語に対応（app_*.arb）
+- **多言語対応**: 70以上の言語に対応（lib/l10n/app_*.arb、gen-l10n）。翻訳運用は translate-app-arb skill で行う（ルートの translate-app.config.json 駆動。未翻訳キーのみの冪等翻訳・check による機械検査・review による品質レビュー）。キー欠落は `test/l10n/arb_integrity_test.dart` でも CI 検出される
 - **ログ出力**: debugPrintを使用（本番環境では無効化される）
 
 ### マネタイズ
