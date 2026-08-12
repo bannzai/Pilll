@@ -47,8 +47,6 @@ lib/util/*secret.dart
 
 scripts/venv
 
-translation_scripts/
-
 fastlane/*
 !fastlane/Appfile
 !fastlane/Fastfile
