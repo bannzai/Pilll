@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Ne prikazuj ponovo",
   "pauseStartDateMustBeOnOrBefore": "Izaberite datum početka pauze na dan {date} ili ranije",
   "addPausePeriod": "Додај период паузе у узимању",
-  "addedPausePeriod": "Додат је период паузе у узимању"
+  "addedPausePeriod": "Додат је период паузе у узимању",
+  "pausePeriodOverlapsOther": "Ne možete da izaberete period koji se preklapa sa drugim periodom pauze u uzimanju."
 }

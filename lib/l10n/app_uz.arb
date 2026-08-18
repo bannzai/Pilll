@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Boshqa ko'rsatmaslik",
   "pauseStartDateMustBeOnOrBefore": "Iltimos, tanaffus boshlanish sanasini {date} yoki undan oldin tanlang",
   "addPausePeriod": "Qabul tanaffusi muddatini qo‘shish",
-  "addedPausePeriod": "Qabul qilish tanaffus davri qoʻshildi"
+  "addedPausePeriod": "Qabul qilish tanaffus davri qoʻshildi",
+  "pausePeriodOverlapsOther": "Boshqa qabul qilish tanaffusi davri bilan ustma-ust tushadigan davrni tanlab bo‘lmaydi."
 }

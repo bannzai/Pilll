@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "ਦੁਬਾਰਾ ਨਾ ਦਿਖਾਓ",
   "pauseStartDateMustBeOnOrBefore": "ਕਿਰਪਾ ਕਰਕੇ {date} ਜਾਂ ਇਸ ਤੋਂ ਪਹਿਲਾਂ ਦੀ ਵਿਰਾਮ ਸ਼ੁਰੂਆਤ ਮਿਤੀ ਚੁਣੋ",
   "addPausePeriod": "ਲੈਣ ਦੀ ਬਰੇਕ ਅਵਧੀ ਸ਼ਾਮਲ ਕਰੋ",
-  "addedPausePeriod": "ਖਾਣ ਦੀ ਅਰਾਮ ਅਵਧੀ ਜੋੜੀ ਗਈ ਹੈ"
+  "addedPausePeriod": "ਖਾਣ ਦੀ ਅਰਾਮ ਅਵਧੀ ਜੋੜੀ ਗਈ ਹੈ",
+  "pausePeriodOverlapsOther": "ਤੁਸੀਂ ਉਹ ਅਵਧੀ ਨਹੀਂ ਚੁਣ ਸਕਦੇ ਜੋ ਕਿਸੇ ਹੋਰ ਸੇਵਨ-ਵਿਰਾਮ ਅਵਧੀ ਨਾਲ ਓਵਰਲੈਪ ਕਰਦੀ ਹੋਵੇ।"
 }

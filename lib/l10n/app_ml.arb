@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "ഇനി ഇത് കാണിക്കരുത്",
   "pauseStartDateMustBeOnOrBefore": "ദയവായി {date} അല്ലെങ്കിൽ അതിന് മുമ്പുള്ള ഇടവേള ആരംഭ തീയതി തിരഞ്ഞെടുക്കുക",
   "addPausePeriod": "സേവന ഇടവേളാ കാലയളവ് ചേർക്കുക",
-  "addedPausePeriod": "സേവന ഇടവേള കാലയളവ് ചേർത്തു"
+  "addedPausePeriod": "സേവന ഇടവേള കാലയളവ് ചേർത്തു",
+  "pausePeriodOverlapsOther": "മറ്റൊരു കഴിക്കൽ ഇടവേളാ കാലയളവുമായി മൂടിവരുന്ന കാലയളവ് തിരഞ്ഞെടുക്കാൻ കഴിയില്ല."
 }

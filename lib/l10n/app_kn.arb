@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "ಇನ್ನು ಮುಂದೆ ತೋರಿಸಬೇಡಿ",
   "pauseStartDateMustBeOnOrBefore": "ದಯವಿಟ್ಟು {date} ಅಥವಾ ಅದಕ್ಕೂ ಮೊದಲಿನ ವಿರಾಮ ಆರಂಭ ದಿನಾಂಕ ಆಯ್ಕೆಮಾಡಿ",
   "addPausePeriod": "ಸೆವನ ವಿರಾಮ ಅವಧಿಯನ್ನು ಸೇರಿಸಿ",
-  "addedPausePeriod": "ಸೆವನೆಯ ವಿರಾಮ ಅವಧಿಯನ್ನು ಸೇರಿಸಲಾಗಿದೆ"
+  "addedPausePeriod": "ಸೆವನೆಯ ವಿರಾಮ ಅವಧಿಯನ್ನು ಸೇರಿಸಲಾಗಿದೆ",
+  "pausePeriodOverlapsOther": "ಇನ್ನೊಂದು ಸೇವನೆ ವಿರಾಮ ಅವಧಿಯೊಂದಿಗೆ ಹೋಲಿಕೊಳ್ಳುವ ಅವಧಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದಿಲ್ಲ."
 }

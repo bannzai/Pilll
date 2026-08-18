@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Ikke vis dette igjen",
   "pauseStartDateMustBeOnOrBefore": "Velg en startdato for pausen {date} eller tidligere",
   "addPausePeriod": "Legg til pauseperiode",
-  "addedPausePeriod": "Pauseperioden for inntak er lagt til"
+  "addedPausePeriod": "Pauseperioden for inntak er lagt til",
+  "pausePeriodOverlapsOther": "Du kan ikke velge en periode som overlapper med en annen pauseperiode for inntak."
 }

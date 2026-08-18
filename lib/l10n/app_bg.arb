@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Не показвай отново",
   "pauseStartDateMustBeOnOrBefore": "Моля, изберете начална дата на паузата на {date} или по-рано",
   "addPausePeriod": "Добавяне на период на почивка от приема",
-  "addedPausePeriod": "Периодът на почивка от приема беше добавен"
+  "addedPausePeriod": "Периодът на почивка от приема беше добавен",
+  "pausePeriodOverlapsOther": "Не можете да изберете период, който се припокрива с друг период на почивка от приема."
 }

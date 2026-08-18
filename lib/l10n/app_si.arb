@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "නැවත මෙය නොපෙන්වන්න",
   "pauseStartDateMustBeOnOrBefore": "කරුණාකර {date} හෝ ඊට පෙර විවේක ආරම්භක දිනයක් තෝරන්න",
   "addPausePeriod": "ගැනීමේ විරාම කාලය එක් කරන්න",
-  "addedPausePeriod": "ගැනීමේ විරාම කාලය එක් කරන ලදී"
+  "addedPausePeriod": "ගැනීමේ විරාම කාලය එක් කරන ලදී",
+  "pausePeriodOverlapsOther": "වෙනත් ගැනීමේ විරාම කාලයක් සමඟ ආවරණය වන කාලයක් තෝරාගත නොහැක."
 }

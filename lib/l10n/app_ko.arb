@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "다시 표시하지 않기",
   "pauseStartDateMustBeOnOrBefore": "복용 중단 시작일은 {date} 이전 날짜를 선택해 주세요",
   "addPausePeriod": "복용 휴식 기간 추가",
-  "addedPausePeriod": "복용 휴식 기간이 추가되었습니다"
+  "addedPausePeriod": "복용 휴식 기간이 추가되었습니다",
+  "pausePeriodOverlapsOther": "다른 복용 쉬는 기간과 겹치는 기간은 선택할 수 없습니다."
 }

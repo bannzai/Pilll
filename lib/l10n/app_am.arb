@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "እንደገና አያሳዩ",
   "pauseStartDateMustBeOnOrBefore": "እባክዎ የእረፍት መጀመሪያ ቀን {date} ወይም ከዚያ በፊት ይምረጡ",
   "addPausePeriod": "የመውሰድ እረፍት ጊዜ ያክሉ",
-  "addedPausePeriod": "የመውሰድ ዕረፍት ጊዜ ተጨምሯል"
+  "addedPausePeriod": "የመውሰድ ዕረፍት ጊዜ ተጨምሯል",
+  "pausePeriodOverlapsOther": "ከሌላ የመውሰድ እረፍት ጊዜ ጋር የሚደራረብ ጊዜ መምረጥ አይቻልም。"
 }

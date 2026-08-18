@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Να μην εμφανιστεί ξανά",
   "pauseStartDateMustBeOnOrBefore": "Επιλέξτε ημερομηνία έναρξης της παύσης στις {date} ή νωρίτερα",
   "addPausePeriod": "Προσθήκη περιόδου διακοπής λήψης",
-  "addedPausePeriod": "Προστέθηκε η περίοδος παύσης λήψης"
+  "addedPausePeriod": "Προστέθηκε η περίοδος παύσης λήψης",
+  "pausePeriodOverlapsOther": "Δεν μπορείτε να επιλέξετε περίοδο που επικαλύπτεται με άλλη περίοδο διακοπής λήψης."
 }

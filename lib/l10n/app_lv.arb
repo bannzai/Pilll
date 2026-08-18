@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Vairs nerādīt",
   "pauseStartDateMustBeOnOrBefore": "Lūdzu, izvēlieties pauzes sākuma datumu {date} vai agrāk",
   "addPausePeriod": "Pievienot lietošanas pauzes periodu",
-  "addedPausePeriod": "Ir pievienots lietošanas pārtraukuma periods"
+  "addedPausePeriod": "Ir pievienots lietošanas pārtraukuma periods",
+  "pausePeriodOverlapsOther": "Nevarat izvēlēties periodu, kas pārklājas ar citu lietošanas pārtraukuma periodu."
 }

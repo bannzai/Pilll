@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Jangan tunjukkan lagi",
   "pauseStartDateMustBeOnOrBefore": "Sila pilih tarikh mula rehat pada {date} atau sebelumnya",
   "addPausePeriod": "Tambah tempoh rehat pengambilan",
-  "addedPausePeriod": "Tempoh rehat pengambilan telah ditambah"
+  "addedPausePeriod": "Tempoh rehat pengambilan telah ditambah",
+  "pausePeriodOverlapsOther": "Anda tidak boleh memilih tempoh yang bertindih dengan tempoh rehat pengambilan yang lain."
 }

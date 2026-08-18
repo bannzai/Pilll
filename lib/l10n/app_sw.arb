@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Usionyeshe tena",
   "pauseStartDateMustBeOnOrBefore": "Tafadhali chagua tarehe ya kuanza mapumziko {date} au kabla yake",
   "addPausePeriod": "Ongeza kipindi cha mapumziko ya kumeza",
-  "addedPausePeriod": "Kipindi cha mapumziko ya kutumia kimeongezwa"
+  "addedPausePeriod": "Kipindi cha mapumziko ya kutumia kimeongezwa",
+  "pausePeriodOverlapsOther": "Huwezi kuchagua kipindi kinachopishana na kipindi kingine cha mapumziko ya kumeza."
 }

@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "दोबारा न दिखाएं",
   "pauseStartDateMustBeOnOrBefore": "कृपया {date} या उससे पहले की विराम शुरुआत तिथि चुनें",
   "addPausePeriod": "सेवन विराम अवधि जोड़ें",
-  "addedPausePeriod": "सेवन विराम अवधि जोड़ दी गई है"
+  "addedPausePeriod": "सेवन विराम अवधि जोड़ दी गई है",
+  "pausePeriodOverlapsOther": "आप कोई ऐसा समय चुन नहीं सकतीं जो किसी दूसरी सेवन-अवकाश अवधि से ओवरलैप करता हो।"
 }

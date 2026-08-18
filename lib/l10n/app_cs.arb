@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Příště nezobrazovat",
   "pauseStartDateMustBeOnOrBefore": "Vyberte datum začátku pauzy {date} nebo dřívější",
   "addPausePeriod": "Přidat období pauzy v užívání",
-  "addedPausePeriod": "Bylo přidáno období pauzy v užívání"
+  "addedPausePeriod": "Bylo přidáno období pauzy v užívání",
+  "pausePeriodOverlapsOther": "Nelze vybrat období, které se překrývá s jiným obdobím přestávky v užívání."
 }

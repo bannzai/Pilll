@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "ไม่แสดงข้อความนี้อีก",
   "pauseStartDateMustBeOnOrBefore": "โปรดเลือกวันเริ่มพักยาเป็นวันที่ {date} หรือก่อนหน้านั้น",
   "addPausePeriod": "เพิ่มช่วงพักการรับประทาน",
-  "addedPausePeriod": "เพิ่มช่วงพักการรับประทานแล้ว"
+  "addedPausePeriod": "เพิ่มช่วงพักการรับประทานแล้ว",
+  "pausePeriodOverlapsOther": "ไม่สามารถเลือกช่วงเวลาที่ทับซ้อนกับช่วงพักกินยาอื่นได้"
 }

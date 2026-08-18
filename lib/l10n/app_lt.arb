@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Daugiau nerodyti",
   "pauseStartDateMustBeOnOrBefore": "Pasirinkite pertraukos pradžios datą {date} arba ankstesnę",
   "addPausePeriod": "Pridėti vartojimo pertraukos laikotarpį",
-  "addedPausePeriod": "Pridėtas vartojimo pertraukos laikotarpis"
+  "addedPausePeriod": "Pridėtas vartojimo pertraukos laikotarpis",
+  "pausePeriodOverlapsOther": "Negalima pasirinkti laikotarpio, kuris persidengia su kitu vartojimo pertraukos laikotarpiu."
 }
