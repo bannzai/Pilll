@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "সেবন বাতিলের পদ্ধতি দেখুন",
   "midnightTakenWarningDialogNeverShowAgain": "আর দেখাবেন না",
   "pauseStartDateMustBeOnOrBefore": "অনুগ্রহ করে {date} বা তার আগের বিরতি শুরুর তারিখ নির্বাচন করুন",
-  "addPausePeriod": "ওষুধ খাওয়ার বিরতির সময়কাল যোগ করুন"
+  "addPausePeriod": "ওষুধ খাওয়ার বিরতির সময়কাল যোগ করুন",
+  "addedPausePeriod": "খাওয়া বন্ধের সময়কাল যোগ করা হয়েছে"
 }

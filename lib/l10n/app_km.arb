@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "មើលរបៀបលុបចោលកំណត់ត្រាការទទួលថ្នាំ",
   "midnightTakenWarningDialogNeverShowAgain": "កុំបង្ហាញម្តងទៀត",
   "pauseStartDateMustBeOnOrBefore": "សូមជ្រើសរើសកាលបរិច្ឆេទចាប់ផ្តើមសម្រាកនៅ {date} ឬមុននេះ",
-  "addPausePeriod": "បន្ថែមរយៈពេលសម្រាកក្នុងការលេប"
+  "addPausePeriod": "បន្ថែមរយៈពេលសម្រាកក្នុងការលេប",
+  "addedPausePeriod": "បានបន្ថែមរយៈពេលសម្រាកនៃការទទួលថ្នាំ"
 }

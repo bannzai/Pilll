@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Se hvordan du angrer en inntaksregistrering",
   "midnightTakenWarningDialogNeverShowAgain": "Ikke vis dette igjen",
   "pauseStartDateMustBeOnOrBefore": "Velg en startdato for pausen {date} eller tidligere",
-  "addPausePeriod": "Legg til pauseperiode for inntak"
+  "addPausePeriod": "Legg til pauseperiode for inntak",
+  "addedPausePeriod": "Pauseperioden for inntak er lagt til"
 }

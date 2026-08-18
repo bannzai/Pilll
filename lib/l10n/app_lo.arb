@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "ເບິ່ງວິທີຍົກເລີກການບັນທຶກການກິນຢາ",
   "midnightTakenWarningDialogNeverShowAgain": "ບໍ່ຕ້ອງສະແດງອີກ",
   "pauseStartDateMustBeOnOrBefore": "ກະລຸນາເລືອກວັນເລີ່ມພັກຢາໃນ {date} ຫຼືກ່ອນໜ້ານັ້ນ",
-  "addPausePeriod": "ເພີ່ມໄລຍະພັກການກິນ"
+  "addPausePeriod": "ເພີ່ມໄລຍະພັກການກິນ",
+  "addedPausePeriod": "ໄດ້ເພີ່ມໄລຍະພັກການຮັບປະທານແລ້ວ"
 }

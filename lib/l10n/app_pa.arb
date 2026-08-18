@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "ਸੇਵਨ ਰਿਕਾਰਡ ਰੱਦ ਕਰਨ ਦਾ ਤਰੀਕਾ ਦੇਖੋ",
   "midnightTakenWarningDialogNeverShowAgain": "ਦੁਬਾਰਾ ਨਾ ਦਿਖਾਓ",
   "pauseStartDateMustBeOnOrBefore": "ਕਿਰਪਾ ਕਰਕੇ {date} ਜਾਂ ਇਸ ਤੋਂ ਪਹਿਲਾਂ ਦੀ ਵਿਰਾਮ ਸ਼ੁਰੂਆਤ ਮਿਤੀ ਚੁਣੋ",
-  "addPausePeriod": "ਲੈਣ ਦੀ ਬਰੇਕ ਅਵਧੀ ਸ਼ਾਮਲ ਕਰੋ"
+  "addPausePeriod": "ਲੈਣ ਦੀ ਬਰੇਕ ਅਵਧੀ ਸ਼ਾਮਲ ਕਰੋ",
+  "addedPausePeriod": "ਖਾਣ ਦੀ ਅਰਾਮ ਅਵਧੀ ਜੋੜੀ ਗਈ ਹੈ"
 }

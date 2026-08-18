@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "সেৱন বাতিলকৰণৰ পদ্ধতি চাওক",
   "midnightTakenWarningDialogNeverShowAgain": "পুনৰ নেদেখুৱাব",
   "pauseStartDateMustBeOnOrBefore": "অনুগ্ৰহ কৰি {date} বা তাৰ আগৰ বিৰতি আৰম্ভণিৰ তাৰিখ বাছনি কৰক",
-  "addPausePeriod": "ঔষধ নোৱাৰা সময়কাল যোগ কৰক"
+  "addPausePeriod": "ঔষধ নোৱাৰা সময়কাল যোগ কৰক",
+  "addedPausePeriod": "ঔষধ গ্ৰহণৰ বিৰতি সময় যোগ কৰা হৈছে"
 }

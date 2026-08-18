@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "ဆေးသောက်မှတ်တမ်း ပယ်ဖျက်နည်းကို ကြည့်ရှုရန်",
   "midnightTakenWarningDialogNeverShowAgain": "နောက်တစ်ဖန် မပြပါနှင့်",
   "pauseStartDateMustBeOnOrBefore": "ကျေးဇူးပြု၍ {date} သို့မဟုတ် ယင်းမတိုင်မီ အနားယူစတင်မည့်ရက်ကို ရွေးပါ",
-  "addPausePeriod": "သောက်သုံးမှုနားချိန်ကာလ ထည့်ရန်"
+  "addPausePeriod": "သောက်သုံးမှုနားချိန်ကာလ ထည့်ရန်",
+  "addedPausePeriod": "သောက်သုံးမှု အနားယူကာလကို ထည့်ပြီးပါပြီ"
 }

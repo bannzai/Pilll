@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Ver como cancelar o rexistro de toma",
   "midnightTakenWarningDialogNeverShowAgain": "Non mostrar isto de novo",
   "pauseStartDateMustBeOnOrBefore": "Selecciona unha data de inicio da pausa o {date} ou antes",
-  "addPausePeriod": "Engadir período de pausa na toma"
+  "addPausePeriod": "Engadir período de pausa na toma",
+  "addedPausePeriod": "Engadiuse o período de descanso da toma"
 }

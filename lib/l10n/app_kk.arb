@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Қабылдауды болдырмау тәсілін көру",
   "midnightTakenWarningDialogNeverShowAgain": "Қайта көрсетпеу",
   "pauseStartDateMustBeOnOrBefore": "Үзілістің басталу күнін {date} немесе одан бұрын таңдаңыз",
-  "addPausePeriod": "Қабылдау үзіліс кезеңін қосу"
+  "addPausePeriod": "Қабылдау үзіліс кезеңін қосу",
+  "addedPausePeriod": "Қабылдау үзіліс кезеңі қосылды"
 }

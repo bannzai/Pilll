@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Տեսնել՝ ինչպես չեղարկել ընդունման գրառումը",
   "midnightTakenWarningDialogNeverShowAgain": "Այլևս երբեք չցուցադրել",
   "pauseStartDateMustBeOnOrBefore": "Խնդրում ենք ընտրել դադարի մեկնարկի ամսաթիվ {date}-ը կամ ավելի վաղ",
-  "addPausePeriod": "Ավելացնել ընդունման դադարի շրջան"
+  "addPausePeriod": "Ավելացնել ընդունման դադարի շրջան",
+  "addedPausePeriod": "Ընդունման ընդմիջման շրջանը ավելացվել է"
 }

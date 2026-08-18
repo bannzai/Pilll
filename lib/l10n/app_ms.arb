@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Lihat cara membatalkan rekod pengambilan",
   "midnightTakenWarningDialogNeverShowAgain": "Jangan tunjukkan lagi",
   "pauseStartDateMustBeOnOrBefore": "Sila pilih tarikh mula rehat pada {date} atau sebelumnya",
-  "addPausePeriod": "Tambah tempoh rehat pengambilan"
+  "addPausePeriod": "Tambah tempoh rehat pengambilan",
+  "addedPausePeriod": "Tempoh rehat pengambilan telah ditambah"
 }

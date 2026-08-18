@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Skoða leiðbeiningar um að afturkalla tökuskráningu",
   "midnightTakenWarningDialogNeverShowAgain": "Ekki sýna þetta aftur",
   "pauseStartDateMustBeOnOrBefore": "Veldu upphafsdag hlés {date} eða fyrr",
-  "addPausePeriod": "Bæta við hlédegi í notkun"
+  "addPausePeriod": "Bæta við hlédegi í notkun",
+  "addedPausePeriod": "Hlébil fyrir inntöku hefur verið bætt við"
 }

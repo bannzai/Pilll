@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Aaleitig zum Rückgängigmache vo de Iinahm aaluege",
   "midnightTakenWarningDialogNeverShowAgain": "Nie me aazeige",
   "pauseStartDateMustBeOnOrBefore": "Bitte wähl es Startdatum vo de Pause am {date} oder dervor",
-  "addPausePeriod": "Pausenzyt zum Einnahme hinzuegee"
+  "addPausePeriod": "Pausenzyt zum Einnahme hinzuegee",
+  "addedPausePeriod": "D Paus für d'Einahm isch zuegfüegt worde"
 }

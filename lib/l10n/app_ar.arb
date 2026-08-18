@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "عرض كيفية إلغاء تسجيل التناول",
   "midnightTakenWarningDialogNeverShowAgain": "عدم العرض مرة أخرى",
   "pauseStartDateMustBeOnOrBefore": "يرجى اختيار تاريخ بدء الاستراحة في {date} أو قبله",
-  "addPausePeriod": "إضافة فترة التوقف عن الاستخدام"
+  "addPausePeriod": "إضافة فترة التوقف عن الاستخدام",
+  "addedPausePeriod": "تمت إضافة فترة التوقف عن الاستخدام"
 }

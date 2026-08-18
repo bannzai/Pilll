@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "తీసుకున్న రికార్డును ఎలా రద్దు చేయాలో చూడండి",
   "midnightTakenWarningDialogNeverShowAgain": "మళ్లీ చూపించవద్దు",
   "pauseStartDateMustBeOnOrBefore": "దయచేసి {date} లేదా అంతకు ముందు విరామ ప్రారంభ తేదీని ఎంచుకోండి",
-  "addPausePeriod": "సేవన విరామ కాలాన్ని జోడించండి"
+  "addPausePeriod": "సేవన విరామ కాలాన్ని జోడించండి",
+  "addedPausePeriod": "తీసుకునే విరామ కాలం జోడించబడింది"
 }
