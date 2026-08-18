@@ -2735,5 +2735,18 @@
         "type": "String"
       }
     }
+  },
+
+  "addPausePeriod": "服用お休み期間を追加",
+  "@addPausePeriod": {
+    "description": "前回のピルシートグループの画面で、終了した服用お休み期間を後から追加するボタンの文言です。"
+  },
+  "addedPausePeriod": "服用お休み期間を追加しました",
+  "@addedPausePeriod": {
+    "description": "前回のピルシートグループに服用お休み期間を追加した後に表示されるスナックバーの文言です。"
+  },
+  "pausePeriodOverlapsOther": "他の服用お休み期間と重なる期間は選択できません",
+  "@pausePeriodOverlapsOther": {
+    "description": "服用お休み期間の追加・変更で、既存の別の服用お休み期間と重なる期間が選択された場合に表示されるエラーメッセージです。"
   }
 }

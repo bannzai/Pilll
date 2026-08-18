@@ -2856,5 +2856,18 @@
         "type": "String"
       }
     }
+  },
+
+  "addPausePeriod": "Add pill break period",
+  "@addPausePeriod": {
+    "description": ""
+  },
+  "addedPausePeriod": "Pill break period added",
+  "@addedPausePeriod": {
+    "description": ""
+  },
+  "pausePeriodOverlapsOther": "The selected period overlaps another pill break period",
+  "@pausePeriodOverlapsOther": {
+    "description": ""
   }
 }
