@@ -1,2851 +1,562 @@
 {
   "@@locale": "hi",
   "pillSheetType21With7Placebo": "21 गोली प्रकार",
-  "@pillSheetType21With7Placebo": {
-    "description": "ピルシートの種類で、21錠の薬効成分を含む錠剤と7錠の偽薬（プラセボ）で構成される28錠パックのタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示されます。"
-  },
   "pillSheetType28With4Placebo": "28 टैबलेट प्रकार (4 प्लेसेबो)",
-  "@pillSheetType28With4Placebo": {
-    "description": "ピルシートの種類で、28錠の薬剤のうち24錠が薬効成分を含み4錠が偽薬（プラセボ）で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用されます。"
-  },
   "pillSheetType28With7Placebo": "28 गोली प्रकार (7 प्लेसिबो गोलियां)",
-  "@pillSheetType28With7Placebo": {
-    "description": "ピルシートの種類で、28錠の薬剤のうち21錠が薬効成分を含み7錠が偽薬（プラセボ）で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用されます。"
-  },
   "pillSheetType28": "28 गोली प्रकार (सभी सक्रिय दवा)",
-  "@pillSheetType28": {
-    "description": "ピルシートの種類で、28錠すべてが薬効成分を含む実薬で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用され、プラセボ（偽薬）を含まない28錠タイプであることを示します。"
-  },
   "pillSheetType24": "24 टैबलेट प्रकार (सभी सक्रिय दवा)",
-  "@pillSheetType24": {
-    "description": "ピルシートの種類で、24錠すべてが薬効成分を含む実薬で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用され、プラセボ（偽薬）を含まない24錠タイプであることを示します。"
-  },
   "pillSheetType21": "21 गोली प्रकार (सभी सक्रिय गोलियाँ)",
-  "@pillSheetType21": {
-    "description": "ピルシートの種類で、21錠すべてが薬効成分を含む実薬で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用され、プラセボ（偽薬）を含まない21錠タイプであることを示します。"
-  },
   "pillSheetType24WithRest4": "24 टैबलेट प्रकार",
-  "@pillSheetType24WithRest4": {
-    "description": "ピルシートの種類で、24錠のうち20錠が薬効成分を含む実薬、4錠が休薬期間用のプラセボ錠（偽薬）で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用されます。"
-  },
   "restPeriod": "दवा विराम",
-  "@restPeriod": {
-    "description": "ピルの服用サイクル中の休薬期間を指す用語です。通常はプラセボ錠を服用するか薬を飲まない期間で、この期間中に生理が来ることが多いです。"
-  },
   "placebo": "प्लेसिबो",
-  "@placebo": {
-    "description": "ピルパックに含まれるホルモン非含有錠で、休薬期間中に服用する錠剤を指します。プラセボ錠を服用している期間中に生理が来ることが一般的です。"
-  },
   "userNotFound": "उपयोगकर्ता नहीं मिला",
-  "@userNotFound": {
-    "description": "ログインやアカウント検索時に、指定されたユーザーが存在しない場合に表示されるエラーメッセージです。アプリ内でユーザーアカウントが見つからない状況で使用されます。"
-  },
   "userAlreadyExists": "पहले से ही उपयोगकर्ता मौजूद है",
-  "@userAlreadyExists": {
-    "description": "アカウント作成やユーザー登録時に、入力されたメールアドレスや電話番号が既に他のアカウントで使用されている場合に表示されるエラーメッセージです。ユーザーに対して既存のアカウントでログインするか、別の認証情報を使用するよう促す文脈で使用されます。"
-  },
   "medicationHistory": "सेवन इतिहास",
-  "@medicationHistory": {
-    "description": "ピルアプリ内で、過去に服用したピルの記録を確認できる画面やメニューのタイトルとして使用されます。ユーザーがいつピルを飲んだかの履歴を表示する機能の名称です。"
-  },
   "settings": "सेटिंग्स",
-  "@settings": {
-    "description": "ピルアプリ内で、ユーザーがアプリの各種設定（通知設定、服用時間設定、プロフィール設定など）を変更できる設定画面のタイトルやメニュー項目として使用されます。アプリの動作や表示をカスタマイズするための設定機能全般を指す用語です。"
-  },
   "account": "खाता",
-  "@account": {
-    "description": "ピルアプリの設定画面で表示されるメニュー項目で、ユーザーのログイン情報や個人プロフィール、アカウント設定などを管理する機能にアクセスするためのラベルです。"
-  },
   "dataTransferRequiresAccount": "डिवाइस बदलने या स्मार्टफोन खो जाने पर डेटा स्थानांतरण और पुनर्स्थापना के लिए खाता पंजीकरण आवश्यक है।",
-  "@dataTransferRequiresAccount": {
-    "description": "機種変更や端末紛失時に、ピルの服用記録や生理記録などのデータを新しい端末に引き継ぐには、アカウント登録が必要であることをユーザーに説明する文章です。"
-  },
   "pillPremium": "Pilll प्रीमियम",
-  "@pillPremium": {
-    "description": "Pilllアプリの有料プラン（サブスクリプション）の名称です。アプリ名「Pilll」と「Premium」を組み合わせたブランド名として、設定画面や課金関連のUIで表示されます。"
-  },
   "unlimitedFeatureDuration": "असीमित सुविधाओं की अवधि के बारे में",
-  "@unlimitedFeatureDuration": {
-    "description": "プレミアムプラン加入者が利用できる機能無制限期間について説明するテキストです。設定画面や課金関連のUIで、ユーザーに有料プランの特典期間を案内する際に表示されます。"
-  },
   "pillSheet": "पिल शीट",
-  "@pillSheet": {
-    "description": "避妊薬が包装されているシート状のパッケージのことで、アプリではピルシートをメタファーとしたUIを提供し、ユーザーがどこまで薬を飲んだか、いつ生理が来るかなどを一目で確認できます。"
-  },
   "notification": "सूचना",
-  "@notification": {
-    "description": "アプリがユーザーに送るプッシュ通知や画面内の通知のことで、ピルの服用時刻を知らせるリマインダーや重要な情報を伝える機能を指します。"
-  },
   "menstruation": "महावारी",
-  "@menstruation": {
-    "description": "ピル服用管理アプリにおける女性の生理（月経）を指し、生理周期の記録・管理機能で使用される医学的な用語です。ユーザーが生理日を記録して健康管理を行う際に表示されます。"
-  },
   "others": "अन्य",
-  "@others": {
-    "description": "各種選択肢や分類項目において、既存の選択肢に該当しない場合に選択する汎用的な「その他」オプションです。"
-  },
   "faq": "अकसर पूछे जाने वाले प्रश्न",
-  "@faq": {
-    "description": "アプリ内のヘルプ・サポートセクションで表示される「よくある質問」を意味するラベルです。ユーザーがピルの服用方法や機能について疑問を持った際にアクセスするページのタイトルとして使用されます。"
-  },
   "newFeaturesIntroduction": "नई सुविधाएं",
-  "@newFeaturesIntroduction": {
-    "description": "新機能紹介"
-  },
   "contactUs": "संपर्क करें",
-  "@contactUs": {
-    "description": "アプリ内のメニューやボタンで表示される、ユーザーがサポートチームに問い合わせや相談をするための機能名です。"
-  },
   "delete": "हटाएं",
-  "@delete": {
-    "description": "アプリ内の各種データ（服用記録、生理記録、日記など）を削除する際に表示されるボタンやメニューの文言です。ユーザーが操作を取り消したい時に使用される汎用的な削除機能を表します。"
-  },
   "doDelete": "हटाएं",
-  "@doDelete": {
-    "description": "服用記録や生理記録などのデータを削除する際のボタンに表示される動詞形の文言です。"
-  },
   "deleteUser": "उपयोगकर्ता को हटाएं",
-  "@deleteUser": {
-    "description": "アカウント削除機能で表示される文言で、ユーザーのアカウントと関連する全ての服用記録・生理記録データを完全に削除することを示します。重要な操作のため、各言語で適切に警告的なニュアンスを持つ表現にしてください。"
-  },
   "deleteDiary": "डायरी हटाई जाएगी",
-  "@deleteDiary": {
-    "description": "アプリ内の日記機能（体調記録）で特定の日記エントリを削除する際に表示される文言です。ユーザーの大切な体調記録が削除されることを示すため、各言語で適切に警告的なニュアンスを持つ表現にしてください。"
-  },
   "confirmDeletingMenstruation": "क्या आप मासिक धर्म की अवधि को हटाना चाहते हैं?",
-  "@confirmDeletingMenstruation": {
-    "description": "生理管理機能でユーザーが記録した生理期間のデータを削除する際に表示される確認ダイアログの文言です。重要な記録の削除を確認するため、各言語で慎重で丁寧な表現を使用してください。"
-  },
   "addNotificationTime": "सूचना समय जोड़ें",
-  "@addNotificationTime": {
-    "description": "ピルの服用リマインダー機能で、ユーザーが新しい通知時間を追加する際に表示されるボタンやメニュー項目の文言です。簡潔で分かりやすい表現を使用してください。"
-  },
   "syncWithDeviceTimeZone": "क्या आप डिवाइस टाइम जोन ({deviceTimezoneName}) के साथ सिंक करना चाहते हैं?",
-  "@syncWithDeviceTimeZone": {
-    "description": "ピル服用リマインダーの時刻設定で、ユーザーが設定した時間と端末のタイムゾーンが異なる場合に、端末のタイムゾーンに合わせて同期するかを確認するダイアログメッセージです。{deviceTimezoneName}には実際のタイムゾーン名（例：Asia/Tokyo）が表示されます。",
-    "placeholders": {
-      "deviceTimezoneName": {
-        "type": "String"
-      }
-    }
-  },
   "currentTimeZone": "वर्तमान में सेट टाइम ज़ोन",
-  "@currentTimeZone": {
-    "description": "設定画面等で表示される、ユーザーの端末で現在設定されているタイムゾーンを示すラベルです。ピルの服用リマインド機能で正確な時刻管理を行うため、タイムゾーン設定の確認に使用されます。"
-  },
   "yes": "हाँ",
-  "@yes": {
-    "description": "アプリ内のダイアログボックスやアラートで使用される肯定的な応答ボタンのラベルです。ユーザーが何かの確認や質問に対して「はい」と答える際に表示されます。"
-  },
   "no": "नहीं",
-  "@no": {
-    "description": "アプリ内のダイアログボックスやアラートで使用される否定的な応答ボタンのラベルです。ユーザーが何かの確認や質問に対して「いいえ」と答える際に表示されます。"
-  },
   "unsubscribeInfo": "रद्दीकरण के बारे में",
-  "@unsubscribeInfo": {
-    "description": "プレミアムプランの解約手続きや解約に関する情報へのリンク・ボタンのラベルです。ユーザーがサブスクリプションの解約方法を確認したい時に表示されます。"
-  },
   "pillReminder": "पिल सेवन सूचना",
-  "@pillReminder": {
-    "description": "アプリがユーザーにピル（経口避妊薬）の服用時刻を知らせるリマインダー通知機能の名称です。設定画面や通知関連のメニューで表示されます。"
-  },
   "takePillReminderChannelName": "गोली सेवन सूचना",
-  "@takePillReminderChannelName": {
-    "description": "ピルの服用リマインダー通知を分類するための通知チャンネル名です。ユーザーの端末の通知設定画面で表示され、この種類の通知のオン・オフを制御するために使われます。"
-  },
   "takePillReminder": "💊 का समय है",
-  "@takePillReminder": {
-    "description": "ピルの服用時刻になった時にユーザーに送信されるプッシュ通知のメッセージです。簡潔で親しみやすく、服用を促すトーンで翻訳してください。"
-  },
   "copyDebugInfo": "डिबग जानकारी कॉपी करें",
-  "@copyDebugInfo": {
-    "description": "アプリに問題が発生した際に、サポートや開発者への報告のために技術的なデバッグ情報をクリップボードにコピーするボタンのテキストです。ユーザーにとって分かりやすく、行動を促す表現で翻訳してください。"
-  },
   "cancel": "रद्द करें",
-  "@cancel": {
-    "description": "各種ダイアログや操作確認画面で、現在の操作を中止して前の画面に戻るためのボタンのテキストです。ユーザーが誤操作を防げるよう、明確で分かりやすい表現で翻訳してください。"
-  },
   "signOut": "साइन आउट",
-  "@signOut": {
-    "description": "ユーザーアカウントからサインアウト/ログアウトするためのボタンやメニュー項目のテキストです。各言語で一般的に使用される「ログアウト」の表現で翻訳してください。"
-  },
   "autoAddPillSheetGroup": "पिल शीट ग्रुप का स्वचालित जोड़ना",
-  "@autoAddPillSheetGroup": {
-    "description": "アプリが新しいピルの服用サイクルを開始する際に、ピルシートの管理グループを自動的に作成・追加する機能のタイトルです。ユーザーが手動で設定しなくても、システムが自動的にピルシートの管理単位を追加することを表しています。"
-  },
   "autoAddNewSheetAfterCurrentEnds": "जब मौजूदा पिल शीट समूह समाप्त हो जाएगा, तो नई शीट अपने आप जुड़ जाएगी",
-  "@autoAddNewSheetAfterCurrentEnds": {
-    "description": "現在服用中のピルシート（1パック分）が終了した際に、次のピルシートを自動的に追加する機能の説明文です。設定画面で表示される機能の説明として使用されます。"
-  },
   "accountSettings": "अकाउंट सेटिंग्स",
-  "@accountSettings": {
-    "description": "設定画面で表示される「アカウント設定」メニュー項目のラベルです。ユーザーの個人情報やアカウント関連の設定を管理する画面へのナビゲーションとして使用されます。"
-  },
   "linked": "जुड़ा हुआ",
-  "@linked": {
-    "description": "外部サービスやアカウントとの連携が完了している状態を表すステータス表示です。設定画面などで「連携済み」として表示されます。"
-  },
   "unregistered": "अपंजीकृत",
-  "@unregistered": {
-    "description": "外部サービスやアカウントとの連携がまだ完了していない状態を表すステータス表示です。設定画面などで「未登録」や「未連携」として表示され、ユーザーがまだ登録手続きを行っていないことを示します。"
-  },
   "quickRecord": "त्वरित रिकॉर्ड",
-  "@quickRecord": {
-    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
-  },
   "quickRecordDescription": "सूचना स्क्रीन में आज की गोली की जानकारी मिलती है और तुरंत सेवन रिकॉर्ड किया जा सकता है।",
-  "@quickRecordDescription": {
-    "description": "通知画面でのクイック記録機能の説明文です。今日飲むべきピルの確認と服用記録を同じ画面で素早く行えることを表現してください。"
-  },
   "healthCareIntegration": "हेल्थकेयर एकीकरण",
-  "@healthCareIntegration": {
-    "description": "設定画面等で表示される機能名で、iOSのヘルスケアアプリやその他の健康管理アプリとのデータ連携機能を指します。ピルの服用記録や生理データを外部の健康管理システムと同期する機能の名称として使用されます。"
-  },
   "healthCareIntegrationDescription": "Pilll में रिकॉर्ड किए गए मासिक धर्म के रिकॉर्ड को स्वचालित रूप से हेल्थकेयर में रिकॉर्ड किया जा सकता है",
-  "@healthCareIntegrationDescription": {
-    "description": "ピルの服用管理アプリPilllで記録した生理記録を、iOSの「ヘルスケア」アプリに自動的に同期する機能の説明文です。設定画面などでユーザーに機能の利便性を伝える際に表示されます。"
-  },
   "viewPremiumPlan": "प्रीमियम प्लान देखें",
-  "@viewPremiumPlan": {
-    "description": "有料プランの詳細や料金を確認するためのボタンやリンクのテキストです。設定画面やプレミアム機能の紹介画面で、ユーザーがプレミアムプランの内容を見る際に使用されます。"
-  },
   "changePillNumberForToday": "आज की गोली संख्या बदलें",
-  "@changePillNumberForToday": {
-    "description": "ピルシートUIで今日服用するべきピル番号を手動で変更する機能のテキストです。飲み忘れやピルシートの進捗調整時に、ユーザーが今日の服用予定を修正する際に表示されます。"
-  },
   "discardAllPillSheets": "सभी पिल शीट हटाएं",
-  "@discardAllPillSheets": {
-    "description": "アプリに登録されているすべてのピルシート情報を削除する機能のボタンテキストです。ユーザーがピル管理をリセットしたい場合や、すべてのデータを一括削除したい場合に使用される重要な操作です。"
-  },
   "areYouSureDoing": "क्या आप {doing} करना चाहते हैं？",
-  "@areYouSureDoing": {
-    "description": "ユーザーが何らかの操作を実行する前の確認ダイアログで表示される汎用的な確認フレーズです。{doing}部分には具体的な操作内容（削除、変更など）が入り、「その操作を本当に実行しますか？」という意味で使用されます。",
-    "placeholders": {
-      "doing": {
-        "type": "String"
-      }
-    }
-  },
   "currentlyDisplayed": "वर्तमान में प्रदर्शित",
-  "@currentlyDisplayed": {
-    "description": "画面上で現在表示されている項目やコンテンツを示すラベルです。ピルシートや履歴画面などで、表示中の内容を説明する際に使用されます。"
-  },
   "allPillSheets": "सभी पिल शीट",
-  "@allPillSheets": {
-    "description": "ユーザーが使用している過去・現在のピルシート一覧を表示する画面やセクションのタイトルです。複数のピルシートを管理・閲覧する際に表示されるラベルとして使用されます。"
-  },
   "willBeDiscarded": "हटा दिया जाएगा",
-  "@willBeDiscarded": {
-    "description": "データやピルシートなどのオブジェクトが削除・破棄される際に使用される文言です。確認ダイアログなどで「〜が破棄されます」として表示される部分に使用されます。"
-  },
   "discard": "हटाएं",
-  "@discard": {
-    "description": "ピルシートやデータなどを削除・廃棄する際のボタンやアクションに使用される動詞です。確認ダイアログなどで「破棄する」「削除する」として表示されます。"
-  },
   "pillSheetDiscarded": "पिल शीट हटा दी गई है",
-  "@pillSheetDiscarded": {
-    "description": "ユーザーがピルシート（避妊薬のパッケージ）を物理的に破棄・処分した際に表示される確認メッセージです。アプリ内でピルシートの管理状態を更新した後に、ユーザーに対して破棄完了を知らせるために使用されます。"
-  },
   "aboutMenstruation": "माहवारी के बारे में",
-  "@aboutMenstruation": {
-    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
-  },
   "checkPillNumberForMenstruationStart": "कृपया मासिक धर्म शुरुआत की तारीख की गोली संख्या की जांच करें। वर्तमान में चुने गए गोली शीट प्रकार में मौजूद नहीं होने वाली गोली संख्या सेट की गई है।",
-  "@checkPillNumberForMenstruationStart": {
-    "description": "ピルシートタイプを変更した際に、以前設定した生理開始日のピル番号が新しいピルシートには存在しない場合に表示される警告メッセージです。ユーザーに設定の確認と修正を促すエラー通知として使用されます。"
-  },
   "customizeMedicationNotifications": "सेवन सूचना अनुकूलन",
-  "@customizeMedicationNotifications": {
-    "description": "ピル服用のリマインダー通知をユーザーが自分好みに設定できる機能の項目名です。通知時刻や通知方法などをカスタマイズする設定画面への入り口として表示されます。"
-  },
   "medicationNotification": "दवा की सूचना",
-  "@medicationNotification": {
-    "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
-  },
   "xCanBeCustomized": "{x} को अनुकूलित कर सकते हैं",
-  "@xCanBeCustomized": {
-    "description": "特定の機能や設定項目（{x}で表される）をユーザーが自分の好みに合わせて調整・変更できることを伝えるメッセージです。設定画面などで「通知設定をカスタマイズできます」のような形で表示されます。",
-    "placeholders": {
-      "x": {
-        "type": "String"
-      }
-    }
-  },
   "thankYouForCooperation": "आपके सहयोग के लिए धन्यवाद",
-  "@thankYouForCooperation": {
-    "description": "ユーザーがアプリの改善やフィードバックに協力してくれた際に表示される感謝メッセージです。丁寧で感謝の気持ちが伝わるような表現にしてください。"
-  },
   "feedbackUsage": "आपके सुझावों का उपयोग हम भविष्य में अपनी सेवा को बेहतर बनाने के लिए करेंगे।",
-  "@feedbackUsage": {
-    "description": "ユーザーがアプリに対してフィードバックや意見を送信した際に表示される、運営側がそのフィードバックをどのように活用するかを説明するメッセージです。丁寧で感謝の気持ちが伝わり、今後のサービス改善への活用を約束する表現にしてください。"
-  },
   "close": "बंद करें",
-  "@close": {
-    "description": "ダイアログ、モーダル、各種設定画面などを閉じるためのボタンのラベルです。アプリ全体で汎用的に使用される基本的なUI要素のため、その言語で最も自然で一般的な「閉じる」の表現を使用してください。"
-  },
   "registerAccount": "खाता पंजीकरण",
-  "@registerAccount": {
-    "description": "新規ユーザーがピル服用管理アプリPilllのアカウントを作成するためのボタンや項目です。アプリの初回利用時やログイン画面で表示される、アカウント新規登録を促すUI要素として使用されます。"
-  },
   "reLogin": "पुनः लॉगिन",
-  "@reLogin": {
-    "description": "ログインセッションが切れた際やエラーが発生した際に、ユーザーがアプリに再度ログインするためのボタンや項目です。健康管理アプリの継続的な利用において、セキュリティやセッション管理の観点から再認証が必要になった場合に表示されます。"
-  },
   "authenticationInfoUpdated": "प्रमाणीकरण जानकारी अपडेट की गई",
-  "@authenticationInfoUpdated": {
-    "description": "ユーザーのログイン認証情報（パスワードやアカウント設定など）の更新が正常に完了した際に表示される成功メッセージです。健康管理アプリのセキュリティ強化や問題解決後にユーザーに安心感を与える通知として使用されます。"
-  },
   "updateAuthenticationInformation": "प्रमाणीकरण जानकारी अपडेट करें",
-  "@updateAuthenticationInformation": {
-    "description": "ユーザーのログイン認証情報（パスワードやアカウント設定など）を更新する機能で表示されるボタンやメニューのテキストです。健康管理アプリのセキュリティ強化や問題解決の際にユーザーが操作する重要な機能として使用されます。"
-  },
   "registeredWithProvider": "{accountTypeProviderName} के साथ पंजीकरण पूरा हुआ",
-  "@registeredWithProvider": {
-    "description": "アカウント登録完了時にユーザーに表示される確認メッセージで、{accountTypeProviderName}にはGoogleやAppleなどのソーシャルログインサービス名が入ります。ユーザーが正常に登録できたことを伝える肯定的なメッセージとして使用されます。",
-    "placeholders": {
-      "accountTypeProviderName": {
-        "type": "String"
-      }
-    }
-  },
   "linkAccount": "जोड़ें",
-  "@linkAccount": {
-    "description": "ユーザーアカウントを外部サービス（GoogleやAppleアカウントなど）と連携してデータの同期やバックアップを行う機能のボタンやメニューに表示されるテキストです。"
-  },
   "withdraw": "खाता हटाएं",
-  "@withdraw": {
-    "description": "ユーザーがPilllアプリのサービスから完全に退会（アカウント削除）する際にボタンやメニューに表示されるテキストです。アプリの利用を停止し、すべてのデータを削除する最終的な操作を表します。"
-  },
   "withdrawalCompleted": "खाता हटा दिया गया है",
-  "@withdrawalCompleted": {
-    "description": "ユーザーがPilllアプリのアカウント削除（退会）処理を完了した後に表示される確認メッセージです。退会操作が正常に完了したことをユーザーに伝える重要な通知文言になります。"
-  },
   "appExitMessage": "ऐप अब समाप्त हो जाएगा। नई शुरुआत करने के लिए, कृपया ऐप को पुनः प्रारंभ करके प्रारंभिक सेटअप पूरा करें।",
-  "@appExitMessage": {
-    "description": "データリセットや初期化などの重要な操作の後に表示される確認メッセージです。ユーザーにアプリの再起動と初期設定のやり直しが必要であることを伝える重要な通知文言になります。"
-  },
   "oK": "OK",
-  "@oK": {
-    "description": "ダイアログボックスや確認画面で使用される汎用的な「OK」ボタンのラベルです。ユーザーが操作を確認・承認する際に表示されます。"
-  },
   "changePillNumber": "गोली नंबर बदलें",
-  "@changePillNumber": {
-    "description": "ピルシートUI上で表示される各ピルの番号（1番、2番など）を変更・調整する機能です。ユーザーが自分の使いやすい番号表示にカスタマイズできる設定項目として使用されます。"
-  },
   "change": "बदलें",
-  "@change": {
-    "description": "設定画面やピルシート番号調整などで使用される汎用的な「変更」ボタンやアクションラベルです。ユーザーが何かを変更・調整する際に表示される動詞として使用されます。"
-  },
   "pill": "गोली",
-  "@pill": {
-    "description": "避妊ピル（経口避妊薬）を指す医療用語です。アプリの核となる概念で、各言語の医療分野で一般的に使用される「ピル」「錠剤」に相当する用語で翻訳してください。"
-  },
   "calendar": "कैलेंडर",
-  "@calendar": {
-    "description": "アプリ内で生理記録、服用履歴、体調日記、予定管理などを表示・入力するためのカレンダー機能を指します。各言語で一般的に使用される「カレンダー」「暦」に相当する用語で翻訳してください。"
-  },
   "userInformationWillBeDeleted": "उपयोगकर्ता जानकारी हटा दी जाएगी",
-  "@userInformationWillBeDeleted": {
-    "description": "アカウント削除やデータリセット時に表示される警告メッセージです。ユーザーの服用履歴、生理記録、体調日記などのすべての個人データが完全に削除されることを伝える重要な確認メッセージとして翻訳してください。"
-  },
   "withdrawalMessage": "खाता बंद करने पर सभी डेटा हमेशा के लिए मिट जाएगा और आप इसी खाते से दोबारा लॉगिन नहीं कर पाएंगे।",
-  "@withdrawalMessage": {
-    "description": "アカウント退会時に表示される最終確認メッセージです。全データが削除され、同じアカウントで再ログインできなくなることを強調する重要な警告として翻訳してください。"
-  },
   "recordPage": "रिकॉर्ड पेज",
-  "@recordPage": {
-    "description": "ピルの服用記録を確認・管理するページの名前です。ユーザーが過去の服用履歴を閲覧したり、服用状況を記録したりする機能を持つメインページの一つとして翻訳してください。"
-  },
   "doReLogin": "कृपया दोबारा लॉगिन करें",
-  "@doReLogin": {
-    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
-  },
   "reLoginMessage": "खाता बंद करने से पहले पहचान सत्यापन के लिए कृपया पुनः लॉगिन करें। पुनः लॉगिन के बाद, खाता बंद करने की प्रक्रिया स्वचालित रूप से शुरू हो जाएगी।",
-  "@reLoginMessage": {
-    "description": "アカウント退会処理を開始する前に、セキュリティ確保のため本人確認として再ログインを促すメッセージです。ユーザーが退会手続きを選択した際に表示され、再ログイン完了後に自動的に退会処理が実行されることを説明しています。"
-  },
   "updateAuthenticationAfterReLogin": "फिर से लॉग इन करके प्रमाणीकरण जानकारी अपडेट करते हैं",
-  "@updateAuthenticationAfterReLogin": {
-    "description": "アカウント退会処理時に、セキュリティ確保のため再ログインを求める際に表示されるメッセージです。ユーザーに認証情報の更新が必要であることを説明します。"
-  },
   "menstruationPage": "मासिक धर्म",
-  "@menstruationPage": {
-    "description": "ピルアプリ内で生理記録や管理を行うページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
-  },
   "calendarPage": "कैलेंडर",
-  "@calendarPage": {
-    "description": "ピルアプリ内で体調記録や通院予定などの将来の予定を管理するカレンダーページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
-  },
   "settingsPage": "सेटिंग्स पेज",
-  "@settingsPage": {
-    "description": "ピルアプリ内でアプリの各種設定を変更・管理する設定ページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
-  },
   "menstruationDeleted": "माहवारी की अवधि हटा दी गई है",
-  "@menstruationDeleted": {
-    "description": "ユーザーが記録した生理期間のデータを削除した際に表示される確認・完了メッセージです。削除操作が正常に完了したことをユーザーに伝える文章として翻訳してください。"
-  },
   "editMenstruationPeriod": "मासिक धर्म अवधि संपादित करें",
-  "@editMenstruationPeriod": {
-    "description": "ユーザーが過去に記録した生理期間のデータ（開始日・終了日など）を修正・編集する際に表示されるボタンやメニュー項目のテキストです。生理管理機能の編集操作を表す動作として翻訳してください。"
-  },
   "menstruationEdited": "मासिक धर्म अवधि संपादित की गई",
-  "@menstruationEdited": {
-    "description": "ユーザーが過去に記録した生理期間のデータ（開始日・終了日など）を編集完了した後に表示される確認メッセージです。生理管理機能での編集操作の完了を知らせる文言として翻訳してください。"
-  },
   "physicalConditionDetail": "स्वास्थ्य विवरण",
-  "@physicalConditionDetail": {
-    "description": "ユーザーが日記機能で体調を記録する際の詳細情報を表示する画面やセクションのタイトルです。体調に関する具体的な症状や状況を詳しく入力・閲覧できる機能の見出しとして翻訳してください。"
-  },
   "medicationHistoryPremiumFeatureRestriction": "आगे का इतिहास देखना प्रीमियम सुविधा है",
-  "@medicationHistoryPremiumFeatureRestriction": {
-    "description": "薬の服用履歴画面で、一定期間以上過去の履歴を閲覧しようとした際に無料ユーザーに表示される制限メッセージです。プレミアム機能への登録を促す内容として翻訳してください。"
-  },
   "viewMoreDetails": "और देखें",
-  "@viewMoreDetails": {
-    "description": "詳細情報や追加の情報を表示するためのボタンやリンクのテキストです。「もっと見る」「詳細を見る」といった意味で、ユーザーがより詳しい情報にアクセスしたい時に表示されます。"
-  },
   "viewMore": "और देखें",
-  "@viewMore": {
-    "description": "追加の詳細情報を表示するためのボタンテキストです。リストや概要表示で、さらに多くの項目や詳細を見たい時にタップするリンクとして使用されます。"
-  },
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}वीं",
-  "@afterLastTakenPillNumber": {
-    "description": "ピルシートUI上で、最後に服用したピルの次に飲むべきピルの番号を表示するテキストです。数字の後に付ける序数詞（日本語では「番」、英語では「th」など）を各言語に適した形で翻訳してください。",
-    "placeholders": {
-      "afterLastTakenPillNumber": {
-        "type": "String"
-      }
-    }
-  },
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} नंबर",
-  "@leftDashAfterLastTakenPillNumber": {
-    "description": "ピルシートUIで表示される「残り服用数-最後に服用したピル番号」の形式です。例：「7-21番」は残り7錠で、21番目のピルまで服用済みを表します。",
-    "placeholders": {
-      "left": {
-        "type": "String"
-      },
-      "afterLastTakenPillNumber": {
-        "type": "String"
-      }
-    }
-  },
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} नंबर",
-  "@beforeLastTakenPillNumber": {
-    "description": "最後に服用したピルの1つ前の番号を表示します。ピルシートのUI上で服用履歴の範囲表示に使用される番号です。",
-    "placeholders": {
-      "beforeLastTakenPillNumber": {
-        "type": "String"
-      }
-    }
-  },
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} नंबर",
-  "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
-    "description": "ピルシートUIで、最後に服用したピルの番号から次に服用予定のピルの番号までの範囲を「-」でつないで表示するテキストです。「3-4番」のように連続する番号の範囲を示します。",
-    "placeholders": {
-      "beforeLastTakenPillNumber": {
-        "type": "String"
-      },
-      "afterLastTakenPillNumberPlusOne": {
-        "type": "String"
-      }
-    }
-  },
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} नंबर",
-  "@oneToAfterDisplayNumberBeginPillNumber": {
-    "description": "ピルシートの表示番号設定で、1番から設定した開始番号までの範囲を示すテキストです。ピルシート上での番号表示のカスタマイズ機能で使用されます。",
-    "placeholders": {
-      "afterDisplayNumberSettingBeginPillNumber": {
-        "type": "String"
-      }
-    }
-  },
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber} → {afterDisplayNumberSettingBeginPillNumber} नंबर",
-  "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
-    "description": "ピルシートの表示番号設定で、元の開始番号から変更後の開始番号への変更を示すテキストです。番号の変更前後を矢印で表現しています。",
-    "placeholders": {
-      "beforeBeginPillNumber": {
-        "type": "String"
-      },
-      "afterDisplayNumberSettingBeginPillNumber": {
-        "type": "String"
-      }
-    }
-  },
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} नंबर",
-  "@oneToAfterDisplayNumberEndPillNumber": {
-    "description": "ピルシートUIでピルの番号表示範囲を示すテキストです。「1番目から設定された最後の番号まで」という意味で、ピルシートの表示範囲を表します。",
-    "placeholders": {
-      "afterDisplayNumberSettingEndPillNumber": {
-        "type": "String"
-      }
-    }
-  },
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} नं",
-  "@beforeEndToAfterDisplayNumberEndPillNumber": {
-    "description": "ピルシートの最後の薬の表示番号を変更する際に使用されます。変更前の番号から変更後の番号への変更を矢印で示します。",
-    "placeholders": {
-      "beforeEndPillNumber": {
-        "type": "String"
-      },
-      "afterDisplayNumberSettingEndPillNumber": {
-        "type": "String"
-      }
-    }
-  },
   "selectPauseStartDate": "सेवन विराम प्रारंभ दिनांक चयन",
-  "@selectPauseStartDate": {
-    "description": "ピルの休薬期間（服用を一時的に停止する期間）の開始日をカレンダーから選択する際に表示される画面タイトルです。生理周期に合わせた服用スケジュール管理で使用されます。"
-  },
   "selectPausePeriod": "सेवन विराम अवधि चुनें",
-  "@selectPausePeriod": {
-    "description": "ピルの休薬期間（服用を一時的に停止する期間）の長さを選択する際に表示される画面タイトルです。生理周期に合わせた服用スケジュール管理で使用されます。"
-  },
   "pauseStartDate": "सेवन विराम प्रारंभ तिथि",
-  "@pauseStartDate": {
-    "description": "ピルの休薬期間（服用を一時的に停止する期間）の開始日を指定する際に表示されるラベルです。生理周期に合わせた服用スケジュール管理で使用されます。"
-  },
   "pauseEndDate": "सेवन विराम समाप्ति तारीख",
-  "@pauseEndDate": {
-    "description": "ピルの休薬期間（服用を一時的に停止する期間）の終了日を指定する際に表示されるラベルです。生理周期に合わせた服用スケジュール管理で使用されます。"
-  },
   "endPillSheet": "पिल शीट समाप्त",
-  "@endPillSheet": {
-    "description": "ピル（経口避妊薬）の一包装（通常シート状で28日分程度）がすべて服用完了した際に表示されるメッセージです。次のピルシートへの切り替えやタイミングを知らせる重要な通知として使用されます。"
-  },
   "discardPillSheet": "पिल्ल शीट निपटान",
-  "@discardPillSheet": {
-    "description": "服用が完了した空のピルシート（ブリスターパック）を適切に廃棄・処分する際に表示されるアクションやメッセージです。環境に配慮した廃棄方法の案内や、次のシートへの切り替えを促す文脈で使用されます。"
-  },
   "takingTime": "दवा का समय",
-  "@takingTime": {
-    "description": "ユーザーがピルを服用する予定時刻を表示・設定する際に使用されるラベルです。リマインダー機能や服用履歴において、何時に薬を飲むべきかを示す文脈で表示されます。"
-  },
   "takingHistoryIsPremiumFeature": "सेवन इतिहास एक प्रीमियम सुविधा है",
-  "@takingHistoryIsPremiumFeature": {
-    "description": "ユーザーが服用履歴機能にアクセスしようとした際に表示される、その機能がプレミアムプラン限定であることを伝えるメッセージです。無料ユーザーに対して有料プランへのアップグレードを促す文脈で使用されます。"
-  },
   "pauseTakingDoesNotAdvancePillNumber": "दवा का सेवन बंद करने पर पिल नंबर आगे नहीं बढ़ता",
-  "@pauseTakingDoesNotAdvancePillNumber": {
-    "description": "ピルシートUI上で表示される説明文で、ユーザーが服用を一時停止した場合にピルシート上の順序番号が進まないことを伝えるメッセージです。アプリの核心機能であるピルシート管理において、服用の順序性を正確に保つための重要な動作説明です。"
-  },
   "pauseTakingFromNumber": "क्या आप {number} से गोली लेना बंद करना चाहते हैं?",
-  "@pauseTakingFromNumber": {
-    "description": "ピルシートUI上で、ユーザーが特定の番号（{number}）から薬の服用を一時停止することを確認するダイアログメッセージです。ピル管理アプリにおける重要な機能で、服用スケジュールの変更を行う際にユーザーの意思を確認するために表示されます。",
-    "placeholders": {
-      "number": {
-        "type": "String"
-      }
-    }
-  },
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}नंबर",
-  "@lastTakenPlusOnePillNumber": {
-    "description": "次に服用すべきピルの番号を表示するためのテキストです。ピルシートUIで「◯番目のピルを飲む」という形で使用されます。",
-    "placeholders": {
-      "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
-        "type": "String"
-      }
-    }
-  },
   "taking": "सेवन",
-  "@taking": {
-    "description": "ピルの服用を表す単語。服用記録や服用時刻などの機能で使用される。"
-  },
   "estimatedEndPillNumber": "पिछली शीट का अंत: {estimatedEndPillNumber} नंबर",
-  "@estimatedEndPillNumber": {
-    "description": "前回使用していたピルシート（ブリスターパック）の最後に服用したピルの番号を表示するテキストです。新しいシートに移る際の継続性を示すために使用されます。",
-    "placeholders": {
-      "estimatedEndPillNumber": {
-        "type": "int"
-      }
-    }
-  },
   "addPillSheetButton": "पिल शीट जोड़ें",
-  "@addPillSheetButton": {
-    "description": "新しいピル薬のパック（シート）をアプリに登録するためのボタンのテキストです。ユーザーが新しいピルを飲み始める際に使用される機能です。"
-  },
   "taken": "लिया",
-  "@taken": {
-    "description": "ピルを服用したことを示すステータス表示です。服用履歴画面などで、ユーザーが既にピルを飲み終えた状態を表現するために使用されます。"
-  },
   "notTaken": "नहीं लिया",
-  "@notTaken": {
-    "description": "ピルの服用状態を示すステータス表示で、ユーザーがその日にピルを服用していない状態を表します。服用履歴画面やピルシートUIで「taken」（服用済み）と対になって表示される重要な状態表示です。"
-  },
   "pillSheetSettings": "पिल शीट सेटिंग्स",
-  "@pillSheetSettings": {
-    "description": "ピルの服用管理アプリで、物理的なピルシート（薬のブリスターパック）をデジタル化したUI表示や服用スケジュールに関する設定画面のタイトル。ピルシートの種類選択、表示番号調整、服用パターンなどの設定項目を含む重要な機能設定です。"
-  },
   "unmarkTodayPillAsTakenToPause": "आज की गोली को न ली गई के रूप में मार्क करने के बाद",
-  "@unmarkTodayPillAsTakenToPause": {
-    "description": "ユーザーがピルの服用を一時停止（休薬）する際に、今日予定されているピルを「未服用」状態にマークする機能に関するメッセージです。休薬期間を開始する前段階として、当日のピル服用状況をリセットする操作を説明しています。"
-  },
   "pauseTaking": "दवा विराम",
-  "@pauseTaking": {
-    "description": "ピルの服用を一時的に停止・休薬する際に表示されるボタンやメニュー項目のテキストです。ユーザーが意図的にピル服用をお休みする機能を表しています。"
-  },
   "changePauseStartDate": "सेवन विराम प्रारंभ तिथि बदलें",
-  "@changePauseStartDate": {
-    "description": "ピルの服用を一時的に休止する期間（休薬期間）の開始日を変更する機能のボタンやメニュー項目です。ユーザーが既に設定した休薬開始日を後から変更したい場合に使用されます。"
-  },
   "pauseTakingPeriodEnded": "गोली सेवन का विराम अवधि समाप्त हो गई है",
-  "@pauseTakingPeriodEnded": {
-    "description": "ピルの服用を一時的に休止する休薬期間が終了したことをユーザーに通知するメッセージです。通知やダイアログなどで表示される短いテキストです。"
-  },
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "@endValue": {
-    "description": "ピルシートの最後のピル番号を表示するテキストです。ピルシートUIで「何番目まで飲むか」を示す数値が入ります。",
-    "placeholders": {
-      "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
-        "type": "int"
-      }
-    }
-  },
   "changePillDaysForSheet": "शीट के सेवन दिन बदलें",
-  "@changePillDaysForSheet": {
-    "description": "ピルシート（ブリスターパック）の服用期間日数を変更する設定項目。ユーザーが21日間、28日間など、そのシートを何日間服用するかを設定できる機能のラベルです。"
-  },
   "changedStartAndEndNumbers": "शुरुआत और अंत की संख्या बदल दी गई है",
-  "@changedStartAndEndNumbers": {
-    "description": "ピルシートの表示番号（開始番号と終了番号）をユーザーが変更した際に表示される確認메ッセージです。例えば「1番～28番」から「3番～30番」に変更した場合などに使用されます。"
-  },
   "startOfPillDays": "सेवन दिनों की शुरुआत",
-  "@startOfPillDays": {
-    "description": "ピルシート画面で、ピルの服用を開始する日付または日数を表示するラベルです。ユーザーがピルシートの表示番号を調整する際に使用されます。"
-  },
   "beforePillSheetGroupSequentialEstimatedEndDay": "पिछली शीट का अंत: {beforePillSheetGroupSequentialEstimatedEndPillNumber}वां दिन",
-  "@beforePillSheetGroupSequentialEstimatedEndDay": {
-    "description": "ピルシート管理画面で、前回使用していたピルシートの最後の服用日を示すテキストです。ユーザーがピルの服用進度や次のシートとの関連性を把握するために表示される情報です。",
-    "placeholders": {
-      "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
-        "type": "int"
-      }
-    }
-  },
   "endOfPillDays": "सेवन अवधि का अंत",
-  "@endOfPillDays": {
-    "description": "ピルシートの服用期間が完了したことをユーザーに知らせるメッセージです。次のサイクルに進む前の区切りを示します。"
-  },
   "changedToNumber": "नंबर में बदलें",
-  "@changedToNumber": {
-    "description": "ピルシートUIでピルの表示番号を変更する機能に関するメッセージです。ユーザーがピルの番号表示を調整する際に使用されます。"
-  },
   "displayMode": "प्रदर्शन मोड",
-  "@displayMode": {
-    "description": "ピルシートや設定画面で表示形式を選択する機能のラベルです。ユーザーがアプリの表示方法を変更する際に使用されます。"
-  },
   "dateDisplay": "दिनांक प्रदर्शन",
-  "@dateDisplay": {
-    "description": "設定画面で日付の表示形式を選択する機能のラベルです。ピルの服用記録や生理日などの日付情報をどのような形式で表示するかを設定する際に使用されます。"
-  },
   "pillNumber": "पिल नंबर",
-  "@pillNumber": {
-    "description": "ピル番号"
-  },
   "pillDaysCycle": "सेवन दिवस",
-  "@pillDaysCycle": {
-    "description": "1つの服用周期において、実際にピルを服用する日数を表示する項目です。通常のピルでは21日間服用、7日間休薬という28日周期が一般的です。"
-  },
   "pillSheetEnded": "पिल शीट पूरी हो गई",
-  "@pillSheetEnded": {
-    "description": "1つのピルシート（通常21日分のピルが入った包装シート）を全て服用し終えた時に表示されるメッセージです。ユーザーにピルシートの終了を通知し、次のシートの準備や休薬期間への移行を促します。"
-  },
   "checkLastTakenDate": "अंतिम सेवन तिथि देखें",
-  "@checkLastTakenDate": {
-    "description": "ユーザーが最後にピルを服用した日付を確認するためのボタンやリンクに表示されるテキストです。服用履歴の確認や飲み忘れ防止のために使用されます。"
-  },
   "pleaseRegisterAccount": "कृपया खाता पंजीकृत करें",
-  "@pleaseRegisterAccount": {
-    "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
-  },
   "cannotTransferPremiumWithoutAccount": "डिवाइस बदलने या फोन खो जाने पर प्रीमियम सुविधाएं स्थानांतरित नहीं हो सकतीं",
-  "@cannotTransferPremiumWithoutAccount": {
-    "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
-  },
   "reexperiencePremiumFeatures": "प्रीमियम फ़ीचर्स को 14 दिन तक फिर से एक्सपीरियंस करें!\nटैप करके सोशल मीडिया पर शेयर करें!",
-  "@reexperiencePremiumFeatures": {
-    "description": "プレミアム機能の14日間無料再体験キャンペーンを告知し、ユーザーにSNSでのシェアを促すメッセージです。タップするとシェア機能が起動される想定のボタンテキストとして使用されます。"
-  },
   "whereToShare": "कहाँ शेयर करें?",
-  "@whereToShare": {
-    "description": "シェア機能でユーザーがシェア先（SNSなど）を選択する際に表示される選択画面のタイトルテキストです。プレミアム機能の再体験キャンペーンなどの情報をシェアする場面で使用されます。"
-  },
   "pauseTakingDay": "🌙 दवा विराम {day}वां दिन",
-  "@pauseTakingDay": {
-    "description": "ピルの服用サイクルにおいて、休薬期間（通常7日間）の何日目かを表示するテキストです。{day}には「1」「2」「3」などの数字が入り、「🌙 服用お休み 3日目」のように表示されます。",
-    "placeholders": {
-      "day": {
-        "type": "int"
-      }
-    }
-  },
   "withDay": "दिन {word}",
-  "@withDay": {
-    "description": "ピルシートや服用履歴で「何日目」かを表示する際に使用されます。{word}には数字（1、2、3など）が入り、「1日目」「2日目」のように表示されます。",
-    "placeholders": {
-      "word": {
-        "type": "String"
-      }
-    }
-  },
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}वां दिन",
-  "@restDurationDays": {
-    "description": "休薬期間（ピルを服用しない期間）の経過日数を表示する際に使用されます。{restDurationDays}には日数が入り、全体で「休薬〇日目」のような形で表示されます。",
-    "placeholders": {
-      "activePillSheetPillSheetTypeNotTakenWord": {
-        "type": "String"
-      },
-      "restDurationDays": {
-        "type": "int"
-      }
-    }
-  },
   "daysUntilPausePeriod": "{diffPlusOne} दिन बाद {activePillSheetPillSheetTypeNotTakenWord} की अवधि है",
-  "@daysUntilPausePeriod": {
-    "description": "ピルの服用期間から休薬期間までの残り日数を知らせるメッセージです。{diffPlusOne}は日数、{activePillSheetPillSheetTypeNotTakenWord}は休薬期間等の用語が入ります。",
-    "placeholders": {
-      "diffPlusOne": {
-        "type": "int"
-      },
-      "activePillSheetPillSheetTypeNotTakenWord": {
-        "type": "String"
-      }
-    }
-  },
   "remainingDaysAllFeatures": "आप बाकी {diff} दिन तक सभी सुविधाओं का उपयोग कर सकते हैं",
-  "@remainingDaysAllFeatures": {
-    "description": "プレミアムプラン（有料機能）の無料試用期間や有料契約の残り日数を表示するメッセージです。ユーザーにあと何日間、アプリのすべての機能（広告非表示、詳細統計など）が利用できるかを伝えています。",
-    "placeholders": {
-      "diff": {
-        "type": "int"
-      }
-    }
-  },
   "todayIsTaking": "💊 आज सेवन करें",
-  "@todayIsTaking": {
-    "description": "ピルの服用管理画面で、今日がピル服用の予定日であることをユーザーに通知するメッセージです。カレンダーやホーム画面などで、今日が服用日であることを示すステータス表示として使用されます。"
-  },
   "todayPillToTake": "💊 आज की गोली",
-  "@todayPillToTake": {
-    "description": "ピル服用管理画面で、今日服用すべきピルを示すラベルです。ホーム画面やカレンダーなどで、今日飲む予定のピルがあることをユーザーに伝える際に使用されます。"
-  },
   "number": "नं",
-  "@number": {
-    "description": "ピルシートUI上でピルの位置・順番を示す番号のラベルです。「1番」「2番」のように表示される際の「番」部分に相当します。"
-  },
   "dayNumber": "th day",
-  "@dayNumber": {
-    "description": "服用日数モードで使用される単位です。「1日目」「2日目」のように表示される際の「日目」部分に相当します。"
-  },
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} से मासिक धर्म की शुरुआत रिकॉर्ड की गई",
-  "@recordedMenstruationStartDate": {
-    "description": "ユーザーが生理開始日を記録した後に表示される確認メッセージです。「○月○日から生理開始として記録しました」という意味で、記録が完了したことをユーザーに知らせる文言です。",
-    "placeholders": {
-      "DateTimeFormatterMonthAndDay": {
-        "type": "String"
-      }
-    }
-  },
   "menstruationStartDate": "माहवारी शुरुआत की तारीख",
-  "@menstruationStartDate": {
-    "description": "生理管理機能で、ユーザーが生理の開始日を記録する際に表示されるラベルです。"
-  },
   "menstruationEndDate": "मासिक धर्म समाप्ति दिनांक",
-  "@menstruationEndDate": {
-    "description": "生理管理機能で、ユーザーが生理の終了日を記録する際に表示されるラベル・項目名です。生理開始日とペアで使用され、生理期間を管理するために重要な情報です。"
-  },
   "menstruationScheduleDate": "पीरियड की अनुमानित तारीख",
-  "@menstruationScheduleDate": {
-    "description": "生理管理機能で、アプリが計算・予測した次回生理開始予定日を表示する際のラベル・項目名です。ユーザーの生理周期から自動算出される予測日であり、カレンダーやスケジュール画面で「次の生理はいつ頃来るか」を示すために使用されます。"
-  },
   "menstruationScheduleDateWithNumber": "पीरियड अनुसूची: {diffPlusOne} दिन",
-  "@menstruationScheduleDateWithNumber": {
-    "description": "生理管理機能で、アプリが予測した次回生理開始日までの残り日数を「生理予定：X日目」形式で表示する際に使用される文字列です。{diffPlusOne}には具体的な日数（1日目、2日目など）が入り、ユーザーのピル服用スケジュールと連動した生理周期予測を示します。",
-    "placeholders": {
-      "diffPlusOne": {
-        "type": "int"
-      }
-    }
-  },
   "menstruationScheduleDateWithNumberAndPillNumber": "मासिक धर्म अनुसूची: {diffPlusOne} दिन की {pillNumber}",
-  "@menstruationScheduleDateWithNumberAndPillNumber": {
-    "description": "ピルシート上で生理予定日の表示に使用される文字列。{diffPlusOne}は周期の何日目か、{pillNumber}はその日に服用するピルの番号を表示します。",
-    "placeholders": {
-      "diffPlusOne": {
-        "type": "int"
-      },
-      "pillNumber": {
-        "type": "String"
-      }
-    }
-  },
   "menstruationRemainingDay": "{diff} दिन बाकी",
-  "@menstruationRemainingDay": {
-    "description": "次回の生理予定日まであと何日かを示すメッセージです。{diff}に残り日数が入ります。",
-    "placeholders": {
-      "diff": {
-        "type": "int"
-      }
-    }
-  },
   "menstruationProgressingDay": "{diffPlusOne} दिन",
-  "@menstruationProgressingDay": {
-    "description": "生理開始から経過した日数を表示する際に使用されるテキストです。生理管理画面で「3日目」「5日目」のように現在の生理周期の進行状況を示します。",
-    "placeholders": {
-      "diffPlusOne": {
-        "type": "int"
-      }
-    }
-  },
   "recordMenstruation": "मासिक धर्म रिकॉर्ड करें",
-  "@recordMenstruation": {
-    "description": "生理記録機能のラベルです。ユーザーが生理の開始や期間を入力・記録する際に表示されるテキストです。"
-  },
   "menstruationHistory": "पीरियड हिस्ट्री",
-  "@menstruationHistory": {
-    "description": "これまでに記録された生理の履歴・データを表示する画面やメニューのラベルです。ユーザーが過去の生理周期や記録を確認するための機能名として使用されます。"
-  },
   "menstruationFromToday": "आज से मासिक धर्म",
-  "@menstruationFromToday": {
-    "description": "生理記録機能で、ユーザーが今日から生理が開始したことを記録する際に表示されるボタンやメニューのラベルです。生理周期の管理において、新しい生理期間の開始日を今日として登録するための操作に使用されます。"
-  },
   "menstruationFromYesterday": "कल से माहवारी",
-  "@menstruationFromYesterday": {
-    "description": "生理記録機能で、ユーザーが昨日から生理が開始したことを記録する際に表示されるボタンやメニューのラベルです。生理周期の管理において、新しい生理期間の開始日を昨日として登録するための操作に使用されます。"
-  },
   "selectMenstruationStartDate": "पीरियड्स की शुरुआती तारीख चुनें",
-  "@selectMenstruationStartDate": {
-    "description": "生理記録機能で、ユーザーが新しい生理期間の開始日を設定する際に表示されるボタンやメニューのラベルです。生理周期の管理において、生理開始日を記録するための操作に使用されます。"
-  },
   "menstruationCycle": "{menstruationDuration} दिन का चक्र",
-  "@menstruationCycle": {
-    "description": "生理周期の日数を表示する際に使用されるテキストです。{menstruationDuration}には28日、30日などの周期日数が入ります。",
-    "placeholders": {
-      "menstruationDuration": {
-        "type": "int"
-      }
-    }
-  },
   "login": "लॉग इन",
-  "@login": {
-    "description": "アプリにアカウントでログインする際のボタンやリンクに表示されるテキストです。ユーザーが既存のアカウントでサインインするためのアクション表示に使用されます。"
-  },
   "beforePremiumRegistration": "प्रीमियम रजिस्ट्रेशन से पहले...",
-  "@beforePremiumRegistration": {
-    "description": "プレミアム機能の説明や紹介をする際の導入部分として表示されるテキストです。ユーザーが有料プランの詳細を確認する前に表示される前置きの文言として使用されます。"
-  },
   "createNewAccountIfNotLoggedIn": "यदि आपने Pilll में अभी तक लॉगिन नहीं किया है तो एक नया खाता बनाया जाएगा",
-  "@createNewAccountIfNotLoggedIn": {
-    "description": "ログイン画面や初回利用時に表示される、新規ユーザー向けの説明テキストです。初めてアプリを使用するユーザーに対して、自動的にアカウントが作成されることを知らせる案内文として使用されます。"
-  },
   "registerAccountForDataTransfer": "खाता पंजीकरण करने से डेटा ट्रांसफर संभव हो जाता है",
-  "@registerAccountForDataTransfer": {
-    "description": "アカウント登録によりピルの服用履歴や生理記録などのデータをバックアップ・復元できることを伝えるメッセージです。デバイス変更や再インストール時のデータ移行機能について説明しています。"
-  },
   "registerAccountToKeepData": "आपकी जानकारी को सुरक्षित रखने के लिए, कृपया अकाउंट पंजीकरण करें",
-  "@registerAccountToKeepData": {
-    "description": "ユーザーの服用履歴や生理記録などの大切なデータを保持・維持するために、アカウント登録を促すメッセージです。データの永続化とバックアップのためのアカウント作成を案内しています。"
-  },
   "signInWith": "{loginName}से साइन इन करें",
-  "@signInWith": {
-    "description": "外部サービス（Google、Apple等）を使用してアプリにサインインするためのボタンテキストです。{loginName}にはGoogleやAppleなどの認証サービス名が動的に挿入され、ユーザーの服用データや生理記録を安全に保管するためのアカウント作成・ログイン機能の一部として使用されます。",
-    "placeholders": {
-      "loginName": {
-        "type": "String"
-      }
-    }
-  },
   "registerWith": "{loginName} से साइन अप करें",
-  "@registerWith": {
-    "description": "アカウント新規登録時に、指定されたログイン方法（Google、Apple、メールアドレスなど）を使って登録することを示すボタンやメッセージ。{loginName}には具体的なサービス名が入ります。",
-    "placeholders": {
-      "loginName": {
-        "type": "String"
-      }
-    }
-  },
   "premiumRegistrationComplete": "Pilll प्रीमियम पंजीकरण पूरा हुआ",
-  "@premiumRegistrationComplete": {
-    "description": "有料プラン「Pilll Premium」への登録が正常に完了したことをユーザーに知らせる成功メッセージです。アプリ名「Pilll」は翻訳せずそのまま使用してください。"
-  },
   "thankYouForRegistration": "पंजीकरण के लिए धन्यवाद।\nअब सभी सुविधाएं उपलब्ध हैं!",
-  "@thankYouForRegistration": {
-    "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
-  },
   "limitedTimeDiscount": "अभी सीमित कीमत में हमेशा के लिए उपयोग करें",
-  "@limitedTimeDiscount": {
-    "description": "アプリのプレミアム機能に関する期間限定キャンペーンのメッセージです。特別価格でサブスクリプションに加入すれば、その価格でずっと使い続けられることを表現しています。"
-  },
   "standardMonthlyPlan": "सामान्य मासिक प्लान",
-  "@standardMonthlyPlan": {
-    "description": "アプリのプレミアム機能に関する通常価格の月額サブスクリプションプランの名称です。割引プランと区別するために表示されます。"
-  },
   "annualPlan": "वार्षिक प्लान",
-  "@annualPlan": {
-    "description": "アプリのプレミアム機能に関する年額サブスクリプションプランの名称です。月額プランと区別するために表示されます。"
-  },
   "annualPrice": "{annualPackageStoreProductPriceString}/साल",
-  "@annualPrice": {
-    "description": "年額プレミアムプランの価格表示で、placeholderに価格が入り「価格/年」の形式で表示されます。各言語で「年」を表す適切な単位を使用してください。",
-    "placeholders": {
-      "annualPackageStoreProductPriceString": {
-        "type": "String"
-      }
-    }
-  },
   "monthlyPrice": "{monthlyPriceString}/माह",
-  "@monthlyPrice": {
-    "description": "プレミアムプランの月額料金を表示する際の形式で、価格の後に「/月」を付けて表示します。",
-    "placeholders": {
-      "monthlyPriceString": {
-        "type": "String"
-      }
-    }
-  },
   "dailyPrice": "{dailyPriceString}/दिन",
-  "@dailyPrice": {
-    "description": "プレミアムプランの1日あたりの料金を表示する際に使用されます。{dailyPriceString}は計算された1日の価格が入ります。",
-    "placeholders": {
-      "dailyPriceString": {
-        "type": "String"
-      }
-    }
-  },
   "premiumTermsNotice1": "• प्रीमियम अनुबंध अवधि प्रारंभ तिथि से गिनकर प्रत्येक 1 महीने या 1 वर्ष में स्वचालित रूप से नवीकृत होगी।",
-  "@premiumTermsNotice1": {
-    "description": "プレミアムプランの利用規約で表示される、サブスクリプションの自動更新に関する重要な契約条件です。法的文書として正確で分かりやすい翻訳が必要です。"
-  },
   "premiumTermsBullet": "•",
-  "@premiumTermsBullet": {
-    "description": "プレミアムプランの利用規約で項目を列挙する際に使用する箇条書きのバレット記号です。各言語の慣習に合わせた適切な箇条書き記号（・、•、-など）に翻訳してください。"
-  },
   "slashSeparator": "/",
-  "@slashSeparator": {
-    "description": "UIで項目を区切る際に使用するスラッシュ記号です。各言語の慣習に合わせて、適切な区切り文字（/、｜、-など）とスペースの有無を調整してください。"
-  },
   "premiumTermsNotice2": "व्यापारिक कानूनी जानकारी",
-  "@premiumTermsNotice2": {
-    "description": "プレミアムプラン（有料機能）の法的情報を表示する際のタイトルです。日本の特定商取引法に基づく事業者情報の表示義務に対応します。"
-  },
   "premiumTermsNotice3": "की पुष्टि करके पंजीकरण करें",
-  "@premiumTermsNotice3": {
-    "description": "プレミアムプラン登録時に、利用規約や法的事項の確認を促すメッセージの最後の部分です。ユーザーに内容を確認してから登録を進めるよう案内する文言です。"
-  },
   "autoRenewNotice": "• प्रीमियम सब्सक्रिप्शन की समाप्ति तिथि से कम से कम 24 घंटे पहले रद्द न करने पर यह स्वचालित रूप से नवीनीकृत हो जाएगी।",
-  "@autoRenewNotice": {
-    "description": "プレミアムプランの自動更新に関する法的通知で、アプリストアの規約に準拠するために表示される重要な文言です。正確な法的意味を保持して翻訳してください。"
-  },
   "cancelAutoRenewInfo": "・खरीदारी के बाद, ऑटो-नवीकरण रद्द करना {storeName} ऐप के खाता सेटिंग्स में किया जा सकता है। (ऐप के भीतर से ऑटो-नवीकरण रद्द नहीं किया जा सकता)।",
-  "@cancelAutoRenewInfo": {
-    "description": "プレミアムプランの自動更新解約方法を説明する重要な文言で、App StoreやGoogle Play Storeでの解約手順とアプリ内では解約できないことを正確に伝える必要があります。",
-    "placeholders": {
-      "storeName": {
-        "type": "String"
-      }
-    }
-  },
   "moreDetails": "विवरण देखें",
-  "@moreDetails": {
-    "description": "詳細情報を表示するためのリンクやボタンに使用されるテキストです。ユーザーが追加の情報を確認したい時にタップ/クリックする要素の表示文言として使用されます。"
-  },
   "restorePurchase": "खरीदारी की जानकारी बहाल की गई",
-  "@restorePurchase": {
-    "description": "ピルアプリのプレミアムプラン（有料機能）を復元した際に表示される成功メッセージです。ユーザーが機種変更や再インストール後に、以前購入したプレミアム機能を復元完了したことを知らせる通知文言として使用されます。"
-  },
   "previouslyPurchased": "पहले खरीदारी करने वाले यहाँ क्लिक करें",
-  "@previouslyPurchased": {
-    "description": "ピルアプリのプレミアムプラン購入画面で、既に購入済みのユーザーが機種変更や再インストール後に購入履歴を復元するためのリンクまたはボタンに表示されるテキストです。新規購入ではなく、過去の購入を復元したいユーザー向けの案内文言として使用されます。"
-  },
   "noPreviousPurchaseInfo": "पिछली खरीदारी की जानकारी नहीं मिली। कृपया अपना खाता जांचें और पुनः कोशिश करें।",
-  "@noPreviousPurchaseInfo": {
-    "description": "プレミアムプラン購入復元時に、以前の購入履歴が見つからない場合にユーザーに表示されるエラーメッセージです。機種変更や再インストール後に購入復元を試みたが失敗した際のメッセージとして使用されます。"
-  },
   "monthlyPlan": "मासिक प्लान",
-  "@monthlyPlan": {
-    "description": "プレミアム機能を利用するための月額課金プラン名です。年額プランと対比して表示される課金オプションとして使用されます。"
-  },
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/माह",
-  "@monthlyPlanPrice": {
-    "description": "プレミアム機能の月額課金プランの価格表示で、価格の後に続く「/月」部分です。年額プランと対比されるため、各言語で適切な月単位の表現を使用してください。",
-    "placeholders": {
-      "monthlyPackageStoreProductPriceString": {
-        "type": "String"
-      }
-    }
-  },
   "lifetimePlan": "आजीवन खरीद",
-  "@lifetimePlan": {
-    "description": "アプリ内の有料プランの支払い方式の1つで、一度購入すれば永続的に利用できるプランを指します。サブスクリプション（月額・年額）とは異なる買い切り型の課金方式です。"
-  },
   "lifetimePlanDescription": "एक बार खरीदें, हमेशा के लिए प्रीमियम",
-  "@lifetimePlanDescription": {
-    "description": "買い切り型有料プランの説明文で、一度の支払いで永続的にプレミアム機能が利用できることを示すテキストです。"
-  },
   "lifetimePlanSpecialOffer": "आजीवन योजना\nसीमित समय विशेष मूल्य",
-  "@lifetimePlanSpecialOffer": {
-    "description": "買い切り型プレミアムプランの期間限定特別価格オファーを表示するタイトルテキストです。課金画面で通常価格より安い特別価格で提供される際に使用されます。"
-  },
   "lifetimePlanStandardPrice": "सामान्य मूल्य",
-  "@lifetimePlanStandardPrice": {
-    "description": "買い切り型プレミアムプランの通常価格を表示するラベルテキストです。課金画面で特別価格オファーと対比して表示される際に使用されます。"
-  },
   "youArePremiumMember": "आप प्रीमियम सदस्य हैं",
-  "@youArePremiumMember": {
-    "description": "プレミアムプラン（有料プラン）に加入しているユーザーに表示される会員ステータスメッセージです。"
-  },
   "thankYouMessage": "उपयोग के लिए धन्यवाद।\nआपके सहयोग से हम Pilll का संचालन जारी रख पा रहे हैं।",
-  "@thankYouMessage": {
-    "description": "プレミアムプラン（有料プラン）のユーザーに向けて表示される感謝のメッセージです。アプリの利用とサポートに対する感謝を表現し、運営継続への貢献を認める内容にしてください。"
-  },
   "premiumFeaturesList": "प्रीमियम सुविधाएं",
-  "@premiumFeaturesList": {
-    "description": "プレミアムプラン（有料プラン）で利用できる機能の一覧を表示する際の見出しまたはタイトルです。ユーザーがプレミアム機能を確認する画面で使用されます。"
-  },
   "pushNotificationForTakingRecord": "📩 पुश नोटिफिकेशन से दवा सेवन रिकॉर्ड",
-  "@pushNotificationForTakingRecord": {
-    "description": "プッシュ通知を受信した際に、アプリを開かずに通知から直接ピルの服用記録を行う機能の名称です。プレミアム機能の一覧で表示される項目として使用されます。"
-  },
   "viewAndRecordTakingHistory": "🗂 दवा सेवन का रिकॉर्ड और समीक्षा",
-  "@viewAndRecordTakingHistory": {
-    "description": "ピルの服用記録を過去に遡って確認したり、新たな服用記録を登録したりできる機能の名称です。プレミアム機能の一覧で表示される項目として使用されます。"
-  },
   "displayDateOnPillSheet": "📆 पिल शीट पर तारीख प्रदर्शन",
-  "@displayDateOnPillSheet": {
-    "description": "プレミアム機能の一覧で表示される機能名です。ピルシートのUI画面上に日付情報を表示する機能を指しており、ユーザーがピルの服用管理をしやすくするための視覚的サポート機能です。"
-  },
   "autoRefillNewPillSheet": "📦 नई गोली शीट की स्वचालित पूर्ति",
-  "@autoRefillNewPillSheet": {
-    "description": "プレミアム機能の一覧で表示される機能名です。現在使用中のピルシートが終了間近になった際に、自動的に新しいピルシートの設定を作成してくれる便利機能を表しています。"
-  },
   "viewPastData": "👀 पिछले डेटा देखना",
-  "@viewPastData": {
-    "description": "プレミアム機能の一覧で表示される機能名です。過去の服用記録、生理記録、体調記録などの履歴データを閲覧できる機能を表しています。"
-  },
   "customizeHealthTags": "🏷 तबीयत टैग कस्टमाइज़ करें",
-  "@customizeHealthTags": {
-    "description": "プレミアム機能の一覧で表示される機能名です。ユーザーが日記機能で体調を記録する際に使用するタグ（頭痛、吐き気、気分など）を自分好みにカスタマイズできる機能を表しています。"
-  },
   "hideAds": "🚫 विज्ञापन हटाना",
-  "@hideAds": {
-    "description": "プレミアム機能の一覧で表示される機能名です。有料プランに加入することでアプリ内の広告（バナー広告など）を非表示にできる機能を表しています。"
-  },
   "seeDetailsOfPremiumFeatures": "प्रीमियम सुविधाओं का विवरण देखें",
-  "@seeDetailsOfPremiumFeatures": {
-    "description": "プレミアム機能の詳細画面に遷移するボタンやリンクのテキストです。ユーザーが有料プランの機能について詳しく知りたい時にタップする要素として使用されます。"
-  },
   "popularFeatures": "लोकप्रिय\nफीचर्स",
-  "@popularFeatures": {
-    "description": "アプリ内で人気の高い機能やおすすめ機能を紹介する見出しやタイトルとして使用されます。UI上で改行（\\n）が含まれる場合があり、レイアウトを考慮して翻訳してください。"
-  },
   "viewPremiumFeatures": "प्रीमियम सुविधाएं देखें",
-  "@viewPremiumFeatures": {
-    "description": "プレミアム機能（有料機能）の詳細や内容を確認するためのボタンやリンクテキストとして使用されます。ユーザーをプレミアム機能の紹介画面に誘導する際の行動を促すテキストです。"
-  },
   "seeDetails": "विवरण देखें",
-  "@seeDetails": {
-    "description": "ボタンやリンクテキストとして使用され、ピルの服用履歴や生理記録、プレミアム機能などの詳細情報を表示する画面に遷移する際の行動を促すテキストです。"
-  },
   "stepThreeOfThree": "3/3",
-  "@stepThreeOfThree": {
-    "description": "アプリの初期設定やオンボーディングプロセスにおける3番目（最終）のステップを示すテキストで、「3/3」の形式で進捗を表示します。画面上部などに表示され、ユーザーに現在のステップ位置を分数形式で伝える役割があります。"
-  },
   "missedPillNotification": "पिल लेने की याददाश्त",
-  "@missedPillNotification": {
-    "description": "設定した服用時刻にピルを飲み忘れた際にユーザーに送信されるプッシュ通知のタイトルまたは内容として表示されるテキストです。アプリの主要機能である「飲み忘れ防止」のためのリマインド機能の一部として使用されます。"
-  },
   "setMultipleReminders": "कई रिमाइंडर सेट करने से गोली लेना भूलने से बचा जा सकता है",
-  "@setMultipleReminders": {
-    "description": "ピルの服用リマインダーを複数設定することで飲み忘れを防げることをユーザーに説明するメッセージです。リマインダー設定画面や説明画面で表示されます。"
-  },
   "and": "और",
-  "@and": {
-    "description": "2つの項目や要素を並列に繋ぐ際に使用される接続詞です。アプリ内のテキストで「設定と履歴」「朝と夜」などの表現に使われます。"
-  },
   "readAndStartUsing": "पढ़कर उपयोग शुरू करें",
-  "@readAndStartUsing": {
-    "description": "利用規約やプライバシーポリシー等の重要な情報を読んでから、アプリの使用を開始することを促すボタンまたは案内文です。ユーザーに対して情報の確認と利用開始の両方のアクションを促している表現です。"
-  },
   "next": "अगला",
-  "@next": {
-    "description": "画面やフォームで次のステップに進むためのボタンラベルです。初回設定、チュートリアル、各種設定画面などで使用されます。"
-  },
   "notificationIndex": "सूचना {number}",
-  "@notificationIndex": {
-    "description": "複数のピル服用リマインダー通知がある場合に、各通知を番号で区別するためのラベルです。通知設定画面や通知一覧で「通知1」「通知2」のように表示されます。",
-    "placeholders": {
-      "number": {
-        "type": "int"
-      }
-    }
-  },
   "takingRecordFromNotification": "\\ सूचना से सेवन रिकॉर्ड कर सकते हैं /",
-  "@takingRecordFromNotification": {
-    "description": "プッシュ通知から直接ピルの服用記録を行える機能を説明するユーザー向けの案内文です。リマインド通知を受け取ったユーザーが、アプリを開かなくても通知から服用記録できる便利さを伝える文言です。"
-  },
   "startApp": "शुरू करें",
-  "@startApp": {
-    "description": "新規ユーザーがアプリの利用を開始する際に表示されるボタンやリンクのテキストです。オンボーディングやチュートリアル完了後に、実際にPilllアプリの機能を使い始めることを促す文言として使用されます。"
-  },
   "loggedInWithProvider": "{accountTypeProviderName} के साथ लॉग इन हो गए",
-  "@loggedInWithProvider": {
-    "description": "ユーザーが外部認証プロバイダー（Google、Apple、Facebookなど）を使用してログインに成功した際に表示される確認メッセージです。{accountTypeProviderName}には使用したサービス名が入ります。",
-    "placeholders": {
-      "accountTypeProviderName": {
-        "type": "String"
-      }
-    }
-  },
   "tellAboutPrescribedSheet": "निर्धारित शीट के बारे में\nकृपया बताएं",
-  "@tellAboutPrescribedSheet": {
-    "description": "医師から処方されたピルのシート（薬のパッケージ）に関する情報を入力してもらう際のメッセージです。ユーザーが使用しているピルの種類や詳細について教えてもらうための画面で表示されます。"
-  },
   "existingAccountUsers": "पहले से खाता है? यहाँ लॉगिन करें",
-  "@existingAccountUsers": {
-    "description": "アカウント作成や初回設定画面で、すでにアプリにアカウントを持っているユーザーがログイン画面に移動するためのリンクテキストです。新規ユーザー向けの画面で、既存ユーザーを適切な画面に誘導する役割を持ちます。"
-  },
   "selectTodayPillNumber": "आज ({todayString}) की गोली का नंबर टैप करें",
-  "@selectTodayPillNumber": {
-    "description": "ピルシート画面で、今日服用予定または服用済みのピルの番号をタップするよう促すユーザー向けの操作説明です。服用記録を行うためのUI要素に表示されます。",
-    "placeholders": {
-      "todayString": {
-        "type": "String"
-      }
-    }
-  },
   "notYetKnown": "अभी पता नहीं",
-  "@notYetKnown": {
-    "description": "ユーザーがまだ情報を入力していない、または設定していない状態を表示する際に使用されます。生理予定日や服用スケジュールなど、アプリの各機能でデータが未確定の場合に表示されるテキストです。"
-  },
   "pillForToday": "{today} को लेने वाली गोली",
-  "@pillForToday": {
-    "description": "特定の日付に服用予定のピルを表示する際のラベルテキストです。ピルシート画面やカレンダー表示で、その日に飲むべきピルの情報を示す前置きとして使用されます。",
-    "placeholders": {
-      "today": {
-        "type": "String"
-      }
-    }
-  },
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
-  "@todayPillNumber": {
-    "description": "ピルシート上で今日服用すべきピルの番号（例：1錠目、15錠目など）を表示する際に使用されます。リマインダー通知やログ記録でも参照される重要な値です。",
-    "placeholders": {
-      "todayPillNumberPillNumberInPillSheet": {
-        "type": "String"
-      }
-    }
-  },
   "preview": "पूर्वावलोकन",
-  "@preview": {
-    "description": "設定や入力内容を事前に確認するためのプレビュー表示に使用される文字列です。ユーザーが何かを実行・保存する前の確認画面で表示されます。"
-  },
   "normal": "सामान्य",
-  "@normal": {
-    "description": "アプリ内で状態や設定を表す際の「通常」や「正常」を意味する汎用的な文字列です。ピルの服用状態、生理の状態、アプリの動作モードなど、標準的・正常な状態を示す場面で使用されます。"
-  },
   "missed": "छूटी खुराक",
-  "@missed": {
-    "description": "ピルの服用予定時刻を過ぎても服用していない状態を表す表示ラベルです。アプリ内でユーザーがピルを飲み忘れた際に表示される状態表示として使用されます。"
-  },
   "showsDate": "तारीख दिखाएं",
-  "@showsDate": {
-    "description": "設定画面やオプションメニューで使用される、日付表示の有無を切り替える設定項目のラベルです。ユーザーがアプリ内で日付情報を表示するかどうかを選択する際に表示されます。"
-  },
   "showsPillNumber": "नंबर दिखाएं",
-  "@showsPillNumber": {
-    "description": "ピルシートの各薬に表示される順番の数字（1日目、2日目など）を表示するかどうかを切り替える設定項目のラベルです。ユーザーがピルシートUI上で薬の服用順序を数字で確認したい場合に使用されます。"
-  },
   "showsDescription": "विवरण दिखाएं",
-  "@showsDescription": {
-    "description": "アプリ内の設定画面で、説明文やヘルプテキストの表示・非表示を切り替えるオプションのラベルです。ユーザーがUIをシンプルにしたい場合に説明文を隠すことができる機能を指します。"
-  },
   "title": "शीर्षक",
-  "@title": {
-    "description": "予定やスケジュールの件名・タイトルを表します。通院予定や体調記録などの見出しとして使用されます。"
-  },
   "message": "संदेश",
-  "@message": {
-    "description": "エラー発生時やシステム処理時に表示される汎用的なメッセージです。主にプレミアム機能の購入・復元処理やSNSシェア機能でのエラーメッセージとして使用されます。"
-  },
   "option": "विकल्प",
-  "@option": {
-    "description": "アプリ内の設定項目やメニューでの選択肢を表す汎用的な用語です。設定画面やダイアログでの選択項目として使用されます。"
-  },
   "completed": "पूरा",
-  "@completed": {
-    "description": "テキスト入力やピッカーでの選択などの作業を完了・確定する際に押すボタンのテキストです。日記投稿、スケジュール投稿、通知設定などの画面で使用されます。"
-  },
   "pilll": "Pilll",
-  "@pilll": {
-    "description": "ピルの服用管理アプリ「Pilll」のアプリ名です。基本的には「Pilll」のまま使用しますが、各言語の文字体系に合わせて表記を調整してください。"
-  },
   "changeMissedNotificationMessage": "पिल लेना भूलने की स्थिति में मिलने वाली सूचना के संदेश को आप बदल सकते हैं",
-  "@changeMissedNotificationMessage": {
-    "description": "ピルの服用を忘れた際に表示される通知メッセージを、ユーザーが自分で編集・カスタマイズできる機能の説明文です。設定画面などで表示される機能説明として使用されます。"
-  },
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "@missedNotificationMessageLength": {
-    "description": "ピルの服用を忘れた際のカスタム通知メッセージの文字数制限を表示するテキストです。現在の入力文字数と最大文字数（100文字）を「現在文字数/100」の形式で表示します。",
-    "placeholders": {
-      "missedTakenMessageValueCharactersLength": {
-        "type": "int"
-      }
-    }
-  },
   "changeNotificationHeader": "आप अपनी सूचनाओं का शुरुआती हिस्सा बदल सकते हैं",
-  "@changeNotificationHeader": {
-    "description": "プッシュ通知のタイトル部分をユーザーがカスタマイズできる機能について説明するテキストです。設定画面などで、服用リマインダー通知の冒頭メッセージを変更できることを伝えています。"
-  },
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "@notificationHeaderLength": {
-    "description": "プッシュ通知のヘッダー（タイトル）をカスタマイズする際の文字数制限表示で、現在の入力文字数を8文字制限中の何文字目かを示すテキストです。数字の「8」は文字数制限のため変更せず、スラッシュ（/）も区切り文字として保持してください。",
-    "placeholders": {
-      "wordValueCharactersLength": {
-        "type": "int"
-      }
-    }
-  },
   "enterAtLeastOneCharacter": "कृपया 0 अक्षर या अधिक लिखें",
-  "@enterAtLeastOneCharacter": {
-    "description": "フォーム入力時に最低文字数を満たしていない場合に表示されるバリデーションエラーメッセージです。日記や体調記録などの入力フィールドで使用されます。"
-  },
   "changeDailyNotificationMessage": "गोली न भूलने पर मिलने वाले नोटिफिकेशन मैसेज को बदला जा सकता है",
-  "@changeDailyNotificationMessage": {
-    "description": "ピルを正常に服用した場合（飲み忘れていない場合）の通知メッセージをユーザーがカスタマイズできる機能の説明文です。アプリの設定画面で表示される機能説明として使用されます。"
-  },
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "@dailyNotificationMessageLength": {
-    "description": "{dailyTakenMessageValueCharactersLength}/100",
-    "placeholders": {
-      "dailyTakenMessageValueCharactersLength": {
-        "type": "int"
-      }
-    }
-  },
   "receiveDailyNotificationAt9AM": "उसी दिन सुबह 9:00 बजे सूचना प्राप्त करें",
-  "@receiveDailyNotificationAt9AM": {
-    "description": "ピルの服用リマインダー通知の設定項目で、当日の朝9:00に通知を受け取る機能を表します。通知時刻が固定で朝9:00となっているボタンやメニューのテキストです。"
-  },
   "save": "सहेजें",
-  "@save": {
-    "description": "設定変更や入力内容を確定・保存する際に表示されるボタンのテキストです。アプリ内の様々な画面（服用設定、通知設定、プロフィール編集など）で汎用的に使用されます。"
-  },
   "physicalCondition": "तबीयत",
-  "@physicalCondition": {
-    "description": "日記機能において、ユーザーが体調や身体の状態を記録する際の項目名として表示されます。ピル服用による体調の変化や身体のコンディションを記録するために使用されます。"
-  },
   "deletedDiaryCannotBeRecovered": "हटाई गई डायरी को पुनर्स्थापित नहीं किया जा सकता है",
-  "@deletedDiaryCannotBeRecovered": {
-    "description": "日記機能において、日記を削除する際の確認画面や警告メッセージとして表示されます。削除操作が不可逆であることをユーザーに伝える重要な注意文です。"
-  },
   "sex": "यौन",
-  "@sex": {
-    "description": "日記機能において、体調記録の一項目として性的活動の有無を記録する際のラベルです。ピル服用管理との関連で重要な体調データとして使用されます。"
-  },
   "previousPillSheetGroup": "पिछला पिल शीट समूह",
-  "@previousPillSheetGroup": {
-    "description": "ピル服用管理において、複数のピルシート（薬のパッケージ）をグループとして管理する際の、時系列的に一つ前に使用していたピルシートのまとまりを指します。服用履歴や切り替えの管理画面で表示される項目として使用されます。"
-  },
   "noPreviousPillSheetGroup": "पिछला पिल शीट समूह अभी तक मौजूद नहीं है",
-  "@noPreviousPillSheetGroup": {
-    "description": "アプリ内で前回使用していたピルシートのグループが存在しない状況（初回使用時や履歴がない場合など）で表示される状態メッセージです。ユーザーが過去の服用履歴を確認しようとした際に、まだ前回のデータが登録されていないことを伝える文言として使用されます。"
-  },
   "failedToFetchPillHistory": "सेवन इतिहास की जानकारी प्राप्त करने में असफल। {error}",
-  "@failedToFetchPillHistory": {
-    "description": "アプリ内でユーザーが過去のピル服用履歴を確認しようとした際に、システムエラーやネットワーク障害などでデータの取得に失敗した場合に表示されるエラーメッセージです。{error}部分には具体的なエラー内容が挿入されます。",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
   "seeFAQ": "FAQ देखें",
-  "@seeFAQ": {
-    "description": "アプリ内でFAQ（よくある質問）ページへ移動するためのボタンやリンクのテキストです。ピルの服用方法やアプリの操作方法に関する質問と回答を確認できるページに誘導します。"
-  },
   "reloadScreen": "पुनः लोड करें",
-  "@reloadScreen": {
-    "description": "アプリでデータの読み込みエラーが発生した際に、画面を再読み込みするためのボタンやリンクのテキストです。服用記録や生理記録などの情報を再取得して画面を更新する機能に使用されます。"
-  },
   "contactIfNotResolved": "समाधान नहीं मिलने पर यहाँ संपर्क करें",
-  "@contactIfNotResolved": {
-    "description": "アプリで技術的な問題やエラーが発生し、ユーザー自身では解決できない場合に、サポートチームに連絡するためのリンクやボタンのテキストです。トラブルシューティング画面で「お問い合わせ」や「サポートに連絡」の意味で使用されます。"
-  },
   "shareFeedback": "कृपया Pilll के बारे में अपना फीडबैक साझा करें",
-  "@shareFeedback": {
-    "description": "ユーザーにアプリに対する感想やフィードバックの提供を促すメッセージです。設定画面やフィードバック画面で、アプリの改善のためにユーザーの意見を求める際に表示されます。"
-  },
   "confirm": "ठीक",
-  "@confirm": {
-    "description": "アクションや選択内容を確定する際に使用される一般的な確認ボタンのラベルです。ダイアログボックスやフォームでユーザーの操作を最終確認する場面で表示されます。"
-  },
   "surveyForServiceImprovement": "यदि आप चाहें तो कृपया सेवा सुधार के लिए सर्वेक्षण में भी सहयोग करें",
-  "@surveyForServiceImprovement": {
-    "description": "アプリ利用者に対してサービス品質向上を目的としたアンケート調査への協力を任意でお願いする丁寧なメッセージです。ユーザーの負担感を軽減するため、協力は任意であることを示す敬語表現を含めてください。"
-  },
   "participate": "सहयोग करें",
-  "@participate": {
-    "description": "サービス改善アンケートに参加・協力するためのボタンやリンクのテキストです。ユーザーがアンケート調査に協力することを表現する動詞として使用されます。"
-  },
   "notHelp": "मददगार नहीं",
-  "@notHelp": {
-    "description": "フィードバックやアンケートで「役に立ったか」という質問に対する否定的な回答選択肢として使用されます。英語版では「Not helpful」として表示されるボタンやリンクのテキストです。"
-  },
   "serviceImprovementSurvey": "सेवा सुधार सर्वेक्षण",
-  "@serviceImprovementSurvey": {
-    "description": "アプリ内でユーザーのフィードバックを収集するためのアンケート機能のタイトルや見出しとして表示される文字列です。Pilllアプリのサービス向上を目的としたユーザー向けアンケートを指しています。"
-  },
   "satisfied": "संतुष्ट हूँ",
-  "@satisfied": {
-    "description": "アプリのサービス向上アンケートで使用される満足度評価の選択肢です。ユーザーがアプリに対して「満足している」という回答を選択する際に表示される文字列です。"
-  },
   "notSatisfied": "असंतुष्ट",
-  "@notSatisfied": {
-    "description": "アプリのサービス向上アンケートで使用される満足度評価の選択肢です。ユーザーがアプリに対して「満足していない」という回答を選択する際に表示される文字列です。"
-  },
   "perNumber": "नंबरवार",
-  "@perNumber": {
-    "description": "ピルシートの薬の番号（1番、2番...）ごとに何かを行う際に使用される表現です。ピル管理機能で薬の順番や番号に基づいた表示・操作を示すフレーズです。"
-  },
   "howManyDaysDoesMenstruationLast": "आपका मासिक धर्म कितने दिन तक चलता है?",
-  "@howManyDaysDoesMenstruationLast": {
-    "description": "生理管理機能で、ユーザーの生理期間（日数）を入力してもらう際の質問文です。通常3-7日程度の期間を想定した設定画面で使用されます。"
-  },
   "daysMenstruationLasts": "दिन माहवारी चलती है",
-  "@daysMenstruationLasts": {
-    "description": "生理管理機能で、ユーザーが設定した生理期間の日数を表示する際のテキストです。数値の後に続けて「X日間生理が続く」のような形で使用されます。"
-  },
   "selectPillNumberForMenstruationStart": "मासिक धर्म शुरू होने वाली गोली संख्या पर टैप करें",
-  "@selectPillNumberForMenstruationStart": {
-    "description": "ピルシートUI上で、ユーザーが生理開始時のピル番号を指定する際の操作指示です。生理周期を正確に管理するための重要な設定項目として使用されます。"
-  },
   "countOfSheet": "{number}वीं",
-  "@countOfSheet": {
-    "description": "ピルシートUI上で複数のシートがある場合に、現在表示しているピルシートが何枚目かを示す順序表示です。「1枚目」「2枚目」のように数値とともに使用されます。",
-    "placeholders": {
-      "number": {
-        "type": "int"
-      }
-    }
-  },
   "newPillSheetStart": "नई पिल शीट शुरू करें ▶︎",
-  "@newPillSheetStart": {
-    "description": "新しいピルシート（1ヶ月分のピルパック）の服用を開始するためのボタンやメニュー項目に表示されるテキストです。ユーザーが前のシートを終了して新しいサイクルを始める際に使用します。"
-  },
   "selectPillType": "पिल का प्रकार चुनें",
-  "@selectPillType": {
-    "description": "アプリの初期設定やピル変更時に、使用するピルの種類（21日タイプ、28日タイプなど）を選択するためのボタンやメニュー項目に表示されるテキストです。ユーザーが自分の服用しているピルに合わせて適切な種類を選択する際に使用されます。"
-  },
   "twentyOnePills": "21 टैबलेट",
-  "@twentyOnePills": {
-    "description": "ピルの種類選択時に表示される選択肢で、1シートに21錠入ったピル（21日間服用タイプ）を表します。ユーザーが自分の使用しているピルの種類を選択する際の医療用語として正確に翻訳してください。"
-  },
   "twentyEightPills": "28 टैबलेट",
-  "@twentyEightPills": {
-    "description": "ピルの種類選択時に表示される選択肢で、1シートに28錠入ったピル（28日間連続服用タイプ）を表します。ユーザーが自分の使用しているピルの種類を選択する際の医療用語として正確に翻訳してください。"
-  },
   "twentyFourPills": "24 गोली",
-  "@twentyFourPills": {
-    "description": "ピルの種類選択時に表示される選択肢で、1シートに24錠入ったピルを表します。ユーザーが自分の使用しているピルの種類を選択する際の医療用語として正確に翻訳してください。"
-  },
   "twentyOnePlusSevenDaysBreak": "21 गोली + 7 दिन विराम",
-  "@twentyOnePlusSevenDaysBreak": {
-    "description": "ピルの種類選択時に表示される選択肢で、21日間連続でピルを服用した後、7日間休薬する服用スケジュールを表します。医療用語として正確に翻訳してください。"
-  },
   "twentyFourPlusFourPlacebo": "24 टैबलेट + 4 प्लेसिबो टैबलेट",
-  "@twentyFourPlusFourPlacebo": {
-    "description": "ピルの種類選択時に表示される選択肢で、28日間のピルシートのうち24日間は有効成分入りの錠剤、4日間は休薬期間用のプラセボ（偽薬）錠剤を服用する服用スケジュールを表します。医療用語として正確に翻訳してください。"
-  },
   "twentyOnePlusSevenPlacebo": "21 टैबलेट + 7 प्लेसिबो",
-  "@twentyOnePlusSevenPlacebo": {
-    "description": "ピルの種類選択で表示される28日間の服用スケジュールで、21日間は有効成分入りの錠剤、7日間は休薬期間用のプラセボ（偽薬）を服用することを表します。医療用語として正確に翻訳してください。"
-  },
   "allActivePills": "सभी सक्रिय गोलियाँ",
-  "@allActivePills": {
-    "description": "ピルの種類選択で表示される、28日間すべてが有効成分入りの錠剤（プラセボなし）であることを表す医療用語です。"
-  },
   "twentyFourPlusFourDaysBreak": "24 गोली + 4 दिन विराम",
-  "@twentyFourPlusFourDaysBreak": {
-    "description": "24日間ピルを服用し4日間休薬する、28日周期のピル服用パターンを表す医療用語です。"
-  },
   "choosePillType": "पिल का प्रकार चुनें",
-  "@choosePillType": {
-    "description": "ピルの初期設定時に表示される、ユーザーが使用するピルの服用パターン（21日型、28日型など）を選択する画面で使用されるボタンやラベルのテキストです。"
-  },
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} अवधि की सूचना",
-  "@notificationForNotTakenPeriod": {
-    "description": "ピルシートの休薬期間やプラセボ期間など、薬を服用しない期間に関するプッシュ通知のタイトルとして使用されます。プレースホルダーには「休薬」「プラセボ」などの期間タイプが入ります。",
-    "placeholders": {
-      "pillSheetPillSheetTypeNotTakenWord": {
-        "type": "String"
-      }
-    }
-  },
   "autoRecordForNotTakenPeriodIfNotificationOff": "नोटिफिकेशन ऑफ होने की स्थिति में भी, {pillSheetPillSheetTypeNotTakenWord} अवधि के सेवन रिकॉर्ड अपने आप जोड़े जाते हैं",
-  "@autoRecordForNotTakenPeriodIfNotificationOff": {
-    "description": "プッシュ通知機能がオフの状態でも、休薬期間（プラセボ期間）の服用記録が自動的に作成されることを説明するメッセージです。{pillSheetPillSheetTypeNotTakenWord}は「休薬期間」「プラセボ期間」などの期間名が入るプレースホルダーです。",
-    "placeholders": {
-      "pillSheetPillSheetTypeNotTakenWord": {
-        "type": "String"
-      }
-    }
-  },
   "requestForCancelSurvey": "रद्दीकरण के बाद सर्वेक्षण में सहयोग का अनुरोध",
-  "@requestForCancelSurvey": {
-    "description": "ユーザーがプレミアムプランの解約手続きを完了した後に表示される、解約理由などを聞くアンケートへの協力をお願いするメッセージです。丁寧で協力的なトーンで翻訳してください。"
-  },
   "pilllDescription": "Pilll पिल सेवन के लिए विशेषीकृत रिमाइंडर ऐप",
-  "@pilllDescription": {
-    "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
-  },
   "reachedMaximumCountOfReminderTimes": "पंजीकरण की अधिकतम सीमा पूरी हो गई है। कृपया {ReminderTimeMaximumCount} के अंदर रखें।",
-  "@reachedMaximumCountOfReminderTimes": {
-    "description": "ピルの服用リマインダー時刻を登録する際、設定可能な上限数に達した時に表示されるエラーメッセージです。ユーザーに対してリマインダー時刻の数を制限内（{ReminderTimeMaximumCount}で指定された件数以内）に収めるよう促しています。",
-    "placeholders": {
-      "ReminderTimeMaximumCount": {
-        "type": "int"
-      }
-    }
-  },
   "minimumCountOfReminderTimes": "न्यूनतम {ReminderTimeMinimumCount} रिमाइंडर समय आवश्यक हैं",
-  "@minimumCountOfReminderTimes": {
-    "description": "ピルの服用リマインド通知を設定する際に、必要最低限の通知時間数が設定されていない場合に表示されるエラーメッセージです。ユーザーが通知設定で最低限必要な件数を満たしていない時に警告として表示されます。",
-    "placeholders": {
-      "ReminderTimeMinimumCount": {
-        "type": "int"
-      }
-    }
-  },
   "purchaseErrorUnknownError": "अज्ञात कारण से त्रुटि हुई है। कुछ समय बाद फिर से कोशिश करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorUnknownError": {
-    "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
-    "placeholders": {
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorStoreProblemError": "{storeName} में त्रुटि हो रही है। कृपया कुछ समय बाद फिर से प्रयास करें।",
-  "@purchaseErrorStoreProblemError": {
-    "description": "アプリ内課金の購入時にApp StoreやGoogle Playなどのストアで問題が発生した際のエラーメッセージです。{storeName}には各プラットフォームのストア名が入ります。",
-    "placeholders": {
-      "storeName": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorPurchaseNotAllowedError": "इस डिवाइस पर खरीदारी की अनुमति नहीं है",
-  "@purchaseErrorPurchaseNotAllowedError": {
-    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
-  },
   "purchaseErrorPurchaseInvalidError": "भुगतान असफल हो गया। कृपया अपनी भुगतान विधि की वैधता की जांच करें और पुनः प्रयास करें।",
-  "@purchaseErrorPurchaseInvalidError": {
-    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
-  },
   "purchaseErrorProductNotAvailableForPurchaseError": "यह प्लान अभी उपलब्ध नहीं है। कृपया ऐप को रीस्टार्ट करके दोबारा कोशिश करें।",
-  "@purchaseErrorProductNotAvailableForPurchaseError": {
-    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
-  },
   "purchaseErrorProductAlreadyPurchasedError": "आपने पहले से ही प्लान खरीद लिया है। इस डिवाइस पर खरीदारी की जानकारी को पुनर्स्थापित करने के लिए कृपया \"पहले से खरीदारी करने वाले यहाँ क्लिक करें\" से खरीदारी की जानकारी को पुनर्स्थापित करें",
-  "@purchaseErrorProductAlreadyPurchasedError": {
-    "description": "すでにプレミアムプランを購入済みのユーザーが再度購入しようとした際に表示されるエラーメッセージです。購入情報の復元方法を案内する内容が含まれます。"
-  },
   "purchaseErrorReceiptAlreadyInUseError": "पहले से खरीदा जा चुका है या खरीदारी की जानकारी किसी अन्य उपयोगकर्ता द्वारा उपयोग की जा रही है। कृपया {accountName} की जांच करें।",
-  "@purchaseErrorReceiptAlreadyInUseError": {
-    "description": "プレミアムプラン購入時に、購入情報（レシート）が既に別のユーザーアカウントで使用されている場合に表示されるエラーメッセージです。ユーザーにアカウント確認を促す内容が含まれます。",
-    "placeholders": {
-      "accountName": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorInvalidReceiptError": "अमान्य खरीदारी जानकारी है। कृपया अपनी खरीदारी जानकारी की जांच करें।",
-  "@purchaseErrorInvalidReceiptError": {
-    "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
-  },
   "purchaseErrorMissingReceiptFileError": "खरीदार की जानकारी उपलब्ध नहीं है। कृपया {accountName} से डिवाइस में साइन इन करके पुनः प्रयास करें।",
-  "@purchaseErrorMissingReceiptFileError": {
-    "description": "アプリ内課金でプレミアムプラン購入時に、デバイスにサインインしているアカウントと購入情報が一致しない場合に表示されるエラーメッセージです。ユーザーに正しいアカウントでのサインインを促す内容にしてください。",
-    "placeholders": {
-      "accountName": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorNetworkError": "नेटवर्क कनेक्शन अस्थिर है। कृपया अपनी कनेक्शन की जांच करके फिर से कोशिश करें।",
-  "@purchaseErrorNetworkError": {
-    "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
-  },
   "purchaseErrorInvalidCredentialsError": "खरीदारी असफल हो गई। कुछ समय बाद फिर से कोशिश करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क करें से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorInvalidCredentialsError": {
-    "description": "アプリ内課金（プレミアムプラン購入）時に無効な認証情報が原因で購入が失敗した場合に表示されるエラーメッセージです。ユーザーに時間をおいて再試行を促し、解決しない場合はサポートへの連絡を案内する内容で翻訳してください。",
-    "placeholders": {
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorUnexpectedBackendResponseError": "फिलहाल खरीदारी नहीं की जा सकती। कुछ समय बाद फिर कोशिश करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क करें से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorUnexpectedBackendResponseError": {
-    "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
-    "placeholders": {
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorReceiptInUseByOtherSubscriberError": "खरीदारी की जानकारी दूसरे उपयोगकर्ता द्वारा उपयोग की जा रही है। कृपया डिवाइस में लॉग इन किए गए {accountName} की जांच करें।",
-  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
-    "description": "アプリ内課金（プレミアムプラン）で、同じ購入レシートが別のユーザーアカウントで既に使用されている場合に表示されるエラーメッセージです。ユーザーにデバイスにログインしているアカウント名を確認するよう促しています。",
-    "placeholders": {
-      "accountName": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorInvalidAppUserIdError": "उपयोगकर्ता की पुष्टि नहीं हो सकी। कृपया ऐप को रीस्टार्ट करके फिर से कोशिश करें। विवरण: {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorInvalidAppUserIdError": {
-    "description": "アプリ内課金時にユーザーIDの検証に失敗した場合のエラーメッセージです。アプリの再起動を促し、技術的なエラー詳細も表示されます。",
-    "placeholders": {
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorOperationAlreadyInProgressError": "खरीदारी प्रक्रिया पहले से चल रही है। कृपया कुछ समय बाद फिर से जांच लें।",
-  "@purchaseErrorOperationAlreadyInProgressError": {
-    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
-  },
   "purchaseErrorUnknownBackendError": "वर्तमान में खरीदारी नहीं की जा सकती। कुछ समय बाद फिर से कोशिश करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क करें से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorUnknownBackendError": {
-    "description": "アプリ内課金処理で不明なバックエンドエラーが発生した際に表示されるエラーメッセージです。ユーザーに購入の一時的な失敗を伝え、再試行を促すとともに、問題が継続する場合のサポート連絡先を案内する内容として使用されます。",
-    "placeholders": {
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorInvalidAppleSubscriptionKeyError": "खरीदारी असफल हुई। कुछ समय बाद फिर से कोशिश करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क के माध्यम से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorInvalidAppleSubscriptionKeyError": {
-    "description": "Apple App Storeでのサブスクリプション購入失敗時に表示されるエラーメッセージです。ユーザーに再試行を促し、解決しない場合のサポート連絡方法と技術的な詳細情報を案内する内容です。",
-    "placeholders": {
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorIneligibleError": "आपके उपयोगकर्ता के लिए खरीदारी असफल हो गई। कुछ समय बाद पुनः प्रयास करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क करें से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorIneligibleError": {
-    "description": "アプリ内課金（プレミアムプラン購入）でユーザーが購入資格を満たしていない場合に表示されるエラーメッセージです。一時的な問題の可能性もあるため、再試行とサポート連絡を案内しています。",
-    "placeholders": {
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorInsufficientPermissionsError": "आपके {accountName} के साथ प्लान की सदस्यता नहीं ली जा सकती। कृपया अपनी भुगतान जानकारी की जांच करें और फिर से कोशिश करें।",
-  "@purchaseErrorInsufficientPermissionsError": {
-    "description": "アプリ内課金でプレミアムプランに加入しようとした際に、ユーザーのApple IDやGoogle アカウントに課金権限がない場合に表示されるエラーメッセージです。アカウント設定や支払い方法に問題があることをユーザーに伝える内容です。",
-    "placeholders": {
-      "accountName": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorPaymentPendingError": "भुगतान बीच में रुक गया है। कृपया लॉगिन किए गए {accountName} के साथ {storeName} पर जांच करें",
-  "@purchaseErrorPaymentPendingError": {
-    "description": "アプリ内課金の支払い処理が中断された際に表示されるエラーメッセージです。ユーザーにストア（App Store/Google Play）で支払い状況を確認するよう案内します。",
-    "placeholders": {
-      "accountName": {
-        "type": "String"
-      },
-      "storeName": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorInvalidSubscriberAttributesError": "खरीदारी असफल हुई। कुछ समय बाद पुनः प्रयास करें। यदि समस्या का समाधान नहीं होता है तो सेटिंग्स > संपर्क से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorInvalidSubscriberAttributesError": {
-    "description": "プレミアムプランなどの有料機能の購入処理でエラーが発生した際にユーザーに表示されるメッセージです。購入失敗の原因を説明し、再試行やサポートへの問い合わせ方法を案内する内容になります。",
-    "placeholders": {
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorLogOutWithAnonymousUserError": "उपयोगकर्ता जानकारी प्राप्त करने में विफल। कुछ समय बाद पुनः प्रयास करें। यदि समस्या का समाधान नहीं होता है तो सेटिंग्स > संपर्क करें से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorLogOutWithAnonymousUserError": {
-    "description": "プレミアムプラン購入時にユーザー情報の取得に失敗した際のエラーメッセージです。再試行とサポートへの問い合わせ方法を案内しています。",
-    "placeholders": {
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorConfigurationError": "खरीदारी की जानकारी प्राप्त करने में असफल हुआ। कुछ समय बाद पुन: प्रयास करें। यदि समस्या हल नहीं होती है तो सेटिंग > संपर्क करें से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorConfigurationError": {
-    "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
-    "placeholders": {
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorUnsupportedError": "यह एक अज्ञात त्रुटि है। कृपया नवीनतम संस्करण में अपडेट करके पुनः प्रयास करें। यदि समस्या का समाधान नहीं होता है तो कृपया सेटिंग्स > संपर्क करें से संपर्क करें। कोड: {errorCode} विवरण: {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorUnsupportedError": {
-    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
-    "placeholders": {
-      "errorCode": {
-        "type": "String"
-      },
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorEmptySubscriberAttributesError": "अज्ञात कारण से त्रुटि। खरीदारी की जानकारी पहले से प्राप्त नहीं की जा सकी। विवरण: {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorEmptySubscriberAttributesError": {
-    "description": "アプリ内課金でプレミアムプラン購入時に、ユーザー情報の取得に失敗した場合に表示される技術的なエラーメッセージです。",
-    "placeholders": {
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorProductDiscountMissingIdentifierError": "यह एक अज्ञात त्रुटि है। कृपया नवीनतम संस्करण में अपडेट करके फिर से प्रयास करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क करें से संपर्क करें। कोड: {errorCode} विवरण: {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorProductDiscountMissingIdentifierError": {
-    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
-    "placeholders": {
-      "errorCode": {
-        "type": "String"
-      },
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorUnknownNonNativeError": "यह एक अज्ञात त्रुटि है। कृपया नवीनतम संस्करण में अपडेट करें और पुनः प्रयास करें। यदि यह समस्या का समाधान नहीं करता है तो सेटिंग्स > संपर्क करें के माध्यम से संपर्क करें। कोड: {errorCode} विवरण: {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorUnknownNonNativeError": {
-    "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
-    "placeholders": {
-      "errorCode": {
-        "type": "String"
-      },
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "यह एक अज्ञात त्रुटि है। कृपया नवीनतम संस्करण में अपडेट करके पुनः प्रयास करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क करें से संपर्क करें। कोड: {errorCode} विवरण: {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
-    "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
-    "placeholders": {
-      "errorCode": {
-        "type": "String"
-      },
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorCustomerInfoError": "ग्राहक जानकारी प्राप्त करने में विफल रहे। कुछ समय बाद फिर से कोशिश करें। यदि समस्या हल नहीं होती है तो सेटिंग > संपर्क करें के माध्यम से संपर्क करें। विवरण: कोड: {errorCode} {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorCustomerInfoError": {
-    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
-    "placeholders": {
-      "errorCode": {
-        "type": "String"
-      },
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorSystemInfoError": "आपके डिवाइस की सेटिंग में समस्या है। कृपया जांच करें और फिर से कोशिश करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क से संपर्क करें। कोड: {errorCode} विवरण: {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorSystemInfoError": {
-    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
-    "placeholders": {
-      "errorCode": {
-        "type": "String"
-      },
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorBeginRefundRequestError": "रिफंड प्रक्रिया शुरू हो गई है। कृपया जांचें और पुनः प्रयास करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क करें से संपर्क करें। कोड: {errorCode} विवरण: {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorBeginRefundRequestError": {
-    "description": "アプリ内課金のプレミアムプランで返金処理が開始された際に表示されるエラーメッセージです。ユーザーに状況確認と再試行を促し、解決しない場合のサポート連絡先も案内する内容です。",
-    "placeholders": {
-      "errorCode": {
-        "type": "String"
-      },
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorProductRequestTimeout": "टाइमआउट हो गया। कृपया अपना नेटवर्क कनेक्शन जांचें और फिर से कोशिश करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorProductRequestTimeout": {
-    "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
-    "placeholders": {
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorApiEndpointBlocked": "यह एक अज्ञात त्रुटि है। कृपया नवीनतम संस्करण में अपडेट करके फिर से कोशिश करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क के माध्यम से संपर्क करें। कोड: {errorCode} विवरण: {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorApiEndpointBlocked": {
-    "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
-    "placeholders": {
-      "errorCode": {
-        "type": "String"
-      },
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorInvalidPromotionalOfferError": "अज्ञात कारण से त्रुटि हुई है। कृपया नवीनतम संस्करण में अपडेट करें और पुनः प्रयास करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क करें के माध्यम से संपर्क करें। कोड: {errorCode} विवरण: {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorInvalidPromotionalOfferError": {
-    "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
-    "placeholders": {
-      "errorCode": {
-        "type": "String"
-      },
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "purchaseErrorOfflineConnectionError": "नेटवर्क कनेक्टिविटी की समस्या है। कृपया अपने नेटवर्क कनेक्शन की जांच करके फिर से कोशिश करें। यदि समस्या बनी रहे तो सेटिंग्स > संपर्क करें से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
-  "@purchaseErrorOfflineConnectionError": {
-    "description": "アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。",
-    "placeholders": {
-      "exceptionMessage": {
-        "type": "String"
-      },
-      "exceptionDetails": {
-        "type": "String"
-      }
-    }
-  },
   "forceUpdateTitle": "कृपया ऐप को अपडेट करें",
-  "@forceUpdateTitle": {
-    "description": "アプリの新しいバージョンが必要で、ユーザーが強制的にアップデートしなければならない状況で表示されるタイトルです。緊急性を伝えつつ、丁寧な表現で更新を促してください。"
-  },
   "forceUpdateMessage": "कृपया अपने ऐप का वर्जन अपडेट करें। {storeName} से नवीनतम वर्जन में अपडेट करें।",
-  "@forceUpdateMessage": {
-    "description": "アプリのバージョンが古いため、強制的にアップデートが必要な場合にユーザーに表示されるメッセージです。{storeName}にはApp StoreやGoogle Play Storeなどのストア名が入ります。",
-    "placeholders": {
-      "storeName": {
-        "type": "String"
-      }
-    }
-  },
   "visitHospital": "डॉक्टर के पास जाना",
-  "@visitHospital": {
-    "description": "アプリの予定機能で使用される項目です。定期的な医療機関への通院予定を指し、継続的な医療ケアのニュアンスを含みます。"
-  },
   "receiveNotificationAt9AM": "आज सुबह 9:00 बजे सूचना प्राप्त करें",
-  "@receiveNotificationAt9AM": {
-    "description": "ピル服用のリマインダー通知を当日の朝9:00に受け取る設定項目です。"
-  },
   "deletedScheduleCannotBeRestored": "हटाए गए अपॉइंटमेंट को वापस नहीं लाया जा सकता",
-  "@deletedScheduleCannotBeRestored": {
-    "description": "通院予定や服用スケジュールなどの予定を削除する際に表示される警告メッセージです。一度削除した予定は元に戻せないことをユーザーに注意喚起しています。"
-  },
   "deleteSchedule": "योजना हटाएं",
-  "@deleteSchedule": {
-    "description": "通院予定や服用スケジュールなどの予定を削除する際のボタンやメニューのラベルです。ユーザーが予定を削除したいときに表示される操作名称として使用されます。"
-  },
   "onlySupportiOS": "यह केवल iOS ऐप के लिए उपलब्ध है",
-  "@onlySupportiOS": {
-    "description": "特定の機能がiOSアプリでのみ利用可能であることをユーザーに伝えるメッセージです。Androidユーザーがその機能にアクセスしようとした際などに表示される説明文として使用されます。"
-  },
   "healthKitDoesNotSupport": "हेल्थकेयर समर्थित नहीं होने वाले डिवाइस पर यह सुविधा उपलब्ध नहीं है",
-  "@healthKitDoesNotSupport": {
-    "description": "AppleのHealthKit（ヘルスケア機能）に対応していない端末で、健康データ連携機能を利用しようとした際に表示されるエラーメッセージです。ユーザーに機能制限があることを丁寧に伝える文章として翻訳してください。"
-  },
   "enableHealthKitFromSettings": "कृपया सेटिंग्स ऐप से हेल्थकेयर सक्षम करें",
-  "@enableHealthKitFromSettings": {
-    "description": "AppleのHealthKit（ヘルスケア機能）との連携を有効にするため、ユーザーにiOSの設定アプリでの操作を促すメッセージです。ピルの服用記録や健康データをHealthKitと同期する機能を使用する際に表示されます。"
-  },
   "accountAlreadyLinked": "यह {accountTypeProviderName} खाता पहले से ही आपके Pilll खाते से जुड़ा हुआ है। स्क्रीन को रिफ्रेश करने का प्रयास करें। FAQ भी देखें। विवरण: {exceptionMessage}",
-  "@accountAlreadyLinked": {
-    "description": "ソーシャルログイン（Google、Apple等）のアカウントが既にユーザーのPilllアカウントと連携済みの場合に表示されるエラーメッセージです。アカウント連携時の重複エラーを説明し、画面更新やFAQ確認による解決方法を案内しています。",
-    "placeholders": {
-      "accountTypeProviderName": {
-        "type": "String"
-      },
-      "exceptionMessage": {
-        "type": "String"
-      }
-    }
-  },
   "accountAlreadyLinkedWithOtherPilllAccount": "यह {accountTypeProviderName} खाता पहले से ही किसी अन्य Pilll खाते से जुड़ा हुआ है, इसलिए पंजीकरण नहीं किया जा सकता। कृपया FAQ भी देखें। विवरण: {exceptionMessage}",
-  "@accountAlreadyLinkedWithOtherPilllAccount": {
-    "description": "アカウント登録時に、GoogleやAppleアカウントなど外部アカウントが既に他のPilllアカウントに連携済みで登録できない場合のエラーメッセージです。FAQへの誘導とエラー詳細の表示も含みます。",
-    "placeholders": {
-      "accountTypeProviderName": {
-        "type": "String"
-      },
-      "exceptionMessage": {
-        "type": "String"
-      }
-    }
-  },
   "emailAlreadyInUse": "आपका {accountTypeProviderName} खाते का ईमेल पता पहले से ही किसी अन्य Pilll खाते से जुड़ा हुआ है, इसलिए पंजीकरण नहीं हो सकता। कृपया FAQ भी देखें। विवरण: {exceptionMessage}",
-  "@emailAlreadyInUse": {
-    "description": "ユーザーがGoogle/Appleアカウントなどで登録しようとした際、そのメールアドレスが既に別のPilllアカウントと紐付いているため新規登録できない旨を伝えるエラーメッセージです。アカウント重複を防ぐためのシステムメッセージなので、ユーザーが状況を理解し適切な対処法（FAQ参照）を取れるよう明確に翻訳してください。",
-    "placeholders": {
-      "accountTypeProviderName": {
-        "type": "String"
-      },
-      "exceptionMessage": {
-        "type": "String"
-      }
-    }
-  },
   "todaySchedule": "आज का कार्यक्रम",
-  "@todaySchedule": {
-    "description": "カレンダー機能で表示される「今日の予定・スケジュール」のタイトルです。ピルの服用予定や通院予定などの健康管理に関する今日の予定を指します。"
-  },
   "calendarSchedule": "कैलेंडर की योजनाएं",
-  "@calendarSchedule": {
-    "description": "カレンダー機能で表示される予定やスケジュールの総称です。ピルの服用予定、通院予定、生理予定などの健康管理に関する様々な予定を指します。"
-  },
   "newPillSheetNotificationTitle": "आज से नई शीट शुरू होती है",
-  "@newPillSheetNotificationTitle": {
-    "description": "新しいピルシート（薬のパッケージ）の服用が開始される際に表示されるプッシュ通知のタイトルです。ピルの新しい服用サイクルの開始を利用者に知らせる重要な通知メッセージです。"
-  },
   "newPillSheetNotificationMessage": "🆕 आज से नया शीट शुरू हो रहा है\nइसे लेना न भूलें👍",
-  "@newPillSheetNotificationMessage": {
-    "description": "新しいピルシート（薬のパッケージ）の服用サイクルが開始される際にユーザーに送信されるプッシュ通知のメッセージです。ピルの新しい服用周期の開始を知らせ、飲み忘れを防ぐための重要なリマインド通知として機能します。"
-  },
   "unexpectedPremiumEntitlementsIsNotExists": "प्रीमियम जानकारी नहीं मिली",
-  "@unexpectedPremiumEntitlementsIsNotExists": {
-    "description": "アプリ内でプレミアム機能の権限情報を取得できない場合に表示されるエラーメッセージです。ユーザーには技術的な問題が発生していることを簡潔に伝える文言として翻訳してください。"
-  },
   "purchaseErrorPurchasePendingError": "आपका भुगतान सक्रियण अभी तक पूरा नहीं हुआ है। कृपया कुछ समय बाद पुनः जांचें।",
-  "@purchaseErrorPurchasePendingError": {
-    "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
-  },
   "launchError": "ऐप शुरू करते समय त्रुटि हुई।\n{ErrorMessagesConnection}\n\nविवरण: ",
-  "@launchError": {
-    "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
-    "placeholders": {
-      "ErrorMessagesConnection": {
-        "type": "String"
-      }
-    }
-  },
   "exampleRestDurationDate": "उदाहरण के लिए \"1/12 से 3 दिन के लिए\" गोली बंद करने की स्थिति में",
-  "@exampleRestDurationDate": {
-    "description": "ピルの服用を一時的に休止する期間の入力例を示すテキストです。具体的な日付（1/12）と日数（3日間）を使って、ユーザーがアプリでどう休薬期間を指定するかを説明しています。"
-  },
   "exampleRestDurationNumber": "उदाहरण के लिए \"18वें से 3 दिन तक\" सेवन बंद करने पर",
-  "@exampleRestDurationNumber": {
-    "description": "ピルシートの特定の錠剤番号（18番）から一定期間（3日間）服用を休止する場合の入力例を示すテキストです。ユーザーが休薬期間を記録する際の具体的な使用例として表示されます。"
-  },
   "withNumber": "{number}वां",
-  "@withNumber": {
-    "description": "ピルシートの錠剤番号を表示するためのテキストです。{number}には具体的な錠剤番号（例：18）が入り、ユーザーがピルシート上のどの錠剤かを特定するために使用されます。",
-    "placeholders": {
-      "number": {
-        "type": "String"
-      }
-    }
-  },
   "currentPillSheetNotFound": "वर्तमान में सक्रिय पिल शीट नहीं मिली",
-  "@currentPillSheetNotFound": {
-    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
-  },
   "doNotRevertTakePillInPausePeriod": "विश्राम अवधि में पिल सेवन रद्द नहीं किया जा सकता",
-  "@doNotRevertTakePillInPausePeriod": {
-    "description": "ユーザーがピルの服用記録を取り消そうとした際、休薬期間（プラセボ期間）中のため操作できないことを知らせるエラーメッセージです。ピル服薬管理における医学的な制約を説明する重要な通知です。"
-  },
   "googleAccount": "Google खाता",
-  "@googleAccount": {
-    "description": "アプリへのログインや設定画面で表示されるGoogleアカウントのラベルです。ユーザー認証やデータ同期に使用されます。"
-  },
   "diaryRecord": "डायरी रिकॉर्ड करें",
-  "@diaryRecord": {
-    "description": "アプリ内の日記機能で体調や気分を記録する際に表示されるボタンやラベルのテキストです。カレンダー画面から日々の体調記録を行う機能に使用されます。"
-  },
   "scheduleRecord": "योजना दर्ज करें",
-  "@scheduleRecord": {
-    "description": "アプリ内のカレンダー機能で、ユーザーが将来の予定（通院予定や生理予定など）を記録・追加する際に表示されるボタンやラベルのテキストです。"
-  },
   "previousPillSheetGroupNotFound": "पिछला पिल शीट ग्रुप अभी तक मौजूद नहीं है",
-  "@previousPillSheetGroupNotFound": {
-    "description": "アプリでピルシートの履歴を確認する際、前回使用していたピルシートのグループデータが見つからない場合に表示されるエラーメッセージです。"
-  },
   "withPillSheetCount": "{number} शीट",
-  "@withPillSheetCount": {
-    "description": "ピルシートの枚数を表示する際に使用される文字列で、数値の後に枚数を表す単位語が続きます。ピルの在庫管理や履歴表示などで「3枚」「5枚」のように表示されます。",
-    "placeholders": {
-      "number": {
-        "type": "int"
-      }
-    }
-  },
   "connectionError": "नेटवर्क कनेक्शन अस्थिर लग रहा है। कृपया कुछ समय बाद पुनः प्रयास करें।",
-  "@connectionError": {
-    "description": "ネットワーク通信に失敗した際にユーザーに表示されるエラーメッセージです。アプリの主要機能（服用記録の同期等）で通信エラーが発生した時に使用されます。"
-  },
   "unknownErrorAndRetryAfter": "त्रुटि हुई है। कृपया कुछ समय बाद पुनः प्रयास करें।",
-  "@unknownErrorAndRetryAfter": {
-    "description": "アプリ内で予期しない一般的なエラーが発生した際にユーザーに表示されるメッセージです。サーバーエラーや処理失敗など、具体的な原因が不明な場合に再試行を促すために使用されます。"
-  },
   "errorOccurred": "त्रुटि हुई है",
-  "@errorOccurred": {
-    "description": "アプリ内で予期しない一般的なエラーが発生した際にユーザーに表示される基本的なエラーメッセージです。具体的な原因を伝えずに、シンプルにエラーの発生を通知する場合に使用されます。"
-  },
   "unknownError": "अज्ञात त्रुटि हुई है",
-  "@unknownError": {
-    "description": "アプリ内で予期しない技術的エラーが発生した際にユーザーに表示される汎用的なエラーメッセージです。具体的な原因を特定できない場合に使用され、ユーザーに対してシンプルで理解しやすい表現が求められます。"
-  },
   "unexpectedErrorOccurred": "अप्रत्याशित त्रुटि हुई है",
-  "@unexpectedErrorOccurred": {
-    "description": "アプリ内で予期しない技術的エラーが発生した際にユーザーに表示される汎用的なエラーメッセージです。ピルの服用管理という健康に関わる重要な機能で使用されるため、ユーザーに不安を与えすぎない、親しみやすく理解しやすい表現が求められます。"
-  },
   "pressAndHoldNotificationToRecordPillTaking": "सूचना को लंबे समय तक दबाकर सेवन रिकॉर्ड कर सकते हैं",
-  "@pressAndHoldNotificationToRecordPillTaking": {
-    "description": "ピル服用のリマインド通知を長押しすることで、アプリ内で服用記録を簡単に作成できる機能の説明です。ユーザーの利便性を伝える操作ガイダンス文です。"
-  },
   "letsTryIt": "ज़रूर आज़माएं",
-  "@letsTryIt": {
-    "description": "機能説明の後でユーザーに実際にその機能を使ってみることを勧める行動促進メッセージです。親しみやすく前向きな表現で翻訳してください。"
-  },
   "trialDeadlineDateOffsetDay": "{number} दिनों तक सभी फीचर्स उपलब्ध हैं!",
-  "@trialDeadlineDateOffsetDay": {
-    "description": "プレミアム機能の無料トライアル期間中にすべての機能が利用可能であることをユーザーに伝える励ましのメッセージです。ポジティブで親しみやすい表現で翻訳してください。",
-    "placeholders": {
-      "number": {
-        "type": "int"
-      }
-    }
-  },
   "inputAndAdd": "दर्ज करके जोड़ें",
-  "@inputAndAdd": {
-    "description": "何かの情報を手動で入力・追加する際のボタンやラベルのテキストです。服用記録や予定などをユーザーが自分で入力して追加する場面で使用されます。"
-  },
   "averagePeriod": "औसत चक्र",
-  "@averagePeriod": {
-    "description": "ユーザーの生理の平均周期（日数）を表示するラベルです。生理管理機能で使用され、過去のデータから算出された平均的な生理周期の長さを示します。"
-  },
   "averageDays": "औसत दिन",
-  "@averageDays": {
-    "description": "生理管理機能で、ユーザーの過去のデータから算出された生理周期の平均日数を表示する際に使用されるラベルです。数値と併せて「平均○日」のような形で表示されます。"
-  },
   "days": "दिन",
-  "@days": {
-    "description": "時間の単位を表す「日」で、生理周期や服用日数などの数値と組み合わせて表示されます。言語によって単数形・複数形の使い分けが必要な場合があります。"
-  },
   "memo": "नोट",
-  "@memo": {
-    "description": "日記機能で体調や症状と合わせて自由にメモを記録できる入力欄のラベルです。短い単語で「メモ」や「記録」のような意味の翻訳が適切です。"
-  },
   "failedToUpdate": "अपडेट विफल रहा। कृपया अपने नेटवर्क कनेक्शन की जांच करके फिर से कोशिश करें।",
-  "@failedToUpdate": {
-    "description": "ピルの服用記録や生理記録などのデータをサーバーに保存・更新する際にネットワークエラーが発生した時に表示されるエラーメッセージです。ユーザーに通信状況の確認と再操作を促す丁寧な表現で翻訳してください。"
-  },
   "headache": "सिरदर्द",
-  "@headache": {
-    "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「頭痛」の適切な医療用語で翻訳してください。"
-  },
   "abdominalPain": "पेट दर्द",
-  "@abdominalPain": {
-    "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「腹痛」の適切な医療用語で翻訳してください。"
-  },
   "nausea": "मतली",
-  "@nausea": {
-    "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「吐き気」の適切な医療用語で翻訳してください。"
-  },
   "anemia": "एनीमिया",
-  "@anemia": {
-    "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「貧血」の適切な医療用語で翻訳してください。"
-  },
   "diarrhea": "दस्त",
-  "@diarrhea": {
-    "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「下痢」の適切な医療用語で翻訳してください。"
-  },
   "constipation": "कब्ज़",
-  "@constipation": {
-    "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「便秘」の適切な医療用語で翻訳してください。"
-  },
   "drowsiness": "तंद्रा",
-  "@drowsiness": {
-    "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「眠気」の適切な医療用語で翻訳してください。"
-  },
   "backPain": "कमर दर्द",
-  "@backPain": {
-    "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「腰痛」の適切な医療用語で翻訳してください。"
-  },
   "palpitation": "धड़कन",
-  "@palpitation": {
-    "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「動悸」の適切な医療用語で翻訳してください。"
-  },
   "irregularBleeding": "अनियमित रक्तस्राव",
-  "@irregularBleeding": {
-    "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「不正出血」の適切な医療用語で翻訳してください。"
-  },
   "lossOfAppetite": "अरुचि",
-  "@lossOfAppetite": {
-    "description": "女性の健康管理アプリにおいて、ユーザーが体調記録や日記機能で症状として記録する際に使用される医学的な用語です。各言語において一般的に使われる「食欲不振」の適切な医療用語で翻訳してください。"
-  },
   "chestTightness": "स्तन में तनाव",
-  "@chestTightness": {
-    "description": "女性の健康管理アプリにおいて、ユーザーが体調記録や日記機能で症状として記録する際に使用される医学的な用語です。各言語において一般的に使われる「胸の張り」の適切な医療用語で翻訳してください。"
-  },
   "insomnia": "अनिद्रा",
-  "@insomnia": {
-    "description": "女性の健康管理アプリにおいて、ユーザーが体調記録や日記機能で体調の変化や不調として記録する際に選択できる症状項目の一つです。各言語において医学的に正確で、一般ユーザーにも理解しやすい「不眠・睡眠障害」の適切な表現で翻訳してください。"
-  },
   "pauseStartingOtherDaysInstructions": "सेवन बंद करें। यदि आप आज के अलावा किसी अन्य दिन से गोली लेना बंद करना चाहते हैं, तो कृपया नीचे दिए गए निर्देशों को देखें।",
-  "@pauseStartingOtherDaysInstructions": {
-    "description": "ピルの服用管理アプリにおいて、ユーザーが今日以外の日から服用を一時停止（お休み）したい場合に表示される説明文です。この後に具体的な操作手順や注意事項が続くことを示唆する導入文として機能します。"
-  },
   "seeHowToUsePauseTakingFeature": "सेवन विराम सुविधा का उपयोग देखें",
-  "@seeHowToUsePauseTakingFeature": {
-    "description": "ピルの服用を一時的に停止する「服用お休み機能」の使用方法を説明するヘルプページへのリンクテキストです。ユーザーがこの機能の操作方法を学ぶためのガイドに誘導する際に表示されます。"
-  },
   "startPauseTakingLabel": "सेवन विराम शुरू करें",
-  "@startPauseTakingLabel": {
-    "description": "ピルの服用を一時的に停止する「服用お休み機能」を開始する際に表示されるボタンまたはラベルのテキストです。ユーザーがピルの服用をお休みしたい時にタップする機能の開始を表します。"
-  },
   "pauseTakingChanged": "सेवन विराम की अवधि बदल दी गई है",
-  "@pauseTakingChanged": {
-    "description": "ユーザーがピルの服用お休み期間（服用を一時停止する期間）を変更した際に表示される確認メッセージです。設定変更が完了したことをユーザーに通知する目的で使用されます。"
-  },
   "editPausePeriod": "सेवन विराम अवधि संपादित करें",
-  "@editPausePeriod": {
-    "description": "ピルの服用を一時的に停止する期間を設定・変更するためのボタンまたはリンクのテキストです。設定画面や編集画面で表示され、ユーザーが休薬期間を調整する際に使用されます。"
-  },
   "changePillDays": "सेवन अवधि बदलें",
-  "@changePillDays": {
-    "description": "ピルの1シートあたりの服用日数を変更する機能のラベルです。ユーザーが自分のピルの種類に合わせて服用期間（21日間、28日間など）を設定する際に表示されます。"
-  },
   "beginToEndNumbers": "{begin} नंबर ~ {end} नंबर",
-  "@beginToEndNumbers": {
-    "description": "ピルシートの番号範囲を表示する際に使用される文字列です。例えば「1番 ~ 21番」のように、連続する番号の開始と終了を示すフォーマットです。",
-    "placeholders": {
-      "begin": {
-        "type": "int"
-      },
-      "end": {
-        "type": "int"
-      }
-    }
-  },
   "resumeTaking": "सेवन पुनः आरंभ",
-  "@resumeTaking": {
-    "description": "ピルの服用を一時的に中断していた状態から、再び服用を開始する際に使用されるボタンやラベルのテキストです。"
-  },
   "changePausePeriod": "सेवन विराम अवधि बदलें",
-  "@changePausePeriod": {
-    "description": "ピルの服用サイクルにおける休薬期間（通常7日間）の日数を変更する機能です。設定画面やボタンのラベルとして使用されます。"
-  },
   "changedPausePeriod": "दवा विराम अवधि बदल दी गई",
-  "@changedPausePeriod": {
-    "description": "ピルの服用サイクルにおける休薬期間（通常7日間）の日数設定を変更した後に表示される完了メッセージです。ユーザーに設定変更が正常に実行されたことを知らせるフィードバック文言として使用されます。"
-  },
   "changedToDate": "{date} पर बदल दिया गया",
-  "@changedToDate": {
-    "description": "何かの日付設定を変更した後に表示される完了メッセージです。ユーザーに設定変更が正常に実行されたことを知らせるフィードバック文言として使用されます。",
-    "placeholders": {
-      "date": {
-        "type": "String"
-      }
-    }
-  },
   "quickRecordTakePillFailed": "दवा सेवन का रिकॉर्ड सहेजने में असफलता हो सकती है",
-  "@quickRecordTakePillFailed": {
-    "description": "ピルの服用記録をアプリに保存する際に、技術的な問題により記録処理が失敗した可能性があることをユーザーに伝えるエラーメッセージです。"
-  },
   "quickRecordTakePillFailedMessage": "कृपया ऐप खोलकर जांच लें",
-  "@quickRecordTakePillFailedMessage": {
-    "description": "ピルの服用記録の保存に失敗した際に、ユーザーにアプリを開いて記録状況を確認してもらうためのメッセージです。記録処理エラー時の具体的な行動指示として表示されます。"
-  },
   "alreadyTaken": "ली गई",
-  "@alreadyTaken": {
-    "description": "ピルの服用状態を表示する際に使用される文言で、ユーザーがすでにピルを服用したことを示します。服用履歴やピルシートUIで表示されます。"
-  },
   "startPauseTaking": "सेवन रोकें",
-  "@startPauseTaking": {
-    "description": "ピルの服用管理において、定期的な休薬期間（プラセボ期間）を開始する際にユーザーが選択するボタンやメニュー項目の文言です。生理期間中や医師の指示による一時的な服用中断を意味します。"
-  },
   "startedPauseTaking": "सेवन विराम शुरू किया गया",
-  "@startedPauseTaking": {
-    "description": "ピルの服用を一時的に休止（休薬期間やプラセボ期間）することをユーザーが開始した際に表示される確認メッセージです。医師の指示による服用中断や生理期間中の服用停止を意味します。"
-  },
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} नंबर",
-  "@sequentialLastTakenPlusOnePillNumber": {
-    "description": "次に服用すべきピルの番号を表示するテキストです。プレースホルダーには数字が入るため、各言語の序数や番号表現に適合させて翻訳してください。",
-    "placeholders": {
-      "pillSheetGroupSequentialLastTakenPillNumber": {
-        "type": "String"
-      }
-    }
-  },
   "startFromNumber": "नंबर से शुरू",
-  "@startFromNumber": {
-    "description": "ピルシートUIで表示する薬の番号の開始位置を設定する機能のテキストです。ユーザーが任意の番号からピルシートの表示をスタートできるようにする設定項目で使用されます。"
-  },
   "add": "जोड़ें",
-  "@add": {
-    "description": "ピルの服用記録、生理記録、未来の予定、日記などの新しいデータを追加する際に表示される汎用的なボタンやアクションのテキストです。アプリ内の様々な画面で新規登録や追加機能において使用されます。"
-  },
   "addPillSheet": "पिल शीट जोड़ें",
-  "@addPillSheet": {
-    "description": "新しいピル（避妊薬・治療薬）のシート・パックを服用管理対象として追加する際のボタンやアクションのテキストです。ユーザーが新しい薬のパッケージを開始する時に表示されます。"
-  },
   "pillTakenCountPrefix": "1 दिन में",
-  "@pillTakenCountPrefix": {
-    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の前に表示するテキストです。「1日に [2] 回服用する」のように、prefix + 数値入力欄 + pillTakenCountSuffix の順で横並びに表示されます。"
-  },
   "pillTakenCountSuffix": "1 दिन में [X] बार लें",
-  "@pillTakenCountSuffix": {
-    "description": "ピルシート追加画面の1日の服用回数入力で、数値入力欄の後に表示するテキストです。「1日に [2] 回服用する」のように、pillTakenCountPrefix + 数値入力欄 + suffix の順で横並びに表示されます。"
-  },
   "duringPauseTaking": "सेवन बंद",
-  "@duringPauseTaking": {
-    "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。"
-  },
   "cannotPauseAlreadyTakenToday": "आज की गोली पहले से ली जा चुकी है\n\"सेवन विराम\" नहीं कर सकते",
-  "@cannotPauseAlreadyTakenToday": {
-    "description": "今日のピルを既に服用した後で「服用お休み」機能を使おうとした際に表示されるエラーメッセージです。「服用お休み」はピルの服用を一時的に休止する機能名で、既に服用済みの場合は使用できないことをユーザーに説明しています。"
-  },
   "pauseTakingStarted": "गोली का सेवन विराम शुरू किया गया है",
-  "@pauseTakingStarted": {
-    "description": "ユーザーがピルの服用を一時的に休止する「服用お休み」機能を開始した際に表示される確認メッセージです。服用スケジュールが一時停止状態になったことをユーザーに通知しています。"
-  },
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
-  "@formattedDateAndWeekday": {
-    "description": "日付と曜日を組み合わせて表示するためのフォーマットです。「12月15日(月)」のように月日の後に括弧内で曜日を表示する形式で、カレンダーや服用記録の日付表示に使用されます。",
-    "placeholders": {
-      "DateTimeFormatterMonthAndDay": {
-        "type": "String"
-      },
-      "DateTimeFormatterWeekday": {
-        "type": "String"
-      }
-    }
-  },
   "editPauseStartDate": "सेवन विराम की प्रारंभ तिथि संपादित करें",
-  "@editPauseStartDate": {
-    "description": "ピルの服用を一時的に休止する期間の開始日を編集する画面やボタンで使用されるテキストです。ユーザーが体調や医師の指示により服用を中断したい場合に設定する機能です。"
-  },
   "shareWithFriends": "दोस्तों को बताएं",
-  "@shareWithFriends": {
-    "description": "アプリを友達に紹介・推薦する機能で使用されるテキストです。ユーザーがPilllアプリを他の人に勧める際のボタンやメニュー項目として表示されます。"
-  },
   "termsOfService": "उपयोग की शर्तें",
-  "@termsOfService": {
-    "description": "アプリの設定画面や法的情報画面で表示される利用規約へのリンクテキストです。ユーザーがアプリの使用条件や規約を確認する際にタップする項目として使用されます。"
-  },
   "privacyPolicy": "गोपनीयता नीति",
-  "@privacyPolicy": {
-    "description": "アプリの設定画面や法的情報画面で表示されるプライバシーポリシーへのリンクテキストです。ユーザーが個人情報の取り扱いに関する規約を確認する際にタップする項目として使用されます。"
-  },
   "linkCopiedToClipboard": "क्लिपबोर्ड में कॉपी हो गया",
-  "@linkCopiedToClipboard": {
-    "description": "ユーザーがリンクやテキストをクリップボードにコピーした際に表示される成功通知メッセージです。シェア機能やURL共有時などに、コピー操作が完了したことをユーザーに知らせるフィードバックとして使用されます。"
-  },
   "notificationNumber": "सूचना {number}",
-  "@notificationNumber": {
-    "description": "アプリ内の通知メッセージに番号を付ける際に使用される文字列です。{number}には通知を識別するための数字が入り、複数のピル服用リマインド通知を区別するために使用されます。",
-    "placeholders": {
-      "number": {
-        "type": "int"
-      }
-    }
-  },
   "notificationTime": "सूचना समय",
-  "@notificationTime": {
-    "description": "ピルの服用リマインダーを受け取る時間を設定する際に表示されるラベルです。通知設定画面で「何時に通知を受け取るか」を指定する項目名として使用されます。"
-  },
   "timeZoneChangedTo": "{tz} में बदल दिया गया",
-  "@timeZoneChangedTo": {
-    "description": "ユーザーがアプリの設定でタイムゾーンを変更した際に表示される確認メッセージです。{tz}部分には具体的なタイムゾーン名（例：Asia/Tokyo）が入り、ピルの服用リマインダー時間に影響する重要な設定変更を知らせます。",
-    "placeholders": {
-      "tz": {
-        "type": "String"
-      }
-    }
-  },
   "changeStartOfPillDays": "सेवन अवधि की शुरुआत बदलें",
-  "@changeStartOfPillDays": {
-    "description": "ピルシートの服用開始日や服用日数のカウント開始日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの基準日を調整するための機能です。"
-  },
   "changeEndOfPillDays": "सेवन अवधि का अंत बदलें",
-  "@changeEndOfPillDays": {
-    "description": "ピルシートの服用終了日や服用日数のカウント終了日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの終了タイミングを調整するための機能です。"
-  },
   "cannotUpdateToReplacePillSheet": "गोली शीट के बदलाव से अपडेट नहीं हो सका id: {id}",
-  "@cannotUpdateToReplacePillSheet": {
-    "description": "ピルシートを新しいものに交換・切り替える際に、システム側で何らかの理由により処理が完了できない場合に表示されるエラーメッセージです。ユーザーに対して、該当するピルシートID付きで更新処理が失敗したことを通知します。",
-    "placeholders": {
-      "id": {
-        "type": "String"
-      }
-    }
-  },
   "failedToGetPillSheetHistory": "दवा सेवन का इतिहास प्राप्त करने में असफल। {error}",
-  "@failedToGetPillSheetHistory": {
-    "description": "ピルの服用履歴データの取得に失敗した際に表示されるエラーメッセージです。{error}には具体的なエラー内容が挿入されます。",
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
   "cancelTaking": "सेवन रद्द करें",
-  "@cancelTaking": {
-    "description": "ユーザーが誤って記録したピルの服用履歴を取り消すためのボタンのラベル。服用管理画面で使用される。"
-  },
   "deletedDiaryCannotBeRestored": "हटाई गई डायरी को पुनर्प्राप्त नहीं किया जा सकता",
-  "@deletedDiaryCannotBeRestored": {
-    "description": "アプリ内の日記機能（体調記録）で、ユーザーが日記を削除する際に表示される警告メッセージ。削除された記録は元に戻せないことを伝える重要な注意事項です。"
-  },
   "editMenstruation": "मासिक धर्म की अवधि संपादित करें",
-  "@editMenstruation": {
-    "description": "生理記録機能で、ユーザーが既に記録した生理期間の開始日や終了日などの情報を後から修正・編集する際に表示されるボタンやメニュー項目のテキストです。"
-  },
   "changedPillNumber": "पिल नंबर परिवर्तन",
-  "@changedPillNumber": {
-    "description": "ピルシートの番号設定を変更した際の履歴表示で使用される文言です。カレンダー画面の履歴機能でユーザーの過去の操作を示します。"
-  },
   "offPercentForMonthlyPremiumPackage": "सामान्य मासिक की तुलना में {offPercent}% छूट",
-  "@offPercentForMonthlyPremiumPackage": {
-    "description": "アプリのプレミアムプラン（有料機能）で、年額プランが通常の月額プランと比較して何パーセント安くなるかを示す割引表示メッセージです。課金画面やプラン選択画面で表示されます。",
-    "placeholders": {
-      "offPercent": {
-        "type": "int"
-      }
-    }
-  },
   "premiumIntroductionDiscountPriceDeadline": "प्रीमियम पंजीकरण के साथ सभी सुविधाओं का उपयोग जारी रख सकते हैं",
-  "@premiumIntroductionDiscountPriceDeadline": {
-    "description": "無料期間や割引期間が終了するユーザーに向けて表示されるメッセージです。プレミアムプランに登録することで、引き続きアプリの全機能（服用記録、生理管理、プレミアム限定機能など）が利用できることを案内しています。"
-  },
   "countdownForDiscountPriceDeadline": "{countdown} में खरीदारी करने पर {offPercent}% की छूट",
-  "@countdownForDiscountPriceDeadline": {
-    "description": "限定割引キャンペーンの締切時間を知らせるメッセージです。プレミアムプラン購入画面で、残り時間（countdown）内に購入すると指定された割引率（offPercent）が適用されることをユーザーに伝えます。",
-    "placeholders": {
-      "countdown": {
-        "type": "String"
-      },
-      "offPercent": {
-        "type": "int"
-      }
-    }
-  },
   "pillReminderChanged": "दवा की अधिसूचना {value} पर सेट कर दी गई है",
-  "@pillReminderChanged": {
-    "description": "ユーザーがピルの服用リマインダー時刻を変更した際に表示される確認メッセージです。{value}には変更後の時刻が入ります。",
-    "placeholders": {
-      "value": {
-        "type": "String"
-      }
-    }
-  },
   "silentModeNotificationDescription": "फोकस मोड चालू होने पर या डिवाइस साइलेंट होने पर भी, सूचनाएं लॉक स्क्रीन पर दिखाई जाएंगी और ध्वनि बजेगी",
-  "@silentModeNotificationDescription": {
-    "description": "ピルの服用リマインダー通知が、端末の集中モードや消音設定に関係なく確実に届くことを説明する文章です。服用忘れを防ぐための重要な機能説明として表示されます。"
-  },
   "enableNotificationInSilentMode": "साइलेंट मोड में भी सूचना दें",
-  "@enableNotificationInSilentMode": {
-    "description": "ピル服用リマインダー通知の設定項目で、端末がマナーモードや消音設定になっていても確実に通知を届ける機能のオン/オフを切り替えるボタンのラベルです。服用忘れを防ぐための重要な機能として表示されます。"
-  },
   "enableNotificationInSilentModeSetting": "साइलेंट मोड में भी नोटिफिकेशन",
-  "@enableNotificationInSilentModeSetting": {
-    "description": "設定画面でマナーモード時でもピル服用の重要な通知を確実に受け取れるようにする機能の設定項目名です。服用忘れを防ぐための重要な通知機能として各言語で適切に表現してください。"
-  },
   "criticalAlertVolume": "वॉल्यूम",
-  "@criticalAlertVolume": {
-    "description": "マナーモード時でも鳴らすことができるピル服用リマインダーの重要なアラート音量を設定する項目名です。服用忘れを防ぐための重要な通知音の音量レベルとして各言語で適切に表現してください。"
-  },
   "logout": "लॉग आउट",
-  "@logout": {
-    "description": "アプリのユーザーアカウントからログアウトする機能のボタンやメニュー項目です。設定画面等で使用されます。"
-  },
   "goToInitialSettingAndReloginIfNeededMessage": "प्रारंभिक सेटअप पर वापस जा रहे हैं। यदि लॉगिन आवश्यक है तो कृपया प्रारंभिक सेटअप के नीचे से करें।",
-  "@goToInitialSettingAndReloginIfNeededMessage": {
-    "description": "何らかのエラーやリセット操作によってアプリが初期設定画面に戻る時に表示される案内メッセージです。ユーザーに対して再度ログインが必要な場合があることと、その方法を説明しています。"
-  },
   "deleteAccount": "खाता हटाएं",
-  "@deleteAccount": {
-    "description": "ユーザーアカウントとそれに紐づく服用履歴や個人データをすべて削除する機能のラベルです。設定画面などで表示される重要な操作項目として使用されます。"
-  },
   "logoutCompleted": "लॉग आउट हो गए",
-  "@logoutCompleted": {
-    "description": "ユーザーがログアウト操作を完了した後に表示される確認メッセージです。アプリからサインアウトされ、認証状態が解除されたことをユーザーに伝えるために使用されます。"
-  },
   "specialDiscountPriceNow": "विशेष मूल्य पर प्रीमियम प्लान पाएं!",
-  "@specialDiscountPriceNow": {
-    "description": "プレミアムプラン（有料機能）の特別割引キャンペーン時に表示される宣伝メッセージです。通常価格よりも安い価格でプレミアムプランを購入できることをユーザーに伝えるために使用されます。"
-  },
   "inquiryTypeLabel": "पूछताछ प्रकार",
-  "@inquiryTypeLabel": {
-    "description": "お問い合わせフォームで、問い合わせの種類を選択するセクションのラベルです。"
-  },
   "bugReport": "बग रिपोर्ट",
-  "@bugReport": {
-    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、アプリの不具合やバグを報告する際に選択するオプションです。"
-  },
   "featureRequest": "राय और सुझाव",
-  "@featureRequest": {
-    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、機能追加や改善の要望を送る際に選択するオプションです。"
-  },
   "otherInquiry": "अन्य",
-  "@otherInquiry": {
-    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、不具合報告や要望以外の内容を問い合わせる際に選択するオプションです。"
-  },
   "otherInquiryPlaceholder": "कृपया अन्य विवरण दर्ज करें",
-  "@otherInquiryPlaceholder": {
-    "description": "お問い合わせフォームで「その他」を選択した際に表示されるテキスト入力欄のプレースホルダーです。"
-  },
   "emailAddress": "ईमेल पता",
-  "@emailAddress": {
-    "description": "お問い合わせフォームでユーザーの連絡先メールアドレスを入力する欄のラベルです。"
-  },
   "emailPlaceholder": "example@example.com",
-  "@emailPlaceholder": {
-    "description": "メールアドレス入力欄のプレースホルダーとして表示される例示用のメールアドレスです。"
-  },
   "inquiryContent": "पूछताछ विवरण",
-  "@inquiryContent": {
-    "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
-  },
   "inquiryContentPlaceholder": "कृपया अपनी पूछताछ का विवरण दर्ज करें",
-  "@inquiryContentPlaceholder": {
-    "description": "お問い合わせ内容入力欄のプレースホルダーです。"
-  },
   "debugInfoLabel": "डिबग जानकारी (स्वतः भरा गया)",
-  "@debugInfoLabel": {
-    "description": "お問い合わせフォームでアプリの状態やデバイス情報などのデバッグ情報を表示するセクションのラベルです。ユーザーは編集できず、調査用に自動で入力されます。"
-  },
   "inquirySent": "पूछताछ भेजी गई है",
-  "@inquirySent": {
-    "description": "お問い合わせフォームの送信が完了した際にSnackbarで表示される確認メッセージです。"
-  },
   "sendInquiry": "भेजें",
-  "@sendInquiry": {
-    "description": "お問い合わせフォームの送信ボタンのラベルです。"
-  },
   "invalidEmailFormat": "कृपया एक मान्य ईमेल पता दर्ज करें",
-  "@invalidEmailFormat": {
-    "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
-  },
   "emailCannotReceiveICloud": "※कृपया @icloud.com के अलावा अन्य ईमेल पते का उपयोग करें। इस पर ब्लॉकिंग अक्सर हो रही है।",
-  "@emailCannotReceiveICloud": {
-    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
-  },
   "emailReceiveSettingNote": "※कृपया सुनिश्चित करें कि आप pilll.reminder.app@gmail.com से ईमेल प्राप्त कर सकें",
-  "@emailReceiveSettingNote": {
-    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
-  },
   "inquiryContentRequired": "कृपया पूछताछ की सामग्री दर्ज करें",
-  "@inquiryContentRequired": {
-    "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
-  },
   "lifetimeSubscriptionWarning": "एक-बार भुगतान प्लान खरीदने के लिए धन्यवाद। यदि आप मासिक या वार्षिक प्लान के सदस्य हैं, तो कृपया अपनी सदस्यता रद्द करना न भूलें।",
-  "@lifetimeSubscriptionWarning": {
-    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
-  },
   "lifetimePurchaseNotice1": "एक बार खरीदने वाली योजना खरीदने पर भी मासिक/वार्षिक योजना स्वचालित रूप से रद्द नहीं होगी।",
-  "@lifetimePurchaseNotice1": {
-    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（前半部分）"
-  },
-  "lifetimePurchaseNotice3": "कृपया खरीदने से पहले अपनी मौजूदा सदस्यता रद्द कर लें।",
-  "@lifetimePurchaseNotice3": {
-    "description": "Paywallのフッターに表示する、買い切りプラン購入時の注意文言（後半部分）"
-  },
-  "featureAppealTryFeature": "इसे आज़माएँ",
-  "@featureAppealTryFeature": {
-    "description": "FeatureAppealのヘルプページのフッターに表示する「実際にこの機能を試す」ボタンのラベル"
-  },
-  "recommendSignupGeneralTitle": "खाता बनाएं",
-  "@recommendSignupGeneralTitle": {
-    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarのタイトル文言。アカウント登録(Apple/Googleでのサインイン)を促す"
-  },
-  "recommendSignupGeneralDescription": "रजिस्टर करने पर आपका डेटा बैकअप किया जा सकेगा।",
-  "@recommendSignupGeneralDescription": {
-    "description": "非Premiumかつ未認証のユーザー向けのAnnouncementBarの説明文言。バックアップ可能になることを伝える"
-  },
-  "criticalAlertFeatureAppealTitle": "साइलेंट मोड में भी सूचना पाएं",
-  "@criticalAlertFeatureAppealTitle": {
-    "description": "Critical Alert機能のFeatureAppeal Barタイトル"
-  },
-  "criticalAlertFeatureAppealShortDescription": "डू नॉट डिस्टर्ब मोड में भी दवा लेना न भूलें",
-  "@criticalAlertFeatureAppealShortDescription": {
-    "description": "Critical Alert機能のFeatureAppeal Barの短い説明文"
-  },
-  "criticalAlertFeatureAppealHeadline": "साइलेंट मोड में भी सूचनाएँ प्राप्त होंगी",
-  "@criticalAlertFeatureAppealHeadline": {
-    "description": "Critical Alert機能のヘルプページのヘッドライン"
-  },
-  "criticalAlertFeatureAppealBody": "Critical Alert सक्रिय करने पर, आप डू नॉट डिस्टर्ब (Do Not Disturb) या साइलेंट मोड में होने पर भी पिल लेने की सूचनाएँ प्राप्त कर पाएँगे। महत्वपूर्ण पिल लेने के समय न चूकने के लिए, कृपया इसे सक्षम करें।",
-  "@criticalAlertFeatureAppealBody": {
-    "description": "Critical Alert機能のヘルプページの本文。機能の説明と利点"
-  },
-  "reminderNotificationCustomizeWordFeatureAppealTitle": "सूचना संदेश अनुकूलित करें",
-  "@reminderNotificationCustomizeWordFeatureAppealTitle": {
-    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barタイトル"
-  },
-  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "आप सूचनाओं के संदेशों को अनुकूलित कर सकते हैं।",
-  "@reminderNotificationCustomizeWordFeatureAppealShortDescription": {
-    "description": "通知メッセージカスタマイズ機能のFeatureAppeal Barの短い説明文"
-  },
-  "reminderNotificationCustomizeWordFeatureAppealHeadline": "दवा लेने के रिमाइंडर संदेश को अपनी इच्छानुसार संपादित करें",
-  "@reminderNotificationCustomizeWordFeatureAppealHeadline": {
-    "description": "通知メッセージカスタマイズ機能のヘルプページのヘッドライン"
-  },
-  "reminderNotificationCustomizeWordFeatureAppealBody": "आप \"पिल लेने का समय है\" जैसे डिफ़ॉल्ट संदेश को अपनी पसंद के शब्दों से कस्टमाइज़ कर सकते हैं। प्रेरणादायी वाक्य या पालतू के नाम जैसे व्यक्तिगत संदेश चुनें ताकि रोज़ाना दवा लेना और भी मजेदार हो सके।",
-  "@reminderNotificationCustomizeWordFeatureAppealBody": {
-    "description": "通知メッセージカスタマイズ機能のヘルプページの本文"
-  },
-  "appearanceModeDateFeatureAppealTitle": "पिल शीट पर तारीखें दिखाएँ",
-  "@appearanceModeDateFeatureAppealTitle": {
-    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barタイトル"
-  },
-  "appearanceModeDateFeatureAppealShortDescription": "एक नज़र में जानें कब लेना है",
-  "@appearanceModeDateFeatureAppealShortDescription": {
-    "description": "ピルシート外観モード(date)機能のFeatureAppeal Barの短い説明文"
-  },
-  "appearanceModeDateFeatureAppealHeadline": "पिल शीट पर तारीखें दिखाएँ",
-  "@appearanceModeDateFeatureAppealHeadline": {
-    "description": "ピルシート外観モード(date)機能のヘルプページのヘッドライン"
-  },
-  "appearanceModeDateFeatureAppealBody": "पिल शीट के हर ख़ाने में तारीख दिखाकर, आप पिछले सेवन के रिकॉर्ड और आने वाले सेवन की योजना को एक नज़र में देख सकते हैं। अपनी पसंद के अनुसार \"संख्या\" मोड और \"तारीख\" मोड के बीच स्विच करें।",
-  "@appearanceModeDateFeatureAppealBody": {
-    "description": "ピルシート外観モード(date)機能のヘルプページの本文"
-  },
-  "recordPillFeatureAppealTitle": "दवा लेने के रिकॉर्ड को आसानी से देखें",
-  "@recordPillFeatureAppealTitle": {
-    "description": "ピル記録/服用履歴機能のFeatureAppeal Barタイトル"
-  },
-  "recordPillFeatureAppealShortDescription": "कब लिया था यह तुरंत पता चलता है",
-  "@recordPillFeatureAppealShortDescription": {
-    "description": "ピル記録/服用履歴機能のFeatureAppeal Barの短い説明文"
-  },
-  "recordPillFeatureAppealHeadline": "होम स्क्रीन से पिल का सेवन रिकॉर्ड करें",
-  "@recordPillFeatureAppealHeadline": {
-    "description": "ピル記録/服用履歴機能のヘルプページのヘッドライン"
-  },
-  "recordPillFeatureAppealBody": "होम स्क्रीन पर पिल शीट को सिर्फ टैप करने भर से आप उसी दिन की दवा लेने का रिकॉर्ड रख सकते हैं। गलती से रिकॉर्ड हो गया हो तो फिर से टैप करके उसे रद्द किया जा सकता है। दवा के रिकॉर्ड आप बाद में भी देख सकते हैं, इसलिए आप निश्चिंत होकर इसका उपयोग जारी रख सकते हैं।",
-  "@recordPillFeatureAppealBody": {
-    "description": "ピル記録/服用履歴機能のヘルプページの本文"
-  },
-  "menstruationFeatureAppealTitle": "पीरियड को रिकॉर्ड करें और अनुमान लगाएं",
-  "@menstruationFeatureAppealTitle": {
-    "description": "生理記録機能のFeatureAppeal Barタイトル"
-  },
-  "menstruationFeatureAppealShortDescription": "मासिक धर्म की शुरुआत की तारीख दर्ज करें और अपने चक्र को समझें",
-  "@menstruationFeatureAppealShortDescription": {
-    "description": "生理記録機能のFeatureAppeal Barの短い説明文"
-  },
-  "menstruationFeatureAppealHeadline": "आप पीरियड को रिकॉर्ड कर सकते हैं और उसका अनुमान लगा सकते हैं",
-  "@menstruationFeatureAppealHeadline": {
-    "description": "生理記録機能のヘルプページのヘッドライン"
-  },
-  "menstruationFeatureAppealBody": "पीरियड शुरू होने पर बस उसे रिकॉर्ड करें — आप पिछले पीरियड का इतिहास सूचीबद्ध रूप में देख सकते हैं। अगली अनुमानित पीरियड तारीखें भी स्वचालित रूप से अनुमानित की जाती हैं, ताकि आप बेहतर तरीके से योजना बना सकें।",
-  "@menstruationFeatureAppealBody": {
-    "description": "生理記録機能のヘルプページの本文"
-  },
-  "calendarDiaryFeatureAppealTitle": "कैलेंडर में अपना स्वास्थ्य रिकॉर्ड करें",
-  "@calendarDiaryFeatureAppealTitle": {
-    "description": "カレンダー・日記機能のFeatureAppeal Barタイトル"
-  },
-  "calendarDiaryFeatureAppealShortDescription": "अपनी रोज़ाना की सेहत कैलेंडर में दर्ज करें",
-  "@calendarDiaryFeatureAppealShortDescription": {
-    "description": "カレンダー・日記機能のFeatureAppeal Barの短い説明文"
-  },
-  "calendarDiaryFeatureAppealHeadline": "दैनिक स्वास्थ्य को कैलेंडर में रिकॉर्ड करें",
-  "@calendarDiaryFeatureAppealHeadline": {
-    "description": "カレンダー・日記機能のヘルプページのヘッドライン"
-  },
-  "calendarDiaryFeatureAppealBody": "कैलेंडर में किसी तारीख़ को टैप करके आप अपनी सेहत, मूड और लक्षण आदि दर्ज कर सकते हैं। आप इन्हें दवा लेने के रिकॉर्ड और मासिक धर्म के रिकॉर्ड के साथ एक साथ देख सकते हैं, जिससे अपने शरीर के चक्र को समझना आसान हो जाता है।",
-  "@calendarDiaryFeatureAppealBody": {
-    "description": "カレンダー・日記機能のヘルプページの本文"
-  },
-  "futureScheduleFeatureAppealTitle": "अपनी भविष्य की योजनाएँ लिखें",
-  "@futureScheduleFeatureAppealTitle": {
-    "description": "未来の予定機能のFeatureAppeal Barタイトル"
-  },
-  "futureScheduleFeatureAppealShortDescription": "आने वाली नियुक्तियाँ और अन्य भविष्य की योजनाएँ प्रबंधित करें",
-  "@futureScheduleFeatureAppealShortDescription": {
-    "description": "未来の予定機能のFeatureAppeal Barの短い説明文"
-  },
-  "futureScheduleFeatureAppealHeadline": "कैलेंडर में भविष्य की योजनाओं को रिकॉर्ड करें",
-  "@futureScheduleFeatureAppealHeadline": {
-    "description": "未来の予定機能のヘルプページのヘッドライン"
-  },
-  "futureScheduleFeatureAppealBody": "आप चिकित्सकीय अपॉइंटमेंट या यात्रा जैसी आने वाली योजनाओं को कैलेंडर में दर्ज कर सकते हैं। यह पिल के सेवन चक्र के साथ एक साथ दिखता है, जिससे आप मासिक धर्म की संभावित तिथियों को ध्यान में रखते हुए योजनाएँ बना सकते हैं।",
-  "@futureScheduleFeatureAppealBody": {
-    "description": "未来の予定機能のヘルプページの本文"
-  },
-  "healthCareIntegrationFeatureAppealTitle": "हेल्थकेयर से कनेक्ट",
-  "@healthCareIntegrationFeatureAppealTitle": {
-    "description": "ヘルスケア連携機能のFeatureAppeal Barタイトル"
-  },
-  "healthCareIntegrationFeatureAppealShortDescription": "मासिक चक्र के रिकॉर्ड को स्वास्थ्य ऐप के साथ साझा करें",
-  "@healthCareIntegrationFeatureAppealShortDescription": {
-    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
-  },
-  "healthCareIntegrationFeatureAppealHeadline": "हेल्थकेयर के साथ जुड़ सकता है",
-  "@healthCareIntegrationFeatureAppealHeadline": {
-    "description": "ヘルスケア連携機能のヘルプページのヘッドライン"
-  },
-  "healthCareIntegrationFeatureAppealBody": "Pilll में दर्ज आपके मासिक धर्म डेटा को हेल्थ ऐप के साथ स्वचालित रूप से सिंक किया जा सकता है। आप इसे हेल्थ ऐप में अन्य स्वास्थ्य डेटा के साथ देख सकते हैं, और अन्य ऐप्स में भी मासिक धर्म डेटा का उपयोग कर पाएँगे।",
-  "@healthCareIntegrationFeatureAppealBody": {
-    "description": "ヘルスケア連携機能のヘルプページの本文"
-  },
-  "quickRecordFeatureAppealTitle": "नोटिफिकेशन से सीधे दवा लेने का रिकॉर्ड",
-  "@quickRecordFeatureAppealTitle": {
-    "description": "クイックレコード機能のFeatureAppeal Barタイトル"
-  },
-  "quickRecordFeatureAppealShortDescription": "ऐप खोले बिना नोटिफिकेशन पर रिकॉर्ड करें",
-  "@quickRecordFeatureAppealShortDescription": {
-    "description": "クイックレコード機能のFeatureAppeal Barの短い説明文"
-  },
-  "quickRecordFeatureAppealHeadline": "नोटिफिकेशन स्क्रीन पर एक-टैप में सेवन दर्ज करें",
-  "@quickRecordFeatureAppealHeadline": {
-    "description": "クイックレコード機能のヘルプページのヘッドライン"
-  },
-  "quickRecordFeatureAppealBody": "रिमाइंडर नोटिफिकेशन को लंबा दबाने पर \"दवा ली\" क्रिया दिखाई देती है, जिससे आप ऐप खोले बिना दवा लेने को रिकॉर्ड कर सकते हैं।",
-  "@quickRecordFeatureAppealBody": {
-    "description": "クイックレコード機能のヘルプページの本文"
-  },
-  "creatingNewPillSheetFeatureAppealTitle": "पिल शीट स्वचालित रूप से जोड़ें",
-  "@creatingNewPillSheetFeatureAppealTitle": {
-    "description": "ピルシート自動追加機能のFeatureAppeal Barタイトル"
-  },
-  "creatingNewPillSheetFeatureAppealShortDescription": "अगली शीट अपने आप बन जाती है",
-  "@creatingNewPillSheetFeatureAppealShortDescription": {
-    "description": "ピルシート自動追加機能のFeatureAppeal Barの短い説明文"
-  },
-  "creatingNewPillSheetFeatureAppealHeadline": "अगली पिल शीट को स्वचालित रूप से बनाएं",
-  "@creatingNewPillSheetFeatureAppealHeadline": {
-    "description": "ピルシート自動追加機能のヘルプページのヘッドライン"
-  },
-  "creatingNewPillSheetFeatureAppealBody": "वर्तमान पिल शीट समूह खत्म होने पर नया पिल शीट समूह स्वचालित रूप से बन जाएगा। इससे मैन्युअल रूप से स्विच करने की आवश्यकता नहीं रहती और रिकॉर्ड छूटने की समस्या नहीं होती।",
-  "@creatingNewPillSheetFeatureAppealBody": {
-    "description": "ピルシート自動追加機能のヘルプページの本文"
-  },
-  "alarmKitFeatureAppealTitle": "घड़ी की तरह बजने वाला अलार्म",
-  "@alarmKitFeatureAppealTitle": {
-    "description": "AlarmKit機能のFeatureAppeal Barタイトル"
-  },
-  "alarmKitFeatureAppealShortDescription": "साइलेंट में भी निश्चित रूप से बजने वाली सूचनाएं",
-  "@alarmKitFeatureAppealShortDescription": {
-    "description": "AlarmKit機能のFeatureAppeal Barの短い説明文"
-  },
-  "alarmKitFeatureAppealHeadline": "घड़ी की तरह दवा लेने की याद दिलाने वाला अलार्म",
-  "@alarmKitFeatureAppealHeadline": {
-    "description": "AlarmKit機能のヘルプページのヘッドライン"
-  },
-  "alarmKitFeatureAppealBody": "iOS 26 और उसके बाद के संस्करणों में उपलब्ध AlarmKit का उपयोग करके, साइलेंट मोड और फोकस मोड में भी निश्चित रूप से बजे वाले अलार्म के जरिए पिल लेने की याद दिलाता है।",
-  "@alarmKitFeatureAppealBody": {
-    "description": "AlarmKit機能のヘルプページの本文"
-  },
-  "todayPillNumberFeatureAppealTitle": "आज की गोली का नंबर सही करें",
-  "@todayPillNumberFeatureAppealTitle": {
-    "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"
-  },
-  "todayPillNumberFeatureAppealShortDescription": "यदि संख्या गड़बड़ा गई है तो सेटिंग्स में जाकर ठीक करें",
-  "@todayPillNumberFeatureAppealShortDescription": {
-    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
-  },
-  "todayPillNumberFeatureAppealHeadline": "आज लेने वाली गोली का नंबर बदल सकते हैं",
-  "@todayPillNumberFeatureAppealHeadline": {
-    "description": "今日の服用番号変更機能のヘルプページのヘッドライン"
-  },
-  "todayPillNumberFeatureAppealBody": "यदि आप दवा लेना भूल जाते हैं या गलती से दूसरी गोली ले लेते हैं जिससे पिल शीट पर संख्या और वास्तविक सेवन मेल नहीं खाते, तो आप आज की लेने वाली गोली का नंबर मैन्युअल रूप से समायोजित कर सकते हैं। होम स्क्रीन पर पिल नंबर दिखाने वाले हिस्से से भी आप वही स्क्रीन खोल सकते हैं।",
-  "@todayPillNumberFeatureAppealBody": {
-    "description": "今日の服用番号変更機能のヘルプページの本文"
-  },
-  "restDurationFeatureAppealTitle": "दवा न लेने की अवधि दर्ज करें",
-  "@restDurationFeatureAppealTitle": {
-    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
-  },
-  "restDurationFeatureAppealShortDescription": "दवा के सेवन में ब्रेक और रुकावटों को सटीक रूप से प्रबंधित करें",
-  "@restDurationFeatureAppealShortDescription": {
-    "description": "服用おやすみ機能のFeatureAppeal Barの短い説明文"
-  },
-  "restDurationFeatureAppealHeadline": "पिल का सेवन रोकें",
-  "@restDurationFeatureAppealHeadline": {
-    "description": "服用おやすみ機能のヘルプページのヘッドライン"
-  },
-  "restDurationFeatureAppealBody": "आप कुछ समय के लिए दवा लेना रोकने की अवधि को पिल शीट में रिकॉर्ड कर सकते हैं। रुकने के दौरान खुराक की गिनती आगे नहीं बढ़ेगी, और फिर से शुरू करने पर रिकॉर्डिंग तुरंत दोबारा चालू हो जाएगी।",
-  "@restDurationFeatureAppealBody": {
-    "description": "服用おやすみ機能のヘルプページの本文"
-  },
-  "featureAppealLocationLabel": "ऐप के भीतर का स्थान",
-  "@featureAppealLocationLabel": {
-    "description": ""
-  },
-  "criticalAlertFeatureAppealPoint1": "फोकस मोड में भी सूचनाएँ मिलेंगी",
-  "@criticalAlertFeatureAppealPoint1": {
-    "description": ""
-  },
-  "criticalAlertFeatureAppealPoint2": "निश्चित समय पर याद दिलाना",
-  "@criticalAlertFeatureAppealPoint2": {
-    "description": ""
-  },
-  "criticalAlertFeatureAppealPoint3": "एक टैप में आसान सेटअप",
-  "@criticalAlertFeatureAppealPoint3": {
-    "description": ""
-  },
-  "reminderNotificationCustomizeWordFeatureAppealPoint1": "नोटिफिकेशन संदेश को अपनी इच्छानुसार संपादित करें",
-  "@reminderNotificationCustomizeWordFeatureAppealPoint1": {
-    "description": ""
-  },
-  "reminderNotificationCustomizeWordFeatureAppealPoint2": "दैनिक रिमाइंडरों में प्रतिबिंबित करें",
-  "@reminderNotificationCustomizeWordFeatureAppealPoint2": {
-    "description": ""
-  },
-  "reminderNotificationCustomizeWordFeatureAppealPoint3": "अपना निजी नोटिफिकेशन संदेश सेट करें",
-  "@reminderNotificationCustomizeWordFeatureAppealPoint3": {
-    "description": ""
-  },
-  "appearanceModeDateFeatureAppealPoint1": "पिल शीट को तारीख के अनुसार प्रदर्शित करें",
-  "@appearanceModeDateFeatureAppealPoint1": {
-    "description": ""
-  },
-  "appearanceModeDateFeatureAppealPoint2": "कैलेंडर देखे बिना भी तारीख पता चलती है",
-  "@appearanceModeDateFeatureAppealPoint2": {
-    "description": ""
-  },
-  "appearanceModeDateFeatureAppealPoint3": "पिल शीट सेटिंग्स से बदला जा सकता है",
-  "@appearanceModeDateFeatureAppealPoint3": {
-    "description": ""
-  },
-  "recordPillFeatureAppealPoint1": "पिल शीट पर टैप करके सेवन दर्ज करें",
-  "@recordPillFeatureAppealPoint1": {
-    "description": ""
-  },
-  "recordPillFeatureAppealPoint2": "गलती होने पर भी आसान रद्द करें",
-  "@recordPillFeatureAppealPoint2": {
-    "description": ""
-  },
-  "recordPillFeatureAppealPoint3": "कभी भी दवा सेवन का इतिहास देखें",
-  "@recordPillFeatureAppealPoint3": {
-    "description": ""
-  },
-  "menstruationFeatureAppealPoint1": "माहवारी की शुरुआत की तारीख को आसानी से दर्ज करें",
-  "@menstruationFeatureAppealPoint1": {
-    "description": ""
-  },
-  "menstruationFeatureAppealPoint2": "चक्रों का स्वचालित पता लगाना",
-  "@menstruationFeatureAppealPoint2": {
-    "description": ""
-  },
-  "menstruationFeatureAppealPoint3": "सेटिंग्स को कस्टमाइज़ करें",
-  "@menstruationFeatureAppealPoint3": {
-    "description": ""
-  },
-  "calendarDiaryFeatureAppealPoint1": "कैलेंडर में रिकॉर्ड देखें",
-  "@calendarDiaryFeatureAppealPoint1": {
-    "description": ""
-  },
-  "calendarDiaryFeatureAppealPoint2": "हिंदी अनुवाद",
-  "@calendarDiaryFeatureAppealPoint2": {
-    "description": ""
-  },
-  "calendarDiaryFeatureAppealPoint3": "कैलेंडर पर पिछले रिकॉर्ड देखें",
-  "@calendarDiaryFeatureAppealPoint3": {
-    "description": ""
-  },
-  "calendarDiaryFeatureAppealLocationHint": "तिथि पर टैप करके अपनी स्थिति दर्ज करें",
-  "@calendarDiaryFeatureAppealLocationHint": {
-    "description": ""
-  },
-  "futureScheduleFeatureAppealPoint1": "कैलेंडर में कार्यक्रम जोड़ें",
-  "@futureScheduleFeatureAppealPoint1": {
-    "description": ""
-  },
-  "futureScheduleFeatureAppealPoint2": "क्लिनिक जाने के दिनों का प्रबंधन आसान बनाएं",
-  "@futureScheduleFeatureAppealPoint2": {
-    "description": ""
-  },
-  "futureScheduleFeatureAppealPoint3": "रिमाइंडर द्वारा सूचित करें",
-  "@futureScheduleFeatureAppealPoint3": {
-    "description": ""
-  },
-  "futureScheduleFeatureAppealLocationHint": "तारीख पर टैप करके अपनी योजना लिखें",
-  "@futureScheduleFeatureAppealLocationHint": {
-    "description": ""
-  },
-  "healthCareIntegrationFeatureAppealPoint1": "मासिक धर्म रिकॉर्ड को स्वचालित रूप से समक्रमित करें",
-  "@healthCareIntegrationFeatureAppealPoint1": {
-    "description": ""
-  },
-  "healthCareIntegrationFeatureAppealPoint2": "हेल्थ ऐप के साथ सिंक करें",
-  "@healthCareIntegrationFeatureAppealPoint2": {
-    "description": ""
-  },
-  "healthCareIntegrationFeatureAppealPoint3": "Apple Health के साथ संगत",
-  "@healthCareIntegrationFeatureAppealPoint3": {
-    "description": ""
-  },
-  "quickRecordFeatureAppealPoint1": "नोटिफिकेशन की क्रिया से सेवन दर्ज करें",
-  "@quickRecordFeatureAppealPoint1": {
-    "description": ""
-  },
-  "quickRecordFeatureAppealPoint2": "ऐप खोले बिना पूरा करें",
-  "@quickRecordFeatureAppealPoint2": {
-    "description": ""
-  },
-  "quickRecordFeatureAppealPoint3": "प्रीमियम सदस्यता लेने पर तुरंत उपयोग कर सकते हैं",
-  "@quickRecordFeatureAppealPoint3": {
-    "description": ""
-  },
-  "creatingNewPillSheetFeatureAppealPoint1": "पिल शीट समाप्त होने पर स्वचालित रूप से बदलें",
-  "@creatingNewPillSheetFeatureAppealPoint1": {
-    "description": ""
-  },
-  "creatingNewPillSheetFeatureAppealPoint2": "मैन्युअल रूप से बनाना आवश्यक नहीं है",
-  "@creatingNewPillSheetFeatureAppealPoint2": {
-    "description": ""
-  },
-  "creatingNewPillSheetFeatureAppealPoint3": "सेटिंग्स टैब के स्विच से बदलें",
-  "@creatingNewPillSheetFeatureAppealPoint3": {
-    "description": ""
-  },
-  "alarmKitFeatureAppealPoint1": "साइलेंट/फोकस मोड में भी बजेगा",
-  "@alarmKitFeatureAppealPoint1": {
-    "description": ""
-  },
-  "alarmKitFeatureAppealPoint2": "घड़ी जैसी अलार्म ध्वनि",
-  "@alarmKitFeatureAppealPoint2": {
-    "description": ""
-  },
-  "alarmKitFeatureAppealPoint3": "iOS 26 और उसके बाद — सेटिंग्स टैब से सक्षम करें",
-  "@alarmKitFeatureAppealPoint3": {
-    "description": ""
-  },
-  "todayPillNumberFeatureAppealPoint1": "निःशुल्क नंबर मिलान सुविधा",
-  "@todayPillNumberFeatureAppealPoint1": {
-    "description": ""
-  },
-  "todayPillNumberFeatureAppealPoint2": "सेटिंग्स टैब से बदला जा सकता है",
-  "@todayPillNumberFeatureAppealPoint2": {
-    "description": ""
-  },
-  "todayPillNumberFeatureAppealPoint3": "होम के नंबर टैप से भी खोलें",
-  "@todayPillNumberFeatureAppealPoint3": {
-    "description": ""
-  },
-  "restDurationFeatureAppealPoint1": "पिल ब्रेक का निःशुल्क रिकॉर्ड",
-  "@restDurationFeatureAppealPoint1": {
-    "description": ""
-  },
-  "restDurationFeatureAppealPoint2": "पिल शीट के ऊपर-दाएँ कॉग आइकन से शुरू करें",
-  "@restDurationFeatureAppealPoint2": {
-    "description": ""
-  },
-  "restDurationFeatureAppealPoint3": "माहवारी का संपादन और फिर से शुरू करना भी आसान है",
-  "@restDurationFeatureAppealPoint3": {
-    "description": ""
-  },
   "lifetimePurchaseNotice2": "सदस्यता प्रबंधित करें",
-  "@lifetimePurchaseNotice2": {
-    "description": "サブスクリプション管理ページへのリンクテキスト"
-  },
-  "midnightTakenWarningDialogBody": "{takenDate} तक की गोलियां सेवन के रूप में दर्ज हो चुकी हैं। आज ({takenDate}) के {reminderTimes} बजे की सूचना आपको नहीं मिलेगी।\nअगर यह गलती से हुआ है, तो कृपया सेवन रद्द करें।",
-  "midnightTakenWarningDialogNeverShowAgain": "दोबारा न दिखाएं",
-  "midnightTakenWarningDialogSeeHowToRevert": "सेवन रद्द करने का तरीका देखें",
-  "midnightTakenWarningDialogTitle": "कृपया ध्यान दें",
+  "lifetimePurchaseNotice3": "कृपया खरीदने से पहले अपनी मौजूदा सदस्यता रद्द कर लें।",
+  "featureAppealTryFeature": "इसे आज़माएँ",
+  "recommendSignupGeneralTitle": "खाता बनाएं",
+  "recommendSignupGeneralDescription": "रजिस्टर करने पर आपका डेटा बैकअप किया जा सकेगा।",
+  "criticalAlertFeatureAppealTitle": "साइलेंट मोड में भी सूचना पाएं",
+  "criticalAlertFeatureAppealShortDescription": "डू नॉट डिस्टर्ब मोड में भी दवा लेना न भूलें",
+  "criticalAlertFeatureAppealHeadline": "साइलेंट मोड में भी सूचनाएँ प्राप्त होंगी",
+  "criticalAlertFeatureAppealBody": "Critical Alert सक्रिय करने पर, आप डू नॉट डिस्टर्ब (Do Not Disturb) या साइलेंट मोड में होने पर भी पिल लेने की सूचनाएँ प्राप्त कर पाएँगे। महत्वपूर्ण पिल लेने के समय न चूकने के लिए, कृपया इसे सक्षम करें।",
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "सूचना संदेश अनुकूलित करें",
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "आप सूचनाओं के संदेशों को अनुकूलित कर सकते हैं।",
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "दवा लेने के रिमाइंडर संदेश को अपनी इच्छानुसार संपादित करें",
+  "reminderNotificationCustomizeWordFeatureAppealBody": "आप \"पिल लेने का समय है\" जैसे डिफ़ॉल्ट संदेश को अपनी पसंद के शब्दों से कस्टमाइज़ कर सकते हैं। प्रेरणादायी वाक्य या पालतू के नाम जैसे व्यक्तिगत संदेश चुनें ताकि रोज़ाना दवा लेना और भी मजेदार हो सके।",
+  "appearanceModeDateFeatureAppealTitle": "पिल शीट पर तारीखें दिखाएँ",
+  "appearanceModeDateFeatureAppealShortDescription": "एक नज़र में जानें कब लेना है",
+  "appearanceModeDateFeatureAppealHeadline": "पिल शीट पर तारीखें दिखाएँ",
+  "appearanceModeDateFeatureAppealBody": "पिल शीट के हर ख़ाने में तारीख दिखाकर, आप पिछले सेवन के रिकॉर्ड और आने वाले सेवन की योजना को एक नज़र में देख सकते हैं। अपनी पसंद के अनुसार \"संख्या\" मोड और \"तारीख\" मोड के बीच स्विच करें।",
+  "recordPillFeatureAppealTitle": "दवा लेने के रिकॉर्ड को आसानी से देखें",
+  "recordPillFeatureAppealShortDescription": "कब लिया था यह तुरंत पता चलता है",
+  "recordPillFeatureAppealHeadline": "होम स्क्रीन से पिल का सेवन रिकॉर्ड करें",
+  "recordPillFeatureAppealBody": "होम स्क्रीन पर पिल शीट को सिर्फ टैप करने भर से आप उसी दिन की दवा लेने का रिकॉर्ड रख सकते हैं। गलती से रिकॉर्ड हो गया हो तो फिर से टैप करके उसे रद्द किया जा सकता है। दवा के रिकॉर्ड आप बाद में भी देख सकते हैं, इसलिए आप निश्चिंत होकर इसका उपयोग जारी रख सकते हैं।",
+  "menstruationFeatureAppealTitle": "पीरियड को रिकॉर्ड करें और अनुमान लगाएं",
+  "menstruationFeatureAppealShortDescription": "मासिक धर्म की शुरुआत की तारीख दर्ज करें और अपने चक्र को समझें",
+  "menstruationFeatureAppealHeadline": "आप पीरियड को रिकॉर्ड कर सकते हैं और उसका अनुमान लगा सकते हैं",
+  "menstruationFeatureAppealBody": "पीरियड शुरू होने पर बस उसे रिकॉर्ड करें — आप पिछले पीरियड का इतिहास सूचीबद्ध रूप में देख सकते हैं। अगली अनुमानित पीरियड तारीखें भी स्वचालित रूप से अनुमानित की जाती हैं, ताकि आप बेहतर तरीके से योजना बना सकें।",
+  "calendarDiaryFeatureAppealTitle": "कैलेंडर में अपना स्वास्थ्य रिकॉर्ड करें",
+  "calendarDiaryFeatureAppealShortDescription": "अपनी रोज़ाना की सेहत कैलेंडर में दर्ज करें",
+  "calendarDiaryFeatureAppealHeadline": "दैनिक स्वास्थ्य को कैलेंडर में रिकॉर्ड करें",
+  "calendarDiaryFeatureAppealBody": "कैलेंडर में किसी तारीख़ को टैप करके आप अपनी सेहत, मूड और लक्षण आदि दर्ज कर सकते हैं। आप इन्हें दवा लेने के रिकॉर्ड और मासिक धर्म के रिकॉर्ड के साथ एक साथ देख सकते हैं, जिससे अपने शरीर के चक्र को समझना आसान हो जाता है।",
+  "futureScheduleFeatureAppealTitle": "अपनी भविष्य की योजनाएँ लिखें",
+  "futureScheduleFeatureAppealShortDescription": "आने वाली नियुक्तियाँ और अन्य भविष्य की योजनाएँ प्रबंधित करें",
+  "futureScheduleFeatureAppealHeadline": "कैलेंडर में भविष्य की योजनाओं को रिकॉर्ड करें",
+  "futureScheduleFeatureAppealBody": "आप चिकित्सकीय अपॉइंटमेंट या यात्रा जैसी आने वाली योजनाओं को कैलेंडर में दर्ज कर सकते हैं। यह पिल के सेवन चक्र के साथ एक साथ दिखता है, जिससे आप मासिक धर्म की संभावित तिथियों को ध्यान में रखते हुए योजनाएँ बना सकते हैं।",
+  "healthCareIntegrationFeatureAppealTitle": "हेल्थकेयर से कनेक्ट",
+  "healthCareIntegrationFeatureAppealShortDescription": "मासिक चक्र के रिकॉर्ड को स्वास्थ्य ऐप के साथ साझा करें",
+  "healthCareIntegrationFeatureAppealHeadline": "हेल्थकेयर के साथ जुड़ सकता है",
+  "healthCareIntegrationFeatureAppealBody": "Pilll में दर्ज आपके मासिक धर्म डेटा को हेल्थ ऐप के साथ स्वचालित रूप से सिंक किया जा सकता है। आप इसे हेल्थ ऐप में अन्य स्वास्थ्य डेटा के साथ देख सकते हैं, और अन्य ऐप्स में भी मासिक धर्म डेटा का उपयोग कर पाएँगे।",
+  "quickRecordFeatureAppealTitle": "नोटिफिकेशन से सीधे दवा लेने का रिकॉर्ड",
+  "quickRecordFeatureAppealShortDescription": "ऐप खोले बिना नोटिफिकेशन पर रिकॉर्ड करें",
+  "quickRecordFeatureAppealHeadline": "नोटिफिकेशन स्क्रीन पर एक-टैप में सेवन दर्ज करें",
+  "quickRecordFeatureAppealBody": "रिमाइंडर नोटिफिकेशन को लंबा दबाने पर \"दवा ली\" क्रिया दिखाई देती है, जिससे आप ऐप खोले बिना दवा लेने को रिकॉर्ड कर सकते हैं।",
+  "creatingNewPillSheetFeatureAppealTitle": "पिल शीट स्वचालित रूप से जोड़ें",
+  "creatingNewPillSheetFeatureAppealShortDescription": "अगली शीट अपने आप बन जाती है",
+  "creatingNewPillSheetFeatureAppealHeadline": "अगली पिल शीट को स्वचालित रूप से बनाएं",
+  "creatingNewPillSheetFeatureAppealBody": "वर्तमान पिल शीट समूह खत्म होने पर नया पिल शीट समूह स्वचालित रूप से बन जाएगा। इससे मैन्युअल रूप से स्विच करने की आवश्यकता नहीं रहती और रिकॉर्ड छूटने की समस्या नहीं होती।",
+  "alarmKitFeatureAppealTitle": "घड़ी की तरह बजने वाला अलार्म",
+  "alarmKitFeatureAppealShortDescription": "साइलेंट में भी निश्चित रूप से बजने वाली सूचनाएं",
+  "alarmKitFeatureAppealHeadline": "घड़ी की तरह दवा लेने की याद दिलाने वाला अलार्म",
+  "alarmKitFeatureAppealBody": "iOS 26 और उसके बाद के संस्करणों में उपलब्ध AlarmKit का उपयोग करके, साइलेंट मोड और फोकस मोड में भी निश्चित रूप से बजे वाले अलार्म के जरिए पिल लेने की याद दिलाता है।",
+  "todayPillNumberFeatureAppealTitle": "आज की गोली का नंबर सही करें",
+  "todayPillNumberFeatureAppealShortDescription": "यदि संख्या गड़बड़ा गई है तो सेटिंग्स में जाकर ठीक करें",
+  "todayPillNumberFeatureAppealHeadline": "आज लेने वाली गोली का नंबर बदल सकते हैं",
+  "todayPillNumberFeatureAppealBody": "यदि आप दवा लेना भूल जाते हैं या गलती से दूसरी गोली ले लेते हैं जिससे पिल शीट पर संख्या और वास्तविक सेवन मेल नहीं खाते, तो आप आज की लेने वाली गोली का नंबर मैन्युअल रूप से समायोजित कर सकते हैं। होम स्क्रीन पर पिल नंबर दिखाने वाले हिस्से से भी आप वही स्क्रीन खोल सकते हैं।",
+  "restDurationFeatureAppealTitle": "दवा न लेने की अवधि दर्ज करें",
+  "restDurationFeatureAppealShortDescription": "दवा के सेवन में ब्रेक और रुकावटों को सटीक रूप से प्रबंधित करें",
+  "restDurationFeatureAppealHeadline": "पिल का सेवन रोकें",
+  "restDurationFeatureAppealBody": "आप कुछ समय के लिए दवा लेना रोकने की अवधि को पिल शीट में रिकॉर्ड कर सकते हैं। रुकने के दौरान खुराक की गिनती आगे नहीं बढ़ेगी, और फिर से शुरू करने पर रिकॉर्डिंग तुरंत दोबारा चालू हो जाएगी।",
+  "featureAppealLocationLabel": "ऐप के भीतर का स्थान",
+  "criticalAlertFeatureAppealPoint1": "फोकस मोड में भी सूचनाएँ मिलेंगी",
+  "criticalAlertFeatureAppealPoint2": "निश्चित समय पर याद दिलाना",
+  "criticalAlertFeatureAppealPoint3": "एक टैप में आसान सेटअप",
+  "reminderNotificationCustomizeWordFeatureAppealPoint1": "नोटिफिकेशन संदेश को अपनी इच्छानुसार संपादित करें",
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "दैनिक रिमाइंडरों में प्रतिबिंबित करें",
+  "reminderNotificationCustomizeWordFeatureAppealPoint3": "अपना निजी नोटिफिकेशन संदेश सेट करें",
+  "appearanceModeDateFeatureAppealPoint1": "पिल शीट को तारीख के अनुसार प्रदर्शित करें",
+  "appearanceModeDateFeatureAppealPoint2": "कैलेंडर देखे बिना भी तारीख पता चलती है",
+  "appearanceModeDateFeatureAppealPoint3": "पिल शीट सेटिंग्स से बदला जा सकता है",
+  "recordPillFeatureAppealPoint1": "पिल शीट पर टैप करके सेवन दर्ज करें",
+  "recordPillFeatureAppealPoint2": "गलती होने पर भी आसान रद्द करें",
+  "recordPillFeatureAppealPoint3": "कभी भी दवा सेवन का इतिहास देखें",
+  "menstruationFeatureAppealPoint1": "माहवारी की शुरुआत की तारीख को आसानी से दर्ज करें",
+  "menstruationFeatureAppealPoint2": "चक्रों का स्वचालित पता लगाना",
+  "menstruationFeatureAppealPoint3": "सेटिंग्स को कस्टमाइज़ करें",
+  "calendarDiaryFeatureAppealPoint1": "कैलेंडर में रिकॉर्ड देखें",
+  "calendarDiaryFeatureAppealPoint2": "हिंदी अनुवाद",
+  "calendarDiaryFeatureAppealPoint3": "कैलेंडर पर पिछले रिकॉर्ड देखें",
+  "calendarDiaryFeatureAppealLocationHint": "तिथि पर टैप करके अपनी स्थिति दर्ज करें",
+  "futureScheduleFeatureAppealPoint1": "कैलेंडर में कार्यक्रम जोड़ें",
+  "futureScheduleFeatureAppealPoint2": "क्लिनिक जाने के दिनों का प्रबंधन आसान बनाएं",
+  "futureScheduleFeatureAppealPoint3": "रिमाइंडर द्वारा सूचित करें",
+  "futureScheduleFeatureAppealLocationHint": "तारीख पर टैप करके अपनी योजना लिखें",
+  "healthCareIntegrationFeatureAppealPoint1": "मासिक धर्म रिकॉर्ड को स्वचालित रूप से समक्रमित करें",
+  "healthCareIntegrationFeatureAppealPoint2": "हेल्थ ऐप के साथ सिंक करें",
+  "healthCareIntegrationFeatureAppealPoint3": "Apple Health के साथ संगत",
+  "quickRecordFeatureAppealPoint1": "नोटिफिकेशन की क्रिया से सेवन दर्ज करें",
+  "quickRecordFeatureAppealPoint2": "ऐप खोले बिना पूरा करें",
+  "quickRecordFeatureAppealPoint3": "प्रीमियम सदस्यता लेने पर तुरंत उपयोग कर सकते हैं",
+  "creatingNewPillSheetFeatureAppealPoint1": "पिल शीट समाप्त होने पर स्वचालित रूप से बदलें",
+  "creatingNewPillSheetFeatureAppealPoint2": "मैन्युअल रूप से बनाना आवश्यक नहीं है",
+  "creatingNewPillSheetFeatureAppealPoint3": "सेटिंग्स टैब के स्विच से बदलें",
+  "alarmKitFeatureAppealPoint1": "साइलेंट/फोकस मोड में भी बजेगा",
+  "alarmKitFeatureAppealPoint2": "घड़ी जैसी अलार्म ध्वनि",
+  "alarmKitFeatureAppealPoint3": "iOS 26 और उसके बाद — सेटिंग्स टैब से सक्षम करें",
+  "todayPillNumberFeatureAppealPoint1": "निःशुल्क नंबर मिलान सुविधा",
+  "todayPillNumberFeatureAppealPoint2": "सेटिंग्स टैब से बदला जा सकता है",
+  "todayPillNumberFeatureAppealPoint3": "होम के नंबर टैप से भी खोलें",
+  "restDurationFeatureAppealPoint1": "पिल ब्रेक का निःशुल्क रिकॉर्ड",
+  "restDurationFeatureAppealPoint2": "पिल शीट के ऊपर-दाएँ कॉग आइकन से शुरू करें",
+  "restDurationFeatureAppealPoint3": "माहवारी का संपादन और फिर से शुरू करना भी आसान है",
   "endedPillSheetDialogHistoryTitle": "क्या आप अपनी पिल लेने का इतिहास देखना चाहती हैं?",
-  "@endedPillSheetDialogHistoryTitle": {
-    "description": ""
-  },
   "endedPillSheetDialogSummaryTitle": "आइए इस पिल शीट पर नज़र डालें",
-  "@endedPillSheetDialogSummaryTitle": {
-    "description": ""
-  },
   "endedPillSheetDialogSummaryMessage": "{recordedDays} दिन दर्ज हुए, {missedDays} दिन छूट गए",
-  "@endedPillSheetDialogSummaryMessage": {
-    "description": "",
-    "placeholders": {
-      "recordedDays": {
-        "type": "int"
-      },
-      "missedDays": {
-        "type": "int"
-      }
-    }
-  },
+  "midnightTakenWarningDialogTitle": "कृपया ध्यान दें",
+  "midnightTakenWarningDialogBody": "{takenDate} तक की गोलियां सेवन के रूप में दर्ज हो चुकी हैं। आज ({takenDate}) के {reminderTimes} बजे की सूचना आपको नहीं मिलेगी।\nअगर यह गलती से हुआ है, तो कृपया सेवन रद्द करें।",
+  "midnightTakenWarningDialogSeeHowToRevert": "सेवन रद्द करने का तरीका देखें",
+  "midnightTakenWarningDialogNeverShowAgain": "दोबारा न दिखाएं",
   "pauseStartDateMustBeOnOrBefore": "कृपया {date} या उससे पहले की विराम शुरुआत तिथि चुनें",
-  "@pauseStartDateMustBeOnOrBefore": {
-    "description": "",
-    "placeholders": {
-      "date": {
-        "type": "String"
-      }
-    }
-  }
+  "addPausePeriod": "सेवन विराम अवधि जोड़ें"
 }
