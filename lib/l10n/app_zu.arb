@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Ungaphinde ukhombise lokhu",
   "pauseStartDateMustBeOnOrBefore": "Sicela ukhethe usuku lokuqala kwekhefu ngo-{date} noma ngaphambili",
   "addPausePeriod": "Engeza isikhathi sekhefu sokuphuza",
-  "addedPausePeriod": "Isikhathi sekhefu lokuphuza sengeziwe"
+  "addedPausePeriod": "Isikhathi sekhefu lokuphuza sengeziwe",
+  "pausePeriodOverlapsOther": "Isikhathi esidlana nesinye isikhathi sekhefu lokuthatha asikwazi ukukhethwa"
 }

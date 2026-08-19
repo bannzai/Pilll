@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "عدم العرض مرة أخرى",
   "pauseStartDateMustBeOnOrBefore": "يرجى اختيار تاريخ بدء الاستراحة في {date} أو قبله",
   "addPausePeriod": "إضافة فترة التوقف عن الاستخدام",
-  "addedPausePeriod": "تمت إضافة فترة التوقف عن تناول الحبوب"
+  "addedPausePeriod": "تمت إضافة فترة التوقف عن تناول الحبوب",
+  "pausePeriodOverlapsOther": "لا يمكن تحديد فترة تتداخل مع فترة إيقاف أخرى"
 }

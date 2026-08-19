@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Jangan tampilkan lagi",
   "pauseStartDateMustBeOnOrBefore": "Pilih tanggal mulai jeda pada {date} atau sebelumnya",
   "addPausePeriod": "Tambahkan periode jeda minum",
-  "addedPausePeriod": "Periode jeda minum telah ditambahkan"
+  "addedPausePeriod": "Periode jeda minum telah ditambahkan",
+  "pausePeriodOverlapsOther": "Periode yang tumpang tindih dengan periode jeda konsumsi lain tidak dapat dipilih"
 }

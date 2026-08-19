@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Nie pokazuj ponownie",
   "pauseStartDateMustBeOnOrBefore": "Wybierz datę rozpoczęcia przerwy {date} lub wcześniejszą",
   "addPausePeriod": "Dodaj okres przerwy w przyjmowaniu",
-  "addedPausePeriod": "Dodano okres przerwy w przyjmowaniu"
+  "addedPausePeriod": "Dodano okres przerwy w przyjmowaniu",
+  "pausePeriodOverlapsOther": "Nie można wybrać okresu, który nakłada się na inny okres przerwy w przyjmowaniu"
 }

@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Більше не показувати",
   "pauseStartDateMustBeOnOrBefore": "Виберіть дату початку перерви {date} або раніше",
   "addPausePeriod": "Додати період перерви в прийомі",
-  "addedPausePeriod": "Додано період перерви в прийомі"
+  "addedPausePeriod": "Додано період перерви в прийомі",
+  "pausePeriodOverlapsOther": "Не можна вибрати період, який перетинається з іншим періодом перерви в прийомі"
 }

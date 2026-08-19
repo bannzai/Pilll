@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "మళ్లీ చూపించవద్దు",
   "pauseStartDateMustBeOnOrBefore": "దయచేసి {date} లేదా అంతకు ముందు విరామ ప్రారంభ తేదీని ఎంచుకోండి",
   "addPausePeriod": "తీసుకునే విరామ వ్యవధిని జోడించండి",
-  "addedPausePeriod": "సేవన విరామ కాలం జోడించబడింది"
+  "addedPausePeriod": "సేవన విరామ కాలం జోడించబడింది",
+  "pausePeriodOverlapsOther": "మరొక తీసుకునే విరామ కాలంతో పొరపడే కాలాన్ని ఎంచుకోలేరు"
 }

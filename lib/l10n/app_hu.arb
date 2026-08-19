@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Ne jelenjen meg többé",
   "pauseStartDateMustBeOnOrBefore": "Válassz {date} vagy korábbi szünetkezdő dátumot",
   "addPausePeriod": "Szedési szünet időszakának hozzáadása",
-  "addedPausePeriod": "Hozzáadtuk a szedési szünet időszakát"
+  "addedPausePeriod": "Hozzáadtuk a szedési szünet időszakát",
+  "pausePeriodOverlapsOther": "Nem választható ki olyan időszak, amely átfedésben van egy másik szedési szünettel"
 }

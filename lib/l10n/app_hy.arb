@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Այլևս երբեք չցուցադրել",
   "pauseStartDateMustBeOnOrBefore": "Խնդրում ենք ընտրել դադարի մեկնարկի ամսաթիվ {date}-ը կամ ավելի վաղ",
   "addPausePeriod": "Ավելացնել ընդունման դադարային շրջան",
-  "addedPausePeriod": "Ընդունման ընդմիջման շրջանը ավելացվել է"
+  "addedPausePeriod": "Ընդունման ընդմիջման շրջանը ավելացվել է",
+  "pausePeriodOverlapsOther": "Չի կարելի ընտրել այնպիսի ժամանակահատված, որը համընկնում է ընդունման այլ դադարի ժամանակահատվածի հետ"
 }

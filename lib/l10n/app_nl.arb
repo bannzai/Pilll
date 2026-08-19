@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Niet meer tonen",
   "pauseStartDateMustBeOnOrBefore": "Kies een startdatum van de pauze op {date} of eerder",
   "addPausePeriod": "Pauzeperiode toevoegen",
-  "addedPausePeriod": "De pauzeperiode voor inname is toegevoegd"
+  "addedPausePeriod": "De pauzeperiode voor inname is toegevoegd",
+  "pausePeriodOverlapsOther": "Je kunt geen periode selecteren die overlapt met een andere innamepauze"
 }

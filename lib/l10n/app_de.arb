@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Nicht mehr anzeigen",
   "pauseStartDateMustBeOnOrBefore": "Bitte wähle ein Startdatum der Pause am {date} oder davor",
   "addPausePeriod": "Einnahmepause hinzufügen",
-  "addedPausePeriod": "Die Einnahmepause wurde hinzugefügt"
+  "addedPausePeriod": "Die Einnahmepause wurde hinzugefügt",
+  "pausePeriodOverlapsOther": "Ein Zeitraum, der sich mit einem anderen Einnahmepausen-Zeitraum überschneidet, kann nicht ausgewählt werden"
 }

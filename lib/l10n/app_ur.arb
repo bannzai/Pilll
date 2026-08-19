@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "دوبارہ نہ دکھائیں",
   "pauseStartDateMustBeOnOrBefore": "براہ کرم {date} یا اس سے پہلے کی وقفہ شروع کرنے کی تاریخ منتخب کریں",
   "addPausePeriod": "لینے کے وقفے کی مدت شامل کریں",
-  "addedPausePeriod": "استعمال کے وقفے کی مدت شامل کر دی گئی ہے"
+  "addedPausePeriod": "استعمال کے وقفے کی مدت شامل کر دی گئی ہے",
+  "pausePeriodOverlapsOther": "کسی اور لینے کے وقفے کی مدت کے ساتھ اوورلیپ ہونے والی مدت منتخب نہیں کی جا سکتی"
 }

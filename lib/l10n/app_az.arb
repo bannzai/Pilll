@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Bir daha göstərmə",
   "pauseStartDateMustBeOnOrBefore": "Zəhmət olmasa fasilənin başlama tarixini {date} və ya ondan əvvəl seçin",
   "addPausePeriod": "Qəbul fasiləsi müddəti əlavə et",
-  "addedPausePeriod": "Qəbul fasiləsi müddəti əlavə olundu"
+  "addedPausePeriod": "Qəbul fasiləsi müddəti əlavə olundu",
+  "pausePeriodOverlapsOther": "Başqa qəbul fasiləsi dövrü ilə üst-üstə düşən dövrü seçmək olmaz"
 }

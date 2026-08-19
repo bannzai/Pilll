@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "აღარ მაჩვენო ეს",
   "pauseStartDateMustBeOnOrBefore": "გთხოვთ, აირჩიოთ შესვენების დაწყების თარიღი {date} ან უფრო ადრე",
   "addPausePeriod": "მიღების შესვენების პერიოდის დამატება",
-  "addedPausePeriod": "მიღების შესვენების პერიოდი დაემატა"
+  "addedPausePeriod": "მიღების შესვენების პერიოდი დაემატა",
+  "pausePeriodOverlapsOther": "სხვა მიღების შესვენების პერიოდთან გადაფარვის მქონე პერიოდის არჩევა შეუძლებელია"
 }

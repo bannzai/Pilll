@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Дахин бүү харуул",
   "pauseStartDateMustBeOnOrBefore": "Завсарлагын эхлэх огноог {date} буюу түүнээс өмнө сонгоно уу",
   "addPausePeriod": "Уух завсарлагааны хугацаа нэмэх",
-  "addedPausePeriod": "Уух завсарлагааны хугацаа нэмлээ"
+  "addedPausePeriod": "Уух завсарлагааны хугацаа нэмлээ",
+  "pausePeriodOverlapsOther": "Өөр уух завсарлагын хугацаатай давхцсан хугацааг сонгох боломжгүй"
 }

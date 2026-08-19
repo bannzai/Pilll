@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Bir daha gösterme",
   "pauseStartDateMustBeOnOrBefore": "Lütfen ara başlangıç tarihini {date} veya öncesi olarak seçin",
   "addPausePeriod": "Kullanım ara verme süresi ekle",
-  "addedPausePeriod": "Alım arası süresi eklendi"
+  "addedPausePeriod": "Alım arası süresi eklendi",
+  "pausePeriodOverlapsOther": "Başka bir kullanım arası dönemiyle çakışan bir dönem seçilemez"
 }

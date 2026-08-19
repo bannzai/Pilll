@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Экинчи көрсөтпөө",
   "pauseStartDateMustBeOnOrBefore": "Тыныгуунун башталуу күнүн {date} же андан мурун тандаңыз",
   "addPausePeriod": "Ичүү тыныгуу мезгилин кошуу",
-  "addedPausePeriod": "Ичүү тыныгуу мөөнөтү кошулду"
+  "addedPausePeriod": "Ичүү тыныгуу мөөнөтү кошулду",
+  "pausePeriodOverlapsOther": "Башка ичүүнү токтотуу мөөнөтү менен дал келген мөөнөттү тандап болбойт"
 }

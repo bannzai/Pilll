@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Ne prikaži več",
   "pauseStartDateMustBeOnOrBefore": "Izberite datum začetka premora {date} ali prej",
   "addPausePeriod": "Dodaj obdobje premora pri jemanju",
-  "addedPausePeriod": "Dodano je obdobje odmora pri jemanju"
+  "addedPausePeriod": "Dodano je obdobje odmora pri jemanju",
+  "pausePeriodOverlapsOther": "Ni mogoče izbrati obdobja, ki se prekriva z drugim obdobjem premora pri jemanju"
 }

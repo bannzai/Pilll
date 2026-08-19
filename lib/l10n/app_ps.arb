@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "دا نور مه ښکاره کوئ",
   "pauseStartDateMustBeOnOrBefore": "مهرباني وکړئ د وقفې د پیل نېټه {date} یا له هغې مخکې وټاکئ",
   "addPausePeriod": "د اخیستو د وقفې موده اضافه کړئ",
-  "addedPausePeriod": "د کارونې د وقفې موده اضافه شوه"
+  "addedPausePeriod": "د کارونې د وقفې موده اضافه شوه",
+  "pausePeriodOverlapsOther": "له بلې د اخيستلو د وقفې مودې سره يوځای کېدونکې موده نه شي ټاکل کېدای"
 }

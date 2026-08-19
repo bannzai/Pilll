@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "இதை மீண்டும் காட்ட வேண்டாம்",
   "pauseStartDateMustBeOnOrBefore": "தயவுசெய்து {date} அல்லது அதற்கு முந்தைய இடைவேளை தொடக்க தேதியைத் தேர்ந்தெடுக்கவும்",
   "addPausePeriod": "உட்கொள்ளும் இடைவேளை காலத்தைச் சேர்க்க",
-  "addedPausePeriod": "உட்கொள்ளும் இடைவேளை காலம் சேர்க்கப்பட்டது"
+  "addedPausePeriod": "உட்கொள்ளும் இடைவேளை காலம் சேர்க்கப்பட்டது",
+  "pausePeriodOverlapsOther": "மற்றொரு மருந்து இடைவேளை காலத்துடன் ஒத்துப்போகும் காலத்தைத் தேர்ந்தெடுக்க முடியாது"
 }

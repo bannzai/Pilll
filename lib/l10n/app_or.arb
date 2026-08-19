@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "ଏହା ଆଉ ଦେଖାନ୍ତୁ ନାହିଁ",
   "pauseStartDateMustBeOnOrBefore": "ଦୟାକରି {date} କିମ୍ବା ତା ପୂର୍ବର ବିରତି ଆରମ୍ଭ ତାରିଖ ବାଛନ୍ତୁ",
   "addPausePeriod": "ଗ୍ରହଣ ବିରତି ସମୟ ଯୋଡନ୍ତୁ",
-  "addedPausePeriod": "ସେବନ ବିରତି ସମୟସୀମା ଯୋଡ଼ାଗଲା"
+  "addedPausePeriod": "ସେବନ ବିରତି ସମୟସୀମା ଯୋଡ଼ାଗଲା",
+  "pausePeriodOverlapsOther": "ଅନ୍ୟ ଏକ ସେବନ ବିରତି ସମୟ ସହିତ ଓଭରଲ୍ୟାପ୍ ହେଉଥିବା ସମୟସୀମା ବାଛିହେବ ନାହିଁ"
 }

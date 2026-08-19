@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Ez erakutsi berriro",
   "pauseStartDateMustBeOnOrBefore": "Aukeratu atsedenaren hasiera-data {date} edo lehenago",
   "addPausePeriod": "Gehitu hartze-atsedenaldia",
-  "addedPausePeriod": "Hartzeko atsedenaldia gehitu da"
+  "addedPausePeriod": "Hartzeko atsedenaldia gehitu da",
+  "pausePeriodOverlapsOther": "Ezin da hautatu beste hartze-atseden aldi batekin gainjartzen den aldirik"
 }

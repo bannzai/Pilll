@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "ફરીથી બતાવશો નહીં",
   "pauseStartDateMustBeOnOrBefore": "કૃપા કરીને {date} અથવા તે પહેલાંની વિરામ શરૂઆતની તારીખ પસંદ કરો",
   "addPausePeriod": "લેવાની વિરામ અવધિ ઉમેરો",
-  "addedPausePeriod": "સેવન વિરામનો સમયગાળો ઉમેરાયો છે"
+  "addedPausePeriod": "સેવન વિરામનો સમયગાળો ઉમેરાયો છે",
+  "pausePeriodOverlapsOther": "બીજા લેવાની વિરામ અવધિ સાથે ઓવરલેપ થતો સમયગાળો પસંદ કરી શકાતો નથી"
 }

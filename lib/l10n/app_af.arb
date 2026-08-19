@@ -559,5 +559,6 @@
   "midnightTakenWarningDialogNeverShowAgain": "Moenie dit weer wys nie",
   "pauseStartDateMustBeOnOrBefore": "Kies 'n begindatum vir die ruskans op of voor {date}",
   "addPausePeriod": "Voeg pouseperiode by",
-  "addedPausePeriod": "Inname-pouseperiode is bygevoeg"
+  "addedPausePeriod": "Inname-pouseperiode is bygevoeg",
+  "pausePeriodOverlapsOther": "Periodes wat oorvleuel met 'n ander pouse-periode kan nie gekies word nie"
 }
