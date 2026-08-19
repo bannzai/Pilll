@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Se hur du ångrar en registrering",
   "midnightTakenWarningDialogNeverShowAgain": "Visa inte igen",
   "pauseStartDateMustBeOnOrBefore": "Välj ett startdatum för pausen {date} eller tidigare",
-  "addPausePeriod": "Lägg till uppehållsperiod",
-  "addedPausePeriod": "Pausperioden för intag har lagts till"
+  "addPausePeriod": "Lägg till uppehållsperiod"
 }

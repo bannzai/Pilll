@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "ସେବନ ବାତିଲ କରିବାର ବିଧି ଦେଖନ୍ତୁ",
   "midnightTakenWarningDialogNeverShowAgain": "ଏହା ଆଉ ଦେଖାନ୍ତୁ ନାହିଁ",
   "pauseStartDateMustBeOnOrBefore": "ଦୟାକରି {date} କିମ୍ବା ତା ପୂର୍ବର ବିରତି ଆରମ୍ଭ ତାରିଖ ବାଛନ୍ତୁ",
-  "addPausePeriod": "ସେବନ ବିରତି ସମୟ ଯୋଡନ୍ତୁ",
-  "addedPausePeriod": "ସେବନ ବିରତି ସମୟ ଯୋଡାଗଲା"
+  "addPausePeriod": "ସେବନ ବିରତି ସମୟ ଯୋଡନ୍ତୁ"
 }

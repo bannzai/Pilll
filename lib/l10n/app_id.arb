@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Lihat cara membatalkan catatan konsumsi",
   "midnightTakenWarningDialogNeverShowAgain": "Jangan tampilkan lagi",
   "pauseStartDateMustBeOnOrBefore": "Pilih tanggal mulai jeda pada {date} atau sebelumnya",
-  "addPausePeriod": "Tambahkan periode jeda minum",
-  "addedPausePeriod": "Periode jeda minum telah ditambahkan"
+  "addPausePeriod": "Tambahkan periode jeda minum"
 }

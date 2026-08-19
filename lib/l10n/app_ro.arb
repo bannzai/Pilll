@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Vezi cum să anulezi administrarea",
   "midnightTakenWarningDialogNeverShowAgain": "Nu mai afișa din nou",
   "pauseStartDateMustBeOnOrBefore": "Selectați o dată de început a pauzei pe {date} sau mai devreme",
-  "addPausePeriod": "Adaugă perioada de pauză la administrare",
-  "addedPausePeriod": "A fost adăugată perioada de pauză pentru administrare"
+  "addPausePeriod": "Adaugă perioada de pauză la administrare"
 }

@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Shiko si të anulosh regjistrimin e marrjes",
   "midnightTakenWarningDialogNeverShowAgain": "Mos e shfaq më",
   "pauseStartDateMustBeOnOrBefore": "Zgjidhni një datë fillimi të pushimit më {date} ose më herët",
-  "addPausePeriod": "Shto periudhën e pauzës së marrjes",
-  "addedPausePeriod": "U shtua periudha e pushimit të marrjes"
+  "addPausePeriod": "Shto periudhën e pauzës së marrjes"
 }

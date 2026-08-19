@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "خوراک منسوخ کرنے کا طریقہ دیکھیں",
   "midnightTakenWarningDialogNeverShowAgain": "دوبارہ نہ دکھائیں",
   "pauseStartDateMustBeOnOrBefore": "براہ کرم {date} یا اس سے پہلے کی وقفہ شروع کرنے کی تاریخ منتخب کریں",
-  "addPausePeriod": "استعمال کے وقفے کی مدت شامل کریں",
-  "addedPausePeriod": "استعمال کے وقفے کی مدت شامل کر دی گئی ہے"
+  "addPausePeriod": "استعمال کے وقفے کی مدت شامل کریں"
 }

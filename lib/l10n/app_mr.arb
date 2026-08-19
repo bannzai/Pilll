@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "सेवन रद्द करण्याची पद्धत पहा",
   "midnightTakenWarningDialogNeverShowAgain": "पुन्हा दाखवू नका",
   "pauseStartDateMustBeOnOrBefore": "कृपया {date} किंवा त्यापूर्वीची विश्रांती सुरू होण्याची तारीख निवडा",
-  "addPausePeriod": "घेण्याचा विराम कालावधी जोडा",
-  "addedPausePeriod": "घेण्याचा विश्रांती कालावधी जोडला आहे"
+  "addPausePeriod": "घेण्याचा विराम कालावधी जोडा"
 }

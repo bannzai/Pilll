@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Bekijk hoe u een inname-registratie ongedaan kunt maken",
   "midnightTakenWarningDialogNeverShowAgain": "Niet meer tonen",
   "pauseStartDateMustBeOnOrBefore": "Kies een startdatum van de pauze op {date} of eerder",
-  "addPausePeriod": "Pauzeperiode toevoegen",
-  "addedPausePeriod": "De pauzeperiode voor inname is toegevoegd"
+  "addPausePeriod": "Pauzeperiode toevoegen"
 }

@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Skatīt, kā atcelt lietošanas atzīmi",
   "midnightTakenWarningDialogNeverShowAgain": "Vairs nerādīt",
   "pauseStartDateMustBeOnOrBefore": "Lūdzu, izvēlieties pauzes sākuma datumu {date} vai agrāk",
-  "addPausePeriod": "Pievienot lietošanas pauzes periodu",
-  "addedPausePeriod": "Ir pievienots lietošanas pārtraukuma periods"
+  "addPausePeriod": "Pievienot lietošanas pauzes periodu"
 }

@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Qəbul qeydinin necə ləğv ediləcəyini görün",
   "midnightTakenWarningDialogNeverShowAgain": "Bir daha göstərmə",
   "pauseStartDateMustBeOnOrBefore": "Zəhmət olmasa fasilənin başlama tarixini {date} və ya ondan əvvəl seçin",
-  "addPausePeriod": "Qəbul fasiləsi müddətini əlavə et",
-  "addedPausePeriod": "Qəbul fasilə müddəti əlavə edildi"
+  "addPausePeriod": "Qəbul fasiləsi müddətini əlavə et"
 }

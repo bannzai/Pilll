@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "የመውሰድ መዝገብን እንዴት እንደሚሰርዙ ይመልከቱ",
   "midnightTakenWarningDialogNeverShowAgain": "እንደገና አያሳዩ",
   "pauseStartDateMustBeOnOrBefore": "እባክዎ የእረፍት መጀመሪያ ቀን {date} ወይም ከዚያ በፊት ይምረጡ",
-  "addPausePeriod": "የመውሰድ እረፍት ጊዜ ያክሉ",
-  "addedPausePeriod": "የመውሰድ ዕረፍት ጊዜ ተጨምሯል"
+  "addPausePeriod": "የመውሰድ እረፍት ጊዜ ያክሉ"
 }

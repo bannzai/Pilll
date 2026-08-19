@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "მიღების გაუქმების მეთოდი იხილეთ",
   "midnightTakenWarningDialogNeverShowAgain": "აღარ მაჩვენო ეს",
   "pauseStartDateMustBeOnOrBefore": "გთხოვთ, აირჩიოთ შესვენების დაწყების თარიღი {date} ან უფრო ადრე",
-  "addPausePeriod": "მიღების შესვენების პერიოდის დამატება",
-  "addedPausePeriod": "მიღების შესვენების პერიოდი დაემატა"
+  "addPausePeriod": "მიღების შესვენების პერიოდის დამატება"
 }

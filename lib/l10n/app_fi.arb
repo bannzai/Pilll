@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Katso, miten peruutat merkinnän",
   "midnightTakenWarningDialogNeverShowAgain": "Älä näytä tätä uudelleen",
   "pauseStartDateMustBeOnOrBefore": "Valitse tauon aloituspäivä {date} tai aiemmin",
-  "addPausePeriod": "Lisää taukokauden ajankohta",
-  "addedPausePeriod": "Taukojakso on lisätty"
+  "addPausePeriod": "Lisää taukokauden ajankohta"
 }

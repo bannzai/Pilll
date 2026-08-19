@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Вижте как да отмените записа за приема",
   "midnightTakenWarningDialogNeverShowAgain": "Не показвай отново",
   "pauseStartDateMustBeOnOrBefore": "Моля, изберете начална дата на паузата на {date} или по-рано",
-  "addPausePeriod": "Добавяне на период на почивка от приема",
-  "addedPausePeriod": "Периодът на почивка от приема беше добавен"
+  "addPausePeriod": "Добавяне на период на почивка от приема"
 }

@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Паглядзець, як скасаваць прыём",
   "midnightTakenWarningDialogNeverShowAgain": "Больш не паказваць",
   "pauseStartDateMustBeOnOrBefore": "Выберыце дату пачатку перапынку не пазней за {date}",
-  "addPausePeriod": "Дадаць перыяд перапынку ў прыёме",
-  "addedPausePeriod": "Перыяд перапынку ў прыёме дададзены"
+  "addPausePeriod": "Дадаць перыяд перапынку ў прыёме"
 }

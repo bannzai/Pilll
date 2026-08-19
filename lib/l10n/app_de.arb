@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Anleitung zum Stornieren der Einnahme ansehen",
   "midnightTakenWarningDialogNeverShowAgain": "Nicht mehr anzeigen",
   "pauseStartDateMustBeOnOrBefore": "Bitte wähle ein Startdatum der Pause am {date} oder davor",
-  "addPausePeriod": "Einnahmepause hinzufügen",
-  "addedPausePeriod": "Die Einnahmepause wurde hinzugefügt"
+  "addPausePeriod": "Einnahmepause hinzufügen"
 }

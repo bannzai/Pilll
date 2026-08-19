@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Gweld sut i ganslo cofnod cymryd",
   "midnightTakenWarningDialogNeverShowAgain": "Peidiwch â dangos hwn eto",
   "pauseStartDateMustBeOnOrBefore": "Dewiswch ddyddiad dechrau'r saib ar {date} neu cyn hynny",
-  "addPausePeriod": "Ychwanegu cyfnod seibiant o gymryd",
-  "addedPausePeriod": "Ychwanegwyd y cyfnod seibiant rhag cymryd"
+  "addPausePeriod": "Ychwanegu cyfnod seibiant o gymryd"
 }

@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "உட்கொள்ளுதலை ரத்து செய்யும் முறையைக் காண்க",
   "midnightTakenWarningDialogNeverShowAgain": "இதை மீண்டும் காட்ட வேண்டாம்",
   "pauseStartDateMustBeOnOrBefore": "தயவுசெய்து {date} அல்லது அதற்கு முந்தைய இடைவேளை தொடக்க தேதியைத் தேர்ந்தெடுக்கவும்",
-  "addPausePeriod": "சாப்பிடும் இடைவேளை காலத்தைச் சேர்க்கவும்",
-  "addedPausePeriod": "உட்கொள்ளும் இடைவெளிக் காலம் சேர்க்கப்பட்டது"
+  "addPausePeriod": "சாப்பிடும் இடைவேளை காலத்தைச் சேர்க்கவும்"
 }

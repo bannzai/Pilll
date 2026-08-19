@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Qabulni bekor qilish usulini ko'rish",
   "midnightTakenWarningDialogNeverShowAgain": "Boshqa ko'rsatmaslik",
   "pauseStartDateMustBeOnOrBefore": "Iltimos, tanaffus boshlanish sanasini {date} yoki undan oldin tanlang",
-  "addPausePeriod": "Qabul tanaffusi muddatini qo‘shish",
-  "addedPausePeriod": "Qabul qilish tanaffus davri qoʻshildi"
+  "addPausePeriod": "Qabul tanaffusi muddatini qo‘shish"
 }

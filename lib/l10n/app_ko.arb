@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "복용 취소 방법 보기",
   "midnightTakenWarningDialogNeverShowAgain": "다시 표시하지 않기",
   "pauseStartDateMustBeOnOrBefore": "복용 중단 시작일은 {date} 이전 날짜를 선택해 주세요",
-  "addPausePeriod": "복용 휴식 기간 추가",
-  "addedPausePeriod": "복용 휴식 기간이 추가되었습니다"
+  "addPausePeriod": "복용 휴식 기간 추가"
 }

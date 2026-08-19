@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Découvrez comment restaurer un enregistrement pris",
   "midnightTakenWarningDialogNeverShowAgain": "Ne montre plus ça",
   "pauseStartDateMustBeOnOrBefore": "Veuillez choisir une date de début de pause le {date} ou avant",
-  "addPausePeriod": "Ajouter une période de pause de prise",
-  "addedPausePeriod": "La période de pause de prise a été ajoutée"
+  "addPausePeriod": "Ajouter une période de pause de prise"
 }

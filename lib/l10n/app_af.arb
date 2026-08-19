@@ -558,6 +558,5 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Sien hoe om 'n innameaantekening terug te keer",
   "midnightTakenWarningDialogNeverShowAgain": "Moenie dit weer wys nie",
   "pauseStartDateMustBeOnOrBefore": "Kies 'n begindatum vir die ruskans op of voor {date}",
-  "addPausePeriod": "Voeg pouseperiode by",
-  "addedPausePeriod": "Die pouseperiode vir inname is bygevoeg"
+  "addPausePeriod": "Voeg pouseperiode by"
 }
