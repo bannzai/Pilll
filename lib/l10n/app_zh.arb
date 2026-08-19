@@ -559,6 +559,5 @@
   "midnightTakenWarningDialogNeverShowAgain": "不再提示",
   "pauseStartDateMustBeOnOrBefore": "请选择{date}或之前的日期作为停药开始日",
   "addPausePeriod": "添加服用休息期间",
-  "addedPausePeriod": "已添加服用休息期间",
-  "pausePeriodOverlapsOther": "无法选择与其他服用休息期间重叠的期间"
+  "addedPausePeriod": "已添加服用休息期间"
 }

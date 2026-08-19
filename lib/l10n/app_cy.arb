@@ -559,6 +559,5 @@
   "midnightTakenWarningDialogNeverShowAgain": "Peidiwch â dangos hwn eto",
   "pauseStartDateMustBeOnOrBefore": "Dewiswch ddyddiad dechrau'r saib ar {date} neu cyn hynny",
   "addPausePeriod": "Ychwanegu cyfnod seibiant o gymryd",
-  "addedPausePeriod": "Ychwanegwyd y cyfnod seibiant rhag cymryd",
-  "pausePeriodOverlapsOther": "Ni allwch ddewis cyfnod sy'n gorgyffwrdd â chyfnod seibiant arall."
+  "addedPausePeriod": "Ychwanegwyd y cyfnod seibiant rhag cymryd"
 }

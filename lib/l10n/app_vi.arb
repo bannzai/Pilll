@@ -559,6 +559,5 @@
   "midnightTakenWarningDialogNeverShowAgain": "Không hiển thị lại nữa",
   "pauseStartDateMustBeOnOrBefore": "Vui lòng chọn ngày bắt đầu tạm ngưng vào {date} hoặc trước đó",
   "addPausePeriod": "Thêm khoảng thời gian ngừng uống",
-  "addedPausePeriod": "Đã thêm thời gian nghỉ uống thuốc",
-  "pausePeriodOverlapsOther": "Không thể chọn khoảng thời gian chồng lấn với một khoảng tạm ngưng uống khác."
+  "addedPausePeriod": "Đã thêm thời gian nghỉ uống thuốc"
 }

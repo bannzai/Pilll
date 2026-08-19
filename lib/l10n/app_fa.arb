@@ -559,6 +559,5 @@
   "midnightTakenWarningDialogNeverShowAgain": "دیگر نمایش داده نشود",
   "pauseStartDateMustBeOnOrBefore": "لطفاً تاریخ شروع استراحت را {date} یا قبل از آن انتخاب کنید",
   "addPausePeriod": "افزودن دورهٔ وقفه در مصرف",
-  "addedPausePeriod": "دوره استراحت مصرف اضافه شد",
-  "pausePeriodOverlapsOther": "نمی‌توانید بازه‌ای را انتخاب کنید که با یک بازهٔ دیگرِ وقفهٔ مصرف هم‌پوشانی داشته باشد."
+  "addedPausePeriod": "دوره استراحت مصرف اضافه شد"
 }

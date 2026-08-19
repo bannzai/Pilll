@@ -559,6 +559,5 @@
   "midnightTakenWarningDialogNeverShowAgain": "Non mostrare più questo messaggio",
   "pauseStartDateMustBeOnOrBefore": "Seleziona una data di inizio pausa il {date} o prima",
   "addPausePeriod": "Aggiungi periodo di pausa nell’assunzione",
-  "addedPausePeriod": "È stato aggiunto il periodo di pausa dell’assunzione",
-  "pausePeriodOverlapsOther": "Non puoi selezionare un periodo che si sovrappone a un altro periodo di pausa di assunzione."
+  "addedPausePeriod": "È stato aggiunto il periodo di pausa dell’assunzione"
 }

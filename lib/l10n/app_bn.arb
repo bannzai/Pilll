@@ -559,6 +559,5 @@
   "midnightTakenWarningDialogNeverShowAgain": "আর দেখাবেন না",
   "pauseStartDateMustBeOnOrBefore": "অনুগ্রহ করে {date} বা তার আগের বিরতি শুরুর তারিখ নির্বাচন করুন",
   "addPausePeriod": "ওষুধ খাওয়ার বিরতির সময়কাল যোগ করুন",
-  "addedPausePeriod": "খাওয়া বন্ধের সময়কাল যোগ করা হয়েছে",
-  "pausePeriodOverlapsOther": "অন্য কোনো সেবন-বিরতির সময়ের সঙ্গে ওভারল্যাপ করে এমন সময় বেছে নেওয়া যায় না।"
+  "addedPausePeriod": "খাওয়া বন্ধের সময়কাল যোগ করা হয়েছে"
 }

@@ -559,6 +559,5 @@
   "midnightTakenWarningDialogNeverShowAgain": "Huwag nang ipakita muli",
   "pauseStartDateMustBeOnOrBefore": "Pumili ng start date ng pahinga sa {date} o mas maaga",
   "addPausePeriod": "Magdagdag ng panahon ng pahinga sa pag-inom",
-  "addedPausePeriod": "Naidagdag na ang panahon ng pahinga sa pag-inom",
-  "pausePeriodOverlapsOther": "Hindi puwedeng pumili ng panahong nagsasapawan sa ibang panahon ng pahinga sa pag-inom."
+  "addedPausePeriod": "Naidagdag na ang panahon ng pahinga sa pag-inom"
 }

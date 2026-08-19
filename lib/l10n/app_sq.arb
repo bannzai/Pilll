@@ -559,6 +559,5 @@
   "midnightTakenWarningDialogNeverShowAgain": "Mos e shfaq më",
   "pauseStartDateMustBeOnOrBefore": "Zgjidhni një datë fillimi të pushimit më {date} ose më herët",
   "addPausePeriod": "Shto periudhën e pauzës së marrjes",
-  "addedPausePeriod": "U shtua periudha e pushimit të marrjes",
-  "pausePeriodOverlapsOther": "Nuk mund të zgjidhni një periudhë që mbivendoset me një periudhë tjetër pushimi në marrje."
+  "addedPausePeriod": "U shtua periudha e pushimit të marrjes"
 }

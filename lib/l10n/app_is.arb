@@ -559,6 +559,5 @@
   "midnightTakenWarningDialogNeverShowAgain": "Ekki sýna þetta aftur",
   "pauseStartDateMustBeOnOrBefore": "Veldu upphafsdag hlés {date} eða fyrr",
   "addPausePeriod": "Bæta við hlédegi í notkun",
-  "addedPausePeriod": "Hlébil fyrir inntöku hefur verið bætt við",
-  "pausePeriodOverlapsOther": "Þú getur ekki valið tímabil sem skarast við annað hlé á töku."
+  "addedPausePeriod": "Hlébil fyrir inntöku hefur verið bætt við"
 }

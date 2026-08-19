@@ -559,6 +559,5 @@
   "midnightTakenWarningDialogNeverShowAgain": "Non mostrar isto de novo",
   "pauseStartDateMustBeOnOrBefore": "Selecciona unha data de inicio da pausa o {date} ou antes",
   "addPausePeriod": "Engadir período de pausa na toma",
-  "addedPausePeriod": "Engadiuse o período de descanso da toma",
-  "pausePeriodOverlapsOther": "Non podes seleccionar un período que se solape con outro período de pausa na toma."
+  "addedPausePeriod": "Engadiuse o período de descanso da toma"
 }

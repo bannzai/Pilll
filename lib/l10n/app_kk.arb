@@ -559,6 +559,5 @@
   "midnightTakenWarningDialogNeverShowAgain": "Қайта көрсетпеу",
   "pauseStartDateMustBeOnOrBefore": "Үзілістің басталу күнін {date} немесе одан бұрын таңдаңыз",
   "addPausePeriod": "Қабылдау үзіліс кезеңін қосу",
-  "addedPausePeriod": "Қабылдау үзіліс кезеңі қосылды",
-  "pausePeriodOverlapsOther": "Басқа қабылдауды тоқтату кезеңімен қабаттасатын кезеңді таңдауға болмайды."
+  "addedPausePeriod": "Қабылдау үзіліс кезеңі қосылды"
 }

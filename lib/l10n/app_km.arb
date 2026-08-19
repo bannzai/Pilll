@@ -559,6 +559,5 @@
   "midnightTakenWarningDialogNeverShowAgain": "កុំបង្ហាញម្តងទៀត",
   "pauseStartDateMustBeOnOrBefore": "សូមជ្រើសរើសកាលបរិច្ឆេទចាប់ផ្តើមសម្រាកនៅ {date} ឬមុននេះ",
   "addPausePeriod": "បន្ថែមរយៈពេលសម្រាកក្នុងការលេប",
-  "addedPausePeriod": "បានបន្ថែមរយៈពេលសម្រាកនៃការទទួលថ្នាំ",
-  "pausePeriodOverlapsOther": "អ្នកមិនអាចជ្រើសរើសរយៈពេលដែលត្រួតស៊ីគ្នាជាមួយរយៈពេលសម្រាកលេបផ្សេងទៀតបានទេ។"
+  "addedPausePeriod": "បានបន្ថែមរយៈពេលសម្រាកនៃការទទួលថ្នាំ"
 }

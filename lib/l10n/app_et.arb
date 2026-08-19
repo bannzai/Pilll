@@ -559,6 +559,5 @@
   "midnightTakenWarningDialogNeverShowAgain": "Ära näita seda enam",
   "pauseStartDateMustBeOnOrBefore": "Vali pausi alguskuupäev {date} või varasem",
   "addPausePeriod": "Lisa võtmise pausiperiood",
-  "addedPausePeriod": "Võtmise pausiperiood on lisatud",
-  "pausePeriodOverlapsOther": "Ei saa valida ajavahemikku, mis kattub mõne muu võtmispuhkuse perioodiga."
+  "addedPausePeriod": "Võtmise pausiperiood on lisatud"
 }

@@ -559,6 +559,5 @@
   "midnightTakenWarningDialogNeverShowAgain": "אל תציג הודעה זו שוב",
   "pauseStartDateMustBeOnOrBefore": "יש לבחור תאריך התחלת הפסקה ב-{date} או לפני כן",
   "addPausePeriod": "הוספת תקופת הפסקה בנטילה",
-  "addedPausePeriod": "נוספה תקופת ההפסקה בנטילה",
-  "pausePeriodOverlapsOther": "אי אפשר לבחור תקופה שחופפת לתקופת הפסקה אחרת של נטילה."
+  "addedPausePeriod": "נוספה תקופת ההפסקה בנטילה"
 }

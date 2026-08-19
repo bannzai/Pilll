@@ -559,6 +559,5 @@
   "midnightTakenWarningDialogNeverShowAgain": "Älä näytä tätä uudelleen",
   "pauseStartDateMustBeOnOrBefore": "Valitse tauon aloituspäivä {date} tai aiemmin",
   "addPausePeriod": "Lisää taukokauden ajankohta",
-  "addedPausePeriod": "Taukojakso on lisätty",
-  "pausePeriodOverlapsOther": "Et voi valita jaksoa, joka menee päällekkäin toisen taukojakson kanssa."
+  "addedPausePeriod": "Taukojakso on lisätty"
 }
