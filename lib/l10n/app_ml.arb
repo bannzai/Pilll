@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "സേവനം റദ്ദാക്കുന്ന വിധം കാണുക",
   "midnightTakenWarningDialogNeverShowAgain": "ഇനി ഇത് കാണിക്കരുത്",
   "pauseStartDateMustBeOnOrBefore": "ദയവായി {date} അല്ലെങ്കിൽ അതിന് മുമ്പുള്ള ഇടവേള ആരംഭ തീയതി തിരഞ്ഞെടുക്കുക",
-  "addPausePeriod": "കഴിക്കലിലെ ഇടവേളാ കാലയളവ് ചേർക്കുക"
+  "addPausePeriod": "കഴിക്കലിലെ ഇടവേളാ കാലയളവ് ചേർക്കുക",
+  "addedPausePeriod": "സേവന ഇടവേള കാലയളവ് ചേർത്തു"
 }

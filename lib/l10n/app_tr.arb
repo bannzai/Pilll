@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Alım kaydını geri alma yöntemini görüntüle",
   "midnightTakenWarningDialogNeverShowAgain": "Bir daha gösterme",
   "pauseStartDateMustBeOnOrBefore": "Lütfen ara başlangıç tarihini {date} veya öncesi olarak seçin",
-  "addPausePeriod": "Kullanım ara verme süresi ekle"
+  "addPausePeriod": "Kullanım ara verme süresi ekle",
+  "addedPausePeriod": "Alım arası süresi eklendi"
 }

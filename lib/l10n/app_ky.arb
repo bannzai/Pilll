@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Дары ичкенди жокко чыгаруу жолун көрүү",
   "midnightTakenWarningDialogNeverShowAgain": "Экинчи көрсөтпөө",
   "pauseStartDateMustBeOnOrBefore": "Тыныгуунун башталуу күнүн {date} же андан мурун тандаңыз",
-  "addPausePeriod": "Ичүү тыныгуу мезгилин кошуу"
+  "addPausePeriod": "Ичүү тыныгуу мезгилин кошуу",
+  "addedPausePeriod": "Ичүү тыныгуу мөөнөтү кошулду"
 }

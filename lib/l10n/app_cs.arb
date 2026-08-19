@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Zobrazit návod, jak zrušit záznam o užití",
   "midnightTakenWarningDialogNeverShowAgain": "Příště nezobrazovat",
   "pauseStartDateMustBeOnOrBefore": "Vyberte datum začátku pauzy {date} nebo dřívější",
-  "addPausePeriod": "Přidat období pauzy v užívání"
+  "addPausePeriod": "Přidat období pauzy v užívání",
+  "addedPausePeriod": "Období přestávky v užívání bylo přidáno"
 }

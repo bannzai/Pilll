@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Як скасувати запис про прийом",
   "midnightTakenWarningDialogNeverShowAgain": "Більше не показувати",
   "pauseStartDateMustBeOnOrBefore": "Виберіть дату початку перерви {date} або раніше",
-  "addPausePeriod": "Додати період перерви в прийомі"
+  "addPausePeriod": "Додати період перерви в прийомі",
+  "addedPausePeriod": "Додано період перерви в прийомі"
 }

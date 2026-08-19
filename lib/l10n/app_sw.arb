@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Ona jinsi ya kubatilisha rekodi ya kuchukua",
   "midnightTakenWarningDialogNeverShowAgain": "Usionyeshe tena",
   "pauseStartDateMustBeOnOrBefore": "Tafadhali chagua tarehe ya kuanza mapumziko {date} au kabla yake",
-  "addPausePeriod": "Ongeza kipindi cha mapumziko ya kumeza"
+  "addPausePeriod": "Ongeza kipindi cha mapumziko ya kumeza",
+  "addedPausePeriod": "Kipindi cha mapumziko ya kutumia kimeongezwa"
 }

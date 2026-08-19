@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Δείτε τον τρόπο ακύρωσης της καταγραφής λήψης",
   "midnightTakenWarningDialogNeverShowAgain": "Να μην εμφανιστεί ξανά",
   "pauseStartDateMustBeOnOrBefore": "Επιλέξτε ημερομηνία έναρξης της παύσης στις {date} ή νωρίτερα",
-  "addPausePeriod": "Προσθήκη περιόδου διακοπής λήψης"
+  "addPausePeriod": "Προσθήκη περιόδου διακοπής λήψης",
+  "addedPausePeriod": "Προστέθηκε περίοδος διακοπής λήψης"
 }

@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "查看取消服用记录的方法",
   "midnightTakenWarningDialogNeverShowAgain": "不再提示",
   "pauseStartDateMustBeOnOrBefore": "请选择{date}或之前的日期作为停药开始日",
-  "addPausePeriod": "添加服用休息期"
+  "addPausePeriod": "添加服用休息期",
+  "addedPausePeriod": "已添加服用休息期间"
 }

@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "સેવન રદ કરવાની રીત જુઓ",
   "midnightTakenWarningDialogNeverShowAgain": "ફરીથી બતાવશો નહીં",
   "pauseStartDateMustBeOnOrBefore": "કૃપા કરીને {date} અથવા તે પહેલાંની વિરામ શરૂઆતની તારીખ પસંદ કરો",
-  "addPausePeriod": "લેવાની વિરામ અવધિ ઉમેરો"
+  "addPausePeriod": "લેવાની વિરામ અવધિ ઉમેરો",
+  "addedPausePeriod": "સેવન વિરામનો સમયગાળો ઉમેરાયો છે"
 }

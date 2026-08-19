@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Уусан бүртгэлийг цуцлах аргыг үзэх",
   "midnightTakenWarningDialogNeverShowAgain": "Дахин бүү харуул",
   "pauseStartDateMustBeOnOrBefore": "Завсарлагын эхлэх огноог {date} буюу түүнээс өмнө сонгоно уу",
-  "addPausePeriod": "Уух завсарлагааны хугацаа нэмэх"
+  "addPausePeriod": "Уух завсарлагааны хугацаа нэмэх",
+  "addedPausePeriod": "Уух завсарлагааны хугацаа нэмлээ"
 }

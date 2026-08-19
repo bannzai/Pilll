@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Veure com cancel·lar un registre de presa",
   "midnightTakenWarningDialogNeverShowAgain": "No tornis a mostrar-ho",
   "pauseStartDateMustBeOnOrBefore": "Selecciona una data d'inici de la pausa el {date} o abans",
-  "addPausePeriod": "Afegeix un període de pausa de presa"
+  "addPausePeriod": "Afegeix un període de pausa de presa",
+  "addedPausePeriod": "S'ha afegit el període de descans de la presa"
 }

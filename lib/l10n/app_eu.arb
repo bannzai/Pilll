@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Hartzea ezeztatzeko modua ikusi",
   "midnightTakenWarningDialogNeverShowAgain": "Ez erakutsi berriro",
   "pauseStartDateMustBeOnOrBefore": "Aukeratu atsedenaren hasiera-data {date} edo lehenago",
-  "addPausePeriod": "Gehitu hartze-atsedenaldia"
+  "addPausePeriod": "Gehitu hartze-atsedenaldia",
+  "addedPausePeriod": "Hartzeko atsedenaldia gehitu da"
 }

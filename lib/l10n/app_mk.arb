@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Видете како да го откажете записот за земање",
   "midnightTakenWarningDialogNeverShowAgain": "Не прикажувај повторно",
   "pauseStartDateMustBeOnOrBefore": "Изберете датум на почеток на паузата на {date} или порано",
-  "addPausePeriod": "Додај период на пауза во земањето"
+  "addPausePeriod": "Додај период на пауза во земањето",
+  "addedPausePeriod": "Додаден е период на пауза од земање"
 }

@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "د اخیستلو ثبت د لغوه کولو طریقه وګورئ",
   "midnightTakenWarningDialogNeverShowAgain": "دا نور مه ښکاره کوئ",
   "pauseStartDateMustBeOnOrBefore": "مهرباني وکړئ د وقفې د پیل نېټه {date} یا له هغې مخکې وټاکئ",
-  "addPausePeriod": "د اخیستو د وقفې موده اضافه کړئ"
+  "addPausePeriod": "د اخیستو د وقفې موده اضافه کړئ",
+  "addedPausePeriod": "د کارونې د وقفې موده اضافه شوه"
 }

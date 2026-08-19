@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "לראות איך לבטל רישום נטילה",
   "midnightTakenWarningDialogNeverShowAgain": "אל תציג הודעה זו שוב",
   "pauseStartDateMustBeOnOrBefore": "יש לבחור תאריך התחלת הפסקה ב-{date} או לפני כן",
-  "addPausePeriod": "הוספת תקופת הפסקה בנטילה"
+  "addPausePeriod": "הוספת תקופת הפסקה בנטילה",
+  "addedPausePeriod": "נוספה תקופת הפסקה בנטילה"
 }

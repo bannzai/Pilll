@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Vaata, kuidas võtmiskirjet tühistada",
   "midnightTakenWarningDialogNeverShowAgain": "Ära näita seda enam",
   "pauseStartDateMustBeOnOrBefore": "Vali pausi alguskuupäev {date} või varasem",
-  "addPausePeriod": "Lisa kasutamispausi periood"
+  "addPausePeriod": "Lisa kasutamispausi periood",
+  "addedPausePeriod": "Võtmispaus on lisatud"
 }

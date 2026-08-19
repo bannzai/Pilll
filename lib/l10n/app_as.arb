@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "সেৱন বাতিলকৰণৰ পদ্ধতি চাওক",
   "midnightTakenWarningDialogNeverShowAgain": "পুনৰ নেদেখুৱাব",
   "pauseStartDateMustBeOnOrBefore": "অনুগ্ৰহ কৰি {date} বা তাৰ আগৰ বিৰতি আৰম্ভণিৰ তাৰিখ বাছনি কৰক",
-  "addPausePeriod": "খোৱাৰ বিৰতিৰ সময় যোগ কৰক"
+  "addPausePeriod": "খোৱাৰ বিৰতিৰ সময় যোগ কৰক",
+  "addedPausePeriod": "সেৱন-বিৰতি সময়সীমা যোগ কৰা হৈছে"
 }

@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "مشاهده روش لغو ثبت مصرف",
   "midnightTakenWarningDialogNeverShowAgain": "دیگر نمایش داده نشود",
   "pauseStartDateMustBeOnOrBefore": "لطفاً تاریخ شروع استراحت را {date} یا قبل از آن انتخاب کنید",
-  "addPausePeriod": "افزودن دورهٔ توقف مصرف"
+  "addPausePeriod": "افزودن دورهٔ توقف مصرف",
+  "addedPausePeriod": "بازهٔ استراحت مصرف اضافه شد"
 }

@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Tingnan ang paraan ng pag-cancel ng record ng pag-inom",
   "midnightTakenWarningDialogNeverShowAgain": "Huwag nang ipakita muli",
   "pauseStartDateMustBeOnOrBefore": "Pumili ng start date ng pahinga sa {date} o mas maaga",
-  "addPausePeriod": "Magdagdag ng panahon ng pahinga sa pag-inom"
+  "addPausePeriod": "Magdagdag ng panahon ng pahinga sa pag-inom",
+  "addedPausePeriod": "Naidagdag ang pahinga sa pag-inom"
 }

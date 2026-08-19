@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Poglejte, kako razveljaviti zapis o jemanju",
   "midnightTakenWarningDialogNeverShowAgain": "Ne prikaži več",
   "pauseStartDateMustBeOnOrBefore": "Izberite datum začetka premora {date} ali prej",
-  "addPausePeriod": "Dodaj obdobje premora pri jemanju"
+  "addPausePeriod": "Dodaj obdobje premora pri jemanju",
+  "addedPausePeriod": "Dodano je obdobje odmora pri jemanju"
 }

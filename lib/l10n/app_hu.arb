@@ -558,5 +558,6 @@
   "midnightTakenWarningDialogSeeHowToRevert": "A bevétel visszavonásának módja",
   "midnightTakenWarningDialogNeverShowAgain": "Ne jelenjen meg többé",
   "pauseStartDateMustBeOnOrBefore": "Válassz {date} vagy korábbi szünetkezdő dátumot",
-  "addPausePeriod": "Szedési szünet időszakának hozzáadása"
+  "addPausePeriod": "Szedési szünet időszakának hozzáadása",
+  "addedPausePeriod": "Hozzáadtuk a szedési szünet időszakát"
 }
