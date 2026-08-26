@@ -179,7 +179,10 @@ class Purchase {
   /// Return value is used to display the completion page
   Future<bool> call(Package package, {required PaywallSource source}) async {
     try {
-      final purchaserInfo = await Purchases.purchasePackage(package);
+      // purchases_flutter v9から購入APIの戻り値がCustomerInfoではなくPurchaseResultになった。
+      // v10でpurchasePackageがdeprecatedになったためpurchase(PurchaseParams)を使う
+      final purchaseResult = await Purchases.purchase(PurchaseParams.package(package));
+      final purchaserInfo = purchaseResult.customerInfo;
       final premiumEntitlement = purchaserInfo.entitlements.all[premiumEntitlements];
       if (premiumEntitlement == null) {
         throw AssertionError(L.unexpectedPremiumEntitlementsIsNotExists);
