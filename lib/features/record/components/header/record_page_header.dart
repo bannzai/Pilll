@@ -1,4 +1,6 @@
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/before_pill_sheet_group_history/page.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -70,26 +72,19 @@ class RecordPageInformationHeader extends StatelessWidget {
             ],
           ),
         ),
-        // TODO:  [PillSheetModifiedHistory-V2-BeforePillSheetGroupHistory] 2024-05-01
-        // ピルシートグループIDを用いてフィルタリングできるようになるので、一つ前のピルシートグループの履歴を表示する機能を解放する
-        // Align(
-        //   alignment: Alignment.topRight,
-        //   child: IconButton(
-        //     icon: const Icon(Icons.history, color: PilllColors.primary),
-        //     onPressed: () {
-        //       analytics.logEvent(name: "tapped_record_information_header_history");
-
-        //       if (user.isPremium || user.isTrial) {
-        //         Navigator.of(context).push(
-        //           BeforePillSheetGroupHistoryPageRoute.route(),
-        //         );
-        //       } else {
-        //         showPremiumIntroductionSheet(context);
-        //       }
-        //     },
-        //     color: Colors.black,
-        //   ),
-        // ),
+        // 前回のピルシートグループの閲覧と、その服用お休み期間の追加・変更への導線
+        // 新しいピルシートグループに切り替わった後でも前回のピルシートグループの服用お休みを記録・修正できるようにする
+        Align(
+          alignment: Alignment.topRight,
+          child: IconButton(
+            icon: const Icon(Icons.history, color: AppColors.primary),
+            tooltip: L.previousPillSheetGroup,
+            onPressed: () {
+              analytics.logEvent(name: 'tapped_record_information_header_history');
+              Navigator.of(context).push(BeforePillSheetGroupHistoryPageRoute.route());
+            },
+          ),
+        ),
       ],
     );
   }

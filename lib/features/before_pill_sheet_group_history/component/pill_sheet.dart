@@ -127,7 +127,11 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
   bool _isDone({required int pillNumberInPillSheet}) {
     final activePillSheet = pillSheetGroup.activePillSheet;
     if (activePillSheet == null) {
-      throw const FormatException('pill sheet not found');
+      // 前回のピルシートグループは終了済みで今日アクティブなピルシートが無いのが通常。各ピルシートの服用記録だけで判定する
+      return switch (pillSheet) {
+        PillSheetV1() => pillNumberInPillSheet <= pillSheet.lastTakenOrZeroPillNumber,
+        PillSheetV2 v2 => pillNumberInPillSheet <= v2.lastCompletedPillNumber,
+      };
     }
     if (activePillSheet.groupIndex < pillSheet.groupIndex) {
       return false;

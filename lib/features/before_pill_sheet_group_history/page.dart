@@ -10,6 +10,7 @@ import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dar
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/features/error/page.dart';
 import 'package:pilll/features/before_pill_sheet_group_history/component/pill_sheet.dart';
+import 'package:pilll/features/before_pill_sheet_group_history/component/rest_duration/rest_duration_section.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/setting.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 class BeforePillSheetGroupHistoryPage extends HookConsumerWidget {
@@ -25,12 +27,24 @@ class BeforePillSheetGroupHistoryPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return AsyncValueGroup.group2(
+    return AsyncValueGroup.group4(
       ref.watch(beforePillSheetGroupProvider),
+      ref.watch(latestPillSheetGroupProvider),
       ref.watch(settingProvider),
+      ref.watch(userProvider),
     ).when(
       data: (data) {
-        return _Page(pillSheetGroup: data.$1, setting: data.$2);
+        final beforePillSheetGroup = data.$1;
+        final latestPillSheetGroup = data.$2;
+        // ピルシートグループが1件しか無い時 beforePillSheetGroupProvider はその1件を返す。それが使用中 (終了も破棄もしていない) なら前回のピルシートグループではないので表示しない
+        // 終了済みの場合は、まだ新しいピルシートグループを作っていない状態の前回のピルシートグループとして扱い、服用お休み期間を後から記録できるようにする
+        final isLatestInUse =
+            latestPillSheetGroup != null && beforePillSheetGroup?.id == latestPillSheetGroup.id && !latestPillSheetGroup.isDeactived;
+        return _Page(
+          pillSheetGroup: isLatestInUse ? null : beforePillSheetGroup,
+          setting: data.$3,
+          premiumOrTrial: data.$4.premiumOrTrial,
+        );
       },
       error: (error, stackTrace) => UniversalErrorPage(
         error: error,
@@ -45,8 +59,9 @@ class BeforePillSheetGroupHistoryPage extends HookConsumerWidget {
 class _Page extends HookConsumerWidget {
   final PillSheetGroup? pillSheetGroup;
   final Setting setting;
+  final bool premiumOrTrial;
 
-  const _Page({required this.pillSheetGroup, required this.setting});
+  const _Page({required this.pillSheetGroup, required this.setting, required this.premiumOrTrial});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -68,7 +83,9 @@ class _Page extends HookConsumerWidget {
       );
     }
 
-    final currentPillSheet = useState(pillSheetGroup.pillSheets[0]);
+    // 服用お休み期間の追加・変更でピルシートグループが再取得されても表示中のページを維持できるように、ピルシートではなくページ番号を状態に持つ
+    final currentPage = useState(0);
+    final currentPillSheet = pillSheetGroup.pillSheets[currentPage.value];
     final pageController = usePageController(
       initialPage: 0,
       viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width,
@@ -78,14 +95,13 @@ class _Page extends HookConsumerWidget {
       if (page == null) {
         return;
       }
-      final pillSheet = pillSheetGroup.pillSheets[page];
-      currentPillSheet.value = pillSheet;
+      currentPage.value = page;
     });
     final begin = DateTimeFormatter.slashYearAndMonthAndDay(
-      currentPillSheet.value.beginDate,
+      currentPillSheet.beginDate,
     );
     final end = DateTimeFormatter.slashYearAndMonthAndDay(
-      currentPillSheet.value.estimatedEndTakenDate,
+      currentPillSheet.estimatedEndTakenDate,
     );
 
     return Scaffold(
@@ -154,10 +170,16 @@ class _Page extends HookConsumerWidget {
                 },
               ),
             ],
+            // 破棄したピルシートグループの服用お休みは編集できない
+            if (pillSheetGroup.deletedAt == null) ...[
+              const SizedBox(height: 16),
+              BeforePillSheetGroupRestDurationSection(pillSheetGroup: pillSheetGroup),
+            ],
             Padding(
               padding: const EdgeInsets.only(left: 24, right: 24),
               child: BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList(
-                pillSheet: currentPillSheet.value,
+                pillSheet: currentPillSheet,
+                premiumOrTrial: premiumOrTrial,
               ),
             ),
           ],
