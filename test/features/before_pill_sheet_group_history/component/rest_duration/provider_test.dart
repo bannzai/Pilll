@@ -356,6 +356,30 @@ void main() {
       ),
     ]);
 
+    test('開始日と終了日が同じ日 (お休み期間が0日) はエラー', () {
+      expect(
+        pillSheetGroup.restDurationRangeErrorMessageForBeforePillSheetGroup(
+          dateTimeRange: DateTimeRange(
+              start: DateTime.parse('2020-09-22'),
+              end: DateTime.parse('2020-09-22')),
+          excludingRestDuration: null,
+        ),
+        L.pauseEndDateMustBeAfterStartDate,
+      );
+    });
+
+    test('開始日の翌日が終了日 (お休み期間が1日) はエラーなし', () {
+      expect(
+        pillSheetGroup.restDurationRangeErrorMessageForBeforePillSheetGroup(
+          dateTimeRange: DateTimeRange(
+              start: DateTime.parse('2020-09-22'),
+              end: DateTime.parse('2020-09-23')),
+          excludingRestDuration: null,
+        ),
+        isNull,
+      );
+    });
+
     test('開始日が最終服用日の翌日ならエラーなし', () {
       expect(
         pillSheetGroup.restDurationRangeErrorMessageForBeforePillSheetGroup(

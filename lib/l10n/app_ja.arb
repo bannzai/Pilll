@@ -2748,5 +2748,10 @@
   "pausePeriodOverlapsOther": "他の服用お休み期間と重なる期間は選択できません",
   "@pausePeriodOverlapsOther": {
     "description": "服用お休み期間の追加・変更で、既存の別の服用お休み期間と重なる期間が選択された場合に表示されるエラーメッセージです。"
+  },
+
+  "pauseEndDateMustBeAfterStartDate": "服用お休み終了日は開始日より後の日付を選択してください",
+  "@pauseEndDateMustBeAfterStartDate": {
+    "description": "服用お休み期間の追加・変更で、終了日 (服用再開日) に開始日と同じ日付が選択された場合に表示されるエラーメッセージです。終了日は服用を再開する日のため、開始日と同じだとお休み期間が0日になってしまうことを防ぎます。"
   }
 }

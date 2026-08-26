@@ -1,5 +1,6 @@
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/before_pill_sheet_group_history/page.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -77,6 +78,7 @@ class RecordPageInformationHeader extends StatelessWidget {
           alignment: Alignment.topRight,
           child: IconButton(
             icon: const Icon(Icons.history, color: AppColors.primary),
+            tooltip: L.previousPillSheetGroup,
             onPressed: () {
               analytics.logEvent(name: 'tapped_record_information_header_history');
               Navigator.of(context).push(BeforePillSheetGroupHistoryPageRoute.route());

@@ -48,6 +48,10 @@ extension BeforePillSheetGroupRestDurationDomain on PillSheetGroup {
     required DateTimeRange dateTimeRange,
     required RestDuration? excludingRestDuration,
   }) {
+    // 終了日は服用再開日でお休み期間に含まれないため、開始日と同じ日を選ぶとお休み期間が0日の記録ができてしまう
+    if (!dateTimeRange.start.date().isBefore(dateTimeRange.end.date())) {
+      return L.pauseEndDateMustBeAfterStartDate;
+    }
     final latestSelectableBeginDate = latestSelectableRestDurationBeginDateForBeforePillSheetGroup;
     if (dateTimeRange.start.date().isAfter(latestSelectableBeginDate)) {
       return L.pauseStartDateMustBeOnOrBefore(
@@ -108,13 +112,15 @@ class AddCompletedRestDuration {
     // beginDateをアップデート。ChangeRestDuration と同じく、このループ内で更新した前のピルシートを用いて算出する
     final updatedBeginDatePillSheets = <PillSheet>[];
     for (final pillSheet in pillSheetGroup.pillSheets) {
+      // PillSheet.id は nullable のため、null 同士の比較で全シートが対象扱いにならないように groupIndex で対象シートを判定する
+      final isTargetPillSheet = pillSheet.groupIndex == targetPillSheet.groupIndex;
       if (pillSheet.groupIndex == 0) {
-        updatedBeginDatePillSheets.add(pillSheet.id == targetPillSheet.id ? updatedTargetPillSheet : pillSheet);
+        updatedBeginDatePillSheets.add(isTargetPillSheet ? updatedTargetPillSheet : pillSheet);
         continue;
       }
       final beforePillSheet = updatedBeginDatePillSheets[pillSheet.groupIndex - 1];
       updatedBeginDatePillSheets.add(
-        (pillSheet.id == targetPillSheet.id ? updatedTargetPillSheet : pillSheet).copyWith(
+        (isTargetPillSheet ? updatedTargetPillSheet : pillSheet).copyWith(
           beginDate: beforePillSheet.estimatedEndTakenDate.date().addDays(1),
         ),
       );

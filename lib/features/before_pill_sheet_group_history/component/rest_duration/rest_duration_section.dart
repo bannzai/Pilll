@@ -92,7 +92,7 @@ class _ChangeRestDuration extends HookConsumerWidget {
     return ListTile(
       leading: const Icon(Icons.date_range_outlined),
       title: Text(L.changePausePeriod),
-      subtitle: Text('${_format(restDuration.beginDate)} - ${endDate != null ? _format(endDate) : ''}'),
+      subtitle: Text('${_format(restDuration.beginDate)} - ${endDate != null ? _format(endDate) : L.duringPauseTaking}'),
       onTap: () async {
         analytics.logEvent(
           name: 'change_rest_duration_in_before_group',

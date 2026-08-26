@@ -2869,5 +2869,10 @@
   "pausePeriodOverlapsOther": "The selected period overlaps another pill break period",
   "@pausePeriodOverlapsOther": {
     "description": ""
+  },
+
+  "pauseEndDateMustBeAfterStartDate": "Please select a break end date after the start date",
+  "@pauseEndDateMustBeAfterStartDate": {
+    "description": ""
   }
 }
