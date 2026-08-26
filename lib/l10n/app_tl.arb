@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Pumili ng start date ng pahinga sa {date} o mas maaga",
   "addPausePeriod": "Magdagdag ng panahon ng pahinga sa pag-inom",
   "addedPausePeriod": "Naidagdag na ang pahinga sa pag-inom",
-  "pausePeriodOverlapsOther": "Hindi puwedeng pumili ng panahong may overlap sa isa pang panahon ng pahinga sa pag-inom"
+  "pausePeriodOverlapsOther": "Hindi puwedeng pumili ng panahong may overlap sa isa pang panahon ng pahinga sa pag-inom",
+  "pauseEndDateMustBeAfterStartDate": "Mangyaring pumili ng petsang mas huli kaysa petsa ng pagsisimula bilang petsa ng pagtatapos ng pahinga sa pag-inom."
 }

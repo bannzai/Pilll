@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Vali pausi alguskuupäev {date} või varasem",
   "addPausePeriod": "Lisa kasutamispausi periood",
   "addedPausePeriod": "Võtmispaus on lisatud",
-  "pausePeriodOverlapsOther": "Ei saa valida perioodi, mis kattub mõne muu võtmise pausi perioodiga"
+  "pausePeriodOverlapsOther": "Ei saa valida perioodi, mis kattub mõne muu võtmise pausi perioodiga",
+  "pauseEndDateMustBeAfterStartDate": "Palun valige võtmispausi lõppkuupäevaks alguskuupäevast hilisem kuupäev."
 }

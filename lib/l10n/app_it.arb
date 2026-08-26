@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Seleziona una data di inizio pausa il {date} o prima",
   "addPausePeriod": "Aggiungi periodo di pausa nell’assunzione",
   "addedPausePeriod": "È stato aggiunto il periodo di pausa nell'assunzione",
-  "pausePeriodOverlapsOther": "Non puoi selezionare un periodo che si sovrappone a un altro periodo di pausa di assunzione"
+  "pausePeriodOverlapsOther": "Non puoi selezionare un periodo che si sovrappone a un altro periodo di pausa di assunzione",
+  "pauseEndDateMustBeAfterStartDate": "Seleziona una data successiva alla data di inizio come data di fine della pausa di assunzione."
 }

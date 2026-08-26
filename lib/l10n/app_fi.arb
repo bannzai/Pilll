@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Valitse tauon aloituspäivä {date} tai aiemmin",
   "addPausePeriod": "Lisää taukojakso",
   "addedPausePeriod": "Taukojakso lisätty",
-  "pausePeriodOverlapsOther": "Et voi valita jaksoa, რომელიც on päällekkäinen toisen taukojaksen kanssa"
+  "pausePeriodOverlapsOther": "Et voi valita jaksoa, რომელიც on päällekkäinen toisen taukojaksen kanssa",
+  "pauseEndDateMustBeAfterStartDate": "Valitse tauon päättymispäiväksi aloituspäivän jälkeinen päivämäärä."
 }

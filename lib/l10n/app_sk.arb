@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Vyberte dátum začiatku prestávky {date} alebo skorší",
   "addPausePeriod": "Pridať obdobie prestávky v užívaní",
   "addedPausePeriod": "Obdobie prestávky v užívaní bolo pridané",
-  "pausePeriodOverlapsOther": "Nemožno vybrať obdobie, ktoré sa prekrýva s iným obdobím prestávky v užívaní"
+  "pausePeriodOverlapsOther": "Nemožno vybrať obdobie, ktoré sa prekrýva s iným obdobím prestávky v užívaní",
+  "pauseEndDateMustBeAfterStartDate": "Prosím, vyberte dátum po dátume začiatku ako dátum ukončenia prestávky v užívaní."
 }

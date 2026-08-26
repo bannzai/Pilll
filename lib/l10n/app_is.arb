@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Veldu upphafsdag hlés {date} eða fyrr",
   "addPausePeriod": "Bæta við hlé tímabili",
   "addedPausePeriod": "Bætt var við hléum á inntöku",
-  "pausePeriodOverlapsOther": "Ekki er hægt að velja tímabil sem skarast við annað hlé tímabil"
+  "pausePeriodOverlapsOther": "Ekki er hægt að velja tímabil sem skarast við annað hlé tímabil",
+  "pauseEndDateMustBeAfterStartDate": "Vinsamlegast veldu dagsetningu eftir upphafsdagsetningu sem lokadag hlés á inntöku."
 }

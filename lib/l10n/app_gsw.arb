@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Bitte wähl es Startdatum vo de Pause am {date} oder dervor",
   "addPausePeriod": "Pausenäriigs-Ziit derzuefüege",
   "addedPausePeriod": "D Paus für d Einnahm isch zuegfiegt worde",
-  "pausePeriodOverlapsOther": "Du chasch kei Zytabschnitt uuswähle, wo sich mit eme andere Einnahmepause-Zytabschnitt überlappt"
+  "pausePeriodOverlapsOther": "Du chasch kei Zytabschnitt uuswähle, wo sich mit eme andere Einnahmepause-Zytabschnitt überlappt",
+  "pauseEndDateMustBeAfterStartDate": "Bitte wähled Sie als Änddatum vo de Ihnahmepause es Datum noch em Aafangsdatum us."
 }

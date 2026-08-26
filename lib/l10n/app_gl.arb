@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Selecciona unha data de inicio da pausa o {date} ou antes",
   "addPausePeriod": "Engadir período de pausa de toma",
   "addedPausePeriod": "Engadiuse o período de descanso da toma",
-  "pausePeriodOverlapsOther": "Non se pode seleccionar un período que se solape con outro período de pausa de toma"
+  "pausePeriodOverlapsOther": "Non se pode seleccionar un período que se solape con outro período de pausa de toma",
+  "pauseEndDateMustBeAfterStartDate": "Selecciona unha data posterior á data de inicio como data de fin da pausa de toma, por favor."
 }

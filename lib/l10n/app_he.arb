@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "יש לבחור תאריך התחלת הפסקה ב-{date} או לפני כן",
   "addPausePeriod": "הוספת תקופת הפסקה בנטילה",
   "addedPausePeriod": "נוספה תקופת הפסקה בנטילה",
-  "pausePeriodOverlapsOther": "לא ניתן לבחור תקופה שחופפת לתקופת הפסקה אחרת של נטילה"
+  "pausePeriodOverlapsOther": "לא ניתן לבחור תקופה שחופפת לתקופת הפסקה אחרת של נטילה",
+  "pauseEndDateMustBeAfterStartDate": "יש לבחור תאריך מאוחר מתאריך ההתחלה כתאריך סיום ההפסקה בנטילה."
 }

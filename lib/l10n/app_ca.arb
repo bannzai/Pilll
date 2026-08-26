@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Selecciona una data d'inici de la pausa el {date} o abans",
   "addPausePeriod": "Afegeix un període de pausa de presa",
   "addedPausePeriod": "S'ha afegit el període de descans de la presa",
-  "pausePeriodOverlapsOther": "No es pot seleccionar un període que se solapi amb un altre període de pausa de presa"
+  "pausePeriodOverlapsOther": "No es pot seleccionar un període que se solapi amb un altre període de pausa de presa",
+  "pauseEndDateMustBeAfterStartDate": "Si us plau, seleccioneu una data posterior a la data d'inici com a data de finalització de la pausa de presa."
 }

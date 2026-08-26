@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "โปรดเลือกวันเริ่มพักยาเป็นวันที่ {date} หรือก่อนหน้านั้น",
   "addPausePeriod": "เพิ่มช่วงพักการทาน",
   "addedPausePeriod": "เพิ่มช่วงพักการรับประทานแล้ว",
-  "pausePeriodOverlapsOther": "ไม่สามารถเลือกช่วงเวลาที่ทับซ้อนกับช่วงหยุดรับประทานอื่นได้"
+  "pausePeriodOverlapsOther": "ไม่สามารถเลือกช่วงเวลาที่ทับซ้อนกับช่วงหยุดรับประทานอื่นได้",
+  "pauseEndDateMustBeAfterStartDate": "โปรดเลือกวันที่หลังจากวันเริ่มต้นเป็นวันสิ้นสุดช่วงพักการรับประทาน"
 }

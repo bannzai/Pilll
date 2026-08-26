@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Lütfen ara başlangıç tarihini {date} veya öncesi olarak seçin",
   "addPausePeriod": "Kullanım ara verme süresi ekle",
   "addedPausePeriod": "Alım arası süresi eklendi",
-  "pausePeriodOverlapsOther": "Başka bir kullanım arası dönemiyle çakışan bir dönem seçilemez"
+  "pausePeriodOverlapsOther": "Başka bir kullanım arası dönemiyle çakışan bir dönem seçilemez",
+  "pauseEndDateMustBeAfterStartDate": "Lütfen kullanım molasının bitiş tarihi olarak başlangıç tarihinden sonraki bir tarih seçin."
 }

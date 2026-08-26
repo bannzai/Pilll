@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "කරුණාකර {date} හෝ ඊට පෙර විවේක ආරම්භක දිනයක් තෝරන්න",
   "addPausePeriod": "ගැනීමේ විරාම කාලය එක් කරන්න",
   "addedPausePeriod": "ගැනීමේ විරාම කාලය එක් කර ඇත",
-  "pausePeriodOverlapsOther": "වෙනත් භාවිත විරාම කාලසීමාවක් සමඟ එකිනෙක මැලවෙන කාලසීමාවක් තේරිය නොහැක"
+  "pausePeriodOverlapsOther": "වෙනත් භාවිත විරාම කාලසීමාවක් සමඟ එකිනෙක මැලවෙන කාලසීමාවක් තේරිය නොහැක",
+  "pauseEndDateMustBeAfterStartDate": "කරුණාකර सेवन විරාමයේ අවසන් දිනය ලෙස ආරම්භක දිනයට පසු දිනයක් තෝරන්න."
 }

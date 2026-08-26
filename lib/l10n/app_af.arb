@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Kies 'n begindatum vir die ruskans op of voor {date}",
   "addPausePeriod": "Voeg pouseperiode by",
   "addedPausePeriod": "Inname-pouseperiode is bygevoeg",
-  "pausePeriodOverlapsOther": "Periodes wat oorvleuel met 'n ander pouse-periode kan nie gekies word nie"
+  "pausePeriodOverlapsOther": "Periodes wat oorvleuel met 'n ander pouse-periode kan nie gekies word nie",
+  "pauseEndDateMustBeAfterStartDate": "Kies asseblief ’n datum ná die begindatum as die einddatum van die pouse in inname."
 }

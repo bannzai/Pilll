@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Lūdzu, izvēlieties pauzes sākuma datumu {date} vai agrāk",
   "addPausePeriod": "Pievienot lietošanas pārtraukuma periodu",
   "addedPausePeriod": "Ir pievienots lietošanas pārtraukuma periods",
-  "pausePeriodOverlapsOther": "Nevar izvēlēties periodu, kas pārklājas ar citu lietošanas pārtraukuma periodu"
+  "pausePeriodOverlapsOther": "Nevar izvēlēties periodu, kas pārklājas ar citu lietošanas pārtraukuma periodu",
+  "pauseEndDateMustBeAfterStartDate": "Lūdzu, izvēlieties lietošanas pārtraukuma beigu datumu, kas ir pēc sākuma datuma."
 }

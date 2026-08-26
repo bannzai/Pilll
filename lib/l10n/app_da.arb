@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Vælg en startdato for pausen den {date} eller tidligere",
   "addPausePeriod": "Tilføj pauseperiode",
   "addedPausePeriod": "Pauseperiode for indtagelse er tilføjet",
-  "pausePeriodOverlapsOther": "Du kan ikke vælge en periode, der overlapper med en anden pauseperiode"
+  "pausePeriodOverlapsOther": "Du kan ikke vælge en periode, der overlapper med en anden pauseperiode",
+  "pauseEndDateMustBeAfterStartDate": "Vælg venligst en dato efter startdatoen som slutdato for pausen i indtagelsen."
 }

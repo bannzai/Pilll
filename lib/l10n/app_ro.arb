@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Selectați o dată de început a pauzei pe {date} sau mai devreme",
   "addPausePeriod": "Adaugă perioada de pauză la administrare",
   "addedPausePeriod": "Perioada de pauză a administrării a fost adăugată",
-  "pausePeriodOverlapsOther": "Nu puteți selecta o perioadă care se suprapune cu o altă perioadă de pauză de administrare"
+  "pausePeriodOverlapsOther": "Nu puteți selecta o perioadă care se suprapune cu o altă perioadă de pauză de administrare",
+  "pauseEndDateMustBeAfterStartDate": "Vă rugăm să selectați o dată ulterioară datei de început ca dată de încheiere a pauzei de administrare."
 }

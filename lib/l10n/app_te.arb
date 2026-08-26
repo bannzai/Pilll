@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "దయచేసి {date} లేదా అంతకు ముందు విరామ ప్రారంభ తేదీని ఎంచుకోండి",
   "addPausePeriod": "తీసుకునే విరామ వ్యవధిని జోడించండి",
   "addedPausePeriod": "సేవన విరామ కాలం జోడించబడింది",
-  "pausePeriodOverlapsOther": "మరొక తీసుకునే విరామ కాలంతో పొరపడే కాలాన్ని ఎంచుకోలేరు"
+  "pausePeriodOverlapsOther": "మరొక తీసుకునే విరామ కాలంతో పొరపడే కాలాన్ని ఎంచుకోలేరు",
+  "pauseEndDateMustBeAfterStartDate": "దయచేసి సేవన విరామం ముగింపు తేదీగా ప్రారంభ తేదీ తర్వాతి తేదీని ఎంచుకోండి."
 }

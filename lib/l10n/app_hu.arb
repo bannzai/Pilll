@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Válassz {date} vagy korábbi szünetkezdő dátumot",
   "addPausePeriod": "Szedési szünet időszakának hozzáadása",
   "addedPausePeriod": "Hozzáadtuk a szedési szünet időszakát",
-  "pausePeriodOverlapsOther": "Nem választható ki olyan időszak, amely átfedésben van egy másik szedési szünettel"
+  "pausePeriodOverlapsOther": "Nem választható ki olyan időszak, amely átfedésben van egy másik szedési szünettel",
+  "pauseEndDateMustBeAfterStartDate": "Kérjük, a szedési szünet befejezési dátumaként a kezdőnapnál későbbi dátumot válasszon."
 }

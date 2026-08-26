@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Pasirinkite pertraukos pradžios datą {date} arba ankstesnę",
   "addPausePeriod": "Pridėti vartojimo pertraukos laikotarpį",
   "addedPausePeriod": "Pridėtas vartojimo pertraukos laikotarpis",
-  "pausePeriodOverlapsOther": "Negalima pasirinkti laikotarpio, kuris persidengia su kitu vartojimo pertraukos laikotarpiu"
+  "pausePeriodOverlapsOther": "Negalima pasirinkti laikotarpio, kuris persidengia su kitu vartojimo pertraukos laikotarpiu",
+  "pauseEndDateMustBeAfterStartDate": "Pasirinkite vartojimo pertraukos pabaigos datą, vėlesnę nei pradžios data."
 }

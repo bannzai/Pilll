@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Pilih tanggal mulai jeda pada {date} atau sebelumnya",
   "addPausePeriod": "Tambahkan periode jeda minum",
   "addedPausePeriod": "Periode jeda minum telah ditambahkan",
-  "pausePeriodOverlapsOther": "Periode yang tumpang tindih dengan periode jeda konsumsi lain tidak dapat dipilih"
+  "pausePeriodOverlapsOther": "Periode yang tumpang tindih dengan periode jeda konsumsi lain tidak dapat dipilih",
+  "pauseEndDateMustBeAfterStartDate": "Silakan pilih tanggal setelah tanggal mulai sebagai tanggal berakhirnya jeda konsumsi."
 }

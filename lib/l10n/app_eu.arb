@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Aukeratu atsedenaren hasiera-data {date} edo lehenago",
   "addPausePeriod": "Gehitu hartze-atsedenaldia",
   "addedPausePeriod": "Hartzeko atsedenaldia gehitu da",
-  "pausePeriodOverlapsOther": "Ezin da hautatu beste hartze-atseden aldi batekin gainjartzen den aldirik"
+  "pausePeriodOverlapsOther": "Ezin da hautatu beste hartze-atseden aldi batekin gainjartzen den aldirik",
+  "pauseEndDateMustBeAfterStartDate": "Mesedez, aukeratu hasiera-data baino geroagoko data bat hartzearen etenaldiaren amaiera-datatzat."
 }

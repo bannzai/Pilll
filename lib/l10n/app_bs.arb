@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Odaberite datum početka pauze na dan {date} ili ranije",
   "addPausePeriod": "Dodaj period pauze u uzimanju",
   "addedPausePeriod": "Dodano je razdoblje pauze od uzimanja",
-  "pausePeriodOverlapsOther": "Ne možete izabrati period koji se preklapa s drugim periodom pauze u uzimanju"
+  "pausePeriodOverlapsOther": "Ne možete izabrati period koji se preklapa s drugim periodom pauze u uzimanju",
+  "pauseEndDateMustBeAfterStartDate": "Molimo odaberite datum nakon početnog datuma kao datum završetka pauze u uzimanju."
 }

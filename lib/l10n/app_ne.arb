@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "कृपया {date} वा त्यसअघिको विश्राम सुरु मिति चयन गर्नुहोस्",
   "addPausePeriod": "सेवन विश्राम अवधि थप्नुहोस्",
   "addedPausePeriod": "सेवन विश्राम अवधि थपिएको छ",
-  "pausePeriodOverlapsOther": "अर्को सेवन विश्राम अवधिसँग ओभरल्याप हुने अवधि चयन गर्न सकिँदैन"
+  "pausePeriodOverlapsOther": "अर्को सेवन विश्राम अवधिसँग ओभरल्याप हुने अवधि चयन गर्न सकिँदैन",
+  "pauseEndDateMustBeAfterStartDate": "कृपया सेवन विश्रामको समाप्ति मितिका लागि सुरु मितिपछिको मिति चयन गर्नुहोस्।"
 }

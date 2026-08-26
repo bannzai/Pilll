@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Vui lòng chọn ngày bắt đầu tạm ngưng vào {date} hoặc trước đó",
   "addPausePeriod": "Thêm thời gian nghỉ uống",
   "addedPausePeriod": "Đã thêm khoảng nghỉ uống thuốc",
-  "pausePeriodOverlapsOther": "Không thể chọn khoảng thời gian trùng với một khoảng nghỉ uống khác"
+  "pausePeriodOverlapsOther": "Không thể chọn khoảng thời gian trùng với một khoảng nghỉ uống khác",
+  "pauseEndDateMustBeAfterStartDate": "Vui lòng chọn ngày sau ngày bắt đầu làm ngày kết thúc thời gian tạm nghỉ uống thuốc."
 }

@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Izberite datum začetka premora {date} ali prej",
   "addPausePeriod": "Dodaj obdobje premora pri jemanju",
   "addedPausePeriod": "Dodano je obdobje odmora pri jemanju",
-  "pausePeriodOverlapsOther": "Ni mogoče izbrati obdobja, ki se prekriva z drugim obdobjem premora pri jemanju"
+  "pausePeriodOverlapsOther": "Ni mogoče izbrati obdobja, ki se prekriva z drugim obdobjem premora pri jemanju",
+  "pauseEndDateMustBeAfterStartDate": "Prosimo, izberite datum po začetnem datumu kot datum konca premora pri jemanju."
 }

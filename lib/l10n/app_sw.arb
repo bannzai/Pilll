@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Tafadhali chagua tarehe ya kuanza mapumziko {date} au kabla yake",
   "addPausePeriod": "Ongeza kipindi cha mapumziko ya kumeza",
   "addedPausePeriod": "Kipindi cha mapumziko ya kutumia kimeongezwa",
-  "pausePeriodOverlapsOther": "Huwezi kuchagua kipindi kinachopishana na kipindi kingine cha mapumziko ya kumeza"
+  "pausePeriodOverlapsOther": "Huwezi kuchagua kipindi kinachopishana na kipindi kingine cha mapumziko ya kumeza",
+  "pauseEndDateMustBeAfterStartDate": "Tafadhali chagua tarehe iliyo baada ya tarehe ya kuanza kama tarehe ya kumaliza mapumziko ya matumizi."
 }

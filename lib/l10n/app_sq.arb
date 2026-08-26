@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Zgjidhni një datë fillimi të pushimit më {date} ose më herët",
   "addPausePeriod": "Shto periudhën e pauzës së marrjes",
   "addedPausePeriod": "U shtua periudha e pushimit nga marrja",
-  "pausePeriodOverlapsOther": "Nuk mund të zgjidhni një periudhë që mbivendoset me një periudhë tjetër pauze të marrjes"
+  "pausePeriodOverlapsOther": "Nuk mund të zgjidhni një periudhë që mbivendoset me një periudhë tjetër pauze të marrjes",
+  "pauseEndDateMustBeAfterStartDate": "Ju lutemi, zgjidhni një datë pas datës së fillimit si datë përfundimi të pushimit të marrjes."
 }

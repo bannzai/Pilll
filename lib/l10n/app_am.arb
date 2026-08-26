@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "እባክዎ የእረፍት መጀመሪያ ቀን {date} ወይም ከዚያ በፊት ይምረጡ",
   "addPausePeriod": "የመውሰድ እረፍት ጊዜ ያክሉ",
   "addedPausePeriod": "የመውሰድ እረፍት ጊዜ ተጨምሯል",
-  "pausePeriodOverlapsOther": "ከሌላ የመድሀኒት እረፍት ጊዜ ጋር የሚደራረብ ጊዜ መምረጥ አይቻልም"
+  "pausePeriodOverlapsOther": "ከሌላ የመድሀኒት እረፍት ጊዜ ጋር የሚደራረብ ጊዜ መምረጥ አይቻልም",
+  "pauseEndDateMustBeAfterStartDate": "እባክዎ የመውሰድ እረፍቱ መጨረሻ ቀን ከመጀመሪያ ቀን በኋላ ያለ ቀን ይምረጡ።"
 }

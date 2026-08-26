@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Kies een startdatum van de pauze op {date} of eerder",
   "addPausePeriod": "Pauzeperiode toevoegen",
   "addedPausePeriod": "De pauzeperiode voor inname is toegevoegd",
-  "pausePeriodOverlapsOther": "Je kunt geen periode selecteren die overlapt met een andere innamepauze"
+  "pausePeriodOverlapsOther": "Je kunt geen periode selecteren die overlapt met een andere innamepauze",
+  "pauseEndDateMustBeAfterStartDate": "Kies als einddatum van de innamestop een datum na de startdatum."
 }

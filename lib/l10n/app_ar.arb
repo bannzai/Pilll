@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "يرجى اختيار تاريخ بدء الاستراحة في {date} أو قبله",
   "addPausePeriod": "إضافة فترة التوقف عن الاستخدام",
   "addedPausePeriod": "تمت إضافة فترة التوقف عن تناول الحبوب",
-  "pausePeriodOverlapsOther": "لا يمكن تحديد فترة تتداخل مع فترة إيقاف أخرى"
+  "pausePeriodOverlapsOther": "لا يمكن تحديد فترة تتداخل مع فترة إيقاف أخرى",
+  "pauseEndDateMustBeAfterStartDate": "يرجى اختيار تاريخ لاحق لتاريخ بدء فترة التوقف عن تناول الحبوب كتاريخ لانتهائها."
 }

@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "Zəhmət olmasa fasilənin başlama tarixini {date} və ya ondan əvvəl seçin",
   "addPausePeriod": "Qəbul fasiləsi müddəti əlavə et",
   "addedPausePeriod": "Qəbul fasiləsi müddəti əlavə olundu",
-  "pausePeriodOverlapsOther": "Başqa qəbul fasiləsi dövrü ilə üst-üstə düşən dövrü seçmək olmaz"
+  "pausePeriodOverlapsOther": "Başqa qəbul fasiləsi dövrü ilə üst-üstə düşən dövrü seçmək olmaz",
+  "pauseEndDateMustBeAfterStartDate": "Zəhmət olmasa, qəbul fasiləsinin bitmə tarixi üçün başlanğıc tarixindən sonrakı bir tarixi seçin."
 }

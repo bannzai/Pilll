@@ -560,5 +560,6 @@
   "pauseStartDateMustBeOnOrBefore": "કૃપા કરીને {date} અથવા તે પહેલાંની વિરામ શરૂઆતની તારીખ પસંદ કરો",
   "addPausePeriod": "લેવાની વિરામ અવધિ ઉમેરો",
   "addedPausePeriod": "સેવન વિરામનો સમયગાળો ઉમેરાયો છે",
-  "pausePeriodOverlapsOther": "બીજા લેવાની વિરામ અવધિ સાથે ઓવરલેપ થતો સમયગાળો પસંદ કરી શકાતો નથી"
+  "pausePeriodOverlapsOther": "બીજા લેવાની વિરામ અવધિ સાથે ઓવરલેપ થતો સમયગાળો પસંદ કરી શકાતો નથી",
+  "pauseEndDateMustBeAfterStartDate": "કૃપા કરીને સેવન વિરામની સમાપ્તિ તારીખ તરીકે શરૂઆતની તારીખ પછીની તારીખ પસંદ કરો."
 }
