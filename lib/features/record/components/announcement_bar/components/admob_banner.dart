@@ -4,7 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:pilll/secret/secret.dart';
 
-/// A simple app that loads a banner ad.
+/// アンカー型アダプティブバナー広告を読み込んで表示する
+///
+/// 固定サイズ (320x50) ではなく画面幅いっぱいのアダプティブバナーを要求する。
+/// 固定サイズだと幅の余った端末では小さい広告しか配信されず eCPM が下がるため。
+/// 参照: https://developers.google.com/admob/flutter/banner
 class AdMobBanner extends StatefulWidget {
   const AdMobBanner({super.key});
 
@@ -15,12 +19,19 @@ class AdMobBanner extends StatefulWidget {
 class AdMobBannerState extends State<AdMobBanner> {
   BannerAd? _bannerAd;
 
+  /// 読み込みを開始したかどうか。didChangeDependencies は複数回呼ばれるため、広告の二重読み込みを防ぐ
+  bool _adLoadStarted = false;
+
   final String _adUnitId = Platform.isAndroid ? Secret.androidAdmobBannerIdentifier : Secret.iOSAdmobBannerIdentifier;
 
   @override
-  void initState() {
-    super.initState();
-    _loadAd();
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // アダプティブバナーのサイズ決定に画面幅 (MediaQuery) が必要で、initState では参照できないためここで読み込む
+    if (!_adLoadStarted) {
+      _adLoadStarted = true;
+      _loadAd(width: MediaQuery.sizeOf(context).width.truncate());
+    }
   }
 
   @override
@@ -39,14 +50,20 @@ class AdMobBannerState extends State<AdMobBanner> {
     }
   }
 
-  /// Loads and shows a banner ad.
+  /// 画面幅に合わせたアンカー型アダプティブバナーを読み込む
   ///
-  /// Dimensions of the ad are determined by the AdSize class.
-  void _loadAd() async {
-    BannerAd(
+  /// [width] は端末の画面幅 (dp)。AdMob 側が幅に応じた最適な高さを返す
+  Future<void> _loadAd({required int width}) async {
+    // 端末情報の取得に失敗した時などに null になる。その場合は広告を表示しない (従来と同じ挙動)
+    final size = await AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(width);
+    if (size == null) {
+      return;
+    }
+
+    await BannerAd(
       adUnitId: _adUnitId,
       request: const AdRequest(),
-      size: AdSize.banner,
+      size: size,
       listener: BannerAdListener(
         // Called when an ad is successfully received.
         onAdLoaded: (ad) {
