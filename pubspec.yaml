@@ -29,8 +29,8 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  flutter_svg: ^2.2.3
-  shared_preferences: ^2.5.4
+  flutter_svg: ^2.3.0
+  shared_preferences: ^2.5.5
   new_version_plus: ^1.0.1
   intl: ^0.20.2
   firebase_core: ^4.3.0
@@ -40,38 +40,38 @@ dependencies:
   firebase_remote_config:
   firebase_crashlytics:
   cloud_functions:
-  cloud_firestore:
+  cloud_firestore: 6.9.0
   url_launcher: ^6.3.2
   package_info_plus: ^9.0.0
   json_annotation: ^4.9.0
   mockito: ^5.4.4
   freezed_annotation: ^2.4.4
-  riverpod: ^2.4.4
-  hooks_riverpod: ^2.4.10
-  riverpod_annotation: 2.3.5
-  flutter_hooks: ^0.20.5
+  riverpod: ^2.6.1
+  hooks_riverpod: ^2.6.1
+  riverpod_annotation: 2.6.1
+  flutter_hooks: ^0.21.3+1
   dotted_border: ^2.1.0
-  in_app_review: ^2.0.11
-  uuid: ^4.5.2
+  in_app_review: ^2.0.12
+  uuid: ^4.6.0
   async_value_group: ^1.0.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.8
+  cupertino_icons: ^1.0.9
   flutter_app_badger: ^1.2.0
   purchases_flutter: ^8.3.1
-  flutter_local_notifications: ^19.5.0
-  webview_flutter: ^4.13.0
+  flutter_local_notifications: ^22.3.0
+  webview_flutter: ^4.14.1
   collection: ^1.18.0
   crypto: 3.0.7
-  timezone: 0.10.1
+  timezone: 0.11.1
   google_mobile_ads: ^5.0.0
     # home_widget: ^0.5.0
   home_widget:
     git:
       url: https://github.com/bannzai/home_widget.git
       ref: main
-  path_provider: ^2.1.4
+  path_provider: ^2.1.6
   flutter_timezone: ^4.1.0
 
 dev_dependencies:
