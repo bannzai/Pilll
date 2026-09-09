@@ -3,4 +3,9 @@
   <domain-config cleartextTrafficPermitted="true">
     <domain includeSubdomains="false">10.0.2.2</domain>
   </domain-config>
+  <!-- Meta Audience Network が広告メディアをローカルにキャッシュする際に 127.0.0.1 へ cleartext で接続するため許可する
+       参照: https://developers.google.com/admob/flutter/mediation/meta -->
+  <domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="true">127.0.0.1</domain>
+  </domain-config>
 </network-security-config>

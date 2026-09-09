@@ -55,7 +55,7 @@ class AdMobBannerState extends State<AdMobBanner> {
   /// [width] は端末の画面幅 (dp)。AdMob 側が幅に応じた最適な高さを返す
   Future<void> _loadAd({required int width}) async {
     // 端末情報の取得に失敗した時などに null になる。その場合は広告を表示しない (従来と同じ挙動)
-    final size = await AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(width);
+    final size = await AdSize.getLargeAnchoredAdaptiveBannerAdSize(width);
     if (size == null) {
       return;
     }

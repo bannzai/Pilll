@@ -9,6 +9,7 @@ PODS:
     - Flutter
   - device_info_plus (0.0.1):
     - Flutter
+  - FBAudienceNetwork (6.22.0)
   - Firebase/Auth (11.10.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 11.10.0)
@@ -170,11 +171,17 @@ PODS:
     - Flutter
   - flutter_timezone (0.0.1):
     - Flutter
-  - Google-Mobile-Ads-SDK (11.13.0):
-    - GoogleUserMessagingPlatform (>= 1.1)
-  - google_mobile_ads (5.3.1):
+  - gma_mediation_meta (1.7.0):
     - Flutter
-    - Google-Mobile-Ads-SDK (~> 11.13.0)
+    - GoogleMobileAdsMediationFacebook (~> 6.22.0.0)
+  - gma_mediation_mintegral (2.1.3):
+    - Flutter
+    - GoogleMobileAdsMediationMintegral (~> 8.1.6.0)
+  - Google-Mobile-Ads-SDK (13.9.0):
+    - GoogleUserMessagingPlatform (>= 1.1)
+  - google_mobile_ads (9.1.0):
+    - Flutter
+    - Google-Mobile-Ads-SDK (~> 13.7)
     - webview_flutter_wkwebview
   - GoogleAppMeasurement (11.10.0):
     - GoogleAppMeasurement/AdIdSupport (= 11.10.0)
@@ -199,7 +206,13 @@ PODS:
   - GoogleDataTransport (10.1.0):
     - nanopb (~> 3.30910.0)
     - PromisesObjC (~> 2.4)
-  - GoogleUserMessagingPlatform (3.0.0)
+  - GoogleMobileAdsMediationFacebook (6.22.0.0):
+    - FBAudienceNetwork (= 6.22.0)
+    - Google-Mobile-Ads-SDK (~> 13.3)
+  - GoogleMobileAdsMediationMintegral (8.1.6.0):
+    - Google-Mobile-Ads-SDK (~> 13.3)
+    - MintegralAdSDK/All (= 8.1.6)
+  - GoogleUserMessagingPlatform (3.1.0)
   - GoogleUtilities/AppDelegateSwizzler (8.1.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -233,6 +246,31 @@ PODS:
   - in_app_review (2.0.0):
     - Flutter
   - leveldb-library (1.22.6)
+  - MintegralAdSDK/All (8.1.6):
+    - MintegralAdSDK/BannerAd
+    - MintegralAdSDK/BidNativeAd
+    - MintegralAdSDK/InterstitialVideoAd
+    - MintegralAdSDK/NativeAd
+    - MintegralAdSDK/NativeAdvancedAd
+    - MintegralAdSDK/NewInterstitialAd
+    - MintegralAdSDK/RewardVideoAd
+    - MintegralAdSDK/SplashAd
+  - MintegralAdSDK/BannerAd (8.1.6):
+    - MintegralAdSDK/NativeAd
+  - MintegralAdSDK/BidNativeAd (8.1.6):
+    - MintegralAdSDK/NativeAd
+  - MintegralAdSDK/InterstitialVideoAd (8.1.6):
+    - MintegralAdSDK/NativeAd
+  - MintegralAdSDK/NativeAd (8.1.6)
+  - MintegralAdSDK/NativeAdvancedAd (8.1.6):
+    - MintegralAdSDK/NativeAd
+  - MintegralAdSDK/NewInterstitialAd (8.1.6):
+    - MintegralAdSDK/InterstitialVideoAd
+    - MintegralAdSDK/NativeAd
+  - MintegralAdSDK/RewardVideoAd (8.1.6):
+    - MintegralAdSDK/NativeAd
+  - MintegralAdSDK/SplashAd (8.1.6):
+    - MintegralAdSDK/NativeAd
   - nanopb (3.30910.0):
     - nanopb/decode (= 3.30910.0)
     - nanopb/encode (= 3.30910.0)
@@ -277,6 +315,8 @@ DEPENDENCIES:
   - flutter_app_badger (from `.symlinks/plugins/flutter_app_badger/ios`)
   - flutter_local_notifications (from `.symlinks/plugins/flutter_local_notifications/ios`)
   - flutter_timezone (from `.symlinks/plugins/flutter_timezone/ios`)
+  - gma_mediation_meta (from `.symlinks/plugins/gma_mediation_meta/ios`)
+  - gma_mediation_mintegral (from `.symlinks/plugins/gma_mediation_mintegral/ios`)
   - google_mobile_ads (from `.symlinks/plugins/google_mobile_ads/ios`)
   - home_widget (from `.symlinks/plugins/home_widget/ios`)
   - in_app_review (from `.symlinks/plugins/in_app_review/ios`)
@@ -289,6 +329,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - FBAudienceNetwork
     - Firebase
     - FirebaseABTesting
     - FirebaseAnalytics
@@ -316,10 +357,13 @@ SPEC REPOS:
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleDataTransport
+    - GoogleMobileAdsMediationFacebook
+    - GoogleMobileAdsMediationMintegral
     - GoogleUserMessagingPlatform
     - GoogleUtilities
     - GTMSessionFetcher
     - leveldb-library
+    - MintegralAdSDK
     - nanopb
     - PromisesObjC
     - PromisesSwift
@@ -357,6 +401,10 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/flutter_local_notifications/ios"
   flutter_timezone:
     :path: ".symlinks/plugins/flutter_timezone/ios"
+  gma_mediation_meta:
+    :path: ".symlinks/plugins/gma_mediation_meta/ios"
+  gma_mediation_mintegral:
+    :path: ".symlinks/plugins/gma_mediation_mintegral/ios"
   google_mobile_ads:
     :path: ".symlinks/plugins/google_mobile_ads/ios"
   home_widget:
@@ -385,6 +433,7 @@ SPEC CHECKSUMS:
   cloud_firestore: 08a05552cbefc3292105dcb86a01ecd375759c3d
   cloud_functions: c2d063f2433ece65bfc6fa2c49529953601dec50
   device_info_plus: 71ffc6ab7634ade6267c7a93088ed7e4f74e5896
+  FBAudienceNetwork: b05c65487114aa3bf3a68e865c60937a9fb03b69
   Firebase: 1fe1c0a7d9aaea32efe01fbea5f0ebd8d70e53a2
   firebase_analytics: 47b11014a69ebb5c8e183a45552b90568d25b3f7
   firebase_auth: 10f7429de9662e84d33e45c91e4a27deafbbba96
@@ -420,16 +469,21 @@ SPEC CHECKSUMS:
   flutter_app_badger: 16b371e989d04cd265df85be2c3851b49cb68d18
   flutter_local_notifications: a5a732f069baa862e728d839dd2ebb904737effb
   flutter_timezone: 7c838e17ffd4645d261e87037e5bebf6d38fe544
-  Google-Mobile-Ads-SDK: 14f57f2dc33532a24db288897e26494640810407
-  google_mobile_ads: 16ad301354fa6a7ea55770c6254bd4339bf8558b
+  gma_mediation_meta: 6a9496825660414aaddbd5bcb33325a72b15f650
+  gma_mediation_mintegral: ccc57326e3a67d364d9c1162c32b79065a058833
+  Google-Mobile-Ads-SDK: cec761d0da669c462bcc19cd16c747498b9f39f7
+  google_mobile_ads: 6b1c16497394528f4a59e76e2fc947cb32b101e2
   GoogleAppMeasurement: 36684bfb3ee034e2b42b4321eb19da3a1b81e65d
   GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
-  GoogleUserMessagingPlatform: f8d0cdad3ca835406755d0a69aa634f00e76d576
+  GoogleMobileAdsMediationFacebook: 213c2a7cabd34f2e4115c3e7fa4780256043db42
+  GoogleMobileAdsMediationMintegral: d48168f90805dd508beea9230e39d0e24660a3d5
+  GoogleUserMessagingPlatform: befe603da6501006420c206222acd449bba45a9c
   GoogleUtilities: 00c88b9a86066ef77f0da2fab05f65d7768ed8e1
   GTMSessionFetcher: fc75fc972958dceedee61cb662ae1da7a83a91cf
   home_widget: f169fc41fd807b4d46ab6615dc44d62adbf9f64f
   in_app_review: 7dd1ea365263f834b8464673f9df72c80c17c937
   leveldb-library: cc8b8f8e013647a295ad3f8cd2ddf49a6f19be19
+  MintegralAdSDK: b8fbfe18eacde1eb4f5c0e388c3769503ed5d4fa
   nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
   package_info_plus: af8e2ca6888548050f16fa2f1938db7b5a5df499
   path_provider_foundation: 080d55be775b7414fd5a5ef3ac137b97b097e564
@@ -441,8 +495,8 @@ SPEC CHECKSUMS:
   RevenueCat: d8174cfd72fab33f3b877d38c9f033142dc87c60
   shared_preferences_foundation: 9e1978ff2562383bd5676f64ec4e9aa8fa06a6f7
   url_launcher_ios: 694010445543906933d732453a59da0a173ae33d
-  webview_flutter_wkwebview: 1821ceac936eba6f7984d89a9f3bcb4dea99ebb2
+  webview_flutter_wkwebview: 8ebf4fded22593026f7dbff1fbff31ea98573c8d
 
-PODFILE CHECKSUM: eda6f8b2f58b60af79d987d33c06a3c36d67f34f
+PODFILE CHECKSUM: 6abc644bc4c874ceeced80aeec8b791cb09d8842
 
 COCOAPODS: 1.16.2
