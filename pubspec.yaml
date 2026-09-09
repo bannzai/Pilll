@@ -72,7 +72,7 @@ dependencies:
       url: https://github.com/bannzai/home_widget.git
       ref: main
   path_provider: ^2.1.4
-  flutter_timezone: ^4.1.0
+  flutter_timezone: ^5.1.0
   firebase_app_check: ^0.4.7
 
 dev_dependencies:
