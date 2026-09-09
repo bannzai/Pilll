@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_core_platform_interface/test.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pilll/utils/firebase.dart';
@@ -9,54 +10,39 @@ void main() {
   setupFirebaseCoreMocks();
 
   group('#initializeFirebase', () {
-    final activations = <Map<dynamic, dynamic>>[];
+    final activations = <List<Object?>>[];
+    const activationChannel = BasicMessageChannel<Object?>(
+      'dev.flutter.pigeon.firebase_app_check_platform_interface.FirebaseAppCheckHostApi.activate',
+      StandardMessageCodec(),
+    );
 
     setUp(() {
       activations.clear();
       TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
-          .setMockMethodCallHandler(
-        const MethodChannel('plugins.flutter.io/firebase_app_check'),
-        (methodCall) async {
-          if (methodCall.method == 'FirebaseAppCheck#registerTokenListener') {
-            return 'app-check-test-events';
-          }
-          if (methodCall.method == 'FirebaseAppCheck#activate') {
-            // Firebase 初期化が完了する前に App Check を呼ぶ退行を検出する。
-            expect(Firebase.app().name, '[DEFAULT]');
-            activations.add(methodCall.arguments as Map<dynamic, dynamic>);
-          }
-          return null;
-        },
-      );
-      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
-          .setMockMethodCallHandler(
-        const MethodChannel('app-check-test-events'),
-        (methodCall) async => null,
-      );
+          .setMockDecodedMessageHandler<Object?>(activationChannel,
+              (arguments) async {
+        // Firebase 初期化が完了する前に App Check を呼ぶ退行を検出する。
+        expect(Firebase.app().name, '[DEFAULT]');
+        activations.add(arguments as List<Object?>);
+        return <Object?>[null];
+      });
     });
 
     tearDown(() {
+      debugDefaultTargetPlatformOverride = null;
       TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
-          .setMockMethodCallHandler(
-        const MethodChannel('plugins.flutter.io/firebase_app_check'),
-        null,
-      );
-      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
-          .setMockMethodCallHandler(
-        const MethodChannel('app-check-test-events'),
-        null,
-      );
+          .setMockDecodedMessageHandler<Object?>(activationChannel, null);
     });
 
     test('デバッグビルドでは両 OS のデバッグプロバイダを設定しトークン値を渡さない', () async {
-      await initializeFirebase(isDebugMode: true);
+      for (final platform in [TargetPlatform.android, TargetPlatform.iOS]) {
+        debugDefaultTargetPlatformOverride = platform;
+        await initializeFirebase(isDebugMode: true);
+      }
 
       expect(activations, [
-        {
-          'appName': '[DEFAULT]',
-          'androidProvider': 'debug',
-          'appleProvider': 'debug'
-        },
+        ['[DEFAULT]', 'debug', 'debug', null, null],
+        ['[DEFAULT]', 'debug', 'debug', null, null],
       ]);
     });
 
@@ -65,11 +51,13 @@ void main() {
       await initializeFirebase(isDebugMode: false);
 
       expect(activations, [
-        {
-          'appName': '[DEFAULT]',
-          'androidProvider': 'playIntegrity',
-          'appleProvider': 'appAttestWithDeviceCheckFallback'
-        },
+        [
+          '[DEFAULT]',
+          'playIntegrity',
+          'appAttestWithDeviceCheckFallback',
+          null,
+          null
+        ],
       ]);
     });
 

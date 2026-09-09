@@ -8,7 +8,7 @@ Future<void> initializeFirebase({required bool isDebugMode}) async {
   }
   // flavor ではなくビルド種別で分離し、dev の配布ビルドでも実機の認証を使う。
   await FirebaseAppCheck.instance.activate(
-    androidProvider: isDebugMode ? AndroidProvider.debug : AndroidProvider.playIntegrity,
-    appleProvider: isDebugMode ? AppleProvider.debug : AppleProvider.appAttestWithDeviceCheckFallback,
+    providerAndroid: isDebugMode ? const AndroidDebugProvider() : const AndroidPlayIntegrityProvider(),
+    providerApple: isDebugMode ? const AppleDebugProvider() : const AppleAppAttestWithDeviceCheckFallbackProvider(),
   );
 }

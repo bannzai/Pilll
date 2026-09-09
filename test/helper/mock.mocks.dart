@@ -418,9 +418,9 @@ class MockWriteBatch extends _i1.Mock implements _i3.WriteBatch {
       );
 
   @override
-  void update(
-    _i3.DocumentReference<Object?>? document,
-    Map<String, dynamic>? data,
+  void update<T>(
+    _i3.DocumentReference<T>? document,
+    T? data,
   ) =>
       super.noSuchMethod(
         Invocation.method(

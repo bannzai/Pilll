@@ -33,8 +33,7 @@ dependencies:
   shared_preferences: ^2.5.4
   new_version_plus: ^1.0.1
   intl: ^0.20.2
-  # iOS 14 対応とネイティブ Firebase SDK 11 系を維持するため、iOS 15 必須の 4 系には更新しない。
-  firebase_core: ^3.15.2
+  firebase_core: ^4.14.0
   firebase_analytics:
   firebase_auth:
   firebase_messaging:
@@ -74,10 +73,10 @@ dependencies:
       ref: main
   path_provider: ^2.1.4
   flutter_timezone: ^4.1.0
-  firebase_app_check: ^0.3.2+10
+  firebase_app_check: ^0.4.7
 
 dev_dependencies:
-  firebase_core_platform_interface: ^6.0.2
+  firebase_core_platform_interface: ^8.1.1
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
