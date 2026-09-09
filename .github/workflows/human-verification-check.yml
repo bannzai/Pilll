@@ -4,6 +4,7 @@ on:
   pull_request:
     types: [opened, edited, reopened, synchronize]
 
+# イベント本文の検査のみでトークンを使わないため無権限を維持する
 permissions: {}
 
 jobs:
