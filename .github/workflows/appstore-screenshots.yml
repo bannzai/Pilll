@@ -6,6 +6,9 @@
 name: appstore-screenshots
 run-name: "appstore-screenshots langs=${{ inputs.langs || 'all' }}"
 
+permissions:
+  contents: read
+
 on:
   workflow_dispatch: # fork PR に Secrets を渡さないため手動系トリガーのみ（下の push も自ブランチ限定）
     inputs:

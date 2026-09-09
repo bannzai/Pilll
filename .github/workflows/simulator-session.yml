@@ -4,6 +4,9 @@ name: simulator-session
 # run-name は local/simtunnel CLI が run を特定するキーのためこの形式を維持する
 run-name: "session=${{ inputs.session }} device=${{ inputs.device }}"
 
+permissions:
+  contents: read
+
 on:
   workflow_dispatch: # fork PR に Secrets を渡さないため workflow_dispatch のみ
     inputs:
