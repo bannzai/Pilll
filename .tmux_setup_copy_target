@@ -1,0 +1,3 @@
+# tmux-issue-setup / tmux-branch-setup が worktree へ反映する git 管理外ファイル
+android/local.properties
+android/app/src/main/res/values/values.xml
