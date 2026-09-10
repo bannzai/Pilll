@@ -645,14 +645,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.3"
+  gma_mediation_meta:
+    dependency: "direct main"
+    description:
+      name: gma_mediation_meta
+      sha256: f2a8019cc51d9aed49513f1224ca80f59e67d3f4f1b72bc6bfc4da3afa9e8c67
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.7.0"
+  gma_mediation_mintegral:
+    dependency: "direct main"
+    description:
+      name: gma_mediation_mintegral
+      sha256: b96f39e50a41ebe50bee9d4bd10afcb8a94b5b3043f5cb4551d8dd015be9d702
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.3"
   google_mobile_ads:
     dependency: "direct main"
     description:
       name: google_mobile_ads
-      sha256: "0d4a3744b5e8ed1b8be6a1b452d309f811688855a497c6113fc4400f922db603"
+      sha256: "8094e1ace8b0da33fe79027ca6959763c96a28855025cb7c8ec60838e1d56ed8"
       url: "https://pub.dev"
     source: hosted
-    version: "5.3.1"
+    version: "9.1.0"
   graphs:
     dependency: transitive
     description:
@@ -1391,26 +1407,26 @@ packages:
     dependency: transitive
     description:
       name: webview_flutter_android
-      sha256: "9573ad97890d199ac3ab32399aa33a5412163b37feb573eb5b0a76b35e9ffe41"
+      sha256: ad5182eff9a550925330cb9f0cb038eddfdd5712aba8b77aa0f0400e50f6e688
       url: "https://pub.dev"
     source: hosted
-    version: "4.8.2"
+    version: "4.12.0"
   webview_flutter_platform_interface:
     dependency: transitive
     description:
       name: webview_flutter_platform_interface
-      sha256: "7cb32b21825bd65569665c32bb00a34ded5779786d6201f5350979d2d529940d"
+      sha256: "1221c1b12f5278791042f2ec2841743784cf25c5a644e23d6680e5d718824f04"
       url: "https://pub.dev"
     source: hosted
-    version: "2.13.0"
+    version: "2.15.1"
   webview_flutter_wkwebview:
     dependency: transitive
     description:
       name: webview_flutter_wkwebview
-      sha256: "71523b9048cf510cfa1fd4e0a3fa5e476a66e0884d5df51d59d5023dba237107"
+      sha256: "82648217f537573e1ca9ae9952d3eacedca6ab5aee69dc84445fc763766dcea2"
       url: "https://pub.dev"
     source: hosted
-    version: "3.22.1"
+    version: "3.25.1"
   win32:
     dependency: transitive
     description:
@@ -1452,5 +1468,5 @@ packages:
     source: hosted
     version: "3.1.3"
 sdks:
-  dart: ">=3.9.0 <4.0.0"
-  flutter: ">=3.35.0"
+  dart: ">=3.10.0 <4.0.0"
+  flutter: ">=3.38.1"

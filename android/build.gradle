@@ -2,6 +2,12 @@ allprojects {
     repositories {
         google()
         jcenter()
+        // AdMob メディエーションの Mintegral アダプタが依存する Mintegral SDK (com.mbridge.msdk.oversea) は
+        // Google / Maven Central に無く Mintegral 自前の maven からしか取得できない
+        // 参照: https://developers.google.com/admob/android/mediation/mintegral
+        maven {
+            url 'https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea'
+        }
     }
     subprojects {
         afterEvaluate { project ->
