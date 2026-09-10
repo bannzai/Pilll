@@ -1,8 +1,8 @@
 ---
 feature: feature_appeal
 verification: mobile-mcp
-last_verified_commit: 34b7e05eb0ed73e5ee0caa2a91a96147e2edaded
-last_verified_at: 2026-07-05
+last_verified_commit: 21853fcbe3916b4509d34b8a00a3fac51298721c
+last_verified_at: 2026-09-11
 ---
 
 # feature_appeal QA
@@ -12,6 +12,7 @@ last_verified_at: 2026-07-05
 ## 1. バー表示・ローテーション (共通コンテナ)
 
 - [x] **候補のうち1件のみ表示**: ホーム画面のアナウンスバー領域には feature_appeal の候補(最大13件)のうち1件だけが表示される(日付ベースのローテーションで日替わり)
+- [x] **転換実績に基づく重み付きローテーション**: 表示順は `FeatureAppealBarWeight` (alarm_kit / health_care_integration / quick_record = 3、future_schedule / menstruation / appearance_mode_date = 2、他 = 1) で重み付けされ、1 周目は全候補、2 周目以降は重みが残る候補だけが順に表示される。表示時に `feature_appeal_bar_shown` (feature_key / feature_type / weight / rotation_length) が送られる
 - [x] **iOS限定機能はAndroidで候補から除外**: Android端末では CriticalAlert・AlarmKit のバーが候補から除外される(設定画面に対応する行がないため)
 - [x] **×ボタンで当日は再表示されない**: 表示中のバーの×ボタンをタップすると feature_appeal 領域全体がその日は非表示になる(`featureAppealLastDismissedDate` に当日の日付が保存される)
 - [x] **全候補がdismiss済みの場合は領域ごと非表示**: 全機能をdismiss済みにした状態でホーム画面を開くと、feature_appeal 領域が何も表示せず高さ0で折りたたまれる
@@ -61,6 +62,18 @@ last_verified_at: 2026-07-05
 **確認日: 2026-07-05**
 
 ⏭️ 13機能すべての dismiss 済み SharedPreferences 状態は実機シミュレータのサンドボックス内 plist を書き換える必要があり本 session のツール制約上直接再現できないため、代替手段として自動テストで確認した。`flutter test test/features/feature_appeal/feature_appeal_bars_container_test.dart` の `13 機能全 dismiss → SizedBox.shrink が表示される` テストで13件全 dismiss 時に全 Bar が `findsNothing` となることを確認済み（13件中13件成功）。
+
+</details>
+
+### **転換実績に基づく重み付きローテーション**: 表示順は `FeatureAppealBarWeight` (alarm_kit / health_care_integration / quick_record = 3、future_schedule / menstruation / appearance_mode_date = 2、他 = 1) で重み付けされ、1 周目は全候補、2 周目以降は重みが残る候補だけが順に表示される。表示時に `feature_appeal_bar_shown` (feature_key / feature_type / weight / rotation_length) が送られる
+
+<details><summary>動作確認スクショ</summary>
+
+**確認日: 2026-09-11**
+
+初期設定直後のトライアル中ユーザー (iOS、全 13 候補・appIsReleased=true で表示順は 22 日周期) のホーム画面で「未来の予定を書き込もう」(future_schedule) が表示された。2026-09-11 は epoch (2024-01-01) から 984 日目で 984 % 22 = 16 → 2 周目 (13 件目以降) の 4 番目 = 重み 2 の future_schedule に一致する (1 周目 13 件 → 2 周目: quick_record / appearance_mode_date / menstruation / future_schedule / health_care_integration / alarm_kit)。日替わりの全周期は端末で確認できないため、`flutter test test/features/feature_appeal/feature_appeal_bars_container_test.dart` の `#weightedRotationOrder` (4 件) と `2 周目` / `3 周目の末尾と折り返し` のテストで表示順を検証した (181 件中 181 件成功)。`feature_appeal_bar_shown` の送信は BigQuery 着弾を待つ (PilllBackend `feature_appeal_bar_exposure.sql`)。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/09/10/e971e1dd-5f63-4075-b518-6eb9b0c5e349-home_after_onboarding_trial.png" width="320">
 
 </details>
 
@@ -122,7 +135,9 @@ last_verified_at: 2026-07-05
 
 - [x] **プレミアムバッジ付きプレビュー表示**: プレミアム機能のHelpPage(例: `AlarmKitHelpPage`)には該当設定行のプレビューに `PremiumBadge` が表示される
 - [ ] **非プレミアムユーザーは確認するボタンでペイウォール表示**: 非プレミアムユーザーが「確認する」ボタンをタップすると、設定タブへの遷移前に `PremiumIntroductionSheet` が表示される
+  - ⏭️ スキップ: 2026-07-05 の記録 (下記エビデンス) のとおり未実施。今回 (2026-09-11) はトライアル中ユーザーの導線 (下の項目) を対象にしたため再実施していない。現在は開発者オプション「トライアル解除」で無料ユーザー状態を作れるので、次回の QA で確認する
 - [x] **プレミアムユーザーは確認するボタンで直接タブ遷移**: プレミアムまたはトライアル中のユーザーが同じボタンをタップすると、ペイウォールを経由せず設定タブへ直接遷移する
+- [x] **トライアル中ユーザーには「プレミアムプランを見る」ボタンが表示される**: プレミアム機能のHelpPageで、トライアル中(非プレミアム)のユーザーには「確認する」の下に「プレミアムプランを見る」(`FeatureAppealPremiumPlanButton`) が表示され、タップすると `PremiumIntroductionSheet` が開く。プレミアム会員・トライアル未開始/終了後の無料ユーザーには表示されない
 
 #### 動作確認
 <details>
@@ -159,6 +174,19 @@ last_verified_at: 2026-07-05
 トライアル中ユーザー(`isTrial=true`)がプレミアム機能(通知メッセージカスタマイズ)のHelpPageで「確認する」をタップすると、`PremiumIntroductionSheet` を経由せず設定タブへ直接遷移することを確認。
 
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/0441d239-856f-470e-98d6-7023fdcce740.png" width="320">
+
+</details>
+
+### **トライアル中ユーザーには「プレミアムプランを見る」ボタンが表示される**: プレミアム機能のHelpPageで、トライアル中(非プレミアム)のユーザーには「確認する」の下に「プレミアムプランを見る」(`FeatureAppealPremiumPlanButton`) が表示され、タップすると `PremiumIntroductionSheet` が開く。プレミアム会員・トライアル未開始/終了後の無料ユーザーには表示されない
+
+<details><summary>動作確認スクショ</summary>
+
+**確認日: 2026-09-11**
+
+初期設定直後 (トライアル中) のユーザーで、開発者オプション「FeatureAppeal HelpPage 一覧」→ AlarmKit (iOS 26+) を開くと「確認する」の下に「プレミアムプランを見る」が表示され、タップで `PremiumIntroductionSheet` (プラン一覧) が開いた。非表示の条件 (プレミアム会員・トライアル未開始・トライアル終了後) は `flutter test test/features/feature_appeal/feature_appeal_premium_plan_button_test.dart` (4 件成功) で確認した。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/09/10/9ab1e0dc-05a5-48b9-9079-042641157c9b-help_page_alarm_kit_trial.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/09/10/0d1dd55d-5d96-4f65-8aa7-e4ebed792661-help_page_alarm_kit_paywall.png" width="320">
 
 </details>
 
