@@ -285,3 +285,29 @@ last_verified_at: 2026-07-06
 </details>
 
 </details>
+
+---
+
+## 7. 開発者オプション
+
+- [x] **AdMob 一覧**: dev ビルドの「開発者オプション」→「AdMob 一覧」をタップすると、アンカー型アダプティブバナーとネイティブ広告 (テンプレート small) がテスト広告として描画される。バナーは画面幅いっぱい (iPhone SE 3rd で 320x100) になり、旧固定サイズ (320x50) にならない。プレミアム状態や他の AnnouncementBar の優先順位に依存せず広告 Widget 単体を確認する用途
+
+#### 動作確認
+<details>
+<summary>動作確認エビデンス</summary>
+
+### **AdMob 一覧**: dev ビルドの「開発者オプション」→「AdMob 一覧」をタップすると、アンカー型アダプティブバナーとネイティブ広告 (テンプレート small) がテスト広告として描画される。バナーは画面幅いっぱい (iPhone SE 3rd で 320x100) になり、旧固定サイズ (320x50) にならない。プレミアム状態や他の AnnouncementBar の優先順位に依存せず広告 Widget 単体を確認する用途
+
+<details><summary>動作確認スクショ</summary>
+
+**確認日: 2026-09-09** (コミット 7306dafbdfb36545dcfdb0978f88e41c15b0258e、google_mobile_ads 9.1.0 + Meta / Mintegral アダプタ導入後)
+
+iPhone SE (3rd generation) シミュレータ (iOS 26.5) で設定タブ → 開発者オプション → 「AdMob 一覧」を開き、上段に「This is a 320x100 test ad.」のアダプティブバナー、下段に Flood-It! のネイティブテスト広告 (Ad バッジ・App Store・インストールボタン) が描画されることを確認。遷移 6 秒後と 15 秒後で表示は同一。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/09/10/51c0e33f-9a0e-4078-86e6-5887638aead4-admob-list-sdk9-15s.png" width="320">
+
+- ⏭️ スキップ: Meta / Mintegral からの実広告の配信確認は AdMob 管理画面で入札ソースを設定し、各社のアプリ審査が通るまで行えないため未検証 (テスト広告は AdMob 単体の配信)
+
+</details>
+
+</details>
