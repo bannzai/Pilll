@@ -6,7 +6,9 @@ import 'package:pilll/features/initial_setting/premium_trial/page.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
+import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
+import 'package:pilll/utils/remote_config.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -27,7 +29,6 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStateNotifierProvider.notifier);
     final state = ref.watch(initialSettingStateNotifierProvider);
-    final onboardingPaywallVariant = onboardingPaywallVariantFromRemoteConfig(ref.watch(remoteConfigParameterProvider).onboardingPaywallVariant);
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -152,6 +153,15 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                         );
                         // A/B テスト (PilllBackend issue #417): 群の割当をここで計測し、実験群には premium_trial 紹介の前に Paywall を出す。
                         // 対照群も割当イベントを送ることで、BigQuery で群間のトライアル開始率・転換率を比較できる。
+                        // 初回起動では setupRemoteConfig の fetchAndActivate を待たずに画面が進み、remoteConfigParameterProvider は
+                        // 起動直後の値 (未取得なら既定の空文字) を保持し続けるため、provider ではなくタップ時点の Remote Config を直接読む。
+                        // provider を invalidate すると、それを watch する initialSettingStateNotifierProvider の入力状態が消えるので使わない。
+                        final onboardingPaywallVariant = onboardingPaywallVariantFromRemoteConfig(
+                          remoteConfig.getStringOrDefault(
+                            RemoteConfigKeys.onboardingPaywallVariant,
+                            RemoteConfigParameterDefaultValues.onboardingPaywallVariant,
+                          ),
+                        );
                         if (onboardingPaywallVariant != null) {
                           analytics.logEvent(
                             name: 'onboarding_paywall_assigned',
