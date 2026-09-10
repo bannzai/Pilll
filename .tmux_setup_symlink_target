@@ -1,0 +1,7 @@
+# tmux-issue-setup / tmux-branch-setup が worktree へ反映する git 管理外ファイル
+android/app/src/dev/google-services.json
+android/app/src/google-services.json
+android/app/src/prod/google-services.json
+android/secret.properties
+ios/Firebase/GoogleService-Info.plist
+ios/Runner/StoreKitTestCertificate.cer

@@ -1,70 +1,24 @@
-# Pilll プロジェクト概要
+# Pilll の開発指示
 
-## アプリケーション概要
-飲み忘れの不安をなくすピルの服用管理モバイルアプリ・Pilllの開発をしています。
-ピルの服用時刻にリマインド、服用履歴の管理、生理管理を行えるアプリになっています
-iOS・Androidアプリ両方を提供しております。Flutter製のアプリです。このリポジトリはPilllのFlutterプロジェクトのリポジトリです
+ピルの服用管理アプリ。依存関係は `pubspec.yaml`、Lint は `analysis_options.yaml` を参照する。
 
-### 主な機能
-- ピルの服用記録: 服用記録・取り消し。服用履歴を確認できる
-- ピルシートUI: ピルシートをメタファーとしたUIで「どこまで飲んだかを一目でわかる」価値を提供。また、ピルシートのUIからいつ頃生理が来るか、何日飲む薬か、何番目の薬か。が一目でわかる。表示番号も調整できる
-- 生理記録: 生理が記録・編集ができる
-- 日記: カレンダーUIがあり、体調を記録
-- 未来の予定: カレンダーUIから予定を書き込むことができる。通院予定など
-- プレミアムプラン（有料機能）
-
-## 技術スタック
-詳細は、 @pubspec.yaml を参考
-
-### 状態管理
-- **Riverpod**: グローバル状態管理
-- **Flutter Hooks**: Widget内部状態管理
-
-### バックエンド・インフラ
-- **Firebase**:
-  - Authentication (認証)
-  - Firestore (データベース)
-  - Analytics
-  - Crashlytics
-  - Remote Config
-  - Messaging (プッシュ通知)
-
-### その他主要パッケージ
-- **freezed** - イミュータブルなデータクラス生成
-- **json_annotation** - JSONシリアライゼーション
-- **mockito** - テスト用モック
-- **intl** - 国際化対応
-- **shared_preferences** - ローカルストレージ
-
-### 決済
-- **RevenueCat** - アプリ内課金管理
+応答は日本語で行う。
 
 ## コーディング規約
 
-### コーディング規約
 - 内部状態の管理は可能な限り flutter_hooksを使用する
 - 一時変数は宣言しない。少なくとも「わかりやすくなる」という主観的な目的では行わない。繰り返し使われるものや、長すぎる条件式をまとめる場合は検討する
 - コンポーネント内で状態管理の完結を目指す。
 - 親からの状態共有は ValueNotifier を子コンポーネント間で共有する。コールバックは使わない。もし使用したい場合は理由をコメントに書く
 - ValueNotifierのaddListenerは基本的にわかりづらいのでやらない。許容するケースは SharedPreferences と同期をしたい時
 - StateNotifier,ChangeNotifierは使わない
-- 関数、メソッドの引数は、{required} をつけましょう。引数ラベルがないとわかりづらいです
-
-### Lintルール (analysis_options.yaml)
-- その他は、 @analysis_options.yaml を参照
+- Dart の引数・Provider・DB 操作の規約は `.claude/rules/coding-conventions.md` を参照する。
 
 ### ファイル構成・命名規則
-- **エンティティ**: `lib/entity/`: `.codegen.dart` サフィックスで自動生成ファイルを識別
-- **Provider**: `lib/provider/`: Riverpodプロバイダー
-- **機能別ディレクトリ**: `lib/features/`: 各画面・機能ごとにディレクトリを分割
-- **コンポーネント**: `lib/components/` 
-  * Deprecated: atoms/molecules/organisms/page/templateのAtomic Design構成
-  * components/の下は特にルールなく都合よくパッケージを切っていきましょう
+- `lib/components/` は Atomic Design 構成を非推奨とし、用途に応じてパッケージを分ける。
 
 ### コード生成
-- `build_runner` を使用
-- 対象: freezed, json_serializable, riverpod_generator
-- 実行コマンド: `flutter pub run build_runner build --delete-conflicting-outputs;dart format lib`
+- `flutter pub run build_runner build --delete-conflicting-outputs` を実行後、`dart format lib` を実行する。
 
 ### テスト
 - テストファイルは `test/` ディレクトリに配置
@@ -77,19 +31,9 @@ iOS・Androidアプリ両方を提供しております。Flutter製のアプリ
 
 ### その他の重要事項
 - **ライセンス**: 独自ライセンス（著作権保持、個人利用・PR許可）
-- **多言語対応**: 70以上の言語に対応（lib/l10n/app_*.arb、gen-l10n）。翻訳運用は translate-app-arb skill で行う（ルートの translate-app.config.json 駆動。未翻訳キーのみの冪等翻訳・check による機械検査・review による品質レビュー）。キー欠落は `test/l10n/arb_integrity_test.dart` でも CI 検出される
-- **ログ出力**: debugPrintを使用（本番環境では無効化される）
-
-### マネタイズ
-- サブスクリプション: 2種類ある
-  * 割引: 月額300円, 年額3600円
-  * 通常: 月額600円, 年額4800円
-- また、古いプランに 月額480円,年額3600円 がある。時たまキャンペーンとしてこの金額のプランを提供することがある
-- 広告: アプリのホーム画面にAdMobのバナー広告。たまに企業からの純広告(バナー形式)を表示することがある
-
-## 開発時の注意点
-1. Firebaseの設定ファイルは環境ごとに分かれている（main.dev.dart/main.prod.dart）
-2. RemoteConfigでフィーチャーフラグを管理
+- 翻訳は `translate-app-arb` skill とルートの `translate-app.config.json` に従う。
+- ログ出力は `debugPrint` を使用する。
+- Firebase の設定は `main.dev.dart` / `main.prod.dart` で環境が分かれている。
 
 ## issue の読み書き先
 このリポジトリ (bannzai/Pilll) は public で issue 機能が無効。issue は private の bannzai/PilllBackend で管理している。
@@ -123,15 +67,6 @@ iOS・Androidアプリ両方を提供しております。Flutter製のアプリ
 - PillSheet.v1() と PillSheet.v2() の両方でテストが必要な場合がある
 - v2 特有のロジック（pills から lastTakenDate を導出など）は `#PillSheetV2` グループ内でテスト
 - 共通 getter/function で v1/v2 両方のテストが必要な場合は、各グループ内に `group("v2", ...)` を追加
-
-## Project Context
-
-### Paths
-- Commands: `.claude/commands/`
-- Skills: `.claude/skills/`
-
-## Development Guidelines
-- Think in English, but generate responses in Japanese (思考は英語、回答の生成は日本語で行うように)
 
 <!-- ai-review-config begin -->
 <!--
