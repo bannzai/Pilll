@@ -1,8 +1,12 @@
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state.codegen.dart';
+import 'package:pilll/features/initial_setting/onboarding_paywall_variant.dart';
 import 'package:pilll/features/initial_setting/premium_trial/page.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
+import 'package:pilll/features/premium_introduction/paywall_source.dart';
+import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -23,6 +27,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStateNotifierProvider.notifier);
     final state = ref.watch(initialSettingStateNotifierProvider);
+    final onboardingPaywallVariant = onboardingPaywallVariantFromRemoteConfig(ref.watch(remoteConfigParameterProvider).onboardingPaywallVariant);
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -145,6 +150,18 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                         analytics.logEvent(
                           name: 'next_initial_setting_reminder_times',
                         );
+                        // A/B テスト (PilllBackend issue #417): 群の割当をここで計測し、実験群には premium_trial 紹介の前に Paywall を出す。
+                        // 対照群も割当イベントを送ることで、BigQuery で群間のトライアル開始率・転換率を比較できる。
+                        if (onboardingPaywallVariant != null) {
+                          analytics.logEvent(
+                            name: 'onboarding_paywall_assigned',
+                            parameters: {'variant': onboardingPaywallVariant.value},
+                          );
+                        }
+                        if (onboardingPaywallVariant == OnboardingPaywallVariant.paywall) {
+                          await showPremiumIntroductionSheet(context, source: PaywallSource.onboarding);
+                        }
+                        if (!context.mounted) return;
                         Navigator.of(context).push(
                           IntiialSettingPremiumTrialStartPageRoute.route(),
                         );

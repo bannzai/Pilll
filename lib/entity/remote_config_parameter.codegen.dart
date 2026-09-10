@@ -58,6 +58,9 @@ abstract class RemoteConfigKeys {
 
   /// ピルシート終了ダイアログの A/B バリアント識別子キー
   static const endedPillSheetDialogVariant = 'endedPillSheetDialogVariant';
+
+  /// オンボーディング内 Paywall 表示の A/B バリアント識別子キー
+  static const onboardingPaywallVariant = 'onboardingPaywallVariant';
 }
 
 /// Remote Configパラメータのデフォルト値定義
@@ -118,6 +121,9 @@ abstract class RemoteConfigParameterDefaultValues {
 
   /// ピルシート終了ダイアログのバリアント（空文字 = 実験未参加 / 非表示）
   static const endedPillSheetDialogVariant = '';
+
+  /// オンボーディング内 Paywall のバリアント（空文字 = 実験未参加。割当イベントも送らず現行フローのまま）
+  static const onboardingPaywallVariant = '';
 }
 
 // [RemoteConfigDefaultValues] でgrepした場所に全て設定する
@@ -220,6 +226,11 @@ class RemoteConfigParameter with _$RemoteConfigParameter {
     /// ピルシート終了ダイアログの A/B バリアント識別子
     /// 'history_blur' / 'summary_stats' / '' (非表示)。Firebase A/B Testing で配信する
     @Default(RemoteConfigParameterDefaultValues.endedPillSheetDialogVariant) String endedPillSheetDialogVariant,
+
+    /// オンボーディング内 Paywall 表示の A/B バリアント識別子
+    /// 'control' (現行フロー) / 'paywall' (initial_setting 完了後・premium_trial 紹介前に Paywall を表示) / '' (実験未参加)。
+    /// Firebase A/B Testing で配信する。解釈は lib/features/initial_setting/onboarding_paywall_variant.dart
+    @Default(RemoteConfigParameterDefaultValues.onboardingPaywallVariant) String onboardingPaywallVariant,
   }) = _RemoteConfigParameter;
   RemoteConfigParameter._();
   factory RemoteConfigParameter.fromJson(Map<String, dynamic> json) => _$RemoteConfigParameterFromJson(json);
