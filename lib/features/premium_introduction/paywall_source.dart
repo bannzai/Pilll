@@ -36,6 +36,9 @@ enum PaywallSource {
   lifetimeOfferAppLaunch,
   endedPillSheetDialogHistory,
   endedPillSheetDialogSummary,
+
+  /// オンボーディング (initial_setting) 完了直後・premium_trial 紹介前に表示する A/B テスト用 paywall
+  onboarding,
 }
 
 extension PaywallSourceFunction on PaywallSource {
@@ -101,6 +104,8 @@ extension PaywallSourceFunction on PaywallSource {
         return 'ended_pill_sheet_dialog_history';
       case PaywallSource.endedPillSheetDialogSummary:
         return 'ended_pill_sheet_dialog_summary';
+      case PaywallSource.onboarding:
+        return 'onboarding';
     }
   }
 }
