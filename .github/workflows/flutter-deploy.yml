@@ -371,7 +371,7 @@ jobs:
           echo "keystore: $SIZE bytes"
           [ "$SIZE" -gt 100 ] || { echo "::error::keystore が $SIZE bytes しかありません。ANDROID_KEYSTORE_JKS_BASE64 が壊れています"; exit 1; }
           keytool -list -keystore "$ANDROID_KEYSTORE_PATH" -storepass "$ANDROID_KEYSTORE_PASSWORD" -alias "$ANDROID_KEYSTORE_ALIAS" > /dev/null \
-            || { echo "::error::keystore を ANDROID_KEYSTORE_PASSWORD / ANDROID_KEYSTORE_ALIAS で開けません。Bitrise の Secrets と同じ値か確認してください"; exit 1; }
+            || { echo "::error::keystore を ANDROID_KEYSTORE_PASSWORD / ANDROID_KEYSTORE_ALIAS で開けません。Secret の値を登録し直してください"; exit 1; }
 
       - run: make secret
 
