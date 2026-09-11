@@ -36,7 +36,7 @@ jobs:
       contents: read # checkout のみ。OIDC token (id-token) は session job だけに与える
     steps:
       # simtunnel 経路の workflow は uses を commit SHA で固定する（simtunnel PROJECT.md「リポジトリ公開に耐える安全性」）
-      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
       - name: Prepare firebase config
@@ -51,7 +51,7 @@ jobs:
           flutter-version: '3.41.9'
       - run: flutter pub get
       - run: flutter build ios --simulator --debug --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
-      - uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: simulator-app
           path: build/ios/iphonesimulator # .app の親ディレクトリ（.app 直指定は中身が flatten される）
