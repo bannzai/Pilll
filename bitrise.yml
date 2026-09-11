@@ -1,0 +1,398 @@
+---
+format_version: '8'
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+project_type: flutter
+workflows:
+  primary:
+    steps:
+    - activate-ssh-key@4:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone@6.2: {}
+    - script@1:
+        title: Do anything with Script step
+    - flutter-installer@0:
+        inputs:
+        - is_update: 'false'
+    - cache-pull@2: {}
+    - flutter-analyze@0:
+        inputs:
+        - project_location: "$BITRISE_FLUTTER_PROJECT_LOCATION"
+    - cache-push@2: {}
+    - flutter-test@0:
+        inputs:
+        - project_location: "$BITRISE_FLUTTER_PROJECT_LOCATION"
+    - deploy-to-bitrise-io@1: {}
+    - create-install-page-qr-code@1: {}
+    - slack@3:
+        inputs:
+        - buttons: |
+            View App|${BITRISE_APP_URL}
+            View Build|${BITRISE_BUILD_URL}
+            Install Page|${BITRISE_PUBLIC_INSTALL_PAGE_URL}
+            QR|$BITRISE_PUBLIC_INSTALL_PAGE_QR_CODE_IMAGE_URL
+        - fields: |-
+            App|${BITRISE_APP_TITLE}
+            Branch|${BITRISE_GIT_BRANCH}
+            Workflow|${BITRISE_TRIGGERED_WORKFLOW_ID}
+            QR|$BITRISE_PUBLIC_INSTALL_PAGE_QR_CODE_IMAGE_URL
+        - api_token: "$SLACK_WEB_HOOK_URL_FOR_DEPLOY_ADHOC_APP"
+  release-android:
+    steps:
+    - build-router-start@0:
+        inputs:
+        - workflows: |-
+            release-android-dev
+            release-android-prod
+        - access_token: "$DEPLOY_ACCESS_TOKEN"
+  release-android-dev:
+    steps:
+    - activate-ssh-key@4:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone@8.0: {}
+    - set-java-version@1:
+        inputs:
+        - set_java_version: '17'
+    - flutter-installer@0:
+        inputs:
+        - version: "$FLUTTER_VERSION"
+        - is_update: 'false'
+    - cache-pull@2: {}
+    - script@1:
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            export REVENUE_CAT_PUBLIC_API_KEY=$DEV_REVENUE_CAT_PUBLIC_API_KEY
+            set -u
+
+            export ANDROID_ADMOB_NATIVE_ADVANCE_IDENTIFIER=$DEV_ANDROID_ADMOB_NATIVE_ADVANCE_IDENTIFIER
+            export ANDROID_RES_VALUES=$ANDROID_RES_VALUES_DEV
+            export FILE_FIREBASE_ANDROID=$FILE_FIREBASE_ANDROID_DEVELOPMENT
+            # write your script here
+            make secret
+
+            # 何か理由があって指定してたが、試したところ不要そうなのでコメントアウトする
+            # 復活させる場合は Install missing Android SDK componentsのstepをこの後に追加する
+            # dart-define-from-file の移行時にFlutter buildの前にNDKをインストールする必要があるためエラーが出ていたのがきっかけで削除
+            # sdkmanager 'ndk;23.1.7779620'
+            # echo "flutter.sdk=$HOME/flutter-sdk/flutter" >> android/local.properties
+            # echo "ndk.dir=/opt/android-ndk/" >> android/local.properties
+    - file-downloader@1:
+        inputs:
+        - destination: "$BITRISE_SOURCE_DIR/android/app/bannzai.key.jks"
+        - source: "$BITRISEIO_ANDROID_KEYSTORE_URL"
+    - change-android-versioncode-and-versionname@1:
+        inputs:
+        - version_code_offset: '100'
+        - build_gradle_path: "$BITRISE_SOURCE_DIR/android/app/build.gradle"
+    - flutter-build@0:
+        inputs:
+        - project_location: "$BITRISE_FLUTTER_PROJECT_LOCATION"
+        - ios_additional_params: "--release --no-codesign --flavor production"
+        - android_additional_params: "--release --target lib/main.dev.dart
+            --dart-define-from-file=environment/dev.json"
+        - is_debug_mode: 'true'
+        - android_output_type: appbundle
+        - platform: android
+    - sign-apk@1: {}
+    - cache-push@2: {}
+    - google-play-deploy@3:
+        inputs:
+        - package_name: com.mizuki.Ohashi.Pilll.development
+        - track: internal
+        - expansionfile_path:
+        - service_account_json_key_path: "$BITRISEIO_GOOGLE_PLAY_API_SERVICE_ACCOUNT_JSON_URL"
+    - slack@3:
+        inputs:
+        - buttons: |-
+            View App|${BITRISE_APP_URL}
+            View Build|${BITRISE_BUILD_URL}
+            Install Page|${BITRISE_PUBLIC_INSTALL_PAGE_URL}
+            QR|$BITRISE_PUBLIC_INSTALL_PAGE_QR_CODE_IMAGE_URL
+        - fields: |-
+            App|${BITRISE_APP_TITLE}
+            Branch|${BITRISE_GIT_BRANCH}
+            Workflow|${BITRISE_TRIGGERED_WORKFLOW_ID}
+            QR|$BITRISE_PUBLIC_INSTALL_PAGE_QR_CODE_IMAGE_URL
+        - webhook_url: "$SLACK_WEB_HOOK_URL_FOR_DEPLOY_ADHOC_APP"
+        - api_token: ''
+  release-android-prod:
+    steps:
+    - activate-ssh-key@4:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone@8.0: {}
+    - set-java-version@1:
+        inputs:
+        - set_java_version: '17'
+    - flutter-installer@0:
+        inputs:
+        - version: "$FLUTTER_VERSION"
+        - is_update: 'false'
+    - cache-pull@2: {}
+    - script@1:
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            export REVENUE_CAT_PUBLIC_API_KEY=$PROD_REVENUE_CAT_PUBLIC_API_KEY
+            set -u
+
+            # write your script here
+            export ANDROID_ADMOB_NATIVE_ADVANCE_IDENTIFIER=$PROD_ANDROID_ADMOB_NATIVE_ADVANCE_IDENTIFIER
+            export ANDROID_ADMOB_BANNER_IDENTIFIER=$PROD_ANDROID_ADMOB_BANNER_IDENTIFIER
+            export ANDROID_RES_VALUES=$ANDROID_RES_VALUES_PROD
+            export FILE_FIREBASE_ANDROID=$FILE_FIREBASE_ANDROID_RPODUCTION
+            make secret
+
+            # 何か理由があって指定してたが、試したところ不要そうなのでコメントアウトする
+            # 復活させる場合は Install missing Android SDK componentsのstepをこの後に追加する
+            # dart-define-from-file の移行時にFlutter buildの前にNDKをインストールする必要があるためエラーが出ていたのがきっかけで削除
+            # sdkmanager 'ndk;23.1.7779620'
+            # echo "flutter.sdk=$HOME/flutter-sdk/flutter" >> android/local.properties
+    - file-downloader@1:
+        inputs:
+        - destination: "$BITRISE_SOURCE_DIR/android/app/bannzai.key.jks"
+        - source: "$BITRISEIO_ANDROID_KEYSTORE_URL"
+    - change-android-versioncode-and-versionname@1:
+        inputs:
+        - version_code_offset: '100'
+        - build_gradle_path: "$BITRISE_SOURCE_DIR/android/app/build.gradle"
+    - flutter-build@0:
+        inputs:
+        - project_location: "$BITRISE_FLUTTER_PROJECT_LOCATION"
+        - ios_additional_params: "--release --no-codesign --flavor production"
+        - android_additional_params: "--release --target lib/main.prod.dart
+            --dart-define-from-file=environment/prod.json"
+        - is_debug_mode: 'true'
+        - android_output_type: appbundle
+        - platform: android
+    - sign-apk@1: {}
+    - cache-push@2: {}
+    - google-play-deploy@3:
+        inputs:
+        - package_name: com.mizuki.Ohashi.Pilll
+        - track: internal
+        - retry_without_sending_to_review: 'true'
+        - service_account_json_key_path: "$BITRISEIO_GOOGLE_PLAY_API_SERVICE_ACCOUNT_JSON_URL"
+    - slack@3:
+        inputs:
+        - buttons: |-
+            View App|${BITRISE_APP_URL}
+            View Build|${BITRISE_BUILD_URL}
+            Install Page|${BITRISE_PUBLIC_INSTALL_PAGE_URL}
+            QR|$BITRISE_PUBLIC_INSTALL_PAGE_QR_CODE_IMAGE_URL
+        - fields: |-
+            App|${BITRISE_APP_TITLE}
+            Branch|${BITRISE_GIT_BRANCH}
+            Workflow|${BITRISE_TRIGGERED_WORKFLOW_ID}
+            QR|$BITRISE_PUBLIC_INSTALL_PAGE_QR_CODE_IMAGE_URL
+        - webhook_url: "$SLACK_WEB_HOOK_URL_FOR_DEPLOY_ADHOC_APP"
+        - api_token: ''
+  release-dev:
+    steps:
+    - build-router-start@0:
+        inputs:
+        - workflows: |-
+            release-android-dev
+            release-ios-dev
+        - access_token: "$DEPLOY_ACCESS_TOKEN"
+  release-ios:
+    steps:
+    - build-router-start@0:
+        inputs:
+        - workflows: |-
+            release-ios-prod
+            release-ios-dev
+        - access_token: "$DEPLOY_ACCESS_TOKEN"
+    meta:
+      bitrise.io:
+        machine_type_id: g2-m1.4core
+  release-ios-dev:
+    steps:
+    - activate-ssh-key@4:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone@8.1: {}
+    - flutter-installer@0:
+        inputs:
+        - version: "$FLUTTER_VERSION"
+        - is_update: 'false'
+    - cache-pull@2: {}
+    - script@1:
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            export REVENUE_CAT_PUBLIC_API_KEY=$DEV_REVENUE_CAT_PUBLIC_API_KEY
+            set -u
+
+            # write your script here
+            export IOS_ADMOB_NATIVE_ADVANCE_IDENTIFIER=$DEV_IOS_ADMOB_NATIVE_ADVANCE_IDENTIFIER
+
+            export XCCONFIG_SECRET=$XCCONFIG_SECRET_DEVELOPMENT
+            export FILE_FIREBASE_IOS=$FILE_FIREBASE_IOS_DEVELOPMENT
+            export ANDROID_RES_VALUES=""
+
+            make secret
+            gem update cocoapods
+            pod --version
+            ./scripts/export-options-plist.sh
+    - certificate-and-profile-installer@1: {}
+    - set-xcode-build-number@1:
+        inputs:
+        - build_version_offset: '100'
+        - plist_path: ios/Runner/Info.plist
+    - flutter-build@0:
+        inputs:
+        - project_location: "$BITRISE_FLUTTER_PROJECT_LOCATION"
+        - ios_additional_params: "--release --target lib/main.dev.dart --flavor
+            development --dart-define-from-file=environment/dev.json"
+        - android_additional_params: "--release --flavor development"
+        - ios_output_type: archive
+        - platform: ios
+    - export-xcarchive@4:
+        inputs:
+        - distribution_method: app-store
+    - deploy-to-bitrise-io@2: {}
+    - cache-push@2: {}
+    - deploy-to-itunesconnect-deliver@2:
+        inputs:
+        - password: "$APPLE_ID_PASSWORD"
+        - team_id: '97327896'
+        - bundle_id: com.mizuki.Ohashi.Pilll.dev
+        - fastlane_version: latest
+        - itunescon_user: "$APPLE_ID"
+    - firebase-dsym-upload@2:
+        inputs:
+        - fdu_fabric_location: "./ios/Pods/FirebaseCrashlytics/upload-symbols"
+        - fdu_google_services_location: "./ios/Firebase/GoogleService-Info.plist"
+    - slack@4.0:
+        inputs:
+        - buttons: |-
+            View App|${BITRISE_APP_URL}
+            View Build|${BITRISE_BUILD_URL}
+            Install Page|${BITRISE_PUBLIC_INSTALL_PAGE_URL}
+            QR|$BITRISE_PUBLIC_INSTALL_PAGE_QR_CODE_IMAGE_URL
+        - fields: |-
+            App|${BITRISE_APP_TITLE}
+            Branch|${BITRISE_GIT_BRANCH}
+            Workflow|${BITRISE_TRIGGERED_WORKFLOW_ID}
+            QR|$BITRISE_PUBLIC_INSTALL_PAGE_QR_CODE_IMAGE_URL
+        - webhook_url: "$SLACK_WEB_HOOK_URL_FOR_DEPLOY_ADHOC_APP"
+        - api_token: ''
+    meta:
+      bitrise.io:
+        machine_type_id: g2-m1.4core
+  release-ios-prod:
+    steps:
+    - activate-ssh-key@4:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone@8.1: {}
+    - flutter-installer@0:
+        inputs:
+        - version: "$FLUTTER_VERSION"
+        - is_update: 'false'
+    - cache-pull@2: {}
+    - script@1:
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            export REVENUE_CAT_PUBLIC_API_KEY=$PROD_REVENUE_CAT_PUBLIC_API_KEY
+            set -u
+
+            export IOS_ADMOB_NATIVE_ADVANCE_IDENTIFIER=$PROD_IOS_ADMOB_NATIVE_ADVANCE_IDENTIFIER
+            export IOS_ADMOB_BANNER_IDENTIFIER=$PROD_IOS_ADMOB_BANNER_IDENTIFIER
+
+            export XCCONFIG_SECRET=$XCCONFIG_SECRET_PRODUCTION
+            export FILE_FIREBASE_IOS=$FILE_FIREBASE_IOS_PRODUCTION
+            export ANDROID_RES_VALUES=""
+
+            # write your script here
+            make secret
+            gem update cocoapods
+            pod --version
+    - certificate-and-profile-installer@1: {}
+    - set-xcode-build-number@1:
+        inputs:
+        - build_version_offset: '100'
+        - plist_path: ios/Runner/Info.plist
+    - flutter-build@0:
+        inputs:
+        - project_location: "$BITRISE_FLUTTER_PROJECT_LOCATION"
+        - ios_additional_params: "--release --target lib/main.prod.dart
+            --dart-define-from-file=environment/prod.json"
+        - android_additional_params: "--release --flavor development"
+        - ios_output_type: archive
+        - platform: ios
+    - export-xcarchive@4:
+        inputs:
+        - distribution_method: app-store
+    - deploy-to-bitrise-io@2: {}
+    - cache-push@2: {}
+    - deploy-to-itunesconnect-deliver@2:
+        inputs:
+        - password: "$APPLE_ID_PASSWORD"
+        - team_id: '97327896'
+        - bundle_id: com.mizuki.Ohashi.Pilll
+        - app_password: "$APPLE_APP_SPECIFIC_PASSWORD"
+        - fastlane_version: latest
+        - itunescon_user: "$APPLE_ID"
+    - firebase-dsym-upload@2:
+        inputs:
+        - fdu_google_services_location: "./ios/Firebase/GoogleService-Info.plist"
+        - fdu_fabric_location: "./ios/Pods/FirebaseCrashlytics/upload-symbols"
+    - slack@4.0:
+        inputs:
+        - buttons: |-
+            View App|${BITRISE_APP_URL}
+            View Build|${BITRISE_BUILD_URL}
+            Install Page|${BITRISE_PUBLIC_INSTALL_PAGE_URL}
+            QR|$BITRISE_PUBLIC_INSTALL_PAGE_QR_CODE_IMAGE_URL
+        - fields: |-
+            App|${BITRISE_APP_TITLE}
+            Branch|${BITRISE_GIT_BRANCH}
+            Workflow|${BITRISE_TRIGGERED_WORKFLOW_ID}
+            QR|$BITRISE_PUBLIC_INSTALL_PAGE_QR_CODE_IMAGE_URL
+        - webhook_url: "$SLACK_WEB_HOOK_URL_FOR_DEPLOY_ADHOC_APP"
+        - api_token: ''
+    meta:
+      bitrise.io:
+        machine_type_id: g2-m1.4core
+app:
+  envs:
+  - opts:
+      is_expand: false
+    BITRISE_FLUTTER_PROJECT_LOCATION: "."
+  - opts:
+      is_expand: false
+    BITRISE_PROJECT_PATH: ios/Runner.xcworkspace
+  - opts:
+      is_expand: false
+    BITRISE_SCHEME: Runner
+  - opts:
+      is_expand: false
+    BITRISE_EXPORT_METHOD: ad-hoc
+  - FLUTTER_VERSION: 3.41.9
+    opts:
+      is_expand: false
+  - opts:
+      is_expand: false
+    fastlane_version: latest
+trigger_map:
+- push_branch: main
+  workflow: release-dev
+- tag: release-ios-v*
+  workflow: release-ios
+- tag: release-android-v*
+  workflow: release-android
+- tag: release-dev-date-*
+  workflow: release-dev
+meta:
+  bitrise.io:
+    stack: osx-xcode-26.6.x
+    machine_type_id: g2.mac.medium
+
