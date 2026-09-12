@@ -21,6 +21,7 @@ void main() {
           'ended_pill_sheet_dialog_history');
       expect(PaywallSource.endedPillSheetDialogSummary.value,
           'ended_pill_sheet_dialog_summary');
+      expect(PaywallSource.onboarding.value, 'onboarding');
     });
   });
 }
