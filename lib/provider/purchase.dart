@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/services.dart';
@@ -301,7 +303,9 @@ Future<void> initializePurchase(String uid) async {
     Environment.isDevelopment ? LogLevel.debug : LogLevel.info,
   );
   Purchases.configure(
-    PurchasesConfiguration(Secret.revenueCatPublicAPIKey)..appUserID = uid,
+    PurchasesConfiguration(
+      Platform.isIOS ? Secret.revenueCatPublicAPIKeyIOS : Secret.revenueCatPublicAPIKeyAndroid,
+    )..appUserID = uid,
   );
   Purchases.addCustomerInfoUpdateListener(callUpdatePurchaseInfo);
   await syncPurchaseInfo();
