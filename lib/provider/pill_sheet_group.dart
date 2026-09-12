@@ -65,7 +65,8 @@ Future<PillSheetGroup?> beforePillSheetGroup(
     return snapshot.docs.first.data();
   }
 
-  return snapshot.docs.last.data();
+  // orderBy(createdAt).limitToLast(2) は昇順のまま末尾2件を返すので docs は [前回, 最新] の順になる。前回のピルシートグループは先頭
+  return snapshot.docs.first.data();
 }
 
 @Riverpod(dependencies: [database])

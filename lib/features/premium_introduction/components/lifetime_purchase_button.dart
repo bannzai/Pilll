@@ -78,12 +78,13 @@ class LifetimePurchaseButton extends StatelessWidget {
               ),
             ),
           ),
-          if (discountRate != null && offeringType == OfferingType.discount)
+          // NOTE: 通常買い切り価格はストアから取得した値だけを表示する。取得できない時はバッジ自体を表示しない
+          if (discountRate != null && lifetimePremiumPackage != null && offeringType == OfferingType.discount)
             Positioned(
               top: -5,
               child: _LifetimeDiscountBadge(
                 discountRate: discountRate!,
-                lifetimePremiumPackage: lifetimePremiumPackage,
+                lifetimePremiumPackage: lifetimePremiumPackage!,
               ),
             ),
         ],
@@ -94,7 +95,7 @@ class LifetimePurchaseButton extends StatelessWidget {
 
 class _LifetimeDiscountBadge extends StatelessWidget {
   final double discountRate;
-  final Package? lifetimePremiumPackage;
+  final Package lifetimePremiumPackage;
 
   const _LifetimeDiscountBadge({
     required this.discountRate,
@@ -110,7 +111,7 @@ class _LifetimeDiscountBadge extends StatelessWidget {
         color: AppColors.secondary,
       ),
       child: Text(
-        '通常買い切り価格の ${lifetimePremiumPackage?.storeProduct.priceString ?? "¥20,000"} よりも ${discountRate.toInt()}％OFF',
+        '通常買い切り価格の ${lifetimePremiumPackage.storeProduct.priceString} よりも ${discountRate.toInt()}％OFF',
         style: const TextStyle(
           fontWeight: FontWeight.w700,
           fontSize: 10,

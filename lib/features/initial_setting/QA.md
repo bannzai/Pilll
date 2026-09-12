@@ -1,8 +1,8 @@
 ---
 feature: initial_setting
 verification: mobile-mcp
-last_verified_commit: 34b7e05eb0ed73e5ee0caa2a91a96147e2edaded
-last_verified_at: 2026-07-05
+last_verified_commit: 21853fcbe3916b4509d34b8a00a3fac51298721c
+last_verified_at: 2026-09-11
 ---
 
 # initial_setting QA
@@ -135,6 +135,9 @@ last_verified_at: 2026-07-05
 - [x] **飲み忘れ通知の時刻設定**: 「ピルの飲み忘れ通知」の案内のもと3つの時刻設定枠が表示され、各枠をタップするとタイムピッカーがボトムシートで表示され、選択した時刻が枠に反映される
 - [x] **利用規約・プライバシーポリシーのリンク**: 画面下部の「プライバシーポリシー」「利用規約」リンクをタップすると、それぞれWebViewで該当ページが開く
 - [x] **「次へ」でプレミアム体験開始画面に遷移**: 「次へ」ボタンをタップするとプレミアム体験開始画面に遷移する
+- [x] **オンボーディング Paywall A/B (実験未参加)**: Remote Config `onboardingPaywallVariant` が未設定 (空文字) の場合、「次へ」で Paywall は表示されず現行どおりプレミアム体験開始画面に遷移する (割当イベント `onboarding_paywall_assigned` も送られない)
+- [ ] **オンボーディング Paywall A/B (paywall 群)**: `onboardingPaywallVariant` = `paywall` の場合、「次へ」で `onboarding_paywall_assigned {variant: paywall}` が送られ、`PremiumIntroductionSheet` (paywall_source = onboarding) が表示され、閉じるとプレミアム体験開始画面に遷移する
+  - ⏭️ スキップ: Remote Config の値は Firebase コンソールでしか設定できず、dev / prod のどちらにもパラメータ `onboardingPaywallVariant` が未作成のため、実験群の状態を端末で作れない。variant の解決は `flutter test test/features/initial_setting/onboarding_paywall_variant_test.dart` (6 件成功) で確認した。パラメータ作成後に `paywall` を配信して再確認する (bannzai/PilllBackend#422 のユーザー作業)
 
 #### 動作確認
 <details>
@@ -171,6 +174,27 @@ last_verified_at: 2026-07-05
 **確認日: 2026-07-05**
 
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/5a8366b0-bfd4-4118-a6f5-715dfc393896.png" width="320">
+
+</details>
+
+### **オンボーディング Paywall A/B (実験未参加)**: Remote Config `onboardingPaywallVariant` が未設定 (空文字) の場合、「次へ」で Paywall は表示されず現行どおりプレミアム体験開始画面に遷移する (割当イベント `onboarding_paywall_assigned` も送られない)
+
+<details><summary>動作確認スクショ</summary>
+
+**確認日: 2026-09-11**
+
+新規アカウント (clearState) で初期設定を進め、リマインダー時刻設定 (3/3) の「次へ」をタップすると、Paywall を経由せずプレミアム体験開始画面に遷移した (dev の Remote Config にパラメータ未作成 = 空文字 = 実験未参加)。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/09/10/7cbbb3a1-10e2-44c3-ae6b-c3a84b804aba-onboarding_reminder_times.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/09/10/4784f921-6f0f-4d88-b7fd-c1ad087e4844-onboarding_after_next_control.png" width="320">
+
+</details>
+
+### **オンボーディング Paywall A/B (paywall 群)**: `onboardingPaywallVariant` = `paywall` の場合、「次へ」で `onboarding_paywall_assigned {variant: paywall}` が送られ、`PremiumIntroductionSheet` (paywall_source = onboarding) が表示され、閉じるとプレミアム体験開始画面に遷移する
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
 
 </details>
 

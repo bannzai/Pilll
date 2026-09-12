@@ -1,0 +1,449 @@
+name: flutter-deploy
+
+# 配布ワークフロー (iOS: App Store Connect / Android: Google Play 内部テスト)。Bitrise の bitrise.yml (trigger_map と
+# release-ios-* / release-android-* workflow) を GitHub Actions に移したもの。構成は kashakeibo の flutter-deploy.yml を踏襲し、
+# secret の復元は Bitrise と同じ `make secret` (Makefile / scripts/secret.sh / android/scripts/secret_properties.sh) で行う。
+#
+# 起動条件 (bitrise.yml の trigger_map と同じ):
+# - main への push        → dev (iOS + Android)
+# - tag release-ios-v*     → iOS prod
+# - tag release-android-v* → Android prod
+# - workflow_dispatch      → 対象を選んで手動起動
+#
+# ビルド番号 = github.run_number + BUILD_NUMBER_OFFSET。iOS (CFBundleVersion) と Android (versionCode) で共通。
+# Bitrise 時代の最終値は dev アプリの方が大きい (main push のたびに dev を配布していたため)。
+# 2026-09-12 時点の実測: App Store Connect prod 6283 / dev 6314、Google Play prod 6282 / dev 6304。
+# offset はこの最大値 6314 を超えるように決める (Google Play は同じパッケージで versionCode の重複を拒否する)。
+# アップロード step まで進んで失敗した run を Re-run すると同じビルド番号の再送になり拒否されるため、その場合は
+# 原因を直して workflow_dispatch で新しく起動する (アップロードより前で失敗した run は Re-run してよい)。
+#
+# Makefile の `base64 -D` は macOS の書式のため、Android の job も macOS runner で実行する (ci.yml と同じ)。
+#
+# flavor 別の secret は job の env で `matrix.flavor == 'dev' && secrets.X_DEV || secrets.X_PROD` の形で選ぶ。
+# GITHUB_ENV 経由で secret の値を後続 step に渡す方式は、base64 の長い値が後続 step で空になり
+# 初回 run (34595908831) が失敗したためやめた。
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "配布対象"
+        required: true
+        type: choice
+        default: dev
+        options:
+          - dev
+          - ios-prod
+          - android-prod
+  push:
+    branches:
+      - main
+    tags:
+      - 'release-ios-v*'
+      - 'release-android-v*'
+
+permissions:
+  contents: read
+
+# 同じ ref の配布は同時に 1 本だけにする。ビルド番号は run_number 由来で衝突しないため、キャンセルはせず順番に実行する
+concurrency:
+  group: flutter-deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  FLUTTER_VERSION: '3.41.9'
+  BUILD_NUMBER_OFFSET: 6400
+  # 署名は project.pbxproj の Release / Release-Development 設定 (CODE_SIGN_STYLE = Manual + 下記の profile 名) に従う
+  IOS_TEAM_ID: TQPN82UBBY
+  SLACK_NOTIFY_CHANNEL: pilll-notification
+
+jobs:
+  # 起動条件から配布する flavor を決める (bitrise.yml の trigger_map + build-router-start@0 に相当)
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      ios: ${{ steps.plan.outputs.ios }}
+      android: ${{ steps.plan.outputs.android }}
+    steps:
+      - id: plan
+        env:
+          REF: ${{ github.ref }}
+          EVENT: ${{ github.event_name }}
+          TARGET: ${{ inputs.target }}
+        run: |
+          ios='[]'
+          android='[]'
+          if [ "$EVENT" = "workflow_dispatch" ]; then
+            case "$TARGET" in
+              dev) ios='["dev"]'; android='["dev"]' ;;
+              ios-prod) ios='["prod"]' ;;
+              android-prod) android='["prod"]' ;;
+            esac
+          else
+            case "$REF" in
+              refs/heads/main) ios='["dev"]'; android='["dev"]' ;;
+              refs/tags/release-ios-v*) ios='["prod"]' ;;
+              refs/tags/release-android-v*) android='["prod"]' ;;
+            esac
+          fi
+          echo "ios=$ios" >> "$GITHUB_OUTPUT"
+          echo "android=$android" >> "$GITHUB_OUTPUT"
+          echo "ios=$ios android=$android"
+
+  # ---------------------------------------------------------------------------
+  # iOS (bitrise.yml の release-ios-dev / release-ios-prod)
+  # ---------------------------------------------------------------------------
+  ios:
+    needs: plan
+    if: ${{ needs.plan.outputs.ios != '[]' }}
+    runs-on: macos-26
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        flavor: ${{ fromJSON(needs.plan.outputs.ios) }}
+    name: ios-${{ matrix.flavor }}
+    env:
+      # bitrise.yml の release-ios-{dev,prod} の script step と同じ環境変数を flavor で選ぶ
+      FILE_FIREBASE_IOS: ${{ matrix.flavor == 'dev' && secrets.FILE_FIREBASE_IOS_DEVELOPMENT || secrets.FILE_FIREBASE_IOS_PRODUCTION }}
+      XCCONFIG_SECRET: ${{ matrix.flavor == 'dev' && secrets.XCCONFIG_SECRET_DEVELOPMENT || secrets.XCCONFIG_SECRET_PRODUCTION }}
+      REVENUE_CAT_PUBLIC_API_KEY: ${{ matrix.flavor == 'dev' && secrets.REVENUE_CAT_PUBLIC_API_KEY || secrets.PROD_REVENUE_CAT_PUBLIC_API_KEY }}
+      IOS_ADMOB_NATIVE_ADVANCE_IDENTIFIER: ${{ matrix.flavor == 'dev' && secrets.IOS_ADMOB_NATIVE_ADVANCE_IDENTIFIER || secrets.PROD_IOS_ADMOB_NATIVE_ADVANCE_IDENTIFIER }}
+      IOS_ADMOB_BANNER_IDENTIFIER: ${{ matrix.flavor == 'dev' && secrets.IOS_ADMOB_BANNER_IDENTIFIER || secrets.PROD_IOS_ADMOB_BANNER_IDENTIFIER }}
+      IOS_PROVISIONING_PROFILE_BASE64: ${{ matrix.flavor == 'dev' && secrets.IOS_PROVISIONING_PROFILE_BASE64_DEV || secrets.IOS_PROVISIONING_PROFILE_BASE64_PROD }}
+      IOS_WIDGET_PROVISIONING_PROFILE_BASE64: ${{ matrix.flavor == 'dev' && secrets.IOS_WIDGET_PROVISIONING_PROFILE_BASE64_DEV || secrets.IOS_WIDGET_PROVISIONING_PROFILE_BASE64_PROD }}
+      IOS_PROFILE_NAME: ${{ matrix.flavor == 'dev' && 'Pilll.Development.AppStore' || 'Pilll.Production.AppStore' }}
+      IOS_WIDGET_PROFILE_NAME: ${{ matrix.flavor == 'dev' && 'Pilll.Development.Widget.AppStore' || 'Pilll.Production.Widget.AppStore' }}
+      IOS_BUNDLE_ID: ${{ matrix.flavor == 'dev' && 'com.mizuki.Ohashi.Pilll.dev' || 'com.mizuki.Ohashi.Pilll' }}
+      FLUTTER_TARGET: ${{ matrix.flavor == 'dev' && 'lib/main.dev.dart' || 'lib/main.prod.dart' }}
+      FLUTTER_FLAVOR_ARGS: ${{ matrix.flavor == 'dev' && '--flavor development' || '' }}
+      DART_DEFINE_FILE: ${{ matrix.flavor == 'dev' && 'environment/dev.json' || 'environment/prod.json' }}
+      # flavor 共通
+      STOREKIT_TESTING_CONFIGURATION_PUBLIC_CERT: ${{ secrets.STOREKIT_TESTING_CONFIGURATION_PUBLIC_CERT }}
+      DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
+      DART_DEFINE_FROM_FILE_PROD: ${{ secrets.DART_DEFINE_FROM_FILE_PROD }}
+      ANDROID_RES_VALUES: ${{ secrets.ANDROID_RES_VALUES }}
+      # iOS では使わないが make secret / secret.sh / secret_properties.sh が参照するため値を渡す (Bitrise と同じく dev の値)
+      ANDROID_ADMOB_NATIVE_ADVANCE_IDENTIFIER: ${{ secrets.ANDROID_ADMOB_NATIVE_ADVANCE_IDENTIFIER }}
+      ANDROID_ADMOB_BANNER_IDENTIFIER: ${{ secrets.ANDROID_ADMOB_BANNER_IDENTIFIER }}
+      ANDROID_ADMOB_APP_IDENTIFIER: ${{ secrets.ANDROID_ADMOB_APP_IDENTIFIER }}
+      ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+      ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD }}
+      ANDROID_KEYSTORE_ALIAS: ${{ secrets.ANDROID_KEYSTORE_ALIAS }}
+      ANDROID_KEYSTORE_PATH: ${{ github.workspace }}/android/app/bannzai.key.jks
+      IOS_P12_CERTIFICATE_BASE64: ${{ secrets.IOS_P12_CERTIFICATE_BASE64 }}
+      IOS_P12_PASSWORD: ${{ secrets.IOS_P12_PASSWORD }}
+      ASC_API_KEY_ID: ${{ secrets.ASC_API_KEY_ID }}
+      ASC_API_KEY_ISSUER_ID: ${{ secrets.ASC_API_KEY_ISSUER_ID }}
+      ASC_API_KEY_P8_BASE64: ${{ secrets.ASC_API_KEY_P8_BASE64 }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # `echo $(VAR) | base64 -D > file` は VAR が空でも exit 0 で空ファイルを書くため、make secret の前に全変数の非空を検査する
+      - name: Check secrets
+        run: |
+          for name in FILE_FIREBASE_IOS XCCONFIG_SECRET REVENUE_CAT_PUBLIC_API_KEY IOS_ADMOB_NATIVE_ADVANCE_IDENTIFIER IOS_ADMOB_BANNER_IDENTIFIER IOS_PROVISIONING_PROFILE_BASE64 IOS_WIDGET_PROVISIONING_PROFILE_BASE64 STOREKIT_TESTING_CONFIGURATION_PUBLIC_CERT DART_DEFINE_FROM_FILE_DEV DART_DEFINE_FROM_FILE_PROD ANDROID_RES_VALUES ANDROID_ADMOB_NATIVE_ADVANCE_IDENTIFIER ANDROID_ADMOB_BANNER_IDENTIFIER ANDROID_ADMOB_APP_IDENTIFIER ANDROID_KEYSTORE_PASSWORD ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD ANDROID_KEYSTORE_ALIAS IOS_P12_CERTIFICATE_BASE64 IOS_P12_PASSWORD ASC_API_KEY_ID ASC_API_KEY_ISSUER_ID ASC_API_KEY_P8_BASE64; do
+            [ -n "${!name:-}" ] || { echo "::error::Secret ${name} (${{ matrix.flavor }} 用) が未登録または空です"; exit 1; }
+          done
+          echo "BUILD_NUMBER=$((GITHUB_RUN_NUMBER + BUILD_NUMBER_OFFSET))" >> "$GITHUB_ENV"
+
+      - run: make secret
+
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
+        with:
+          channel: stable
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+
+      - run: flutter pub get
+
+      # certificate-and-profile-installer@1 の置き換え。P12 証明書のインポート (一時キーチェーンの作成・登録は action が行う)
+      - uses: apple-actions/import-codesign-certs@63fff01cd422d4b7b855d40ca1e9d34d2de9427d # v3
+        with:
+          p12-file-base64: ${{ secrets.IOS_P12_CERTIFICATE_BASE64 }}
+          p12-password: ${{ secrets.IOS_P12_PASSWORD }}
+
+      # Runner と WidgetExtension の profile を、従来の MobileDevice 配下と Xcode 16 以降の走査先の両方に置く
+      - name: Install provisioning profiles
+        run: |
+          PROFILE_DIR="$HOME/Library/MobileDevice/Provisioning Profiles"
+          XCODE_PROFILE_DIR="$HOME/Library/Developer/Xcode/UserData/Provisioning Profiles"
+          mkdir -p "$PROFILE_DIR" "$XCODE_PROFILE_DIR"
+          printf '%s' "$IOS_PROVISIONING_PROFILE_BASE64" | base64 --decode > "$PROFILE_DIR/runner.mobileprovision"
+          printf '%s' "$IOS_WIDGET_PROVISIONING_PROFILE_BASE64" | base64 --decode > "$PROFILE_DIR/widget.mobileprovision"
+          cp "$PROFILE_DIR/runner.mobileprovision" "$PROFILE_DIR/widget.mobileprovision" "$XCODE_PROFILE_DIR/"
+          # 展開した profile 名が pbxproj / ExportOptions の指定と一致することを検査する (Secret の取り違え検出)。
+          # PlistBuddy は /dev/stdin を読めない (Error Reading File: /dev/stdin) ため、復号した plist をファイルに落としてから読む
+          for pair in "runner:$IOS_PROFILE_NAME" "widget:$IOS_WIDGET_PROFILE_NAME"; do
+            f="${pair%%:*}"; expected="${pair#*:}"
+            security cms -D -i "$PROFILE_DIR/$f.mobileprovision" > "$RUNNER_TEMP/$f.plist"
+            actual=$(/usr/libexec/PlistBuddy -c 'Print :Name' "$RUNNER_TEMP/$f.plist")
+            echo "$f: $actual"
+            [ "$actual" = "$expected" ] || { echo "::error::$f の profile 名が $expected ではなく $actual です。Secret の登録内容を確認してください"; exit 1; }
+          done
+
+      # altool が ~/.appstoreconnect/private_keys/AuthKey_<KEY_ID>.p8 を自動で探すためここに置く
+      - name: Restore App Store Connect API key
+        run: |
+          mkdir -p ~/.appstoreconnect/private_keys
+          printf '%s' "$ASC_API_KEY_P8_BASE64" | base64 --decode > ~/.appstoreconnect/private_keys/AuthKey_${ASC_API_KEY_ID}.p8
+
+      # Bitrise の FILE_EXPORT_OPTIONS_PLIST_* と同じ内容 (manageAppVersionAndBuildNumber / uploadSymbols / stripSwiftSymbols) を、
+      # profile 名だけ project.pbxproj の PROVISIONING_PROFILE_SPECIFIER に合わせて生成する
+      # (Bitrise 側の plist は Bitrise が自動生成した profile 名を指しており、GitHub Actions では使えない)。
+      # manageAppVersionAndBuildNumber=true: WidgetExtension の CURRENT_PROJECT_VERSION は pbxproj で 1 固定のため、
+      # export 時に Xcode が Runner のビルド番号に揃える (Bitrise と同じ挙動)
+      - name: Generate ExportOptions.plist
+        run: |
+          mkdir -p tmp
+          cat > tmp/ExportOptions.plist <<PLIST
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>destination</key>
+            <string>export</string>
+            <key>manageAppVersionAndBuildNumber</key>
+            <true/>
+            <key>method</key>
+            <string>app-store-connect</string>
+            <key>provisioningProfiles</key>
+            <dict>
+              <key>${IOS_BUNDLE_ID}</key>
+              <string>${IOS_PROFILE_NAME}</string>
+              <key>${IOS_BUNDLE_ID}.Widget</key>
+              <string>${IOS_WIDGET_PROFILE_NAME}</string>
+            </dict>
+            <key>signingCertificate</key>
+            <string>Apple Distribution</string>
+            <key>signingStyle</key>
+            <string>manual</string>
+            <key>stripSwiftSymbols</key>
+            <true/>
+            <key>teamID</key>
+            <string>${IOS_TEAM_ID}</string>
+            <key>uploadSymbols</key>
+            <true/>
+          </dict>
+          </plist>
+          PLIST
+          cat tmp/ExportOptions.plist
+
+      # Prebuild (flutter build ipa の Dart defines 関連バグ回避のため一度 no-codesign でビルドする。kashakeibo と同じ)
+      - name: Prebuild iOS
+        run: |
+          flutter build ios --release --no-codesign \
+            --target "$FLUTTER_TARGET" $FLUTTER_FLAVOR_ARGS \
+            --dart-define-from-file="$DART_DEFINE_FILE" \
+            --build-number="$BUILD_NUMBER"
+
+      # archive + export (bitrise.yml の flutter-build (ios_output_type: archive) + export-xcarchive@4 に相当)
+      - name: Build IPA
+        id: build_ipa
+        run: |
+          flutter build ipa --release \
+            --target "$FLUTTER_TARGET" $FLUTTER_FLAVOR_ARGS \
+            --dart-define-from-file="$DART_DEFINE_FILE" \
+            --build-number="$BUILD_NUMBER" \
+            --export-options-plist=tmp/ExportOptions.plist
+          ls -la build/ios/ipa
+
+      # deploy-to-itunesconnect-deliver@2 (Apple ID + パスワード認証) の置き換え。App Store Connect API キーで認証する
+      - name: Upload to App Store Connect
+        run: |
+          xcrun altool --upload-app \
+            -f build/ios/ipa/*.ipa \
+            -t ios \
+            --apiKey "$ASC_API_KEY_ID" \
+            --apiIssuer "$ASC_API_KEY_ISSUER_ID"
+
+      # firebase-dsym-upload@2 の置き換え。アップロード後の失敗で run を落とすと同じビルド番号の再送になるため、失敗しても続行する
+      - name: Upload dSYMs to Crashlytics
+        continue-on-error: true
+        run: |
+          ./ios/Pods/FirebaseCrashlytics/upload-symbols \
+            -gsp ios/Firebase/GoogleService-Info.plist \
+            -p ios \
+            build/ios/archive/Runner.xcarchive/dSYMs
+
+      # IPA は障害調査用に、export 済みならアップロードの成否にかかわらず artifact に保存する (deploy-to-bitrise-io@2 に相当)
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: ${{ !cancelled() && steps.build_ipa.outcome == 'success' }}
+        with:
+          name: ios-${{ matrix.flavor }}-ipa-${{ env.BUILD_NUMBER }}
+          path: build/ios/ipa/*.ipa
+
+      - name: Cleanup
+        if: always()
+        run: |
+          rm -f ~/.appstoreconnect/private_keys/AuthKey_*.p8 || true
+          for d in "$HOME/Library/MobileDevice/Provisioning Profiles" "$HOME/Library/Developer/Xcode/UserData/Provisioning Profiles"; do
+            rm -f "$d/runner.mobileprovision" "$d/widget.mobileprovision" || true
+          done
+
+      # slack@4.0 step の置き換え (bot token + chat.postMessage。slack-notification-setup の標準経路)。通知の失敗は配布の成否に影響させない
+      - name: Slack に配布結果を通知
+        if: always()
+        continue-on-error: true
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          JOB_STATUS: ${{ job.status }}
+          FLAVOR: ${{ matrix.flavor }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [ -z "$SLACK_BOT_TOKEN" ]; then
+            echo "SLACK_BOT_TOKEN が未設定のため Slack 通知をスキップしました" >&2
+            exit 0
+          fi
+          if [ "$JOB_STATUS" = "success" ]; then
+            TEXT="✅ flutter-deploy iOS ${FLAVOR} 成功: build ${BUILD_NUMBER} (${GITHUB_REF_NAME}) を App Store Connect にアップロードしました: $RUN_URL"
+          else
+            TEXT="❌ flutter-deploy iOS ${FLAVOR} 失敗 (${JOB_STATUS}): $RUN_URL"
+          fi
+          jq -n --arg channel "$SLACK_NOTIFY_CHANNEL" --arg text "$TEXT" '{channel: $channel, text: $text}' \
+            | curl -sf --connect-timeout 5 --max-time 30 \
+                -X POST -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
+                -H 'Content-Type: application/json; charset=utf-8' \
+                --data @- https://slack.com/api/chat.postMessage \
+            | jq -e '.ok' > /dev/null \
+            || { echo "Slack 通知の送信に失敗しました" >&2; exit 1; }
+
+  # ---------------------------------------------------------------------------
+  # Android (bitrise.yml の release-android-dev / release-android-prod)
+  # ---------------------------------------------------------------------------
+  android:
+    needs: plan
+    if: ${{ needs.plan.outputs.android != '[]' }}
+    runs-on: macos-26
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        flavor: ${{ fromJSON(needs.plan.outputs.android) }}
+    name: android-${{ matrix.flavor }}
+    env:
+      # bitrise.yml の release-android-{dev,prod} の script step と同じ環境変数を flavor で選ぶ
+      FILE_FIREBASE_ANDROID: ${{ matrix.flavor == 'dev' && secrets.FILE_FIREBASE_ANDROID_DEVELOPMENT || secrets.FILE_FIREBASE_ANDROID_PRODUCTION }}
+      ANDROID_RES_VALUES: ${{ matrix.flavor == 'dev' && secrets.ANDROID_RES_VALUES_DEV || secrets.ANDROID_RES_VALUES_PROD }}
+      REVENUE_CAT_PUBLIC_API_KEY: ${{ matrix.flavor == 'dev' && secrets.REVENUE_CAT_PUBLIC_API_KEY || secrets.PROD_REVENUE_CAT_PUBLIC_API_KEY }}
+      ANDROID_ADMOB_NATIVE_ADVANCE_IDENTIFIER: ${{ matrix.flavor == 'dev' && secrets.ANDROID_ADMOB_NATIVE_ADVANCE_IDENTIFIER || secrets.PROD_ANDROID_ADMOB_NATIVE_ADVANCE_IDENTIFIER }}
+      ANDROID_ADMOB_BANNER_IDENTIFIER: ${{ matrix.flavor == 'dev' && secrets.ANDROID_ADMOB_BANNER_IDENTIFIER || secrets.PROD_ANDROID_ADMOB_BANNER_IDENTIFIER }}
+      ANDROID_ADMOB_APP_IDENTIFIER: ${{ matrix.flavor == 'dev' && secrets.ANDROID_ADMOB_APP_IDENTIFIER || secrets.PROD_ANDROID_ADMOB_APP_IDENTIFIER }}
+      ANDROID_PACKAGE_NAME: ${{ matrix.flavor == 'dev' && 'com.mizuki.Ohashi.Pilll.development' || 'com.mizuki.Ohashi.Pilll' }}
+      FLUTTER_TARGET: ${{ matrix.flavor == 'dev' && 'lib/main.dev.dart' || 'lib/main.prod.dart' }}
+      DART_DEFINE_FILE: ${{ matrix.flavor == 'dev' && 'environment/dev.json' || 'environment/prod.json' }}
+      # flavor 共通
+      STOREKIT_TESTING_CONFIGURATION_PUBLIC_CERT: ${{ secrets.STOREKIT_TESTING_CONFIGURATION_PUBLIC_CERT }}
+      DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
+      DART_DEFINE_FROM_FILE_PROD: ${{ secrets.DART_DEFINE_FROM_FILE_PROD }}
+      # Android では使わないが make secret / secret.sh が参照するため値を渡す (Bitrise と同じく dev の値)
+      FILE_FIREBASE_IOS: ${{ secrets.FILE_FIREBASE_IOS_DEVELOPMENT }}
+      XCCONFIG_SECRET: ${{ secrets.XCCONFIG_SECRET_DEVELOPMENT }}
+      IOS_ADMOB_NATIVE_ADVANCE_IDENTIFIER: ${{ secrets.IOS_ADMOB_NATIVE_ADVANCE_IDENTIFIER }}
+      IOS_ADMOB_BANNER_IDENTIFIER: ${{ secrets.IOS_ADMOB_BANNER_IDENTIFIER }}
+      # keystore の置き場所は file-downloader@1 の destination と同じ (android/app/*.jks は .gitignore 済み)
+      ANDROID_KEYSTORE_JKS_BASE64: ${{ secrets.ANDROID_KEYSTORE_JKS_BASE64 }}
+      ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+      ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD }}
+      ANDROID_KEYSTORE_ALIAS: ${{ secrets.ANDROID_KEYSTORE_ALIAS }}
+      ANDROID_KEYSTORE_PATH: ${{ github.workspace }}/android/app/bannzai.key.jks
+      PLAY_SA_JSON_BASE64: ${{ secrets.PLAY_SA_JSON_BASE64 }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6 # v6.0.1
+        with:
+          distribution: "zulu"
+          java-version: '17'
+
+      - name: Check secrets
+        run: |
+          for name in FILE_FIREBASE_ANDROID ANDROID_RES_VALUES REVENUE_CAT_PUBLIC_API_KEY ANDROID_ADMOB_NATIVE_ADVANCE_IDENTIFIER ANDROID_ADMOB_BANNER_IDENTIFIER ANDROID_ADMOB_APP_IDENTIFIER STOREKIT_TESTING_CONFIGURATION_PUBLIC_CERT DART_DEFINE_FROM_FILE_DEV DART_DEFINE_FROM_FILE_PROD FILE_FIREBASE_IOS XCCONFIG_SECRET IOS_ADMOB_NATIVE_ADVANCE_IDENTIFIER IOS_ADMOB_BANNER_IDENTIFIER ANDROID_KEYSTORE_JKS_BASE64 ANDROID_KEYSTORE_PASSWORD ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD ANDROID_KEYSTORE_ALIAS PLAY_SA_JSON_BASE64; do
+            [ -n "${!name:-}" ] || { echo "::error::Secret ${name} (${{ matrix.flavor }} 用) が未登録または空です"; exit 1; }
+          done
+          echo "BUILD_NUMBER=$((GITHUB_RUN_NUMBER + BUILD_NUMBER_OFFSET))" >> "$GITHUB_ENV"
+
+      # file-downloader@1 (BITRISEIO_ANDROID_KEYSTORE_URL → android/app/bannzai.key.jks) の置き換え。
+      # keystore のパスワードと alias で開けることを先に検査し、Gradle の署名で初めて失敗する状況を避ける
+      - name: Restore release keystore
+        run: |
+          printf '%s' "$ANDROID_KEYSTORE_JKS_BASE64" | base64 --decode > "$ANDROID_KEYSTORE_PATH"
+          SIZE=$(wc -c < "$ANDROID_KEYSTORE_PATH")
+          echo "keystore: $SIZE bytes"
+          [ "$SIZE" -gt 100 ] || { echo "::error::keystore が $SIZE bytes しかありません。ANDROID_KEYSTORE_JKS_BASE64 が壊れています"; exit 1; }
+          keytool -list -keystore "$ANDROID_KEYSTORE_PATH" -storepass "$ANDROID_KEYSTORE_PASSWORD" -alias "$ANDROID_KEYSTORE_ALIAS" > /dev/null \
+            || { echo "::error::keystore を ANDROID_KEYSTORE_PASSWORD / ANDROID_KEYSTORE_ALIAS で開けません。Secret の値を登録し直してください"; exit 1; }
+
+      - run: make secret
+
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
+        with:
+          channel: stable
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+
+      - run: flutter pub get
+
+      # 署名は android/app/build.gradle の signingConfigs.release (secret.properties 経由) で行うため、
+      # Bitrise の sign-apk@1 (同じ keystore での再署名) に相当する step は不要
+      - name: Build App Bundle
+        id: build_aab
+        run: |
+          flutter build appbundle --release \
+            --target "$FLUTTER_TARGET" \
+            --dart-define-from-file="$DART_DEFINE_FILE" \
+            --build-number="$BUILD_NUMBER"
+          ls -la build/app/outputs/bundle/release
+
+      - name: Restore Play service account JSON
+        run: |
+          printf '%s' "$PLAY_SA_JSON_BASE64" | base64 --decode > "$RUNNER_TEMP/play-service-account.json"
+          jq -e '.client_email' "$RUNNER_TEMP/play-service-account.json" > /dev/null
+
+      # google-play-deploy@3 の置き換え。Bitrise と同じく dev / prod とも内部テストトラックへ配布する
+      - name: Upload to Google Play (internal)
+        uses: r0adkll/upload-google-play@e738b9dd8f2476ea806d921b64aacd24f34515a5 # v1.1.5
+        with:
+          serviceAccountJson: ${{ runner.temp }}/play-service-account.json
+          packageName: ${{ env.ANDROID_PACKAGE_NAME }}
+          releaseFiles: build/app/outputs/bundle/release/app-release.aab
+          track: internal
+          status: completed
+
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: ${{ !cancelled() && steps.build_aab.outcome == 'success' }}
+        with:
+          name: android-${{ matrix.flavor }}-aab-${{ env.BUILD_NUMBER }}
+          path: build/app/outputs/bundle/release/app-release.aab
+
+      - name: Cleanup
+        if: always()
+        run: |
+          rm -f "$ANDROID_KEYSTORE_PATH" "$RUNNER_TEMP/play-service-account.json" android/secret.properties || true
+
+      - name: Slack に配布結果を通知
+        if: always()
+        continue-on-error: true
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          JOB_STATUS: ${{ job.status }}
+          FLAVOR: ${{ matrix.flavor }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [ -z "$SLACK_BOT_TOKEN" ]; then
+            echo "SLACK_BOT_TOKEN が未設定のため Slack 通知をスキップしました" >&2
+            exit 0
+          fi
+          if [ "$JOB_STATUS" = "success" ]; then
+            TEXT="✅ flutter-deploy Android ${FLAVOR} 成功: versionCode ${BUILD_NUMBER} (${GITHUB_REF_NAME}) を Google Play 内部テストにアップロードしました: $RUN_URL"
+          else
+            TEXT="❌ flutter-deploy Android ${FLAVOR} 失敗 (${JOB_STATUS}): $RUN_URL"
+          fi
+          jq -n --arg channel "$SLACK_NOTIFY_CHANNEL" --arg text "$TEXT" '{channel: $channel, text: $text}' \
+            | curl -sf --connect-timeout 5 --max-time 30 \
+                -X POST -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
+                -H 'Content-Type: application/json; charset=utf-8' \
+                --data @- https://slack.com/api/chat.postMessage \
+            | jq -e '.ok' > /dev/null \
+            || { echo "Slack 通知の送信に失敗しました" >&2; exit 1; }

@@ -35,6 +35,7 @@ _$RemoteConfigParameterImpl _$$RemoteConfigParameterImplFromJson(Map<String, dyn
           (json['lifetimeOfferDurationHours'] as num?)?.toInt() ?? RemoteConfigParameterDefaultValues.lifetimeOfferDurationHours,
       lifetimeOfferCopyVariant: json['lifetimeOfferCopyVariant'] as String? ?? RemoteConfigParameterDefaultValues.lifetimeOfferCopyVariant,
       endedPillSheetDialogVariant: json['endedPillSheetDialogVariant'] as String? ?? RemoteConfigParameterDefaultValues.endedPillSheetDialogVariant,
+      onboardingPaywallVariant: json['onboardingPaywallVariant'] as String? ?? RemoteConfigParameterDefaultValues.onboardingPaywallVariant,
     );
 
 Map<String, dynamic> _$$RemoteConfigParameterImplToJson(_$RemoteConfigParameterImpl instance) => <String, dynamic>{
@@ -55,4 +56,5 @@ Map<String, dynamic> _$$RemoteConfigParameterImplToJson(_$RemoteConfigParameterI
       'lifetimeOfferDurationHours': instance.lifetimeOfferDurationHours,
       'lifetimeOfferCopyVariant': instance.lifetimeOfferCopyVariant,
       'endedPillSheetDialogVariant': instance.endedPillSheetDialogVariant,
+      'onboardingPaywallVariant': instance.onboardingPaywallVariant,
     };

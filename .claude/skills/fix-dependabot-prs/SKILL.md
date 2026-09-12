@@ -26,9 +26,8 @@ gh pr list --author "app/dependabot" --state open
 ### 3. まとめブランチを作成
 
 ```bash
-git checkout main
-git pull origin main
-git checkout -b chore/dependabot-updates-$(date +%Y%m%d%H%M%S)
+git fetch origin
+git checkout -b chore/dependabot-updates-$(date +%Y%m%d%H%M%S) origin/main
 ```
 
 ### 4. 各PRの変更を取り込む
@@ -92,44 +91,11 @@ flutter test
 
 ### 9. まとめPRを作成
 
-```bash
-git push origin HEAD
-gh pr create --title "chore: dependabot PRまとめ更新" --body "$(cat <<'EOF'
-## 概要
-dependabotから上がってきた複数のPRをまとめて対応しました。
+`~/.agents/skills/commit-create-pr/SKILL.md` に従い、push・PR 作成を行う。
+本文には取り込んだ PR とバージョン変更、コード生成・Podfile.lock の更新内容、検証結果を記載する。
+除外した PR があれば、理由・背景・今後の対応も同じ本文にまとめる。
 
-## 取り込んだPR
-- #PR番号1: パッケージ名 x.x.x → y.y.y
-- #PR番号2: パッケージ名 x.x.x → y.y.y
-...
-
-## 追加対応
-- [ ] build_runner実行
-- [ ] Podfile.lock更新
-
-## 除外したPR（ある場合）
-- #PR番号: 除外理由
-EOF
-)"
-```
-
-### 10. 除外したPRがある場合
-
-まとめPRにコメントで理由を記載:
-
-```bash
-gh pr comment <まとめPR番号> --body "$(cat <<'EOF'
-## 除外したdependabot PR
-
-### #PR番号: パッケージ名の更新
-**理由**: （例）他のパッケージとの依存関係が矛盾するため
-**背景**: （詳細な説明）
-**今後の対応**: （必要であれば）
-EOF
-)"
-```
-
-### 11. 元のdependabot PRをクローズ
+### 10. 元のdependabot PRをクローズ
 
 まとめPRがマージされた後、元のdependabot PRをクローズする:
 

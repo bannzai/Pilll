@@ -6,6 +6,9 @@
 name: appstore-screenshots
 run-name: "appstore-screenshots langs=${{ inputs.langs || 'all' }}"
 
+permissions:
+  contents: read
+
 on:
   workflow_dispatch: # fork PR に Secrets を渡さないため手動系トリガーのみ（下の push も自ブランチ限定）
     inputs:
@@ -43,7 +46,7 @@ jobs:
     outputs:
       lang_groups: ${{ steps.plan.outputs.lang_groups }}
     steps:
-      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
       - name: Prepare firebase config
@@ -91,7 +94,7 @@ jobs:
           echo "lang_groups=$lang_groups"
           echo "lang_groups=$lang_groups" >> "$GITHUB_OUTPUT"
       - run: flutter build ios --simulator --debug --target lib/main.dev.dart --dart-define=SCREENSHOT_CATALOG=true --dart-define-from-file=environment/dev.json
-      - uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: screenshot-catalog-app
           path: build/ios/iphonesimulator
@@ -108,10 +111,10 @@ jobs:
       matrix:
         langs: ${{ fromJSON(needs.build.outputs.lang_groups) }}
     steps:
-      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5.0.0
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
           name: screenshot-catalog-app
           path: build/ios/iphonesimulator
@@ -133,14 +136,14 @@ jobs:
           CAPTURE_LANGS: ${{ matrix.langs }}
         run: bash scripts/generate_screenshots/capture_langs.sh --udid "${{ steps.sim.outputs.udid }}" -l "$CAPTURE_LANGS"
       # 一部言語が失敗しても撮影済み言語の成果物は回収できるよう、失敗時もアップロードする
-      - uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: ${{ !cancelled() }}
         with:
           name: simulator-screenshots-${{ strategy.job-index }}
           path: scripts/generate_screenshots/artifacts/simulator
           if-no-files-found: error
       # 失敗原因調査用に Maestro のデバッグ出力（スクリーンショット・ログ）を上げる
-      - uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: ${{ failure() }}
         with:
           name: maestro-debug-${{ strategy.job-index }}

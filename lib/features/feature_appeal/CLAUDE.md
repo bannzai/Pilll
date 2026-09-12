@@ -39,6 +39,8 @@ tabController?.animateTo(HomePageTabType.{record|menstruation|calendar|setting}.
 
 Premium 機能の場合のみ、タブ移動前に `ref.watch(userProvider).requireValue` で user を取得し、`!user.premiumOrTrial` のとき `showPremiumIntroductionSheet(context)` でペイウォール表示。
 
+Premium 機能の HelpPage は「確認する」の下に `FeatureAppealPremiumPlanButton` (`feature_appeal_premium_plan_button.dart`) を置く。トライアル中ユーザーにだけ表示され、`feature_appeal_paywall_shown` (`trigger: premium_plan_button`) を送ってペイウォールを開く。
+
 ## ステップバイステップガイド
 
 ### 矢印
@@ -72,7 +74,8 @@ Premium 機能の場合のみ、タブ移動前に `ref.watch(userProvider).requ
 
 - 各機能には AnnouncementBar (`*_announcement_bar.dart`) と HelpPage (`*_help_page.dart`) がセット
 - AnnouncementBar タップで HelpPage に遷移する
-- 日次ローテーション: `daysBetween(epoch, today()) % candidates.length`
+- 日次ローテーション: `weightedRotationOrder` (転換実績に基づく `FeatureAppealBarWeight` の重み付き表示順) に対して `daysBetween(epoch, today()) % 表示順の長さ`。重みの根拠は `feature_appeal_bars_container.dart` のコメントを参照
+- 表示時に `feature_appeal_bar_shown` (feature_key / feature_type / weight / rotation_length) を送る
 - dismiss は SharedPreferences のキーで機能ごとに管理
 
 ## Route 定義
@@ -95,7 +98,7 @@ extension XxxHelpPageRoute on XxxHelpPage {
 3. `{feature}_announcement_bar.dart` を作成
 4. `lib/l10n/app_ja.arb` / `app_en.arb` に L10n キーを追加（Title, Headline, Point1/2/3）
 5. `flutter gen-l10n` で生成
-6. `lib/features/feature_appeal/feature_appeal_bars_container.dart` に AnnouncementBar を登録
+6. `lib/features/feature_appeal/feature_appeal_bars_container.dart` に AnnouncementBar を登録 (featureKey / featureType と `FeatureAppealBarWeight` の重みを付ける。転換実績が無い新機能は `noConversion`)
 7. `lib/features/settings/components/rows/feature_appeal_help_page_list_page.dart` の `pages` リストにエントリを追加
 8. **PilllBackend (`~/ghq/github.com/bannzai/PilllBackend`) の BigQuery も同期更新** (Pilll リリース前 or 同時に PR を merge する。ズレるとデータ欠損)
    - `bigquery/views/event_logs_feature_appeal.sql` の `firebaseScreen IN (...)` に新 HelpPage 名を追加

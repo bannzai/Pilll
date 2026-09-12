@@ -8,10 +8,12 @@ import 'package:pilll/provider/pill_sheet_modified_history.dart';
 
 class BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList extends HookConsumerWidget {
   final PillSheet pillSheet;
+  final bool premiumOrTrial;
 
   const BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList({
     super.key,
     required this.pillSheet,
+    required this.premiumOrTrial,
   });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -26,7 +28,7 @@ class BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList extends HookCo
           data: (pillSheetModifiedHistories) {
             return PillSheetModifiedHistoryList(
               pillSheetModifiedHistories: pillSheetModifiedHistories,
-              premiumOrTrial: true,
+              premiumOrTrial: premiumOrTrial,
             );
           },
           loading: () => const Indicator(),

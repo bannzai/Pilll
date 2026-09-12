@@ -32,7 +32,7 @@ final latestPillSheetGroupProvider = AutoDisposeStreamProvider<PillSheetGroup?>.
 );
 
 typedef LatestPillSheetGroupRef = AutoDisposeStreamProviderRef<PillSheetGroup?>;
-String _$beforePillSheetGroupHash() => r'8cd3b068ebd5024ff92e229b4f1620a5a621d11f';
+String _$beforePillSheetGroupHash() => r'b226dbc576cb5de5b1aa530dffdb2ed91f97ed0a';
 
 /// See also [beforePillSheetGroup].
 @ProviderFor(beforePillSheetGroup)
