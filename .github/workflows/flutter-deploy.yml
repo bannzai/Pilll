@@ -169,12 +169,13 @@ jobs:
           mkdir -p "$PROFILE_DIR" "$XCODE_PROFILE_DIR"
           printf '%s' "$IOS_PROVISIONING_PROFILE_BASE64" | base64 --decode > "$PROFILE_DIR/runner.mobileprovision"
           printf '%s' "$IOS_WIDGET_PROVISIONING_PROFILE_BASE64" | base64 --decode > "$PROFILE_DIR/widget.mobileprovision"
-          ls -la "$PROFILE_DIR"
           cp "$PROFILE_DIR/runner.mobileprovision" "$PROFILE_DIR/widget.mobileprovision" "$XCODE_PROFILE_DIR/"
-          # 展開した profile 名が pbxproj / ExportOptions の指定と一致することを検査する (Secret の取り違え検出)
+          # 展開した profile 名が pbxproj / ExportOptions の指定と一致することを検査する (Secret の取り違え検出)。
+          # PlistBuddy は /dev/stdin を読めない (Error Reading File: /dev/stdin) ため、復号した plist をファイルに落としてから読む
           for pair in "runner:$IOS_PROFILE_NAME" "widget:$IOS_WIDGET_PROFILE_NAME"; do
             f="${pair%%:*}"; expected="${pair#*:}"
-            actual=$(security cms -D -i "$PROFILE_DIR/$f.mobileprovision" | /usr/libexec/PlistBuddy -c 'Print :Name' /dev/stdin)
+            security cms -D -i "$PROFILE_DIR/$f.mobileprovision" > "$RUNNER_TEMP/$f.plist"
+            actual=$(/usr/libexec/PlistBuddy -c 'Print :Name' "$RUNNER_TEMP/$f.plist")
             echo "$f: $actual"
             [ "$actual" = "$expected" ] || { echo "::error::$f の profile 名が $expected ではなく $actual です。Secret の登録内容を確認してください"; exit 1; }
           done
