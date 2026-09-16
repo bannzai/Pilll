@@ -159,7 +159,7 @@ jobs:
       - run: flutter pub get
 
       # certificate-and-profile-installer@1 の置き換え。P12 証明書のインポート (一時キーチェーンの作成・登録は action が行う)
-      - uses: apple-actions/import-codesign-certs@63fff01cd422d4b7b855d40ca1e9d34d2de9427d # v3
+      - uses: apple-actions/import-codesign-certs@5142e029c445c10ffc7149d172e540235a065466 # v7.0.0
         with:
           p12-file-base64: ${{ secrets.IOS_P12_CERTIFICATE_BASE64 }}
           p12-password: ${{ secrets.IOS_P12_PASSWORD }}
