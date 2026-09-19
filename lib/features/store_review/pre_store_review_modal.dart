@@ -23,9 +23,10 @@ class PreStoreReviewModal extends HookConsumerWidget {
     final selectionValue = selection.value;
     final navigator = Navigator.of(context);
 
+    // NOTE: 高さは固定しない。固定するとホームインジケータぶんの SafeArea や端末のフォントサイズ設定で
+    // 内容が入りきらず、「決定」ボタンがオーバーフローして切れる
     return Container(
       padding: const EdgeInsets.all(20),
-      height: 240,
       color: Colors.white,
       child: SafeArea(
         child: Column(
@@ -57,7 +58,7 @@ class PreStoreReviewModal extends HookConsumerWidget {
               ],
             ),
             if (selectionValue != null) ...[
-              const Spacer(),
+              const SizedBox(height: 24),
               PrimaryButton(
                 onPressed: () async {
                   switch (selectionValue) {
