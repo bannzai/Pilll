@@ -104,7 +104,11 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                 ];
               } else {
                 return [
+                  // NOTE: ロックオーバーレイの Column は Positioned ではない子にして、Stack の高さに算入させる。
+                  // Positioned.fill に入れると Stack の高さ(= 背後の履歴リストの高さ)に閉じ込められ、
+                  // 履歴が少ないアカウントでは「くわしくみる」ボタンがクリップされてタップできなくなる
                   Stack(
+                    alignment: Alignment.center,
                     children: [
                       SingleChildScrollView(
                         physics: const NeverScrollableScrollPhysics(),
@@ -115,51 +119,45 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                       ),
                       Positioned.fill(
                         child: ClipRect(
-                          child: Stack(
-                            children: [
-                              BackdropFilter(
-                                filter: ImageFilter.blur(sigmaX: 6, sigmaY: 6),
-                                child: Container(
-                                  color: Colors.black.withOpacity(0),
-                                ),
-                              ),
-                              Center(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    const Text(
-                                      lockEmoji,
-                                      style: TextStyle(fontSize: 40),
-                                    ),
-                                    const SizedBox(height: 12),
-                                    Text(
-                                      L.takingHistoryIsPremiumFeature,
-                                      style: const TextStyle(
-                                        color: TextColor.main,
-                                        fontSize: 14,
-                                        fontFamily: FontFamily.japanese,
-                                        fontWeight: FontWeight.w400,
-                                      ),
-                                    ),
-                                    const SizedBox(height: 15),
-                                    SizedBox(
-                                      width: 204,
-                                      child: AppOutlinedButton(
-                                        text: L.viewMoreDetails,
-                                        onPressed: () async {
-                                          analytics.logEvent(
-                                            name: 'pressed_show_detail_pill_sheet_history',
-                                          );
-                                          showPremiumIntroductionSheet(context, source: PaywallSource.pillSheetModifiedHistoryCard);
-                                        },
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
+                          child: BackdropFilter(
+                            filter: ImageFilter.blur(sigmaX: 6, sigmaY: 6),
+                            child: Container(
+                              color: Colors.black.withOpacity(0),
+                            ),
                           ),
                         ),
+                      ),
+                      Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const Text(
+                            lockEmoji,
+                            style: TextStyle(fontSize: 40),
+                          ),
+                          const SizedBox(height: 12),
+                          Text(
+                            L.takingHistoryIsPremiumFeature,
+                            style: const TextStyle(
+                              color: TextColor.main,
+                              fontSize: 14,
+                              fontFamily: FontFamily.japanese,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          const SizedBox(height: 15),
+                          SizedBox(
+                            width: 204,
+                            child: AppOutlinedButton(
+                              text: L.viewMoreDetails,
+                              onPressed: () async {
+                                analytics.logEvent(
+                                  name: 'pressed_show_detail_pill_sheet_history',
+                                );
+                                showPremiumIntroductionSheet(context, source: PaywallSource.pillSheetModifiedHistoryCard);
+                              },
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
