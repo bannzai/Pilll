@@ -10,6 +10,7 @@ import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_taken_pill_action.dart';
 import 'package:pilll/features/pill_sheet_modified_history/page.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
@@ -83,7 +84,7 @@ void main() {
       expect(find.text('10'), findsNothing);
     });
 
-    testWidgets('読み込み中で値が取れない間は直前に表示していた一覧を維持する', (tester) async {
+    testWidgets('履歴が全件削除されて空リストが流れてきたら一覧も空になる', (tester) async {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse('2020-09-29'));
@@ -98,8 +99,31 @@ void main() {
 
       expect(find.text('10:00'), findsOneWidget);
 
-      // limit 変更直後の読み込み中に相当する空の状態でも、一覧が空にならない
+      // 空のスナップショットは読み込み中ではなく取得成功なので、古い一覧を残さず空にする
       controller.add([]);
+      await tester.pump();
+
+      expect(find.text('10:00'), findsNothing);
+      expect(find.byType(PillSheetModifiedHistoryTakenPillAction), findsNothing);
+    });
+
+    testWidgets('値が取れない間 (エラー) は直前に表示していた一覧を維持する', (tester) async {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse('2020-09-29'));
+
+      final controller = StreamController<List<PillSheetModifiedHistory>>();
+      addTearDown(controller.close);
+
+      await tester.pumpWidget(_buildPage(controller.stream));
+
+      controller.add([_takenHistory(estimatedEventCausingDate: DateTime(2020, 9, 10, 10, 0))]);
+      await tester.pump();
+
+      expect(find.text('10:00'), findsOneWidget);
+
+      // limit を増やした直後の読み込み中と同じく値が取れない状態。一覧を空にせず直前の内容を残す
+      controller.addError(Exception('failed to load histories'));
       await tester.pump();
 
       expect(find.text('10:00'), findsOneWidget);

@@ -24,10 +24,11 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
     final histories = useState(historiesAsync.asData?.value ?? []);
 
     useEffect(() {
-      // limit を増やすと別の provider インスタンスになり読み込み完了まで値が取れないため、取得できた時だけ反映して一覧が空になるのを防ぐ。
-      // 件数が変わらない内容だけの編集も反映するので、件数の変化は条件にしない
-      final fetchedHistories = historiesAsync.asData?.value ?? [];
-      if (fetchedHistories.isNotEmpty) {
+      // 取得できた値はそのまま反映する。件数が変わらない内容だけの編集も反映するので件数の変化は条件にせず、
+      // 全件削除された時に一覧を空にするため空リストも反映する。
+      // 値が取れない間 (limit を増やした直後の読み込み中・エラー) だけ、一覧が空になるのを避けて直前の内容を残す
+      final fetchedHistories = historiesAsync.asData?.value;
+      if (fetchedHistories != null) {
         histories.value = fetchedHistories;
       }
       return null;
