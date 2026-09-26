@@ -46,6 +46,14 @@ abstract class PillSheetModifiedHistoryPillNumberOrDate {
     required int afterLastTakenPillNumber,
     required PillSheetAppearanceMode pillSheetAppearanceMode,
   }) {
+    // v1 は服用のたびに番号が進むため通常は before == after にならない。
+    // lastTakenDate が服用終了予定日より後ろにある履歴スナップショットでは、before / after の両方がピルシートの最後の番号に収められて等しくなるため、after だけを表示する
+    if (beforeLastTakenPillNumber == afterLastTakenPillNumber) {
+      return _formatPillNumber(
+        '$afterLastTakenPillNumber',
+        pillSheetAppearanceMode: pillSheetAppearanceMode,
+      );
+    }
     // beforePillSheetの最後に飲んだ番号+1から服用記録が始まる
     // nullの場合は服用記録を取り消したり、服用日を移動した際にありえる
     // また、1つ前のピルシートの最後の番号の時もnullになる
@@ -117,6 +125,14 @@ abstract class PillSheetModifiedHistoryPillNumberOrDate {
     required PillSheetAppearanceMode pillSheetAppearanceMode,
   }) {
     if (afterLastTakenPillNumber == null) {
+      return _formatPillNumber(
+        '$beforeLastTakenPillNumber',
+        pillSheetAppearanceMode: pillSheetAppearanceMode,
+      );
+    }
+    // v1 は取り消しのたびに番号が戻るため通常は before == after にならない。
+    // lastTakenDate が服用終了予定日より後ろにある履歴スナップショットでは、before / after の両方がピルシートの最後の番号に収められて等しくなるため、before だけを表示する
+    if (beforeLastTakenPillNumber == afterLastTakenPillNumber) {
       return _formatPillNumber(
         '$beforeLastTakenPillNumber',
         pillSheetAppearanceMode: pillSheetAppearanceMode,

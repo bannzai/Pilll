@@ -68,6 +68,8 @@ void main() {
         expect(tester.takeException(), isNull);
         expect(find.byType(RowLayout), findsOneWidget);
         expect(find.byType(PillNumber), findsOneWidget);
+        // before / after のどちらもピルシートの最後の番号 28 に収まり、存在しない 29 番を含む「28-29日目」にならない
+        expect(find.text('28日目'), findsOneWidget);
       });
     });
   });

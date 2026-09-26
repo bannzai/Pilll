@@ -77,6 +77,8 @@ void main() {
         expect(tester.takeException(), isNull);
         expect(find.byType(RowLayout), findsOneWidget);
         expect(find.byType(PillNumber), findsOneWidget);
+        // before / after のどちらもピルシートの最後の番号 28 に収まり、開始と終了が逆転した「29-28日目」にならない
+        expect(find.text('28日目'), findsOneWidget);
       });
     });
   });
