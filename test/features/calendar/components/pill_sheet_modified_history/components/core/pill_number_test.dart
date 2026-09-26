@@ -109,6 +109,17 @@ void main() {
         );
         expect(result, '13日目');
       });
+
+      test(
+          'before と after が等しい（before=28, after=28。錠数を超える番号を最後の番号に収めたスナップショット）場合、「28日目」を返す',
+          () {
+        final result = PillSheetModifiedHistoryPillNumberOrDate.taken(
+          beforeLastTakenPillNumber: 28,
+          afterLastTakenPillNumber: 28,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
+        );
+        expect(result, '28日目');
+      });
     });
 
     group('PillSheetAppearanceMode.date（日付表示・番表記）', () {
@@ -178,6 +189,21 @@ void main() {
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
         expect(result, '15-11番');
+      });
+    });
+
+    group('PillSheetAppearanceMode.cyclicSequential（周期的連番表示・日目表記）', () {
+      const pillSheetAppearanceMode = PillSheetAppearanceMode.cyclicSequential;
+
+      test(
+          'before と after が等しい（before=28, after=28。錠数を超える番号を最後の番号に収めたスナップショット）場合、「28日目」を返す',
+          () {
+        final result = PillSheetModifiedHistoryPillNumberOrDate.revert(
+          beforeLastTakenPillNumber: 28,
+          afterLastTakenPillNumber: 28,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
+        );
+        expect(result, '28日目');
       });
     });
   });

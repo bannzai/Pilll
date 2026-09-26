@@ -3504,5 +3504,58 @@ void main() {
         );
       });
     });
+
+    group("ピルシート内の番号がピルシートの錠数を超える場合", () {
+      // lastTakenDate が服用終了予定日より後ろにある履歴スナップショットでは、lastTakenOrZeroPillNumber が錠数を超える
+      test("そのピルシートの最後のピルの番号を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(
+          mockTodayRepository.now(),
+        ).thenReturn(DateTime.parse("2020-10-10"));
+
+        const sheetType = PillSheetType.pillsheet_28_0;
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["sheet_id_1", "sheet_id_2"],
+          pillSheets: [
+            PillSheet.v1(
+              id: "sheet_id_1",
+              groupIndex: 0,
+              beginDate: DateTime.parse("2020-09-01"),
+              lastTakenDate: DateTime.parse("2020-09-28"),
+              createdAt: now(),
+              typeInfo: sheetType.typeInfo,
+            ),
+            PillSheet.v1(
+              id: "sheet_id_2",
+              groupIndex: 1,
+              beginDate: DateTime.parse("2020-09-29"),
+              lastTakenDate: DateTime.parse("2020-10-10"),
+              createdAt: now(),
+              typeInfo: sheetType.typeInfo,
+            ),
+          ],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
+        );
+
+        // 1枚目: 28錠なので30番は1枚目の最後の28になる。2枚目の番号にはならない
+        expect(
+          pillSheetGroup.cycleSequentialPillSheetNumber(
+            pageIndex: 0,
+            pillNumberInPillSheet: 30,
+          ),
+          28,
+        );
+        // 2枚目: 1枚目から続く番号で、最後は56
+        expect(
+          pillSheetGroup.cycleSequentialPillSheetNumber(
+            pageIndex: 1,
+            pillNumberInPillSheet: 30,
+          ),
+          56,
+        );
+      });
+    });
   });
 }
