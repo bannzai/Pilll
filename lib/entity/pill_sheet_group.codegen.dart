@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:collection/collection.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -435,7 +437,10 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return pillNumbersForCyclicSequential.where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number;
+    final pillMarksInPillSheet = pillNumbersForCyclicSequential.where((e) => e.pillSheet.groupIndex == pageIndex).toList();
+    // pillNumberInPillSheet の元になる PillSheet.pillNumberFor は下限(1)だけを保証し、上限(ピルシートの錠数)を保証しない。
+    // lastTakenDate が服用終了予定日より後ろにある服用履歴のスナップショットでは錠数を超える番号が渡るため、そのピルシートの最後のピルに収めて RangeError を防ぐ
+    return pillMarksInPillSheet[min(pillNumberInPillSheet, pillMarksInPillSheet.length) - 1].number;
   }
 }
 

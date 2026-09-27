@@ -7,7 +7,7 @@ import 'package:pilll/provider/force_update.dart';
 import 'package:pilll/components/page/ok_dialog.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/features/error/page.dart';
+import 'package:pilll/features/error/error_boundary.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/utils/platform/platform.dart';
@@ -28,9 +28,8 @@ class ForceUpdate extends HookConsumerWidget {
       if (!Environment.isTest) {
         // Set global error page
         ErrorWidget.builder = (FlutterErrorDetails details) {
-          return UniversalErrorPage(
-            error: details.exception.toString(),
-            child: null,
+          return buildErrorWidget(
+            details: details,
             reload: () => ref.refresh(refreshAppProvider),
           );
         };
