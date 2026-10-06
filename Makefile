@@ -28,3 +28,12 @@ secret-backup:
 	mv lib/app/secret.dart lib/app/_secret.dart
 	mv android/secret.properties android/_secret.properties
 
+
+# 引数なしの make で動作確認 (verify) を実行する
+.DEFAULT_GOAL := verify
+
+.PHONY: verify
+verify:
+	flutter pub get
+	flutter analyze --no-pub --no-fatal-infos --fatal-warnings
+	flutter test
