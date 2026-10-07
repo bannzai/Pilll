@@ -63,3 +63,18 @@ App Analytics で CPP ごとの impressions / downloads / CVR を計測（初回
   ピル銘柄名・避妊薬系→beginner、en-US の birth control 系→birthcontrol
 - 例外（未設定）: privacy はプールに関連語が無いため全ロケール未設定。fr-FR は承認済み
   バージョンにローカライズ自体が無くプールが空のため、新バージョン承認後に検討する
+
+## Creative Asset (header / search results) の出し分け (2026-10 追加)
+
+2026-10-06 の App Store Connect のアップデートで、CPP ごとに product page header と検索結果の search results アセットを置けるようになった (castle issue https://github.com/bannzai/castle/issues/1503 )。5 つの CPP それぞれに、訴求軸に合わせた文字なしの画像を配置した。生成元と ASC の画像 ID は `appstore/creative-assets/README.md`。
+
+- 視覚体系は既存の `appstore/product-page-header/` (淡い青灰の地に無地のピルシート、スレートブルーの錠剤、コーラルの 1 錠) を引き継ぎ、16:9 で作り直して header と search results の両方に使う
+  - reminder: 1 錠だけコーラルに光るシートと服用済みのチェック (既存ヘッダーと同じ訴求「今日の服用を確認できる安心感」)。既定の製品ページにもこの画像を使う
+  - privacy: スレートブルーの布ポーチに、ほとんど隠れたピルシート (伏せた通知)
+  - menstruation: 28 個の珠の輪 (5 個がピンク) の中にピルシート (生理周期とピルを一緒に)
+  - beginner: 未開封のシートで 1 錠目だけコーラル (服用スタート)
+  - birthcontrol: en-US 専用軸のため reminder と同じ画像
+- 承認済み CPP のローカライズには、画像が APPROVED になるまで配置できない (ASC API の 409、2026-10-07 実測)。5 CPP すべてに新しいバージョン (v2、PREPARE_FOR_SUBMISSION) を作り、31 locale (birthcontrol は 2 locale) × header / search results を配置した。v2 には v1 のローカライズ・promotionalText・スクリーンショットが複製されている
+- **searchKeywords は新バージョンに複製されない** (2026-10-07 実測)。v2 の審査が通った後に、locale ごとに `cpp_set_keywords.sh <v2 の LOCALIZATION_ID> <config.json の keywords...>` で割り当て直す (LOCALIZATION_ID は `cpp_create_version.sh <CPP_ID>` の `LOCALIZATION=` 行で取れる。`cpp_apply_config.sh` は `screenshot_dir` のスクリーンショットも upsert しようとするため、複製済みのスクショがある v2 には使わない)
+- 既定の製品ページ (公開中バージョン 202609.14.152816) への配置は、reminder の画像を `cpp_submit.sh --image` で単体提出して承認された後に行う (配置先が承認済みのため)
+- 提出は v2 の CPP バージョンごと (`cpp_submit.sh <CPP_ID>`)。提出前にユーザーが画像と設計を確認する
