@@ -29,11 +29,18 @@ secret-backup:
 	mv android/secret.properties android/_secret.properties
 
 
-# 引数なしの make で動作確認 (verify) を実行する
-.DEFAULT_GOAL := verify
+# 引数なしの make で ios を実行する (人が手で動作確認するための入口。検査・テストは CI が行う)
+.DEFAULT_GOAL := ios
 
 .PHONY: verify
 verify:
 	flutter pub get
 	flutter analyze --no-pub --no-fatal-infos --fatal-warnings
 	flutter test
+
+.PHONY: ios
+ios:
+	@set -e; \
+	simulator_udid="$$(SCRIPT_QUIET=1 sim-boot | sed -n 's/^DEVICE_UDID=//p' | tail -n 1)"; \
+	[ -n "$$simulator_udid" ] || { echo "Error: sim-boot で Simulator を解決できません (sim-boot が PATH にあるか確認してください)" >&2; exit 1; }; \
+	flutter run --debug -t lib/main.dev.dart --dart-define-from-file=environment/dev.json -d "$$simulator_udid"
