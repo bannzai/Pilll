@@ -96,6 +96,27 @@ void main() {
         );
         expect(result, '11-15日目');
       });
+
+      group('開始番号の境界値テスト', () {
+        // before は PillSheetGroup.pillNumberWithoutDateOrZero が未服用時に返す「開始番号の 1 つ前」
+        test('開始番号 10 のグループの最初の服用（before=9, after=10）の場合、「10日目」を返す', () {
+          final result = PillSheetModifiedHistoryPillNumberOrDate.taken(
+            beforeLastTakenPillNumber: 9,
+            afterLastTakenPillNumber: 10,
+            pillSheetAppearanceMode: pillSheetAppearanceMode,
+          );
+          expect(result, '10日目');
+        });
+
+        test('開始番号 1 のグループの最初の服用（before=0, after=1）の場合、「1日目」を返す', () {
+          final result = PillSheetModifiedHistoryPillNumberOrDate.taken(
+            beforeLastTakenPillNumber: 0,
+            afterLastTakenPillNumber: 1,
+            pillSheetAppearanceMode: pillSheetAppearanceMode,
+          );
+          expect(result, '1日目');
+        });
+      });
     });
 
     group('PillSheetAppearanceMode.cyclicSequential（周期的連番表示・日目表記）', () {
@@ -108,6 +129,15 @@ void main() {
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
         expect(result, '13日目');
+      });
+
+      test('開始番号 10 のグループの最初の服用（before=9, after=10）の場合、「10日目」を返す', () {
+        final result = PillSheetModifiedHistoryPillNumberOrDate.taken(
+          beforeLastTakenPillNumber: 9,
+          afterLastTakenPillNumber: 10,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
+        );
+        expect(result, '10日目');
       });
 
       test(
@@ -205,6 +235,27 @@ void main() {
         );
         expect(result, '28日目');
       });
+
+      group('開始番号の境界値テスト', () {
+        // after は PillSheetGroup.pillNumberWithoutDateOrZero が全て取り消した後に返す「開始番号の 1 つ前」
+        test('開始番号 10 のグループの最初の 1 錠の取り消し（before=10, after=9）の場合、「10日目」を返す', () {
+          final result = PillSheetModifiedHistoryPillNumberOrDate.revert(
+            beforeLastTakenPillNumber: 10,
+            afterLastTakenPillNumber: 9,
+            pillSheetAppearanceMode: pillSheetAppearanceMode,
+          );
+          expect(result, '10日目');
+        });
+
+        test('開始番号 1 のグループの最初の 1 錠の取り消し（before=1, after=0）の場合、「1日目」を返す', () {
+          final result = PillSheetModifiedHistoryPillNumberOrDate.revert(
+            beforeLastTakenPillNumber: 1,
+            afterLastTakenPillNumber: 0,
+            pillSheetAppearanceMode: pillSheetAppearanceMode,
+          );
+          expect(result, '1日目');
+        });
+      });
     });
   });
 
@@ -270,10 +321,67 @@ void main() {
         );
         expect(result, '13日目');
       });
+
+      group('開始番号の境界値テスト', () {
+        // before は PillSheetGroup.pillNumberWithoutDateOrZero が未服用時に返す「開始番号の 1 つ前」
+        test('開始番号 10 のグループの最初のピルの 1 回目の服用（before=9, after=10）の場合、「10日目」を返す',
+            () {
+          final result = PillSheetModifiedHistoryPillNumberOrDate.takenV2(
+            beforeLastTakenPillNumber: 9,
+            afterLastTakenPillNumber: 10,
+            pillSheetAppearanceMode: pillSheetAppearanceMode,
+          );
+          expect(result, '10日目');
+        });
+
+        test('開始番号 10 のグループの最初のピルの 2 回目の服用（before=10, after=10）の場合、「10日目」を返す',
+            () {
+          final result = PillSheetModifiedHistoryPillNumberOrDate.takenV2(
+            beforeLastTakenPillNumber: 10,
+            afterLastTakenPillNumber: 10,
+            pillSheetAppearanceMode: pillSheetAppearanceMode,
+          );
+          expect(result, '10日目');
+        });
+
+        test('開始番号 1 のグループの最初のピルの 1 回目の服用（before=0, after=1）の場合、「1日目」を返す', () {
+          final result = PillSheetModifiedHistoryPillNumberOrDate.takenV2(
+            beforeLastTakenPillNumber: 0,
+            afterLastTakenPillNumber: 1,
+            pillSheetAppearanceMode: pillSheetAppearanceMode,
+          );
+          expect(result, '1日目');
+        });
+      });
     });
   });
 
   group('#revertV2', () {
+    group('PillSheetAppearanceMode.sequential（連番表示・日目表記）', () {
+      const pillSheetAppearanceMode = PillSheetAppearanceMode.sequential;
+
+      group('開始番号の境界値テスト', () {
+        // after は PillSheetGroup.pillNumberWithoutDateOrZero が全て取り消した後に返す「開始番号の 1 つ前」
+        test('開始番号 10 のグループの最初のピルの取り消し（before=10, after=9）の場合、「10日目」を返す', () {
+          final result = PillSheetModifiedHistoryPillNumberOrDate.revertV2(
+            beforeLastTakenPillNumber: 10,
+            afterLastTakenPillNumber: 9,
+            pillSheetAppearanceMode: pillSheetAppearanceMode,
+          );
+          expect(result, '10日目');
+        });
+
+        test('開始番号 1 のグループの最初のピルの取り消し（before=1, after=0）の場合、「1日目」を返す', () {
+          final result = PillSheetModifiedHistoryPillNumberOrDate.revertV2(
+            beforeLastTakenPillNumber: 1,
+            afterLastTakenPillNumber: 0,
+            pillSheetAppearanceMode: pillSheetAppearanceMode,
+          );
+          expect(result, '1日目');
+        });
+      });
+    });
+
     group('PillSheetAppearanceMode.number（番号表示）', () {
       const pillSheetAppearanceMode = PillSheetAppearanceMode.number;
 

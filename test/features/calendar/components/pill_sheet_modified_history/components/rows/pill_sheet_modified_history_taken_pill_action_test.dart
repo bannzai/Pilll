@@ -81,5 +81,121 @@ void main() {
         expect(find.text('28日目'), findsOneWidget);
       });
     });
+
+    group('表示モードが cyclicSequential で開始番号が 10 の場合', () {
+      // 未服用の before は表示番号 0 ではなく開始番号の 1 つ前 (9) として扱われ、最初の服用記録が「1-10日目」にならない
+
+      /// 開始番号 10 の cyclicSequential 表示のグループを、指定したピルシート 1 枚で作る
+      PillSheetGroup pillSheetGroup({required PillSheet pillSheet}) =>
+          PillSheetGroup(
+            id: 'group_id',
+            pillSheetIDs: ['pill_sheet_id_1'],
+            pillSheets: [pillSheet],
+            createdAt: DateTime(2020, 9, 1),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
+            displayNumberSetting:
+                const PillSheetGroupDisplayNumberSetting(beginPillNumber: 10),
+          );
+
+      testWidgets('v1 (1錠飲み) の最初の 1 錠の服用記録は「10日目」と表示される', (tester) async {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse('2020-09-01'));
+
+        /// 2020-09-01 開始の 21 錠 v1 ピルシートを、指定した最終服用日で作る
+        PillSheet pillSheet({required DateTime? lastTakenDate}) => PillSheet.v1(
+              id: 'pill_sheet_id_1',
+              typeInfo: PillSheetType.pillsheet_21.typeInfo,
+              beginDate: DateTime(2020, 9, 1),
+              lastTakenDate: lastTakenDate,
+              createdAt: DateTime(2020, 9, 1),
+            );
+        final history = PillSheetModifiedHistory(
+          id: 'taken_pill_history_id',
+          actionType: PillSheetModifiedActionType.takenPill.name,
+          estimatedEventCausingDate: DateTime(2020, 9, 1, 10),
+          createdAt: DateTime(2020, 9, 1, 10),
+          value:
+              const PillSheetModifiedHistoryValue(takenPill: TakenPillValue()),
+          beforePillSheetGroup:
+              pillSheetGroup(pillSheet: pillSheet(lastTakenDate: null)),
+          afterPillSheetGroup: pillSheetGroup(
+              pillSheet: pillSheet(lastTakenDate: DateTime(2020, 9, 1))),
+        );
+
+        await tester.pumpWidget(
+          ProviderScope(
+            overrides: [
+              databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
+            ],
+            child: MaterialApp(
+              home: Material(
+                child: PillSheetModifiedHistoryTakenPillAction(
+                  premiumOrTrial: true,
+                  estimatedEventCausingDate: history.estimatedEventCausingDate,
+                  history: history,
+                  value: history.value.takenPill,
+                ),
+              ),
+            ),
+          ),
+        );
+
+        expect(tester.takeException(), isNull);
+        expect(find.byType(PillNumber), findsOneWidget);
+        expect(find.text('10日目'), findsOneWidget);
+      });
+
+      testWidgets('v2 (2錠飲み) の最初のピルの服用記録は「10日目」と表示される', (tester) async {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse('2020-09-01'));
+
+        /// 2020-09-01 開始の 21 錠 v2 (2錠飲み) ピルシートを、指定した最終服用日まで服用済みで作る
+        PillSheet pillSheet({required DateTime? lastTakenDate}) =>
+            PillSheet.create(
+              PillSheetType.pillsheet_21,
+              beginDate: DateTime(2020, 9, 1),
+              lastTakenDate: lastTakenDate,
+              pillTakenCount: 2,
+            );
+        final history = PillSheetModifiedHistory(
+          id: 'taken_pill_history_id',
+          actionType: PillSheetModifiedActionType.takenPill.name,
+          estimatedEventCausingDate: DateTime(2020, 9, 1, 10),
+          createdAt: DateTime(2020, 9, 1, 10),
+          value:
+              const PillSheetModifiedHistoryValue(takenPill: TakenPillValue()),
+          beforePillSheetGroup:
+              pillSheetGroup(pillSheet: pillSheet(lastTakenDate: null)),
+          afterPillSheetGroup: pillSheetGroup(
+              pillSheet: pillSheet(lastTakenDate: DateTime(2020, 9, 1))),
+        );
+
+        await tester.pumpWidget(
+          ProviderScope(
+            overrides: [
+              databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
+            ],
+            child: MaterialApp(
+              home: Material(
+                child: PillSheetModifiedHistoryTakenPillAction(
+                  premiumOrTrial: true,
+                  estimatedEventCausingDate: history.estimatedEventCausingDate,
+                  history: history,
+                  value: history.value.takenPill,
+                ),
+              ),
+            ),
+          ),
+        );
+
+        expect(tester.takeException(), isNull);
+        expect(find.byType(PillNumber), findsOneWidget);
+        expect(find.text('10日目'), findsOneWidget);
+      });
+    });
   });
 }
