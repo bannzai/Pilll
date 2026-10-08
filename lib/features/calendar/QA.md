@@ -1,7 +1,7 @@
 ---
 feature: calendar
 verification: mobile-mcp
-last_verified_commit: 1abe9113bb377e9d90c42a10ee54feeae9ca058c
+last_verified_commit: 2e6665e4ad01d02e9fc88d72442a3000cd9818a5
 last_verified_at: 2026-10-08
 ---
 
@@ -95,10 +95,10 @@ last_verified_at: 2026-10-08
 - [x] **未来日をタップ**: 今日より後の日付をタップすると予定登録画面（SchedulePostPage）に直接遷移する
 - [x] **記録なしの当日/過去日をタップ**: 日記も予定も未登録の日をタップすると日記投稿画面（新規作成）に遷移する
 - [ ] **予定のみある日をタップ**: 予定はあるが日記がない日をタップすると「日記を記録」「予定を記録」の選択ボトムシートが表示され、「日記を記録」で日記投稿画面（新規作成）、「予定を記録」で予定編集画面に遷移する
-  - ⏭️ スキップ: `lib/components/organisms/calendar/week/week_calendar.dart` の `transitionWhenCalendarDayTapped` は `date.date().isAfter(today())` が true の間は無条件で SchedulePostPage に直接遷移し、ボトムシート分岐は日付が今日以前になって初めて到達する。この分岐を実機で再現するには「未来日に予定を登録 → 日付が今日以前になるまで待つ（またはシステム時計を進める）」操作が必要だが、システム時計の変更はホスト Mac 全体に影響し QA の作業範囲を超えるため実施しなかった。実装コードを確認した限りロジックは仕様通り（schedule はあるが diary が無い場合、showDiary→日記投稿画面/showSchedule→予定編集画面 の DiaryOrScheduleSheet を表示）
+  - ⏭️ スキップ: `lib/components/organisms/calendar/week/week_calendar.dart` の `transitionWhenCalendarDayTapped` は `date.date().isAfter(today())` が true の間は無条件で SchedulePostPage に直接遷移し、ボトムシート分岐は日付が今日以前になって初めて到達する。この分岐を実機で再現するには「未来日に予定を登録 → その日が今日以前になるまで待つ」操作が必要で、今回の QA では予定日まで待たなかったため未実施。実装コードを確認した限りロジックは仕様通り（schedule はあるが diary が無い場合、showDiary→日記投稿画面/showSchedule→予定編集画面 の DiaryOrScheduleSheet を表示）
 - [x] **日記のみある日をタップ**: 日記のみ登録済みの日をタップすると日記確認シート（内容表示・編集・削除導線）が表示される
 - [ ] **日記と予定が両方ある日をタップ**: 選択ボトムシートが表示され、「日記を記録」選択で日記確認シートが開き、「予定を記録」選択で予定編集画面が開く
-  - ⏭️ スキップ: 上記と同じ理由（未来日は無条件で SchedulePostPage に直接遷移するため、当日以前で予定と日記が両方存在する状態を作るにはシステム時計の変更が必要）。同ファンクションの diary != null 分岐で showDiary→`_showConfirmDiarySheet`、showSchedule→SchedulePostPage となることをコードで確認済み
+  - ⏭️ スキップ: 未来日は無条件で SchedulePostPage に直接遷移するため、当日以前で予定と日記が両方ある状態を作るには、未来日に予定を登録してその日が今日以前になるまで待ってから同じ日に日記を保存する必要がある。今回の QA では予定日まで待たなかったため未実施。同ファンクションの diary != null 分岐で showDiary→`_showConfirmDiarySheet`、showSchedule→SchedulePostPage となることをコードで確認済み
 
 #### 動作確認
 <details>
@@ -213,7 +213,9 @@ last_verified_at: 2026-10-08
 
 **確認日: 2026-10-08**
 
-履歴が 7 件以上ある状態で「もっと見る」が表示され、トライアル中にタップすると全履歴一覧ページ「服用履歴」に遷移すること (1 枚目、2026-10-05) を確認。無料ユーザーでは履歴カードがロック表示になり「くわしくみる」でプレミアム紹介シートが開くこと (2 枚目、2026-10-08) を確認。
+履歴が 7 件以上ある状態で「もっと見る」が表示され、トライアル中にタップすると全履歴一覧ページ「服用履歴」に遷移すること (1 枚目、2026-10-05) を確認。無料ユーザーでは履歴カードのリスト部分がぼかしのオーバーレイで覆われ、「もっと見る」ではなくオーバーレイの「くわしくみる」でプレミアム紹介シートが開くこと (2 枚目、2026-10-08) を確認した。無料ユーザーが「もっと見る」自体をタップした時の挙動は、オーバーレイの下にあって画面では操作できず未確認 (`pill_sheet_modified_history_more_button.dart` では非プレミアム・非トライアル時に `showPremiumIntroductionSheet` を呼ぶ)。
+
+
 
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/93d43d4e-01b7-44f5-80bd-96186a2387ac-calendar-history-all.png" width="320">
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/8e194ba7-96fb-482c-8650-2462e4a579aa-free-calendar-history-premium-sheet.png" width="320">

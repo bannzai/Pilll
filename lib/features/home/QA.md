@@ -1,7 +1,7 @@
 ---
 feature: home
 verification: mobile-mcp
-last_verified_commit: 1abe9113bb377e9d90c42a10ee54feeae9ca058c
+last_verified_commit: 2e6665e4ad01d02e9fc88d72442a3000cd9818a5
 last_verified_at: 2026-10-08
 ---
 
@@ -89,7 +89,7 @@ last_verified_at: 2026-10-08
 
 ## 2. エッジケース
 
-- [x] **通知権限リクエスト**: 通知権限が未許可の端末でホーム画面を開くと、通知許可を求めるダイアログが表示される（許可済み端末では表示されないのが正常）
+- [x] **通知権限リクエスト**: 通知権限が未許可の端末では初回起動時 (初期設定フローの表示中) に通知許可を求めるダイアログが表示され、許可した後にホーム画面を開いても再表示されない（iOS では `lib/entrypoint.dart` の `localNotificationService.initialize()` が起動時に要求するため、`lib/features/home/page.dart` の `requestNotificationPermissions` の時点では許可・拒否が確定している。未許可のままホームを開いた時の要求は Android 向けの経路）
 - [ ] **累計服薬記録に応じたストアレビュー促進・退会アンケート表示**: 服薬記録が一定回数を超えたユーザーには事前ストアレビューモーダルが、解約手続き中のユーザーには退会理由アンケート（WebView）が表示される
   - ⏭️ スキップ: 表示条件はユーザーの解約フラグ (`user.shouldAskCancelReason`。Firestore 側で解約手続き中に true になる) や SharedPreferences の記録回数 (`totalCountOfActionForTakenPill` が 10 より大きい) といった状態が必要で、シミュレータの通常操作では再現していない。`lib/features/home/page.dart` の発火条件をコードレビューで確認した。事前ストアレビューモーダルの描画は `test/features/store_review/pre_store_review_modal_test.dart` で担保している
 - [ ] **ピルシート終了時の課金転換ダイアログ**: ピルシートグループが終了 (アクティブなシートが無い) した無料ユーザーがホームを開くと、Remote Config の `endedPillSheetDialogVariant` に応じた課金転換ダイアログが終了グループにつき 1 回だけ表示される
@@ -99,13 +99,13 @@ last_verified_at: 2026-10-08
 <details>
 <summary>動作確認エビデンス</summary>
 
-### **通知権限リクエスト**: 通知権限が未許可の端末でホーム画面を開くと、通知許可を求めるダイアログが表示される（許可済み端末では表示されないのが正常）
+### **通知権限リクエスト**: 通知権限が未許可の端末では初回起動時 (初期設定フローの表示中) に通知許可を求めるダイアログが表示され、許可した後にホーム画面を開いても再表示されない（iOS では `lib/entrypoint.dart` の `localNotificationService.initialize()` が起動時に要求するため、`lib/features/home/page.dart` の `requestNotificationPermissions` の時点では許可・拒否が確定している。未許可のままホームを開いた時の要求は Android 向けの経路）
 
 <details><summary>動作確認スクショ</summary>
 
 **確認日: 2026-10-08**
 
-アプリをアンインストールしてから再インストールして起動すると、初期設定画面の上に「“Pilll-dev” は通知を送信します。よろしいですか?」の許可ダイアログが表示されることを確認。「許可」の後にホームを開いても再表示されない。
+アプリをアンインストールしてから再インストールして起動すると、初期設定画面の上に「“Pilll-dev” は通知を送信します。よろしいですか?」の許可ダイアログが表示されることを確認。「許可」の後にホームを開いても再表示されない。未許可のままホームを開いた時の要求 (Android 向け) は Android 環境が無く未確認。
 
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/a3fe9c22-77ad-49c6-9cf7-3da13d73291e-root-notification-permission.png" width="320">
 

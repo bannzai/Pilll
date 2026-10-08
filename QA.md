@@ -1,7 +1,7 @@
 ---
 feature: _root
 verification: mobile-mcp
-last_verified_commit: 1abe9113bb377e9d90c42a10ee54feeae9ca058c
+last_verified_commit: 2e6665e4ad01d02e9fc88d72442a3000cd9818a5
 last_verified_at: 2026-10-08
 ---
 
@@ -72,7 +72,7 @@ Xcode 27 は Pods の `IPHONEOS_DEPLOYMENT_TARGET < 15.0` をエラーにする�
 - [x] **匿名起動**: アプリを新規インストール・起動すると匿名ユーザーとして自動サインインし、初期設定フローに進める
 - [x] **初期設定完了**: 初期設定（`lib/features/initial_setting/`）を最後まで完了すると、ホーム画面に到達しピルシートが表示される
 - [ ] **Apple/Google 連携**: `sign_in_sheet` から Apple または Google と連携すると、匿名アカウントのデータを引き継いだまま連携済み状態になる
-  - ⏭️ スキップ: 連携の完了には Apple Account / Google アカウントの認証情報が要り、シミュレータには用意していないため未検証。Apple は OS の「Apple Account にサインインしてください」ダイアログまで、Google は accounts.google.com のログイン画面まで到達することを確認した（`lib/features/settings/QA.md` の「アカウント連携・再ログイン導線」）
+  - ⏭️ スキップ: 連携の完了には Apple Account / Google アカウントの認証情報が要り、シミュレータには用意していないため未検証。Apple は OS の「Apple Account にサインインしてください」ダイアログまで、Google は accounts.google.com のログイン画面まで到達することを確認した（`lib/features/settings/QA.md` の「アカウント連携導線」）
     - 起動条件: ローカル sim-boot。`SIMSLIM_EXCEPT=store,health,icloud` / `SLIM_STATUS=APPLIED`（2026-10-05）、`ALREADY_SLIM`（2026-10-08）
     - デーモン: icloud カテゴリを有効にした状態で Apple のサインインダイアログは表示される（無効時は `AuthorizationError Code=1000` の汎用エラー）
     - 試した手順: 設定 → アカウント設定 → 連携する → Appleで登録 → サインインダイアログで停止。Google アカウントで登録 → ログイン画面で停止
@@ -178,7 +178,9 @@ Xcode 27 は Pods の `IPHONEOS_DEPLOYMENT_TARGET < 15.0` をエラーにする�
 ## 3. 課金・プレミアム
 
 - [x] **プレミアム導線表示**: 非プレミアムユーザーに `premium_introduction` への導線（プラン一覧・価格表示）が正しく表示される
-- [x] **課金ゲート**: プレミアム限定機能が非プレミアムユーザーには制限され、購入後に解放される。購入後の解放は Sandbox テスターアカウントが無く未検証で、制限側だけを確認対象とする
+- [x] **課金ゲート (非プレミアム時の制限)**: プレミアム限定機能が非プレミアムユーザーには制限される
+- [ ] **課金ゲート (購入後の解放)**: 購入後にプレミアム限定機能が解放される
+  - ⏭️ スキップ: 月額プランのタップで Apple Account のサインインダイアログは出るが、Sandbox テスターアカウントの認証情報が無く購入を完了できないため未実施
 
 #### 動作確認
 <details>
@@ -196,17 +198,25 @@ Xcode 27 は Pods の `IPHONEOS_DEPLOYMENT_TARGET < 15.0` をエラーにする�
 
 </details>
 
-### **課金ゲート**: プレミアム限定機能が非プレミアムユーザーには制限され、購入後に解放される。購入後の解放は Sandbox テスターアカウントが無く未検証で、制限側だけを確認対象とする
+### **課金ゲート (非プレミアム時の制限)**: プレミアム限定機能が非プレミアムユーザーには制限される
 
 <details><summary>動作確認スクショ</summary>
 
 **確認日: 2026-10-08**
 
-開発者オプション「トライアル解除」で無料ユーザーにした後、「ピルシートグループの自動追加」のトグルをタップすると ON にならずプレミアム紹介シートが表示されることを確認（制限側）。カレンダーの月ロック・履歴カードのロック、記録画面の日付表示の制限も同じ状態で確認した（各 feature の QA.md）。
+開発者オプション「トライアル解除」で無料ユーザーにした後、「ピルシートグループの自動追加」のトグルをタップすると ON にならずプレミアム紹介シートが表示されることを確認。カレンダーの月ロック・履歴カードのロック、記録画面の日付表示の制限も同じ状態で確認した（各 feature の QA.md）。
 
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/34466766-1aab-4bc7-a122-45376985ad33-free-settings-autoadd-premium.png" width="320">
 
-- ⏭️ スキップ: 「購入後に解放される」側は、月額プランのタップで Apple Account のサインインダイアログは出るが、Sandbox テスターアカウントの認証情報が無く購入を完了できないため未実施
+</details>
+
+### **課金ゲート (購入後の解放)**: 購入後にプレミアム限定機能が解放される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+⏭️ スキップ: Sandbox テスターアカウントが無く購入を完了できないため未実施（理由はチェックリスト側を参照）
 
 </details>
 
