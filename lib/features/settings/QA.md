@@ -1,13 +1,15 @@
 ---
 feature: settings
 verification: mobile-mcp
-last_verified_commit: 34b7e05eb0ed73e5ee0caa2a91a96147e2edaded
-last_verified_at: 2026-07-06
+last_verified_commit: 1abe9113bb377e9d90c42a10ee54feeae9ca058c
+last_verified_at: 2026-10-08
 ---
 
 # settings QA
 
 設定画面は項目数が多いため、主要フローを中心にテスト項目を定義する。
+
+確認環境 (2026-10-04〜05 と 2026-10-08 の記録): iPhone 16 Pro シミュレータ (iOS 27.0、ローカル sim-boot、`SIMSLIM_EXCEPT=store,health,icloud`) の dev ビルド (commit 75c754dd72 を Xcode 26.5 でビルド。`lib/features` は HEAD と同一)。トライアル中の確認は 2026-10-05、「トライアル解除」後の無料ユーザーの確認は 2026-10-08 に行った。
 
 ## 1. アカウント
 
@@ -23,13 +25,16 @@ last_verified_at: 2026-07-06
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-06**
+**確認日: 2026-10-05**
 
-匿名ユーザー（Apple/Google未連携）で設定画面の「アカウント設定」行に「未登録」と表示されることを確認。
+匿名ユーザー (Apple/Google 未連携) で設定画面の「アカウント設定」行に「未登録」と表示されることを確認。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/22cd3066-01a6-4581-827c-0a04cb20de6c.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/9da73715-73e7-4cbc-a1b1-abfb1fe83786-settings-top.png" width="320">
 
-- ⏭️ スキップ: 「いずれか連携済みなら『連携済み』と表示される」側は、Apple/Google連携が実OAuth認証を要しSimulatorでは完了できないため未検証（項目2で連携シートの表示まで確認）
+- ⏭️ スキップ: 「いずれか連携済みなら『連携済み』と表示される」側は、Apple/Google 連携が実 OAuth 認証 (Apple Account / Google アカウントの認証情報) を要しシミュレータでは完了できないため未検証
+  - 起動条件: ローカル sim-boot。`SIMSLIM_EXCEPT=store,health,icloud` / `SLIM_STATUS=APPLIED` (2026-10-05)、`ALREADY_SLIM` (2026-10-08)
+  - デーモン: icloud カテゴリを有効にした状態で、Apple 連携は OS の「Apple Account にサインインしてください」ダイアログまで到達する (下の「アカウント連携・再ログイン導線」のスクショ)
+  - 試した手順: 連携一覧 → Apple「連携する」→ サインインシート「Appleで登録」→ Apple Account 未サインインのため OS ダイアログで停止。Google「連携する」→ accounts.google.com のログイン画面まで到達、テストアカウントの認証情報が無いため中断
 
 </details>
 
@@ -37,13 +42,16 @@ last_verified_at: 2026-07-06
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-06**
+**確認日: 2026-10-05**
 
-「アカウント設定」から連携一覧画面（Apple/Google/退会するの一覧）に遷移し、未連携のAppleの「連携する」をタップすると「Appleで登録」「Googleアカウントで登録」を含むサインインシートが表示されることを確認。
+「アカウント設定」から連携一覧画面 (Apple / Google アカウント / 退会する) に遷移し (1 枚目)、Apple の「連携する」で「Appleで登録」「Google アカウントで登録」のサインインシートが表示されること (2 枚目) を確認。「Appleで登録」をタップすると OS の「Apple Account にサインインしてください」ダイアログが出る (3 枚目。icloud デーモン有効時。2026-10-04 の icloud 無効時は `AuthorizationError Code=1000` の汎用エラーダイアログだった)。「Google アカウントで登録」はアプリ内ブラウザで accounts.google.com のログイン画面に到達する (4 枚目)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/04202c74-9cae-4d01-8746-62c982d7c821.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/5d7a2035-37e8-438e-b330-2fb4d3e22bb5-settings-account-list.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/d0167468-96ff-4aef-81af-71e7c9f01fdd-settings-signin-sheet.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/e21e63e3-a3ed-4d34-9c43-5fdb172bc186-root-apple-signin-closed.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/1f157723-03c8-458c-bf80-c211105bce0e-root-google-signin.png" width="320">
 
-- ⏭️ スキップ: 「連携済みの行を長押しすると再ログイン確認ダイアログが表示される」側は、匿名アカウントのため連携済み行が存在せず、Simulatorで実OAuth連携を完了できないため未検証
+- ⏭️ スキップ: 「連携済みの行を長押しすると再ログイン確認ダイアログが表示される」側は、匿名アカウントのため連携済み行が存在せず、シミュレータで実 OAuth 連携を完了できないため未検証 (起動条件・試した手順は「連携状態の表示」のスキップ記録と同じ)
 
 </details>
 
@@ -51,11 +59,11 @@ last_verified_at: 2026-07-06
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-06**
+**確認日: 2026-10-05**
 
-「退会する」タップで「ユーザー情報が削除されます。退会をするとすべてのデータが削除され、二度と同じアカウントでログインができなくなります。」の確認ダイアログ（キャンセル/退会する）が表示されることを確認。実削除は実行せず「キャンセル」で閉じた。
+「退会する」タップで「ユーザー情報が削除されます」の確認ダイアログ (キャンセル / 退会する) が表示されることを確認。実削除は実行せず「キャンセル」で閉じた。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/b0159831-fbe0-4ae1-a38f-0cb20ef791f3.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/5b69b7bb-286a-44f9-8acb-7325762d3ffb-settings-withdraw.png" width="320">
 
 </details>
 
@@ -76,11 +84,11 @@ last_verified_at: 2026-07-06
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-06**
+**確認日: 2026-10-05**
 
-「プレミアムプランを見る」タップで月額/年額/買い切りプランと期間限定オファーが表示されるプレミアム紹介シートに遷移することを確認。
+「プレミアムプランを見る」タップで月額 / 年額 / 買い切りプランと期間限定割引が表示されるプレミアム紹介シートが開くことを確認。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/3565a396-99c7-4d65-b4ea-cffbd52061a7.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/7f9c0b3a-1b99-4378-9e57-41fcdf139dc0-premium-sheet.png" width="320">
 
 </details>
 
@@ -88,11 +96,11 @@ last_verified_at: 2026-07-06
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-06**
+**確認日: 2026-10-05**
 
-トライアル中ユーザー（新規匿名登録直後）の設定画面に「機能無制限の期間について」行が表示され、タップするとアプリ内ブラウザで pilll.notion.site の「機能無制限の期間について」ヘルプページが開くことを確認。
+トライアル中の設定画面に「機能無制限の期間について」行が表示され (「連携状態の表示」のスクショ)、タップすると pilll.notion.site の「機能無制限の期間について」がアプリ内ブラウザで開くことを確認。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/fd73b7c3-3a8f-4f92-b718-0d14d602e2ee.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/8202b37b-06d3-45da-9dc9-5b51be08b8be-settings-trial-help.png" width="320">
 
 </details>
 
@@ -114,11 +122,12 @@ last_verified_at: 2026-07-06
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-06**
+**確認日: 2026-10-05**
 
-「今日飲むピル番号の変更」から番号変更画面に遷移し、1番から3番に変更して「変更」をタップすると設定画面に戻り、ホーム画面の「今日飲むピル」が3番に反映され1・2番が服用済み扱いになることを確認（通知の再登録はアプリ内ログでの確認は行っていない）。
+設定画面の「今日飲むピル番号の変更」から番号変更画面 (記録画面の設定シートからの遷移先と同じ画面。1 枚目) に遷移し、「変更」で設定画面に戻ること (2 枚目) を確認。通知の再登録はアプリ内ログでは確認していない。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/77769d18-33ed-44bc-89cd-c251a57dcd55.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/d0fe14d6-af32-450b-aceb-737fa2f2f2e9-record-today-number-page.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/4e28a27f-2333-4113-9da1-b768af02f9f8-settings-today-number-back.png" width="320">
 
 </details>
 
@@ -126,13 +135,11 @@ last_verified_at: 2026-07-06
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-06**
+**確認日: 2026-10-05**
 
-「ピルシートをすべて破棄」タップで確認ダイアログ（キャンセル/破棄する）が表示され、「破棄する」タップでピルシートが削除されピル画面が「+ ピルシートを追加」の空状態になることを確認。SnackBarはmobile-mcpのスクリーンショット取得タイミングでは捕捉できなかったが、破棄後に「ピルシートを追加」から再作成し、ピルシートが復元されることを確認した。
+「ピルシートをすべて破棄」→ 確認ダイアログ「破棄する」でピルシートが削除され、記録画面が「+ ピルシートを追加」の空状態になりスナックバー「ピルシートを破棄しました」が表示されることを確認 (破棄は記録画面のピルシート設定シートの同名の行から実行した。設定画面の行と同じ `PillSheetGroupDelete` の処理を呼ぶ)。破棄後に「ピルシートを追加」から再作成できることも確認した (record の「空状態からの追加フローとシートタイプ選択」を参照)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/17f06a86-b1cf-426f-85df-4bb7db2a2057.png" width="320">
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/a2235259-7013-4ad5-97d0-882d4e9bd00f.png" width="320">
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/1a6f7df5-012e-4e78-954f-59676550bec2.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/ca2f5d6f-6fe0-41a5-9ec9-46606315766f-record-deleted.png" width="320">
 
 </details>
 
@@ -140,11 +147,13 @@ last_verified_at: 2026-07-06
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-06**
+**確認日: 2026-10-08**
 
-トライアル中ユーザーではトグルをON→OFF→ONに自由に切り替えられることを確認。開発者オプション「トライアル解除」で非会員状態にした後は、トグルはOFF表示になり、タップするとプレミアム紹介シートが表示され、シートを閉じてもトグルはOFFのまま変化しないことを確認。
+トライアル中はトグルを OFF (スナックバー「ピルシートグループの自動追加をOFFにしました」。1 枚目) → ON (2 枚目) に切り替えられることを確認 (2026-10-05)。「トライアル解除」後の無料ユーザーでトグルをタップするとプレミアム紹介シートが表示され、閉じてもトグルは OFF のままであることを確認 (3 枚目、2026-10-08)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/b7ec3814-a881-4563-be3f-e85defe6f742.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/cad6491b-0f45-4094-b1bd-847e5c030871-settings-autoadd-off.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/d178234a-d310-485c-a1db-7fbfddd57a00-settings-autoadd-on.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/34466766-1aab-4bc7-a122-45376985ad33-free-settings-autoadd-premium.png" width="320">
 
 </details>
 
@@ -166,12 +175,12 @@ last_verified_at: 2026-07-06
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-06**
+**確認日: 2026-10-05**
 
-「ピルの服用通知」トグルをタップしてON→OFF→ONに切り替えられることを確認。`toggle_reminder_notification.dart`のソースを確認し、切り替え時に`setSetting`→`registerReminderLocalNotification`/`cancelReminderLocalNotification`→`L.pillReminderChanged`のSnackBar表示（2秒間）が実装されていることを確認したが、SnackBar自体はmobile-mcpのスクリーンショット取得タイミング（2秒のdurationより後）では捕捉できなかった。
+「ピルの服用通知」トグルを OFF にするとスナックバー「服用通知をOFFにしました」(1 枚目)、ON に戻すと「服用通知をONにしました」(2 枚目) が表示されることを確認。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/da68c845-2cd0-4b05-aa86-15bddf9b60db.png" width="320">
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/616dc741-50da-4f2a-8c23-ad3745d41ca5.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/10b11ebe-a8ba-43c3-8957-fcb732694e8a-settings-reminder-off.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/d3b4dfa5-aa46-43be-bfab-23454846f6e9-settings-reminder-on.png" width="320">
 
 </details>
 
@@ -179,11 +188,12 @@ last_verified_at: 2026-07-06
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-06**
+**確認日: 2026-10-05**
 
-「通知時間」タップで時刻編集画面（通知1: 13:00, 通知2: 14:00）に遷移することを確認。Cupertino風の時刻ピッカーはmobile-mcpのタップ・スワイプでは選択値を変更できなかったため、「通知時間の追加」で通知3(20:00)を追加する形で変更操作を実行し、時刻編集画面・設定画面の両方の行に「13:00, 14:00, 20:00」が反映されることを確認した。確認後、通知3をスワイプ削除し元の「13:00, 14:00」に復元した。
+「通知時間」タップで時刻編集画面 (通知1: 01:00、通知2: 02:00) に遷移し、右上のアイコンで通知3 (20:00) を追加すると (1 枚目)、設定画面の行に「01:00, 02:00, 20:00」が反映されること (2 枚目) を確認。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/595cc2bc-8b86-4830-9c07-33f749dfa690.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/ba95a500-3437-4ddd-8145-1dc887cac3c1-settings-reminder-times.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/b6895560-2995-4638-a402-b730b2ff6661-settings-reminder-times-row.png" width="320">
 
 </details>
 
@@ -191,16 +201,13 @@ last_verified_at: 2026-07-06
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-06**
+**確認日: 2026-10-08**
 
-非会員（トライアル解除済み）状態で「マナーモードでも通知設定」「服用通知のカスタマイズ」「アラーム機能」のいずれをタップしても、プレミアム紹介シートが表示されトグルは変化しないことを確認。
+トライアル中は「マナーモードでも通知設定」で音量スライダーと「テスト通知を送信」付きの設定画面に (1 枚目)、「服用通知のカスタマイズ」でプレビュー・タイトル・メッセージの編集画面に (2 枚目) 遷移することを確認 (2026-10-05)。「トライアル解除」後の無料ユーザーで「マナーモードでも通知設定」をタップするとプレミアム紹介シートが表示されることを確認 (3 枚目、2026-10-08)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/9e385e53-e452-42d9-bab7-f8c6c68a32d6.png" width="320">
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/c7cac195-3db8-4ad4-a3c6-852058098981.png" width="320">
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/ca85cb82-d35d-44db-9005-e9162137bcd3.png" width="320">
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/dcc62562-2e7f-4ffa-acad-a0e903acddb2.png" width="320">
-
-- ⏭️ スキップ: 「プレミアム/トライアル会員は各設定画面に遷移する」側は、本セッションのdevアカウントが「トライアル解除」実行済みの無料ユーザー状態のため未検証（トライアル状態に戻すと他項目の非会員前提の確認結果に影響するため、本セッションでは切り替えなかった）
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/b50b0820-d284-4af1-ba17-c98d389677cb-settings-critical-alert.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/3ccb8275-21c0-4b47-a26e-608549a37a71-settings-customize-word.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/0f0e89c0-1099-4c25-adcc-daa3e9312217-free-settings-critical-alert-premium.png" width="320">
 
 </details>
 
@@ -221,13 +228,12 @@ last_verified_at: 2026-07-06
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-06**
+**確認日: 2026-10-05**
 
-「生理について」タップで生理設定画面（生理がはじまるピル番号選択・何日間続くか設定）に遷移することを確認。
+生理開始のピル番号 (80 番) が現在の 28 錠タイプに存在しない状態で、「生理について」行に警告アイコンと「生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています」が表示されること (1 枚目)、タップで生理設定画面に遷移すること (2 枚目) を確認。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/188bae97-c5d1-460b-848d-5b279e5f2b48.png" width="320">
-
-- ⏭️ スキップ: 「ピル番号設定が不足している場合の警告アイコン・注意文」側は、本セッションのピルシート設定では条件に該当しないため未検証
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/fb640c30-caa4-4f37-abf9-fada5b335303-settings-menstruation-warning.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/80d2deca-bc4e-4477-9572-b08ad0752cb2-settings-menstruation-page.png" width="320">
 
 </details>
 
@@ -235,13 +241,12 @@ last_verified_at: 2026-07-06
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-06**
+**確認日: 2026-10-05**
 
-「ヘルスケア連携」タップでiOSネイティブのヘルスケアデータアクセス許可ダイアログ（月経の書き込み許可・許可/許可しない）が表示されることを確認。
+`SIMSLIM_EXCEPT=store,health,icloud` で health デーモンを有効にして起動したシミュレータで、「ヘルスケア連携」タップで iOS のヘルスケアデータアクセス許可画面 (月経の書き込み) が表示され (1 枚目)、「月経」を ON にして「許可」を選んだ後に再度タップすると案内ページ (pilll.notion.site「3.9.0 ヘルスケア連携」) がアプリ内ブラウザで開くこと (2 枚目) を確認。2026-07-06 の記録にあった「許可シートがタップに反応しない」事象は、health カテゴリを有効にした起動では起きなかった。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/99bb8276-727a-4490-b826-521606f09044.png" width="320">
-
-- ⏭️ スキップ: このネイティブHealthKit許可シートはmobile-mcpのタップ・ダブルタップ・長押しに反応せず「許可しない」等を選択できなかった（アプリ自体の不具合ではなくシミュレータのシステムダイアログとツールの既知の相性問題と判断）。アプリを再起動してダイアログを解消し、「許可済みなら案内ページが開く」側は未検証のまま次項目に進んだ
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/5260ca02-1512-4f34-b86e-82607678b238-settings-healthkit.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/7014dcb6-5af6-4053-bfe9-e69d4ac9e9bc-settings-healthkit-allowed.png" width="320">
 
 </details>
 
@@ -252,6 +257,7 @@ last_verified_at: 2026-07-06
 ## 6. その他
 
 - [x] **各種リンク行の動作**: 「その他」セクションの「友達に教える」（紹介文がクリップボードにコピーされSnackBarが表示される）、「利用規約」「プライバシーポリシー」「FAQ」「新機能紹介」（それぞれアプリ内ブラウザ/外部ブラウザで該当ページが開く）が正しく動作する
+- [x] **ライセンス一覧**: 「ライセンス」をタップするとアプリ名・バージョンと依存パッケージのライセンス一覧が表示され、パッケージをタップするとライセンス本文が開く
 - [x] **お問い合わせ導線**: 「お問い合わせ」をタップするとFAQ確認を促す確認ダイアログが表示され、「FAQを確認する」でFAQページが開き、「お問い合わせを続ける」でお問い合わせ画面に遷移する
 
 #### 動作確認
@@ -262,11 +268,27 @@ last_verified_at: 2026-07-06
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-06**
+**確認日: 2026-10-05**
 
-「利用規約」「プライバシーポリシー」「FAQ」「新機能紹介（リリースノート）」はいずれもタップでアプリ内ブラウザ（bannzai.github.io / pilll.notion.site）が開き該当ページが表示されることを確認。「友達に教える」はタップ後にSnackBarをスクリーンショットで捕捉できなかったが、`xcrun simctl pbpaste`でクリップボードに「Pilll ピル服用に特化したピルリマインダーアプリ」を含む紹介文とiOS/Android storeリンクがコピーされていることを確認した。
+「利用規約」(bannzai.github.io。1 枚目)、「FAQ」(2 枚目) と「新機能紹介」(3 枚目。どちらも pilll.notion.site) がアプリ内ブラウザで開くことを確認。「プライバシーポリシー」は premium_introduction のフッターから同じ URL が開くことを確認済み。「友達に教える」はスナックバー「クリップボードにコピーしました」が表示されることを確認 (4 枚目)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/a888c9d2-e4b8-48a4-b2a2-6670f0eb9b2c.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/89552caa-0d25-4439-bcb5-88367b0c200c-settings-terms-crop.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/54087acd-81d9-40a7-9b98-a41a223e7cd9-settings-unknown-link.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/aba2d215-58c9-4c7f-b57b-03b3b13652f2-settings-newfeature.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/71f8dbfd-37df-4f86-aeda-d7eb2fe37882-settings-share.png" width="320">
+
+</details>
+
+### **ライセンス一覧**: 「ライセンス」をタップするとアプリ名・バージョンと依存パッケージのライセンス一覧が表示され、パッケージをタップするとライセンス本文が開く
+
+<details><summary>動作確認スクショ</summary>
+
+**確認日: 2026-10-05**
+
+「ライセンス」タップで「Pilll-dev 202609.14.152816 Powered by Flutter」と依存パッケージの一覧が表示され (1 枚目)、abseil-cpp をタップすると Apache License 2.0 の本文が開くこと (2 枚目) を確認。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/271916be-1699-4f12-8636-762c74cf130f-settings-oss.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/4f2b73f1-d24e-42f1-b655-a4778f866dd1-settings-oss-detail.png" width="320">
 
 </details>
 
@@ -274,13 +296,12 @@ last_verified_at: 2026-07-06
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-06**
+**確認日: 2026-10-05**
 
-「お問い合わせ」タップでFAQ確認ダイアログ（FAQを確認する/お問い合わせを続ける）が表示され、「お問い合わせを続ける」でお問い合わせフォーム（項目選択・メールアドレス・内容入力）に遷移することを確認。同ダイアログの「FAQを確認する」からもFAQページ（pilll.notion.site）が開くことを確認。
+「お問い合わせ」タップで FAQ 確認ダイアログ (FAQを確認する / お問い合わせを続ける) が表示され (1 枚目)、「お問い合わせを続ける」でお問い合わせフォーム (項目選択・メールアドレス・内容) に遷移すること (2 枚目) を確認。「FAQを確認する」は「各種リンク行の動作」の FAQ と同じページが開く。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/a235beff-e473-4f83-baa5-7b66d089de81.png" width="320">
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/f70789c7-fe1e-49f2-b98a-8a6eb0e8247c.png" width="320">
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/3e933ba7-f089-4025-8d7f-dcff6d16f4c7.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/9795518a-65b2-4acb-ac98-c57bbcfe22f1-settings-inquiry-dialog.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/7b89824d-3842-405f-b53d-5512ff913acf-settings-inquiry-form.png" width="320">
 
 </details>
 
@@ -290,23 +311,64 @@ last_verified_at: 2026-07-06
 
 ## 7. 開発者オプション
 
-- [x] **AdMob 一覧**: dev ビルドの「開発者オプション」→「AdMob 一覧」をタップすると、アンカー型アダプティブバナーとネイティブ広告 (テンプレート small) がテスト広告として描画される。バナーは画面幅いっぱい (iPhone SE 3rd で 320x100) になり、旧固定サイズ (320x50) にならない。プレミアム状態や他の AnnouncementBar の優先順位に依存せず広告 Widget 単体を確認する用途
+- [x] **AdMob 一覧**: dev ビルドの「開発者オプション」→「AdMob 一覧」をタップすると、アンカー型アダプティブバナーとネイティブ広告 (テンプレート small) がテスト広告として描画される。バナーは画面幅いっぱいになり、旧固定サイズ (320x50) にならない。プレミアム状態や他の AnnouncementBar の優先順位に依存せず広告 Widget 単体を確認する用途
+- [x] **トライアル解除**: 「トライアル解除」をタップするとスナックバー「トライアルを解除しました」が表示され、設定画面の「機能無制限の期間について」行が消えて無料ユーザーの表示 (Premium バッジ付き機能のタップでプレミアム紹介シート) になる
+- [x] **買い切りオファー Paywall**: 「買い切りオファー Paywall」をタップすると表示パターン (解約誘導文言あり/なし)・文言バリアント・オファープラン (買い切り/月額300円) を選ぶダイアログが順に出て、選んだ組み合わせの `LifetimeOfferPage` が開く
+- [x] **終了済みの前回ピルシートグループを作成**: タップすると現在のグループが過去にずらされて 21 番まで服用済みの終了状態になり、今日から始まる新しいグループが作られる (記録画面の履歴アイコンから前回グループとして閲覧できる)
 
 #### 動作確認
 <details>
 <summary>動作確認エビデンス</summary>
 
-### **AdMob 一覧**: dev ビルドの「開発者オプション」→「AdMob 一覧」をタップすると、アンカー型アダプティブバナーとネイティブ広告 (テンプレート small) がテスト広告として描画される。バナーは画面幅いっぱい (iPhone SE 3rd で 320x100) になり、旧固定サイズ (320x50) にならない。プレミアム状態や他の AnnouncementBar の優先順位に依存せず広告 Widget 単体を確認する用途
+### **AdMob 一覧**: dev ビルドの「開発者オプション」→「AdMob 一覧」をタップすると、アンカー型アダプティブバナーとネイティブ広告 (テンプレート small) がテスト広告として描画される。バナーは画面幅いっぱいになり、旧固定サイズ (320x50) にならない。プレミアム状態や他の AnnouncementBar の優先順位に依存せず広告 Widget 単体を確認する用途
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-09-09** (コミット 7306dafbdfb36545dcfdb0978f88e41c15b0258e、google_mobile_ads 9.1.0 + Meta / Mintegral アダプタ導入後)
+**確認日: 2026-10-05**
 
-iPhone SE (3rd generation) シミュレータ (iOS 26.5) で設定タブ → 開発者オプション → 「AdMob 一覧」を開き、上段に「This is a 320x100 test ad.」のアダプティブバナー、下段に Flood-It! のネイティブテスト広告 (Ad バッジ・App Store・インストールボタン) が描画されることを確認。遷移 6 秒後と 15 秒後で表示は同一。
+「AdMob 一覧」で上段に「This is a 320x100 test ad.」のアダプティブバナー、下段に Flood-It! のネイティブテスト広告 (Ad バッジ・App Store・インストール) が描画されることを確認。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/09/10/51c0e33f-9a0e-4078-86e6-5887638aead4-admob-list-sdk9-15s.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/2c0105e0-9ba3-4e73-9b58-7e4060baf3a4-settings-admob.png" width="320">
 
 - ⏭️ スキップ: Meta / Mintegral からの実広告の配信確認は AdMob 管理画面で入札ソースを設定し、各社のアプリ審査が通るまで行えないため未検証 (テスト広告は AdMob 単体の配信)
+
+</details>
+
+### **トライアル解除**: 「トライアル解除」をタップするとスナックバー「トライアルを解除しました」が表示され、設定画面の「機能無制限の期間について」行が消えて無料ユーザーの表示 (Premium バッジ付き機能のタップでプレミアム紹介シート) になる
+
+<details><summary>動作確認スクショ</summary>
+
+**確認日: 2026-10-05**
+
+「トライアル解除」タップでスナックバー「トライアルを解除しました」が表示されることを確認。解除後の無料ユーザーの挙動は「自動追加トグルのプレミアム制御」「プレミアム限定の通知機能導線」と calendar の「5. プレミアム制限」で確認した。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/8bfb6785-7658-43b8-a0d3-6adf334fd56f-settings-end-trial.png" width="320">
+
+</details>
+
+### **買い切りオファー Paywall**: 「買い切りオファー Paywall」をタップすると表示パターン (解約誘導文言あり/なし)・文言バリアント・オファープラン (買い切り/月額300円) を選ぶダイアログが順に出て、選んだ組み合わせの `LifetimeOfferPage` が開く
+
+<details><summary>動作確認スクショ</summary>
+
+**確認日: 2026-10-05**
+
+「表示パターンを選択」(1 枚目) と「オファープランを選択」(2 枚目) のダイアログが順に表示され、選んだ組み合わせの画面が開くことを確認。開いた画面の内容は `lib/features/lifetime_offer/QA.md` に記録した。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/0823a042-ff97-41d7-a3db-4ad4a3d63ece-settings-lifetime-row.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/d7e68db7-f982-457b-9484-a9ba5e47e4f8-settings-lifetime-with-cancel.png" width="320">
+
+</details>
+
+### **終了済みの前回ピルシートグループを作成**: タップすると現在のグループが過去にずらされて 21 番まで服用済みの終了状態になり、今日から始まる新しいグループが作られる (記録画面の履歴アイコンから前回グループとして閲覧できる)
+
+<details><summary>動作確認スクショ</summary>
+
+**確認日: 2026-10-05**
+
+開発者オプションの行 (1 枚目) をタップした後、記録画面の履歴アイコンから「前回のピルシートグループ 2026/08/27 ~ 2026/09/23」(1〜21 番が服用済み) が開くこと (2 枚目) を確認。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/9327e656-968e-4e1e-ba5a-0612cabc299f-settings-create-ended.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/0f6fee37-4ce6-42fc-8cb8-41eabe46cc26-before-ended.png" width="320">
 
 </details>
 
