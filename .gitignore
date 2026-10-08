@@ -75,3 +75,6 @@ scripts/generate_screenshots/artifacts/
 # Bitrise の署名手順 (file-downloader / scripts/export-options-plist.sh) がローカル実行時に生成・取得する署名関連ファイル
 android/app/*.jks
 ios/Runner/ExportOptions*.plist
+
+# LLVM の計測プロファイル (coverage 付きでビルドされたツールをリポジトリ直下で実行すると生成される)
+*.profraw
