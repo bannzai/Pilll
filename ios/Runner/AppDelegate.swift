@@ -7,17 +7,18 @@ import flutter_local_notifications
 import AlarmKit
 
 private var channel: FlutterMethodChannel?
+/// アプリの UIApplicationDelegate。Flutter エンジンの初期化後の plugin とメソッドチャネルの登録、通知の設定を担う
 @main
-@objc class AppDelegate: FlutterAppDelegate {
+@objc class AppDelegate: FlutterAppDelegate, FlutterImplicitEngineDelegate {
 
-  override func application(
-    _ application: UIApplication,
-    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
-  ) -> Bool {
-    let viewController = window?.rootViewController as! FlutterViewController
+  /// UIScene ライフサイクル (iOS 27 SDK でビルドしたアプリに必須) では application(_:didFinishLaunchingWithOptions:) の時点で
+  /// window と FlutterViewController が無いため、Flutter エンジンの初期化後に plugin とメソッドチャネルを登録する。
+  /// 移行手順: https://docs.flutter.dev/release/breaking-changes/uiscenedelegate
+  func didInitializeImplicitFlutterEngine(_ engineBridge: FlutterImplicitEngineBridge) {
+    GeneratedPluginRegistrant.register(with: engineBridge.pluginRegistry)
     channel = FlutterMethodChannel(
       name: "method.channel.MizukiOhashi.Pilll",
-      binaryMessenger: viewController.binaryMessenger
+      binaryMessenger: engineBridge.applicationRegistrar.messenger()
     )
     // DO NOT OVERRIDE
     channel?.setMethodCallHandler(
@@ -242,7 +243,18 @@ private var channel: FlutterMethodChannel?
           return
         }
       })
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
+      // NOTE: [LOCAL_NOTIFICATION] Flutter local notificationの構造体をロギングしている
+      if let dic = UserDefaults.standard.object(forKey: "flutter_local_notifications_presentation_options") as? [String: Any] {
+        analytics(name: "fln_debug", parameters: dic)
+      }
+    }
+  }
 
+  override func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+  ) -> Bool {
     // Await established channel
     DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
       if #available(iOS 14.0, *) {
@@ -277,14 +289,6 @@ private var channel: FlutterMethodChannel?
     // NOTE: [LOCAL_NOTIFICATION] Flutter Local NotificationのExamplesではFlutterLocalNotificationsPlugin.setPluginRegistrantCallbackのあとにDelegateをセットしている
     // 通知が来ない問題があり再現しないため原因は不明だがこの順番を守る
     UNUserNotificationCenter.current().delegate = self
-
-    GeneratedPluginRegistrant.register(with: self)
-    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
-      // NOTE: [LOCAL_NOTIFICATION] Flutter local notificationの構造体をロギングしている
-      if let dic = UserDefaults.standard.object(forKey: "flutter_local_notifications_presentation_options") as? [String: Any] {
-        analytics(name: "fln_debug", parameters: dic)
-      }
-    }
 
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
