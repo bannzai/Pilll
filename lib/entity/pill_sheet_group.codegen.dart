@@ -316,6 +316,10 @@ extension PillSheetGroupPillSheetModifiedHistoryDomain on PillSheetGroup {
           return 0;
         case PillSheetAppearanceMode.sequential:
         case PillSheetAppearanceMode.cyclicSequential:
+          // ピルシートが無いグループには最初の表示番号が存在しないため、_cycleSequentialPillSheetNumber の空リストの参照 (RangeError) を避けて 0 を返す
+          if (pillSheets.isEmpty) {
+            return 0;
+          }
           return _cycleSequentialPillSheetNumber(
                 pageIndex: pageIndex,
                 pillNumberInPillSheet: 1,

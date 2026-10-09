@@ -12967,6 +12967,29 @@ void main() {
         });
       }
 
+      test("ピルシートが空のグループでは sequential モードでも例外を投げずに 0 を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(
+          mockTodayRepository.now(),
+        ).thenReturn(DateTime.parse("2020-09-14"));
+
+        expect(
+          PillSheetGroup(
+            pillSheetIDs: [],
+            pillSheets: [],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+            displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 10),
+          ).pillNumberWithoutDateOrZero(
+            pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+            pageIndex: 0,
+            pillNumberInPillSheet: 0,
+          ),
+          0,
+        );
+      });
+
       test("beginPillNumber が 1 の場合は sequential モードでも 0 を返す (開始番号 1 のグループの表示は変わらない)", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
