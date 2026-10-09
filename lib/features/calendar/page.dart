@@ -230,7 +230,6 @@ class MonthCalendarPager extends StatelessWidget {
             calendarMenstruationBandModels: calendarMenstruationBandModels,
             calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
             calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
-            horizontalPadding: 0,
             day: (context, weekday, date) {
               if (date.isPreviousMonth(displayedMonth)) {
                 return CalendarDayTile.grayout(weekday: weekday, date: date);

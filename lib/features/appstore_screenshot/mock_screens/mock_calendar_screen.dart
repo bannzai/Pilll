@@ -145,7 +145,6 @@ class MockCalendarScreen extends StatelessWidget {
                       calendarMenstruationBandModels: [CalendarMenstruationBandModel(_latestMenstruation)],
                       calendarScheduledMenstruationBandModels: [_scheduledBand],
                       calendarNextPillSheetBandModels: [_nextPillSheetBand],
-                      horizontalPadding: 0,
                       day: (context, weekday, date) {
                         if (date.isPreviousMonth(_displayedMonth)) {
                           return CalendarDayTile.grayout(weekday: weekday, date: date);

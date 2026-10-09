@@ -61,7 +61,6 @@ class MenstruationCalendarHeader extends StatelessWidget {
                     height: MenstruationPageConst.tileHeight,
                     child: CalendarWeekLine(
                       dateRange: DateRange(days.first, days.last),
-                      horizontalPadding: _horizontalPadding,
                       day: (context, weekday, date) {
                         return CalendarDayTile(
                           weekday: weekday,

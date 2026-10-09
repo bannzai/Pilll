@@ -55,9 +55,17 @@ last_verified_at: 2026-10-09
 
 ## 実行ナレッジ
 
-### Xcode 27 では Pods の deployment target でビルドが落ちる（2026-10-04）
+### Xcode 27.1 でビルドする（2026-10-10）
 
-Xcode 27 は Pods の `IPHONEOS_DEPLOYMENT_TARGET < 15.0` をエラーにするため、環境変数 `DEVELOPER_DIR` に Xcode 26.5 の `Contents/Developer` を指定してビルドする。シミュレータのランタイムは iOS 27.0 のままでよい。
+- Pods の `IPHONEOS_DEPLOYMENT_TARGET < 15.0` は `ios/Podfile` の post_install が 15.0 に揃えるため、Xcode 26.5 を `DEVELOPER_DIR` に指定する回避は不要になった（2026-10-04 の記録を置き換え）
+- Simulator 向けのビルド（`flutter build ios --simulator`）は `FLUTTER_XCODE_ARCHS=arm64` を付ける。Flutter 3.41.9 は arm64 と x86_64 を 1 回の `lipo -verify_arch` で検証し、Xcode 27 の lipo が `-verify_arch requires exactly one input file` で拒否して `debug_unpack_ios` が失敗する（ https://github.com/flutter/flutter/issues/188461 。修正 PR #188625 は 2026-10-10 時点の stable に未収録）。`flutter run -d <UDID>` は対象 1 機種の arch だけをビルドするため指定は不要
+- アプリは UIScene ライフサイクルに移行済み（`ios/Runner/Info.plist` の `UIApplicationSceneManifest`、`AppDelegate.swift` の `didInitializeImplicitFlutterEngine`）。iOS 27 SDK でビルドしたアプリは UIScene 未対応だと起動直後に落ちる（ https://docs.flutter.dev/release/breaking-changes/uiscenedelegate ）
+
+### iPhone Duo（iOS 27.1）の外側・内側ディスプレイを確認する（2026-10-10）
+
+- 起動は `SIM_DEVICE_TYPE="iPhone Duo" SIMSLIM_EXCEPT=store,health,icloud sim-boot`（iOS 27.1 のランタイムは iPhone Duo だけが対応）。姿勢の切り替えと撮影は ios-simulator skill Phase 2「折りたたみ端末の外側・内側ディスプレイを切り替える」に従う（`duo-pose.sh set --udid <UDID> open|closed`、内側は `xcrun simctl io <UDID> screenshot --display=primary-1`）
+- 外側ディスプレイでは OS が画面右端の約 84pt の列を占有し、SafeArea の右 inset になる。`MediaQuery.of(context).size.width`（画面全体の幅）を使った幅の計算は SafeArea 内の実際の幅とずれるため、`LayoutBuilder` の幅を使う（2026-10-10 に直した箇所: ピルシートの PageView、カレンダーの帯、設定の「ピルシートグループの自動追加」、初期設定後のプレミアム紹介）
+- iOS 27.1 では `NSUserDefaults` に `NSNull` を書くと例外になる。`home_widget` の `saveWidgetData` に null を渡すと落ちるため、`lib/native/widget.dart` の `saveWidgetDataOrRemove` を経由する
 
 ### mobile-mcp のタップがボトムシートの下に抜ける（2026-10-08）
 

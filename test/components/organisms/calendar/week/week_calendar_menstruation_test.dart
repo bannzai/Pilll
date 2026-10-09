@@ -37,7 +37,6 @@ void main() {
                 calendarMenstruationBandModels: [model],
                 calendarScheduledMenstruationBandModels: const [],
                 calendarNextPillSheetBandModels: const [],
-                horizontalPadding: 0,
                 day: (context, weekday, date) => Expanded(
                   child: Container(
                     height: 60,
@@ -71,7 +70,6 @@ void main() {
                 calendarMenstruationBandModels: [model],
                 calendarScheduledMenstruationBandModels: const [],
                 calendarNextPillSheetBandModels: const [],
-                horizontalPadding: 0,
                 day: (context, weekday, date) => Expanded(
                   child: Container(
                     height: 60,
@@ -105,7 +103,6 @@ void main() {
                 calendarMenstruationBandModels: [model],
                 calendarScheduledMenstruationBandModels: const [],
                 calendarNextPillSheetBandModels: const [],
-                horizontalPadding: 0,
                 day: (context, weekday, date) => Expanded(
                   child: Container(
                     height: 60,
@@ -148,7 +145,6 @@ void main() {
                 calendarMenstruationBandModels: [model],
                 calendarScheduledMenstruationBandModels: const [],
                 calendarNextPillSheetBandModels: const [],
-                horizontalPadding: 0,
                 day: (context, weekday, date) => Expanded(
                   child: Container(
                     height: 60,
