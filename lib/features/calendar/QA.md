@@ -1,7 +1,7 @@
 ---
 feature: calendar
 verification: mobile-mcp
-last_verified_commit: c827d4be46d15d8f4b573af8be8e356c24d8b710
+last_verified_commit: 823738c52e32155e88214f4cc0663a9a85f0d5c4
 last_verified_at: 2026-10-09
 ---
 
@@ -220,7 +220,7 @@ last_verified_at: 2026-10-09
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/93d43d4e-01b7-44f5-80bd-96186a2387ac-calendar-history-all.png" width="320">
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/8e194ba7-96fb-482c-8650-2462e4a579aa-free-calendar-history-premium-sheet.png" width="320">
 
-全履歴一覧には、開始番号 10 で作った 1 日 2 回服用グループの最初の服用記録が「1-10日目」、2 回目が「10日目」と表示されている。開始番号を 1 より大きくした新しいグループの最初の服用記録が「1-N日目」と表示されるのは、`pillNumberWithoutDateOrZero` が未服用 (番号 0) の時に表示番号のオフセットを無視して 0 を返すためで、今回の変更より前からある表示の不具合として bannzai/PilllBackend#495 に起票した (リリース前ゲートの判定に使う失敗の記録ではなく観測として書く。修正は別 PR)。
+全履歴一覧には、開始番号 10 で作った 1 日 2 回服用グループの最初の服用記録が「1-10日目」、2 回目が「10日目」と表示されている。開始番号を 1 より大きくした新しいグループの最初の服用記録が「1-N日目」と表示されるのは、`pillNumberWithoutDateOrZero` が未服用 (番号 0) の時に表示番号のオフセットを無視して 0 を返すためで、今回の変更より前からある表示の不具合として bannzai/PilllBackend#495 に起票した (リリース前ゲートの判定に使う失敗の記録ではなく観測として書く)。修正は https://github.com/bannzai/Pilll/pull/1898 で main に入り、2026-10-09 にこのブランチへ取り込んだ。上の 2 枚のスクリーンショットは修正前のビルドのもので、修正後の表示は `test/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_taken_pill_action_test.dart` と `pill_sheet_modified_history_revert_taken_pill_action_test.dart` (開始番号を 1 より大きくした場合の表記を含む) で担保し、シミュレータでは撮り直していない。
 
 </details>
 
