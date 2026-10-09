@@ -1,7 +1,7 @@
 ---
 feature: settings
 verification: mobile-mcp
-last_verified_commit: e7d4082f35056070b0425056efd6b085b115c752
+last_verified_commit: c827d4be46d15d8f4b573af8be8e356c24d8b710
 last_verified_at: 2026-10-09
 ---
 
@@ -17,7 +17,7 @@ last_verified_at: 2026-10-09
 - [ ] **連携状態の表示 (連携済み)**: Apple/Googleのいずれか連携済みなら「アカウント設定」行に「連携済み」と表示される
   - ⏭️ スキップ: Apple/Google 連携が実 OAuth 認証 (Apple Account / Google アカウントの認証情報) を要しシミュレータでは完了できないため未検証
     - 起動条件: ローカル sim-boot。`SIMSLIM_EXCEPT=store,health,icloud` / `SLIM_STATUS=APPLIED` (2026-10-05)、`ALREADY_SLIM` (2026-10-08)
-    - デーモン: icloud カテゴリを有効にした状態で、Apple 連携は OS の「Apple Account にサインインしてください」ダイアログまで到達する (「アカウント連携導線」のスクショ)
+    - デーモン: icloud カテゴリを有効にした状態で、Apple 連携は OS の「Apple Account にサインインしてください」ダイアログまで到達する (「アカウント連携導線」のスクショ。`launchctl list` の出力は取っていない)
     - 試した手順: 連携一覧 → Apple「連携する」→ サインインシート「Appleで登録」→ Apple Account 未サインインのため OS ダイアログで停止。Google「連携する」→ accounts.google.com のログイン画面まで到達、テストアカウントの認証情報が無いため中断
 - [x] **アカウント連携導線**: 「アカウント設定」から連携一覧画面に遷移し、未連携のApple/Googleで「連携する」をタップするとサインインシートが表示される。実OAuth認証結果の確認はSimulatorでは制限があるため、シートと OS のダイアログの表示までを確認対象とする
 - [ ] **再ログイン導線**: 連携済みの行を長押しすると「認証情報を更新します」の再ログイン確認ダイアログが表示される
@@ -56,10 +56,11 @@ last_verified_at: 2026-10-09
 
 **確認日: 2026-10-05**
 
-「アカウント設定」から連携一覧画面 (Apple / Google アカウント / 退会する) に遷移し (1 枚目)、Apple の「連携する」で「Appleで登録」「Google アカウントで登録」のサインインシートが表示されること (2 枚目) を確認。「Appleで登録」をタップすると OS の「Apple Account にサインインしてください」ダイアログが出る (3 枚目。icloud デーモン有効時。2026-10-04 の icloud 無効時は `AuthorizationError Code=1000` の汎用エラーダイアログだった)。「Google アカウントで登録」はアプリ内ブラウザで accounts.google.com のログイン画面に到達する (4 枚目)。
+「アカウント設定」から連携一覧画面 (Apple / Google アカウント / 退会する) に遷移し (1 枚目)、Apple の「連携する」で「Appleで登録」「Google アカウントで登録」のサインインシートが表示されること (2 枚目) を確認。「Appleで登録」をタップすると OS の「Apple Account にサインインしてください」ダイアログが出て (3 枚目)、「閉じる」で閉じるとアプリの汎用エラーダイアログ「予期しないエラーが発生しました [firebase_auth/unknown] ... AuthorizationError Code=1000」が表示される (4 枚目。Apple Account 未サインインの環境要因で、2026-07-06 の記録と同じ挙動)。「Google アカウントで登録」はアプリ内ブラウザで accounts.google.com のログイン画面に到達する (5 枚目)。
 
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/5d7a2035-37e8-438e-b330-2fb4d3e22bb5-settings-account-list.png" width="320">
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/d0167468-96ff-4aef-81af-71e7c9f01fdd-settings-signin-sheet.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/8df9944a-69ac-4daa-b901-bfa848d24bea-root-apple-signin.png" width="320">
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/e21e63e3-a3ed-4d34-9c43-5fdb172bc186-root-apple-signin-closed.png" width="320">
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/1f157723-03c8-458c-bf80-c211105bce0e-root-google-signin.png" width="320">
 
@@ -130,7 +131,9 @@ last_verified_at: 2026-10-09
 
 ## 3. ピルシート管理
 
-- [x] **今日のピル番号変更**: 「今日飲むピル番号の変更」をタップすると番号変更画面に遷移し、番号を選んで「変更」をタップすると設定画面に戻り通知が再登録される
+- [x] **今日のピル番号変更**: 「今日飲むピル番号の変更」をタップすると番号変更画面に遷移し、番号を選んで「変更」をタップすると設定画面に戻る
+- [ ] **今日のピル番号変更後の通知の再登録**: 「変更」の後にリマインダー通知が新しい番号で再登録される
+  - ⏭️ スキップ: 通知の再登録はアプリ内ログ・通知センターのどちらでも確認していない。`lib/utils/local_notification.dart` は前回の確認の後に 1 日 2 回服用の対応で変わっているため、root QA.md の「服用リマインダー通知」と合わせて再確認が要る項目として残す
 - [ ] **ピルシート破棄**: 「ピルシートをすべて破棄」をタップすると確認ダイアログが表示され、「破棄」をタップするとピルシートが削除され「ピルシートを破棄しました」のSnackBarが表示される。不可逆操作のため、破棄後に再作成できることを確認したうえで実行する
   - ⏭️ スキップ: 2026-10 のラウンドでは設定画面の行 (`PillSheetRemoveRow`) からは実施していない。同じ `deletePillSheetGroupProvider` を呼ぶ記録画面のピルシート設定シートの「ピルシートをすべて破棄」で、確認ダイアログ → 削除 → スナックバー → 再作成までを確認した (record の「ピルシートグループ削除」)。設定画面の行の確認ダイアログ・スナックバー・通知キャンセルは `pill_sheet_remove.dart` の独自実装で、画面では未確認
 - [x] **自動追加トグルのプレミアム制御**: 「ピルシートグループの自動追加」トグルは、プレミアム/トライアルユーザーはON/OFFを切り替えられ、非会員がタップするとプレミアム紹介シートが表示されトグルはOFFのままになる
@@ -139,16 +142,26 @@ last_verified_at: 2026-10-09
 <details>
 <summary>動作確認エビデンス</summary>
 
-### **今日のピル番号変更**: 「今日飲むピル番号の変更」をタップすると番号変更画面に遷移し、番号を選んで「変更」をタップすると設定画面に戻り通知が再登録される
+### **今日のピル番号変更**: 「今日飲むピル番号の変更」をタップすると番号変更画面に遷移し、番号を選んで「変更」をタップすると設定画面に戻る
 
 <details><summary>動作確認スクショ</summary>
 
 **確認日: 2026-10-05**
 
-設定画面の「今日飲むピル番号の変更」から番号変更画面 (記録画面の設定シートからの遷移先と同じ画面。1 枚目) に遷移し、「変更」で設定画面に戻ること (2 枚目) を確認。通知の再登録はアプリ内ログでは確認していない。
+設定画面の「今日飲むピル番号の変更」から番号変更画面に遷移し (1 枚目は記録画面の設定シートから開いた同じ画面 `TodayPillNumberPage` のスクショで、設定画面から開いた時のスクショは撮っていない)、「変更」で設定画面に戻ること (2 枚目) を確認。
 
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/d0fe14d6-af32-450b-aceb-737fa2f2f2e9-record-today-number-page.png" width="320">
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/4e28a27f-2333-4113-9da1-b768af02f9f8-settings-today-number-back.png" width="320">
+
+</details>
+
+### **今日のピル番号変更後の通知の再登録**: 「変更」の後にリマインダー通知が新しい番号で再登録される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+⏭️ スキップ: 通知の再登録は確認していない (理由はチェックリスト側を参照)
 
 </details>
 

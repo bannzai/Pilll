@@ -1,7 +1,7 @@
 ---
 feature: _root
 verification: mobile-mcp
-last_verified_commit: e7d4082f35056070b0425056efd6b085b115c752
+last_verified_commit: c827d4be46d15d8f4b573af8be8e356c24d8b710
 last_verified_at: 2026-10-09
 ---
 
@@ -74,7 +74,7 @@ Xcode 27 は Pods の `IPHONEOS_DEPLOYMENT_TARGET < 15.0` をエラーにする�
 - [ ] **Apple/Google 連携**: `sign_in_sheet` から Apple または Google と連携すると、匿名アカウントのデータを引き継いだまま連携済み状態になる
   - ⏭️ スキップ: 連携の完了には Apple Account / Google アカウントの認証情報が要り、シミュレータには用意していないため未検証。Apple は OS の「Apple Account にサインインしてください」ダイアログまで、Google は accounts.google.com のログイン画面まで到達することを確認した（`lib/features/settings/QA.md` の「アカウント連携導線」）
     - 起動条件: ローカル sim-boot。`SIMSLIM_EXCEPT=store,health,icloud` / `SLIM_STATUS=APPLIED`（2026-10-05）、`ALREADY_SLIM`（2026-10-08）
-    - デーモン: icloud カテゴリを有効にした状態で Apple のサインインダイアログは表示される（無効時は `AuthorizationError Code=1000` の汎用エラー）
+    - デーモン: icloud カテゴリを有効にした状態で Apple の OS のサインインダイアログは表示される（`launchctl list` の出力は取っていない）。ダイアログを閉じるとアプリ側に `AuthorizationError Code=1000` の汎用エラーが出る（Apple Account 未サインインの環境要因）
     - 試した手順: 設定 → アカウント設定 → 連携する → Appleで登録 → サインインダイアログで停止。Google アカウントで登録 → ログイン画面で停止
 - [x] **サインアウト/再起動後の復元**: アプリを終了して再起動しても、直前のログイン状態・データが保持されている
 
@@ -112,8 +112,9 @@ Xcode 27 は Pods の `IPHONEOS_DEPLOYMENT_TARGET < 15.0` をエラーにする�
 
 **確認日: 2026-10-05**
 
-導線（設定 → アカウント設定 → 連携する → Apple/Googleで登録）の到達を確認。Apple は「Apple Account にサインインしてください」の OS ダイアログ、Google は accounts.google.com のログイン画面で止まり、以降は未実施。
+導線（設定 → アカウント設定 → 連携する → Apple/Googleで登録）の到達を確認。Apple は「Apple Account にサインインしてください」の OS ダイアログ（1 枚目）で止まり、閉じるとアプリの汎用エラー `AuthorizationError Code=1000`（2 枚目）が出る。Google は accounts.google.com のログイン画面（3 枚目）で止まり、以降は未実施。
 
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/8df9944a-69ac-4daa-b901-bfa848d24bea-root-apple-signin.png" width="320">
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/e21e63e3-a3ed-4d34-9c43-5fdb172bc186-root-apple-signin-closed.png" width="320">
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/1f157723-03c8-458c-bf80-c211105bce0e-root-google-signin.png" width="320">
 

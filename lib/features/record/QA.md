@@ -1,7 +1,7 @@
 ---
 feature: record
 verification: mobile-mcp
-last_verified_commit: e7d4082f35056070b0425056efd6b085b115c752
+last_verified_commit: c827d4be46d15d8f4b573af8be8e356c24d8b710
 last_verified_at: 2026-10-09
 ---
 
@@ -24,7 +24,7 @@ last_verified_at: 2026-10-09
 
 **確認日: 2026-10-08**
 
-「10/8 (木)」と周期表示の「今日は服用 34日目」が表示されることを確認 (1 枚目)。ピル番号表示では「今日飲むピル 1番」になる (2026-10-05 の「服用ボタンで記録」のスクショ参照)。ピルシートを破棄した空状態 (2 枚目) と休薬中 (3 枚目) は服用数欄が「-」になることを確認。シート終了時は実日数の経過が必要なため、`record_page_header.dart` の `activePillSheet == null` の分岐で同じ「-」になることをコードで確認した。
+「10/8 (木)」と周期表示の「今日は服用 34日目」が表示されることを確認 (1 枚目)。ピル番号表示では「今日飲むピル 1番」になる (2026-10-05 の「服用ボタンで記録」のスクショ参照)。ピルシートを破棄した空状態 (2 枚目) と休薬中 (3 枚目) は服用数欄が「-」になることを確認。シート終了時は実日数の経過が必要なため、`components/header/today_taken_pill_number.dart` の `activePillSheet == null || pillSheetGroup.isDeactived` の分岐で同じ「-」になることをコードで確認した。
 
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/167f0ccb-81f4-4119-9638-cec2632b6ad2-free-record-top.png" width="320">
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/ca2f5d6f-6fe0-41a5-9ec9-46606315766f-record-deleted.png" width="320">
