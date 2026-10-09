@@ -30,12 +30,15 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
     return SwitchListTile(
       title: Row(
         children: [
-          Text(
-            L.autoAddPillSheetGroup,
-            style: const TextStyle(
-              fontFamily: FontFamily.roboto,
-              fontWeight: FontWeight.w300,
-              fontSize: 16,
+          // iPhone Duo の外側ディスプレイ (幅 382pt) では文言とバッジが 1 行に収まらず右にはみ出すため、文言側を折り返す
+          Flexible(
+            child: Text(
+              L.autoAddPillSheetGroup,
+              style: const TextStyle(
+                fontFamily: FontFamily.roboto,
+                fontWeight: FontWeight.w300,
+                fontSize: 16,
+              ),
             ),
           ),
           if (!isPremium) ...[const SizedBox(width: 8), const PremiumBadge()],

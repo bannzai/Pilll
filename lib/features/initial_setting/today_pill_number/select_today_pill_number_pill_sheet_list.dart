@@ -22,71 +22,80 @@ class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final pageController = usePageController(
-      viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width,
-    );
-    return Column(
-      children: [
-        SizedBox(
-          height: PillSheetViewLayout.calcHeight(
-            PillSheetViewLayout.mostLargePillSheetType(
-              state.pillSheetTypes,
-            ).numberOfLineInPillSheet,
-            true,
-          ),
-          child: PageView(
-            clipBehavior: Clip.none,
-            controller: pageController,
-            scrollDirection: Axis.horizontal,
-            children: List.generate(state.pillSheetTypes.length, (index) {
-              return Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: SettingPillSheetView(
-                      pageIndex: index,
-                      appearanceMode: PillSheetAppearanceMode.number,
-                      pillSheetTypes: state.pillSheetTypes,
-                      selectedPillNumberIntoPillSheet: state.selectedTodayPillNumberIntoPillSheet(
-                        pageIndex: index,
-                      ),
-                      markSelected: (pageIndex, number) {
-                        analytics.logEvent(
-                          name: 'selected_today_number_initial_setting',
-                          parameters: {
-                            'pill_number': number,
-                            'page': pageIndex,
-                          },
-                        );
-                        store.setTodayPillNumber(
-                          pageIndex: pageIndex,
-                          pillNumberInPillSheet: number,
-                        );
-                      },
-                    ),
-                  ),
-                  const Spacer(),
-                ],
-              );
-            }).toList(),
-          ),
-        ),
-        if (state.pillSheetTypes.length > 1) ...[
-          const SizedBox(height: 16),
-          DotsIndicator(
-            controller: pageController,
-            itemCount: state.pillSheetTypes.length,
-            onDotTapped: (page) {
-              pageController.animateToPage(
-                page,
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeInOut,
-              );
-            },
-          ),
-        ],
-      ],
+    // iPhone Duo の外側ディスプレイでは OS が画面右端の列を占有して SafeArea の右 inset になり、
+    // MediaQuery の幅 (画面全体) より使える幅が狭い。画面幅ではなく PageView 自身の幅からページ幅を決める
+    return LayoutBuilder(
+      builder: (context, constraints) => HookBuilder(
+        builder: (context) {
+          final pageController = usePageController(
+            viewportFraction: (PillSheetViewLayout.width + 20) / constraints.maxWidth,
+            keys: [constraints.maxWidth],
+          );
+          return Column(
+            children: [
+              SizedBox(
+                height: PillSheetViewLayout.calcHeight(
+                  PillSheetViewLayout.mostLargePillSheetType(
+                    state.pillSheetTypes,
+                  ).numberOfLineInPillSheet,
+                  true,
+                ),
+                child: PageView(
+                  clipBehavior: Clip.none,
+                  controller: pageController,
+                  scrollDirection: Axis.horizontal,
+                  children: List.generate(state.pillSheetTypes.length, (index) {
+                    return Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: SettingPillSheetView(
+                            pageIndex: index,
+                            appearanceMode: PillSheetAppearanceMode.number,
+                            pillSheetTypes: state.pillSheetTypes,
+                            selectedPillNumberIntoPillSheet: state.selectedTodayPillNumberIntoPillSheet(
+                              pageIndex: index,
+                            ),
+                            markSelected: (pageIndex, number) {
+                              analytics.logEvent(
+                                name: 'selected_today_number_initial_setting',
+                                parameters: {
+                                  'pill_number': number,
+                                  'page': pageIndex,
+                                },
+                              );
+                              store.setTodayPillNumber(
+                                pageIndex: pageIndex,
+                                pillNumberInPillSheet: number,
+                              );
+                            },
+                          ),
+                        ),
+                        const Spacer(),
+                      ],
+                    );
+                  }).toList(),
+                ),
+              ),
+              if (state.pillSheetTypes.length > 1) ...[
+                const SizedBox(height: 16),
+                DotsIndicator(
+                  controller: pageController,
+                  itemCount: state.pillSheetTypes.length,
+                  onDotTapped: (page) {
+                    pageController.animateToPage(
+                      page,
+                      duration: const Duration(milliseconds: 300),
+                      curve: Curves.easeInOut,
+                    );
+                  },
+                ),
+              ],
+            ],
+          );
+        },
+      ),
     );
   }
 }

@@ -50,71 +50,78 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                     horizontal: 44.5,
                   ),
                   color: AppColors.mat,
-                  child: Column(
-                    children: [
-                      const SizedBox(height: 1),
-                      Column(
-                        children: [
-                          Text(
-                            L.takingRecordFromNotification,
-                            style: const TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: TextColor.black,
-                              fontFamily: FontFamily.japanese,
-                            ),
-                          ),
-                          const SizedBox(height: 16),
-                        ],
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 24.5,
-                          right: 24.5,
-                          top: 24,
-                        ),
-                        child: Stack(
-                          clipBehavior: Clip.none,
-                          alignment: AlignmentDirectional.topEnd,
+                  alignment: Alignment.center,
+                  // 紹介画像は幅いっぱいに広がるため、iPhone Duo の内側ディスプレイ (約 950pt 幅) では
+                  // 画像が縦に伸びて下のボタンが画面外へ押し出される。既存の iPhone で最も広い幅 (iPhone 17 Pro Max の 440pt) を
+                  // 上限にして、既存の iPhone の表示を変えずに広い画面では中央に収める
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 440),
+                    child: Column(
+                      children: [
+                        const SizedBox(height: 1),
+                        Column(
                           children: [
-                            Image.asset(
-                              Platform.isIOS ? 'images/ios-quick-record.gif' : 'images/android-quick-record.gif',
-                            ),
-                            Positioned(
-                              right: -27,
-                              top: -27,
-                              child: Stack(
-                                alignment: AlignmentDirectional.center,
-                                children: [
-                                  SvgPicture.asset('images/yellow_spike.svg'),
-                                  Text(
-                                    L.popularFeatures,
-                                    style: const TextStyle(
-                                      color: TextColor.primaryDarkBlue,
-                                      fontSize: 10,
-                                      fontFamily: FontFamily.japanese,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                ],
+                            Text(
+                              L.takingRecordFromNotification,
+                              style: const TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: TextColor.black,
+                                fontFamily: FontFamily.japanese,
                               ),
                             ),
+                            const SizedBox(height: 16),
                           ],
                         ),
-                      ),
-                      const SizedBox(height: 12),
-                      Text(
-                        '${L.pressAndHoldNotificationToRecordPillTaking}\n${L.letsTryIt}',
-                        style: const TextStyle(
-                          color: TextColor.main,
-                          fontSize: 14,
-                          fontFamily: FontFamily.japanese,
-                          fontWeight: FontWeight.normal,
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 24.5,
+                            right: 24.5,
+                            top: 24,
+                          ),
+                          child: Stack(
+                            clipBehavior: Clip.none,
+                            alignment: AlignmentDirectional.topEnd,
+                            children: [
+                              Image.asset(
+                                Platform.isIOS ? 'images/ios-quick-record.gif' : 'images/android-quick-record.gif',
+                              ),
+                              Positioned(
+                                right: -27,
+                                top: -27,
+                                child: Stack(
+                                  alignment: AlignmentDirectional.center,
+                                  children: [
+                                    SvgPicture.asset('images/yellow_spike.svg'),
+                                    Text(
+                                      L.popularFeatures,
+                                      style: const TextStyle(
+                                        color: TextColor.primaryDarkBlue,
+                                        fontSize: 10,
+                                        fontFamily: FontFamily.japanese,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
+                        const SizedBox(height: 12),
+                        Text(
+                          '${L.pressAndHoldNotificationToRecordPillTaking}\n${L.letsTryIt}',
+                          style: const TextStyle(
+                            color: TextColor.main,
+                            fontSize: 14,
+                            fontFamily: FontFamily.japanese,
+                            fontWeight: FontWeight.normal,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(height: 16),

@@ -55,9 +55,23 @@ last_verified_at: 2026-10-09
 
 ## 実行ナレッジ
 
-### Xcode 27 では Pods の deployment target でビルドが落ちる（2026-10-04）
+### Xcode 27.1 でビルドする（2026-10-10）
 
-Xcode 27 は Pods の `IPHONEOS_DEPLOYMENT_TARGET < 15.0` をエラーにするため、環境変数 `DEVELOPER_DIR` に Xcode 26.5 の `Contents/Developer` を指定してビルドする。シミュレータのランタイムは iOS 27.0 のままでよい。
+- Pods の `IPHONEOS_DEPLOYMENT_TARGET < 15.0` は `ios/Podfile` の post_install が 15.0 に揃えるため、Xcode 26.5 を `DEVELOPER_DIR` に指定する回避は不要になった（2026-10-04 の記録を置き換え）
+- Simulator 向けのビルド（`flutter build ios --simulator`）は `FLUTTER_XCODE_ARCHS=arm64` を付ける。Flutter 3.41.9 は arm64 と x86_64 を 1 回の `lipo -verify_arch` で検証し、Xcode 27 の lipo が `-verify_arch requires exactly one input file` で拒否して `debug_unpack_ios` が失敗する（ https://github.com/flutter/flutter/issues/188461 。修正 PR #188625 は 2026-10-10 時点の stable に未収録）。`flutter run -d <UDID>` は対象 1 機種の arch だけをビルドするため指定は不要
+- アプリは UIScene ライフサイクルに移行済み（`ios/Runner/Info.plist` の `UIApplicationSceneManifest`、`AppDelegate.swift` の `didInitializeImplicitFlutterEngine`）。iOS 27 SDK でビルドしたアプリは UIScene 未対応だと起動直後に落ちる（ https://docs.flutter.dev/release/breaking-changes/uiscenedelegate ）
+
+### iPhone Duo（iOS 27.1）の外側・内側ディスプレイを確認する（2026-10-10）
+
+- 起動は `SIM_DEVICE_TYPE="iPhone Duo" SIMSLIM_EXCEPT=store,health,icloud sim-boot`（iOS 27.1 のランタイムは iPhone Duo だけが対応）。姿勢の切り替えと撮影は ios-simulator skill Phase 2「折りたたみ端末の外側・内側ディスプレイを切り替える」に従う（`duo-pose.sh set --udid <UDID> open|closed`、内側は `xcrun simctl io <UDID> screenshot --display=primary-1`）
+- 外側ディスプレイでは OS が画面右端の約 84pt の列を占有し、SafeArea の右 inset になる。`MediaQuery.of(context).size.width`（画面全体の幅）を使った幅の計算は SafeArea 内の実際の幅とずれるため、`LayoutBuilder` の幅を使う（2026-10-10 に直した箇所: ピルシートの PageView、カレンダーの帯、設定の「ピルシートグループの自動追加」、初期設定後のプレミアム紹介）
+- iOS 27.1 では `NSUserDefaults` に `NSNull` を書くと例外になる。`home_widget` の `saveWidgetData` に null を渡すと落ちるため、`lib/native/widget.dart` の `saveWidgetDataOrRemove` を経由する
+
+### 通知のアクション（「飲んだ」）を Simulator で確認する（2026-10-10）
+
+- 通知時刻を待たずに `xcrun simctl push <UDID> <ペイロードの JSON>` で通知を届ける。ペイロードは `{"Simulator Target Bundle": "com.mizuki.Ohashi.Pilll.dev", "aps": {"alert": {"title": "💊の時間です", "body": "..."}, "category": "PILL_REMINDER", "sound": "default"}}`。`category` を `PILL_REMINDER` にすると `AppDelegate.swift` の `configureNotificationActionableButtons` が登録した「飲んだ」のアクションが出る
+- 終了状態からの確認は `xcrun simctl terminate` で止めてから push し、ロック画面の通知を mobile-mcp で長押し（約 800ms）して「飲んだ」をタップする。結果は `xcrun simctl spawn <UDID> log show --last 2m --predicate 'process == "Runner"'` の `handle_recordPill_method_channel` と `quick_recorded` で確認する（アプリは前面に出ない）
+- Simulator では画面を開かない通知アクションでも `UIWindowScene` が接続されて画面の Flutter エンジンが初期化されるため、scene が接続されない時に起動する headless エンジン（`AppDelegate.swift` の `startHeadlessEngineIfNeeded`）の経路は Simulator では通らない
 
 ### mobile-mcp のタップがボトムシートの下に抜ける（2026-10-08）
 
@@ -141,7 +155,7 @@ Xcode 27 は Pods の `IPHONEOS_DEPLOYMENT_TARGET < 15.0` をエラーにする�
 
 - [x] **通知権限許可**: 初回起動時またはリマインダー設定時に通知許可ダイアログが表示され、許可するとリマインダー通知が有効になる
 - [ ] **服用リマインダー通知**: 設定した時刻にローカル通知（`flutter_local_notifications`）が届き、通知から服用記録ができる
-  - ⏭️ スキップ: 本ラウンドでは通知時刻まで待つ確認を行っていない（2026-07-06 にロック画面通知「💊の時間です」とアイコンバッジの到達を確認済み）。通知の登録処理 `lib/utils/local_notification.dart` は前回の確認の後に 1 日 2 回服用 (`pillTakenCount`) に対応する変更が入っているため、再確認が要る項目として残す。mobile-mcp では通知時刻のピッカーを狙った時刻に合わせられず（通知の追加は既定の時刻になる）、通知到達の確認を本ラウンドで実施できなかった。「通知から服用記録ができる」部分はクイックレコードがプレミアム限定で、無料ユーザー状態では標準の通知アクションだけが出るため未検証
+  - ⏭️ スキップ: 本ラウンドでは通知時刻まで待つ確認を行っていない（2026-07-06 にロック画面通知「💊の時間です」とアイコンバッジの到達を確認済み）。通知の登録処理 `lib/utils/local_notification.dart` は前回の確認の後に 1 日 2 回服用 (`pillTakenCount`) に対応する変更が入っているため、再確認が要る項目として残す。mobile-mcp では通知時刻のピッカーを狙った時刻に合わせられず（通知の追加は既定の時刻になる）、通知到達の確認を本ラウンドで実施できなかった。「通知から服用記録ができる」部分は 2026-10-10 に Simulator で `xcrun simctl push` を使って確認した (下のエビデンス)。通知時刻の到達と、scene が接続されない実機の終了状態からの通知アクション (headless の Flutter エンジンの経路) は未確認
 
 #### 動作確認
 <details>
@@ -171,6 +185,12 @@ Xcode 27 は Pods の `IPHONEOS_DEPLOYMENT_TARGET < 15.0` をエラーにする�
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/94f170f0-50b4-4e42-a751-4beeb43942f5.png" width="320">
 
 ⏭️ スキップ: 2026-10 のラウンドでは再確認していない（チェックリスト側を参照）
+
+**確認日: 2026-10-10 (通知から服用記録ができる部分のみ)**
+
+iPhone 17 Pro (iOS 27.0) の Simulator で dev ビルド (Xcode 27.1・UIScene 移行後) のアプリを `xcrun simctl terminate` で終了し、`xcrun simctl push` で `category` が `PILL_REMINDER` の通知を届けて、通知を長押しして出る「飲んだ」を押した。アプリを開かない手順 1 回と、押した直後にアプリを開く手順 3 回のいずれも、アプリが起動して Dart の `recordPill` が実行され (`log show` に `handle_recordPill_method_channel` → `quick_recorded`)、記録画面の今日の番号が服用済み (ボタンが「飲んでない」) になり、クラッシュレポートは増えなかった。Simulator では画面を開かない通知アクションでも `UIWindowScene` が接続されて画面の Flutter エンジンが先に初期化されるため、scene が接続されない時に起動する headless エンジンの経路は Simulator では通らない (実機でのみ確認できる)。push 用のペイロードは `{"Simulator Target Bundle": "<bundle id>", "aps": {"alert": {...}, "category": "PILL_REMINDER"}}` の JSON ファイル。
+
+<img alt="通知の「飲んだ」の後に開いた記録画面。今日の番号が服用済みで、ボタンが「飲んでない」になっている" src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/09/c0008350-9f8f-4730-81cc-481b59649bb3-quick-record-from-terminated.png" width="320">
 
 </details>
 
@@ -258,6 +278,31 @@ Xcode 27 は Pods の `IPHONEOS_DEPLOYMENT_TARGET < 15.0` をエラーにする�
 
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/20d3b099-ab9c-4d28-9e0e-63185c09b5ce-root-menstruation-recorded.png" width="320">
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/4904e22d-0462-4517-8a5c-bfbf450b2c57-root-menstruation-edited.png" width="320">
+
+</details>
+
+</details>
+
+## 5. iPhone Duo（外側・内側ディスプレイ）での主要画面の表示
+
+- [x] **外側・内側ディスプレイで主要画面が崩れない**: iPhone Duo（iOS 27.1）の Simulator で、閉じた姿勢（外側）・開いた姿勢（内側）・閉じ直した姿勢の順に主要画面（初期設定 1/3〜3/3・プレミアム紹介・記録・ピルシートの設定シート・生理・生理を記録シート・カレンダー・日記の投稿・設定・ピル番号の変更・プレミアムプランのシート・買い切りオファー）を撮り、見切れ・重なり・固定幅による偏り・サイドバー化が無い
+
+#### 動作確認
+<details>
+<summary>動作確認エビデンス</summary>
+
+### **外側・内側ディスプレイで主要画面が崩れない**
+
+<details><summary>動作確認スクショ</summary>
+
+**確認日: 2026-10-10**
+
+Xcode 27.1 (27A9275) でビルドした dev ビルド (commit 6a7e22d7fa) を iPhone Duo の Simulator (`pilll-issue-1899-iOS27.1`、ローカル sim-boot、`SIMSLIM_EXCEPT=store,health,icloud`) に入れ、上の全画面を 3 姿勢で撮った。崩れていた 4 種類 (ピルシートの PageView・カレンダーの帯・プレミアム紹介の画像・設定の自動追加の行) は同じ commit で直し、直した後の表示を確認した。全画面の画像と修正前後の比較は https://github.com/bannzai/Pilll/pull/1900 の表を参照。1 枚目は初期設定 2/3 の外側、2 枚目は同じ画面の内側、3 枚目はカレンダー 11 月の外側、4 枚目は同じ画面の内側。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/09/8a696da2-1c3e-44c3-aa62-bae0d7cdeec7-duo-after-initial-setting-2-outer.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/09/26a2e83e-fbe7-4173-bdb2-c3c7a6cfb880-duo-after-initial-setting-2-inner.png" width="480">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/09/e5956afc-db0e-4c03-9d18-bc0ff6cd291f-duo-after-calendar-november-outer.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/09/2a9b628f-7819-42e0-9d6c-518395ef3d47-duo-after-calendar-november-inner.png" width="480">
 
 </details>
 

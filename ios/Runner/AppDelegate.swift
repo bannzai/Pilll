@@ -7,17 +7,58 @@ import flutter_local_notifications
 import AlarmKit
 
 private var channel: FlutterMethodChannel?
+/// 画面を開かない通知アクション (アプリ終了状態からのクイックレコード) のために起動する Flutter エンジン。
+/// UIScene では画面を開かない起動で scene が接続されず、storyboard の FlutterViewController が作る暗黙のエンジンが
+/// 初期化されないため、必要になった時だけ起動し、画面のエンジンが初期化されて実行中の処理が無くなったら破棄する
+private var headlessEngine: FlutterEngine?
+/// headless エンジンで実行中の通知アクションの処理の数。実行中に破棄すると Dart 側の服用記録が途中で失われるため、0 になるまで破棄を待つ
+private var headlessEngineInFlightCount = 0
+/// 画面のエンジン (storyboard の FlutterViewController の暗黙のエンジン) が初期化済みか。初期化済みなら headless のエンジンは役目を終える
+private var implicitEngineInitialized = false
+/// アプリの UIApplicationDelegate。Flutter エンジンの初期化後の plugin とメソッドチャネルの登録、通知の設定を担う
 @main
-@objc class AppDelegate: FlutterAppDelegate {
+@objc class AppDelegate: FlutterAppDelegate, FlutterImplicitEngineDelegate {
 
-  override func application(
-    _ application: UIApplication,
-    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
-  ) -> Bool {
-    let viewController = window?.rootViewController as! FlutterViewController
+  /// UIScene ライフサイクル (iOS 27 SDK でビルドしたアプリに必須) では application(_:didFinishLaunchingWithOptions:) の時点で
+  /// window と FlutterViewController が無いため、Flutter エンジンの初期化後に plugin とメソッドチャネルを登録する。
+  /// 移行手順: https://docs.flutter.dev/release/breaking-changes/uiscenedelegate
+  func didInitializeImplicitFlutterEngine(_ engineBridge: FlutterImplicitEngineBridge) {
+    GeneratedPluginRegistrant.register(with: engineBridge.pluginRegistry)
+    implicitEngineInitialized = true
+    // 画面を開かない起動で先に headless のエンジンを起動していた場合は、Dart のアプリが 2 つ動き続けないよう画面のエンジンに一本化する
+    destroyHeadlessEngineIfIdle()
+    setUpMethodChannel(binaryMessenger: engineBridge.applicationRegistrar.messenger())
+  }
+
+  /// 画面のエンジンが初期化済みで、headless エンジンで実行中の処理が無ければ headless エンジンを破棄する。
+  /// 通知アクションの処理中は破棄せず、その処理の完了時に改めて呼ぶ
+  private func destroyHeadlessEngineIfIdle() {
+    guard implicitEngineInitialized, headlessEngineInFlightCount == 0, let engine = headlessEngine else {
+      return
+    }
+    engine.destroyContext()
+    headlessEngine = nil
+  }
+
+  /// 画面を開かない通知アクションの処理で、まだ Flutter エンジンが無ければ headless で起動してメソッドチャネルを用意する。
+  /// UIScene 移行前は storyboard の FlutterViewController が起動時に必ず作られ、終了状態からの通知アクションでも Dart 側の
+  /// recordPill が動いていた。その経路を保つためのもの
+  private func startHeadlessEngineIfNeeded() {
+    if channel != nil {
+      return
+    }
+    let engine = FlutterEngine(name: "headless")
+    engine.run()
+    GeneratedPluginRegistrant.register(with: engine)
+    headlessEngine = engine
+    setUpMethodChannel(binaryMessenger: engine.binaryMessenger)
+  }
+
+  /// Dart 側 (lib/native/channel.dart) とのメソッドチャネルを作り、ネイティブ側の処理を登録する
+  private func setUpMethodChannel(binaryMessenger: FlutterBinaryMessenger) {
     channel = FlutterMethodChannel(
       name: "method.channel.MizukiOhashi.Pilll",
-      binaryMessenger: viewController.binaryMessenger
+      binaryMessenger: binaryMessenger
     )
     // DO NOT OVERRIDE
     channel?.setMethodCallHandler(
@@ -115,6 +156,16 @@ private var channel: FlutterMethodChannel?
             // Fallback on earlier versions
           }
           completionHandler(["result": "success"])
+        case "removeWidgetData":
+          // home_widget の saveWidgetData に null を渡すと、iOS 27.1 では NSUserDefaults が NSNull を拒否して
+          // NSInvalidArgumentException でアプリが落ちるため、Widget 用の値の削除は plugin を経由せずここで行う (lib/native/widget.dart)
+          if let arguments = call.arguments as? [String: Any],
+             let key = arguments["key"] as? String {
+            UserDefaults(suiteName: Plist.appGroupKey)?.removeObject(forKey: key)
+            completionHandler(["result": "success"])
+          } else {
+            completionHandler(["result": "failure", "message": "Invalid arguments for removeWidgetData"])
+          }
         case "requestAppTrackingTransparency":
           requestAppTrackingTransparency(completion: completionHandler)
         case "presentShareToSNSForPremiumTrialReward":
@@ -242,7 +293,18 @@ private var channel: FlutterMethodChannel?
           return
         }
       })
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
+      // NOTE: [LOCAL_NOTIFICATION] Flutter local notificationの構造体をロギングしている
+      if let dic = UserDefaults.standard.object(forKey: "flutter_local_notifications_presentation_options") as? [String: Any] {
+        analytics(name: "fln_debug", parameters: dic)
+      }
+    }
+  }
 
+  override func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+  ) -> Bool {
     // Await established channel
     DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
       if #available(iOS 14.0, *) {
@@ -277,14 +339,6 @@ private var channel: FlutterMethodChannel?
     // NOTE: [LOCAL_NOTIFICATION] Flutter Local NotificationのExamplesではFlutterLocalNotificationsPlugin.setPluginRegistrantCallbackのあとにDelegateをセットしている
     // 通知が来ない問題があり再現しないため原因は不明だがこの順番を守る
     UNUserNotificationCenter.current().delegate = self
-
-    GeneratedPluginRegistrant.register(with: self)
-    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
-      // NOTE: [LOCAL_NOTIFICATION] Flutter local notificationの構造体をロギングしている
-      if let dic = UserDefaults.standard.object(forKey: "flutter_local_notifications_presentation_options") as? [String: Any] {
-        analytics(name: "fln_debug", parameters: dic)
-      }
-    }
 
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
@@ -376,14 +430,28 @@ extension AppDelegate {
         // 先にバッジをクリアしてしまう。後述の理由でQuickRecordが多少遅延するため操作に違和感が出る。この部分は楽観的UIとして更新してしまう
         UIApplication.shared.applicationIconBadgeNumber = 0
 
+        // UIScene では画面を開かないこのアクションで scene が接続されず画面のエンジンが起動しないため、終了状態からの起動では headless で起動する
+        startHeadlessEngineIfNeeded()
+        // 5 秒待つ間に画面のエンジンが初期化されて channel が差し替わっても、Dart の main を走らせ始めたエンジンへ送るため、
+        // 送り先のチャネルはここで確定させる。headless エンジンへ送る時は、処理が終わるまで破棄されないよう実行中として数える
+        let recordChannel = channel
+        let usesHeadlessEngine = headlessEngine != nil
+        if usesHeadlessEngine {
+          headlessEngineInFlightCount += 1
+        }
+
         // application(_:didFinishLaunchingWithOptions:)が終了してからFlutterのmainの開始は非同期的でFlutterのmainの完了までラグがある
         // 特にアプリのプロセスがKillされている状態では、先にuserNotificationCenter(_:didReceive:withCompletionHandler:)の処理が走り
         // Flutter側でのMethodChannelが確立される前にQuickRecordの呼び出しをおこなってしまう。この場合次にChanelが確立するまでFlutter側の処理の実行は遅延される。これは次のアプリの起動時まで遅延されるとほぼ同義になる
         // よって対処療法的ではあるが、5秒待つことでほぼ間違いなくmain(の中でもMethodChanelの確立までは)の処理はすべて終えているとしてここではdelayを設けている。
         // ちなみに通常は1秒前後あれば十分であるが念のためくらいの間を持たせている
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [self] in
-          channel?.invokeMethod("recordPill", arguments: nil, result: { result in
+          recordChannel?.invokeMethod("recordPill", arguments: nil, result: { result in
             end()
+            if usesHeadlessEngine {
+              headlessEngineInFlightCount -= 1
+              destroyHeadlessEngineIfIdle()
+            }
           })
         }
       default:

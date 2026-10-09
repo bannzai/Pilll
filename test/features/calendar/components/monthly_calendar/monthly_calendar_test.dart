@@ -64,7 +64,6 @@ void main() {
                   calendarMenstruationBandModels: const [],
                   calendarScheduledMenstruationBandModels: const [],
                   calendarNextPillSheetBandModels: [model],
-                  horizontalPadding: 0,
                   day: (p0, p1, p2) => Container(),
                 );
               },
@@ -126,7 +125,6 @@ void main() {
                   calendarMenstruationBandModels: const [],
                   calendarScheduledMenstruationBandModels: const [],
                   calendarNextPillSheetBandModels: [model],
-                  horizontalPadding: 0,
                   day: (p0, p1, p2) => Container(),
                 );
               },
@@ -175,7 +173,6 @@ void main() {
                   calendarMenstruationBandModels: const [],
                   calendarScheduledMenstruationBandModels: const [],
                   calendarNextPillSheetBandModels: [model],
-                  horizontalPadding: 0,
                   day: (p0, p1, p2) => Container(),
                 );
               },
@@ -214,7 +211,6 @@ void main() {
                   calendarMenstruationBandModels: const [],
                   calendarScheduledMenstruationBandModels: const [],
                   calendarNextPillSheetBandModels: [model],
-                  horizontalPadding: 0,
                   day: (p0, p1, p2) => Container(),
                 );
               },

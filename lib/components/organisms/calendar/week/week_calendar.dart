@@ -24,7 +24,6 @@ import 'package:pilll/utils/datetime/day.dart';
 
 class CalendarWeekLine extends HookConsumerWidget {
   final DateRange dateRange;
-  final double horizontalPadding;
   final Widget Function(BuildContext, Weekday, DateTime) day;
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
   final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
@@ -33,7 +32,6 @@ class CalendarWeekLine extends HookConsumerWidget {
   const CalendarWeekLine({
     super.key,
     required this.dateRange,
-    required this.horizontalPadding,
     required this.day,
     required this.calendarMenstruationBandModels,
     required this.calendarScheduledMenstruationBandModels,
@@ -41,67 +39,74 @@ class CalendarWeekLine extends HookConsumerWidget {
   });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    var tileWidth = (MediaQuery.of(context).size.width - horizontalPadding * 2) / Weekday.values.length;
-    return Stack(
-      children: [
-        Row(
-          children: Weekday.values.map((weekday) {
-            final date = _buildDate(weekday);
-            final isOutOfBoundsInLine = !dateRange.inRange(date);
-            if (isOutOfBoundsInLine) {
-              return Expanded(child: Container());
-            }
+    // 帯の位置と長さは日付タイルの幅の倍数で決める。タイルは Row の Expanded で週の行の幅を 7 等分したものなので、
+    // 画面幅 (MediaQuery) ではなく行自身の幅から求める。iPhone Duo では OS が占有する右端の列ぶん画面幅と行の幅が
+    // ずれるため、画面幅から求めると帯が右へずれて見切れる
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final tileWidth = constraints.maxWidth / Weekday.values.length;
+        return Stack(
+          children: [
+            Row(
+              children: Weekday.values.map((weekday) {
+                final date = _buildDate(weekday);
+                final isOutOfBoundsInLine = !dateRange.inRange(date);
+                if (isOutOfBoundsInLine) {
+                  return Expanded(child: Container());
+                }
 
-            return day(context, weekday, date);
-          }).toList(),
-        ),
-        ...calendarMenstruationBandModels.where(_contains).map(
-              (e) => _buildBand(
-                calendarBandModel: e,
-                bottomOffset: CalendarBandConst.height,
-                tileWidth: tileWidth,
-                bandBuilder: (_, width) => CalendarMenstruationBand(
-                  menstruation: e.menstruation,
-                  width: width,
-                  onTap: (menstruation) async {
-                    analytics.logEvent(name: 'tap_calendar_menstruation_band');
+                return day(context, weekday, date);
+              }).toList(),
+            ),
+            ...calendarMenstruationBandModels.where(_contains).map(
+                  (e) => _buildBand(
+                    calendarBandModel: e,
+                    bottomOffset: CalendarBandConst.height,
+                    tileWidth: tileWidth,
+                    bandBuilder: (_, width) => CalendarMenstruationBand(
+                      menstruation: e.menstruation,
+                      width: width,
+                      onTap: (menstruation) async {
+                        analytics.logEvent(name: 'tap_calendar_menstruation_band');
 
-                    showMenstruationEditSelectionSheet(
-                      context,
-                      MenstruationEditSelectionSheet(
-                        menstruation: e.menstruation,
-                      ),
-                    );
-                  },
+                        showMenstruationEditSelectionSheet(
+                          context,
+                          MenstruationEditSelectionSheet(
+                            menstruation: e.menstruation,
+                          ),
+                        );
+                      },
+                    ),
+                  ),
                 ),
-              ),
-            ),
-        ...calendarScheduledMenstruationBandModels.where(_contains).map(
-              (e) => _buildBand(
-                calendarBandModel: e,
-                bottomOffset: CalendarBandConst.height,
-                tileWidth: tileWidth,
-                bandBuilder: (_, width) => CalendarScheduledMenstruationBand(
-                  begin: e.begin,
-                  end: e.end,
-                  width: width,
+            ...calendarScheduledMenstruationBandModels.where(_contains).map(
+                  (e) => _buildBand(
+                    calendarBandModel: e,
+                    bottomOffset: CalendarBandConst.height,
+                    tileWidth: tileWidth,
+                    bandBuilder: (_, width) => CalendarScheduledMenstruationBand(
+                      begin: e.begin,
+                      end: e.end,
+                      width: width,
+                    ),
+                  ),
                 ),
-              ),
-            ),
-        ...calendarNextPillSheetBandModels.where(_contains).map(
-              (e) => _buildBand(
-                calendarBandModel: e,
-                bottomOffset: 0,
-                tileWidth: tileWidth,
-                bandBuilder: (isLineBreak, width) => CalendarNextPillSheetBand(
-                  begin: e.begin,
-                  end: e.end,
-                  isLineBreak: isLineBreak,
-                  width: width,
+            ...calendarNextPillSheetBandModels.where(_contains).map(
+                  (e) => _buildBand(
+                    calendarBandModel: e,
+                    bottomOffset: 0,
+                    tileWidth: tileWidth,
+                    bandBuilder: (isLineBreak, width) => CalendarNextPillSheetBand(
+                      begin: e.begin,
+                      end: e.end,
+                      isLineBreak: isLineBreak,
+                      width: width,
+                    ),
+                  ),
                 ),
-              ),
-            ),
-      ],
+          ],
+        );
+      },
     );
   }
 
