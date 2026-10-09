@@ -116,6 +116,16 @@ private var channel: FlutterMethodChannel?
             // Fallback on earlier versions
           }
           completionHandler(["result": "success"])
+        case "removeWidgetData":
+          // home_widget の saveWidgetData に null を渡すと、iOS 27.1 では NSUserDefaults が NSNull を拒否して
+          // NSInvalidArgumentException でアプリが落ちるため、Widget 用の値の削除は plugin を経由せずここで行う (lib/native/widget.dart)
+          if let arguments = call.arguments as? [String: Any],
+             let key = arguments["key"] as? String {
+            UserDefaults(suiteName: Plist.appGroupKey)?.removeObject(forKey: key)
+            completionHandler(["result": "success"])
+          } else {
+            completionHandler(["result": "failure", "message": "Invalid arguments for removeWidgetData"])
+          }
         case "requestAppTrackingTransparency":
           requestAppTrackingTransparency(completion: completionHandler)
         case "presentShareToSNSForPremiumTrialReward":
