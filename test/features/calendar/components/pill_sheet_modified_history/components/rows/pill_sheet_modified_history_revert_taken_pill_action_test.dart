@@ -177,32 +177,34 @@ void main() {
 
     group('表示モードが cyclicSequential で開始番号が前のグループの続き (28 錠の次の 29) の場合', () {
       // 「＋ ピルシートを追加」が前のグループの最後の番号 + 1 を開始番号にする経路 (add_pill_sheet_group/provider.dart)。
-      // 全て取り消した後の after の表示番号 (28) がピルシートの錠数 (28) と一致しても「29日目」と表示する
+      // 全て取り消した後の after の表示番号 (28) がピルシートの錠数 (28) と一致しても、1 つ前のピルシートの最後と誤認して null にしない
+
+      /// 開始番号 29 の cyclicSequential 表示のグループを、2020-09-01 開始の 28 錠 v1 ピルシート 1 枚 (指定した最終服用日) で作る
+      PillSheetGroup pillSheetGroup({required DateTime? lastTakenDate}) =>
+          PillSheetGroup(
+            id: 'group_id',
+            pillSheetIDs: ['pill_sheet_id_1'],
+            pillSheets: [
+              PillSheet.v1(
+                id: 'pill_sheet_id_1',
+                typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+                beginDate: DateTime(2020, 9, 1),
+                lastTakenDate: lastTakenDate,
+                createdAt: DateTime(2020, 9, 1),
+              ),
+            ],
+            createdAt: DateTime(2020, 9, 1),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
+            displayNumberSetting:
+                const PillSheetGroupDisplayNumberSetting(beginPillNumber: 29),
+          );
+
       testWidgets('v1 (1錠飲み) の最初の 1 錠の取り消し記録は「29日目」と表示される', (tester) async {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now())
             .thenReturn(DateTime.parse('2020-09-01'));
 
-        /// 開始番号 29 の cyclicSequential 表示のグループを、2020-09-01 開始の 28 錠 v1 ピルシート 1 枚 (指定した最終服用日) で作る
-        PillSheetGroup pillSheetGroup({required DateTime? lastTakenDate}) =>
-            PillSheetGroup(
-              id: 'group_id',
-              pillSheetIDs: ['pill_sheet_id_1'],
-              pillSheets: [
-                PillSheet.v1(
-                  id: 'pill_sheet_id_1',
-                  typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-                  beginDate: DateTime(2020, 9, 1),
-                  lastTakenDate: lastTakenDate,
-                  createdAt: DateTime(2020, 9, 1),
-                ),
-              ],
-              createdAt: DateTime(2020, 9, 1),
-              pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
-              displayNumberSetting:
-                  const PillSheetGroupDisplayNumberSetting(beginPillNumber: 29),
-            );
         final history = PillSheetModifiedHistory(
           id: 'revert_taken_pill_history_id',
           actionType: PillSheetModifiedActionType.revertTakenPill.name,
@@ -229,6 +231,43 @@ void main() {
         expect(tester.takeException(), isNull);
         expect(find.byType(PillNumber), findsOneWidget);
         expect(find.text('29日目'), findsOneWidget);
+      });
+
+      // 1〜5 錠目を服用した後に 1 錠目をタップしてまとめて取り消すと after が未服用に戻る。
+      // 未服用の after の表示番号 (28) が錠数と一致しても null にせず、取り消した範囲「33-29日目」を表示する
+      testWidgets('v1 (1錠飲み) の 5 錠をまとめて取り消した記録は「33-29日目」と表示される',
+          (tester) async {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse('2020-09-05'));
+
+        final history = PillSheetModifiedHistory(
+          id: 'revert_taken_pill_history_id',
+          actionType: PillSheetModifiedActionType.revertTakenPill.name,
+          estimatedEventCausingDate: DateTime(2020, 9, 5, 10),
+          createdAt: DateTime(2020, 9, 5, 10),
+          value: const PillSheetModifiedHistoryValue(
+              revertTakenPill: RevertTakenPillValue()),
+          beforePillSheetGroup:
+              pillSheetGroup(lastTakenDate: DateTime(2020, 9, 5)),
+          afterPillSheetGroup: pillSheetGroup(lastTakenDate: null),
+        );
+
+        await tester.pumpWidget(
+          MaterialApp(
+            home: Material(
+              child: PillSheetModifiedHistoryRevertTakenPillAction(
+                estimatedEventCausingDate: history.estimatedEventCausingDate,
+                history: history,
+              ),
+            ),
+          ),
+        );
+
+        expect(tester.takeException(), isNull);
+        expect(find.byType(PillNumber), findsOneWidget);
+        expect(find.text('33-29日目'), findsOneWidget);
       });
     });
   });
