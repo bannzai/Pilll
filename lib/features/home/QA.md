@@ -1,11 +1,13 @@
 ---
 feature: home
 verification: mobile-mcp
-last_verified_commit: 34b7e05eb0ed73e5ee0caa2a91a96147e2edaded
-last_verified_at: 2026-07-05
+last_verified_commit: 2e6665e4ad01d02e9fc88d72442a3000cd9818a5
+last_verified_at: 2026-10-08
 ---
 
 # home QA
+
+確認環境 (2026-10-05 と 2026-10-08 の記録): iPhone 16 Pro シミュレータ (iOS 27.0、ローカル sim-boot、`SIMSLIM_EXCEPT=store,health,icloud`) の dev ビルド (commit 75c754dd72 を Xcode 26.5 でビルド。`lib/features` は HEAD と同一)。
 
 ## 1. タブナビゲーション
 
@@ -23,9 +25,11 @@ last_verified_at: 2026-07-05
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-08**
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/34cf2da8-12e3-45f2-9b59-fe328761a037.png" width="320">
+再インストール後の初期設定完了直後と、アプリの再起動直後のどちらも「ピル」タブが選択された記録画面で開くことを確認。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/43fd250f-9341-4d4a-a229-a0654c97525a-root-home-after-reinstall.png" width="320">
 
 </details>
 
@@ -33,9 +37,11 @@ last_verified_at: 2026-07-05
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-08**
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/34cf2da8-12e3-45f2-9b59-fe328761a037.png" width="320">
+画面下部に「ピル」「生理」「カレンダー」「設定」の 4 タブがアイコン付きで表示されることを確認 (上と同じスクショ)。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/43fd250f-9341-4d4a-a229-a0654c97525a-root-home-after-reinstall.png" width="320">
 
 </details>
 
@@ -43,16 +49,13 @@ last_verified_at: 2026-07-05
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-05**
 
-生理タブ:
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/9b3be928-c8d1-4722-b558-defbc0cfe2a4.png" width="320">
+生理タブ (1 枚目)、カレンダータブ (2 枚目)、設定タブ (3 枚目) のタップでそれぞれの画面に切り替わることを確認。
 
-カレンダータブ:
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/12678651-f069-4434-b889-cb3dd97fe95e.png" width="320">
-
-設定タブ:
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/fb075844-455b-4042-a17e-1e65ad207099.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/01bd71f4-9047-434f-8763-9ea411a0e0a9-home-tab-menstruation.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/7fb71210-c6ac-404e-9798-5ab4d46de63f-calendar-top.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/9da73715-73e7-4cbc-a1b1-abfb1fe83786-settings-top.png" width="320">
 
 </details>
 
@@ -60,11 +63,11 @@ last_verified_at: 2026-07-05
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-05**
 
-各タブ画面のスクショ（上記「タブ切り替え」参照）で選択中タブのアイコンが有効色、非選択タブがグレー表示になっていることを確認。
+各タブ画面のスクショ (「タブ切り替え」参照) で、選択中のタブだけがプライマリカラー、他はグレーになっていることを確認。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/fb075844-455b-4042-a17e-1e65ad207099.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/01bd71f4-9047-434f-8763-9ea411a0e0a9-home-tab-menstruation.png" width="320">
 
 </details>
 
@@ -72,11 +75,11 @@ last_verified_at: 2026-07-05
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-05**
 
-ピルタブ表示中に左右スワイプを行い、スワイプ後も「ピル」タブのまま切り替わらないことを確認（下記はスワイプ後のスクショ）。
+ピルタブで左右にスワイプしてもタブは「ピル」のまま切り替わらないことを確認 (スワイプ後のスクショ)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/34cf2da8-12e3-45f2-9b59-fe328761a037.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/a3ed6ce9-f430-4830-b118-890ee91e1b79-home-swipe.png" width="320">
 
 </details>
 
@@ -86,32 +89,45 @@ last_verified_at: 2026-07-05
 
 ## 2. エッジケース
 
-- [x] **通知権限リクエスト**: 通知権限が未許可の端末でホーム画面を開くと、通知許可を求めるダイアログが表示される（許可済み端末では表示されないのが正常）
-- [x] **累計服薬記録に応じたストアレビュー促進・退会アンケート表示**: 服薬記録が一定回数を超えたユーザーには事前ストアレビューモーダルが、解約手続き中のユーザーには退会理由アンケート（WebView）が表示される。表示条件はユーザーの解約フラグやSharedPreferencesの記録回数といった特殊な状態が必要なため、Simulatorで通常操作のみでは再現が難しい。代替手段としてコードレビューで発火条件（`shouldAskCancelReason` / `totalCountOfActionForTakenPill`）を確認する
+- [x] **通知権限リクエスト**: 通知権限が未許可の端末では初回起動時 (初期設定フローの表示中) に通知許可を求めるダイアログが表示され、許可した後にホーム画面を開いても再表示されない（iOS では `lib/entrypoint.dart` の `localNotificationService.initialize()` が起動時に要求するため、`lib/features/home/page.dart` の `requestNotificationPermissions` の時点では許可・拒否が確定している。未許可のままホームを開いた時の要求は Android 向けの経路）
+- [ ] **累計服薬記録に応じたストアレビュー促進・退会アンケート表示**: 服薬記録が一定回数を超えたユーザーには事前ストアレビューモーダルが、解約手続き中のユーザーには退会理由アンケート（WebView）が表示される
+  - ⏭️ スキップ: 表示条件はユーザーの解約フラグ (`user.shouldAskCancelReason`。Firestore 側で解約手続き中に true になる) や SharedPreferences の記録回数 (`totalCountOfActionForTakenPill` が 10 より大きい) といった状態が必要で、シミュレータの通常操作では再現していない。`lib/features/home/page.dart` の発火条件をコードレビューで確認した。事前ストアレビューモーダルの描画は `test/features/store_review/pre_store_review_modal_test.dart` で担保している
+- [ ] **ピルシート終了時の課金転換ダイアログ**: ピルシートグループが終了 (アクティブなシートが無い) した無料ユーザーがホームを開くと、Remote Config の `endedPillSheetDialogVariant` に応じた課金転換ダイアログが終了グループにつき 1 回だけ表示される
+  - ⏭️ スキップ: ピルシートの全日数が経過した状態を再現できないため未実施 (理由と担保しているテストは `lib/features/ended_pill_sheet_dialog/QA.md`)
 
 #### 動作確認
 <details>
 <summary>動作確認エビデンス</summary>
 
-### **通知権限リクエスト**: 通知権限が未許可の端末でホーム画面を開くと、通知許可を求めるダイアログが表示される（許可済み端末では表示されないのが正常）
+### **通知権限リクエスト**: 通知権限が未許可の端末では初回起動時 (初期設定フローの表示中) に通知許可を求めるダイアログが表示され、許可した後にホーム画面を開いても再表示されない（iOS では `lib/entrypoint.dart` の `localNotificationService.initialize()` が起動時に要求するため、`lib/features/home/page.dart` の `requestNotificationPermissions` の時点では許可・拒否が確定している。未許可のままホームを開いた時の要求は Android 向けの経路）
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-08**
 
-未インストール状態から新規に用意したシミュレータでアプリを起動したところ、初期設定フロー中に通知許可ダイアログが表示された。コード上は `lib/entrypoint.dart` の `localNotificationService.initialize()`（`DarwinInitializationSettings` のデフォルト設定で権限リクエストが有効）がアプリ起動時に呼ばれることで表示されており、`lib/features/home/page.dart` の `requestNotificationPermissions` 呼び出し時点では既に許可・拒否が確定しているため再表示されない。既存の許可済み端末（`pilll-無名-iOS26.5`）でホーム画面を開いた際はダイアログが表示されないことも確認した（正常動作）。
+アプリをアンインストールしてから再インストールして起動すると、初期設定画面の上に「“Pilll-dev” は通知を送信します。よろしいですか?」の許可ダイアログが表示されることを確認。「許可」の後にホームを開いても再表示されない。未許可のままホームを開いた時の要求 (Android 向け) は Android 環境が無く未確認。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/c99c42c7-2241-4e6f-aa0d-1036e2d8c134.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/a3fe9c22-77ad-49c6-9cf7-3da13d73291e-root-notification-permission.png" width="320">
 
 </details>
 
-### **累計服薬記録に応じたストアレビュー促進・退会アンケート表示**: 服薬記録が一定回数を超えたユーザーには事前ストアレビューモーダルが、解約手続き中のユーザーには退会理由アンケート（WebView）が表示される。表示条件はユーザーの解約フラグやSharedPreferencesの記録回数といった特殊な状態が必要なため、Simulatorで通常操作のみでは再現が難しい。代替手段としてコードレビューで発火条件（`shouldAskCancelReason` / `totalCountOfActionForTakenPill`）を確認する
+### **累計服薬記録に応じたストアレビュー促進・退会アンケート表示**: 服薬記録が一定回数を超えたユーザーには事前ストアレビューモーダルが、解約手続き中のユーザーには退会理由アンケート（WebView）が表示される
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+（未実行）
 
-コードレビューにより確認（画面操作での再現はスキップ）。`lib/features/home/page.dart:105-137` にて、`user.shouldAskCancelReason`（`lib/entity/user.codegen.dart`、デフォルト `false`、Firestore側で解約手続き中に `true` へ更新）が `true` の場合は退会理由アンケートのWebViewを表示し完了後 `ChurnSurveyCompleteDialog` を表示、`false` かつ `SharedPreferences` の `totalCountOfActionForTakenPill`（`IntKey`）が10より大きく `isAlreadyAnsweredPreStoreReviewModal` が未設定かつ日本語ロケールの場合は `PreStoreReviewModal` を表示するロジックであることを確認し、既存記載の発火条件と一致することを確認した。
+⏭️ スキップ: チェックリスト側に記載の理由 (発火条件の状態を再現していない) により未実施
+
+</details>
+
+### **ピルシート終了時の課金転換ダイアログ**: ピルシートグループが終了 (アクティブなシートが無い) した無料ユーザーがホームを開くと、Remote Config の `endedPillSheetDialogVariant` に応じた課金転換ダイアログが終了グループにつき 1 回だけ表示される
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
+
+⏭️ スキップ: シート終了状態を再現できないため未実施 (`lib/features/ended_pill_sheet_dialog/QA.md` を参照)
 
 </details>
 
