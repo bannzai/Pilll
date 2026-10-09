@@ -271,6 +271,31 @@ last_verified_at: 2026-10-09
 
 </details>
 
+## 5. iPhone Duo（外側・内側ディスプレイ）での主要画面の表示
+
+- [x] **外側・内側ディスプレイで主要画面が崩れない**: iPhone Duo（iOS 27.1）の Simulator で、閉じた姿勢（外側）・開いた姿勢（内側）・閉じ直した姿勢の順に主要画面（初期設定 1/3〜3/3・プレミアム紹介・記録・ピルシートの設定シート・生理・生理を記録シート・カレンダー・日記の投稿・設定・ピル番号の変更・プレミアムプランのシート・買い切りオファー）を撮り、見切れ・重なり・固定幅による偏り・サイドバー化が無い
+
+#### 動作確認
+<details>
+<summary>動作確認エビデンス</summary>
+
+### **外側・内側ディスプレイで主要画面が崩れない**
+
+<details><summary>動作確認スクショ</summary>
+
+**確認日: 2026-10-10**
+
+Xcode 27.1 (27A9275) でビルドした dev ビルド (commit 6a7e22d7fa) を iPhone Duo の Simulator (`pilll-issue-1899-iOS27.1`、ローカル sim-boot、`SIMSLIM_EXCEPT=store,health,icloud`) に入れ、上の全画面を 3 姿勢で撮った。崩れていた 4 種類 (ピルシートの PageView・カレンダーの帯・プレミアム紹介の画像・設定の自動追加の行) は同じ commit で直し、直した後の表示を確認した。全画面の画像と修正前後の比較は https://github.com/bannzai/Pilll/pull/1900 の表を参照。1 枚目は初期設定 2/3 の外側、2 枚目は同じ画面の内側、3 枚目はカレンダー 11 月の外側、4 枚目は同じ画面の内側。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/09/8a696da2-1c3e-44c3-aa62-bae0d7cdeec7-duo-after-initial-setting-2-outer.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/09/26a2e83e-fbe7-4173-bdb2-c3c7a6cfb880-duo-after-initial-setting-2-inner.png" width="480">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/09/e5956afc-db0e-4c03-9d18-bc0ff6cd291f-duo-after-calendar-november-outer.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/09/2a9b628f-7819-42e0-9d6c-518395ef3d47-duo-after-calendar-november-inner.png" width="480">
+
+</details>
+
+</details>
+
 ## 機能別 QA.md
 
 重要・高頻度な機能から順に記載する。
