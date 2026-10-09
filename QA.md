@@ -67,6 +67,12 @@ last_verified_at: 2026-10-09
 - 外側ディスプレイでは OS が画面右端の約 84pt の列を占有し、SafeArea の右 inset になる。`MediaQuery.of(context).size.width`（画面全体の幅）を使った幅の計算は SafeArea 内の実際の幅とずれるため、`LayoutBuilder` の幅を使う（2026-10-10 に直した箇所: ピルシートの PageView、カレンダーの帯、設定の「ピルシートグループの自動追加」、初期設定後のプレミアム紹介）
 - iOS 27.1 では `NSUserDefaults` に `NSNull` を書くと例外になる。`home_widget` の `saveWidgetData` に null を渡すと落ちるため、`lib/native/widget.dart` の `saveWidgetDataOrRemove` を経由する
 
+### 通知のアクション（「飲んだ」）を Simulator で確認する（2026-10-10）
+
+- 通知時刻を待たずに `xcrun simctl push <UDID> <ペイロードの JSON>` で通知を届ける。ペイロードは `{"Simulator Target Bundle": "com.mizuki.Ohashi.Pilll.dev", "aps": {"alert": {"title": "💊の時間です", "body": "..."}, "category": "PILL_REMINDER", "sound": "default"}}`。`category` を `PILL_REMINDER` にすると `AppDelegate.swift` の `configureNotificationActionableButtons` が登録した「飲んだ」のアクションが出る
+- 終了状態からの確認は `xcrun simctl terminate` で止めてから push し、ロック画面の通知を mobile-mcp で長押し（約 800ms）して「飲んだ」をタップする。結果は `xcrun simctl spawn <UDID> log show --last 2m --predicate 'process == "Runner"'` の `handle_recordPill_method_channel` と `quick_recorded` で確認する（アプリは前面に出ない）
+- Simulator では画面を開かない通知アクションでも `UIWindowScene` が接続されて画面の Flutter エンジンが初期化されるため、scene が接続されない時に起動する headless エンジン（`AppDelegate.swift` の `startHeadlessEngineIfNeeded`）の経路は Simulator では通らない
+
 ### mobile-mcp のタップがボトムシートの下に抜ける（2026-10-08）
 
 記録画面のピルシート設定シート（ボトムシート）を開いたまま別の要素の座標をタップすると、シートの下の要素に当たることがある。シートを閉じる時はスクリム部分（画面上部）をタップし、`mobile_list_elements_on_screen` でシートの要素が消えたことを確認してから次の操作に進む。
@@ -149,7 +155,7 @@ last_verified_at: 2026-10-09
 
 - [x] **通知権限許可**: 初回起動時またはリマインダー設定時に通知許可ダイアログが表示され、許可するとリマインダー通知が有効になる
 - [ ] **服用リマインダー通知**: 設定した時刻にローカル通知（`flutter_local_notifications`）が届き、通知から服用記録ができる
-  - ⏭️ スキップ: 本ラウンドでは通知時刻まで待つ確認を行っていない（2026-07-06 にロック画面通知「💊の時間です」とアイコンバッジの到達を確認済み）。通知の登録処理 `lib/utils/local_notification.dart` は前回の確認の後に 1 日 2 回服用 (`pillTakenCount`) に対応する変更が入っているため、再確認が要る項目として残す。mobile-mcp では通知時刻のピッカーを狙った時刻に合わせられず（通知の追加は既定の時刻になる）、通知到達の確認を本ラウンドで実施できなかった。「通知から服用記録ができる」部分はクイックレコードがプレミアム限定で、無料ユーザー状態では標準の通知アクションだけが出るため未検証
+  - ⏭️ スキップ: 本ラウンドでは通知時刻まで待つ確認を行っていない（2026-07-06 にロック画面通知「💊の時間です」とアイコンバッジの到達を確認済み）。通知の登録処理 `lib/utils/local_notification.dart` は前回の確認の後に 1 日 2 回服用 (`pillTakenCount`) に対応する変更が入っているため、再確認が要る項目として残す。mobile-mcp では通知時刻のピッカーを狙った時刻に合わせられず（通知の追加は既定の時刻になる）、通知到達の確認を本ラウンドで実施できなかった。「通知から服用記録ができる」部分は 2026-10-10 に Simulator で `xcrun simctl push` を使って確認した (下のエビデンス)。通知時刻の到達と、scene が接続されない実機の終了状態からの通知アクション (headless の Flutter エンジンの経路) は未確認
 
 #### 動作確認
 <details>
@@ -179,6 +185,12 @@ last_verified_at: 2026-10-09
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/94f170f0-50b4-4e42-a751-4beeb43942f5.png" width="320">
 
 ⏭️ スキップ: 2026-10 のラウンドでは再確認していない（チェックリスト側を参照）
+
+**確認日: 2026-10-10 (通知から服用記録ができる部分のみ)**
+
+iPhone 17 Pro (iOS 27.0) の Simulator で dev ビルド (Xcode 27.1・UIScene 移行後) のアプリを `xcrun simctl terminate` で終了し、`xcrun simctl push` で `category` が `PILL_REMINDER` の通知を届けて、通知を長押しして出る「飲んだ」を押した。アプリを開かない手順 1 回と、押した直後にアプリを開く手順 3 回のいずれも、アプリが起動して Dart の `recordPill` が実行され (`log show` に `handle_recordPill_method_channel` → `quick_recorded`)、記録画面の今日の番号が服用済み (ボタンが「飲んでない」) になり、クラッシュレポートは増えなかった。Simulator では画面を開かない通知アクションでも `UIWindowScene` が接続されて画面の Flutter エンジンが先に初期化されるため、scene が接続されない時に起動する headless エンジンの経路は Simulator では通らない (実機でのみ確認できる)。push 用のペイロードは `{"Simulator Target Bundle": "<bundle id>", "aps": {"alert": {...}, "category": "PILL_REMINDER"}}` の JSON ファイル。
+
+<img alt="通知の「飲んだ」の後に開いた記録画面。今日の番号が服用済みで、ボタンが「飲んでない」になっている" src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/09/c0008350-9f8f-4730-81cc-481b59649bb3-quick-record-from-terminated.png" width="320">
 
 </details>
 
