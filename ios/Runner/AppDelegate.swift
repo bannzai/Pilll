@@ -7,6 +7,10 @@ import flutter_local_notifications
 import AlarmKit
 
 private var channel: FlutterMethodChannel?
+/// 画面を開かない通知アクション (アプリ終了状態からのクイックレコード) のために起動する Flutter エンジン。
+/// UIScene では画面を開かない起動で scene が接続されず、storyboard の FlutterViewController が作る暗黙のエンジンが
+/// 初期化されないため、必要になった時だけ起動し、画面のエンジンが初期化されたら破棄する
+private var headlessEngine: FlutterEngine?
 /// アプリの UIApplicationDelegate。Flutter エンジンの初期化後の plugin とメソッドチャネルの登録、通知の設定を担う
 @main
 @objc class AppDelegate: FlutterAppDelegate, FlutterImplicitEngineDelegate {
@@ -16,9 +20,31 @@ private var channel: FlutterMethodChannel?
   /// 移行手順: https://docs.flutter.dev/release/breaking-changes/uiscenedelegate
   func didInitializeImplicitFlutterEngine(_ engineBridge: FlutterImplicitEngineBridge) {
     GeneratedPluginRegistrant.register(with: engineBridge.pluginRegistry)
+    // 画面を開かない起動で先に headless のエンジンを起動していた場合は、Dart のアプリが 2 つ動かないよう画面のエンジンに一本化する
+    headlessEngine?.destroyContext()
+    headlessEngine = nil
+    setUpMethodChannel(binaryMessenger: engineBridge.applicationRegistrar.messenger())
+  }
+
+  /// 画面を開かない通知アクションの処理で、まだ Flutter エンジンが無ければ headless で起動してメソッドチャネルを用意する。
+  /// UIScene 移行前は storyboard の FlutterViewController が起動時に必ず作られ、終了状態からの通知アクションでも Dart 側の
+  /// recordPill が動いていた。その経路を保つためのもの
+  private func startHeadlessEngineIfNeeded() {
+    if channel != nil {
+      return
+    }
+    let engine = FlutterEngine(name: "headless")
+    engine.run()
+    GeneratedPluginRegistrant.register(with: engine)
+    headlessEngine = engine
+    setUpMethodChannel(binaryMessenger: engine.binaryMessenger)
+  }
+
+  /// Dart 側 (lib/native/channel.dart) とのメソッドチャネルを作り、ネイティブ側の処理を登録する
+  private func setUpMethodChannel(binaryMessenger: FlutterBinaryMessenger) {
     channel = FlutterMethodChannel(
       name: "method.channel.MizukiOhashi.Pilll",
-      binaryMessenger: engineBridge.applicationRegistrar.messenger()
+      binaryMessenger: binaryMessenger
     )
     // DO NOT OVERRIDE
     channel?.setMethodCallHandler(
@@ -389,6 +415,9 @@ extension AppDelegate {
       case "RECORD_PILL":
         // 先にバッジをクリアしてしまう。後述の理由でQuickRecordが多少遅延するため操作に違和感が出る。この部分は楽観的UIとして更新してしまう
         UIApplication.shared.applicationIconBadgeNumber = 0
+
+        // UIScene では画面を開かないこのアクションで scene が接続されず画面のエンジンが起動しないため、終了状態からの起動では headless で起動する
+        startHeadlessEngineIfNeeded()
 
         // application(_:didFinishLaunchingWithOptions:)が終了してからFlutterのmainの開始は非同期的でFlutterのmainの完了までラグがある
         // 特にアプリのプロセスがKillされている状態では、先にuserNotificationCenter(_:didReceive:withCompletionHandler:)の処理が走り
