@@ -52,6 +52,12 @@ post_install do |installer|
       if config.build_settings['WRAPPER_EXTENSION'] == 'bundle'
         config.build_settings['DEVELOPMENT_TEAM'] = 'TQPN82UBBY'
       end
+      # Xcode 27 は iOS 15.0 未満の deployment target を "Target Integrity" のエラーにしてビルドを止める
+      # (podspec が 9.0〜13.0 を宣言する Pod が 50 件あり、Xcode 27.1 で実測)。
+      # Podfile の platform (15.0) に揃えて Pod 側の古い宣言を上書きする
+      if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 15.0
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+      end
     end
   end
 end
