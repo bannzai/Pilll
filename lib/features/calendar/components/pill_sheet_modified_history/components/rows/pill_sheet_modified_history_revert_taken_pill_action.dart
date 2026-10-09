@@ -38,7 +38,9 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
       pillNumberInPillSheet: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber,
     );
     // そのピルシートの服用番号が最後の場合は、1つ前のピルシートと認識する。その場合は表記を省略するためにnullにする
-    if (afterLastTakenPillNumber == afterPillSheetGroup.activePillSheetWhen(estimatedEventCausingDate)?.pillSheetType.totalCount) {
+    // 未服用 (lastTakenOrZeroPillNumber が 0) の after は、開始番号が前のグループの続き (28 錠の次の 29 等) だと表示番号 (28) が錠数と一致するが、1 つ前のピルシートの最後ではないため対象にしない
+    if (afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber != 0 &&
+        afterLastTakenPillNumber == afterPillSheetGroup.activePillSheetWhen(estimatedEventCausingDate)?.pillSheetType.totalCount) {
       afterLastTakenPillNumber = null;
     }
 

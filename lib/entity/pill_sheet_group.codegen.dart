@@ -306,10 +306,26 @@ extension PillSheetGroupPillSheetModifiedHistoryDomain on PillSheetGroup {
     /// ピルシート内の番号
     required int pillNumberInPillSheet,
   }) {
-    // pillNumberInPillSheet: lastTakenOrZeroPillNumberが0の場合に0を返す
-    // PillSheetModifiedHistoryPillNumberOrDate.taken で beforeLastTakenPillNumber にプラス1しており、整合性を保つため
+    // pillNumberInPillSheet が 0 (lastTakenOrZeroPillNumber の未服用) の時は、そのピルシートの最初の表示番号の 1 つ前を返す。
+    // PillSheetModifiedHistoryPillNumberOrDate.taken / revert が before + 1 / after + 1 を服用記録の先頭の番号にするため、
+    // 開始番号 (displayNumberSetting.beginPillNumber) が 1 より大きい sequential / cyclicSequential でも最初の服用記録が「1-N」ではなく「N」になる
     if (pillNumberInPillSheet == 0) {
-      return 0;
+      switch (pillSheetAppearanceMode) {
+        case PillSheetAppearanceMode.number:
+        case PillSheetAppearanceMode.date:
+          return 0;
+        case PillSheetAppearanceMode.sequential:
+        case PillSheetAppearanceMode.cyclicSequential:
+          // ピルシートが無いグループには最初の表示番号が存在しないため、_cycleSequentialPillSheetNumber の空リストの参照 (RangeError) を避けて 0 を返す
+          if (pillSheets.isEmpty) {
+            return 0;
+          }
+          return _cycleSequentialPillSheetNumber(
+                pageIndex: pageIndex,
+                pillNumberInPillSheet: 1,
+              ) -
+              1;
+      }
     }
 
     switch (pillSheetAppearanceMode) {

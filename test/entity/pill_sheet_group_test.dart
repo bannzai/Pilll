@@ -12900,6 +12900,116 @@ void main() {
       }
     });
 
+    group("pillNumberInPillSheet == 0 で displayNumberSetting.beginPillNumber が 10 の場合", () {
+      // 未服用の番号は「最初の表示番号の 1 つ前」なので、開始番号を使う sequential / cyclicSequential では 9、物理番号を使う number / date では 0 になる
+
+      /// 開始番号 10 で未服用の 28 錠 v1 ピルシート 1 枚のグループを、指定した表示モードで作る
+      PillSheetGroup pillSheetGroup({required PillSheetAppearanceMode mode}) {
+        const sheetType = PillSheetType.pillsheet_28_0;
+        return PillSheetGroup(
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [
+            PillSheet.v1(
+              id: firestoreIDGenerator(),
+              groupIndex: 0,
+              beginDate: DateTime.parse("2020-09-01"),
+              lastTakenDate: null,
+              createdAt: now(),
+              typeInfo: PillSheetTypeInfo(
+                dosingPeriod: sheetType.dosingPeriod,
+                name: sheetType.fullName,
+                totalCount: sheetType.totalCount,
+                pillSheetTypeReferencePath: sheetType.rawPath,
+              ),
+            ),
+          ],
+          createdAt: now(),
+          pillSheetAppearanceMode: mode,
+          displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 10),
+        );
+      }
+
+      for (final mode in [PillSheetAppearanceMode.sequential, PillSheetAppearanceMode.cyclicSequential]) {
+        test("${mode.name} モードで開始番号の 1 つ前の 9 を返す", () {
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-14"));
+
+          expect(
+            pillSheetGroup(mode: mode).pillNumberWithoutDateOrZero(
+              pillSheetAppearanceMode: mode,
+              pageIndex: 0,
+              pillNumberInPillSheet: 0,
+            ),
+            9,
+          );
+        });
+      }
+
+      for (final mode in [PillSheetAppearanceMode.number, PillSheetAppearanceMode.date]) {
+        test("${mode.name} モードでは開始番号に関わらず 0 を返す", () {
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-14"));
+
+          expect(
+            pillSheetGroup(mode: mode).pillNumberWithoutDateOrZero(
+              pillSheetAppearanceMode: mode,
+              pageIndex: 0,
+              pillNumberInPillSheet: 0,
+            ),
+            0,
+          );
+        });
+      }
+
+      test("ピルシートが空のグループでは sequential モードでも例外を投げずに 0 を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(
+          mockTodayRepository.now(),
+        ).thenReturn(DateTime.parse("2020-09-14"));
+
+        expect(
+          PillSheetGroup(
+            pillSheetIDs: [],
+            pillSheets: [],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+            displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 10),
+          ).pillNumberWithoutDateOrZero(
+            pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+            pageIndex: 0,
+            pillNumberInPillSheet: 0,
+          ),
+          0,
+        );
+      });
+
+      test("beginPillNumber が 1 の場合は sequential モードでも 0 を返す (開始番号 1 のグループの表示は変わらない)", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(
+          mockTodayRepository.now(),
+        ).thenReturn(DateTime.parse("2020-09-14"));
+
+        expect(
+          pillSheetGroup(mode: PillSheetAppearanceMode.sequential)
+              .copyWith(displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 1))
+              .pillNumberWithoutDateOrZero(
+            pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+            pageIndex: 0,
+            pillNumberInPillSheet: 0,
+          ),
+          0,
+        );
+      });
+    });
+
     group("PillSheetAppearanceMode.number の場合", () {
       group("ピルシートが1つの場合", () {
         test("pillNumberInPillSheet をそのまま返す", () {
