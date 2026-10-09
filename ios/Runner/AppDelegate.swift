@@ -9,8 +9,12 @@ import AlarmKit
 private var channel: FlutterMethodChannel?
 /// 画面を開かない通知アクション (アプリ終了状態からのクイックレコード) のために起動する Flutter エンジン。
 /// UIScene では画面を開かない起動で scene が接続されず、storyboard の FlutterViewController が作る暗黙のエンジンが
-/// 初期化されないため、必要になった時だけ起動し、画面のエンジンが初期化されたら破棄する
+/// 初期化されないため、必要になった時だけ起動し、画面のエンジンが初期化されて実行中の処理が無くなったら破棄する
 private var headlessEngine: FlutterEngine?
+/// headless エンジンで実行中の通知アクションの処理の数。実行中に破棄すると Dart 側の服用記録が途中で失われるため、0 になるまで破棄を待つ
+private var headlessEngineInFlightCount = 0
+/// 画面のエンジン (storyboard の FlutterViewController の暗黙のエンジン) が初期化済みか。初期化済みなら headless のエンジンは役目を終える
+private var implicitEngineInitialized = false
 /// アプリの UIApplicationDelegate。Flutter エンジンの初期化後の plugin とメソッドチャネルの登録、通知の設定を担う
 @main
 @objc class AppDelegate: FlutterAppDelegate, FlutterImplicitEngineDelegate {
@@ -20,10 +24,20 @@ private var headlessEngine: FlutterEngine?
   /// 移行手順: https://docs.flutter.dev/release/breaking-changes/uiscenedelegate
   func didInitializeImplicitFlutterEngine(_ engineBridge: FlutterImplicitEngineBridge) {
     GeneratedPluginRegistrant.register(with: engineBridge.pluginRegistry)
-    // 画面を開かない起動で先に headless のエンジンを起動していた場合は、Dart のアプリが 2 つ動かないよう画面のエンジンに一本化する
-    headlessEngine?.destroyContext()
-    headlessEngine = nil
+    implicitEngineInitialized = true
+    // 画面を開かない起動で先に headless のエンジンを起動していた場合は、Dart のアプリが 2 つ動き続けないよう画面のエンジンに一本化する
+    destroyHeadlessEngineIfIdle()
     setUpMethodChannel(binaryMessenger: engineBridge.applicationRegistrar.messenger())
+  }
+
+  /// 画面のエンジンが初期化済みで、headless エンジンで実行中の処理が無ければ headless エンジンを破棄する。
+  /// 通知アクションの処理中は破棄せず、その処理の完了時に改めて呼ぶ
+  private func destroyHeadlessEngineIfIdle() {
+    guard implicitEngineInitialized, headlessEngineInFlightCount == 0, let engine = headlessEngine else {
+      return
+    }
+    engine.destroyContext()
+    headlessEngine = nil
   }
 
   /// 画面を開かない通知アクションの処理で、まだ Flutter エンジンが無ければ headless で起動してメソッドチャネルを用意する。
@@ -418,6 +432,13 @@ extension AppDelegate {
 
         // UIScene では画面を開かないこのアクションで scene が接続されず画面のエンジンが起動しないため、終了状態からの起動では headless で起動する
         startHeadlessEngineIfNeeded()
+        // 5 秒待つ間に画面のエンジンが初期化されて channel が差し替わっても、Dart の main を走らせ始めたエンジンへ送るため、
+        // 送り先のチャネルはここで確定させる。headless エンジンへ送る時は、処理が終わるまで破棄されないよう実行中として数える
+        let recordChannel = channel
+        let usesHeadlessEngine = headlessEngine != nil
+        if usesHeadlessEngine {
+          headlessEngineInFlightCount += 1
+        }
 
         // application(_:didFinishLaunchingWithOptions:)が終了してからFlutterのmainの開始は非同期的でFlutterのmainの完了までラグがある
         // 特にアプリのプロセスがKillされている状態では、先にuserNotificationCenter(_:didReceive:withCompletionHandler:)の処理が走り
@@ -425,8 +446,12 @@ extension AppDelegate {
         // よって対処療法的ではあるが、5秒待つことでほぼ間違いなくmain(の中でもMethodChanelの確立までは)の処理はすべて終えているとしてここではdelayを設けている。
         // ちなみに通常は1秒前後あれば十分であるが念のためくらいの間を持たせている
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [self] in
-          channel?.invokeMethod("recordPill", arguments: nil, result: { result in
+          recordChannel?.invokeMethod("recordPill", arguments: nil, result: { result in
             end()
+            if usesHeadlessEngine {
+              headlessEngineInFlightCount -= 1
+              destroyHeadlessEngineIfIdle()
+            }
           })
         }
       default:
