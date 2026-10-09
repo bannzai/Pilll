@@ -1,8 +1,8 @@
 ---
 feature: lifetime_offer
 verification: mobile-mcp
-last_verified_commit: 1abe9113bb377e9d90c42a10ee54feeae9ca058c
-last_verified_at: 2026-10-08
+last_verified_commit: e7d4082f35056070b0425056efd6b085b115c752
+last_verified_at: 2026-10-09
 ---
 
 # lifetime_offer QA
@@ -22,8 +22,9 @@ last_verified_at: 2026-10-08
   - 自動化: auto（.maestro/flows/lifetime_offer/lifetime_offer_paywall_variants.yaml）
 - [x] **月額 300 円オファー画面**: 開発者オプションで「月額300円プラン」を選ぶと、「月額プランのご案内です」の文言と月額プランの価格 ($2.99・1ヶ月ごとの自動更新) が表示され、買い切りの価格は表示されない
   - 自動化: manual（開発者オプションのダイアログ選択は座標指定が要り flow 化していない）
-- [x] **閉じる**: 左上の × をタップすると画面が閉じて設定画面に戻る
+- [ ] **閉じる**: 左上の × をタップすると画面が閉じて設定画面に戻る
   - 自動化: manual（同上）
+  - ⏭️ スキップ: 2026-10-08 に × をタップして次の操作に進んだが、閉じた後の設定画面のスクリーンショットを撮っておらず、証跡が無いため未確認として残す
 
 #### 動作確認
 <details>
@@ -57,11 +58,9 @@ last_verified_at: 2026-10-08
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-10-08**
+（未実行）
 
-× のタップで画面が閉じ、開発者オプションの行が見える設定画面に戻ることを確認 (戻った先は「買い切りオファー Paywall」行のスクショと同じ画面)。
-
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/0823a042-ff97-41d7-a3db-4ad4a3d63ece-settings-lifetime-row.png" width="320">
+⏭️ スキップ: 閉じた後のスクリーンショットが無いため未確認 (理由はチェックリスト側を参照)
 
 </details>
 
@@ -77,6 +76,9 @@ last_verified_at: 2026-10-08
   - ⏭️ スキップ: 同上。`test/features/root/resolver/show_lifetime_offer_on_app_launch_test.dart` で担保している
 - [ ] **購入**: 「期間限定の価格で購入する」で StoreKit の購入フローが始まり、完了するとプレミアムになる
   - ⏭️ スキップ: Sandbox テスターアカウント (Apple Account の認証情報) が無く購入を完了できない。購入ボタンからサインインダイアログまでの遷移は premium_introduction の「購入ボタンタップでローディング表示」と同じ `Purchases.purchase` の経路
+    - 起動条件: ローカル sim-boot。`SIMSLIM_EXCEPT=store,health,icloud` / `SLIM_STATUS=ALREADY_SLIM` (2026-10-08)
+    - デーモン: icloud カテゴリを有効にした状態で、premium_introduction の月額プランは OS の「Apple Account にサインイン」ダイアログに到達しており、デーモン不足ではなく認証情報の不足が原因 (`launchctl list` の出力は取っていない)
+    - 試した手順: 本画面の「期間限定の価格で購入する」は未タップ (同じ経路の premium_introduction で止まる箇所が分かっているため)。premium_introduction で月額プラン → サインインダイアログ → 認証情報が無く「キャンセル」で中断
 
 #### 動作確認
 <details>

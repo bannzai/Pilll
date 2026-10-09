@@ -1,8 +1,8 @@
 ---
 feature: premium_introduction
 verification: mobile-mcp
-last_verified_commit: 1abe9113bb377e9d90c42a10ee54feeae9ca058c
-last_verified_at: 2026-10-08
+last_verified_commit: e7d4082f35056070b0425056efd6b085b115c752
+last_verified_at: 2026-10-09
 ---
 
 # premium_introduction QA
@@ -151,8 +151,12 @@ iOS シミュレータで買い切りプラン ($69.99・「一度の購入で�
   - 実課金確認は本番環境では不可のため、Sandbox テスターアカウントでの購入フローの遷移確認に留める
 - [ ] **購入完了ダイアログ**: 購入成功時に「登録が完了しました」ダイアログがジュエル画像付きで表示され、OKタップでダイアログとシートの両方が閉じる
   - ⏭️ スキップ: Sandbox テスターアカウント (Apple Account の認証情報) が本 QA では提供されておらず実購入が完了できないため未実行
+    - 起動条件: ローカル sim-boot。`SIMSLIM_EXCEPT=store,health,icloud` / `SLIM_STATUS=APPLIED` (2026-10-05)
+    - デーモン: icloud カテゴリを有効にした状態で OS の「Apple Account にサインイン」ダイアログに到達しており、デーモン不足ではなく認証情報の不足が原因 (`launchctl list` の出力は取っていない。icloud を無効にした 2026-10-04 の起動ではダイアログが出ずに `Purchase was cancelled.` で即座に失敗した)
+    - 試した手順: 月額プランをタップ → サインインダイアログ → 認証情報が無く「キャンセル」で中断 (「購入ボタンタップでローディング表示」のスクショ)
 - [ ] **購入エラー時のアラート表示**: 購入失敗(Sandbox でのキャンセル操作等)時にエラーアラートが表示され、シートは閉じずに操作をやり直せる
   - ⏭️ スキップ: 月額プランボタンタップ後の Apple Account サインインダイアログで「キャンセル」を選ぶとエラーアラートは表示されない (仕様どおり。`map_to_error.dart` の `purchaseCancelledError` は意図的に `null` を返す)。Sandbox テスターアカウントが無く、購入ボタン経由の実際の購入失敗 (無効レシート等) を再現できないため未確認。同じ `showErrorAlert` の機構は「復元購入」でアラートが表示されることを確認済み
+    - 起動条件・デーモン・試した手順: 「購入完了ダイアログ」と同じ
 - [x] **復元購入**: フッターの「以前に購入した内容を復元」をタップし、購入履歴がない Sandbox アカウントではエラーアラートが表示されることを確認する。有効な購入がある場合は復元成功のスナックバーが表示される
 
 #### 動作確認
@@ -215,6 +219,9 @@ iOS シミュレータで買い切りプラン ($69.99・「一度の購入で�
   - 訂正: この割引権限はバックエンド側の個別付与が不要で、初期設定完了時(`EndInitialSetting`, lib/provider/user.dart)に全ユーザーへ自動的に`discountEntitlementDeadlineDate`が設定される(Remote Configのオフセット日数に基づく)。新規アカウントで初期設定を完了するだけで通常操作で再現できることを確認した
 - [ ] **オファリング取得失敗時のエラー画面**: 機内モード等でオファリング取得に失敗した状態でシートを開くと、エラーページが表示され、再読み込み操作でオファリング再取得を試みられる
   - ⏭️ スキップ: この iOS シミュレータの Settings アプリに Wi-Fi/機内モードのトグルが存在せず、シミュレータ単体でネットワークを切断する手段がない。Mac 本体のネットワークを切ると並行して動く他のセッションに影響するため実施を見送った。コードレビューでは `premium_introduction_sheet.dart` の `AsyncValueGroup.group2(...).when(error: ...)` が `UniversalErrorPage` を表示し、reload で `purchaseOfferingsProvider` / `refreshAppProvider` を再取得することを確認済み
+    - 起動条件: ローカル sim-boot。`SIMSLIM_EXCEPT=store,health,icloud` / `SLIM_STATUS=APPLIED` (2026-10-05)
+    - デーモン: ネットワークの切断はデーモンの有無に依らない操作のため該当なし
+    - 試した手順: シミュレータの Settings アプリで Wi-Fi / 機内モードのトグルを探したが存在しなかった。Mac 本体のネットワーク切断は他のセッションへの影響のため行っていない
 
 #### 動作確認
 <details>

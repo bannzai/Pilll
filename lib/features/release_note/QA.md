@@ -1,13 +1,13 @@
 ---
 feature: release_note
 verification: mobile-mcp
-last_verified_commit: 1abe9113bb377e9d90c42a10ee54feeae9ca058c
-last_verified_at: 2026-10-08
+last_verified_commit: e7d4082f35056070b0425056efd6b085b115c752
+last_verified_at: 2026-10-09
 ---
 
 # release_note QA
 
-確認環境 (2026-10-05 と 2026-10-08 の記録): iPhone 16 Pro シミュレータ (iOS 27.0、ローカル sim-boot、`SIMSLIM_EXCEPT=store,health,icloud`) の dev ビルド (commit 75c754dd72 を Xcode 26.5 でビルド。`lib/features` は HEAD と同一)。既読フラグのリセット手順はルート `QA.md` の「実行ナレッジ」を参照。
+確認環境 (2026-10-05 と 2026-10-08 の記録): iPhone 16 Pro シミュレータ (iOS 27.0、ローカル sim-boot、`SIMSLIM_EXCEPT=store,health,icloud`) の dev ビルド (commit 75c754dd72 を Xcode 26.5 でビルド。`lib/features` は HEAD と同一)。既読フラグのリセット手順はルート `QA.md` の「動作確認手段」の「再現が難しい操作の手順」を参照。
 
 ## 1. 表示条件
 
@@ -15,7 +15,7 @@ last_verified_at: 2026-10-08
 - [ ] **iOS/Android両方で表示される**: 202608.04.x のリリースノート（2錠飲み対応）は両OS対象のため、Platform による表示制限はない
   - ⏭️ スキップ: 本 QA の環境には Android エミュレータ・実機が無く、Android での表示は未確認。`lib/features/release_note/release_note.dart` の `showReleaseNotePreDialog` に `Platform` による分岐が無いことをコードで確認した
 - [x] **2回目以降は再表示されない**: 一度ダイアログが表示されるとフラグが保存され、再度服薬記録をしても同一バージョンでは再表示されない
-  - Simulator で再確認する場合はアプリの SharedPreferences の `flutter.release_notes_shown_202608.04.x` を消す (ルート `QA.md` の「実行ナレッジ」) か、アプリを再インストールしてフラグをクリアする
+  - Simulator で再確認する場合はアプリの SharedPreferences の `flutter.release_notes_shown_202608.04.x` を消す (ルート `QA.md` の「再現が難しい操作の手順」) か、アプリを再インストールしてフラグをクリアする
 
 #### 動作確認
 <details>

@@ -1,8 +1,8 @@
 ---
 feature: before_pill_sheet_group_history
 verification: mobile-mcp
-last_verified_commit: 1abe9113bb377e9d90c42a10ee54feeae9ca058c
-last_verified_at: 2026-10-08
+last_verified_commit: e7d4082f35056070b0425056efd6b085b115c752
+last_verified_at: 2026-10-09
 ---
 
 # before_pill_sheet_group_history QA
@@ -191,7 +191,7 @@ last_verified_at: 2026-10-08
 
 **確認日: 2026-08-19**
 
-最終服用日 6/4 のグループで 6/13〜6/15 を保存すると「服用お休み開始日は6/5(金)以前の日付を選択してください」が表示され、一覧が変わらないことを確認。2026-10-05 の再確認では同じ判定が記録画面の「服用お休み期間変更」(record の「休薬終了と期間変更」) で動くことを確認し、本画面では再実施していない (判定ロジックは `test/features/before_pill_sheet_group_history/component/rest_duration/provider_test.dart` で検証済み)。
+最終服用日 6/4 のグループで 6/13〜6/15 を保存すると「服用お休み開始日は6/5(金)以前の日付を選択してください」が表示され、一覧が変わらないことを確認。2026-10-05 の再確認では本画面でこの項目を再実施していない。本画面の判定は `component/rest_duration/provider.dart` にあり、`test/features/before_pill_sheet_group_history/component/rest_duration/provider_test.dart` が境界値を検証している。
 
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260819/0766c097-512a-4124-93a0-d3221586a174.png" width="300" />
 
@@ -229,11 +229,15 @@ last_verified_at: 2026-10-08
 
 **確認日: 2026-10-05**
 
-終了予定日が 9/10〜9/14 の追加で 09/23 から 09/27 に (1 枚目)、9/14〜9/16 の追加で 09/29 に (2 枚目)、9/14〜9/15 への変更で 09/28 に (3 枚目) 更新されることを確認。1 枚組のため後続シートの開始日の更新は 2026-08-19 の記録 (3 枚組で 2 枚目の開始日が 6/17 になる) を参照。
+終了予定日が 9/10〜9/14 の追加で 09/23 から 09/27 に (1 枚目)、9/14〜9/16 の追加で 09/29 に (2 枚目)、9/14〜9/15 への変更で 09/28 に (3 枚目) 更新されることを確認。2026-10-05 の前回グループは 1 枚組のため、後続シートの開始日の更新は 2026-08-19 の 3 枚組での記録 (6/5〜6/10 の休薬で 1 枚目の終了予定日が 6/11 から 6/16 に延び、2 枚目の開始日が 6/17 になる。4・5 枚目) を保持する。
 
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/010d85e9-31e1-4876-88db-ac506627abc9-before-added.png" width="320">
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/694132ff-8cd0-4564-a01b-31fb28cbd04b-before-boundary-added.png" width="320">
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/63ca38d5-dd49-458e-a939-213dae5f7bde-before-changed.png" width="320">
+
+**確認日: 2026-08-19**
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260819/919d2382-ab46-40e5-99e5-ca3a032644e8.png" width="300" />
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260819/8bf2f134-70ce-433a-8c15-8e6533f6bee6.png" width="300" />
 
 </details>
 
