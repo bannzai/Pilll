@@ -1,7 +1,7 @@
 ---
 feature: before_pill_sheet_group_history
 verification: mobile-mcp
-last_verified_commit: c827d4be46d15d8f4b573af8be8e356c24d8b710
+last_verified_commit: 3d7b46367facd1d3b1d350904eb1af1c26276d58
 last_verified_at: 2026-10-09
 ---
 
@@ -205,7 +205,7 @@ last_verified_at: 2026-10-09
 
 **確認日: 2026-10-05**
 
-9/10〜9/14 がある状態で重なる期間を保存すると「他の服用お休み期間と重なる期間は選択できません」が表示されること (1 枚目)、開始日が既存の終了日と同じ 9/14〜9/16 は保存でき 2 行目が追加されること (2 枚目) を確認。
+9/10〜9/14 がある状態で重なる期間を保存すると「他の服用お休み期間と重なる期間は選択できません」が表示されること (1 枚目)、開始日が既存の終了日と同じ 9/14〜9/16 は保存でき 2 行目が追加されること (2 枚目) を確認。もう一方の境界 (終了日が既存の開始日と同じ日) は画面では試しておらず、`test/features/before_pill_sheet_group_history/component/rest_duration/provider_test.dart` の「終了日が既存の開始日と同じ日は重ならない」で担保している。
 
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/25be6d39-b602-4762-a95b-67a415487aed-before-overlap-error.png" width="320">
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/694132ff-8cd0-4564-a01b-31fb28cbd04b-before-boundary-added.png" width="320">

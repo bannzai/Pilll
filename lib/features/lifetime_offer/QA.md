@@ -1,7 +1,7 @@
 ---
 feature: lifetime_offer
 verification: mobile-mcp
-last_verified_commit: c827d4be46d15d8f4b573af8be8e356c24d8b710
+last_verified_commit: 3d7b46367facd1d3b1d350904eb1af1c26276d58
 last_verified_at: 2026-10-09
 ---
 
@@ -75,7 +75,7 @@ last_verified_at: 2026-10-09
 - [ ] **起動時の自動モーダル**: 条件を満たすユーザーの起動時に周期ごと 1 回だけオファー画面が自動で開き、他の起動時モーダルと重ならない
   - ⏭️ スキップ: 同上。`test/features/root/resolver/show_lifetime_offer_on_app_launch_test.dart` で担保している
 - [ ] **購入**: 「期間限定の価格で購入する」で StoreKit の購入フローが始まり、完了するとプレミアムになる
-  - ⏭️ スキップ: Sandbox テスターアカウント (Apple Account の認証情報) が無く購入を完了できない。購入ボタンからサインインダイアログまでの遷移は premium_introduction の「購入ボタンタップでローディング表示」と同じ `Purchases.purchase` の経路
+  - ⏭️ スキップ: Sandbox テスターアカウント (Apple Account の認証情報) が無く購入を完了できない。購入ボタンからサインインダイアログまでの遷移は premium_introduction の「購入ボタンタップで購入フロー開始」と同じ `Purchases.purchase` の経路
     - 起動条件: ローカル sim-boot。`SIMSLIM_EXCEPT=store,health,icloud` / `SLIM_STATUS=ALREADY_SLIM` (2026-10-08)
     - デーモン: icloud カテゴリを有効にした状態で、premium_introduction の月額プランは OS の「Apple Account にサインイン」ダイアログに到達しており、デーモン不足ではなく認証情報の不足が原因 (`launchctl list` の出力は取っていない)
     - 試した手順: 本画面の「期間限定の価格で購入する」は未タップ (同じ経路の premium_introduction で止まる箇所が分かっているため)。premium_introduction で月額プラン → サインインダイアログ → 認証情報が無く「キャンセル」で中断

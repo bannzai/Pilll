@@ -1,7 +1,7 @@
 ---
 feature: _root
 verification: mobile-mcp
-last_verified_commit: 823738c52e32155e88214f4cc0663a9a85f0d5c4
+last_verified_commit: 3d7b46367facd1d3b1d350904eb1af1c26276d58
 last_verified_at: 2026-10-09
 ---
 
@@ -184,7 +184,7 @@ Xcode 27 は Pods の `IPHONEOS_DEPLOYMENT_TARGET < 15.0` をエラーにする�
   - ⏭️ スキップ: 月額プランのタップで Apple Account のサインインダイアログは出るが、Sandbox テスターアカウントの認証情報が無く購入を完了できないため未実施
     - 起動条件: ローカル sim-boot。`SIMSLIM_EXCEPT=store,health,icloud` / `SLIM_STATUS=APPLIED`（2026-10-05）
     - デーモン: icloud カテゴリを有効にした状態で OS のサインインダイアログに到達しており、デーモン不足ではなく認証情報の不足が原因（`launchctl list` の出力は取っていない）
-    - 試した手順: 設定 → プレミアムプランを見る → 月額プラン → サインインダイアログ → 認証情報が無く「キャンセル」で中断（`lib/features/premium_introduction/QA.md` の「購入ボタンタップでローディング表示」）
+    - 試した手順: 設定 → プレミアムプランを見る → 月額プラン → サインインダイアログ → 認証情報が無く「キャンセル」で中断（`lib/features/premium_introduction/QA.md` の「購入ボタンタップで購入フロー開始」）
 
 #### 動作確認
 <details>

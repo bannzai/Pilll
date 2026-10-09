@@ -1,7 +1,7 @@
 ---
 feature: premium_introduction
 verification: mobile-mcp
-last_verified_commit: c827d4be46d15d8f4b573af8be8e356c24d8b710
+last_verified_commit: 3d7b46367facd1d3b1d350904eb1af1c26276d58
 last_verified_at: 2026-10-09
 ---
 
@@ -153,7 +153,7 @@ iOS シミュレータで買い切りプラン ($69.99・「一度の購入で�
   - ⏭️ スキップ: Sandbox テスターアカウント (Apple Account の認証情報) が本 QA では提供されておらず実購入が完了できないため未実行
     - 起動条件: ローカル sim-boot。`SIMSLIM_EXCEPT=store,health,icloud` / `SLIM_STATUS=APPLIED` (2026-10-05)
     - デーモン: icloud カテゴリを有効にした状態で OS の「Apple Account にサインイン」ダイアログに到達しており、デーモン不足ではなく認証情報の不足が原因 (`launchctl list` の出力は取っていない。`SIMSLIM_EXCEPT=store` だけで起動した 2026-10-04 の記録ではダイアログが出ずに `Purchase was cancelled.` で即座に失敗したと前のセッションがメモしているが、本セッションではその差を再現して確かめていない)
-    - 試した手順: 月額プランをタップ → サインインダイアログ → 認証情報が無く「キャンセル」で中断 (「購入ボタンタップでローディング表示」のスクショ)
+    - 試した手順: 月額プランをタップ → サインインダイアログ → 認証情報が無く「キャンセル」で中断 (「購入ボタンタップで購入フロー開始」のスクショ)
 - [ ] **購入エラー時のアラート表示**: 購入失敗(Sandbox でのキャンセル操作等)時にエラーアラートが表示され、シートは閉じずに操作をやり直せる
   - ⏭️ スキップ: 月額プランボタンタップ後の Apple Account サインインダイアログで「キャンセル」を選ぶとエラーアラートは表示されない (仕様どおり。`map_to_error.dart` の `purchaseCancelledError` は意図的に `null` を返す)。Sandbox テスターアカウントが無く、購入ボタン経由の実際の購入失敗 (無効レシート等) を再現できないため未確認。同じ `showErrorAlert` の機構は「復元購入」でアラートが表示されることを確認済み
     - 起動条件・デーモン・試した手順: 「購入完了ダイアログ」と同じ
