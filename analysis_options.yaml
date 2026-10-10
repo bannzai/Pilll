@@ -42,3 +42,7 @@ analyzer:
   exclude:
     - "lib/**/*.g.dart"
     - "lib/**/*.freezed.dart"
+    # Flutter 3.44 以降は stable でも Swift Package Manager が既定で有効になり、flutter pub get が他のプラグインに依存する
+    # プラグイン (cloud_firestore 等) を Dart のソースごと build/ios/SourcePackages/ に複製する。
+    # 除外しないと flutter analyze がその複製を解析し、CI の lint が依存パッケージの指摘で失敗する
+    - "build/**"
