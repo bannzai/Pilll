@@ -100,6 +100,14 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+  config:
+    # Flutter 3.44 以降は Swift Package Manager が既定で有効になり、CI の flutter build ios が Xcode project に SwiftPM 統合を
+    # 足して各プラグインの Package.swift を使う。gma_mediation_meta 1.7.0 は自身の Package.swift で iOS 13.0 を宣言しながら
+    # iOS 15.0 を要求する MetaAdapterTarget に依存するため、Runner の deployment target (15.0) に関係なく
+    # 「The package product 'MetaAdapterTarget' requires minimum platform version 15.0 ... but this target supports 13.0」で失敗する。
+    # Xcode project は SwiftPM に移行していない (FlutterGeneratedPluginSwiftPackage の参照が無い) ので、3.41.9 までと同じ
+    # CocoaPods の経路に固定する。依存の更新で解消できるようになったら外す
+    enable-swift-package-manager: false
   generate: true
   assets:
     - images/
