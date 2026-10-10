@@ -42,3 +42,8 @@ analyzer:
   exclude:
     - "lib/**/*.g.dart"
     - "lib/**/*.freezed.dart"
+    # Swift Package Manager が有効な環境 (Flutter 3.44 以降の既定。このプロジェクトは pubspec.yaml の flutter.config で
+    # 無効にしているが、手元の flutter config や環境変数 FLUTTER_SWIFT_PACKAGE_MANAGER で有効になりうる) では、
+    # flutter pub get が他のプラグインに依存するプラグイン (cloud_firestore 等) を Dart のソースごと
+    # build/ios/SourcePackages/ に複製する。除外しないと flutter analyze がその複製を解析し、lint が依存パッケージの指摘で失敗する
+    - "build/**"

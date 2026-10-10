@@ -79,11 +79,13 @@ class CreatingNewPillSheetHelpPage extends ConsumerWidget {
               padding: EdgeInsets.symmetric(vertical: 6),
               child: Center(child: Icon(Icons.arrow_downward, size: 28, color: AppColors.primary)),
             ),
-            Container(
-              decoration: BoxDecoration(
-                color: AppColors.white,
+            // SwitchListTile は内部の ListTile が onTap を持つため、背景色付きの Container で包むと Flutter 3.44 以降の debug ビルドで
+            // 「ListTile background color or ink splashes may be invisible」の assertion になる。背景と枠線は Material に持たせる
+            Material(
+              color: AppColors.white,
+              shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: AppColors.primary, width: 1.5),
+                side: const BorderSide(color: AppColors.primary, width: 1.5),
               ),
               child: IgnorePointer(
                 child: SwitchListTile(

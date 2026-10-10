@@ -58,7 +58,7 @@ last_verified_at: 2026-10-09
 ### Xcode 27.1 でビルドする（2026-10-10）
 
 - Pods の `IPHONEOS_DEPLOYMENT_TARGET < 15.0` は `ios/Podfile` の post_install が 15.0 に揃えるため、Xcode 26.5 を `DEVELOPER_DIR` に指定する回避は不要になった（2026-10-04 の記録を置き換え）
-- Simulator 向けのビルド（`flutter build ios --simulator`）は `FLUTTER_XCODE_ARCHS=arm64` を付ける。Flutter 3.41.9 は arm64 と x86_64 を 1 回の `lipo -verify_arch` で検証し、Xcode 27 の lipo が `-verify_arch requires exactly one input file` で拒否して `debug_unpack_ios` が失敗する（ https://github.com/flutter/flutter/issues/188461 。修正 PR #188625 は 2026-10-10 時点の stable に未収録）。`flutter run -d <UDID>` は対象 1 機種の arch だけをビルドするため指定は不要
+- Simulator 向けのビルド（`flutter build ios --simulator`）は Flutter 3.44.9（CI の `flutter-version` と同じ版）でそのまま通る。3.41.9 では arm64 と x86_64 を 1 回の `lipo -verify_arch` で検証し、Xcode 27 の lipo が `-verify_arch requires exactly one input file` で拒否して `debug_unpack_ios` が失敗していた（ https://github.com/flutter/flutter/issues/188461 ）。1 アーキテクチャずつ検証する修正（ https://github.com/flutter/flutter/pull/189792 ）が stable 3.44.8 以降に入っており、`FLUTTER_XCODE_ARCHS=arm64` を付けて arm64 だけをビルドする回避策は要らない（2026-10-10 に Flutter 3.44.9 と Xcode 27.1 (27A9275) で `flutter build ios --simulator --debug -t lib/main.dev.dart --dart-define-from-file=environment/dev.json` を `FLUTTER_XCODE_ARCHS` なしで実行し、`✓ Built build/ios/iphonesimulator/Runner.app` で終了。成果物の `Runner` と `Flutter.framework/Flutter` は `lipo -info` で x86_64 と arm64 の fat binary。https://github.com/bannzai/Pilll/pull/1902 ）
 - アプリは UIScene ライフサイクルに移行済み（`ios/Runner/Info.plist` の `UIApplicationSceneManifest`、`AppDelegate.swift` の `didInitializeImplicitFlutterEngine`）。iOS 27 SDK でビルドしたアプリは UIScene 未対応だと起動直後に落ちる（ https://docs.flutter.dev/release/breaking-changes/uiscenedelegate ）
 
 ### iPhone Duo（iOS 27.1）の外側・内側ディスプレイを確認する（2026-10-10）

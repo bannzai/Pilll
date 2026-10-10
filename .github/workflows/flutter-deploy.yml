@@ -50,7 +50,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  FLUTTER_VERSION: '3.41.9'
+  FLUTTER_VERSION: '3.44.9'
   BUILD_NUMBER_OFFSET: 6400
   # 署名は project.pbxproj の Release / Release-Development 設定 (CODE_SIGN_STYLE = Manual + 下記の profile 名) に従う
   IOS_TEAM_ID: TQPN82UBBY
