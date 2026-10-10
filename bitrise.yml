@@ -376,7 +376,7 @@ app:
   - opts:
       is_expand: false
     BITRISE_EXPORT_METHOD: ad-hoc
-  - FLUTTER_VERSION: 3.41.9
+  - FLUTTER_VERSION: 3.44.9
     opts:
       is_expand: false
   - opts:
