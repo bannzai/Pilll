@@ -688,12 +688,11 @@ packages:
   home_widget:
     dependency: "direct main"
     description:
-      path: "."
-      ref: main
-      resolved-ref: "2bb2581557a6020160c2cd80bb114beca6b7f5d7"
-      url: "https://github.com/bannzai/home_widget.git"
-    source: git
-    version: "0.5.0"
+      name: home_widget
+      sha256: "1dbfdfbb3b47de24639adfba352050d85d66af112b9cc3ec5bf7627a7813abcb"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.10.0"
   hooks_riverpod:
     dependency: "direct main"
     description:

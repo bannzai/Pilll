@@ -8,20 +8,6 @@ import 'package:pilll/entity/user.codegen.dart';
 import 'package:home_widget/home_widget.dart';
 import 'package:pilll/native/channel.dart';
 
-/// Widget が読む App Group の値を保存する。null はキーの削除として扱う
-///
-/// home_widget の saveWidgetData に null を渡すと、iOS 27.1 では NSUserDefaults が NSNull を拒否して
-/// NSInvalidArgumentException でアプリが落ちる (iPhone Duo / iOS 27.1 の Simulator で実測。iOS 27.0 以前は未確認。
-/// plugin の iOS 実装が NSNull を削除として扱わないため)。iOS では削除を AppDelegate の removeWidgetData で行い、
-/// Android は従来どおり plugin に任せる
-Future<void> saveWidgetDataOrRemove({required String key, required Object? value}) async {
-  if (value == null && defaultTargetPlatform == TargetPlatform.iOS) {
-    await methodChannel.invokeMethod('removeWidgetData', {'key': key});
-    return;
-  }
-  await HomeWidget.saveWidgetData(key, value);
-}
-
 // NOTE: [SyncData:Widget]
 Future<void> syncActivePillSheetValue({
   required PillSheetGroup? pillSheetGroup,
@@ -45,7 +31,8 @@ Future<void> syncActivePillSheetValue({
       'pillSheetGroupPillSheetAppearanceMode': pillSheetGroup?.pillSheetAppearanceMode.name,
     };
     for (final element in map.entries) {
-      await saveWidgetDataOrRemove(key: element.key, value: element.value);
+      // null はキーの削除になる (iOS は home_widget 0.10.0 以降が NSNull を削除として扱う https://github.com/ABausG/home_widget/pull/450 。Android は plugin が null を削除として扱う)
+      await HomeWidget.saveWidgetData(element.key, element.value);
     }
     await updateWidget();
   } catch (error) {
@@ -55,9 +42,9 @@ Future<void> syncActivePillSheetValue({
 
 Future<void> syncUserStatus({required User? user}) async {
   try {
-    await saveWidgetDataOrRemove(
-      key: 'userIsPremiumOrTrial',
-      value: user?.premiumOrTrial,
+    await HomeWidget.saveWidgetData(
+      'userIsPremiumOrTrial',
+      user?.premiumOrTrial,
     );
     await updateWidget();
   } catch (error) {
