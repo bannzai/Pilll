@@ -31,7 +31,7 @@ Future<void> syncActivePillSheetValue({
       'pillSheetGroupPillSheetAppearanceMode': pillSheetGroup?.pillSheetAppearanceMode.name,
     };
     for (final element in map.entries) {
-      // null はキーの削除になる (iOS は bannzai/home_widget の fork が NSNull を削除として扱う。Android は plugin が null を削除として扱う)
+      // null はキーの削除になる (iOS は home_widget 0.10.0 以降が NSNull を削除として扱う https://github.com/ABausG/home_widget/pull/450 。Android は plugin が null を削除として扱う)
       await HomeWidget.saveWidgetData(element.key, element.value);
     }
     await updateWidget();
