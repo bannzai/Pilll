@@ -23,6 +23,9 @@ import 'package:pilll/utils/environment.dart';
 /// - SCREENSHOT_LANGS: カンマ区切りの arb 言語コード（未指定は全対象言語）
 /// - SCREENSHOT_PAGES: カンマ区切りのページ番号で生成対象を絞り込む（未指定はバリアントの全ページ）
 /// - SCREENSHOT_VARIANT: バリアント名（未指定は main）。ページの並び順を決める
+/// - SCREENSHOT_DEVICE: 出力デバイス（未指定は iphone67。duo-outer / duo-inner で iPhone Duo の
+///   外側・内側のレイアウトをプレビューする。Duo の正式な生成経路は Simulator 実撮影の
+///   capture_duo_screenshots.sh で、ここは organize_screenshots.dart の対象外の _preview-{device} へ出す）
 ///
 /// バリアントごとにページの表示順が異なる（CPP 対応）。出力ファイル名の index は
 /// バリアントの並び順における位置（0 始まり）にする。
@@ -32,7 +35,7 @@ import 'package:pilll/utils/environment.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  const device = ScreenshotDevice.iPhone67;
+  final device = _deviceFromEnv();
   final variant = (Platform.environment['SCREENSHOT_VARIANT'] ?? '').trim().isEmpty ? 'main' : Platform.environment['SCREENSHOT_VARIANT']!.trim();
   final order = screenshotVariantOrder(variant: variant);
   final langs = _langsFromEnv();
@@ -101,6 +104,21 @@ List<String> _langsFromEnv() {
     return allScreenshotLanguages;
   }
   return value.split(',').map((e) => e.trim()).where((e) => e.isNotEmpty).toList();
+}
+
+/// SCREENSHOT_DEVICE を解釈する。未指定なら iPhone 6.7"（既存の fastlane 配信対象）。
+ScreenshotDevice _deviceFromEnv() {
+  switch ((Platform.environment['SCREENSHOT_DEVICE'] ?? '').trim()) {
+    case '':
+    case 'iphone67':
+      return ScreenshotDevice.iPhone67;
+    case 'duo-outer':
+      return ScreenshotDevice.iPhoneDuoOuter;
+    case 'duo-inner':
+      return ScreenshotDevice.iPhoneDuoInner;
+    default:
+      fail('未知の SCREENSHOT_DEVICE です: ${Platform.environment['SCREENSHOT_DEVICE']}（iphone67 / duo-outer / duo-inner）');
+  }
 }
 
 /// SCREENSHOT_PAGES を解釈する。未指定なら null（バリアントの全ページを生成）。
@@ -239,11 +257,17 @@ Future<void> _renderAndCapture(
 /// scripts/generate_screenshots/artifacts/_variant-{variant}/{fastlaneLocale}/{idx}_{label}_{idx}.png
 /// idx はバリアントの並び順における位置（0 始まり）。deliver は画像のピクセル寸法で
 /// デバイス種別を判定するため、ファイル名のラベルは可読性のためだけに使う。
+///
+/// iPhone 6.7" 以外（iPhone Duo のプレビュー）は deliver が受け付けないため、
+/// organize_screenshots.dart / apply_variant.sh が拾わない _preview-{label} 配下へ出す。
 String _outputPath({
   required String variant,
   required String lang,
   required int index,
   required ScreenshotDevice device,
 }) {
+  if (device != ScreenshotDevice.iPhone67) {
+    return 'scripts/generate_screenshots/artifacts/_preview-${device.fastlaneLabel}/${fastlaneLocaleOf(lang: lang)}/${index}_${device.fastlaneLabel}_$index.png';
+  }
   return 'scripts/generate_screenshots/artifacts/_variant-$variant/${fastlaneLocaleOf(lang: lang)}/${index}_${device.fastlaneLabel}_$index.png';
 }

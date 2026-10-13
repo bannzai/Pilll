@@ -73,6 +73,67 @@ CPPはロシア語と地域別派生を除いた31代表ロケールを使用し
 `cpp-birthcontrol`だけは`en-US`のみを使用する。最終的な画像数は通常商品ページ259枚、
 CPP 5種875枚、合計1134枚。
 
+## iPhone Duo（外側 1398×2034・内側 2853×2007）
+
+Apple の Screenshot specifications（ https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications ）
+に載る iPhone Duo の寸法で、同じ 7 ページ × 32 言語を撮る。内側は仕様が縦（2007×2853）も受け付けるが、
+開いた姿勢の Simulator が回転なしで横長（2853×2007）を返すため横で作る。
+正式経路と同じカタログアプリを iPhone Duo Simulator に載せ、姿勢（閉じた = 外側、開いた = 内側）
+ごとに全言語を撮る。全画面プレビューは画面の縦横比から `ScreenshotDevice` を選ぶため、
+同じビルドで 6.7" / Duo 外側 / Duo 内側の 3 種を撮れる。
+
+```
+capture_duo_screenshots.sh [-l LANGS] [--poses closed,open] [--skip-build] [--udid UDID]
+  ├─ sim-boot（SIM_DEVICE_TYPE="iPhone Duo"）で Simulator を起動
+  ├─ $FLUTTER build ios --simulator -t lib/main.dev.dart --dart-define=SCREENSHOT_CATALOG=true → simctl install
+  ├─ 姿勢ごと（duo-pose.sh set closed|open）に、言語ごと:
+  │    端末言語を切替 → Documents/screenshot_autoplay.txt を書いて起動
+  │    → アプリが各ページを全画面表示して screenshot_ready.txt を書く
+  │    → ホストが simctl io screenshot --display=primary|primary-1 で撮り、magick で alpha を除去し、
+  │      screenshot_ack.txt を書く（同期手順は lib/features/appstore_screenshot/screenshot_autoplay.dart）
+  │    出力: artifacts/iphone-duo/_captured/{outer|inner}/{arbコード}/p{N}.png
+  └─ 寸法（1398×2034 / 2853×2007）・alpha 無し・枚数を sips で検証
+
+organize_duo_screenshots.dart（dart run）
+  └─ _captured/{outer|inner}/{lang}/p{N}.png を main の並び順で
+     artifacts/iphone-duo/{ASCロケール}/{idx}_APP_IPHONE_DUO_{OUTER|INNER}_p{N}.png へ 37 ロケール展開
+```
+
+```sh
+FLUTTER=~/fvm/versions/3.44.9/bin/flutter bash scripts/generate_screenshots/capture_duo_screenshots.sh   # 全32言語 × 外側・内側
+dart run scripts/generate_screenshots/organize_duo_screenshots.dart
+```
+
+- `FLUTTER`: Xcode 27 の Simulator ビルドは Flutter 3.44.8 以降が要る（3.41.9 は lipo の `-verify_arch` で失敗した）。未指定は PATH の `flutter`
+- `DUO_POSE_SH`: 姿勢切替スクリプト（既定 `~/.claude/skills/ios-simulator/scripts/duo-pose.sh`。Device Hub のウィンドウを
+  アクセシビリティ API で操作するためローカルの Mac 限定で、GitHub Actions では撮れない）
+- `magick`（ImageMagick）: `xcrun simctl io screenshot` の PNG は alpha 付き（`sips -g hasAlpha` が yes）で、
+  Apple の Screenshot specifications は「Images can't include alpha channels or transparencies.」としているため除去する
+- OS が描く時刻・Wi-Fi の表示は消せない。iOS 27.1 の iPhone Duo Simulator は、アプリがステータスバーを隠しても
+  （`Info.plist` の `UIViewControllerBasedStatusBarAppearance` = false で全画面表示）、外側ディスプレイの右端の列と
+  内側ディスプレイの右上に時刻・Wi-Fi を描き続けた（ja の 14 枚で実測。`simctl status_bar override` を手で打っても
+  表示自体は残った）。そのためスクリプトが `simctl status_bar override --time 9:41 --wifiMode active --wifiBars 3
+  --cellularMode notSupported --batteryState discharging --batteryLevel 100` で全ページ同じ見た目に固定し、終了時に
+  `status_bar clear` で戻す。`ScreenshotDevice` の文言の帯・フレームの座標はこの表示に掛からない位置にしてある
+  （`lib/features/appstore_screenshot/screenshot_device.dart` のコメント）。OS の表示が無い画像が要る時は
+  widget test レンダラ（下の「高速プレビュー経路」の `SCREENSHOT_DEVICE=duo-outer|duo-inner`）で描けるが、
+  フォントは Simulator 撮影と異なる
+- Maestro の `capture.yaml` は使わない。Maestro の `takeScreenshot` は XCTest 経由で、XCTest の API では開いた姿勢の内側ディスプレイを
+  仕様の寸法で撮れない（`XCUIScreen.main` は外側の 1398×2034、`screens[1]` は 90 度回った 2006×2852 を返す。
+  appstore-screenshot-builder skill `references/iphone-duo.md` の実測）ため、ホスト側の `simctl io screenshot` で撮る
+
+**配置先と配信**: fastlane deliver は Duo の寸法を知らず（`deliver/lib/deliver/app_screenshot.rb` の `DEVICE_RESOLUTIONS` に無い）、
+`fastlane/screenshots/{locale}/` に置くと検証で全体が止まる。そのため `artifacts/iphone-duo/` に出し、
+`apply_variant.sh` と `organize_screenshots.dart` の対象にしない。App Store Connect への登録は Web UI
+（App Store > バージョン > iPhone Duo の枠へドラッグ）か、`APP_IPHONE_DUO` に対応した
+`asc`（rorkai/App-Store-Connect-CLI 5.12.0 以降。`asc --version` で確認）で行う:
+
+```sh
+asc screenshots upload --version-localization <LOCALIZATION_ID> --path scripts/generate_screenshots/artifacts/iphone-duo/<locale> --device-type APP_IPHONE_DUO --skip-existing
+```
+
+外側と内側は 1 つの枠（最大 10 枚）に入るため、14 枚すべては登録できない。どの 10 枚を選ぶかは配信時に決める。
+
 ## 高速プレビュー経路: widget test レンダラ
 
 ## データフロー
@@ -89,6 +150,8 @@ generate_appstore_screenshots.sh -l LANGS -n PAGES --variant NAME
             → screenshotPage() を 1290×2796 で描画
             → RepaintBoundary.toImage → PNG
             → artifacts/_variant-{NAME}/{fastlaneロケール}/{idx}_APP_IPHONE_67_{idx}.png
+            （SCREENSHOT_DEVICE=duo-outer|duo-inner を渡すと iPhone Duo の寸法で描き、
+              artifacts/_preview-APP_IPHONE_DUO_{OUTER|INNER}/ へ出す。apply_variant.sh の対象外）
 
 apply_variant.sh NAME
   └─ artifacts/_variant-{NAME}/{locale}/*.png を fastlane/screenshots/{locale}/ へ cp -f
@@ -146,6 +209,8 @@ bash scripts/generate_screenshots/generate_appstore_screenshots.sh --variant cpp
 | `capture_screenshots.sh` | ローカルでsim-boot・ビルド・installして`capture_langs.sh`を呼ぶ |
 | `capture_langs.sh` | install済みSimulator上で言語ごとに撮影・寸法検証する（ローカル/GitHub Actions共通） |
 | `organize_screenshots.dart` | Simulator撮影結果を通常商品ページ・CPPのロケールへ展開する |
+| `capture_duo_screenshots.sh` | iPhone Duo Simulator で姿勢（外側・内側）ごとに全言語を撮影し、寸法・alpha・枚数を検証する（ローカル限定） |
+| `organize_duo_screenshots.dart` | iPhone Duo の撮影結果を通常商品ページの 37 ロケールへ展開する（`artifacts/iphone-duo/`） |
 | `print_langs.dart` | 撮影元となる全言語をSSOTから出力する |
 | `print_store_locales.dart` | 通常商品ページの全37ロケールをSSOTから出力する |
 | `apply_variant.sh` | 指定バリアントの生成物を`fastlane/screenshots/`へ配置する |
