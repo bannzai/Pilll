@@ -19,6 +19,8 @@ Future<void> main() async {
     // (locale 引数なしは全ロケール初期化)。
     await initializeDateFormatting();
     runApp(const ScreenshotCatalogApp());
+    // ホスト側のスクリプト (capture_duo_screenshots.sh) からの無人操作。依頼ファイルが無ければ何もしない。
+    await runCatalogAutoplayIfRequested();
     return;
   }
   Environment.flavor = Flavor.DEVELOP;
