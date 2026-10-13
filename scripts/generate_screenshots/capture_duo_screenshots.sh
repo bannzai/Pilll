@@ -81,9 +81,16 @@ is_duo() {
 # 別端末として起動する。
 if [ -z "$DEVICE_UDID" ]; then
   echo "boot simulator: iPhone Duo"
+  booted_before="$(xcrun simctl list devices booted -j | jq -r '.devices[][] | .udid')"
   DEVICE_UDID="$(SIM_DEVICE_TYPE="iPhone Duo" sim-boot | awk -F= '/^DEVICE_UDID=/{print $2}')"
   if [ -n "$DEVICE_UDID" ] && ! is_duo "$DEVICE_UDID"; then
     echo "既定名の Simulator ($DEVICE_UDID) は iPhone Duo ではないため、--number 2 で別に起動します"
+    # この呼び出しで起動してしまった別機種は戻す（Booted が 2 台になると sim-id が Duo でない方を返しうる）。
+    # 呼び出し前から Booted だったものは他の作業が使っている可能性があるため触らない。
+    case "$booted_before" in
+      *"$DEVICE_UDID"*) ;;
+      *) xcrun simctl shutdown "$DEVICE_UDID" >/dev/null 2>&1 || true ;;
+    esac
     DEVICE_UDID="$(SIM_DEVICE_TYPE="iPhone Duo" sim-boot --number 2 | awk -F= '/^DEVICE_UDID=/{print $2}')"
   fi
   if [ -z "$DEVICE_UDID" ]; then
