@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:pilll/features/appstore_screenshot/screenshot_autoplay.dart';
 import 'package:pilll/features/appstore_screenshot/screenshot_device.dart';
 import 'package:pilll/features/appstore_screenshot/screenshot_locale.dart';
 import 'package:pilll/features/appstore_screenshot/screenshot_page.dart';
@@ -9,14 +12,18 @@ import 'package:pilll/l10n/app_localizations.dart';
 /// App Store スクリーンショットを Simulator 上で実描画・実撮影するためのカタログアプリ。
 ///
 /// widget test レンダラは実機のフォント・絵文字と見た目が異なるため、正式な生成経路は
-/// この Catalog を Simulator に載せて OS スクリーンショット（1290×2796 px）を撮る方式にする。
+/// この Catalog を Simulator に載せて OS スクリーンショットを撮る方式にする。
 /// main.dev.dart が `--dart-define=SCREENSHOT_CATALOG=true` のときに entrypoint を通さず
 /// このアプリを runApp する。
 ///
-/// 画面遷移: 言語一覧 → ページ一覧(p1〜p5) → 全画面プレビュー。
+/// 画面遷移: 言語一覧 → ページ一覧(p1〜p7) → 全画面プレビュー。
 /// Maestro からタップできるよう、各行に Semantics identifier（言語は arb コード、
 /// ページは page_N、戻るは back）を付ける。言語選択でグローバル [L] と Localizations を
 /// 実行時に差し替える。
+///
+/// 全画面プレビューは載っている Simulator の画面の縦横比から [ScreenshotDevice] を選ぶため、
+/// iPhone 15 Pro Max（1290×2796）と iPhone Duo の外側（1398×2034）・内側（2853×2007）を
+/// 同じビルドで撮れる。ホスト側のスクリプトからの無人操作は [runScreenshotAutoplayIfRequested]。
 class ScreenshotCatalogApp extends StatelessWidget {
   const ScreenshotCatalogApp({super.key});
 
@@ -26,6 +33,7 @@ class ScreenshotCatalogApp extends StatelessWidget {
       valueListenable: catalogLocale,
       builder: (context, locale, _) {
         return MaterialApp(
+          navigatorKey: catalogNavigatorKey,
           debugShowCheckedModeBanner: false,
           locale: locale,
           localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -42,6 +50,32 @@ class ScreenshotCatalogApp extends StatelessWidget {
 /// カタログ全体で共有する現在ロケール。言語選択で差し替えると MaterialApp が再ビルドされ、
 /// Localizations（RTL 含む）が切り替わる。
 final ValueNotifier<Locale> catalogLocale = ValueNotifier<Locale>(Locale(allScreenshotLanguages.first));
+
+/// 無人操作（[runScreenshotAutoplayIfRequested]）が全画面プレビューを push するための Navigator。
+final GlobalKey<NavigatorState> catalogNavigatorKey = GlobalKey<NavigatorState>();
+
+/// グローバル [L] とカタログのロケールを [lang] へ切り替える。言語一覧のタップと無人操作が共用する。
+void applyCatalogLanguage(String lang) {
+  L = lookupAppLocalizations(Locale(lang));
+  catalogLocale.value = Locale(lang);
+}
+
+/// 無人操作の依頼ファイルがあれば、Navigator の準備を待ってから各ページを順に全画面表示する。
+///
+/// main.dev.dart が runApp の直後に呼ぶ。依頼ファイルの形式と同期手順は screenshot_autoplay.dart。
+Future<void> runCatalogAutoplayIfRequested() {
+  return runScreenshotAutoplayIfRequested(
+    applyLanguage: applyCatalogLanguage,
+    pushPage: ({required lang, required page, required documents}) async {
+      while (catalogNavigatorKey.currentState == null) {
+        await Future<void>.delayed(ackPollInterval);
+      }
+      await catalogNavigatorKey.currentState!.push(
+        MaterialPageRoute<void>(builder: (_) => _FullScreenPage(lang: lang, page: page, autoplayDocuments: documents)),
+      );
+    },
+  );
+}
 
 /// 言語一覧ページ。各行タップで L・ロケールを差し替えてページ一覧へ進む。
 class _LanguageListPage extends StatelessWidget {
@@ -62,8 +96,7 @@ class _LanguageListPage extends StatelessWidget {
                 subtitle: Text(fastlaneLocaleOf(lang: lang)),
                 trailing: const Icon(Icons.chevron_right),
                 onTap: () {
-                  L = lookupAppLocalizations(Locale(lang));
-                  catalogLocale.value = Locale(lang);
+                  applyCatalogLanguage(lang);
                   Navigator.of(context).push(MaterialPageRoute(builder: (_) => _PageListPage(lang: lang)));
                 },
               ),
@@ -95,7 +128,7 @@ class _PageListPage extends StatelessWidget {
                 title: Text('page $page'),
                 trailing: const Icon(Icons.chevron_right),
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (_) => _FullScreenPage(lang: lang, page: page)));
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_) => _FullScreenPage(lang: lang, page: page, autoplayDocuments: null)));
                 },
               ),
             ),
@@ -108,16 +141,24 @@ class _PageListPage extends StatelessWidget {
 /// 全画面プレビュー。合成ページ（frame_layout + Mock）を端末画面いっぱいに拡大表示し、
 /// ステータスバーを隠す。下端の透明な帯（identifier: back）で戻る。
 ///
-/// iPhone 6.7"（430×932pt @3x = 1290×2796px）では合成ページ（論理 1290×2796）を
-/// 画面いっぱいに縮小表示すると、OS スクリーンショットが 1290×2796px になる。
+/// 合成ページの寸法は、端末画面の論理サイズに縦横比が最も近い [ScreenshotDevice] から選ぶ。
+/// iPhone 6.7"（430×932pt @3x）では 1290×2796、iPhone Duo の外側（466×678pt）では
+/// 1398×2034、内側（951×669pt、横）では 2853×2007 の合成ページを画面いっぱいに縮小表示し、
+/// OS スクリーンショットがそのままストアの寸法になる。
+///
+/// [autoplayDocuments] が non-null なら無人操作で、描画後にホストへ知らせて撮影完了を待ってから
+/// 自分で閉じる（screenshot_autoplay.dart）。
 class _FullScreenPage extends StatefulWidget {
-  const _FullScreenPage({required this.lang, required this.page});
+  const _FullScreenPage({required this.lang, required this.page, required this.autoplayDocuments});
 
   /// 選択中の arb 言語コード。
   final String lang;
 
   /// 表示するページ番号。
   final int page;
+
+  /// 無人操作の同期ファイルを置く Documents ディレクトリ。Maestro 等の手動操作では null。
+  final Directory? autoplayDocuments;
 
   @override
   State<_FullScreenPage> createState() => _FullScreenPageState();
@@ -129,6 +170,17 @@ class _FullScreenPageState extends State<_FullScreenPage> {
     super.initState();
     // ステータスバー・ホームインジケータを隠して合成ページだけを撮れるようにする。
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
+    final documents = widget.autoplayDocuments;
+    if (documents != null) {
+      // 最初のフレームの描画後にホストへ知らせる。画像アセット等の非同期読み込みの余裕は
+      // ホスト側が撮影前に待つ（capture_duo_screenshots.sh）。
+      WidgetsBinding.instance.addPostFrameCallback((_) async {
+        await notifyReadyAndWaitForAck(documents: documents, lang: widget.lang, page: widget.page);
+        if (mounted) {
+          Navigator.of(context).pop();
+        }
+      });
+    }
   }
 
   @override
@@ -139,6 +191,7 @@ class _FullScreenPageState extends State<_FullScreenPage> {
 
   @override
   Widget build(BuildContext context) {
+    final device = screenshotDeviceForScreen(screenSize: MediaQuery.sizeOf(context));
     return Scaffold(
       body: Stack(
         children: [
@@ -146,9 +199,9 @@ class _FullScreenPageState extends State<_FullScreenPage> {
             child: FittedBox(
               fit: BoxFit.cover,
               child: SizedBox(
-                width: ScreenshotDevice.iPhone67.outputWidth,
-                height: ScreenshotDevice.iPhone67.outputHeight,
-                child: screenshotPage(lang: widget.lang, page: widget.page, device: ScreenshotDevice.iPhone67),
+                width: device.outputWidth,
+                height: device.outputHeight,
+                child: screenshotPage(lang: widget.lang, page: widget.page, device: device),
               ),
             ),
           ),

@@ -36,7 +36,9 @@ Maestroから1290×2796のPNGとして撮影する。widget test
 
 | ファイル | 役割 |
 | --- | --- |
-| `screenshot_device.dart` | 出力寸法・レイアウト比率のデバイス定義 SSOT（現状 iPhone 6.7" のみ） |
+| `screenshot_device.dart` | 出力寸法・レイアウト座標のデバイス定義 SSOT（iPhone 6.7" 縦、iPhone Duo 外側 縦・内側 横）と、画面の縦横比からの選択 |
+| `screenshot_catalog_app.dart` | Simulator 実撮影用のカタログアプリ（Maestro からの操作と、ファイル同期による無人操作） |
+| `screenshot_autoplay.dart` | ホスト側スクリプト（`capture_duo_screenshots.sh`）と Documents ディレクトリ経由で同期する無人操作の手順 |
 | `screenshot_locale.dart` | arb 言語コード → ASC（fastlane）ロケール名の対応表 SSOT |
 | `screenshot_variant.dart` | バリアント（CPP 別のページ並び順）の対応表 SSOT |
 | `screenshot_background.dart` | ページ番号 → 背景グラデーション（2色） |
@@ -75,4 +77,7 @@ Maestroから1290×2796のPNGとして撮影する。widget test
 - **ページ追加**: `mock_screens/` に専用 Mock を追加し、`screenshot_page.dart` の
   `_mockScreen` と `screenshot_variant.dart` の並び順を更新する。
 - **バリアント追加**: `screenshot_variant.dart` に「名前 → ページ並び順」を追記する。
-- **デバイス追加**: `screenshot_device.dart` に同じフィールド構成で別インスタンスを追加する。
+- **デバイス追加**: `screenshot_device.dart` に同じフィールド構成で別インスタンスを追加し、`all` に加える。
+  帯とフレームの座標を直接持つため、縦（帯が上・フレームが下）と横（帯が左・フレームが右）のどちらも
+  `frame_layout.dart` を変えずに定義できる。カタログアプリの全画面プレビューは載っている画面の縦横比で
+  `all` から選ぶため、Simulator の機種を変えるだけで新しいデバイスを撮れる。
