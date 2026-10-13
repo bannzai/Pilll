@@ -189,6 +189,14 @@ wait_done() {
   return 1
 }
 
+# 成功・失敗を問わず終了時に Simulator を元へ戻す。set -e で途中終了しても、時刻の固定が残らず、
+# 依頼ファイルが残って次回の手動起動（ホストの ACK が無い）が待ち続けることもないようにする。
+cleanup() {
+  rm -f "$DOCUMENTS_DIR/screenshot_autoplay.txt"
+  xcrun simctl status_bar "$DEVICE_UDID" clear >/dev/null 2>&1 || true
+}
+trap cleanup EXIT
+
 # iOS 27.1 の iPhone Duo は、アプリがステータスバーを隠しても外側ディスプレイの右端の列と内側ディスプレイの
 # 右上に時刻・Wi-Fi の表示を描き続ける（実測。bannzai/Pilll PR #1900 の「右端の余白は OS の配置によるもの」と同じ）。
 # 画像から消せないため、全ページで同じ見た目になるよう 9:41・Wi-Fi 接続・満充電（充電中の稲妻を出さない）に固定する。
@@ -222,8 +230,7 @@ for pose in $(printf '%s' "$POSES" | tr ',' ' '); do
     fi
   done
 done
-rm -f "$DOCUMENTS_DIR/screenshot_autoplay.txt"
-xcrun simctl status_bar "$DEVICE_UDID" clear
+# 依頼ファイルの削除と status_bar の解除は EXIT の trap（cleanup）が行う。
 # 次回の起動と他の作業のために閉じた姿勢へ戻す。
 set_pose closed
 
