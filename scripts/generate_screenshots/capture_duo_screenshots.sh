@@ -69,14 +69,31 @@ if [ -z "$LANGS" ]; then
   LANGS="$(dart run scripts/generate_screenshots/print_langs.dart)"
 fi
 
+# UDID の機種が iPhone Duo なら 0 を返す。
+is_duo() {
+  xcrun simctl list devices -j | jq -e --arg u "$1" \
+    '[.devices | to_entries[].value[] | select(.udid == $u) | .deviceTypeIdentifier] | any(. == "com.apple.CoreSimulator.SimDeviceType.iPhone-Duo")' >/dev/null
+}
+
 # 1. Simulator 起動（iPhone Duo。sim-boot の既定名を使い、sim-id / sim-shutdown で辿れるようにする）。
+# sim-boot は既定名の既存端末を機種を見ずに再利用するため、同じ worktree で capture_screenshots.sh が
+# 6.7" を作成済みだと Duo が起動しない。その時は --number 2 の名前（sim-id / sim-shutdown は prefix で辿れる）で
+# 別端末として起動する。
 if [ -z "$DEVICE_UDID" ]; then
   echo "boot simulator: iPhone Duo"
   DEVICE_UDID="$(SIM_DEVICE_TYPE="iPhone Duo" sim-boot | awk -F= '/^DEVICE_UDID=/{print $2}')"
+  if [ -n "$DEVICE_UDID" ] && ! is_duo "$DEVICE_UDID"; then
+    echo "既定名の Simulator ($DEVICE_UDID) は iPhone Duo ではないため、--number 2 で別に起動します"
+    DEVICE_UDID="$(SIM_DEVICE_TYPE="iPhone Duo" sim-boot --number 2 | awk -F= '/^DEVICE_UDID=/{print $2}')"
+  fi
   if [ -z "$DEVICE_UDID" ]; then
     echo "sim-boot で DEVICE_UDID を取得できませんでした" >&2
     exit 1
   fi
+fi
+if ! is_duo "$DEVICE_UDID"; then
+  echo "Simulator $DEVICE_UDID は iPhone Duo ではありません（xcrun simctl list devices で機種を確認）" >&2
+  exit 1
 fi
 echo "DEVICE_UDID=$DEVICE_UDID"
 
