@@ -70,9 +70,15 @@ Future<void> runCatalogAutoplayIfRequested() {
       while (catalogNavigatorKey.currentState == null) {
         await Future<void>.delayed(ackPollInterval);
       }
-      await catalogNavigatorKey.currentState!.push(
-        MaterialPageRoute<void>(builder: (_) => _FullScreenPage(lang: lang, page: page, autoplayDocuments: documents)),
-      );
+      final route = MaterialPageRoute<void>(builder: (_) => _FullScreenPage(lang: lang, page: page, autoplayDocuments: documents));
+      await catalogNavigatorKey.currentState!.push(route);
+      // push の Future は pop の時点で完了し、閉じるアニメーションの後に走る前ページの dispose
+      // （SystemUiMode を edgeToEdge に戻す）を待たない。そのまま次ページを push すると、次ページの
+      // initState で隠したシステム UI を前ページの dispose が戻してしまう。route.completed は
+      // Navigator が overlay の unmount（= State.dispose）を待ってから route を dispose した時に
+      // 完了する（flutter/lib/src/widgets/navigator.dart の _RouteEntry.dispose、
+      // routes.dart の TransitionRoute.dispose）ため、これを待ってから次ページへ進む。
+      await route.completed;
     },
   );
 }

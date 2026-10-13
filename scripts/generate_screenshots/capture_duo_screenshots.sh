@@ -155,9 +155,17 @@ capture_lang() {
     fi
     # 最初のフレーム描画後の通知なので、画像アセットの読み込みとページ遷移アニメーションの残りを待つ。
     sleep 1.5
-    xcrun simctl io "$DEVICE_UDID" screenshot --display="$display" "$out_dir/p$page.raw.png" >/dev/null
+    # この関数は `if capture_lang ...` の条件として呼ばれるため set -e が効かない。撮影・変換の失敗は
+    # 明示的に 1 を返し、画像ができた後にだけ ACK を書く（失敗したまま次ページへ進ませない）。
+    if ! xcrun simctl io "$DEVICE_UDID" screenshot --display="$display" "$out_dir/p$page.raw.png" >/dev/null; then
+      echo "screenshot failed: $lang p$page ($side)" >&2
+      return 1
+    fi
     # simctl の PNG は alpha チャンネル付きで App Store Connect が拒否するため除去する。
-    magick "$out_dir/p$page.raw.png" -alpha remove -alpha off "$out_dir/p$page.png"
+    if ! magick "$out_dir/p$page.raw.png" -alpha remove -alpha off "$out_dir/p$page.png"; then
+      echo "magick failed: $lang p$page ($side)" >&2
+      return 1
+    fi
     rm -f "$out_dir/p$page.raw.png"
     : > "$DOCUMENTS_DIR/screenshot_ack.txt"
   done
