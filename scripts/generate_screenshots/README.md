@@ -128,11 +128,15 @@ dart run scripts/generate_screenshots/organize_duo_screenshots.dart
 （App Store > バージョン > iPhone Duo の枠へドラッグ）か、`APP_IPHONE_DUO` に対応した
 `asc`（rorkai/App-Store-Connect-CLI 5.12.0 以降。`asc --version` で確認）で行う:
 
-```sh
-asc screenshots upload --version-localization <LOCALIZATION_ID> --path scripts/generate_screenshots/artifacts/iphone-duo/<locale> --device-type APP_IPHONE_DUO --skip-existing
-```
+外側と内側は 1 つの枠（最大 10 枚）に入るため、`organize_duo_screenshots.dart` が出す 14 枚すべては登録できない。
+どの 10 枚を選ぶかは配信時に決め、選んだ 10 枚だけを集めたディレクトリを作ってから渡す
+（ロケールのディレクトリをそのまま渡すと、ファイル名順で外側と内側が交互に並び、上限を超えた分が失敗する）:
 
-外側と内側は 1 つの枠（最大 10 枚）に入るため、14 枚すべては登録できない。どの 10 枚を選ぶかは配信時に決める。
+```sh
+mkdir -p tmp/duo-upload/<locale>
+cp scripts/generate_screenshots/artifacts/iphone-duo/<locale>/*_OUTER_p[1-7].png scripts/generate_screenshots/artifacts/iphone-duo/<locale>/*_INNER_p[1-3].png tmp/duo-upload/<locale>/
+asc screenshots upload --version-localization <LOCALIZATION_ID> --path tmp/duo-upload/<locale> --device-type APP_IPHONE_DUO --skip-existing
+```
 
 ## 高速プレビュー経路: widget test レンダラ
 

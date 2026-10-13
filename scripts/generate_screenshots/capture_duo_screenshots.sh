@@ -141,7 +141,10 @@ capture_lang() {
     open) side="inner"; display="primary-1" ;;
     *) echo "unknown pose: $pose" >&2; exit 1 ;;
   esac
-  out_dir="$CAPTURED_ROOT/$side/$lang"
+  # 撮影は作業ディレクトリ（<lang>.tmp）に出し、7 ページ揃った時だけ本来の場所へ置き換える。
+  # 途中で失敗しても、以前に撮れていた画像を失わない（撮り直しの経路で特に効く）。
+  final_dir="$CAPTURED_ROOT/$side/$lang"
+  out_dir="$CAPTURED_ROOT/$side/$lang.tmp"
   mkdir -p "$out_dir"
   find "$out_dir" -maxdepth 1 -type f -name 'p*.png' -delete
   rm -f "$DOCUMENTS_DIR/screenshot_ready.txt" "$DOCUMENTS_DIR/screenshot_ack.txt" "$DOCUMENTS_DIR/screenshot_done.txt"
@@ -173,6 +176,10 @@ capture_lang() {
     echo "timeout waiting for done ($lang $side)" >&2
     return 1
   fi
+  mkdir -p "$final_dir"
+  find "$final_dir" -maxdepth 1 -type f -name 'p*.png' -delete
+  mv "$out_dir"/p*.png "$final_dir/"
+  rmdir "$out_dir"
   return 0
 }
 

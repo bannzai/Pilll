@@ -58,7 +58,7 @@ Future<void> runScreenshotAutoplayIfRequested({
   File('${documents.path}/$doneFileName').writeAsStringSync(lang);
 }
 
-/// ページを描画し終えた後にホストへ知らせ、ホストの撮影完了を待ってから true を返す。
+/// ページを描画し終えた後にホストへ知らせ、ホストの撮影完了を待ってから返る。
 ///
 /// [documents] に [readyFileName] を書き、[ackFileName] が現れるまで [ackPollInterval] で待つ。
 /// 見つけたら両方を消してから返す（次のページが同じ名前で書き直せるようにする）。

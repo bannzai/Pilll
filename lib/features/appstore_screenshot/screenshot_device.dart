@@ -160,7 +160,7 @@ class ScreenshotDevice {
   /// 開いた姿勢の Simulator が回転なしで横長を返すため横で作る
   /// （appstore-screenshot-builder skill `references/iphone-duo.md` の既定）。
   /// 横長ではキャッチコピー帯を左（x 170〜1640、全高で上下中央）、iPhone フレームを右
-  /// （x 1760〜2660）に置く。フレーム下端は frameTop(160) + frameHeight(約1904) ≒ 2064 で、
+  /// （x 1700〜2600）に置く。フレーム下端は frameTop(160) + frameHeight(約1904) ≒ 2064 で、
   /// 外側と同じく下端から約 57px だけはみ出す。
   static const ScreenshotDevice iPhoneDuoInner = ScreenshotDevice(
     fastlaneLabel: 'APP_IPHONE_DUO_INNER',
