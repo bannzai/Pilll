@@ -132,9 +132,13 @@ dart run scripts/generate_screenshots/organize_duo_screenshots.dart
 どの 10 枚を選ぶかは配信時に決め、選んだ 10 枚だけを集めたディレクトリを作ってから渡す
 （ロケールのディレクトリをそのまま渡すと、ファイル名順で外側と内側が交互に並び、上限を超えた分が失敗する）:
 
+外側を先に並べたい時は、コピー先で外側に 0〜6、内側に 7〜9 の番号を付け直す（展開後の名前は `<idx>` ごとに
+INNER と OUTER が交互に並ぶ。asc がファイル名順に上げるかは未確認で、順序を名前で固定しておく方が安全）:
+
 ```sh
 mkdir -p tmp/duo-upload/<locale>
-cp scripts/generate_screenshots/artifacts/iphone-duo/<locale>/*_OUTER_p[1-7].png scripts/generate_screenshots/artifacts/iphone-duo/<locale>/*_INNER_p[1-3].png tmp/duo-upload/<locale>/
+for n in 1 2 3 4 5 6 7; do cp scripts/generate_screenshots/artifacts/iphone-duo/<locale>/*_OUTER_p$n.png tmp/duo-upload/<locale>/$((n - 1))_APP_IPHONE_DUO_OUTER_p$n.png; done
+for n in 1 2 3; do cp scripts/generate_screenshots/artifacts/iphone-duo/<locale>/*_INNER_p$n.png tmp/duo-upload/<locale>/$((n + 6))_APP_IPHONE_DUO_INNER_p$n.png; done
 asc screenshots upload --version-localization <LOCALIZATION_ID> --path tmp/duo-upload/<locale> --device-type APP_IPHONE_DUO --skip-existing
 ```
 
