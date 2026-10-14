@@ -268,7 +268,7 @@ jobs:
             build/ios/archive/Runner.xcarchive/dSYMs
 
       # IPA は障害調査用に、export 済みならアップロードの成否にかかわらず artifact に保存する (deploy-to-bitrise-io@2 に相当)
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: ${{ !cancelled() && steps.build_ipa.outcome == 'success' }}
         with:
           name: ios-${{ matrix.flavor }}-ipa-${{ env.BUILD_NUMBER }}
@@ -413,7 +413,7 @@ jobs:
           track: internal
           status: completed
 
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: ${{ !cancelled() && steps.build_aab.outcome == 'success' }}
         with:
           name: android-${{ matrix.flavor }}-aab-${{ env.BUILD_NUMBER }}
