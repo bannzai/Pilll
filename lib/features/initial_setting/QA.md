@@ -211,7 +211,7 @@ last_verified_at: 2026-10-16
 
 **確認日: 2026-10-15**
 
-新規インストールの初期設定で 3/3 の「次へ」をタップすると、Paywall を経由せずプレミアム体験開始画面に遷移した (1 枚目。dev の Remote Config にパラメータ未作成 = 空文字 = 実験未参加)。
+新規インストールの初期設定で 3/3 の「次へ」をタップすると、Paywall を経由せずプレミアム体験開始画面に遷移した (1 枚目。dev の Remote Config にパラメータ未作成 = 空文字 = 実験未参加)。割当イベント `onboarding_paywall_assigned` が送られないことは、今回はログを取っておらず画面では確認できない。`lib/features/initial_setting/reminder_times/page.dart` では、variant が null (空文字を含む実験未参加) の時はイベントを送らない分岐になっている (`if (onboardingPaywallVariant != null) { analytics.logEvent(name: 'onboarding_paywall_assigned', ...) }`)。
 
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/85046030-7537-4aa2-8bb0-11f314ea3f26-ev-is-4.png" width="640">
 
