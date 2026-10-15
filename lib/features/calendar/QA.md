@@ -1,8 +1,8 @@
 ---
 feature: calendar
 verification: mobile-mcp
-last_verified_commit: 823738c52e32155e88214f4cc0663a9a85f0d5c4
-last_verified_at: 2026-10-09
+last_verified_commit: 5061ae673336617372a3320ef37ae251e0394796
+last_verified_at: 2026-10-16
 ---
 
 # calendar QA

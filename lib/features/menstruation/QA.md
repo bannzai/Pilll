@@ -1,8 +1,8 @@
 ---
 feature: menstruation
 verification: mobile-mcp
-last_verified_commit: 34b7e05eb0ed73e5ee0caa2a91a96147e2edaded
-last_verified_at: 2026-07-05
+last_verified_commit: 5061ae673336617372a3320ef37ae251e0394796
+last_verified_at: 2026-10-16
 ---
 
 # menstruation QA

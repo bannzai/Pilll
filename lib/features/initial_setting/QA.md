@@ -1,8 +1,8 @@
 ---
 feature: initial_setting
 verification: mobile-mcp
-last_verified_commit: 21853fcbe3916b4509d34b8a00a3fac51298721c
-last_verified_at: 2026-09-11
+last_verified_commit: 5061ae673336617372a3320ef37ae251e0394796
+last_verified_at: 2026-10-16
 ---
 
 # initial_setting QA
