@@ -1,7 +1,7 @@
 ---
 feature: feature_appeal
 verification: mobile-mcp
-last_verified_commit: 3f79a6d311309b24e071ec4ac707cfd9a90a708f
+last_verified_commit: 06a99e65faf44eaf42cde8c91334e0b703af1fc1
 last_verified_at: 2026-10-16
 ---
 
