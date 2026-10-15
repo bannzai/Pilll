@@ -29,6 +29,7 @@ launched_at: 2018-07-29   # 公開日 (YYYY-MM-DD)。App Store の初回公開�
 - [x] カレンダー・体調記録・予定
 - [x] プレミアム (RevenueCat。ピルシート自動追加・クイックレコード等) と課金導線 (FeatureAppeal / lifetime offer / special offering)
 - [x] 問い合わせ・ストアレビュー依頼・リリースノート
+- [ ] 連続服用モード (ヤーズフレックス等。シート番号とサイクル日数を分け、上限日数・休薬を扱う。方針 bannzai/PilllBackend#498、MVP1 仕様 bannzai/PilllBackend#499)
 - [ ] オンボーディングの改善 (課金導線の A/B テスト結果の反映。bannzai/PilllBackend#418)
 - [ ] AdMob メディエーション設定の見直し (bannzai/PilllBackend#419)
 - [ ] FeatureAppeal の効果測定 (bannzai/PilllBackend#374)
