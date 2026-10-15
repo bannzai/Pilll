@@ -1,8 +1,8 @@
 ---
 feature: feature_appeal
 verification: mobile-mcp
-last_verified_commit: 21853fcbe3916b4509d34b8a00a3fac51298721c
-last_verified_at: 2026-09-11
+last_verified_commit: bcd2fac96e0c1d1565bff72e4ae41c96a6a65689
+last_verified_at: 2026-10-16
 ---
 
 # feature_appeal QA
@@ -25,11 +25,11 @@ last_verified_at: 2026-09-11
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-15〜16**
 
-トライアル中ユーザーのホーム画面で `feature_appeal_bar` (生理記録訴求) が1件のみ表示されていることを確認。
+iPhone 16 Pro シミュレータ (iOS 27.0) の dev ビルド (HEAD を Flutter 3.44.9・Xcode 27.1 でビルド) で、トライアル中ユーザーのホーム画面に feature_appeal のバーが 1 件だけ表示され、10/15 は「生理を記録・予測」、日付が変わった 10/16 は「カレンダーで体調を記録」に替わることを確認。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/4a1dbb6e-6881-418c-8725-d9df27ed4edf.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/317fb97b-6a7c-4117-af6e-85a324f972cb-fa-rotation.png" width="640">
 
 </details>
 
@@ -47,11 +47,11 @@ last_verified_at: 2026-09-11
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-16**
 
-生理記録バーの×ボタンをタップすると feature_appeal 領域は非表示になり、`AnnouncementBar` の次の候補（アカウント登録推奨バー）にフォールバックした。feature_appeal 自体は当日再表示されないことを確認。
+「カレンダーで体調を記録」バー (1 枚目) の×ボタンをタップすると feature_appeal 領域が消えて `AnnouncementBar` の次の候補 (アカウント登録推奨バー) が表示され (2 枚目)、アプリを終了して起動し直しても feature_appeal は表示されない (3 枚目) ことを確認。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/d670e42a-1ba6-447e-a00a-248f17579b6f.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/13171905-9310-4502-a943-b2df3fea3c89-fa-dismiss-compare.png" width="640">
 
 </details>
 
@@ -95,11 +95,11 @@ last_verified_at: 2026-09-11
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-15**
 
-開発者オプションの「FeatureAppeal AnnouncementBar 一覧」で実際のバー(通知メッセージカスタマイズ)をタップし対応するHelpPageに遷移することを確認。あわせて `RecordPillHelpPage`(ピル記録)にも遷移できることを確認。
+ホーム画面の「生理を記録・予測」バーをタップすると生理記録の HelpPage「生理を記録・予測」に遷移する (3 枚目)。開発者オプション「FeatureAppeal HelpPage 一覧」からはピル記録の HelpPage に遷移した (1 枚目)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/1ff198ea-ce53-453c-8aa3-fd92d04a4057.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/dab3f5f4-57e4-420e-b10c-3f6acca49298-ev-fa-free.png" width="640">
 
 </details>
 
@@ -107,11 +107,11 @@ last_verified_at: 2026-09-11
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-15**
 
-`RecordPillHelpPage`(ピル記録)で、アイコン・見出し「服用履歴を簡単に振り返り」・3件のフィーチャーカード・「アプリ内の場所」ラベル・ハイライトされたモックタブバー・下向き矢印・コンポーネントプレビューがすべて表示されることを確認。
+`RecordPillHelpPage`(ピル記録)で、アイコン・見出し「ホーム画面でピルの服用を記録」・3件のフィーチャーカード・「アプリ内の場所」ラベル・ピルタブがハイライトされたモックタブバー・下向き矢印・コンポーネントプレビューがすべて表示されることを確認 (1 枚目)。Material で包む変更の後も、文字が赤字・黄色の下線 (Material 外のエラースタイル) にならない。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/1ff198ea-ce53-453c-8aa3-fd92d04a4057.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/dab3f5f4-57e4-420e-b10c-3f6acca49298-ev-fa-free.png" width="640">
 
 </details>
 
@@ -119,11 +119,11 @@ last_verified_at: 2026-09-11
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-15**
 
-無料機能(生理記録)のHelpPageで「確認する」をタップすると、ペイウォールを経由せず設定タブへ直接遷移することを確認。
+無料機能(ピル記録)のHelpPageで「確認する」をタップすると、ペイウォールを経由せずホーム画面のピルタブへ直接遷移することを確認 (2 枚目)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/02dba706-a101-4dfd-b3bc-c34e7a78f27c.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/dab3f5f4-57e4-420e-b10c-3f6acca49298-ev-fa-free.png" width="640">
 
 </details>
 
@@ -134,9 +134,10 @@ last_verified_at: 2026-09-11
 ## 3. HelpPage 表示・内容 (プレミアム機能の例: AlarmKit)
 
 - [x] **プレミアムバッジ付きプレビュー表示**: プレミアム機能のHelpPage(例: `AlarmKitHelpPage`)には該当設定行のプレビューに `PremiumBadge` が表示される
-- [ ] **非プレミアムユーザーは確認するボタンでペイウォール表示**: 非プレミアムユーザーが「確認する」ボタンをタップすると、設定タブへの遷移前に `PremiumIntroductionSheet` が表示される
-  - ⏭️ スキップ: 2026-07-05 の記録 (下記エビデンス) のとおり未実施。今回 (2026-09-11) はトライアル中ユーザーの導線 (下の項目) を対象にしたため再実施していない。現在は開発者オプション「トライアル解除」で無料ユーザー状態を作れるので、次回の QA で確認する
-- [x] **プレミアムユーザーは確認するボタンで直接タブ遷移**: プレミアムまたはトライアル中のユーザーが同じボタンをタップすると、ペイウォールを経由せず設定タブへ直接遷移する
+- [x] **非プレミアムユーザーは確認するボタンでペイウォール表示**: 非プレミアムユーザーが「確認する」ボタンをタップすると、設定タブへの遷移前に `PremiumIntroductionSheet` が表示される
+- [x] **トライアル中ユーザーは確認するボタンで直接タブ遷移**: トライアル中のユーザーが同じボタンをタップすると、ペイウォールを経由せず設定タブへ直接遷移する
+- [ ] **プレミアム会員は確認するボタンで直接タブ遷移**: プレミアム会員が同じボタンをタップすると、ペイウォールを経由せず設定タブへ直接遷移する
+  - ⏭️ スキップ: 課金中 (プレミアム会員) の状態を dev 環境で作る手段が無い (Sandbox テスターアカウントの認証情報が無い。root QA.md の「動作確認手段」)。分岐はトライアル中と同じ `user.premiumOrTrial` で、トライアル中の直接遷移は上の項目で確認した
 - [x] **トライアル中ユーザーには「プレミアムプランを見る」ボタンが表示される**: プレミアム機能のHelpPageで、トライアル中(非プレミアム)のユーザーには「確認する」の下に「プレミアムプランを見る」(`FeatureAppealPremiumPlanButton`) が表示され、タップすると `PremiumIntroductionSheet` が開く。プレミアム会員・トライアル未開始/終了後の無料ユーザーには表示されない
 
 #### 動作確認
@@ -159,21 +160,23 @@ last_verified_at: 2026-09-11
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-16**
 
-⏭️ スキップ: dev環境で匿名サインアップすると初期設定完了時に自動的に45日間のトライアル(`isTrial=true`)が付与されるため(`lib/provider/user.dart` の `EndInitialSetting`)、本 session 内で「非プレミアム・非トライアル」ユーザー状態を作る手段がない(デバッグ用のプレミアム/トライアル強制トグルは存在せず、Firestore ユーザードキュメントの直接書き換えは QA の範囲外と判断)。コードレビューで `reminder_notification_customize_word_help_page.dart` 等の「確認する」ボタン押下処理に `if (!user.premiumOrTrial) { ... showPremiumIntroductionSheet ... }` のガードが存在することは確認済み。
+開発者オプション「トライアル解除」で無料ユーザーにした後、「FeatureAppeal HelpPage 一覧」→ クイックレコードの HelpPage で「確認する」をタップすると、設定タブへ遷移せずに `PremiumIntroductionSheet` が表示され (2 枚目)、閉じると HelpPage のままになる (3 枚目) ことを確認。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/6247e5db-c37a-4e74-8404-eaadbbe900fc-fa-premium-free-compare-crop.png" width="640">
 
 </details>
 
-### **プレミアムユーザーは確認するボタンで直接タブ遷移**: プレミアムまたはトライアル中のユーザーが同じボタンをタップすると、ペイウォールを経由せず設定タブへ直接遷移する
+### **トライアル中ユーザーは確認するボタンで直接タブ遷移**: トライアル中のユーザーが同じボタンをタップすると、ペイウォールを経由せず設定タブへ直接遷移する
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-16**
 
-トライアル中ユーザー(`isTrial=true`)がプレミアム機能(通知メッセージカスタマイズ)のHelpPageで「確認する」をタップすると、`PremiumIntroductionSheet` を経由せず設定タブへ直接遷移することを確認。
+トライアル中ユーザーがプレミアム機能(クイックレコード)のHelpPageで「確認する」をタップすると、`PremiumIntroductionSheet` を経由せず設定タブへ直接遷移することを確認 (2 枚目)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/0441d239-856f-470e-98d6-7023fdcce740.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/f5f333d2-3328-4249-92dc-4eb850af7893-fa-premium-trial-compare.png" width="640">
 
 </details>
 
@@ -181,12 +184,21 @@ last_verified_at: 2026-09-11
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-09-11**
+**確認日: 2026-10-16**
 
-初期設定直後 (トライアル中) のユーザーで、開発者オプション「FeatureAppeal HelpPage 一覧」→ AlarmKit (iOS 26+) を開くと「確認する」の下に「プレミアムプランを見る」が表示され、タップで `PremiumIntroductionSheet` (プラン一覧) が開いた。非表示の条件 (プレミアム会員・トライアル未開始・トライアル終了後) は `flutter test test/features/feature_appeal/feature_appeal_premium_plan_button_test.dart` (4 件成功) で確認した。
+トライアル中のユーザーで、開発者オプション「FeatureAppeal HelpPage 一覧」→ クイックレコードを開くと「確認する」の下に「プレミアムプランを見る」が表示され (1 枚目の左)、タップで `PremiumIntroductionSheet` (プラン一覧) が開いた (2 枚目)。「トライアル解除」後の無料ユーザーでは同じ HelpPage に「プレミアムプランを見る」が表示されない (3 枚目の左)。プレミアム会員の非表示は `flutter test test/features/feature_appeal/feature_appeal_premium_plan_button_test.dart` で確認している (課金中の状態を dev 環境で作れないため)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/09/10/9ab1e0dc-05a5-48b9-9079-042641157c9b-help_page_alarm_kit_trial.png" width="320">
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/09/10/0d1dd55d-5d96-4f65-8aa7-e4ebed792661-help_page_alarm_kit_paywall.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/f5f333d2-3328-4249-92dc-4eb850af7893-fa-premium-trial-compare.png" width="640">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/6cb4bd9a-5be2-48dd-b3cf-ef790ba5f54f-fa-premium-plan-button-top.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/6247e5db-c37a-4e74-8404-eaadbbe900fc-fa-premium-free-compare-crop.png" width="640">
+
+</details>
+
+### **プレミアム会員は確認するボタンで直接タブ遷移**: プレミアム会員が同じボタンをタップすると、ペイウォールを経由せず設定タブへ直接遷移する
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
 
 </details>
 
@@ -207,11 +219,11 @@ last_verified_at: 2026-09-11
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-15**
 
-HelpPage(Critical Alert)左上の戻るアイコンをタップし、前画面(呼び出し元一覧)に正しく戻れることを確認。`Navigator.of(context).pop()` のみの単純な実装で、ホーム画面のバー起点でも同様に動作する。
+ホーム画面のバーから開いた生理記録の HelpPage (3 枚目) で左上の戻るアイコンをタップすると、ホーム画面に戻る (4 枚目)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/38c48910-a7d7-4b4e-94d4-7bbbc1521742.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/dab3f5f4-57e4-420e-b10c-3f6acca49298-ev-fa-free.png" width="640">
 
 </details>
 

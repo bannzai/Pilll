@@ -1,13 +1,13 @@
 ---
 feature: calendar
 verification: mobile-mcp
-last_verified_commit: 823738c52e32155e88214f4cc0663a9a85f0d5c4
-last_verified_at: 2026-10-09
+last_verified_commit: bcd2fac96e0c1d1565bff72e4ae41c96a6a65689
+last_verified_at: 2026-10-16
 ---
 
 # calendar QA
 
-確認環境 (2026-10-05 と 2026-10-08 の記録): iPhone 16 Pro シミュレータ (iOS 27.0、ローカル sim-boot、`SIMSLIM_EXCEPT=store,health,icloud`) の dev ビルド (commit 75c754dd72 を Xcode 26.5 でビルド。`lib/features` は HEAD と同一)。トライアル中の確認は 2026-10-05、「トライアル解除」後の無料ユーザーの確認は 2026-10-08 に行った。
+確認環境 (2026-10-15〜16 の記録): iPhone 16 Pro シミュレータ (iOS 27.0、ローカル sim-boot、`SIMSLIM_EXCEPT=store,health,icloud,widgets`) の dev ビルド (HEAD を Flutter 3.44.9・Xcode 27.1 でビルド)。トライアル中の確認は 2026-10-15、「トライアル解除」後の無料ユーザーの確認は 2026-10-16 に行った。確認日が 2026-10-05・2026-10-08 の項目は、前回 (commit 75c754dd72 を Xcode 26.5 でビルド) の記録のまま。
 
 ## 関連リンク
 
@@ -30,11 +30,11 @@ last_verified_at: 2026-10-09
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-10-05**
+**確認日: 2026-10-15**
 
-カレンダータブで「2026年10月」の月表示が開くことを確認。
+カレンダータブで「2026年10月」の月表示が開くことを確認。月カレンダーの padding の変更後も 7 列が見切れずに並ぶ。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/7fb71210-c6ac-404e-9798-5ab4d46de63f-calendar-top.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/5f870277-4242-42e0-9992-e7930b56fcf8-cal-top.png" width="320">
 
 </details>
 
@@ -42,11 +42,11 @@ last_verified_at: 2026-10-09
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-10-05**
+**確認日: 2026-10-15**
 
-当日 (10/5) のセルが丸背景でハイライトされることを確認 (上と同じスクショ)。
+当日 (10/15) のセルが丸背景でハイライトされることを確認 (上と同じスクショ)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/7fb71210-c6ac-404e-9798-5ab4d46de63f-calendar-top.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/5f870277-4242-42e0-9992-e7930b56fcf8-cal-top.png" width="320">
 
 </details>
 
@@ -54,11 +54,11 @@ last_verified_at: 2026-10-09
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-10-05**
+**確認日: 2026-10-15**
 
-右矢印のタップで 10 月 → 11 月 → 12 月に切り替わりタイトルが「2026年12月」になること、左スワイプ・右スワイプでも月が切り替わることを確認。
+右矢印で「2026年11月」に切り替わり (1 枚目)、右へのスワイプで「2026年10月」に戻る (2 枚目) ことを確認。11 月には「新しいピルシート開始」の帯が週の行に収まって表示される。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/c7df9597-2887-4944-be08-f714e27ce90d-calendar-dec.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/1581d857-6f35-4648-ba5a-844393ad0a57-cal-nav-compare.png" width="640">
 
 </details>
 
@@ -77,6 +77,17 @@ last_verified_at: 2026-10-09
 ### **記録アイコン表示**: 日記で体調（良い＝笑顔／悪い＝怒り顔）・セックス・症状・メモを記録した日、または予定を登録した日は、日付下にそれぞれ対応するアイコンが表示される
 
 <details><summary>動作確認スクショ</summary>
+
+**確認日: 2026-10-15**
+
+予定を登録した 10/20 に時計のアイコン (1 番目の画像の 3 枚目)、体調「悪い」の日記を記録した 10/15 に怒り顔のアイコン (2 番目の画像の 2 枚目)、体調「良い」の日記を記録した 10/16 に笑顔のアイコン (3 番目の画像の 2 枚目) が表示されることを確認 (10/16 の確認は 2026-10-16)。セックス・症状・メモのアイコンは今回は記録しておらず、2026-10-05 の確認のまま。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/5be0bfaa-790f-43ad-9493-467936e43bfb-ev-cal-future.png" width="640">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/5639eeb4-8a96-4343-9793-06635b94b7ea-ev-cal-diary.png" width="640">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/86783791-0f00-4fc5-ab21-52a373f3f63d-ev-cal-good.png" width="640">
+
+
+前回の記録 (今回操作していない部分の証跡として残す):
 
 **確認日: 2026-10-05**
 
@@ -108,11 +119,11 @@ last_verified_at: 2026-10-09
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-10-05**
+**確認日: 2026-10-15**
 
-未来日の 10/10 をタップすると予定登録画面「2026年10月10日」に直接遷移することを確認。
+未来日 (10/20) をタップすると「2026年10月20日」の予定登録画面に直接遷移し (1 枚目)、「QA通院」を入力して保存すると (2 枚目) カレンダーの 10/20 にアイコンが付く (3 枚目)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/78c92407-4df7-4694-a838-707e35c799e5-calendar-future-tap.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/5be0bfaa-790f-43ad-9493-467936e43bfb-ev-cal-future.png" width="640">
 
 </details>
 
@@ -120,11 +131,11 @@ last_verified_at: 2026-10-09
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-10-05**
+**確認日: 2026-10-15**
 
-未記録の当日 (10/5) をタップすると日記投稿画面 (新規作成) に遷移することを確認。
+記録の無い過去日 (10/13) をタップすると「2026年10月13日」の日記投稿画面 (新規作成) に遷移する (左)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/f5c98fbe-f1ab-47a7-b9fb-eb1888b40305-calendar-today-tap.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/e32ba81e-139e-47b5-b092-7fddf89e6c6f-cal-past-history.png" width="640">
 
 </details>
 
@@ -140,11 +151,11 @@ last_verified_at: 2026-10-09
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-10-05**
+**確認日: 2026-10-15**
 
-日記を保存した 10/5 をタップすると、体調・頭痛・sex・メモを表示する日記確認シート (編集・削除アイコン付き) が表示されることを確認。
+体調「悪い」だけの日記を記録した 10/15 をタップすると、日付・体調アイコンと編集・削除のアイコンを持つ日記確認シートが表示される (3 枚目)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/dc1eb9a1-60f6-46b3-b512-8b2a9f921424-calendar-diary-sheet.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/5639eeb4-8a96-4343-9793-06635b94b7ea-ev-cal-diary.png" width="640">
 
 </details>
 
@@ -171,6 +182,15 @@ last_verified_at: 2026-10-09
 ### **FABタップで当日の日記作成/編集**: 右下の＋ボタン（FloatingActionButton）をタップすると当日日付の日記投稿画面に遷移する。当日分の日記が既に存在する場合は既存内容が反映された編集状態で開く
 
 <details><summary>動作確認スクショ</summary>
+
+**確認日: 2026-10-15**
+
+右下の＋ボタンで当日 (2026年10月15日) の日記投稿画面が開き (1 枚目)、体調「悪い」を選んで保存するとカレンダーの 10/15 にアイコンが付く (2 枚目)。既存の日記がある日の編集状態は今回は開いておらず、2026-10-05 の確認のまま。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/5639eeb4-8a96-4343-9793-06635b94b7ea-ev-cal-diary.png" width="640">
+
+
+前回の記録 (今回操作していない部分の証跡として残す):
 
 **確認日: 2026-10-05**
 
@@ -199,11 +219,11 @@ last_verified_at: 2026-10-09
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-10-05**
+**確認日: 2026-10-15**
 
-「10月」のヘッダーの下にピル番号変更・服用お休み期間変更・服用再開・服用お休み・ピルシートを追加の履歴が並ぶことを確認。
+カレンダー下部の「服用履歴」カードに「10月」のヘッダーで、ピル番号変更・服用取り消し・服用 (時刻と○)・ピルシートを追加の 6 件が並ぶ (右)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/2478fdef-c5ae-40e4-9416-f2865cf61dd2-calendar-history-card.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/e32ba81e-139e-47b5-b092-7fddf89e6c6f-cal-past-history.png" width="640">
 
 </details>
 
@@ -249,11 +269,11 @@ last_verified_at: 2026-10-09
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-10-08**
+**確認日: 2026-10-16**
 
-「トライアル解除」後の無料ユーザーで 2026 年 10 月から 4 か月先の 2027 年 2 月までページングすると、カレンダー全体にぼかし + 🔒 + 「これ以上の閲覧はプレミアム機能になります」+「くわしくみる」のオーバーレイが表示されることを確認。「くわしくみる」で開くプレミアム紹介シートは「服薬履歴カードのロック表示」と同じ。
+「トライアル解除」後の無料ユーザーで、2027年1月 (当月から 3 か月先) は表示され (3 枚目)、2027年2月 (4 か月先) でカレンダー全体にぼかし + 🔒 + 「これ以上の閲覧はプレミアム機能になります」+「くわしくみる」が表示される (4 枚目)。「くわしくみる」で開くプレミアム紹介シートは下の項目と同じ (2 枚目)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/ad96c9d9-05e4-4e3c-836a-6ab4ceec5bc4-free-calendar-month-lock.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/217ab56c-f63f-4000-bfea-c09437611178-free-cal-compare-crop.png" width="640">
 
 </details>
 
@@ -261,12 +281,11 @@ last_verified_at: 2026-10-09
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-10-08**
+**確認日: 2026-10-16**
 
-無料ユーザーで「服用履歴」カードのタイトル横に Premium バッジ、リスト部分にぼかし + 🔒 + 「服用履歴はプレミアム機能です」+「くわしくみる」がカード内に収まって表示されること (1 枚目)、「くわしくみる」でプレミアム紹介シートが開くこと (2 枚目) を確認。
+無料ユーザーで「服用履歴」カードのタイトル横に Premium バッジ、リスト部分にぼかし + 🔒 + 「服用履歴はプレミアム機能です」+「くわしくみる」が表示され (1 枚目)、「くわしくみる」でプレミアム紹介シートが開く (2 枚目)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/d44512d4-5988-4ff4-8432-3b4589b60112-free-calendar-history-lock.png" width="320">
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/8e194ba7-96fb-482c-8650-2462e4a579aa-free-calendar-history-premium-sheet.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/217ab56c-f63f-4000-bfea-c09437611178-free-cal-compare-crop.png" width="640">
 
 </details>
 

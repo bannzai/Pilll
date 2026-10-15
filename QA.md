@@ -1,8 +1,8 @@
 ---
 feature: _root
 verification: mobile-mcp
-last_verified_commit: 3d7b46367facd1d3b1d350904eb1af1c26276d58
-last_verified_at: 2026-10-09
+last_verified_commit: bcd2fac96e0c1d1565bff72e4ae41c96a6a65689
+last_verified_at: 2026-10-16
 ---
 
 # QA 全体ガイド
@@ -35,11 +35,13 @@ last_verified_at: 2026-10-09
 - Apple / Google アカウントとの連携（`lib/features/sign_in/sign_in_sheet.dart`）を確認する場合は、実機・シミュレータにサインイン済みの Apple ID / Google アカウントを使う。テストアカウントの認証情報はここに書かない（必要な場合はパスワードマネージャ等の参照のみとし、担当者に確認する）
 - dev ビルドには開発者専用の「アカウント削除」「サインアウト」操作がある（`lib/main.dev.dart` の `Environment.deleteUser` / `Environment.signOutUser`、設定画面から呼び出し）。ログイン状態をリセットして初期設定フローから QA したい場合はこれを使う
 - dev ビルドの設定画面「開発者オプション」に「トライアル解除」がある（`lib/features/settings/components/rows/end_trial_for_debug.dart`）。タップすると Firestore の `trialDeadlineDate` が過去日・`isTrial` が false に更新され、無料ユーザー（非トライアル）限定のロック UI・プレミアム訴求の QA ができる。匿名アカウントは新規登録時に自動でトライアル状態になるため、無料ユーザー向け表示を確認する項目ではこれを使う
-- アプリをアンインストールして再インストールしても、同じ匿名アカウントで起動し Firestore のデータ（ピルシート・トライアル解除の状態）がそのまま復元される。初期設定フローは再表示される（2026-10-08 に `xcrun simctl uninstall` → `install` → 起動で実測。横断確認項目「サインアウト/再起動後の復元」のスクショ）。新しいアカウントで始めたい時は再インストールではなく開発者専用の「アカウント削除」を使う
+- アプリをアンインストールして再インストールしても、同じ匿名アカウントで起動し、Firestore のデータは復元される。初期設定フローは再表示され、通し直すとトライアル状態も付き直ることがある。新しいアカウントで始めたい時は再インストールではなく開発者専用の「アカウント削除」を使う
+  - 2026-10-08: `xcrun simctl uninstall` → `install` → 起動で、同じ匿名アカウントで起動し Firestore のデータ（ピルシート・トライアル解除の状態）がそのまま復元された
+  - 2026-10-16: 同じ手順 (トライアル解除済みのアカウント) で初期設定を通し直すと、設定画面に「機能無制限の期間について」の行があり、トライアル中になっていた。再インストール前に記録した 10/15 の日記と 10/20 の予定はカレンダーに残っていたため、アカウントは同じで、トライアル状態だけが付き直ったと考えられる (付き直る条件は未確認)
 
 ## 動作確認手段
 
-- iOS シミュレータの起動・管理: `/sim-manager`（`sim-boot` / `sim-list` / `sim-shutdown`）。`sim-boot` は毎回 `SIMSLIM_EXCEPT=store,health,icloud` を指定する（`SIMSLIM_EXCEPT=store,health,icloud sim-boot`）。`health` が無いと「ヘルスケア連携」の許可シートがタップに反応せず、`icloud` が無いと Apple 連携と StoreKit の購入ボタンが OS のサインインダイアログに到達せずに即座に失敗する（2026-07-06 の記録にあった「HealthKit 許可シートが反応しない」事象は health カテゴリの無効化が原因だった）
+- iOS シミュレータの起動・管理: `/sim-manager`（`sim-boot` / `sim-list` / `sim-shutdown`）。`sim-boot` は毎回 `SIMSLIM_EXCEPT=store,health,icloud,widgets` を指定する（`SIMSLIM_EXCEPT=store,health,icloud,widgets sim-boot`）。ホーム画面 Widget の確認では `widgets` も残す (2026-10-15 はこの指定でホーム画面に Widget を追加して表示を確認できた)。`health` が無いと「ヘルスケア連携」の許可シートがタップに反応せず、`icloud` が無いと Apple 連携と StoreKit の購入ボタンが OS のサインインダイアログに到達せずに即座に失敗する（2026-07-06 の記録にあった「HealthKit 許可シートが反応しない」事象は health カテゴリの無効化が原因だった）
 - シミュレータ上での UI 操作・スクリーンショット確認: `/verify-ui-mobile-mcp`（mobile-mcp 経由）
 - QA.md に基づく一連の動作確認の実行・記録: `/run-qa`
 - Maestro E2E フロー（`.maestro/` 配下）がある場合は `/maestro-flutter` を併用する
@@ -63,15 +65,22 @@ last_verified_at: 2026-10-09
 
 ### iPhone Duo（iOS 27.1）の外側・内側ディスプレイを確認する（2026-10-10）
 
-- 起動は `SIM_DEVICE_TYPE="iPhone Duo" SIMSLIM_EXCEPT=store,health,icloud sim-boot`（iOS 27.1 のランタイムは iPhone Duo だけが対応）。姿勢の切り替えと撮影は ios-simulator skill Phase 2「折りたたみ端末の外側・内側ディスプレイを切り替える」に従う（`duo-pose.sh set --udid <UDID> open|closed`、内側は `xcrun simctl io <UDID> screenshot --display=primary-1`）
+- 起動は `SIM_DEVICE_TYPE="iPhone Duo" SIMSLIM_EXCEPT=store,health,icloud,widgets sim-boot`（iOS 27.1 のランタイムは iPhone Duo だけが対応）。姿勢の切り替えと撮影は ios-simulator skill Phase 2「折りたたみ端末の外側・内側ディスプレイを切り替える」に従う（`duo-pose.sh set --udid <UDID> open|closed`、内側は `xcrun simctl io <UDID> screenshot --display=primary-1`）
 - 外側ディスプレイでは OS が画面右端の約 84pt の列を占有し、SafeArea の右 inset になる。`MediaQuery.of(context).size.width`（画面全体の幅）を使った幅の計算は SafeArea 内の実際の幅とずれるため、`LayoutBuilder` の幅を使う（2026-10-10 に直した箇所: ピルシートの PageView、カレンダーの帯、設定の「ピルシートグループの自動追加」、初期設定後のプレミアム紹介）
-- iOS 27.1 では `NSUserDefaults` に `NSNull` を書くと例外になる。`home_widget` の `saveWidgetData` に null を渡すと落ちるため、`lib/native/widget.dart` の `saveWidgetDataOrRemove` を経由する
+- 閉じた姿勢の外側ディスプレイは `xcrun simctl io <UDID> screenshot --display=primary` と明示して撮る。2026-10-16 (Xcode 27.1 27A9275) には `--display` を省くと、閉じた姿勢でも真っ黒な内側ディスプレイ (2007×2853 px) が撮れた
+- iOS 27.1 では `NSUserDefaults` に `NSNull` を書くと例外になる。`home_widget` は 0.10.0 から null をキーの削除として扱うため (https://github.com/ABausG/home_widget/pull/450 )、`lib/native/widget.dart` は null をそのまま `saveWidgetData` に渡している。`home_widget` を 0.10.0 より前に戻すと Widget の値の同期で落ちる
 
 ### 通知のアクション（「飲んだ」）を Simulator で確認する（2026-10-10）
 
 - 通知時刻を待たずに `xcrun simctl push <UDID> <ペイロードの JSON>` で通知を届ける。ペイロードは `{"Simulator Target Bundle": "com.mizuki.Ohashi.Pilll.dev", "aps": {"alert": {"title": "💊の時間です", "body": "..."}, "category": "PILL_REMINDER", "sound": "default"}}`。`category` を `PILL_REMINDER` にすると `AppDelegate.swift` の `configureNotificationActionableButtons` が登録した「飲んだ」のアクションが出る
 - 終了状態からの確認は `xcrun simctl terminate` で止めてから push し、ロック画面の通知を mobile-mcp で長押し（約 800ms）して「飲んだ」をタップする。結果は `xcrun simctl spawn <UDID> log show --last 2m --predicate 'process == "Runner"'` の `handle_recordPill_method_channel` と `quick_recorded` で確認する（アプリは前面に出ない）
+- 通知本体のタップで起動する確認は、ホーム画面を表示した状態で push し、画面上部に出たバナーをタップする。ロック画面・通知センターに溜まった通知のタップは、mobile-mcp と Maestro のどちらでもアプリが起動しなかった（2026-10-15）
+- 通知時刻の到達は、設定の「通知時間」で通知1 を 2〜3 分後にしてホーム画面で待つ。待つ間はバックグラウンドのコマンドで指定の時刻を過ぎてから `xcrun simctl io` で撮る
 - Simulator では画面を開かない通知アクションでも `UIWindowScene` が接続されて画面の Flutter エンジンが初期化されるため、scene が接続されない時に起動する headless エンジン（`AppDelegate.swift` の `startHeadlessEngineIfNeeded`）の経路は Simulator では通らない
+
+### ホーム画面 Widget を追加する（2026-10-15）
+
+`SIMSLIM_EXCEPT` に `widgets` を入れて起動し、ホーム画面のアプリのアイコン (Pilll-dev) を長押しして出るメニューの上段のサイズ (小) をタップすると Widget がホーム画面に追加される。
 
 ### mobile-mcp のタップがボトムシートの下に抜ける（2026-10-08）
 
@@ -79,7 +88,7 @@ last_verified_at: 2026-10-09
 
 ## 横断確認項目
 
-確認環境 (2026-10-05 と 2026-10-08 の記録): iPhone 16 Pro シミュレータ (iOS 27.0、ローカル sim-boot、`SIMSLIM_EXCEPT=store,health,icloud`) の dev ビルド (commit 75c754dd72 を Xcode 26.5 でビルド。`lib/features` は HEAD と同一)。
+確認環境 (2026-10-15〜16 の記録): iPhone 16 Pro シミュレータ (iOS 27.0、ローカル sim-boot、`SIMSLIM_EXCEPT=store,health,icloud,widgets`) と iPhone Duo シミュレータ (iOS 27.1) の dev ビルド (HEAD を Flutter 3.44.9・Xcode 27.1 でビルド)。確認日が 2026-10-05・2026-10-08 の項目 (Apple/Google 連携の導線) は、前回 (commit 75c754dd72 を Xcode 26.5 でビルド) の記録のまま。
 
 ## 1. 起動・アカウント
 
@@ -100,11 +109,11 @@ last_verified_at: 2026-10-09
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-10-08**
+**確認日: 2026-10-15**
 
-アプリをアンインストールしてから再インストールして起動すると、認証情報の入力なしにサインインされ初期設定フロー（1/3「処方されるシートについて教えてください」）に進むことを確認。再インストールではキーチェーンの認証情報から既存の匿名アカウントが復元されるため、新規の匿名アカウントが作られる経路（開発者専用の「アカウント削除」の後の起動）は本ラウンドでは確認していない。
+iPhone 16 Pro シミュレータ (iOS 27.0、`SIMSLIM_EXCEPT=store,health,icloud,widgets`) に、HEAD を Flutter 3.44.9・Xcode 27.1 でビルドした dev ビルドを新規インストールして起動すると、通知許可のダイアログ (1 枚目) の後、認証情報の入力なしに初期設定 1/3 に進む (2 枚目)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/b661ac29-e131-4a10-acd4-d671d357d0bd-root-initial-setting-1.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/f0a518cc-e9be-4e8a-a65f-41eb16e3c003-ev-root-launch.png" width="640">
 
 </details>
 
@@ -112,11 +121,11 @@ last_verified_at: 2026-10-09
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-10-08**
+**確認日: 2026-10-15**
 
-1/3 でピルの種類を選択 → 次へ → 2/3「まだ分からない」→ 3/3 次へ → 「アプリをはじめる」でホーム画面に到達し、ピルシートが表示されることを確認。再インストールのため匿名アカウントが復元され、表示されたのは既存のピルシートグループで、初期設定で選んだピルの種類から新しいグループが作られる経路は本ラウンドでは確認していない（新規アカウントでの初期設定は `lib/features/initial_setting/QA.md` の記録を参照）。
+1/3 でピルシートを 3 枚 (28錠4錠偽薬・21錠・21錠) 選び、2/3 で 10 番、3/3 で通知時刻を設定して「アプリをはじめる」をタップすると、ホーム画面に「今日飲むピル 10番」のピルシートが表示される (3 枚目)。手順の詳細は `lib/features/initial_setting/QA.md`。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/43fd250f-9341-4d4a-a229-a0654c97525a-root-home-after-reinstall.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/f0a518cc-e9be-4e8a-a65f-41eb16e3c003-ev-root-launch.png" width="640">
 
 </details>
 
@@ -140,12 +149,11 @@ last_verified_at: 2026-10-09
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-10-08**
+**確認日: 2026-10-15**
 
-アプリを完全終了して再起動しても匿名ログイン状態・ピルシート・服用記録が保持されたままホーム画面に到達すること（1 枚目、2026-10-05）、アンインストールして再インストールした後もキーチェーンの認証情報から同じアカウントで起動し、Firestore のデータ（34 日目まで服用済みのグループ）が復元されること（2 枚目、2026-10-08）を確認。
+`xcrun simctl terminate` でアプリを終了してから起動し直すと (通知のタップで起動)、匿名ログイン状態のまま、10/15 の服用済みの記録が残ったホーム画面が表示される (2 枚目)。再インストールの後の挙動は「ログイン方法」節の注記を参照。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/79ff4085-a304-4451-b7f8-86a8e5238b96-root-relaunch.png" width="320">
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/43fd250f-9341-4d4a-a229-a0654c97525a-root-home-after-reinstall.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/28af91dc-5ffe-41b0-9a82-0064d1973776-ev-root-notif-tap.png" width="640">
 
 </details>
 
@@ -154,8 +162,7 @@ last_verified_at: 2026-10-09
 ## 2. 通知・権限
 
 - [x] **通知権限許可**: 初回起動時またはリマインダー設定時に通知許可ダイアログが表示され、許可するとリマインダー通知が有効になる
-- [ ] **服用リマインダー通知**: 設定した時刻にローカル通知（`flutter_local_notifications`）が届き、通知から服用記録ができる
-  - ⏭️ スキップ: 本ラウンドでは通知時刻まで待つ確認を行っていない（2026-07-06 にロック画面通知「💊の時間です」とアイコンバッジの到達を確認済み）。通知の登録処理 `lib/utils/local_notification.dart` は前回の確認の後に 1 日 2 回服用 (`pillTakenCount`) に対応する変更が入っているため、再確認が要る項目として残す。mobile-mcp では通知時刻のピッカーを狙った時刻に合わせられず（通知の追加は既定の時刻になる）、通知到達の確認を本ラウンドで実施できなかった。「通知から服用記録ができる」部分は 2026-10-10 に Simulator で `xcrun simctl push` を使って確認した (下のエビデンス)。通知時刻の到達と、scene が接続されない実機の終了状態からの通知アクション (headless の Flutter エンジンの経路) は未確認
+- [x] **服用リマインダー通知**: 設定した時刻にローカル通知（`flutter_local_notifications`）が届き、通知から服用記録ができる
 
 #### 動作確認
 <details>
@@ -165,11 +172,11 @@ last_verified_at: 2026-10-09
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-10-08**
+**確認日: 2026-10-15**
 
-再インストール後の初回起動で初期設定画面の上に通知許可ダイアログが表示され、「許可」の後に初期設定フローへ進むことを確認。設定画面の「ピルの服用通知」が ON になっている（`lib/features/settings/QA.md` の「服薬リマインダーのON/OFF」）。
+新規インストール後の初回起動で通知許可ダイアログが表示され (1 枚目)、「許可」の後に初期設定フローへ進む (2 枚目)。許可した後は設定した時刻に通知が届いた (下の「服用リマインダー通知」)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/a3fe9c22-77ad-49c6-9cf7-3da13d73291e-root-notification-permission.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/f0a518cc-e9be-4e8a-a65f-41eb16e3c003-ev-root-launch.png" width="640">
 
 </details>
 
@@ -177,20 +184,15 @@ last_verified_at: 2026-10-09
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-06**
+**確認日: 2026-10-15**
 
-設定→通知時間で通知1を11:50に変更し、実機時刻が11:50になった時点でロック画面通知「💊の時間です」とアプリアイコンの通知バッジが表示されることを確認（通知到達は確認済み）。
+設定の「通知時間」で通知1 を 04:51 にしてホーム画面で待つと、04:51 に「💊 10/15 (木) 10番 Local」の通知がバナーで届いた (1 枚目)。1 日 2 回服用の対応で変わった `lib/utils/local_notification.dart` で、1 日 1 回のシートの通知が届くことを確かめた。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/536e1a73-63e8-473b-8547-253f81cc7292.png" width="320">
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/94f170f0-50b4-4e42-a751-4beeb43942f5.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/4f31bca6-c01c-4cd2-b75b-4ef2ccc63c0d-root-reminder-arrived.png" width="320">
 
-⏭️ スキップ: 2026-10 のラウンドでは再確認していない（チェックリスト側を参照）
+通知から服用記録: アプリを `xcrun simctl terminate` で終了してから `category` が `PILL_REMINDER` の通知を `xcrun simctl push` で届け、バナーを長押しして出る「飲んだ」を押すと (1 枚目)、`log show` に `handle_recordPill_method_channel` (04:45:44) → `quick_recorded` (04:45:51) が出て、開いた記録画面の今日の番号が服用済み (ボタンが「飲んでない」) になっていた (2 枚目)。Simulator では通知のアクションでも `UIWindowScene` が接続されるため、scene が接続されない時の headless の Flutter エンジンの経路 (実機だけで通る) はこの確認には含まれない。
 
-**確認日: 2026-10-10 (通知から服用記録ができる部分のみ)**
-
-iPhone 17 Pro (iOS 27.0) の Simulator で dev ビルド (Xcode 27.1・UIScene 移行後) のアプリを `xcrun simctl terminate` で終了し、`xcrun simctl push` で `category` が `PILL_REMINDER` の通知を届けて、通知を長押しして出る「飲んだ」を押した。アプリを開かない手順 1 回と、押した直後にアプリを開く手順 3 回のいずれも、アプリが起動して Dart の `recordPill` が実行され (`log show` に `handle_recordPill_method_channel` → `quick_recorded`)、記録画面の今日の番号が服用済み (ボタンが「飲んでない」) になり、クラッシュレポートは増えなかった。Simulator では画面を開かない通知アクションでも `UIWindowScene` が接続されて画面の Flutter エンジンが先に初期化されるため、scene が接続されない時に起動する headless エンジンの経路は Simulator では通らない (実機でのみ確認できる)。push 用のペイロードは `{"Simulator Target Bundle": "<bundle id>", "aps": {"alert": {...}, "category": "PILL_REMINDER"}}` の JSON ファイル。
-
-<img alt="通知の「飲んだ」の後に開いた記録画面。今日の番号が服用済みで、ボタンが「飲んでない」になっている" src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/09/c0008350-9f8f-4730-81cc-481b59649bb3-quick-record-from-terminated.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/086c76fb-9d97-473f-9aee-c47bddd39fff-ev-root-notif-action.png" width="640">
 
 </details>
 
@@ -214,11 +216,11 @@ iPhone 17 Pro (iOS 27.0) の Simulator で dev ビルド (Xcode 27.1・UIScene �
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-10-05**
+**確認日: 2026-10-15〜16**
 
-設定画面「プレミアムプランを見る」から `premium_introduction` のシートが開き、月額/年額/買い切りプランと価格が表示されることを確認（価格は StoreKit テスト環境のため USD 表記）。
+設定画面「プレミアムプランを見る」から `premium_introduction` のシートが開き、月額 $2.99・年額 $27.49・買い切り $69.99 のプランと価格が表示される (StoreKit テスト環境のため USD 表記)。「トライアル解除」後の無料ユーザーでは、ホーム画面のバーが「プレミアム登録で引き続きすべての機能が利用できます」と割引の残り時間に変わる (`lib/features/settings/QA.md` の「ピルシート破棄」の画像の 3 枚目。ピルシートを破棄した後の記録画面の上部に出ているバー)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/7f9c0b3a-1b99-4378-9e57-41fcdf139dc0-premium-sheet.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/8f8d2d44-fa21-4f80-acbc-11e861260304-st-premium-sheet-top.png" width="320">
 
 </details>
 
@@ -226,11 +228,11 @@ iPhone 17 Pro (iOS 27.0) の Simulator で dev ビルド (Xcode 27.1・UIScene �
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-10-08**
+**確認日: 2026-10-16**
 
-開発者オプション「トライアル解除」で無料ユーザーにした後、「ピルシートグループの自動追加」のトグルをタップすると ON にならずプレミアム紹介シートが表示されることを確認。カレンダーの月ロック・履歴カードのロック、記録画面の日付表示の制限も同じ状態で確認した（各 feature の QA.md）。
+開発者オプション「トライアル解除」で無料ユーザーにした後、「ピルシートグループの自動追加」のトグルをタップすると ON にならずプレミアム紹介シートが表示される。カレンダーの月ロック・服用履歴のロック、生理履歴の平均値の🔒、機能紹介の HelpPage の「確認する」のペイウォールも同じ状態で確認した (各 feature の QA.md)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/34466766-1aab-4bc7-a122-45376985ad33-free-settings-autoadd-premium.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/ef0bef43-25ce-4c5e-9364-b0b957802010-free-autoadd-compare-crop.png" width="640">
 
 </details>
 
@@ -259,12 +261,11 @@ iPhone 17 Pro (iOS 27.0) の Simulator で dev ビルド (Xcode 27.1・UIScene �
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-10-05**
+**確認日: 2026-10-15**
 
-「飲んだ」で 1 番にチェックが付き「飲んでない」に切り替わること、「飲んでない」で取り消されて元に戻ることを確認（`lib/features/record/QA.md` の「服用ボタンで記録」「シート上マーク直接タップで服用/取消」）。
+「飲んだ」で今日 (10/15) の番号にチェックが付きボタンが「飲んでない」に切り替わり (1 枚目)、「飲んでない」で取り消されて元に戻る (2 枚目)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/85c00f7d-4eb4-40b8-ad2b-d9d81313f2e6-record-midnight-4.png" width="320">
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/579e051c-4dcb-4037-bf45-d5b936b42618-record-tap-revert.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/7e1a630a-f18d-4538-b068-a0c345de2cc9-ev-root-record.png" width="640">
 
 </details>
 
@@ -272,12 +273,12 @@ iPhone 17 Pro (iOS 27.0) の Simulator で dev ビルド (Xcode 27.1・UIScene �
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-10-05**
+**確認日: 2026-10-15**
 
-生理タブの「生理を記録」で 10/5 開始の生理が記録され「1日目」が表示されること（1 枚目）、「生理期間を編集」で期間を延ばすと週表示の帯が伸びること（2 枚目）を確認。
+生理タブの「生理を記録」→「今日から生理」で 10/15 開始の生理が記録され「1日目」が表示され (上の画像の 3 枚目)、「生理期間を編集」で 10/13-10/16 に変えると「生理期間を編集しました」が表示されて週表示の帯が変わる (下の画像の 4 枚目)。詳細は `lib/features/menstruation/QA.md`。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/20d3b099-ab9c-4d28-9e0e-63185c09b5ce-root-menstruation-recorded.png" width="320">
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/08/4904e22d-0462-4517-8a5c-bfbf450b2c57-root-menstruation-edited.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/cb0b4f7c-e004-4dea-9bc8-667226078cfd-ev-mn-record.png" width="640">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/588fa1a0-b318-4dac-a0c8-a3b1a9b23437-ev-mn-edit.png" width="640">
 
 </details>
 
@@ -291,18 +292,76 @@ iPhone 17 Pro (iOS 27.0) の Simulator で dev ビルド (Xcode 27.1・UIScene �
 <details>
 <summary>動作確認エビデンス</summary>
 
-### **外側・内側ディスプレイで主要画面が崩れない**
+### **外側・内側ディスプレイで主要画面が崩れない**: iPhone Duo（iOS 27.1）の Simulator で、閉じた姿勢（外側）・開いた姿勢（内側）・閉じ直した姿勢の順に主要画面（初期設定 1/3〜3/3・プレミアム紹介・記録・ピルシートの設定シート・生理・生理を記録シート・カレンダー・日記の投稿・設定・ピル番号の変更・プレミアムプランのシート・買い切りオファー）を撮り、見切れ・重なり・固定幅による偏り・サイドバー化が無い
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-10-10**
+**確認日: 2026-10-16**
 
-Xcode 27.1 (27A9275) でビルドした dev ビルド (commit 6a7e22d7fa) を iPhone Duo の Simulator (`pilll-issue-1899-iOS27.1`、ローカル sim-boot、`SIMSLIM_EXCEPT=store,health,icloud`) に入れ、上の全画面を 3 姿勢で撮った。崩れていた 4 種類 (ピルシートの PageView・カレンダーの帯・プレミアム紹介の画像・設定の自動追加の行) は同じ commit で直し、直した後の表示を確認した。全画面の画像と修正前後の比較は https://github.com/bannzai/Pilll/pull/1900 の表を参照。1 枚目は初期設定 2/3 の外側、2 枚目は同じ画面の内側、3 枚目はカレンダー 11 月の外側、4 枚目は同じ画面の内側。
+HEAD を Flutter 3.44.9・Xcode 27.1 (27A9275) でビルドした dev ビルドを iPhone Duo の Simulator (`pilll-issue-497-iOS27.1`、ローカル sim-boot) に入れ、2026-10-10 に崩れを直した 4 画面 (初期設定 2/3 のピルシートの PageView・プレミアム紹介の画像・設定の自動追加の行・カレンダー 11 月の帯) を、閉じた姿勢 (外側)・開いた姿勢 (内側)・閉じ直した姿勢の順に撮った (各画像の左から順)。見切れ・重なり・固定幅による偏りは無かった。他の画面は 2026-10-10 の記録のまま (commit 6a7e22d7fa、全画面の画像は https://github.com/bannzai/Pilll/pull/1900 の表)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/09/8a696da2-1c3e-44c3-aa62-bae0d7cdeec7-duo-after-initial-setting-2-outer.png" width="320">
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/09/26a2e83e-fbe7-4173-bdb2-c3c7a6cfb880-duo-after-initial-setting-2-inner.png" width="480">
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/09/e5956afc-db0e-4c03-9d18-bc0ff6cd291f-duo-after-calendar-november-outer.png" width="320">
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/09/2a9b628f-7819-42e0-9d6c-518395ef3d47-duo-after-calendar-november-inner.png" width="480">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/fae23b1c-d927-4c36-9fd4-139991c172b0-duo-initial-2.png" width="640">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/0bbea126-4545-4a82-b468-f52751063b9b-duo-premium-intro.png" width="640">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/0edcca11-25b4-4692-ad00-d1a9b10a6cd8-duo-settings-autoadd.png" width="640">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/b03154f6-8eb5-445c-837c-7b0b4956ca80-duo-calendar-nov.png" width="640">
+
+</details>
+
+</details>
+
+## 6. アプリのライフサイクル・ホーム画面 Widget
+
+- [x] **バックグラウンドからの復帰**: 記録画面を開いた状態でホーム画面に戻し、アプリを開き直すと、同じ画面・状態のまま表示され、白画面やクラッシュにならない
+- [x] **終了状態から通知バナーのタップで起動**: アプリを終了した状態で届いた服用リマインダー通知を、画面上部のバナーの本体でタップすると、アプリが起動して記録画面が表示される
+- [ ] **終了状態から通知センターの通知のタップで起動**: アプリを終了した状態で届き通知センター (ロック画面) に溜まった服用リマインダー通知をタップすると、アプリが起動して記録画面が表示される
+  - ⏭️ スキップ: 2026-10-15 に Simulator で、通知センターに溜まった通知を mobile-mcp のタップ・Maestro の `tapOn` のどちらでタップしてもアプリが起動しなかった。同じ通知をバナーでタップすると起動したため、Simulator の操作の制約か OS の挙動かを切り分けられていない
+- [x] **ホーム画面 Widget の表示**: ホーム画面に追加した Pilll の Widget (小) に今日のピル番号が表示され、アプリで服用記録すると「服用済み」とチェックの表示に変わる
+
+#### 動作確認
+<details>
+<summary>動作確認エビデンス</summary>
+
+### **バックグラウンドからの復帰**: 記録画面を開いた状態でホーム画面に戻し、アプリを開き直すと、同じ画面・状態のまま表示され、白画面やクラッシュにならない
+
+<details><summary>動作確認スクショ</summary>
+
+**確認日: 2026-10-15**
+
+ホーム画面に Widget を追加するために記録画面からホーム画面に戻し、アプリを開き直すと、同じ記録画面 (今日飲むピル 10番) のまま表示された。白画面にならず、`~/Library/Logs/DiagnosticReports` に Runner のクラッシュレポートは出ていない。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/d7b41b59-3f8e-47c5-8ef2-5579392262cb-root-resume.png" width="320">
+
+</details>
+
+### **終了状態から通知バナーのタップで起動**: アプリを終了した状態で届いた服用リマインダー通知を、画面上部のバナーの本体でタップすると、アプリが起動して記録画面が表示される
+
+<details><summary>動作確認スクショ</summary>
+
+**確認日: 2026-10-15**
+
+`xcrun simctl terminate` でアプリを終了してから `xcrun simctl push` で通知を届け (1 枚目は通知センターに溜まった同じ通知)、ホーム画面上部に出たバナーの本体をタップすると、アプリが起動して記録画面が表示された (2 枚目)。通知センターに溜まった通知のタップでは、mobile-mcp と Maestro のどちらでもアプリが起動しなかった (Simulator の操作の制約か OS の挙動かは切り分けていない)。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/28af91dc-5ffe-41b0-9a82-0064d1973776-ev-root-notif-tap.png" width="640">
+
+</details>
+
+### **ホーム画面 Widget の表示**: ホーム画面に追加した Pilll の Widget (小) に今日のピル番号が表示され、アプリで服用記録すると「服用済み」とチェックの表示に変わる
+
+<details><summary>動作確認スクショ</summary>
+
+**確認日: 2026-10-15**
+
+ホーム画面に Pilll-dev の Widget (小) を追加すると「15 木曜日 / 10番」が表示され (1 枚目)、アプリで「飲んだ」をタップした後 (2 枚目) にホーム画面に戻ると「10番 服用済み」とチェックの表示に変わった (3 枚目)。今日のピル番号を 12 番に変えた後は Widget も 12番になった (`lib/features/settings/QA.md` の「今日のピル番号変更」の 3 枚目)。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/e10de658-ed28-4e0c-a609-56c5e7911197-ev-root-widget.png" width="640">
+
+</details>
+
+### **終了状態から通知センターの通知のタップで起動**: アプリを終了した状態で届き通知センター (ロック画面) に溜まった服用リマインダー通知をタップすると、アプリが起動して記録画面が表示される
+
+<details><summary>動作確認スクショ</summary>
+
+⏭️ スキップ: 2026-10-15 に操作を試したが起動せず、原因を切り分けられていない (チェックリスト側を参照)。通知センターに溜まった通知は「終了状態から通知バナーのタップで起動」の画像の 1 枚目
 
 </details>
 
