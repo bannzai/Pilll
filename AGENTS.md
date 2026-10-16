@@ -36,10 +36,7 @@
 - Firebase の設定は `main.dev.dart` / `main.prod.dart` で環境が分かれている。
 
 ## issue の読み書き先
-このリポジトリ (bannzai/Pilll) は public で issue 機能が無効。issue は private の bannzai/PilllBackend で管理している。
-
-- 指示・skill に登場する issue のやりとり（作成・閲覧・コメント・ラベル操作など）は、すべて bannzai/PilllBackend の issue を読み書きする
-- `gh issue` 系コマンドは必ず `--repo bannzai/PilllBackend` を指定する
+issue はこのリポジトリ (bannzai/Pilll) で管理する。issue 機能を有効にする前の既存の issue は private の bannzai/PilllBackend にあり、参照する時は `#<番号>` に省略せず `bannzai/PilllBackend#<番号>` と書く。
 
 ------------------------------------
 
