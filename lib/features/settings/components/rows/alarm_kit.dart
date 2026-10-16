@@ -5,6 +5,8 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/features/premium_introduction/paywall_source.dart';
+import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/alarm_kit_service.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -23,12 +25,10 @@ class AlarmKitSetting extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final isAlarmKitAvailableFuture = useFuture(AlarmKitService.isAvailable());
-    final isAlarmKitAvailable = isAlarmKitAvailableFuture.data;
     final isLoading = useState(false);
 
     // AlarmKitが利用できない場合は何も表示しない
-    if (isAlarmKitAvailable != true) {
+    if (ref.watch(isAlarmKitAvailableProvider).asData?.value != true) {
       return const SizedBox.shrink();
     }
 
@@ -65,7 +65,10 @@ class AlarmKitSetting extends HookConsumerWidget {
               if (isLoading.value) {
                 return;
               }
+              // 無料ユーザーのタップは did_toggle_alarm_kit_setting を送らない。PilllBackend の feature_appeal_feature_usage.sql が enabled=true を機能の利用として数えるため。
+              // シートを開いたことは showPremiumIntroductionSheet の paywall_viewed で記録される
               if (!isPremium && !isTrial) {
+                showPremiumIntroductionSheet(context, source: PaywallSource.settingsAlarmKitRow);
                 return;
               }
 
