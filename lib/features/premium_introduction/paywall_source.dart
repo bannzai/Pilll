@@ -24,6 +24,7 @@ enum PaywallSource {
   settingsCreatingNewPillSheetRow,
   settingsQuickRecordRow,
   settingsReminderCustomizeRow,
+  settingsAlarmKitRow,
   featureAppealAlarmKit,
   featureAppealAppearanceMode,
   featureAppealCreatingPillSheet,
@@ -80,6 +81,8 @@ extension PaywallSourceFunction on PaywallSource {
         return 'settings_quick_record_row';
       case PaywallSource.settingsReminderCustomizeRow:
         return 'settings_reminder_customize_row';
+      case PaywallSource.settingsAlarmKitRow:
+        return 'settings_alarm_kit_row';
       case PaywallSource.featureAppealAlarmKit:
         return 'feature_appeal_alarm_kit';
       case PaywallSource.featureAppealAppearanceMode:
