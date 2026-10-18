@@ -1,8 +1,8 @@
 ---
 feature: premium_introduction
 verification: mobile-mcp
-last_verified_commit: 3d7b46367facd1d3b1d350904eb1af1c26276d58
-last_verified_at: 2026-10-09
+last_verified_commit: 50c48f6a598abc3f31b73f18708635107caed452
+last_verified_at: 2026-10-17
 ---
 
 # premium_introduction QA
@@ -36,7 +36,7 @@ last_verified_at: 2026-10-09
 
 **確認日: 2026-10-05**
 
-設定画面の「プレミアムプランを見る」からシートがモーダルで表示されることを確認。2026-10-08 には記録画面の表示モード・設定の自動追加トグル・カレンダーのロック表示の各経路からも同じシートが開くことを確認した (各 feature の QA.md を参照)。
+設定画面の「プレミアムプランを見る」からシートがモーダルで表示されることを確認。2026-10-08 には記録画面の表示モード・設定の自動追加トグル・カレンダーのロック表示の各経路からも同じシートが開くことを確認した (各 feature の QA.md を参照)。2026-10-17 には設定の「アラーム機能」を無料ユーザーがタップした経路からも同じシートが開くことを確認した (settings の QA.md の「無料ユーザーのアラーム機能」を参照)。
 
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/04/7f9c0b3a-1b99-4378-9e57-41fcdf139dc0-premium-sheet.png" width="320">
 

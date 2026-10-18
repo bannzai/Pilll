@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/services.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/utils/analytics.dart';
 
 /// AlarmKitの認証状態
@@ -25,6 +26,10 @@ enum AlarmKitAuthorizationStatus {
     }
   }
 }
+
+/// AlarmKitが利用可能かどうか。設定画面の「アラーム機能」の行の表示判定に使う。
+/// テストでは Platform.isIOS が false になり常に利用不可になるため、override できるよう Provider にしている。
+final isAlarmKitAvailableProvider = FutureProvider((ref) => AlarmKitService.isAvailable());
 
 /// AlarmKit機能へのアクセスを提供するサービスクラス
 ///
