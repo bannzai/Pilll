@@ -46,4 +46,4 @@ launched_at: 2018-07-29   # 公開日 (YYYY-MM-DD)。App Store の初回公開�
 
 ## agent に任せること
 
-文書に無い問いはすべて。issue の読み書き先は bannzai/PilllBackend (`AGENTS.md`「issue の読み書き先」)。Android (Google Play) の指標は計測元が castle の skill に無いため判定基準に含めず、揃った時に agent が行を足す。RevenueCat の課金指標 (アクティブなサブスクリプション数・MRR) は、`metrics/overview` を読める v2 API key が `.envrc` に入った時に agent が判定基準へ足す。
+文書に無い問いはすべて。issue の読み書き先は bannzai/Pilll (`AGENTS.md`「issue の読み書き先」)。Android (Google Play) の指標は計測元が castle の skill に無いため判定基準に含めず、揃った時に agent が行を足す。RevenueCat の課金指標 (アクティブなサブスクリプション数・MRR) は、`metrics/overview` を読める v2 API key が `.envrc` に入った時に agent が判定基準へ足す。
