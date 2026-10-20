@@ -186,6 +186,17 @@ final registerReminderLocalNotificationProvider = Provider(
   (ref) => RegisterReminderLocalNotification(ref),
 );
 
+/// 服用再開予定日(endDateが今日より後)ありの服用お休み中に、今日から服用再開予定日までの日数を返す
+/// 予定日より前のリマインドを飛ばす日数と、予定日以降のピル番号を今日の番号から数え直すずらし幅に使う
+/// 服用お休み中でない時と、服用再開予定日が無い時は0
+int restDaysUntilPlannedResumeFor({required RestDuration? activeRestDuration}) {
+  final endDate = activeRestDuration?.endDate;
+  if (endDate == null) {
+    return 0;
+  }
+  return daysBetween(today(), endDate);
+}
+
 // Reminder
 // 最新の状態を元に更新すれば良いので、更新処理に必要な状態はプロパティで持つ。このプロパティは通常ref.watchにより常に最新に保たれる
 // また、状態をcallの引数として受け取らないことで通常はSingle Stateであるものに対して間違った値を受け取れないようにする
@@ -277,9 +288,13 @@ class RegisterReminderLocalNotification {
     if (!setting.isOnReminder) {
       return;
     }
-    if (pillSheetGroup.lastActiveRestDuration != null) {
+    // 服用再開予定日(endDate)がある服用お休み中は、予定日以降のリマインドを登録するために早期returnしない
+    // 予定日が来ても登録しなおす契機(手動の服用再開)が無いため
+    final activeRestDuration = pillSheetGroup.lastActiveRestDuration;
+    if (activeRestDuration != null && activeRestDuration.endDate == null) {
       return;
     }
+    final restDaysUntilPlannedResume = restDaysUntilPlannedResumeFor(activeRestDuration: activeRestDuration);
 
     // AlarmKit使用判定
     final useAlarmKit = setting.useAlarmKit && await AlarmKitService.isAvailable();
@@ -308,6 +323,13 @@ class RegisterReminderLocalNotification {
       // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
       // ユーザーの何かしらのアクションでどこかでスケジュールされるだろう
       for (final dayOffset in List.generate(registerDays, (index) => index)) {
+        // 服用再開予定日より前の日はスキップする
+        if (dayOffset < restDaysUntilPlannedResume) {
+          continue;
+        }
+        // 服用お休み中はピル番号が止まっているので、服用再開予定日以降のピル番号は予定日を起点に数える
+        final pillDayOffset = dayOffset - restDaysUntilPlannedResume;
+
         // 本日服用済みの場合はスキップする
         if (dayOffset == 0 && todayPillAllTaken) {
           analytics.debug(
@@ -338,10 +360,10 @@ class RegisterReminderLocalNotification {
         }
 
         // 跨いでも1ピルシート分だけなので、今日の日付起点で考えて今処理しているループがactivePillSheetの次かどうかを判別し、処理中の「ピルシート中のピル番号」を計算して使用する
-        final isOverActivePillSheet = activePillSheet.todayPillNumber + dayOffset > activePillSheet.typeInfo.totalCount;
+        final isOverActivePillSheet = activePillSheet.todayPillNumber + pillDayOffset > activePillSheet.typeInfo.totalCount;
         final pillNumberInPillSheet = isOverActivePillSheet
-            ? activePillSheet.todayPillNumber + dayOffset - activePillSheet.typeInfo.totalCount
-            : activePillSheet.todayPillNumber + dayOffset;
+            ? activePillSheet.todayPillNumber + pillDayOffset - activePillSheet.typeInfo.totalCount
+            : activePillSheet.todayPillNumber + pillDayOffset;
 
         var pillSheetGroupIndex = activePillSheet.groupIndex;
         var pillSheeType = activePillSheet.pillSheetType;
@@ -466,12 +488,12 @@ class RegisterReminderLocalNotification {
             if (activePillSheet.todayPillNumber - activePillSheet.lastCompletedOrZeroPillNumber > 1) {
               return setting.reminderNotificationCustomization.missedTakenMessage;
             }
-            // 本日分の服用記録がない場合で今日のループ(dayOffset==0)の時
-            if (dayOffset == 0 && !todayPillAllTaken) {
+            // 本日分の服用記録がない場合で今日のループ(pillDayOffset==0)の時
+            if (pillDayOffset == 0 && !todayPillAllTaken) {
               return setting.reminderNotificationCustomization.dailyTakenMessage;
             }
-            // 本日分の服用記録がある場合で、次の日のループ(dayOffset==1)の時
-            if (dayOffset == 1) {
+            // 本日分の服用記録がある場合で、次の日のループ(pillDayOffset==1)の時
+            if (pillDayOffset == 1) {
               return setting.reminderNotificationCustomization.dailyTakenMessage;
             }
             // 休薬期間の通知をONにしているユーザーで、跨いだときはdailyTakenMessageを設定。
@@ -517,7 +539,7 @@ class RegisterReminderLocalNotification {
                       presentAlert: false,
                       presentBanner: true,
                       presentList: true,
-                      badgeNumber: badgeNumber + dayOffset,
+                      badgeNumber: badgeNumber + pillDayOffset,
                       interruptionLevel: setting.useCriticalAlert ? InterruptionLevel.critical : InterruptionLevel.active,
                     ),
                   ),
@@ -601,7 +623,7 @@ class RegisterReminderLocalNotification {
                       presentAlert: false,
                       presentBanner: true,
                       presentList: true,
-                      badgeNumber: badgeNumber + dayOffset,
+                      badgeNumber: badgeNumber + pillDayOffset,
                       interruptionLevel: setting.useCriticalAlert ? InterruptionLevel.critical : InterruptionLevel.active,
                     ),
                   ),

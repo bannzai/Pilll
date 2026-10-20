@@ -32,12 +32,20 @@ class BeginRestDuration {
     required this.batchSetPillSheetModifiedHistory,
   });
 
-  Future<void> call({required PillSheetGroup pillSheetGroup}) async {
+  /// 服用お休みを開始する。[endDate] は任意の服用再開予定日
+  /// [endDate] がある時は、後続のピルシートの beginDate を予定の終了日まで全日数含めた予定終了日の翌日に確定して保存する
+  /// バックエンドは endDate がある服用お休みを日送りしないため、アプリが開始時点で確定する必要がある
+  /// [endDate] が無い時は後続のピルシートを変えない（バックエンドが毎日日送りする）
+  Future<void> call({
+    required PillSheetGroup pillSheetGroup,
+    required DateTime? endDate,
+  }) async {
     final batch = batchFactory.batch();
 
     final restDuration = RestDuration(
       id: firestoreIDGenerator(),
       beginDate: pillSheetGroup.availableRestDurationBeginDate,
+      endDate: endDate,
       createdDate: now(),
     );
 
@@ -47,7 +55,27 @@ class BeginRestDuration {
         restDuration,
       ],
     );
-    final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
+    final PillSheetGroup updatedPillSheetGroup;
+    if (endDate == null) {
+      updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
+    } else {
+      final updatedPillSheets = <PillSheet>[];
+      for (final pillSheet in pillSheetGroup.pillSheets) {
+        if (pillSheet.groupIndex == updatedPillSheet.groupIndex) {
+          updatedPillSheets.add(updatedPillSheet);
+        } else if (pillSheet.groupIndex > updatedPillSheet.groupIndex) {
+          // 前のピルシートのbeginDateが更新され、estimatedEndTakenDateが変わっている場合も考慮する必要があるのでupdatedPillSheetsから1つ前のピルシートにアクセスする
+          updatedPillSheets.add(
+            pillSheet.copyWith(
+              beginDate: updatedPillSheets[pillSheet.groupIndex - 1].estimatedEndTakenDateUntil(upperDate: endDate).date().addDays(1),
+            ),
+          );
+        } else {
+          updatedPillSheets.add(pillSheet);
+        }
+      }
+      updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
+    }
 
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
     batchSetPillSheetModifiedHistory(

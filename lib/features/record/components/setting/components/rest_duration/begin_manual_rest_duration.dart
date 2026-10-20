@@ -59,11 +59,14 @@ class BeginManualRestDuration extends HookConsumerWidget {
             context,
             appearanceMode: appearanceMode,
             pillSheetGroup: pillSheetGroup,
-            onDone: () async {
-              analytics.logEvent(name: 'done_rest_duration');
+            onDone: (endDate) async {
+              analytics.logEvent(
+                name: 'done_rest_duration',
+                parameters: {'has_end_date': endDate != null},
+              );
               // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
               FlutterAppBadger.removeBadge();
-              await beginRestDuration(pillSheetGroup: pillSheetGroup);
+              await beginRestDuration(pillSheetGroup: pillSheetGroup, endDate: endDate);
               await cancelReminderLocalNotification();
               didBeginRestDuration();
             },

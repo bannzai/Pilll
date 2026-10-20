@@ -71,7 +71,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
             initialDate: pillSheetGroup.lastActiveRestDuration?.beginDate ?? today(),
             firstDate: pillSheetGroup.pillSheets.first.beginDate,
             lastDate: pillSheetGroup.availableRestDurationBeginDate,
-            helpText: L.selectPauseStartDate,
+            helpText: pillSheetGroup.availableRestDurationBeginDateHelpText,
             fieldLabelText: L.pauseStartDate,
             builder: (context, child) {
               return DateRangePickerTheme(child: child!);
@@ -120,7 +120,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
             initialDateRange: restDuration.dateTimeRange,
             firstDate: pillSheetGroup.pillSheets.first.beginDate,
             lastDate: pillSheetGroup.availableRestDurationEndDate(restDuration: restDuration),
-            helpText: L.selectPausePeriod,
+            helpText: pillSheetGroup.availableRestDurationEndDateHelpText(restDuration: restDuration),
             fieldStartHintText: L.pauseStartDate,
             fieldEndLabelText: L.pauseEndDate,
             builder: (context, child) {
