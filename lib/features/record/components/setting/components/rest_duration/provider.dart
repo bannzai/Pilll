@@ -189,9 +189,10 @@ class ChangeRestDuration {
       PillSheetV1(:final lastTakenDate?) when lastTakenDate.date().isAfter(pillSheet.estimatedEndTakenDate.date()) => pillSheet.copyWith(
           lastTakenDate: pillSheet.estimatedEndTakenDate.date(),
         ),
+      PillSheetV1() => pillSheet,
       // v2のピル番号は日付から逆算せずpillsのindexから決まるため、lastTakenDateが終了予定日より後でも錠数を超えない。
       // pillTakensは実際の服用記録なので変更しない
-      _ => pillSheet,
+      PillSheetV2() => pillSheet,
     };
   }
 
