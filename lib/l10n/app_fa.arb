@@ -561,5 +561,11 @@
   "addPausePeriod": "افزودن دورهٔ توقف مصرف",
   "addedPausePeriod": "بازهٔ استراحت مصرف اضافه شد",
   "pausePeriodOverlapsOther": "نمی‌توانید بازه‌ای را انتخاب کنید که با یک بازهٔ استراحت دیگر هم‌پوشانی داشته باشد",
-  "pauseEndDateMustBeAfterStartDate": "لطفاً برای تاریخ پایان وقفه مصرف، تاریخی بعد از تاریخ شروع انتخاب کنید."
+  "pauseEndDateMustBeAfterStartDate": "لطفاً برای تاریخ پایان وقفه مصرف، تاریخی بعد از تاریخ شروع انتخاب کنید.",
+  "plannedResumeDateOptional": "تاریخ برنامه‌ریزی‌شده برای ازسرگیری مصرف (اختیاری)",
+  "plannedResumeDateNotSet": "تنظیم نشده",
+  "selectPlannedResumeDate": "تاریخ برنامه‌ریزی‌شده برای شروع دوباره مصرف را انتخاب کنید",
+  "pauseEndDateLimitIsToday": "تاریخ پایان فقط تا امروز قابل انتخاب است",
+  "pauseEndDateLimitBeforeNextPause": "تا روزی که با وقفه بعدی ({date}〜) هم‌پوشانی نداشته باشد",
+  "pauseStartDateLimit": "تاریخ شروع را می‌توان تا {date} انتخاب کرد"
 }

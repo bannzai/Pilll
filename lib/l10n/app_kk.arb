@@ -561,5 +561,11 @@
   "addPausePeriod": "Қабылдау үзіліс кезеңін қосу",
   "addedPausePeriod": "Қабылдау үзіліс кезеңі қосылды",
   "pausePeriodOverlapsOther": "Басқа қабылдау үзіліс кезеңімен қабаттасатын кезеңді таңдауға болмайды",
-  "pauseEndDateMustBeAfterStartDate": "Қабылдауды үзу кезеңінің аяқталу күні ретінде басталу күнінен кейінгі күнді таңдаңыз."
+  "pauseEndDateMustBeAfterStartDate": "Қабылдауды үзу кезеңінің аяқталу күні ретінде басталу күнінен кейінгі күнді таңдаңыз.",
+  "plannedResumeDateOptional": "Қабылдауды қайта бастау жоспарланған күн (міндетті емес)",
+  "plannedResumeDateNotSet": "Орнатылмаған",
+  "selectPlannedResumeDate": "Қабылдауды қайта бастау жоспарланған күнді таңдаңыз",
+  "pauseEndDateLimitIsToday": "Аяқталу күнін ең көбі бүгінге дейін ғана таңдауға болады",
+  "pauseEndDateLimitBeforeNextPause": "Келесі үзіліспен ({date}〜) қабаттаспайтын күнге дейін",
+  "pauseStartDateLimit": "Басталу күнін {date} күніне дейін таңдауға болады"
 }

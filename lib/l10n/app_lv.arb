@@ -561,5 +561,11 @@
   "addPausePeriod": "Pievienot lietošanas pārtraukuma periodu",
   "addedPausePeriod": "Ir pievienots lietošanas pārtraukuma periods",
   "pausePeriodOverlapsOther": "Nevar izvēlēties periodu, kas pārklājas ar citu lietošanas pārtraukuma periodu",
-  "pauseEndDateMustBeAfterStartDate": "Lūdzu, izvēlieties lietošanas pārtraukuma beigu datumu, kas ir pēc sākuma datuma."
+  "pauseEndDateMustBeAfterStartDate": "Lūdzu, izvēlieties lietošanas pārtraukuma beigu datumu, kas ir pēc sākuma datuma.",
+  "plannedResumeDateOptional": "Plānotais lietošanas atsākšanas datums (neobligāti)",
+  "plannedResumeDateNotSet": "Nav iestatīts",
+  "selectPlannedResumeDate": "Izvēlieties plānoto lietošanas atsākšanas datumu",
+  "pauseEndDateLimitIsToday": "Beigu datumu var iestatīt tikai līdz šodienai",
+  "pauseEndDateLimitBeforeNextPause": "Līdz dienai, kas nepārklājas ar nākamo pārtraukumu ({date}–)",
+  "pauseStartDateLimit": "Sākuma datumu var izvēlēties līdz {date}"
 }

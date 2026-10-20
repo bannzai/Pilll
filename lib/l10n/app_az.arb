@@ -561,5 +561,11 @@
   "addPausePeriod": "Qəbul fasiləsi müddəti əlavə et",
   "addedPausePeriod": "Qəbul fasiləsi müddəti əlavə olundu",
   "pausePeriodOverlapsOther": "Başqa qəbul fasiləsi dövrü ilə üst-üstə düşən dövrü seçmək olmaz",
-  "pauseEndDateMustBeAfterStartDate": "Zəhmət olmasa, qəbul fasiləsinin bitmə tarixi üçün başlanğıc tarixindən sonrakı bir tarixi seçin."
+  "pauseEndDateMustBeAfterStartDate": "Zəhmət olmasa, qəbul fasiləsinin bitmə tarixi üçün başlanğıc tarixindən sonrakı bir tarixi seçin.",
+  "plannedResumeDateOptional": "Qəbulun yenidən başlanacağı planlaşdırılan tarix (istəyə bağlı)",
+  "plannedResumeDateNotSet": "Təyin edilməyib",
+  "selectPlannedResumeDate": "Qəbulun yenidən başlanacağı tarixi seçin",
+  "pauseEndDateLimitIsToday": "Bitmə tarixi yalnız bu günə qədər seçilə bilər",
+  "pauseEndDateLimitBeforeNextPause": "Növbəti fasilə ({date}〜) ilə üst-üstə düşməyən günədək",
+  "pauseStartDateLimit": "Başlanğıc tarixi ən gec {date} seçilə bilər"
 }

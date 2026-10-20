@@ -561,5 +561,11 @@
   "addPausePeriod": "ਲੈਣ ਦੀ ਵਿਰਾਮ ਮਿਆਦ ਸ਼ਾਮਲ ਕਰੋ",
   "addedPausePeriod": "ਸੇਵਨ ਵਿਰਾਮ ਅਵਧੀ ਸ਼ਾਮਲ ਕੀਤੀ ਗਈ ਹੈ",
   "pausePeriodOverlapsOther": "ਦੂਜੇ ਸੇਵਨ-ਵਿਰਾਮ ਅਵਧੀ ਨਾਲ ਓਵਰਲੈਪ ਕਰਨ ਵਾਲੀ ਅਵਧੀ ਨਹੀਂ ਚੁਣੀ ਜਾ ਸਕਦੀ",
-  "pauseEndDateMustBeAfterStartDate": "ਕਿਰਪਾ ਕਰਕੇ ਸੇਵਨ ਵਿਸ਼ਰਾਮ ਦੀ ਸਮਾਪਤੀ ਤਾਰੀਖ ਲਈ ਸ਼ੁਰੂਆਤੀ ਤਾਰੀਖ ਤੋਂ ਬਾਅਦ ਦੀ ਤਾਰੀਖ ਚੁਣੋ।"
+  "pauseEndDateMustBeAfterStartDate": "ਕਿਰਪਾ ਕਰਕੇ ਸੇਵਨ ਵਿਸ਼ਰਾਮ ਦੀ ਸਮਾਪਤੀ ਤਾਰੀਖ ਲਈ ਸ਼ੁਰੂਆਤੀ ਤਾਰੀਖ ਤੋਂ ਬਾਅਦ ਦੀ ਤਾਰੀਖ ਚੁਣੋ।",
+  "plannedResumeDateOptional": "ਦੁਬਾਰਾ ਸੇਵਨ ਸ਼ੁਰੂ ਕਰਨ ਦੀ ਨਿਯਤ ਮਿਤੀ (ਵਿਕਲਪਿਕ)",
+  "plannedResumeDateNotSet": "ਸੈੱਟ ਨਹੀਂ ਕੀਤਾ",
+  "selectPlannedResumeDate": "ਦੁਬਾਰਾ ਸੇਵਨ ਸ਼ੁਰੂ ਕਰਨ ਦੀ ਨਿਰਧਾਰਤ ਤਾਰੀਖ ਚੁਣੋ",
+  "pauseEndDateLimitIsToday": "ਸਮਾਪਤੀ ਦੀ ਤਾਰੀਖ ਸਿਰਫ਼ ਅੱਜ ਤੱਕ ਹੀ ਸੈੱਟ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ",
+  "pauseEndDateLimitBeforeNextPause": "ਅਗਲੇ ਵਿਸ਼ਰਾਮ ({date}〜) ਨਾਲ ਨਾ ਓਵਰਲੈਪ ਕਰਨ ਵਾਲੇ ਦਿਨ ਤੱਕ",
+  "pauseStartDateLimit": "ਸ਼ੁਰੂਆਤੀ ਤਾਰੀਖ {date} ਤੱਕ ਚੁਣੀ ਜਾ ਸਕਦੀ ਹੈ"
 }

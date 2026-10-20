@@ -561,5 +561,11 @@
   "addPausePeriod": "Engeza isikhathi sekhefu sokuphuza",
   "addedPausePeriod": "Isikhathi sekhefu lokuphuza sengeziwe",
   "pausePeriodOverlapsOther": "Isikhathi esidlana nesinye isikhathi sekhefu lokuthatha asikwazi ukukhethwa",
-  "pauseEndDateMustBeAfterStartDate": "Sicela ukhethe usuku olungemva kosuku lokuqala njengosuku lokuphela kwekhefu lokuphuza umuthi."
+  "pauseEndDateMustBeAfterStartDate": "Sicela ukhethe usuku olungemva kosuku lokuqala njengosuku lokuphela kwekhefu lokuphuza umuthi.",
+  "plannedResumeDateOptional": "Usuku oluhleliwe lokuqala futhi ukuphuza futhi (okuzikhethela)",
+  "plannedResumeDateNotSet": "Akukasethwa",
+  "selectPlannedResumeDate": "Khetha usuku oluhleliwe lokuqala futhi ukulusebenzisa",
+  "pauseEndDateLimitIsToday": "Usuku lokuphela lungasethwa kuze kube namuhla kuphela",
+  "pauseEndDateLimitBeforeNextPause": "Kuze kube usuku olungangqubuzani nekhefu elilandelayo ({date}–)",
+  "pauseStartDateLimit": "Usuku lokuqala lungakhethwa kuze kube u-{date}"
 }

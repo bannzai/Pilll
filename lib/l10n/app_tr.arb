@@ -561,5 +561,11 @@
   "addPausePeriod": "Kullanım ara verme süresi ekle",
   "addedPausePeriod": "Alım arası süresi eklendi",
   "pausePeriodOverlapsOther": "Başka bir kullanım arası dönemiyle çakışan bir dönem seçilemez",
-  "pauseEndDateMustBeAfterStartDate": "Lütfen kullanım molasının bitiş tarihi olarak başlangıç tarihinden sonraki bir tarih seçin."
+  "pauseEndDateMustBeAfterStartDate": "Lütfen kullanım molasının bitiş tarihi olarak başlangıç tarihinden sonraki bir tarih seçin.",
+  "plannedResumeDateOptional": "Yeniden kullanıma başlama planlanan tarihi (isteğe bağlı)",
+  "plannedResumeDateNotSet": "Ayarlanmadı",
+  "selectPlannedResumeDate": "Yeniden kullanmaya başlama tarihini seçin",
+  "pauseEndDateLimitIsToday": "Bitiş tarihi yalnızca bugüne kadar ayarlanabilir",
+  "pauseEndDateLimitBeforeNextPause": "Sonraki ara ({date}–) ile çakışmayan güne kadar",
+  "pauseStartDateLimit": "Başlangıç tarihi en geç {date} olarak seçilebilir"
 }

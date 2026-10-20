@@ -561,5 +561,11 @@
   "addPausePeriod": "ಸೆವನ ವಿರಾಮ ಅವಧಿಯನ್ನು ಸೇರಿಸಿ",
   "addedPausePeriod": "ಸೆವನ ವಿರಾಮ ಅವಧಿಯನ್ನು ಸೇರಿಸಲಾಗಿದೆ",
   "pausePeriodOverlapsOther": "ಇನ್ನೊಂದು ಸೇವನೆ ವಿರಾಮ ಅವಧಿಯೊಂದಿಗೆ ಹೇರಳವಾಗಿರುವ ಅವಧಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದಿಲ್ಲ",
-  "pauseEndDateMustBeAfterStartDate": "ದಯವಿಟ್ಟು ಸೇವನೆ ವಿರಾಮದ ಅಂತಿಮ ದಿನಾಂಕವಾಗಿ ಆರಂಭ ದಿನಾಂಕದ ನಂತರದ ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆಮಾಡಿ."
+  "pauseEndDateMustBeAfterStartDate": "ದಯವಿಟ್ಟು ಸೇವನೆ ವಿರಾಮದ ಅಂತಿಮ ದಿನಾಂಕವಾಗಿ ಆರಂಭ ದಿನಾಂಕದ ನಂತರದ ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆಮಾಡಿ.",
+  "plannedResumeDateOptional": "ಮತ್ತೆ ಸೇವನೆ ಆರಂಭಿಸಲು ಯೋಜಿಸಿದ ದಿನಾಂಕ (ಐಚ್ಛಿಕ)",
+  "plannedResumeDateNotSet": "ಹೊಂದಿಸಲಾಗಿಲ್ಲ",
+  "selectPlannedResumeDate": "ಮತ್ತೆ ಸೇವನೆ ಆರಂಭಿಸುವ ನಿಗದಿತ ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+  "pauseEndDateLimitIsToday": "ಅಂತ್ಯದ ದಿನಾಂಕವನ್ನು ಇಂದು ತನಕ ಮಾತ್ರ ಆಯ್ಕೆ ಮಾಡಬಹುದು",
+  "pauseEndDateLimitBeforeNextPause": "ಮುಂದಿನ ವಿರಾಮ ({date}〜) ಜೊತೆ ಹೊಮ್ಮಿಸದ ದಿನದವರೆಗೆ",
+  "pauseStartDateLimit": "ಪ್ರಾರಂಭ ದಿನಾಂಕವನ್ನು {date} ವರೆಗೆ ಆಯ್ಕೆ ಮಾಡಬಹುದು"
 }

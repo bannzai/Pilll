@@ -561,5 +561,11 @@
   "addPausePeriod": "Ongeza kipindi cha mapumziko ya kumeza",
   "addedPausePeriod": "Kipindi cha mapumziko ya kutumia kimeongezwa",
   "pausePeriodOverlapsOther": "Huwezi kuchagua kipindi kinachopishana na kipindi kingine cha mapumziko ya kumeza",
-  "pauseEndDateMustBeAfterStartDate": "Tafadhali chagua tarehe iliyo baada ya tarehe ya kuanza kama tarehe ya kumaliza mapumziko ya matumizi."
+  "pauseEndDateMustBeAfterStartDate": "Tafadhali chagua tarehe iliyo baada ya tarehe ya kuanza kama tarehe ya kumaliza mapumziko ya matumizi.",
+  "plannedResumeDateOptional": "Tarehe iliyopangwa ya kuanza tena kutumia (hiari)",
+  "plannedResumeDateNotSet": "Haijawekwa",
+  "selectPlannedResumeDate": "Chagua tarehe iliyopangwa ya kuanza kutumia tena",
+  "pauseEndDateLimitIsToday": "Tarehe ya mwisho inaweza kuwekwa hadi leo tu",
+  "pauseEndDateLimitBeforeNextPause": "Hadi siku ambayo haiingiliani na mapumziko yajayo ({date}–)",
+  "pauseStartDateLimit": "Tarehe ya kuanza inaweza kuchaguliwa hadi {date}"
 }

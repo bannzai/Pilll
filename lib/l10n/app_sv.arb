@@ -561,5 +561,11 @@
   "addPausePeriod": "Lägg till uppehållsperiod",
   "addedPausePeriod": "Pausperioden för intag har lagts till",
   "pausePeriodOverlapsOther": "Du kan inte välja en period som överlappar med en annan pausperiod",
-  "pauseEndDateMustBeAfterStartDate": "Välj ett datum efter startdatumet som slutdatum för uppehållet i intaget."
+  "pauseEndDateMustBeAfterStartDate": "Välj ett datum efter startdatumet som slutdatum för uppehållet i intaget.",
+  "plannedResumeDateOptional": "Planerat datum för att återuppta intaget (valfritt)",
+  "plannedResumeDateNotSet": "Inte inställt",
+  "selectPlannedResumeDate": "Välj planerat datum för att återuppta intaget",
+  "pauseEndDateLimitIsToday": "Slutdatum kan bara ställas in till och med idag",
+  "pauseEndDateLimitBeforeNextPause": "Till den dag som inte överlappar med nästa uppehåll ({date}–)",
+  "pauseStartDateLimit": "Startdatum kan väljas till och med {date}"
 }

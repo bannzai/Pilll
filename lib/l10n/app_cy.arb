@@ -561,5 +561,11 @@
   "addPausePeriod": "Ychwanegu cyfnod seibiant o gymryd",
   "addedPausePeriod": "Ychwanegwyd cyfnod saib rhag cymryd",
   "pausePeriodOverlapsOther": "Ni ellir dewis cyfnod sy'n gorgyffwrdd â chyfnod seibiant arall",
-  "pauseEndDateMustBeAfterStartDate": "Dewiswch ddyddiad ar ôl y dyddiad cychwyn ar gyfer dyddiad gorffen yr egwyl cymryd, os gwelwch yn dda."
+  "pauseEndDateMustBeAfterStartDate": "Dewiswch ddyddiad ar ôl y dyddiad cychwyn ar gyfer dyddiad gorffen yr egwyl cymryd, os gwelwch yn dda.",
+  "plannedResumeDateOptional": "Dyddiad ailddechrau cymryd wedi’i gynllunio (dewisol)",
+  "plannedResumeDateNotSet": "Heb ei osod",
+  "selectPlannedResumeDate": "Dewiswch y dyddiad a drefnwyd i ailddechrau cymryd",
+  "pauseEndDateLimitIsToday": "Dim ond hyd at heddiw y gellir dewis y dyddiad gorffen",
+  "pauseEndDateLimitBeforeNextPause": "Hyd at y diwrnod nad yw’n gorgyffwrdd â’r seibiant nesaf ({date}〜)",
+  "pauseStartDateLimit": "Gellir dewis y dyddiad cychwyn hyd at {date}"
 }

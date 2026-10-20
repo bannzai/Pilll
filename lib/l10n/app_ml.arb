@@ -561,5 +561,11 @@
   "addPausePeriod": "കഴിക്കലിലെ ഇടവേളാ കാലയളവ് ചേർക്കുക",
   "addedPausePeriod": "സേവന ഇടവേള കാലയളവ് ചേർത്തു",
   "pausePeriodOverlapsOther": "മറ്റൊരു കഴിവ് ഇടവേളയുമായി മൂടിമുട്ടുന്ന കാലയളവ് തിരഞ്ഞെടുക്കാൻ കഴിയില്ല",
-  "pauseEndDateMustBeAfterStartDate": "ദയവായി കഴിക്കൽ ഇടവേളയുടെ അവസാന തീയതിയായി ആരംഭ തീയതിക്ക് ശേഷമുള്ള ഒരു തീയതി തിരഞ്ഞെടുക്കുക."
+  "pauseEndDateMustBeAfterStartDate": "ദയവായി കഴിക്കൽ ഇടവേളയുടെ അവസാന തീയതിയായി ആരംഭ തീയതിക്ക് ശേഷമുള്ള ഒരു തീയതി തിരഞ്ഞെടുക്കുക.",
+  "plannedResumeDateOptional": "വീണ്ടും കഴിക്കൽ ആരംഭിക്കാൻ നിശ്ചയിച്ച തീയതി (ഐച്ഛികം)",
+  "plannedResumeDateNotSet": "സജ്ജീകരിച്ചിട്ടില്ല",
+  "selectPlannedResumeDate": "വീണ്ടും കഴിക്കാൻ തുടങ്ങാനുള്ള നിശ്ചിത തീയതി തിരഞ്ഞെടുക്കുക",
+  "pauseEndDateLimitIsToday": "അവസാന തീയതി ഇന്നുവരെ മാത്രം തിരഞ്ഞെടുക്കാനാകും",
+  "pauseEndDateLimitBeforeNextPause": "അടുത്ത ഇടവേള ({date}〜) യുമായി ഒതുങ്ങാത്ത ദിവസം വരെ",
+  "pauseStartDateLimit": "ആരംഭ തീയതി {date} വരെ തിരഞ്ഞെടുക്കാം"
 }

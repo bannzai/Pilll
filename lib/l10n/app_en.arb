@@ -2874,5 +2874,11 @@
   "pauseEndDateMustBeAfterStartDate": "Please select a break end date after the start date",
   "@pauseEndDateMustBeAfterStartDate": {
     "description": ""
-  }
+  },
+  "plannedResumeDateOptional": "Planned date to resume taking it (optional)",
+  "plannedResumeDateNotSet": "Not set",
+  "selectPlannedResumeDate": "Select the scheduled date to resume taking",
+  "pauseEndDateLimitIsToday": "The end date can only be set up to today",
+  "pauseEndDateLimitBeforeNextPause": "Up to the day before it overlaps with the next break ({date}–)",
+  "pauseStartDateLimit": "The start date can be selected up to {date}"
 }

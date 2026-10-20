@@ -561,5 +561,11 @@
   "addPausePeriod": "Ajouter une période de pause de prise",
   "addedPausePeriod": "La période de pause de prise a été ajoutée",
   "pausePeriodOverlapsOther": "Vous ne pouvez pas sélectionner une période qui chevauche une autre période de pause de prise",
-  "pauseEndDateMustBeAfterStartDate": "Veuillez sélectionner une date postérieure à la date de début comme date de fin de la pause de prise."
+  "pauseEndDateMustBeAfterStartDate": "Veuillez sélectionner une date postérieure à la date de début comme date de fin de la pause de prise.",
+  "plannedResumeDateOptional": "Date prévue de reprise de la prise (facultatif)",
+  "plannedResumeDateNotSet": "Non défini",
+  "selectPlannedResumeDate": "Sélectionnez la date prévue de reprise",
+  "pauseEndDateLimitIsToday": "La date de fin peut être définie jusqu’à aujourd’hui בלבד",
+  "pauseEndDateLimitBeforeNextPause": "Jusqu’au jour qui ne chevauche pas la prochaine pause ({date}〜)",
+  "pauseStartDateLimit": "La date de début peut être sélectionnée jusqu’au {date}"
 }

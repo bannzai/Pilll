@@ -561,5 +561,11 @@
   "addPausePeriod": "લેવાની વિરામ અવધિ ઉમેરો",
   "addedPausePeriod": "સેવન વિરામનો સમયગાળો ઉમેરાયો છે",
   "pausePeriodOverlapsOther": "બીજા લેવાની વિરામ અવધિ સાથે ઓવરલેપ થતો સમયગાળો પસંદ કરી શકાતો નથી",
-  "pauseEndDateMustBeAfterStartDate": "કૃપા કરીને સેવન વિરામની સમાપ્તિ તારીખ તરીકે શરૂઆતની તારીખ પછીની તારીખ પસંદ કરો."
+  "pauseEndDateMustBeAfterStartDate": "કૃપા કરીને સેવન વિરામની સમાપ્તિ તારીખ તરીકે શરૂઆતની તારીખ પછીની તારીખ પસંદ કરો.",
+  "plannedResumeDateOptional": "ફરીથી સેવન શરૂ કરવાની નિર્ધારિત તારીખ (વૈકલ્પિક)",
+  "plannedResumeDateNotSet": "સેટ કરેલ નથી",
+  "selectPlannedResumeDate": "ફરીથી સેવન શરૂ કરવાની નિર્ધારિત તારીખ પસંદ કરો",
+  "pauseEndDateLimitIsToday": "અંતિમ તારીખ આજે સુધી જ પસંદ કરી શકાય છે",
+  "pauseEndDateLimitBeforeNextPause": "આગામી વિરામ ({date}〜) સાથે ન અથડાતો દિવસ સુધી",
+  "pauseStartDateLimit": "શરૂઆતની તારીખ {date} સુધી પસંદ કરી શકાય છે"
 }

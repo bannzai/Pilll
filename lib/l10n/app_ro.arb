@@ -561,5 +561,11 @@
   "addPausePeriod": "Adaugă perioada de pauză la administrare",
   "addedPausePeriod": "Perioada de pauză a administrării a fost adăugată",
   "pausePeriodOverlapsOther": "Nu puteți selecta o perioadă care se suprapune cu o altă perioadă de pauză de administrare",
-  "pauseEndDateMustBeAfterStartDate": "Vă rugăm să selectați o dată ulterioară datei de început ca dată de încheiere a pauzei de administrare."
+  "pauseEndDateMustBeAfterStartDate": "Vă rugăm să selectați o dată ulterioară datei de început ca dată de încheiere a pauzei de administrare.",
+  "plannedResumeDateOptional": "Data planificată pentru reluarea administrării (opțional)",
+  "plannedResumeDateNotSet": "Nesetat",
+  "selectPlannedResumeDate": "Selectați data programată pentru reluarea administrării",
+  "pauseEndDateLimitIsToday": "Data de încheiere poate fi setată doar până astăzi",
+  "pauseEndDateLimitBeforeNextPause": "Până în ziua care nu se suprapune cu următoarea pauză ({date}–)",
+  "pauseStartDateLimit": "Data de începere poate fi aleasă până la {date}"
 }

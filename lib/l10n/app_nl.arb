@@ -561,5 +561,11 @@
   "addPausePeriod": "Pauzeperiode toevoegen",
   "addedPausePeriod": "De pauzeperiode voor inname is toegevoegd",
   "pausePeriodOverlapsOther": "Je kunt geen periode selecteren die overlapt met een andere innamepauze",
-  "pauseEndDateMustBeAfterStartDate": "Kies als einddatum van de innamestop een datum na de startdatum."
+  "pauseEndDateMustBeAfterStartDate": "Kies als einddatum van de innamestop een datum na de startdatum.",
+  "plannedResumeDateOptional": "Geplande datum om weer te beginnen met innemen (optioneel)",
+  "plannedResumeDateNotSet": "Niet ingesteld",
+  "selectPlannedResumeDate": "Selecteer de geplande datum om weer te beginnen",
+  "pauseEndDateLimitIsToday": "De einddatum kan alleen tot en met vandaag worden ingesteld",
+  "pauseEndDateLimitBeforeNextPause": "Tot de dag die niet overlapt met de volgende pauze ({date}–)",
+  "pauseStartDateLimit": "De startdatum kan tot en met {date} worden gekozen"
 }

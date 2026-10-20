@@ -561,5 +561,11 @@
   "addPausePeriod": "Lisää taukojakso",
   "addedPausePeriod": "Taukojakso lisätty",
   "pausePeriodOverlapsOther": "Et voi valita jaksoa, რომელიც on päällekkäinen toisen taukojaksen kanssa",
-  "pauseEndDateMustBeAfterStartDate": "Valitse tauon päättymispäiväksi aloituspäivän jälkeinen päivämäärä."
+  "pauseEndDateMustBeAfterStartDate": "Valitse tauon päättymispäiväksi aloituspäivän jälkeinen päivämäärä.",
+  "plannedResumeDateOptional": "Suunniteltu käytön jatkamispäivä (valinnainen)",
+  "plannedResumeDateNotSet": "Ei asetettu",
+  "selectPlannedResumeDate": "Valitse suunniteltu käytön aloituspäivä uudelleen",
+  "pauseEndDateLimitIsToday": "Päättymispäiväksi voi valita vain tämän päivän tai aiemman",
+  "pauseEndDateLimitBeforeNextPause": "Päivään asti, joka ei mene päällekkäin seuraavan tauon kanssa ({date}–)",
+  "pauseStartDateLimit": "Aloituspäivän voi valita päivään {date} asti"
 }

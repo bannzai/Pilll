@@ -561,5 +561,11 @@
   "addPausePeriod": "घेण्याचा विश्रांती कालावधी जोडा",
   "addedPausePeriod": "सेवन विश्रांती कालावधी जोडला आहे",
   "pausePeriodOverlapsOther": "दुसऱ्या सेवन-विराम कालावधीशी जुळणारा कालावधी निवडता येत नाही",
-  "pauseEndDateMustBeAfterStartDate": "कृपया सेवन विश्रांतीची समाप्ती तारीख म्हणून सुरुवातीच्या तारखेनंतरची तारीख निवडा."
+  "pauseEndDateMustBeAfterStartDate": "कृपया सेवन विश्रांतीची समाप्ती तारीख म्हणून सुरुवातीच्या तारखेनंतरची तारीख निवडा.",
+  "plannedResumeDateOptional": "पुन्हा सेवन सुरू करण्याची नियोजित तारीख (ऐच्छिक)",
+  "plannedResumeDateNotSet": "सेट केलेले नाही",
+  "selectPlannedResumeDate": "पुन्हा सेवन सुरू करण्याची नियोजित तारीख निवडा",
+  "pauseEndDateLimitIsToday": "समाप्तीची तारीख फक्त आजपर्यंतच सेट करता येते",
+  "pauseEndDateLimitBeforeNextPause": "पुढील विश्रांती ({date}〜) शी जुळत नाही त्या दिवसापर्यंत",
+  "pauseStartDateLimit": "सुरुवातीची तारीख {date} पर्यंत निवडता येईल"
 }

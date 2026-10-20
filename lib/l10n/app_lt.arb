@@ -561,5 +561,11 @@
   "addPausePeriod": "Pridėti vartojimo pertraukos laikotarpį",
   "addedPausePeriod": "Pridėtas vartojimo pertraukos laikotarpis",
   "pausePeriodOverlapsOther": "Negalima pasirinkti laikotarpio, kuris persidengia su kitu vartojimo pertraukos laikotarpiu",
-  "pauseEndDateMustBeAfterStartDate": "Pasirinkite vartojimo pertraukos pabaigos datą, vėlesnę nei pradžios data."
+  "pauseEndDateMustBeAfterStartDate": "Pasirinkite vartojimo pertraukos pabaigos datą, vėlesnę nei pradžios data.",
+  "plannedResumeDateOptional": "Planuojama vartojimo atnaujinimo data (nebūtina)",
+  "plannedResumeDateNotSet": "Nenustatyta",
+  "selectPlannedResumeDate": "Pasirinkite numatytą vartojimo atnaujinimo datą",
+  "pauseEndDateLimitIsToday": "Pabaigos datą galima nustatyti tik iki šiandienos",
+  "pauseEndDateLimitBeforeNextPause": "Iki dienos, kuri nesutampa su kita pertrauka ({date}–)",
+  "pauseStartDateLimit": "Pradžios datą galima pasirinkti iki {date}"
 }

@@ -561,5 +561,11 @@
   "addPausePeriod": "បន្ថែមរយៈពេលសម្រាកក្នុងការទទួល",
   "addedPausePeriod": "បានបន្ថែមរយៈពេលសម្រាកក្នុងការលេប",
   "pausePeriodOverlapsOther": "មិនអាចជ្រើសរើសរយៈពេលដែលជាន់លើជាមួយរយៈពេលសម្រាកទទួលថ្នាំផ្សេងទៀតបានទេ",
-  "pauseEndDateMustBeAfterStartDate": "សូមជ្រើសរើសកាលបរិច្ឆេទបន្ទាប់ពីថ្ងៃចាប់ផ្តើម សម្រាប់ថ្ងៃបញ្ចប់នៃការផ្អាកការប្រើប្រាស់។"
+  "pauseEndDateMustBeAfterStartDate": "សូមជ្រើសរើសកាលបរិច្ឆេទបន្ទាប់ពីថ្ងៃចាប់ផ្តើម សម្រាប់ថ្ងៃបញ្ចប់នៃការផ្អាកការប្រើប្រាស់។",
+  "plannedResumeDateOptional": "កាលបរិច្ឆេទគ្រោងនឹងចាប់ផ្តើម服用ឡើងវិញ (ជាជម្រើស)",
+  "plannedResumeDateNotSet": "មិនទាន់កំណត់",
+  "selectPlannedResumeDate": "ជ្រើសរើសកាលបរិច្ឆេទដែលគ្រោងចាប់ផ្តើមលេបវិញ",
+  "pauseEndDateLimitIsToday": "កាលបរិច្ឆេទបញ្ចប់អាចកំណត់បានត្រឹមថ្ងៃនេះប៉ុណ្ណោះ",
+  "pauseEndDateLimitBeforeNextPause": "រហូតដល់ថ្ងៃដែលមិនជាន់គ្នានឹងការសម្រាកបន្ទាប់ ({date}〜)",
+  "pauseStartDateLimit": "អាចជ្រើសរើសកាលបរិច្ឆេទចាប់ផ្តើមបានរហូតដល់ {date}"
 }
