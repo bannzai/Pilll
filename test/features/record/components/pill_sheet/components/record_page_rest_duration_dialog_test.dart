@@ -61,7 +61,7 @@ void main() {
   group('RecordPageRestDurationDialog', () {
     group('服用再開予定日の解除ボタン', () {
       testWidgets('服用再開予定日が未選択の場合は表示されない', (WidgetTester tester) async {
-        // AlertDialogのcontentはスクロールしないため、テスト既定の画面サイズだと内容が収まらない
+        // このグループは表示分岐の確認が目的なので、スクロールせずにダイアログの全体が見える画面サイズにする。小さい画面は「画面が小さい場合」で確認する
         tester.view.physicalSize = const Size(1200, 2400);
         tester.view.devicePixelRatio = 1.0;
         addTearDown(tester.view.reset);
@@ -142,6 +142,30 @@ void main() {
         await tester.pump();
 
         expect(onDoneEndDates, [null]);
+      });
+    });
+
+    group('画面が小さい場合', () {
+      testWidgets('内容がはみ出さず、服用再開予定日の行までスクロールして開始ボタンを押せる', (WidgetTester tester) async {
+        // 高さの小さい端末や文字サイズを拡大した環境を想定した画面サイズ
+        tester.view.physicalSize = const Size(320, 480);
+        tester.view.devicePixelRatio = 1.0;
+        addTearDown(tester.view.reset);
+
+        final onDoneEndDates = <DateTime?>[];
+        await tester.pumpWidget(buildDialog(initialEndDate: DateTime.parse('2020-09-26'), onDone: onDoneEndDates.add));
+        await tester.pump();
+
+        expect(find.byType(SingleChildScrollView), findsOneWidget);
+        // はみ出し(RenderFlex overflowed)が起きるとここに例外が残る
+        expect(tester.takeException(), isNull);
+
+        await tester.scrollUntilVisible(find.byType(IconButton), 100, scrollable: find.byType(Scrollable));
+        expect(find.byType(IconButton).hitTestable(), findsOneWidget);
+
+        await tester.tap(find.byType(AppOutlinedButton));
+        await tester.pump();
+        expect(onDoneEndDates, [DateTime.parse('2020-09-26')]);
       });
     });
   });

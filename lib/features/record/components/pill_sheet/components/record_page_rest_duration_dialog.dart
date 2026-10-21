@@ -39,6 +39,8 @@ class RecordPageRestDurationDialog extends HookConsumerWidget {
     final endDate = useState<DateTime?>(initialEndDate);
 
     return AlertDialog(
+      // 服用再開予定日の行が加わり、高さの小さい画面や文字サイズを拡大した環境で内容が収まらないため、スクロールできるようにする
+      scrollable: true,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(20.0)),
       ),
