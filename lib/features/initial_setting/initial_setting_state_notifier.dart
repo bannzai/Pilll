@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
-import 'package:pilll/entity/remote_config_parameter.codegen.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -11,7 +11,6 @@ import 'package:pilll/entity/setting.codegen.dart';
 
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
-import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -25,7 +24,6 @@ final initialSettingStateNotifierProvider = StateNotifierProvider.autoDispose<In
     ref.watch(batchSetSettingProvider),
     ref.watch(batchSetPillSheetModifiedHistoryProvider),
     ref.watch(batchSetPillSheetGroupProvider),
-    ref.watch(remoteConfigParameterProvider),
     ref.watch(registerReminderLocalNotificationRunnerProvider),
     now(),
   ),
@@ -37,7 +35,6 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   final BatchSetSetting batchSetSetting;
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
-  final RemoteConfigParameter remoteConfigParameter;
   final RegisterReminderLocalNotificationRunner registerReminderLocalNotificationRunner;
 
   InitialSettingStateNotifier(
@@ -46,7 +43,6 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     this.batchSetSetting,
     this.batchSetPillSheetModifiedHistory,
     this.batchSetPillSheetGroup,
-    this.remoteConfigParameter,
     this.registerReminderLocalNotificationRunner,
     DateTime _now,
   ) : super(
@@ -116,7 +112,9 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     state = state.copyWith(pillTakenCount: pillTakenCount);
   }
 
-  Future<void> register() async {
+  /// 初期設定の内容を保存し、トライアルを開始する。
+  /// トライアルは 1 アカウント 1 回のため、[user] が既にトライアルを開始している時は開始しない
+  Future<void> register({required User user}) async {
     final batch = batchFactory.batch();
 
     final todayPillNumber = state.todayPillNumber;
@@ -169,7 +167,9 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
       );
     }
 
-    await endInitialSetting(remoteConfigParameter);
+    if (!user.trialIsAlreadyBegin) {
+      await endInitialSetting();
+    }
   }
 
   void showHUD() {
