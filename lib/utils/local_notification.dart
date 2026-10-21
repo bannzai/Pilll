@@ -187,7 +187,7 @@ final registerReminderLocalNotificationProvider = Provider(
 );
 
 /// 服用再開予定日(endDateが今日より後)ありの服用お休み中に、今日から服用再開予定日までの日数を返す
-/// 予定日より前のリマインドを飛ばす日数と、予定日以降のピル番号を今日の番号から数え直すずらし幅に使う
+/// リマインドの登録を始める日を今日から数えた日数と、予定日以降のピル番号を今日の番号から数え直すずらし幅に使う
 /// 服用お休み中でない時と、服用再開予定日が無い時は0
 int restDaysUntilPlannedResumeFor({required RestDuration? activeRestDuration}) {
   final endDate = activeRestDuration?.endDate;
@@ -195,6 +195,12 @@ int restDaysUntilPlannedResumeFor({required RestDuration? activeRestDuration}) {
     return 0;
   }
   return daysBetween(today(), endDate);
+}
+
+/// リマインドを登録する日を、今日から数えた日数(dayOffset)で返す
+/// 服用再開予定日がある服用お休み中は予定日から [RegisterReminderLocalNotification.registerDays] 日分、そうでなければ今日から同じ日数分
+List<int> reminderDayOffsetsFor({required int restDaysUntilPlannedResume}) {
+  return List.generate(RegisterReminderLocalNotification.registerDays, (index) => restDaysUntilPlannedResume + index);
 }
 
 // Reminder
@@ -234,6 +240,7 @@ class RegisterReminderLocalNotification {
   // - ピルをタップして服用キャンセル
   // - クイックレコード
   // - 通知の文言を変えた時
+  // - 服用お休み開始(服用再開予定日あり)
   // - 服用お休み終了
   // - 休薬期間の通知のON/OFF
   // - 休薬終了後
@@ -322,11 +329,8 @@ class RegisterReminderLocalNotification {
     for (final reminderTime in setting.reminderTimes) {
       // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
       // ユーザーの何かしらのアクションでどこかでスケジュールされるだろう
-      for (final dayOffset in List.generate(registerDays, (index) => index)) {
-        // 服用再開予定日より前の日はスキップする
-        if (dayOffset < restDaysUntilPlannedResume) {
-          continue;
-        }
+      // 服用再開予定日がある服用お休み中は、予定日より前の日を飛ばし、予定日から registerDays 日分を登録する
+      for (final dayOffset in reminderDayOffsetsFor(restDaysUntilPlannedResume: restDaysUntilPlannedResume)) {
         // 服用お休み中はピル番号が止まっているので、服用再開予定日以降のピル番号は予定日を起点に数える
         final pillDayOffset = dayOffset - restDaysUntilPlannedResume;
 
