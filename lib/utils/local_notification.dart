@@ -186,21 +186,19 @@ final registerReminderLocalNotificationProvider = Provider(
   (ref) => RegisterReminderLocalNotification(ref),
 );
 
-/// 服用再開予定日(endDateが今日より後)ありの服用お休み中に、今日から服用再開予定日までの日数を返す
-/// リマインドの登録を始める日を今日から数えた日数と、予定日以降のピル番号を今日の番号から数え直すずらし幅に使う
-/// 服用お休み中でない時と、服用再開予定日が無い時は0
-int restDaysUntilPlannedResumeFor({required RestDuration? activeRestDuration}) {
-  final endDate = activeRestDuration?.endDate;
-  if (endDate == null) {
-    return 0;
+/// リマインドを登録する日を、今日から数えた日数(dayOffset)で [RegisterReminderLocalNotification.registerDays] 件返す。要素のindexは、その日に服用するピルが今日の番号から何番進んでいるか(服用お休み中は進まない)を表す
+/// [restDurations] の最後が服用再開予定日(endDateが今日より後)ありの服用お休みなら、その期間(開始前なら開始日から)の日を飛ばす
+/// 開始前の期間は、服用済みの日の翌日に開始する場合(v2で1日分の一部だけ服用した場合など)に起きる
+/// 服用再開予定日の服用お休みが無い時は、今日から [RegisterReminderLocalNotification.registerDays] 日分
+List<int> reminderDayOffsetsFor({required List<RestDuration> restDurations}) {
+  final plannedRestDuration = restDurations.lastOrNull;
+  final plannedEndDate = plannedRestDuration?.endDate;
+  if (plannedRestDuration == null || plannedEndDate == null || !plannedEndDate.date().isAfter(today())) {
+    return List.generate(RegisterReminderLocalNotification.registerDays, (index) => index);
   }
-  return daysBetween(today(), endDate);
-}
-
-/// リマインドを登録する日を、今日から数えた日数(dayOffset)で返す
-/// 服用再開予定日がある服用お休み中は予定日から [RegisterReminderLocalNotification.registerDays] 日分、そうでなければ今日から同じ日数分
-List<int> reminderDayOffsetsFor({required int restDaysUntilPlannedResume}) {
-  return List.generate(RegisterReminderLocalNotification.registerDays, (index) => restDaysUntilPlannedResume + index);
+  final restBeginOffset = max(daysBetween(today(), plannedRestDuration.beginDate), 0);
+  final restDays = daysBetween(today(), plannedEndDate) - restBeginOffset;
+  return List.generate(RegisterReminderLocalNotification.registerDays, (index) => index < restBeginOffset ? index : index + restDays);
 }
 
 // Reminder
@@ -301,7 +299,6 @@ class RegisterReminderLocalNotification {
     if (activeRestDuration != null && activeRestDuration.endDate == null) {
       return;
     }
-    final restDaysUntilPlannedResume = restDaysUntilPlannedResumeFor(activeRestDuration: activeRestDuration);
 
     // AlarmKit使用判定
     final useAlarmKit = setting.useAlarmKit && await AlarmKitService.isAvailable();
@@ -329,11 +326,8 @@ class RegisterReminderLocalNotification {
     for (final reminderTime in setting.reminderTimes) {
       // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
       // ユーザーの何かしらのアクションでどこかでスケジュールされるだろう
-      // 服用再開予定日がある服用お休み中は、予定日より前の日を飛ばし、予定日から registerDays 日分を登録する
-      for (final dayOffset in reminderDayOffsetsFor(restDaysUntilPlannedResume: restDaysUntilPlannedResume)) {
-        // 服用お休み中はピル番号が止まっているので、服用再開予定日以降のピル番号は予定日を起点に数える
-        final pillDayOffset = dayOffset - restDaysUntilPlannedResume;
-
+      // 服用再開予定日がある服用お休みの期間は飛ばす。服用お休み中はピル番号が止まっているので、飛ばした日の分はピル番号を進めない
+      for (final (pillDayOffset, dayOffset) in reminderDayOffsetsFor(restDurations: pillSheetGroup.restDurations).indexed) {
         // 本日服用済みの場合はスキップする
         if (dayOffset == 0 && todayPillAllTaken) {
           analytics.debug(

@@ -11,6 +11,7 @@ import 'package:pilll/features/record/components/setting/components/rest_duratio
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
+import 'package:pilll/utils/local_notification.dart';
 
 class ChangeManualRestDuration extends HookConsumerWidget {
   final RestDuration restDuration;
@@ -28,6 +29,9 @@ class ChangeManualRestDuration extends HookConsumerWidget {
       changeRestDurationBeginDateProvider,
     );
     final changeRestDuration = ref.watch(changeRestDurationProvider);
+    final registerReminderLocalNotification = ref.watch(
+      registerReminderLocalNotificationProvider,
+    );
 
     String format(DateTime dateTime) {
       return '${DateTimeFormatter.monthAndDay(dateTime)}(${DateTimeFormatter.shortWeekday(dateTime)})';
@@ -156,6 +160,8 @@ class ChangeManualRestDuration extends HookConsumerWidget {
               toRestDuration: toRestDuration,
               pillSheetGroup: pillSheetGroup,
             );
+            // 服用再開予定日が変わると、服用再開予定日以降のリマインドを登録する日が変わるため、更新後の状態で登録しなおす
+            await registerReminderLocalNotification();
           } catch (e) {
             onError(e);
           }
