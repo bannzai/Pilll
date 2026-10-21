@@ -209,6 +209,12 @@ class ChangeRestDuration {
     return !restDuration.beginDate.isBefore(pillSheet.beginDate) && !restDuration.beginDate.isAfter(pillSheet.estimatedEndTakenDate);
   }
 
+  /// 開始日の昇順に並べた服用お休み期間を返す。末尾が最新の期間であることを前提にする処理
+  /// ([PillSheet.activeRestDuration]・[PillSheet.estimatedEndTakenDateWithPlannedResume] など)のため、過去の期間を変更して末尾に追加しても順序を保つ
+  List<RestDuration> _sortedByBeginDate(List<RestDuration> restDurations) {
+    return [...restDurations]..sort((a, b) => a.beginDate.compareTo(b.beginDate));
+  }
+
   /// 服用お休み期間の変更で終了予定日が前倒しになった時に、lastTakenDateが終了予定日より後に残らないよう補正したピルシートを返す。
   /// 補正しないと PillSheet.pillNumberFor が錠数を超えるピル番号を返す。
   /// 補正の条件に当てはまらないピルシートはそのまま返す。補正済みのピルシートに再度適用しても結果は変わらない(冪等)。
@@ -258,17 +264,17 @@ class ChangeRestDuration {
     if (updatedFromRestDurationPillSheet.id == toRestDurationPillSheet.id) {
       // 変更前後のお休み期間対象のピルシートが一緒の場合はupdatedFromRestDurationPillSheetからコピーする
       updatedToRestDurationPillSheet = updatedFromRestDurationPillSheet.copyWith(
-        restDurations: [
+        restDurations: _sortedByBeginDate([
           ...updatedFromRestDurationPillSheet.restDurations,
           toRestDuration,
-        ],
+        ]),
       );
     } else {
       updatedToRestDurationPillSheet = toRestDurationPillSheet.copyWith(
-        restDurations: [
+        restDurations: _sortedByBeginDate([
           ...toRestDurationPillSheet.restDurations,
           toRestDuration,
-        ],
+        ]),
       );
     }
 
