@@ -209,6 +209,21 @@ class ChangeRestDuration {
     return !restDuration.beginDate.isBefore(pillSheet.beginDate) && !restDuration.beginDate.isAfter(pillSheet.estimatedEndTakenDate);
   }
 
+  /// 服用お休み期間の変更で終了予定日が前倒しになった時に、lastTakenDateが終了予定日より後に残らないよう補正したピルシートを返す。
+  /// 補正しないと PillSheet.pillNumberFor が錠数を超えるピル番号を返す。
+  /// 補正の条件に当てはまらないピルシートはそのまま返す。補正済みのピルシートに再度適用しても結果は変わらない(冪等)。
+  PillSheet _clampLastTakenDate({required PillSheet pillSheet}) {
+    return switch (pillSheet) {
+      PillSheetV1(:final lastTakenDate?) when lastTakenDate.date().isAfter(pillSheet.estimatedEndTakenDate.date()) => pillSheet.copyWith(
+          lastTakenDate: pillSheet.estimatedEndTakenDate.date(),
+        ),
+      PillSheetV1() => pillSheet,
+      // v2のピル番号は日付から逆算せずpillsのindexから決まるため、lastTakenDateが終了予定日より後でも錠数を超えない。
+      // pillTakensは実際の服用記録なので変更しない
+      PillSheetV2() => pillSheet,
+    };
+  }
+
   Future<void> call({
     required RestDuration fromRestDuration,
     required RestDuration toRestDuration,
@@ -321,7 +336,7 @@ class ChangeRestDuration {
 
     final batch = batchFactory.batch();
     final updatedPillSheetGroup = pillSheetGroup.copyWith(
-      pillSheets: updatedPillSheets,
+      pillSheets: updatedPillSheets.map((pillSheet) => _clampLastTakenDate(pillSheet: pillSheet)).toList(),
     );
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
     switch (actionType) {
