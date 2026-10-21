@@ -152,7 +152,13 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                   try {
                     final navigator = Navigator.of(context);
                     await store.register(user: user);
-                    await registerReminderLocalNotification();
+                    // トライアルを新しく開始した時は、register が premiumOrTrial: true で通知を登録済み。
+                    // startTrial がサーバーで書いたトライアル状態は userProvider に遅れて届くため、
+                    // ここで再登録すると古い premiumOrTrial: false で上書きしてしまう。
+                    // トライアルを開始済みのユーザーは register の登録が今の状態と合わないため、userProvider の状態で登録し直す
+                    if (user.trialIsAlreadyBegin) {
+                      await registerReminderLocalNotification();
+                    }
                     await AppRouter.endInitialSetting(
                       navigator,
                       didEndInitialSettingNotifier,
