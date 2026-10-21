@@ -190,6 +190,7 @@ final registerReminderLocalNotificationProvider = Provider(
 /// [restDurations] の最後が服用再開予定日(endDateが今日より後)ありの服用お休みなら、その期間(開始前なら開始日から)の日を飛ばす
 /// 開始前の期間は、服用済みの日の翌日に開始する場合(v2で1日分の一部だけ服用した場合など)に起きる
 /// 服用再開予定日の服用お休みが無い時は、今日から [RegisterReminderLocalNotification.registerDays] 日分
+/// 飛ばした日の分だけ後ろへずらすので、登録する件数は常に registerDays × 通知時刻の数のまま。iOSの保留中の通知の上限(64件)に近づかない
 List<int> reminderDayOffsetsFor({required List<RestDuration> restDurations}) {
   final plannedRestDuration = restDurations.lastOrNull;
   final plannedEndDate = plannedRestDuration?.endDate;

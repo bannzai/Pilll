@@ -121,11 +121,12 @@ class RecordPageRestDurationDialog extends HookConsumerWidget {
                 },
               );
               if (selectedDate == null) {
+                analytics.logEvent(name: 'cancel_planned_resume_date_picker');
                 return;
               }
               analytics.logEvent(
                 name: 'select_planned_resume_date',
-                parameters: {'end_date': selectedDate.toIso8601String()},
+                parameters: {'selected_date': selectedDate.toIso8601String()},
               );
               endDate.value = selectedDate;
             },
