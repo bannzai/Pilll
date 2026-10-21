@@ -67,7 +67,7 @@ class BeginRestDuration {
           // 前のピルシートのbeginDateが更新され、estimatedEndTakenDateが変わっている場合も考慮する必要があるのでupdatedPillSheetsから1つ前のピルシートにアクセスする
           updatedPillSheets.add(
             pillSheet.copyWith(
-              beginDate: updatedPillSheets[pillSheet.groupIndex - 1].estimatedEndTakenDateUntil(upperDate: endDate).date().addDays(1),
+              beginDate: updatedPillSheets[pillSheet.groupIndex - 1].estimatedEndTakenDateWithPlannedResume.date().addDays(1),
             ),
           );
         } else {
@@ -300,7 +300,7 @@ class ChangeRestDuration {
       final beforePillSheet = updatedBeginingDatePillSheets[pillSheet.groupIndex - 1];
       updatedBeginingDatePillSheets.add(
         pillSheet.copyWith(
-          beginDate: beforePillSheet.estimatedEndTakenDate.date().addDays(1),
+          beginDate: beforePillSheet.estimatedEndTakenDateWithPlannedResume.date().addDays(1),
         ),
       );
     }

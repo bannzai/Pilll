@@ -446,6 +446,16 @@ sealed class PillSheet with _$PillSheet {
       .add(const Duration(days: 1))
       .subtract(const Duration(seconds: 1));
 
+  /// 服用再開予定日まで含めた予想服用完了日
+  /// 最新の服用お休み期間のendDateが今日より後ならそのendDateまで、そうでなければ今日までの服用お休みを数える
+  /// 後続のピルシートのbeginDateを確定する時に使う。表示用の [estimatedEndTakenDate] は今日で打ち切る
+  DateTime get estimatedEndTakenDateWithPlannedResume {
+    final lastEndDate = restDurations.lastOrNull?.endDate;
+    return estimatedEndTakenDateUntil(
+      upperDate: lastEndDate != null && lastEndDate.date().isAfter(today()) ? lastEndDate : today(),
+    );
+  }
+
   /// 現在アクティブな休薬期間
   /// 開始済みで、現在継続中（endDateがnull）もしくは服用再開予定日（endDateが今日より後）の休薬期間を返す
   /// NOTE: beginDateとendDateは日付レベルで比較する。時刻を含めた比較だと、服用おやすみ開始日に

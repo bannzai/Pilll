@@ -1363,6 +1363,108 @@ void main() {
       },
     );
 
+    test(
+      "服用再開予定日(endDateが未来)ありの服用お休み中に終了日を2日延ばすと、2枚目のbeginDateが新しい予定終了日+1日になる",
+      () async {
+        var mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2020-09-19"));
+
+        // 9/17開始で服用再開予定日が9/24の服用お休み中
+        final beforeRestDuration = RestDuration(
+          id: "rest_duration_id",
+          beginDate: DateTime.parse("2020-09-17"),
+          createdDate: DateTime.parse("2020-09-17"),
+          endDate: DateTime.parse("2020-09-24"),
+        );
+        // 服用再開予定日を9/26へ2日延ばす
+        final afterRestDuration = beforeRestDuration.copyWith(
+          endDate: DateTime.parse("2020-09-26"),
+        );
+
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
+
+        final pillSheet1 = PillSheet.v1(
+          id: "pill_sheet_id_1",
+          groupIndex: 0,
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          lastTakenDate: DateTime.parse("2020-09-16"),
+          beginDate: DateTime.parse("2020-09-10"),
+          createdAt: DateTime.parse("2020-09-10"),
+          restDurations: [beforeRestDuration],
+        );
+        // 変更前: 9/10 + 27日 + 服用お休み7日(9/17〜9/24) = 10/14 なので、2枚目は10/15開始
+        final pillSheet2 = PillSheet.v1(
+          id: "pill_sheet_id_2",
+          groupIndex: 1,
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          lastTakenDate: null,
+          beginDate: DateTime.parse("2020-10-15"),
+          createdAt: DateTime.parse("2020-09-10"),
+        );
+        expect(
+          pillSheet1.estimatedEndTakenDateWithPlannedResume.date().addDays(1),
+          DateTime.parse("2020-10-15"),
+        );
+        // 表示用のestimatedEndTakenDateは今日(9/19)までの2日で打ち切るので、2枚目の開始日の確定には使えない
+        expect(
+          pillSheet1.estimatedEndTakenDate.date().addDays(1),
+          DateTime.parse("2020-10-10"),
+        );
+
+        final updatedPillSheet1 = pillSheet1.copyWith(
+          restDurations: [afterRestDuration],
+        );
+        // 変更後: 9/10 + 27日 + 服用お休み9日(9/17〜9/26) = 10/16 なので、2枚目は10/17開始
+        final updatedPillSheet2 = pillSheet2.copyWith(
+          beginDate: DateTime.parse("2020-10-17"),
+        );
+
+        final pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: ["pill_sheet_id_1", "pill_sheet_id_2"],
+          pillSheets: [pillSheet1, pillSheet2],
+          createdAt: DateTime.parse("2020-09-10"),
+        );
+        final updatedPillSheetGroup = pillSheetGroup.copyWith(
+          pillSheets: [updatedPillSheet1, updatedPillSheet2],
+        );
+        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+        when(
+          batchSetPillSheetGroup(batch, updatedPillSheetGroup),
+        ).thenReturn(updatedPillSheetGroup);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createChangedRestDurationAction(
+          beforeRestDuration: beforeRestDuration,
+          afterRestDuration: afterRestDuration,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: updatedPillSheetGroup,
+        );
+        final batchSetPillSheetModifiedHistory =
+            MockBatchSetPillSheetModifiedHistory();
+        when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+        final changeRestDuration = ChangeRestDuration(
+          actionType: PillSheetModifiedActionType.changedRestDuration,
+          batchFactory: batchFactory,
+          batchSetPillSheetGroup: batchSetPillSheetGroup,
+          batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+        );
+        await changeRestDuration.call(
+          fromRestDuration: beforeRestDuration,
+          toRestDuration: afterRestDuration,
+          pillSheetGroup: pillSheetGroup,
+        );
+
+        verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
+        verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
+      },
+    );
+
     group("lastTakenDateの補正", () {
       test(
         "1枚のシートで28番まで服用済みの状態で服用お休み期間を4日から2日に短くすると、lastTakenDateが新しい終了予定日の日付に補正されlastTakenOrZeroPillNumberが28のまま",

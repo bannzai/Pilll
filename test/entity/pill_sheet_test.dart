@@ -5884,6 +5884,49 @@ void main() {
           DateTime(2022, 6, 4, 23, 59, 59),
         );
       });
+
+      test("estimatedEndTakenDateWithPlannedResumeはendDateが今日より後なら予定の終了日(5/15)まで数える", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+        expect(
+          pillSheetWith(restDuration: restDuration).estimatedEndTakenDateWithPlannedResume,
+          DateTime(2022, 6, 4, 23, 59, 59),
+        );
+      });
+
+      test("境界値テスト：estimatedEndTakenDateWithPlannedResumeはendDateが今日と同日なら今日まで数える", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-15"));
+
+        // 5/1 + 27日 + 7日(5/8〜5/15) = 6/4。endDateは服用再開日なので5/15で打ち切っても全日数と同じ
+        expect(
+          pillSheetWith(restDuration: restDuration).estimatedEndTakenDateWithPlannedResume,
+          DateTime(2022, 6, 4, 23, 59, 59),
+        );
+      });
+
+      test("estimatedEndTakenDateWithPlannedResumeはendDateが今日より前なら終了済みの全日数を数える", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-20"));
+
+        final pillSheet = pillSheetWith(restDuration: restDuration);
+        expect(pillSheet.estimatedEndTakenDateWithPlannedResume, pillSheet.estimatedEndTakenDate);
+        expect(pillSheet.estimatedEndTakenDateWithPlannedResume, DateTime(2022, 6, 4, 23, 59, 59));
+      });
+
+      test("estimatedEndTakenDateWithPlannedResumeはrestDurationsが空なら estimatedEndTakenDate と同じ", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+        final pillSheet = pillSheetWith(restDuration: restDuration).copyWith(restDurations: []);
+        expect(pillSheet.estimatedEndTakenDateWithPlannedResume, pillSheet.estimatedEndTakenDate);
+        expect(pillSheet.estimatedEndTakenDateWithPlannedResume, DateTime(2022, 5, 28, 23, 59, 59));
+      });
     });
   });
   group("#activeRestDuration", () {
