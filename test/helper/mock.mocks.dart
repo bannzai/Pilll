@@ -6,45 +6,48 @@
 import 'dart:async' as _i9;
 
 import 'package:cloud_firestore/cloud_firestore.dart' as _i3;
+import 'package:cloud_functions/cloud_functions.dart' as _i10;
+import 'package:cloud_functions_platform_interface/cloud_functions_platform_interface.dart'
+    as _i17;
+import 'package:firebase_core/firebase_core.dart' as _i16;
 import 'package:flutter_local_notifications/flutter_local_notifications.dart'
-    as _i14;
+    as _i15;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:mockito/src/dummies.dart' as _i21;
-import 'package:pilll/entity/diary.codegen.dart' as _i23;
-import 'package:pilll/entity/diary_setting.codegen.dart' as _i22;
-import 'package:pilll/entity/firestore_id_generator.dart' as _i36;
-import 'package:pilll/entity/inquiry.codegen.dart' as _i25;
+import 'package:mockito/src/dummies.dart' as _i24;
+import 'package:pilll/entity/diary.codegen.dart' as _i26;
+import 'package:pilll/entity/diary_setting.codegen.dart' as _i25;
+import 'package:pilll/entity/firestore_id_generator.dart' as _i38;
+import 'package:pilll/entity/inquiry.codegen.dart' as _i28;
 import 'package:pilll/entity/menstruation.codegen.dart' as _i8;
-import 'package:pilll/entity/pill_sheet.codegen.dart' as _i32;
+import 'package:pilll/entity/pill_sheet.codegen.dart' as _i34;
 import 'package:pilll/entity/pill_sheet_group.codegen.dart' as _i7;
-import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart' as _i18;
-import 'package:pilll/entity/pill_sheet_type.dart' as _i17;
-import 'package:pilll/entity/pilll_ads.codegen.dart' as _i26;
+import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart' as _i21;
+import 'package:pilll/entity/pill_sheet_type.dart' as _i20;
+import 'package:pilll/entity/pilll_ads.codegen.dart' as _i29;
 import 'package:pilll/entity/reminder_notification_customization.codegen.dart'
     as _i5;
-import 'package:pilll/entity/remote_config_parameter.codegen.dart' as _i28;
-import 'package:pilll/entity/schedule.codegen.dart' as _i24;
+import 'package:pilll/entity/schedule.codegen.dart' as _i27;
 import 'package:pilll/entity/setting.codegen.dart' as _i6;
 import 'package:pilll/entity/user.codegen.dart' as _i4;
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart'
-    as _i38;
-import 'package:pilll/provider/batch.dart' as _i11;
+    as _i40;
+import 'package:pilll/provider/batch.dart' as _i12;
 import 'package:pilll/provider/database.dart' as _i2;
-import 'package:pilll/provider/force_update.dart' as _i33;
-import 'package:pilll/provider/menstruation.dart' as _i20;
-import 'package:pilll/provider/pill_sheet_group.dart' as _i13;
-import 'package:pilll/provider/pill_sheet_modified_history.dart' as _i12;
-import 'package:pilll/provider/purchase.dart' as _i29;
-import 'package:pilll/provider/revert_take_pill.dart' as _i30;
-import 'package:pilll/provider/set_user_id.dart' as _i34;
-import 'package:pilll/provider/setting.dart' as _i19;
-import 'package:pilll/provider/take_pill.dart' as _i31;
-import 'package:pilll/provider/user.dart' as _i27;
-import 'package:pilll/utils/analytics.dart' as _i16;
-import 'package:pilll/utils/datetime/day.dart' as _i15;
-import 'package:pilll/utils/error_log.dart' as _i35;
-import 'package:pilll/utils/local_notification.dart' as _i37;
-import 'package:purchases_flutter/purchases_flutter.dart' as _i10;
+import 'package:pilll/provider/force_update.dart' as _i35;
+import 'package:pilll/provider/menstruation.dart' as _i23;
+import 'package:pilll/provider/pill_sheet_group.dart' as _i14;
+import 'package:pilll/provider/pill_sheet_modified_history.dart' as _i13;
+import 'package:pilll/provider/purchase.dart' as _i31;
+import 'package:pilll/provider/revert_take_pill.dart' as _i32;
+import 'package:pilll/provider/set_user_id.dart' as _i36;
+import 'package:pilll/provider/setting.dart' as _i22;
+import 'package:pilll/provider/take_pill.dart' as _i33;
+import 'package:pilll/provider/user.dart' as _i30;
+import 'package:pilll/utils/analytics.dart' as _i19;
+import 'package:pilll/utils/datetime/day.dart' as _i18;
+import 'package:pilll/utils/error_log.dart' as _i37;
+import 'package:pilll/utils/local_notification.dart' as _i39;
+import 'package:purchases_flutter/purchases_flutter.dart' as _i11;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -176,8 +179,9 @@ class _FakeFuture_10<T1> extends _i1.SmartFake implements _i9.Future<T1> {
         );
 }
 
-class _FakeOfferings_11 extends _i1.SmartFake implements _i10.Offerings {
-  _FakeOfferings_11(
+class _FakeFirebaseFunctions_11 extends _i1.SmartFake
+    implements _i10.FirebaseFunctions {
+  _FakeFirebaseFunctions_11(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -186,8 +190,8 @@ class _FakeOfferings_11 extends _i1.SmartFake implements _i10.Offerings {
         );
 }
 
-class _FakeBatchFactory_12 extends _i1.SmartFake implements _i11.BatchFactory {
-  _FakeBatchFactory_12(
+class _FakeOfferings_12 extends _i1.SmartFake implements _i11.Offerings {
+  _FakeOfferings_12(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -196,9 +200,8 @@ class _FakeBatchFactory_12 extends _i1.SmartFake implements _i11.BatchFactory {
         );
 }
 
-class _FakeBatchSetPillSheetModifiedHistory_13 extends _i1.SmartFake
-    implements _i12.BatchSetPillSheetModifiedHistory {
-  _FakeBatchSetPillSheetModifiedHistory_13(
+class _FakeBatchFactory_13 extends _i1.SmartFake implements _i12.BatchFactory {
+  _FakeBatchFactory_13(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -207,9 +210,9 @@ class _FakeBatchSetPillSheetModifiedHistory_13 extends _i1.SmartFake
         );
 }
 
-class _FakeBatchSetPillSheetGroup_14 extends _i1.SmartFake
-    implements _i13.BatchSetPillSheetGroup {
-  _FakeBatchSetPillSheetGroup_14(
+class _FakeBatchSetPillSheetModifiedHistory_14 extends _i1.SmartFake
+    implements _i13.BatchSetPillSheetModifiedHistory {
+  _FakeBatchSetPillSheetModifiedHistory_14(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -218,8 +221,9 @@ class _FakeBatchSetPillSheetGroup_14 extends _i1.SmartFake
         );
 }
 
-class _FakeUser_15 extends _i1.SmartFake implements _i4.User {
-  _FakeUser_15(
+class _FakeBatchSetPillSheetGroup_15 extends _i1.SmartFake
+    implements _i14.BatchSetPillSheetGroup {
+  _FakeBatchSetPillSheetGroup_15(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -228,9 +232,73 @@ class _FakeUser_15 extends _i1.SmartFake implements _i4.User {
         );
 }
 
-class _FakeFlutterLocalNotificationsPlugin_16 extends _i1.SmartFake
-    implements _i14.FlutterLocalNotificationsPlugin {
-  _FakeFlutterLocalNotificationsPlugin_16(
+class _FakeUser_16 extends _i1.SmartFake implements _i4.User {
+  _FakeUser_16(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeFlutterLocalNotificationsPlugin_17 extends _i1.SmartFake
+    implements _i15.FlutterLocalNotificationsPlugin {
+  _FakeFlutterLocalNotificationsPlugin_17(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeFirebaseApp_18 extends _i1.SmartFake implements _i16.FirebaseApp {
+  _FakeFirebaseApp_18(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeFirebaseFunctionsPlatform_19 extends _i1.SmartFake
+    implements _i17.FirebaseFunctionsPlatform {
+  _FakeFirebaseFunctionsPlatform_19(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeHttpsCallable_20 extends _i1.SmartFake
+    implements _i10.HttpsCallable {
+  _FakeHttpsCallable_20(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeHttpsCallablePlatform_21 extends _i1.SmartFake
+    implements _i17.HttpsCallablePlatform {
+  _FakeHttpsCallablePlatform_21(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeHttpsCallableResult_22<T1> extends _i1.SmartFake
+    implements _i10.HttpsCallableResult<T1> {
+  _FakeHttpsCallableResult_22(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -242,7 +310,7 @@ class _FakeFlutterLocalNotificationsPlugin_16 extends _i1.SmartFake
 /// A class which mocks [TodayService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockTodayService extends _i1.Mock implements _i15.TodayService {
+class MockTodayService extends _i1.Mock implements _i18.TodayService {
   MockTodayService() {
     _i1.throwOnMissingStub(this);
   }
@@ -266,7 +334,7 @@ class MockTodayService extends _i1.Mock implements _i15.TodayService {
 /// A class which mocks [Analytics].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockAnalytics extends _i1.Mock implements _i16.Analytics {
+class MockAnalytics extends _i1.Mock implements _i19.Analytics {
   MockAnalytics() {
     _i1.throwOnMissingStub(this);
   }
@@ -342,7 +410,7 @@ class MockAnalytics extends _i1.Mock implements _i16.Analytics {
 /// A class which mocks [BatchFactory].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockBatchFactory extends _i1.Mock implements _i11.BatchFactory {
+class MockBatchFactory extends _i1.Mock implements _i12.BatchFactory {
   MockBatchFactory() {
     _i1.throwOnMissingStub(this);
   }
@@ -536,16 +604,16 @@ class MockSetting extends _i1.Mock implements _i6.Setting {
   }
 
   @override
-  List<_i17.PillSheetType> get pillSheetEnumTypes => (super.noSuchMethod(
+  List<_i20.PillSheetType> get pillSheetEnumTypes => (super.noSuchMethod(
         Invocation.getter(#pillSheetEnumTypes),
-        returnValue: <_i17.PillSheetType>[],
-      ) as List<_i17.PillSheetType>);
+        returnValue: <_i20.PillSheetType>[],
+      ) as List<_i20.PillSheetType>);
 
   @override
-  List<_i17.PillSheetType?> get pillSheetTypes => (super.noSuchMethod(
+  List<_i20.PillSheetType?> get pillSheetTypes => (super.noSuchMethod(
         Invocation.getter(#pillSheetTypes),
-        returnValue: <_i17.PillSheetType?>[],
-      ) as List<_i17.PillSheetType?>);
+        returnValue: <_i20.PillSheetType?>[],
+      ) as List<_i20.PillSheetType?>);
 
   @override
   int get pillNumberForFromMenstruation => (super.noSuchMethod(
@@ -634,7 +702,7 @@ class MockSetting extends _i1.Mock implements _i6.Setting {
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockBatchSetPillSheetGroup extends _i1.Mock
-    implements _i13.BatchSetPillSheetGroup {
+    implements _i14.BatchSetPillSheetGroup {
   MockBatchSetPillSheetGroup() {
     _i1.throwOnMissingStub(this);
   }
@@ -678,7 +746,7 @@ class MockBatchSetPillSheetGroup extends _i1.Mock
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockBatchSetPillSheetModifiedHistory extends _i1.Mock
-    implements _i12.BatchSetPillSheetModifiedHistory {
+    implements _i13.BatchSetPillSheetModifiedHistory {
   MockBatchSetPillSheetModifiedHistory() {
     _i1.throwOnMissingStub(this);
   }
@@ -695,7 +763,7 @@ class MockBatchSetPillSheetModifiedHistory extends _i1.Mock
   @override
   void call(
     _i3.WriteBatch? batch,
-    _i18.PillSheetModifiedHistory? history,
+    _i21.PillSheetModifiedHistory? history,
   ) =>
       super.noSuchMethod(
         Invocation.method(
@@ -712,7 +780,7 @@ class MockBatchSetPillSheetModifiedHistory extends _i1.Mock
 /// A class which mocks [BatchSetSetting].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockBatchSetSetting extends _i1.Mock implements _i19.BatchSetSetting {
+class MockBatchSetSetting extends _i1.Mock implements _i22.BatchSetSetting {
   MockBatchSetSetting() {
     _i1.throwOnMissingStub(this);
   }
@@ -746,7 +814,7 @@ class MockBatchSetSetting extends _i1.Mock implements _i19.BatchSetSetting {
 /// A class which mocks [SetSetting].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockSetSetting extends _i1.Mock implements _i19.SetSetting {
+class MockSetSetting extends _i1.Mock implements _i22.SetSetting {
   MockSetSetting() {
     _i1.throwOnMissingStub(this);
   }
@@ -774,7 +842,7 @@ class MockSetSetting extends _i1.Mock implements _i19.SetSetting {
 /// A class which mocks [SetPillSheetGroup].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockSetPillSheetGroup extends _i1.Mock implements _i13.SetPillSheetGroup {
+class MockSetPillSheetGroup extends _i1.Mock implements _i14.SetPillSheetGroup {
   MockSetPillSheetGroup() {
     _i1.throwOnMissingStub(this);
   }
@@ -804,7 +872,7 @@ class MockSetPillSheetGroup extends _i1.Mock implements _i13.SetPillSheetGroup {
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockDeleteMenstruation extends _i1.Mock
-    implements _i20.DeleteMenstruation {
+    implements _i23.DeleteMenstruation {
   MockDeleteMenstruation() {
     _i1.throwOnMissingStub(this);
   }
@@ -832,7 +900,7 @@ class MockDeleteMenstruation extends _i1.Mock
 /// A class which mocks [SetMenstruation].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockSetMenstruation extends _i1.Mock implements _i20.SetMenstruation {
+class MockSetMenstruation extends _i1.Mock implements _i23.SetMenstruation {
   MockSetMenstruation() {
     _i1.throwOnMissingStub(this);
   }
@@ -866,7 +934,7 @@ class MockSetMenstruation extends _i1.Mock implements _i20.SetMenstruation {
 /// A class which mocks [BeginMenstruation].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockBeginMenstruation extends _i1.Mock implements _i20.BeginMenstruation {
+class MockBeginMenstruation extends _i1.Mock implements _i23.BeginMenstruation {
   MockBeginMenstruation() {
     _i1.throwOnMissingStub(this);
   }
@@ -918,7 +986,7 @@ class MockDatabaseConnection extends _i1.Mock
   @override
   String get userID => (super.noSuchMethod(
         Invocation.getter(#userID),
-        returnValue: _i21.dummyValue<String>(
+        returnValue: _i24.dummyValue<String>(
           this,
           Invocation.getter(#userID),
         ),
@@ -955,51 +1023,51 @@ class MockDatabaseConnection extends _i1.Mock
       ) as _i3.DocumentReference<Object?>);
 
   @override
-  _i3.DocumentReference<_i22.DiarySetting> diarySettingReference() =>
+  _i3.DocumentReference<_i25.DiarySetting> diarySettingReference() =>
       (super.noSuchMethod(
         Invocation.method(
           #diarySettingReference,
           [],
         ),
-        returnValue: _FakeDocumentReference_8<_i22.DiarySetting>(
+        returnValue: _FakeDocumentReference_8<_i25.DiarySetting>(
           this,
           Invocation.method(
             #diarySettingReference,
             [],
           ),
         ),
-      ) as _i3.DocumentReference<_i22.DiarySetting>);
+      ) as _i3.DocumentReference<_i25.DiarySetting>);
 
   @override
-  _i3.CollectionReference<_i23.Diary> diariesReference() => (super.noSuchMethod(
+  _i3.CollectionReference<_i26.Diary> diariesReference() => (super.noSuchMethod(
         Invocation.method(
           #diariesReference,
           [],
         ),
-        returnValue: _FakeCollectionReference_9<_i23.Diary>(
+        returnValue: _FakeCollectionReference_9<_i26.Diary>(
           this,
           Invocation.method(
             #diariesReference,
             [],
           ),
         ),
-      ) as _i3.CollectionReference<_i23.Diary>);
+      ) as _i3.CollectionReference<_i26.Diary>);
 
   @override
-  _i3.DocumentReference<_i23.Diary> diaryReference(_i23.Diary? diary) =>
+  _i3.DocumentReference<_i26.Diary> diaryReference(_i26.Diary? diary) =>
       (super.noSuchMethod(
         Invocation.method(
           #diaryReference,
           [diary],
         ),
-        returnValue: _FakeDocumentReference_8<_i23.Diary>(
+        returnValue: _FakeDocumentReference_8<_i26.Diary>(
           this,
           Invocation.method(
             #diaryReference,
             [diary],
           ),
         ),
-      ) as _i3.DocumentReference<_i23.Diary>);
+      ) as _i3.DocumentReference<_i26.Diary>);
 
   @override
   _i3.DocumentReference<Object?> userPrivateRawReference() =>
@@ -1051,24 +1119,24 @@ class MockDatabaseConnection extends _i1.Mock
       ) as _i3.DocumentReference<_i8.Menstruation>);
 
   @override
-  _i3.CollectionReference<_i18.PillSheetModifiedHistory>
+  _i3.CollectionReference<_i21.PillSheetModifiedHistory>
       pillSheetModifiedHistoriesReference() => (super.noSuchMethod(
             Invocation.method(
               #pillSheetModifiedHistoriesReference,
               [],
             ),
             returnValue:
-                _FakeCollectionReference_9<_i18.PillSheetModifiedHistory>(
+                _FakeCollectionReference_9<_i21.PillSheetModifiedHistory>(
               this,
               Invocation.method(
                 #pillSheetModifiedHistoriesReference,
                 [],
               ),
             ),
-          ) as _i3.CollectionReference<_i18.PillSheetModifiedHistory>);
+          ) as _i3.CollectionReference<_i21.PillSheetModifiedHistory>);
 
   @override
-  _i3.DocumentReference<_i18.PillSheetModifiedHistory>
+  _i3.DocumentReference<_i21.PillSheetModifiedHistory>
       pillSheetModifiedHistoryReference(
               {required String? pillSheetModifiedHistoryID}) =>
           (super.noSuchMethod(
@@ -1078,7 +1146,7 @@ class MockDatabaseConnection extends _i1.Mock
               {#pillSheetModifiedHistoryID: pillSheetModifiedHistoryID},
             ),
             returnValue:
-                _FakeDocumentReference_8<_i18.PillSheetModifiedHistory>(
+                _FakeDocumentReference_8<_i21.PillSheetModifiedHistory>(
               this,
               Invocation.method(
                 #pillSheetModifiedHistoryReference,
@@ -1086,7 +1154,7 @@ class MockDatabaseConnection extends _i1.Mock
                 {#pillSheetModifiedHistoryID: pillSheetModifiedHistoryID},
               ),
             ),
-          ) as _i3.DocumentReference<_i18.PillSheetModifiedHistory>);
+          ) as _i3.DocumentReference<_i21.PillSheetModifiedHistory>);
 
   @override
   _i3.CollectionReference<_i7.PillSheetGroup> pillSheetGroupsReference() =>
@@ -1122,67 +1190,67 @@ class MockDatabaseConnection extends _i1.Mock
       ) as _i3.DocumentReference<_i7.PillSheetGroup>);
 
   @override
-  _i3.CollectionReference<_i24.Schedule> schedulesReference() =>
+  _i3.CollectionReference<_i27.Schedule> schedulesReference() =>
       (super.noSuchMethod(
         Invocation.method(
           #schedulesReference,
           [],
         ),
-        returnValue: _FakeCollectionReference_9<_i24.Schedule>(
+        returnValue: _FakeCollectionReference_9<_i27.Schedule>(
           this,
           Invocation.method(
             #schedulesReference,
             [],
           ),
         ),
-      ) as _i3.CollectionReference<_i24.Schedule>);
+      ) as _i3.CollectionReference<_i27.Schedule>);
 
   @override
-  _i3.DocumentReference<_i24.Schedule> scheduleReference(String? scheduleID) =>
+  _i3.DocumentReference<_i27.Schedule> scheduleReference(String? scheduleID) =>
       (super.noSuchMethod(
         Invocation.method(
           #scheduleReference,
           [scheduleID],
         ),
-        returnValue: _FakeDocumentReference_8<_i24.Schedule>(
+        returnValue: _FakeDocumentReference_8<_i27.Schedule>(
           this,
           Invocation.method(
             #scheduleReference,
             [scheduleID],
           ),
         ),
-      ) as _i3.DocumentReference<_i24.Schedule>);
+      ) as _i3.DocumentReference<_i27.Schedule>);
 
   @override
-  _i3.CollectionReference<_i25.Inquiry> inquiriesReference() =>
+  _i3.CollectionReference<_i28.Inquiry> inquiriesReference() =>
       (super.noSuchMethod(
         Invocation.method(
           #inquiriesReference,
           [],
         ),
-        returnValue: _FakeCollectionReference_9<_i25.Inquiry>(
+        returnValue: _FakeCollectionReference_9<_i28.Inquiry>(
           this,
           Invocation.method(
             #inquiriesReference,
             [],
           ),
         ),
-      ) as _i3.CollectionReference<_i25.Inquiry>);
+      ) as _i3.CollectionReference<_i28.Inquiry>);
 
   @override
-  _i3.DocumentReference<_i26.PilllAds?> pilllAds() => (super.noSuchMethod(
+  _i3.DocumentReference<_i29.PilllAds?> pilllAds() => (super.noSuchMethod(
         Invocation.method(
           #pilllAds,
           [],
         ),
-        returnValue: _FakeDocumentReference_8<_i26.PilllAds?>(
+        returnValue: _FakeDocumentReference_8<_i29.PilllAds?>(
           this,
           Invocation.method(
             #pilllAds,
             [],
           ),
         ),
-      ) as _i3.DocumentReference<_i26.PilllAds?>);
+      ) as _i3.DocumentReference<_i29.PilllAds?>);
 
   @override
   _i9.Future<T> transaction<T>(_i3.TransactionHandler<T>? transactionHandler) =>
@@ -1191,8 +1259,8 @@ class MockDatabaseConnection extends _i1.Mock
           #transaction,
           [transactionHandler],
         ),
-        returnValue: _i21.ifNotNull(
-              _i21.dummyValueOrNull<T>(
+        returnValue: _i24.ifNotNull(
+              _i24.dummyValueOrNull<T>(
                 this,
                 Invocation.method(
                   #transaction,
@@ -1229,26 +1297,25 @@ class MockDatabaseConnection extends _i1.Mock
 /// A class which mocks [EndInitialSetting].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockEndInitialSetting extends _i1.Mock implements _i27.EndInitialSetting {
+class MockEndInitialSetting extends _i1.Mock implements _i30.EndInitialSetting {
   MockEndInitialSetting() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i2.DatabaseConnection get databaseConnection => (super.noSuchMethod(
-        Invocation.getter(#databaseConnection),
-        returnValue: _FakeDatabaseConnection_1(
+  _i10.FirebaseFunctions get firebaseFunctions => (super.noSuchMethod(
+        Invocation.getter(#firebaseFunctions),
+        returnValue: _FakeFirebaseFunctions_11(
           this,
-          Invocation.getter(#databaseConnection),
+          Invocation.getter(#firebaseFunctions),
         ),
-      ) as _i2.DatabaseConnection);
+      ) as _i10.FirebaseFunctions);
 
   @override
-  _i9.Future<void> call(_i28.RemoteConfigParameter? remoteConfigParameter) =>
-      (super.noSuchMethod(
+  _i9.Future<void> call() => (super.noSuchMethod(
         Invocation.method(
           #call,
-          [remoteConfigParameter],
+          [],
         ),
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
@@ -1258,62 +1325,62 @@ class MockEndInitialSetting extends _i1.Mock implements _i27.EndInitialSetting {
 /// A class which mocks [PurchaseService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockPurchaseService extends _i1.Mock implements _i29.PurchaseService {
+class MockPurchaseService extends _i1.Mock implements _i31.PurchaseService {
   MockPurchaseService() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i9.Future<_i10.Offerings> fetchOfferings() => (super.noSuchMethod(
+  _i9.Future<_i11.Offerings> fetchOfferings() => (super.noSuchMethod(
         Invocation.method(
           #fetchOfferings,
           [],
         ),
-        returnValue: _i9.Future<_i10.Offerings>.value(_FakeOfferings_11(
+        returnValue: _i9.Future<_i11.Offerings>.value(_FakeOfferings_12(
           this,
           Invocation.method(
             #fetchOfferings,
             [],
           ),
         )),
-      ) as _i9.Future<_i10.Offerings>);
+      ) as _i9.Future<_i11.Offerings>);
 }
 
 /// A class which mocks [RevertTakePill].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockRevertTakePill extends _i1.Mock implements _i30.RevertTakePill {
+class MockRevertTakePill extends _i1.Mock implements _i32.RevertTakePill {
   MockRevertTakePill() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i11.BatchFactory get batchFactory => (super.noSuchMethod(
+  _i12.BatchFactory get batchFactory => (super.noSuchMethod(
         Invocation.getter(#batchFactory),
-        returnValue: _FakeBatchFactory_12(
+        returnValue: _FakeBatchFactory_13(
           this,
           Invocation.getter(#batchFactory),
         ),
-      ) as _i11.BatchFactory);
+      ) as _i12.BatchFactory);
 
   @override
-  _i12.BatchSetPillSheetModifiedHistory get batchSetPillSheetModifiedHistory =>
+  _i13.BatchSetPillSheetModifiedHistory get batchSetPillSheetModifiedHistory =>
       (super.noSuchMethod(
         Invocation.getter(#batchSetPillSheetModifiedHistory),
-        returnValue: _FakeBatchSetPillSheetModifiedHistory_13(
+        returnValue: _FakeBatchSetPillSheetModifiedHistory_14(
           this,
           Invocation.getter(#batchSetPillSheetModifiedHistory),
         ),
-      ) as _i12.BatchSetPillSheetModifiedHistory);
+      ) as _i13.BatchSetPillSheetModifiedHistory);
 
   @override
-  _i13.BatchSetPillSheetGroup get batchSetPillSheetGroup => (super.noSuchMethod(
+  _i14.BatchSetPillSheetGroup get batchSetPillSheetGroup => (super.noSuchMethod(
         Invocation.getter(#batchSetPillSheetGroup),
-        returnValue: _FakeBatchSetPillSheetGroup_14(
+        returnValue: _FakeBatchSetPillSheetGroup_15(
           this,
           Invocation.getter(#batchSetPillSheetGroup),
         ),
-      ) as _i13.BatchSetPillSheetGroup);
+      ) as _i14.BatchSetPillSheetGroup);
 
   @override
   _i9.Future<_i7.PillSheetGroup?> call({
@@ -1339,44 +1406,44 @@ class MockRevertTakePill extends _i1.Mock implements _i30.RevertTakePill {
 /// A class which mocks [TakePill].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockTakePill extends _i1.Mock implements _i31.TakePill {
+class MockTakePill extends _i1.Mock implements _i33.TakePill {
   MockTakePill() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i11.BatchFactory get batchFactory => (super.noSuchMethod(
+  _i12.BatchFactory get batchFactory => (super.noSuchMethod(
         Invocation.getter(#batchFactory),
-        returnValue: _FakeBatchFactory_12(
+        returnValue: _FakeBatchFactory_13(
           this,
           Invocation.getter(#batchFactory),
         ),
-      ) as _i11.BatchFactory);
+      ) as _i12.BatchFactory);
 
   @override
-  _i12.BatchSetPillSheetModifiedHistory get batchSetPillSheetModifiedHistory =>
+  _i13.BatchSetPillSheetModifiedHistory get batchSetPillSheetModifiedHistory =>
       (super.noSuchMethod(
         Invocation.getter(#batchSetPillSheetModifiedHistory),
-        returnValue: _FakeBatchSetPillSheetModifiedHistory_13(
+        returnValue: _FakeBatchSetPillSheetModifiedHistory_14(
           this,
           Invocation.getter(#batchSetPillSheetModifiedHistory),
         ),
-      ) as _i12.BatchSetPillSheetModifiedHistory);
+      ) as _i13.BatchSetPillSheetModifiedHistory);
 
   @override
-  _i13.BatchSetPillSheetGroup get batchSetPillSheetGroup => (super.noSuchMethod(
+  _i14.BatchSetPillSheetGroup get batchSetPillSheetGroup => (super.noSuchMethod(
         Invocation.getter(#batchSetPillSheetGroup),
-        returnValue: _FakeBatchSetPillSheetGroup_14(
+        returnValue: _FakeBatchSetPillSheetGroup_15(
           this,
           Invocation.getter(#batchSetPillSheetGroup),
         ),
-      ) as _i13.BatchSetPillSheetGroup);
+      ) as _i14.BatchSetPillSheetGroup);
 
   @override
   _i9.Future<_i7.PillSheetGroup?> call({
     required DateTime? takenDate,
     required _i7.PillSheetGroup? pillSheetGroup,
-    required _i32.PillSheet? activePillSheet,
+    required _i34.PillSheet? activePillSheet,
     required bool? isQuickRecord,
   }) =>
       (super.noSuchMethod(
@@ -1397,7 +1464,7 @@ class MockTakePill extends _i1.Mock implements _i31.TakePill {
 /// A class which mocks [CheckForceUpdate].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockCheckForceUpdate extends _i1.Mock implements _i33.CheckForceUpdate {
+class MockCheckForceUpdate extends _i1.Mock implements _i35.CheckForceUpdate {
   MockCheckForceUpdate() {
     _i1.throwOnMissingStub(this);
   }
@@ -1415,7 +1482,7 @@ class MockCheckForceUpdate extends _i1.Mock implements _i33.CheckForceUpdate {
 /// A class which mocks [SetUserID].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockSetUserID extends _i1.Mock implements _i34.SetUserID {
+class MockSetUserID extends _i1.Mock implements _i36.SetUserID {
   MockSetUserID() {
     _i1.throwOnMissingStub(this);
   }
@@ -1435,7 +1502,7 @@ class MockSetUserID extends _i1.Mock implements _i34.SetUserID {
 /// A class which mocks [FetchOrCreateUser].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockFetchOrCreateUser extends _i1.Mock implements _i27.FetchOrCreateUser {
+class MockFetchOrCreateUser extends _i1.Mock implements _i30.FetchOrCreateUser {
   MockFetchOrCreateUser() {
     _i1.throwOnMissingStub(this);
   }
@@ -1455,7 +1522,7 @@ class MockFetchOrCreateUser extends _i1.Mock implements _i27.FetchOrCreateUser {
           #call,
           [uid],
         ),
-        returnValue: _i9.Future<_i4.User>.value(_FakeUser_15(
+        returnValue: _i9.Future<_i4.User>.value(_FakeUser_16(
           this,
           Invocation.method(
             #call,
@@ -1469,7 +1536,7 @@ class MockFetchOrCreateUser extends _i1.Mock implements _i27.FetchOrCreateUser {
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockSaveUserLaunchInfo extends _i1.Mock
-    implements _i27.SaveUserLaunchInfo {
+    implements _i30.SaveUserLaunchInfo {
   MockSaveUserLaunchInfo() {
     _i1.throwOnMissingStub(this);
   }
@@ -1496,7 +1563,7 @@ class MockSaveUserLaunchInfo extends _i1.Mock
 /// A class which mocks [ErrorLogger].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockErrorLogger extends _i1.Mock implements _i35.ErrorLogger {
+class MockErrorLogger extends _i1.Mock implements _i37.ErrorLogger {
   MockErrorLogger() {
     _i1.throwOnMissingStub(this);
   }
@@ -1531,7 +1598,7 @@ class MockErrorLogger extends _i1.Mock implements _i35.ErrorLogger {
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockFirestoreIDGenerator extends _i1.Mock
-    implements _i36.FirestoreIDGenerator {
+    implements _i38.FirestoreIDGenerator {
   MockFirestoreIDGenerator() {
     _i1.throwOnMissingStub(this);
   }
@@ -1542,7 +1609,7 @@ class MockFirestoreIDGenerator extends _i1.Mock
           #call,
           [],
         ),
-        returnValue: _i21.dummyValue<String>(
+        returnValue: _i24.dummyValue<String>(
           this,
           Invocation.method(
             #call,
@@ -1556,19 +1623,19 @@ class MockFirestoreIDGenerator extends _i1.Mock
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockLocalNotificationService extends _i1.Mock
-    implements _i37.LocalNotificationService {
+    implements _i39.LocalNotificationService {
   MockLocalNotificationService() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i14.FlutterLocalNotificationsPlugin get plugin => (super.noSuchMethod(
+  _i15.FlutterLocalNotificationsPlugin get plugin => (super.noSuchMethod(
         Invocation.getter(#plugin),
-        returnValue: _FakeFlutterLocalNotificationsPlugin_16(
+        returnValue: _FakeFlutterLocalNotificationsPlugin_17(
           this,
           Invocation.getter(#plugin),
         ),
-      ) as _i14.FlutterLocalNotificationsPlugin);
+      ) as _i15.FlutterLocalNotificationsPlugin);
 
   @override
   _i9.Future<void> initialize() => (super.noSuchMethod(
@@ -1634,35 +1701,35 @@ class MockLocalNotificationService extends _i1.Mock
       ) as _i9.Future<void>);
 
   @override
-  _i9.Future<List<_i14.PendingNotificationRequest>>
+  _i9.Future<List<_i15.PendingNotificationRequest>>
       pendingReminderNotifications() => (super.noSuchMethod(
             Invocation.method(
               #pendingReminderNotifications,
               [],
             ),
             returnValue:
-                _i9.Future<List<_i14.PendingNotificationRequest>>.value(
-                    <_i14.PendingNotificationRequest>[]),
-          ) as _i9.Future<List<_i14.PendingNotificationRequest>>);
+                _i9.Future<List<_i15.PendingNotificationRequest>>.value(
+                    <_i15.PendingNotificationRequest>[]),
+          ) as _i9.Future<List<_i15.PendingNotificationRequest>>);
 
   @override
-  _i9.Future<List<_i14.PendingNotificationRequest>>
+  _i9.Future<List<_i15.PendingNotificationRequest>>
       pendingNewPillSheetNotifications() => (super.noSuchMethod(
             Invocation.method(
               #pendingNewPillSheetNotifications,
               [],
             ),
             returnValue:
-                _i9.Future<List<_i14.PendingNotificationRequest>>.value(
-                    <_i14.PendingNotificationRequest>[]),
-          ) as _i9.Future<List<_i14.PendingNotificationRequest>>);
+                _i9.Future<List<_i15.PendingNotificationRequest>>.value(
+                    <_i15.PendingNotificationRequest>[]),
+          ) as _i9.Future<List<_i15.PendingNotificationRequest>>);
 }
 
 /// A class which mocks [RegisterReminderLocalNotificationRunner].
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockRegisterReminderLocalNotificationRunner extends _i1.Mock
-    implements _i38.RegisterReminderLocalNotificationRunner {
+    implements _i40.RegisterReminderLocalNotificationRunner {
   MockRegisterReminderLocalNotificationRunner() {
     _i1.throwOnMissingStub(this);
   }
@@ -1670,7 +1737,7 @@ class MockRegisterReminderLocalNotificationRunner extends _i1.Mock
   @override
   _i9.Future<void> call({
     required _i7.PillSheetGroup? createdPillSheetGroup,
-    required _i32.PillSheet? activePillSheet,
+    required _i34.PillSheet? activePillSheet,
     required bool? premiumOrTrial,
     required _i6.Setting? setting,
   }) =>
@@ -1688,4 +1755,182 @@ class MockRegisterReminderLocalNotificationRunner extends _i1.Mock
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+}
+
+/// A class which mocks [FirebaseFunctions].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockFirebaseFunctions extends _i1.Mock implements _i10.FirebaseFunctions {
+  MockFirebaseFunctions() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i16.FirebaseApp get app => (super.noSuchMethod(
+        Invocation.getter(#app),
+        returnValue: _FakeFirebaseApp_18(
+          this,
+          Invocation.getter(#app),
+        ),
+      ) as _i16.FirebaseApp);
+
+  @override
+  _i17.FirebaseFunctionsPlatform get delegate => (super.noSuchMethod(
+        Invocation.getter(#delegate),
+        returnValue: _FakeFirebaseFunctionsPlatform_19(
+          this,
+          Invocation.getter(#delegate),
+        ),
+      ) as _i17.FirebaseFunctionsPlatform);
+
+  @override
+  Map<dynamic, dynamic> get pluginConstants => (super.noSuchMethod(
+        Invocation.getter(#pluginConstants),
+        returnValue: <dynamic, dynamic>{},
+      ) as Map<dynamic, dynamic>);
+
+  @override
+  _i10.HttpsCallable httpsCallable(
+    String? name, {
+    _i10.HttpsCallableOptions? options,
+  }) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #httpsCallable,
+          [name],
+          {#options: options},
+        ),
+        returnValue: _FakeHttpsCallable_20(
+          this,
+          Invocation.method(
+            #httpsCallable,
+            [name],
+            {#options: options},
+          ),
+        ),
+      ) as _i10.HttpsCallable);
+
+  @override
+  _i10.HttpsCallable httpsCallableFromUrl(
+    String? url, {
+    _i10.HttpsCallableOptions? options,
+  }) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #httpsCallableFromUrl,
+          [url],
+          {#options: options},
+        ),
+        returnValue: _FakeHttpsCallable_20(
+          this,
+          Invocation.method(
+            #httpsCallableFromUrl,
+            [url],
+            {#options: options},
+          ),
+        ),
+      ) as _i10.HttpsCallable);
+
+  @override
+  _i10.HttpsCallable httpsCallableFromUri(
+    Uri? uri, {
+    _i10.HttpsCallableOptions? options,
+  }) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #httpsCallableFromUri,
+          [uri],
+          {#options: options},
+        ),
+        returnValue: _FakeHttpsCallable_20(
+          this,
+          Invocation.method(
+            #httpsCallableFromUri,
+            [uri],
+            {#options: options},
+          ),
+        ),
+      ) as _i10.HttpsCallable);
+
+  @override
+  void useFunctionsEmulator(
+    String? host,
+    int? port, {
+    bool? automaticHostMapping = true,
+  }) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #useFunctionsEmulator,
+          [
+            host,
+            port,
+          ],
+          {#automaticHostMapping: automaticHostMapping},
+        ),
+        returnValueForMissingStub: null,
+      );
+}
+
+/// A class which mocks [HttpsCallable].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockHttpsCallable extends _i1.Mock implements _i10.HttpsCallable {
+  MockHttpsCallable() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i17.HttpsCallablePlatform get delegate => (super.noSuchMethod(
+        Invocation.getter(#delegate),
+        returnValue: _FakeHttpsCallablePlatform_21(
+          this,
+          Invocation.getter(#delegate),
+        ),
+      ) as _i17.HttpsCallablePlatform);
+
+  @override
+  _i9.Future<_i10.HttpsCallableResult<T>> call<T>([dynamic parameters]) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #call,
+          [parameters],
+        ),
+        returnValue: _i9.Future<_i10.HttpsCallableResult<T>>.value(
+            _FakeHttpsCallableResult_22<T>(
+          this,
+          Invocation.method(
+            #call,
+            [parameters],
+          ),
+        )),
+      ) as _i9.Future<_i10.HttpsCallableResult<T>>);
+
+  @override
+  _i9.Stream<_i10.StreamResponse<T, R>> stream<T, R>([Object? input]) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #stream,
+          [input],
+        ),
+        returnValue: _i9.Stream<_i10.StreamResponse<T, R>>.empty(),
+      ) as _i9.Stream<_i10.StreamResponse<T, R>>);
+}
+
+/// A class which mocks [HttpsCallableResult].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockHttpsCallableResult<T> extends _i1.Mock
+    implements _i10.HttpsCallableResult<T> {
+  MockHttpsCallableResult() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  T get data => (super.noSuchMethod(
+        Invocation.getter(#data),
+        returnValue: _i24.dummyValue<T>(
+          this,
+          Invocation.getter(#data),
+        ),
+      ) as T);
 }
