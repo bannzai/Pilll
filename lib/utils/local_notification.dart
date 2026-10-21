@@ -46,6 +46,18 @@ const newPillSheetNotificationIdentifier = 2;
 const scheduleNotificationIdentifierOffset = 100000;
 const reminderNotificationIdentifierOffset = 1000000000;
 
+/// iOS の服用リマインダー通知のカテゴリ。通知から服用を記録する RECORD_PILL アクションを持つ。
+/// RECORD_PILL は服用記録を書き込むため、ロック中の端末では持ち主のロック解除を求める。
+/// ネイティブ側の ios/Runner/AppDelegate.swift の configureNotificationActionableButtons も同じカテゴリを登録しているため、変更する時は合わせる
+DarwinNotificationCategory iOSQuickRecordPillCategory() {
+  return DarwinNotificationCategory(
+    iOSQuickRecordPillCategoryIdentifier,
+    actions: [
+      DarwinNotificationAction.plain(actionIdentifier, L.taken, options: {DarwinNotificationActionOption.authenticationRequired}),
+    ],
+  );
+}
+
 // NOTE: It can not be use Future.wait(processes) when register notification.
 class LocalNotificationService {
   final plugin = FlutterLocalNotificationsPlugin();
@@ -62,14 +74,7 @@ class LocalNotificationService {
       InitializationSettings(
         android: const AndroidInitializationSettings('@mipmap/ic_notification'),
         iOS: DarwinInitializationSettings(
-          notificationCategories: [
-            DarwinNotificationCategory(
-              iOSQuickRecordPillCategoryIdentifier,
-              actions: [
-                DarwinNotificationAction.plain(actionIdentifier, L.taken),
-              ],
-            ),
-          ],
+          notificationCategories: [iOSQuickRecordPillCategory()],
           // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
           // https://developer.apple.com/documentation/usernotifications/unnotificationpresentationoptions/unnotificationpresentationoptionalert
           defaultPresentAlert: false,
