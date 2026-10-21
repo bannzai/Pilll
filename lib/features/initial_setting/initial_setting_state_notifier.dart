@@ -193,6 +193,8 @@ class RegisterReminderLocalNotificationRunner {
     required bool premiumOrTrial,
     required Setting setting,
   }) async {
+    // 通知 ID は時刻と番号から決まり上書きされないため、初期設定をやり直した時に前回登録した通知が残らないよう全て解除してから登録する
+    await CancelReminderLocalNotification()();
     await RegisterReminderLocalNotification.run(
       pillSheetGroup: createdPillSheetGroup,
       activePillSheet: activePillSheet,
