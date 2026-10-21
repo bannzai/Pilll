@@ -365,8 +365,11 @@ extension UNUserNotificationCenter {
 // MARK: - Notification
 extension AppDelegate {
   func configureNotificationActionableButtons() {
+    // 服用記録を書き込むため、ロック中の端末では持ち主のロック解除を求める。
+    // Dart 側の setNotificationCategories は画面の初回フレーム後にしか走らず、headless 起動ではこの登録が残るため、Dart 側の iOSQuickRecordPillCategory と同じ options にする
     let recordAction = UNNotificationAction(identifier: "RECORD_PILL",
-                                            title: "飲んだ")
+                                            title: "飲んだ",
+                                            options: .authenticationRequired)
     let category =
     UNNotificationCategory(identifier: Category.pillReminder.rawValue,
                            actions: [recordAction],
