@@ -1,12 +1,90 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/local_notification.dart';
 
 import '../helper/mock.mocks.dart';
 
 void main() {
+  group("#newPillSheetNotificationBaseDateFor", () {
+    PillSheet lastPillSheetWith({required List<RestDuration> restDurations}) {
+      return PillSheet.v1(
+        id: "pill_sheet_id",
+        groupIndex: 0,
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: DateTime.parse("2022-05-01"),
+        restDurations: restDurations,
+      );
+    }
+
+    void mockToday(String date) {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse(date));
+    }
+
+    test("服用お休みが無い場合は服用完了日(5/28)の翌日", () {
+      mockToday("2022-05-10");
+
+      expect(newPillSheetNotificationBaseDateFor(lastPillSheet: lastPillSheetWith(restDurations: [])), DateTime(2022, 5, 29, 23, 59, 59));
+    });
+
+    test("服用再開予定日ありの服用お休み中は、今日(5/10)までではなく予定日(5/15)まで含めた日の翌日", () {
+      mockToday("2022-05-10");
+
+      final lastPillSheet = lastPillSheetWith(
+        restDurations: [
+          RestDuration(
+            id: "rest_duration_id",
+            beginDate: DateTime.parse("2022-05-08"),
+            createdDate: DateTime.parse("2022-05-08"),
+            endDate: DateTime.parse("2022-05-15"),
+          ),
+        ],
+      );
+      // 5/1 + 27日 + 服用お休み7日(5/8〜5/15) = 6/4 なので、通知の基準日は6/5。今日で打ち切った estimatedEndTakenDate の翌日(5/31)ではない
+      expect(newPillSheetNotificationBaseDateFor(lastPillSheet: lastPillSheet), DateTime(2022, 6, 5, 23, 59, 59));
+      expect(lastPillSheet.estimatedEndTakenDate.addDays(1), DateTime(2022, 5, 31, 23, 59, 59));
+    });
+
+    test("endDateがnullの服用お休み中は今日までで数えた日の翌日", () {
+      mockToday("2022-05-10");
+
+      final lastPillSheet = lastPillSheetWith(
+        restDurations: [
+          RestDuration(
+            id: "rest_duration_id",
+            beginDate: DateTime.parse("2022-05-08"),
+            createdDate: DateTime.parse("2022-05-08"),
+          ),
+        ],
+      );
+      // 5/1 + 27日 + 服用お休み2日(5/8〜5/10) = 5/30 なので、通知の基準日は5/31
+      expect(newPillSheetNotificationBaseDateFor(lastPillSheet: lastPillSheet), DateTime(2022, 5, 31, 23, 59, 59));
+    });
+
+    test("境界値テスト：服用再開予定日が今日と同日の場合は全日数を数えた日の翌日", () {
+      mockToday("2022-05-15");
+
+      final lastPillSheet = lastPillSheetWith(
+        restDurations: [
+          RestDuration(
+            id: "rest_duration_id",
+            beginDate: DateTime.parse("2022-05-08"),
+            createdDate: DateTime.parse("2022-05-08"),
+            endDate: DateTime.parse("2022-05-15"),
+          ),
+        ],
+      );
+      expect(newPillSheetNotificationBaseDateFor(lastPillSheet: lastPillSheet), DateTime(2022, 6, 5, 23, 59, 59));
+    });
+  });
+
   group("#reminderDayOffsetsFor", () {
     void mockToday(String date) {
       final mockTodayRepository = MockTodayService();

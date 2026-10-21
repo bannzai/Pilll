@@ -805,6 +805,13 @@ final newPillSheetNotificationProvider = Provider(
   (ref) => NewPillSheetNotification(),
 );
 
+/// ピルシートグループの最後のシートの後に「新しいピルシート」通知を出す日(時刻は含まない基準日)を返す
+/// 服用再開予定日ありの服用お休み中は、今日で打ち切った [PillSheet.estimatedEndTakenDate] ではなく予定日まで含めた
+/// [PillSheet.estimatedEndTakenDateWithPlannedResume] を使う。後続シートの beginDate の確定と同じ基準にするため
+DateTime newPillSheetNotificationBaseDateFor({required PillSheet lastPillSheet}) {
+  return lastPillSheet.estimatedEndTakenDateWithPlannedResume.addDays(1);
+}
+
 // 新しいピルシートの通知をスケジュールする
 // PillSheetGroup.pillSheets毎にスケジュールする方法が直感的だが、ローカル通知のスケジュールができる数に上限もあるので枠を節約する意味でも一つ先のピルシートの通知をスケジュールする
 // 2[0-9]日毎に1会通知をスケジュールするのでも十分
@@ -893,7 +900,7 @@ class NewPillSheetNotification {
       // ピルシートグループが終了する場合
       if (pillSheet.groupIndex == pillSheetGroup.pillSheets.last.groupIndex) {
         final nextBeginDate = tz.TZDateTime.from(
-          pillSheet.estimatedEndTakenDate.addDays(1),
+          newPillSheetNotificationBaseDateFor(lastPillSheet: pillSheet),
           tz.local,
         );
         final reminderDateTime = nextBeginDate.date().add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute));
