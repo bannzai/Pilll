@@ -19,6 +19,7 @@ import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/app_is_released.dart';
+import 'package:pilll/utils/functions/firebase_functions.dart';
 
 enum OfferingType { discount, specialOffering, premium }
 
@@ -260,13 +261,13 @@ Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
   try {
     analytics.logEvent(name: 'call_update_purchase_info');
     await updatePurchaseInfo(
-      isActivated: premiumEntitlement?.isActive,
       entitlementIdentifier: premiumEntitlement?.identifier,
       premiumPlanIdentifier: premiumEntitlement?.productIdentifier,
       purchaseAppID: info.originalAppUserId,
       activeSubscriptions: info.activeSubscriptions,
       originalPurchaseDate: info.originalPurchaseDate,
     );
+    await SyncPurchaseInfo(functions)();
     analytics.logEvent(name: 'end_update_purchase_info');
   } catch (exception, stack) {
     errorLogger.recordError(exception, stack);
@@ -284,14 +285,9 @@ Future<void> syncPurchaseInfo() async {
     return;
   }
 
-  final purchaserInfo = await Purchases.getCustomerInfo();
-  final premiumEntitlement = purchaserInfo.entitlements.all[premiumEntitlements];
-  final isActivated = premiumEntitlement == null ? false : premiumEntitlement.isActive;
-
   try {
-    final syncPurchaseInfo = SyncPurchaseInfo(DatabaseConnection(uid));
     analytics.logEvent(name: 'call_service_sync_purchase_info');
-    await syncPurchaseInfo(isActivated: isActivated);
+    await SyncPurchaseInfo(functions)();
     analytics.logEvent(name: 'end_sync_purchase_info');
   } catch (exception, stack) {
     errorLogger.recordError(exception, stack);
