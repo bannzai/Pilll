@@ -18,6 +18,10 @@ class RecordPageRestDurationDialog extends HookConsumerWidget {
   final PillSheetAppearanceMode appearanceMode;
   final PillSheetGroup pillSheetGroup;
 
+  /// ダイアログを開いた時点で選択済みにする服用再開予定日。未選択で開く時はnull。
+  /// 選択状態は[useState]で持つため、開いた後に変わっても反映しない
+  final DateTime? initialEndDate;
+
   /// 服用再開予定日（任意）を受け取って服用お休みを開始する。未選択ならnull
   final void Function(DateTime? endDate) onDone;
 
@@ -26,12 +30,13 @@ class RecordPageRestDurationDialog extends HookConsumerWidget {
     required this.title,
     required this.appearanceMode,
     required this.pillSheetGroup,
+    required this.initialEndDate,
     required this.onDone,
   });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final endDate = useState<DateTime?>(null);
+    final endDate = useState<DateTime?>(initialEndDate);
 
     return AlertDialog(
       shape: const RoundedRectangleBorder(
@@ -159,6 +164,7 @@ void showRecordPageRestDurationDialog(
       ),
       appearanceMode: appearanceMode,
       pillSheetGroup: pillSheetGroup,
+      initialEndDate: null,
       onDone: onDone,
     ),
   );
