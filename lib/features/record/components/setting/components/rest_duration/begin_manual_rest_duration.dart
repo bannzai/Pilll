@@ -28,6 +28,9 @@ class BeginManualRestDuration extends HookConsumerWidget {
     final cancelReminderLocalNotification = ref.watch(
       cancelReminderLocalNotificationProvider,
     );
+    final registerReminderLocalNotification = ref.watch(
+      registerReminderLocalNotificationProvider,
+    );
 
     void didBeginRestDuration() {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -59,12 +62,20 @@ class BeginManualRestDuration extends HookConsumerWidget {
             context,
             appearanceMode: appearanceMode,
             pillSheetGroup: pillSheetGroup,
-            onDone: () async {
-              analytics.logEvent(name: 'done_rest_duration');
+            onDone: (endDate) async {
+              analytics.logEvent(
+                name: 'done_rest_duration',
+                parameters: {'has_end_date': endDate != null},
+              );
               // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
               FlutterAppBadger.removeBadge();
-              await beginRestDuration(pillSheetGroup: pillSheetGroup);
-              await cancelReminderLocalNotification();
+              await beginRestDuration(pillSheetGroup: pillSheetGroup, endDate: endDate);
+              if (endDate == null) {
+                await cancelReminderLocalNotification();
+              } else {
+                // 服用再開予定日以降のリマインドを登録する。予定日が来ても登録しなおす契機(手動の服用再開)が無いため。登録の前に既存の通知は全てキャンセルされる
+                await registerReminderLocalNotification();
+              }
               didBeginRestDuration();
             },
           );

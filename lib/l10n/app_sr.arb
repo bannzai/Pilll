@@ -561,5 +561,11 @@
   "addPausePeriod": "Dodaj period pauze u uzimanju",
   "addedPausePeriod": "Додат је период паузе у узимању",
   "pausePeriodOverlapsOther": "Не можете да изаберете период који се преклапа са другим периодом паузе у узимању",
-  "pauseEndDateMustBeAfterStartDate": "Молимо вас да као датум завршетка паузе у узимању изаберете датум након почетног датума."
+  "pauseEndDateMustBeAfterStartDate": "Молимо вас да као датум завршетка паузе у узимању изаберете датум након почетног датума.",
+  "plannedResumeDateOptional": "Планирани датум поновног почетка узимања (опционо)",
+  "plannedResumeDateNotSet": "Није подешено",
+  "selectPlannedResumeDate": "Изаберите планирани датум наставка узимања",
+  "pauseEndDateLimitIsToday": "Датум завршетка може да се подеси најкасније на данас",
+  "pauseEndDateLimitBeforeNextPause": "Do dana koji se ne preklapa sa sledećom pauzom ({date}–)",
+  "pauseStartDateLimit": "Datum početka može da se izabere do {date}"
 }

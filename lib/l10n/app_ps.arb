@@ -561,5 +561,11 @@
   "addPausePeriod": "د اخیستو د وقفې موده اضافه کړئ",
   "addedPausePeriod": "د کارونې د وقفې موده اضافه شوه",
   "pausePeriodOverlapsOther": "له بلې د اخيستلو د وقفې مودې سره يوځای کېدونکې موده نه شي ټاکل کېدای",
-  "pauseEndDateMustBeAfterStartDate": "مهرباني وکړئ د استعمال د وقفې د پای نېټې لپاره د پیل نېټې نه وروسته نېټه وټاکئ."
+  "pauseEndDateMustBeAfterStartDate": "مهرباني وکړئ د استعمال د وقفې د پای نېټې لپاره د پیل نېټې نه وروسته نېټه وټاکئ.",
+  "plannedResumeDateOptional": "د بیا اخیستلو ټاکل شوې نېټه (اختیاري)",
+  "plannedResumeDateNotSet": "ټاکل شوی نه دی",
+  "selectPlannedResumeDate": "د بیا اخیستلو ټاکل شوې نېټه وټاکئ",
+  "pauseEndDateLimitIsToday": "د پای نېټه یوازې تر نن پورې ټاکل کېدای شي",
+  "pauseEndDateLimitBeforeNextPause": "تر هغې ورځې پورې چې له راتلونکې وقفې ({date}〜) سره نه ټکرېږي",
+  "pauseStartDateLimit": "د پیل نېټه تر {date} پورې ټاکل کېدای شي"
 }

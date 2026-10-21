@@ -561,5 +561,11 @@
   "addPausePeriod": "Tambahkan periode jeda minum",
   "addedPausePeriod": "Periode jeda minum telah ditambahkan",
   "pausePeriodOverlapsOther": "Periode yang tumpang tindih dengan periode jeda konsumsi lain tidak dapat dipilih",
-  "pauseEndDateMustBeAfterStartDate": "Silakan pilih tanggal setelah tanggal mulai sebagai tanggal berakhirnya jeda konsumsi."
+  "pauseEndDateMustBeAfterStartDate": "Silakan pilih tanggal setelah tanggal mulai sebagai tanggal berakhirnya jeda konsumsi.",
+  "plannedResumeDateOptional": "Tanggal rencana mulai minum lagi (opsional)",
+  "plannedResumeDateNotSet": "Belum diatur",
+  "selectPlannedResumeDate": "Pilih tanggal rencana melanjutkan konsumsi",
+  "pauseEndDateLimitIsToday": "Tanggal berakhir hanya dapat diatur sampai hari ini",
+  "pauseEndDateLimitBeforeNextPause": "Sampai hari yang tidak tumpang tindih dengan jeda berikutnya ({date}–)",
+  "pauseStartDateLimit": "Tanggal mulai dapat dipilih hingga {date}"
 }

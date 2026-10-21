@@ -684,20 +684,22 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
     }
   }
 
+  /// 服用再開予定日や服用お休み中の終了日として、開始日から選択できる最大の日数
+  /// 服用お休みの長さに仕様上の上限は無い。DatePickerのlastDateが必須のため、十分に長い値として1年を置く
+  static const int maxRestDurationDays = 365;
+
   /// 既存の服用お休み期間を変更する際に終了日として選択できる最終日を返す。ChangeManualRestDurationのDateRangePickerのlastDateに利用する
   /// 休薬中や服用再開直後はlastTakenDateが休薬開始の前日のまま止まるため、availableRestDurationBeginDate（最終服用日の翌日）を
   /// そのまま上限にすると休薬開始日と一致し、休薬開始日より後の日付=終了日が選択できなくなる
   /// そのため「今日」も選択できるようにavailableRestDurationBeginDateと今日の遅い方を上限とする
   /// availableRestDurationBeginDateより後かつ今日以前の日付には服用記録が存在しないため、上限を広げてもlastTakenDateが変動することはない
-  /// ただし、変更対象より後に開始する服用お休み期間がある場合はその開始日で上限を打ち切り、後続の休薬期間との重複を防ぐ
+  /// ただし、服用お休み中（endDateがnullまたは今日より後）の期間は服用再開予定日を延ばせるべきなので今日の上限を適用せず、開始日から[maxRestDurationDays]日後を上限にする
+  /// また、変更対象より後に開始する服用お休み期間がある場合はその開始日で上限を打ち切り、後続の休薬期間との重複を防ぐ
   /// （endDateは服用再開日でお休み期間には含まれないため、後続の開始日と同日までは重複しない）
   /// また、変更対象の既存の終了日は常に選択できるようにする（DateRangePickerのinitialDateRangeがlastDateを超えると表示できないため）
   DateTime availableRestDurationEndDate({required RestDuration restDuration}) {
-    final nextRestDurationBeginDate = restDurations.map((e) => e.beginDate).where((e) => e.isAfter(restDuration.beginDate)).minOrNull;
-    final selectableLastDate = [
-      availableRestDurationBeginDate,
-      today(),
-    ].reduce((a, b) => a.isAfter(b) ? a : b);
+    final nextRestDurationBeginDate = _nextRestDurationBeginDate(restDuration: restDuration);
+    final selectableLastDate = _selectableLastRestDurationEndDate(restDuration: restDuration);
     return [
       if (nextRestDurationBeginDate != null && nextRestDurationBeginDate.isBefore(selectableLastDate))
         nextRestDurationBeginDate
@@ -705,6 +707,46 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
         selectableLastDate,
       if (restDuration.endDate != null) restDuration.endDate!,
     ].reduce((a, b) => a.isAfter(b) ? a : b);
+  }
+
+  /// [restDuration] の次に開始する服用お休み期間の開始日。無ければnull
+  DateTime? _nextRestDurationBeginDate({required RestDuration restDuration}) {
+    return restDurations.map((e) => e.beginDate).where((e) => e.isAfter(restDuration.beginDate)).minOrNull;
+  }
+
+  /// [restDuration] の終了日として、後続の服用お休み期間で打ち切る前に選択できる最終日
+  DateTime _selectableLastRestDurationEndDate({required RestDuration restDuration}) {
+    final endDate = restDuration.endDate;
+    if (endDate == null || endDate.date().isAfter(today())) {
+      return restDuration.beginDate.date().addDays(maxRestDurationDays);
+    }
+    return [
+      availableRestDurationBeginDate,
+      today(),
+    ].reduce((a, b) => a.isAfter(b) ? a : b);
+  }
+
+  /// 既存の服用お休み期間を変更するDateRangePickerのhelpTextに出す、選べる終了日の上限の理由を返す
+  /// 後続の服用お休み期間で打ち切られる時と、終了済みの期間で今日が上限の時は理由を返す。
+  /// 理由に当たらない時（服用お休み中で開始日から[maxRestDurationDays]日後が上限の時など）は従来のタイトルを返す
+  String availableRestDurationEndDateHelpText({required RestDuration restDuration}) {
+    final nextRestDurationBeginDate = _nextRestDurationBeginDate(restDuration: restDuration);
+    if (nextRestDurationBeginDate != null && nextRestDurationBeginDate.isBefore(_selectableLastRestDurationEndDate(restDuration: restDuration))) {
+      return L.pauseEndDateLimitBeforeNextPause(DateTimeFormatter.monthAndDay(nextRestDurationBeginDate));
+    }
+    final endDate = restDuration.endDate;
+    final isFinished = endDate != null && !endDate.date().isAfter(today());
+    if (isFinished && !availableRestDurationBeginDate.date().isAfter(today())) {
+      return L.pauseEndDateLimitIsToday;
+    }
+    return L.selectPausePeriod;
+  }
+
+  /// 開始日だけを変更するDatePickerのhelpTextに出す、選べる開始日の上限の理由を返す
+  String get availableRestDurationBeginDateHelpText {
+    return L.pauseStartDateLimit(
+      '${DateTimeFormatter.monthAndDay(availableRestDurationBeginDate)}(${DateTimeFormatter.shortWeekday(availableRestDurationBeginDate)})',
+    );
   }
 }
 

@@ -561,5 +561,11 @@
   "addPausePeriod": "Szedési szünet időszakának hozzáadása",
   "addedPausePeriod": "Hozzáadtuk a szedési szünet időszakát",
   "pausePeriodOverlapsOther": "Nem választható ki olyan időszak, amely átfedésben van egy másik szedési szünettel",
-  "pauseEndDateMustBeAfterStartDate": "Kérjük, a szedési szünet befejezési dátumaként a kezdőnapnál későbbi dátumot válasszon."
+  "pauseEndDateMustBeAfterStartDate": "Kérjük, a szedési szünet befejezési dátumaként a kezdőnapnál későbbi dátumot válasszon.",
+  "plannedResumeDateOptional": "A szedés tervezett újrakezdésének dátuma (nem kötelező)",
+  "plannedResumeDateNotSet": "Nincs beállítva",
+  "selectPlannedResumeDate": "Válassza ki a szedés tervezett újrakezdési dátumát",
+  "pauseEndDateLimitIsToday": "A befejezés dátuma legfeljebb a mai nap lehet",
+  "pauseEndDateLimitBeforeNextPause": "A következő szünettel ({date}–) nem átfedő napig",
+  "pauseStartDateLimit": "A kezdőnap legkésőbb {date} lehet"
 }

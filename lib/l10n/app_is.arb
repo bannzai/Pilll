@@ -561,5 +561,11 @@
   "addPausePeriod": "Bæta við hlé tímabili",
   "addedPausePeriod": "Bætt var við hléum á inntöku",
   "pausePeriodOverlapsOther": "Ekki er hægt að velja tímabil sem skarast við annað hlé tímabil",
-  "pauseEndDateMustBeAfterStartDate": "Vinsamlegast veldu dagsetningu eftir upphafsdagsetningu sem lokadag hlés á inntöku."
+  "pauseEndDateMustBeAfterStartDate": "Vinsamlegast veldu dagsetningu eftir upphafsdagsetningu sem lokadag hlés á inntöku.",
+  "plannedResumeDateOptional": "Áætluð dagsetning til að hefja töku aftur (valfrjálst)",
+  "plannedResumeDateNotSet": "Ekki stillt",
+  "selectPlannedResumeDate": "Veldu áætlaða dagsetningu fyrir að hefja töku aftur",
+  "pauseEndDateLimitIsToday": "Aðeins er hægt að velja lokadag til dagsins í dag",
+  "pauseEndDateLimitBeforeNextPause": "Fram að deginum sem skarast ekki við næsta hlé ({date}–)",
+  "pauseStartDateLimit": "Hægt er að velja upphafsdag til {date}"
 }

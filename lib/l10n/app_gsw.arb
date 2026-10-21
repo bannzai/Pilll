@@ -561,5 +561,11 @@
   "addPausePeriod": "Pausenäriigs-Ziit derzuefüege",
   "addedPausePeriod": "D Paus für d Einnahm isch zuegfiegt worde",
   "pausePeriodOverlapsOther": "Du chasch kei Zytabschnitt uuswähle, wo sich mit eme andere Einnahmepause-Zytabschnitt überlappt",
-  "pauseEndDateMustBeAfterStartDate": "Bitte wähled Sie als Änddatum vo de Ihnahmepause es Datum noch em Aafangsdatum us."
+  "pauseEndDateMustBeAfterStartDate": "Bitte wähled Sie als Änddatum vo de Ihnahmepause es Datum noch em Aafangsdatum us.",
+  "plannedResumeDateOptional": "Vorgsehns Datum fürs Widrufneh vo de Iinnahm (optional)",
+  "plannedResumeDateNotSet": "Nöd fesgleit",
+  "selectPlannedResumeDate": "S Datum für s Wiederufneh vo dr Iinahm uuswähle",
+  "pauseEndDateLimitIsToday": "S Enddatum cha nur bis hüt gsetzt werde",
+  "pauseEndDateLimitBeforeNextPause": "Bis zu däm Tag, wo sich nöd mit dr nöchschte Pause ({date}–) überschneidet",
+  "pauseStartDateLimit": "S Startdatum cha bis {date} usgwählt werde"
 }

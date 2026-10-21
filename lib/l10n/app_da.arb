@@ -561,5 +561,11 @@
   "addPausePeriod": "Tilføj pauseperiode",
   "addedPausePeriod": "Pauseperiode for indtagelse er tilføjet",
   "pausePeriodOverlapsOther": "Du kan ikke vælge en periode, der overlapper med en anden pauseperiode",
-  "pauseEndDateMustBeAfterStartDate": "Vælg venligst en dato efter startdatoen som slutdato for pausen i indtagelsen."
+  "pauseEndDateMustBeAfterStartDate": "Vælg venligst en dato efter startdatoen som slutdato for pausen i indtagelsen.",
+  "plannedResumeDateOptional": "Planlagt dato for genoptagelse (valgfrit)",
+  "plannedResumeDateNotSet": "Ikke indstillet",
+  "selectPlannedResumeDate": "Vælg planlagt dato for genoptagelse",
+  "pauseEndDateLimitIsToday": "Slutdatoen kan kun vælges til og med i dag",
+  "pauseEndDateLimitBeforeNextPause": "Indtil den, der ikke overlapper med næste pause ({date}–)",
+  "pauseStartDateLimit": "Startdatoen kan vælges til og med {date}"
 }

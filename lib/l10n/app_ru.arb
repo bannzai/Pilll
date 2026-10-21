@@ -561,5 +561,11 @@
   "addPausePeriod": "Добавить период перерыва в приеме",
   "addedPausePeriod": "Добавлен период перерыва в приёме",
   "pausePeriodOverlapsOther": "Нельзя выбрать период, который пересекается с другим периодом перерыва в приеме",
-  "pauseEndDateMustBeAfterStartDate": "Пожалуйста, выберите дату окончания перерыва в приёме позже даты начала."
+  "pauseEndDateMustBeAfterStartDate": "Пожалуйста, выберите дату окончания перерыва в приёме позже даты начала.",
+  "plannedResumeDateOptional": "Планируемая дата возобновления приёма (необязательно)",
+  "plannedResumeDateNotSet": "Не задано",
+  "selectPlannedResumeDate": "Выберите предполагаемую дату возобновления приёма",
+  "pauseEndDateLimitIsToday": "Дату окончания можно установить только до сегодняшнего дня",
+  "pauseEndDateLimitBeforeNextPause": "До дня, который не пересекается со следующим перерывом ({date}–)",
+  "pauseStartDateLimit": "Дату начала можно выбрать до {date}"
 }

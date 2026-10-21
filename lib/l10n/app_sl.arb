@@ -561,5 +561,11 @@
   "addPausePeriod": "Dodaj obdobje premora pri jemanju",
   "addedPausePeriod": "Dodano je obdobje odmora pri jemanju",
   "pausePeriodOverlapsOther": "Ni mogoče izbrati obdobja, ki se prekriva z drugim obdobjem premora pri jemanju",
-  "pauseEndDateMustBeAfterStartDate": "Prosimo, izberite datum po začetnem datumu kot datum konca premora pri jemanju."
+  "pauseEndDateMustBeAfterStartDate": "Prosimo, izberite datum po začetnem datumu kot datum konca premora pri jemanju.",
+  "plannedResumeDateOptional": "Predvideni datum ponovnega začetka jemanja (izbirno)",
+  "plannedResumeDateNotSet": "Ni nastavljeno",
+  "selectPlannedResumeDate": "Izberite predvideni datum ponovnega začetka jemanja",
+  "pauseEndDateLimitIsToday": "Končni datum lahko nastavite najpozneje na danes",
+  "pauseEndDateLimitBeforeNextPause": "Do dneva, ki se ne prekriva z naslednjim premorom ({date}–)",
+  "pauseStartDateLimit": "Začetni datum lahko izberete do {date}"
 }

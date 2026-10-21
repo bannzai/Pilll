@@ -561,5 +561,11 @@
   "addPausePeriod": "ເພີ່ມໄລຍະພັກການກິນ",
   "addedPausePeriod": "ໄດ້ເພີ່ມໄລຍະພັກການກິນ",
   "pausePeriodOverlapsOther": "ບໍ່ສາມາດເລືອກໄລຍະທີ່ທັບຊ້ອນກັບໄລຍະພັກການກິນອື່ນໄດ້",
-  "pauseEndDateMustBeAfterStartDate": "ກະລຸນາເລືອກວັນທີຫຼັງຈາກວັນເລີ່ມຕົ້ນເປັນວັນສິ້ນສຸດຂອງໄລຍະພັກການຮັບປະທານ."
+  "pauseEndDateMustBeAfterStartDate": "ກະລຸນາເລືອກວັນທີຫຼັງຈາກວັນເລີ່ມຕົ້ນເປັນວັນສິ້ນສຸດຂອງໄລຍະພັກການຮັບປະທານ.",
+  "plannedResumeDateOptional": "ວັນທີວາງແຜນຈະເລີ່ມຮັບປະທານອີກຄັ້ງ (ບໍ່ບັງຄັບ)",
+  "plannedResumeDateNotSet": "ຍັງບໍ່ໄດ້ຕັ້ງ",
+  "selectPlannedResumeDate": "ເລືອກວັນທີທີ່ວາງແຜນຈະກັບມາຮັບປະທານ",
+  "pauseEndDateLimitIsToday": "ວັນສິ້ນສຸດເລືອກໄດ້ເຖິງມື້ນີ້ເທົ່ານັ້ນ",
+  "pauseEndDateLimitBeforeNextPause": "ຈົນເຖິງວັນທີ່ບໍ່ຊ້ອນກັບຊ່ວງພັກຄັ້ງຕໍ່ໄປ ({date}〜)",
+  "pauseStartDateLimit": "ສາມາດເລືອກວັນເລີ່ມຕົ້ນໄດ້ເຖິງ {date}"
 }

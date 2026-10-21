@@ -2753,5 +2753,39 @@
   "pauseEndDateMustBeAfterStartDate": "服用お休み終了日は開始日より後の日付を選択してください",
   "@pauseEndDateMustBeAfterStartDate": {
     "description": "服用お休み期間の追加・変更で、終了日 (服用再開日) に開始日と同じ日付が選択された場合に表示されるエラーメッセージです。終了日は服用を再開する日のため、開始日と同じだとお休み期間が0日になってしまうことを防ぎます。"
+  },
+  "plannedResumeDateOptional": "服用再開予定日 (任意)",
+  "@plannedResumeDateOptional": {
+    "description": "服用お休みを開始するダイアログで、服用を再開する予定の日を任意で選ぶ行のラベルです。未選択のままでも服用お休みを開始できます。"
+  },
+  "plannedResumeDateNotSet": "未設定",
+  "@plannedResumeDateNotSet": {
+    "description": "服用お休みを開始するダイアログで、服用再開予定日をまだ選んでいない時に、その行の値として表示される文言です。"
+  },
+  "selectPlannedResumeDate": "服用再開予定日を選択",
+  "@selectPlannedResumeDate": {
+    "description": "服用お休みを開始するダイアログで、服用再開予定日をカレンダーから選択する際に表示される画面タイトルです。"
+  },
+  "pauseEndDateLimitIsToday": "終了日は今日まで",
+  "@pauseEndDateLimitIsToday": {
+    "description": "終了済みの服用お休み期間を変更するカレンダーで、終了日に選べる最終日が今日であることを伝える1行の説明です。未来の日付を終了日にできない理由を示します。"
+  },
+  "pauseEndDateLimitBeforeNextPause": "次のお休み（{date}〜）と重ならない日まで",
+  "@pauseEndDateLimitBeforeNextPause": {
+    "description": "服用お休み期間を変更するカレンダーで、後続の服用お休み期間があるために終了日に選べる日が限られていることを伝える1行の説明です。{date}には次の服用お休みの開始日（例: 7/13）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "pauseStartDateLimit": "開始日は{date}まで",
+  "@pauseStartDateLimit": {
+    "description": "服用お休みの開始日だけを変更するカレンダーで、開始日に選べる最終日（最後に服用した日の翌日）を伝える1行の説明です。{date}には開始日として選べる最終日（例: 7/13(月)）が入ります。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
   }
 }

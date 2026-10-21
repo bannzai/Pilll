@@ -561,5 +561,11 @@
   "addPausePeriod": "เพิ่มช่วงพักการทาน",
   "addedPausePeriod": "เพิ่มช่วงพักการรับประทานแล้ว",
   "pausePeriodOverlapsOther": "ไม่สามารถเลือกช่วงเวลาที่ทับซ้อนกับช่วงหยุดรับประทานอื่นได้",
-  "pauseEndDateMustBeAfterStartDate": "โปรดเลือกวันที่หลังจากวันเริ่มต้นเป็นวันสิ้นสุดช่วงพักการรับประทาน"
+  "pauseEndDateMustBeAfterStartDate": "โปรดเลือกวันที่หลังจากวันเริ่มต้นเป็นวันสิ้นสุดช่วงพักการรับประทาน",
+  "plannedResumeDateOptional": "วันที่วางแผนจะกลับมารับประทานอีกครั้ง (ไม่บังคับ)",
+  "plannedResumeDateNotSet": "ยังไม่ได้ตั้งค่า",
+  "selectPlannedResumeDate": "เลือกวันที่กำหนดจะกลับมารับประทานอีกครั้ง",
+  "pauseEndDateLimitIsToday": "สามารถตั้งวันที่สิ้นสุดได้ถึงวันนี้เท่านั้น",
+  "pauseEndDateLimitBeforeNextPause": "จนถึงวันที่ไม่ทับกับช่วงพักครั้งถัดไป ({date}〜)",
+  "pauseStartDateLimit": "เลือกวันที่เริ่มต้นได้ถึง {date}"
 }

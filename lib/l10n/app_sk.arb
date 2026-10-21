@@ -561,5 +561,11 @@
   "addPausePeriod": "Pridať obdobie prestávky v užívaní",
   "addedPausePeriod": "Obdobie prestávky v užívaní bolo pridané",
   "pausePeriodOverlapsOther": "Nemožno vybrať obdobie, ktoré sa prekrýva s iným obdobím prestávky v užívaní",
-  "pauseEndDateMustBeAfterStartDate": "Prosím, vyberte dátum po dátume začiatku ako dátum ukončenia prestávky v užívaní."
+  "pauseEndDateMustBeAfterStartDate": "Prosím, vyberte dátum po dátume začiatku ako dátum ukončenia prestávky v užívaní.",
+  "plannedResumeDateOptional": "Plánovaný dátum obnovenia užívania (voliteľné)",
+  "plannedResumeDateNotSet": "Nenastavené",
+  "selectPlannedResumeDate": "Vyberte plánovaný dátum obnovenia užívania",
+  "pauseEndDateLimitIsToday": "Dátum ukončenia možno nastaviť najneskôr na dnes",
+  "pauseEndDateLimitBeforeNextPause": "Do dňa, ktorý sa neprekrýva s nasledujúcou prestávkou ({date}–)",
+  "pauseStartDateLimit": "Dátum začiatku je možné vybrať najneskôr do {date}"
 }

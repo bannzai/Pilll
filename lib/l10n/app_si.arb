@@ -561,5 +561,11 @@
   "addPausePeriod": "ගැනීමේ විරාම කාලය එක් කරන්න",
   "addedPausePeriod": "ගැනීමේ විරාම කාලය එක් කර ඇත",
   "pausePeriodOverlapsOther": "වෙනත් භාවිත විරාම කාලසීමාවක් සමඟ එකිනෙක මැලවෙන කාලසීමාවක් තේරිය නොහැක",
-  "pauseEndDateMustBeAfterStartDate": "කරුණාකර सेवन විරාමයේ අවසන් දිනය ලෙස ආරම්භක දිනයට පසු දිනයක් තෝරන්න."
+  "pauseEndDateMustBeAfterStartDate": "කරුණාකර सेवन විරාමයේ අවසන් දිනය ලෙස ආරම්භක දිනයට පසු දිනයක් තෝරන්න.",
+  "plannedResumeDateOptional": "නැවත ගැනීම ආරම්භ කිරීමට සැලසුම් කළ දිනය (විකල්ප)",
+  "plannedResumeDateNotSet": "සකසා නැත",
+  "selectPlannedResumeDate": "නැවත ගැනීම ආරම්භ කිරීමට නියමිත දිනය තෝරන්න",
+  "pauseEndDateLimitIsToday": "අවසන් දිනය අද දක්වා පමණක් සැකසිය හැක",
+  "pauseEndDateLimitBeforeNextPause": "ඊළඟ විරාමය ({date}〜) සමඟ නොගැලපෙන දිනය දක්වා",
+  "pauseStartDateLimit": "ආරම්භක දිනය {date} දක්වා තෝරා ගත හැක"
 }

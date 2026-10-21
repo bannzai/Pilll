@@ -561,5 +561,11 @@
   "addPausePeriod": "Añadir periodo de descanso de toma",
   "addedPausePeriod": "Se ha añadido el período de descanso de la toma",
   "pausePeriodOverlapsOther": "No puedes seleccionar un período que se superponga con otro período de pausa de toma",
-  "pauseEndDateMustBeAfterStartDate": "Selecciona una fecha posterior a la fecha de inicio como fecha de finalización del descanso de toma, por favor."
+  "pauseEndDateMustBeAfterStartDate": "Selecciona una fecha posterior a la fecha de inicio como fecha de finalización del descanso de toma, por favor.",
+  "plannedResumeDateOptional": "Fecha prevista para reanudar la toma (opcional)",
+  "plannedResumeDateNotSet": "Sin configurar",
+  "selectPlannedResumeDate": "Selecciona la fecha prevista para reanudar la toma",
+  "pauseEndDateLimitIsToday": "La fecha de finalización solo puede establecerse hasta hoy",
+  "pauseEndDateLimitBeforeNextPause": "Hasta el día en que no se superponga con el siguiente descanso ({date}〜)",
+  "pauseStartDateLimit": "La fecha de inicio se puede seleccionar hasta {date}"
 }

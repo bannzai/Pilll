@@ -561,5 +561,11 @@
   "addPausePeriod": "Ավելացնել ընդունման դադարային շրջան",
   "addedPausePeriod": "Ընդունման ընդմիջման շրջանը ավելացվել է",
   "pausePeriodOverlapsOther": "Չի կարելի ընտրել այնպիսի ժամանակահատված, որը համընկնում է ընդունման այլ դադարի ժամանակահատվածի հետ",
-  "pauseEndDateMustBeAfterStartDate": "Խնդրում ենք ընդունման ընդմիջման ավարտի օրվա համար ընտրել մեկնարկի օրվանից ուշ ամսաթիվ։"
+  "pauseEndDateMustBeAfterStartDate": "Խնդրում ենք ընդունման ընդմիջման ավարտի օրվա համար ընտրել մեկնարկի օրվանից ուշ ամսաթիվ։",
+  "plannedResumeDateOptional": "Ընդունումը վերսկսելու նախատեսված ամսաթիվը (ըստ ցանկության)",
+  "plannedResumeDateNotSet": "Սահմանված չէ",
+  "selectPlannedResumeDate": "Ընտրեք ընդունումը վերսկսելու նախատեսված ամսաթիվը",
+  "pauseEndDateLimitIsToday": "Ավարտի ամսաթիվը կարելի է սահմանել միայն մինչև այսօր",
+  "pauseEndDateLimitBeforeNextPause": "Մինչ այն օրը, որը չի համընկնում հաջորդ դադարի հետ ({date}〜)",
+  "pauseStartDateLimit": "Մեկնարկի ամսաթիվը կարելի է ընտրել մինչև {date}"
 }

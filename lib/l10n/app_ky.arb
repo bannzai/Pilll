@@ -561,5 +561,11 @@
   "addPausePeriod": "Ичүү тыныгуу мезгилин кошуу",
   "addedPausePeriod": "Ичүү тыныгуу мөөнөтү кошулду",
   "pausePeriodOverlapsOther": "Башка ичүүнү токтотуу мөөнөтү менен дал келген мөөнөттү тандап болбойт",
-  "pauseEndDateMustBeAfterStartDate": "Сураныч, кабыл алууну тыныгуу мөөнөтүнүн аяктоо күнү катары башталган күндөн кийинки күндү тандаңыз."
+  "pauseEndDateMustBeAfterStartDate": "Сураныч, кабыл алууну тыныгуу мөөнөтүнүн аяктоо күнү катары башталган күндөн кийинки күндү тандаңыз.",
+  "plannedResumeDateOptional": "Кайра ичүүнү баштоо пландалган күн (милдеттүү эмес)",
+  "plannedResumeDateNotSet": "Орнотулган эмес",
+  "selectPlannedResumeDate": "Кабыл алууну кайра баштоо пландалган күндү тандаңыз",
+  "pauseEndDateLimitIsToday": "Аяктоо күнүн бүгүнкү күнгө чейин гана тандаса болот",
+  "pauseEndDateLimitBeforeNextPause": "Кийинки тыныгуу ({date}〜) менен дал келбеген күнгө чейин",
+  "pauseStartDateLimit": "Баштоо күнүн {date} чейин тандаса болот"
 }

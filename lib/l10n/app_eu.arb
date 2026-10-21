@@ -561,5 +561,11 @@
   "addPausePeriod": "Gehitu hartze-atsedenaldia",
   "addedPausePeriod": "Hartzeko atsedenaldia gehitu da",
   "pausePeriodOverlapsOther": "Ezin da hautatu beste hartze-atseden aldi batekin gainjartzen den aldirik",
-  "pauseEndDateMustBeAfterStartDate": "Mesedez, aukeratu hasiera-data baino geroagoko data bat hartzearen etenaldiaren amaiera-datatzat."
+  "pauseEndDateMustBeAfterStartDate": "Mesedez, aukeratu hasiera-data baino geroagoko data bat hartzearen etenaldiaren amaiera-datatzat.",
+  "plannedResumeDateOptional": "Hartzea berriro hasteko aurreikusitako data (aukerakoa)",
+  "plannedResumeDateNotSet": "Ezarri gabe",
+  "selectPlannedResumeDate": "Hautatu berriro hartzeko aurreikusitako data",
+  "pauseEndDateLimitIsToday": "Amaiera-data gaur arte baino ezin da ezarri",
+  "pauseEndDateLimitBeforeNextPause": "Hurrengo atsedenaldiarekin ({date}〜) gainjartzen ez den egunera arte",
+  "pauseStartDateLimit": "Hasiera-data {date} arte aukeratu daiteke"
 }

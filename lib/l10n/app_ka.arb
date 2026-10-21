@@ -561,5 +561,11 @@
   "addPausePeriod": "მიღების შესვენების პერიოდის დამატება",
   "addedPausePeriod": "მიღების შესვენების პერიოდი დაემატა",
   "pausePeriodOverlapsOther": "სხვა მიღების შესვენების პერიოდთან გადაფარვის მქონე პერიოდის არჩევა შეუძლებელია",
-  "pauseEndDateMustBeAfterStartDate": "გთხოვთ, მიღების შესვენების დასრულების თარიღად აირჩიოთ დაწყების თარიღზე გვიანდელი თარიღი."
+  "pauseEndDateMustBeAfterStartDate": "გთხოვთ, მიღების შესვენების დასრულების თარიღად აირჩიოთ დაწყების თარიღზე გვიანდელი თარიღი.",
+  "plannedResumeDateOptional": "მიღების განახლების დაგეგმილი თარიღი (არასავალდებულო)",
+  "plannedResumeDateNotSet": "არ არის დაყენებული",
+  "selectPlannedResumeDate": "აირჩიეთ მიღების განახლების დაგეგმილი თარიღი",
+  "pauseEndDateLimitIsToday": "დასრულების თარიღად მხოლოდ დღევანდელი დღის არჩევაა შესაძლებელი",
+  "pauseEndDateLimitBeforeNextPause": "იმ დღემდე, რომელიც არ ემთხვევა შემდეგ შესვენებას ({date}〜)",
+  "pauseStartDateLimit": "დაწყების თარიღის არჩევა შესაძლებელია {date}-მდე"
 }
