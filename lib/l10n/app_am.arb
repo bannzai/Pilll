@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "መውሰድን እንደገና የጀመሩበት ቀን",
   "yazFlexSelectDate": "ቀን ይምረጡ",
   "yazFlexBeginPillNumberPageTitle": "ሺቱን የጀመሩት ቀን\nከመድሀኒት እረፍት በኋላ ስንተኛ ቀን ነበር?",
-  "yazFlexNextInputIsRestDuration": "ቀጥሎ የቀድሞ መድሀኒት ዕረፍትዎን ያስገቡ"
+  "yazFlexNextInputIsRestDuration": "ቀጥሎ የቀድሞ መድሀኒት ዕረፍትዎን ያስገቡ",
+  "yazFlexHasNotResumedYet": "ገና መውሰድን አልቀጠልኩም"
 }

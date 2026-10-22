@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "Az újrakezdés napja",
   "yazFlexSelectDate": "Válasszon dátumot",
   "yazFlexBeginPillNumberPageTitle": "Amikor elkezdte a levelet,\na szünet után hányadik nap volt?",
-  "yazFlexNextInputIsRestDuration": "Ezután adja meg az előző szünetet"
+  "yazFlexNextInputIsRestDuration": "Ezután adja meg az előző szünetet",
+  "yazFlexHasNotResumedYet": "Még nem kezdtem el újra szedni"
 }

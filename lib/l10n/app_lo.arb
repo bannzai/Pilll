@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "ວັນທີ່ເລີ່ມກິນອີກຄັ້ງ",
   "yazFlexSelectDate": "ເລືອກວັນທີ",
   "yazFlexBeginPillNumberPageTitle": "ມື້ທີ່ທ່ານເລີ່ມແຜ່ນຢາ\nເປັນມື້ທີ່ເທົ່າໃດຫຼັງຈາກຊ່ວງຢຸດຢາ?",
-  "yazFlexNextInputIsRestDuration": "ຕໍ່ໄປ ກະລຸນາປ້ອນຊ່ວງຢຸດກິນຄັ້ງກ່ອນ"
+  "yazFlexNextInputIsRestDuration": "ຕໍ່ໄປ ກະລຸນາປ້ອນຊ່ວງຢຸດກິນຄັ້ງກ່ອນ",
+  "yazFlexHasNotResumedYet": "ຍັງບໍ່ໄດ້ກັບມາເລີ່ມກິນອີກ"
 }

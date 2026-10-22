@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "Дахин ууж эхэлсэн өдөр",
   "yazFlexSelectDate": "Огноо сонгоно уу",
   "yazFlexBeginPillNumberPageTitle": "Хуудсыг эхлүүлсэн өдөр\nзавсарлагааны дараах хэд дэх өдөр байсан бэ?",
-  "yazFlexNextInputIsRestDuration": "Дараа нь өмнөх завсарлагаа оруулна уу"
+  "yazFlexNextInputIsRestDuration": "Дараа нь өмнөх завсарлагаа оруулна уу",
+  "yazFlexHasNotResumedYet": "Одоогоор дахин ууж эхлээгүй байна"
 }

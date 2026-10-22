@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "Dia en què vas reprendre la presa",
   "yazFlexSelectDate": "Seleccioneu una data",
   "yazFlexBeginPillNumberPageTitle": "El dia que vas començar el blíster,\nquin dia era després del descans?",
-  "yazFlexNextInputIsRestDuration": "A continuació, introdueix l’últim període de descans"
+  "yazFlexNextInputIsRestDuration": "A continuació, introdueix l’últim període de descans",
+  "yazFlexHasNotResumedYet": "Encara no he reprès la presa"
 }

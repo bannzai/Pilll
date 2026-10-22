@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "Tekrar almaya başladığınız gün",
   "yazFlexSelectDate": "Tarih seçin",
   "yazFlexBeginPillNumberPageTitle": "Pakete başladığınız gün,\naradan sonraki kaçıncı gündü?",
-  "yazFlexNextInputIsRestDuration": "Sonraki adımda önceki ara dönemini girin"
+  "yazFlexNextInputIsRestDuration": "Sonraki adımda önceki ara dönemini girin",
+  "yazFlexHasNotResumedYet": "Henüz tekrar kullanmaya başlamadım"
 }

@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "Qabulni qayta boshlagan kun",
   "yazFlexSelectDate": "Sanani tanlang",
   "yazFlexBeginPillNumberPageTitle": "Blisterni boshlagan kuningiz\ntanaffusdan keyin nechinchi kun edi?",
-  "yazFlexNextInputIsRestDuration": "Keyingi bosqichda avvalgi tanaffusni kiriting"
+  "yazFlexNextInputIsRestDuration": "Keyingi bosqichda avvalgi tanaffusni kiriting",
+  "yazFlexHasNotResumedYet": "Hali qayta qabul qilishni boshlamadim"
 }

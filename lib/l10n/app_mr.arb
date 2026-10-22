@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "पुन्हा घेणे सुरू केलेला दिवस",
   "yazFlexSelectDate": "तारीख निवडा",
   "yazFlexBeginPillNumberPageTitle": "तुम्ही शीट सुरू केली त्या दिवशी\nब्रेक संपल्यानंतर कितवा दिवस होता?",
-  "yazFlexNextInputIsRestDuration": "पुढे, मागील विराम प्रविष्ट करा"
+  "yazFlexNextInputIsRestDuration": "पुढे, मागील विराम प्रविष्ट करा",
+  "yazFlexHasNotResumedYet": "अजून पुन्हा घेणे सुरू केलेले नाही"
 }

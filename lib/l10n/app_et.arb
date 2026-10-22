@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "Võtmise taasalustamise päev",
   "yazFlexSelectDate": "Valige kuupäev",
   "yazFlexBeginPillNumberPageTitle": "Mis päeval pärast pausi\nalustasite lehega?",
-  "yazFlexNextInputIsRestDuration": "Järgmisena sisestage oma eelmine paus"
+  "yazFlexNextInputIsRestDuration": "Järgmisena sisestage oma eelmine paus",
+  "yazFlexHasNotResumedYet": "Ma ei ole veel võtmist uuesti alustanud"
 }

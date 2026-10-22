@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "Siku uliyoanza tena kutumia",
   "yazFlexSelectDate": "Chagua tarehe",
   "yazFlexBeginPillNumberPageTitle": "Siku uliyoanza kifurushi,\nilikuwa siku ya ngapi baada ya mapumziko?",
-  "yazFlexNextInputIsRestDuration": "Kisha, weka kipindi chako cha mapumziko cha awali"
+  "yazFlexNextInputIsRestDuration": "Kisha, weka kipindi chako cha mapumziko cha awali",
+  "yazFlexHasNotResumedYet": "Bado sijaanza kumeza tena"
 }

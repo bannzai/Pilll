@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "Дата на подновяване на приема",
   "yazFlexSelectDate": "Изберете дата",
   "yazFlexBeginPillNumberPageTitle": "В кой ден след почивката\nзапочнахте блистера?",
-  "yazFlexNextInputIsRestDuration": "След това въведете предишния период на пауза"
+  "yazFlexNextInputIsRestDuration": "След това въведете предишния период на пауза",
+  "yazFlexHasNotResumedYet": "Все още не съм подновила приема"
 }

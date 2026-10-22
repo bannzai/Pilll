@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "هغه ورځ چې بیا مو اخیستل پیل کړل",
   "yazFlexSelectDate": "نېټه وټاکئ",
   "yazFlexBeginPillNumberPageTitle": "هغه ورځ چې تاسو پاڼه پیل کړه\nد وقفې له پای وروسته څویمه ورځ وه؟",
-  "yazFlexNextInputIsRestDuration": "بل پړاو کې خپله پخوانۍ وقفه دننه کړئ"
+  "yazFlexNextInputIsRestDuration": "بل پړاو کې خپله پخوانۍ وقفه دننه کړئ",
+  "yazFlexHasNotResumedYet": "لا مې بیا اخیستل نه دي پیل کړي"
 }

@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "Վերսկսելու օրը",
   "yazFlexSelectDate": "Ընտրեք ամսաթիվը",
   "yazFlexBeginPillNumberPageTitle": "Այն օրը, երբ սկսեցիք թերթիկը,\nդադարի ավարտից հետո ո՞ր օրն էր։",
-  "yazFlexNextInputIsRestDuration": "Հաջորդը մուտքագրեք նախորդ դադարը"
+  "yazFlexNextInputIsRestDuration": "Հաջորդը մուտքագրեք նախորդ դադարը",
+  "yazFlexHasNotResumedYet": "Դեռ չեմ վերսկսել ընդունումը"
 }

@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "Tag, a dem du d Iinahm wieder ufgnuu hesch",
   "yazFlexSelectDate": "Es Datum uswehle",
   "yazFlexBeginPillNumberPageTitle": "A wellem Tag nach dr Pause\nhesch mit em Blister agfange?",
-  "yazFlexNextInputIsRestDuration": "Als Nächsts gibsch dini letschti Pause ii"
+  "yazFlexNextInputIsRestDuration": "Als Nächsts gibsch dini letschti Pause ii",
+  "yazFlexHasNotResumedYet": "Ich ha d Iinahm no nid wieder aaagfange"
 }

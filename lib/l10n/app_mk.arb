@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "Денот кога повторно почнавте да земате",
   "yazFlexSelectDate": "Изберете датум",
   "yazFlexBeginPillNumberPageTitle": "Кога ја започнавте лентата,\nкој ден беше по паузата?",
-  "yazFlexNextInputIsRestDuration": "Следно, внесете ја претходната пауза"
+  "yazFlexNextInputIsRestDuration": "Следно, внесете ја претходната пауза",
+  "yazFlexHasNotResumedYet": "Сѐ уште не сум почнала повторно да ги земам"
 }

@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "Дан када сте поново почели са узимањем",
   "yazFlexSelectDate": "Изаберите датум",
   "yazFlexBeginPillNumberPageTitle": "Када сте почели блистер,\nкоји је то био дан после паузе?",
-  "yazFlexNextInputIsRestDuration": "Zatim unesite prethodnu pauzu"
+  "yazFlexNextInputIsRestDuration": "Zatim unesite prethodnu pauzu",
+  "yazFlexHasNotResumedYet": "Још нисам поново почела да узимам"
 }

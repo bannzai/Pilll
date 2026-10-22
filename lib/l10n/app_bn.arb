@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "আবার সেবন শুরু করার দিন",
   "yazFlexSelectDate": "তারিখ নির্বাচন করুন",
   "yazFlexBeginPillNumberPageTitle": "শিট শুরু করার দিনটি\nবিরতির পর কততম দিন ছিল?",
-  "yazFlexNextInputIsRestDuration": "এরপর আগের বিরতির তথ্য লিখুন"
+  "yazFlexNextInputIsRestDuration": "এরপর আগের বিরতির তথ্য লিখুন",
+  "yazFlexHasNotResumedYet": "এখনও খাওয়া আবার শুরু করিনি"
 }

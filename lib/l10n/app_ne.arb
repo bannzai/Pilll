@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "फेरि खान सुरु गरेको दिन",
   "yazFlexSelectDate": "मिति चयन गर्नुहोस्",
   "yazFlexBeginPillNumberPageTitle": "तपाईंले शीट सुरु गरेको दिन\nब्रेक सकिएपछि कतिौँ दिन थियो?",
-  "yazFlexNextInputIsRestDuration": "अर्को चरणमा अघिल्लो विश्राम अवधि प्रविष्ट गर्नुहोस्"
+  "yazFlexNextInputIsRestDuration": "अर्को चरणमा अघिल्लो विश्राम अवधि प्रविष्ट गर्नुहोस्",
+  "yazFlexHasNotResumedYet": "अहिलेसम्म फेरि खान सुरु गरेकी छैन"
 }

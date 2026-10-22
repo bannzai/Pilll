@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "Кайра иче баштаган күн",
   "yazFlexSelectDate": "Күндү тандаңыз",
   "yazFlexBeginPillNumberPageTitle": "Баракты баштаган күнүңүз\nтыныгуудан кийин канчанчы күн болчу?",
-  "yazFlexNextInputIsRestDuration": "Кийинки кадамда мурунку тыныгууңузду киргизиңиз"
+  "yazFlexNextInputIsRestDuration": "Кийинки кадамда мурунку тыныгууңузду киргизиңиз",
+  "yazFlexHasNotResumedYet": "Азырынча кайра иче баштай элекмин"
 }

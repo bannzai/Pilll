@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "Usuku oqale ngalo futhi ukuyiphuza",
   "yazFlexSelectDate": "Khetha usuku",
   "yazFlexBeginPillNumberPageTitle": "Ngosuku oqale ngalo ishidi,\nkwakuwusuku lwesingaki ngemva kwekhefu?",
-  "yazFlexNextInputIsRestDuration": "Okulandelayo, faka ikhefu lakho langaphambilini"
+  "yazFlexNextInputIsRestDuration": "Okulandelayo, faka ikhefu lakho langaphambilini",
+  "yazFlexHasNotResumedYet": "Angikaqali futhi ukuyiphuza okwamanje"
 }

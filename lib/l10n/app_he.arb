@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "היום שבו חזרת ליטול",
   "yazFlexSelectDate": "בחרי תאריך",
   "yazFlexBeginPillNumberPageTitle": "ביום שבו התחלת את החפיסה,\nכמה ימים עברו מסיום ההפסקה?",
-  "yazFlexNextInputIsRestDuration": "בשלב הבא, יש להזין את ההפסקה הקודמת"
+  "yazFlexNextInputIsRestDuration": "בשלב הבא, יש להזין את ההפסקה הקודמת",
+  "yazFlexHasNotResumedYet": "עדיין לא חזרתי ליטול"
 }

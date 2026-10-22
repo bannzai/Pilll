@@ -576,5 +576,6 @@
   "yazFlexLastRestDurationEndDate": "Ziua în care ai reluat administrarea",
   "yazFlexSelectDate": "Selectați o dată",
   "yazFlexBeginPillNumberPageTitle": "În ziua în care ați început blisterul,\na câta zi după pauză era?",
-  "yazFlexNextInputIsRestDuration": "În continuare, introduceți pauza anterioară"
+  "yazFlexNextInputIsRestDuration": "În continuare, introduceți pauza anterioară",
+  "yazFlexHasNotResumedYet": "Încă nu am reluat administrarea"
 }
