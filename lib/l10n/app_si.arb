@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "නැවත ගැනීම ආරම්භ කිරීමට නියමිත දිනය තෝරන්න",
   "pauseEndDateLimitIsToday": "අවසන් දිනය අද දක්වා පමණක් සැකසිය හැක",
   "pauseEndDateLimitBeforeNextPause": "ඊළඟ විරාමය ({date}〜) සමඟ නොගැලපෙන දිනය දක්වා",
-  "pauseStartDateLimit": "ආරම්භක දිනය {date} දක්වා තෝරා ගත හැක"
+  "pauseStartDateLimit": "ආරම්භක දිනය {date} දක්වා තෝරා ගත හැක",
+  "initialSettingAskYazFlex": "ඔබ Yaz Flex භාවිතා කරනවාද?",
+  "initialSettingAskYazFlexDescription": "“ඔව්” තෝරාගත් විට\nවිවේක කාලය අවසන් වූ පසු කීවැනි දිනදැයි පෙන්වන ලෙස සකසනු ඇත",
+  "yazFlexLastRestDurationTitle": "කරුණාකර\nපෙර විරාම කාලය ගැන අපට කියන්න",
+  "yazFlexHasNotRestedYet": "මම තවමත් ගોળි ගැනීමේ විවේකයක් ගෙන නැහැ",
+  "yazFlexLastRestDurationBeginDate": "විරාමය ආරම්භ වූ දිනය",
+  "yazFlexLastRestDurationEndDate": "නැවත ලබාගැනීම ආරම්භ කළ දිනය",
+  "yazFlexSelectDate": "දිනය තෝරන්න",
+  "yazFlexBeginPillNumberTitle": "පළමු තීරුවේ අංක 1 ගුලිය, විරාමය අවසන් වූ පසු කීවැනි දිනට අයත්ද?"
 }

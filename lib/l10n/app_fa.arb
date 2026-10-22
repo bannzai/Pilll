@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "تاریخ برنامه‌ریزی‌شده برای شروع دوباره مصرف را انتخاب کنید",
   "pauseEndDateLimitIsToday": "تاریخ پایان فقط تا امروز قابل انتخاب است",
   "pauseEndDateLimitBeforeNextPause": "تا روزی که با وقفه بعدی ({date}〜) هم‌پوشانی نداشته باشد",
-  "pauseStartDateLimit": "تاریخ شروع را می‌توان تا {date} انتخاب کرد"
+  "pauseStartDateLimit": "تاریخ شروع را می‌توان تا {date} انتخاب کرد",
+  "initialSettingAskYazFlex": "آیا از Yaz Flex استفاده می‌کنید؟",
+  "initialSettingAskYazFlexDescription": "اگر «بله» را انتخاب کنید،\nطوری تنظیم می‌کنیم که تعداد روزهای گذشته از پایان دوره وقفه نمایش داده شود.",
+  "yazFlexLastRestDurationTitle": "لطفاً\nدرباره آخرین دوره وقفه به ما بگویید",
+  "yazFlexHasNotRestedYet": "هنوز دوره قطع مصرف قرص را شروع نکرده‌ام",
+  "yazFlexLastRestDurationBeginDate": "روز شروع وقفه",
+  "yazFlexLastRestDurationEndDate": "روز از سرگیری مصرف",
+  "yazFlexSelectDate": "تاریخ را انتخاب کنید",
+  "yazFlexBeginPillNumberTitle": "قرص شماره ۱ در ورق اول، چندمین روز بعد از پایان دورهٔ وقفه است؟"
 }

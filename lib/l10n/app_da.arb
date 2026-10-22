@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "Vælg planlagt dato for genoptagelse",
   "pauseEndDateLimitIsToday": "Slutdatoen kan kun vælges til og med i dag",
   "pauseEndDateLimitBeforeNextPause": "Indtil den, der ikke overlapper med næste pause ({date}–)",
-  "pauseStartDateLimit": "Startdatoen kan vælges til og med {date}"
+  "pauseStartDateLimit": "Startdatoen kan vælges til og med {date}",
+  "initialSettingAskYazFlex": "Bruger du Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Hvis du vælger “Ja”,\nindstiller vi det, så antal dage siden pausen sluttede kan vises.",
+  "yazFlexLastRestDurationTitle": "Fortæl os venligst\nom din seneste pause",
+  "yazFlexHasNotRestedYet": "Jeg har endnu ikke holdt pause fra pillerne",
+  "yazFlexLastRestDurationBeginDate": "Dagen, hvor pausen startede",
+  "yazFlexLastRestDurationEndDate": "Dato for genoptagelse",
+  "yazFlexSelectDate": "Vælg en dato",
+  "yazFlexBeginPillNumberTitle": "Hvilken dag efter pausen er nr. 1 på det første blister?"
 }

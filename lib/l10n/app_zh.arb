@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "选择预计恢复服用日期",
   "pauseEndDateLimitIsToday": "结束日期只能设置到今天",
   "pauseEndDateLimitBeforeNextPause": "截至不与下一次休药期（{date}〜）重叠的日期",
-  "pauseStartDateLimit": "开始日期最晚可选至{date}"
+  "pauseStartDateLimit": "开始日期最晚可选至{date}",
+  "initialSettingAskYazFlex": "您正在使用优思明灵活型吗？",
+  "initialSettingAskYazFlexDescription": "选择“是”后\n我们会将其设置为可显示停药期结束后的第几天",
+  "yazFlexLastRestDurationTitle": "请告诉我们\n上一次停药期的情况",
+  "yazFlexHasNotRestedYet": "还没有开始停药",
+  "yazFlexLastRestDurationBeginDate": "开始休药的日期",
+  "yazFlexLastRestDurationEndDate": "重新开始服用的日期",
+  "yazFlexSelectDate": "选择日期",
+  "yazFlexBeginPillNumberTitle": "第1板的第1粒药，是停药期结束后的第几天服用呢？"
 }

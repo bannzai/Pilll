@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "ເລືອກວັນທີທີ່ວາງແຜນຈະກັບມາຮັບປະທານ",
   "pauseEndDateLimitIsToday": "ວັນສິ້ນສຸດເລືອກໄດ້ເຖິງມື້ນີ້ເທົ່ານັ້ນ",
   "pauseEndDateLimitBeforeNextPause": "ຈົນເຖິງວັນທີ່ບໍ່ຊ້ອນກັບຊ່ວງພັກຄັ້ງຕໍ່ໄປ ({date}〜)",
-  "pauseStartDateLimit": "ສາມາດເລືອກວັນເລີ່ມຕົ້ນໄດ້ເຖິງ {date}"
+  "pauseStartDateLimit": "ສາມາດເລືອກວັນເລີ່ມຕົ້ນໄດ້ເຖິງ {date}",
+  "initialSettingAskYazFlex": "ທ່ານໃຊ້ Yaz Flex ຢູ່ບໍ?",
+  "initialSettingAskYazFlexDescription": "ຖ້າທ່ານເລືອກ “ແມ່ນ”\nພວກເຮົາຈະຕັ້ງຄ່າໃຫ້ສາມາດສະແດງວ່າເປັນມື້ທີເທົ່າໃດຫຼັງຈາກຊ່ວງຢຸດສິ້ນສຸດ",
+  "yazFlexLastRestDurationTitle": "ກະລຸນາ\nບອກພວກເຮົາກ່ຽວກັບຊ່ວງພັກຄັ້ງກ່ອນ",
+  "yazFlexHasNotRestedYet": "ຂ້ອຍຍັງບໍ່ທັນໄດ້ພັກການກິນຢາເທື່ອ",
+  "yazFlexLastRestDurationBeginDate": "ວັນທີ່ເລີ່ມພັກຢາ",
+  "yazFlexLastRestDurationEndDate": "ວັນທີ່ເລີ່ມກິນອີກຄັ້ງ",
+  "yazFlexSelectDate": "ເລືອກວັນທີ",
+  "yazFlexBeginPillNumberTitle": "ເມັດທີ 1 ໃນແຜ່ນທຳອິດ ແມ່ນມື້ທີເທົ່າໃດຫຼັງຈາກພັກການກິນຢາ?"
 }

@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "ਦੁਬਾਰਾ ਸੇਵਨ ਸ਼ੁਰੂ ਕਰਨ ਦੀ ਨਿਰਧਾਰਤ ਤਾਰੀਖ ਚੁਣੋ",
   "pauseEndDateLimitIsToday": "ਸਮਾਪਤੀ ਦੀ ਤਾਰੀਖ ਸਿਰਫ਼ ਅੱਜ ਤੱਕ ਹੀ ਸੈੱਟ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ",
   "pauseEndDateLimitBeforeNextPause": "ਅਗਲੇ ਵਿਸ਼ਰਾਮ ({date}〜) ਨਾਲ ਨਾ ਓਵਰਲੈਪ ਕਰਨ ਵਾਲੇ ਦਿਨ ਤੱਕ",
-  "pauseStartDateLimit": "ਸ਼ੁਰੂਆਤੀ ਤਾਰੀਖ {date} ਤੱਕ ਚੁਣੀ ਜਾ ਸਕਦੀ ਹੈ"
+  "pauseStartDateLimit": "ਸ਼ੁਰੂਆਤੀ ਤਾਰੀਖ {date} ਤੱਕ ਚੁਣੀ ਜਾ ਸਕਦੀ ਹੈ",
+  "initialSettingAskYazFlex": "ਕੀ ਤੁਸੀਂ Yaz Flex ਵਰਤ ਰਹੇ ਹੋ?",
+  "initialSettingAskYazFlexDescription": "“ਹਾਂ” ਚੁਣਨ ਤੇ\nਬ੍ਰੇਕ ਖਤਮ ਹੋਣ ਤੋਂ ਬਾਅਦ ਕਿੰਨਾ ਦਿਨ ਹੋਇਆ ਹੈ, ਇਹ ਵੇਖਾਉਣ ਲਈ ਸੈਟ ਕੀਤਾ ਜਾਵੇਗਾ",
+  "yazFlexLastRestDurationTitle": "ਕਿਰਪਾ ਕਰਕੇ\nਪਿਛਲੇ ਵਿਰਾਮ ਬਾਰੇ ਸਾਨੂੰ ਦੱਸੋ",
+  "yazFlexHasNotRestedYet": "ਮੈਂ ਹਾਲੇ ਤੱਕ ਗੋਲੀ ਤੋਂ ਬ੍ਰੇਕ ਨਹੀਂ ਲਿਆ",
+  "yazFlexLastRestDurationBeginDate": "ਜਿਸ ਦਿਨ ਵਿਸ਼ਰਾਮ ਸ਼ੁਰੂ ਹੋਇਆ",
+  "yazFlexLastRestDurationEndDate": "ਦੁਬਾਰਾ ਲੈਣਾ ਸ਼ੁਰੂ ਕੀਤਾ ਦਿਨ",
+  "yazFlexSelectDate": "ਤਾਰੀਖ ਚੁਣੋ",
+  "yazFlexBeginPillNumberTitle": "ਪਹਿਲੀ ਸ਼ੀਟ ਦੀ ਨੰਬਰ 1 ਗੋਲੀ, ਵਿਸ਼ਰਾਮ ਖਤਮ ਹੋਣ ਤੋਂ ਬਾਅਦ ਕਿਹੜੇ ਦਿਨ ਦੀ ਹੈ?"
 }

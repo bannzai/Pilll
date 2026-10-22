@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "בחרי את התאריך המתוכנן לחידוש הנטילה",
   "pauseEndDateLimitIsToday": "ניתן להגדיר את תאריך הסיום עד היום בלבד",
   "pauseEndDateLimitBeforeNextPause": "עד ליום שאינו חופף להפסקה הבאה ({date}〜)",
-  "pauseStartDateLimit": "ניתן לבחור את תאריך ההתחלה עד {date}"
+  "pauseStartDateLimit": "ניתן לבחור את תאריך ההתחלה עד {date}",
+  "initialSettingAskYazFlex": "האם את משתמשת ב-Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "אם תבחרי ב״כן״,\nנגדיר שיוצג כמה ימים עברו מאז סיום ההפסקה.",
+  "yazFlexLastRestDurationTitle": "נשמח אם תספרי לנו\nעל ההפסקה הקודמת",
+  "yazFlexHasNotRestedYet": "עדיין לא עשיתי הפסקה מהגלולות",
+  "yazFlexLastRestDurationBeginDate": "היום שבו ההפסקה התחילה",
+  "yazFlexLastRestDurationEndDate": "היום שבו חזרת ליטול",
+  "yazFlexSelectDate": "בחרי תאריך",
+  "yazFlexBeginPillNumberTitle": "הגלולה מספר 1 בחפיסה הראשונה היא היום ה־כמה אחרי ההפסקה?"
 }

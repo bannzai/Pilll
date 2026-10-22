@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "Ууж эхлэхээр төлөвлөсөн огноог сонгоно уу",
   "pauseEndDateLimitIsToday": "Дуусах огноог өнөөдрийг хүртэлхээр л сонгох боломжтой",
   "pauseEndDateLimitBeforeNextPause": "Дараагийн завсарлага ({date}〜)-тай давхцахгүй өдөр хүртэл",
-  "pauseStartDateLimit": "Эхлэх өдрийг {date} хүртэл сонгох боломжтой"
+  "pauseStartDateLimit": "Эхлэх өдрийг {date} хүртэл сонгох боломжтой",
+  "initialSettingAskYazFlex": "Та Yaz Flex хэрэглэж байна уу?",
+  "initialSettingAskYazFlexDescription": "“Тийм”-ийг сонговол\nзавсарлага дууссанаас хойш хэд дэх өдөр болохыг харуулахаар тохируулна",
+  "yazFlexLastRestDurationTitle": "Өмнөх завсарлагынхаа талаар\nбидэнд хэлнэ үү",
+  "yazFlexHasNotRestedYet": "Би эмийн завсарлага хараахан хийгээгүй байна",
+  "yazFlexLastRestDurationBeginDate": "Завсарлага эхэлсэн өдөр",
+  "yazFlexLastRestDurationEndDate": "Дахин ууж эхэлсэн өдөр",
+  "yazFlexSelectDate": "Огноо сонгоно уу",
+  "yazFlexBeginPillNumberTitle": "Эхний хавтангийн 1-р эм завсарлага дууссанаас хойш хэд дэх өдрийнх вэ?"
 }

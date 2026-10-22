@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "Ընտրեք ընդունումը վերսկսելու նախատեսված ամսաթիվը",
   "pauseEndDateLimitIsToday": "Ավարտի ամսաթիվը կարելի է սահմանել միայն մինչև այսօր",
   "pauseEndDateLimitBeforeNextPause": "Մինչ այն օրը, որը չի համընկնում հաջորդ դադարի հետ ({date}〜)",
-  "pauseStartDateLimit": "Մեկնարկի ամսաթիվը կարելի է ընտրել մինչև {date}"
+  "pauseStartDateLimit": "Մեկնարկի ամսաթիվը կարելի է ընտրել մինչև {date}",
+  "initialSettingAskYazFlex": "Yaz Flex օգտագործո՞ւմ եք։",
+  "initialSettingAskYazFlexDescription": "Եթե ընտրեք «Այո»-ն,\nկկարգավորենք, որպեսզի ցուցադրվի, թե ընդմիջման ավարտից քանիերորդ օրն է։",
+  "yazFlexLastRestDurationTitle": "Խնդրում ենք\nպատմել նախորդ դադարի մասին",
+  "yazFlexHasNotRestedYet": "Դեռևս դեղահաբերի ընդմիջում չեմ արել",
+  "yazFlexLastRestDurationBeginDate": "Ընդմիջման սկսվելու օրը",
+  "yazFlexLastRestDurationEndDate": "Վերսկսելու օրը",
+  "yazFlexSelectDate": "Ընտրեք ամսաթիվը",
+  "yazFlexBeginPillNumberTitle": "Առաջին շերտի 1-ին հաբը դադարից հետո ո՞ր օրն է։"
 }

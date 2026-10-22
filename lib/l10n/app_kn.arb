@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "ಮತ್ತೆ ಸೇವನೆ ಆರಂಭಿಸುವ ನಿಗದಿತ ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
   "pauseEndDateLimitIsToday": "ಅಂತ್ಯದ ದಿನಾಂಕವನ್ನು ಇಂದು ತನಕ ಮಾತ್ರ ಆಯ್ಕೆ ಮಾಡಬಹುದು",
   "pauseEndDateLimitBeforeNextPause": "ಮುಂದಿನ ವಿರಾಮ ({date}〜) ಜೊತೆ ಹೊಮ್ಮಿಸದ ದಿನದವರೆಗೆ",
-  "pauseStartDateLimit": "ಪ್ರಾರಂಭ ದಿನಾಂಕವನ್ನು {date} ವರೆಗೆ ಆಯ್ಕೆ ಮಾಡಬಹುದು"
+  "pauseStartDateLimit": "ಪ್ರಾರಂಭ ದಿನಾಂಕವನ್ನು {date} ವರೆಗೆ ಆಯ್ಕೆ ಮಾಡಬಹುದು",
+  "initialSettingAskYazFlex": "ನೀವು Yaz Flex ಬಳಸುತ್ತೀರಾ?",
+  "initialSettingAskYazFlexDescription": "“ಹೌದು” ಆಯ್ಕೆ ಮಾಡಿದರೆ\nವಿರಾಮ ಮುಗಿದ ನಂತರ ಎಷ್ಟುನೇ ದಿನವಾಗಿದೆ ಎಂಬುದನ್ನು ತೋರಿಸುವಂತೆ ಹೊಂದಿಸಲಾಗುತ್ತದೆ",
+  "yazFlexLastRestDurationTitle": "ದಯವಿಟ್ಟು\nಹಿಂದಿನ ವಿರಾಮ ಅವಧಿಯ ಬಗ್ಗೆ ನಮಗೆ ತಿಳಿಸಿ",
+  "yazFlexHasNotRestedYet": "ನಾನು ಇನ್ನೂ ಮಾತ್ರೆ ಸೇವನೆಗೆ ವಿರಾಮ ತೆಗೆದುಕೊಂಡಿಲ್ಲ",
+  "yazFlexLastRestDurationBeginDate": "ವಿರಾಮ ಆರಂಭವಾದ ದಿನ",
+  "yazFlexLastRestDurationEndDate": "ಮತ್ತೆ ಸೇವನೆ ಪ್ರಾರಂಭಿಸಿದ ದಿನ",
+  "yazFlexSelectDate": "ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ",
+  "yazFlexBeginPillNumberTitle": "ಮೊದಲ ಶೀಟ್‌ನ 1ನೇ ಗುಳಿ ವಿರಾಮದ ನಂತರ ಎಷ್ಟನೇ ದಿನದದು?"
 }

@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "మళ్లీ సేవించడం ప్రారంభించే నిర్ణయించిన తేదీని ఎంచుకోండి",
   "pauseEndDateLimitIsToday": "ముగింపు తేదీని ఈ రోజు వరకు మాత్రమే సెట్ చేయవచ్చు",
   "pauseEndDateLimitBeforeNextPause": "తదుపరి విరామం ({date}〜)తో మిళితం కాకుండా ఉండే రోజు వరకు",
-  "pauseStartDateLimit": "ప్రారంభ తేదీని {date} వరకు ఎంచుకోవచ్చు"
+  "pauseStartDateLimit": "ప్రారంభ తేదీని {date} వరకు ఎంచుకోవచ్చు",
+  "initialSettingAskYazFlex": "మీరు Yaz Flex ఉపయోగిస్తున్నారా?",
+  "initialSettingAskYazFlexDescription": "“అవును” ఎంచుకుంటే\nవిరామం ముగిసిన తర్వాత ఎన్ని రోజులు అయ్యిందో చూపించేలా సెటప్ చేస్తాము",
+  "yazFlexLastRestDurationTitle": "దయచేసి\nమునుపటి విరామ కాలం గురించి మాకు చెప్పండి",
+  "yazFlexHasNotRestedYet": "నేను ఇంకా మాత్రల విరామం తీసుకోలేదు",
+  "yazFlexLastRestDurationBeginDate": "విరామం ప్రారంభమైన రోజు",
+  "yazFlexLastRestDurationEndDate": "మళ్లీ తీసుకోవడం ప్రారంభించిన రోజు",
+  "yazFlexSelectDate": "తేదీని ఎంచుకోండి",
+  "yazFlexBeginPillNumberTitle": "మొదటి షీట్‌లోని 1వ మాత్ర, విరామం ముగిసిన తర్వాత ఎన్ని రోజులది?"
 }

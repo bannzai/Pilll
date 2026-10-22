@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "Seleziona la data prevista per riprendere l’assunzione",
   "pauseEndDateLimitIsToday": "La data di fine può essere impostata solo fino a oggi",
   "pauseEndDateLimitBeforeNextPause": "Fino al giorno che non si sovrappone alla pausa successiva ({date}–)",
-  "pauseStartDateLimit": "La data di inizio può essere selezionata fino al {date}"
+  "pauseStartDateLimit": "La data di inizio può essere selezionata fino al {date}",
+  "initialSettingAskYazFlex": "Stai usando Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Se scegli “Sì”,\nlo imposteremo in modo da mostrare quanti giorni sono passati dalla fine della pausa.",
+  "yazFlexLastRestDurationTitle": "Per favore,\nparlaci della tua ultima pausa",
+  "yazFlexHasNotRestedYet": "Non ho ancora fatto una pausa dalla pillola",
+  "yazFlexLastRestDurationBeginDate": "Giorno di inizio della pausa",
+  "yazFlexLastRestDurationEndDate": "Data di ripresa dell’assunzione",
+  "yazFlexSelectDate": "Seleziona una data",
+  "yazFlexBeginPillNumberTitle": "A quale giorno dopo la pausa corrisponde la pillola n. 1 del primo blister?"
 }

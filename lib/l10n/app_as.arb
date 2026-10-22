@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "পুনৰায় সেৱন আৰম্ভ কৰাৰ নিৰ্ধাৰিত তাৰিখ বাছনি কৰক",
   "pauseEndDateLimitIsToday": "সমাপ্তিৰ তাৰিখ আজিলৈকেহে বাছনি কৰিব পাৰিব",
   "pauseEndDateLimitBeforeNextPause": "পৰৱৰ্তী বিৰতি ({date}〜)-ৰ সৈতে নুওভৰা দিনলৈকে",
-  "pauseStartDateLimit": "আৰম্ভৰ তাৰিখ {date} লৈকে বাছনি কৰিব পাৰি"
+  "pauseStartDateLimit": "আৰম্ভৰ তাৰিখ {date} লৈকে বাছনি কৰিব পাৰি",
+  "initialSettingAskYazFlex": "আপুনি Yaz Flex ব্যৱহাৰ কৰে নেকি?",
+  "initialSettingAskYazFlexDescription": "“হয়” বাছনি কৰিলে\nঔষধ বন্ধৰ সময় শেষ হোৱাৰ পিছত কিমান দিন হ’ল সেয়া দেখুৱাব পৰাকৈ ছেট কৰা হ’ব",
+  "yazFlexLastRestDurationTitle": "অনুগ্ৰহ কৰি\nআপোনাৰ পূৰ্বৰ ঔষধ-বিৰতিৰ বিষয়ে জনাওক",
+  "yazFlexHasNotRestedYet": "মই এতিয়াও ঔষধ বন্ধৰ সময় লোৱা নাই",
+  "yazFlexLastRestDurationBeginDate": "বিৰতি আৰম্ভ হোৱা দিন",
+  "yazFlexLastRestDurationEndDate": "পুনৰায় সেৱন আৰম্ভ কৰা দিন",
+  "yazFlexSelectDate": "তাৰিখ বাছনি কৰক",
+  "yazFlexBeginPillNumberTitle": "প্ৰথম শ্বীটৰ ১ নম্বৰটো বিৰতি শেষ হোৱাৰ পিছত কিমান নম্বৰ দিনৰ?"
 }

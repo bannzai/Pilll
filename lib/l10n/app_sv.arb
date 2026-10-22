@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "Välj planerat datum för att återuppta intaget",
   "pauseEndDateLimitIsToday": "Slutdatum kan bara ställas in till och med idag",
   "pauseEndDateLimitBeforeNextPause": "Till den dag som inte överlappar med nästa uppehåll ({date}–)",
-  "pauseStartDateLimit": "Startdatum kan väljas till och med {date}"
+  "pauseStartDateLimit": "Startdatum kan väljas till och med {date}",
+  "initialSettingAskYazFlex": "Använder du Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Om du väljer ”Ja”\nställer vi in det så att det visar hur många dagar det har gått sedan uppehållet slutade.",
+  "yazFlexLastRestDurationTitle": "Berätta gärna för oss\nom din senaste paus",
+  "yazFlexHasNotRestedYet": "Jag har ännu inte haft något uppehåll från pillren",
+  "yazFlexLastRestDurationBeginDate": "Dagen då uppehållet började",
+  "yazFlexLastRestDurationEndDate": "Dagen du började ta den igen",
+  "yazFlexSelectDate": "Välj ett datum",
+  "yazFlexBeginPillNumberTitle": "Vilken dag efter uppehållet är piller nr 1 på den första kartan?"
 }

@@ -11,6 +11,10 @@ appId: com.mizuki.Ohashi.Pilll.dev
       - tapOn: "許可"
       - waitForAnimationToEnd
 
+# Screen 0: 「ヤーズフレックスの方ですか？」→ いいえ (従来の導線)
+- tapOn: "いいえ"
+- waitForAnimationToEnd
+
 # Screen 1 (1/3): ピルシートタイプ選択
 # まず「ピルの種類を選択」ボタンをタップしてモーダルを開く
 - tapOn: "ピルの種類を選択"

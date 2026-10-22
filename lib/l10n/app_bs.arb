@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "Odaberite planirani datum nastavka uzimanja",
   "pauseEndDateLimitIsToday": "Datum završetka može se odabrati najkasnije do danas",
   "pauseEndDateLimitBeforeNextPause": "Do dana koji se ne preklapa sa sljedećom pauzom ({date}–)",
-  "pauseStartDateLimit": "Datum početka možete odabrati do {date}"
+  "pauseStartDateLimit": "Datum početka možete odabrati do {date}",
+  "initialSettingAskYazFlex": "Da li koristite Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Ako odaberete „Da”,\npodesit ćemo prikaz koliko je dana prošlo od završetka pauze.",
+  "yazFlexLastRestDurationTitle": "Molimo,\nrecite nam o prethodnoj pauzi",
+  "yazFlexHasNotRestedYet": "Još nisam napravila pauzu s tabletama",
+  "yazFlexLastRestDurationBeginDate": "Dan kada je počela pauza",
+  "yazFlexLastRestDurationEndDate": "Dan kada ste ponovo počeli uzimati",
+  "yazFlexSelectDate": "Odaberite datum",
+  "yazFlexBeginPillNumberTitle": "Koji je dan nakon pauze pilula broj 1 na prvom blisteru?"
 }

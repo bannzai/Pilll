@@ -147,6 +147,9 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                               SignInSheetStateContext.initialSetting,
                               (accountType) async {
                                 store.showHUD();
+                                // このページは「ヤーズフレックスの方ですか？」のページから push されるため、
+                                // ログイン後にホームへ切り替わるルートの上に残らないよう最初のページまで戻す
+                                Navigator.of(context).popUntil((route) => route.isFirst);
                               },
                             );
                           },

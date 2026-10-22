@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "Selecione a data prevista para retomar a toma",
   "pauseEndDateLimitIsToday": "A data de término só pode ser definida até hoje",
   "pauseEndDateLimitBeforeNextPause": "Até ao dia que não se sobrepõe à próxima pausa ({date}–)",
-  "pauseStartDateLimit": "A data de início pode ser selecionada até {date}"
+  "pauseStartDateLimit": "A data de início pode ser selecionada até {date}",
+  "initialSettingAskYazFlex": "Está a usar Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Se escolher “Sim”,\nvamos configurar para mostrar quantos dias se passaram desde o fim da pausa.",
+  "yazFlexLastRestDurationTitle": "Conte-nos, por favor,\nsobre a sua última pausa",
+  "yazFlexHasNotRestedYet": "Ainda não fiz uma pausa da pílula",
+  "yazFlexLastRestDurationBeginDate": "Dia em que a pausa começou",
+  "yazFlexLastRestDurationEndDate": "Dia em que retomou a toma",
+  "yazFlexSelectDate": "Selecione uma data",
+  "yazFlexBeginPillNumberTitle": "A pílula nº 1 da primeira cartela corresponde a que dia após a pausa?"
 }

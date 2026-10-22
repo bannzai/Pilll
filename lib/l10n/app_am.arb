@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "የመውሰድ ዳግም መጀመሪያ የታቀደበትን ቀን ይምረጡ",
   "pauseEndDateLimitIsToday": "የመጨረሻ ቀን እስከ ዛሬ ብቻ ነው",
   "pauseEndDateLimitBeforeNextPause": "ከሚቀጥለው እረፍት ({date}〜) ጋር እስካልተደራረበ ቀን ድረስ",
-  "pauseStartDateLimit": "የመጀመሪያ ቀን እስከ {date} ድረስ መምረጥ ይቻላል"
+  "pauseStartDateLimit": "የመጀመሪያ ቀን እስከ {date} ድረስ መምረጥ ይቻላል",
+  "initialSettingAskYazFlex": "Yaz Flex ነው የምትወስዱት?",
+  "initialSettingAskYazFlexDescription": "«አዎ»ን ከመረጡ\nከመድኃኒት እረፍቱ በኋላ ስንተኛ ቀን እንደሆነ እንዲታይ እናስተካክላለን",
+  "yazFlexLastRestDurationTitle": "እባክዎ\nስለ ቀደመው የእረፍት ጊዜ ያሳውቁን",
+  "yazFlexHasNotRestedYet": "እስካሁን የመድኃኒት እረፍት አላደረግሁም",
+  "yazFlexLastRestDurationBeginDate": "የእረፍት ጊዜው የጀመረበት ቀን",
+  "yazFlexLastRestDurationEndDate": "መውሰድን እንደገና የጀመሩበት ቀን",
+  "yazFlexSelectDate": "ቀን ይምረጡ",
+  "yazFlexBeginPillNumberTitle": "በመጀመሪያው ሺት ላይ ቁጥር 1 ከመድኃኒት እረፍት በኋላ ስንተኛ ቀን ነው?"
 }

@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "Pasirinkite numatytą vartojimo atnaujinimo datą",
   "pauseEndDateLimitIsToday": "Pabaigos datą galima nustatyti tik iki šiandienos",
   "pauseEndDateLimitBeforeNextPause": "Iki dienos, kuri nesutampa su kita pertrauka ({date}–)",
-  "pauseStartDateLimit": "Pradžios datą galima pasirinkti iki {date}"
+  "pauseStartDateLimit": "Pradžios datą galima pasirinkti iki {date}",
+  "initialSettingAskYazFlex": "Ar vartojate Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Jei pasirinksite „Taip“,\nsukonfigūruosime, kad būtų rodoma, kelinta diena po pertraukos pabaigos.",
+  "yazFlexLastRestDurationTitle": "Prašome\npapasakoti apie ankstesnę pertrauką",
+  "yazFlexHasNotRestedYet": "Dar neturėjau tablečių vartojimo pertraukos",
+  "yazFlexLastRestDurationBeginDate": "Diena, kai prasidėjo pertrauka",
+  "yazFlexLastRestDurationEndDate": "Diena, kai vėl pradėjote vartoti",
+  "yazFlexSelectDate": "Pasirinkite datą",
+  "yazFlexBeginPillNumberTitle": "Kelinta diena po pertraukos yra 1-oji tabletė pirmoje plokštelėje?"
 }

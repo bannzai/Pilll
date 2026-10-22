@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "পুনরায় সেবন শুরুর নির্ধারিত তারিখ নির্বাচন করুন",
   "pauseEndDateLimitIsToday": "শেষের তারিখ আজ পর্যন্তই নির্বাচন করা যাবে",
   "pauseEndDateLimitBeforeNextPause": "পরবর্তী বিরতি ({date}〜)-র সঙ্গে মিলে না যাওয়া দিন পর্যন্ত",
-  "pauseStartDateLimit": "শুরুর তারিখ {date} পর্যন্ত বেছে নেওয়া যাবে"
+  "pauseStartDateLimit": "শুরুর তারিখ {date} পর্যন্ত বেছে নেওয়া যাবে",
+  "initialSettingAskYazFlex": "আপনি কি Yaz Flex ব্যবহার করছেন?",
+  "initialSettingAskYazFlexDescription": "“হ্যাঁ” নির্বাচন করলে\nবিরতি শেষ হওয়ার পর কততম দিন চলছে তা দেখানোর জন্য সেট করা হবে",
+  "yazFlexLastRestDurationTitle": "অনুগ্রহ করে\nআগের বিরতি সম্পর্কে জানান",
+  "yazFlexHasNotRestedYet": "আমি এখনও ওষুধ বন্ধের বিরতি নিইনি",
+  "yazFlexLastRestDurationBeginDate": "বিরতি শুরু হওয়ার দিন",
+  "yazFlexLastRestDurationEndDate": "আবার সেবন শুরু করার দিন",
+  "yazFlexSelectDate": "তারিখ নির্বাচন করুন",
+  "yazFlexBeginPillNumberTitle": "প্রথম শিটের ১ নম্বরটি বিরতি শেষ হওয়ার কততম দিনের পিল?"
 }

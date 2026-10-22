@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "S Datum für s Wiederufneh vo dr Iinahm uuswähle",
   "pauseEndDateLimitIsToday": "S Enddatum cha nur bis hüt gsetzt werde",
   "pauseEndDateLimitBeforeNextPause": "Bis zu däm Tag, wo sich nöd mit dr nöchschte Pause ({date}–) überschneidet",
-  "pauseStartDateLimit": "S Startdatum cha bis {date} usgwählt werde"
+  "pauseStartDateLimit": "S Startdatum cha bis {date} usgwählt werde",
+  "initialSettingAskYazFlex": "Nimmsch Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Wänn du „Ja“ uuswählsch,\nstellemer s so ii, dass aazeigt wird, dr wievielt Tag sit em Ändi vo dr Pause esch.",
+  "yazFlexLastRestDurationTitle": "Bitte verzell is\nvo diner letschte Pause",
+  "yazFlexHasNotRestedYet": "Ich ha no kei Pillepause gmacht",
+  "yazFlexLastRestDurationBeginDate": "Dr Tag, a wott d Pause aagfange het",
+  "yazFlexLastRestDurationEndDate": "Tag, a dem du d Iinahm wieder ufgnuu hesch",
+  "yazFlexSelectDate": "Es Datum uswehle",
+  "yazFlexBeginPillNumberTitle": "Dr wievielt Tag nach dr Pause isch Pille Nr. 1 uf em erschte Blister?"
 }

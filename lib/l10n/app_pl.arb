@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "Wybierz planowaną datę wznowienia przyjmowania",
   "pauseEndDateLimitIsToday": "Datę zakończenia można ustawić tylko do dzisiaj",
   "pauseEndDateLimitBeforeNextPause": "Do dnia, który nie nakłada się z następną przerwą ({date}–)",
-  "pauseStartDateLimit": "Datę rozpoczęcia można wybrać najpóźniej do {date}"
+  "pauseStartDateLimit": "Datę rozpoczęcia można wybrać najpóźniej do {date}",
+  "initialSettingAskYazFlex": "Czy stosujesz Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Jeśli wybierzesz „Tak”,\nustawimy wyświetlanie, który to dzień od zakończenia przerwy.",
+  "yazFlexLastRestDurationTitle": "Powiedz nam proszę\no poprzedniej przerwie",
+  "yazFlexHasNotRestedYet": "Nie miałam jeszcze przerwy w braniu tabletek",
+  "yazFlexLastRestDurationBeginDate": "Dzień rozpoczęcia przerwy",
+  "yazFlexLastRestDurationEndDate": "Dzień wznowienia przyjmowania",
+  "yazFlexSelectDate": "Wybierz datę",
+  "yazFlexBeginPillNumberTitle": "Który to dzień po przerwie dla tabletki nr 1 na pierwszym blistrze?"
 }

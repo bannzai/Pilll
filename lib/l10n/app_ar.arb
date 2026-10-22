@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "اختاري تاريخ استئناف التناول",
   "pauseEndDateLimitIsToday": "يمكن تحديد تاريخ الانتهاء حتى اليوم فقط",
   "pauseEndDateLimitBeforeNextPause": "حتى اليوم الذي لا يتداخل مع فترة التوقف التالية ({date}〜)",
-  "pauseStartDateLimit": "يمكن اختيار تاريخ البدء حتى {date}"
+  "pauseStartDateLimit": "يمكن اختيار تاريخ البدء حتى {date}",
+  "initialSettingAskYazFlex": "هل تستخدمين ياز فليكس؟",
+  "initialSettingAskYazFlexDescription": "إذا اخترتِ «نعم»،\nفسنضبط الإعدادات بحيث يمكن عرض عدد الأيام منذ انتهاء فترة التوقف.",
+  "yazFlexLastRestDurationTitle": "يرجى إخبارنا\nعن فترة التوقف السابقة",
+  "yazFlexHasNotRestedYet": "لم أبدأ فترة التوقف عن تناول الحبوب بعد",
+  "yazFlexLastRestDurationBeginDate": "تاريخ بدء فترة التوقف",
+  "yazFlexLastRestDurationEndDate": "تاريخ استئناف تناول الحبوب",
+  "yazFlexSelectDate": "حددي التاريخ",
+  "yazFlexBeginPillNumberTitle": "ما رقم اليوم بعد انتهاء فترة التوقف عن تناول الحبوب للحبة رقم 1 في الشريط الأول؟"
 }

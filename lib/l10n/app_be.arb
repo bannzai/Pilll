@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "Выберыце запланаваную дату аднаўлення прыёму",
   "pauseEndDateLimitIsToday": "Дату завяршэння можна выбраць толькі да сённяшняга дня",
   "pauseEndDateLimitBeforeNextPause": "Да дня, які не перасякаецца з наступным перапынкам ({date}〜)",
-  "pauseStartDateLimit": "Дату пачатку можна выбраць да {date}"
+  "pauseStartDateLimit": "Дату пачатку можна выбраць да {date}",
+  "initialSettingAskYazFlex": "Вы прымаеце Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Калі вы выбераце «Так»,\nмы наладзім паказ колькасці дзён пасля заканчэння перапынку.",
+  "yazFlexLastRestDurationTitle": "Калі ласка,\nраскажыце пра папярэдні перыяд перапынку",
+  "yazFlexHasNotRestedYet": "Яшчэ не рабіла перапынак у прыёме таблетак",
+  "yazFlexLastRestDurationBeginDate": "Дзень пачатку перапынку",
+  "yazFlexLastRestDurationEndDate": "Дата аднаўлення прыёму",
+  "yazFlexSelectDate": "Выберыце дату",
+  "yazFlexBeginPillNumberTitle": "Першая таблетка на першым блістары — гэта які дзень пасля перапынку?"
 }

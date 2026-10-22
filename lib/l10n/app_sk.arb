@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "Vyberte plánovaný dátum obnovenia užívania",
   "pauseEndDateLimitIsToday": "Dátum ukončenia možno nastaviť najneskôr na dnes",
   "pauseEndDateLimitBeforeNextPause": "Do dňa, ktorý sa neprekrýva s nasledujúcou prestávkou ({date}–)",
-  "pauseStartDateLimit": "Dátum začiatku je možné vybrať najneskôr do {date}"
+  "pauseStartDateLimit": "Dátum začiatku je možné vybrať najneskôr do {date}",
+  "initialSettingAskYazFlex": "Užívate Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Ak vyberiete „Áno“,\nnastavíme zobrazovanie, ktorý deň je od konca prestávky.",
+  "yazFlexLastRestDurationTitle": "Prosím,\npovedzte nám o vašej predchádzajúcej prestávke",
+  "yazFlexHasNotRestedYet": "Ešte som nemala prestávku v užívaní",
+  "yazFlexLastRestDurationBeginDate": "Deň začiatku prestávky",
+  "yazFlexLastRestDurationEndDate": "Deň opätovného začatia užívania",
+  "yazFlexSelectDate": "Vyberte dátum",
+  "yazFlexBeginPillNumberTitle": "Ktorý deň po prestávke je tabletka č. 1 na prvom blistri?"
 }

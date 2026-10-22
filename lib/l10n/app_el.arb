@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "Επιλέξτε την προγραμματισμένη ημερομηνία επανέναρξης λήψης",
   "pauseEndDateLimitIsToday": "Η ημερομηνία λήξης μπορεί να οριστεί μόνο έως σήμερα",
   "pauseEndDateLimitBeforeNextPause": "Μέχρι την ημέρα που δεν επικαλύπτεται με την επόμενη παύση ({date}〜)",
-  "pauseStartDateLimit": "Η ημερομηνία έναρξης μπορεί να επιλεγεί έως τις {date}"
+  "pauseStartDateLimit": "Η ημερομηνία έναρξης μπορεί να επιλεγεί έως τις {date}",
+  "initialSettingAskYazFlex": "Παίρνετε το Yaz Flex;",
+  "initialSettingAskYazFlexDescription": "Αν επιλέξετε «Ναι»,\nθα το ρυθμίσουμε ώστε να εμφανίζεται πόσες ημέρες έχουν περάσει από το τέλος της διακοπής.",
+  "yazFlexLastRestDurationTitle": "Παρακαλώ,\nενημερώστε μας για το προηγούμενο διάστημα διακοπής",
+  "yazFlexHasNotRestedYet": "Δεν έχω κάνει ακόμη διάλειμμα από το χάπι",
+  "yazFlexLastRestDurationBeginDate": "Η ημέρα που ξεκίνησε η διακοπή",
+  "yazFlexLastRestDurationEndDate": "Ημερομηνία επανέναρξης λήψης",
+  "yazFlexSelectDate": "Επιλέξτε ημερομηνία",
+  "yazFlexBeginPillNumberTitle": "Η 1η χάπι στην πρώτη καρτέλα αντιστοιχεί σε ποια ημέρα μετά το διάλειμμα;"
 }

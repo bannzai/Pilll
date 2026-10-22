@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "Izberite predvideni datum ponovnega začetka jemanja",
   "pauseEndDateLimitIsToday": "Končni datum lahko nastavite najpozneje na danes",
   "pauseEndDateLimitBeforeNextPause": "Do dneva, ki se ne prekriva z naslednjim premorom ({date}–)",
-  "pauseStartDateLimit": "Začetni datum lahko izberete do {date}"
+  "pauseStartDateLimit": "Začetni datum lahko izberete do {date}",
+  "initialSettingAskYazFlex": "Ali uporabljate Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Če izberete »Da«, \nbomo nastavili prikaz, koliko dni je minilo od konca premora.",
+  "yazFlexLastRestDurationTitle": "Prosimo,\npovejte nam o prejšnjem premoru",
+  "yazFlexHasNotRestedYet": "Še nisem imela premora pri jemanju tablet",
+  "yazFlexLastRestDurationBeginDate": "Dan začetka premora",
+  "yazFlexLastRestDurationEndDate": "Dan ponovnega začetka jemanja",
+  "yazFlexSelectDate": "Izberite datum",
+  "yazFlexBeginPillNumberTitle": "Kateri dan po premoru je tabletka št. 1 na prvem pretisnem omotu?"
 }

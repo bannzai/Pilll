@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "Chagua tarehe iliyopangwa ya kuanza kutumia tena",
   "pauseEndDateLimitIsToday": "Tarehe ya mwisho inaweza kuwekwa hadi leo tu",
   "pauseEndDateLimitBeforeNextPause": "Hadi siku ambayo haiingiliani na mapumziko yajayo ({date}–)",
-  "pauseStartDateLimit": "Tarehe ya kuanza inaweza kuchaguliwa hadi {date}"
+  "pauseStartDateLimit": "Tarehe ya kuanza inaweza kuchaguliwa hadi {date}",
+  "initialSettingAskYazFlex": "Je, unatumia Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Ukichagua “Ndiyo”,\ntutaiweka ili ionyeshe ni siku ya ngapi tangu mapumziko yalipoisha.",
+  "yazFlexLastRestDurationTitle": "Tafadhali\ntuambie kuhusu mapumziko yako ya mwisho",
+  "yazFlexHasNotRestedYet": "Bado sijaanza mapumziko ya tembe",
+  "yazFlexLastRestDurationBeginDate": "Siku ambayo mapumziko yalianza",
+  "yazFlexLastRestDurationEndDate": "Siku uliyoanza tena kutumia",
+  "yazFlexSelectDate": "Chagua tarehe",
+  "yazFlexBeginPillNumberTitle": "Kidonge namba 1 kwenye kifurushi cha kwanza ni cha siku ya ngapi baada ya mapumziko?"
 }

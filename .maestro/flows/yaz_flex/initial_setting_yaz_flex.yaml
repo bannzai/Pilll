@@ -1,0 +1,46 @@
+appId: com.mizuki.Ohashi.Pilll.dev
+---
+# 初期設定で「ヤーズフレックスの方ですか？」に「はい」と答え、
+# 今日飲む番号 → 前回の休薬 (休薬はまだしていない) → 服用タイミング → プレミアムトライアルの順に進み、ホーム画面に到達することを確認する。
+- launchApp:
+    clearState: true
+    clearKeychain: true
+    permissions:
+      notifications: allow
+- waitForAnimationToEnd
+
+# 通知許可ダイアログが表示される場合がある → 許可をタップ
+- runFlow:
+    when:
+      visible: "許可"
+    commands:
+      - tapOn: "許可"
+      - waitForAnimationToEnd
+
+# 「ヤーズフレックスの方ですか？」→ はい
+- assertVisible: "ヤーズフレックスの方ですか？"
+- tapOn: "はい"
+- waitForAnimationToEnd
+
+# 今日飲む番号: 1枚目の最初のピルを座標でタップ (ピルシート内の Flutter のピルは Maestro がテキストで検出できないため)
+- tapOn:
+    point: "20%,32%"
+- waitForAnimationToEnd
+- tapOn: "次へ"
+- waitForAnimationToEnd
+
+# 前回の休薬: 休薬はまだしていない → 日付の入力欄が消え、次へ進める
+- assertVisible: "前回の休薬について\n教えてください"
+- tapOn: "休薬はまだしていない"
+- waitForAnimationToEnd
+- assertNotVisible: "休薬が始まった日"
+- tapOn: "次へ"
+- waitForAnimationToEnd
+
+# 服用タイミング → そのまま次へ
+- tapOn: "次へ"
+- waitForAnimationToEnd
+
+# プレミアムトライアル → アプリ開始
+- tapOn: "アプリをはじめる"
+- waitForAnimationToEnd

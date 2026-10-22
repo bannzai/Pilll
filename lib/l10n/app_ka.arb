@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "აირჩიეთ მიღების განახლების დაგეგმილი თარიღი",
   "pauseEndDateLimitIsToday": "დასრულების თარიღად მხოლოდ დღევანდელი დღის არჩევაა შესაძლებელი",
   "pauseEndDateLimitBeforeNextPause": "იმ დღემდე, რომელიც არ ემთხვევა შემდეგ შესვენებას ({date}〜)",
-  "pauseStartDateLimit": "დაწყების თარიღის არჩევა შესაძლებელია {date}-მდე"
+  "pauseStartDateLimit": "დაწყების თარიღის არჩევა შესაძლებელია {date}-მდე",
+  "initialSettingAskYazFlex": "Yaz Flex-ს იყენებთ?",
+  "initialSettingAskYazFlexDescription": "თუ აირჩევთ „დიახ“-ს,\nდავაყენებთ ისე, რომ გამოჩნდეს, რამდენი დღე გავიდა შესვენების დასრულებიდან.",
+  "yazFlexLastRestDurationTitle": "გთხოვთ,\ngვაცნობეთ წინა შესვენების შესახებ",
+  "yazFlexHasNotRestedYet": "ჯერ არ მქონია აბების მიღების შესვენება",
+  "yazFlexLastRestDurationBeginDate": "დღე, როცა შესვენება დაიწყო",
+  "yazFlexLastRestDurationEndDate": "მიღების განახლების დღე",
+  "yazFlexSelectDate": "აირჩიეთ თარიღი",
+  "yazFlexBeginPillNumberTitle": "პირველი ფირფიტის №1 აბი შესვენების დასრულებიდან მერამდენე დღეა?"
 }

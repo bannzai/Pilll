@@ -567,5 +567,13 @@
   "selectPlannedResumeDate": "Pilih tanggal rencana melanjutkan konsumsi",
   "pauseEndDateLimitIsToday": "Tanggal berakhir hanya dapat diatur sampai hari ini",
   "pauseEndDateLimitBeforeNextPause": "Sampai hari yang tidak tumpang tindih dengan jeda berikutnya ({date}–)",
-  "pauseStartDateLimit": "Tanggal mulai dapat dipilih hingga {date}"
+  "pauseStartDateLimit": "Tanggal mulai dapat dipilih hingga {date}",
+  "initialSettingAskYazFlex": "Apakah Anda menggunakan Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Jika Anda memilih “Ya”,\nkami akan mengaturnya agar dapat menampilkan hari keberapa sejak jeda berakhir.",
+  "yazFlexLastRestDurationTitle": "Mohon beri tahu kami\ntentang jeda terakhir Anda",
+  "yazFlexHasNotRestedYet": "Saya belum menjalani jeda minum pil",
+  "yazFlexLastRestDurationBeginDate": "Hari dimulainya jeda",
+  "yazFlexLastRestDurationEndDate": "Hari Anda kembali mulai minum",
+  "yazFlexSelectDate": "Pilih tanggal",
+  "yazFlexBeginPillNumberTitle": "Pil nomor 1 pada lembar pertama diminum pada hari ke berapa setelah jeda?"
 }
