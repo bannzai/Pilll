@@ -2787,5 +2787,37 @@
         "type": "String"
       }
     }
+  },
+  "initialSettingAskYazFlex": "ヤーズフレックスの方ですか？",
+  "@initialSettingAskYazFlex": {
+    "description": "初期設定の最初のページの見出しです。処方されているピルが、休薬明けにシートの途中の番号から服用を再開する連続服用のピル「ヤーズフレックス」かどうかを尋ねます。「はい」と「いいえ」のボタンで答えます。"
+  },
+  "initialSettingAskYazFlexDescription": "「はい」を選ぶと\n休薬明けから何日目かを表示できるように設定します",
+  "@initialSettingAskYazFlexDescription": {
+    "description": "初期設定の最初のページで「ヤーズフレックスの方ですか？」の見出しの下に出す説明です。「はい」を選ぶと、ピルシートの番号ではなく休薬明けから何日目かを表示する設定で始められることを伝えます。"
+  },
+  "yazFlexLastRestDurationTitle": "前回の休薬について\n教えてください",
+  "@yazFlexLastRestDurationTitle": {
+    "description": "ヤーズフレックス向けの初期設定で、前回の休薬（ピルを飲まない期間）がいつ始まりいつ終わったかを入力してもらうページの見出しです。"
+  },
+  "yazFlexHasNotRestedYet": "休薬はまだしていない",
+  "@yazFlexHasNotRestedYet": {
+    "description": "ヤーズフレックス向けの初期設定で、ヤーズフレックスを飲み始めてから一度も休薬（ピルを飲まない期間）をしていない人が選ぶチェックボックスのラベルです。選ぶと休薬の日付の入力欄が消えます。"
+  },
+  "yazFlexLastRestDurationBeginDate": "休薬が始まった日",
+  "@yazFlexLastRestDurationBeginDate": {
+    "description": "ヤーズフレックス向けの初期設定で、前回の休薬（ピルを飲まない期間）の初日を選ぶ入力欄のラベルです。タップするとカレンダーが開きます。"
+  },
+  "yazFlexLastRestDurationEndDate": "服用を再開した日",
+  "@yazFlexLastRestDurationEndDate": {
+    "description": "ヤーズフレックス向けの初期設定で、前回の休薬（ピルを飲まない期間）が終わり、ピルの服用を再開した日を選ぶ入力欄のラベルです。タップするとカレンダーが開きます。"
+  },
+  "yazFlexSelectDate": "日付を選択",
+  "@yazFlexSelectDate": {
+    "description": "ヤーズフレックス向けの初期設定で、休薬の日付がまだ選ばれていない入力欄に出すプレースホルダーです。タップするとカレンダーが開きます。"
+  },
+  "yazFlexBeginPillNumberTitle": "1枚目の1番は\n休薬明けから何日目ですか",
+  "@yazFlexBeginPillNumberTitle": {
+    "description": "ヤーズフレックス向けの初期設定で、ピルシートの1枚目の1番のピルが、休薬（ピルを飲まない期間）が明けてから何日目に飲むピルかを入力してもらう欄の見出しです。下に「−」「＋」のボタンと「〇日目」の数字が並びます。"
   }
 }
