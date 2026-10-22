@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "Pilih tarikh dijadualkan untuk menyambung pengambilan",
   "pauseEndDateLimitIsToday": "Tarikh tamat hanya boleh ditetapkan sehingga hari ini",
   "pauseEndDateLimitBeforeNextPause": "Sehingga hari yang tidak bertindih dengan rehat seterusnya ({date}–)",
-  "pauseStartDateLimit": "Tarikh mula boleh dipilih sehingga {date}"
+  "pauseStartDateLimit": "Tarikh mula boleh dipilih sehingga {date}",
+  "initialSettingAskYazFlex": "Adakah anda menggunakan Yaz Flex?"
 }

@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "የመውሰድ ዳግም መጀመሪያ የታቀደበትን ቀን ይምረጡ",
   "pauseEndDateLimitIsToday": "የመጨረሻ ቀን እስከ ዛሬ ብቻ ነው",
   "pauseEndDateLimitBeforeNextPause": "ከሚቀጥለው እረፍት ({date}〜) ጋር እስካልተደራረበ ቀን ድረስ",
-  "pauseStartDateLimit": "የመጀመሪያ ቀን እስከ {date} ድረስ መምረጥ ይቻላል"
+  "pauseStartDateLimit": "የመጀመሪያ ቀን እስከ {date} ድረስ መምረጥ ይቻላል",
+  "initialSettingAskYazFlex": "Yaz Flex ነው የምትወስዱት?"
 }

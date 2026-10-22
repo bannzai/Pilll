@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "మళ్లీ సేవించడం ప్రారంభించే నిర్ణయించిన తేదీని ఎంచుకోండి",
   "pauseEndDateLimitIsToday": "ముగింపు తేదీని ఈ రోజు వరకు మాత్రమే సెట్ చేయవచ్చు",
   "pauseEndDateLimitBeforeNextPause": "తదుపరి విరామం ({date}〜)తో మిళితం కాకుండా ఉండే రోజు వరకు",
-  "pauseStartDateLimit": "ప్రారంభ తేదీని {date} వరకు ఎంచుకోవచ్చు"
+  "pauseStartDateLimit": "ప్రారంభ తేదీని {date} వరకు ఎంచుకోవచ్చు",
+  "initialSettingAskYazFlex": "మీరు Yaz Flex ఉపయోగిస్తున్నారా?"
 }

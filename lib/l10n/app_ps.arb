@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "د بیا اخیستلو ټاکل شوې نېټه وټاکئ",
   "pauseEndDateLimitIsToday": "د پای نېټه یوازې تر نن پورې ټاکل کېدای شي",
   "pauseEndDateLimitBeforeNextPause": "تر هغې ورځې پورې چې له راتلونکې وقفې ({date}〜) سره نه ټکرېږي",
-  "pauseStartDateLimit": "د پیل نېټه تر {date} پورې ټاکل کېدای شي"
+  "pauseStartDateLimit": "د پیل نېټه تر {date} پورې ټاکل کېدای شي",
+  "initialSettingAskYazFlex": "ایا تاسو Yaz Flex کاروئ؟"
 }

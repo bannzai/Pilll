@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "เลือกวันที่กำหนดจะกลับมารับประทานอีกครั้ง",
   "pauseEndDateLimitIsToday": "สามารถตั้งวันที่สิ้นสุดได้ถึงวันนี้เท่านั้น",
   "pauseEndDateLimitBeforeNextPause": "จนถึงวันที่ไม่ทับกับช่วงพักครั้งถัดไป ({date}〜)",
-  "pauseStartDateLimit": "เลือกวันที่เริ่มต้นได้ถึง {date}"
+  "pauseStartDateLimit": "เลือกวันที่เริ่มต้นได้ถึง {date}",
+  "initialSettingAskYazFlex": "คุณใช้ Yaz Flex อยู่ใช่ไหม"
 }

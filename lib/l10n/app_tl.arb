@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "Piliin ang nakatakdang petsa ng muling pag-inom",
   "pauseEndDateLimitIsToday": "Maaari lang itakda ang petsa ng pagtatapos hanggang ngayong araw",
   "pauseEndDateLimitBeforeNextPause": "Hanggang sa araw na hindi sumasapaw sa susunod na pahinga ({date}–)",
-  "pauseStartDateLimit": "Maaaring piliin ang petsa ng pagsisimula hanggang {date}"
+  "pauseStartDateLimit": "Maaaring piliin ang petsa ng pagsisimula hanggang {date}",
+  "initialSettingAskYazFlex": "Gumagamit ka ba ng Yaz Flex?"
 }

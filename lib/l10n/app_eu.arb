@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "Hautatu berriro hartzeko aurreikusitako data",
   "pauseEndDateLimitIsToday": "Amaiera-data gaur arte baino ezin da ezarri",
   "pauseEndDateLimitBeforeNextPause": "Hurrengo atsedenaldiarekin ({date}〜) gainjartzen ez den egunera arte",
-  "pauseStartDateLimit": "Hasiera-data {date} arte aukeratu daiteke"
+  "pauseStartDateLimit": "Hasiera-data {date} arte aukeratu daiteke",
+  "initialSettingAskYazFlex": "Yaz Flex erabiltzen duzu?"
 }

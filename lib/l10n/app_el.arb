@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "Επιλέξτε την προγραμματισμένη ημερομηνία επανέναρξης λήψης",
   "pauseEndDateLimitIsToday": "Η ημερομηνία λήξης μπορεί να οριστεί μόνο έως σήμερα",
   "pauseEndDateLimitBeforeNextPause": "Μέχρι την ημέρα που δεν επικαλύπτεται με την επόμενη παύση ({date}〜)",
-  "pauseStartDateLimit": "Η ημερομηνία έναρξης μπορεί να επιλεγεί έως τις {date}"
+  "pauseStartDateLimit": "Η ημερομηνία έναρξης μπορεί να επιλεγεί έως τις {date}",
+  "initialSettingAskYazFlex": "Παίρνετε το Yaz Flex;"
 }

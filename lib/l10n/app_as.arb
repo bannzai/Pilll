@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "পুনৰায় সেৱন আৰম্ভ কৰাৰ নিৰ্ধাৰিত তাৰিখ বাছনি কৰক",
   "pauseEndDateLimitIsToday": "সমাপ্তিৰ তাৰিখ আজিলৈকেহে বাছনি কৰিব পাৰিব",
   "pauseEndDateLimitBeforeNextPause": "পৰৱৰ্তী বিৰতি ({date}〜)-ৰ সৈতে নুওভৰা দিনলৈকে",
-  "pauseStartDateLimit": "আৰম্ভৰ তাৰিখ {date} লৈকে বাছনি কৰিব পাৰি"
+  "pauseStartDateLimit": "আৰম্ভৰ তাৰিখ {date} লৈকে বাছনি কৰিব পাৰি",
+  "initialSettingAskYazFlex": "আপুনি Yaz Flex ব্যৱহাৰ কৰে নেকি?"
 }

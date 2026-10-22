@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "Chọn ngày dự định dùng lại",
   "pauseEndDateLimitIsToday": "Ngày kết thúc chỉ có thể đặt đến hôm nay",
   "pauseEndDateLimitBeforeNextPause": "Đến ngày không bị trùng với kỳ nghỉ tiếp theo ({date}–)",
-  "pauseStartDateLimit": "Có thể chọn ngày bắt đầu đến {date}"
+  "pauseStartDateLimit": "Có thể chọn ngày bắt đầu đến {date}",
+  "initialSettingAskYazFlex": "Bạn có đang sử dụng Yaz Flex không?"
 }

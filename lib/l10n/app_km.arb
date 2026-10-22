@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "ជ្រើសរើសកាលបរិច្ឆេទដែលគ្រោងចាប់ផ្តើមលេបវិញ",
   "pauseEndDateLimitIsToday": "កាលបរិច្ឆេទបញ្ចប់អាចកំណត់បានត្រឹមថ្ងៃនេះប៉ុណ្ណោះ",
   "pauseEndDateLimitBeforeNextPause": "រហូតដល់ថ្ងៃដែលមិនជាន់គ្នានឹងការសម្រាកបន្ទាប់ ({date}〜)",
-  "pauseStartDateLimit": "អាចជ្រើសរើសកាលបរិច្ឆេទចាប់ផ្តើមបានរហូតដល់ {date}"
+  "pauseStartDateLimit": "អាចជ្រើសរើសកាលបរិច្ឆេទចាប់ផ្តើមបានរហូតដល់ {date}",
+  "initialSettingAskYazFlex": "តើអ្នកកំពុងប្រើ Yaz Flex មែនទេ?"
 }

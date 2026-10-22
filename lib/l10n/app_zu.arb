@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "Khetha usuku oluhleliwe lokuqala futhi ukulusebenzisa",
   "pauseEndDateLimitIsToday": "Usuku lokuphela lungasethwa kuze kube namuhla kuphela",
   "pauseEndDateLimitBeforeNextPause": "Kuze kube usuku olungangqubuzani nekhefu elilandelayo ({date}–)",
-  "pauseStartDateLimit": "Usuku lokuqala lungakhethwa kuze kube u-{date}"
+  "pauseStartDateLimit": "Usuku lokuqala lungakhethwa kuze kube u-{date}",
+  "initialSettingAskYazFlex": "Ingabe usebenzisa i-Yaz Flex?"
 }

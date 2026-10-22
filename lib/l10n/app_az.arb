@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "Qəbulun yenidən başlanacağı tarixi seçin",
   "pauseEndDateLimitIsToday": "Bitmə tarixi yalnız bu günə qədər seçilə bilər",
   "pauseEndDateLimitBeforeNextPause": "Növbəti fasilə ({date}〜) ilə üst-üstə düşməyən günədək",
-  "pauseStartDateLimit": "Başlanğıc tarixi ən gec {date} seçilə bilər"
+  "pauseStartDateLimit": "Başlanğıc tarixi ən gec {date} seçilə bilər",
+  "initialSettingAskYazFlex": "Yaz Flex istifadə edirsiniz?"
 }

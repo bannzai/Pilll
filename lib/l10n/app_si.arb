@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "නැවත ගැනීම ආරම්භ කිරීමට නියමිත දිනය තෝරන්න",
   "pauseEndDateLimitIsToday": "අවසන් දිනය අද දක්වා පමණක් සැකසිය හැක",
   "pauseEndDateLimitBeforeNextPause": "ඊළඟ විරාමය ({date}〜) සමඟ නොගැලපෙන දිනය දක්වා",
-  "pauseStartDateLimit": "ආරම්භක දිනය {date} දක්වා තෝරා ගත හැක"
+  "pauseStartDateLimit": "ආරම්භක දිනය {date} දක්වා තෝරා ගත හැක",
+  "initialSettingAskYazFlex": "ඔබ Yaz Flex භාවිතා කරනවාද?"
 }

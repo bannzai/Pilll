@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "Қабылдауды қайта бастау жоспарланған күнді таңдаңыз",
   "pauseEndDateLimitIsToday": "Аяқталу күнін ең көбі бүгінге дейін ғана таңдауға болады",
   "pauseEndDateLimitBeforeNextPause": "Келесі үзіліспен ({date}〜) қабаттаспайтын күнге дейін",
-  "pauseStartDateLimit": "Басталу күнін {date} күніне дейін таңдауға болады"
+  "pauseStartDateLimit": "Басталу күнін {date} күніне дейін таңдауға болады",
+  "initialSettingAskYazFlex": "Yaz Flex қолданасыз ба?"
 }

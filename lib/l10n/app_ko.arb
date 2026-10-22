@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "복용 재개 예정일을 선택해 주세요",
   "pauseEndDateLimitIsToday": "종료일은 오늘까지만 선택할 수 있어요",
   "pauseEndDateLimitBeforeNextPause": "다음 휴약 기간({date}~)과 겹치지 않는 날까지",
-  "pauseStartDateLimit": "시작일은 {date}까지 선택할 수 있어요"
+  "pauseStartDateLimit": "시작일은 {date}까지 선택할 수 있어요",
+  "initialSettingAskYazFlex": "야즈플렉스를 복용 중이신가요?"
 }

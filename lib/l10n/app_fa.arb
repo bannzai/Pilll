@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "تاریخ برنامه‌ریزی‌شده برای شروع دوباره مصرف را انتخاب کنید",
   "pauseEndDateLimitIsToday": "تاریخ پایان فقط تا امروز قابل انتخاب است",
   "pauseEndDateLimitBeforeNextPause": "تا روزی که با وقفه بعدی ({date}〜) هم‌پوشانی نداشته باشد",
-  "pauseStartDateLimit": "تاریخ شروع را می‌توان تا {date} انتخاب کرد"
+  "pauseStartDateLimit": "تاریخ شروع را می‌توان تا {date} انتخاب کرد",
+  "initialSettingAskYazFlex": "آیا از Yaz Flex استفاده می‌کنید؟"
 }

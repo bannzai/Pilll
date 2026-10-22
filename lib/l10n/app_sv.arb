@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "Välj planerat datum för att återuppta intaget",
   "pauseEndDateLimitIsToday": "Slutdatum kan bara ställas in till och med idag",
   "pauseEndDateLimitBeforeNextPause": "Till den dag som inte överlappar med nästa uppehåll ({date}–)",
-  "pauseStartDateLimit": "Startdatum kan väljas till och med {date}"
+  "pauseStartDateLimit": "Startdatum kan väljas till och med {date}",
+  "initialSettingAskYazFlex": "Använder du Yaz Flex?"
 }

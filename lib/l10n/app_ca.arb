@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "Selecciona la data prevista de represa de la presa",
   "pauseEndDateLimitIsToday": "La data de finalització només es pot seleccionar fins avui",
   "pauseEndDateLimitBeforeNextPause": "Fins al dia que no se superposi amb el següent descans ({date}〜)",
-  "pauseStartDateLimit": "La data d'inici es pot triar fins a {date}"
+  "pauseStartDateLimit": "La data d'inici es pot triar fins a {date}",
+  "initialSettingAskYazFlex": "Prens Yaz Flex?"
 }

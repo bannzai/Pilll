@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "ફરીથી સેવન શરૂ કરવાની નિર્ધારિત તારીખ પસંદ કરો",
   "pauseEndDateLimitIsToday": "અંતિમ તારીખ આજે સુધી જ પસંદ કરી શકાય છે",
   "pauseEndDateLimitBeforeNextPause": "આગામી વિરામ ({date}〜) સાથે ન અથડાતો દિવસ સુધી",
-  "pauseStartDateLimit": "શરૂઆતની તારીખ {date} સુધી પસંદ કરી શકાય છે"
+  "pauseStartDateLimit": "શરૂઆતની તારીખ {date} સુધી પસંદ કરી શકાય છે",
+  "initialSettingAskYazFlex": "શું તમે Yaz Flex વાપરો છો?"
 }

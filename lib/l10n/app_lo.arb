@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "ເລືອກວັນທີທີ່ວາງແຜນຈະກັບມາຮັບປະທານ",
   "pauseEndDateLimitIsToday": "ວັນສິ້ນສຸດເລືອກໄດ້ເຖິງມື້ນີ້ເທົ່ານັ້ນ",
   "pauseEndDateLimitBeforeNextPause": "ຈົນເຖິງວັນທີ່ບໍ່ຊ້ອນກັບຊ່ວງພັກຄັ້ງຕໍ່ໄປ ({date}〜)",
-  "pauseStartDateLimit": "ສາມາດເລືອກວັນເລີ່ມຕົ້ນໄດ້ເຖິງ {date}"
+  "pauseStartDateLimit": "ສາມາດເລືອກວັນເລີ່ມຕົ້ນໄດ້ເຖິງ {date}",
+  "initialSettingAskYazFlex": "ທ່ານໃຊ້ Yaz Flex ຢູ່ບໍ?"
 }

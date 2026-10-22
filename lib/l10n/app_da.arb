@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "Vælg planlagt dato for genoptagelse",
   "pauseEndDateLimitIsToday": "Slutdatoen kan kun vælges til og med i dag",
   "pauseEndDateLimitBeforeNextPause": "Indtil den, der ikke overlapper med næste pause ({date}–)",
-  "pauseStartDateLimit": "Startdatoen kan vælges til og med {date}"
+  "pauseStartDateLimit": "Startdatoen kan vælges til og med {date}",
+  "initialSettingAskYazFlex": "Bruger du Yaz Flex?"
 }

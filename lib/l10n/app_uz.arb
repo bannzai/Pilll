@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "Qabulni qayta boshlash rejalashtirilgan sanani tanlang",
   "pauseEndDateLimitIsToday": "Tugash sanasini faqat bugungacha belgilash mumkin",
   "pauseEndDateLimitBeforeNextPause": "Keyingi tanaffus ({date}–) bilan ustma-ust kelmaydigan kungacha",
-  "pauseStartDateLimit": "Boshlanish sanasini {date} gacha tanlash mumkin"
+  "pauseStartDateLimit": "Boshlanish sanasini {date} gacha tanlash mumkin",
+  "initialSettingAskYazFlex": "Siz Yaz Flex ishlatyapsizmi?"
 }

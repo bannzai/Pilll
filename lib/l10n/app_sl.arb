@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "Izberite predvideni datum ponovnega začetka jemanja",
   "pauseEndDateLimitIsToday": "Končni datum lahko nastavite najpozneje na danes",
   "pauseEndDateLimitBeforeNextPause": "Do dneva, ki se ne prekriva z naslednjim premorom ({date}–)",
-  "pauseStartDateLimit": "Začetni datum lahko izberete do {date}"
+  "pauseStartDateLimit": "Začetni datum lahko izberete do {date}",
+  "initialSettingAskYazFlex": "Ali uporabljate Yaz Flex?"
 }

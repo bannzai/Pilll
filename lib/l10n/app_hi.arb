@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "सेवन दोबारा शुरू करने की निर्धारित तिथि चुनें",
   "pauseEndDateLimitIsToday": "समाप्ति तिथि केवल आज तक ही सेट की जा सकती है",
   "pauseEndDateLimitBeforeNextPause": "अगले विराम ({date}〜) से न टकराने वाले दिन तक",
-  "pauseStartDateLimit": "शुरुआत की तारीख {date} तक चुनी जा सकती है"
+  "pauseStartDateLimit": "शुरुआत की तारीख {date} तक चुनी जा सकती है",
+  "initialSettingAskYazFlex": "क्या आप Yaz Flex का उपयोग कर रही हैं?"
 }

@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "Válassza ki a szedés tervezett újrakezdési dátumát",
   "pauseEndDateLimitIsToday": "A befejezés dátuma legfeljebb a mai nap lehet",
   "pauseEndDateLimitBeforeNextPause": "A következő szünettel ({date}–) nem átfedő napig",
-  "pauseStartDateLimit": "A kezdőnap legkésőbb {date} lehet"
+  "pauseStartDateLimit": "A kezdőnap legkésőbb {date} lehet",
+  "initialSettingAskYazFlex": "Yaz Flexet szedsz?"
 }

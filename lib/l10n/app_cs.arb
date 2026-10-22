@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "Vyberte plánované datum obnovení užívání",
   "pauseEndDateLimitIsToday": "Datum ukončení lze nastavit nejpozději na dnešek",
   "pauseEndDateLimitBeforeNextPause": "Do dne, který se nepřekrývá s následující pauzou ({date}〜)",
-  "pauseStartDateLimit": "Počáteční datum lze vybrat nejpozději do {date}"
+  "pauseStartDateLimit": "Počáteční datum lze vybrat nejpozději do {date}",
+  "initialSettingAskYazFlex": "Užíváte Yaz Flex?"
 }

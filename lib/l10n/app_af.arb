@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "Kies die beplande hervatdatum",
   "pauseEndDateLimitIsToday": "Die einddatum is tot vandag",
   "pauseEndDateLimitBeforeNextPause": "Tot en met die dag voordat dit met die volgende pouse ({date}–) oorvleuel",
-  "pauseStartDateLimit": "Die begindatum kan tot {date} gekies word"
+  "pauseStartDateLimit": "Die begindatum kan tot {date} gekies word",
+  "initialSettingAskYazFlex": "Gebruik jy Yaz Flex?"
 }

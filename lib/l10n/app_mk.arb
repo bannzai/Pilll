@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "Изберете го планираниот датум за продолжување со земањето",
   "pauseEndDateLimitIsToday": "Датумот на завршување може да се постави најдоцна до денес",
   "pauseEndDateLimitBeforeNextPause": "До денот што не се преклопува со следната пауза ({date}〜)",
-  "pauseStartDateLimit": "Почетниот датум може да се избере до {date}"
+  "pauseStartDateLimit": "Почетниот датум може да се избере до {date}",
+  "initialSettingAskYazFlex": "Дали користите Yaz Flex?"
 }

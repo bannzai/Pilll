@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "Wybierz planowaną datę wznowienia przyjmowania",
   "pauseEndDateLimitIsToday": "Datę zakończenia można ustawić tylko do dzisiaj",
   "pauseEndDateLimitBeforeNextPause": "Do dnia, który nie nakłada się z następną przerwą ({date}–)",
-  "pauseStartDateLimit": "Datę rozpoczęcia można wybrać najpóźniej do {date}"
+  "pauseStartDateLimit": "Datę rozpoczęcia można wybrać najpóźniej do {date}",
+  "initialSettingAskYazFlex": "Czy stosujesz Yaz Flex?"
 }

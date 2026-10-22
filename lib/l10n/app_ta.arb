@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "மீண்டும் உட்கொள்வதைத் தொடங்கும் திட்டமிட்ட தேதியைத் தேர்ந்தெடுக்கவும்",
   "pauseEndDateLimitIsToday": "முடிவு தேதியை இன்று வரை மட்டுமே அமைக்கலாம்",
   "pauseEndDateLimitBeforeNextPause": "அடுத்த இடைவெளி ({date}〜) உடன் ஒட்டாத நாள் வரை",
-  "pauseStartDateLimit": "தொடக்கத் தேதியை {date} வரை தேர்ந்தெடுக்கலாம்"
+  "pauseStartDateLimit": "தொடக்கத் தேதியை {date} வரை தேர்ந்தெடுக்கலாம்",
+  "initialSettingAskYazFlex": "நீங்கள் Yaz Flex பயன்படுத்துகிறீர்களா?"
 }

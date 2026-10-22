@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "Selectați data programată pentru reluarea administrării",
   "pauseEndDateLimitIsToday": "Data de încheiere poate fi setată doar până astăzi",
   "pauseEndDateLimitBeforeNextPause": "Până în ziua care nu se suprapune cu următoarea pauză ({date}–)",
-  "pauseStartDateLimit": "Data de începere poate fi aleasă până la {date}"
+  "pauseStartDateLimit": "Data de începere poate fi aleasă până la {date}",
+  "initialSettingAskYazFlex": "Folosiți Yaz Flex?"
 }

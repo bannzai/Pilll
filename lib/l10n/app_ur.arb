@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "دوبارہ استعمال شروع کرنے کی طے شدہ تاریخ منتخب کریں",
   "pauseEndDateLimitIsToday": "اختتامی تاریخ صرف آج تک ہی مقرر کی جا سکتی ہے",
   "pauseEndDateLimitBeforeNextPause": "اگلے وقفے ({date}〜) سے نہ ٹکرانے والے دن تک",
-  "pauseStartDateLimit": "شروع کی تاریخ {date} تک منتخب کی جا سکتی ہے"
+  "pauseStartDateLimit": "شروع کی تاریخ {date} تک منتخب کی جا سکتی ہے",
+  "initialSettingAskYazFlex": "کیا آپ Yaz Flex استعمال کر رہی ہیں؟"
 }

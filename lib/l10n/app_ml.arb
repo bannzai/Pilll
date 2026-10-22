@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "വീണ്ടും കഴിക്കാൻ തുടങ്ങാനുള്ള നിശ്ചിത തീയതി തിരഞ്ഞെടുക്കുക",
   "pauseEndDateLimitIsToday": "അവസാന തീയതി ഇന്നുവരെ മാത്രം തിരഞ്ഞെടുക്കാനാകും",
   "pauseEndDateLimitBeforeNextPause": "അടുത്ത ഇടവേള ({date}〜) യുമായി ഒതുങ്ങാത്ത ദിവസം വരെ",
-  "pauseStartDateLimit": "ആരംഭ തീയതി {date} വരെ തിരഞ്ഞെടുക്കാം"
+  "pauseStartDateLimit": "ആരംഭ തീയതി {date} വരെ തിരഞ്ഞെടുക്കാം",
+  "initialSettingAskYazFlex": "നിങ്ങൾ Yaz Flex ഉപയോഗിക്കുകയാണോ?"
 }

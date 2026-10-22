@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "Виберіть заплановану дату відновлення прийому",
   "pauseEndDateLimitIsToday": "Дату завершення можна встановити лише до сьогодні",
   "pauseEndDateLimitBeforeNextPause": "До дня, який не перетинається з наступною перервою ({date}–)",
-  "pauseStartDateLimit": "Дату початку можна вибрати до {date}"
+  "pauseStartDateLimit": "Дату початку можна вибрати до {date}",
+  "initialSettingAskYazFlex": "Ви приймаєте Yaz Flex?"
 }

@@ -567,5 +567,6 @@
   "selectPlannedResumeDate": "Selecione a data prevista para retomar a toma",
   "pauseEndDateLimitIsToday": "A data de término só pode ser definida até hoje",
   "pauseEndDateLimitBeforeNextPause": "Até ao dia que não se sobrepõe à próxima pausa ({date}–)",
-  "pauseStartDateLimit": "A data de início pode ser selecionada até {date}"
+  "pauseStartDateLimit": "A data de início pode ser selecionada até {date}",
+  "initialSettingAskYazFlex": "Está a usar Yaz Flex?"
 }
