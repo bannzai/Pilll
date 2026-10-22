@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "میں نے ابھی تک گولیوں سے وقفہ نہیں لیا",
   "yazFlexLastRestDurationBeginDate": "وہ دن جب وقفہ شروع ہوا",
   "yazFlexLastRestDurationEndDate": "دوبارہ لینا شروع کرنے کا دن",
-  "yazFlexSelectDate": "تاریخ منتخب کریں"
+  "yazFlexSelectDate": "تاریخ منتخب کریں",
+  "yazFlexBeginPillNumberTitle": "پہلی شیٹ کی نمبر 1 گولی، وقفہ ختم ہونے کے بعد کتنےویں دن کی ہے؟"
 }

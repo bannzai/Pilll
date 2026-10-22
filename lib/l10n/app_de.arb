@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "Ich habe noch keine Pillenpause gemacht",
   "yazFlexLastRestDurationBeginDate": "Tag des Beginns der Pause",
   "yazFlexLastRestDurationEndDate": "Tag der Wiederaufnahme der Einnahme",
-  "yazFlexSelectDate": "Datum auswählen"
+  "yazFlexSelectDate": "Datum auswählen",
+  "yazFlexBeginPillNumberTitle": "Der wievielte Tag nach der Pause ist Pille Nr. 1 auf dem ersten Blister?"
 }

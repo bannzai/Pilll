@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "মই এতিয়াও ঔষধ বন্ধৰ সময় লোৱা নাই",
   "yazFlexLastRestDurationBeginDate": "বিৰতি আৰম্ভ হোৱা দিন",
   "yazFlexLastRestDurationEndDate": "পুনৰায় সেৱন আৰম্ভ কৰা দিন",
-  "yazFlexSelectDate": "তাৰিখ বাছনি কৰক"
+  "yazFlexSelectDate": "তাৰিখ বাছনি কৰক",
+  "yazFlexBeginPillNumberTitle": "প্ৰথম শ্বীটৰ ১ নম্বৰটো বিৰতি শেষ হোৱাৰ পিছত কিমান নম্বৰ দিনৰ?"
 }

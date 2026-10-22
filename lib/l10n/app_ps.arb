@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "ما لا تر اوسه د ګولیو وقفه نه ده کړې",
   "yazFlexLastRestDurationBeginDate": "هغه ورځ چې وقفه پیل شوه",
   "yazFlexLastRestDurationEndDate": "هغه ورځ چې بیا مو اخیستل پیل کړل",
-  "yazFlexSelectDate": "نېټه وټاکئ"
+  "yazFlexSelectDate": "نېټه وټاکئ",
+  "yazFlexBeginPillNumberTitle": "د لومړۍ پاڼې ۱ نمبر ګولۍ له وقفې وروسته د څوومې ورځې ده؟"
 }

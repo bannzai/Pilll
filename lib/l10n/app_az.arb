@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "Hələ dərman fasiləsi etməmişəm",
   "yazFlexLastRestDurationBeginDate": "Fasilənin başladığı gün",
   "yazFlexLastRestDurationEndDate": "Qəbulu yenidən başladığınız gün",
-  "yazFlexSelectDate": "Tarix seçin"
+  "yazFlexSelectDate": "Tarix seçin",
+  "yazFlexBeginPillNumberTitle": "Birinci vərəqdəki 1-ci həb, fasilə bitdikdən sonra neçənci günə düşür?"
 }

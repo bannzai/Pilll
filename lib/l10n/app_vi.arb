@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "Tôi vẫn chưa nghỉ uống thuốc",
   "yazFlexLastRestDurationBeginDate": "Ngày bắt đầu thời gian nghỉ thuốc",
   "yazFlexLastRestDurationEndDate": "Ngày bạn bắt đầu uống lại",
-  "yazFlexSelectDate": "Chọn ngày"
+  "yazFlexSelectDate": "Chọn ngày",
+  "yazFlexBeginPillNumberTitle": "Viên số 1 ở vỉ đầu tiên là viên uống vào ngày thứ mấy sau thời gian nghỉ thuốc?"
 }

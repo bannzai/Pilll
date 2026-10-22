@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "ကျွန်မသည် ဆေးမသောက်သည့်ကာလကို မလုပ်ရသေးပါ",
   "yazFlexLastRestDurationBeginDate": "နားရက်စတင်သည့်နေ့",
   "yazFlexLastRestDurationEndDate": "ပြန်လည်သောက်သုံးစတင်သည့်နေ့",
-  "yazFlexSelectDate": "ရက်စွဲကို ရွေးပါ"
+  "yazFlexSelectDate": "ရက်စွဲကို ရွေးပါ",
+  "yazFlexBeginPillNumberTitle": "ပထမဆုံးအချပ်၏ နံပါတ် 1 ဆေးလုံးသည် ဆေးနားရက်ပြီးနောက် ဘယ်နှရက်မြောက်နေ့အတွက်ပါသလဲ။"
 }

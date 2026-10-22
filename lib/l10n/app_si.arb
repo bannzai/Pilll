@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "මම තවමත් ගોળි ගැනීමේ විවේකයක් ගෙන නැහැ",
   "yazFlexLastRestDurationBeginDate": "විරාමය ආරම්භ වූ දිනය",
   "yazFlexLastRestDurationEndDate": "නැවත ලබාගැනීම ආරම්භ කළ දිනය",
-  "yazFlexSelectDate": "දිනය තෝරන්න"
+  "yazFlexSelectDate": "දිනය තෝරන්න",
+  "yazFlexBeginPillNumberTitle": "පළමු තීරුවේ අංක 1 ගුලිය, විරාමය අවසන් වූ පසු කීවැනි දිනට අයත්ද?"
 }

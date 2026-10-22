@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "நான் இன்னும் மாத்திரை இடைவெளி எடுக்கவில்லை",
   "yazFlexLastRestDurationBeginDate": "இடைவேளை தொடங்கிய நாள்",
   "yazFlexLastRestDurationEndDate": "மீண்டும் எடுத்துக்கொள்ளத் தொடங்கிய நாள்",
-  "yazFlexSelectDate": "தேதியைத் தேர்ந்தெடுக்கவும்"
+  "yazFlexSelectDate": "தேதியைத் தேர்ந்தெடுக்கவும்",
+  "yazFlexBeginPillNumberTitle": "முதல் சீட்டிலுள்ள 1ஆம் மாத்திரை, இடைவேளை முடிந்து எத்தனையாவது நாளுக்கானது?"
 }

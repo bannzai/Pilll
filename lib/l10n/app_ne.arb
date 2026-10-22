@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "मैले अहिलेसम्म चक्की नखाने विराम लिएको छैन",
   "yazFlexLastRestDurationBeginDate": "ब्रेक सुरु भएको दिन",
   "yazFlexLastRestDurationEndDate": "फेरि खान सुरु गरेको दिन",
-  "yazFlexSelectDate": "मिति चयन गर्नुहोस्"
+  "yazFlexSelectDate": "मिति चयन गर्नुहोस्",
+  "yazFlexBeginPillNumberTitle": "पहिलो सिटको नम्बर 1 चक्की, विश्राम सकिएपछि कतिौँ दिनको हो?"
 }

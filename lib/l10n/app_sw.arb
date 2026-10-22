@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "Bado sijaanza mapumziko ya tembe",
   "yazFlexLastRestDurationBeginDate": "Siku ambayo mapumziko yalianza",
   "yazFlexLastRestDurationEndDate": "Siku uliyoanza tena kutumia",
-  "yazFlexSelectDate": "Chagua tarehe"
+  "yazFlexSelectDate": "Chagua tarehe",
+  "yazFlexBeginPillNumberTitle": "Kidonge namba 1 kwenye kifurushi cha kwanza ni cha siku ya ngapi baada ya mapumziko?"
 }

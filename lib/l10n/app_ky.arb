@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "Мен азырынча таблетканы ичүүдөн тыныгуу жасай элекмин",
   "yazFlexLastRestDurationBeginDate": "Тыныгуу башталган күн",
   "yazFlexLastRestDurationEndDate": "Кайра иче баштаган күн",
-  "yazFlexSelectDate": "Күндү тандаңыз"
+  "yazFlexSelectDate": "Күндү тандаңыз",
+  "yazFlexBeginPillNumberTitle": "Биринчи баракчадагы №1 таблетка тыныгуудан кийинки канчанчы күнгө туура келет?"
 }

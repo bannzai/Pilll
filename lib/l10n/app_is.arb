@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "Ég hef ekki enn tekið hlé frá pillunni",
   "yazFlexLastRestDurationBeginDate": "Dagurinn sem hléið hófst",
   "yazFlexLastRestDurationEndDate": "Dagurinn sem þú hófst aftur að taka lyfið",
-  "yazFlexSelectDate": "Veldu dagsetningu"
+  "yazFlexSelectDate": "Veldu dagsetningu",
+  "yazFlexBeginPillNumberTitle": "Hvaða dag eftir hléið er tafla nr. 1 á fyrsta spjaldinu?"
 }

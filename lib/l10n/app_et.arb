@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "Ma ei ole veel pillipausi teinud",
   "yazFlexLastRestDurationBeginDate": "Päev, mil paus algas",
   "yazFlexLastRestDurationEndDate": "Võtmise taasalustamise päev",
-  "yazFlexSelectDate": "Valige kuupäev"
+  "yazFlexSelectDate": "Valige kuupäev",
+  "yazFlexBeginPillNumberTitle": "Mitmes päev pärast pausi on esimese lehe tablett nr 1?"
 }

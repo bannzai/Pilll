@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "ჯერ არ მქონია აბების მიღების შესვენება",
   "yazFlexLastRestDurationBeginDate": "დღე, როცა შესვენება დაიწყო",
   "yazFlexLastRestDurationEndDate": "მიღების განახლების დღე",
-  "yazFlexSelectDate": "აირჩიეთ თარიღი"
+  "yazFlexSelectDate": "აირჩიეთ თარიღი",
+  "yazFlexBeginPillNumberTitle": "პირველი ფირფიტის №1 აბი შესვენების დასრულებიდან მერამდენე დღეა?"
 }

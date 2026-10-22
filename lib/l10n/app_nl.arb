@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "Ik heb nog geen pillenpauze gehad",
   "yazFlexLastRestDurationBeginDate": "Dag waarop de stopweek begon",
   "yazFlexLastRestDurationEndDate": "Dag waarop je weer begon met innemen",
-  "yazFlexSelectDate": "Selecteer een datum"
+  "yazFlexSelectDate": "Selecteer een datum",
+  "yazFlexBeginPillNumberTitle": "Welke dag na de stopweek is pil nummer 1 op de eerste strip?"
 }
