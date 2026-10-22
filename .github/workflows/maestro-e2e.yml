@@ -1,0 +1,98 @@
+# GitHub Actions の macOS Runner 上で Maestro E2E flow をバッチ実行する workflow。
+# maestro-e2e-actions skill (~/.claude/skills/maestro-e2e-actions/SKILL.md) が生成した雛形に、Pilll の build 前準備と PR トリガーを足している。
+# PR では .maestro/flows/config.yaml が対象にする flow をすべて実行する。
+# 起動例:
+#   gh workflow run maestro-e2e.yml -f flows=all -f device="iPhone 17"
+name: maestro-e2e
+run-name: "maestro-e2e flows=${{ inputs.flows || 'all' }} device=${{ inputs.device || 'iPhone 17' }}"
+
+permissions:
+  contents: read
+
+# 同じ PR で多重起動したら古い方を止める（macOS Runner 枠の浪費防止）
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+on:
+  # pull_request_target にはしない。pull_request は fork からの PR に Secrets を渡さない（ci.yml と同じ）
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      flows:
+        description: "実行する flow。all (.maestro/flows/config.yaml が対象にする flow) または .maestro/ 配下のコミット済みパス"
+        required: true
+        default: all
+      device:
+        description: "Simulator のデバイス名"
+        required: true
+        default: "iPhone 17"
+      record_video:
+        description: "実行中の画面を録画して artifact に含める"
+        required: false
+        default: "true"
+
+jobs:
+  # dev 環境の Simulator 用 .app をビルドして artifact に上げる（simulator-session.yml の build と同じ手順）
+  build:
+    runs-on: macos-26
+    timeout-minutes: 30
+    if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
+    permissions:
+      contents: read # checkout のみ
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Prepare firebase config
+        run: make secret
+        env:
+          FILE_FIREBASE_IOS: ${{ secrets.FILE_FIREBASE_IOS_DEVELOPMENT }}
+          DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
+          XCCONFIG_SECRET: ${{ secrets.XCCONFIG_SECRET_DEVELOPMENT }}
+          ANDROID_RES_VALUES: ${{ secrets.ANDROID_RES_VALUES }}
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
+        with:
+          flutter-version: '3.44.9'
+      - run: flutter pub get
+      - run: flutter build ios --simulator --debug --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
+      # upload-artifact はファイル権限を保持しない (download 後は全て 0644 になり .app の実行バイナリが壊れる) ため、
+      # tar で権限ごと固めてから artifact にする。e2e 側の maestro-e2e-run.sh が展開する。
+      - name: ビルド成果物を tar でまとめる
+        run: tar -C build/ios/iphonesimulator -cf simulator-app.tar .
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: simulator-app
+          path: simulator-app.tar
+          retention-days: 1
+  e2e:
+    needs: build
+    runs-on: macos-26
+    timeout-minutes: 60
+    permissions:
+      contents: read # checkout のみ
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: simulator-app
+          path: build-app
+      - name: Maestro flow を実行
+        env:
+          FLOWS: ${{ inputs.flows || 'all' }}
+          DEVICE: ${{ inputs.device || 'iPhone 17' }}
+          RECORD_VIDEO: ${{ inputs.record_video || 'true' }}
+          # flow はアプリの日本語の文言をタップするため、Simulator の言語・地域を日本語にして起動する
+          SIMULATOR_LANGUAGE: ja
+          SIMULATOR_LOCALE: ja_JP
+        run: bash .github/scripts/maestro-e2e-run.sh
+      # public repo の artifact は誰でもダウンロードできるため保持期間を短くする。
+      # 録画には初期設定から作るダミーのデータだけが映る（flow は clearState で始める）。
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: always()
+        with:
+          name: maestro-e2e-artifacts
+          path: maestro-artifacts
+          retention-days: 3

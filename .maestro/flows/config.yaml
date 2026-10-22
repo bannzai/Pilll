@@ -1,0 +1,9 @@
+# `maestro test .maestro/flows` (maestro-e2e workflow) が実行する flow。
+# maestro test はディレクトリ直下の flow しか実行しないため、サブディレクトリをここで指定する。`*` はサブディレクトリの subflows/ を含まない。
+# 対象外:
+# - appstore_screenshot/: SCREENSHOT_CATALOG=true でビルドしたカタログアプリと LANG の指定が要る (appstore-screenshots workflow が実行する)
+# - simtunnel/: simtunnel セッションの起動時に初期設定を突破する flow で、検証は feature_appeal/ が同じサブフローで行う
+flows:
+  - "yaz_flex/*"
+  - "feature_appeal/*"
+  - "lifetime_offer/*"
