@@ -16,8 +16,9 @@ appId: com.mizuki.Ohashi.Pilll.dev
 #   (設定画面に戻る)で座標ズレを検知できる。
 # - lifetime のオファー画面は確認ダイアログなしで×即閉じ(page.dart: 「確認なしで閉じる」)。
 #   スペシャルオファーのような「本当に閉じますか？」ダイアログは無い。
-# - debug row は「表示パターン選択(解約誘導あり/なし)」→「文言バリアント選択(default/ownership)」の
-#   2段階ダイアログ。両バリアントとも「解約誘導文言なし(非課金)」を選択して検証する。
+# - debug row は「表示パターン選択(解約誘導あり/なし)」→「文言バリアント選択(default/ownership)」→
+#   「オファープラン選択(買い切り/月額300円)」の3段階ダイアログ。両バリアントとも「解約誘導文言なし(非課金)」と
+#   「買い切りプラン」を選択して検証する。
 # - ListTile(title+subtitle)の行タップは、アクセシビリティツリー上で title と subtitle が
 #   1要素に結合される可能性を考慮し、末尾に ".*" を付けた正規表現でタップ対象を指定している。
 
@@ -48,6 +49,9 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - waitForAnimationToEnd
 - assertVisible: "文言バリアントを選択"
 - tapOn: "default（現行文言）"
+- waitForAnimationToEnd
+- assertVisible: "オファープランを選択"
+- tapOn: "買い切りプラン"
 - extendedWaitUntil:
     visible: "長く使ってくださっている方へ[\\s\\S]*ご案内です"
     timeout: 20000
@@ -70,6 +74,9 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - waitForAnimationToEnd
 - assertVisible: "文言バリアントを選択"
 - tapOn: "ownership（所有価値訴求）"
+- waitForAnimationToEnd
+- assertVisible: "オファープランを選択"
+- tapOn: "買い切りプラン"
 - extendedWaitUntil:
     visible: "一度の購入で、ずっとプレミアム。[\\s\\S]*不要です"
     timeout: 20000
