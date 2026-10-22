@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "ഞാൻ ഇനിയും ഗുളിക കഴിക്കുന്നത് നിർത്തിയിട്ടില്ല",
   "yazFlexLastRestDurationBeginDate": "ഇടവേള ആരംഭിച്ച ദിവസം",
   "yazFlexLastRestDurationEndDate": "വീണ്ടും കഴിക്കാൻ ആരംഭിച്ച ദിവസം",
-  "yazFlexSelectDate": "തീയതി തിരഞ്ഞെടുക്കുക"
+  "yazFlexSelectDate": "തീയതി തിരഞ്ഞെടുക്കുക",
+  "yazFlexBeginPillNumberPageTitle": "നിങ്ങൾ ഷീറ്റ് തുടങ്ങിയത്\nഇടവേള കഴിഞ്ഞ് എത്രാമത്തെ ദിവസമായിരുന്നു?"
 }

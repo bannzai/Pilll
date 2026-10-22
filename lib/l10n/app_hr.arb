@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "Još nisam imala pauzu od pilula",
   "yazFlexLastRestDurationBeginDate": "Dan kada je pauza započela",
   "yazFlexLastRestDurationEndDate": "Dan kada ste ponovno počeli uzimati",
-  "yazFlexSelectDate": "Odaberite datum"
+  "yazFlexSelectDate": "Odaberite datum",
+  "yazFlexBeginPillNumberPageTitle": "Kada ste počeli blister,\nkoji je to bio dan nakon pauze?"
 }

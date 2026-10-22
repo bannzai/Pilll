@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "Jeg har endnu ikke holdt pause fra pillerne",
   "yazFlexLastRestDurationBeginDate": "Dagen, hvor pausen startede",
   "yazFlexLastRestDurationEndDate": "Dato for genoptagelse",
-  "yazFlexSelectDate": "Vælg en dato"
+  "yazFlexSelectDate": "Vælg en dato",
+  "yazFlexBeginPillNumberPageTitle": "Hvilken dag efter pausen\nstartede du arket?"
 }

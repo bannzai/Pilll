@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "Oraindik ez dut pilulen etenaldirik egin",
   "yazFlexLastRestDurationBeginDate": "Atsedena hasi zen eguna",
   "yazFlexLastRestDurationEndDate": "Hartzeari berriro ekin zenion eguna",
-  "yazFlexSelectDate": "Hautatu data"
+  "yazFlexSelectDate": "Hautatu data",
+  "yazFlexBeginPillNumberPageTitle": "Orriari ekin zenion eguna\natsedenaldiaren ondorengo zein egun izan zen?"
 }

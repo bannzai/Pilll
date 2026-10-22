@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "నేను ఇంకా మాత్రల విరామం తీసుకోలేదు",
   "yazFlexLastRestDurationBeginDate": "విరామం ప్రారంభమైన రోజు",
   "yazFlexLastRestDurationEndDate": "మళ్లీ తీసుకోవడం ప్రారంభించిన రోజు",
-  "yazFlexSelectDate": "తేదీని ఎంచుకోండి"
+  "yazFlexSelectDate": "తేదీని ఎంచుకోండి",
+  "yazFlexBeginPillNumberPageTitle": "మీరు షీట్ ప్రారంభించిన రోజు\nవిరామం ముగిసిన తర్వాత ఎన్ని రోజులైంది?"
 }

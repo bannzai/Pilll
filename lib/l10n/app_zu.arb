@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "Angikayeki ikhefu lokuyeka amaphilisi okwamanje",
   "yazFlexLastRestDurationBeginDate": "Usuku ikhefu eliqale ngalo",
   "yazFlexLastRestDurationEndDate": "Usuku oqale ngalo futhi ukuyiphuza",
-  "yazFlexSelectDate": "Khetha usuku"
+  "yazFlexSelectDate": "Khetha usuku",
+  "yazFlexBeginPillNumberPageTitle": "Ngosuku oqale ngalo ishidi,\nkwakuwusuku lwesingaki ngemva kwekhefu?"
 }

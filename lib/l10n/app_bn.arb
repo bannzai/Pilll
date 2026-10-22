@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "আমি এখনও ওষুধ বন্ধের বিরতি নিইনি",
   "yazFlexLastRestDurationBeginDate": "বিরতি শুরু হওয়ার দিন",
   "yazFlexLastRestDurationEndDate": "আবার সেবন শুরু করার দিন",
-  "yazFlexSelectDate": "তারিখ নির্বাচন করুন"
+  "yazFlexSelectDate": "তারিখ নির্বাচন করুন",
+  "yazFlexBeginPillNumberPageTitle": "শিট শুরু করার দিনটি\nবিরতির পর কততম দিন ছিল?"
 }

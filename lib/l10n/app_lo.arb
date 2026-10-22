@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "ຂ້ອຍຍັງບໍ່ທັນໄດ້ພັກການກິນຢາເທື່ອ",
   "yazFlexLastRestDurationBeginDate": "ວັນທີ່ເລີ່ມພັກຢາ",
   "yazFlexLastRestDurationEndDate": "ວັນທີ່ເລີ່ມກິນອີກຄັ້ງ",
-  "yazFlexSelectDate": "ເລືອກວັນທີ"
+  "yazFlexSelectDate": "ເລືອກວັນທີ",
+  "yazFlexBeginPillNumberPageTitle": "ມື້ທີ່ທ່ານເລີ່ມແຜ່ນຢາ\nເປັນມື້ທີ່ເທົ່າໃດຫຼັງຈາກຊ່ວງຢຸດຢາ?"
 }

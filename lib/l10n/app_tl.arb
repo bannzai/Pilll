@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "Hindi pa ako nagkakaroon ng pahinga sa pag-inom ng pill",
   "yazFlexLastRestDurationBeginDate": "Araw na nagsimula ang pahinga",
   "yazFlexLastRestDurationEndDate": "Araw na muli kang nagsimulang uminom",
-  "yazFlexSelectDate": "Pumili ng petsa"
+  "yazFlexSelectDate": "Pumili ng petsa",
+  "yazFlexBeginPillNumberPageTitle": "Noong araw na sinimulan mo ang pack,\npang-ilang araw iyon matapos ang pahinga?"
 }

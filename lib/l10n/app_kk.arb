@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "Мен әлі таблетка қабылдауға үзіліс жасаған жоқпын",
   "yazFlexLastRestDurationBeginDate": "Үзіліс басталған күн",
   "yazFlexLastRestDurationEndDate": "Қабылдауды қайта бастаған күн",
-  "yazFlexSelectDate": "Күнді таңдаңыз"
+  "yazFlexSelectDate": "Күнді таңдаңыз",
+  "yazFlexBeginPillNumberPageTitle": "Парақты бастаған күніңіз\nүзілістен кейін нешінші күн болды?"
 }

@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "ମୁଁ ଏପର୍ଯ୍ୟନ୍ତ ଗୋଳି ବନ୍ଦର ବିରତି ନେଇନାହିଁ",
   "yazFlexLastRestDurationBeginDate": "ବିରତି ଆରମ୍ଭ ହୋଇଥିବା ଦିନ",
   "yazFlexLastRestDurationEndDate": "ପୁଣି ନେବା ଆରମ୍ଭ କରିଥିବା ଦିନ",
-  "yazFlexSelectDate": "ତାରିଖ ଚୟନ କରନ୍ତୁ"
+  "yazFlexSelectDate": "ତାରିଖ ଚୟନ କରନ୍ତୁ",
+  "yazFlexBeginPillNumberPageTitle": "ଆପଣ ଶିଟ୍ ଆରମ୍ଭ କରିଥିବା ଦିନଟି\nବିରତି ସମାପ୍ତ ହେବା ପରେ କେତେତମ ଦିନ ଥିଲା?"
 }

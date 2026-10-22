@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "Դեռևս դեղահաբերի ընդմիջում չեմ արել",
   "yazFlexLastRestDurationBeginDate": "Ընդմիջման սկսվելու օրը",
   "yazFlexLastRestDurationEndDate": "Վերսկսելու օրը",
-  "yazFlexSelectDate": "Ընտրեք ամսաթիվը"
+  "yazFlexSelectDate": "Ընտրեք ամսաթիվը",
+  "yazFlexBeginPillNumberPageTitle": "Այն օրը, երբ սկսեցիք թերթիկը,\nդադարի ավարտից հետո ո՞ր օրն էր։"
 }

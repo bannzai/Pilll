@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "I haven’t taken a pill break yet",
   "yazFlexLastRestDurationBeginDate": "Day the break started",
   "yazFlexLastRestDurationEndDate": "Date you resumed taking it",
-  "yazFlexSelectDate": "Select a date"
+  "yazFlexSelectDate": "Select a date",
+  "yazFlexBeginPillNumberPageTitle": "What day after the break\ndid you start the pack?"
 }

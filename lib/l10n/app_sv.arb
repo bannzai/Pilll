@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "Jag har ännu inte haft något uppehåll från pillren",
   "yazFlexLastRestDurationBeginDate": "Dagen då uppehållet började",
   "yazFlexLastRestDurationEndDate": "Dagen du började ta den igen",
-  "yazFlexSelectDate": "Välj ett datum"
+  "yazFlexSelectDate": "Välj ett datum",
+  "yazFlexBeginPillNumberPageTitle": "Vilken dag efter uppehållet\nbörjade du med kartan?"
 }

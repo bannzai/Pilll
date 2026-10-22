@@ -574,5 +574,6 @@
   "yazFlexHasNotRestedYet": "Би эмийн завсарлага хараахан хийгээгүй байна",
   "yazFlexLastRestDurationBeginDate": "Завсарлага эхэлсэн өдөр",
   "yazFlexLastRestDurationEndDate": "Дахин ууж эхэлсэн өдөр",
-  "yazFlexSelectDate": "Огноо сонгоно уу"
+  "yazFlexSelectDate": "Огноо сонгоно уу",
+  "yazFlexBeginPillNumberPageTitle": "Хуудсыг эхлүүлсэн өдөр\nзавсарлагааны дараах хэд дэх өдөр байсан бэ?"
 }
