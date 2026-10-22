@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "다음 휴약 기간({date}~)과 겹치지 않는 날까지",
   "pauseStartDateLimit": "시작일은 {date}까지 선택할 수 있어요",
   "initialSettingAskYazFlex": "야즈플렉스를 복용 중이신가요?",
-  "initialSettingAskYazFlexDescription": "“예”를 선택하면\n휴약이 끝난 뒤 몇 일째인지 표시되도록 설정할게요"
+  "initialSettingAskYazFlexDescription": "“예”를 선택하면\n휴약이 끝난 뒤 몇 일째인지 표시되도록 설정할게요",
+  "yazFlexLastRestDurationTitle": "지난 휴약 기간에 대해\n알려주세요"
 }

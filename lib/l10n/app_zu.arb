@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "Kuze kube usuku olungangqubuzani nekhefu elilandelayo ({date}–)",
   "pauseStartDateLimit": "Usuku lokuqala lungakhethwa kuze kube u-{date}",
   "initialSettingAskYazFlex": "Ingabe usebenzisa i-Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Uma ukhetha okuthi “Yebo”,\nsizokumisa ukuze kuboniswe ukuthi sekuyisuku lwesingaki kusukela ikhefu liphelile."
+  "initialSettingAskYazFlexDescription": "Uma ukhetha okuthi “Yebo”,\nsizokumisa ukuze kuboniswe ukuthi sekuyisuku lwesingaki kusukela ikhefu liphelile.",
+  "yazFlexLastRestDurationTitle": "Sicela\nusitshele ngekhefu lakho langaphambilini"
 }

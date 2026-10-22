@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "Do dnia, który nie nakłada się z następną przerwą ({date}–)",
   "pauseStartDateLimit": "Datę rozpoczęcia można wybrać najpóźniej do {date}",
   "initialSettingAskYazFlex": "Czy stosujesz Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Jeśli wybierzesz „Tak”,\nustawimy wyświetlanie, który to dzień od zakończenia przerwy."
+  "initialSettingAskYazFlexDescription": "Jeśli wybierzesz „Tak”,\nustawimy wyświetlanie, który to dzień od zakończenia przerwy.",
+  "yazFlexLastRestDurationTitle": "Powiedz nam proszę\no poprzedniej przerwie"
 }

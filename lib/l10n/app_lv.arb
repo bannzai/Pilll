@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "Līdz dienai, kas nepārklājas ar nākamo pārtraukumu ({date}–)",
   "pauseStartDateLimit": "Sākuma datumu var izvēlēties līdz {date}",
   "initialSettingAskYazFlex": "Vai lietojat Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Ja izvēlēsieties “Jā”,\nmēs iestatīsim, lai varētu rādīt, kura diena ir pēc pārtraukuma beigām."
+  "initialSettingAskYazFlexDescription": "Ja izvēlēsieties “Jā”,\nmēs iestatīsim, lai varētu rādīt, kura diena ir pēc pārtraukuma beigām.",
+  "yazFlexLastRestDurationTitle": "Lūdzu,\npastāstiet mums par iepriekšējo pārtraukumu"
 }

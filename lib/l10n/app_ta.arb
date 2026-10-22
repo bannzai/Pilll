@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "அடுத்த இடைவெளி ({date}〜) உடன் ஒட்டாத நாள் வரை",
   "pauseStartDateLimit": "தொடக்கத் தேதியை {date} வரை தேர்ந்தெடுக்கலாம்",
   "initialSettingAskYazFlex": "நீங்கள் Yaz Flex பயன்படுத்துகிறீர்களா?",
-  "initialSettingAskYazFlexDescription": "“ஆம்” என்பதைத் தேர்ந்தெடுத்தால்\nஇடைவேளை முடிந்ததிலிருந்து எத்தனையாவது நாள் என்பதை காட்டும் வகையில் அமைக்கப்படும்"
+  "initialSettingAskYazFlexDescription": "“ஆம்” என்பதைத் தேர்ந்தெடுத்தால்\nஇடைவேளை முடிந்ததிலிருந்து எத்தனையாவது நாள் என்பதை காட்டும் வகையில் அமைக்கப்படும்",
+  "yazFlexLastRestDurationTitle": "தயவுசெய்து\nமுந்தைய இடைவேளை பற்றி எங்களுக்குச் சொல்லுங்கள்"
 }

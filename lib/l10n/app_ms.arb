@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "Sehingga hari yang tidak bertindih dengan rehat seterusnya ({date}–)",
   "pauseStartDateLimit": "Tarikh mula boleh dipilih sehingga {date}",
   "initialSettingAskYazFlex": "Adakah anda menggunakan Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Jika anda memilih “Ya”,\nkami akan menetapkannya supaya bilangan hari sejak tamat tempoh rehat dapat dipaparkan."
+  "initialSettingAskYazFlexDescription": "Jika anda memilih “Ya”,\nkami akan menetapkannya supaya bilangan hari sejak tamat tempoh rehat dapat dipaparkan.",
+  "yazFlexLastRestDurationTitle": "Sila beritahu kami\ntentang tempoh rehat anda yang lalu"
 }

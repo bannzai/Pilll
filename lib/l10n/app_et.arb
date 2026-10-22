@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "Kuni päevani, mis ei kattu järgmise pausiga ({date}–)",
   "pauseStartDateLimit": "Alguskuupäeva saab valida kuni {date}",
   "initialSettingAskYazFlex": "Kas kasutad Yaz Flexi?",
-  "initialSettingAskYazFlexDescription": "Kui valite „Jah“,\nseadistame selle nii, et kuvatakse, mitmes päev on pausijärgselt."
+  "initialSettingAskYazFlexDescription": "Kui valite „Jah“,\nseadistame selle nii, et kuvatakse, mitmes päev on pausijärgselt.",
+  "yazFlexLastRestDurationTitle": "Palun rääkige meile\noma eelmisest pausist"
 }

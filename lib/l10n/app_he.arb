@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "עד ליום שאינו חופף להפסקה הבאה ({date}〜)",
   "pauseStartDateLimit": "ניתן לבחור את תאריך ההתחלה עד {date}",
   "initialSettingAskYazFlex": "האם את משתמשת ב-Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "אם תבחרי ב״כן״,\nנגדיר שיוצג כמה ימים עברו מאז סיום ההפסקה."
+  "initialSettingAskYazFlexDescription": "אם תבחרי ב״כן״,\nנגדיר שיוצג כמה ימים עברו מאז סיום ההפסקה.",
+  "yazFlexLastRestDurationTitle": "נשמח אם תספרי לנו\nעל ההפסקה הקודמת"
 }

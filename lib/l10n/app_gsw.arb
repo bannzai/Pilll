@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "Bis zu däm Tag, wo sich nöd mit dr nöchschte Pause ({date}–) überschneidet",
   "pauseStartDateLimit": "S Startdatum cha bis {date} usgwählt werde",
   "initialSettingAskYazFlex": "Nimmsch Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Wänn du „Ja“ uuswählsch,\nstellemer s so ii, dass aazeigt wird, dr wievielt Tag sit em Ändi vo dr Pause esch."
+  "initialSettingAskYazFlexDescription": "Wänn du „Ja“ uuswählsch,\nstellemer s so ii, dass aazeigt wird, dr wievielt Tag sit em Ändi vo dr Pause esch.",
+  "yazFlexLastRestDurationTitle": "Bitte verzell is\nvo diner letschte Pause"
 }

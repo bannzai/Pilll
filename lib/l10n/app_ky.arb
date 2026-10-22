@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "Кийинки тыныгуу ({date}〜) менен дал келбеген күнгө чейин",
   "pauseStartDateLimit": "Баштоо күнүн {date} чейин тандаса болот",
   "initialSettingAskYazFlex": "Yaz Flex колдонуп жатасызбы?",
-  "initialSettingAskYazFlexDescription": "“Ооба” дегенди тандасаңыз,\nтыныгуудан кийин канчанчы күн экенин көрсөтө тургандай кылып жөндөйбүз."
+  "initialSettingAskYazFlexDescription": "“Ооба” дегенди тандасаңыз,\nтыныгуудан кийин канчанчы күн экенин көрсөтө тургандай кылып жөндөйбүз.",
+  "yazFlexLastRestDurationTitle": "Сураныч,\nмурунку тыныгуу мезгили тууралуу айтып бериңиз"
 }

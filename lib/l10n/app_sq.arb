@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "Deri në ditën që nuk përputhet me pushimin e radhës ({date}–)",
   "pauseStartDateLimit": "Data e fillimit mund të zgjidhet deri më {date}",
   "initialSettingAskYazFlex": "A po përdorni Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Nëse zgjidhni “Po”,\ndo ta caktojmë që të shfaqet sa ditë kanë kaluar që nga përfundimi i pushimit."
+  "initialSettingAskYazFlexDescription": "Nëse zgjidhni “Po”,\ndo ta caktojmë që të shfaqet sa ditë kanë kaluar që nga përfundimi i pushimit.",
+  "yazFlexLastRestDurationTitle": "Ju lutemi,\nna tregoni për pushimin e mëparshëm"
 }

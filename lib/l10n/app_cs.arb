@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "Do dne, který se nepřekrývá s následující pauzou ({date}〜)",
   "pauseStartDateLimit": "Počáteční datum lze vybrat nejpozději do {date}",
   "initialSettingAskYazFlex": "Užíváte Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Když vyberete „Ano“,\nnastavíme zobrazení počtu dní od konce pauzy."
+  "initialSettingAskYazFlexDescription": "Když vyberete „Ano“,\nnastavíme zobrazení počtu dní od konce pauzy.",
+  "yazFlexLastRestDurationTitle": "Prosím,\nřekněte nám o svém posledním období pauzy"
 }

@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "До деня, който не се припокрива със следващата почивка ({date}〜)",
   "pauseStartDateLimit": "Началната дата може да бъде до {date}",
   "initialSettingAskYazFlex": "Приемате ли Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Ако изберете „Да“,\nще настроим показването на това кой ден е след края на паузата."
+  "initialSettingAskYazFlexDescription": "Ако изберете „Да“,\nще настроим показването на това кой ден е след края на паузата.",
+  "yazFlexLastRestDurationTitle": "Моля,\nкажете ни за предишния период на пауза"
 }

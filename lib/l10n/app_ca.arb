@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "Fins al dia que no se superposi amb el següent descans ({date}〜)",
   "pauseStartDateLimit": "La data d'inici es pot triar fins a {date}",
   "initialSettingAskYazFlex": "Prens Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Si selecciones «Sí»,\nho configurarem perquè es mostri quants dies han passat des del final del descans."
+  "initialSettingAskYazFlexDescription": "Si selecciones «Sí»,\nho configurarem perquè es mostri quants dies han passat des del final del descans.",
+  "yazFlexLastRestDurationTitle": "Si us plau,\nexplica'ns l'últim període de descans"
 }

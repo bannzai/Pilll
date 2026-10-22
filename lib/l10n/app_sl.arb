@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "Do dneva, ki se ne prekriva z naslednjim premorom ({date}–)",
   "pauseStartDateLimit": "Začetni datum lahko izberete do {date}",
   "initialSettingAskYazFlex": "Ali uporabljate Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Če izberete »Da«, \nbomo nastavili prikaz, koliko dni je minilo od konca premora."
+  "initialSettingAskYazFlexDescription": "Če izberete »Da«, \nbomo nastavili prikaz, koliko dni je minilo od konca premora.",
+  "yazFlexLastRestDurationTitle": "Prosimo,\npovejte nam o prejšnjem premoru"
 }

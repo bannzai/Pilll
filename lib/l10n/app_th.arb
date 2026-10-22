@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "จนถึงวันที่ไม่ทับกับช่วงพักครั้งถัดไป ({date}〜)",
   "pauseStartDateLimit": "เลือกวันที่เริ่มต้นได้ถึง {date}",
   "initialSettingAskYazFlex": "คุณใช้ Yaz Flex อยู่ใช่ไหม",
-  "initialSettingAskYazFlexDescription": "หากคุณเลือก “ใช่”\nเราจะตั้งค่าให้สามารถแสดงได้ว่าเป็นวันที่เท่าไรหลังจากช่วงหยุดยา"
+  "initialSettingAskYazFlexDescription": "หากคุณเลือก “ใช่”\nเราจะตั้งค่าให้สามารถแสดงได้ว่าเป็นวันที่เท่าไรหลังจากช่วงหยุดยา",
+  "yazFlexLastRestDurationTitle": "กรุณา\nบอกเราเกี่ยวกับช่วงหยุดยาครั้งก่อน"
 }

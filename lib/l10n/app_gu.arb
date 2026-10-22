@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "આગામી વિરામ ({date}〜) સાથે ન અથડાતો દિવસ સુધી",
   "pauseStartDateLimit": "શરૂઆતની તારીખ {date} સુધી પસંદ કરી શકાય છે",
   "initialSettingAskYazFlex": "શું તમે Yaz Flex વાપરો છો?",
-  "initialSettingAskYazFlexDescription": "જો તમે “હા” પસંદ કરો,\nતો વિરામ પૂરો થયા પછી કેટલોમો દિવસ છે તે બતાવી શકાય તેવી સેટિંગ કરવામાં આવશે"
+  "initialSettingAskYazFlexDescription": "જો તમે “હા” પસંદ કરો,\nતો વિરામ પૂરો થયા પછી કેટલોમો દિવસ છે તે બતાવી શકાય તેવી સેટિંગ કરવામાં આવશે",
+  "yazFlexLastRestDurationTitle": "કૃપા કરીને\nપાછલા વિરામ સમય વિશે અમને જણાવો"
 }

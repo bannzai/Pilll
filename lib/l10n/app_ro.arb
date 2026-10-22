@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "Până în ziua care nu se suprapune cu următoarea pauză ({date}–)",
   "pauseStartDateLimit": "Data de începere poate fi aleasă până la {date}",
   "initialSettingAskYazFlex": "Folosiți Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Dacă alegeți „Da”,\nvom seta afișarea numărului de zile de la încheierea pauzei."
+  "initialSettingAskYazFlexDescription": "Dacă alegeți „Da”,\nvom seta afișarea numărului de zile de la încheierea pauzei.",
+  "yazFlexLastRestDurationTitle": "Spune-ne, te rugăm,\ndespre ultima ta pauză"
 }

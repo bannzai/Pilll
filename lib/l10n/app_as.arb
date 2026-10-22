@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "পৰৱৰ্তী বিৰতি ({date}〜)-ৰ সৈতে নুওভৰা দিনলৈকে",
   "pauseStartDateLimit": "আৰম্ভৰ তাৰিখ {date} লৈকে বাছনি কৰিব পাৰি",
   "initialSettingAskYazFlex": "আপুনি Yaz Flex ব্যৱহাৰ কৰে নেকি?",
-  "initialSettingAskYazFlexDescription": "“হয়” বাছনি কৰিলে\nঔষধ বন্ধৰ সময় শেষ হোৱাৰ পিছত কিমান দিন হ’ল সেয়া দেখুৱাব পৰাকৈ ছেট কৰা হ’ব"
+  "initialSettingAskYazFlexDescription": "“হয়” বাছনি কৰিলে\nঔষধ বন্ধৰ সময় শেষ হোৱাৰ পিছত কিমান দিন হ’ল সেয়া দেখুৱাব পৰাকৈ ছেট কৰা হ’ব",
+  "yazFlexLastRestDurationTitle": "অনুগ্ৰহ কৰি\nআপোনাৰ পূৰ্বৰ ঔষধ-বিৰতিৰ বিষয়ে জনাওক"
 }

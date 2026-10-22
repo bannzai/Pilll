@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "截至不与下一次休药期（{date}〜）重叠的日期",
   "pauseStartDateLimit": "开始日期最晚可选至{date}",
   "initialSettingAskYazFlex": "您正在使用优思明灵活型吗？",
-  "initialSettingAskYazFlexDescription": "选择“是”后\n我们会将其设置为可显示停药期结束后的第几天"
+  "initialSettingAskYazFlexDescription": "选择“是”后\n我们会将其设置为可显示停药期结束后的第几天",
+  "yazFlexLastRestDurationTitle": "请告诉我们\n上一次停药期的情况"
 }

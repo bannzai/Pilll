@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "იმ დღემდე, რომელიც არ ემთხვევა შემდეგ შესვენებას ({date}〜)",
   "pauseStartDateLimit": "დაწყების თარიღის არჩევა შესაძლებელია {date}-მდე",
   "initialSettingAskYazFlex": "Yaz Flex-ს იყენებთ?",
-  "initialSettingAskYazFlexDescription": "თუ აირჩევთ „დიახ“-ს,\nდავაყენებთ ისე, რომ გამოჩნდეს, რამდენი დღე გავიდა შესვენების დასრულებიდან."
+  "initialSettingAskYazFlexDescription": "თუ აირჩევთ „დიახ“-ს,\nდავაყენებთ ისე, რომ გამოჩნდეს, რამდენი დღე გავიდა შესვენების დასრულებიდან.",
+  "yazFlexLastRestDurationTitle": "გთხოვთ,\ngვაცნობეთ წინა შესვენების შესახებ"
 }

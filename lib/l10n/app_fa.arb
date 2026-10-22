@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "تا روزی که با وقفه بعدی ({date}〜) هم‌پوشانی نداشته باشد",
   "pauseStartDateLimit": "تاریخ شروع را می‌توان تا {date} انتخاب کرد",
   "initialSettingAskYazFlex": "آیا از Yaz Flex استفاده می‌کنید؟",
-  "initialSettingAskYazFlexDescription": "اگر «بله» را انتخاب کنید،\nطوری تنظیم می‌کنیم که تعداد روزهای گذشته از پایان دوره وقفه نمایش داده شود."
+  "initialSettingAskYazFlexDescription": "اگر «بله» را انتخاب کنید،\nطوری تنظیم می‌کنیم که تعداد روزهای گذشته از پایان دوره وقفه نمایش داده شود.",
+  "yazFlexLastRestDurationTitle": "لطفاً\nدرباره آخرین دوره وقفه به ما بگویید"
 }

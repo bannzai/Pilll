@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "পরবর্তী বিরতি ({date}〜)-র সঙ্গে মিলে না যাওয়া দিন পর্যন্ত",
   "pauseStartDateLimit": "শুরুর তারিখ {date} পর্যন্ত বেছে নেওয়া যাবে",
   "initialSettingAskYazFlex": "আপনি কি Yaz Flex ব্যবহার করছেন?",
-  "initialSettingAskYazFlexDescription": "“হ্যাঁ” নির্বাচন করলে\nবিরতি শেষ হওয়ার পর কততম দিন চলছে তা দেখানোর জন্য সেট করা হবে"
+  "initialSettingAskYazFlexDescription": "“হ্যাঁ” নির্বাচন করলে\nবিরতি শেষ হওয়ার পর কততম দিন চলছে তা দেখানোর জন্য সেট করা হবে",
+  "yazFlexLastRestDurationTitle": "অনুগ্রহ করে\nআগের বিরতি সম্পর্কে জানান"
 }

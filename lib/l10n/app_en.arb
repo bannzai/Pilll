@@ -569,5 +569,6 @@
   "pauseEndDateLimitBeforeNextPause": "Up to the day before it overlaps with the next break ({date}–)",
   "pauseStartDateLimit": "The start date can be selected up to {date}",
   "initialSettingAskYazFlex": "Are you using Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "If you choose “Yes”,\nwe’ll set it to show how many days it has been since the end of your break."
+  "initialSettingAskYazFlexDescription": "If you choose “Yes”,\nwe’ll set it to show how many days it has been since the end of your break.",
+  "yazFlexLastRestDurationTitle": "Please tell us\nabout your last break"
 }
