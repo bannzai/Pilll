@@ -188,27 +188,33 @@ class YazFlexRestDurationCheckbox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: InkWell(
-        onTap: () => onChanged(!value),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Checkbox(
-              activeColor: AppColors.primary,
-              value: value,
-              onChanged: (value) => onChanged(value ?? false),
-            ),
-            Text(
-              label,
-              style: const TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w400,
-                fontSize: 14,
-                color: TextColor.main,
+      child: Padding(
+        // ドイツ語などの長い訳文や拡大した文字でもラベルが画面の外にはみ出さないよう、左右に余白を取った幅で折り返す
+        padding: const EdgeInsets.symmetric(horizontal: 24),
+        child: InkWell(
+          onTap: () => onChanged(!value),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Checkbox(
+                activeColor: AppColors.primary,
+                value: value,
+                onChanged: (value) => onChanged(value ?? false),
               ),
-            ),
-            const SizedBox(width: 12),
-          ],
+              Flexible(
+                child: Text(
+                  label,
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 14,
+                    color: TextColor.main,
+                  ),
+                ),
+              ),
+              const SizedBox(width: 12),
+            ],
+          ),
         ),
       ),
     );
