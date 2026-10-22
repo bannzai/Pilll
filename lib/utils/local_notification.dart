@@ -202,6 +202,23 @@ List<int> reminderDayOffsetsFor({required List<RestDuration> restDurations}) {
   return List.generate(RegisterReminderLocalNotification.registerDays, (index) => index < restBeginOffset ? index : index + restDays);
 }
 
+/// 今日から [dayOffset] 日後に出すリマインドに表示する、ピル番号の文字列を返す
+/// 連続番号(sequential/cyclicSequential)は、通知を出す日を今日とみなして計算する。服用再開予定日ありの服用お休み中に登録した通知でも、
+/// 予定日以降は、その日に画面が表示する番号(服用お休みが終わった日から1番に戻る)と一致させるため
+/// number/dateモードの番号はindexから決まるため、この日付に影響されない
+String reminderPillDisplayNumberFor({
+  required PillSheetGroup pillSheetGroup,
+  required int pageIndex,
+  required int pillNumberInPillSheet,
+  required int dayOffset,
+}) {
+  return pillSheetGroup.displayPillNumberWithoutDate(
+    pageIndex: pageIndex,
+    pillNumberInPillSheet: pillNumberInPillSheet,
+    estimatedEventCausingDate: today().addDays(dayOffset),
+  );
+}
+
 // Reminder
 // 最新の状態を元に更新すれば良いので、更新処理に必要な状態はプロパティで持つ。このプロパティは通常ref.watchにより常に最新に保たれる
 // また、状態をcallの引数として受け取らないことで通常はSingle Stateであるものに対して間違った値を受け取れないようにする
@@ -366,9 +383,11 @@ class RegisterReminderLocalNotification {
 
         var pillSheetGroupIndex = activePillSheet.groupIndex;
         var pillSheeType = activePillSheet.pillSheetType;
-        var pillSheetDisplayNumber = pillSheetGroup.displayPillNumberWithoutDate(
+        var pillSheetDisplayNumber = reminderPillDisplayNumberFor(
+          pillSheetGroup: pillSheetGroup,
           pageIndex: activePillSheet.groupIndex,
           pillNumberInPillSheet: pillNumberInPillSheet,
+          dayOffset: dayOffset,
         );
 
         // activePillSheetよりも未来のPillSheet
@@ -406,9 +425,11 @@ class RegisterReminderLocalNotification {
               final nextPillSheet = pillSheetGroup.pillSheets[activePillSheet.groupIndex + 1];
               pillSheetGroupIndex = nextPillSheet.groupIndex;
               pillSheeType = nextPillSheet.pillSheetType;
-              pillSheetDisplayNumber = pillSheetGroup.displayPillNumberWithoutDate(
+              pillSheetDisplayNumber = reminderPillDisplayNumberFor(
+                pillSheetGroup: pillSheetGroup,
                 pageIndex: nextPillSheet.groupIndex,
                 pillNumberInPillSheet: pillNumberInPillSheet,
+                dayOffset: dayOffset,
               );
 
             case (_, _, _):

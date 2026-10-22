@@ -305,6 +305,11 @@ extension PillSheetGroupPillSheetModifiedHistoryDomain on PillSheetGroup {
 
     /// ピルシート内の番号
     required int pillNumberInPillSheet,
+
+    /// 番号を表示する日を今日とみなして連続番号(sequential/cyclicSequential)を計算する場合の、その日付
+    /// 服用再開予定日ありの服用お休み中に、予定日以降に出すローカル通知の番号を、その日に画面が表示する番号と一致させるために使う
+    /// nullの場合は今日を基準にする。number/dateモードの番号はindexから決まるため影響しない
+    DateTime? estimatedEventCausingDate,
   }) {
     // pillNumberInPillSheet が 0 (lastTakenOrZeroPillNumber の未服用) の時は、そのピルシートの最初の表示番号の 1 つ前を返す。
     // PillSheetModifiedHistoryPillNumberOrDate.taken / revert が before + 1 / after + 1 を服用記録の先頭の番号にするため、
@@ -323,6 +328,7 @@ extension PillSheetGroupPillSheetModifiedHistoryDomain on PillSheetGroup {
           return _cycleSequentialPillSheetNumber(
                 pageIndex: pageIndex,
                 pillNumberInPillSheet: 1,
+                estimatedEventCausingDate: estimatedEventCausingDate,
               ) -
               1;
       }
@@ -342,6 +348,7 @@ extension PillSheetGroupPillSheetModifiedHistoryDomain on PillSheetGroup {
         return _cycleSequentialPillSheetNumber(
           pageIndex: pageIndex,
           pillNumberInPillSheet: pillNumberInPillSheet,
+          estimatedEventCausingDate: estimatedEventCausingDate,
         );
     }
   }
@@ -360,11 +367,15 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
 
     /// ピルシート内の番号
     required int pillNumberInPillSheet,
+
+    /// 番号を表示する日を今日とみなして計算する場合の、その日付。[pillNumberWithoutDateOrZero] の同名の引数を参照
+    DateTime? estimatedEventCausingDate,
   }) {
     return pillNumberWithoutDateOrZero(
       pillSheetAppearanceMode: pillSheetAppearanceMode,
       pageIndex: pageIndex,
       pillNumberInPillSheet: pillNumberInPillSheet,
+      estimatedEventCausingDate: estimatedEventCausingDate,
     ).toString();
   }
 
@@ -452,8 +463,13 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
   int _cycleSequentialPillSheetNumber({
     required int pageIndex,
     required int pillNumberInPillSheet,
+    DateTime? estimatedEventCausingDate,
   }) {
-    final pillMarksInPillSheet = pillNumbersForCyclicSequential.where((e) => e.pillSheet.groupIndex == pageIndex).toList();
+    // 日付が指定された時は、その日を今日とみなした連続番号を都度計算する。遅延初期化の pillNumbersForCyclicSequential は今日を基準にしている
+    final pillNumbers = estimatedEventCausingDate == null
+        ? pillNumbersForCyclicSequential
+        : _pillNumbersForCyclicSequential(estimatedEventCausingDate: estimatedEventCausingDate);
+    final pillMarksInPillSheet = pillNumbers.where((e) => e.pillSheet.groupIndex == pageIndex).toList();
     // pillNumberInPillSheet の元になる PillSheet.pillNumberFor は下限(1)だけを保証し、上限(ピルシートの錠数)を保証しない。
     // lastTakenDate が服用終了予定日より後ろにある服用履歴のスナップショットでは錠数を超える番号が渡るため、そのピルシートの最後のピルに収めて RangeError を防ぐ
     return pillMarksInPillSheet[min(pillNumberInPillSheet, pillMarksInPillSheet.length) - 1].number;
