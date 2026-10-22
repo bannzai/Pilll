@@ -13,8 +13,10 @@ RECORD_VIDEO="${RECORD_VIDEO:-true}"
 SUMMARY="${GITHUB_STEP_SUMMARY:-/dev/null}"
 # maestro を入れる時のバージョンと、そのリリースの maestro.zip の sha256。
 # 更新は https://github.com/mobile-dev-inc/maestro/releases の checksums_sha256.txt から取る。
-MAESTRO_VERSION="${MAESTRO_VERSION:-2.8.0}"
-MAESTRO_SHA256="${MAESTRO_SHA256:-b3e561161904fb391875ca5834d5b22cf0b01c052dd1b408ad83e30d8f8951b3}"
+# 2.8.0 では runner 上で XCTest driver が DeviceUnreachableException で落ちたため、
+# appstore-screenshots workflow が同じ runner で動かしている 2.6.0 に合わせる。
+MAESTRO_VERSION="${MAESTRO_VERSION:-2.6.0}"
+MAESTRO_SHA256="${MAESTRO_SHA256:-80185105a5d7e227e3b3fbcf225f45b312508ea676a9fc8e1b1aa1cac8b9ff6e}"
 
 RESOLVE_ONLY=false
 if [ "${1:-}" = "--resolve-only" ]; then

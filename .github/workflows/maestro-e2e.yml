@@ -83,7 +83,8 @@ jobs:
         env:
           FLOWS: ${{ inputs.flows || 'all' }}
           DEVICE: ${{ inputs.device || 'iPhone 17' }}
-          RECORD_VIDEO: ${{ inputs.record_video || 'true' }}
+          # 録画は runner の CPU を使い driver が落ちる一因になるため、PR では録画しない
+          RECORD_VIDEO: ${{ inputs.record_video || 'false' }}
           # flow はアプリの日本語の文言をタップするため、Simulator の言語・地域を日本語にして起動する
           SIMULATOR_LANGUAGE: ja
           SIMULATOR_LOCALE: ja_JP
