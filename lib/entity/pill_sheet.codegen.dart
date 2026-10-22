@@ -425,27 +425,47 @@ sealed class PillSheet with _$PillSheet {
 
   /// ピルシートの予想服用完了日
   /// 開始日、総ピル数、休薬期間を考慮して計算される完了予定日
-  DateTime get estimatedEndTakenDate => beginDate
+  /// 服用お休みは今日までで打ち切って数えるため、服用お休み中は毎日1日ずつ延びる
+  /// 服用再開予定日(endDateが未来)ありで服用お休みを始めた場合、後続のピルシートのbeginDateは
+  /// [estimatedEndTakenDateUntil] に予定の終了日を渡した値からアプリが開始時点で確定して保存する。
+  /// バックエンドはendDateがあるお休みを日送りしないため。そのため服用お休み中は、このシートのestimatedEndTakenDateと後続シートのbeginDateの間に隙間ができる
+  /// 今日は常にこのシートの範囲内(服用お休み中はピル番号が止まるので today <= estimatedEndTakenDate)なので、activePillSheetの判定は壊れない
+  DateTime get estimatedEndTakenDate => estimatedEndTakenDateUntil(upperDate: today());
+
+  /// [upperDate] までの服用お休みを数えたピルシートの予想服用完了日
+  /// [upperDate] より後に終わる服用お休みは [upperDate] で打ち切って数える
+  DateTime estimatedEndTakenDateUntil({required DateTime upperDate}) => beginDate
       .addDays(pillSheetType.totalCount - 1)
       .addDays(
         summarizedRestDuration(
           restDurations: restDurations,
-          upperDate: today(),
+          upperDate: upperDate,
         ),
       )
       .date()
       .add(const Duration(days: 1))
       .subtract(const Duration(seconds: 1));
 
+  /// 服用再開予定日まで含めた予想服用完了日
+  /// 最新の服用お休み期間のendDateが今日より後ならそのendDateまで、そうでなければ今日までの服用お休みを数える
+  /// 後続のピルシートのbeginDateを確定する時に使う。表示用の [estimatedEndTakenDate] は今日で打ち切る
+  DateTime get estimatedEndTakenDateWithPlannedResume {
+    final lastEndDate = restDurations.lastOrNull?.endDate;
+    return estimatedEndTakenDateUntil(
+      upperDate: lastEndDate != null && lastEndDate.date().isAfter(today()) ? lastEndDate : today(),
+    );
+  }
+
   /// 現在アクティブな休薬期間
-  /// 現在継続中（endDateがnull）かつ開始済みの休薬期間を返す
-  /// NOTE: beginDateは日付レベルで比較する。時刻を含めた比較だと、服用おやすみ開始日に
+  /// 開始済みで、現在継続中（endDateがnull）もしくは服用再開予定日（endDateが今日より後）の休薬期間を返す
+  /// NOTE: beginDateとendDateは日付レベルで比較する。時刻を含めた比較だと、服用おやすみ開始日に
   /// lastTakenDateの時刻を過ぎるまで表示されない問題が発生するため
   RestDuration? get activeRestDuration {
     if (restDurations.isEmpty) {
       return null;
     } else {
-      if (restDurations.last.endDate == null && !restDurations.last.beginDate.date().isAfter(today())) {
+      final endDate = restDurations.last.endDate;
+      if ((endDate == null || endDate.date().isAfter(today())) && !restDurations.last.beginDate.date().isAfter(today())) {
         return restDurations.last;
       } else {
         return null;
@@ -496,7 +516,13 @@ sealed class PillSheet with _$PillSheet {
         if (restDuration.beginDate.isBefore(date) || isSameDay(restDuration.beginDate, date)) {
           // estimatedEventCausingDateに値がある場合は、服用履歴のスナップショットの日付を返したい。 estimatedEventCausingDate もしくは today をこのメソッドでの計算式の上限の日付とする
           final upperDate = estimatedEventCausingDate ?? today().date();
-          final restDurationEndDateOrUpperDate = restDuration.endDate ?? upperDate;
+          final restDurationEndDate = restDuration.endDate;
+          // upperDate時点で服用お休み中(開始済みでendDateがupperDateより後)の期間は、upperDateで打ち切る。endDateがnullの服用お休みと同じ扱いにするため
+          // upperDateより後に開始する期間は打ち切らず、従来どおり全日数を数える
+          final isRestingAtUpperDate = restDurationEndDate != null &&
+              restDurationEndDate.date().isAfter(upperDate.date()) &&
+              !restDuration.beginDate.date().isAfter(upperDate.date());
+          final restDurationEndDateOrUpperDate = restDurationEndDate == null || isRestingAtUpperDate ? upperDate : restDurationEndDate;
           if (restDurationEndDateOrUpperDate.isAfter(date)) {
             final diff = daysBetween(date, restDurationEndDateOrUpperDate);
             date = date.addDays(diff);
@@ -610,7 +636,8 @@ int summarizedRestDuration({
     }
 
     final endDate = e.endDate;
-    if (endDate == null) {
+    // upperDateより後のendDateはupperDateで打ち切る。endDateがnullの服用お休みと同じ扱いにするため
+    if (endDate == null || endDate.date().isAfter(upperDate.date())) {
       return daysBetween(e.beginDate, upperDate);
     }
 

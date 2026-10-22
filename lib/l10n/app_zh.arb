@@ -561,5 +561,11 @@
   "addPausePeriod": "添加服用休息期",
   "addedPausePeriod": "已添加服用休息期间",
   "pausePeriodOverlapsOther": "不能选择与其他服用休息期间重叠的期间",
-  "pauseEndDateMustBeAfterStartDate": "请选择晚于开始日期的日期作为服用休息结束日。"
+  "pauseEndDateMustBeAfterStartDate": "请选择晚于开始日期的日期作为服用休息结束日。",
+  "plannedResumeDateOptional": "预计恢复服用日期（可选）",
+  "plannedResumeDateNotSet": "未设置",
+  "selectPlannedResumeDate": "选择预计恢复服用日期",
+  "pauseEndDateLimitIsToday": "结束日期只能设置到今天",
+  "pauseEndDateLimitBeforeNextPause": "截至不与下一次休药期（{date}〜）重叠的日期",
+  "pauseStartDateLimit": "开始日期最晚可选至{date}"
 }

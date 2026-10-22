@@ -561,5 +561,11 @@
   "addPausePeriod": "Afegeix un període de pausa de presa",
   "addedPausePeriod": "S'ha afegit el període de descans de la presa",
   "pausePeriodOverlapsOther": "No es pot seleccionar un període que se solapi amb un altre període de pausa de presa",
-  "pauseEndDateMustBeAfterStartDate": "Si us plau, seleccioneu una data posterior a la data d'inici com a data de finalització de la pausa de presa."
+  "pauseEndDateMustBeAfterStartDate": "Si us plau, seleccioneu una data posterior a la data d'inici com a data de finalització de la pausa de presa.",
+  "plannedResumeDateOptional": "Data prevista de represa de la presa (opcional)",
+  "plannedResumeDateNotSet": "No configurat",
+  "selectPlannedResumeDate": "Selecciona la data prevista de represa de la presa",
+  "pauseEndDateLimitIsToday": "La data de finalització només es pot seleccionar fins avui",
+  "pauseEndDateLimitBeforeNextPause": "Fins al dia que no se superposi amb el següent descans ({date}〜)",
+  "pauseStartDateLimit": "La data d'inici es pot triar fins a {date}"
 }

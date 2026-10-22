@@ -561,5 +561,11 @@
   "addPausePeriod": "Thêm thời gian nghỉ uống",
   "addedPausePeriod": "Đã thêm khoảng nghỉ uống thuốc",
   "pausePeriodOverlapsOther": "Không thể chọn khoảng thời gian trùng với một khoảng nghỉ uống khác",
-  "pauseEndDateMustBeAfterStartDate": "Vui lòng chọn ngày sau ngày bắt đầu làm ngày kết thúc thời gian tạm nghỉ uống thuốc."
+  "pauseEndDateMustBeAfterStartDate": "Vui lòng chọn ngày sau ngày bắt đầu làm ngày kết thúc thời gian tạm nghỉ uống thuốc.",
+  "plannedResumeDateOptional": "Ngày dự kiến dùng lại (không bắt buộc)",
+  "plannedResumeDateNotSet": "Chưa thiết lập",
+  "selectPlannedResumeDate": "Chọn ngày dự định dùng lại",
+  "pauseEndDateLimitIsToday": "Ngày kết thúc chỉ có thể đặt đến hôm nay",
+  "pauseEndDateLimitBeforeNextPause": "Đến ngày không bị trùng với kỳ nghỉ tiếp theo ({date}–)",
+  "pauseStartDateLimit": "Có thể chọn ngày bắt đầu đến {date}"
 }

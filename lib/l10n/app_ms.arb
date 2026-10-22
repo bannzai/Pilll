@@ -561,5 +561,11 @@
   "addPausePeriod": "Tambah tempoh rehat pengambilan",
   "addedPausePeriod": "Tempoh rehat pengambilan telah ditambah",
   "pausePeriodOverlapsOther": "Tempoh yang bertindih dengan tempoh rehat pengambilan lain tidak boleh dipilih",
-  "pauseEndDateMustBeAfterStartDate": "Sila pilih tarikh selepas tarikh mula sebagai tarikh tamat tempoh rehat pengambilan."
+  "pauseEndDateMustBeAfterStartDate": "Sila pilih tarikh selepas tarikh mula sebagai tarikh tamat tempoh rehat pengambilan.",
+  "plannedResumeDateOptional": "Tarikh dijangka untuk sambung pengambilan (pilihan)",
+  "plannedResumeDateNotSet": "Belum ditetapkan",
+  "selectPlannedResumeDate": "Pilih tarikh dijadualkan untuk menyambung pengambilan",
+  "pauseEndDateLimitIsToday": "Tarikh tamat hanya boleh ditetapkan sehingga hari ini",
+  "pauseEndDateLimitBeforeNextPause": "Sehingga hari yang tidak bertindih dengan rehat seterusnya ({date}–)",
+  "pauseStartDateLimit": "Tarikh mula boleh dipilih sehingga {date}"
 }

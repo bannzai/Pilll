@@ -5835,6 +5835,99 @@ void main() {
         );
       });
     });
+
+    group("服用再開予定日（endDateが今日より後）がある場合", () {
+      PillSheet pillSheetWith({required RestDuration restDuration}) {
+        const sheetType = PillSheetType.pillsheet_28_0;
+        return PillSheet.v1(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          restDurations: [restDuration],
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+      }
+
+      final restDuration = RestDuration(
+        id: "rest_duration_id",
+        beginDate: DateTime.parse("2022-05-08"),
+        createdDate: DateTime.parse("2022-05-08"),
+        endDate: DateTime.parse("2022-05-15"),
+      );
+
+      test("estimatedEndTakenDateは今日(5/10)までの服用お休み2日で数える", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+        // 5/1 + 27日 + 2日 = 5/30
+        expect(
+          pillSheetWith(restDuration: restDuration).estimatedEndTakenDate,
+          DateTime(2022, 5, 30, 23, 59, 59),
+        );
+      });
+
+      test("estimatedEndTakenDateUntilは予定の終了日(5/15)を渡すと服用お休み7日の全日数で数える", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+        // 5/1 + 27日 + 7日 = 6/4
+        expect(
+          pillSheetWith(restDuration: restDuration).estimatedEndTakenDateUntil(upperDate: DateTime.parse("2022-05-15")),
+          DateTime(2022, 6, 4, 23, 59, 59),
+        );
+      });
+
+      test("estimatedEndTakenDateWithPlannedResumeはendDateが今日より後なら予定の終了日(5/15)まで数える", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+        expect(
+          pillSheetWith(restDuration: restDuration).estimatedEndTakenDateWithPlannedResume,
+          DateTime(2022, 6, 4, 23, 59, 59),
+        );
+      });
+
+      test("境界値テスト：estimatedEndTakenDateWithPlannedResumeはendDateが今日と同日なら今日まで数える", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-15"));
+
+        // 5/1 + 27日 + 7日(5/8〜5/15) = 6/4。endDateは服用再開日なので5/15で打ち切っても全日数と同じ
+        expect(
+          pillSheetWith(restDuration: restDuration).estimatedEndTakenDateWithPlannedResume,
+          DateTime(2022, 6, 4, 23, 59, 59),
+        );
+      });
+
+      test("estimatedEndTakenDateWithPlannedResumeはendDateが今日より前なら終了済みの全日数を数える", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-20"));
+
+        final pillSheet = pillSheetWith(restDuration: restDuration);
+        expect(pillSheet.estimatedEndTakenDateWithPlannedResume, pillSheet.estimatedEndTakenDate);
+        expect(pillSheet.estimatedEndTakenDateWithPlannedResume, DateTime(2022, 6, 4, 23, 59, 59));
+      });
+
+      test("estimatedEndTakenDateWithPlannedResumeはrestDurationsが空なら estimatedEndTakenDate と同じ", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+        final pillSheet = pillSheetWith(restDuration: restDuration).copyWith(restDurations: []);
+        expect(pillSheet.estimatedEndTakenDateWithPlannedResume, pillSheet.estimatedEndTakenDate);
+        expect(pillSheet.estimatedEndTakenDateWithPlannedResume, DateTime(2022, 5, 28, 23, 59, 59));
+      });
+    });
   });
   group("#activeRestDuration", () {
     test("restDurationsが空の場合はnullを返す", () {
@@ -6149,6 +6242,95 @@ void main() {
           ),
         );
         expect(pillSheet.activeRestDuration, restDuration);
+      });
+    });
+
+    group("服用再開予定日（endDateが今日より後）がある場合", () {
+      PillSheet pillSheetWith({required RestDuration restDuration}) {
+        const sheetType = PillSheetType.pillsheet_21;
+        return PillSheet.v1(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          restDurations: [restDuration],
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+      }
+
+      test("endDateが明日の場合はそのRestDurationを返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+        final restDuration = RestDuration(
+          id: "rest_duration_id",
+          beginDate: DateTime.parse("2022-05-08"),
+          createdDate: DateTime.parse("2022-05-08"),
+          endDate: DateTime.parse("2022-05-11"),
+        );
+        expect(pillSheetWith(restDuration: restDuration).activeRestDuration, restDuration);
+      });
+
+      test("endDateが今日の場合は服用再開済みなのでnullを返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+        final restDuration = RestDuration(
+          id: "rest_duration_id",
+          beginDate: DateTime.parse("2022-05-08"),
+          createdDate: DateTime.parse("2022-05-08"),
+          endDate: DateTime.parse("2022-05-10"),
+        );
+        expect(pillSheetWith(restDuration: restDuration).activeRestDuration, isNull);
+      });
+
+      test("endDateが今日で時刻が現在時刻より後でも日付で比較して、服用再開済みなのでnullを返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime(2022, 5, 10, 8, 0, 0));
+
+        final restDuration = RestDuration(
+          id: "rest_duration_id",
+          beginDate: DateTime.parse("2022-05-08"),
+          createdDate: DateTime.parse("2022-05-08"),
+          endDate: DateTime(2022, 5, 10, 23, 0, 0),
+        );
+        expect(pillSheetWith(restDuration: restDuration).activeRestDuration, isNull);
+      });
+
+      test("endDateが昨日の場合はnullを返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+        final restDuration = RestDuration(
+          id: "rest_duration_id",
+          beginDate: DateTime.parse("2022-05-08"),
+          createdDate: DateTime.parse("2022-05-08"),
+          endDate: DateTime.parse("2022-05-09"),
+        );
+        expect(pillSheetWith(restDuration: restDuration).activeRestDuration, isNull);
+      });
+
+      test("beginDateが明日でendDateがさらに後の場合は開始前なのでnullを返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+        final restDuration = RestDuration(
+          id: "rest_duration_id",
+          beginDate: DateTime.parse("2022-05-11"),
+          createdDate: DateTime.parse("2022-05-10"),
+          endDate: DateTime.parse("2022-05-14"),
+        );
+        expect(pillSheetWith(restDuration: restDuration).activeRestDuration, isNull);
       });
     });
   });
@@ -7444,6 +7626,104 @@ void main() {
       expect(actual[9], DateTime.parse("2022-05-15"));
       expect(actual[10], DateTime.parse("2022-05-16"));
     });
+    test("endDateがtodayより後の休薬期間はendDateがnullの休薬期間と同じ日付になる", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-15"));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final pillSheet = PillSheet.v1(
+        id: firestoreIDGenerator(),
+        beginDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [
+          RestDuration(
+            id: firestoreIDGenerator(),
+            beginDate: DateTime.parse("2022-05-10"),
+            endDate: DateTime.parse("2022-05-20"), // 服用再開予定日
+            createdDate: now(),
+          ),
+        ],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+
+      final actual = pillSheet.buildDates();
+
+      expect(actual[8], DateTime.parse("2022-05-09"));
+      // endDate(05-20)ではなくtoday(05-15)で打ち切られる
+      expect(actual[9], DateTime.parse("2022-05-15"));
+      expect(actual[10], DateTime.parse("2022-05-16"));
+    });
+    test("estimatedEventCausingDateがendDateより前の場合はestimatedEventCausingDateで打ち切られる", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-25"));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final pillSheet = PillSheet.v1(
+        id: firestoreIDGenerator(),
+        beginDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [
+          RestDuration(
+            id: firestoreIDGenerator(),
+            beginDate: DateTime.parse("2022-05-10"),
+            endDate: DateTime.parse("2022-05-20"),
+            createdDate: now(),
+          ),
+        ],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+
+      final actual = pillSheet.buildDates(estimatedEventCausingDate: DateTime.parse("2022-05-15"));
+
+      expect(actual[8], DateTime.parse("2022-05-09"));
+      expect(actual[9], DateTime.parse("2022-05-15"));
+    });
+    test("endDateがtodayより前の休薬期間は全日数ずれる", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-25"));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final pillSheet = PillSheet.v1(
+        id: firestoreIDGenerator(),
+        beginDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [
+          RestDuration(
+            id: firestoreIDGenerator(),
+            beginDate: DateTime.parse("2022-05-10"),
+            endDate: DateTime.parse("2022-05-20"),
+            createdDate: now(),
+          ),
+        ],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+
+      final actual = pillSheet.buildDates();
+
+      expect(actual[8], DateTime.parse("2022-05-09"));
+      expect(actual[9], DateTime.parse("2022-05-20"));
+    });
   });
   group("#summarizedRestDuration", () {
     test("restDurations isEmpty", () {
@@ -7493,6 +7773,113 @@ void main() {
         ),
         1,
       );
+    });
+    group("endDateがupperDateより後の場合", () {
+      test("upperDateで打ち切って数える", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+        final restDurations = [
+          RestDuration(
+            id: "rest_duration_id",
+            beginDate: DateTime.parse("2022-05-07"),
+            createdDate: DateTime.parse("2022-05-07"),
+            endDate: DateTime.parse("2022-05-15"),
+          ),
+        ];
+        // 5/7から今日(5/10)までの3日。予定の終了日(5/15)までの8日は数えない
+        expect(
+          summarizedRestDuration(
+            restDurations: restDurations,
+            upperDate: today(),
+          ),
+          3,
+        );
+      });
+      test("境界値テスト：endDateがupperDateと同日の場合は全日数を数える", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+        final restDurations = [
+          RestDuration(
+            id: "rest_duration_id",
+            beginDate: DateTime.parse("2022-05-07"),
+            createdDate: DateTime.parse("2022-05-07"),
+            endDate: DateTime.parse("2022-05-10"),
+          ),
+        ];
+        expect(
+          summarizedRestDuration(
+            restDurations: restDurations,
+            upperDate: today(),
+          ),
+          3,
+        );
+      });
+      test("境界値テスト：endDateがupperDateの翌日の場合はupperDateまでの日数を数える", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+        final restDurations = [
+          RestDuration(
+            id: "rest_duration_id",
+            beginDate: DateTime.parse("2022-05-07"),
+            createdDate: DateTime.parse("2022-05-07"),
+            endDate: DateTime.parse("2022-05-11"),
+          ),
+        ];
+        expect(
+          summarizedRestDuration(
+            restDurations: restDurations,
+            upperDate: today(),
+          ),
+          3,
+        );
+      });
+      test("upperDateに時刻があっても日付で比較する", () {
+        final restDurations = [
+          RestDuration(
+            id: "rest_duration_id",
+            beginDate: DateTime.parse("2022-05-07"),
+            createdDate: DateTime.parse("2022-05-07"),
+            endDate: DateTime.parse("2022-05-10"),
+          ),
+        ];
+        expect(
+          summarizedRestDuration(
+            restDurations: restDurations,
+            upperDate: DateTime(2022, 5, 10, 23, 59, 59),
+          ),
+          3,
+        );
+      });
+      test("終了済みの服用お休みと予定日ありの服用お休みが両方ある場合は終了済みを全日数、予定日ありをupperDateまで数える", () {
+        final restDurations = [
+          RestDuration(
+            id: "rest_duration_id_1",
+            beginDate: DateTime.parse("2022-05-03"),
+            createdDate: DateTime.parse("2022-05-03"),
+            endDate: DateTime.parse("2022-05-05"),
+          ),
+          RestDuration(
+            id: "rest_duration_id_2",
+            beginDate: DateTime.parse("2022-05-07"),
+            createdDate: DateTime.parse("2022-05-07"),
+            endDate: DateTime.parse("2022-05-15"),
+          ),
+        ];
+        // 2日 + 3日
+        expect(
+          summarizedRestDuration(
+            restDurations: restDurations,
+            upperDate: DateTime.parse("2022-05-10"),
+          ),
+          5,
+        );
+      });
     });
   });
 

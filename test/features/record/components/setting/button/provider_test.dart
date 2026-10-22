@@ -85,7 +85,8 @@ void main() {
         batchSetPillSheetGroup: batchSetPillSheetGroup,
         batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
       );
-      await beginRestDuration.call(pillSheetGroup: pillSheetGroup);
+      await beginRestDuration.call(
+          pillSheetGroup: pillSheetGroup, endDate: null);
 
       verify(batchFactory.batch()).called(1);
 
@@ -158,7 +159,8 @@ void main() {
         batchSetPillSheetGroup: batchSetPillSheetGroup,
         batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
       );
-      await beginRestDuration.call(pillSheetGroup: pillSheetGroup);
+      await beginRestDuration.call(
+          pillSheetGroup: pillSheetGroup, endDate: null);
 
       verify(batchFactory.batch()).called(1);
 
@@ -241,7 +243,8 @@ void main() {
           batchSetPillSheetGroup: batchSetPillSheetGroup,
           batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
         );
-        await beginRestDuration.call(pillSheetGroup: pillSheetGroup);
+        await beginRestDuration.call(
+            pillSheetGroup: pillSheetGroup, endDate: null);
 
         verify(batchFactory.batch()).called(1);
 
@@ -322,7 +325,96 @@ void main() {
         batchSetPillSheetGroup: batchSetPillSheetGroup,
         batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
       );
-      await beginRestDuration.call(pillSheetGroup: pillSheetGroup);
+      await beginRestDuration.call(
+          pillSheetGroup: pillSheetGroup, endDate: null);
+
+      verify(batchFactory.batch()).called(1);
+
+      verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
+      verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
+    });
+
+    test("endDateありで開始するとrestDurationにendDateが入り、2枚目のbeginDateが予定終了日+1日になる",
+        () async {
+      var mockTodayRepository = MockTodayService();
+      final mockToday = DateTime.parse("2020-09-19");
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+
+      final mockIDGenerator = MockFirestoreIDGenerator();
+      when(mockIDGenerator.call()).thenReturn("rest_duration_id");
+      firestoreIDGenerator = mockIDGenerator;
+
+      final batchFactory = MockBatchFactory();
+      final batch = MockWriteBatch();
+      when(batchFactory.batch()).thenReturn(batch);
+
+      // 9/19から9/24の前日までの5日間お休みする。1枚目(28錠)は9/10開始なので、お休みの全日数を含めると10/12に服用が終わる
+      final plannedEndDate = DateTime.parse("2020-09-24");
+      final pillSheet1 = PillSheet.v1(
+        id: "pill_sheet_id_1",
+        groupIndex: 0,
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        lastTakenDate: DateTime.parse("2020-09-18"),
+        beginDate: DateTime.parse("2020-09-10"),
+        createdAt: now(),
+      );
+      final pillSheet2 = PillSheet.v1(
+        id: "pill_sheet_id_2",
+        groupIndex: 1,
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        lastTakenDate: null,
+        beginDate: DateTime.parse("2020-10-08"),
+        createdAt: now(),
+      );
+      final plannedRestDuration = RestDuration(
+        id: "rest_duration_id",
+        beginDate: DateTime.parse("2020-09-19"),
+        createdDate: now(),
+        endDate: plannedEndDate,
+      );
+      final updatedPillSheet1 = pillSheet1.copyWith(
+        restDurations: [plannedRestDuration],
+      );
+      final updatedPillSheet2 = pillSheet2.copyWith(
+        beginDate: DateTime.parse("2020-10-13"),
+      );
+
+      final pillSheetGroup = PillSheetGroup(
+        id: "group_id",
+        pillSheetIDs: ["pill_sheet_id_1", "pill_sheet_id_2"],
+        pillSheets: [pillSheet1, pillSheet2],
+        createdAt: now(),
+        pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+      );
+      final updatedPillSheetGroup = pillSheetGroup.copyWith(
+        pillSheets: [updatedPillSheet1, updatedPillSheet2],
+      );
+
+      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+      when(
+        batchSetPillSheetGroup(batch, updatedPillSheetGroup),
+      ).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
+
+      final history = PillSheetModifiedHistoryServiceActionFactory
+          .createBeganRestDurationAction(
+        restDuration: plannedRestDuration,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
+      );
+      final batchSetPillSheetModifiedHistory =
+          MockBatchSetPillSheetModifiedHistory();
+      when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+      final beginRestDuration = BeginRestDuration(
+        batchFactory: batchFactory,
+        batchSetPillSheetGroup: batchSetPillSheetGroup,
+        batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+      );
+      await beginRestDuration.call(
+        pillSheetGroup: pillSheetGroup,
+        endDate: plannedEndDate,
+      );
 
       verify(batchFactory.batch()).called(1);
 
@@ -517,6 +609,102 @@ void main() {
         activePillSheet: pillSheets[0],
         pillSheetGroup: pillSheetGroup,
         restDuration: notYetEndRestDuration,
+      );
+
+      verify(batchFactory.batch()).called(1);
+
+      verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
+      verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
+    });
+
+    test(
+        "endDateが未来の服用お休み期間を今日で終了すると、endDateが今日になり2枚目のbeginDateが今日までの服用お休みで再計算される",
+        () async {
+      var mockTodayRepository = MockTodayService();
+      final mockToday = DateTime.parse("2020-09-19");
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+
+      final plannedRestDuration = RestDuration(
+        id: "rest_duration_id",
+        beginDate: DateTime.parse("2020-09-17"),
+        createdDate: DateTime.parse("2020-09-17"),
+        endDate: DateTime.parse("2020-09-24"),
+      );
+      final endedRestDuration = plannedRestDuration.copyWith(endDate: now());
+
+      final batchFactory = MockBatchFactory();
+      final batch = MockWriteBatch();
+      when(batchFactory.batch()).thenReturn(batch);
+
+      final pillSheets = [
+        PillSheet.v1(
+          id: "pill_sheet_id_1",
+          groupIndex: 0,
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginDate: DateTime.parse("2020-09-10"),
+          lastTakenDate: null,
+          restDurations: [plannedRestDuration],
+          createdAt: now(),
+        ),
+        PillSheet.v1(
+          id: "pill_sheet_id_2",
+          groupIndex: 1,
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          // 予定の終了日(9/24)まで全日数含めた値で確定されていた開始日
+          beginDate: DateTime.parse("2020-10-15"),
+          lastTakenDate: null,
+          createdAt: now(),
+        ),
+      ];
+      expect(pillSheets[0].activeRestDuration, plannedRestDuration);
+
+      final updatedPillSheet1 = pillSheets[0].copyWith(
+        restDurations: [endedRestDuration],
+      );
+      final updatedPillSheet2 = pillSheets[1].copyWith(
+        beginDate: updatedPillSheet1.estimatedEndTakenDate.add(
+          const Duration(days: 1),
+        ),
+      );
+      // 9/17から今日(9/19)までの2日だけ数えるので、2枚目は予定の終了日までの全日数で確定されていた10/15より早くなる
+      expect(
+          updatedPillSheet2.beginDate.isBefore(pillSheets[1].beginDate), true);
+      expect(updatedPillSheet1.activeRestDuration, null);
+
+      final pillSheetGroup = PillSheetGroup(
+        id: "group_id",
+        pillSheetIDs: pillSheets.map((e) => e.id!).toList(),
+        pillSheets: pillSheets,
+        createdAt: now(),
+      );
+      final updatedPillSheetGroup = pillSheetGroup.copyWith(
+        pillSheets: [updatedPillSheet1, updatedPillSheet2],
+      );
+      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+      when(
+        batchSetPillSheetGroup(batch, updatedPillSheetGroup),
+      ).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
+
+      final history = PillSheetModifiedHistoryServiceActionFactory
+          .createEndedRestDurationAction(
+        restDuration: endedRestDuration,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
+      );
+      final batchSetPillSheetModifiedHistory =
+          MockBatchSetPillSheetModifiedHistory();
+      when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+      final endRestDuration = EndRestDuration(
+        batchFactory: batchFactory,
+        batchSetPillSheetGroup: batchSetPillSheetGroup,
+        batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+      );
+      await endRestDuration.call(
+        activePillSheet: pillSheets[0],
+        pillSheetGroup: pillSheetGroup,
+        restDuration: plannedRestDuration,
       );
 
       verify(batchFactory.batch()).called(1);
@@ -1174,5 +1362,427 @@ void main() {
         verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
       },
     );
+
+    test(
+      "服用再開予定日(endDateが未来)ありの服用お休み中に終了日を2日延ばすと、2枚目のbeginDateが新しい予定終了日+1日になる",
+      () async {
+        var mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2020-09-19"));
+
+        // 9/17開始で服用再開予定日が9/24の服用お休み中
+        final beforeRestDuration = RestDuration(
+          id: "rest_duration_id",
+          beginDate: DateTime.parse("2020-09-17"),
+          createdDate: DateTime.parse("2020-09-17"),
+          endDate: DateTime.parse("2020-09-24"),
+        );
+        // 服用再開予定日を9/26へ2日延ばす
+        final afterRestDuration = beforeRestDuration.copyWith(
+          endDate: DateTime.parse("2020-09-26"),
+        );
+
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
+
+        final pillSheet1 = PillSheet.v1(
+          id: "pill_sheet_id_1",
+          groupIndex: 0,
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          lastTakenDate: DateTime.parse("2020-09-16"),
+          beginDate: DateTime.parse("2020-09-10"),
+          createdAt: DateTime.parse("2020-09-10"),
+          restDurations: [beforeRestDuration],
+        );
+        // 変更前: 9/10 + 27日 + 服用お休み7日(9/17〜9/24) = 10/14 なので、2枚目は10/15開始
+        final pillSheet2 = PillSheet.v1(
+          id: "pill_sheet_id_2",
+          groupIndex: 1,
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          lastTakenDate: null,
+          beginDate: DateTime.parse("2020-10-15"),
+          createdAt: DateTime.parse("2020-09-10"),
+        );
+        expect(
+          pillSheet1.estimatedEndTakenDateWithPlannedResume.date().addDays(1),
+          DateTime.parse("2020-10-15"),
+        );
+        // 表示用のestimatedEndTakenDateは今日(9/19)までの2日で打ち切るので、2枚目の開始日の確定には使えない
+        expect(
+          pillSheet1.estimatedEndTakenDate.date().addDays(1),
+          DateTime.parse("2020-10-10"),
+        );
+
+        final updatedPillSheet1 = pillSheet1.copyWith(
+          restDurations: [afterRestDuration],
+        );
+        // 変更後: 9/10 + 27日 + 服用お休み9日(9/17〜9/26) = 10/16 なので、2枚目は10/17開始
+        final updatedPillSheet2 = pillSheet2.copyWith(
+          beginDate: DateTime.parse("2020-10-17"),
+        );
+
+        final pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: ["pill_sheet_id_1", "pill_sheet_id_2"],
+          pillSheets: [pillSheet1, pillSheet2],
+          createdAt: DateTime.parse("2020-09-10"),
+        );
+        final updatedPillSheetGroup = pillSheetGroup.copyWith(
+          pillSheets: [updatedPillSheet1, updatedPillSheet2],
+        );
+        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+        when(
+          batchSetPillSheetGroup(batch, updatedPillSheetGroup),
+        ).thenReturn(updatedPillSheetGroup);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createChangedRestDurationAction(
+          beforeRestDuration: beforeRestDuration,
+          afterRestDuration: afterRestDuration,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: updatedPillSheetGroup,
+        );
+        final batchSetPillSheetModifiedHistory =
+            MockBatchSetPillSheetModifiedHistory();
+        when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+        final changeRestDuration = ChangeRestDuration(
+          actionType: PillSheetModifiedActionType.changedRestDuration,
+          batchFactory: batchFactory,
+          batchSetPillSheetGroup: batchSetPillSheetGroup,
+          batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+        );
+        await changeRestDuration.call(
+          fromRestDuration: beforeRestDuration,
+          toRestDuration: afterRestDuration,
+          pillSheetGroup: pillSheetGroup,
+        );
+
+        verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
+        verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
+      },
+    );
+
+    test(
+      "服用再開予定日ありの服用お休み中に同じシートの過去の服用お休みを変更しても、restDurationsは開始日順に保たれ、2枚目のbeginDateは予定終了日+1日から計算される",
+      () async {
+        var mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2020-09-19"));
+
+        // 9/12〜9/14(2日)の終了済みの服用お休みと、9/17開始で服用再開予定日が9/24の服用お休み中
+        final pastRestDuration = RestDuration(
+          id: "rest_duration_id_past",
+          beginDate: DateTime.parse("2020-09-12"),
+          createdDate: DateTime.parse("2020-09-12"),
+          endDate: DateTime.parse("2020-09-14"),
+        );
+        final plannedRestDuration = RestDuration(
+          id: "rest_duration_id_planned",
+          beginDate: DateTime.parse("2020-09-17"),
+          createdDate: DateTime.parse("2020-09-17"),
+          endDate: DateTime.parse("2020-09-24"),
+        );
+        // 過去の服用お休みを9/12〜9/15(3日)に1日延ばす
+        final afterPastRestDuration = pastRestDuration.copyWith(
+          endDate: DateTime.parse("2020-09-15"),
+        );
+
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
+
+        final pillSheet1 = PillSheet.v1(
+          id: "pill_sheet_id_1",
+          groupIndex: 0,
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          lastTakenDate: DateTime.parse("2020-09-16"),
+          beginDate: DateTime.parse("2020-09-10"),
+          createdAt: DateTime.parse("2020-09-10"),
+          restDurations: [pastRestDuration, plannedRestDuration],
+        );
+        // 変更前: 9/10 + 27日 + 服用お休み2日 + 7日(9/17〜9/24) = 10/16 なので、2枚目は10/17開始
+        final pillSheet2 = PillSheet.v1(
+          id: "pill_sheet_id_2",
+          groupIndex: 1,
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          lastTakenDate: null,
+          beginDate: DateTime.parse("2020-10-17"),
+          createdAt: DateTime.parse("2020-09-10"),
+        );
+        expect(
+          pillSheet1.estimatedEndTakenDateWithPlannedResume.date().addDays(1),
+          DateTime.parse("2020-10-17"),
+        );
+
+        // 変更後の末尾は、過去の服用お休みではなく服用再開予定日ありの服用お休み
+        final updatedPillSheet1 = pillSheet1.copyWith(
+          restDurations: [afterPastRestDuration, plannedRestDuration],
+        );
+        // 変更後: 9/10 + 27日 + 服用お休み3日 + 7日 = 10/17 なので、2枚目は10/18開始
+        final updatedPillSheet2 = pillSheet2.copyWith(
+          beginDate: DateTime.parse("2020-10-18"),
+        );
+
+        final pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: ["pill_sheet_id_1", "pill_sheet_id_2"],
+          pillSheets: [pillSheet1, pillSheet2],
+          createdAt: DateTime.parse("2020-09-10"),
+        );
+        final updatedPillSheetGroup = pillSheetGroup.copyWith(
+          pillSheets: [updatedPillSheet1, updatedPillSheet2],
+        );
+        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+        when(
+          batchSetPillSheetGroup(batch, updatedPillSheetGroup),
+        ).thenReturn(updatedPillSheetGroup);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createChangedRestDurationAction(
+          beforeRestDuration: pastRestDuration,
+          afterRestDuration: afterPastRestDuration,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: updatedPillSheetGroup,
+        );
+        final batchSetPillSheetModifiedHistory =
+            MockBatchSetPillSheetModifiedHistory();
+        when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+        final changeRestDuration = ChangeRestDuration(
+          actionType: PillSheetModifiedActionType.changedRestDuration,
+          batchFactory: batchFactory,
+          batchSetPillSheetGroup: batchSetPillSheetGroup,
+          batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+        );
+        await changeRestDuration.call(
+          fromRestDuration: pastRestDuration,
+          toRestDuration: afterPastRestDuration,
+          pillSheetGroup: pillSheetGroup,
+        );
+
+        verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
+        verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
+      },
+    );
+
+    group("lastTakenDateの補正", () {
+      test(
+        "1枚のシートで28番まで服用済みの状態で服用お休み期間を4日から2日に短くすると、lastTakenDateが新しい終了予定日の日付に補正されlastTakenOrZeroPillNumberが28のまま",
+        () async {
+          var mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2020-12-01"));
+
+          final beforeRestDuration = RestDuration(
+            id: "rest_duration_id",
+            beginDate: DateTime.parse("2020-09-10"),
+            createdDate: DateTime.parse("2020-09-10"),
+            endDate: DateTime.parse("2020-09-14"),
+          );
+          final afterRestDuration = RestDuration(
+            id: "rest_duration_id",
+            beginDate: DateTime.parse("2020-09-10"),
+            createdDate: DateTime.parse("2020-09-10"),
+            endDate: DateTime.parse("2020-09-12"),
+          );
+
+          final batchFactory = MockBatchFactory();
+          final batch = MockWriteBatch();
+          when(batchFactory.batch()).thenReturn(batch);
+
+          // 28錠を服用お休み4日分延びた10/2に28番まで服用済み
+          final pillSheet = PillSheet.v1(
+            id: "pill_sheet_id_1",
+            groupIndex: 0,
+            typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+            lastTakenDate: DateTime.parse("2020-10-02"),
+            beginDate: DateTime.parse("2020-09-01"),
+            createdAt: DateTime.parse("2020-09-01"),
+            restDurations: [beforeRestDuration],
+          );
+          expect(pillSheet.lastTakenOrZeroPillNumber, 28);
+          // 補正しない場合は短くした2日分、錠数を超える
+          expect(
+            pillSheet.copyWith(
+                restDurations: [afterRestDuration]).lastTakenOrZeroPillNumber,
+            30,
+          );
+          final updatedPillSheet = (pillSheet as PillSheetV1).copyWith(
+            lastTakenDate: DateTime.parse("2020-09-30"),
+            restDurations: [afterRestDuration],
+          );
+          expect(updatedPillSheet.lastTakenOrZeroPillNumber, 28);
+
+          final pillSheetGroup = PillSheetGroup(
+            id: "group_id",
+            pillSheetIDs: ["pill_sheet_id_1"],
+            pillSheets: [pillSheet],
+            createdAt: DateTime.parse("2020-09-01"),
+          );
+          final updatedPillSheetGroup = pillSheetGroup.copyWith(
+            pillSheets: [updatedPillSheet],
+          );
+          final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+          when(
+            batchSetPillSheetGroup(batch, updatedPillSheetGroup),
+          ).thenReturn(updatedPillSheetGroup);
+
+          final history = PillSheetModifiedHistoryServiceActionFactory
+              .createChangedRestDurationAction(
+            beforeRestDuration: beforeRestDuration,
+            afterRestDuration: afterRestDuration,
+            beforePillSheetGroup: pillSheetGroup,
+            afterPillSheetGroup: updatedPillSheetGroup,
+          );
+          final batchSetPillSheetModifiedHistory =
+              MockBatchSetPillSheetModifiedHistory();
+          when(batchSetPillSheetModifiedHistory(batch, history))
+              .thenReturn(null);
+
+          final changeRestDuration = ChangeRestDuration(
+            actionType: PillSheetModifiedActionType.changedRestDuration,
+            batchFactory: batchFactory,
+            batchSetPillSheetGroup: batchSetPillSheetGroup,
+            batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+          );
+          await changeRestDuration.call(
+            fromRestDuration: beforeRestDuration,
+            toRestDuration: afterRestDuration,
+            pillSheetGroup: pillSheetGroup,
+          );
+
+          verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup))
+              .called(1);
+          verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
+        },
+      );
+
+      for (final isTakenAllSecondPillSheet in [true, false]) {
+        test(
+          isTakenAllSecondPillSheet
+              ? "複数シートで1枚目の服用お休み期間を短くした時、2枚目が全て服用済みなら2枚目のlastTakenDateも新しい終了予定日に補正される"
+              : "複数シートで1枚目の服用お休み期間を短くした時、2枚目が服用途中ならlastTakenDateは変わらない",
+          () async {
+            var mockTodayRepository = MockTodayService();
+            todayRepository = mockTodayRepository;
+            when(mockTodayRepository.now())
+                .thenReturn(DateTime.parse("2020-12-01"));
+
+            final beforeRestDuration = RestDuration(
+              id: "rest_duration_id",
+              beginDate: DateTime.parse("2020-09-10"),
+              createdDate: DateTime.parse("2020-09-10"),
+              endDate: DateTime.parse("2020-09-14"),
+            );
+            final afterRestDuration = RestDuration(
+              id: "rest_duration_id",
+              beginDate: DateTime.parse("2020-09-10"),
+              createdDate: DateTime.parse("2020-09-10"),
+              endDate: DateTime.parse("2020-09-12"),
+            );
+            // 変更対象ではない2枚目の服用お休み期間。2枚目がlastTakenDateをクリアされず保持される条件
+            final secondPillSheetRestDuration = RestDuration(
+              id: "second_rest_duration_id",
+              beginDate: DateTime.parse("2020-10-10"),
+              createdDate: DateTime.parse("2020-10-10"),
+              endDate: DateTime.parse("2020-10-12"),
+            );
+
+            final batchFactory = MockBatchFactory();
+            final batch = MockWriteBatch();
+            when(batchFactory.batch()).thenReturn(batch);
+
+            final pillSheet1 = PillSheet.v1(
+              id: "pill_sheet_id_1",
+              groupIndex: 0,
+              typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+              lastTakenDate: DateTime.parse("2020-10-02"),
+              beginDate: DateTime.parse("2020-09-01"),
+              createdAt: DateTime.parse("2020-09-01"),
+              restDurations: [beforeRestDuration],
+            );
+            // 変更前の終了予定日は 10/3 + 27日 + 服用お休み2日 = 11/1
+            final pillSheet2 = PillSheet.v1(
+              id: "pill_sheet_id_2",
+              groupIndex: 1,
+              typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+              lastTakenDate: DateTime.parse(
+                isTakenAllSecondPillSheet ? "2020-11-01" : "2020-10-20",
+              ),
+              beginDate: DateTime.parse("2020-10-03"),
+              createdAt: DateTime.parse("2020-09-01"),
+              restDurations: [secondPillSheetRestDuration],
+            );
+            final updatedPillSheet1 = (pillSheet1 as PillSheetV1).copyWith(
+              lastTakenDate: DateTime.parse("2020-09-30"),
+              restDurations: [afterRestDuration],
+            );
+            // 変更後の2枚目は 10/1 開始で終了予定日が 10/30 になる
+            final updatedPillSheet2 = (pillSheet2 as PillSheetV1).copyWith(
+              lastTakenDate: DateTime.parse(
+                isTakenAllSecondPillSheet ? "2020-10-30" : "2020-10-20",
+              ),
+              beginDate: DateTime.parse("2020-10-01"),
+            );
+            expect(
+              updatedPillSheet2.estimatedEndTakenDate.date(),
+              DateTime.parse("2020-10-30"),
+            );
+            expect(
+              updatedPillSheet2.lastTakenOrZeroPillNumber,
+              isTakenAllSecondPillSheet ? 28 : 18,
+            );
+
+            final pillSheetGroup = PillSheetGroup(
+              id: "group_id",
+              pillSheetIDs: ["pill_sheet_id_1", "pill_sheet_id_2"],
+              pillSheets: [pillSheet1, pillSheet2],
+              createdAt: DateTime.parse("2020-09-01"),
+            );
+            final updatedPillSheetGroup = pillSheetGroup.copyWith(
+              pillSheets: [updatedPillSheet1, updatedPillSheet2],
+            );
+            final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+            when(
+              batchSetPillSheetGroup(batch, updatedPillSheetGroup),
+            ).thenReturn(updatedPillSheetGroup);
+
+            final history = PillSheetModifiedHistoryServiceActionFactory
+                .createChangedRestDurationAction(
+              beforeRestDuration: beforeRestDuration,
+              afterRestDuration: afterRestDuration,
+              beforePillSheetGroup: pillSheetGroup,
+              afterPillSheetGroup: updatedPillSheetGroup,
+            );
+            final batchSetPillSheetModifiedHistory =
+                MockBatchSetPillSheetModifiedHistory();
+            when(batchSetPillSheetModifiedHistory(batch, history))
+                .thenReturn(null);
+
+            final changeRestDuration = ChangeRestDuration(
+              actionType: PillSheetModifiedActionType.changedRestDuration,
+              batchFactory: batchFactory,
+              batchSetPillSheetGroup: batchSetPillSheetGroup,
+              batchSetPillSheetModifiedHistory:
+                  batchSetPillSheetModifiedHistory,
+            );
+            await changeRestDuration.call(
+              fromRestDuration: beforeRestDuration,
+              toRestDuration: afterRestDuration,
+              pillSheetGroup: pillSheetGroup,
+            );
+
+            verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup))
+                .called(1);
+            verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
+          },
+        );
+      }
+    });
   });
 }

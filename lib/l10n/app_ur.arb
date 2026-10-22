@@ -561,5 +561,11 @@
   "addPausePeriod": "لینے کے وقفے کی مدت شامل کریں",
   "addedPausePeriod": "استعمال کے وقفے کی مدت شامل کر دی گئی ہے",
   "pausePeriodOverlapsOther": "کسی اور لینے کے وقفے کی مدت کے ساتھ اوورلیپ ہونے والی مدت منتخب نہیں کی جا سکتی",
-  "pauseEndDateMustBeAfterStartDate": "براہ کرم استعمال کے وقفے کی اختتامی تاریخ کے لیے آغاز کی تاریخ کے بعد کی کوئی تاریخ منتخب کریں۔"
+  "pauseEndDateMustBeAfterStartDate": "براہ کرم استعمال کے وقفے کی اختتامی تاریخ کے لیے آغاز کی تاریخ کے بعد کی کوئی تاریخ منتخب کریں۔",
+  "plannedResumeDateOptional": "دوبارہ استعمال شروع کرنے کی متوقع تاریخ (اختیاری)",
+  "plannedResumeDateNotSet": "سیٹ نہیں ہے",
+  "selectPlannedResumeDate": "دوبارہ استعمال شروع کرنے کی طے شدہ تاریخ منتخب کریں",
+  "pauseEndDateLimitIsToday": "اختتامی تاریخ صرف آج تک ہی مقرر کی جا سکتی ہے",
+  "pauseEndDateLimitBeforeNextPause": "اگلے وقفے ({date}〜) سے نہ ٹکرانے والے دن تک",
+  "pauseStartDateLimit": "شروع کی تاریخ {date} تک منتخب کی جا سکتی ہے"
 }

@@ -561,5 +561,11 @@
   "addPausePeriod": "सेवन विराम अवधि जोड़ें",
   "addedPausePeriod": "सेवन विराम अवधि जोड़ दी गई है",
   "pausePeriodOverlapsOther": "आप किसी ऐसी अवधि का चयन नहीं कर सकते जो किसी अन्य सेवन-विश्राम अवधि से ओवरलैप करती हो",
-  "pauseEndDateMustBeAfterStartDate": "कृपया सेवन विराम की समाप्ति तिथि के लिए शुरूआत की तारीख के बाद की तारीख चुनें।"
+  "pauseEndDateMustBeAfterStartDate": "कृपया सेवन विराम की समाप्ति तिथि के लिए शुरूआत की तारीख के बाद की तारीख चुनें।",
+  "plannedResumeDateOptional": "दोबारा सेवन शुरू करने की निर्धारित तिथि (वैकल्पिक)",
+  "plannedResumeDateNotSet": "सेट नहीं है",
+  "selectPlannedResumeDate": "सेवन दोबारा शुरू करने की निर्धारित तिथि चुनें",
+  "pauseEndDateLimitIsToday": "समाप्ति तिथि केवल आज तक ही सेट की जा सकती है",
+  "pauseEndDateLimitBeforeNextPause": "अगले विराम ({date}〜) से न टकराने वाले दिन तक",
+  "pauseStartDateLimit": "शुरुआत की तारीख {date} तक चुनी जा सकती है"
 }

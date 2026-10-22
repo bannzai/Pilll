@@ -561,5 +561,11 @@
   "addPausePeriod": "သောက်သုံးမှုရပ်နားချိန်ကာလ ထည့်ပါ",
   "addedPausePeriod": "သောက်သုံးမှု အနားယူကာလကို ထည့်ပြီးပါပြီ",
   "pausePeriodOverlapsOther": "အခြား သောက်သုံးမှု ရပ်နားချိန်နှင့် ထပ်နေသော ကာလကို ရွေးချယ်၍မရပါ",
-  "pauseEndDateMustBeAfterStartDate": "ကျေးဇူးပြု၍ သောက်သုံးမှုနားရက်၏ ပြီးဆုံးရက်အတွက် စတင်ရက်နောက်ပိုင်းရက်ကို ရွေးချယ်ပါ။"
+  "pauseEndDateMustBeAfterStartDate": "ကျေးဇူးပြု၍ သောက်သုံးမှုနားရက်၏ ပြီးဆုံးရက်အတွက် စတင်ရက်နောက်ပိုင်းရက်ကို ရွေးချယ်ပါ။",
+  "plannedResumeDateOptional": "ပြန်လည်သောက်သုံးမည့် ရက်စွဲ (ရွေးချယ်နိုင်သည်)",
+  "plannedResumeDateNotSet": "မသတ်မှတ်ရသေးပါ",
+  "selectPlannedResumeDate": "ပြန်လည်သောက်သုံးမည့် စီစဉ်ထားသော ရက်စွဲကို ရွေးပါ",
+  "pauseEndDateLimitIsToday": "ပြီးဆုံးရက်ကို ယနေ့အထိသာ သတ်မှတ်နိုင်ပါသည်",
+  "pauseEndDateLimitBeforeNextPause": "နောက်လာမည့်နားရက် ({date}〜) နှင့် မထပ်သည့်နေ့အထိ",
+  "pauseStartDateLimit": "စတင်ရက်ကို {date} အထိ ရွေးချယ်နိုင်သည်"
 }

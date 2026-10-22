@@ -561,5 +561,11 @@
   "addPausePeriod": "הוספת תקופת הפסקה בנטילה",
   "addedPausePeriod": "נוספה תקופת הפסקה בנטילה",
   "pausePeriodOverlapsOther": "לא ניתן לבחור תקופה שחופפת לתקופת הפסקה אחרת של נטילה",
-  "pauseEndDateMustBeAfterStartDate": "יש לבחור תאריך מאוחר מתאריך ההתחלה כתאריך סיום ההפסקה בנטילה."
+  "pauseEndDateMustBeAfterStartDate": "יש לבחור תאריך מאוחר מתאריך ההתחלה כתאריך סיום ההפסקה בנטילה.",
+  "plannedResumeDateOptional": "תאריך מתוכנן לחידוש הנטילה (אופציונלי)",
+  "plannedResumeDateNotSet": "לא הוגדר",
+  "selectPlannedResumeDate": "בחרי את התאריך המתוכנן לחידוש הנטילה",
+  "pauseEndDateLimitIsToday": "ניתן להגדיר את תאריך הסיום עד היום בלבד",
+  "pauseEndDateLimitBeforeNextPause": "עד ליום שאינו חופף להפסקה הבאה ({date}〜)",
+  "pauseStartDateLimit": "ניתן לבחור את תאריך ההתחלה עד {date}"
 }

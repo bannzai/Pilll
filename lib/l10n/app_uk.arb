@@ -561,5 +561,11 @@
   "addPausePeriod": "Додати період перерви в прийомі",
   "addedPausePeriod": "Додано період перерви в прийомі",
   "pausePeriodOverlapsOther": "Не можна вибрати період, який перетинається з іншим періодом перерви в прийомі",
-  "pauseEndDateMustBeAfterStartDate": "Будь ласка, виберіть дату завершення перерви в прийомі пізніше за дату початку."
+  "pauseEndDateMustBeAfterStartDate": "Будь ласка, виберіть дату завершення перерви в прийомі пізніше за дату початку.",
+  "plannedResumeDateOptional": "Запланована дата відновлення прийому (необов’язково)",
+  "plannedResumeDateNotSet": "Не задано",
+  "selectPlannedResumeDate": "Виберіть заплановану дату відновлення прийому",
+  "pauseEndDateLimitIsToday": "Дату завершення можна встановити лише до сьогодні",
+  "pauseEndDateLimitBeforeNextPause": "До дня, який не перетинається з наступною перервою ({date}–)",
+  "pauseStartDateLimit": "Дату початку можна вибрати до {date}"
 }

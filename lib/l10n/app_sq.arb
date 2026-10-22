@@ -561,5 +561,11 @@
   "addPausePeriod": "Shto periudhën e pauzës së marrjes",
   "addedPausePeriod": "U shtua periudha e pushimit nga marrja",
   "pausePeriodOverlapsOther": "Nuk mund të zgjidhni një periudhë që mbivendoset me një periudhë tjetër pauze të marrjes",
-  "pauseEndDateMustBeAfterStartDate": "Ju lutemi, zgjidhni një datë pas datës së fillimit si datë përfundimi të pushimit të marrjes."
+  "pauseEndDateMustBeAfterStartDate": "Ju lutemi, zgjidhni një datë pas datës së fillimit si datë përfundimi të pushimit të marrjes.",
+  "plannedResumeDateOptional": "Data e planifikuar për rifillimin e marrjes (opsionale)",
+  "plannedResumeDateNotSet": "Nuk është caktuar",
+  "selectPlannedResumeDate": "Zgjidhni datën e planifikuar për rifillimin e marrjes",
+  "pauseEndDateLimitIsToday": "Data e përfundimit mund të caktohet vetëm deri sot",
+  "pauseEndDateLimitBeforeNextPause": "Deri në ditën që nuk përputhet me pushimin e radhës ({date}–)",
+  "pauseStartDateLimit": "Data e fillimit mund të zgjidhet deri më {date}"
 }

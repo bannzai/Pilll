@@ -561,5 +561,11 @@
   "addPausePeriod": "Qabul qilish tanaffus muddatini qoʻshish",
   "addedPausePeriod": "Qabul qilish tanaffusi muddati qoʻshildi",
   "pausePeriodOverlapsOther": "Boshqa qabul tanaffusi davri bilan ustma-ust tushadigan davrni tanlab bo‘lmaydi",
-  "pauseEndDateMustBeAfterStartDate": "Iltimos, qabul qilish tanaffusining tugash sanasi uchun boshlanish sanasidan keyingi sanani tanlang."
+  "pauseEndDateMustBeAfterStartDate": "Iltimos, qabul qilish tanaffusining tugash sanasi uchun boshlanish sanasidan keyingi sanani tanlang.",
+  "plannedResumeDateOptional": "Qabulni qayta boshlash rejalashtirilgan sana (ixtiyoriy)",
+  "plannedResumeDateNotSet": "Belgilanmagan",
+  "selectPlannedResumeDate": "Qabulni qayta boshlash rejalashtirilgan sanani tanlang",
+  "pauseEndDateLimitIsToday": "Tugash sanasini faqat bugungacha belgilash mumkin",
+  "pauseEndDateLimitBeforeNextPause": "Keyingi tanaffus ({date}–) bilan ustma-ust kelmaydigan kungacha",
+  "pauseStartDateLimit": "Boshlanish sanasini {date} gacha tanlash mumkin"
 }
