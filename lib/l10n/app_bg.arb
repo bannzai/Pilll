@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Моля,\nкажете ни за предишния период на пауза",
   "yazFlexHasNotRestedYet": "Все още не съм правила пауза в приема",
   "yazFlexLastRestDurationBeginDate": "Денят, в който е започнала паузата",
-  "yazFlexLastRestDurationEndDate": "Дата на подновяване на приема"
+  "yazFlexLastRestDurationEndDate": "Дата на подновяване на приема",
+  "yazFlexSelectDate": "Изберете дата"
 }

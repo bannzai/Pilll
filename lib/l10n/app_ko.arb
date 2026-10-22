@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "지난 휴약 기간에 대해\n알려주세요",
   "yazFlexHasNotRestedYet": "아직 휴약하지 않았어요",
   "yazFlexLastRestDurationBeginDate": "휴약이 시작된 날",
-  "yazFlexLastRestDurationEndDate": "복용을 재개한 날"
+  "yazFlexLastRestDurationEndDate": "복용을 재개한 날",
+  "yazFlexSelectDate": "날짜를 선택해 주세요"
 }

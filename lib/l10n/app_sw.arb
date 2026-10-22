@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Tafadhali\ntuambie kuhusu mapumziko yako ya mwisho",
   "yazFlexHasNotRestedYet": "Bado sijaanza mapumziko ya tembe",
   "yazFlexLastRestDurationBeginDate": "Siku ambayo mapumziko yalianza",
-  "yazFlexLastRestDurationEndDate": "Siku uliyoanza tena kutumia"
+  "yazFlexLastRestDurationEndDate": "Siku uliyoanza tena kutumia",
+  "yazFlexSelectDate": "Chagua tarehe"
 }

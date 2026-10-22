@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Vinsamlegast segðu okkur\nfrá síðasta hléinu þínu",
   "yazFlexHasNotRestedYet": "Ég hef ekki enn tekið hlé frá pillunni",
   "yazFlexLastRestDurationBeginDate": "Dagurinn sem hléið hófst",
-  "yazFlexLastRestDurationEndDate": "Dagurinn sem þú hófst aftur að taka lyfið"
+  "yazFlexLastRestDurationEndDate": "Dagurinn sem þú hófst aftur að taka lyfið",
+  "yazFlexSelectDate": "Veldu dagsetningu"
 }

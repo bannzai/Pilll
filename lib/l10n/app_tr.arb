@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Lütfen\nbir önceki ara döneminiz hakkında bize bilgi verin",
   "yazFlexHasNotRestedYet": "Henüz ilaç arası vermedim",
   "yazFlexLastRestDurationBeginDate": "Aranın başladığı gün",
-  "yazFlexLastRestDurationEndDate": "Tekrar almaya başladığınız gün"
+  "yazFlexLastRestDurationEndDate": "Tekrar almaya başladığınız gün",
+  "yazFlexSelectDate": "Tarih seçin"
 }

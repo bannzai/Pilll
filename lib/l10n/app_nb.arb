@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Fortell oss gjerne\nom den forrige pausen din",
   "yazFlexHasNotRestedYet": "Jeg har ikke hatt pause fra pillene ennå",
   "yazFlexLastRestDurationBeginDate": "Dagen pausen startet",
-  "yazFlexLastRestDurationEndDate": "Datoen du begynte å ta den igjen"
+  "yazFlexLastRestDurationEndDate": "Datoen du begynte å ta den igjen",
+  "yazFlexSelectDate": "Velg en dato"
 }

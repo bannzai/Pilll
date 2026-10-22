@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "សូមប្រាប់យើង\nអំពីរយៈពេលឈប់ថ្នាំលើកមុន",
   "yazFlexHasNotRestedYet": "ខ្ញុំនៅមិនទាន់បានឈប់លេបថ្នាំនៅឡើយទេ",
   "yazFlexLastRestDurationBeginDate": "ថ្ងៃដែលការផ្អាកបានចាប់ផ្ដើម",
-  "yazFlexLastRestDurationEndDate": "ថ្ងៃដែលអ្នកបានចាប់ផ្ដើមប្រើម្តងទៀត"
+  "yazFlexLastRestDurationEndDate": "ថ្ងៃដែលអ្នកបានចាប់ផ្ដើមប្រើម្តងទៀត",
+  "yazFlexSelectDate": "ជ្រើសរើសកាលបរិច្ឆេទ"
 }

@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "தயவுசெய்து\nமுந்தைய இடைவேளை பற்றி எங்களுக்குச் சொல்லுங்கள்",
   "yazFlexHasNotRestedYet": "நான் இன்னும் மாத்திரை இடைவெளி எடுக்கவில்லை",
   "yazFlexLastRestDurationBeginDate": "இடைவேளை தொடங்கிய நாள்",
-  "yazFlexLastRestDurationEndDate": "மீண்டும் எடுத்துக்கொள்ளத் தொடங்கிய நாள்"
+  "yazFlexLastRestDurationEndDate": "மீண்டும் எடுத்துக்கொள்ளத் தொடங்கிய நாள்",
+  "yazFlexSelectDate": "தேதியைத் தேர்ந்தெடுக்கவும்"
 }

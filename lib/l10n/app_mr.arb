@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "कृपया\nमागील विश्रांती कालावधीबद्दल आम्हाला सांगा",
   "yazFlexHasNotRestedYet": "मी अजून गोळ्यांमधला ब्रेक घेतलेला नाही",
   "yazFlexLastRestDurationBeginDate": "विश्रांती सुरू झालेला दिवस",
-  "yazFlexLastRestDurationEndDate": "पुन्हा घेणे सुरू केलेला दिवस"
+  "yazFlexLastRestDurationEndDate": "पुन्हा घेणे सुरू केलेला दिवस",
+  "yazFlexSelectDate": "तारीख निवडा"
 }

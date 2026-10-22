@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Fortæl os venligst\nom din seneste pause",
   "yazFlexHasNotRestedYet": "Jeg har endnu ikke holdt pause fra pillerne",
   "yazFlexLastRestDurationBeginDate": "Dagen, hvor pausen startede",
-  "yazFlexLastRestDurationEndDate": "Dato for genoptagelse"
+  "yazFlexLastRestDurationEndDate": "Dato for genoptagelse",
+  "yazFlexSelectDate": "Vælg en dato"
 }

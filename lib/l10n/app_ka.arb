@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "გთხოვთ,\ngვაცნობეთ წინა შესვენების შესახებ",
   "yazFlexHasNotRestedYet": "ჯერ არ მქონია აბების მიღების შესვენება",
   "yazFlexLastRestDurationBeginDate": "დღე, როცა შესვენება დაიწყო",
-  "yazFlexLastRestDurationEndDate": "მიღების განახლების დღე"
+  "yazFlexLastRestDurationEndDate": "მიღების განახლების დღე",
+  "yazFlexSelectDate": "აირჩიეთ თარიღი"
 }

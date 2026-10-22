@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "لطفاً\nدرباره آخرین دوره وقفه به ما بگویید",
   "yazFlexHasNotRestedYet": "هنوز دوره قطع مصرف قرص را شروع نکرده‌ام",
   "yazFlexLastRestDurationBeginDate": "روز شروع وقفه",
-  "yazFlexLastRestDurationEndDate": "روز از سرگیری مصرف"
+  "yazFlexLastRestDurationEndDate": "روز از سرگیری مصرف",
+  "yazFlexSelectDate": "تاریخ را انتخاب کنید"
 }

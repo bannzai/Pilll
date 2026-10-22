@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "કૃપા કરીને\nપાછલા વિરામ સમય વિશે અમને જણાવો",
   "yazFlexHasNotRestedYet": "મેં હજી સુધી ગોળીનો વિરામ લીધો નથી",
   "yazFlexLastRestDurationBeginDate": "વિરામ શરૂ થયેલો દિવસ",
-  "yazFlexLastRestDurationEndDate": "ફરીથી લેવાનું શરૂ કરેલો દિવસ"
+  "yazFlexLastRestDurationEndDate": "ફરીથી લેવાનું શરૂ કરેલો દિવસ",
+  "yazFlexSelectDate": "તારીખ પસંદ કરો"
 }

@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Dywedwch wrthym,\nos gwelwch yn dda,\nam eich egwyl ddiwethaf",
   "yazFlexHasNotRestedYet": "Nid wyf wedi cael seibiant rhag y bilsen eto",
   "yazFlexLastRestDurationBeginDate": "Y diwrnod y dechreuodd y seibiant",
-  "yazFlexLastRestDurationEndDate": "Y diwrnod y gwnaethoch ailddechrau ei gymryd"
+  "yazFlexLastRestDurationEndDate": "Y diwrnod y gwnaethoch ailddechrau ei gymryd",
+  "yazFlexSelectDate": "Dewiswch ddyddiad"
 }

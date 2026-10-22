@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Mohon beri tahu kami\ntentang jeda terakhir Anda",
   "yazFlexHasNotRestedYet": "Saya belum menjalani jeda minum pil",
   "yazFlexLastRestDurationBeginDate": "Hari dimulainya jeda",
-  "yazFlexLastRestDurationEndDate": "Hari Anda kembali mulai minum"
+  "yazFlexLastRestDurationEndDate": "Hari Anda kembali mulai minum",
+  "yazFlexSelectDate": "Pilih tanggal"
 }

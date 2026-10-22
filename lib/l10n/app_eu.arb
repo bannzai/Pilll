@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Mesedez,\nesan iezaguzu aurreko atsedenaldiari buruz",
   "yazFlexHasNotRestedYet": "Oraindik ez dut pilulen etenaldirik egin",
   "yazFlexLastRestDurationBeginDate": "Atsedena hasi zen eguna",
-  "yazFlexLastRestDurationEndDate": "Hartzeari berriro ekin zenion eguna"
+  "yazFlexLastRestDurationEndDate": "Hartzeari berriro ekin zenion eguna",
+  "yazFlexSelectDate": "Hautatu data"
 }

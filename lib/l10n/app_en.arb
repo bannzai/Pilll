@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Please tell us\nabout your last break",
   "yazFlexHasNotRestedYet": "I haven’t taken a pill break yet",
   "yazFlexLastRestDurationBeginDate": "Day the break started",
-  "yazFlexLastRestDurationEndDate": "Date you resumed taking it"
+  "yazFlexLastRestDurationEndDate": "Date you resumed taking it",
+  "yazFlexSelectDate": "Select a date"
 }

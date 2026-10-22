@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Conte-nos, por favor,\nsobre a sua última pausa",
   "yazFlexHasNotRestedYet": "Ainda não fiz uma pausa da pílula",
   "yazFlexLastRestDurationBeginDate": "Dia em que a pausa começou",
-  "yazFlexLastRestDurationEndDate": "Dia em que retomou a toma"
+  "yazFlexLastRestDurationEndDate": "Dia em que retomou a toma",
+  "yazFlexSelectDate": "Selecione uma data"
 }

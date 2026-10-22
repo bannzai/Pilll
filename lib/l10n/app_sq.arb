@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Ju lutemi,\nna tregoni për pushimin e mëparshëm",
   "yazFlexHasNotRestedYet": "Ende nuk kam bërë pauzë nga pilula",
   "yazFlexLastRestDurationBeginDate": "Dita kur filloi pushimi",
-  "yazFlexLastRestDurationEndDate": "Dita kur rifilluat marrjen"
+  "yazFlexLastRestDurationEndDate": "Dita kur rifilluat marrjen",
+  "yazFlexSelectDate": "Zgjidhni datën"
 }

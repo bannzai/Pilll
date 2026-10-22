@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Будь ласка,\nрозкажіть про попередню перерву",
   "yazFlexHasNotRestedYet": "Я ще не робила перерву в прийомі таблеток",
   "yazFlexLastRestDurationBeginDate": "День початку перерви",
-  "yazFlexLastRestDurationEndDate": "День відновлення прийому"
+  "yazFlexLastRestDurationEndDate": "День відновлення прийому",
+  "yazFlexSelectDate": "Виберіть дату"
 }

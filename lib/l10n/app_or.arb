@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "ଦୟାକରି\nପୂର୍ବବର୍ତ୍ତୀ ବିରତି ସମୟ ବିଷୟରେ ଆମକୁ କୁହନ୍ତୁ",
   "yazFlexHasNotRestedYet": "ମୁଁ ଏପର୍ଯ୍ୟନ୍ତ ଗୋଳି ବନ୍ଦର ବିରତି ନେଇନାହିଁ",
   "yazFlexLastRestDurationBeginDate": "ବିରତି ଆରମ୍ଭ ହୋଇଥିବା ଦିନ",
-  "yazFlexLastRestDurationEndDate": "ପୁଣି ନେବା ଆରମ୍ଭ କରିଥିବା ଦିନ"
+  "yazFlexLastRestDurationEndDate": "ପୁଣି ନେବା ଆରମ୍ଭ କରିଥିବା ଦିନ",
+  "yazFlexSelectDate": "ତାରିଖ ଚୟନ କରନ୍ତୁ"
 }

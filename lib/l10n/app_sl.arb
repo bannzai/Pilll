@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Prosimo,\npovejte nam o prejšnjem premoru",
   "yazFlexHasNotRestedYet": "Še nisem imela premora pri jemanju tablet",
   "yazFlexLastRestDurationBeginDate": "Dan začetka premora",
-  "yazFlexLastRestDurationEndDate": "Dan ponovnega začetka jemanja"
+  "yazFlexLastRestDurationEndDate": "Dan ponovnega začetka jemanja",
+  "yazFlexSelectDate": "Izberite datum"
 }

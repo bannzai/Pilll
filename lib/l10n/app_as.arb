@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "অনুগ্ৰহ কৰি\nআপোনাৰ পূৰ্বৰ ঔষধ-বিৰতিৰ বিষয়ে জনাওক",
   "yazFlexHasNotRestedYet": "মই এতিয়াও ঔষধ বন্ধৰ সময় লোৱা নাই",
   "yazFlexLastRestDurationBeginDate": "বিৰতি আৰম্ভ হোৱা দিন",
-  "yazFlexLastRestDurationEndDate": "পুনৰায় সেৱন আৰম্ভ কৰা দিন"
+  "yazFlexLastRestDurationEndDate": "পুনৰায় সেৱন আৰম্ভ কৰা দিন",
+  "yazFlexSelectDate": "তাৰিখ বাছনি কৰক"
 }

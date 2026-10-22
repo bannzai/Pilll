@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Өтінеміз,\nалдыңғы үзіліс кезеңі туралы айтып беріңіз",
   "yazFlexHasNotRestedYet": "Мен әлі таблетка қабылдауға үзіліс жасаған жоқпын",
   "yazFlexLastRestDurationBeginDate": "Үзіліс басталған күн",
-  "yazFlexLastRestDurationEndDate": "Қабылдауды қайта бастаған күн"
+  "yazFlexLastRestDurationEndDate": "Қабылдауды қайта бастаған күн",
+  "yazFlexSelectDate": "Күнді таңдаңыз"
 }

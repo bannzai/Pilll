@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Zəhmət olmasa\nəvvəlki fasilə dövrünüz barədə məlumat verin",
   "yazFlexHasNotRestedYet": "Hələ dərman fasiləsi etməmişəm",
   "yazFlexLastRestDurationBeginDate": "Fasilənin başladığı gün",
-  "yazFlexLastRestDurationEndDate": "Qəbulu yenidən başladığınız gün"
+  "yazFlexLastRestDurationEndDate": "Qəbulu yenidən başladığınız gün",
+  "yazFlexSelectDate": "Tarix seçin"
 }

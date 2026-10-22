@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Palun rääkige meile\noma eelmisest pausist",
   "yazFlexHasNotRestedYet": "Ma ei ole veel pillipausi teinud",
   "yazFlexLastRestDurationBeginDate": "Päev, mil paus algas",
-  "yazFlexLastRestDurationEndDate": "Võtmise taasalustamise päev"
+  "yazFlexLastRestDurationEndDate": "Võtmise taasalustamise päev",
+  "yazFlexSelectDate": "Valige kuupäev"
 }

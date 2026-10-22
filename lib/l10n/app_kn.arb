@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "ದಯವಿಟ್ಟು\nಹಿಂದಿನ ವಿರಾಮ ಅವಧಿಯ ಬಗ್ಗೆ ನಮಗೆ ತಿಳಿಸಿ",
   "yazFlexHasNotRestedYet": "ನಾನು ಇನ್ನೂ ಮಾತ್ರೆ ಸೇವನೆಗೆ ವಿರಾಮ ತೆಗೆದುಕೊಂಡಿಲ್ಲ",
   "yazFlexLastRestDurationBeginDate": "ವಿರಾಮ ಆರಂಭವಾದ ದಿನ",
-  "yazFlexLastRestDurationEndDate": "ಮತ್ತೆ ಸೇವನೆ ಪ್ರಾರಂಭಿಸಿದ ದಿನ"
+  "yazFlexLastRestDurationEndDate": "ಮತ್ತೆ ಸೇವನೆ ಪ್ರಾರಂಭಿಸಿದ ದಿನ",
+  "yazFlexSelectDate": "ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"
 }

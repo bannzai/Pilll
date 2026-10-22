@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Lūdzu,\npastāstiet mums par iepriekšējo pārtraukumu",
   "yazFlexHasNotRestedYet": "Es vēl neesmu taisījusi tablešu lietošanas pārtraukumu",
   "yazFlexLastRestDurationBeginDate": "Diena, kad sākās pārtraukums",
-  "yazFlexLastRestDurationEndDate": "Diena, kad atsākāt lietošanu"
+  "yazFlexLastRestDurationEndDate": "Diena, kad atsākāt lietošanu",
+  "yazFlexSelectDate": "Izvēlieties datumu"
 }

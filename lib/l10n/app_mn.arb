@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Өмнөх завсарлагынхаа талаар\nбидэнд хэлнэ үү",
   "yazFlexHasNotRestedYet": "Би эмийн завсарлага хараахан хийгээгүй байна",
   "yazFlexLastRestDurationBeginDate": "Завсарлага эхэлсэн өдөр",
-  "yazFlexLastRestDurationEndDate": "Дахин ууж эхэлсэн өдөр"
+  "yazFlexLastRestDurationEndDate": "Дахин ууж эхэлсэн өдөр",
+  "yazFlexSelectDate": "Огноо сонгоно уу"
 }

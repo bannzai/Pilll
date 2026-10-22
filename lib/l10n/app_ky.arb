@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Сураныч,\nмурунку тыныгуу мезгили тууралуу айтып бериңиз",
   "yazFlexHasNotRestedYet": "Мен азырынча таблетканы ичүүдөн тыныгуу жасай элекмин",
   "yazFlexLastRestDurationBeginDate": "Тыныгуу башталган күн",
-  "yazFlexLastRestDurationEndDate": "Кайра иче баштаган күн"
+  "yazFlexLastRestDurationEndDate": "Кайра иче баштаган күн",
+  "yazFlexSelectDate": "Күндү тандаңыз"
 }

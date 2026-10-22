@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Παρακαλώ,\nενημερώστε μας για το προηγούμενο διάστημα διακοπής",
   "yazFlexHasNotRestedYet": "Δεν έχω κάνει ακόμη διάλειμμα από το χάπι",
   "yazFlexLastRestDurationBeginDate": "Η ημέρα που ξεκίνησε η διακοπή",
-  "yazFlexLastRestDurationEndDate": "Ημερομηνία επανέναρξης λήψης"
+  "yazFlexLastRestDurationEndDate": "Ημερομηνία επανέναρξης λήψης",
+  "yazFlexSelectDate": "Επιλέξτε ημερομηνία"
 }

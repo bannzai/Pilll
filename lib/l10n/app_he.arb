@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "נשמח אם תספרי לנו\nעל ההפסקה הקודמת",
   "yazFlexHasNotRestedYet": "עדיין לא עשיתי הפסקה מהגלולות",
   "yazFlexLastRestDurationBeginDate": "היום שבו ההפסקה התחילה",
-  "yazFlexLastRestDurationEndDate": "היום שבו חזרת ליטול"
+  "yazFlexLastRestDurationEndDate": "היום שבו חזרת ליטול",
+  "yazFlexSelectDate": "בחרי תאריך"
 }

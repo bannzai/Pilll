@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Prosím,\nřekněte nám o svém posledním období pauzy",
   "yazFlexHasNotRestedYet": "Ještě jsem neměla pauzu v užívání",
   "yazFlexLastRestDurationBeginDate": "Den začátku pauzy",
-  "yazFlexLastRestDurationEndDate": "Den opětovného zahájení užívání"
+  "yazFlexLastRestDurationEndDate": "Den opětovného zahájení užívání",
+  "yazFlexSelectDate": "Vyberte datum"
 }

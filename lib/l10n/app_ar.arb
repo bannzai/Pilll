@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "يرجى إخبارنا\nعن فترة التوقف السابقة",
   "yazFlexHasNotRestedYet": "لم أبدأ فترة التوقف عن تناول الحبوب بعد",
   "yazFlexLastRestDurationBeginDate": "تاريخ بدء فترة التوقف",
-  "yazFlexLastRestDurationEndDate": "تاريخ استئناف تناول الحبوب"
+  "yazFlexLastRestDurationEndDate": "تاريخ استئناف تناول الحبوب",
+  "yazFlexSelectDate": "حددي التاريخ"
 }

@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Berätta gärna för oss\nom din senaste paus",
   "yazFlexHasNotRestedYet": "Jag har ännu inte haft något uppehåll från pillren",
   "yazFlexLastRestDurationBeginDate": "Dagen då uppehållet började",
-  "yazFlexLastRestDurationEndDate": "Dagen du började ta den igen"
+  "yazFlexLastRestDurationEndDate": "Dagen du började ta den igen",
+  "yazFlexSelectDate": "Välj ett datum"
 }

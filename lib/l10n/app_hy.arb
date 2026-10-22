@@ -573,5 +573,6 @@
   "yazFlexLastRestDurationTitle": "Խնդրում ենք\nպատմել նախորդ դադարի մասին",
   "yazFlexHasNotRestedYet": "Դեռևս դեղահաբերի ընդմիջում չեմ արել",
   "yazFlexLastRestDurationBeginDate": "Ընդմիջման սկսվելու օրը",
-  "yazFlexLastRestDurationEndDate": "Վերսկսելու օրը"
+  "yazFlexLastRestDurationEndDate": "Վերսկսելու օրը",
+  "yazFlexSelectDate": "Ընտրեք ամսաթիվը"
 }
