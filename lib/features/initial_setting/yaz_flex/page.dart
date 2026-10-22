@@ -29,6 +29,8 @@ class InitialSettingYazFlexPage extends ConsumerWidget {
         appBar: AppBar(backgroundColor: AppColors.white),
         body: SafeArea(
           child: Container(
+            // Column は子の最大幅に縮むため、説明文が短いと左に寄る。画面幅いっぱいにして中央に揃える
+            width: double.infinity,
             padding: const EdgeInsets.symmetric(horizontal: 40),
             child: Column(
               children: [
