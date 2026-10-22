@@ -202,6 +202,24 @@ List<int> reminderDayOffsetsFor({required List<RestDuration> restDurations}) {
   return List.generate(RegisterReminderLocalNotification.registerDays, (index) => index < restBeginOffset ? index : index + restDays);
 }
 
+/// [reminderDate] に出すリマインドに表示する、ピル番号の文字列を返す
+/// 連続番号(sequential/cyclicSequential)は、通知を出す日を今日とみなして計算する。服用再開予定日ありの服用お休み中に登録した通知でも、
+/// 予定日以降は、その日に画面が表示する番号(服用お休みが終わった日から1番に戻る)と一致させるため
+/// [reminderDate] は通知を登録する日時(reminderDateTime)の日付を渡す。today() から作り直すと、登録の処理が日付をまたいだ時に通知日と番号の基準日がずれるため
+/// number/dateモードの番号はindexから決まるため、この日付に影響されない
+String reminderPillDisplayNumberFor({
+  required PillSheetGroup pillSheetGroup,
+  required int pageIndex,
+  required int pillNumberInPillSheet,
+  required DateTime reminderDate,
+}) {
+  return pillSheetGroup.displayPillNumberWithoutDate(
+    pageIndex: pageIndex,
+    pillNumberInPillSheet: pillNumberInPillSheet,
+    estimatedEventCausingDate: reminderDate.date(),
+  );
+}
+
 // Reminder
 // 最新の状態を元に更新すれば良いので、更新処理に必要な状態はプロパティで持つ。このプロパティは通常ref.watchにより常に最新に保たれる
 // また、状態をcallの引数として受け取らないことで通常はSingle Stateであるものに対して間違った値を受け取れないようにする
@@ -366,9 +384,11 @@ class RegisterReminderLocalNotification {
 
         var pillSheetGroupIndex = activePillSheet.groupIndex;
         var pillSheeType = activePillSheet.pillSheetType;
-        var pillSheetDisplayNumber = pillSheetGroup.displayPillNumberWithoutDate(
+        var pillSheetDisplayNumber = reminderPillDisplayNumberFor(
+          pillSheetGroup: pillSheetGroup,
           pageIndex: activePillSheet.groupIndex,
           pillNumberInPillSheet: pillNumberInPillSheet,
+          reminderDate: reminderDateTime,
         );
 
         // activePillSheetよりも未来のPillSheet
@@ -406,9 +426,11 @@ class RegisterReminderLocalNotification {
               final nextPillSheet = pillSheetGroup.pillSheets[activePillSheet.groupIndex + 1];
               pillSheetGroupIndex = nextPillSheet.groupIndex;
               pillSheeType = nextPillSheet.pillSheetType;
-              pillSheetDisplayNumber = pillSheetGroup.displayPillNumberWithoutDate(
+              pillSheetDisplayNumber = reminderPillDisplayNumberFor(
+                pillSheetGroup: pillSheetGroup,
                 pageIndex: nextPillSheet.groupIndex,
                 pillNumberInPillSheet: pillNumberInPillSheet,
+                reminderDate: reminderDateTime,
               );
 
             case (_, _, _):
