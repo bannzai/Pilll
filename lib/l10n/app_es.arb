@@ -575,5 +575,6 @@
   "yazFlexLastRestDurationBeginDate": "Día en que comenzó el descanso",
   "yazFlexLastRestDurationEndDate": "Día en que reanudaste la toma",
   "yazFlexSelectDate": "Selecciona una fecha",
-  "yazFlexBeginPillNumberPageTitle": "El día que empezaste la lámina,\n¿cuántos días habían pasado desde el descanso?"
+  "yazFlexBeginPillNumberPageTitle": "El día que empezaste la lámina,\n¿cuántos días habían pasado desde el descanso?",
+  "yazFlexNextInputIsRestDuration": "A continuación, introduce tu descanso anterior"
 }

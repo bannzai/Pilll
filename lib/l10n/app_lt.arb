@@ -575,5 +575,6 @@
   "yazFlexLastRestDurationBeginDate": "Diena, kai prasidėjo pertrauka",
   "yazFlexLastRestDurationEndDate": "Diena, kai vėl pradėjote vartoti",
   "yazFlexSelectDate": "Pasirinkite datą",
-  "yazFlexBeginPillNumberPageTitle": "Kurią dieną po pertraukos\npradėjote pakuotę?"
+  "yazFlexBeginPillNumberPageTitle": "Kurią dieną po pertraukos\npradėjote pakuotę?",
+  "yazFlexNextInputIsRestDuration": "Toliau įveskite ankstesnę pertrauką"
 }

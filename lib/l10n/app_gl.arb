@@ -575,5 +575,6 @@
   "yazFlexLastRestDurationBeginDate": "Día no que comezou a pausa",
   "yazFlexLastRestDurationEndDate": "Día no que retomaches a toma",
   "yazFlexSelectDate": "Selecciona unha data",
-  "yazFlexBeginPillNumberPageTitle": "O día que comezaches o blíster,\nque número de día era despois do descanso?"
+  "yazFlexBeginPillNumberPageTitle": "O día que comezaches o blíster,\nque número de día era despois do descanso?",
+  "yazFlexNextInputIsRestDuration": "A continuación, introduce a pausa anterior"
 }

@@ -575,5 +575,6 @@
   "yazFlexLastRestDurationBeginDate": "বিৰতি আৰম্ভ হোৱা দিন",
   "yazFlexLastRestDurationEndDate": "পুনৰায় সেৱন আৰম্ভ কৰা দিন",
   "yazFlexSelectDate": "তাৰিখ বাছনি কৰক",
-  "yazFlexBeginPillNumberPageTitle": "শ্বীটটো আৰম্ভ কৰা দিনটো\nঔষধ নোখোৱা সময় শেষ হোৱাৰ পাছত কিমান নম্বৰ দিন আছিল?"
+  "yazFlexBeginPillNumberPageTitle": "শ্বীটটো আৰম্ভ কৰা দিনটো\nঔষধ নোখোৱা সময় শেষ হোৱাৰ পাছত কিমান নম্বৰ দিন আছিল?",
+  "yazFlexNextInputIsRestDuration": "ইয়াৰ পিছত আগৰ ঔষধ-বিৰতি লিখক"
 }

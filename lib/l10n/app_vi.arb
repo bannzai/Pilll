@@ -575,5 +575,6 @@
   "yazFlexLastRestDurationBeginDate": "Ngày bắt đầu thời gian nghỉ thuốc",
   "yazFlexLastRestDurationEndDate": "Ngày bạn bắt đầu uống lại",
   "yazFlexSelectDate": "Chọn ngày",
-  "yazFlexBeginPillNumberPageTitle": "Vào ngày bạn bắt đầu vỉ thuốc,\nđó là ngày thứ mấy sau khi hết thời gian nghỉ thuốc?"
+  "yazFlexBeginPillNumberPageTitle": "Vào ngày bạn bắt đầu vỉ thuốc,\nđó là ngày thứ mấy sau khi hết thời gian nghỉ thuốc?",
+  "yazFlexNextInputIsRestDuration": "Tiếp theo, hãy nhập khoảng nghỉ trước đó"
 }

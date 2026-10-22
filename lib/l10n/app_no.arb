@@ -575,5 +575,6 @@
   "yazFlexLastRestDurationBeginDate": "Dagen pausen startet",
   "yazFlexLastRestDurationEndDate": "Datoen du begynte å ta den igjen",
   "yazFlexSelectDate": "Velg en dato",
-  "yazFlexBeginPillNumberPageTitle": "Hvilken dag etter pausen\nstartet du brettet?"
+  "yazFlexBeginPillNumberPageTitle": "Hvilken dag etter pausen\nstartet du brettet?",
+  "yazFlexNextInputIsRestDuration": "Deretter legger du inn forrige pause"
 }

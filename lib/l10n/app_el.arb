@@ -575,5 +575,6 @@
   "yazFlexLastRestDurationBeginDate": "Η ημέρα που ξεκίνησε η διακοπή",
   "yazFlexLastRestDurationEndDate": "Ημερομηνία επανέναρξης λήψης",
   "yazFlexSelectDate": "Επιλέξτε ημερομηνία",
-  "yazFlexBeginPillNumberPageTitle": "Την ημέρα που ξεκινήσατε το blister,\nποια μέρα μετά το διάλειμμα ήταν;"
+  "yazFlexBeginPillNumberPageTitle": "Την ημέρα που ξεκινήσατε το blister,\nποια μέρα μετά το διάλειμμα ήταν;",
+  "yazFlexNextInputIsRestDuration": "Στη συνέχεια, εισαγάγετε την προηγούμενη διακοπή"
 }

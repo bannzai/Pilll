@@ -575,5 +575,6 @@
   "yazFlexLastRestDurationBeginDate": "День начала перерыва",
   "yazFlexLastRestDurationEndDate": "День возобновления приёма",
   "yazFlexSelectDate": "Выберите дату",
-  "yazFlexBeginPillNumberPageTitle": "В какой день после перерыва\nвы начали блистер?"
+  "yazFlexBeginPillNumberPageTitle": "В какой день после перерыва\nвы начали блистер?",
+  "yazFlexNextInputIsRestDuration": "Далее введите предыдущий перерыв"
 }

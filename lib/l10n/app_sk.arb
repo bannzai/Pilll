@@ -575,5 +575,6 @@
   "yazFlexLastRestDurationBeginDate": "Deň začiatku prestávky",
   "yazFlexLastRestDurationEndDate": "Deň opätovného začatia užívania",
   "yazFlexSelectDate": "Vyberte dátum",
-  "yazFlexBeginPillNumberPageTitle": "Keď ste začali blister,\nktorý to bol deň po prestávke?"
+  "yazFlexBeginPillNumberPageTitle": "Keď ste začali blister,\nktorý to bol deň po prestávke?",
+  "yazFlexNextInputIsRestDuration": "Ďalej zadajte predchádzajúcu prestávku"
 }

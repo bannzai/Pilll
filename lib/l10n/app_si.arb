@@ -575,5 +575,6 @@
   "yazFlexLastRestDurationBeginDate": "විරාමය ආරම්භ වූ දිනය",
   "yazFlexLastRestDurationEndDate": "නැවත ලබාගැනීම ආරම්භ කළ දිනය",
   "yazFlexSelectDate": "දිනය තෝරන්න",
-  "yazFlexBeginPillNumberPageTitle": "ඔබ ෂීට් එක ආරම්භ කළ දිනය\nවිරාමය අවසන් වී දින කීවෙනි දිනද?"
+  "yazFlexBeginPillNumberPageTitle": "ඔබ ෂීට් එක ආරම්භ කළ දිනය\nවිරාමය අවසන් වී දින කීවෙනි දිනද?",
+  "yazFlexNextInputIsRestDuration": "ඊළඟට, පෙර විරාම කාලය ඇතුළත් කරන්න"
 }

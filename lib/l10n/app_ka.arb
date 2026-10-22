@@ -575,5 +575,6 @@
   "yazFlexLastRestDurationBeginDate": "დღე, როცა შესვენება დაიწყო",
   "yazFlexLastRestDurationEndDate": "მიღების განახლების დღე",
   "yazFlexSelectDate": "აირჩიეთ თარიღი",
-  "yazFlexBeginPillNumberPageTitle": "იმ დღეს, როცა ფირფიტა დაიწყეთ,\nშესვენების დასრულებიდან მერამდენე დღე იყო?"
+  "yazFlexBeginPillNumberPageTitle": "იმ დღეს, როცა ფირფიტა დაიწყეთ,\nშესვენების დასრულებიდან მერამდენე დღე იყო?",
+  "yazFlexNextInputIsRestDuration": "შემდეგ შეიყვანეთ წინა შესვენება"
 }

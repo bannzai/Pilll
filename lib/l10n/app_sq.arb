@@ -575,5 +575,6 @@
   "yazFlexLastRestDurationBeginDate": "Dita kur filloi pushimi",
   "yazFlexLastRestDurationEndDate": "Dita kur rifilluat marrjen",
   "yazFlexSelectDate": "Zgjidhni datën",
-  "yazFlexBeginPillNumberPageTitle": "Kur e nisët paketën,\ncila ditë ishte pas pushimit?"
+  "yazFlexBeginPillNumberPageTitle": "Kur e nisët paketën,\ncila ditë ishte pas pushimit?",
+  "yazFlexNextInputIsRestDuration": "Më pas, shkruani pushimin e mëparshëm"
 }

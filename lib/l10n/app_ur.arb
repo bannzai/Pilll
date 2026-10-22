@@ -575,5 +575,6 @@
   "yazFlexLastRestDurationBeginDate": "وہ دن جب وقفہ شروع ہوا",
   "yazFlexLastRestDurationEndDate": "دوبارہ لینا شروع کرنے کا دن",
   "yazFlexSelectDate": "تاریخ منتخب کریں",
-  "yazFlexBeginPillNumberPageTitle": "جس دن آپ نے شیٹ شروع کی\nوہ وقفہ ختم ہونے کے بعد کون سا دن تھا؟"
+  "yazFlexBeginPillNumberPageTitle": "جس دن آپ نے شیٹ شروع کی\nوہ وقفہ ختم ہونے کے بعد کون سا دن تھا؟",
+  "yazFlexNextInputIsRestDuration": "اگلے مرحلے میں پچھلا وقفہ درج کریں"
 }

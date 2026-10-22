@@ -575,5 +575,6 @@
   "yazFlexLastRestDurationBeginDate": "Araw na nagsimula ang pahinga",
   "yazFlexLastRestDurationEndDate": "Araw na muli kang nagsimulang uminom",
   "yazFlexSelectDate": "Pumili ng petsa",
-  "yazFlexBeginPillNumberPageTitle": "Noong araw na sinimulan mo ang pack,\npang-ilang araw iyon matapos ang pahinga?"
+  "yazFlexBeginPillNumberPageTitle": "Noong araw na sinimulan mo ang pack,\npang-ilang araw iyon matapos ang pahinga?",
+  "yazFlexNextInputIsRestDuration": "Susunod, ilagay ang dati mong pahinga sa pag-inom"
 }

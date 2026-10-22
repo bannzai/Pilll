@@ -575,5 +575,6 @@
   "yazFlexLastRestDurationBeginDate": "تاريخ بدء فترة التوقف",
   "yazFlexLastRestDurationEndDate": "تاريخ استئناف تناول الحبوب",
   "yazFlexSelectDate": "حددي التاريخ",
-  "yazFlexBeginPillNumberPageTitle": "في أي يوم بعد انتهاء فترة التوقف\nبدأتِ الشريط؟"
+  "yazFlexBeginPillNumberPageTitle": "في أي يوم بعد انتهاء فترة التوقف\nبدأتِ الشريط؟",
+  "yazFlexNextInputIsRestDuration": "بعد ذلك، أدخلي فترة التوقف السابقة"
 }

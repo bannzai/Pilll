@@ -575,5 +575,6 @@
   "yazFlexLastRestDurationBeginDate": "वह दिन जब विराम शुरू हुआ",
   "yazFlexLastRestDurationEndDate": "दोबारा लेना शुरू करने का दिन",
   "yazFlexSelectDate": "तारीख चुनें",
-  "yazFlexBeginPillNumberPageTitle": "जिस दिन आपने शीट शुरू की,\nवह ब्रेक खत्म होने के बाद कौन-सा दिन था?"
+  "yazFlexBeginPillNumberPageTitle": "जिस दिन आपने शीट शुरू की,\nवह ब्रेक खत्म होने के बाद कौन-सा दिन था?",
+  "yazFlexNextInputIsRestDuration": "अगले चरण में पिछला ब्रेक दर्ज करें"
 }

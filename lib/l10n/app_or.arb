@@ -575,5 +575,6 @@
   "yazFlexLastRestDurationBeginDate": "ବିରତି ଆରମ୍ଭ ହୋଇଥିବା ଦିନ",
   "yazFlexLastRestDurationEndDate": "ପୁଣି ନେବା ଆରମ୍ଭ କରିଥିବା ଦିନ",
   "yazFlexSelectDate": "ତାରିଖ ଚୟନ କରନ୍ତୁ",
-  "yazFlexBeginPillNumberPageTitle": "ଆପଣ ଶିଟ୍ ଆରମ୍ଭ କରିଥିବା ଦିନଟି\nବିରତି ସମାପ୍ତ ହେବା ପରେ କେତେତମ ଦିନ ଥିଲା?"
+  "yazFlexBeginPillNumberPageTitle": "ଆପଣ ଶିଟ୍ ଆରମ୍ଭ କରିଥିବା ଦିନଟି\nବିରତି ସମାପ୍ତ ହେବା ପରେ କେତେତମ ଦିନ ଥିଲା?",
+  "yazFlexNextInputIsRestDuration": "ପରେ ପୂର୍ବରୁ ଥିବା ବିରତି ଅବଧି ଭରନ୍ତୁ"
 }

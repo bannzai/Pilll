@@ -575,5 +575,6 @@
   "yazFlexLastRestDurationBeginDate": "Atsedena hasi zen eguna",
   "yazFlexLastRestDurationEndDate": "Hartzeari berriro ekin zenion eguna",
   "yazFlexSelectDate": "Hautatu data",
-  "yazFlexBeginPillNumberPageTitle": "Orriari ekin zenion eguna\natsedenaldiaren ondorengo zein egun izan zen?"
+  "yazFlexBeginPillNumberPageTitle": "Orriari ekin zenion eguna\natsedenaldiaren ondorengo zein egun izan zen?",
+  "yazFlexNextInputIsRestDuration": "Ondoren, aurreko atsedenaldia sartu"
 }
