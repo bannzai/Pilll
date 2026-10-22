@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "Slutdatum kan bara ställas in till och med idag",
   "pauseEndDateLimitBeforeNextPause": "Till den dag som inte överlappar med nästa uppehåll ({date}–)",
   "pauseStartDateLimit": "Startdatum kan väljas till och med {date}",
-  "initialSettingAskYazFlex": "Använder du Yaz Flex?"
+  "initialSettingAskYazFlex": "Använder du Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Om du väljer ”Ja”\nställer vi in det så att det visar hur många dagar det har gått sedan uppehållet slutade."
 }

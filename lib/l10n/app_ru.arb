@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "Дату окончания можно установить только до сегодняшнего дня",
   "pauseEndDateLimitBeforeNextPause": "До дня, который не пересекается со следующим перерывом ({date}–)",
   "pauseStartDateLimit": "Дату начала можно выбрать до {date}",
-  "initialSettingAskYazFlex": "Вы принимаете Yaz Flex?"
+  "initialSettingAskYazFlex": "Вы принимаете Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Если вы выберете «Да»,\nмы настроим отображение того, какой день идёт после окончания перерыва."
 }

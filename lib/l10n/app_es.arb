@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "La fecha de finalización solo puede establecerse hasta hoy",
   "pauseEndDateLimitBeforeNextPause": "Hasta el día en que no se superponga con el siguiente descanso ({date}〜)",
   "pauseStartDateLimit": "La fecha de inicio se puede seleccionar hasta {date}",
-  "initialSettingAskYazFlex": "¿Estás usando Yaz Flex?"
+  "initialSettingAskYazFlex": "¿Estás usando Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Si eliges “Sí”,\nlo configuraremos para que puedas ver cuántos días han pasado desde que terminó el descanso."
 }

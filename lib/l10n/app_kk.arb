@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "Аяқталу күнін ең көбі бүгінге дейін ғана таңдауға болады",
   "pauseEndDateLimitBeforeNextPause": "Келесі үзіліспен ({date}〜) қабаттаспайтын күнге дейін",
   "pauseStartDateLimit": "Басталу күнін {date} күніне дейін таңдауға болады",
-  "initialSettingAskYazFlex": "Yaz Flex қолданасыз ба?"
+  "initialSettingAskYazFlex": "Yaz Flex қолданасыз ба?",
+  "initialSettingAskYazFlexDescription": "Егер «Иә» таңдасаңыз,\nүзіліс аяқталғаннан бері нешінші күн екенін көрсететіндей етіп баптаймыз."
 }

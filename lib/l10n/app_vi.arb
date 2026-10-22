@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "Ngày kết thúc chỉ có thể đặt đến hôm nay",
   "pauseEndDateLimitBeforeNextPause": "Đến ngày không bị trùng với kỳ nghỉ tiếp theo ({date}–)",
   "pauseStartDateLimit": "Có thể chọn ngày bắt đầu đến {date}",
-  "initialSettingAskYazFlex": "Bạn có đang sử dụng Yaz Flex không?"
+  "initialSettingAskYazFlex": "Bạn có đang sử dụng Yaz Flex không?",
+  "initialSettingAskYazFlexDescription": "Nếu bạn chọn “Có”,\nchúng tôi sẽ cài đặt để hiển thị đang là ngày thứ bao nhiêu kể từ khi hết thời gian nghỉ thuốc."
 }

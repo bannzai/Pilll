@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "Η ημερομηνία λήξης μπορεί να οριστεί μόνο έως σήμερα",
   "pauseEndDateLimitBeforeNextPause": "Μέχρι την ημέρα που δεν επικαλύπτεται με την επόμενη παύση ({date}〜)",
   "pauseStartDateLimit": "Η ημερομηνία έναρξης μπορεί να επιλεγεί έως τις {date}",
-  "initialSettingAskYazFlex": "Παίρνετε το Yaz Flex;"
+  "initialSettingAskYazFlex": "Παίρνετε το Yaz Flex;",
+  "initialSettingAskYazFlexDescription": "Αν επιλέξετε «Ναι»,\nθα το ρυθμίσουμε ώστε να εμφανίζεται πόσες ημέρες έχουν περάσει από το τέλος της διακοπής."
 }

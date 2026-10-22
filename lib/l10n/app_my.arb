@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "ပြီးဆုံးရက်ကို ယနေ့အထိသာ သတ်မှတ်နိုင်ပါသည်",
   "pauseEndDateLimitBeforeNextPause": "နောက်လာမည့်နားရက် ({date}〜) နှင့် မထပ်သည့်နေ့အထိ",
   "pauseStartDateLimit": "စတင်ရက်ကို {date} အထိ ရွေးချယ်နိုင်သည်",
-  "initialSettingAskYazFlex": "သင် Yaz Flex ကို အသုံးပြုနေပါသလား?"
+  "initialSettingAskYazFlex": "သင် Yaz Flex ကို အသုံးပြုနေပါသလား?",
+  "initialSettingAskYazFlexDescription": "“ဟုတ်ကဲ့” ကိုရွေးပါက\nအနားယူကာလပြီးဆုံးပြီးနောက် ဘယ်နှရက်မြောက်နေ့လဲကို ပြသနိုင်အောင် သတ်မှတ်ပေးပါမည်"
 }

@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "Датумот на завршување може да се постави најдоцна до денес",
   "pauseEndDateLimitBeforeNextPause": "До денот што не се преклопува со следната пауза ({date}〜)",
   "pauseStartDateLimit": "Почетниот датум може да се избере до {date}",
-  "initialSettingAskYazFlex": "Дали користите Yaz Flex?"
+  "initialSettingAskYazFlex": "Дали користите Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Ако изберете „Да“,\nќе поставиме да се прикажува кој ден е по завршувањето на паузата."
 }

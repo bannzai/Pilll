@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "Päättymispäiväksi voi valita vain tämän päivän tai aiemman",
   "pauseEndDateLimitBeforeNextPause": "Päivään asti, joka ei mene päällekkäin seuraavan tauon kanssa ({date}–)",
   "pauseStartDateLimit": "Aloituspäivän voi valita päivään {date} asti",
-  "initialSettingAskYazFlex": "Käytätkö Yaz Flexiä?"
+  "initialSettingAskYazFlex": "Käytätkö Yaz Flexiä?",
+  "initialSettingAskYazFlexDescription": "Jos valitset ”Kyllä”,\nasetamme näytettäväksi, monesko päivä tauon päättymisestä on menossa."
 }

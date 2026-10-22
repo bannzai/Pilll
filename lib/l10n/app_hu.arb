@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "A befejezés dátuma legfeljebb a mai nap lehet",
   "pauseEndDateLimitBeforeNextPause": "A következő szünettel ({date}–) nem átfedő napig",
   "pauseStartDateLimit": "A kezdőnap legkésőbb {date} lehet",
-  "initialSettingAskYazFlex": "Yaz Flexet szedsz?"
+  "initialSettingAskYazFlex": "Yaz Flexet szedsz?",
+  "initialSettingAskYazFlexDescription": "Ha az „Igen” lehetőséget választja,\nbeállítjuk, hogy a szünet vége óta eltelt napok száma jelenjen meg."
 }

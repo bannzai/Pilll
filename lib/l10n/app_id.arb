@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "Tanggal berakhir hanya dapat diatur sampai hari ini",
   "pauseEndDateLimitBeforeNextPause": "Sampai hari yang tidak tumpang tindih dengan jeda berikutnya ({date}–)",
   "pauseStartDateLimit": "Tanggal mulai dapat dipilih hingga {date}",
-  "initialSettingAskYazFlex": "Apakah Anda menggunakan Yaz Flex?"
+  "initialSettingAskYazFlex": "Apakah Anda menggunakan Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Jika Anda memilih “Ya”,\nkami akan mengaturnya agar dapat menampilkan hari keberapa sejak jeda berakhir."
 }

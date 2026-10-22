@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "Die einddatum is tot vandag",
   "pauseEndDateLimitBeforeNextPause": "Tot en met die dag voordat dit met die volgende pouse ({date}–) oorvleuel",
   "pauseStartDateLimit": "Die begindatum kan tot {date} gekies word",
-  "initialSettingAskYazFlex": "Gebruik jy Yaz Flex?"
+  "initialSettingAskYazFlex": "Gebruik jy Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "As jy “Ja” kies,\nstel ons dit so op dat jy kan sien hoeveel dae dit is sedert die einde van jou pouse."
 }

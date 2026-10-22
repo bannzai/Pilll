@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "Дату завяршэння можна выбраць толькі да сённяшняга дня",
   "pauseEndDateLimitBeforeNextPause": "Да дня, які не перасякаецца з наступным перапынкам ({date}〜)",
   "pauseStartDateLimit": "Дату пачатку можна выбраць да {date}",
-  "initialSettingAskYazFlex": "Вы прымаеце Yaz Flex?"
+  "initialSettingAskYazFlex": "Вы прымаеце Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Калі вы выбераце «Так»,\nмы наладзім паказ колькасці дзён пасля заканчэння перапынку."
 }

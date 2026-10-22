@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "समाप्ति मिति आजसम्म मात्र सेट गर्न सकिन्छ",
   "pauseEndDateLimitBeforeNextPause": "अर्को विश्राम ({date}〜) सँग नजुध्ने दिनसम्म",
   "pauseStartDateLimit": "सुरु मिति {date} सम्म छान्न सकिन्छ",
-  "initialSettingAskYazFlex": "के तपाईं Yaz Flex प्रयोग गर्दै हुनुहुन्छ?"
+  "initialSettingAskYazFlex": "के तपाईं Yaz Flex प्रयोग गर्दै हुनुहुन्छ?",
+  "initialSettingAskYazFlexDescription": "“हो” छान्नुभयो भने\nविश्राम अवधि सकिएपछि कति दिन भयो भन्ने देखिने गरी सेट गरिनेछ"
 }

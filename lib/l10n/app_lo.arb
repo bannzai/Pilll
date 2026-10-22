@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "ວັນສິ້ນສຸດເລືອກໄດ້ເຖິງມື້ນີ້ເທົ່ານັ້ນ",
   "pauseEndDateLimitBeforeNextPause": "ຈົນເຖິງວັນທີ່ບໍ່ຊ້ອນກັບຊ່ວງພັກຄັ້ງຕໍ່ໄປ ({date}〜)",
   "pauseStartDateLimit": "ສາມາດເລືອກວັນເລີ່ມຕົ້ນໄດ້ເຖິງ {date}",
-  "initialSettingAskYazFlex": "ທ່ານໃຊ້ Yaz Flex ຢູ່ບໍ?"
+  "initialSettingAskYazFlex": "ທ່ານໃຊ້ Yaz Flex ຢູ່ບໍ?",
+  "initialSettingAskYazFlexDescription": "ຖ້າທ່ານເລືອກ “ແມ່ນ”\nພວກເຮົາຈະຕັ້ງຄ່າໃຫ້ສາມາດສະແດງວ່າເປັນມື້ທີເທົ່າໃດຫຼັງຈາກຊ່ວງຢຸດສິ້ນສຸດ"
 }

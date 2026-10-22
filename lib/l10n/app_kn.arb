@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "ಅಂತ್ಯದ ದಿನಾಂಕವನ್ನು ಇಂದು ತನಕ ಮಾತ್ರ ಆಯ್ಕೆ ಮಾಡಬಹುದು",
   "pauseEndDateLimitBeforeNextPause": "ಮುಂದಿನ ವಿರಾಮ ({date}〜) ಜೊತೆ ಹೊಮ್ಮಿಸದ ದಿನದವರೆಗೆ",
   "pauseStartDateLimit": "ಪ್ರಾರಂಭ ದಿನಾಂಕವನ್ನು {date} ವರೆಗೆ ಆಯ್ಕೆ ಮಾಡಬಹುದು",
-  "initialSettingAskYazFlex": "ನೀವು Yaz Flex ಬಳಸುತ್ತೀರಾ?"
+  "initialSettingAskYazFlex": "ನೀವು Yaz Flex ಬಳಸುತ್ತೀರಾ?",
+  "initialSettingAskYazFlexDescription": "“ಹೌದು” ಆಯ್ಕೆ ಮಾಡಿದರೆ\nವಿರಾಮ ಮುಗಿದ ನಂತರ ಎಷ್ಟುನೇ ದಿನವಾಗಿದೆ ಎಂಬುದನ್ನು ತೋರಿಸುವಂತೆ ಹೊಂದಿಸಲಾಗುತ್ತದೆ"
 }

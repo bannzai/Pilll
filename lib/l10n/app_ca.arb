@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "La data de finalització només es pot seleccionar fins avui",
   "pauseEndDateLimitBeforeNextPause": "Fins al dia que no se superposi amb el següent descans ({date}〜)",
   "pauseStartDateLimit": "La data d'inici es pot triar fins a {date}",
-  "initialSettingAskYazFlex": "Prens Yaz Flex?"
+  "initialSettingAskYazFlex": "Prens Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Si selecciones «Sí»,\nho configurarem perquè es mostri quants dies han passat des del final del descans."
 }

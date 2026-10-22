@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "Usuku lokuphela lungasethwa kuze kube namuhla kuphela",
   "pauseEndDateLimitBeforeNextPause": "Kuze kube usuku olungangqubuzani nekhefu elilandelayo ({date}–)",
   "pauseStartDateLimit": "Usuku lokuqala lungakhethwa kuze kube u-{date}",
-  "initialSettingAskYazFlex": "Ingabe usebenzisa i-Yaz Flex?"
+  "initialSettingAskYazFlex": "Ingabe usebenzisa i-Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Uma ukhetha okuthi “Yebo”,\nsizokumisa ukuze kuboniswe ukuthi sekuyisuku lwesingaki kusukela ikhefu liphelile."
 }

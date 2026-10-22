@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "اختتامی تاریخ صرف آج تک ہی مقرر کی جا سکتی ہے",
   "pauseEndDateLimitBeforeNextPause": "اگلے وقفے ({date}〜) سے نہ ٹکرانے والے دن تک",
   "pauseStartDateLimit": "شروع کی تاریخ {date} تک منتخب کی جا سکتی ہے",
-  "initialSettingAskYazFlex": "کیا آپ Yaz Flex استعمال کر رہی ہیں؟"
+  "initialSettingAskYazFlex": "کیا آپ Yaz Flex استعمال کر رہی ہیں؟",
+  "initialSettingAskYazFlexDescription": "اگر آپ “ہاں” منتخب کریں\nتو ہم اسے اس طرح سیٹ کریں گے کہ وقفہ ختم ہونے کے بعد کون سا دن ہے، یہ دکھایا جا سکے"
 }

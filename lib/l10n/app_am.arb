@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "የመጨረሻ ቀን እስከ ዛሬ ብቻ ነው",
   "pauseEndDateLimitBeforeNextPause": "ከሚቀጥለው እረፍት ({date}〜) ጋር እስካልተደራረበ ቀን ድረስ",
   "pauseStartDateLimit": "የመጀመሪያ ቀን እስከ {date} ድረስ መምረጥ ይቻላል",
-  "initialSettingAskYazFlex": "Yaz Flex ነው የምትወስዱት?"
+  "initialSettingAskYazFlex": "Yaz Flex ነው የምትወስዱት?",
+  "initialSettingAskYazFlexDescription": "«አዎ»ን ከመረጡ\nከመድኃኒት እረፍቱ በኋላ ስንተኛ ቀን እንደሆነ እንዲታይ እናስተካክላለን"
 }

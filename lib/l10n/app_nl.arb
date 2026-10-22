@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "De einddatum kan alleen tot en met vandaag worden ingesteld",
   "pauseEndDateLimitBeforeNextPause": "Tot de dag die niet overlapt met de volgende pauze ({date}–)",
   "pauseStartDateLimit": "De startdatum kan tot en met {date} worden gekozen",
-  "initialSettingAskYazFlex": "Gebruik je Yaz Flex?"
+  "initialSettingAskYazFlex": "Gebruik je Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Als je “Ja” kiest,\nstellen we het zo in dat je kunt zien hoeveel dagen het sinds het einde van de stopweek is."
 }

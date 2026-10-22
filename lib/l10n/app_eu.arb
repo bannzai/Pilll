@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "Amaiera-data gaur arte baino ezin da ezarri",
   "pauseEndDateLimitBeforeNextPause": "Hurrengo atsedenaldiarekin ({date}〜) gainjartzen ez den egunera arte",
   "pauseStartDateLimit": "Hasiera-data {date} arte aukeratu daiteke",
-  "initialSettingAskYazFlex": "Yaz Flex erabiltzen duzu?"
+  "initialSettingAskYazFlex": "Yaz Flex erabiltzen duzu?",
+  "initialSettingAskYazFlexDescription": "“Bai” aukeratzen baduzu,\netenaldiaren amaieratik zenbat egun igaro diren erakusteko ezarriko dugu."
 }

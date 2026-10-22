@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "La date de fin peut être définie jusqu’à aujourd’hui uniquement",
   "pauseEndDateLimitBeforeNextPause": "Jusqu’au jour qui ne chevauche pas la prochaine pause ({date}〜)",
   "pauseStartDateLimit": "La date de début peut être sélectionnée jusqu’au {date}",
-  "initialSettingAskYazFlex": "Utilisez-vous Yaz Flex ?"
+  "initialSettingAskYazFlex": "Utilisez-vous Yaz Flex ?",
+  "initialSettingAskYazFlexDescription": "Si vous choisissez « Oui »,\nnous le configurerons pour afficher le nombre de jours écoulés depuis la fin de la pause."
 }

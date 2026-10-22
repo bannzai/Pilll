@@ -568,5 +568,6 @@
   "pauseEndDateLimitIsToday": "Maaari lang itakda ang petsa ng pagtatapos hanggang ngayong araw",
   "pauseEndDateLimitBeforeNextPause": "Hanggang sa araw na hindi sumasapaw sa susunod na pahinga ({date}–)",
   "pauseStartDateLimit": "Maaaring piliin ang petsa ng pagsisimula hanggang {date}",
-  "initialSettingAskYazFlex": "Gumagamit ka ba ng Yaz Flex?"
+  "initialSettingAskYazFlex": "Gumagamit ka ba ng Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Kapag pinili mo ang “Oo”,\nise-set namin ito para maipakita kung pang-ilang araw na mula nang matapos ang pahinga."
 }
