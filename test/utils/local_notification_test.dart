@@ -1,3 +1,4 @@
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -10,6 +11,22 @@ import 'package:pilll/utils/local_notification.dart';
 import '../helper/mock.mocks.dart';
 
 void main() {
+  group("#iOSQuickRecordPillCategory", () {
+    test("PILL_REMINDER カテゴリに RECORD_PILL アクションが 1 つだけある", () {
+      final category = iOSQuickRecordPillCategory();
+
+      expect(category.identifier, iOSQuickRecordPillCategoryIdentifier);
+      expect(category.actions.map((action) => action.identifier), [actionIdentifier]);
+    });
+
+    test("RECORD_PILL アクションはロック中の端末でロック解除を求める", () {
+      expect(
+        iOSQuickRecordPillCategory().actions.single.options,
+        contains(DarwinNotificationActionOption.authenticationRequired),
+      );
+    });
+  });
+
   group("#reminderPillDisplayNumberFor", () {
     // 日付の真昼にする。ちょうど0時だと、その日に開始するピルシートが isBegan(開始日 < 現在時刻) を満たさず、前のピルシートがアクティブのままになるため
     void mockToday(String date) {
