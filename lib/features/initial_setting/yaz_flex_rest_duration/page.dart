@@ -249,6 +249,8 @@ class YazFlexRestDurationDateField extends StatelessWidget {
           onTap: onTap,
           child: Container(
             height: 48,
+            // 「次へ」ボタンと同じ幅にそろえる
+            width: 180,
             padding: const EdgeInsets.symmetric(horizontal: 16),
             decoration: BoxDecoration(
               color: AppColors.white,

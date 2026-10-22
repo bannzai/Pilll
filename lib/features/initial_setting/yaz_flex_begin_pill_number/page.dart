@@ -70,12 +70,16 @@ class InitialSettingYazFlexBeginPillNumberPage extends ConsumerWidget {
                         },
                         child: Container(
                           height: 48,
-                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          // 選んだ日数の文字に合わせた幅にし、短い文字でも押しやすいよう最低限の幅を確保する
+                          constraints: const BoxConstraints(minWidth: 120),
+                          padding: const EdgeInsets.symmetric(horizontal: 24),
                           decoration: BoxDecoration(
+                            color: AppColors.white,
                             borderRadius: const BorderRadius.all(Radius.circular(4)),
                             border: Border.all(width: 1, color: AppColors.border),
                           ),
-                          child: Center(
+                          child: Align(
+                            widthFactor: 1,
                             child: Text(
                               L.withDay('${state.yazFlexBeginPillNumber}'),
                               style: const TextStyle(
