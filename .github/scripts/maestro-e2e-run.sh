@@ -118,12 +118,36 @@ if [ "$RECORD_VIDEO" = "true" ]; then
   REC_PID=$!
 fi
 
+# 1 回の maestro test で複数 flow を流すと、XCTest driver が途中で落ちた時に後続の flow が全て
+# 接続エラーで失敗する。flow ごとに maestro test を起動し、driver を起動し直す。
+# ディレクトリ指定の時は config.yaml の flows のパターンから flow を展開する (subflows/ は含まれない)。
+if [ -d "$TARGET" ]; then
+  FLOW_FILES=()
+  while IFS= read -r pattern; do
+    for f in "$TARGET"/$pattern; do
+      case "$f" in *.yaml | *.yml) [ -f "$f" ] && FLOW_FILES+=("$f") ;; esac
+    done
+  done < <(sed -n 's/^[[:space:]]*-[[:space:]]*"\{0,1\}\([^"]*\)"\{0,1\}[[:space:]]*$/\1/p' "${TARGET}/config.yaml")
+else
+  FLOW_FILES=("$TARGET")
+fi
+[ "${#FLOW_FILES[@]}" -gt 0 ] || fail "実行する flow が無い: ${TARGET}"
+
 STATUS=0
-maestro --udid "$UDID" test \
-  --format junit \
-  --output "${ARTIFACT_DIR}/report.xml" \
-  --debug-output "${ARTIFACT_DIR}/debug" \
-  "$TARGET" || STATUS=$?
+for flow in "${FLOW_FILES[@]}"; do
+  name="$(basename "${flow%.*}")"
+  echo "::group::${flow}"
+  maestro --udid "$UDID" test \
+    --format junit \
+    --output "${ARTIFACT_DIR}/report-${name}.xml" \
+    --debug-output "${ARTIFACT_DIR}/debug/${name}" \
+    "$flow" || STATUS=1
+  echo "::endgroup::"
+done
+# --debug-output を指定しても失敗時のスクリーンショットが ~/.maestro/tests に残ることがあるため、artifact に含める
+if [ -d "${HOME}/.maestro/tests" ]; then
+  cp -R "${HOME}/.maestro/tests" "${ARTIFACT_DIR}/maestro-tests"
+fi
 
 # recordVideo は SIGINT で終了させないと mp4 が壊れる
 if [ -n "$REC_PID" ]; then
@@ -140,7 +164,7 @@ fi
   if [ "$STATUS" -eq 0 ]; then
     echo "- 結果: 成功"
   else
-    echo "- 結果: 失敗 (exit ${STATUS})。artifact \`maestro-e2e-artifacts\` の report.xml / debug / session.mp4 を参照"
+    echo "- 結果: 失敗 (exit ${STATUS})。artifact \`maestro-e2e-artifacts\` の report-*.xml / debug / maestro-tests / session.mp4 を参照"
   fi
 } >> "$SUMMARY"
 

@@ -1,4 +1,4 @@
-# `maestro test .maestro/flows` (maestro-e2e workflow) が実行する flow。
+# `maestro test .maestro/flows` と maestro-e2e workflow (.github/scripts/maestro-e2e-run.sh がこの flows を展開して 1 つずつ実行する) が実行する flow。
 # maestro test はディレクトリ直下の flow しか実行しないため、サブディレクトリをここで指定する。`*` はサブディレクトリの subflows/ を含まない。
 # 対象外:
 # - appstore_screenshot/: SCREENSHOT_CATALOG=true でビルドしたカタログアプリと LANG の指定が要る (appstore-screenshots workflow が実行する)
