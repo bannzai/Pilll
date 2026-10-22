@@ -202,20 +202,21 @@ List<int> reminderDayOffsetsFor({required List<RestDuration> restDurations}) {
   return List.generate(RegisterReminderLocalNotification.registerDays, (index) => index < restBeginOffset ? index : index + restDays);
 }
 
-/// 今日から [dayOffset] 日後に出すリマインドに表示する、ピル番号の文字列を返す
+/// [reminderDate] に出すリマインドに表示する、ピル番号の文字列を返す
 /// 連続番号(sequential/cyclicSequential)は、通知を出す日を今日とみなして計算する。服用再開予定日ありの服用お休み中に登録した通知でも、
 /// 予定日以降は、その日に画面が表示する番号(服用お休みが終わった日から1番に戻る)と一致させるため
+/// [reminderDate] は通知を登録する日時(reminderDateTime)の日付を渡す。today() から作り直すと、登録の処理が日付をまたいだ時に通知日と番号の基準日がずれるため
 /// number/dateモードの番号はindexから決まるため、この日付に影響されない
 String reminderPillDisplayNumberFor({
   required PillSheetGroup pillSheetGroup,
   required int pageIndex,
   required int pillNumberInPillSheet,
-  required int dayOffset,
+  required DateTime reminderDate,
 }) {
   return pillSheetGroup.displayPillNumberWithoutDate(
     pageIndex: pageIndex,
     pillNumberInPillSheet: pillNumberInPillSheet,
-    estimatedEventCausingDate: today().addDays(dayOffset),
+    estimatedEventCausingDate: reminderDate.date(),
   );
 }
 
@@ -387,7 +388,7 @@ class RegisterReminderLocalNotification {
           pillSheetGroup: pillSheetGroup,
           pageIndex: activePillSheet.groupIndex,
           pillNumberInPillSheet: pillNumberInPillSheet,
-          dayOffset: dayOffset,
+          reminderDate: reminderDateTime,
         );
 
         // activePillSheetよりも未来のPillSheet
@@ -429,7 +430,7 @@ class RegisterReminderLocalNotification {
                 pillSheetGroup: pillSheetGroup,
                 pageIndex: nextPillSheet.groupIndex,
                 pillNumberInPillSheet: pillNumberInPillSheet,
-                dayOffset: dayOffset,
+                reminderDate: reminderDateTime,
               );
 
             case (_, _, _):

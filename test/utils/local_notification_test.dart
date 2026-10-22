@@ -56,7 +56,7 @@ void main() {
               pillSheetGroup: pillSheetGroup,
               pageIndex: activePillSheet.groupIndex,
               pillNumberInPillSheet: activePillSheet.todayPillNumber + pillDayOffset,
-              dayOffset: dayOffset,
+              reminderDate: today().addDays(dayOffset),
             ),
           ),
       ];
@@ -139,14 +139,13 @@ void main() {
               (
                 today().addDays(dayOffset),
                 activePillSheet.todayPillNumber + pillDayOffset,
-                dayOffset,
               ),
           ];
           // 2枚目の開始日(6/3)が登録の範囲に入っていること
           expect(reminders.any((e) => e.$1 == DateTime.parse("2022-06-03")), true);
 
           var crossedToSecondPillSheet = false;
-          for (final (date, pillNumberInPillSheetWithOverflow, dayOffset) in reminders) {
+          for (final (date, pillNumberInPillSheetWithOverflow) in reminders) {
             mockToday("2022-05-24");
             final isOverActivePillSheet = pillNumberInPillSheetWithOverflow > 28;
             final pillNumberInPillSheet = isOverActivePillSheet ? pillNumberInPillSheetWithOverflow - 28 : pillNumberInPillSheetWithOverflow;
@@ -155,7 +154,7 @@ void main() {
               pillSheetGroup: build(),
               pageIndex: pageIndex,
               pillNumberInPillSheet: pillNumberInPillSheet,
-              dayOffset: dayOffset,
+              reminderDate: date,
             );
 
             mockToday(date.toIso8601String());
@@ -174,6 +173,40 @@ void main() {
         });
       });
     }
+
+    group("reminderDate", () {
+      test("通知日時(時刻あり)を渡しても日付で計算し、today()ではなく渡した日付を基準にする", () {
+        final restDuration = RestDuration(
+          id: "rest_duration_id",
+          beginDate: DateTime.parse("2022-05-08"),
+          createdDate: DateTime.parse("2022-05-08"),
+          endDate: DateTime.parse("2022-05-15"),
+        );
+        PillSheetGroup build() => pillSheetGroupWith(
+              appearanceMode: PillSheetAppearanceMode.cyclicSequential,
+              pillSheetType: PillSheetType.pillsheet_28_0,
+              restDuration: restDuration,
+              beginDates: ["2022-05-01"],
+            );
+        mockToday("2022-05-10");
+
+        // 登録の処理が日付をまたぐと today() は 5/11 になる。通知日(5/15 05:00)を渡すので、今日の値に依らず再開日の 1 番になる
+        expect(
+          reminderPillDisplayNumberFor(pillSheetGroup: build(), pageIndex: 0, pillNumberInPillSheet: 8, reminderDate: DateTime(2022, 5, 15, 5, 0)),
+          "1",
+        );
+        mockToday("2022-05-11");
+        expect(
+          reminderPillDisplayNumberFor(pillSheetGroup: build(), pageIndex: 0, pillNumberInPillSheet: 8, reminderDate: DateTime(2022, 5, 15, 5, 0)),
+          "1",
+        );
+        // 予定日の前日の通知日を渡すと、まだ服用お休み中の暫定の番号になる(8番)
+        expect(
+          reminderPillDisplayNumberFor(pillSheetGroup: build(), pageIndex: 0, pillNumberInPillSheet: 8, reminderDate: DateTime(2022, 5, 14, 5, 0)),
+          "8",
+        );
+      });
+    });
 
     group("number", () {
       test("服用再開予定日ありでも番号はシート内の番号のまま", () {
