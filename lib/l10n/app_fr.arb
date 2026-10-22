@@ -572,5 +572,6 @@
   "initialSettingAskYazFlexDescription": "Si vous choisissez « Oui »,\nnous le configurerons pour afficher le nombre de jours écoulés depuis la fin de la pause.",
   "yazFlexLastRestDurationTitle": "Veuillez nous indiquer\nvotre dernière période de pause",
   "yazFlexHasNotRestedYet": "Je n’ai pas encore fait de pause dans la prise de la pilule",
-  "yazFlexLastRestDurationBeginDate": "Date de début de la pause"
+  "yazFlexLastRestDurationBeginDate": "Date de début de la pause",
+  "yazFlexLastRestDurationEndDate": "Date de reprise de la prise"
 }

@@ -572,5 +572,6 @@
   "initialSettingAskYazFlexDescription": "Ha az „Igen” lehetőséget választja,\nbeállítjuk, hogy a szünet vége óta eltelt napok száma jelenjen meg.",
   "yazFlexLastRestDurationTitle": "Kérjük,\nmeséljen az előző szünetéről",
   "yazFlexHasNotRestedYet": "Még nem tartottam gyógyszerszünetet",
-  "yazFlexLastRestDurationBeginDate": "A szünet kezdőnapja"
+  "yazFlexLastRestDurationBeginDate": "A szünet kezdőnapja",
+  "yazFlexLastRestDurationEndDate": "Az újrakezdés napja"
 }

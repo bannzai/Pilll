@@ -572,5 +572,6 @@
   "initialSettingAskYazFlexDescription": "Ukichagua “Ndiyo”,\ntutaiweka ili ionyeshe ni siku ya ngapi tangu mapumziko yalipoisha.",
   "yazFlexLastRestDurationTitle": "Tafadhali\ntuambie kuhusu mapumziko yako ya mwisho",
   "yazFlexHasNotRestedYet": "Bado sijaanza mapumziko ya tembe",
-  "yazFlexLastRestDurationBeginDate": "Siku ambayo mapumziko yalianza"
+  "yazFlexLastRestDurationBeginDate": "Siku ambayo mapumziko yalianza",
+  "yazFlexLastRestDurationEndDate": "Siku uliyoanza tena kutumia"
 }

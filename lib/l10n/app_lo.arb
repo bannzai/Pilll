@@ -572,5 +572,6 @@
   "initialSettingAskYazFlexDescription": "ຖ້າທ່ານເລືອກ “ແມ່ນ”\nພວກເຮົາຈະຕັ້ງຄ່າໃຫ້ສາມາດສະແດງວ່າເປັນມື້ທີເທົ່າໃດຫຼັງຈາກຊ່ວງຢຸດສິ້ນສຸດ",
   "yazFlexLastRestDurationTitle": "ກະລຸນາ\nບອກພວກເຮົາກ່ຽວກັບຊ່ວງພັກຄັ້ງກ່ອນ",
   "yazFlexHasNotRestedYet": "ຂ້ອຍຍັງບໍ່ທັນໄດ້ພັກການກິນຢາເທື່ອ",
-  "yazFlexLastRestDurationBeginDate": "ວັນທີ່ເລີ່ມພັກຢາ"
+  "yazFlexLastRestDurationBeginDate": "ວັນທີ່ເລີ່ມພັກຢາ",
+  "yazFlexLastRestDurationEndDate": "ວັນທີ່ເລີ່ມກິນອີກຄັ້ງ"
 }

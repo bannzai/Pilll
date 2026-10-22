@@ -572,5 +572,6 @@
   "initialSettingAskYazFlexDescription": "“ஆம்” என்பதைத் தேர்ந்தெடுத்தால்\nஇடைவேளை முடிந்ததிலிருந்து எத்தனையாவது நாள் என்பதை காட்டும் வகையில் அமைக்கப்படும்",
   "yazFlexLastRestDurationTitle": "தயவுசெய்து\nமுந்தைய இடைவேளை பற்றி எங்களுக்குச் சொல்லுங்கள்",
   "yazFlexHasNotRestedYet": "நான் இன்னும் மாத்திரை இடைவெளி எடுக்கவில்லை",
-  "yazFlexLastRestDurationBeginDate": "இடைவேளை தொடங்கிய நாள்"
+  "yazFlexLastRestDurationBeginDate": "இடைவேளை தொடங்கிய நாள்",
+  "yazFlexLastRestDurationEndDate": "மீண்டும் எடுத்துக்கொள்ளத் தொடங்கிய நாள்"
 }

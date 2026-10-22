@@ -572,5 +572,6 @@
   "initialSettingAskYazFlexDescription": "Kapag pinili mo ang “Oo”,\nise-set namin ito para maipakita kung pang-ilang araw na mula nang matapos ang pahinga.",
   "yazFlexLastRestDurationTitle": "Pakisabi po\nang tungkol sa huli mong pahinga",
   "yazFlexHasNotRestedYet": "Hindi pa ako nagkakaroon ng pahinga sa pag-inom ng pill",
-  "yazFlexLastRestDurationBeginDate": "Araw na nagsimula ang pahinga"
+  "yazFlexLastRestDurationBeginDate": "Araw na nagsimula ang pahinga",
+  "yazFlexLastRestDurationEndDate": "Araw na muli kang nagsimulang uminom"
 }

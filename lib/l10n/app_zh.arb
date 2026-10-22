@@ -572,5 +572,6 @@
   "initialSettingAskYazFlexDescription": "选择“是”后\n我们会将其设置为可显示停药期结束后的第几天",
   "yazFlexLastRestDurationTitle": "请告诉我们\n上一次停药期的情况",
   "yazFlexHasNotRestedYet": "还没有开始停药",
-  "yazFlexLastRestDurationBeginDate": "开始休药的日期"
+  "yazFlexLastRestDurationBeginDate": "开始休药的日期",
+  "yazFlexLastRestDurationEndDate": "重新开始服用的日期"
 }

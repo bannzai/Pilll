@@ -572,5 +572,6 @@
   "initialSettingAskYazFlexDescription": "Jos valitset ”Kyllä”,\nasetamme näytettäväksi, monesko päivä tauon päättymisestä on menossa.",
   "yazFlexLastRestDurationTitle": "Kerrothan meille\nedellisestä tauostasi",
   "yazFlexHasNotRestedYet": "En ole vielä pitänyt taukoa pillereistä",
-  "yazFlexLastRestDurationBeginDate": "Tauon alkamispäivä"
+  "yazFlexLastRestDurationBeginDate": "Tauon alkamispäivä",
+  "yazFlexLastRestDurationEndDate": "Päivä, jolloin aloitit käytön uudelleen"
 }

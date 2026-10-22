@@ -572,5 +572,6 @@
   "initialSettingAskYazFlexDescription": "Ако изберете „Да“,\nќе поставиме да се прикажува кој ден е по завршувањето на паузата.",
   "yazFlexLastRestDurationTitle": "Ве молиме,\nкажете ни за претходната пауза",
   "yazFlexHasNotRestedYet": "Сè уште немам направено пауза од таблетите",
-  "yazFlexLastRestDurationBeginDate": "Денот кога започна паузата"
+  "yazFlexLastRestDurationBeginDate": "Денот кога започна паузата",
+  "yazFlexLastRestDurationEndDate": "Денот кога повторно почнавте да земате"
 }

@@ -572,5 +572,6 @@
   "initialSettingAskYazFlexDescription": "Якщо ви виберете «Так»,\nми налаштуємо показ того, який день триває після завершення перерви.",
   "yazFlexLastRestDurationTitle": "Будь ласка,\nрозкажіть про попередню перерву",
   "yazFlexHasNotRestedYet": "Я ще не робила перерву в прийомі таблеток",
-  "yazFlexLastRestDurationBeginDate": "День початку перерви"
+  "yazFlexLastRestDurationBeginDate": "День початку перерви",
+  "yazFlexLastRestDurationEndDate": "День відновлення прийому"
 }

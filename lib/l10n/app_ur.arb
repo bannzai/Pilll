@@ -572,5 +572,6 @@
   "initialSettingAskYazFlexDescription": "اگر آپ “ہاں” منتخب کریں\nتو ہم اسے اس طرح سیٹ کریں گے کہ وقفہ ختم ہونے کے بعد کون سا دن ہے، یہ دکھایا جا سکے",
   "yazFlexLastRestDurationTitle": "براہ کرم\nپچھلے وقفے کے بارے میں ہمیں بتائیں",
   "yazFlexHasNotRestedYet": "میں نے ابھی تک گولیوں سے وقفہ نہیں لیا",
-  "yazFlexLastRestDurationBeginDate": "وہ دن جب وقفہ شروع ہوا"
+  "yazFlexLastRestDurationBeginDate": "وہ دن جب وقفہ شروع ہوا",
+  "yazFlexLastRestDurationEndDate": "دوبارہ لینا شروع کرنے کا دن"
 }

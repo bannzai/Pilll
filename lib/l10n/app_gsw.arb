@@ -572,5 +572,6 @@
   "initialSettingAskYazFlexDescription": "Wänn du „Ja“ uuswählsch,\nstellemer s so ii, dass aazeigt wird, dr wievielt Tag sit em Ändi vo dr Pause esch.",
   "yazFlexLastRestDurationTitle": "Bitte verzell is\nvo diner letschte Pause",
   "yazFlexHasNotRestedYet": "Ich ha no kei Pillepause gmacht",
-  "yazFlexLastRestDurationBeginDate": "Dr Tag, a wott d Pause aagfange het"
+  "yazFlexLastRestDurationBeginDate": "Dr Tag, a wott d Pause aagfange het",
+  "yazFlexLastRestDurationEndDate": "Tag, a dem du d Iinahm wieder ufgnuu hesch"
 }
