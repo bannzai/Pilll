@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "Ek het nog nie 'n pilpouse gehad nie",
   "yazFlexLastRestDurationBeginDate": "Die dag waarop die pouse begin het",
   "yazFlexLastRestDurationEndDate": "Datum waarop jy weer begin het om dit te neem",
-  "yazFlexSelectDate": "Kies 'n datum",
-  "yazFlexBeginPillNumberTitle": "Op watter dag ná die pouse is nr. 1 op die eerste strook?"
+  "yazFlexSelectDate": "Kies 'n datum"
 }

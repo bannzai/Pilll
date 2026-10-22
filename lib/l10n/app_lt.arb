@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "Dar neturėjau tablečių vartojimo pertraukos",
   "yazFlexLastRestDurationBeginDate": "Diena, kai prasidėjo pertrauka",
   "yazFlexLastRestDurationEndDate": "Diena, kai vėl pradėjote vartoti",
-  "yazFlexSelectDate": "Pasirinkite datą",
-  "yazFlexBeginPillNumberTitle": "Kelinta diena po pertraukos yra 1-oji tabletė pirmoje plokštelėje?"
+  "yazFlexSelectDate": "Pasirinkite datą"
 }

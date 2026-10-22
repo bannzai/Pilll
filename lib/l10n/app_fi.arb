@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "En ole vielä pitänyt taukoa pillereistä",
   "yazFlexLastRestDurationBeginDate": "Tauon alkamispäivä",
   "yazFlexLastRestDurationEndDate": "Päivä, jolloin aloitit käytön uudelleen",
-  "yazFlexSelectDate": "Valitse päivämäärä",
-  "yazFlexBeginPillNumberTitle": "Monesko päivä tauon jälkeen on ensimmäisen liuskan pilleri nro 1?"
+  "yazFlexSelectDate": "Valitse päivämäärä"
 }

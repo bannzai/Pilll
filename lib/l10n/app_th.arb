@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "ยังไม่ได้หยุดยาชั่วคราว",
   "yazFlexLastRestDurationBeginDate": "วันที่เริ่มช่วงหยุดยา",
   "yazFlexLastRestDurationEndDate": "วันที่กลับมาเริ่มรับประทานอีกครั้ง",
-  "yazFlexSelectDate": "เลือกวันที่",
-  "yazFlexBeginPillNumberTitle": "ยาเม็ดที่ 1 ในแผงแรก เป็นยาของวันที่เท่าไรหลังช่วงเว้นยา?"
+  "yazFlexSelectDate": "เลือกวันที่"
 }

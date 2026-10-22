@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "Сè уште немам направено пауза од таблетите",
   "yazFlexLastRestDurationBeginDate": "Денот кога започна паузата",
   "yazFlexLastRestDurationEndDate": "Денот кога повторно почнавте да земате",
-  "yazFlexSelectDate": "Изберете датум",
-  "yazFlexBeginPillNumberTitle": "Кој ден по паузата е пилулата бр. 1 на првиот блистер?"
+  "yazFlexSelectDate": "Изберете датум"
 }

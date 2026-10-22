@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "ನಾನು ಇನ್ನೂ ಮಾತ್ರೆ ಸೇವನೆಗೆ ವಿರಾಮ ತೆಗೆದುಕೊಂಡಿಲ್ಲ",
   "yazFlexLastRestDurationBeginDate": "ವಿರಾಮ ಆರಂಭವಾದ ದಿನ",
   "yazFlexLastRestDurationEndDate": "ಮತ್ತೆ ಸೇವನೆ ಪ್ರಾರಂಭಿಸಿದ ದಿನ",
-  "yazFlexSelectDate": "ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ",
-  "yazFlexBeginPillNumberTitle": "ಮೊದಲ ಶೀಟ್‌ನ 1ನೇ ಗುಳಿ ವಿರಾಮದ ನಂತರ ಎಷ್ಟನೇ ದಿನದದು?"
+  "yazFlexSelectDate": "ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"
 }

@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "Še nisem imela premora pri jemanju tablet",
   "yazFlexLastRestDurationBeginDate": "Dan začetka premora",
   "yazFlexLastRestDurationEndDate": "Dan ponovnega začetka jemanja",
-  "yazFlexSelectDate": "Izberite datum",
-  "yazFlexBeginPillNumberTitle": "Kateri dan po premoru je tabletka št. 1 na prvem pretisnem omotu?"
+  "yazFlexSelectDate": "Izberite datum"
 }

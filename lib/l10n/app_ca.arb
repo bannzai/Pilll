@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "Encara no he fet cap pausa de les pastilles",
   "yazFlexLastRestDurationBeginDate": "Dia d’inici de la pausa",
   "yazFlexLastRestDurationEndDate": "Dia en què vas reprendre la presa",
-  "yazFlexSelectDate": "Seleccioneu una data",
-  "yazFlexBeginPillNumberTitle": "A quin dia després de la pausa correspon la píndola núm. 1 del primer blíster?"
+  "yazFlexSelectDate": "Seleccioneu una data"
 }

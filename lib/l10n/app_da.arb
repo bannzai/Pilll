@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "Jeg har endnu ikke holdt pause fra pillerne",
   "yazFlexLastRestDurationBeginDate": "Dagen, hvor pausen startede",
   "yazFlexLastRestDurationEndDate": "Dato for genoptagelse",
-  "yazFlexSelectDate": "Vælg en dato",
-  "yazFlexBeginPillNumberTitle": "Hvilken dag efter pausen er nr. 1 på det første blister?"
+  "yazFlexSelectDate": "Vælg en dato"
 }

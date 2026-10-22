@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "Még nem tartottam gyógyszerszünetet",
   "yazFlexLastRestDurationBeginDate": "A szünet kezdőnapja",
   "yazFlexLastRestDurationEndDate": "Az újrakezdés napja",
-  "yazFlexSelectDate": "Válasszon dátumot",
-  "yazFlexBeginPillNumberTitle": "Az első levél 1-es tablettája a szünet utáni hányadik napra esik?"
+  "yazFlexSelectDate": "Válasszon dátumot"
 }

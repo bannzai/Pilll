@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "ਮੈਂ ਹਾਲੇ ਤੱਕ ਗੋਲੀ ਤੋਂ ਬ੍ਰੇਕ ਨਹੀਂ ਲਿਆ",
   "yazFlexLastRestDurationBeginDate": "ਜਿਸ ਦਿਨ ਵਿਸ਼ਰਾਮ ਸ਼ੁਰੂ ਹੋਇਆ",
   "yazFlexLastRestDurationEndDate": "ਦੁਬਾਰਾ ਲੈਣਾ ਸ਼ੁਰੂ ਕੀਤਾ ਦਿਨ",
-  "yazFlexSelectDate": "ਤਾਰੀਖ ਚੁਣੋ",
-  "yazFlexBeginPillNumberTitle": "ਪਹਿਲੀ ਸ਼ੀਟ ਦੀ ਨੰਬਰ 1 ਗੋਲੀ, ਵਿਸ਼ਰਾਮ ਖਤਮ ਹੋਣ ਤੋਂ ਬਾਅਦ ਕਿਹੜੇ ਦਿਨ ਦੀ ਹੈ?"
+  "yazFlexSelectDate": "ਤਾਰੀਖ ਚੁਣੋ"
 }

@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "还没有开始停药",
   "yazFlexLastRestDurationBeginDate": "开始休药的日期",
   "yazFlexLastRestDurationEndDate": "重新开始服用的日期",
-  "yazFlexSelectDate": "选择日期",
-  "yazFlexBeginPillNumberTitle": "第1板的第1粒药，是停药期结束后的第几天服用呢？"
+  "yazFlexSelectDate": "选择日期"
 }

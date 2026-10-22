@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "እስካሁን የመድኃኒት እረፍት አላደረግሁም",
   "yazFlexLastRestDurationBeginDate": "የእረፍት ጊዜው የጀመረበት ቀን",
   "yazFlexLastRestDurationEndDate": "መውሰድን እንደገና የጀመሩበት ቀን",
-  "yazFlexSelectDate": "ቀን ይምረጡ",
-  "yazFlexBeginPillNumberTitle": "በመጀመሪያው ሺት ላይ ቁጥር 1 ከመድኃኒት እረፍት በኋላ ስንተኛ ቀን ነው?"
+  "yazFlexSelectDate": "ቀን ይምረጡ"
 }

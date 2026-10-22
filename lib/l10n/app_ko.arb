@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "아직 휴약하지 않았어요",
   "yazFlexLastRestDurationBeginDate": "휴약이 시작된 날",
   "yazFlexLastRestDurationEndDate": "복용을 재개한 날",
-  "yazFlexSelectDate": "날짜를 선택해 주세요",
-  "yazFlexBeginPillNumberTitle": "첫 번째 시트의 1번 약은 휴약이 끝난 뒤 며칠째에 먹는 약인가요?"
+  "yazFlexSelectDate": "날짜를 선택해 주세요"
 }

@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "Jag har ännu inte haft något uppehåll från pillren",
   "yazFlexLastRestDurationBeginDate": "Dagen då uppehållet började",
   "yazFlexLastRestDurationEndDate": "Dagen du började ta den igen",
-  "yazFlexSelectDate": "Välj ett datum",
-  "yazFlexBeginPillNumberTitle": "Vilken dag efter uppehållet är piller nr 1 på den första kartan?"
+  "yazFlexSelectDate": "Välj ett datum"
 }

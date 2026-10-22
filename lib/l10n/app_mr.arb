@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "मी अजून गोळ्यांमधला ब्रेक घेतलेला नाही",
   "yazFlexLastRestDurationBeginDate": "विश्रांती सुरू झालेला दिवस",
   "yazFlexLastRestDurationEndDate": "पुन्हा घेणे सुरू केलेला दिवस",
-  "yazFlexSelectDate": "तारीख निवडा",
-  "yazFlexBeginPillNumberTitle": "पहिल्या शीटमधील क्रमांक 1 ची गोळी, विश्रांती संपल्यानंतर कितव्या दिवसाची आहे?"
+  "yazFlexSelectDate": "तारीख निवडा"
 }

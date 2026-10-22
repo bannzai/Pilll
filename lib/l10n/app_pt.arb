@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "Ainda não fiz uma pausa da pílula",
   "yazFlexLastRestDurationBeginDate": "Dia em que a pausa começou",
   "yazFlexLastRestDurationEndDate": "Dia em que retomou a toma",
-  "yazFlexSelectDate": "Selecione uma data",
-  "yazFlexBeginPillNumberTitle": "A pílula nº 1 da primeira cartela corresponde a que dia após a pausa?"
+  "yazFlexSelectDate": "Selecione uma data"
 }

@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "Ešte som nemala prestávku v užívaní",
   "yazFlexLastRestDurationBeginDate": "Deň začiatku prestávky",
   "yazFlexLastRestDurationEndDate": "Deň opätovného začatia užívania",
-  "yazFlexSelectDate": "Vyberte dátum",
-  "yazFlexBeginPillNumberTitle": "Ktorý deň po prestávke je tabletka č. 1 na prvom blistri?"
+  "yazFlexSelectDate": "Vyberte dátum"
 }

@@ -1,7 +1,7 @@
 appId: com.mizuki.Ohashi.Pilll.dev
 ---
 # 初期設定で「ヤーズフレックスの方ですか？」に「はい」と答え、
-# 今日飲む番号 → 前回の休薬 (休薬はまだしていない) → 服用タイミング → プレミアムトライアルの順に進み、ホーム画面に到達することを確認する。
+# 今日飲む番号 → 開始番号 (既定の1日目のまま) → 前回の休薬 (休薬はまだしていない) → 服用タイミング → プレミアムトライアルの順に進み、ホーム画面に到達することを確認する。
 - launchApp:
     clearState: true
     clearKeychain: true
@@ -26,6 +26,12 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - tapOn:
     point: "20%,32%"
 - waitForAnimationToEnd
+- tapOn: "次へ"
+- waitForAnimationToEnd
+
+# 開始番号: ピルシートのプレビューと「1日目」のピッカーが出る。既定の1日目のまま次へ
+- assertVisible: "シートを始めた日は\n休薬明けから何日目でしたか"
+- assertVisible: "次は前回の休薬を入力します"
 - tapOn: "次へ"
 - waitForAnimationToEnd
 

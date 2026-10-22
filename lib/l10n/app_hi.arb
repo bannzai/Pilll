@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "मैंने अभी तक गोली लेना बंद नहीं किया है",
   "yazFlexLastRestDurationBeginDate": "वह दिन जब विराम शुरू हुआ",
   "yazFlexLastRestDurationEndDate": "दोबारा लेना शुरू करने का दिन",
-  "yazFlexSelectDate": "तारीख चुनें",
-  "yazFlexBeginPillNumberTitle": "पहली शीट की नंबर 1 गोली, ब्रेक खत्म होने के बाद कितनेवें दिन की है?"
+  "yazFlexSelectDate": "तारीख चुनें"
 }

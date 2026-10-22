@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "Todavía no he hecho una pausa de la píldora",
   "yazFlexLastRestDurationBeginDate": "Día en que comenzó el descanso",
   "yazFlexLastRestDurationEndDate": "Día en que reanudaste la toma",
-  "yazFlexSelectDate": "Selecciona una fecha",
-  "yazFlexBeginPillNumberTitle": "¿Qué día después del descanso corresponde a la píldora n.º 1 de la primera lámina?"
+  "yazFlexSelectDate": "Selecciona una fecha"
 }

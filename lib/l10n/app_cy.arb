@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "Nid wyf wedi cael seibiant rhag y bilsen eto",
   "yazFlexLastRestDurationBeginDate": "Y diwrnod y dechreuodd y seibiant",
   "yazFlexLastRestDurationEndDate": "Y diwrnod y gwnaethoch ailddechrau ei gymryd",
-  "yazFlexSelectDate": "Dewiswch ddyddiad",
-  "yazFlexBeginPillNumberTitle": "Ar ba ddiwrnod ar ôl y saib mae rhif 1 ar y daflen gyntaf?"
+  "yazFlexSelectDate": "Dewiswch ddyddiad"
 }

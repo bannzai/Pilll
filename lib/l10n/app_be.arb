@@ -574,6 +574,5 @@
   "yazFlexHasNotRestedYet": "Яшчэ не рабіла перапынак у прыёме таблетак",
   "yazFlexLastRestDurationBeginDate": "Дзень пачатку перапынку",
   "yazFlexLastRestDurationEndDate": "Дата аднаўлення прыёму",
-  "yazFlexSelectDate": "Выберыце дату",
-  "yazFlexBeginPillNumberTitle": "Першая таблетка на першым блістары — гэта які дзень пасля перапынку?"
+  "yazFlexSelectDate": "Выберыце дату"
 }
