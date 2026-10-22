@@ -570,5 +570,6 @@
   "pauseStartDateLimit": "सुरुवातीची तारीख {date} पर्यंत निवडता येईल",
   "initialSettingAskYazFlex": "तुम्ही Yaz Flex वापरत आहात का?",
   "initialSettingAskYazFlexDescription": "“होय” निवडल्यास\nविश्रांतीचा कालावधी संपल्यानंतर कितवा दिवस आहे हे दाखवण्यासाठी सेट केले जाईल",
-  "yazFlexLastRestDurationTitle": "कृपया\nमागील विश्रांती कालावधीबद्दल आम्हाला सांगा"
+  "yazFlexLastRestDurationTitle": "कृपया\nमागील विश्रांती कालावधीबद्दल आम्हाला सांगा",
+  "yazFlexHasNotRestedYet": "मी अजून गोळ्यांमधला ब्रेक घेतलेला नाही"
 }

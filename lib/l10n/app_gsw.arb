@@ -570,5 +570,6 @@
   "pauseStartDateLimit": "S Startdatum cha bis {date} usgwählt werde",
   "initialSettingAskYazFlex": "Nimmsch Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Wänn du „Ja“ uuswählsch,\nstellemer s so ii, dass aazeigt wird, dr wievielt Tag sit em Ändi vo dr Pause esch.",
-  "yazFlexLastRestDurationTitle": "Bitte verzell is\nvo diner letschte Pause"
+  "yazFlexLastRestDurationTitle": "Bitte verzell is\nvo diner letschte Pause",
+  "yazFlexHasNotRestedYet": "Ich ha no kei Pillepause gmacht"
 }

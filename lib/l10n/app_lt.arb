@@ -570,5 +570,6 @@
   "pauseStartDateLimit": "Pradžios datą galima pasirinkti iki {date}",
   "initialSettingAskYazFlex": "Ar vartojate Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Jei pasirinksite „Taip“,\nsukonfigūruosime, kad būtų rodoma, kelinta diena po pertraukos pabaigos.",
-  "yazFlexLastRestDurationTitle": "Prašome\npapasakoti apie ankstesnę pertrauką"
+  "yazFlexLastRestDurationTitle": "Prašome\npapasakoti apie ankstesnę pertrauką",
+  "yazFlexHasNotRestedYet": "Dar neturėjau tablečių vartojimo pertraukos"
 }

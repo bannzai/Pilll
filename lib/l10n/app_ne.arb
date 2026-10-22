@@ -570,5 +570,6 @@
   "pauseStartDateLimit": "सुरु मिति {date} सम्म छान्न सकिन्छ",
   "initialSettingAskYazFlex": "के तपाईं Yaz Flex प्रयोग गर्दै हुनुहुन्छ?",
   "initialSettingAskYazFlexDescription": "“हो” छान्नुभयो भने\nविश्राम अवधि सकिएपछि कति दिन भयो भन्ने देखिने गरी सेट गरिनेछ",
-  "yazFlexLastRestDurationTitle": "कृपया\nअघिल्लो विश्राम अवधिबारे हामीलाई बताउनुहोस्"
+  "yazFlexLastRestDurationTitle": "कृपया\nअघिल्लो विश्राम अवधिबारे हामीलाई बताउनुहोस्",
+  "yazFlexHasNotRestedYet": "मैले अहिलेसम्म चक्की नखाने विराम लिएको छैन"
 }

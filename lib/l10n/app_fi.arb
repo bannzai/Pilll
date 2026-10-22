@@ -570,5 +570,6 @@
   "pauseStartDateLimit": "Aloituspäivän voi valita päivään {date} asti",
   "initialSettingAskYazFlex": "Käytätkö Yaz Flexiä?",
   "initialSettingAskYazFlexDescription": "Jos valitset ”Kyllä”,\nasetamme näytettäväksi, monesko päivä tauon päättymisestä on menossa.",
-  "yazFlexLastRestDurationTitle": "Kerrothan meille\nedellisestä tauostasi"
+  "yazFlexLastRestDurationTitle": "Kerrothan meille\nedellisestä tauostasi",
+  "yazFlexHasNotRestedYet": "En ole vielä pitänyt taukoa pillereistä"
 }

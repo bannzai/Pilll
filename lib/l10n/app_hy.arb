@@ -570,5 +570,6 @@
   "pauseStartDateLimit": "Մեկնարկի ամսաթիվը կարելի է ընտրել մինչև {date}",
   "initialSettingAskYazFlex": "Yaz Flex օգտագործո՞ւմ եք։",
   "initialSettingAskYazFlexDescription": "Եթե ընտրեք «Այո»-ն,\nկկարգավորենք, որպեսզի ցուցադրվի, թե ընդմիջման ավարտից քանիերորդ օրն է։",
-  "yazFlexLastRestDurationTitle": "Խնդրում ենք\nպատմել նախորդ դադարի մասին"
+  "yazFlexLastRestDurationTitle": "Խնդրում ենք\nպատմել նախորդ դադարի մասին",
+  "yazFlexHasNotRestedYet": "Դեռևս դեղահաբերի ընդմիջում չեմ արել"
 }

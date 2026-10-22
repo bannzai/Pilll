@@ -570,5 +570,6 @@
   "pauseStartDateLimit": "Началната дата може да бъде до {date}",
   "initialSettingAskYazFlex": "Приемате ли Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ако изберете „Да“,\nще настроим показването на това кой ден е след края на паузата.",
-  "yazFlexLastRestDurationTitle": "Моля,\nкажете ни за предишния период на пауза"
+  "yazFlexLastRestDurationTitle": "Моля,\nкажете ни за предишния период на пауза",
+  "yazFlexHasNotRestedYet": "Все още не съм правила пауза в приема"
 }

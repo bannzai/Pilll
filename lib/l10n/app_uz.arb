@@ -570,5 +570,6 @@
   "pauseStartDateLimit": "Boshlanish sanasini {date} gacha tanlash mumkin",
   "initialSettingAskYazFlex": "Siz Yaz Flex ishlatyapsizmi?",
   "initialSettingAskYazFlexDescription": "Agar “Ha” ni tanlasangiz,\ntanaffus tugaganidan keyin nechinchi kun ekanini ko‘rsatadigan qilib sozlaymiz.",
-  "yazFlexLastRestDurationTitle": "Iltimos,\navvalgi tanaffus davri haqida bizga ayting"
+  "yazFlexLastRestDurationTitle": "Iltimos,\navvalgi tanaffus davri haqida bizga ayting",
+  "yazFlexHasNotRestedYet": "Men hali tabletkadan tanaffus qilmaganman"
 }

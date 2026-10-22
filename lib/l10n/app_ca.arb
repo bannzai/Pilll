@@ -570,5 +570,6 @@
   "pauseStartDateLimit": "La data d'inici es pot triar fins a {date}",
   "initialSettingAskYazFlex": "Prens Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Si selecciones «Sí»,\nho configurarem perquè es mostri quants dies han passat des del final del descans.",
-  "yazFlexLastRestDurationTitle": "Si us plau,\nexplica'ns l'últim període de descans"
+  "yazFlexLastRestDurationTitle": "Si us plau,\nexplica'ns l'últim període de descans",
+  "yazFlexHasNotRestedYet": "Encara no he fet cap pausa de les pastilles"
 }

@@ -570,5 +570,6 @@
   "pauseStartDateLimit": "Gellir dewis y dyddiad cychwyn hyd at {date}",
   "initialSettingAskYazFlex": "Ydych chi’n defnyddio Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Os dewiswch “Ie”,\nbyddwn yn ei osod i ddangos sawl diwrnod sydd wedi mynd heibio ers diwedd yr egwyl.",
-  "yazFlexLastRestDurationTitle": "Dywedwch wrthym,\nos gwelwch yn dda,\nam eich egwyl ddiwethaf"
+  "yazFlexLastRestDurationTitle": "Dywedwch wrthym,\nos gwelwch yn dda,\nam eich egwyl ddiwethaf",
+  "yazFlexHasNotRestedYet": "Nid wyf wedi cael seibiant rhag y bilsen eto"
 }

@@ -570,5 +570,6 @@
   "pauseStartDateLimit": "დაწყების თარიღის არჩევა შესაძლებელია {date}-მდე",
   "initialSettingAskYazFlex": "Yaz Flex-ს იყენებთ?",
   "initialSettingAskYazFlexDescription": "თუ აირჩევთ „დიახ“-ს,\nდავაყენებთ ისე, რომ გამოჩნდეს, რამდენი დღე გავიდა შესვენების დასრულებიდან.",
-  "yazFlexLastRestDurationTitle": "გთხოვთ,\ngვაცნობეთ წინა შესვენების შესახებ"
+  "yazFlexLastRestDurationTitle": "გთხოვთ,\ngვაცნობეთ წინა შესვენების შესახებ",
+  "yazFlexHasNotRestedYet": "ჯერ არ მქონია აბების მიღების შესვენება"
 }

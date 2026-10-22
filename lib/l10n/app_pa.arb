@@ -570,5 +570,6 @@
   "pauseStartDateLimit": "ਸ਼ੁਰੂਆਤੀ ਤਾਰੀਖ {date} ਤੱਕ ਚੁਣੀ ਜਾ ਸਕਦੀ ਹੈ",
   "initialSettingAskYazFlex": "ਕੀ ਤੁਸੀਂ Yaz Flex ਵਰਤ ਰਹੇ ਹੋ?",
   "initialSettingAskYazFlexDescription": "“ਹਾਂ” ਚੁਣਨ ਤੇ\nਬ੍ਰੇਕ ਖਤਮ ਹੋਣ ਤੋਂ ਬਾਅਦ ਕਿੰਨਾ ਦਿਨ ਹੋਇਆ ਹੈ, ਇਹ ਵੇਖਾਉਣ ਲਈ ਸੈਟ ਕੀਤਾ ਜਾਵੇਗਾ",
-  "yazFlexLastRestDurationTitle": "ਕਿਰਪਾ ਕਰਕੇ\nਪਿਛਲੇ ਵਿਰਾਮ ਬਾਰੇ ਸਾਨੂੰ ਦੱਸੋ"
+  "yazFlexLastRestDurationTitle": "ਕਿਰਪਾ ਕਰਕੇ\nਪਿਛਲੇ ਵਿਰਾਮ ਬਾਰੇ ਸਾਨੂੰ ਦੱਸੋ",
+  "yazFlexHasNotRestedYet": "ਮੈਂ ਹਾਲੇ ਤੱਕ ਗੋਲੀ ਤੋਂ ਬ੍ਰੇਕ ਨਹੀਂ ਲਿਆ"
 }

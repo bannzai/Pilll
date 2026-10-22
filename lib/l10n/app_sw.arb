@@ -570,5 +570,6 @@
   "pauseStartDateLimit": "Tarehe ya kuanza inaweza kuchaguliwa hadi {date}",
   "initialSettingAskYazFlex": "Je, unatumia Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ukichagua “Ndiyo”,\ntutaiweka ili ionyeshe ni siku ya ngapi tangu mapumziko yalipoisha.",
-  "yazFlexLastRestDurationTitle": "Tafadhali\ntuambie kuhusu mapumziko yako ya mwisho"
+  "yazFlexLastRestDurationTitle": "Tafadhali\ntuambie kuhusu mapumziko yako ya mwisho",
+  "yazFlexHasNotRestedYet": "Bado sijaanza mapumziko ya tembe"
 }

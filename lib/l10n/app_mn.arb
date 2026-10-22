@@ -570,5 +570,6 @@
   "pauseStartDateLimit": "Эхлэх өдрийг {date} хүртэл сонгох боломжтой",
   "initialSettingAskYazFlex": "Та Yaz Flex хэрэглэж байна уу?",
   "initialSettingAskYazFlexDescription": "“Тийм”-ийг сонговол\nзавсарлага дууссанаас хойш хэд дэх өдөр болохыг харуулахаар тохируулна",
-  "yazFlexLastRestDurationTitle": "Өмнөх завсарлагынхаа талаар\nбидэнд хэлнэ үү"
+  "yazFlexLastRestDurationTitle": "Өмнөх завсарлагынхаа талаар\nбидэнд хэлнэ үү",
+  "yazFlexHasNotRestedYet": "Би эмийн завсарлага хараахан хийгээгүй байна"
 }

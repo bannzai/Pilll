@@ -570,5 +570,6 @@
   "pauseStartDateLimit": "Sākuma datumu var izvēlēties līdz {date}",
   "initialSettingAskYazFlex": "Vai lietojat Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ja izvēlēsieties “Jā”,\nmēs iestatīsim, lai varētu rādīt, kura diena ir pēc pārtraukuma beigām.",
-  "yazFlexLastRestDurationTitle": "Lūdzu,\npastāstiet mums par iepriekšējo pārtraukumu"
+  "yazFlexLastRestDurationTitle": "Lūdzu,\npastāstiet mums par iepriekšējo pārtraukumu",
+  "yazFlexHasNotRestedYet": "Es vēl neesmu taisījusi tablešu lietošanas pārtraukumu"
 }

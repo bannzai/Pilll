@@ -570,5 +570,6 @@
   "pauseStartDateLimit": "د پیل نېټه تر {date} پورې ټاکل کېدای شي",
   "initialSettingAskYazFlex": "ایا تاسو Yaz Flex کاروئ؟",
   "initialSettingAskYazFlexDescription": "که «هو» وټاکئ،\nموږ به داسې یې تنظیم کړو چې د وقفې له پای ته رسېدو وروسته څویمه ورځ ده، وښيي.",
-  "yazFlexLastRestDurationTitle": "مهرباني وکړئ\nد تېر وقفې په اړه موږ ته ووایاست"
+  "yazFlexLastRestDurationTitle": "مهرباني وکړئ\nد تېر وقفې په اړه موږ ته ووایاست",
+  "yazFlexHasNotRestedYet": "ما لا تر اوسه د ګولیو وقفه نه ده کړې"
 }

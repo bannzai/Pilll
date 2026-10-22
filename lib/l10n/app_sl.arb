@@ -570,5 +570,6 @@
   "pauseStartDateLimit": "Začetni datum lahko izberete do {date}",
   "initialSettingAskYazFlex": "Ali uporabljate Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Če izberete »Da«, \nbomo nastavili prikaz, koliko dni je minilo od konca premora.",
-  "yazFlexLastRestDurationTitle": "Prosimo,\npovejte nam o prejšnjem premoru"
+  "yazFlexLastRestDurationTitle": "Prosimo,\npovejte nam o prejšnjem premoru",
+  "yazFlexHasNotRestedYet": "Še nisem imela premora pri jemanju tablet"
 }

@@ -570,5 +570,6 @@
   "pauseStartDateLimit": "Startdatoen kan vælges til og med {date}",
   "initialSettingAskYazFlex": "Bruger du Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Hvis du vælger “Ja”,\nindstiller vi det, så antal dage siden pausen sluttede kan vises.",
-  "yazFlexLastRestDurationTitle": "Fortæl os venligst\nom din seneste pause"
+  "yazFlexLastRestDurationTitle": "Fortæl os venligst\nom din seneste pause",
+  "yazFlexHasNotRestedYet": "Jeg har endnu ikke holdt pause fra pillerne"
 }

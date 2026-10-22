@@ -570,5 +570,6 @@
   "pauseStartDateLimit": "Data e fillimit mund të zgjidhet deri më {date}",
   "initialSettingAskYazFlex": "A po përdorni Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Nëse zgjidhni “Po”,\ndo ta caktojmë që të shfaqet sa ditë kanë kaluar që nga përfundimi i pushimit.",
-  "yazFlexLastRestDurationTitle": "Ju lutemi,\nna tregoni për pushimin e mëparshëm"
+  "yazFlexLastRestDurationTitle": "Ju lutemi,\nna tregoni për pushimin e mëparshëm",
+  "yazFlexHasNotRestedYet": "Ende nuk kam bërë pauzë nga pilula"
 }
