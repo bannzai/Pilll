@@ -239,6 +239,7 @@ class YazFlexRestDurationDateRow extends StatelessWidget {
           ),
         ),
         TextButton(
+          style: TextButton.styleFrom(foregroundColor: AppColors.primary),
           onPressed: onTap,
           child: Text(
             date == null ? L.yazFlexSelectDate : DateTimeFormatter.yearAndMonthAndDay(date),

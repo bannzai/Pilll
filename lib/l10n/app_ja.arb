@@ -2792,7 +2792,7 @@
   "@initialSettingAskYazFlex": {
     "description": "初期設定の最初のページの見出しです。処方されているピルが、休薬明けにシートの途中の番号から服用を再開する連続服用のピル「ヤーズフレックス」かどうかを尋ねます。「はい」と「いいえ」のボタンで答えます。"
   },
-  "initialSettingAskYazFlexDescription": "「はい」を選ぶと\n休薬明けから何日目かを表示できるように設定します",
+  "initialSettingAskYazFlexDescription": "「はい」を選ぶと\n休薬明けから何日目かを\n表示できるように設定します",
   "@initialSettingAskYazFlexDescription": {
     "description": "初期設定の最初のページで「ヤーズフレックスの方ですか？」の見出しの下に出す説明です。「はい」を選ぶと、ピルシートの番号ではなく休薬明けから何日目かを表示する設定で始められることを伝えます。"
   },
