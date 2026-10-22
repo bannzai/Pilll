@@ -571,5 +571,6 @@
   "initialSettingAskYazFlex": "Apakah Anda menggunakan Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Jika Anda memilih “Ya”,\nkami akan mengaturnya agar dapat menampilkan hari keberapa sejak jeda berakhir.",
   "yazFlexLastRestDurationTitle": "Mohon beri tahu kami\ntentang jeda terakhir Anda",
-  "yazFlexHasNotRestedYet": "Saya belum menjalani jeda minum pil"
+  "yazFlexHasNotRestedYet": "Saya belum menjalani jeda minum pil",
+  "yazFlexLastRestDurationBeginDate": "Hari dimulainya jeda"
 }

@@ -571,5 +571,6 @@
   "initialSettingAskYazFlex": "Da li koristite Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ako odaberete „Da”,\npodesit ćemo prikaz koliko je dana prošlo od završetka pauze.",
   "yazFlexLastRestDurationTitle": "Molimo,\nrecite nam o prethodnoj pauzi",
-  "yazFlexHasNotRestedYet": "Još nisam napravila pauzu s tabletama"
+  "yazFlexHasNotRestedYet": "Još nisam napravila pauzu s tabletama",
+  "yazFlexLastRestDurationBeginDate": "Dan kada je počela pauza"
 }

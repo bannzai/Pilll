@@ -571,5 +571,6 @@
   "initialSettingAskYazFlex": "Gebruik jy Yaz Flex?",
   "initialSettingAskYazFlexDescription": "As jy “Ja” kies,\nstel ons dit so op dat jy kan sien hoeveel dae dit is sedert die einde van jou pouse.",
   "yazFlexLastRestDurationTitle": "Vertel ons asseblief\nvan jou vorige pouse",
-  "yazFlexHasNotRestedYet": "Ek het nog nie 'n pilpouse gehad nie"
+  "yazFlexHasNotRestedYet": "Ek het nog nie 'n pilpouse gehad nie",
+  "yazFlexLastRestDurationBeginDate": "Die dag waarop die pouse begin het"
 }

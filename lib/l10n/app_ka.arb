@@ -571,5 +571,6 @@
   "initialSettingAskYazFlex": "Yaz Flex-ს იყენებთ?",
   "initialSettingAskYazFlexDescription": "თუ აირჩევთ „დიახ“-ს,\nდავაყენებთ ისე, რომ გამოჩნდეს, რამდენი დღე გავიდა შესვენების დასრულებიდან.",
   "yazFlexLastRestDurationTitle": "გთხოვთ,\ngვაცნობეთ წინა შესვენების შესახებ",
-  "yazFlexHasNotRestedYet": "ჯერ არ მქონია აბების მიღების შესვენება"
+  "yazFlexHasNotRestedYet": "ჯერ არ მქონია აბების მიღების შესვენება",
+  "yazFlexLastRestDurationBeginDate": "დღე, როცა შესვენება დაიწყო"
 }

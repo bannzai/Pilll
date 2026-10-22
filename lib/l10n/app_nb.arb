@@ -571,5 +571,6 @@
   "initialSettingAskYazFlex": "Bruker du Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Hvis du velger «Ja»,\nsetter vi det opp slik at det viser hvor mange dager det er siden pausen tok slutt.",
   "yazFlexLastRestDurationTitle": "Fortell oss gjerne\nom den forrige pausen din",
-  "yazFlexHasNotRestedYet": "Jeg har ikke hatt pause fra pillene ennå"
+  "yazFlexHasNotRestedYet": "Jeg har ikke hatt pause fra pillene ennå",
+  "yazFlexLastRestDurationBeginDate": "Dagen pausen startet"
 }

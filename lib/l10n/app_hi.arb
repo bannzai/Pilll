@@ -571,5 +571,6 @@
   "initialSettingAskYazFlex": "क्या आप Yaz Flex का उपयोग कर रही हैं?",
   "initialSettingAskYazFlexDescription": "“हाँ” चुनने पर\nसेटिंग ऐसी कर दी जाएगी कि ब्रेक खत्म होने के बाद कौन-सा दिन है, यह दिखे",
   "yazFlexLastRestDurationTitle": "कृपया हमें\nपिछले ब्रेक के बारे में बताएं",
-  "yazFlexHasNotRestedYet": "मैंने अभी तक गोली लेना बंद नहीं किया है"
+  "yazFlexHasNotRestedYet": "मैंने अभी तक गोली लेना बंद नहीं किया है",
+  "yazFlexLastRestDurationBeginDate": "वह दिन जब विराम शुरू हुआ"
 }

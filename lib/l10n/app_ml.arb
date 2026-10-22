@@ -571,5 +571,6 @@
   "initialSettingAskYazFlex": "നിങ്ങൾ Yaz Flex ഉപയോഗിക്കുകയാണോ?",
   "initialSettingAskYazFlexDescription": "“അതെ” തിരഞ്ഞെടുക്കുകയാണെങ്കിൽ\nഇടവേള കഴിഞ്ഞ് എത്രാമത്തെ ദിവസമാണെന്ന് കാണിക്കുന്ന വിധത്തിൽ സജ്ജീകരിക്കും",
   "yazFlexLastRestDurationTitle": "ദയവായി\nമുൻ ഇടവേളയെക്കുറിച്ച് ഞങ്ങളോട് പറയൂ",
-  "yazFlexHasNotRestedYet": "ഞാൻ ഇനിയും ഗുളിക കഴിക്കുന്നത് നിർത്തിയിട്ടില്ല"
+  "yazFlexHasNotRestedYet": "ഞാൻ ഇനിയും ഗുളിക കഴിക്കുന്നത് നിർത്തിയിട്ടില്ല",
+  "yazFlexLastRestDurationBeginDate": "ഇടവേള ആരംഭിച്ച ദിവസം"
 }

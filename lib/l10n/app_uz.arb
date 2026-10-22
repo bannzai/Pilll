@@ -571,5 +571,6 @@
   "initialSettingAskYazFlex": "Siz Yaz Flex ishlatyapsizmi?",
   "initialSettingAskYazFlexDescription": "Agar “Ha” ni tanlasangiz,\ntanaffus tugaganidan keyin nechinchi kun ekanini ko‘rsatadigan qilib sozlaymiz.",
   "yazFlexLastRestDurationTitle": "Iltimos,\navvalgi tanaffus davri haqida bizga ayting",
-  "yazFlexHasNotRestedYet": "Men hali tabletkadan tanaffus qilmaganman"
+  "yazFlexHasNotRestedYet": "Men hali tabletkadan tanaffus qilmaganman",
+  "yazFlexLastRestDurationBeginDate": "Tanaffus boshlangan kun"
 }

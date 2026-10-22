@@ -571,5 +571,6 @@
   "initialSettingAskYazFlex": "Вы принимаете Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Если вы выберете «Да»,\nмы настроим отображение того, какой день идёт после окончания перерыва.",
   "yazFlexLastRestDurationTitle": "Пожалуйста,\nрасскажите о предыдущем перерыве",
-  "yazFlexHasNotRestedYet": "Я ещё не делала перерыв в приёме таблеток"
+  "yazFlexHasNotRestedYet": "Я ещё не делала перерыв в приёме таблеток",
+  "yazFlexLastRestDurationBeginDate": "День начала перерыва"
 }

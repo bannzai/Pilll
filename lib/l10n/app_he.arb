@@ -571,5 +571,6 @@
   "initialSettingAskYazFlex": "האם את משתמשת ב-Yaz Flex?",
   "initialSettingAskYazFlexDescription": "אם תבחרי ב״כן״,\nנגדיר שיוצג כמה ימים עברו מאז סיום ההפסקה.",
   "yazFlexLastRestDurationTitle": "נשמח אם תספרי לנו\nעל ההפסקה הקודמת",
-  "yazFlexHasNotRestedYet": "עדיין לא עשיתי הפסקה מהגלולות"
+  "yazFlexHasNotRestedYet": "עדיין לא עשיתי הפסקה מהגלולות",
+  "yazFlexLastRestDurationBeginDate": "היום שבו ההפסקה התחילה"
 }

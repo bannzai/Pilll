@@ -571,5 +571,6 @@
   "initialSettingAskYazFlex": "Užíváte Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Když vyberete „Ano“,\nnastavíme zobrazení počtu dní od konce pauzy.",
   "yazFlexLastRestDurationTitle": "Prosím,\nřekněte nám o svém posledním období pauzy",
-  "yazFlexHasNotRestedYet": "Ještě jsem neměla pauzu v užívání"
+  "yazFlexHasNotRestedYet": "Ještě jsem neměla pauzu v užívání",
+  "yazFlexLastRestDurationBeginDate": "Den začátku pauzy"
 }

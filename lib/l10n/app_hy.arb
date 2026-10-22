@@ -571,5 +571,6 @@
   "initialSettingAskYazFlex": "Yaz Flex օգտագործո՞ւմ եք։",
   "initialSettingAskYazFlexDescription": "Եթե ընտրեք «Այո»-ն,\nկկարգավորենք, որպեսզի ցուցադրվի, թե ընդմիջման ավարտից քանիերորդ օրն է։",
   "yazFlexLastRestDurationTitle": "Խնդրում ենք\nպատմել նախորդ դադարի մասին",
-  "yazFlexHasNotRestedYet": "Դեռևս դեղահաբերի ընդմիջում չեմ արել"
+  "yazFlexHasNotRestedYet": "Դեռևս դեղահաբերի ընդմիջում չեմ արել",
+  "yazFlexLastRestDurationBeginDate": "Ընդմիջման սկսվելու օրը"
 }

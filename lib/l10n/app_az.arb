@@ -571,5 +571,6 @@
   "initialSettingAskYazFlex": "Yaz Flex istifadə edirsiniz?",
   "initialSettingAskYazFlexDescription": "“Bəli” seçsəniz,\nfasilədən sonra neçə gün keçdiyini göstərə biləcək şəkildə tənzimləyəcəyik.",
   "yazFlexLastRestDurationTitle": "Zəhmət olmasa\nəvvəlki fasilə dövrünüz barədə məlumat verin",
-  "yazFlexHasNotRestedYet": "Hələ dərman fasiləsi etməmişəm"
+  "yazFlexHasNotRestedYet": "Hələ dərman fasiləsi etməmişəm",
+  "yazFlexLastRestDurationBeginDate": "Fasilənin başladığı gün"
 }

@@ -571,5 +571,6 @@
   "initialSettingAskYazFlex": "តើអ្នកកំពុងប្រើ Yaz Flex មែនទេ?",
   "initialSettingAskYazFlexDescription": "ប្រសិនបើអ្នកជ្រើសរើស «បាទ/ចាស»\nយើងនឹងកំណត់ឱ្យអាចបង្ហាញថា ជាថ្ងៃទីប៉ុន្មានបន្ទាប់ពីចប់រយៈពេលឈប់服用។",
   "yazFlexLastRestDurationTitle": "សូមប្រាប់យើង\nអំពីរយៈពេលឈប់ថ្នាំលើកមុន",
-  "yazFlexHasNotRestedYet": "ខ្ញុំនៅមិនទាន់បានឈប់លេបថ្នាំនៅឡើយទេ"
+  "yazFlexHasNotRestedYet": "ខ្ញុំនៅមិនទាន់បានឈប់លេបថ្នាំនៅឡើយទេ",
+  "yazFlexLastRestDurationBeginDate": "ថ្ងៃដែលការផ្អាកបានចាប់ផ្ដើម"
 }

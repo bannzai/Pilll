@@ -571,5 +571,6 @@
   "initialSettingAskYazFlex": "আপনি কি Yaz Flex ব্যবহার করছেন?",
   "initialSettingAskYazFlexDescription": "“হ্যাঁ” নির্বাচন করলে\nবিরতি শেষ হওয়ার পর কততম দিন চলছে তা দেখানোর জন্য সেট করা হবে",
   "yazFlexLastRestDurationTitle": "অনুগ্রহ করে\nআগের বিরতি সম্পর্কে জানান",
-  "yazFlexHasNotRestedYet": "আমি এখনও ওষুধ বন্ধের বিরতি নিইনি"
+  "yazFlexHasNotRestedYet": "আমি এখনও ওষুধ বন্ধের বিরতি নিইনি",
+  "yazFlexLastRestDurationBeginDate": "বিরতি শুরু হওয়ার দিন"
 }

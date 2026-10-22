@@ -571,5 +571,6 @@
   "initialSettingAskYazFlex": "Ingabe usebenzisa i-Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Uma ukhetha okuthi “Yebo”,\nsizokumisa ukuze kuboniswe ukuthi sekuyisuku lwesingaki kusukela ikhefu liphelile.",
   "yazFlexLastRestDurationTitle": "Sicela\nusitshele ngekhefu lakho langaphambilini",
-  "yazFlexHasNotRestedYet": "Angikayeki ikhefu lokuyeka amaphilisi okwamanje"
+  "yazFlexHasNotRestedYet": "Angikayeki ikhefu lokuyeka amaphilisi okwamanje",
+  "yazFlexLastRestDurationBeginDate": "Usuku ikhefu eliqale ngalo"
 }

@@ -571,5 +571,6 @@
   "initialSettingAskYazFlex": "Prens Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Si selecciones «Sí»,\nho configurarem perquè es mostri quants dies han passat des del final del descans.",
   "yazFlexLastRestDurationTitle": "Si us plau,\nexplica'ns l'últim període de descans",
-  "yazFlexHasNotRestedYet": "Encara no he fet cap pausa de les pastilles"
+  "yazFlexHasNotRestedYet": "Encara no he fet cap pausa de les pastilles",
+  "yazFlexLastRestDurationBeginDate": "Dia d’inici de la pausa"
 }

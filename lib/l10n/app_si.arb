@@ -571,5 +571,6 @@
   "initialSettingAskYazFlex": "ඔබ Yaz Flex භාවිතා කරනවාද?",
   "initialSettingAskYazFlexDescription": "“ඔව්” තෝරාගත් විට\nවිවේක කාලය අවසන් වූ පසු කීවැනි දිනදැයි පෙන්වන ලෙස සකසනු ඇත",
   "yazFlexLastRestDurationTitle": "කරුණාකර\nපෙර විරාම කාලය ගැන අපට කියන්න",
-  "yazFlexHasNotRestedYet": "මම තවමත් ගોળි ගැනීමේ විවේකයක් ගෙන නැහැ"
+  "yazFlexHasNotRestedYet": "මම තවමත් ගોળි ගැනීමේ විවේකයක් ගෙන නැහැ",
+  "yazFlexLastRestDurationBeginDate": "විරාමය ආරම්භ වූ දිනය"
 }

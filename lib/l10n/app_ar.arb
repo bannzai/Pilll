@@ -571,5 +571,6 @@
   "initialSettingAskYazFlex": "هل تستخدمين ياز فليكس؟",
   "initialSettingAskYazFlexDescription": "إذا اخترتِ «نعم»،\nفسنضبط الإعدادات بحيث يمكن عرض عدد الأيام منذ انتهاء فترة التوقف.",
   "yazFlexLastRestDurationTitle": "يرجى إخبارنا\nعن فترة التوقف السابقة",
-  "yazFlexHasNotRestedYet": "لم أبدأ فترة التوقف عن تناول الحبوب بعد"
+  "yazFlexHasNotRestedYet": "لم أبدأ فترة التوقف عن تناول الحبوب بعد",
+  "yazFlexLastRestDurationBeginDate": "تاريخ بدء فترة التوقف"
 }
