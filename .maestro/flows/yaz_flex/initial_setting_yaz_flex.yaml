@@ -36,9 +36,18 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - tapOn: "次へ"
 - waitForAnimationToEnd
 
-# 前回の休薬: ピルをタップせずに「休薬の入力はスキップ」→ 確認ダイアログで「スキップする」→ 服用タイミングへ進む
+# 前回の休薬: 「休薬中でまだ再開していない」をオンにすると「休薬して今日で何日目」(既定 4日目) の欄が出る。オフに戻してから
+# ピルをタップせずに「休薬の入力はスキップ」→ 確認ダイアログで「スキップする」→ 服用タイミングへ進む
 - assertVisible: "休薬した時のピルを\nタップしてください"
 - assertVisible: "休薬中でまだ再開していない"
+- tapOn: "休薬中でまだ再開していない"
+- waitForAnimationToEnd
+- assertVisible: "休薬して今日で何日目"
+- assertVisible: "4日目"
+- takeScreenshot: "yaz_flex_rest_duration_resting"
+- tapOn: "休薬中でまだ再開していない"
+- waitForAnimationToEnd
+- assertNotVisible: "休薬して今日で何日目"
 - tapOn: "休薬の入力はスキップ"
 - waitForAnimationToEnd
 - assertVisible: "休薬の入力をスキップします"
