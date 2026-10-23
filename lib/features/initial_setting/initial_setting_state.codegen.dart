@@ -57,11 +57,16 @@ class InitialSettingState with _$InitialSettingState {
   }) = _InitialSettingState;
 
   /// ヤーズフレックス向けの導線で、前回の休薬が終わった日 (服用を再開した日)。休薬のピルの次のピルを飲んだ日
-  /// 休薬のピルが未選択・今日の番号が未選択の時は null
+  /// 休薬のピルが未選択・今日の番号が未選択・休薬のピルが今日のピル以降 (戻って今日の番号を変えた後) の時は null
   DateTime? get yazFlexLastRestDurationEndDate {
     final todayPillNumber = this.todayPillNumber;
     final lastTakenPillNumberBeforeRest = yazFlexLastTakenPillNumberBeforeRest;
-    if (todayPillNumber == null || lastTakenPillNumberBeforeRest == null) {
+    if (todayPillNumber == null ||
+        lastTakenPillNumberBeforeRest == null ||
+        !yazFlexCanSelectAsLastTakenPillBeforeRest(
+          pageIndex: lastTakenPillNumberBeforeRest.pageIndex,
+          pillNumberInPillSheet: lastTakenPillNumberBeforeRest.pillNumberInPillSheet,
+        )) {
       return null;
     }
     return today().addDays(

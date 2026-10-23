@@ -158,6 +158,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     state = state.copyWith(yazFlexBeginPillNumber: yazFlexBeginPillNumber);
   }
 
+  /// 今日飲む番号を選ぶ。ヤーズフレックス向けの導線で選んだ休薬のピルが今日のピル以降になる時 (戻って今日の番号を変えた時) は、その選択を消す
   void setTodayPillNumber({
     required int pageIndex,
     required int pillNumberInPillSheet,
@@ -168,6 +169,14 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
         pillNumberInPillSheet: pillNumberInPillSheet,
       ),
     );
+    final lastTakenPillNumberBeforeRest = state.yazFlexLastTakenPillNumberBeforeRest;
+    if (lastTakenPillNumberBeforeRest != null &&
+        !state.yazFlexCanSelectAsLastTakenPillBeforeRest(
+          pageIndex: lastTakenPillNumberBeforeRest.pageIndex,
+          pillNumberInPillSheet: lastTakenPillNumberBeforeRest.pillNumberInPillSheet,
+        )) {
+      state = state.copyWith(yazFlexLastTakenPillNumberBeforeRest: null);
+    }
   }
 
   void unsetTodayPillNumber() {

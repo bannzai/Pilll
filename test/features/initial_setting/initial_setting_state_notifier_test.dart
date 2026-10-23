@@ -973,6 +973,38 @@ void main() {
         expect(pillSheetGroup.restDurations, isEmpty);
         expect(pillSheetGroup.sequentialTodayPillNumber, 17);
       });
+      test("休薬のピルを選んだ後に戻って今日の番号をそれ以前に変えた場合は、休薬の選択が消えて登録されない", () async {
+        final pillSheetGroup = await registerYazFlex(
+          mockToday: DateTime.parse("2022-03-02"),
+          input: (store) {
+            store.setTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 20);
+            store.setYazFlexLastTakenPillNumberBeforeRest(
+                pageIndex: 0, pillNumberInPillSheet: 16);
+            store.setTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 10);
+          },
+        );
+
+        expect(pillSheetGroup.restDurations, isEmpty);
+        expect(pillSheetGroup.sequentialTodayPillNumber, 10);
+      });
+      test("休薬のピルを選んだ後に戻って今日の番号をそれより後に変えた場合は、休薬の選択が残り再開日が計算し直される", () async {
+        final pillSheetGroup = await registerYazFlex(
+          mockToday: DateTime.parse("2022-03-02"),
+          input: (store) {
+            store.setTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 20);
+            store.setYazFlexLastTakenPillNumberBeforeRest(
+                pageIndex: 0, pillNumberInPillSheet: 16);
+            store.setTodayPillNumber(pageIndex: 1, pillNumberInPillSheet: 2);
+          },
+        );
+
+        expect(pillSheetGroup.pillSheets[0].restDurations.length, 1);
+        expect(
+          pillSheetGroup.pillSheets[0].restDurations[0].endDate,
+          DateTime.parse("2022-02-17"),
+        );
+        expect(pillSheetGroup.sequentialTodayPillNumber, 14);
+      });
     });
 
     test(
