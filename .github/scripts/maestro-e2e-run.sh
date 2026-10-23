@@ -121,13 +121,20 @@ fi
 # 1 回の maestro test で複数 flow を流すと、XCTest driver が途中で落ちた時に後続の flow が全て
 # 接続エラーで失敗する。flow ごとに maestro test を起動し、driver を起動し直す。
 # ディレクトリ指定の時は config.yaml の flows のパターンから flow を展開する (subflows/ は含まれない)。
+# config.yaml が無いディレクトリは、maestro test <dir> と同じく直下の flow を対象にする。
 if [ -d "$TARGET" ]; then
   FLOW_FILES=()
   while IFS= read -r pattern; do
     for f in "$TARGET"/$pattern; do
-      case "$f" in *.yaml | *.yml) [ -f "$f" ] && FLOW_FILES+=("$f") ;; esac
+      case "$f" in */config.yaml) ;; *.yaml | *.yml) [ -f "$f" ] && FLOW_FILES+=("$f") ;; esac
     done
-  done < <(sed -n 's/^[[:space:]]*-[[:space:]]*"\{0,1\}\([^"]*\)"\{0,1\}[[:space:]]*$/\1/p' "${TARGET}/config.yaml")
+  done < <(
+    if [ -f "${TARGET}/config.yaml" ]; then
+      sed -n 's/^[[:space:]]*-[[:space:]]*"\{0,1\}\([^"]*\)"\{0,1\}[[:space:]]*$/\1/p' "${TARGET}/config.yaml"
+    else
+      echo "*"
+    fi
+  )
 else
   FLOW_FILES=("$TARGET")
 fi
