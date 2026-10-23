@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "ഇടവേള കാലയളവ് നൽകുന്നത് ഒഴിവാക്കുക",
   "yazFlexSkipRestDurationDialogTitle": "ഇടവേള കാലയളവിന്റെ എൻട്രി ഒഴിവാക്കുക",
   "yazFlexSkipRestDurationDialogMessage": "മരുന്ന് കഴിക്കുന്നതിലെ ഇടവേളയുടെ കാലയളവ് പിന്നീട് ഹോമിലെ “മരുന്ന് കഴിക്കുന്നതിലെ ഇടവേള”യിൽ നിന്ന് നൽകാം.",
+  "yazFlexSkipRestDurationDialogSkip": "ഒഴിവാക്കുക",
   "yazFlexLastRestDurationBeginDate": "ഇടവേള ആരംഭിച്ച ദിവസം",
   "yazFlexLastRestDurationEndDate": "വീണ്ടും കഴിക്കാൻ ആരംഭിച്ച ദിവസം",
   "yazFlexSelectDate": "തീയതി തിരഞ്ഞെടുക്കുക",

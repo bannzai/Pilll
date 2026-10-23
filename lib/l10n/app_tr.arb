@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "Ara dönem girişini atla",
   "yazFlexSkipRestDurationDialogTitle": "Ara dönem girişini atla",
   "yazFlexSkipRestDurationDialogMessage": "Kullanıma ara verme dönemini daha sonra Ana Ekran’daki “Kullanıma ara verme” bölümünden girebilirsiniz.",
+  "yazFlexSkipRestDurationDialogSkip": "Atla",
   "yazFlexLastRestDurationBeginDate": "Aranın başladığı gün",
   "yazFlexLastRestDurationEndDate": "Tekrar almaya başladığınız gün",
   "yazFlexSelectDate": "Tarih seçin",

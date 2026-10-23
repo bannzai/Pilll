@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "Пропуснете въвеждането на почивката",
   "yazFlexSkipRestDurationDialogTitle": "Пропускане на въвеждането на почивката",
   "yazFlexSkipRestDurationDialogMessage": "Периодът на пауза в приема може да бъде въведен по-късно от „Пауза в приема“ на началния екран.",
+  "yazFlexSkipRestDurationDialogSkip": "Пропусни",
   "yazFlexLastRestDurationBeginDate": "Денят, в който е започнала паузата",
   "yazFlexLastRestDurationEndDate": "Дата на подновяване на приема",
   "yazFlexSelectDate": "Изберете дата",

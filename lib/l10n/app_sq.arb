@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "Kalo futjen e periudhës së pushimit",
   "yazFlexSkipRestDurationDialogTitle": "Kalo futjen e periudhës së pauzës",
   "yazFlexSkipRestDurationDialogMessage": "Periudhën e pauzës së marrjes mund ta vendosni më vonë te “Pauza e marrjes” në ekranin kryesor.",
+  "yazFlexSkipRestDurationDialogSkip": "Kaloje",
   "yazFlexLastRestDurationBeginDate": "Dita kur filloi pushimi",
   "yazFlexLastRestDurationEndDate": "Dita kur rifilluat marrjen",
   "yazFlexSelectDate": "Zgjidhni datën",

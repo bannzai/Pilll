@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "Pomiń wpisywanie przerwy",
   "yazFlexSkipRestDurationDialogTitle": "Pomiń wprowadzanie przerwy",
   "yazFlexSkipRestDurationDialogMessage": "Okres przerwy w przyjmowaniu możesz wprowadzić później w sekcji „Przerwa w przyjmowaniu” na ekranie głównym.",
+  "yazFlexSkipRestDurationDialogSkip": "Pomiń",
   "yazFlexLastRestDurationBeginDate": "Dzień rozpoczęcia przerwy",
   "yazFlexLastRestDurationEndDate": "Dzień wznowienia przyjmowania",
   "yazFlexSelectDate": "Wybierz datę",

@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "Langkau memasukkan tempoh rehat",
   "yazFlexSkipRestDurationDialogTitle": "Langkaukan pengisian tempoh rehat",
   "yazFlexSkipRestDurationDialogMessage": "Tempoh rehat pengambilan boleh diisi kemudian daripada “Rehat pengambilan” di Laman Utama.",
+  "yazFlexSkipRestDurationDialogSkip": "Langkau",
   "yazFlexLastRestDurationBeginDate": "Hari rehat bermula",
   "yazFlexLastRestDurationEndDate": "Hari anda menyambung semula pengambilan",
   "yazFlexSelectDate": "Pilih tarikh",

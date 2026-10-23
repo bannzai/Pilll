@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "Ignorer la saisie de la pause",
   "yazFlexSkipRestDurationDialogTitle": "Ignorer la saisie de la pause",
   "yazFlexSkipRestDurationDialogMessage": "Vous pourrez saisir plus tard la période de pause de prise depuis « Pause de prise » sur l’écran d’accueil.",
+  "yazFlexSkipRestDurationDialogSkip": "Ignorer",
   "yazFlexLastRestDurationBeginDate": "Date de début de la pause",
   "yazFlexLastRestDurationEndDate": "Date de reprise de la prise",
   "yazFlexSelectDate": "Sélectionnez une date",

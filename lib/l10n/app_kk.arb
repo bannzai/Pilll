@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "Үзіліс кезеңін енгізуді өткізіп жіберу",
   "yazFlexSkipRestDurationDialogTitle": "Үзіліс кезеңін енгізуді өткізіп жіберу",
   "yazFlexSkipRestDurationDialogMessage": "Қабылдау үзілісінің мерзімін кейінірек Басты беттегі «Қабылдау үзілісі» бөлімінен енгізе аласыз.",
+  "yazFlexSkipRestDurationDialogSkip": "Өткізіп жіберу",
   "yazFlexLastRestDurationBeginDate": "Үзіліс басталған күн",
   "yazFlexLastRestDurationEndDate": "Қабылдауды қайта бастаған күн",
   "yazFlexSelectDate": "Күнді таңдаңыз",

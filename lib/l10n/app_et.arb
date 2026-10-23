@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "Jäta pausi sisestamine vahele",
   "yazFlexSkipRestDurationDialogTitle": "Jäta pausiperioodi sisestamine vahele",
   "yazFlexSkipRestDurationDialogMessage": "Võtmispausi perioodi saate hiljem sisestada avalehe jaotises „Võtmispaus”.",
+  "yazFlexSkipRestDurationDialogSkip": "Jäta vahele",
   "yazFlexLastRestDurationBeginDate": "Päev, mil paus algas",
   "yazFlexLastRestDurationEndDate": "Võtmise taasalustamise päev",
   "yazFlexSelectDate": "Valige kuupäev",

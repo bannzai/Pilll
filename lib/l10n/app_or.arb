@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "ବିରତି ଅବଧି ଇନପୁଟ୍‌କୁ ଏଡ଼ାନ୍ତୁ",
   "yazFlexSkipRestDurationDialogTitle": "ବିରତି ଅବଧିର ଏଣ୍ଟ୍ରିକୁ ଏଡ଼ାନ୍ତୁ",
   "yazFlexSkipRestDurationDialogMessage": "ଔଷଧ ସେବନ ବିରତିର ସମୟସୀମା ପରେ ହୋମର “ଔଷଧ ସେବନ ବିରତି” ରୁ ଭରଣ କରିପାରିବେ।",
+  "yazFlexSkipRestDurationDialogSkip": "ଏଡାଇଦିଅନ୍ତୁ",
   "yazFlexLastRestDurationBeginDate": "ବିରତି ଆରମ୍ଭ ହୋଇଥିବା ଦିନ",
   "yazFlexLastRestDurationEndDate": "ପୁଣି ନେବା ଆରମ୍ଭ କରିଥିବା ଦିନ",
   "yazFlexSelectDate": "ତାରିଖ ଚୟନ କରନ୍ତୁ",

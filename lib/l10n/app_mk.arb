@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "Прескокни внесување на паузата",
   "yazFlexSkipRestDurationDialogTitle": "Прескокни го внесувањето на паузата",
   "yazFlexSkipRestDurationDialogMessage": "Периодот на пауза во земањето може подоцна да го внесете од „Пауза во земањето“ на почетниот екран.",
+  "yazFlexSkipRestDurationDialogSkip": "Прескокни",
   "yazFlexLastRestDurationBeginDate": "Денот кога започна паузата",
   "yazFlexLastRestDurationEndDate": "Денот кога повторно почнавте да земате",
   "yazFlexSelectDate": "Изберете датум",

@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "Omitir a introdución do período de descanso",
   "yazFlexSkipRestDurationDialogTitle": "Omitir o rexistro do descanso",
   "yazFlexSkipRestDurationDialogMessage": "Poderás introducir máis tarde o período de descanso da toma desde «Descanso da toma» na pantalla de inicio.",
+  "yazFlexSkipRestDurationDialogSkip": "Omitir",
   "yazFlexLastRestDurationBeginDate": "Día no que comezou a pausa",
   "yazFlexLastRestDurationEndDate": "Día no que retomaches a toma",
   "yazFlexSelectDate": "Selecciona unha data",

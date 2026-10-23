@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "Hepgor mewnbynnu'r cyfnod seibiant",
   "yazFlexSkipRestDurationDialogTitle": "Hepgor mewnbynnu’r egwyl",
   "yazFlexSkipRestDurationDialogMessage": "Gallwch nodi cyfnod saib y tabledi yn nes ymlaen o “Saib cymryd” ar y sgrin gartref.",
+  "yazFlexSkipRestDurationDialogSkip": "Hepgor",
   "yazFlexLastRestDurationBeginDate": "Y diwrnod y dechreuodd y seibiant",
   "yazFlexLastRestDurationEndDate": "Y diwrnod y gwnaethoch ailddechrau ei gymryd",
   "yazFlexSelectDate": "Dewiswch ddyddiad",

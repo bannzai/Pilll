@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "இடைவேளை காலத்தை உள்ளிடுவது தவிர்க்கவும்",
   "yazFlexSkipRestDurationDialogTitle": "இடைவேளை காலத்தை பதிவு செய்வதைத் தவிர்க்கவும்",
   "yazFlexSkipRestDurationDialogMessage": "மருந்து எடுத்தல் ஓய்வு காலத்தை பின்னர் முகப்பில் உள்ள “மருந்து எடுத்தல் ஓய்வு” பகுதியில் உள்ளிடலாம்.",
+  "yazFlexSkipRestDurationDialogSkip": "தவிர்க்கவும்",
   "yazFlexLastRestDurationBeginDate": "இடைவேளை தொடங்கிய நாள்",
   "yazFlexLastRestDurationEndDate": "மீண்டும் எடுத்துக்கொள்ளத் தொடங்கிய நாள்",
   "yazFlexSelectDate": "தேதியைத் தேர்ந்தெடுக்கவும்",

@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "Завсарлагааны хугацаа оруулахыг алгасах",
   "yazFlexSkipRestDurationDialogTitle": "Завсарлах хугацааны оруулгыг алгасах",
   "yazFlexSkipRestDurationDialogMessage": "Уух завсарлагын хугацааг дараа нь Нүүр хуудасны “Уух завсарлага” хэсгээс оруулах боломжтой.",
+  "yazFlexSkipRestDurationDialogSkip": "Алгасах",
   "yazFlexLastRestDurationBeginDate": "Завсарлага эхэлсэн өдөр",
   "yazFlexLastRestDurationEndDate": "Дахин ууж эхэлсэн өдөр",
   "yazFlexSelectDate": "Огноо сонгоно уу",

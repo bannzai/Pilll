@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "Spring indtastning af pause over",
   "yazFlexSkipRestDurationDialogTitle": "Spring registrering af pause over",
   "yazFlexSkipRestDurationDialogMessage": "Perioden for pause i indtagelse kan indtastes senere under “Pause i indtagelse” på hjemmeskærmen.",
+  "yazFlexSkipRestDurationDialogSkip": "Spring over",
   "yazFlexLastRestDurationBeginDate": "Dagen, hvor pausen startede",
   "yazFlexLastRestDurationEndDate": "Dato for genoptagelse",
   "yazFlexSelectDate": "Vælg en dato",

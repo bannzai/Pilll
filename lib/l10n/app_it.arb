@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "Salta l’inserimento della pausa",
   "yazFlexSkipRestDurationDialogTitle": "Salta l’inserimento della pausa",
   "yazFlexSkipRestDurationDialogMessage": "Potrai inserire in seguito il periodo di pausa di assunzione da “Pausa di assunzione” nella schermata Home.",
+  "yazFlexSkipRestDurationDialogSkip": "Salta",
   "yazFlexLastRestDurationBeginDate": "Giorno di inizio della pausa",
   "yazFlexLastRestDurationEndDate": "Data di ripresa dell’assunzione",
   "yazFlexSelectDate": "Seleziona una data",

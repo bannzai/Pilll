@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "Tanaffus davrini kiritishni oʻtkazib yuborish",
   "yazFlexSkipRestDurationDialogTitle": "Tanaffus davrini kiritishni oʻtkazib yuborish",
   "yazFlexSkipRestDurationDialogMessage": "Qabul qilish tanaffusi muddatini keyinroq Bosh sahifadagi “Qabul qilish tanaffusi” bo‘limidan kiritishingiz mumkin.",
+  "yazFlexSkipRestDurationDialogSkip": "O‘tkazib yuborish",
   "yazFlexLastRestDurationBeginDate": "Tanaffus boshlangan kun",
   "yazFlexLastRestDurationEndDate": "Qabulni qayta boshlagan kun",
   "yazFlexSelectDate": "Sanani tanlang",

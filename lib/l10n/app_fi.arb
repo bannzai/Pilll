@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "Ohita tauon syöttäminen",
   "yazFlexSkipRestDurationDialogTitle": "Ohita taukojakson kirjaaminen",
   "yazFlexSkipRestDurationDialogMessage": "Taukojakson voi syöttää myöhemmin Koti-näytön ”Tauko ottamisesta” -kohdasta.",
+  "yazFlexSkipRestDurationDialogSkip": "Ohita",
   "yazFlexLastRestDurationBeginDate": "Tauon alkamispäivä",
   "yazFlexLastRestDurationEndDate": "Päivä, jolloin aloitit käytön uudelleen",
   "yazFlexSelectDate": "Valitse päivämäärä",

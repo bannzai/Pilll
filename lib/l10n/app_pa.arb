@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "ਵਿਰਾਮ ਮਿਆਦ ਦਰਜ ਕਰਨਾ ਛੱਡੋ",
   "yazFlexSkipRestDurationDialogTitle": "ਵਿਰਾਮ ਅਵਧੀ ਦੀ ਐਂਟਰੀ ਛੱਡੋ",
   "yazFlexSkipRestDurationDialogMessage": "ਗੋਲੀ ਲੈਣ ਦੇ ਵਿਰਾਮ ਦੀ ਮਿਆਦ ਬਾਅਦ ਵਿੱਚ ਹੋਮ ਦੇ “ਗੋਲੀ ਲੈਣ ਦਾ ਵਿਰਾਮ” ਤੋਂ ਦਰਜ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ।",
+  "yazFlexSkipRestDurationDialogSkip": "ਛੱਡੋ",
   "yazFlexLastRestDurationBeginDate": "ਜਿਸ ਦਿਨ ਵਿਸ਼ਰਾਮ ਸ਼ੁਰੂ ਹੋਇਆ",
   "yazFlexLastRestDurationEndDate": "ਦੁਬਾਰਾ ਲੈਣਾ ਸ਼ੁਰੂ ਕੀਤਾ ਦਿਨ",
   "yazFlexSelectDate": "ਤਾਰੀਖ ਚੁਣੋ",

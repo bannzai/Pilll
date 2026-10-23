@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "Preskoči vnos premora",
   "yazFlexSkipRestDurationDialogTitle": "Preskoči vnos premora",
   "yazFlexSkipRestDurationDialogMessage": "Obdobje premora pri jemanju lahko pozneje vnesete v razdelku »Premor pri jemanju« na domačem zaslonu.",
+  "yazFlexSkipRestDurationDialogSkip": "Preskoči",
   "yazFlexLastRestDurationBeginDate": "Dan začetka premora",
   "yazFlexLastRestDurationEndDate": "Dan ponovnega začetka jemanja",
   "yazFlexSelectDate": "Izberite datum",

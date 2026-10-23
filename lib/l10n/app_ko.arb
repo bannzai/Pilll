@@ -574,6 +574,7 @@
   "yazFlexSkipRestDuration": "휴약 입력 건너뛰기",
   "yazFlexSkipRestDurationDialogTitle": "휴약 입력을 건너뛸게요",
   "yazFlexSkipRestDurationDialogMessage": "복용 휴약 기간은 나중에 홈의 ‘복용 휴약’에서 입력할 수 있어요.",
+  "yazFlexSkipRestDurationDialogSkip": "건너뛰기",
   "yazFlexLastRestDurationBeginDate": "휴약이 시작된 날",
   "yazFlexLastRestDurationEndDate": "복용을 재개한 날",
   "yazFlexSelectDate": "날짜를 선택해 주세요",
