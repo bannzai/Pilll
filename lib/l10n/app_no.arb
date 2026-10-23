@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Hopp over registrering av pauseperioden",
   "yazFlexSkipRestDurationDialogMessage": "Perioden for pause i inntak kan legges inn senere under «Pause i inntak» på hjemmeskjermen.",
   "yazFlexSkipRestDurationDialogSkip": "Hopp over",
+  "yazFlexEmptyEndDateMeansResting": "Hvis du ikke har begynt å ta den igjen ennå, lar du datoen for oppstart stå tom.",
   "yazFlexLastRestDurationBeginDate": "Dagen pausen startet",
   "yazFlexLastRestDurationEndDate": "Datoen du begynte å ta den igjen",
   "yazFlexSelectDate": "Velg en dato",

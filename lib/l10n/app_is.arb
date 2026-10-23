@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Sleppa skráningu hlés",
   "yazFlexSkipRestDurationDialogMessage": "Þú getur skráð hlé á töku síðar undir „Hlé á töku“ á heimaskjánum.",
   "yazFlexSkipRestDurationDialogSkip": "Sleppa",
+  "yazFlexEmptyEndDateMeansResting": "Ef þú hefur ekki hafið töku aftur ennþá skaltu skilja endurupptökudagsetninguna eftir auða.",
   "yazFlexLastRestDurationBeginDate": "Dagurinn sem hléið hófst",
   "yazFlexLastRestDurationEndDate": "Dagurinn sem þú hófst aftur að taka lyfið",
   "yazFlexSelectDate": "Veldu dagsetningu",

@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "A szünet megadásának kihagyása",
   "yazFlexSkipRestDurationDialogMessage": "A gyógyszerszedési szünet időszakát később a Kezdőképernyő „Szedési szünet” menüpontjában adhatja meg.",
   "yazFlexSkipRestDurationDialogSkip": "Kihagyás",
+  "yazFlexEmptyEndDateMeansResting": "Ha még nem kezdte újra a szedést, hagyja üresen az újrakezdés dátumát.",
   "yazFlexLastRestDurationBeginDate": "A szünet kezdőnapja",
   "yazFlexLastRestDurationEndDate": "Az újrakezdés napja",
   "yazFlexSelectDate": "Válasszon dátumot",

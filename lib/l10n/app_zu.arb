@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Yeqa ukufaka isikhathi sekhefu",
   "yazFlexSkipRestDurationDialogMessage": "Isikhathi sekhefu lokuphuza singafakwa kamuva kokuthi “Ikhefu lokuphuza” ekhasini lasekhaya.",
   "yazFlexSkipRestDurationDialogSkip": "Yeqa",
+  "yazFlexEmptyEndDateMeansResting": "Uma ungakaqali futhi ukuyiphuza, shiya usuku lokuqala kabusha lungenalutho.",
   "yazFlexLastRestDurationBeginDate": "Usuku ikhefu eliqale ngalo",
   "yazFlexLastRestDurationEndDate": "Usuku oqale ngalo futhi ukuyiphuza",
   "yazFlexSelectDate": "Khetha usuku",

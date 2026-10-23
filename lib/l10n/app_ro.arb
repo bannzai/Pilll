@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Omiteți introducerea perioadei de pauză",
   "yazFlexSkipRestDurationDialogMessage": "Perioada de pauză a administrării poate fi introdusă mai târziu din „Pauză administrare” de pe ecranul principal.",
   "yazFlexSkipRestDurationDialogSkip": "Omite",
+  "yazFlexEmptyEndDateMeansResting": "Dacă nu ați reluat încă administrarea, lăsați necompletată data reluării.",
   "yazFlexLastRestDurationBeginDate": "Ziua în care a început pauza",
   "yazFlexLastRestDurationEndDate": "Ziua în care ai reluat administrarea",
   "yazFlexSelectDate": "Selectați o dată",

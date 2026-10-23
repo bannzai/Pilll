@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "विश्राम अवधिको प्रविष्टि छोड्नुहोस्",
   "yazFlexSkipRestDurationDialogMessage": "औषध सेवन विश्राम अवधि पछि होमको “औषध सेवन विश्राम” बाट प्रविष्ट गर्न सकिन्छ।",
   "yazFlexSkipRestDurationDialogSkip": "छोड्नुहोस्",
+  "yazFlexEmptyEndDateMeansResting": "यदि तपाईंले अझै फेरि सेवन सुरु गर्नुभएको छैन भने, पुनः सुरु गरेको मिति खाली छोड्नुहोस्।",
   "yazFlexLastRestDurationBeginDate": "ब्रेक सुरु भएको दिन",
   "yazFlexLastRestDurationEndDate": "फेरि खान सुरु गरेको दिन",
   "yazFlexSelectDate": "मिति चयन गर्नुहोस्",

@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "විරාම කාලය ඇතුළත් කිරීම මඟ හරින්න",
   "yazFlexSkipRestDurationDialogMessage": "ඖෂධ ගැනීමේ විරාම කාලය පසුව මුල් පිටුවේ “ඖෂධ ගැනීමේ විරාමය” වෙතින් ඇතුළත් කළ හැකියි.",
   "yazFlexSkipRestDurationDialogSkip": "මඟ හරින්න",
+  "yazFlexEmptyEndDateMeansResting": "ඔබ තවමත් නැවත ගැනීම ආරම්භ කර නොමැති නම්, නැවත ආරම්භ කළ දිනය හිස්ව තබන්න.",
   "yazFlexLastRestDurationBeginDate": "විරාමය ආරම්භ වූ දිනය",
   "yazFlexLastRestDurationEndDate": "නැවත ලබාගැනීම ආරම්භ කළ දිනය",
   "yazFlexSelectDate": "දිනය තෝරන්න",

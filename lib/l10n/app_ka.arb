@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "შესვენების პერიოდის შეყვანის გამოტოვება",
   "yazFlexSkipRestDurationDialogMessage": "მიღების შესვენების პერიოდის შეყვანა მოგვიანებითაც შეგიძლიათ მთავარ ეკრანზე „მიღების შესვენება“-დან.",
   "yazFlexSkipRestDurationDialogSkip": "გამოტოვება",
+  "yazFlexEmptyEndDateMeansResting": "თუ მიღება ჯერ არ განგიახლებიათ, განახლების თარიღი ცარიელი დატოვეთ.",
   "yazFlexLastRestDurationBeginDate": "დღე, როცა შესვენება დაიწყო",
   "yazFlexLastRestDurationEndDate": "მიღების განახლების დღე",
   "yazFlexSelectDate": "აირჩიეთ თარიღი",

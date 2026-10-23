@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Atsedenaldiaren sarrera saltatu",
   "yazFlexSkipRestDurationDialogMessage": "Hartzeko atsedenaldia geroago sar dezakezu hasierako pantailako «Hartzeko atsedenaldia» aukeratik.",
   "yazFlexSkipRestDurationDialogSkip": "Saltatu",
+  "yazFlexEmptyEndDateMeansResting": "Oraindik hartzen berriro hasi ez bazara, utzi berriro hasteko data hutsik.",
   "yazFlexLastRestDurationBeginDate": "Atsedena hasi zen eguna",
   "yazFlexLastRestDurationEndDate": "Hartzeari berriro ekin zenion eguna",
   "yazFlexSelectDate": "Hautatu data",

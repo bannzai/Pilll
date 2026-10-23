@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "ঔষধ-বিৰতিৰ ইনপুট এৰি যাব",
   "yazFlexSkipRestDurationDialogMessage": "ঔষধ সেৱন বিৰতিৰ সময়সীমা পিছত হোমৰ «ঔষধ সেৱন বিৰতি»ৰ পৰা লিখিব পাৰিব।",
   "yazFlexSkipRestDurationDialogSkip": "এৰি দিয়ক",
+  "yazFlexEmptyEndDateMeansResting": "যদি এতিয়াও সেৱন পুনৰ আৰম্ভ কৰা নাই, তেন্তে পুনৰ আৰম্ভ কৰা তাৰিখ খালী ৰাখক।",
   "yazFlexLastRestDurationBeginDate": "বিৰতি আৰম্ভ হোৱা দিন",
   "yazFlexLastRestDurationEndDate": "পুনৰায় সেৱন আৰম্ভ কৰা দিন",
   "yazFlexSelectDate": "তাৰিখ বাছনি কৰক",

@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Παράλειψη καταχώρισης της διακοπής",
   "yazFlexSkipRestDurationDialogMessage": "Μπορείτε να καταχωρίσετε αργότερα την περίοδο διακοπής λήψης από το «Διακοπή λήψης» στην αρχική οθόνη.",
   "yazFlexSkipRestDurationDialogSkip": "Παράβλεψη",
+  "yazFlexEmptyEndDateMeansResting": "Αν δεν έχετε ξαναρχίσει ακόμη τη λήψη, αφήστε κενή την ημερομηνία επανέναρξης.",
   "yazFlexLastRestDurationBeginDate": "Η ημέρα που ξεκίνησε η διακοπή",
   "yazFlexLastRestDurationEndDate": "Ημερομηνία επανέναρξης λήψης",
   "yazFlexSelectDate": "Επιλέξτε ημερομηνία",

@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "ຂ້າມການປ້ອນໄລຍະພັກຢາ",
   "yazFlexSkipRestDurationDialogMessage": "ທ່ານສາມາດປ້ອນໄລຍະເວລາພັກການກິນໄດ້ພາຍຫຼັງ ຈາກ “ພັກການກິນ” ໃນໜ້າຫຼັກ",
   "yazFlexSkipRestDurationDialogSkip": "ຂ້າມ",
+  "yazFlexEmptyEndDateMeansResting": "ຖ້າທ່ານຍັງບໍ່ໄດ້ເລີ່ມກິນອີກຄັ້ງ, ກະລຸນາປ່ອຍວັນທີ່ເລີ່ມກິນອີກຄັ້ງໄວ້ວ່າງໄວ້.",
   "yazFlexLastRestDurationBeginDate": "ວັນທີ່ເລີ່ມພັກຢາ",
   "yazFlexLastRestDurationEndDate": "ວັນທີ່ເລີ່ມກິນອີກຄັ້ງ",
   "yazFlexSelectDate": "ເລືອກວັນທີ",

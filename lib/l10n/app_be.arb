@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Прапусціць увод перыяду перапынку",
   "yazFlexSkipRestDurationDialogMessage": "Перыяд перапынку ў прыёме можна будзе ўвесці пазней у раздзеле «Перапынак у прыёме» на галоўнай старонцы.",
   "yazFlexSkipRestDurationDialogSkip": "Прапусціць",
+  "yazFlexEmptyEndDateMeansResting": "Калі вы яшчэ не аднавілі прыём, пакіньце дату аднаўлення пустой.",
   "yazFlexLastRestDurationBeginDate": "Дзень пачатку перапынку",
   "yazFlexLastRestDurationEndDate": "Дата аднаўлення прыёму",
   "yazFlexSelectDate": "Выберыце дату",

@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Laktawan ang paglalagay ng panahon ng pahinga",
   "yazFlexSkipRestDurationDialogMessage": "Maaari mong ilagay mamaya ang panahon ng pahinga sa pag-inom mula sa “Pahinga sa pag-inom” sa Home.",
   "yazFlexSkipRestDurationDialogSkip": "Laktawan",
+  "yazFlexEmptyEndDateMeansResting": "Kung hindi ka pa muling nagsisimulang uminom, iwanang blangko ang petsa ng muling pagsisimula.",
   "yazFlexLastRestDurationBeginDate": "Araw na nagsimula ang pahinga",
   "yazFlexLastRestDurationEndDate": "Araw na muli kang nagsimulang uminom",
   "yazFlexSelectDate": "Pumili ng petsa",

@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Eingabe der Pause überspringen",
   "yazFlexSkipRestDurationDialogMessage": "Den Zeitraum der Einnahmepause können Sie später unter „Einnahmepause“ auf dem Startbildschirm eingeben.",
   "yazFlexSkipRestDurationDialogSkip": "Überspringen",
+  "yazFlexEmptyEndDateMeansResting": "Wenn Sie die Einnahme noch nicht wieder aufgenommen haben, lassen Sie das Datum für die Wiederaufnahme leer.",
   "yazFlexLastRestDurationBeginDate": "Tag des Beginns der Pause",
   "yazFlexLastRestDurationEndDate": "Tag der Wiederaufnahme der Einnahme",
   "yazFlexSelectDate": "Datum auswählen",

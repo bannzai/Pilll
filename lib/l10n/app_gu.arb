@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "વિરામ અવધિની નોંધ છોડો",
   "yazFlexSkipRestDurationDialogMessage": "દવા લેવાનું વિરામ સમયગાળો પછીથી હોમમાં “દવા લેવાનું વિરામ” માંથી દાખલ કરી શકશો.",
   "yazFlexSkipRestDurationDialogSkip": "છોડી દો",
+  "yazFlexEmptyEndDateMeansResting": "જો તમે હજી ફરીથી લેવાનું શરૂ કર્યું નથી, તો ફરી શરૂ કરવાની તારીખ ખાલી રાખો.",
   "yazFlexLastRestDurationBeginDate": "વિરામ શરૂ થયેલો દિવસ",
   "yazFlexLastRestDurationEndDate": "ફરીથી લેવાનું શરૂ કરેલો દિવસ",
   "yazFlexSelectDate": "તારીખ પસંદ કરો",

@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Slaan die invoer van die pouse oor",
   "yazFlexSkipRestDurationDialogMessage": "Die pouseperiode kan later by \"Neem 'n pouse\" op die tuisskerm ingevul word.",
   "yazFlexSkipRestDurationDialogSkip": "Slaan oor",
+  "yazFlexEmptyEndDateMeansResting": "As u nog nie die inname hervat het nie, laat die hervattingsdatum leeg.",
   "yazFlexLastRestDurationBeginDate": "Die dag waarop die pouse begin het",
   "yazFlexLastRestDurationEndDate": "Datum waarop jy weer begin het om dit te neem",
   "yazFlexSelectDate": "Kies 'n datum",

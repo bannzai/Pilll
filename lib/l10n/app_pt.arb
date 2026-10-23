@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Ignorar o registo da pausa",
   "yazFlexSkipRestDurationDialogMessage": "Pode introduzir mais tarde o período de pausa da toma em “Pausa da toma”, no ecrã principal.",
   "yazFlexSkipRestDurationDialogSkip": "Pular",
+  "yazFlexEmptyEndDateMeansResting": "Se ainda não retomou a toma, deixe a data de retoma em branco.",
   "yazFlexLastRestDurationBeginDate": "Dia em que a pausa começou",
   "yazFlexLastRestDurationEndDate": "Dia em que retomou a toma",
   "yazFlexSelectDate": "Selecione uma data",

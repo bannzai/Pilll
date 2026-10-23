@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "ဆေးနားကာလ ထည့်သွင်းမှုကို ကျော်မည်",
   "yazFlexSkipRestDurationDialogMessage": "ဆေးသောက်နားချိန်ကာလကို နောက်မှ ပင်မစာမျက်နှာရှိ “ဆေးသောက်နားချိန်” မှ ထည့်သွင်းနိုင်ပါသည်။",
   "yazFlexSkipRestDurationDialogSkip": "ကျော်မည်",
+  "yazFlexEmptyEndDateMeansResting": "သောက်သုံးမှုကို မပြန်လည်စတင်ရသေးပါက၊ ပြန်လည်စတင်သည့်ရက်စွဲကို ဗလာထားပါ။",
   "yazFlexLastRestDurationBeginDate": "နားရက်စတင်သည့်နေ့",
   "yazFlexLastRestDurationEndDate": "ပြန်လည်သောက်သုံးစတင်သည့်နေ့",
   "yazFlexSelectDate": "ရက်စွဲကို ရွေးပါ",

@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Тыныгуу мезгилин киргизүүнү өткөрүп жиберүү",
   "yazFlexSkipRestDurationDialogMessage": "Ичүүнү тыныгуу мөөнөтүн кийинчерээк Башкы беттеги “Ичүүнү тыныгуу” бөлүмүнөн киргизе аласыз.",
   "yazFlexSkipRestDurationDialogSkip": "Өткөрүп жиберүү",
+  "yazFlexEmptyEndDateMeansResting": "Эгер кабыл алууну али кайра баштай элек болсоңуз, кайра баштаган күндү бош калтырыңыз.",
   "yazFlexLastRestDurationBeginDate": "Тыныгуу башталган күн",
   "yazFlexLastRestDurationEndDate": "Кайра иче баштаган күн",
   "yazFlexSelectDate": "Күндү тандаңыз",

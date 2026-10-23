@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "រំលងការបញ្ចូលរយៈពេលសម្រាក",
   "yazFlexSkipRestDurationDialogMessage": "អ្នកអាចបញ្ចូលរយៈពេលផ្អាកការទទួលទាននៅពេលក្រោយពី “ផ្អាកការទទួលទាន” នៅលើទំព័រដើម។",
   "yazFlexSkipRestDurationDialogSkip": "រំលង",
+  "yazFlexEmptyEndDateMeansResting": "ប្រសិនបើអ្នកមិនទាន់បានបន្តលេបវិញទេ សូមទុកកាលបរិច្ឆេទចាប់ផ្តើមវិញឱ្យនៅទទេ។",
   "yazFlexLastRestDurationBeginDate": "ថ្ងៃដែលការផ្អាកបានចាប់ផ្ដើម",
   "yazFlexLastRestDurationEndDate": "ថ្ងៃដែលអ្នកបានចាប់ផ្ដើមប្រើម្តងទៀត",
   "yazFlexSelectDate": "ជ្រើសរើសកាលបរិច្ឆេទ",

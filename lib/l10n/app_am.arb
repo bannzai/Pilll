@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "የመድኃኒት ዕረፍት ግቤትን ይዝለሉ",
   "yazFlexSkipRestDurationDialogMessage": "የመውሰድ እረፍት ጊዜውን በኋላ በመነሻ ገጹ ላይ ካለው \"የመውሰድ እረፍት\" ማስገባት ይችላሉ።",
   "yazFlexSkipRestDurationDialogSkip": "ዝለል",
+  "yazFlexEmptyEndDateMeansResting": "መውሰድን እስካሁን ካልቀጠሉ፣ የዳግም መጀመሪያ ቀንን ባዶ ይተዉት።",
   "yazFlexLastRestDurationBeginDate": "የእረፍት ጊዜው የጀመረበት ቀን",
   "yazFlexLastRestDurationEndDate": "መውሰድን እንደገና የጀመሩበት ቀን",
   "yazFlexSelectDate": "ቀን ይምረጡ",

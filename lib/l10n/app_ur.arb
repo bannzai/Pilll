@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "وقفے کی مدت کا اندراج چھوڑ دیں",
   "yazFlexSkipRestDurationDialogMessage": "گولی لینے کے وقفے کی مدت بعد میں ہوم کی “گولی لینے کا وقفہ” سے درج کی جا سکتی ہے۔",
   "yazFlexSkipRestDurationDialogSkip": "چھوڑ دیں",
+  "yazFlexEmptyEndDateMeansResting": "اگر آپ نے ابھی تک دوبارہ لینا شروع نہیں کیا ہے تو دوبارہ شروع کرنے کی تاریخ خالی چھوڑ دیں۔",
   "yazFlexLastRestDurationBeginDate": "وہ دن جب وقفہ شروع ہوا",
   "yazFlexLastRestDurationEndDate": "دوبارہ لینا شروع کرنے کا دن",
   "yazFlexSelectDate": "تاریخ منتخب کریں",

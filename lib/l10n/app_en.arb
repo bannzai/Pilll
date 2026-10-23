@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Skip entering the break period",
   "yazFlexSkipRestDurationDialogMessage": "You can enter the break period later from “Break from Taking” on the Home screen.",
   "yazFlexSkipRestDurationDialogSkip": "Skip",
+  "yazFlexEmptyEndDateMeansResting": "If you have not resumed taking it yet, leave the restart date blank.",
   "yazFlexLastRestDurationBeginDate": "Day the break started",
   "yazFlexLastRestDurationEndDate": "Date you resumed taking it",
   "yazFlexSelectDate": "Select a date",

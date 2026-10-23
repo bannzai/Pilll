@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Omitir el registro del descanso",
   "yazFlexSkipRestDurationDialogMessage": "Más adelante puedes introducir el período de descanso de la toma desde «Descanso de la toma» en Inicio.",
   "yazFlexSkipRestDurationDialogSkip": "Omitir",
+  "yazFlexEmptyEndDateMeansResting": "Si aún no has reanudado la toma, deja en blanco la fecha de reanudación.",
   "yazFlexLastRestDurationBeginDate": "Día en que comenzó el descanso",
   "yazFlexLastRestDurationEndDate": "Día en que reanudaste la toma",
   "yazFlexSelectDate": "Selecciona una fecha",

@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "ข้ามการบันทึกช่วงหยุดยา",
   "yazFlexSkipRestDurationDialogMessage": "คุณสามารถกรอกช่วงพักการรับประทานได้ภายหลังจาก “พักการรับประทาน” บนหน้าหลัก",
   "yazFlexSkipRestDurationDialogSkip": "ข้าม",
+  "yazFlexEmptyEndDateMeansResting": "หากคุณยังไม่ได้กลับมาเริ่มรับประทานอีกครั้ง โปรดเว้นวันที่เริ่มรับประทานอีกครั้งไว้เป็นค่าว่าง",
   "yazFlexLastRestDurationBeginDate": "วันที่เริ่มช่วงหยุดยา",
   "yazFlexLastRestDurationEndDate": "วันที่กลับมาเริ่มรับประทานอีกครั้ง",
   "yazFlexSelectDate": "เลือกวันที่",

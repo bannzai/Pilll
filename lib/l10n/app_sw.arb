@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Ruka kuingiza kipindi cha mapumziko",
   "yazFlexSkipRestDurationDialogMessage": "Unaweza kuingiza baadaye kipindi cha mapumziko ya matumizi kutoka “Mapumziko ya matumizi” kwenye Skrini ya Mwanzo.",
   "yazFlexSkipRestDurationDialogSkip": "Ruka",
+  "yazFlexEmptyEndDateMeansResting": "Ikiwa bado hujaanza tena kutumia, acha tarehe ya kuanza tena wazi.",
   "yazFlexLastRestDurationBeginDate": "Siku ambayo mapumziko yalianza",
   "yazFlexLastRestDurationEndDate": "Siku uliyoanza tena kutumia",
   "yazFlexSelectDate": "Chagua tarehe",

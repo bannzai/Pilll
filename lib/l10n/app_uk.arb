@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Пропустити введення періоду перерви",
   "yazFlexSkipRestDurationDialogMessage": "Період перерви в прийомі можна буде ввести пізніше в розділі «Перерва в прийомі» на головному екрані.",
   "yazFlexSkipRestDurationDialogSkip": "Пропустити",
+  "yazFlexEmptyEndDateMeansResting": "Якщо ви ще не відновили прийом, залиште дату відновлення порожньою.",
   "yazFlexLastRestDurationBeginDate": "День початку перерви",
   "yazFlexLastRestDurationEndDate": "День відновлення прийому",
   "yazFlexSelectDate": "Виберіть дату",

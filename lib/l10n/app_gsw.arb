@@ -575,6 +575,7 @@
   "yazFlexSkipRestDurationDialogTitle": "D Iigab vo dr Pause überspringe",
   "yazFlexSkipRestDurationDialogMessage": "D Ziit vo dr Iinahmspause chönd Si spöter über „Iinahmspause“ uf em Home-Bildschirm iigeh.",
   "yazFlexSkipRestDurationDialogSkip": "Überspringe",
+  "yazFlexEmptyEndDateMeansResting": "Wenn Si d Ihnahm no nid wieder ufgnuu hän, lönd S s Datum fürs Wiederufnäh leer.",
   "yazFlexLastRestDurationBeginDate": "Dr Tag, a wott d Pause aagfange het",
   "yazFlexLastRestDurationEndDate": "Tag, a dem du d Iinahm wieder ufgnuu hesch",
   "yazFlexSelectDate": "Es Datum uswehle",
