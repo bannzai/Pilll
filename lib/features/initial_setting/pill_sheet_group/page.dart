@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/organisms/pill_sheet/add_pill_sheet_type_empty.dart';
 import 'package:pilll/features/localizations/l.dart';
@@ -21,6 +20,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/features/sign_in/sign_in_sheet.dart';
+import 'package:pilll/provider/auth.dart';
 
 class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   const InitialSettingPillSheetGroupPage({super.key});
@@ -47,7 +47,8 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
     useEffect(() {
       analytics.logEvent(
         name: 'initial_setting_signin_account',
-        parameters: {'uid': FirebaseAuth.instance.currentUser?.uid},
+        // FirebaseAuth.instance を直接読むと Firebase を初期化できない Widget Test でこのページを描画できないため、Provider 経由で読む
+        parameters: {'uid': ref.read(firebaseUserStateProvider).valueOrNull?.uid},
       );
 
       final LinkAccountType? accountType = () {
