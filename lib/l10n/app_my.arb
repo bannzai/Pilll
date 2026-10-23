@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "ပြန်လည်သောက်သုံးစတင်သည့်နေ့",
   "yazFlexSelectDate": "ရက်စွဲကို ရွေးပါ",
   "yazFlexBeginPillNumberPageTitle": "စက်ဝန်းအရ အချပ်၏အစမှာ ဘယ်နှကြိမ်မြောက် သောက်ခြင်းဖြစ်ပါသလဲ?",
+  "yazFlexBeginPillNumberPageNote": "ယခင်ဆေးနားကာလပြီးနောက် ကုန်လွန်ခဲ့သော ရက်အရေအတွက်အပေါ် အခြေခံ၍ ဖြေကြားပေးပါ။",
   "yazFlexNextInputIsRestDuration": "ထို့နောက် ယခင်နားရက်ကာလကို ထည့်ပါ"
 }

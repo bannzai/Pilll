@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "Día no que retomaches a toma",
   "yazFlexSelectDate": "Selecciona unha data",
   "yazFlexBeginPillNumberPageTitle": "A que toma do ciclo corresponde o inicio do blíster?",
+  "yazFlexBeginPillNumberPageNote": "Responde segundo o número de días transcorridos desde a última pausa, por favor.",
   "yazFlexNextInputIsRestDuration": "A continuación, introduce a pausa anterior"
 }

@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "Date de reprise de la prise",
   "yazFlexSelectDate": "Sélectionnez une date",
   "yazFlexBeginPillNumberPageTitle": "À quelle prise du cycle correspond le début de la plaquette ?",
+  "yazFlexBeginPillNumberPageNote": "Veuillez répondre en fonction du nombre de jours écoulés depuis la dernière pause.",
   "yazFlexNextInputIsRestDuration": "Ensuite, indiquez votre dernière pause"
 }

@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "ວັນທີ່ເລີ່ມກິນອີກຄັ້ງ",
   "yazFlexSelectDate": "ເລືອກວັນທີ",
   "yazFlexBeginPillNumberPageTitle": "ຈຸດເລີ່ມຕົ້ນຂອງແຜ່ນ ໃນຮອບການກິນແມ່ນຄັ້ງທີເທົ່າໃດ?",
+  "yazFlexBeginPillNumberPageNote": "ກະລຸນາຕອບໂດຍອີງໃສ່ຈຳນວນມື້ທີ່ຜ່ານມານັບຈາກການພັກຄັ້ງກ່ອນ.",
   "yazFlexNextInputIsRestDuration": "ຕໍ່ໄປ ກະລຸນາປ້ອນຊ່ວງຢຸດກິນຄັ້ງກ່ອນ"
 }

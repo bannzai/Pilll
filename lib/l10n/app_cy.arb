@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "Y diwrnod y gwnaethoch ailddechrau ei gymryd",
   "yazFlexSelectDate": "Dewiswch ddyddiad",
   "yazFlexBeginPillNumberPageTitle": "Pa rif rhif yn y cylch yw dechrau'r pecyn?",
+  "yazFlexBeginPillNumberPageNote": "Atebwch ar sail nifer y dyddiau ers yr egwyl ddiwethaf, os gwelwch yn dda.",
   "yazFlexNextInputIsRestDuration": "Nesaf, nodwch y cyfnod seibiant diwethaf"
 }

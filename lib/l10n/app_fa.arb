@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "روز از سرگیری مصرف",
   "yazFlexSelectDate": "تاریخ را انتخاب کنید",
   "yazFlexBeginPillNumberPageTitle": "شروع شیت در چرخه، چندمین نوبت مصرف است؟",
+  "yazFlexBeginPillNumberPageNote": "لطفاً بر اساس تعداد روزهای گذشته از آخرین دورهٔ وقفه پاسخ دهید.",
   "yazFlexNextInputIsRestDuration": "در مرحله بعد، وقفه قبلی را وارد کنید"
 }

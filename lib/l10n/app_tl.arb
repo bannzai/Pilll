@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "Araw na muli kang nagsimulang uminom",
   "yazFlexSelectDate": "Pumili ng petsa",
   "yazFlexBeginPillNumberPageTitle": "Pang-ilang pag-inom sa cycle ang simula ng sheet?",
+  "yazFlexBeginPillNumberPageNote": "Pakisagot batay sa bilang ng mga araw mula noong nakaraang pahinga.",
   "yazFlexNextInputIsRestDuration": "Susunod, ilagay ang dati mong pahinga sa pag-inom"
 }

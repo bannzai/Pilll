@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "Date you resumed taking it",
   "yazFlexSelectDate": "Select a date",
   "yazFlexBeginPillNumberPageTitle": "Which dose number in the cycle is the start of the sheet?",
+  "yazFlexBeginPillNumberPageNote": "Please answer based on the number of days since your last break.",
   "yazFlexNextInputIsRestDuration": "Next, enter your previous break"
 }

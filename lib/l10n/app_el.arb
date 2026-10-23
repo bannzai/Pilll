@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "Ημερομηνία επανέναρξης λήψης",
   "yazFlexSelectDate": "Επιλέξτε ημερομηνία",
   "yazFlexBeginPillNumberPageTitle": "Σε ποια λήψη του κύκλου αντιστοιχεί η αρχή του blister;",
+  "yazFlexBeginPillNumberPageNote": "Παρακαλούμε απαντήστε με βάση τον αριθμό των ημερών που έχουν περάσει από την προηγούμενη διακοπή.",
   "yazFlexNextInputIsRestDuration": "Στη συνέχεια, εισαγάγετε την προηγούμενη διακοπή"
 }

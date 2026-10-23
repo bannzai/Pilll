@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "Den opětovného zahájení užívání",
   "yazFlexSelectDate": "Vyberte datum",
   "yazFlexBeginPillNumberPageTitle": "Které užití v cyklu odpovídá začátku plata?",
+  "yazFlexBeginPillNumberPageNote": "Odpovězte prosím podle počtu dnů od poslední pauzy.",
   "yazFlexNextInputIsRestDuration": "Dále zadejte předchozí pauzu v užívání"
 }

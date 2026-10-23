@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "Ngày bạn bắt đầu uống lại",
   "yazFlexSelectDate": "Chọn ngày",
   "yazFlexBeginPillNumberPageTitle": "Đầu vỉ tương ứng với lần uống thứ mấy trong chu kỳ?",
+  "yazFlexBeginPillNumberPageNote": "Vui lòng trả lời dựa trên số ngày đã trôi qua kể từ lần nghỉ thuốc trước.",
   "yazFlexNextInputIsRestDuration": "Tiếp theo, hãy nhập khoảng nghỉ trước đó"
 }

@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "Дахин ууж эхэлсэн өдөр",
   "yazFlexSelectDate": "Огноо сонгоно уу",
   "yazFlexBeginPillNumberPageTitle": "Циклийн хэд дэх уух үе нь хавтангийн эхлэл вэ?",
+  "yazFlexBeginPillNumberPageNote": "Өмнөх завсарлагаанаас хойш өнгөрсөн хоногийн тоонд үндэслэн хариулна уу.",
   "yazFlexNextInputIsRestDuration": "Дараа нь өмнөх завсарлагаа оруулна уу"
 }

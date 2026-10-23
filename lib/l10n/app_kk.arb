@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "Қабылдауды қайта бастаған күн",
   "yazFlexSelectDate": "Күнді таңдаңыз",
   "yazFlexBeginPillNumberPageTitle": "Циклдегі парақтың басы нешінші қабылдауға сәйкес келеді?",
+  "yazFlexBeginPillNumberPageNote": "Соңғы үзілістен бері өткен күндер санына қарай жауап беріңіз.",
   "yazFlexNextInputIsRestDuration": "Келесі қадамда алдыңғы үзілісті енгізіңіз"
 }

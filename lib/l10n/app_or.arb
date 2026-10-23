@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "ପୁଣି ନେବା ଆରମ୍ଭ କରିଥିବା ଦିନ",
   "yazFlexSelectDate": "ତାରିଖ ଚୟନ କରନ୍ତୁ",
   "yazFlexBeginPillNumberPageTitle": "ଚକ୍ର ଅନୁସାରେ ସିଟ୍‌ର ଆରମ୍ଭ କେଉଁ ନମ୍ବର ସେବନ?",
+  "yazFlexBeginPillNumberPageNote": "ଦୟାକରି ପୂର୍ବବର୍ତ୍ତୀ ବିରତି ପରଠାରୁ କେତେ ଦିନ ହୋଇଛି ତାହା ଆଧାର କରି ଉତ୍ତର ଦିଅନ୍ତୁ।",
   "yazFlexNextInputIsRestDuration": "ପରେ ପୂର୍ବରୁ ଥିବା ବିରତି ଅବଧି ଭରନ୍ତୁ"
 }

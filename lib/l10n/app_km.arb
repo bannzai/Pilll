@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "ថ្ងៃដែលអ្នកបានចាប់ផ្ដើមប្រើម្តងទៀត",
   "yazFlexSelectDate": "ជ្រើសរើសកាលបរិច្ឆេទ",
   "yazFlexBeginPillNumberPageTitle": "ការចាប់ផ្ដើមសន្លឹក ត្រូវនឹងការលេបលើកទីប៉ុន្មានក្នុងវដ្ត?",
+  "yazFlexBeginPillNumberPageNote": "សូមឆ្លើយដោយផ្អែកលើចំនួនថ្ងៃដែលបានកន្លងផុតទៅចាប់ពីការឈប់សម្រាកលើកមុន។",
   "yazFlexNextInputIsRestDuration": "បន្ទាប់មក សូមបញ្ចូលរយៈពេលឈប់មុន"
 }

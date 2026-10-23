@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "Päivä, jolloin aloitit käytön uudelleen",
   "yazFlexSelectDate": "Valitse päivämäärä",
   "yazFlexBeginPillNumberPageTitle": "Monesko otto kierrossa liuskan alku on?",
+  "yazFlexBeginPillNumberPageNote": "Vastaa edellisestä tauosta kuluneiden päivien perusteella.",
   "yazFlexNextInputIsRestDuration": "Seuraavaksi syötä edellinen taukosi"
 }

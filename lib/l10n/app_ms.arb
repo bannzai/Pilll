@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "Hari anda menyambung semula pengambilan",
   "yazFlexSelectDate": "Pilih tarikh",
   "yazFlexBeginPillNumberPageTitle": "Permulaan helaian ini ialah pengambilan ke berapa dalam kitaran?",
+  "yazFlexBeginPillNumberPageNote": "Sila jawab berdasarkan bilangan hari sejak rehat yang lalu.",
   "yazFlexNextInputIsRestDuration": "Seterusnya, masukkan tempoh rehat sebelum ini"
 }

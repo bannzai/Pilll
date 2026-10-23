@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "Dan kada ste ponovo počeli uzimati",
   "yazFlexSelectDate": "Odaberite datum",
   "yazFlexBeginPillNumberPageTitle": "Po redu koji je unos u ciklusu početak pakovanja?",
+  "yazFlexBeginPillNumberPageNote": "Molimo odgovorite na osnovu broja dana proteklih od prethodne pauze.",
   "yazFlexNextInputIsRestDuration": "Zatim unesite prethodnu pauzu"
 }

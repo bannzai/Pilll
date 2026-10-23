@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "Dia em que retomou a toma",
   "yazFlexSelectDate": "Selecione uma data",
   "yazFlexBeginPillNumberPageTitle": "A que toma do ciclo corresponde o início da cartela?",
+  "yazFlexBeginPillNumberPageNote": "Responda com base no número de dias desde a última pausa, por favor.",
   "yazFlexNextInputIsRestDuration": "Em seguida, insira a pausa anterior"
 }

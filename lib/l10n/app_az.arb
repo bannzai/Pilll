@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "Qəbulu yenidən başladığınız gün",
   "yazFlexSelectDate": "Tarix seçin",
   "yazFlexBeginPillNumberPageTitle": "Sikl üzrə vərəqin başlanğıcı neçənci qəbuldur?",
+  "yazFlexBeginPillNumberPageNote": "Zəhmət olmasa, son fasilədən sonra keçən günlərin sayına əsasən cavab verin.",
   "yazFlexNextInputIsRestDuration": "Növbəti addımda əvvəlki fasilə müddətini daxil edin"
 }

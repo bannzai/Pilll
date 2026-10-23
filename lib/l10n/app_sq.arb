@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "Dita kur rifilluat marrjen",
   "yazFlexSelectDate": "Zgjidhni datën",
   "yazFlexBeginPillNumberPageTitle": "Fillimi i fletës me cilën marrje në cikël përkon?",
+  "yazFlexBeginPillNumberPageNote": "Ju lutemi, përgjigjuni bazuar në numrin e ditëve që kanë kaluar që nga pushimi i fundit.",
   "yazFlexNextInputIsRestDuration": "Më pas, shkruani pushimin e mëparshëm"
 }

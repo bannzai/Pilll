@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "День відновлення прийому",
   "yazFlexSelectDate": "Виберіть дату",
   "yazFlexBeginPillNumberPageTitle": "Початок блістера — це який за рахунком прийом у циклі?",
+  "yazFlexBeginPillNumberPageNote": "Будь ласка, дайте відповідь на основі кількості днів, що минули з часу попередньої перерви.",
   "yazFlexNextInputIsRestDuration": "Далі введіть попередню перерву"
 }

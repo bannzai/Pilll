@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "Дата аднаўлення прыёму",
   "yazFlexSelectDate": "Выберыце дату",
   "yazFlexBeginPillNumberPageTitle": "Пачатак блістара — гэта які па ліку прыём у цыкле?",
+  "yazFlexBeginPillNumberPageNote": "Калі ласка, адкажыце на падставе колькасці дзён, якія прайшлі з часу папярэдняга перапынку.",
   "yazFlexNextInputIsRestDuration": "Далей увядзіце папярэдні перыяд перапынку"
 }

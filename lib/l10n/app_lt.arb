@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "Diena, kai vėl pradėjote vartoti",
   "yazFlexSelectDate": "Pasirinkite datą",
   "yazFlexBeginPillNumberPageTitle": "Kelintas vartojimas cikle yra lapelio pradžia?",
+  "yazFlexBeginPillNumberPageNote": "Prašome atsakyti pagal dienų skaičių nuo paskutinės pertraukos.",
   "yazFlexNextInputIsRestDuration": "Toliau įveskite ankstesnę pertrauką"
 }

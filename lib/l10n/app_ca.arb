@@ -580,5 +580,6 @@
   "yazFlexLastRestDurationEndDate": "Dia en què vas reprendre la presa",
   "yazFlexSelectDate": "Seleccioneu una data",
   "yazFlexBeginPillNumberPageTitle": "L'inici del blíster a quina presa del cicle correspon?",
+  "yazFlexBeginPillNumberPageNote": "Si us plau, responeu segons el nombre de dies transcorreguts des de l’última pausa.",
   "yazFlexNextInputIsRestDuration": "A continuació, introdueix l’últim període de descans"
 }
