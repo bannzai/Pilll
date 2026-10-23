@@ -1,0 +1,99 @@
+# GitHub Actions の macOS Runner 上で Maestro E2E flow をバッチ実行する workflow。
+# maestro-e2e-actions skill (~/.claude/skills/maestro-e2e-actions/SKILL.md) が生成する。
+# 起動例:
+#   gh workflow run maestro-e2e.yml -f flows=all -f device="iPhone 17"
+name: maestro-e2e
+run-name: "maestro-e2e flows=${{ inputs.flows }} device=${{ inputs.device }}"
+
+on:
+  workflow_dispatch: # fork PR に Secrets を渡さないため workflow_dispatch のみ
+    inputs:
+      flows:
+        description: "実行する flow。all (.maestro/flows 配下すべて) または .maestro/ 配下のコミット済みパス"
+        required: true
+        default: all
+      device:
+        description: "Simulator のデバイス名"
+        required: true
+        default: "iPhone 17"
+      record_video:
+        description: "実行中の画面を録画して artifact に含める"
+        required: false
+        default: "true"
+
+jobs:
+  build:
+    runs-on: macos-26
+    timeout-minutes: 30
+    permissions:
+      contents: read # checkout のみ
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
+      # アプリ固有のビルド前準備 (secret 復元・dart-define ファイル生成等) が要る場合はこの下に step を足す
+      # simulator-session.yml の build job と同じ dev 環境の secret を復元する
+      - name: Prepare firebase config
+        run: make secret
+        env:
+          FILE_FIREBASE_IOS: ${{ secrets.FILE_FIREBASE_IOS_DEVELOPMENT }}
+          DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
+          XCCONFIG_SECRET: ${{ secrets.XCCONFIG_SECRET_DEVELOPMENT }}
+          ANDROID_RES_VALUES: ${{ secrets.ANDROID_RES_VALUES }}
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
+        with:
+          flutter-version: '3.44.9'
+      - run: flutter pub get
+      - run: flutter build ios --simulator --debug --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
+      # upload-artifact はファイル権限を保持しない (download 後は全て 0644 になり .app の実行バイナリが壊れる) ため、
+      # tar で権限ごと固めてから artifact にする。e2e 側の maestro-e2e-run.sh が展開する。
+      - name: ビルド成果物を tar でまとめる
+        run: tar -C build/ios/iphonesimulator -cf simulator-app.tar .
+      - uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+        with:
+          name: simulator-app
+          path: simulator-app.tar
+          retention-days: 1
+  e2e:
+    needs: build
+    runs-on: macos-26
+    timeout-minutes: 60
+    permissions:
+      contents: read # checkout のみ
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5.0.0
+        with:
+          name: simulator-app
+          path: build-app
+      # .maestro/ の flow は日本語の文言をタップするため、英語ロケールの runner の Simulator を日本語にしておく。
+      # 設定は再起動後に反映されるため一度 shutdown し、maestro-e2e-run.sh が起動し直す
+      - name: Simulator を日本語ロケールにする
+        env:
+          DEVICE: ${{ inputs.device }}
+        run: |
+          UDID="$(xcrun simctl list devices available -j \
+            | jq -r --arg name "$DEVICE" '.devices | to_entries[] | .value[] | select(.name == $name) | .udid' \
+            | head -1)"
+          [ -n "$UDID" ] || { echo "::error::デバイスが見つからない: ${DEVICE}"; exit 1; }
+          xcrun simctl boot "$UDID" || true
+          xcrun simctl bootstatus "$UDID" -b
+          xcrun simctl spawn "$UDID" defaults write -g AppleLanguages -array ja
+          xcrun simctl spawn "$UDID" defaults write -g AppleLocale -string ja_JP
+          xcrun simctl shutdown "$UDID"
+      - name: Maestro flow を実行
+        env:
+          FLOWS: ${{ inputs.flows }}
+          DEVICE: ${{ inputs.device }}
+          RECORD_VIDEO: ${{ inputs.record_video }}
+        run: bash .github/scripts/maestro-e2e-run.sh
+      # public repo の artifact は誰でもダウンロードできるため保持期間を短くする。
+      # 録画にシード済みダミーデータ以外を映さない運用は QA.md 側に記載する。
+      - uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+        if: always()
+        with:
+          name: maestro-e2e-artifacts
+          path: maestro-artifacts
+          retention-days: 3
