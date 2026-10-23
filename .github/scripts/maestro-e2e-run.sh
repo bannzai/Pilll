@@ -141,15 +141,29 @@ fi
 [ "${#FLOW_FILES[@]}" -gt 0 ] || fail "実行する flow が無い: ${TARGET}"
 
 STATUS=0
+run_flow() {
+  maestro --udid "$UDID" test \
+    --format junit \
+    --output "${ARTIFACT_DIR}/report-${2}.xml" \
+    --debug-output "${ARTIFACT_DIR}/debug/${2}" \
+    --flatten-debug-output \
+    "$1"
+}
 for flow in "${FLOW_FILES[@]}"; do
   name="$(basename "${flow%.*}")"
   echo "::group::${flow}"
-  maestro --udid "$UDID" test \
-    --format junit \
-    --output "${ARTIFACT_DIR}/report-${name}.xml" \
-    --debug-output "${ARTIFACT_DIR}/debug/${name}" \
-    --flatten-debug-output \
-    "$flow" || STATUS=1
+  if ! run_flow "$flow" "$name"; then
+    # runner 上で XCTest driver への接続が途中で切れることがある (maestro-e2e run 39915603040 で pollConnect の接続失敗)。
+    # flow の中身による失敗と区別するため、接続の失敗の時だけ 1 回やり直す。1 回目の debug 出力は -attempt1 に残す
+    # maestro.log は成功時も起動中の接続の再試行を記録するため、失敗したコマンドの記録 (commands-*.json) だけを見る
+    if grep -qE 'ConnectException|pollConnect|DeviceUnreachableException' "${ARTIFACT_DIR}/debug/${name}"/commands-*.json 2>/dev/null; then
+      mv "${ARTIFACT_DIR}/debug/${name}" "${ARTIFACT_DIR}/debug/${name}-attempt1"
+      echo "::warning::${flow} が driver への接続失敗で落ちたため 1 回やり直す"
+      run_flow "$flow" "$name" || STATUS=1
+    else
+      STATUS=1
+    fi
+  fi
   echo "::endgroup::"
 done
 # --debug-output を指定しても失敗時のスクリーンショットが ~/.maestro/tests に残ることがあるため、artifact に含める

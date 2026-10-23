@@ -35,6 +35,17 @@ appId: com.mizuki.Ohashi.Pilll.dev
 # Screen 2 (2/3): 今日の服用番号 → スキップ
 - tapOn: "まだ分からない"
 - waitForAnimationToEnd
+# CI の Simulator ではページ遷移中のタップが効かず 2/3 に留まることがある (maestro-e2e run 39915603040 の失敗時の画面で確認) ため、
+# 3/3 の画面が出ていなければもう一度タップする
+- runFlow:
+    when:
+      notVisible: "3/3"
+    commands:
+      - tapOn: "まだ分からない"
+      - waitForAnimationToEnd
+- extendedWaitUntil:
+    visible: "3/3"
+    timeout: 10000
 
 # Screen 3 (3/3): リマインダー設定 → そのまま次へ
 - tapOn: "次へ"
