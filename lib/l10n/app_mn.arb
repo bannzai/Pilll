@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "Та Yaz Flex хэрэглэж байна уу?",
   "initialSettingAskYazFlexDescription": "“Тийм”-ийг сонговол\nзавсарлага дууссанаас хойш хэд дэх өдөр болохыг харуулахаар тохируулна",
   "yazFlexLastRestDurationTitle": "Завсарлага эхлэхийн өмнө уусан эмээ\nтовшино уу",
+  "yazFlexLastRestDurationNote": "Завсарлага эхлэхээс өмнө хамгийн сүүлд уусан эмээ сонгоно уу",
   "yazFlexSkipRestDuration": "Завсарлагааны хугацаа оруулахыг алгасах",
   "yazFlexSkipRestDurationDialogTitle": "Завсарлах хугацааны оруулгыг алгасах",
   "yazFlexSkipRestDurationDialogMessage": "Уух завсарлагын хугацааг дараа нь Нүүр хуудасны “Уух завсарлага” хэсгээс оруулах боломжтой.",

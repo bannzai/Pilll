@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "Ydych chi’n defnyddio Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Os dewiswch “Ie”,\nbyddwn yn ei osod i ddangos sawl diwrnod sydd wedi mynd heibio ers diwedd yr egwyl.",
   "yazFlexLastRestDurationTitle": "Tapiwch y bilsen\na gymerwyd gennych yn union cyn dechrau’r egwyl",
+  "yazFlexLastRestDurationNote": "Dewiswch y bilsen olaf a gymerasoch cyn dechrau’r egwyl",
   "yazFlexSkipRestDuration": "Hepgor mewnbynnu'r cyfnod seibiant",
   "yazFlexSkipRestDurationDialogTitle": "Hepgor mewnbynnu’r egwyl",
   "yazFlexSkipRestDurationDialogMessage": "Gallwch nodi cyfnod saib y tabledi yn nes ymlaen o “Saib cymryd” ar y sgrin gartref.",

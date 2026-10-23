@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "ଆପଣ Yaz Flex ବ୍ୟବହାର କରୁଛନ୍ତି କି?",
   "initialSettingAskYazFlexDescription": "“ହଁ” ବାଛିଲେ\nବିରତି ସମାପ୍ତ ହେବା ପରେ କେତେ ଦିନ ହେଲା ତାହା ଦେଖାଇବା ପାଇଁ ସେଟ୍ କରାଯିବ",
   "yazFlexLastRestDurationTitle": "ବିରତି ଆରମ୍ଭ ହେବା ପୂର୍ବରୁ ନେଇଥିବା ପିଲ୍‌ଟିରେ\nଟାପ୍ କରନ୍ତୁ",
+  "yazFlexLastRestDurationNote": "ଦୟାକରି ବିରତି ଆରମ୍ଭ କରିବା ପୂର୍ବରୁ ଆପଣ ଶେଷରେ ଖାଇଥିବା ପିଲ୍‌ଟିକୁ ବାଛନ୍ତୁ",
   "yazFlexSkipRestDuration": "ବିରତି ଅବଧି ଇନପୁଟ୍‌କୁ ଏଡ଼ାନ୍ତୁ",
   "yazFlexSkipRestDurationDialogTitle": "ବିରତି ଅବଧିର ଏଣ୍ଟ୍ରିକୁ ଏଡ଼ାନ୍ତୁ",
   "yazFlexSkipRestDurationDialogMessage": "ଔଷଧ ସେବନ ବିରତିର ସମୟସୀମା ପରେ ହୋମର “ଔଷଧ ସେବନ ବିରତି” ରୁ ଭରଣ କରିପାରିବେ।",

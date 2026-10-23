@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "Ви приймаєте Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Якщо ви виберете «Так»,\nми налаштуємо показ того, який день триває після завершення перерви.",
   "yazFlexLastRestDurationTitle": "Торкніться пігулки,\nяку ви прийняли безпосередньо перед перервою",
+  "yazFlexLastRestDurationNote": "Будь ласка, виберіть останню таблетку, яку ви прийняли перед початком перерви",
   "yazFlexSkipRestDuration": "Пропустити введення перерви",
   "yazFlexSkipRestDurationDialogTitle": "Пропустити введення періоду перерви",
   "yazFlexSkipRestDurationDialogMessage": "Період перерви в прийомі можна буде ввести пізніше в розділі «Перерва в прийомі» на головному екрані.",

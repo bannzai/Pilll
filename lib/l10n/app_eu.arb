@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "Yaz Flex erabiltzen duzu?",
   "initialSettingAskYazFlexDescription": "“Bai” aukeratzen baduzu,\netenaldiaren amaieratik zenbat egun igaro diren erakusteko ezarriko dugu.",
   "yazFlexLastRestDurationTitle": "Sakatu atsedenaldia hasi aurretik\nhartu zenuen pilula",
+  "yazFlexLastRestDurationNote": "Aukeratu atsedenaldia hasi aurretik hartu zenuen azken pilula",
   "yazFlexSkipRestDuration": "Saltatu atsedenaldiaren sarrera",
   "yazFlexSkipRestDurationDialogTitle": "Atsedenaldiaren sarrera saltatu",
   "yazFlexSkipRestDurationDialogMessage": "Hartzeko atsedenaldia geroago sar dezakezu hasierako pantailako «Hartzeko atsedenaldia» aukeratik.",

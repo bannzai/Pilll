@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "আপুনি Yaz Flex ব্যৱহাৰ কৰে নেকি?",
   "initialSettingAskYazFlexDescription": "“হয়” বাছনি কৰিলে\nঔষধ বন্ধৰ সময় শেষ হোৱাৰ পিছত কিমান দিন হ’ল সেয়া দেখুৱাব পৰাকৈ ছেট কৰা হ’ব",
   "yazFlexLastRestDurationTitle": "বিৰতি আৰম্ভ কৰাৰ ঠিক আগতে খোৱা পিলটোত\nটেপ কৰক",
+  "yazFlexLastRestDurationNote": "বিৰতি আৰম্ভ কৰাৰ আগতে আপুনি শেষবাৰ খোৱা পিলটো নিৰ্বাচন কৰক",
   "yazFlexSkipRestDuration": "ঔষধ বন্ধৰ সময়ছোৱাৰ ইনপুট এৰি দিয়ক",
   "yazFlexSkipRestDurationDialogTitle": "ঔষধ-বিৰতিৰ ইনপুট এৰি যাব",
   "yazFlexSkipRestDurationDialogMessage": "ঔষধ সেৱন বিৰতিৰ সময়সীমা পিছত হোমৰ «ঔষধ সেৱন বিৰতি»ৰ পৰা লিখিব পাৰিব।",

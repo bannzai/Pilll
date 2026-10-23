@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "Bruger du Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Hvis du vælger “Ja”,\nindstiller vi det, så antal dage siden pausen sluttede kan vises.",
   "yazFlexLastRestDurationTitle": "Tryk på den pille,\ndu tog lige før pausen",
+  "yazFlexLastRestDurationNote": "Vælg den sidste pille, du tog, før du begyndte pausen",
   "yazFlexSkipRestDuration": "Spring indtastning af pause over",
   "yazFlexSkipRestDurationDialogTitle": "Spring registrering af pause over",
   "yazFlexSkipRestDurationDialogMessage": "Perioden for pause i indtagelse kan indtastes senere under “Pause i indtagelse” på hjemmeskærmen.",

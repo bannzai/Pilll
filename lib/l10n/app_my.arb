@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "သင် Yaz Flex ကို အသုံးပြုနေပါသလား?",
   "initialSettingAskYazFlexDescription": "“ဟုတ်ကဲ့” ကိုရွေးပါက\nအနားယူကာလပြီးဆုံးပြီးနောက် ဘယ်နှရက်မြောက်နေ့လဲကို ပြသနိုင်အောင် သတ်မှတ်ပေးပါမည်",
   "yazFlexLastRestDurationTitle": "အနားယူကာလမစတင်မီ သောက်ခဲ့သော ဆေးလုံးကို\nနှိပ်ပါ",
+  "yazFlexLastRestDurationNote": "အနားယူကာလ မစတင်မီ နောက်ဆုံးသောက်ခဲ့သော ဆေးလုံးကို ရွေးချယ်ပါ",
   "yazFlexSkipRestDuration": "ဆေးနားကာလ ထည့်သွင်းမှုကို ကျော်ရန်",
   "yazFlexSkipRestDurationDialogTitle": "ဆေးနားကာလ ထည့်သွင်းမှုကို ကျော်မည်",
   "yazFlexSkipRestDurationDialogMessage": "ဆေးသောက်နားချိန်ကာလကို နောက်မှ ပင်မစာမျက်နှာရှိ “ဆေးသောက်နားချိန်” မှ ထည့်သွင်းနိုင်ပါသည်။",

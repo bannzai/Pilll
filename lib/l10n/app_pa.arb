@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "ਕੀ ਤੁਸੀਂ Yaz Flex ਵਰਤ ਰਹੇ ਹੋ?",
   "initialSettingAskYazFlexDescription": "“ਹਾਂ” ਚੁਣਨ ਤੇ\nਬ੍ਰੇਕ ਖਤਮ ਹੋਣ ਤੋਂ ਬਾਅਦ ਕਿੰਨਾ ਦਿਨ ਹੋਇਆ ਹੈ, ਇਹ ਵੇਖਾਉਣ ਲਈ ਸੈਟ ਕੀਤਾ ਜਾਵੇਗਾ",
   "yazFlexLastRestDurationTitle": "ਕਿਰਪਾ ਕਰਕੇ ਉਸ ਗੋਲੀ 'ਤੇ ਟੈਪ ਕਰੋ\nਜੋ ਤੁਸੀਂ ਬ੍ਰੇਕ ਸ਼ੁਰੂ ਹੋਣ ਤੋਂ ਠੀਕ ਪਹਿਲਾਂ ਲਈ ਸੀ",
+  "yazFlexLastRestDurationNote": "ਕਿਰਪਾ ਕਰਕੇ ਬ੍ਰੇਕ ਸ਼ੁਰੂ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਤੁਸੀਂ ਆਖਰੀ ਵਾਰ ਲਈ ਗੋਲੀ ਚੁਣੋ",
   "yazFlexSkipRestDuration": "ਵਿਰਾਮ ਮਿਆਦ ਦਰਜ ਕਰਨਾ ਛੱਡੋ",
   "yazFlexSkipRestDurationDialogTitle": "ਵਿਰਾਮ ਅਵਧੀ ਦੀ ਐਂਟਰੀ ਛੱਡੋ",
   "yazFlexSkipRestDurationDialogMessage": "ਗੋਲੀ ਲੈਣ ਦੇ ਵਿਰਾਮ ਦੀ ਮਿਆਦ ਬਾਅਦ ਵਿੱਚ ਹੋਮ ਦੇ “ਗੋਲੀ ਲੈਣ ਦਾ ਵਿਰਾਮ” ਤੋਂ ਦਰਜ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ।",

@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "क्या आप Yaz Flex का उपयोग कर रही हैं?",
   "initialSettingAskYazFlexDescription": "“हाँ” चुनने पर\nसेटिंग ऐसी कर दी जाएगी कि ब्रेक खत्म होने के बाद कौन-सा दिन है, यह दिखे",
   "yazFlexLastRestDurationTitle": "ब्रेक शुरू होने से ठीक पहले ली गई गोली पर\nटैप करें",
+  "yazFlexLastRestDurationNote": "कृपया ब्रेक शुरू करने से पहले ली गई आखिरी गोली चुनें",
   "yazFlexSkipRestDuration": "ब्रेक अवधि दर्ज करना छोड़ें",
   "yazFlexSkipRestDurationDialogTitle": "ब्रेक अवधि की प्रविष्टि छोड़ें",
   "yazFlexSkipRestDurationDialogMessage": "दवा लेने के विराम की अवधि बाद में होम के “दवा लेने का विराम” से दर्ज की जा सकती है।",

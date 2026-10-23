@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "Kas kasutad Yaz Flexi?",
   "initialSettingAskYazFlexDescription": "Kui valite „Jah“,\nseadistame selle nii, et kuvatakse, mitmes päev on pausijärgselt.",
   "yazFlexLastRestDurationTitle": "Puudutage pilli,\nmille võtsite vahetult enne pausi",
+  "yazFlexLastRestDurationNote": "Palun valige viimane pill, mille võtsite enne pausi alustamist",
   "yazFlexSkipRestDuration": "Jäta pausi sisestamine vahele",
   "yazFlexSkipRestDurationDialogTitle": "Jäta pausiperioodi sisestamine vahele",
   "yazFlexSkipRestDurationDialogMessage": "Võtmispausi perioodi saate hiljem sisestada avalehe jaotises „Võtmispaus”.",

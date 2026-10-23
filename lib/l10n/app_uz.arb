@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "Siz Yaz Flex ishlatyapsizmi?",
   "initialSettingAskYazFlexDescription": "Agar “Ha” ni tanlasangiz,\ntanaffus tugaganidan keyin nechinchi kun ekanini ko‘rsatadigan qilib sozlaymiz.",
   "yazFlexLastRestDurationTitle": "Tanaffus boshlanishidan oldin ichgan tabletkani\nbosing",
+  "yazFlexLastRestDurationNote": "Tanaffusni boshlashdan oldin oxirgi qabul qilgan tabletkangizni tanlang",
   "yazFlexSkipRestDuration": "Tanaffus davrini kiritishni oʻtkazib yuborish",
   "yazFlexSkipRestDurationDialogTitle": "Tanaffus davrini kiritishni oʻtkazib yuborish",
   "yazFlexSkipRestDurationDialogMessage": "Qabul qilish tanaffusi muddatini keyinroq Bosh sahifadagi “Qabul qilish tanaffusi” bo‘limidan kiritishingiz mumkin.",

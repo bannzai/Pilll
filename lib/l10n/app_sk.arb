@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "Užívate Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ak vyberiete „Áno“,\nnastavíme zobrazovanie, ktorý deň je od konca prestávky.",
   "yazFlexLastRestDurationTitle": "Ťuknite na pilulku,\nktorú ste užili tesne pred prestávkou",
+  "yazFlexLastRestDurationNote": "Vyberte prosím poslednú tabletku, ktorú ste užili pred začiatkom prestávky",
   "yazFlexSkipRestDuration": "Preskočiť zadanie prestávky",
   "yazFlexSkipRestDurationDialogTitle": "Preskočiť zadanie prestávky",
   "yazFlexSkipRestDurationDialogMessage": "Obdobie prestávky v užívaní môžete zadať neskôr v časti „Prestávka v užívaní“ na domovskej obrazovke.",

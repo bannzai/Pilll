@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "Yaz Flex kullanıyor musunuz?",
   "initialSettingAskYazFlexDescription": "“Evet”i seçerseniz,\nara dönem bittikten sonra kaçıncı gün olduğunu gösterecek şekilde ayarlayacağız.",
   "yazFlexLastRestDurationTitle": "Molaya başlamadan hemen önce aldığınız hapı\nseçmek için dokunun",
+  "yazFlexLastRestDurationNote": "Lütfen molaya başlamadan önce en son aldığınız hapı seçin",
   "yazFlexSkipRestDuration": "Ara dönem girişini atla",
   "yazFlexSkipRestDurationDialogTitle": "Ara dönem girişini atla",
   "yazFlexSkipRestDurationDialogMessage": "Kullanıma ara verme dönemini daha sonra Ana Ekran’daki “Kullanıma ara verme” bölümünden girebilirsiniz.",

@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "Estás a usar Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Se escolles «Si»,\nconfigurarémolo para que se mostre cantos días pasaron desde que rematou a pausa.",
   "yazFlexLastRestDurationTitle": "Toca a pílula\nque tomaches xusto antes da pausa",
+  "yazFlexLastRestDurationNote": "Selecciona a última pílula que tomaches antes de comezar o descanso",
   "yazFlexSkipRestDuration": "Omitir a introdución do período de descanso",
   "yazFlexSkipRestDurationDialogTitle": "Omitir o rexistro do descanso",
   "yazFlexSkipRestDurationDialogMessage": "Poderás introducir máis tarde o período de descanso da toma desde «Descanso da toma» na pantalla de inicio.",
