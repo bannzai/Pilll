@@ -574,6 +574,7 @@
   "yazFlexLastRestDurationNote": "Selecteer de laatste pil die je hebt ingenomen voordat je met de pauze begon",
   "yazFlexRestDurationDaysLabel": "Aantal stopdagen",
   "yazFlexRestDurationDaysValue": "{days} dagen",
+  "yazFlexResting": "Ik ben in mijn stopperiode en nog niet opnieuw begonnen",
   "yazFlexSkipRestDuration": "Invoeren van de stopweek overslaan",
   "yazFlexSkipRestDurationDialogTitle": "Invoer van de stopweek overslaan",
   "yazFlexSkipRestDurationDialogMessage": "De stopperiode kun je later invoeren via ‘Stopperiode’ op het startscherm.",

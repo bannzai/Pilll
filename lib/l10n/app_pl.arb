@@ -574,6 +574,7 @@
   "yazFlexLastRestDurationNote": "Wybierz ostatnią tabletkę, którą przyjęłaś przed rozpoczęciem przerwy",
   "yazFlexRestDurationDaysLabel": "Liczba dni przerwy",
   "yazFlexRestDurationDaysValue": "{days} dni",
+  "yazFlexResting": "Jestem w przerwie i jeszcze nie wznowiłam",
   "yazFlexSkipRestDuration": "Pomiń wpisywanie przerwy",
   "yazFlexSkipRestDurationDialogTitle": "Pomiń wprowadzanie przerwy",
   "yazFlexSkipRestDurationDialogMessage": "Okres przerwy w przyjmowaniu możesz wprowadzić później w sekcji „Przerwa w przyjmowaniu” na ekranie głównym.",

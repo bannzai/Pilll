@@ -574,6 +574,7 @@
   "yazFlexLastRestDurationNote": "Lūdzu, izvēlieties pēdējo tableti, ko lietojāt pirms pārtraukuma sākuma",
   "yazFlexRestDurationDaysLabel": "Pārtraukuma dienu skaits",
   "yazFlexRestDurationDaysValue": "{days} dienas",
+  "yazFlexResting": "Esmu pārtraukuma periodā un vēl neesmu atsākusi",
   "yazFlexSkipRestDuration": "Izlaist pārtraukuma perioda ievadi",
   "yazFlexSkipRestDurationDialogTitle": "Izlaist pārtraukuma perioda ievadi",
   "yazFlexSkipRestDurationDialogMessage": "Lietošanas pārtraukuma periodu vēlāk varēsiet ievadīt sākuma ekrāna sadaļā “Lietošanas pārtraukums”.",

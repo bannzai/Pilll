@@ -574,6 +574,7 @@
   "yazFlexLastRestDurationNote": "Odaberite pilulu koju ste posljednju uzeli prije početka pauze",
   "yazFlexRestDurationDaysLabel": "Broj dana pauze",
   "yazFlexRestDurationDaysValue": "{days} dana",
+  "yazFlexResting": "U pauzi sam i još nisam nastavila",
   "yazFlexSkipRestDuration": "Preskoči unos pauze",
   "yazFlexSkipRestDurationDialogTitle": "Preskočite unos pauze",
   "yazFlexSkipRestDurationDialogMessage": "Period pauze uzimanja možete unijeti kasnije u odjeljku „Pauza uzimanja“ na početnom ekranu.",

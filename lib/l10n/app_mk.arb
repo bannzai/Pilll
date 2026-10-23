@@ -574,6 +574,7 @@
   "yazFlexLastRestDurationNote": "Изберете ја последната пилула што ја испивте пред да започне паузата",
   "yazFlexRestDurationDaysLabel": "Број на денови на пауза",
   "yazFlexRestDurationDaysValue": "{days} дена",
+  "yazFlexResting": "Во период на пауза сум и сè уште не сум продолжила",
   "yazFlexSkipRestDuration": "Прескокни внесување на паузата",
   "yazFlexSkipRestDurationDialogTitle": "Прескокни го внесувањето на паузата",
   "yazFlexSkipRestDurationDialogMessage": "Периодот на пауза во земањето може подоцна да го внесете од „Пауза во земањето“ на почетниот екран.",

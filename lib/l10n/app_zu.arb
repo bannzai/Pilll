@@ -574,6 +574,7 @@
   "yazFlexLastRestDurationNote": "Sicela ukhethe iphilisi lokugcina oliphuzile ngaphambi kokuqala ikhefu",
   "yazFlexRestDurationDaysLabel": "Inani lezinsuku zekhefu",
   "yazFlexRestDurationDaysValue": "{days} izinsuku",
+  "yazFlexResting": "Ngisesikhathini sekhefu futhi angikaqali futhi",
   "yazFlexSkipRestDuration": "Yeqa ukufaka isikhathi sekhefu",
   "yazFlexSkipRestDurationDialogTitle": "Yeqa ukufaka isikhathi sekhefu",
   "yazFlexSkipRestDurationDialogMessage": "Isikhathi sekhefu lokuphuza singafakwa kamuva kokuthi “Ikhefu lokuphuza” ekhasini lasekhaya.",

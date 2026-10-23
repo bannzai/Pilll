@@ -574,6 +574,7 @@
   "yazFlexLastRestDurationNote": "Vinsamlegast veldu síðustu pilluna sem þú tókst áður en hléið hófst",
   "yazFlexRestDurationDaysLabel": "Fjöldi hlédaga",
   "yazFlexRestDurationDaysValue": "{days} dagar",
+  "yazFlexResting": "Í hléi og hef ekki hafið aftur enn",
   "yazFlexSkipRestDuration": "Sleppa innslætti á hléi",
   "yazFlexSkipRestDurationDialogTitle": "Sleppa skráningu hlés",
   "yazFlexSkipRestDurationDialogMessage": "Þú getur skráð hlé á töku síðar undir „Hlé á töku“ á heimaskjánum.",

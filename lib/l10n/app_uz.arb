@@ -574,6 +574,7 @@
   "yazFlexLastRestDurationNote": "Tanaffusni boshlashdan oldin oxirgi qabul qilgan tabletkangizni tanlang",
   "yazFlexRestDurationDaysLabel": "Tanaffus kunlari soni",
   "yazFlexRestDurationDaysValue": "{days} kun",
+  "yazFlexResting": "Tanaffus davridaman va hali qayta boshlamadim",
   "yazFlexSkipRestDuration": "Tanaffus davrini kiritishni oʻtkazib yuborish",
   "yazFlexSkipRestDurationDialogTitle": "Tanaffus davrini kiritishni oʻtkazib yuborish",
   "yazFlexSkipRestDurationDialogMessage": "Qabul qilish tanaffusi muddatini keyinroq Bosh sahifadagi “Qabul qilish tanaffusi” bo‘limidan kiritishingiz mumkin.",

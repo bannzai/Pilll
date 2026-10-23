@@ -574,6 +574,7 @@
   "yazFlexLastRestDurationNote": "โปรดเลือกยาที่คุณรับประทานครั้งสุดท้ายก่อนเริ่มช่วงพักยา",
   "yazFlexRestDurationDaysLabel": "จำนวนวันหยุดยา",
   "yazFlexRestDurationDaysValue": "{days} วัน",
+  "yazFlexResting": "อยู่ในช่วงพักยาและยังไม่ได้เริ่มใหม่",
   "yazFlexSkipRestDuration": "ข้ามการกรอกช่วงหยุดยา",
   "yazFlexSkipRestDurationDialogTitle": "ข้ามการบันทึกช่วงหยุดยา",
   "yazFlexSkipRestDurationDialogMessage": "คุณสามารถกรอกช่วงพักการรับประทานได้ภายหลังจาก “พักการรับประทาน” บนหน้าหลัก",

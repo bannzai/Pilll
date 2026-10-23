@@ -574,6 +574,7 @@
   "yazFlexLastRestDurationNote": "Sila pilih pil terakhir yang anda ambil sebelum memulakan rehat",
   "yazFlexRestDurationDaysLabel": "Bilangan hari rehat",
   "yazFlexRestDurationDaysValue": "{days} hari",
+  "yazFlexResting": "Sedang dalam tempoh rehat dan masih belum mula semula",
   "yazFlexSkipRestDuration": "Langkau memasukkan tempoh rehat",
   "yazFlexSkipRestDurationDialogTitle": "Langkaukan pengisian tempoh rehat",
   "yazFlexSkipRestDurationDialogMessage": "Tempoh rehat pengambilan boleh diisi kemudian daripada “Rehat pengambilan” di Laman Utama.",

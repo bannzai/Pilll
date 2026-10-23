@@ -574,6 +574,7 @@
   "yazFlexLastRestDurationNote": "Pasirinkite paskutinę tabletę, kurią išgėrėte prieš pradėdama pertrauką",
   "yazFlexRestDurationDaysLabel": "Pertraukos dienų skaičius",
   "yazFlexRestDurationDaysValue": "{days} d.",
+  "yazFlexResting": "Esu pertraukos laikotarpiu ir dar neatnaujinau vartojimo",
   "yazFlexSkipRestDuration": "Praleisti pertraukos laikotarpio įvedimą",
   "yazFlexSkipRestDurationDialogTitle": "Praleisti pertraukos laikotarpio įvedimą",
   "yazFlexSkipRestDurationDialogMessage": "Vartojimo pertraukos laikotarpį vėliau galėsite įvesti pradžios ekrano skiltyje „Vartojimo pertrauka“.",

@@ -574,6 +574,7 @@
   "yazFlexLastRestDurationNote": "Please select the last pill you took before starting the break",
   "yazFlexRestDurationDaysLabel": "Number of break days",
   "yazFlexRestDurationDaysValue": "{days} days",
+  "yazFlexResting": "On a break and haven’t restarted yet",
   "yazFlexSkipRestDuration": "Skip entering the break period",
   "yazFlexSkipRestDurationDialogTitle": "Skip entering the break period",
   "yazFlexSkipRestDurationDialogMessage": "You can enter the break period later from “Break from Taking” on the Home screen.",
