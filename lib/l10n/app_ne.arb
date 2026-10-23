@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "ब्रेक दिनहरूको संख्या",
   "yazFlexRestDurationDaysValue": "{days} दिन",
   "yazFlexResting": "विश्राम अवधिमा छु र अझै फेरि सुरु गरेको छैन",
+  "yazFlexRestingDaysLabel": "आज विश्रामको कतिौँ दिन हो",
   "yazFlexSkipRestDuration": "ब्रेक अवधि प्रविष्ट नगरी अघि बढ्नुहोस्",
   "yazFlexSkipRestDurationDialogTitle": "विश्राम अवधिको प्रविष्टि छोड्नुहोस्",
   "yazFlexSkipRestDurationDialogMessage": "औषध सेवन विश्राम अवधि पछि होमको “औषध सेवन विश्राम” बाट प्रविष्ट गर्न सकिन्छ।",

@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Fjöldi hlédaga",
   "yazFlexRestDurationDaysValue": "{days} dagar",
   "yazFlexResting": "Í hléi og hef ekki hafið aftur enn",
+  "yazFlexRestingDaysLabel": "Hvaða dagur hlésins er í dag",
   "yazFlexSkipRestDuration": "Sleppa innslætti á hléi",
   "yazFlexSkipRestDurationDialogTitle": "Sleppa skráningu hlés",
   "yazFlexSkipRestDurationDialogMessage": "Þú getur skráð hlé á töku síðar undir „Hlé á töku“ á heimaskjánum.",

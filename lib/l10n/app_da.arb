@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Antal pausedage",
   "yazFlexRestDurationDaysValue": "{days} dage",
   "yazFlexResting": "Jeg er i pause og er ikke startet igen endnu",
+  "yazFlexRestingDaysLabel": "Hvilken dag i pausen er det i dag",
   "yazFlexSkipRestDuration": "Spring indtastning af pause over",
   "yazFlexSkipRestDurationDialogTitle": "Spring registrering af pause over",
   "yazFlexSkipRestDurationDialogMessage": "Perioden for pause i indtagelse kan indtastes senere under “Pause i indtagelse” på hjemmeskærmen.",

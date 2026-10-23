@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "ওষুধ বিরতির দিনের সংখ্যা",
   "yazFlexRestDurationDaysValue": "{days} দিন",
   "yazFlexResting": "ওষুধ বিরতিতে আছি, এখনও আবার শুরু করিনি",
+  "yazFlexRestingDaysLabel": "ওষুধ বন্ধের আজ কততম দিন",
   "yazFlexSkipRestDuration": "ওষুধ বিরতির তথ্য দেওয়া এড়িয়ে যান",
   "yazFlexSkipRestDurationDialogTitle": "ওষুধ বিরতির তথ্য লেখা এড়িয়ে যান",
   "yazFlexSkipRestDurationDialogMessage": "পিল খাওয়া বিরতির সময়কাল পরে হোমের «পিল খাওয়া বিরতি» থেকে লিখতে পারবেন।",

@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Тыныгуу күндөрүнүн саны",
   "yazFlexRestDurationDaysValue": "{days} күн",
   "yazFlexResting": "Тыныгуу мезгилиндемин жана али кайра баштай элекмин",
+  "yazFlexRestingDaysLabel": "Бүгүн тыныгуунун канчанчы күнү",
   "yazFlexSkipRestDuration": "Тыныгуу мезгилин киргизүүнү өткөрүп жиберүү",
   "yazFlexSkipRestDurationDialogTitle": "Тыныгуу мезгилин киргизүүнү өткөрүп жиберүү",
   "yazFlexSkipRestDurationDialogMessage": "Ичүүнү тыныгуу мөөнөтүн кийинчерээк Башкы беттеги “Ичүүнү тыныгуу” бөлүмүнөн киргизе аласыз.",

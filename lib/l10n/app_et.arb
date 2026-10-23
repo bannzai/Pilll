@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Pausipäevade arv",
   "yazFlexRestDurationDaysValue": "{days} päeva",
   "yazFlexResting": "Olen pausiperioodil ega ole veel uuesti alustanud",
+  "yazFlexRestingDaysLabel": "Mitmes pausipäev täna on",
   "yazFlexSkipRestDuration": "Jäta pausi sisestamine vahele",
   "yazFlexSkipRestDurationDialogTitle": "Jäta pausiperioodi sisestamine vahele",
   "yazFlexSkipRestDurationDialogMessage": "Võtmispausi perioodi saate hiljem sisestada avalehe jaotises „Võtmispaus”.",

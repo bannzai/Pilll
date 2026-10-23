@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "休药天数",
   "yazFlexRestDurationDaysValue": "{days}天",
   "yazFlexResting": "处于停药期，尚未重新开始服用",
+  "yazFlexRestingDaysLabel": "今天是停药第几天",
   "yazFlexSkipRestDuration": "跳过输入停药期",
   "yazFlexSkipRestDurationDialogTitle": "跳过停药期录入",
   "yazFlexSkipRestDurationDialogMessage": "休药期间可稍后在首页的“服用休息”中输入。",

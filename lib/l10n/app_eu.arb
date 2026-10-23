@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Atseden egun kopurua",
   "yazFlexRestDurationDaysValue": "{days} egun",
   "yazFlexResting": "Atsedenaldian nago eta oraindik ez naiz berriro hasi",
+  "yazFlexRestingDaysLabel": "Atsedenaldiaren gaurko zenbatgarren eguna da",
   "yazFlexSkipRestDuration": "Saltatu atsedenaldiaren sarrera",
   "yazFlexSkipRestDurationDialogTitle": "Atsedenaldiaren sarrera saltatu",
   "yazFlexSkipRestDurationDialogMessage": "Hartzeko atsedenaldia geroago sar dezakezu hasierako pantailako «Hartzeko atsedenaldia» aukeratik.",

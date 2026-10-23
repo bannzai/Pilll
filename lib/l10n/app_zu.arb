@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Inani lezinsuku zekhefu",
   "yazFlexRestDurationDaysValue": "{days} izinsuku",
   "yazFlexResting": "Ngisesikhathini sekhefu futhi angikaqali futhi",
+  "yazFlexRestingDaysLabel": "Namuhla usuku lwesingaki sekhefu",
   "yazFlexSkipRestDuration": "Yeqa ukufaka isikhathi sekhefu",
   "yazFlexSkipRestDurationDialogTitle": "Yeqa ukufaka isikhathi sekhefu",
   "yazFlexSkipRestDurationDialogMessage": "Isikhathi sekhefu lokuphuza singafakwa kamuva kokuthi “Ikhefu lokuphuza” ekhasini lasekhaya.",

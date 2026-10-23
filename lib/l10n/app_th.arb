@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "จำนวนวันหยุดยา",
   "yazFlexRestDurationDaysValue": "{days} วัน",
   "yazFlexResting": "อยู่ในช่วงพักยาและยังไม่ได้เริ่มใหม่",
+  "yazFlexRestingDaysLabel": "วันนี้เป็นวันที่เท่าไรของช่วงหยุดยา",
   "yazFlexSkipRestDuration": "ข้ามการกรอกช่วงหยุดยา",
   "yazFlexSkipRestDurationDialogTitle": "ข้ามการบันทึกช่วงหยุดยา",
   "yazFlexSkipRestDurationDialogMessage": "คุณสามารถกรอกช่วงพักการรับประทานได้ภายหลังจาก “พักการรับประทาน” บนหน้าหลัก",

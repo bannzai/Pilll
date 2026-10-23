@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Tanaffus kunlari soni",
   "yazFlexRestDurationDaysValue": "{days} kun",
   "yazFlexResting": "Tanaffus davridaman va hali qayta boshlamadim",
+  "yazFlexRestingDaysLabel": "Bugun tanaffusning nechinchi kuni",
   "yazFlexSkipRestDuration": "Tanaffus davrini kiritishni oʻtkazib yuborish",
   "yazFlexSkipRestDurationDialogTitle": "Tanaffus davrini kiritishni oʻtkazib yuborish",
   "yazFlexSkipRestDurationDialogMessage": "Qabul qilish tanaffusi muddatini keyinroq Bosh sahifadagi “Qabul qilish tanaffusi” bo‘limidan kiritishingiz mumkin.",

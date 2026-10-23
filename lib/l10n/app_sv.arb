@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Antal pausdagar",
   "yazFlexRestDurationDaysValue": "{days} dagar",
   "yazFlexResting": "Jag är i uppehåll och har inte börjat igen än",
+  "yazFlexRestingDaysLabel": "Vilken dag i uppehållet är det i dag",
   "yazFlexSkipRestDuration": "Hoppa över att ange uppehållet",
   "yazFlexSkipRestDurationDialogTitle": "Hoppa över registrering av uppehållsperioden",
   "yazFlexSkipRestDurationDialogMessage": "Perioden för uppehåll i intaget kan du ange senare under ”Uppehåll i intaget” på hemskärmen.",

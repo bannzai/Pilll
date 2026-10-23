@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Αριθμός ημερών διακοπής",
   "yazFlexRestDurationDaysValue": "{days} ημέρες",
   "yazFlexResting": "Είμαι σε διάλειμμα και δεν έχω ξεκινήσει ξανά ακόμα",
+  "yazFlexRestingDaysLabel": "Ποια μέρα της διακοπής είναι σήμερα",
   "yazFlexSkipRestDuration": "Παράλειψη εισαγωγής διαλείμματος",
   "yazFlexSkipRestDurationDialogTitle": "Παράλειψη καταχώρισης της διακοπής",
   "yazFlexSkipRestDurationDialogMessage": "Μπορείτε να καταχωρίσετε αργότερα την περίοδο διακοπής λήψης από το «Διακοπή λήψης» στην αρχική οθόνη.",

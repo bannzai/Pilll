@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Število dni premora",
   "yazFlexRestDurationDaysValue": "{days} dni",
   "yazFlexResting": "Sem v premoru in še nisem ponovno začela",
+  "yazFlexRestingDaysLabel": "Kateri dan premora je danes",
   "yazFlexSkipRestDuration": "Preskoči vnos premora",
   "yazFlexSkipRestDurationDialogTitle": "Preskoči vnos premora",
   "yazFlexSkipRestDurationDialogMessage": "Obdobje premora pri jemanju lahko pozneje vnesete v razdelku »Premor pri jemanju« na domačem zaslonu.",

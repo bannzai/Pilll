@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Завсарласан өдрийн тоо",
   "yazFlexRestDurationDaysValue": "{days} өдөр",
   "yazFlexResting": "Завсарлагааны үед байгаа бөгөөд хараахан дахин эхлээгүй байна",
+  "yazFlexRestingDaysLabel": "Өнөөдөр завсарлагааны хэд дэх өдөр вэ",
   "yazFlexSkipRestDuration": "Завсарлагааны хугацаа оруулахыг алгасах",
   "yazFlexSkipRestDurationDialogTitle": "Завсарлах хугацааны оруулгыг алгасах",
   "yazFlexSkipRestDurationDialogMessage": "Уух завсарлагын хугацааг дараа нь Нүүр хуудасны “Уух завсарлага” хэсгээс оруулах боломжтой.",

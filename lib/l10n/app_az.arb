@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Fasilə günlərinin sayı",
   "yazFlexRestDurationDaysValue": "{days} gün",
   "yazFlexResting": "Fasilə dövründəyəm və hələ yenidən başlamamışam",
+  "yazFlexRestingDaysLabel": "Fasilədən bu gün neçənci gündür",
   "yazFlexSkipRestDuration": "Fasilə dövrünün daxil edilməsini keçin",
   "yazFlexSkipRestDurationDialogTitle": "Fasilə dövrü daxiletməsini keçin",
   "yazFlexSkipRestDurationDialogMessage": "Qəbul fasiləsi müddətini sonra Ana səhifədəki “Qəbul fasiləsi” bölməsindən daxil edə bilərsiniz.",

@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Ara verilen gün sayısı",
   "yazFlexRestDurationDaysValue": "{days} gün",
   "yazFlexResting": "Ara dönemindeyim ve henüz yeniden başlamadım",
+  "yazFlexRestingDaysLabel": "Bugün aranın kaçıncı günü",
   "yazFlexSkipRestDuration": "Ara dönem girişini atla",
   "yazFlexSkipRestDurationDialogTitle": "Ara dönem girişini atla",
   "yazFlexSkipRestDurationDialogMessage": "Kullanıma ara verme dönemini daha sonra Ana Ekran’daki “Kullanıma ara verme” bölümünden girebilirsiniz.",

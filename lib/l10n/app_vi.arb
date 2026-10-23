@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Số ngày tạm ngừng thuốc",
   "yazFlexRestDurationDaysValue": "{days} ngày",
   "yazFlexResting": "Đang trong thời gian nghỉ thuốc và هنوز chưa dùng lại",
+  "yazFlexRestingDaysLabel": "Hôm nay là ngày thứ mấy của thời gian nghỉ thuốc",
   "yazFlexSkipRestDuration": "Bỏ qua nhập thời gian nghỉ thuốc",
   "yazFlexSkipRestDurationDialogTitle": "Bỏ qua nhập thời gian nghỉ thuốc",
   "yazFlexSkipRestDurationDialogMessage": "Bạn có thể nhập thời gian nghỉ uống sau trong mục “Nghỉ uống” ở Trang chủ.",

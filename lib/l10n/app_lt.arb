@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Pertraukos dienų skaičius",
   "yazFlexRestDurationDaysValue": "{days} d.",
   "yazFlexResting": "Esu pertraukos laikotarpiu ir dar neatnaujinau vartojimo",
+  "yazFlexRestingDaysLabel": "Kelinta šiandien pertraukos diena",
   "yazFlexSkipRestDuration": "Praleisti pertraukos laikotarpio įvedimą",
   "yazFlexSkipRestDurationDialogTitle": "Praleisti pertraukos laikotarpio įvedimą",
   "yazFlexSkipRestDurationDialogMessage": "Vartojimo pertraukos laikotarpį vėliau galėsite įvesti pradžios ekrano skiltyje „Vartojimo pertrauka“.",

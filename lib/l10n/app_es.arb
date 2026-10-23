@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Número de días de descanso",
   "yazFlexRestDurationDaysValue": "{days} días",
   "yazFlexResting": "Estoy en un descanso y aún no he retomado la toma",
+  "yazFlexRestingDaysLabel": "¿Qué día del descanso es hoy?",
   "yazFlexSkipRestDuration": "Omitir el registro del descanso",
   "yazFlexSkipRestDurationDialogTitle": "Omitir el registro del descanso",
   "yazFlexSkipRestDurationDialogMessage": "Más adelante puedes introducir el período de descanso de la toma desde «Descanso de la toma» en Inicio.",

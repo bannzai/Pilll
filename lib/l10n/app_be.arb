@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Колькасць дзён перапынку",
   "yazFlexRestDurationDaysValue": "{days} дзён",
   "yazFlexResting": "На перапынку ў прыёме і яшчэ не аднавіла",
+  "yazFlexRestingDaysLabel": "Які сёння дзень перапынку ў прыёме",
   "yazFlexSkipRestDuration": "Прапусціць увод перыяду перапынку",
   "yazFlexSkipRestDurationDialogTitle": "Прапусціць увод перыяду перапынку",
   "yazFlexSkipRestDurationDialogMessage": "Перыяд перапынку ў прыёме можна будзе ўвесці пазней у раздзеле «Перапынак у прыёме» на галоўнай старонцы.",

@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "વિરામના દિવસોની સંખ્યા",
   "yazFlexRestDurationDaysValue": "{days} દિવસ",
   "yazFlexResting": "વિરામ દરમિયાન છું અને હજી ફરી શરૂ કર્યું નથી",
+  "yazFlexRestingDaysLabel": "આજે વિરામનો કેટલામો દિવસ છે",
   "yazFlexSkipRestDuration": "વિરામ અવધિ દાખલ કરવું છોડો",
   "yazFlexSkipRestDurationDialogTitle": "વિરામ અવધિની નોંધ છોડો",
   "yazFlexSkipRestDurationDialogMessage": "દવા લેવાનું વિરામ સમયગાળો પછીથી હોમમાં “દવા લેવાનું વિરામ” માંથી દાખલ કરી શકશો.",

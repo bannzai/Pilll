@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "ဆေးနားရက် အရေအတွက်",
   "yazFlexRestDurationDaysValue": "{days} ရက်",
   "yazFlexResting": "ဆေးနားကာလအတွင်းဖြစ်ပြီး ပြန်မစသေးပါ",
+  "yazFlexRestingDaysLabel": "ယနေ့သည် ဆေးနားကာလ၏ ဘယ်နှရက်မြောက်နေ့လဲ",
   "yazFlexSkipRestDuration": "ဆေးနားကာလ ထည့်သွင်းမှုကို ကျော်ရန်",
   "yazFlexSkipRestDurationDialogTitle": "ဆေးနားကာလ ထည့်သွင်းမှုကို ကျော်မည်",
   "yazFlexSkipRestDurationDialogMessage": "ဆေးသောက်နားချိန်ကာလကို နောက်မှ ပင်မစာမျက်နှာရှိ “ဆေးသောက်နားချိန်” မှ ထည့်သွင်းနိုင်ပါသည်။",

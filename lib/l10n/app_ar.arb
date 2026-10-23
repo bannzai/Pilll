@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "عدد أيام التوقف",
   "yazFlexRestDurationDaysValue": "{days} أيام",
   "yazFlexResting": "في فترة التوقف ولم أستأنف بعد",
+  "yazFlexRestingDaysLabel": "اليوم هو اليوم رقم كم من فترة التوقف؟",
   "yazFlexSkipRestDuration": "تخطي إدخال فترة التوقف",
   "yazFlexSkipRestDurationDialogTitle": "تخطي إدخال فترة التوقف",
   "yazFlexSkipRestDurationDialogMessage": "يمكنكِ إدخال فترة التوقف عن تناول الحبوب لاحقًا من «التوقف عن تناول الحبوب» في الصفحة الرئيسية.",

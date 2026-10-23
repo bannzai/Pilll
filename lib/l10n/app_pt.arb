@@ -575,6 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Número de dias de pausa",
   "yazFlexRestDurationDaysValue": "{days} dias",
   "yazFlexResting": "Estou em pausa e ainda não retomei",
+  "yazFlexRestingDaysLabel": "Em que dia da pausa você está hoje",
   "yazFlexSkipRestDuration": "Ignorar a introdução da pausa",
   "yazFlexSkipRestDurationDialogTitle": "Ignorar o registo da pausa",
   "yazFlexSkipRestDurationDialogMessage": "Pode introduzir mais tarde o período de pausa da toma em “Pausa da toma”, no ecrã principal.",
