@@ -239,21 +239,26 @@ class YazFlexRestingSwitch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          L.yazFlexResting,
-          style: const TextStyle(
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w300,
-            fontSize: 14,
-            color: TextColor.main,
+    // 文字の部分をタップしても切り替わるようにする (スイッチだけだと押す場所が小さい)
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTap: () => onChanged(!isResting),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            L.yazFlexResting,
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w300,
+              fontSize: 14,
+              color: TextColor.main,
+            ),
           ),
-        ),
-        const SizedBox(width: 8),
-        Switch(value: isResting, onChanged: onChanged),
-      ],
+          const SizedBox(width: 8),
+          Switch(value: isResting, onChanged: onChanged),
+        ],
+      ),
     );
   }
 }
