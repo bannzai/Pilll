@@ -30,6 +30,17 @@ extension FirebaseFunctionsExt on FirebaseFunctions {
     }
     return response['data']['isAlreadyExist'] as bool;
   }
+
+  /// 呼び出し元のユーザーのトライアルを開始する。
+  /// トライアルの開始日・期限はサーバーの時刻と設定で決まるため、クライアントからは値を渡さない
+  Future<void> startTrial() async {
+    await httpsCallable('startTrial').call();
+  }
+
+  /// RevenueCat の購読状態をサーバーで照会し、呼び出し元のユーザーの isPremium を設定させる
+  Future<void> syncRevenueCat() async {
+    await httpsCallable('syncRevenueCat').call();
+  }
 }
 
 // Map<String, dynamic>.fromだけだとネストした子要素が_Map<Object? Object?>のままになる

@@ -6,6 +6,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/typed_shared_preferences.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -30,6 +31,8 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
       boolSharedPreferencesProvider(BoolKey.didEndInitialSetting).notifier,
     );
     final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
+    // InitialSettingOrAppPage が user の取得後にだけ初期設定を表示するため、ここでは値が入っている
+    final user = ref.watch(userProvider).requireValue;
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -148,8 +151,14 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                   analytics.logEvent(name: 'pressed_start_app_preiun_trial');
                   try {
                     final navigator = Navigator.of(context);
-                    await store.register();
-                    await registerReminderLocalNotification();
+                    await store.register(user: user);
+                    // トライアルを新しく開始した時は、register が premiumOrTrial: true で通知を登録済み。
+                    // startTrial がサーバーで書いたトライアル状態は userProvider に遅れて届くため、
+                    // ここで再登録すると古い premiumOrTrial: false で上書きしてしまう。
+                    // トライアルを開始済みのユーザーは register の登録が今の状態と合わないため、userProvider の状態で登録し直す
+                    if (user.trialIsAlreadyBegin) {
+                      await registerReminderLocalNotification();
+                    }
                     await AppRouter.endInitialSetting(
                       navigator,
                       didEndInitialSettingNotifier,
