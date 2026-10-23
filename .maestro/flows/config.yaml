@@ -1,0 +1,6 @@
+# `maestro test .maestro/flows` (maestro-e2e workflow の flows=all) で実行する E2E flow の範囲。
+# Maestro は既定でフォルダ直下の flow しか対象にしないため、E2E のディレクトリを列挙する (`*` はサブフォルダを含まない)。
+# appstore_screenshot は SCREENSHOT_CATALOG=true のビルドと LANG が要る撮影用、simtunnel はセッション起動用で E2E ではないため含めない
+flows:
+  - "feature_appeal/*"
+  - "lifetime_offer/*"

@@ -21,7 +21,7 @@ bash ~/.claude/skills/maestro-e2e-actions/scripts/run-e2e.sh --repo bannzai/Pill
 
 input:
 
-- `flows`: `all` か `.maestro/` 配下のコミット済みパス (ファイルかディレクトリ)。`..`・絶対パス・`.maestro/` 外・存在しないパスは runner 側 (`maestro-e2e-run.sh`) で拒否される。push していない flow は runner に無いため、先に push する
+- `flows`: `all` か `.maestro/` 配下のコミット済みパス (ファイルかディレクトリ)。`all` で回る flow は `.maestro/flows/config.yaml` の `flows` が決める。E2E の flow を新しいディレクトリに足した時はそこにも足す。`..`・絶対パス・`.maestro/` 外・存在しないパスは runner 側 (`maestro-e2e-run.sh`) で拒否される。push していない flow は runner に無いため、先に push する
 - `device`: Simulator のデバイス名 (既定 `iPhone 17`)
 - `record_video`: 画面録画を artifact に含めるか (既定 `true`)
 
