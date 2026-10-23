@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "Yaz Flex қолданасыз ба?",
   "initialSettingAskYazFlexDescription": "Егер «Иә» таңдасаңыз,\nүзіліс аяқталғаннан бері нешінші күн екенін көрсететіндей етіп баптаймыз.",
   "yazFlexLastRestDurationTitle": "Өтінеміз,\nалдыңғы үзіліс кезеңі туралы айтып беріңіз",
-  "yazFlexHasNotRestedYet": "Мен әлі таблетка қабылдауға үзіліс жасаған жоқпын",
   "yazFlexLastRestDurationBeginDate": "Үзіліс басталған күн",
   "yazFlexLastRestDurationEndDate": "Қабылдауды қайта бастаған күн",
   "yazFlexSelectDate": "Күнді таңдаңыз",
   "yazFlexBeginPillNumberPageTitle": "Парақты бастаған күніңіз\nүзілістен кейін нешінші күн болды?",
-  "yazFlexNextInputIsRestDuration": "Келесі қадамда алдыңғы үзілісті енгізіңіз",
-  "yazFlexHasNotResumedYet": "Әлі қабылдауды қайта бастаған жоқпын"
+  "yazFlexNextInputIsRestDuration": "Келесі қадамда алдыңғы үзілісті енгізіңіз"
 }

@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "Käytätkö Yaz Flexiä?",
   "initialSettingAskYazFlexDescription": "Jos valitset ”Kyllä”,\nasetamme näytettäväksi, monesko päivä tauon päättymisestä on menossa.",
   "yazFlexLastRestDurationTitle": "Kerrothan meille\nedellisestä tauostasi",
-  "yazFlexHasNotRestedYet": "En ole vielä pitänyt taukoa pillereistä",
   "yazFlexLastRestDurationBeginDate": "Tauon alkamispäivä",
   "yazFlexLastRestDurationEndDate": "Päivä, jolloin aloitit käytön uudelleen",
   "yazFlexSelectDate": "Valitse päivämäärä",
   "yazFlexBeginPillNumberPageTitle": "Monentenako päivänä tauon jälkeen\naloitit liuskan?",
-  "yazFlexNextInputIsRestDuration": "Seuraavaksi syötä edellinen taukosi",
-  "yazFlexHasNotResumedYet": "En ole vielä aloittanut käyttöä uudelleen"
+  "yazFlexNextInputIsRestDuration": "Seuraavaksi syötä edellinen taukosi"
 }

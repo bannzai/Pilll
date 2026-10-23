@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "Are you using Yaz Flex?",
   "initialSettingAskYazFlexDescription": "If you choose “Yes”,\nwe’ll set it to show how many days it has been since the end of your break.",
   "yazFlexLastRestDurationTitle": "Please tell us\nabout your last break",
-  "yazFlexHasNotRestedYet": "I haven’t taken a pill break yet",
   "yazFlexLastRestDurationBeginDate": "Day the break started",
   "yazFlexLastRestDurationEndDate": "Date you resumed taking it",
   "yazFlexSelectDate": "Select a date",
   "yazFlexBeginPillNumberPageTitle": "What day after the break\ndid you start the pack?",
-  "yazFlexNextInputIsRestDuration": "Next, enter your previous break",
-  "yazFlexHasNotResumedYet": "I haven’t resumed taking it yet"
+  "yazFlexNextInputIsRestDuration": "Next, enter your previous break"
 }

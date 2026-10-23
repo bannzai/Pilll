@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "Gebruik je Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Als je “Ja” kiest,\nstellen we het zo in dat je kunt zien hoeveel dagen het sinds het einde van de stopweek is.",
   "yazFlexLastRestDurationTitle": "Vertel ons alsjeblieft\nover je vorige pauze",
-  "yazFlexHasNotRestedYet": "Ik heb nog geen pillenpauze gehad",
   "yazFlexLastRestDurationBeginDate": "Dag waarop de stopweek begon",
   "yazFlexLastRestDurationEndDate": "Dag waarop je weer begon met innemen",
   "yazFlexSelectDate": "Selecteer een datum",
   "yazFlexBeginPillNumberPageTitle": "Op welke dag na de stopweek\nben je met de strip begonnen?",
-  "yazFlexNextInputIsRestDuration": "Voer daarna je vorige stopweek in",
-  "yazFlexHasNotResumedYet": "Ik ben nog niet opnieuw begonnen met innemen"
+  "yazFlexNextInputIsRestDuration": "Voer daarna je vorige stopweek in"
 }

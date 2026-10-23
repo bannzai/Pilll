@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "Folosiți Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Dacă alegeți „Da”,\nvom seta afișarea numărului de zile de la încheierea pauzei.",
   "yazFlexLastRestDurationTitle": "Spune-ne, te rugăm,\ndespre ultima ta pauză",
-  "yazFlexHasNotRestedYet": "Încă nu am făcut pauză de la pilule",
   "yazFlexLastRestDurationBeginDate": "Ziua în care a început pauza",
   "yazFlexLastRestDurationEndDate": "Ziua în care ai reluat administrarea",
   "yazFlexSelectDate": "Selectați o dată",
   "yazFlexBeginPillNumberPageTitle": "În ziua în care ați început blisterul,\na câta zi după pauză era?",
-  "yazFlexNextInputIsRestDuration": "În continuare, introduceți pauza anterioară",
-  "yazFlexHasNotResumedYet": "Încă nu am reluat administrarea"
+  "yazFlexNextInputIsRestDuration": "În continuare, introduceți pauza anterioară"
 }

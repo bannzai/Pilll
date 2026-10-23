@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "Ertu að nota Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ef þú velur „Já“,\nstillum við þetta þannig að hægt sé að sýna hversu margir dagar eru liðnir frá því að hléinu lauk.",
   "yazFlexLastRestDurationTitle": "Vinsamlegast segðu okkur\nfrá síðasta hléinu þínu",
-  "yazFlexHasNotRestedYet": "Ég hef ekki enn tekið hlé frá pillunni",
   "yazFlexLastRestDurationBeginDate": "Dagurinn sem hléið hófst",
   "yazFlexLastRestDurationEndDate": "Dagurinn sem þú hófst aftur að taka lyfið",
   "yazFlexSelectDate": "Veldu dagsetningu",
   "yazFlexBeginPillNumberPageTitle": "Hvaða dag eftir hléið\nbyrjaðir þú á spjaldinu?",
-  "yazFlexNextInputIsRestDuration": "Næst skaltu slá inn fyrra hléið",
-  "yazFlexHasNotResumedYet": "Ég hef ekki byrjað að taka það aftur enn"
+  "yazFlexNextInputIsRestDuration": "Næst skaltu slá inn fyrra hléið"
 }

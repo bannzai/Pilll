@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "Yaz Flex kullanıyor musunuz?",
   "initialSettingAskYazFlexDescription": "“Evet”i seçerseniz,\nara dönem bittikten sonra kaçıncı gün olduğunu gösterecek şekilde ayarlayacağız.",
   "yazFlexLastRestDurationTitle": "Lütfen\nbir önceki ara döneminiz hakkında bize bilgi verin",
-  "yazFlexHasNotRestedYet": "Henüz ilaç arası vermedim",
   "yazFlexLastRestDurationBeginDate": "Aranın başladığı gün",
   "yazFlexLastRestDurationEndDate": "Tekrar almaya başladığınız gün",
   "yazFlexSelectDate": "Tarih seçin",
   "yazFlexBeginPillNumberPageTitle": "Pakete başladığınız gün,\naradan sonraki kaçıncı gündü?",
-  "yazFlexNextInputIsRestDuration": "Sonraki adımda önceki ara dönemini girin",
-  "yazFlexHasNotResumedYet": "Henüz tekrar kullanmaya başlamadım"
+  "yazFlexNextInputIsRestDuration": "Sonraki adımda önceki ara dönemini girin"
 }

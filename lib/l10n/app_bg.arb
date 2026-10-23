@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "Приемате ли Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ако изберете „Да“,\nще настроим показването на това кой ден е след края на паузата.",
   "yazFlexLastRestDurationTitle": "Моля,\nкажете ни за предишния период на пауза",
-  "yazFlexHasNotRestedYet": "Все още не съм правила пауза в приема",
   "yazFlexLastRestDurationBeginDate": "Денят, в който е започнала паузата",
   "yazFlexLastRestDurationEndDate": "Дата на подновяване на приема",
   "yazFlexSelectDate": "Изберете дата",
   "yazFlexBeginPillNumberPageTitle": "В кой ден след почивката\nзапочнахте блистера?",
-  "yazFlexNextInputIsRestDuration": "След това въведете предишния период на пауза",
-  "yazFlexHasNotResumedYet": "Все още не съм подновила приема"
+  "yazFlexNextInputIsRestDuration": "След това въведете предишния период на пауза"
 }

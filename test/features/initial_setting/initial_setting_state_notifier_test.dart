@@ -1060,7 +1060,7 @@ void main() {
       expect(pillSheetGroup.sequentialTodayPillNumber, 1);
     });
 
-    group("まだ服用を再開していない (休薬中)", () {
+    group("再開日が未入力 (休薬中でまだ服用を再開していない)", () {
       test("今日が1枚目の17番で4日前から休薬中の場合は、1枚目に終了日の無い休薬が入り16番まで服用済みで休薬中になる", () async {
         // 今日(2022-03-02)の4日前の2022-02-26から休薬中。16番を2022-02-25に飲んだ後に休薬し、17番は再開後の最初のピル
         final pillSheetGroup = await registerYazFlex(
@@ -1070,7 +1070,6 @@ void main() {
             store.setYazFlexLastRestDurationBeginDate(
               yazFlexLastRestDurationBeginDate: DateTime.parse("2022-02-26"),
             );
-            store.setYazFlexHasNotResumedYet(yazFlexHasNotResumedYet: true);
           },
         );
 
@@ -1105,7 +1104,6 @@ void main() {
             store.setYazFlexLastRestDurationBeginDate(
               yazFlexLastRestDurationBeginDate: DateTime.parse("2022-03-02"),
             );
-            store.setYazFlexHasNotResumedYet(yazFlexHasNotResumedYet: true);
           },
         );
 
@@ -1125,8 +1123,7 @@ void main() {
         expect(pillSheetGroup.activePillSheet?.groupIndex, 1);
         expect(pillSheetGroup.lastActiveRestDuration, isNotNull);
       });
-      test("休薬が始まった日を入力しても「まだ服用を再開していない」を外して再開日を入れ直した場合は、終了日のある休薬になる",
-          () async {
+      test("再開日を消してから入れ直した場合は、終了日のある休薬になる", () async {
         final pillSheetGroup = await registerYazFlex(
           mockToday: DateTime.parse("2022-03-02"),
           input: (store) {
@@ -1134,8 +1131,10 @@ void main() {
             store.setYazFlexLastRestDurationBeginDate(
               yazFlexLastRestDurationBeginDate: DateTime.parse("2022-02-13"),
             );
-            store.setYazFlexHasNotResumedYet(yazFlexHasNotResumedYet: true);
-            store.setYazFlexHasNotResumedYet(yazFlexHasNotResumedYet: false);
+            store.setYazFlexLastRestDurationEndDate(
+              yazFlexLastRestDurationEndDate: DateTime.parse("2022-02-20"),
+            );
+            store.clearYazFlexLastRestDurationEndDate();
             store.setYazFlexLastRestDurationEndDate(
               yazFlexLastRestDurationEndDate: DateTime.parse("2022-02-17"),
             );
@@ -1152,8 +1151,9 @@ void main() {
     });
   });
 
-  group("#setYazFlexHasNotResumedYet", () {
-    test("選ぶと入力済みの服用を再開した日が消え、外しても戻らない", () {
+  group("#clearYazFlexLastRestDurationEndDate / #clearYazFlexLastRestDuration",
+      () {
+    test("再開日の×で再開した日だけが消え、開始日の×で両方消える", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-03-02"));
@@ -1187,12 +1187,12 @@ void main() {
         yazFlexLastRestDurationEndDate: DateTime.parse("2022-02-17"),
       );
 
-      store.setYazFlexHasNotResumedYet(yazFlexHasNotResumedYet: true);
+      store.clearYazFlexLastRestDurationEndDate();
       expect(
         container
             .read(initialSettingStateNotifierProvider)
-            .yazFlexHasNotResumedYet,
-        true,
+            .yazFlexLastRestDurationBeginDate,
+        DateTime.parse("2022-02-13"),
       );
       expect(
         container
@@ -1201,12 +1201,15 @@ void main() {
         isNull,
       );
 
-      store.setYazFlexHasNotResumedYet(yazFlexHasNotResumedYet: false);
+      store.setYazFlexLastRestDurationEndDate(
+        yazFlexLastRestDurationEndDate: DateTime.parse("2022-02-17"),
+      );
+      store.clearYazFlexLastRestDuration();
       expect(
         container
             .read(initialSettingStateNotifierProvider)
-            .yazFlexHasNotResumedYet,
-        false,
+            .yazFlexLastRestDurationBeginDate,
+        isNull,
       );
       expect(
         container
@@ -1215,7 +1218,7 @@ void main() {
         isNull,
       );
     });
-    test("「休薬はまだしていない」を選ぶと「まだ服用を再開していない」も外れる", () {
+    test("休薬の入力をスキップすると入力済みの日付が消える", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-03-02"));
@@ -1245,13 +1248,12 @@ void main() {
       store.setYazFlexLastRestDurationBeginDate(
         yazFlexLastRestDurationBeginDate: DateTime.parse("2022-02-13"),
       );
-      store.setYazFlexHasNotResumedYet(yazFlexHasNotResumedYet: true);
 
       store.setYazFlexHasNotRestedYet(yazFlexHasNotRestedYet: true);
       final state = container.read(initialSettingStateNotifierProvider);
       expect(state.yazFlexHasNotRestedYet, true);
-      expect(state.yazFlexHasNotResumedYet, false);
       expect(state.yazFlexLastRestDurationBeginDate, isNull);
+      expect(state.yazFlexLastRestDurationEndDate, isNull);
     });
   });
 

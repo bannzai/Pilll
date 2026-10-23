@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "Gebruik jy Yaz Flex?",
   "initialSettingAskYazFlexDescription": "As jy “Ja” kies,\nstel ons dit so op dat jy kan sien hoeveel dae dit is sedert die einde van jou pouse.",
   "yazFlexLastRestDurationTitle": "Vertel ons asseblief\nvan jou vorige pouse",
-  "yazFlexHasNotRestedYet": "Ek het nog nie 'n pilpouse gehad nie",
   "yazFlexLastRestDurationBeginDate": "Die dag waarop die pouse begin het",
   "yazFlexLastRestDurationEndDate": "Datum waarop jy weer begin het om dit te neem",
   "yazFlexSelectDate": "Kies 'n datum",
   "yazFlexBeginPillNumberPageTitle": "Op watter dag ná die pilvrye periode\nhet jy met die strook begin?",
-  "yazFlexNextInputIsRestDuration": "Volgende voer jy jou vorige pouse in",
-  "yazFlexHasNotResumedYet": "Ek het nog nie weer begin om dit te neem nie"
+  "yazFlexNextInputIsRestDuration": "Volgende voer jy jou vorige pouse in"
 }

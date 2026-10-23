@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "के तपाईं Yaz Flex प्रयोग गर्दै हुनुहुन्छ?",
   "initialSettingAskYazFlexDescription": "“हो” छान्नुभयो भने\nविश्राम अवधि सकिएपछि कति दिन भयो भन्ने देखिने गरी सेट गरिनेछ",
   "yazFlexLastRestDurationTitle": "कृपया\nअघिल्लो विश्राम अवधिबारे हामीलाई बताउनुहोस्",
-  "yazFlexHasNotRestedYet": "मैले अहिलेसम्म चक्की नखाने विराम लिएको छैन",
   "yazFlexLastRestDurationBeginDate": "ब्रेक सुरु भएको दिन",
   "yazFlexLastRestDurationEndDate": "फेरि खान सुरु गरेको दिन",
   "yazFlexSelectDate": "मिति चयन गर्नुहोस्",
   "yazFlexBeginPillNumberPageTitle": "तपाईंले शीट सुरु गरेको दिन\nब्रेक सकिएपछि कतिौँ दिन थियो?",
-  "yazFlexNextInputIsRestDuration": "अर्को चरणमा अघिल्लो विश्राम अवधि प्रविष्ट गर्नुहोस्",
-  "yazFlexHasNotResumedYet": "अहिलेसम्म फेरि खान सुरु गरेकी छैन"
+  "yazFlexNextInputIsRestDuration": "अर्को चरणमा अघिल्लो विश्राम अवधि प्रविष्ट गर्नुहोस्"
 }

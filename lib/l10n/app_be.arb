@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "Вы прымаеце Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Калі вы выбераце «Так»,\nмы наладзім паказ колькасці дзён пасля заканчэння перапынку.",
   "yazFlexLastRestDurationTitle": "Калі ласка,\nраскажыце пра папярэдні перыяд перапынку",
-  "yazFlexHasNotRestedYet": "Яшчэ не рабіла перапынак у прыёме таблетак",
   "yazFlexLastRestDurationBeginDate": "Дзень пачатку перапынку",
   "yazFlexLastRestDurationEndDate": "Дата аднаўлення прыёму",
   "yazFlexSelectDate": "Выберыце дату",
   "yazFlexBeginPillNumberPageTitle": "У які дзень пасля перапынку\nвы пачалі блістар?",
-  "yazFlexNextInputIsRestDuration": "Далей увядзіце папярэдні перыяд перапынку",
-  "yazFlexHasNotResumedYet": "Яшчэ не аднавіла прыём"
+  "yazFlexNextInputIsRestDuration": "Далей увядзіце папярэдні перыяд перапынку"
 }

@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "तुम्ही Yaz Flex वापरत आहात का?",
   "initialSettingAskYazFlexDescription": "“होय” निवडल्यास\nविश्रांतीचा कालावधी संपल्यानंतर कितवा दिवस आहे हे दाखवण्यासाठी सेट केले जाईल",
   "yazFlexLastRestDurationTitle": "कृपया\nमागील विश्रांती कालावधीबद्दल आम्हाला सांगा",
-  "yazFlexHasNotRestedYet": "मी अजून गोळ्यांमधला ब्रेक घेतलेला नाही",
   "yazFlexLastRestDurationBeginDate": "विश्रांती सुरू झालेला दिवस",
   "yazFlexLastRestDurationEndDate": "पुन्हा घेणे सुरू केलेला दिवस",
   "yazFlexSelectDate": "तारीख निवडा",
   "yazFlexBeginPillNumberPageTitle": "तुम्ही शीट सुरू केली त्या दिवशी\nब्रेक संपल्यानंतर कितवा दिवस होता?",
-  "yazFlexNextInputIsRestDuration": "पुढे, मागील विराम प्रविष्ट करा",
-  "yazFlexHasNotResumedYet": "अजून पुन्हा घेणे सुरू केलेले नाही"
+  "yazFlexNextInputIsRestDuration": "पुढे, मागील विराम प्रविष्ट करा"
 }

@@ -232,7 +232,7 @@ void main() {
         (pageIndex: 1, pillNumberInPillSheet: 1),
       );
     });
-    test("まだ服用を再開していない場合はnull", () {
+    test("再開日が未入力 (まだ服用を再開していない) の場合はnull", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-03-02"));
@@ -240,7 +240,6 @@ void main() {
       final state = InitialSettingState(
         reminderTimes: [],
         isYazFlex: true,
-        yazFlexHasNotResumedYet: true,
         pillSheetTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
@@ -420,7 +419,7 @@ void main() {
       );
       expect(state.buildYazFlexRestDurationInPillSheetGroup(), isNull);
     });
-    test("まだ服用を再開していない場合は、終了日の無いRestDurationを返す", () {
+    test("再開日が未入力 (まだ服用を再開していない) の場合は、終了日の無いRestDurationを返す", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-03-02"));
@@ -431,7 +430,6 @@ void main() {
       final state = InitialSettingState(
         reminderTimes: [],
         isYazFlex: true,
-        yazFlexHasNotResumedYet: true,
         pillSheetTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
@@ -451,7 +449,7 @@ void main() {
         ),
       );
     });
-    test("まだ服用を再開していないが休薬が始まった日が未入力の場合はnull", () {
+    test("休薬が始まった日が未入力の場合はnull", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-03-02"));
@@ -459,7 +457,6 @@ void main() {
       const state = InitialSettingState(
         reminderTimes: [],
         isYazFlex: true,
-        yazFlexHasNotResumedYet: true,
         pillSheetTypes: [
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,

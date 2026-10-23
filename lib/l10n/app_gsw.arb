@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "Nimmsch Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Wänn du „Ja“ uuswählsch,\nstellemer s so ii, dass aazeigt wird, dr wievielt Tag sit em Ändi vo dr Pause esch.",
   "yazFlexLastRestDurationTitle": "Bitte verzell is\nvo diner letschte Pause",
-  "yazFlexHasNotRestedYet": "Ich ha no kei Pillepause gmacht",
   "yazFlexLastRestDurationBeginDate": "Dr Tag, a wott d Pause aagfange het",
   "yazFlexLastRestDurationEndDate": "Tag, a dem du d Iinahm wieder ufgnuu hesch",
   "yazFlexSelectDate": "Es Datum uswehle",
   "yazFlexBeginPillNumberPageTitle": "A wellem Tag nach dr Pause\nhesch mit em Blister agfange?",
-  "yazFlexNextInputIsRestDuration": "Als Nächsts gibsch dini letschti Pause ii",
-  "yazFlexHasNotResumedYet": "Ich ha d Iinahm no nid wieder aaagfange"
+  "yazFlexNextInputIsRestDuration": "Als Nächsts gibsch dini letschti Pause ii"
 }

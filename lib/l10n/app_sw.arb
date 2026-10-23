@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "Je, unatumia Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ukichagua “Ndiyo”,\ntutaiweka ili ionyeshe ni siku ya ngapi tangu mapumziko yalipoisha.",
   "yazFlexLastRestDurationTitle": "Tafadhali\ntuambie kuhusu mapumziko yako ya mwisho",
-  "yazFlexHasNotRestedYet": "Bado sijaanza mapumziko ya tembe",
   "yazFlexLastRestDurationBeginDate": "Siku ambayo mapumziko yalianza",
   "yazFlexLastRestDurationEndDate": "Siku uliyoanza tena kutumia",
   "yazFlexSelectDate": "Chagua tarehe",
   "yazFlexBeginPillNumberPageTitle": "Siku uliyoanza kifurushi,\nilikuwa siku ya ngapi baada ya mapumziko?",
-  "yazFlexNextInputIsRestDuration": "Kisha, weka kipindi chako cha mapumziko cha awali",
-  "yazFlexHasNotResumedYet": "Bado sijaanza kumeza tena"
+  "yazFlexNextInputIsRestDuration": "Kisha, weka kipindi chako cha mapumziko cha awali"
 }

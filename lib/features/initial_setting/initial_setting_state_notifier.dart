@@ -106,7 +106,6 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
       yazFlexHasNotRestedYet: false,
       yazFlexLastRestDurationBeginDate: null,
       yazFlexLastRestDurationEndDate: null,
-      yazFlexHasNotResumedYet: false,
       yazFlexBeginPillNumber: 1,
     );
   }
@@ -125,19 +124,30 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
       yazFlexHasNotRestedYet: false,
       yazFlexLastRestDurationBeginDate: null,
       yazFlexLastRestDurationEndDate: null,
-      yazFlexHasNotResumedYet: false,
       yazFlexBeginPillNumber: 1,
     );
   }
 
-  /// ヤーズフレックス向けの導線で「休薬はまだしていない」を選ぶ・外す。選んだ時は入力済みの休薬の日付と「まだ服用を再開していない」を消す
+  /// ヤーズフレックス向けの導線で前回の休薬の入力をスキップする (true)・入力して進む (false)。スキップした時は入力済みの休薬の日付を消す
   void setYazFlexHasNotRestedYet({required bool yazFlexHasNotRestedYet}) {
     state = state.copyWith(
       yazFlexHasNotRestedYet: yazFlexHasNotRestedYet,
       yazFlexLastRestDurationBeginDate: yazFlexHasNotRestedYet ? null : state.yazFlexLastRestDurationBeginDate,
       yazFlexLastRestDurationEndDate: yazFlexHasNotRestedYet ? null : state.yazFlexLastRestDurationEndDate,
-      yazFlexHasNotResumedYet: yazFlexHasNotRestedYet ? false : state.yazFlexHasNotResumedYet,
     );
+  }
+
+  /// ヤーズフレックス向けの導線で入力した前回の休薬の開始日と服用を再開した日を消す (開始日の × を押した時)
+  void clearYazFlexLastRestDuration() {
+    state = state.copyWith(
+      yazFlexLastRestDurationBeginDate: null,
+      yazFlexLastRestDurationEndDate: null,
+    );
+  }
+
+  /// ヤーズフレックス向けの導線で入力した服用を再開した日だけを消し、休薬中 (まだ再開していない) の入力にする
+  void clearYazFlexLastRestDurationEndDate() {
+    state = state.copyWith(yazFlexLastRestDurationEndDate: null);
   }
 
   /// ヤーズフレックス向けの導線で前回の休薬が始まった日を入力する
@@ -156,14 +166,6 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   /// ヤーズフレックス向けの導線で前回の休薬が終わった日 (服用を再開した日) を入力する
   void setYazFlexLastRestDurationEndDate({required DateTime yazFlexLastRestDurationEndDate}) {
     state = state.copyWith(yazFlexLastRestDurationEndDate: yazFlexLastRestDurationEndDate);
-  }
-
-  /// ヤーズフレックス向けの導線で「まだ服用を再開していない」を選ぶ・外す。選んだ時は入力済みの服用を再開した日を消す
-  void setYazFlexHasNotResumedYet({required bool yazFlexHasNotResumedYet}) {
-    state = state.copyWith(
-      yazFlexHasNotResumedYet: yazFlexHasNotResumedYet,
-      yazFlexLastRestDurationEndDate: yazFlexHasNotResumedYet ? null : state.yazFlexLastRestDurationEndDate,
-    );
   }
 
   /// ヤーズフレックス向けの導線で開始番号 (1枚目の1番は休薬明けから何日目か) を入力する

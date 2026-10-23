@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "Yaz Flex erabiltzen duzu?",
   "initialSettingAskYazFlexDescription": "“Bai” aukeratzen baduzu,\netenaldiaren amaieratik zenbat egun igaro diren erakusteko ezarriko dugu.",
   "yazFlexLastRestDurationTitle": "Mesedez,\nesan iezaguzu aurreko atsedenaldiari buruz",
-  "yazFlexHasNotRestedYet": "Oraindik ez dut pilulen etenaldirik egin",
   "yazFlexLastRestDurationBeginDate": "Atsedena hasi zen eguna",
   "yazFlexLastRestDurationEndDate": "Hartzeari berriro ekin zenion eguna",
   "yazFlexSelectDate": "Hautatu data",
   "yazFlexBeginPillNumberPageTitle": "Orriari ekin zenion eguna\natsedenaldiaren ondorengo zein egun izan zen?",
-  "yazFlexNextInputIsRestDuration": "Ondoren, aurreko atsedenaldia sartu",
-  "yazFlexHasNotResumedYet": "Oraindik ez dut berriro hartzen hasi"
+  "yazFlexNextInputIsRestDuration": "Ondoren, aurreko atsedenaldia sartu"
 }

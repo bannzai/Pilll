@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "Estás a usar Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Se escolles «Si»,\nconfigurarémolo para que se mostre cantos días pasaron desde que rematou a pausa.",
   "yazFlexLastRestDurationTitle": "Cóntanos, por favor,\nsobre o teu último descanso",
-  "yazFlexHasNotRestedYet": "Aínda non fixen ningunha pausa da pílula",
   "yazFlexLastRestDurationBeginDate": "Día no que comezou a pausa",
   "yazFlexLastRestDurationEndDate": "Día no que retomaches a toma",
   "yazFlexSelectDate": "Selecciona unha data",
   "yazFlexBeginPillNumberPageTitle": "O día que comezaches o blíster,\nque número de día era despois do descanso?",
-  "yazFlexNextInputIsRestDuration": "A continuación, introduce a pausa anterior",
-  "yazFlexHasNotResumedYet": "Aínda non retomei a toma"
+  "yazFlexNextInputIsRestDuration": "A continuación, introduce a pausa anterior"
 }

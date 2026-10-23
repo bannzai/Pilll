@@ -160,19 +160,16 @@ mixin _$InitialSettingState {
   /// true の時はヤーズフレックス向けの導線 (28錠タイプ固定・前回の休薬・開始番号の入力) で登録する
   bool get isYazFlex => throw _privateConstructorUsedError;
 
-  /// ヤーズフレックス向けの導線で「休薬はまだしていない」を選んだか
+  /// ヤーズフレックス向けの導線で前回の休薬の入力をスキップしたか (休薬はまだしていない、または後でホームから入力する)
+  /// true の時は入力済みの日付があっても休薬を登録しない
   bool get yazFlexHasNotRestedYet => throw _privateConstructorUsedError;
 
   /// ヤーズフレックス向けの導線で入力した、前回の休薬が始まった日
   DateTime? get yazFlexLastRestDurationBeginDate => throw _privateConstructorUsedError;
 
   /// ヤーズフレックス向けの導線で入力した、前回の休薬が終わった日 (服用を再開した日)
-  /// 休薬中でまだ再開していない ([yazFlexHasNotResumedYet]) 時は null のまま登録する
+  /// 開始日があって終了日が null の時は、休薬中でまだ再開していない (終了日の無い服用お休み中) として登録する
   DateTime? get yazFlexLastRestDurationEndDate => throw _privateConstructorUsedError;
-
-  /// ヤーズフレックス向けの導線で「まだ服用を再開していない」(前回の休薬が続いている) を選んだか
-  /// true の時は終了日の無い休薬 (服用お休み中) として登録する
-  bool get yazFlexHasNotResumedYet => throw _privateConstructorUsedError;
 
   /// ヤーズフレックス向けの導線で入力した開始番号 (1枚目の1番は休薬明けから何日目か)
   /// 既定の 1 は、休薬明けの初日にシートの1番から飲み始めた (休薬明けとシートの切り替わりが一致している) 想定
@@ -200,7 +197,6 @@ abstract class $InitialSettingStateCopyWith<$Res> {
       bool yazFlexHasNotRestedYet,
       DateTime? yazFlexLastRestDurationBeginDate,
       DateTime? yazFlexLastRestDurationEndDate,
-      bool yazFlexHasNotResumedYet,
       int yazFlexBeginPillNumber});
 
   $InitialSettingTodayPillNumberCopyWith<$Res>? get todayPillNumber;
@@ -230,7 +226,6 @@ class _$InitialSettingStateCopyWithImpl<$Res, $Val extends InitialSettingState> 
     Object? yazFlexHasNotRestedYet = null,
     Object? yazFlexLastRestDurationBeginDate = freezed,
     Object? yazFlexLastRestDurationEndDate = freezed,
-    Object? yazFlexHasNotResumedYet = null,
     Object? yazFlexBeginPillNumber = null,
   }) {
     return _then(_value.copyWith(
@@ -282,10 +277,6 @@ class _$InitialSettingStateCopyWithImpl<$Res, $Val extends InitialSettingState> 
           ? _value.yazFlexLastRestDurationEndDate
           : yazFlexLastRestDurationEndDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      yazFlexHasNotResumedYet: null == yazFlexHasNotResumedYet
-          ? _value.yazFlexHasNotResumedYet
-          : yazFlexHasNotResumedYet // ignore: cast_nullable_to_non_nullable
-              as bool,
       yazFlexBeginPillNumber: null == yazFlexBeginPillNumber
           ? _value.yazFlexBeginPillNumber
           : yazFlexBeginPillNumber // ignore: cast_nullable_to_non_nullable
@@ -325,7 +316,6 @@ abstract class _$$InitialSettingStateImplCopyWith<$Res> implements $InitialSetti
       bool yazFlexHasNotRestedYet,
       DateTime? yazFlexLastRestDurationBeginDate,
       DateTime? yazFlexLastRestDurationEndDate,
-      bool yazFlexHasNotResumedYet,
       int yazFlexBeginPillNumber});
 
   @override
@@ -352,7 +342,6 @@ class __$$InitialSettingStateImplCopyWithImpl<$Res> extends _$InitialSettingStat
     Object? yazFlexHasNotRestedYet = null,
     Object? yazFlexLastRestDurationBeginDate = freezed,
     Object? yazFlexLastRestDurationEndDate = freezed,
-    Object? yazFlexHasNotResumedYet = null,
     Object? yazFlexBeginPillNumber = null,
   }) {
     return _then(_$InitialSettingStateImpl(
@@ -404,10 +393,6 @@ class __$$InitialSettingStateImplCopyWithImpl<$Res> extends _$InitialSettingStat
           ? _value.yazFlexLastRestDurationEndDate
           : yazFlexLastRestDurationEndDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      yazFlexHasNotResumedYet: null == yazFlexHasNotResumedYet
-          ? _value.yazFlexHasNotResumedYet
-          : yazFlexHasNotResumedYet // ignore: cast_nullable_to_non_nullable
-              as bool,
       yazFlexBeginPillNumber: null == yazFlexBeginPillNumber
           ? _value.yazFlexBeginPillNumber
           : yazFlexBeginPillNumber // ignore: cast_nullable_to_non_nullable
@@ -432,7 +417,6 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
       this.yazFlexHasNotRestedYet = false,
       this.yazFlexLastRestDurationBeginDate,
       this.yazFlexLastRestDurationEndDate,
-      this.yazFlexHasNotResumedYet = false,
       this.yazFlexBeginPillNumber = 1})
       : _pillSheetTypes = pillSheetTypes,
         _reminderTimes = reminderTimes,
@@ -478,7 +462,8 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
   @JsonKey()
   final bool isYazFlex;
 
-  /// ヤーズフレックス向けの導線で「休薬はまだしていない」を選んだか
+  /// ヤーズフレックス向けの導線で前回の休薬の入力をスキップしたか (休薬はまだしていない、または後でホームから入力する)
+  /// true の時は入力済みの日付があっても休薬を登録しない
   @override
   @JsonKey()
   final bool yazFlexHasNotRestedYet;
@@ -488,15 +473,9 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
   final DateTime? yazFlexLastRestDurationBeginDate;
 
   /// ヤーズフレックス向けの導線で入力した、前回の休薬が終わった日 (服用を再開した日)
-  /// 休薬中でまだ再開していない ([yazFlexHasNotResumedYet]) 時は null のまま登録する
+  /// 開始日があって終了日が null の時は、休薬中でまだ再開していない (終了日の無い服用お休み中) として登録する
   @override
   final DateTime? yazFlexLastRestDurationEndDate;
-
-  /// ヤーズフレックス向けの導線で「まだ服用を再開していない」(前回の休薬が続いている) を選んだか
-  /// true の時は終了日の無い休薬 (服用お休み中) として登録する
-  @override
-  @JsonKey()
-  final bool yazFlexHasNotResumedYet;
 
   /// ヤーズフレックス向けの導線で入力した開始番号 (1枚目の1番は休薬明けから何日目か)
   /// 既定の 1 は、休薬明けの初日にシートの1番から飲み始めた (休薬明けとシートの切り替わりが一致している) 想定
@@ -506,7 +485,7 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
 
   @override
   String toString() {
-    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, settingIsExist: $settingIsExist, accountType: $accountType, pillTakenCount: $pillTakenCount, isYazFlex: $isYazFlex, yazFlexHasNotRestedYet: $yazFlexHasNotRestedYet, yazFlexLastRestDurationBeginDate: $yazFlexLastRestDurationBeginDate, yazFlexLastRestDurationEndDate: $yazFlexLastRestDurationEndDate, yazFlexHasNotResumedYet: $yazFlexHasNotResumedYet, yazFlexBeginPillNumber: $yazFlexBeginPillNumber)';
+    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, settingIsExist: $settingIsExist, accountType: $accountType, pillTakenCount: $pillTakenCount, isYazFlex: $isYazFlex, yazFlexHasNotRestedYet: $yazFlexHasNotRestedYet, yazFlexLastRestDurationBeginDate: $yazFlexLastRestDurationBeginDate, yazFlexLastRestDurationEndDate: $yazFlexLastRestDurationEndDate, yazFlexBeginPillNumber: $yazFlexBeginPillNumber)';
   }
 
   @override
@@ -528,7 +507,6 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
                 other.yazFlexLastRestDurationBeginDate == yazFlexLastRestDurationBeginDate) &&
             (identical(other.yazFlexLastRestDurationEndDate, yazFlexLastRestDurationEndDate) ||
                 other.yazFlexLastRestDurationEndDate == yazFlexLastRestDurationEndDate) &&
-            (identical(other.yazFlexHasNotResumedYet, yazFlexHasNotResumedYet) || other.yazFlexHasNotResumedYet == yazFlexHasNotResumedYet) &&
             (identical(other.yazFlexBeginPillNumber, yazFlexBeginPillNumber) || other.yazFlexBeginPillNumber == yazFlexBeginPillNumber));
   }
 
@@ -547,7 +525,6 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
       yazFlexHasNotRestedYet,
       yazFlexLastRestDurationBeginDate,
       yazFlexLastRestDurationEndDate,
-      yazFlexHasNotResumedYet,
       yazFlexBeginPillNumber);
 
   @JsonKey(ignore: true)
@@ -571,7 +548,6 @@ abstract class _InitialSettingState extends InitialSettingState {
       final bool yazFlexHasNotRestedYet,
       final DateTime? yazFlexLastRestDurationBeginDate,
       final DateTime? yazFlexLastRestDurationEndDate,
-      final bool yazFlexHasNotResumedYet,
       final int yazFlexBeginPillNumber}) = _$InitialSettingStateImpl;
   const _InitialSettingState._() : super._();
 
@@ -598,7 +574,8 @@ abstract class _InitialSettingState extends InitialSettingState {
   bool get isYazFlex;
   @override
 
-  /// ヤーズフレックス向けの導線で「休薬はまだしていない」を選んだか
+  /// ヤーズフレックス向けの導線で前回の休薬の入力をスキップしたか (休薬はまだしていない、または後でホームから入力する)
+  /// true の時は入力済みの日付があっても休薬を登録しない
   bool get yazFlexHasNotRestedYet;
   @override
 
@@ -607,13 +584,8 @@ abstract class _InitialSettingState extends InitialSettingState {
   @override
 
   /// ヤーズフレックス向けの導線で入力した、前回の休薬が終わった日 (服用を再開した日)
-  /// 休薬中でまだ再開していない ([yazFlexHasNotResumedYet]) 時は null のまま登録する
+  /// 開始日があって終了日が null の時は、休薬中でまだ再開していない (終了日の無い服用お休み中) として登録する
   DateTime? get yazFlexLastRestDurationEndDate;
-  @override
-
-  /// ヤーズフレックス向けの導線で「まだ服用を再開していない」(前回の休薬が続いている) を選んだか
-  /// true の時は終了日の無い休薬 (服用お休み中) として登録する
-  bool get yazFlexHasNotResumedYet;
   @override
 
   /// ヤーズフレックス向けの導線で入力した開始番号 (1枚目の1番は休薬明けから何日目か)

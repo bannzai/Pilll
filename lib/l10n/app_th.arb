@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "คุณใช้ Yaz Flex อยู่ใช่ไหม",
   "initialSettingAskYazFlexDescription": "หากคุณเลือก “ใช่”\nเราจะตั้งค่าให้สามารถแสดงได้ว่าเป็นวันที่เท่าไรหลังจากช่วงหยุดยา",
   "yazFlexLastRestDurationTitle": "กรุณา\nบอกเราเกี่ยวกับช่วงหยุดยาครั้งก่อน",
-  "yazFlexHasNotRestedYet": "ยังไม่ได้หยุดยาชั่วคราว",
   "yazFlexLastRestDurationBeginDate": "วันที่เริ่มช่วงหยุดยา",
   "yazFlexLastRestDurationEndDate": "วันที่กลับมาเริ่มรับประทานอีกครั้ง",
   "yazFlexSelectDate": "เลือกวันที่",
   "yazFlexBeginPillNumberPageTitle": "วันที่คุณเริ่มแผงยา\nเป็นวันที่เท่าไรหลังจากช่วงหยุดยา?",
-  "yazFlexNextInputIsRestDuration": "ถัดไป กรอกช่วงเว้นยาครั้งก่อน",
-  "yazFlexHasNotResumedYet": "ยังไม่ได้กลับมาเริ่มรับประทานอีกครั้ง"
+  "yazFlexNextInputIsRestDuration": "ถัดไป กรอกช่วงเว้นยาครั้งก่อน"
 }

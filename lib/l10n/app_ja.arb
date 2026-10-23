@@ -2800,9 +2800,25 @@
   "@yazFlexLastRestDurationTitle": {
     "description": "ヤーズフレックス向けの初期設定で、前回の休薬（ピルを飲まない期間）がいつ始まりいつ終わったかを入力してもらうページの見出しです。"
   },
-  "yazFlexHasNotRestedYet": "休薬はまだしていない",
-  "@yazFlexHasNotRestedYet": {
-    "description": "ヤーズフレックス向けの初期設定で、ヤーズフレックスを飲み始めてから一度も休薬（ピルを飲まない期間）をしていない人が選ぶチェックボックスのラベルです。選ぶと休薬の日付の入力欄が消えます。"
+  "yazFlexSkipRestDuration": "休薬の入力はスキップ",
+  "@yazFlexSkipRestDuration": {
+    "description": "ヤーズフレックス向けの初期設定で、前回の休薬（ピルを飲まない期間）の日付を入力せずに次へ進むための控えめなテキストボタンです。押すと確認のダイアログが開きます。"
+  },
+  "yazFlexSkipRestDurationDialogTitle": "休薬の入力をスキップします",
+  "@yazFlexSkipRestDurationDialogTitle": {
+    "description": "休薬の入力をスキップするボタンを押した時に出る確認ダイアログの見出しです。"
+  },
+  "yazFlexSkipRestDurationDialogMessage": "服用お休みの期間は、あとからホームの「服用お休み」で入力できます",
+  "@yazFlexSkipRestDurationDialogMessage": {
+    "description": "休薬の入力をスキップする確認ダイアログの本文です。「服用お休み」はアプリ内で休薬期間を指す既存の機能名で、ホーム画面のボタンの名前と同じ訳にしてください。"
+  },
+  "yazFlexSkipRestDurationDialogSkip": "スキップする",
+  "@yazFlexSkipRestDurationDialogSkip": {
+    "description": "休薬の入力をスキップする確認ダイアログで、スキップを確定するボタンのラベルです。もう一方のボタンは「キャンセル」です。"
+  },
+  "yazFlexEmptyEndDateMeansResting": "服用を再開していない場合は再開した日を空のままにしてください",
+  "@yazFlexEmptyEndDateMeansResting": {
+    "description": "前回の休薬の「休薬が始まった日」「服用を再開した日」の入力欄の下に出す注釈です。休薬が続いていてまだピルを飲み始めていない人は、再開した日を入力しないでよいことを伝えます。"
   },
   "yazFlexLastRestDurationBeginDate": "休薬が始まった日",
   "@yazFlexLastRestDurationBeginDate": {
@@ -2823,9 +2839,5 @@
   "yazFlexNextInputIsRestDuration": "次は前回の休薬を入力します",
   "@yazFlexNextInputIsRestDuration": {
     "description": "ヤーズフレックス向けの初期設定で、開始番号を入力するページの「次へ」ボタンの上に出す小さな注釈です。次のページで前回の休薬（ピルを飲まない期間）を入力することを予告します。"
-  },
-  "yazFlexHasNotResumedYet": "まだ服用を再開していない",
-  "@yazFlexHasNotResumedYet": {
-    "description": "ヤーズフレックス向けの初期設定で、前回の休薬（ピルを飲まない期間）がまだ続いていて服用を再開していない人が選ぶチェックボックスのラベルです。選ぶと「服用を再開した日」の入力欄が消えます。"
   }
 }

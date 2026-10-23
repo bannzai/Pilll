@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "Užívate Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ak vyberiete „Áno“,\nnastavíme zobrazovanie, ktorý deň je od konca prestávky.",
   "yazFlexLastRestDurationTitle": "Prosím,\npovedzte nám o vašej predchádzajúcej prestávke",
-  "yazFlexHasNotRestedYet": "Ešte som nemala prestávku v užívaní",
   "yazFlexLastRestDurationBeginDate": "Deň začiatku prestávky",
   "yazFlexLastRestDurationEndDate": "Deň opätovného začatia užívania",
   "yazFlexSelectDate": "Vyberte dátum",
   "yazFlexBeginPillNumberPageTitle": "Keď ste začali blister,\nktorý to bol deň po prestávke?",
-  "yazFlexNextInputIsRestDuration": "Ďalej zadajte predchádzajúcu prestávku",
-  "yazFlexHasNotResumedYet": "Ešte som znovu nezačala užívať"
+  "yazFlexNextInputIsRestDuration": "Ďalej zadajte predchádzajúcu prestávku"
 }

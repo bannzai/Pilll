@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "Та Yaz Flex хэрэглэж байна уу?",
   "initialSettingAskYazFlexDescription": "“Тийм”-ийг сонговол\nзавсарлага дууссанаас хойш хэд дэх өдөр болохыг харуулахаар тохируулна",
   "yazFlexLastRestDurationTitle": "Өмнөх завсарлагынхаа талаар\nбидэнд хэлнэ үү",
-  "yazFlexHasNotRestedYet": "Би эмийн завсарлага хараахан хийгээгүй байна",
   "yazFlexLastRestDurationBeginDate": "Завсарлага эхэлсэн өдөр",
   "yazFlexLastRestDurationEndDate": "Дахин ууж эхэлсэн өдөр",
   "yazFlexSelectDate": "Огноо сонгоно уу",
   "yazFlexBeginPillNumberPageTitle": "Хуудсыг эхлүүлсэн өдөр\nзавсарлагааны дараах хэд дэх өдөр байсан бэ?",
-  "yazFlexNextInputIsRestDuration": "Дараа нь өмнөх завсарлагаа оруулна уу",
-  "yazFlexHasNotResumedYet": "Одоогоор дахин ууж эхлээгүй байна"
+  "yazFlexNextInputIsRestDuration": "Дараа нь өмнөх завсарлагаа оруулна уу"
 }

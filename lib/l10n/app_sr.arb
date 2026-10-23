@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "Da li koristite Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ako izaberete „Da“,\npodesićemo prikaz koliko je dana prošlo od završetka pauze.",
   "yazFlexLastRestDurationTitle": "Молимо,\nреците нам о претходној паузи",
-  "yazFlexHasNotRestedYet": "Још нисам правила паузу са пилулама",
   "yazFlexLastRestDurationBeginDate": "Дан када је почела пауза",
   "yazFlexLastRestDurationEndDate": "Дан када сте поново почели са узимањем",
   "yazFlexSelectDate": "Изаберите датум",
   "yazFlexBeginPillNumberPageTitle": "Када сте почели блистер,\nкоји је то био дан после паузе?",
-  "yazFlexNextInputIsRestDuration": "Zatim unesite prethodnu pauzu",
-  "yazFlexHasNotResumedYet": "Још нисам поново почела да узимам"
+  "yazFlexNextInputIsRestDuration": "Zatim unesite prethodnu pauzu"
 }

@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "Bruger du Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Hvis du vælger “Ja”,\nindstiller vi det, så antal dage siden pausen sluttede kan vises.",
   "yazFlexLastRestDurationTitle": "Fortæl os venligst\nom din seneste pause",
-  "yazFlexHasNotRestedYet": "Jeg har endnu ikke holdt pause fra pillerne",
   "yazFlexLastRestDurationBeginDate": "Dagen, hvor pausen startede",
   "yazFlexLastRestDurationEndDate": "Dato for genoptagelse",
   "yazFlexSelectDate": "Vælg en dato",
   "yazFlexBeginPillNumberPageTitle": "Hvilken dag efter pausen\nstartede du arket?",
-  "yazFlexNextInputIsRestDuration": "Derefter skal du indtaste din seneste pause",
-  "yazFlexHasNotResumedYet": "Jeg er endnu ikke begyndt at tage den igen"
+  "yazFlexNextInputIsRestDuration": "Derefter skal du indtaste din seneste pause"
 }

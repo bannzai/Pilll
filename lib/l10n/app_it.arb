@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "Stai usando Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Se scegli “Sì”,\nlo imposteremo in modo da mostrare quanti giorni sono passati dalla fine della pausa.",
   "yazFlexLastRestDurationTitle": "Per favore,\nparlaci della tua ultima pausa",
-  "yazFlexHasNotRestedYet": "Non ho ancora fatto una pausa dalla pillola",
   "yazFlexLastRestDurationBeginDate": "Giorno di inizio della pausa",
   "yazFlexLastRestDurationEndDate": "Data di ripresa dell’assunzione",
   "yazFlexSelectDate": "Seleziona una data",
   "yazFlexBeginPillNumberPageTitle": "Il giorno in cui hai iniziato il blister,\nquanti giorni erano passati dalla fine della pausa?",
-  "yazFlexNextInputIsRestDuration": "Successivamente, inserisci la pausa precedente",
-  "yazFlexHasNotResumedYet": "Non ho ancora ripreso l’assunzione"
+  "yazFlexNextInputIsRestDuration": "Successivamente, inserisci la pausa precedente"
 }

@@ -571,11 +571,9 @@
   "initialSettingAskYazFlex": "Ali uporabljate Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Če izberete »Da«, \nbomo nastavili prikaz, koliko dni je minilo od konca premora.",
   "yazFlexLastRestDurationTitle": "Prosimo,\npovejte nam o prejšnjem premoru",
-  "yazFlexHasNotRestedYet": "Še nisem imela premora pri jemanju tablet",
   "yazFlexLastRestDurationBeginDate": "Dan začetka premora",
   "yazFlexLastRestDurationEndDate": "Dan ponovnega začetka jemanja",
   "yazFlexSelectDate": "Izberite datum",
   "yazFlexBeginPillNumberPageTitle": "Ko ste začeli pretisni omot,\nkateri dan po premoru je bil to?",
-  "yazFlexNextInputIsRestDuration": "Nato vnesite prejšnji premor",
-  "yazFlexHasNotResumedYet": "Še nisem ponovno začela jemati"
+  "yazFlexNextInputIsRestDuration": "Nato vnesite prejšnji premor"
 }
