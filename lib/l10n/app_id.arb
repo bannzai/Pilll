@@ -570,6 +570,7 @@
   "pauseStartDateLimit": "Tanggal mulai dapat dipilih hingga {date}",
   "initialSettingAskYazFlex": "Apakah Anda menggunakan Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Jika Anda memilih “Ya”,\nkami akan mengaturnya agar dapat menampilkan hari keberapa sejak jeda berakhir.",
+  "yazFlexLastRestDurationTitle": "Ketuk pil\nyang diminum tepat sebelum jeda",
   "yazFlexSkipRestDuration": "Lewati pengisian masa jeda",
   "yazFlexSkipRestDurationDialogTitle": "Lewati pengisian masa jeda",
   "yazFlexSkipRestDurationDialogMessage": "Periode jeda minum dapat diisi nanti dari “Jeda minum” di Beranda.",

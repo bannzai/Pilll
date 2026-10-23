@@ -570,6 +570,7 @@
   "pauseStartDateLimit": "Մեկնարկի ամսաթիվը կարելի է ընտրել մինչև {date}",
   "initialSettingAskYazFlex": "Yaz Flex օգտագործո՞ւմ եք։",
   "initialSettingAskYazFlexDescription": "Եթե ընտրեք «Այո»-ն,\nկկարգավորենք, որպեսզի ցուցադրվի, թե ընդմիջման ավարտից քանիերորդ օրն է։",
+  "yazFlexLastRestDurationTitle": "Խնդրում ենք հպվել այն հաբին,\nորը ընդունել եք դադարից անմիջապես առաջ",
   "yazFlexSkipRestDuration": "Բաց թողնել ընդմիջման շրջանի մուտքագրումը",
   "yazFlexSkipRestDurationDialogTitle": "Բաց թողնել դադարի մուտքագրումը",
   "yazFlexSkipRestDurationDialogMessage": "Ընդունման դադարի ժամանակահատվածը կարող եք ավելի ուշ մուտքագրել Գլխավորի «Ընդունման դադար» բաժնից։",

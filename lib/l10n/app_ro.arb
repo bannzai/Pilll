@@ -570,6 +570,7 @@
   "pauseStartDateLimit": "Data de începere poate fi aleasă până la {date}",
   "initialSettingAskYazFlex": "Folosiți Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Dacă alegeți „Da”,\nvom seta afișarea numărului de zile de la încheierea pauzei.",
+  "yazFlexLastRestDurationTitle": "Atingeți pilula\npe care ați luat-o chiar înainte de pauză",
   "yazFlexSkipRestDuration": "Omite introducerea perioadei de pauză",
   "yazFlexSkipRestDurationDialogTitle": "Omiteți introducerea perioadei de pauză",
   "yazFlexSkipRestDurationDialogMessage": "Perioada de pauză a administrării poate fi introdusă mai târziu din „Pauză administrare” de pe ecranul principal.",

@@ -570,6 +570,7 @@
   "pauseStartDateLimit": "يمكن اختيار تاريخ البدء حتى {date}",
   "initialSettingAskYazFlex": "هل تستخدمين ياز فليكس؟",
   "initialSettingAskYazFlexDescription": "إذا اخترتِ «نعم»،\nفسنضبط الإعدادات بحيث يمكن عرض عدد الأيام منذ انتهاء فترة التوقف.",
+  "yazFlexLastRestDurationTitle": "يرجى الضغط على الحبة\nالتي تناولتها قبل بدء فترة التوقف",
   "yazFlexSkipRestDuration": "تخطي إدخال فترة التوقف",
   "yazFlexSkipRestDurationDialogTitle": "تخطي إدخال فترة التوقف",
   "yazFlexSkipRestDurationDialogMessage": "يمكنكِ إدخال فترة التوقف عن تناول الحبوب لاحقًا من «التوقف عن تناول الحبوب» في الصفحة الرئيسية.",

@@ -570,6 +570,7 @@
   "pauseStartDateLimit": "Başlanğıc tarixi ən gec {date} seçilə bilər",
   "initialSettingAskYazFlex": "Yaz Flex istifadə edirsiniz?",
   "initialSettingAskYazFlexDescription": "“Bəli” seçsəniz,\nfasilədən sonra neçə gün keçdiyini göstərə biləcək şəkildə tənzimləyəcəyik.",
+  "yazFlexLastRestDurationTitle": "Fasiləyə başlamazdan əvvəl qəbul etdiyiniz həbi\nseçmək üçün toxunun",
   "yazFlexSkipRestDuration": "Fasilə dövrünün daxil edilməsini keçin",
   "yazFlexSkipRestDurationDialogTitle": "Fasilə dövrü daxiletməsini keçin",
   "yazFlexSkipRestDurationDialogMessage": "Qəbul fasiləsi müddətini sonra Ana səhifədəki “Qəbul fasiləsi” bölməsindən daxil edə bilərsiniz.",

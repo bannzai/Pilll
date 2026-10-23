@@ -570,6 +570,7 @@
   "pauseStartDateLimit": "Началната дата може да бъде до {date}",
   "initialSettingAskYazFlex": "Приемате ли Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ако изберете „Да“,\nще настроим показването на това кой ден е след края на паузата.",
+  "yazFlexLastRestDurationTitle": "Моля, докоснете хапчето,\nкоето сте приели преди началото на паузата",
   "yazFlexSkipRestDuration": "Пропуснете въвеждането на почивката",
   "yazFlexSkipRestDurationDialogTitle": "Пропускане на въвеждането на почивката",
   "yazFlexSkipRestDurationDialogMessage": "Периодът на пауза в приема може да бъде въведен по-късно от „Пауза в приема“ на началния екран.",

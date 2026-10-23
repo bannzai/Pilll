@@ -570,6 +570,7 @@
   "pauseStartDateLimit": "დაწყების თარიღის არჩევა შესაძლებელია {date}-მდე",
   "initialSettingAskYazFlex": "Yaz Flex-ს იყენებთ?",
   "initialSettingAskYazFlexDescription": "თუ აირჩევთ „დიახ“-ს,\nდავაყენებთ ისე, რომ გამოჩნდეს, რამდენი დღე გავიდა შესვენების დასრულებიდან.",
+  "yazFlexLastRestDurationTitle": "გთხოვთ, შეეხეთ აბს,\nრომელიც შესვენების დაწყებამდე მიიღეთ",
   "yazFlexSkipRestDuration": "გამოტოვეთ შესვენების პერიოდის შეყვანა",
   "yazFlexSkipRestDurationDialogTitle": "შესვენების პერიოდის შეყვანის გამოტოვება",
   "yazFlexSkipRestDurationDialogMessage": "მიღების შესვენების პერიოდის შეყვანა მოგვიანებითაც შეგიძლიათ მთავარ ეკრანზე „მიღების შესვენება“-დან.",

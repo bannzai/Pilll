@@ -570,6 +570,7 @@
   "pauseStartDateLimit": "શરૂઆતની તારીખ {date} સુધી પસંદ કરી શકાય છે",
   "initialSettingAskYazFlex": "શું તમે Yaz Flex વાપરો છો?",
   "initialSettingAskYazFlexDescription": "જો તમે “હા” પસંદ કરો,\nતો વિરામ પૂરો થયા પછી કેટલોમો દિવસ છે તે બતાવી શકાય તેવી સેટિંગ કરવામાં આવશે",
+  "yazFlexLastRestDurationTitle": "વિરામ શરૂ થાય તે પહેલાં લીધેલી ગોળી પર\nટૅપ કરો",
   "yazFlexSkipRestDuration": "વિરામ અવધિ દાખલ કરવું છોડો",
   "yazFlexSkipRestDurationDialogTitle": "વિરામ અવધિની નોંધ છોડો",
   "yazFlexSkipRestDurationDialogMessage": "દવા લેવાનું વિરામ સમયગાળો પછીથી હોમમાં “દવા લેવાનું વિરામ” માંથી દાખલ કરી શકશો.",

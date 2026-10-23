@@ -570,6 +570,7 @@
   "pauseStartDateLimit": "Η ημερομηνία έναρξης μπορεί να επιλεγεί έως τις {date}",
   "initialSettingAskYazFlex": "Παίρνετε το Yaz Flex;",
   "initialSettingAskYazFlexDescription": "Αν επιλέξετε «Ναι»,\nθα το ρυθμίσουμε ώστε να εμφανίζεται πόσες ημέρες έχουν περάσει από το τέλος της διακοπής.",
+  "yazFlexLastRestDurationTitle": "Πατήστε το χάπι\nπου πήρατε ακριβώς πριν από τη διακοπή",
   "yazFlexSkipRestDuration": "Παράλειψη εισαγωγής διαλείμματος",
   "yazFlexSkipRestDurationDialogTitle": "Παράλειψη καταχώρισης της διακοπής",
   "yazFlexSkipRestDurationDialogMessage": "Μπορείτε να καταχωρίσετε αργότερα την περίοδο διακοπής λήψης από το «Διακοπή λήψης» στην αρχική οθόνη.",

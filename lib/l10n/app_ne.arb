@@ -570,6 +570,7 @@
   "pauseStartDateLimit": "सुरु मिति {date} सम्म छान्न सकिन्छ",
   "initialSettingAskYazFlex": "के तपाईं Yaz Flex प्रयोग गर्दै हुनुहुन्छ?",
   "initialSettingAskYazFlexDescription": "“हो” छान्नुभयो भने\nविश्राम अवधि सकिएपछि कति दिन भयो भन्ने देखिने गरी सेट गरिनेछ",
+  "yazFlexLastRestDurationTitle": "ब्रेक सुरु हुनुअघि खाएको चक्कीमा\nट्याप गर्नुहोस्",
   "yazFlexSkipRestDuration": "ब्रेक अवधि प्रविष्ट नगरी अघि बढ्नुहोस्",
   "yazFlexSkipRestDurationDialogTitle": "विश्राम अवधिको प्रविष्टि छोड्नुहोस्",
   "yazFlexSkipRestDurationDialogMessage": "औषध सेवन विश्राम अवधि पछि होमको “औषध सेवन विश्राम” बाट प्रविष्ट गर्न सकिन्छ।",

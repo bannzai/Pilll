@@ -570,6 +570,7 @@
   "pauseStartDateLimit": "Tarehe ya kuanza inaweza kuchaguliwa hadi {date}",
   "initialSettingAskYazFlex": "Je, unatumia Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ukichagua “Ndiyo”,\ntutaiweka ili ionyeshe ni siku ya ngapi tangu mapumziko yalipoisha.",
+  "yazFlexLastRestDurationTitle": "Tafadhali gusa kidonge\nulichotumia kabla tu ya mapumziko",
   "yazFlexSkipRestDuration": "Ruka kuingiza kipindi cha mapumziko",
   "yazFlexSkipRestDurationDialogTitle": "Ruka kuingiza kipindi cha mapumziko",
   "yazFlexSkipRestDurationDialogMessage": "Unaweza kuingiza baadaye kipindi cha mapumziko ya matumizi kutoka “Mapumziko ya matumizi” kwenye Skrini ya Mwanzo.",

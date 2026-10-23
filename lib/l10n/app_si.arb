@@ -570,6 +570,7 @@
   "pauseStartDateLimit": "ආරම්භක දිනය {date} දක්වා තෝරා ගත හැක",
   "initialSettingAskYazFlex": "ඔබ Yaz Flex භාවිතා කරනවාද?",
   "initialSettingAskYazFlexDescription": "“ඔව්” තෝරාගත් විට\nවිවේක කාලය අවසන් වූ පසු කීවැනි දිනදැයි පෙන්වන ලෙස සකසනු ඇත",
+  "yazFlexLastRestDurationTitle": "විරාමය ආරම්භ කිරීමට පෙර ගත් ගෝලිය\nතට්ටු කරන්න",
   "yazFlexSkipRestDuration": "විරාම කාලය ඇතුළත් කිරීම මඟ හරින්න",
   "yazFlexSkipRestDurationDialogTitle": "විරාම කාලය ඇතුළත් කිරීම මඟ හරින්න",
   "yazFlexSkipRestDurationDialogMessage": "ඖෂධ ගැනීමේ විරාම කාලය පසුව මුල් පිටුවේ “ඖෂධ ගැනීමේ විරාමය” වෙතින් ඇතුළත් කළ හැකියි.",

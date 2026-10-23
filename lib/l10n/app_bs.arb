@@ -570,6 +570,7 @@
   "pauseStartDateLimit": "Datum početka možete odabrati do {date}",
   "initialSettingAskYazFlex": "Da li koristite Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ako odaberete „Da”,\npodesit ćemo prikaz koliko je dana prošlo od završetka pauze.",
+  "yazFlexLastRestDurationTitle": "Dodirnite pilulu\nkoju ste uzeli neposredno prije pauze",
   "yazFlexSkipRestDuration": "Preskoči unos pauze",
   "yazFlexSkipRestDurationDialogTitle": "Preskočite unos pauze",
   "yazFlexSkipRestDurationDialogMessage": "Period pauze uzimanja možete unijeti kasnije u odjeljku „Pauza uzimanja“ na početnom ekranu.",

@@ -570,6 +570,7 @@
   "pauseStartDateLimit": "Data e fillimit mund të zgjidhet deri më {date}",
   "initialSettingAskYazFlex": "A po përdorni Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Nëse zgjidhni “Po”,\ndo ta caktojmë që të shfaqet sa ditë kanë kaluar që nga përfundimi i pushimit.",
+  "yazFlexLastRestDurationTitle": "Prekni pilulën\nqë e more pak para pushimit",
   "yazFlexSkipRestDuration": "Kalo futjen e periudhës së pushimit",
   "yazFlexSkipRestDurationDialogTitle": "Kalo futjen e periudhës së pauzës",
   "yazFlexSkipRestDurationDialogMessage": "Periudhën e pauzës së marrjes mund ta vendosni më vonë te “Pauza e marrjes” në ekranin kryesor.",

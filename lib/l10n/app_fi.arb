@@ -570,6 +570,7 @@
   "pauseStartDateLimit": "Aloituspäivän voi valita päivään {date} asti",
   "initialSettingAskYazFlex": "Käytätkö Yaz Flexiä?",
   "initialSettingAskYazFlexDescription": "Jos valitset ”Kyllä”,\nasetamme näytettäväksi, monesko päivä tauon päättymisestä on menossa.",
+  "yazFlexLastRestDurationTitle": "Napauta pilleriä,\njonka otit juuri ennen taukoa",
   "yazFlexSkipRestDuration": "Ohita tauon syöttäminen",
   "yazFlexSkipRestDurationDialogTitle": "Ohita taukojakson kirjaaminen",
   "yazFlexSkipRestDurationDialogMessage": "Taukojakson voi syöttää myöhemmin Koti-näytön ”Tauko ottamisesta” -kohdasta.",

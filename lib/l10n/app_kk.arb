@@ -570,6 +570,7 @@
   "pauseStartDateLimit": "Басталу күнін {date} күніне дейін таңдауға болады",
   "initialSettingAskYazFlex": "Yaz Flex қолданасыз ба?",
   "initialSettingAskYazFlexDescription": "Егер «Иә» таңдасаңыз,\nүзіліс аяқталғаннан бері нешінші күн екенін көрсететіндей етіп баптаймыз.",
+  "yazFlexLastRestDurationTitle": "Үзіліс басталардың алдында ішкен таблетканы\nтүртіңіз",
   "yazFlexSkipRestDuration": "Үзіліс кезеңін енгізуді өткізіп жіберу",
   "yazFlexSkipRestDurationDialogTitle": "Үзіліс кезеңін енгізуді өткізіп жіберу",
   "yazFlexSkipRestDurationDialogMessage": "Қабылдау үзілісінің мерзімін кейінірек Басты беттегі «Қабылдау үзілісі» бөлімінен енгізе аласыз.",

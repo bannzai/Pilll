@@ -570,6 +570,7 @@
   "pauseStartDateLimit": "Баштоо күнүн {date} чейин тандаса болот",
   "initialSettingAskYazFlex": "Yaz Flex колдонуп жатасызбы?",
   "initialSettingAskYazFlexDescription": "“Ооба” дегенди тандасаңыз,\nтыныгуудан кийин канчанчы күн экенин көрсөтө тургандай кылып жөндөйбүз.",
+  "yazFlexLastRestDurationTitle": "Тыныгуу башталардын алдында ичкен таблетканы\nтаптаңыз",
   "yazFlexSkipRestDuration": "Тыныгуу мезгилин киргизүүнү өткөрүп жиберүү",
   "yazFlexSkipRestDurationDialogTitle": "Тыныгуу мезгилин киргизүүнү өткөрүп жиберүү",
   "yazFlexSkipRestDurationDialogMessage": "Ичүүнү тыныгуу мөөнөтүн кийинчерээк Башкы беттеги “Ичүүнү тыныгуу” бөлүмүнөн киргизе аласыз.",

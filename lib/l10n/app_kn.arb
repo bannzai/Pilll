@@ -570,6 +570,7 @@
   "pauseStartDateLimit": "ಪ್ರಾರಂಭ ದಿನಾಂಕವನ್ನು {date} ವರೆಗೆ ಆಯ್ಕೆ ಮಾಡಬಹುದು",
   "initialSettingAskYazFlex": "ನೀವು Yaz Flex ಬಳಸುತ್ತೀರಾ?",
   "initialSettingAskYazFlexDescription": "“ಹೌದು” ಆಯ್ಕೆ ಮಾಡಿದರೆ\nವಿರಾಮ ಮುಗಿದ ನಂತರ ಎಷ್ಟುನೇ ದಿನವಾಗಿದೆ ಎಂಬುದನ್ನು ತೋರಿಸುವಂತೆ ಹೊಂದಿಸಲಾಗುತ್ತದೆ",
+  "yazFlexLastRestDurationTitle": "ವಿರಾಮ ಆರಂಭಿಸುವ ಮುನ್ನ ತೆಗೆದುಕೊಂಡ ಮಾತ್ರೆಯನ್ನು\nಟ್ಯಾಪ್ ಮಾಡಿ",
   "yazFlexSkipRestDuration": "ವಿರಾಮ ಅವಧಿ ನಮೂದಿಸುವುದನ್ನು ಬಿಟ್ಟುಬಿಡಿ",
   "yazFlexSkipRestDurationDialogTitle": "ವಿರಾಮ ಅವಧಿಯ ದಾಖಲೆಯನ್ನು ಬಿಟ್ಟುಬಿಡಿ",
   "yazFlexSkipRestDurationDialogMessage": "ಔಷಧ ಸೇವನೆ ವಿರಾಮದ ಅವಧಿಯನ್ನು ನಂತರ ಹೋಮ್‌ನ “ಔಷಧ ಸೇವನೆ ವಿರಾಮ” ನಲ್ಲಿ ನಮೂದಿಸಬಹುದು.",
