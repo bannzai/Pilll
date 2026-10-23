@@ -579,6 +579,5 @@
   "yazFlexLastRestDurationBeginDate": "Day the break started",
   "yazFlexLastRestDurationEndDate": "Date you resumed taking it",
   "yazFlexSelectDate": "Select a date",
-  "yazFlexBeginPillNumberPageTitle": "What day after the break\ndid you start the pack?",
   "yazFlexNextInputIsRestDuration": "Next, enter your previous break"
 }

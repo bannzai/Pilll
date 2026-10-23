@@ -579,6 +579,5 @@
   "yazFlexLastRestDurationBeginDate": "Dan kada je pauza započela",
   "yazFlexLastRestDurationEndDate": "Dan kada ste ponovno počeli uzimati",
   "yazFlexSelectDate": "Odaberite datum",
-  "yazFlexBeginPillNumberPageTitle": "Kada ste počeli blister,\nkoji je to bio dan nakon pauze?",
   "yazFlexNextInputIsRestDuration": "Zatim unesite prethodnu pauzu"
 }

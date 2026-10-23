@@ -2832,9 +2832,13 @@
   "@yazFlexSelectDate": {
     "description": "ヤーズフレックス向けの初期設定で、休薬の日付がまだ選ばれていない入力欄に出すプレースホルダーです。タップするとカレンダーが開きます。"
   },
-  "yazFlexBeginPillNumberPageTitle": "シートを始めた日は\n休薬明けから何日目でしたか",
+  "yazFlexBeginPillNumberPageTitle": "シートの始まりは周期上\n何番目の服用ですか？",
   "@yazFlexBeginPillNumberPageTitle": {
-    "description": "ヤーズフレックス向けの初期設定で、ピルシートの1枚目の1番のピル（画面のピルシートの絵で印が付いている）を飲んだ日が、休薬（ピルを飲まない期間）が明けてから何日目だったかを入力してもらうページの見出しです。下に「〇日目」を選ぶピッカーがあります。"
+    "description": "ヤーズフレックス向けの初期設定で、ピルシートの1枚目の1番のピル（画面のピルシートの絵で印が付いている）が、服用の周期（前回の休薬が明けてから数えた日数）の何番目の服用にあたるかを入力してもらうページの見出しです。下に「〇日目」を選ぶピッカーがあります。"
+  },
+  "yazFlexBeginPillNumberPageNote": "前回の休薬からの経過日数を元にお答えください",
+  "@yazFlexBeginPillNumberPageNote": {
+    "description": "上の見出し（シートの始まりは周期上何番目の服用か）の下に出す小さな注意書きです。前回の休薬（ピルを飲まない期間）が明けてから何日経ったかを数えて答えてほしいことを伝えます。"
   },
   "yazFlexNextInputIsRestDuration": "次は前回の休薬を入力します",
   "@yazFlexNextInputIsRestDuration": {

@@ -54,6 +54,17 @@ class InitialSettingYazFlexBeginPillNumberPage extends ConsumerWidget {
                       ),
                       textAlign: TextAlign.center,
                     ),
+                    const SizedBox(height: 8),
+                    Text(
+                      L.yazFlexBeginPillNumberPageNote,
+                      style: const TextStyle(
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w300,
+                        fontSize: 12,
+                        color: TextColor.gray,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
                     const SizedBox(height: 24),
                     if (pillSheetGroup != null)
                       YazFlexPillSheetGroupPreview(

@@ -579,6 +579,5 @@
   "yazFlexLastRestDurationBeginDate": "Tauon alkamispäivä",
   "yazFlexLastRestDurationEndDate": "Päivä, jolloin aloitit käytön uudelleen",
   "yazFlexSelectDate": "Valitse päivämäärä",
-  "yazFlexBeginPillNumberPageTitle": "Monentenako päivänä tauon jälkeen\naloitit liuskan?",
   "yazFlexNextInputIsRestDuration": "Seuraavaksi syötä edellinen taukosi"
 }
