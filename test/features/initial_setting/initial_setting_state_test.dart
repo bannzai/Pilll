@@ -147,6 +147,7 @@ void main() {
     int yazFlexRestDurationDays = 4,
     int yazFlexBeginPillNumber = 1,
     bool yazFlexHasNotRestedYet = false,
+    bool yazFlexIsResting = false,
   }) {
     return InitialSettingState(
       reminderTimes: [],
@@ -164,6 +165,7 @@ void main() {
       yazFlexRestDurationDays: yazFlexRestDurationDays,
       yazFlexBeginPillNumber: yazFlexBeginPillNumber,
       yazFlexHasNotRestedYet: yazFlexHasNotRestedYet,
+      yazFlexIsResting: yazFlexIsResting,
     );
   }
 
@@ -233,6 +235,70 @@ void main() {
           state.yazFlexLastRestDurationEndDate, DateTime.parse("2020-12-29"));
       expect(
           state.yazFlexLastRestDurationBeginDate, DateTime.parse("2020-12-25"));
+    });
+  });
+
+  group("#yazFlexLastTakenPillPositionBeforeRest", () {
+    test("休薬中でなければタップしたピルの位置、未選択なら null", () {
+      expect(
+        yazFlexState(
+          todayPillNumber: const InitialSettingTodayPillNumber(
+              pageIndex: 1, pillNumberInPillSheet: 2),
+          yazFlexLastTakenPillNumberBeforeRest:
+              const InitialSettingTodayPillNumber(
+                  pageIndex: 0, pillNumberInPillSheet: 16),
+        ).yazFlexLastTakenPillPositionBeforeRest,
+        (pageIndex: 0, pillNumberInPillSheet: 16),
+      );
+      expect(
+        yazFlexState(
+          todayPillNumber: const InitialSettingTodayPillNumber(
+              pageIndex: 1, pillNumberInPillSheet: 2),
+        ).yazFlexLastTakenPillPositionBeforeRest,
+        isNull,
+      );
+    });
+    test("休薬中は今日のピルの1つ前の位置 (ピルシートの境界では前のシートの最後のピル)", () {
+      expect(
+        yazFlexState(
+          todayPillNumber: const InitialSettingTodayPillNumber(
+              pageIndex: 1, pillNumberInPillSheet: 1),
+          yazFlexIsResting: true,
+        ).yazFlexLastTakenPillPositionBeforeRest,
+        (pageIndex: 0, pillNumberInPillSheet: 28),
+      );
+      expect(
+        yazFlexState(
+          todayPillNumber: const InitialSettingTodayPillNumber(
+              pageIndex: 0, pillNumberInPillSheet: 1),
+          yazFlexIsResting: true,
+        ).yazFlexLastTakenPillPositionBeforeRest,
+        isNull,
+      );
+    });
+  });
+
+  group("#yazFlexLastRestDurationBeginDate (休薬中)", () {
+    test("休薬して今日で4日目なら開始日は3日前で再開日は無し。年をまたぐ場合も同じ", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2021-01-02"));
+
+      final state = yazFlexState(
+        todayPillNumber: const InitialSettingTodayPillNumber(
+            pageIndex: 0, pillNumberInPillSheet: 10),
+        yazFlexIsResting: true,
+      );
+      expect(
+          state.yazFlexLastRestDurationBeginDate, DateTime.parse("2020-12-30"));
+      expect(state.yazFlexLastRestDurationEndDate, isNull);
+    });
+    test("休薬中で今日の番号が未選択なら null", () {
+      expect(
+        yazFlexState(todayPillNumber: null, yazFlexIsResting: true)
+            .yazFlexLastRestDurationBeginDate,
+        isNull,
+      );
     });
   });
 

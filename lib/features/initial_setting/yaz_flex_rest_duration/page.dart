@@ -19,6 +19,7 @@ const _maxRestDurationDays = 30;
 
 /// ヤーズフレックス向けの初期設定で、前回の休薬を「休薬に入る直前に飲んだピル」のタップと休薬の日数で入力するページ
 /// 開始番号のページで入力した服用日数を反映したピルシートグループのプレビューの上でピルをタップし、選んだピルの次のピルから 1 に戻る表示をそのまま見せる
+/// 休薬中でまだ再開していない人はスイッチでそれを選び、休薬して今日で何日目かを入力する (休薬のピルは今日のピルの 1 つ前に決まるのでタップしない)
 /// 休薬の入力自体をスキップして服用タイミングのページへ進むこともできる
 class InitialSettingYazFlexRestDurationPage extends ConsumerWidget {
   const InitialSettingYazFlexRestDurationPage({super.key});
@@ -27,7 +28,7 @@ class InitialSettingYazFlexRestDurationPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStateNotifierProvider.notifier);
     final state = ref.watch(initialSettingStateNotifierProvider);
-    final lastTakenPillNumberBeforeRest = state.yazFlexLastTakenPillNumberBeforeRest;
+    final lastTakenPillPositionBeforeRest = state.yazFlexLastTakenPillPositionBeforeRest;
     final pillSheetGroup = state.buildPillSheetGroup();
 
     return Scaffold(
@@ -72,29 +73,41 @@ class InitialSettingYazFlexRestDurationPage extends ConsumerWidget {
                     if (pillSheetGroup != null)
                       YazFlexPillSheetGroupPreview(
                         pillSheetGroup: pillSheetGroup,
-                        markedPill: lastTakenPillNumberBeforeRest == null
+                        markedPill: lastTakenPillPositionBeforeRest,
+                        // 休薬中は休薬のピルが今日のピルの 1 つ前に決まるので、タップで選ばせない
+                        onPillTap: state.yazFlexIsResting
                             ? null
-                            : (
-                                pageIndex: lastTakenPillNumberBeforeRest.pageIndex,
-                                pillNumberInPillSheet: lastTakenPillNumberBeforeRest.pillNumberInPillSheet
-                              ),
-                        onPillTap: ({required pageIndex, required pillNumberInPillSheet}) {
-                          analytics.logEvent(
-                            name: 'yaz_flex_rest_pill_tapped',
-                            parameters: {'page_index': pageIndex, 'pill_number_in_pill_sheet': pillNumberInPillSheet},
-                          );
-                          store.setYazFlexLastTakenPillNumberBeforeRest(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
-                        },
+                            : ({required pageIndex, required pillNumberInPillSheet}) {
+                                analytics.logEvent(
+                                  name: 'yaz_flex_rest_pill_tapped',
+                                  parameters: {'page_index': pageIndex, 'pill_number_in_pill_sheet': pillNumberInPillSheet},
+                                );
+                                store.setYazFlexLastTakenPillNumberBeforeRest(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
+                              },
                         // 選んだピルが無い時は今日飲むピルのピルシートを開き、休薬のピルを探しやすくする
-                        initialPageIndex: lastTakenPillNumberBeforeRest?.pageIndex ?? state.todayPillNumber?.pageIndex ?? 0,
+                        initialPageIndex: lastTakenPillPositionBeforeRest?.pageIndex ?? state.todayPillNumber?.pageIndex ?? 0,
                       ),
-                    const SizedBox(height: 24),
-                    if (lastTakenPillNumberBeforeRest != null) ...[
+                    const SizedBox(height: 16),
+                    YazFlexRestingSwitch(
+                      isResting: state.yazFlexIsResting,
+                      onChanged: (isResting) {
+                        analytics.logEvent(name: 'yaz_flex_is_resting_toggled', parameters: {'is_resting': isResting});
+                        store.setYazFlexIsResting(yazFlexIsResting: isResting);
+                      },
+                    ),
+                    const SizedBox(height: 16),
+                    if (state.yazFlexIsResting || lastTakenPillPositionBeforeRest != null) ...[
                       YazFlexRestDurationDaysField(
+                        isResting: state.yazFlexIsResting,
                         restDurationDays: state.yazFlexRestDurationDays,
                         onTap: () {
                           analytics.logEvent(name: 'yaz_flex_rest_duration_days_tapped');
-                          _showDaysPicker(context, store: store, restDurationDays: state.yazFlexRestDurationDays);
+                          _showDaysPicker(
+                            context,
+                            store: store,
+                            isResting: state.yazFlexIsResting,
+                            restDurationDays: state.yazFlexRestDurationDays,
+                          );
                         },
                       ),
                       const SizedBox(height: 16),
@@ -140,13 +153,14 @@ class InitialSettingYazFlexRestDurationPage extends ConsumerWidget {
               width: 180,
               child: PrimaryButton(
                 text: L.next,
-                onPressed: lastTakenPillNumberBeforeRest == null
+                onPressed: !state.yazFlexIsResting && lastTakenPillPositionBeforeRest == null
                     ? null
                     : () async {
                         analytics.logEvent(
                           name: 'done_yaz_flex_rest_duration',
                           parameters: {
                             'rest_duration_days': state.yazFlexRestDurationDays,
+                            'is_resting': state.yazFlexIsResting,
                             'begin_pill_number': state.yazFlexBeginPillNumber,
                           },
                         );
@@ -165,6 +179,7 @@ class InitialSettingYazFlexRestDurationPage extends ConsumerWidget {
   void _showDaysPicker(
     BuildContext context, {
     required InitialSettingStateNotifier store,
+    required bool isResting,
     required int restDurationDays,
   }) {
     var selectedRestDurationDays = restDurationDays;
@@ -197,7 +212,10 @@ class InitialSettingYazFlexRestDurationPage extends ConsumerWidget {
                   selectedRestDurationDays = index + 1;
                 },
                 scrollController: FixedExtentScrollController(initialItem: restDurationDays - 1),
-                children: List.generate(_maxRestDurationDays, (index) => Text(L.yazFlexRestDurationDaysValue('${index + 1}'))),
+                children: List.generate(
+                  _maxRestDurationDays,
+                  (index) => Text(isResting ? L.withDay('${index + 1}') : L.yazFlexRestDurationDaysValue('${index + 1}')),
+                ),
               ),
             ),
           ],
@@ -207,14 +225,50 @@ class InitialSettingYazFlexRestDurationPage extends ConsumerWidget {
   }
 }
 
-/// 前回の休薬の日数の欄。ラベルの下に「4日間」のような日数を枠で囲って出し、タップでピッカーを開く
+/// 「休薬中でまだ再開していない」のスイッチの行
+/// 値は初期設定の状態 (InitialSettingStateNotifier) に入れるため、切り替えはコールバックで親に渡す
+class YazFlexRestingSwitch extends StatelessWidget {
+  final bool isResting;
+  final ValueChanged<bool> onChanged;
+
+  const YazFlexRestingSwitch({
+    super.key,
+    required this.isResting,
+    required this.onChanged,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          L.yazFlexResting,
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w300,
+            fontSize: 14,
+            color: TextColor.main,
+          ),
+        ),
+        const SizedBox(width: 8),
+        Switch(value: isResting, onChanged: onChanged),
+      ],
+    );
+  }
+}
+
+/// 前回の休薬の日数の欄。ラベルの下に「4日間」(休薬中は「4日目」) のような日数を枠で囲って出し、タップでピッカーを開く
 /// 日数は初期設定の状態 (InitialSettingStateNotifier) に入れるため、タップ時の処理はコールバックで親から渡す
 class YazFlexRestDurationDaysField extends StatelessWidget {
+  /// 休薬中 (まだ再開していない) か。true の時はラベルと日数の表記を「休薬して今日で何日目」にする
+  final bool isResting;
   final int restDurationDays;
   final VoidCallback onTap;
 
   const YazFlexRestDurationDaysField({
     super.key,
+    required this.isResting,
     required this.restDurationDays,
     required this.onTap,
   });
@@ -224,7 +278,7 @@ class YazFlexRestDurationDaysField extends StatelessWidget {
     return Column(
       children: [
         Text(
-          L.yazFlexRestDurationDaysLabel,
+          isResting ? L.yazFlexRestingDaysLabel : L.yazFlexRestDurationDaysLabel,
           style: const TextStyle(
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w300,
@@ -250,7 +304,7 @@ class YazFlexRestDurationDaysField extends StatelessWidget {
               child: Align(
                 widthFactor: 1,
                 child: Text(
-                  L.yazFlexRestDurationDaysValue('$restDurationDays'),
+                  isResting ? L.withDay('$restDurationDays') : L.yazFlexRestDurationDaysValue('$restDurationDays'),
                   style: const TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w700,

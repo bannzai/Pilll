@@ -94,6 +94,43 @@ void main() {
         tester.widget<PrimaryButton>(find.byType(PrimaryButton)).onPressed,
         isNull,
       );
+      expect(
+          tester
+              .widget<YazFlexRestingSwitch>(find.byType(YazFlexRestingSwitch))
+              .isResting,
+          false);
+    });
+
+    testWidgets(
+        "休薬中 (まだ再開していない) を選んだ場合は、今日のピル (1枚目の17番) の1つ前の16番に印が付いてタップできず、「何日目」の欄が出て次へ進める",
+        (WidgetTester tester) async {
+      await pumpPage(
+        tester,
+        input: (store) {
+          store.selectYazFlex();
+          store.setTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 17);
+          store.setYazFlexIsResting(yazFlexIsResting: true);
+        },
+      );
+
+      final preview = tester.widget<YazFlexPillSheetGroupPreview>(
+          find.byType(YazFlexPillSheetGroupPreview));
+      expect(preview.onPillTap, isNull);
+      expect(preview.markedPill, (pageIndex: 0, pillNumberInPillSheet: 16));
+      expect(find.byType(SelectedPillMark), findsOneWidget);
+      expect(
+          tester
+              .widget<YazFlexRestingSwitch>(find.byType(YazFlexRestingSwitch))
+              .isResting,
+          true);
+      final daysField = tester.widget<YazFlexRestDurationDaysField>(
+          find.byType(YazFlexRestDurationDaysField));
+      expect(daysField.isResting, true);
+      expect(daysField.restDurationDays, 4);
+      expect(
+        tester.widget<PrimaryButton>(find.byType(PrimaryButton)).onPressed,
+        isNotNull,
+      );
     });
 
     testWidgets("休薬のピル (1枚目の16番) を選んだ場合は、そのピルに印が付いて日数の欄 (既定の4日間) が出て、次へ進める",

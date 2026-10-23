@@ -38,6 +38,7 @@ appId: com.mizuki.Ohashi.Pilll.dev
 
 # 前回の休薬: ピルをタップせずに「休薬の入力はスキップ」→ 確認ダイアログで「スキップする」→ 服用タイミングへ進む
 - assertVisible: "休薬した時のピルを\nタップしてください"
+- assertVisible: "休薬中でまだ再開していない"
 - tapOn: "休薬の入力はスキップ"
 - waitForAnimationToEnd
 - assertVisible: "休薬の入力をスキップします"

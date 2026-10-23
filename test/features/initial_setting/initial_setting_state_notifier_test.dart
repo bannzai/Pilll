@@ -1139,6 +1139,202 @@ void main() {
         daysBetween(DateTime.parse("2022-02-26"), today()) + 1,
       );
     });
+
+    group("休薬中 (まだ服用を再開していない)", () {
+      test("今日が1枚目の17番で休薬して今日で4日目の場合は、1枚目に終了日の無い休薬が入り16番まで服用済みで、休薬の開始日は3日前",
+          () async {
+        // 今日(2022-03-02)で4日目 → 休薬の開始日は 2022-02-27、16番は前日の 2022-02-26 に飲んだ
+        final pillSheetGroup = await registerYazFlex(
+          mockToday: DateTime.parse("2022-03-02"),
+          input: (store) {
+            store.setTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 17);
+            store.setYazFlexIsResting(yazFlexIsResting: true);
+          },
+        );
+
+        expect(pillSheetGroup.pillSheets[0].restDurations.length, 1);
+        expect(
+          pillSheetGroup.pillSheets[0].restDurations[0].beginDate,
+          DateTime.parse("2022-02-27"),
+        );
+        expect(pillSheetGroup.pillSheets[0].restDurations[0].endDate, isNull);
+        expect(pillSheetGroup.pillSheets[0].lastTakenOrZeroPillNumber, 16);
+        expect(pillSheetGroup.pillSheets[0].lastTakenDate,
+            DateTime.parse("2022-02-26"));
+        expect(pillSheetGroup.pillSheets[0].beginDate,
+            DateTime.parse("2022-02-11"));
+        expect(pillSheetGroup.pillSheets[1].restDurations, isEmpty);
+        expect(pillSheetGroup.activePillSheet?.activeRestDuration, isNotNull);
+      });
+      test("今日が2枚目の1番で休薬して今日で4日目の場合は、2枚目に終了日の無い休薬が入り1枚目は服用済み", () async {
+        final pillSheetGroup = await registerYazFlex(
+          mockToday: DateTime.parse("2022-03-02"),
+          input: (store) {
+            store.setTodayPillNumber(pageIndex: 1, pillNumberInPillSheet: 1);
+            store.setYazFlexIsResting(yazFlexIsResting: true);
+          },
+        );
+
+        expect(pillSheetGroup.pillSheets[0].restDurations, isEmpty);
+        expect(pillSheetGroup.pillSheets[0].isTakenAll, true);
+        expect(pillSheetGroup.pillSheets[0].lastTakenDate,
+            DateTime.parse("2022-02-26"));
+        expect(pillSheetGroup.pillSheets[1].restDurations.length, 1);
+        expect(
+          pillSheetGroup.pillSheets[1].restDurations[0].beginDate,
+          DateTime.parse("2022-02-27"),
+        );
+        expect(pillSheetGroup.pillSheets[1].restDurations[0].endDate, isNull);
+        // 2枚目はまだ1錠も飲んでいない (lastTakenDate は既存の計算どおり開始日の前日 = 1枚目の最後のピルの日)
+        expect(pillSheetGroup.pillSheets[1].lastTakenOrZeroPillNumber, 0);
+        expect(pillSheetGroup.pillSheets[1].beginDate,
+            DateTime.parse("2022-02-27"));
+        expect(pillSheetGroup.activePillSheet?.groupIndex, 1);
+        expect(pillSheetGroup.activePillSheet?.activeRestDuration, isNotNull);
+      });
+      test("今日で7日目にすると休薬の開始日が6日前になる", () async {
+        final pillSheetGroup = await registerYazFlex(
+          mockToday: DateTime.parse("2022-03-02"),
+          input: (store) {
+            store.setTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 17);
+            store.setYazFlexIsResting(yazFlexIsResting: true);
+            store.setYazFlexRestDurationDays(yazFlexRestDurationDays: 7);
+          },
+        );
+
+        expect(
+          pillSheetGroup.pillSheets[0].restDurations[0].beginDate,
+          DateTime.parse("2022-02-24"),
+        );
+        expect(pillSheetGroup.pillSheets[0].lastTakenDate,
+            DateTime.parse("2022-02-23"));
+      });
+      test("休薬中を選んだ後に休薬の入力をスキップすると、休薬は登録されない", () async {
+        final pillSheetGroup = await registerYazFlex(
+          mockToday: DateTime.parse("2022-03-02"),
+          input: (store) {
+            store.setTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 17);
+            store.setYazFlexIsResting(yazFlexIsResting: true);
+            store.setYazFlexHasNotRestedYet(yazFlexHasNotRestedYet: true);
+          },
+        );
+
+        expect(pillSheetGroup.restDurations, isEmpty);
+        expect(pillSheetGroup.sequentialTodayPillNumber, 17);
+      });
+    });
+  });
+
+  group("#setYazFlexIsResting", () {
+    test("休薬中にするとタップした休薬のピルとスキップが消え、1つ前のピルに印が付き、休薬の開始日は今日の3日前・再開日は無し", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-03-02"));
+
+      final container = ProviderContainer(
+        overrides: [
+          endInitialSettingProvider.overrideWith(
+            (ref) => MockEndInitialSetting(),
+          ),
+          batchFactoryProvider.overrideWithValue(MockBatchFactory()),
+          batchSetSettingProvider.overrideWith((ref) => MockBatchSetSetting()),
+          batchSetPillSheetModifiedHistoryProvider.overrideWith(
+            (ref) => MockBatchSetPillSheetModifiedHistory(),
+          ),
+          batchSetPillSheetGroupProvider.overrideWith(
+            (ref) => MockBatchSetPillSheetGroup(),
+          ),
+          remoteConfigParameterProvider.overrideWithValue(
+            RemoteConfigParameter(),
+          ),
+        ],
+      );
+      final store = container.read(
+        initialSettingStateNotifierProvider.notifier,
+      );
+      store.selectYazFlex();
+      store.setTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 17);
+      store.setYazFlexLastTakenPillNumberBeforeRest(
+          pageIndex: 0, pillNumberInPillSheet: 10);
+      store.setYazFlexHasNotRestedYet(yazFlexHasNotRestedYet: true);
+
+      store.setYazFlexIsResting(yazFlexIsResting: true);
+      final state = container.read(initialSettingStateNotifierProvider);
+      expect(state.yazFlexIsResting, true);
+      expect(state.yazFlexHasNotRestedYet, false);
+      expect(state.yazFlexLastTakenPillNumberBeforeRest, isNull);
+      expect(
+        state.yazFlexLastTakenPillPositionBeforeRest,
+        (pageIndex: 0, pillNumberInPillSheet: 16),
+      );
+      expect(
+          state.yazFlexLastRestDurationBeginDate, DateTime.parse("2022-02-27"));
+      expect(state.yazFlexLastRestDurationEndDate, isNull);
+      expect(state.yazFlexResumedPillPosition, isNull);
+
+      // 休薬中はピルをタップしても選ばれない
+      store.setYazFlexLastTakenPillNumberBeforeRest(
+          pageIndex: 0, pillNumberInPillSheet: 10);
+      expect(
+        container
+            .read(initialSettingStateNotifierProvider)
+            .yazFlexLastTakenPillNumberBeforeRest,
+        isNull,
+      );
+
+      // 休薬中を外すと印が消え、タップで選び直せる
+      store.setYazFlexIsResting(yazFlexIsResting: false);
+      expect(
+        container
+            .read(initialSettingStateNotifierProvider)
+            .yazFlexLastTakenPillPositionBeforeRest,
+        isNull,
+      );
+      store.setYazFlexLastTakenPillNumberBeforeRest(
+          pageIndex: 0, pillNumberInPillSheet: 10);
+      expect(
+        container
+            .read(initialSettingStateNotifierProvider)
+            .yazFlexLastTakenPillPositionBeforeRest,
+        (pageIndex: 0, pillNumberInPillSheet: 10),
+      );
+    });
+    test("今日が1枚目の1番の時に休薬中にすると、1つ前のピルがグループに無いので印は付かないが休薬は登録される", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-03-02"));
+
+      final container = ProviderContainer(
+        overrides: [
+          endInitialSettingProvider.overrideWith(
+            (ref) => MockEndInitialSetting(),
+          ),
+          batchFactoryProvider.overrideWithValue(MockBatchFactory()),
+          batchSetSettingProvider.overrideWith((ref) => MockBatchSetSetting()),
+          batchSetPillSheetModifiedHistoryProvider.overrideWith(
+            (ref) => MockBatchSetPillSheetModifiedHistory(),
+          ),
+          batchSetPillSheetGroupProvider.overrideWith(
+            (ref) => MockBatchSetPillSheetGroup(),
+          ),
+          remoteConfigParameterProvider.overrideWithValue(
+            RemoteConfigParameter(),
+          ),
+        ],
+      );
+      final store = container.read(
+        initialSettingStateNotifierProvider.notifier,
+      );
+      store.selectYazFlex();
+      store.setTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 1);
+      store.setYazFlexIsResting(yazFlexIsResting: true);
+
+      final state = container.read(initialSettingStateNotifierProvider);
+      expect(state.yazFlexLastTakenPillPositionBeforeRest, isNull);
+      expect(
+          state.yazFlexLastRestDurationBeginDate, DateTime.parse("2022-02-27"));
+      expect(state.yazFlexLastRestDurationEndDate, isNull);
+    });
   });
 
   group(

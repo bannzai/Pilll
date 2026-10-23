@@ -101,6 +101,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
       todayPillNumber: null,
       yazFlexHasNotRestedYet: false,
       yazFlexLastTakenPillNumberBeforeRest: null,
+      yazFlexIsResting: false,
       yazFlexRestDurationDays: 4,
       yazFlexBeginPillNumber: 1,
     );
@@ -119,23 +120,37 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
       todayPillNumber: null,
       yazFlexHasNotRestedYet: false,
       yazFlexLastTakenPillNumberBeforeRest: null,
+      yazFlexIsResting: false,
       yazFlexRestDurationDays: 4,
       yazFlexBeginPillNumber: 1,
     );
   }
 
-  /// ヤーズフレックス向けの導線で前回の休薬の入力をスキップする (true)・入力して進む (false)。スキップした時は選んだ休薬のピルを消す
+  /// ヤーズフレックス向けの導線で前回の休薬の入力をスキップする (true)・入力して進む (false)。スキップした時は選んだ休薬のピルと休薬中の入力を消す
   void setYazFlexHasNotRestedYet({required bool yazFlexHasNotRestedYet}) {
     state = state.copyWith(
       yazFlexHasNotRestedYet: yazFlexHasNotRestedYet,
       yazFlexLastTakenPillNumberBeforeRest: yazFlexHasNotRestedYet ? null : state.yazFlexLastTakenPillNumberBeforeRest,
+      yazFlexIsResting: yazFlexHasNotRestedYet ? false : state.yazFlexIsResting,
+    );
+  }
+
+  /// ヤーズフレックス向けの導線で「休薬中でまだ服用を再開していない」を切り替える
+  /// 休薬中にすると、休薬のピルは今日飲む番号のピルの 1 つ前に決まるのでタップで選んだピルを消し、スキップも解除する
+  void setYazFlexIsResting({required bool yazFlexIsResting}) {
+    state = state.copyWith(
+      yazFlexIsResting: yazFlexIsResting,
+      yazFlexHasNotRestedYet: false,
+      yazFlexLastTakenPillNumberBeforeRest: yazFlexIsResting ? null : state.yazFlexLastTakenPillNumberBeforeRest,
     );
   }
 
   /// ヤーズフレックス向けの導線で休薬に入る直前に飲んだピルをタップで選ぶ。今日飲む番号のピル以降は選べないので無視する
+  /// 休薬中 (まだ再開していない) の時は休薬のピルが今日のピルの 1 つ前に決まるので無視する
   /// スキップした後に戻って選び直した時はスキップを解除し、プレビューに反映する
   void setYazFlexLastTakenPillNumberBeforeRest({required int pageIndex, required int pillNumberInPillSheet}) {
-    if (!state.yazFlexCanSelectAsLastTakenPillBeforeRest(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet)) {
+    if (state.yazFlexIsResting ||
+        !state.yazFlexCanSelectAsLastTakenPillBeforeRest(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet)) {
       return;
     }
     state = state.copyWith(
