@@ -3,7 +3,8 @@
 # 対象外:
 # - appstore_screenshot/: SCREENSHOT_CATALOG=true でビルドしたカタログアプリと LANG の指定が要る (appstore-screenshots workflow が実行する)
 # - simtunnel/: simtunnel セッションの起動時に初期設定を突破する flow で、検証は feature_appeal/ が同じサブフローで行う
+# - lifetime_offer/: オファー画面は RevenueCat の offering (StoreKit の商品) が取れるまでインジケーターのままで、
+#   App Store の商品を取得できない CI の Simulator では表示されない (maestro-e2e run 39906545518 の失敗時の画面で確認)
 flows:
   - "yaz_flex/*"
   - "feature_appeal/*"
-  - "lifetime_offer/*"
