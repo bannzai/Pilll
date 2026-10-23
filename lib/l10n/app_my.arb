@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "“ဟုတ်ကဲ့” ကိုရွေးပါက\nအနားယူကာလပြီးဆုံးပြီးနောက် ဘယ်နှရက်မြောက်နေ့လဲကို ပြသနိုင်အောင် သတ်မှတ်ပေးပါမည်",
   "yazFlexLastRestDurationTitle": "ကျေးဇူးပြု၍\nယခင်နားချိန်အကြောင်း ပြောပြပါ",
   "yazFlexSkipRestDuration": "ဆေးနားကာလ ထည့်သွင်းမှုကို ကျော်ရန်",
+  "yazFlexSkipRestDurationDialogTitle": "ဆေးနားကာလ ထည့်သွင်းမှုကို ကျော်မည်",
   "yazFlexLastRestDurationBeginDate": "နားရက်စတင်သည့်နေ့",
   "yazFlexLastRestDurationEndDate": "ပြန်လည်သောက်သုံးစတင်သည့်နေ့",
   "yazFlexSelectDate": "ရက်စွဲကို ရွေးပါ",

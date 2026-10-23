@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "“ඔව්” තෝරාගත් විට\nවිවේක කාලය අවසන් වූ පසු කීවැනි දිනදැයි පෙන්වන ලෙස සකසනු ඇත",
   "yazFlexLastRestDurationTitle": "කරුණාකර\nපෙර විරාම කාලය ගැන අපට කියන්න",
   "yazFlexSkipRestDuration": "විරාම කාලය ඇතුළත් කිරීම මඟ හරින්න",
+  "yazFlexSkipRestDurationDialogTitle": "විරාම කාලය ඇතුළත් කිරීම මඟ හරින්න",
   "yazFlexLastRestDurationBeginDate": "විරාමය ආරම්භ වූ දිනය",
   "yazFlexLastRestDurationEndDate": "නැවත ලබාගැනීම ආරම්භ කළ දිනය",
   "yazFlexSelectDate": "දිනය තෝරන්න",

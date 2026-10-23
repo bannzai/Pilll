@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Ako izaberete „Da“,\npodesićemo prikaz koliko je dana prošlo od završetka pauze.",
   "yazFlexLastRestDurationTitle": "Молимо,\nреците нам о претходној паузи",
   "yazFlexSkipRestDuration": "Прескочи унос паузе",
+  "yazFlexSkipRestDurationDialogTitle": "Прескочите унос паузе",
   "yazFlexLastRestDurationBeginDate": "Дан када је почела пауза",
   "yazFlexLastRestDurationEndDate": "Дан када сте поново почели са узимањем",
   "yazFlexSelectDate": "Изаберите датум",

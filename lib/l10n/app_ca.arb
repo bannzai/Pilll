@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Si selecciones «Sí»,\nho configurarem perquè es mostri quants dies han passat des del final del descans.",
   "yazFlexLastRestDurationTitle": "Si us plau,\nexplica'ns l'últim període de descans",
   "yazFlexSkipRestDuration": "Omet la introducció del període de descans",
+  "yazFlexSkipRestDurationDialogTitle": "Omet l’entrada del descans",
   "yazFlexLastRestDurationBeginDate": "Dia d’inici de la pausa",
   "yazFlexLastRestDurationEndDate": "Dia en què vas reprendre la presa",
   "yazFlexSelectDate": "Seleccioneu una data",

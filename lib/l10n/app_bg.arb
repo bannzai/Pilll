@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Ако изберете „Да“,\nще настроим показването на това кой ден е след края на паузата.",
   "yazFlexLastRestDurationTitle": "Моля,\nкажете ни за предишния период на пауза",
   "yazFlexSkipRestDuration": "Пропуснете въвеждането на почивката",
+  "yazFlexSkipRestDurationDialogTitle": "Пропускане на въвеждането на почивката",
   "yazFlexLastRestDurationBeginDate": "Денят, в който е започнала паузата",
   "yazFlexLastRestDurationEndDate": "Дата на подновяване на приема",
   "yazFlexSelectDate": "Изберете дата",

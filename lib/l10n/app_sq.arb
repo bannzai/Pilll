@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Nëse zgjidhni “Po”,\ndo ta caktojmë që të shfaqet sa ditë kanë kaluar që nga përfundimi i pushimit.",
   "yazFlexLastRestDurationTitle": "Ju lutemi,\nna tregoni për pushimin e mëparshëm",
   "yazFlexSkipRestDuration": "Kalo futjen e periudhës së pushimit",
+  "yazFlexSkipRestDurationDialogTitle": "Kalo futjen e periudhës së pauzës",
   "yazFlexLastRestDurationBeginDate": "Dita kur filloi pushimi",
   "yazFlexLastRestDurationEndDate": "Dita kur rifilluat marrjen",
   "yazFlexSelectDate": "Zgjidhni datën",

@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "ប្រសិនបើអ្នកជ្រើសរើស «បាទ/ចាស»\nយើងនឹងកំណត់ឱ្យអាចបង្ហាញថា ជាថ្ងៃទីប៉ុន្មានបន្ទាប់ពីចប់រយៈពេលឈប់លេបថ្នាំ។",
   "yazFlexLastRestDurationTitle": "សូមប្រាប់យើង\nអំពីរយៈពេលឈប់ថ្នាំលើកមុន",
   "yazFlexSkipRestDuration": "រំលងការបញ្ចូលរយៈពេលឈប់ថ្នាំ",
+  "yazFlexSkipRestDurationDialogTitle": "រំលងការបញ្ចូលរយៈពេលសម្រាក",
   "yazFlexLastRestDurationBeginDate": "ថ្ងៃដែលការផ្អាកបានចាប់ផ្ដើម",
   "yazFlexLastRestDurationEndDate": "ថ្ងៃដែលអ្នកបានចាប់ផ្ដើមប្រើម្តងទៀត",
   "yazFlexSelectDate": "ជ្រើសរើសកាលបរិច្ឆេទ",

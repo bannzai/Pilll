@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "“हो” छान्नुभयो भने\nविश्राम अवधि सकिएपछि कति दिन भयो भन्ने देखिने गरी सेट गरिनेछ",
   "yazFlexLastRestDurationTitle": "कृपया\nअघिल्लो विश्राम अवधिबारे हामीलाई बताउनुहोस्",
   "yazFlexSkipRestDuration": "ब्रेक अवधि प्रविष्ट नगरी अघि बढ्नुहोस्",
+  "yazFlexSkipRestDurationDialogTitle": "विश्राम अवधिको प्रविष्टि छोड्नुहोस्",
   "yazFlexLastRestDurationBeginDate": "ब्रेक सुरु भएको दिन",
   "yazFlexLastRestDurationEndDate": "फेरि खान सुरु गरेको दिन",
   "yazFlexSelectDate": "मिति चयन गर्नुहोस्",

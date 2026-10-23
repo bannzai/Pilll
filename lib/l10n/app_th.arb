@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "หากคุณเลือก “ใช่”\nเราจะตั้งค่าให้สามารถแสดงได้ว่าเป็นวันที่เท่าไรหลังจากช่วงหยุดยา",
   "yazFlexLastRestDurationTitle": "กรุณา\nบอกเราเกี่ยวกับช่วงหยุดยาครั้งก่อน",
   "yazFlexSkipRestDuration": "ข้ามการกรอกช่วงหยุดยา",
+  "yazFlexSkipRestDurationDialogTitle": "ข้ามการบันทึกช่วงหยุดยา",
   "yazFlexLastRestDurationBeginDate": "วันที่เริ่มช่วงหยุดยา",
   "yazFlexLastRestDurationEndDate": "วันที่กลับมาเริ่มรับประทานอีกครั้ง",
   "yazFlexSelectDate": "เลือกวันที่",

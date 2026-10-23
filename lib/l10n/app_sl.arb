@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Če izberete »Da«, \nbomo nastavili prikaz, koliko dni je minilo od konca premora.",
   "yazFlexLastRestDurationTitle": "Prosimo,\npovejte nam o prejšnjem premoru",
   "yazFlexSkipRestDuration": "Preskoči vnos premora",
+  "yazFlexSkipRestDurationDialogTitle": "Preskoči vnos premora",
   "yazFlexLastRestDurationBeginDate": "Dan začetka premora",
   "yazFlexLastRestDurationEndDate": "Dan ponovnega začetka jemanja",
   "yazFlexSelectDate": "Izberite datum",

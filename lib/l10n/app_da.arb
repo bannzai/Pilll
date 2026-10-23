@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Hvis du vælger “Ja”,\nindstiller vi det, så antal dage siden pausen sluttede kan vises.",
   "yazFlexLastRestDurationTitle": "Fortæl os venligst\nom din seneste pause",
   "yazFlexSkipRestDuration": "Spring indtastning af pause over",
+  "yazFlexSkipRestDurationDialogTitle": "Spring registrering af pause over",
   "yazFlexLastRestDurationBeginDate": "Dagen, hvor pausen startede",
   "yazFlexLastRestDurationEndDate": "Dato for genoptagelse",
   "yazFlexSelectDate": "Vælg en dato",

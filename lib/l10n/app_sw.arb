@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Ukichagua “Ndiyo”,\ntutaiweka ili ionyeshe ni siku ya ngapi tangu mapumziko yalipoisha.",
   "yazFlexLastRestDurationTitle": "Tafadhali\ntuambie kuhusu mapumziko yako ya mwisho",
   "yazFlexSkipRestDuration": "Ruka kuingiza kipindi cha mapumziko",
+  "yazFlexSkipRestDurationDialogTitle": "Ruka kuingiza kipindi cha mapumziko",
   "yazFlexLastRestDurationBeginDate": "Siku ambayo mapumziko yalianza",
   "yazFlexLastRestDurationEndDate": "Siku uliyoanza tena kutumia",
   "yazFlexSelectDate": "Chagua tarehe",

@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Jos valitset ”Kyllä”,\nasetamme näytettäväksi, monesko päivä tauon päättymisestä on menossa.",
   "yazFlexLastRestDurationTitle": "Kerrothan meille\nedellisestä tauostasi",
   "yazFlexSkipRestDuration": "Ohita tauon syöttäminen",
+  "yazFlexSkipRestDurationDialogTitle": "Ohita taukojakson kirjaaminen",
   "yazFlexLastRestDurationBeginDate": "Tauon alkamispäivä",
   "yazFlexLastRestDurationEndDate": "Päivä, jolloin aloitit käytön uudelleen",
   "yazFlexSelectDate": "Valitse päivämäärä",

@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "თუ აირჩევთ „დიახ“-ს,\nდავაყენებთ ისე, რომ გამოჩნდეს, რამდენი დღე გავიდა შესვენების დასრულებიდან.",
   "yazFlexLastRestDurationTitle": "გთხოვთ,\ngვაცნობეთ წინა შესვენების შესახებ",
   "yazFlexSkipRestDuration": "გამოტოვეთ შესვენების პერიოდის შეყვანა",
+  "yazFlexSkipRestDurationDialogTitle": "შესვენების პერიოდის შეყვანის გამოტოვება",
   "yazFlexLastRestDurationBeginDate": "დღე, როცა შესვენება დაიწყო",
   "yazFlexLastRestDurationEndDate": "მიღების განახლების დღე",
   "yazFlexSelectDate": "აირჩიეთ თარიღი",

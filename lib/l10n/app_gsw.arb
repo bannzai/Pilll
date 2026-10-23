@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Wänn du „Ja“ uuswählsch,\nstellemer s so ii, dass aazeigt wird, dr wievielt Tag sit em Ändi vo dr Pause esch.",
   "yazFlexLastRestDurationTitle": "Bitte verzell is\nvo diner letschte Pause",
   "yazFlexSkipRestDuration": "Iigab vo dr Pause überspringe",
+  "yazFlexSkipRestDurationDialogTitle": "D Iigab vo dr Pause überspringe",
   "yazFlexLastRestDurationBeginDate": "Dr Tag, a wott d Pause aagfange het",
   "yazFlexLastRestDurationEndDate": "Tag, a dem du d Iinahm wieder ufgnuu hesch",
   "yazFlexSelectDate": "Es Datum uswehle",

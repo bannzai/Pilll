@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Když vyberete „Ano“,\nnastavíme zobrazení počtu dní od konce pauzy.",
   "yazFlexLastRestDurationTitle": "Prosím,\nřekněte nám o svém posledním období pauzy",
   "yazFlexSkipRestDuration": "Přeskočit zadání pauzy",
+  "yazFlexSkipRestDurationDialogTitle": "Přeskočit zadání pauzy",
   "yazFlexLastRestDurationBeginDate": "Den začátku pauzy",
   "yazFlexLastRestDurationEndDate": "Den opětovného zahájení užívání",
   "yazFlexSelectDate": "Vyberte datum",

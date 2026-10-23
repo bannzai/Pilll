@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Jei pasirinksite „Taip“,\nsukonfigūruosime, kad būtų rodoma, kelinta diena po pertraukos pabaigos.",
   "yazFlexLastRestDurationTitle": "Prašome\npapasakoti apie ankstesnę pertrauką",
   "yazFlexSkipRestDuration": "Praleisti pertraukos laikotarpio įvedimą",
+  "yazFlexSkipRestDurationDialogTitle": "Praleisti pertraukos laikotarpio įvedimą",
   "yazFlexLastRestDurationBeginDate": "Diena, kai prasidėjo pertrauka",
   "yazFlexLastRestDurationEndDate": "Diena, kai vėl pradėjote vartoti",
   "yazFlexSelectDate": "Pasirinkite datą",

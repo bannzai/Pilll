@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Wenn du „Ja“ auswählst,\nrichten wir es so ein, dass angezeigt werden kann, der wievielte Tag seit dem Ende der Pause ist.",
   "yazFlexLastRestDurationTitle": "Bitte erzählen Sie uns\nvon Ihrer letzten Einnahmepause",
   "yazFlexSkipRestDuration": "Eingabe der Pause überspringen",
+  "yazFlexSkipRestDurationDialogTitle": "Eingabe der Pause überspringen",
   "yazFlexLastRestDurationBeginDate": "Tag des Beginns der Pause",
   "yazFlexLastRestDurationEndDate": "Tag der Wiederaufnahme der Einnahme",
   "yazFlexSelectDate": "Datum auswählen",

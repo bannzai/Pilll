@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Jeśli wybierzesz „Tak”,\nustawimy wyświetlanie, który to dzień od zakończenia przerwy.",
   "yazFlexLastRestDurationTitle": "Powiedz nam proszę\no poprzedniej przerwie",
   "yazFlexSkipRestDuration": "Pomiń wpisywanie przerwy",
+  "yazFlexSkipRestDurationDialogTitle": "Pomiń wprowadzanie przerwy",
   "yazFlexLastRestDurationBeginDate": "Dzień rozpoczęcia przerwy",
   "yazFlexLastRestDurationEndDate": "Dzień wznowienia przyjmowania",
   "yazFlexSelectDate": "Wybierz datę",

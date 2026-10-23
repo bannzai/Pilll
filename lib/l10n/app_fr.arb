@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Si vous choisissez « Oui »,\nnous le configurerons pour afficher le nombre de jours écoulés depuis la fin de la pause.",
   "yazFlexLastRestDurationTitle": "Veuillez nous indiquer\nvotre dernière période de pause",
   "yazFlexSkipRestDuration": "Ignorer la saisie de la pause",
+  "yazFlexSkipRestDurationDialogTitle": "Ignorer la saisie de la pause",
   "yazFlexLastRestDurationBeginDate": "Date de début de la pause",
   "yazFlexLastRestDurationEndDate": "Date de reprise de la prise",
   "yazFlexSelectDate": "Sélectionnez une date",

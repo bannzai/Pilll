@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Hvis du velger «Ja»,\nsetter vi det opp slik at det viser hvor mange dager det er siden pausen tok slutt.",
   "yazFlexLastRestDurationTitle": "Fortell oss gjerne\nom den forrige pausen din",
   "yazFlexSkipRestDuration": "Hopp over registrering av pausen",
+  "yazFlexSkipRestDurationDialogTitle": "Hopp over registrering av pauseperioden",
   "yazFlexLastRestDurationBeginDate": "Dagen pausen startet",
   "yazFlexLastRestDurationEndDate": "Datoen du begynte å ta den igjen",
   "yazFlexSelectDate": "Velg en dato",

@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "إذا اخترتِ «نعم»،\nفسنضبط الإعدادات بحيث يمكن عرض عدد الأيام منذ انتهاء فترة التوقف.",
   "yazFlexLastRestDurationTitle": "يرجى إخبارنا\nعن فترة التوقف السابقة",
   "yazFlexSkipRestDuration": "تخطي إدخال فترة التوقف",
+  "yazFlexSkipRestDurationDialogTitle": "تخطي إدخال فترة التوقف",
   "yazFlexLastRestDurationBeginDate": "تاريخ بدء فترة التوقف",
   "yazFlexLastRestDurationEndDate": "تاريخ استئناف تناول الحبوب",
   "yazFlexSelectDate": "حددي التاريخ",

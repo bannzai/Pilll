@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Se escolles «Si»,\nconfigurarémolo para que se mostre cantos días pasaron desde que rematou a pausa.",
   "yazFlexLastRestDurationTitle": "Cóntanos, por favor,\nsobre o teu último descanso",
   "yazFlexSkipRestDuration": "Omitir a introdución do período de descanso",
+  "yazFlexSkipRestDurationDialogTitle": "Omitir o rexistro do descanso",
   "yazFlexLastRestDurationBeginDate": "Día no que comezou a pausa",
   "yazFlexLastRestDurationEndDate": "Día no que retomaches a toma",
   "yazFlexSelectDate": "Selecciona unha data",

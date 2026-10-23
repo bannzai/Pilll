@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Ak vyberiete „Áno“,\nnastavíme zobrazovanie, ktorý deň je od konca prestávky.",
   "yazFlexLastRestDurationTitle": "Prosím,\npovedzte nám o vašej predchádzajúcej prestávke",
   "yazFlexSkipRestDuration": "Preskočiť zadanie prestávky",
+  "yazFlexSkipRestDurationDialogTitle": "Preskočiť zadanie prestávky",
   "yazFlexLastRestDurationBeginDate": "Deň začiatku prestávky",
   "yazFlexLastRestDurationEndDate": "Deň opätovného začatia užívania",
   "yazFlexSelectDate": "Vyberte dátum",
