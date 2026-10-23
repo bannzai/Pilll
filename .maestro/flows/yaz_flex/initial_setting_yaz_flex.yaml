@@ -18,7 +18,10 @@ appId: com.mizuki.Ohashi.Pilll.dev
       - waitForAnimationToEnd
 
 # 「ヤーズフレックスの方ですか？」→ はい
-- assertVisible: "ヤーズフレックスの方ですか？"
+# CI の Simulator ではクリーンインストール直後の起動に時間がかかるため表示を待つ
+- extendedWaitUntil:
+    visible: "ヤーズフレックスの方ですか？"
+    timeout: 60000
 - tapOn: "はい"
 - waitForAnimationToEnd
 
