@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "ඖෂධ ගැනීමේ විරාම කාලය පසුව මුල් පිටුවේ “ඖෂධ ගැනීමේ විරාමය” වෙතින් ඇතුළත් කළ හැකියි.",
   "yazFlexSkipRestDurationDialogSkip": "මඟ හරින්න",
   "yazFlexBeginPillNumberPageTitle": "චක්‍රයේ ෂීට් එකේ ආරම්භය කීවන වර ලබාගැනීමද?",
+  "yazFlexBeginPillNumberPageNote": "කරුණාකර ෂීට් එක ආරම්භ කිරීමට පෙර තිබූ විරාමයෙන් ගත වූ දින ගණන අනුව පිළිතුරු දෙන්න.",
   "yazFlexNextInputIsRestDuration": "ඊළඟට, පෙර විරාම කාලය ඇතුළත් කරන්න"
 }

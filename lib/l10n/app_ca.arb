@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Més endavant podràs introduir el període de descans de la presa a «Descans de la presa» de la pantalla d’inici.",
   "yazFlexSkipRestDurationDialogSkip": "Omet",
   "yazFlexBeginPillNumberPageTitle": "L'inici del blíster a quina presa del cicle correspon?",
+  "yazFlexBeginPillNumberPageNote": "Si us plau, responeu en funció dels dies transcorreguts des del descans abans de començar la làmina.",
   "yazFlexNextInputIsRestDuration": "A continuació, introdueix l’últim període de descans"
 }

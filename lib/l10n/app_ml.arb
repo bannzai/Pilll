@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "മരുന്ന് കഴിക്കുന്നതിലെ ഇടവേളയുടെ കാലയളവ് പിന്നീട് ഹോമിലെ “മരുന്ന് കഴിക്കുന്നതിലെ ഇടവേള”യിൽ നിന്ന് നൽകാം.",
   "yazFlexSkipRestDurationDialogSkip": "ഒഴിവാക്കുക",
   "yazFlexBeginPillNumberPageTitle": "ചക്രത്തിൽ ഷീറ്റിന്റെ തുടക്കം എത്രാമത്തെ കഴിക്കലാണ്?",
+  "yazFlexBeginPillNumberPageNote": "ഷീറ്റ് ആരംഭിക്കുന്നതിന് മുമ്പുള്ള ഇടവേള കഴിഞ്ഞ് എത്ര ദിവസം ആയെന്നത് അടിസ്ഥാനമാക്കി ദയവായി മറുപടി നൽകുക.",
   "yazFlexNextInputIsRestDuration": "അടുത്തതായി, മുമ്പത്തെ ഇടവേള നൽകുക"
 }

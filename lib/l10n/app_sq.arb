@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Periudhën e pauzës së marrjes mund ta vendosni më vonë te “Pauza e marrjes” në ekranin kryesor.",
   "yazFlexSkipRestDurationDialogSkip": "Kaloje",
   "yazFlexBeginPillNumberPageTitle": "Fillimi i fletës me cilën marrje në cikël përkon?",
+  "yazFlexBeginPillNumberPageNote": "Ju lutemi, përgjigjuni bazuar në numrin e ditëve që kanë kaluar që nga pushimi para fillimit të fletës.",
   "yazFlexNextInputIsRestDuration": "Më pas, shkruani pushimin e mëparshëm"
 }

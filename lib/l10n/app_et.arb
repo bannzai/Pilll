@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Võtmispausi perioodi saate hiljem sisestada avalehe jaotises „Võtmispaus”.",
   "yazFlexSkipRestDurationDialogSkip": "Jäta vahele",
   "yazFlexBeginPillNumberPageTitle": "Mitmes võtmine tsüklis on lehe algus?",
+  "yazFlexBeginPillNumberPageNote": "Palun vastake selle põhjal, mitu päeva on möödunud enne lehe alustamist olnud pausist.",
   "yazFlexNextInputIsRestDuration": "Järgmisena sisestage oma eelmine paus"
 }

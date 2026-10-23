@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Hartzeko atsedenaldia geroago sar dezakezu hasierako pantailako «Hartzeko atsedenaldia» aukeratik.",
   "yazFlexSkipRestDurationDialogSkip": "Saltatu",
   "yazFlexBeginPillNumberPageTitle": "Zikloan, zein hartualdi da xaflaren hasiera?",
+  "yazFlexBeginPillNumberPageNote": "Erantzun, mesedez, orria hasi aurreko atsedenalditik igaro diren egunen kopuruaren arabera.",
   "yazFlexNextInputIsRestDuration": "Ondoren, aurreko atsedenaldia sartu"
 }

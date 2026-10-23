@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Maaari mong ilagay mamaya ang panahon ng pahinga sa pag-inom mula sa “Pahinga sa pag-inom” sa Home.",
   "yazFlexSkipRestDurationDialogSkip": "Laktawan",
   "yazFlexBeginPillNumberPageTitle": "Pang-ilang pag-inom sa cycle ang simula ng sheet?",
+  "yazFlexBeginPillNumberPageNote": "Mangyaring sumagot batay sa bilang ng mga araw mula noong pahinga bago simulan ang pack.",
   "yazFlexNextInputIsRestDuration": "Susunod, ilagay ang huli mong pahinga sa pag-inom"
 }

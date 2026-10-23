@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "تاسې کولی شئ د درملو د وقفې موده وروسته د کور سکرین له “د درملو وقفه” څخه دننه کړئ.",
   "yazFlexSkipRestDurationDialogSkip": "تېرول",
   "yazFlexBeginPillNumberPageTitle": "د دورې له مخې د پاڼې پیل څویم ځل اخیستل دي؟",
+  "yazFlexBeginPillNumberPageNote": "مهرباني وکړئ د شېټ له پيلولو مخکې د وقفې له پای ته رسېدو راهيسې د تېر شويو ورځو شمېر پر بنسټ ځواب ورکړئ.",
   "yazFlexNextInputIsRestDuration": "بل پړاو کې خپله پخوانۍ وقفه دننه کړئ"
 }

@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "يمكنكِ إدخال فترة التوقف عن تناول الحبوب لاحقًا من «التوقف عن تناول الحبوب» في الصفحة الرئيسية.",
   "yazFlexSkipRestDurationDialogSkip": "تخطي",
   "yazFlexBeginPillNumberPageTitle": "في أي جرعة من الدورة يبدأ الشريط؟",
+  "yazFlexBeginPillNumberPageNote": "يُرجى الإجابة بناءً على عدد الأيام التي مضت منذ فترة التوقف قبل بدء الشريط.",
   "yazFlexNextInputIsRestDuration": "بعد ذلك، أدخلي فترة التوقف السابقة"
 }

@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Perioden for pause i inntak kan legges inn senere under «Pause i inntak» på hjemmeskjermen.",
   "yazFlexSkipRestDurationDialogSkip": "Hopp over",
   "yazFlexBeginPillNumberPageTitle": "Hvilket nummer i syklusen er starten på brettet?",
+  "yazFlexBeginPillNumberPageNote": "Vennligst svar basert på hvor mange dager som har gått siden pausen før du startet brettet.",
   "yazFlexNextInputIsRestDuration": "Deretter legger du inn forrige pause"
 }

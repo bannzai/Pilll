@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Уух завсарлагын хугацааг дараа нь Нүүр хуудасны “Уух завсарлага” хэсгээс оруулах боломжтой.",
   "yazFlexSkipRestDurationDialogSkip": "Алгасах",
   "yazFlexBeginPillNumberPageTitle": "Циклийн хэд дэх уух үе нь хавтангийн эхлэл вэ?",
+  "yazFlexBeginPillNumberPageNote": "Шахмалыг эхлэхийн өмнөх завсарлагаанаас хойш өнгөрсөн хоногийн тоонд үндэслэн хариулна уу.",
   "yazFlexNextInputIsRestDuration": "Дараа нь өмнөх завсарлагаа оруулна уу"
 }

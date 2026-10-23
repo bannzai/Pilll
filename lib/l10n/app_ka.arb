@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "მიღების შესვენების პერიოდის შეყვანა მოგვიანებითაც შეგიძლიათ მთავარ ეკრანზე „მიღების შესვენება“-დან.",
   "yazFlexSkipRestDurationDialogSkip": "გამოტოვება",
   "yazFlexBeginPillNumberPageTitle": "ციკლში მერამდენე მიღებაა შიტის დასაწყისი?",
+  "yazFlexBeginPillNumberPageNote": "გთხოვთ, უპასუხოთ იმ დღეების რაოდენობის მიხედვით, რომლებიც გავიდა ფურცლის დაწყებამდე არსებული შესვენების შემდეგ.",
   "yazFlexNextInputIsRestDuration": "შემდეგ შეიყვანეთ წინა შესვენება"
 }

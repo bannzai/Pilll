@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Qəbul fasiləsi müddətini sonra Ana səhifədəki “Qəbul fasiləsi” bölməsindən daxil edə bilərsiniz.",
   "yazFlexSkipRestDurationDialogSkip": "Keçin",
   "yazFlexBeginPillNumberPageTitle": "Sikl üzrə vərəqin başlanğıcı neçənci qəbuldur?",
+  "yazFlexBeginPillNumberPageNote": "Zəhmət olmasa, vərəqə başlamazdan əvvəlki fasilədən sonra keçən günlərin sayına əsasən cavab verin.",
   "yazFlexNextInputIsRestDuration": "Növbəti addımda əvvəlki fasilə müddətini daxil edin"
 }

@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "می‌توانید دوره توقف مصرف را بعداً از «توقف مصرف» در صفحه اصلی وارد کنید.",
   "yazFlexSkipRestDurationDialogSkip": "رد کردن",
   "yazFlexBeginPillNumberPageTitle": "شروع شیت در چرخه، چندمین نوبت مصرف است؟",
+  "yazFlexBeginPillNumberPageNote": "لطفاً بر اساس تعداد روزهای گذشته از دورهٔ وقفه قبل از شروع شیت پاسخ دهید.",
   "yazFlexNextInputIsRestDuration": "در مرحله بعد، وقفه قبلی را وارد کنید"
 }

@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Bạn có thể nhập thời gian nghỉ uống sau trong mục “Nghỉ uống” ở Trang chủ.",
   "yazFlexSkipRestDurationDialogSkip": "Bỏ qua",
   "yazFlexBeginPillNumberPageTitle": "Đầu vỉ tương ứng với lần uống thứ mấy trong chu kỳ?",
+  "yazFlexBeginPillNumberPageNote": "Vui lòng trả lời dựa trên số ngày đã trôi qua kể từ quãng nghỉ trước khi bắt đầu vỉ thuốc.",
   "yazFlexNextInputIsRestDuration": "Tiếp theo, hãy nhập khoảng nghỉ trước đó"
 }

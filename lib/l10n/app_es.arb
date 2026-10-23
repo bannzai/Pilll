@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Más adelante puedes introducir el período de descanso de la toma desde «Descanso de la toma» en Inicio.",
   "yazFlexSkipRestDurationDialogSkip": "Omitir",
   "yazFlexBeginPillNumberPageTitle": "¿A qué toma del ciclo corresponde el inicio del blíster?",
+  "yazFlexBeginPillNumberPageNote": "Responde en función de los días transcurridos desde el descanso antes de empezar el blíster.",
   "yazFlexNextInputIsRestDuration": "A continuación, introduce tu descanso anterior"
 }

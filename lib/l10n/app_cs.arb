@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Období přestávky v užívání můžete zadat později v části „Přestávka v užívání“ na domovské obrazovce.",
   "yazFlexSkipRestDurationDialogSkip": "Přeskočit",
   "yazFlexBeginPillNumberPageTitle": "Které užití v cyklu odpovídá začátku plata?",
+  "yazFlexBeginPillNumberPageNote": "Odpovězte prosím podle počtu dní, které uplynuly od přestávky před zahájením plata.",
   "yazFlexNextInputIsRestDuration": "Dále zadejte předchozí pauzu v užívání"
 }

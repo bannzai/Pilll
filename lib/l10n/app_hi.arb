@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "दवा लेने के विराम की अवधि बाद में होम के “दवा लेने का विराम” से दर्ज की जा सकती है।",
   "yazFlexSkipRestDurationDialogSkip": "छोड़ें",
   "yazFlexBeginPillNumberPageTitle": "चक्र में शीट की शुरुआत कौन-सी खुराक है?",
+  "yazFlexBeginPillNumberPageNote": "कृपया शीट शुरू करने से पहले के ब्रेक के बाद बीते दिनों की संख्या के आधार पर उत्तर दें।",
   "yazFlexNextInputIsRestDuration": "अगले चरण में पिछला ब्रेक दर्ज करें"
 }

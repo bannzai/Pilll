@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Vartojimo pertraukos laikotarpį vėliau galėsite įvesti pradžios ekrano skiltyje „Vartojimo pertrauka“.",
   "yazFlexSkipRestDurationDialogSkip": "Praleisti",
   "yazFlexBeginPillNumberPageTitle": "Kelintas vartojimas cikle yra lapelio pradžia?",
+  "yazFlexBeginPillNumberPageNote": "Prašome atsakyti pagal dienų skaičių, praėjusį nuo pertraukos prieš pradedant lapelį.",
   "yazFlexNextInputIsRestDuration": "Toliau įveskite ankstesnę pertrauką"
 }

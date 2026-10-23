@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "ঔষধ সেৱন বিৰতিৰ সময়সীমা পিছত হোমৰ «ঔষধ সেৱন বিৰতি»ৰ পৰা লিখিব পাৰিব।",
   "yazFlexSkipRestDurationDialogSkip": "এৰি দিয়ক",
   "yazFlexBeginPillNumberPageTitle": "চক্ৰ অনুসৰি শ্বীটৰ আৰম্ভণি কোন নম্বৰ সেৱন?",
+  "yazFlexBeginPillNumberPageNote": "অনুগ্ৰহ কৰি শ্বীট আৰম্ভ কৰাৰ আগৰ বিৰতিৰ পিছত পাৰ হোৱা দিনৰ সংখ্যাৰ ভিত্তিত উত্তৰ দিয়ক।",
   "yazFlexNextInputIsRestDuration": "ইয়াৰ পিছত আগৰ ঔষধ-বিৰতি লিখক"
 }

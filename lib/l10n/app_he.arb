@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "אפשר להזין אחר כך את תקופת ההפסקה בנטילה דרך „הפסקה בנטילה” במסך הבית.",
   "yazFlexSkipRestDurationDialogSkip": "דלגי",
   "yazFlexBeginPillNumberPageTitle": "איזו נטילה במחזור היא תחילת המגשית?",
+  "yazFlexBeginPillNumberPageNote": "אנא השיבי לפי מספר הימים שחלפו מאז ההפסקה שלפני תחילת החפיסה.",
   "yazFlexNextInputIsRestDuration": "בשלב הבא, יש להזין את ההפסקה הקודמת"
 }

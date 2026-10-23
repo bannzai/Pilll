@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Die pouseperiode kan later by \"Neem 'n pouse\" op die tuisskerm ingevul word.",
   "yazFlexSkipRestDurationDialogSkip": "Slaan oor",
   "yazFlexBeginPillNumberPageTitle": "Watter nommer dosis in die siklus is die begin van die strook?",
+  "yazFlexBeginPillNumberPageNote": "Antwoord asseblief op grond van die aantal dae wat verloop het sedert die pouse voor die begin van die strook.",
   "yazFlexNextInputIsRestDuration": "Volgende voer jy jou vorige pouse in"
 }

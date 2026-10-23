@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Isikhathi sekhefu lokuphuza singafakwa kamuva kokuthi “Ikhefu lokuphuza” ekhasini lasekhaya.",
   "yazFlexSkipRestDurationDialogSkip": "Yeqa",
   "yazFlexBeginPillNumberPageTitle": "Ukuqala kwephepha kuhambisana nokuphuza kwesingaki emjikelezweni?",
+  "yazFlexBeginPillNumberPageNote": "Sicela uphendule ngokusekelwe enanini lezinsuku esezidlulile kusukela ekhefini ngaphambi kokuqala ishidi.",
   "yazFlexNextInputIsRestDuration": "Okulandelayo, faka ikhefu lakho langaphambilini"
 }

@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Ընդունման դադարի ժամանակահատվածը կարող եք ավելի ուշ մուտքագրել Գլխավորի «Ընդունման դադար» բաժնից։",
   "yazFlexSkipRestDurationDialogSkip": "Բաց թողնել",
   "yazFlexBeginPillNumberPageTitle": "Ցիկլում ո՞րերորդ ընդունումն է թերթիկի սկիզբը։",
+  "yazFlexBeginPillNumberPageNote": "Խնդրում ենք պատասխանել՝ հիմնվելով թերթիկը սկսելուց առաջ եղած դադարից անցած օրերի քանակի վրա։",
   "yazFlexNextInputIsRestDuration": "Հաջորդը մուտքագրեք նախորդ դադարը"
 }

@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "औषध सेवन विश्राम अवधि पछि होमको “औषध सेवन विश्राम” बाट प्रविष्ट गर्न सकिन्छ।",
   "yazFlexSkipRestDurationDialogSkip": "छोड्नुहोस्",
   "yazFlexBeginPillNumberPageTitle": "चक्रमा सिटको सुरु कतिौँ पटकको सेवन हो?",
+  "yazFlexBeginPillNumberPageNote": "कृपया सिट सुरु गर्नु अघिको विश्रामपछि बितेका दिनहरूको संख्याका आधारमा उत्तर दिनुहोस्।",
   "yazFlexNextInputIsRestDuration": "अर्को चरणमा अघिल्लो विश्राम अवधि प्रविष्ट गर्नुहोस्"
 }

@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "દવા લેવાનું વિરામ સમયગાળો પછીથી હોમમાં “દવા લેવાનું વિરામ” માંથી દાખલ કરી શકશો.",
   "yazFlexSkipRestDurationDialogSkip": "છોડી દો",
   "yazFlexBeginPillNumberPageTitle": "ચક્ર મુજબ શીટની શરૂઆત કેટલીમી ગોળી લેવાનું છે?",
+  "yazFlexBeginPillNumberPageNote": "કૃપા કરીને શીટ શરૂ કરતા પહેલાંના વિરામથી કેટલા દિવસ વીતી ગયા છે તેના આધારે જવાબ આપો.",
   "yazFlexNextInputIsRestDuration": "આગળ, અગાઉનો વિરામ દાખલ કરો"
 }

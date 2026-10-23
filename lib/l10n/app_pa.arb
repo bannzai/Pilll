@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "ਗੋਲੀ ਲੈਣ ਦੇ ਵਿਰਾਮ ਦੀ ਮਿਆਦ ਬਾਅਦ ਵਿੱਚ ਹੋਮ ਦੇ “ਗੋਲੀ ਲੈਣ ਦਾ ਵਿਰਾਮ” ਤੋਂ ਦਰਜ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ।",
   "yazFlexSkipRestDurationDialogSkip": "ਛੱਡੋ",
   "yazFlexBeginPillNumberPageTitle": "ਚੱਕਰ ਵਿੱਚ ਸ਼ੀਟ ਦੀ ਸ਼ੁਰੂਆਤ ਕਿਹੜੀ ਨੰਬਰ ਦੀ ਖੁਰਾਕ ਹੈ?",
+  "yazFlexBeginPillNumberPageNote": "ਕਿਰਪਾ ਕਰਕੇ ਸ਼ੀਟ ਸ਼ੁਰੂ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਵਾਲੇ ਵਿਰਾਮ ਤੋਂ ਬਾਅਦ ਬੀਤੇ ਦਿਨਾਂ ਦੀ ਗਿਣਤੀ ਦੇ ਆਧਾਰ 'ਤੇ ਜਵਾਬ ਦਿਓ।",
   "yazFlexNextInputIsRestDuration": "ਅਗਲੇ ਕਦਮ ਵਿੱਚ ਪਿਛਲਾ ਵਿਰਾਮ ਦਰਜ ਕਰੋ"
 }

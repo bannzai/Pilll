@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Vous pourrez saisir plus tard la période de pause de prise depuis « Pause de prise » sur l’écran d’accueil.",
   "yazFlexSkipRestDurationDialogSkip": "Ignorer",
   "yazFlexBeginPillNumberPageTitle": "À quelle prise du cycle correspond le début de la plaquette ?",
+  "yazFlexBeginPillNumberPageNote": "Veuillez répondre en fonction du nombre de jours écoulés depuis la pause avant le début de la plaquette.",
   "yazFlexNextInputIsRestDuration": "Ensuite, indiquez votre dernière pause"
 }

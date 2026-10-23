@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Kullanıma ara verme dönemini daha sonra Ana Ekran’daki “Kullanıma ara verme” bölümünden girebilirsiniz.",
   "yazFlexSkipRestDurationDialogSkip": "Atla",
   "yazFlexBeginPillNumberPageTitle": "Döngüde yaprağın başlangıcı kaçıncı kullanıma denk geliyor?",
+  "yazFlexBeginPillNumberPageNote": "Lütfen, blistere başlamadan önceki aradan bu yana geçen gün sayısına göre yanıt verin.",
   "yazFlexNextInputIsRestDuration": "Sonraki adımda önceki ara dönemini girin"
 }

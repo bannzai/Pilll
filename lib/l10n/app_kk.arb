@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Қабылдау үзілісінің мерзімін кейінірек Басты беттегі «Қабылдау үзілісі» бөлімінен енгізе аласыз.",
   "yazFlexSkipRestDurationDialogSkip": "Өткізіп жіберу",
   "yazFlexBeginPillNumberPageTitle": "Циклдегі парақтың басы нешінші қабылдауға сәйкес келеді?",
+  "yazFlexBeginPillNumberPageNote": "Өтінеміз, парақты бастар алдындағы үзілістен бері өткен күндер санына қарай жауап беріңіз.",
   "yazFlexNextInputIsRestDuration": "Келесі қадамда алдыңғы үзілісті енгізіңіз"
 }

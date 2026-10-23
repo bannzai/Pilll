@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "మందు తీసుకునే విరామ కాలాన్ని తర్వాత హోమ్‌లోని “మందు తీసుకునే విరామం” నుంచి నమోదు చేయవచ్చు.",
   "yazFlexSkipRestDurationDialogSkip": "దాటవేయండి",
   "yazFlexBeginPillNumberPageTitle": "చక్రంలో షీట్ ప్రారంభం ఎన్ని వ సారి తీసుకోవడమా?",
+  "yazFlexBeginPillNumberPageNote": "దయచేసి షీట్ ప్రారంభించే ముందు ఉన్న విరామం ముగిసిన తర్వాత గడిచిన రోజుల సంఖ్య ఆధారంగా సమాధానం ఇవ్వండి.",
   "yazFlexNextInputIsRestDuration": "తర్వాత, మునుపటి విరామాన్ని నమోదు చేయండి"
 }

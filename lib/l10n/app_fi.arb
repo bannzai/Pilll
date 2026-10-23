@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Taukojakson voi syöttää myöhemmin Koti-näytön ”Tauko ottamisesta” -kohdasta.",
   "yazFlexSkipRestDurationDialogSkip": "Ohita",
   "yazFlexBeginPillNumberPageTitle": "Monesko otto kierrossa liuskan alku on?",
+  "yazFlexBeginPillNumberPageNote": "Vastaa sen mukaan, kuinka monta päivää on kulunut ennen liuskan aloittamista olleesta tauosta.",
   "yazFlexNextInputIsRestDuration": "Seuraavaksi syötä edellinen taukosi"
 }

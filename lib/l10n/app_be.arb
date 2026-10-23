@@ -579,5 +579,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Перыяд перапынку ў прыёме можна будзе ўвесці пазней у раздзеле «Перапынак у прыёме» на галоўнай старонцы.",
   "yazFlexSkipRestDurationDialogSkip": "Прапусціць",
   "yazFlexBeginPillNumberPageTitle": "Пачатак блістара — гэта які па ліку прыём у цыкле?",
+  "yazFlexBeginPillNumberPageNote": "Калі ласка, адкажыце на падставе колькасці дзён, што прайшлі з моманту перапынку перад пачаткам блістара.",
   "yazFlexNextInputIsRestDuration": "Далей увядзіце папярэдні перыяд перапынку"
 }
