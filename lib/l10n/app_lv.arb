@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Lūdzu,\npastāstiet mums par iepriekšējo pārtraukumu",
   "yazFlexSkipRestDuration": "Izlaist pārtraukuma perioda ievadi",
   "yazFlexSkipRestDurationDialogTitle": "Izlaist pārtraukuma perioda ievadi",
+  "yazFlexSkipRestDurationDialogMessage": "Lietošanas pārtraukuma periodu vēlāk varēsiet ievadīt sākuma ekrāna sadaļā “Lietošanas pārtraukums”.",
   "yazFlexLastRestDurationBeginDate": "Diena, kad sākās pārtraukums",
   "yazFlexLastRestDurationEndDate": "Diena, kad atsākāt lietošanu",
   "yazFlexSelectDate": "Izvēlieties datumu",

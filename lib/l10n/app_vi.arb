@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Vui lòng cho chúng tôi biết\nvề khoảng nghỉ trước đó của bạn",
   "yazFlexSkipRestDuration": "Bỏ qua nhập thời gian nghỉ thuốc",
   "yazFlexSkipRestDurationDialogTitle": "Bỏ qua nhập thời gian nghỉ thuốc",
+  "yazFlexSkipRestDurationDialogMessage": "Bạn có thể nhập thời gian nghỉ uống sau trong mục “Nghỉ uống” ở Trang chủ.",
   "yazFlexLastRestDurationBeginDate": "Ngày bắt đầu thời gian nghỉ thuốc",
   "yazFlexLastRestDurationEndDate": "Ngày bạn bắt đầu uống lại",
   "yazFlexSelectDate": "Chọn ngày",

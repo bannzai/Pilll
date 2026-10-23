@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Prosím,\npovedzte nám o vašej predchádzajúcej prestávke",
   "yazFlexSkipRestDuration": "Preskočiť zadanie prestávky",
   "yazFlexSkipRestDurationDialogTitle": "Preskočiť zadanie prestávky",
+  "yazFlexSkipRestDurationDialogMessage": "Obdobie prestávky v užívaní môžete zadať neskôr v časti „Prestávka v užívaní“ na domovskej obrazovke.",
   "yazFlexLastRestDurationBeginDate": "Deň začiatku prestávky",
   "yazFlexLastRestDurationEndDate": "Deň opätovného začatia užívania",
   "yazFlexSelectDate": "Vyberte dátum",

@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "कृपया हमें\nपिछले ब्रेक के बारे में बताएं",
   "yazFlexSkipRestDuration": "ब्रेक अवधि दर्ज करना छोड़ें",
   "yazFlexSkipRestDurationDialogTitle": "ब्रेक अवधि की प्रविष्टि छोड़ें",
+  "yazFlexSkipRestDurationDialogMessage": "दवा लेने के विराम की अवधि बाद में होम के “दवा लेने का विराम” से दर्ज की जा सकती है।",
   "yazFlexLastRestDurationBeginDate": "वह दिन जब विराम शुरू हुआ",
   "yazFlexLastRestDurationEndDate": "दोबारा लेना शुरू करने का दिन",
   "yazFlexSelectDate": "तारीख चुनें",

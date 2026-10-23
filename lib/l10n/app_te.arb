@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "దయచేసి\nమునుపటి విరామ కాలం గురించి మాకు చెప్పండి",
   "yazFlexSkipRestDuration": "విరామ కాలాన్ని నమోదు చేయడం దాటవేయండి",
   "yazFlexSkipRestDurationDialogTitle": "విరామ కాలం నమోదు చేయడం దాటవేయండి",
+  "yazFlexSkipRestDurationDialogMessage": "మందు తీసుకునే విరామ కాలాన్ని తర్వాత హోమ్‌లోని “మందు తీసుకునే విరామం” నుంచి నమోదు చేయవచ్చు.",
   "yazFlexLastRestDurationBeginDate": "విరామం ప్రారంభమైన రోజు",
   "yazFlexLastRestDurationEndDate": "మళ్లీ తీసుకోవడం ప్రారంభించిన రోజు",
   "yazFlexSelectDate": "తేదీని ఎంచుకోండి",

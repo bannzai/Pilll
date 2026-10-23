@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Molimo,\nrecite nam o prethodnoj pauzi",
   "yazFlexSkipRestDuration": "Preskoči unos pauze",
   "yazFlexSkipRestDurationDialogTitle": "Preskoči unos pauze",
+  "yazFlexSkipRestDurationDialogMessage": "Razdoblje pauze uzimanja možete unijeti kasnije u odjeljku „Pauza uzimanja” na početnom zaslonu.",
   "yazFlexLastRestDurationBeginDate": "Dan kada je pauza započela",
   "yazFlexLastRestDurationEndDate": "Dan kada ste ponovno počeli uzimati",
   "yazFlexSelectDate": "Odaberite datum",

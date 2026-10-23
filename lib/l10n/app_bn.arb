@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "অনুগ্রহ করে\nআগের বিরতি সম্পর্কে জানান",
   "yazFlexSkipRestDuration": "ওষুধ বিরতির তথ্য দেওয়া এড়িয়ে যান",
   "yazFlexSkipRestDurationDialogTitle": "ওষুধ বিরতির তথ্য লেখা এড়িয়ে যান",
+  "yazFlexSkipRestDurationDialogMessage": "পিল খাওয়া বিরতির সময়কাল পরে হোমের «পিল খাওয়া বিরতি» থেকে লিখতে পারবেন।",
   "yazFlexLastRestDurationBeginDate": "বিরতি শুরু হওয়ার দিন",
   "yazFlexLastRestDurationEndDate": "আবার সেবন শুরু করার দিন",
   "yazFlexSelectDate": "তারিখ নির্বাচন করুন",

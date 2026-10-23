@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Խնդրում ենք\nպատմել նախորդ դադարի մասին",
   "yazFlexSkipRestDuration": "Բաց թողնել ընդմիջման շրջանի մուտքագրումը",
   "yazFlexSkipRestDurationDialogTitle": "Բաց թողնել դադարի մուտքագրումը",
+  "yazFlexSkipRestDurationDialogMessage": "Ընդունման դադարի ժամանակահատվածը կարող եք ավելի ուշ մուտքագրել Գլխավորի «Ընդունման դադար» բաժնից։",
   "yazFlexLastRestDurationBeginDate": "Ընդմիջման սկսվելու օրը",
   "yazFlexLastRestDurationEndDate": "Վերսկսելու օրը",
   "yazFlexSelectDate": "Ընտրեք ամսաթիվը",

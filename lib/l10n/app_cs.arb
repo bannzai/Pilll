@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Prosím,\nřekněte nám o svém posledním období pauzy",
   "yazFlexSkipRestDuration": "Přeskočit zadání pauzy",
   "yazFlexSkipRestDurationDialogTitle": "Přeskočit zadání pauzy",
+  "yazFlexSkipRestDurationDialogMessage": "Období přestávky v užívání můžete zadat později v části „Přestávka v užívání“ na domovské obrazovce.",
   "yazFlexLastRestDurationBeginDate": "Den začátku pauzy",
   "yazFlexLastRestDurationEndDate": "Den opětovného zahájení užívání",
   "yazFlexSelectDate": "Vyberte datum",

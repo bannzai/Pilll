@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "ದಯವಿಟ್ಟು\nಹಿಂದಿನ ವಿರಾಮ ಅವಧಿಯ ಬಗ್ಗೆ ನಮಗೆ ತಿಳಿಸಿ",
   "yazFlexSkipRestDuration": "ವಿರಾಮ ಅವಧಿ ನಮೂದಿಸುವುದನ್ನು ಬಿಟ್ಟುಬಿಡಿ",
   "yazFlexSkipRestDurationDialogTitle": "ವಿರಾಮ ಅವಧಿಯ ದಾಖಲೆಯನ್ನು ಬಿಟ್ಟುಬಿಡಿ",
+  "yazFlexSkipRestDurationDialogMessage": "ಔಷಧ ಸೇವನೆ ವಿರಾಮದ ಅವಧಿಯನ್ನು ನಂತರ ಹೋಮ್‌ನ “ಔಷಧ ಸೇವನೆ ವಿರಾಮ” ನಲ್ಲಿ ನಮೂದಿಸಬಹುದು.",
   "yazFlexLastRestDurationBeginDate": "ವಿರಾಮ ಆರಂಭವಾದ ದಿನ",
   "yazFlexLastRestDurationEndDate": "ಮತ್ತೆ ಸೇವನೆ ಪ್ರಾರಂಭಿಸಿದ ದಿನ",
   "yazFlexSelectDate": "ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ",

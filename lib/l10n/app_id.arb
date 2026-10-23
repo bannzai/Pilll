@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Mohon beri tahu kami\ntentang jeda terakhir Anda",
   "yazFlexSkipRestDuration": "Lewati pengisian masa jeda",
   "yazFlexSkipRestDurationDialogTitle": "Lewati pengisian masa jeda",
+  "yazFlexSkipRestDurationDialogMessage": "Periode jeda minum dapat diisi nanti dari “Jeda minum” di Beranda.",
   "yazFlexLastRestDurationBeginDate": "Hari dimulainya jeda",
   "yazFlexLastRestDurationEndDate": "Hari Anda kembali mulai minum",
   "yazFlexSelectDate": "Pilih tanggal",

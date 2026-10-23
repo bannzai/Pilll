@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "لطفاً\nدرباره آخرین دوره وقفه به ما بگویید",
   "yazFlexSkipRestDuration": "از وارد کردن دوره قطع مصرف صرف‌نظر کنید",
   "yazFlexSkipRestDurationDialogTitle": "ورود دوره توقف را رد کنید",
+  "yazFlexSkipRestDurationDialogMessage": "می‌توانید دوره توقف مصرف را بعداً از «توقف مصرف» در صفحه اصلی وارد کنید.",
   "yazFlexLastRestDurationBeginDate": "روز شروع وقفه",
   "yazFlexLastRestDurationEndDate": "روز از سرگیری مصرف",
   "yazFlexSelectDate": "تاریخ را انتخاب کنید",

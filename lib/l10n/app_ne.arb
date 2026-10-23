@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "कृपया\nअघिल्लो विश्राम अवधिबारे हामीलाई बताउनुहोस्",
   "yazFlexSkipRestDuration": "ब्रेक अवधि प्रविष्ट नगरी अघि बढ्नुहोस्",
   "yazFlexSkipRestDurationDialogTitle": "विश्राम अवधिको प्रविष्टि छोड्नुहोस्",
+  "yazFlexSkipRestDurationDialogMessage": "औषध सेवन विश्राम अवधि पछि होमको “औषध सेवन विश्राम” बाट प्रविष्ट गर्न सकिन्छ।",
   "yazFlexLastRestDurationBeginDate": "ब्रेक सुरु भएको दिन",
   "yazFlexLastRestDurationEndDate": "फेरि खान सुरु गरेको दिन",
   "yazFlexSelectDate": "मिति चयन गर्नुहोस्",

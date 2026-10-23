@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Sicela\nusitshele ngekhefu lakho langaphambilini",
   "yazFlexSkipRestDuration": "Yeqa ukufaka isikhathi sekhefu",
   "yazFlexSkipRestDurationDialogTitle": "Yeqa ukufaka isikhathi sekhefu",
+  "yazFlexSkipRestDurationDialogMessage": "Isikhathi sekhefu lokuphuza singafakwa kamuva kokuthi “Ikhefu lokuphuza” ekhasini lasekhaya.",
   "yazFlexLastRestDurationBeginDate": "Usuku ikhefu eliqale ngalo",
   "yazFlexLastRestDurationEndDate": "Usuku oqale ngalo futhi ukuyiphuza",
   "yazFlexSelectDate": "Khetha usuku",

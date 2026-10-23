@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "براہ کرم\nپچھلے وقفے کے بارے میں ہمیں بتائیں",
   "yazFlexSkipRestDuration": "وقفے کی مدت درج کرنا چھوڑ دیں",
   "yazFlexSkipRestDurationDialogTitle": "وقفے کی مدت کا اندراج چھوڑ دیں",
+  "yazFlexSkipRestDurationDialogMessage": "گولی لینے کے وقفے کی مدت بعد میں ہوم کی “گولی لینے کا وقفہ” سے درج کی جا سکتی ہے۔",
   "yazFlexLastRestDurationBeginDate": "وہ دن جب وقفہ شروع ہوا",
   "yazFlexLastRestDurationEndDate": "دوبارہ لینا شروع کرنے کا دن",
   "yazFlexSelectDate": "تاریخ منتخب کریں",

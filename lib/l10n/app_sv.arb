@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Berätta gärna för oss\nom din senaste paus",
   "yazFlexSkipRestDuration": "Hoppa över att ange uppehållet",
   "yazFlexSkipRestDurationDialogTitle": "Hoppa över registrering av uppehållsperioden",
+  "yazFlexSkipRestDurationDialogMessage": "Perioden för uppehåll i intaget kan du ange senare under ”Uppehåll i intaget” på hemskärmen.",
   "yazFlexLastRestDurationBeginDate": "Dagen då uppehållet började",
   "yazFlexLastRestDurationEndDate": "Dagen du började ta den igen",
   "yazFlexSelectDate": "Välj ett datum",

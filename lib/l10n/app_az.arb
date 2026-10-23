@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Zəhmət olmasa\nəvvəlki fasilə dövrünüz barədə məlumat verin",
   "yazFlexSkipRestDuration": "Fasilə dövrünün daxil edilməsini keçin",
   "yazFlexSkipRestDurationDialogTitle": "Fasilə dövrü daxiletməsini keçin",
+  "yazFlexSkipRestDurationDialogMessage": "Qəbul fasiləsi müddətini sonra Ana səhifədəki “Qəbul fasiləsi” bölməsindən daxil edə bilərsiniz.",
   "yazFlexLastRestDurationBeginDate": "Fasilənin başladığı gün",
   "yazFlexLastRestDurationEndDate": "Qəbulu yenidən başladığınız gün",
   "yazFlexSelectDate": "Tarix seçin",
