@@ -258,23 +258,25 @@ class YazFlexRestDurationDateField extends StatelessWidget {
               alignment: Alignment.center,
               children: [
                 Padding(
-                  // 右端の × と文字が重ならないよう、× のぶんだけ左右に同じ余白を取る
-                  padding: const EdgeInsets.symmetric(horizontal: 32),
-                  child: Text(
-                    date == null ? L.yazFlexSelectDate : DateTimeFormatter.yearAndMonthAndDay(date),
-                    style: TextStyle(
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 16,
-                      color: onTap == null
-                          ? TextColor.lightGray
-                          : date == null
-                              ? TextColor.gray
-                              : TextColor.main,
+                  // 右端の × と文字が重ならないよう × のぶん右に余白を取り、横に 2 つ並べた狭い欄でも年月日を省略せず全体を見せるため、収まらない時は文字を縮める
+                  padding: EdgeInsets.only(left: 8, right: onClear == null ? 8 : 36),
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      date == null ? L.yazFlexSelectDate : DateTimeFormatter.yearAndMonthAndDay(date),
+                      style: TextStyle(
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 16,
+                        color: onTap == null
+                            ? TextColor.lightGray
+                            : date == null
+                                ? TextColor.gray
+                                : TextColor.main,
+                      ),
+                      textAlign: TextAlign.center,
+                      maxLines: 1,
                     ),
-                    textAlign: TextAlign.center,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
                 if (onClear != null)

@@ -151,10 +151,11 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   }
 
   /// ヤーズフレックス向けの導線で前回の休薬が始まった日を入力する
-  /// 終わった日が始まった日以前になる時は、終わった日を未入力に戻す
+  /// 終わった日が始まった日以前になる時は、終わった日を未入力に戻す。スキップした後に戻って入力し直した時はスキップを解除し、プレビューに反映する
   void setYazFlexLastRestDurationBeginDate({required DateTime yazFlexLastRestDurationBeginDate}) {
     final yazFlexLastRestDurationEndDate = state.yazFlexLastRestDurationEndDate;
     state = state.copyWith(
+      yazFlexHasNotRestedYet: false,
       yazFlexLastRestDurationBeginDate: yazFlexLastRestDurationBeginDate,
       yazFlexLastRestDurationEndDate:
           yazFlexLastRestDurationEndDate != null && yazFlexLastRestDurationEndDate.isAfter(yazFlexLastRestDurationBeginDate)
@@ -163,9 +164,12 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     );
   }
 
-  /// ヤーズフレックス向けの導線で前回の休薬が終わった日 (服用を再開した日) を入力する
+  /// ヤーズフレックス向けの導線で前回の休薬が終わった日 (服用を再開した日) を入力する。スキップした後に戻って入力し直した時はスキップを解除する
   void setYazFlexLastRestDurationEndDate({required DateTime yazFlexLastRestDurationEndDate}) {
-    state = state.copyWith(yazFlexLastRestDurationEndDate: yazFlexLastRestDurationEndDate);
+    state = state.copyWith(
+      yazFlexHasNotRestedYet: false,
+      yazFlexLastRestDurationEndDate: yazFlexLastRestDurationEndDate,
+    );
   }
 
   /// ヤーズフレックス向けの導線で開始番号 (1枚目の1番は休薬明けから何日目か) を入力する
