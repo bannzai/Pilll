@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "क्या आप Yaz Flex का उपयोग कर रही हैं?",
   "initialSettingAskYazFlexDescription": "“हाँ” चुनने पर\nसेटिंग ऐसी कर दी जाएगी कि ब्रेक खत्म होने के बाद कौन-सा दिन है, यह दिखे",
   "yazFlexLastRestDurationTitle": "कृपया हमें\nपिछले ब्रेक के बारे में बताएं",
+  "yazFlexSkipRestDuration": "ब्रेक अवधि दर्ज करना छोड़ें",
   "yazFlexLastRestDurationBeginDate": "वह दिन जब विराम शुरू हुआ",
   "yazFlexLastRestDurationEndDate": "दोबारा लेना शुरू करने का दिन",
   "yazFlexSelectDate": "तारीख चुनें",

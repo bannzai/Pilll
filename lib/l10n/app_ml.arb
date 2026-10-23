@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "നിങ്ങൾ Yaz Flex ഉപയോഗിക്കുകയാണോ?",
   "initialSettingAskYazFlexDescription": "“അതെ” തിരഞ്ഞെടുക്കുകയാണെങ്കിൽ\nഇടവേള കഴിഞ്ഞ് എത്രാമത്തെ ദിവസമാണെന്ന് കാണിക്കുന്ന വിധത്തിൽ സജ്ജീകരിക്കും",
   "yazFlexLastRestDurationTitle": "ദയവായി\nമുൻ ഇടവേളയെക്കുറിച്ച് ഞങ്ങളോട് പറയൂ",
+  "yazFlexSkipRestDuration": "ഇടവേള കാലയളവ് നൽകുന്നത് ഒഴിവാക്കുക",
   "yazFlexLastRestDurationBeginDate": "ഇടവേള ആരംഭിച്ച ദിവസം",
   "yazFlexLastRestDurationEndDate": "വീണ്ടും കഴിക്കാൻ ആരംഭിച്ച ദിവസം",
   "yazFlexSelectDate": "തീയതി തിരഞ്ഞെടുക്കുക",

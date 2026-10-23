@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "Are you using Yaz Flex?",
   "initialSettingAskYazFlexDescription": "If you choose “Yes”,\nwe’ll set it to show how many days it has been since the end of your break.",
   "yazFlexLastRestDurationTitle": "Please tell us\nabout your last break",
+  "yazFlexSkipRestDuration": "Skip entering the break period",
   "yazFlexLastRestDurationBeginDate": "Day the break started",
   "yazFlexLastRestDurationEndDate": "Date you resumed taking it",
   "yazFlexSelectDate": "Select a date",

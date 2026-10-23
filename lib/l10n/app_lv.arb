@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "Vai lietojat Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ja izvēlēsieties “Jā”,\nmēs iestatīsim, lai varētu rādīt, kura diena ir pēc pārtraukuma beigām.",
   "yazFlexLastRestDurationTitle": "Lūdzu,\npastāstiet mums par iepriekšējo pārtraukumu",
+  "yazFlexSkipRestDuration": "Izlaist pārtraukuma perioda ievadi",
   "yazFlexLastRestDurationBeginDate": "Diena, kad sākās pārtraukums",
   "yazFlexLastRestDurationEndDate": "Diena, kad atsākāt lietošanu",
   "yazFlexSelectDate": "Izvēlieties datumu",

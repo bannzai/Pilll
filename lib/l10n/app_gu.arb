@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "શું તમે Yaz Flex વાપરો છો?",
   "initialSettingAskYazFlexDescription": "જો તમે “હા” પસંદ કરો,\nતો વિરામ પૂરો થયા પછી કેટલોમો દિવસ છે તે બતાવી શકાય તેવી સેટિંગ કરવામાં આવશે",
   "yazFlexLastRestDurationTitle": "કૃપા કરીને\nપાછલા વિરામ સમય વિશે અમને જણાવો",
+  "yazFlexSkipRestDuration": "વિરામ અવધિ દાખલ કરવું છોડો",
   "yazFlexLastRestDurationBeginDate": "વિરામ શરૂ થયેલો દિવસ",
   "yazFlexLastRestDurationEndDate": "ફરીથી લેવાનું શરૂ કરેલો દિવસ",
   "yazFlexSelectDate": "તારીખ પસંદ કરો",

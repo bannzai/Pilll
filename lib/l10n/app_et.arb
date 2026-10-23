@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "Kas kasutad Yaz Flexi?",
   "initialSettingAskYazFlexDescription": "Kui valite „Jah“,\nseadistame selle nii, et kuvatakse, mitmes päev on pausijärgselt.",
   "yazFlexLastRestDurationTitle": "Palun rääkige meile\noma eelmisest pausist",
+  "yazFlexSkipRestDuration": "Jäta pausi sisestamine vahele",
   "yazFlexLastRestDurationBeginDate": "Päev, mil paus algas",
   "yazFlexLastRestDurationEndDate": "Võtmise taasalustamise päev",
   "yazFlexSelectDate": "Valige kuupäev",

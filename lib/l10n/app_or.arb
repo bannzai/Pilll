@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "ଆପଣ Yaz Flex ବ୍ୟବହାର କରୁଛନ୍ତି କି?",
   "initialSettingAskYazFlexDescription": "“ହଁ” ବାଛିଲେ\nବିରତି ସମାପ୍ତ ହେବା ପରେ କେତେ ଦିନ ହେଲା ତାହା ଦେଖାଇବା ପାଇଁ ସେଟ୍ କରାଯିବ",
   "yazFlexLastRestDurationTitle": "ଦୟାକରି\nପୂର୍ବବର୍ତ୍ତୀ ବିରତି ସମୟ ବିଷୟରେ ଆମକୁ କୁହନ୍ତୁ",
+  "yazFlexSkipRestDuration": "ବିରତି ଅବଧି ଇନପୁଟ୍‌କୁ ଏଡ଼ାନ୍ତୁ",
   "yazFlexLastRestDurationBeginDate": "ବିରତି ଆରମ୍ଭ ହୋଇଥିବା ଦିନ",
   "yazFlexLastRestDurationEndDate": "ପୁଣି ନେବା ଆରମ୍ଭ କରିଥିବା ଦିନ",
   "yazFlexSelectDate": "ତାରିଖ ଚୟନ କରନ୍ତୁ",

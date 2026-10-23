@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "Yaz Flex kullanıyor musunuz?",
   "initialSettingAskYazFlexDescription": "“Evet”i seçerseniz,\nara dönem bittikten sonra kaçıncı gün olduğunu gösterecek şekilde ayarlayacağız.",
   "yazFlexLastRestDurationTitle": "Lütfen\nbir önceki ara döneminiz hakkında bize bilgi verin",
+  "yazFlexSkipRestDuration": "Ara dönem girişini atla",
   "yazFlexLastRestDurationBeginDate": "Aranın başladığı gün",
   "yazFlexLastRestDurationEndDate": "Tekrar almaya başladığınız gün",
   "yazFlexSelectDate": "Tarih seçin",

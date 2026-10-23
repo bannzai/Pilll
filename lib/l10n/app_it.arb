@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "Stai usando Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Se scegli “Sì”,\nlo imposteremo in modo da mostrare quanti giorni sono passati dalla fine della pausa.",
   "yazFlexLastRestDurationTitle": "Per favore,\nparlaci della tua ultima pausa",
+  "yazFlexSkipRestDuration": "Salta l’inserimento della pausa",
   "yazFlexLastRestDurationBeginDate": "Giorno di inizio della pausa",
   "yazFlexLastRestDurationEndDate": "Data di ripresa dell’assunzione",
   "yazFlexSelectDate": "Seleziona una data",

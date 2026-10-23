@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "Använder du Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Om du väljer ”Ja”\nställer vi in det så att det visar hur många dagar det har gått sedan uppehållet slutade.",
   "yazFlexLastRestDurationTitle": "Berätta gärna för oss\nom din senaste paus",
+  "yazFlexSkipRestDuration": "Hoppa över att ange uppehållet",
   "yazFlexLastRestDurationBeginDate": "Dagen då uppehållet började",
   "yazFlexLastRestDurationEndDate": "Dagen du började ta den igen",
   "yazFlexSelectDate": "Välj ett datum",

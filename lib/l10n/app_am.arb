@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "Yaz Flex ነው የምትወስዱት?",
   "initialSettingAskYazFlexDescription": "«አዎ»ን ከመረጡ\nከመድኃኒት እረፍቱ በኋላ ስንተኛ ቀን እንደሆነ እንዲታይ እናስተካክላለን",
   "yazFlexLastRestDurationTitle": "እባክዎ\nስለ ቀደመው የእረፍት ጊዜ ያሳውቁን",
+  "yazFlexSkipRestDuration": "የመድሀኒት ዕረፍት መረጃ ማስገባትን ዝለል",
   "yazFlexLastRestDurationBeginDate": "የእረፍት ጊዜው የጀመረበት ቀን",
   "yazFlexLastRestDurationEndDate": "መውሰድን እንደገና የጀመሩበት ቀን",
   "yazFlexSelectDate": "ቀን ይምረጡ",

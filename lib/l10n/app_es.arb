@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "¿Estás usando Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Si eliges “Sí”,\nlo configuraremos para que puedas ver cuántos días han pasado desde que terminó el descanso.",
   "yazFlexLastRestDurationTitle": "Cuéntanos, por favor,\nsobre tu último descanso",
+  "yazFlexSkipRestDuration": "Omitir el registro del descanso",
   "yazFlexLastRestDurationBeginDate": "Día en que comenzó el descanso",
   "yazFlexLastRestDurationEndDate": "Día en que reanudaste la toma",
   "yazFlexSelectDate": "Selecciona una fecha",

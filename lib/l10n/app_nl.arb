@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "Gebruik je Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Als je “Ja” kiest,\nstellen we het zo in dat je kunt zien hoeveel dagen het sinds het einde van de stopweek is.",
   "yazFlexLastRestDurationTitle": "Vertel ons alsjeblieft\nover je vorige pauze",
+  "yazFlexSkipRestDuration": "Invoeren van de stopweek overslaan",
   "yazFlexLastRestDurationBeginDate": "Dag waarop de stopweek begon",
   "yazFlexLastRestDurationEndDate": "Dag waarop je weer begon met innemen",
   "yazFlexSelectDate": "Selecteer een datum",

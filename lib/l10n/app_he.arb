@@ -571,6 +571,7 @@
   "initialSettingAskYazFlex": "האם את משתמשת ב-Yaz Flex?",
   "initialSettingAskYazFlexDescription": "אם תבחרי ב״כן״,\nנגדיר שיוצג כמה ימים עברו מאז סיום ההפסקה.",
   "yazFlexLastRestDurationTitle": "נשמח אם תספרי לנו\nעל ההפסקה הקודמת",
+  "yazFlexSkipRestDuration": "דלגי על הזנת תקופת ההפסקה",
   "yazFlexLastRestDurationBeginDate": "היום שבו ההפסקה התחילה",
   "yazFlexLastRestDurationEndDate": "היום שבו חזרת ליטול",
   "yazFlexSelectDate": "בחרי תאריך",
