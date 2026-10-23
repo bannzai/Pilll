@@ -580,6 +580,5 @@
   "yazFlexLastRestDurationEndDate": "மீண்டும் எடுத்துக்கொள்ளத் தொடங்கிய நாள்",
   "yazFlexSelectDate": "தேதியைத் தேர்ந்தெடுக்கவும்",
   "yazFlexBeginPillNumberPageTitle": "சுழற்சியில் தாளின் தொடக்கம் எத்தனையாவது உட்கொள்ளல்?",
-  "yazFlexBeginPillNumberPageNote": "முந்தைய இடைவெளிக்குப் பிறகு கடந்த நாட்களின் எண்ணிக்கையின் அடிப்படையில் பதிலளிக்கவும்.",
   "yazFlexNextInputIsRestDuration": "அடுத்து, முந்தைய இடைவேளையை உள்ளிடவும்"
 }

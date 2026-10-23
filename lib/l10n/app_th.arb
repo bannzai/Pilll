@@ -580,6 +580,5 @@
   "yazFlexLastRestDurationEndDate": "วันที่กลับมาเริ่มรับประทานอีกครั้ง",
   "yazFlexSelectDate": "เลือกวันที่",
   "yazFlexBeginPillNumberPageTitle": "จุดเริ่มต้นของแผง ตรงกับการรับประทานครั้งที่เท่าไรในรอบ?",
-  "yazFlexBeginPillNumberPageNote": "โปรดตอบตามจำนวนวันที่ผ่านไปนับจากช่วงหยุดยาครั้งก่อน",
   "yazFlexNextInputIsRestDuration": "ถัดไป กรอกช่วงเว้นยาครั้งก่อน"
 }

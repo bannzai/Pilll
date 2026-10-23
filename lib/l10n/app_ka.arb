@@ -580,6 +580,5 @@
   "yazFlexLastRestDurationEndDate": "მიღების განახლების დღე",
   "yazFlexSelectDate": "აირჩიეთ თარიღი",
   "yazFlexBeginPillNumberPageTitle": "ციკლში მერამდენე მიღებაა შიტის დასაწყისი?",
-  "yazFlexBeginPillNumberPageNote": "გთხოვთ, უპასუხოთ წინა შესვენებიდან გასული დღეების რაოდენობის მიხედვით.",
   "yazFlexNextInputIsRestDuration": "შემდეგ შეიყვანეთ წინა შესვენება"
 }

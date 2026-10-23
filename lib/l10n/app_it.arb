@@ -580,6 +580,5 @@
   "yazFlexLastRestDurationEndDate": "Data di ripresa dell’assunzione",
   "yazFlexSelectDate": "Seleziona una data",
   "yazFlexBeginPillNumberPageTitle": "A quale assunzione del ciclo corrisponde l'inizio del blister?",
-  "yazFlexBeginPillNumberPageNote": "Rispondi in base al numero di giorni trascorsi dall’ultima pausa.",
   "yazFlexNextInputIsRestDuration": "Successivamente, inserisci la pausa precedente"
 }

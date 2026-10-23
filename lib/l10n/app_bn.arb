@@ -580,6 +580,5 @@
   "yazFlexLastRestDurationEndDate": "আবার সেবন শুরু করার দিন",
   "yazFlexSelectDate": "তারিখ নির্বাচন করুন",
   "yazFlexBeginPillNumberPageTitle": "চক্র অনুযায়ী শিটের শুরু কোন নম্বর সেবন?",
-  "yazFlexBeginPillNumberPageNote": "অনুগ্রহ করে আগের বিরতির পর থেকে কত দিন কেটেছে তার ভিত্তিতে উত্তর দিন।",
   "yazFlexNextInputIsRestDuration": "এরপর আগের বিরতির তথ্য লিখুন"
 }

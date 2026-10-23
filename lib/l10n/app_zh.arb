@@ -580,6 +580,5 @@
   "yazFlexLastRestDurationEndDate": "重新开始服用的日期",
   "yazFlexSelectDate": "选择日期",
   "yazFlexBeginPillNumberPageTitle": "这板药的开始对应周期中的第几次服用？",
-  "yazFlexBeginPillNumberPageNote": "请根据距离上次停药期结束后经过的天数作答。",
   "yazFlexNextInputIsRestDuration": "接下来请输入上一次停药期"
 }

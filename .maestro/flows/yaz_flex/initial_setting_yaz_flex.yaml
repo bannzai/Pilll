@@ -31,7 +31,7 @@ appId: com.mizuki.Ohashi.Pilll.dev
 
 # 開始番号: ピルシートのプレビューと「1日目」のピッカーが出る。既定の1日目のまま次へ
 - assertVisible: "シートの始まりは周期上\n何番目の服用ですか？"
-- assertVisible: "前回の休薬からの経過日数を元にお答えください"
+- assertVisible: "シート開始前の休薬からの経過日数を元にお答えください"
 - assertVisible: "次は前回の休薬を入力します"
 - tapOn: "次へ"
 - waitForAnimationToEnd

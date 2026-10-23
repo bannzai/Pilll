@@ -580,6 +580,5 @@
   "yazFlexLastRestDurationEndDate": "Deň opätovného začatia užívania",
   "yazFlexSelectDate": "Vyberte dátum",
   "yazFlexBeginPillNumberPageTitle": "Ktoré užitie v cykle zodpovedá začiatku blistra?",
-  "yazFlexBeginPillNumberPageNote": "Odpovedzte, prosím, podľa počtu dní od poslednej prestávky.",
   "yazFlexNextInputIsRestDuration": "Ďalej zadajte predchádzajúcu prestávku"
 }

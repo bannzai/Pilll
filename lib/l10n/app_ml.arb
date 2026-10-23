@@ -580,6 +580,5 @@
   "yazFlexLastRestDurationEndDate": "വീണ്ടും കഴിക്കാൻ ആരംഭിച്ച ദിവസം",
   "yazFlexSelectDate": "തീയതി തിരഞ്ഞെടുക്കുക",
   "yazFlexBeginPillNumberPageTitle": "ചക്രത്തിൽ ഷീറ്റിന്റെ തുടക്കം എത്രാമത്തെ കഴിക്കലാണ്?",
-  "yazFlexBeginPillNumberPageNote": "ദയവായി കഴിഞ്ഞ ഇടവേള കഴിഞ്ഞ് എത്ര ദിവസം ആയെന്നതിന്റെ അടിസ്ഥാനത്തിൽ മറുപടി നൽകുക.",
   "yazFlexNextInputIsRestDuration": "അടുത്തതായി, മുമ്പത്തെ ഇടവേള നൽകുക"
 }

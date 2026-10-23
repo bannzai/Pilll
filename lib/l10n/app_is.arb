@@ -580,6 +580,5 @@
   "yazFlexLastRestDurationEndDate": "Dagurinn sem þú hófst aftur að taka lyfið",
   "yazFlexSelectDate": "Veldu dagsetningu",
   "yazFlexBeginPillNumberPageTitle": "Hvaða númer inntaka í hringnum er upphaf spjaldsins?",
-  "yazFlexBeginPillNumberPageNote": "Vinsamlegast svaraðu út frá fjölda daga frá síðasta hléi.",
   "yazFlexNextInputIsRestDuration": "Næst skaltu slá inn fyrra hléið"
 }

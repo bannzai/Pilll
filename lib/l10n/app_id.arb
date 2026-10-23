@@ -580,6 +580,5 @@
   "yazFlexLastRestDurationEndDate": "Hari Anda kembali mulai minum",
   "yazFlexSelectDate": "Pilih tanggal",
   "yazFlexBeginPillNumberPageTitle": "Awal lembar pada siklus ini adalah konsumsi ke berapa?",
-  "yazFlexBeginPillNumberPageNote": "Silakan jawab berdasarkan jumlah hari sejak jeda terakhir.",
   "yazFlexNextInputIsRestDuration": "Berikutnya, masukkan jeda sebelumnya"
 }

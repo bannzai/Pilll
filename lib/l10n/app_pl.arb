@@ -580,6 +580,5 @@
   "yazFlexLastRestDurationEndDate": "Dzień wznowienia przyjmowania",
   "yazFlexSelectDate": "Wybierz datę",
   "yazFlexBeginPillNumberPageTitle": "Które z kolei przyjęcie w cyklu odpowiada początkowi blistra?",
-  "yazFlexBeginPillNumberPageNote": "Proszę odpowiedzieć na podstawie liczby dni, które upłynęły od poprzedniej przerwy.",
   "yazFlexNextInputIsRestDuration": "Następnie wpisz poprzednią przerwę"
 }

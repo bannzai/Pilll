@@ -580,6 +580,5 @@
   "yazFlexLastRestDurationEndDate": "दोबारा लेना शुरू करने का दिन",
   "yazFlexSelectDate": "तारीख चुनें",
   "yazFlexBeginPillNumberPageTitle": "चक्र में शीट की शुरुआत कौन-सी खुराक है?",
-  "yazFlexBeginPillNumberPageNote": "कृपया पिछली ब्रेक के बाद से बीते दिनों की संख्या के आधार पर उत्तर दें।",
   "yazFlexNextInputIsRestDuration": "अगले चरण में पिछला ब्रेक दर्ज करें"
 }

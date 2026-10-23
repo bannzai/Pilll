@@ -580,6 +580,5 @@
   "yazFlexLastRestDurationEndDate": "Võtmise taasalustamise päev",
   "yazFlexSelectDate": "Valige kuupäev",
   "yazFlexBeginPillNumberPageTitle": "Mitmes võtmine tsüklis on lehe algus?",
-  "yazFlexBeginPillNumberPageNote": "Palun vastake eelmise pausi möödunud päevade arvu põhjal.",
   "yazFlexNextInputIsRestDuration": "Järgmisena sisestage oma eelmine paus"
 }
