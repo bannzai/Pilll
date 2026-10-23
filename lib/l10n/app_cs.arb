@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Když vyberete „Ano“,\nnastavíme zobrazení počtu dní od konce pauzy.",
   "yazFlexLastRestDurationTitle": "Klepněte na pilulku,\nkterou jste užila těsně před pauzou",
   "yazFlexLastRestDurationNote": "Vyberte prosím poslední pilulku, kterou jste užila před začátkem pauzy",
+  "yazFlexRestDurationDaysLabel": "Počet dní pauzy",
   "yazFlexSkipRestDuration": "Přeskočit zadání pauzy",
   "yazFlexSkipRestDurationDialogTitle": "Přeskočit zadání pauzy",
   "yazFlexSkipRestDurationDialogMessage": "Období přestávky v užívání můžete zadat později v části „Přestávka v užívání“ na domovské obrazovce.",

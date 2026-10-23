@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "As jy “Ja” kies,\nstel ons dit so op dat jy kan sien hoeveel dae dit is sedert die einde van jou pouse.",
   "yazFlexLastRestDurationTitle": "Tik asseblief die pil\nwat u geneem het toe u met die pouse begin het",
   "yazFlexLastRestDurationNote": "Kies asseblief die laaste pil wat jy geneem het voordat jy met die pouse begin het",
+  "yazFlexRestDurationDaysLabel": "Aantal dae sonder pille",
   "yazFlexSkipRestDuration": "Slaan die invoer van die pouse oor",
   "yazFlexSkipRestDurationDialogTitle": "Slaan die invoer van die pouse oor",
   "yazFlexSkipRestDurationDialogMessage": "Die pouseperiode kan later by \"Neem 'n pouse\" op die tuisskerm ingevul word.",

@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Wenn du „Ja“ auswählst,\nrichten wir es so ein, dass angezeigt werden kann, der wievielte Tag seit dem Ende der Pause ist.",
   "yazFlexLastRestDurationTitle": "Tippen Sie auf die Pille,\ndie Sie direkt vor der Pause eingenommen haben",
   "yazFlexLastRestDurationNote": "Bitte wähle die letzte Pille aus, die du vor der Pause eingenommen hast",
+  "yazFlexRestDurationDaysLabel": "Anzahl der Pausentage",
   "yazFlexSkipRestDuration": "Eingabe der Pause überspringen",
   "yazFlexSkipRestDurationDialogTitle": "Eingabe der Pause überspringen",
   "yazFlexSkipRestDurationDialogMessage": "Den Zeitraum der Einnahmepause können Sie später unter „Einnahmepause“ auf dem Startbildschirm eingeben.",

@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Ukichagua “Ndiyo”,\ntutaiweka ili ionyeshe ni siku ya ngapi tangu mapumziko yalipoisha.",
   "yazFlexLastRestDurationTitle": "Tafadhali gusa kidonge\nulichotumia kabla tu ya mapumziko",
   "yazFlexLastRestDurationNote": "Tafadhali chagua kidonge cha mwisho ulichotumia kabla ya kuanza mapumziko",
+  "yazFlexRestDurationDaysLabel": "Idadi ya siku za mapumziko",
   "yazFlexSkipRestDuration": "Ruka kuingiza kipindi cha mapumziko",
   "yazFlexSkipRestDurationDialogTitle": "Ruka kuingiza kipindi cha mapumziko",
   "yazFlexSkipRestDurationDialogMessage": "Unaweza kuingiza baadaye kipindi cha mapumziko ya matumizi kutoka “Mapumziko ya matumizi” kwenye Skrini ya Mwanzo.",

@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Si eliges “Sí”,\nlo configuraremos para que puedas ver cuántos días han pasado desde que terminó el descanso.",
   "yazFlexLastRestDurationTitle": "Toca la pastilla\nque tomaste justo antes del descanso",
   "yazFlexLastRestDurationNote": "Selecciona la última píldora que tomaste antes de empezar el descanso",
+  "yazFlexRestDurationDaysLabel": "Número de días de descanso",
   "yazFlexSkipRestDuration": "Omitir el registro del descanso",
   "yazFlexSkipRestDurationDialogTitle": "Omitir el registro del descanso",
   "yazFlexSkipRestDurationDialogMessage": "Más adelante puedes introducir el período de descanso de la toma desde «Descanso de la toma» en Inicio.",

@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Si vous choisissez « Oui »,\nnous le configurerons pour afficher le nombre de jours écoulés depuis la fin de la pause.",
   "yazFlexLastRestDurationTitle": "Touchez la pilule\nque vous avez prise juste avant la pause",
   "yazFlexLastRestDurationNote": "Veuillez sélectionner la dernière pilule que vous avez prise avant de commencer la pause",
+  "yazFlexRestDurationDaysLabel": "Nombre de jours de pause",
   "yazFlexSkipRestDuration": "Ignorer la saisie de la pause",
   "yazFlexSkipRestDurationDialogTitle": "Ignorer la saisie de la pause",
   "yazFlexSkipRestDurationDialogMessage": "Vous pourrez saisir plus tard la période de pause de prise depuis « Pause de prise » sur l’écran d’accueil.",

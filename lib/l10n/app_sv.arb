@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Om du väljer ”Ja”\nställer vi in det så att det visar hur många dagar det har gått sedan uppehållet slutade.",
   "yazFlexLastRestDurationTitle": "Tryck på pillret\ndu tog precis innan uppehållet",
   "yazFlexLastRestDurationNote": "Välj den sista pillan du tog innan uppehållet började",
+  "yazFlexRestDurationDaysLabel": "Antal pausdagar",
   "yazFlexSkipRestDuration": "Hoppa över att ange uppehållet",
   "yazFlexSkipRestDurationDialogTitle": "Hoppa över registrering av uppehållsperioden",
   "yazFlexSkipRestDurationDialogMessage": "Perioden för uppehåll i intaget kan du ange senare under ”Uppehåll i intaget” på hemskärmen.",

@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Если вы выберете «Да»,\nмы настроим отображение того, какой день идёт после окончания перерыва.",
   "yazFlexLastRestDurationTitle": "Нажмите на таблетку,\nкоторую вы приняли прямо перед перерывом",
   "yazFlexLastRestDurationNote": "Пожалуйста, выберите последнюю таблетку, которую вы приняли перед началом перерыва",
+  "yazFlexRestDurationDaysLabel": "Количество дней перерыва",
   "yazFlexSkipRestDuration": "Пропустить ввод перерыва",
   "yazFlexSkipRestDurationDialogTitle": "Пропустить ввод периода перерыва",
   "yazFlexSkipRestDurationDialogMessage": "Период перерыва в приёме можно будет ввести позже в разделе «Перерыв в приёме» на главном экране.",

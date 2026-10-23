@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Si selecciones «Sí»,\nho configurarem perquè es mostri quants dies han passat des del final del descans.",
   "yazFlexLastRestDurationTitle": "Toca la píndola\nque vas prendre just abans de la pausa",
   "yazFlexLastRestDurationNote": "Selecciona l’última píndola que vas prendre abans de començar el descans",
+  "yazFlexRestDurationDaysLabel": "Nombre de dies de descans",
   "yazFlexSkipRestDuration": "Omet la introducció del període de descans",
   "yazFlexSkipRestDurationDialogTitle": "Omet l’entrada del descans",
   "yazFlexSkipRestDurationDialogMessage": "Més endavant podràs introduir el període de descans de la presa a «Descans de la presa» de la pantalla d’inici.",

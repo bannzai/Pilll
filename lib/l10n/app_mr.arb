@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "“होय” निवडल्यास\nविश्रांतीचा कालावधी संपल्यानंतर कितवा दिवस आहे हे दाखवण्यासाठी सेट केले जाईल",
   "yazFlexLastRestDurationTitle": "ब्रेक सुरू होण्याच्या अगदी आधी घेतलेल्या गोळीवर\nटॅप करा",
   "yazFlexLastRestDurationNote": "कृपया विश्रांती सुरू करण्यापूर्वी तुम्ही शेवटी घेतलेली गोळी निवडा",
+  "yazFlexRestDurationDaysLabel": "विश्रांतीच्या दिवसांची संख्या",
   "yazFlexSkipRestDuration": "ब्रेक कालावधी टाकणे वगळा",
   "yazFlexSkipRestDurationDialogTitle": "विश्रांती कालावधीची नोंद वगळा",
   "yazFlexSkipRestDurationDialogMessage": "गोळी घेण्याच्या विश्रांतीचा कालावधी नंतर होममधील “गोळी घेण्याची विश्रांती” मधून भरू शकता.",

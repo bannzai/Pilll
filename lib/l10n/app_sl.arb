@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Če izberete »Da«, \nbomo nastavili prikaz, koliko dni je minilo od konca premora.",
   "yazFlexLastRestDurationTitle": "Tapnite tableto,\nki ste jo vzeli tik pred premorom",
   "yazFlexLastRestDurationNote": "Prosimo, izberite zadnjo tableto, ki ste jo vzeli pred začetkom premora",
+  "yazFlexRestDurationDaysLabel": "Število dni premora",
   "yazFlexSkipRestDuration": "Preskoči vnos premora",
   "yazFlexSkipRestDurationDialogTitle": "Preskoči vnos premora",
   "yazFlexSkipRestDurationDialogMessage": "Obdobje premora pri jemanju lahko pozneje vnesete v razdelku »Premor pri jemanju« na domačem zaslonu.",

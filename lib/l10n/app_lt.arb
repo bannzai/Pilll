@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Jei pasirinksite „Taip“,\nsukonfigūruosime, kad būtų rodoma, kelinta diena po pertraukos pabaigos.",
   "yazFlexLastRestDurationTitle": "Palieskite tabletę,\nkurią išgėrėte prieš pat pertrauką",
   "yazFlexLastRestDurationNote": "Pasirinkite paskutinę tabletę, kurią išgėrėte prieš pradėdama pertrauką",
+  "yazFlexRestDurationDaysLabel": "Pertraukos dienų skaičius",
   "yazFlexSkipRestDuration": "Praleisti pertraukos laikotarpio įvedimą",
   "yazFlexSkipRestDurationDialogTitle": "Praleisti pertraukos laikotarpio įvedimą",
   "yazFlexSkipRestDurationDialogMessage": "Vartojimo pertraukos laikotarpį vėliau galėsite įvesti pradžios ekrano skiltyje „Vartojimo pertrauka“.",

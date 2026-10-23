@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Se escolher “Sim”,\nvamos configurar para mostrar quantos dias se passaram desde o fim da pausa.",
   "yazFlexLastRestDurationTitle": "Toque na pílula\nque tomou imediatamente antes da pausa",
   "yazFlexLastRestDurationNote": "Selecione a última pílula que tomou antes de iniciar a pausa",
+  "yazFlexRestDurationDaysLabel": "Número de dias de pausa",
   "yazFlexSkipRestDuration": "Ignorar a introdução da pausa",
   "yazFlexSkipRestDurationDialogTitle": "Ignorar o registo da pausa",
   "yazFlexSkipRestDurationDialogMessage": "Pode introduzir mais tarde o período de pausa da toma em “Pausa da toma”, no ecrã principal.",

@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "אם תבחרי ב״כן״,\nנגדיר שיוצג כמה ימים עברו מאז סיום ההפסקה.",
   "yazFlexLastRestDurationTitle": "יש להקיש על הגלולה\nשנטלת ממש לפני תחילת ההפסקה",
   "yazFlexLastRestDurationNote": "יש לבחור את הגלולה האחרונה שלקחת לפני תחילת ההפסקה",
+  "yazFlexRestDurationDaysLabel": "מספר ימי ההפסקה",
   "yazFlexSkipRestDuration": "דלגי על הזנת תקופת ההפסקה",
   "yazFlexSkipRestDurationDialogTitle": "לדלג על הזנת תקופת ההפסקה",
   "yazFlexSkipRestDurationDialogMessage": "אפשר להזין אחר כך את תקופת ההפסקה בנטילה דרך „הפסקה בנטילה” במסך הבית.",

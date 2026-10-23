@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Hvis du velger «Ja»,\nsetter vi det opp slik at det viser hvor mange dager det er siden pausen tok slutt.",
   "yazFlexLastRestDurationTitle": "Trykk på pillen\ndu tok rett før pausen",
   "yazFlexLastRestDurationNote": "Velg pillen du tok sist før pausen startet",
+  "yazFlexRestDurationDaysLabel": "Antall pausedager",
   "yazFlexSkipRestDuration": "Hopp over registrering av pausen",
   "yazFlexSkipRestDurationDialogTitle": "Hopp over registrering av pauseperioden",
   "yazFlexSkipRestDurationDialogMessage": "Perioden for pause i inntak kan legges inn senere under «Pause i inntak» på hjemmeskjermen.",

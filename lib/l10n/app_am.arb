@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "«አዎ»ን ከመረጡ\nከመድኃኒት እረፍቱ በኋላ ስንተኛ ቀን እንደሆነ እንዲታይ እናስተካክላለን",
   "yazFlexLastRestDurationTitle": "የእረፍት ጊዜውን ከጀመሩ በፊት የወሰዱትን ክኒን\nእባክዎ ይንኩ",
   "yazFlexLastRestDurationNote": "የእረፍት ጊዜውን ከመጀመርዎ በፊት መጨረሻ የወሰዱትን ክኒን ይምረጡ",
+  "yazFlexRestDurationDaysLabel": "የመድኃኒት መቋረጥ ቀናት",
   "yazFlexSkipRestDuration": "የመድሀኒት ዕረፍት መረጃ ማስገባትን ዝለል",
   "yazFlexSkipRestDurationDialogTitle": "የመድኃኒት ዕረፍት ግቤትን ይዝለሉ",
   "yazFlexSkipRestDurationDialogMessage": "የመውሰድ እረፍት ጊዜውን በኋላ በመነሻ ገጹ ላይ ካለው \"የመውሰድ እረፍት\" ማስገባት ይችላሉ።",

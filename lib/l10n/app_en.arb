@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "If you choose “Yes”,\nwe’ll set it to show how many days it has been since the end of your break.",
   "yazFlexLastRestDurationTitle": "Please tap the pill\nyou took just before the break",
   "yazFlexLastRestDurationNote": "Please select the last pill you took before starting the break",
+  "yazFlexRestDurationDaysLabel": "Number of break days",
   "yazFlexSkipRestDuration": "Skip entering the break period",
   "yazFlexSkipRestDurationDialogTitle": "Skip entering the break period",
   "yazFlexSkipRestDurationDialogMessage": "You can enter the break period later from “Break from Taking” on the Home screen.",

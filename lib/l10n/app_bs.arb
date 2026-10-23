@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Ako odaberete „Da”,\npodesit ćemo prikaz koliko je dana prošlo od završetka pauze.",
   "yazFlexLastRestDurationTitle": "Dodirnite pilulu\nkoju ste uzeli neposredno prije pauze",
   "yazFlexLastRestDurationNote": "Odaberite pilulu koju ste posljednju uzeli prije početka pauze",
+  "yazFlexRestDurationDaysLabel": "Broj dana pauze",
   "yazFlexSkipRestDuration": "Preskoči unos pauze",
   "yazFlexSkipRestDurationDialogTitle": "Preskočite unos pauze",
   "yazFlexSkipRestDurationDialogMessage": "Period pauze uzimanja možete unijeti kasnije u odjeljku „Pauza uzimanja“ na početnom ekranu.",

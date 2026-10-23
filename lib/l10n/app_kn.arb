@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "“ಹೌದು” ಆಯ್ಕೆ ಮಾಡಿದರೆ\nವಿರಾಮ ಮುಗಿದ ನಂತರ ಎಷ್ಟುನೇ ದಿನವಾಗಿದೆ ಎಂಬುದನ್ನು ತೋರಿಸುವಂತೆ ಹೊಂದಿಸಲಾಗುತ್ತದೆ",
   "yazFlexLastRestDurationTitle": "ವಿರಾಮ ಆರಂಭಿಸುವ ಮುನ್ನ ತೆಗೆದುಕೊಂಡ ಮಾತ್ರೆಯನ್ನು\nಟ್ಯಾಪ್ ಮಾಡಿ",
   "yazFlexLastRestDurationNote": "ವಿರಾಮ ಪ್ರಾರಂಭಿಸುವ ಮೊದಲು ನೀವು ಕೊನೆಯಾಗಿ ತೆಗೆದುಕೊಂಡ ಮಾತ್ರೆಯನ್ನು ದಯವಿಟ್ಟು ಆಯ್ಕೆಮಾಡಿ",
+  "yazFlexRestDurationDaysLabel": "ವಿರಾಮದ ದಿನಗಳ ಸಂಖ್ಯೆ",
   "yazFlexSkipRestDuration": "ವಿರಾಮ ಅವಧಿ ನಮೂದಿಸುವುದನ್ನು ಬಿಟ್ಟುಬಿಡಿ",
   "yazFlexSkipRestDurationDialogTitle": "ವಿರಾಮ ಅವಧಿಯ ದಾಖಲೆಯನ್ನು ಬಿಟ್ಟುಬಿಡಿ",
   "yazFlexSkipRestDurationDialogMessage": "ಔಷಧ ಸೇವನೆ ವಿರಾಮದ ಅವಧಿಯನ್ನು ನಂತರ ಹೋಮ್‌ನ “ಔಷಧ ಸೇವನೆ ವಿರಾಮ” ನಲ್ಲಿ ನಮೂದಿಸಬಹುದು.",

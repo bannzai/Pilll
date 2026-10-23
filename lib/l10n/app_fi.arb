@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Jos valitset ”Kyllä”,\nasetamme näytettäväksi, monesko päivä tauon päättymisestä on menossa.",
   "yazFlexLastRestDurationTitle": "Napauta pilleriä,\njonka otit juuri ennen taukoa",
   "yazFlexLastRestDurationNote": "Valitse viimeinen pilleri, jonka otit ennen tauon alkamista",
+  "yazFlexRestDurationDaysLabel": "Taukopäivien määrä",
   "yazFlexSkipRestDuration": "Ohita tauon syöttäminen",
   "yazFlexSkipRestDurationDialogTitle": "Ohita taukojakson kirjaaminen",
   "yazFlexSkipRestDurationDialogMessage": "Taukojakson voi syöttää myöhemmin Koti-näytön ”Tauko ottamisesta” -kohdasta.",

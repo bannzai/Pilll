@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "Եթե ընտրեք «Այո»-ն,\nկկարգավորենք, որպեսզի ցուցադրվի, թե ընդմիջման ավարտից քանիերորդ օրն է։",
   "yazFlexLastRestDurationTitle": "Խնդրում ենք հպվել այն հաբին,\nորը ընդունել եք դադարից անմիջապես առաջ",
   "yazFlexLastRestDurationNote": "Խնդրում ենք ընտրել վերջին հաբը, որը ընդունել եք ընդմիջումը սկսելուց առաջ",
+  "yazFlexRestDurationDaysLabel": "Դադարի օրերի քանակ",
   "yazFlexSkipRestDuration": "Բաց թողնել ընդմիջման շրջանի մուտքագրումը",
   "yazFlexSkipRestDurationDialogTitle": "Բաց թողնել դադարի մուտքագրումը",
   "yazFlexSkipRestDurationDialogMessage": "Ընդունման դադարի ժամանակահատվածը կարող եք ավելի ուշ մուտքագրել Գլխավորի «Ընդունման դադար» բաժնից։",

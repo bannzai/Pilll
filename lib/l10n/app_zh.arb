@@ -572,6 +572,7 @@
   "initialSettingAskYazFlexDescription": "选择“是”后\n我们会将其设置为可显示停药期结束后的第几天",
   "yazFlexLastRestDurationTitle": "请点按进入休药前\n服用的那颗药",
   "yazFlexLastRestDurationNote": "请选择开始停药前最后一次服用的药片",
+  "yazFlexRestDurationDaysLabel": "休药天数",
   "yazFlexSkipRestDuration": "跳过输入停药期",
   "yazFlexSkipRestDurationDialogTitle": "跳过停药期录入",
   "yazFlexSkipRestDurationDialogMessage": "休药期间可稍后在首页的“服用休息”中输入。",
