@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "Tag des Beginns der Pause",
   "yazFlexLastRestDurationEndDate": "Tag der Wiederaufnahme der Einnahme",
   "yazFlexSelectDate": "Datum auswählen",
+  "yazFlexBeginPillNumberPageTitle": "Die wievielte Einnahme im Zyklus ist der Beginn des Blisters?",
   "yazFlexNextInputIsRestDuration": "Als Nächstes gibst du die letzte Einnahmepause ein"
 }

@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "ವಿರಾಮ ಆರಂಭವಾದ ದಿನ",
   "yazFlexLastRestDurationEndDate": "ಮತ್ತೆ ಸೇವನೆ ಪ್ರಾರಂಭಿಸಿದ ದಿನ",
   "yazFlexSelectDate": "ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ",
+  "yazFlexBeginPillNumberPageTitle": "ಚಕ್ರದಲ್ಲಿ ಶೀಟ್‌ನ ಆರಂಭವು ಎಷ್ಟನೇ ಸೇವನೆಗೆ ಹೊಂದುತ್ತದೆ?",
   "yazFlexNextInputIsRestDuration": "ಮುಂದೆ, ಹಿಂದಿನ ವಿರಾಮವನ್ನು ನಮೂದಿಸಿ"
 }

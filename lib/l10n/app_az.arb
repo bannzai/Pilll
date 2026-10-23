@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "Fasilənin başladığı gün",
   "yazFlexLastRestDurationEndDate": "Qəbulu yenidən başladığınız gün",
   "yazFlexSelectDate": "Tarix seçin",
+  "yazFlexBeginPillNumberPageTitle": "Sikl üzrə vərəqin başlanğıcı neçənci qəbuldur?",
   "yazFlexNextInputIsRestDuration": "Növbəti addımda əvvəlki fasilə müddətini daxil edin"
 }

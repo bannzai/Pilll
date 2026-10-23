@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "Date de début de la pause",
   "yazFlexLastRestDurationEndDate": "Date de reprise de la prise",
   "yazFlexSelectDate": "Sélectionnez une date",
+  "yazFlexBeginPillNumberPageTitle": "À quelle prise du cycle correspond le début de la plaquette ?",
   "yazFlexNextInputIsRestDuration": "Ensuite, indiquez votre dernière pause"
 }

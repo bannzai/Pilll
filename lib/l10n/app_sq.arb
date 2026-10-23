@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "Dita kur filloi pushimi",
   "yazFlexLastRestDurationEndDate": "Dita kur rifilluat marrjen",
   "yazFlexSelectDate": "Zgjidhni datën",
+  "yazFlexBeginPillNumberPageTitle": "Fillimi i fletës me cilën marrje në cikël përkon?",
   "yazFlexNextInputIsRestDuration": "Më pas, shkruani pushimin e mëparshëm"
 }

@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "היום שבו ההפסקה התחילה",
   "yazFlexLastRestDurationEndDate": "היום שבו חזרת ליטול",
   "yazFlexSelectDate": "בחרי תאריך",
+  "yazFlexBeginPillNumberPageTitle": "איזו נטילה במחזור היא תחילת המגשית?",
   "yazFlexNextInputIsRestDuration": "בשלב הבא, יש להזין את ההפסקה הקודמת"
 }

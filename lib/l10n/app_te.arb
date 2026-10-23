@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "విరామం ప్రారంభమైన రోజు",
   "yazFlexLastRestDurationEndDate": "మళ్లీ తీసుకోవడం ప్రారంభించిన రోజు",
   "yazFlexSelectDate": "తేదీని ఎంచుకోండి",
+  "yazFlexBeginPillNumberPageTitle": "చక్రంలో షీట్ ప్రారంభం ఎన్ని వ సారి తీసుకోవడమా?",
   "yazFlexNextInputIsRestDuration": "తర్వాత, మునుపటి విరామాన్ని నమోదు చేయండి"
 }

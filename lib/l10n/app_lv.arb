@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "Diena, kad sākās pārtraukums",
   "yazFlexLastRestDurationEndDate": "Diena, kad atsākāt lietošanu",
   "yazFlexSelectDate": "Izvēlieties datumu",
+  "yazFlexBeginPillNumberPageTitle": "Kurā lietošanas reizē ciklā ir plāksnītes sākums?",
   "yazFlexNextInputIsRestDuration": "Tālāk ievadiet iepriekšējo pārtraukumu"
 }

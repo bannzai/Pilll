@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "Денот кога започна паузата",
   "yazFlexLastRestDurationEndDate": "Денот кога повторно почнавте да земате",
   "yazFlexSelectDate": "Изберете датум",
+  "yazFlexBeginPillNumberPageTitle": "Почетокот на блистерот на кое по ред земање во циклусот одговара?",
   "yazFlexNextInputIsRestDuration": "Следно, внесете ја претходната пауза"
 }

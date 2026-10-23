@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "Dan začetka premora",
   "yazFlexLastRestDurationEndDate": "Dan ponovnega začetka jemanja",
   "yazFlexSelectDate": "Izberite datum",
+  "yazFlexBeginPillNumberPageTitle": "Kateri po vrsti odmerek v ciklu je začetek pretisnega omota?",
   "yazFlexNextInputIsRestDuration": "Nato vnesite prejšnji premor"
 }

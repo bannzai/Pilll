@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "Денят, в който е започнала паузата",
   "yazFlexLastRestDurationEndDate": "Дата на подновяване на приема",
   "yazFlexSelectDate": "Изберете дата",
+  "yazFlexBeginPillNumberPageTitle": "Началото на листа на кой пореден прием от цикъла е?",
   "yazFlexNextInputIsRestDuration": "След това въведете предишния период на пауза"
 }

@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "Siku ambayo mapumziko yalianza",
   "yazFlexLastRestDurationEndDate": "Siku uliyoanza tena kutumia",
   "yazFlexSelectDate": "Chagua tarehe",
+  "yazFlexBeginPillNumberPageTitle": "Mwanzo wa kifurushi ni matumizi ya ngapi katika mzunguko?",
   "yazFlexNextInputIsRestDuration": "Kisha, weka kipindi chako cha mapumziko cha awali"
 }

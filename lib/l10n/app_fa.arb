@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "روز شروع وقفه",
   "yazFlexLastRestDurationEndDate": "روز از سرگیری مصرف",
   "yazFlexSelectDate": "تاریخ را انتخاب کنید",
+  "yazFlexBeginPillNumberPageTitle": "شروع شیت در چرخه، چندمین نوبت مصرف است؟",
   "yazFlexNextInputIsRestDuration": "در مرحله بعد، وقفه قبلی را وارد کنید"
 }

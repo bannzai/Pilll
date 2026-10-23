@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "Тыныгуу башталган күн",
   "yazFlexLastRestDurationEndDate": "Кайра иче баштаган күн",
   "yazFlexSelectDate": "Күндү тандаңыз",
+  "yazFlexBeginPillNumberPageTitle": "Цикл боюнча барактын башталышы канчанчы кабыл алуу болот?",
   "yazFlexNextInputIsRestDuration": "Кийинки кадамда мурунку тыныгууңузду киргизиңиз"
 }

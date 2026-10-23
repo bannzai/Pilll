@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "နားရက်စတင်သည့်နေ့",
   "yazFlexLastRestDurationEndDate": "ပြန်လည်သောက်သုံးစတင်သည့်နေ့",
   "yazFlexSelectDate": "ရက်စွဲကို ရွေးပါ",
+  "yazFlexBeginPillNumberPageTitle": "စက်ဝန်းအရ အချပ်၏အစမှာ ဘယ်နှကြိမ်မြောက် သောက်ခြင်းဖြစ်ပါသလဲ?",
   "yazFlexNextInputIsRestDuration": "ထို့နောက် ယခင်နားရက်ကာလကို ထည့်ပါ"
 }

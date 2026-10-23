@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "Die dag waarop die pouse begin het",
   "yazFlexLastRestDurationEndDate": "Datum waarop jy weer begin het om dit te neem",
   "yazFlexSelectDate": "Kies 'n datum",
+  "yazFlexBeginPillNumberPageTitle": "Watter nommer dosis in die siklus is die begin van die strook?",
   "yazFlexNextInputIsRestDuration": "Volgende voer jy jou vorige pouse in"
 }

@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "Dagen då uppehållet började",
   "yazFlexLastRestDurationEndDate": "Dagen du började ta den igen",
   "yazFlexSelectDate": "Välj ett datum",
+  "yazFlexBeginPillNumberPageTitle": "Vilket nummer i cykeln är början på kartan?",
   "yazFlexNextInputIsRestDuration": "Därefter anger du föregående uppehåll"
 }

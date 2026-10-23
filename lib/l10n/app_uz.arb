@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "Tanaffus boshlangan kun",
   "yazFlexLastRestDurationEndDate": "Qabulni qayta boshlagan kun",
   "yazFlexSelectDate": "Sanani tanlang",
+  "yazFlexBeginPillNumberPageTitle": "Sikl bo‘yicha listning boshlanishi nechanchi qabulga to‘g‘ri keladi?",
   "yazFlexNextInputIsRestDuration": "Keyingi bosqichda avvalgi tanaffusni kiriting"
 }

@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "বিরতি শুরু হওয়ার দিন",
   "yazFlexLastRestDurationEndDate": "আবার সেবন শুরু করার দিন",
   "yazFlexSelectDate": "তারিখ নির্বাচন করুন",
+  "yazFlexBeginPillNumberPageTitle": "চক্র অনুযায়ী শিটের শুরু কোন নম্বর সেবন?",
   "yazFlexNextInputIsRestDuration": "এরপর আগের বিরতির তথ্য লিখুন"
 }

@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "Aranın başladığı gün",
   "yazFlexLastRestDurationEndDate": "Tekrar almaya başladığınız gün",
   "yazFlexSelectDate": "Tarih seçin",
+  "yazFlexBeginPillNumberPageTitle": "Döngüde yaprağın başlangıcı kaçıncı kullanıma denk geliyor?",
   "yazFlexNextInputIsRestDuration": "Sonraki adımda önceki ara dönemini girin"
 }

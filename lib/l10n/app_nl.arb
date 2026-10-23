@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "Dag waarop de stopweek begon",
   "yazFlexLastRestDurationEndDate": "Dag waarop je weer begon met innemen",
   "yazFlexSelectDate": "Selecteer een datum",
+  "yazFlexBeginPillNumberPageTitle": "Met welke inname in de cyclus begint deze strip?",
   "yazFlexNextInputIsRestDuration": "Voer daarna je vorige stopweek in"
 }

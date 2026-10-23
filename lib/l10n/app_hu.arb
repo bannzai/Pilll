@@ -579,5 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "A szünet kezdőnapja",
   "yazFlexLastRestDurationEndDate": "Az újrakezdés napja",
   "yazFlexSelectDate": "Válasszon dátumot",
+  "yazFlexBeginPillNumberPageTitle": "A ciklusban hányadik bevétel a levél kezdete?",
   "yazFlexNextInputIsRestDuration": "Ezután adja meg az előző szünetet"
 }
