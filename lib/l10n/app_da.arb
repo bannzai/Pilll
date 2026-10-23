@@ -579,6 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "Dagen, hvor pausen startede",
   "yazFlexLastRestDurationEndDate": "Dato for genoptagelse",
   "yazFlexSelectDate": "Vælg en dato",
-  "yazFlexBeginPillNumberPageTitle": "Hvilken dag efter pausen\nstartede du arket?",
+  "yazFlexBeginPillNumberPageTitle": "Hvilket nummer indtag i cyklussen er starten på arket?",
   "yazFlexNextInputIsRestDuration": "Derefter skal du indtaste din seneste pause"
 }

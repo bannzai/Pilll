@@ -579,6 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "Завсарлага эхэлсэн өдөр",
   "yazFlexLastRestDurationEndDate": "Дахин ууж эхэлсэн өдөр",
   "yazFlexSelectDate": "Огноо сонгоно уу",
-  "yazFlexBeginPillNumberPageTitle": "Хуудсыг эхлүүлсэн өдөр\nзавсарлагааны дараах хэд дэх өдөр байсан бэ?",
+  "yazFlexBeginPillNumberPageTitle": "Циклийн хэд дэх уух үе нь хавтангийн эхлэл вэ?",
   "yazFlexNextInputIsRestDuration": "Дараа нь өмнөх завсарлагаа оруулна уу"
 }

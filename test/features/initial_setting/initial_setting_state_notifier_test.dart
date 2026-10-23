@@ -1255,6 +1255,60 @@ void main() {
       expect(state.yazFlexLastRestDurationBeginDate, isNull);
       expect(state.yazFlexLastRestDurationEndDate, isNull);
     });
+    test("スキップした後に戻って日付を入力し直すとスキップが解除され、プレビューに再開したピルの位置が出る", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-03-02"));
+
+      final container = ProviderContainer(
+        overrides: [
+          endInitialSettingProvider.overrideWith(
+            (ref) => MockEndInitialSetting(),
+          ),
+          batchFactoryProvider.overrideWithValue(MockBatchFactory()),
+          batchSetSettingProvider.overrideWith((ref) => MockBatchSetSetting()),
+          batchSetPillSheetModifiedHistoryProvider.overrideWith(
+            (ref) => MockBatchSetPillSheetModifiedHistory(),
+          ),
+          batchSetPillSheetGroupProvider.overrideWith(
+            (ref) => MockBatchSetPillSheetGroup(),
+          ),
+          remoteConfigParameterProvider.overrideWithValue(
+            RemoteConfigParameter(),
+          ),
+        ],
+      );
+      final store = container.read(
+        initialSettingStateNotifierProvider.notifier,
+      );
+      store.selectYazFlex();
+      store.setTodayPillNumber(pageIndex: 1, pillNumberInPillSheet: 2);
+      store.setYazFlexHasNotRestedYet(yazFlexHasNotRestedYet: true);
+
+      store.setYazFlexLastRestDurationBeginDate(
+        yazFlexLastRestDurationBeginDate: DateTime.parse("2022-02-13"),
+      );
+      expect(
+        container
+            .read(initialSettingStateNotifierProvider)
+            .yazFlexHasNotRestedYet,
+        false,
+      );
+
+      store.setYazFlexHasNotRestedYet(yazFlexHasNotRestedYet: true);
+      store.setYazFlexLastRestDurationBeginDate(
+        yazFlexLastRestDurationBeginDate: DateTime.parse("2022-02-13"),
+      );
+      store.setYazFlexLastRestDurationEndDate(
+        yazFlexLastRestDurationEndDate: DateTime.parse("2022-02-17"),
+      );
+      final state = container.read(initialSettingStateNotifierProvider);
+      expect(state.yazFlexHasNotRestedYet, false);
+      expect(
+        state.yazFlexResumedPillPosition,
+        (pageIndex: 0, pillNumberInPillSheet: 17),
+      );
+    });
   });
 
   group("#selectYazFlex", () {

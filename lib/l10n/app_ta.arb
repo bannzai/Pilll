@@ -579,6 +579,6 @@
   "yazFlexLastRestDurationBeginDate": "இடைவேளை தொடங்கிய நாள்",
   "yazFlexLastRestDurationEndDate": "மீண்டும் எடுத்துக்கொள்ளத் தொடங்கிய நாள்",
   "yazFlexSelectDate": "தேதியைத் தேர்ந்தெடுக்கவும்",
-  "yazFlexBeginPillNumberPageTitle": "நீங்கள் சீட்டை தொடங்கிய நாள்\nஇடைவெளி முடிந்து எத்தனையாவது நாள்?",
+  "yazFlexBeginPillNumberPageTitle": "சுழற்சியில் தாளின் தொடக்கம் எத்தனையாவது உட்கொள்ளல்?",
   "yazFlexNextInputIsRestDuration": "அடுத்து, முந்தைய இடைவேளையை உள்ளிடவும்"
 }
