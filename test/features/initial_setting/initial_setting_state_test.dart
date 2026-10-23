@@ -140,7 +140,7 @@ void main() {
     });
   });
 
-  // ヤーズフレックス向けの導線の状態 (28錠 × 3枚、今日の番号・休薬のピル・休薬の日数・開始番号を指定) を返す
+  // ヤーズフレックス向けの導線の状態 (28錠 × 5枚、今日の番号・休薬のピル・休薬の日数・開始番号を指定) を返す
   InitialSettingState yazFlexState({
     required InitialSettingTodayPillNumber? todayPillNumber,
     InitialSettingTodayPillNumber? yazFlexLastTakenPillNumberBeforeRest,
@@ -152,6 +152,8 @@ void main() {
       reminderTimes: [],
       isYazFlex: true,
       pillSheetTypes: const [
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0
@@ -409,6 +411,8 @@ void main() {
         reminderTimes: [],
         isYazFlex: false,
         pillSheetTypes: [
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0

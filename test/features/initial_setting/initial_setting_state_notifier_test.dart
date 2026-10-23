@@ -812,6 +812,13 @@ void main() {
       expect(pillSheetGroup.pillSheets[1].todayPillNumber, 2);
       expect(
           pillSheetGroup.pillSheets[2].beginDate, DateTime.parse("2022-03-29"));
+      // 5 枚で 1 周期 (最長 120 日) を収める。4 枚目・5 枚目は休薬の影響を受けず 28 日ずつ後ろに続く
+      expect(pillSheetGroup.pillSheets.length, 5);
+      expect(
+          pillSheetGroup.pillSheets[3].beginDate, DateTime.parse("2022-04-26"));
+      expect(
+          pillSheetGroup.pillSheets[4].beginDate, DateTime.parse("2022-05-24"));
+      expect(pillSheetGroup.pillSheets[4].restDurations, isEmpty);
       expect(pillSheetGroup.activePillSheet?.groupIndex, 1);
       expect(pillSheetGroup.displayNumberSetting?.beginPillNumber, 1);
       expect(
@@ -821,6 +828,8 @@ void main() {
       expect(
         pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
         [
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
           PillSheetType.pillsheet_28_0,
@@ -1182,7 +1191,7 @@ void main() {
   });
 
   group("#selectYazFlex", () {
-    test("「はい」を選ぶと28錠タイプのピルシートが3枚になり、ヤーズフレックス向けの導線の状態になる", () {
+    test("「はい」を選ぶと28錠タイプのピルシートが5枚になり、ヤーズフレックス向けの導線の状態になる", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-03-02"));
@@ -1209,13 +1218,15 @@ void main() {
         initialSettingStateNotifierProvider.notifier,
       );
 
-      // 「いいえ」でピルシートの種類を選んでから戻って「はい」を選んだ場合も28錠タイプ3枚になる
+      // 「いいえ」でピルシートの種類を選んでから戻って「はい」を選んだ場合も28錠タイプ5枚になる
       store.selectedFirstPillSheetType(PillSheetType.pillsheet_21);
       store.selectYazFlex();
 
       final state = container.read(initialSettingStateNotifierProvider);
       expect(state.isYazFlex, true);
       expect(state.pillSheetTypes, [
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,

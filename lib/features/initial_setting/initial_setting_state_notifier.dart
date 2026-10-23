@@ -97,11 +97,11 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   }
 
   /// 「ヤーズフレックスの方ですか？」に「はい」と答えた時の状態にする
-  /// ピルシートは28錠タイプ固定で、枚数はヤーズフレックス以外の初期設定の既定と同じ3枚にする
+  /// ピルシートは28錠タイプ固定で 5 枚。ヤーズフレックスの連続服用は最長 120 日 (28錠 × 4 枚 + 8 錠) なので、1 周期を 1 つのピルシートグループに収めるには 5 枚要る
   void selectYazFlex() {
     state = state.copyWith(
       isYazFlex: true,
-      pillSheetTypes: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0],
+      pillSheetTypes: List.filled(5, PillSheetType.pillsheet_28_0),
       todayPillNumber: null,
       yazFlexHasNotRestedYet: false,
       yazFlexLastTakenPillNumberBeforeRest: null,
