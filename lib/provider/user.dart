@@ -1,16 +1,16 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:cloud_functions/cloud_functions.dart';
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:flutter/foundation.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
-import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/package.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
-import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
+import 'package:pilll/utils/functions/firebase_functions.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -26,7 +26,6 @@ class UpdatePurchaseInfo {
   UpdatePurchaseInfo(this.databaseConnection);
 
   Future<void> call({
-    required bool? isActivated,
     required String? entitlementIdentifier,
     required String? premiumPlanIdentifier,
     required String purchaseAppID,
@@ -34,7 +33,6 @@ class UpdatePurchaseInfo {
     required String? originalPurchaseDate,
   }) async {
     await databaseConnection.userRawReference().set({
-      if (isActivated != null) UserFirestoreFieldKeys.isPremium: isActivated,
       UserFirestoreFieldKeys.purchaseAppID: purchaseAppID,
     }, SetOptions(merge: true));
     final privates = {
@@ -51,14 +49,14 @@ class UpdatePurchaseInfo {
   }
 }
 
+/// isPremium をサーバー (syncRevenueCat) に設定させる。
+/// isPremium は権限の判定に使われるため、端末上の CustomerInfo から書かずサーバーが RevenueCat に照会して決める
 class SyncPurchaseInfo {
-  final DatabaseConnection databaseConnection;
-  SyncPurchaseInfo(this.databaseConnection);
+  final FirebaseFunctions firebaseFunctions;
+  SyncPurchaseInfo(this.firebaseFunctions);
 
-  Future<void> call({required bool isActivated}) async {
-    await databaseConnection.userRawReference().set({
-      UserFirestoreFieldKeys.isPremium: isActivated,
-    }, SetOptions(merge: true));
+  Future<void> call() async {
+    await firebaseFunctions.syncRevenueCat();
   }
 }
 
@@ -252,31 +250,22 @@ class SaveUserLaunchInfo {
       UserFirestoreFieldKeys.userDocumentIDSets: userDocumentIDSets,
       UserFirestoreFieldKeys.firebaseCurrentUserIDSets: firebaseCurrentUserIDSets,
       UserFirestoreFieldKeys.anonymousUserIDSets: anonymousUserIDSets,
-
-      UserFirestoreFieldKeys.isTrial: user.isTrial,
     }, SetOptions(merge: true));
   }
 }
 
 final endInitialSettingProvider = Provider(
-  (ref) => EndInitialSetting(ref.watch(databaseProvider)),
+  (ref) => EndInitialSetting(functions),
 );
 
+/// 初期設定の完了時にトライアルを開始する。
+/// トライアルの権限フィールド (isTrial・beginTrialDate・trialDeadlineDate・discountEntitlementDeadlineDate) はサーバー (startTrial) が書く
 class EndInitialSetting {
-  final DatabaseConnection databaseConnection;
-  EndInitialSetting(this.databaseConnection);
+  final FirebaseFunctions firebaseFunctions;
+  EndInitialSetting(this.firebaseFunctions);
 
-  Future<void> call(RemoteConfigParameter remoteConfigParameter) {
-    return databaseConnection.userRawReference().set({
-      UserFirestoreFieldKeys.isTrial: true,
-      UserFirestoreFieldKeys.beginTrialDate: now(),
-      UserFirestoreFieldKeys.trialDeadlineDate: now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay).endOfDay(),
-      UserFirestoreFieldKeys.discountEntitlementDeadlineDate: now()
-          .addDays(
-            remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay,
-          )
-          .endOfDay(),
-    }, SetOptions(merge: true));
+  Future<void> call() async {
+    await firebaseFunctions.startTrial();
   }
 }
 
