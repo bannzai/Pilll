@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Моля, докоснете хапчето,\nкоето сте приели преди началото на паузата",
   "yazFlexLastRestDurationNote": "Моля, изберете последното хапче, което сте приели преди началото на паузата",
   "yazFlexRestDurationDaysLabel": "Брой дни на пауза",
+  "yazFlexRestDurationDaysValue": "{days} дни",
   "yazFlexSkipRestDuration": "Пропуснете въвеждането на почивката",
   "yazFlexSkipRestDurationDialogTitle": "Пропускане на въвеждането на почивката",
   "yazFlexSkipRestDurationDialogMessage": "Периодът на пауза в приема може да бъде въведен по-късно от „Пауза в приема“ на началния екран.",

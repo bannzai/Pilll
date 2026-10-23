@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Ketuk pil\nyang diminum tepat sebelum jeda",
   "yazFlexLastRestDurationNote": "Silakan pilih pil terakhir yang Anda minum sebelum memulai jeda",
   "yazFlexRestDurationDaysLabel": "Jumlah hari jeda",
+  "yazFlexRestDurationDaysValue": "{days} hari",
   "yazFlexSkipRestDuration": "Lewati pengisian masa jeda",
   "yazFlexSkipRestDurationDialogTitle": "Lewati pengisian masa jeda",
   "yazFlexSkipRestDurationDialogMessage": "Periode jeda minum dapat diisi nanti dari “Jeda minum” di Beranda.",

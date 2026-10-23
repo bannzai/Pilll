@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Koppintson arra a tablettára,\namelyet közvetlenül a szünet előtt vett be",
   "yazFlexLastRestDurationNote": "Kérjük, válaszd ki az utolsó tablettát, amelyet a szünet kezdete előtt vettél be",
   "yazFlexRestDurationDaysLabel": "Szünet napjainak száma",
+  "yazFlexRestDurationDaysValue": "{days} nap",
   "yazFlexSkipRestDuration": "A szünet megadásának kihagyása",
   "yazFlexSkipRestDurationDialogTitle": "A szünet megadásának kihagyása",
   "yazFlexSkipRestDurationDialogMessage": "A gyógyszerszedési szünet időszakát később a Kezdőképernyő „Szedési szünet” menüpontjában adhatja meg.",

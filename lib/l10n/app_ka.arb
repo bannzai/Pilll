@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "გთხოვთ, შეეხეთ აბს,\nრომელიც შესვენების დაწყებამდე მიიღეთ",
   "yazFlexLastRestDurationNote": "გთხოვთ, აირჩიოთ ბოლო აბი, რომელიც შესვენების დაწყებამდე მიიღეთ",
   "yazFlexRestDurationDaysLabel": "შესვენების დღეების რაოდენობა",
+  "yazFlexRestDurationDaysValue": "{days} დღე",
   "yazFlexSkipRestDuration": "გამოტოვეთ შესვენების პერიოდის შეყვანა",
   "yazFlexSkipRestDurationDialogTitle": "შესვენების პერიოდის შეყვანის გამოტოვება",
   "yazFlexSkipRestDurationDialogMessage": "მიღების შესვენების პერიოდის შეყვანა მოგვიანებითაც შეგიძლიათ მთავარ ეკრანზე „მიღების შესვენება“-დან.",

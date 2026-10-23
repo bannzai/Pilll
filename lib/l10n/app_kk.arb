@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Үзіліс басталардың алдында ішкен таблетканы\nтүртіңіз",
   "yazFlexLastRestDurationNote": "Үзіліс басталар алдында қабылдаған соңғы таблетканы таңдаңыз",
   "yazFlexRestDurationDaysLabel": "Үзіліс күндерінің саны",
+  "yazFlexRestDurationDaysValue": "{days} күн",
   "yazFlexSkipRestDuration": "Үзіліс кезеңін енгізуді өткізіп жіберу",
   "yazFlexSkipRestDurationDialogTitle": "Үзіліс кезеңін енгізуді өткізіп жіберу",
   "yazFlexSkipRestDurationDialogMessage": "Қабылдау үзілісінің мерзімін кейінірек Басты беттегі «Қабылдау үзілісі» бөлімінен енгізе аласыз.",

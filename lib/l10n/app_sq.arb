@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Prekni pilulën\nqë e more pak para pushimit",
   "yazFlexLastRestDurationNote": "Ju lutemi, zgjidhni pilulën e fundit që keni marrë para se të filloni pushimin",
   "yazFlexRestDurationDaysLabel": "Numri i ditëve të pauzës",
+  "yazFlexRestDurationDaysValue": "{days} ditë",
   "yazFlexSkipRestDuration": "Kalo futjen e periudhës së pushimit",
   "yazFlexSkipRestDurationDialogTitle": "Kalo futjen e periudhës së pauzës",
   "yazFlexSkipRestDurationDialogMessage": "Periudhën e pauzës së marrjes mund ta vendosni më vonë te “Pauza e marrjes” në ekranin kryesor.",

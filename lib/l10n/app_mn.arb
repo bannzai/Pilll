@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Завсарлага эхлэхийн өмнө уусан эмээ\nтовшино уу",
   "yazFlexLastRestDurationNote": "Завсарлага эхлэхээс өмнө хамгийн сүүлд уусан эмээ сонгоно уу",
   "yazFlexRestDurationDaysLabel": "Завсарласан өдрийн тоо",
+  "yazFlexRestDurationDaysValue": "{days} өдөр",
   "yazFlexSkipRestDuration": "Завсарлагааны хугацаа оруулахыг алгасах",
   "yazFlexSkipRestDurationDialogTitle": "Завсарлах хугацааны оруулгыг алгасах",
   "yazFlexSkipRestDurationDialogMessage": "Уух завсарлагын хугацааг дараа нь Нүүр хуудасны “Уух завсарлага” хэсгээс оруулах боломжтой.",

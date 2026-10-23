@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Puudutage pilli,\nmille võtsite vahetult enne pausi",
   "yazFlexLastRestDurationNote": "Palun valige viimane pill, mille võtsite enne pausi alustamist",
   "yazFlexRestDurationDaysLabel": "Pausipäevade arv",
+  "yazFlexRestDurationDaysValue": "{days} päeva",
   "yazFlexSkipRestDuration": "Jäta pausi sisestamine vahele",
   "yazFlexSkipRestDurationDialogTitle": "Jäta pausiperioodi sisestamine vahele",
   "yazFlexSkipRestDurationDialogMessage": "Võtmispausi perioodi saate hiljem sisestada avalehe jaotises „Võtmispaus”.",

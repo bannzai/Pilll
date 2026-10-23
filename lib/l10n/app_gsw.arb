@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Bitte tipp uf d Pille,\nwoner du grad vor dr Pause gno hesch",
   "yazFlexLastRestDurationNote": "Bitte wähl d’letscht Pille us, wo du vor dr Pause gnoh hesch",
   "yazFlexRestDurationDaysLabel": "Aazahl vo de Pause-Täg",
+  "yazFlexRestDurationDaysValue": "{days} Täg",
   "yazFlexSkipRestDuration": "Iigab vo dr Pause überspringe",
   "yazFlexSkipRestDurationDialogTitle": "D Iigab vo dr Pause überspringe",
   "yazFlexSkipRestDurationDialogMessage": "D Ziit vo dr Iinahmspause chönd Si spöter über „Iinahmspause“ uf em Home-Bildschirm iigeh.",

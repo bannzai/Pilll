@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "இடைவேளை தொடங்குவதற்கு முன் எடுத்த மாத்திரையைத்\nதட்டவும்",
   "yazFlexLastRestDurationNote": "இடைவேளை தொடங்குவதற்கு முன் நீங்கள் கடைசியாக எடுத்த மாத்திரையைத் தேர்ந்தெடுக்கவும்",
   "yazFlexRestDurationDaysLabel": "இடைவேளை நாட்களின் எண்ணிக்கை",
+  "yazFlexRestDurationDaysValue": "{days} நாட்கள்",
   "yazFlexSkipRestDuration": "இடைவேளை காலத்தை உள்ளிடுவது தவிர்க்கவும்",
   "yazFlexSkipRestDurationDialogTitle": "இடைவேளை காலத்தை பதிவு செய்வதைத் தவிர்க்கவும்",
   "yazFlexSkipRestDurationDialogMessage": "மருந்து எடுத்தல் ஓய்வு காலத்தை பின்னர் முகப்பில் உள்ள “மருந்து எடுத்தல் ஓய்வு” பகுதியில் உள்ளிடலாம்.",

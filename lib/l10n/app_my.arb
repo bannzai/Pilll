@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "အနားယူကာလမစတင်မီ သောက်ခဲ့သော ဆေးလုံးကို\nနှိပ်ပါ",
   "yazFlexLastRestDurationNote": "အနားယူကာလ မစတင်မီ နောက်ဆုံးသောက်ခဲ့သော ဆေးလုံးကို ရွေးချယ်ပါ",
   "yazFlexRestDurationDaysLabel": "ဆေးနားရက် အရေအတွက်",
+  "yazFlexRestDurationDaysValue": "{days} ရက်",
   "yazFlexSkipRestDuration": "ဆေးနားကာလ ထည့်သွင်းမှုကို ကျော်ရန်",
   "yazFlexSkipRestDurationDialogTitle": "ဆေးနားကာလ ထည့်သွင်းမှုကို ကျော်မည်",
   "yazFlexSkipRestDurationDialogMessage": "ဆေးသောက်နားချိန်ကာလကို နောက်မှ ပင်မစာမျက်နှာရှိ “ဆေးသောက်နားချိန်” မှ ထည့်သွင်းနိုင်ပါသည်။",

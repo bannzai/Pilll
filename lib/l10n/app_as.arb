@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "বিৰতি আৰম্ভ কৰাৰ ঠিক আগতে খোৱা পিলটোত\nটেপ কৰক",
   "yazFlexLastRestDurationNote": "বিৰতি আৰম্ভ কৰাৰ আগতে আপুনি শেষবাৰ খোৱা পিলটো নিৰ্বাচন কৰক",
   "yazFlexRestDurationDaysLabel": "ঔষধ নোখোৱা দিনৰ সংখ্যা",
+  "yazFlexRestDurationDaysValue": "{days} দিন",
   "yazFlexSkipRestDuration": "ঔষধ বন্ধৰ সময়ছোৱাৰ ইনপুট এৰি দিয়ক",
   "yazFlexSkipRestDurationDialogTitle": "ঔষধ-বিৰতিৰ ইনপুট এৰি যাব",
   "yazFlexSkipRestDurationDialogMessage": "ঔষধ সেৱন বিৰতিৰ সময়সীমা পিছত হোমৰ «ঔষধ সেৱন বিৰতি»ৰ পৰা লিখিব পাৰিব।",

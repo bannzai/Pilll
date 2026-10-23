@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "የእረፍት ጊዜውን ከጀመሩ በፊት የወሰዱትን ክኒን\nእባክዎ ይንኩ",
   "yazFlexLastRestDurationNote": "የእረፍት ጊዜውን ከመጀመርዎ በፊት መጨረሻ የወሰዱትን ክኒን ይምረጡ",
   "yazFlexRestDurationDaysLabel": "የመድኃኒት መቋረጥ ቀናት",
+  "yazFlexRestDurationDaysValue": "{days} ቀናት",
   "yazFlexSkipRestDuration": "የመድሀኒት ዕረፍት መረጃ ማስገባትን ዝለል",
   "yazFlexSkipRestDurationDialogTitle": "የመድኃኒት ዕረፍት ግቤትን ይዝለሉ",
   "yazFlexSkipRestDurationDialogMessage": "የመውሰድ እረፍት ጊዜውን በኋላ በመነሻ ገጹ ላይ ካለው \"የመውሰድ እረፍት\" ማስገባት ይችላሉ።",

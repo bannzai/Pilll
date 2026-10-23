@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "لطفاً قرصی را که درست قبل از شروع وقفه مصرف کردید\nانتخاب کنید",
   "yazFlexLastRestDurationNote": "لطفاً آخرین قرصی را که پیش از شروع دوره وقفه مصرف کردید انتخاب کنید",
   "yazFlexRestDurationDaysLabel": "تعداد روزهای وقفه",
+  "yazFlexRestDurationDaysValue": "{days} روز",
   "yazFlexSkipRestDuration": "از وارد کردن دوره قطع مصرف صرف‌نظر کنید",
   "yazFlexSkipRestDurationDialogTitle": "ورود دوره توقف را رد کنید",
   "yazFlexSkipRestDurationDialogMessage": "می‌توانید دوره توقف مصرف را بعداً از «توقف مصرف» در صفحه اصلی وارد کنید.",

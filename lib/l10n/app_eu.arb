@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Sakatu atsedenaldia hasi aurretik\nhartu zenuen pilula",
   "yazFlexLastRestDurationNote": "Aukeratu atsedenaldia hasi aurretik hartu zenuen azken pilula",
   "yazFlexRestDurationDaysLabel": "Atseden egun kopurua",
+  "yazFlexRestDurationDaysValue": "{days} egun",
   "yazFlexSkipRestDuration": "Saltatu atsedenaldiaren sarrera",
   "yazFlexSkipRestDurationDialogTitle": "Atsedenaldiaren sarrera saltatu",
   "yazFlexSkipRestDurationDialogMessage": "Hartzeko atsedenaldia geroago sar dezakezu hasierako pantailako «Hartzeko atsedenaldia» aukeratik.",

@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "I-tap ang pill\nna ininom mo bago magsimula ang pahinga",
   "yazFlexLastRestDurationNote": "Pakipili ang huling pill na ininom mo bago magsimula ang pahinga",
   "yazFlexRestDurationDaysLabel": "Bilang ng mga araw ng pahinga",
+  "yazFlexRestDurationDaysValue": "{days} araw",
   "yazFlexSkipRestDuration": "Laktawan ang paglalagay ng panahon ng pahinga",
   "yazFlexSkipRestDurationDialogTitle": "Laktawan ang paglalagay ng panahon ng pahinga",
   "yazFlexSkipRestDurationDialogMessage": "Maaari mong ilagay mamaya ang panahon ng pahinga sa pag-inom mula sa “Pahinga sa pag-inom” sa Home.",

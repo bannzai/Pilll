@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Atingeți pilula\npe care ați luat-o chiar înainte de pauză",
   "yazFlexLastRestDurationNote": "Te rugăm să selectezi ultima pilulă pe care ai luat-o înainte de începerea pauzei",
   "yazFlexRestDurationDaysLabel": "Numărul zilelor de pauză",
+  "yazFlexRestDurationDaysValue": "{days} zile",
   "yazFlexSkipRestDuration": "Omite introducerea perioadei de pauză",
   "yazFlexSkipRestDurationDialogTitle": "Omiteți introducerea perioadei de pauză",
   "yazFlexSkipRestDurationDialogMessage": "Perioada de pauză a administrării poate fi introdusă mai târziu din „Pauză administrare” de pe ecranul principal.",

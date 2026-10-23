@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Toca a pílula\nque tomaches xusto antes da pausa",
   "yazFlexLastRestDurationNote": "Selecciona a última pílula que tomaches antes de comezar o descanso",
   "yazFlexRestDurationDaysLabel": "Número de días de descanso",
+  "yazFlexRestDurationDaysValue": "{days} días",
   "yazFlexSkipRestDuration": "Omitir a introdución do período de descanso",
   "yazFlexSkipRestDurationDialogTitle": "Omitir o rexistro do descanso",
   "yazFlexSkipRestDurationDialogMessage": "Poderás introducir máis tarde o período de descanso da toma desde «Descanso da toma» na pantalla de inicio.",

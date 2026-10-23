@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "مهرباني وکړئ هغه ګولۍ ټیپ کړئ\nچې تاسو د وقفې له پیل مخکې اخیستې وه",
   "yazFlexLastRestDurationNote": "مهرباني وکړئ هغه وروستۍ ګولۍ وټاکئ چې تاسو د وقفې له پیل مخکې خوړلې وه",
   "yazFlexRestDurationDaysLabel": "د وقفې د ورځو شمېر",
+  "yazFlexRestDurationDaysValue": "{days} ورځې",
   "yazFlexSkipRestDuration": "د وقفې مودې داخلول پرېږدئ",
   "yazFlexSkipRestDurationDialogTitle": "د وقفې مودې ننوتل پرېږدئ",
   "yazFlexSkipRestDurationDialogMessage": "تاسې کولی شئ د درملو د وقفې موده وروسته د کور سکرین له “د درملو وقفه” څخه دننه کړئ.",

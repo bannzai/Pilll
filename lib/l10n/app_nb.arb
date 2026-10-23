@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Trykk på pillen\ndu tok rett før pausen",
   "yazFlexLastRestDurationNote": "Velg pillen du tok sist før pausen startet",
   "yazFlexRestDurationDaysLabel": "Antall pausedager",
+  "yazFlexRestDurationDaysValue": "{days} dager",
   "yazFlexSkipRestDuration": "Hopp over registrering av pausen",
   "yazFlexSkipRestDurationDialogTitle": "Hopp over registrering av pauseperioden",
   "yazFlexSkipRestDurationDialogMessage": "Perioden for pause i inntak kan legges inn senere under «Pause i inntak» på Hjem-skjermen.",

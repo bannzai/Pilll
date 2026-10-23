@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Molaya başlamadan hemen önce aldığınız hapı\nseçmek için dokunun",
   "yazFlexLastRestDurationNote": "Lütfen molaya başlamadan önce en son aldığınız hapı seçin",
   "yazFlexRestDurationDaysLabel": "Ara verilen gün sayısı",
+  "yazFlexRestDurationDaysValue": "{days} gün",
   "yazFlexSkipRestDuration": "Ara dönem girişini atla",
   "yazFlexSkipRestDurationDialogTitle": "Ara dönem girişini atla",
   "yazFlexSkipRestDurationDialogMessage": "Kullanıma ara verme dönemini daha sonra Ana Ekran’daki “Kullanıma ara verme” bölümünden girebilirsiniz.",

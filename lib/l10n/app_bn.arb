@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "বিরতি শুরুর ঠিক আগে যে পিলটি খেয়েছিলেন,\nসেটিতে ট্যাপ করুন",
   "yazFlexLastRestDurationNote": "বিরতি শুরু করার আগে শেষ যে পিলটি খেয়েছিলেন, সেটি নির্বাচন করুন",
   "yazFlexRestDurationDaysLabel": "ওষুধ বিরতির দিনের সংখ্যা",
+  "yazFlexRestDurationDaysValue": "{days} দিন",
   "yazFlexSkipRestDuration": "ওষুধ বিরতির তথ্য দেওয়া এড়িয়ে যান",
   "yazFlexSkipRestDurationDialogTitle": "ওষুধ বিরতির তথ্য লেখা এড়িয়ে যান",
   "yazFlexSkipRestDurationDialogMessage": "পিল খাওয়া বিরতির সময়কাল পরে হোমের «পিল খাওয়া বিরতি» থেকে লিখতে পারবেন।",

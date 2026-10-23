@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "વિરામ શરૂ થાય તે પહેલાં લીધેલી ગોળી પર\nટૅપ કરો",
   "yazFlexLastRestDurationNote": "કૃપા કરીને વિરામ શરૂ કરતાં પહેલાં તમે છેલ્લે લીધી હતી તે ગોળી પસંદ કરો",
   "yazFlexRestDurationDaysLabel": "વિરામના દિવસોની સંખ્યા",
+  "yazFlexRestDurationDaysValue": "{days} દિવસ",
   "yazFlexSkipRestDuration": "વિરામ અવધિ દાખલ કરવું છોડો",
   "yazFlexSkipRestDurationDialogTitle": "વિરામ અવધિની નોંધ છોડો",
   "yazFlexSkipRestDurationDialogMessage": "દવા લેવાનું વિરામ સમયગાળો પછીથી હોમમાં “દવા લેવાનું વિરામ” માંથી દાખલ કરી શકશો.",

@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "يرجى الضغط على الحبة\nالتي تناولتها قبل بدء فترة التوقف",
   "yazFlexLastRestDurationNote": "يرجى اختيار آخر حبة تناولتها قبل بدء فترة التوقف",
   "yazFlexRestDurationDaysLabel": "عدد أيام التوقف",
+  "yazFlexRestDurationDaysValue": "{days} أيام",
   "yazFlexSkipRestDuration": "تخطي إدخال فترة التوقف",
   "yazFlexSkipRestDurationDialogTitle": "تخطي إدخال فترة التوقف",
   "yazFlexSkipRestDurationDialogMessage": "يمكنكِ إدخال فترة التوقف عن تناول الحبوب لاحقًا من «التوقف عن تناول الحبوب» في الصفحة الرئيسية.",

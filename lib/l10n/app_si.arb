@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "විරාමය ආරම්භ කිරීමට පෙර ගත් ගෝලිය\nතට්ටු කරන්න",
   "yazFlexLastRestDurationNote": "කරුණාකර විරාමය ආරම්භ කිරීමට පෙර අවසන් වරට ගත් ගුලිය තෝරන්න",
   "yazFlexRestDurationDaysLabel": "විරාම දින ගණන",
+  "yazFlexRestDurationDaysValue": "{days} දින",
   "yazFlexSkipRestDuration": "විරාම කාලය ඇතුළත් කිරීම මඟ හරින්න",
   "yazFlexSkipRestDurationDialogTitle": "විරාම කාලය ඇතුළත් කිරීම මඟ හරින්න",
   "yazFlexSkipRestDurationDialogMessage": "ඖෂධ ගැනීමේ විරාම කාලය පසුව මුල් පිටුවේ “ඖෂධ ගැනීමේ විරාමය” වෙතින් ඇතුළත් කළ හැකියි.",

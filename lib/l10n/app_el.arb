@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Πατήστε το χάπι\nπου πήρατε ακριβώς πριν από τη διακοπή",
   "yazFlexLastRestDurationNote": "Παρακαλώ επιλέξτε το τελευταίο χάπι που πήρατε πριν ξεκινήσει η διακοπή",
   "yazFlexRestDurationDaysLabel": "Αριθμός ημερών διακοπής",
+  "yazFlexRestDurationDaysValue": "{days} ημέρες",
   "yazFlexSkipRestDuration": "Παράλειψη εισαγωγής διαλείμματος",
   "yazFlexSkipRestDurationDialogTitle": "Παράλειψη καταχώρισης της διακοπής",
   "yazFlexSkipRestDurationDialogMessage": "Μπορείτε να καταχωρίσετε αργότερα την περίοδο διακοπής λήψης από το «Διακοπή λήψης» στην αρχική οθόνη.",

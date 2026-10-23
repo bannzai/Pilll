@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "Tryck på pillret\ndu tog precis innan uppehållet",
   "yazFlexLastRestDurationNote": "Välj den sista pillan du tog innan uppehållet började",
   "yazFlexRestDurationDaysLabel": "Antal pausdagar",
+  "yazFlexRestDurationDaysValue": "{days} dagar",
   "yazFlexSkipRestDuration": "Hoppa över att ange uppehållet",
   "yazFlexSkipRestDurationDialogTitle": "Hoppa över registrering av uppehållsperioden",
   "yazFlexSkipRestDurationDialogMessage": "Perioden för uppehåll i intaget kan du ange senare under ”Uppehåll i intaget” på hemskärmen.",

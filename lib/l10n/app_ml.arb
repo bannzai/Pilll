@@ -573,6 +573,7 @@
   "yazFlexLastRestDurationTitle": "ഇടവേള തുടങ്ങുന്നതിനുമുമ്പ് എടുത്ത ഗുളികയിൽ\nടാപ്പ് ചെയ്യുക",
   "yazFlexLastRestDurationNote": "ഇടവേള ആരംഭിക്കുന്നതിന് മുമ്പ് നിങ്ങൾ അവസാനമായി കഴിച്ച ഗുളിക തിരഞ്ഞെടുക്കുക",
   "yazFlexRestDurationDaysLabel": "ഇടവേള ദിവസങ്ങളുടെ എണ്ണം",
+  "yazFlexRestDurationDaysValue": "{days} ദിവസം",
   "yazFlexSkipRestDuration": "ഇടവേള കാലയളവ് നൽകുന്നത് ഒഴിവാക്കുക",
   "yazFlexSkipRestDurationDialogTitle": "ഇടവേള കാലയളവിന്റെ എൻട്രി ഒഴിവാക്കുക",
   "yazFlexSkipRestDurationDialogMessage": "മരുന്ന് കഴിക്കുന്നതിലെ ഇടവേളയുടെ കാലയളവ് പിന്നീട് ഹോമിലെ “മരുന്ന് കഴിക്കുന്നതിലെ ഇടവേള”യിൽ നിന്ന് നൽകാം.",
