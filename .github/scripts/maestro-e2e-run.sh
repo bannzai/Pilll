@@ -141,6 +141,7 @@ for flow in "${FLOW_FILES[@]}"; do
     --format junit \
     --output "${ARTIFACT_DIR}/report-${name}.xml" \
     --debug-output "${ARTIFACT_DIR}/debug/${name}" \
+    --flatten-debug-output \
     "$flow" || STATUS=1
   echo "::endgroup::"
 done

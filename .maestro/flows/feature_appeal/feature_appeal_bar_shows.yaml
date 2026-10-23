@@ -13,5 +13,8 @@ appId: com.mizuki.Ohashi.Pilll.dev
 # ホーム画面到達後、データ読み込みを待つ
 - waitForAnimationToEnd
 # AnnouncementBar に RecommendSignupGeneral が表示されることを id セレクタで確認
-- assertVisible:
-    id: "recommend_signup_general_bar"
+# CI の Simulator ではホーム画面のデータ読み込みが waitForAnimationToEnd の後になることがあるため、30 秒まで表示を待つ
+- extendedWaitUntil:
+    visible:
+      id: "recommend_signup_general_bar"
+    timeout: 30000

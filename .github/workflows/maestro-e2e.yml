@@ -96,4 +96,6 @@ jobs:
         with:
           name: maestro-e2e-artifacts
           path: maestro-artifacts
+          # maestro は debug 出力を .maestro/ 配下 (隠しディレクトリ) に書くため含める
+          include-hidden-files: true
           retention-days: 3

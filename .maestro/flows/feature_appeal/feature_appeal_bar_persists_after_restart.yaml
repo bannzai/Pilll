@@ -11,8 +11,11 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - runFlow: subflows/initial_setup.yaml
 - waitForAnimationToEnd
 # 初回起動時に Bar が表示される
-- assertVisible:
-    id: "recommend_signup_general_bar"
+# CI の Simulator ではホーム画面のデータ読み込みが waitForAnimationToEnd の後になることがあるため、30 秒まで表示を待つ
+- extendedWaitUntil:
+    visible:
+      id: "recommend_signup_general_bar"
+    timeout: 30000
 # アプリを停止して再起動 (clearState なし = 状態維持)
 - stopApp
 - launchApp:
@@ -20,5 +23,8 @@ appId: com.mizuki.Ohashi.Pilll.dev
     clearKeychain: false
 - waitForAnimationToEnd
 # 再起動後も Bar が表示される (初期設定済み + 匿名ユーザー = RecommendSignupGeneral)
-- assertVisible:
-    id: "recommend_signup_general_bar"
+# CI の Simulator ではホーム画面のデータ読み込みが waitForAnimationToEnd の後になることがあるため、30 秒まで表示を待つ
+- extendedWaitUntil:
+    visible:
+      id: "recommend_signup_general_bar"
+    timeout: 30000

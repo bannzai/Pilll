@@ -12,6 +12,10 @@ appId: com.mizuki.Ohashi.Pilll.dev
       - waitForAnimationToEnd
 
 # Screen 0: 「ヤーズフレックスの方ですか？」→ いいえ (従来の導線)
+# CI の Simulator ではクリーンインストール直後の起動に時間がかかり、tapOn の待ち時間を超えるため表示を待つ
+- extendedWaitUntil:
+    visible: "ヤーズフレックスの方ですか？"
+    timeout: 60000
 - tapOn: "いいえ"
 - waitForAnimationToEnd
 
