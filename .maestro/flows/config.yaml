@@ -4,3 +4,4 @@
 flows:
   - "feature_appeal/*"
   - "lifetime_offer/*"
+  - "yaz_flex/*"
