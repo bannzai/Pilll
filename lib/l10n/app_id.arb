@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "Apakah Anda menggunakan Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Jika Anda memilih “Ya”,\nkami akan mengaturnya agar dapat menampilkan hari keberapa sejak jeda berakhir.",
   "yazFlexLastRestDurationTitle": "Mohon beri tahu kami\ntentang jeda terakhir Anda",
-  "yazFlexHasNotRestedYet": "Saya belum menjalani jeda minum pil",
+  "yazFlexSkipRestDuration": "Lewati pengisian masa jeda",
+  "yazFlexSkipRestDurationDialogTitle": "Lewati pengisian masa jeda",
+  "yazFlexSkipRestDurationDialogMessage": "Periode jeda minum dapat diisi nanti dari “Jeda minum” di Beranda.",
+  "yazFlexSkipRestDurationDialogSkip": "Lewati",
+  "yazFlexEmptyEndDateMeansResting": "Jika Anda belum mulai minum lagi, biarkan tanggal mulai lagi kosong.",
   "yazFlexLastRestDurationBeginDate": "Hari dimulainya jeda",
   "yazFlexLastRestDurationEndDate": "Hari Anda kembali mulai minum",
   "yazFlexSelectDate": "Pilih tanggal",
-  "yazFlexBeginPillNumberTitle": "Pil nomor 1 pada lembar pertama diminum pada hari ke berapa setelah jeda?"
+  "yazFlexBeginPillNumberPageTitle": "Pada hari Anda mulai lembar pil,\nhari keberapa setelah jeda itu?",
+  "yazFlexNextInputIsRestDuration": "Berikutnya, masukkan jeda sebelumnya"
 }

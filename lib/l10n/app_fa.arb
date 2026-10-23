@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "آیا از Yaz Flex استفاده می‌کنید؟",
   "initialSettingAskYazFlexDescription": "اگر «بله» را انتخاب کنید،\nطوری تنظیم می‌کنیم که تعداد روزهای گذشته از پایان دوره وقفه نمایش داده شود.",
   "yazFlexLastRestDurationTitle": "لطفاً\nدرباره آخرین دوره وقفه به ما بگویید",
-  "yazFlexHasNotRestedYet": "هنوز دوره قطع مصرف قرص را شروع نکرده‌ام",
+  "yazFlexSkipRestDuration": "از وارد کردن دوره قطع مصرف صرف‌نظر کنید",
+  "yazFlexSkipRestDurationDialogTitle": "ورود دوره توقف را رد کنید",
+  "yazFlexSkipRestDurationDialogMessage": "می‌توانید دوره توقف مصرف را بعداً از «توقف مصرف» در صفحه اصلی وارد کنید.",
+  "yazFlexSkipRestDurationDialogSkip": "رد کردن",
+  "yazFlexEmptyEndDateMeansResting": "اگر هنوز مصرف را از سر نگرفته‌اید، تاریخ شروع دوباره را خالی بگذارید.",
   "yazFlexLastRestDurationBeginDate": "روز شروع وقفه",
   "yazFlexLastRestDurationEndDate": "روز از سرگیری مصرف",
   "yazFlexSelectDate": "تاریخ را انتخاب کنید",
-  "yazFlexBeginPillNumberTitle": "قرص شماره ۱ در ورق اول، چندمین روز بعد از پایان دورهٔ وقفه است؟"
+  "yazFlexBeginPillNumberPageTitle": "روزی که بسته را شروع کردید\nچندمین روز بعد از پایان وقفه بود؟",
+  "yazFlexNextInputIsRestDuration": "در مرحله بعد، وقفه قبلی را وارد کنید"
 }

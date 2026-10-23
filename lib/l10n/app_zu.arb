@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "Ingabe usebenzisa i-Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Uma ukhetha okuthi “Yebo”,\nsizokumisa ukuze kuboniswe ukuthi sekuyisuku lwesingaki kusukela ikhefu liphelile.",
   "yazFlexLastRestDurationTitle": "Sicela\nusitshele ngekhefu lakho langaphambilini",
-  "yazFlexHasNotRestedYet": "Angikayeki ikhefu lokuyeka amaphilisi okwamanje",
+  "yazFlexSkipRestDuration": "Yeqa ukufaka isikhathi sekhefu",
+  "yazFlexSkipRestDurationDialogTitle": "Yeqa ukufaka isikhathi sekhefu",
+  "yazFlexSkipRestDurationDialogMessage": "Isikhathi sekhefu lokuphuza singafakwa kamuva kokuthi “Ikhefu lokuphuza” ekhasini lasekhaya.",
+  "yazFlexSkipRestDurationDialogSkip": "Yeqa",
+  "yazFlexEmptyEndDateMeansResting": "Uma ungakaqali futhi ukuyiphuza, shiya usuku lokuqala kabusha lungenalutho.",
   "yazFlexLastRestDurationBeginDate": "Usuku ikhefu eliqale ngalo",
   "yazFlexLastRestDurationEndDate": "Usuku oqale ngalo futhi ukuyiphuza",
   "yazFlexSelectDate": "Khetha usuku",
-  "yazFlexBeginPillNumberTitle": "Iphilisi elingu-1 eshidini sokuqala lithathwa ngosuku lwesingaki ngemva kwekhefu?"
+  "yazFlexBeginPillNumberPageTitle": "Ngosuku oqale ngalo ishidi,\nkwakuwusuku lwesingaki ngemva kwekhefu?",
+  "yazFlexNextInputIsRestDuration": "Okulandelayo, faka ikhefu lakho langaphambilini"
 }

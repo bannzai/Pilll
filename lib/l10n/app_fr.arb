@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "Utilisez-vous Yaz Flex ?",
   "initialSettingAskYazFlexDescription": "Si vous choisissez « Oui »,\nnous le configurerons pour afficher le nombre de jours écoulés depuis la fin de la pause.",
   "yazFlexLastRestDurationTitle": "Veuillez nous indiquer\nvotre dernière période de pause",
-  "yazFlexHasNotRestedYet": "Je n’ai pas encore fait de pause dans la prise de la pilule",
+  "yazFlexSkipRestDuration": "Ignorer la saisie de la pause",
+  "yazFlexSkipRestDurationDialogTitle": "Ignorer la saisie de la pause",
+  "yazFlexSkipRestDurationDialogMessage": "Vous pourrez saisir plus tard la période de pause de prise depuis « Pause de prise » sur l’écran d’accueil.",
+  "yazFlexSkipRestDurationDialogSkip": "Ignorer",
+  "yazFlexEmptyEndDateMeansResting": "Si vous n’avez pas encore repris la prise, laissez la date de reprise vide.",
   "yazFlexLastRestDurationBeginDate": "Date de début de la pause",
   "yazFlexLastRestDurationEndDate": "Date de reprise de la prise",
   "yazFlexSelectDate": "Sélectionnez une date",
-  "yazFlexBeginPillNumberTitle": "À quel jour après la pause correspond la pilule n°1 de la première plaquette ?"
+  "yazFlexBeginPillNumberPageTitle": "Le jour où vous avez commencé la plaquette,\ncombien de jours s’étaient écoulés après la pause ?",
+  "yazFlexNextInputIsRestDuration": "Ensuite, indiquez votre dernière pause"
 }

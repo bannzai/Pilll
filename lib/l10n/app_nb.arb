@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "Bruker du Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Hvis du velger «Ja»,\nsetter vi det opp slik at det viser hvor mange dager det er siden pausen tok slutt.",
   "yazFlexLastRestDurationTitle": "Fortell oss gjerne\nom den forrige pausen din",
-  "yazFlexHasNotRestedYet": "Jeg har ikke hatt pause fra pillene ennå",
+  "yazFlexSkipRestDuration": "Hopp over registrering av pausen",
+  "yazFlexSkipRestDurationDialogTitle": "Hopp over registrering av pauseperioden",
+  "yazFlexSkipRestDurationDialogMessage": "Perioden for pause i inntak kan legges inn senere under «Pause i inntak» på Hjem-skjermen.",
+  "yazFlexSkipRestDurationDialogSkip": "Hopp over",
+  "yazFlexEmptyEndDateMeansResting": "Hvis du ikke har begynt å ta den igjen ennå, lar du datoen for oppstart stå tom.",
   "yazFlexLastRestDurationBeginDate": "Dagen pausen startet",
   "yazFlexLastRestDurationEndDate": "Datoen du begynte å ta den igjen",
   "yazFlexSelectDate": "Velg en dato",
-  "yazFlexBeginPillNumberTitle": "Hvilken dag etter pausen er pille nr. 1 på det første brettet?"
+  "yazFlexBeginPillNumberPageTitle": "Hvilken dag etter pausen\nstartet du brettet?",
+  "yazFlexNextInputIsRestDuration": "Deretter legger du inn forrige pause"
 }

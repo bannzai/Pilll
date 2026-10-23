@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "ನೀವು Yaz Flex ಬಳಸುತ್ತೀರಾ?",
   "initialSettingAskYazFlexDescription": "“ಹೌದು” ಆಯ್ಕೆ ಮಾಡಿದರೆ\nವಿರಾಮ ಮುಗಿದ ನಂತರ ಎಷ್ಟುನೇ ದಿನವಾಗಿದೆ ಎಂಬುದನ್ನು ತೋರಿಸುವಂತೆ ಹೊಂದಿಸಲಾಗುತ್ತದೆ",
   "yazFlexLastRestDurationTitle": "ದಯವಿಟ್ಟು\nಹಿಂದಿನ ವಿರಾಮ ಅವಧಿಯ ಬಗ್ಗೆ ನಮಗೆ ತಿಳಿಸಿ",
-  "yazFlexHasNotRestedYet": "ನಾನು ಇನ್ನೂ ಮಾತ್ರೆ ಸೇವನೆಗೆ ವಿರಾಮ ತೆಗೆದುಕೊಂಡಿಲ್ಲ",
+  "yazFlexSkipRestDuration": "ವಿರಾಮ ಅವಧಿ ನಮೂದಿಸುವುದನ್ನು ಬಿಟ್ಟುಬಿಡಿ",
+  "yazFlexSkipRestDurationDialogTitle": "ವಿರಾಮ ಅವಧಿಯ ದಾಖಲೆಯನ್ನು ಬಿಟ್ಟುಬಿಡಿ",
+  "yazFlexSkipRestDurationDialogMessage": "ಔಷಧ ಸೇವನೆ ವಿರಾಮದ ಅವಧಿಯನ್ನು ನಂತರ ಹೋಮ್‌ನ “ಔಷಧ ಸೇವನೆ ವಿರಾಮ” ನಲ್ಲಿ ನಮೂದಿಸಬಹುದು.",
+  "yazFlexSkipRestDurationDialogSkip": "ಬಿಟ್ಟುಬಿಡಿ",
+  "yazFlexEmptyEndDateMeansResting": "ನೀವು ಇನ್ನೂ ಮತ್ತೆ ಸೇವನೆ ಪ್ರಾರಂಭಿಸದಿದ್ದರೆ, ಮರುಪ್ರಾರಂಭಿಸಿದ ದಿನಾಂಕವನ್ನು ಖಾಲಿಯೇ ಬಿಡಿ.",
   "yazFlexLastRestDurationBeginDate": "ವಿರಾಮ ಆರಂಭವಾದ ದಿನ",
   "yazFlexLastRestDurationEndDate": "ಮತ್ತೆ ಸೇವನೆ ಪ್ರಾರಂಭಿಸಿದ ದಿನ",
   "yazFlexSelectDate": "ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ",
-  "yazFlexBeginPillNumberTitle": "ಮೊದಲ ಶೀಟ್‌ನ 1ನೇ ಗುಳಿ ವಿರಾಮದ ನಂತರ ಎಷ್ಟನೇ ದಿನದದು?"
+  "yazFlexBeginPillNumberPageTitle": "ನೀವು ಶೀಟ್ ಪ್ರಾರಂಭಿಸಿದ ದಿನ\nವಿರಾಮದ ನಂತರ ಎಷ್ಟನೇ ದಿನವಾಗಿತ್ತು?",
+  "yazFlexNextInputIsRestDuration": "ಮುಂದೆ, ಹಿಂದಿನ ವಿರಾಮವನ್ನು ನಮೂದಿಸಿ"
 }

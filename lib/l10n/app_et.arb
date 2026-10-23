@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "Kas kasutad Yaz Flexi?",
   "initialSettingAskYazFlexDescription": "Kui valite „Jah“,\nseadistame selle nii, et kuvatakse, mitmes päev on pausijärgselt.",
   "yazFlexLastRestDurationTitle": "Palun rääkige meile\noma eelmisest pausist",
-  "yazFlexHasNotRestedYet": "Ma ei ole veel pillipausi teinud",
+  "yazFlexSkipRestDuration": "Jäta pausi sisestamine vahele",
+  "yazFlexSkipRestDurationDialogTitle": "Jäta pausiperioodi sisestamine vahele",
+  "yazFlexSkipRestDurationDialogMessage": "Võtmispausi perioodi saate hiljem sisestada avalehe jaotises „Võtmispaus”.",
+  "yazFlexSkipRestDurationDialogSkip": "Jäta vahele",
+  "yazFlexEmptyEndDateMeansResting": "Kui te ei ole veel võtmist jätkanud, jätke jätkamise kuupäev tühjaks.",
   "yazFlexLastRestDurationBeginDate": "Päev, mil paus algas",
   "yazFlexLastRestDurationEndDate": "Võtmise taasalustamise päev",
   "yazFlexSelectDate": "Valige kuupäev",
-  "yazFlexBeginPillNumberTitle": "Mitmes päev pärast pausi on esimese lehe tablett nr 1?"
+  "yazFlexBeginPillNumberPageTitle": "Mis päeval pärast pausi\nalustasite lehega?",
+  "yazFlexNextInputIsRestDuration": "Järgmisena sisestage oma eelmine paus"
 }

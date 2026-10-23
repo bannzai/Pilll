@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "நீங்கள் Yaz Flex பயன்படுத்துகிறீர்களா?",
   "initialSettingAskYazFlexDescription": "“ஆம்” என்பதைத் தேர்ந்தெடுத்தால்\nஇடைவேளை முடிந்ததிலிருந்து எத்தனையாவது நாள் என்பதை காட்டும் வகையில் அமைக்கப்படும்",
   "yazFlexLastRestDurationTitle": "தயவுசெய்து\nமுந்தைய இடைவேளை பற்றி எங்களுக்குச் சொல்லுங்கள்",
-  "yazFlexHasNotRestedYet": "நான் இன்னும் மாத்திரை இடைவெளி எடுக்கவில்லை",
+  "yazFlexSkipRestDuration": "இடைவேளை காலத்தை உள்ளிடுவது தவிர்க்கவும்",
+  "yazFlexSkipRestDurationDialogTitle": "இடைவேளை காலத்தை பதிவு செய்வதைத் தவிர்க்கவும்",
+  "yazFlexSkipRestDurationDialogMessage": "மருந்து எடுத்தல் ஓய்வு காலத்தை பின்னர் முகப்பில் உள்ள “மருந்து எடுத்தல் ஓய்வு” பகுதியில் உள்ளிடலாம்.",
+  "yazFlexSkipRestDurationDialogSkip": "தவிர்க்கவும்",
+  "yazFlexEmptyEndDateMeansResting": "நீங்கள் இன்னும் மீண்டும் உட்கொள்ளத் தொடங்கவில்லை என்றால், மீண்டும் தொடங்கிய தேதியை காலியாக விடுங்கள்.",
   "yazFlexLastRestDurationBeginDate": "இடைவேளை தொடங்கிய நாள்",
   "yazFlexLastRestDurationEndDate": "மீண்டும் எடுத்துக்கொள்ளத் தொடங்கிய நாள்",
   "yazFlexSelectDate": "தேதியைத் தேர்ந்தெடுக்கவும்",
-  "yazFlexBeginPillNumberTitle": "முதல் சீட்டிலுள்ள 1ஆம் மாத்திரை, இடைவேளை முடிந்து எத்தனையாவது நாளுக்கானது?"
+  "yazFlexBeginPillNumberPageTitle": "நீங்கள் சீட்டை தொடங்கிய நாள்\nஇடைவெளி முடிந்து எத்தனையாவது நாள்?",
+  "yazFlexNextInputIsRestDuration": "அடுத்து, முந்தைய இடைவேளையை உள்ளிடவும்"
 }

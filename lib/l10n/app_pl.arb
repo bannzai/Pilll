@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "Czy stosujesz Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Jeśli wybierzesz „Tak”,\nustawimy wyświetlanie, który to dzień od zakończenia przerwy.",
   "yazFlexLastRestDurationTitle": "Powiedz nam proszę\no poprzedniej przerwie",
-  "yazFlexHasNotRestedYet": "Nie miałam jeszcze przerwy w braniu tabletek",
+  "yazFlexSkipRestDuration": "Pomiń wpisywanie przerwy",
+  "yazFlexSkipRestDurationDialogTitle": "Pomiń wprowadzanie przerwy",
+  "yazFlexSkipRestDurationDialogMessage": "Okres przerwy w przyjmowaniu możesz wprowadzić później w sekcji „Przerwa w przyjmowaniu” na ekranie głównym.",
+  "yazFlexSkipRestDurationDialogSkip": "Pomiń",
+  "yazFlexEmptyEndDateMeansResting": "Jeśli jeszcze nie wznowiłaś przyjmowania, pozostaw datę wznowienia pustą.",
   "yazFlexLastRestDurationBeginDate": "Dzień rozpoczęcia przerwy",
   "yazFlexLastRestDurationEndDate": "Dzień wznowienia przyjmowania",
   "yazFlexSelectDate": "Wybierz datę",
-  "yazFlexBeginPillNumberTitle": "Który to dzień po przerwie dla tabletki nr 1 na pierwszym blistrze?"
+  "yazFlexBeginPillNumberPageTitle": "W którym dniu po przerwie\nzaczęła Pani blister?",
+  "yazFlexNextInputIsRestDuration": "Następnie wpisz poprzednią przerwę"
 }

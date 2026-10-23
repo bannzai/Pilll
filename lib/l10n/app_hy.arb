@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "Yaz Flex օգտագործո՞ւմ եք։",
   "initialSettingAskYazFlexDescription": "Եթե ընտրեք «Այո»-ն,\nկկարգավորենք, որպեսզի ցուցադրվի, թե ընդմիջման ավարտից քանիերորդ օրն է։",
   "yazFlexLastRestDurationTitle": "Խնդրում ենք\nպատմել նախորդ դադարի մասին",
-  "yazFlexHasNotRestedYet": "Դեռևս դեղահաբերի ընդմիջում չեմ արել",
+  "yazFlexSkipRestDuration": "Բաց թողնել ընդմիջման շրջանի մուտքագրումը",
+  "yazFlexSkipRestDurationDialogTitle": "Բաց թողնել դադարի մուտքագրումը",
+  "yazFlexSkipRestDurationDialogMessage": "Ընդունման դադարի ժամանակահատվածը կարող եք ավելի ուշ մուտքագրել Գլխավորի «Ընդունման դադար» բաժնից։",
+  "yazFlexSkipRestDurationDialogSkip": "Բաց թողնել",
+  "yazFlexEmptyEndDateMeansResting": "Եթե դեռ չեք վերսկսել ընդունումը, վերսկսման ամսաթիվը թողեք դատարկ։",
   "yazFlexLastRestDurationBeginDate": "Ընդմիջման սկսվելու օրը",
   "yazFlexLastRestDurationEndDate": "Վերսկսելու օրը",
   "yazFlexSelectDate": "Ընտրեք ամսաթիվը",
-  "yazFlexBeginPillNumberTitle": "Առաջին շերտի 1-ին հաբը դադարից հետո ո՞ր օրն է։"
+  "yazFlexBeginPillNumberPageTitle": "Այն օրը, երբ սկսեցիք թերթիկը,\nդադարի ավարտից հետո ո՞ր օրն էր։",
+  "yazFlexNextInputIsRestDuration": "Հաջորդը մուտքագրեք նախորդ դադարը"
 }

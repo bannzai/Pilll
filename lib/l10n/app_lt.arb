@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "Ar vartojate Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Jei pasirinksite „Taip“,\nsukonfigūruosime, kad būtų rodoma, kelinta diena po pertraukos pabaigos.",
   "yazFlexLastRestDurationTitle": "Prašome\npapasakoti apie ankstesnę pertrauką",
-  "yazFlexHasNotRestedYet": "Dar neturėjau tablečių vartojimo pertraukos",
+  "yazFlexSkipRestDuration": "Praleisti pertraukos laikotarpio įvedimą",
+  "yazFlexSkipRestDurationDialogTitle": "Praleisti pertraukos laikotarpio įvedimą",
+  "yazFlexSkipRestDurationDialogMessage": "Vartojimo pertraukos laikotarpį vėliau galėsite įvesti pradžios ekrano skiltyje „Vartojimo pertrauka“.",
+  "yazFlexSkipRestDurationDialogSkip": "Praleisti",
+  "yazFlexEmptyEndDateMeansResting": "Jei dar neatnaujinote vartojimo, palikite atnaujinimo datą tuščią.",
   "yazFlexLastRestDurationBeginDate": "Diena, kai prasidėjo pertrauka",
   "yazFlexLastRestDurationEndDate": "Diena, kai vėl pradėjote vartoti",
   "yazFlexSelectDate": "Pasirinkite datą",
-  "yazFlexBeginPillNumberTitle": "Kelinta diena po pertraukos yra 1-oji tabletė pirmoje plokštelėje?"
+  "yazFlexBeginPillNumberPageTitle": "Kurią dieną po pertraukos\npradėjote pakuotę?",
+  "yazFlexNextInputIsRestDuration": "Toliau įveskite ankstesnę pertrauką"
 }

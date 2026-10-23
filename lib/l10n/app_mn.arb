@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "Та Yaz Flex хэрэглэж байна уу?",
   "initialSettingAskYazFlexDescription": "“Тийм”-ийг сонговол\nзавсарлага дууссанаас хойш хэд дэх өдөр болохыг харуулахаар тохируулна",
   "yazFlexLastRestDurationTitle": "Өмнөх завсарлагынхаа талаар\nбидэнд хэлнэ үү",
-  "yazFlexHasNotRestedYet": "Би эмийн завсарлага хараахан хийгээгүй байна",
+  "yazFlexSkipRestDuration": "Завсарлагааны хугацаа оруулахыг алгасах",
+  "yazFlexSkipRestDurationDialogTitle": "Завсарлах хугацааны оруулгыг алгасах",
+  "yazFlexSkipRestDurationDialogMessage": "Уух завсарлагын хугацааг дараа нь Нүүр хуудасны “Уух завсарлага” хэсгээс оруулах боломжтой.",
+  "yazFlexSkipRestDurationDialogSkip": "Алгасах",
+  "yazFlexEmptyEndDateMeansResting": "Хэрэв та ууж эхлээгүй байгаа бол дахин эхэлсэн огноог хоосон үлдээнэ үү.",
   "yazFlexLastRestDurationBeginDate": "Завсарлага эхэлсэн өдөр",
   "yazFlexLastRestDurationEndDate": "Дахин ууж эхэлсэн өдөр",
   "yazFlexSelectDate": "Огноо сонгоно уу",
-  "yazFlexBeginPillNumberTitle": "Эхний хавтангийн 1-р эм завсарлага дууссанаас хойш хэд дэх өдрийнх вэ?"
+  "yazFlexBeginPillNumberPageTitle": "Хуудсыг эхлүүлсэн өдөр\nзавсарлагааны дараах хэд дэх өдөр байсан бэ?",
+  "yazFlexNextInputIsRestDuration": "Дараа нь өмнөх завсарлагаа оруулна уу"
 }

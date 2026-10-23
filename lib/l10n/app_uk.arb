@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "Ви приймаєте Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Якщо ви виберете «Так»,\nми налаштуємо показ того, який день триває після завершення перерви.",
   "yazFlexLastRestDurationTitle": "Будь ласка,\nрозкажіть про попередню перерву",
-  "yazFlexHasNotRestedYet": "Я ще не робила перерву в прийомі таблеток",
+  "yazFlexSkipRestDuration": "Пропустити введення перерви",
+  "yazFlexSkipRestDurationDialogTitle": "Пропустити введення періоду перерви",
+  "yazFlexSkipRestDurationDialogMessage": "Період перерви в прийомі можна буде ввести пізніше в розділі «Перерва в прийомі» на головному екрані.",
+  "yazFlexSkipRestDurationDialogSkip": "Пропустити",
+  "yazFlexEmptyEndDateMeansResting": "Якщо ви ще не відновили прийом, залиште дату відновлення порожньою.",
   "yazFlexLastRestDurationBeginDate": "День початку перерви",
   "yazFlexLastRestDurationEndDate": "День відновлення прийому",
   "yazFlexSelectDate": "Виберіть дату",
-  "yazFlexBeginPillNumberTitle": "Який це день після перерви для таблетки №1 на першому блістері?"
+  "yazFlexBeginPillNumberPageTitle": "У який день після перерви\nви почали блістер?",
+  "yazFlexNextInputIsRestDuration": "Далі введіть попередню перерву"
 }

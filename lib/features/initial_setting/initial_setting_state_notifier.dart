@@ -106,7 +106,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
       yazFlexHasNotRestedYet: false,
       yazFlexLastRestDurationBeginDate: null,
       yazFlexLastRestDurationEndDate: null,
-      yazFlexBeginPillNumber: null,
+      yazFlexBeginPillNumber: 1,
     );
   }
 
@@ -124,18 +124,30 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
       yazFlexHasNotRestedYet: false,
       yazFlexLastRestDurationBeginDate: null,
       yazFlexLastRestDurationEndDate: null,
-      yazFlexBeginPillNumber: null,
+      yazFlexBeginPillNumber: 1,
     );
   }
 
-  /// ヤーズフレックス向けの導線で「休薬はまだしていない」を選ぶ・外す。選んだ時は入力済みの休薬の日付を消す
+  /// ヤーズフレックス向けの導線で前回の休薬の入力をスキップする (true)・入力して進む (false)。スキップした時は入力済みの休薬の日付を消す
   void setYazFlexHasNotRestedYet({required bool yazFlexHasNotRestedYet}) {
     state = state.copyWith(
       yazFlexHasNotRestedYet: yazFlexHasNotRestedYet,
       yazFlexLastRestDurationBeginDate: yazFlexHasNotRestedYet ? null : state.yazFlexLastRestDurationBeginDate,
       yazFlexLastRestDurationEndDate: yazFlexHasNotRestedYet ? null : state.yazFlexLastRestDurationEndDate,
-      yazFlexBeginPillNumber: null,
     );
+  }
+
+  /// ヤーズフレックス向けの導線で入力した前回の休薬の開始日と服用を再開した日を消す (開始日の × を押した時)
+  void clearYazFlexLastRestDuration() {
+    state = state.copyWith(
+      yazFlexLastRestDurationBeginDate: null,
+      yazFlexLastRestDurationEndDate: null,
+    );
+  }
+
+  /// ヤーズフレックス向けの導線で入力した服用を再開した日だけを消し、休薬中 (まだ再開していない) の入力にする
+  void clearYazFlexLastRestDurationEndDate() {
+    state = state.copyWith(yazFlexLastRestDurationEndDate: null);
   }
 
   /// ヤーズフレックス向けの導線で前回の休薬が始まった日を入力する
@@ -148,16 +160,12 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
           yazFlexLastRestDurationEndDate != null && yazFlexLastRestDurationEndDate.isAfter(yazFlexLastRestDurationBeginDate)
               ? yazFlexLastRestDurationEndDate
               : null,
-      yazFlexBeginPillNumber: null,
     );
   }
 
   /// ヤーズフレックス向けの導線で前回の休薬が終わった日 (服用を再開した日) を入力する
   void setYazFlexLastRestDurationEndDate({required DateTime yazFlexLastRestDurationEndDate}) {
-    state = state.copyWith(
-      yazFlexLastRestDurationEndDate: yazFlexLastRestDurationEndDate,
-      yazFlexBeginPillNumber: null,
-    );
+    state = state.copyWith(yazFlexLastRestDurationEndDate: yazFlexLastRestDurationEndDate);
   }
 
   /// ヤーズフレックス向けの導線で開始番号 (1枚目の1番は休薬明けから何日目か) を入力する
@@ -174,8 +182,6 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
         pageIndex: pageIndex,
         pillNumberInPillSheet: pillNumberInPillSheet,
       ),
-      // 開始番号の初期値は今日の位置から決まるため、今日の位置が変わったら初期値に戻す
-      yazFlexBeginPillNumber: null,
     );
   }
 
@@ -190,43 +196,10 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   Future<void> register() async {
     final batch = batchFactory.batch();
 
-    final todayPillNumber = state.todayPillNumber;
+    final builtPillSheetGroup = state.buildPillSheetGroup();
     PillSheetGroup? createdPillSheetGroup;
-    if (todayPillNumber != null) {
-      final restDuration = state.buildYazFlexRestDurationInPillSheetGroup();
-      final createdPillSheets = state.pillSheetTypes.asMap().keys.map((
-        pageIndex,
-      ) {
-        return InitialSettingState.buildPillSheet(
-          pageIndex: pageIndex,
-          todayPillNumber: todayPillNumber,
-          pillSheetTypes: state.pillSheetTypes,
-          pillTakenCount: state.pillTakenCount,
-          restDuration: restDuration,
-        );
-      }).toList();
-
-      final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();
-      createdPillSheetGroup = batchSetPillSheetGroup(
-        batch,
-        PillSheetGroup(
-          pillTakenCount: state.pillTakenCount,
-          pillSheetIDs: pillSheetIDs,
-          pillSheets: createdPillSheets,
-          createdAt: now(),
-          // ヤーズフレックスは休薬明けから何日目かで服用を管理するため、休薬明けに1に戻る「服用日数」の表示にする
-          displayNumberSetting: state.isYazFlex
-              ? PillSheetGroupDisplayNumberSetting(
-                  beginPillNumber: state.yazFlexBeginPillNumber ?? state.yazFlexDefaultBeginPillNumber,
-                )
-              : null,
-          pillSheetAppearanceMode: state.isYazFlex
-              ? PillSheetAppearanceMode.cyclicSequential
-              // BEGIN: Release function for trial user
-              : PillSheetAppearanceMode.date,
-          // END: Release function for trial user
-        ),
-      );
+    if (builtPillSheetGroup != null) {
+      createdPillSheetGroup = batchSetPillSheetGroup(batch, builtPillSheetGroup);
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
         beforePillSheetGroup: null,

@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "Ydych chi’n defnyddio Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Os dewiswch “Ie”,\nbyddwn yn ei osod i ddangos sawl diwrnod sydd wedi mynd heibio ers diwedd yr egwyl.",
   "yazFlexLastRestDurationTitle": "Dywedwch wrthym,\nos gwelwch yn dda,\nam eich egwyl ddiwethaf",
-  "yazFlexHasNotRestedYet": "Nid wyf wedi cael seibiant rhag y bilsen eto",
+  "yazFlexSkipRestDuration": "Hepgor mewnbynnu'r cyfnod seibiant",
+  "yazFlexSkipRestDurationDialogTitle": "Hepgor mewnbynnu’r egwyl",
+  "yazFlexSkipRestDurationDialogMessage": "Gallwch nodi cyfnod saib y tabledi yn nes ymlaen o “Saib cymryd” ar y sgrin gartref.",
+  "yazFlexSkipRestDurationDialogSkip": "Hepgor",
+  "yazFlexEmptyEndDateMeansResting": "Os nad ydych wedi ailddechrau ei gymryd eto, gadewch y dyddiad ailddechrau yn wag.",
   "yazFlexLastRestDurationBeginDate": "Y diwrnod y dechreuodd y seibiant",
   "yazFlexLastRestDurationEndDate": "Y diwrnod y gwnaethoch ailddechrau ei gymryd",
   "yazFlexSelectDate": "Dewiswch ddyddiad",
-  "yazFlexBeginPillNumberTitle": "Ar ba ddiwrnod ar ôl y saib mae rhif 1 ar y daflen gyntaf?"
+  "yazFlexBeginPillNumberPageTitle": "Ar ba ddiwrnod ar ôl y seibiant\ny dechreuoch y pecyn?",
+  "yazFlexNextInputIsRestDuration": "Nesaf, nodwch y cyfnod seibiant diwethaf"
 }

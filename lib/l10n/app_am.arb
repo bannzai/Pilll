@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "Yaz Flex ነው የምትወስዱት?",
   "initialSettingAskYazFlexDescription": "«አዎ»ን ከመረጡ\nከመድኃኒት እረፍቱ በኋላ ስንተኛ ቀን እንደሆነ እንዲታይ እናስተካክላለን",
   "yazFlexLastRestDurationTitle": "እባክዎ\nስለ ቀደመው የእረፍት ጊዜ ያሳውቁን",
-  "yazFlexHasNotRestedYet": "እስካሁን የመድኃኒት እረፍት አላደረግሁም",
+  "yazFlexSkipRestDuration": "የመድሀኒት ዕረፍት መረጃ ማስገባትን ዝለል",
+  "yazFlexSkipRestDurationDialogTitle": "የመድኃኒት ዕረፍት ግቤትን ይዝለሉ",
+  "yazFlexSkipRestDurationDialogMessage": "የመውሰድ እረፍት ጊዜውን በኋላ በመነሻ ገጹ ላይ ካለው \"የመውሰድ እረፍት\" ማስገባት ይችላሉ።",
+  "yazFlexSkipRestDurationDialogSkip": "ዝለል",
+  "yazFlexEmptyEndDateMeansResting": "መውሰድን እስካሁን ካልቀጠሉ፣ የዳግም መጀመሪያ ቀንን ባዶ ይተዉት።",
   "yazFlexLastRestDurationBeginDate": "የእረፍት ጊዜው የጀመረበት ቀን",
   "yazFlexLastRestDurationEndDate": "መውሰድን እንደገና የጀመሩበት ቀን",
   "yazFlexSelectDate": "ቀን ይምረጡ",
-  "yazFlexBeginPillNumberTitle": "በመጀመሪያው ሺት ላይ ቁጥር 1 ከመድኃኒት እረፍት በኋላ ስንተኛ ቀን ነው?"
+  "yazFlexBeginPillNumberPageTitle": "ሺቱን የጀመሩት ቀን\nከመድሀኒት እረፍት በኋላ ስንተኛ ቀን ነበር?",
+  "yazFlexNextInputIsRestDuration": "ቀጥሎ የቀድሞ መድሀኒት ዕረፍትዎን ያስገቡ"
 }

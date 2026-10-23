@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "Yaz Flex istifadə edirsiniz?",
   "initialSettingAskYazFlexDescription": "“Bəli” seçsəniz,\nfasilədən sonra neçə gün keçdiyini göstərə biləcək şəkildə tənzimləyəcəyik.",
   "yazFlexLastRestDurationTitle": "Zəhmət olmasa\nəvvəlki fasilə dövrünüz barədə məlumat verin",
-  "yazFlexHasNotRestedYet": "Hələ dərman fasiləsi etməmişəm",
+  "yazFlexSkipRestDuration": "Fasilə dövrünün daxil edilməsini keçin",
+  "yazFlexSkipRestDurationDialogTitle": "Fasilə dövrü daxiletməsini keçin",
+  "yazFlexSkipRestDurationDialogMessage": "Qəbul fasiləsi müddətini sonra Ana səhifədəki “Qəbul fasiləsi” bölməsindən daxil edə bilərsiniz.",
+  "yazFlexSkipRestDurationDialogSkip": "Keçin",
+  "yazFlexEmptyEndDateMeansResting": "Qəbulu hələ bərpa etməmisinizsə, bərpa tarixini boş saxlayın.",
   "yazFlexLastRestDurationBeginDate": "Fasilənin başladığı gün",
   "yazFlexLastRestDurationEndDate": "Qəbulu yenidən başladığınız gün",
   "yazFlexSelectDate": "Tarix seçin",
-  "yazFlexBeginPillNumberTitle": "Birinci vərəqdəki 1-ci həb, fasilə bitdikdən sonra neçənci günə düşür?"
+  "yazFlexBeginPillNumberPageTitle": "Vərəqə başladığınız gün\nfasilədən sonra neçəinci gün idi?",
+  "yazFlexNextInputIsRestDuration": "Növbəti addımda əvvəlki fasilə müddətini daxil edin"
 }

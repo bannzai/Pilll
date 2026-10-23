@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "هل تستخدمين ياز فليكس؟",
   "initialSettingAskYazFlexDescription": "إذا اخترتِ «نعم»،\nفسنضبط الإعدادات بحيث يمكن عرض عدد الأيام منذ انتهاء فترة التوقف.",
   "yazFlexLastRestDurationTitle": "يرجى إخبارنا\nعن فترة التوقف السابقة",
-  "yazFlexHasNotRestedYet": "لم أبدأ فترة التوقف عن تناول الحبوب بعد",
+  "yazFlexSkipRestDuration": "تخطي إدخال فترة التوقف",
+  "yazFlexSkipRestDurationDialogTitle": "تخطي إدخال فترة التوقف",
+  "yazFlexSkipRestDurationDialogMessage": "يمكنكِ إدخال فترة التوقف عن تناول الحبوب لاحقًا من «التوقف عن تناول الحبوب» في الصفحة الرئيسية.",
+  "yazFlexSkipRestDurationDialogSkip": "تخطي",
+  "yazFlexEmptyEndDateMeansResting": "إذا لم تكوني قد استأنفتِ تناول الدواء بعد، فاتركي تاريخ الاستئناف فارغًا.",
   "yazFlexLastRestDurationBeginDate": "تاريخ بدء فترة التوقف",
   "yazFlexLastRestDurationEndDate": "تاريخ استئناف تناول الحبوب",
   "yazFlexSelectDate": "حددي التاريخ",
-  "yazFlexBeginPillNumberTitle": "ما رقم اليوم بعد انتهاء فترة التوقف عن تناول الحبوب للحبة رقم 1 في الشريط الأول؟"
+  "yazFlexBeginPillNumberPageTitle": "في أي يوم بعد انتهاء فترة التوقف\nبدأتِ الشريط؟",
+  "yazFlexNextInputIsRestDuration": "بعد ذلك، أدخلي فترة التوقف السابقة"
 }

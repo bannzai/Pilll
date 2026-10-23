@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "શું તમે Yaz Flex વાપરો છો?",
   "initialSettingAskYazFlexDescription": "જો તમે “હા” પસંદ કરો,\nતો વિરામ પૂરો થયા પછી કેટલોમો દિવસ છે તે બતાવી શકાય તેવી સેટિંગ કરવામાં આવશે",
   "yazFlexLastRestDurationTitle": "કૃપા કરીને\nપાછલા વિરામ સમય વિશે અમને જણાવો",
-  "yazFlexHasNotRestedYet": "મેં હજી સુધી ગોળીનો વિરામ લીધો નથી",
+  "yazFlexSkipRestDuration": "વિરામ અવધિ દાખલ કરવું છોડો",
+  "yazFlexSkipRestDurationDialogTitle": "વિરામ અવધિની નોંધ છોડો",
+  "yazFlexSkipRestDurationDialogMessage": "દવા લેવાનું વિરામ સમયગાળો પછીથી હોમમાં “દવા લેવાનું વિરામ” માંથી દાખલ કરી શકશો.",
+  "yazFlexSkipRestDurationDialogSkip": "છોડી દો",
+  "yazFlexEmptyEndDateMeansResting": "જો તમે હજી ફરીથી લેવાનું શરૂ કર્યું નથી, તો ફરી શરૂ કરવાની તારીખ ખાલી રાખો.",
   "yazFlexLastRestDurationBeginDate": "વિરામ શરૂ થયેલો દિવસ",
   "yazFlexLastRestDurationEndDate": "ફરીથી લેવાનું શરૂ કરેલો દિવસ",
   "yazFlexSelectDate": "તારીખ પસંદ કરો",
-  "yazFlexBeginPillNumberTitle": "પહેલી શીટની નંબર 1 ગોળી વિરામ પૂરો થયા પછી કેટલામા દિવસે લેવાય છે?"
+  "yazFlexBeginPillNumberPageTitle": "તમે શીટ શરૂ કરી તે દિવસ\nવિરામ પૂરો થયા પછી કેટલામો દિવસ હતો?",
+  "yazFlexNextInputIsRestDuration": "આગળ, અગાઉનો વિરામ દાખલ કરો"
 }

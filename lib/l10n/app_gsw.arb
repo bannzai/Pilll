@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "Nimmsch Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Wänn du „Ja“ uuswählsch,\nstellemer s so ii, dass aazeigt wird, dr wievielt Tag sit em Ändi vo dr Pause esch.",
   "yazFlexLastRestDurationTitle": "Bitte verzell is\nvo diner letschte Pause",
-  "yazFlexHasNotRestedYet": "Ich ha no kei Pillepause gmacht",
+  "yazFlexSkipRestDuration": "Iigab vo dr Pause überspringe",
+  "yazFlexSkipRestDurationDialogTitle": "D Iigab vo dr Pause überspringe",
+  "yazFlexSkipRestDurationDialogMessage": "D Ziit vo dr Iinahmspause chönd Si spöter über „Iinahmspause“ uf em Home-Bildschirm iigeh.",
+  "yazFlexSkipRestDurationDialogSkip": "Überspringe",
+  "yazFlexEmptyEndDateMeansResting": "Wenn Si d Ihnahm no nid wieder ufgnuu hän, lönd S s Datum fürs Wiederufnäh leer.",
   "yazFlexLastRestDurationBeginDate": "Dr Tag, a wott d Pause aagfange het",
   "yazFlexLastRestDurationEndDate": "Tag, a dem du d Iinahm wieder ufgnuu hesch",
   "yazFlexSelectDate": "Es Datum uswehle",
-  "yazFlexBeginPillNumberTitle": "Dr wievielt Tag nach dr Pause isch Pille Nr. 1 uf em erschte Blister?"
+  "yazFlexBeginPillNumberPageTitle": "A wellem Tag nach dr Pause\nhesch mit em Blister agfange?",
+  "yazFlexNextInputIsRestDuration": "Als Nächsts gibsch dini letschti Pause ii"
 }

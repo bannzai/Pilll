@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "Da li koristite Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ako odaberete „Da”,\npodesit ćemo prikaz koliko je dana prošlo od završetka pauze.",
   "yazFlexLastRestDurationTitle": "Molimo,\nrecite nam o prethodnoj pauzi",
-  "yazFlexHasNotRestedYet": "Još nisam napravila pauzu s tabletama",
+  "yazFlexSkipRestDuration": "Preskoči unos pauze",
+  "yazFlexSkipRestDurationDialogTitle": "Preskočite unos pauze",
+  "yazFlexSkipRestDurationDialogMessage": "Period pauze uzimanja možete unijeti kasnije u odjeljku „Pauza uzimanja“ na početnom ekranu.",
+  "yazFlexSkipRestDurationDialogSkip": "Preskoči",
+  "yazFlexEmptyEndDateMeansResting": "Ako još niste nastavili uzimanje, ostavite datum nastavka praznim.",
   "yazFlexLastRestDurationBeginDate": "Dan kada je počela pauza",
   "yazFlexLastRestDurationEndDate": "Dan kada ste ponovo počeli uzimati",
   "yazFlexSelectDate": "Odaberite datum",
-  "yazFlexBeginPillNumberTitle": "Koji je dan nakon pauze pilula broj 1 na prvom blisteru?"
+  "yazFlexBeginPillNumberPageTitle": "Kada ste počeli pakovanje,\nkoji je to bio dan nakon pauze?",
+  "yazFlexNextInputIsRestDuration": "Zatim unesite prethodnu pauzu"
 }

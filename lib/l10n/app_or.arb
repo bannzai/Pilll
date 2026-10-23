@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "ଆପଣ Yaz Flex ବ୍ୟବହାର କରୁଛନ୍ତି କି?",
   "initialSettingAskYazFlexDescription": "“ହଁ” ବାଛିଲେ\nବିରତି ସମାପ୍ତ ହେବା ପରେ କେତେ ଦିନ ହେଲା ତାହା ଦେଖାଇବା ପାଇଁ ସେଟ୍ କରାଯିବ",
   "yazFlexLastRestDurationTitle": "ଦୟାକରି\nପୂର୍ବବର୍ତ୍ତୀ ବିରତି ସମୟ ବିଷୟରେ ଆମକୁ କୁହନ୍ତୁ",
-  "yazFlexHasNotRestedYet": "ମୁଁ ଏପର୍ଯ୍ୟନ୍ତ ଗୋଳି ବନ୍ଦର ବିରତି ନେଇନାହିଁ",
+  "yazFlexSkipRestDuration": "ବିରତି ଅବଧି ଇନପୁଟ୍‌କୁ ଏଡ଼ାନ୍ତୁ",
+  "yazFlexSkipRestDurationDialogTitle": "ବିରତି ଅବଧିର ଏଣ୍ଟ୍ରିକୁ ଏଡ଼ାନ୍ତୁ",
+  "yazFlexSkipRestDurationDialogMessage": "ଔଷଧ ସେବନ ବିରତିର ସମୟସୀମା ପରେ ହୋମର “ଔଷଧ ସେବନ ବିରତି” ରୁ ଭରଣ କରିପାରିବେ।",
+  "yazFlexSkipRestDurationDialogSkip": "ଏଡାଇଦିଅନ୍ତୁ",
+  "yazFlexEmptyEndDateMeansResting": "ଯଦି ଆପଣ ଏପର୍ଯ୍ୟନ୍ତ ପୁଣିଥରେ ସେବନ ଆରମ୍ଭ କରିନାହାନ୍ତି, ତେବେ ପୁନରାରମ୍ଭ ତାରିଖ ଖାଲି ରଖନ୍ତୁ।",
   "yazFlexLastRestDurationBeginDate": "ବିରତି ଆରମ୍ଭ ହୋଇଥିବା ଦିନ",
   "yazFlexLastRestDurationEndDate": "ପୁଣି ନେବା ଆରମ୍ଭ କରିଥିବା ଦିନ",
   "yazFlexSelectDate": "ତାରିଖ ଚୟନ କରନ୍ତୁ",
-  "yazFlexBeginPillNumberTitle": "ପ୍ରଥମ ଶୀଟ୍‌ର ୧ ନମ୍ବର ଗୋଳିଟି ବିରତି ସମାପ୍ତ ହେବା ପରେ କେତେତମ ଦିନର?"
+  "yazFlexBeginPillNumberPageTitle": "ଆପଣ ଶିଟ୍ ଆରମ୍ଭ କରିଥିବା ଦିନଟି\nବିରତି ସମାପ୍ତ ହେବା ପରେ କେତେତମ ଦିନ ଥିଲା?",
+  "yazFlexNextInputIsRestDuration": "ପରେ ପୂର୍ବରୁ ଥିବା ବିରତି ଅବଧି ଭରନ୍ତୁ"
 }

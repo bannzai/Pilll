@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "Παίρνετε το Yaz Flex;",
   "initialSettingAskYazFlexDescription": "Αν επιλέξετε «Ναι»,\nθα το ρυθμίσουμε ώστε να εμφανίζεται πόσες ημέρες έχουν περάσει από το τέλος της διακοπής.",
   "yazFlexLastRestDurationTitle": "Παρακαλώ,\nενημερώστε μας για το προηγούμενο διάστημα διακοπής",
-  "yazFlexHasNotRestedYet": "Δεν έχω κάνει ακόμη διάλειμμα από το χάπι",
+  "yazFlexSkipRestDuration": "Παράλειψη εισαγωγής διαλείμματος",
+  "yazFlexSkipRestDurationDialogTitle": "Παράλειψη καταχώρισης της διακοπής",
+  "yazFlexSkipRestDurationDialogMessage": "Μπορείτε να καταχωρίσετε αργότερα την περίοδο διακοπής λήψης από το «Διακοπή λήψης» στην αρχική οθόνη.",
+  "yazFlexSkipRestDurationDialogSkip": "Παράβλεψη",
+  "yazFlexEmptyEndDateMeansResting": "Αν δεν έχετε ξαναρχίσει ακόμη τη λήψη, αφήστε κενή την ημερομηνία επανέναρξης.",
   "yazFlexLastRestDurationBeginDate": "Η ημέρα που ξεκίνησε η διακοπή",
   "yazFlexLastRestDurationEndDate": "Ημερομηνία επανέναρξης λήψης",
   "yazFlexSelectDate": "Επιλέξτε ημερομηνία",
-  "yazFlexBeginPillNumberTitle": "Η 1η χάπι στην πρώτη καρτέλα αντιστοιχεί σε ποια ημέρα μετά το διάλειμμα;"
+  "yazFlexBeginPillNumberPageTitle": "Την ημέρα που ξεκινήσατε το blister,\nποια μέρα μετά το διάλειμμα ήταν;",
+  "yazFlexNextInputIsRestDuration": "Στη συνέχεια, εισαγάγετε την προηγούμενη διακοπή"
 }

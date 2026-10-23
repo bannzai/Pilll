@@ -571,9 +571,14 @@
   "initialSettingAskYazFlex": "Yaz Flex колдонуп жатасызбы?",
   "initialSettingAskYazFlexDescription": "“Ооба” дегенди тандасаңыз,\nтыныгуудан кийин канчанчы күн экенин көрсөтө тургандай кылып жөндөйбүз.",
   "yazFlexLastRestDurationTitle": "Сураныч,\nмурунку тыныгуу мезгили тууралуу айтып бериңиз",
-  "yazFlexHasNotRestedYet": "Мен азырынча таблетканы ичүүдөн тыныгуу жасай элекмин",
+  "yazFlexSkipRestDuration": "Тыныгуу мезгилин киргизүүнү өткөрүп жиберүү",
+  "yazFlexSkipRestDurationDialogTitle": "Тыныгуу мезгилин киргизүүнү өткөрүп жиберүү",
+  "yazFlexSkipRestDurationDialogMessage": "Ичүүнү тыныгуу мөөнөтүн кийинчерээк Башкы беттеги “Ичүүнү тыныгуу” бөлүмүнөн киргизе аласыз.",
+  "yazFlexSkipRestDurationDialogSkip": "Өткөрүп жиберүү",
+  "yazFlexEmptyEndDateMeansResting": "Эгер кабыл алууну али кайра баштай элек болсоңуз, кайра баштаган күндү бош калтырыңыз.",
   "yazFlexLastRestDurationBeginDate": "Тыныгуу башталган күн",
   "yazFlexLastRestDurationEndDate": "Кайра иче баштаган күн",
   "yazFlexSelectDate": "Күндү тандаңыз",
-  "yazFlexBeginPillNumberTitle": "Биринчи баракчадагы №1 таблетка тыныгуудан кийинки канчанчы күнгө туура келет?"
+  "yazFlexBeginPillNumberPageTitle": "Баракты баштаган күнүңүз\nтыныгуудан кийин канчанчы күн болчу?",
+  "yazFlexNextInputIsRestDuration": "Кийинки кадамда мурунку тыныгууңузду киргизиңиз"
 }

@@ -1,7 +1,7 @@
 appId: com.mizuki.Ohashi.Pilll.dev
 ---
 # 初期設定で「ヤーズフレックスの方ですか？」に「はい」と答え、
-# 今日飲む番号 → 前回の休薬 (休薬はまだしていない) → 服用タイミング → プレミアムトライアルの順に進み、ホーム画面に到達することを確認する。
+# 今日飲む番号 → 開始番号 (既定の1日目のまま) → 前回の休薬 (入力をスキップ) → 服用タイミング → プレミアムトライアルの順に進み、ホーム画面に到達することを確認する。
 - launchApp:
     clearState: true
     clearKeychain: true
@@ -29,12 +29,20 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - tapOn: "次へ"
 - waitForAnimationToEnd
 
-# 前回の休薬: 休薬はまだしていない → 日付の入力欄が消え、次へ進める
-- assertVisible: "前回の休薬について\n教えてください"
-- tapOn: "休薬はまだしていない"
-- waitForAnimationToEnd
-- assertNotVisible: "休薬が始まった日"
+# 開始番号: ピルシートのプレビューと「1日目」のピッカーが出る。既定の1日目のまま次へ
+- assertVisible: "シートを始めた日は\n休薬明けから何日目でしたか"
+- assertVisible: "次は前回の休薬を入力します"
 - tapOn: "次へ"
+- waitForAnimationToEnd
+
+# 前回の休薬: 日付を入れずに「休薬の入力はスキップ」→ 確認ダイアログで「スキップする」→ 服用タイミングへ進む
+- assertVisible: "前回の休薬について\n教えてください"
+- assertVisible: "休薬が始まった日"
+- assertVisible: "服用を再開した日"
+- tapOn: "休薬の入力はスキップ"
+- waitForAnimationToEnd
+- assertVisible: "休薬の入力をスキップします"
+- tapOn: "スキップする"
 - waitForAnimationToEnd
 
 # 服用タイミング → そのまま次へ
