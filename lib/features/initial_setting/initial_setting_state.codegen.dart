@@ -40,20 +40,39 @@ class InitialSettingState with _$InitialSettingState {
     @Default(false) bool isYazFlex,
 
     /// ヤーズフレックス向けの導線で前回の休薬の入力をスキップしたか (休薬はまだしていない、または後でホームから入力する)
-    /// true の時は入力済みの日付があっても休薬を登録しない
+    /// true の時は休薬のピルを選んでいても休薬を登録しない
     @Default(false) bool yazFlexHasNotRestedYet,
 
-    /// ヤーズフレックス向けの導線で入力した、前回の休薬が始まった日
-    DateTime? yazFlexLastRestDurationBeginDate,
+    /// ヤーズフレックス向けの導線でタップした、休薬に入る直前に飲んだピルの位置 (今のピルシートグループの中のピル)
+    /// このピルの翌日から [yazFlexRestDurationDays] 日休み、次のピルで服用を再開したとみなす。未選択なら null
+    InitialSettingTodayPillNumber? yazFlexLastTakenPillNumberBeforeRest,
 
-    /// ヤーズフレックス向けの導線で入力した、前回の休薬が終わった日 (服用を再開した日)
-    /// 開始日があって終了日が null の時は、休薬中でまだ再開していない (終了日の無い服用お休み中) として登録する
-    DateTime? yazFlexLastRestDurationEndDate,
+    /// ヤーズフレックス向けの導線で入力した前回の休薬の日数
+    /// 既定の 4 は、ヤーズフレックス配合錠の添付文書で休薬期間が 4 日間と定められているため
+    @Default(4) int yazFlexRestDurationDays,
 
     /// ヤーズフレックス向けの導線で入力した開始番号 (1枚目の1番は休薬明けから何日目か)
     /// 既定の 1 は、休薬明けの初日にシートの1番から飲み始めた (休薬明けとシートの切り替わりが一致している) 想定
     @Default(1) int yazFlexBeginPillNumber,
   }) = _InitialSettingState;
+
+  /// ヤーズフレックス向けの導線で、前回の休薬が終わった日 (服用を再開した日)。休薬のピルの次のピルを飲んだ日
+  /// 休薬のピルが未選択・今日の番号が未選択の時は null
+  DateTime? get yazFlexLastRestDurationEndDate {
+    final todayPillNumber = this.todayPillNumber;
+    final lastTakenPillNumberBeforeRest = yazFlexLastTakenPillNumberBeforeRest;
+    if (todayPillNumber == null || lastTakenPillNumberBeforeRest == null) {
+      return null;
+    }
+    return today().addDays(
+      -(_todayPillIndexInPillSheetGroup(todayPillNumber: todayPillNumber, pillSheetTypes: pillSheetTypes) -
+          _todayPillIndexInPillSheetGroup(todayPillNumber: lastTakenPillNumberBeforeRest, pillSheetTypes: pillSheetTypes) -
+          1),
+    );
+  }
+
+  /// ヤーズフレックス向けの導線で、前回の休薬が始まった日 (休薬のピルを飲んだ翌日)。[yazFlexLastRestDurationEndDate] が null なら null
+  DateTime? get yazFlexLastRestDurationBeginDate => yazFlexLastRestDurationEndDate?.addDays(-yazFlexRestDurationDays);
 
   DateTime? reminderTimeOrNull(int index) {
     if (index < reminderTimes.length) {
@@ -91,37 +110,19 @@ class InitialSettingState with _$InitialSettingState {
     return setting;
   }
 
-  /// ヤーズフレックス向けの導線で入力した前回の休薬のうち、ピルシートグループの範囲 (1枚目の1番の日より後に服用を再開した) に入るものを返す
-  /// 服用を再開した日が未入力の時は休薬中とみなし、終了日の無い (服用お休み中の) RestDuration を返す。休薬中は今日飲む番号のピルが再開後の最初のピルになるため、常に範囲に入る
-  /// 範囲に入らない・休薬の入力をスキップした・開始日が未入力の時は null。null の時の休薬明けからの日数は [yazFlexBeginPillNumber] だけで表す
+  /// ヤーズフレックス向けの導線で入力した前回の休薬 (休薬のピルの翌日から [yazFlexRestDurationDays] 日) を返す
+  /// 休薬のピルは今のピルシートグループの中のピルなので、再開したピルは常に 1枚目の1番より後にあり、範囲の判定は要らない
+  /// 休薬の入力をスキップした・休薬のピルが未選択の時は null。null の時の休薬明けからの日数は [yazFlexBeginPillNumber] だけで表す
   /// 呼び出すたびに新しい id の RestDuration を返すため冪等ではない。登録時に1回だけ呼ぶ
   RestDuration? buildYazFlexRestDurationInPillSheetGroup() {
-    final todayPillNumber = this.todayPillNumber;
     final restDurationBeginDate = yazFlexLastRestDurationBeginDate;
-    final restDurationEndDate = yazFlexLastRestDurationEndDate;
-    if (!isYazFlex || yazFlexHasNotRestedYet || todayPillNumber == null || restDurationBeginDate == null) {
-      return null;
-    }
-    if (restDurationEndDate == null) {
-      return RestDuration(
-        id: firestoreIDGenerator(),
-        beginDate: restDurationBeginDate,
-        endDate: null,
-        createdDate: now(),
-      );
-    }
-    if (_restDurationEndPillIndexInPillSheetGroup(
-          todayPillNumber: todayPillNumber,
-          pillSheetTypes: pillSheetTypes,
-          restDurationEndDate: restDurationEndDate,
-        ) <
-        1) {
+    if (!isYazFlex || yazFlexHasNotRestedYet || restDurationBeginDate == null) {
       return null;
     }
     return RestDuration(
       id: firestoreIDGenerator(),
       beginDate: restDurationBeginDate,
-      endDate: restDurationEndDate,
+      endDate: yazFlexLastRestDurationEndDate,
       createdDate: now(),
     );
   }
@@ -159,22 +160,13 @@ class InitialSettingState with _$InitialSettingState {
     );
   }
 
-  /// ヤーズフレックス向けの導線で入力した、服用を再開した日のピルの位置 (ピルシートグループのプレビューで印を付ける対象)
-  /// 再開日がピルシートグループの範囲に入らない・休薬の入力をスキップした・再開日が未入力 (休薬中) の時は null
+  /// ヤーズフレックス向けの導線で、服用を再開したピル (休薬のピルの次のピル) の位置。休薬のピルが未選択・休薬の入力をスキップした時は null
   ({int pageIndex, int pillNumberInPillSheet})? get yazFlexResumedPillPosition {
-    final todayPillNumber = this.todayPillNumber;
-    final restDurationEndDate = yazFlexLastRestDurationEndDate;
-    if (!isYazFlex || yazFlexHasNotRestedYet || todayPillNumber == null || restDurationEndDate == null) {
+    final lastTakenPillNumberBeforeRest = yazFlexLastTakenPillNumberBeforeRest;
+    if (!isYazFlex || yazFlexHasNotRestedYet || lastTakenPillNumberBeforeRest == null) {
       return null;
     }
-    final resumedPillIndex = _restDurationEndPillIndexInPillSheetGroup(
-      todayPillNumber: todayPillNumber,
-      pillSheetTypes: pillSheetTypes,
-      restDurationEndDate: restDurationEndDate,
-    );
-    if (resumedPillIndex < 1) {
-      return null;
-    }
+    final resumedPillIndex = _todayPillIndexInPillSheetGroup(todayPillNumber: lastTakenPillNumberBeforeRest, pillSheetTypes: pillSheetTypes) + 1;
     for (final (pageIndex, pillSheetType) in pillSheetTypes.indexed) {
       final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pageIndex);
       if (resumedPillIndex < offset + pillSheetType.totalCount) {
@@ -182,6 +174,19 @@ class InitialSettingState with _$InitialSettingState {
       }
     }
     return null;
+  }
+
+  /// ヤーズフレックス向けの導線で、休薬のピルとして選べるピルか (今日飲む番号のピルより前のピルだけ。それ以降はまだ飲んでいないので休薬の前に飲めない)
+  bool yazFlexCanSelectAsLastTakenPillBeforeRest({required int pageIndex, required int pillNumberInPillSheet}) {
+    final todayPillNumber = this.todayPillNumber;
+    if (todayPillNumber == null) {
+      return false;
+    }
+    return _todayPillIndexInPillSheetGroup(
+          todayPillNumber: InitialSettingTodayPillNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
+          pillSheetTypes: pillSheetTypes,
+        ) <
+        _todayPillIndexInPillSheetGroup(todayPillNumber: todayPillNumber, pillSheetTypes: pillSheetTypes);
   }
 
   /// 初期設定の入力からピルシートグループの [pageIndex] 枚目のピルシートを組み立てる

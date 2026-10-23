@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "Sākuma datumu var izvēlēties līdz {date}",
   "initialSettingAskYazFlex": "Vai lietojat Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ja izvēlēsieties “Jā”,\nmēs iestatīsim, lai varētu rādīt, kura diena ir pēc pārtraukuma beigām.",
-  "yazFlexLastRestDurationTitle": "Lūdzu,\npastāstiet mums par iepriekšējo pārtraukumu",
   "yazFlexSkipRestDuration": "Izlaist pārtraukuma perioda ievadi",
   "yazFlexSkipRestDurationDialogTitle": "Izlaist pārtraukuma perioda ievadi",
   "yazFlexSkipRestDurationDialogMessage": "Lietošanas pārtraukuma periodu vēlāk varēsiet ievadīt sākuma ekrāna sadaļā “Lietošanas pārtraukums”.",
   "yazFlexSkipRestDurationDialogSkip": "Izlaist",
-  "yazFlexEmptyEndDateMeansResting": "Ja vēl neesat atsākusi lietošanu, atstājiet atsākšanas datumu tukšu.",
-  "yazFlexLastRestDurationBeginDate": "Diena, kad sākās pārtraukums",
-  "yazFlexLastRestDurationEndDate": "Diena, kad atsākāt lietošanu",
-  "yazFlexSelectDate": "Izvēlieties datumu",
   "yazFlexBeginPillNumberPageTitle": "Kurā lietošanas reizē ciklā ir plāksnītes sākums?",
   "yazFlexNextInputIsRestDuration": "Tālāk ievadiet iepriekšējo pārtraukumu"
 }

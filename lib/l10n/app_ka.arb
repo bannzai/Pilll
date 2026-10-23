@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "დაწყების თარიღის არჩევა შესაძლებელია {date}-მდე",
   "initialSettingAskYazFlex": "Yaz Flex-ს იყენებთ?",
   "initialSettingAskYazFlexDescription": "თუ აირჩევთ „დიახ“-ს,\nდავაყენებთ ისე, რომ გამოჩნდეს, რამდენი დღე გავიდა შესვენების დასრულებიდან.",
-  "yazFlexLastRestDurationTitle": "გთხოვთ,\ngვაცნობეთ წინა შესვენების შესახებ",
   "yazFlexSkipRestDuration": "გამოტოვეთ შესვენების პერიოდის შეყვანა",
   "yazFlexSkipRestDurationDialogTitle": "შესვენების პერიოდის შეყვანის გამოტოვება",
   "yazFlexSkipRestDurationDialogMessage": "მიღების შესვენების პერიოდის შეყვანა მოგვიანებითაც შეგიძლიათ მთავარ ეკრანზე „მიღების შესვენება“-დან.",
   "yazFlexSkipRestDurationDialogSkip": "გამოტოვება",
-  "yazFlexEmptyEndDateMeansResting": "თუ მიღება ჯერ არ განგიახლებიათ, განახლების თარიღი ცარიელი დატოვეთ.",
-  "yazFlexLastRestDurationBeginDate": "დღე, როცა შესვენება დაიწყო",
-  "yazFlexLastRestDurationEndDate": "მიღების განახლების დღე",
-  "yazFlexSelectDate": "აირჩიეთ თარიღი",
   "yazFlexBeginPillNumberPageTitle": "ციკლში მერამდენე მიღებაა შიტის დასაწყისი?",
   "yazFlexNextInputIsRestDuration": "შემდეგ შეიყვანეთ წინა შესვენება"
 }

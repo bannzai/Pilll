@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "អាចជ្រើសរើសកាលបរិច្ឆេទចាប់ផ្តើមបានរហូតដល់ {date}",
   "initialSettingAskYazFlex": "តើអ្នកកំពុងប្រើ Yaz Flex មែនទេ?",
   "initialSettingAskYazFlexDescription": "ប្រសិនបើអ្នកជ្រើសរើស «បាទ/ចាស»\nយើងនឹងកំណត់ឱ្យអាចបង្ហាញថា ជាថ្ងៃទីប៉ុន្មានបន្ទាប់ពីចប់រយៈពេលឈប់លេបថ្នាំ។",
-  "yazFlexLastRestDurationTitle": "សូមប្រាប់យើង\nអំពីរយៈពេលឈប់ថ្នាំលើកមុន",
   "yazFlexSkipRestDuration": "រំលងការបញ្ចូលរយៈពេលឈប់ថ្នាំ",
   "yazFlexSkipRestDurationDialogTitle": "រំលងការបញ្ចូលរយៈពេលសម្រាក",
   "yazFlexSkipRestDurationDialogMessage": "អ្នកអាចបញ្ចូលរយៈពេលផ្អាកការទទួលទាននៅពេលក្រោយពី “ផ្អាកការទទួលទាន” នៅលើទំព័រដើម។",
   "yazFlexSkipRestDurationDialogSkip": "រំលង",
-  "yazFlexEmptyEndDateMeansResting": "ប្រសិនបើអ្នកមិនទាន់បានបន្តលេបវិញទេ សូមទុកកាលបរិច្ឆេទចាប់ផ្តើមវិញឱ្យនៅទទេ។",
-  "yazFlexLastRestDurationBeginDate": "ថ្ងៃដែលការផ្អាកបានចាប់ផ្ដើម",
-  "yazFlexLastRestDurationEndDate": "ថ្ងៃដែលអ្នកបានចាប់ផ្ដើមប្រើម្តងទៀត",
-  "yazFlexSelectDate": "ជ្រើសរើសកាលបរិច្ឆេទ",
   "yazFlexBeginPillNumberPageTitle": "ការចាប់ផ្ដើមសន្លឹក ត្រូវនឹងការលេបលើកទីប៉ុន្មានក្នុងវដ្ត?",
   "yazFlexNextInputIsRestDuration": "បន្ទាប់មក សូមបញ្ចូលរយៈពេលឈប់មុន"
 }

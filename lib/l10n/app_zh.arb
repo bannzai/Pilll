@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "开始日期最晚可选至{date}",
   "initialSettingAskYazFlex": "您正在使用优思明灵活型吗？",
   "initialSettingAskYazFlexDescription": "选择“是”后\n我们会将其设置为可显示停药期结束后的第几天",
-  "yazFlexLastRestDurationTitle": "请告诉我们\n上一次停药期的情况",
   "yazFlexSkipRestDuration": "跳过输入停药期",
   "yazFlexSkipRestDurationDialogTitle": "跳过停药期录入",
   "yazFlexSkipRestDurationDialogMessage": "休药期间可稍后在首页的“服用休息”中输入。",
   "yazFlexSkipRestDurationDialogSkip": "跳过",
-  "yazFlexEmptyEndDateMeansResting": "如果您还没有重新开始服用，请将重新开始的日期留空。",
-  "yazFlexLastRestDurationBeginDate": "开始休药的日期",
-  "yazFlexLastRestDurationEndDate": "重新开始服用的日期",
-  "yazFlexSelectDate": "选择日期",
   "yazFlexBeginPillNumberPageTitle": "这板药的开始对应周期中的第几次服用？",
   "yazFlexNextInputIsRestDuration": "接下来请输入上一次停药期"
 }

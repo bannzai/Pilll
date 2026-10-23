@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "ਸ਼ੁਰੂਆਤੀ ਤਾਰੀਖ {date} ਤੱਕ ਚੁਣੀ ਜਾ ਸਕਦੀ ਹੈ",
   "initialSettingAskYazFlex": "ਕੀ ਤੁਸੀਂ Yaz Flex ਵਰਤ ਰਹੇ ਹੋ?",
   "initialSettingAskYazFlexDescription": "“ਹਾਂ” ਚੁਣਨ ਤੇ\nਬ੍ਰੇਕ ਖਤਮ ਹੋਣ ਤੋਂ ਬਾਅਦ ਕਿੰਨਾ ਦਿਨ ਹੋਇਆ ਹੈ, ਇਹ ਵੇਖਾਉਣ ਲਈ ਸੈਟ ਕੀਤਾ ਜਾਵੇਗਾ",
-  "yazFlexLastRestDurationTitle": "ਕਿਰਪਾ ਕਰਕੇ\nਪਿਛਲੇ ਵਿਰਾਮ ਬਾਰੇ ਸਾਨੂੰ ਦੱਸੋ",
   "yazFlexSkipRestDuration": "ਵਿਰਾਮ ਮਿਆਦ ਦਰਜ ਕਰਨਾ ਛੱਡੋ",
   "yazFlexSkipRestDurationDialogTitle": "ਵਿਰਾਮ ਅਵਧੀ ਦੀ ਐਂਟਰੀ ਛੱਡੋ",
   "yazFlexSkipRestDurationDialogMessage": "ਗੋਲੀ ਲੈਣ ਦੇ ਵਿਰਾਮ ਦੀ ਮਿਆਦ ਬਾਅਦ ਵਿੱਚ ਹੋਮ ਦੇ “ਗੋਲੀ ਲੈਣ ਦਾ ਵਿਰਾਮ” ਤੋਂ ਦਰਜ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ।",
   "yazFlexSkipRestDurationDialogSkip": "ਛੱਡੋ",
-  "yazFlexEmptyEndDateMeansResting": "ਜੇ ਤੁਸੀਂ ਅਜੇ ਤੱਕ ਮੁੜ ਲੈਣਾ ਸ਼ੁਰੂ ਨਹੀਂ ਕੀਤਾ ਹੈ, ਤਾਂ ਮੁੜ ਸ਼ੁਰੂ ਕਰਨ ਦੀ ਤਾਰੀਖ ਖਾਲੀ ਛੱਡੋ।",
-  "yazFlexLastRestDurationBeginDate": "ਜਿਸ ਦਿਨ ਵਿਸ਼ਰਾਮ ਸ਼ੁਰੂ ਹੋਇਆ",
-  "yazFlexLastRestDurationEndDate": "ਦੁਬਾਰਾ ਲੈਣਾ ਸ਼ੁਰੂ ਕੀਤਾ ਦਿਨ",
-  "yazFlexSelectDate": "ਤਾਰੀਖ ਚੁਣੋ",
   "yazFlexBeginPillNumberPageTitle": "ਚੱਕਰ ਵਿੱਚ ਸ਼ੀਟ ਦੀ ਸ਼ੁਰੂਆਤ ਕਿਹੜੀ ਨੰਬਰ ਦੀ ਖੁਰਾਕ ਹੈ?",
   "yazFlexNextInputIsRestDuration": "ਅਗਲੇ ਕਦਮ ਵਿੱਚ ਪਿਛਲਾ ਵਿਰਾਮ ਦਰਜ ਕਰੋ"
 }

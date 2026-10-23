@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "আৰম্ভৰ তাৰিখ {date} লৈকে বাছনি কৰিব পাৰি",
   "initialSettingAskYazFlex": "আপুনি Yaz Flex ব্যৱহাৰ কৰে নেকি?",
   "initialSettingAskYazFlexDescription": "“হয়” বাছনি কৰিলে\nঔষধ বন্ধৰ সময় শেষ হোৱাৰ পিছত কিমান দিন হ’ল সেয়া দেখুৱাব পৰাকৈ ছেট কৰা হ’ব",
-  "yazFlexLastRestDurationTitle": "অনুগ্ৰহ কৰি\nআপোনাৰ পূৰ্বৰ ঔষধ-বিৰতিৰ বিষয়ে জনাওক",
   "yazFlexSkipRestDuration": "ঔষধ বন্ধৰ সময়ছোৱাৰ ইনপুট এৰি দিয়ক",
   "yazFlexSkipRestDurationDialogTitle": "ঔষধ-বিৰতিৰ ইনপুট এৰি যাব",
   "yazFlexSkipRestDurationDialogMessage": "ঔষধ সেৱন বিৰতিৰ সময়সীমা পিছত হোমৰ «ঔষধ সেৱন বিৰতি»ৰ পৰা লিখিব পাৰিব।",
   "yazFlexSkipRestDurationDialogSkip": "এৰি দিয়ক",
-  "yazFlexEmptyEndDateMeansResting": "যদি এতিয়াও সেৱন পুনৰ আৰম্ভ কৰা নাই, তেন্তে পুনৰ আৰম্ভ কৰা তাৰিখ খালী ৰাখক।",
-  "yazFlexLastRestDurationBeginDate": "বিৰতি আৰম্ভ হোৱা দিন",
-  "yazFlexLastRestDurationEndDate": "পুনৰায় সেৱন আৰম্ভ কৰা দিন",
-  "yazFlexSelectDate": "তাৰিখ বাছনি কৰক",
   "yazFlexBeginPillNumberPageTitle": "চক্ৰ অনুসৰি শ্বীটৰ আৰম্ভণি কোন নম্বৰ সেৱন?",
   "yazFlexNextInputIsRestDuration": "ইয়াৰ পিছত আগৰ ঔষধ-বিৰতি লিখক"
 }

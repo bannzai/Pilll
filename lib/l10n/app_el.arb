@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "Η ημερομηνία έναρξης μπορεί να επιλεγεί έως τις {date}",
   "initialSettingAskYazFlex": "Παίρνετε το Yaz Flex;",
   "initialSettingAskYazFlexDescription": "Αν επιλέξετε «Ναι»,\nθα το ρυθμίσουμε ώστε να εμφανίζεται πόσες ημέρες έχουν περάσει από το τέλος της διακοπής.",
-  "yazFlexLastRestDurationTitle": "Παρακαλώ,\nενημερώστε μας για το προηγούμενο διάστημα διακοπής",
   "yazFlexSkipRestDuration": "Παράλειψη εισαγωγής διαλείμματος",
   "yazFlexSkipRestDurationDialogTitle": "Παράλειψη καταχώρισης της διακοπής",
   "yazFlexSkipRestDurationDialogMessage": "Μπορείτε να καταχωρίσετε αργότερα την περίοδο διακοπής λήψης από το «Διακοπή λήψης» στην αρχική οθόνη.",
   "yazFlexSkipRestDurationDialogSkip": "Παράβλεψη",
-  "yazFlexEmptyEndDateMeansResting": "Αν δεν έχετε ξαναρχίσει ακόμη τη λήψη, αφήστε κενή την ημερομηνία επανέναρξης.",
-  "yazFlexLastRestDurationBeginDate": "Η ημέρα που ξεκίνησε η διακοπή",
-  "yazFlexLastRestDurationEndDate": "Ημερομηνία επανέναρξης λήψης",
-  "yazFlexSelectDate": "Επιλέξτε ημερομηνία",
   "yazFlexBeginPillNumberPageTitle": "Σε ποια λήψη του κύκλου αντιστοιχεί η αρχή του blister;",
   "yazFlexNextInputIsRestDuration": "Στη συνέχεια, εισαγάγετε την προηγούμενη διακοπή"
 }

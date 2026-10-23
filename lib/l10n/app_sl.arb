@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "Začetni datum lahko izberete do {date}",
   "initialSettingAskYazFlex": "Ali uporabljate Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Če izberete »Da«, \nbomo nastavili prikaz, koliko dni je minilo od konca premora.",
-  "yazFlexLastRestDurationTitle": "Prosimo,\npovejte nam o prejšnjem premoru",
   "yazFlexSkipRestDuration": "Preskoči vnos premora",
   "yazFlexSkipRestDurationDialogTitle": "Preskoči vnos premora",
   "yazFlexSkipRestDurationDialogMessage": "Obdobje premora pri jemanju lahko pozneje vnesete v razdelku »Premor pri jemanju« na domačem zaslonu.",
   "yazFlexSkipRestDurationDialogSkip": "Preskoči",
-  "yazFlexEmptyEndDateMeansResting": "Če jemanja še niste ponovno začeli, pustite datum ponovnega začetka prazen.",
-  "yazFlexLastRestDurationBeginDate": "Dan začetka premora",
-  "yazFlexLastRestDurationEndDate": "Dan ponovnega začetka jemanja",
-  "yazFlexSelectDate": "Izberite datum",
   "yazFlexBeginPillNumberPageTitle": "Kateri po vrsti odmerek v ciklu je začetek pretisnega omota?",
   "yazFlexNextInputIsRestDuration": "Nato vnesite prejšnji premor"
 }

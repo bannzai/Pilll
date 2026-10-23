@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "Почетниот датум може да се избере до {date}",
   "initialSettingAskYazFlex": "Дали користите Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ако изберете „Да“,\nќе поставиме да се прикажува кој ден е по завршувањето на паузата.",
-  "yazFlexLastRestDurationTitle": "Ве молиме,\nкажете ни за претходната пауза",
   "yazFlexSkipRestDuration": "Прескокни внесување на паузата",
   "yazFlexSkipRestDurationDialogTitle": "Прескокни го внесувањето на паузата",
   "yazFlexSkipRestDurationDialogMessage": "Периодот на пауза во земањето може подоцна да го внесете од „Пауза во земањето“ на почетниот екран.",
   "yazFlexSkipRestDurationDialogSkip": "Прескокни",
-  "yazFlexEmptyEndDateMeansResting": "Ако сè уште не сте продолжиле со земање, оставете го датумот на продолжување празен.",
-  "yazFlexLastRestDurationBeginDate": "Денот кога започна паузата",
-  "yazFlexLastRestDurationEndDate": "Денот кога повторно почнавте да земате",
-  "yazFlexSelectDate": "Изберете датум",
   "yazFlexBeginPillNumberPageTitle": "Почетокот на блистерот на кое по ред земање во циклусот одговара?",
   "yazFlexNextInputIsRestDuration": "Следно, внесете ја претходната пауза"
 }

@@ -104,8 +104,8 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
       pillSheetTypes: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0],
       todayPillNumber: null,
       yazFlexHasNotRestedYet: false,
-      yazFlexLastRestDurationBeginDate: null,
-      yazFlexLastRestDurationEndDate: null,
+      yazFlexLastTakenPillNumberBeforeRest: null,
+      yazFlexRestDurationDays: 4,
       yazFlexBeginPillNumber: 1,
     );
   }
@@ -122,54 +122,35 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
       pillSheetTypes: [],
       todayPillNumber: null,
       yazFlexHasNotRestedYet: false,
-      yazFlexLastRestDurationBeginDate: null,
-      yazFlexLastRestDurationEndDate: null,
+      yazFlexLastTakenPillNumberBeforeRest: null,
+      yazFlexRestDurationDays: 4,
       yazFlexBeginPillNumber: 1,
     );
   }
 
-  /// ヤーズフレックス向けの導線で前回の休薬の入力をスキップする (true)・入力して進む (false)。スキップした時は入力済みの休薬の日付を消す
+  /// ヤーズフレックス向けの導線で前回の休薬の入力をスキップする (true)・入力して進む (false)。スキップした時は選んだ休薬のピルを消す
   void setYazFlexHasNotRestedYet({required bool yazFlexHasNotRestedYet}) {
     state = state.copyWith(
       yazFlexHasNotRestedYet: yazFlexHasNotRestedYet,
-      yazFlexLastRestDurationBeginDate: yazFlexHasNotRestedYet ? null : state.yazFlexLastRestDurationBeginDate,
-      yazFlexLastRestDurationEndDate: yazFlexHasNotRestedYet ? null : state.yazFlexLastRestDurationEndDate,
+      yazFlexLastTakenPillNumberBeforeRest: yazFlexHasNotRestedYet ? null : state.yazFlexLastTakenPillNumberBeforeRest,
     );
   }
 
-  /// ヤーズフレックス向けの導線で入力した前回の休薬の開始日と服用を再開した日を消す (開始日の × を押した時)
-  void clearYazFlexLastRestDuration() {
-    state = state.copyWith(
-      yazFlexLastRestDurationBeginDate: null,
-      yazFlexLastRestDurationEndDate: null,
-    );
-  }
-
-  /// ヤーズフレックス向けの導線で入力した服用を再開した日だけを消し、休薬中 (まだ再開していない) の入力にする
-  void clearYazFlexLastRestDurationEndDate() {
-    state = state.copyWith(yazFlexLastRestDurationEndDate: null);
-  }
-
-  /// ヤーズフレックス向けの導線で前回の休薬が始まった日を入力する
-  /// 終わった日が始まった日以前になる時は、終わった日を未入力に戻す。スキップした後に戻って入力し直した時はスキップを解除し、プレビューに反映する
-  void setYazFlexLastRestDurationBeginDate({required DateTime yazFlexLastRestDurationBeginDate}) {
-    final yazFlexLastRestDurationEndDate = state.yazFlexLastRestDurationEndDate;
+  /// ヤーズフレックス向けの導線で休薬に入る直前に飲んだピルをタップで選ぶ。今日飲む番号のピル以降は選べないので無視する
+  /// スキップした後に戻って選び直した時はスキップを解除し、プレビューに反映する
+  void setYazFlexLastTakenPillNumberBeforeRest({required int pageIndex, required int pillNumberInPillSheet}) {
+    if (!state.yazFlexCanSelectAsLastTakenPillBeforeRest(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet)) {
+      return;
+    }
     state = state.copyWith(
       yazFlexHasNotRestedYet: false,
-      yazFlexLastRestDurationBeginDate: yazFlexLastRestDurationBeginDate,
-      yazFlexLastRestDurationEndDate:
-          yazFlexLastRestDurationEndDate != null && yazFlexLastRestDurationEndDate.isAfter(yazFlexLastRestDurationBeginDate)
-              ? yazFlexLastRestDurationEndDate
-              : null,
+      yazFlexLastTakenPillNumberBeforeRest: InitialSettingTodayPillNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
     );
   }
 
-  /// ヤーズフレックス向けの導線で前回の休薬が終わった日 (服用を再開した日) を入力する。スキップした後に戻って入力し直した時はスキップを解除する
-  void setYazFlexLastRestDurationEndDate({required DateTime yazFlexLastRestDurationEndDate}) {
-    state = state.copyWith(
-      yazFlexHasNotRestedYet: false,
-      yazFlexLastRestDurationEndDate: yazFlexLastRestDurationEndDate,
-    );
+  /// ヤーズフレックス向けの導線で前回の休薬の日数を入力する
+  void setYazFlexRestDurationDays({required int yazFlexRestDurationDays}) {
+    state = state.copyWith(yazFlexRestDurationDays: yazFlexRestDurationDays);
   }
 
   /// ヤーズフレックス向けの導線で開始番号 (1枚目の1番は休薬明けから何日目か) を入力する

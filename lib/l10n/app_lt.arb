@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "Pradžios datą galima pasirinkti iki {date}",
   "initialSettingAskYazFlex": "Ar vartojate Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Jei pasirinksite „Taip“,\nsukonfigūruosime, kad būtų rodoma, kelinta diena po pertraukos pabaigos.",
-  "yazFlexLastRestDurationTitle": "Prašome\npapasakoti apie ankstesnę pertrauką",
   "yazFlexSkipRestDuration": "Praleisti pertraukos laikotarpio įvedimą",
   "yazFlexSkipRestDurationDialogTitle": "Praleisti pertraukos laikotarpio įvedimą",
   "yazFlexSkipRestDurationDialogMessage": "Vartojimo pertraukos laikotarpį vėliau galėsite įvesti pradžios ekrano skiltyje „Vartojimo pertrauka“.",
   "yazFlexSkipRestDurationDialogSkip": "Praleisti",
-  "yazFlexEmptyEndDateMeansResting": "Jei dar neatnaujinote vartojimo, palikite atnaujinimo datą tuščią.",
-  "yazFlexLastRestDurationBeginDate": "Diena, kai prasidėjo pertrauka",
-  "yazFlexLastRestDurationEndDate": "Diena, kai vėl pradėjote vartoti",
-  "yazFlexSelectDate": "Pasirinkite datą",
   "yazFlexBeginPillNumberPageTitle": "Kelintas vartojimas cikle yra lapelio pradžia?",
   "yazFlexNextInputIsRestDuration": "Toliau įveskite ankstesnę pertrauką"
 }

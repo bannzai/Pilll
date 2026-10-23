@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "A data de início pode ser selecionada até {date}",
   "initialSettingAskYazFlex": "Está a usar Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Se escolher “Sim”,\nvamos configurar para mostrar quantos dias se passaram desde o fim da pausa.",
-  "yazFlexLastRestDurationTitle": "Conte-nos, por favor,\nsobre a sua última pausa",
   "yazFlexSkipRestDuration": "Ignorar a introdução da pausa",
   "yazFlexSkipRestDurationDialogTitle": "Ignorar o registo da pausa",
   "yazFlexSkipRestDurationDialogMessage": "Pode introduzir mais tarde o período de pausa da toma em “Pausa da toma”, no ecrã principal.",
   "yazFlexSkipRestDurationDialogSkip": "Pular",
-  "yazFlexEmptyEndDateMeansResting": "Se ainda não retomou a toma, deixe a data de retoma em branco.",
-  "yazFlexLastRestDurationBeginDate": "Dia em que a pausa começou",
-  "yazFlexLastRestDurationEndDate": "Dia em que retomou a toma",
-  "yazFlexSelectDate": "Selecione uma data",
   "yazFlexBeginPillNumberPageTitle": "A que toma do ciclo corresponde o início da cartela?",
   "yazFlexNextInputIsRestDuration": "Em seguida, insira a pausa anterior"
 }

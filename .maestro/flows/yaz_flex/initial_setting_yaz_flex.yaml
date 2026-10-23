@@ -36,10 +36,8 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - tapOn: "次へ"
 - waitForAnimationToEnd
 
-# 前回の休薬: 日付を入れずに「休薬の入力はスキップ」→ 確認ダイアログで「スキップする」→ 服用タイミングへ進む
-- assertVisible: "前回の休薬について\n教えてください"
-- assertVisible: "休薬が始まった日"
-- assertVisible: "服用を再開した日"
+# 前回の休薬: ピルをタップせずに「休薬の入力はスキップ」→ 確認ダイアログで「スキップする」→ 服用タイミングへ進む
+- assertVisible: "休薬した時のピルを\nタップしてください"
 - tapOn: "休薬の入力はスキップ"
 - waitForAnimationToEnd
 - assertVisible: "休薬の入力をスキップします"

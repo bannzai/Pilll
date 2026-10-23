@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "Дату початку можна вибрати до {date}",
   "initialSettingAskYazFlex": "Ви приймаєте Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Якщо ви виберете «Так»,\nми налаштуємо показ того, який день триває після завершення перерви.",
-  "yazFlexLastRestDurationTitle": "Будь ласка,\nрозкажіть про попередню перерву",
   "yazFlexSkipRestDuration": "Пропустити введення перерви",
   "yazFlexSkipRestDurationDialogTitle": "Пропустити введення періоду перерви",
   "yazFlexSkipRestDurationDialogMessage": "Період перерви в прийомі можна буде ввести пізніше в розділі «Перерва в прийомі» на головному екрані.",
   "yazFlexSkipRestDurationDialogSkip": "Пропустити",
-  "yazFlexEmptyEndDateMeansResting": "Якщо ви ще не відновили прийом, залиште дату відновлення порожньою.",
-  "yazFlexLastRestDurationBeginDate": "День початку перерви",
-  "yazFlexLastRestDurationEndDate": "День відновлення прийому",
-  "yazFlexSelectDate": "Виберіть дату",
   "yazFlexBeginPillNumberPageTitle": "Початок блістера — це який за рахунком прийом у циклі?",
   "yazFlexNextInputIsRestDuration": "Далі введіть попередню перерву"
 }

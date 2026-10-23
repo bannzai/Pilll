@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "ສາມາດເລືອກວັນເລີ່ມຕົ້ນໄດ້ເຖິງ {date}",
   "initialSettingAskYazFlex": "ທ່ານໃຊ້ Yaz Flex ຢູ່ບໍ?",
   "initialSettingAskYazFlexDescription": "ຖ້າທ່ານເລືອກ “ແມ່ນ”\nພວກເຮົາຈະຕັ້ງຄ່າໃຫ້ສາມາດສະແດງວ່າເປັນມື້ທີເທົ່າໃດຫຼັງຈາກຊ່ວງຢຸດສິ້ນສຸດ",
-  "yazFlexLastRestDurationTitle": "ກະລຸນາ\nບອກພວກເຮົາກ່ຽວກັບຊ່ວງພັກຄັ້ງກ່ອນ",
   "yazFlexSkipRestDuration": "ຂ້າມການປ້ອນໄລຍະພັກຢາ",
   "yazFlexSkipRestDurationDialogTitle": "ຂ້າມການປ້ອນໄລຍະພັກຢາ",
   "yazFlexSkipRestDurationDialogMessage": "ທ່ານສາມາດປ້ອນໄລຍະເວລາພັກການກິນໄດ້ພາຍຫຼັງ ຈາກ “ພັກການກິນ” ໃນໜ້າຫຼັກ",
   "yazFlexSkipRestDurationDialogSkip": "ຂ້າມ",
-  "yazFlexEmptyEndDateMeansResting": "ຖ້າທ່ານຍັງບໍ່ໄດ້ເລີ່ມກິນອີກຄັ້ງ, ກະລຸນາປ່ອຍວັນທີ່ເລີ່ມກິນອີກຄັ້ງໄວ້ວ່າງໄວ້.",
-  "yazFlexLastRestDurationBeginDate": "ວັນທີ່ເລີ່ມພັກຢາ",
-  "yazFlexLastRestDurationEndDate": "ວັນທີ່ເລີ່ມກິນອີກຄັ້ງ",
-  "yazFlexSelectDate": "ເລືອກວັນທີ",
   "yazFlexBeginPillNumberPageTitle": "ຈຸດເລີ່ມຕົ້ນຂອງແຜ່ນ ໃນຮອບການກິນແມ່ນຄັ້ງທີເທົ່າໃດ?",
   "yazFlexNextInputIsRestDuration": "ຕໍ່ໄປ ກະລຸນາປ້ອນຊ່ວງຢຸດກິນຄັ້ງກ່ອນ"
 }

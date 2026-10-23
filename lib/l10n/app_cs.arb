@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "Počáteční datum lze vybrat nejpozději do {date}",
   "initialSettingAskYazFlex": "Užíváte Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Když vyberete „Ano“,\nnastavíme zobrazení počtu dní od konce pauzy.",
-  "yazFlexLastRestDurationTitle": "Prosím,\nřekněte nám o svém posledním období pauzy",
   "yazFlexSkipRestDuration": "Přeskočit zadání pauzy",
   "yazFlexSkipRestDurationDialogTitle": "Přeskočit zadání pauzy",
   "yazFlexSkipRestDurationDialogMessage": "Období přestávky v užívání můžete zadat později v části „Přestávka v užívání“ na domovské obrazovce.",
   "yazFlexSkipRestDurationDialogSkip": "Přeskočit",
-  "yazFlexEmptyEndDateMeansResting": "Pokud jste užívání ještě neobnovila, nechte datum obnovení prázdné.",
-  "yazFlexLastRestDurationBeginDate": "Den začátku pauzy",
-  "yazFlexLastRestDurationEndDate": "Den opětovného zahájení užívání",
-  "yazFlexSelectDate": "Vyberte datum",
   "yazFlexBeginPillNumberPageTitle": "Které užití v cyklu odpovídá začátku plata?",
   "yazFlexNextInputIsRestDuration": "Dále zadejte předchozí pauzu v užívání"
 }

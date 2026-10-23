@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "Die begindatum kan tot {date} gekies word",
   "initialSettingAskYazFlex": "Gebruik jy Yaz Flex?",
   "initialSettingAskYazFlexDescription": "As jy “Ja” kies,\nstel ons dit so op dat jy kan sien hoeveel dae dit is sedert die einde van jou pouse.",
-  "yazFlexLastRestDurationTitle": "Vertel ons asseblief\nvan jou vorige pouse",
   "yazFlexSkipRestDuration": "Slaan die invoer van die pouse oor",
   "yazFlexSkipRestDurationDialogTitle": "Slaan die invoer van die pouse oor",
   "yazFlexSkipRestDurationDialogMessage": "Die pouseperiode kan later by \"Neem 'n pouse\" op die tuisskerm ingevul word.",
   "yazFlexSkipRestDurationDialogSkip": "Slaan oor",
-  "yazFlexEmptyEndDateMeansResting": "As u nog nie die inname hervat het nie, laat die hervattingsdatum leeg.",
-  "yazFlexLastRestDurationBeginDate": "Die dag waarop die pouse begin het",
-  "yazFlexLastRestDurationEndDate": "Datum waarop jy weer begin het om dit te neem",
-  "yazFlexSelectDate": "Kies 'n datum",
   "yazFlexBeginPillNumberPageTitle": "Watter nommer dosis in die siklus is die begin van die strook?",
   "yazFlexNextInputIsRestDuration": "Volgende voer jy jou vorige pouse in"
 }

@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "Startdatum kan väljas till och med {date}",
   "initialSettingAskYazFlex": "Använder du Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Om du väljer ”Ja”\nställer vi in det så att det visar hur många dagar det har gått sedan uppehållet slutade.",
-  "yazFlexLastRestDurationTitle": "Berätta gärna för oss\nom din senaste paus",
   "yazFlexSkipRestDuration": "Hoppa över att ange uppehållet",
   "yazFlexSkipRestDurationDialogTitle": "Hoppa över registrering av uppehållsperioden",
   "yazFlexSkipRestDurationDialogMessage": "Perioden för uppehåll i intaget kan du ange senare under ”Uppehåll i intaget” på hemskärmen.",
   "yazFlexSkipRestDurationDialogSkip": "Hoppa över",
-  "yazFlexEmptyEndDateMeansResting": "Om du ännu inte har börjat ta den igen, lämna omstartsdatumet tomt.",
-  "yazFlexLastRestDurationBeginDate": "Dagen då uppehållet började",
-  "yazFlexLastRestDurationEndDate": "Dagen du började ta den igen",
-  "yazFlexSelectDate": "Välj ett datum",
   "yazFlexBeginPillNumberPageTitle": "Vilket nummer i cykeln är början på kartan?",
   "yazFlexNextInputIsRestDuration": "Därefter anger du föregående uppehåll"
 }

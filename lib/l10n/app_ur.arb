@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "شروع کی تاریخ {date} تک منتخب کی جا سکتی ہے",
   "initialSettingAskYazFlex": "کیا آپ Yaz Flex استعمال کر رہی ہیں؟",
   "initialSettingAskYazFlexDescription": "اگر آپ “ہاں” منتخب کریں\nتو ہم اسے اس طرح سیٹ کریں گے کہ وقفہ ختم ہونے کے بعد کون سا دن ہے، یہ دکھایا جا سکے",
-  "yazFlexLastRestDurationTitle": "براہ کرم\nپچھلے وقفے کے بارے میں ہمیں بتائیں",
   "yazFlexSkipRestDuration": "وقفے کی مدت درج کرنا چھوڑ دیں",
   "yazFlexSkipRestDurationDialogTitle": "وقفے کی مدت کا اندراج چھوڑ دیں",
   "yazFlexSkipRestDurationDialogMessage": "گولی لینے کے وقفے کی مدت بعد میں ہوم کی “گولی لینے کا وقفہ” سے درج کی جا سکتی ہے۔",
   "yazFlexSkipRestDurationDialogSkip": "چھوڑ دیں",
-  "yazFlexEmptyEndDateMeansResting": "اگر آپ نے ابھی تک دوبارہ لینا شروع نہیں کیا ہے تو دوبارہ شروع کرنے کی تاریخ خالی چھوڑ دیں۔",
-  "yazFlexLastRestDurationBeginDate": "وہ دن جب وقفہ شروع ہوا",
-  "yazFlexLastRestDurationEndDate": "دوبارہ لینا شروع کرنے کا دن",
-  "yazFlexSelectDate": "تاریخ منتخب کریں",
   "yazFlexBeginPillNumberPageTitle": "سائیکل کے حساب سے شیٹ کی شروعات کون سی خوراک ہے؟",
   "yazFlexNextInputIsRestDuration": "اگلے مرحلے میں پچھلا وقفہ درج کریں"
 }

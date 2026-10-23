@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "The start date can be selected up to {date}",
   "initialSettingAskYazFlex": "Are you using Yaz Flex?",
   "initialSettingAskYazFlexDescription": "If you choose “Yes”,\nwe’ll set it to show how many days it has been since the end of your break.",
-  "yazFlexLastRestDurationTitle": "Please tell us\nabout your last break",
   "yazFlexSkipRestDuration": "Skip entering the break period",
   "yazFlexSkipRestDurationDialogTitle": "Skip entering the break period",
   "yazFlexSkipRestDurationDialogMessage": "You can enter the break period later from “Break from Taking” on the Home screen.",
   "yazFlexSkipRestDurationDialogSkip": "Skip",
-  "yazFlexEmptyEndDateMeansResting": "If you have not resumed taking it yet, leave the restart date blank.",
-  "yazFlexLastRestDurationBeginDate": "Day the break started",
-  "yazFlexLastRestDurationEndDate": "Date you resumed taking it",
-  "yazFlexSelectDate": "Select a date",
   "yazFlexBeginPillNumberPageTitle": "Which dose number in the cycle is the start of the sheet?",
   "yazFlexNextInputIsRestDuration": "Next, enter your previous break"
 }

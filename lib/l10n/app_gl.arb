@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "A data de inicio pódese escoller ata o {date}",
   "initialSettingAskYazFlex": "Estás a usar Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Se escolles «Si»,\nconfigurarémolo para que se mostre cantos días pasaron desde que rematou a pausa.",
-  "yazFlexLastRestDurationTitle": "Cóntanos, por favor,\nsobre o teu último descanso",
   "yazFlexSkipRestDuration": "Omitir a introdución do período de descanso",
   "yazFlexSkipRestDurationDialogTitle": "Omitir o rexistro do descanso",
   "yazFlexSkipRestDurationDialogMessage": "Poderás introducir máis tarde o período de descanso da toma desde «Descanso da toma» na pantalla de inicio.",
   "yazFlexSkipRestDurationDialogSkip": "Omitir",
-  "yazFlexEmptyEndDateMeansResting": "Se aínda non retomaches a toma, deixa en branco a data de reinicio.",
-  "yazFlexLastRestDurationBeginDate": "Día no que comezou a pausa",
-  "yazFlexLastRestDurationEndDate": "Día no que retomaches a toma",
-  "yazFlexSelectDate": "Selecciona unha data",
   "yazFlexBeginPillNumberPageTitle": "A que toma do ciclo corresponde o inicio do blíster?",
   "yazFlexNextInputIsRestDuration": "A continuación, introduce a pausa anterior"
 }

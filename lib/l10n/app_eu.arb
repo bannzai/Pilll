@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "Hasiera-data {date} arte aukeratu daiteke",
   "initialSettingAskYazFlex": "Yaz Flex erabiltzen duzu?",
   "initialSettingAskYazFlexDescription": "“Bai” aukeratzen baduzu,\netenaldiaren amaieratik zenbat egun igaro diren erakusteko ezarriko dugu.",
-  "yazFlexLastRestDurationTitle": "Mesedez,\nesan iezaguzu aurreko atsedenaldiari buruz",
   "yazFlexSkipRestDuration": "Saltatu atsedenaldiaren sarrera",
   "yazFlexSkipRestDurationDialogTitle": "Atsedenaldiaren sarrera saltatu",
   "yazFlexSkipRestDurationDialogMessage": "Hartzeko atsedenaldia geroago sar dezakezu hasierako pantailako «Hartzeko atsedenaldia» aukeratik.",
   "yazFlexSkipRestDurationDialogSkip": "Saltatu",
-  "yazFlexEmptyEndDateMeansResting": "Oraindik hartzen berriro hasi ez bazara, utzi berriro hasteko data hutsik.",
-  "yazFlexLastRestDurationBeginDate": "Atsedena hasi zen eguna",
-  "yazFlexLastRestDurationEndDate": "Hartzeari berriro ekin zenion eguna",
-  "yazFlexSelectDate": "Hautatu data",
   "yazFlexBeginPillNumberPageTitle": "Zikloan, zein hartualdi da xaflaren hasiera?",
   "yazFlexNextInputIsRestDuration": "Ondoren, aurreko atsedenaldia sartu"
 }

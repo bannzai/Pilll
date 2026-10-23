@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "Басталу күнін {date} күніне дейін таңдауға болады",
   "initialSettingAskYazFlex": "Yaz Flex қолданасыз ба?",
   "initialSettingAskYazFlexDescription": "Егер «Иә» таңдасаңыз,\nүзіліс аяқталғаннан бері нешінші күн екенін көрсететіндей етіп баптаймыз.",
-  "yazFlexLastRestDurationTitle": "Өтінеміз,\nалдыңғы үзіліс кезеңі туралы айтып беріңіз",
   "yazFlexSkipRestDuration": "Үзіліс кезеңін енгізуді өткізіп жіберу",
   "yazFlexSkipRestDurationDialogTitle": "Үзіліс кезеңін енгізуді өткізіп жіберу",
   "yazFlexSkipRestDurationDialogMessage": "Қабылдау үзілісінің мерзімін кейінірек Басты беттегі «Қабылдау үзілісі» бөлімінен енгізе аласыз.",
   "yazFlexSkipRestDurationDialogSkip": "Өткізіп жіберу",
-  "yazFlexEmptyEndDateMeansResting": "Егер қабылдауды әлі қайта бастамаған болсаңыз, қайта бастаған күнді бос қалдырыңыз.",
-  "yazFlexLastRestDurationBeginDate": "Үзіліс басталған күн",
-  "yazFlexLastRestDurationEndDate": "Қабылдауды қайта бастаған күн",
-  "yazFlexSelectDate": "Күнді таңдаңыз",
   "yazFlexBeginPillNumberPageTitle": "Циклдегі парақтың басы нешінші қабылдауға сәйкес келеді?",
   "yazFlexNextInputIsRestDuration": "Келесі қадамда алдыңғы үзілісті енгізіңіз"
 }

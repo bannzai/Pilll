@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "শুরুর তারিখ {date} পর্যন্ত বেছে নেওয়া যাবে",
   "initialSettingAskYazFlex": "আপনি কি Yaz Flex ব্যবহার করছেন?",
   "initialSettingAskYazFlexDescription": "“হ্যাঁ” নির্বাচন করলে\nবিরতি শেষ হওয়ার পর কততম দিন চলছে তা দেখানোর জন্য সেট করা হবে",
-  "yazFlexLastRestDurationTitle": "অনুগ্রহ করে\nআগের বিরতি সম্পর্কে জানান",
   "yazFlexSkipRestDuration": "ওষুধ বিরতির তথ্য দেওয়া এড়িয়ে যান",
   "yazFlexSkipRestDurationDialogTitle": "ওষুধ বিরতির তথ্য লেখা এড়িয়ে যান",
   "yazFlexSkipRestDurationDialogMessage": "পিল খাওয়া বিরতির সময়কাল পরে হোমের «পিল খাওয়া বিরতি» থেকে লিখতে পারবেন।",
   "yazFlexSkipRestDurationDialogSkip": "এড়িয়ে যান",
-  "yazFlexEmptyEndDateMeansResting": "এখনও সেবন আবার শুরু না করে থাকলে, পুনরায় শুরু করার তারিখটি ফাঁকা রাখুন।",
-  "yazFlexLastRestDurationBeginDate": "বিরতি শুরু হওয়ার দিন",
-  "yazFlexLastRestDurationEndDate": "আবার সেবন শুরু করার দিন",
-  "yazFlexSelectDate": "তারিখ নির্বাচন করুন",
   "yazFlexBeginPillNumberPageTitle": "চক্র অনুযায়ী শিটের শুরু কোন নম্বর সেবন?",
   "yazFlexNextInputIsRestDuration": "এরপর আগের বিরতির তথ্য লিখুন"
 }

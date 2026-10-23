@@ -570,15 +570,10 @@
   "pauseStartDateLimit": "La data di inizio può essere selezionata fino al {date}",
   "initialSettingAskYazFlex": "Stai usando Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Se scegli “Sì”,\nlo imposteremo in modo da mostrare quanti giorni sono passati dalla fine della pausa.",
-  "yazFlexLastRestDurationTitle": "Per favore,\nparlaci della tua ultima pausa",
   "yazFlexSkipRestDuration": "Salta l’inserimento della pausa",
   "yazFlexSkipRestDurationDialogTitle": "Salta l’inserimento della pausa",
   "yazFlexSkipRestDurationDialogMessage": "Potrai inserire in seguito il periodo di pausa di assunzione da “Pausa di assunzione” nella schermata Home.",
   "yazFlexSkipRestDurationDialogSkip": "Salta",
-  "yazFlexEmptyEndDateMeansResting": "Se non hai ancora ripreso l’assunzione, lascia vuota la data di ripresa.",
-  "yazFlexLastRestDurationBeginDate": "Giorno di inizio della pausa",
-  "yazFlexLastRestDurationEndDate": "Data di ripresa dell’assunzione",
-  "yazFlexSelectDate": "Seleziona una data",
   "yazFlexBeginPillNumberPageTitle": "A quale assunzione del ciclo corrisponde l'inizio del blister?",
   "yazFlexNextInputIsRestDuration": "Successivamente, inserisci la pausa precedente"
 }
