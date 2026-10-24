@@ -13,7 +13,7 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - runFlow: subflows/initial_setup.yaml
 # ホーム画面到達後、データ読み込みを待つ
 - waitForAnimationToEnd
-# AnnouncementBar に FeatureAppeal の Bar が表示されることを id セレクタで確認
+# AnnouncementBar に FeatureAppeal の Bar が表示されることを id セレクタで確認 (どの機能の Bar かは日付のローテーションで変わる)
 # Bar はユーザー情報の読み込み後に出るため、CI の遅い Simulator でも間に合うよう 30 秒まで表示を待つ
 - extendedWaitUntil:
     visible:
