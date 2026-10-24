@@ -11,7 +11,7 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - waitForAnimationToEnd
 # ホーム画面 (ピルタブ) で Bar が表示される
 - assertVisible:
-    id: "recommend_signup_general_bar"
+    id: "feature_appeal_bar"
 # 設定タブに切替 (タブは Image 型で text 検出不可のため座標タップ)
 - tapOn:
     point: "88%,95%"
@@ -22,4 +22,4 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - waitForAnimationToEnd
 # ピルタブに戻っても Bar が表示されている
 - assertVisible:
-    id: "recommend_signup_general_bar"
+    id: "feature_appeal_bar"
