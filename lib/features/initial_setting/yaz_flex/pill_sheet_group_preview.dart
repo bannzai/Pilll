@@ -16,9 +16,12 @@ import 'package:pilll/features/record/components/pill_sheet/record_page_pill_she
 /// ヤーズフレックス向けの初期設定で、入力途中の内容から組み立てたピルシートグループを登録前に見せるプレビュー
 /// 各ピルの番号は登録後のホームと同じ服用日数 (休薬明けに1に戻る) で、服用済みのピルはホームと同じ服用済みの表示にする
 /// [markedPill] の位置のピルは、入力している値がどのピルを指すかを示す印 (選択中の色) にする。null の時は印を付けない
+/// [onPillTap] がある時はピルをタップで選べる。選んだ結果は初期設定の状態 (Riverpod の InitialSettingStateNotifier) に入れるため、
+/// 子で完結する ValueNotifier ではなくコールバックで親に渡す。null の時はタップしても何もしない
 class YazFlexPillSheetGroupPreview extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final ({int pageIndex, int pillNumberInPillSheet})? markedPill;
+  final void Function({required int pageIndex, required int pillNumberInPillSheet})? onPillTap;
 
   /// 最初に表示するピルシートの pageIndex。入力している値に関係するピルシートを開いた状態で見せる
   final int initialPageIndex;
@@ -27,6 +30,7 @@ class YazFlexPillSheetGroupPreview extends HookConsumerWidget {
     super.key,
     required this.pillSheetGroup,
     required this.markedPill,
+    required this.onPillTap,
     required this.initialPageIndex,
   });
 
@@ -122,8 +126,7 @@ class YazFlexPillSheetGroupPreview extends HookConsumerWidget {
             pillMarkType: pillMarkType,
             remainingPillTakenCount: null,
           ),
-          // プレビューなのでピルをタップしても何もしない
-          onTap: () {},
+          onTap: () => onPillTap?.call(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
         ),
       );
     });

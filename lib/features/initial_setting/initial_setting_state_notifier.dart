@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
-import 'package:pilll/entity/remote_config_parameter.codegen.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -11,7 +11,6 @@ import 'package:pilll/entity/setting.codegen.dart';
 
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
-import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -25,7 +24,6 @@ final initialSettingStateNotifierProvider = StateNotifierProvider.autoDispose<In
     ref.watch(batchSetSettingProvider),
     ref.watch(batchSetPillSheetModifiedHistoryProvider),
     ref.watch(batchSetPillSheetGroupProvider),
-    ref.watch(remoteConfigParameterProvider),
     ref.watch(registerReminderLocalNotificationRunnerProvider),
     now(),
   ),
@@ -37,7 +35,6 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   final BatchSetSetting batchSetSetting;
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
-  final RemoteConfigParameter remoteConfigParameter;
   final RegisterReminderLocalNotificationRunner registerReminderLocalNotificationRunner;
 
   InitialSettingStateNotifier(
@@ -46,7 +43,6 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     this.batchSetSetting,
     this.batchSetPillSheetModifiedHistory,
     this.batchSetPillSheetGroup,
-    this.remoteConfigParameter,
     this.registerReminderLocalNotificationRunner,
     DateTime _now,
   ) : super(
@@ -97,15 +93,16 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   }
 
   /// 「ヤーズフレックスの方ですか？」に「はい」と答えた時の状態にする
-  /// ピルシートは28錠タイプ固定で、枚数はヤーズフレックス以外の初期設定の既定と同じ3枚にする
+  /// ピルシートは28錠タイプ固定で 5 枚。ヤーズフレックスの連続服用は最長 120 日 (28錠 × 4 枚 + 8 錠) なので、1 周期を 1 つのピルシートグループに収めるには 5 枚要る
   void selectYazFlex() {
     state = state.copyWith(
       isYazFlex: true,
-      pillSheetTypes: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_28_0],
+      pillSheetTypes: List.filled(5, PillSheetType.pillsheet_28_0),
       todayPillNumber: null,
       yazFlexHasNotRestedYet: false,
-      yazFlexLastRestDurationBeginDate: null,
-      yazFlexLastRestDurationEndDate: null,
+      yazFlexLastTakenPillNumberBeforeRest: null,
+      yazFlexIsResting: false,
+      yazFlexRestDurationDays: 4,
       yazFlexBeginPillNumber: 1,
     );
   }
@@ -122,54 +119,49 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
       pillSheetTypes: [],
       todayPillNumber: null,
       yazFlexHasNotRestedYet: false,
-      yazFlexLastRestDurationBeginDate: null,
-      yazFlexLastRestDurationEndDate: null,
+      yazFlexLastTakenPillNumberBeforeRest: null,
+      yazFlexIsResting: false,
+      yazFlexRestDurationDays: 4,
       yazFlexBeginPillNumber: 1,
     );
   }
 
-  /// ヤーズフレックス向けの導線で前回の休薬の入力をスキップする (true)・入力して進む (false)。スキップした時は入力済みの休薬の日付を消す
+  /// ヤーズフレックス向けの導線で前回の休薬の入力をスキップする (true)・入力して進む (false)。スキップした時は選んだ休薬のピルと休薬中の入力を消す
   void setYazFlexHasNotRestedYet({required bool yazFlexHasNotRestedYet}) {
     state = state.copyWith(
       yazFlexHasNotRestedYet: yazFlexHasNotRestedYet,
-      yazFlexLastRestDurationBeginDate: yazFlexHasNotRestedYet ? null : state.yazFlexLastRestDurationBeginDate,
-      yazFlexLastRestDurationEndDate: yazFlexHasNotRestedYet ? null : state.yazFlexLastRestDurationEndDate,
+      yazFlexLastTakenPillNumberBeforeRest: yazFlexHasNotRestedYet ? null : state.yazFlexLastTakenPillNumberBeforeRest,
+      yazFlexIsResting: yazFlexHasNotRestedYet ? false : state.yazFlexIsResting,
     );
   }
 
-  /// ヤーズフレックス向けの導線で入力した前回の休薬の開始日と服用を再開した日を消す (開始日の × を押した時)
-  void clearYazFlexLastRestDuration() {
+  /// ヤーズフレックス向けの導線で「休薬中でまだ服用を再開していない」を切り替える
+  /// 休薬中にすると、休薬のピルは今日飲む番号のピルの 1 つ前に決まるのでタップで選んだピルを消し、スキップも解除する
+  void setYazFlexIsResting({required bool yazFlexIsResting}) {
     state = state.copyWith(
-      yazFlexLastRestDurationBeginDate: null,
-      yazFlexLastRestDurationEndDate: null,
+      yazFlexIsResting: yazFlexIsResting,
+      yazFlexHasNotRestedYet: false,
+      yazFlexLastTakenPillNumberBeforeRest: yazFlexIsResting ? null : state.yazFlexLastTakenPillNumberBeforeRest,
     );
   }
 
-  /// ヤーズフレックス向けの導線で入力した服用を再開した日だけを消し、休薬中 (まだ再開していない) の入力にする
-  void clearYazFlexLastRestDurationEndDate() {
-    state = state.copyWith(yazFlexLastRestDurationEndDate: null);
-  }
-
-  /// ヤーズフレックス向けの導線で前回の休薬が始まった日を入力する
-  /// 終わった日が始まった日以前になる時は、終わった日を未入力に戻す。スキップした後に戻って入力し直した時はスキップを解除し、プレビューに反映する
-  void setYazFlexLastRestDurationBeginDate({required DateTime yazFlexLastRestDurationBeginDate}) {
-    final yazFlexLastRestDurationEndDate = state.yazFlexLastRestDurationEndDate;
+  /// ヤーズフレックス向けの導線で休薬に入る直前に飲んだピルをタップで選ぶ。今日飲む番号のピル以降は選べないので無視する
+  /// 休薬中 (まだ再開していない) の時は休薬のピルが今日のピルの 1 つ前に決まるので無視する
+  /// スキップした後に戻って選び直した時はスキップを解除し、プレビューに反映する
+  void setYazFlexLastTakenPillNumberBeforeRest({required int pageIndex, required int pillNumberInPillSheet}) {
+    if (state.yazFlexIsResting ||
+        !state.yazFlexCanSelectAsLastTakenPillBeforeRest(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet)) {
+      return;
+    }
     state = state.copyWith(
       yazFlexHasNotRestedYet: false,
-      yazFlexLastRestDurationBeginDate: yazFlexLastRestDurationBeginDate,
-      yazFlexLastRestDurationEndDate:
-          yazFlexLastRestDurationEndDate != null && yazFlexLastRestDurationEndDate.isAfter(yazFlexLastRestDurationBeginDate)
-              ? yazFlexLastRestDurationEndDate
-              : null,
+      yazFlexLastTakenPillNumberBeforeRest: InitialSettingTodayPillNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
     );
   }
 
-  /// ヤーズフレックス向けの導線で前回の休薬が終わった日 (服用を再開した日) を入力する。スキップした後に戻って入力し直した時はスキップを解除する
-  void setYazFlexLastRestDurationEndDate({required DateTime yazFlexLastRestDurationEndDate}) {
-    state = state.copyWith(
-      yazFlexHasNotRestedYet: false,
-      yazFlexLastRestDurationEndDate: yazFlexLastRestDurationEndDate,
-    );
+  /// ヤーズフレックス向けの導線で前回の休薬の日数を入力する
+  void setYazFlexRestDurationDays({required int yazFlexRestDurationDays}) {
+    state = state.copyWith(yazFlexRestDurationDays: yazFlexRestDurationDays);
   }
 
   /// ヤーズフレックス向けの導線で開始番号 (1枚目の1番は休薬明けから何日目か) を入力する
@@ -177,6 +169,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     state = state.copyWith(yazFlexBeginPillNumber: yazFlexBeginPillNumber);
   }
 
+  /// 今日飲む番号を選ぶ。ヤーズフレックス向けの導線で選んだ休薬のピルが今日のピル以降になる時 (戻って今日の番号を変えた時) は、その選択を消す
   void setTodayPillNumber({
     required int pageIndex,
     required int pillNumberInPillSheet,
@@ -187,6 +180,14 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
         pillNumberInPillSheet: pillNumberInPillSheet,
       ),
     );
+    final lastTakenPillNumberBeforeRest = state.yazFlexLastTakenPillNumberBeforeRest;
+    if (lastTakenPillNumberBeforeRest != null &&
+        !state.yazFlexCanSelectAsLastTakenPillBeforeRest(
+          pageIndex: lastTakenPillNumberBeforeRest.pageIndex,
+          pillNumberInPillSheet: lastTakenPillNumberBeforeRest.pillNumberInPillSheet,
+        )) {
+      state = state.copyWith(yazFlexLastTakenPillNumberBeforeRest: null);
+    }
   }
 
   void unsetTodayPillNumber() {
@@ -197,7 +198,9 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     state = state.copyWith(pillTakenCount: pillTakenCount);
   }
 
-  Future<void> register() async {
+  /// 初期設定の内容を保存し、トライアルを開始する。
+  /// トライアルは 1 アカウント 1 回のため、[user] が既にトライアルを開始している時は開始しない
+  Future<void> register({required User user}) async {
     final batch = batchFactory.batch();
 
     final builtPillSheetGroup = state.buildPillSheetGroup();
@@ -227,7 +230,9 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
       );
     }
 
-    await endInitialSetting(remoteConfigParameter);
+    if (!user.trialIsAlreadyBegin) {
+      await endInitialSetting();
+    }
   }
 
   void showHUD() {
@@ -251,6 +256,8 @@ class RegisterReminderLocalNotificationRunner {
     required bool premiumOrTrial,
     required Setting setting,
   }) async {
+    // 通知 ID は時刻と番号から決まり上書きされないため、初期設定をやり直した時に前回登録した通知が残らないよう全て解除してから登録する
+    await CancelReminderLocalNotification()();
     await RegisterReminderLocalNotification.run(
       pillSheetGroup: createdPillSheetGroup,
       activePillSheet: activePillSheet,

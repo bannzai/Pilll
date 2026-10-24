@@ -7,7 +7,6 @@ import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_marks.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/features/initial_setting/yaz_flex/pill_sheet_group_preview.dart';
 import 'package:pilll/features/initial_setting/yaz_flex_begin_pill_number/page.dart';
@@ -44,7 +43,6 @@ void main() {
       MockBatchSetSetting(),
       MockBatchSetPillSheetModifiedHistory(),
       MockBatchSetPillSheetGroup(),
-      RemoteConfigParameter(),
       MockRegisterReminderLocalNotificationRunner(),
       DateTime.parse("2022-03-02"),
     );

@@ -6,7 +6,7 @@ import 'package:mockito/mockito.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_marks.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
-import 'package:pilll/entity/remote_config_parameter.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/features/initial_setting/yaz_flex/pill_sheet_group_preview.dart';
 import 'package:pilll/features/initial_setting/yaz_flex_rest_duration/page.dart';
@@ -43,7 +43,6 @@ void main() {
       MockBatchSetSetting(),
       MockBatchSetPillSheetModifiedHistory(),
       MockBatchSetPillSheetGroup(),
-      RemoteConfigParameter(),
       MockRegisterReminderLocalNotificationRunner(),
       DateTime.parse("2022-03-02"),
     );
@@ -72,7 +71,7 @@ void main() {
   }
 
   group("#InitialSettingYazFlexRestDurationPage", () {
-    testWidgets("未入力の場合は開始日と再開日の入力欄とスキップのボタンが表示され、次へは押せない",
+    testWidgets("休薬のピルが未選択の場合は、タップできるプレビューとスキップのボタンが出て、日数の欄は無く次へは押せない",
         (WidgetTester tester) async {
       await pumpPage(
         tester,
@@ -82,116 +81,112 @@ void main() {
         },
       );
 
-      expect(find.byType(YazFlexPillSheetGroupPreview), findsOneWidget);
-      expect(find.byType(YazFlexRestDurationDateField), findsNWidgets(2));
+      final preview = tester.widget<YazFlexPillSheetGroupPreview>(
+          find.byType(YazFlexPillSheetGroupPreview));
+      expect(preview.onPillTap, isNotNull);
+      expect(preview.markedPill, isNull);
+      // 今日飲むピルのピルシート (2枚目) を開く
+      expect(preview.initialPageIndex, 1);
+      expect(find.byType(SelectedPillMark), findsNothing);
+      expect(find.byType(YazFlexRestDurationDaysField), findsNothing);
       expect(find.byType(InconspicuousButton), findsOneWidget);
-      // 開始日が未入力の間は再開日を選べず、どちらにも × が無い
-      final dateFields = tester
-          .widgetList<YazFlexRestDurationDateField>(
-              find.byType(YazFlexRestDurationDateField))
-          .toList();
-      expect(dateFields[0].onTap, isNotNull);
-      expect(dateFields[0].onClear, isNull);
-      expect(dateFields[1].onTap, isNull);
-      expect(dateFields[1].onClear, isNull);
-      expect(find.byIcon(Icons.close), findsNothing);
-      // 開始日が未入力の間は次へ進めない
       expect(
         tester.widget<PrimaryButton>(find.byType(PrimaryButton)).onPressed,
         isNull,
       );
-      // 再開したピルが無いのでプレビューに印が無い
-      expect(find.byType(SelectedPillMark), findsNothing);
+      expect(
+          tester
+              .widget<YazFlexRestingSwitch>(find.byType(YazFlexRestingSwitch))
+              .isResting,
+          false);
     });
 
-    testWidgets("開始日と再開日を入力済みの場合は次へ進め、両方に × が付き、再開したピルに印が付く",
+    testWidgets(
+        "休薬中 (まだ再開していない) を選んだ場合は、今日のピル (1枚目の17番) の1つ前の16番に印が付いてタップできず、「何日目」の欄が出て次へ進める",
+        (WidgetTester tester) async {
+      await pumpPage(
+        tester,
+        input: (store) {
+          store.selectYazFlex();
+          store.setTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 17);
+          store.setYazFlexIsResting(yazFlexIsResting: true);
+        },
+      );
+
+      final preview = tester.widget<YazFlexPillSheetGroupPreview>(
+          find.byType(YazFlexPillSheetGroupPreview));
+      expect(preview.onPillTap, isNull);
+      expect(preview.markedPill, (pageIndex: 0, pillNumberInPillSheet: 16));
+      expect(find.byType(SelectedPillMark), findsOneWidget);
+      expect(
+          tester
+              .widget<YazFlexRestingSwitch>(find.byType(YazFlexRestingSwitch))
+              .isResting,
+          true);
+      final daysField = tester.widget<YazFlexRestDurationDaysField>(
+          find.byType(YazFlexRestDurationDaysField));
+      expect(daysField.isResting, true);
+      expect(daysField.restDurationDays, 4);
+      expect(
+        tester.widget<PrimaryButton>(find.byType(PrimaryButton)).onPressed,
+        isNotNull,
+      );
+    });
+
+    testWidgets("休薬のピル (1枚目の16番) を選んだ場合は、そのピルに印が付いて日数の欄 (既定の4日間) が出て、次へ進める",
         (WidgetTester tester) async {
       await pumpPage(
         tester,
         input: (store) {
           store.selectYazFlex();
           store.setTodayPillNumber(pageIndex: 1, pillNumberInPillSheet: 2);
-          store.setYazFlexLastRestDurationBeginDate(
-            yazFlexLastRestDurationBeginDate: DateTime.parse("2022-02-13"),
-          );
-          store.setYazFlexLastRestDurationEndDate(
-            yazFlexLastRestDurationEndDate: DateTime.parse("2022-02-17"),
-          );
+          store.setYazFlexLastTakenPillNumberBeforeRest(
+              pageIndex: 0, pillNumberInPillSheet: 16);
         },
       );
 
-      final dateFields = tester
-          .widgetList<YazFlexRestDurationDateField>(
-              find.byType(YazFlexRestDurationDateField))
-          .toList();
-      expect(dateFields[1].onTap, isNotNull);
-      expect(dateFields[0].onClear, isNotNull);
-      expect(dateFields[1].onClear, isNotNull);
-      expect(find.byIcon(Icons.close), findsNWidgets(2));
-      expect(
-        tester.widget<PrimaryButton>(find.byType(PrimaryButton)).onPressed,
-        isNotNull,
-      );
-      // 再開日の2022-02-17は1枚目の17番。プレビューは再開したピルのピルシート (1枚目) を開いて印を付ける
       final preview = tester.widget<YazFlexPillSheetGroupPreview>(
           find.byType(YazFlexPillSheetGroupPreview));
-      expect(preview.markedPill, (pageIndex: 0, pillNumberInPillSheet: 17));
+      expect(preview.markedPill, (pageIndex: 0, pillNumberInPillSheet: 16));
       expect(preview.initialPageIndex, 0);
       expect(find.byType(SelectedPillMark), findsOneWidget);
+      // 次の17番から1に戻る
+      expect(
+        preview.pillSheetGroup.displayPillNumberWithoutDate(
+            pageIndex: 0, pillNumberInPillSheet: 17),
+        "1",
+      );
+      expect(
+        tester
+            .widget<YazFlexRestDurationDaysField>(
+                find.byType(YazFlexRestDurationDaysField))
+            .restDurationDays,
+        4,
+      );
+      expect(
+        tester.widget<PrimaryButton>(find.byType(PrimaryButton)).onPressed,
+        isNotNull,
+      );
     });
 
-    testWidgets("開始日だけ入力した場合 (休薬中) は次へ進め、再開日は空のままで印が無い",
-        (WidgetTester tester) async {
+    testWidgets("休薬の日数を7日にした場合は、日数の欄に7が出る", (WidgetTester tester) async {
       await pumpPage(
         tester,
         input: (store) {
           store.selectYazFlex();
           store.setTodayPillNumber(pageIndex: 1, pillNumberInPillSheet: 2);
-          store.setYazFlexLastRestDurationBeginDate(
-            yazFlexLastRestDurationBeginDate: DateTime.parse("2022-02-26"),
-          );
+          store.setYazFlexLastTakenPillNumberBeforeRest(
+              pageIndex: 0, pillNumberInPillSheet: 16);
+          store.setYazFlexRestDurationDays(yazFlexRestDurationDays: 7);
         },
       );
 
-      final dateFields = tester
-          .widgetList<YazFlexRestDurationDateField>(
-              find.byType(YazFlexRestDurationDateField))
-          .toList();
-      expect(dateFields[0].onClear, isNotNull);
-      expect(dateFields[1].onTap, isNotNull);
-      expect(dateFields[1].onClear, isNull);
-      expect(find.byIcon(Icons.close), findsOneWidget);
       expect(
-        tester.widget<PrimaryButton>(find.byType(PrimaryButton)).onPressed,
-        isNotNull,
-      );
-      // 休薬中は再開したピルが無いので印が無く、今日飲むピルのピルシート (2枚目) を開く
-      final preview = tester.widget<YazFlexPillSheetGroupPreview>(
-          find.byType(YazFlexPillSheetGroupPreview));
-      expect(preview.markedPill, isNull);
-      expect(preview.initialPageIndex, 1);
-    });
-
-    testWidgets("開始日が今日の場合は再開日を選べない", (WidgetTester tester) async {
-      await pumpPage(
-        tester,
-        input: (store) {
-          store.selectYazFlex();
-          store.setTodayPillNumber(pageIndex: 1, pillNumberInPillSheet: 2);
-          store.setYazFlexLastRestDurationBeginDate(
-            yazFlexLastRestDurationBeginDate: DateTime.parse("2022-03-02"),
-          );
-        },
-      );
-
-      final dateFields = tester
-          .widgetList<YazFlexRestDurationDateField>(
-              find.byType(YazFlexRestDurationDateField))
-          .toList();
-      expect(dateFields[1].onTap, isNull);
-      expect(
-        tester.widget<PrimaryButton>(find.byType(PrimaryButton)).onPressed,
-        isNotNull,
+        tester
+            .widget<YazFlexRestDurationDaysField>(
+                find.byType(YazFlexRestDurationDaysField))
+            .restDurationDays,
+        7,
       );
     });
   });

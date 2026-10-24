@@ -70,6 +70,7 @@ class InitialSettingYazFlexBeginPillNumberPage extends ConsumerWidget {
                       YazFlexPillSheetGroupPreview(
                         pillSheetGroup: pillSheetGroup,
                         markedPill: (pageIndex: 0, pillNumberInPillSheet: 1),
+                        onPillTap: null,
                         initialPageIndex: 0,
                       ),
                     const SizedBox(height: 24),
