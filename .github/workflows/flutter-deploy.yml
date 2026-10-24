@@ -163,7 +163,7 @@ jobs:
       - run: flutter pub get
 
       # certificate-and-profile-installer@1 の置き換え。P12 証明書のインポート (一時キーチェーンの作成・登録は action が行う)
-      - uses: apple-actions/import-codesign-certs@5142e029c445c10ffc7149d172e540235a065466 # v7.0.0
+      - uses: apple-actions/import-codesign-certs@77ba2a2a8f5cfc8c405ebf3159f767c323e238f9 # v7.1.0
         with:
           p12-file-base64: ${{ secrets.IOS_P12_CERTIFICATE_BASE64 }}
           p12-password: ${{ secrets.IOS_P12_PASSWORD }}
@@ -272,7 +272,7 @@ jobs:
             build/ios/archive/Runner.xcarchive/dSYMs
 
       # IPA は障害調査用に、export 済みならアップロードの成否にかかわらず artifact に保存する (deploy-to-bitrise-io@2 に相当)
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: ${{ !cancelled() && steps.build_ipa.outcome == 'success' }}
         with:
           name: ios-${{ matrix.flavor }}-ipa-${{ env.BUILD_NUMBER }}
@@ -417,7 +417,7 @@ jobs:
           track: internal
           status: completed
 
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: ${{ !cancelled() && steps.build_aab.outcome == 'success' }}
         with:
           name: android-${{ matrix.flavor }}-aab-${{ env.BUILD_NUMBER }}
