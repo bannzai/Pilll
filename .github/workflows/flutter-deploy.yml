@@ -13,7 +13,11 @@ name: flutter-deploy
 # ビルド番号 = github.run_number + BUILD_NUMBER_OFFSET。iOS (CFBundleVersion) と Android (versionCode) で共通。
 # Bitrise 時代の最終値は dev アプリの方が大きい (main push のたびに dev を配布していたため)。
 # 2026-09-12 時点の実測: App Store Connect prod 6283 / dev 6314、Google Play prod 6282 / dev 6304。
-# offset はこの最大値 6314 を超えるように決める (Google Play は同じパッケージで versionCode の重複を拒否する)。
+# Bitrise の webhook と trigger_map はこの workflow の移行後も有効で、main push と release tag のたびに
+# Bitrise も BITRISE_BUILD_NUMBER + 100 のビルド番号で同じトラックへアップロードし続けている。
+# その値が offset 6400 の時のビルド番号に追いつき (2026-10-21 の dev: 「Version code 6433 has already been used」)、
+# 追い越した後は Google Play が低い versionCode を「existing users を upgrade できない」として拒否した
+# (2026-10-24 の prod: run 44 の 6444)。offset は Bitrise のビルド番号が届かない 10000 にする。
 # アップロード step まで進んで失敗した run を Re-run すると同じビルド番号の再送になり拒否されるため、その場合は
 # 原因を直して workflow_dispatch で新しく起動する (アップロードより前で失敗した run は Re-run してよい)。
 #
@@ -51,7 +55,7 @@ concurrency:
 
 env:
   FLUTTER_VERSION: '3.44.9'
-  BUILD_NUMBER_OFFSET: 6400
+  BUILD_NUMBER_OFFSET: 10000
   # 署名は project.pbxproj の Release / Release-Development 設定 (CODE_SIGN_STYLE = Manual + 下記の profile 名) に従う
   IOS_TEAM_ID: TQPN82UBBY
   SLACK_NOTIFY_CHANNEL: pilll-notification
