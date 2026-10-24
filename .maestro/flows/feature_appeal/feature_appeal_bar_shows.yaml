@@ -1,7 +1,7 @@
 appId: com.mizuki.Ohashi.Pilll.dev
 ---
-# 初期設定完了後に AnnouncementBar 領域に PR #1782 の変更 (RecommendSignupGeneral) が表示されることを確認する。
-# 匿名ユーザー (ログインプロバイダ未連携) → RecommendSignupGeneral が FeatureAppeal より優先される。
+# 初期設定完了後に AnnouncementBar 領域に FeatureAppeal の Bar が表示されることを確認する。
+# トライアル中のユーザーは、匿名 (ログインプロバイダ未連携) でも FeatureAppeal が RecommendSignupGeneral より優先される (announcement_bar.dart)。
 - launchApp:
     clearState: true
     clearKeychain: true
@@ -12,6 +12,6 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - runFlow: subflows/initial_setup.yaml
 # ホーム画面到達後、データ読み込みを待つ
 - waitForAnimationToEnd
-# AnnouncementBar に RecommendSignupGeneral が表示されることを id セレクタで確認
+# AnnouncementBar に FeatureAppeal の Bar が表示されることを id セレクタで確認 (どの機能の Bar かは日付のローテーションで変わる)
 - assertVisible:
-    id: "recommend_signup_general_bar"
+    id: "feature_appeal_bar"
