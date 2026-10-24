@@ -88,8 +88,6 @@ jobs:
           FLOWS: ${{ inputs.flows }}
           DEVICE: ${{ inputs.device }}
           RECORD_VIDEO: ${{ inputs.record_video }}
-          # runner では XCUITest の driver の起動が既定の待ち時間に収まらないことがある (run 40047559687 の 2 回目)
-          MAESTRO_DRIVER_STARTUP_TIMEOUT: '180000'
         run: bash .github/scripts/maestro-e2e-run.sh
       # public repo の artifact は誰でもダウンロードできるため保持期間を短くする。
       # 録画にシード済みダミーデータ以外を映さない運用は QA.md 側に記載する。
