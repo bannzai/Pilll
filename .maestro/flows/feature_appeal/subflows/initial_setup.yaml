@@ -42,10 +42,10 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - tapOn: "まだ分からない"
 - waitForAnimationToEnd
 # CI の Simulator ではページ遷移中のタップが効かず 2/3 に留まることがある (maestro-e2e run 39915603040 の失敗時の画面で確認) ため、
-# 3/3 の画面が出ていなければもう一度タップする
+# 「まだ分からない」(2/3 の画面にだけある) が残っていればもう一度タップする
 - runFlow:
     when:
-      notVisible: "3/3"
+      visible: "まだ分からない"
     commands:
       - tapOn: "まだ分からない"
       - waitForAnimationToEnd
