@@ -58,5 +58,10 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - waitForAnimationToEnd
 
 # Screen 4: プレミアムトライアル → アプリ開始
+# 3/3 の「次へ」の後に初期設定の保存を待ってから出る画面で、CI の Simulator では tapOn の待ち時間を超えることがある
+# (maestro-e2e run 40106336852 では失敗の時点で画面が出ていた) ため、30 秒まで表示を待つ
+- extendedWaitUntil:
+    visible: "アプリをはじめる"
+    timeout: 30000
 - tapOn: "アプリをはじめる"
 - waitForAnimationToEnd
