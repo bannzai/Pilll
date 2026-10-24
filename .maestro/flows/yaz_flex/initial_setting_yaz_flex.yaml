@@ -23,14 +23,15 @@ appId: com.mizuki.Ohashi.Pilll.dev
       - waitForAnimationToEnd
 
 # 「ヤーズフレックスの方ですか？」→ はい
+# CI の Simulator ではクリーンインストール直後の起動に時間がかかるため表示を待つ
 - extendedWaitUntil:
     visible: "ヤーズフレックスの方ですか？"
-    timeout: 15000
+    timeout: 60000
 - tapOn: "はい"
 - waitForAnimationToEnd
 
 # 今日飲む番号: 1枚目の最初のピルを座標でタップ (ピルシート内の Flutter のピルは Maestro がテキストで検出できないため)
-# iPhone 17 (maestro-e2e workflow の既定) で 1 番の円の中心は横 21%・縦 34%。32% だと番号のラベルに当たって選ばれない
+# iPhone 17 で 1 番のピルの丸は (21%,34%)。32% は番号の文字の位置でタップが効かない (maestro-e2e run 39906545518 の失敗時の画面で確認)
 - tapOn:
     point: "21%,34%"
 - waitForAnimationToEnd
@@ -68,5 +69,10 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - waitForAnimationToEnd
 
 # プレミアムトライアル → アプリ開始
+# 初期設定の保存を待ってから出る画面で、CI の Simulator では tapOn の待ち時間を超えることがあるため 30 秒まで表示を待つ
+# (feature_appeal/subflows/initial_setup.yaml と同じ。maestro-e2e run 40106336852)
+- extendedWaitUntil:
+    visible: "アプリをはじめる"
+    timeout: 30000
 - tapOn: "アプリをはじめる"
 - waitForAnimationToEnd

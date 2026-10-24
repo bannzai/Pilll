@@ -13,8 +13,10 @@ RECORD_VIDEO="${RECORD_VIDEO:-true}"
 SUMMARY="${GITHUB_STEP_SUMMARY:-/dev/null}"
 # maestro を入れる時のバージョンと、そのリリースの maestro.zip の sha256。
 # 更新は https://github.com/mobile-dev-inc/maestro/releases の checksums_sha256.txt から取る。
-MAESTRO_VERSION="${MAESTRO_VERSION:-2.8.0}"
-MAESTRO_SHA256="${MAESTRO_SHA256:-b3e561161904fb391875ca5834d5b22cf0b01c052dd1b408ad83e30d8f8951b3}"
+# 2.8.0 では runner 上で XCTest driver が DeviceUnreachableException で落ちたため、
+# appstore-screenshots workflow が同じ runner で動かしている 2.6.0 に合わせる。
+MAESTRO_VERSION="${MAESTRO_VERSION:-2.6.0}"
+MAESTRO_SHA256="${MAESTRO_SHA256:-80185105a5d7e227e3b3fbcf225f45b312508ea676a9fc8e1b1aa1cac8b9ff6e}"
 
 RESOLVE_ONLY=false
 if [ "${1:-}" = "--resolve-only" ]; then
@@ -51,6 +53,15 @@ UDID="$(xcrun simctl list devices available -j \
   | head -1)"
 [ -n "$UDID" ] || fail "デバイスが見つからない: ${DEVICE} (xcrun simctl list devices available で確認)"
 echo "udid=${UDID}"
+
+# 言語・地域の変更は Simulator の再起動後に反映されるため、一度起動して書き込み、停止してから起動し直す
+if [ -n "${SIMULATOR_LANGUAGE:-}" ]; then
+  xcrun simctl boot "$UDID" || true
+  xcrun simctl bootstatus "$UDID" -b
+  xcrun simctl spawn "$UDID" defaults write "Apple Global Domain" AppleLanguages -array "$SIMULATOR_LANGUAGE"
+  xcrun simctl spawn "$UDID" defaults write "Apple Global Domain" AppleLocale -string "${SIMULATOR_LOCALE:-$SIMULATOR_LANGUAGE}"
+  xcrun simctl shutdown "$UDID"
+fi
 
 xcrun simctl boot "$UDID" || true
 xcrun simctl bootstatus "$UDID" -b
@@ -107,12 +118,58 @@ if [ "$RECORD_VIDEO" = "true" ]; then
   REC_PID=$!
 fi
 
+# 1 回の maestro test で複数 flow を流すと、XCTest driver が途中で落ちた時に後続の flow が全て
+# 接続エラーで失敗する。flow ごとに maestro test を起動し、driver を起動し直す。
+# ディレクトリ指定の時は config.yaml の flows のパターンから flow を展開する (subflows/ は含まれない)。
+# config.yaml が無いディレクトリは、maestro test <dir> と同じく直下の flow を対象にする。
+if [ -d "$TARGET" ]; then
+  FLOW_FILES=()
+  while IFS= read -r pattern; do
+    for f in "$TARGET"/$pattern; do
+      case "$f" in */config.yaml) ;; *.yaml | *.yml) [ -f "$f" ] && FLOW_FILES+=("$f") ;; esac
+    done
+  done < <(
+    if [ -f "${TARGET}/config.yaml" ]; then
+      sed -n 's/^[[:space:]]*-[[:space:]]*"\{0,1\}\([^"]*\)"\{0,1\}[[:space:]]*$/\1/p' "${TARGET}/config.yaml"
+    else
+      echo "*"
+    fi
+  )
+else
+  FLOW_FILES=("$TARGET")
+fi
+[ "${#FLOW_FILES[@]}" -gt 0 ] || fail "実行する flow が無い: ${TARGET}"
+
 STATUS=0
-maestro --udid "$UDID" test \
-  --format junit \
-  --output "${ARTIFACT_DIR}/report.xml" \
-  --debug-output "${ARTIFACT_DIR}/debug" \
-  "$TARGET" || STATUS=$?
+run_flow() {
+  maestro --udid "$UDID" test \
+    --format junit \
+    --output "${ARTIFACT_DIR}/report-${2}.xml" \
+    --debug-output "${ARTIFACT_DIR}/debug/${2}" \
+    --flatten-debug-output \
+    "$1"
+}
+for flow in "${FLOW_FILES[@]}"; do
+  name="$(basename "${flow%.*}")"
+  echo "::group::${flow}"
+  if ! run_flow "$flow" "$name"; then
+    # runner 上で XCTest driver への接続が途中で切れることがある (maestro-e2e run 39915603040 で pollConnect の接続失敗)。
+    # flow の中身による失敗と区別するため、接続の失敗の時だけ 1 回やり直す。1 回目の debug 出力は -attempt1 に残す
+    # maestro.log は成功時も起動中の接続の再試行を記録するため、失敗したコマンドの記録 (commands-*.json) だけを見る
+    if grep -qE 'ConnectException|pollConnect|DeviceUnreachableException' "${ARTIFACT_DIR}/debug/${name}"/commands-*.json 2>/dev/null; then
+      mv "${ARTIFACT_DIR}/debug/${name}" "${ARTIFACT_DIR}/debug/${name}-attempt1"
+      echo "::warning::${flow} が driver への接続失敗で落ちたため 1 回やり直す"
+      run_flow "$flow" "$name" || STATUS=1
+    else
+      STATUS=1
+    fi
+  fi
+  echo "::endgroup::"
+done
+# --debug-output を指定しても失敗時のスクリーンショットが ~/.maestro/tests に残ることがあるため、artifact に含める
+if [ -d "${HOME}/.maestro/tests" ]; then
+  cp -R "${HOME}/.maestro/tests" "${ARTIFACT_DIR}/maestro-tests"
+fi
 
 # recordVideo は SIGINT で終了させないと mp4 が壊れる
 if [ -n "$REC_PID" ]; then
@@ -129,7 +186,7 @@ fi
   if [ "$STATUS" -eq 0 ]; then
     echo "- 結果: 成功"
   else
-    echo "- 結果: 失敗 (exit ${STATUS})。artifact \`maestro-e2e-artifacts\` の report.xml / debug / session.mp4 を参照"
+    echo "- 結果: 失敗 (exit ${STATUS})。artifact \`maestro-e2e-artifacts\` の report-*.xml / debug / maestro-tests / session.mp4 を参照"
   fi
 } >> "$SUMMARY"
 

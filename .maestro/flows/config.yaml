@@ -1,7 +1,10 @@
-# `maestro test .maestro/flows` (maestro-e2e workflow の flows=all) で実行する E2E flow の範囲。
-# Maestro は既定でフォルダ直下の flow しか対象にしないため、E2E のディレクトリを列挙する (`*` はサブフォルダを含まない)。
-# appstore_screenshot は SCREENSHOT_CATALOG=true のビルドと LANG が要る撮影用、simtunnel はセッション起動用で E2E ではないため含めない
+# `maestro test .maestro/flows` と maestro-e2e workflow (.github/scripts/maestro-e2e-run.sh がこの flows を展開して 1 つずつ実行する) が実行する flow。
+# maestro test はディレクトリ直下の flow しか実行しないため、サブディレクトリをここで指定する。`*` はサブディレクトリの subflows/ を含まない。
+# 対象外:
+# - appstore_screenshot/: SCREENSHOT_CATALOG=true でビルドしたカタログアプリと LANG の指定が要る (appstore-screenshots workflow が実行する)
+# - simtunnel/: simtunnel セッションの起動時に初期設定を突破する flow で、検証は feature_appeal/ が同じサブフローで行う
+# - lifetime_offer/: オファー画面は RevenueCat の offering (StoreKit の商品) が取れるまでインジケーターのままで、
+#   App Store の商品を取得できない CI の Simulator では表示されない (maestro-e2e run 39906545518 の失敗時の画面で確認)
 flows:
-  - "feature_appeal/*"
-  - "lifetime_offer/*"
   - "yaz_flex/*"
+  - "feature_appeal/*"

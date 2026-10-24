@@ -3,7 +3,13 @@ appId: com.mizuki.Ohashi.Pilll.dev
 # 初期設定を自動で完了し、ホーム画面に到達するサブフロー。
 # clearState: true で呼ばれる前提。
 
-# 通知許可ダイアログが表示される場合がある → 許可をタップ
+# 通知許可ダイアログは起動の数秒後に出ることがあり、出ている間は下の画面を Maestro が検出できない
+# (maestro-e2e run 40066823667 では「ヤーズフレックスの方ですか？」の上に残って待ちが失敗した)。
+# yaz_flex/initial_setting_yaz_flex.yaml と同じく、最大 15 秒待ってから出ていれば許可をタップする
+- extendedWaitUntil:
+    visible: "許可"
+    timeout: 15000
+    optional: true
 - runFlow:
     when:
       visible: "許可"
@@ -12,6 +18,10 @@ appId: com.mizuki.Ohashi.Pilll.dev
       - waitForAnimationToEnd
 
 # Screen 0: 「ヤーズフレックスの方ですか？」→ いいえ (従来の導線)
+# CI の Simulator ではクリーンインストール直後の起動に時間がかかり、tapOn の待ち時間を超えるため表示を待つ
+- extendedWaitUntil:
+    visible: "ヤーズフレックスの方ですか？"
+    timeout: 60000
 - tapOn: "いいえ"
 - waitForAnimationToEnd
 
@@ -31,11 +41,27 @@ appId: com.mizuki.Ohashi.Pilll.dev
 # Screen 2 (2/3): 今日の服用番号 → スキップ
 - tapOn: "まだ分からない"
 - waitForAnimationToEnd
+# CI の Simulator ではページ遷移中のタップが効かず 2/3 に留まることがある (maestro-e2e run 39915603040 の失敗時の画面で確認) ため、
+# 「まだ分からない」(2/3 の画面にだけある) が残っていればもう一度タップする
+- runFlow:
+    when:
+      visible: "まだ分からない"
+    commands:
+      - tapOn: "まだ分からない"
+      - waitForAnimationToEnd
+- extendedWaitUntil:
+    visible: "3/3"
+    timeout: 10000
 
 # Screen 3 (3/3): リマインダー設定 → そのまま次へ
 - tapOn: "次へ"
 - waitForAnimationToEnd
 
 # Screen 4: プレミアムトライアル → アプリ開始
+# 3/3 の「次へ」の後に初期設定の保存を待ってから出る画面で、CI の Simulator では tapOn の待ち時間を超えることがある
+# (maestro-e2e run 40106336852 では失敗の時点で画面が出ていた) ため、30 秒まで表示を待つ
+- extendedWaitUntil:
+    visible: "アプリをはじめる"
+    timeout: 30000
 - tapOn: "アプリをはじめる"
 - waitForAnimationToEnd

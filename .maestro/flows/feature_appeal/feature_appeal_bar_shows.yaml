@@ -1,7 +1,8 @@
 appId: com.mizuki.Ohashi.Pilll.dev
 ---
 # 初期設定完了後に AnnouncementBar 領域に FeatureAppeal の Bar が表示されることを確認する。
-# トライアル中のユーザーは、匿名 (ログインプロバイダ未連携) でも FeatureAppeal が RecommendSignupGeneral より優先される (announcement_bar.dart)。
+# トライアル中のユーザーでは、未表示の FeatureAppeal があれば RecommendSignupGeneral より優先される
+# (lib/features/record/components/announcement_bar/announcement_bar.dart)。
 - launchApp:
     clearState: true
     clearKeychain: true
@@ -13,5 +14,8 @@ appId: com.mizuki.Ohashi.Pilll.dev
 # ホーム画面到達後、データ読み込みを待つ
 - waitForAnimationToEnd
 # AnnouncementBar に FeatureAppeal の Bar が表示されることを id セレクタで確認 (どの機能の Bar かは日付のローテーションで変わる)
-- assertVisible:
-    id: "feature_appeal_bar"
+# Bar はユーザー情報の読み込み後に出るため、CI の遅い Simulator でも間に合うよう 30 秒まで表示を待つ
+- extendedWaitUntil:
+    visible:
+      id: "feature_appeal_bar"
+    timeout: 30000

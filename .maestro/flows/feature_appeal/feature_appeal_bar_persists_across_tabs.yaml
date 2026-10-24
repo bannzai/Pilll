@@ -10,8 +10,11 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - runFlow: subflows/initial_setup.yaml
 - waitForAnimationToEnd
 # ホーム画面 (ピルタブ) で Bar が表示される
-- assertVisible:
-    id: "feature_appeal_bar"
+# Bar はユーザー情報の読み込み後に出るため、CI の遅い Simulator でも間に合うよう 30 秒まで表示を待つ
+- extendedWaitUntil:
+    visible:
+      id: "feature_appeal_bar"
+    timeout: 30000
 # 設定タブに切替 (タブは Image 型で text 検出不可のため座標タップ)
 - tapOn:
     point: "88%,95%"
@@ -21,5 +24,8 @@ appId: com.mizuki.Ohashi.Pilll.dev
     point: "12%,95%"
 - waitForAnimationToEnd
 # ピルタブに戻っても Bar が表示されている
-- assertVisible:
-    id: "feature_appeal_bar"
+# Bar はユーザー情報の読み込み後に出るため、CI の遅い Simulator でも間に合うよう 30 秒まで表示を待つ
+- extendedWaitUntil:
+    visible:
+      id: "feature_appeal_bar"
+    timeout: 30000
