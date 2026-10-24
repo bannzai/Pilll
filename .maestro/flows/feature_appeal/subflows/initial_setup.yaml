@@ -3,7 +3,13 @@ appId: com.mizuki.Ohashi.Pilll.dev
 # 初期設定を自動で完了し、ホーム画面に到達するサブフロー。
 # clearState: true で呼ばれる前提。
 
-# 通知許可ダイアログが表示される場合がある → 許可をタップ
+# 通知許可ダイアログは起動の数秒後に出ることがあり、出ている間は下の画面を Maestro が検出できない
+# (maestro-e2e run 40066823667 では「ヤーズフレックスの方ですか？」の上に残って待ちが失敗した)。
+# yaz_flex/initial_setting_yaz_flex.yaml と同じく、最大 15 秒待ってから出ていれば許可をタップする
+- extendedWaitUntil:
+    visible: "許可"
+    timeout: 15000
+    optional: true
 - runFlow:
     when:
       visible: "許可"
