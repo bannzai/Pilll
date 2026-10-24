@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "ପୁଣିଥରେ ସେବନ ଆରମ୍ଭ କରିବାର ନିର୍ଦ୍ଧାରିତ ତାରିଖ ବାଛନ୍ତୁ",
   "pauseEndDateLimitIsToday": "ଶେଷ ତାରିଖ କେବଳ ଆଜି ପର୍ଯ୍ୟନ୍ତ ସେଟ୍ କରାଯାଇପାରିବ",
   "pauseEndDateLimitBeforeNextPause": "ପରବର୍ତ୍ତୀ ବିରତି ({date}〜) ସହିତ ମିଳିନଥିବା ଦିନ ପର୍ଯ୍ୟନ୍ତ",
-  "pauseStartDateLimit": "ଆରମ୍ଭ ତାରିଖ {date} ପର୍ଯ୍ୟନ୍ତ ବାଛି ପାରିବେ"
+  "pauseStartDateLimit": "ଆରମ୍ଭ ତାରିଖ {date} ପର୍ଯ୍ୟନ୍ତ ବାଛି ପାରିବେ",
+  "initialSettingAskYazFlex": "ଆପଣ Yaz Flex ବ୍ୟବହାର କରୁଛନ୍ତି କି?",
+  "initialSettingAskYazFlexDescription": "“ହଁ” ବାଛିଲେ\nବିରତି ସମାପ୍ତ ହେବା ପରେ କେତେ ଦିନ ହେଲା ତାହା ଦେଖାଇବା ପାଇଁ ସେଟ୍ କରାଯିବ",
+  "yazFlexLastRestDurationTitle": "ବିରତି ଆରମ୍ଭ ହେବା ପୂର୍ବରୁ ନେଇଥିବା ପିଲ୍‌ଟିରେ\nଟାପ୍ କରନ୍ତୁ",
+  "yazFlexLastRestDurationNote": "ଦୟାକରି ବିରତି ଆରମ୍ଭ କରିବା ପୂର୍ବରୁ ଆପଣ ଶେଷରେ ଖାଇଥିବା ପିଲ୍‌ଟିକୁ ବାଛନ୍ତୁ",
+  "yazFlexRestDurationDaysLabel": "ବିରତି ଦିନର ସଂଖ୍ୟା",
+  "yazFlexRestDurationDaysValue": "{days} ଦିନ",
+  "yazFlexResting": "ବିରତି ସମୟରେ ଅଛି ଏବଂ ଏପର୍ଯ୍ୟନ୍ତ ପୁଣି ଆରମ୍ଭ କରିନାହିଁ",
+  "yazFlexRestingDaysLabel": "ଆଜି ବିରତିର କେତେତମ ଦିନ",
+  "yazFlexSkipRestDuration": "ବିରତି ଅବଧି ଇନପୁଟ୍‌କୁ ଏଡ଼ାନ୍ତୁ",
+  "yazFlexSkipRestDurationDialogTitle": "ବିରତି ଅବଧିର ଏଣ୍ଟ୍ରିକୁ ଏଡ଼ାନ୍ତୁ",
+  "yazFlexSkipRestDurationDialogMessage": "ଔଷଧ ସେବନ ବିରତିର ସମୟସୀମା ପରେ ହୋମର “ଔଷଧ ସେବନ ବିରତି” ରୁ ଭରଣ କରିପାରିବେ।",
+  "yazFlexSkipRestDurationDialogSkip": "ଏଡାଇଦିଅନ୍ତୁ",
+  "yazFlexBeginPillNumberPageTitle": "ଚକ୍ର ଅନୁସାରେ ସିଟ୍‌ର ଆରମ୍ଭ କେଉଁ ନମ୍ବର ସେବନ?",
+  "yazFlexBeginPillNumberPageNote": "ଦୟାକରି ଶିଟ୍ ଆରମ୍ଭ କରିବା ପୂର୍ବରୁ ଥିବା ବିରତି ପରେ କେତେ ଦିନ କଟିଛି, ତାହା ଆଧାର କରି ଉତ୍ତର ଦିଅନ୍ତୁ।",
+  "yazFlexNextInputIsRestDuration": "ପରେ ପୂର୍ବରୁ ଥିବା ବିରତି ଅବଧି ଭରନ୍ତୁ"
 }

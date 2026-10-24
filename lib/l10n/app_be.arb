@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "Выберыце запланаваную дату аднаўлення прыёму",
   "pauseEndDateLimitIsToday": "Дату завяршэння можна выбраць толькі да сённяшняга дня",
   "pauseEndDateLimitBeforeNextPause": "Да дня, які не перасякаецца з наступным перапынкам ({date}〜)",
-  "pauseStartDateLimit": "Дату пачатку можна выбраць да {date}"
+  "pauseStartDateLimit": "Дату пачатку можна выбраць да {date}",
+  "initialSettingAskYazFlex": "Вы прымаеце Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Калі вы выбераце «Так»,\nмы наладзім паказ колькасці дзён пасля заканчэння перапынку.",
+  "yazFlexLastRestDurationTitle": "Націсніце, калі ласка, на таблетку,\nякую вы прынялі перад пачаткам перапынку",
+  "yazFlexLastRestDurationNote": "Калі ласка, абярыце апошнюю таблетку, якую вы прынялі перад пачаткам перапынку",
+  "yazFlexRestDurationDaysLabel": "Колькасць дзён перапынку",
+  "yazFlexRestDurationDaysValue": "{days} дзён",
+  "yazFlexResting": "На перапынку ў прыёме і яшчэ не аднавіла",
+  "yazFlexRestingDaysLabel": "Які сёння дзень перапынку ў прыёме",
+  "yazFlexSkipRestDuration": "Прапусціць увод перыяду перапынку",
+  "yazFlexSkipRestDurationDialogTitle": "Прапусціць увод перыяду перапынку",
+  "yazFlexSkipRestDurationDialogMessage": "Перыяд перапынку ў прыёме можна будзе ўвесці пазней у раздзеле «Перапынак у прыёме» на галоўнай старонцы.",
+  "yazFlexSkipRestDurationDialogSkip": "Прапусціць",
+  "yazFlexBeginPillNumberPageTitle": "Пачатак блістара — гэта які па ліку прыём у цыкле?",
+  "yazFlexBeginPillNumberPageNote": "Калі ласка, адкажыце на падставе колькасці дзён, што прайшлі з моманту перапынку перад пачаткам блістара.",
+  "yazFlexNextInputIsRestDuration": "Далей увядзіце папярэдні перыяд перапынку"
 }

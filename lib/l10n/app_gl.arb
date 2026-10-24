@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "Selecciona a data prevista para retomar a toma",
   "pauseEndDateLimitIsToday": "A data de finalización só se pode establecer ata hoxe",
   "pauseEndDateLimitBeforeNextPause": "Ata o día que non se solape co seguinte descanso ({date}〜)",
-  "pauseStartDateLimit": "A data de inicio pódese escoller ata o {date}"
+  "pauseStartDateLimit": "A data de inicio pódese escoller ata o {date}",
+  "initialSettingAskYazFlex": "Estás a usar Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Se escolles «Si»,\nconfigurarémolo para que se mostre cantos días pasaron desde que rematou a pausa.",
+  "yazFlexLastRestDurationTitle": "Toca a pílula\nque tomaches xusto antes da pausa",
+  "yazFlexLastRestDurationNote": "Selecciona a última pílula que tomaches antes de comezar o descanso",
+  "yazFlexRestDurationDaysLabel": "Número de días de descanso",
+  "yazFlexRestDurationDaysValue": "{days} días",
+  "yazFlexResting": "Estou nun período de descanso e aínda non retomei a toma",
+  "yazFlexRestingDaysLabel": "Que día do descanso é hoxe",
+  "yazFlexSkipRestDuration": "Omitir a introdución do período de descanso",
+  "yazFlexSkipRestDurationDialogTitle": "Omitir o rexistro do descanso",
+  "yazFlexSkipRestDurationDialogMessage": "Poderás introducir máis tarde o período de descanso da toma desde «Descanso da toma» na pantalla de inicio.",
+  "yazFlexSkipRestDurationDialogSkip": "Omitir",
+  "yazFlexBeginPillNumberPageTitle": "A que toma do ciclo corresponde o inicio do blíster?",
+  "yazFlexBeginPillNumberPageNote": "Responde en función do número de días transcorridos desde o descanso antes de comezar o blíster.",
+  "yazFlexNextInputIsRestDuration": "A continuación, introduce a pausa anterior"
 }

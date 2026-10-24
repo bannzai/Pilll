@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "Seleziona la data prevista per riprendere l’assunzione",
   "pauseEndDateLimitIsToday": "La data di fine può essere impostata solo fino a oggi",
   "pauseEndDateLimitBeforeNextPause": "Fino al giorno che non si sovrappone alla pausa successiva ({date}–)",
-  "pauseStartDateLimit": "La data di inizio può essere selezionata fino al {date}"
+  "pauseStartDateLimit": "La data di inizio può essere selezionata fino al {date}",
+  "initialSettingAskYazFlex": "Stai usando Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Se scegli “Sì”,\nlo imposteremo in modo da mostrare quanti giorni sono passati dalla fine della pausa.",
+  "yazFlexLastRestDurationTitle": "Tocca la pillola\nche hai preso subito prima della pausa",
+  "yazFlexLastRestDurationNote": "Seleziona l’ultima pillola che hai preso prima di iniziare la pausa",
+  "yazFlexRestDurationDaysLabel": "Numero di giorni di pausa",
+  "yazFlexRestDurationDaysValue": "{days} giorni",
+  "yazFlexResting": "Sono in pausa e non ho ancora ricominciato",
+  "yazFlexRestingDaysLabel": "A che giorno di pausa sei oggi",
+  "yazFlexSkipRestDuration": "Salta l’inserimento della pausa",
+  "yazFlexSkipRestDurationDialogTitle": "Salta l’inserimento della pausa",
+  "yazFlexSkipRestDurationDialogMessage": "Potrai inserire in seguito il periodo di pausa di assunzione da “Pausa di assunzione” nella schermata Home.",
+  "yazFlexSkipRestDurationDialogSkip": "Salta",
+  "yazFlexBeginPillNumberPageTitle": "A quale assunzione del ciclo corrisponde l'inizio del blister?",
+  "yazFlexBeginPillNumberPageNote": "Rispondi in base al numero di giorni trascorsi dalla pausa prima di iniziare il blister.",
+  "yazFlexNextInputIsRestDuration": "Successivamente, inserisci la pausa precedente"
 }

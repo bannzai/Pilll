@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "Виберіть заплановану дату відновлення прийому",
   "pauseEndDateLimitIsToday": "Дату завершення можна встановити лише до сьогодні",
   "pauseEndDateLimitBeforeNextPause": "До дня, який не перетинається з наступною перервою ({date}–)",
-  "pauseStartDateLimit": "Дату початку можна вибрати до {date}"
+  "pauseStartDateLimit": "Дату початку можна вибрати до {date}",
+  "initialSettingAskYazFlex": "Ви приймаєте Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Якщо ви виберете «Так»,\nми налаштуємо показ того, який день триває після завершення перерви.",
+  "yazFlexLastRestDurationTitle": "Торкніться пігулки,\nяку ви прийняли безпосередньо перед перервою",
+  "yazFlexLastRestDurationNote": "Будь ласка, виберіть останню таблетку, яку ви прийняли перед початком перерви",
+  "yazFlexRestDurationDaysLabel": "Кількість днів перерви",
+  "yazFlexRestDurationDaysValue": "{days} днів",
+  "yazFlexResting": "Я на перерві й ще не відновила прийом",
+  "yazFlexRestingDaysLabel": "Який сьогодні день перерви",
+  "yazFlexSkipRestDuration": "Пропустити введення перерви",
+  "yazFlexSkipRestDurationDialogTitle": "Пропустити введення періоду перерви",
+  "yazFlexSkipRestDurationDialogMessage": "Період перерви в прийомі можна буде ввести пізніше в розділі «Перерва в прийомі» на головному екрані.",
+  "yazFlexSkipRestDurationDialogSkip": "Пропустити",
+  "yazFlexBeginPillNumberPageTitle": "Початок блістера — це який за рахунком прийом у циклі?",
+  "yazFlexBeginPillNumberPageNote": "Будь ласка, дайте відповідь на основі кількості днів, що минули від перерви перед початком блістера.",
+  "yazFlexNextInputIsRestDuration": "Далі введіть попередню перерву"
 }

@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "Zgjidhni datën e planifikuar për rifillimin e marrjes",
   "pauseEndDateLimitIsToday": "Data e përfundimit mund të caktohet vetëm deri sot",
   "pauseEndDateLimitBeforeNextPause": "Deri në ditën që nuk përputhet me pushimin e radhës ({date}–)",
-  "pauseStartDateLimit": "Data e fillimit mund të zgjidhet deri më {date}"
+  "pauseStartDateLimit": "Data e fillimit mund të zgjidhet deri më {date}",
+  "initialSettingAskYazFlex": "A po përdorni Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Nëse zgjidhni “Po”,\ndo ta caktojmë që të shfaqet sa ditë kanë kaluar që nga përfundimi i pushimit.",
+  "yazFlexLastRestDurationTitle": "Prekni pilulën\nqë e more pak para pushimit",
+  "yazFlexLastRestDurationNote": "Ju lutemi, zgjidhni pilulën e fundit që keni marrë para se të filloni pushimin",
+  "yazFlexRestDurationDaysLabel": "Numri i ditëve të pauzës",
+  "yazFlexRestDurationDaysValue": "{days} ditë",
+  "yazFlexResting": "Jam në periudhë pushimi dhe ende nuk e kam rifilluar",
+  "yazFlexRestingDaysLabel": "Cila ditë e pushimit është sot",
+  "yazFlexSkipRestDuration": "Kalo futjen e periudhës së pushimit",
+  "yazFlexSkipRestDurationDialogTitle": "Kalo futjen e periudhës së pauzës",
+  "yazFlexSkipRestDurationDialogMessage": "Periudhën e pauzës së marrjes mund ta vendosni më vonë te “Pauza e marrjes” në ekranin kryesor.",
+  "yazFlexSkipRestDurationDialogSkip": "Kaloje",
+  "yazFlexBeginPillNumberPageTitle": "Fillimi i fletës me cilën marrje në cikël përkon?",
+  "yazFlexBeginPillNumberPageNote": "Ju lutemi, përgjigjuni bazuar në numrin e ditëve që kanë kaluar që nga pushimi para fillimit të fletës.",
+  "yazFlexNextInputIsRestDuration": "Më pas, shkruani pushimin e mëparshëm"
 }

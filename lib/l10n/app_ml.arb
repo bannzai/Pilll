@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "വീണ്ടും കഴിക്കാൻ തുടങ്ങാനുള്ള നിശ്ചിത തീയതി തിരഞ്ഞെടുക്കുക",
   "pauseEndDateLimitIsToday": "അവസാന തീയതി ഇന്നുവരെ മാത്രം തിരഞ്ഞെടുക്കാനാകും",
   "pauseEndDateLimitBeforeNextPause": "അടുത്ത ഇടവേള ({date}〜) യുമായി ഒതുങ്ങാത്ത ദിവസം വരെ",
-  "pauseStartDateLimit": "ആരംഭ തീയതി {date} വരെ തിരഞ്ഞെടുക്കാം"
+  "pauseStartDateLimit": "ആരംഭ തീയതി {date} വരെ തിരഞ്ഞെടുക്കാം",
+  "initialSettingAskYazFlex": "നിങ്ങൾ Yaz Flex ഉപയോഗിക്കുകയാണോ?",
+  "initialSettingAskYazFlexDescription": "“അതെ” തിരഞ്ഞെടുക്കുകയാണെങ്കിൽ\nഇടവേള കഴിഞ്ഞ് എത്രാമത്തെ ദിവസമാണെന്ന് കാണിക്കുന്ന വിധത്തിൽ സജ്ജീകരിക്കും",
+  "yazFlexLastRestDurationTitle": "ഇടവേള തുടങ്ങുന്നതിനുമുമ്പ് എടുത്ത ഗുളികയിൽ\nടാപ്പ് ചെയ്യുക",
+  "yazFlexLastRestDurationNote": "ഇടവേള ആരംഭിക്കുന്നതിന് മുമ്പ് നിങ്ങൾ അവസാനമായി കഴിച്ച ഗുളിക തിരഞ്ഞെടുക്കുക",
+  "yazFlexRestDurationDaysLabel": "ഇടവേള ദിവസങ്ങളുടെ എണ്ണം",
+  "yazFlexRestDurationDaysValue": "{days} ദിവസം",
+  "yazFlexResting": "ഇടവേളയിലാണ്, ഇനിയും വീണ്ടും തുടങ്ങിയിട്ടില്ല",
+  "yazFlexRestingDaysLabel": "ഇന്ന് ഇടവേളയുടെ എത്രാമത്തെ ദിവസം",
+  "yazFlexSkipRestDuration": "ഇടവേള കാലയളവ് നൽകുന്നത് ഒഴിവാക്കുക",
+  "yazFlexSkipRestDurationDialogTitle": "ഇടവേള കാലയളവിന്റെ എൻട്രി ഒഴിവാക്കുക",
+  "yazFlexSkipRestDurationDialogMessage": "മരുന്ന് കഴിക്കുന്നതിലെ ഇടവേളയുടെ കാലയളവ് പിന്നീട് ഹോമിലെ “മരുന്ന് കഴിക്കുന്നതിലെ ഇടവേള”യിൽ നിന്ന് നൽകാം.",
+  "yazFlexSkipRestDurationDialogSkip": "ഒഴിവാക്കുക",
+  "yazFlexBeginPillNumberPageTitle": "ചക്രത്തിൽ ഷീറ്റിന്റെ തുടക്കം എത്രാമത്തെ കഴിക്കലാണ്?",
+  "yazFlexBeginPillNumberPageNote": "ഷീറ്റ് ആരംഭിക്കുന്നതിന് മുമ്പുള്ള ഇടവേള കഴിഞ്ഞ് എത്ര ദിവസം ആയെന്നത് അടിസ്ഥാനമാക്കി ദയവായി മറുപടി നൽകുക.",
+  "yazFlexNextInputIsRestDuration": "അടുത്തതായി, മുമ്പത്തെ ഇടവേള നൽകുക"
 }

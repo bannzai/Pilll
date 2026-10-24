@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "Pilih tarikh dijadualkan untuk menyambung pengambilan",
   "pauseEndDateLimitIsToday": "Tarikh tamat hanya boleh ditetapkan sehingga hari ini",
   "pauseEndDateLimitBeforeNextPause": "Sehingga hari yang tidak bertindih dengan rehat seterusnya ({date}–)",
-  "pauseStartDateLimit": "Tarikh mula boleh dipilih sehingga {date}"
+  "pauseStartDateLimit": "Tarikh mula boleh dipilih sehingga {date}",
+  "initialSettingAskYazFlex": "Adakah anda menggunakan Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Jika anda memilih “Ya”,\nkami akan menetapkannya supaya bilangan hari sejak tamat tempoh rehat dapat dipaparkan.",
+  "yazFlexLastRestDurationTitle": "Ketik pil\nyang anda ambil sejurus sebelum rehat",
+  "yazFlexLastRestDurationNote": "Sila pilih pil terakhir yang anda ambil sebelum memulakan rehat",
+  "yazFlexRestDurationDaysLabel": "Bilangan hari rehat",
+  "yazFlexRestDurationDaysValue": "{days} hari",
+  "yazFlexResting": "Sedang dalam tempoh rehat dan masih belum mula semula",
+  "yazFlexRestingDaysLabel": "Hari ke berapa waktu rehat hari ini",
+  "yazFlexSkipRestDuration": "Langkau memasukkan tempoh rehat",
+  "yazFlexSkipRestDurationDialogTitle": "Langkaukan pengisian tempoh rehat",
+  "yazFlexSkipRestDurationDialogMessage": "Tempoh rehat pengambilan boleh diisi kemudian daripada “Rehat pengambilan” di Laman Utama.",
+  "yazFlexSkipRestDurationDialogSkip": "Langkau",
+  "yazFlexBeginPillNumberPageTitle": "Permulaan helaian ini ialah pengambilan ke berapa dalam kitaran?",
+  "yazFlexBeginPillNumberPageNote": "Sila jawab berdasarkan bilangan hari yang telah berlalu sejak tempoh rehat sebelum memulakan helaian.",
+  "yazFlexNextInputIsRestDuration": "Seterusnya, masukkan tempoh rehat sebelum ini"
 }

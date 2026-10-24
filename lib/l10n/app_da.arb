@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "Vælg planlagt dato for genoptagelse",
   "pauseEndDateLimitIsToday": "Slutdatoen kan kun vælges til og med i dag",
   "pauseEndDateLimitBeforeNextPause": "Indtil den, der ikke overlapper med næste pause ({date}–)",
-  "pauseStartDateLimit": "Startdatoen kan vælges til og med {date}"
+  "pauseStartDateLimit": "Startdatoen kan vælges til og med {date}",
+  "initialSettingAskYazFlex": "Bruger du Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Hvis du vælger “Ja”,\nindstiller vi det, så antal dage siden pausen sluttede kan vises.",
+  "yazFlexLastRestDurationTitle": "Tryk på den pille,\ndu tog lige før pausen",
+  "yazFlexLastRestDurationNote": "Vælg den sidste pille, du tog, før du begyndte pausen",
+  "yazFlexRestDurationDaysLabel": "Antal pausedage",
+  "yazFlexRestDurationDaysValue": "{days} dage",
+  "yazFlexResting": "Jeg er i pause og er ikke startet igen endnu",
+  "yazFlexRestingDaysLabel": "Hvilken dag i pausen er det i dag",
+  "yazFlexSkipRestDuration": "Spring indtastning af pause over",
+  "yazFlexSkipRestDurationDialogTitle": "Spring registrering af pause over",
+  "yazFlexSkipRestDurationDialogMessage": "Perioden for pause i indtagelse kan indtastes senere under “Pause i indtagelse” på hjemmeskærmen.",
+  "yazFlexSkipRestDurationDialogSkip": "Spring over",
+  "yazFlexBeginPillNumberPageTitle": "Hvilket nummer indtag i cyklussen er starten på arket?",
+  "yazFlexBeginPillNumberPageNote": "Svar venligst ud fra, hvor mange dage der er gået siden pausen før start af arket.",
+  "yazFlexNextInputIsRestDuration": "Derefter skal du indtaste din seneste pause"
 }

@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "Vyberte plánované datum obnovení užívání",
   "pauseEndDateLimitIsToday": "Datum ukončení lze nastavit nejpozději na dnešek",
   "pauseEndDateLimitBeforeNextPause": "Do dne, který se nepřekrývá s následující pauzou ({date}〜)",
-  "pauseStartDateLimit": "Počáteční datum lze vybrat nejpozději do {date}"
+  "pauseStartDateLimit": "Počáteční datum lze vybrat nejpozději do {date}",
+  "initialSettingAskYazFlex": "Užíváte Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Když vyberete „Ano“,\nnastavíme zobrazení počtu dní od konce pauzy.",
+  "yazFlexLastRestDurationTitle": "Klepněte na pilulku,\nkterou jste užila těsně před pauzou",
+  "yazFlexLastRestDurationNote": "Vyberte prosím poslední pilulku, kterou jste užila před začátkem pauzy",
+  "yazFlexRestDurationDaysLabel": "Počet dní pauzy",
+  "yazFlexRestDurationDaysValue": "{days} dní",
+  "yazFlexResting": "Jsem v období vysazení a ještě jsem nezačala znovu",
+  "yazFlexRestingDaysLabel": "Kolikátý je dnes den pauzy",
+  "yazFlexSkipRestDuration": "Přeskočit zadání pauzy",
+  "yazFlexSkipRestDurationDialogTitle": "Přeskočit zadání pauzy",
+  "yazFlexSkipRestDurationDialogMessage": "Období přestávky v užívání můžete zadat později v části „Přestávka v užívání“ na domovské obrazovce.",
+  "yazFlexSkipRestDurationDialogSkip": "Přeskočit",
+  "yazFlexBeginPillNumberPageTitle": "Které užití v cyklu odpovídá začátku plata?",
+  "yazFlexBeginPillNumberPageNote": "Odpovězte prosím podle počtu dní, které uplynuly od přestávky před zahájením plata.",
+  "yazFlexNextInputIsRestDuration": "Dále zadejte předchozí pauzu v užívání"
 }

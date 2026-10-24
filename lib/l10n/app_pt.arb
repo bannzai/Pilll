@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "Selecione a data prevista para retomar a toma",
   "pauseEndDateLimitIsToday": "A data de término só pode ser definida até hoje",
   "pauseEndDateLimitBeforeNextPause": "Até ao dia que não se sobrepõe à próxima pausa ({date}–)",
-  "pauseStartDateLimit": "A data de início pode ser selecionada até {date}"
+  "pauseStartDateLimit": "A data de início pode ser selecionada até {date}",
+  "initialSettingAskYazFlex": "Está a usar Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Se escolher “Sim”,\nvamos configurar para mostrar quantos dias se passaram desde o fim da pausa.",
+  "yazFlexLastRestDurationTitle": "Toque na pílula\nque tomou imediatamente antes da pausa",
+  "yazFlexLastRestDurationNote": "Selecione a última pílula que tomou antes de iniciar a pausa",
+  "yazFlexRestDurationDaysLabel": "Número de dias de pausa",
+  "yazFlexRestDurationDaysValue": "{days} dias",
+  "yazFlexResting": "Estou em pausa e ainda não retomei",
+  "yazFlexRestingDaysLabel": "Em que dia da pausa você está hoje",
+  "yazFlexSkipRestDuration": "Ignorar a introdução da pausa",
+  "yazFlexSkipRestDurationDialogTitle": "Ignorar o registo da pausa",
+  "yazFlexSkipRestDurationDialogMessage": "Pode introduzir mais tarde o período de pausa da toma em “Pausa da toma”, no ecrã principal.",
+  "yazFlexSkipRestDurationDialogSkip": "Pular",
+  "yazFlexBeginPillNumberPageTitle": "A que toma do ciclo corresponde o início da cartela?",
+  "yazFlexBeginPillNumberPageNote": "Responda com base no número de dias decorridos desde a pausa antes de começar a cartela.",
+  "yazFlexNextInputIsRestDuration": "Em seguida, insira a pausa anterior"
 }

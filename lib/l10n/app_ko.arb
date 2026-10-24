@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "복용 재개 예정일을 선택해 주세요",
   "pauseEndDateLimitIsToday": "종료일은 오늘까지만 선택할 수 있어요",
   "pauseEndDateLimitBeforeNextPause": "다음 휴약 기간({date}~)과 겹치지 않는 날까지",
-  "pauseStartDateLimit": "시작일은 {date}까지 선택할 수 있어요"
+  "pauseStartDateLimit": "시작일은 {date}까지 선택할 수 있어요",
+  "initialSettingAskYazFlex": "야즈플렉스를 복용 중이신가요?",
+  "initialSettingAskYazFlexDescription": "“예”를 선택하면\n휴약이 끝난 뒤 몇 일째인지 표시되도록 설정할게요",
+  "yazFlexLastRestDurationTitle": "휴약에 들어가기 직전에 복용한 알약을\n눌러 주세요",
+  "yazFlexLastRestDurationNote": "휴약에 들어가기 전에 마지막으로 복용한 알약을 선택해 주세요",
+  "yazFlexRestDurationDaysLabel": "휴약 일수",
+  "yazFlexRestDurationDaysValue": "{days}일",
+  "yazFlexResting": "휴약 중이며 아직 다시 시작하지 않았어요",
+  "yazFlexRestingDaysLabel": "휴약한 지 오늘로 며칠째",
+  "yazFlexSkipRestDuration": "휴약 입력 건너뛰기",
+  "yazFlexSkipRestDurationDialogTitle": "휴약 입력을 건너뛸게요",
+  "yazFlexSkipRestDurationDialogMessage": "복용 휴약 기간은 나중에 홈의 ‘복용 휴약’에서 입력할 수 있어요.",
+  "yazFlexSkipRestDurationDialogSkip": "건너뛰기",
+  "yazFlexBeginPillNumberPageTitle": "시트의 시작은 주기상 몇 번째 복용인가요?",
+  "yazFlexBeginPillNumberPageNote": "시트 시작 전 휴약이 끝난 후 지난 일수를 기준으로 답변해 주세요.",
+  "yazFlexNextInputIsRestDuration": "다음으로 이전 휴약 기간을 입력해 주세요"
 }

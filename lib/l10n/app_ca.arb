@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "Selecciona la data prevista de represa de la presa",
   "pauseEndDateLimitIsToday": "La data de finalització només es pot seleccionar fins avui",
   "pauseEndDateLimitBeforeNextPause": "Fins al dia que no se superposi amb el següent descans ({date}〜)",
-  "pauseStartDateLimit": "La data d'inici es pot triar fins a {date}"
+  "pauseStartDateLimit": "La data d'inici es pot triar fins a {date}",
+  "initialSettingAskYazFlex": "Prens Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Si selecciones «Sí»,\nho configurarem perquè es mostri quants dies han passat des del final del descans.",
+  "yazFlexLastRestDurationTitle": "Toca la píndola\nque vas prendre just abans de la pausa",
+  "yazFlexLastRestDurationNote": "Selecciona l’última píndola que vas prendre abans de començar el descans",
+  "yazFlexRestDurationDaysLabel": "Nombre de dies de descans",
+  "yazFlexRestDurationDaysValue": "{days} dies",
+  "yazFlexResting": "Estic en període de descans i encara no l'he reprès",
+  "yazFlexRestingDaysLabel": "Quin dia de descans és avui",
+  "yazFlexSkipRestDuration": "Omet la introducció del període de descans",
+  "yazFlexSkipRestDurationDialogTitle": "Omet l’entrada del descans",
+  "yazFlexSkipRestDurationDialogMessage": "Més endavant podràs introduir el període de descans de la presa a «Descans de la presa» de la pantalla d’inici.",
+  "yazFlexSkipRestDurationDialogSkip": "Omet",
+  "yazFlexBeginPillNumberPageTitle": "L'inici del blíster a quina presa del cicle correspon?",
+  "yazFlexBeginPillNumberPageNote": "Si us plau, responeu en funció dels dies transcorreguts des del descans abans de començar la làmina.",
+  "yazFlexNextInputIsRestDuration": "A continuació, introdueix l’últim període de descans"
 }

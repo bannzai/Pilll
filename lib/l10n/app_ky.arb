@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "Кабыл алууну кайра баштоо пландалган күндү тандаңыз",
   "pauseEndDateLimitIsToday": "Аяктоо күнүн бүгүнкү күнгө чейин гана тандаса болот",
   "pauseEndDateLimitBeforeNextPause": "Кийинки тыныгуу ({date}〜) менен дал келбеген күнгө чейин",
-  "pauseStartDateLimit": "Баштоо күнүн {date} чейин тандаса болот"
+  "pauseStartDateLimit": "Баштоо күнүн {date} чейин тандаса болот",
+  "initialSettingAskYazFlex": "Yaz Flex колдонуп жатасызбы?",
+  "initialSettingAskYazFlexDescription": "“Ооба” дегенди тандасаңыз,\nтыныгуудан кийин канчанчы күн экенин көрсөтө тургандай кылып жөндөйбүз.",
+  "yazFlexLastRestDurationTitle": "Тыныгуу башталардын алдында ичкен таблетканы\nтаптаңыз",
+  "yazFlexLastRestDurationNote": "Тыныгуу башталганга чейин акыркы ичкен таблеткаңызды тандаңыз",
+  "yazFlexRestDurationDaysLabel": "Тыныгуу күндөрүнүн саны",
+  "yazFlexRestDurationDaysValue": "{days} күн",
+  "yazFlexResting": "Тыныгуу мезгилиндемин жана али кайра баштай элекмин",
+  "yazFlexRestingDaysLabel": "Бүгүн тыныгуунун канчанчы күнү",
+  "yazFlexSkipRestDuration": "Тыныгуу мезгилин киргизүүнү өткөрүп жиберүү",
+  "yazFlexSkipRestDurationDialogTitle": "Тыныгуу мезгилин киргизүүнү өткөрүп жиберүү",
+  "yazFlexSkipRestDurationDialogMessage": "Ичүүнү тыныгуу мөөнөтүн кийинчерээк Башкы беттеги “Ичүүнү тыныгуу” бөлүмүнөн киргизе аласыз.",
+  "yazFlexSkipRestDurationDialogSkip": "Өткөрүп жиберүү",
+  "yazFlexBeginPillNumberPageTitle": "Цикл боюнча барактын башталышы канчанчы кабыл алуу болот?",
+  "yazFlexBeginPillNumberPageNote": "Сураныч, таңгакты баштоонун алдындагы тыныгуудан бери өткөн күндөрдүн санына жараша жооп бериңиз.",
+  "yazFlexNextInputIsRestDuration": "Кийинки кадамда мурунку тыныгууңузду киргизиңиз"
 }

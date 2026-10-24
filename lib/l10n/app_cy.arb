@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "Dewiswch y dyddiad a drefnwyd i ailddechrau cymryd",
   "pauseEndDateLimitIsToday": "Dim ond hyd at heddiw y gellir dewis y dyddiad gorffen",
   "pauseEndDateLimitBeforeNextPause": "Hyd at y diwrnod nad yw’n gorgyffwrdd â’r seibiant nesaf ({date}〜)",
-  "pauseStartDateLimit": "Gellir dewis y dyddiad cychwyn hyd at {date}"
+  "pauseStartDateLimit": "Gellir dewis y dyddiad cychwyn hyd at {date}",
+  "initialSettingAskYazFlex": "Ydych chi’n defnyddio Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Os dewiswch “Ie”,\nbyddwn yn ei osod i ddangos sawl diwrnod sydd wedi mynd heibio ers diwedd yr egwyl.",
+  "yazFlexLastRestDurationTitle": "Tapiwch y bilsen\na gymerwyd gennych yn union cyn dechrau’r egwyl",
+  "yazFlexLastRestDurationNote": "Dewiswch y bilsen olaf a gymerasoch cyn dechrau’r egwyl",
+  "yazFlexRestDurationDaysLabel": "Nifer y dyddiau seibiant",
+  "yazFlexRestDurationDaysValue": "{days} diwrnod",
+  "yazFlexResting": "Ar gyfnod seibiant ac heb ailddechrau eto",
+  "yazFlexRestingDaysLabel": "Pa ddiwrnod o'r egwyl yw hi heddiw",
+  "yazFlexSkipRestDuration": "Hepgor mewnbynnu'r cyfnod seibiant",
+  "yazFlexSkipRestDurationDialogTitle": "Hepgor mewnbynnu’r egwyl",
+  "yazFlexSkipRestDurationDialogMessage": "Gallwch nodi cyfnod saib y tabledi yn nes ymlaen o “Saib cymryd” ar y sgrin gartref.",
+  "yazFlexSkipRestDurationDialogSkip": "Hepgor",
+  "yazFlexBeginPillNumberPageTitle": "Pa rif rhif yn y cylch yw dechrau'r pecyn?",
+  "yazFlexBeginPillNumberPageNote": "Atebwch yn ôl nifer y diwrnodau sydd wedi mynd heibio ers yr egwyl cyn dechrau’r pecyn, os gwelwch yn dda.",
+  "yazFlexNextInputIsRestDuration": "Nesaf, nodwch y cyfnod seibiant diwethaf"
 }

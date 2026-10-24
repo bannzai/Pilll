@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "Ընտրեք ընդունումը վերսկսելու նախատեսված ամսաթիվը",
   "pauseEndDateLimitIsToday": "Ավարտի ամսաթիվը կարելի է սահմանել միայն մինչև այսօր",
   "pauseEndDateLimitBeforeNextPause": "Մինչ այն օրը, որը չի համընկնում հաջորդ դադարի հետ ({date}〜)",
-  "pauseStartDateLimit": "Մեկնարկի ամսաթիվը կարելի է ընտրել մինչև {date}"
+  "pauseStartDateLimit": "Մեկնարկի ամսաթիվը կարելի է ընտրել մինչև {date}",
+  "initialSettingAskYazFlex": "Yaz Flex օգտագործո՞ւմ եք։",
+  "initialSettingAskYazFlexDescription": "Եթե ընտրեք «Այո»-ն,\nկկարգավորենք, որպեսզի ցուցադրվի, թե ընդմիջման ավարտից քանիերորդ օրն է։",
+  "yazFlexLastRestDurationTitle": "Խնդրում ենք հպվել այն հաբին,\nորը ընդունել եք դադարից անմիջապես առաջ",
+  "yazFlexLastRestDurationNote": "Խնդրում ենք ընտրել վերջին հաբը, որը ընդունել եք ընդմիջումը սկսելուց առաջ",
+  "yazFlexRestDurationDaysLabel": "Դադարի օրերի քանակ",
+  "yazFlexRestDurationDaysValue": "{days} օր",
+  "yazFlexResting": "Դադարի շրջանում եմ և դեռ չեմ վերսկսել",
+  "yazFlexRestingDaysLabel": "Այսօր ընդմիջման որերորդ օրն է",
+  "yazFlexSkipRestDuration": "Բաց թողնել ընդմիջման շրջանի մուտքագրումը",
+  "yazFlexSkipRestDurationDialogTitle": "Բաց թողնել դադարի մուտքագրումը",
+  "yazFlexSkipRestDurationDialogMessage": "Ընդունման դադարի ժամանակահատվածը կարող եք ավելի ուշ մուտքագրել Գլխավորի «Ընդունման դադար» բաժնից։",
+  "yazFlexSkipRestDurationDialogSkip": "Բաց թողնել",
+  "yazFlexBeginPillNumberPageTitle": "Ցիկլում ո՞րերորդ ընդունումն է թերթիկի սկիզբը։",
+  "yazFlexBeginPillNumberPageNote": "Խնդրում ենք պատասխանել՝ հիմնվելով թերթիկը սկսելուց առաջ եղած դադարից անցած օրերի քանակի վրա։",
+  "yazFlexNextInputIsRestDuration": "Հաջորդը մուտքագրեք նախորդ դադարը"
 }

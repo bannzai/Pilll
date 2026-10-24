@@ -156,6 +156,31 @@ mixin _$InitialSettingState {
   LinkAccountType? get accountType => throw _privateConstructorUsedError;
   int get pillTakenCount => throw _privateConstructorUsedError;
 
+  /// 初期設定の最初のページで「ヤーズフレックスの方ですか？」に「はい」と答えたか
+  /// true の時はヤーズフレックス向けの導線 (28錠タイプ固定・前回の休薬・開始番号の入力) で登録する
+  bool get isYazFlex => throw _privateConstructorUsedError;
+
+  /// ヤーズフレックス向けの導線で前回の休薬の入力をスキップしたか (休薬はまだしていない、または後でホームから入力する)
+  /// true の時は休薬のピルを選んでいても休薬を登録しない
+  bool get yazFlexHasNotRestedYet => throw _privateConstructorUsedError;
+
+  /// ヤーズフレックス向けの導線でタップした、休薬に入る直前に飲んだピルの位置 (今のピルシートグループの中のピル)
+  /// このピルの翌日から [yazFlexRestDurationDays] 日休み、次のピルで服用を再開したとみなす。未選択なら null
+  InitialSettingTodayPillNumber? get yazFlexLastTakenPillNumberBeforeRest => throw _privateConstructorUsedError;
+
+  /// ヤーズフレックス向けの導線で、休薬中でまだ服用を再開していないか
+  /// true の時は休薬のピルをタップさせず、今日飲む番号のピルの 1 つ前のピルを休薬に入る直前に飲んだピルとみなし、
+  /// [yazFlexRestDurationDays] を「休薬して今日で何日目か」として終了日の無い服用お休みを登録する。今日飲む番号のピルは再開後の最初のピルになる
+  bool get yazFlexIsResting => throw _privateConstructorUsedError;
+
+  /// ヤーズフレックス向けの導線で入力した前回の休薬の日数。休薬中 ([yazFlexIsResting]) の時は休薬して今日で何日目か
+  /// 既定の 4 は、ヤーズフレックス配合錠の添付文書で休薬期間が 4 日間と定められているため
+  int get yazFlexRestDurationDays => throw _privateConstructorUsedError;
+
+  /// ヤーズフレックス向けの導線で入力した開始番号 (1枚目の1番は休薬明けから何日目か)
+  /// 既定の 1 は、休薬明けの初日にシートの1番から飲み始めた (休薬明けとシートの切り替わりが一致している) 想定
+  int get yazFlexBeginPillNumber => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $InitialSettingStateCopyWith<InitialSettingState> get copyWith => throw _privateConstructorUsedError;
 }
@@ -173,9 +198,16 @@ abstract class $InitialSettingStateCopyWith<$Res> {
       bool isLoading,
       bool settingIsExist,
       LinkAccountType? accountType,
-      int pillTakenCount});
+      int pillTakenCount,
+      bool isYazFlex,
+      bool yazFlexHasNotRestedYet,
+      InitialSettingTodayPillNumber? yazFlexLastTakenPillNumberBeforeRest,
+      bool yazFlexIsResting,
+      int yazFlexRestDurationDays,
+      int yazFlexBeginPillNumber});
 
   $InitialSettingTodayPillNumberCopyWith<$Res>? get todayPillNumber;
+  $InitialSettingTodayPillNumberCopyWith<$Res>? get yazFlexLastTakenPillNumberBeforeRest;
 }
 
 /// @nodoc
@@ -198,6 +230,12 @@ class _$InitialSettingStateCopyWithImpl<$Res, $Val extends InitialSettingState> 
     Object? settingIsExist = null,
     Object? accountType = freezed,
     Object? pillTakenCount = null,
+    Object? isYazFlex = null,
+    Object? yazFlexHasNotRestedYet = null,
+    Object? yazFlexLastTakenPillNumberBeforeRest = freezed,
+    Object? yazFlexIsResting = null,
+    Object? yazFlexRestDurationDays = null,
+    Object? yazFlexBeginPillNumber = null,
   }) {
     return _then(_value.copyWith(
       pillSheetTypes: null == pillSheetTypes
@@ -232,6 +270,30 @@ class _$InitialSettingStateCopyWithImpl<$Res, $Val extends InitialSettingState> 
           ? _value.pillTakenCount
           : pillTakenCount // ignore: cast_nullable_to_non_nullable
               as int,
+      isYazFlex: null == isYazFlex
+          ? _value.isYazFlex
+          : isYazFlex // ignore: cast_nullable_to_non_nullable
+              as bool,
+      yazFlexHasNotRestedYet: null == yazFlexHasNotRestedYet
+          ? _value.yazFlexHasNotRestedYet
+          : yazFlexHasNotRestedYet // ignore: cast_nullable_to_non_nullable
+              as bool,
+      yazFlexLastTakenPillNumberBeforeRest: freezed == yazFlexLastTakenPillNumberBeforeRest
+          ? _value.yazFlexLastTakenPillNumberBeforeRest
+          : yazFlexLastTakenPillNumberBeforeRest // ignore: cast_nullable_to_non_nullable
+              as InitialSettingTodayPillNumber?,
+      yazFlexIsResting: null == yazFlexIsResting
+          ? _value.yazFlexIsResting
+          : yazFlexIsResting // ignore: cast_nullable_to_non_nullable
+              as bool,
+      yazFlexRestDurationDays: null == yazFlexRestDurationDays
+          ? _value.yazFlexRestDurationDays
+          : yazFlexRestDurationDays // ignore: cast_nullable_to_non_nullable
+              as int,
+      yazFlexBeginPillNumber: null == yazFlexBeginPillNumber
+          ? _value.yazFlexBeginPillNumber
+          : yazFlexBeginPillNumber // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 
@@ -244,6 +306,18 @@ class _$InitialSettingStateCopyWithImpl<$Res, $Val extends InitialSettingState> 
 
     return $InitialSettingTodayPillNumberCopyWith<$Res>(_value.todayPillNumber!, (value) {
       return _then(_value.copyWith(todayPillNumber: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $InitialSettingTodayPillNumberCopyWith<$Res>? get yazFlexLastTakenPillNumberBeforeRest {
+    if (_value.yazFlexLastTakenPillNumberBeforeRest == null) {
+      return null;
+    }
+
+    return $InitialSettingTodayPillNumberCopyWith<$Res>(_value.yazFlexLastTakenPillNumberBeforeRest!, (value) {
+      return _then(_value.copyWith(yazFlexLastTakenPillNumberBeforeRest: value) as $Val);
     });
   }
 }
@@ -262,10 +336,18 @@ abstract class _$$InitialSettingStateImplCopyWith<$Res> implements $InitialSetti
       bool isLoading,
       bool settingIsExist,
       LinkAccountType? accountType,
-      int pillTakenCount});
+      int pillTakenCount,
+      bool isYazFlex,
+      bool yazFlexHasNotRestedYet,
+      InitialSettingTodayPillNumber? yazFlexLastTakenPillNumberBeforeRest,
+      bool yazFlexIsResting,
+      int yazFlexRestDurationDays,
+      int yazFlexBeginPillNumber});
 
   @override
   $InitialSettingTodayPillNumberCopyWith<$Res>? get todayPillNumber;
+  @override
+  $InitialSettingTodayPillNumberCopyWith<$Res>? get yazFlexLastTakenPillNumberBeforeRest;
 }
 
 /// @nodoc
@@ -284,6 +366,12 @@ class __$$InitialSettingStateImplCopyWithImpl<$Res> extends _$InitialSettingStat
     Object? settingIsExist = null,
     Object? accountType = freezed,
     Object? pillTakenCount = null,
+    Object? isYazFlex = null,
+    Object? yazFlexHasNotRestedYet = null,
+    Object? yazFlexLastTakenPillNumberBeforeRest = freezed,
+    Object? yazFlexIsResting = null,
+    Object? yazFlexRestDurationDays = null,
+    Object? yazFlexBeginPillNumber = null,
   }) {
     return _then(_$InitialSettingStateImpl(
       pillSheetTypes: null == pillSheetTypes
@@ -318,6 +406,30 @@ class __$$InitialSettingStateImplCopyWithImpl<$Res> extends _$InitialSettingStat
           ? _value.pillTakenCount
           : pillTakenCount // ignore: cast_nullable_to_non_nullable
               as int,
+      isYazFlex: null == isYazFlex
+          ? _value.isYazFlex
+          : isYazFlex // ignore: cast_nullable_to_non_nullable
+              as bool,
+      yazFlexHasNotRestedYet: null == yazFlexHasNotRestedYet
+          ? _value.yazFlexHasNotRestedYet
+          : yazFlexHasNotRestedYet // ignore: cast_nullable_to_non_nullable
+              as bool,
+      yazFlexLastTakenPillNumberBeforeRest: freezed == yazFlexLastTakenPillNumberBeforeRest
+          ? _value.yazFlexLastTakenPillNumberBeforeRest
+          : yazFlexLastTakenPillNumberBeforeRest // ignore: cast_nullable_to_non_nullable
+              as InitialSettingTodayPillNumber?,
+      yazFlexIsResting: null == yazFlexIsResting
+          ? _value.yazFlexIsResting
+          : yazFlexIsResting // ignore: cast_nullable_to_non_nullable
+              as bool,
+      yazFlexRestDurationDays: null == yazFlexRestDurationDays
+          ? _value.yazFlexRestDurationDays
+          : yazFlexRestDurationDays // ignore: cast_nullable_to_non_nullable
+              as int,
+      yazFlexBeginPillNumber: null == yazFlexBeginPillNumber
+          ? _value.yazFlexBeginPillNumber
+          : yazFlexBeginPillNumber // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -333,7 +445,13 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
       this.isLoading = false,
       this.settingIsExist = false,
       this.accountType,
-      this.pillTakenCount = 1})
+      this.pillTakenCount = 1,
+      this.isYazFlex = false,
+      this.yazFlexHasNotRestedYet = false,
+      this.yazFlexLastTakenPillNumberBeforeRest,
+      this.yazFlexIsResting = false,
+      this.yazFlexRestDurationDays = 4,
+      this.yazFlexBeginPillNumber = 1})
       : _pillSheetTypes = pillSheetTypes,
         _reminderTimes = reminderTimes,
         super._();
@@ -372,9 +490,45 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
   @JsonKey()
   final int pillTakenCount;
 
+  /// 初期設定の最初のページで「ヤーズフレックスの方ですか？」に「はい」と答えたか
+  /// true の時はヤーズフレックス向けの導線 (28錠タイプ固定・前回の休薬・開始番号の入力) で登録する
+  @override
+  @JsonKey()
+  final bool isYazFlex;
+
+  /// ヤーズフレックス向けの導線で前回の休薬の入力をスキップしたか (休薬はまだしていない、または後でホームから入力する)
+  /// true の時は休薬のピルを選んでいても休薬を登録しない
+  @override
+  @JsonKey()
+  final bool yazFlexHasNotRestedYet;
+
+  /// ヤーズフレックス向けの導線でタップした、休薬に入る直前に飲んだピルの位置 (今のピルシートグループの中のピル)
+  /// このピルの翌日から [yazFlexRestDurationDays] 日休み、次のピルで服用を再開したとみなす。未選択なら null
+  @override
+  final InitialSettingTodayPillNumber? yazFlexLastTakenPillNumberBeforeRest;
+
+  /// ヤーズフレックス向けの導線で、休薬中でまだ服用を再開していないか
+  /// true の時は休薬のピルをタップさせず、今日飲む番号のピルの 1 つ前のピルを休薬に入る直前に飲んだピルとみなし、
+  /// [yazFlexRestDurationDays] を「休薬して今日で何日目か」として終了日の無い服用お休みを登録する。今日飲む番号のピルは再開後の最初のピルになる
+  @override
+  @JsonKey()
+  final bool yazFlexIsResting;
+
+  /// ヤーズフレックス向けの導線で入力した前回の休薬の日数。休薬中 ([yazFlexIsResting]) の時は休薬して今日で何日目か
+  /// 既定の 4 は、ヤーズフレックス配合錠の添付文書で休薬期間が 4 日間と定められているため
+  @override
+  @JsonKey()
+  final int yazFlexRestDurationDays;
+
+  /// ヤーズフレックス向けの導線で入力した開始番号 (1枚目の1番は休薬明けから何日目か)
+  /// 既定の 1 は、休薬明けの初日にシートの1番から飲み始めた (休薬明けとシートの切り替わりが一致している) 想定
+  @override
+  @JsonKey()
+  final int yazFlexBeginPillNumber;
+
   @override
   String toString() {
-    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, settingIsExist: $settingIsExist, accountType: $accountType, pillTakenCount: $pillTakenCount)';
+    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, settingIsExist: $settingIsExist, accountType: $accountType, pillTakenCount: $pillTakenCount, isYazFlex: $isYazFlex, yazFlexHasNotRestedYet: $yazFlexHasNotRestedYet, yazFlexLastTakenPillNumberBeforeRest: $yazFlexLastTakenPillNumberBeforeRest, yazFlexIsResting: $yazFlexIsResting, yazFlexRestDurationDays: $yazFlexRestDurationDays, yazFlexBeginPillNumber: $yazFlexBeginPillNumber)';
   }
 
   @override
@@ -389,12 +543,33 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
             (identical(other.isLoading, isLoading) || other.isLoading == isLoading) &&
             (identical(other.settingIsExist, settingIsExist) || other.settingIsExist == settingIsExist) &&
             (identical(other.accountType, accountType) || other.accountType == accountType) &&
-            (identical(other.pillTakenCount, pillTakenCount) || other.pillTakenCount == pillTakenCount));
+            (identical(other.pillTakenCount, pillTakenCount) || other.pillTakenCount == pillTakenCount) &&
+            (identical(other.isYazFlex, isYazFlex) || other.isYazFlex == isYazFlex) &&
+            (identical(other.yazFlexHasNotRestedYet, yazFlexHasNotRestedYet) || other.yazFlexHasNotRestedYet == yazFlexHasNotRestedYet) &&
+            (identical(other.yazFlexLastTakenPillNumberBeforeRest, yazFlexLastTakenPillNumberBeforeRest) ||
+                other.yazFlexLastTakenPillNumberBeforeRest == yazFlexLastTakenPillNumberBeforeRest) &&
+            (identical(other.yazFlexIsResting, yazFlexIsResting) || other.yazFlexIsResting == yazFlexIsResting) &&
+            (identical(other.yazFlexRestDurationDays, yazFlexRestDurationDays) || other.yazFlexRestDurationDays == yazFlexRestDurationDays) &&
+            (identical(other.yazFlexBeginPillNumber, yazFlexBeginPillNumber) || other.yazFlexBeginPillNumber == yazFlexBeginPillNumber));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_pillSheetTypes), todayPillNumber,
-      const DeepCollectionEquality().hash(_reminderTimes), isOnReminder, isLoading, settingIsExist, accountType, pillTakenCount);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_pillSheetTypes),
+      todayPillNumber,
+      const DeepCollectionEquality().hash(_reminderTimes),
+      isOnReminder,
+      isLoading,
+      settingIsExist,
+      accountType,
+      pillTakenCount,
+      isYazFlex,
+      yazFlexHasNotRestedYet,
+      yazFlexLastTakenPillNumberBeforeRest,
+      yazFlexIsResting,
+      yazFlexRestDurationDays,
+      yazFlexBeginPillNumber);
 
   @JsonKey(ignore: true)
   @override
@@ -412,7 +587,13 @@ abstract class _InitialSettingState extends InitialSettingState {
       final bool isLoading,
       final bool settingIsExist,
       final LinkAccountType? accountType,
-      final int pillTakenCount}) = _$InitialSettingStateImpl;
+      final int pillTakenCount,
+      final bool isYazFlex,
+      final bool yazFlexHasNotRestedYet,
+      final InitialSettingTodayPillNumber? yazFlexLastTakenPillNumberBeforeRest,
+      final bool yazFlexIsResting,
+      final int yazFlexRestDurationDays,
+      final int yazFlexBeginPillNumber}) = _$InitialSettingStateImpl;
   const _InitialSettingState._() : super._();
 
   @override
@@ -431,6 +612,37 @@ abstract class _InitialSettingState extends InitialSettingState {
   LinkAccountType? get accountType;
   @override
   int get pillTakenCount;
+  @override
+
+  /// 初期設定の最初のページで「ヤーズフレックスの方ですか？」に「はい」と答えたか
+  /// true の時はヤーズフレックス向けの導線 (28錠タイプ固定・前回の休薬・開始番号の入力) で登録する
+  bool get isYazFlex;
+  @override
+
+  /// ヤーズフレックス向けの導線で前回の休薬の入力をスキップしたか (休薬はまだしていない、または後でホームから入力する)
+  /// true の時は休薬のピルを選んでいても休薬を登録しない
+  bool get yazFlexHasNotRestedYet;
+  @override
+
+  /// ヤーズフレックス向けの導線でタップした、休薬に入る直前に飲んだピルの位置 (今のピルシートグループの中のピル)
+  /// このピルの翌日から [yazFlexRestDurationDays] 日休み、次のピルで服用を再開したとみなす。未選択なら null
+  InitialSettingTodayPillNumber? get yazFlexLastTakenPillNumberBeforeRest;
+  @override
+
+  /// ヤーズフレックス向けの導線で、休薬中でまだ服用を再開していないか
+  /// true の時は休薬のピルをタップさせず、今日飲む番号のピルの 1 つ前のピルを休薬に入る直前に飲んだピルとみなし、
+  /// [yazFlexRestDurationDays] を「休薬して今日で何日目か」として終了日の無い服用お休みを登録する。今日飲む番号のピルは再開後の最初のピルになる
+  bool get yazFlexIsResting;
+  @override
+
+  /// ヤーズフレックス向けの導線で入力した前回の休薬の日数。休薬中 ([yazFlexIsResting]) の時は休薬して今日で何日目か
+  /// 既定の 4 は、ヤーズフレックス配合錠の添付文書で休薬期間が 4 日間と定められているため
+  int get yazFlexRestDurationDays;
+  @override
+
+  /// ヤーズフレックス向けの導線で入力した開始番号 (1枚目の1番は休薬明けから何日目か)
+  /// 既定の 1 は、休薬明けの初日にシートの1番から飲み始めた (休薬明けとシートの切り替わりが一致している) 想定
+  int get yazFlexBeginPillNumber;
   @override
   @JsonKey(ignore: true)
   _$$InitialSettingStateImplCopyWith<_$InitialSettingStateImpl> get copyWith => throw _privateConstructorUsedError;

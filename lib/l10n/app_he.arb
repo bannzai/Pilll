@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "בחרי את התאריך המתוכנן לחידוש הנטילה",
   "pauseEndDateLimitIsToday": "ניתן להגדיר את תאריך הסיום עד היום בלבד",
   "pauseEndDateLimitBeforeNextPause": "עד ליום שאינו חופף להפסקה הבאה ({date}〜)",
-  "pauseStartDateLimit": "ניתן לבחור את תאריך ההתחלה עד {date}"
+  "pauseStartDateLimit": "ניתן לבחור את תאריך ההתחלה עד {date}",
+  "initialSettingAskYazFlex": "האם את משתמשת ב-Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "אם תבחרי ב״כן״,\nנגדיר שיוצג כמה ימים עברו מאז סיום ההפסקה.",
+  "yazFlexLastRestDurationTitle": "יש להקיש על הגלולה\nשנטלת ממש לפני תחילת ההפסקה",
+  "yazFlexLastRestDurationNote": "יש לבחור את הגלולה האחרונה שלקחת לפני תחילת ההפסקה",
+  "yazFlexRestDurationDaysLabel": "מספר ימי ההפסקה",
+  "yazFlexRestDurationDaysValue": "{days} ימים",
+  "yazFlexResting": "בתקופת הפסקה ועדיין לא חזרתי לקחת",
+  "yazFlexRestingDaysLabel": "היום הוא היום ה־כמה של ההפסקה",
+  "yazFlexSkipRestDuration": "דלגי על הזנת תקופת ההפסקה",
+  "yazFlexSkipRestDurationDialogTitle": "לדלג על הזנת תקופת ההפסקה",
+  "yazFlexSkipRestDurationDialogMessage": "אפשר להזין אחר כך את תקופת ההפסקה בנטילה דרך „הפסקה בנטילה” במסך הבית.",
+  "yazFlexSkipRestDurationDialogSkip": "דלגי",
+  "yazFlexBeginPillNumberPageTitle": "איזו נטילה במחזור היא תחילת המגשית?",
+  "yazFlexBeginPillNumberPageNote": "אנא השיבי לפי מספר הימים שחלפו מאז ההפסקה שלפני תחילת החפיסה.",
+  "yazFlexNextInputIsRestDuration": "בשלב הבא, יש להזין את ההפסקה הקודמת"
 }

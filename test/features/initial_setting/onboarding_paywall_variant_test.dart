@@ -4,11 +4,13 @@ import 'package:pilll/features/initial_setting/onboarding_paywall_variant.dart';
 void main() {
   group('#onboardingPaywallVariantFromRemoteConfig', () {
     test("'control' → control", () {
-      expect(onboardingPaywallVariantFromRemoteConfig('control'), OnboardingPaywallVariant.control);
+      expect(onboardingPaywallVariantFromRemoteConfig('control'),
+          OnboardingPaywallVariant.control);
     });
 
     test("'paywall' → paywall", () {
-      expect(onboardingPaywallVariantFromRemoteConfig('paywall'), OnboardingPaywallVariant.paywall);
+      expect(onboardingPaywallVariantFromRemoteConfig('paywall'),
+          OnboardingPaywallVariant.paywall);
     });
 
     test('空文字 (Remote Config 未設定・実験未参加) → null', () {
@@ -28,7 +30,8 @@ void main() {
 
     test('全 variant の value から元の variant に戻せる (Remote Config の値と 1:1)', () {
       for (final variant in OnboardingPaywallVariant.values) {
-        expect(onboardingPaywallVariantFromRemoteConfig(variant.value), variant);
+        expect(
+            onboardingPaywallVariantFromRemoteConfig(variant.value), variant);
       }
     });
   });

@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "Qabulni qayta boshlash rejalashtirilgan sanani tanlang",
   "pauseEndDateLimitIsToday": "Tugash sanasini faqat bugungacha belgilash mumkin",
   "pauseEndDateLimitBeforeNextPause": "Keyingi tanaffus ({date}–) bilan ustma-ust kelmaydigan kungacha",
-  "pauseStartDateLimit": "Boshlanish sanasini {date} gacha tanlash mumkin"
+  "pauseStartDateLimit": "Boshlanish sanasini {date} gacha tanlash mumkin",
+  "initialSettingAskYazFlex": "Siz Yaz Flex ishlatyapsizmi?",
+  "initialSettingAskYazFlexDescription": "Agar “Ha” ni tanlasangiz,\ntanaffus tugaganidan keyin nechinchi kun ekanini ko‘rsatadigan qilib sozlaymiz.",
+  "yazFlexLastRestDurationTitle": "Tanaffus boshlanishidan oldin ichgan tabletkani\nbosing",
+  "yazFlexLastRestDurationNote": "Tanaffusni boshlashdan oldin oxirgi qabul qilgan tabletkangizni tanlang",
+  "yazFlexRestDurationDaysLabel": "Tanaffus kunlari soni",
+  "yazFlexRestDurationDaysValue": "{days} kun",
+  "yazFlexResting": "Tanaffus davridaman va hali qayta boshlamadim",
+  "yazFlexRestingDaysLabel": "Bugun tanaffusning nechinchi kuni",
+  "yazFlexSkipRestDuration": "Tanaffus davrini kiritishni oʻtkazib yuborish",
+  "yazFlexSkipRestDurationDialogTitle": "Tanaffus davrini kiritishni oʻtkazib yuborish",
+  "yazFlexSkipRestDurationDialogMessage": "Qabul qilish tanaffusi muddatini keyinroq Bosh sahifadagi “Qabul qilish tanaffusi” bo‘limidan kiritishingiz mumkin.",
+  "yazFlexSkipRestDurationDialogSkip": "O‘tkazib yuborish",
+  "yazFlexBeginPillNumberPageTitle": "Sikl bo‘yicha listning boshlanishi nechanchi qabulga to‘g‘ri keladi?",
+  "yazFlexBeginPillNumberPageNote": "Iltimos, varaqni boshlashdan oldingi tanaffusdan beri o‘tgan kunlar soniga qarab javob bering.",
+  "yazFlexNextInputIsRestDuration": "Keyingi bosqichda avvalgi tanaffusni kiriting"
 }

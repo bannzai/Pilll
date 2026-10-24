@@ -1,0 +1,72 @@
+appId: com.mizuki.Ohashi.Pilll.dev
+---
+# 初期設定で「ヤーズフレックスの方ですか？」に「はい」と答え、
+# 今日飲む番号 → 開始番号 (既定の1日目のまま) → 前回の休薬 (入力をスキップ) → 服用タイミング → プレミアムトライアルの順に進み、ホーム画面に到達することを確認する。
+- launchApp:
+    clearState: true
+    clearKeychain: true
+    permissions:
+      notifications: allow
+- waitForAnimationToEnd
+
+# 通知許可ダイアログは起動の数秒後に出ることがある (GitHub Actions の run 40047619937 では最初のページの上に残って assert を塞いだ)。
+# 最大 15 秒待ってから、出ていれば許可をタップする
+- extendedWaitUntil:
+    visible: "許可"
+    timeout: 15000
+    optional: true
+- runFlow:
+    when:
+      visible: "許可"
+    commands:
+      - tapOn: "許可"
+      - waitForAnimationToEnd
+
+# 「ヤーズフレックスの方ですか？」→ はい
+- extendedWaitUntil:
+    visible: "ヤーズフレックスの方ですか？"
+    timeout: 15000
+- tapOn: "はい"
+- waitForAnimationToEnd
+
+# 今日飲む番号: 1枚目の最初のピルを座標でタップ (ピルシート内の Flutter のピルは Maestro がテキストで検出できないため)
+# iPhone 17 (maestro-e2e workflow の既定) で 1 番の円の中心は横 21%・縦 34%。32% だと番号のラベルに当たって選ばれない
+- tapOn:
+    point: "21%,34%"
+- waitForAnimationToEnd
+- assertVisible: ".*に飲むピルは.*"
+- tapOn: "次へ"
+- waitForAnimationToEnd
+
+# 開始番号: ピルシートのプレビューと「1日目」のピッカーが出る。既定の1日目のまま次へ
+- assertVisible: "シートの始まりは周期上\n何番目の服用ですか？"
+- assertVisible: "シート開始前の休薬からの経過日数を元にお答えください"
+- assertVisible: "次は前回の休薬を入力します"
+- tapOn: "次へ"
+- waitForAnimationToEnd
+
+# 前回の休薬: 「休薬中でまだ再開していない」をオンにすると「休薬して今日で何日目」(既定 4日目) の欄が出る。オフに戻してから
+# ピルをタップせずに「休薬の入力はスキップ」→ 確認ダイアログで「スキップする」→ 服用タイミングへ進む
+- assertVisible: "休薬した時のピルを\nタップしてください"
+- assertVisible: "休薬中でまだ再開していない"
+- tapOn: "休薬中でまだ再開していない"
+- waitForAnimationToEnd
+- assertVisible: "休薬して今日で何日目"
+- assertVisible: "4日目"
+- takeScreenshot: "yaz_flex_rest_duration_resting"
+- tapOn: "休薬中でまだ再開していない"
+- waitForAnimationToEnd
+- assertNotVisible: "休薬して今日で何日目"
+- tapOn: "休薬の入力はスキップ"
+- waitForAnimationToEnd
+- assertVisible: "休薬の入力をスキップします"
+- tapOn: "スキップする"
+- waitForAnimationToEnd
+
+# 服用タイミング → そのまま次へ
+- tapOn: "次へ"
+- waitForAnimationToEnd
+
+# プレミアムトライアル → アプリ開始
+- tapOn: "アプリをはじめる"
+- waitForAnimationToEnd

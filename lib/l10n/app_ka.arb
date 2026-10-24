@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "აირჩიეთ მიღების განახლების დაგეგმილი თარიღი",
   "pauseEndDateLimitIsToday": "დასრულების თარიღად მხოლოდ დღევანდელი დღის არჩევაა შესაძლებელი",
   "pauseEndDateLimitBeforeNextPause": "იმ დღემდე, რომელიც არ ემთხვევა შემდეგ შესვენებას ({date}〜)",
-  "pauseStartDateLimit": "დაწყების თარიღის არჩევა შესაძლებელია {date}-მდე"
+  "pauseStartDateLimit": "დაწყების თარიღის არჩევა შესაძლებელია {date}-მდე",
+  "initialSettingAskYazFlex": "Yaz Flex-ს იყენებთ?",
+  "initialSettingAskYazFlexDescription": "თუ აირჩევთ „დიახ“-ს,\nდავაყენებთ ისე, რომ გამოჩნდეს, რამდენი დღე გავიდა შესვენების დასრულებიდან.",
+  "yazFlexLastRestDurationTitle": "გთხოვთ, შეეხეთ აბს,\nრომელიც შესვენების დაწყებამდე მიიღეთ",
+  "yazFlexLastRestDurationNote": "გთხოვთ, აირჩიოთ ბოლო აბი, რომელიც შესვენების დაწყებამდე მიიღეთ",
+  "yazFlexRestDurationDaysLabel": "შესვენების დღეების რაოდენობა",
+  "yazFlexRestDurationDaysValue": "{days} დღე",
+  "yazFlexResting": "შესვენების პერიოდში ვარ და ჯერ არ განმიახლებია",
+  "yazFlexRestingDaysLabel": "დღეს შესვენების მერამდენე დღეა",
+  "yazFlexSkipRestDuration": "გამოტოვეთ შესვენების პერიოდის შეყვანა",
+  "yazFlexSkipRestDurationDialogTitle": "შესვენების პერიოდის შეყვანის გამოტოვება",
+  "yazFlexSkipRestDurationDialogMessage": "მიღების შესვენების პერიოდის შეყვანა მოგვიანებითაც შეგიძლიათ მთავარ ეკრანზე „მიღების შესვენება“-დან.",
+  "yazFlexSkipRestDurationDialogSkip": "გამოტოვება",
+  "yazFlexBeginPillNumberPageTitle": "ციკლში მერამდენე მიღებაა შიტის დასაწყისი?",
+  "yazFlexBeginPillNumberPageNote": "გთხოვთ, უპასუხოთ იმ დღეების რაოდენობის მიხედვით, რომლებიც გავიდა ფურცლის დაწყებამდე არსებული შესვენების შემდეგ.",
+  "yazFlexNextInputIsRestDuration": "შემდეგ შეიყვანეთ წინა შესვენება"
 }

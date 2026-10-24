@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "Selectați data programată pentru reluarea administrării",
   "pauseEndDateLimitIsToday": "Data de încheiere poate fi setată doar până astăzi",
   "pauseEndDateLimitBeforeNextPause": "Până în ziua care nu se suprapune cu următoarea pauză ({date}–)",
-  "pauseStartDateLimit": "Data de începere poate fi aleasă până la {date}"
+  "pauseStartDateLimit": "Data de începere poate fi aleasă până la {date}",
+  "initialSettingAskYazFlex": "Folosiți Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Dacă alegeți „Da”,\nvom seta afișarea numărului de zile de la încheierea pauzei.",
+  "yazFlexLastRestDurationTitle": "Atingeți pilula\npe care ați luat-o chiar înainte de pauză",
+  "yazFlexLastRestDurationNote": "Te rugăm să selectezi ultima pilulă pe care ai luat-o înainte de începerea pauzei",
+  "yazFlexRestDurationDaysLabel": "Numărul zilelor de pauză",
+  "yazFlexRestDurationDaysValue": "{days} zile",
+  "yazFlexResting": "Sunt în pauză și încă nu am reluat",
+  "yazFlexRestingDaysLabel": "A câta zi de pauză este astăzi",
+  "yazFlexSkipRestDuration": "Omite introducerea perioadei de pauză",
+  "yazFlexSkipRestDurationDialogTitle": "Omiteți introducerea perioadei de pauză",
+  "yazFlexSkipRestDurationDialogMessage": "Perioada de pauză a administrării poate fi introdusă mai târziu din „Pauză administrare” de pe ecranul principal.",
+  "yazFlexSkipRestDurationDialogSkip": "Omite",
+  "yazFlexBeginPillNumberPageTitle": "În ciclul de administrare, începutul foliei corespunde cărei prize?",
+  "yazFlexBeginPillNumberPageNote": "Vă rugăm să răspundeți în funcție de numărul de zile trecute de la pauza de dinainte de începerea foliei.",
+  "yazFlexNextInputIsRestDuration": "În continuare, introduceți pauza anterioară"
 }

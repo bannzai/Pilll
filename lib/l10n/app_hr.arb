@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "Odaberite planirani datum nastavka uzimanja",
   "pauseEndDateLimitIsToday": "Datum završetka može se postaviti najkasnije na danas",
   "pauseEndDateLimitBeforeNextPause": "Do dana koji se ne preklapa sa sljedećom pauzom ({date}–)",
-  "pauseStartDateLimit": "Datum početka može se odabrati do {date}"
+  "pauseStartDateLimit": "Datum početka može se odabrati do {date}",
+  "initialSettingAskYazFlex": "Koristite li Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Ako odaberete „Da”,\npodesit ćemo prikaz koji pokazuje koji je dan nakon završetka pauze.",
+  "yazFlexLastRestDurationTitle": "Dodirnite pilulu\nkoju ste uzeli neposredno prije pauze",
+  "yazFlexLastRestDurationNote": "Odaberite posljednju pilulu koju ste uzeli prije početka pauze",
+  "yazFlexRestDurationDaysLabel": "Broj dana pauze",
+  "yazFlexRestDurationDaysValue": "{days} dana",
+  "yazFlexResting": "Na pauzi sam i još nisam ponovno počela",
+  "yazFlexRestingDaysLabel": "Koji je danas dan pauze",
+  "yazFlexSkipRestDuration": "Preskoči unos pauze",
+  "yazFlexSkipRestDurationDialogTitle": "Preskoči unos pauze",
+  "yazFlexSkipRestDurationDialogMessage": "Razdoblje pauze uzimanja možete unijeti kasnije u odjeljku „Pauza uzimanja” na početnom zaslonu.",
+  "yazFlexSkipRestDurationDialogSkip": "Preskoči",
+  "yazFlexBeginPillNumberPageTitle": "Po redu koje je uzimanje u ciklusu početak blistera?",
+  "yazFlexBeginPillNumberPageNote": "Molimo odgovorite na temelju broja dana proteklih od pauze prije početka blistera.",
+  "yazFlexNextInputIsRestDuration": "Zatim unesite prethodnu pauzu"
 }

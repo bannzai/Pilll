@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "Wybierz planowaną datę wznowienia przyjmowania",
   "pauseEndDateLimitIsToday": "Datę zakończenia można ustawić tylko do dzisiaj",
   "pauseEndDateLimitBeforeNextPause": "Do dnia, który nie nakłada się z następną przerwą ({date}–)",
-  "pauseStartDateLimit": "Datę rozpoczęcia można wybrać najpóźniej do {date}"
+  "pauseStartDateLimit": "Datę rozpoczęcia można wybrać najpóźniej do {date}",
+  "initialSettingAskYazFlex": "Czy stosujesz Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Jeśli wybierzesz „Tak”,\nustawimy wyświetlanie, który to dzień od zakończenia przerwy.",
+  "yazFlexLastRestDurationTitle": "Stuknij tabletkę,\nktórą przyjęłaś tuż przed przerwą",
+  "yazFlexLastRestDurationNote": "Wybierz ostatnią tabletkę, którą przyjęłaś przed rozpoczęciem przerwy",
+  "yazFlexRestDurationDaysLabel": "Liczba dni przerwy",
+  "yazFlexRestDurationDaysValue": "{days} dni",
+  "yazFlexResting": "Jestem w przerwie i jeszcze nie wznowiłam",
+  "yazFlexRestingDaysLabel": "Który to dziś dzień przerwy",
+  "yazFlexSkipRestDuration": "Pomiń wpisywanie przerwy",
+  "yazFlexSkipRestDurationDialogTitle": "Pomiń wprowadzanie przerwy",
+  "yazFlexSkipRestDurationDialogMessage": "Okres przerwy w przyjmowaniu możesz wprowadzić później w sekcji „Przerwa w przyjmowaniu” na ekranie głównym.",
+  "yazFlexSkipRestDurationDialogSkip": "Pomiń",
+  "yazFlexBeginPillNumberPageTitle": "Które z kolei przyjęcie w cyklu odpowiada początkowi blistra?",
+  "yazFlexBeginPillNumberPageNote": "Proszę odpowiedzieć na podstawie liczby dni, które upłynęły od przerwy przed rozpoczęciem blistra.",
+  "yazFlexNextInputIsRestDuration": "Następnie wpisz poprzednią przerwę"
 }

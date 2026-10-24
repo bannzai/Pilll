@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "Válassza ki a szedés tervezett újrakezdési dátumát",
   "pauseEndDateLimitIsToday": "A befejezés dátuma legfeljebb a mai nap lehet",
   "pauseEndDateLimitBeforeNextPause": "A következő szünettel ({date}–) nem átfedő napig",
-  "pauseStartDateLimit": "A kezdőnap legkésőbb {date} lehet"
+  "pauseStartDateLimit": "A kezdőnap legkésőbb {date} lehet",
+  "initialSettingAskYazFlex": "Yaz Flexet szedsz?",
+  "initialSettingAskYazFlexDescription": "Ha az „Igen” lehetőséget választja,\nbeállítjuk, hogy a szünet vége óta eltelt napok száma jelenjen meg.",
+  "yazFlexLastRestDurationTitle": "Koppintson arra a tablettára,\namelyet közvetlenül a szünet előtt vett be",
+  "yazFlexLastRestDurationNote": "Kérjük, válaszd ki az utolsó tablettát, amelyet a szünet kezdete előtt vettél be",
+  "yazFlexRestDurationDaysLabel": "Szünet napjainak száma",
+  "yazFlexRestDurationDaysValue": "{days} nap",
+  "yazFlexResting": "Szünetet tartok, és még nem kezdtem újra",
+  "yazFlexRestingDaysLabel": "A szünet hányadik napja van ma",
+  "yazFlexSkipRestDuration": "A szünet megadásának kihagyása",
+  "yazFlexSkipRestDurationDialogTitle": "A szünet megadásának kihagyása",
+  "yazFlexSkipRestDurationDialogMessage": "A gyógyszerszedési szünet időszakát később a Kezdőképernyő „Szedési szünet” menüpontjában adhatja meg.",
+  "yazFlexSkipRestDurationDialogSkip": "Kihagyás",
+  "yazFlexBeginPillNumberPageTitle": "A ciklusban hányadik bevétel a levél kezdete?",
+  "yazFlexBeginPillNumberPageNote": "Kérjük, a lap megkezdése előtti szünet óta eltelt napok száma alapján válaszoljon.",
+  "yazFlexNextInputIsRestDuration": "Ezután adja meg az előző szünetet"
 }

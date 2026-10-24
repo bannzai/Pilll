@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "නැවත ගැනීම ආරම්භ කිරීමට නියමිත දිනය තෝරන්න",
   "pauseEndDateLimitIsToday": "අවසන් දිනය අද දක්වා පමණක් සැකසිය හැක",
   "pauseEndDateLimitBeforeNextPause": "ඊළඟ විරාමය ({date}〜) සමඟ නොගැලපෙන දිනය දක්වා",
-  "pauseStartDateLimit": "ආරම්භක දිනය {date} දක්වා තෝරා ගත හැක"
+  "pauseStartDateLimit": "ආරම්භක දිනය {date} දක්වා තෝරා ගත හැක",
+  "initialSettingAskYazFlex": "ඔබ Yaz Flex භාවිතා කරනවාද?",
+  "initialSettingAskYazFlexDescription": "“ඔව්” තෝරාගත් විට\nවිවේක කාලය අවසන් වූ පසු කීවැනි දිනදැයි පෙන්වන ලෙස සකසනු ඇත",
+  "yazFlexLastRestDurationTitle": "විරාමය ආරම්භ කිරීමට පෙර ගත් ගෝලිය\nතට්ටු කරන්න",
+  "yazFlexLastRestDurationNote": "කරුණාකර විරාමය ආරම්භ කිරීමට පෙර අවසන් වරට ගත් ගුලිය තෝරන්න",
+  "yazFlexRestDurationDaysLabel": "විරාම දින ගණන",
+  "yazFlexRestDurationDaysValue": "{days} දින",
+  "yazFlexResting": "විරාම කාලයේ සිටින අතර තවම නැවත ආරම්භ කර නැහැ",
+  "yazFlexRestingDaysLabel": "අද විරාමයේ කීවෙනි දවසද",
+  "yazFlexSkipRestDuration": "විරාම කාලය ඇතුළත් කිරීම මඟ හරින්න",
+  "yazFlexSkipRestDurationDialogTitle": "විරාම කාලය ඇතුළත් කිරීම මඟ හරින්න",
+  "yazFlexSkipRestDurationDialogMessage": "ඖෂධ ගැනීමේ විරාම කාලය පසුව මුල් පිටුවේ “ඖෂධ ගැනීමේ විරාමය” වෙතින් ඇතුළත් කළ හැකියි.",
+  "yazFlexSkipRestDurationDialogSkip": "මඟ හරින්න",
+  "yazFlexBeginPillNumberPageTitle": "චක්‍රයේ ෂීට් එකේ ආරම්භය කීවන වර ලබාගැනීමද?",
+  "yazFlexBeginPillNumberPageNote": "කරුණාකර ෂීට් එක ආරම්භ කිරීමට පෙර තිබූ විරාමයෙන් ගත වූ දින ගණන අනුව පිළිතුරු දෙන්න.",
+  "yazFlexNextInputIsRestDuration": "ඊළඟට, පෙර විරාම කාලය ඇතුළත් කරන්න"
 }

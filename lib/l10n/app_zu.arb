@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "Khetha usuku oluhleliwe lokuqala futhi ukulusebenzisa",
   "pauseEndDateLimitIsToday": "Usuku lokuphela lungasethwa kuze kube namuhla kuphela",
   "pauseEndDateLimitBeforeNextPause": "Kuze kube usuku olungangqubuzani nekhefu elilandelayo ({date}–)",
-  "pauseStartDateLimit": "Usuku lokuqala lungakhethwa kuze kube u-{date}"
+  "pauseStartDateLimit": "Usuku lokuqala lungakhethwa kuze kube u-{date}",
+  "initialSettingAskYazFlex": "Ingabe usebenzisa i-Yaz Flex?",
+  "initialSettingAskYazFlexDescription": "Uma ukhetha okuthi “Yebo”,\nsizokumisa ukuze kuboniswe ukuthi sekuyisuku lwesingaki kusukela ikhefu liphelile.",
+  "yazFlexLastRestDurationTitle": "Sicela uthephe iphilisi\noliphuze ngaphambi nje kokuqala kwekhefu",
+  "yazFlexLastRestDurationNote": "Sicela ukhethe iphilisi lokugcina oliphuzile ngaphambi kokuqala ikhefu",
+  "yazFlexRestDurationDaysLabel": "Inani lezinsuku zekhefu",
+  "yazFlexRestDurationDaysValue": "{days} izinsuku",
+  "yazFlexResting": "Ngisesikhathini sekhefu futhi angikaqali futhi",
+  "yazFlexRestingDaysLabel": "Namuhla usuku lwesingaki sekhefu",
+  "yazFlexSkipRestDuration": "Yeqa ukufaka isikhathi sekhefu",
+  "yazFlexSkipRestDurationDialogTitle": "Yeqa ukufaka isikhathi sekhefu",
+  "yazFlexSkipRestDurationDialogMessage": "Isikhathi sekhefu lokuphuza singafakwa kamuva kokuthi “Ikhefu lokuphuza” ekhasini lasekhaya.",
+  "yazFlexSkipRestDurationDialogSkip": "Yeqa",
+  "yazFlexBeginPillNumberPageTitle": "Ukuqala kwephepha kuhambisana nokuphuza kwesingaki emjikelezweni?",
+  "yazFlexBeginPillNumberPageNote": "Sicela uphendule ngokusekelwe enanini lezinsuku esezidlulile kusukela ekhefini ngaphambi kokuqala ishidi.",
+  "yazFlexNextInputIsRestDuration": "Okulandelayo, faka ikhefu lakho langaphambilini"
 }

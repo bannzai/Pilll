@@ -567,5 +567,20 @@
   "selectPlannedResumeDate": "Valitse suunniteltu käytön aloituspäivä uudelleen",
   "pauseEndDateLimitIsToday": "Päättymispäiväksi voi valita vain tämän päivän tai aiemman",
   "pauseEndDateLimitBeforeNextPause": "Päivään asti, joka ei mene päällekkäin seuraavan tauon kanssa ({date}–)",
-  "pauseStartDateLimit": "Aloituspäivän voi valita päivään {date} asti"
+  "pauseStartDateLimit": "Aloituspäivän voi valita päivään {date} asti",
+  "initialSettingAskYazFlex": "Käytätkö Yaz Flexiä?",
+  "initialSettingAskYazFlexDescription": "Jos valitset ”Kyllä”,\nasetamme näytettäväksi, monesko päivä tauon päättymisestä on menossa.",
+  "yazFlexLastRestDurationTitle": "Napauta pilleriä,\njonka otit juuri ennen taukoa",
+  "yazFlexLastRestDurationNote": "Valitse viimeinen pilleri, jonka otit ennen tauon alkamista",
+  "yazFlexRestDurationDaysLabel": "Taukopäivien määrä",
+  "yazFlexRestDurationDaysValue": "{days} päivää",
+  "yazFlexResting": "Taukojaksolla enkä ole vielä aloittanut uudelleen",
+  "yazFlexRestingDaysLabel": "Monesko taukopäivä tänään on",
+  "yazFlexSkipRestDuration": "Ohita tauon syöttäminen",
+  "yazFlexSkipRestDurationDialogTitle": "Ohita taukojakson kirjaaminen",
+  "yazFlexSkipRestDurationDialogMessage": "Taukojakson voi syöttää myöhemmin Koti-näytön ”Tauko ottamisesta” -kohdasta.",
+  "yazFlexSkipRestDurationDialogSkip": "Ohita",
+  "yazFlexBeginPillNumberPageTitle": "Monesko otto kierrossa liuskan alku on?",
+  "yazFlexBeginPillNumberPageNote": "Vastaa sen mukaan, kuinka monta päivää on kulunut ennen liuskan aloittamista olleesta tauosta.",
+  "yazFlexNextInputIsRestDuration": "Seuraavaksi syötä edellinen taukosi"
 }

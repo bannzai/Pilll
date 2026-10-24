@@ -8,6 +8,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/initial_setting/reminder_times/page.dart';
 import 'package:pilll/features/initial_setting/today_pill_number/explain_label.dart';
 import 'package:pilll/features/initial_setting/today_pill_number/select_today_pill_number_pill_sheet_list.dart';
+import 'package:pilll/features/initial_setting/yaz_flex_begin_pill_number/page.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -91,8 +92,11 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                               analytics.logEvent(
                                 name: 'done_today_number_initial_setting',
                               );
+                              // ヤーズフレックス向けの導線では、服用タイミングの前に開始番号と前回の休薬を聞く
                               Navigator.of(context).push(
-                                InitialSettingReminderTimesPageRoute.route(),
+                                state.isYazFlex
+                                    ? InitialSettingYazFlexBeginPillNumberPageRoute.route()
+                                    : InitialSettingReminderTimesPageRoute.route(),
                               );
                             },
                     ),
