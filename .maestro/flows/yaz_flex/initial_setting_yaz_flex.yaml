@@ -9,7 +9,12 @@ appId: com.mizuki.Ohashi.Pilll.dev
       notifications: allow
 - waitForAnimationToEnd
 
-# 通知許可ダイアログが表示される場合がある → 許可をタップ
+# 通知許可ダイアログは起動の数秒後に出ることがある (GitHub Actions の run 40047619937 では最初のページの上に残って assert を塞いだ)。
+# 最大 15 秒待ってから、出ていれば許可をタップする
+- extendedWaitUntil:
+    visible: "許可"
+    timeout: 15000
+    optional: true
 - runFlow:
     when:
       visible: "許可"
@@ -18,7 +23,9 @@ appId: com.mizuki.Ohashi.Pilll.dev
       - waitForAnimationToEnd
 
 # 「ヤーズフレックスの方ですか？」→ はい
-- assertVisible: "ヤーズフレックスの方ですか？"
+- extendedWaitUntil:
+    visible: "ヤーズフレックスの方ですか？"
+    timeout: 15000
 - tapOn: "はい"
 - waitForAnimationToEnd
 
