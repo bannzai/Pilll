@@ -23,9 +23,11 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - waitForAnimationToEnd
 
 # 今日飲む番号: 1枚目の最初のピルを座標でタップ (ピルシート内の Flutter のピルは Maestro がテキストで検出できないため)
+# iPhone 17 (maestro-e2e workflow の既定) で 1 番の円の中心は横 21%・縦 34%。32% だと番号のラベルに当たって選ばれない
 - tapOn:
-    point: "20%,32%"
+    point: "21%,34%"
 - waitForAnimationToEnd
+- assertVisible: ".*に飲むピルは.*"
 - tapOn: "次へ"
 - waitForAnimationToEnd
 
