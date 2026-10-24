@@ -11,7 +11,8 @@ permissions:
 
 # 同じ PR で多重起動したら古い方を止める（macOS Runner 枠の浪費防止）
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  # 手動起動 (workflow_dispatch) は flows を変えて並行に回すことがあるため、run ごとに別の group にする
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.run_id }}
   cancel-in-progress: true
 
 on:
