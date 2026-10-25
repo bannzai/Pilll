@@ -111,6 +111,14 @@ if ! command -v maestro > /dev/null 2>&1; then
   export PATH="${PATH}:${INSTALL_DIR}/maestro/bin"
 fi
 maestro --version
+# flow の launchApp の permissions (notifications: allow) は applesimutils で付与され、runner に無いと何もせず終わる
+# (simctl privacy には通知の項目が無い)。その場合は初回起動で通知許可ダイアログが出て、許可のタップが効かないと
+# 下の画面を塞いで flow が失敗する (maestro-e2e run 40204632533) ため、インストールしておく
+if ! command -v applesimutils > /dev/null 2>&1; then
+  brew tap wix/brew
+  brew install applesimutils
+fi
+command -v applesimutils
 
 REC_PID=""
 if [ "$RECORD_VIDEO" = "true" ]; then
