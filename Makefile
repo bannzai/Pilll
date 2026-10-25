@@ -4,15 +4,17 @@
 prepare:
 	cd ios; rm -rf ./Pods; pod install;
 
+# レシピ行は `@` で表示を抑える。make は実行前に $(VAR) を展開した行を標準出力に出すため、
+# `@` が無いと base64 の全文が端末と agent の会話ログに残る。
 .PHONY: secret
 secret:
-	echo $(FILE_FIREBASE_ANDROID) | base64 -D > android/app/src/google-services.json
-	echo $(FILE_FIREBASE_IOS) | base64 -D > ios/Firebase/GoogleService-Info.plist
-	echo $(XCCONFIG_SECRET) | base64 -D > ios/Flutter/Secret.xcconfig
-	echo $(STOREKIT_TESTING_CONFIGURATION_PUBLIC_CERT) | base64 -D > ios/Runner/StoreKitTestCertificate.cer
-	echo $(DART_DEFINE_FROM_FILE_DEV) | base64 -D > environment/dev.json
-	echo $(DART_DEFINE_FROM_FILE_PROD) | base64 -D > environment/prod.json
-	echo $(ANDROID_RES_VALUES) | base64 -D > android/app/src/main/res/values/values.xml
+	@echo $(FILE_FIREBASE_ANDROID) | base64 -D > android/app/src/google-services.json
+	@echo $(FILE_FIREBASE_IOS) | base64 -D > ios/Firebase/GoogleService-Info.plist
+	@echo $(XCCONFIG_SECRET) | base64 -D > ios/Flutter/Secret.xcconfig
+	@echo $(STOREKIT_TESTING_CONFIGURATION_PUBLIC_CERT) | base64 -D > ios/Runner/StoreKitTestCertificate.cer
+	@echo $(DART_DEFINE_FROM_FILE_DEV) | base64 -D > environment/dev.json
+	@echo $(DART_DEFINE_FROM_FILE_PROD) | base64 -D > environment/prod.json
+	@echo $(ANDROID_RES_VALUES) | base64 -D > android/app/src/main/res/values/values.xml
 	./scripts/secret.sh
 	./android/scripts/secret_properties.sh
 
