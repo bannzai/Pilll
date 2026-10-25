@@ -116,6 +116,8 @@ maestro --version
 # 下の画面を塞いで flow が失敗する (maestro-e2e run 40204632533) ため、インストールしておく
 if ! command -v applesimutils > /dev/null 2>&1; then
   brew tap wix/brew
+  # runner の Homebrew は信頼していない tap の formula を読まないため、この formula だけを信頼する
+  brew trust --formula wix/brew/applesimutils
   brew install applesimutils
 fi
 command -v applesimutils
