@@ -6,7 +6,7 @@ appId: com.mizuki.Ohashi.Pilll.dev
     clearKeychain: true
     permissions:
       notifications: allow
-- waitForAnimationToEnd
+# 起動直後に waitForAnimationToEnd を置かない理由はサブフローの先頭に書いている
 - runFlow: subflows/initial_setup.yaml
 - waitForAnimationToEnd
 # ホーム画面 (ピルタブ) で Bar が表示される
