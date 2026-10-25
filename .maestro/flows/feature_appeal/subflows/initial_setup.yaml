@@ -19,9 +19,13 @@ appId: com.mizuki.Ohashi.Pilll.dev
     visible: "許可"
     timeout: 15000
     optional: true
-- runFlow:
-    when:
+# CI では tapOn が完了扱いになってもダイアログが閉じないことがある
+# (maestro-e2e run 40212472518 で失敗時の画面にダイアログが残っていた) ため、残っている間はタップし直す。
+# launchApp の permissions (notifications: allow) は Maestro 2.6.0 が通知の付与を行わず (同 run の maestro.log)、ダイアログは防げない
+- repeat:
+    while:
       visible: "許可"
+    times: 3
     commands:
       - tapOn: "許可"
       - waitForAnimationToEnd
