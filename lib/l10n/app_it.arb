@@ -385,7 +385,7 @@
   "editPausePeriod": "Modifica la pausa dalla pillola",
   "changePillDays": "Modifica il numero di giorni di assunzione della pillola",
   "beginToEndNumbers": "n. {begin} ~ {end}",
-  "resumeTaking": "Riprendi assunzione",
+  "resumeTaking": "Riprendi la pillola",
   "changePausePeriod": "Modifica periodo di pausa",
   "changedPausePeriod": "Il periodo di pausa dall'assunzione è stato modificato",
   "changedToDate": "Cambiato al {date}",

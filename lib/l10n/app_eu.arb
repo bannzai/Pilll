@@ -385,7 +385,7 @@
   "editPausePeriod": "Pilula hartzeko atsedenaldia editatu",
   "changePillDays": "Aldatu pilula hartzeko egun kopurua",
   "beginToEndNumbers": "{begin}. ~ {end}. zenbakia",
-  "resumeTaking": "Hartzea berriz hasi",
+  "resumeTaking": "Hasi berriro pilula hartzen",
   "changePausePeriod": "Atseden-aldiaren aldaketa",
   "changedPausePeriod": "Pilula hartzeko atseden aldia aldatu da",
   "changedToDate": "{date} datara aldatu da",

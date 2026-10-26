@@ -385,7 +385,7 @@
   "editPausePeriod": "Pillenpause bearbeiten",
   "changePillDays": "Anzahl der Einnahmetage ändern",
   "beginToEndNumbers": "Nr. {begin} ~ {end}",
-  "resumeTaking": "Einnahme fortsetzen",
+  "resumeTaking": "Pilleneinnahme fortsetzen",
   "changePausePeriod": "Einnahmepause ändern",
   "changedPausePeriod": "Die Einnahmepause wurde angepasst",
   "changedToDate": "Auf {date} geändert",

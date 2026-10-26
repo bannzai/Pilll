@@ -385,7 +385,7 @@
   "editPausePeriod": "የክኒን ዕረፍት ጊዜን ያርትዑ",
   "changePillDays": "ክኒን የሚወሰድበትን የቀናት ብዛት ይቀይሩ",
   "beginToEndNumbers": "ቁጥር {begin} ~ {end}",
-  "resumeTaking": "እንደገና መጀመር",
+  "resumeTaking": "ክኒን መውሰድን እንደገና ይጀምሩ",
   "changePausePeriod": "የእረፍት ጊዜ ለውጥ",
   "changedPausePeriod": "የእረፍት ጊዜ ቅንብር ተቀይሯል",
   "changedToDate": "ወደ {date} ተቀይሯል",

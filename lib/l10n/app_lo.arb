@@ -385,7 +385,7 @@
   "editPausePeriod": "ແກ້ໄຂໄລຍະພັກກິນຢາເມັດ",
   "changePillDays": "ປ່ຽນຈຳນວນມື້ທີ່ກິນຢາເມັດ",
   "beginToEndNumbers": "ເລກ {begin} ~ {end}",
-  "resumeTaking": "ເລີ່ມກິນໃໝ່",
+  "resumeTaking": "ກັບມາກິນຢາເມັດອີກຄັ້ງ",
   "changePausePeriod": "ປ່ຽນແປງໄລຍະພັກກິນຢາ",
   "changedPausePeriod": "ໄດ້ປ່ຽນແປງໄລຍະຢຸດກິນຢາແລ້ວ",
   "changedToDate": "ປ່ຽນເປັນ {date} ແລ້ວ",

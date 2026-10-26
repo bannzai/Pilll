@@ -385,7 +385,7 @@
   "editPausePeriod": "Измените период паузе у узимању пилула",
   "changePillDays": "Промена броја дана узимања пилуле",
   "beginToEndNumbers": "бр. {begin} ~ {end}",
-  "resumeTaking": "Obnovi uzimanje",
+  "resumeTaking": "Поново почните да узимате пилулу",
   "changePausePeriod": "Promena perioda pauze",
   "changedPausePeriod": "Promenjen je period pauze u uzimanju",
   "changedToDate": "Промењено на {date}",

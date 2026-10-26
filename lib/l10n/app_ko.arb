@@ -385,7 +385,7 @@
   "editPausePeriod": "복용 휴식 기간 수정",
   "changePillDays": "약 복용 일수 변경",
   "beginToEndNumbers": "{begin}번 ~ {end}번",
-  "resumeTaking": "복용 재개",
+  "resumeTaking": "복용 다시 시작하기",
   "changePausePeriod": "휴약 기간 변경",
   "changedPausePeriod": "휴약 기간을 변경했습니다",
   "changedToDate": "{date}로 변경되었습니다",

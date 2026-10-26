@@ -385,7 +385,7 @@
   "editPausePeriod": "පෙති ගැනීමේ විරාම කාලය සංස්කරණය කරන්න",
   "changePillDays": "පෙති ගන්නා දින ගණන වෙනස් කරන්න",
   "beginToEndNumbers": "අංක {begin} ~ {end}",
-  "resumeTaking": "සේවනය නැවත ආරම්භ කරන්න",
+  "resumeTaking": "පෙති ගැනීම නැවත අරඹන්න",
   "changePausePeriod": "සේවන විරාම කාලය වෙනස් කිරීම",
   "changedPausePeriod": "සේවන විරාම කාලය වෙනස් කරන ලදී",
   "changedToDate": "{date}ට වෙනස් කරන ලදී",

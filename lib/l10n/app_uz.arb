@@ -385,7 +385,7 @@
   "editPausePeriod": "Tabletka ichishdagi tanaffus muddatini oʻzgartiring",
   "changePillDays": "Tabletkani ichish kunlari sonini oʻzgartiring",
   "beginToEndNumbers": "{begin} ~ {end}-raqam",
-  "resumeTaking": "Qayta boshlash",
+  "resumeTaking": "Tabletkani qabul qilishni qayta boshlang",
   "changePausePeriod": "Tanaffus davrini o'zgartirish",
   "changedPausePeriod": "Dori qabul qilish tanaffus muddati o'zgartirildi",
   "changedToDate": "{date}ga o'zgartirildi",

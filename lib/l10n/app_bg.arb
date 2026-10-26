@@ -385,7 +385,7 @@
   "editPausePeriod": "Промяна на периода на почивка от хапчета",
   "changePillDays": "Промяна на броя дни за прием на хапчета",
   "beginToEndNumbers": "№ {begin} ~ {end}",
-  "resumeTaking": "Възобновяване на приема",
+  "resumeTaking": "Подновете приема на хапчета",
   "changePausePeriod": "Промяна на почивния период",
   "changedPausePeriod": "Периодът на пауза в приемането беше променен",
   "changedToDate": "Променено е на {date}",

@@ -385,7 +385,7 @@
   "editPausePeriod": "Golygu cyfnod yr egwyl rhag cymryd y bilsen",
   "changePillDays": "Newid nifer y diwrnodau o gymryd y bilsen",
   "beginToEndNumbers": "rhif {begin} ~ {end}",
-  "resumeTaking": "Ailddechrau cymryd",
+  "resumeTaking": "Ailddechrau cymryd y bilsen",
   "changePausePeriod": "Newid Cyfnod Seibiant",
   "changedPausePeriod": "Wedi newid cyfnod saib y bilsen",
   "changedToDate": "Newidiwyd i {date}",

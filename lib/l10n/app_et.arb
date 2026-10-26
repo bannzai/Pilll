@@ -385,7 +385,7 @@
   "editPausePeriod": "Muuda pillivaba perioodi",
   "changePillDays": "Muuda pilli võtmise päevade arvu",
   "beginToEndNumbers": "nr {begin} ~ {end}",
-  "resumeTaking": "Jätka võtmist",
+  "resumeTaking": "Jätka pilli võtmist",
   "changePausePeriod": "Pillipauside muutmine",
   "changedPausePeriod": "Võtmise pausperiood on muudetud",
   "changedToDate": "Muudetud {date}-le",

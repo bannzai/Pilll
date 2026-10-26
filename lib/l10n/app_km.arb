@@ -385,7 +385,7 @@
   "editPausePeriod": "កែប្រែរយៈពេលសម្រាកពីការលេបថ្នាំគ្រាប់",
   "changePillDays": "ប្ដូរចំនួនថ្ងៃលេបថ្នាំគ្រាប់",
   "beginToEndNumbers": "លេខ {begin} ~ {end}",
-  "resumeTaking": "ចាប់ផ្តើមញុំាថ្នាំឡើងវិញ",
+  "resumeTaking": "សូមចាប់ផ្តើមលេបថ្នាំគ្រាប់វិញ",
   "changePausePeriod": "ផ្លាស់ប្តូររយៈពេលសម្រាកការទទួលថ្នាំ",
   "changedPausePeriod": "រយៈពេលឈប់ទទួលទានថ្នាំត្រូវបានផ្លាស់ប្តូរហើយ",
   "changedToDate": "បានផ្លាស់ប្តូរទៅជា {date}",

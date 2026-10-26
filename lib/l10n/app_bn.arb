@@ -385,7 +385,7 @@
   "editPausePeriod": "পিল খাওয়ার বিরতির সময় বদলান",
   "changePillDays": "পিল খাওয়ার দিনের সংখ্যা পরিবর্তন করুন",
   "beginToEndNumbers": "নং {begin} ~ {end}",
-  "resumeTaking": "সেবন পুনরায় শুরু",
+  "resumeTaking": "আবার পিল খাওয়া শুরু করুন",
   "changePausePeriod": "সেবন বিরতির সময় পরিবর্তন",
   "changedPausePeriod": "সেবন বিরতির সময়কাল পরিবর্তন করা হয়েছে",
   "changedToDate": "{date} তে পরিবর্তন করা হয়েছে",

@@ -385,7 +385,7 @@
   "editPausePeriod": "Таблетка қабылдаудағы үзіліс мерзімін өзгерту",
   "changePillDays": "Таблетка қабылдайтын күндер санын өзгертіңіз",
   "beginToEndNumbers": "№ {begin} ~ {end}",
-  "resumeTaking": "Қайта бастау",
+  "resumeTaking": "Таблетканы қабылдауды қайта бастаңыз",
   "changePausePeriod": "Қабылдауды үзу кезеңін өзгерту",
   "changedPausePeriod": "Дәрі қабылдаудан тыныш кезеңі өзгертілді",
   "changedToDate": "{date}-ға өзгертілді",

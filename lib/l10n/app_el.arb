@@ -385,7 +385,7 @@
   "editPausePeriod": "Επεξεργασία περιόδου διακοπής λήψης του χαπιού",
   "changePillDays": "Αλλαγή αριθμού ημερών λήψης του χαπιού",
   "beginToEndNumbers": "αρ. {begin} ~ {end}",
-  "resumeTaking": "Επανάληψη λήψης",
+  "resumeTaking": "Συνεχίστε τη λήψη του χαπιού",
   "changePausePeriod": "Αλλαγή διαλείμματος λήψης",
   "changedPausePeriod": "Η περίοδος διαλείμματος λήψης άλλαξε",
   "changedToDate": "Άλλαξε σε {date}",

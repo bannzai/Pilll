@@ -385,7 +385,7 @@
   "editPausePeriod": "ବଟିକା ଖାଇବାର ବିରତି ଅବଧି ବଦଳାନ୍ତୁ",
   "changePillDays": "ବଟିକା ଖାଇବା ଦିନ ସଂଖ୍ୟା ବଦଳାନ୍ତୁ",
   "beginToEndNumbers": "ନଂ {begin} ~ {end}",
-  "resumeTaking": "ପୁନଃ ସେବନ",
+  "resumeTaking": "ବଟିକା ଖାଇବା ପୁଣି ଆରମ୍ଭ କରନ୍ତୁ",
   "changePausePeriod": "ସେବନ ବିରତି ଅବଧି ପରିବର୍ତ୍ତନ",
   "changedPausePeriod": "ସେବନ ବିରାମ ସମୟ ପରିବର୍ତ୍ତନ କରାଯାଇଛି",
   "changedToDate": "{date} କୁ ବଦଳାଇଲେ",

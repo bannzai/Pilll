@@ -385,7 +385,7 @@
   "editPausePeriod": "Tablettaszedési szünet szerkesztése",
   "changePillDays": "A tablettaszedési napok számának módosítása",
   "beginToEndNumbers": "{begin}. ~ {end}.",
-  "resumeTaking": "Szedés folytatása",
+  "resumeTaking": "A tabletta szedésének folytatása",
   "changePausePeriod": "Szünet időszak módosítása",
   "changedPausePeriod": "A szünet időszakot módosítottuk",
   "changedToDate": "Módosítva: {date}",

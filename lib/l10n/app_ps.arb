@@ -385,7 +385,7 @@
   "editPausePeriod": "د ګولیو د اخیستلو د دمې موده بدله کړئ",
   "changePillDays": "د ګولۍ اخیستو د ورځو شمېر بدل کړئ",
   "beginToEndNumbers": "شمېره {begin} ~ {end}",
-  "resumeTaking": "د ګولیو بیا پیل کول",
+  "resumeTaking": "د ګولۍ اخیستل بیا پیل کړئ",
   "changePausePeriod": "د استعمال وقفه دوره تبديل",
   "changedPausePeriod": "د ګولیو د نه اخیستلو وخت بدل شو",
   "changedToDate": "{date} ته بدل شو",

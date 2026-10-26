@@ -385,7 +385,7 @@
   "editPausePeriod": "Muokkaa pilleritaukoa",
   "changePillDays": "Muuta pillereiden käyttöpäivien määrää",
   "beginToEndNumbers": "nro {begin} ~ {end}",
-  "resumeTaking": "Jatka ottamista",
+  "resumeTaking": "Aloita pillerien käyttö uudelleen",
   "changePausePeriod": "Muuta taukojaksoa",
   "changedPausePeriod": "Ottotaukojakso muutettiin",
   "changedToDate": "Muutettu {date}:een",

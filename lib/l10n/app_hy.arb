@@ -385,7 +385,7 @@
   "editPausePeriod": "Խմբագրել հաբերի ընդունման դադարի տևողությունը",
   "changePillDays": "Փոխեք հաբի ընդունման օրերի քանակը",
   "beginToEndNumbers": "№ {begin} ~ {end}",
-  "resumeTaking": "Վերսկսել ընդունումը",
+  "resumeTaking": "Վերսկսեք հաբի ընդունումը",
   "changePausePeriod": "Դադարի ժամկետի փոփоխում",
   "changedPausePeriod": "Դեղի դադարի ժամանակահատվածը փոփոխվեց",
   "changedToDate": "Փոխված է {date}-ին",

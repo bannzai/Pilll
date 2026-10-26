@@ -385,7 +385,7 @@
   "editPausePeriod": "ঔষধৰ বড়ি খোৱাৰ বিৰতিৰ সময় সলনি কৰক",
   "changePillDays": "পিল খোৱাৰ দিনৰ সংখ্যা সলনি কৰক",
   "beginToEndNumbers": "নং {begin} ~ {end}",
-  "resumeTaking": "সেৱন পুনৰাৰম্ভ",
+  "resumeTaking": "পিল খোৱা পুনৰ আৰম্ভ কৰক",
   "changePausePeriod": "সেৱন বিৰতি সময় সলনি",
   "changedPausePeriod": "ঔষধ সেৱনৰ বিৰতি কাল সলনি কৰা হ'ল",
   "changedToDate": "{date}লৈ সলনি কৰা হ'ল",

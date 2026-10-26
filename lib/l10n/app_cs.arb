@@ -385,7 +385,7 @@
   "editPausePeriod": "Upravit období přestávky v užívání pilulek",
   "changePillDays": "Změnit počet dní užívání pilulek",
   "beginToEndNumbers": "č. {begin} ~ {end}",
-  "resumeTaking": "Obnovit užívání",
+  "resumeTaking": "Obnovit užívání pilulek",
   "changePausePeriod": "Změna období přestávky",
   "changedPausePeriod": "Období přestávky v užívání bylo změněno",
   "changedToDate": "Změněno na {date}",

@@ -385,7 +385,7 @@
   "editPausePeriod": "Ändra pilleruppehållet",
   "changePillDays": "Ändra antalet dagar du tar p-piller",
   "beginToEndNumbers": "nr {begin} ~ {end}",
-  "resumeTaking": "Återuppta intag",
+  "resumeTaking": "Börja ta p-piller igen",
   "changePausePeriod": "Ändra pausperiod",
   "changedPausePeriod": "Pausperioden har ändrats",
   "changedToDate": "Ändrat till {date}",

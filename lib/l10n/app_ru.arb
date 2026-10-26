@@ -385,7 +385,7 @@
   "editPausePeriod": "Изменить период перерыва в приёме таблеток",
   "changePillDays": "Изменить число дней приёма таблеток",
   "beginToEndNumbers": "№ {begin} ~ {end}",
-  "resumeTaking": "Возобновить приём",
+  "resumeTaking": "Возобновите приём таблетки",
   "changePausePeriod": "Изменение периода перерыва",
   "changedPausePeriod": "Период перерыва в приеме изменен",
   "changedToDate": "Изменено на {date}",
