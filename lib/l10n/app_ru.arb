@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Пожалуйста, обновите приложение",
   "forceUpdateMessage": "Приложение необходимо обновить. Пожалуйста, установите последнюю версию через {storeName}",
   "visitHospital": "Ходить на регулярные осмотры к врачу",
-  "receiveNotificationAt9AM": "Получать уведомление в 9:00 в день приёма",
+  "receiveNotificationAt9AM": "Получать уведомление в 9:00 того же дня",
   "deletedScheduleCannotBeRestored": "Удаленные записи не могут быть восстановлены",
   "deleteSchedule": "Удалить событие",
   "onlySupportiOS": "Доступно только для iOS-приложения",

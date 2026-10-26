@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Please update the app",
   "forceUpdateMessage": "This app needs an update. Please get the latest version from {storeName}",
   "visitHospital": "Attend a follow-up appointment",
-  "receiveNotificationAt9AM": "Receive notification at 9:00 AM on the day",
+  "receiveNotificationAt9AM": "Get a notification at 9:00 that day",
   "deletedScheduleCannotBeRestored": "Deleted schedules cannot be restored",
   "deleteSchedule": "Delete Schedule",
   "onlySupportiOS": "This feature is only available on the iOS app",

@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Zaktualizuj aplikację",
   "forceUpdateMessage": "Aplikacja wymaga aktualizacji. Pobierz najnowszą wersję z {storeName}",
   "visitHospital": "Chodzić na regularne wizyty kontrolne",
-  "receiveNotificationAt9AM": "Otrzymuj powiadomienie o 9:00 w dniu przyjmowania",
+  "receiveNotificationAt9AM": "Otrzymuj powiadomienie o 9:00 tego samego dnia",
   "deletedScheduleCannotBeRestored": "Usuniętego wydarzenia nie można przywrócić",
   "deleteSchedule": "Usuń termin",
   "onlySupportiOS": "Dostępne tylko na iOS",

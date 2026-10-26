@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Ве молиме, ажурирајте ја апликацијата",
   "forceUpdateMessage": "Потребно е ажурирање на апликацијата. Ве молиме, преземете ја најновата верзија преку {storeName}",
   "visitHospital": "Редовна посета на лекар",
-  "receiveNotificationAt9AM": "Известување во 9:00 истиот ден",
+  "receiveNotificationAt9AM": "Добивајте известување истиот ден во 9:00",
   "deletedScheduleCannotBeRestored": "Избришаните термини не можат да се вратат",
   "deleteSchedule": "Избриши термин",
   "onlySupportiOS": "Достапно е само за iOS апликација",

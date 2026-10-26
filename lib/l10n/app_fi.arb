@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Päivitä sovellus",
   "forceUpdateMessage": "Sovellus on päivitettävä. Saat uusimman version palvelusta {storeName}",
   "visitHospital": "Käydä seurantakäynnillä",
-  "receiveNotificationAt9AM": "Saa muistutus samana päivänä kello 9:00",
+  "receiveNotificationAt9AM": "Saat ilmoituksen samana päivänä klo 9:00",
   "deletedScheduleCannotBeRestored": "Poistettua aikataulua ei voi palauttaa",
   "deleteSchedule": "Poista aikataulu",
   "onlySupportiOS": "Tuettu vain iOS-sovelluksessa",

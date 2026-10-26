@@ -325,7 +325,7 @@
   "forceUpdateTitle": "කරුණාකර යෙදුම යාවත්කාලීන කරන්න",
   "forceUpdateMessage": "යෙදුම යාවත්කාලීන කිරීමට අවශ්‍යයි. කරුණාකර {storeName} වෙතින් නවතම අනුවාදය බාගන්න",
   "visitHospital": "නිතිපතා වෛද්‍ය පරීක්ෂාවට යාම",
-  "receiveNotificationAt9AM": "එදිනම 9:00ට දැනුම්දීම ලබාගන්න",
+  "receiveNotificationAt9AM": "එදිනම 9:00ට දැනුම්දීමක් ලබා ගන්න",
   "deletedScheduleCannotBeRestored": "ඉවත් කරන ලද කාර්ය සැලසුම් ප්‍රතිස්ථාපනය කළ නොහැක",
   "deleteSchedule": "කාලසටහන මකන්න",
   "onlySupportiOS": "iOS යෙදුමට පමණක් සහාය දක්වයි",

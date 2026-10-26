@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Actualiza la aplicación, por favor",
   "forceUpdateMessage": "Es necesario actualizar la aplicación. Descarga la versión más reciente desde {storeName}",
   "visitHospital": "Ir a una consulta médica de seguimiento",
-  "receiveNotificationAt9AM": "Recibir recordatorio el mismo día a las 9:00",
+  "receiveNotificationAt9AM": "Recibe una notificación a las 9:00 de ese día",
   "deletedScheduleCannotBeRestored": "Las citas eliminadas no se pueden recuperar",
   "deleteSchedule": "Eliminar evento",
   "onlySupportiOS": "Solo disponible para la aplicación iOS",

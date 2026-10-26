@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Колдонмону жаңыртыңыз",
   "forceUpdateMessage": "Колдонмону жаңыртуу керек. Сураныч, эң акыркы версиясын {storeName} дүкөнүнөн жүктөп алыңыз",
   "visitHospital": "Дарыгерге үзгүлтүксүз көрүнүү",
-  "receiveNotificationAt9AM": "Ошол күнү саат 9:00де эскертме алуу",
+  "receiveNotificationAt9AM": "Ошол күнү саат 9:00дө билдирме алыңыз",
   "deletedScheduleCannotBeRestored": "Өчүрүлгөн пландарды кайра орнотуу мүмкүн эмес",
   "deleteSchedule": "Планды өчүрүү",
   "onlySupportiOS": "iOS колдонмосунда гана жеткиликтүү",

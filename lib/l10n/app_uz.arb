@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Iltimos, ilovani yangilang",
   "forceUpdateMessage": "Ilovani yangilash kerak. Iltimos, eng soʻnggi versiyani {storeName} orqali yuklab oling",
   "visitHospital": "Shifokor ko‘rigiga muntazam borish",
-  "receiveNotificationAt9AM": "O'sha kun soat 9:00 da bildirishnoma olish",
+  "receiveNotificationAt9AM": "Oʻsha kuni soat 9:00 da bildirishnoma oling",
   "deletedScheduleCannotBeRestored": "O'chirilgan rejalarni qayta tiklab bo'lmaydi",
   "deleteSchedule": "Rejani o'chirish",
   "onlySupportiOS": "Faqat iOS ilovasi qo'llab-quvvatlanadi",

@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Lütfen uygulamayı güncelleyin",
   "forceUpdateMessage": "Uygulamanın güncellenmesi gerekiyor. Lütfen en son sürümü {storeName} üzerinden indirin",
   "visitHospital": "Düzenli doktor kontrolüne gitmek",
-  "receiveNotificationAt9AM": "Aynı gün 09:00'da bildirim al",
+  "receiveNotificationAt9AM": "Aynı gün saat 9:00'da bildirim alın",
   "deletedScheduleCannotBeRestored": "Silinen planlar geri yüklenemez",
   "deleteSchedule": "Programı sil",
   "onlySupportiOS": "Sadece iOS uygulamasında desteklenmektedir",

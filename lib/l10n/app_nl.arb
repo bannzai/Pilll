@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Werk de app bij",
   "forceUpdateMessage": "De app moet worden bijgewerkt. Je kunt de nieuwste versie downloaden via {storeName}",
   "visitHospital": "Naar een regelmatige controle bij de arts gaan",
-  "receiveNotificationAt9AM": "Ontvang melding om 9:00 op de dag",
+  "receiveNotificationAt9AM": "Ontvang die dag om 9:00 een melding",
   "deletedScheduleCannotBeRestored": "Verwijderde afspraken kunnen niet worden hersteld",
   "deleteSchedule": "Afspraak verwijderen",
   "onlySupportiOS": "Alleen ondersteund in de iOS-app",

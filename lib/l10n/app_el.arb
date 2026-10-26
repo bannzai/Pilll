@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Παρακαλούμε ενημερώστε την εφαρμογή",
   "forceUpdateMessage": "Χρειάζεται ενημέρωση της εφαρμογής. Ενημερώστε την στην πιο πρόσφατη έκδοση μέσω του {storeName}",
   "visitHospital": "Τακτική επίσκεψη στον γιατρό",
-  "receiveNotificationAt9AM": "Ειδοποίηση στις 9:00 την ίδια ημέρα",
+  "receiveNotificationAt9AM": "Λήψη ειδοποίησης στις 9:00 την ίδια ημέρα",
   "deletedScheduleCannotBeRestored": "Τα διαγραμμένα σχέδια δεν μπορούν να ανακτηθούν",
   "deleteSchedule": "Διαγραφή προγράμματος",
   "onlySupportiOS": "Διαθέσιμο μόνο στην εφαρμογή iOS",

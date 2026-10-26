@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Аппыг шинэчилнэ үү",
   "forceUpdateMessage": "Аппыг шинэчлэх шаардлагатай. {storeName}-ээс хамгийн сүүлийн хувилбарыг татаж авна уу",
   "visitHospital": "Эмчийн тогтмол үзлэгт орох",
-  "receiveNotificationAt9AM": "Тухайн өдрийн 9:00 цагт мэдэгдэл авах",
+  "receiveNotificationAt9AM": "Тухайн өдөр 9:00 цагт мэдэгдэл авах",
   "deletedScheduleCannotBeRestored": "Устгасан төлөвлөгөөг сэргээх боломжгүй",
   "deleteSchedule": "Хуваарийг устгах",
   "onlySupportiOS": "Зөвхөн iOS аппд дэмждэг",

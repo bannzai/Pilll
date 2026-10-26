@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Eguneratu aplikazioa, mesedez",
   "forceUpdateMessage": "Aplikazioa eguneratu behar da. Mesedez, eskuratu azken bertsioa {storeName} dendan",
   "visitHospital": "Medikuaren jarraipen-kontsultara joatea",
-  "receiveNotificationAt9AM": "Egun berean 9:00etan jakinarazpena jaso",
+  "receiveNotificationAt9AM": "Jaso jakinarazpena egun horretan 9:00etan",
   "deletedScheduleCannotBeRestored": "Ezabatutako gertaerak ezin dira berreskuratu",
   "deleteSchedule": "Hitzordua ezabatu",
   "onlySupportiOS": "iOS aplikaziorako soilik eskuragarria da",

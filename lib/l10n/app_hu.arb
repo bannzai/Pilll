@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Kérjük, frissítsd az alkalmazást",
   "forceUpdateMessage": "Az alkalmazást frissíteni kell. Kérjük, töltsd le a legújabb verziót a {storeName} áruházból",
   "visitHospital": "Rendszeres orvosi ellenőrzésre járni",
-  "receiveNotificationAt9AM": "Értesítés fogadása aznap 9:00-kor",
+  "receiveNotificationAt9AM": "Értesítés aznap 9:00-kor",
   "deletedScheduleCannotBeRestored": "A törölt időpontok nem állíthatók vissza",
   "deleteSchedule": "Időpont törlése",
   "onlySupportiOS": "Csak iOS alkalmazásban elérhető",

@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Vui lòng cập nhật ứng dụng",
   "forceUpdateMessage": "Ứng dụng cần được cập nhật. Vui lòng tải phiên bản mới nhất từ {storeName}",
   "visitHospital": "Đi tái khám định kỳ",
-  "receiveNotificationAt9AM": "Nhận thông báo lúc 9:00 trong ngày",
+  "receiveNotificationAt9AM": "Nhận thông báo lúc 9:00 cùng ngày",
   "deletedScheduleCannotBeRestored": "Lịch trình đã xóa không thể khôi phục",
   "deleteSchedule": "Xóa lịch trình",
   "onlySupportiOS": "Chỉ hỗ trợ ứng dụng iOS",

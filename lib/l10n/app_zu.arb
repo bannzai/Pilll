@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Sicela ubuyekeze uhlelo lokusebenza",
   "forceUpdateMessage": "Uhlelo lokusebenza ludinga ukubuyekezwa. Sicela ulande inguqulo yakamuva ku-{storeName}",
   "visitHospital": "Ukuya ekuhlolweni okuvamile kodokotela",
-  "receiveNotificationAt9AM": "Thola isaziso nge-9:00 ngalelolanga",
+  "receiveNotificationAt9AM": "Thola isaziso ngo-9:00 ngalolo suku",
   "deletedScheduleCannotBeRestored": "Amacebo asusiwe awakwazi ukubuyiselwa",
   "deleteSchedule": "Susa uhlelo",
   "onlySupportiOS": "Itholakala kuphela ku-app ye-iOS",

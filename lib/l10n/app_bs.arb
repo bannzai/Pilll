@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Molimo Vas, ažurirajte aplikaciju",
   "forceUpdateMessage": "Molimo Vas da ažurirate aplikaciju na najnoviju verziju putem {storeName}",
   "visitHospital": "Redovna posjeta ljekaru",
-  "receiveNotificationAt9AM": "Primiti notifikaciju u 9:00 istog dana",
+  "receiveNotificationAt9AM": "Primajte obavijest u 9:00 istog dana",
   "deletedScheduleCannotBeRestored": "Obrisani rasporedi se ne mogu vratiti",
   "deleteSchedule": "Obriši termin",
   "onlySupportiOS": "Dostupno samo za iOS aplikaciju",

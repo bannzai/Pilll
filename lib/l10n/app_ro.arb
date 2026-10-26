@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Actualizează aplicația, te rugăm",
   "forceUpdateMessage": "Aplicația trebuie actualizată. Poți descărca cea mai recentă versiune din {storeName}",
   "visitHospital": "Mergi la controlul medical periodic",
-  "receiveNotificationAt9AM": "Primesc notificare la 9:00 în aceeași zi",
+  "receiveNotificationAt9AM": "Primește o notificare la 9:00 în aceeași zi",
   "deletedScheduleCannotBeRestored": "Programările șterse nu pot fi restaurate",
   "deleteSchedule": "Șterge programarea",
   "onlySupportiOS": "Această funcție este disponibilă doar pentru aplicația iOS",

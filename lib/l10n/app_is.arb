@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Vinsamlegast uppfærðu appið",
   "forceUpdateMessage": "Það þarf að uppfæra appið. Þú getur sótt nýjustu útgáfuna í {storeName}",
   "visitHospital": "Fara í reglulegt eftirlit hjá lækni",
-  "receiveNotificationAt9AM": "Fá tilkynningu á sama degi klukkan 9:00",
+  "receiveNotificationAt9AM": "Fá tilkynningu kl. 9:00 sama dag",
   "deletedScheduleCannotBeRestored": "Eyddar áætlanir er ekki hægt að endurheimta",
   "deleteSchedule": "Eyða áætlun",
   "onlySupportiOS": "Aðeins fáanlegt í iOS appinu",

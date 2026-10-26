@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Opdater venligst appen",
   "forceUpdateMessage": "Appen skal opdateres. Du kan hente den nyeste version i {storeName}",
   "visitHospital": "Tage til regelmæssig lægekontrol",
-  "receiveNotificationAt9AM": "Modtag påmindelse kl. 9:00 samme dag",
+  "receiveNotificationAt9AM": "Få en notifikation kl. 9:00 samme dag",
   "deletedScheduleCannotBeRestored": "Slettede planer kan ikke gendannes",
   "deleteSchedule": "Slet aftale",
   "onlySupportiOS": "Understøttes kun på iOS-appen",

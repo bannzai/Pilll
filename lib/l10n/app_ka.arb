@@ -325,7 +325,7 @@
   "forceUpdateTitle": "გთხოვთ, განაახლოთ აპი",
   "forceUpdateMessage": "აპის განახლებაა საჭირო. გთხოვთ, უახლესი ვერსია {storeName}-დან ჩამოტვირთოთ",
   "visitHospital": "ექიმთან გეგმურ შემოწმებაზე მისვლა",
-  "receiveNotificationAt9AM": "იმავე დღეს 9:00-ზე შეტყობინება",
+  "receiveNotificationAt9AM": "შეტყობინების მიღება იმავე დღეს 9:00 საათზე",
   "deletedScheduleCannotBeRestored": "წაშლილი განრიგი ვერ აღდგება",
   "deleteSchedule": "განრიგის წაშლა",
   "onlySupportiOS": "მხარდაჭერილია მხოლოდ iOS აპლიკაციაში",

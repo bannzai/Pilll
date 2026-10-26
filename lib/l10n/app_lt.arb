@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Atnaujinkite programėlę",
   "forceUpdateMessage": "Programėlę reikia atnaujinti. Atsisiųskite naujausią versiją iš {storeName}",
   "visitHospital": "Reguliariai lankytis pas gydytoją",
-  "receiveNotificationAt9AM": "Gauti pranešimą tą dieną 9:00 val.",
+  "receiveNotificationAt9AM": "Gauti pranešimą tą pačią dieną 9:00 val.",
   "deletedScheduleCannotBeRestored": "Ištrinti planai negali būti atkurti",
   "deleteSchedule": "Ištrinti planą",
   "onlySupportiOS": "Palaikoma tik iOS programėlėje",

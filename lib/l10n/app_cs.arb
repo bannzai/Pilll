@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Aktualizujte prosím aplikaci",
   "forceUpdateMessage": "Je potřeba aktualizovat aplikaci. Nainstalujte si prosím nejnovější verzi z {storeName}",
   "visitHospital": "Chodit na pravidelné kontroly",
-  "receiveNotificationAt9AM": "Upozornění v 9:00 téhož dne",
+  "receiveNotificationAt9AM": "Dostávat oznámení v 9:00 téhož dne",
   "deletedScheduleCannotBeRestored": "Smazané termíny nelze obnovit",
   "deleteSchedule": "Smazat plán",
   "onlySupportiOS": "Podporováno pouze v iOS aplikaci",

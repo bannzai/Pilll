@@ -325,7 +325,7 @@
   "forceUpdateTitle": "مهرباني وکړئ اپلېکېشن تازه کړئ",
   "forceUpdateMessage": "اپلېکېشن تازه کولو ته اړتیا لري. مهرباني وکړئ وروستۍ نسخه له {storeName} څخه ښکته کړئ",
   "visitHospital": "د ډاکټر منظمې کتنې ته تلل",
-  "receiveNotificationAt9AM": "د ورځې په ۹:۰۰ بجه خبرتیا ترلاسه کول",
+  "receiveNotificationAt9AM": "په هماغه ورځ 9:00 بجې خبرتیا ترلاسه کړئ",
   "deletedScheduleCannotBeRestored": "پاک شوي پروګرامونه بیرته رانه اوړېدی شي",
   "deleteSchedule": "پروګرام ړنګول",
   "onlySupportiOS": "یوازې د iOS اپلیکیشن لپاره دستیاب دی",

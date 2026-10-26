@@ -325,7 +325,7 @@
   "forceUpdateTitle": "ದಯವಿಟ್ಟು ಆ್ಯಪ್ ಅನ್ನು ನವೀಕರಿಸಿ",
   "forceUpdateMessage": "ಆ್ಯಪ್‌ ಅನ್ನು ನವೀಕರಿಸುವ ಅಗತ್ಯವಿದೆ. ದಯವಿಟ್ಟು {storeName} ನಿಂದ ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಯನ್ನು ಪಡೆಯಿರಿ",
   "visitHospital": "ನಿಯಮಿತ ವೈದ್ಯಕೀಯ ತಪಾಸಣೆಗೆ ಹೋಗುವುದು",
-  "receiveNotificationAt9AM": "ಅದೇ ದಿನ ೯:೦೦ ಕ್ಕೆ ಅಧಿಸೂಚನೆ ಸ್ವೀಕರಿಸಿ",
+  "receiveNotificationAt9AM": "ಅದೇ ದಿನ 9:00 ಗಂಟೆಗೆ ಅಧಿಸೂಚನೆ ಪಡೆಯಿರಿ",
   "deletedScheduleCannotBeRestored": "ಅಳಿಸಿದ ಯೋಜನೆಗಳನ್ನು ಮರುಪ್ರಾಪ್ತಿ ಮಾಡಲಾಗುವುದಿಲ್ಲ",
   "deleteSchedule": "ವೇಳಾಪಟ್ಟಿ ಅಳಿಸಿ",
   "onlySupportiOS": "ಕೇವಲ iOS ಆಪ್‌ನಲ್ಲಿ ಮಾತ್ರ ಲಭ್ಯವಿದೆ",

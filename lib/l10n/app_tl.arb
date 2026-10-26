@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Paki-update po ang app",
   "forceUpdateMessage": "Kailangang i-update ang app. Paki-download po ang pinakabagong bersyon mula sa {storeName}",
   "visitHospital": "Pumunta sa regular na pagpapatingin",
-  "receiveNotificationAt9AM": "Makatanggap ng abiso sa 9:00 ng umaga",
+  "receiveNotificationAt9AM": "Makatanggap ng abiso nang 9:00 sa araw na iyon",
   "deletedScheduleCannotBeRestored": "Hindi na maaaring maibalik ang mga nataggal na iskedyul",
   "deleteSchedule": "Tanggalin ang iskedyul",
   "onlySupportiOS": "Suportado lamang sa iOS na app",

@@ -325,7 +325,7 @@
   "forceUpdateTitle": "请更新应用",
   "forceUpdateMessage": "应用需要更新。请前往 {storeName} 下载最新版本",
   "visitHospital": "定期复诊",
-  "receiveNotificationAt9AM": "在当日9:00接收通知",
+  "receiveNotificationAt9AM": "当天 9:00 接收通知",
   "deletedScheduleCannotBeRestored": "已删除的日程无法恢复",
   "deleteSchedule": "删除日程",
   "onlySupportiOS": "仅支持iOS应用",

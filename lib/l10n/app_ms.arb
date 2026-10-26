@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Sila kemas kini aplikasi",
   "forceUpdateMessage": "Aplikasi perlu dikemas kini. Sila muat turun versi terkini daripada {storeName}",
   "visitHospital": "Pergi ke pemeriksaan susulan berkala",
-  "receiveNotificationAt9AM": "Terima pemberitahuan pada 9:00 pada hari yang sama",
+  "receiveNotificationAt9AM": "Terima pemberitahuan pada pukul 9:00 hari yang sama",
   "deletedScheduleCannotBeRestored": "Jadual yang dipadam tidak dapat dipulihkan",
   "deleteSchedule": "Padam jadual",
   "onlySupportiOS": "Hanya tersedia untuk aplikasi iOS",

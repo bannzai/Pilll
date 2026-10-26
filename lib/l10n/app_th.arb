@@ -325,7 +325,7 @@
   "forceUpdateTitle": "โปรดอัปเดตแอป",
   "forceUpdateMessage": "แอปจำเป็นต้องอัปเดตค่ะ กรุณาดาวน์โหลดเวอร์ชันล่าสุดจาก {storeName} ค่ะ",
   "visitHospital": "ไปพบแพทย์ตามนัดอย่างต่อเนื่อง",
-  "receiveNotificationAt9AM": "รับการแจ้งเตือนเวลา 09:00 น. ในวันนั้น",
+  "receiveNotificationAt9AM": "รับการแจ้งเตือนเวลา 9:00 น. ของวันนั้น",
   "deletedScheduleCannotBeRestored": "ไม่สามารถกู้คืนกำหนดการที่ถูกลบแล้วได้",
   "deleteSchedule": "ลบกำหนดการ",
   "onlySupportiOS": "รองรับเฉพาะแอป iOS เท่านั้น",

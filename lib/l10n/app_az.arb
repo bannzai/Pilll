@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Zəhmət olmasa tətbiqi yeniləyin",
   "forceUpdateMessage": "Tətbiqi yeniləməyinizi xahiş edirik. Zəhmət olmasa, {storeName} vasitəsilə ən son versiyaya yeniləyin",
   "visitHospital": "Müntəzəm həkim müayinəsinə getmək",
-  "receiveNotificationAt9AM": "Həmin gün 9:00-da bildiriş al",
+  "receiveNotificationAt9AM": "Həmin gün saat 9:00-da bildiriş alın",
   "deletedScheduleCannotBeRestored": "Silinmiş təyinatlar bərpa edilə bilməz",
   "deleteSchedule": "Planı sil",
   "onlySupportiOS": "Yalnız iOS tətbiqi üçün mövcuddur",

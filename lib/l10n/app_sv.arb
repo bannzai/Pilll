@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Uppdatera gärna appen",
   "forceUpdateMessage": "Appen behöver uppdateras. Du kan hämta den senaste versionen från {storeName}",
   "visitHospital": "Gå på regelbundna läkarbesök",
-  "receiveNotificationAt9AM": "Få påminnelse kl. 9:00 samma dag",
+  "receiveNotificationAt9AM": "Få en avisering kl. 9:00 samma dag",
   "deletedScheduleCannotBeRestored": "Raderade händelser kan inte återställas",
   "deleteSchedule": "Ta bort händelse",
   "onlySupportiOS": "Endast tillgänglig för iOS-appen",

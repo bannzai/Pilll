@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Будь ласка, оновіть застосунок",
   "forceUpdateMessage": "Застосунок потрібно оновити. Будь ласка, завантажте останню версію з {storeName}",
   "visitHospital": "Регулярно відвідувати лікаря",
-  "receiveNotificationAt9AM": "Отримувати сповіщення того дня о 9:00",
+  "receiveNotificationAt9AM": "Отримувати сповіщення о 9:00 того самого дня",
   "deletedScheduleCannotBeRestored": "Видалені записи не можна відновити",
   "deleteSchedule": "Видалити план",
   "onlySupportiOS": "Підтримується лише в iOS додатку",

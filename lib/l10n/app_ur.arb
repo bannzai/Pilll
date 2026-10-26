@@ -325,7 +325,7 @@
   "forceUpdateTitle": "براہِ کرم ایپ اپ ڈیٹ کریں",
   "forceUpdateMessage": "ایپ کو اپ ڈیٹ کرنے کی ضرورت ہے۔ براہِ کرم {storeName} سے تازہ ترین ورژن ڈاؤن لوڈ کریں",
   "visitHospital": "باقاعدہ طبی معائنے کے لیے جانا",
-  "receiveNotificationAt9AM": "آج 9:00 بجے اطلاع موصول کریں",
+  "receiveNotificationAt9AM": "اسی دن 9:00 بجے اطلاع حاصل کریں",
   "deletedScheduleCannotBeRestored": "ڈیلیٹ شدہ شیڈول کو بحال نہیں کیا جا سکتا",
   "deleteSchedule": "شیڈول حذف کریں",
   "onlySupportiOS": "صرف iOS ایپ میں دستیاب ہے",

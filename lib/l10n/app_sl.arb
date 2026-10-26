@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Prosimo, posodobite aplikacijo",
   "forceUpdateMessage": "Aplikacijo je treba posodobiti. Prosimo, prenesite najnovejšo različico iz {storeName}",
   "visitHospital": "Hoditi na redne zdravniške preglede",
-  "receiveNotificationAt9AM": "Prejmi obvestilo ob 9:00 istega dne",
+  "receiveNotificationAt9AM": "Prejmite obvestilo ob 9:00 istega dne",
   "deletedScheduleCannotBeRestored": "Izbrisani termini se ne morejo obnoviti",
   "deleteSchedule": "Izbriši termin",
   "onlySupportiOS": "Na voljo le za iOS aplikacijo",

@@ -325,7 +325,7 @@
   "forceUpdateTitle": "အက်ပ်ကို အပ်ဒိတ်လုပ်ပေးပါ",
   "forceUpdateMessage": "အက်ပ်ကို အပ်ဒိတ်လုပ်ရန် လိုအပ်ပါတယ်။ {storeName} မှ နောက်ဆုံးဗားရှင်းကို ဒေါင်းလုဒ်လုပ်ပေးပါ",
   "visitHospital": "ပုံမှန် ဆေးခန်းပြန်ပြခြင်း",
-  "receiveNotificationAt9AM": "ယနေ့ 9:00 တွင် အသိပေးချက်ကို လက်ခံရန်",
+  "receiveNotificationAt9AM": "ထိုနေ့ 9:00 နာရီတွင် အသိပေးချက် ရယူပါ",
   "deletedScheduleCannotBeRestored": "ပယ်ဖျက်လိုက်သော အစီအစဉ်များကို ပြန်လည်ရယူ၍မရပါ",
   "deleteSchedule": "အစီအစဉ်ကို ဖျက်သိမ်းပါ",
   "onlySupportiOS": "iOS အက်ပ်အတွက်သာ ပံ့ပိုးထားပါသည်",

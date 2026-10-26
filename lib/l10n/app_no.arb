@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Oppdater appen",
   "forceUpdateMessage": "Appen må oppdateres. Du kan hente den nyeste versjonen fra {storeName}",
   "visitHospital": "Gå til regelmessig legekontroll",
-  "receiveNotificationAt9AM": "Motta varsel klokka 9:00 samme dag",
+  "receiveNotificationAt9AM": "Få et varsel kl. 9:00 samme dag",
   "deletedScheduleCannotBeRestored": "Slettede avtaler kan ikke gjenopprettes",
   "deleteSchedule": "Slett avtale",
   "onlySupportiOS": "Kun tilgjengelig på iOS-appen",

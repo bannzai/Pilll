@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Diweddarwch yr ap, os gwelwch yn dda",
   "forceUpdateMessage": "Mae angen diweddaru’r ap. Diweddarwch i’r fersiwn ddiweddaraf drwy {storeName}, os gwelwch yn dda",
   "visitHospital": "Mynd i apwyntiad meddygol dilynol",
-  "receiveNotificationAt9AM": "Derbyn hysbysiad am 9:00 ar y diwrnod",
+  "receiveNotificationAt9AM": "Derbyn hysbysiad am 9:00 ar y diwrnod hwnnw",
   "deletedScheduleCannotBeRestored": "Ni ellir adfer trefniadau sydd wedi'u dileu",
   "deleteSchedule": "Dileu apwyntiad",
   "onlySupportiOS": "Ar gael ar ap iOS yn unig",

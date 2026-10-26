@@ -325,7 +325,7 @@
   "forceUpdateTitle": "សូមធ្វើបច្ចុប្បន្នភាពកម្មវិធី",
   "forceUpdateMessage": "កម្មវិធីត្រូវការធ្វើបច្ចុប្បន្នភាព។ សូមទាញយកកំណែថ្មីបំផុតពី {storeName}",
   "visitHospital": "ទៅពិនិត្យសុខភាពតាមការណាត់ជាប្រចាំ",
-  "receiveNotificationAt9AM": "ទទួលការជូនដំណឹងនៅម៉ោង ៩:០០ ថ្ងៃនេះ",
+  "receiveNotificationAt9AM": "ទទួលការជូនដំណឹងនៅម៉ោង 9:00 នៅថ្ងៃនោះ",
   "deletedScheduleCannotBeRestored": "កម្មវិធីដែលបានលុបមិនអាចស្តារឡើងវិញបានទេ",
   "deleteSchedule": "លុបកាលវិភាគ",
   "onlySupportiOS": "គាំទ្រតែកម្មវិធី iOS ប៉ុណ្ណោះ",

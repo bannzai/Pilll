@@ -325,7 +325,7 @@
   "forceUpdateTitle": "ദയവായി ആപ്പ് അപ്ഡേറ്റ് ചെയ്യൂ",
   "forceUpdateMessage": "ആപ്പ് അപ്‌ഡേറ്റ് ചെയ്യേണ്ടതുണ്ട്. ദയവായി {storeName}ൽ നിന്ന് ഏറ്റവും പുതിയ പതിപ്പ് ഡൗൺലോഡ് ചെയ്യൂ",
   "visitHospital": "പതിവ് പരിശോധനയ്ക്ക് ഡോക്ടറെ കാണുക",
-  "receiveNotificationAt9AM": "അന്ന് രാവിലെ 9:00 ന് അറിയിപ്പ് സ്വീകരിക്കുക",
+  "receiveNotificationAt9AM": "അതേ ദിവസം 9:00-ന് അറിയിപ്പ് ലഭിക്കുക",
   "deletedScheduleCannotBeRestored": "നീക്കം ചെയ്ത ഷെഡ്യൂൾ പുനഃസ്ഥാപിക്കാൻ കഴിയില്ല",
   "deleteSchedule": "ഷെഡ്യൂൾ ഇല്ലാതാക്കുക",
   "onlySupportiOS": "iOS ആപ്പിൽ മാത്രം ലഭ്യമാണ്",

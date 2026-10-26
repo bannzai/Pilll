@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Silakan perbarui aplikasi",
   "forceUpdateMessage": "Aplikasi perlu diperbarui. Silakan unduh versi terbaru dari {storeName}",
   "visitHospital": "Pergi ke pemeriksaan dokter rutin",
-  "receiveNotificationAt9AM": "Terima notifikasi pada pukul 9:00 hari yang sama",
+  "receiveNotificationAt9AM": "Terima notifikasi pukul 9:00 pada hari yang sama",
   "deletedScheduleCannotBeRestored": "Jadwal yang dihapus tidak dapat dipulihkan",
   "deleteSchedule": "Hapus jadwal",
   "onlySupportiOS": "Fitur ini hanya tersedia di aplikasi iOS",

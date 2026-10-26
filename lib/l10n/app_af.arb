@@ -325,7 +325,7 @@
   "forceUpdateTitle": "Dateer asseblief die app op",
   "forceUpdateMessage": "Ons vra jou asseblief om die app op te dateer. Werk dit via {storeName} op na die nuutste weergawe",
   "visitHospital": "Gaan vir 'n opvolgbesoek",
-  "receiveNotificationAt9AM": "Ontvang kennisgewing om 9:00 op die dag",
+  "receiveNotificationAt9AM": "Ontvang ’n kennisgewing om 9:00 op dieselfde dag",
   "deletedScheduleCannotBeRestored": "Geskrapte afsprake kan nie herstel word nie",
   "deleteSchedule": "Verwyder afspraak",
   "onlySupportiOS": "Slegs beskikbaar op iOS-toepassings",

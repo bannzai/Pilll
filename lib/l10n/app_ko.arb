@@ -325,7 +325,7 @@
   "forceUpdateTitle": "앱을 업데이트해 주세요",
   "forceUpdateMessage": "앱을 업데이트해야 해요. {storeName}에서 최신 버전으로 업데이트해 주세요",
   "visitHospital": "정기적으로 병원에 가기",
-  "receiveNotificationAt9AM": "당일 9:00에 알림 받기",
+  "receiveNotificationAt9AM": "당일 9:00에 알림을 받아요",
   "deletedScheduleCannotBeRestored": "삭제된 일정은 복원할 수 없습니다",
   "deleteSchedule": "예정을 삭제합니다",
   "onlySupportiOS": "iOS 앱에서만 지원됩니다",

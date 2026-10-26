@@ -325,7 +325,7 @@
   "forceUpdateTitle": "કૃપા કરીને ઍપ અપડેટ કરો",
   "forceUpdateMessage": "ઍપ અપડેટ કરવી જરૂરી છે. કૃપા કરીને {storeName} પરથી નવીનતમ વર્ઝન મેળવો",
   "visitHospital": "નિયમિત તબીબી તપાસ માટે જવું",
-  "receiveNotificationAt9AM": "દિવસે 9:00 વાગ્યે સૂચના મેળવો",
+  "receiveNotificationAt9AM": "તે જ દિવસે 9:00 વાગ્યે સૂચના મેળવો",
   "deletedScheduleCannotBeRestored": "કાઢી નાખવામાં આવેલ શેડ્યૂલ પુનઃસ્થાપિત કરી શકાતું નથી",
   "deleteSchedule": "કાર્યક્રમ કાઢશે",
   "onlySupportiOS": "આ માત્ર iOS એપ્લિકેશન માટે ઉપલબ્ધ છે",
