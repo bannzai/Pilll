@@ -283,7 +283,7 @@
   "choosePillType": "Izvēlieties tabletes veidu",
   "notificationForNotTakenPeriod": "Paziņojums par {pillSheetPillSheetTypeNotTakenWord} periodu",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kad paziņojumi ir izslēgti, tablešu lietošanas ieraksts par {pillSheetPillSheetTypeNotTakenWord} periodu arī tiek izveidots automātiski",
-  "requestForCancelSurvey": "Lūgums piedalīties aptaujā pēc atcelšanas",
+  "requestForCancelSurvey": "Lūdzu, piedalieties aptaujā pēc abonementa atcelšanas",
   "pilllDescription": "Pilll - kontraceptīvo tableťu atgādinājumu lietotne",
   "reachedMaximumCountOfReminderTimes": "Sasniegts reģistrācijas ierobežojums. Lūdzu, ierobežojiet līdz {ReminderTimeMaximumCount} vienībām.",
   "minimumCountOfReminderTimes": "Ir nepieciešami vismaz {ReminderTimeMinimumCount} paziņojuma laiki",

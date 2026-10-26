@@ -283,7 +283,7 @@
   "choosePillType": "ជ្រើសរើសប្រភេទថ្នាំគ្រាប់",
   "notificationForNotTakenPeriod": "ការជូនដំណឹងសម្រាប់រយៈពេល {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "ពេលបិទការជូនដំណឹង កំណត់ត្រាការលេបថ្នាំសម្រាប់អំឡុងពេល {pillSheetPillSheetTypeNotTakenWord} ក៏ត្រូវបានបង្កើតដោយស្វ័យប្រវត្តិដែរ",
-  "requestForCancelSurvey": "សំណូមពរការសហការក្នុងការស្ទាបស្ទង់មតិបន្ទាប់ពីការលុបចោល",
+  "requestForCancelSurvey": "សូមចូលរួមការស្ទង់មតិបន្ទាប់ពីបោះបង់ការជាវ",
   "pilllDescription": "Pilll កម្មវិធីរំលឹកថ្នាំកុំមានកូនជំនាញពិសេស",
   "reachedMaximumCountOfReminderTimes": "ចំនួនម៉ោងរំលឹកបានដល់ដែនកំណត់។ សូមរក្សាឲ្យតិចជាង {ReminderTimeMaximumCount} ដង។",
   "minimumCountOfReminderTimes": "ត្រូវការការជូនដំណឹងយ៉ាងតិច {ReminderTimeMinimumCount} ចំនួន",

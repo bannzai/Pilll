@@ -283,7 +283,7 @@
   "choosePillType": "चक्कीको प्रकार छान्नुहोस्",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} अवधिको सूचना",
   "autoRecordForNotTakenPeriodIfNotificationOff": "सूचनाहरू बन्द हुँदा पनि {pillSheetPillSheetTypeNotTakenWord} अवधिका लागि सेवन रेकर्ड स्वतः बनाइन्छ",
-  "requestForCancelSurvey": "रद्दीकरणपछिको सर्वेक्षणमा सहयोगका लागि अनुरोध",
+  "requestForCancelSurvey": "सदस्यता रद्द गरेपछिको सर्वेक्षणमा कृपया सहभागी हुनुहोस्",
   "pilllDescription": "Pilll गर्भनिरोधी चक्की सेवनमा विशेषज्ञ रिमाइन्डर एप",
   "reachedMaximumCountOfReminderTimes": "दर्ताको अधिकतम सीमा पुगेको छ। कृपया {ReminderTimeMaximumCount} वटा भित्र राख्नुहोस्।",
   "minimumCountOfReminderTimes": "सूचना समयको लागि न्यूनतम {ReminderTimeMinimumCount} वटा आवश्यक छ",

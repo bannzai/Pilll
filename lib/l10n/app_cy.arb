@@ -283,7 +283,7 @@
   "choosePillType": "Dewiswch y math o bilsen",
   "notificationForNotTakenPeriod": "Hysbysiad am gyfnod {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Pan fydd hysbysiadau wedi'u diffodd, caiff cofnod cymryd ar gyfer cyfnod {pillSheetPillSheetTypeNotTakenWord} ei greu'n awtomatig hefyd",
-  "requestForCancelSurvey": "Cais am Gymorth gydag Arolwg ar ôl Canslo",
+  "requestForCancelSurvey": "Arolwg ar ôl canslo eich tanysgrifiad",
   "pilllDescription": "Pilll - ap atgoffa pilsennau arbenigol",
   "reachedMaximumCountOfReminderTimes": "Rydych wedi cyrraedd y terfyn uchaf cofrestru. Cadwch at {ReminderTimeMaximumCount} eitem neu lai os gwelwch yn dda",
   "minimumCountOfReminderTimes": "Mae angen o leiaf {ReminderTimeMinimumCount} amser hysbysiad",

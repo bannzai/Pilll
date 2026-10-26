@@ -283,7 +283,7 @@
   "choosePillType": "Alege tipul de pilulă",
   "notificationForNotTakenPeriod": "Notificare pentru perioada de {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Când notificările sunt dezactivate, se creează automat și o înregistrare pentru perioada {pillSheetPillSheetTypeNotTakenWord}",
-  "requestForCancelSurvey": "Vă rugăm să ne ajutați cu chestionarul post-anulare",
+  "requestForCancelSurvey": "Ajută-ne completând un sondaj după anularea abonamentului",
   "pilllDescription": "Pilll - Aplicație de memento pentru pilule",
   "reachedMaximumCountOfReminderTimes": "Ați atins limita maximă de înregistrări. Vă rugăm să păstrați numărul la maximum {ReminderTimeMaximumCount} elemente.",
   "minimumCountOfReminderTimes": "Sunt necesare minimum {ReminderTimeMinimumCount} ore de notificare",

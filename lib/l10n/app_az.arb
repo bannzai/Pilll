@@ -283,7 +283,7 @@
   "choosePillType": "Həb növünü seçin",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} dövrü üçün bildiriş",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Bildirişlər söndürüldükdə, {pillSheetPillSheetTypeNotTakenWord} dövrü üçün həb qəbulu qeyd avtomatik olaraq yaradılır",
-  "requestForCancelSurvey": "Ləğvetmədən sonra sorğuda əməkdaşlıq xahişi",
+  "requestForCancelSurvey": "Ləğvdən sonrakı sorğuda iştirak etməyinizi xahiş edirik",
   "pilllDescription": "Pilll - Doğum nəzarəti həbləri üçün xüsusi xatırladıcı tətbiq",
   "reachedMaximumCountOfReminderTimes": "Maksimal həddə çatdınız. {ReminderTimeMaximumCount} ədəd daxilində saxlayın",
   "minimumCountOfReminderTimes": "Ən azı {ReminderTimeMinimumCount} bildiriş vaxtı tələb olunur",

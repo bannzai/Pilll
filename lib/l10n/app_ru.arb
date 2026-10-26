@@ -283,7 +283,7 @@
   "choosePillType": "Выберите тип таблетки",
   "notificationForNotTakenPeriod": "Уведомление о периоде {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Когда уведомления отключены, журнал приёма таблеток за период {pillSheetPillSheetTypeNotTakenWord} также заполняется автоматически",
-  "requestForCancelSurvey": "Просим вас принять участие в опросе после отмены подписки",
+  "requestForCancelSurvey": "Просим вас пройти опрос после отмены подписки",
   "pilllDescription": "Pilll - приложение-напоминание для приёма контрацептивов",
   "reachedMaximumCountOfReminderTimes": "Достигнуто максимальное количество напоминаний. Пожалуйста, ограничьте количество до {ReminderTimeMaximumCount}.",
   "minimumCountOfReminderTimes": "Требуется минимум {ReminderTimeMinimumCount} времён уведомлений",

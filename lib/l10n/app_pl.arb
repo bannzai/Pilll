@@ -283,7 +283,7 @@
   "choosePillType": "Wybierz rodzaj tabletki",
   "notificationForNotTakenPeriod": "Powiadomienie o okresie {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Gdy powiadomienia są wyłączone, zapis przyjęcia tabletki w okresie {pillSheetPillSheetTypeNotTakenWord} również powstaje automatycznie",
-  "requestForCancelSurvey": "Prośba o wypełnienie ankiety po rezygnacji",
+  "requestForCancelSurvey": "Pomóż nam, odpowiadając na ankietę po anulowaniu subskrypcji",
   "pilllDescription": "Pilll - aplikacja do przypominania o pigułkach antykoncepcyjnych",
   "reachedMaximumCountOfReminderTimes": "Osiągnięto limit przypomnień. Ogranicz do {ReminderTimeMaximumCount} pozycji.",
   "minimumCountOfReminderTimes": "Wymagane jest minimum {ReminderTimeMinimumCount} powiadomień",

@@ -283,7 +283,7 @@
   "choosePillType": "ഗുളികയുടെ തരം തിരഞ്ഞെടുക്കൂ",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} കാലയളവിലെ അറിയിപ്പ്",
   "autoRecordForNotTakenPeriodIfNotificationOff": "അറിയിപ്പുകൾ ഓഫായിരിക്കുമ്പോഴും {pillSheetPillSheetTypeNotTakenWord} കാലയളവിലെ ഗുളിക കഴിച്ചതിന്റെ രേഖ സ്വയമേവ സൃഷ്ടിക്കപ്പെടും",
-  "requestForCancelSurvey": "സബ്സ്ക്രിപ്ഷൻ റദ്ദാക്കിയതിനു ശേഷമുള്ള സർവേയിൽ സഹകരിക്കാനുള്ള അഭ്യർത്ഥന",
+  "requestForCancelSurvey": "സബ്‌സ്‌ക്രിപ്‌ഷൻ റദ്ദാക്കിയ ശേഷമുള്ള സർവേയിൽ പങ്കെടുക്കൂ",
   "pilllDescription": "Pilll - പിൽ സേവനത്തിനായി പ്രത്യേകം രൂപകൽപ്പന ചെയ്ത റിമൈൻഡർ ആപ്പ്",
   "reachedMaximumCountOfReminderTimes": "പരമാവധി പരിധിയിൽ എത്തി. ദయവായി {ReminderTimeMaximumCount} എണ്ണത്തിനുള്ളിൽ ഒതുക്കുക",
   "minimumCountOfReminderTimes": "കുറഞ്ഞത് {ReminderTimeMinimumCount} അറിയിപ്പ് സമയങ്ങൾ ആവശ്യമാണ്",

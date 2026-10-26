@@ -283,7 +283,7 @@
   "choosePillType": "Kies het type pil",
   "notificationForNotTakenPeriod": "Melding voor de periode {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Als meldingen uitstaan, wordt ook voor de periode {pillSheetPillSheetTypeNotTakenWord} automatisch een innameregistratie aangemaakt",
-  "requestForCancelSurvey": "Verzoek om medewerking aan enquête na opzegging",
+  "requestForCancelSurvey": "Help ons met een enquête na het opzeggen van je abonnement",
   "pilllDescription": "Pilll - Gespecialiseerde pil reminder app",
   "reachedMaximumCountOfReminderTimes": "Het maximum aantal registraties is bereikt. Houd het binnen {ReminderTimeMaximumCount} items.",
   "minimumCountOfReminderTimes": "Er zijn minimaal {ReminderTimeMinimumCount} herinneringstijden vereist",

@@ -283,7 +283,7 @@
   "choosePillType": "Vali pilli tüüp",
   "notificationForNotTakenPeriod": "Teavitus perioodi {pillSheetPillSheetTypeNotTakenWord} kohta",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kui teavitused on välja lülitatud, luuakse {pillSheetPillSheetTypeNotTakenWord} perioodi võtmiskirje samuti automaatselt",
-  "requestForCancelSurvey": "Palun osalemist küsitluses pärast tühistamist",
+  "requestForCancelSurvey": "Palume sul pärast tellimuse tühistamist küsitlusele vastata",
   "pilllDescription": "Pilll - pillide võtmise meeldetuletusrakendus",
   "reachedMaximumCountOfReminderTimes": "Maksimaalne arv on saavutatud. Palun piirike {ReminderTimeMaximumCount} kirjega.",
   "minimumCountOfReminderTimes": "Meeldetuletuse aegu on vaja vähemalt {ReminderTimeMinimumCount}",

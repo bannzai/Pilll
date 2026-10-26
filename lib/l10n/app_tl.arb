@@ -283,7 +283,7 @@
   "choosePillType": "Piliin ninyo ang uri ng pildoras",
   "notificationForNotTakenPeriod": "Abiso para sa panahon ng {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kapag naka-off ang mga abiso, awtomatiko ring nagagawa ang tala ng pag-inom para sa panahon ng {pillSheetPillSheetTypeNotTakenWord}",
-  "requestForCancelSurvey": "Pakisuyo sa Pagsasagot ng Survey Matapos ang Pagkansela",
+  "requestForCancelSurvey": "Maaari po ba kayong sumagot sa sarbey matapos kanselahin ang suskrisyon",
   "pilllDescription": "Pilll - Pill Reminder App para sa Birth Control Pills",
   "reachedMaximumCountOfReminderTimes": "Naabot na ang maximum na bilang na pwedeng ma-register. Panatilihin sa loob ng {ReminderTimeMaximumCount} na mga reminder.",
   "minimumCountOfReminderTimes": "Kailangan ng hindi bababa sa {ReminderTimeMinimumCount} na oras ng paalala",

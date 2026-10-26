@@ -283,7 +283,7 @@
   "choosePillType": "ဆေးပြားအမျိုးအစား ရွေးချယ်ပါ",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} ကာလအတွက် အသိပေးချက်",
   "autoRecordForNotTakenPeriodIfNotificationOff": "အကြောင်းကြားချက်များ ပိတ်ထားချိန်တွင်လည်း {pillSheetPillSheetTypeNotTakenWord} ကာလအတွက် ဆေးသောက်မှတ်တမ်းကို အလိုအလျောက် ဖန်တီးပေးပါတယ်",
-  "requestForCancelSurvey": "ပယ်ဖျက်ပြီးနောက် စစ်တမ်းအတွက် ပူးပေါင်းကူညီမှုတောင်းခံခြင်း",
+  "requestForCancelSurvey": "စာရင်းသွင်းမှု ပယ်ဖျက်ပြီးနောက် စစ်တမ်းတွင် ပါဝင်ဖြေဆိုပေးပါ",
   "pilllDescription": "Pilll ဆေးလုံးသောက်ခြင်းအတွက် အထူးပြု အမှတ်ရစေရန်အက်ပ်",
   "reachedMaximumCountOfReminderTimes": "အများဆုံးအကန့်အသတ်သို့ ရောက်ရှိပါပြီ။ {ReminderTimeMaximumCount} ခုအောက်တွင် ကန့်သတ်ပါ။",
   "minimumCountOfReminderTimes": "သတိပေးချိန်သည် အနည်းဆုံး {ReminderTimeMinimumCount} ခု လိုအပ်ပါသည်",

@@ -283,7 +283,7 @@
   "choosePillType": "گولی کی قسم منتخب کریں",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} کی مدت کی اطلاع",
   "autoRecordForNotTakenPeriodIfNotificationOff": "اطلاعات بند ہونے پر بھی {pillSheetPillSheetTypeNotTakenWord} کی مدت کے لیے گولی لینے کا ریکارڈ خودکار طور پر بن جاتا ہے",
-  "requestForCancelSurvey": "منسوخی کے بعد سروے میں تعاون کی درخواست",
+  "requestForCancelSurvey": "رکنیت منسوخ کرنے کے بعد براہ کرم سروے میں حصہ لیں",
   "pilllDescription": "Pilll پل کی یاد دہانی کے لیے مخصوص ایپ",
   "reachedMaximumCountOfReminderTimes": "اندراج کی حد مکمل ہو گئی ہے۔ براہ کرم {ReminderTimeMaximumCount} کے اندر رکھیں",
   "minimumCountOfReminderTimes": "نوٹیفیکیشن کے اوقات میں کم از کم {ReminderTimeMinimumCount} اندراج ضروری ہے",

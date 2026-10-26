@@ -283,7 +283,7 @@
   "choosePillType": "गोळीचा प्रकार निवडा",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} कालावधीची सूचना",
   "autoRecordForNotTakenPeriodIfNotificationOff": "सूचना बंद असतानाही {pillSheetPillSheetTypeNotTakenWord} कालावधीसाठी सेवन नोंद आपोआप तयार होते",
-  "requestForCancelSurvey": "रद्द केल्यानंतरच्या सर्वेक्षणासाठी सहकार्याची विनंती",
+  "requestForCancelSurvey": "सदस्यता रद्द केल्यानंतरच्या सर्वेक्षणात कृपया सहभागी व्हा",
   "pilllDescription": "Pilll गर्भनिरोधक गोळ्या घेण्यासाठी विशेष रिमाइंडर अ‍ॅप",
   "reachedMaximumCountOfReminderTimes": "नोंदणीची कमाल संख्या गाठली आहे. कृपया {ReminderTimeMaximumCount} च्या मर्यादेत ठेवा.",
   "minimumCountOfReminderTimes": "किमान {ReminderTimeMinimumCount} सूचना वेळा आवश्यक आहेत",

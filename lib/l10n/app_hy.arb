@@ -283,7 +283,7 @@
   "choosePillType": "Ընտրեք հաբի տեսակը",
   "notificationForNotTakenPeriod": "Ծանուցում {pillSheetPillSheetTypeNotTakenWord} ժամանակահատվածի համար",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Երբ ծանուցումներն անջատված են, {pillSheetPillSheetTypeNotTakenWord} ժամանակահատվածի համար նույնպես ինքնաբերաբար ստեղծվում է ընդունման գրառում",
-  "requestForCancelSurvey": "Լուծարման հետո հարցակցությանը մասնակցության խնդրանք",
+  "requestForCancelSurvey": "Խնդրում ենք մասնակցել բաժանորդագրությունը չեղարկելուց հետո անցկացվող հարցմանը",
   "pilllDescription": "Pilll - հակաբեղմնավորիչ դեղերի ընդունման մասնագիտացված հիշեցման հավելված",
   "reachedMaximumCountOfReminderTimes": "Գրանցման սահմանը լրացել է: Խնդրում ենք պահպանել {ReminderTimeMaximumCount} հիշեցման սահմանը:",
   "minimumCountOfReminderTimes": "Ծանուցման ժամերը առնվազն {ReminderTimeMinimumCount} հատ պահանջվում են",

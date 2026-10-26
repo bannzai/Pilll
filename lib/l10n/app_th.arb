@@ -283,7 +283,7 @@
   "choosePillType": "เลือกประเภทของยาเม็ด",
   "notificationForNotTakenPeriod": "การแจ้งเตือนช่วง{pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "แม้ปิดการแจ้งเตือน ระบบก็จะสร้างบันทึกการทานยาสำหรับช่วง {pillSheetPillSheetTypeNotTakenWord} โดยอัตโนมัติค่ะ",
-  "requestForCancelSurvey": "ขอความร่วมมือในการตอบแบบสำรวจหลังการยกเลิกสมาชิก",
+  "requestForCancelSurvey": "ขอความร่วมมือตอบแบบสอบถามหลังยกเลิกการสมัครสมาชิก",
   "pilllDescription": "Pilll แอปเตือนรับประทานยาคุมเฉพาะทาง",
   "reachedMaximumCountOfReminderTimes": "คุณได้ลงทะเบียนครบจำนวนสูงสุดแล้ว กรุณาจำกัดให้ไม่เกิน {ReminderTimeMaximumCount} รายการ",
   "minimumCountOfReminderTimes": "จำเป็นต้องตั้งเวลาแจ้งเตือนอย่างน้อย {ReminderTimeMinimumCount} รายการ",

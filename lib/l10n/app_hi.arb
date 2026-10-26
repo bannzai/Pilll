@@ -283,7 +283,7 @@
   "choosePillType": "गोली का प्रकार चुनें",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} अवधि की सूचना",
   "autoRecordForNotTakenPeriodIfNotificationOff": "सूचनाएँ बंद होने पर भी {pillSheetPillSheetTypeNotTakenWord} अवधि के लिए सेवन रिकॉर्ड अपने आप बन जाता है",
-  "requestForCancelSurvey": "रद्दीकरण के बाद सर्वेक्षण में सहयोग का अनुरोध",
+  "requestForCancelSurvey": "सदस्यता रद्द करने के बाद सर्वेक्षण में भाग लेने का अनुरोध",
   "pilllDescription": "Pilll पिल सेवन के लिए विशेषीकृत रिमाइंडर ऐप",
   "reachedMaximumCountOfReminderTimes": "पंजीकरण की अधिकतम सीमा पूरी हो गई है। कृपया {ReminderTimeMaximumCount} के अंदर रखें।",
   "minimumCountOfReminderTimes": "न्यूनतम {ReminderTimeMinimumCount} रिमाइंडर समय आवश्यक हैं",

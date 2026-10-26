@@ -283,7 +283,7 @@
   "choosePillType": "পিলৰ প্ৰকাৰ বাছনি কৰক",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} সময়ছোৱাৰ জাননী",
   "autoRecordForNotTakenPeriodIfNotificationOff": "জাননী বন্ধ থাকিলেও {pillSheetPillSheetTypeNotTakenWord} সময়ৰ ঔষধ সেৱনৰ ৰেকৰ্ড স্বয়ংক্ৰিয়ভাৱে তৈয়াৰ হয়",
-  "requestForCancelSurvey": "বাতিলকৰণৰ পিছত সমীক্ষাত সহযোগিতাৰ অনুৰোধ",
+  "requestForCancelSurvey": "বাতিল কৰাৰ পিছৰ সমীক্ষাত অনুগ্ৰহ কৰি অংশ লওক",
   "pilllDescription": "Pilll - পিল সেৱন ব্যৱস্থাপনাৰ বাবে বিশেষভাৱে নিৰ্মিত ৰিমাইণ্ডাৰ এপ্",
   "reachedMaximumCountOfReminderTimes": "পঞ্জীকৰণৰ সৰ্বোচ্চ সীমা পোৱা গৈছে। {ReminderTimeMaximumCount}টাৰ ভিতৰত ৰাখক।",
   "minimumCountOfReminderTimes": "জাননী সময় নূন্যতম {ReminderTimeMinimumCount}টা প্ৰয়োজন",

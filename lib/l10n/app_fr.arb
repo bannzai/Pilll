@@ -283,7 +283,7 @@
   "choosePillType": "Choisissez le type de pilule",
   "notificationForNotTakenPeriod": "Notification pour la période de {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Lorsque les notifications sont désactivées, une entrée dans le journal des prises est aussi créée automatiquement pour la période {pillSheetPillSheetTypeNotTakenWord}",
-  "requestForCancelSurvey": "Demande d'enquête post-annulation",
+  "requestForCancelSurvey": "Merci de répondre à notre questionnaire après la résiliation de votre abonnement",
   "pilllDescription": "Pilll - Application de rappel de pilule contraceptive",
   "reachedMaximumCountOfReminderTimes": "Limite maximale atteinte. Veuillez conserver les rappels {ReminderTimeMaximumCount}.",
   "minimumCountOfReminderTimes": "Au moins des délais de notification {ReminderTimeMinimumCount} sont requis",

@@ -283,7 +283,7 @@
   "choosePillType": "Tria el tipus de píndola",
   "notificationForNotTakenPeriod": "Notificació del període de {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Si les notificacions estan desactivades, també es crea automàticament un registre de preses per al període {pillSheetPillSheetTypeNotTakenWord}",
-  "requestForCancelSurvey": "Sol·licitud de col·laboració per a l'enquesta posterior a la cancel·lació",
+  "requestForCancelSurvey": "Ens ajudaries responent una enquesta després de cancel·lar la subscripció",
   "pilllDescription": "Pilll Recordatori especialitzat en la presa de píndoles",
   "reachedMaximumCountOfReminderTimes": "S'ha arribat al límit màxim de registres. Si us plau, mantingueu-ho dins de {ReminderTimeMaximumCount} recordatoris.",
   "minimumCountOfReminderTimes": "Es necessiten un mínim de {ReminderTimeMinimumCount} horaris de notificació",

@@ -283,7 +283,7 @@
   "choosePillType": "აბის ტიპის არჩევა",
   "notificationForNotTakenPeriod": "შეტყობინება {pillSheetPillSheetTypeNotTakenWord} პერიოდის შესახებ",
   "autoRecordForNotTakenPeriodIfNotificationOff": "როცა შეტყობინებები გამორთულია, {pillSheetPillSheetTypeNotTakenWord} პერიოდის მიღების ჩანაწერიც ავტომატურად იქმნება",
-  "requestForCancelSurvey": "გაუქმების შემდგომი კითხვარის შევსების თხოვნა",
+  "requestForCancelSurvey": "გთხოვთ, მონაწილეობა მიიღოთ გამოწერის გაუქმების შემდგომ გამოკითხვაში",
   "pilllDescription": "Pilll - კონტრაცეპტული აბების მიღების შეხსენების აპი",
   "reachedMaximumCountOfReminderTimes": "რეგისტრაციის ლიმიტს მიაღწია. გთხოვთ შეზღუდოთ {ReminderTimeMaximumCount} ცალამდე.",
   "minimumCountOfReminderTimes": "შეტყობინების დრო მინიმუმ {ReminderTimeMinimumCount} საჭიროა",

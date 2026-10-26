@@ -283,7 +283,7 @@
   "choosePillType": "Виберіть тип пігулки",
   "notificationForNotTakenPeriod": "Сповіщення про період {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Коли сповіщення вимкнено, запис прийому за період {pillSheetPillSheetTypeNotTakenWord} також створюється автоматично",
-  "requestForCancelSurvey": "Прохання про участь в опитуванні після скасування",
+  "requestForCancelSurvey": "Просимо вас пройти опитування після скасування підписки",
   "pilllDescription": "Pilll - додаток-нагадування для прийому протизаплідних таблеток",
   "reachedMaximumCountOfReminderTimes": "Досягнуто максимальної кількості нагадувань. Будь ласка, залиште не більше {ReminderTimeMaximumCount} нагадувань.",
   "minimumCountOfReminderTimes": "Потрібно щонайменше {ReminderTimeMinimumCount} часів нагадувань",

@@ -283,7 +283,7 @@
   "choosePillType": "Scegli il tipo di pillola",
   "notificationForNotTakenPeriod": "Notifica per il periodo di {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Quando le notifiche sono disattivate, viene creato automaticamente anche un registro delle assunzioni per il periodo {pillSheetPillSheetTypeNotTakenWord}",
-  "requestForCancelSurvey": "Richiesta di collaborazione per questionario post-cancellazione",
+  "requestForCancelSurvey": "Aiutaci rispondendo a un sondaggio dopo la disdetta dell’abbonamento",
   "pilllDescription": "Pilll - App promemoria dedicata all'assunzione della pillola",
   "reachedMaximumCountOfReminderTimes": "Hai raggiunto il limite massimo di registrazioni. Ti preghiamo di limitare a {ReminderTimeMaximumCount} promemoria.",
   "minimumCountOfReminderTimes": "Sono necessari almeno {ReminderTimeMinimumCount} orari di notifica",

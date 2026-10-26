@@ -283,7 +283,7 @@
   "choosePillType": "Odaberite vrstu pilule",
   "notificationForNotTakenPeriod": "Obavijest za period {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kada su obavijesti isključene, zapis u evidenciji za period {pillSheetPillSheetTypeNotTakenWord} također se automatski kreira",
-  "requestForCancelSurvey": "Molimo vas za učešće u anketi nakon otkazivanja",
+  "requestForCancelSurvey": "Molimo Vas da učestvujete u anketi nakon otkazivanja pretplate",
   "pilllDescription": "Pilll - podsjetnik za uzimanje pilula",
   "reachedMaximumCountOfReminderTimes": "Dosegnuli ste maksimalni broj registracije. Molimo ograničite na {ReminderTimeMaximumCount} stavki.",
   "minimumCountOfReminderTimes": "Potrebno je najmanje {ReminderTimeMinimumCount} vremena obavještenja",

@@ -283,7 +283,7 @@
   "choosePillType": "Выберыце тып пігулкі",
   "notificationForNotTakenPeriod": "Апавяшчэнне пра перыяд {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Калі апавяшчэнні выключаны, запіс прыёму пігулак за перыяд {pillSheetPillSheetTypeNotTakenWord} таксама ствараецца аўтаматычна",
-  "requestForCancelSurvey": "Просім прыняць удзел у апытанні пасля адмовы",
+  "requestForCancelSurvey": "Просім вас паўдзельнічаць у апытанні пасля скасавання падпіскі",
   "pilllDescription": "Pilll - спецыялізаванае прыкладанне-нагадванне для прыёму пілюль",
   "reachedMaximumCountOfReminderTimes": "Дасягнута максімальная колькасць напамінаў. Калі ласка, абмежуйцеся {ReminderTimeMaximumCount} напамінамі",
   "minimumCountOfReminderTimes": "Патрэбна як мінімум {ReminderTimeMinimumCount} гадзін апавяшчэння",

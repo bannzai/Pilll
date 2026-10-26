@@ -283,7 +283,7 @@
   "choosePillType": "ବଟିକାର ପ୍ରକାର ବାଛନ୍ତୁ",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} ଅବଧି ପାଇଁ ସୂଚନା",
   "autoRecordForNotTakenPeriodIfNotificationOff": "ବିଜ୍ଞପ୍ତି ବନ୍ଦ ଥିଲେ ମଧ୍ୟ {pillSheetPillSheetTypeNotTakenWord} ଅବଧି ପାଇଁ ସେବନ ରେକର୍ଡ ସ୍ୱୟଂଚାଳିତ ଭାବେ ତିଆରି ହୁଏ",
-  "requestForCancelSurvey": "ବାତିଲ ପରବର୍ତ୍ତୀ ସର୍ବେ ପାଇଁ ସହଯୋଗ ଅନୁରୋଧ",
+  "requestForCancelSurvey": "ସଦସ୍ୟତା ବାତିଲ କରିବା ପରେ ସର୍ବେକ୍ଷଣରେ ଦୟାକରି ଭାଗ ନିଅନ୍ତୁ",
   "pilllDescription": "Pilll ପିଲ୍‌ ସେବନ ପାଇଁ ବିଶେଷ ସ୍ମାରକ ଆପ୍‌",
   "reachedMaximumCountOfReminderTimes": "ସର୍ବାଧିକ ପଞ୍ଜୀକରଣ ସୀମା ପହଞ୍ଚିଛି। ଦୟାକରି {ReminderTimeMaximumCount}ଟି ମଧ୍ୟରେ ରଖନ୍ତୁ।",
   "minimumCountOfReminderTimes": "ସର୍ବନିମ୍ନ {ReminderTimeMinimumCount}ଟି ବିଜ୍ଞପ୍ତି ସମୟ ଆବଶ୍ୟକ",

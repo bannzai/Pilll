@@ -283,7 +283,7 @@
   "choosePillType": "Таблетка түрін таңдаңыз",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} кезеңі туралы хабарландыру",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Хабарландырулар өшірілгенде, {pillSheetPillSheetTypeNotTakenWord} кезеңіне қабылдау жазбасы да автоматты түрде жасалады",
-  "requestForCancelSurvey": "Жазылымды тоқтатқаннан кейінгі сауалнамаға қатысуды сұраймыз",
+  "requestForCancelSurvey": "Жазылымнан бас тартқаннан кейінгі сауалнамаға қатысуыңызды сұраймыз",
   "pilllDescription": "Pilll таблетка қабылдауға арналған хабарландыру қолданбасы",
   "reachedMaximumCountOfReminderTimes": "Тіркеу шегіне жеттіңіз. {ReminderTimeMaximumCount} данадан аспауы керек.",
   "minimumCountOfReminderTimes": "Ескерту уақыты кемінде {ReminderTimeMinimumCount} дана болуы қажет",

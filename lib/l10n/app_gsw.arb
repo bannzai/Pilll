@@ -283,7 +283,7 @@
   "choosePillType": "Wähl d Pillensorte uus",
   "notificationForNotTakenPeriod": "Mitteilige für d {pillSheetPillSheetTypeNotTakenWord}-Ziit",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Wänn d'Mäldige usgschalte sind, wird für d'Ziit vo {pillSheetPillSheetTypeNotTakenWord} au automatisch e Iinahm-Ufzeichnig gmacht",
-  "requestForCancelSurvey": "Bitte um Ihre Mithilfe bei der Umfrage nach der Kündigung",
+  "requestForCancelSurvey": "Hilf eus doch mit ere Umfrag nach de Chündigung",
   "pilllDescription": "Pilll - Spezialisierti Erinnerigsapp für Pille-Iinahm",
   "reachedMaximumCountOfReminderTimes": "S Maximum isch erreicht. Bitte begränzed Sie sich uf {ReminderTimeMaximumCount} Stück.",
   "minimumCountOfReminderTimes": "Es sind mindestens {ReminderTimeMinimumCount} Benachrichtigungszeiten erforderlich",

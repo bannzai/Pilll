@@ -283,7 +283,7 @@
   "choosePillType": "Veldu tegund pillu",
   "notificationForNotTakenPeriod": "Tilkynning um {pillSheetPillSheetTypeNotTakenWord}-tímabil",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Þegar slökkt er á tilkynningum verður inntökuskrá fyrir tímabilið {pillSheetPillSheetTypeNotTakenWord} einnig til sjálfkrafa",
-  "requestForCancelSurvey": "Vinsamlegast taktu þátt í könnun eftir uppsögn",
+  "requestForCancelSurvey": "Viltu svara könnun eftir að áskriftinni var sagt upp",
   "pilllDescription": "Pilll - píluáminningarforrit fyrir píluinntöku",
   "reachedMaximumCountOfReminderTimes": "Hámarki hefur verið náð. Vinsamlegast hafðu ekki fleiri en {ReminderTimeMaximumCount} áminningar.",
   "minimumCountOfReminderTimes": "Að minnsta kosti {ReminderTimeMinimumCount} tilkynningatímar eru nauðsynlegir",

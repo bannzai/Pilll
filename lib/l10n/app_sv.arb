@@ -283,7 +283,7 @@
   "choosePillType": "Välj typ av p-piller",
   "notificationForNotTakenPeriod": "Avisering för perioden med {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "När aviseringar är avstängda skapas en intagslogg för perioden {pillSheetPillSheetTypeNotTakenWord} också automatiskt",
-  "requestForCancelSurvey": "Förfrågan om medverkan i enkät efter uppsägning",
+  "requestForCancelSurvey": "Hjälp oss gärna genom att svara på en enkät efter uppsägningen",
   "pilllDescription": "Pilll - påminnelseapp specialiserad på p-pillerintag",
   "reachedMaximumCountOfReminderTimes": "Du har nått det maximala antalet registreringar. Begränsa till {ReminderTimeMaximumCount} påminnelser eller färre.",
   "minimumCountOfReminderTimes": "Minst {ReminderTimeMinimumCount} påminnelsetider krävs",

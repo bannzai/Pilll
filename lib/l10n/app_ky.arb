@@ -283,7 +283,7 @@
   "choosePillType": "Таблетканын түрүн тандаңыз",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} мезгили тууралуу билдирүү",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Билдирмелер өчүрүлгөндө да {pillSheetPillSheetTypeNotTakenWord} мезгилине таблетка ичүү жазуусу автоматтык түрдө түзүлөт",
-  "requestForCancelSurvey": "Жокко чыганган соңундагы сурамжылоого кол кабыш берүү өтүнүчү",
+  "requestForCancelSurvey": "Жазылууну токтоткондон кийинки сурамжылоого катышып коюуңузду суранабыз",
   "pilllDescription": "Pilll контрацептивдик таблеткаларды ичүүгө атайын иштелип чыккан эскертүү колдонмосу",
   "reachedMaximumCountOfReminderTimes": "Катталуунун чеги толду. {ReminderTimeMaximumCount} данадан ашпаган санда болушу керек.",
   "minimumCountOfReminderTimes": "Эскертүү убактысы эң азында {ReminderTimeMinimumCount} болушу керек",

@@ -283,7 +283,7 @@
   "choosePillType": "පෙති වර්ගය තෝරන්න",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} කාලය සඳහා දැනුම්දීම",
   "autoRecordForNotTakenPeriodIfNotificationOff": "දැනුම්දීම් අක්‍රිය වූ විටත් {pillSheetPillSheetTypeNotTakenWord} කාලය සඳහා පෙති ගැනීමේ සටහන ස්වයංක්‍රීයව සෑදේ",
-  "requestForCancelSurvey": "අවලංගු කිරීමෙන් පසු සමීක්ෂණයට සහයෝගිතාව ඉල්ලීම",
+  "requestForCancelSurvey": "දායකත්වය අවලංගු කිරීමෙන් පසු සමීක්ෂණයට කරුණාකර සහභාගී වන්න",
   "pilllDescription": "Pilll ගර්භ නිරෝධක පෙති සඳහා විශේෂ මතක්කිරීමේ යෙදුම",
   "reachedMaximumCountOfReminderTimes": "ලියාපදිංචි කළ හැකි උපරිම සීමාවට ළඟා වී ඇත. කරුණාකර {ReminderTimeMaximumCount} ක් ඇතුළත සීමා කරන්න.",
   "minimumCountOfReminderTimes": "අවම වශයෙන් {ReminderTimeMinimumCount} දැනුම්දීමේ වේලාවන් අවශ්‍ය වේ",

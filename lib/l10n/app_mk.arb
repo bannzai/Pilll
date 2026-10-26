@@ -283,7 +283,7 @@
   "choosePillType": "Избор на вид таблета",
   "notificationForNotTakenPeriod": "Известување за периодот {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Кога известувањата се исклучени, Запис за земање за периодот {pillSheetPillSheetTypeNotTakenWord} исто така се создава автоматски",
-  "requestForCancelSurvey": "Ве молиме за соработка со анкетата по откажувањето",
+  "requestForCancelSurvey": "Ве молиме да учествувате во анкета по откажувањето на претплатата",
   "pilllDescription": "Pilll специјализирана апликација за потсетување на пилули",
   "reachedMaximumCountOfReminderTimes": "Достигнат е максималниот број на регистрации. Ве молиме ограничете се на {ReminderTimeMaximumCount} или помалку.",
   "minimumCountOfReminderTimes": "Потребни се најмалку {ReminderTimeMinimumCount} времиња за известување",

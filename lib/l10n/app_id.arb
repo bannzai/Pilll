@@ -283,7 +283,7 @@
   "choosePillType": "Pilih jenis pil",
   "notificationForNotTakenPeriod": "Notifikasi untuk periode {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Saat notifikasi dimatikan, catatan minum pil untuk periode {pillSheetPillSheetTypeNotTakenWord} juga dibuat otomatis",
-  "requestForCancelSurvey": "Mohon Bantuan Survei Setelah Pembatalan",
+  "requestForCancelSurvey": "Mohon bantu isi survei setelah membatalkan langganan",
   "pilllDescription": "Pilll Aplikasi pengingat khusus konsumsi pil",
   "reachedMaximumCountOfReminderTimes": "Batas maksimum pendaftaran telah tercapai. Harap batasi dalam {ReminderTimeMaximumCount} item.",
   "minimumCountOfReminderTimes": "Minimal {ReminderTimeMinimumCount} waktu notifikasi diperlukan",

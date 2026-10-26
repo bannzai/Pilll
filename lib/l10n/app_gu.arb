@@ -283,7 +283,7 @@
   "choosePillType": "ગોળીનો પ્રકાર પસંદ કરો",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} સમયગાળા માટેની સૂચના",
   "autoRecordForNotTakenPeriodIfNotificationOff": "સૂચનાઓ બંધ હોય ત્યારે પણ {pillSheetPillSheetTypeNotTakenWord} સમયગાળા માટે ગોળી સેવનની નોંધ આપમેળે બનાવવામાં આવે છે",
-  "requestForCancelSurvey": "કેન્સલ કર્યા પછીના સર્વેમાં તમારા સહકારની વિનંતી",
+  "requestForCancelSurvey": "સબ્સ્ક્રિપ્શન રદ કર્યા પછીના સર્વેમાં ભાગ લેવા વિનંતી",
   "pilllDescription": "Pilll ગર્ભનિરોધક ગોળીના સેવન માટે વિશેષીકૃત રિમાઇન્ડર એપ",
   "reachedMaximumCountOfReminderTimes": "નોંધણીની મર્યાદા પહોંચી ગઈ છે. કૃપા કરીને {ReminderTimeMaximumCount} કે તેથી ઓછા આઈટમ્સ રાખો",
   "minimumCountOfReminderTimes": "ઓછામાં ઓછી {ReminderTimeMinimumCount} સૂચના સમય જરૂરી છે",

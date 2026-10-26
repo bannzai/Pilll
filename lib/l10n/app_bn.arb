@@ -283,7 +283,7 @@
   "choosePillType": "পিলের ধরন বেছে নিন",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} সময়ের বিজ্ঞপ্তি",
   "autoRecordForNotTakenPeriodIfNotificationOff": "বিজ্ঞপ্তি বন্ধ থাকলেও {pillSheetPillSheetTypeNotTakenWord} সময়ের সেবনের রেকর্ড স্বয়ংক্রিয়ভাবে তৈরি হয়",
-  "requestForCancelSurvey": "সাবস্ক্রিপশন বাতিলের পর সমীক্ষায় সহযোগিতার অনুরোধ",
+  "requestForCancelSurvey": "সদস্যতা বাতিলের পর জরিপে অংশ নিতে আপনাকে অনুরোধ করছি",
   "pilllDescription": "Pilll পিল সেবনের জন্য বিশেষায়িত রিমাইন্ডার অ্যাপ",
   "reachedMaximumCountOfReminderTimes": "নিবন্ধনের সর্বোচ্চ সীমায় পৌঁছেছেন। {ReminderTimeMaximumCount}টির মধ্যে রাখুন",
   "minimumCountOfReminderTimes": "কমপক্ষে {ReminderTimeMinimumCount}টি বিজ্ঞপ্তির সময় প্রয়োজন",

@@ -283,7 +283,7 @@
   "choosePillType": "మాత్ర రకాన్ని ఎంచుకోండి",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} కాలానికి నోటిఫికేషన్",
   "autoRecordForNotTakenPeriodIfNotificationOff": "నోటిఫికేషన్‌లు ఆఫ్‌లో ఉన్నప్పుడు కూడా {pillSheetPillSheetTypeNotTakenWord} కాలానికి మాత్రల నమోదు ఆటోమేటిక్‌గా సృష్టించబడుతుంది",
-  "requestForCancelSurvey": "రద్దు తర్వాత సర్వేలో సహకరించమని విన్నపం",
+  "requestForCancelSurvey": "సబ్‌స్క్రిప్షన్‌ను రద్దు చేసిన తర్వాత సర్వేలో పాల్గొనండి",
   "pilllDescription": "Pilll పిల్స్ తీసుకోవడంలో ప్రత్యేకమైన పిల్ రిమైండర్ యాప్",
   "reachedMaximumCountOfReminderTimes": "నమోదు చేయగల గరిష్ఠ సంఖ్యకు చేరుకున్నారు. దయచేసి {ReminderTimeMaximumCount} కు పరిమితం చేయండి",
   "minimumCountOfReminderTimes": "కనీసం {ReminderTimeMinimumCount} రిమైండర్ టైమ్స్ అవసరం",

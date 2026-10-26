@@ -283,7 +283,7 @@
   "choosePillType": "Vyberte typ tabletky",
   "notificationForNotTakenPeriod": "Upozornenie na obdobie {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Keď sú upozornenia vypnuté, záznam o užití za obdobie {pillSheetPillSheetTypeNotTakenWord} sa tiež vytvorí automaticky",
-  "requestForCancelSurvey": "Prosba o spoluprácu s anketou po zrušení",
+  "requestForCancelSurvey": "Prosíme vás o vyplnenie dotazníka po zrušení predplatného",
   "pilllDescription": "Pilll - špecializovaný pripomínač na užívanie piluliek",
   "reachedMaximumCountOfReminderTimes": "Bol dosiahnutý maximálny počet registrácií. Obmedzte na maximálne {ReminderTimeMaximumCount} položiek.",
   "minimumCountOfReminderTimes": "Je potrebných minimálne {ReminderTimeMinimumCount} časov upozornení",

@@ -283,7 +283,7 @@
   "choosePillType": "בחירת סוג הגלולה",
   "notificationForNotTakenPeriod": "התראה לתקופת {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "כשההתראות כבויות, נוצר אוטומטית גם רישום נטילה לתקופת {pillSheetPillSheetTypeNotTakenWord}",
-  "requestForCancelSurvey": "בקשה לשיתוף פעולה בסקר לאחר הביטול",
+  "requestForCancelSurvey": "נשמח לקבל מענה לסקר לאחר ביטול המינוי",
   "pilllDescription": "Pilll אפליקציית תזכורת מיוחדת לנטילת גלולות",
   "reachedMaximumCountOfReminderTimes": "הגעת למגבלת הרישום. אנא הגבל את מספר התזכורות ל-{ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "נדרשים לפחות {ReminderTimeMinimumCount} זמני הודעה",

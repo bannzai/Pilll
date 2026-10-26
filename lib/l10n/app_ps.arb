@@ -283,7 +283,7 @@
   "choosePillType": "د ګولۍ ډول وټاکئ",
   "notificationForNotTakenPeriod": "د {pillSheetPillSheetTypeNotTakenWord} مودې خبرتیا",
   "autoRecordForNotTakenPeriodIfNotificationOff": "کله چې خبرتیاوې بندې وي، د {pillSheetPillSheetTypeNotTakenWord} مودې لپاره د ګولۍ اخیستلو ریکارډ هم په اوتومات ډول جوړېږي",
-  "requestForCancelSurvey": "د منسوخولو وروسته د پوښتنلیک په ډکولو کې د همکارۍ غوښتنه",
+  "requestForCancelSurvey": "د ګډون له لغوه کولو وروسته، مهرباني وکړئ په سروې کې برخه واخلئ",
   "pilllDescription": "Pilll د ګولیو د اخیستلو لپاره ځانګړی یادښت اپلیکیشن",
   "reachedMaximumCountOfReminderTimes": "د ثبت کولو حد ته ورسیده. د {ReminderTimeMaximumCount} څخه کم وساتئ",
   "minimumCountOfReminderTimes": "د یادونې وخت لږترلږه {ReminderTimeMinimumCount} اړین دی",

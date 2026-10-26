@@ -283,7 +283,7 @@
   "choosePillType": "Tafadhali chagua aina ya kidonge",
   "notificationForNotTakenPeriod": "Arifa ya kipindi cha {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Arifa zikiwa zimezimwa, rekodi ya kumeza vidonge ya kipindi cha {pillSheetPillSheetTypeNotTakenWord} pia huundwa kiotomatiki",
-  "requestForCancelSurvey": "Tafadhali shiriki katika utafiti wetu baada ya kusitisha",
+  "requestForCancelSurvey": "Tafadhali shiriki katika utafiti baada ya kusitisha usajili",
   "pilllDescription": "Pilll - Programu ya ukumbusho mahsusi kwa kutumia kidongowazi",
   "reachedMaximumCountOfReminderTimes": "Umefika kikomo cha juu cha usajili. Tafadhali hakikisha kuwa si zaidi ya {ReminderTimeMaximumCount}.",
   "minimumCountOfReminderTimes": "Angalau mipango {ReminderTimeMinimumCount} ya arifa inahitajika",

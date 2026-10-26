@@ -283,7 +283,7 @@
   "choosePillType": "Zgjidhni llojin e pilulës",
   "notificationForNotTakenPeriod": "Njoftim për periudhën {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kur njoftimet janë të çaktivizuara, regjistrimi i marrjes për periudhën {pillSheetPillSheetTypeNotTakenWord} krijohet gjithashtu automatikisht",
-  "requestForCancelSurvey": "Lutje për bashkëpunimin tuaj në pyetësorin pas anulimit",
+  "requestForCancelSurvey": "Ju lutemi, merrni pjesë në anketë pas anulimit të abonimit",
   "pilllDescription": "Pilll aplikacion kujtues i specializuar për marrjen e pilulës",
   "reachedMaximumCountOfReminderTimes": "U arrit numri maksimal i regjistrimit. Ju lutemi kufizohuni në {ReminderTimeMaximumCount} ose më pak.",
   "minimumCountOfReminderTimes": "Duhen të paktën {ReminderTimeMinimumCount} kohë njoftimi",
