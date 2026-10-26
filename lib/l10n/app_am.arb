@@ -102,7 +102,7 @@
   "beforeLastTakenPillNumber": "ክኒን ቁጥር {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "ክኒን ቁጥር {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "ቁጥር 1–{afterDisplayNumberSettingBeginPillNumber}",
-  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}ኛ",
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1 እስከ {afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}ኛ",
   "selectPauseStartDate": "የመድሃኒት እረፍት መጀመሪያ ቀን ምርጫ",

@@ -102,7 +102,7 @@
   "beforeLastTakenPillNumber": "ເມັດຢາເລກ {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "ຢາເມັດເລກ {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "ເລກ 1 ຫາ {afterDisplayNumberSettingBeginPillNumber}",
-  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} ເລກທີ່",
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→ແຂງທີ່ {afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→ເລກ{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "ເລືອກວັນເລີ່ມຕົ້ນການພັກກິນຢາ",

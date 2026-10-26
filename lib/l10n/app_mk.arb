@@ -102,7 +102,7 @@
   "beforeLastTakenPillNumber": "Таблета бр. {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "таблети бр. {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "броеви 1–{afterDisplayNumberSettingBeginPillNumber}",
-  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} број",
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} бр.",
   "selectPauseStartDate": "Избор на почетен датум за пауза од земање",

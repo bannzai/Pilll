@@ -102,7 +102,7 @@
   "beforeLastTakenPillNumber": "Viên thuốc số {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "viên thuốc số {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "số 1–{afterDisplayNumberSettingBeginPillNumber}",
-  "beforeBeginToAfterDisplayNumberBeginPillNumber": "Số {beforeBeginPillNumber}→Số {afterDisplayNumberSettingBeginPillNumber}",
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→số {afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} số",
   "selectPauseStartDate": "Chọn ngày bắt đầu nghỉ uống thuốc",

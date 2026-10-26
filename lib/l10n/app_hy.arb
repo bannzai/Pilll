@@ -102,7 +102,7 @@
   "beforeLastTakenPillNumber": "Հաբ № {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} համարի հաբեր",
   "oneToAfterDisplayNumberBeginPillNumber": "համարներ 1–{afterDisplayNumberSettingBeginPillNumber}",
-  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} համար",
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} համար",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} համար",
   "selectPauseStartDate": "Դեղի ընծիջման սկզբի ամսաթվի ընտրություն",

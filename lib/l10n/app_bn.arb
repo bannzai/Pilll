@@ -102,7 +102,7 @@
   "beforeLastTakenPillNumber": "পিল নম্বর {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "পিল নং {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "১ থেকে {afterDisplayNumberSettingBeginPillNumber} নম্বর",
-  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} নং",
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "১→{afterDisplayNumberSettingEndPillNumber}নং",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}নং",
   "selectPauseStartDate": "ঔষধ সেবন বিরতির শুরুর তারিখ নির্বাচন",

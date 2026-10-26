@@ -102,7 +102,7 @@
   "beforeLastTakenPillNumber": "№ {beforeLastTakenPillNumber} таблетка",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}-номердеги таблеткалар",
   "oneToAfterDisplayNumberBeginPillNumber": "1–{afterDisplayNumberSettingBeginPillNumber} номерлер",
-  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}-сан",
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}-чи",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}-саны",
   "selectPauseStartDate": "Дары ичүүдөн эс алуунун башталыш күнүн тандоо",

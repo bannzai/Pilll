@@ -102,7 +102,7 @@
   "beforeLastTakenPillNumber": "ဆေးလုံးအမှတ် {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "ဆေးလုံးအမှတ် {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "နံပါတ် ၁ မှ {afterDisplayNumberSettingBeginPillNumber} အထိ",
-  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}နံပါတ်",
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} နံပါတ်",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}နံပါတ်",
   "selectPauseStartDate": "ဆေးသောက်ရပ်နားစတင်ရက် ရွေးချယ်ရန်",

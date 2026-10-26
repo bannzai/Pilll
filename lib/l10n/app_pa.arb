@@ -102,7 +102,7 @@
   "beforeLastTakenPillNumber": "ਗੋਲੀ ਨੰਬਰ {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "ਗੋਲੀਆਂ ਨੰਬਰ {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "੧ ਤੋਂ {afterDisplayNumberSettingBeginPillNumber} ਨੰਬਰ",
-  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} ਨੰਬਰ",
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} ਨੰਬਰ",
   "selectPauseStartDate": "ਸੇਵਨ ਬ੍ਰੇਕ ਸ਼ੁਰੂਆਤ ਤਾਰੀਖ ਚੁਣੋ",

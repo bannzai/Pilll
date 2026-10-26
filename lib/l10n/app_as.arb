@@ -102,7 +102,7 @@
   "beforeLastTakenPillNumber": "পিল নম্বৰ {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "বৰি নং {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1ৰ পৰা {afterDisplayNumberSettingBeginPillNumber} নম্বৰলৈ",
-  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}নম্বৰ",
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "১→{afterDisplayNumberSettingEndPillNumber}নং",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} নম্বৰ",
   "selectPauseStartDate": "সেৱন বিৰতি আৰম্ভৰ তাৰিখ নিৰ্বাচন",

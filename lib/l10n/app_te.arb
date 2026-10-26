@@ -102,7 +102,7 @@
   "beforeLastTakenPillNumber": "మాత్ర సంఖ్య {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} నంబరు మాత్రలు",
   "oneToAfterDisplayNumberBeginPillNumber": "1 నుండి {afterDisplayNumberSettingBeginPillNumber} వరకు సంఖ్యలు",
-  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}నంబర్",
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}వ",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "సేవన విరామ ప్రారంభ తేదీ ఎంపిక",

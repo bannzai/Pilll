@@ -102,7 +102,7 @@
   "beforeLastTakenPillNumber": "चक्की नम्बर {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} नम्बरका चक्कीहरू",
   "oneToAfterDisplayNumberBeginPillNumber": "१ देखि {afterDisplayNumberSettingBeginPillNumber} सम्मका नम्बर",
-  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}नम्बर",
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} नम्बर",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}नं।",
   "selectPauseStartDate": "सेवन बिदा सुरुवात मिति छनोट",

@@ -102,7 +102,7 @@
   "beforeLastTakenPillNumber": "د {beforeLastTakenPillNumber} شمېرې ګولۍ",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "د ګولیو شمېرې {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "له 1 تر {afterDisplayNumberSettingBeginPillNumber} شمېرې",
-  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} شمیره",
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "۱→{afterDisplayNumberSettingEndPillNumber}ګ",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} شمېره",
   "selectPauseStartDate": "د درملو د ناستې د پیل نیټه ټاکنه",

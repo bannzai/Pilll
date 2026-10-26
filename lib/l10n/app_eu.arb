@@ -102,7 +102,7 @@
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}. pilula",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}. pilulak",
   "oneToAfterDisplayNumberBeginPillNumber": "1etik {afterDisplayNumberSettingBeginPillNumber}ra arteko zenbakiak",
-  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} zenbakia",
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}. zenbakia",
   "selectPauseStartDate": "Atseden aldiaren hasiera data hautatu",

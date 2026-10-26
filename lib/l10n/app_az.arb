@@ -102,7 +102,7 @@
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} nömrəli həb",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} nömrəli həblər",
   "oneToAfterDisplayNumberBeginPillNumber": "1–{afterDisplayNumberSettingBeginPillNumber} nömrələr",
-  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} nömrə",
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Həb qəbuluna fasilənin başlama tarixi seçimi",

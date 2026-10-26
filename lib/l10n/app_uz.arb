@@ -102,7 +102,7 @@
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}-raqamli tabletka",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}-raqamli tabletkalar",
   "oneToAfterDisplayNumberBeginPillNumber": "1–{afterDisplayNumberSettingBeginPillNumber} raqamlar",
-  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}-son",
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}-raqam",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}-raqam",
   "selectPauseStartDate": "Tabletka tanaffusi boshlanish kunini tanlash",

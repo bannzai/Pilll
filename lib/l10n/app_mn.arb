@@ -102,7 +102,7 @@
   "beforeLastTakenPillNumber": "№ {beforeLastTakenPillNumber} эм",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} дугаартай эм",
   "oneToAfterDisplayNumberBeginPillNumber": "1–{afterDisplayNumberSettingBeginPillNumber} дугаар",
-  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} дугаар",
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} дугаар",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} дугаар",
   "selectPauseStartDate": "Завсрах эхлэх өдөр сонгох",
