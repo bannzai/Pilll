@@ -330,7 +330,7 @@
   "deleteSchedule": "Жоспарды жойыңыз",
   "onlySupportiOS": "Бұл мүмкіндік тек iOS қолданбасында қолжетімді",
   "healthKitDoesNotSupport": "Бұл мүмкіндік денсаулық деректерін қолдамайтын құрылғыларда қолжетімсіз",
-  "enableHealthKitFromSettings": "Баптаулар қолданбасынан Денсаулықты қосыңыз",
+  "enableHealthKitFromSettings": "«Параметрлер» қолданбасында «Денсаулық» қолданбасына кіруге рұқсат беріңіз",
   "accountAlreadyLinked": "Бұл {accountTypeProviderName} тіркелгісі сіздің Pilll тіркелгіңізге бұрыннан байланыстырылған. Экранды жаңартып көріңіз. ЖҚС бөлімін де қараңыз. Егжей-тегжей: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Бұл {accountTypeProviderName} аккаунты басқа Pilll аккаунтымен байланысқан болғандықтан тіркелу мүмкін емес. FAQ-ды көріңіз. Егжей-тегжей: {exceptionMessage}",
   "emailAlreadyInUse": "Сіздің {accountTypeProviderName} аккаунтыңыздың электрондық пошта мекенжайы басқа Pilll аккаунтына байланысқан болғандықтан, тіркелу мүмкін емес. FAQ-ты да қараңыз. Егжей-тегжейлі: {exceptionMessage}",

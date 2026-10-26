@@ -330,7 +330,7 @@
   "deleteSchedule": "Supprimer le programme",
   "onlySupportiOS": "Cette fonctionnalité est disponible uniquement dans l’application iOS",
   "healthKitDoesNotSupport": "Cette fonctionnalité n’est pas disponible sur les appareils qui ne prennent pas en charge les données de santé",
-  "enableHealthKitFromSettings": "Veuillez activer Santé dans l'application Paramètres",
+  "enableHealthKitFromSettings": "Veuillez autoriser l’accès à Santé dans l’app Réglages",
   "accountAlreadyLinked": "Ce compte {accountTypeProviderName} est déjà lié à votre compte Pilll. Veuillez essayer d'actualiser l'écran ou consulter notre FAQ pour plus d'informations. Détails : {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Ce compte {accountTypeProviderName} est déjà lié à un autre compte Pilll et ne peut pas être utilisé pour l'inscription. Veuillez consulter notre FAQ pour plus d'informations. Détails : {exceptionMessage}",
   "emailAlreadyInUse": "L'adresse e-mail de votre compte {accountTypeProviderName} est déjà liée à un autre compte Pilll, l'inscription ne peut donc pas être finalisée. Veuillez consulter notre FAQ. Détails : {exceptionMessage}",

@@ -330,7 +330,7 @@
   "deleteSchedule": "Fshini planin",
   "onlySupportiOS": "Kjo veçori është e disponueshme vetëm në aplikacionin për iOS",
   "healthKitDoesNotSupport": "Kjo veçori nuk ofrohet në pajisjet që nuk mbështesin të dhënat shëndetësore",
-  "enableHealthKitFromSettings": "Ju lutemi aktivizoni Shëndetin nga aplikacioni Cilësime",
+  "enableHealthKitFromSettings": "Ju lutemi, aktivizoni qasjen te Shëndeti në aplikacionin Cilësimet",
   "accountAlreadyLinked": "Ky llogari {accountTypeProviderName} është tashmë e lidhur me llogarinë tuaj Pilll. Provoni të rifreshoni ekranin. Ju lutemi, shikoni edhe FAQ-të. Detajet: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Ky llogari {accountTypeProviderName} është tashmë e lidhur me një llogari tjetër të Pilll dhe nuk mund të regjistrohet. Ju lutemi shikoni edhe FAQ. Detajet: {exceptionMessage}",
   "emailAlreadyInUse": "Nuk mundeni të regjistroheni pasi adresa e emailit e llogarisë suaj {accountTypeProviderName} është tashmë e lidhur me një llogari tjetër Pilll. Shikoni FAQ-të. Detajet: {exceptionMessage}",

@@ -330,7 +330,7 @@
   "deleteSchedule": "Планды өчүрүңүз",
   "onlySupportiOS": "Бул функция iOS тиркемесинде гана жеткиликтүү",
   "healthKitDoesNotSupport": "Бул функция ден соолук маалыматын колдобогон түзмөктөрдө жеткиликсиз",
-  "enableHealthKitFromSettings": "Жөндөөлөр колдонмосунан Саламаттыкты иштетиңиз",
+  "enableHealthKitFromSettings": "Жөндөөлөр колдонмосунан Ден соолук колдонмосуна кирүүгө уруксат бериңиз",
   "accountAlreadyLinked": "Бул {accountTypeProviderName} аккаунт мурда эле сиздин Pilll аккаунтуңузга байланыштырылган. Экранды жаңыртып көрүңүз. FAQты да караңыз. Кененирээк маалымат: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Бул {accountTypeProviderName} аккаунт мурда эле башка Pilll аккаунтуна байланышкан болгондуктан каттоо мүмкүн эмес. FAQ дагы көрүңүз. Чоо-жайы: {exceptionMessage}",
   "emailAlreadyInUse": "{accountTypeProviderName} аккаунту менен колдонулган электрондук дарегиңиз башка Pilll аккаунтуна байланыштырылгандыктан катталуу мүмкүн эмес. FAQ бөлүмүн да көрүңүз. Чоо-жайы: {exceptionMessage}",

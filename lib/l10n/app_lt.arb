@@ -330,7 +330,7 @@
   "deleteSchedule": "Ištrinkite planą",
   "onlySupportiOS": "Ši funkcija pasiekiama tik „iOS“ programėlėje",
   "healthKitDoesNotSupport": "Ši funkcija nepasiekiama įrenginiuose, kurie nepalaiko sveikatos duomenų",
-  "enableHealthKitFromSettings": "Prašome įgalinti Sveikatą nustatymų programėlėje",
+  "enableHealthKitFromSettings": "Leiskite prieigą prie programos „Sveikata“ programoje „Nustatymai“",
   "accountAlreadyLinked": "Ši {accountTypeProviderName} paskyra jau susieta su jūsų Pilll paskyra. Pabandykite atnaujinti ekraną. Taip pat peržiūrėkite DUK. Išsamiau: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Šis {accountTypeProviderName} paskyra jau susieta su kita Pilll paskyra, todėl registracija negalima. Taip pat peržiūrėkite DUK. Išsamiau: {exceptionMessage}",
   "emailAlreadyInUse": "Jūsų {accountTypeProviderName} paskyroje naudojamas el. pašto adresas jau susietas su kita Pilll paskyra, todėl registracija negalima. Taip pat peržiūrėkite DUK. Išsami informacija: {exceptionMessage}",

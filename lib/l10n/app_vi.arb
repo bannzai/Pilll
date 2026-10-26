@@ -330,7 +330,7 @@
   "deleteSchedule": "Xóa lịch trình",
   "onlySupportiOS": "Tính năng này chỉ có trên ứng dụng iOS",
   "healthKitDoesNotSupport": "Tính năng này không khả dụng trên thiết bị không hỗ trợ dữ liệu sức khỏe",
-  "enableHealthKitFromSettings": "Vui lòng kích hoạt Sức khỏe trong ứng dụng Cài đặt",
+  "enableHealthKitFromSettings": "Vui lòng bật quyền truy cập ứng dụng Sức khỏe trong Cài đặt",
   "accountAlreadyLinked": "Tài khoản {accountTypeProviderName} này đã được liên kết với tài khoản Pilll của bạn. Vui lòng thử làm mới màn hình. Vui lòng xem FAQ. Chi tiết: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Tài khoản {accountTypeProviderName} này đã được liên kết với tài khoản Pilll khác nên không thể đăng ký. Vui lòng xem FAQ. Chi tiết: {exceptionMessage}",
   "emailAlreadyInUse": "Không thể đăng ký vì địa chỉ email bạn đang sử dụng trong tài khoản {accountTypeProviderName} đã được liên kết với tài khoản Pilll khác. Vui lòng tham khảo FAQ. Chi tiết: {exceptionMessage}",

@@ -330,7 +330,7 @@
   "deleteSchedule": "പട്ടിക ഇല്ലാതാക്കുക",
   "onlySupportiOS": "ഈ സൗകര്യം iOS ആപ്പിൽ മാത്രമേ ലഭ്യമാകൂ",
   "healthKitDoesNotSupport": "ആരോഗ്യ വിവരങ്ങൾ പിന്തുണയ്ക്കാത്ത ഉപകരണങ്ങളിൽ ഈ സൗകര്യം ലഭ്യമല്ല",
-  "enableHealthKitFromSettings": "സെറ്റിംഗ്സ് ആപ്പിൽ നിന്ന് ഹെൽത്ത്കെയർ സജീവമാക്കുക",
+  "enableHealthKitFromSettings": "ക്രമീകരണ ആപ്പിൽ ആരോഗ്യ ആപ്പിലേക്കുള്ള പ്രവേശനം അനുവദിക്കൂ",
   "accountAlreadyLinked": "ഈ {accountTypeProviderName} അക്കൗണ്ട് ഇതിനകം നിങ്ങളുടെ Pilll അക്കൗണ്ടുമായി ബന്ധിപ്പിച്ചിട്ടുണ്ട്. സ്ക്രീൻ പുതുക്കാൻ ശ്രമിക്കുക. FAQ യും കാണുക. വിശദാംശങ്ങൾ: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "ഈ {accountTypeProviderName} അക്കൗണ്ട് ഇതിനകം മറ്റൊരു Pilll അക്കൗണ്ടുമായി ബന്ധിപ്പിച്ചിട്ടുള്ളതിനാൽ രജിസ്റ്റർ ചെയ്യാൻ കഴിയില്ല. FAQ യും കാണുക. വിശദാംശങ്ങൾ: {exceptionMessage}",
   "emailAlreadyInUse": "നിങ്ങളുടെ {accountTypeProviderName} അക്കൗണ്ടിലെ ഇമെയിൽ വിലാസം ഇതിനകം മറ്റൊരു Pilll അക്കൗണ്ടുമായി ബന്ധിപ്പിച്ചിരിക്കുന്നതിനാൽ രജിസ്ട്രേഷൻ സാധ്യമല്ല. FAQ കൂടി കാണുക. വിവരങ്ങൾ: {exceptionMessage}",

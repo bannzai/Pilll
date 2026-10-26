@@ -330,7 +330,7 @@
   "deleteSchedule": "Plan lösche",
   "onlySupportiOS": "Die Funktion gits nume i de iOS-App",
   "healthKitDoesNotSupport": "Die Funktion gaht uf Grät, wo kei Gsundheitsdate unterstützed, leider nöd",
-  "enableHealthKitFromSettings": "Bitte aktiviere d'Gsundheit i de Iistelligs-App",
+  "enableHealthKitFromSettings": "Du chasch de Zuegriff uf Gsundheit i de Iistellige aktiviere",
   "accountAlreadyLinked": "Ds {accountTypeProviderName}-Konto isch scho mit Ihrem Pilll-Konto verbunde. Bitte versuechet d'Aazeig z'aktualisiere. Luegget au s'FAQ aa. Details: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Dä {accountTypeProviderName}-Account isch bereits mit eme andere Pilll-Account verknüpft und chan drum nöd registriert werde. Lueg au i üsi FAQ. Details: {exceptionMessage}",
   "emailAlreadyInUse": "Ihri E-Mail-Adrässe vom {accountTypeProviderName}-Account isch scho mit emne andere Pilll-Account verbunde, drum chönd Sie sich nöd registriere. Bitte luegäd au s FAQ aa. Details: {exceptionMessage}",

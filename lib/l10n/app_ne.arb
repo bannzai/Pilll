@@ -330,7 +330,7 @@
   "deleteSchedule": "तालिका मेटाउनुहोस्",
   "onlySupportiOS": "यो सुविधा iOS एपमा मात्र उपलब्ध छ",
   "healthKitDoesNotSupport": "स्वास्थ्यसम्बन्धी डाटा समर्थन नगर्ने उपकरणमा यो सुविधा उपलब्ध छैन",
-  "enableHealthKitFromSettings": "कृपया सेटिङ एपबाट हेल्थकेयर सक्रिय गर्नुहोस्",
+  "enableHealthKitFromSettings": "कृपया सेटिङ एपमा स्वास्थ्य एपको पहुँच सक्षम गर्नुहोस्",
   "accountAlreadyLinked": "यो {accountTypeProviderName} खाता पहिले नै तपाईंको Pilll खातासँग जोडिएको छ। स्क्रिन अपडेट गर्ने कोशिश गर्नुहोस्। FAQ पनि हेर्नुहोस्। विवरण: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "यो {accountTypeProviderName} खाता पहिले नै अन्य Pilll खातासँग जोडिएको छ त्यसैले दर्ता गर्न सकिँदैन। FAQ पनि हेर्नुहोस्। विवरण: {exceptionMessage}",
   "emailAlreadyInUse": "तपाईंले {accountTypeProviderName} खातामा प्रयोग गर्नुभएको इमेल ठेगाना पहिले नै अर्को Pilll खातासँग जोडिएको छ, त्यसैले दर्ता गर्न सकिँदैन। FAQ पनि हेर्नुहोस्। विस्तृत जानकारी: {exceptionMessage}",

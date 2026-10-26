@@ -330,7 +330,7 @@
   "deleteSchedule": "حذف برنامه",
   "onlySupportiOS": "این قابلیت فقط در برنامهٔ iOS در دسترس است",
   "healthKitDoesNotSupport": "این قابلیت در دستگاه‌هایی که از داده‌های سلامت پشتیبانی نمی‌کنند، در دسترس نیست",
-  "enableHealthKitFromSettings": "لطفاً سلامت را از اپلیکیشن تنظیمات فعال کنید",
+  "enableHealthKitFromSettings": "لطفاً دسترسی به برنامهٔ سلامت را در تنظیمات فعال کنید",
   "accountAlreadyLinked": "این حساب {accountTypeProviderName} قبلاً به حساب Pilll شما مرتبط شده است. لطفاً صفحه را بروزرسانی کنید. همچنین به پرسش‌های متداول نگاه کنید. جزئیات: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "این حساب {accountTypeProviderName} قبلاً به حساب Pilll دیگری متصل شده است، بنابراین نمی‌توان ثبت‌نام کرد. لطفاً سؤالات متداول را نیز مشاهده کنید. جزئیات: {exceptionMessage}",
   "emailAlreadyInUse": "آدرس ایمیل شما که در حساب کاربری {accountTypeProviderName} استفاده می‌کنید، از قبل به حساب Pilll دیگری مرتبط شده است، بنابراین ثبت نام امکان‌پذیر نیست. لطفاً پرسش‌های متداول را نیز مطالعه کنید. جزئیات: {exceptionMessage}",

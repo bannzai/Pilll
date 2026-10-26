@@ -330,7 +330,7 @@
   "deleteSchedule": "Ջնջել ժամանակացույցը",
   "onlySupportiOS": "Այս գործառույթը հասանելի է միայն iOS հավելվածում",
   "healthKitDoesNotSupport": "Այս գործառույթը հասանելի չէ առողջության տվյալները չաջակցող սարքերում",
-  "enableHealthKitFromSettings": "Խնդրում ենք Կարգավորումների հավելվածում միացրեք Առողջությունը",
+  "enableHealthKitFromSettings": "Խնդրում ենք «Կարգավորումներ» հավելվածում միացնել «Առողջություն» հավելվածի հասանելիությունը",
   "accountAlreadyLinked": "Այս {accountTypeProviderName} հաշիվն արդեն կապակցված է ձեր Pilll հաշվի հետ: Փորձեք թարմացնել էկրանը: Նաև նայեք FAQ-ին: Մանրամասներ՝ {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Այս {accountTypeProviderName} հաշիվն արդեն կապված է այլ Pilll հաշվի հետ, ուստի գրանցումը հնարավոր չէ: Խնդրում ենք դիտել նաև ՀՏՀ բաժինը: Մանրամասները՝ {exceptionMessage}",
   "emailAlreadyInUse": "{accountTypeProviderName} հաշվի էլ․փոստի հասցեն արդեն կապված է այլ Pilll հաշվի հետ, ուստի գրանցումը հնարավոր չէ։ Տես նաև ՀՏՀ բաժինը։ Մանրամասներ՝ {exceptionMessage}",

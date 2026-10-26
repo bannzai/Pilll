@@ -330,7 +330,7 @@
   "deleteSchedule": "ਯੋਜਨਾ ਮਿਟਾਓ",
   "onlySupportiOS": "ਇਹ ਸਹੂਲਤ ਸਿਰਫ਼ iOS ਐਪ ਵਿੱਚ ਉਪਲਬਧ ਹੈ",
   "healthKitDoesNotSupport": "ਸਿਹਤ ਡੇਟਾ ਦਾ ਸਮਰਥਨ ਨਾ ਕਰਨ ਵਾਲੀਆਂ ਡਿਵਾਈਸਾਂ ਉੱਤੇ ਇਹ ਸਹੂਲਤ ਉਪਲਬਧ ਨਹੀਂ ਹੈ",
-  "enableHealthKitFromSettings": "ਸੈਟਿੰਗ ਐਪ ਵਿੱਚੋਂ ਹੈਲਥਕੇਅਰ ਨੂੰ ਚਾਲੂ ਕਰੋ",
+  "enableHealthKitFromSettings": "ਕਿਰਪਾ ਕਰਕੇ ਸੈਟਿੰਗਾਂ ਐਪ ਵਿੱਚ ਸਿਹਤ ਐਪ ਤੱਕ ਪਹੁੰਚ ਚਾਲੂ ਕਰੋ",
   "accountAlreadyLinked": "ਇਹ {accountTypeProviderName} ਖਾਤਾ ਪਹਿਲਾਂ ਹੀ ਤੁਹਾਡੇ Pilll ਖਾਤੇ ਨਾਲ ਜੁੜਿਆ ਹੋਇਆ ਹੈ। ਸਕਰੀਨ ਨੂੰ ਰਿਫਰੈਸ਼ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ। FAQ ਵੀ ਵੇਖੋ। ਵੇਰਵਾ: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "ਇਹ {accountTypeProviderName} ਖਾਤਾ ਪਹਿਲਾਂ ਹੀ ਦੂਸਰੇ Pilll ਖਾਤੇ ਨਾਲ ਜੁੜਿਆ ਹੋਇਆ ਹੈ ਇਸਲਈ ਰਜਿਸਟਰ ਨਹੀਂ ਕਰ ਸਕਦੇ। FAQ ਵੀ ਦੇਖੋ। ਵੇਰਵਾ: {exceptionMessage}",
   "emailAlreadyInUse": "ਪਹਿਲਾਂ ਹੀ {accountTypeProviderName} ਖਾਤੇ ਨਾਲ ਵਰਤਿਆ ਜਾ ਰਿਹਾ ਈਮੇਲ ਪਤਾ ਕਿਸੇ ਹੋਰ Pilll ਖਾਤੇ ਨਾਲ ਜੁੜਿਆ ਹੋਇਆ ਹੈ ਇਸ ਲਈ ਰਜਿਸਟਰ ਨਹੀਂ ਕਰ ਸਕਦੇ। ਕਿਰਪਾ ਕਰਕੇ FAQ ਵੀ ਵੇਖੋ। ਵੇਰਵਾ: {exceptionMessage}",

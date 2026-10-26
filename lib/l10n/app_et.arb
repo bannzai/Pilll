@@ -330,7 +330,7 @@
   "deleteSchedule": "Kustuta plaan",
   "onlySupportiOS": "See funktsioon on saadaval ainult iOS-i rakenduses",
   "healthKitDoesNotSupport": "See funktsioon pole saadaval seadmetes, mis ei toeta terviseandmeid",
-  "enableHealthKitFromSettings": "Aktiveerige Tervis Seadete rakenduses",
+  "enableHealthKitFromSettings": "Luba palun rakenduses Seaded juurdepääs Tervisele",
   "accountAlreadyLinked": "See {accountTypeProviderName} konto on juba teie Pilll kontoga seotud. Palun proovige lehte värskendada. Vaadake ka KKK-d. Üksikasjad: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "See {accountTypeProviderName} konto on juba teise Pilll kontoga seotud, seega registreerimine ei ole võimalik. Vaadake ka KKK. Üksikasjad: {exceptionMessage}",
   "emailAlreadyInUse": "Teie {accountTypeProviderName} kontoga kasutatav e-posti aadress on juba seotud teise Pilli kontoga, mistõttu registreerimine ei ole võimalik. Vaadake ka KKK-d. Üksikasjad: {exceptionMessage}",

@@ -330,7 +330,7 @@
   "deleteSchedule": "Delete schedule",
   "onlySupportiOS": "This feature is only available in the iOS app",
   "healthKitDoesNotSupport": "This feature isn't available on devices that don't support health data",
-  "enableHealthKitFromSettings": "Please enable Health in the Settings app",
+  "enableHealthKitFromSettings": "Please enable access to Health in the Settings app",
   "accountAlreadyLinked": "This {accountTypeProviderName} account is already linked to your Pilll account. Please try refreshing the screen or check our FAQ for more information. Details: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "This {accountTypeProviderName} account is already linked to another Pilll account and cannot be used for registration. Please check our FAQ for more information. Details: {exceptionMessage}",
   "emailAlreadyInUse": "The email address from your {accountTypeProviderName} account is already linked to another Pilll account, so registration cannot be completed. Please check our FAQ. Details: {exceptionMessage}",

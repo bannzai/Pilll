@@ -330,7 +330,7 @@
   "deleteSchedule": "Видалити план",
   "onlySupportiOS": "Ця функція доступна лише в застосунку для iOS",
   "healthKitDoesNotSupport": "Ця функція недоступна на пристроях, які не підтримують дані про здоров’я",
-  "enableHealthKitFromSettings": "Будь ласка, увімкніть Здоров'я в додатку Налаштування",
+  "enableHealthKitFromSettings": "Увімкніть доступ до програми «Здоров’я» в налаштуваннях",
   "accountAlreadyLinked": "Цей {accountTypeProviderName} обліковий запис вже прив'язаний до вашого облікового запису Pilll. Спробуйте оновити екран. Також перегляньте ЧаПи. Деталі: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Цей обліковий запис {accountTypeProviderName} вже пов'язаний з іншим обліковим записом Pilll, тому реєстрація неможлива. Також перегляньте FAQ. Деталі: {exceptionMessage}",
   "emailAlreadyInUse": "Електронна пошта, яку ви використовуєте для облікового запису {accountTypeProviderName}, вже прив'язана до іншого облікового запису Pilll, тому реєстрація неможлива. Перегляньте також часті запитання. Подробиці: {exceptionMessage}",

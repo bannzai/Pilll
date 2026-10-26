@@ -330,7 +330,7 @@
   "deleteSchedule": "Eyða áætlun",
   "onlySupportiOS": "Þessi eiginleiki er aðeins í boði í iOS-appinu",
   "healthKitDoesNotSupport": "Þessi eiginleiki er ekki í boði í tækjum sem styðja ekki heilsufarsgögn",
-  "enableHealthKitFromSettings": "Vinsamlegast virkjaðu heilsuvernd í stillingaforritinu",
+  "enableHealthKitFromSettings": "Þú getur virkjað aðgang að Heilsa í Stillingum",
   "accountAlreadyLinked": "Þessi {accountTypeProviderName} reikningur er nú þegar tengdur við Pilll reikninginn þinn. Reyndu að uppfæra skjáinn. Vinsamlegast skoðaðu einnig FAQ. Nánar: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Þessi {accountTypeProviderName} reikningur er nú þegar tengdur við annan Pilll reikning og því er ekki hægt að skrá sig. Vinsamlegast skoðaðu einnig FAQ. Nánar: {exceptionMessage}",
   "emailAlreadyInUse": "Ekki er hægt að skrá sig því netfangið sem þú notar fyrir {accountTypeProviderName} reikninginn þinn er þegar tengt öðrum Pilll reikningi. Vinsamlegast skoðaðu FAQ. Nánar: {exceptionMessage}",

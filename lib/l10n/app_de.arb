@@ -330,7 +330,7 @@
   "deleteSchedule": "Termin löschen",
   "onlySupportiOS": "Diese Funktion ist nur in der iOS-App verfügbar",
   "healthKitDoesNotSupport": "Diese Funktion ist auf Geräten ohne Unterstützung für Gesundheitsdaten nicht verfügbar",
-  "enableHealthKitFromSettings": "Bitte aktivieren Sie Health in den Einstellungen",
+  "enableHealthKitFromSettings": "Aktiviere den Zugriff auf Health in der Einstellungen-App",
   "accountAlreadyLinked": "Dieses {accountTypeProviderName}-Konto ist bereits mit Ihrem Pilll-Konto verknüpft. Bitte versuchen Sie, die Ansicht zu aktualisieren. Schauen Sie auch in unsere FAQ. Details: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Dieses {accountTypeProviderName}-Konto ist bereits mit einem anderen Pilll-Konto verknüpft und kann daher nicht registriert werden. Bitte schauen Sie auch in unsere FAQ. Details: {exceptionMessage}",
   "emailAlreadyInUse": "Die E-Mail-Adresse, die Sie bereits für Ihr {accountTypeProviderName}-Konto verwenden, ist bereits mit einem anderen Pilll-Konto verknüpft, sodass eine Registrierung nicht möglich ist. Bitte sehen Sie auch in den FAQ nach. Details: {exceptionMessage}",

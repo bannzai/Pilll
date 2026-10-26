@@ -330,7 +330,7 @@
   "deleteSchedule": "Удалить план",
   "onlySupportiOS": "Эта функция доступна только в приложении для iOS",
   "healthKitDoesNotSupport": "Эта функция недоступна на устройствах, которые не поддерживают данные о здоровье",
-  "enableHealthKitFromSettings": "Включите функцию «Здоровье» в приложении «Настройки»",
+  "enableHealthKitFromSettings": "Разрешите доступ к приложению «Здоровье» в настройках",
   "accountAlreadyLinked": "Этот аккаунт {accountTypeProviderName} уже связан с вашим аккаунтом Pilll. Попробуйте обновить экран. Также ознакомьтесь с FAQ. Подробности: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Этот аккаунт {accountTypeProviderName} уже привязан к другому аккаунту Pilll, поэтому регистрация невозможна. Пожалуйста, обратитесь к FAQ. Подробности: {exceptionMessage}",
   "emailAlreadyInUse": "Адрес электронной почты, используемый в вашем аккаунте {accountTypeProviderName}, уже привязан к другому аккаунту Pilll, поэтому регистрация невозможна. Также ознакомьтесь с FAQ. Подробности: {exceptionMessage}",

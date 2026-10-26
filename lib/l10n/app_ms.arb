@@ -330,7 +330,7 @@
   "deleteSchedule": "Padam jadual",
   "onlySupportiOS": "Ciri ini hanya tersedia dalam aplikasi iOS",
   "healthKitDoesNotSupport": "Ciri ini tidak tersedia pada peranti yang tidak menyokong data kesihatan",
-  "enableHealthKitFromSettings": "Sila dayakan Kesihatan daripada aplikasi Tetapan",
+  "enableHealthKitFromSettings": "Sila benarkan akses kepada Kesihatan dalam aplikasi Tetapan",
   "accountAlreadyLinked": "Akaun {accountTypeProviderName} ini sudah dikaitkan dengan akaun Pilll anda. Cuba muat semula skrin. Sila lihat juga FAQ. Butiran: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Akaun {accountTypeProviderName} ini sudah dikaitkan dengan akaun Pilll yang lain, oleh itu tidak dapat didaftarkan. Sila rujuk FAQ juga. Butiran: {exceptionMessage}",
   "emailAlreadyInUse": "Alamat e-mel yang digunakan dengan akaun {accountTypeProviderName} anda sudah dikaitkan dengan akaun Pilll lain, oleh itu pendaftaran tidak dapat dilakukan. Sila rujuk FAQ untuk maklumat lanjut. Butiran: {exceptionMessage}",

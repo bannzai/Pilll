@@ -330,7 +330,7 @@
   "deleteSchedule": "Smazat plán",
   "onlySupportiOS": "Tato funkce je dostupná pouze v aplikaci pro iOS",
   "healthKitDoesNotSupport": "Tato funkce není dostupná na zařízeních, která nepodporují zdravotní údaje",
-  "enableHealthKitFromSettings": "Prosím povolte Zdraví v aplikaci Nastavení",
+  "enableHealthKitFromSettings": "Povolte prosím přístup ke Zdraví v aplikaci Nastavení",
   "accountAlreadyLinked": "Tento {accountTypeProviderName} účet je již propojený s vaším Pilll účtem. Zkuste aktualizovat obrazovku. Podívejte se také na FAQ. Podrobnosti: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Tento {accountTypeProviderName} účet je již propojen s jiným Pilll účtem, proto registrace není možná. Prosím, podívejte se také na FAQ. Podrobnosti: {exceptionMessage}",
   "emailAlreadyInUse": "E-mailová adresa používaná s vaším {accountTypeProviderName} účtem je již propojena s jiným Pilll účtem, proto se nelze zaregistrovat. Prosím, podívejte se také na FAQ. Podrobnosti: {exceptionMessage}",

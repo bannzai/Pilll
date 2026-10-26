@@ -330,7 +330,7 @@
   "deleteSchedule": "Excluir programação",
   "onlySupportiOS": "Este recurso está disponível apenas no app para iOS",
   "healthKitDoesNotSupport": "Este recurso não está disponível em dispositivos que não são compatíveis com dados de saúde",
-  "enableHealthKitFromSettings": "Ative a Saúde no app Configurações",
+  "enableHealthKitFromSettings": "Você pode ativar o acesso ao app Saúde em Ajustes",
   "accountAlreadyLinked": "Esta conta {accountTypeProviderName} já está vinculada à sua conta do Pilll. Tente atualizar a tela. Consulte também as perguntas frequentes. Detalhes: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Esta conta {accountTypeProviderName} já está vinculada a outra conta Pilll, portanto não é possível registrá-la. Confira também nossas FAQs. Detalhes: {exceptionMessage}",
   "emailAlreadyInUse": "O endereço de email da sua conta {accountTypeProviderName} já está vinculado a outra conta Pilll, portanto não é possível realizar o cadastro. Consulte também as FAQ. Detalhes: {exceptionMessage}",

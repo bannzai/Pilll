@@ -330,7 +330,7 @@
   "deleteSchedule": "Dileu’r amserlen",
   "onlySupportiOS": "Mae'r nodwedd hon ar gael yn ap iOS yn unig",
   "healthKitDoesNotSupport": "Nid yw'r nodwedd hon ar gael ar ddyfeisiau nad ydynt yn cefnogi data iechyd",
-  "enableHealthKitFromSettings": "Galluogwch Iechyd drwy'r ap Gosodiadau",
+  "enableHealthKitFromSettings": "Galluogwch fynediad at Iechyd yn yr ap Gosodiadau, os gwelwch yn dda",
   "accountAlreadyLinked": "Mae'r cyfrif {accountTypeProviderName} hwn eisoes wedi'i gysylltu â'ch cyfrif Pilll. Rhowch gynnig ar adnewyddu'r sgrin. Gwelwch hefyd y CyfFAQ. Manylion: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Mae'r cyfrif {accountTypeProviderName} hwn eisoes wedi'i gysylltu â chyfrif Pilll arall, felly ni ellir ei gofrestru. Gwelwch hefyd y FAQ. Manylion: {exceptionMessage}",
   "emailAlreadyInUse": "Ni allwch gofrestru oherwydd bod eich cyfeiriad e-bost a ddefnyddir eisoes gyda chyfrif {accountTypeProviderName} wedi'i gysylltu â chyfrif Pilll arall. Gwelwch hefyd y cwestiynau cyffredin. Manylion: {exceptionMessage}",
