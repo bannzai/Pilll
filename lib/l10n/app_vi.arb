@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "Kết nối mạng không ổn định. Vui lòng kiểm tra kết nối rồi thử lại.",
   "purchaseErrorInvalidCredentialsError": "Không thể hoàn tất giao dịch mua. Vui lòng thử lại sau ít phút. Nếu sự cố vẫn tiếp diễn, hãy liên hệ với chúng tôi qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Hiện chưa thể mua. Vui lòng thử lại sau. Nếu sự cố vẫn tiếp diễn, hãy liên hệ với chúng tôi qua Cài đặt > Liên hệ với chúng tôi. Chi tiết: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Thông tin mua hàng đã được sử dụng cho một người dùng khác. Vui lòng kiểm tra tài khoản {accountName} đã đăng nhập trên thiết bị này.",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Thông tin mua hàng này đã được một người dùng khác sử dụng. Vui lòng kiểm tra tài khoản {accountName} đang đăng nhập trên thiết bị của bạn.",
   "purchaseErrorInvalidAppUserIdError": "Không thể xác thực người dùng. Vui lòng khởi động lại ứng dụng và thử lại. Chi tiết: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Hiện đang có giao dịch mua hàng khác đang được xử lý. Vui lòng đợi một lúc và kiểm tra lại.",
   "purchaseErrorUnknownBackendError": "Hiện tại không thể mua hàng. Vui lòng thử lại sau một thời gian. Nếu vấn đề vẫn chưa được giải quyết, vui lòng liên hệ qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",

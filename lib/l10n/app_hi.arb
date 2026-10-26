@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "नेटवर्क कनेक्शन स्थिर नहीं है। कृपया अपना कनेक्शन जाँचें और फिर से कोशिश करें।",
   "purchaseErrorInvalidCredentialsError": "खरीदारी पूरी नहीं हो सकी। कृपया कुछ समय बाद फिर कोशिश करें। समस्या बनी रहे तो सेटिंग्स > संपर्क करें से हमसे संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "अभी खरीदारी नहीं हो पा रही है। कृपया थोड़ी देर बाद फिर कोशिश करें। समस्या बनी रहे तो सेटिंग > हमसे संपर्क करें के ज़रिए हमसे संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "खरीदारी की जानकारी दूसरे उपयोगकर्ता द्वारा उपयोग की जा रही है। कृपया डिवाइस में लॉग इन किए गए {accountName} की जांच करें।",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "इस खरीद की जानकारी पहले से किसी अन्य उपयोगकर्ता के खाते से जुड़ी है। कृपया अपने डिवाइस पर साइन इन किए गए {accountName} खाते की जाँच करें।",
   "purchaseErrorInvalidAppUserIdError": "उपयोगकर्ता की पुष्टि नहीं हो सकी। कृपया ऐप को रीस्टार्ट करके फिर से कोशिश करें। विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "खरीदारी प्रक्रिया पहले से चल रही है। कृपया कुछ समय बाद फिर से जांच लें।",
   "purchaseErrorUnknownBackendError": "वर्तमान में खरीदारी नहीं की जा सकती। कुछ समय बाद फिर से कोशिश करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क करें से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",

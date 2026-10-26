@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "Nettengingin er óstöðug. Athugaðu tenginguna og reyndu aftur.",
   "purchaseErrorInvalidCredentialsError": "Ekki tókst að ljúka kaupunum. Prófaðu aftur eftir smá stund. Ef vandinn heldur áfram geturðu haft samband við okkur í Stillingar > Hafa samband. Nánar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Ekki er hægt að ganga frá kaupum núna. Reyndu aftur síðar. Ef vandamálið heldur áfram geturðu haft samband við okkur í Stillingar > Hafa samband. Nánar: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Kaupupplýsingarnar eru þegar í notkun hjá öðrum notanda. Vinsamlegast athugaðu {accountName} sem er innskráður á tækinu.",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Kaupupplýsingarnar eru þegar í notkun hjá öðrum notanda. Athugaðu hvaða {accountName}-reikningur er skráður inn í tækinu þínu.",
   "purchaseErrorInvalidAppUserIdError": "Gat ekki staðfest notanda. Endurræstu forritið og reyndu aftur. Nánar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Önnur kaupvinnsla er í gangi. Vinsamlegast bíddu og reyndu aftur síðar",
   "purchaseErrorUnknownBackendError": "Ekki er hægt að kaupa í augnablikinu. Vinsamlegast reyndu aftur síðar. Ef vandamálið leysist ekki, hafðu samband við okkur í gegnum Stillingar > Fyrirspurnir. Nánar: {exceptionMessage}:{exceptionDetails}",

@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "د شبکې اړیکه ثابته نه ده. مهرباني وکړئ اړیکه وګورئ او بیا هڅه وکړئ.",
   "purchaseErrorInvalidCredentialsError": "پېرود بشپړ نه شو. مهرباني وکړئ لږ وروسته بیا هڅه وکړئ. که ستونزه دوام وکړي، د امستنو > له موږ سره اړیکه له لارې له موږ سره اړیکه ونیسئ. جزییات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "اوس مهال پېرود نه شي کېدای. مهرباني وکړئ لږ وروسته بیا هڅه وکړئ. که ستونزه دوام وکړي، د امستنو > له موږ سره اړیکه له لارې له موږ سره اړیکه ونیسئ. جزییات: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "د پیرودلو معلومات د بل کاروونکي لخوا کارول کیږي. د دغه وسیلې کې ننوتل شوی {accountName} وګورئ",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "د دې پېرود معلومات بل کاروونکی کاروي. مهرباني وکړئ په خپل وسیله کې ننوتلی د {accountName} حساب وګورئ.",
   "purchaseErrorInvalidAppUserIdError": "کاروونکي تصدیق نه شو. اپ ریسټارټ کړئ او بیا هڅه وکړئ. تفصیلات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "د پېرودلو پروسه دمخه روانه ده. مهرباني وکړئ د یو څه وخت وروسته بیا وګورئ",
   "purchaseErrorUnknownBackendError": "اوس مهال د پیرودلو توان نشته. د یو څه وخت وروسته بیا هڅه وکړئ. که ستونزه حل نشي نو د تنظیمات > پوښتنې څخه اړیکه ونیسئ. توضیحات: {exceptionMessage}:{exceptionDetails}",

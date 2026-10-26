@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "Mrežna veza nije stabilna. Provjerite vezu i pokušajte ponovno.",
   "purchaseErrorInvalidCredentialsError": "Kupnju nije bilo moguće dovršiti. Pokušajte ponovno malo kasnije. Ako se problem nastavi, obratite nam se putem Postavke > Kontaktirajte nas. Pojedinosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Kupnja trenutačno nije moguća. Molimo pokušajte ponovno kasnije. Ako se problem nastavi, obratite nam se putem Postavke > Kontaktirajte nas. Pojedinosti: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Informacije o kupovini već se koriste od strane drugog korisnika. Molimo provjerite {accountName} koji je prijavljen na uređaju",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Podatke o kupnji već koristi drugi korisnik. Provjerite na koji ste račun {accountName} prijavljeni na uređaju.",
   "purchaseErrorInvalidAppUserIdError": "Verifikacija korisnika nije uspjela. Molimo restartajte aplikaciju i pokušajte ponovno. Detalji: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Kupovina se već obrađuje. Molimo pričekajte i pokušajte ponovno.",
   "purchaseErrorUnknownBackendError": "Trenutno nije moguće izvršiti kupnju. Molimo pokušajte ponovo kasnije. Ako se problem nastavi, kontaktirajte nas preko Postavke > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",

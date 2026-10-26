@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "Omrežna povezava ni stabilna. Preverite povezavo in poskusite znova.",
   "purchaseErrorInvalidCredentialsError": "Nakupa ni bilo mogoče dokončati. Čez nekaj časa poskusite znova. Če težava ne izgine, se obrnite na nas prek Nastavitve > Stik z nami. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Nakup trenutno ni mogoč. Poskusite znova pozneje. Če težava ne izgine, se obrnite na nas prek Nastavitve > Stik z nami. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Nakupne informacije že uporablja drug uporabnik. Preverite račun {accountName}, prijavljen v tej napravi",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Podatke o nakupu že uporablja drug uporabnik. Preverite, s katerim računom {accountName} ste prijavljeni v napravi.",
   "purchaseErrorInvalidAppUserIdError": "Uporabnik ni mogel biti preverjen. Prosimo, znova zaženite aplikacijo in poskusite ponovno. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Drug postopek nakupa je v teku. Počakajte nekaj časa in nato preverite znova.",
   "purchaseErrorUnknownBackendError": "Trenutno nakup ni mogoč. Poskusite znova po nekaj času. Če se težava ne reši, se obrnite na nas prek Nastavitve > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",

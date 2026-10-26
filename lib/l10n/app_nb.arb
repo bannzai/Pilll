@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "Nettverkstilkoblingen er ustabil. Sjekk tilkoblingen og prøv igjen.",
   "purchaseErrorInvalidCredentialsError": "Kjøpet kunne ikke fullføres. Prøv igjen om litt. Hvis problemet fortsetter, kan du kontakte oss via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Du kan ikke kjøpe akkurat nå. Prøv igjen senere. Hvis problemet fortsetter, kan du kontakte oss via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Kjøpsinformasjonen er allerede i bruk av en annen bruker. Kontroller {accountName} som er logget inn på enheten.",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Kjøpsinformasjonen brukes allerede av en annen bruker. Sjekk hvilken {accountName}-konto du er logget inn med på enheten din.",
   "purchaseErrorInvalidAppUserIdError": "Kunne ikke bekrefte bruker. Start appen på nytt og prøv igjen. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "En kjøpsprosess er allerede i gang. Vennligst vent litt og prøv igjen.",
   "purchaseErrorUnknownBackendError": "Kan ikke kjøpe for øyeblikket. Vennligst prøv igjen senere. Hvis problemet fortsetter, ta kontakt via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",

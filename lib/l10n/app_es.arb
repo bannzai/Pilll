@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "La conexión de red es inestable. Comprueba tu conexión y vuelve a intentarlo.",
   "purchaseErrorInvalidCredentialsError": "No se pudo completar la compra. Vuelve a intentarlo más tarde. Si el problema continúa, contáctanos desde Configuración > Contáctanos. Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "No es puede completar la compra en este momento. Vuelve a intentarlo más tarde. Si el problema continúa, contáctanos desde Configuración > Contáctanos. Detalles: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "La información de compra ya está siendo utilizada por otro usuario. Verifique la cuenta {accountName} conectada en el dispositivo",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Esta compra ya está vinculada a otra persona. Comprueba la cuenta de {accountName} con la que has iniciado sesión en tu dispositivo.",
   "purchaseErrorInvalidAppUserIdError": "No se pudo verificar al usuario. Por favor, reinicia la aplicación e inténtalo de nuevo. Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Ya se está procesando una compra. Por favor, espere un momento y vuelva a intentarlo.",
   "purchaseErrorUnknownBackendError": "No se puede realizar la compra en este momento. Por favor, espere un momento e inténtelo de nuevo. Si el problema persiste, póngase en contacto con nosotros desde Configuración > Contacto. Detalles: {exceptionMessage}:{exceptionDetails}",

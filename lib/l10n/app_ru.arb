@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "Соединение с сетью нестабильно. Проверьте подключение и попробуйте ещё раз.",
   "purchaseErrorInvalidCredentialsError": "Не удалось завершить покупку. Пожалуйста, попробуйте ещё раз немного позже. Если проблема сохранится, свяжитесь с нами через Настройки > Связаться с нами. Подробности: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Сейчас покупка недоступна. Пожалуйста, попробуйте ещё раз позже. Если проблема сохранится, свяжитесь с нами через Настройки > Связаться с нами. Подробности: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Информация о покупке используется другим пользователем. Проверьте {accountName}, под которым выполнен вход на устройство",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Данные о покупке уже используются другим пользователем. Проверьте, в какой аккаунт {accountName} выполнен вход на вашем устройстве.",
   "purchaseErrorInvalidAppUserIdError": "Не удалось подтвердить пользователя. Пожалуйста, перезапустите приложение и попробуйте снова. Подробности: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "В данный момент обрабатывается другая покупка. Пожалуйста, подождите некоторое время и повторите попытку.",
   "purchaseErrorUnknownBackendError": "В настоящее время покупка невозможна. Пожалуйста, попробуйте еще раз через некоторое время. Если проблема не решается, обратитесь к нам через Настройки > Обратная связь. Подробности: {exceptionMessage}:{exceptionDetails}",

@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "Verkkoyhteys on epävakaa. Tarkista yhteys ja yritä uudelleen.",
   "purchaseErrorInvalidCredentialsError": "Ostoa ei voitu viimeistellä. Kokeile hetken kuluttua uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdasta Asetukset > Ota yhteyttä. Lisätiedot: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Ostaminen ei onnistu juuri nyt. Yritä myöhemmin uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdasta Asetukset > Ota yhteyttä. Lisätiedot: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Ostotiedot ovat jo toisen käyttäjän käytössä. Tarkista laitteeseen kirjautunut {accountName}.",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Ostotiedot ovat jo toisen käyttäjän käytössä. Tarkista, mille {accountName}-tilille olet kirjautunut laitteellasi.",
   "purchaseErrorInvalidAppUserIdError": "Käyttäjää ei voitu vahvistaa. Käynnistä sovellus uudelleen ja yritä uudestaan. Yksityiskohdat: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Ostoprosessi on jo meneillään. Odota hetki ja yritä uudelleen.",
   "purchaseErrorUnknownBackendError": "Osto ei ole tällä hetkellä mahdollinen. Odota hetki ja yritä uudelleen. Jos ongelma jatkuu, ota yhteyttä kohdassa Asetukset > Ota yhteyttä. Lisätiedot: {exceptionMessage}:{exceptionDetails}",

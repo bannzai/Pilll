@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "การเชื่อมต่อเครือข่ายไม่เสถียรค่ะ โปรดตรวจสอบการเชื่อมต่อแล้วลองอีกครั้งค่ะ",
   "purchaseErrorInvalidCredentialsError": "การซื้อไม่สำเร็จค่ะ โปรดลองอีกครั้งในภายหลังนะคะ หากยังพบปัญหา โปรดติดต่อเราผ่าน การตั้งค่า > ติดต่อเรา ค่ะ รายละเอียด: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "ขณะนี้ยังไม่สามารถซื้อได้ค่ะ กรุณาลองอีกครั้งในภายหลัง หากยังพบปัญหา โปรดติดต่อเราผ่าน การตั้งค่า > ติดต่อเรา ค่ะ รายละเอียด: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "ข้อมูลการซื้อถูกใช้งานโดยผู้ใช้อื่นแล้ว โปรดตรวจสอบ {accountName} ที่เข้าสู่ระบบในอุปกรณ์นี้",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "ข้อมูลการซื้อนี้มีผู้ใช้อื่นใช้อยู่แล้วค่ะ โปรดตรวจสอบบัญชี {accountName} ที่ลงชื่อเข้าใช้บนอุปกรณ์ของคุณค่ะ",
   "purchaseErrorInvalidAppUserIdError": "ไม่สามารถยืนยันตัวผู้ใช้ได้ กรุณาปิดแอปแล้วเปิดใหม่และลองอีกครั้ง รายละเอียด: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "มีการซื้ออื่นกำลังดำเนินการอยู่ กรุณารอสักครู่แล้วตรวจสอบอีกครั้ง",
   "purchaseErrorUnknownBackendError": "ไม่สามารถทำการซื้อได้ในขณะนี้ โปรดลองใหม่อีกครั้งหลังจากผ่านไปสักครู่ หากปัญหายังไม่หาย โปรดติดต่อเราผ่าน การตั้งค่า > ติดต่อเรา รายละเอียด: {exceptionMessage}:{exceptionDetails}",

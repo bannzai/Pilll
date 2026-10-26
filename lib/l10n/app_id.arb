@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "Koneksi jaringan tidak stabil. Periksa koneksi Anda, lalu coba lagi.",
   "purchaseErrorInvalidCredentialsError": "Pembelian belum berhasil. Silakan coba lagi beberapa saat lagi. Jika masalah berlanjut, hubungi kami melalui Pengaturan > Hubungi kami. Detail: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Pembelian belum dapat dilakukan saat ini. Silakan coba lagi nanti. Jika masalah berlanjut, hubungi kami melalui Pengaturan > Hubungi kami. Detail: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Informasi pembelian telah digunakan oleh pengguna lain. Silakan periksa {accountName} yang login di perangkat.",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Informasi pembelian ini sudah digunakan oleh pengguna lain. Silakan periksa akun {accountName} yang masuk di perangkat Anda.",
   "purchaseErrorInvalidAppUserIdError": "Pengguna tidak dapat diverifikasi. Silakan restart aplikasi dan coba lagi. Detail: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Proses pembelian lain sedang berlangsung. Silakan tunggu sebentar dan coba lagi",
   "purchaseErrorUnknownBackendError": "Saat ini tidak dapat melakukan pembelian. Silakan coba lagi setelah beberapa saat. Jika masalah tidak teratasi, silakan hubungi kami melalui Pengaturan > Hubungi Kami. Detail: {exceptionMessage}:{exceptionDetails}",

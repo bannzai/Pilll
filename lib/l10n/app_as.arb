@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "নেটৱৰ্ক সংযোগ অস্থিৰ হৈ আছে। অনুগ্ৰহ কৰি সংযোগ পৰীক্ষা কৰি পুনৰ চেষ্টা কৰক।",
   "purchaseErrorInvalidCredentialsError": "ক্ৰয় সম্পূৰ্ণ নহ’ল। অনুগ্ৰহ কৰি কিছু সময়ৰ পাছত পুনৰ চেষ্টা কৰক। সমস্যাটো থাকিলে ছেটিংছ > যোগাযোগ কৰক যোগে আমাৰ সৈতে যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "বৰ্তমান ক্ৰয় কৰিব পৰা নাযায়। অনুগ্ৰহ কৰি কিছু সময় পাছত পুনৰ চেষ্টা কৰক। সমস্যাটো সমাধান নহ’লে, ছেটিংছ > যোগাযোগ কৰক-ৰ জৰিয়তে আমাৰ সৈতে যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "ক্ৰয় তথ্য অন্য এজন ব্যৱহাৰকাৰীয়ে ব্যৱহাৰ কৰিছে। ডিভাইচত লগ ইন থকা {accountName} পৰীক্ষা কৰক।",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "ক্ৰয়ৰ তথ্য আন এজন ব্যৱহাৰকাৰীয়ে ব্যৱহাৰ কৰি আছে। অনুগ্ৰহ কৰি আপোনাৰ ডিভাইচত লগ ইন কৰা {accountName} পৰীক্ষা কৰক।",
   "purchaseErrorInvalidAppUserIdError": "ব্যৱহাৰকাৰীক নিশ্চিত কৰিব পৰা নগ'ল। এপটো পুনৰাম্ভ কৰি পুনৰ চেষ্টা কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "এটা ক্ৰয় প্ৰক্ৰিয়া ইতিমধ্যে চলি আছে। অনুগ্ৰহ কৰি কিছু সময় অপেক্ষা কৰি পুনৰায় চেষ্টা কৰক।",
   "purchaseErrorUnknownBackendError": "বৰ্তমান ক্ৰয় কৰিব পৰা নাই। কিছু সময় অপেক্ষা কৰি পুনৰ চেষ্টা কৰক। সমাধান নহ'লে ছেটিংছ > সোধা-পোছা ৰ পৰা যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",

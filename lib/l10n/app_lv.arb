@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "Tīkla savienojums nav stabils. Lūdzu, pārbaudiet savienojumu un mēģiniet vēlreiz.",
   "purchaseErrorInvalidCredentialsError": "Pirkumu neizdevās pabeigt. Lūdzu, pēc brīža mēģiniet vēlreiz. Ja problēma saglabājas, sazinieties ar mums sadaļā Iestatījumi > Sazināties ar mums. Informācija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Pašlaik pirkumu nevar veikt. Lūdzu, mēģiniet vēlreiz vēlāk. Ja problēma saglabājas, sazinieties ar mums sadaļā Iestatījumi > Sazināties ar mums. Informācija: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Šī pirkuma informācija jau tiek izmantota citam lietotājam. Lūdzu pārbaudiet ierīcē pierakstīto {accountName}.",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Pirkuma informāciju jau izmanto cits lietotājs. Lūdzu, pārbaudiet, kurā {accountName} kontā esat pierakstījušies savā ierīcē.",
   "purchaseErrorInvalidAppUserIdError": "Neizdevās verificēt lietotāju. Lūdzu, restartējiet lietotni un mēģiniet vēlreiz. Detaļas: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Pašlaik notiek cits pirkuma process. Lūdzu, uzgaidiet un pārbaudiet vēlāk.",
   "purchaseErrorUnknownBackendError": "Pašlaik nevar veikt pirkumu. Lūdzu, pagaidiet un mēģiniet vēlreiz. Ja problēma saglabājas, sazinieties ar mums sadaļā Iestatījumi > Sazināties. Detaļas: {exceptionMessage}:{exceptionDetails}",

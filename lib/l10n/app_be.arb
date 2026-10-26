@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "Злучэнне з сеткай нестабільнае. Калі ласка, праверце злучэнне і паспрабуйце яшчэ раз.",
   "purchaseErrorInvalidCredentialsError": "Не ўдалося завяршыць куплю. Калі ласка, паспрабуйце яшчэ раз крыху пазней. Калі праблема застанецца, звяжыцеся з намі праз Налады > Звязацца з намі. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Зараз зрабіць пакупку немагчыма. Калі ласка, паспрабуйце пазней. Калі праблема не знікне, звяжыцеся з намі праз Налады > Зваротная сувязь. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Інфармацыя аб покупцы ўжо выкарыстоўваецца іншым карыстальнікам. Праверце {accountName}, які залагінены на прыладзе",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Даныя пакупкі ўжо выкарыстоўваюцца іншым карыстальнікам. Калі ласка, праверце ўліковы запіс {accountName}, у які вы ўвайшлі на прыладзе.",
   "purchaseErrorInvalidAppUserIdError": "Немагчыма пацвердзіць карыстальніка. Перазапусціце праграму і паспрабуйце зноў. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Ужо выконваецца іншы працэс покупкi. Калi ласка, пачакайце і паўтарыце спробу пазней.",
   "purchaseErrorUnknownBackendError": "Зараз не можа здзейсніць пакупку. Калі ласка, пачакайце і паспрабуйце зноў. Калі праблема не вырашаецца, звярніцеся да нас праз Налады > Звернуцца. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",

@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "De netwerkverbinding is instabiel. Controleer je verbinding en probeer het opnieuw.",
   "purchaseErrorInvalidCredentialsError": "De aankoop kon niet worden afgerond. Probeer het later nog eens. Blijft het probleem bestaan? Neem dan contact met ons op via Instellingen > Contact opnemen. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Je kunt op dit moment geen aankoop doen. Probeer het later nog eens. Blijft het probleem bestaan? Neem dan contact met ons op via Instellingen > Contact. Details: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Deze aankoopgegevens zijn al in gebruik door een andere gebruiker. Controleer de {accountName} die op dit apparaat is ingelogd.",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Deze aankoop wordt al door een andere gebruiker gebruikt. Controleer met welk {accountName}-account je bent ingelogd op je apparaat.",
   "purchaseErrorInvalidAppUserIdError": "De gebruiker kon niet worden geverifieerd. Herstart de app en probeer het opnieuw. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Er loopt al een aankoopproces. Wacht even en probeer het opnieuw.",
   "purchaseErrorUnknownBackendError": "Er kan momenteel geen aankoop worden gedaan. Probeer het na een tijdje opnieuw. Als het probleem aanhoudt, neem dan contact met ons op via Instellingen > Contact opnemen. Details: {exceptionMessage}:{exceptionDetails}",

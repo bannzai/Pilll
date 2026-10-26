@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "നെറ്റ്‌വർക്ക് കണക്ഷൻ സ്ഥിരമല്ല. ദയവായി കണക്ഷൻ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കൂ.",
   "purchaseErrorInvalidCredentialsError": "വാങ്ങൽ പൂർത്തിയാക്കാനായില്ല. ദയവായി കുറച്ച് കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കൂ. പ്രശ്നം തുടരുകയാണെങ്കിൽ ക്രമീകരണങ്ങൾ > ഞങ്ങളെ ബന്ധപ്പെടുക വഴി ഞങ്ങളെ ബന്ധപ്പെടൂ. വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "ഇപ്പോൾ വാങ്ങാൻ കഴിയുന്നില്ല. കുറച്ച് കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കൂ. പ്രശ്നം തുടരുകയാണെങ്കിൽ, ക്രമീകരണങ്ങൾ > ഞങ്ങളെ ബന്ധപ്പെടുക വഴി ഞങ്ങളെ ബന്ധപ്പെടൂ. വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "വാങ്ങൽ വിവരങ്ങൾ മറ്റൊരു ഉപയോക്താവ് ഉപയോഗിച്ചിരിക്കുന്നു. ഉപകരണത്തിൽ ലോഗിൻ ചെയ്തിരിക്കുന്ന {accountName} പരിശോധിക്കുക",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "ഈ വാങ്ങലിന്റെ വിവരങ്ങൾ മറ്റൊരു ഉപയോക്താവ് ഇതിനകം ഉപയോഗിക്കുന്നുണ്ട്. നിങ്ങളുടെ ഉപകരണത്തിൽ സൈൻ ഇൻ ചെയ്തിരിക്കുന്ന {accountName} അക്കൗണ്ട് പരിശോധിക്കൂ.",
   "purchaseErrorInvalidAppUserIdError": "ഉപയോക്താവിനെ സ്ഥിരീകരിക്കാൻ കഴിഞ്ഞില്ല. ആപ്പ് പുനരാരംഭിച്ച് വീണ്ടും ശ്രമിക്കുക. വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "മറ്റൊരു വാങ്ങൽ പ്രക്രിയ പുരോഗമിക്കുന്നു. കുറച്ച് സമയം കഴിഞ്ഞ് വീണ്ടും പരിശോധിക്കുക",
   "purchaseErrorUnknownBackendError": "ഇപ്പോൾ വാങ്ങാൻ കഴിയുന്നില്ല. കുറച്ച് സമയം കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കുക. പ്രശ്നം പരിഹരിക്കപ്പെടുന്നില്ലെങ്കിൽ ക്രമീകരണങ്ങൾ > ബന്ധപ്പെടുക വഴി ബന്ധപ്പെടുക. വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",

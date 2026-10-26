@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "Muunganisho wa mtandao si thabiti. Tafadhali angalia muunganisho wako kisha ujaribu tena.",
   "purchaseErrorInvalidCredentialsError": "Ununuzi haujakamilika. Tafadhali jaribu tena baada ya muda. Tatizo likiendelea, wasiliana nasi kupitia Mipangilio > Wasiliana nasi. Maelezo: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Ununuzi haupatikani kwa sasa. Tafadhali jaribu tena baadaye. Tatizo likiendelea, wasiliana nasi kupitia Mipangilio > Wasiliana nasi. Maelezo: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Taarifa za ununuzi tayari zinatumika na mtumiaji mwingine. Tafadhali hakiki {accountName} aliyeingia kwenye kifaa hiki.",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Taarifa za ununuzi huu tayari zinatumiwa na mtumiaji mwingine. Tafadhali angalia akaunti ya {accountName} iliyotumika kuingia kwenye kifaa chako.",
   "purchaseErrorInvalidAppUserIdError": "Mtumiaji hakuweza kuthibitishwa. Anzisha upya programu tumizi na ujaribu tena. Maelezo: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Mchakato wa ununuzi unaendelea tayari. Tafadhali subiri kidogo na ujaribu tena.",
   "purchaseErrorUnknownBackendError": "Ununuzi haukuwezekani kwa sasa. Tafadhali jaribu tena baada ya muda. Ikiwa tatizo halitajatuliwa, tafadhali wasiliana nasi kupitia Mipangilio > Maswali. Maelezo: {exceptionMessage}:{exceptionDetails}",

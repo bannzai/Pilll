@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "नेटवर्क जडान स्थिर छैन। कृपया जडान जाँचेर फेरि प्रयास गर्नुहोस्।",
   "purchaseErrorInvalidCredentialsError": "खरिद पूरा हुन सकेन। कृपया केही समयपछि फेरि प्रयास गर्नुहोस्। समस्या जारी रहेमा सेटिङहरू > हामीलाई सम्पर्क गर्नुहोस् बाट हामीलाई सम्पर्क गर्नुहोस्। विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "अहिले खरिद गर्न सकिँदैन। कृपया केही समयपछि फेरि प्रयास गर्नुहोस्। समस्या रहिरहेमा सेटिङ > हामीलाई सम्पर्क गर्नुहोस् मार्फत सम्पर्क गर्नुहोस्। विवरण: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "खरिद जानकारी अर्को प्रयोगकर्ताबाट प्रयोग भइसकेको छ। यन्त्रमा लग इन भएको {accountName} जाँच गर्नुहोस्।",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "यो खरिदको जानकारी अर्को प्रयोगकर्ताले प्रयोग गरिरहेको छ। कृपया आफ्नो डिभाइसमा लग इन भएको {accountName} खाता जाँच गर्नुहोस्।",
   "purchaseErrorInvalidAppUserIdError": "प्रयोगकर्ताको पुष्टि गर्न सकिएन। एपलाई पुनः सुरु गरेर फेरि प्रयास गर्नुहोस्। विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "अर्को खरिद प्रक्रिया भइरहेको छ। कृपया केही समय पछि पुनः जाँच गर्नुहोस्।",
   "purchaseErrorUnknownBackendError": "हाल खरिद गर्न सकिन्न। केहि समय पछि फेरि प्रयास गर्नुहोस्। समस्या समाधान नभएमा सेटिङ > सम्पर्क मार्फत सम्पर्क गर्नुहोस्। विवरण: {exceptionMessage}:{exceptionDetails}",

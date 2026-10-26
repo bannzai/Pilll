@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "Тармак байланышы туруктуу эмес. Сураныч, байланышты текшерип, кайра аракет кылыңыз.",
   "purchaseErrorInvalidCredentialsError": "Сатып алуу ишке ашкан жок. Бир аз убакыттан кийин кайра аракет кылып көрүңүз. Көйгөй чечилбесе, Жөндөөлөр > Биз менен байланышуу аркылуу бизге кайрылыңыз. Чоо-жайы: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Азыр сатып алуу мүмкүн эмес. Бир аздан кийин кайра аракет кылып көрүңүз. Көйгөй чечилбесе, Жөндөөлөр > Биз менен байланышуу бөлүмү аркылуу кайрылыңыз. Толук маалымат: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Сатып алуу маалыматы башка колдонуучу тарабынан колдонулган. Түзмөккө кирген {accountName} текшериңиз",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Сатып алуу маалыматын башка колдонуучу колдонуп жатат. Түзмөгүңүздө кирген {accountName} каттоо эсебин текшериңиз.",
   "purchaseErrorInvalidAppUserIdError": "Колдонуучуну текшерүү мүмкүн болбоду. Колдонмону кайра ишке киргизип, кайрадан аракет кылыныз. Детали: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Сатып алуу процесси жүрүп жатат. Бир аз күтүп, кайрадан текшериңиз.",
   "purchaseErrorUnknownBackendError": "Азырдакы учурда сатып алуу мүмкүн эмес. Убакыт өткөндөн кийин кайра аракет кылыңыз. Эгер чечилбесе, Жөндөөлөр > Байланыш арқылуу байланышыңыз. Кеңири маалымат: {exceptionMessage}:{exceptionDetails}",

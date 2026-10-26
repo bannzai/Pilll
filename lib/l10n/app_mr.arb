@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "नेटवर्क कनेक्शन स्थिर नाही. कृपया कनेक्शन तपासून पुन्हा प्रयत्न करा.",
   "purchaseErrorInvalidCredentialsError": "खरेदी पूर्ण होऊ शकली नाही. कृपया थोड्या वेळाने पुन्हा प्रयत्न करा. समस्या कायम राहिल्यास सेटिंग्ज > आमच्याशी संपर्क साधा येथून आमच्याशी संपर्क साधा. तपशील: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "सध्या खरेदी करता येत नाही. कृपया थोड्या वेळाने पुन्हा प्रयत्न करा. समस्या कायम राहिल्यास, सेटिंग्ज > आमच्याशी संपर्क साधा येथून आमच्याशी संपर्क साधा. तपशील: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "खरेदी माहिती दुसऱ्या वापरकर्त्याने वापरली आहे. कृपया उपकरणावर लॉग इन केलेले {accountName} तपासा",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "या खरेदीची माहिती दुसरा वापरकर्ता आधीच वापरत आहे. कृपया तुमच्या डिव्हाइसवर लॉग इन असलेले {accountName} खाते तपासा.",
   "purchaseErrorInvalidAppUserIdError": "वापरकर्त्याची पुष्टी करता आली नाही. अॅप पुन्हा सुरू करून पुन्हा प्रयत्न करा. तपशील: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "खरेदीची प्रक्रिया आधीच सुरू आहे. कृपया काही वेळानंतर पुन्हा प्रयत्न करा",
   "purchaseErrorUnknownBackendError": "सध्या खरेदी करता येत नाही. थोड्या वेळाने पुन्हा प्रयत्न करा. जर समस्या सुटली नाही तर सेटिंग्ज > संपर्क या मार्गे संपर्क साधा. तपशील: {exceptionMessage}:{exceptionDetails}",

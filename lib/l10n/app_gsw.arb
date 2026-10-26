@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "D Netzverbindig isch nöd stabil. Lueg bitte dini Verbindig aa und probier's nomal.",
   "purchaseErrorInvalidCredentialsError": "De Chauf hät nöd klappt. Probier’s bitte spöter nomal. Wänn s Problem bliibt, mäld di bi eus über Iistellige > Kontakt. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Im Momänt chasch nüt chaufe. Probier s spöter nomal. Wänn s Problem bliibt, mäld di bi eus über Iistellige > Kontakt. Details: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "D Chaufinformatione werded scho vo eme andere Benutzer verwendet. Prüefed de {accountName}, wo uf em Gerät aagmeldet isch.",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Dä Chauf isch scho mit eme andere Benutzerkonto verbunde. Lueg bitte, mit welem {accountName}-Konto du uf dim Grät agmäldet bisch.",
   "purchaseErrorInvalidAppUserIdError": "De Benutzer het nöd chöne verifiziert werde. Bitte starte d'App neu und versuech's nomol. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "En andere Chauf läuft bereits. Bitte warte churz und probier's nomol.",
   "purchaseErrorUnknownBackendError": "Derzitt chönd mir nöd chaufe. Bitte warte es bitzli und versuech es denn nomol. Falls sich s Problem nöd löst, melde di bitte über Iistellige > Kontakt. Details: {exceptionMessage}:{exceptionDetails}",

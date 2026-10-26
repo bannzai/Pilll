@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "Ցանցային կապն անկայուն է։ Խնդրում ենք ստուգել Ձեր կապը և կրկին փորձել։",
   "purchaseErrorInvalidCredentialsError": "Չհաջողվեց ավարտել գնումը։ Խնդրում ենք որոշ ժամանակ անց կրկին փորձել։ Եթե խնդիրը շարունակվի, կապվեք մեզ հետ Կարգավորումներ > Կապ մեզ հետ բաժնից։ Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Այս պահին գնում կատարել հնարավոր չէ։ Խնդրում ենք որոշ ժամանակ անց կրկին փորձել։ Եթե խնդիրը չլուծվի, կապվեք մեզ հետ Կարգավորումներ > Կապ մեզ հետ բաժնից։ Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Գնման տվյալները օգտագործվում են այլ օգտատիրոջ կողմից: Խնդրում ենք հաստատել սարքում մուտք գործած {accountName}-ը:",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Գնման տվյալներն արդեն օգտագործվում են մեկ այլ օգտատիրոջ կողմից։ Խնդրում ենք ստուգել, թե Ձեր սարքում {accountName}-ի որ հաշիվն է մուտք գործած։",
   "purchaseErrorInvalidAppUserIdError": "Օգտատիրոջ հաստատումը ձախողվեց: Վերագործարկեք հավելվածը և փորձեք կրկին: Մանրամասները՝ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Մեկ այլ գնման գործընթաց արդեն ընթանում է: Խնդրում ենք որոշ ժամանակ սպասել և կրկին փորձել:",
   "purchaseErrorUnknownBackendError": "Ներկայումս գնումը հնարավոր չէ: Խնդրում ենք սպասել և կրկին փորձել: Եթե խնդիրը չի լուծվում, դիմեք մեզ Կարգավորումներ > Դիմում բաժնից: Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",

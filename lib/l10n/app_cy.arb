@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "Mae'r cysylltiad rhwydwaith yn ansefydlog. Gwiriwch eich cysylltiad a rhowch gynnig arall arni, os gwelwch yn dda.",
   "purchaseErrorInvalidCredentialsError": "Ni fu modd cwblhau’r pryniant. Rhowch gynnig arall arni ymhen ychydig. Os bydd y broblem yn parhau, cysylltwch â ni drwy Gosodiadau > Cysylltu â ni. Manylion: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Nid yw'n bosibl prynu ar hyn o bryd. Rhowch gynnig arall arni yn nes ymlaen, os gwelwch yn dda. Os bydd y broblem yn parhau, cysylltwch â ni drwy Gosodiadau > Cysylltu â ni. Manylion: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Mae'r wybodaeth brynu yn cael ei defnyddio gan ddefnyddiwr arall. Gwiriwch {accountName} sydd wedi mewngofnodi i'r ddyfais",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Mae gwybodaeth y pryniant eisoes yn cael ei defnyddio gan ddefnyddiwr arall. Gwiriwch y cyfrif {accountName} sydd wedi mewngofnodi ar eich dyfais.",
   "purchaseErrorInvalidAppUserIdError": "Ni allwyd cadarnhau'r defnyddiwr. Rhowch gynnig arall arni ar ôl ailgychwyn yr ap. Manylion: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Mae proses brynu arall yn mynd rhagddi. Arhoswch ychydig ac yna gwiriwch eto.",
   "purchaseErrorUnknownBackendError": "Ni ellir prynu ar hyn o bryd. Rhowch gynnig arall arni ymhen ychydig. Os na fydd hyn yn datrys y broblem, cysylltwch â ni drwy Gosodiadau > Cysylltu â ni. Manylion: {exceptionMessage}:{exceptionDetails}",

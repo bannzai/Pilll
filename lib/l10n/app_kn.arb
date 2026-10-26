@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "ನೆಟ್‌ವರ್ಕ್ ಸಂಪರ್ಕ ಸ್ಥಿರವಾಗಿಲ್ಲ. ದಯವಿಟ್ಟು ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
   "purchaseErrorInvalidCredentialsError": "ಖರೀದಿಯನ್ನು ಪೂರ್ಣಗೊಳಿಸಲಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ. ಸಮಸ್ಯೆ ಮುಂದುವರಿದರೆ, ಸೆಟ್ಟಿಂಗ್‌ಗಳು > ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ ಮೂಲಕ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ. ವಿವರಗಳು: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "ಈಗ ಖರೀದಿ ಮಾಡಲು ಸಾಧ್ಯವಾಗುತ್ತಿಲ್ಲ. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ. ಸಮಸ್ಯೆ ಮುಂದುವರಿದರೆ, ಸೆಟ್ಟಿಂಗ್‌ಗಳು > ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ ಮೂಲಕ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ. ವಿವರಗಳು: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "ಖರೀದಿ ಮಾಹಿತಿಯನ್ನು ಬೇರೆ ಬಳಕೆದಾರರು ಬಳಸುತ್ತಿದ್ದಾರೆ. ಸಾಧನದಲ್ಲಿ ಲಾಗಿನ್ ಆಗಿರುವ {accountName} ಅನ್ನು ಪರಿಶೀಲಿಸಿ",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "ಈ ಖರೀದಿಯ ಮಾಹಿತಿಯನ್ನು ಈಗಾಗಲೇ ಇನ್ನೊಬ್ಬ ಬಳಕೆದಾರರು ಬಳಸುತ್ತಿದ್ದಾರೆ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಸೈನ್ ಇನ್ ಆಗಿರುವ {accountName} ಖಾತೆಯನ್ನು ಪರಿಶೀಲಿಸಿ.",
   "purchaseErrorInvalidAppUserIdError": "ಬಳಕೆದಾರರನ್ನು ದೃಢೀಕರಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಿ ಮತ್ತು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ. ವಿವರಗಳು: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "ಇನ್ನೊಂದು ಖರೀದಿ ಪ್ರಕ್ರಿಯೆ ಪ್ರಗತಿಯಲ್ಲಿದೆ. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯ ಕಾಯಿರಿ ಮತ್ತು ಮತ್ತೆ ಪರಿಶೀಲಿಸಿ",
   "purchaseErrorUnknownBackendError": "ಸದ್ಯ ಖರೀದಿ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ. ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ. ಸಮಸ್ಯೆ ಪರಿಹಾರವಾಗದಿದ್ದರೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳು > ಸಂಪರ್ಕಿಸಿ ನಿಂದ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ. ವಿವರಗಳು: {exceptionMessage}:{exceptionDetails}",

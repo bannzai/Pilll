@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "Желі байланысы тұрақсыз. Байланысты тексеріп, қайталап көріңіз.",
   "purchaseErrorInvalidCredentialsError": "Сатып алуды аяқтау мүмкін болмады. Біраз уақыттан кейін қайталап көріңіз. Мәселе шешілмесе, Параметрлер > Бізбен байланысу арқылы бізге хабарласыңыз. Толығырақ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Қазір сатып алу мүмкін емес. Біраз уақыттан кейін қайталап көріңіз. Мәселе шешілмесе, Параметрлер > Бізбен байланысу бөлімі арқылы хабарласыңыз. Мәліметтер: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Сатып алу ақпараты басқа пайдаланушы тарапынан пайдаланылады. Құрылғыға кірген {accountName} тексеріңіз",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Сатып алу деректерін басқа пайдаланушы қолданып жатыр. Құрылғыңызда кірген {accountName} есептік жазбасын тексеріңіз.",
   "purchaseErrorInvalidAppUserIdError": "Пайдаланушыны растау мүмкін болмады. Қолданбаны қайта іске қосып, қайтадан көріңіз. Егжей-тегжейлі ақпарат: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Сатып алу процесі жүріп жатыр. Біраз уақыттан кейін қайта тексеріңіз",
   "purchaseErrorUnknownBackendError": "Қазір сатып алу мүмкін емес. Біраз уақыттан кейін қайталап көріңіз. Мәселе шешілмесе, Параметрлер > Хабарласу арқылы бізге хабарласыңыз. Егжей-тегжейі: {exceptionMessage}:{exceptionDetails}",

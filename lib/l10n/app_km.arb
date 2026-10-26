@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "ការតភ្ជាប់បណ្ដាញមិនមានស្ថិរភាពទេ។ សូមពិនិត្យការតភ្ជាប់ រួចសាកល្បងម្ដងទៀត។",
   "purchaseErrorInvalidCredentialsError": "ការទិញមិនបានសម្រេចទេ។ សូមព្យាយាមម្ដងទៀតបន្តិចក្រោយ។ ប្រសិនបើបញ្ហានៅតែបន្ត សូមទាក់ទងមកយើងតាម ការកំណត់ > ទាក់ទងមកយើង។ ព័ត៌មានលម្អិត៖ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "មិនអាចទិញបាននៅពេលនេះទេ។ សូមសាកល្បងម្តងទៀតនៅពេលក្រោយ។ ប្រសិនបើបញ្ហានៅតែបន្ត សូមទាក់ទងមកយើងតាម ការកំណត់ > ទាក់ទងមកយើង។ ព័ត៌មានលម្អិត៖ {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "ព័ត៌មានការទិញត្រូវបានប្រើប្រាស់ដោយអ្នកប្រើប្រាស់ផ្សេង។ សូមពិនិត្យ {accountName} ដែលបានចូលលើឧបករណ៍។",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "ព័ត៌មានការទិញនេះកំពុងត្រូវបានប្រើដោយអ្នកប្រើប្រាស់ផ្សេងទៀត។ សូមពិនិត្យមើលគណនី {accountName} ដែលបានចូលនៅលើឧបករណ៍របស់អ្នក។",
   "purchaseErrorInvalidAppUserIdError": "មិនអាចផ្ទៀងផ្ទាត់អ្នកប្រើប្រាស់បានទេ។ សូមបិទដើម និងបើកកម្មវិធីម្តងទៀត រួចព្យាយាមម្តងទៀត។ ព័ត៌មានលម្អិត: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "ដំណើរការទិញផ្សេងទៀតកំពុងដំណើរការ។ សូមរងចាំបន្តិចហើយពិនិត្យមើលម្តងទៀត",
   "purchaseErrorUnknownBackendError": "បច្ចុប្បន្នមិនអាចទិញបានទេ។ សូមចាំបន្តិចហើយព្យាយាមម្តងទៀត។ ប្រសិនបើបញ្ហានៅមិនទាន់ត្រូវបានដោះស្រាយ សូមទាក់ទងមកកាន់យើងតាមរយៈ ការកំណត់ > ការចម្លើយ។ លម្អិត៖ {exceptionMessage}:{exceptionDetails}",

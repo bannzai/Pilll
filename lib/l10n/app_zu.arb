@@ -299,7 +299,7 @@
   "purchaseErrorNetworkError": "Uxhumano lwenethiwekhi aluzinzile. Sicela uhlole uxhumano lwakho bese uzama futhi.",
   "purchaseErrorInvalidCredentialsError": "Ukuthenga akuphumelelanga. Sicela uzame futhi ngemva kwesikhashana. Uma inkinga iqhubeka, sicela uxhumane nathi ngokusebenzisa Izilungiselelo > Xhumana nathi. Imininingwane: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Ukuthenga akutholakali okwamanje. Sicela uzame futhi ngokuhamba kwesikhathi. Uma inkinga iqhubeka, sicela uxhumane nathi ku-Izilungiselelo > Xhumana nathi. Imininingwane: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Imininingwane yokuthenga zisetshenziswa umsebenzisi omunye. Sicela uhlole i-{accountName} engene kule divayisi.",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Imininingwane yalokhu kuthenga isivele isetshenziswa omunye umsebenzisi. Sicela uhlole i-akhawunti ye-{accountName} ongene ngayo kudivayisi yakho.",
   "purchaseErrorInvalidAppUserIdError": "Umsebenzisi akakwazanga ukuqinisekisa. Sicela uqale kabusha uhlelo lokusebenza bese uzama futhi. Imininingwane: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Kunomsebenzi wokuthenga oseqhubekayo. Sicela ulinde isikhashana bese uhlola kabusha.",
   "purchaseErrorUnknownBackendError": "Ngeke ukwazi ukuthenga manje. Sicela uzame futhi ngemva kwesikhathi. Uma inkinga iqhubeka, xhumana nathi ku-Izilungiselelo > Buza. Imininingwane: {exceptionMessage}:{exceptionDetails}",
