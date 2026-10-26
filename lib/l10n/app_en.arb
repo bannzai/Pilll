@@ -421,7 +421,7 @@
   "editMenstruation": "Edit period dates",
   "changedPillNumber": "Pill number changed",
   "offPercentForMonthlyPremiumPackage": "Save {offPercent}% compared with the regular monthly plan",
-  "premiumIntroductionDiscountPriceDeadline": "Premium registration allows you to continue using all features",
+  "premiumIntroductionDiscountPriceDeadline": "Subscribe to Premium to keep using all features",
   "countdownForDiscountPriceDeadline": "Purchase within {countdown} for {offPercent}% OFF",
   "pillReminderChanged": "Pill reminder has been set to {value}",
   "silentModeNotificationDescription": "Notifications will be displayed on the lock screen and sound will be played even when Focus mode is on or the device is on silent mode",

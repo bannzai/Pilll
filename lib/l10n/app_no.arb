@@ -421,7 +421,7 @@
   "editMenstruation": "Rediger mensdagene",
   "changedPillNumber": "pillenummer endret",
   "offPercentForMonthlyPremiumPackage": "Spar {offPercent} % sammenlignet med det vanlige månedsabonnementet",
-  "premiumIntroductionDiscountPriceDeadline": "Med Premium-registrering har du fortsatt tilgang til alle funksjoner",
+  "premiumIntroductionDiscountPriceDeadline": "Med et Premium-abonnement kan du fortsette å bruke alle funksjonene",
   "countdownForDiscountPriceDeadline": "{offPercent}% rabatt ved kjøp innen {countdown}",
   "pillReminderChanged": "Medisinpåminnelser er satt til {value}",
   "silentModeNotificationDescription": "Varslingene vises på låseskjermen og lyd spilles selv når Ikke forstyrr-modus er påslått eller enheten er på lydløs",

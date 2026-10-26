@@ -421,7 +421,7 @@
   "editMenstruation": "मासिक पाळीचे दिवस संपादित करा",
   "changedPillNumber": "गोळी क्रमांक बदलला",
   "offPercentForMonthlyPremiumPackage": "नेहमीच्या मासिक प्लॅनपेक्षा {offPercent}% सवलत",
-  "premiumIntroductionDiscountPriceDeadline": "प्रीमियम नोंदणीने आपण सर्व वैशिष्ट्ये वापरत राहू शकता",
+  "premiumIntroductionDiscountPriceDeadline": "प्रीमियम सदस्यत्वासह तुम्ही सर्व सुविधा वापरणे सुरू ठेवू शकता",
   "countdownForDiscountPriceDeadline": "{countdown}मध्ये खरेदी करून {offPercent}% सूट मिळवा",
   "pillReminderChanged": "औषध सेवन सूचना {value} ला सेट केली",
   "silentModeNotificationDescription": "फोकस मोड चालू असताना किंवा डिव्हाइस साइलेंट असताना देखील, नोटिफिकेशन लॉक स्क्रीनवर दिसतील आणि आवाज वाजेल",

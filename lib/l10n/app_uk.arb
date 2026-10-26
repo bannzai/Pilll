@@ -421,7 +421,7 @@
   "editMenstruation": "Змінити дати місячних",
   "changedPillNumber": "зміна номер пігулки",
   "offPercentForMonthlyPremiumPackage": "На {offPercent}% дешевше за звичайний місячний план",
-  "premiumIntroductionDiscountPriceDeadline": "Преміум-підписка дозволяє продовжувати використовувати всі функції",
+  "premiumIntroductionDiscountPriceDeadline": "З підпискою преміум ви зможете й надалі користуватися всіма функціями",
   "countdownForDiscountPriceDeadline": "Знижка {offPercent}% при покупці протягом {countdown}",
   "pillReminderChanged": "Нагадування про прийом встановлено на {value}",
   "silentModeNotificationDescription": "Коли увімкнено режим концентрації або пристрій беззвучний, сповіщення все одно відображатимуться на екрані блокування та відтворюватиметься звук",

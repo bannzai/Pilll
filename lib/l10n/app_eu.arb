@@ -421,7 +421,7 @@
   "editMenstruation": "Editatu hilekoaren datak",
   "changedPillNumber": "pilula-zenbaki aldatu da",
   "offPercentForMonthlyPremiumPackage": "Ohiko hileko plana baino % {offPercent} merkeago",
-  "premiumIntroductionDiscountPriceDeadline": "Premium harpidetzan eginbide guztiak erabiltzen jarrai dezakezu",
+  "premiumIntroductionDiscountPriceDeadline": "Premium harpidetzarekin, funtzio guztiak erabiltzen jarrai dezakezu",
   "countdownForDiscountPriceDeadline": "{countdown} barruan erosita % {offPercent} deskontua",
   "pillReminderChanged": "Hartu-jakinarazpena {value}(e)ra aldatu da",
   "silentModeNotificationDescription": "Kontzentrazio modua aktibatuta dagoenean edo gailua isilik dagoenean ere, jakinarazpenak pantaila blokeatuan agertuko dira eta soinua erreproduzituko da",

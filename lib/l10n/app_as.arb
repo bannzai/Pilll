@@ -421,7 +421,7 @@
   "editMenstruation": "মাহেকীয়াৰ সময়সীমা সম্পাদনা কৰক",
   "changedPillNumber": "পিল নম্বৰ সলনি",
   "offPercentForMonthlyPremiumPackage": "সাধাৰণ মাহেকীয়া পৰিকল্পনাৰ তুলনাত {offPercent}% ৰেহাই",
-  "premiumIntroductionDiscountPriceDeadline": "প্ৰিমিয়াম পঞ্জীয়নৰ সৈতে সকলো সুবিধা অব্যাহত ব্যৱহাৰ কৰিব পাৰিব",
+  "premiumIntroductionDiscountPriceDeadline": "প্ৰিমিয়ামত সদস্যতা ল’লে আপুনি সকলো সুবিধা ব্যৱহাৰ কৰি থাকিব পাৰিব",
   "countdownForDiscountPriceDeadline": "{countdown} ৰ ভিতৰত কিনিলে {offPercent}% ছাৰ",
   "pillReminderChanged": "সেৱন বিজ্ঞপ্তি {value} লৈ সেট কৰিলোঁ",
   "silentModeNotificationDescription": "ফোকাস মোড অন থাকিলে বা যন্ত্ৰ নীৰৱ অৱস্থাত থাকিলেও জাননী লক স্ক্ৰিনত প্ৰদৰ্শিত হ'ব আৰু শব্দ বাজিব",

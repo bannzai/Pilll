@@ -421,7 +421,7 @@
   "editMenstruation": "Editează perioada menstruației",
   "changedPillNumber": "schimbarea numărul pilulei",
   "offPercentForMonthlyPremiumPackage": "Cu {offPercent}% mai ieftin decât planul lunar obișnuit",
-  "premiumIntroductionDiscountPriceDeadline": "Cu abonamentul Premium puteți continua să utilizați toate funcțiile",
+  "premiumIntroductionDiscountPriceDeadline": "Cu un abonament premium poți folosi în continuare toate funcțiile",
   "countdownForDiscountPriceDeadline": "{offPercent}% REDUCERE la cumpărarea în {countdown}",
   "pillReminderChanged": "Notificarea de administrare a fost setată la {value}",
   "silentModeNotificationDescription": "Notificările vor fi afișate pe ecranul de blocare și se va reda sunetul chiar și când modul Nu deranja este activat sau dispozitivul este pe silențios",

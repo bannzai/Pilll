@@ -421,7 +421,7 @@
   "editMenstruation": "сарын тэмдгийн өдрүүдийг засах",
   "changedPillNumber": "эмийн дугаар өөрчлөгдсөн",
   "offPercentForMonthlyPremiumPackage": "Ердийн сарын багцтай харьцуулахад {offPercent}% хямд",
-  "premiumIntroductionDiscountPriceDeadline": "Премиум бүртгэл хийснээр бүх функцийг үргэлжлүүлэн ашиглах боломжтой",
+  "premiumIntroductionDiscountPriceDeadline": "премиум захиалгатай бол бүх боломжийг үргэлжлүүлэн ашиглах боломжтой",
   "countdownForDiscountPriceDeadline": "{countdown} дотор худалдан авбал {offPercent}% хөнгөлөлт",
   "pillReminderChanged": "Эм уух сануулгыг {value} болгон тохируулав",
   "silentModeNotificationDescription": "Анхаарал төвлөрүүлэх горим асаалттай эсвэл төхөөрөмж дуугүй горимд байгаа үед ч мэдэгдэл түгжээстэй дэлгэцэд харагдаж, дуу гарна",

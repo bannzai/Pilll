@@ -421,7 +421,7 @@
   "editMenstruation": "მენსტრუაციის პერიოდის რედაქტირება",
   "changedPillNumber": "აბის ნომერ შეიცვალა",
   "offPercentForMonthlyPremiumPackage": "{offPercent}%-ით იაფი ჩვეულებრივ თვიურ გეგმასთან შედარებით",
-  "premiumIntroductionDiscountPriceDeadline": "პრემიუმ რეგისტრაციით შეგიძლიათ განაგრძოთ ყველა ფუნქციის გამოყენება",
+  "premiumIntroductionDiscountPriceDeadline": "პრემიუმ გამოწერით შეგიძლიათ ყველა ფუნქციის გამოყენება გააგრძელოთ",
   "countdownForDiscountPriceDeadline": "{countdown}-ის განმავლობაში შესყიდვით მიიღეთ {offPercent}% ფასდაკლება",
   "pillReminderChanged": "მიღების შეხსენება {value}-ზე დაყენდა",
   "silentModeNotificationDescription": "ფოკუსირების რეჟიმის ჩართვისას ან მოწყობილობის უხმო რეჟიმშიც კი, შეტყობინებები ჩაკეტილ ეკრანზე გამოჩნდება და ხმა იკვრება",

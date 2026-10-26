@@ -421,7 +421,7 @@
   "editMenstruation": "Edit tanggal haid",
   "changedPillNumber": "nomor pil diubah",
   "offPercentForMonthlyPremiumPackage": "Hemat {offPercent}% dibandingkan paket bulanan biasa",
-  "premiumIntroductionDiscountPriceDeadline": "Berlangganan premium untuk terus menggunakan semua fitur",
+  "premiumIntroductionDiscountPriceDeadline": "Dengan berlangganan premium, Anda dapat terus menggunakan semua fitur",
   "countdownForDiscountPriceDeadline": "Dapatkan diskon {offPercent}% untuk pembelian dalam {countdown}",
   "pillReminderChanged": "Notifikasi minum telah diatur ke {value}",
   "silentModeNotificationDescription": "Meskipun Mode Fokus aktif atau perangkat dalam keadaan senyap, notifikasi tetap akan ditampilkan di layar kunci dan suara akan diputar",

@@ -421,7 +421,7 @@
   "editMenstruation": "แก้ไขช่วงประจำเดือน",
   "changedPillNumber": "เปลี่ยนหมายเลขเม็ดยา",
   "offPercentForMonthlyPremiumPackage": "ประหยัด {offPercent}% เมื่อเทียบกับแพ็กเกจรายเดือนปกติ",
-  "premiumIntroductionDiscountPriceDeadline": "สมัครสมาชิกพรีเมี่ยมเพื่อใช้ฟีเจอร์ทั้งหมดต่อไป",
+  "premiumIntroductionDiscountPriceDeadline": "สมัครพรีเมียมแล้วใช้งานทุกฟีเจอร์ต่อได้ค่ะ",
   "countdownForDiscountPriceDeadline": "ซื้อภายใน{countdown}ได้ส่วนลด{offPercent}%",
   "pillReminderChanged": "ตั้งการแจ้งเตือนการรับประทานยาเป็น{value}แล้ว",
   "silentModeNotificationDescription": "แม้ในโหมดไม่รบกวนหรือเมื่ออุปกรณ์เปิดโหมดเงียบ การแจ้งเตือนจะแสดงบนหน้าจอล็อกพร้อมเสียงเตือน",

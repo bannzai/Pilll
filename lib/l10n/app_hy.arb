@@ -421,7 +421,7 @@
   "editMenstruation": "Փոփոխել դաշտանի օրերը",
   "changedPillNumber": "հաբի համար փոփոխվել է",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% զեղչ՝ սովորական ամսական պլանի համեմատ",
-  "premiumIntroductionDiscountPriceDeadline": "Պրեմիում բաժանորդագրությամբ կարող եք շարունակել օգտագործել բոլոր գործառույթները",
+  "premiumIntroductionDiscountPriceDeadline": "պրեմիում բաժանորդագրությամբ Դուք կարող եք շարունակել օգտվել բոլոր հնարավորություններից",
   "countdownForDiscountPriceDeadline": "{countdown}ի ընթացքում գնելիս {offPercent}％ զեղչ",
   "pillReminderChanged": "Ծանուցումը տեղադրվեց {value}-ին",
   "silentModeNotificationDescription": "Կենտրոնացման ռեժիմի միացման կամ սարքի լռության դեպքում էլ ծանուցումները կցուցադրվեն կողպված էկրանին և ձայնը կնվագարկվի",

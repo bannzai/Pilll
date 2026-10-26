@@ -421,7 +421,7 @@
   "editMenstruation": "Editar os dias da menstruação",
   "changedPillNumber": "alteração do número da pílula",
   "offPercentForMonthlyPremiumPackage": "Economize {offPercent}% em relação ao plano mensal regular",
-  "premiumIntroductionDiscountPriceDeadline": "Com a assinatura premium, você pode continuar usando todas as funcionalidades",
+  "premiumIntroductionDiscountPriceDeadline": "Com uma assinatura Premium, você pode continuar usando todos os recursos",
   "countdownForDiscountPriceDeadline": "{offPercent}% OFF na compra em até {countdown}",
   "pillReminderChanged": "Notificação de tomada definida para {value}",
   "silentModeNotificationDescription": "As notificações serão exibidas na tela de bloqueio e o som será reproduzido mesmo com o modo de concentração ativado ou dispositivo no modo silencioso",

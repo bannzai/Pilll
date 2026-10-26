@@ -421,7 +421,7 @@
   "editMenstruation": "ແກ້ໄຂວັນປະຈຳເດືອນ",
   "changedPillNumber": "ປ່ຽນເລກເມັດຢາ",
   "offPercentForMonthlyPremiumPackage": "ຫຼຸດ {offPercent}% ທຽບກັບແຜນລາຍເດືອນປົກກະຕິ",
-  "premiumIntroductionDiscountPriceDeadline": "ດ້ວຍການສະໝັກສະມາຊິກພຣີມຽມ ທ່ານສາມາດໃຊ້ຟີເຈີທັງໝົດໄດ້ຕໍ່ໄປ",
+  "premiumIntroductionDiscountPriceDeadline": "ເມື່ອສະໝັກ Premium ແລ້ວ ທ່ານສາມາດໃຊ້ທຸກຟັງຊັນຕໍ່ໄປໄດ້",
   "countdownForDiscountPriceDeadline": "ຊື້ພາຍໃນ {countdown} ຫຼຸດ {offPercent}％",
   "pillReminderChanged": "ໄດ້ຕັ້ງການແຈ້ງເຕືອນການເສີບຢາເປັນ{value}ແລ້ວ",
   "silentModeNotificationDescription": "ເຖິງແມ່ນວ່າໂໝດເຈາະຈົງເປີດຢູ່ ຫຼື ອຸປະກອນເປັນແບບງຽບ, ການແຈ້ງເຕືອນຈະຍັງສະແດງຢູ່ໜ້າຈໍລັອກ ແລະ ສຽງຈະເປີດຂຶ້ນ",

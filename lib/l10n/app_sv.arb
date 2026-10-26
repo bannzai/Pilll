@@ -421,7 +421,7 @@
   "editMenstruation": "Ändra mensdagar",
   "changedPillNumber": "tablettnummer ändrat",
   "offPercentForMonthlyPremiumPackage": "Spara {offPercent} % jämfört med det vanliga månadsabonnemanget",
-  "premiumIntroductionDiscountPriceDeadline": "Genom att registrera dig för premium kan du fortsätta att använda alla funktioner",
+  "premiumIntroductionDiscountPriceDeadline": "Med en premiumprenumeration kan du fortsätta använda alla funktioner",
   "countdownForDiscountPriceDeadline": "{offPercent}% rabatt vid köp inom {countdown}",
   "pillReminderChanged": "Påminnelsen för medicintag har ställts in till {value}",
   "silentModeNotificationDescription": "Aviseringar visas på låsskärmen och ljud spelas upp även när fokusläget är PÅ eller enheten är på tyst",

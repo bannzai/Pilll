@@ -421,7 +421,7 @@
   "editMenstruation": "I-edit ang mga petsa ng regla",
   "changedPillNumber": "binago ang numero ng tableta",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% na mas mura kaysa sa karaniwang buwanang plano",
-  "premiumIntroductionDiscountPriceDeadline": "Sa Premium subscription, patuloy mong magagamit ang lahat ng features",
+  "premiumIntroductionDiscountPriceDeadline": "Sa pag-subscribe sa Premium, magagamit pa rin ninyo ang lahat ng feature",
   "countdownForDiscountPriceDeadline": "{offPercent}% OFF kapag bumili sa loob ng {countdown}",
   "pillReminderChanged": "Naitakda na ang paalala sa pag-inom sa {value}",
   "silentModeNotificationDescription": "Kahit nakabukas ang Focus Mode o naka-silent ang device, makikita pa rin ang mga notification sa lock screen at tutunog pa rin ito.",

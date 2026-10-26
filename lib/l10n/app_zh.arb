@@ -421,7 +421,7 @@
   "editMenstruation": "编辑经期日期",
   "changedPillNumber": "药片编号已更改",
   "offPercentForMonthlyPremiumPackage": "比常规月度套餐优惠 {offPercent}%",
-  "premiumIntroductionDiscountPriceDeadline": "订阅高级会员即可继续使用所有功能",
+  "premiumIntroductionDiscountPriceDeadline": "订阅高级版后，可继续使用所有功能",
   "countdownForDiscountPriceDeadline": "{countdown}内购买可享{offPercent}％优惠",
   "pillReminderChanged": "服用提醒已设置为{value}",
   "silentModeNotificationDescription": "即便开启专注模式或设备处于静音状态，通知仍会在锁屏界面显示并播放声音",

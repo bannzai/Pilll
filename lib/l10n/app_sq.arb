@@ -421,7 +421,7 @@
   "editMenstruation": "Ndryshoni datat e menstruacionit",
   "changedPillNumber": "ndryshim i numri i pilulës",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% më lirë se plani i zakonshëm mujor",
-  "premiumIntroductionDiscountPriceDeadline": "Me regjistrimin premium mund të vazhdoni të përdorni të gjitha funksionet",
+  "premiumIntroductionDiscountPriceDeadline": "Me abonimin premium mund të vazhdoni të përdorni të gjitha veçoritë",
   "countdownForDiscountPriceDeadline": "{offPercent}% zbritje për blerjet brenda {countdown}",
   "pillReminderChanged": "E vendosa njoftimin e pilulës në {value}",
   "silentModeNotificationDescription": "Njoftimet do të shfaqen në ekranin e kyçur dhe do të luhet zëri, edhe kur modaliteti i përqendrimit është i aktivizuar ose pajisja është në heshtje",

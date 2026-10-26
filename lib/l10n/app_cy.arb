@@ -421,7 +421,7 @@
   "editMenstruation": "Golygu dyddiadau'r mislif",
   "changedPillNumber": "newid rhif y bilsen",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% yn rhatach na'r cynllun misol arferol",
-  "premiumIntroductionDiscountPriceDeadline": "Gallwch barhau i ddefnyddio pob nodwedd gyda chofrestriad premiwm",
+  "premiumIntroductionDiscountPriceDeadline": "Gyda thanysgrifiad premiwm, gallwch barhau i ddefnyddio’r holl nodweddion",
   "countdownForDiscountPriceDeadline": "{offPercent}% OFF wrth brynu o fewn {countdown}",
   "pillReminderChanged": "Wedi gosod yr hysbysiad cymryd i {value}",
   "silentModeNotificationDescription": "Er bod y modd canolbwyntio ymlaen neu'r ddyfais ar ddistaw, bydd hysbysiadau'n dal i ymddangos ar y sgrin clo gyda sain",

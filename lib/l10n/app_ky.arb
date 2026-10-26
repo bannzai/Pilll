@@ -421,7 +421,7 @@
   "editMenstruation": "Айыз күндөрүн өзгөртүңүз",
   "changedPillNumber": "таблетканын номери өзгөртүлдү",
   "offPercentForMonthlyPremiumPackage": "Кадимки айлык планга салыштырмалуу {offPercent}% арзандатуу",
-  "premiumIntroductionDiscountPriceDeadline": "Премиум катталуу менен бардык функцияларды улантуу менен колдоно аласыз",
+  "premiumIntroductionDiscountPriceDeadline": "Премиум жазылуусу менен бардык мүмкүнчүлүктөрдү колдонууну уланта аласыз",
   "countdownForDiscountPriceDeadline": "{countdown} ичинде сатып алсаңыз {offPercent}% жеңилдик",
   "pillReminderChanged": "Дары ичүү эскертүүсү {value} убактысына орнотулду",
   "silentModeNotificationDescription": "Концентрация режими күйгүзүлгөндө же түзмөк үнсүз болгондо дагы, билдирүүлөр кулпуланган экранда көрсөтүлөт жана үн ойнотулат",

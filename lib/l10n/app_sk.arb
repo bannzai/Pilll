@@ -421,7 +421,7 @@
   "editMenstruation": "Upraviť obdobie menštruácie",
   "changedPillNumber": "zmena číslo tabletky",
   "offPercentForMonthlyPremiumPackage": "O {offPercent} % lacnejšie než bežný mesačný plán",
-  "premiumIntroductionDiscountPriceDeadline": "S premium registráciou budú naďalej k dispozícii všetky funkcie",
+  "premiumIntroductionDiscountPriceDeadline": "S predplatným Premium môžete naďalej využívať všetky funkcie",
   "countdownForDiscountPriceDeadline": "{offPercent}% zľava pri nákupe do {countdown}",
   "pillReminderChanged": "Upozornenie na užívanie bolo nastavené na {value}",
   "silentModeNotificationDescription": "Aj keď je zapnutý režim sústredenosti alebo je zariadenie v tichom režime, oznámenia sa zobrazia na zamknutej obrazovke a prehrá sa zvuk.",

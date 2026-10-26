@@ -421,7 +421,7 @@
   "editMenstruation": "महिनावारीका दिनहरू सम्पादन गर्नुहोस्",
   "changedPillNumber": "चक्की नम्बर परिवर्तन",
   "offPercentForMonthlyPremiumPackage": "सामान्य मासिक योजनाको तुलनामा {offPercent}% छुट",
-  "premiumIntroductionDiscountPriceDeadline": "प्रिमियम दर्ता गरेर तपाईंले सबै सुविधाहरू निरन्तर प्रयोग गर्न सक्नुहुन्छ",
+  "premiumIntroductionDiscountPriceDeadline": "प्रिमियम सदस्यतासँगै तपाईं सबै सुविधाहरू प्रयोग गरिरहन सक्नुहुन्छ",
   "countdownForDiscountPriceDeadline": "{countdown} भित्र खरिद गर्दा {offPercent}% छुट",
   "pillReminderChanged": "सेवन सूचना {value} मा सेट गरिएको छ",
   "silentModeNotificationDescription": "फोकस मोड सक्रिय भएको वा डिभाइस मौन मोडमा भएको बेलामा पनि, सूचनाहरू लक स्क्रिनमा देखाइनेछ र आवाज बज्नेछ",

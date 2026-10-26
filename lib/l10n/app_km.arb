@@ -421,7 +421,7 @@
   "editMenstruation": "កែសម្រួលថ្ងៃមានរដូវ",
   "changedPillNumber": "បានប្តូរលេខគ្រាប់ថ្នាំ",
   "offPercentForMonthlyPremiumPackage": "បញ្ចុះតម្លៃ {offPercent}% ធៀបនឹងគម្រោងប្រចាំខែធម្មតា",
-  "premiumIntroductionDiscountPriceDeadline": "ការចុះឈ្មោះ Premium នឹងអនុញ្ញាតឱ្យអ្នកបន្តប្រើមុខងារទាំងអស់",
+  "premiumIntroductionDiscountPriceDeadline": "ជាមួយការជាវព្រីមៀម អ្នកអាចបន្តប្រើមុខងារទាំងអស់បាន",
   "countdownForDiscountPriceDeadline": "ទិញក្នុងរយៈពេល{countdown}ទទួលបានការបញ្ចុះតម្លៃ{offPercent}％",
   "pillReminderChanged": "បានកំណត់ការរំលឹងទទួលទានថ្នាំទៅ{value}",
   "silentModeNotificationDescription": "បើទោះបីជារបៀបផ្តោតអារម្មណ៍បើក ឬឧបករណ៍ស្ងាត់ក៏ដោយ ការជូនដំណឹងនឹងបង្ហាញនៅលើអេក្រង់ចាក់សោ ហើយសំឡេងនឹងចាក់",

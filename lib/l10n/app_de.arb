@@ -421,7 +421,7 @@
   "editMenstruation": "Zeitraum der Periode bearbeiten",
   "changedPillNumber": "Pillennummer geändert",
   "offPercentForMonthlyPremiumPackage": "{offPercent} % günstiger als der reguläre Monatstarif",
-  "premiumIntroductionDiscountPriceDeadline": "Mit der Premium-Registrierung können Sie weiterhin alle Funktionen nutzen",
+  "premiumIntroductionDiscountPriceDeadline": "Mit einem Premium-Abo kannst du weiterhin alle Funktionen nutzen",
   "countdownForDiscountPriceDeadline": "{offPercent}% Rabatt bei Kauf innerhalb von {countdown}",
   "pillReminderChanged": "Einnahme-Erinnerung wurde auf {value} eingestellt",
   "silentModeNotificationDescription": "Auch wenn der Nicht-stören-Modus aktiviert ist oder das Gerät stumm geschaltet ist, werden Benachrichtigungen auf dem Sperrbildschirm angezeigt und Töne abgespielt",

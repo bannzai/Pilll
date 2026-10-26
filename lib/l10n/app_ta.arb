@@ -421,7 +421,7 @@
   "editMenstruation": "மாதவிடாய் நாட்களைத் திருத்துங்கள்",
   "changedPillNumber": "மாத்திரை எண் மாற்றப்பட்டது",
   "offPercentForMonthlyPremiumPackage": "வழக்கமான மாதாந்திரத் திட்டத்தைவிட {offPercent}% தள்ளுபடி",
-  "premiumIntroductionDiscountPriceDeadline": "ப்ரீமியம் பதிவின் மூலம் தொடர்ந்து அனைத்து அம்சங்களையும் பயன்படுத்தலாம்",
+  "premiumIntroductionDiscountPriceDeadline": "பிரீமியம் சந்தாவுடன் எல்லா அம்சங்களையும் தொடர்ந்து பயன்படுத்தலாம்",
   "countdownForDiscountPriceDeadline": "{countdown} க்குள் வாங்கினால் {offPercent}% தள்ளுபடி",
   "pillReminderChanged": "மாத்திரை அறிவிப்பை {value}க்கு மாற்றினோம்",
   "silentModeNotificationDescription": "ஃபோக்கஸ் மோட் இயக்கத்தில் இருந்தாலும் அல்லது சாதனம் ஊமையாக இருந்தாலும், அறிவிப்புகள் பூட்டுத் திரையில் காண்பிக்கப்படும் மற்றும் ஒலி ஒலிக்கும்",

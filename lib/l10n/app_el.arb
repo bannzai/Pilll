@@ -421,7 +421,7 @@
   "editMenstruation": "Επεξεργασία ημερών περιόδου",
   "changedPillNumber": "αλλαγή στον αριθμό χαπιού",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% φθηνότερα από το κανονικό μηνιαίο πρόγραμμα",
-  "premiumIntroductionDiscountPriceDeadline": "Με την εγγραφή premium μπορείτε να συνεχίσετε να χρησιμοποιείτε όλες τις λειτουργίες",
+  "premiumIntroductionDiscountPriceDeadline": "Με συνδρομή Premium μπορείτε να συνεχίσετε να χρησιμοποιείτε όλες τις λειτουργίες",
   "countdownForDiscountPriceDeadline": "{offPercent}% έκπτωση με αγορά εντός {countdown}",
   "pillReminderChanged": "Η υπενθύμιση λήψης ορίστηκε στις {value}",
   "silentModeNotificationDescription": "Ακόμη και όταν η λειτουργία συγκέντρωσης είναι ενεργοποιημένη ή η συσκευή είναι σε σίγαση, οι ειδοποιήσεις θα εμφανίζονται στην οθόνη κλειδώματος και θα αναπαράγεται ήχος.",

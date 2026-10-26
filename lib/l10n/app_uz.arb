@@ -421,7 +421,7 @@
   "editMenstruation": "Hayz kunlarini tahrirlang",
   "changedPillNumber": "tabletka raqam oʻzgartirildi",
   "offPercentForMonthlyPremiumPackage": "Odatdagi oylik rejaga nisbatan {offPercent}% chegirma",
-  "premiumIntroductionDiscountPriceDeadline": "Premium obunaga o'tish orqali barcha funksiyalardan foydalanishni davom ettirishingiz mumkin",
+  "premiumIntroductionDiscountPriceDeadline": "Premium obunasi bilan barcha imkoniyatlardan foydalanishda davom etishingiz mumkin",
   "countdownForDiscountPriceDeadline": "{countdown} vaqt ichida xarid qilsangiz {offPercent}% chegirma",
   "pillReminderChanged": "Tabletka ichish xabari {value} ga o'rnatildi",
   "silentModeNotificationDescription": "Diqqat rejimi yoqilgan yoki qurilma jim rejimida bo'lsa ham, bildirishnomalar qulflangan ekranda ko'rsatiladi va tovush chiqariladi",

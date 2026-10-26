@@ -421,7 +421,7 @@
   "editMenstruation": "Adet günlerini düzenleyin",
   "changedPillNumber": "hap numarası değiştirildi",
   "offPercentForMonthlyPremiumPackage": "Standart aylık plana göre %{offPercent} indirim",
-  "premiumIntroductionDiscountPriceDeadline": "Premium üyelik ile tüm özellikleri kullanmaya devam edebilirsiniz",
+  "premiumIntroductionDiscountPriceDeadline": "Premium aboneliğiyle tüm özellikleri kullanmaya devam edebilirsiniz",
   "countdownForDiscountPriceDeadline": "{countdown} içinde satın alırsan %{offPercent} indirim",
   "pillReminderChanged": "İlaç hatırlatıcısı {value} olarak ayarlandı",
   "silentModeNotificationDescription": "Odak modu açık olduğunda veya cihaz sessiz modda olduğunda bile, bildirimler kilit ekranında görüntülenir ve ses çalar",

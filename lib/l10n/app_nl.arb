@@ -421,7 +421,7 @@
   "editMenstruation": "Menstruatiedagen aanpassen",
   "changedPillNumber": "pilnummer gewijzigd",
   "offPercentForMonthlyPremiumPackage": "Bespaar {offPercent}% ten opzichte van het gewone maandabonnement",
-  "premiumIntroductionDiscountPriceDeadline": "Met Premium-registratie blijf je alle functies gebruiken",
+  "premiumIntroductionDiscountPriceDeadline": "Met een premiumabonnement kun je alle functies blijven gebruiken",
   "countdownForDiscountPriceDeadline": "{offPercent}% korting bij aankoop binnen {countdown}",
   "pillReminderChanged": "Innameherinnering ingesteld op {value}",
   "silentModeNotificationDescription": "Meldingen verschijnen op het vergrendelscherm en spelen geluid af, zelfs bij ingeschakelde Focus-modus of wanneer het apparaat gedempt is",

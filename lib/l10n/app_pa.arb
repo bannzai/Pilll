@@ -421,7 +421,7 @@
   "editMenstruation": "ਮਾਹਵਾਰੀ ਦੇ ਦਿਨ ਸੋਧੋ",
   "changedPillNumber": "ਗੋਲੀ ਨੰਬਰ ਬਦਲਿਆ ਗਿਆ",
   "offPercentForMonthlyPremiumPackage": "ਆਮ ਮਹੀਨਾਵਾਰ ਪਲਾਨ ਨਾਲੋਂ {offPercent}% ਛੋਟ",
-  "premiumIntroductionDiscountPriceDeadline": "ਪ੍ਰੀਮੀਅਮ ਰਜਿਸਟਰ ਕਰਕੇ ਤੁਸੀਂ ਸਾਰੇ ਫੀਚਰਾਂ ਦੀ ਵਰਤੋਂ ਜਾਰੀ ਰੱਖ ਸਕਦੇ ਹੋ",
+  "premiumIntroductionDiscountPriceDeadline": "ਪ੍ਰੀਮੀਅਮ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਨਾਲ ਤੁਸੀਂ ਸਾਰੀਆਂ ਸੁਵਿਧਾਵਾਂ ਵਰਤਣਾ ਜਾਰੀ ਰੱਖ ਸਕਦੇ ਹੋ",
   "countdownForDiscountPriceDeadline": "{countdown} ਵਿੱਚ ਖਰੀਦੋ, {offPercent}% ਛੂਟ",
   "pillReminderChanged": "ਸੇਵਨ ਸੂਚਨਾ {value} ਵਜੇ ਸੈੱਟ ਕਰ ਦਿੱਤੀ ਗਈ",
   "silentModeNotificationDescription": "ਫੋਕਸ ਮੋਡ ਚਾਲੂ ਹੋਣ 'ਤੇ ਜਾਂ ਡਿਵਾਈਸ ਸਾਈਲੈਂਟ ਹੋਣ 'ਤੇ ਵੀ, ਨੋਟੀਫਿਕੇਸ਼ਨ ਲਾਕ ਸਕਰੀਨ 'ਤੇ ਦਿਖਾਈ ਜਾਵੇਗੀ ਅਤੇ ਆਵਾਜ਼ ਚੱਲੇਗੀ",

@@ -421,7 +421,7 @@
   "editMenstruation": "د حیض ورځې سمې کړئ",
   "changedPillNumber": "د ګولۍ شمېر بدلول",
   "offPercentForMonthlyPremiumPackage": "د عادي میاشتني پلان په پرتله {offPercent}% تخفیف",
-  "premiumIntroductionDiscountPriceDeadline": "د پریمیم ثبت سره ټولې دندې کارولی شي",
+  "premiumIntroductionDiscountPriceDeadline": "د پریمیم ګډون سره تاسو کولی شئ له ټولو ځانګړنو څخه کار اخیستلو ته دوام ورکړئ",
   "countdownForDiscountPriceDeadline": "د {countdown} دننه پیرودل {offPercent}％ تخفیف",
   "pillReminderChanged": "د درملو یادونه {value} ته تنظیم شوه",
   "silentModeNotificationDescription": "که څه هم د تمرکز موډ فعال وي یا دستګاه بې غږه وي، خبرتیاوې به د قفل په سکرین کې ښکاره شي او غږ به وغږیږي",

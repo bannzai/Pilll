@@ -421,7 +421,7 @@
   "editMenstruation": "A menstruáció időszakának szerkesztése",
   "changedPillNumber": "tablettaszám módosítva",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% kedvezmény a szokásos havi csomaghoz képest",
-  "premiumIntroductionDiscountPriceDeadline": "A prémium előfizetéssel továbbra is használhatja az összes funkciót",
+  "premiumIntroductionDiscountPriceDeadline": "Prémium-előfizetéssel továbbra is használhatod az összes funkciót",
   "countdownForDiscountPriceDeadline": "{countdown} alatt {offPercent}% kedvezmény!",
   "pillReminderChanged": "A bevételiértesítést {value}-ra beállítottam",
   "silentModeNotificationDescription": "A koncentrációs mód bekapcsolása vagy az eszköz némítása esetén is az értesítések megjelennek a zárolási képernyőn és a hang lejátszásra kerül.",

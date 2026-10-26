@@ -421,7 +421,7 @@
   "editMenstruation": "עריכת תאריכי המחזור",
   "changedPillNumber": "שינוי מספר גלולה",
   "offPercentForMonthlyPremiumPackage": "הנחה של {offPercent}% לעומת התוכנית החודשית הרגילה",
-  "premiumIntroductionDiscountPriceDeadline": "הרשמה לפרמיום מאפשרת המשך שימוש בכל התכונות",
+  "premiumIntroductionDiscountPriceDeadline": "מינוי פרימיום מאפשר להמשיך להשתמש בכל האפשרויות",
   "countdownForDiscountPriceDeadline": "קנה תוך {countdown} וקבל {offPercent}% הנחה",
   "pillReminderChanged": "תזכורת הנטילה הוגדרה ל{value}",
   "silentModeNotificationDescription": "גם כאשר מצב הריכוז מופעל או המכשיר מושתק, הודעות יוצגו במסך הנעילה וצליל יושמע",

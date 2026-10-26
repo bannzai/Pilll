@@ -421,7 +421,7 @@
   "editMenstruation": "Badilisha siku za hedhi",
   "changedPillNumber": "nambari ya kidonge imebadilishwa",
   "offPercentForMonthlyPremiumPackage": "Punguzo la {offPercent}% ikilinganishwa na mpango wa kawaida wa kila mwezi",
-  "premiumIntroductionDiscountPriceDeadline": "Kusajili Premium kutakuwezesha kuendelea kutumia vipengele vyote",
+  "premiumIntroductionDiscountPriceDeadline": "Kwa kujisajili kwenye Premium, unaweza kuendelea kutumia vipengele vyote",
   "countdownForDiscountPriceDeadline": "Nunua ndani ya {countdown} na upate punguzo la {offPercent}%",
   "pillReminderChanged": "Arifa ya vidonge imewekwa {value}",
   "silentModeNotificationDescription": "Hata wakati hali ya makini imeongezwa au kifaa kimewekwa kimya, arifa zitaonekana kwenye skrini iliyofungwa na sauti itasikika",

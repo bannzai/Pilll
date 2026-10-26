@@ -421,7 +421,7 @@
   "editMenstruation": "Redaguoti mėnesinių datas",
   "changedPillNumber": "pakeistas tabletės numer",
   "offPercentForMonthlyPremiumPackage": "{offPercent} % pigiau nei įprastas mėnesinis planas",
-  "premiumIntroductionDiscountPriceDeadline": "Su Premium prenumerata galėsite toliau naudoti visas funkcijas",
+  "premiumIntroductionDiscountPriceDeadline": "Užsisakę Premium galėsite toliau naudotis visomis funkcijomis",
   "countdownForDiscountPriceDeadline": "{offPercent}% nuolaida įsigyjant per {countdown}",
   "pillReminderChanged": "Tabletės vartojimo priminimas nustatytas {value}",
   "silentModeNotificationDescription": "Net įjungus koncentracijos režimą arba nutildžius įrenginį, pranešimai bus rodomi užrakintame ekrane ir atkuriamas garsas",

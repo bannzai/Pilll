@@ -421,7 +421,7 @@
   "editMenstruation": "ماہواری کی تاریخیں تبدیل کریں",
   "changedPillNumber": "گولی نمبر تبدیل کیا گیا",
   "offPercentForMonthlyPremiumPackage": "باقاعدہ ماہانہ پلان کے مقابلے میں {offPercent}% رعایت",
-  "premiumIntroductionDiscountPriceDeadline": "پریمیم رجسٹریشن کے ساتھ تمام فیچرز کا استعمال جاری رکھ سکتے ہیں",
+  "premiumIntroductionDiscountPriceDeadline": "پریمیم سبسکرپشن کے ساتھ آپ تمام خصوصیات کا استعمال جاری رکھ سکتی ہیں",
   "countdownForDiscountPriceDeadline": "{countdown} میں خریداری پر {offPercent}% چھوٹ",
   "pillReminderChanged": "خوراک کی یاد دہانی {value} پر سیٹ کر دی گئی ہے",
   "silentModeNotificationDescription": "فوکس موڈ آن ہونے یا ڈیوائس خاموش ہونے کے باوجود بھی، اطلاعات لاک اسکرین پر ظاہر ہوں گی اور آواز بجے گی",

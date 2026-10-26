@@ -421,7 +421,7 @@
   "editMenstruation": "Modifica i giorni delle mestruazioni",
   "changedPillNumber": "modifica del numero della pillola",
   "offPercentForMonthlyPremiumPackage": "Risparmia il {offPercent}% rispetto al piano mensile standard",
-  "premiumIntroductionDiscountPriceDeadline": "Con l'abbonamento Premium potrai continuare a utilizzare tutte le funzioni",
+  "premiumIntroductionDiscountPriceDeadline": "Con un abbonamento Premium puoi continuare a usare tutte le funzioni",
   "countdownForDiscountPriceDeadline": "{offPercent}% di sconto acquistando entro {countdown}",
   "pillReminderChanged": "Il promemoria di assunzione è stato impostato alle {value}",
   "silentModeNotificationDescription": "Anche quando la modalità concentrazione è attiva o il dispositivo è in modalità silenziosa, le notifiche verranno visualizzate sulla schermata di blocco e il suono verrà riprodotto",

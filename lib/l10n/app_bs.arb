@@ -421,7 +421,7 @@
   "editMenstruation": "Uredite period menstruacije",
   "changedPillNumber": "promjena broj pilule",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% povoljnije od redovnog mjesečnog plana",
-  "premiumIntroductionDiscountPriceDeadline": "Sa premium pretplatom možete i dalje koristiti sve funkcije",
+  "premiumIntroductionDiscountPriceDeadline": "Uz premium pretplatu možete nastaviti koristiti sve funkcije",
   "countdownForDiscountPriceDeadline": "{offPercent}% popusta pri kupovini u roku od {countdown}",
   "pillReminderChanged": "Postavili smo notifikaciju za uzimanje na {value}",
   "silentModeNotificationDescription": "Čak i kada je fokus način uključen ili je uređaj utišan, obavještenja će biti prikazana na zaključanom ekranu i zvuk će se reproducirati",

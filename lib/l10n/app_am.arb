@@ -421,7 +421,7 @@
   "editMenstruation": "የወር አበባ ቀናትን አርትዕ",
   "changedPillNumber": "የክኒን ቁጥር ለውጥ",
   "offPercentForMonthlyPremiumPackage": "ከመደበኛው ወርሃዊ እቅድ ጋር ሲነጻጸር {offPercent}% ቅናሽ",
-  "premiumIntroductionDiscountPriceDeadline": "ፕሪሚየም በመመዝገብ ሁሉንም ባህርያት በመቀጠል መጠቀም ይችላሉ",
+  "premiumIntroductionDiscountPriceDeadline": "ለፕሪሚየም በመመዝገብ ሁሉንም ባህሪያት መጠቀምዎን መቀጠል ይችላሉ",
   "countdownForDiscountPriceDeadline": "በ{countdown} ውስጥ ሲገዙ {offPercent}% ቅናש",
   "pillReminderChanged": "የመድሃኒት አማሳሰቢያን ወደ {value} ቀይሬዋለሁ",
   "silentModeNotificationDescription": "ትኩረት ሁነታ ሲበራ ወይም መሣሪያው ፀጥተኛ ሁነታ ላይ ሲሆን እንኳን፣ ማሳወቂያዎች በተቆለፈው ስክሪን ላይ ይታያሉ እና ድምፅ ይደመፃል።",

@@ -421,7 +421,7 @@
   "editMenstruation": "Етеккір күндерін өзгертіңіз",
   "changedPillNumber": "таблетка нөмір өзгертілді",
   "offPercentForMonthlyPremiumPackage": "Әдеттегі айлық жоспармен салыстырғанда {offPercent}% жеңілдік",
-  "premiumIntroductionDiscountPriceDeadline": "Премиум тіркелімі арқылы барлық мүмкіндіктерді әрі қарай пайдалана аласыз",
+  "premiumIntroductionDiscountPriceDeadline": "Премиум жазылымымен барлық мүмкіндіктерді пайдалануды жалғастыра аласыз",
   "countdownForDiscountPriceDeadline": "{countdown} ішінде сатып алса {offPercent}% жеңілдік",
   "pillReminderChanged": "Дәрі қабылдау ескертуін {value} уақытына орнаттым",
   "silentModeNotificationDescription": "Шоғырлану режимі қосулы болса немесе құрылғы үнсіз режимде болса да, хабарландырулар құлып экранында көрсетіледі және дыбыс ойнатылады",

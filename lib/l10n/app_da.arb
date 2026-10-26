@@ -421,7 +421,7 @@
   "editMenstruation": "Rediger menstruationsperioden",
   "changedPillNumber": "pillenummer ændret",
   "offPercentForMonthlyPremiumPackage": "Spar {offPercent} % i forhold til det normale månedsabonnement",
-  "premiumIntroductionDiscountPriceDeadline": "Med Premium-registrering kan du fortsat bruge alle funktioner",
+  "premiumIntroductionDiscountPriceDeadline": "Med et Premium-abonnement kan du fortsat bruge alle funktioner",
   "countdownForDiscountPriceDeadline": "{offPercent}% rabat ved køb inden for {countdown}",
   "pillReminderChanged": "Pillepåmindelse er sat til {value}",
   "silentModeNotificationDescription": "Notifikationer vises på låseskærmen og lyd afspilles, selv når fokustilstand er aktiveret eller enheden er sat til lydløs",

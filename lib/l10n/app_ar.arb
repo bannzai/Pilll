@@ -421,7 +421,7 @@
   "editMenstruation": "تعديل فترة الدورة",
   "changedPillNumber": "تغيير رقم الحبة",
   "offPercentForMonthlyPremiumPackage": "خصم {offPercent}% مقارنة بالخطة الشهرية المعتادة",
-  "premiumIntroductionDiscountPriceDeadline": "التسجيل المميز يتيح لك الاستمرار في استخدام جميع الميزات",
+  "premiumIntroductionDiscountPriceDeadline": "بالاشتراك في بريميوم، يمكنكِ الاستمرار في استخدام جميع الميزات",
   "countdownForDiscountPriceDeadline": "خصم {offPercent}٪ للشراء خلال {countdown}",
   "pillReminderChanged": "تم تعديل موعد تذكير تناول الحبوب إلى {value}",
   "silentModeNotificationDescription": "حتى عند تشغيل وضع التركيز أو كتم صوت الجهاز، ستظهر الإشعارات على شاشة القفل وسيتم تشغيل الأصوات",

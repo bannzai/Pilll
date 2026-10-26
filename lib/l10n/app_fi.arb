@@ -421,7 +421,7 @@
   "editMenstruation": "Muokkaa kuukautisten ajankohtaa",
   "changedPillNumber": "pillerinumero muutettu",
   "offPercentForMonthlyPremiumPackage": "Säästä {offPercent} % tavalliseen kuukausitilaukseen verrattuna",
-  "premiumIntroductionDiscountPriceDeadline": "Premium-tilauksella kaikki ominaisuudet pysyvät käytettävissä",
+  "premiumIntroductionDiscountPriceDeadline": "Premium-tilauksella voit jatkaa kaikkien ominaisuuksien käyttöä",
   "countdownForDiscountPriceDeadline": "{offPercent}% alennusta ostamalla {countdown} kuluessa",
   "pillReminderChanged": "Ottamismuistutus asetettu kelloaikaan {value}",
   "silentModeNotificationDescription": "Ilmoitukset näkyvät lukitusnäytöllä ja ääni toistetaan, vaikka keskittymistila olisi päällä tai laite olisi äänettömässä",
