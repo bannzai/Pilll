@@ -541,7 +541,7 @@
   "creatingNewPillSheetFeatureAppealPoint1": "पिल स्ट्रिप खत्म होने पर अपने आप बदल जाता है",
   "creatingNewPillSheetFeatureAppealPoint2": "इसे खुद बनाने की ज़रूरत नहीं",
   "creatingNewPillSheetFeatureAppealPoint3": "सेटिंग टैब के स्विच से बदलें",
-  "alarmKitFeatureAppealPoint1": "साइलेंट/फोकस मोड में भी बजेगा",
+  "alarmKitFeatureAppealPoint1": "साइलेंट/फ़ोकस मोड में भी अलार्म बजता है",
   "alarmKitFeatureAppealPoint2": "घड़ी जैसी अलार्म ध्वनि",
   "alarmKitFeatureAppealPoint3": "iOS 26 और उसके बाद — सेटिंग्स टैब से सक्षम करें",
   "todayPillNumberFeatureAppealPoint1": "निःशुल्क नंबर मिलान सुविधा",

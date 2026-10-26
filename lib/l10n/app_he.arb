@@ -541,7 +541,7 @@
   "creatingNewPillSheetFeatureAppealPoint1": "מעבר אוטומטי בסיום חפיסת הגלולות",
   "creatingNewPillSheetFeatureAppealPoint2": "אין צורך ליצור ידנית",
   "creatingNewPillSheetFeatureAppealPoint3": "אפשר לשנות באמצעות המתג בלשונית ההגדרות",
-  "alarmKitFeatureAppealPoint1": "הצלצול גם במצב שקט/ריכוז",
+  "alarmKitFeatureAppealPoint1": "הצלצול פועל גם במצב שקט/מיקוד",
   "alarmKitFeatureAppealPoint2": "צליל התראה כמו של שעון מעורר",
   "alarmKitFeatureAppealPoint3": "הפעל דרך לשונית 'הגדרות' ב-iOS 26 ומעלה",
   "todayPillNumberFeatureAppealPoint1": "תכונת התאמת מספרים חינמית",

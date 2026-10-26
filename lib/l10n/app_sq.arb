@@ -541,7 +541,7 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Kalimi automatik kur mbaron blister",
   "creatingNewPillSheetFeatureAppealPoint2": "Nuk keni nevojë ta krijoni manualisht",
   "creatingNewPillSheetFeatureAppealPoint3": "Ndryshojeni me çelësin në skedën Cilësimet",
-  "alarmKitFeatureAppealPoint1": "Dëgjohet edhe kur pajisja është në modalitetin Heshtje ose Fokus",
+  "alarmKitFeatureAppealPoint1": "Bie edhe në modalitetin e heshtur/të përqendrimit",
   "alarmKitFeatureAppealPoint2": "Tingull alarmi si ai i orës së zgjimit",
   "alarmKitFeatureAppealPoint3": "Në iOS 26 e më vonë · aktivizoni nga skeda Cilësimet",
   "todayPillNumberFeatureAppealPoint1": "Funksion falas për përputhjen e numrave",

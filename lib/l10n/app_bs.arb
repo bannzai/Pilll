@@ -541,7 +541,7 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Automatsko prebacivanje kada se blister potroši",
   "creatingNewPillSheetFeatureAppealPoint2": "Ne morate ručno kreirati",
   "creatingNewPillSheetFeatureAppealPoint3": "Promijenite pomoću prekidača na kartici Postavke",
-  "alarmKitFeatureAppealPoint1": "Oglašava se čak i u tihom/fokus modu",
+  "alarmKitFeatureAppealPoint1": "Zvoni i u tihom načinu rada/načinu rada za fokus",
   "alarmKitFeatureAppealPoint2": "Zvuk alarma poput budilnika",
   "alarmKitFeatureAppealPoint3": "iOS 26 i noviji · Omogući u kartici Postavke",
   "todayPillNumberFeatureAppealPoint1": "Besplatna funkcija usklađivanja broja",

@@ -541,7 +541,7 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Ավտոմատ անցում, երբ հաբերի բլիստեր ավարտվում է",
   "creatingNewPillSheetFeatureAppealPoint2": "Ձեռքով ստեղծելու կարիք չկա",
   "creatingNewPillSheetFeatureAppealPoint3": "Փոխեք Կարգավորումներ ներդիրի անջատիչով",
-  "alarmKitFeatureAppealPoint1": "Ձայն հնչելու է նույնիսկ լուռ կամ կենտրոնացման ռեժիմում",
+  "alarmKitFeatureAppealPoint1": "Զանգում է նաև անձայն/կենտրոնացման ռեժիմում",
   "alarmKitFeatureAppealPoint2": "Զարթուցիչի նման ծանուցման ձայն",
   "alarmKitFeatureAppealPoint3": "iOS 26 կամ ավելի ուշ · Միացնել Կարգավորումներ ներդիրից",
   "todayPillNumberFeatureAppealPoint1": "Անվճար համարների համընկման ֆունկցիա",

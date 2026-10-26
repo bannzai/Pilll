@@ -541,7 +541,7 @@
   "creatingNewPillSheetFeatureAppealPoint1": "həb blister bitdikdə avtomatik keçid",
   "creatingNewPillSheetFeatureAppealPoint2": "Əl ilə yaratmağa ehtiyac yoxdur",
   "creatingNewPillSheetFeatureAppealPoint3": "Ayarlar bölməsindəki keçidlə dəyişdirin",
-  "alarmKitFeatureAppealPoint1": "Səssiz/Fokus rejimində belə çalınır",
+  "alarmKitFeatureAppealPoint1": "Səssiz/fokus rejimində də səslənir",
   "alarmKitFeatureAppealPoint2": "Zəngli saat kimi alarm səsi",
   "alarmKitFeatureAppealPoint3": "iOS 26 və sonrakı · Parametrlər tabından aktivləşdir",
   "todayPillNumberFeatureAppealPoint1": "Pulsuz istifadə edilə bilən nömrə uyğunlaşdırma funksiyası",

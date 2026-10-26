@@ -541,7 +541,7 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Switches automatically when the pill pack ends",
   "creatingNewPillSheetFeatureAppealPoint2": "No need to create it manually",
   "creatingNewPillSheetFeatureAppealPoint3": "Toggle it with the switch in the Settings tab",
-  "alarmKitFeatureAppealPoint1": "Rings even in Silent/Focus Mode",
+  "alarmKitFeatureAppealPoint1": "Sounds even in Silent/Focus mode",
   "alarmKitFeatureAppealPoint2": "Alarm clock-style alert sound",
   "alarmKitFeatureAppealPoint3": "iOS 26 or later · Enable from Settings tab",
   "todayPillNumberFeatureAppealPoint1": "Free pill number adjustment feature",

@@ -541,7 +541,7 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Automatyczna zmiana po zużyciu blist",
   "creatingNewPillSheetFeatureAppealPoint2": "Nie musisz tworzyć jej ręcznie",
   "creatingNewPillSheetFeatureAppealPoint3": "Zmień za pomocą przełącznika w karcie Ustawienia",
-  "alarmKitFeatureAppealPoint1": "Dzwoni nawet w trybie cichym/skupienia",
+  "alarmKitFeatureAppealPoint1": "Dzwoni także w trybie cichym/skupienia",
   "alarmKitFeatureAppealPoint2": "Dźwięk alarmu jak budzik",
   "alarmKitFeatureAppealPoint3": "iOS 26 lub nowszy・Włącz w zakładce Ustawienia",
   "todayPillNumberFeatureAppealPoint1": "Funkcja dopasowania numerów dostępna bezpłatnie",

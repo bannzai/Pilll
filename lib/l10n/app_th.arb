@@ -541,7 +541,7 @@
   "creatingNewPillSheetFeatureAppealPoint1": "สลับอัตโนมัติเมื่อแผงยาหมดค่ะ",
   "creatingNewPillSheetFeatureAppealPoint2": "ไม่ต้องสร้างเอง",
   "creatingNewPillSheetFeatureAppealPoint3": "เปลี่ยนได้ด้วยสวิตช์ในแท็บการตั้งค่าค่ะ",
-  "alarmKitFeatureAppealPoint1": "ดังแม้อยู่ในโหมดเงียบ/โฟกัส",
+  "alarmKitFeatureAppealPoint1": "เสียงปลุกดังแม้อยู่ในโหมดเงียบ/โหมดโฟกัสค่ะ",
   "alarmKitFeatureAppealPoint2": "เสียงแจ้งเตือนแบบเดียวกับนาฬิกาปลุก",
   "alarmKitFeatureAppealPoint3": "iOS 26 ขึ้นไป・เปิดใช้งานได้จากแท็บการตั้งค่า",
   "todayPillNumberFeatureAppealPoint1": "หมายเลขจับคู่ที่ใช้ได้ฟรี",

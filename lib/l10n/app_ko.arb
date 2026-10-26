@@ -541,7 +541,7 @@
   "creatingNewPillSheetFeatureAppealPoint1": "알약 시트가 끝나면 자동으로 전환돼요",
   "creatingNewPillSheetFeatureAppealPoint2": "직접 만들 필요가 없어요",
   "creatingNewPillSheetFeatureAppealPoint3": "설정 탭의 스위치로 전환해요",
-  "alarmKitFeatureAppealPoint1": "무음/집중 모드에서도 울립니다",
+  "alarmKitFeatureAppealPoint1": "무음/집중 모드에서도 알람이 울려요",
   "alarmKitFeatureAppealPoint2": "알람 시계와 같은 알림 소리",
   "alarmKitFeatureAppealPoint3": "iOS 26 이상 · 설정 탭에서 활성화",
   "todayPillNumberFeatureAppealPoint1": "무료로 이용 가능한 번호 맞춤 기능",

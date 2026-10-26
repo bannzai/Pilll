@@ -541,7 +541,7 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Vaihtuu automaattisesti, kun pilleriliuska loppuu",
   "creatingNewPillSheetFeatureAppealPoint2": "Sinun ei tarvitse luoda sitä itse",
   "creatingNewPillSheetFeatureAppealPoint3": "Vaihda asetusta Asetukset-välilehden kytkimellä",
-  "alarmKitFeatureAppealPoint1": "Soi myös äänettömässä/Fokus-tilassa",
+  "alarmKitFeatureAppealPoint1": "Hälyttää myös äänettömässä tilassa/keskittymistilassa",
   "alarmKitFeatureAppealPoint2": "Herätyskelloa vastaava hälytysääni",
   "alarmKitFeatureAppealPoint3": "iOS 26 tai uudempi・Ota käyttöön Asetukset-välilehdeltä",
   "todayPillNumberFeatureAppealPoint1": "Ilmaiseksi käytettävä numeroiden sovitusominaisuus",

@@ -541,7 +541,7 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Tự động chuyển khi dùng hết vỉ thuốc",
   "creatingNewPillSheetFeatureAppealPoint2": "Bạn không cần tạo thủ công",
   "creatingNewPillSheetFeatureAppealPoint3": "Chuyển đổi bằng công tắc trong thẻ Cài đặt",
-  "alarmKitFeatureAppealPoint1": "Vẫn kêu ngay cả khi ở chế độ Im lặng/Tập trung",
+  "alarmKitFeatureAppealPoint1": "Vẫn đổ chuông khi bật chế độ Im lặng/Tập trung",
   "alarmKitFeatureAppealPoint2": "Âm báo giống đồng hồ báo thức",
   "alarmKitFeatureAppealPoint3": "iOS 26 trở lên · Bật trong tab Cài đặt",
   "todayPillNumberFeatureAppealPoint1": "Tính năng đối chiếu số miễn phí",

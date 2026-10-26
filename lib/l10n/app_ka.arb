@@ -541,7 +541,7 @@
   "creatingNewPillSheetFeatureAppealPoint1": "ავტომატური გადართვა, როცა აბების ბლისტერ დასრულდება",
   "creatingNewPillSheetFeatureAppealPoint2": "ხელით შექმნა საჭირო არ არის",
   "creatingNewPillSheetFeatureAppealPoint3": "შეცვალეთ პარამეტრების ჩანართში არსებული გადამრთველით",
-  "alarmKitFeatureAppealPoint1": "სგრილენტ/კონცენტრაციის რეჟიმშიც რეკავს",
+  "alarmKitFeatureAppealPoint1": "რეკავს უხმო/ფოკუსირების რეჟიმშიც",
   "alarmKitFeatureAppealPoint2": "მაღვიძარას მსგავსი გაფრთხილების ხმა",
   "alarmKitFeatureAppealPoint3": "iOS 26 და შემდეგ — პარამეტრების ჩანართიდან ჩართვა",
   "todayPillNumberFeatureAppealPoint1": "უფასო ნომრების შეთავსების ფუნქცია",

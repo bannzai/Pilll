@@ -541,7 +541,7 @@
   "creatingNewPillSheetFeatureAppealPoint1": "Beralih otomatis saat strip pil habis",
   "creatingNewPillSheetFeatureAppealPoint2": "Tidak perlu membuatnya secara manual",
   "creatingNewPillSheetFeatureAppealPoint3": "Ubah dengan tombol alih di tab Pengaturan",
-  "alarmKitFeatureAppealPoint1": "Berbunyi bahkan dalam mode diam/fokus",
+  "alarmKitFeatureAppealPoint1": "Berbunyi meski dalam mode senyap/fokus",
   "alarmKitFeatureAppealPoint2": "Suara alarm seperti jam weker",
   "alarmKitFeatureAppealPoint3": "Tersedia di iOS 26 ke atas — aktifkan dari tab Pengaturan",
   "todayPillNumberFeatureAppealPoint1": "Fitur pencocokan nomor gratis",

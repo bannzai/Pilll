@@ -541,7 +541,7 @@
   "creatingNewPillSheetFeatureAppealPoint1": "گولیوں کی پٹی ختم ہونے پر خودکار تبدیلی",
   "creatingNewPillSheetFeatureAppealPoint2": "خود بنانے کی ضرورت نہیں",
   "creatingNewPillSheetFeatureAppealPoint3": "ترتیبات کے ٹیب میں موجود سوئچ سے تبدیل کریں",
-  "alarmKitFeatureAppealPoint1": "خاموش موڈ یا فوکس موڈ میں بھی بجے گا",
+  "alarmKitFeatureAppealPoint1": "خاموش/توجہ کے موڈ میں بھی الارم بجتا ہے",
   "alarmKitFeatureAppealPoint2": "جاگنے والی گھڑی جیسی الارم کی آواز",
   "alarmKitFeatureAppealPoint3": "iOS 26 یا اس کے بعد — سیٹنگز ٹیب سے فعال کریں",
   "todayPillNumberFeatureAppealPoint1": "مفت استعمال کے لیے نمبر ملاپ کی خصوصیت",
