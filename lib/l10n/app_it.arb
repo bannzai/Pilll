@@ -303,7 +303,7 @@
   "purchaseErrorInvalidAppUserIdError": "Non siamo riusciti a verificare il tuo account. Riavvia l’app e riprova. Dettagli: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "È già in corso un altro acquisto. Attendi un momento e riprova",
   "purchaseErrorUnknownBackendError": "Non è possibile completare l’acquisto in questo momento. Riprova tra poco. Se il problema persiste, contattaci da Impostazioni > Contattaci. Dettagli: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "Non è stato possibile completare l'acquisto. Riprova più tardi. Se il problema persiste, contattaci tramite Impostazioni > Supporto. Dettagli: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Non è stato possibile completare l’acquisto. Riprova tra poco. Se il problema persiste, contattaci da Impostazioni > Contattaci. Dettagli: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "L'acquisto con il tuo account utente è fallito. Attendi un momento e riprova. Se il problema persiste, contattaci tramite Impostazioni > Contatti. Dettagli: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Non è possibile iscriversi al piano con il tuo {accountName}. Verifica le informazioni di pagamento e riprova.",
   "purchaseErrorPaymentPendingError": "Il pagamento è stato interrotto. Controlla {storeName} con l'account {accountName} attualmente collegato",

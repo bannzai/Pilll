@@ -303,7 +303,7 @@
   "purchaseErrorInvalidAppUserIdError": "آپ کے اکاؤنٹ کی تصدیق نہیں ہو سکی۔ براہِ کرم ایپ دوبارہ شروع کریں اور پھر کوشش کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "ایک اور خریداری پر کارروائی جاری ہے۔ براہِ کرم کچھ دیر بعد دوبارہ کوشش کریں",
   "purchaseErrorUnknownBackendError": "فی الحال خریداری مکمل نہیں ہو سکتی۔ براہِ کرم کچھ دیر بعد دوبارہ کوشش کریں۔ اگر مسئلہ برقرار رہے تو ترتیبات > رابطہ کریں کے ذریعے ہم سے رابطہ کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "خریداری میں ناکامی ہوئی۔ کچھ وقت بعد دوبارہ کوشش کریں۔ اگر مسئلہ حل نہیں ہوتا تو ترتیبات > رابطہ سے رابطہ کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "خریداری مکمل نہیں ہو سکی۔ براہِ کرم کچھ دیر بعد دوبارہ کوشش کریں۔ اگر مسئلہ برقرار رہے تو ترتیبات > ہم سے رابطہ کریں کے ذریعے ہم سے رابطہ کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "آپ کے صارف کے ساتھ خریداری ناکام ہو گئی۔ کچھ وقت بعد دوبارہ کوشش کریں۔ اگر مسئلہ حل نہیں ہوا تو سیٹنگز > رابطہ کریں سے رابطہ کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "آپ کے {accountName} سے پلان میں شامل ہونا ممکن نہیں ہے۔ اپنی ادائیگی کی معلومات چیک کر کے دوبارہ کوشش کریں۔",
   "purchaseErrorPaymentPendingError": "ادائیگی رک گئی ہے۔ براہ کرم {accountName} اکاؤنٹ کے ساتھ {storeName} میں چیک کریں",

@@ -303,7 +303,7 @@
   "purchaseErrorInvalidAppUserIdError": "Ons kon jou nie verifieer nie. Maak asseblief die app weer oop en probeer weer. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Nog ’n aankoop word verwerk. Probeer asseblief oor ’n rukkie weer",
   "purchaseErrorUnknownBackendError": "Die aankoop kan tans nie voltooi word nie. Probeer asseblief later weer. As die probleem voortduur, kan jy ons via Instellings > Kontak kontak. Besonderhede: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "Aankoop kon nie voltooi word nie. Probeer asseblief later weer. Indien dit steeds nie opgelos word nie, kontak ons asseblief via Instellings > Kontak. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Die aankoop het misluk. Probeer asseblief later weer. As die probleem aanhou, kan jy ons via Instellings > Kontak ons bereik. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Die aankoop vir u gebruiker het nie geslaag nie. Probeer asseblief later weer. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Kontak. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "U kan nie met {accountName} by die plan aansluit nie. Kontroleer asseblief u betaalinligting en probeer weer.",
   "purchaseErrorPaymentPendingError": "Die betaling is onderbreek. Kontroleer asseblief by {storeName} terwyl jy met {accountName} aangemeld is.",

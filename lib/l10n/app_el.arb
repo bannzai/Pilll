@@ -303,7 +303,7 @@
   "purchaseErrorInvalidAppUserIdError": "Δεν ήταν δυνατή η επαλήθευση του λογαριασμού σας. Επανεκκινήστε την εφαρμογή και δοκιμάστε ξανά. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Μια άλλη αγορά βρίσκεται σε εξέλιξη. Περιμένετε λίγο και δοκιμάστε ξανά",
   "purchaseErrorUnknownBackendError": "Η αγορά δεν μπορεί να ολοκληρωθεί αυτήν τη στιγμή. Δοκιμάστε ξανά σε λίγο. Αν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας από τις Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "Η αγορά απέτυχε. Παρακαλώ δοκιμάστε ξανά αργότερα. Εάν το πρόβλημα παραμένει, παρακαλώ επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Η αγορά δεν ολοκληρώθηκε. Δοκιμάστε ξανά σε λίγο. Αν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας από τις Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Η αγορά απέτυχε για τον χρήστη σας. Παρακαλώ περιμένετε λίγο και δοκιμάστε ξανά. Εάν το πρόβλημα παραμείνει, επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Δεν είναι δυνατή η εγγραφή σε πλάνο με τον λογαριασμό σας {accountName}. Παρακαλώ ελέγξτε τα στοιχεία πληρωμής σας και δοκιμάστε ξανά.",
   "purchaseErrorPaymentPendingError": "Η πληρωμή έχει διακοπεί. Παρακαλώ ελέγξτε το {storeName} με τον λογαριασμό {accountName}",

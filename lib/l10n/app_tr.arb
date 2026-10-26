@@ -303,7 +303,7 @@
   "purchaseErrorInvalidAppUserIdError": "Hesabınız doğrulanamadı. Lütfen uygulamayı yeniden başlatıp tekrar deneyin. Ayrıntılar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Başka bir satın alma işlemi sürüyor. Lütfen biraz bekleyip tekrar deneyin",
   "purchaseErrorUnknownBackendError": "Satın alma şu anda tamamlanamıyor. Lütfen biraz sonra tekrar deneyin. Sorun devam ederse Ayarlar > İletişim üzerinden bize ulaşın. Ayrıntılar: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "Satın alma başarısız oldu. Biraz bekleyip tekrar deneyiniz. Eğer sorun devam ederse Ayarlar > İletişim üzerinden bizimle iletişime geçiniz. Detaylar: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Satın alma işlemi tamamlanamadı. Lütfen bir süre sonra tekrar deneyin. Sorun devam ederse Ayarlar > Bize ulaşın bölümünden bizimle iletişime geçin. Ayrıntılar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Kullanıcınız için satın alma başarısız oldu. Lütfen biraz bekleyip tekrar deneyin. Sorun çözülmezse Ayarlar > İletişim aracılığıyla bizimle iletişime geçin. Detaylar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "{accountName} hesabınızla plana katılım mümkün değil. Lütfen ödeme bilgilerinizi kontrol ederek tekrar deneyiniz.",
   "purchaseErrorPaymentPendingError": "Ödeme işlemi yarıda kaldı. Lütfen giriş yaptığınız {accountName} hesabıyla {storeName}'da kontrol edin",

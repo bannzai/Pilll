@@ -303,7 +303,7 @@
   "purchaseErrorInvalidAppUserIdError": "உங்கள் கணக்கைச் சரிபார்க்க முடியவில்லை. தயவுசெய்து செயலியை மீண்டும் தொடங்கி, மறுபடியும் முயற்சி செய்யுங்கள். விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "மற்றொரு வாங்குதல் செயலாக்கத்தில் உள்ளது. சிறிது நேரம் காத்திருந்து மீண்டும் முயற்சி செய்யுங்கள்",
   "purchaseErrorUnknownBackendError": "தற்போது வாங்குவதை நிறைவு செய்ய முடியவில்லை. சிறிது நேரம் கழித்து மீண்டும் முயற்சி செய்யுங்கள். சிக்கல் தொடர்ந்தால், அமைப்புகள் > தொடர்புகொள்ளவும் வழியாக எங்களைத் தொடர்புகொள்ளுங்கள். விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "வாங்குதல் தோல்வியடைந்தது. சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும். தீர்வு கிடைக்கவில்லை என்றால் அமைப்புகள் > தொடர்பு கொள்ளவும் மூலம் எங்களைத் தொடர்பு கொள்ளவும். விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "வாங்குதலை முடிக்க முடியவில்லை. சிறிது நேரம் கழித்து மீண்டும் முயற்சி செய்யுங்கள். சிக்கல் தொடர்ந்தால், அமைப்புகள் > எங்களைத் தொடர்புகொள்ளவும் வழியாக எங்களைத் தொடர்புகொள்ளுங்கள். விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "உங்கள் பயனருக்கான வாங்குதல் தோல்வியுற்றது. சிறிது நேரம் காத்திருந்து மீண்டும் முயற்சிக்கவும். இது தீர்க்கப்படாவிட்டால் அமைப்புகள் > தொடர்பு கொள்ளுங்கள் மூலம் தொடர்பு கொள்ளுங்கள். விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "உங்கள் {accountName} கணக்கில் திட்டத்தில் சேர முடியவில்லை. கட்டண தகவல்களை சரிபார்த்து மீண்டும் முயற்சிக்கவும்",
   "purchaseErrorPaymentPendingError": "கட்டணம் நடுவில் நிறுத்தப்பட்டுள்ளது. உள்நுழைந்துள்ள {accountName} மூலம் {storeName} ஐ சரிபார்க்கவும்",

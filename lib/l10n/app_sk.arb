@@ -303,7 +303,7 @@
   "purchaseErrorInvalidAppUserIdError": "Nepodarilo sa overiť váš účet. Reštartujte aplikáciu a skúste to znova. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Spracúva sa iný nákup. Počkajte chvíľu a skúste to znova",
   "purchaseErrorUnknownBackendError": "Nákup momentálne nie je možné dokončiť. Skúste to, prosím, o chvíľu znova. Ak problém pretrváva, kontaktujte nás cez Nastavenia > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "Nákup sa nepodaril. Skúste to znovu neskôr. Ak sa problém nevyrieši, kontaktujte nás cez Nastavenia > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Nákup sa nepodarilo dokončiť. Skúste to, prosím, o chvíľu znova. Ak problém pretrváva, kontaktujte nás cez Nastavenia > Kontaktujte nás. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Nákup pre vášho používateľa nebol úspešný. Skúste to znova o chvíľu. Ak sa problém nevyrieši, kontaktujte nás prostredníctvom Nastavenia > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "S vaším {accountName} nie je možné prihlásiť sa k plánu. Skontrolujte si platobné informácie a skúste to znovu.",
   "purchaseErrorPaymentPendingError": "Platba sa zastavila uprostred procesu. Skontrolujte prosím {storeName} s prihláseným účtom {accountName}.",

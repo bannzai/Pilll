@@ -303,7 +303,7 @@
   "purchaseErrorInvalidAppUserIdError": "Ezin izan dugu zure kontua egiaztatu. Berrabiarazi aplikazioa eta saiatu berriro, mesedez. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Beste erosketa bat prozesatzen ari da. Itxaron pixka bat eta saiatu berriro",
   "purchaseErrorUnknownBackendError": "Ezin da erosketa osatu une honetan. Saiatu berriro geroago. Arazoak jarraitzen badu, jarri gurekin harremanetan Ezarpenak > Kontaktua ataletik. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "Erosketa huts egin du. Denbora pixka bat itxaron eta saiatu berriz. Konpontzen ez bada, Ezarpenak > Kontsultak bidez jarri gurekin harremanetan. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Erosketa ezin izan da burutu. Saiatu berriro pixka bat geroago. Arazoak jarraitzen badu, jarri gurekin harremanetan Ezarpenak > Jarri harremanetan atalaren bidez. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Zure erabiltzailearekin erosketaren huts egin du. Denbora bat itxaron eta saiatu berriro. Konpondu ezean, Ezarpenak > Kontsultak bidez jarri gurekin harremanetan. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Zure {accountName} kontuarekin ezin da planean sartu. Mesedez, ordainketa informazioa egiaztatu eta saiatu berriro.",
   "purchaseErrorPaymentPendingError": "Ordainketa erdian gelditu da. {accountName} kontuan saioa hasita duzula {storeName} egiaztatu ezazu",

@@ -303,7 +303,7 @@
   "purchaseErrorInvalidAppUserIdError": "Vašega računa ni bilo mogoče potrditi. Znova zaženite aplikacijo in poskusite še enkrat. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Drugi nakup je v obdelavi. Počakajte trenutek in poskusite znova",
   "purchaseErrorUnknownBackendError": "Nakupa trenutno ni mogoče dokončati. Poskusite znova čez nekaj časa. Če težava ne izgine, se obrnite na nas prek Nastavitve > Stik z nami. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "Nakup je spodletel. Poskusite znova čez nekaj časa. Če se težava ne reši, nas kontaktirajte preko Nastavitve > Poizvedba. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Nakupa ni bilo mogoče dokončati. Poskusite znova čez nekaj časa. Če težava ostane, nam pišite prek Nastavitve > Stik z nami. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Nakup za vašega uporabnika ni uspel. Poskusite ponovno po nekaj času. Če se težava ne razreši, nas kontaktirajte preko Nastavitve > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Naročnina na načrt z vašim {accountName} ni mogoča. Preverite podatke o plačilu in poskusite znova.",
   "purchaseErrorPaymentPendingError": "Plačilo je bilo prekinjeno. Preverite {storeName} z računu {accountName}, s katerim ste prijavljeni.",

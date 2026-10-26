@@ -303,7 +303,7 @@
   "purchaseErrorInvalidAppUserIdError": "আপনার পরিচয় যাচাই করা যায়নি। অনুগ্রহ করে অ্যাপটি আবার চালু করে চেষ্টা করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "আরেকটি কেনাকাটার প্রক্রিয়া চলছে। অনুগ্রহ করে কিছুক্ষণ পরে আবার চেষ্টা করুন",
   "purchaseErrorUnknownBackendError": "এই মুহূর্তে কেনাকাটা সম্পন্ন করা যাচ্ছে না। অনুগ্রহ করে কিছুক্ষণ পর আবার চেষ্টা করুন। সমস্যা থেকে গেলে সেটিংস > যোগাযোগ থেকে আমাদের সঙ্গে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "ক্রয় ব্যর্থ হয়েছে। কিছুক্ষণ পর আবার চেষ্টা করুন। যদি সমস্যার সমাধান না হয়, তাহলে সেটিংস > যোগাযোগ এর মাধ্যমে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "কেনাকাটা সম্পন্ন হয়নি। অনুগ্রহ করে কিছুক্ষণ পর আবার চেষ্টা করুন। সমস্যা থেকে গেলে সেটিংস > যোগাযোগ করুন থেকে আমাদের জানান। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "আপনার ব্যবহারকারীর জন্য ক্রয় ব্যর্থ হয়েছে। কিছুক্ষণ পর আবার চেষ্টা করুন। যদি সমস্যার সমাধান না হয়, তাহলে সেটিংস > যোগাযোগ এর মাধ্যমে আমাদের সাথে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "আপনার {accountName} দিয়ে প্ল্যানে যোগদান করা সম্ভব নয়। অনুগ্রহ করে আপনার পেমেন্ট তথ্য যাচাই করে আবার চেষ্টা করুন।",
   "purchaseErrorPaymentPendingError": "পেমেন্ট মাঝপথে বন্ধ হয়ে গেছে। লগইন করা {accountName} দিয়ে {storeName} চেক করুন",

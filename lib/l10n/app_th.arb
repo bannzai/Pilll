@@ -303,7 +303,7 @@
   "purchaseErrorInvalidAppUserIdError": "ไม่สามารถยืนยันบัญชีได้ค่ะ กรุณาเปิดแอปใหม่แล้วลองอีกครั้งค่ะ รายละเอียด: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "กำลังดำเนินการซื้อรายการอื่นอยู่ค่ะ กรุณารอสักครู่แล้วลองอีกครั้งค่ะ",
   "purchaseErrorUnknownBackendError": "ขณะนี้ยังไม่สามารถซื้อได้ค่ะ โปรดลองอีกครั้งในภายหลังค่ะ หากยังพบปัญหา โปรดติดต่อเราผ่าน การตั้งค่า > ติดต่อเรา ค่ะ รายละเอียด: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "การซื้อไม่สำเร็จ กรุณารอสักครู่แล้วลองใหม่อีกครั้ง หากปัญหายังไม่ได้รับการแก้ไข กรุณาติดต่อเราผ่าน การตั้งค่า > ติดต่อเรา รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "การซื้อไม่สำเร็จค่ะ โปรดลองอีกครั้งในภายหลังค่ะ หากปัญหายังไม่หายไป โปรดติดต่อเราผ่าน การตั้งค่า > ติดต่อเรา ค่ะ รายละเอียด: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "การซื้อสำหรับผู้ใช้ของคุณล้มเหลว กรุณารอสักครู่และลองใหม่อีกครั้ง หากยังไม่สามารถแก้ไขได้ กรุณาติดต่อเราผ่าน การตั้งค่า > ติดต่อสอบถาม รายละเอียด: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "{accountName} ของคุณไม่สามารถสมัครแพ็กเกจได้ กรุณาตรวจสอบข้อมูลการชำระเงินและลองใหม่อีกครั้ง",
   "purchaseErrorPaymentPendingError": "การชำระเงินถูกหยุดกลางทาง กรุณาตรวจสอบใน {storeName} ด้วยบัญชี {accountName} ที่เข้าสู่ระบบอยู่",

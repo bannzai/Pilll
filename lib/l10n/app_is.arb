@@ -303,7 +303,7 @@
   "purchaseErrorInvalidAppUserIdError": "Ekki tókst að staðfesta aðganginn þinn. Endurræstu appið og reyndu aftur. Nánari upplýsingar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Önnur kaup eru í vinnslu. Bíddu aðeins og reyndu aftur",
   "purchaseErrorUnknownBackendError": "Ekki er hægt að ljúka kaupunum eins og er. Prófaðu aftur eftir smástund. Ef vandinn heldur áfram geturðu haft samband við okkur í Stillingar > Hafa samband. Nánari upplýsingar: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "Kaup mistókst. Reyndu aftur síðar. Ef vandamálið helst, hafðu samband í gegnum Stillingar > Fyrirspurnir. Nánar: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Ekki tókst að ganga frá kaupunum. Prófaðu aftur eftir smá stund. Ef vandinn heldur áfram geturðu haft samband við okkur í Stillingar > Hafa samband. Nánari upplýsingar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Kaup mistókst fyrir þinn notanda. Vinsamlegast reyndu aftur síðar. Ef vandamálið helst, vinsamlegast hafðu samband í gegnum Stillingar > Fyrirspurnir. Nánar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Ekki er hægt að skrá {accountName} reikninginn þinn í áskrift. Vinsamlegast athugaðu greiðsluupplýsingarnar þínar og reyndu aftur.",
   "purchaseErrorPaymentPendingError": "Greiðslan hefur stöðvast. Vinsamlegast athugaðu {storeName} með {accountName} reikningnum þínum",

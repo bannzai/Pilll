@@ -303,7 +303,7 @@
   "purchaseErrorInvalidAppUserIdError": "Таны бүртгэлийг баталгаажуулах боломжгүй байлаа. Аппыг дахин эхлүүлээд дахин оролдоно уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Өөр худалдан авалт боловсруулагдаж байна. Түр хүлээгээд дахин оролдоно уу",
   "purchaseErrorUnknownBackendError": "Одоогоор худалдан авалтыг дуусгах боломжгүй байна. Түр хүлээгээд дахин оролдоно уу. Асуудал үргэлжилбэл Тохиргоо > Холбоо барих хэсгээр бидэнтэй холбогдоно уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "Худалдан авах амжилтгүй боллоо. Хэсэг хугацааны дараа дахин оролдоно уу. Хэрэв шийдэгдэхгүй бол Тохиргоо > Хандалт-аар холбогдоно уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Худалдан авалт амжилтгүй боллоо. Та түр хүлээгээд дахин оролдоно уу. Асуудал үргэлжилбэл Тохиргоо > Бидэнтэй холбогдох хэсгээр бидэнд хандана уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Таны хэрэглэгчээр худалдан авалт амжилтгүй боллоо. Хэсэг хугацааны дараа дахин оролдоно уу. Хэрэв шийдэгдэхгүй бол Тохиргоо > Лавлагаа хэсгээр холбогдоно уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Таны {accountName} дээр төлөвлөгөөнд нэгдэх боломжгүй байна. Төлбөрийн мэдээллээ шалгаад дахин оролдоно уу",
   "purchaseErrorPaymentPendingError": "Төлбөр дунд зогссон байна. Нэвтэрсэн {accountName}-ээр {storeName}-г шалгана уу",

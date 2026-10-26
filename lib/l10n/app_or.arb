@@ -303,7 +303,7 @@
   "purchaseErrorInvalidAppUserIdError": "ଆପଣଙ୍କ ଖାତା ଯାଞ୍ଚ କରିହେଲା ନାହିଁ। ଦୟାକରି ଆପ୍‌ଟି ପୁଣି ଚାଲୁ କରି ଆଉଥରେ ଚେଷ୍ଟା କରନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "ଅନ୍ୟ ଏକ କ୍ରୟ ପ୍ରକ୍ରିୟା ଚାଲିଛି। ଦୟାକରି କିଛି ସମୟ ପରେ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ",
   "purchaseErrorUnknownBackendError": "ବର୍ତ୍ତମାନ କ୍ରୟ ସମ୍ପୂର୍ଣ୍ଣ ହୋଇପାରୁନାହିଁ। ଦୟାକରି କିଛି ସମୟ ପରେ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ। ସମସ୍ୟା ଜାରି ରହିଲେ, ସେଟିଂସ୍ > ଯୋଗାଯୋଗ ମାଧ୍ୟମରେ ଆମ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "କିଣିବାରେ ବିଫଳ ହୋଇଛି। କିଛି ସମୟ ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ସମାଧାନ ନହୁଏ, ସେଟିଂସ୍ > ଯୋଗାଯୋଗ ରୁ ଯୋଗାଯୋଗ କରନ୍ତୁ। ବିସ୍ତୃତ ତଥ୍ୟ: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "କ୍ରୟ ସମ୍ପୂର୍ଣ୍ଣ ହୋଇପାରିଲା ନାହିଁ। ଦୟାକରି କିଛି ସମୟ ପରେ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ। ସମସ୍ୟା ଜାରି ରହିଲେ, ସେଟିଂସ୍ > ଆମ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ ମାଧ୍ୟମରେ ଆମକୁ ଜଣାନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "ଆପଣଙ୍କ ବ୍ୟବହାରକାରୀ ଆକାଉଣ୍ଟରେ କ୍ରୟ ବିଫଳ ହୋଇଛି। କିଛି ସମୟ ଅପେକ୍ଷା କରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ସମସ୍ୟା ସମାଧାନ ହୁଏ ନାହିଁ ତେବେ ସେଟିଂସ > ଯୋଗାଯୋଗରୁ ଆମକୁ ସମ୍ପର୍କ କରନ୍ତୁ। ବିସ୍ତୃତ ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "ଆପଣଙ୍କ {accountName} ରେ ପ୍ଲାନ୍‌ରେ ଯୋଗଦାନ କରିପାରିବେ ନାହିଁ। ଆପଣଙ୍କ ପେମେଣ୍ଟ ସୂଚନା ଯାଞ୍ଚ କରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ।",
   "purchaseErrorPaymentPendingError": "ପେମେଣ୍ଟ ଅସମ୍ପୂର୍ଣ୍ଣ ରହିଯାଇଛି। ଲଗଇନ୍ ହୋଇଥିବା {accountName} ସହିତ {storeName} କୁ ଦୟାକରି ଯାଞ୍ଚ କରନ୍ତୁ",

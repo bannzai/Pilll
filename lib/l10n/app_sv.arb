@@ -303,7 +303,7 @@
   "purchaseErrorInvalidAppUserIdError": "Vi kunde inte verifiera ditt konto. Starta om appen och försök igen. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Ett annat köp behandlas just nu. Vänta en stund och försök igen",
   "purchaseErrorUnknownBackendError": "Köpet kan inte slutföras just nu. Försök igen om en stund. Om problemet kvarstår kan du kontakta oss via Inställningar > Kontakta oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "Köpet misslyckades. Vänta en stund och försök igen. Om problemet kvarstår, kontakta oss via Inställningar > Kontakta oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Köpet kunde inte slutföras. Försök igen om en stund. Om problemet kvarstår kan du kontakta oss via Inställningar > Kontakta oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Köpet misslyckades för din användare. Vänta en stund och försök igen. Om problemet kvarstår, kontakta oss via Inställningar > Kontakta oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Du kan inte prenumerera på planen med ditt {accountName}. Kontrollera din betalningsinformation och försök igen.",
   "purchaseErrorPaymentPendingError": "Betalningen har avbrutits. Kontrollera {storeName} med ditt konto {accountName}",

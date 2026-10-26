@@ -303,7 +303,7 @@
   "purchaseErrorInvalidAppUserIdError": "የተጠቃሚውን መለያ ማረጋገጥ አልተቻለም። እባክዎ መተግበሪያውን እንደገና ያስጀምሩና ይሞክሩ። ዝርዝር፦ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "ሌላ የግዢ ሂደት በመካሄድ ላይ ነው። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ",
   "purchaseErrorUnknownBackendError": "አሁን ግዢውን ማጠናቀቅ አይቻልም። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ። ችግሩ ከቀጠለ፣ በቅንብሮች > እገዛ ያግኙን። ዝርዝሮች: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "ግዢ አልተሳካም። ትንሽ ቆይተው እንደገና ይሞክሩ። ችግሩ ካልተፈታ ቅንብሮች > ጥያቄ በኩል ያናግሩን። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "ግዢው አልተሳካም። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ። ችግሩ ከቀጠለ፣ በቅንብሮች > ያግኙን በኩል ያነጋግሩን። ዝርዝሮች: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "በእርስዎ ተጠቃሚ መግዛት አልተሳካም። ትንሽ ጊዜ ቆይተው እንደገና ይሞክሩ። ካልተፈታ ቅንጅቶች > ጥያቄ አማካኝነት ያግኙን። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "{accountName} በተባለው መለያዎ በዚህ እቅድ ላይ መቀላቀል አይችሉም። የክፍያ መረጃዎን ያረጋግጡ እና እንደገና ይሞክሩ።",
   "purchaseErrorPaymentPendingError": "ክፍያው በመሀል ተቋርጧል። በመለያ {accountName} ውስጥ {storeName}ን ያረጋግጡ።",

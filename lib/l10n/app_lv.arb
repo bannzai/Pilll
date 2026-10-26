@@ -303,7 +303,7 @@
   "purchaseErrorInvalidAppUserIdError": "Neizdevās apstiprināt jūsu kontu. Lūdzu, pārstartējiet lietotni un mēģiniet vēlreiz. Informācija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Tiek apstrādāts cits pirkums. Lūdzu, uzgaidiet brīdi un mēģiniet vēlreiz",
   "purchaseErrorUnknownBackendError": "Pašlaik pirkumu nevar pabeigt. Lūdzu, pēc brīža mēģiniet vēlreiz. Ja problēma turpinās, sazinieties ar mums sadaļā Iestatījumi > Sazināties. Informācija: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "Pirkums neizdevās. Lūdzu, uzgaidiet un mēģiniet vēlreiz. Ja problēma netiek atrisināta, lūdzu, sazinieties ar mums caur Iestatījumi > Sazinieties ar mums. Detaļas: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Pirkumu neizdevās pabeigt. Lūdzu, pēc brīža mēģiniet vēlreiz. Ja problēma turpinās, sazinieties ar mums sadaļā Iestatījumi > Sazināties ar mums. Detalizēta informācija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Pirkums jūsu lietotājam neizdevās. Lūdzu, mēģiniet vēlreiz pēc brīža. Ja problēma nav atrisināta, sazinieties ar mums, izmantojot Iestatījumi > Kontakti. Detaļas: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Ar jūsu {accountName} kontu nevar pievienoties plānam. Lūdzu, pārbaudiet maksājumu informāciju un mēģiniet vēlreiz.",
   "purchaseErrorPaymentPendingError": "Maksājums ir pārtraukts. Lūdzu, pārbaudiet {storeName} ar pieteikušos kontu {accountName}",

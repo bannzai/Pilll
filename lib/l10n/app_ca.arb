@@ -303,7 +303,7 @@
   "purchaseErrorInvalidAppUserIdError": "No hem pogut verificar el teu compte. Si us plau, reinicia l’aplicació i torna-ho a provar. Detalls: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Hi ha una altra compra en curs. Espera una mica i torna-ho a provar",
   "purchaseErrorUnknownBackendError": "Ara mateix no es pot completar la compra. Torna-ho a provar d’aquí a una estona. Si el problema continua, posa’t en contacte amb nosaltres des de Configuració > Contacte. Detalls: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "La compra ha fallat. Torneu a intentar-ho més tard. Si no es resol, poseu-vos en contacte amb nosaltres des de Configuració > Contacte. Detalls: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "No s’ha pogut completar la compra. Torna-ho a provar d’aquí a una estona. Si el problema continua, contacta amb nosaltres des de Configuració > Contacta amb nosaltres. Detalls: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "La compra ha fallat per al vostre usuari. Espereu una estona i torneu-ho a intentar. Si el problema continua, contacteu amb nosaltres a Configuració > Contacte. Detalls: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Amb el vostre {accountName} no podeu subscriure-us al pla. Reviseu la informació de pagament i torneu-ho a provar.",
   "purchaseErrorPaymentPendingError": "El pagament s'ha interromput. Si us plau, comproveu {storeName} amb el vostre compte {accountName}",

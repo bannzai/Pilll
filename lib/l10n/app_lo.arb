@@ -303,7 +303,7 @@
   "purchaseErrorInvalidAppUserIdError": "ບໍ່ສາມາດຢືນຢັນບັນຊີຂອງທ່ານໄດ້. ກະລຸນາເປີດແອັບຄືນໃໝ່ແລ້ວລອງອີກຄັ້ງ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "ກຳລັງດຳເນີນການຊື້ອີກລາຍການໜຶ່ງຢູ່. ກະລຸນາລໍຖ້າຈັກໜ້ອຍ ແລ້ວລອງໃໝ່",
   "purchaseErrorUnknownBackendError": "ຕອນນີ້ຍັງບໍ່ສາມາດຊື້ໄດ້. ກະລຸນາລອງໃໝ່ອີກຄັ້ງພາຍຫຼັງ. ຖ້າບັນຫາຍັງຢູ່ ກະລຸນາຕິດຕໍ່ພວກເຮົາຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "ການຊື້ລົ້ມເຫລວ. ກະລຸນາລໍຖ້າແລ້ວລອງໃໝ່ອີກ. ຫາກບໍ່ສາມາດແກ້ໄຂໄດ້ ກະລຸນາຕິດຕໍ່ສອບຖາມຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ສອບຖາມ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "ການຊື້ບໍ່ສຳເລັດ. ກະລຸນາລອງອີກຄັ້ງໃນອີກບໍ່ດົນ. ຖ້າບັນຫາຍັງຢູ່ ກະລຸນາຕິດຕໍ່ພວກເຮົາຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ພວກເຮົາ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "ການຊື້ຂອງຜູ້ໃຊ້ທ່ານບໍ່ສຳເລັດ. ກະລຸນາລໍຖ້າຈັກໜ່ອຍແລ້ວລອງໃໝ່ອີກຄັ້ງ. ຫາກບັນຫາຍັງບໍ່ຫາຍ, ກະລຸນາຕິດຕໍ່ພວກເຮົາໂດຍຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ສອບຖາມ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "ບໍ່ສາມາດສະໝັກແຜນດ້ວຍ {accountName} ຂອງທ່ານໄດ້. ກະລຸນາກວດສອບຂໍ້ມູນການຈ່າຍເງິນຂອງທ່ານແລະລອງໃໝ່ອີກຄັ້ງ",
   "purchaseErrorPaymentPendingError": "ການຈ່າຍເງິນໄດ້ຢຸດກາງທາງແລ້ວ. ກະລຸນາກວດສອບໃນ{storeName}ດ້ວຍບັນຊີ{accountName}ທີ່ເຂົ້າສູ່ລະບົບຢູ່",
