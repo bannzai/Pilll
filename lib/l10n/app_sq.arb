@@ -502,7 +502,7 @@
   "alarmKitFeatureAppealBody": "Me AlarmKit, i disponueshëm nga iOS 26, një alarm që bie edhe në modalitetin e heshtur ose të përqendrimit ju kujton të merrni pilulën.",
   "todayPillNumberFeatureAppealTitle": "Përshtatni numrin e pilulës së sotme",
   "todayPillNumberFeatureAppealShortDescription": "Nëse numri i pilulës nuk përputhet, mund ta korrigjoni te cilësimet",
-  "todayPillNumberFeatureAppealHeadline": "Mund të ndryshoni numrin e pilulës për sot",
+  "todayPillNumberFeatureAppealHeadline": "Mund ta ndryshoni numri i pilulës për sot",
   "todayPillNumberFeatureAppealBody": "Nëse numri në fletën e pilulave dhe marrja reale nuk përputhen për shkak të harresës ose ngatërrimit, mund ta rregulloni manualisht numrin e pilulës për sot. Mund të hapni të njëjtin ekran edhe nga shfaqja e numrit të pilulës në faqen kryesore.",
   "restDurationFeatureAppealTitle": "Regjistro periudhën e pushimit të marrjes",
   "restDurationFeatureAppealShortDescription": "Menaxho saktë pushimet dhe ndërprerjet",

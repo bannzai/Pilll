@@ -502,7 +502,7 @@
   "alarmKitFeatureAppealBody": "iOS 26-ից սկսած հասանելի AlarmKit-ի միջոցով ահազանգը կհիշեցնի Ձեզ ընդունել հաբը, նույնիսկ եթե միացված է անձայն կամ կենտրոնացման ռեժիմը։",
   "todayPillNumberFeatureAppealTitle": "Համապատասխանեցրեք այսօրվա հաբի համարը",
   "todayPillNumberFeatureAppealShortDescription": "Եթե հաբի համարը չի համընկնում, Դուք կարող եք այն ուղղել կարգավորումներում",
-  "todayPillNumberFeatureAppealHeadline": "Կարող եք փոխել այսօր ընդունվող պիլուլի համարը",
+  "todayPillNumberFeatureAppealHeadline": "Դուք կարող եք փոխել այսօրվա հաբի համարն",
   "todayPillNumberFeatureAppealBody": "Ձեր կողմից մատչար կամ սխալ վերցնելու պատճառով պտղա թերթիկի վրա նշված թվերը և իրական ընդունումը տարբերվելիս կարող եք ձեռքով համադրել՝ այսօր ընդունելի նշանակվող պտղայի համար։ Դուք կարող եք նույն էկրանին բացել նաև գլխավորի պտուղների թվանշան ցույց տալուց։",
   "restDurationFeatureAppealTitle": "Հիշողության արձանագրություն՝ դեղաչափով դադարող ժամանակի նշում",
   "restDurationFeatureAppealShortDescription": "Ճշգրիտ կառավարեք դադարները և դեղի ընդունման ընդհատումները",

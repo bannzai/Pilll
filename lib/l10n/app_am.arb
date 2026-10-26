@@ -502,7 +502,7 @@
   "alarmKitFeatureAppealBody": "ከiOS 26 ጀምሮ በሚገኘው AlarmKit አማካኝነት፣ በዝምታ ሁኔታ ወይም በትኩረት ሁኔታ ላይም የሚሰማ ማንቂያ ክኒን የመውሰጃ ጊዜን ያሳውቅዎታል።",
   "todayPillNumberFeatureAppealTitle": "የዛሬን የክኒን ቁጥር ያስተካክሉ",
   "todayPillNumberFeatureAppealShortDescription": "የክኒን ቁጥሩ ከተሳሳተ፣ በቅንብሮች ውስጥ ማስተካከል ይችላሉ",
-  "todayPillNumberFeatureAppealHeadline": "የዛሬን ክኒን ቁጥር መቀየር ይቻላል",
+  "todayPillNumberFeatureAppealHeadline": "የዛሬውን ክኒን ቁጥር መቀየር ይችላሉ",
   "todayPillNumberFeatureAppealBody": "ክኒን መውሰድ ሲዘነጉ ወይም ሲቀላቀሉ የክኒን ሉህ ቁጥር ከተወሰደው ክኒን ጋር ሲለያይ፣ ዛሬ መውሰድ የሚያስፈልጉዎትን የክኒን ቁጥር በእጅ ማስተካከል ይችላሉ። ከዋናው ማያ ገጽ የክኒን ቁጥር ማሳያ ወደ ተመሳሳዩ ማያ ገጽ ሊሄዱ ይችላሉ።",
   "restDurationFeatureAppealTitle": "የክኒን ዕረፍት ወቅት ይዝግቡ",
   "restDurationFeatureAppealShortDescription": "ዕረፍትና ማቋረጥን በትክክል ያስተዳድሩ",

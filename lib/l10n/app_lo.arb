@@ -502,7 +502,7 @@
   "alarmKitFeatureAppealBody": "ໂດຍໃຊ້ AlarmKit ທີ່ມີໃຫ້ໃຊ້ຕັ້ງແຕ່ iOS 26 ຂຶ້ນໄປ, ສຽງປຸກທີ່ດັງແມ່ນແຕ່ໃນໂໝດງຽບ ຫຼື ໂໝດຕັ້ງໃຈ ຈະເຕືອນໃຫ້ທ່ານກິນຢາເມັດ.",
   "todayPillNumberFeatureAppealTitle": "ປັບໝາຍເລກຢາເມັດຂອງມື້ນີ້",
   "todayPillNumberFeatureAppealShortDescription": "ຖ້າເລກເມັດຢາບໍ່ກົງ ສາມາດແກ້ໄຂໄດ້ໃນການຕັ້ງຄ່າ",
-  "todayPillNumberFeatureAppealHeadline": "ສາມາດປ່ຽນໝາຍເລກຢາທີ່ຈະກິນມື້ນີ້",
+  "todayPillNumberFeatureAppealHeadline": "ທ່ານສາມາດປ່ຽນເລກເມັດຢາຂອງມື້ນີ້ໄດ້",
   "todayPillNumberFeatureAppealBody": "ເມື່ອເກີດການລືມຫຼືກິນຢາຜິດເຮັດໃຫ້ໝາຍເລກໃນແຜ່ນຢາບໍ່ກົງກັບການທີ່ທ່ານຈິງ, ທ່ານສາມາດປັບໝາຍເລກຢາທີ່ຈະທຳໃນມື້ນີ້ດ້ວຍຕົນເອງ. ທ່ານສາມາດເປີດຫນ້ານີ້ຈາກການແສດງໝາຍເລກຢາໃນຫນ້າຫຼັກໄດ້.",
   "restDurationFeatureAppealTitle": "ບັນທຶກຊ່ວງຢຸດກິນຢາ",
   "restDurationFeatureAppealShortDescription": "ຄວບຄຸມການຢຸດການຮັບຢາແລະການຂາດຕໍ່ໄດ້ຢ່າງແນ່ນອນ",

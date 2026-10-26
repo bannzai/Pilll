@@ -502,7 +502,7 @@
   "alarmKitFeatureAppealBody": "Với AlarmKit có trên iOS 26 trở lên, chuông báo vẫn reo khi bật chế độ Im lặng hoặc Tập trung để nhắc bạn uống thuốc.",
   "todayPillNumberFeatureAppealTitle": "Điều chỉnh số thứ tự viên thuốc hôm nay",
   "todayPillNumberFeatureAppealShortDescription": "Nếu số thứ tự viên thuốc không khớp, bạn có thể chỉnh lại trong phần cài đặt",
-  "todayPillNumberFeatureAppealHeadline": "Có thể thay đổi số thứ tự viên thuốc cho hôm nay",
+  "todayPillNumberFeatureAppealHeadline": "Bạn có thể đổi số thứ tự viên thuốc hôm nay",
   "todayPillNumberFeatureAppealBody": "Khi số trên vỉ thuốc và việc uống thực tế bị lệch do quên uống hoặc nhầm lẫn, bạn có thể điều chỉnh thủ công số viên cần uống hôm nay. Bạn cũng có thể mở cùng màn hình này từ phần hiển thị số viên trên trang chủ.",
   "restDurationFeatureAppealTitle": "Ghi lại thời gian nghỉ uống thuốc",
   "restDurationFeatureAppealShortDescription": "Quản lý chính xác việc tạm ngưng/gián đoạn uống thuốc",

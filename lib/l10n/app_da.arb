@@ -502,7 +502,7 @@
   "alarmKitFeatureAppealBody": "Med AlarmKit, som er tilgængeligt fra iOS 26, minder en alarm, der også lyder i lydløs tilstand eller Fokus, dig om at tage din p-pille.",
   "todayPillNumberFeatureAppealTitle": "Tilpas nummeret på dagens p-pille",
   "todayPillNumberFeatureAppealShortDescription": "Hvis pillenummeret ikke passer, kan du rette det i indstillingerne",
-  "todayPillNumberFeatureAppealHeadline": "Du kan ændre nummeret på den pille, du tager i dag",
+  "todayPillNumberFeatureAppealHeadline": "Du kan ændre dagens pillenummer",
   "todayPillNumberFeatureAppealBody": "Hvis nummeret på pillekortet ikke stemmer overens med den faktiske indtagelse på grund af glemte piller eller forveksling, kan du manuelt justere dagens pillenummer. Du kan også åbne den samme skærm fra pillenummervisningen på startskærmen.",
   "restDurationFeatureAppealTitle": "Registrer pillepause",
   "restDurationFeatureAppealShortDescription": "Præcis styring af pauser og afbrydelser",

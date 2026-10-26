@@ -502,7 +502,7 @@
   "alarmKitFeatureAppealBody": "Naudojant „AlarmKit“, pasiekiamą nuo iOS 26, signalas, skambantis net tyliuoju ar susikaupimo režimu, primena jums išgerti tabletę.",
   "todayPillNumberFeatureAppealTitle": "Pakoreguokite šiandienos tabletės numerį",
   "todayPillNumberFeatureAppealShortDescription": "Jei tabletės numeris nesutampa, galite jį pataisyti nustatymuose",
-  "todayPillNumberFeatureAppealHeadline": "Galite pakeisti šiandien vartojamos tabletės numerį",
+  "todayPillNumberFeatureAppealHeadline": "Galite pakeisti šiandienos tabletės numer",
   "todayPillNumberFeatureAppealBody": "Jei dėl pamiršimo ar klaidos numeris ant tablečių lapelio nesutampa su tuo, ką iš tikrųjų suvartojote, galite rankiniu būdu suderinti šiandien vartojamos tabletės numerį. Tą patį ekraną taip pat galite atidaryti paspaudę tablečių numerį pagrindiniame ekrane.",
   "restDurationFeatureAppealTitle": "Užfiksuoti vartojimo pertrauką",
   "restDurationFeatureAppealShortDescription": "Tikslus vartojimo pertraukų ir nutraukimų valdymas",

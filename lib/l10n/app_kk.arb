@@ -502,7 +502,7 @@
   "alarmKitFeatureAppealBody": "iOS 26 және одан кейінгі нұсқаларда қолжетімді AlarmKit арқылы дыбыссыз немесе назар аудару режимінде де шырылдайтын дабыл сізге таблетканы қабылдау уақытын еске салады.",
   "todayPillNumberFeatureAppealTitle": "Бүгінгі таблетканың нөмірін реттеңіз",
   "todayPillNumberFeatureAppealShortDescription": "Таблетка нөмірі сәйкес келмесе, оны баптаулардан түзете аласыз",
-  "todayPillNumberFeatureAppealHeadline": "Бүгін ішетін таблетканың нөмірін өзгертуге болады",
+  "todayPillNumberFeatureAppealHeadline": "Бүгінгі таблетка нөмірін өзгерте аласыз",
   "todayPillNumberFeatureAppealBody": "Ұмытып қалу немесе шатастыру салдарынан дәрі парағындағы нөмір нақты қабылдаудан ауытқыса, бүгін ішетін таблетканың нөмірін қолмен қайта реттей аласыз. Осы экранды басты беттегі нөмірді түрту арқылы да аша аласыз.",
   "restDurationFeatureAppealTitle": "Дәріні ішпеген кезеңді жазу",
   "restDurationFeatureAppealShortDescription": "Дәрі қабылдауды үзіліспен және тоқтатумен дәл басқару",

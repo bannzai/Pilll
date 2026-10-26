@@ -502,7 +502,7 @@
   "alarmKitFeatureAppealBody": "Uz AlarmKit, dostupan od iOS-a 26, alarm koji se oglašava i u tihom načinu rada ili načinu rada Fokus podsjeća vas da uzmete pilulu.",
   "todayPillNumberFeatureAppealTitle": "Prilagodite broj današnje pilule",
   "todayPillNumberFeatureAppealShortDescription": "Ako se broj pilule ne podudara, možete ga ispraviti u postavkama",
-  "todayPillNumberFeatureAppealHeadline": "Možete promijeniti broj pilule koju ćete uzeti danas",
+  "todayPillNumberFeatureAppealHeadline": "Možete promijeniti broj pilule za danas",
   "todayPillNumberFeatureAppealBody": "Ako su se zbog zaborava ili zamjene brojevi na listi pilula i stvarno uzimanje pomaknuli, možete ručno prilagoditi broj pilule koji ćete uzeti danas. Isti zaslon možete otvoriti i iz prikaza broja pilule na početnom zaslonu.",
   "restDurationFeatureAppealTitle": "Zabilježi razdoblje prekida uzimanja",
   "restDurationFeatureAppealShortDescription": "Precizno upravljanje prekidima u uzimanju",

@@ -502,7 +502,7 @@
   "alarmKitFeatureAppealBody": "iOS 26 లేదా తర్వాతి వెర్షన్‌లలో అందుబాటులో ఉన్న AlarmKit సహాయంతో, సైలెంట్ మోడ్ లేదా ఫోకస్ మోడ్‌లో కూడా మోగే అలారం మాత్ర తీసుకోవాల్సిన సమయాన్ని గుర్తుచేస్తుంది.",
   "todayPillNumberFeatureAppealTitle": "నేటి మాత్ర సంఖ్యను సర్దుబాటు చేయండి",
   "todayPillNumberFeatureAppealShortDescription": "మాత్ర సంఖ్య సరిపోకపోతే, సెట్టింగ్‌లలో దాన్ని సరిచేయవచ్చు",
-  "todayPillNumberFeatureAppealHeadline": "ఈ రోజు తాగవలసిన గోలి సంఖ్యను మార్చవచ్చు",
+  "todayPillNumberFeatureAppealHeadline": "ఈ రోజు మాత్ర సంఖ్యను మార్చుకోవచ్చు",
   "todayPillNumberFeatureAppealBody": "ఈ వాక్యాన్ని అనువదించండి",
   "restDurationFeatureAppealTitle": "గోళీలు తినడం ఆపిన కాలాన్ని నమోదు చేయండి",
   "restDurationFeatureAppealShortDescription": "విరామాలు మరియు నిలిపివేతలను ఖచ్చితంగా నిర్వహించండి",

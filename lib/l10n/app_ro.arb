@@ -502,7 +502,7 @@
   "alarmKitFeatureAppealBody": "Cu AlarmKit, disponibil începând cu iOS 26, o alarmă care sună chiar și în modul Silențios sau Concentrare îți amintește să iei pilula.",
   "todayPillNumberFeatureAppealTitle": "Ajustează numărul pilulei de azi",
   "todayPillNumberFeatureAppealShortDescription": "Dacă numărul pilulei nu corespunde, îl poți corecta în setări",
-  "todayPillNumberFeatureAppealHeadline": "Puteți modifica numărul pilulei de astăzi",
+  "todayPillNumberFeatureAppealHeadline": "Poți schimba numărul pilulei de astăzi",
   "todayPillNumberFeatureAppealBody": "Când numărul de pe fișa de pastile nu corespunde cu administrarea reală, din cauza uitării sau confuziei, puteți ajusta manual numărul pastilei pe care trebuie să o luați astăzi. Același ecran poate fi deschis și din afișajul numărului de pastile de pe ecranul principal.",
   "restDurationFeatureAppealTitle": "Înregistrează perioada de pauză de la administrare",
   "restDurationFeatureAppealShortDescription": "Gestionare precisă a pauzelor și întreruperilor",

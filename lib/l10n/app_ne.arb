@@ -502,7 +502,7 @@
   "alarmKitFeatureAppealBody": "iOS 26 र त्यसपछिका संस्करणमा उपलब्ध AlarmKit प्रयोग गरेर, साइलेन्ट वा फोकस मोडमा पनि बज्ने अलार्मले तपाईंलाई चक्की खाने समय सम्झाउँछ।",
   "todayPillNumberFeatureAppealTitle": "आजको चक्कीको नम्बर मिलाउनुहोस्",
   "todayPillNumberFeatureAppealShortDescription": "चक्कीको नम्बर नमिलेमा सेटिङमा सच्याउन सक्नुहुन्छ",
-  "todayPillNumberFeatureAppealHeadline": "आज खाने चक्कीको नम्बर परिवर्तन गर्न सकिन्छ",
+  "todayPillNumberFeatureAppealHeadline": "तपाईं आजको चक्की नम्बर परिवर्तन गर्न सक्नुहुन्छ",
   "todayPillNumberFeatureAppealBody": "पिल खान बिर्सिएमा वा गलत पिल खाइयो भने पिल शीटको नम्बर र वास्तविक सेवनमा भिन्नता आउँदा, आज खानुपर्ने पिल नम्बर हातले मिलाउन सकिन्छ। गृहपृष्ठको पिल नम्बर प्रदर्शनबाट पनि उही स्क्रिन खोल्न सकिन्छ।",
   "restDurationFeatureAppealTitle": "गोली नखाने अवधि रेकर्ड गर्नुहोस्",
   "restDurationFeatureAppealShortDescription": "विराम र अवरोधको सटीक व्यवस्थापन",

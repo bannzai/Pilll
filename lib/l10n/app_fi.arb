@@ -502,7 +502,7 @@
   "alarmKitFeatureAppealBody": "iOS 26:ssa ja uudemmissa saatavilla olevan AlarmKitin avulla myös äänettömässä tilassa tai Keskity-tilassa soiva hälytys muistuttaa sinua ottamaan pillerin.",
   "todayPillNumberFeatureAppealTitle": "Muuta tämän päivän pillerin numeroa",
   "todayPillNumberFeatureAppealShortDescription": "Jos pillerin numero ei täsmää, voit korjata sen asetuksissa",
-  "todayPillNumberFeatureAppealHeadline": "Voit muuttaa tänään otettavan pillerin numeroa",
+  "todayPillNumberFeatureAppealHeadline": "Voit vaihtaa tämän päivän pillerinumeron",
   "todayPillNumberFeatureAppealBody": "Jos olet unohtanut ottaa pillerin tai sekoittanut ne, jolloin pillerilevyn numero ja todellinen ottaminen eivät täsmää, voit säätää tänään otettavan pillerin numeron manuaalisesti. Voit avata saman näytön myös kotinäytön pillerinumeronäytöltä.",
   "restDurationFeatureAppealTitle": "Kirjaa taukojakso",
   "restDurationFeatureAppealShortDescription": "Hallitse taukoja ja keskeytyksiä tarkasti",

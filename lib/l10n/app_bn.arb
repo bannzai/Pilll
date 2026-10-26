@@ -502,7 +502,7 @@
   "alarmKitFeatureAppealBody": "iOS 26 বা পরবর্তী সংস্করণে উপলব্ধ AlarmKit ব্যবহার করে, সাইলেন্ট বা ফোকাস মোডেও বেজে ওঠা অ্যালার্ম আপনাকে পিল খাওয়ার সময় জানায়।",
   "todayPillNumberFeatureAppealTitle": "আজকের পিলের নম্বর মিলিয়ে নিন",
   "todayPillNumberFeatureAppealShortDescription": "পিলের নম্বর না মিললে সেটিংসে ঠিক করতে পারেন",
-  "todayPillNumberFeatureAppealHeadline": "আজকের গ্রহণ নম্বর পরিবর্তন করা যাবে",
+  "todayPillNumberFeatureAppealHeadline": "আপনি আজকের পিল নম্বর পরিবর্তন করতে পারেন",
   "todayPillNumberFeatureAppealBody": "ভুলে যাওয়া বা ভুল করে নেওয়ার কারণে পিল শিটের নম্বর এবং প্রকৃত সেবনের মধ্যে পার্থক্য হলে, আজকে সেবন করার পিল নম্বরটি ম্যানুয়ালি ঠিক করতে পারবেন। হোমের পিল নম্বর প্রদর্শন থেকেও একই স্ক্রিনটি খোলা যাবে।",
   "restDurationFeatureAppealTitle": "ওষুধ বিরতির সময়কাল রেকর্ড করুন",
   "restDurationFeatureAppealShortDescription": "বিরতি ও বন্ধ সঠিকভাবে পরিচালনা করুন",

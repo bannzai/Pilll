@@ -502,7 +502,7 @@
   "alarmKitFeatureAppealBody": "Með AlarmKit, sem er í boði frá iOS 26, minnir vekjari sem hringir líka í hljóðlausri stillingu eða einbeitingarstillingu á að taka pilluna.",
   "todayPillNumberFeatureAppealTitle": "Breyta númeri pillunnar í dag",
   "todayPillNumberFeatureAppealShortDescription": "Ef númer pillunnar stemmir ekki, geturðu leiðrétt það í stillingum",
-  "todayPillNumberFeatureAppealHeadline": "Þú getur breytt númeri pillunnar sem á að taka í dag",
+  "todayPillNumberFeatureAppealHeadline": "Þú getur breytt pillunúmerinu fyrir daginn í dag",
   "todayPillNumberFeatureAppealBody": "Ef númerið á pillublaðinu og raunveruleg inntaka eru ekki samstillt vegna þess að þú gleymdir töku eða tókst ranga pillu, getur þú handvirkt stillt hvaða pillunúmer á að taka í dag. Sama skjá er einnig hægt að opna úr pillunúmerasýningunni á heimaskjánum.",
   "restDurationFeatureAppealTitle": "Skrá hlé í töku pillna",
   "restDurationFeatureAppealShortDescription": "Nákvæm skráning og stjórnun á hléum",

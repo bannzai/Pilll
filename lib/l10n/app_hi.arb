@@ -502,7 +502,7 @@
   "alarmKitFeatureAppealBody": "iOS 26 और उसके बाद उपलब्ध AlarmKit की मदद से, साइलेंट या फ़ोकस मोड में भी बजने वाला अलार्म आपको गोली लेने का समय याद दिलाता है।",
   "todayPillNumberFeatureAppealTitle": "आज की गोली का नंबर ठीक करें",
   "todayPillNumberFeatureAppealShortDescription": "गोली का नंबर मेल न खाए तो आप उसे सेटिंग में ठीक कर सकते हैं",
-  "todayPillNumberFeatureAppealHeadline": "आज लेने वाली गोली का नंबर बदल सकते हैं",
+  "todayPillNumberFeatureAppealHeadline": "आप आज का गोली नंबर बदल सकती हैं",
   "todayPillNumberFeatureAppealBody": "यदि आप दवा लेना भूल जाते हैं या गलती से दूसरी गोली ले लेते हैं जिससे पिल शीट पर संख्या और वास्तविक सेवन मेल नहीं खाते, तो आप आज की लेने वाली गोली का नंबर मैन्युअल रूप से समायोजित कर सकते हैं। होम स्क्रीन पर पिल नंबर दिखाने वाले हिस्से से भी आप वही स्क्रीन खोल सकते हैं।",
   "restDurationFeatureAppealTitle": "दवा न लेने की अवधि दर्ज करें",
   "restDurationFeatureAppealShortDescription": "दवा के सेवन में ब्रेक और रुकावटों को सटीक रूप से प्रबंधित करें",

@@ -502,7 +502,7 @@
   "alarmKitFeatureAppealBody": "iOS 26-დან ხელმისაწვდომი AlarmKit-ის საშუალებით, მაღვიძარა, რომელიც უხმო ან ფოკუსირების რეჟიმშიც რეკავს, აბის მიღების დროს შეგახსენებთ.",
   "todayPillNumberFeatureAppealTitle": "დღევანდელი აბის ნომრის შეცვლა",
   "todayPillNumberFeatureAppealShortDescription": "თუ აბის ნომერი არ ემთხვევა, მისი შესწორება პარამეტრებში შეგიძლიათ",
-  "todayPillNumberFeatureAppealHeadline": "დღეს მიღებადი აბის ნომრის შეცვლა",
+  "todayPillNumberFeatureAppealHeadline": "შეგიძლიათ შეცვალოთ დღევანდელი აბის ნომერი",
   "todayPillNumberFeatureAppealBody": "თუ დაგავიწყებისა ან შეცდომით მიღების გამო პილ-ფურცელზე ნაჩვენები ნომერი რეალურ მიღებას არ ემთხვევა, შეგიძლიათ დღეს მიღების პილის ნომერი ხელით დაარეგულიროთ. იგივე ეკრანი ხელმისაწვდომია მთავარი ეკრანის პილის ნომრის ჩვენებიდანაც.",
   "restDurationFeatureAppealTitle": "მიღების შესვენების პერიოდის ჩანაწერა",
   "restDurationFeatureAppealShortDescription": "დასვენებისა და შეჩერებების ზუსტი კონტროლი",

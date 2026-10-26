@@ -502,7 +502,7 @@
   "alarmKitFeatureAppealBody": "С AlarmKit, наличен в iOS 26 и по-нови версии, аларма, която звучи дори в безшумен режим или режим „Фокус“, ви напомня да вземете хапчето.",
   "todayPillNumberFeatureAppealTitle": "Настройте номера на днешното хапче",
   "todayPillNumberFeatureAppealShortDescription": "Ако номерът на хапчето не съвпада, можете да го поправите в настройките",
-  "todayPillNumberFeatureAppealHeadline": "Можете да промените номера на хапчето, което приемате днес",
+  "todayPillNumberFeatureAppealHeadline": "Можете да промените номер на хапче за днес",
   "todayPillNumberFeatureAppealBody": "Когато номерът на хапчето в листа и действителното приемане се разминат поради пропускане или объркване, можете ръчно да коригирате номера на хапчето, което трябва да приемете днес. Можете да отворите същия екран и от показването на номера на хапчето на началния екран.",
   "restDurationFeatureAppealTitle": "Записване на почивката от приема",
   "restDurationFeatureAppealShortDescription": "Точно управление на почивки и прекъсвания",
