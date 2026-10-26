@@ -409,7 +409,7 @@
   "termsOfService": "Mga tuntunin sa paggamit",
   "privacyPolicy": "Patakaran sa pribasiya",
   "linkCopiedToClipboard": "Nakopya na sa clipboard",
-  "notificationNumber": "Notification {number}",
+  "notificationNumber": "Abiso {number}",
   "notificationTime": "Oras ng Paalala",
   "timeZoneChangedTo": "Napalitan na sa {tz}",
   "changeStartOfPillDays": "Baguhin ang simula ng mga araw ng pag-inom",

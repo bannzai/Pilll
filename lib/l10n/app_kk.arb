@@ -409,7 +409,7 @@
   "termsOfService": "Пайдалану шарттары",
   "privacyPolicy": "Құпиялық саясаты",
   "linkCopiedToClipboard": "Алмасу буферіне көшірілді",
-  "notificationNumber": "Ескерту {number}",
+  "notificationNumber": "Хабарландыру {number}",
   "notificationTime": "хабарландыру уақыты",
   "timeZoneChangedTo": "{tz} уақыт белдеуіне өзгертілді",
   "changeStartOfPillDays": "Қабылдау күндерінің басталуын өзгерту",

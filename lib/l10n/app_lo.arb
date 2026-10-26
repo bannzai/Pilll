@@ -409,7 +409,7 @@
   "termsOfService": "ເງື່ອນໄຂການນຳໃຊ້",
   "privacyPolicy": "ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ",
   "linkCopiedToClipboard": "ສຳເນົາໄປຍັງຄລິບບອດແລ້ວ",
-  "notificationNumber": "ການແຈ້ງເຕືອນ{number}",
+  "notificationNumber": "ການແຈ້ງເຕືອນ {number}",
   "notificationTime": "ເວລາແຈ້ງເຕືອນ",
   "timeZoneChangedTo": "ປ່ຽນເປັນ {tz} ແລ້ວ",
   "changeStartOfPillDays": "ປ່ຽນວັນເລີ່ມກິນຢາ",

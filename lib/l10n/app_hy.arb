@@ -409,7 +409,7 @@
   "termsOfService": "Օգտագործման պայմաններ",
   "privacyPolicy": "Գաղտնիության քաղաքականություն",
   "linkCopiedToClipboard": "Պատճենվել է փոխանակման բուֆերում",
-  "notificationNumber": "ծանուցում{number}",
+  "notificationNumber": "Ծանուցում {number}",
   "notificationTime": "ծանուցման ժամանակ",
   "timeZoneChangedTo": "{tz}-ին փոխված է",
   "changeStartOfPillDays": "Ընդունման օրերի սկիզբը փոփոխել",

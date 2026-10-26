@@ -409,7 +409,7 @@
   "termsOfService": "Felhasználási feltételek",
   "privacyPolicy": "Adatvédelmi szabályzat",
   "linkCopiedToClipboard": "A vágólapra másolva",
-  "notificationNumber": "Értesítés {number}",
+  "notificationNumber": "{number}. értesítés",
   "notificationTime": "Értesítési idő",
   "timeZoneChangedTo": "{tz}-re módosítva",
   "changeStartOfPillDays": "A bevételi napok kezdetének módosítása",

@@ -409,7 +409,7 @@
   "termsOfService": "Условия за ползване",
   "privacyPolicy": "Политика за поверителност",
   "linkCopiedToClipboard": "Копирано в клипборда",
-  "notificationNumber": "Уведомление {number}",
+  "notificationNumber": "Известие {number}",
   "notificationTime": "Време за уведомление",
   "timeZoneChangedTo": "Променено на {tz}",
   "changeStartOfPillDays": "Промяна на началото на приема",

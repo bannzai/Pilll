@@ -409,7 +409,7 @@
   "termsOfService": "Колдонуу шарттары",
   "privacyPolicy": "Купуялык саясаты",
   "linkCopiedToClipboard": "Алмашуу буферине көчүрүлдү",
-  "notificationNumber": "эскертүү {number}",
+  "notificationNumber": "Билдирүү {number}",
   "notificationTime": "эскертүү убактысы",
   "timeZoneChangedTo": "{tz} убакыт алкагына өзгөртүлдү",
   "changeStartOfPillDays": "Дары ичүүнүн башталуу күнүн өзгөртүү",

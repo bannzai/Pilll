@@ -409,7 +409,7 @@
   "termsOfService": "Erabilera-baldintzak",
   "privacyPolicy": "Pribatutasun-politika",
   "linkCopiedToClipboard": "Arbelean kopiatu da",
-  "notificationNumber": "Jakinarazpena {number}",
+  "notificationNumber": "{number}. jakinarazpena",
   "notificationTime": "Jakinarazpenaren ordua",
   "timeZoneChangedTo": "{tz}ra aldatu da",
   "changeStartOfPillDays": "Hartzeko egunen hasiera aldatu",

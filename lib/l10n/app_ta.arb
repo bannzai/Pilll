@@ -409,7 +409,7 @@
   "termsOfService": "பயன்பாட்டு விதிமுறைகள்",
   "privacyPolicy": "தனியுரிமைக் கொள்கை",
   "linkCopiedToClipboard": "கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது",
-  "notificationNumber": "அறிவிப்பு{number}",
+  "notificationNumber": "அறிவிப்பு {number}",
   "notificationTime": "அறிவிப்பு நேரம்",
   "timeZoneChangedTo": "{tz}க்கு மாற்றப்பட்டது",
   "changeStartOfPillDays": "மருந்து நாட்களின் தொடக்கத்தை மாற்று",

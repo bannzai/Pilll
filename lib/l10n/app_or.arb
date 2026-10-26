@@ -409,7 +409,7 @@
   "termsOfService": "ବ୍ୟବହାରର ସର୍ତ୍ତାବଳୀ",
   "privacyPolicy": "ଗୋପନୀୟତା ନୀତି",
   "linkCopiedToClipboard": "କ୍ଲିପବୋର୍ଡକୁ କପି ହୋଇଛି",
-  "notificationNumber": "ସୂଚନା{number}",
+  "notificationNumber": "ସୂଚନା {number}",
   "notificationTime": "ସୂଚନା ସମୟ",
   "timeZoneChangedTo": "{tz}କୁ ପରିବର୍ତ୍ତନ କରାଯାଇଛି",
   "changeStartOfPillDays": "ସେବନ ଆରମ୍ଭ ଦିନ ପରିବର୍ତ୍ତନ କରନ୍ତୁ",

@@ -409,7 +409,7 @@
   "termsOfService": "Үйлчилгээний нөхцөл",
   "privacyPolicy": "Нууцлалын бодлого",
   "linkCopiedToClipboard": "Түр санах ойд хууллаа",
-  "notificationNumber": "мэдэгдэл {number}",
+  "notificationNumber": "Мэдэгдэл {number}",
   "notificationTime": "Мэдэгдлийн цаг",
   "timeZoneChangedTo": "{tz}-д солигдлоо",
   "changeStartOfPillDays": "Хэрэглэх өдрийн эхлэлийг өөрчлөх",

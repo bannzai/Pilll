@@ -409,7 +409,7 @@
   "termsOfService": "İstifadə şərtləri",
   "privacyPolicy": "Məxfilik siyasəti",
   "linkCopiedToClipboard": "Mübadilə buferinə kopyalandı",
-  "notificationNumber": "bildiriş {number}",
+  "notificationNumber": "Bildiriş {number}",
   "notificationTime": "Bildiriş vaxtı",
   "timeZoneChangedTo": "{tz} olaraq dəyişdirildi",
   "changeStartOfPillDays": "Qəbul başlanğıc tarixini dəyişdirmək",

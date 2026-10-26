@@ -409,7 +409,7 @@
   "termsOfService": "شروط الاستخدام",
   "privacyPolicy": "سياسة الخصوصية",
   "linkCopiedToClipboard": "تم النسخ إلى الحافظة",
-  "notificationNumber": "إشعار {number}",
+  "notificationNumber": "الإشعار {number}",
   "notificationTime": "وقت الإشعار",
   "timeZoneChangedTo": "تم التغيير إلى {tz}",
   "changeStartOfPillDays": "تغيير بداية أيام التناول",

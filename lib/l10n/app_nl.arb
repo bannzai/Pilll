@@ -409,7 +409,7 @@
   "termsOfService": "Gebruiksvoorwaarden",
   "privacyPolicy": "Privacybeleid",
   "linkCopiedToClipboard": "Gekopieerd naar het klembord",
-  "notificationNumber": "Notificatie {number}",
+  "notificationNumber": "Melding {number}",
   "notificationTime": "Notificatietijd",
   "timeZoneChangedTo": "Gewijzigd naar {tz}",
   "changeStartOfPillDays": "Startdatum van inname wijzigen",

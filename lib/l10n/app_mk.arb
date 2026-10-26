@@ -409,7 +409,7 @@
   "termsOfService": "Услови за користење",
   "privacyPolicy": "Политика за приватност",
   "linkCopiedToClipboard": "Копирано во таблата со исечоци",
-  "notificationNumber": "известување{number}",
+  "notificationNumber": "Известување {number}",
   "notificationTime": "Време за известување",
   "timeZoneChangedTo": "Временската зона е променета на {tz}",
   "changeStartOfPillDays": "Промени почеток на бројот на денови за земање",

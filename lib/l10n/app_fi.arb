@@ -409,7 +409,7 @@
   "termsOfService": "Käyttöehdot",
   "privacyPolicy": "Tietosuojakäytäntö",
   "linkCopiedToClipboard": "Kopioitu leikepöydälle",
-  "notificationNumber": "Ilmoitus{number}",
+  "notificationNumber": "Ilmoitus {number}",
   "notificationTime": "Ilmoitusaika",
   "timeZoneChangedTo": "Vaihdettu {tz}:ksi",
   "changeStartOfPillDays": "Muuta ottopäivien alkua",

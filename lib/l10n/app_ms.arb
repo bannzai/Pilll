@@ -409,7 +409,7 @@
   "termsOfService": "Terma penggunaan",
   "privacyPolicy": "Dasar privasi",
   "linkCopiedToClipboard": "Disalin ke papan klip",
-  "notificationNumber": "Notifikasi {number}",
+  "notificationNumber": "Pemberitahuan {number}",
   "notificationTime": "Waktu Notifikasi",
   "timeZoneChangedTo": "Telah ditukar kepada {tz}",
   "changeStartOfPillDays": "Ubah Permulaan Kiraan Hari Pengambilan",

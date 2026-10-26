@@ -409,7 +409,7 @@
   "termsOfService": "Uvjeti korištenja",
   "privacyPolicy": "Pravila privatnosti",
   "linkCopiedToClipboard": "Kopirano u međuspremnik",
-  "notificationNumber": "Notifikacija {number}",
+  "notificationNumber": "Obavijest {number}",
   "notificationTime": "Vrijeme notifikacije",
   "timeZoneChangedTo": "Promijenjeno u {tz}",
   "changeStartOfPillDays": "Promjeni početak uzimanja tableta",

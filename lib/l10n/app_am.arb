@@ -409,7 +409,7 @@
   "termsOfService": "የአገልግሎት ውል",
   "privacyPolicy": "የግላዊነት ፖሊሲ",
   "linkCopiedToClipboard": "ወደ ቅንጥብ ሰሌዳ ተቀድቷል",
-  "notificationNumber": "ማሳወቃ{number}",
+  "notificationNumber": "ማሳወቂያ {number}",
   "notificationTime": "ማስታወቂያ ሰዓት",
   "timeZoneChangedTo": "ወደ {tz} ተቀይሯል",
   "changeStartOfPillDays": "የአወሳሰድ መጀመሪያ ቀን መቀየር",

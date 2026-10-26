@@ -409,7 +409,7 @@
   "termsOfService": "លក្ខខណ្ឌប្រើប្រាស់",
   "privacyPolicy": "គោលការណ៍ឯកជនភាព",
   "linkCopiedToClipboard": "បានចម្លងទៅក្ដារតម្បៀតខ្ទាស់",
-  "notificationNumber": "ការជូនដំណឹង{number}",
+  "notificationNumber": "ការជូនដំណឹង {number}",
   "notificationTime": "ពេលជូនដំណឹង",
   "timeZoneChangedTo": "បានប្តូរទៅ{tz}ហើយ",
   "changeStartOfPillDays": "ផ្លាស់ប្តូរថ្ងៃចាប់ផ្តើមសេវា",

@@ -409,7 +409,7 @@
   "termsOfService": "Podmienky používania",
   "privacyPolicy": "Zásady ochrany osobných údajov",
   "linkCopiedToClipboard": "Skopírované do schránky",
-  "notificationNumber": "Notifikácia {number}",
+  "notificationNumber": "Upozornenie {number}",
   "notificationTime": "Čas oznámenia",
   "timeZoneChangedTo": "Zmenené na {tz}",
   "changeStartOfPillDays": "Zmeniť začiatok dní užívania",

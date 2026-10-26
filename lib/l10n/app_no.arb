@@ -409,7 +409,7 @@
   "termsOfService": "Bruksvilkår",
   "privacyPolicy": "Personvernerklæring",
   "linkCopiedToClipboard": "Kopiert til utklippstavlen",
-  "notificationNumber": "Varsling {number}",
+  "notificationNumber": "Varsel {number}",
   "notificationTime": "Varslingstid",
   "timeZoneChangedTo": "Endret til {tz}",
   "changeStartOfPillDays": "Endre start på inntaksperioden",

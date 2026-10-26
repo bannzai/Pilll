@@ -409,7 +409,7 @@
   "termsOfService": "ઉપયોગની શરતો",
   "privacyPolicy": "ગોપનીયતા નીતિ",
   "linkCopiedToClipboard": "ક્લિપબોર્ડમાં કૉપિ થયું",
-  "notificationNumber": "સૂચના{number}",
+  "notificationNumber": "સૂચના {number}",
   "notificationTime": "સૂચના સમય",
   "timeZoneChangedTo": "{tz} માં બદલાવ કર્યો છે",
   "changeStartOfPillDays": "સેવનના દિવસોની શરૂઆત બદલો",

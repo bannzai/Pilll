@@ -409,7 +409,7 @@
   "termsOfService": "Notkunarskilmálar",
   "privacyPolicy": "Persónuverndarstefna",
   "linkCopiedToClipboard": "Afritað á klippiborð",
-  "notificationNumber": "tilkynning {number}",
+  "notificationNumber": "Tilkynning {number}",
   "notificationTime": "Tilkynningatími",
   "timeZoneChangedTo": "Breytt í {tz}",
   "changeStartOfPillDays": "Breyta upphafi inntökudaga",

@@ -409,7 +409,7 @@
   "termsOfService": "Telerau defnyddio",
   "privacyPolicy": "Polisi preifatrwydd",
   "linkCopiedToClipboard": "Wedi copïo i'r clipfwrdd",
-  "notificationNumber": "hysbysiad {number}",
+  "notificationNumber": "Hysbysiad {number}",
   "notificationTime": "Amser Hysbysiad",
   "timeZoneChangedTo": "Newidiwyd i {tz}",
   "changeStartOfPillDays": "Newid dechrau'r dyddiau cymryd",

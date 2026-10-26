@@ -409,7 +409,7 @@
   "termsOfService": "Nutzigsbedingige",
   "privacyPolicy": "Dateschutzbestimmige",
   "linkCopiedToClipboard": "I d Zwüscheablag kopiert",
-  "notificationNumber": "Mäldig {number}",
+  "notificationNumber": "Mitteilige {number}",
   "notificationTime": "Benachrichtigungszeit",
   "timeZoneChangedTo": "Uf {tz} gänderet",
   "changeStartOfPillDays": "Afang vo de Inahmetäg ändere",

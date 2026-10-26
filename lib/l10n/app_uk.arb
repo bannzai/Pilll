@@ -409,7 +409,7 @@
   "termsOfService": "Умови користування",
   "privacyPolicy": "Політика конфіденційності",
   "linkCopiedToClipboard": "Скопійовано до буфера обміну",
-  "notificationNumber": "Повідомлення {number}",
+  "notificationNumber": "Сповіщення {number}",
   "notificationTime": "Час сповіщення",
   "timeZoneChangedTo": "Змінено на {tz}",
   "changeStartOfPillDays": "Змінити початок відліку прийому",

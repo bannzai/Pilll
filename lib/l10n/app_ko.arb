@@ -409,7 +409,7 @@
   "termsOfService": "이용약관",
   "privacyPolicy": "개인정보 처리방침",
   "linkCopiedToClipboard": "클립보드에 복사했어요",
-  "notificationNumber": "알림{number}",
+  "notificationNumber": "알림 {number}",
   "notificationTime": "알림 시간",
   "timeZoneChangedTo": "{tz}로 변경했습니다",
   "changeStartOfPillDays": "복용 일수 시작 변경",

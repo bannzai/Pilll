@@ -409,7 +409,7 @@
   "termsOfService": "সেৱাৰ চৰ্তাৱলী",
   "privacyPolicy": "গোপনীয়তা নীতি",
   "linkCopiedToClipboard": "ক্লিপব’ৰ্ডলৈ কপি কৰা হ’ল",
-  "notificationNumber": "জ্ঞাপন{number}",
+  "notificationNumber": "জাননী {number}",
   "notificationTime": "জাননীৰ সময়",
   "timeZoneChangedTo": "{tz}লৈ সলনি কৰা হ'ল",
   "changeStartOfPillDays": "সেৱন আৰম্ভৰ দিন সলনি কৰক",

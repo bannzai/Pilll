@@ -409,7 +409,7 @@
   "termsOfService": "ಬಳಕೆಯ ನಿಯಮಗಳು",
   "privacyPolicy": "ಗೌಪ್ಯತಾ ನೀತಿ",
   "linkCopiedToClipboard": "ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಲಾಗಿದೆ",
-  "notificationNumber": "ಅಧಿಸೂಚನೆ{number}",
+  "notificationNumber": "ಅಧಿಸೂಚನೆ {number}",
   "notificationTime": "ಅಧಿಸೂಚನೆ ಸಮಯ",
   "timeZoneChangedTo": "{tz}ಗೆ ಬದಲಾಯಿಸಲಾಗಿದೆ",
   "changeStartOfPillDays": "ಸೇವನೆಯ ದಿನಗಳ ಆರಂಭವನ್ನು ಬದಲಾಯಿಸಿ",

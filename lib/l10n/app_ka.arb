@@ -409,7 +409,7 @@
   "termsOfService": "გამოყენების პირობები",
   "privacyPolicy": "კონფიდენციალურობის პოლიტიკა",
   "linkCopiedToClipboard": "დაკოპირდა ბუფერში",
-  "notificationNumber": "შეტყობინება{number}",
+  "notificationNumber": "შეტყობინება {number}",
   "notificationTime": "შეტყობინების დრო",
   "timeZoneChangedTo": "{tz}-ზე შეიცვალა",
   "changeStartOfPillDays": "მიღების დღეების დასაწყისის შეცვლა",

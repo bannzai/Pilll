@@ -409,7 +409,7 @@
   "termsOfService": "Kasutustingimused",
   "privacyPolicy": "Privaatsuspoliitika",
   "linkCopiedToClipboard": "Kopeeritud lõikelauale",
-  "notificationNumber": "Teatis {number}",
+  "notificationNumber": "Teavitus {number}",
   "notificationTime": "Teavituse aeg",
   "timeZoneChangedTo": "Muudetud ajavööndile {tz}",
   "changeStartOfPillDays": "Muuda võtmispäevade algust",

@@ -409,7 +409,7 @@
   "termsOfService": "वापराच्या अटी",
   "privacyPolicy": "गोपनीयता धोरण",
   "linkCopiedToClipboard": "क्लिपबोर्डवर कॉपी केले",
-  "notificationNumber": "सूचना{number}",
+  "notificationNumber": "सूचना {number}",
   "notificationTime": "सूचना वेळ",
   "timeZoneChangedTo": "{tz} मध्ये बदलले आहे",
   "changeStartOfPillDays": "सेवन दिवसांची सुरुवात बदला",

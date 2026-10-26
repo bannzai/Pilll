@@ -409,7 +409,7 @@
   "termsOfService": "תנאי שימוש",
   "privacyPolicy": "מדיניות פרטיות",
   "linkCopiedToClipboard": "הועתק ללוח",
-  "notificationNumber": "הודעה {number}",
+  "notificationNumber": "התראה {number}",
   "notificationTime": "זמן התראה",
   "timeZoneChangedTo": "שונה ל{tz}",
   "changeStartOfPillDays": "שינוי תחילת ימי הנטילה",

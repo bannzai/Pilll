@@ -409,7 +409,7 @@
   "termsOfService": "Användarvillkor",
   "privacyPolicy": "Integritetspolicy",
   "linkCopiedToClipboard": "Kopierat till urklipp",
-  "notificationNumber": "Notifikation {number}",
+  "notificationNumber": "Avisering {number}",
   "notificationTime": "Notifikationstid",
   "timeZoneChangedTo": "Tidszonen har ändrats till {tz}",
   "changeStartOfPillDays": "Ändra startdatum för medicinering",

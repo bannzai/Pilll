@@ -409,7 +409,7 @@
   "termsOfService": "Condicións de uso",
   "privacyPolicy": "Política de privacidade",
   "linkCopiedToClipboard": "Copiouse no portapapeis",
-  "notificationNumber": "notificación {number}",
+  "notificationNumber": "Notificación {number}",
   "notificationTime": "Hora da notificación",
   "timeZoneChangedTo": "Cambiado a {tz}",
   "changeStartOfPillDays": "Cambiar o inicio dos días de toma",

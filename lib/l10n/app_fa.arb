@@ -409,7 +409,7 @@
   "termsOfService": "شرایط استفاده",
   "privacyPolicy": "سیاست حفظ حریم خصوصی",
   "linkCopiedToClipboard": "در کلیپ‌بورد کپی شد",
-  "notificationNumber": "اطلاعیه {number}",
+  "notificationNumber": "اعلان {number}",
   "notificationTime": "زمان اطلاع‌رسانی",
   "timeZoneChangedTo": "منطقه زمانی به {tz} تغییر یافت",
   "changeStartOfPillDays": "تغییر شروع دوره مصرف",

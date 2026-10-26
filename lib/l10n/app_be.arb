@@ -409,7 +409,7 @@
   "termsOfService": "Умовы карыстання",
   "privacyPolicy": "Палітыка прыватнасці",
   "linkCopiedToClipboard": "Скапіявана ў буфер абмену",
-  "notificationNumber": "Апавяшчэнне{number}",
+  "notificationNumber": "Апавяшчэнне {number}",
   "notificationTime": "Час апавяшчэння",
   "timeZoneChangedTo": "Зменена на {tz}",
   "changeStartOfPillDays": "Змяніць пачатак прыёму дзён",

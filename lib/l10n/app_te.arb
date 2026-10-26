@@ -409,7 +409,7 @@
   "termsOfService": "వినియోగ నిబంధనలు",
   "privacyPolicy": "గోప్యతా విధానం",
   "linkCopiedToClipboard": "క్లిప్‌బోర్డ్‌కు కాపీ అయింది",
-  "notificationNumber": "సూచన{number}",
+  "notificationNumber": "నోటిఫికేషన్ {number}",
   "notificationTime": "నోటిఫికేషన్ సమయం",
   "timeZoneChangedTo": "{tz}కు మార్చబడింది",
   "changeStartOfPillDays": "సేవన రోజుల ప్రారంభం మార్చండి",
