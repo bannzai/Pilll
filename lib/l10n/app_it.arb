@@ -168,7 +168,7 @@
   "menstruationCycle": "Ciclo mestruale di {menstruationDuration} giorni",
   "login": "Accedi",
   "beforePremiumRegistration": "Prima di iscriverti a Premium…",
-  "createNewAccountIfNotLoggedIn": "Se non hai mai effettuato l'accesso a Pilll, verrà creato automaticamente un nuovo account",
+  "createNewAccountIfNotLoggedIn": "Se non hai mai effettuato l’accesso a Pilll, verrà creato un nuovo account per te",
   "registerAccountForDataTransfer": "Registrando un account potrai trasferire i tuoi dati",
   "registerAccountToKeepData": "Per conservare le tue informazioni, ti preghiamo di registrare un account",
   "signInWith": "Accedi con {loginName}",

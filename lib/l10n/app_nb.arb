@@ -168,7 +168,7 @@
   "menstruationCycle": "Menssyklus på {menstruationDuration} dager",
   "login": "Logg inn",
   "beforePremiumRegistration": "Før du registrerer deg for premium…",
-  "createNewAccountIfNotLoggedIn": "Hvis du ikke har logget inn på Pilll tidligere, vil det bli opprettet en ny konto",
+  "createNewAccountIfNotLoggedIn": "Hvis du ikke har logget inn på Pilll før, opprettes en ny konto for deg",
   "registerAccountForDataTransfer": "Ved å registrere en konto kan du overføre data",
   "registerAccountToKeepData": "Vennligst opprett en konto for å sikre at kontoinformasjonen din blir lagret",
   "signInWith": "Logg inn med {loginName}",

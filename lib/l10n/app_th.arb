@@ -168,7 +168,7 @@
   "menstruationCycle": "รอบเดือน {menstruationDuration} วัน",
   "login": "เข้าสู่ระบบ",
   "beforePremiumRegistration": "ก่อนสมัครพรีเมียม…",
-  "createNewAccountIfNotLoggedIn": "หากคุณยังไม่เคยเข้าสู่ระบบ Pilll จะสร้างบัญชีใหม่ให้โดยอัตโนมัติ",
+  "createNewAccountIfNotLoggedIn": "หากยังไม่เคยเข้าสู่ระบบ Pilll ระบบจะสร้างบัญชีใหม่ให้ค่ะ",
   "registerAccountForDataTransfer": "การลงทะเบียนบัญชีจะทำให้สามารถถ่ายโอนข้อมูลได้",
   "registerAccountToKeepData": "กรุณาลงทะเบียนบัญชีผู้ใช้เพื่อเก็บรักษาข้อมูลบัญชีของคุณ",
   "signInWith": "เข้าสู่ระบบด้วย{loginName}",

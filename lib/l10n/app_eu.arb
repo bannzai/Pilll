@@ -168,7 +168,7 @@
   "menstruationCycle": "{menstruationDuration} eguneko hilekoaren zikloa",
   "login": "Hasi saioa",
   "beforePremiumRegistration": "Premiumen izena eman aurretik…",
-  "createNewAccountIfNotLoggedIn": "Pilll-en oraindik ez baduzu saioa hasi, kontu berri bat sortuko da",
+  "createNewAccountIfNotLoggedIn": "Pilll-en inoiz saioa hasi ez baduzu, kontu berri bat sortuko zaizu",
   "registerAccountForDataTransfer": "Kontua erregistratuz gero, datuen transferentzia ahalbidetuko da",
   "registerAccountToKeepData": "Kontu-informazioa gordetzeko, mesedez erregistratu kontua",
   "signInWith": "{loginName}(e)kin saioa hasi",

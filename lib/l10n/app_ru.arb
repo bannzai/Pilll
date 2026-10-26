@@ -168,7 +168,7 @@
   "menstruationCycle": "Менструальный цикл: {menstruationDuration} дней",
   "login": "Войти",
   "beforePremiumRegistration": "Перед регистрацией в премиум…",
-  "createNewAccountIfNotLoggedIn": "Если вы впервые используете Pilll, для вас будет автоматически создан новый аккаунт",
+  "createNewAccountIfNotLoggedIn": "Если вы ещё ни разу не входили в Pilll, для вас будет создана новая учётная запись",
   "registerAccountForDataTransfer": "Регистрация аккаунта позволит переносить ваши данные",
   "registerAccountToKeepData": "Пожалуйста, зарегистрируйте аккаунт для сохранения данных аккаунта",
   "signInWith": "Войти через {loginName}",

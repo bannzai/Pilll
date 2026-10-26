@@ -168,7 +168,7 @@
   "menstruationCycle": "{menstruationDuration}-დღიანი მენსტრუალური ციკლი",
   "login": "შესვლა",
   "beforePremiumRegistration": "პრემიუმზე რეგისტრაციამდე…",
-  "createNewAccountIfNotLoggedIn": "თუ Pilll-ში ჯერ არ გაქვთ შესული, ახალი ანგარიში შეიქმნება",
+  "createNewAccountIfNotLoggedIn": "თუ Pilll-ში აქამდე არ შესულხართ, თქვენთვის ახალი ანგარიში შეიქმნება",
   "registerAccountForDataTransfer": "ანგარიშის რეგისტრაცია მონაცემების გადატანის საშუალებას იძლევა",
   "registerAccountToKeepData": "ანგარიშის ინფორმაციის შენარჩუნებისთვის, გთხოვთ დარეგისტრირდეთ",
   "signInWith": "{loginName}-ით შესვლა",

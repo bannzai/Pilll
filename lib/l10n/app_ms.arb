@@ -168,7 +168,7 @@
   "menstruationCycle": "Kitaran haid {menstruationDuration} hari",
   "login": "Log masuk",
   "beforePremiumRegistration": "Sebelum mendaftar untuk premium…",
-  "createNewAccountIfNotLoggedIn": "Jika anda belum pernah log masuk ke Pilll, akaun baru akan dibuat",
+  "createNewAccountIfNotLoggedIn": "Jika anda belum pernah log masuk ke Pilll, akaun baharu akan dibuat untuk anda",
   "registerAccountForDataTransfer": "Daftar akaun untuk membolehkan pemindahan data",
   "registerAccountToKeepData": "Sila daftarkan akaun untuk menyimpan maklumat akaun anda",
   "signInWith": "Log masuk dengan {loginName}",

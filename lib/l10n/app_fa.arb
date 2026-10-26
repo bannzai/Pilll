@@ -168,7 +168,7 @@
   "menstruationCycle": "چرخهٔ قاعدگی {menstruationDuration} روزه",
   "login": "ورود",
   "beforePremiumRegistration": "پیش از ثبت‌نام در پریمیوم…",
-  "createNewAccountIfNotLoggedIn": "در صورتی که هنوز وارد Pilll نشده‌اید، حساب کاربری جدیدی ایجاد خواهد شد",
+  "createNewAccountIfNotLoggedIn": "اگر تاکنون وارد Pilll نشده‌اید، حساب جدیدی برای شما ساخته می‌شود",
   "registerAccountForDataTransfer": "ثبت نام حساب کاربری امکان انتقال اطلاعات را فراهم می‌کند",
   "registerAccountToKeepData": "برای حفظ اطلاعات حساب کاربری، لطفاً ثبت نام کنید",
   "signInWith": "ورود با {loginName}",

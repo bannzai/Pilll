@@ -168,7 +168,7 @@
   "menstruationCycle": "Ciclo menstrual de {menstruationDuration} días",
   "login": "Iniciar sesión",
   "beforePremiumRegistration": "Antes de rexistrarte en Premium…",
-  "createNewAccountIfNotLoggedIn": "Se aínda non iniciaches sesión en Pilll, crearase unha nova conta",
+  "createNewAccountIfNotLoggedIn": "Se aínda non iniciaches sesión en Pilll, crearase unha conta nova para ti",
   "registerAccountForDataTransfer": "Ao rexistrar unha conta será posible transferir os datos",
   "registerAccountToKeepData": "Para conservar a información da túa conta, rexistra unha conta, por favor",
   "signInWith": "Iniciar sesión con {loginName}",

@@ -168,7 +168,7 @@
   "menstruationCycle": "{menstruationDuration} dienu menstruālais cikls",
   "login": "Pierakstīties",
   "beforePremiumRegistration": "Pirms reģistrēšanās Premium plānam…",
-  "createNewAccountIfNotLoggedIn": "Ja jūs vēl neesat pieteicies Pilll lietotnē, tiks automātiski izveidots jauns konts",
+  "createNewAccountIfNotLoggedIn": "Ja iepriekš neesat pierakstījušies Pilll, jums tiks izveidots jauns konts",
   "registerAccountForDataTransfer": "Reģistrējot kontu, kļūst iespējama datu pārnešana",
   "registerAccountToKeepData": "Lūdzam izveidot kontu, lai saglabātu jūsu informāciju",
   "signInWith": "Pierakstīties ar {loginName}",

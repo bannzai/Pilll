@@ -168,7 +168,7 @@
   "menstruationCycle": "{menstruationDuration} dienų mėnesinių ciklas",
   "login": "Prisijungti",
   "beforePremiumRegistration": "Prieš registruojantis į Premium…",
-  "createNewAccountIfNotLoggedIn": "Jei dar niekada nesate prisijungę prie Pilll, bus sukurta nauja paskyra",
+  "createNewAccountIfNotLoggedIn": "Jei anksčiau nesate prisijungę prie Pilll, jums bus sukurta nauja paskyra",
   "registerAccountForDataTransfer": "Užsiregistravus paskyrą galėsite perkelti duomenis",
   "registerAccountToKeepData": "Prašome užsiregistruoti paskyrą, kad galėtume išsaugoti jūsų duomenis",
   "signInWith": "Prisijungti su {loginName}",

@@ -168,7 +168,7 @@
   "menstruationCycle": "{menstruationDuration} daga tíðahringur",
   "login": "Skrá inn",
   "beforePremiumRegistration": "Áður en þú skráir þig í Premium…",
-  "createNewAccountIfNotLoggedIn": "Ef þú hefur aldrei skráð þig inn í Pilll verður nýr reikningur búinn til",
+  "createNewAccountIfNotLoggedIn": "Ef þú hefur ekki skráð þig inn í Pilll áður verður nýr aðgangur stofnaður fyrir þig",
   "registerAccountForDataTransfer": "Með reikningsskráningu verður hægt að flytja gögn",
   "registerAccountToKeepData": "Vinsamlegast stofnaðu reikning til að varðveita gögnin þín",
   "signInWith": "Skrá inn með {loginName}",

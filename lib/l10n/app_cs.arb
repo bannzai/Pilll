@@ -168,7 +168,7 @@
   "menstruationCycle": "Menstruační cyklus: {menstruationDuration} dní",
   "login": "Přihlásit se",
   "beforePremiumRegistration": "Před registrací do Premium…",
-  "createNewAccountIfNotLoggedIn": "Pokud jste se do Pilll ještě nikdy nepřihlásili, bude vytvořen nový účet.",
+  "createNewAccountIfNotLoggedIn": "Pokud jste se do Pilll ještě nikdy nepřihlásili, vytvoří se vám nový účet",
   "registerAccountForDataTransfer": "Registrace účtu umožní přenos vašich dat",
   "registerAccountToKeepData": "Pro uchování informací o účtu se prosím zaregistrujte",
   "signInWith": "Přihlásit se přes {loginName}",

@@ -168,7 +168,7 @@
   "menstruationCycle": "{menstruationDuration}-päevane menstruaaltsükkel",
   "login": "Logi sisse",
   "beforePremiumRegistration": "Enne premiumiga liitumist…",
-  "createNewAccountIfNotLoggedIn": "Kui te ei ole veel Pillisse sisse loginud, luuakse teile automaatselt uus konto",
+  "createNewAccountIfNotLoggedIn": "Kui sa pole varem Pilll sisse loginud, luuakse sulle uus konto",
   "registerAccountForDataTransfer": "Konto registreerimisel saab võimalikuks andmete ülekandmine",
   "registerAccountToKeepData": "Andmete säilitamiseks palume teil kasutajakonto registreerida",
   "signInWith": "Logi sisse {loginName}ga",

@@ -168,7 +168,7 @@
   "menstruationCycle": "{menstruationDuration} күндүк этек кир цикли",
   "login": "Кирүү",
   "beforePremiumRegistration": "премиумга катталуудан мурун…",
-  "createNewAccountIfNotLoggedIn": "Эгер сиз Pilll'ге мурда кирбесеңиз, жаңы аккаунт түзүлөт",
+  "createNewAccountIfNotLoggedIn": "Эгер сиз Pilll'ге мурда кирбеген болсоңуз, сиз үчүн жаңы аккаунт түзүлөт",
   "registerAccountForDataTransfer": "Эсеп каттасаңыз, маалыматтарды которуп алуу мүмкүн болот",
   "registerAccountToKeepData": "Маалыматыңызды сактоо үчүн аккаунт түзүүнү суранабыз",
   "signInWith": "{loginName} менен кирүү",

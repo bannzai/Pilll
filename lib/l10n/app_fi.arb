@@ -168,7 +168,7 @@
   "menstruationCycle": "{menstruationDuration} päivän kuukautiskierto",
   "login": "Kirjaudu sisään",
   "beforePremiumRegistration": "Ennen Premium-tilausta…",
-  "createNewAccountIfNotLoggedIn": "Jos et ole vielä kirjautunut Pillliin, luodaan uusi tili",
+  "createNewAccountIfNotLoggedIn": "Jos et ole aiemmin kirjautunut Pilll-sovellukseen, sinulle luodaan uusi tili",
   "registerAccountForDataTransfer": "Tilin luominen mahdollistaa tietojen siirtämisen",
   "registerAccountToKeepData": "Rekisteröidy tilille tietojesi säilyttämiseksi",
   "signInWith": "Kirjaudu sisään {loginName}-tilillä",

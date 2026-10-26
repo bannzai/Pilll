@@ -168,7 +168,7 @@
   "menstruationCycle": "Cylch mislif o {menstruationDuration} diwrnod",
   "login": "Mewngofnodi",
   "beforePremiumRegistration": "Cyn cofrestru ar gyfer premiwm…",
-  "createNewAccountIfNotLoggedIn": "Os nad ydych chi wedi mewngofnodi i Pilll o'r blaen, bydd cyfrif newydd yn cael ei greu",
+  "createNewAccountIfNotLoggedIn": "Os nad ydych erioed wedi mewngofnodi i Pilll, caiff cyfrif newydd ei greu ar eich cyfer",
   "registerAccountForDataTransfer": "Mae cofrestru cyfrif yn galluogi trosglwyddo data",
   "registerAccountToKeepData": "Os gwelwch yn dda, cofrestrwch gyfrif er mwyn cadw eich gwybodaeth",
   "signInWith": "Arwyddo i mewn gyda {loginName}",

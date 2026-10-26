@@ -168,7 +168,7 @@
   "menstruationCycle": "{menstruationDuration}天的月经周期",
   "login": "登录",
   "beforePremiumRegistration": "注册高级版之前…",
-  "createNewAccountIfNotLoggedIn": "如果您还没有登录过Pilll，将为您创建新账户",
+  "createNewAccountIfNotLoggedIn": "如果你以前从未登录过 Pilll，系统会为你创建新账号",
   "registerAccountForDataTransfer": "注册账户后可以实现数据同步",
   "registerAccountToKeepData": "为了保存账户信息，请注册账户",
   "signInWith": "使用{loginName}登录",

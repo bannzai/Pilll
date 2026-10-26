@@ -168,7 +168,7 @@
   "menstruationCycle": "{menstruationDuration} દિવસનું માસિક ચક્ર",
   "login": "લૉગ ઇન કરો",
   "beforePremiumRegistration": "પ્રીમિયમ માટે નોંધણી કરતાં પહેલાં…",
-  "createNewAccountIfNotLoggedIn": "Pilll માં પ્રથમ વખત લોગિન કરતી વખતે નવું એકાઉન્ટ આપોઆપ બનાવવામાં આવશે",
+  "createNewAccountIfNotLoggedIn": "તમે અગાઉ Pilllમાં લૉગ ઇન ન કર્યું હોય, તો તમારા માટે નવું એકાઉન્ટ બનાવવામાં આવશે",
   "registerAccountForDataTransfer": "ખાતું નોંધણી કરાવવાથી ડેટા સ્થાનાંતરણ શક્ય બનશે",
   "registerAccountToKeepData": "તમારી એકાઉન્ટ માહિતી સાચવવા માટે, કૃપા કરીને એકાઉન્ટ બનાવો",
   "signInWith": "{loginName} થી સાઇન ઇન કરો",

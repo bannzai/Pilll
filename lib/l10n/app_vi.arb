@@ -168,7 +168,7 @@
   "menstruationCycle": "Chu kỳ kinh nguyệt {menstruationDuration} ngày",
   "login": "Đăng nhập",
   "beforePremiumRegistration": "Trước khi đăng ký Premium…",
-  "createNewAccountIfNotLoggedIn": "Nếu bạn chưa từng đăng nhập vào Pilll, một tài khoản mới sẽ được tự động tạo",
+  "createNewAccountIfNotLoggedIn": "Nếu bạn chưa từng đăng nhập vào Pilll, một tài khoản mới sẽ được tạo cho bạn",
   "registerAccountForDataTransfer": "Đăng ký tài khoản để có thể chuyển đổi dữ liệu",
   "registerAccountToKeepData": "Vui lòng đăng ký tài khoản để lưu giữ thông tin tài khoản",
   "signInWith": "Đăng nhập bằng {loginName}",

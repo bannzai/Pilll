@@ -168,7 +168,7 @@
   "menstruationCycle": "የ{menstruationDuration} ቀን የወር አበባ ዑደት",
   "login": "ይግቡ",
   "beforePremiumRegistration": "ለፕሪሚየም ከመመዝገብዎ በፊት…",
-  "createNewAccountIfNotLoggedIn": "ለመጀመሪያ ጊዜ Pilll ውስጥ ከገቡ አዲስ መለያ ይፈጠራልዎት።",
+  "createNewAccountIfNotLoggedIn": "ከዚህ በፊት ወደ Pilll ገብተው የማያውቁ ከሆነ፣ አዲስ መለያ ይፈጠርልዎታል",
   "registerAccountForDataTransfer": "መለያ ካመዘገቡ በኋላ ውሂብ ማስተላለፍ ይቻላል",
   "registerAccountToKeepData": "የመለያ መረጃዎን ለማቆየት እባክዎ መለያ ይመዝገቡ",
   "signInWith": "በ{loginName} መግባት",

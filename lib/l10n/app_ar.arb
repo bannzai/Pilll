@@ -168,7 +168,7 @@
   "menstruationCycle": "دورة شهرية كل {menstruationDuration} يومًا",
   "login": "تسجيل الدخول",
   "beforePremiumRegistration": "قبل الاشتراك في بريميوم…",
-  "createNewAccountIfNotLoggedIn": "إذا لم تقم بتسجيل الدخول إلى Pilll من قبل، فسيتم إنشاء حساب جديد لك",
+  "createNewAccountIfNotLoggedIn": "إذا لم يسبق لكِ تسجيل الدخول إلى Pilll، فسيُنشأ لكِ حساب جديد",
   "registerAccountForDataTransfer": "تسجيل الحساب يتيح نقل البيانات",
   "registerAccountToKeepData": "يرجى تسجيل حساب للحفاظ على معلومات حسابك",
   "signInWith": "تسجيل الدخول باستخدام {loginName}",

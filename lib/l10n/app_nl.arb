@@ -168,7 +168,7 @@
   "menstruationCycle": "Menstruatiecyclus van {menstruationDuration} dagen",
   "login": "Inloggen",
   "beforePremiumRegistration": "Voordat je je aanmeldt voor premium…",
-  "createNewAccountIfNotLoggedIn": "Als je nog nooit bij Pilll bent ingelogd, wordt er automatisch een nieuw account voor je aangemaakt.",
+  "createNewAccountIfNotLoggedIn": "Als je nog niet eerder bij Pilll bent ingelogd, wordt er een nieuw account voor je aangemaakt",
   "registerAccountForDataTransfer": "Door een account aan te maken kunt u uw gegevens overdragen",
   "registerAccountToKeepData": "Om uw accountgegevens te behouden, vragen wij u een account aan te maken",
   "signInWith": "Inloggen met {loginName}",

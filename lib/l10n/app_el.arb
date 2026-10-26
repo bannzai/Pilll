@@ -168,7 +168,7 @@
   "menstruationCycle": "Έμμηνος κύκλος {menstruationDuration} ημερών",
   "login": "Σύνδεση",
   "beforePremiumRegistration": "Πριν εγγραφείτε στο Premium…",
-  "createNewAccountIfNotLoggedIn": "Εάν δεν έχετε συνδεθεί ποτέ στο Pilll, θα δημιουργηθεί αυτόματα ένας νέος λογαριασμός",
+  "createNewAccountIfNotLoggedIn": "Αν δεν έχετε συνδεθεί ξανά στο Pilll, θα δημιουργηθεί ένας νέος λογαριασμός για εσάς",
   "registerAccountForDataTransfer": "Με την εγγραφή λογαριασμού μπορείτε να μεταφέρετε τα δεδομένα σας",
   "registerAccountToKeepData": "Παρακαλούμε δημιουργήστε λογαριασμό για να διατηρήσουμε τα στοιχεία σας",
   "signInWith": "Σύνδεση με {loginName}",

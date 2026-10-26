@@ -168,7 +168,7 @@
   "menstruationCycle": "Siklo ng regla na {menstruationDuration} araw",
   "login": "Mag-sign in",
   "beforePremiumRegistration": "Bago kayo magparehistro para sa Premium…",
-  "createNewAccountIfNotLoggedIn": "Kung hindi ka pa nakakapag-login sa Pilll, makakagawa ng bagong account",
+  "createNewAccountIfNotLoggedIn": "Kung hindi pa kayo nakapag-sign in sa Pilll, gagawa ng bagong account para sa inyo",
   "registerAccountForDataTransfer": "Mapapahintulutan ang paglipat ng datos kapag magre-rehistro ng account",
   "registerAccountToKeepData": "Para mapanatili ang inyong account na impormasyon, mangyaring mag-rehistro",
   "signInWith": "Mag-sign in gamit ang {loginName}",

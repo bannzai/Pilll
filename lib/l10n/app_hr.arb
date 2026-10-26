@@ -168,7 +168,7 @@
   "menstruationCycle": "Menstrualni ciklus od {menstruationDuration} dana",
   "login": "Prijavite se",
   "beforePremiumRegistration": "Prije registracije za Premium…",
-  "createNewAccountIfNotLoggedIn": "Ako se još niste prijavljivali u Pilll, bit će stvoren novi račun",
+  "createNewAccountIfNotLoggedIn": "Ako se još niste prijavili u Pilll, za vas će se izraditi novi račun",
   "registerAccountForDataTransfer": "Registracija računa omogućava prenošenje podataka",
   "registerAccountToKeepData": "Molimo registrirajte račun za čuvanje vaših podataka",
   "signInWith": "Prijaviti se pomoću {loginName}",

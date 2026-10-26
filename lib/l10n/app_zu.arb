@@ -168,7 +168,7 @@
   "menstruationCycle": "Umjikelezo wokuya esikhathini wezinsuku ezingu-{menstruationDuration}",
   "login": "Ngena ngemvume",
   "beforePremiumRegistration": "Ngaphambi kokubhalisela i-Premium…",
-  "createNewAccountIfNotLoggedIn": "Uma ungakaze ungene ku-Pilll, kuzokwakhiwa i-akhawunti entsha",
+  "createNewAccountIfNotLoggedIn": "Uma ungakaze ungene ku-Pilll ngaphambilini, uzokwakhelwa i-akhawunti entsha",
   "registerAccountForDataTransfer": "Uma ubhalisa i-akhawunti, uzokwazi ukuhambisa idatha yakho",
   "registerAccountToKeepData": "Sicela wenze i-akhawunti ukuze sigcine imininingwane yakho ephephile",
   "signInWith": "Ngena nge-{loginName}",

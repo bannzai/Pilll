@@ -168,7 +168,7 @@
   "menstruationCycle": "Zyklus von {menstruationDuration} Tagen",
   "login": "Anmelden",
   "beforePremiumRegistration": "Bevor du dich für Premium registrierst…",
-  "createNewAccountIfNotLoggedIn": "Falls Sie sich noch nie bei Pilll angemeldet haben, wird automatisch ein neues Konto für Sie erstellt.",
+  "createNewAccountIfNotLoggedIn": "Wenn du dich noch nie bei Pilll angemeldet hast, wird ein neues Konto für dich erstellt",
   "registerAccountForDataTransfer": "Durch die Kontoregistrierung wird die Datenübertragung möglich",
   "registerAccountToKeepData": "Bitte registrieren Sie ein Konto, um Ihre Daten zu sichern",
   "signInWith": "Mit {loginName} anmelden",

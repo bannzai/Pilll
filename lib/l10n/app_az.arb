@@ -168,7 +168,7 @@
   "menstruationCycle": "{menstruationDuration} günlük aybaşı dövrü",
   "login": "Daxil olun",
   "beforePremiumRegistration": "premium üçün qeydiyyatdan keçməzdən əvvəl…",
-  "createNewAccountIfNotLoggedIn": "Pilll-ə əvvəl daxil olmamışsınızsa, yeni hesab yaradılacaq",
+  "createNewAccountIfNotLoggedIn": "Pilll hesabınıza əvvəllər daxil olmamısınızsa, sizin üçün yeni hesab yaradılacaq",
   "registerAccountForDataTransfer": "Hesaba qeydiyyatdan keçsəniz, məlumatlarınızı köçürə bilərsiniz",
   "registerAccountToKeepData": "Məlumatlarınızı saxlamaq üçün hesab qeydiyyatından keçməyinizi xahiş edirik",
   "signInWith": "{loginName} ilə daxil ol",

@@ -168,7 +168,7 @@
   "menstruationCycle": "{menstruationDuration} ദിവസത്തെ ആർത്തവചക്രം",
   "login": "ലോഗിൻ ചെയ്യുക",
   "beforePremiumRegistration": "പ്രീമിയ പ്ലാനിൽ ചേരുന്നതിന് മുമ്പ്…",
-  "createNewAccountIfNotLoggedIn": "Pilll-ൽ ഇതുവരെ ലോഗിൻ ചെയ്തിട്ടില്ലെങ്കിൽ പുതിയ അക്കൗണ്ട് സൃഷ്ടിക്കപ്പെടും",
+  "createNewAccountIfNotLoggedIn": "മുമ്പ് Pilll-ൽ ലോഗിൻ ചെയ്തിട്ടില്ലെങ്കിൽ, നിങ്ങൾക്കായി പുതിയ അക്കൗണ്ട് സൃഷ്ടിക്കപ്പെടും",
   "registerAccountForDataTransfer": "അക്കൗണ്ട് രജിസ്റ്റർ ചെയ്യുന്നതിലൂടെ ഡാറ്റ കൈമാറ്റം സാധ്യമാകും",
   "registerAccountToKeepData": "നിങ്ങളുടെ അക്കൗണ്ട് വിവരങ്ങൾ സുരക്ഷിതമായി സൂക്ഷിക്കുന്നതിനായി ദയവായി അക്കൗണ്ട് രജിസ്ട്രേഷൻ പൂർത്തിയാക്കുക",
   "signInWith": "{loginName} ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്യുക",

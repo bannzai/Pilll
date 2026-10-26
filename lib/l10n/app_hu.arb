@@ -168,7 +168,7 @@
   "menstruationCycle": "{menstruationDuration} napos menstruációs ciklus",
   "login": "Bejelentkezés",
   "beforePremiumRegistration": "A prémiumra való regisztráció előtt…",
-  "createNewAccountIfNotLoggedIn": "Ha még nincs Pilll fiókja, automatikusan létrejön egy új fiók",
+  "createNewAccountIfNotLoggedIn": "Ha még nem jelentkeztél be a Pilll alkalmazásba, új fiók jön létre számodra",
   "registerAccountForDataTransfer": "Fiók regisztrálásával lehetővé válik az adatok átvitele",
   "registerAccountToKeepData": "Az adatok megőrzése érdekében kérjük, regisztráljon fiókot",
   "signInWith": "Bejelentkezés {loginName}-val",

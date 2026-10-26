@@ -168,7 +168,7 @@
   "menstruationCycle": "Siklus menstruasi {menstruationDuration} hari",
   "login": "Masuk",
   "beforePremiumRegistration": "Sebelum mendaftar premium…",
-  "createNewAccountIfNotLoggedIn": "Jika belum pernah login ke Pilll, akun baru akan dibuat",
+  "createNewAccountIfNotLoggedIn": "Jika Anda belum pernah masuk ke Pilll, akun baru akan dibuat untuk Anda",
   "registerAccountForDataTransfer": "Mendaftar akun memungkinkan sinkronisasi data",
   "registerAccountToKeepData": "Untuk menyimpan informasi akun, silakan daftar akun",
   "signInWith": "Masuk dengan {loginName}",

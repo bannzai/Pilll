@@ -168,7 +168,7 @@
   "menstruationCycle": "Mzunguko wa hedhi wa siku {menstruationDuration}",
   "login": "Ingia",
   "beforePremiumRegistration": "Kabla ya kujisajili kwa Premium…",
-  "createNewAccountIfNotLoggedIn": "Ikiwa bado hujaingia kwenye Pilll, akaunti mpya itaundwa",
+  "createNewAccountIfNotLoggedIn": "Ikiwa hujawahi kuingia kwenye Pilll, akaunti mpya itaundwa kwa ajili yako",
   "registerAccountForDataTransfer": "Kusajili akaunti kutakuwezesha kuhamisha data yako",
   "registerAccountToKeepData": "Tafadhali jisajili akaunti ili kuhifadhi taarifa zako",
   "signInWith": "Ingia kwa {loginName}",

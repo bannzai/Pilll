@@ -168,7 +168,7 @@
   "menstruationCycle": "{menstruationDuration} օրվա դաշտանային ցիկլ",
   "login": "Մուտք գործել",
   "beforePremiumRegistration": "Մինչ պրեմիում բաժանորդագրության գրանցումը…",
-  "createNewAccountIfNotLoggedIn": "Եթե դուք դեռ չեք մուտք գործել Pilll-ում, նոր հաշիվ կստեղծվի",
+  "createNewAccountIfNotLoggedIn": "Եթե Դուք նախկինում մուտք չեք գործել Pilll, Ձեզ համար նոր հաշիվ կստեղծվի",
   "registerAccountForDataTransfer": "Հաշվի գրանցումը թույլ է տալիս տվյալները փոխանցել",
   "registerAccountToKeepData": "Ձեր տվյալները պահպանելու համար խնդրում ենք գրանցել հաշիվ",
   "signInWith": "Մուտք գործել {loginName}-ով",

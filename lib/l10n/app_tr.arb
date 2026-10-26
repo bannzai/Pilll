@@ -168,7 +168,7 @@
   "menstruationCycle": "{menstruationDuration} günlük adet döngüsü",
   "login": "Giriş yapın",
   "beforePremiumRegistration": "Premium'a kaydolmadan önce…",
-  "createNewAccountIfNotLoggedIn": "Pilll'e daha önce giriş yapmadıysanız, yeni bir hesap oluşturulacaktır",
+  "createNewAccountIfNotLoggedIn": "Pilll'e daha önce giriş yapmadıysanız sizin için yeni bir hesap oluşturulur",
   "registerAccountForDataTransfer": "Hesap kaydı yaptığınızda verilerinizi aktarabilirsiniz",
   "registerAccountToKeepData": "Hesap bilgilerinizi korumak için lütfen hesap kaydı yapın",
   "signInWith": "{loginName} ile giriş yap",

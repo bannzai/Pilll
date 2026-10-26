@@ -168,7 +168,7 @@
   "menstruationCycle": "{menstruationDuration} دن کا ماہواری چکر",
   "login": "لاگ اِن کریں",
   "beforePremiumRegistration": "پریمیم کے لیے رجسٹریشن سے پہلے…",
-  "createNewAccountIfNotLoggedIn": "اگر آپ نے ابھی تک Pilll میں لاگ ان نہیں کیا ہے تو ایک نیا اکاؤنٹ بنایا جائے گا",
+  "createNewAccountIfNotLoggedIn": "اگر آپ نے پہلے کبھی Pilll میں لاگ اِن نہیں کیا، تو آپ کے لیے نیا اکاؤنٹ بنایا جائے گا",
   "registerAccountForDataTransfer": "اکاؤنٹ رجسٹر کرنے سے ڈیٹا کی منتقلی ممکن ہو جائے گی",
   "registerAccountToKeepData": "اکاؤنٹ کی معلومات محفوظ کرنے کے لیے، برائے کرم اکاؤنٹ رجسٹر کریں",
   "signInWith": "{loginName} کے ساتھ ساین ان کریں",
