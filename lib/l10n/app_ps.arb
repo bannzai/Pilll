@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "د وقف وړیا ثبت",
   "restDurationFeatureAppealPoint2": "د ګولیو پاڼې په پورتنۍ ښي خوا کې د ګېر له نښې څخه پیل وکړئ",
   "restDurationFeatureAppealPoint3": "د ګولیو د وقفې موده بدلول او بیا پیلول هم اسانه دي",
-  "endedPillSheetDialogHistoryTitle": "غواړئ د ګولۍ اخیستلو تاریخچه وګورئ؟",
+  "endedPillSheetDialogHistoryTitle": "غواړئ د ګولیو پاڼ تاریخ وګورئ؟",
   "endedPillSheetDialogSummaryTitle": "راځئ دې د ګولیو پاڼې ته یو ځل بیا وګورو",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} ورځې ثبت شوې، {missedDays} ورځې پاتې شوې",
   "midnightTakenWarningDialogTitle": "پام وکړئ",

@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Registro gratuito da pausa",
   "restDurationFeatureAppealPoint2": "Comece pelo ícone de engrenagem no canto superior direito da cartela",
   "restDurationFeatureAppealPoint3": "Também é fácil ajustar e retomar a pausa da pílula",
-  "endedPillSheetDialogHistoryTitle": "Quer ver seu histórico de tomadas?",
+  "endedPillSheetDialogHistoryTitle": "Que tal ver o histórico das suas cartelas?",
   "endedPillSheetDialogSummaryTitle": "Vamos rever esta cartela",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} dias registrados, {missedDays} dias esquecidos",
   "midnightTakenWarningDialogTitle": "Atenção",

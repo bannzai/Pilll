@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Free pill break tracking",
   "restDurationFeatureAppealPoint2": "Start with the gear icon at the top right of the pill pack",
   "restDurationFeatureAppealPoint3": "Easily edit and resume your pill break",
-  "endedPillSheetDialogHistoryTitle": "Want to see your pill sheet history?",
+  "endedPillSheetDialogHistoryTitle": "Would you like to see your pill pack history?",
   "endedPillSheetDialogSummaryTitle": "Let's look back on this pill sheet",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} days recorded, {missedDays} days missed",
   "midnightTakenWarningDialogTitle": "Please note",

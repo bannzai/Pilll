@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "இடைவேளையை இலவசமாகப் பதிவு செய்யலாம்",
   "restDurationFeatureAppealPoint2": "மாத்திரை அட்டையின் மேல் வலது மூலையில் உள்ள அமைப்புகள் சின்னத்திலிருந்து தொடங்குங்கள்",
   "restDurationFeatureAppealPoint3": "மாத்திரை இடைவெளிக் காலத்தை மாற்றி மீண்டும் தொடர்வதும் எளிது",
-  "endedPillSheetDialogHistoryTitle": "உங்கள் மாத்திரை எடுத்த வரலாற்றைப் பார்க்க விரும்புகிறீர்களா?",
+  "endedPillSheetDialogHistoryTitle": "மாத்திரை அட்டை வரலாற்றைப் பார்க்க விரும்புகிறீர்களா?",
   "endedPillSheetDialogSummaryTitle": "இந்த மாத்திரை தாளை திரும்பிப் பார்ப்போம்",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} நாட்கள் பதிவாகின, {missedDays} நாட்கள் விடுபட்டன",
   "midnightTakenWarningDialogTitle": "கவனிக்கவும்",

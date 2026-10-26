@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Einnahmepause kostenlos erfassen",
   "restDurationFeatureAppealPoint2": "Starte über das Zahnrad oben rechts auf dem Pillenblister",
   "restDurationFeatureAppealPoint3": "Du kannst die Pause auch ganz einfach ändern und fortsetzen",
-  "endedPillSheetDialogHistoryTitle": "Möchtest du deinen Einnahmeverlauf sehen?",
+  "endedPillSheetDialogHistoryTitle": "Möchtest du den Verlauf deiner Pillenblister ansehen?",
   "endedPillSheetDialogSummaryTitle": "Blicken wir auf dieses Pillenblatt zurück",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} Tage erfasst, {missedDays} Tage verpasst",
   "midnightTakenWarningDialogTitle": "Bitte beachten",

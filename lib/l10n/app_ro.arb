@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Înregistrarea gratuită a pauzei",
   "restDurationFeatureAppealPoint2": "Începe de la pictograma roată dințată din dreapta sus a blisterului",
   "restDurationFeatureAppealPoint3": "Poți modifica și relua ușor pauza de la pilulă",
-  "endedPillSheetDialogHistoryTitle": "Vrei să vezi istoricul administrării pastilelor?",
+  "endedPillSheetDialogHistoryTitle": "Vrei să vezi istoricul pentru blister?",
   "endedPillSheetDialogSummaryTitle": "Să aruncăm o privire asupra acestui blister",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} zile înregistrate, {missedDays} zile omise",
   "midnightTakenWarningDialogTitle": "Vă rugăm să rețineți",

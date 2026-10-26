@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "ነፃ የክኒን እረፍት መዝገብ",
   "restDurationFeatureAppealPoint2": "በክኒን ሉህ ላይኛው ቀኝ ያለውን የማስተካከያ ምልክት በመንካት ይጀምሩ",
   "restDurationFeatureAppealPoint3": "የእረፍት ጊዜውን ማስተካከልና እንደገና መጀመርም ቀላል ነው",
-  "endedPillSheetDialogHistoryTitle": "የክኒን መውሰድ ታሪክዎን ማየት ይፈልጋሉ?",
+  "endedPillSheetDialogHistoryTitle": "የክኒን ሉህ ታሪክን ማየት ይፈልጋሉ?",
   "endedPillSheetDialogSummaryTitle": "ይህን የክኒን ሉህ እንመልከት",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} ቀናት ተመዝግቧል፣ {missedDays} ቀናት ተዘሏል",
   "midnightTakenWarningDialogTitle": "እባክዎ ልብ ይበሉ",

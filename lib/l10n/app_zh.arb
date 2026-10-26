@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "免费记录停药期",
   "restDurationFeatureAppealPoint2": "从药板右上角的齿轮图标开始吧",
   "restDurationFeatureAppealPoint3": "休药期也能轻松调整和重新开始",
-  "endedPillSheetDialogHistoryTitle": "想查看您的服药记录吗？",
+  "endedPillSheetDialogHistoryTitle": "想看看药板的使用记录吗？",
   "endedPillSheetDialogSummaryTitle": "回顾一下这板药吧",
   "endedPillSheetDialogSummaryMessage": "已记录 {recordedDays} 天，漏记 {missedDays} 天",
   "midnightTakenWarningDialogTitle": "请注意",

@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Rexistro gratuíto do descanso",
   "restDurationFeatureAppealPoint2": "Comeza desde a icona da engrenaxe na parte superior dereita do blíster",
   "restDurationFeatureAppealPoint3": "Tamén podes cambiar e retomar facilmente a pausa da pílula",
-  "endedPillSheetDialogHistoryTitle": "Queres ver o teu historial de tomas?",
+  "endedPillSheetDialogHistoryTitle": "Gustaríache ver o historial dos blísteres?",
   "endedPillSheetDialogSummaryTitle": "Repasemos este blíster",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} días rexistrados, {missedDays} días omitidos",
   "midnightTakenWarningDialogTitle": "Aviso",

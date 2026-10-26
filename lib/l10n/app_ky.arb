@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Тыныгууну акысыз каттоо",
   "restDurationFeatureAppealPoint2": "таблетка блистеринин жогорку оң бурчундагы тиштүү дөңгөлөк белгисинен баштаңыз",
   "restDurationFeatureAppealPoint3": "Тыныгуу мөөнөтүн өзгөртүп, кайра улантуу да оңой",
-  "endedPillSheetDialogHistoryTitle": "Дары ичүү тарыхын көргүңүз келеби?",
+  "endedPillSheetDialogHistoryTitle": "Таблетка блистери тарыхын көргүңүз келеби?",
   "endedPillSheetDialogSummaryTitle": "Бул дары барагын карап чыгалы",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} күн жазылды, {missedDays} күн калтырылды",
   "midnightTakenWarningDialogTitle": "Көңүл буруңуз",

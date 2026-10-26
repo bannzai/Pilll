@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Brezplačno beleženje premora",
   "restDurationFeatureAppealPoint2": "Začnite pri ikoni zobnika zgoraj desno na ploščici",
   "restDurationFeatureAppealPoint3": "Obdobje premora lahko preprosto uredite in nadaljujete",
-  "endedPillSheetDialogHistoryTitle": "Želite videti zgodovino jemanja tablet?",
+  "endedPillSheetDialogHistoryTitle": "Bi si želeli ogledati zgodovino ploščic?",
   "endedPillSheetDialogSummaryTitle": "Poglejmo nazaj na ta pretisni omot",
   "endedPillSheetDialogSummaryMessage": "Zabeleženih dni: {recordedDays}, izpuščenih: {missedDays}",
   "midnightTakenWarningDialogTitle": "Bodite pozorni",

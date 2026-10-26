@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Maksuton taukojakson seuranta",
   "restDurationFeatureAppealPoint2": "Aloita pilleriliuskan oikean yläkulman rataskuvakkeesta",
   "restDurationFeatureAppealPoint3": "Voit myös helposti muokata ja jatkaa pilleritaukoa",
-  "endedPillSheetDialogHistoryTitle": "Haluatko nähdä pillereiden ottohistoriasi?",
+  "endedPillSheetDialogHistoryTitle": "Haluaisitko nähdä pilleriliuskojen historian?",
   "endedPillSheetDialogSummaryTitle": "Katsotaanpa tätä pilleriliuskaa",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} päivää kirjattu, {missedDays} päivää väliin",
   "midnightTakenWarningDialogTitle": "Huomioithan",

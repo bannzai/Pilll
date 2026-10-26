@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Tanaffusni bepul qayd etish",
   "restDurationFeatureAppealPoint2": "tabletka blisterining yuqori o‘ng burchagidagi tishli g‘ildirak belgisidan boshlang",
   "restDurationFeatureAppealPoint3": "Tanaffus muddatini oʻzgartirish va qayta boshlash ham oson",
-  "endedPillSheetDialogHistoryTitle": "Dori ichish tarixingizni ko'rmoqchimisiz?",
+  "endedPillSheetDialogHistoryTitle": "Tabletka blister tarixini koʻrishni xohlaysizmi?",
   "endedPillSheetDialogSummaryTitle": "Ushbu dori varag'ini ko'rib chiqaylik",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} kun qayd etildi, {missedDays} kun o'tkazib yuborildi",
   "midnightTakenWarningDialogTitle": "Ehtiyot bo'ling",

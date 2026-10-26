@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "შესვენების უფასო აღრიცხვა",
   "restDurationFeatureAppealPoint2": "დაიწყეთ აბების ბლისტერ-ის ზედა მარჯვენა კუთხეში მდებარე კბილანის ხატულიდან",
   "restDurationFeatureAppealPoint3": "შესვენების პერიოდის შეცვლა და გაგრძელებაც მარტივია",
-  "endedPillSheetDialogHistoryTitle": "გსურთ ნახოთ აბების მიღების ისტორია?",
+  "endedPillSheetDialogHistoryTitle": "გსურთ ნახოთ აბების ბლისტერის ისტორია?",
   "endedPillSheetDialogSummaryTitle": "მოდით გადავხედოთ ამ აბების ფურცელს",
   "endedPillSheetDialogSummaryMessage": "ჩაწერილია {recordedDays} დღე, გამოტოვებულია {missedDays} დღე",
   "midnightTakenWarningDialogTitle": "გთხოვთ გაითვალისწინოთ",

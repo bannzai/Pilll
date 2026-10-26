@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Suivi gratuit de la pause",
   "restDurationFeatureAppealPoint2": "Commencez par l'icône en forme d'engrenage en haut à droite de la plaquette",
   "restDurationFeatureAppealPoint3": "Vous pouvez aussi modifier et reprendre facilement votre pause de pilule",
-  "endedPillSheetDialogHistoryTitle": "Envie de voir votre historique de prise de pilules ?",
+  "endedPillSheetDialogHistoryTitle": "Souhaitez-vous consulter l’historique de vos plaquettes ?",
   "endedPillSheetDialogSummaryTitle": "Faisons le point sur cette plaquette",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} jours enregistrés, {missedDays} jours manqués",
   "midnightTakenWarningDialogTitle": "Veuillez noter",

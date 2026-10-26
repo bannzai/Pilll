@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "ವಿರಾಮದ ಉಚಿತ ದಾಖಲೆ",
   "restDurationFeatureAppealPoint2": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್‌ನ ಮೇಲಿನ ಬಲ ಮೂಲೆಯಲ್ಲಿರುವ ಗೇರ್ ಗುರುತಿನಿಂದ ಪ್ರಾರಂಭಿಸಿ",
   "restDurationFeatureAppealPoint3": "ಮಾತ್ರೆಗಳ ವಿರಾಮದ ಅವಧಿಯನ್ನು ಬದಲಿಸಿ ಮತ್ತೆ ಮುಂದುವರಿಸುವುದೂ ಸುಲಭ",
-  "endedPillSheetDialogHistoryTitle": "ನಿಮ್ಮ ಮಾತ್ರೆ ಸೇವನೆಯ ಇತಿಹಾಸ ನೋಡಲು ಬಯಸುವಿರಾ?",
+  "endedPillSheetDialogHistoryTitle": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್‌ಗಳ ಇತಿಹಾಸವನ್ನು ನೋಡಲು ಬಯಸುವಿರಾ?",
   "endedPillSheetDialogSummaryTitle": "ಈ ಮಾತ್ರೆ ಶೀಟ್ ಅನ್ನು ಹಿಂತಿರುಗಿ ನೋಡೋಣ",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} ದಿನ ದಾಖಲಾಗಿದೆ, {missedDays} ದಿನ ತಪ್ಪಿದೆ",
   "midnightTakenWarningDialogTitle": "ದಯವಿಟ್ಟು ಗಮನಿಸಿ",

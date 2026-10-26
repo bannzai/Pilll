@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Դադարի անվճար գրանցում",
   "restDurationFeatureAppealPoint2": "Սկսեք հաբերի բլիստեր-ի վերևի աջ անկյունում գտնվող ատամնանիվի նշանից",
   "restDurationFeatureAppealPoint3": "Դադարի տևողությունը փոփոխելն ու վերսկսելը նույնպես հեշտ է",
-  "endedPillSheetDialogHistoryTitle": "Ցանկանո՞ւմ եք տեսնել դեղահաբերի ընդունման պատմությունը",
+  "endedPillSheetDialogHistoryTitle": "Կցանկանա՞ք տեսնել հաբերի բլիստեր պատմությունը։",
   "endedPillSheetDialogSummaryTitle": "Եկեք վերանայենք այս դեղաթերթիկը",
   "endedPillSheetDialogSummaryMessage": "Գրանցված է {recordedDays} օր, բաց է թողնվել {missedDays} օր",
   "midnightTakenWarningDialogTitle": "Ուշադրություն դարձրեք",

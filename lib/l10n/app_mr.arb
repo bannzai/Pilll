@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "विरामाची मोफत नोंद",
   "restDurationFeatureAppealPoint2": "पिल शीटच्या वरच्या उजव्या कोपऱ्यातील गिअर चिन्हापासून सुरुवात करा",
   "restDurationFeatureAppealPoint3": "गोळ्यांचा विराम बदलणे आणि पुन्हा सुरू करणेही सोपे आहे",
-  "endedPillSheetDialogHistoryTitle": "तुमचा गोळी घेण्याचा इतिहास पाहायचा आहे का?",
+  "endedPillSheetDialogHistoryTitle": "तुम्हाला पिल शीटचा इतिहास पाहायचा आहे का?",
   "endedPillSheetDialogSummaryTitle": "या गोळी शीटकडे मागे वळून पाहूया",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} दिवस नोंदवले, {missedDays} दिवस चुकले",
   "midnightTakenWarningDialogTitle": "कृपया लक्ष द्या",

@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Ukurekhoda isikhathi sekhefu mahhala",
   "restDurationFeatureAppealPoint2": "Sicela uqale ngesithonjana segiya phezulu kwesokudla seshidi lamaphilisi",
   "restDurationFeatureAppealPoint3": "Kulula futhi ukushintsha nokuqalisa kabusha isikhathi sekhefu lamaphilisi",
-  "endedPillSheetDialogHistoryTitle": "Ufuna ukubona umlando wakho wokuphuza amaphilisi?",
+  "endedPillSheetDialogHistoryTitle": "Ungathanda ukubona umlando weshidi lamaphilisi?",
   "endedPillSheetDialogSummaryTitle": "Ake sibheke leli shidi lamaphilisi",
   "endedPillSheetDialogSummaryMessage": "Kurekhodwe izinsuku ezingu-{recordedDays}, kwephuzwa ezingu-{missedDays}",
   "midnightTakenWarningDialogTitle": "Sicela uqaphele",

@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Бесплатно бележење паузе",
   "restDurationFeatureAppealPoint2": "Почните од иконе зупчаника горе десно на блистеру",
   "restDurationFeatureAppealPoint3": "Можете лако да измените и наставите период паузе",
-  "endedPillSheetDialogHistoryTitle": "Želite li da vidite istoriju uzimanja pilula?",
+  "endedPillSheetDialogHistoryTitle": "Желите ли да погледате историју блистера?",
   "endedPillSheetDialogSummaryTitle": "Osvrnimo se na ovaj blister",
   "endedPillSheetDialogSummaryMessage": "Zabeleženo dana: {recordedDays}, propušteno: {missedDays}",
   "midnightTakenWarningDialogTitle": "Napomena",

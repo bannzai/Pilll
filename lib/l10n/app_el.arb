@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Δωρεάν καταγραφή διαλείμματος",
   "restDurationFeatureAppealPoint2": "Ξεκινήστε από το εικονίδιο με το γρανάζι επάνω δεξιά στην καρτέλα χαπιών",
   "restDurationFeatureAppealPoint3": "Μπορείτε επίσης να αλλάξετε και να συνεχίσετε εύκολα την περίοδο διακοπής",
-  "endedPillSheetDialogHistoryTitle": "Θέλετε να δείτε το ιστορικό λήψης χαπιών;",
+  "endedPillSheetDialogHistoryTitle": "Θα θέλατε να δείτε το ιστορικό για την καρτέλα χαπιών;",
   "endedPillSheetDialogSummaryTitle": "Ας δούμε αυτό το φύλλο χαπιών",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} ημέρες καταγράφηκαν, {missedDays} ημέρες παραλείφθηκαν",
   "midnightTakenWarningDialogTitle": "Παρακαλώ προσέξτε",

@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Bezplatný záznam prestávky",
   "restDurationFeatureAppealPoint2": "Začnite ikonou ozubeného kolieska vpravo hore na blistri",
   "restDurationFeatureAppealPoint3": "Obdobie prestávky môžete jednoducho upraviť aj obnoviť",
-  "endedPillSheetDialogHistoryTitle": "Chcete si pozrieť históriu užívania tabletiek?",
+  "endedPillSheetDialogHistoryTitle": "Chcete si pozrieť históriu blistov?",
   "endedPillSheetDialogSummaryTitle": "Pozrime sa späť na tento blister",
   "endedPillSheetDialogSummaryMessage": "Zaznamenané dni: {recordedDays}, vynechané: {missedDays}",
   "midnightTakenWarningDialogTitle": "Upozornenie",

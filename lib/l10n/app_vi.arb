@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Ghi lại thời gian nghỉ thuốc miễn phí",
   "restDurationFeatureAppealPoint2": "Vui lòng bắt đầu từ biểu tượng bánh răng ở góc trên bên phải vỉ thuốc",
   "restDurationFeatureAppealPoint3": "Bạn cũng có thể dễ dàng chỉnh sửa và tiếp tục thời gian tạm ngừng uống thuốc",
-  "endedPillSheetDialogHistoryTitle": "Bạn muốn xem lịch sử uống thuốc của mình?",
+  "endedPillSheetDialogHistoryTitle": "Bạn muốn xem lịch sử vỉ thuốc không?",
   "endedPillSheetDialogSummaryTitle": "Cùng nhìn lại vỉ thuốc này nhé",
   "endedPillSheetDialogSummaryMessage": "Đã ghi {recordedDays} ngày, bỏ lỡ {missedDays} ngày",
   "midnightTakenWarningDialogTitle": "Xin lưu ý",

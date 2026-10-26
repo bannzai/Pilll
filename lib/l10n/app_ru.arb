@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Бесплатная запись перерыва",
   "restDurationFeatureAppealPoint2": "Начните со значка шестерёнки в правом верхнем углу блистера",
   "restDurationFeatureAppealPoint3": "Период перерыва также легко изменить и возобновить",
-  "endedPillSheetDialogHistoryTitle": "Хотите посмотреть историю приёма таблеток?",
+  "endedPillSheetDialogHistoryTitle": "Хотите посмотреть историю блистеров?",
   "endedPillSheetDialogSummaryTitle": "Давайте взглянем на этот блистер",
   "endedPillSheetDialogSummaryMessage": "Записано дней: {recordedDays}, пропущено: {missedDays}",
   "midnightTakenWarningDialogTitle": "Обратите внимание",

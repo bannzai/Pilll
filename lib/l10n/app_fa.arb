@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "ثبت رایگان وقفه",
   "restDurationFeatureAppealPoint2": "از نماد چرخ‌دنده در بالای سمت راست ورق قرص شروع کنید",
   "restDurationFeatureAppealPoint3": "تغییر و ازسرگیری دورهٔ وقفه هم آسان است",
-  "endedPillSheetDialogHistoryTitle": "می‌خواهید تاریخچه مصرف قرص خود را ببینید؟",
+  "endedPillSheetDialogHistoryTitle": "مایلید سابقه ورق قرص‌ها را ببینید؟",
   "endedPillSheetDialogSummaryTitle": "بیایید این ورق قرص را مرور کنیم",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} روز ثبت شده، {missedDays} روز ثبت نشده",
   "midnightTakenWarningDialogTitle": "لطفاً توجه کنید",

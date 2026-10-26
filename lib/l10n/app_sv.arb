@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Gratis registrering av uppehåll",
   "restDurationFeatureAppealPoint2": "Börja med kugghjulsikonen längst upp till höger på p-pillerkartan",
   "restDurationFeatureAppealPoint3": "Du kan också enkelt ändra och återuppta pillerpausen",
-  "endedPillSheetDialogHistoryTitle": "Vill du se din pillerhistorik?",
+  "endedPillSheetDialogHistoryTitle": "Vill du se historiken för dina p-pillerkartor?",
   "endedPillSheetDialogSummaryTitle": "Låt oss se tillbaka på den här pillerkartan",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} dagar registrerade, {missedDays} dagar missade",
   "midnightTakenWarningDialogTitle": "Observera",

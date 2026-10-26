@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Cofnod seibiant am ddim",
   "restDurationFeatureAppealPoint2": "Dechreuwch o'r eicon gêr ar ochr dde uchaf y stribed pils",
   "restDurationFeatureAppealPoint3": "Mae'n hawdd newid cyfnod yr egwyl a'i ailddechrau hefyd",
-  "endedPillSheetDialogHistoryTitle": "Eisiau gweld eich hanes cymryd pils?",
+  "endedPillSheetDialogHistoryTitle": "Hoffech chi weld hanes eich stribed pils?",
   "endedPillSheetDialogSummaryTitle": "Gadewch i ni edrych yn ôl ar y ddalen bils hon",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} diwrnod wedi'u cofnodi, {missedDays} diwrnod wedi'u methu",
   "midnightTakenWarningDialogTitle": "Sylwch, os gwelwch yn dda",

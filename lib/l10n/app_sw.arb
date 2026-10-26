@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Rekodi ya mapumziko bila malipo",
   "restDurationFeatureAppealPoint2": "Tafadhali anza kwenye ikoni ya gia iliyo juu kulia kwenye pakiti ya vidonge",
   "restDurationFeatureAppealPoint3": "Ni rahisi pia kubadili na kuendelea na kipindi cha mapumziko ya vidonge",
-  "endedPillSheetDialogHistoryTitle": "Ungependa kuona historia yako ya kumeza vidonge?",
+  "endedPillSheetDialogHistoryTitle": "Je, ungependa kuona historia ya pakiti ya vidonge?",
   "endedPillSheetDialogSummaryTitle": "Hebu tuangalie tena karatasi hii ya vidonge",
   "endedPillSheetDialogSummaryMessage": "Siku {recordedDays} zimerekodiwa, siku {missedDays} zimekosekana",
   "midnightTakenWarningDialogTitle": "Tafadhali zingatia",

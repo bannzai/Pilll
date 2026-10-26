@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Atsedenaldiaren doako erregistroa",
   "restDurationFeatureAppealPoint2": "Hasi pilula-blisterreko goiko eskuineko engranajearen ikonotik",
   "restDurationFeatureAppealPoint3": "Pilulen atsedenaldia erraz aldatu eta berrabiarazi dezakezu",
-  "endedPillSheetDialogHistoryTitle": "Pilulak hartzearen historia ikusi nahi duzu?",
+  "endedPillSheetDialogHistoryTitle": "Pilula-blister historikoa ikusi nahi duzu?",
   "endedPillSheetDialogSummaryTitle": "Errepasa dezagun pilula-orri hau",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} egun erregistratuta, {missedDays} egun galduta",
   "midnightTakenWarningDialogTitle": "Kontuan izan",

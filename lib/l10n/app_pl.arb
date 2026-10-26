@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Bezpłatne zapisywanie przerw",
   "restDurationFeatureAppealPoint2": "Zacznij od ikony koła zębatego w prawym górnym rogu blistra",
   "restDurationFeatureAppealPoint3": "Przerwę w przyjmowaniu tabletek można też łatwo zmienić i wznowić",
-  "endedPillSheetDialogHistoryTitle": "Chcesz zobaczyć historię przyjmowania tabletek?",
+  "endedPillSheetDialogHistoryTitle": "Chcesz zobaczyć historię blistów?",
   "endedPillSheetDialogSummaryTitle": "Spójrzmy na ten listek tabletek",
   "endedPillSheetDialogSummaryMessage": "Zapisane dni: {recordedDays}, pominięte: {missedDays}",
   "midnightTakenWarningDialogTitle": "Zwróć uwagę",

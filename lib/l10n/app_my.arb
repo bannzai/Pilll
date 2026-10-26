@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "ဆေးနားရက်ကို အခမဲ့ မှတ်တမ်းတင်နိုင်ပါသည်",
   "restDurationFeatureAppealPoint2": "ဆေးပြားကတ်၏ အပေါ်ညာဘက်ရှိ ဂီယာပုံကို နှိပ်ပြီး စတင်ပါ",
   "restDurationFeatureAppealPoint3": "ဆေးသောက်ခြင်း ခေတ္တရပ်နားချိန်ကို ပြင်ဆင်ပြီး ပြန်လည်စတင်ရန်လည်း လွယ်ကူပါတယ်",
-  "endedPillSheetDialogHistoryTitle": "သောက်ဆေးမှတ်တမ်းကို ကြည့်လိုပါသလား။",
+  "endedPillSheetDialogHistoryTitle": "ဆေးပြားကတ်မှတ်တမ်းကို ကြည့်ချင်ပါသလား?",
   "endedPillSheetDialogSummaryTitle": "ဒီဆေးပြားစာရွက်ကို ပြန်ကြည့်ကြရအောင်",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} ရက် မှတ်တမ်းတင်ပြီး၊ {missedDays} ရက် လွတ်သွားသည်",
   "midnightTakenWarningDialogTitle": "သတိပြုပါ",

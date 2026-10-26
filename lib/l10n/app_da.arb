@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Gratis registrering af pillepause",
   "restDurationFeatureAppealPoint2": "Du kan starte ved tandhjulet øverst til højre på pillekortet",
   "restDurationFeatureAppealPoint3": "Du kan også nemt ændre og genoptage pillepausen",
-  "endedPillSheetDialogHistoryTitle": "Vil du se din pillehistorik?",
+  "endedPillSheetDialogHistoryTitle": "Har du lyst til at se historikken for dit pillekort?",
   "endedPillSheetDialogSummaryTitle": "Lad os se tilbage på dette pilleark",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} dage registreret, {missedDays} dage sprunget over",
   "midnightTakenWarningDialogTitle": "Bemærk venligst",

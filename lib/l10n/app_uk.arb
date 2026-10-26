@@ -550,7 +550,7 @@
   "restDurationFeatureAppealPoint1": "Безплатний запис перерви",
   "restDurationFeatureAppealPoint2": "Почніть зі значка шестерні у правому верхньому куті блістера",
   "restDurationFeatureAppealPoint3": "Період перерви також легко змінити й відновити",
-  "endedPillSheetDialogHistoryTitle": "Хочете переглянути історію прийому таблеток?",
+  "endedPillSheetDialogHistoryTitle": "Хочете переглянути історію блістерів?",
   "endedPillSheetDialogSummaryTitle": "Погляньмо на цей блістер",
   "endedPillSheetDialogSummaryMessage": "Записано днів: {recordedDays}, пропущено: {missedDays}",
   "midnightTakenWarningDialogTitle": "Зверніть увагу",
