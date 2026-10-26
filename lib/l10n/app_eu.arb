@@ -531,7 +531,7 @@
   "futureScheduleFeatureAppealPoint1": "Gehitu zure planak egutegian",
   "futureScheduleFeatureAppealPoint2": "Kudeatu erraz medikuaren hitzorduak",
   "futureScheduleFeatureAppealPoint3": "Jakinarazpenak gogorarazpen bidez",
-  "futureScheduleFeatureAppealLocationHint": "Sakatu data bat agenda idazteko",
+  "futureScheduleFeatureAppealLocationHint": "Sakatu data bat plan bat gehitzeko",
   "healthCareIntegrationFeatureAppealPoint1": "Hilekoen erregistroen datu-sinkronizazio automatikoa",
   "healthCareIntegrationFeatureAppealPoint2": "Osasun aplikazioarekin sinkronizatu",
   "healthCareIntegrationFeatureAppealPoint3": "Apple Health bateragarria",

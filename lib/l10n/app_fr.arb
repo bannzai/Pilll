@@ -531,7 +531,7 @@
   "futureScheduleFeatureAppealPoint1": "Ajoutez vos projets au calendrier",
   "futureScheduleFeatureAppealPoint2": "Suivez facilement vos rendez-vous médicaux",
   "futureScheduleFeatureAppealPoint3": "Notifications par rappel",
-  "futureScheduleFeatureAppealLocationHint": "Appuyez sur une date pour ajouter un forfait",
+  "futureScheduleFeatureAppealLocationHint": "Touchez une date pour ajouter un événement",
   "healthCareIntegrationFeatureAppealPoint1": "Synchroniser automatiquement les enregistrements de périodes",
   "healthCareIntegrationFeatureAppealPoint2": "Synchroniser avec l'application Santé",
   "healthCareIntegrationFeatureAppealPoint3": "Intégration Apple Santé",

@@ -531,7 +531,7 @@
   "futureScheduleFeatureAppealPoint1": "Lisää suunnitelmasi kalenteriin",
   "futureScheduleFeatureAppealPoint2": "Pidä lääkärikäynnit helposti järjestyksessä",
   "futureScheduleFeatureAppealPoint3": "Ilmoitukset muistutuksella",
-  "futureScheduleFeatureAppealLocationHint": "Napauta päivämäärää kirjoittaaksesi tapahtuman",
+  "futureScheduleFeatureAppealLocationHint": "Lisää suunnitelma napauttamalla päivämäärää",
   "healthCareIntegrationFeatureAppealPoint1": "Kuukautistietojen automaattinen synkronointi",
   "healthCareIntegrationFeatureAppealPoint2": "Synkronoi terveyssovellukseen",
   "healthCareIntegrationFeatureAppealPoint3": "Apple Health -tuki",

@@ -531,7 +531,7 @@
   "futureScheduleFeatureAppealPoint1": "Пландарыңызды жылнаамага кошуңуз",
   "futureScheduleFeatureAppealPoint2": "Дарыгерге бару күндөрүн оңой көзөмөлдөңүз",
   "futureScheduleFeatureAppealPoint3": "эскертме аркылуу билдирүү",
-  "futureScheduleFeatureAppealLocationHint": "Датага тийип планыңызды жазыңыз",
+  "futureScheduleFeatureAppealLocationHint": "План кошуу үчүн күндү таптаңыз",
   "healthCareIntegrationFeatureAppealPoint1": "Айыз жазууларын автоматтык түрдө синхрондоштуруу",
   "healthCareIntegrationFeatureAppealPoint2": "Ден соолук тиркемеси менен синхрондоо",
   "healthCareIntegrationFeatureAppealPoint3": "Apple Health колдоосу",

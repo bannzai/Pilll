@@ -531,7 +531,7 @@
   "futureScheduleFeatureAppealPoint1": "Төлөвлөгөөгөө хуанлид нэмнэ үү",
   "futureScheduleFeatureAppealPoint2": "Эмчид үзүүлэх өдрүүдээ хялбархан хянаарай",
   "futureScheduleFeatureAppealPoint3": "сануулгаар мэдэгдэх",
-  "futureScheduleFeatureAppealLocationHint": "Огноог дарж хуваарь бичих",
+  "futureScheduleFeatureAppealLocationHint": "Төлөвлөгөө нэмэхийн тулд огноон дээр товшино уу",
   "healthCareIntegrationFeatureAppealPoint1": "Сарын тэмдгийн бичлэгийг автоматаар синхрончлох",
   "healthCareIntegrationFeatureAppealPoint2": "Эрүүл мэндийн апптай синхрончлох",
   "healthCareIntegrationFeatureAppealPoint3": "Apple Эрүүл мэнд дэмжлэг",

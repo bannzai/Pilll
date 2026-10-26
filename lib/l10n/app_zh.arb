@@ -531,7 +531,7 @@
   "futureScheduleFeatureAppealPoint1": "将计划添加到日历",
   "futureScheduleFeatureAppealPoint2": "轻松管理就诊日期",
   "futureScheduleFeatureAppealPoint3": "通过提醒发送通知",
-  "futureScheduleFeatureAppealLocationHint": "点击日期并输入日程",
+  "futureScheduleFeatureAppealLocationHint": "轻点日期，添加日程",
   "healthCareIntegrationFeatureAppealPoint1": "自动同步生理记录",
   "healthCareIntegrationFeatureAppealPoint2": "将与健康应用同步",
   "healthCareIntegrationFeatureAppealPoint3": "支持 Apple 健康",

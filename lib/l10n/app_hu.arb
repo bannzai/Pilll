@@ -531,7 +531,7 @@
   "futureScheduleFeatureAppealPoint1": "Írd be a terveidet a naptárba",
   "futureScheduleFeatureAppealPoint2": "Kövesd egyszerűen az orvosi időpontjaidat",
   "futureScheduleFeatureAppealPoint3": "Értesítés emlékeztetővel",
-  "futureScheduleFeatureAppealLocationHint": "Érintsd meg a dátumot a bejegyzés hozzáadásához.",
+  "futureScheduleFeatureAppealLocationHint": "Koppints egy dátumra a terv hozzáadásához",
   "healthCareIntegrationFeatureAppealPoint1": "Menstruációs feljegyzések automatikus szinkronizálása",
   "healthCareIntegrationFeatureAppealPoint2": "Szinkronizálás az egészségügyi alkalmazással",
   "healthCareIntegrationFeatureAppealPoint3": "Apple Health támogatása",
