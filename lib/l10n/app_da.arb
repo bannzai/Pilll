@@ -48,7 +48,7 @@
   "unregistered": "Ikke registreret",
   "quickRecord": "Hurtig registrering",
   "quickRecordDescription": "På notifikationsskærmen kan du se, hvilken p-pille du skal tage i dag, og straks opdatere din pilleregistrering.",
-  "healthCareIntegration": "Sundhedsintegration",
+  "healthCareIntegration": "Forbindelse til sundhedsapps",
   "healthCareIntegrationDescription": "Menstruationsregistreringer fra Pilll kan automatisk gemmes i Sundhed-appen",
   "viewPremiumPlan": "Se premium plan",
   "changePillNumberForToday": "Ændre dagens pillenummer",

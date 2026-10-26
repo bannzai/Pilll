@@ -48,7 +48,7 @@
   "unregistered": "Ekki skráð",
   "quickRecord": "Fljótleg skráning",
   "quickRecordDescription": "Á tilkynningaskjánum sérðu hvaða pillu á að taka í dag og getur skráð hana strax í inntökuskrá.",
-  "healthCareIntegration": "Heilsutenging",
+  "healthCareIntegration": "Tenging við heilsuöpp",
   "healthCareIntegrationDescription": "Tíðablæðingarskráningar úr Pilll geta sjálfkrafa verið skráðar í Heilsugögn",
   "viewPremiumPlan": "Skoða úrvalsáætlun",
   "changePillNumberForToday": "Breyting á númeri pílu í dag",

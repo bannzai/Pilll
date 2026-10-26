@@ -48,7 +48,7 @@
   "unregistered": "未注册",
   "quickRecord": "快速记录",
   "quickRecordDescription": "在通知页面，你可以查看今天该服用哪粒药，并直接添加服药记录。",
-  "healthCareIntegration": "健康数据同步",
+  "healthCareIntegration": "连接健康应用",
   "healthCareIntegrationDescription": "可以将在Pilll中记录的生理记录自动同步到健康应用",
   "viewPremiumPlan": "查看高级计划",
   "changePillNumberForToday": "修改今日服用药片编号",

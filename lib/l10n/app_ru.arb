@@ -48,7 +48,7 @@
   "unregistered": "Не зарегистрировано",
   "quickRecord": "Быстрая запись",
   "quickRecordDescription": "На экране уведомлений вы можете увидеть, какую таблетку принять сегодня, и сразу добавить запись в журнал приёма таблеток.",
-  "healthCareIntegration": "Интеграция с Health",
+  "healthCareIntegration": "Подключение к приложениям здоровья",
   "healthCareIntegrationDescription": "Менструальные записи, созданные в Pilll, могут автоматически синхронизироваться с приложением \"Здоровье\"",
   "viewPremiumPlan": "Посмотреть премиум-план",
   "changePillNumberForToday": "Изменение номера таблетки на сегодня",

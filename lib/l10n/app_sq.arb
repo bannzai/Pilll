@@ -48,7 +48,7 @@
   "unregistered": "Pa regjistruar",
   "quickRecord": "Regjistrim i shpejtë",
   "quickRecordDescription": "Në ekranin e njoftimeve mund të shihni cilën pilulë duhet të merrni sot dhe ta shtoni menjëherë te regjistrimi i marrjes.",
-  "healthCareIntegration": "Integrimi Shëndetësor",
+  "healthCareIntegration": "Lidhja me aplikacionet e shëndetit",
   "healthCareIntegrationDescription": "Regjistrimet e menstruacionit nga Pilll mund të ruhen automatikisht në aplikacionin Health",
   "viewPremiumPlan": "Shiko Planin Premium",
   "changePillNumberForToday": "Ndryshimi i numrit të pilulës së sotme",

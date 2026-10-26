@@ -48,7 +48,7 @@
   "unregistered": "Бүртгүүлээгүй",
   "quickRecord": "Хурдан тэмдэглэх",
   "quickRecordDescription": "Мэдэгдлийн дэлгэцээс өнөөдөр уух эмээ харж, эм уусан бүртгэлд шууд нэмж болно.",
-  "healthCareIntegration": "Эрүүл мэндийн холбоо",
+  "healthCareIntegration": "Эрүүл мэндийн апптай холбох",
   "healthCareIntegrationDescription": "Pilll-д бүртгэсэн сарын тэмдгийн мэдээллийг автоматаар Эрүүл мэндийн аппд тэмдэглэх боломжтой",
   "viewPremiumPlan": "Премиум багцыг үзэх",
   "changePillNumberForToday": "Өнөөдрийн эмийн дугаарыг өөрчлөх",

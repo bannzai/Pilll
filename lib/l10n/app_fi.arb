@@ -48,7 +48,7 @@
   "unregistered": "Ei rekisteröity",
   "quickRecord": "Pikakirjaus",
   "quickRecordDescription": "Ilmoitusnäytöltä näet, mikä pilleri on vuorossa tänään, ja voit lisätä sen heti pillerilokiin.",
-  "healthCareIntegration": "Terveysdatan synkronointi",
+  "healthCareIntegration": "Yhteys terveyssovelluksiin",
   "healthCareIntegrationDescription": "Pilllissä tallennetut kuukautistiedot voidaan tallentaa automaattisesti Terveys-sovellukseen",
   "viewPremiumPlan": "Katso Premium-paketti",
   "changePillNumberForToday": "Muuta tänään otettavan pillerin numeroa",

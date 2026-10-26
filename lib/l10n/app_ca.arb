@@ -48,7 +48,7 @@
   "unregistered": "Sense registrar",
   "quickRecord": "Registre ràpid",
   "quickRecordDescription": "A la pantalla de notificacions pots veure quina píndola toca avui i afegir-la directament al registre de preses.",
-  "healthCareIntegration": "Integració de Salut",
+  "healthCareIntegration": "Connexió amb aplicacions de salut",
   "healthCareIntegrationDescription": "Els registres menstruals de Pilll es poden sincronitzar automàticament amb Salut",
   "viewPremiumPlan": "Veure el pla premium",
   "changePillNumberForToday": "Canvi del número de píndola d'avui",

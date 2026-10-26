@@ -48,7 +48,7 @@
   "unregistered": "አልተመዘገበም",
   "quickRecord": "ፈጣን የክኒን መዝገብ",
   "quickRecordDescription": "በማሳወቂያው ማያ ገጽ ዛሬ የሚወስዱትን ክኒን ማየትና ወዲያውኑ በአወሳሰድ መዝገብ ላይ መመዝገብ ይችላሉ።",
-  "healthCareIntegration": "ጤና እንክብካቤ ትስስር",
+  "healthCareIntegration": "ከጤና መተግበሪያዎች ጋር ማገናኘት",
   "healthCareIntegrationDescription": "በPilll የተመዘገቡ የወር ቆጠራ መረጃዎች በራስ-ሰር ወደ ጤና እንክብካቤ መተግበሪያ ይመዘገባሉ",
   "viewPremiumPlan": "ፕሪሚየም ኮረጃን ይመልከቱ",
   "changePillNumberForToday": "የዛሬ ፒል ቁጥር መቀየር",

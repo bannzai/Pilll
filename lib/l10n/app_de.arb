@@ -48,7 +48,7 @@
   "unregistered": "Nicht registriert",
   "quickRecord": "Schnelle Erfassung",
   "quickRecordDescription": "Auf dem Mitteilungsbildschirm siehst du, welche Pille heute dran ist, und kannst sie direkt im Einnahmeprotokoll eintragen.",
-  "healthCareIntegration": "Health-Integration",
+  "healthCareIntegration": "Verbindung mit Gesundheitsapps",
   "healthCareIntegrationDescription": "Die in Pilll erfassten Periodenaufzeichnungen können automatisch in die Health-App übertragen werden.",
   "viewPremiumPlan": "Premium-Plan ansehen",
   "changePillNumberForToday": "Pillennummer für heute ändern",

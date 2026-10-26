@@ -48,7 +48,7 @@
   "unregistered": "Inte registrerad",
   "quickRecord": "Snabbregistrering",
   "quickRecordDescription": "På aviseringsskärmen ser du vilket p-piller du ska ta i dag och kan lägga till det direkt i din intagslogg.",
-  "healthCareIntegration": "Hälsointegration",
+  "healthCareIntegration": "Anslutning till hälsoappar",
   "healthCareIntegrationDescription": "Mensdata registrerad i Pilll kan automatiskt registreras i Hälsa-appen",
   "viewPremiumPlan": "Se premiumplan",
   "changePillNumberForToday": "Ändra dagens pillnummer",

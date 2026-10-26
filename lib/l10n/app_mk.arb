@@ -48,7 +48,7 @@
   "unregistered": "Не е регистрирано",
   "quickRecord": "Брз запис за земање",
   "quickRecordDescription": "На екранот со известувања можете да видите која таблета е за денес и веднаш да додадете Запис за земање.",
-  "healthCareIntegration": "Здравствена интеграција",
+  "healthCareIntegration": "Поврзување со здравствени апликации",
   "healthCareIntegrationDescription": "Менструалните записи снимени во Pilll можат автоматски да се синхронизираат со Здравје",
   "viewPremiumPlan": "Види премиум план",
   "changePillNumberForToday": "Менување на број на денешна пилула",

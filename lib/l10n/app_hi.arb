@@ -48,7 +48,7 @@
   "unregistered": "पंजीकृत नहीं",
   "quickRecord": "तुरंत दर्ज करें",
   "quickRecordDescription": "नोटिफ़िकेशन स्क्रीन पर आप देख सकती हैं कि आज कौन-सी गोली लेनी है और वहीं से सेवन रिकॉर्ड में दर्ज कर सकती हैं।",
-  "healthCareIntegration": "हेल्थकेयर एकीकरण",
+  "healthCareIntegration": "स्वास्थ्य ऐप से कनेक्शन",
   "healthCareIntegrationDescription": "Pilll में रिकॉर्ड किए गए मासिक धर्म के रिकॉर्ड को स्वचालित रूप से हेल्थकेयर में रिकॉर्ड किया जा सकता है",
   "viewPremiumPlan": "प्रीमियम प्लान देखें",
   "changePillNumberForToday": "आज की गोली संख्या बदलें",

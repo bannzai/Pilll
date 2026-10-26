@@ -48,7 +48,7 @@
   "unregistered": "Nije registrovano",
   "quickRecord": "Brzo bilježenje",
   "quickRecordDescription": "Na ekranu obavijesti možete vidjeti koju pilulu trebate uzeti danas i odmah je dodati u evidenciju uzimanja.",
-  "healthCareIntegration": "Zdravstvena integracija",
+  "healthCareIntegration": "Povezivanje sa zdravstvenim aplikacijama",
   "healthCareIntegrationDescription": "Podaci o menstrualnom ciklusu zabilježeni u Pilll mogu se automatski sinhronizovati sa Health aplikacijom",
   "viewPremiumPlan": "Pogledaj premium plan",
   "changePillNumberForToday": "Promjena broja današnje pilule",

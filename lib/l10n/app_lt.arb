@@ -48,7 +48,7 @@
   "unregistered": "Neužregistruota",
   "quickRecord": "Greitas įrašas",
   "quickRecordDescription": "Pranešimų ekrane galite matyti, kurią piliulę reikia išgerti šiandien, ir iškart pridėti vartojimo įrašą.",
-  "healthCareIntegration": "Sveikatos integracija",
+  "healthCareIntegration": "Susiejimas su sveikatos programėlėmis",
   "healthCareIntegrationDescription": "Menstruacijų įrašai, užregistruoti Pilll programėlėje, gali būti automatiškai įrašomi į „Health\" programą",
   "viewPremiumPlan": "Peržiūrėti premium planą",
   "changePillNumberForToday": "Šiandienos tabletės numerio keitimas",

@@ -48,7 +48,7 @@
   "unregistered": "Sin registrar",
   "quickRecord": "Registro rápido",
   "quickRecordDescription": "En la pantalla de notificaciones puedes ver qué píldora te toca hoy y añadirla directamente al registro de toma.",
-  "healthCareIntegration": "Integración de salud",
+  "healthCareIntegration": "Conexión con apps de salud",
   "healthCareIntegrationDescription": "Pilll puede sincronizar automáticamente tus registros menstruales con la app Salud",
   "viewPremiumPlan": "Ver plan premium",
   "changePillNumberForToday": "Cambiar número de píldora de hoy",

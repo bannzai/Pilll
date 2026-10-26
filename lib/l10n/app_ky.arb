@@ -48,7 +48,7 @@
   "unregistered": "Катталган эмес",
   "quickRecord": "Тез каттоо",
   "quickRecordDescription": "Билдирме экранынан бүгүн кайсы таблетканы ичүү керектигин көрүп, дароо таблетка ичүү жазуусун кошо аласыз.",
-  "healthCareIntegration": "Ден соолук интеграциясы",
+  "healthCareIntegration": "Ден соолук колдонмолору менен байланыш",
   "healthCareIntegrationDescription": "Pilll колдонмосунда катталган менструалдык маалыматтарды автоматтык түрдө Health колдонмосуна каттоого болот",
   "viewPremiumPlan": "Премиум планды көрүү",
   "changePillNumberForToday": "Бүгүнкү таблетка номурун өзгөртүү",

@@ -48,7 +48,7 @@
   "unregistered": "Registreerimata",
   "quickRecord": "Kiire märge",
   "quickRecordDescription": "Teavituste kuval näed, milline pill tuleb täna võtta, ja saad kohe lisada võtmiskirje.",
-  "healthCareIntegration": "Tervishoiu integratsioon",
+  "healthCareIntegration": "Ühendus terviserakendustega",
   "healthCareIntegrationDescription": "Pillis registreeritud menstruatsiooniandmed saab automaatselt Tervise rakendusse salvestada",
   "viewPremiumPlan": "Vaata premiumplaani",
   "changePillNumberForToday": "Tänase pilli numbri muutmine",

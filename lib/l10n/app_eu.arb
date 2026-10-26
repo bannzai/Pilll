@@ -48,7 +48,7 @@
   "unregistered": "Erregistratu gabe",
   "quickRecord": "Erregistro azkarra",
   "quickRecordDescription": "Jakinarazpenen pantailan gaur zein pilula hartu behar duzun ikus dezakezu, eta hartze-erregistroan berehala jaso.",
-  "healthCareIntegration": "Osasun elkarlana",
+  "healthCareIntegration": "Osasun aplikazioekin lotura",
   "healthCareIntegrationDescription": "Pilllen erregistratutako hileko-datuak automatikoki Osasun aplikazioan gorde daitezke",
   "viewPremiumPlan": "Premium plana ikusi",
   "changePillNumberForToday": "Gaurko pilula zenbakiaren aldaketa",

@@ -48,7 +48,7 @@
   "unregistered": "Nav reģistrēts",
   "quickRecord": "Ātrā atzīmēšana",
   "quickRecordDescription": "Paziņojumu ekrānā varat redzēt, kura tablete jālieto šodien, un uzreiz pievienot tablešu lietošanas ierakstu.",
-  "healthCareIntegration": "Veselības integrācija",
+  "healthCareIntegration": "Savienojums ar veselības lietotnēm",
   "healthCareIntegrationDescription": "Pilll lietotnē ierakstītos menstruācijas datus var automātiski pievienot Veselības lietotnei",
   "viewPremiumPlan": "Apskatīt Premium plānu",
   "changePillNumberForToday": "Šodienas pilules numura maiņa",

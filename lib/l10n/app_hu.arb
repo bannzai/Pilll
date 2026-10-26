@@ -48,7 +48,7 @@
   "unregistered": "Nincs regisztrálva",
   "quickRecord": "Gyors rögzítés",
   "quickRecordDescription": "Az értesítési képernyőn láthatod, melyik tabletta esedékes ma, és rögtön beírhatod a tablettaszedési naplóba.",
-  "healthCareIntegration": "Egészségügyi integráció",
+  "healthCareIntegration": "Kapcsolódás egészségügyi alkalmazásokhoz",
   "healthCareIntegrationDescription": "A Pilllben feljegyzett menstruációs adatok automatikusan rögzíthetők az Egészség alkalmazásban",
   "viewPremiumPlan": "Prémium csomag megtekintése",
   "changePillNumberForToday": "A mai tablettaszám módosítása",

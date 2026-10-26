@@ -48,7 +48,7 @@
   "unregistered": "Kayıtlı değil",
   "quickRecord": "Hızlı kayıt",
   "quickRecordDescription": "Bildirim ekranında bugün alacağınız hapı görebilir ve hemen hap kullanım kaydına ekleyebilirsiniz.",
-  "healthCareIntegration": "Sağlık Entegrasyonu",
+  "healthCareIntegration": "Sağlık uygulamalarıyla bağlantı",
   "healthCareIntegrationDescription": "Pilll ile kaydettiğiniz adet kayıtları otomatik olarak Sağlık uygulamasına aktarılabilir",
   "viewPremiumPlan": "Premium Planı Görüntüle",
   "changePillNumberForToday": "Bugün alınacak hap numarasını değiştir",

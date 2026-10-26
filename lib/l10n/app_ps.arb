@@ -48,7 +48,7 @@
   "unregistered": "لا نه دی ثبت شوی",
   "quickRecord": "چټک ثبت",
   "quickRecordDescription": "د خبرتیاوو په پرده کې نننۍ ګولۍ لیدلی شئ او هماغلته یې د ګولۍ اخیستلو ریکارډ ته سمدستي ورزیاتولی شئ.",
-  "healthCareIntegration": "د روغتیا پاملرنې ترکیب",
+  "healthCareIntegration": "له روغتیايي اپونو سره نښلول",
   "healthCareIntegrationDescription": "په Pilll کې د میاشتنۍ دورې ثبت شوي ریکارډونه په اتوماتیک ډول د Health اپ ته ثبتولی شي",
   "viewPremiumPlan": "پریمیم پلان وګورئ",
   "changePillNumberForToday": "د نن ورځې د حبې د شمیرې بدلول",
