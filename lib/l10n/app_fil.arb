@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "Kapag gumawa kayo ng account, maaari ninyong ilipat ang inyong data sa ibang device",
   "registerAccountToKeepData": "Para mapanatili ang impormasyon ng inyong account, magparehistro po ng account",
   "signInWith": "Mag-sign in gamit ang {loginName}",
-  "registerWith": "Mag-register gamit ang {loginName}",
+  "registerWith": "Magparehistro gamit ang {loginName}",
   "premiumRegistrationComplete": "Tapos na ang Pilll Premium Registration",
   "thankYouForRegistration": "Salamat sa pagpaparehistro!\nMaaari na ninyong gamitin ang lahat ng features ng app!",
   "limitedTimeDiscount": "Limitadong presyo ngayon - magagamit mo habambuhay",

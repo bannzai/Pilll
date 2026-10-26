@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "Kontu bat sortuz gero, zure datuak beste gailu batera eraman ditzakezu",
   "registerAccountToKeepData": "Kontuaren informazioa gordetzeko, sortu kontu bat, mesedez",
   "signInWith": "Hasi saioa {loginName} bidez",
-  "registerWith": "{loginName}z erregistratu",
+  "registerWith": "Eman izena {loginName} bidez",
   "premiumRegistrationComplete": "Pilll Premium erregistroa osatuta",
   "thankYouForRegistration": "Mila esker erregistratzeagatik.\nFuntzio guztiak eskuragarri daude orain!",
   "limitedTimeDiscount": "Orain prezio bereziarekin betirako erabil dezakezu",

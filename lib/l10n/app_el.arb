@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "Αν δημιουργήσετε λογαριασμό, μπορείτε να μεταφέρετε τα δεδομένα σας σε άλλη συσκευή",
   "registerAccountToKeepData": "Για να διατηρήσετε τα στοιχεία του λογαριασμού σας, δημιουργήστε έναν λογαριασμό",
   "signInWith": "Συνδεθείτε με {loginName}",
-  "registerWith": "Εγγραφή με {loginName}",
+  "registerWith": "Εγγραφείτε με {loginName}",
   "premiumRegistrationComplete": "Η εγγραφή στο Pilll Premium ολοκληρώθηκε",
   "thankYouForRegistration": "Ευχαριστούμε για την εγγραφή σας.\nΌλες οι λειτουργίες είναι πλέον διαθέσιμες!",
   "limitedTimeDiscount": "Τώρα με ειδική τιμή για πάντα",

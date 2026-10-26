@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "Uma uvula i-akhawunti, ungadlulisela idatha yakho kwenye idivayisi",
   "registerAccountToKeepData": "Sicela ubhalise i-akhawunti ukuze ugcine imininingwane ye-akhawunti yakho",
   "signInWith": "Sicela ungene usebenzisa i-{loginName}",
-  "registerWith": "Bhalisa ngo-{loginName}",
+  "registerWith": "Sicela ubhalise usebenzisa i-{loginName}",
   "premiumRegistrationComplete": "Ukubhalisela kwe-Pilll Premium kuphelelisiwe",
   "thankYouForRegistration": "Siyabonga ngokubhalisa kwakho.\nZonke izici sezitholakala manje!",
   "limitedTimeDiscount": "Manje kukhona intengo ekhethekile ozoyisebenzisa unaphakade",

@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "Ha létrehozol egy fiókot, átviheted az adataidat egy másik készülékre",
   "registerAccountToKeepData": "Hozz létre egy fiókot, hogy a fiókadataid megmaradjanak",
   "signInWith": "Bejelentkezés {loginName}-fiókkal",
-  "registerWith": "Regisztráció {loginName} segítségével",
+  "registerWith": "Regisztráció {loginName} használatával",
   "premiumRegistrationComplete": "Pilll prémium feliratkozás sikeres",
   "thankYouForRegistration": "Köszönjük a regisztrációt!\nMost már minden funkció elérhető!",
   "limitedTimeDiscount": "Most különleges áron mindörökre használható",

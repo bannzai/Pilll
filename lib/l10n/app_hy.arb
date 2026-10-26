@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "Հաշիվ գրանցելուց հետո Դուք կարող եք Ձեր տվյալները փոխանցել այլ սարք",
   "registerAccountToKeepData": "Ձեր հաշվի տվյալները պահպանելու համար խնդրում ենք գրանցել հաշիվ",
   "signInWith": "Մուտք գործեք {loginName}-ով",
-  "registerWith": "{loginName}-ով գրանցում",
+  "registerWith": "Գրանցվեք {loginName}-ի միջոցով",
   "premiumRegistrationComplete": "Pilll Premium գրանցումը հաջողությամբ ավարտվեց",
   "thankYouForRegistration": "Շնորհակալություն գրանցման համար։\nԲոլոր գործառույթները այժմ հասանելի են։",
   "limitedTimeDiscount": "Հիմա հատուկ գնով՝ մշտապես օգտագործեք",

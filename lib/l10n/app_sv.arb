@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "När du skapar ett konto kan du föra över dina data till en annan enhet",
   "registerAccountToKeepData": "Skapa ett konto för att behålla dina kontouppgifter",
   "signInWith": "Logga in med {loginName}",
-  "registerWith": "Registrera med {loginName}",
+  "registerWith": "Registrera dig med {loginName}",
   "premiumRegistrationComplete": "Pilll Premium registrering slutförd",
   "thankYouForRegistration": "Tack för din registrering.\nNu kan du använda alla funktioner!",
   "limitedTimeDiscount": "Nu till specialpris för alltid",

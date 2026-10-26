@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "Kui lood konto, saad oma andmed teise seadmesse üle kanda",
   "registerAccountToKeepData": "Loo konto, et sinu kontoandmed säiliksid",
   "signInWith": "Logi sisse {loginName}iga",
-  "registerWith": "Registreeru {loginName} abil",
+  "registerWith": "Registreeru {loginName} kaudu",
   "premiumRegistrationComplete": "Pilll Premium registreerimine lõppenud",
   "thankYouForRegistration": "Täname registreerumise eest.\nKõik funktsioonid on nüüd kasutamiseks saadaval!",
   "limitedTimeDiscount": "Nüüd piiratud hinnaga igaveseks",

@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "Hesap oluşturduğunuzda verilerinizi başka bir cihaza aktarabilirsiniz",
   "registerAccountToKeepData": "Hesap bilgilerinizi saklamak için lütfen bir hesap oluşturun",
   "signInWith": "{loginName} ile giriş yapın",
-  "registerWith": "{loginName} ile kayıt ol",
+  "registerWith": "{loginName} ile kaydolun",
   "premiumRegistrationComplete": "Pilll Premium Kaydı Tamamlandı",
   "thankYouForRegistration": "Kaydolduğunuz için teşekkür ederiz.\nArtık tüm özellikleri kullanabilirsiniz!",
   "limitedTimeDiscount": "Şimdi özel fiyatla sonsuza kadar kullanın",

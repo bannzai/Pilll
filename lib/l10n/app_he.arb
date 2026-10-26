@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "יצירת חשבון מאפשרת להעביר את הנתונים למכשיר אחר",
   "registerAccountToKeepData": "כדי לשמור את פרטי החשבון, יש ליצור חשבון",
   "signInWith": "כניסה באמצעות {loginName}",
-  "registerWith": "הירשם עם {loginName}",
+  "registerWith": "הרשמה באמצעות {loginName}",
   "premiumRegistrationComplete": "רישום Pilll פרימיום הושלם",
   "thankYouForRegistration": "תודה על ההרשמה.\nכל התכונות זמינות עכשיו!",
   "limitedTimeDiscount": "עכשיו במחיר מיוחד לכל החיים",

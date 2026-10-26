@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "Бүртгэл үүсгэснээр та мэдээллээ өөр төхөөрөмж рүү шилжүүлэх боломжтой болно",
   "registerAccountToKeepData": "Бүртгэлийн мэдээллээ хадгалахын тулд бүртгэл үүсгэнэ үү",
   "signInWith": "{loginName}-ээр нэвтэрнэ үү",
-  "registerWith": "{loginName}ээр бүртгэх",
+  "registerWith": "{loginName}-ээр бүртгүүлнэ үү",
   "premiumRegistrationComplete": "Pilll премиум бүртгэл амжилттай болсон",
   "thankYouForRegistration": "Бүртгүүлсэнд баярлалаа.\nБүх функц ашиглах боломжтой болсон!",
   "limitedTimeDiscount": "Одоо онцгой үнээр үүрд ашиглах боломжтой",

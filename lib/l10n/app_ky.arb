@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "Каттоо эсебин ачкандан кийин дайындарыңызды башка түзмөккө көчүрө аласыз",
   "registerAccountToKeepData": "Каттоо эсебиңиздин маалыматын сактоо үчүн, каттоо эсебин түзүңүз",
   "signInWith": "{loginName} аркылуу кириңиз",
-  "registerWith": "{loginName} менен катталуу",
+  "registerWith": "{loginName} аркылуу катталыңыз",
   "premiumRegistrationComplete": "Pilll Premium катталуу аяктады",
   "thankYouForRegistration": "Катталганыңызга рахмат.\nБардык функциялар колдонууга даяр!",
   "limitedTimeDiscount": "Азыр чектелген баа менен түбөлүккө колдоно аласыз",

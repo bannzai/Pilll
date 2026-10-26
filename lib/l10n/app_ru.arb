@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "После создания аккаунта вы сможете перенести свои данные на другое устройство",
   "registerAccountToKeepData": "Чтобы сохранить данные учётной записи, пожалуйста, создайте учётную запись",
   "signInWith": "Войти через {loginName}",
-  "registerWith": "Зарегистрироваться через {loginName}",
+  "registerWith": "Зарегистрируйтесь через {loginName}",
   "premiumRegistrationComplete": "Регистрация на Pilll Premium завершена",
   "thankYouForRegistration": "Благодарим за регистрацию!\nТеперь вам доступны все функции!",
   "limitedTimeDiscount": "Сейчас по специальной цене навсегда",

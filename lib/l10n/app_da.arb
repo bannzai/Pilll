@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "Når du opretter en konto, kan du overføre dine data til en anden enhed",
   "registerAccountToKeepData": "Opret en konto, så du kan gemme dine kontooplysninger",
   "signInWith": "Log ind med {loginName}",
-  "registerWith": "Registrer med {loginName}",
+  "registerWith": "Opret en konto med {loginName}",
   "premiumRegistrationComplete": "Pilll Premium-registrering fuldført",
   "thankYouForRegistration": "Tak for din registrering. Alle funktioner er nu tilgængelige!",
   "limitedTimeDiscount": "Nu til særpris - brug på livstid",

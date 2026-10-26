@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "Pasi të krijoni një llogari, mund t’i transferoni të dhënat tuaja në një pajisje tjetër",
   "registerAccountToKeepData": "Për të ruajtur të dhënat e llogarisë suaj, ju lutemi krijoni një llogari",
   "signInWith": "Hyni me {loginName}",
-  "registerWith": "Regjistrohu me {loginName}",
+  "registerWith": "Regjistrohuni me {loginName}",
   "premiumRegistrationComplete": "Regjistrimi në Pilll Premium u përfundua",
   "thankYouForRegistration": "Faleminderit për regjistrimin.\nTë gjitha funksionet janë tani të disponueshme!",
   "limitedTimeDiscount": "Tani me çmim special - përdore përgjithmonë",

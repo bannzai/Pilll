@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "Kun luot tilin, voit siirtää tietosi toiseen laitteeseen",
   "registerAccountToKeepData": "Luo tili, jotta tilisi tiedot säilyvät",
   "signInWith": "Kirjaudu sisään {loginName}-tilillä",
-  "registerWith": "Rekisteröidy {loginName}:lla",
+  "registerWith": "Rekisteröidy {loginName}-tilillä",
   "premiumRegistrationComplete": "Pilll Premium -tilaus onnistui",
   "thankYouForRegistration": "Kiitos rekisteröitymisestä!\nKaikki ominaisuudet ovat nyt käytettävissäsi!",
   "limitedTimeDiscount": "Nyt erikoishinnalla - säilytä hinta ikuisesti",

@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "Hisob ochsangiz, maʼlumotlaringizni boshqa qurilmaga koʻchira olasiz",
   "registerAccountToKeepData": "Hisobingiz maʼlumotlarini saqlab qolish uchun, iltimos, hisob yarating",
   "signInWith": "{loginName} orqali tizimga kiring",
-  "registerWith": "{loginName} bilan ro'yxatdan o'tish",
+  "registerWith": "{loginName} orqali roʻyxatdan oʻting",
   "premiumRegistrationComplete": "Pilll Premium ro'yxatdan o'tish tugallandi",
   "thankYouForRegistration": "Ro'yxatdan o'tganingiz uchun rahmat.\nEndi barcha funksiyalardan foydalanishingiz mumkin!",
   "limitedTimeDiscount": "Hozir maxsus narxda abadiy foydalaning",

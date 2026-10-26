@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "Kad izradite račun, možete prenijeti svoje podatke na drugi uređaj",
   "registerAccountToKeepData": "Kako biste sačuvali podatke o svojem računu, molimo vas da izradite račun",
   "signInWith": "Prijavite se putem {loginName}",
-  "registerWith": "Registriraj se s {loginName}",
+  "registerWith": "Registrirajte se putem {loginName}",
   "premiumRegistrationComplete": "Pilll Premium registracija dovršena",
   "thankYouForRegistration": "Hvala vam na registraciji!\nSve funkcije su sada dostupne!",
   "limitedTimeDiscount": "Sada po posebnoj cijeni zauvijek",

@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "ანგარიშის შექმნის შემდეგ შეგიძლიათ თქვენი მონაცემები სხვა მოწყობილობაზე გადაიტანოთ",
   "registerAccountToKeepData": "თქვენი ანგარიშის ინფორმაციის შესანარჩუნებლად, გთხოვთ, შექმნათ ანგარიში",
   "signInWith": "{loginName}-ით შესვლა",
-  "registerWith": "{loginName}-ით რეგისტრაცია",
+  "registerWith": "რეგისტრაცია {loginName}-ით",
   "premiumRegistrationComplete": "Pilll პრემიუმ რეგისტრაცია დასრულდა",
   "thankYouForRegistration": "რეგისტრაციისთვის გმადლობთ.\nყველა ფუნქცია ხელმისაწვდომი გახდა!",
   "limitedTimeDiscount": "ახლა შეზღუდული ფასით სამუდამოდ გამოიყენება",

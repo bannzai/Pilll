@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "खाते तयार केल्यावर तुम्ही तुमचा डेटा दुसऱ्या डिव्हाइसवर हस्तांतरित करू शकता",
   "registerAccountToKeepData": "तुमच्या खात्याची माहिती जतन करण्यासाठी कृपया खाते तयार करा",
   "signInWith": "{loginName} वापरून साइन इन करा",
-  "registerWith": "{loginName} ने नोंदणी करा",
+  "registerWith": "{loginName} वापरून नोंदणी करा",
   "premiumRegistrationComplete": "Pilll प्रीमियम नोंदणी पूर्ण",
   "thankYouForRegistration": "नोंदणीसाठी धन्यवाद।\nसर्व वैशिष्ट्ये आता वापरण्यासाठी उपलब्ध आहेत!",
   "limitedTimeDiscount": "आता विशेष किंमतीत कायमसाठी मिळवा",

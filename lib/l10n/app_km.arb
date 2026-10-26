@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "នៅពេលបង្កើតគណនី អ្នកអាចផ្ទេរទិន្នន័យទៅឧបករណ៍ផ្សេងបាន",
   "registerAccountToKeepData": "សូមបង្កើតគណនី ដើម្បីរក្សាទុកព័ត៌មានគណនីរបស់អ្នក",
   "signInWith": "សូមចូលគណនីដោយប្រើ {loginName}",
-  "registerWith": "ចុះឈ្មោះជាមួយ{loginName}",
+  "registerWith": "សូមចុះឈ្មោះដោយប្រើ {loginName}",
   "premiumRegistrationComplete": "ការចុះឈ្មោះ Pilll Premium បានបញ្ចប់ហើយ",
   "thankYouForRegistration": "សូមអរគុណសម្រាប់ការចុះឈ្មោះ។\nមុខងារទាំងអស់បានដំណើរការហើយ!",
   "limitedTimeDiscount": "ឥឡូវនេះជាមួយតម្លៃពិសេស ប្រើបានជារៀងរហូត",

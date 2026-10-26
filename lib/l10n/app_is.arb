@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "Ef þú stofnar aðgang geturðu flutt gögnin þín í annað tæki",
   "registerAccountToKeepData": "Þú getur stofnað aðgang svo að reikningsupplýsingarnar þínar varðveitist",
   "signInWith": "Skráðu þig inn með {loginName}",
-  "registerWith": "Skrá sig með {loginName}",
+  "registerWith": "Skráðu þig með {loginName}",
   "premiumRegistrationComplete": "Pilll Premium skráning kláruð",
   "thankYouForRegistration": "Takk fyrir skráninguna.\nÞú getur nú notað alla eiginleika!",
   "limitedTimeDiscount": "Sérstakt verð núna - notaðu að eilífu",

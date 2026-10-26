@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "Po vytvorení účtu môžete preniesť svoje údaje do iného zariadenia",
   "registerAccountToKeepData": "Ak si chcete uchovať údaje o svojom účte, vytvorte si účet",
   "signInWith": "Prihláste sa cez {loginName}",
-  "registerWith": "Zaregistrovať sa cez {loginName}",
+  "registerWith": "Zaregistrujte sa cez {loginName}",
   "premiumRegistrationComplete": "Pilll Premium registrácia dokončená",
   "thankYouForRegistration": "Ďakujeme za registráciu.\nTeraz môžete používať všetky funkcie!",
   "limitedTimeDiscount": "Teraz za výhodnú cenu navždy",

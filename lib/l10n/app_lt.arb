@@ -172,7 +172,7 @@
   "registerAccountForDataTransfer": "Sukūrę paskyrą galėsite perkelti savo duomenis į kitą įrenginį",
   "registerAccountToKeepData": "Kad išsaugotumėte savo paskyros informaciją, susikurkite paskyrą",
   "signInWith": "Prisijunkite naudodami {loginName}",
-  "registerWith": "Registruotis su {loginName}",
+  "registerWith": "Registruokitės per {loginName}",
   "premiumRegistrationComplete": "Pilll premium registracija sėkminga",
   "thankYouForRegistration": "Ačiū už registraciją.\nDabar galite naudoti visas funkcijas!",
   "limitedTimeDiscount": "Dabar už ribotą kainą - naudokite visam laikui",
