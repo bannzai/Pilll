@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "الدورة المتوقعة: اليوم {diffPlusOne}، الحبة {pillNumber}",
   "menstruationRemainingDay": "باقي {diff} أيام",
   "menstruationProgressingDay": "اليوم {diffPlusOne} من الدورة الشهرية",
-  "recordMenstruation": "سجل الدورة الشهرية",
+  "recordMenstruation": "تسجيل الدورة",
   "menstruationHistory": "سجل الدورة الشهرية",
   "menstruationFromToday": "بدء الحيض اليوم",
   "menstruationFromYesterday": "الدورة الشهرية من أمس",

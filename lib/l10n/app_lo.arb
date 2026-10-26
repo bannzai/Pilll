@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "ປະຈຳເດືອນທີ່ຄາດໄວ້: ມື້ທີ {diffPlusOne}, ຢາເມັດທີ {pillNumber}",
   "menstruationRemainingDay": "ຍັງເຫຼືອ {diff} ມື້",
   "menstruationProgressingDay": "ມື້ທີ {diffPlusOne} ຂອງປະຈຳເດືອນ",
-  "recordMenstruation": "ບັນທຶກປະຈໍາເດືອນ",
+  "recordMenstruation": "ບັນທຶກປະຈຳເດືອນ",
   "menstruationHistory": "ປະຫວັດປະຈຳເດືອນ",
   "menstruationFromToday": "ມື້ນີ້ເລີ່ມມີແດງ",
   "menstruationFromYesterday": "ມື້ວານມີເດືອນ",

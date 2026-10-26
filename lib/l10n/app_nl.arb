@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "Verwachte menstruatie: dag {diffPlusOne}, pil {pillNumber}",
   "menstruationRemainingDay": "Nog {diff} dagen",
   "menstruationProgressingDay": "Dag {diffPlusOne} van je menstruatie",
-  "recordMenstruation": "Menstruatie registreren",
+  "recordMenstruation": "Menstruatie vastleggen",
   "menstruationHistory": "Menstruatiegeschiedenis",
   "menstruationFromToday": "Menstruatie start vandaag",
   "menstruationFromYesterday": "Menstruatie vanaf gisteren",

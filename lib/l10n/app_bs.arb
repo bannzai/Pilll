@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "Očekivana menstruacija: dan {diffPlusOne}, pilula {pillNumber}",
   "menstruationRemainingDay": "Preostalo je {diff} dana",
   "menstruationProgressingDay": "{diffPlusOne}. dan menstruacije",
-  "recordMenstruation": "Zabilježiti menstruaciju",
+  "recordMenstruation": "Zabilježite menstruaciju",
   "menstruationHistory": "Menstrualna historija",
   "menstruationFromToday": "Menstruacija danas",
   "menstruationFromYesterday": "Od jučer menstruacija",

@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "Paredzamās mēnešreizes: {diffPlusOne}. diena, {pillNumber}. tablete",
   "menstruationRemainingDay": "Atlikušas {diff} dienas",
   "menstruationProgressingDay": "Mēnešreižu {diffPlusOne}. diena",
-  "recordMenstruation": "Reģistrēt menstruāciju",
+  "recordMenstruation": "Atzīmējiet mēnešreizes",
   "menstruationHistory": "Menstruāciju vēsture",
   "menstruationFromToday": "Menstruācija no šodienas",
   "menstruationFromYesterday": "Menstruācija no vakar",

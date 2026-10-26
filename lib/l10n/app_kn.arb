@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "ನಿರೀಕ್ಷಿತ ಮುಟ್ಟಿನ ದಿನ: {diffPlusOne}ನೇ ದಿನ, {pillNumber}ನೇ ಮಾತ್ರೆ",
   "menstruationRemainingDay": "ಇನ್ನೂ {diff} ದಿನಗಳು ಬಾಕಿ",
   "menstruationProgressingDay": "ಮುಟ್ಟಿನ {diffPlusOne}ನೇ ದಿನ",
-  "recordMenstruation": "ಮಾಸಿಕ ಧರ್ಮ ದಾಖಲಿಸಿ",
+  "recordMenstruation": "ಮುಟ್ಟಿನ ವಿವರ ದಾಖಲಿಸಿ",
   "menstruationHistory": "ಮಾಸಿಕ ಧರ್ಮದ ಇತಿಹಾಸ",
   "menstruationFromToday": "ಇಂದಿನಿಂದ ಋತುಚಕ್ರ",
   "menstruationFromYesterday": "ನಿನ್ನೆಯಿಂದ ಮಾಸಿಕ ಧರ್ಮ",

@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "Verwagte maandstonde: dag {diffPlusOne}, pil {pillNumber}",
   "menstruationRemainingDay": "Nog {diff} dae",
   "menstruationProgressingDay": "Dag {diffPlusOne}",
-  "recordMenstruation": "Teken menstruasie aan",
+  "recordMenstruation": "Teken maandstonde aan",
   "menstruationHistory": "Menstruasiegeskiedenis",
   "menstruationFromToday": "Menstruasie begin vandag",
   "menstruationFromYesterday": "Menstruasie vanaf gister",

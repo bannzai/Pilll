@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "Хүлээгдэж буй сарын тэмдгийн өдөр: {diffPlusOne} дахь өдөр, {pillNumber} дэх эм",
   "menstruationRemainingDay": "{diff} хоног үлдлээ",
   "menstruationProgressingDay": "Сарын тэмдгийн {diffPlusOne} дэх өдөр",
-  "recordMenstruation": "Сарын тэмдэг бүртгэх",
+  "recordMenstruation": "Сарын тэмдгийн бүртгэл хийх",
   "menstruationHistory": "Сарын тэмдгийн түүх",
   "menstruationFromToday": "Өнөөдрөөс сарын тэмдэг",
   "menstruationFromYesterday": "өчигдрөөс сарын тэмдэг",

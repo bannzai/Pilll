@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "Inaasahang regla: araw {diffPlusOne}, pildoras {pillNumber}",
   "menstruationRemainingDay": "{diff} araw pa",
   "menstruationProgressingDay": "Ika-{diffPlusOne} araw ng regla",
-  "recordMenstruation": "Itala ang regla",
+  "recordMenstruation": "Itala ang regla ninyo",
   "menstruationHistory": "Kasaysayan ng Regla",
   "menstruationFromToday": "Regla mula ngayon",
   "menstruationFromYesterday": "Regla mula kahapon",

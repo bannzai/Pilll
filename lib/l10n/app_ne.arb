@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "अपेक्षित महिनावारी: {diffPlusOne}औँ दिन, {pillNumber}औँ चक्की",
   "menstruationRemainingDay": "अझै {diff} दिन बाँकी",
   "menstruationProgressingDay": "महिनावारीको {diffPlusOne}औँ दिन",
-  "recordMenstruation": "महिनावारी रेकर्ड गर्नुहोस्",
+  "recordMenstruation": "महिनावारीको विवरण राख्नुहोस्",
   "menstruationHistory": "मासिक धर्म इतिहास",
   "menstruationFromToday": "आजदेखि महावरी",
   "menstruationFromYesterday": "हिजोदेखि महिनावारी",

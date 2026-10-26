@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "Күтүлгөн айыз: {diffPlusOne}-күн, {pillNumber}-таблетка",
   "menstruationRemainingDay": "{diff} күн калды",
   "menstruationProgressingDay": "Айыздын {diffPlusOne}-күнү",
-  "recordMenstruation": "Менструацияны жазуу",
+  "recordMenstruation": "Айызды каттаңыз",
   "menstruationHistory": "айыз тарыхы",
   "menstruationFromToday": "Бүгүндөн айгөл",
   "menstruationFromYesterday": "кечеден айлык курч",

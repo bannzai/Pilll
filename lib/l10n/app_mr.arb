@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "अपेक्षित मासिक पाळी: {diffPlusOne}वा दिवस, {pillNumber}वी गोळी",
   "menstruationRemainingDay": "आणखी {diff} दिवस बाकी",
   "menstruationProgressingDay": "पाळीचा {diffPlusOne}वा दिवस",
-  "recordMenstruation": "मासिक पाळी नोंदवा",
+  "recordMenstruation": "मासिक पाळीची नोंद करा",
   "menstruationHistory": "मासिकधर्म इतिहास",
   "menstruationFromToday": "आजपासून मासिक पाळी",
   "menstruationFromYesterday": "काल पासून मासिक पाळी",

@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "Mislif disgwyliedig: diwrnod {diffPlusOne}, pilsen {pillNumber}",
   "menstruationRemainingDay": "Mae {diff} diwrnod ar ôl",
   "menstruationProgressingDay": "Diwrnod {diffPlusOne} o’r mislif",
-  "recordMenstruation": "Cofnodi misglwyf",
+  "recordMenstruation": "Cofnodi mislif",
   "menstruationHistory": "Hanes Aeddfed",
   "menstruationFromToday": "Misglwyf heddiw",
   "menstruationFromYesterday": "Misglwyf ers ddoe",

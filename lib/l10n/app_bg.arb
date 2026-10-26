@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "Очакван мензис: ден {diffPlusOne}, хапче {pillNumber}",
   "menstruationRemainingDay": "Остават {diff} дни",
   "menstruationProgressingDay": "{diffPlusOne}-и ден от менструацията",
-  "recordMenstruation": "Записване на менструация",
+  "recordMenstruation": "Запис на мензис",
   "menstruationHistory": "Менструална история",
   "menstruationFromToday": "Менструация от днес",
   "menstruationFromYesterday": "Менструация от вчера",

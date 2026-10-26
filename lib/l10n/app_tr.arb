@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "Beklenen adet: {diffPlusOne}. gün, {pillNumber}. hap",
   "menstruationRemainingDay": "{diff} gün kaldı",
   "menstruationProgressingDay": "Adetin {diffPlusOne}. günü",
-  "recordMenstruation": "Adet Kaydet",
+  "recordMenstruation": "Adet döneminizi kaydedin",
   "menstruationHistory": "Adet Geçmişi",
   "menstruationFromToday": "Bugün adet başladı",
   "menstruationFromYesterday": "Dünden itibaren adet",

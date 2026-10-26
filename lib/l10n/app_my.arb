@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "မျှော်မှန်းထားသော ရာသီလာချိန်: {diffPlusOne} ရက်မြောက်နေ့၊ ဆေးပြား {pillNumber}",
   "menstruationRemainingDay": "နောက်ထပ် {diff} ရက်",
   "menstruationProgressingDay": "ရာသီလာသည့် {diffPlusOne} ရက်မြောက်နေ့",
-  "recordMenstruation": "ရာသီမှတ်တမ်းတင်",
+  "recordMenstruation": "ရာသီကို မှတ်တမ်းတင်ပါ",
   "menstruationHistory": "ရာသီမှတ်တမ်း",
   "menstruationFromToday": "ယနေ့ရာသီစ",
   "menstruationFromYesterday": "မနေ့က ရာသီ",

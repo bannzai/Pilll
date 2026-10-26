@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "د حیض اټکلي وخت: {diffPlusOne}مه ورځ، {pillNumber}مه ګولۍ",
   "menstruationRemainingDay": "{diff} ورځې پاتې دي",
   "menstruationProgressingDay": "د میاشتني عادت {diffPlusOne}مه ورځ",
-  "recordMenstruation": "د میاشتنۍ دورې ثبتول",
+  "recordMenstruation": "حیض ثبت کړئ",
   "menstruationHistory": "د میاشتو تاریخ",
   "menstruationFromToday": "نن د میاشتنۍ دوره",
   "menstruationFromYesterday": "پرون څخه میاشتنۍ دوره",

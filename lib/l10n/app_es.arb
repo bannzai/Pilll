@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "Regla prevista: día {diffPlusOne}, píldora {pillNumber}",
   "menstruationRemainingDay": "Faltan {diff} días",
   "menstruationProgressingDay": "Día {diffPlusOne} de la regla",
-  "recordMenstruation": "Registrar menstruación",
+  "recordMenstruation": "Registra la regla",
   "menstruationHistory": "Historial menstrual",
   "menstruationFromToday": "Regla desde hoy",
   "menstruationFromYesterday": "Menstruación desde ayer",

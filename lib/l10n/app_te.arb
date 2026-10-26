@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "నెలసరి రావచ్చని భావించే రోజు: {diffPlusOne}వ రోజు, {pillNumber}వ మాత్ర",
   "menstruationRemainingDay": "ఇంకా {diff} రోజులు",
   "menstruationProgressingDay": "నెలసరి {diffPlusOne}వ రోజు",
-  "recordMenstruation": "రుతుక్రమ నమోదు",
+  "recordMenstruation": "నెలసరిని నమోదు చేయండి",
   "menstruationHistory": "మాసిక ధర్మ చరిత్ర",
   "menstruationFromToday": "ఈ రోజు నుండి రుతుస్రావం",
   "menstruationFromYesterday": "నిన్న నుంచి రుతుస్రావం",

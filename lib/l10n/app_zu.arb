@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "Ukuya esikhathini okulindelekile: usuku {diffPlusOne}, iphilisi {pillNumber}",
   "menstruationRemainingDay": "Kusele izinsuku ezingu-{diff}",
   "menstruationProgressingDay": "Usuku lwesi-{diffPlusOne} lokuya esikhathini",
-  "recordMenstruation": "Rekhoda ukuya",
+  "recordMenstruation": "Sicela uqophe ukuya esikhathini",
   "menstruationHistory": "Umlando wokugezela",
   "menstruationFromToday": "Isicubu kusukela namuhla",
   "menstruationFromYesterday": "Kusukela izolo",

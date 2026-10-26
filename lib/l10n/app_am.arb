@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "የወር አበባ የሚጠበቅበት ቀን፦ ቀን {diffPlusOne}፣ ክኒን {pillNumber}",
   "menstruationRemainingDay": "የቀሩት {diff} ቀናት",
   "menstruationProgressingDay": "የወር አበባ ቀን {diffPlusOne}",
-  "recordMenstruation": "ወርሃዊ መመዝገብ",
+  "recordMenstruation": "ወር አበባን ይመዝግቡ",
   "menstruationHistory": "የወር አበባ ታሪክ",
   "menstruationFromToday": "ዛሬ ጀምሮ የወር አበባ",
   "menstruationFromYesterday": "ትናንት ጀምሮ ወር",

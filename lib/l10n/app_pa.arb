@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "ਸੰਭਾਵਿਤ ਮਾਹਵਾਰੀ: {diffPlusOne}ਵਾਂ ਦਿਨ, ਗੋਲੀ {pillNumber}",
   "menstruationRemainingDay": "ਹੋਰ {diff} ਦਿਨ ਬਾਕੀ",
   "menstruationProgressingDay": "ਮਾਹਵਾਰੀ ਦਾ {diffPlusOne}ਵਾਂ ਦਿਨ",
-  "recordMenstruation": "ਮਾਹਵਾਰੀ ਰਿਕਾਰਡ ਕਰੋ",
+  "recordMenstruation": "ਮਾਹਵਾਰੀ ਦਰਜ ਕਰੋ",
   "menstruationHistory": "ਮਾਸਿਕ ਧਰਮ ਇਤਿਹਾਸ",
   "menstruationFromToday": "ਅੱਜ ਤੋਂ ਮਾਹਵਾਰੀ",
   "menstruationFromYesterday": "ਕੱਲ੍ਹ ਤੋਂ ਮਾਹਵਾਰੀ",

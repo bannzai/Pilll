@@ -160,7 +160,7 @@
   "menstruationScheduleDateWithNumberAndPillNumber": "Ожидаемые месячные: день {diffPlusOne}, таблетка {pillNumber}",
   "menstruationRemainingDay": "Осталось {diff} дней",
   "menstruationProgressingDay": "{diffPlusOne}-й день месячных",
-  "recordMenstruation": "Записать менструацию",
+  "recordMenstruation": "Записать месячные",
   "menstruationHistory": "История менструаций",
   "menstruationFromToday": "Месячные с сегодня",
   "menstruationFromYesterday": "Месячные с вчера",
