@@ -488,7 +488,7 @@
   "healthCareIntegrationFeatureAppealShortDescription": "Teile deine Periodeneinträge mit Health",
   "healthCareIntegrationFeatureAppealHeadline": "Mit der Health-App verbinden",
   "healthCareIntegrationFeatureAppealBody": "Du kannst deine in Pilll erfassten Periodendaten automatisch mit der Health-App synchronisieren. Dort kannst du sie zusammen mit deinen anderen Gesundheitsdaten ansehen und auch in anderen Apps nutzen.",
-  "quickRecordFeatureAppealTitle": "Einnahme direkt aus der Benachrichtigung erfassen",
+  "quickRecordFeatureAppealTitle": "Einnahmeprotokoll direkt über die Benachrichtigung",
   "quickRecordFeatureAppealShortDescription": "Aufzeichnung per Benachrichtigung ohne App-Öffnung",
   "quickRecordFeatureAppealHeadline": "Medikamenteneinnahme per Tipp direkt in der Benachrichtigung erfassen",
   "quickRecordFeatureAppealBody": "Wenn Sie die Erinnerungsbenachrichtigung lange gedrückt halten, wird die Aktion „Eingenommen\" angezeigt, und Sie können die Einnahme aufzeichnen, ohne die App zu öffnen.",

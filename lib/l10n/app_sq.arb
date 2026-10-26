@@ -488,7 +488,7 @@
   "healthCareIntegrationFeatureAppealShortDescription": "Ndani shënimet e menstruacionit me aplikacionin Shëndeti",
   "healthCareIntegrationFeatureAppealHeadline": "Mund të lidheni me aplikacionin Shëndeti",
   "healthCareIntegrationFeatureAppealBody": "Të dhënat e menstruacionit të regjistruara në Pilll mund t’i sinkronizoni automatikisht me aplikacionin Shëndeti. Mund t’i shihni bashkë me të dhënat e tjera shëndetësore dhe t’i përdorni edhe në aplikacione të tjera.",
-  "quickRecordFeatureAppealTitle": "Regjistro direkt nga njoftimi",
+  "quickRecordFeatureAppealTitle": "Regjistrimi i marrjes direkt nga njoftimi",
   "quickRecordFeatureAppealShortDescription": "Regjistro pa hapur aplikacionin, direkt nga njoftimi",
   "quickRecordFeatureAppealHeadline": "Regjistrim me një trokitje nga njoftimet",
   "quickRecordFeatureAppealBody": "Kur shtypni gjatë njoftimin e kujtuesit, do të shfaqet veprimi „E kam marrë\" që ju lejon të regjistroni marrjen pa hapur aplikacionin.",

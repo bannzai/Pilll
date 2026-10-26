@@ -488,7 +488,7 @@
   "healthCareIntegrationFeatureAppealShortDescription": "شاركي سجلات الدورة مع تطبيق صحتي",
   "healthCareIntegrationFeatureAppealHeadline": "يمكن الربط بتطبيق الصحة",
   "healthCareIntegrationFeatureAppealBody": "يمكنكِ مزامنة بيانات الدورة المسجلة في Pilll تلقائيًا مع تطبيق الصحة. ويمكنكِ الاطلاع عليها إلى جانب بياناتكِ الصحية الأخرى في تطبيق الصحة، واستخدامها في تطبيقات أخرى.",
-  "quickRecordFeatureAppealTitle": "تسجيل الجرعة مباشرةً من الإشعار",
+  "quickRecordFeatureAppealTitle": "تسجيل تناول مباشرة من الإشعار",
   "quickRecordFeatureAppealShortDescription": "التسجيل من الإشعار دون فتح التطبيق",
   "quickRecordFeatureAppealHeadline": "تسجيل الجرعة بنقرة واحدة من شاشة الإشعارات",
   "quickRecordFeatureAppealBody": "عند الضغط المطول على إشعار التذكير، يظهر إجراء \"تم التناول\"، مما يتيح لك تسجيل الجرعة دون فتح التطبيق.",

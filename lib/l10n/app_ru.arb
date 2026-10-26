@@ -488,7 +488,7 @@
   "healthCareIntegrationFeatureAppealShortDescription": "Поделитесь записями о месячных с приложением «Здоровье»",
   "healthCareIntegrationFeatureAppealHeadline": "Можно подключить к приложению «Здоровье»",
   "healthCareIntegrationFeatureAppealBody": "Данные о месячных, записанные в Pilll, можно автоматически синхронизировать с приложением «Здоровье». Вы сможете просматривать их вместе с другими данными о здоровье и использовать в других приложениях.",
-  "quickRecordFeatureAppealTitle": "Запись приёма прямо из уведомлений",
+  "quickRecordFeatureAppealTitle": "Журнал приёма таблеток прямо из уведомления",
   "quickRecordFeatureAppealShortDescription": "Запись через уведомление без открытия приложения",
   "quickRecordFeatureAppealHeadline": "Одно касание — запись приёма прямо с экрана уведомлений",
   "quickRecordFeatureAppealBody": "Нажмите и удерживайте уведомление-напоминание, чтобы появилось действие «Принято» — это позволяет записать приём таблетки без открытия приложения.",

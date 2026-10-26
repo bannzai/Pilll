@@ -488,7 +488,7 @@
   "healthCareIntegrationFeatureAppealShortDescription": "Kopīgojiet mēnešreižu ierakstus ar lietotni Veselība",
   "healthCareIntegrationFeatureAppealHeadline": "Varat savienot ar lietotni Veselība",
   "healthCareIntegrationFeatureAppealBody": "Pilll reģistrētos mēnešreižu datus varat automātiski sinhronizēt ar lietotni Veselība. Tajā varat tos apskatīt kopā ar citiem veselības datiem un izmantot arī citās lietotnēs.",
-  "quickRecordFeatureAppealTitle": "Reģistrēt lietošanu tieši no paziņojuma",
+  "quickRecordFeatureAppealTitle": "Tablešu lietošanas ieraksts tieši no paziņojuma",
   "quickRecordFeatureAppealShortDescription": "Ierakstīt paziņojumā, neatverot lietotni",
   "quickRecordFeatureAppealHeadline": "Vienu pieskārienu reģistrēšana paziņojumu ekrānā",
   "quickRecordFeatureAppealBody": "Ilgi nospiežot atgādinājuma paziņojumu, parādīsies darbība „Atzīmēt kā lietotu”, kas ļauj reģistrēt tabletes lietošanu, neatverot lietotni.",

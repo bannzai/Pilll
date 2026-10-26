@@ -488,7 +488,7 @@
   "healthCareIntegrationFeatureAppealShortDescription": "Jaa kuukautismerkinnät Terveys-sovelluksen kanssa",
   "healthCareIntegrationFeatureAppealHeadline": "Voit yhdistää Terveys-appiin",
   "healthCareIntegrationFeatureAppealBody": "Voit synkronoida Pillliin kirjaamasi kuukautistiedot automaattisesti Terveys-sovellukseen. Näet ne muiden terveystietojesi rinnalla ja voit käyttää niitä myös muissa sovelluksissa.",
-  "quickRecordFeatureAppealTitle": "Kirjaa suoraan ilmoituksesta",
+  "quickRecordFeatureAppealTitle": "Pilleriloki suoraan ilmoituksesta",
   "quickRecordFeatureAppealShortDescription": "Tallenna ilmoituksesta avaamatta sovellusta",
   "quickRecordFeatureAppealHeadline": "Merkitse annos napauttamalla ilmoitusta",
   "quickRecordFeatureAppealBody": "Kun painat muistutusilmoitusta pitkään, näkyviin tulee \"Otettu\"-toiminto, jonka avulla voit kirjata pillerin otetuksi avaamatta sovellusta.",

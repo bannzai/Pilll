@@ -488,7 +488,7 @@
   "healthCareIntegrationFeatureAppealShortDescription": "Поділіться записами про місячні із застосунком «Здоров’я»",
   "healthCareIntegrationFeatureAppealHeadline": "Можна підключити до застосунку «Здоров’я»",
   "healthCareIntegrationFeatureAppealBody": "Дані про місячні, записані в Pilll, можна автоматично синхронізувати з програмою «Здоров’я». Ви зможете переглядати їх разом з іншими даними про здоров’я та використовувати в інших програмах.",
-  "quickRecordFeatureAppealTitle": "Зафіксувати прийом прямо зі сповіщення",
+  "quickRecordFeatureAppealTitle": "Запис прийому просто зі сповіщення",
   "quickRecordFeatureAppealShortDescription": "Запис через сповіщення без відкриття додатка",
   "quickRecordFeatureAppealHeadline": "Запис прийому одним дотиком на екрані сповіщень",
   "quickRecordFeatureAppealBody": "Якщо натиснути й утримувати сповіщення-нагадування, з’явиться дія «Прийнято», яка дозволить зафіксувати прийом без відкриття додатка.",

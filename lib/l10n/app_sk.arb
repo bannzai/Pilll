@@ -488,7 +488,7 @@
   "healthCareIntegrationFeatureAppealShortDescription": "Zdieľajte záznamy o menštruácii s aplikáciou Zdravie",
   "healthCareIntegrationFeatureAppealHeadline": "Môžete prepojiť s aplikáciou Zdravie",
   "healthCareIntegrationFeatureAppealBody": "Údaje o menštruácii zaznamenané v Pilll môžete automaticky synchronizovať s aplikáciou Zdravie. Môžete si ich prezerať spolu s ďalšími zdravotnými údajmi a používať ich aj v iných aplikáciách.",
-  "quickRecordFeatureAppealTitle": "Zaznamenať užitie priamo z upozornenia",
+  "quickRecordFeatureAppealTitle": "Záznam o užití priamo z upozornenia",
   "quickRecordFeatureAppealShortDescription": "Zaznamenať z upozornenia bez otvorenia aplikácie",
   "quickRecordFeatureAppealHeadline": "Zaznamenanie užitia jedným ťuknutím priamo v notifikácii",
   "quickRecordFeatureAppealBody": "Pri dlhom stlačení upozornenia sa zobrazí akcia \"Označiť ako užité\", vďaka čomu si môžete zaznamenať užitie bez otvorenia aplikácie.",

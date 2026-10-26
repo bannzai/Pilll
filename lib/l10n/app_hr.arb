@@ -488,7 +488,7 @@
   "healthCareIntegrationFeatureAppealShortDescription": "Podijelite zapise o menstruaciji s aplikacijom Zdravlje",
   "healthCareIntegrationFeatureAppealHeadline": "Možete povezati s aplikacijom Zdravlje",
   "healthCareIntegrationFeatureAppealBody": "Podatke o menstruaciji zabilježene u aplikaciji Pilll možete automatski sinkronizirati s aplikacijom Zdravlje. Možete ih pregledavati uz ostale zdravstvene podatke i koristiti u drugim aplikacijama.",
-  "quickRecordFeatureAppealTitle": "Zabilježi uzimanje iz obavijesti",
+  "quickRecordFeatureAppealTitle": "Evidencija uzimanja izravno iz obavijesti",
   "quickRecordFeatureAppealShortDescription": "Zabilježite putem obavijesti bez otvaranja aplikacije",
   "quickRecordFeatureAppealHeadline": "Jednim dodirom u obavijestima zabilježite uzimanje",
   "quickRecordFeatureAppealBody": "If you long-press the reminder notification, the \"Taken\" action will appear and you can record the dose without opening the app.",

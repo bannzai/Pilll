@@ -488,7 +488,7 @@
   "healthCareIntegrationFeatureAppealShortDescription": "Споделете записите за мензис със Здраве",
   "healthCareIntegrationFeatureAppealHeadline": "Можете да свържете с приложението „Здраве“",
   "healthCareIntegrationFeatureAppealBody": "Можете автоматично да синхронизирате данните за мензиса, записани в Pilll, с приложението „Здраве“. Там можете да ги преглеждате заедно с другите си здравни данни и да ги използвате и в други приложения.",
-  "quickRecordFeatureAppealTitle": "Записвайте приема директно от известието",
+  "quickRecordFeatureAppealTitle": "Добавяне на запис на приема направо от известието",
   "quickRecordFeatureAppealShortDescription": "Записвай от известията, без да отваряш приложението",
   "quickRecordFeatureAppealHeadline": "Запис на приема с едно докосване от известието",
   "quickRecordFeatureAppealBody": "При продължително натискане върху напомнянето се показва действието „Приех\", което ви позволява да записвате приема, без да отваряте приложението.",

@@ -488,7 +488,7 @@
   "healthCareIntegrationFeatureAppealShortDescription": "Menstruációs feljegyzések megosztása az Egészség appal",
   "healthCareIntegrationFeatureAppealHeadline": "Összekapcsolhatod az Egészség appal",
   "healthCareIntegrationFeatureAppealBody": "A Pilllben rögzített menstruációs adatokat automatikusan szinkronizálhatod az Egészség alkalmazással. Így a többi egészségügyi adatoddal együtt láthatod és más alkalmazásokban is használhatod őket.",
-  "quickRecordFeatureAppealTitle": "Értesítésből közvetlen rögzítés",
+  "quickRecordFeatureAppealTitle": "Tablettaszedési napló közvetlenül az értesítésből",
   "quickRecordFeatureAppealShortDescription": "Értesítésből rögzítés az alkalmazás megnyitása nélkül",
   "quickRecordFeatureAppealHeadline": "Tabletta bevétele egy koppintással az értesítési képernyőn",
   "quickRecordFeatureAppealBody": "Ha hosszan megnyomod az emlékeztető-értesítést, megjelenik a „Bevettem” művelet, így az alkalmazás megnyitása nélkül is rögzítheted a bevételt.",
