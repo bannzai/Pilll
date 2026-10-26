@@ -114,7 +114,7 @@
   "takingTime": "Time to take your pill",
   "takingHistoryIsPremiumFeature": "Pill history is a Premium feature",
   "pauseTakingDoesNotAdvancePillNumber": "If you pause taking your pill, the pill number won't advance",
-  "pauseTakingFromNumber": "Take a break starting from pill {number}?",
+  "pauseTakingFromNumber": "Pause taking pills starting with pill {number}?",
   "lastTakenPlusOnePillNumber": "Pill {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "taking",
   "estimatedEndPillNumber": "Last pill from previous sheet: #{estimatedEndPillNumber}",

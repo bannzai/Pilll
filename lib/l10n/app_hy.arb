@@ -114,7 +114,7 @@
   "takingTime": "Հաբն ընդունելու ժամը",
   "takingHistoryIsPremiumFeature": "Ընդունման պատմությունը պրեմիում գործառույթ է",
   "pauseTakingDoesNotAdvancePillNumber": "Եթե ժամանակավորապես դադարեցնեք հաբի ընդունումը, հաբի համարը առաջ չի անցնի",
-  "pauseTakingFromNumber": "{number}-ից դեղի ընդունումը դադարեցնե՞լ:",
+  "pauseTakingFromNumber": "Ցանկանո՞ւմ եք ժամանակավորապես դադարեցնել հաբերի ընդունումը՝ սկսած {number}-րդ հաբից։",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}-րդ",
   "taking": "ընդունում",
   "estimatedEndPillNumber": "Նախորդ փաթեթի վերջը՝ {estimatedEndPillNumber} համար",

@@ -114,7 +114,7 @@
   "takingTime": "পিল খাওয়ার সময়",
   "takingHistoryIsPremiumFeature": "সেবনের ইতিহাস প্রিমিয়াম সুবিধা",
   "pauseTakingDoesNotAdvancePillNumber": "পিল খাওয়া সাময়িক বন্ধ রাখলে পিল নম্বর এগোবে না",
-  "pauseTakingFromNumber": "{number} থেকে পিল সেবন বিরতি নিতে চান?",
+  "pauseTakingFromNumber": "{number} নম্বর পিল থেকে খাওয়া সাময়িকভাবে বন্ধ রাখতে চান?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}নং",
   "taking": "সেবন",
   "estimatedEndPillNumber": "আগের শিটের শেষ: {estimatedEndPillNumber} নম্বর",

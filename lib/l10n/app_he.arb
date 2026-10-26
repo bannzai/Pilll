@@ -114,7 +114,7 @@
   "takingTime": "שעת נטילת הגלולה",
   "takingHistoryIsPremiumFeature": "היסטוריית נטילה היא תכונת פרימיום",
   "pauseTakingDoesNotAdvancePillNumber": "בהפסקה זמנית של נטילת הגלולות, מספר גלולה לא יתקדם",
-  "pauseTakingFromNumber": "האם להפסיק את נטילת הכדורים מ־{number}?",
+  "pauseTakingFromNumber": "להפסיק זמנית את נטילת הגלולות החל מגלולה מספר {number}?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "נטילה",
   "estimatedEndPillNumber": "הגלולה האחרונה בגיליון הקודם: {estimatedEndPillNumber}",

@@ -114,7 +114,7 @@
   "takingTime": "পিল খোৱাৰ সময়",
   "takingHistoryIsPremiumFeature": "সেৱনৰ ইতিহাস প্ৰিমিয়াম সুবিধা",
   "pauseTakingDoesNotAdvancePillNumber": "পিল খোৱা সাময়িকভাৱে বন্ধ কৰিলে পিল নম্বৰ আগবাঢ়ি নাযায়",
-  "pauseTakingFromNumber": "{number} নম্বৰৰ পৰা ঔষধ খোৱা বন্ধ কৰিব নেকি?",
+  "pauseTakingFromNumber": "{number} নম্বৰৰ বড়িৰ পৰা খোৱাটো কিছুদিনৰ বাবে বন্ধ ৰাখিব বিচাৰেনে?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}নং",
   "taking": "সেৱন",
   "estimatedEndPillNumber": "আগৰ শ্বীটৰ শেষ: {estimatedEndPillNumber} নং",

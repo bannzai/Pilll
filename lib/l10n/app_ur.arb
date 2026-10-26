@@ -114,7 +114,7 @@
   "takingTime": "گولی لینے کا وقت",
   "takingHistoryIsPremiumFeature": "گولی لینے کی ہسٹری پریمیم فیچر ہے",
   "pauseTakingDoesNotAdvancePillNumber": "اگر گولیاں لینا کچھ وقت کے لیے روک دیں تو گولی نمبر آگے نہیں بڑھے گا",
-  "pauseTakingFromNumber": "{number} سے دوا لینا بند کر دیں گے؟",
+  "pauseTakingFromNumber": "کیا آپ گولی نمبر {number} سے گولیاں لینا عارضی طور پر روکنا چاہتی ہیں؟",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} نمبر",
   "taking": "استعمال",
   "estimatedEndPillNumber": "گزشتہ شیٹ کا آخری: {estimatedEndPillNumber} نمبر",

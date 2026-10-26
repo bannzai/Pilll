@@ -114,7 +114,7 @@
   "takingTime": "Hap alma saati",
   "takingHistoryIsPremiumFeature": "Kullanım geçmişi bir Premium özelliğidir",
   "pauseTakingDoesNotAdvancePillNumber": "Hap almaya ara verirseniz hap numarası ilerlemez",
-  "pauseTakingFromNumber": "{number}'den itibaren alımı durduracak mısınız?",
+  "pauseTakingFromNumber": "{number} numaralı haptan itibaren hap almaya ara vermek ister misiniz?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}. hap",
   "taking": "alma",
   "estimatedEndPillNumber": "Önceki paketin sonu: {estimatedEndPillNumber}. hap",

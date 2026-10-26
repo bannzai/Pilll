@@ -114,7 +114,7 @@
   "takingTime": "Zeit für die Pille",
   "takingHistoryIsPremiumFeature": "Der Einnahmeverlauf ist eine Premium-Funktion",
   "pauseTakingDoesNotAdvancePillNumber": "Wenn du eine Einnahmepause machst, rückt die Pillennummer nicht weiter",
-  "pauseTakingFromNumber": "Möchten Sie ab {number} mit der Einnahme pausieren?",
+  "pauseTakingFromNumber": "Möchtest du ab Pille {number} eine Einnahmepause machen?",
   "lastTakenPlusOnePillNumber": "Nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Einnahme",
   "estimatedEndPillNumber": "Ende der vorherigen Packung: {estimatedEndPillNumber}",

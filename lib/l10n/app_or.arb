@@ -114,7 +114,7 @@
   "takingTime": "ବଟିକା ଖାଇବା ସମୟ",
   "takingHistoryIsPremiumFeature": "ସେବନ ଇତିହାସ ଏକ ପ୍ରିମିୟମ୍ ସୁବିଧା",
   "pauseTakingDoesNotAdvancePillNumber": "ବଟିକା ଖାଇବା କିଛି ସମୟ ପାଇଁ ବନ୍ଦ ରଖିଲେ ବଟିକା ନମ୍ବର ଆଗକୁ ବଢ଼ିବ ନାହିଁ",
-  "pauseTakingFromNumber": "{number}ରୁ ସେବନ ବନ୍ଦ କରିବେ କି?",
+  "pauseTakingFromNumber": "ଆପଣ {number} ନମ୍ବର ବଟିକାରୁ ବଟିକା ଖାଇବା କିଛି ସମୟ ପାଇଁ ବନ୍ଦ ରଖିବାକୁ ଚାହୁଁଛନ୍ତି କି?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}ତମ",
   "taking": "ସେବନ",
   "estimatedEndPillNumber": "ଗତ ସିଟ୍‌ର ଶେଷ: {estimatedEndPillNumber} ନମ୍ବର",

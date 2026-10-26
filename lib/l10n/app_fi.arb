@@ -114,7 +114,7 @@
   "takingTime": "Pillerin ottoaika",
   "takingHistoryIsPremiumFeature": "Pillerihistoria on Premium-ominaisuus",
   "pauseTakingDoesNotAdvancePillNumber": "Jos pidät tauon pillereiden ottamisesta, pillerinumero ei siirry eteenpäin",
-  "pauseTakingFromNumber": "Keskeytätkö lääkkeen ottamisen numerosta {number} alkaen?",
+  "pauseTakingFromNumber": "Haluatko pitää tauon pillereiden ottamisesta pilleristä {number} alkaen?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}.",
   "taking": "ottaminen",
   "estimatedEndPillNumber": "Edellisen paketin loppu: {estimatedEndPillNumber}. pilleri",

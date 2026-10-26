@@ -114,7 +114,7 @@
   "takingTime": "Godzina przyjęcia tabletki",
   "takingHistoryIsPremiumFeature": "Historia przyjmowania tabletek to funkcja premium",
   "pauseTakingDoesNotAdvancePillNumber": "Jeśli zrobisz przerwę w przyjmowaniu tabletek, numer tabletki nie przesunie się dalej",
-  "pauseTakingFromNumber": "Czy przerwać zażywanie od {number}?",
+  "pauseTakingFromNumber": "Czy chcesz zrobić przerwę w przyjmowaniu tabletek od tabletki numer {number}?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}.",
   "taking": "zażywanie",
   "estimatedEndPillNumber": "Ostatnia z poprzedniej blisterki: {estimatedEndPillNumber}",

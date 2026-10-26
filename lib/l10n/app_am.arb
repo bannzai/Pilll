@@ -114,7 +114,7 @@
   "takingTime": "የክኒን መውሰጃ ሰዓት",
   "takingHistoryIsPremiumFeature": "አወሳሰድ ታሪክ የፕሪሚየም ባህሪ ነው",
   "pauseTakingDoesNotAdvancePillNumber": "ክኒን መውሰድን ለጊዜው ካቆሙ፣ ክኒን ቁጥር ወደ ቀጣዩ አይሄድም",
-  "pauseTakingFromNumber": "ከ{number} ጀምሮ መድኃኒቱን መውሰድ ማቆም ይፈልጋሉ?",
+  "pauseTakingFromNumber": "ከክኒን ቁጥር {number} ጀምሮ መውሰድ ለጊዜው ማቆም ይፈልጋሉ?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}ኛ",
   "taking": "መውሰድ",
   "estimatedEndPillNumber": "ባለፈው ሺት መጨረሻ፡ {estimatedEndPillNumber}ኛ",
