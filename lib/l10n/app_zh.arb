@@ -469,7 +469,7 @@
   "appearanceModeDateFeatureAppealHeadline": "可以在药板上查看日期",
   "appearanceModeDateFeatureAppealBody": "在药板的格子中显示日期，就能一眼查看服药历史和接下来的服药计划。切换“编号”和“日期”模式，选择适合你的显示方式吧。",
   "recordPillFeatureAppealTitle": "轻松回顾服药历史",
-  "recordPillFeatureAppealShortDescription": "可快速查看服用时间",
+  "recordPillFeatureAppealShortDescription": "一眼查看服药时间",
   "recordPillFeatureAppealHeadline": "在主屏幕记录服药",
   "recordPillFeatureAppealBody": "只需点击主屏幕上的药片表，即可记录当天的服药情况。如果误操作记录，再次点击即可撤销。服药记录也可以随时查看，让您安心持续用药。",
   "menstruationFeatureAppealTitle": "记录并预测生理",
