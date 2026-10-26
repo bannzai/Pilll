@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} број",
   "selectPauseStartDate": "Изаберите датум почетка паузе у узимању пилуле",
   "selectPausePeriod": "Изаберите трајање паузе у узимању пилула",
-  "pauseStartDate": "Datum početka pauze u uzimanju",
+  "pauseStartDate": "Датум почетка паузе у узимању пилула",
   "pauseEndDate": "Završetak pauze uzimanja",
   "endPillSheet": "Blister završen",
   "discardPillSheet": "Одбаци блистер",

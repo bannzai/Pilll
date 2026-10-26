@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} หมายเลข",
   "selectPauseStartDate": "เลือกวันที่เริ่มพักทานยา",
   "selectPausePeriod": "เลือกระยะเวลาหยุดทานยาค่ะ",
-  "pauseStartDate": "วันเริ่มต้นหยุดยา",
+  "pauseStartDate": "วันที่เริ่มพักการทานยาเม็ด",
   "pauseEndDate": "วันสิ้นสุดการพักยา",
   "endPillSheet": "แผงยาคุมเสร็จสิ้น",
   "discardPillSheet": "ทิ้งแผงยา",

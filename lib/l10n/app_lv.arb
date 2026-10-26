@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nr.",
   "selectPauseStartDate": "Izvēlieties tablešu lietošanas pārtraukuma sākuma datumu",
   "selectPausePeriod": "Izvēlieties tablešu lietošanas pārtraukuma ilgumu",
-  "pauseStartDate": "Pārtraukuma sākuma datums",
+  "pauseStartDate": "Tablešu lietošanas pārtraukuma sākuma datums",
   "pauseEndDate": "Pārtraukuma beigu datums",
   "endPillSheet": "Tablešu blistera pabeigšana",
   "discardPillSheet": "Blistera utilizācija",

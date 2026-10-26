@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} број",
   "selectPauseStartDate": "Избор на датум за почеток на паузата од земање таблета",
   "selectPausePeriod": "Изберете времетраење на паузата во земањето таблета",
-  "pauseStartDate": "Почетен датум на пауза",
+  "pauseStartDate": "Датум на почеток на паузата во земањето таблети",
   "pauseEndDate": "Датум на завршување на паузата",
   "endPillSheet": "Пилула пакетот завршен",
   "discardPillSheet": "Отфрлување на блистерот",

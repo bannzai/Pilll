@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} číslo",
   "selectPauseStartDate": "Vyberte dátum začiatku prestávky v užívaní tabletiek",
   "selectPausePeriod": "Vyberte dĺžku prestávky v užívaní tabletiek",
-  "pauseStartDate": "Začiatok prestávky v užívaní",
+  "pauseStartDate": "Dátum začiatku prestávky v užívaní tabletiek",
   "pauseEndDate": "Koniec prestávky v užívaní",
   "endPillSheet": "Balenie dokončené",
   "discardPillSheet": "Zlikvidovať blister s tabletkami",

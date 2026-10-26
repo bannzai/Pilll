@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nr.",
   "selectPauseStartDate": "Kies de begindatum van je stopweek",
   "selectPausePeriod": "Kies de duur van je pillenpauze",
-  "pauseStartDate": "Pilpauze startdatum",
+  "pauseStartDate": "Startdatum van de pilpauze",
   "pauseEndDate": "Einddatum innamepauze",
   "endPillSheet": "Pilstrip voltooid",
   "discardPillSheet": "Pillenstrip weggooien",

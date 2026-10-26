@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} n°",
   "selectPauseStartDate": "Choisir la date de début de la pause de pilule",
   "selectPausePeriod": "Choisissez la durée de la pause dans la prise de pilule",
-  "pauseStartDate": "Date de début de pause",
+  "pauseStartDate": "Date de début de la pause de pilule",
   "pauseEndDate": "Date de fin de pause",
   "endPillSheet": "Pack de pilules terminé",
   "discardPillSheet": "Jeter le paquet de pilules",

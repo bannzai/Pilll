@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nömrə",
   "selectPauseStartDate": "Həb qəbuluna fasilənin başlanğıc tarixini seçin",
   "selectPausePeriod": "Həb qəbuluna fasilənin müddətini seçin",
-  "pauseStartDate": "Qəbul fasiləsinin başlama tarixi",
+  "pauseStartDate": "Həb qəbuluna fasilənin başlama tarixi",
   "pauseEndDate": "Dərman fasiləsinin bitiş tarixi",
   "endPillSheet": "Həb planşeti tamamlandı",
   "discardPillSheet": "Həb lövhəsinin imhası",

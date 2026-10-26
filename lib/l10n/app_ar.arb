@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} رقم",
   "selectPauseStartDate": "اختيار تاريخ بدء فترة التوقف عن تناول الحبوب",
   "selectPausePeriod": "اختاري مدة التوقف عن تناول الحبوب",
-  "pauseStartDate": "تاريخ بداية فترة التوقف عن التناول",
+  "pauseStartDate": "تاريخ بدء فترة التوقف عن تناول الحبوب",
   "pauseEndDate": "تاريخ انتهاء فترة التوقف عن تناول الحبوب",
   "endPillSheet": "انتهى شريط الحبوب",
   "discardPillSheet": "إتلاف شريط الحبوب",

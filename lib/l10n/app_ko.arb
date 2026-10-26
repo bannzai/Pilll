@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}번",
   "selectPauseStartDate": "복용 휴식 시작일 선택",
   "selectPausePeriod": "복용 휴식 기간을 선택해요",
-  "pauseStartDate": "휴약 시작일",
+  "pauseStartDate": "알약 복용 휴식 시작일",
   "pauseEndDate": "휴약기 종료일",
   "endPillSheet": "피임약 팩 종료",
   "discardPillSheet": "피임약 시트 폐기",

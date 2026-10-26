@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nr.",
   "selectPauseStartDate": "Veldu upphafsdag hlés frá pillutöku",
   "selectPausePeriod": "Veldu lengd hlés frá pillutöku",
-  "pauseStartDate": "Upphafsdagur inntökuhlés",
+  "pauseStartDate": "Upphafsdagur pilluhléss",
   "pauseEndDate": "Lokadagur hvíldarskipti",
   "endPillSheet": "Pillublaði lokið",
   "discardPillSheet": "Förgun pillupakkningar",

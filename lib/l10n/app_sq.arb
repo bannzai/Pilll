@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nr.",
   "selectPauseStartDate": "Zgjidhni datën e fillimit të pushimit nga marrja e pilulës",
   "selectPausePeriod": "Zgjidhni kohëzgjatjen e pushimit nga marrja e pilulave",
-  "pauseStartDate": "Data e fillimit të pushimit të marrjes",
+  "pauseStartDate": "Data e fillimit të pushimit nga marrja e pilulave",
   "pauseEndDate": "Data e përfundimit të pushimit",
   "endPillSheet": "Fleta e pilulës përfundoi",
   "discardPillSheet": "Heqja e fletës së pilules",

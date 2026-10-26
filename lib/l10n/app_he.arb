@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} מס׳",
   "selectPauseStartDate": "בחירת תאריך תחילת ההפסקה בנטילת הגלולה",
   "selectPausePeriod": "בחירת משך ההפסקה בנטילת הגלולה",
-  "pauseStartDate": "תאריך תחילת ההפסקה",
+  "pauseStartDate": "תאריך תחילת ההפסקה בנטילת הגלולות",
   "pauseEndDate": "תאריך סיום ההפסקה",
   "endPillSheet": "סיום אריזת הגלולות",
   "discardPillSheet": "פינוי עלה כדורים",

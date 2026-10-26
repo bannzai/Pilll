@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}. szám",
   "selectPauseStartDate": "A tablettaszedési szünet kezdőnapjának kiválasztása",
   "selectPausePeriod": "Válaszd ki a tablettaszedési szünet hosszát",
-  "pauseStartDate": "Szedés szünet kezdő dátuma",
+  "pauseStartDate": "A tablettaszedési szünet kezdőnapja",
   "pauseEndDate": "Szedési szünet befejezési dátuma",
   "endPillSheet": "Tablettacsomag befejezve",
   "discardPillSheet": "Tablettacsomag eldobása",

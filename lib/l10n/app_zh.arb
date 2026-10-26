@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}号",
   "selectPauseStartDate": "选择停药期开始日期",
   "selectPausePeriod": "选择停药期时长",
-  "pauseStartDate": "停药开始日期",
+  "pauseStartDate": "停药期开始日期",
   "pauseEndDate": "休药期结束日期",
   "endPillSheet": "避孕药片结束",
   "discardPillSheet": "药板处理",

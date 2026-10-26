@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} bilang",
   "selectPauseStartDate": "Piliin ang petsa ng simula ng pahinga sa pag-inom ng pildoras",
   "selectPausePeriod": "Piliin ninyo ang tagal ng pahinga sa pag-inom ng pildoras",
-  "pauseStartDate": "Simula ng Pahinga sa Pag-inom",
+  "pauseStartDate": "Petsa ng simula ng pahinga sa pag-inom ng pildoras",
   "pauseEndDate": "Petsa ng pagtatapos ng pahinga sa pag-inom",
   "endPillSheet": "Tapos na ang Pill Pack",
   "discardPillSheet": "Pagtatapon ng Pill Sheet",

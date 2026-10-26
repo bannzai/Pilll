@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} համար",
   "selectPauseStartDate": "Ընտրեք հաբի ընդունման ընդմիջման մեկնարկի ամսաթիվը",
   "selectPausePeriod": "Ընտրեք հաբերի ընդունման ընդմիջման տևողությունը",
-  "pauseStartDate": "Դեղընդունման դադարի սկսման ամսաթիվ",
+  "pauseStartDate": "Հաբերի ընդունման ընդմիջման մեկնարկի ամսաթիվ",
   "pauseEndDate": "Դադարի ավարտի ամսաթիվ",
   "endPillSheet": "Հաբերի փաթեթ ավարտ",
   "discardPillSheet": "Դեղահաբերի փաթեթի գցում",

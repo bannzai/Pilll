@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nr.",
   "selectPauseStartDate": "Pasirinkite tablečių vartojimo pertraukos pradžios datą",
   "selectPausePeriod": "Pasirinkite tablečių vartojimo pertraukos trukmę",
-  "pauseStartDate": "Vartojimo pertraukos pradžia",
+  "pauseStartDate": "Tablečių vartojimo pertraukos pradžios data",
   "pauseEndDate": "Vartojimo pertraukos pabaigos data",
   "endPillSheet": "Tablečių pakuotė baigta",
   "discardPillSheet": "Tablečių plokštelės šalinimas",

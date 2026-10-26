@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} අංකය",
   "selectPauseStartDate": "පෙති ගැනීමේ විරාමය ආරම්භ වන දිනය තෝරන්න",
   "selectPausePeriod": "පෙති ගැනීමේ විරාමයේ කාලය තෝරන්න",
-  "pauseStartDate": "ඖෂධ ගැනීම් විරාම ආරම්භක දිනය",
+  "pauseStartDate": "පෙති ගැනීමේ විරාමය ආරම්භ වන දිනය",
   "pauseEndDate": "ඖෂධ විරාමයේ අවසන් දිනය",
   "endPillSheet": "ගුලි පත්‍ර අවසන්",
   "discardPillSheet": "පෙති පත්‍රය ඉවත් කිරීම",

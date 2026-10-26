@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nro",
   "selectPauseStartDate": "Valitse pilleritauon alkamispäivä",
   "selectPausePeriod": "Valitse pilleritauon pituus",
-  "pauseStartDate": "Käyttötauon aloituspäivä",
+  "pauseStartDate": "Pilleritauon alkamispäivä",
   "pauseEndDate": "Käyttötauon päättymispäivä",
   "endPillSheet": "Ehkäisytablettipakkaus loppu",
   "discardPillSheet": "Pilleriarkin hävittäminen",

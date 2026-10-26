@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} नंबर",
   "selectPauseStartDate": "गोली लेने के विराम की शुरुआत की तारीख चुनें",
   "selectPausePeriod": "गोली लेने के बीच विराम की अवधि चुनें",
-  "pauseStartDate": "सेवन विराम प्रारंभ तिथि",
+  "pauseStartDate": "गोली लेने में विराम शुरू होने की तारीख",
   "pauseEndDate": "सेवन विराम समाप्ति तारीख",
   "endPillSheet": "पिल शीट समाप्त",
   "discardPillSheet": "पिल्ल शीट निपटान",

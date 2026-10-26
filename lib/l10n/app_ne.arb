@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} नम्बर",
   "selectPauseStartDate": "चक्की खाने विश्रामको सुरु मिति छान्नुहोस्",
   "selectPausePeriod": "चक्की खाने बीचको विश्राम अवधि छान्नुहोस्",
-  "pauseStartDate": "सेवन बिदाको सुरुवात मिति",
+  "pauseStartDate": "चक्की खानबाट विश्राम सुरु हुने मिति",
   "pauseEndDate": "औषधि विश्राम समाप्ति मिति",
   "endPillSheet": "गर्भनिरोधक चक्कीको पत्ता समाप्त",
   "discardPillSheet": "पिल्स सिट फाल्नु",

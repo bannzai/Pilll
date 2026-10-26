@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} നമ്പർ",
   "selectPauseStartDate": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേള തുടങ്ങുന്ന തീയതി തിരഞ്ഞെടുക്കൂ",
   "selectPausePeriod": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേളയുടെ ദൈർഘ്യം തിരഞ്ഞെടുക്കൂ",
-  "pauseStartDate": "സേവന വിശ്രമ ആരംഭ തീയതി",
+  "pauseStartDate": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേള തുടങ്ങുന്ന തീയതി",
   "pauseEndDate": "മരുന്ന് ഇടവേള അവസാന തീയതി",
   "endPillSheet": "പിൽ ഷീറ്റ് പൂർത്തിയായി",
   "discardPillSheet": "പിൽ ഷീറ്റ് നീക്കം ചെയ്യൽ",

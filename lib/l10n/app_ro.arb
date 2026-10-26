@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nr.",
   "selectPauseStartDate": "Alege data de început a pauzei de pilulă",
   "selectPausePeriod": "Alege durata pauzei de la pilulă",
-  "pauseStartDate": "Data de începere a pauzei",
+  "pauseStartDate": "Data începerii pauzei de la pilulă",
   "pauseEndDate": "Data de încheiere a pauzei de administrare",
   "endPillSheet": "Blister terminat",
   "discardPillSheet": "Eliminare blister",

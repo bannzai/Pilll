@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nr",
   "selectPauseStartDate": "Vali pillipausi alguskuupäev",
   "selectPausePeriod": "Vali pillipausi kestus",
-  "pauseStartDate": "Pausi alguskuupäev",
+  "pauseStartDate": "Pillipausi alguskuupäev",
   "pauseEndDate": "Võtmispausi lõppkuupäev",
   "endPillSheet": "Pillipakk lõppenud",
   "discardPillSheet": "Pillipakendi utiliseerimine",

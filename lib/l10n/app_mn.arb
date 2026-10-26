@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} дугаар",
   "selectPauseStartDate": "Эм уух завсарлагын эхлэх өдрийг сонгоно уу",
   "selectPausePeriod": "Эм уух завсарлагын хугацааг сонгоно уу",
-  "pauseStartDate": "Эм уухыг завсарлах эхлэх өдөр",
+  "pauseStartDate": "Эм уух завсарлагын эхлэх өдөр",
   "pauseEndDate": "Эмийн завсарлага дуусах өдөр",
   "endPillSheet": "Пиллийн хуудас дууссан",
   "discardPillSheet": "Эмийн хуудас устгах",

@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} núm.",
   "selectPauseStartDate": "Escolle a data de inicio da pausa da pílula",
   "selectPausePeriod": "Escolle a duración da pausa na toma da pílula",
-  "pauseStartDate": "Data de inicio da pausa na toma",
+  "pauseStartDate": "Data de inicio da pausa da pílula",
   "pauseEndDate": "Data de fin do descanso",
   "endPillSheet": "Folla de píldoras rematada",
   "discardPillSheet": "Desechar blíster de píldoras",

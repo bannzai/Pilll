@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}-raqam",
   "selectPauseStartDate": "Tabletkani ichishdagi tanaffus boshlanadigan sanani tanlang",
   "selectPausePeriod": "Tabletkalarni qabul qilishdagi tanaffus muddatini tanlang",
-  "pauseStartDate": "Qabul qilishni to'xtatish boshlanish sanasi",
+  "pauseStartDate": "Tabletkalarni qabul qilishdagi tanaffus boshlanadigan sana",
   "pauseEndDate": "Dori tanaffusi tugash kuni",
   "endPillSheet": "Tabletka paketi tugadi",
   "discardPillSheet": "Dori varag'ini tashlash",

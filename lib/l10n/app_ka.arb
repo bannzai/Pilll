@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} ნომერი",
   "selectPauseStartDate": "აბის მიღების შესვენების დაწყების თარიღის არჩევა",
   "selectPausePeriod": "აირჩიეთ აბების მიღების შესვენების ხანგრძლივობა",
-  "pauseStartDate": "შესვენების დაწყების თარიღი",
+  "pauseStartDate": "აბების მიღების შესვენების დაწყების თარიღი",
   "pauseEndDate": "შესვენების დასრულების თარიღი",
   "endPillSheet": "ტაბლეტების პაკეტი დასრულდა",
   "discardPillSheet": "ფურცლის განადგურება",

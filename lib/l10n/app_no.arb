@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nr.",
   "selectPauseStartDate": "Velg startdato for p-pillepausen",
   "selectPausePeriod": "Velg lengden på p-pillepausen",
-  "pauseStartDate": "Pause startdato",
+  "pauseStartDate": "Startdato for p-pillepause",
   "pauseEndDate": "Sluttdato for pillpause",
   "endPillSheet": "P-pillepakning fullført",
   "discardPillSheet": "Avhend pillpakke",

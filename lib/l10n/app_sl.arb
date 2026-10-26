@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} št.",
   "selectPauseStartDate": "Izberite datum začetka premora pri jemanju tablet",
   "selectPausePeriod": "Izberite dolžino premora pri jemanju tablet",
-  "pauseStartDate": "Datum začetka odmora",
+  "pauseStartDate": "Datum začetka premora pri jemanju tablet",
   "pauseEndDate": "Datum konca premora v jemanju",
   "endPillSheet": "Pilule končane",
   "discardPillSheet": "Odstrani blister",

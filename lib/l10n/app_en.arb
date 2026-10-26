@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Select pill break start date",
   "selectPausePeriod": "Select the length of your pill break",
-  "pauseStartDate": "Break Start Date",
+  "pauseStartDate": "Pill break start date",
   "pauseEndDate": "Break End Date",
   "endPillSheet": "Pill Sheet Finished",
   "discardPillSheet": "Discard Pill Sheet",

@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} نمبر",
   "selectPauseStartDate": "گولی لینے میں وقفے کی شروعات کی تاریخ منتخب کریں",
   "selectPausePeriod": "گولی لینے میں وقفے کی مدت منتخب کریں",
-  "pauseStartDate": "وقفے کی شروعات کی تاریخ",
+  "pauseStartDate": "گولیاں لینے میں وقفہ شروع ہونے کی تاریخ",
   "pauseEndDate": "دوا کے وقفے کی اختتام کی تاریخ",
   "endPillSheet": "پل شیٹ مکمل",
   "discardPillSheet": "پِل شیٹ ضائع کریں",

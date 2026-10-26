@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} číslo",
   "selectPauseStartDate": "Vybrat datum začátku pauzy v užívání pilulek",
   "selectPausePeriod": "Vybrat délku pauzy v užívání pilulek",
-  "pauseStartDate": "Datum zahájení přestávky v užívání",
+  "pauseStartDate": "Datum začátku pauzy v užívání pilulek",
   "pauseEndDate": "Konec přestávky v užívání",
   "endPillSheet": "Balení pilulek dokončeno",
   "discardPillSheet": "Likvidace blistru",
