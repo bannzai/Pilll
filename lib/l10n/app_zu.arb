@@ -301,7 +301,7 @@
   "purchaseErrorUnexpectedBackendResponseError": "Ukuthenga akutholakali okwamanje. Sicela uzame futhi ngokuhamba kwesikhathi. Uma inkinga iqhubeka, sicela uxhumane nathi ku-Izilungiselelo > Xhumana nathi. Imininingwane: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Imininingwane yalokhu kuthenga isivele isetshenziswa omunye umsebenzisi. Sicela uhlole i-akhawunti ye-{accountName} ongene ngayo kudivayisi yakho.",
   "purchaseErrorInvalidAppUserIdError": "Asikwazanga ukuqinisekisa i-akhawunti yakho. Sicela uqale kabusha uhlelo lokusebenza bese uzama futhi. Imininingwane: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOperationAlreadyInProgressError": "Kunomsebenzi wokuthenga oseqhubekayo. Sicela ulinde isikhashana bese uhlola kabusha.",
+  "purchaseErrorOperationAlreadyInProgressError": "Okunye ukuthenga kuyacutshungulwa. Sicela ulinde isikhashana bese uzama futhi",
   "purchaseErrorUnknownBackendError": "Ngeke ukwazi ukuthenga manje. Sicela uzame futhi ngemva kwesikhathi. Uma inkinga iqhubeka, xhumana nathi ku-Izilungiselelo > Buza. Imininingwane: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Ukuthenga kuhlulekile. Sicela uzame futhi ngemuva kwesikhathi. Uma inkinga ingalungiseki, sicela uxhumane nathi nga Izilungiselelo > Ukuxhumana. Imininingwane: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Ukuthenga kwe-akhawunti yakho yemsebenzisi akuphumelelanga. Sicela uzame futhi ngemuva kwesikhathi. Uma le nkinga ingalungiseki, sicela uxhumane nathi ngokungena ku-Izilungiselelo > Buza. Imininingwane: {exceptionMessage}:{exceptionDetails}",

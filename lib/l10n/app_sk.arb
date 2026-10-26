@@ -301,7 +301,7 @@
   "purchaseErrorUnexpectedBackendResponseError": "Nákup momentálne nie je možný. Skúste to, prosím, znova neskôr. Ak problém pretrváva, kontaktujte nás cez Nastavenia > Kontaktujte nás. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Údaje o nákupe už používa iný používateľ. Skontrolujte, do ktorého účtu {accountName} ste prihlásení v zariadení.",
   "purchaseErrorInvalidAppUserIdError": "Nepodarilo sa overiť váš účet. Reštartujte aplikáciu a skúste to znova. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOperationAlreadyInProgressError": "Prebieha iný nákupný proces. Počkajte chvíľu a potom to skúste znova.",
+  "purchaseErrorOperationAlreadyInProgressError": "Spracúva sa iný nákup. Počkajte chvíľu a skúste to znova",
   "purchaseErrorUnknownBackendError": "Momentálne nie je možné uskutočniť nákup. Počkajte chvíľu a skúste to znovu. Ak sa problém nevyrieši, kontaktujte nás cez Nastavenia > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Nákup sa nepodaril. Skúste to znovu neskôr. Ak sa problém nevyrieši, kontaktujte nás cez Nastavenia > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Nákup pre vášho používateľa nebol úspešný. Skúste to znova o chvíľu. Ak sa problém nevyrieši, kontaktujte nás prostredníctvom Nastavenia > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",

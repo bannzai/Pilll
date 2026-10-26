@@ -301,7 +301,7 @@
   "purchaseErrorUnexpectedBackendResponseError": "Jy kan tans nie 'n aankoop doen nie. Probeer asseblief later weer. As die probleem voortduur, kontak ons via Instellings > Kontak ons. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Die aankoop word reeds deur ’n ander gebruiker gebruik. Kyk asseblief watter {accountName} op jou toestel aangemeld is.",
   "purchaseErrorInvalidAppUserIdError": "Ons kon jou nie verifieer nie. Maak asseblief die app weer oop en probeer weer. Besonderhede: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOperationAlreadyInProgressError": "'n Aankoop proses is reeds aan die gang. Wag asseblief 'n rukkie en probeer weer.",
+  "purchaseErrorOperationAlreadyInProgressError": "Nog ’n aankoop word verwerk. Probeer asseblief oor ’n rukkie weer",
   "purchaseErrorUnknownBackendError": "Die aankoop kan tans nie voltooi word nie. Probeer asseblief later weer. Indien dit voortduur, kontak ons asseblief via Instellings > Kontak. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Aankoop kon nie voltooi word nie. Probeer asseblief later weer. Indien dit steeds nie opgelos word nie, kontak ons asseblief via Instellings > Kontak. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Die aankoop vir u gebruiker het nie geslaag nie. Probeer asseblief later weer. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Kontak. Besonderhede: {exceptionMessage}:{exceptionDetails}",

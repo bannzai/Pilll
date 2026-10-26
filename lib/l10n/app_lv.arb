@@ -301,7 +301,7 @@
   "purchaseErrorUnexpectedBackendResponseError": "Pašlaik pirkumu nevar veikt. Lūdzu, mēģiniet vēlreiz vēlāk. Ja problēma saglabājas, sazinieties ar mums sadaļā Iestatījumi > Sazināties ar mums. Informācija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Pirkuma informāciju jau izmanto cits lietotājs. Lūdzu, pārbaudiet, kurā {accountName} kontā esat pierakstījušies savā ierīcē.",
   "purchaseErrorInvalidAppUserIdError": "Neizdevās apstiprināt jūsu kontu. Lūdzu, pārstartējiet lietotni un mēģiniet vēlreiz. Informācija: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOperationAlreadyInProgressError": "Pašlaik notiek cits pirkuma process. Lūdzu, uzgaidiet un pārbaudiet vēlāk.",
+  "purchaseErrorOperationAlreadyInProgressError": "Tiek apstrādāts cits pirkums. Lūdzu, uzgaidiet brīdi un mēģiniet vēlreiz",
   "purchaseErrorUnknownBackendError": "Pašlaik nevar veikt pirkumu. Lūdzu, pagaidiet un mēģiniet vēlreiz. Ja problēma saglabājas, sazinieties ar mums sadaļā Iestatījumi > Sazināties. Detaļas: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Pirkums neizdevās. Lūdzu, uzgaidiet un mēģiniet vēlreiz. Ja problēma netiek atrisināta, lūdzu, sazinieties ar mums caur Iestatījumi > Sazinieties ar mums. Detaļas: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Pirkums jūsu lietotājam neizdevās. Lūdzu, mēģiniet vēlreiz pēc brīža. Ja problēma nav atrisināta, sazinieties ar mums, izmantojot Iestatījumi > Kontakti. Detaļas: {exceptionMessage}:{exceptionDetails}",

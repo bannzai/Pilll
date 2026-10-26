@@ -301,7 +301,7 @@
   "purchaseErrorUnexpectedBackendResponseError": "Одоогоор худалдан авалт хийх боломжгүй байна. Түр хүлээгээд дахин оролдоно уу. Асуудал арилахгүй бол Тохиргоо > Бидэнтэй холбогдох хэсгээр бидэнтэй холбогдоно уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Худалдан авалтын мэдээллийг өөр хэрэглэгч ашиглаж байна. Төхөөрөмж дээрээ нэвтэрсэн {accountName} бүртгэлээ шалгана уу.",
   "purchaseErrorInvalidAppUserIdError": "Таны бүртгэлийг баталгаажуулах боломжгүй байлаа. Аппыг дахин эхлүүлээд дахин оролдоно уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOperationAlreadyInProgressError": "Өөр худалдан авалт явагдаж байна. Хэсэг хүлээгээд дахин шалгана уу.",
+  "purchaseErrorOperationAlreadyInProgressError": "Өөр худалдан авалт боловсруулагдаж байна. Түр хүлээгээд дахин оролдоно уу",
   "purchaseErrorUnknownBackendError": "Одоогоор худалдан авах боломжгүй байна. Хэсэг хугацааны дараа дахин оролдоно уу. Хэрэв асуудал шийдэгдэхгүй бол Тохиргоо > Холбогдох хэсгээр холбогдоно уу. Дэлгэрэнгүй мэдээлэл: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Худалдан авах амжилтгүй боллоо. Хэсэг хугацааны дараа дахин оролдоно уу. Хэрэв шийдэгдэхгүй бол Тохиргоо > Хандалт-аар холбогдоно уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Таны хэрэглэгчээр худалдан авалт амжилтгүй боллоо. Хэсэг хугацааны дараа дахин оролдоно уу. Хэрэв шийдэгдэхгүй бол Тохиргоо > Лавлагаа хэсгээр холбогдоно уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",

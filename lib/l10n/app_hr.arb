@@ -301,7 +301,7 @@
   "purchaseErrorUnexpectedBackendResponseError": "Kupnja trenutačno nije moguća. Molimo pokušajte ponovno kasnije. Ako se problem nastavi, obratite nam se putem Postavke > Kontaktirajte nas. Pojedinosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Podatke o kupnji već koristi drugi korisnik. Provjerite na koji ste račun {accountName} prijavljeni na uređaju.",
   "purchaseErrorInvalidAppUserIdError": "Nismo mogli potvrditi vaš račun. Ponovno pokrenite aplikaciju i pokušajte opet. Pojedinosti: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOperationAlreadyInProgressError": "Kupovina se već obrađuje. Molimo pričekajte i pokušajte ponovno.",
+  "purchaseErrorOperationAlreadyInProgressError": "Druga kupnja je u tijeku. Pričekajte malo pa pokušajte ponovno",
   "purchaseErrorUnknownBackendError": "Trenutno nije moguće izvršiti kupnju. Molimo pokušajte ponovo kasnije. Ako se problem nastavi, kontaktirajte nas preko Postavke > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Neuspješna kupnja. Molimo pokušajte ponovo kasnije. Ako se problem nastavi, kontaktirajte nas putem Postavke > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Kupnja za vašeg korisnika nije uspjela. Molimo pokušajte ponovo nakon nekog vremena. Ako se problem nastavi, obratite nam se putem Postavke > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",

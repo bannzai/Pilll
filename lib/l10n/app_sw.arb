@@ -301,7 +301,7 @@
   "purchaseErrorUnexpectedBackendResponseError": "Ununuzi haupatikani kwa sasa. Tafadhali jaribu tena baadaye. Tatizo likiendelea, wasiliana nasi kupitia Mipangilio > Wasiliana nasi. Maelezo: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Taarifa za ununuzi huu tayari zinatumiwa na mtumiaji mwingine. Tafadhali angalia akaunti ya {accountName} iliyotumika kuingia kwenye kifaa chako.",
   "purchaseErrorInvalidAppUserIdError": "Hatukuweza kuthibitisha akaunti yako. Tafadhali anzisha upya programu kisha ujaribu tena. Maelezo: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOperationAlreadyInProgressError": "Mchakato wa ununuzi unaendelea tayari. Tafadhali subiri kidogo na ujaribu tena.",
+  "purchaseErrorOperationAlreadyInProgressError": "Ununuzi mwingine unachakatwa. Tafadhali subiri kidogo kisha ujaribu tena",
   "purchaseErrorUnknownBackendError": "Ununuzi haukuwezekani kwa sasa. Tafadhali jaribu tena baada ya muda. Ikiwa tatizo halitajatuliwa, tafadhali wasiliana nasi kupitia Mipangilio > Maswali. Maelezo: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Ununuzi umeshindikana. Tafadhali subiri kidogo kisha ujaribu tena. Ikiwa tatizo linaendelea, wasiliana nasi kupitia Mipangilio > Maswali. Maelezo ya kina: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Ununuzi umeshindikana kwa mtumiaji wako. Tafadhali jaribu tena baada ya muda. Ikiwa tatizo halitatatuliwa, tafadhali wasiliana nasi kupitia Mipangilio > Mawasiliano. Maelezo: {exceptionMessage}:{exceptionDetails}",

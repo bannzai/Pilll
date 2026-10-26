@@ -301,7 +301,7 @@
   "purchaseErrorUnexpectedBackendResponseError": "មិនអាចទិញបាននៅពេលនេះទេ។ សូមសាកល្បងម្តងទៀតនៅពេលក្រោយ។ ប្រសិនបើបញ្ហានៅតែបន្ត សូមទាក់ទងមកយើងតាម ការកំណត់ > ទាក់ទងមកយើង។ ព័ត៌មានលម្អិត៖ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "ព័ត៌មានការទិញនេះកំពុងត្រូវបានប្រើដោយអ្នកប្រើប្រាស់ផ្សេងទៀត។ សូមពិនិត្យមើលគណនី {accountName} ដែលបានចូលនៅលើឧបករណ៍របស់អ្នក។",
   "purchaseErrorInvalidAppUserIdError": "មិនអាចផ្ទៀងផ្ទាត់គណនីរបស់អ្នកបានទេ។ សូមបើកកម្មវិធីឡើងវិញ ហើយសាកល្បងម្ដងទៀត។ ព័ត៌មានលម្អិត៖ {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOperationAlreadyInProgressError": "ដំណើរការទិញផ្សេងទៀតកំពុងដំណើរការ។ សូមរងចាំបន្តិចហើយពិនិត្យមើលម្តងទៀត",
+  "purchaseErrorOperationAlreadyInProgressError": "ការទិញមួយផ្សេងទៀតកំពុងដំណើរការ។ សូមរង់ចាំបន្តិច ហើយព្យាយាមម្ដងទៀត",
   "purchaseErrorUnknownBackendError": "បច្ចុប្បន្នមិនអាចទិញបានទេ។ សូមចាំបន្តិចហើយព្យាយាមម្តងទៀត។ ប្រសិនបើបញ្ហានៅមិនទាន់ត្រូវបានដោះស្រាយ សូមទាក់ទងមកកាន់យើងតាមរយៈ ការកំណត់ > ការចម្លើយ។ លម្អិត៖ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "ការទិញបានបរាជ័យ។ សូមរង់ចាំបន្តិច ហើយព្យាយាមម្តងទៀត។ ប្រសិនបើមិនអាចដោះស្រាយបាន សូមទាក់ទងមកកាន់យើងតាមរយៈ ការកំណត់ > ការសួរសំណួរ។ លម្អិត៖ {exceptionMessage}៖{exceptionDetails}",
   "purchaseErrorIneligibleError": "ការទិញសម្រាប់អ្នកប្រើប្រាស់របស់អ្នកបានបរាជ័យ។ សូមរង់ចាំបន្តិច ហើយព្យាយាមម្តងទៀត។ ប្រសិនបើបញ្ហានៅតែមាន សូមទាក់ទងមកយើង តាមរយៈ ការកំណត់ > សួរសំណួរ។ ព័ត៌មានលម្អិត៖ {exceptionMessage}:{exceptionDetails}",

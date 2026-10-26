@@ -301,7 +301,7 @@
   "purchaseErrorUnexpectedBackendResponseError": "در حال حاضر امکان خرید وجود ندارد. لطفاً کمی بعد دوباره تلاش کنید. اگر مشکل برطرف نشد، از مسیر تنظیمات > تماس با ما با ما در ارتباط باشید. جزئیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "اطلاعات این خرید در حساب کاربر دیگری استفاده می‌شود. لطفاً حساب {accountName} واردشده در دستگاهتان را بررسی کنید.",
   "purchaseErrorInvalidAppUserIdError": "تأیید حساب شما ممکن نشد. لطفاً برنامه را دوباره راه‌اندازی کنید و باز هم امتحان کنید. جزئیات: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOperationAlreadyInProgressError": "یک عملیات خرید دیگر در حال انجام است. لطفاً کمی صبر کنید و دوباره تلاش کنید",
+  "purchaseErrorOperationAlreadyInProgressError": "خرید دیگری در حال پردازش است. لطفاً کمی صبر کنید و دوباره امتحان کنید",
   "purchaseErrorUnknownBackendError": "در حال حاضر امکان خرید وجود ندارد. لطفاً مدتی بعد دوباره تلاش کنید. در صورت عدم حل مشکل، از طریق تنظیمات > تماس با ما، با ما ارتباط برقرار کنید. جزئیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "خرید ناموفق بود. لطفاً کمی بعد دوباره امتحان کنید. اگر مشکل حل نشد، از طریق تنظیمات > پشتیبانی با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "خرید برای کاربر شما شکست خورد. لطفاً مدتی صبر کرده و دوباره تلاش کنید. اگر مشکل حل نشد، از طریق تنظیمات > تماس با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",

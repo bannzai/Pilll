@@ -301,7 +301,7 @@
   "purchaseErrorUnexpectedBackendResponseError": "Այս պահին գնում կատարել հնարավոր չէ։ Խնդրում ենք որոշ ժամանակ անց կրկին փորձել։ Եթե խնդիրը չլուծվի, կապվեք մեզ հետ Կարգավորումներ > Կապ մեզ հետ բաժնից։ Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Գնման տվյալներն արդեն օգտագործվում են մեկ այլ օգտատիրոջ կողմից։ Խնդրում ենք ստուգել, թե Ձեր սարքում {accountName}-ի որ հաշիվն է մուտք գործած։",
   "purchaseErrorInvalidAppUserIdError": "Չհաջողվեց հաստատել Ձեր հաշիվը։ Խնդրում ենք վերագործարկել հավելվածը և կրկին փորձել։ Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOperationAlreadyInProgressError": "Մեկ այլ գնման գործընթաց արդեն ընթանում է: Խնդրում ենք որոշ ժամանակ սպասել և կրկին փորձել:",
+  "purchaseErrorOperationAlreadyInProgressError": "Մեկ այլ գնում է մշակվում։ Խնդրում ենք մի փոքր սպասել և կրկին փորձել",
   "purchaseErrorUnknownBackendError": "Ներկայումս գնումը հնարավոր չէ: Խնդրում ենք սպասել և կրկին փորձել: Եթե խնդիրը չի լուծվում, դիմեք մեզ Կարգավորումներ > Դիմում բաժնից: Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Գնումը ձախողվեց: Խնդրում ենք մի փոքր սպասել և կրկին փորձել: Եթե խնդիրը չլուծվի՝ դիմեք մեզ Կարգավորումներ > Կապ բաժնի միջոցով: Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Ձեր օգտատիրոջ համար գնումը ձախողվեց: Խնդրում ենք կրկին փորձել որոշ ժամանակ անց: Եթե խնդիրը չլուծվի, խնդրում ենք դիմել Կարգավորումներ > Հարցում բաժնում: Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",

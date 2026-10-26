@@ -301,7 +301,7 @@
   "purchaseErrorUnexpectedBackendResponseError": "এই মুহূর্তে কেনাকাটা করা যাচ্ছে না। অনুগ্রহ করে কিছুক্ষণ পরে আবার চেষ্টা করুন। সমস্যাটি থেকে গেলে সেটিংস > যোগাযোগ করুন থেকে আমাদের জানান। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "কেনাকাটার তথ্য অন্য একজন ব্যবহারকারী ব্যবহার করছেন। অনুগ্রহ করে আপনার ডিভাইসে লগ ইন করা {accountName} অ্যাকাউন্টটি দেখুন।",
   "purchaseErrorInvalidAppUserIdError": "আপনার পরিচয় যাচাই করা যায়নি। অনুগ্রহ করে অ্যাপটি আবার চালু করে চেষ্টা করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOperationAlreadyInProgressError": "অন্য একটি ক্রয় প্রক্রিয়া চলমান রয়েছে। অনুগ্রহ করে কিছুক্ষণ পর আবার চেক করুন।",
+  "purchaseErrorOperationAlreadyInProgressError": "আরেকটি কেনাকাটার প্রক্রিয়া চলছে। অনুগ্রহ করে কিছুক্ষণ পরে আবার চেষ্টা করুন",
   "purchaseErrorUnknownBackendError": "বর্তমানে কেনাকাটা করা যাচ্ছে না। কিছুক্ষণ পর আবার চেষ্টা করুন। যদি সমস্যার সমাধান না হয়, তাহলে সেটিংস > যোগাযোগ এর মাধ্যমে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "ক্রয় ব্যর্থ হয়েছে। কিছুক্ষণ পর আবার চেষ্টা করুন। যদি সমস্যার সমাধান না হয়, তাহলে সেটিংস > যোগাযোগ এর মাধ্যমে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "আপনার ব্যবহারকারীর জন্য ক্রয় ব্যর্থ হয়েছে। কিছুক্ষণ পর আবার চেষ্টা করুন। যদি সমস্যার সমাধান না হয়, তাহলে সেটিংস > যোগাযোগ এর মাধ্যমে আমাদের সাথে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",

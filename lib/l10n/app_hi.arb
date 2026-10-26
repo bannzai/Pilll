@@ -301,7 +301,7 @@
   "purchaseErrorUnexpectedBackendResponseError": "अभी खरीदारी नहीं हो पा रही है। कृपया थोड़ी देर बाद फिर कोशिश करें। समस्या बनी रहे तो सेटिंग > हमसे संपर्क करें के ज़रिए हमसे संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "इस खरीद की जानकारी पहले से किसी अन्य उपयोगकर्ता के खाते से जुड़ी है। कृपया अपने डिवाइस पर साइन इन किए गए {accountName} खाते की जाँच करें।",
   "purchaseErrorInvalidAppUserIdError": "आपके खाते की पुष्टि नहीं हो सकी। कृपया ऐप दोबारा शुरू करके फिर कोशिश करें। विवरण: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOperationAlreadyInProgressError": "खरीदारी प्रक्रिया पहले से चल रही है। कृपया कुछ समय बाद फिर से जांच लें।",
+  "purchaseErrorOperationAlreadyInProgressError": "एक और खरीदारी की प्रक्रिया चल रही है। कृपया थोड़ी देर बाद फिर से कोशिश करें",
   "purchaseErrorUnknownBackendError": "वर्तमान में खरीदारी नहीं की जा सकती। कुछ समय बाद फिर से कोशिश करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क करें से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "खरीदारी असफल हुई। कुछ समय बाद फिर से कोशिश करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क के माध्यम से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "आपके उपयोगकर्ता के लिए खरीदारी असफल हो गई। कुछ समय बाद पुनः प्रयास करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क करें से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",

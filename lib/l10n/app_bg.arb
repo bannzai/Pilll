@@ -301,7 +301,7 @@
   "purchaseErrorUnexpectedBackendResponseError": "В момента покупката не може да бъде завършена. Моля, опитайте отново по-късно. Ако проблемът продължи, свържете се с нас чрез Настройки > Свържете се с нас. Подробности: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Информацията за покупката вече се използва от друг потребител. Моля, проверете с кой акаунт {accountName} сте влезли на устройството.",
   "purchaseErrorInvalidAppUserIdError": "Не успяхме да потвърдим профила ви. Моля, рестартирайте приложението и опитайте отново. Подробности: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOperationAlreadyInProgressError": "В момента се обработва друга покупка. Моля, изчакайте и опитайте отново по-късно.",
+  "purchaseErrorOperationAlreadyInProgressError": "Друга покупка се обработва. Моля, изчакайте малко и опитайте отново",
   "purchaseErrorUnknownBackendError": "В момента покупката не е възможна. Моля, опитайте отново след известно време. Ако проблемът продължава, моля, свържете се с нас чрез Настройки > Запитване. Подробности: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Покупката неуспешна. Моля, опитайте отново след време. Ако проблемът продължава, се свържете с нас чрез Настройки > Запитване. Подробности: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Покупката за вашия потребител не бе успешна. Моля, изчакайте малко и опитайте отново. Ако проблемът продължава, свържете се с нас чрез Настройки > Контакт. Подробности: {exceptionMessage}:{exceptionDetails}",

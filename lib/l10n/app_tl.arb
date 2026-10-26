@@ -301,7 +301,7 @@
   "purchaseErrorUnexpectedBackendResponseError": "Hindi po makabili sa ngayon. Pakisubukan ulit mamaya. Kung magpatuloy ang problema, makipag-ugnayan po sa amin sa Mga Setting > Makipag-ugnayan sa amin. Mga detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Ginagamit na ng ibang gumagamit ang impormasyon ng pagbiling ito. Pakitingnan po ang {accountName} account na naka-sign in sa device ninyo.",
   "purchaseErrorInvalidAppUserIdError": "Hindi namin makumpirma ang inyong account. Pakisuyong i-restart ang app at subukan muli. Mga detalye: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOperationAlreadyInProgressError": "May kasalukuyang proseso ng pagbili na nagaganap. Maghintay po ng ilang sandali at subukan muli.",
+  "purchaseErrorOperationAlreadyInProgressError": "May isa pang pagbili na pinoproseso. Pakihintay po sandali bago subukan muli",
   "purchaseErrorUnknownBackendError": "Hindi makakabili ngayon. Mangyaring maghintay ng kaunti at subukan ulit. Kung patuloy ang problema, makipag-ugnayan sa amin sa Settings > Contact. Detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Nabigo ang pagbili. Maghintay ng kaunti at subukan muli. Kung hindi pa rin maayos, makipag-ugnayan sa amin sa pamamagitan ng Settings > Contact. Mga detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Hindi nagtagumpay ang pagbili para sa inyong user. Maghintay sandali at subukang muli. Kung hindi pa rin naayos, mangyaring makipag-ugnayan sa Settings > Contact. Detalye: {exceptionMessage}:{exceptionDetails}",

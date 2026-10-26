@@ -301,7 +301,7 @@
   "purchaseErrorUnexpectedBackendResponseError": "Ara mateix no es pot completar la compra. Torna-ho a provar més tard. Si el problema continua, contacta amb nosaltres des de Configuració > Contacta amb nosaltres. Detalls: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "La informació de la compra ja la fa servir una altra persona. Comprova el compte {accountName} amb què has iniciat la sessió al dispositiu.",
   "purchaseErrorInvalidAppUserIdError": "No hem pogut verificar el teu compte. Si us plau, reinicia l’aplicació i torna-ho a provar. Detalls: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOperationAlreadyInProgressError": "S'està processant una altra compra. Espereu una estona i torneu a intentar-ho.",
+  "purchaseErrorOperationAlreadyInProgressError": "Hi ha una altra compra en curs. Espera una mica i torna-ho a provar",
   "purchaseErrorUnknownBackendError": "Actualment no és possible realitzar la compra. Si us plau, torneu-ho a intentar més tard. Si el problema persisteix, contacteu-nos a través de Configuració > Contacte. Detalls: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "La compra ha fallat. Torneu a intentar-ho més tard. Si no es resol, poseu-vos en contacte amb nosaltres des de Configuració > Contacte. Detalls: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "La compra ha fallat per al vostre usuari. Espereu una estona i torneu-ho a intentar. Si el problema continua, contacteu amb nosaltres a Configuració > Contacte. Detalls: {exceptionMessage}:{exceptionDetails}",

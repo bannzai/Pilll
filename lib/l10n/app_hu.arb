@@ -301,7 +301,7 @@
   "purchaseErrorUnexpectedBackendResponseError": "Jelenleg nem lehet vásárolni. Kérjük, próbáld újra később. Ha a probléma továbbra is fennáll, lépj kapcsolatba velünk a Beállítások > Kapcsolat menüpontban. Részletek: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "A vásárlási adatokat már egy másik felhasználó használja. Kérjük, ellenőrizd, melyik {accountName}-fiókba vagy bejelentkezve a készülékeden.",
   "purchaseErrorInvalidAppUserIdError": "Nem sikerült ellenőrizni a fiókodat. Indítsd újra az alkalmazást, majd próbáld meg ismét. Részletek: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOperationAlreadyInProgressError": "Másik vásárlási folyamat fut. Kérjük, várjon, majd próbálja újra.",
+  "purchaseErrorOperationAlreadyInProgressError": "Egy másik vásárlás feldolgozása folyamatban van. Várj egy kicsit, majd próbáld újra",
   "purchaseErrorUnknownBackendError": "Jelenleg nem lehet vásárolni. Kérjük, várjon egy kicsit és próbálja újra. Ha a probléma továbbra is fennáll, lépjen kapcsolatba velünk a Beállítások > Kapcsolat menüponton keresztül. Részletek: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "A vásárlás sikertelen volt. Kérjük, várjon egy kicsit, majd próbálja újra. Ha a probléma továbbra is fennáll, lépjen kapcsolatba velünk a Beállítások > Kapcsolat menüpontban. Részletek: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "A vásárlás sikertelen volt az Ön felhasználójával. Kérjük, várjon egy kicsit, majd próbálja újra. Ha a probléma továbbra is fennáll, kérjük, lépjen kapcsolatba velünk a Beállítások > Kapcsolat menüponton keresztül. Részletek: {exceptionMessage}:{exceptionDetails}",

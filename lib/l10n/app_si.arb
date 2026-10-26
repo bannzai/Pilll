@@ -301,7 +301,7 @@
   "purchaseErrorUnexpectedBackendResponseError": "මේ මොහොතේ මිලදී ගැනීම කළ නොහැක. කරුණාකර ටික වේලාවකට පසු නැවත උත්සාහ කරන්න. ගැටලුව දිගටම පවතී නම්, සැකසීම් > අප අමතන්න හරහා අප අමතන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "මෙම මිලදී ගැනීමේ තොරතුරු වෙනත් පරිශීලකයෙකු විසින් දැනටමත් භාවිත කෙරේ. කරුණාකර ඔබේ උපාංගයේ පිවිසී ඇති {accountName} ගිණුම පරීක්ෂා කරන්න.",
   "purchaseErrorInvalidAppUserIdError": "ඔබේ ගිණුම තහවුරු කිරීමට නොහැකි වුණා. කරුණාකර යෙදුම නැවත ආරම්භ කර යළි උත්සාහ කරන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOperationAlreadyInProgressError": "වෙනත් මිලදී ගැනීමේ ක්‍රියාවලියක් ප්‍රගතියේ ඇත. කරුණාකර ටික වේලාවකින් නැවත පරීක්ෂා කරන්න",
+  "purchaseErrorOperationAlreadyInProgressError": "වෙනත් මිලදී ගැනීමක් සැකසෙමින් පවතී. කරුණාකර මඳක් රැඳී සිට නැවත උත්සාහ කරන්න",
   "purchaseErrorUnknownBackendError": "දැනට මිලදී ගැනීම සිදු කළ නොහැක. ටික වේලාවකට පසු නැවත උත්සාහ කරන්න. ගැටලුව විසඳුනේ නැත්නම් සැකසීම් > විමසීම් හරහා අප සමඟ සම්බන්ධ වන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "මිලදී ගැනීම අසාර්ථක විය. කරුණාකර ටික වේලාවක් ගත වූ පසු නැවත උත්සාහ කරන්න. එය නිරාකරණය නොවේ නම් සැකසීම් > අපට ලිවන්න හරහා අප සමඟ සම්බන්ධ වන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "ඔබේ පරිශීලක ගිණුමේ මිලදී ගැනීම අසාර්ථක විය. කරුණාකර ටික වේලාවක් සිට නැවත උත්සාහ කරන්න. ගැටලුව නොසෑදේ නම් සැකසීම් > සම්බන්ධ වීම හරහා අප වෙත සම්බන්ධ වන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",

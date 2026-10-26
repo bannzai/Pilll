@@ -301,7 +301,7 @@
   "purchaseErrorUnexpectedBackendResponseError": "Zakup jest teraz niedostępny. Spróbuj ponownie później. Jeśli problem będzie się powtarzać, skontaktuj się z nami przez Ustawienia > Kontakt. Szczegóły: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Informacje o tym zakupie są już używane przez inną osobę. Sprawdź, na które konto {accountName} zalogowano się na urządzeniu.",
   "purchaseErrorInvalidAppUserIdError": "Nie udało się potwierdzić Twojego konta. Uruchom aplikację ponownie i spróbuj jeszcze raz. Szczegóły: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOperationAlreadyInProgressError": "Proces zakupu jest już w toku. Proszę poczekać i spróbować ponownie.",
+  "purchaseErrorOperationAlreadyInProgressError": "Trwa przetwarzanie innego zakupu. Poczekaj chwilę i spróbuj ponownie",
   "purchaseErrorUnknownBackendError": "Zakup obecnie nie jest możliwy. Proszę spróbować ponownie później. Jeśli problem nadal występuje, skontaktuj się z nami przez Ustawienia > Kontakt. Szczegóły: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Nie udało się dokonać zakupu. Spróbuj ponownie po chwili. Jeśli problem nie zostanie rozwiązany, skontaktuj się z nami przez Ustawienia > Kontakt. Szczegóły: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Zakup nie powiódł się dla Twojego użytkownika. Spróbuj ponownie po chwili. Jeśli problem się nie rozwiąże, skontaktuj się z nami przez Ustawienia > Kontakt. Szczegóły: {exceptionMessage}:{exceptionDetails}",

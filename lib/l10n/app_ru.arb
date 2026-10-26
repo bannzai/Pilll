@@ -301,7 +301,7 @@
   "purchaseErrorUnexpectedBackendResponseError": "Сейчас покупка недоступна. Пожалуйста, попробуйте ещё раз позже. Если проблема сохранится, свяжитесь с нами через Настройки > Связаться с нами. Подробности: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Данные о покупке уже используются другим пользователем. Проверьте, в какой аккаунт {accountName} выполнен вход на вашем устройстве.",
   "purchaseErrorInvalidAppUserIdError": "Не удалось подтвердить вашу учётную запись. Перезапустите приложение и попробуйте ещё раз. Подробности: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOperationAlreadyInProgressError": "В данный момент обрабатывается другая покупка. Пожалуйста, подождите некоторое время и повторите попытку.",
+  "purchaseErrorOperationAlreadyInProgressError": "Другая покупка уже обрабатывается. Пожалуйста, подождите немного и попробуйте снова",
   "purchaseErrorUnknownBackendError": "В настоящее время покупка невозможна. Пожалуйста, попробуйте еще раз через некоторое время. Если проблема не решается, обратитесь к нам через Настройки > Обратная связь. Подробности: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Покупка не удалась. Пожалуйста, повторите попытку позже. Если проблема не решается, обратитесь к нам через Настройки > Обратная связь. Подробности: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Не удалось совершить покупку для вашего пользователя. Попробуйте снова через некоторое время. Если проблема не решается, обратитесь в службу поддержки через Настройки > Обратная связь. Подробности: {exceptionMessage}:{exceptionDetails}",

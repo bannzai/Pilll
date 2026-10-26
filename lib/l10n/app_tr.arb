@@ -301,7 +301,7 @@
   "purchaseErrorUnexpectedBackendResponseError": "Şu anda satın alma işlemi yapılamıyor. Lütfen biraz sonra tekrar deneyin. Sorun devam ederse Ayarlar > Bize ulaşın üzerinden bizimle iletişime geçin. Ayrıntılar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Bu satın alma bilgileri başka bir kullanıcı tarafından kullanılıyor. Lütfen cihazınızda oturum açtığınız {accountName} hesabını kontrol edin.",
   "purchaseErrorInvalidAppUserIdError": "Hesabınız doğrulanamadı. Lütfen uygulamayı yeniden başlatıp tekrar deneyin. Ayrıntılar: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOperationAlreadyInProgressError": "Başka bir satın alma işlemi devam ediyor. Lütfen bir süre bekleyip tekrar kontrol edin.",
+  "purchaseErrorOperationAlreadyInProgressError": "Başka bir satın alma işlemi sürüyor. Lütfen biraz bekleyip tekrar deneyin",
   "purchaseErrorUnknownBackendError": "Şu anda satın alma yapılamıyor. Biraz bekledikten sonra tekrar deneyin. Sorun devam ederse Ayarlar > İletişim kısmından bizimle iletişime geçin. Ayrıntılar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Satın alma başarısız oldu. Biraz bekleyip tekrar deneyiniz. Eğer sorun devam ederse Ayarlar > İletişim üzerinden bizimle iletişime geçiniz. Detaylar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Kullanıcınız için satın alma başarısız oldu. Lütfen biraz bekleyip tekrar deneyin. Sorun çözülmezse Ayarlar > İletişim aracılığıyla bizimle iletişime geçin. Detaylar: {exceptionMessage}:{exceptionDetails}",
