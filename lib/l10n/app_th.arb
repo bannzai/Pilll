@@ -278,7 +278,7 @@
   "twentyOnePlusSevenDaysBreak": "ยาทาน 21 เม็ด + หยุดยา 7 วัน",
   "twentyFourPlusFourPlacebo": "ยาเม็ดที่มีตัวยา 24 เม็ด + ยาหลอก 4 เม็ด",
   "twentyOnePlusSevenPlacebo": "ยาเม็ดที่มีตัวยาสำคัญ 21 เม็ด + ยาหลอก 7 เม็ด",
-  "allActivePills": "ยาจริงทั้งหมด",
+  "allActivePills": "ทั้งหมดเป็นเม็ดฮอร์โมน",
   "twentyFourPlusFourDaysBreak": "ยา 24 เม็ด + หยุดยา 4 วัน",
   "choosePillType": "เลือกประเภทยาคุมกำเนิด",
   "notificationForNotTakenPeriod": "การแจ้งเตือนช่วง{pillSheetPillSheetTypeNotTakenWord}",

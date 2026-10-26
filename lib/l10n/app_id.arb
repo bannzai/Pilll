@@ -278,7 +278,7 @@
   "twentyOnePlusSevenDaysBreak": "21 pil + 7 hari jeda",
   "twentyFourPlusFourPlacebo": "24 pil aktif + 4 pil plasebo",
   "twentyOnePlusSevenPlacebo": "21 pil aktif + 7 pil plasebo",
-  "allActivePills": "Semua Pil Aktif",
+  "allActivePills": "Semua pil adalah pil aktif",
   "twentyFourPlusFourDaysBreak": "24 Pil + 4 Hari Istirahat",
   "choosePillType": "Pilih jenis pil",
   "notificationForNotTakenPeriod": "Notifikasi periode {pillSheetPillSheetTypeNotTakenWord}",
