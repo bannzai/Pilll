@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "journal des prises : {recordedDays} jours · sans entrée : {missedDays} jours",
   "midnightTakenWarningDialogTitle": "À noter",
   "midnightTakenWarningDialogBody": "Une entrée a aussi été ajoutée au journal des prises pour le {takenDate}. Aujourd’hui, {takenDate}, vous ne recevrez pas le rappel de {reminderTimes}.\nSi c’est une erreur, vous pouvez annuler la prise enregistrée",
-  "midnightTakenWarningDialogSeeHowToRevert": "Découvrez comment restaurer un enregistrement pris",
+  "midnightTakenWarningDialogSeeHowToRevert": "Voir comment annuler une prise enregistrée",
   "midnightTakenWarningDialogNeverShowAgain": "Ne montre plus ça",
   "pauseStartDateMustBeOnOrBefore": "Veuillez choisir une date de début de pause le {date} ou avant",
   "addPausePeriod": "Ajouter une période de pause de prise",

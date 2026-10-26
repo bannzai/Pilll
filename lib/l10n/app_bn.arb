@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "সেবনের রেকর্ড: {recordedDays} দিন · রেকর্ড নেই: {missedDays} দিন",
   "midnightTakenWarningDialogTitle": "অনুগ্রহ করে খেয়াল করুন",
   "midnightTakenWarningDialogBody": "{takenDate} তারিখের জন্যও সেবনের রেকর্ড করা হয়েছে। আজ {takenDate} তারিখে {reminderTimes}-এর বিজ্ঞপ্তি আপনি পাবেন না।\nভুল করে রেকর্ড করা হলে, অনুগ্রহ করে পিল সেবনের রেকর্ডটি বাতিল করুন",
-  "midnightTakenWarningDialogSeeHowToRevert": "সেবন বাতিলের পদ্ধতি দেখুন",
+  "midnightTakenWarningDialogSeeHowToRevert": "পিল খাওয়ার রেকর্ড কীভাবে বাতিল করবেন দেখুন",
   "midnightTakenWarningDialogNeverShowAgain": "আর দেখাবেন না",
   "pauseStartDateMustBeOnOrBefore": "অনুগ্রহ করে {date} বা তার আগের বিরতি শুরুর তারিখ নির্বাচন করুন",
   "addPausePeriod": "ওষুধ না নেওয়ার সময়কাল যোগ করুন",

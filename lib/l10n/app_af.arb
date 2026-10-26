@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "innamerekord: {recordedDays} dae · nie aangeteken nie: {missedDays} dae",
   "midnightTakenWarningDialogTitle": "Let asseblief op",
   "midnightTakenWarningDialogBody": "Die innamerekord vir {takenDate} is ook gemaak. Jy sal vandag, {takenDate}, nie die kennisgewing vir {reminderTimes} ontvang nie.\nAs dit ’n fout was, kan jy asseblief die aangetekende inname kanselleer",
-  "midnightTakenWarningDialogSeeHowToRevert": "Sien hoe om 'n innameaantekening terug te keer",
+  "midnightTakenWarningDialogSeeHowToRevert": "Kyk hoe om ’n pilinname te kanselleer",
   "midnightTakenWarningDialogNeverShowAgain": "Moenie dit weer wys nie",
   "pauseStartDateMustBeOnOrBefore": "Kies 'n begindatum vir die ruskans op of voor {date}",
   "addPausePeriod": "Voeg pouseperiode by",

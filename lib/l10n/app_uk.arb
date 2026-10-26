@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "запис прийому: {recordedDays} днів · без запису: {missedDays} днів",
   "midnightTakenWarningDialogTitle": "Зверніть увагу",
   "midnightTakenWarningDialogBody": "Для {takenDate} також створено запис прийому. Сьогодні, {takenDate}, ви не отримаєте сповіщення на {reminderTimes}.\nЯкщо запис зроблено помилково, скасуйте зафіксований прийом пігулки",
-  "midnightTakenWarningDialogSeeHowToRevert": "Як скасувати запис про прийом",
+  "midnightTakenWarningDialogSeeHowToRevert": "Як скасувати запис про прийом пігулки",
   "midnightTakenWarningDialogNeverShowAgain": "Більше не показувати",
   "pauseStartDateMustBeOnOrBefore": "Виберіть дату початку перерви {date} або раніше",
   "addPausePeriod": "Додати період перерви в прийомі",

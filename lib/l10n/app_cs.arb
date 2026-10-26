@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "záznam užití: {recordedDays} dní · bez záznamu: {missedDays} dní",
   "midnightTakenWarningDialogTitle": "Věnujte prosím pozornost",
   "midnightTakenWarningDialogBody": "Byl vytvořen také záznam užití pro {takenDate}. Dnes, {takenDate}, vám upozornění na {reminderTimes} nepřijde.\nPokud jde o omyl, zrušte prosím zaznamenané užití",
-  "midnightTakenWarningDialogSeeHowToRevert": "Zobrazit návod, jak zrušit záznam o užití",
+  "midnightTakenWarningDialogSeeHowToRevert": "Jak zrušit záznam o užití pilulky",
   "midnightTakenWarningDialogNeverShowAgain": "Příště nezobrazovat",
   "pauseStartDateMustBeOnOrBefore": "Vyberte datum začátku pauzy {date} nebo dřívější",
   "addPausePeriod": "Přidat období pauzy v užívání",

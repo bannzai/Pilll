@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "አወሳሰድ መዝገብ፦ {recordedDays} ቀናት · ያልተመዘገቡ፦ {missedDays} ቀናት",
   "midnightTakenWarningDialogTitle": "እባክዎ ያስተውሉ",
   "midnightTakenWarningDialogBody": "ለ{takenDate} አወሳሰድ መዝገብ ተፈጥሯል። ዛሬ {takenDate} ስለሆነ፣ የ{reminderTimes} ማሳወቂያ አይደርስዎትም።\nበስህተት ከተመዘገበ፣ የክኒን መውሰድ መዝገቡን ይሰርዙ",
-  "midnightTakenWarningDialogSeeHowToRevert": "የመውሰድ መዝገብን እንዴት እንደሚሰርዙ ይመልከቱ",
+  "midnightTakenWarningDialogSeeHowToRevert": "የክኒን መውሰድ መዝገብን እንዴት መሰረዝ እንደሚቻል ይመልከቱ",
   "midnightTakenWarningDialogNeverShowAgain": "እንደገና አያሳዩ",
   "pauseStartDateMustBeOnOrBefore": "እባክዎ የእረፍት መጀመሪያ ቀን {date} ወይም ከዚያ በፊት ይምረጡ",
   "addPausePeriod": "የመውሰድ እረፍት ጊዜ ያክሉ",

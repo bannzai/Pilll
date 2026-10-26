@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "intagslogg: {recordedDays} dagar · utan registrering: {missedDays} dagar",
   "midnightTakenWarningDialogTitle": "Observera",
   "midnightTakenWarningDialogBody": "En intagslogg skapades också för {takenDate}. Du får ingen påminnelse kl. {reminderTimes} i dag, {takenDate}.\nOm det blev fel kan du ångra det registrerade intaget",
-  "midnightTakenWarningDialogSeeHowToRevert": "Se hur du ångrar en registrering",
+  "midnightTakenWarningDialogSeeHowToRevert": "Se hur du ångrar en registrerad tablett",
   "midnightTakenWarningDialogNeverShowAgain": "Visa inte igen",
   "pauseStartDateMustBeOnOrBefore": "Välj ett startdatum för pausen {date} eller tidigare",
   "addPausePeriod": "Lägg till uppehållsperiod",

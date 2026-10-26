@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "registro de toma: {recordedDays} días · sin registrar: {missedDays} días",
   "midnightTakenWarningDialogTitle": "Tenlo en cuenta",
   "midnightTakenWarningDialogBody": "También se creó un registro de toma para el {takenDate}. Hoy, {takenDate}, no recibirás el aviso de las {reminderTimes}.\nSi fue un error, puedes anular la toma registrada",
-  "midnightTakenWarningDialogSeeHowToRevert": "Ver cómo cancelar el registro de toma",
+  "midnightTakenWarningDialogSeeHowToRevert": "Consulta cómo deshacer el registro de una píldora",
   "midnightTakenWarningDialogNeverShowAgain": "No volver a mostrar esto",
   "pauseStartDateMustBeOnOrBefore": "Selecciona una fecha de inicio de la pausa el {date} o antes",
   "addPausePeriod": "Añadir periodo de descanso de toma",

@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "Iinahm-Ufzeichnig: {recordedDays} Täg · ohni Iitrag: {missedDays} Täg",
   "midnightTakenWarningDialogTitle": "Lueg bitte gnau",
   "midnightTakenWarningDialogBody": "Für de {takenDate} isch au e Iinahm-Ufzeichnig gmacht worde. Hüt, am {takenDate}, chunnt d Erinnerig vo {reminderTimes} nöd bi dir aa.\nWänn das es Versee gsi isch, chasch d iitreiti Iinahm rückgängig mache",
-  "midnightTakenWarningDialogSeeHowToRevert": "Aaleitig zum Rückgängigmache vo de Iinahm aaluege",
+  "midnightTakenWarningDialogSeeHowToRevert": "Lueg, wie du e Iinahm-Ufzeichnig rückgängig machsch",
   "midnightTakenWarningDialogNeverShowAgain": "Nie me aazeige",
   "pauseStartDateMustBeOnOrBefore": "Bitte wähl es Startdatum vo de Pause am {date} oder dervor",
   "addPausePeriod": "Pausenäriigs-Ziit derzuefüege",

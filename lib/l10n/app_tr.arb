@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "hap kullanım kaydı: {recordedDays} gün · kayıtsız: {missedDays} gün",
   "midnightTakenWarningDialogTitle": "Lütfen dikkat edin",
   "midnightTakenWarningDialogBody": "{takenDate} için de hap kullanım kaydı oluşturuldu. Bugün, {takenDate} tarihinde, {reminderTimes} bildirimini almayacaksınız.\nBu bir hataysa lütfen kaydedilen hap alımını iptal edin",
-  "midnightTakenWarningDialogSeeHowToRevert": "Alım kaydını geri alma yöntemini görüntüle",
+  "midnightTakenWarningDialogSeeHowToRevert": "Hap alma kaydını nasıl geri alacağınızı görün",
   "midnightTakenWarningDialogNeverShowAgain": "Bir daha gösterme",
   "pauseStartDateMustBeOnOrBefore": "Lütfen ara başlangıç tarihini {date} veya öncesi olarak seçin",
   "addPausePeriod": "Kullanım ara verme süresi ekle",

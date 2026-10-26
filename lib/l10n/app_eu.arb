@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "hartze-erregistro: {recordedDays} egun · erregistratu gabe: {missedDays} egun",
   "midnightTakenWarningDialogTitle": "Kontuan izan",
   "midnightTakenWarningDialogBody": "{takenDate} egunerako hartze-erregistro bat ere sortu da. Gaur, {takenDate}, ez duzu {reminderTimes}(e)ko jakinarazpena jasoko.\nOkerra bada, erregistratutako pilularen hartzea ezezta dezakezu",
-  "midnightTakenWarningDialogSeeHowToRevert": "Hartzea ezeztatzeko modua ikusi",
+  "midnightTakenWarningDialogSeeHowToRevert": "Ikusi nola ezeztatu pilula hartu izanaren erregistroa",
   "midnightTakenWarningDialogNeverShowAgain": "Ez erakutsi berriro",
   "pauseStartDateMustBeOnOrBefore": "Aukeratu atsedenaren hasiera-data {date} edo lehenago",
   "addPausePeriod": "Gehitu hartze-atsedenaldia",

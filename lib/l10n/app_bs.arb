@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "Dana u evidenciji: {recordedDays} · dana bez evidencije: {missedDays}",
   "midnightTakenWarningDialogTitle": "Molimo Vas, obratite pažnju",
   "midnightTakenWarningDialogBody": "Unos je dodat i u evidencijу uzimanja za {takenDate}. Danas, {takenDate}, nećete dobiti obavijest za {reminderTimes}.\nAko je ovo greška, molimo Vas da poništite zabilježeno uzimanje",
-  "midnightTakenWarningDialogSeeHowToRevert": "Pogledajte kako poništiti zapis o uzimanju",
+  "midnightTakenWarningDialogSeeHowToRevert": "Pogledajte kako poništiti zapis o uzimanju pilule",
   "midnightTakenWarningDialogNeverShowAgain": "Ne prikazuj ponovo",
   "pauseStartDateMustBeOnOrBefore": "Odaberite datum početka pauze na dan {date} ili ranije",
   "addPausePeriod": "Dodaj period pauze u uzimanju",

@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "Einnahmeprotokoll: {recordedDays} Tage · ohne Eintrag: {missedDays} Tage",
   "midnightTakenWarningDialogTitle": "Bitte beachte",
   "midnightTakenWarningDialogBody": "Für {takenDate} wurde ebenfalls ein Einnahmeprotokoll angelegt. Die Erinnerung um {reminderTimes} erhältst du heute, am {takenDate}, nicht.\nFalls das ein Versehen war, kannst du die erfasste Einnahme rückgängig machen",
-  "midnightTakenWarningDialogSeeHowToRevert": "Anleitung zum Stornieren der Einnahme ansehen",
+  "midnightTakenWarningDialogSeeHowToRevert": "So machst du einen Einnahmeeintrag rückgängig",
   "midnightTakenWarningDialogNeverShowAgain": "Nicht mehr anzeigen",
   "pauseStartDateMustBeOnOrBefore": "Bitte wähle ein Startdatum der Pause am {date} oder davor",
   "addPausePeriod": "Einnahmepause hinzufügen",

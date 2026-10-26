@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "regjistrimi i marrjes: {recordedDays} ditë · pa regjistrim: {missedDays} ditë",
   "midnightTakenWarningDialogTitle": "Ju lutemi, kushtojini vëmendje",
   "midnightTakenWarningDialogBody": "U krijua edhe regjistrimi i marrjes për {takenDate}. Sot, {takenDate}, nuk do ta merrni njoftimin për orën {reminderTimes}.\nNëse është gabim, mund ta anuloni marrjen e regjistruar",
-  "midnightTakenWarningDialogSeeHowToRevert": "Shiko si të anulosh regjistrimin e marrjes",
+  "midnightTakenWarningDialogSeeHowToRevert": "Shihni si të anuloni regjistrimin e marrjes së pilulës",
   "midnightTakenWarningDialogNeverShowAgain": "Mos e shfaq më",
   "pauseStartDateMustBeOnOrBefore": "Zgjidhni një datë fillimi të pushimit më {date} ose më herët",
   "addPausePeriod": "Shto periudhën e pauzës së marrjes",

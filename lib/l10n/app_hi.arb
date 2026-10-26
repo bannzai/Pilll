@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "सेवन रिकॉर्ड: {recordedDays} दिन · बिना रिकॉर्ड: {missedDays} दिन",
   "midnightTakenWarningDialogTitle": "कृपया ध्यान दें",
   "midnightTakenWarningDialogBody": "{takenDate} के लिए भी सेवन रिकॉर्ड दर्ज हो गया है। आज, {takenDate} को {reminderTimes} वाला रिमाइंडर आपको नहीं मिलेगा।\nअगर यह गलती से दर्ज हुआ है, तो कृपया दर्ज किया गया गोली सेवन रद्द करें",
-  "midnightTakenWarningDialogSeeHowToRevert": "सेवन रद्द करने का तरीका देखें",
+  "midnightTakenWarningDialogSeeHowToRevert": "गोली लेने का रिकॉर्ड हटाने का तरीका देखें",
   "midnightTakenWarningDialogNeverShowAgain": "दोबारा न दिखाएं",
   "pauseStartDateMustBeOnOrBefore": "कृपया {date} या उससे पहले की विराम शुरुआत तिथि चुनें",
   "addPausePeriod": "सेवन विराम अवधि जोड़ें",

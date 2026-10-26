@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "tala ng pag-inom: {recordedDays} araw · walang tala: {missedDays} araw",
   "midnightTakenWarningDialogTitle": "Pakitandaan po",
   "midnightTakenWarningDialogBody": "Nagawa rin ang tala ng pag-inom para sa {takenDate}. Ngayong {takenDate}, hindi ninyo matatanggap ang abiso para sa {reminderTimes}.\nKung nagkamali sa pagtatala, maaari po ninyong kanselahin ang naitalang pag-inom ng pildoras",
-  "midnightTakenWarningDialogSeeHowToRevert": "Tingnan kung paano bawiin ang pag-inom",
+  "midnightTakenWarningDialogSeeHowToRevert": "Tingnan kung paano bawiin ang tala ng pag-inom ng pildoras",
   "midnightTakenWarningDialogNeverShowAgain": "Huwag nang ipakita muli",
   "pauseStartDateMustBeOnOrBefore": "Pumili ng start date ng pahinga sa {date} o mas maaga",
   "addPausePeriod": "Magdagdag ng panahon ng pahinga sa pag-inom",

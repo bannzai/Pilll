@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "ဆေးသောက်မှတ်တမ်းရှိသည့်ရက် {recordedDays} ရက် · မှတ်တမ်းမရှိသည့်ရက် {missedDays} ရက်ပါ",
   "midnightTakenWarningDialogTitle": "ကျေးဇူးပြု၍ သတိပြုပါ",
   "midnightTakenWarningDialogBody": "{takenDate} အတွက် ဆေးသောက်မှတ်တမ်းကိုလည်း မှတ်တမ်းတင်ပြီးပါပြီ။ ဒီနေ့ {takenDate} မှာ {reminderTimes} အတွက် သတိပေးချက် မရတော့ပါဘူး။\nမှားယွင်းမှတ်တမ်းတင်မိပါက မှတ်တမ်းတင်ထားသော ဆေးသောက်ခြင်းကို ပယ်ဖျက်ပါ",
-  "midnightTakenWarningDialogSeeHowToRevert": "ဆေးသောက်မှတ်တမ်း ပယ်ဖျက်နည်းကို ကြည့်ရှုရန်",
+  "midnightTakenWarningDialogSeeHowToRevert": "ဆေးလုံးသောက်ထားသည့် မှတ်တမ်းကို ပယ်ဖျက်နည်း ကြည့်ပါ",
   "midnightTakenWarningDialogNeverShowAgain": "နောက်တစ်ဖန် မပြပါနှင့်",
   "pauseStartDateMustBeOnOrBefore": "ကျေးဇူးပြု၍ {date} သို့မဟုတ် ယင်းမတိုင်မီ အနားယူစတင်မည့်ရက်ကို ရွေးပါ",
   "addPausePeriod": "သောက်သုံးမှုရပ်နားချိန်ကာလ ထည့်ပါ",

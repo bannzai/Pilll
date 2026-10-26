@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "ഗുളിക കഴിച്ചതിന്റെ രേഖ: {recordedDays} ദിവസം · രേഖപ്പെടുത്താത്തത്: {missedDays} ദിവസം",
   "midnightTakenWarningDialogTitle": "ദയവായി ശ്രദ്ധിക്കൂ",
   "midnightTakenWarningDialogBody": "{takenDate} നുള്ള ഗുളിക കഴിച്ചതിന്റെ രേഖയും സൃഷ്ടിച്ചു. ഇന്ന് {takenDate} ന് {reminderTimes} ലെ ഓർമ്മപ്പെടുത്തൽ ലഭിക്കില്ല.\nഅബദ്ധത്തിൽ രേഖപ്പെടുത്തിയതാണെങ്കിൽ, ഗുളിക കഴിച്ചതായി രേഖപ്പെടുത്തിയത് റദ്ദാക്കൂ",
-  "midnightTakenWarningDialogSeeHowToRevert": "സേവനം റദ്ദാക്കുന്ന വിധം കാണുക",
+  "midnightTakenWarningDialogSeeHowToRevert": "ഗുളിക കഴിച്ചതിന്റെ രേഖ എങ്ങനെ റദ്ദാക്കാമെന്ന് കാണൂ",
   "midnightTakenWarningDialogNeverShowAgain": "ഇനി ഇത് കാണിക്കരുത്",
   "pauseStartDateMustBeOnOrBefore": "ദയവായി {date} അല്ലെങ്കിൽ അതിന് മുമ്പുള്ള ഇടവേള ആരംഭ തീയതി തിരഞ്ഞെടുക്കുക",
   "addPausePeriod": "കഴിക്കലിലെ ഇടവേളാ കാലയളവ് ചേർക്കുക",

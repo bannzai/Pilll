@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "қабылдау жазбасы бар: {recordedDays} күн · жазбасыз: {missedDays} күн",
   "midnightTakenWarningDialogTitle": "Назар аударыңыз",
   "midnightTakenWarningDialogBody": "{takenDate} күніне де қабылдау жазбасы жасалды. Бүгін, {takenDate} күні, {reminderTimes} уақытындағы ескертпе сізге келмейді.\nЕгер бұл қате болса, тіркелген қабылдауды болдырмаңыз",
-  "midnightTakenWarningDialogSeeHowToRevert": "Қабылдауды болдырмау тәсілін көру",
+  "midnightTakenWarningDialogSeeHowToRevert": "Таблетканы қабылдау жазбасын қалай жоюға болатынын қараңыз",
   "midnightTakenWarningDialogNeverShowAgain": "Қайта көрсетпеу",
   "pauseStartDateMustBeOnOrBefore": "Үзілістің басталу күнін {date} немесе одан бұрын таңдаңыз",
   "addPausePeriod": "Қабылдау үзіліс кезеңін қосу",

@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "таблетка ичүү жазуусу бар: {recordedDays} күн · жазуусу жок: {missedDays} күн",
   "midnightTakenWarningDialogTitle": "Көңүл буруңуз",
   "midnightTakenWarningDialogBody": "{takenDate} күнүнө да таблетка ичүү жазуусу түзүлдү. Бүгүн, {takenDate} күнү, {reminderTimes} убактысындагы эскертмени албайсыз.\nЭгер бул жаңылыштык болсо, катталган таблетка ичүүнү жокко чыгарыңыз",
-  "midnightTakenWarningDialogSeeHowToRevert": "Дары ичкенди жокко чыгаруу жолун көрүү",
+  "midnightTakenWarningDialogSeeHowToRevert": "Таблетка ичүү жазуусун кантип жокко чыгарууну көрүңүз",
   "midnightTakenWarningDialogNeverShowAgain": "Экинчи көрсөтпөө",
   "pauseStartDateMustBeOnOrBefore": "Тыныгуунун башталуу күнүн {date} же андан мурун тандаңыз",
   "addPausePeriod": "Ичүү тыныгуу мезгилин кошуу",

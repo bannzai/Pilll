@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "innameregistratie: {recordedDays} dagen · zonder registratie: {missedDays} dagen",
   "midnightTakenWarningDialogTitle": "Let even op",
   "midnightTakenWarningDialogBody": "Er is ook een innameregistratie gemaakt voor {takenDate}. Je krijgt vandaag, {takenDate}, geen herinnering om {reminderTimes}.\nIs dit per ongeluk gebeurd? Dan kun je de geregistreerde inname ongedaan maken",
-  "midnightTakenWarningDialogSeeHowToRevert": "Bekijk hoe u een inname-registratie ongedaan kunt maken",
+  "midnightTakenWarningDialogSeeHowToRevert": "Bekijk hoe je een geregistreerde pilinname ongedaan maakt",
   "midnightTakenWarningDialogNeverShowAgain": "Niet meer tonen",
   "pauseStartDateMustBeOnOrBefore": "Kies een startdatum van de pauze op {date} of eerder",
   "addPausePeriod": "Pauzeperiode toevoegen",

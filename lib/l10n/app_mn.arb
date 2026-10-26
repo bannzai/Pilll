@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "эм уусан бүртгэлтэй: {recordedDays} өдөр · бүртгэлгүй: {missedDays} өдөр",
   "midnightTakenWarningDialogTitle": "Анхаарна уу",
   "midnightTakenWarningDialogBody": "{takenDate} өдрийн эм уусан бүртгэл мөн хийгдлээ. Өнөөдөр буюу {takenDate}-нд {reminderTimes} цагийн сануулга танд ирэхгүй.\nХэрэв андуурч бүртгэсэн бол эм уусан бүртгэлийг цуцална уу",
-  "midnightTakenWarningDialogSeeHowToRevert": "Уусан бүртгэлийг цуцлах аргыг үзэх",
+  "midnightTakenWarningDialogSeeHowToRevert": "Эм уусан тэмдэглэлийг хэрхэн цуцлахыг харна уу",
   "midnightTakenWarningDialogNeverShowAgain": "Дахин бүү харуул",
   "pauseStartDateMustBeOnOrBefore": "Завсарлагын эхлэх огноог {date} буюу түүнээс өмнө сонгоно уу",
   "addPausePeriod": "Уух завсарлагааны хугацаа нэмэх",

@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "tablešu lietošanas ierakstu dienas: {recordedDays} · bez ieraksta: {missedDays}",
   "midnightTakenWarningDialogTitle": "Lūdzu, pievērsiet uzmanību",
   "midnightTakenWarningDialogBody": "Izveidots arī tablešu lietošanas ieraksts datumam {takenDate}. Šodien, {takenDate}, jūs nesaņemsiet atgādinājumu plkst. {reminderTimes}.\nJa tas notika kļūdas dēļ, lūdzu, atceliet reģistrēto tabletes lietošanu",
-  "midnightTakenWarningDialogSeeHowToRevert": "Skatīt, kā atcelt lietošanas atzīmi",
+  "midnightTakenWarningDialogSeeHowToRevert": "Skatiet, kā atcelt tabletes lietošanas ierakstu",
   "midnightTakenWarningDialogNeverShowAgain": "Vairs nerādīt",
   "pauseStartDateMustBeOnOrBefore": "Lūdzu, izvēlieties pauzes sākuma datumu {date} vai agrāk",
   "addPausePeriod": "Pievienot lietošanas pārtraukuma periodu",

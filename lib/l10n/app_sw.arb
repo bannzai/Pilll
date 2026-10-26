@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "rekodi ya kumeza vidonge: siku {recordedDays} · bila rekodi: siku {missedDays}",
   "midnightTakenWarningDialogTitle": "Tafadhali zingatia",
   "midnightTakenWarningDialogBody": "Rekodi ya kumeza vidonge imeundwa pia kwa tarehe {takenDate}. Leo, {takenDate}, hutapokea ukumbusho wa saa {reminderTimes}.\nIkiwa hii ni kosa, tafadhali batilisha umezaji uliorekodiwa",
-  "midnightTakenWarningDialogSeeHowToRevert": "Ona jinsi ya kubatilisha rekodi ya kuchukua",
+  "midnightTakenWarningDialogSeeHowToRevert": "Angalia jinsi ya kufuta rekodi ya kumeza kidonge",
   "midnightTakenWarningDialogNeverShowAgain": "Usionyeshe tena",
   "pauseStartDateMustBeOnOrBefore": "Tafadhali chagua tarehe ya kuanza mapumziko {date} au kabla yake",
   "addPausePeriod": "Ongeza kipindi cha mapumziko ya kumeza",

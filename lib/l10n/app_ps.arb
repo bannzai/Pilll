@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "د ګولۍ اخیستلو ریکارډ لرونکې ورځې: {recordedDays} · بې‌ریکارډه ورځې: {missedDays}",
   "midnightTakenWarningDialogTitle": "مهرباني وکړئ پام وکړئ",
   "midnightTakenWarningDialogBody": "د {takenDate} لپاره هم د ګولۍ اخیستلو ریکارډ جوړ شو. نن، {takenDate}، به تاسو ته د {reminderTimes} خبرتیا نه رسېږي.\nکه دا په تېروتنه ثبت شوی وي، مهرباني وکړئ ثبت شوې ګولۍ اخیستل لغوه کړئ",
-  "midnightTakenWarningDialogSeeHowToRevert": "د اخیستلو ثبت د لغوه کولو طریقه وګورئ",
+  "midnightTakenWarningDialogSeeHowToRevert": "د ګولۍ اخیستلو ثبت د لغوه کولو څرنګوالی وګورئ",
   "midnightTakenWarningDialogNeverShowAgain": "دا نور مه ښکاره کوئ",
   "pauseStartDateMustBeOnOrBefore": "مهرباني وکړئ د وقفې د پیل نېټه {date} یا له هغې مخکې وټاکئ",
   "addPausePeriod": "د اخیستو د وقفې موده اضافه کړئ",

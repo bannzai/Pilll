@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "rekhodi lokuphuza amaphilisi: izinsuku ezingu-{recordedDays} · ezingabhalisiwe: ezingu-{missedDays}",
   "midnightTakenWarningDialogTitle": "Sicela uqaphele",
   "midnightTakenWarningDialogBody": "Kwenziwe ne-rekhodi lokuphuza amaphilisi lika-{takenDate}. Namuhla, {takenDate}, ngeke uthole isikhumbuzi sika-{reminderTimes}.\nUma lokhu kube yiphutha, sicela ukhansele ukuphuza okurekhodiwe",
-  "midnightTakenWarningDialogSeeHowToRevert": "Bona indlela yokususa irekhodi lokuthatha",
+  "midnightTakenWarningDialogSeeHowToRevert": "Bona ukuthi ungakhansela kanjani irekhodi lokuphuza iphilisi",
   "midnightTakenWarningDialogNeverShowAgain": "Ungaphinde ukhombise lokhu",
   "pauseStartDateMustBeOnOrBefore": "Sicela ukhethe usuku lokuqala kwekhefu ngo-{date} noma ngaphambili",
   "addPausePeriod": "Engeza isikhathi sekhefu sokuphuza",

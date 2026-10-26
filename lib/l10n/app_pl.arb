@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "Dni z zapisem przyjęcia: {recordedDays} · bez zapisu: {missedDays}",
   "midnightTakenWarningDialogTitle": "Zwróć uwagę",
   "midnightTakenWarningDialogBody": "Dodano także wpis do rejestru przyjęciа tabletki na {takenDate}. Dziś, {takenDate}, nie otrzymasz przypomnienia o {reminderTimes}.\nJeśli to pomyłka, możesz cofnąć zarejestrowane przyjęcie tabletki",
-  "midnightTakenWarningDialogSeeHowToRevert": "Zobacz, jak cofnąć przyjęcie",
+  "midnightTakenWarningDialogSeeHowToRevert": "Zobacz, jak cofnąć zapis przyjęcia tabletki",
   "midnightTakenWarningDialogNeverShowAgain": "Nie pokazuj ponownie",
   "pauseStartDateMustBeOnOrBefore": "Wybierz datę rozpoczęcia przerwy {date} lub wcześniejszą",
   "addPausePeriod": "Dodaj okres przerwy w przyjmowaniu",

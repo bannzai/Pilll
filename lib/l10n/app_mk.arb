@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "Запис за земање: {recordedDays} дена · без запис: {missedDays} дена",
   "midnightTakenWarningDialogTitle": "Ве молиме, обрнете внимание",
   "midnightTakenWarningDialogBody": "Создаден е и Запис за земање за {takenDate}. Денес, {takenDate}, нема да добиете известување во {reminderTimes}.\nАко ова е грешка, можете да го откажете запишаното земање",
-  "midnightTakenWarningDialogSeeHowToRevert": "Видете како да го откажете записот за земање",
+  "midnightTakenWarningDialogSeeHowToRevert": "Погледнете како да откажете запис за земање таблета",
   "midnightTakenWarningDialogNeverShowAgain": "Не прикажувај повторно",
   "pauseStartDateMustBeOnOrBefore": "Изберете датум на почеток на паузата на {date} или порано",
   "addPausePeriod": "Додај период на пауза во земањето",

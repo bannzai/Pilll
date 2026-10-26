@@ -555,7 +555,7 @@
   "endedPillSheetDialogSummaryMessage": "सेवन रेकर्ड: {recordedDays} दिन · रेकर्ड नभएका: {missedDays} दिन",
   "midnightTakenWarningDialogTitle": "कृपया ध्यान दिनुहोस्",
   "midnightTakenWarningDialogBody": "{takenDate} का लागि पनि सेवन रेकर्ड बनाइएको छ। आज {takenDate} मा {reminderTimes} को सूचना तपाईंले पाउनुहुने छैन।\nयो गल्तीले रेकर्ड भएको हो भने, कृपया चक्की सेवनको रेकर्ड रद्द गर्नुहोस्",
-  "midnightTakenWarningDialogSeeHowToRevert": "सेवन रद्द गर्ने तरिका हेर्नुहोस्",
+  "midnightTakenWarningDialogSeeHowToRevert": "चक्की खाएको रेकर्ड कसरी रद्द गर्ने हेर्नुहोस्",
   "midnightTakenWarningDialogNeverShowAgain": "फेरि नदेखाउनुहोस्",
   "pauseStartDateMustBeOnOrBefore": "कृपया {date} वा त्यसअघिको विश्राम सुरु मिति चयन गर्नुहोस्",
   "addPausePeriod": "सेवन विश्राम अवधि थप्नुहोस्",
