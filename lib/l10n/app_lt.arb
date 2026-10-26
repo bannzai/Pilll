@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "Pasirinkto plano šiuo metu įsigyti negalima. Paleiskite programėlę iš naujo ir bandykite dar kartą.",
   "purchaseErrorProductAlreadyPurchasedError": "Šį planą jau įsigijote. Norėdami atkurti pirkinį šiame įrenginyje, pasirinkite „Jau pirkote?“",
   "purchaseErrorReceiptAlreadyInUseError": "Pirkimas jau atliktas arba jo duomenys naudojami kitoje naudotojo paskyroje. Patikrinkite paskyrą {accountName}",
-  "purchaseErrorInvalidReceiptError": "Neteisingi pirkimo duomenys. Patikrinkite pirkimo informaciją.",
+  "purchaseErrorInvalidReceiptError": "Pirkimo duomenys negalioja. Patikrinkite savo pirkimo duomenis",
   "purchaseErrorMissingReceiptFileError": "Pirkėjo informacijos nerasta. Prisijunkite prie įrenginio su {accountName} ir bandykite dar kartą.",
   "purchaseErrorNetworkError": "Tinklo būklė nestabili. Patikrinkite ryšio būklę ir bandykite dar kartą.",
   "purchaseErrorInvalidCredentialsError": "Pirkimas nepavyko. Palaukite ir bandykite dar kartą. Jei problema išlieka, susisiekite per Nustatymai > Kontaktai. Išsami informacija: {exceptionMessage}:{exceptionDetails}",

@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "طرح انتخاب‌شده در حال حاضر برای خرید در دسترس نیست. لطفاً برنامه را دوباره راه‌اندازی کنید و باز هم امتحان کنید.",
   "purchaseErrorProductAlreadyPurchasedError": "این طرح را قبلاً خریده‌اید. برای بازیابی اطلاعات خرید در این دستگاه، لطفاً «قبلاً خرید کرده‌اید؟» را انتخاب کنید",
   "purchaseErrorReceiptAlreadyInUseError": "خرید قبلاً انجام شده است یا اطلاعات خرید در حساب کاربری دیگری استفاده می‌شود. لطفاً حساب {accountName} را بررسی کنید",
-  "purchaseErrorInvalidReceiptError": "اطلاعات خرید نامعتبر است. لطفاً اطلاعات خرید خود را بررسی کنید",
+  "purchaseErrorInvalidReceiptError": "اطلاعات خرید معتبر نیست. لطفاً اطلاعات خرید را بررسی کنید",
   "purchaseErrorMissingReceiptFileError": "اطلاعات خریدار موجود نیست. لطفاً با {accountName} وارد دستگاه شوید و دوباره تلاش کنید",
   "purchaseErrorNetworkError": "وضعیت شبکه ناپایدار است. لطفاً وضعیت اتصال خود را بررسی کرده و مجدداً تلاش کنید.",
   "purchaseErrorInvalidCredentialsError": "خرید با شکست مواجه شد. لطفاً کمی صبر کنید و دوباره تلاش کنید. اگر مشکل حل نشد، از طریق تنظیمات > تماس با ما با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",

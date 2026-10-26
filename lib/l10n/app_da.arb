@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "Den valgte plan kan ikke købes lige nu. Genstart appen, og prøv igen.",
   "purchaseErrorProductAlreadyPurchasedError": "Du har allerede købt abonnementet. Hvis du vil gendanne købet på denne enhed, kan du vælge “Har du købt før?”",
   "purchaseErrorReceiptAlreadyInUseError": "Købet er allerede gennemført, eller købsoplysningerne bruges af en anden bruger. Tjek kontoen {accountName}",
-  "purchaseErrorInvalidReceiptError": "Ugyldige købsoplysninger. Kontroller venligst din købsinformation.",
+  "purchaseErrorInvalidReceiptError": "Købsoplysningerne er ugyldige. Tjek venligst dine købsoplysninger",
   "purchaseErrorMissingReceiptFileError": "Der findes ingen køberoplysninger. Log ind på enheden med {accountName} og prøv igen",
   "purchaseErrorNetworkError": "Din netværksforbindelse er ustabil. Kontroller forbindelsen og prøv igen.",
   "purchaseErrorInvalidCredentialsError": "Købet mislykkedes. Vent venligst et øjeblik og prøv igen. Hvis problemet fortsætter, skal du kontakte os via Indstillinger > Kontakt. Detaljer: {exceptionMessage}:{exceptionDetails}",

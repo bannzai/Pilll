@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "O plano selecionado não está disponível para compra no momento. Reinicie o aplicativo e tente novamente.",
   "purchaseErrorProductAlreadyPurchasedError": "Você já comprou este plano. Para restaurar a compra neste dispositivo, selecione “Já comprou antes?”",
   "purchaseErrorReceiptAlreadyInUseError": "A compra já foi feita ou os dados da compra estão em uso em outra conta. Confira a conta {accountName}",
-  "purchaseErrorInvalidReceiptError": "Informações de compra inválidas. Verifique os dados da sua compra.",
+  "purchaseErrorInvalidReceiptError": "As informações da compra não são válidas. Confira os detalhes da sua compra",
   "purchaseErrorMissingReceiptFileError": "Informações do comprador não encontradas. Faça login no dispositivo com {accountName} e tente novamente.",
   "purchaseErrorNetworkError": "Sua conexão com a internet está instável. Verifique sua conexão e tente novamente.",
   "purchaseErrorInvalidCredentialsError": "A compra falhou. Tente novamente após alguns instantes. Se o problema persistir, entre em contato através de Configurações > Contato. Detalhes: {exceptionMessage}:{exceptionDetails}",

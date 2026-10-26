@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "Hindi muna mabibili ang napili ninyong plano. Pakisuyong i-restart ang app at subukan muli.",
   "purchaseErrorProductAlreadyPurchasedError": "Nabili na ninyo ang planong ito. Para maibalik ang impormasyon ng pagbili sa device na ito, piliin po ang “Nakabili na dati?”",
   "purchaseErrorReceiptAlreadyInUseError": "Nabili na po ito, o ginagamit ang impormasyon ng pagbili sa ibang account. Pakitingnan ang account na {accountName}",
-  "purchaseErrorInvalidReceiptError": "Invalid na impormasyon ng pagbili. Mangyaring suriin ang impormasyon ng pagbili.",
+  "purchaseErrorInvalidReceiptError": "Hindi wasto ang impormasyon sa pagbili. Pakisuri po ang mga detalye ng inyong pagbili",
   "purchaseErrorMissingReceiptFileError": "Walang nakitang impormasyon ng mamimili. Mangyaring mag-sign in gamit ang {accountName} sa inyong device at subukan ulit.",
   "purchaseErrorNetworkError": "Hindi matatag ang koneksyon sa internet. Pakisuri ang inyong koneksyon at subukan muli.",
   "purchaseErrorInvalidCredentialsError": "Hindi natagumpay ang pagbili. Maghintay ng kaunti at subukan ulit. Kung patuloy pa ring may problema, makipag-ugnayan sa amin sa pamamagitan ng Settings > Contact. Detalye: {exceptionMessage}:{exceptionDetails}",

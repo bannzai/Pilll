@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "আপুনি বাছি লোৱা প্লেনটো বৰ্তমান কিনিবলৈ উপলব্ধ নহয়। অনুগ্ৰহ কৰি এপটো পুনৰ আৰম্ভ কৰি আকৌ চেষ্টা কৰক।",
   "purchaseErrorProductAlreadyPurchasedError": "আপুনি ইতিমধ্যে প্লেনটো কিনিছে। এই ডিভাইচত ক্ৰয়ৰ তথ্য পুনৰুদ্ধাৰ কৰিবলৈ অনুগ্ৰহ কৰি «আগতে ক্ৰয় কৰিছিল নেকি?» বাছনি কৰক",
   "purchaseErrorReceiptAlreadyInUseError": "ইতিমধ্যে ক্ৰয় কৰা হৈছে, অথবা ক্ৰয়ৰ তথ্য আন এজন ব্যৱহাৰকাৰীয়ে ব্যৱহাৰ কৰি আছে। অনুগ্ৰহ কৰি {accountName} একাউণ্টটো পৰীক্ষা কৰক",
-  "purchaseErrorInvalidReceiptError": "ক্ৰয় তথ্য ভুল হৈছে। অনুগ্ৰহ কৰি আপোনাৰ ক্ৰয় তথ্য পৰীক্ষা কৰক।",
+  "purchaseErrorInvalidReceiptError": "ক্ৰয়ৰ তথ্য বৈধ নহয়। অনুগ্ৰহ কৰি ক্ৰয়ৰ তথ্য পৰীক্ষা কৰক",
   "purchaseErrorMissingReceiptFileError": "ক্ৰেতাৰ তথ্য পোৱা নাযায়। {accountName} ৰ জৰিয়তে ডিভাইচত চাইন ইন কৰি পুনৰ চেষ্টা কৰক",
   "purchaseErrorNetworkError": "নেটৱৰ্কৰ অৱস্থা অস্থিৰ। সংযোগৰ পৰিস্থিতি পৰীক্ষা কৰি পুনৰ চেষ্টা কৰক।",
   "purchaseErrorInvalidCredentialsError": "ক্ৰয় বিফল হৈছে। কিছু সময় পিছত পুনৰ চেষ্টা কৰক। যদি সমাধান নহয়, তেন্তে ছেটিংছ > যোগাযোগ ত যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",

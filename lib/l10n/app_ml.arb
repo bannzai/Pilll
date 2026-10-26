@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "തിരഞ്ഞെടുത്ത പ്ലാൻ ഇപ്പോൾ വാങ്ങാൻ ലഭ്യമല്ല. ദയവായി ആപ്പ് വീണ്ടും ആരംഭിച്ച് ഒന്നുകൂടി ശ്രമിക്കൂ.",
   "purchaseErrorProductAlreadyPurchasedError": "ഈ പ്ലാൻ ഇതിനകം വാങ്ങിയിട്ടുണ്ട്. ഈ ഉപകരണത്തിൽ വാങ്ങലിന്റെ വിവരങ്ങൾ പുനഃസ്ഥാപിക്കാൻ ‘മുമ്പ് വാങ്ങിയിട്ടുണ്ടോ?’ തിരഞ്ഞെടുക്കൂ",
   "purchaseErrorReceiptAlreadyInUseError": "വാങ്ങൽ ഇതിനകം പൂർത്തിയായി, അല്ലെങ്കിൽ വാങ്ങൽ വിവരങ്ങൾ മറ്റൊരു ഉപയോക്താവിന്റെ അക്കൗണ്ടിൽ ഉപയോഗിക്കുന്നുണ്ട്. ദയവായി {accountName} അക്കൗണ്ട് പരിശോധിക്കൂ",
-  "purchaseErrorInvalidReceiptError": "അസാധുവായ വാങ്ങൽ വിവരങ്ങളാണ്. വാങ്ങൽ വിവരങ്ങൾ പരിശോധിക്കുക",
+  "purchaseErrorInvalidReceiptError": "വാങ്ങൽ വിവരങ്ങൾ സാധുവല്ല. വാങ്ങലിന്റെ വിശദാംശങ്ങൾ പരിശോധിക്കൂ",
   "purchaseErrorMissingReceiptFileError": "വാങ്ങുന്നയാളുടെ വിവരങ്ങൾ നിലവിലില്ല. ദയവായി {accountName} ഉപയോഗിച്ച് ഉപകരണത്തിൽ സൈൻ ഇൻ ചെയ്ത് വീണ്ടും ശ്രമിക്കുക",
   "purchaseErrorNetworkError": "ശൃംഖല കണക്ഷൻ അസ്ഥിരമാണ്. കണക്ഷൻ സ്ഥിതി പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക.",
   "purchaseErrorInvalidCredentialsError": "വാങ്ങൽ പരാജയപ്പെട്ടു. കുറച്ച് സമയം കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കുക. പരിഹാരമാകുന്നില്ലെങ്കിൽ ക്രമീകരണങ്ങൾ > അന്വേഷണം വഴി ബന്ധപ്പെടുക. വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",

@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "ଚୟନ କରାଯାଇଥିବା ପ୍ଲାନ୍ ବର୍ତ୍ତମାନ କିଣିବା ପାଇଁ ଉପଲବ୍ଧ ନାହିଁ। ଦୟାକରି ଆପ୍‌ଟି ପୁଣି ଚାଲୁ କରି ଆଉ ଥରେ ଚେଷ୍ଟା କରନ୍ତୁ।",
   "purchaseErrorProductAlreadyPurchasedError": "ଆପଣ ଏହି ପ୍ଲାନ୍‌ଟି ପୂର୍ବରୁ କିଣିଛନ୍ତି। ଏହି ଡିଭାଇସ୍‌ରେ କ୍ରୟ ସୂଚନା ପୁନରୁଦ୍ଧାର କରିବାକୁ ଦୟାକରି “ପୂର୍ବରୁ କିଣିଛନ୍ତି?” ବାଛନ୍ତୁ",
   "purchaseErrorReceiptAlreadyInUseError": "କ୍ରୟ ପୂର୍ବରୁ ହୋଇସାରିଛି କିମ୍ବା କ୍ରୟ ସୂଚନା ଅନ୍ୟ ଜଣେ ବ୍ୟବହାରକାରୀଙ୍କ ଖାତାରେ ବ୍ୟବହୃତ ହେଉଛି। ଦୟାକରି {accountName} ଖାତା ଯାଞ୍ଚ କରନ୍ତୁ",
-  "purchaseErrorInvalidReceiptError": "ଅବୈଧ କ୍ରୟ ସୂଚନା। ଦୟାକରି ଆପଣଙ୍କ କ୍ରୟ ସୂଚନା ଯାଞ୍ଚ କରନ୍ତୁ।",
+  "purchaseErrorInvalidReceiptError": "କ୍ରୟ ସୂଚନା ବୈଧ ନୁହେଁ। ଦୟାକରି ଆପଣଙ୍କ କ୍ରୟ ବିବରଣୀ ଯାଞ୍ଚ କରନ୍ତୁ",
   "purchaseErrorMissingReceiptFileError": "କ୍ରେତାଙ୍କ ସୂଚନା ମିଳୁନାହିଁ। {accountName} ସହିତ ଡିଭାଇସ୍‌ରେ ସାଇନ୍ ଇନ୍ କରି ଚେଷ୍ଟା କରନ୍ତୁ।",
   "purchaseErrorNetworkError": "ନେଟୱାର୍କ ସଂଯୋଗ ଅସ୍ଥିର ଅଛି। ଆପଣଙ୍କର ସଂଯୋଗ ସ୍ଥିତି ଯାଞ୍ଚ କରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ।",
   "purchaseErrorInvalidCredentialsError": "କିଣାଯିବାରେ ବିଫଳ ହୋଇଛି। କିଛି ସମୟ ପରେ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ। ସମାଧାନ ନ ହେଲେ ସେଟିଂ > ଯୋଗାଯୋଗ ଦ୍ୱାରା ଯୋଗାଯୋଗ କରନ୍ତୁ। ବିସ୍ତାରିତ ତଥ୍ୟ: {exceptionMessage}:{exceptionDetails}",

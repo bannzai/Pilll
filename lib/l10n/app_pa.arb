@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "ਚੁਣਿਆ ਗਿਆ ਪਲਾਨ ਇਸ ਵੇਲੇ ਖਰੀਦਣ ਲਈ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਐਪ ਮੁੜ ਚਾਲੂ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
   "purchaseErrorProductAlreadyPurchasedError": "ਤੁਸੀਂ ਇਹ ਪਲਾਨ ਪਹਿਲਾਂ ਹੀ ਖਰੀਦ ਚੁੱਕੇ ਹੋ। ਇਸ ਡਿਵਾਈਸ ’ਤੇ ਖਰੀਦ ਦੀ ਜਾਣਕਾਰੀ ਬਹਾਲ ਕਰਨ ਲਈ ਕਿਰਪਾ ਕਰਕੇ “ਪਹਿਲਾਂ ਖਰੀਦਿਆ ਹੈ?” ਚੁਣੋ",
   "purchaseErrorReceiptAlreadyInUseError": "ਖਰੀਦ ਪਹਿਲਾਂ ਹੀ ਹੋ ਚੁੱਕੀ ਹੈ ਜਾਂ ਖਰੀਦ ਦੀ ਜਾਣਕਾਰੀ ਕਿਸੇ ਹੋਰ ਵਰਤੋਂਕਾਰ ਦੇ ਖਾਤੇ ਵਿੱਚ ਵਰਤੀ ਜਾ ਰਹੀ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ {accountName} ਖਾਤਾ ਜਾਂਚੋ",
-  "purchaseErrorInvalidReceiptError": "ਗਲਤ ਖਰੀਦਦਾਰੀ ਜਾਣਕਾਰੀ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਖਰੀਦਦਾਰੀ ਜਾਣਕਾਰੀ ਦੀ ਜਾਂਚ ਕਰੋ।",
+  "purchaseErrorInvalidReceiptError": "ਖਰੀਦ ਦੀ ਜਾਣਕਾਰੀ ਵੈਧ ਨਹੀਂ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਖਰੀਦ ਦੇ ਵੇਰਵੇ ਜਾਂਚੋ",
   "purchaseErrorMissingReceiptFileError": "ਖਰੀਦਦਾਰ ਦੀ ਜਾਣਕਾਰੀ ਮੌਜੂਦ ਨਹੀਂ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ {accountName} ਨਾਲ ਆਪਣੇ ਡਿਵਾਈਸ ਵਿੱਚ ਸਾਈਨ ਇਨ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
   "purchaseErrorNetworkError": "ਨੈੱਟਵਰਕ ਦੀ ਸਥਿਤੀ ਅਸਥਿਰ ਹੈ। ਕਨੈਕਸ਼ਨ ਦੀ ਸਥਿਤੀ ਦੀ ਜਾਂਚ ਕਰਨ ਤੋਂ ਬਾਅਦ ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
   "purchaseErrorInvalidCredentialsError": "ਖਰੀਦਦਾਰੀ ਅਸਫਲ ਹੋ ਗਈ। ਕੁਝ ਸਮੇਂ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਜੇਕਰ ਸਮੱਸਿਆ ਹੱਲ ਨਹੀਂ ਹੁੰਦੀ ਤਾਂ ਸੈਟਿੰਗਜ਼ > ਸੰਪਰਕ ਰਾਹੀਂ ਸੰਪਰਕ ਕਰੋ। ਵਿਸਤਾਰ: {exceptionMessage}:{exceptionDetails}",

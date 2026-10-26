@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "O plan que escolliches non está dispoñible para mercalo neste momento. Reinicia a aplicación e téntao de novo, por favor.",
   "purchaseErrorProductAlreadyPurchasedError": "Xa compraches o plan. Para restaurar a compra neste dispositivo, selecciona «Xa o compraches?»",
   "purchaseErrorReceiptAlreadyInUseError": "A compra xa se realizou ou os seus datos están a usarse noutra conta. Comproba a conta {accountName}",
-  "purchaseErrorInvalidReceiptError": "A información de compra non é válida. Comprobe a información de compra.",
+  "purchaseErrorInvalidReceiptError": "A información da compra non é válida. Comproba os datos da túa compra",
   "purchaseErrorMissingReceiptFileError": "Non se atopa información do comprador. Inicia sesión no dispositivo con {accountName} e téntao de novo.",
   "purchaseErrorNetworkError": "A conexión de rede está inestable. Comprobe a súa conexión á internet e ténteo de novo.",
   "purchaseErrorInvalidCredentialsError": "Fallou a compra. Ténteo de novo despois dun tempo. Se non se resolve, contacte connosco desde Configuración > Consulta. Detalles: {exceptionMessage}:{exceptionDetails}",

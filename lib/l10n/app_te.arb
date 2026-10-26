@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "ఎంచుకున్న ప్లాన్ ప్రస్తుతం కొనుగోలుకు అందుబాటులో లేదు. దయచేసి యాప్‌ను మళ్లీ ప్రారంభించి, మరోసారి ప్రయత్నించండి.",
   "purchaseErrorProductAlreadyPurchasedError": "ఈ ప్లాన్‌ను మీరు ఇప్పటికే కొనుగోలు చేశారు. ఈ పరికరంలో కొనుగోలు సమాచారాన్ని పునరుద్ధరించడానికి దయచేసి “ఇంతకు ముందు కొనుగోలు చేశారా?” ఎంచుకోండి",
   "purchaseErrorReceiptAlreadyInUseError": "కొనుగోలు ఇప్పటికే పూర్తయింది లేదా కొనుగోలు సమాచారం మరో వినియోగదారు ఖాతాలో ఉపయోగించబడుతోంది. దయచేసి {accountName} ఖాతాను తనిఖీ చేయండి",
-  "purchaseErrorInvalidReceiptError": "చెల్లని కొనుగోలు సమాచారం. దయచేసి మీ కొనుగోలు సమాచారాన్ని తనిఖీ చేయండి",
+  "purchaseErrorInvalidReceiptError": "కొనుగోలు సమాచారం చెల్లదు. దయచేసి మీ కొనుగోలు వివరాలను తనిఖీ చేయండి",
   "purchaseErrorMissingReceiptFileError": "కొనుగోలుదారు సమాచారం ఉనికిలో లేదు. {accountName} తో పరికరంలోకి సైన్ ఇన్ చేసి మళ్లీ ప్రయత్నించండి",
   "purchaseErrorNetworkError": "నెట్‌వర్క్ కనెక్షన్ అస్థిరంగా ఉంది. కనెక్షన్ స్థితిని తనిఖీ చేసి మళ్లీ ప్రయత్నించండి.",
   "purchaseErrorInvalidCredentialsError": "కొనుగోలు విఫలమైంది. కొంత సమయం తరువాత మళ్లీ ప్రయత్నించండి. సమస్య పరిష్కరించకపోతే సెట్టింగ్స్ > సంప్రదింపు ద్వారా సంప్రదించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",

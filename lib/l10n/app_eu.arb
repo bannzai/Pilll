@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "Aukeratu duzun plana ezin da une honetan erosi. Berrabiarazi aplikazioa, mesedez, eta saiatu berriro.",
   "purchaseErrorProductAlreadyPurchasedError": "Dagoeneko erosi duzu plana. Erosketa gailu honetan berrezartzeko, hautatu «Lehenago erosi duzu?»",
   "purchaseErrorReceiptAlreadyInUseError": "Erosketa eginda dago jada, edo beste erabiltzaile-kontu bat ari da erosketa-datuak erabiltzen. Egiaztatu {accountName} kontua, mesedez",
-  "purchaseErrorInvalidReceiptError": "Erosketa informazioa ez da baliozkoa. Mesedez, egiaztatu erosketa datuak.",
+  "purchaseErrorInvalidReceiptError": "Erosketaren datuak ez dira baliozkoak. Egiaztatu, mesedez, erosketaren datuak",
   "purchaseErrorMissingReceiptFileError": "Eroslearen informazioa ez dago eskuragarri. {accountName} kontuarekin gailuan saioa hasi eta berriz saiatu.",
   "purchaseErrorNetworkError": "Sarearen egoera ezegonkorra da. Konexioaren egoera egiaztatu eta berriro saiatu, mesedez.",
   "purchaseErrorInvalidCredentialsError": "Erosketak huts egin du. Denbora bat itxaron eta berriro saiatu. Konpondu ez bada, Ezarpenak > Kontsultak bidez jarri harremanetan gurekin. Xehetasunak: {exceptionMessage}:{exceptionDetails}",

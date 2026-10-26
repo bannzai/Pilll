@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "แพ็กเกจที่เลือกยังไม่พร้อมให้ซื้อในขณะนี้ค่ะ กรุณาเปิดแอปใหม่แล้วลองอีกครั้งค่ะ",
   "purchaseErrorProductAlreadyPurchasedError": "ซื้อแพ็กเกจนี้แล้วค่ะ หากต้องการกู้คืนข้อมูลการซื้อบนอุปกรณ์นี้ โปรดเลือก “เคยซื้อแล้ว?” ค่ะ",
   "purchaseErrorReceiptAlreadyInUseError": "มีการซื้อแล้ว หรือข้อมูลการซื้อกำลังถูกใช้ในบัญชีอื่น โปรดตรวจสอบบัญชี {accountName} ค่ะ",
-  "purchaseErrorInvalidReceiptError": "ข้อมูลการซื้อไม่ถูกต้อง กรุณาตรวจสอบข้อมูลการซื้อของคุณ",
+  "purchaseErrorInvalidReceiptError": "ข้อมูลการซื้อไม่ถูกต้องค่ะ โปรดตรวจสอบรายละเอียดการซื้อค่ะ",
   "purchaseErrorMissingReceiptFileError": "ไม่พบข้อมูลผู้ซื้อ กรุณาเข้าสู่ระบบด้วย {accountName} ในอุปกรณ์ของคุณแล้วลองใหม่อีกครั้ง",
   "purchaseErrorNetworkError": "สถานะเครือข่ายไม่เสถียร กรุณาตรวจสอบการเชื่อมต่อและลองอีกครั้ง",
   "purchaseErrorInvalidCredentialsError": "การซื้อล้มเหลว กรุณาลองใหม่อีกครั้งภายหลัง หากปัญหายังไม่ได้รับการแก้ไข กรุณาติดต่อสอบถามผ่าน การตั้งค่า > สอบถาม รายละเอียด: {exceptionMessage}:{exceptionDetails}",

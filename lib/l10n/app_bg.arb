@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "Избраният план временно не е достъпен за покупка. Моля, рестартирайте приложението и опитайте отново.",
   "purchaseErrorProductAlreadyPurchasedError": "Вече сте закупили плана. За да възстановите покупката на това устройство, изберете „Вече сте купували?“",
   "purchaseErrorReceiptAlreadyInUseError": "Покупката вече е направена или данните за нея се използват от друг потребител. Моля, проверете профила {accountName}",
-  "purchaseErrorInvalidReceiptError": "Невалидна информация за покупка. Моля, проверете информацията за покупката.",
+  "purchaseErrorInvalidReceiptError": "Информацията за покупката е невалидна. Моля, проверете данните за покупката",
   "purchaseErrorMissingReceiptFileError": "Информацията за купувача не съществува. Моля, влезте в устройството с {accountName} и опитайте отново.",
   "purchaseErrorNetworkError": "Мрежовата връзка е нестабилна. Моля, проверете състоянието на връзката си и опитайте отново.",
   "purchaseErrorInvalidCredentialsError": "Покупката неуспешна. Моля, опитайте отново след известно време. Ако проблемът продължава, свържете се с нас от Настройки > Обратна връзка. Подробности: {exceptionMessage}:{exceptionDetails}",

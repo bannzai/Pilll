@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "Nid yw'r cynllun a ddewisoch ar gael i'w brynu ar hyn o bryd. Ailgychwynnwch yr ap a rhowch gynnig arall arni, os gwelwch yn dda.",
   "purchaseErrorProductAlreadyPurchasedError": "Rydych chi eisoes wedi prynu’r cynllun. I adfer eich pryniant ar y ddyfais hon, dewiswch “Wedi prynu o’r blaen?”",
   "purchaseErrorReceiptAlreadyInUseError": "Mae’r pryniant eisoes wedi’i wneud, neu mae’r manylion prynu’n cael eu defnyddio gan gyfrif defnyddiwr arall. Gwiriwch gyfrif {accountName}, os gwelwch yn dda",
-  "purchaseErrorInvalidReceiptError": "Mae'r wybodaeth brynu yn annilys. Gwiriwch eich gwybodaeth brynu.",
+  "purchaseErrorInvalidReceiptError": "Nid yw'r wybodaeth brynu'n ddilys. Gwiriwch fanylion eich pryniant",
   "purchaseErrorMissingReceiptFileError": "Nid oes gwybodaeth prynwr ar gael. Mewngofnodwch i'r ddyfais gyda {accountName} a rhowch gynnig arni.",
   "purchaseErrorNetworkError": "Mae cyflwr y rhwydwaith yn ansefydlog. Gwiriwch eich cysylltiad a rhowch gynnig arni eto.",
   "purchaseErrorInvalidCredentialsError": "Mae'r bryniant wedi methu. Rhowch gynnig arall arni ar ôl ychydig o amser. Os na lwyddwch i ddatrys y broblem, cysylltwch â ni drwy Gosodiadau > Ymholiadau. Manylion: {exceptionMessage}:{exceptionDetails}",

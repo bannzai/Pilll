@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "Ընտրված պլանն այս պահին հասանելի չէ գնման համար։ Խնդրում ենք վերագործարկել հավելվածը և կրկին փորձել։",
   "purchaseErrorProductAlreadyPurchasedError": "Դուք արդեն գնել եք այս պլանը։ Այս սարքում գնման տվյալները վերականգնելու համար ընտրեք «Նախկինում գնե՞լ եք»",
   "purchaseErrorReceiptAlreadyInUseError": "Գնումն արդեն կատարվել է, կամ գնման տվյալներն օգտագործվում են մեկ այլ օգտատիրոջ հաշվում։ Խնդրում ենք ստուգել {accountName} հաշիվը",
-  "purchaseErrorInvalidReceiptError": "Անվավեր գնման տեղեկություններ: Խնդրում ենք ստուգել ձեր գնման տվյալները:",
+  "purchaseErrorInvalidReceiptError": "Գնման տվյալները վավեր չեն։ Խնդրում ենք ստուգել Ձեր գնման տվյալները",
   "purchaseErrorMissingReceiptFileError": "Գնորդի տեղեկությունները չեն գտնվել։ Խնդրում ենք {accountName} հաշվով սարքում մուտք գործել և կրկին փորձել։",
   "purchaseErrorNetworkError": "Ցանցի կապակցությունը անկայուն է։ Ստուգեք ձեր ինտերնետ կապակցությունը և նորից փորձեք։",
   "purchaseErrorInvalidCredentialsError": "Գնումը ձախողվեց։ Խնդրում ենք մի փոքր սպասել և կրկին փորձել։ Եթե խնդիրը չի լուծվում, ապա Կարգավորումներ > Հարցումներ բաժնից կապվեք մեզ հետ։ Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",

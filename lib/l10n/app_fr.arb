@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "L’offre sélectionnée n’est pas disponible à l’achat pour le moment. Veuillez redémarrer l’application et réessayer.",
   "purchaseErrorProductAlreadyPurchasedError": "Vous avez déjà acheté cette formule. Pour restaurer votre achat sur cet appareil, sélectionnez « Vous avez déjà acheté ? »",
   "purchaseErrorReceiptAlreadyInUseError": "L’achat a déjà été effectué ou ses informations sont utilisées par un autre compte. Veuillez vérifier le compte {accountName}",
-  "purchaseErrorInvalidReceiptError": "Informations d'achat invalides. Veuillez vérifier les détails de votre achat.",
+  "purchaseErrorInvalidReceiptError": "Les informations d'achat ne sont pas valides. Veuillez vérifier les détails de votre achat",
   "purchaseErrorMissingReceiptFileError": "Aucune information sur l'acheteur trouvée. Veuillez vous connecter à votre appareil avec {accountName} et réessayer.",
   "purchaseErrorNetworkError": "La connexion réseau est instable. Veuillez vérifier votre connexion et réessayer.",
   "purchaseErrorInvalidCredentialsError": "L'achat a échoué. Veuillez patienter un moment et réessayer. Si le problème persiste, veuillez nous contacter via Paramètres > Contactez-nous. Détails : {exceptionMessage}:{exceptionDetails}",

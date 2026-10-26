@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "Izvēlēto plānu pašlaik nevar iegādāties. Lūdzu, restartējiet lietotni un mēģiniet vēlreiz.",
   "purchaseErrorProductAlreadyPurchasedError": "Jūs jau iegādājāties šo plānu. Lai atjaunotu pirkumu šajā ierīcē, izvēlieties “Jau iegādājāties?”",
   "purchaseErrorReceiptAlreadyInUseError": "Pirkums jau ir veikts, vai tā dati tiek izmantoti citā lietotāja kontā. Lūdzu, pārbaudiet kontu {accountName}",
-  "purchaseErrorInvalidReceiptError": "Nederīga pirkuma informācija. Lūdzu, pārbaudiet savu pirkuma informāciju.",
+  "purchaseErrorInvalidReceiptError": "Pirkuma informācija nav derīga. Lūdzu, pārbaudiet pirkuma datus",
   "purchaseErrorMissingReceiptFileError": "Pircēja informācija nepastāv. Lūdzu pierakstieties ierīcē ar {accountName} un mēģiniet vēlreiz.",
   "purchaseErrorNetworkError": "Tīkla savienojums ir nestabils. Lūdzu, pārbaudiet savienojuma statusu un mēģiniet vēlreiz.",
   "purchaseErrorInvalidCredentialsError": "Pirkums neizdevās. Lūdzu uzgaidiet un mēģiniet vēlreiz. Ja problēma netiek atrisināta, lūdzu sazinieties ar mums sadaļā Iestatījumi > Kontakti. Detaļas: {exceptionMessage}:{exceptionDetails}",

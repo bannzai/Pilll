@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "התוכנית שנבחרה אינה זמינה כרגע לרכישה. כדאי להפעיל מחדש את האפליקציה ולנסות שוב.",
   "purchaseErrorProductAlreadyPurchasedError": "התוכנית כבר נרכשה. לשחזור פרטי הרכישה במכשיר הזה, יש לבחור ב״כבר רכשת בעבר?״",
   "purchaseErrorReceiptAlreadyInUseError": "הרכישה כבר בוצעה, או שפרטי הרכישה משמשים בחשבון אחר. יש לבדוק את החשבון {accountName}",
-  "purchaseErrorInvalidReceiptError": "מידע רכישה לא תקין. אנא בדקו את פרטי הרכישה שלכם",
+  "purchaseErrorInvalidReceiptError": "פרטי הרכישה אינם תקינים. כדאי לבדוק את פרטי הרכישה",
   "purchaseErrorMissingReceiptFileError": "מידע הרוכש לא נמצא. אנא התחבר למכשיר באמצעות {accountName} ונסה שוב",
   "purchaseErrorNetworkError": "מצב הרשת אינו יציב. אנא בדוק את מצב החיבור ונסה שוב.",
   "purchaseErrorInvalidCredentialsError": "הרכישה נכשלה. אנא נסו שוב לאחר זמן מה. אם הבעיה לא נפתרת, אנא פנו אלינו דרך הגדרות > פניה. פרטים: {exceptionMessage}:{exceptionDetails}",

@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "Die gekose plan is tans nie beskikbaar nie. Herbegin asseblief die app en probeer weer.",
   "purchaseErrorProductAlreadyPurchasedError": "Jy het reeds die plan gekoop. As jy jou aankoop op hierdie toestel wil herstel, kan jy asseblief op “Reeds gekoop?” tik",
   "purchaseErrorReceiptAlreadyInUseError": "Reeds gekoop, of die aankoopbesonderhede word deur ’n ander gebruiker gebruik. Gaan asseblief {accountName} na",
-  "purchaseErrorInvalidReceiptError": "Ongeldige aankoopinligting. Kontroleer asseblief jou aankoopinligting.",
+  "purchaseErrorInvalidReceiptError": "Die aankoopinligting is ongeldig. Kyk asseblief jou aankoopbesonderhede na",
   "purchaseErrorMissingReceiptFileError": "Daar is geen inligting oor die koper nie. Meld asseblief by hierdie toestel aan met {accountName} en probeer weer.",
   "purchaseErrorNetworkError": "Die netwerkverbinding is onstabiel. Kontroleer asseblief jou internetverbinding en probeer weer.",
   "purchaseErrorInvalidCredentialsError": "Aankoop kon nie voltooi word nie. Probeer asseblief later weer. As dit nie opgelos word nie, gaan na Instellings > Kontak om ondersteuning te kry. Besonderhede: {exceptionMessage}:{exceptionDetails}",

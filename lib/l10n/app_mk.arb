@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "Избраниот план во моментов не е достапен за купување. Ве молиме, рестартирајте ја апликацијата и обидете се повторно.",
   "purchaseErrorProductAlreadyPurchasedError": "Веќе сте го купиле планот. За да ги вратите податоците за купувањето на овој уред, изберете „Претходно сте купиле?“",
   "purchaseErrorReceiptAlreadyInUseError": "Купувањето е веќе извршено или податоците за купувањето се користат на друга корисничка сметка. Ве молиме, проверете ја сметката {accountName}",
-  "purchaseErrorInvalidReceiptError": "Невалидни податоци за купување. Ве молиме проверете ги информациите за купување.",
+  "purchaseErrorInvalidReceiptError": "Податоците за купувањето не се валидни. Ве молиме проверете ги податоците за купувањето",
   "purchaseErrorMissingReceiptFileError": "Информациите за купувачот не постојат. Ве молиме најавете се на уредот со {accountName} и обидете се повторно",
   "purchaseErrorNetworkError": "Мрежната врска е нестабилна. Проверете ја интернет врската и обидете се повторно.",
   "purchaseErrorInvalidCredentialsError": "Купувањето не успеа. Обидете се повторно подоцна. Ако проблемот се задржи, контактирајте не преку Поставки > Контакт. Детали: {exceptionMessage}:{exceptionDetails}",

@@ -294,7 +294,7 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "छनोट गरिएको योजना अहिले खरिदका लागि उपलब्ध छैन। कृपया एप फेरि सुरु गरेर पुनः प्रयास गर्नुहोस्।",
   "purchaseErrorProductAlreadyPurchasedError": "यो योजना पहिले नै खरिद गरिएको छ। यस उपकरणमा खरिदको जानकारी पुनर्स्थापना गर्न कृपया “पहिले खरिद गर्नुभएको हो?” छान्नुहोस्",
   "purchaseErrorReceiptAlreadyInUseError": "खरिद पहिले नै भइसकेको छ वा खरिदसम्बन्धी जानकारी अर्को प्रयोगकर्ताको खातामा प्रयोग भइरहेको छ। कृपया {accountName} खाता जाँच गर्नुहोस्",
-  "purchaseErrorInvalidReceiptError": "अमान्य खरीद जानकारी छ। कृपया आफ्नो खरीद जानकारी जाँच गर्नुहोस्।",
+  "purchaseErrorInvalidReceiptError": "खरिदको जानकारी मान्य छैन। कृपया आफ्नो खरिदको विवरण जाँच गर्नुहोस्",
   "purchaseErrorMissingReceiptFileError": "क्रेताको जानकारी अवस्थित छैन। कृपया {accountName} मा यन्त्रमा साइन इन गरेर प्रयास गर्नुहोस्।",
   "purchaseErrorNetworkError": "नेटवर्क अस्थिर छ। जडान स्थिति जाँच गरेर पुन: प्रयास गर्नुहोस्।",
   "purchaseErrorInvalidCredentialsError": "खरिदारी असफल भयो। केहि समयपछि पुनः प्रयास गर्नुहोस्। समस्या समाधान नभएमा सेटिङ > सम्पर्क मार्फत हामीलाई जानकारी दिनुहोस्। विवरण: {exceptionMessage}:{exceptionDetails}",
