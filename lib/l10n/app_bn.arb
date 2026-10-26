@@ -10,7 +10,7 @@
   "restPeriod": "বিরতি",
   "placebo": "প্লাসিবো",
   "userNotFound": "ব্যবহারকারীকে পাওয়া যায়নি",
-  "userAlreadyExists": "ব্যবহারকারী ইতিমধ্যে বিদ্যমান",
+  "userAlreadyExists": "এই অ্যাকাউন্টটি ইতিমধ্যে আছে",
   "medicationHistory": "সেবনের ইতিহাস",
   "settings": "সেটিংস",
   "account": "অ্যাকাউন্ট",

@@ -10,7 +10,7 @@
   "restPeriod": "descanso",
   "placebo": "placebo",
   "userNotFound": "Non se atopou o usuario",
-  "userAlreadyExists": "Xa existe un usuario",
+  "userAlreadyExists": "Esta conta xa existe",
   "medicationHistory": "Historial de tomas",
   "settings": "Configuración",
   "account": "Conta",

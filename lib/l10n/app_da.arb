@@ -10,7 +10,7 @@
   "restPeriod": "pillepause",
   "placebo": "placebo",
   "userNotFound": "Brugeren blev ikke fundet",
-  "userAlreadyExists": "Der findes allerede en bruger",
+  "userAlreadyExists": "Denne konto findes allerede",
   "medicationHistory": "Indtagelseshistorik",
   "settings": "Indstillinger",
   "account": "Konto",

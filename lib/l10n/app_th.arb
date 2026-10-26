@@ -10,7 +10,7 @@
   "restPeriod": "หยุดยา",
   "placebo": "ยาหลอก",
   "userNotFound": "ไม่พบผู้ใช้ค่ะ",
-  "userAlreadyExists": "ผู้ใช้นี้มีอยู่แล้ว",
+  "userAlreadyExists": "มีบัญชีนี้อยู่แล้วค่ะ",
   "medicationHistory": "ประวัติการรับประทาน",
   "settings": "การตั้งค่า",
   "account": "บัญชี",

@@ -10,7 +10,7 @@
   "restPeriod": "premor",
   "placebo": "placebo",
   "userNotFound": "Uporabnika ni bilo mogoče najti",
-  "userAlreadyExists": "Uporabnik že obstaja",
+  "userAlreadyExists": "Ta račun že obstaja",
   "medicationHistory": "Zgodovina jemanja",
   "settings": "Nastavitve",
   "account": "Račun",

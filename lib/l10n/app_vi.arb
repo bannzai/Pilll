@@ -10,7 +10,7 @@
   "restPeriod": "nghỉ thuốc",
   "placebo": "giả dược",
   "userNotFound": "Không tìm thấy người dùng",
-  "userAlreadyExists": "Người dùng đã tồn tại",
+  "userAlreadyExists": "Tài khoản này đã tồn tại",
   "medicationHistory": "Lịch sử uống thuốc",
   "settings": "Cài đặt",
   "account": "Tài khoản",

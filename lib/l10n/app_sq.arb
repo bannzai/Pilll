@@ -10,7 +10,7 @@
   "restPeriod": "pushim",
   "placebo": "placebo",
   "userNotFound": "Përdoruesi nuk u gjet",
-  "userAlreadyExists": "Përdoruesi ekziston tashmë",
+  "userAlreadyExists": "Kjo llogari ekziston tashmë",
   "medicationHistory": "Historia e Marrjes",
   "settings": "Cilësimet",
   "account": "Llogari",

@@ -10,7 +10,7 @@
   "restPeriod": "راحة",
   "placebo": "حبوب وهمية",
   "userNotFound": "لم يتم العثور على المستخدم",
-  "userAlreadyExists": "المستخدم موجود بالفعل",
+  "userAlreadyExists": "هذا الحساب موجود بالفعل",
   "medicationHistory": "سجل التناول",
   "settings": "الإعدادات",
   "account": "حساب",

@@ -10,7 +10,7 @@
   "restPeriod": "შესვენება",
   "placebo": "პლაცებო",
   "userNotFound": "მომხმარებელი ვერ მოიძებნა",
-  "userAlreadyExists": "მომხმარებელი უკვე არსებობს",
+  "userAlreadyExists": "ეს ანგარიში უკვე არსებობს",
   "medicationHistory": "მიღების ისტორია",
   "settings": "პარამეტრები",
   "account": "ანგარიში",

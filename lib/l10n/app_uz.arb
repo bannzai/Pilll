@@ -10,7 +10,7 @@
   "restPeriod": "tanaffus",
   "placebo": "platsebo",
   "userNotFound": "Foydalanuvchi topilmadi",
-  "userAlreadyExists": "Foydalanuvchi allaqachon mavjud",
+  "userAlreadyExists": "Bu hisob allaqachon mavjud",
   "medicationHistory": "Qabul qilish tarixi",
   "settings": "Sozlamalar",
   "account": "Hisob",

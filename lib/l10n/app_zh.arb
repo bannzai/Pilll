@@ -10,7 +10,7 @@
   "restPeriod": "停药",
   "placebo": "安慰剂",
   "userNotFound": "未找到用户",
-  "userAlreadyExists": "用户已存在",
+  "userAlreadyExists": "这个账号已存在",
   "medicationHistory": "服用记录",
   "settings": "设置",
   "account": "账户",

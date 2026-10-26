@@ -10,7 +10,7 @@
   "restPeriod": "descans",
   "placebo": "placebo",
   "userNotFound": "No s'ha trobat l'usuari",
-  "userAlreadyExists": "Ja existeix un usuari",
+  "userAlreadyExists": "Aquest compte ja existeix",
   "medicationHistory": "Historial de preses",
   "settings": "Configuració",
   "account": "Compte",

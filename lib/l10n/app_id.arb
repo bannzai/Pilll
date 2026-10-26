@@ -10,7 +10,7 @@
   "restPeriod": "jeda",
   "placebo": "plasebo",
   "userNotFound": "Pengguna tidak ditemukan",
-  "userAlreadyExists": "Pengguna sudah terdaftar",
+  "userAlreadyExists": "Akun ini sudah ada",
   "medicationHistory": "Riwayat Konsumsi",
   "settings": "Pengaturan",
   "account": "Akun",

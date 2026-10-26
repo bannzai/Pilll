@@ -10,7 +10,7 @@
   "restPeriod": "ara dönem",
   "placebo": "plasebo",
   "userNotFound": "Kullanıcı bulunamadı",
-  "userAlreadyExists": "Kullanıcı zaten mevcut",
+  "userAlreadyExists": "Bu hesap zaten mevcut",
   "medicationHistory": "Kullanım geçmişi",
   "settings": "Ayarlar",
   "account": "Hesap",

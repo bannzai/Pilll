@@ -10,7 +10,7 @@
   "restPeriod": "hlé",
   "placebo": "lyfleysutöflur",
   "userNotFound": "Notandi fannst ekki",
-  "userAlreadyExists": "Notandi er þegar til",
+  "userAlreadyExists": "Þessi reikningur er þegar til",
   "medicationHistory": "Inntökusaga",
   "settings": "Stillingar",
   "account": "Reikningur",

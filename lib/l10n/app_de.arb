@@ -10,7 +10,7 @@
   "restPeriod": "Einnahmepause",
   "placebo": "Placebo",
   "userNotFound": "Benutzerkonto nicht gefunden",
-  "userAlreadyExists": "Ein Benutzer existiert bereits",
+  "userAlreadyExists": "Dieses Konto gibt es bereits",
   "medicationHistory": "Einnahmehistorie",
   "settings": "Einstellungen",
   "account": "Konto",

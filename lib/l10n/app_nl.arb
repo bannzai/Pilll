@@ -10,7 +10,7 @@
   "restPeriod": "stopweek",
   "placebo": "placebo",
   "userNotFound": "Gebruiker niet gevonden",
-  "userAlreadyExists": "Gebruiker bestaat al",
+  "userAlreadyExists": "Dit account bestaat al",
   "medicationHistory": "Inneemgeschiedenis",
   "settings": "Instellingen",
   "account": "Account",

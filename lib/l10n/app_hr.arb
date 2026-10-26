@@ -10,7 +10,7 @@
   "restPeriod": "pauza",
   "placebo": "placebo",
   "userNotFound": "Korisnik nije pronađen",
-  "userAlreadyExists": "Korisnik već postoji",
+  "userAlreadyExists": "Ovaj račun već postoji",
   "medicationHistory": "Povijest uzimanja",
   "settings": "Postavke",
   "account": "Račun",

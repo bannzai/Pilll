@@ -10,7 +10,7 @@
   "restPeriod": "διάλειμμα",
   "placebo": "πλασέμπο",
   "userNotFound": "Ο χρήστης δεν βρέθηκε",
-  "userAlreadyExists": "Ο χρήστης υπάρχει ήδη",
+  "userAlreadyExists": "Αυτός ο λογαριασμός υπάρχει ήδη",
   "medicationHistory": "Ιστορικό λήψης",
   "settings": "Ρυθμίσεις",
   "account": "Λογαριασμός",

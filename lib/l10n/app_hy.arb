@@ -10,7 +10,7 @@
   "restPeriod": "դադար",
   "placebo": "պլացեբո",
   "userNotFound": "Օգտատերը չի գտնվել",
-  "userAlreadyExists": "Օգտատերն արդեն գոյություն ունի",
+  "userAlreadyExists": "Այս հաշիվն արդեն գոյություն ունի",
   "medicationHistory": "Ընդունման պատմություն",
   "settings": "կարգավորումներ",
   "account": "Հաշիվ",

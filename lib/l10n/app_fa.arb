@@ -10,7 +10,7 @@
   "restPeriod": "وقفه",
   "placebo": "دارونما",
   "userNotFound": "کاربر پیدا نشد",
-  "userAlreadyExists": "کاربر از قبل وجود دارد",
+  "userAlreadyExists": "این حساب از قبل وجود دارد",
   "medicationHistory": "تاریخچه مصرف",
   "settings": "تنظیمات",
   "account": "حساب",

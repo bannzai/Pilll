@@ -10,7 +10,7 @@
   "restPeriod": "pārtraukums",
   "placebo": "placebo",
   "userNotFound": "Lietotājs nav atrasts",
-  "userAlreadyExists": "Lietotājs jau eksistē",
+  "userAlreadyExists": "Šis konts jau pastāv",
   "medicationHistory": "Lietošanas vēsture",
   "settings": "Iestatījumi",
   "account": "Konts",

@@ -10,7 +10,7 @@
   "restPeriod": "विश्राम",
   "placebo": "प्लेसिबो",
   "userNotFound": "प्रयोगकर्ता फेला परेन",
-  "userAlreadyExists": "प्रयोगकर्ता पहिले देखि नै अवस्थित छ",
+  "userAlreadyExists": "यो खाता पहिले नै छ",
   "medicationHistory": "सेवन इतिहास",
   "settings": "सेटिङ",
   "account": "खाता",

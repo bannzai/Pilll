@@ -10,7 +10,7 @@
   "restPeriod": "pouse",
   "placebo": "placebo",
   "userNotFound": "Gebruiker nie gevind nie",
-  "userAlreadyExists": "Gebruiker bestaan reeds",
+  "userAlreadyExists": "Hierdie rekening bestaan reeds",
   "medicationHistory": "Innamegeskiedenis",
   "settings": "Instellings",
   "account": "Rekening",

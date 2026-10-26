@@ -10,7 +10,7 @@
   "restPeriod": "пауза",
   "placebo": "плацебо",
   "userNotFound": "Потребителят не е намерен",
-  "userAlreadyExists": "Потребителят вече съществува",
+  "userAlreadyExists": "Този акаунт вече съществува",
   "medicationHistory": "История на приема",
   "settings": "Настройки",
   "account": "Акаунт",

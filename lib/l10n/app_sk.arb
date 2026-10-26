@@ -10,7 +10,7 @@
   "restPeriod": "prestávka",
   "placebo": "placebo",
   "userNotFound": "Používateľ sa nenašiel",
-  "userAlreadyExists": "Používateľ už existuje",
+  "userAlreadyExists": "Tento účet už existuje",
   "medicationHistory": "História užívania",
   "settings": "Nastavenia",
   "account": "Účet",

@@ -10,7 +10,7 @@
   "restPeriod": "pill break",
   "placebo": "Placebo",
   "userNotFound": "User not found",
-  "userAlreadyExists": "User already exists",
+  "userAlreadyExists": "This account already exists",
   "medicationHistory": "Intake History",
   "settings": "Settings",
   "account": "Account",

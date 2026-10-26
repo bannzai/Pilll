@@ -10,7 +10,7 @@
   "restPeriod": "taukojakso",
   "placebo": "lumetabletit",
   "userNotFound": "Käyttäjää ei löytynyt",
-  "userAlreadyExists": "Käyttäjä on jo olemassa",
+  "userAlreadyExists": "Tämä tili on jo olemassa",
   "medicationHistory": "Ottamishistoria",
   "settings": "Asetukset",
   "account": "Tili",

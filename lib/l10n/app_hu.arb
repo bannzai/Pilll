@@ -10,7 +10,7 @@
   "restPeriod": "szünet",
   "placebo": "placebotabletta",
   "userNotFound": "A felhasználó nem található",
-  "userAlreadyExists": "A felhasználó már létezik",
+  "userAlreadyExists": "Ez a fiók már létezik",
   "medicationHistory": "Bevételi előzmények",
   "settings": "Beállítások",
   "account": "Fiók",

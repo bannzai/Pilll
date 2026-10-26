@@ -10,7 +10,7 @@
   "restPeriod": "ພັກຢາ",
   "placebo": "ຢາຫຼອກ",
   "userNotFound": "ບໍ່ພົບຜູ້ໃຊ້",
-  "userAlreadyExists": "ຜູ້ໃຊ້ນີ້ມີຢູ່ແລ້ວ",
+  "userAlreadyExists": "ບັນຊີນີ້ມີຢູ່ແລ້ວ",
   "medicationHistory": "ປະຫວັດການກິນຢາ",
   "settings": "ຕັ້ງຄ່າ",
   "account": "ບັນຊີ",

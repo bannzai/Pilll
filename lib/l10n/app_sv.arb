@@ -10,7 +10,7 @@
   "restPeriod": "uppehåll",
   "placebo": "placebo",
   "userNotFound": "Användaren hittades inte",
-  "userAlreadyExists": "En användare finns redan",
+  "userAlreadyExists": "Det här kontot finns redan",
   "medicationHistory": "Intagshistorik",
   "settings": "Inställningar",
   "account": "Konto",

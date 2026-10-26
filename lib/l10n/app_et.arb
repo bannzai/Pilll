@@ -10,7 +10,7 @@
   "restPeriod": "pillipaus",
   "placebo": "platseebo",
   "userNotFound": "Kasutajat ei leitud",
-  "userAlreadyExists": "Kasutaja on juba olemas",
+  "userAlreadyExists": "See konto on juba olemas",
   "medicationHistory": "Võtmisajalugu",
   "settings": "Seaded",
   "account": "konto",

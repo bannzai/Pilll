@@ -10,7 +10,7 @@
   "restPeriod": "pauză",
   "placebo": "placebo",
   "userNotFound": "Utilizatorul nu a fost găsit",
-  "userAlreadyExists": "Utilizatorul există deja",
+  "userAlreadyExists": "Acest cont există deja",
   "medicationHistory": "Istoric administrare",
   "settings": "Setări",
   "account": "Cont",
