@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Ushbu hayz davri qaydini oʻchirmoqchimisiz?",
   "addNotificationTime": "Bildirishnoma vaqtini qoʻshing",
   "syncWithDeviceTimeZone": "Qurilmangizning vaqt mintaqasi ({deviceTimezoneName}) bilan sinxronlashtirmoqchimisiz?",
-  "currentTimeZone": "Joriy o'rnatilgan vaqt zonasi",
+  "currentTimeZone": "Hozir sozlangan vaqt mintaqasi",
   "yes": "Ha",
   "no": "Yo'q",
   "unsubscribeInfo": "Obunani bekor qilish haqida",

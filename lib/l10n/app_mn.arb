@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Энэ сарын тэмдгийн үеийн бүртгэлийг устгах уу?",
   "addNotificationTime": "Мэдэгдлийн цаг нэмнэ үү",
   "syncWithDeviceTimeZone": "Төхөөрөмжийн цагийн бүстэй ({deviceTimezoneName}) синк хийх үү?",
-  "currentTimeZone": "одоогийн тохируулсан цагийн бүс",
+  "currentTimeZone": "Одоогоор тохируулсан цагийн бүс",
   "yes": "Тийм",
   "no": "үгүй",
   "unsubscribeInfo": "Цуцлалтын тухай",

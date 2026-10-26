@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "मासिक पाळीच्या या कालावधीची नोंद हटवायची आहे का?",
   "addNotificationTime": "सूचनेची वेळ जोडा",
   "syncWithDeviceTimeZone": "तुमच्या डिव्हाइसच्या वेळ क्षेत्राशी ({deviceTimezoneName}) समक्रमित करायचे आहे का?",
-  "currentTimeZone": "सध्या सेट केलेला टाइम झोन",
+  "currentTimeZone": "सध्या सेट केलेला वेळ क्षेत्र",
   "yes": "होय",
   "no": "नाही",
   "unsubscribeInfo": "रद्दीकरणाबद्दल",

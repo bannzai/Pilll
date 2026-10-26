@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Hapus catatan periode haid ini?",
   "addNotificationTime": "Tambah waktu notifikasi",
   "syncWithDeviceTimeZone": "Ingin menyinkronkan dengan zona waktu perangkat Anda ({deviceTimezoneName})?",
-  "currentTimeZone": "Zona waktu saat ini",
+  "currentTimeZone": "Zona waktu yang saat ini diatur",
   "yes": "Ya",
   "no": "Tidak",
   "unsubscribeInfo": "Tentang Pembatalan",

@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "ಈ ಮುಟ್ಟಿನ ಅವಧಿಯ ದಾಖಲೆಯನ್ನು ಅಳಿಸಲು ಬಯಸುವಿರಾ?",
   "addNotificationTime": "ಅಧಿಸೂಚನೆ ಸಮಯವನ್ನು ಸೇರಿಸಿ",
   "syncWithDeviceTimeZone": "ನಿಮ್ಮ ಸಾಧನದ ಸಮಯ ವಲಯದೊಂದಿಗೆ ({deviceTimezoneName}) ಸಿಂಕ್ ಮಾಡಲು ಬಯಸುವಿರಾ?",
-  "currentTimeZone": "ಪ್ರಸ್ತುತ ಹೊಂದಿಸಲಾಗಿರುವ ಸಮಯ ಮಂಡಲ",
+  "currentTimeZone": "ಪ್ರಸ್ತುತ ಹೊಂದಿಸಿರುವ ಸಮಯ ವಲಯ",
   "yes": "ಹೌದು",
   "no": "ಇಲ್ಲ",
   "unsubscribeInfo": "ರದ್ದತಿ ಕುರಿತು",

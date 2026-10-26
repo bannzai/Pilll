@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "क्या आप इस पीरियड की अवधि का रिकॉर्ड हटाना चाहती हैं?",
   "addNotificationTime": "सूचना का समय जोड़ें",
   "syncWithDeviceTimeZone": "क्या आप अपने डिवाइस के समय क्षेत्र ({deviceTimezoneName}) से सिंक करना चाहेंगी?",
-  "currentTimeZone": "वर्तमान में सेट टाइम ज़ोन",
+  "currentTimeZone": "अभी सेट किया गया समय क्षेत्र",
   "yes": "हाँ",
   "no": "नहीं",
   "unsubscribeInfo": "रद्दीकरण के बारे में",

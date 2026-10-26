@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "የወር አበባ ጊዜ መዝገቡን መሰረዝ ይፈልጋሉ?",
   "addNotificationTime": "የማሳወቂያ ሰዓት ያክሉ",
   "syncWithDeviceTimeZone": "ከመሣሪያዎ የሰዓት ክልል ({deviceTimezoneName}) ጋር ማመሳሰል ይፈልጋሉ?",
-  "currentTimeZone": "የተዋቀረው ጊዜ ዞን",
+  "currentTimeZone": "አሁን የተቀናበረው የሰዓት ሰቅ",
   "yes": "አዎ",
   "no": "አይደለም",
   "unsubscribeInfo": "ስለ መሻር",

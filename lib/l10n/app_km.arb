@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "តើអ្នកចង់លុបកំណត់ត្រារយៈពេលរដូវនេះឬ?",
   "addNotificationTime": "បន្ថែមម៉ោងជូនដំណឹង",
   "syncWithDeviceTimeZone": "តើអ្នកចង់ធ្វើសមកាលកម្មជាមួយតំបន់ពេលវេលារបស់ឧបករណ៍ ({deviceTimezoneName}) ទេ?",
-  "currentTimeZone": "តំបន់ពេលវេលាបច្ចុប្បន្ន",
+  "currentTimeZone": "តំបន់ម៉ោងដែលបានកំណត់បច្ចុប្បន្ន",
   "yes": "បាទ",
   "no": "ទេ",
   "unsubscribeInfo": "អំពីការលុបចោល",

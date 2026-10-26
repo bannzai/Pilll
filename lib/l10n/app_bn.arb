@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "আপনি কি মাসিকের সময়কালের রেকর্ড মুছে ফেলতে চান?",
   "addNotificationTime": "নোটিফিকেশনের সময় যোগ করুন",
   "syncWithDeviceTimeZone": "আপনার ডিভাইসের সময় অঞ্চল ({deviceTimezoneName}) অনুযায়ী সিঙ্ক করতে চান?",
-  "currentTimeZone": "বর্তমানে সেট করা টাইমজোন",
+  "currentTimeZone": "বর্তমানে সেট করা সময় অঞ্চল",
   "yes": "হ্যাঁ",
   "no": "না",
   "unsubscribeInfo": "বাতিল সম্পর্কে",

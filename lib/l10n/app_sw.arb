@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Je, ungependa kufuta rekodi ya kipindi hiki cha hedhi?",
   "addNotificationTime": "Tafadhali ongeza muda wa arifa",
   "syncWithDeviceTimeZone": "Je, ungependa kusawazisha na saa za eneo la kifaa chako ({deviceTimezoneName})?",
-  "currentTimeZone": "Mkoa wa wakati wa sasa",
+  "currentTimeZone": "Saa za eneo zilizowekwa sasa",
   "yes": "Ndio",
   "no": "Hapana",
   "unsubscribeInfo": "Kuhusu kufuta usajili",

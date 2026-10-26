@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "මෙම ඔසප් කාලයේ වාර්තාව මකා දැමීමට අවශ්‍යද?",
   "addNotificationTime": "දැනුම්දීමේ වේලාව එක් කරන්න",
   "syncWithDeviceTimeZone": "ඔබේ උපාංගයේ වේලා කලාපය ({deviceTimezoneName}) සමඟ සමමුහුර්ත කරන්නද?",
-  "currentTimeZone": "වර්තමානයේ සකසා ඇති වේලා කලාපය",
+  "currentTimeZone": "දැනට සකසා ඇති කාල කලාපය",
   "yes": "ඔව්",
   "no": "නෑ",
   "unsubscribeInfo": "අවලංගු කිරීම ගැන",

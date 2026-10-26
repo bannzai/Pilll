@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "გსურთ მენსტრუაციის ამ პერიოდის ჩანაწერის წაშლა?",
   "addNotificationTime": "შეტყობინების დროის დამატება",
   "syncWithDeviceTimeZone": "გსურთ მოწყობილობის დროის სარტყელთან ({deviceTimezoneName}) სინქრონიზაცია?",
-  "currentTimeZone": "ამჟამად დაყენებული დროის ზონა",
+  "currentTimeZone": "ამჟამად დაყენებული დროის სარტყელი",
   "yes": "დიახ",
   "no": "არა",
   "unsubscribeInfo": "გაუქმების შესახებ",

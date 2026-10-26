@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Удалить запись об этом периоде месячных?",
   "addNotificationTime": "Добавить время уведомления",
   "syncWithDeviceTimeZone": "Синхронизировать с часовым поясом устройства ({deviceTimezoneName})?",
-  "currentTimeZone": "Настроенный часовой пояс",
+  "currentTimeZone": "Текущий часовой пояс",
   "yes": "Да",
   "no": "нет",
   "unsubscribeInfo": "О отмене подписки",

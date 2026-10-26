@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "ဒီရာသီကာလရဲ့ မှတ်တမ်းကို ဖျက်ချင်ပါသလား?",
   "addNotificationTime": "အသိပေးချက်အချိန် ထည့်ပါ",
   "syncWithDeviceTimeZone": "စက်၏ အချိန်ဇုန် ({deviceTimezoneName}) နှင့် ထပ်တူပြုလိုပါသလား?",
-  "currentTimeZone": "လက်ရှိသတ်မှတ်ထားသည့်အချိန်ဇုန်",
+  "currentTimeZone": "လက်ရှိ သတ်မှတ်ထားသော အချိန်ဇုန်",
   "yes": "ဟုတ်",
   "no": "မဟုတ်ပါ",
   "unsubscribeInfo": "ပယ်ဖျက်ခြင်းအကြောင်း",

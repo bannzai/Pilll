@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Айыз мезгилинин жазуусун өчүргүңүз келеби?",
   "addNotificationTime": "Эскертме убактысын кошуңуз",
   "syncWithDeviceTimeZone": "Түзмөгүңүздүн убакыт алкагы ({deviceTimezoneName}) менен шайкештештиргиңиз келеби?",
-  "currentTimeZone": "Учурда орнотулган убакыт зонасы",
+  "currentTimeZone": "Учурда коюлган убакыт алкагы",
   "yes": "Ооба",
   "no": "жок",
   "unsubscribeInfo": "Жокко чыгаруу жөнүндө",

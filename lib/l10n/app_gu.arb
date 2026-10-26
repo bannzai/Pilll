@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "શું તમે આ માસિક સમયગાળાનો રેકોર્ડ કાઢી નાખવા માંગો છો?",
   "addNotificationTime": "સૂચનાનો સમય ઉમેરો",
   "syncWithDeviceTimeZone": "શું તમે તમારા ઉપકરણના સમય ક્ષેત્ર ({deviceTimezoneName}) સાથે સમન્વય કરવા માંગો છો?",
-  "currentTimeZone": "હાલમાં સેટ કરેલ ટાઇમ ઝોન",
+  "currentTimeZone": "હાલમાં સેટ કરેલો સમય ઝોન",
   "yes": "હા",
   "no": "ના",
   "unsubscribeInfo": "રદીકરણ વિશે",

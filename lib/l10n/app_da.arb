@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Vil du slette registreringen af denne menstruation?",
   "addNotificationTime": "Tilføj påmindelsestidspunkt",
   "syncWithDeviceTimeZone": "Vil du synkronisere med enhedens tidszone ({deviceTimezoneName})?",
-  "currentTimeZone": "Aktuelt indstillede tidszone",
+  "currentTimeZone": "Aktuel tidszone",
   "yes": "Ja",
   "no": "Nej",
   "unsubscribeInfo": "Om opsigelse",

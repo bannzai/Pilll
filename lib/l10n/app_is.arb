@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Viltu eyða skráningu þessa blæðingatímabils?",
   "addNotificationTime": "Bæta við tilkynningartíma",
   "syncWithDeviceTimeZone": "Viltu samstilla við tímabelti tækisins ({deviceTimezoneName})?",
-  "currentTimeZone": "Núverandi tímabelti",
+  "currentTimeZone": "Tímabelti sem er stillt núna",
   "yes": "Já",
   "no": "Nei",
   "unsubscribeInfo": "Um uppsögn",

@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "کیا آپ ماہواری کے اس دورانیے کا ریکارڈ حذف کرنا چاہتی ہیں؟",
   "addNotificationTime": "اطلاع کا وقت شامل کریں",
   "syncWithDeviceTimeZone": "کیا آپ اپنے آلے کے ٹائم زون ({deviceTimezoneName}) کے مطابق مطابقت پذیری کرنا چاہیں گی؟",
-  "currentTimeZone": "موجودہ سیٹ شدہ ٹائم زون",
+  "currentTimeZone": "فی الحال سیٹ کردہ ٹائم زون",
   "yes": "ہاں",
   "no": "نہیں",
   "unsubscribeInfo": "منسوخی کے بارے میں",

@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Hileko honen erregistroa ezabatu nahi duzu?",
   "addNotificationTime": "Gehitu jakinarazpenaren ordua",
   "syncWithDeviceTimeZone": "Gailuaren ordu-eremuarekin ({deviceTimezoneName}) sinkronizatu nahi duzu?",
-  "currentTimeZone": "Konfiguratutako ordu zona",
+  "currentTimeZone": "Une honetan ezarritako ordu-eremua",
   "yes": "Bai",
   "no": "ez",
   "unsubscribeInfo": "Ezeztapenari buruz",

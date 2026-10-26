@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Vrei să ștergi înregistrarea acestei perioade de menstruație?",
   "addNotificationTime": "Adaugă o oră pentru notificare",
   "syncWithDeviceTimeZone": "Vrei să sincronizezi cu fusul orar al dispozitivului ({deviceTimezoneName})?",
-  "currentTimeZone": "Fusul orar configurat în prezent",
+  "currentTimeZone": "Fusul orar setat în prezent",
   "yes": "Da",
   "no": "Nu",
   "unsubscribeInfo": "Despre reziliere",

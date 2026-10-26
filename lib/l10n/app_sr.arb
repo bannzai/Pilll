@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Да ли желите да обришете запис о овом периоду менструације?",
   "addNotificationTime": "Додајте време обавештења",
   "syncWithDeviceTimeZone": "Да ли желите да ускладите са временском зоном уређаја ({deviceTimezoneName})?",
-  "currentTimeZone": "Trenutno podešena vremenska zona",
+  "currentTimeZone": "Тренутно подешена временска зона",
   "yes": "Да",
   "no": "Ne",
   "unsubscribeInfo": "О отказу",

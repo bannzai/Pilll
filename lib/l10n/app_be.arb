@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Вы хочаце выдаліць запіс пра перыяд месячных?",
   "addNotificationTime": "Дадаць час апавяшчэння",
   "syncWithDeviceTimeZone": "Хочаце сінхранізаваць з часавым поясам прылады ({deviceTimezoneName})?",
-  "currentTimeZone": "Цяперашні часавы пояс",
+  "currentTimeZone": "Бягучы гадзінны пояс",
   "yes": "Так",
   "no": "Не",
   "unsubscribeInfo": "Пра скасаванне",

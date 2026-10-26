@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Vai vēlaties dzēst šī mēnešreižu perioda ierakstu?",
   "addNotificationTime": "Pievienojiet paziņojuma laiku",
   "syncWithDeviceTimeZone": "Vai vēlaties sinhronizēt ar ierīces laika joslu ({deviceTimezoneName})?",
-  "currentTimeZone": "Pašlaik iestatītā laika zona",
+  "currentTimeZone": "Pašlaik iestatītā laika josla",
   "yes": "Jā",
   "no": "Nē",
   "unsubscribeInfo": "Par atcelšanos",

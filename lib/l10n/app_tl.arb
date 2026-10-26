@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Gusto po ba ninyong burahin ang tala ng panahong ito ng regla?",
   "addNotificationTime": "Magdagdag po ng oras ng abiso",
   "syncWithDeviceTimeZone": "Gusto po ba ninyong iayon sa sona ng oras ng inyong device ({deviceTimezoneName})?",
-  "currentTimeZone": "Kasalukuyang time zone",
+  "currentTimeZone": "Kasalukuyang nakatakdang sona ng oras",
   "yes": "Oo",
   "no": "Hindi",
   "unsubscribeInfo": "Tungkol sa Pagkakansela",

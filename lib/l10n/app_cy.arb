@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Ydych chi am ddileu cofnod cyfnod y mislif?",
   "addNotificationTime": "Ychwanegwch amser hysbysiad",
   "syncWithDeviceTimeZone": "Hoffech chi gysoni â pharth amser eich dyfais ({deviceTimezoneName})?",
-  "currentTimeZone": "Cylchfa amser gyfredol",
+  "currentTimeZone": "Y gylchfa amser sydd wedi'i gosod ar hyn o bryd",
   "yes": "Ie",
   "no": "Na",
   "unsubscribeInfo": "Ynghylch canslo",

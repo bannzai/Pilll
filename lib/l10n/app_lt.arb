@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Ar norite ištrinti šio mėnesinių laikotarpio įrašą?",
   "addNotificationTime": "Pridėti pranešimo laiką",
   "syncWithDeviceTimeZone": "Ar norite sinchronizuoti su įrenginio laiko juosta ({deviceTimezoneName})?",
-  "currentTimeZone": "Dabartinė nustatyta laiko juosta",
+  "currentTimeZone": "Šiuo metu nustatyta laiko juosta",
   "yes": "Taip",
   "no": "Ne",
   "unsubscribeInfo": "Apie atšaukimą",

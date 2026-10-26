@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "آیا می‌خواهید سابقهٔ این دورهٔ پریود را حذف کنید؟",
   "addNotificationTime": "افزودن زمان اعلان",
   "syncWithDeviceTimeZone": "مایلید با منطقه زمانی دستگاه ({deviceTimezoneName}) همگام‌سازی کنید؟",
-  "currentTimeZone": "منطقه زمانی تنظیم شده فعلی",
+  "currentTimeZone": "منطقهٔ زمانی تنظیم‌شدهٔ فعلی",
   "yes": "بله",
   "no": "نه",
   "unsubscribeInfo": "درباره لغو",

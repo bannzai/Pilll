@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Wil je de registratie van deze menstruatieperiode verwijderen?",
   "addNotificationTime": "Meldingstijd toevoegen",
   "syncWithDeviceTimeZone": "Wil je synchroniseren met de tijdzone van je apparaat ({deviceTimezoneName})?",
-  "currentTimeZone": "Huidige tijdzone",
+  "currentTimeZone": "Huidig ingestelde tijdzone",
   "yes": "ja",
   "no": "Nee",
   "unsubscribeInfo": "Over opzeggen",

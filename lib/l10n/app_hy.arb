@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Ցանկանո՞ւմ եք ջնջել այս դաշտանի ժամանակահատվածի գրառումը։",
   "addNotificationTime": "Ավելացնել ծանուցման ժամ",
   "syncWithDeviceTimeZone": "Ցանկանո՞ւմ եք համաժամեցնել սարքի ժամային գոտու ({deviceTimezoneName}) հետ։",
-  "currentTimeZone": "Ներկայումս սահմանված ժամային գոտին",
+  "currentTimeZone": "Ներկայումս սահմանված ժամային գոտի",
   "yes": "Այո",
   "no": "ոչ",
   "unsubscribeInfo": "չեղարկման մասին",

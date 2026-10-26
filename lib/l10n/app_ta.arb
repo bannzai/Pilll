@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "இந்த மாதவிடாய் காலப் பதிவை நீக்க விரும்புகிறீர்களா?",
   "addNotificationTime": "அறிவிப்பு நேரத்தைச் சேர்க்குங்கள்",
   "syncWithDeviceTimeZone": "சாதனத்தின் நேர மண்டலத்துடன் ({deviceTimezoneName}) ஒத்திசைக்க விரும்புகிறீர்களா?",
-  "currentTimeZone": "தற்போதைய நேர மண்டலம்",
+  "currentTimeZone": "தற்போது அமைக்கப்பட்டுள்ள நேர மண்டலம்",
   "yes": "ஆம்",
   "no": "இல்லை",
   "unsubscribeInfo": "ரத்து செய்வது பற்றி",

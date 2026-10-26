@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Aybaşı dövrünün qeydini silmək istəyirsiniz?",
   "addNotificationTime": "Bildiriş vaxtı əlavə edin",
   "syncWithDeviceTimeZone": "Cihazınızın saat qurşağı ({deviceTimezoneName}) ilə sinxronlaşdırmaq istəyirsiniz?",
-  "currentTimeZone": "Cari vaxt zonası",
+  "currentTimeZone": "Hazırda təyin edilmiş saat qurşağı",
   "yes": "Bəli",
   "no": "Xeyr",
   "unsubscribeInfo": "Ləğv etmə haqqında",

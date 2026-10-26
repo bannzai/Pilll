@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Bạn có muốn xóa bản ghi kỳ kinh nguyệt này không?",
   "addNotificationTime": "Thêm giờ thông báo",
   "syncWithDeviceTimeZone": "Bạn có muốn đồng bộ với múi giờ của thiết bị ({deviceTimezoneName}) không?",
-  "currentTimeZone": "Múi giờ hiện tại được thiết lập",
+  "currentTimeZone": "Múi giờ hiện được cài đặt",
   "yes": "Có",
   "no": "Không",
   "unsubscribeInfo": "Về việc hủy đăng ký",

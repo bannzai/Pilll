@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Искате ли да изтриете записа за периода на мензиса?",
   "addNotificationTime": "Добавяне на час за известие",
   "syncWithDeviceTimeZone": "Искате ли да синхронизирате с часовата зона на устройството ({deviceTimezoneName})?",
-  "currentTimeZone": "Текущо зададена часова зона",
+  "currentTimeZone": "Текуща часова зона",
   "yes": "Да",
   "no": "Не",
   "unsubscribeInfo": "За прекратяване",

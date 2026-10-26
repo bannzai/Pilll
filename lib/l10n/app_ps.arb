@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "ایا تاسو غواړئ د دې حیض د مودې ثبت پاک کړئ؟",
   "addNotificationTime": "د خبرتیا وخت ورزیات کړئ",
   "syncWithDeviceTimeZone": "ایا د خپل وسیلې له وخت زون ({deviceTimezoneName}) سره همغږي کول غواړئ؟",
-  "currentTimeZone": "اوسنی تنظیم شوی ټایم زون",
+  "currentTimeZone": "اوس مهال ټاکل شوی د وخت زون",
   "yes": "هو",
   "no": "نه",
   "unsubscribeInfo": "د منسوخولو په اړه",

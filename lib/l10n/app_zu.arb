@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Ungathanda ukususa irekhodi lalesi sikhathi sokuya esikhathini?",
   "addNotificationTime": "Sicela ungeze isikhathi sesaziso",
   "syncWithDeviceTimeZone": "Ungathanda yini ukuvumelanisa nezoni yesikhathi yedivayisi yakho ({deviceTimezoneName})?",
-  "currentTimeZone": "I-timezone esetiwe njengamanje",
+  "currentTimeZone": "Indawo yesikhathi esethwe njengamanje",
   "yes": "Yebo",
   "no": "Cha",
   "unsubscribeInfo": "Mayelana nokuchitha",

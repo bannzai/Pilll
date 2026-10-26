@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "ഈ ആർത്തവ കാലയളവിന്റെ രേഖ ഇല്ലാതാക്കണോ?",
   "addNotificationTime": "അറിയിപ്പ് സമയം ചേർക്കൂ",
   "syncWithDeviceTimeZone": "ഉപകരണത്തിന്റെ സമയമേഖലയുമായി ({deviceTimezoneName}) സമന്വയിപ്പിക്കണോ?",
-  "currentTimeZone": "നിലവിലെ ടൈം സോൺ",
+  "currentTimeZone": "നിലവിൽ സജ്ജമാക്കിയ സമയ മേഖല",
   "yes": "അതെ",
   "no": "ഇല്ല",
   "unsubscribeInfo": "റദ്ദാക്കലിനെ കുറിച്ച്",

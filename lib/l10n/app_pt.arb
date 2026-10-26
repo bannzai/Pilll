@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Quer excluir o registro deste período de menstruação?",
   "addNotificationTime": "Adicionar horário de notificação",
   "syncWithDeviceTimeZone": "Quer sincronizar com o fuso horário do seu celular ({deviceTimezoneName})?",
-  "currentTimeZone": "Fuso horário atualmente configurado",
+  "currentTimeZone": "Fuso horário atual",
   "yes": "Sim",
   "no": "Não",
   "unsubscribeInfo": "Sobre o cancelamento",

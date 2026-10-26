@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "هل تريدين حذف فترة الدورة المسجلة؟",
   "addNotificationTime": "إضافة وقت تنبيه",
   "syncWithDeviceTimeZone": "هل ترغبين في المزامنة مع المنطقة الزمنية للجهاز ({deviceTimezoneName})؟",
-  "currentTimeZone": "المنطقة الزمنية الحالية",
+  "currentTimeZone": "المنطقة الزمنية المضبوطة حاليًا",
   "yes": "نعم",
   "no": "لا",
   "unsubscribeInfo": "حول الإلغاء",

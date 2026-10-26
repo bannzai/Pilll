@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "Adakah anda mahu memadamkan rekod tempoh haid ini?",
   "addNotificationTime": "Tambah masa pemberitahuan",
   "syncWithDeviceTimeZone": "Adakah anda mahu menyegerakkan dengan zon waktu peranti ({deviceTimezoneName})?",
-  "currentTimeZone": "Zon masa yang ditetapkan sekarang",
+  "currentTimeZone": "Zon waktu yang ditetapkan sekarang",
   "yes": "Ya",
   "no": "Tidak",
   "unsubscribeInfo": "Tentang Pembatalan",

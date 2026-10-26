@@ -31,7 +31,7 @@
   "confirmDeletingMenstruation": "ต้องการลบบันทึกช่วงประจำเดือนนี้ไหมคะ",
   "addNotificationTime": "เพิ่มเวลาแจ้งเตือน",
   "syncWithDeviceTimeZone": "ต้องการซิงค์กับเขตเวลาของอุปกรณ์ ({deviceTimezoneName}) ไหมคะ",
-  "currentTimeZone": "เขตเวลาที่ตั้งในปัจจุบัน",
+  "currentTimeZone": "เขตเวลาที่ตั้งค่าอยู่ในขณะนี้",
   "yes": "ใช่",
   "no": "ไม่",
   "unsubscribeInfo": "เกี่ยวกับการยกเลิก",
