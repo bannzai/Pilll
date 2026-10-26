@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Preskočiť zadanie prestávky",
   "yazFlexSkipRestDurationDialogMessage": "Trvanie prestávky môžete zadať neskôr v časti „Prestávka v užívaní tabletiek“ na domovskej obrazovke.",
   "yazFlexSkipRestDurationDialogSkip": "Preskočte",
-  "yazFlexBeginPillNumberPageTitle": "Ktoré užitie v cykle zodpovedá začiatku blistra?",
+  "yazFlexBeginPillNumberPageTitle": "V ktorý deň cyklu užívania tabletiek sa začína blister?",
   "yazFlexBeginPillNumberPageNote": "Prosím, odpovedzte podľa počtu dní, ktoré uplynuli od prestávky pred začatím blistra.",
   "yazFlexNextInputIsRestDuration": "Ďalej zadajte predchádzajúcu prestávku"
 }

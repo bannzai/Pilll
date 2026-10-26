@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "વિરામની માહિતી દાખલ કરવાનું છોડી દો",
   "yazFlexSkipRestDurationDialogMessage": "વિરામનો સમયગાળો તમે પછીથી હોમ સ્ક્રીન પર “ગોળી લેવામાં વિરામ” માં દાખલ કરી શકો છો.",
   "yazFlexSkipRestDurationDialogSkip": "છોડી દો",
-  "yazFlexBeginPillNumberPageTitle": "ચક્ર મુજબ શીટની શરૂઆત કેટલીમી ગોળી લેવાનું છે?",
+  "yazFlexBeginPillNumberPageTitle": "તમારા ગોળી લેવાના ચક્રના કયા દિવસે પત્તું શરૂ થાય છે?",
   "yazFlexBeginPillNumberPageNote": "કૃપા કરીને શીટ શરૂ કરતા પહેલાંના વિરામથી કેટલા દિવસ વીતી ગયા છે તેના આધારે જવાબ આપો.",
   "yazFlexNextInputIsRestDuration": "આગળ, અગાઉનો વિરામ દાખલ કરો"
 }

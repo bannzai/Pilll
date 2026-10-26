@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Langkau pengisian tempoh rehat",
   "yazFlexSkipRestDurationDialogMessage": "Tempoh jeda boleh diisi kemudian melalui “Jeda pengambilan pil” pada skrin utama.",
   "yazFlexSkipRestDurationDialogSkip": "Langkau",
-  "yazFlexBeginPillNumberPageTitle": "Permulaan helaian ini ialah pengambilan ke berapa dalam kitaran?",
+  "yazFlexBeginPillNumberPageTitle": "Pada hari ke berapa dalam kitaran pengambilan pil anda pek ini bermula?",
   "yazFlexBeginPillNumberPageNote": "Sila jawab berdasarkan bilangan hari yang telah berlalu sejak tempoh rehat sebelum memulakan helaian.",
   "yazFlexNextInputIsRestDuration": "Seterusnya, masukkan tempoh rehat sebelum ini"
 }

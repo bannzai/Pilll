@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Atsedenaldiaren datuak sartzea saltatu",
   "yazFlexSkipRestDurationDialogMessage": "Etenaldiaren iraupena geroago sar dezakezu hasierako pantailako «Pilula hartzeko etenaldia» atalean.",
   "yazFlexSkipRestDurationDialogSkip": "Saltatu",
-  "yazFlexBeginPillNumberPageTitle": "Zikloan, zein hartualdi da xaflaren hasiera?",
+  "yazFlexBeginPillNumberPageTitle": "Pilulak hartzeko zikloko zein egunetan hasten da blisterra?",
   "yazFlexBeginPillNumberPageNote": "Erantzun, mesedez, orria hasi aurreko atsedenalditik igaro diren egunen kopuruaren arabera.",
   "yazFlexNextInputIsRestDuration": "Ondoren, aurreko atsedenaldia sartu"
 }

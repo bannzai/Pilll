@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Hopp over registrering av pillepause",
   "yazFlexSkipRestDurationDialogMessage": "Du kan legge inn perioden senere under «Pillepause» på hjemskjermen.",
   "yazFlexSkipRestDurationDialogSkip": "Hopp over",
-  "yazFlexBeginPillNumberPageTitle": "Hvilket nummer i syklusen er starten på brettet?",
+  "yazFlexBeginPillNumberPageTitle": "Hvilken dag i p-pillesyklusen din begynner brettet?",
   "yazFlexBeginPillNumberPageNote": "Vennligst svar basert på hvor mange dager som har gått siden pausen før du startet brettet.",
   "yazFlexNextInputIsRestDuration": "Deretter legger du inn forrige pause"
 }

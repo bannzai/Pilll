@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Пропустить ввод данных о перерыве",
   "yazFlexSkipRestDurationDialogMessage": "Длительность перерыва можно будет указать позже в разделе «Перерыв в приёме таблеток» на главном экране.",
   "yazFlexSkipRestDurationDialogSkip": "Пропустить",
-  "yazFlexBeginPillNumberPageTitle": "Какому по счёту приёму в цикле соответствует начало блистера?",
+  "yazFlexBeginPillNumberPageTitle": "На какой день цикла приёма таблеток начинается блистер?",
   "yazFlexBeginPillNumberPageNote": "Пожалуйста, ответьте, исходя из количества дней, прошедших с перерыва перед началом блистера.",
   "yazFlexNextInputIsRestDuration": "Далее введите предыдущий перерыв"
 }

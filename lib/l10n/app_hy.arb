@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Բաց թողնել դադարի մուտքագրումը",
   "yazFlexSkipRestDurationDialogMessage": "Դադարի տևողությունը կարող եք ավելի ուշ մուտքագրել գլխավոր էկրանի «Դեղահաբի ընդունման դադար» բաժնում։",
   "yazFlexSkipRestDurationDialogSkip": "Բաց թողնել",
-  "yazFlexBeginPillNumberPageTitle": "Ցիկլում ո՞րերորդ ընդունումն է թերթիկի սկիզբը։",
+  "yazFlexBeginPillNumberPageTitle": "Հաբերի ընդունման Ձեր շրջանի ո՞ր օրն է սկսվում թերթիկը:",
   "yazFlexBeginPillNumberPageNote": "Խնդրում ենք պատասխանել՝ հիմնվելով թերթիկը սկսելուց առաջ եղած դադարից անցած օրերի քանակի վրա։",
   "yazFlexNextInputIsRestDuration": "Հաջորդը մուտքագրեք նախորդ դադարը"
 }

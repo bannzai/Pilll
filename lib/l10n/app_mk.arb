@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Прескокнување на внесот за пауза",
   "yazFlexSkipRestDurationDialogMessage": "Периодот на пауза можете подоцна да го внесете преку „Пауза во земање таблета“ на почетниот екран.",
   "yazFlexSkipRestDurationDialogSkip": "Прескокни",
-  "yazFlexBeginPillNumberPageTitle": "Почетокот на блистерот на кое по ред земање во циклусот одговара?",
+  "yazFlexBeginPillNumberPageTitle": "На кој ден од Вашиот циклус на земање таблета започнува блистерот?",
   "yazFlexBeginPillNumberPageNote": "Ве молиме одговорете според бројот на денови поминати од паузата пред започнување на лентата.",
   "yazFlexNextInputIsRestDuration": "Следно, внесете ја претходната пауза"
 }

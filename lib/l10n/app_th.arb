@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "ข้ามการกรอกข้อมูลช่วงหยุดยา",
   "yazFlexSkipRestDurationDialogMessage": "สามารถกรอกระยะเวลาที่พักทานยาในภายหลังได้ที่ “พักทานยาเม็ดชั่วคราว” บนหน้าหลักค่ะ",
   "yazFlexSkipRestDurationDialogSkip": "ข้าม",
-  "yazFlexBeginPillNumberPageTitle": "จุดเริ่มต้นของแผง ตรงกับการรับประทานครั้งที่เท่าไรในรอบ?",
+  "yazFlexBeginPillNumberPageTitle": "แผงยาเริ่มตรงกับวันที่เท่าไรของรอบการทานยาคะ",
   "yazFlexBeginPillNumberPageNote": "โปรดตอบโดยอิงตามจำนวนวันที่ผ่านไปนับจากช่วงหยุดยาก่อนเริ่มแผงยา",
   "yazFlexNextInputIsRestDuration": "ถัดไป กรอกช่วงเว้นยาครั้งก่อน"
 }

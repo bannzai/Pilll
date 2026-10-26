@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Pomiń wprowadzanie przerwy",
   "yazFlexSkipRestDurationDialogMessage": "Czas trwania przerwy możesz wpisać później w sekcji „Przerwa w przyjmowaniu tabletek” na ekranie głównym.",
   "yazFlexSkipRestDurationDialogSkip": "Pomiń",
-  "yazFlexBeginPillNumberPageTitle": "Które z kolei przyjęcie w cyklu odpowiada początkowi blistra?",
+  "yazFlexBeginPillNumberPageTitle": "W którym dniu cyklu przyjmowania tabletek zaczyna się blister?",
   "yazFlexBeginPillNumberPageNote": "Proszę odpowiedzieć na podstawie liczby dni, które upłynęły od przerwy przed rozpoczęciem blistra.",
   "yazFlexNextInputIsRestDuration": "Następnie wpisz poprzednią przerwę"
 }

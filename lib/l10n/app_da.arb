@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Spring indtastning af pillepause over",
   "yazFlexSkipRestDurationDialogMessage": "Du kan indtaste perioden senere under “Pillepause” på hjemmeskærmen.",
   "yazFlexSkipRestDurationDialogSkip": "Spring over",
-  "yazFlexBeginPillNumberPageTitle": "Hvilket nummer indtag i cyklussen er starten på arket?",
+  "yazFlexBeginPillNumberPageTitle": "Hvilken dag i din p-pillecyklus begynder pakken?",
   "yazFlexBeginPillNumberPageNote": "Svar venligst ud fra, hvor mange dage der er gået siden pausen før start af arket.",
   "yazFlexNextInputIsRestDuration": "Derefter skal du indtaste din seneste pause"
 }

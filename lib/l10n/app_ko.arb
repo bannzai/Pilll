@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "휴약 정보 입력을 건너뛸게요",
   "yazFlexSkipRestDurationDialogMessage": "쉬는 기간은 나중에 홈 화면의 ‘피임약 복용 잠시 쉬기’에서 입력할 수 있어요.",
   "yazFlexSkipRestDurationDialogSkip": "건너뛰기",
-  "yazFlexBeginPillNumberPageTitle": "시트의 시작은 주기상 몇 번째 복용인가요?",
+  "yazFlexBeginPillNumberPageTitle": "복용 주기의 몇 번째 날에 피임약 시트가 시작되나요?",
   "yazFlexBeginPillNumberPageNote": "시트 시작 전 휴약이 끝난 후 지난 일수를 기준으로 답변해 주세요.",
   "yazFlexNextInputIsRestDuration": "다음으로 이전 휴약 기간을 입력해 주세요"
 }

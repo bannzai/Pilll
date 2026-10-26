@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "تخطي إدخال فترة الراحة",
   "yazFlexSkipRestDurationDialogMessage": "يمكنكِ إدخال مدة التوقف لاحقًا من «إيقاف تناول الحبوب مؤقتًا» في الصفحة الرئيسية.",
   "yazFlexSkipRestDurationDialogSkip": "تخطي",
-  "yazFlexBeginPillNumberPageTitle": "في أي جرعة من الدورة يبدأ الشريط؟",
+  "yazFlexBeginPillNumberPageTitle": "في أي يوم من دورة تناول الحبوب تبدأ العبوة؟",
   "yazFlexBeginPillNumberPageNote": "يُرجى الإجابة بناءً على عدد الأيام التي مضت منذ فترة التوقف قبل بدء الشريط.",
   "yazFlexNextInputIsRestDuration": "بعد ذلك، أدخلي فترة التوقف السابقة"
 }

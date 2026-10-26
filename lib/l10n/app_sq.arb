@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Anashkaloni futjen e të dhënave për pushimin",
   "yazFlexSkipRestDurationDialogMessage": "Kohëzgjatjen e pauzës mund ta vendosni më vonë te “Pauzë në marrjen e pilulës” në ekranin kryesor.",
   "yazFlexSkipRestDurationDialogSkip": "Kapërcejeni",
-  "yazFlexBeginPillNumberPageTitle": "Fillimi i fletës me cilën marrje në cikël përkon?",
+  "yazFlexBeginPillNumberPageTitle": "Në cilën ditë të ciklit të marrjes së pilulave fillon blisteri?",
   "yazFlexBeginPillNumberPageNote": "Ju lutemi, përgjigjuni bazuar në numrin e ditëve që kanë kaluar që nga pushimi para fillimit të fletës.",
   "yazFlexNextInputIsRestDuration": "Më pas, shkruani pushimin e mëparshëm"
 }

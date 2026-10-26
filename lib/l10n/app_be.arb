@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Прапусціць увод даных пра перапын",
   "yazFlexSkipRestDurationDialogMessage": "Перыяд перапынку можна будзе ўвесці пазней у раздзеле «Перапынак у прыёме пігулак» на галоўным экране.",
   "yazFlexSkipRestDurationDialogSkip": "Прапусціць",
-  "yazFlexBeginPillNumberPageTitle": "Пачатак блістара — гэта які па ліку прыём у цыкле?",
+  "yazFlexBeginPillNumberPageTitle": "На які дзень вашага цыклу прыёму пігулак пачынаецца блістар?",
   "yazFlexBeginPillNumberPageNote": "Калі ласка, адкажыце на падставе колькасці дзён, што прайшлі з моманту перапынку перад пачаткам блістара.",
   "yazFlexNextInputIsRestDuration": "Далей увядзіце папярэдні перыяд перапынку"
 }

@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "ವಿರಾಮದ ಮಾಹಿತಿಯನ್ನು ನಮೂದಿಸುವುದನ್ನು ಬಿಟ್ಟುಬಿಡಿ",
   "yazFlexSkipRestDurationDialogMessage": "ವಿರಾಮದ ಅವಧಿಯನ್ನು ನಂತರ ಮುಖಪುಟದ “ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದಕ್ಕೆ ವಿರಾಮ” ವಿಭಾಗದಲ್ಲಿ ನಮೂದಿಸಬಹುದು.",
   "yazFlexSkipRestDurationDialogSkip": "ಬಿಟ್ಟುಬಿಡಿ",
-  "yazFlexBeginPillNumberPageTitle": "ಚಕ್ರದಲ್ಲಿ ಶೀಟ್‌ನ ಆರಂಭವು ಎಷ್ಟನೇ ಸೇವನೆಗೆ ಹೊಂದುತ್ತದೆ?",
+  "yazFlexBeginPillNumberPageTitle": "ನಿಮ್ಮ ಮಾತ್ರೆ ಸೇವನೆಯ ಚಕ್ರದ ಎಷ್ಟನೇ ದಿನ ಸ್ಟ್ರಿಪ್ ಆರಂಭವಾಗುತ್ತದೆ?",
   "yazFlexBeginPillNumberPageNote": "ದಯವಿಟ್ಟು ಶೀಟ್ ಪ್ರಾರಂಭಿಸುವ ಮೊದಲು ಇದ್ದ ವಿರಾಮದಿಂದ ಕಳೆದ ದಿನಗಳ ಸಂಖ್ಯೆಯನ್ನು ಆಧರಿಸಿ ಉತ್ತರಿಸಿ.",
   "yazFlexNextInputIsRestDuration": "ಮುಂದೆ, ಹಿಂದಿನ ವಿರಾಮವನ್ನು ನಮೂದಿಸಿ"
 }

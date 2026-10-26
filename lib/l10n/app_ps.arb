@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "د وقف د معلوماتو ثبتول پرېږدئ",
   "yazFlexSkipRestDurationDialogMessage": "تاسو کولای شئ د وقفې موده وروسته د کور پر پرده د «د ګولیو په خوړلو کې وقفه» له لارې دننه کړئ.",
   "yazFlexSkipRestDurationDialogSkip": "پرېږدئ",
-  "yazFlexBeginPillNumberPageTitle": "د دورې له مخې د پاڼې پیل څویم ځل اخیستل دي؟",
+  "yazFlexBeginPillNumberPageTitle": "د ګولیو د اخیستو د دورې په څویمه ورځ د ګولیو پاڼه پیلېږي؟",
   "yazFlexBeginPillNumberPageNote": "مهرباني وکړئ د شېټ له پيلولو مخکې د وقفې له پای ته رسېدو راهيسې د تېر شويو ورځو شمېر پر بنسټ ځواب ورکړئ.",
   "yazFlexNextInputIsRestDuration": "بل پړاو کې خپله پخوانۍ وقفه دننه کړئ"
 }

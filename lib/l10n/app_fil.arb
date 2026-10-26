@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Laktawan ang paglagay ng pahinga",
   "yazFlexSkipRestDurationDialogMessage": "Maaari po ninyong ilagay sa ibang pagkakataon ang tagal ng pahinga sa “Pahinga muna sa pag-inom ng pill” sa Home.",
   "yazFlexSkipRestDurationDialogSkip": "Laktawan",
-  "yazFlexBeginPillNumberPageTitle": "Pang-ilang pag-inom sa cycle ang simula ng sheet?",
+  "yazFlexBeginPillNumberPageTitle": "Sa anong araw po ng siklo ng pag-inom ninyo ng pills nagsisimula ang pakete?",
   "yazFlexBeginPillNumberPageNote": "Mangyaring sumagot batay sa bilang ng mga araw mula noong pahinga bago simulan ang pack.",
   "yazFlexNextInputIsRestDuration": "Susunod, ilagay ang huli mong pahinga sa pag-inom"
 }

@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "შესვენების შეყვანის გამოტოვება",
   "yazFlexSkipRestDurationDialogMessage": "შესვენების ხანგრძლივობა მოგვიანებით შეგიძლიათ შეიყვანოთ მთავარი ეკრანის „აბების მიღების დროებითი შეჩერება“ განყოფილებაში.",
   "yazFlexSkipRestDurationDialogSkip": "გამოტოვება",
-  "yazFlexBeginPillNumberPageTitle": "ციკლში მერამდენე მიღებაა შიტის დასაწყისი?",
+  "yazFlexBeginPillNumberPageTitle": "აბების მიღების ციკლის მერამდენე დღეს იწყება ფირფიტა?",
   "yazFlexBeginPillNumberPageNote": "გთხოვთ, უპასუხოთ იმ დღეების რაოდენობის მიხედვით, რომლებიც გავიდა ფურცლის დაწყებამდე არსებული შესვენების შემდეგ.",
   "yazFlexNextInputIsRestDuration": "შემდეგ შეიყვანეთ წინა შესვენება"
 }

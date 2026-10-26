@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "رد کردن ثبت وقفه",
   "yazFlexSkipRestDurationDialogMessage": "می‌توانید مدت وقفه را بعداً از بخش «وقفه در مصرف قرص» در صفحه اصلی وارد کنید.",
   "yazFlexSkipRestDurationDialogSkip": "رد کردن",
-  "yazFlexBeginPillNumberPageTitle": "شروع شیت در چرخه، چندمین نوبت مصرف است؟",
+  "yazFlexBeginPillNumberPageTitle": "ورق قرص از چندمین روز چرخهٔ مصرف شما شروع می‌شود؟",
   "yazFlexBeginPillNumberPageNote": "لطفاً بر اساس تعداد روزهای گذشته از دورهٔ وقفه قبل از شروع شیت پاسخ دهید.",
   "yazFlexNextInputIsRestDuration": "در مرحله بعد، وقفه قبلی را وارد کنید"
 }

@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "وقف کی معلومات درج کرنا چھوڑ دیں",
   "yazFlexSkipRestDurationDialogMessage": "وقفے کی مدت بعد میں ہوم اسکرین پر ”گولی لینے میں وقفہ“ سے درج کی جا سکتی ہے۔",
   "yazFlexSkipRestDurationDialogSkip": "چھوڑ دیں",
-  "yazFlexBeginPillNumberPageTitle": "سائیکل کے حساب سے شیٹ کی شروعات کون سی خوراک ہے؟",
+  "yazFlexBeginPillNumberPageTitle": "گولیاں لینے کے چکر کے کس دن سے پتا شروع ہوتا ہے؟",
   "yazFlexBeginPillNumberPageNote": "براہِ کرم شیٹ شروع کرنے سے پہلے والے وقفے کے بعد گزرے دنوں کی تعداد کی بنیاد پر جواب دیں۔",
   "yazFlexNextInputIsRestDuration": "اگلے مرحلے میں پچھلا وقفہ درج کریں"
 }

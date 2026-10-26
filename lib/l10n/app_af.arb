@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Slaan die invoer van die pouse oor",
   "yazFlexSkipRestDurationDialogMessage": "Jy kan die pillepouse later op die tuisskerm by “Pillepouse” invul.",
   "yazFlexSkipRestDurationDialogSkip": "Slaan oor",
-  "yazFlexBeginPillNumberPageTitle": "Watter nommer dosis in die siklus is die begin van die strook?",
+  "yazFlexBeginPillNumberPageTitle": "Op watter dag van jou pilsiklus begin die strokie?",
   "yazFlexBeginPillNumberPageNote": "Antwoord asseblief op grond van die aantal dae wat verloop het sedert die pouse voor die begin van die strook.",
   "yazFlexNextInputIsRestDuration": "Volgende voer jy jou vorige pouse in"
 }

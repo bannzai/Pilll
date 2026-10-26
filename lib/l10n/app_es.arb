@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Omitir el registro del descanso",
   "yazFlexSkipRestDurationDialogMessage": "Más adelante puedes introducir la duración de la pausa en «Pausar la toma de la píldora», en la pantalla de inicio.",
   "yazFlexSkipRestDurationDialogSkip": "Omitir",
-  "yazFlexBeginPillNumberPageTitle": "¿A qué toma del ciclo corresponde el inicio del blíster?",
+  "yazFlexBeginPillNumberPageTitle": "¿En qué día de tu ciclo de toma de píldoras empieza el blíster?",
   "yazFlexBeginPillNumberPageNote": "Responde en función de los días transcurridos desde el descanso antes de empezar el blíster.",
   "yazFlexNextInputIsRestDuration": "A continuación, introduce tu descanso anterior"
 }

@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Пропустити введення даних про перерву",
   "yazFlexSkipRestDurationDialogMessage": "Тривалість перерви можна буде вказати пізніше в розділі «Перерва в прийомі пігулок» на головному екрані.",
   "yazFlexSkipRestDurationDialogSkip": "Пропустити",
-  "yazFlexBeginPillNumberPageTitle": "Початок блістера — це який за рахунком прийом у циклі?",
+  "yazFlexBeginPillNumberPageTitle": "На який день циклу прийому пігулок починається блістер?",
   "yazFlexBeginPillNumberPageNote": "Будь ласка, дайте відповідь на основі кількості днів, що минули від перерви перед початком блістера.",
   "yazFlexNextInputIsRestDuration": "Далі введіть попередню перерву"
 }

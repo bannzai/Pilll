@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Tafadhali ruka kuweka taarifa za mapumziko",
   "yazFlexSkipRestDurationDialogMessage": "Unaweza kuweka muda wa mapumziko baadaye kupitia “Mapumziko ya kumeza vidonge” kwenye skrini ya mwanzo.",
   "yazFlexSkipRestDurationDialogSkip": "Ruka",
-  "yazFlexBeginPillNumberPageTitle": "Mwanzo wa kifurushi ni matumizi ya ngapi katika mzunguko?",
+  "yazFlexBeginPillNumberPageTitle": "Kifurushi cha vidonge huanza siku ya ngapi ya mzunguko wa kumeza vidonge?",
   "yazFlexBeginPillNumberPageNote": "Tafadhali jibu kulingana na idadi ya siku zilizopita tangu mapumziko kabla ya kuanza pakiti.",
   "yazFlexNextInputIsRestDuration": "Kisha, weka kipindi chako cha mapumziko cha awali"
 }

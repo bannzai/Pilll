@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Ometre la introducció del descans",
   "yazFlexSkipRestDurationDialogMessage": "Més endavant pots introduir la durada de la pausa a «Pausa de la píndola», a la pantalla d’inici.",
   "yazFlexSkipRestDurationDialogSkip": "Omet",
-  "yazFlexBeginPillNumberPageTitle": "L'inici del blíster a quina presa del cicle correspon?",
+  "yazFlexBeginPillNumberPageTitle": "Quin dia del teu cicle de presa de píndoles comença el blíster?",
   "yazFlexBeginPillNumberPageNote": "Si us plau, responeu en funció dels dies transcorreguts des del descans abans de començar la làmina.",
   "yazFlexNextInputIsRestDuration": "A continuació, introdueix l’últim període de descans"
 }

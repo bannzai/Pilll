@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "Ohita taukojakson kirjaaminen",
   "yazFlexSkipRestDurationDialogMessage": "Voit lisätä tauon keston myöhemmin aloitusnäytön kohdassa ”Tauko pillereiden otossa”.",
   "yazFlexSkipRestDurationDialogSkip": "Ohita",
-  "yazFlexBeginPillNumberPageTitle": "Monesko otto kierrossa liuskan alku on?",
+  "yazFlexBeginPillNumberPageTitle": "Mille pillerinottopäivälle liuskan alku osuu?",
   "yazFlexBeginPillNumberPageNote": "Vastaa sen mukaan, kuinka monta päivää on kulunut ennen liuskan aloittamista olleesta tauosta.",
   "yazFlexNextInputIsRestDuration": "Seuraavaksi syötä edellinen taukosi"
 }

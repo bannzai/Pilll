@@ -580,7 +580,7 @@
   "yazFlexSkipRestDurationDialogTitle": "విరామ వివరాలను నమోదు చేయడాన్ని దాటవేయండి",
   "yazFlexSkipRestDurationDialogMessage": "విరామ కాలాన్ని తర్వాత హోమ్ స్క్రీన్‌లోని “మాత్రలు తీసుకోవడంలో విరామం” వద్ద నమోదు చేయవచ్చు.",
   "yazFlexSkipRestDurationDialogSkip": "దాటవేయండి",
-  "yazFlexBeginPillNumberPageTitle": "చక్రంలో షీట్ ప్రారంభం ఎన్ని వ సారి తీసుకోవడమా?",
+  "yazFlexBeginPillNumberPageTitle": "మాత్రలు తీసుకునే చక్రంలో ఎన్నో రోజున స్ట్రిప్ ప్రారంభమవుతుంది?",
   "yazFlexBeginPillNumberPageNote": "దయచేసి షీట్ ప్రారంభించే ముందు ఉన్న విరామం ముగిసిన తర్వాత గడిచిన రోజుల సంఖ్య ఆధారంగా సమాధానం ఇవ్వండి.",
   "yazFlexNextInputIsRestDuration": "తర్వాత, మునుపటి విరామాన్ని నమోదు చేయండి"
 }
