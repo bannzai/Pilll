@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Padarykite pertrauką vartodami tabletes. Jei norite pradėti pertrauką ne šiandien, o kitą dieną, vadovaukitės toliau pateiktais nurodymais.",
   "seeHowToUsePauseTakingFeature": "Sužinokite, kaip naudoti tablečių vartojimo pertraukos funkciją",
   "startPauseTakingLabel": "Pradėkite tablečių vartojimo pertrauką",
-  "pauseTakingChanged": "Pilulių vartojimo pertrauka pakeista",
+  "pauseTakingChanged": "Tablečių vartojimo pertrauka pakeista",
   "editPausePeriod": "Redaguoti vartojimo pertraukos laikotarpį",
   "changePillDays": "Keisti vartojimo dienų skaičių",
   "beginToEndNumbers": "{begin} - {end}",

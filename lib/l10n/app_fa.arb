@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "لطفاً مصرف قرص را موقتاً متوقف کنید. اگر می‌خواهید این وقفه از روزی غیر از امروز شروع شود، راهنمای زیر را ببینید.",
   "seeHowToUsePauseTakingFeature": "روش استفاده از قابلیت توقف موقت مصرف قرص را ببینید",
   "startPauseTakingLabel": "شروع وقفه در مصرف قرص",
-  "pauseTakingChanged": "دوره توقف مصرف تغییر یافت",
+  "pauseTakingChanged": "دورهٔ توقف مصرف قرص تغییر کرد",
   "editPausePeriod": "ویرایش دوره استراحت از مصرف",
   "changePillDays": "تغییر دوره مصرف",
   "beginToEndNumbers": "شماره {begin} تا {end}",

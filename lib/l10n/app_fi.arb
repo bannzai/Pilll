@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Pidä tauko pillereiden ottamisesta. Jos haluat aloittaa tauon muuna päivänä kuin tänään, katso alla olevat ohjeet.",
   "seeHowToUsePauseTakingFeature": "Katso, miten pilleritauko toimii",
   "startPauseTakingLabel": "Aloita pilleritauko",
-  "pauseTakingChanged": "Pillin tauko on muutettu",
+  "pauseTakingChanged": "Pilleritauko on muutettu",
   "editPausePeriod": "Muokkaa pilleritaukoa",
   "changePillDays": "Muuta käyttöpäiviä",
   "beginToEndNumbers": "{begin}–{end}",

@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "გთხოვთ, დროებით შეისვენოთ აბების მიღებისგან. თუ შესვენების დაწყება დღევანდელის გარდა სხვა დღიდან გსურთ, იხილეთ ქვემოთ მოცემული მითითებები.",
   "seeHowToUsePauseTakingFeature": "ნახეთ, როგორ გამოიყენოთ აბების მიღების დროებით შეჩერების ფუნქცია",
   "startPauseTakingLabel": "აბების მიღების შესვენების დაწყება",
-  "pauseTakingChanged": "აბების მიღების შესვენება შეიცვალა",
+  "pauseTakingChanged": "აბის მიღების შესვენება შეიცვალა",
   "editPausePeriod": "შესვენების პერიოდის რედაქტირება",
   "changePillDays": "მიღების დღეების შეცვლა",
   "beginToEndNumbers": "{begin}-ე ნომერი ~ {end}-ე ნომერი",

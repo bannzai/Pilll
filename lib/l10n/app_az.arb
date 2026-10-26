@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Zəhmət olmasa, həb qəbuluna fasilə verin. Fasiləni bu gündən başqa bir gündə başlatmaq istəyirsinizsə, aşağıdakı təlimata baxın.",
   "seeHowToUsePauseTakingFeature": "Həb qəbuluna fasilə vermə funksiyasından necə istifadə edəcəyinizə baxın",
   "startPauseTakingLabel": "Həb qəbuluna fasilə başlayın",
-  "pauseTakingChanged": "Qəbul fasiləsi dəyişdirildi",
+  "pauseTakingChanged": "Həb qəbuluna fasilə dəyişdirildi",
   "editPausePeriod": "Fasilə dövrünü redaktə et",
   "changePillDays": "Qəbul günlərinin sayını dəyişdir",
   "beginToEndNumbers": "{begin}-ci - {end}-ci",

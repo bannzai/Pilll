@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Taktu hlé frá því að taka pilluna. Ef þú vilt hefja hléið á öðrum degi en í dag skaltu fylgja leiðbeiningunum hér að neðan.",
   "seeHowToUsePauseTakingFeature": "Sjáðu hvernig þú notar pilluhléið",
   "startPauseTakingLabel": "Hefja hlé á pillutöku",
-  "pauseTakingChanged": "Tökuhlé hefur verið breytt",
+  "pauseTakingChanged": "Hléi á pillutöku hefur verið breytt",
   "editPausePeriod": "Breyta inntökuhlé",
   "changePillDays": "Breyta inntökudögum",
   "beginToEndNumbers": "{begin}. - {end}.",

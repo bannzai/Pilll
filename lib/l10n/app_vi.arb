@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Vui lòng tạm ngừng uống thuốc. Nếu bạn muốn bắt đầu nghỉ uống thuốc vào một ngày khác thay vì hôm nay, hãy xem hướng dẫn bên dưới.",
   "seeHowToUsePauseTakingFeature": "Xem cách dùng tính năng tạm dừng uống thuốc",
   "startPauseTakingLabel": "Bắt đầu tạm ngừng uống thuốc",
-  "pauseTakingChanged": "Đã thay đổi kỳ nghỉ uống thuốc",
+  "pauseTakingChanged": "Đã thay đổi thời gian tạm ngừng uống thuốc",
   "editPausePeriod": "Chỉnh sửa thời gian tạm ngừng uống thuốc",
   "changePillDays": "Thay đổi số ngày uống thuốc",
   "beginToEndNumbers": "Số {begin} ~ {end}",

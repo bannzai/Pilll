@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "ਕਿਰਪਾ ਕਰਕੇ ਗੋਲੀ ਲੈਣ ਤੋਂ ਕੁਝ ਸਮੇਂ ਲਈ ਵਿਰਾਮ ਲਓ। ਜੇ ਤੁਸੀਂ ਅੱਜ ਦੀ ਬਜਾਏ ਕਿਸੇ ਹੋਰ ਦਿਨ ਤੋਂ ਵਿਰਾਮ ਸ਼ੁਰੂ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ, ਤਾਂ ਹੇਠਾਂ ਦਿੱਤੀਆਂ ਹਦਾਇਤਾਂ ਵੇਖੋ।",
   "seeHowToUsePauseTakingFeature": "ਗੋਲੀ ਲੈਣ ਵਿੱਚ ਅਸਥਾਈ ਵਿਰਾਮ ਦੀ ਸਹੂਲਤ ਵਰਤਣ ਦਾ ਤਰੀਕਾ ਵੇਖੋ",
   "startPauseTakingLabel": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਵਿਰਾਮ ਸ਼ੁਰੂ ਕਰੋ",
-  "pauseTakingChanged": "ਦਵਾਈ ਦੀ ਛੁੱਟੀ ਬਦਲੀ ਗਈ ਹੈ",
+  "pauseTakingChanged": "ਗੋਲੀ ਲੈਣ ਦਾ ਵਿਰਾਮ ਬਦਲ ਦਿੱਤਾ ਗਿਆ ਹੈ",
   "editPausePeriod": "ਸੇਵਨ ਬ੍ਰੇਕ ਦੀ ਮਿਆਦ ਸੰਪਾਦਿਤ ਕਰੋ",
   "changePillDays": "ਸੇਵਨ ਦਿਨ ਬਦਲੋ",
   "beginToEndNumbers": "{begin} ਤੋਂ {end} ਤੱਕ",

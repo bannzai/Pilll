@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Lege bitte eine Pillenpause ein. Wenn du die Pause an einem anderen Tag als heute beginnen möchtest, findest du unten eine Anleitung.",
   "seeHowToUsePauseTakingFeature": "Sieh dir an, wie du die Pillenpause nutzt",
   "startPauseTakingLabel": "Pillenpause beginnen",
-  "pauseTakingChanged": "Die Einnahmepause wurde geändert",
+  "pauseTakingChanged": "Deine Pillenpause wurde geändert",
   "editPausePeriod": "Einnahmepause bearbeiten",
   "changePillDays": "Einnahmedauer ändern",
   "beginToEndNumbers": "Nr. {begin} bis {end}",

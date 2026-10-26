@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Խնդրում ենք դադար վերցնել հաբի ընդունումից։ Եթե ցանկանում եք դադարը սկսել ոչ թե այսօր, այլ մեկ այլ օր, հետևեք ստորև բերված ցուցումներին։",
   "seeHowToUsePauseTakingFeature": "Տեսեք, թե ինչպես օգտագործել հաբերի ընդունման ընդմիջման գործառույթը",
   "startPauseTakingLabel": "Սկսել հաբերի ընդունման դադարը",
-  "pauseTakingChanged": "Ընդունման դադարը փոխված է",
+  "pauseTakingChanged": "Հաբի ընդունման դադարը փոխվել է",
   "editPausePeriod": "Խմբագրել դադարի ժամանակահատվածը",
   "changePillDays": "Ընդունման օրերի փոփոխում",
   "beginToEndNumbers": "{begin}համար ~ {end}համար",

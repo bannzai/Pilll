@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Faça uma pausa no uso da pílula. Se quiser começar a pausa em outro dia, e não hoje, siga as orientações abaixo.",
   "seeHowToUsePauseTakingFeature": "Veja como usar o recurso de pausa no uso da pílula",
   "startPauseTakingLabel": "Iniciar pausa na pílula",
-  "pauseTakingChanged": "A pausa da medicação foi alterada",
+  "pauseTakingChanged": "A pausa no uso da pílula foi alterada",
   "editPausePeriod": "Editar período de pausa",
   "changePillDays": "Alterar dias de uso",
   "beginToEndNumbers": "{begin} a {end}",

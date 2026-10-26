@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Take a break from taking your pill. If you’d like the break to start on a day other than today, follow the steps below.",
   "seeHowToUsePauseTakingFeature": "See how to use the pill pause feature",
   "startPauseTakingLabel": "Start pill break",
-  "pauseTakingChanged": "Break period changed",
+  "pauseTakingChanged": "Your pill break has been changed",
   "editPausePeriod": "Edit Break Period",
   "changePillDays": "Change Dosage Days",
   "beginToEndNumbers": "{begin} - {end}",

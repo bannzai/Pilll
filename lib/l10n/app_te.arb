@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "దయచేసి మాత్రలు తీసుకోవడంలో కొంతకాలం విరామం తీసుకోండి. ఈ రోజు కాకుండా వేరే రోజు నుంచి విరామం ప్రారంభించాలనుకుంటే, కింద ఉన్న సూచనలు చూడండి.",
   "seeHowToUsePauseTakingFeature": "మాత్రలు తీసుకోవడాన్ని తాత్కాలికంగా ఆపే సదుపాయాన్ని ఎలా ఉపయోగించాలో చూడండి",
   "startPauseTakingLabel": "మాత్రలు తీసుకోవడంలో విరామం ప్రారంభించండి",
-  "pauseTakingChanged": "సేవన విరామం మార్చబడింది",
+  "pauseTakingChanged": "మాత్రలు తీసుకోవడంలో విరామం మార్చబడింది",
   "editPausePeriod": "మందు విరామ కాలాన్ని సవరించండి",
   "changePillDays": "సేవన రోజులను మార్చండి",
   "beginToEndNumbers": "{begin}వ ~ {end}వ",

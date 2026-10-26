@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "કૃપા કરીને ગોળી લેવાનું થોડા સમય માટે અટકાવો. તમે વિરામ આજ સિવાયના કોઈ દિવસે શરૂ કરવા માગતા હો, તો નીચેની સૂચનાઓ જુઓ.",
   "seeHowToUsePauseTakingFeature": "ગોળી લેવાનું થોડા સમય માટે રોકવાની સુવિધા કેવી રીતે વાપરવી તે જુઓ",
   "startPauseTakingLabel": "ગોળી લેવાનો વિરામ શરૂ કરો",
-  "pauseTakingChanged": "સેવન વિરામ બદલાવ થયો છે",
+  "pauseTakingChanged": "ગોળી લેવાનો વિરામ બદલાયો છે",
   "editPausePeriod": "સેવન વિરામ અવધિ સંપાદિત કરો",
   "changePillDays": "સેવનના દિવસો બદલો",
   "beginToEndNumbers": "{begin} નંબર થી {end} નંબર",

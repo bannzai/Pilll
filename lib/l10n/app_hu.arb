@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Tarts szünetet a tabletta szedésében. Ha nem ma, hanem egy másik napon szeretnéd elkezdeni a szünetet, kövesd az alábbi útmutatót.",
   "seeHowToUsePauseTakingFeature": "Nézd meg, hogyan használhatod a tablettaszedési szünet funkcióját",
   "startPauseTakingLabel": "Tablettaszedési szünet kezdése",
-  "pauseTakingChanged": "Megváltoztattuk a szedési szünetet",
+  "pauseTakingChanged": "Módosult a tablettaszedési szünet",
   "editPausePeriod": "Szedésmentes időszak szerkesztése",
   "changePillDays": "Szedési napok módosítása",
   "beginToEndNumbers": "{begin}. - {end}.",

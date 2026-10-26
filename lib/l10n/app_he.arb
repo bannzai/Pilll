@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "יש לעשות הפסקה בנטילת הגלולה. כדי להתחיל את ההפסקה ביום שאינו היום, אפשר להיעזר בהנחיות שלהלן.",
   "seeHowToUsePauseTakingFeature": "איך להשתמש באפשרות להפסקה זמנית בנטילת הגלולה",
   "startPauseTakingLabel": "להתחיל הפסקה בנטילת הגלולות",
-  "pauseTakingChanged": "הפסקת הנטילה עודכנה",
+  "pauseTakingChanged": "ההפסקה בנטילת הגלולה שונתה",
   "editPausePeriod": "עריכת תקופת הפסקה",
   "changePillDays": "שנה מספר ימי נטילה",
   "beginToEndNumbers": "{begin} עד {end}",

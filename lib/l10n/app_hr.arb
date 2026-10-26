@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Napravite stanku u uzimanju pilule. Ako želite da stanka počne neki drugi dan, a ne danas, pogledajte upute u nastavku.",
   "seeHowToUsePauseTakingFeature": "Pogledajte kako koristiti značajku pauze u uzimanju pilule",
   "startPauseTakingLabel": "Započnite stanku u uzimanju pilule",
-  "pauseTakingChanged": "Promijenjena je pauza uzimanja",
+  "pauseTakingChanged": "Stanka u uzimanju pilule je promijenjena",
   "editPausePeriod": "Uredi period pauziranja uzimanja",
   "changePillDays": "Promijeni broj dana",
   "beginToEndNumbers": "{begin}. - {end}.",

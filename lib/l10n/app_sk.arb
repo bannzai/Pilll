@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Dajte si prestávku v užívaní tabletiek. Ak chcete prestávku začať v iný deň ako dnes, pozrite si pokyny nižšie.",
   "seeHowToUsePauseTakingFeature": "Pozrite si, ako používať funkciu prestávky v užívaní tabletiek",
   "startPauseTakingLabel": "Začnite prestávku v užívaní tabletiek",
-  "pauseTakingChanged": "Pauza v užívaní bola zmenená",
+  "pauseTakingChanged": "Prestávka v užívaní tabletiek bola zmenená",
   "editPausePeriod": "Upraviť obdobie prestávky užívania",
   "changePillDays": "Zmeniť počet dní užívania",
   "beginToEndNumbers": "{begin}. – {end}.",

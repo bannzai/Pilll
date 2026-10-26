@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Egin eten bat pilulak hartzean. Etena gaur ez den beste egun batean hasi nahi baduzu, jarraitu beheko argibideei.",
   "seeHowToUsePauseTakingFeature": "Ikusi pilulak hartzeko etenaldiaren funtzioa nola erabili",
   "startPauseTakingLabel": "Hasi pilulak hartzeko etenaldia",
-  "pauseTakingChanged": "Hartzeko atseden aldia aldatu da",
+  "pauseTakingChanged": "Pilula hartzeko atsedenaldia aldatu da",
   "editPausePeriod": "Hartzea atseden aldia editatu",
   "changePillDays": "Hartzeko egunen kopurua aldatu",
   "beginToEndNumbers": "{begin}etik {end}era",

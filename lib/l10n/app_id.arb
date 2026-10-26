@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Silakan jeda minum pil untuk sementara. Jika Anda ingin memulai jeda pada hari selain hari ini, ikuti petunjuk di bawah.",
   "seeHowToUsePauseTakingFeature": "Lihat cara menggunakan fitur jeda minum pil",
   "startPauseTakingLabel": "Mulai jeda minum pil",
-  "pauseTakingChanged": "Periode istirahat konsumsi telah diubah",
+  "pauseTakingChanged": "Jeda minum pil telah diubah",
   "editPausePeriod": "Edit Periode Istirahat Konsumsi",
   "changePillDays": "Ubah Jumlah Hari Konsumsi",
   "beginToEndNumbers": "No. {begin} - {end}",

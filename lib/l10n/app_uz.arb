@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Iltimos, dorilarni qabul qilishda tanaffus qiling. Tanaffusni bugun emas, boshqa kuni boshlamoqchi boʻlsangiz, quyidagi koʻrsatmalarga qarang.",
   "seeHowToUsePauseTakingFeature": "Tabletkalarni ichishda vaqtincha tanaffus qilish funksiyasidan qanday foydalanishni koʻring",
   "startPauseTakingLabel": "Tabletka qabul qilishdagi tanaffusni boshlang",
-  "pauseTakingChanged": "Qabul qilish tanaffusi o'zgartirildi",
+  "pauseTakingChanged": "Tabletka qabul qilishdagi tanaffus oʻzgartirildi",
   "editPausePeriod": "Qabul qilish tanaffusi davrini tahrirlash",
   "changePillDays": "Qabul qilish kunlarini o'zgartirish",
   "beginToEndNumbers": "{begin}-raqam ~ {end}-raqam",

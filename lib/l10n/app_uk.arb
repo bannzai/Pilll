@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Зробіть перерву в прийомі пігулок. Якщо ви хочете почати перерву не сьогодні, а в інший день, скористайтеся інструкцією нижче.",
   "seeHowToUsePauseTakingFeature": "Дізнайтеся, як користуватися функцією перерви у прийомі пігулок",
   "startPauseTakingLabel": "Почати перерву в прийомі пігулок",
-  "pauseTakingChanged": "Перерву в прийомі змінено",
+  "pauseTakingChanged": "Перерву в прийомі пігулок змінено",
   "editPausePeriod": "Редагувати перерву в прийомі",
   "changePillDays": "Зміна кількості днів прийому",
   "beginToEndNumbers": "{begin} до {end}",

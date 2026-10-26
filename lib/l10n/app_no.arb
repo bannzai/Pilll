@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Ta en pause fra p-pillene. Hvis du vil starte pausen en annen dag enn i dag, kan du følge veiledningen nedenfor.",
   "seeHowToUsePauseTakingFeature": "Se hvordan du bruker funksjonen for p-pillepause",
   "startPauseTakingLabel": "Start p-pillepause",
-  "pauseTakingChanged": "Pillepausen er endret",
+  "pauseTakingChanged": "Pillepausen din er endret",
   "editPausePeriod": "Rediger pauseperiode",
   "changePillDays": "Endre antall inntak-dager",
   "beginToEndNumbers": "nr. {begin} til nr. {end}",

@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Моля, направете пауза в приема на хапчетата. Ако искате паузата да започне в ден, различен от днес, вижте указанията по-долу.",
   "seeHowToUsePauseTakingFeature": "Вижте как се използва функцията за пауза в приема на хапчета",
   "startPauseTakingLabel": "Начало на паузата в приема на хапчета",
-  "pauseTakingChanged": "Променена е паузата от хапчетата",
+  "pauseTakingChanged": "Паузата в приема на хапчета е променена",
   "editPausePeriod": "Редактиране на почивка от прием",
   "changePillDays": "Промени дните на прием",
   "beginToEndNumbers": "№{begin} до №{end}",

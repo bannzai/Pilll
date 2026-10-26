@@ -381,7 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Tafadhali pumzika kwa muda katika kumeza vidonge. Ikiwa ungependa kuanza mapumziko hayo siku nyingine badala ya leo, fuata maelekezo hapa chini.",
   "seeHowToUsePauseTakingFeature": "Angalia jinsi ya kutumia kipengele cha kusitisha kumeza vidonge kwa muda",
   "startPauseTakingLabel": "Tafadhali anza mapumziko ya kumeza vidonge",
-  "pauseTakingChanged": "Kipindi cha mapumziko kimebadilishwa",
+  "pauseTakingChanged": "Mapumziko ya kumeza vidonge yamebadilishwa",
   "editPausePeriod": "Hariri kipindi cha mapumziko ya matumizi",
   "changePillDays": "Badilisha siku za kutumia vidonge",
   "beginToEndNumbers": "{begin} hadi {end}",
