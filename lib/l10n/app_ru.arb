@@ -110,7 +110,7 @@
   "pauseStartDate": "Дата начала перерыва в приёме таблеток",
   "pauseEndDate": "Дата окончания перерыва в приёме таблеток",
   "endPillSheet": "блистер закончился",
-  "discardPillSheet": "Утилизация блистера",
+  "discardPillSheet": "выбросить блистер",
   "takingTime": "Время приёма",
   "takingHistoryIsPremiumFeature": "История приёма - премиум-функция",
   "pauseTakingDoesNotAdvancePillNumber": "При пропуске приема номер таблетки не продвигается",

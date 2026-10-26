@@ -110,7 +110,7 @@
   "pauseStartDate": "Таблетка ичүүдөгү тыныгуунун башталган күнү",
   "pauseEndDate": "Таблетка ичүүдөгү тыныгуунун аяктоо күнү",
   "endPillSheet": "таблетка блистери бүттү",
-  "discardPillSheet": "Таблетка парагын таштоо",
+  "discardPillSheet": "таблетка блистери ыргытуу",
   "takingTime": "Дарыны ичүү убактысы",
   "takingHistoryIsPremiumFeature": "Дары ичүү тарыхы премиум функция",
   "pauseTakingDoesNotAdvancePillNumber": "Дарыны ичүүнү токтотсоңуз, таблетканын номери алдыга жылбайт",

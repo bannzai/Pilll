@@ -110,7 +110,7 @@
   "pauseStartDate": "Dyddiad dechrau'r seibiant rhag cymryd y bilsen",
   "pauseEndDate": "Dyddiad gorffen y seibiant o gymryd y bilsen",
   "endPillSheet": "stribed pils wedi gorffen",
-  "discardPillSheet": "Gwaredu Pacer Piliau",
+  "discardPillSheet": "Gwaredu stribed pils",
   "takingTime": "Amser cymryd",
   "takingHistoryIsPremiumFeature": "Mae hanes y bilsen yn nodwedd premiwm",
   "pauseTakingDoesNotAdvancePillNumber": "Ni fydd rhif y bilsen yn symud ymlaen pan fyddwch yn peidio â'i chymryd",

@@ -110,7 +110,7 @@
   "pauseStartDate": "ክኒን መውሰድ የሚቆምበት የመጀመሪያ ቀን",
   "pauseEndDate": "ክኒን ከመውሰድ የእረፍት ጊዜ መጨረሻ ቀን",
   "endPillSheet": "ክኒን ሉህ ተጠናቋል",
-  "discardPillSheet": "የክኒን ጥቅል መጣል",
+  "discardPillSheet": "ክኒን ሉህ ማስወገድ",
   "takingTime": "የመድኃኒት መወሰጃ ጊዜ",
   "takingHistoryIsPremiumFeature": "የመድሃኒት አወሳሰድ ታሪክ ፕሪሚየም ባህሪ ነው",
   "pauseTakingDoesNotAdvancePillNumber": "መድሃኒት መውሰድ ማቆም ሲሆን የመድሃኒት ቁጥሩ አይቀጥልም",

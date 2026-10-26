@@ -110,7 +110,7 @@
   "pauseStartDate": "Эм уух завсарлагын эхлэх өдөр",
   "pauseEndDate": "Эм уух завсарлагын дуусах өдөр",
   "endPillSheet": "эмийн блистер дууссан",
-  "discardPillSheet": "Эмийн хуудас устгах",
+  "discardPillSheet": "эмийн блистер хаях",
   "takingTime": "Уух цаг",
   "takingHistoryIsPremiumFeature": "Уухын түүх нь премиум функц юм",
   "pauseTakingDoesNotAdvancePillNumber": "Пилл ууухаа зогсоовол дугаар урагшлахгүй",

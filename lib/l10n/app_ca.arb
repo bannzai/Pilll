@@ -110,7 +110,7 @@
   "pauseStartDate": "Data d'inici de la pausa de la píndola",
   "pauseEndDate": "Data de finalització de la pausa de la píndola",
   "endPillSheet": "blíster acabat",
-  "discardPillSheet": "Eliminació del blíster",
+  "discardPillSheet": "llençar el blíster",
   "takingTime": "Hora de presa",
   "takingHistoryIsPremiumFeature": "L'historial de presa és una funció premium",
   "pauseTakingDoesNotAdvancePillNumber": "Quan pauseu la presa, el número de píndola no avança",

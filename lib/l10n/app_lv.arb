@@ -110,7 +110,7 @@
   "pauseStartDate": "Tablešu lietošanas pārtraukuma sākuma datums",
   "pauseEndDate": "Tablešu lietošanas pārtraukuma beigu datums",
   "endPillSheet": "tablešu blister ir pabeigts",
-  "discardPillSheet": "Blistera utilizācija",
+  "discardPillSheet": "Izmest tablešu blisteri",
   "takingTime": "Lietošanas laiks",
   "takingHistoryIsPremiumFeature": "Lietošanas vēsture ir premium funkcija",
   "pauseTakingDoesNotAdvancePillNumber": "Pārtraucot tablešu lietošanu, tabletes numurs nepalielinās",

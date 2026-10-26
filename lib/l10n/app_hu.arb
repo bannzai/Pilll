@@ -110,7 +110,7 @@
   "pauseStartDate": "A tablettaszedési szünet kezdőnapja",
   "pauseEndDate": "A tablettaszedési szünet utolsó napja",
   "endPillSheet": "tablettacsomag elfogyott",
-  "discardPillSheet": "Tablettacsomag eldobása",
+  "discardPillSheet": "tablettacsomag kidobása",
   "takingTime": "Bevételi idő",
   "takingHistoryIsPremiumFeature": "A szedési előzmények prémium funkció",
   "pauseTakingDoesNotAdvancePillNumber": "A szedés szüneteltetése esetén a tabletta sorszáma nem halad tovább.",

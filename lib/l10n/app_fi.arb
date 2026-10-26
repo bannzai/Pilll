@@ -110,7 +110,7 @@
   "pauseStartDate": "Pilleritauon alkamispäivä",
   "pauseEndDate": "Pilleritauon päättymispäivä",
   "endPillSheet": "pilleriliuska käytetty loppuun",
-  "discardPillSheet": "Pilleriarkin hävittäminen",
+  "discardPillSheet": "hävitä pilleriliuska",
   "takingTime": "Ottamisaika",
   "takingHistoryIsPremiumFeature": "Ottamishistoria on premium-ominaisuus",
   "pauseTakingDoesNotAdvancePillNumber": "Kun pidät tauon pillerien ottamisessa, pillin numero ei etene",

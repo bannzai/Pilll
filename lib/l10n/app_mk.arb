@@ -110,7 +110,7 @@
   "pauseStartDate": "Датум на почеток на паузата во земањето таблети",
   "pauseEndDate": "Датум на завршување на паузата од земање таблета",
   "endPillSheet": "блистер е завршен",
-  "discardPillSheet": "Отфрлување на блистерот",
+  "discardPillSheet": "фрлање блистер",
   "takingTime": "Време за прием",
   "takingHistoryIsPremiumFeature": "Историјата на земање е премиум функција",
   "pauseTakingDoesNotAdvancePillNumber": "Кога ја прескокнувате дозата, бројот на пилулата не напредува",

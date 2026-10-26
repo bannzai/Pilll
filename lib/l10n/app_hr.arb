@@ -110,7 +110,7 @@
   "pauseStartDate": "Datum početka pauze u uzimanju pilula",
   "pauseEndDate": "Datum završetka stanke u uzimanju pilule",
   "endPillSheet": "blister je završen",
-  "discardPillSheet": "Odbacivanje blistera",
+  "discardPillSheet": "odložite blister",
   "takingTime": "Vrijeme uzimanja",
   "takingHistoryIsPremiumFeature": "Povijest uzimanja je premium funkcija",
   "pauseTakingDoesNotAdvancePillNumber": "Kad zaustavite uzimanje, broj pilule se neće pomjeriti",

@@ -110,7 +110,7 @@
   "pauseStartDate": "د ګولیو له اخیستو د وقفې د پیل نېټه",
   "pauseEndDate": "د ګولیو اخیستلو د دمې د پای نېټه",
   "endPillSheet": "د ګولیو پاڼ پای ته ورسېد",
-  "discardPillSheet": "د ګولیو پاکټ تلفول",
+  "discardPillSheet": "د ګولیو پاڼ وغورځوئ",
   "takingTime": "د درملو وخت",
   "takingHistoryIsPremiumFeature": "د دوا نیولو تاریخچه پریمیم فیچر دی",
   "pauseTakingDoesNotAdvancePillNumber": "د دوا اخیستل کله چې ودروئ، د ګولۍ شمېره پرمخ نه ځي",

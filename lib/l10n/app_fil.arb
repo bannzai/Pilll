@@ -110,7 +110,7 @@
   "pauseStartDate": "Petsa ng simula ng pahinga sa pag-inom ng pildoras",
   "pauseEndDate": "Petsa ng pagtatapos ng pahinga sa pag-inom ng pildoras",
   "endPillSheet": "Naubos na ang pakete ng pildoras",
-  "discardPillSheet": "Pagtatapon ng Pill Sheet",
+  "discardPillSheet": "itapon ang pakete ng pildoras",
   "takingTime": "Oras ng Pag-inom",
   "takingHistoryIsPremiumFeature": "Ang kasaysayan ng pag-inom ay premium na feature",
   "pauseTakingDoesNotAdvancePillNumber": "Kapag natigil ang pag-inom, hindi magpapatuloy ang numero ng pill",

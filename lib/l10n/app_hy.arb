@@ -110,7 +110,7 @@
   "pauseStartDate": "Հաբերի ընդունման ընդմիջման մեկնարկի ամսաթիվ",
   "pauseEndDate": "Հաբերի ընդունման ընդմիջման ավարտի ամսաթիվ",
   "endPillSheet": "հաբերի բլիստեր ավարտվել է",
-  "discardPillSheet": "Դեղահաբերի փաթեթի գցում",
+  "discardPillSheet": "հաբերի բլիստեր դեն նետել",
   "takingTime": "Ընդունման ժամ",
   "takingHistoryIsPremiumFeature": "Ընդունման պատմությունը պրեմիում գործառույթ է",
   "pauseTakingDoesNotAdvancePillNumber": "Հապի ընդունումը դադարեցնելիս համարը չի առաջ գնա",

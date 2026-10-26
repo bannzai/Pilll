@@ -110,7 +110,7 @@
   "pauseStartDate": "Data de início da pausa da pílula",
   "pauseEndDate": "Data de término da pausa da pílula",
   "endPillSheet": "Cartela finalizada",
-  "discardPillSheet": "Descarte da cartela",
+  "discardPillSheet": "descartar a cartela",
   "takingTime": "Horário da medicação",
   "takingHistoryIsPremiumFeature": "O histórico de medicação é um recurso premium",
   "pauseTakingDoesNotAdvancePillNumber": "Ao pausar a tomada, o número da pílula não avança",

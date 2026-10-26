@@ -110,7 +110,7 @@
   "pauseStartDate": "Datum začátku pauzy v užívání pilulek",
   "pauseEndDate": "Datum konce přestávky v užívání pilulek",
   "endPillSheet": "blistr dokončen",
-  "discardPillSheet": "Likvidace blistru",
+  "discardPillSheet": "Vyhodit blistr",
   "takingTime": "Čas užití",
   "takingHistoryIsPremiumFeature": "Historie užívání je prémiová funkce",
   "pauseTakingDoesNotAdvancePillNumber": "Při přerušení užívání se číslo pilulky neposune",

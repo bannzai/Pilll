@@ -110,7 +110,7 @@
   "pauseStartDate": "Beginn der Pillenpause",
   "pauseEndDate": "Enddatum der Pillenpause",
   "endPillSheet": "Pillenblister aufgebraucht",
-  "discardPillSheet": "Blister entsorgen",
+  "discardPillSheet": "Pillenblister entsorgen",
   "takingTime": "Einnahmezeit",
   "takingHistoryIsPremiumFeature": "Die Einnahmehistorie ist eine Premium-Funktion",
   "pauseTakingDoesNotAdvancePillNumber": "Bei einer Einnahmepause wird die Pillennummer nicht fortgesetzt.",

@@ -110,7 +110,7 @@
   "pauseStartDate": "Hap kullanımına ara verme başlangıç tarihi",
   "pauseEndDate": "Hap kullanımına ara verme bitiş tarihi",
   "endPillSheet": "blister tamamlandı",
-  "discardPillSheet": "Hap Paketi İmhası",
+  "discardPillSheet": "Kullanılmış blisteri atın",
   "takingTime": "İlaç Saati",
   "takingHistoryIsPremiumFeature": "Kullanım geçmişi premium özelliğidir",
   "pauseTakingDoesNotAdvancePillNumber": "Kullanımı duraklattığınızda hap numarası ilerlemez",

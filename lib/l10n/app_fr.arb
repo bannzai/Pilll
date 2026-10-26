@@ -110,7 +110,7 @@
   "pauseStartDate": "Date de début de la pause de pilule",
   "pauseEndDate": "Date de fin de la pause de la pilule",
   "endPillSheet": "Plaquette terminée",
-  "discardPillSheet": "Jeter le paquet de pilules",
+  "discardPillSheet": "jeter la plaquette",
   "takingTime": "Temps de dosage",
   "takingHistoryIsPremiumFeature": "Prendre l'historique est une fonctionnalité premium",
   "pauseTakingDoesNotAdvancePillNumber": "Les numéros de pilules n'avancent pas lorsque vous sautez des doses",

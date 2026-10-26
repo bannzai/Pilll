@@ -110,7 +110,7 @@
   "pauseStartDate": "Startdato for p-pillepause",
   "pauseEndDate": "Sluttdato for p-pillepausen",
   "endPillSheet": "pillebrett brukt opp",
-  "discardPillSheet": "Kast pilleplate",
+  "discardPillSheet": "kast pillebrett",
   "takingTime": "Doseringstid",
   "takingHistoryIsPremiumFeature": "Inntakshistorikk er en premium-funksjon",
   "pauseTakingDoesNotAdvancePillNumber": "Når du pauser inntak, går ikke pillenummeret fremover",

@@ -110,7 +110,7 @@
   "pauseStartDate": "ગોળી લેવામાં વિરામ શરૂ થવાની તારીખ",
   "pauseEndDate": "ગોળી લેવાના વિરામની સમાપ્તિ તારીખ",
   "endPillSheet": "ગોળીની સ્ટ્રિપ પૂરી થઈ",
-  "discardPillSheet": "પિલ શીટ નકાર",
+  "discardPillSheet": "ગોળીની સ્ટ્રિપનો નિકાલ",
   "takingTime": "દવા લેવાનો સમય",
   "takingHistoryIsPremiumFeature": "દવા લેવાનો ઇતિહાસ પ્રીમિયમ સુવિધા છે",
   "pauseTakingDoesNotAdvancePillNumber": "ગોળી લેવાનો વિરામ લેવાથી ગોળીનો નંબર આગળ વધશે નહીં",

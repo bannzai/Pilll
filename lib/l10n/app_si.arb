@@ -110,7 +110,7 @@
   "pauseStartDate": "පෙති ගැනීමේ විරාමය ආරම්භ වන දිනය",
   "pauseEndDate": "පෙති ගැනීමේ විරාමය අවසන් වන දිනය",
   "endPillSheet": "පෙති කාඩ්පත අවසන් වී ඇත",
-  "discardPillSheet": "පෙති පත්‍රය ඉවත් කිරීම",
+  "discardPillSheet": "පෙති කාඩ්පත ඉවත දැමීම",
   "takingTime": "සේවන වේලාව",
   "takingHistoryIsPremiumFeature": "පිල් සේවන ඉතිහාසය ප්‍රිමියම් විශේෂාංගයකි",
   "pauseTakingDoesNotAdvancePillNumber": "ඔසු නොගන්නා විට පෙති අංකය ඉදිරියට නොයයි",

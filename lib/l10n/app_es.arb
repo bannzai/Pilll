@@ -110,7 +110,7 @@
   "pauseStartDate": "Fecha de inicio de la pausa de la píldora",
   "pauseEndDate": "Fecha de fin de la pausa de la píldora",
   "endPillSheet": "Blíster terminado",
-  "discardPillSheet": "Descarte del blíster",
+  "discardPillSheet": "desechar el blíster",
   "takingTime": "Hora de toma",
   "takingHistoryIsPremiumFeature": "El historial de tomas es una función premium",
   "pauseTakingDoesNotAdvancePillNumber": "Al pausar la toma, el número de píldora no avanza",

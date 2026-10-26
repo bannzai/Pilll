@@ -110,7 +110,7 @@
   "pauseStartDate": "Həb qəbuluna fasilənin başlama tarixi",
   "pauseEndDate": "Həb qəbuluna fasilənin bitmə tarixi",
   "endPillSheet": "həb blister tamamlandı",
-  "discardPillSheet": "Həb lövhəsinin imhası",
+  "discardPillSheet": "həb blister atılması",
   "takingTime": "Qəbul vaxtı",
   "takingHistoryIsPremiumFeature": "Qəbul tarixçəsi premium funksiyadır",
   "pauseTakingDoesNotAdvancePillNumber": "Qəbulu dayandırdığınızda həb nömrəsi irəliləmir",

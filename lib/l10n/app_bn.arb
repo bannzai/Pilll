@@ -110,7 +110,7 @@
   "pauseStartDate": "পিল খাওয়ায় বিরতির শুরুর তারিখ",
   "pauseEndDate": "পিল খাওয়ার বিরতি শেষের তারিখ",
   "endPillSheet": "পিল শিট শেষ হয়েছে",
-  "discardPillSheet": "পিল শিট নিষ্পত্তি",
+  "discardPillSheet": "পিল শিট ফেলে দেওয়া",
   "takingTime": "সেবনের সময়",
   "takingHistoryIsPremiumFeature": "সেবনের ইতিহাস প্রিমিয়াম ফিচার",
   "pauseTakingDoesNotAdvancePillNumber": "পিল সেবন বন্ধ করলে পিল নম্বর এগোবে না",

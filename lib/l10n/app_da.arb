@@ -110,7 +110,7 @@
   "pauseStartDate": "Startdato for p-pillepause",
   "pauseEndDate": "Slutdato for p-pillepausen",
   "endPillSheet": "pillekort afsluttet",
-  "discardPillSheet": "Bortskaf pillerpakke",
+  "discardPillSheet": "smid pillekort ud",
   "takingTime": "Indtagelsestid",
   "takingHistoryIsPremiumFeature": "Dosishistorik er en premium-funktion",
   "pauseTakingDoesNotAdvancePillNumber": "Pillenummeret går ikke fremad, når du pauser med at tage pillerne",

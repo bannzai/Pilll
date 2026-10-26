@@ -110,7 +110,7 @@
   "pauseStartDate": "Data di inizio della pausa della pillola",
   "pauseEndDate": "Data di fine della pausa della pillola",
   "endPillSheet": "Blister terminato",
-  "discardPillSheet": "Smaltisci blister",
+  "discardPillSheet": "getta il blister",
   "takingTime": "Orario di assunzione",
   "takingHistoryIsPremiumFeature": "La cronologia delle assunzioni è una funzione premium",
   "pauseTakingDoesNotAdvancePillNumber": "Quando sospendi l'assunzione, il numero della pillola non avanza",

@@ -110,7 +110,7 @@
   "pauseStartDate": "گولیاں لینے میں وقفہ شروع ہونے کی تاریخ",
   "pauseEndDate": "گولی لینے کے وقفے کی آخری تاریخ",
   "endPillSheet": "گولیوں کی پٹی ختم ہو گئی",
-  "discardPillSheet": "پِل شیٹ ضائع کریں",
+  "discardPillSheet": "گولیوں کی پٹی پھینک دیں",
   "takingTime": "دوا کا وقت",
   "takingHistoryIsPremiumFeature": "خوراک کی تاریخ پریمیم فیچر ہے",
   "pauseTakingDoesNotAdvancePillNumber": "پل کا استعمال روک دینے سے پل نمبر آگے نہیں بڑھے گا",
