@@ -236,7 +236,7 @@
   "showsDescription": "Afficher les explications",
   "title": "Titre",
   "message": "Message",
-  "option": "Possibilités",
+  "option": "Options",
   "completed": "Fait",
   "pilll": "Pilule",
   "changeMissedNotificationMessage": "Vous pouvez personnaliser le message de notification pour les pilules oubliées",

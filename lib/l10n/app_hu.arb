@@ -236,7 +236,7 @@
   "showsDescription": "Magyarázatok megjelenítése",
   "title": "Cím",
   "message": "Üzenet",
-  "option": "Opciók",
+  "option": "Beállítások",
   "completed": "Kész",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Módosíthatja az elmaradás esetén megjelenő értesítési szöveget",

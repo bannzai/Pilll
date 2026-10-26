@@ -236,7 +236,7 @@
   "showsDescription": "Показывать пояснения",
   "title": "Название",
   "message": "Сообщение",
-  "option": "Опции",
+  "option": "Параметры",
   "completed": "Готово",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Вы можете изменить текст уведомления о пропуске приёма",

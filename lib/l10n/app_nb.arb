@@ -236,7 +236,7 @@
   "showsDescription": "Vis forklaringer",
   "title": "Tittel",
   "message": "Melding",
-  "option": "Valg",
+  "option": "Alternativer",
   "completed": "Ferdig",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Du kan tilpasse varselteksten som vises når du glemmer å ta pillen",
