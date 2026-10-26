@@ -535,7 +535,7 @@
   "healthCareIntegrationFeatureAppealPoint1": "مزامنة سجلات الدورة تلقائيًا",
   "healthCareIntegrationFeatureAppealPoint2": "المزامنة مع تطبيق الصحة",
   "healthCareIntegrationFeatureAppealPoint3": "التكامل مع Apple Health",
-  "quickRecordFeatureAppealPoint1": "تسجيل تناول الدواء عبر إجراء الإشعار",
+  "quickRecordFeatureAppealPoint1": "تسجيل تناول عبر زر الإشعار",
   "quickRecordFeatureAppealPoint2": "أكمل دون فتح التطبيق",
   "quickRecordFeatureAppealPoint3": "متاح للاستخدام فورًا باشتراك بريميوم",
   "creatingNewPillSheetFeatureAppealPoint1": "التبديل التلقائي عند انتهاء ورقة الحبوب",

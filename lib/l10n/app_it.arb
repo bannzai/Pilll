@@ -535,7 +535,7 @@
   "healthCareIntegrationFeatureAppealPoint1": "Sincronizza automaticamente le registrazioni delle mestruazioni",
   "healthCareIntegrationFeatureAppealPoint2": "Sincronizza con l’app Salute",
   "healthCareIntegrationFeatureAppealPoint3": "Integrazione con Apple Health",
-  "quickRecordFeatureAppealPoint1": "Registra assunzione dalle azioni delle notifiche",
+  "quickRecordFeatureAppealPoint1": "Aggiungi una voce al registro delle assunzioni dalla notifica",
   "quickRecordFeatureAppealPoint2": "Segna come assunto senza aprire l'app",
   "quickRecordFeatureAppealPoint3": "Disponibile con l'abbonamento Premium",
   "creatingNewPillSheetFeatureAppealPoint1": "Automatica commutazione alla fine della confezione di pillole",

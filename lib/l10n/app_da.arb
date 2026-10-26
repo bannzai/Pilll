@@ -535,7 +535,7 @@
   "healthCareIntegrationFeatureAppealPoint1": "Synkroniser menstruationsregistreringer automatisk",
   "healthCareIntegrationFeatureAppealPoint2": "Synkroniser med appen Sundhed",
   "healthCareIntegrationFeatureAppealPoint3": "Integration med Apple Health",
-  "quickRecordFeatureAppealPoint1": "Registrer indtagelse via notifikationshandling",
+  "quickRecordFeatureAppealPoint1": "Lav en pilleregistrering med knappen i notifikationen",
   "quickRecordFeatureAppealPoint2": "Fuldfør uden at åbne appen",
   "quickRecordFeatureAppealPoint3": "Tilgængelig med Premium-abonnement",
   "creatingNewPillSheetFeatureAppealPoint1": "Automatisk skift ved afslutning af pilleark",

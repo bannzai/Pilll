@@ -535,7 +535,7 @@
   "healthCareIntegrationFeatureAppealPoint1": "Automaticky synchronizovat záznamy o menstruaci",
   "healthCareIntegrationFeatureAppealPoint2": "Synchronizovat s aplikací Zdraví",
   "healthCareIntegrationFeatureAppealPoint3": "Propojení s Apple Health",
-  "quickRecordFeatureAppealPoint1": "Záznam užití přes akci oznámení",
+  "quickRecordFeatureAppealPoint1": "Přidat záznam užití tlačítkem v oznámení",
   "quickRecordFeatureAppealPoint2": "Dokončit bez otevření aplikace",
   "quickRecordFeatureAppealPoint3": "Dostupné s předplatným Premium",
   "creatingNewPillSheetFeatureAppealPoint1": "Automatické přepnutí po skončení arch tabletek",

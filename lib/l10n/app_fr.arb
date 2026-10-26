@@ -535,7 +535,7 @@
   "healthCareIntegrationFeatureAppealPoint1": "Synchroniser automatiquement les données de règles",
   "healthCareIntegrationFeatureAppealPoint2": "Synchroniser avec l’app Santé",
   "healthCareIntegrationFeatureAppealPoint3": "Intégration avec Apple Health",
-  "quickRecordFeatureAppealPoint1": "Enregistrer la dose issue de l'action de notification",
+  "quickRecordFeatureAppealPoint1": "Ajouter une entrée au journal des prises depuis la notification",
   "quickRecordFeatureAppealPoint2": "Terminer sans ouvrir l'application",
   "quickRecordFeatureAppealPoint3": "Disponible avec l'abonnement Premium",
   "creatingNewPillSheetFeatureAppealPoint1": "Commutation automatique sur l'achèvement de la feuille de pilules",

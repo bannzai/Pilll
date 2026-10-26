@@ -535,7 +535,7 @@
   "healthCareIntegrationFeatureAppealPoint1": "Automatycznie synchronizuj zapisy okresu",
   "healthCareIntegrationFeatureAppealPoint2": "Synchronizuj z aplikacją Zdrowie",
   "healthCareIntegrationFeatureAppealPoint3": "Połączenie z Apple Health",
-  "quickRecordFeatureAppealPoint1": "Zarejestruj przyjęcie przez powiadomienie",
+  "quickRecordFeatureAppealPoint1": "Dodaj wpis do rejestru przyjęć przyciskiem w powiadomieniu",
   "quickRecordFeatureAppealPoint2": "Zakończ bez otwierania aplikacji",
   "quickRecordFeatureAppealPoint3": "Dostępne bez zmian po wykupieniu Premium",
   "creatingNewPillSheetFeatureAppealPoint1": "Automatyczne przełączanie po zakończeniu blisterki",

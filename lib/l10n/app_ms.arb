@@ -535,7 +535,7 @@
   "healthCareIntegrationFeatureAppealPoint1": "Segerakkan rekod haid secara automatik",
   "healthCareIntegrationFeatureAppealPoint2": "Segerakkan dengan aplikasi Kesihatan",
   "healthCareIntegrationFeatureAppealPoint3": "Sambungan dengan Apple Health",
-  "quickRecordFeatureAppealPoint1": "Rekod pengambilan melalui tindakan notifikasi",
+  "quickRecordFeatureAppealPoint1": "Tambah rekod pengambilan melalui butang pada pemberitahuan",
   "quickRecordFeatureAppealPoint2": "Selesai tanpa membuka apl",
   "quickRecordFeatureAppealPoint3": "Boleh digunakan terus dengan langganan Premium",
   "creatingNewPillSheetFeatureAppealPoint1": "Tukar automatik apabila helaian pil tamat",

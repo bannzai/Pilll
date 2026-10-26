@@ -535,7 +535,7 @@
   "healthCareIntegrationFeatureAppealPoint1": "Sincroniza automáticamente los registros de la regla",
   "healthCareIntegrationFeatureAppealPoint2": "Sincronizar con la app Salud",
   "healthCareIntegrationFeatureAppealPoint3": "Integración con Apple Health",
-  "quickRecordFeatureAppealPoint1": "Registrar toma desde notificación",
+  "quickRecordFeatureAppealPoint1": "Añade una entrada al registro de toma desde la notificación",
   "quickRecordFeatureAppealPoint2": "Completar sin abrir la aplicación",
   "quickRecordFeatureAppealPoint3": "Disponible con suscripción Premium",
   "creatingNewPillSheetFeatureAppealPoint1": "Cambio automático al finalizar la hoja de pastillas",

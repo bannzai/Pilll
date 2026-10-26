@@ -535,7 +535,7 @@
   "healthCareIntegrationFeatureAppealPoint1": "Автоматически синхронизировать записи о месячных",
   "healthCareIntegrationFeatureAppealPoint2": "Синхронизировать с приложением «Здоровье»",
   "healthCareIntegrationFeatureAppealPoint3": "Интеграция с Apple Health",
-  "quickRecordFeatureAppealPoint1": "Отметить прием из уведомления",
+  "quickRecordFeatureAppealPoint1": "Добавить запись в журнал приёма таблеток через уведомление",
   "quickRecordFeatureAppealPoint2": "Отклонено",
   "quickRecordFeatureAppealPoint3": "Доступно по подписке Premium",
   "creatingNewPillSheetFeatureAppealPoint1": "Автоматическое переключение при завершении листа таблеток",

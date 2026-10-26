@@ -535,7 +535,7 @@
   "healthCareIntegrationFeatureAppealPoint1": "Автоматично синхронизиране на записите за мензис",
   "healthCareIntegrationFeatureAppealPoint2": "Синхронизиране с приложението „Здраве“",
   "healthCareIntegrationFeatureAppealPoint3": "Интеграция с Apple Health",
-  "quickRecordFeatureAppealPoint1": "Запис на приемане чрез действие в известие",
+  "quickRecordFeatureAppealPoint1": "Запис на приема чрез бутона в известието",
   "quickRecordFeatureAppealPoint2": "Завърши без отваряне на приложението",
   "quickRecordFeatureAppealPoint3": "Достъпно веднага с Premium абонамент",
   "creatingNewPillSheetFeatureAppealPoint1": "Автоматично превключване при край на листа с хапчета",

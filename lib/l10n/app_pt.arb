@@ -535,7 +535,7 @@
   "healthCareIntegrationFeatureAppealPoint1": "Sincronize automaticamente os registros de menstruação",
   "healthCareIntegrationFeatureAppealPoint2": "Sincronizar com o app Saúde",
   "healthCareIntegrationFeatureAppealPoint3": "Integração com o Apple Health",
-  "quickRecordFeatureAppealPoint1": "Registrar dose por ação de notificação",
+  "quickRecordFeatureAppealPoint1": "Adicione ao registro de uso pelo botão da notificação",
   "quickRecordFeatureAppealPoint2": "Concluir sem abrir o aplicativo",
   "quickRecordFeatureAppealPoint3": "Disponível com assinatura Premium",
   "creatingNewPillSheetFeatureAppealPoint1": "Troca automática ao término da cartela",

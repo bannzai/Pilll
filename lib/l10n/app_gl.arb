@@ -535,7 +535,7 @@
   "healthCareIntegrationFeatureAppealPoint1": "Sincroniza automaticamente os rexistros da regra",
   "healthCareIntegrationFeatureAppealPoint2": "Sincroniza coa aplicación Saúde",
   "healthCareIntegrationFeatureAppealPoint3": "Integración con Apple Health",
-  "quickRecordFeatureAppealPoint1": "Rexistro de toma desde notificación",
+  "quickRecordFeatureAppealPoint1": "Engade unha entrada ao rexistro de tomas desde a notificación",
   "quickRecordFeatureAppealPoint2": "Completar sen abrir a aplicación",
   "quickRecordFeatureAppealPoint3": "Dispoñible tal como está coa subscrición Premium",
   "creatingNewPillSheetFeatureAppealPoint1": "Cambio automático ao remate da folla de píldoras",

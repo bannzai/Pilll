@@ -535,7 +535,7 @@
   "healthCareIntegrationFeatureAppealPoint1": "Αυτόματος συγχρονισμός καταγραφών περιόδου",
   "healthCareIntegrationFeatureAppealPoint2": "Συγχρονισμός με την εφαρμογή Υγεία",
   "healthCareIntegrationFeatureAppealPoint3": "Σύνδεση με το Apple Health",
-  "quickRecordFeatureAppealPoint1": "Καταγραφή λήψης μέσω ειδοποίησης",
+  "quickRecordFeatureAppealPoint1": "Καταχώριση στην καταγραφή λήψης από την ειδοποίηση",
   "quickRecordFeatureAppealPoint2": "Ολοκλήρωση χωρίς άνοιγμα εφαρμογής",
   "quickRecordFeatureAppealPoint3": "Διαθέσιμο με συνδρομή Premium",
   "creatingNewPillSheetFeatureAppealPoint1": "Αυτόματη εναλλαγή στη λήξη φύλλου χαπιών",

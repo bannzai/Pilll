@@ -535,7 +535,7 @@
   "healthCareIntegrationFeatureAppealPoint1": "A menstruációs feljegyzések automatikus szinkronizálása",
   "healthCareIntegrationFeatureAppealPoint2": "Szinkronizálás az Egészség alkalmazással",
   "healthCareIntegrationFeatureAppealPoint3": "Kapcsolat az Apple Health alkalmazással",
-  "quickRecordFeatureAppealPoint1": "Bevétel rögzítése értesítésből",
+  "quickRecordFeatureAppealPoint1": "Bejegyzés a tablettaszedési naplóba az értesítés gombjával",
   "quickRecordFeatureAppealPoint2": "Alkalmazás megnyitása nélkül befejezve",
   "quickRecordFeatureAppealPoint3": "Premium-előfizetéssel azonnal használható",
   "creatingNewPillSheetFeatureAppealPoint1": "Automatikus váltás tablettacsomag végén",

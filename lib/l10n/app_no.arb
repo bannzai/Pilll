@@ -535,7 +535,7 @@
   "healthCareIntegrationFeatureAppealPoint1": "Synkroniser mensregistreringer automatisk",
   "healthCareIntegrationFeatureAppealPoint2": "Synkroniser med Helse-appen",
   "healthCareIntegrationFeatureAppealPoint3": "Tilkobling til Apple Health",
-  "quickRecordFeatureAppealPoint1": "Registrer inntak via varslingshandling",
+  "quickRecordFeatureAppealPoint1": "Legg til i pillelogg med knappen i varselet",
   "quickRecordFeatureAppealPoint2": "Fullfør uten å åpne appen",
   "quickRecordFeatureAppealPoint3": "Tilgjengelig med Premium-abonnement",
   "creatingNewPillSheetFeatureAppealPoint1": "Automatisk bytte ved slutt på pilleark",

@@ -535,7 +535,7 @@
   "healthCareIntegrationFeatureAppealPoint1": "ซิงค์บันทึกประจำเดือนโดยอัตโนมัติ",
   "healthCareIntegrationFeatureAppealPoint2": "ซิงค์กับแอปสุขภาพ",
   "healthCareIntegrationFeatureAppealPoint3": "เชื่อมต่อกับ Apple Health",
-  "quickRecordFeatureAppealPoint1": "บันทึกการทานจากการแจ้งเตือน",
+  "quickRecordFeatureAppealPoint1": "เพิ่มบันทึกการทานยาผ่านปุ่มในการแจ้งเตือน",
   "quickRecordFeatureAppealPoint2": "เปิดแอปไม่ต้องเสร็จ",
   "quickRecordFeatureAppealPoint3": "ใช้งานได้ทันทีเมื่อเป็นสมาชิก Premium",
   "creatingNewPillSheetFeatureAppealPoint1": "สลับแผงยาคุมอัตโนมัติเมื่อแผงเดิมหมด",
