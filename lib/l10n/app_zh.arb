@@ -448,7 +448,7 @@
   "invalidEmailFormat": "请输入有效的电子邮箱地址",
   "emailCannotReceiveICloud": "※请使用非 @icloud.com 的邮箱地址，回复邮件经常被拦截。",
   "emailReceiveSettingNote": "请设置邮箱，以便接收来自 pilll.reminder.app@gmail.com 的邮件",
-  "inquiryContentRequired": "请输入咨询内容",
+  "inquiryContentRequired": "请填写咨询内容",
   "lifetimeSubscriptionWarning": "感谢您购买买断版。若您仍订阅月度或年度计划，请务必记得取消订阅。",
   "lifetimePurchaseNotice1": "购买“买断计划”不会自动取消您当前的月度或年度订阅。",
   "lifetimePurchaseNotice2": "点此管理",

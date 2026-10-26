@@ -448,7 +448,7 @@
   "invalidEmailFormat": "Įveskite galiojantį el. pašto adresą",
   "emailCannotReceiveICloud": "※Naudokite el. pašto adresą, kuris nesibaigia @icloud.com. Atsakymo laiškai dažnai blokuojami.",
   "emailReceiveSettingNote": "Prašome nustatyti el. paštą taip, kad gautumėte laiškus iš pilll.reminder.app@gmail.com",
-  "inquiryContentRequired": "Prašome įvesti užklausos turinį",
+  "inquiryContentRequired": "Įveskite savo užklausos tekstą",
   "lifetimeSubscriptionWarning": "Ačiū, kad įsigijote vienkartinį planą. Jei turite mėnesinę arba metinę prenumeratą, nepamirškite jos atšaukti.",
   "lifetimePurchaseNotice1": "Net jei įsigysite „vienkartinį“ planą, jūsų mėnesio ar metiniai prenumeratos planai nebus automatiškai atšaukti.",
   "lifetimePurchaseNotice2": "Tvarkyti prenumeratą",

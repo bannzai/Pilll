@@ -448,7 +448,7 @@
   "invalidEmailFormat": "Adj meg egy érvényes e-mail-címet",
   "emailCannotReceiveICloud": "※Kérjük, olyan e-mail-címet használj, amely nem @icloud.com végű. A válaszleveleket gyakran blokkolják.",
   "emailReceiveSettingNote": "Kérjük, állítsd be az e-mail-fiókodat úgy, hogy fogadhassa a pilll.reminder.app@gmail.com címről érkező üzeneteket",
-  "inquiryContentRequired": "Kérjük, adja meg az üzenet tartalmát",
+  "inquiryContentRequired": "Kérjük, írd be az üzeneted",
   "lifetimeSubscriptionWarning": "Köszönjük, hogy megvásárolta az egyszeri díjas csomagot. Ha havi vagy éves előfizetéssel rendelkezik, ne felejtse el lemondani azt.",
   "lifetimePurchaseNotice1": "・Az egyszeri megvásárlásos csomag megvásárlása esetén a havi vagy éves előfizetés nem kerül automatikusan lemondásra.",
   "lifetimePurchaseNotice2": "Előfizetés kezelése",

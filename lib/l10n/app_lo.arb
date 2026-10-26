@@ -448,7 +448,7 @@
   "invalidEmailFormat": "ກະລຸນາປ້ອນທີ່ຢູ່ອີເມວທີ່ຖືກຕ້ອງ",
   "emailCannotReceiveICloud": "※ກະລຸນາໃຊ້ທີ່ຢູ່ອີເມວທີ່ບໍ່ລົງທ້າຍດ້ວຍ @icloud.com. ອີເມວຕອບກັບມັກຖືກບລັອກ.",
   "emailReceiveSettingNote": "ກະລຸນາຕັ້ງຄ່າອີເມວເພື່ອໃຫ້ຮັບຂໍ້ຄວາມຈາກ pilll.reminder.app@gmail.com ໄດ້",
-  "inquiryContentRequired": "ກະລຸນາປ້ອນເນື້ອຫາການສອບຖາມ",
+  "inquiryContentRequired": "ກະລຸນາປ້ອນລາຍລະອຽດຄຳຖາມຂອງທ່ານ",
   "lifetimeSubscriptionWarning": "ຂອບໃຈທີ່ທ່ານໄດ້ຊື້ແຜນຄັ້ງດຽວ. ຖ້າທ່ານຍັງສະມາຊິກແຜນລາຄາປະຈໍາເດືອນ ຫຼື ປະຈໍາປີ, ກະລຸນາຢ່າລືມຍົກເລີກການສະມາຊິກ",
   "lifetimePurchaseNotice1": "・ເຖິງແມ່ນຊື້ \"ແຜນຊື້ຄັ້ງດຽວ\" ແລ້ວ, \"ແຜນລາຍເດືອນ/ລາຍປີ\" ກໍຈະບໍ່ຖືກຍົກເລີກໂດຍອັດຕະໂນມັດ",
   "lifetimePurchaseNotice2": "ທີ່ນີ້",

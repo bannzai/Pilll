@@ -448,7 +448,7 @@
   "invalidEmailFormat": "נא להזין כתובת אימייל תקינה",
   "emailCannotReceiveICloud": "※מומלץ להשתמש בכתובת אימייל שאינה מסתיימת ב־@icloud.com. הודעות התשובה נחסמות לעיתים קרובות.",
   "emailReceiveSettingNote": "כדאי לוודא שהגדרות הדוא״ל מאפשרות קבלת הודעות מ־pilll.reminder.app@gmail.com",
-  "inquiryContentRequired": "נא להזין את תוכן הפנייה",
+  "inquiryContentRequired": "יש להזין את תוכן הפנייה",
   "lifetimeSubscriptionWarning": "תודה על רכישת התוכנית החד-פעמית. אם אתם מנויים לתוכנית חודשית או שנתית, אל תשכחו לבטל את המנוי.",
   "lifetimePurchaseNotice1": "・גם לאחר רכישת \"תוכנית חד-פעמית\", \"תוכנית חודשית/שנתית\" לא תבוטל אוטומטית.",
   "lifetimePurchaseNotice2": "כאן",

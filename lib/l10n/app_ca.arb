@@ -448,7 +448,7 @@
   "invalidEmailFormat": "Introdueix una adreça electrònica vàlida, si us plau",
   "emailCannotReceiveICloud": "※Si us plau, fes servir una adreça electrònica que no acabi en @icloud.com. Els correus de resposta sovint es bloquegen.",
   "emailReceiveSettingNote": "Configura el correu perquè puguis rebre missatges de pilll.reminder.app@gmail.com",
-  "inquiryContentRequired": "Si us plau, introduïu el contingut de la consulta",
+  "inquiryContentRequired": "Escriu el contingut de la consulta, si us plau",
   "lifetimeSubscriptionWarning": "Gràcies per la vostra compra del pla de pagament únic. Si teniu una subscripció mensual o anual activa, recordeu cancel·lar-la.",
   "lifetimePurchaseNotice1": "・Si compreu el «Pla de compra única», el «Pla mensual/anual» no es cancel·larà automàticament.",
   "lifetimePurchaseNotice2": "aquí",

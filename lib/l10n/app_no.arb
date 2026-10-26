@@ -448,7 +448,7 @@
   "invalidEmailFormat": "Skriv inn en gyldig e-postadresse",
   "emailCannotReceiveICloud": "※Bruk gjerne en e-postadresse som ikke slutter på @icloud.com. E-postsvar blir ofte blokkert.",
   "emailReceiveSettingNote": "Sørg for at e-postinnstillingene dine tillater meldinger fra pilll.reminder.app@gmail.com",
-  "inquiryContentRequired": "Vennligst skriv inn din henvendelse",
+  "inquiryContentRequired": "Skriv inn meldingen din",
   "lifetimeSubscriptionWarning": "Takk for at du kjøpte engangspakken. Hvis du abonnerer på en månedlig eller årlig plan, ikke glem å avslutte abonnementet.",
   "lifetimePurchaseNotice1": "・Selv om du kjøper «engangskjøpsplanen», kanselleres ikke «måneds-/årsplanen» automatisk.",
   "lifetimePurchaseNotice2": "her",

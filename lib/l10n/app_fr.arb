@@ -448,7 +448,7 @@
   "invalidEmailFormat": "Veuillez saisir une adresse e-mail valide",
   "emailCannotReceiveICloud": "※Veuillez utiliser une adresse e-mail qui ne se termine pas par @icloud.com. Les e-mails de réponse sont souvent bloqués.",
   "emailReceiveSettingNote": "Veuillez vérifier que votre messagerie accepte les e-mails envoyés par pilll.reminder.app@gmail.com",
-  "inquiryContentRequired": "Veuillez saisir votre demande",
+  "inquiryContentRequired": "Veuillez saisir votre message",
   "lifetimeSubscriptionWarning": "Merci d'avoir acheté le plan à vie. Si vous êtes abonné à un forfait mensuel ou annuel, n'oubliez pas de l'annuler.",
   "lifetimePurchaseNotice1": "・L'achat du « Forfait à vie » n'annulera pas automatiquement votre « Forfait mensuel/annuel ».",
   "lifetimePurchaseNotice2": "Gérer ici",
