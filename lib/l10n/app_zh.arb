@@ -204,7 +204,7 @@
   "pushNotificationForTakingRecord": "📩 通过推送通知填写服药记录",
   "viewAndRecordTakingHistory": "🗂 记录和查看服药历史",
   "displayDateOnPillSheet": "📆 在药板上显示日期",
-  "autoRefillNewPillSheet": "📦 自动补充新药片包装",
+  "autoRefillNewPillSheet": "📦 自动添加新药板",
   "viewPastData": "👀 查看过去数据",
   "customizeHealthTags": "🏷 自定义体调标签",
   "hideAds": "🚫 屏蔽广告",

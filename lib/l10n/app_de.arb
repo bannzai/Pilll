@@ -204,7 +204,7 @@
   "pushNotificationForTakingRecord": "📩 Einnahmeprotokoll per Push-Mitteilung",
   "viewAndRecordTakingHistory": "🗂 Einnahmeverlauf erfassen und ansehen",
   "displayDateOnPillSheet": "📆 Datum auf dem Pillenblister anzeigen",
-  "autoRefillNewPillSheet": "📦 Automatische Nachfüllung neuer Pillenpackungen",
+  "autoRefillNewPillSheet": "📦 Neuen Pillenblister automatisch hinzufügen",
   "viewPastData": "👀 Vergangene Daten einsehen",
   "customizeHealthTags": "🏷 Symptom-Tags personalisieren",
   "hideAds": "🚫 Werbefrei",

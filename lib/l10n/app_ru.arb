@@ -204,7 +204,7 @@
   "pushNotificationForTakingRecord": "📩 журнал приёма таблеток из уведомления",
   "viewAndRecordTakingHistory": "🗂 Запись и просмотр истории приёма (история приёма)",
   "displayDateOnPillSheet": "📆 Показывать дату на блистере",
-  "autoRefillNewPillSheet": "📦 Автоматическое пополнение новых блистеров",
+  "autoRefillNewPillSheet": "📦 Автоматически добавить новый блистер",
   "viewPastData": "👀 Просмотр архивных данных",
   "customizeHealthTags": "🏷 Настройка тегов самочувствия",
   "hideAds": "🚫 Отключение рекламы",

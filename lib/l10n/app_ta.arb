@@ -204,7 +204,7 @@
   "pushNotificationForTakingRecord": "📩 புஷ் அறிவிப்பிலிருந்து மாத்திரை உட்கொண்ட பதிவு",
   "viewAndRecordTakingHistory": "🗂 மாத்திரை உட்கொண்ட வரலாறு: பதிவு செய்து பார்க்கவும்",
   "displayDateOnPillSheet": "📆 மாத்திரை அட்டையில் தேதியைக் காட்டுதல்",
-  "autoRefillNewPillSheet": "📦 புதிய மாத்திரை தாள் தானியங்கி நிரப்பு",
+  "autoRefillNewPillSheet": "📦 புதிய மாத்திரை அட்டை தானாகச் சேர்த்தல்",
   "viewPastData": "👀 கடந்த கால தரவு பார்வை",
   "customizeHealthTags": "🏷 உடல்நிலை குறிச்சொல் தனிப்படுத்தல்",
   "hideAds": "🚫 விளம்பர நீக்கம்",
