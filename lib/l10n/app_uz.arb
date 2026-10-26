@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Oldindan ko‘rish",
   "normal": "Odatdagi",
-  "missed": "Ichilmagan",
+  "missed": "Tabletka hali ichilmagan",
   "showsDate": "Sanani ko'rsatish",
   "showsPillNumber": "Raqamlarni ko'rsatish",
   "showsDescription": "Tushuntirishni ko'rsatish",

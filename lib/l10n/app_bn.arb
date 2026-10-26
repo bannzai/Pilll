@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "পূর্বরূপ",
   "normal": "স্বাভাবিক",
-  "missed": "সেবন ভুলে গেছে",
+  "missed": "পিলটি এখনও খাওয়া হয়নি",
   "showsDate": "তারিখ প্রদর্শন",
   "showsPillNumber": "সংখ্যা প্রদর্শন করুন",
   "showsDescription": "ব্যাখ্যা প্রদর্শন করুন",

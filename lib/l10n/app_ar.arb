@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "معاينة",
   "normal": "عادي",
-  "missed": "فائت",
+  "missed": "لم تُؤخذ الحبة بعد",
   "showsDate": "عرض التاريخ",
   "showsPillNumber": "إظهار الأرقام",
   "showsDescription": "إظهار النص التوضيحي",

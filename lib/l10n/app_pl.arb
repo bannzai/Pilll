@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Podgląd",
   "normal": "Normalnie",
-  "missed": "Pominięto",
+  "missed": "Tabletka jeszcze nieprzyjęta",
   "showsDate": "Wyświetlaj datę",
   "showsPillNumber": "Wyświetl numery",
   "showsDescription": "Wyświetl opisy",

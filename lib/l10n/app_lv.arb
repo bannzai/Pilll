@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Priekšskatījums",
   "normal": "Parasti",
-  "missed": "Izlaists",
+  "missed": "Tablete vēl nav lietota",
   "showsDate": "Parādīt datumu",
   "showsPillNumber": "Rādīt numurus",
   "showsDescription": "Rādīt aprakstu",

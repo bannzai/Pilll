@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Преглед",
   "normal": "Вообичаено",
-  "missed": "пропуштена доза",
+  "missed": "Таблета сè уште не е земена",
   "showsDate": "Прикажи датум",
   "showsPillNumber": "Прикажи броеви",
   "showsDescription": "Прикажи објаснувања",

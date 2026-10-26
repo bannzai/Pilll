@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Pratinjau",
   "normal": "Normal",
-  "missed": "lupa minum",
+  "missed": "Pil belum diminum",
   "showsDate": "Tampilkan tanggal",
   "showsPillNumber": "Tampilkan Nomor",
   "showsDescription": "Tampilkan penjelasan",

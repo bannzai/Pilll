@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Pratonton",
   "normal": "Biasa",
-  "missed": "Terlepas",
+  "missed": "Pil belum diambil",
   "showsDate": "Paparkan tarikh",
   "showsPillNumber": "Tunjukkan nombor",
   "showsDescription": "Paparkan keterangan",

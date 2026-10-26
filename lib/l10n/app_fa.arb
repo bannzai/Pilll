@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "پیش‌نمایش",
   "normal": "عادی",
-  "missed": "فراموش شده",
+  "missed": "قرص هنوز مصرف نشده",
   "showsDate": "نمایش تاریخ",
   "showsPillNumber": "نمایش شماره",
   "showsDescription": "نمایش متن توضیحی",

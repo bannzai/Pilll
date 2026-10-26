@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "အစမ်းကြည့်ရန်",
   "normal": "ပုံမှန်",
-  "missed": "သောက်မေ့ခြင်း",
+  "missed": "ဆေးလုံး မသောက်ရသေးပါ",
   "showsDate": "ရက်စွဲ ပြသ",
   "showsPillNumber": "နံပါတ်ပြရန်",
   "showsDescription": "ရှင်းလင်းချက်များ ပြပါ",

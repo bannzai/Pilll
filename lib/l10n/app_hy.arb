@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Նախադիտում",
   "normal": "Սովորական",
-  "missed": "Բաց թողում",
+  "missed": "Հաբը դեռ ընդունված չէ",
   "showsDate": "Ամսաթիվը ցուցադրել",
   "showsPillNumber": "Ցուցադրել համարները",
   "showsDescription": "Ցուցադրել բացատրական տեքստը",

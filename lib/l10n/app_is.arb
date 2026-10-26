@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Forskoðun",
   "normal": "Venjulegt",
-  "missed": "Gleymdi",
+  "missed": "Pillan hefur ekki verið tekin enn",
   "showsDate": "Sýna dagsetningu",
   "showsPillNumber": "Sýna númer",
   "showsDescription": "Sýna lýsingartexta",

@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Önizləmə",
   "normal": "Normal",
-  "missed": "Unudulmuş doza",
+  "missed": "Həb hələ qəbul edilməyib",
   "showsDate": "Tarixi göstər",
   "showsPillNumber": "Nömrələri göstər",
   "showsDescription": "Açıqlamaları göstər",

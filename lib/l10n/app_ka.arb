@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "წინასწარი ნახვა",
   "normal": "ჩვეულებრივი",
-  "missed": "გამოტოვებული",
+  "missed": "აბი ჯერ არ არის მიღებული",
   "showsDate": "თარიღის ჩვენება",
   "showsPillNumber": "ნომრების ჩვენება",
   "showsDescription": "განმარტებების ჩვენება",

@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Prévia",
   "normal": "Normal",
-  "missed": "Dose esquecida",
+  "missed": "Pílula ainda não tomada",
   "showsDate": "Mostrar data",
   "showsPillNumber": "Mostrar números",
   "showsDescription": "Mostrar texto explicativo",

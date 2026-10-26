@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Predogled",
   "normal": "Običajno",
-  "missed": "pozabljen odmerek",
+  "missed": "Tableta še ni bila vzeta",
   "showsDate": "Prikaži datum",
   "showsPillNumber": "Prikaz številk",
   "showsDescription": "Prikaži opise",

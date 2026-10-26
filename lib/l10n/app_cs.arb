@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Náhled",
   "normal": "Normální",
-  "missed": "Vynechaná dávka",
+  "missed": "Tableta ještě nebyla užita",
   "showsDate": "Zobrazit datum",
   "showsPillNumber": "Zobrazit čísla",
   "showsDescription": "Zobrazovat popis",

@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Попередній перегляд",
   "normal": "Звичайний",
-  "missed": "пропуск прийому",
+  "missed": "Пігулку ще не прийнято",
   "showsDate": "Відображати дату",
   "showsPillNumber": "Показувати номери",
   "showsDescription": "Показувати пояснення",

@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Peržiūra",
   "normal": "Įprasta",
-  "missed": "Praleista",
+  "missed": "Tabletė dar neišgerta",
   "showsDate": "Rodyti datą",
   "showsPillNumber": "Rodyti numerius",
   "showsDescription": "Rodyti aprašymus",

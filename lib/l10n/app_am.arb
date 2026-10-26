@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "ቅድመ እይታ",
   "normal": "መደበኛ",
-  "missed": "ያልተወሰደ",
+  "missed": "ክኒን ገና አልተወሰደም",
   "showsDate": "ቀን ማሳያ",
   "showsPillNumber": "ቁጥሮችን አሳይ",
   "showsDescription": "ማብራሪያዎችን አሳይ",

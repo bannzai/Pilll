@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "תצוגה מקדימה",
   "normal": "רגיל",
-  "missed": "פספוס מנה",
+  "missed": "הגלולה עדיין לא ניטלה",
   "showsDate": "הצגת תאריך",
   "showsPillNumber": "הצג מספרים",
   "showsDescription": "הצג הסברים",

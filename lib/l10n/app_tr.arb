@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Önizleme",
   "normal": "Normal",
-  "missed": "Kaçırılan",
+  "missed": "Hap henüz alınmadı",
   "showsDate": "Tarihi göster",
   "showsPillNumber": "Numaraları göster",
   "showsDescription": "Açıklamaları göster",

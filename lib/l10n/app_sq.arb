@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Pamje paraprake",
   "normal": "Normal",
-  "missed": "Doza e harruar",
+  "missed": "Pilula ende nuk është marrë",
   "showsDate": "Shfaq datën",
   "showsPillNumber": "Shfaq numrat",
   "showsDescription": "Shfaq shpjegimet",

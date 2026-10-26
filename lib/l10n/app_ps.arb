@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "مخکتنه",
   "normal": "عادي",
-  "missed": "هیر شوی",
+  "missed": "ګولۍ لا نه ده اخیستل شوې",
   "showsDate": "نیټه ښودل",
   "showsPillNumber": "شمېرې ښودل",
   "showsDescription": "تشریحات ښودل",

@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "পূৰ্বদৰ্শন",
   "normal": "স্বাভাৱিক",
-  "missed": "সেৱন পাহৰা",
+  "missed": "বৰি এতিয়াও খোৱা হোৱা নাই",
   "showsDate": "তাৰিখ দেখুৱাওক",
   "showsPillNumber": "সংখ্যা দেখুৱাওক",
   "showsDescription": "বিবৰণ প্ৰদৰ্শন কৰক",

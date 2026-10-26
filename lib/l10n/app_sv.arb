@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Förhandsvisning",
   "normal": "Normal",
-  "missed": "Missad",
+  "missed": "P-pillret är inte taget än",
   "showsDate": "Visa datum",
   "showsPillNumber": "Visa nummer",
   "showsDescription": "Visa beskrivningar",

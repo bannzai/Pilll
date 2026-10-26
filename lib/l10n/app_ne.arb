@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "पूर्वावलोकन",
   "normal": "सामान्य",
-  "missed": "छुटेको",
+  "missed": "चक्की अझै लिइएको छैन",
   "showsDate": "मिति देखाउनुहोस्",
   "showsPillNumber": "नम्बर देखाउने",
   "showsDescription": "विवरण देखाउनुहोस्",

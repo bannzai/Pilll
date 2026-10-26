@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Voorbeeld",
   "normal": "Normaal",
-  "missed": "gemist",
+  "missed": "Pil nog niet ingenomen",
   "showsDate": "Datum weergeven",
   "showsPillNumber": "Nummers weergeven",
   "showsDescription": "Beschrijvingen weergeven",

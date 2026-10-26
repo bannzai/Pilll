@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Előnézet",
   "normal": "Normál",
-  "missed": "Elmulasztott bevétel",
+  "missed": "A tabletta még nincs beszedve",
   "showsDate": "Dátum megjelenítése",
   "showsPillNumber": "Számok megjelenítése",
   "showsDescription": "Magyarázó szöveg megjelenítése",

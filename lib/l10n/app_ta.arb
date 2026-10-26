@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "முன்னோட்டம்",
   "normal": "வழக்கமானது",
-  "missed": "தவறவிட்டது",
+  "missed": "மாத்திரை இன்னும் எடுத்துக்கொள்ளப்படவில்லை",
   "showsDate": "தேதி காட்சி",
   "showsPillNumber": "எண்களைக் காண்பி",
   "showsDescription": "விளக்க உரையைக் காட்டு",

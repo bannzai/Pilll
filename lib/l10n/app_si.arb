@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "පෙරදසුන",
   "normal": "සාමාන්‍ය",
-  "missed": "අමතක කළ මාත්‍රාව",
+  "missed": "පෙත්ත තවම ගෙන නැහැ",
   "showsDate": "දිනය පෙන්වන්න",
   "showsPillNumber": "අංක පෙන්වන්න",
   "showsDescription": "විස්තර පෙන්වන්න",

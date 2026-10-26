@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "预览",
   "normal": "正常",
-  "missed": "漏服",
+  "missed": "还未服药",
   "showsDate": "显示日期",
   "showsPillNumber": "显示编号",
   "showsDescription": "显示说明文字",

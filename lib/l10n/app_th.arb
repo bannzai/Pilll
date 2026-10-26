@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "ตัวอย่าง",
   "normal": "ปกติ",
-  "missed": "ลืมกิน",
+  "missed": "ยังไม่ได้ทานยา",
   "showsDate": "แสดงวันที่",
   "showsPillNumber": "แสดงหมายเลข",
   "showsDescription": "แสดงคำอธิบาย",

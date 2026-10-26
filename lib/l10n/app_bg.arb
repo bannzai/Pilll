@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Преглед",
   "normal": "Нормално",
-  "missed": "пропуснат прием",
+  "missed": "Хапчето още не е взето",
   "showsDate": "Показване на дата",
   "showsPillNumber": "Показване на номерата",
   "showsDescription": "Показвай описанията",

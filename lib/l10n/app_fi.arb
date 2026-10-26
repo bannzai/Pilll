@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Esikatselu",
   "normal": "Normaali",
-  "missed": "Unohdettu",
+  "missed": "Pilleri vielä ottamatta",
   "showsDate": "Näytä päivämäärä",
   "showsPillNumber": "Näytä numerot",
   "showsDescription": "Näytä selitykset",

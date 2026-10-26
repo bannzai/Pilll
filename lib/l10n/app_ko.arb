@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "미리보기",
   "normal": "일반",
-  "missed": "복용 누락",
+  "missed": "아직 복용하지 않았어요",
   "showsDate": "날짜 표시",
   "showsPillNumber": "번호 표시",
   "showsDescription": "설명문 표시",

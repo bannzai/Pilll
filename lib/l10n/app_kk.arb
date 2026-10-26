@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Алдын ала қарау",
   "normal": "Қалыпты",
-  "missed": "Ұмытылған дәрі",
+  "missed": "Таблетка әлі қабылданбаған",
   "showsDate": "Күнді көрсету",
   "showsPillNumber": "Нөмірлерді көрсету",
   "showsDescription": "Түсіндірме мәтінді көрсету",

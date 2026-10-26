@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "ເບິ່ງຕົວຢ່າງ",
   "normal": "ປົກກະຕິ",
-  "missed": "ລືມກິນຢາ",
+  "missed": "ຍັງບໍ່ໄດ້ກິນຢາເມັດ",
   "showsDate": "ສະແດງວັນທີ",
   "showsPillNumber": "ສະແດງເລກ",
   "showsDescription": "ສະແດງຄຳອະທິບາຍ",

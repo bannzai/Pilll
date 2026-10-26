@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Vista previa",
   "normal": "Normal",
-  "missed": "Olvidado",
+  "missed": "Píldora aún no tomada",
   "showsDate": "Mostrar fecha",
   "showsPillNumber": "Mostrar números",
   "showsDescription": "Mostrar descripciones",

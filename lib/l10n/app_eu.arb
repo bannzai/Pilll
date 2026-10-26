@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Aurrebista",
   "normal": "Ohikoa",
-  "missed": "Ahaztua",
+  "missed": "Pilula oraindik hartu gabe",
   "showsDate": "Data erakutsi",
   "showsPillNumber": "Zenbakiak erakutsi",
   "showsDescription": "Azalpenak erakutsi",

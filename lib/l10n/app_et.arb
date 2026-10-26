@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Eelvaade",
   "normal": "Tavaline",
-  "missed": "Võtmata",
+  "missed": "Pill on veel võtmata",
   "showsDate": "Kuva kuupäev",
   "showsPillNumber": "Näita numbreid",
   "showsDescription": "Näita selgitusteksti",

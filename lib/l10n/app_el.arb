@@ -230,7 +230,7 @@
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Προεπισκόπηση",
   "normal": "Κανονικό",
-  "missed": "Παραλείφθηκε",
+  "missed": "Το χάπι δεν έχει ληφθεί ακόμα",
   "showsDate": "Εμφάνιση ημερομηνίας",
   "showsPillNumber": "Εμφάνιση αριθμών",
   "showsDescription": "Εμφάνιση περιγραφών",
