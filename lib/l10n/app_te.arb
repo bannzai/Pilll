@@ -546,7 +546,7 @@
   "alarmKitFeatureAppealPoint3": "iOS 26 లేదా ఆ తర్వాతి వెర్షన్ · సెట్టింగ్‌ల ట్యాబ్‌లో ఆన్ చేయండి",
   "todayPillNumberFeatureAppealPoint1": "మాత్రల సంఖ్యలను సరిపోల్చే ఉచిత సదుపాయం",
   "todayPillNumberFeatureAppealPoint2": "సెట్టింగ్‌ల ట్యాబ్‌లో దీన్ని మార్చుకోవచ్చు",
-  "todayPillNumberFeatureAppealPoint3": "హోమ్‌లోని సంఖ్యను తాకితే కూడా తెరవవచ్చు",
+  "todayPillNumberFeatureAppealPoint3": "హోమ్ స్క్రీన్‌పై ఉన్న సంఖ్యను నొక్కడం ద్వారా కూడా దీన్ని తెరవవచ్చు",
   "restDurationFeatureAppealPoint1": "ఉచితంగా ఉపయోగించుకునే విరామ రికార్డు",
   "restDurationFeatureAppealPoint2": "పిల్ షీట్‌పై ఉన్న పై కుడి గేర్ చిహ్నం ద్వారా ప్రారంభించండి",
   "restDurationFeatureAppealPoint3": "మాసికాన్ని సవరించడం లేదా పునఃప్రారంభించడం సులభం",
