@@ -432,7 +432,7 @@
   "goToInitialSettingAndReloginIfNeededMessage": "Сиз баштапкы жөндөөлөргө кайтасыз. Кирүү керек болсо, баштапкы жөндөөлөр экранынын төмөн жагынан кириңиз.",
   "deleteAccount": "Каттоо эсебин өчүрүү",
   "logoutCompleted": "Сиз каттоо эсебиңизден чыктыңыз",
-  "specialDiscountPriceNow": "Атайын баа менен премиум планды алыңыз!",
+  "specialDiscountPriceNow": "Премиум планды атайын баада алыңыз!",
   "inquiryTypeLabel": "Кайрылуу темасы",
   "bugReport": "Мүчүлүштүк тууралуу билдирүү",
   "featureRequest": "Пикирлер жана сунуштар",

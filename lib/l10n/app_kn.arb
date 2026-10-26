@@ -432,7 +432,7 @@
   "goToInitialSettingAndReloginIfNeededMessage": "ನೀವು ಆರಂಭಿಕ ಸೆಟಪ್‌ಗೆ ಹಿಂತಿರುಗುತ್ತೀರಿ. ಲಾಗ್ ಇನ್ ಮಾಡುವ ಅಗತ್ಯವಿದ್ದರೆ, ದಯವಿಟ್ಟು ಆರಂಭಿಕ ಸೆಟಪ್ ಪರದೆಯ ಕೆಳಭಾಗದಿಂದ ಲಾಗ್ ಇನ್ ಮಾಡಿ.",
   "deleteAccount": "ಖಾತೆಯನ್ನು ಅಳಿಸಿ",
   "logoutCompleted": "ನೀವು ಖಾತೆಯಿಂದ ಹೊರಬಂದಿದ್ದೀರಿ",
-  "specialDiscountPriceNow": "ವಿಶೇಷ ಬೆಲೆಯಲ್ಲಿ ಪ್ರೀಮಿಯಂ ಪ್ಲಾನ್ ಪಡೆಯಿರಿ!",
+  "specialDiscountPriceNow": "ಪ್ರೀಮಿಯಂ ಯೋಜನೆಯನ್ನು ವಿಶೇಷ ಬೆಲೆಯಲ್ಲಿ ಪಡೆಯಿರಿ!",
   "inquiryTypeLabel": "ವಿಚಾರಣೆಯ ಪ್ರಕಾರ",
   "bugReport": "ದೋಷ ವರದಿ",
   "featureRequest": "ಅಭಿಪ್ರಾಯಗಳು ಮತ್ತು ಸಲಹೆಗಳು",

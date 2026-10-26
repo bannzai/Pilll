@@ -432,7 +432,7 @@
   "goToInitialSettingAndReloginIfNeededMessage": "Þú ferð aftur í upphafsstillingarnar. Ef þú þarft að skrá þig inn geturðu gert það neðst á skjánum fyrir upphafsstillingar.",
   "deleteAccount": "Eyða aðgangi",
   "logoutCompleted": "Þú hefur skráð þig út",
-  "specialDiscountPriceNow": "Fáðu úrvals áætlun á tilboðsverði!",
+  "specialDiscountPriceNow": "Fáðu Premium-áskrift á sérstöku verði!",
   "inquiryTypeLabel": "Tegund fyrirspurnar",
   "bugReport": "Villuskýrsla",
   "featureRequest": "Ábendingar og óskir",

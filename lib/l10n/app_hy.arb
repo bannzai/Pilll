@@ -432,7 +432,7 @@
   "goToInitialSettingAndReloginIfNeededMessage": "Դուք կվերադառնաք սկզբնական կարգավորման էջ։ Եթե անհրաժեշտ լինի մուտք գործել, խնդրում ենք դա անել էջի ներքևի մասից։",
   "deleteAccount": "Հաշվի ջնջում",
   "logoutCompleted": "Դուք դուրս եք եկել Ձեր հաշվից",
-  "specialDiscountPriceNow": "Ստացիր պրեմիում ծրագիրը հատուկ գնով:",
+  "specialDiscountPriceNow": "Ստացեք պրեմիում պլանը հատուկ գնով!",
   "inquiryTypeLabel": "Հարցման տեսակ",
   "bugReport": "Սխալների հաղորդում",
   "featureRequest": "Կարծիքներ և առաջարկություններ",

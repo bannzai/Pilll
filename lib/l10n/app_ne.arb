@@ -432,7 +432,7 @@
   "goToInitialSettingAndReloginIfNeededMessage": "तपाईं प्रारम्भिक सेटअपमा फर्कनुहुनेछ। लग इन गर्न आवश्यक भएमा, कृपया प्रारम्भिक सेटअप स्क्रिनको तलबाट लग इन गर्नुहोस्।",
   "deleteAccount": "खाता मेटाउनुहोस्",
   "logoutCompleted": "तपाईं खाताबाट बाहिरिनुभएको छ",
-  "specialDiscountPriceNow": "विशेष छुटमा प्रिमियम प्लान पाउनुहोस्！",
+  "specialDiscountPriceNow": "प्रिमियम योजना विशेष मूल्यमा लिनुहोस्!",
   "inquiryTypeLabel": "सोधपुछ विषय",
   "bugReport": "बग रिपोर्ट",
   "featureRequest": "राय र सुझाव",

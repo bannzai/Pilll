@@ -432,7 +432,7 @@
   "goToInitialSettingAndReloginIfNeededMessage": "আপনি প্রাথমিক সেটআপে ফিরে যাবেন। লগ ইন করতে হলে, অনুগ্রহ করে প্রাথমিক সেটআপ স্ক্রিনের নিচের অংশ থেকে লগ ইন করুন।",
   "deleteAccount": "অ্যাকাউন্ট মুছে ফেলুন",
   "logoutCompleted": "আপনি লগ আউট করেছেন",
-  "specialDiscountPriceNow": "বিশেষ দামে প্রিমিয়াম প্ল্যান পান!",
+  "specialDiscountPriceNow": "বিশেষ দামে প্রিমিয়াম প্ল্যান নিন!",
   "inquiryTypeLabel": "যোগাযোগের ধরন",
   "bugReport": "ত্রুটি রিপোর্ট",
   "featureRequest": "মতামত ও অনুরোধ",

@@ -432,7 +432,7 @@
   "goToInitialSettingAndReloginIfNeededMessage": "Та анхны тохиргоо руу буцна. Нэвтрэх шаардлагатай бол анхны тохиргооны дэлгэцийн доод хэсгээс нэвтэрнэ үү.",
   "deleteAccount": "Бүртгэл устгах",
   "logoutCompleted": "Та бүртгэлээсээ гарсан байна",
-  "specialDiscountPriceNow": "Тусгай үнээр премиум төлөвлөгөө авах!",
+  "specialDiscountPriceNow": "Премиум багцыг тусгай үнээр аваарай!",
   "inquiryTypeLabel": "Хандалтын төрөл",
   "bugReport": "Согог мэдээлэх",
   "featureRequest": "Санал, хүсэлт",

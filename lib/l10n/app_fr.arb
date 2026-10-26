@@ -432,7 +432,7 @@
   "goToInitialSettingAndReloginIfNeededMessage": "Vous allez revenir à la configuration initiale. Si vous devez vous connecter, vous pourrez le faire en bas de cet écran.",
   "deleteAccount": "Supprimer le compte",
   "logoutCompleted": "Vous êtes déconnecté de votre compte",
-  "specialDiscountPriceNow": "Obtenez Premium à un prix spécial !",
+  "specialDiscountPriceNow": "Profitez du forfait Premium à prix spécial !",
   "inquiryTypeLabel": "Type de demande",
   "bugReport": "Rapport de bug",
   "featureRequest": "Commentaires et suggestions",

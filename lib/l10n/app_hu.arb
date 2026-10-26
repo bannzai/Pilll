@@ -432,7 +432,7 @@
   "goToInitialSettingAndReloginIfNeededMessage": "Visszatérsz a kezdeti beállításokhoz. Ha be kell jelentkezned, ezt a beállítási képernyő alján teheted meg.",
   "deleteAccount": "Fiók törlése",
   "logoutCompleted": "Kijelentkeztél",
-  "specialDiscountPriceNow": "Szerezd meg a Prémium csomagot különleges áron!",
+  "specialDiscountPriceNow": "Szerezd meg a prémium csomagot különleges áron!",
   "inquiryTypeLabel": "Megkeresés témája",
   "bugReport": "Hibajelentés",
   "featureRequest": "Vélemények és javaslatok",

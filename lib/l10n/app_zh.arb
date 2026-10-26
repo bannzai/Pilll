@@ -432,7 +432,7 @@
   "goToInitialSettingAndReloginIfNeededMessage": "即将返回初始设置页面。如果需要登录，请在页面底部登录。",
   "deleteAccount": "删除账号",
   "logoutCompleted": "已退出登录",
-  "specialDiscountPriceNow": "特价抢购高级计划！",
+  "specialDiscountPriceNow": "以特惠价格开通高级方案！",
   "inquiryTypeLabel": "咨询类型",
   "bugReport": "故障报告",
   "featureRequest": "意见和建议",

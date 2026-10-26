@@ -432,7 +432,7 @@
   "goToInitialSettingAndReloginIfNeededMessage": "İlkin quraşdırmaya qayıdacaqsınız. Daxil olmağınız lazım olsa, zəhmət olmasa ilkin quraşdırma ekranının aşağı hissəsindən daxil olun.",
   "deleteAccount": "Hesabı silmək",
   "logoutCompleted": "Hesabınızdan çıxış etdiniz",
-  "specialDiscountPriceNow": "Xüsusi qiymətə premium planı əldə edin!",
+  "specialDiscountPriceNow": "Premium planı xüsusi qiymətə əldə edin!",
   "inquiryTypeLabel": "Müraciət mövzusu",
   "bugReport": "Xəta bildirişi",
   "featureRequest": "Rəylər və təkliflər",

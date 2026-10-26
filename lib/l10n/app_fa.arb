@@ -432,7 +432,7 @@
   "goToInitialSettingAndReloginIfNeededMessage": "به تنظیمات اولیه برمی‌گردید. اگر لازم بود وارد حساب کاربری شوید، لطفاً از پایین صفحهٔ تنظیمات اولیه وارد شوید.",
   "deleteAccount": "حذف حساب کاربری",
   "logoutCompleted": "از حساب خود خارج شدید",
-  "specialDiscountPriceNow": "پلن پریمیوم را با قیمت ویژه دریافت کنید!",
+  "specialDiscountPriceNow": "طرح پریمیوم را با قیمت ویژه دریافت کنید!",
   "inquiryTypeLabel": "موضوع تماس",
   "bugReport": "گزارش اشکال",
   "featureRequest": "نظرات و پیشنهادات",

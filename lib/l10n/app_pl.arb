@@ -432,7 +432,7 @@
   "goToInitialSettingAndReloginIfNeededMessage": "Wrócisz do konfiguracji początkowej. Jeśli trzeba będzie się zalogować, możesz to zrobić u dołu ekranu konfiguracji.",
   "deleteAccount": "Usuń konto",
   "logoutCompleted": "Wylogowano",
-  "specialDiscountPriceNow": "Zdobądź plan Premium w specjalnej cenie!",
+  "specialDiscountPriceNow": "Wybierz plan premium w specjalnej cenie!",
   "inquiryTypeLabel": "Kategoria zapytania",
   "bugReport": "Zgłoszenie błędu",
   "featureRequest": "Opinie i sugestie",

@@ -432,7 +432,7 @@
   "goToInitialSettingAndReloginIfNeededMessage": "ຈະກັບໄປຫາການຕັ້ງຄ່າເບື້ອງຕົ້ນ. ຖ້າຕ້ອງເຂົ້າສູ່ບັນຊີ, ກະລຸນາເຂົ້າຈາກດ້ານລຸ່ມຂອງໜ້າການຕັ້ງຄ່າເບື້ອງຕົ້ນ.",
   "deleteAccount": "ລຶບບັນຊີ",
   "logoutCompleted": "ທ່ານໄດ້ອອກຈາກບັນຊີແລ້ວ",
-  "specialDiscountPriceNow": "ໄດ້ຮັບແຜນພຣີເມຍມດ້ວຍລາຄາພິເສດ！",
+  "specialDiscountPriceNow": "ຮັບແພັກເກດ Premium ໃນລາຄາພິເສດ!",
   "inquiryTypeLabel": "ປະເພດການສອບຖາມ",
   "bugReport": "ລາຍງານບັນຫາ",
   "featureRequest": "ຄຳຄິດເຫັນ ແລະ ຄຳແນະນຳ",

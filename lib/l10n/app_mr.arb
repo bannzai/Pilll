@@ -432,7 +432,7 @@
   "goToInitialSettingAndReloginIfNeededMessage": "तुम्ही सुरुवातीच्या सेटअपवर परत जाल. लॉग इन करणे आवश्यक असल्यास, कृपया सुरुवातीच्या सेटअप स्क्रीनच्या तळाशी जाऊन लॉग इन करा.",
   "deleteAccount": "खाते हटवा",
   "logoutCompleted": "तुम्ही खात्यातून बाहेर पडलात",
-  "specialDiscountPriceNow": "विशेष किंमतीत प्रीमियम प्लान मिळवा!",
+  "specialDiscountPriceNow": "प्रीमियम प्लॅन खास किमतीत मिळवा!",
   "inquiryTypeLabel": "चौकशी प्रकार",
   "bugReport": "दोष अहवाल",
   "featureRequest": "सूचना आणि विनंती",

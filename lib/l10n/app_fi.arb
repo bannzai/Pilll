@@ -432,7 +432,7 @@
   "goToInitialSettingAndReloginIfNeededMessage": "Palaat alkuasetuksiin. Jos sinun täytyy kirjautua sisään, voit tehdä sen alkuasetusten näytön alareunasta.",
   "deleteAccount": "Poista tili",
   "logoutCompleted": "Olet kirjautunut ulos",
-  "specialDiscountPriceNow": "Hanki Premium-paketti erikoishintaan!",
+  "specialDiscountPriceNow": "Hanki Premium-tilaus erikoishintaan!",
   "inquiryTypeLabel": "Yhteydenoton aihe",
   "bugReport": "Virheilmoitus",
   "featureRequest": "Palaute ja ehdotukset",

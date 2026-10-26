@@ -432,7 +432,7 @@
   "goToInitialSettingAndReloginIfNeededMessage": "Ще се върнете към началната настройка. Ако е нужно да влезете в профила си, можете да го направите в долната част на екрана.",
   "deleteAccount": "Изтриване на акаунта",
   "logoutCompleted": "Излязохте от профила си",
-  "specialDiscountPriceNow": "Получи премиум плана на специална цена!",
+  "specialDiscountPriceNow": "Вземете план премиум на специална цена!",
   "inquiryTypeLabel": "Тема на запитването",
   "bugReport": "Докладване на грешка",
   "featureRequest": "Мнения и предложения",

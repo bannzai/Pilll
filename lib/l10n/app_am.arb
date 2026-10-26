@@ -432,7 +432,7 @@
   "goToInitialSettingAndReloginIfNeededMessage": "ወደ መጀመሪያ ማዋቀሪያ ይመለሳሉ። መግባት ካስፈለገዎት፣ እባክዎ በመጀመሪያ ማዋቀሪያ ገጽ ታች በኩል ይግቡ።",
   "deleteAccount": "መለያ መሰረዝ",
   "logoutCompleted": "ከመለያዎ ወጥተዋል",
-  "specialDiscountPriceNow": "በልዩ ዋጋ ፕሪሚየም እቅዱን ያግኙ！",
+  "specialDiscountPriceNow": "የፕሪሚየም እቅድን በልዩ ዋጋ ያግኙ!",
   "inquiryTypeLabel": "የጥያቄ አይነት",
   "bugReport": "ስህተት ሪፖርት",
   "featureRequest": "አስተያየት እና ጥያቄ",

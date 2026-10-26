@@ -432,7 +432,7 @@
   "goToInitialSettingAndReloginIfNeededMessage": "თქვენ დაბრუნდებით საწყის პარამეტრებთან. თუ ანგარიშში შესვლა დაგჭირდებათ, ამის გაკეთება საწყისი პარამეტრების ეკრანის ქვედა ნაწილიდან შეგიძლიათ.",
   "deleteAccount": "ანგარიშის წაშლა",
   "logoutCompleted": "თქვენ გახვედით ანგარიშიდან",
-  "specialDiscountPriceNow": "სპეციალურ ფასად მიიღეთ პრემიუმ პლანი!",
+  "specialDiscountPriceNow": "მიიღეთ პრემიუმ გეგმა სპეციალურ ფასად!",
   "inquiryTypeLabel": "მიმართვის ტიპი",
   "bugReport": "ხარვეზის შეტყობინება",
   "featureRequest": "გამოხმაურება და წინადადებები",

@@ -432,7 +432,7 @@
   "goToInitialSettingAndReloginIfNeededMessage": "Tornaràs a la configuració inicial. Si has d’iniciar sessió, pots fer-ho a la part inferior de la pantalla de configuració inicial.",
   "deleteAccount": "Eliminar el compte",
   "logoutCompleted": "Has tancat la sessió",
-  "specialDiscountPriceNow": "Aconsegueix el pla premium a preu especial!",
+  "specialDiscountPriceNow": "Aconsegueix el pla Premium a un preu especial!",
   "inquiryTypeLabel": "Tipus de consulta",
   "bugReport": "Informe d'errors",
   "featureRequest": "Opinions i suggeriments",
