@@ -394,7 +394,7 @@
   "alreadyTaken": "Tabletka ichilgan",
   "startPauseTaking": "Tabletka qabul qilishdagi tanaffusni boshlang",
   "startedPauseTaking": "Tabletkalarni qabul qilishdagi tanaffus boshlandi",
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}-chi",
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}-raqamli tabletka",
   "startFromNumber": "Raqamdan boshlash",
   "add": "Qo'shish",
   "addPillSheet": "Dori paketini qo'shish",

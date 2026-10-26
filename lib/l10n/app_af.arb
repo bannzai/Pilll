@@ -394,7 +394,7 @@
   "alreadyTaken": "Reeds geneem",
   "startPauseTaking": "Begin jou pilpouse",
   "startedPauseTaking": "Jou pilpouse het begin",
-  "sequentialLastTakenPlusOnePillNumber": "Pil {pillSheetGroupSequentialLastTakenPillNumber}",
+  "sequentialLastTakenPlusOnePillNumber": "nr. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Start vanaf",
   "add": "Voeg by",
   "addPillSheet": "Voeg pilpakket by",

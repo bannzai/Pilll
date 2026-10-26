@@ -394,7 +394,7 @@
   "alreadyTaken": "복용했어요",
   "startPauseTaking": "피임약 휴약 시작하기",
   "startedPauseTaking": "피임약 복용 휴약 기간이 시작됐어요",
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}번째",
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}번 알약",
   "startFromNumber": "번부터 시작",
   "add": "추가",
   "addPillSheet": "알약 시트 추가",

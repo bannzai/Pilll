@@ -394,7 +394,7 @@
   "alreadyTaken": "قرص مصرف شده",
   "startPauseTaking": "شروع دورهٔ وقفه در مصرف قرص",
   "startedPauseTaking": "وقفه در مصرف قرص آغاز شد",
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}ام",
+  "sequentialLastTakenPlusOnePillNumber": "قرص شمارهٔ {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "از شماره شروع",
   "add": "افزودن",
   "addPillSheet": "افزودن بسته قرص",

@@ -394,7 +394,7 @@
   "alreadyTaken": "ഗുളിക കഴിച്ചു",
   "startPauseTaking": "ഗുളിക കഴിക്കുന്നതിൽ ഇടവേള തുടങ്ങൂ",
   "startedPauseTaking": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേള ആരംഭിച്ചു",
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}ാം",
+  "sequentialLastTakenPlusOnePillNumber": "ഗുളിക നമ്പർ {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "നമ്പർ മുതൽ ആരംഭിക്കുക",
   "add": "ചേർക്കുക",
   "addPillSheet": "ഗുളിക ഷീറ്റ് ചേർക്കുക",

@@ -394,7 +394,7 @@
   "alreadyTaken": "Tableta vzeta",
   "startPauseTaking": "Začnite premor pri jemanju tablet",
   "startedPauseTaking": "Začel se je premor pri jemanju tablet",
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}.",
+  "sequentialLastTakenPlusOnePillNumber": "tableta št. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Začni od številke",
   "add": "Dodaj",
   "addPillSheet": "Dodaj list tablet",

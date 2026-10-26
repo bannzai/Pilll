@@ -394,7 +394,7 @@
   "alreadyTaken": "Pilula është marrë",
   "startPauseTaking": "Filloni pushimin nga marrja e pilulave",
   "startedPauseTaking": "Ka filluar pushimi nga marrja e pilulave",
-  "sequentialLastTakenPlusOnePillNumber": "Nr. {pillSheetGroupSequentialLastTakenPillNumber}",
+  "sequentialLastTakenPlusOnePillNumber": "pilula nr. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Nis nga numri",
   "add": "Shto",
   "addPillSheet": "Shto fletë pilule",

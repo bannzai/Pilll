@@ -394,7 +394,7 @@
   "alreadyTaken": "Wedi cymryd y bilsen",
   "startPauseTaking": "Dechrau seibiant o gymryd y bilsen",
   "startedPauseTaking": "Mae'r seibiant rhag cymryd y bilsen wedi dechrau",
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}ed",
+  "sequentialLastTakenPlusOnePillNumber": "pilsen rhif {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Cychwyn o rif",
   "add": "Ychwanegu",
   "addPillSheet": "Ychwanegu Taflen Biliau",

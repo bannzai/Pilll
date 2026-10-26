@@ -394,7 +394,7 @@
   "alreadyTaken": "Pille gnoh",
   "startPauseTaking": "Pillepause aafange",
   "startedPauseTaking": "D Pillenpause hät aagfange",
-  "sequentialLastTakenPlusOnePillNumber": "Nr. {pillSheetGroupSequentialLastTakenPillNumber}",
+  "sequentialLastTakenPlusOnePillNumber": "Pille Nr. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Ab Nummere",
   "add": "Hinzufüege",
   "addPillSheet": "Pilleblischter hinzuefüege",

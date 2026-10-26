@@ -394,7 +394,7 @@
   "alreadyTaken": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳಲಾಗಿದೆ",
   "startPauseTaking": "ಮಾತ್ರೆ ಸೇವನೆಯಲ್ಲಿ ವಿರಾಮ ಆರಂಭಿಸಿ",
   "startedPauseTaking": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ವಿರಾಮ ಆರಂಭವಾಗಿದೆ",
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}ನೇ",
+  "sequentialLastTakenPlusOnePillNumber": "ಮಾತ್ರೆ ಸಂಖ್ಯೆ {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "ನಂಬರ್‌ನಿಂದ ಆರಂಭ",
   "add": "ಸೇರಿಸು",
   "addPillSheet": "ಮಾತ್ರೆ ಶೀಟ್ ಸೇರಿಸಿ",

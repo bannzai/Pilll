@@ -394,7 +394,7 @@
   "alreadyTaken": "Tabletta bevéve",
   "startPauseTaking": "Tablettaszedési szünet indítása",
   "startedPauseTaking": "Elkezdődött a tablettaszedési szünet",
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}.",
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}. tabletta",
   "startFromNumber": "Kezdőszám",
   "add": "Hozzáadás",
   "addPillSheet": "Tablettás lemez hozzáadása",

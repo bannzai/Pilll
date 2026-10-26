@@ -394,7 +394,7 @@
   "alreadyTaken": "गोळी घेतली आहे",
   "startPauseTaking": "गोळ्या घेण्याचा विराम सुरू करा",
   "startedPauseTaking": "गोळी घेण्याचा विराम सुरू झाला आहे",
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} नंबर",
+  "sequentialLastTakenPlusOnePillNumber": "गोळी क्रमांक {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "क्रमांकापासून सुरुवात",
   "add": "जोडा",
   "addPillSheet": "गोळी-शीट जोडा",

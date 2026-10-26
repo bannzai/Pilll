@@ -394,7 +394,7 @@
   "alreadyTaken": "Hap alındı",
   "startPauseTaking": "Hap kullanımına ara verin",
   "startedPauseTaking": "Hap kullanımına ara verme dönemi başladı",
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}.",
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} numaralı hap",
   "startFromNumber": "numaradan başla",
   "add": "Ekle",
   "addPillSheet": "Hap Paketi Ekle",

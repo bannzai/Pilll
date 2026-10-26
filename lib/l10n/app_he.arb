@@ -394,7 +394,7 @@
   "alreadyTaken": "הגלולה ניטלה",
   "startPauseTaking": "להתחיל הפסקה בנטילת הגלולה",
   "startedPauseTaking": "החלה ההפסקה בנטילת הגלולה",
-  "sequentialLastTakenPlusOnePillNumber": "מס' {pillSheetGroupSequentialLastTakenPillNumber}",
+  "sequentialLastTakenPlusOnePillNumber": "גלולה מספר {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "התחלה ממספר",
   "add": "הוסף",
   "addPillSheet": "הוסף גיליון כדורים",

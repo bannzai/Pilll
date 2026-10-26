@@ -394,7 +394,7 @@
   "alreadyTaken": "Хапчето е взето",
   "startPauseTaking": "Започнете почивка от хапчетата",
   "startedPauseTaking": "Почивката от приема на хапчета започна",
-  "sequentialLastTakenPlusOnePillNumber": "№{pillSheetGroupSequentialLastTakenPillNumber}",
+  "sequentialLastTakenPlusOnePillNumber": "хапче № {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Започни от номер",
   "add": "Добави",
   "addPillSheet": "Добави опаковка",

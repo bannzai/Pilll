@@ -394,7 +394,7 @@
   "alreadyTaken": "Pil sudah diminum",
   "startPauseTaking": "Mulai jeda minum pil",
   "startedPauseTaking": "Jeda minum pil dimulai",
-  "sequentialLastTakenPlusOnePillNumber": "nomor {pillSheetGroupSequentialLastTakenPillNumber}",
+  "sequentialLastTakenPlusOnePillNumber": "Pil nomor {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Mulai dari nomor",
   "add": "Tambah",
   "addPillSheet": "Tambah Strip Pil",

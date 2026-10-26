@@ -394,7 +394,7 @@
   "alreadyTaken": "Հաբն ընդունված է",
   "startPauseTaking": "Սկսեք հաբերի ընդունման ընդմիջումը",
   "startedPauseTaking": "Հաբերի ընդունման ընդմիջումը սկսվել է",
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} համար",
+  "sequentialLastTakenPlusOnePillNumber": "հաբ № {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Սկսել համարից",
   "add": "Ավելացնել",
   "addPillSheet": "Հապակի փաթեթ ավելացնել",

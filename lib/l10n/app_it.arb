@@ -394,7 +394,7 @@
   "alreadyTaken": "Pillola assunta",
   "startPauseTaking": "Inizia la pausa dalla pillola",
   "startedPauseTaking": "È iniziata la pausa dalla pillola",
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}ª",
+  "sequentialLastTakenPlusOnePillNumber": "Pillola n. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "dal n°",
   "add": "Aggiungi",
   "addPillSheet": "Aggiungi confezione",

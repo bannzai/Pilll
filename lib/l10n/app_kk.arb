@@ -394,7 +394,7 @@
   "alreadyTaken": "Таблетка қабылданды",
   "startPauseTaking": "Таблетка қабылдаудағы үзілісті бастаңыз",
   "startedPauseTaking": "Таблетка қабылдаудағы үзіліс басталды",
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}-інші",
+  "sequentialLastTakenPlusOnePillNumber": "№ {pillSheetGroupSequentialLastTakenPillNumber} таблетка",
   "startFromNumber": "нөмірінен бастау",
   "add": "Қосу",
   "addPillSheet": "Дәрі парағын қосу",

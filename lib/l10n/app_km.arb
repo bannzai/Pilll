@@ -394,7 +394,7 @@
   "alreadyTaken": "បានលេបថ្នាំគ្រាប់ហើយ",
   "startPauseTaking": "ចាប់ផ្តើមសម្រាកពីការលេបថ្នាំគ្រាប់",
   "startedPauseTaking": "ការផ្អាកលេបថ្នាំគ្រាប់បានចាប់ផ្តើមហើយ",
-  "sequentialLastTakenPlusOnePillNumber": "ដុំទី{pillSheetGroupSequentialLastTakenPillNumber}",
+  "sequentialLastTakenPlusOnePillNumber": "គ្រាប់លេខ {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "ចាប់ផ្ដើមពីលេខ",
   "add": "បន្ថែម",
   "addPillSheet": "បន្ថែមបន្ទះថ្នាំ",

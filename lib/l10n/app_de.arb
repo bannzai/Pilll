@@ -394,7 +394,7 @@
   "alreadyTaken": "Pille eingenommen",
   "startPauseTaking": "Pillenpause beginnen",
   "startedPauseTaking": "Die Pillenpause hat begonnen",
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}.",
+  "sequentialLastTakenPlusOnePillNumber": "Pille Nr. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Start ab Nummer",
   "add": "Hinzufügen",
   "addPillSheet": "Pillenpackung hinzufügen",

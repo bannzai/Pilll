@@ -394,7 +394,7 @@
   "alreadyTaken": "Tablete lietota",
   "startPauseTaking": "Sākt tablešu lietošanas pārtraukumu",
   "startedPauseTaking": "Sākās tablešu lietošanas pārtraukums",
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}.",
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}. tablete",
   "startFromNumber": "Sākt no numura",
   "add": "Pievienot",
   "addPillSheet": "Pievienot tablešu plāksnīti",

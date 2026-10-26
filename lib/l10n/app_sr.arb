@@ -394,7 +394,7 @@
   "alreadyTaken": "Пилула је узета",
   "startPauseTaking": "Започните паузу у узимању пилула",
   "startedPauseTaking": "Почела је пауза у узимању пилула",
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}.",
+  "sequentialLastTakenPlusOnePillNumber": "пилула бр. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Od broja",
   "add": "Додај",
   "addPillSheet": "Додати паковање пилула",

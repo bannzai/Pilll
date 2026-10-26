@@ -394,7 +394,7 @@
   "alreadyTaken": "Tableta užita",
   "startPauseTaking": "Zahájit přestávku v užívání pilulek",
   "startedPauseTaking": "Pauza v užívání pilulek začala",
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}.",
+  "sequentialLastTakenPlusOnePillNumber": "tableta č. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Začít od čísla",
   "add": "Přidat",
   "addPillSheet": "Přidat blistr pilulek",

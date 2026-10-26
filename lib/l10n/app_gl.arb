@@ -394,7 +394,7 @@
   "alreadyTaken": "Pílula tomada",
   "startPauseTaking": "Comezar a pausa da pílula",
   "startedPauseTaking": "Comezou a pausa na toma da pílula",
-  "sequentialLastTakenPlusOnePillNumber": "nº {pillSheetGroupSequentialLastTakenPillNumber}",
+  "sequentialLastTakenPlusOnePillNumber": "Pílula núm. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Comezar dende o número",
   "add": "Engadir",
   "addPillSheet": "Engadir folla de píldoras",

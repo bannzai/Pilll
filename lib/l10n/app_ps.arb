@@ -394,7 +394,7 @@
   "alreadyTaken": "ګولۍ اخیستل شوې ده",
   "startPauseTaking": "د ګولیو اخیستلو وقفه پیل کړئ",
   "startedPauseTaking": "د ګولیو له اخیستلو وقفه پیل شوه",
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}مه",
+  "sequentialLastTakenPlusOnePillNumber": "د ګولۍ شمېره {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "له شمیرې پیل",
   "add": "اضافه",
   "addPillSheet": "د ګولیو پاڼه اضافه کړئ",

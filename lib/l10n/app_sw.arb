@@ -394,7 +394,7 @@
   "alreadyTaken": "Kidonge kimemezwa",
   "startPauseTaking": "Tafadhali anza mapumziko ya kumeza vidonge",
   "startedPauseTaking": "Mapumziko ya kumeza vidonge yameanza",
-  "sequentialLastTakenPlusOnePillNumber": "Namba {pillSheetGroupSequentialLastTakenPillNumber}",
+  "sequentialLastTakenPlusOnePillNumber": "kidonge namba {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Anza kutoka nambari",
   "add": "Ongeza",
   "addPillSheet": "Ongeza Karatasi ya Vidonge",

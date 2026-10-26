@@ -394,7 +394,7 @@
   "alreadyTaken": "ବଟିକା ଖିଆଯାଇଛି",
   "startPauseTaking": "ବଟିକା ଖାଇବାରୁ ବିରତି ଆରମ୍ଭ କରନ୍ତୁ",
   "startedPauseTaking": "ବଟିକା ଖାଇବାର ବିରତି ଆରମ୍ଭ ହୋଇଛି",
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}ନମ୍ବର",
+  "sequentialLastTakenPlusOnePillNumber": "ବଟି ନମ୍ବର {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "ସଂଖ୍ୟାରୁ ଆରମ୍ଭ",
   "add": "ଯୋଗ",
   "addPillSheet": "ପିଲ୍ ଶିଟ୍ ଯୋଗ କରନ୍ତୁ",

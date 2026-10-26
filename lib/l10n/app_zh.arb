@@ -394,7 +394,7 @@
   "alreadyTaken": "已服药",
   "startPauseTaking": "开始暂停服药",
   "startedPauseTaking": "已开始暂停服药",
-  "sequentialLastTakenPlusOnePillNumber": "第{pillSheetGroupSequentialLastTakenPillNumber}颗",
+  "sequentialLastTakenPlusOnePillNumber": "第{pillSheetGroupSequentialLastTakenPillNumber}片",
   "startFromNumber": "从几号开始",
   "add": "添加",
   "addPillSheet": "添加药板",

@@ -394,7 +394,7 @@
   "alreadyTaken": "Таблетка принята",
   "startPauseTaking": "Начать перерыв в приёме таблеток",
   "startedPauseTaking": "Начался перерыв в приёме таблеток",
-  "sequentialLastTakenPlusOnePillNumber": "№{pillSheetGroupSequentialLastTakenPillNumber}",
+  "sequentialLastTakenPlusOnePillNumber": "таблетка № {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "С номера",
   "add": "Добавить",
   "addPillSheet": "Добавить упаковку",

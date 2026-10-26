@@ -394,7 +394,7 @@
   "alreadyTaken": "পিল খাওয়া হয়েছে",
   "startPauseTaking": "পিল খাওয়া থেকে বিরতি শুরু করুন",
   "startedPauseTaking": "পিল খাওয়ার বিরতি শুরু হয়েছে",
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}নং",
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} নম্বর পিল",
   "startFromNumber": "নম্বর থেকে শুরু",
   "add": "যোগ করুন",
   "addPillSheet": "পিল শিট যোগ করুন",

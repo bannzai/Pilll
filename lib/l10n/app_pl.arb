@@ -394,7 +394,7 @@
   "alreadyTaken": "Tabletka przyjęta",
   "startPauseTaking": "Rozpocznij przerwę w braniu pigułek",
   "startedPauseTaking": "Rozpoczęła się przerwa w przyjmowaniu tabletek",
-  "sequentialLastTakenPlusOnePillNumber": "tabletka {pillSheetGroupSequentialLastTakenPillNumber}",
+  "sequentialLastTakenPlusOnePillNumber": "tabletka nr {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Rozpocznij od numeru",
   "add": "Dodaj",
   "addPillSheet": "Dodaj opakowanie pigułek",

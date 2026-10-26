@@ -394,7 +394,7 @@
   "alreadyTaken": "Pílula tomada",
   "startPauseTaking": "Iniciar pausa na pílula",
   "startedPauseTaking": "A pausa no uso da pílula começou",
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}ª",
+  "sequentialLastTakenPlusOnePillNumber": "Pílula nº {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Começar do número",
   "add": "Adicionar",
   "addPillSheet": "Adicionar cartela de pílulas",
