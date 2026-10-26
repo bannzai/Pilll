@@ -472,7 +472,7 @@
   "recordPillFeatureAppealShortDescription": "আপনি কখন পিল খেয়েছেন, তা সহজেই দেখুন",
   "recordPillFeatureAppealHeadline": "হোম স্ক্রিনে পিল খাওয়ার তথ্য লিখে রাখুন",
   "recordPillFeatureAppealBody": "হোম স্ক্রিনের পিল শিটে ট্যাপ করলেই আপনি সেদিনের পিল খাওয়া নথিভুক্ত করতে পারবেন। ভুল করে নথিভুক্ত হলে আবার ট্যাপ করে তা বাতিল করতে পারবেন। পরে সেবনের ইতিহাস দেখে নিশ্চিন্তে চালিয়ে যেতে পারবেন।",
-  "menstruationFeatureAppealTitle": "মাসিক ট্র্যাক ও পূর্বাভাস",
+  "menstruationFeatureAppealTitle": "মাসিকের তথ্য লিখুন ও পরবর্তী সময়ের পূর্বাভাস দেখুন",
   "menstruationFeatureAppealShortDescription": "মাসিক শুরুর তারিখ রেকর্ড করে চক্র জানুন",
   "menstruationFeatureAppealHeadline": "মাসিকের রেকর্ড ও পূর্বাভাস করা যায়",
   "menstruationFeatureAppealBody": "মাসিক এলে শুধু রেকর্ড করলেই অতীতের মাসিকের ইতিহাস তালিকায় দেখতে পাবেন। পরবর্তী মাসিকের প্রত্যাশিত তারিখও স্বয়ংক্রিয়ভাবে অনুমান করা হয়, তাই পরিকল্পনামতো সময় কাটাতে পারবেন।",

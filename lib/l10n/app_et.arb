@@ -472,7 +472,7 @@
   "recordPillFeatureAppealShortDescription": "Näed kohe, millal pilli võtsid",
   "recordPillFeatureAppealHeadline": "Märgi pilli võtmine avakuval",
   "recordPillFeatureAppealBody": "Puuduta avalehel pillileh, et märkida tänane pilli võtmine. Kui märgid selle kogemata, puuduta uuesti, et märge tühistada. Võtmislogi saad hiljem üle vaadata ja rahulikult jätkata.",
-  "menstruationFeatureAppealTitle": "Menstruatsiooni jälgimine ja prognoosimine",
+  "menstruationFeatureAppealTitle": "Märgi päevad üles ja ennusta järgmisi",
   "menstruationFeatureAppealShortDescription": "Salvesta menstruatsiooni alguskuupäev ja jälgi tsüklit",
   "menstruationFeatureAppealHeadline": "Menstruatsiooni saab salvestada ja prognoosida",
   "menstruationFeatureAppealBody": "Lihtsalt registreerige menstruatsioon, kui see algab, ja saate vaadata oma varasemat menstruatsiooniajalugu. Järgmine eeldatav menstruatsioonikuupäev ennustatakse automaatselt, mis võimaldab teil paremini planeerida.",
