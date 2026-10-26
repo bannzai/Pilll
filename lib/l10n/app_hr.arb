@@ -396,7 +396,7 @@
   "startedPauseTaking": "Počela je stanka u uzimanju pilule",
   "sequentialLastTakenPlusOnePillNumber": "pilula br. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Počnite od ovog broja",
-  "add": "Dodaj",
+  "add": "Dodajte",
   "addPillSheet": "Dodaj blister pilula",
   "pillTakenCountPrefix": "Dnevno",
   "pillTakenCountSuffix": "Uzeti 2 puta dnevno",

@@ -396,7 +396,7 @@
   "startedPauseTaking": "Ha començat la pausa de la píndola",
   "sequentialLastTakenPlusOnePillNumber": "píndola núm. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Comença per aquest número",
-  "add": "Afegir",
+  "add": "Afegeix",
   "addPillSheet": "Afegir una fulla de píndoles",
   "pillTakenCountPrefix": "1 dia",
   "pillTakenCountSuffix": "Prendre-la 2 vegades",

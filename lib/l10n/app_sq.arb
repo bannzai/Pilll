@@ -396,7 +396,7 @@
   "startedPauseTaking": "Ka filluar pushimi nga marrja e pilulave",
   "sequentialLastTakenPlusOnePillNumber": "pilula nr. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Filloni nga ky numër",
-  "add": "Shto",
+  "add": "Shtoni",
   "addPillSheet": "Shto fletë pilule",
   "pillTakenCountPrefix": "Në ditë",
   "pillTakenCountSuffix": "Merr një herë në ditë",
