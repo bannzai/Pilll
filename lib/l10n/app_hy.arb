@@ -408,7 +408,7 @@
   "shareWithFriends": "Կիսվեք ընկերների հետ",
   "termsOfService": "Օգտագործման պայմաններ",
   "privacyPolicy": "Գաղտնիության քաղաքականություն",
-  "linkCopiedToClipboard": "Պատճենվեց սեղմատախտակում",
+  "linkCopiedToClipboard": "Պատճենվել է փոխանակման բուֆերում",
   "notificationNumber": "ծանուցում{number}",
   "notificationTime": "ծանուցման ժամանակ",
   "timeZoneChangedTo": "{tz}-ին փոխված է",

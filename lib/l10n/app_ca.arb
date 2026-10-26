@@ -408,7 +408,7 @@
   "shareWithFriends": "Comparteix-ho amb els amics",
   "termsOfService": "Condicions d’ús",
   "privacyPolicy": "Política de privacitat",
-  "linkCopiedToClipboard": "Copiat al porta-retalls",
+  "linkCopiedToClipboard": "S'ha copiat al porta-retalls",
   "notificationNumber": "Notificació {number}",
   "notificationTime": "hora de notificació",
   "timeZoneChangedTo": "S'ha canviat a {tz}",

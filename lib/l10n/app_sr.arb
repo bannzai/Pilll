@@ -408,7 +408,7 @@
   "shareWithFriends": "Препоручите пријатељима",
   "termsOfService": "Услови коришћења",
   "privacyPolicy": "Политика приватности",
-  "linkCopiedToClipboard": "Копирано у клипборд",
+  "linkCopiedToClipboard": "Копирано у привремену меморију",
   "notificationNumber": "Обавештење {number}",
   "notificationTime": "Vreme obaveštenja",
   "timeZoneChangedTo": "Promenjeno na {tz}",

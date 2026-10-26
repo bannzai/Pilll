@@ -408,7 +408,7 @@
   "shareWithFriends": "Досторуңузга сунуштаңыз",
   "termsOfService": "Колдонуу шарттары",
   "privacyPolicy": "Купуялык саясаты",
-  "linkCopiedToClipboard": "Клипбордго көчүрүлдү",
+  "linkCopiedToClipboard": "Алмашуу буферине көчүрүлдү",
   "notificationNumber": "эскертүү {number}",
   "notificationTime": "эскертүү убактысы",
   "timeZoneChangedTo": "{tz} убакыт алкагына өзгөртүлдү",

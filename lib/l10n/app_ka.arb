@@ -408,7 +408,7 @@
   "shareWithFriends": "გაუზიარეთ მეგობრებს",
   "termsOfService": "გამოყენების პირობები",
   "privacyPolicy": "კონფიდენციალურობის პოლიტიკა",
-  "linkCopiedToClipboard": "კლიპბორდში დაკოპირდა",
+  "linkCopiedToClipboard": "დაკოპირდა ბუფერში",
   "notificationNumber": "შეტყობინება{number}",
   "notificationTime": "შეტყობინების დრო",
   "timeZoneChangedTo": "{tz}-ზე შეიცვალა",

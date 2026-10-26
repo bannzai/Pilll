@@ -408,7 +408,7 @@
   "shareWithFriends": "Достарыңызға ұсыныңыз",
   "termsOfService": "Пайдалану шарттары",
   "privacyPolicy": "Құпиялық саясаты",
-  "linkCopiedToClipboard": "Буферге көшірілді",
+  "linkCopiedToClipboard": "Алмасу буферіне көшірілді",
   "notificationNumber": "Ескерту {number}",
   "notificationTime": "хабарландыру уақыты",
   "timeZoneChangedTo": "{tz} уақыт белдеуіне өзгертілді",
