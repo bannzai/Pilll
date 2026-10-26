@@ -69,7 +69,7 @@
   "close": "Zamknij",
   "registerAccount": "Utwórz konto",
   "reLogin": "Zaloguj się ponownie",
-  "authenticationInfoUpdated": "Dane uwierzytelniające zostały zaktualizowane",
+  "authenticationInfoUpdated": "Dane logowania zostały zaktualizowane",
   "updateAuthenticationInformation": "Zaktualizuj dane uwierzytelniające",
   "registeredWithProvider": "Zarejestrowano przez {accountTypeProviderName}",
   "linkAccount": "Połącz",

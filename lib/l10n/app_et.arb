@@ -69,7 +69,7 @@
   "close": "Sulge",
   "registerAccount": "Loo konto",
   "reLogin": "Logi uuesti sisse",
-  "authenticationInfoUpdated": "Autentimisandmed on uuendatud",
+  "authenticationInfoUpdated": "Sinu sisselogimisandmed on uuendatud",
   "updateAuthenticationInformation": "Uuenda autentimisandmeid",
   "registeredWithProvider": "Registreeritud {accountTypeProviderName} kaudu",
   "linkAccount": "Linkida",

@@ -69,7 +69,7 @@
   "close": "Bezárás",
   "registerAccount": "Fiók létrehozása",
   "reLogin": "Jelentkezz be újra",
-  "authenticationInfoUpdated": "A hitelesítési adatok frissítve lettek",
+  "authenticationInfoUpdated": "A bejelentkezési adataid frissültek",
   "updateAuthenticationInformation": "Hitelesítési adatok frissítése",
   "registeredWithProvider": "Regisztráltál {accountTypeProviderName}-val",
   "linkAccount": "Összekapcsolás",

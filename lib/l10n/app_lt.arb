@@ -69,7 +69,7 @@
   "close": "Uždarykite",
   "registerAccount": "Sukurti paskyrą",
   "reLogin": "Prisijunkite dar kartą",
-  "authenticationInfoUpdated": "Prisijungimo duomenys atnaujinti",
+  "authenticationInfoUpdated": "Jūsų prisijungimo duomenys atnaujinti",
   "updateAuthenticationInformation": "Atnaujinti autentifikavimo duomenis",
   "registeredWithProvider": "Užsiregistravote per {accountTypeProviderName}",
   "linkAccount": "Susieti",

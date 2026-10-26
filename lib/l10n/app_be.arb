@@ -69,7 +69,7 @@
   "close": "Зачыніць",
   "registerAccount": "Рэгістрацыя ўліковага запісу",
   "reLogin": "Увайсці зноў",
-  "authenticationInfoUpdated": "Аўтэнтыфікацыйныя даныя абноўлены",
+  "authenticationInfoUpdated": "Даныя для ўваходу абноўлены",
   "updateAuthenticationInformation": "Абнавіць даныя аўтэнтыфікацыі",
   "registeredWithProvider": "Зарэгістраваны з дапамогай {accountTypeProviderName}",
   "linkAccount": "Звязаць",

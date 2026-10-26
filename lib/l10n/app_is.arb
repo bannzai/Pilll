@@ -69,7 +69,7 @@
   "close": "Loka",
   "registerAccount": "Stofna aðgang",
   "reLogin": "Skráðu þig inn aftur",
-  "authenticationInfoUpdated": "Auðkennisupplýsingar hafa verið uppfærðar",
+  "authenticationInfoUpdated": "Innskráningarupplýsingarnar þínar hafa verið uppfærðar",
   "updateAuthenticationInformation": "Uppfæra auðkenningargögn",
   "registeredWithProvider": "Skráður með {accountTypeProviderName}",
   "linkAccount": "Tengja",

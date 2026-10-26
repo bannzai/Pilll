@@ -69,7 +69,7 @@
   "close": "Fermer",
   "registerAccount": "Créer un compte",
   "reLogin": "Reconnectez-vous",
-  "authenticationInfoUpdated": "Informations d'authentification mises à jour",
+  "authenticationInfoUpdated": "Vos informations de connexion ont été mises à jour",
   "updateAuthenticationInformation": "Mettre à jour les informations d'authentification",
   "registeredWithProvider": "Enregistré auprès de {accountTypeProviderName}",
   "linkAccount": "Connecter",

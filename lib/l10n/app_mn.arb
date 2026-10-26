@@ -69,7 +69,7 @@
   "close": "Хаах",
   "registerAccount": "Бүртгэл үүсгэх",
   "reLogin": "Дахин нэвтэрнэ үү",
-  "authenticationInfoUpdated": "Баталгаажуулалтын мэдээллийг шинэчилсэн",
+  "authenticationInfoUpdated": "Таны нэвтрэх мэдээлэл шинэчлэгдлээ",
   "updateAuthenticationInformation": "Баталгаажуулалт шинэчлэх",
   "registeredWithProvider": "{accountTypeProviderName}-аар бүртгүүлсэн",
   "linkAccount": "Холбох",

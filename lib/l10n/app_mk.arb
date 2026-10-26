@@ -69,7 +69,7 @@
   "close": "Затворете",
   "registerAccount": "Регистрација на сметка",
   "reLogin": "Најавете се повторно",
-  "authenticationInfoUpdated": "Информациите за автентификација се ажурираа",
+  "authenticationInfoUpdated": "Податоците за најава се ажурирани",
   "updateAuthenticationInformation": "Ажурирај ги автентикациските податоци",
   "registeredWithProvider": "Се регистриравте со {accountTypeProviderName}",
   "linkAccount": "Поврзи",

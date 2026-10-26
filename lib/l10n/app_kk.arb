@@ -69,7 +69,7 @@
   "close": "Жабу",
   "registerAccount": "Тіркелгі ашу",
   "reLogin": "Қайта кіріңіз",
-  "authenticationInfoUpdated": "Растау деректері жаңартылды",
+  "authenticationInfoUpdated": "Кіру деректеріңіз жаңартылды",
   "updateAuthenticationInformation": "Растау ақпаратын жаңарту",
   "registeredWithProvider": "{accountTypeProviderName} арқылы тіркелдіңіз",
   "linkAccount": "Байланыстыру",

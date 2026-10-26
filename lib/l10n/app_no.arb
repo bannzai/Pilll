@@ -69,7 +69,7 @@
   "close": "Lukk",
   "registerAccount": "Opprett konto",
   "reLogin": "Logg inn igjen",
-  "authenticationInfoUpdated": "Påloggingsopplysningene er oppdatert",
+  "authenticationInfoUpdated": "Innloggingsopplysningene dine er oppdatert",
   "updateAuthenticationInformation": "Oppdater påloggingsinformasjon",
   "registeredWithProvider": "Registrert med {accountTypeProviderName}",
   "linkAccount": "Koble til",

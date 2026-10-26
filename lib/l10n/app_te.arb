@@ -69,7 +69,7 @@
   "close": "మూసివేయండి",
   "registerAccount": "ఖాతా సృష్టించండి",
   "reLogin": "మళ్లీ లాగిన్ అవ్వండి",
-  "authenticationInfoUpdated": "ప్రమాణీకరణ వివరాలు నవీకరించబడ్డాయి",
+  "authenticationInfoUpdated": "మీ లాగిన్ సమాచారం నవీకరించబడింది",
   "updateAuthenticationInformation": "ప్రమాణీకరణ వివరాలను అప్‌డేట్ చేయండి",
   "registeredWithProvider": "{accountTypeProviderName}తో నమోదు చేయబడింది",
   "linkAccount": "అనుసంధానం చేయండి",

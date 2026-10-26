@@ -69,7 +69,7 @@
   "close": "Zatvorite",
   "registerAccount": "Registrirajte račun",
   "reLogin": "Ponovno se prijavite",
-  "authenticationInfoUpdated": "Podaci za prijavu su uspješno ažurirani",
+  "authenticationInfoUpdated": "Vaši podaci za prijavu su ažurirani",
   "updateAuthenticationInformation": "Ažuriraj autentifikacijske podatke",
   "registeredWithProvider": "Registrirali ste se pomoću {accountTypeProviderName}",
   "linkAccount": "Povezati",

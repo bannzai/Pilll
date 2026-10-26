@@ -69,7 +69,7 @@
   "close": "Закрийте",
   "registerAccount": "Створити обліковий запис",
   "reLogin": "Увійдіть знову",
-  "authenticationInfoUpdated": "Автентифікаційні дані оновлено",
+  "authenticationInfoUpdated": "Ваші дані для входу оновлено",
   "updateAuthenticationInformation": "Оновити облікові дані",
   "registeredWithProvider": "Зареєстровано через {accountTypeProviderName}",
   "linkAccount": "Підключити",

@@ -69,7 +69,7 @@
   "close": "סגירה",
   "registerAccount": "יצירת חשבון",
   "reLogin": "להתחבר מחדש",
-  "authenticationInfoUpdated": "פרטי האימות עודכנו",
+  "authenticationInfoUpdated": "פרטי ההתחברות עודכנו",
   "updateAuthenticationInformation": "עדכון פרטי אימות",
   "registeredWithProvider": "נרשמת באמצעות {accountTypeProviderName}",
   "linkAccount": "חבר",

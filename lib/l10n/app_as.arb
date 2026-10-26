@@ -69,7 +69,7 @@
   "close": "বন্ধ কৰক",
   "registerAccount": "একাউণ্ট পঞ্জীয়ন",
   "reLogin": "পুনৰ লগ ইন কৰক",
-  "authenticationInfoUpdated": "প্ৰমাণীকৰণৰ তথ্য আপডেট কৰা হ'ল",
+  "authenticationInfoUpdated": "লগইন তথ্য আপডেট কৰা হৈছে",
   "updateAuthenticationInformation": "প্ৰমাণীকৰণ তথ্য আপডেট কৰিব",
   "registeredWithProvider": "{accountTypeProviderName}ৰে নিবন্ধন সম্পূৰ্ণ হ'ল",
   "linkAccount": "সংযোগ কৰক",

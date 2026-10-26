@@ -69,7 +69,7 @@
   "close": "Chiudi",
   "registerAccount": "Crea un account",
   "reLogin": "Accedi di nuovo",
-  "authenticationInfoUpdated": "Le credenziali di autenticazione sono state aggiornate",
+  "authenticationInfoUpdated": "I tuoi dati di accesso sono stati aggiornati",
   "updateAuthenticationInformation": "Aggiorna credenziali",
   "registeredWithProvider": "Ti sei registrato con {accountTypeProviderName}",
   "linkAccount": "Collega",

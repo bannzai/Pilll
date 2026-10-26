@@ -69,7 +69,7 @@
   "close": "Yoping",
   "registerAccount": "Hisob yarating",
   "reLogin": "Qayta kiring",
-  "authenticationInfoUpdated": "Autentifikatsiya ma'lumotlari yangilandi",
+  "authenticationInfoUpdated": "Kirish maʼlumotlaringiz yangilandi",
   "updateAuthenticationInformation": "Autentifikatsiya ma'lumotlarini yangilash",
   "registeredWithProvider": "{accountTypeProviderName} orqali ro'yxatdan o'tdingiz",
   "linkAccount": "Bog'lash",

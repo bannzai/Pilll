@@ -69,7 +69,7 @@
   "close": "மூடுங்கள்",
   "registerAccount": "கணக்கை உருவாக்குங்கள்",
   "reLogin": "மீண்டும் உள்நுழையுங்கள்",
-  "authenticationInfoUpdated": "அங்கீகார தகவல் புதுப்பிக்கப்பட்டது",
+  "authenticationInfoUpdated": "உங்கள் உள்நுழைவுத் தகவல் புதுப்பிக்கப்பட்டது",
   "updateAuthenticationInformation": "அங்கீகார தகவலை புதுப்பிக்கும்",
   "registeredWithProvider": "{accountTypeProviderName} மூலம் பதிவு செய்யப்பட்டது",
   "linkAccount": "இணைக்க",

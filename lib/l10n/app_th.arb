@@ -69,7 +69,7 @@
   "close": "ปิด",
   "registerAccount": "สร้างบัญชี",
   "reLogin": "เข้าสู่ระบบอีกครั้ง",
-  "authenticationInfoUpdated": "อัปเดตข้อมูลการยืนยันตัวตนแล้ว",
+  "authenticationInfoUpdated": "อัปเดตข้อมูลเข้าสู่ระบบเรียบร้อยแล้วค่ะ",
   "updateAuthenticationInformation": "อัปเดตข้อมูลการยืนยันตัวตน",
   "registeredWithProvider": "ลงทะเบียนด้วย{accountTypeProviderName}เรียบร้อยแล้ว",
   "linkAccount": "เชื่อมต่อ",

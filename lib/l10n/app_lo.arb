@@ -69,7 +69,7 @@
   "close": "ປິດ",
   "registerAccount": "ສ້າງບັນຊີ",
   "reLogin": "ເຂົ້າລະບົບອີກຄັ້ງ",
-  "authenticationInfoUpdated": "ອັບເດດຂໍ້ມູນການຢັ້ງຢືນສຳເລັດແລ້ວ",
+  "authenticationInfoUpdated": "ຂໍ້ມູນເຂົ້າລະບົບຂອງທ່ານໄດ້ອັບເດດແລ້ວ",
   "updateAuthenticationInformation": "ອັບເດດຂໍ້ມູນການພິສູດຕົວຕົນ",
   "registeredWithProvider": "ລົງທະບຽນດ້ວຍ {accountTypeProviderName} ແລ້ວ",
   "linkAccount": "ເຊື່ອມຕໍ່",

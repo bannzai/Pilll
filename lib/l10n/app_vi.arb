@@ -69,7 +69,7 @@
   "close": "Đóng",
   "registerAccount": "Tạo tài khoản",
   "reLogin": "Đăng nhập lại",
-  "authenticationInfoUpdated": "Thông tin xác thực đã được cập nhật",
+  "authenticationInfoUpdated": "Thông tin đăng nhập của bạn đã được cập nhật",
   "updateAuthenticationInformation": "Cập nhật thông tin xác thực",
   "registeredWithProvider": "Đã đăng ký bằng {accountTypeProviderName}",
   "linkAccount": "Liên kết",

@@ -69,7 +69,7 @@
   "close": "Zavřít",
   "registerAccount": "Zaregistrovat účet",
   "reLogin": "Znovu se přihlásit",
-  "authenticationInfoUpdated": "Ověřovací údaje byly aktualizovány",
+  "authenticationInfoUpdated": "Přihlašovací údaje byly aktualizovány",
   "updateAuthenticationInformation": "Aktualizovat přihlašovací údaje",
   "registeredWithProvider": "Zaregistrovali jste se přes {accountTypeProviderName}",
   "linkAccount": "Propojit",

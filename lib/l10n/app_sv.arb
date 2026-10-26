@@ -69,7 +69,7 @@
   "close": "Stäng",
   "registerAccount": "Skapa konto",
   "reLogin": "Logga in igen",
-  "authenticationInfoUpdated": "Autentiseringsuppgifter har uppdaterats",
+  "authenticationInfoUpdated": "Dina inloggningsuppgifter har uppdaterats",
   "updateAuthenticationInformation": "Uppdatera autentiseringsuppgifter",
   "registeredWithProvider": "Registrerad med {accountTypeProviderName}",
   "linkAccount": "Anslut",

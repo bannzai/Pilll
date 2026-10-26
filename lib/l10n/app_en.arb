@@ -69,7 +69,7 @@
   "close": "Close",
   "registerAccount": "Create an account",
   "reLogin": "Log in again",
-  "authenticationInfoUpdated": "Authentication information updated",
+  "authenticationInfoUpdated": "Your sign-in details have been updated",
   "updateAuthenticationInformation": "Update authentication information",
   "registeredWithProvider": "Registered with {accountTypeProviderName}",
   "linkAccount": "Connect",

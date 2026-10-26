@@ -69,7 +69,7 @@
   "close": "Isara",
   "registerAccount": "Gumawa ng account",
   "reLogin": "Mag-log in po muli",
-  "authenticationInfoUpdated": "Na-update na ang inyong authentication information",
+  "authenticationInfoUpdated": "Na-update na ang inyong impormasyon sa pag-sign in",
   "updateAuthenticationInformation": "I-update ang impormasyon ng pagpapatunay",
   "registeredWithProvider": "Matagumpay kang narehistro gamit ang {accountTypeProviderName}",
   "linkAccount": "Magkonekta",

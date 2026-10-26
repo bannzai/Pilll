@@ -69,7 +69,7 @@
   "close": "დახურვა",
   "registerAccount": "ანგარიშის შექმნა",
   "reLogin": "ხელახლა შესვლა",
-  "authenticationInfoUpdated": "ავთენტიკაციის ინფორმაცია განახლდა",
+  "authenticationInfoUpdated": "თქვენი შესვლის მონაცემები განახლდა",
   "updateAuthenticationInformation": "ავთენტიფიკაციის მონაცემების განახლება",
   "registeredWithProvider": "{accountTypeProviderName}-ით დარეგისტრირდით",
   "linkAccount": "დაკავშირება",

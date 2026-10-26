@@ -69,7 +69,7 @@
   "close": "Zuemache",
   "registerAccount": "Konto aalege",
   "reLogin": "Meld di nomal aa",
-  "authenticationInfoUpdated": "D'Aahmeldigsdate sind erfolgriich aktualisiert worde",
+  "authenticationInfoUpdated": "Dini Aamälddate sind aktualisiert",
   "updateAuthenticationInformation": "Aagmäldigsdate aktualisiere",
   "registeredWithProvider": "Mit {accountTypeProviderName} aagmeldet",
   "linkAccount": "verchnüpfe",

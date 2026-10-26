@@ -69,7 +69,7 @@
   "close": "Sluiten",
   "registerAccount": "Account aanmaken",
   "reLogin": "Log opnieuw in",
-  "authenticationInfoUpdated": "Authenticatiegegevens zijn bijgewerkt",
+  "authenticationInfoUpdated": "Je inloggegevens zijn bijgewerkt",
   "updateAuthenticationInformation": "Authenticatiegegevens bijwerken",
   "registeredWithProvider": "Geregistreerd met {accountTypeProviderName}",
   "linkAccount": "Koppelen",

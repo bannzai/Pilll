@@ -69,7 +69,7 @@
   "close": "Sicela uvale",
   "registerAccount": "Dala i-akhawunti",
   "reLogin": "Sicela ungene ngemvume futhi",
-  "authenticationInfoUpdated": "Imininingwane yokuqinisekisa zibuyekeziwe",
+  "authenticationInfoUpdated": "Imininingwane yakho yokungena ibuyekeziwe",
   "updateAuthenticationInformation": "Sizobuyekeza ulwazi lokuqinisekisa",
   "registeredWithProvider": "Ubhalisiwe nge-{accountTypeProviderName}",
   "linkAccount": "Xhuma",

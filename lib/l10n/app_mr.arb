@@ -69,7 +69,7 @@
   "close": "बंद करा",
   "registerAccount": "खाते तयार करा",
   "reLogin": "पुन्हा लॉग इन करा",
-  "authenticationInfoUpdated": "प्रमाणीकरण माहिती अपडेट केली आहे",
+  "authenticationInfoUpdated": "तुमची लॉगिन माहिती अपडेट झाली आहे",
   "updateAuthenticationInformation": "प्रमाणीकरण माहिती अद्यतन करा",
   "registeredWithProvider": "{accountTypeProviderName} वापरून नोंदणी केली",
   "linkAccount": "जोडा",

@@ -69,7 +69,7 @@
   "close": "ਬੰਦ ਕਰੋ",
   "registerAccount": "ਖਾਤਾ ਬਣਾਓ",
   "reLogin": "ਦੁਬਾਰਾ ਲੌਗ ਇਨ ਕਰੋ",
-  "authenticationInfoUpdated": "ਪ੍ਰਮਾਣਿਕਤਾ ਜਾਣਕਾਰੀ ਅਪਡੇਟ ਕਰ ਦਿੱਤੀ ਗਈ",
+  "authenticationInfoUpdated": "ਤੁਹਾਡੀ ਲੌਗਇਨ ਜਾਣਕਾਰੀ ਅੱਪਡੇਟ ਹੋ ਗਈ ਹੈ",
   "updateAuthenticationInformation": "ਪ੍ਰਮਾਣਿਕਤਾ ਦੀ ਜਾਣਕਾਰੀ ਅਪਡੇਟ ਕਰੋ",
   "registeredWithProvider": "{accountTypeProviderName} ਨਾਲ ਰਜਿਸਟਰ ਹੋ ਗਿਆ",
   "linkAccount": "ਜੋੜੋ",

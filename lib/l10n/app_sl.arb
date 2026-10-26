@@ -69,7 +69,7 @@
   "close": "Zaprite",
   "registerAccount": "Ustvarite račun",
   "reLogin": "Znova se prijavite",
-  "authenticationInfoUpdated": "Prijavni podatki so bili posodobljeni",
+  "authenticationInfoUpdated": "Vaši podatki za prijavo so posodobljeni",
   "updateAuthenticationInformation": "Posodobi poverilnice",
   "registeredWithProvider": "Uspešno ste se registrirali z {accountTypeProviderName}",
   "linkAccount": "Povezati",

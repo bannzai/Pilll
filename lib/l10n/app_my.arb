@@ -69,7 +69,7 @@
   "close": "ပိတ်ရန်",
   "registerAccount": "အကောင့်ဖွင့်ရန်",
   "reLogin": "ပြန်လည်ဝင်ရောက်ပါ",
-  "authenticationInfoUpdated": "အထောက်အထား အချက်အလက်များကို အသစ်ပြုလုပ်ပြီးပါပြီ",
+  "authenticationInfoUpdated": "အကောင့်ဝင်ရန် အချက်အလက်ကို အပ်ဒိတ်လုပ်ပြီးပါပြီ",
   "updateAuthenticationInformation": "အကောင့်အချက်အလက်များ အပ်ဒိတ်လုပ်မည်",
   "registeredWithProvider": "{accountTypeProviderName} ဖြင့် မှတ်ပုံတင်ပြီးပါပြီ",
   "linkAccount": "ချိတ်ဆက်ရန်",

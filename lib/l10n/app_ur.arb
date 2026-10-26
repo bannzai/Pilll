@@ -69,7 +69,7 @@
   "close": "بند کریں",
   "registerAccount": "اکاؤنٹ بنائیں",
   "reLogin": "دوبارہ لاگ اِن کریں",
-  "authenticationInfoUpdated": "اسناد کی تصدیق اپڈیٹ کر دی گئی",
+  "authenticationInfoUpdated": "آپ کی لاگ اِن معلومات اپ ڈیٹ ہو گئی ہیں",
   "updateAuthenticationInformation": "تصدیقی معلومات اپڈیٹ کریں",
   "registeredWithProvider": "{accountTypeProviderName} کے ساتھ رجسٹریشن مکمل ہوگئی",
   "linkAccount": "منسلک کریں",

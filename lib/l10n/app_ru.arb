@@ -69,7 +69,7 @@
   "close": "Закрыть",
   "registerAccount": "Создать аккаунт",
   "reLogin": "Войдите снова",
-  "authenticationInfoUpdated": "Данные для входа обновлены",
+  "authenticationInfoUpdated": "Ваши данные для входа обновлены",
   "updateAuthenticationInformation": "Обновить учётные данные",
   "registeredWithProvider": "Зарегистрировано через {accountTypeProviderName}",
   "linkAccount": "Связать",

@@ -69,7 +69,7 @@
   "close": "Sulje",
   "registerAccount": "Luo tili",
   "reLogin": "Kirjaudu uudelleen",
-  "authenticationInfoUpdated": "Tunnistautumistiedot on päivitetty",
+  "authenticationInfoUpdated": "Kirjautumistietosi on päivitetty",
   "updateAuthenticationInformation": "Päivitetään tunnistautumistiedot",
   "registeredWithProvider": "Rekisteröidyttiin {accountTypeProviderName}lla",
   "linkAccount": "Yhdistä",

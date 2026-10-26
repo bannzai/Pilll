@@ -69,7 +69,7 @@
   "close": "Aizveriet",
   "registerAccount": "Izveidot kontu",
   "reLogin": "Piesakieties vēlreiz",
-  "authenticationInfoUpdated": "Autentifikācijas dati ir atjaunoti",
+  "authenticationInfoUpdated": "Jūsu pieteikšanās dati ir atjaunināti",
   "updateAuthenticationInformation": "Atjaunināt autentifikācijas datus",
   "registeredWithProvider": "Reģistrējies ar {accountTypeProviderName}",
   "linkAccount": "Savienot",

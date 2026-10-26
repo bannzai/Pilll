@@ -69,7 +69,7 @@
   "close": "Затворете",
   "registerAccount": "Регистрация на акаунт",
   "reLogin": "Влезте отново",
-  "authenticationInfoUpdated": "Данните за вход бяха обновени",
+  "authenticationInfoUpdated": "Данните ви за вход са обновени",
   "updateAuthenticationInformation": "Актуализиране на данните за вход",
   "registeredWithProvider": "Успешно се регистрирахте с {accountTypeProviderName}",
   "linkAccount": "Свържи",

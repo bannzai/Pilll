@@ -69,7 +69,7 @@
   "close": "بستن",
   "registerAccount": "ایجاد حساب کاربری",
   "reLogin": "ورود دوباره",
-  "authenticationInfoUpdated": "اطلاعات احراز هویت به‌روزرسانی شد",
+  "authenticationInfoUpdated": "اطلاعات ورود شما به‌روزرسانی شد",
   "updateAuthenticationInformation": "به‌روزرسانی اطلاعات احراز هویت",
   "registeredWithProvider": "با {accountTypeProviderName} ثبت نام شدید",
   "linkAccount": "پیوند دادن",

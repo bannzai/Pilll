@@ -69,7 +69,7 @@
   "close": "ዝጉ",
   "registerAccount": "መለያ መመዝገብ",
   "reLogin": "እንደገና ይግቡ",
-  "authenticationInfoUpdated": "የማረጋገጫ መረጃ ተዘምኗል",
+  "authenticationInfoUpdated": "የመግቢያ መረጃ ተዘምኗል",
   "updateAuthenticationInformation": "የማረጋገጫ መረጃዎችን ያዘምናል",
   "registeredWithProvider": "በ{accountTypeProviderName} ተመዝግበዋል",
   "linkAccount": "ማገናኘት",

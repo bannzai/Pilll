@@ -69,7 +69,7 @@
   "close": "បិទ",
   "registerAccount": "បង្កើតគណនី",
   "reLogin": "សូមចូលគណនីម្ដងទៀត",
-  "authenticationInfoUpdated": "ព័ត៌មានបញ្ជាក់ខ្លួនបានធ្វើបច្ចុប្បន្នភាពរួចរាល់",
+  "authenticationInfoUpdated": "ព័ត៌មានចូលគណនីរបស់អ្នកត្រូវបានធ្វើបច្ចុប្បន្នភាព",
   "updateAuthenticationInformation": "កែប្រែព័ត៌មានផ្ទៀងផ្ទាត់",
   "registeredWithProvider": "បានចុះឈ្មោះដោយ{accountTypeProviderName}",
   "linkAccount": "ភ្ជាប់",

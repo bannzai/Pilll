@@ -69,7 +69,7 @@
   "close": "બંધ કરો",
   "registerAccount": "ખાતું બનાવો",
   "reLogin": "ફરીથી લૉગ ઇન કરો",
-  "authenticationInfoUpdated": "પ્રમાણીકરણ માહિતી અપડેટ કરવામાં આવી",
+  "authenticationInfoUpdated": "તમારી લૉગિન માહિતી અપડેટ થઈ ગઈ છે",
   "updateAuthenticationInformation": "પ્રમાણીકરણ માહિતી અપડેટ કરો",
   "registeredWithProvider": "{accountTypeProviderName}સાથે નોંધણી કરવામાં આવી",
   "linkAccount": "જોડાવવું",

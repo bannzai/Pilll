@@ -69,7 +69,7 @@
   "close": "Funga",
   "registerAccount": "Fungua akaunti",
   "reLogin": "Tafadhali ingia tena",
-  "authenticationInfoUpdated": "Taarifa za uthibitisho zimesasishwa",
+  "authenticationInfoUpdated": "Taarifa zako za kuingia zimesasishwa",
   "updateAuthenticationInformation": "Sasisha taarifa za uthibitishaji",
   "registeredWithProvider": "Umesajiliwa kwa kutumia {accountTypeProviderName}",
   "linkAccount": "Unganisha",

@@ -69,7 +69,7 @@
   "close": "إغلاق",
   "registerAccount": "إنشاء حساب",
   "reLogin": "تسجيل الدخول مجددًا",
-  "authenticationInfoUpdated": "تم تحديث معلومات التوثيق بنجاح",
+  "authenticationInfoUpdated": "تم تحديث بيانات تسجيل الدخول",
   "updateAuthenticationInformation": "تحديث معلومات المصادقة",
   "registeredWithProvider": "تم التسجيل باستخدام {accountTypeProviderName}",
   "linkAccount": "ربط",

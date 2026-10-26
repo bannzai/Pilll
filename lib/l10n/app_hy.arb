@@ -69,7 +69,7 @@
   "close": "Փակել",
   "registerAccount": "Հաշվի գրանցում",
   "reLogin": "Կրկին մուտք գործեք",
-  "authenticationInfoUpdated": "Վավերացման տվյալները թարմացվել են",
+  "authenticationInfoUpdated": "Ձեր մուտքի տվյալները թարմացվել են",
   "updateAuthenticationInformation": "Նույնականացման տվյալները թարմացնել",
   "registeredWithProvider": "Գրանցվել եք {accountTypeProviderName}-ով",
   "linkAccount": "միացնել",

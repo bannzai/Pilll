@@ -69,7 +69,7 @@
   "close": "Tutup",
   "registerAccount": "Daftar akaun",
   "reLogin": "Log masuk semula",
-  "authenticationInfoUpdated": "Maklumat pengesahan telah berjaya dikemas kini",
+  "authenticationInfoUpdated": "Maklumat log masuk anda telah dikemas kini",
   "updateAuthenticationInformation": "Kemaskini maklumat pengesahan",
   "registeredWithProvider": "Berjaya didaftar dengan {accountTypeProviderName}",
   "linkAccount": "Hubungkan",

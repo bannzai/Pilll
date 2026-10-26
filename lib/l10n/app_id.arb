@@ -69,7 +69,7 @@
   "close": "Tutup",
   "registerAccount": "Buat akun",
   "reLogin": "Masuk lagi",
-  "authenticationInfoUpdated": "Informasi autentikasi berhasil diperbarui",
+  "authenticationInfoUpdated": "Informasi login Anda berhasil diperbarui",
   "updateAuthenticationInformation": "Perbarui kredensial",
   "registeredWithProvider": "Berhasil mendaftar dengan {accountTypeProviderName}",
   "linkAccount": "Hubungkan",

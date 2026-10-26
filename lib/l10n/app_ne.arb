@@ -69,7 +69,7 @@
   "close": "बन्द गर्नुहोस्",
   "registerAccount": "खाता सिर्जना गर्नुहोस्",
   "reLogin": "फेरि लग इन गर्नुहोस्",
-  "authenticationInfoUpdated": "प्रमाणीकरण जानकारी सफलतापूर्वक अपडेट गरियो",
+  "authenticationInfoUpdated": "तपाईंको लगइन जानकारी अद्यावधिक भयो",
   "updateAuthenticationInformation": "प्रमाणीकरण जानकारी अपडेट गर्नेछ",
   "registeredWithProvider": "{accountTypeProviderName}मार्फत दर्ता गरियो",
   "linkAccount": "जडान गर्नुहोस्",

@@ -69,7 +69,7 @@
   "close": "Luk",
   "registerAccount": "Opret konto",
   "reLogin": "Log ind igen",
-  "authenticationInfoUpdated": "Legitimationsoplysninger opdateret",
+  "authenticationInfoUpdated": "Dine loginoplysninger er opdateret",
   "updateAuthenticationInformation": "Opdater legitimationsoplysninger",
   "registeredWithProvider": "Registreret med {accountTypeProviderName}",
   "linkAccount": "Forbind",

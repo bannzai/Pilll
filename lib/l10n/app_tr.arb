@@ -69,7 +69,7 @@
   "close": "Kapatın",
   "registerAccount": "Hesap oluşturun",
   "reLogin": "Yeniden giriş yapın",
-  "authenticationInfoUpdated": "Kimlik doğrulama bilgileri güncellendi",
+  "authenticationInfoUpdated": "Giriş bilgileriniz güncellendi",
   "updateAuthenticationInformation": "Kimlik bilgilerini güncelle",
   "registeredWithProvider": "{accountTypeProviderName} ile kayıt oldunuz",
   "linkAccount": "Bağla",

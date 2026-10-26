@@ -69,7 +69,7 @@
   "close": "Bağlayın",
   "registerAccount": "Hesab qeydiyyatı",
   "reLogin": "Yenidən daxil olun",
-  "authenticationInfoUpdated": "Autentifikasiya məlumatları yeniləndi",
+  "authenticationInfoUpdated": "Giriş məlumatlarınız yeniləndi",
   "updateAuthenticationInformation": "Autentifikasiya məlumatlarını yeniləyin",
   "registeredWithProvider": "{accountTypeProviderName} ilə qeydiyyatdan keçdiniz",
   "linkAccount": "Əlaqələndir",

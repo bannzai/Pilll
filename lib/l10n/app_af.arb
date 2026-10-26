@@ -69,7 +69,7 @@
   "close": "Sluit",
   "registerAccount": "Rekeningregistrasie",
   "reLogin": "Meld weer aan",
-  "authenticationInfoUpdated": "Geloofsbriewe is opgedateer",
+  "authenticationInfoUpdated": "Jou aanmeldbesonderhede is opgedateer",
   "updateAuthenticationInformation": "Werk outentiseringsinligting op",
   "registeredWithProvider": "Geregistreer met {accountTypeProviderName}",
   "linkAccount": "Koppel",

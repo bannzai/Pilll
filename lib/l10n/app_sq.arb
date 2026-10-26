@@ -69,7 +69,7 @@
   "close": "Mbyllni",
   "registerAccount": "Krijoni llogari",
   "reLogin": "Hyni përsëri",
-  "authenticationInfoUpdated": "Të dhënat e vërtetimit u përditësuan",
+  "authenticationInfoUpdated": "Të dhënat tuaja të hyrjes u përditësuan",
   "updateAuthenticationInformation": "Përditëso informacionin e autentifikimit",
   "registeredWithProvider": "U regjistruat me {accountTypeProviderName}",
   "linkAccount": "Lidh",

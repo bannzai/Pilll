@@ -69,7 +69,7 @@
   "close": "Κλείστε",
   "registerAccount": "Δημιουργία λογαριασμού",
   "reLogin": "Συνδεθείτε ξανά",
-  "authenticationInfoUpdated": "Οι πληροφορίες ταυτοποίησης ενημερώθηκαν",
+  "authenticationInfoUpdated": "Τα στοιχεία σύνδεσής σας ενημερώθηκαν",
   "updateAuthenticationInformation": "Ενημέρωση στοιχείων ταυτοποίησης",
   "registeredWithProvider": "Εγγραφήκατε μέσω {accountTypeProviderName}",
   "linkAccount": "Σύνδεση",

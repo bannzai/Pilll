@@ -69,7 +69,7 @@
   "close": "বন্ধ করুন",
   "registerAccount": "অ্যাকাউন্ট নিবন্ধন",
   "reLogin": "আবার লগ ইন করুন",
-  "authenticationInfoUpdated": "প্রমাণীকরণ তথ্য আপডেট করা হয়েছে",
+  "authenticationInfoUpdated": "লগইন তথ্য আপডেট হয়েছে",
   "updateAuthenticationInformation": "প্রমাণীকরণ তথ্য আপডেট করুন",
   "registeredWithProvider": "{accountTypeProviderName} দিয়ে নিবন্ধন সম্পন্ন হয়েছে",
   "linkAccount": "সংযুক্ত করুন",

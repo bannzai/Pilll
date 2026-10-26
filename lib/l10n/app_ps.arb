@@ -69,7 +69,7 @@
   "close": "تړل",
   "registerAccount": "حساب جوړ کړئ",
   "reLogin": "بیا ننوتل",
-  "authenticationInfoUpdated": "ستاسو د تصديق معلومات بریالیتوب سره اپډیټ شول",
+  "authenticationInfoUpdated": "ستاسو د ننوتلو معلومات تازه شول",
   "updateAuthenticationInformation": "د تصديق معلومات اپډېټ کړو",
   "registeredWithProvider": "د {accountTypeProviderName} سره ثبت شوي",
   "linkAccount": "تړل",

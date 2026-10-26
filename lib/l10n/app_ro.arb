@@ -69,7 +69,7 @@
   "close": "Închide",
   "registerAccount": "Creează un cont",
   "reLogin": "Conectează-te din nou",
-  "authenticationInfoUpdated": "Informațiile de autentificare au fost actualizate",
+  "authenticationInfoUpdated": "Datele tale de conectare au fost actualizate",
   "updateAuthenticationInformation": "Actualizați informațiile de autentificare",
   "registeredWithProvider": "Te-ai înregistrat cu {accountTypeProviderName}",
   "linkAccount": "Conecta",

@@ -69,7 +69,7 @@
   "close": "Itxi",
   "registerAccount": "Kontua sortu",
   "reLogin": "Hasi saioa berriro",
-  "authenticationInfoUpdated": "Autentifikazio-informazioa eguneratu da",
+  "authenticationInfoUpdated": "Saioa hasteko zure datuak eguneratu dira",
   "updateAuthenticationInformation": "Autentifikazio informazioa eguneratu",
   "registeredWithProvider": "{accountTypeProviderName} bidez erregistratu da",
   "linkAccount": "Konektatu",

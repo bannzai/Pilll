@@ -69,7 +69,7 @@
   "close": "关闭",
   "registerAccount": "注册账号",
   "reLogin": "重新登录",
-  "authenticationInfoUpdated": "认证信息已更新",
+  "authenticationInfoUpdated": "登录信息已更新",
   "updateAuthenticationInformation": "更新认证信息",
   "registeredWithProvider": "已通过{accountTypeProviderName}注册",
   "linkAccount": "关联",

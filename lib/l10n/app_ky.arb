@@ -69,7 +69,7 @@
   "close": "Жабуу",
   "registerAccount": "Каттоо эсебин түзүү",
   "reLogin": "Кайра кириңиз",
-  "authenticationInfoUpdated": "Аутентификация маалыматы жаңыланды",
+  "authenticationInfoUpdated": "Кирүү маалыматыңыз жаңыртылды",
   "updateAuthenticationInformation": "Аутентификация маалыматын жаңыртуу",
   "registeredWithProvider": "{accountTypeProviderName} аркылуу катталдыңыз",
   "linkAccount": "Байланыштыруу",

@@ -69,7 +69,7 @@
   "close": "닫기",
   "registerAccount": "계정 만들기",
   "reLogin": "다시 로그인해요",
-  "authenticationInfoUpdated": "인증 정보가 업데이트되었습니다",
+  "authenticationInfoUpdated": "로그인 정보가 업데이트됐어요",
   "updateAuthenticationInformation": "인증 정보를 업데이트합니다",
   "registeredWithProvider": "{accountTypeProviderName}로 가입했습니다",
   "linkAccount": "연동하기",
