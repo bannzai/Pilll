@@ -84,7 +84,7 @@
   "userInformationWillBeDeleted": "İstifadəçi məlumatlarınız silinəcək",
   "withdrawalMessage": "Hesabınızı bağlasanız, bütün məlumatlarınız silinəcək və eyni hesabla bir daha daxil ola bilməyəcəksiniz.",
   "recordPage": "Həb qəbulu qeydləri",
-  "doReLogin": "Yenidən daxil olun",
+  "doReLogin": "Zəhmət olmasa, yenidən daxil olun",
   "reLoginMessage": "Hesabı ləğv etməzdən əvvəl şəxsiyyətinizi təsdiq etmək üçün yenidən daxil olun. Yenidən daxil olduqdan sonra hesabın ləğvi prosesi avtomatik başlayacaq.",
   "updateAuthenticationAfterReLogin": "Autentifikasiya məlumatlarınızı yeniləmək üçün yenidən daxil olun",
   "menstruationPage": "Aybaşı Səhifəsi",

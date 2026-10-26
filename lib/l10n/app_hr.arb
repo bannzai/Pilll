@@ -84,7 +84,7 @@
   "userInformationWillBeDeleted": "Vaši korisnički podaci bit će izbrisani",
   "withdrawalMessage": "Ako izbrišete svoj račun, svi vaši podaci bit će izbrisani i više se nikada nećete moći prijaviti istim računom.",
   "recordPage": "Evidencija uzimanja pilula",
-  "doReLogin": "Molimo prijavite se ponovno",
+  "doReLogin": "Prijavite se ponovno, molimo",
   "reLoginMessage": "Prije brisanja računa molimo ponovno se prijavite radi potvrde identiteta. Nakon ponovne prijave automatski će započeti postupak brisanja računa.",
   "updateAuthenticationAfterReLogin": "Prijavite se ponovno da ažurirate podatke za autentifikaciju",
   "menstruationPage": "Menstruacija",

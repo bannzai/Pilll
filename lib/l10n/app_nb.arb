@@ -84,7 +84,7 @@
   "userInformationWillBeDeleted": "Brukeropplysningene dine blir slettet",
   "withdrawalMessage": "Hvis du sletter kontoen din, blir alle dataene dine slettet, og du kan aldri logge inn med den samme kontoen igjen.",
   "recordPage": "Pillehistorikk",
-  "doReLogin": "Vennligst logg inn på nytt",
+  "doReLogin": "Logg inn igjen, takk",
   "reLoginMessage": "Vennligst logg inn på nytt for å bekrefte identiteten din før avmelding. Avmeldingsprosessen starter automatisk etter at du har logget inn på nytt.",
   "updateAuthenticationAfterReLogin": "Logg inn på nytt for å oppdatere legitimasjonsopplysningene dine",
   "menstruationPage": "Menstruasjon",

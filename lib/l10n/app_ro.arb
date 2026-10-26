@@ -84,7 +84,7 @@
   "userInformationWillBeDeleted": "Informațiile tale de utilizator vor fi șterse",
   "withdrawalMessage": "Dacă îți ștergi contul, toate datele tale vor fi șterse și nu te vei mai putea conecta niciodată cu același cont.",
   "recordPage": "Evidența administrării pilulelor",
-  "doReLogin": "Vă rugăm să vă autentificați din nou",
+  "doReLogin": "Conectează-te din nou, te rugăm",
   "reLoginMessage": "Vă rugăm să vă reconectați pentru verificarea identității înainte de ștergerea contului. După reconectare, procesul de ștergere a contului va începe automat.",
   "updateAuthenticationAfterReLogin": "Vă rugăm să vă conectați din nou pentru a actualiza informațiile de autentificare",
   "menstruationPage": "Menstruație",

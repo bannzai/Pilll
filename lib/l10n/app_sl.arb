@@ -84,7 +84,7 @@
   "userInformationWillBeDeleted": "Vaši uporabniški podatki bodo izbrisani",
   "withdrawalMessage": "Če izbrišete svoj račun, bodo vsi vaši podatki izbrisani in z istim računom se ne boste mogli nikoli več prijaviti.",
   "recordPage": "Evidenca jemanja tablet",
-  "doReLogin": "Prosim, prijavite se znova",
+  "doReLogin": "Prosimo, znova se prijavite",
   "reLoginMessage": "Pred ukinitvijo računa se prosimo ponovno prijavite za preverjanje identitete. Po ponovni prijavi se bo samodejno začel postopek ukinitve računa.",
   "updateAuthenticationAfterReLogin": "Ponovno se prijavite za posodobitev avtentikacijskih podatkov",
   "menstruationPage": "Menstruacija",

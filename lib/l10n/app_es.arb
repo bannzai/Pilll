@@ -84,7 +84,7 @@
   "userInformationWillBeDeleted": "Se eliminará tu información de usuario",
   "withdrawalMessage": "Si eliminas tu cuenta, se borrarán todos tus datos y nunca podrás volver a iniciar sesión con la misma cuenta.",
   "recordPage": "Registro de píldoras",
-  "doReLogin": "Por favor, inicie sesión nuevamente",
+  "doReLogin": "Vuelve a iniciar sesión, por favor",
   "reLoginMessage": "Por favor, vuelve a iniciar sesión para verificar tu identidad antes de cancelar tu cuenta. Después de volver a iniciar sesión, el proceso de cancelación de cuenta comenzará automáticamente.",
   "updateAuthenticationAfterReLogin": "Inicia sesión nuevamente para actualizar tu información de autenticación",
   "menstruationPage": "Menstruación",

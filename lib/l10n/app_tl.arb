@@ -84,7 +84,7 @@
   "userInformationWillBeDeleted": "Mabubura ang inyong impormasyon bilang gumagamit",
   "withdrawalMessage": "Kapag binura ninyo ang inyong account, mabubura ang lahat ng inyong datos at hindi na kayo kailanman makakapag-log in gamit ang account na iyon.",
   "recordPage": "Talaan ng pag-inom ng pildoras",
-  "doReLogin": "Mangyaring mag-login muli",
+  "doReLogin": "Pakiusap, mag-log in po kayo muli",
   "reLoginMessage": "Mangyaring mag-log in muli para sa pagpapatunay ng pagkakakilanlan bago tanggalin ang account. Pagkatapos ng muling pag-log in, awtomatikong magsisimula ang proseso ng pagtanggal ng account.",
   "updateAuthenticationAfterReLogin": "Mag-login muli upang ma-update ang authentication credentials",
   "menstruationPage": "Regla",

@@ -84,7 +84,7 @@
   "userInformationWillBeDeleted": "S'eliminarà la teva informació d'usuari",
   "withdrawalMessage": "Si elimines el compte, s’esborraran totes les teves dades i no podràs tornar a iniciar sessió amb el mateix compte.",
   "recordPage": "Registre de píndoles",
-  "doReLogin": "Si us plau, torneu a iniciar sessió",
+  "doReLogin": "Torna a iniciar la sessió, si us plau",
   "reLoginMessage": "Abans de cancel·lar el compte, torneu a iniciar sessió per verificar la vostra identitat. Després de tornar a iniciar sessió, s'iniciarà automàticament el procés de cancel·lació del compte.",
   "updateAuthenticationAfterReLogin": "Torneu a iniciar sessió per actualitzar la informació d'autenticació",
   "menstruationPage": "Menstruació",

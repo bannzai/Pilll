@@ -84,7 +84,7 @@
   "userInformationWillBeDeleted": "פרטי המשתמש יימחקו",
   "withdrawalMessage": "מחיקת החשבון תמחק את כל הנתונים, ולא תהיה עוד אפשרות להתחבר באמצעות אותו חשבון.",
   "recordPage": "רישום נטילת גלולות",
-  "doReLogin": "אנא התחבר שוב",
+  "doReLogin": "יש להתחבר מחדש",
   "reLoginMessage": "אנא התחבר מחדש לאימות זהות לפני סגירת החשבון. לאחר התחברות מחודשת, תהליך סגירת החשבון יתחיל באופן אוטומטי",
   "updateAuthenticationAfterReLogin": "התחבר שוב לעדכון מידע האימות",
   "menstruationPage": "וסת",
