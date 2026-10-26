@@ -386,7 +386,7 @@
   "changePillDays": "Modifier le nombre de jours de prise de la pilule",
   "beginToEndNumbers": "n° {begin} ~ {end}",
   "resumeTaking": "Reprendre la pilule",
-  "changePausePeriod": "Modifier la période de repos",
+  "changePausePeriod": "Modifier la durée de la pause de la pilule",
   "changedPausePeriod": "Période de pause mise à jour",
   "changedToDate": "Changé en {date}",
   "quickRecordTakePillFailed": "L'enregistrement de votre dose a peut-être échoué",

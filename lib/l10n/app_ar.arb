@@ -386,7 +386,7 @@
   "changePillDays": "تغيير عدد أيام تناول الحبوب",
   "beginToEndNumbers": "رقم {begin} ~ {end}",
   "resumeTaking": "استئناف تناول الحبوب",
-  "changePausePeriod": "تغيير فترة الراحة من الحبوب",
+  "changePausePeriod": "تغيير مدة التوقف عن تناول الحبوب",
   "changedPausePeriod": "تم تغيير فترة الراحة من تناول الحبوب",
   "changedToDate": "تم التغيير إلى {date}",
   "quickRecordTakePillFailed": "قد يكون حفظ سجل الجرعة قد فشل",

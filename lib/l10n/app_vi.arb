@@ -386,7 +386,7 @@
   "changePillDays": "Thay đổi số ngày uống thuốc",
   "beginToEndNumbers": "số {begin} ~ {end}",
   "resumeTaking": "Uống thuốc trở lại",
-  "changePausePeriod": "Thay đổi thời kỳ nghỉ uống thuốc",
+  "changePausePeriod": "Thay đổi số ngày nghỉ uống thuốc",
   "changedPausePeriod": "Đã thay đổi kỳ nghỉ uống thuốc",
   "changedToDate": "Đã thay đổi thành {date}",
   "quickRecordTakePillFailed": "Việc ghi nhận việc uống thuốc có thể đã không thành công",

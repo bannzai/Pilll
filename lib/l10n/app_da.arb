@@ -386,7 +386,7 @@
   "changePillDays": "Skift antal dage med p-piller",
   "beginToEndNumbers": "nr. {begin} ~ {end}",
   "resumeTaking": "Genoptag p-pillerne",
-  "changePausePeriod": "Ændre pauseperiode",
+  "changePausePeriod": "Ændr længden på pillepausen",
   "changedPausePeriod": "Pauseperioden er blevet ændret",
   "changedToDate": "Ændret til {date}",
   "quickRecordTakePillFailed": "Pilleindtagelsen blev muligvis ikke registreret",

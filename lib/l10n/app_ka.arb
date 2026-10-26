@@ -386,7 +386,7 @@
   "changePillDays": "აბების მიღების დღეების რაოდენობის შეცვლა",
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "აბების მიღების განახლება",
-  "changePausePeriod": "მიღების შესვენების პერიოდის შეცვლა",
+  "changePausePeriod": "აბების მიღების შესვენების ხანგრძლივობის შეცვლა",
   "changedPausePeriod": "მიღების პაუზის პერიოდი შეიცვალა",
   "changedToDate": "{date}-ზე შეიცვალა",
   "quickRecordTakePillFailed": "დოზის აღრიცხვა შესაძლოა ვერ მოხერხდა",

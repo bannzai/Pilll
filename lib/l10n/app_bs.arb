@@ -386,7 +386,7 @@
   "changePillDays": "Promijenite broj dana uzimanja pilula",
   "beginToEndNumbers": "br. {begin} ~ {end}",
   "resumeTaking": "Nastavite uzimati pilule",
-  "changePausePeriod": "Promjena periode pauze",
+  "changePausePeriod": "Promjena trajanja pauze u uzimanju pilula",
   "changedPausePeriod": "Promijenjen je period pauze u uzimanju",
   "changedToDate": "Promijenjeno na {date}",
   "quickRecordTakePillFailed": "Zapisivanje uzimanja pilula možda nije uspjelo",

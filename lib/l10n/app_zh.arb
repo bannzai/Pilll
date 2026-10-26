@@ -386,7 +386,7 @@
   "changePillDays": "更改服药天数",
   "beginToEndNumbers": "{begin}号 ~ {end}号",
   "resumeTaking": "恢复服药",
-  "changePausePeriod": "更改休药期间",
+  "changePausePeriod": "更改停药期天数",
   "changedPausePeriod": "已修改停药期间",
   "changedToDate": "已更改为{date}",
   "quickRecordTakePillFailed": "服药记录可能保存失败",

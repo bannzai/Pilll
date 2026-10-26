@@ -386,7 +386,7 @@
   "changePillDays": "మాత్రలు తీసుకునే రోజుల సంఖ్యను మార్చండి",
   "beginToEndNumbers": "నం. {begin} ~ {end}",
   "resumeTaking": "మాత్రలు తీసుకోవడం మళ్లీ ప్రారంభించండి",
-  "changePausePeriod": "సేవన విరామ కాలం మార్పు",
+  "changePausePeriod": "మాత్రలు తీసుకునే విరామ వ్యవధిని మార్చండి",
   "changedPausePeriod": "సేవన విరామ కాలం మార్చబడింది",
   "changedToDate": "{date}కు మార్చబడింది",
   "quickRecordTakePillFailed": "మందు సేవన రికార్డు విఫలమైన అవకాశం ఉంది",

@@ -386,7 +386,7 @@
   "changePillDays": "ປ່ຽນຈຳນວນມື້ທີ່ກິນຢາເມັດ",
   "beginToEndNumbers": "ເລກ {begin} ~ {end}",
   "resumeTaking": "ກັບມາກິນຢາເມັດອີກຄັ້ງ",
-  "changePausePeriod": "ປ່ຽນແປງໄລຍະພັກກິນຢາ",
+  "changePausePeriod": "ປ່ຽນໄລຍະເວລາພັກກິນຢາເມັດ",
   "changedPausePeriod": "ໄດ້ປ່ຽນແປງໄລຍະຢຸດກິນຢາແລ້ວ",
   "changedToDate": "ປ່ຽນເປັນ {date} ແລ້ວ",
   "quickRecordTakePillFailed": "ບັນທຶກການກິນຢາອາດຈະລົ້ມເຫລວ",

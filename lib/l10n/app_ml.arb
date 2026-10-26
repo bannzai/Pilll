@@ -386,7 +386,7 @@
   "changePillDays": "ഗുളിക കഴിക്കുന്ന ദിവസങ്ങളുടെ എണ്ണം മാറ്റുക",
   "beginToEndNumbers": "നമ്പർ {begin} ~ {end}",
   "resumeTaking": "ഗുളിക കഴിക്കുന്നത് വീണ്ടും തുടങ്ങൂ",
-  "changePausePeriod": "മരുന്ന് ഇടവേള മാറ്റം",
+  "changePausePeriod": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേളയുടെ ദൈർഘ്യം മാറ്റുക",
   "changedPausePeriod": "സേവന വിരാമ കാലാവധി മാറ്റി",
   "changedToDate": "{date} ലേക്ക് മാറ്റി",
   "quickRecordTakePillFailed": "മരുന്ന് കഴിക്കുന്ന രേഖ പരാജയപ്പെട്ടിരിക്കാം",

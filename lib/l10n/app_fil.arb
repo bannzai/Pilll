@@ -386,7 +386,7 @@
   "changePillDays": "Baguhin ang bilang ng mga araw ng pag-inom ng pildoras",
   "beginToEndNumbers": "Blg. {begin} ~ {end}",
   "resumeTaking": "Ipagpatuloy ang pag-inom ng pildoras",
-  "changePausePeriod": "Baguhin ang Rest Period",
+  "changePausePeriod": "Baguhin ang tagal ng pahinga sa pag-inom ng pildoras",
   "changedPausePeriod": "Nabago na ang panahon ng pahinga sa pag-inom",
   "changedToDate": "Na-update sa {date}",
   "quickRecordTakePillFailed": "Maaaring nabigo ang pagtatala ng pag-inom",

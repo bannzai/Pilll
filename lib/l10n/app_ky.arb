@@ -386,7 +386,7 @@
   "changePillDays": "Таблетка ичүү күндөрүнүн санын өзгөртүңүз",
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Таблетка ичүүнү кайра баштаңыз",
-  "changePausePeriod": "Эс алуу мөөнөтүн өзгөртүү",
+  "changePausePeriod": "Таблетка ичүүдөгү тыныгуунун узактыгын өзгөртүңүз",
   "changedPausePeriod": "Дары ичүүдө демалыс мезгили өзгөртүлдү",
   "changedToDate": "{date}-га өзгөртүлдү",
   "quickRecordTakePillFailed": "Дары ичүү жазуусун сактоо жаңылышы болушу мүмкүн",

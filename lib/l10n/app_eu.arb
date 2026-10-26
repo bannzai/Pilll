@@ -386,7 +386,7 @@
   "changePillDays": "Aldatu pilula hartzeko egun kopurua",
   "beginToEndNumbers": "{begin}. ~ {end}. zenbakia",
   "resumeTaking": "Hasi berriro pilula hartzen",
-  "changePausePeriod": "Atseden-aldiaren aldaketa",
+  "changePausePeriod": "Pilulen atsedenaldiaren iraupena aldatu",
   "changedPausePeriod": "Pilula hartzeko atseden aldia aldatu da",
   "changedToDate": "{date} datara aldatu da",
   "quickRecordTakePillFailed": "Hartze erregistroak huts egin dezake",

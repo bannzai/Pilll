@@ -386,7 +386,7 @@
   "changePillDays": "Change pill-taking days",
   "beginToEndNumbers": "No. {begin} ~ {end}",
   "resumeTaking": "Resume taking the pill",
-  "changePausePeriod": "Change Rest Period",
+  "changePausePeriod": "Change pill break length",
   "changedPausePeriod": "Break period updated",
   "changedToDate": "Changed to {date}",
   "quickRecordTakePillFailed": "Recording your dose may have failed",

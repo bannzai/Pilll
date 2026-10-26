@@ -386,7 +386,7 @@
   "changePillDays": "Muuta pillereiden käyttöpäivien määrää",
   "beginToEndNumbers": "nro {begin} ~ {end}",
   "resumeTaking": "Aloita pillerien käyttö uudelleen",
-  "changePausePeriod": "Muuta taukojaksoa",
+  "changePausePeriod": "Muuta pilleritauon pituutta",
   "changedPausePeriod": "Ottotaukojakso muutettiin",
   "changedToDate": "Muutettu {date}:een",
   "quickRecordTakePillFailed": "Lääkkeenottomerkinnän tallentaminen on saattanut epäonnistua",

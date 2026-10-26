@@ -386,7 +386,7 @@
   "changePillDays": "Ubah jumlah hari minum pil",
   "beginToEndNumbers": "No. {begin} ~ {end}",
   "resumeTaking": "Mulai minum pil lagi",
-  "changePausePeriod": "Ubah Periode Istirahat",
+  "changePausePeriod": "Ubah durasi jeda minum pil",
   "changedPausePeriod": "Periode istirahat konsumsi telah diubah",
   "changedToDate": "Berhasil diubah ke {date}",
   "quickRecordTakePillFailed": "Catatan konsumsi mungkin gagal disimpan",

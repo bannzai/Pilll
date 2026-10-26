@@ -386,7 +386,7 @@
   "changePillDays": "Փոխեք հաբի ընդունման օրերի քանակը",
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Վերսկսեք հաբի ընդունումը",
-  "changePausePeriod": "Դադարի ժամկետի փոփоխում",
+  "changePausePeriod": "Փոխել հաբերի ընդունման դադարի տևողությունը",
   "changedPausePeriod": "Դեղի դադարի ժամանակահատվածը փոփոխվեց",
   "changedToDate": "Փոխված է {date}-ին",
   "quickRecordTakePillFailed": "Ընդունման գրանցումը ձախողվել է հնարավոր",

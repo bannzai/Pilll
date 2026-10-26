@@ -386,7 +386,7 @@
   "changePillDays": "Zmień liczbę dni przyjmowania pigułek",
   "beginToEndNumbers": "nr {begin} ~ {end}",
   "resumeTaking": "Wznów przyjmowanie pigułek",
-  "changePausePeriod": "Zmiana okresu przerwy",
+  "changePausePeriod": "Zmień długość przerwy w przyjmowaniu tabletek",
   "changedPausePeriod": "Okres przerwy w przyjmowaniu został zmieniony",
   "changedToDate": "Zmieniono na {date}",
   "quickRecordTakePillFailed": "Możliwe, że zapis przyjęcia leku się nie powiódł",

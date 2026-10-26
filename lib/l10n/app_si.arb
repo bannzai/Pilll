@@ -386,7 +386,7 @@
   "changePillDays": "පෙති ගන්නා දින ගණන වෙනස් කරන්න",
   "beginToEndNumbers": "අංක {begin} ~ {end}",
   "resumeTaking": "පෙති ගැනීම නැවත අරඹන්න",
-  "changePausePeriod": "සේවන විරාම කාලය වෙනස් කිරීම",
+  "changePausePeriod": "පෙති ගැනීමේ විරාමයේ කාලය වෙනස් කරන්න",
   "changedPausePeriod": "සේවන විරාම කාලය වෙනස් කරන ලදී",
   "changedToDate": "{date}ට වෙනස් කරන ලදී",
   "quickRecordTakePillFailed": "ඖෂධ ගැනීමේ සටහන සුරැකීම අසාර්ථක වූ හැකියාවක් ඇත",

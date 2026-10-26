@@ -386,7 +386,7 @@
   "changePillDays": "Mainiet tablešu lietošanas dienu skaitu",
   "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "Atsāciet lietot tabletes",
-  "changePausePeriod": "Pārtraukuma perioda maiņa",
+  "changePausePeriod": "Mainiet tablešu lietošanas pārtraukuma ilgumu",
   "changedPausePeriod": "Lietošanas pārtraukuma periods ir mainīts",
   "changedToDate": "Mainīts uz {date}",
   "quickRecordTakePillFailed": "Iespējams, medikamentu lietošanas ieraksts nav saglabājies",

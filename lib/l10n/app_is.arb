@@ -386,7 +386,7 @@
   "changePillDays": "Breyta fjölda daga sem pillan er tekin",
   "beginToEndNumbers": "nr. {begin} ~ {end}",
   "resumeTaking": "Byrja aftur að taka pilluna",
-  "changePausePeriod": "Breyta hvíldartímabili",
+  "changePausePeriod": "Breyta lengd pilluhléss",
   "changedPausePeriod": "Hvíldartímabil pillunnar hefur verið breytt",
   "changedToDate": "Breytt í {date}",
   "quickRecordTakePillFailed": "Inntökuskráning gæti hafa mistekist",

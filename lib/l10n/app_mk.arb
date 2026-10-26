@@ -386,7 +386,7 @@
   "changePillDays": "Промена на бројот на денови за земање таблета",
   "beginToEndNumbers": "бр. {begin} ~ {end}",
   "resumeTaking": "Продолжете со земање таблета",
-  "changePausePeriod": "Промена на периодот на пауза",
+  "changePausePeriod": "Промена на времетраењето на паузата од земање таблета",
   "changedPausePeriod": "Периодот на пауза од земање е променет",
   "changedToDate": "Променено е на {date}",
   "quickRecordTakePillFailed": "Записот за приемот можноже е неуспешен",

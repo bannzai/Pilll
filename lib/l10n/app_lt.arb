@@ -386,7 +386,7 @@
   "changePillDays": "Pakeiskite tablečių vartojimo dienų skaičių",
   "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "Vėl pradėkite vartoti tabletes",
-  "changePausePeriod": "Pertraukos laikotarpio keitimas",
+  "changePausePeriod": "Pakeiskite tablečių vartojimo pertraukos trukmę",
   "changedPausePeriod": "Pertraukos laikotarpis pakeistas",
   "changedToDate": "Pakeista į {date}",
   "quickRecordTakePillFailed": "Vaistų vartojimo įrašymas galėjo nepavykti",

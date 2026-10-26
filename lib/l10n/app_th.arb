@@ -386,7 +386,7 @@
   "changePillDays": "เปลี่ยนจำนวนวันที่ทานยา",
   "beginToEndNumbers": "หมายเลข {begin} ~ {end}",
   "resumeTaking": "กลับมาทานยาอีกครั้ง",
-  "changePausePeriod": "เปลี่ยนระยะหยุดยา",
+  "changePausePeriod": "เปลี่ยนระยะเวลาหยุดทานยา",
   "changedPausePeriod": "เปลี่ยนระยะเวลาหยุดรับประทานยาเรียบร้อยแล้ว",
   "changedToDate": "เปลี่ยนเป็น {date} แล้ว",
   "quickRecordTakePillFailed": "การบันทึกการรับประทานอาจล้มเหลว",

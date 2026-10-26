@@ -386,7 +386,7 @@
   "changePillDays": "Anzahl der Einnahmetage ändern",
   "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "Pilleneinnahme fortsetzen",
-  "changePausePeriod": "Einnahmepause ändern",
+  "changePausePeriod": "Dauer der Pillenpause ändern",
   "changedPausePeriod": "Die Einnahmepause wurde angepasst",
   "changedToDate": "Auf {date} geändert",
   "quickRecordTakePillFailed": "Die Einnahmeaufzeichnung konnte möglicherweise nicht gespeichert werden",

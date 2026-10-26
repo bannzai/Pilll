@@ -386,7 +386,7 @@
   "changePillDays": "गोली लेने के दिनों की संख्या बदलें",
   "beginToEndNumbers": "नं. {begin} ~ {end}",
   "resumeTaking": "गोली लेना फिर शुरू करें",
-  "changePausePeriod": "सेवन विराम अवधि बदलें",
+  "changePausePeriod": "गोली लेने के बीच विराम की अवधि बदलें",
   "changedPausePeriod": "दवा विराम अवधि बदल दी गई",
   "changedToDate": "{date} पर बदल दिया गया",
   "quickRecordTakePillFailed": "दवा सेवन का रिकॉर्ड सहेजने में असफलता हो सकती है",

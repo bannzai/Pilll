@@ -386,7 +386,7 @@
   "changePillDays": "Aantal dagen dat je de pil neemt wijzigen",
   "beginToEndNumbers": "nr. {begin} ~ {end}",
   "resumeTaking": "Begin weer met de pil",
-  "changePausePeriod": "Pauzeperiode wijzigen",
+  "changePausePeriod": "Duur van de stopweek wijzigen",
   "changedPausePeriod": "De pilpauze periode is gewijzigd",
   "changedToDate": "Gewijzigd naar {date}",
   "quickRecordTakePillFailed": "Het registreren van de inname is mogelijk mislukt",

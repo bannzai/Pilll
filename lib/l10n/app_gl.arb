@@ -386,7 +386,7 @@
   "changePillDays": "Cambia o número de días de toma da pílula",
   "beginToEndNumbers": "núm. {begin} ~ {end}",
   "resumeTaking": "Retoma a pílula",
-  "changePausePeriod": "Cambio do período de descanso da toma",
+  "changePausePeriod": "Cambiar a duración da pausa da pílula",
   "changedPausePeriod": "Cambiouse o período de descanso da toma",
   "changedToDate": "Cambiouse a {date}",
   "quickRecordTakePillFailed": "É posible que o rexistro da toma fallase",

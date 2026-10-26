@@ -386,7 +386,7 @@
   "changePillDays": "שינוי מספר ימי נטילת הגלולה",
   "beginToEndNumbers": "מס׳ {begin} ~ {end}",
   "resumeTaking": "לחזור לנטילת הגלולה",
-  "changePausePeriod": "שינוי תקופת ההפסקה",
+  "changePausePeriod": "שינוי משך ההפסקה בנטילת הגלולות",
   "changedPausePeriod": "תקופת ההפסקה עודכנה",
   "changedToDate": "עודכן ל-{date}",
   "quickRecordTakePillFailed": "ייתכן שרישום הנטילה נכשל",

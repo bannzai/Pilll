@@ -386,7 +386,7 @@
   "changePillDays": "Schimbă numărul de zile în care iei pilula",
   "beginToEndNumbers": "nr. {begin} ~ {end}",
   "resumeTaking": "Reia administrarea pilulei",
-  "changePausePeriod": "Schimbarea perioadei de pauză",
+  "changePausePeriod": "Schimbă durata pauzei de la pilulă",
   "changedPausePeriod": "Perioada de pauză a fost modificată",
   "changedToDate": "Schimbat la {date}",
   "quickRecordTakePillFailed": "Este posibil ca înregistrarea administrării să fi eșuat",

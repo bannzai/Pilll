@@ -386,7 +386,7 @@
   "changePillDays": "Tabletkani ichish kunlari sonini oʻzgartiring",
   "beginToEndNumbers": "{begin} ~ {end}-raqam",
   "resumeTaking": "Tabletkani qabul qilishni qayta boshlang",
-  "changePausePeriod": "Tanaffus davrini o'zgartirish",
+  "changePausePeriod": "Tabletka ichishdagi tanaffus muddatini oʻzgartiring",
   "changedPausePeriod": "Dori qabul qilish tanaffus muddati o'zgartirildi",
   "changedToDate": "{date}ga o'zgartirildi",
   "quickRecordTakePillFailed": "Qabul qilish yozuvi saqlashda xatolik yuz bergan bo'lishi mumkin",

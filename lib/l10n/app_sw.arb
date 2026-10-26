@@ -386,7 +386,7 @@
   "changePillDays": "Badilisha idadi ya siku za kumeza vidonge",
   "beginToEndNumbers": "namba {begin} ~ {end}",
   "resumeTaking": "Anza tena kumeza kidonge",
-  "changePausePeriod": "Badilisha Kipindi cha Kuacha Dawa",
+  "changePausePeriod": "Badilisha muda wa mapumziko ya kumeza vidonge",
   "changedPausePeriod": "Kipindi cha mapumziko kimebadilishwa",
   "changedToDate": "Imebadilishwa kuwa {date}",
   "quickRecordTakePillFailed": "Inawezekana rekodi ya kumeza dawa haijahifadhiwa",

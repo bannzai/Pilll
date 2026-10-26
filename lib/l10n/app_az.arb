@@ -386,7 +386,7 @@
   "changePillDays": "Həb qəbul etdiyiniz günlərin sayını dəyişin",
   "beginToEndNumbers": "{begin}–{end} nömrəli",
   "resumeTaking": "Həb qəbuluna yenidən başlayın",
-  "changePausePeriod": "Qəbul fasiləsinin dəyişdirilməsi",
+  "changePausePeriod": "Həbə fasilə müddətini dəyişin",
   "changedPausePeriod": "Qəbul fasiləsi dövrü dəyişdirildi",
   "changedToDate": "{date}-ə dəyişdirildi",
   "quickRecordTakePillFailed": "Qəbul qeydi saxlanmamış ola bilər",

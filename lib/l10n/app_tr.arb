@@ -386,7 +386,7 @@
   "changePillDays": "Hap kullanma gün sayısını değiştirin",
   "beginToEndNumbers": "{begin} ~ {end} numara",
   "resumeTaking": "Hapı almaya yeniden başlayın",
-  "changePausePeriod": "İlaç Arası Dönem Değişikliği",
+  "changePausePeriod": "Hap kullanma arasının süresini değiştirin",
   "changedPausePeriod": "Ara verme dönemi değiştirildi",
   "changedToDate": "{date} tarihine değiştirildi",
   "quickRecordTakePillFailed": "İlaç alım kaydınız başarısız olmuş olabilir",

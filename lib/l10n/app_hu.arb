@@ -386,7 +386,7 @@
   "changePillDays": "A tablettaszedési napok számának módosítása",
   "beginToEndNumbers": "{begin}. ~ {end}.",
   "resumeTaking": "A tabletta szedésének folytatása",
-  "changePausePeriod": "Szünet időszak módosítása",
+  "changePausePeriod": "A tablettaszedési szünet hosszának módosítása",
   "changedPausePeriod": "A szünet időszakot módosítottuk",
   "changedToDate": "Módosítva: {date}",
   "quickRecordTakePillFailed": "A tabletta bevételének rögzítése sikertelen lehetett",

@@ -386,7 +386,7 @@
   "changePillDays": "गोळी घेण्याच्या दिवसांची संख्या बदला",
   "beginToEndNumbers": "क्र. {begin} ~ {end}",
   "resumeTaking": "गोळी पुन्हा घेण्यास सुरुवात करा",
-  "changePausePeriod": "सेवन विराम कालावधी बदल",
+  "changePausePeriod": "गोळ्या घेण्याच्या विश्रांतीचा कालावधी बदला",
   "changedPausePeriod": "सेवन विश्राम कालावधी बदलला",
   "changedToDate": "{date} मध्ये बदलले",
   "quickRecordTakePillFailed": "सेवन रेकॉर्ड सेव्ह करण्यात अयशस्वी झाले असण्याची शक्यता आहे",

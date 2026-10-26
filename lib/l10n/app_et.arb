@@ -386,7 +386,7 @@
   "changePillDays": "Muuda pilli võtmise päevade arvu",
   "beginToEndNumbers": "nr {begin} ~ {end}",
   "resumeTaking": "Jätka pilli võtmist",
-  "changePausePeriod": "Pillipauside muutmine",
+  "changePausePeriod": "Muuda pillipausi pikkust",
   "changedPausePeriod": "Võtmise pausperiood on muudetud",
   "changedToDate": "Muudetud {date}-le",
   "quickRecordTakePillFailed": "Manustamise salvestamine võis ebaõnnestuda",

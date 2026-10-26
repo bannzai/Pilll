@@ -386,7 +386,7 @@
   "changePillDays": "Shintsha inani lezinsuku zokuphuza amaphilisi",
   "beginToEndNumbers": "inombolo {begin} ~ {end}",
   "resumeTaking": "Sicela uqale futhi ukuphuza iphilisi",
-  "changePausePeriod": "Shintsha Isikhathi Sokuphumula",
+  "changePausePeriod": "Shintsha ubude bekhefu lokuphuza amaphilisi",
   "changedPausePeriod": "Isikhathi sokuphumula sishintshiwe",
   "changedToDate": "Kushintshiwe ku-{date}",
   "quickRecordTakePillFailed": "Kungenzeka ukuthi irekhodi lokuthatha amaphilisi lihlulekile",

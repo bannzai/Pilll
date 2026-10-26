@@ -386,7 +386,7 @@
   "changePillDays": "Изменить число дней приёма таблеток",
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Возобновите приём таблетки",
-  "changePausePeriod": "Изменение периода перерыва",
+  "changePausePeriod": "Изменить длительность перерыва в приёме таблеток",
   "changedPausePeriod": "Период перерыва в приеме изменен",
   "changedToDate": "Изменено на {date}",
   "quickRecordTakePillFailed": "Возможно, не удалось сохранить запись о приеме таблеток",

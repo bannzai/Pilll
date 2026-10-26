@@ -386,7 +386,7 @@
   "changePillDays": "تغییر تعداد روزهای مصرف قرص",
   "beginToEndNumbers": "شمارهٔ {begin} ~ {end}",
   "resumeTaking": "شروع دوباره مصرف قرص",
-  "changePausePeriod": "تغییر دوره توقف مصرف",
+  "changePausePeriod": "تغییر مدت وقفه مصرف قرص",
   "changedPausePeriod": "دوره استراحت مصرف تغییر داده شد",
   "changedToDate": "به {date} تغییر داده شد",
   "quickRecordTakePillFailed": "ممکن است ثبت مصرف ناموفق بوده باشد",

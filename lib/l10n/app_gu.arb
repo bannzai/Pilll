@@ -386,7 +386,7 @@
   "changePillDays": "ગોળી લેવાના દિવસોની સંખ્યા બદલો",
   "beginToEndNumbers": "નં. {begin} ~ {end}",
   "resumeTaking": "ગોળી લેવાનું ફરી શરૂ કરો",
-  "changePausePeriod": "સેવન વિરામકાળ બદલાવ",
+  "changePausePeriod": "ગોળી લેવાના વિરામનો સમયગાળો બદલો",
   "changedPausePeriod": "સેવન વિરામ અવધિ બદલી દીધી છે",
   "changedToDate": "{date} માં બદલ્યું",
   "quickRecordTakePillFailed": "દવા લેવાનો રેકોર્ડ નિષ્ફળ થવાની શક્યતા છે",
