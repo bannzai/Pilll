@@ -350,7 +350,7 @@
   "diaryRecord": "הוספת רשומה ליומן",
   "scheduleRecord": "הוספת אירוע",
   "previousPillSheetGroupNotFound": "עדיין אין קבוצה קודמת של חפיסת גלולות",
-  "withPillSheetCount": "{number} דפים",
+  "withPillSheetCount": "{number} חפיסות גלולות",
   "connectionError": "החיבור לאינטרנט נראה לא יציב. אנא המתינו ונסו שוב",
   "unknownErrorAndRetryAfter": "אירעה שגיאה. אנא נסה שוב לאחר זמן מה",
   "errorOccurred": "התרחשה שגיאה",

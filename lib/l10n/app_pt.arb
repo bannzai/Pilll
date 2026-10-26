@@ -350,7 +350,7 @@
   "diaryRecord": "Adicionar anotação ao diário",
   "scheduleRecord": "Adicionar evento",
   "previousPillSheetGroupNotFound": "Ainda não há um grupo de cartela anterior",
-  "withPillSheetCount": "{number} cartelas",
+  "withPillSheetCount": "{number} cartelas de pílulas",
   "connectionError": "A conexão de rede parece instável. Aguarde um momento e tente novamente.",
   "unknownErrorAndRetryAfter": "Ocorreu um erro. Aguarde um momento e tente novamente.",
   "errorOccurred": "Ocorreu um erro",

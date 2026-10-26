@@ -350,7 +350,7 @@
   "diaryRecord": "Voeg dagboekinskrywing by",
   "scheduleRecord": "Voeg 'n afspraak by",
   "previousPillSheetGroupNotFound": "Daar is nog nie ’n vorige pilstrokiegroep nie",
-  "withPillSheetCount": "{number} stukke",
+  "withPillSheetCount": "{number} pilvelle",
   "connectionError": "Dit lyk asof die netwerkverbinding onstabiel is. Probeer asseblief weer later.",
   "unknownErrorAndRetryAfter": "'n Fout het voorgekom. Probeer asseblief weer later.",
   "errorOccurred": "'n Fout het voorgekom",

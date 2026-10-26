@@ -350,7 +350,7 @@
   "diaryRecord": "Tambah catatan harian",
   "scheduleRecord": "Tambah jadwal",
   "previousPillSheetGroupNotFound": "Grup strip pil sebelumnya belum ada",
-  "withPillSheetCount": "{number} lembar",
+  "withPillSheetCount": "{number} lembar pil",
   "connectionError": "Koneksi jaringan tampaknya tidak stabil. Mohon tunggu sebentar dan coba lagi.",
   "unknownErrorAndRetryAfter": "Terjadi kesalahan. Silakan tunggu sebentar dan coba lagi.",
   "errorOccurred": "Terjadi kesalahan",

@@ -350,7 +350,7 @@
   "diaryRecord": "Ajouter une entrée au journal",
   "scheduleRecord": "Ajouter un événement",
   "previousPillSheetGroupNotFound": "Il n’y a pas encore de groupe de plaquettes précédent",
-  "withPillSheetCount": "Feuilles {number}",
+  "withPillSheetCount": "{number} plaquettes de pilules",
   "connectionError": "Votre connexion semble instable. Veuillez réessayer plus tard.",
   "unknownErrorAndRetryAfter": "Une erreur s'est produite. Veuillez réessayer plus tard.",
   "errorOccurred": "Une erreur s'est produite",

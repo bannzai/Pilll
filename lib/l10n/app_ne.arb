@@ -350,7 +350,7 @@
   "diaryRecord": "डायरीमा टिपोट थप्नुहोस्",
   "scheduleRecord": "कार्यक्रम थप्नुहोस्",
   "previousPillSheetGroupNotFound": "अघिल्लो चक्की पत्ता समूह अझै छैन",
-  "withPillSheetCount": "{number} ओटा",
+  "withPillSheetCount": "{number} चक्कीका पत्ता",
   "connectionError": "नेटवर्क कनेक्शन अस्थिर देखिन्छ। केही समय पछि फेरि प्रयास गर्नुहोस्।",
   "unknownErrorAndRetryAfter": "त्रुटि भयो। केही समय पछि फेरि प्रयास गर्नुहोस्।",
   "errorOccurred": "त्रुटि भएको छ",

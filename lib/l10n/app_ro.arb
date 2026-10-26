@@ -350,7 +350,7 @@
   "diaryRecord": "Adaugă o însemnare în jurnal",
   "scheduleRecord": "Adaugă un eveniment",
   "previousPillSheetGroupNotFound": "Nu există încă un grup anterior de blister",
-  "withPillSheetCount": "{number} blistere",
+  "withPillSheetCount": "{number} folii de pilule",
   "connectionError": "Conexiunea pare instabilă. Vă rugăm să încercați din nou mai târziu.",
   "unknownErrorAndRetryAfter": "A apărut o eroare. Încercați din nou mai târziu.",
   "errorOccurred": "A apărut o eroare",

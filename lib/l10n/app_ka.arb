@@ -350,7 +350,7 @@
   "diaryRecord": "დღიურში ჩანაწერის დამატება",
   "scheduleRecord": "ღონისძიების დამატება",
   "previousPillSheetGroupNotFound": "აბების ბლისტერის წინა ჯგუფი ჯერ არ არსებობს",
-  "withPillSheetCount": "{number} ფურცელი",
+  "withPillSheetCount": "{number} აბების ფირფიტა",
   "connectionError": "ქსელური კავშირი არასტაბილურია. გთხოვთ, დაელოდოთ და სცადეთ ხელახლა.",
   "unknownErrorAndRetryAfter": "შეცდომა მოხდა. ცოტა ხნის შემდეგ ისევ სცადეთ",
   "errorOccurred": "შეცდომა მოხდა",

@@ -350,7 +350,7 @@
   "diaryRecord": "Дадаць запіс у дзённік",
   "scheduleRecord": "Дадаць запланаваную падзею",
   "previousPillSheetGroupNotFound": "Папярэдняй групы блістар яшчэ няма",
-  "withPillSheetCount": "{number} лістоў",
+  "withPillSheetCount": "{number} блістараў",
   "connectionError": "Сувязь нестабільная. Пачакайце і паспрабуйце зноў.",
   "unknownErrorAndRetryAfter": "Адбылася памылка. Пачакайце крыху і паспрабуйце яшчэ раз",
   "errorOccurred": "Адбылася памылка",

@@ -350,7 +350,7 @@
   "diaryRecord": "Legg til dagboknotat",
   "scheduleRecord": "Legg til avtale",
   "previousPillSheetGroupNotFound": "Det finnes ingen tidligere pillebrettgruppe ennå",
-  "withPillSheetCount": "{number} pakker",
+  "withPillSheetCount": "{number} pillebrett",
   "connectionError": "Det ser ut til at nettverkstilkoblingen er ustabil. Vennligst vent litt og prøv igjen.",
   "unknownErrorAndRetryAfter": "Det oppstod en feil. Vennligst prøv igjen senere.",
   "errorOccurred": "Det oppstod en feil",

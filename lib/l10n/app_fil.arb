@@ -350,7 +350,7 @@
   "diaryRecord": "Magdagdag ng tala sa talaarawan",
   "scheduleRecord": "Magdagdag ng iskedyul",
   "previousPillSheetGroupNotFound": "Wala pang naunang grupo ng pakete ng pildoras",
-  "withPillSheetCount": "{number} piraso",
+  "withPillSheetCount": "{number} pakete ng pildoras",
   "connectionError": "Mukhang may problema sa koneksyon. Subukan ulit mamaya.",
   "unknownErrorAndRetryAfter": "May naganap na error. Mag-antay ng ilang sandali at subukan muli.",
   "errorOccurred": "Nagkaroon ng error",

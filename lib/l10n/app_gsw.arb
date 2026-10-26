@@ -350,7 +350,7 @@
   "diaryRecord": "Iitrag is Tagebuech tue",
   "scheduleRecord": "En Termin iiträge",
   "previousPillSheetGroupNotFound": "Es git no kei früeneri Pilleblistergruppe",
-  "withPillSheetCount": "{number} Blättli",
+  "withPillSheetCount": "{number} Pilleblister",
   "connectionError": "D Netzwerkverbindig isch unstabil. Bitte warte churz und versuech's nomol.",
   "unknownErrorAndRetryAfter": "Es isch en Fähler passiert. Bitte versuech es nach ere Ziit nommal.",
   "errorOccurred": "Es isch en Fehler ufträte",

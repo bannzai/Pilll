@@ -350,7 +350,7 @@
   "diaryRecord": "Добавете запис в дневника",
   "scheduleRecord": "Добавяне на събитие",
   "previousPillSheetGroupNotFound": "Все още няма предишна група блистер",
-  "withPillSheetCount": "{number} опаковки",
+  "withPillSheetCount": "{number} блистера",
   "connectionError": "Мрежовата връзка е нестабилна. Моля, опитайте отново след малко.",
   "unknownErrorAndRetryAfter": "Възникна грешка. Моля, изчакайте малко и опитайте отново.",
   "errorOccurred": "Възникна грешка",

@@ -350,7 +350,7 @@
   "diaryRecord": "Bæta við dagbókarfærslu",
   "scheduleRecord": "Bæta við viðburði",
   "previousPillSheetGroupNotFound": "Fyrri pilluspjaldshópur er ekki til enn",
-  "withPillSheetCount": "{number} blöð",
+  "withPillSheetCount": "{number} pilluspjöld",
   "connectionError": "Nettengingin virðist vera óstöðug. Vinsamlegast reyndu aftur eftir smá stund.",
   "unknownErrorAndRetryAfter": "Villa átti sér stað. Reyndu aftur eftir smá stund.",
   "errorOccurred": "Villa hefur komið upp",

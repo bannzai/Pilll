@@ -350,7 +350,7 @@
   "diaryRecord": "Sicela wengeze okubhalwe kudayari",
   "scheduleRecord": "Sicela wengeze umcimbi",
   "previousPillSheetGroupNotFound": "Alikabi khona iqembu langaphambilini leshidi lamaphilisi",
-  "withPillSheetCount": "{number} amashidi",
+  "withPillSheetCount": "{number} amaphakethe amaphilisi",
   "connectionError": "Kubonakala sengathi uxhumano lunenkinga. Sicela uzame futhi kamuva.",
   "unknownErrorAndRetryAfter": "Iphutha lenzekile. Sicela ulinde isikhashana bese uzama futhi.",
   "errorOccurred": "Iphutha lenzekile",

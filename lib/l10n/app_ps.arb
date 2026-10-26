@@ -350,7 +350,7 @@
   "diaryRecord": "د ورځني یادښت لیکنه زیاته کړئ",
   "scheduleRecord": "پلان شوی کار ورزیات کړئ",
   "previousPillSheetGroupNotFound": "د ګولیو پاڼ پخوانۍ ډله تر اوسه نشته",
-  "withPillSheetCount": "{number} ټوټې",
+  "withPillSheetCount": "{number} د ګولیو پاڼې",
   "connectionError": "د شبکې اړیکې بې ثباته ښکاري. مهرباني وکړئ یو څه وخت وروسته بیا هڅه وکړئ",
   "unknownErrorAndRetryAfter": "یوه خرابي رامنځته شوې. مهرباني وکړئ د یو څه وخت وروسته بیا هڅه وکړئ.",
   "errorOccurred": "خرابۍ پیښه شوه",

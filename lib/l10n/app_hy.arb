@@ -350,7 +350,7 @@
   "diaryRecord": "Ավելացնել օրագրի գրառում",
   "scheduleRecord": "Ավելացնել իրադարձություն",
   "previousPillSheetGroupNotFound": "Նախորդ հաբերի բլիստեր խումբը դեռ գոյություն չունի",
-  "withPillSheetCount": "{number} բլիթ",
+  "withPillSheetCount": "{number} դեղահաբերի թիթեղիկ",
   "connectionError": "Ցանցային կապը անկայուն է թվում: Խնդրում ենք սպասել մի փոքր և կրկին փորձել:",
   "unknownErrorAndRetryAfter": "Սխալ է տեղի ունեցել: Մի փոքր սպասեք և կրկին փորձեք:",
   "errorOccurred": "Սխալ է տեղի ունեցել",

@@ -350,7 +350,7 @@
   "diaryRecord": "Pridajte záznam do denníka",
   "scheduleRecord": "Pridajte udalosť",
   "previousPillSheetGroupNotFound": "Predchádzajúca skupina blistov zatiaľ neexistuje",
-  "withPillSheetCount": "{number} balení",
+  "withPillSheetCount": "{number} blistrov tabletiek",
   "connectionError": "Pripojenie k internetu je nestabilné. Skúste to prosím znova o chvíľu.",
   "unknownErrorAndRetryAfter": "Vyskytla sa chyba. Skúste to znovu za chvíľu.",
   "errorOccurred": "Došlo k chybe",

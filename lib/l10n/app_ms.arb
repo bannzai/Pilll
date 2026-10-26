@@ -350,7 +350,7 @@
   "diaryRecord": "Tambah catatan diari",
   "scheduleRecord": "Tambah acara",
   "previousPillSheetGroupNotFound": "Kumpulan pek pil sebelumnya belum ada",
-  "withPillSheetCount": "{number} helai",
+  "withPillSheetCount": "{number} keping pil",
   "connectionError": "Nampaknya sambungan rangkaian tidak stabil. Sila cuba lagi selepas beberapa ketika.",
   "unknownErrorAndRetryAfter": "Ralat telah berlaku. Sila tunggu sebentar dan cuba lagi.",
   "errorOccurred": "Ralat telah berlaku",

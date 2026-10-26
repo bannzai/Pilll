@@ -350,7 +350,7 @@
   "diaryRecord": "Afegeix una entrada al diari",
   "scheduleRecord": "Afegeix un esdeveniment",
   "previousPillSheetGroupNotFound": "Encara no hi ha cap grup de blíster anterior",
-  "withPillSheetCount": "{number} plaquetes",
+  "withPillSheetCount": "{number} blísters",
   "connectionError": "La connexió de xarxa sembla inestable. Si us plau, espereu una estona i torneu-ho a intentar.",
   "unknownErrorAndRetryAfter": "S'ha produït un error. Espereu una estona i torneu-ho a provar.",
   "errorOccurred": "S'ha produït un error",

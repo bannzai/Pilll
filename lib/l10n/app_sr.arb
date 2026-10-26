@@ -350,7 +350,7 @@
   "diaryRecord": "Додајте запис у дневник",
   "scheduleRecord": "Додајте догађај",
   "previousPillSheetGroupNotFound": "Претходна група блистер још не постоји",
-  "withPillSheetCount": "{number} листова",
+  "withPillSheetCount": "{number} блистера таблета",
   "connectionError": "Veza sa internetom je nestabilna. Molimo sačekajte malo i pokušajte ponovo.",
   "unknownErrorAndRetryAfter": "Došlo je do greške. Molimo pokušajte kasnije.",
   "errorOccurred": "Došlo je do greške",

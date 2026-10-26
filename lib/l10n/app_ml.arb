@@ -350,7 +350,7 @@
   "diaryRecord": "ഡയറിയിൽ കുറിപ്പ് ചേർക്കുക",
   "scheduleRecord": "പരിപാടി ചേർക്കുക",
   "previousPillSheetGroupNotFound": "മുമ്പത്തെ ഗുളിക സ്ട്രിപ്പ ഗ്രൂപ്പ് ഇതുവരെ ഇല്ല",
-  "withPillSheetCount": "{number} ഷീറ്റ്",
+  "withPillSheetCount": "{number} ഗുളിക സ്ട്രിപ്പുകൾ",
   "connectionError": "നെറ്റ്‌വർക്ക് കണക്ഷൻ അസ്ഥിരമാണെന്ന് തോന്നുന്നു. കുറച്ച് സമയം കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കുക",
   "unknownErrorAndRetryAfter": "ഒരു പിശക് സംഭവിച്ചു. കുറച്ച് സമയം കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കുക",
   "errorOccurred": "പിശകുണ്ടായി",

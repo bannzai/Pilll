@@ -350,7 +350,7 @@
   "diaryRecord": "Lägg till dagboksanteckning",
   "scheduleRecord": "Lägg till händelse",
   "previousPillSheetGroupNotFound": "Det finns ingen tidigare p-pillerkarta-grupp ännu",
-  "withPillSheetCount": "{number} blister",
+  "withPillSheetCount": "{number} pillerkartor",
   "connectionError": "Det verkar vara problem med nätverksanslutningen. Vänta en stund och försök igen.",
   "unknownErrorAndRetryAfter": "Ett fel uppstod. Försök igen om ett tag.",
   "errorOccurred": "Ett fel har uppstått",

@@ -350,7 +350,7 @@
   "diaryRecord": "Aggiungi una voce al diario",
   "scheduleRecord": "Aggiungi un evento",
   "previousPillSheetGroupNotFound": "Non c’è ancora un gruppo di blister precedente",
-  "withPillSheetCount": "{number} blister",
+  "withPillSheetCount": "{number} blister di pillole",
   "connectionError": "La connessione sembra instabile. Riprova tra qualche momento.",
   "unknownErrorAndRetryAfter": "Si è verificato un errore. Riprova tra qualche istante.",
   "errorOccurred": "Si è verificato un errore",

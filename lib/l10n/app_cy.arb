@@ -350,7 +350,7 @@
   "diaryRecord": "Ychwanegwch gofnod dyddiadur",
   "scheduleRecord": "Ychwanegwch ddigwyddiad",
   "previousPillSheetGroupNotFound": "Nid oes grŵp stribed pils blaenorol eto",
-  "withPillSheetCount": "{number} dalen",
+  "withPillSheetCount": "{number} pecyn o bilsen",
   "connectionError": "Mae'r cysylltiad rhwydwaith yn ymddangos yn ansefydlog. Rhowch gynnig arall arni ar ôl ychydig o amser.",
   "unknownErrorAndRetryAfter": "Mae gwall wedi digwydd. Rhowch gynnig arall arni yn nes ymlaen.",
   "errorOccurred": "Mae gwall wedi digwydd",

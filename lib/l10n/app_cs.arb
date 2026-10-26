@@ -350,7 +350,7 @@
   "diaryRecord": "Přidat záznam do deníku",
   "scheduleRecord": "Přidat událost",
   "previousPillSheetGroupNotFound": "Předchozí skupina blistrů zatím neexistuje",
-  "withPillSheetCount": "{number} balení",
+  "withPillSheetCount": "{number} platíček",
   "connectionError": "Připojení k síti je nestabilní. Zkuste to prosím později.",
   "unknownErrorAndRetryAfter": "Došlo k chybě. Zkuste to prosím znovu za chvíli.",
   "errorOccurred": "Došlo k chybě",

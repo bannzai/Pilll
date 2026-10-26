@@ -350,7 +350,7 @@
   "diaryRecord": "Lisää päiväkirjamerkintä",
   "scheduleRecord": "Lisää tapahtuma",
   "previousPillSheetGroupNotFound": "Edellistä pilleriliuskaryhmää ei vielä ole",
-  "withPillSheetCount": "{number} arkkia",
+  "withPillSheetCount": "{number} pillerilevyä",
   "connectionError": "Verkkoyhteys vaikuttaa epävakaalta. Odota hetki ja yritä uudelleen.",
   "unknownErrorAndRetryAfter": "Tapahtui virhe. Yritä uudelleen hetken kuluttua.",
   "errorOccurred": "Tapahtui virhe",

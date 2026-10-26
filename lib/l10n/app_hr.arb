@@ -350,7 +350,7 @@
   "diaryRecord": "Dodajte zapis u dnevnik",
   "scheduleRecord": "Dodajte događaj",
   "previousPillSheetGroupNotFound": "Prethodna grupa blistera još ne postoji",
-  "withPillSheetCount": "{number} paketa",
+  "withPillSheetCount": "{number} blistera pilula",
   "connectionError": "Čini se da je internetska veza nestabilna. Molimo pokušajte ponovo kasnije.",
   "unknownErrorAndRetryAfter": "Došlo je do greške. Molimo pokušajte ponovno kasnije.",
   "errorOccurred": "Dogodila se greška",

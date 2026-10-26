@@ -350,7 +350,7 @@
   "diaryRecord": "Naplóbejegyzés hozzáadása",
   "scheduleRecord": "Esemény hozzáadása",
   "previousPillSheetGroupNotFound": "Még nincs korábbi tablettacsomag-csoport",
-  "withPillSheetCount": "{number} darab",
+  "withPillSheetCount": "{number} levél tabletta",
   "connectionError": "A hálózati kapcsolat instabil. Kérjük, próbálja újra később.",
   "unknownErrorAndRetryAfter": "Hiba történt. Kérjük, próbálja újra később.",
   "errorOccurred": "Hiba történt",

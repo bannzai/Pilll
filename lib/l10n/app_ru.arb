@@ -350,7 +350,7 @@
   "diaryRecord": "Добавить запись в дневник",
   "scheduleRecord": "Добавить событие",
   "previousPillSheetGroupNotFound": "Предыдущей группы блистеров пока нет",
-  "withPillSheetCount": "{number} упаковок",
+  "withPillSheetCount": "{number} блистеров",
   "connectionError": "Похоже, что сетевое соединение нестабильно. Пожалуйста, подождите и попробуйте снова.",
   "unknownErrorAndRetryAfter": "Произошла ошибка. Попробуйте еще раз через некоторое время",
   "errorOccurred": "Произошла ошибка",

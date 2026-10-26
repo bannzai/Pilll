@@ -350,7 +350,7 @@
   "diaryRecord": "Προσθήκη καταχώρισης στο ημερολόγιο",
   "scheduleRecord": "Προσθήκη προγραμματισμένου γεγονότος",
   "previousPillSheetGroupNotFound": "Δεν υπάρχει ακόμη προηγούμενη ομάδα για την καρτέλα χαπιών",
-  "withPillSheetCount": "{number} φύλλα",
+  "withPillSheetCount": "{number} καρτέλες χαπιών",
   "connectionError": "Η σύνδεση δικτύου φαίνεται ασταθής. Παρακαλούμε περιμένετε λίγο και δοκιμάστε ξανά",
   "unknownErrorAndRetryAfter": "Παρουσιάστηκε σφάλμα. Παρακαλώ δοκιμάστε ξανά σε λίγο.",
   "errorOccurred": "Παρουσιάστηκε σφάλμα",

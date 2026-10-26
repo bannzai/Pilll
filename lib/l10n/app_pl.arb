@@ -350,7 +350,7 @@
   "diaryRecord": "Dodaj wpis do dziennika",
   "scheduleRecord": "Dodaj wydarzenie",
   "previousPillSheetGroupNotFound": "Poprzednia grupa blistów jeszcze nie istnieje",
-  "withPillSheetCount": "{number} opakowań",
+  "withPillSheetCount": "{number} blistrów",
   "connectionError": "Połączenie z internetem wydaje się niestabilne. Spróbuj ponownie za chwilę.",
   "unknownErrorAndRetryAfter": "Wystąpił błąd. Spróbuj ponownie po chwili.",
   "errorOccurred": "Wystąpił błąd",

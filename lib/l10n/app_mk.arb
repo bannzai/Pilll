@@ -350,7 +350,7 @@
   "diaryRecord": "Запис во дневник",
   "scheduleRecord": "Додавање на настан",
   "previousPillSheetGroupNotFound": "Сè уште нема претходна група блистер",
-  "withPillSheetCount": "{number} листови",
+  "withPillSheetCount": "{number} блистери со таблети",
   "connectionError": "Мрежната врска изгледа нестабилна. Ве молиме почекајте малку и обидете се повторно.",
   "unknownErrorAndRetryAfter": "Се случи грешка. Ве молиме обидете се повторно подоцна.",
   "errorOccurred": "Се случи грешка",

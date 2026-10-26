@@ -350,7 +350,7 @@
   "diaryRecord": "Өдрийн тэмдэглэлд бичлэг нэмнэ үү",
   "scheduleRecord": "Товлосон зүйл нэмнэ үү",
   "previousPillSheetGroupNotFound": "Өмнөх эмийн блистер бүлэг хараахан байхгүй байна",
-  "withPillSheetCount": "{number} хуудас",
+  "withPillSheetCount": "{number} ширхэг эмийн блистер",
   "connectionError": "Интернет холболт тогтвооргүй байна. Түр хүлээгээд дахин оролдоно уу.",
   "unknownErrorAndRetryAfter": "Алдаа гарлаа. Түр хүлээгээд дахин оролдоно уу.",
   "errorOccurred": "Алдаа гарлаа",

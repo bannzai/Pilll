@@ -350,7 +350,7 @@
   "diaryRecord": "Tagebucheintrag hinzufügen",
   "scheduleRecord": "Termin hinzufügen",
   "previousPillSheetGroupNotFound": "Es gibt noch keine vorherige Pillenblistergruppe",
-  "withPillSheetCount": "{number} Packungen",
+  "withPillSheetCount": "{number} Pillenblister",
   "connectionError": "Ihre Internetverbindung scheint instabil zu sein. Bitte versuchen Sie es später erneut.",
   "unknownErrorAndRetryAfter": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.",
   "errorOccurred": "Ein Fehler ist aufgetreten",

@@ -350,7 +350,7 @@
   "diaryRecord": "డైరీలో నమోదు చేయండి",
   "scheduleRecord": "కార్యక్రమాన్ని జోడించండి",
   "previousPillSheetGroupNotFound": "మునుపటి మాత్రల స్ట్రిప్ సమూహం ఇంకా లేదు",
-  "withPillSheetCount": "{number}షీట్లు",
+  "withPillSheetCount": "{number} మాత్రల స్ట్రిప్‌లు",
   "connectionError": "ఇంటర్నెట్ కనెక్షన్ అస్థిరంగా ఉంది. కొంత సమయం తర్వాత మళ్లీ ప్రయత్నించండి",
   "unknownErrorAndRetryAfter": "దోషం సంభవించింది. కొంత సమయం తర్వాత మళ్లీ ప్రయత్నించండి",
   "errorOccurred": "లోపం సంభవించింది",

@@ -350,7 +350,7 @@
   "diaryRecord": "افزودن یادداشت روزانه",
   "scheduleRecord": "افزودن رویداد",
   "previousPillSheetGroupNotFound": "هنوز گروه قبلی ورق قرص وجود ندارد",
-  "withPillSheetCount": "{number} بلیستر",
+  "withPillSheetCount": "{number} ورق قرص",
   "connectionError": "اتصال اینترنت ناپایدار است. لطفاً کمی صبر کرده و دوباره تلاش کنید.",
   "unknownErrorAndRetryAfter": "خطایی رخ داده است. لطفاً پس از مدتی دوباره تلاش کنید.",
   "errorOccurred": "خطایی رخ داده است",

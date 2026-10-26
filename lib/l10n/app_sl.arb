@@ -350,7 +350,7 @@
   "diaryRecord": "Dodajte zapis v dnevnik",
   "scheduleRecord": "Dodajte dogodek",
   "previousPillSheetGroupNotFound": "Prejšnja skupina ploščic še ne obstaja",
-  "withPillSheetCount": "{number} listov",
+  "withPillSheetCount": "{number} omotov tablet",
   "connectionError": "Zdi se, da je internetna povezava nestabilna. Prosimo, poskusite znova čez nekaj časa.",
   "unknownErrorAndRetryAfter": "Prišlo je do napake. Počakajte nekaj časa in poskusite znova.",
   "errorOccurred": "Nastala je napaka",

@@ -350,7 +350,7 @@
   "diaryRecord": "ଡାଏରୀରେ ଟିପ୍ପଣୀ ଯୋଡ଼ନ୍ତୁ",
   "scheduleRecord": "କାର୍ଯ୍ୟକ୍ରମ ଯୋଡ଼ନ୍ତୁ",
   "previousPillSheetGroupNotFound": "ପୂର୍ବ ବଟିକା ସିଟ ଗୋଷ୍ଠୀ ଏପର୍ଯ୍ୟନ୍ତ ନାହିଁ",
-  "withPillSheetCount": "{number}ଟି",
+  "withPillSheetCount": "{number}ଟି ବଟିର ପତ୍ର",
   "connectionError": "ନେଟୱାର୍କ ସଂଯୋଗ ଅସ୍ଥିର ଲାଗୁଛି। କିଛି ସମୟ ପରେ ପୁଣିଥରେ ଚେଷ୍ଟା କରନ୍ତୁ।",
   "unknownErrorAndRetryAfter": "ଏକ ତ୍ରୁଟି ଘଟିଛି। କିଛି ସମୟ ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ।",
   "errorOccurred": "ତ୍ରୁଟି ଘଟିଛି",

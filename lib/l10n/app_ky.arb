@@ -350,7 +350,7 @@
   "diaryRecord": "Күндөлүккө жазуу кошуңуз",
   "scheduleRecord": "Иш-чара кошуңуз",
   "previousPillSheetGroupNotFound": "Мурунку таблетка блистери тобу азырынча жок",
-  "withPillSheetCount": "{number} барак",
+  "withPillSheetCount": "{number} таблетка блистери",
   "connectionError": "Интернет туташууда көйгөй бар көрүнөт. Бир аз күтүп, кайра аракет кылыңыз",
   "unknownErrorAndRetryAfter": "Ката кетти. Бир аз убакыт өткөндөн кийин кайра аракет кылыңыз",
   "errorOccurred": "Ката кетти",

@@ -350,7 +350,7 @@
   "diaryRecord": "ਡਾਇਰੀ ਵਿੱਚ ਨੋਟ ਜੋੜੋ",
   "scheduleRecord": "ਕਾਰਜਕ੍ਰਮ ਸ਼ਾਮਲ ਕਰੋ",
   "previousPillSheetGroupNotFound": "ਪਿਛਲਾ ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਸਮੂਹ ਹਾਲੇ ਮੌਜੂਦ ਨਹੀਂ ਹੈ",
-  "withPillSheetCount": "{number} ਸ਼ੀਟਾਂ",
+  "withPillSheetCount": "{number} ਗੋਲੀਆਂ ਦੇ ਪੱਤੇ",
   "connectionError": "ਨੈੱਟਵਰਕ ਕਨੈਕਸ਼ਨ ਅਸਥਿਰ ਲਗ ਰਿਹਾ ਹੈ। ਕੁਝ ਦੇਰ ਬਾਅਦ ਫਿਰ ਤੋਂ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
   "unknownErrorAndRetryAfter": "ਇੱਕ ਗਲਤੀ ਹੋਈ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਕੁਝ ਦੇਰ ਬਾਅਦ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
   "errorOccurred": "ਇੱਕ ਗਲਤੀ ਹੋ ਗਈ ਹੈ",

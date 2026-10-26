@@ -350,7 +350,7 @@
   "diaryRecord": "Thêm ghi chép vào nhật ký",
   "scheduleRecord": "Thêm sự kiện",
   "previousPillSheetGroupNotFound": "Chưa có nhóm vỉ thuốc trước đó",
-  "withPillSheetCount": "{number} vỉ",
+  "withPillSheetCount": "{number} vỉ thuốc",
   "connectionError": "Kết nối mạng có vẻ không ổn định. Vui lòng đợi một lúc và thử lại.",
   "unknownErrorAndRetryAfter": "Đã xảy ra lỗi. Vui lòng thử lại sau.",
   "errorOccurred": "Đã xảy ra lỗi",

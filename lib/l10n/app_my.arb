@@ -350,7 +350,7 @@
   "diaryRecord": "နေ့စဉ်မှတ်တမ်းတွင် မှတ်စုထည့်ပါ",
   "scheduleRecord": "အစီအစဉ် ထည့်ပါ",
   "previousPillSheetGroupNotFound": "ယခင် ဆေးပြားကတ် အုပ်စု မရှိသေးပါ",
-  "withPillSheetCount": "{number}ရွက်",
+  "withPillSheetCount": "{number} ကတ် ဆေးပြား",
   "connectionError": "ဆက်သွယ်ရေးအခြေအနေမှာ ပြဿနာရှိနေပုံရပါသည်။ ခေတ္တစောင့်ပြီး ထပ်မံကြိုးစားကြည့်ပါ။",
   "unknownErrorAndRetryAfter": "ချို့ယွင်းမှုတစ်ခုဖြစ်ပွားခဲ့သည်။ ခေတ္တစောင့်ပြီး ပြန်လည်ကြိုးစားပါ။",
   "errorOccurred": "အမှားဖြစ်ပါသည်",

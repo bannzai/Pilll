@@ -350,7 +350,7 @@
   "diaryRecord": "Күнделікке жазба қосыңыз",
   "scheduleRecord": "Жоспарланған оқиғаны қосыңыз",
   "previousPillSheetGroupNotFound": "Алдыңғы таблетка блистер тобы әлі жоқ",
-  "withPillSheetCount": "{number} парақ",
+  "withPillSheetCount": "{number} таблетка блистері",
   "connectionError": "Интернет байланысы тұрақсыз. Кейінірек қайталап көріңіз",
   "unknownErrorAndRetryAfter": "Қате орын алды. Біраз уақыттан кейін қайта көріңіз.",
   "errorOccurred": "Қате орын алды",

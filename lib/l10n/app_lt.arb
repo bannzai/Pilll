@@ -350,7 +350,7 @@
   "diaryRecord": "Pridėkite dienoraščio įrašą",
   "scheduleRecord": "Pridėkite įvykį",
   "previousPillSheetGroupNotFound": "Ankstesnės tablečių plokštel grupės dar nėra",
-  "withPillSheetCount": "{number} pak.",
+  "withPillSheetCount": "{number} tablečių plokštelių",
   "connectionError": "Tinklo ryšys nestabilus. Palaukite ir bandykite dar kartą.",
   "unknownErrorAndRetryAfter": "Įvyko klaida. Palaukite ir pabandykite dar kartą.",
   "errorOccurred": "Įvyko klaida",

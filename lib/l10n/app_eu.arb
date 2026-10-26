@@ -350,7 +350,7 @@
   "diaryRecord": "Gehitu egunerokoan sarrera bat",
   "scheduleRecord": "Gehitu hitzordua",
   "previousPillSheetGroupNotFound": "Oraindik ez dago aurreko pilula-blister talderik",
-  "withPillSheetCount": "{number} blister",
+  "withPillSheetCount": "{number} pilula-blister",
   "connectionError": "Konexioa ezegonkorra dirudi. Pixka bat itxaron eta berriz saiatu, mesedez.",
   "unknownErrorAndRetryAfter": "Errore bat gertatu da. Itxaron pixka bat eta saiatu berriro, mesedez.",
   "errorOccurred": "Akatsa bat gertatu da",

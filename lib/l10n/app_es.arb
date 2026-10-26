@@ -350,7 +350,7 @@
   "diaryRecord": "Añadir entrada al diario",
   "scheduleRecord": "Agregar evento",
   "previousPillSheetGroupNotFound": "Aún no hay un grupo de blíster anterior",
-  "withPillSheetCount": "{number} hojas",
+  "withPillSheetCount": "{number} blísteres",
   "connectionError": "Parece que la conexión de red es inestable. Por favor, inténtalo de nuevo más tarde.",
   "unknownErrorAndRetryAfter": "Ha ocurrido un error. Por favor, inténtalo de nuevo más tarde.",
   "errorOccurred": "Ha ocurrido un error",

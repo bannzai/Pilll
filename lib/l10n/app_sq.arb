@@ -350,7 +350,7 @@
   "diaryRecord": "Shtoni një shënim në ditar",
   "scheduleRecord": "Shtoni një ngjarje",
   "previousPillSheetGroupNotFound": "Grupi i mëparshëm i blister ende nuk ekziston",
-  "withPillSheetCount": "{number} fletë",
+  "withPillSheetCount": "{number} blistera pilulash",
   "connectionError": "Lidhja e internetit duket të jetë e paqëndrueshme. Ju lutemi provoni përsëri pas pak kohësh.",
   "unknownErrorAndRetryAfter": "Ndodhi një gabim. Ju lutem prisni pak dhe provoni përsëri.",
   "errorOccurred": "Ka ndodhur një gabim",

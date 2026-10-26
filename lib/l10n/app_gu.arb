@@ -350,7 +350,7 @@
   "diaryRecord": "ડાયરીમાં નોંધ ઉમેરો",
   "scheduleRecord": "કાર્યક્રમ ઉમેરો",
   "previousPillSheetGroupNotFound": "અગાઉની ગોળીની સ્ટ્રિપનું જૂથ હજી નથી",
-  "withPillSheetCount": "{number} શીટ",
+  "withPillSheetCount": "{number} ગોળીની પટ્ટીઓ",
   "connectionError": "નેટવર્ક કનેક્શન અસ્થિર લાગે છે. કૃપા કરીને થોડા સમય પછી ફરીથી પ્રયાસ કરો.",
   "unknownErrorAndRetryAfter": "ભૂલ આવી છે. કૃપા કરીને થોડીવાર બાદ ફરી પ્રયાસ કરો",
   "errorOccurred": "ભૂલ આવી છે",

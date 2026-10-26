@@ -350,7 +350,7 @@
   "diaryRecord": "เพิ่มบันทึกประจำวัน",
   "scheduleRecord": "เพิ่มกำหนดการ",
   "previousPillSheetGroupNotFound": "ยังไม่มีกลุ่มแผงยาก่อนหน้าค่ะ",
-  "withPillSheetCount": "{number}แผ่น",
+  "withPillSheetCount": "{number} แผง",
   "connectionError": "การเชื่อมต่ออินเทอร์เน็ตไม่เสถียร กรุณารอสักครู่แล้วลองใหม่อีกครั้ง",
   "unknownErrorAndRetryAfter": "เกิดข้อผิดพลาด กรุณารอสักครู่แล้วลองใหม่อีกครั้ง",
   "errorOccurred": "เกิดข้อผิดพลาด",

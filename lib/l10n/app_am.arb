@@ -350,7 +350,7 @@
   "diaryRecord": "የዕለት ማስታወሻ ይመዝግቡ",
   "scheduleRecord": "ቀጠሮ ያክሉ",
   "previousPillSheetGroupNotFound": "የቀድሞ ክኒን ሉህ ቡድን ገና የለም",
-  "withPillSheetCount": "{number} ፓኬት",
+  "withPillSheetCount": "{number} የክኒን ካርዶች",
   "connectionError": "የኢንተርኔት ግንኙነት ተረጋጋ አይደለም። እባክዎን ትንሽ ቆይተው እንደገና ይሞክሩ።",
   "unknownErrorAndRetryAfter": "ስህተት ተከስቷል። እባክዎን ትንሽ ይጠብቁ እና እንደገና ይሞክሩ።",
   "errorOccurred": "ስሕተት ተከስቷል",
