@@ -447,7 +447,7 @@
   "sendInquiry": "Send",
   "invalidEmailFormat": "Indtast en gyldig e-mailadresse",
   "emailCannotReceiveICloud": "※Brug gerne en e-mailadresse, der ikke ender på @icloud.com. Svarmails bliver ofte blokeret.",
-  "emailReceiveSettingNote": "※Sørg venligst for at justere dine indstillinger, så du kan modtage e-mails fra pilll.reminder.app@gmail.com",
+  "emailReceiveSettingNote": "Sørg for, at dine e-mailindstillinger tillader mails fra pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Indtast venligst indholdet af din henvendelse",
   "lifetimeSubscriptionWarning": "Tak for dit køb af engangspakken. Hvis du er tilmeldt en månedlig eller årlig plan, må du ikke glemme at afmelde dig.",
   "lifetimePurchaseNotice1": "・Selv hvis du køber \"Engangskøbsplanen\", annulleres \"Måneds-/Årsplanen\" ikke automatisk.",

@@ -447,7 +447,7 @@
   "sendInquiry": "ପଠାନ୍ତୁ",
   "invalidEmailFormat": "ଦୟାକରି ଏକ ବୈଧ ଇମେଲ୍ ଠିକଣା ଲେଖନ୍ତୁ",
   "emailCannotReceiveICloud": "※ଦୟାକରି @icloud.com ବ୍ୟତୀତ ଅନ୍ୟ ଏକ ଇମେଲ୍ ଠିକଣା ବ୍ୟବହାର କରନ୍ତୁ। ଉତ୍ତର ଇମେଲ୍‌ଗୁଡ଼ିକ ପ୍ରାୟତଃ ବ୍ଲକ୍ ହୋଇଯାଏ।",
-  "emailReceiveSettingNote": "ଦୟାକରି pilll.reminder.app@gmail.com ରୁ ଇମେଲ୍ ଗ୍ରହଣ କରିବାକୁ ସେଟିଂସ୍ ବିନ୍ୟାସ କରନ୍ତୁ",
+  "emailReceiveSettingNote": "ଦୟାକରି pilll.reminder.app@gmail.com ରୁ ଇମେଲ୍ ପାଇପାରିବା ପାଇଁ ଆପଣଙ୍କ ଇମେଲ୍ ସେଟିଂସ୍ ଠିକ୍ କରନ୍ତୁ",
   "inquiryContentRequired": "ଦୟାକରି ଅନୁସନ୍ଧାନ ବିଷୟବସ୍ତୁ ପ୍ରବେଶ କରନ୍ତୁ",
   "lifetimeSubscriptionWarning": "ଏକ-ସମୟ ଖରିଦ ପ୍ଲାନ କ୍ରୟ କରିଥିବାରୁ ଆପଣଙ୍କୁ ଧନ୍ୟବାଦ। ଯଦି ଆପଣ ମାସିକ ବା ବାର୍ଷିକ ପ୍ଲାନରେ ସଦସ୍ୟ ଅଛନ୍ତି, ଦୟାକରି ତାହା ବାତିଲ କରିବାକୁ ଭୁଲନ୍ତୁ ନାହିଁ।",
   "lifetimePurchaseNotice1": "・\"ଏକକାଳୀନ ଯୋଜନା\" କ୍ରୟ କଲେ ମଧ୍ୟ \"ମାସିକ/ବାର୍ଷିକ ଯୋଜନା\" ସ୍ୱୟଂଚାଳିତ ଭାବରେ ବାତିଲ ହୁଏ ନାହିଁ।",

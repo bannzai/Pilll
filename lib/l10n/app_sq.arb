@@ -447,7 +447,7 @@
   "sendInquiry": "Dërgoni",
   "invalidEmailFormat": "Ju lutemi, shkruani një adresë të vlefshme emaili",
   "emailCannotReceiveICloud": "※Ju lutemi, përdorni një adresë emaili që nuk përfundon me @icloud.com. Mesazhet e përgjigjes bllokohen shpesh.",
-  "emailReceiveSettingNote": "Ju lutemi sigurohuni që të mund të merrni email-e nga pilll.reminder.app@gmail.com",
+  "emailReceiveSettingNote": "Ju lutemi, rregulloni emailin tuaj që të mund të merrni mesazhe nga pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Ju lutemi shkruani përmbajtjen e pyetjes",
   "lifetimeSubscriptionWarning": "Faleminderit që keni blerë planin me pagesë të njëhershme. Nëse jeni abonuar në planin mujor ose vjetor, mos harroni ta anuloni.",
   "lifetimePurchaseNotice1": "Edhe nëse blini \"planin me pagesë njëherëse\", abonimet mujore ose vjetore nuk do të anulohen automatikisht.",

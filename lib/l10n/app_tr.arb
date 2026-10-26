@@ -447,7 +447,7 @@
   "sendInquiry": "Gönderin",
   "invalidEmailFormat": "Lütfen geçerli bir e-posta adresi girin",
   "emailCannotReceiveICloud": "※Lütfen @icloud.com ile bitmeyen bir e-posta adresi kullanın. Yanıt e-postaları sık sık engelleniyor.",
-  "emailReceiveSettingNote": "Lütfen pilll.reminder.app@gmail.com adresinden gelen e-postaları alabilmek için ayarlarınızı yapın",
+  "emailReceiveSettingNote": "Lütfen e-posta ayarlarınızı pilll.reminder.app@gmail.com adresinden gelen iletileri alabilecek şekilde düzenleyin",
   "inquiryContentRequired": "Lütfen mesajınızı girin",
   "lifetimeSubscriptionWarning": "Tek seferlik satın alma için teşekkür ederiz. Aylık veya yıllık bir plana aboneyseniz, lütfen mevcut aboneliğinizi iptal etmeyi unutmayın.",
   "lifetimePurchaseNotice1": "Tek seferlik satın alma planını satın alırsanız bile aylık/yıllık plan otomatik olarak iptal edilmez.",

@@ -447,7 +447,7 @@
   "sendInquiry": "ส่ง",
   "invalidEmailFormat": "กรุณากรอกที่อยู่อีเมลที่ถูกต้องค่ะ",
   "emailCannotReceiveICloud": "※กรุณาใช้อีเมลที่ไม่ได้ลงท้ายด้วย @icloud.com เนื่องจากอีเมลตอบกลับมักถูกบล็อกค่ะ",
-  "emailReceiveSettingNote": "กรุณาตั้งค่าอีเมลของคุณเพื่อให้สามารถรับอีเมลจาก pilll.reminder.app@gmail.com ได้",
+  "emailReceiveSettingNote": "โปรดตั้งค่าอีเมลให้รับข้อความจาก pilll.reminder.app@gmail.com ได้ค่ะ",
   "inquiryContentRequired": "กรุณากรอกเนื้อหาที่ต้องการสอบถาม",
   "lifetimeSubscriptionWarning": "ซื้อแผนแบบซื้อขาดเรียบร้อยแล้ว ขอบคุณครับ/ค่ะ โปรดอย่าลืมยกเลิกแผนรายเดือน/รายปีหากคุณเคยสมัครใช้งานไว้",
   "lifetimePurchaseNotice1": "แม้ว่าคุณจะซื้อแผนซื้อขาดแล้ว การสมัครแบบรายเดือนหรือรายปีจะไม่ถูกยกเลิกโดยอัตโนมัติ",

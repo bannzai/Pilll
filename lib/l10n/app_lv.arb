@@ -447,7 +447,7 @@
   "sendInquiry": "Nosūtiet",
   "invalidEmailFormat": "Lūdzu, ievadiet derīgu e-pasta adresi",
   "emailCannotReceiveICloud": "※Lūdzu, izmantojiet e-pasta adresi, kas nebeidzas ar @icloud.com. Atbildes e-pasti bieži tiek bloķēti.",
-  "emailReceiveSettingNote": "Lūdzu, pārliecinieties, ka varat saņemt e-pastus no pilll.reminder.app@gmail.com",
+  "emailReceiveSettingNote": "Lūdzu, iestatiet e-pastu tā, lai varētu saņemt ziņojumus no pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Lūdzu, ievadiet ziņojuma saturu",
   "lifetimeSubscriptionWarning": "Paldies, ka iegādājāties vienreizējā pirkuma plānu. Ja jums ir aktīvs mēneša vai gada abonements, lūdzu, neaizmirstiet to atcelt.",
   "lifetimePurchaseNotice1": "Pat ja iegādājaties vienreizējo plānu, jūsu mēneša vai gada abonements netiks automātiski atcelts.",

@@ -447,7 +447,7 @@
   "sendInquiry": "Odošlite",
   "invalidEmailFormat": "Zadajte platnú e-mailovú adresu",
   "emailCannotReceiveICloud": "※Použite, prosím, e-mailovú adresu, ktorá sa nekončí na @icloud.com. E-maily s odpoveďou bývajú často blokované.",
-  "emailReceiveSettingNote": "Uistite sa, že môžete prijímať e-maily z adresy pilll.reminder.app@gmail.com",
+  "emailReceiveSettingNote": "Nastavte si, prosím, e-mail tak, aby ste mohli prijímať správy z adresy pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Prosím, zadajte obsah vášho dotazu",
   "lifetimeSubscriptionWarning": "Ďakujeme za zakúpenie jednorazového plánu. Ak máte aktívne mesačné alebo ročné predplatné, nezabudnite ho zrušiť.",
   "lifetimePurchaseNotice1": "Zakúpením jednorazového plánu sa mesačné alebo ročné predplatné automaticky nezruší.",

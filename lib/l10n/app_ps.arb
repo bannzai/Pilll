@@ -447,7 +447,7 @@
   "sendInquiry": "ولېږئ",
   "invalidEmailFormat": "مهرباني وکړئ یو سم برېښنالیک پته ولیکئ",
   "emailCannotReceiveICloud": "※مهرباني وکړئ له @icloud.com پرته بل برېښنالیک پته وکاروئ. د ځواب برېښنالیکونه ډېر ځله بندېږي.",
-  "emailReceiveSettingNote": "مهرباني وکړئ خپلې ترتیبات داسې تنظیم کړئ چې تاسو د pilll.reminder.app@gmail.com څخه بریښنالیکونه ترلاسه کړئ",
+  "emailReceiveSettingNote": "مهرباني وکړئ خپل برېښنالیک داسې تنظیم کړئ چې له pilll.reminder.app@gmail.com څخه پیغامونه ترلاسه کړئ",
   "inquiryContentRequired": "مهرباني وکړئ د تماس متن دننه کړئ",
   "lifetimeSubscriptionWarning": "د یو ځل د پیرود پلان اخیستلو لپاره مننه. که چیری تاسو د میاشتني یا کلني پلان ګډون کړی یاست، نو د لغوه کولو هیر مه کوئ.",
   "lifetimePurchaseNotice1": "・که د «یو ځل پیرودنې پلان» واخلئ، «میاشتنی/کلنی پلان» به اتوماتیک لغوه نه کیږي.",

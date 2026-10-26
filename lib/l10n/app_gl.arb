@@ -447,7 +447,7 @@
   "sendInquiry": "Enviar",
   "invalidEmailFormat": "Introduce un enderezo de correo electrónico válido",
   "emailCannotReceiveICloud": "※Usa, por favor, un enderezo de correo que non remate en @icloud.com. Os correos de resposta adoitan bloquearse.",
-  "emailReceiveSettingNote": "※ Por favor, configure a súa conta para poder recibir correos electrónicos de pilll.reminder.app@gmail.com",
+  "emailReceiveSettingNote": "Asegúrate de que o teu correo permita recibir mensaxes de pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Introduce o contido da consulta",
   "lifetimeSubscriptionWarning": "Grazas pola compra do plan de pago único. Se está subscrito a un plan mensual ou anual, non esqueza cancelar a súa subscrición.",
   "lifetimePurchaseNotice1": "・Aínda que adquirades o «Plan de compra única», os «Plans mensual e anual» non se cancelarán automaticamente.",

@@ -447,7 +447,7 @@
   "sendInquiry": "Invia",
   "invalidEmailFormat": "Inserisci un indirizzo email valido",
   "emailCannotReceiveICloud": "※Usa un indirizzo email che non termini con @icloud.com. Le email di risposta vengono spesso bloccate.",
-  "emailReceiveSettingNote": "Si prega di configurare le impostazioni per ricevere email da pilll.reminder.app@gmail.com",
+  "emailReceiveSettingNote": "Assicurati di poter ricevere le email inviate da pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Inserisci il contenuto della richiesta",
   "lifetimeSubscriptionWarning": "Grazie per aver acquistato il piano a pagamento una tantum. Se sei iscritto a un piano mensile o annuale, non dimenticare di annullarlo.",
   "lifetimePurchaseNotice1": "L'acquisto del piano a pagamento una tantum non annullerà automaticamente l'abbonamento mensile o annuale.",

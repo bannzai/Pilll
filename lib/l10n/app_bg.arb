@@ -447,7 +447,7 @@
   "sendInquiry": "Изпратете",
   "invalidEmailFormat": "Моля, въведете валиден имейл адрес",
   "emailCannotReceiveICloud": "※Моля, използвайте имейл адрес, който не завършва на @icloud.com. Имейлите с отговор често се блокират.",
-  "emailReceiveSettingNote": "※Моля, уверете се, че можете да получавате имейли от pilll.reminder.app@gmail.com",
+  "emailReceiveSettingNote": "Моля, настройте пощата си така, че да получавате имейли от pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Моля, въведете съдържанието на запитването",
   "lifetimeSubscriptionWarning": "Благодарим ви за закупуването на пожизнения план. Ако сте абонирани за месечен или годишен план, не забравяйте да го отмените.",
   "lifetimePurchaseNotice1": "・Дори и да закупите „Еднократен план\", „Месечен/Годишен план\" няма да бъде автоматично отменен.",

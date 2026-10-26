@@ -447,7 +447,7 @@
   "sendInquiry": "Kirim",
   "invalidEmailFormat": "Masukkan alamat email yang valid",
   "emailCannotReceiveICloud": "※Mohon gunakan alamat email selain @icloud.com. Email balasan sering terblokir.",
-  "emailReceiveSettingNote": "Harap pastikan Anda dapat menerima email dari pilll.reminder.app@gmail.com",
+  "emailReceiveSettingNote": "Pastikan pengaturan email Anda memungkinkan penerimaan pesan dari pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Harap masukkan isi pertanyaan",
   "lifetimeSubscriptionWarning": "Terima kasih telah membeli paket sekali bayar. Jika Anda berlangganan paket bulanan atau tahunan, harap batalkan langganan tersebut.",
   "lifetimePurchaseNotice1": "Membeli paket sekali bayar tidak akan otomatis membatalkan langganan bulanan atau tahunan Anda.",

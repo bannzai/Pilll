@@ -447,7 +447,7 @@
   "sendInquiry": "Hantar",
   "invalidEmailFormat": "Sila masukkan alamat e-mel yang sah",
   "emailCannotReceiveICloud": "※Sila gunakan alamat e-mel yang tidak berakhir dengan @icloud.com. E-mel balasan kerap disekat.",
-  "emailReceiveSettingNote": "Sila pastikan tetapan e-mel anda membenarkan penerimaan daripada pilll.reminder.app@gmail.com",
+  "emailReceiveSettingNote": "Sila tetapkan e-mel anda supaya mesej daripada pilll.reminder.app@gmail.com dapat diterima",
   "inquiryContentRequired": "Sila masukkan kandungan pertanyaan",
   "lifetimeSubscriptionWarning": "Terima kasih kerana membeli pelan sekali beli. Jika anda melanggan pelan bulanan atau tahunan, sila jangan lupa untuk membatalkan langganan tersebut.",
   "lifetimePurchaseNotice1": "・Walaupun anda membeli \"Pelan Bayaran Sekali\", \"Pelan Bulanan/Tahunan\" tidak akan dibatalkan secara automatik.",

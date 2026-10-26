@@ -447,7 +447,7 @@
   "sendInquiry": "Send",
   "invalidEmailFormat": "Please enter a valid email address",
   "emailCannotReceiveICloud": "※Please use an email address other than @icloud.com. Reply emails are often blocked.",
-  "emailReceiveSettingNote": "*Please ensure you can receive emails from pilll.reminder.app@gmail.com",
+  "emailReceiveSettingNote": "Please make sure you can receive emails from pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Please enter your inquiry",
   "lifetimeSubscriptionWarning": "Thank you for your purchase of the lifetime plan. If you are subscribed to a monthly or annual plan, please don't forget to cancel it.",
   "lifetimePurchaseNotice1": "・Purchasing the \"Lifetime Plan\" will not automatically cancel your \"Monthly/Annual Plan\".",

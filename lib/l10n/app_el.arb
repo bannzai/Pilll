@@ -447,7 +447,7 @@
   "sendInquiry": "Αποστολή",
   "invalidEmailFormat": "Παρακαλούμε εισαγάγετε μια έγκυρη διεύθυνση email",
   "emailCannotReceiveICloud": "※Παρακαλούμε χρησιμοποιήστε μια διεύθυνση email που δεν τελειώνει σε @icloud.com. Τα email απάντησης συχνά αποκλείονται.",
-  "emailReceiveSettingNote": "※Παρακαλούμε βεβαιωθείτε ότι μπορείτε να λαμβάνετε email από το pilll.reminder.app@gmail.com",
+  "emailReceiveSettingNote": "Βεβαιωθείτε ότι οι ρυθμίσεις του email σας επιτρέπουν τη λήψη μηνυμάτων από το pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Παρακαλώ εισάγετε το περιεχόμενο του ερωτήματος",
   "lifetimeSubscriptionWarning": "Ευχαριστούμε για την αγορά του εφάπαξ πλάνου. Εάν είστε συνδρομητές σε μηνιαίο ή ετήσιο πλάνο, μην ξεχάσετε να ακυρώσετε τη συνδρομή σας.",
   "lifetimePurchaseNotice1": "・Η αγορά του «εφάπαξ πλάνου» δεν ακυρώνει αυτόματα το «μηνιαίο/ετήσιο πλάνο».",

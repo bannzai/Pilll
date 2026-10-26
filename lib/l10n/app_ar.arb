@@ -447,7 +447,7 @@
   "sendInquiry": "إرسال",
   "invalidEmailFormat": "يرجى إدخال عنوان بريد إلكتروني صالح",
   "emailCannotReceiveICloud": "※يرجى استخدام عنوان بريد إلكتروني غير @icloud.com، إذ تُحظر رسائل الرد كثيرًا.",
-  "emailReceiveSettingNote": "※ يُرجى التأكد من ضبط إعدادات بريدك الإلكتروني لاستقبال الرسائل من pilll.reminder.app@gmail.com",
+  "emailReceiveSettingNote": "يرجى ضبط إعدادات بريدك الإلكتروني لتصلك الرسائل من pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "يرجى إدخال محتوى الاستفسار",
   "lifetimeSubscriptionWarning": "شكراً لشرائك الخطة الدائمة. إذا كنت مشتركاً في خطة شهرية أو سنوية، يرجى عدم نسيان إلغاء اشتراكك",
   "lifetimePurchaseNotice1": "・حتى لو اشتريت «خطة الشراء مرة واحدة»، لن يتم إلغاء «الخطة الشهرية/السنوية» تلقائياً.",

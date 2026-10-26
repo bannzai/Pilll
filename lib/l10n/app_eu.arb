@@ -447,7 +447,7 @@
   "sendInquiry": "Bidali",
   "invalidEmailFormat": "Idatzi baliozko helbide elektroniko bat, mesedez",
   "emailCannotReceiveICloud": "※Erabili, mesedez, @icloud.com ez den helbide elektroniko bat. Erantzun-mezuak sarri blokeatzen dira.",
-  "emailReceiveSettingNote": "※Mesedez, konfiguratu zure harpidetza pilll.reminder.app@gmail.com helbidetik datozen mezuak jaso ahal izateko",
+  "emailReceiveSettingNote": "Ziurtatu posta elektronikoa konfiguratuta duzula pilll.reminder.app@gmail.com helbidetik mezuak jasotzeko",
   "inquiryContentRequired": "Mesedez, sartu kontsultaren edukia",
   "lifetimeSubscriptionWarning": "Eskerrik asko behin-betiko plana erosteagatik. Hileko edo urteko planean izena emanda bazaude, ez ahaztu harpidetza bertan behera uzten.",
   "lifetimePurchaseNotice1": "・「Behin betiko plana」erosten baduzu ere, «hileko/urteko plana» ez da automatikoki bertan behera utziko.",
