@@ -75,7 +75,7 @@
   "linkAccount": "Koppla konto",
   "withdraw": "Radera konto",
   "withdrawalCompleted": "Ditt konto har raderats",
-  "appExitMessage": "Appen kommer nu att stängas. För att börja om, starta om appen och genomför den inledande konfigurationen.",
+  "appExitMessage": "Appen stängs nu. Om du vill börja om öppnar du den igen och slutför den första inställningen.",
   "oK": "OK",
   "changePillNumber": "Ändra pillnummer",
   "change": "Ändra",

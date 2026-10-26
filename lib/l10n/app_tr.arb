@@ -75,7 +75,7 @@
   "linkAccount": "Hesabı bağlayın",
   "withdraw": "Hesabı silin",
   "withdrawalCompleted": "Hesabınız silindi",
-  "appExitMessage": "Uygulama kapatılacak. Yeniden başlamak için uygulamayı yeniden açtıktan sonra ilk kurulumu yapın.",
+  "appExitMessage": "Uygulama şimdi kapanacak. Yeniden başlamak isterseniz uygulamayı tekrar açıp ilk kurulumu tamamlayın.",
   "oK": "Tamam",
   "changePillNumber": "Hap Numarasını Değiştir",
   "change": "Değiştir",

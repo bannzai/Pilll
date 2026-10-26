@@ -75,7 +75,7 @@
   "linkAccount": "Liên kết tài khoản",
   "withdraw": "Xóa tài khoản",
   "withdrawalCompleted": "Tài khoản của bạn đã được xóa",
-  "appExitMessage": "Ứng dụng sẽ được đóng một lần. Nếu muốn bắt đầu lại, vui lòng khởi động lại ứng dụng và thực hiện thiết lập ban đầu.",
+  "appExitMessage": "Ứng dụng sẽ đóng ngay bây giờ. Để bắt đầu lại, vui lòng mở lại ứng dụng và hoàn tất thiết lập ban đầu.",
   "oK": "OK",
   "changePillNumber": "Thay đổi số viên thuốc",
   "change": "Thay đổi",

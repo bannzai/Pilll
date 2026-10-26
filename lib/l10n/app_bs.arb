@@ -75,7 +75,7 @@
   "linkAccount": "Povežite račun",
   "withdraw": "Izbrišite račun",
   "withdrawalCompleted": "Vaš račun je izbrisan",
-  "appExitMessage": "Aplikacija će se zatvoriti. Za novi početak, restartujte aplikaciju i izvršite početnu konfiguraciju.",
+  "appExitMessage": "Aplikacija će se sada zatvoriti. Ako želite početi iznova, ponovo je otvorite i dovršite početno podešavanje.",
   "oK": "OK",
   "changePillNumber": "Promjena broja pilula",
   "change": "Izmijeni",

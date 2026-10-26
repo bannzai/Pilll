@@ -75,7 +75,7 @@
   "linkAccount": "Propojit účet",
   "withdraw": "Smazat účet",
   "withdrawalCompleted": "Váš účet byl smazán",
-  "appExitMessage": "Aplikace se nyní ukončí. Pro nový začátek restartujte aplikaci a proveďte počáteční nastavení.",
+  "appExitMessage": "Aplikace se nyní zavře. Pokud chcete začít znovu, otevřete ji a dokončete úvodní nastavení.",
   "oK": "OK",
   "changePillNumber": "Změna číslování pilulek",
   "change": "Změnit",

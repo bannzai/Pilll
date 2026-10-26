@@ -75,7 +75,7 @@
   "linkAccount": "Associer le compte",
   "withdraw": "Supprimer le compte",
   "withdrawalCompleted": "Votre compte a été supprimé",
-  "appExitMessage": "L'application se fermera. Pour repartir à zéro, veuillez redémarrer l'application et terminer la configuration initiale.",
+  "appExitMessage": "L’application va se fermer. Pour repartir de zéro, ouvrez-la à nouveau et terminez la configuration initiale.",
   "oK": "D'ACCORD",
   "changePillNumber": "Changer les numéros de pilule",
   "change": "Changement",

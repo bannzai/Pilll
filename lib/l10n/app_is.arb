@@ -75,7 +75,7 @@
   "linkAccount": "Tengja reikning",
   "withdraw": "Eyða aðgangi",
   "withdrawalCompleted": "Reikningnum þínum hefur verið eytt",
-  "appExitMessage": "Appið mun lokast núna. Ef þú vilt byrja að nýju skaltu endurræsa appið og klára upphaflegu stillingarnar.",
+  "appExitMessage": "Forritinu verður lokað núna. Ef þú vilt byrja upp á nýtt skaltu opna það aftur og ljúka upphafsstillingunni.",
   "oK": "OK",
   "changePillNumber": "Breyting á pillunúmerum",
   "change": "Breyta",

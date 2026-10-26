@@ -75,7 +75,7 @@
   "linkAccount": "계정 연결하기",
   "withdraw": "계정 삭제",
   "withdrawalCompleted": "계정이 삭제되었어요",
-  "appExitMessage": "앱을 종료합니다. 새로 시작하려면 앱을 재시작한 후 초기 설정을 다시 진행해 주세요.",
+  "appExitMessage": "앱이 잠시 종료돼요. 새로 시작하려면 앱을 다시 열고 초기 설정을 완료해 주세요.",
   "oK": "확인",
   "changePillNumber": "알약 번호 변경",
   "change": "변경",

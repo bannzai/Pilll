@@ -75,7 +75,7 @@
   "linkAccount": "Połącz konto",
   "withdraw": "Usuń konto",
   "withdrawalCompleted": "Twoje konto zostało usunięte",
-  "appExitMessage": "Aplikacja zostanie zamknięta. W przypadku ponownego rozpoczęcia należy uruchomić aplikację ponownie i wykonać konfigurację początkową.",
+  "appExitMessage": "Aplikacja zostanie teraz zamknięta. Aby zacząć od nowa, otwórz ją ponownie i dokończ konfigurację początkową.",
   "oK": "OK",
   "changePillNumber": "Zmiana numeracji pigułek",
   "change": "Zmień",

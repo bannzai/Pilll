@@ -75,7 +75,7 @@
   "linkAccount": "Koble til konto",
   "withdraw": "Slett konto",
   "withdrawalCompleted": "Kontoen din er slettet",
-  "appExitMessage": "Appen vil nå avsluttes. For å starte på nytt må du starte appen på nytt og gjennomføre det opprinnelige oppsettet.",
+  "appExitMessage": "Appen lukkes nå. Hvis du vil starte på nytt, åpner du den igjen og fullfører det første oppsettet.",
   "oK": "OK",
   "changePillNumber": "Endre pillenummer",
   "change": "Endre",

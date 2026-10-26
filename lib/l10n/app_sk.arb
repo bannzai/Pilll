@@ -75,7 +75,7 @@
   "linkAccount": "Prepojte účet",
   "withdraw": "Odstráňte účet",
   "withdrawalCompleted": "Váš účet bol odstránený",
-  "appExitMessage": "Aplikácia sa teraz ukončí. Ak chcete začať odznova, reštartujte aplikáciu a vykonajte počiatočné nastavenie.",
+  "appExitMessage": "Aplikácia sa teraz zatvorí. Ak chcete začať odznova, znova ju otvorte a dokončite úvodné nastavenie.",
   "oK": "OK",
   "changePillNumber": "Zmena čísel piluliek",
   "change": "Zmeniť",

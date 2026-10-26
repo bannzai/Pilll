@@ -75,7 +75,7 @@
   "linkAccount": "Konto verknüpfen",
   "withdraw": "Konto löschen",
   "withdrawalCompleted": "Dein Konto wurde gelöscht",
-  "appExitMessage": "Die App wird jetzt beendet. Um neu zu beginnen, starten Sie die App neu und führen Sie die Ersteinrichtung durch.",
+  "appExitMessage": "Die App wird jetzt geschlossen. Wenn du neu anfangen möchtest, öffne sie erneut und schließe die Ersteinrichtung ab.",
   "oK": "OK",
   "changePillNumber": "Pillennummer ändern",
   "change": "Ändern",

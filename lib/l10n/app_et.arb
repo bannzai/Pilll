@@ -75,7 +75,7 @@
   "linkAccount": "Seo konto",
   "withdraw": "Kustuta konto",
   "withdrawalCompleted": "Sinu konto on kustutatud",
-  "appExitMessage": "Rakendus suletakse. Uuesti alustamiseks käivitage rakendus uuesti ja tehke algseadistus.",
+  "appExitMessage": "Rakendus sulgub nüüd. Kui soovid uuesti alustada, ava see uuesti ja lõpeta algseadistus.",
   "oK": "OK",
   "changePillNumber": "Pilli numbrite muutmine",
   "change": "Muuda",

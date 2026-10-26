@@ -75,7 +75,7 @@
   "linkAccount": "Tilknyt konto",
   "withdraw": "Slet din konto",
   "withdrawalCompleted": "Din konto er slettet",
-  "appExitMessage": "Appen lukkes nu. For at starte på ny skal du genstarte appen og gennemføre den indledende opsætning.",
+  "appExitMessage": "Appen lukker nu. Hvis du vil starte forfra, skal du åbne den igen og gennemføre den første opsætning.",
   "oK": "OK",
   "changePillNumber": "Ændring af pillenumre",
   "change": "Ændre",

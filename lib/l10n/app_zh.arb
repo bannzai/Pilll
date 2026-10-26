@@ -75,7 +75,7 @@
   "linkAccount": "关联账号",
   "withdraw": "删除账号",
   "withdrawalCompleted": "你的账号已删除",
-  "appExitMessage": "应用将退出。如需重新开始，请重新启动应用并进行初始设置。",
+  "appExitMessage": "应用即将关闭。如需重新开始，请再次打开应用并完成初始设置。",
   "oK": "确定",
   "changePillNumber": "修改药片编号",
   "change": "修改",

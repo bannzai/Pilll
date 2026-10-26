@@ -75,7 +75,7 @@
   "linkAccount": "Yhdistä tili",
   "withdraw": "Poista tili",
   "withdrawalCompleted": "Tilisi on poistettu",
-  "appExitMessage": "Sovellus suljetaan nyt. Aloittaaksesi uudelleen, käynnistä sovellus uudelleen ja suorita alkuasetukset.",
+  "appExitMessage": "Sovellus sulkeutuu nyt. Jos haluat aloittaa alusta, avaa sovellus uudelleen ja tee alkuasetukset.",
   "oK": "OK",
   "changePillNumber": "Pillien numerointi",
   "change": "Muuta",

@@ -75,7 +75,7 @@
   "linkAccount": "Vincula el compte",
   "withdraw": "Elimina el compte",
   "withdrawalCompleted": "S'ha suprimit el teu compte",
-  "appExitMessage": "L'aplicació es tancarà ara. Per començar de nou, reinicieu l'aplicació i realitzeu la configuració inicial.",
+  "appExitMessage": "L’aplicació es tancarà ara. Si vols començar de nou, torna-la a obrir i completa la configuració inicial.",
   "oK": "D'acord",
   "changePillNumber": "Canvi del número de píndola",
   "change": "Canviar",

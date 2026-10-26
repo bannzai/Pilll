@@ -75,7 +75,7 @@
   "linkAccount": "Account koppelen",
   "withdraw": "Account verwijderen",
   "withdrawalCompleted": "Je account is verwijderd",
-  "appExitMessage": "De app wordt nu afgesloten. Om opnieuw te beginnen, start de app opnieuw op en doorloop de initiële configuratie.",
+  "appExitMessage": "De app sluit nu. Wil je opnieuw beginnen? Open de app dan opnieuw en rond de eerste instellingen af.",
   "oK": "OK",
   "changePillNumber": "Pilnummers aanpassen",
   "change": "Wijzigen",

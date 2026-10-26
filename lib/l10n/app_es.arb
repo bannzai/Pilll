@@ -75,7 +75,7 @@
   "linkAccount": "Vincular cuenta",
   "withdraw": "Eliminar cuenta",
   "withdrawalCompleted": "Se eliminó tu cuenta",
-  "appExitMessage": "La aplicación se cerrará. Para volver a empezar, reinicie la aplicación y complete la configuración inicial.",
+  "appExitMessage": "La app se cerrará ahora. Si quieres empezar de nuevo, vuelve a abrirla y completa la configuración inicial.",
   "oK": "OK",
   "changePillNumber": "Cambiar números de píldoras",
   "change": "Cambiar",
