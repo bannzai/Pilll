@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "පෙර පෙති කාඩ්පතේ කණ්ඩායම තවම නැහැ",
   "withPillSheetCount": "{number} පෙති පත්‍ර",
   "connectionError": "ඔබගේ අන්තර්ජාල සම්බන්ධතාවය අස්ථිර බව පෙනේ. කරුණාකර කෙටි වේලාවකට පසු නැවත උත්සාහ කරන්න",
-  "unknownErrorAndRetryAfter": "දෝෂයක් සිදුවී ඇත. කරුණාකර මද වේලාවකට පසුව නැවත උත්සාහ කරන්න",
+  "unknownErrorAndRetryAfter": "දෝෂයක් ඇති වුණා. කරුණාකර ටික වේලාවකට පසු නැවත උත්සාහ කරන්න",
   "errorOccurred": "දෝෂයක් ඇති විය",
   "unknownError": "නොදන්නා දෝෂයක් සිදුවිය",
   "unexpectedErrorOccurred": "අනපේක්ෂිත දෝෂයක් සිදු වුණා",

@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Encara no hi ha cap grup de blíster anterior",
   "withPillSheetCount": "{number} blísters",
   "connectionError": "La connexió de xarxa sembla inestable. Si us plau, espereu una estona i torneu-ho a intentar.",
-  "unknownErrorAndRetryAfter": "S'ha produït un error. Espereu una estona i torneu-ho a provar.",
+  "unknownErrorAndRetryAfter": "S’ha produït un error. Torna-ho a provar més tard",
   "errorOccurred": "S'ha produït un error",
   "unknownError": "S'ha produït un error desconegut",
   "unexpectedErrorOccurred": "S'ha produït un error inesperat",

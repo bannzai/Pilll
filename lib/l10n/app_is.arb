@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Fyrri pilluspjaldshópur er ekki til enn",
   "withPillSheetCount": "{number} pilluspjöld",
   "connectionError": "Nettengingin virðist vera óstöðug. Vinsamlegast reyndu aftur eftir smá stund.",
-  "unknownErrorAndRetryAfter": "Villa átti sér stað. Reyndu aftur eftir smá stund.",
+  "unknownErrorAndRetryAfter": "Villa kom upp. Prófaðu aftur síðar",
   "errorOccurred": "Villa hefur komið upp",
   "unknownError": "Óþekkt villa kom upp",
   "unexpectedErrorOccurred": "Óvænt villa kom upp",

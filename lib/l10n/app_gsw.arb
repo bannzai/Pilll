@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Es git no kei früeneri Pilleblistergruppe",
   "withPillSheetCount": "{number} Pilleblister",
   "connectionError": "D Netzwerkverbindig isch unstabil. Bitte warte churz und versuech's nomol.",
-  "unknownErrorAndRetryAfter": "Es isch en Fähler passiert. Bitte versuech es nach ere Ziit nommal.",
+  "unknownErrorAndRetryAfter": "Es isch en Fähler passiert. Probier s bitte spöter nomal",
   "errorOccurred": "Es isch en Fehler ufträte",
   "unknownError": "En unbekannte Fähler isch uftrete",
   "unexpectedErrorOccurred": "En unerwartete Fähler isch ufträte",

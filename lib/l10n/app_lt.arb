@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Ankstesnės tablečių plokštel grupės dar nėra",
   "withPillSheetCount": "{number} tablečių plokštelių",
   "connectionError": "Tinklo ryšys nestabilus. Palaukite ir bandykite dar kartą.",
-  "unknownErrorAndRetryAfter": "Įvyko klaida. Palaukite ir pabandykite dar kartą.",
+  "unknownErrorAndRetryAfter": "Įvyko klaida. Bandykite dar kartą vėliau",
   "errorOccurred": "Įvyko klaida",
   "unknownError": "Įvyko nežinoma klaida",
   "unexpectedErrorOccurred": "Atsiprašome, įvyko klaida",

@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Grup strip pil sebelumnya belum ada",
   "withPillSheetCount": "{number} lembar pil",
   "connectionError": "Koneksi jaringan tampaknya tidak stabil. Mohon tunggu sebentar dan coba lagi.",
-  "unknownErrorAndRetryAfter": "Terjadi kesalahan. Silakan tunggu sebentar dan coba lagi.",
+  "unknownErrorAndRetryAfter": "Terjadi kesalahan. Silakan coba lagi nanti",
   "errorOccurred": "Terjadi kesalahan",
   "unknownError": "Terjadi kesalahan yang tidak diketahui",
   "unexpectedErrorOccurred": "Terjadi kesalahan yang tidak terduga",

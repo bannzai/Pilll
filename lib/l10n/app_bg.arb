@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Все още няма предишна група блистер",
   "withPillSheetCount": "{number} блистера",
   "connectionError": "Мрежовата връзка е нестабилна. Моля, опитайте отново след малко.",
-  "unknownErrorAndRetryAfter": "Възникна грешка. Моля, изчакайте малко и опитайте отново.",
+  "unknownErrorAndRetryAfter": "Възникна грешка. Моля, опитайте отново по-късно",
   "errorOccurred": "Възникна грешка",
   "unknownError": "Възникна неизвестна грешка",
   "unexpectedErrorOccurred": "Възникна неочаквана грешка",

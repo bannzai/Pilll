@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Предыдущей группы блистеров пока нет",
   "withPillSheetCount": "{number} блистеров",
   "connectionError": "Похоже, что сетевое соединение нестабильно. Пожалуйста, подождите и попробуйте снова.",
-  "unknownErrorAndRetryAfter": "Произошла ошибка. Попробуйте еще раз через некоторое время",
+  "unknownErrorAndRetryAfter": "Произошла ошибка. Пожалуйста, попробуйте ещё раз позже",
   "errorOccurred": "Произошла ошибка",
   "unknownError": "Произошла неизвестная ошибка",
   "unexpectedErrorOccurred": "Произошла неожиданная ошибка",

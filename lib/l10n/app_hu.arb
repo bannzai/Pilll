@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Még nincs korábbi tablettacsomag-csoport",
   "withPillSheetCount": "{number} levél tabletta",
   "connectionError": "Úgy tűnik, az internetkapcsolat nem stabil. Próbáld újra egy kis idő múlva.",
-  "unknownErrorAndRetryAfter": "Hiba történt. Kérjük, próbálja újra később.",
+  "unknownErrorAndRetryAfter": "Hiba történt. Kérjük, próbáld újra később",
   "errorOccurred": "Hiba történt",
   "unknownError": "Ismeretlen hiba történt",
   "unexpectedErrorOccurred": "Váratlan hiba történt",

@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Prejšnja skupina ploščic še ne obstaja",
   "withPillSheetCount": "{number} omotov tablet",
   "connectionError": "Zdi se, da je internetna povezava nestabilna. Prosimo, poskusite znova čez nekaj časa.",
-  "unknownErrorAndRetryAfter": "Prišlo je do napake. Počakajte nekaj časa in poskusite znova.",
+  "unknownErrorAndRetryAfter": "Prišlo je do napake. Poskusite znova pozneje",
   "errorOccurred": "Nastala je napaka",
   "unknownError": "Prišlo je do neznane napake",
   "unexpectedErrorOccurred": "Prišlo je do nepričakovane napake",

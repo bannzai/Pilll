@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "የቀድሞ ክኒን ሉህ ቡድን ገና የለም",
   "withPillSheetCount": "{number} የክኒን ካርዶች",
   "connectionError": "የኢንተርኔት ግንኙነት ተረጋጋ አይደለም። እባክዎን ትንሽ ቆይተው እንደገና ይሞክሩ።",
-  "unknownErrorAndRetryAfter": "ስህተት ተከስቷል። እባክዎን ትንሽ ይጠብቁ እና እንደገና ይሞክሩ።",
+  "unknownErrorAndRetryAfter": "ስህተት ተፈጥሯል። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ",
   "errorOccurred": "ስሕተት ተከስቷል",
   "unknownError": "ያልታወቀ ስህተት ተከስቷል",
   "unexpectedErrorOccurred": "ያልተጠበቀ ችግር ተከስቷል",

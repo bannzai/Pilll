@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Попередньої групи блістерів поки немає",
   "withPillSheetCount": "{number} блістерів пігулок",
   "connectionError": "Здається, з'єднання нестабільне. Будь ласка, повторіть спробу через деякий час.",
-  "unknownErrorAndRetryAfter": "Виникла помилка. Зачекайте трохи і спробуйте ще раз",
+  "unknownErrorAndRetryAfter": "Сталася помилка. Будь ласка, спробуйте ще раз пізніше",
   "errorOccurred": "Сталася помилка",
   "unknownError": "Сталася невідома помилка",
   "unexpectedErrorOccurred": "Виникла неочікувана помилка",

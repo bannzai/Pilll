@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Il n’y a pas encore de groupe de plaquettes précédent",
   "withPillSheetCount": "{number} plaquettes de pilules",
   "connectionError": "Votre connexion semble instable. Veuillez réessayer plus tard.",
-  "unknownErrorAndRetryAfter": "Une erreur s'est produite. Veuillez réessayer plus tard.",
+  "unknownErrorAndRetryAfter": "Une erreur s’est produite. Veuillez réessayer plus tard",
   "errorOccurred": "Une erreur s'est produite",
   "unknownError": "Une erreur inconnue s'est produite",
   "unexpectedErrorOccurred": "Quelque chose s'est mal passé",

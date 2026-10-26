@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Oldingi tabletka blister guruhi hali mavjud emas",
   "withPillSheetCount": "{number} dona tabletka blisteri",
   "connectionError": "Internet aloqasi beqaror ko'rinadi. Iltimos, biroz vaqt o'tgach qaytadan urinib ko'ring",
-  "unknownErrorAndRetryAfter": "Xatolik yuz berdi. Biroz kutib, qayta urinib ko'ring",
+  "unknownErrorAndRetryAfter": "Xatolik yuz berdi. Iltimos, birozdan keyin qayta urinib koʻring",
   "errorOccurred": "Xatolik yuz berdi",
   "unknownError": "Noma'lum xato yuz berdi",
   "unexpectedErrorOccurred": "Kutilmagan xato yuz berdi",

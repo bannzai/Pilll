@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "முந்தைய மாத்திரை அட்டை குழு இன்னும் இல்லை",
   "withPillSheetCount": "{number} மாத்திரை அட்டைகள்",
   "connectionError": "இணைய இணைப்பு நிலையற்றதாக தெரிகிறது. சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும்.",
-  "unknownErrorAndRetryAfter": "பிழை ஏற்பட்டுள்ளது. சிறிது நேரம் கழித்து மீண்டும் முயற்சி செய்யுங்கள்",
+  "unknownErrorAndRetryAfter": "பிழை ஏற்பட்டது. சிறிது நேரம் கழித்து மீண்டும் முயற்சி செய்யுங்கள்",
   "errorOccurred": "பிழை ஏற்பட்டது",
   "unknownError": "தெரியாத பிழை ஏற்பட்டது",
   "unexpectedErrorOccurred": "எதிர்பாராத பிழை ஏற்பட்டுள்ளது",

@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Wala pang naunang grupo ng pakete ng pildoras",
   "withPillSheetCount": "{number} pakete ng pildoras",
   "connectionError": "Mukhang may problema sa koneksyon. Subukan ulit mamaya.",
-  "unknownErrorAndRetryAfter": "May naganap na error. Mag-antay ng ilang sandali at subukan muli.",
+  "unknownErrorAndRetryAfter": "Nagkaroon ng error. Pakisubukan po ulit mamaya",
   "errorOccurred": "Nagkaroon ng error",
   "unknownError": "Nagkaroon ng hindi kilalang error",
   "unexpectedErrorOccurred": "Nagkaroon ng hindi inaasahang suliranin",

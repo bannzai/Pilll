@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Мурунку таблетка блистери тобу азырынча жок",
   "withPillSheetCount": "{number} таблетка блистери",
   "connectionError": "Интернет туташууда көйгөй бар көрүнөт. Бир аз күтүп, кайра аракет кылыңыз",
-  "unknownErrorAndRetryAfter": "Ката кетти. Бир аз убакыт өткөндөн кийин кайра аракет кылыңыз",
+  "unknownErrorAndRetryAfter": "Ката кетти. Бир аздан кийин кайра аракет кылып көрүңүз",
   "errorOccurred": "Ката кетти",
   "unknownError": "Белгисиз ката чыкты",
   "unexpectedErrorOccurred": "Күтүлбөгөн ката пайда болду",

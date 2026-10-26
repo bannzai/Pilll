@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "لا توجد مجموعة شريط سابقة حتى الآن",
   "withPillSheetCount": "{number} شرائط حبوب",
   "connectionError": "يبدو أن بيئة الاتصال غير مستقرة. يرجى الانتظار قليلاً والمحاولة مرة أخرى",
-  "unknownErrorAndRetryAfter": "حدث خطأ. يرجى المحاولة مرة أخرى بعد قليل",
+  "unknownErrorAndRetryAfter": "حدث خطأ. يُرجى المحاولة مرة أخرى لاحقًا",
   "errorOccurred": "حدث خطأ",
   "unknownError": "حدث خطأ غير معروف",
   "unexpectedErrorOccurred": "حدث خطأ غير متوقع",

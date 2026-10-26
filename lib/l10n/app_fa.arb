@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "هنوز گروه قبلی ورق قرص وجود ندارد",
   "withPillSheetCount": "{number} ورق قرص",
   "connectionError": "اتصال اینترنت ناپایدار است. لطفاً کمی صبر کرده و دوباره تلاش کنید.",
-  "unknownErrorAndRetryAfter": "خطایی رخ داده است. لطفاً پس از مدتی دوباره تلاش کنید.",
+  "unknownErrorAndRetryAfter": "خطایی رخ داد. لطفاً کمی بعد دوباره تلاش کنید",
   "errorOccurred": "خطایی رخ داده است",
   "unknownError": "خطای نامشخصی رخ داده است",
   "unexpectedErrorOccurred": "خطای غیرمنتظره‌ای رخ داد",

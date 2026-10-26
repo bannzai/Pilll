@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "گولیوں کی پٹی کا پچھلا گروپ ابھی موجود نہیں ہے",
   "withPillSheetCount": "{number} گولیوں کے پتے",
   "connectionError": "نیٹ ورک کنکشن غیر مستحکم لگ رہا ہے۔ کچھ وقت انتظار کر کے دوبارہ کوشش کریں",
-  "unknownErrorAndRetryAfter": "خرابی پیدا ہوئی۔ کچھ وقت بعد دوبارہ کوشش کریں",
+  "unknownErrorAndRetryAfter": "کوئی خرابی پیش آئی ہے۔ براہ کرم کچھ دیر بعد دوبارہ کوشش کریں",
   "errorOccurred": "خرابی ہو گئی ہے",
   "unknownError": "ایک نامعلوم خرابی ہوئی ہے",
   "unexpectedErrorOccurred": "غیر متوقع خرابی ہوئی ہے",

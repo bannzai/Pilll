@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "目前还没有上一组药板哦",
   "withPillSheetCount": "{number}板",
   "connectionError": "网络连接不稳定，请稍后重试",
-  "unknownErrorAndRetryAfter": "发生错误，请稍后重试",
+  "unknownErrorAndRetryAfter": "出现了错误，请稍后重试",
   "errorOccurred": "发生错误",
   "unknownError": "发生了未知错误",
   "unexpectedErrorOccurred": "出现了意外错误",

@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Ainda não há um grupo de cartela anterior",
   "withPillSheetCount": "{number} cartelas de pílulas",
   "connectionError": "A conexão de rede parece instável. Aguarde um momento e tente novamente.",
-  "unknownErrorAndRetryAfter": "Ocorreu um erro. Aguarde um momento e tente novamente.",
+  "unknownErrorAndRetryAfter": "Ocorreu um erro. Tente novamente mais tarde",
   "errorOccurred": "Ocorreu um erro",
   "unknownError": "Ocorreu um erro desconhecido",
   "unexpectedErrorOccurred": "Ocorreu um erro inesperado",

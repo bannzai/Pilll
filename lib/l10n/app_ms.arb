@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Kumpulan pek pil sebelumnya belum ada",
   "withPillSheetCount": "{number} keping pil",
   "connectionError": "Nampaknya sambungan rangkaian tidak stabil. Sila cuba lagi selepas beberapa ketika.",
-  "unknownErrorAndRetryAfter": "Ralat telah berlaku. Sila tunggu sebentar dan cuba lagi.",
+  "unknownErrorAndRetryAfter": "Ralat telah berlaku. Sila cuba lagi sebentar lagi",
   "errorOccurred": "Ralat telah berlaku",
   "unknownError": "Ralat tidak diketahui telah berlaku",
   "unexpectedErrorOccurred": "Ralat yang tidak dijangka telah berlaku",

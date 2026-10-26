@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Det finnes ingen tidligere pillebrettgruppe ennå",
   "withPillSheetCount": "{number} pillebrett",
   "connectionError": "Det ser ut til at nettverkstilkoblingen er ustabil. Vennligst vent litt og prøv igjen.",
-  "unknownErrorAndRetryAfter": "Det oppstod en feil. Vennligst prøv igjen senere.",
+  "unknownErrorAndRetryAfter": "Det oppstod en feil. Prøv igjen senere",
   "errorOccurred": "Det oppstod en feil",
   "unknownError": "Det oppstod en ukjent feil",
   "unexpectedErrorOccurred": "Det oppstod en uventet feil",

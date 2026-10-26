@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Iepriekšējās tablešu blister grupas vēl nav",
   "withPillSheetCount": "{number} tablešu plāksnītes",
   "connectionError": "Tīkla savienojums šķiet nestabils. Lūdzu, uzgaidiet un mēģiniet vēlreiz.",
-  "unknownErrorAndRetryAfter": "Notika kļūda. Lūdzu, mēģiniet vēlreiz pēc brīža.",
+  "unknownErrorAndRetryAfter": "Radās kļūda. Lūdzu, mēģiniet vēlreiz vēlāk",
   "errorOccurred": "Radās kļūda",
   "unknownError": "Radās nezināma kļūda",
   "unexpectedErrorOccurred": "Radās negaidīta kļūda",

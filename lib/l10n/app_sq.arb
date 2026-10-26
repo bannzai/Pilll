@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Grupi i mëparshëm i blister ende nuk ekziston",
   "withPillSheetCount": "{number} blistera pilulash",
   "connectionError": "Lidhja e internetit duket të jetë e paqëndrueshme. Ju lutemi provoni përsëri pas pak kohësh.",
-  "unknownErrorAndRetryAfter": "Ndodhi një gabim. Ju lutem prisni pak dhe provoni përsëri.",
+  "unknownErrorAndRetryAfter": "Ndodhi një gabim. Ju lutemi, provoni përsëri më vonë",
   "errorOccurred": "Ka ndodhur një gabim",
   "unknownError": "Ndodhi një gabim i panjohur",
   "unexpectedErrorOccurred": "Ka ndodhur një gabim i papritur",

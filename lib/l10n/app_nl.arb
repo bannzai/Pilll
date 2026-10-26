@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Er is nog geen vorige pillenstripgroep",
   "withPillSheetCount": "{number} pillenstrips",
   "connectionError": "De verbinding lijkt instabiel. Probeer het later opnieuw.",
-  "unknownErrorAndRetryAfter": "Er is een fout opgetreden. Wacht even en probeer het opnieuw.",
+  "unknownErrorAndRetryAfter": "Er is iets misgegaan. Probeer het later nog eens",
   "errorOccurred": "Er is een fout opgetreden",
   "unknownError": "Er is een onbekende fout opgetreden",
   "unexpectedErrorOccurred": "Er is iets fout gegaan",

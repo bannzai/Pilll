@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Předchozí skupina blistrů zatím neexistuje",
   "withPillSheetCount": "{number} platíček",
   "connectionError": "Připojení k síti je nestabilní. Zkuste to prosím později.",
-  "unknownErrorAndRetryAfter": "Došlo k chybě. Zkuste to prosím znovu za chvíli.",
+  "unknownErrorAndRetryAfter": "Došlo k chybě. Zkuste to prosím později znovu",
   "errorOccurred": "Došlo k chybě",
   "unknownError": "Došlo k neznámé chybě",
   "unexpectedErrorOccurred": "Došlo k neočekávané chybě",

@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "មិនទាន់មានក្រុមបន្ទះថ្នាំគ្រាប់ពីមុនទេ",
   "withPillSheetCount": "{number} បន្ទះថ្នាំគ្រាប់",
   "connectionError": "ការតភ្ជាប់អ៊ីនធឺណិតហាក់ដូចជាមិនស្ថិរ។ សូមរង់ចាំមួយរយៈ រួចព្យាយាមម្តងទៀត",
-  "unknownErrorAndRetryAfter": "មានកំហុសកើតឡើង។ សូមព្យាយាមម្តងទៀតក្នុងពេលបន្តិចទៀត។",
+  "unknownErrorAndRetryAfter": "មានបញ្ហាកើតឡើង។ សូមព្យាយាមម្ដងទៀតនៅពេលក្រោយ",
   "errorOccurred": "មានកំហុសកើតឡើង",
   "unknownError": "មានកំហុសមិនស្គាល់បានកើតឡើង",
   "unexpectedErrorOccurred": "កំហុសមិនរំពឹងបានកើតឡើង",

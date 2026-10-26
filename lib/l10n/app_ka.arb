@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "აბების ბლისტერის წინა ჯგუფი ჯერ არ არსებობს",
   "withPillSheetCount": "{number} აბების ფირფიტა",
   "connectionError": "ქსელური კავშირი არასტაბილურია. გთხოვთ, დაელოდოთ და სცადეთ ხელახლა.",
-  "unknownErrorAndRetryAfter": "შეცდომა მოხდა. ცოტა ხნის შემდეგ ისევ სცადეთ",
+  "unknownErrorAndRetryAfter": "შეცდომა მოხდა. გთხოვთ, მოგვიანებით კვლავ სცადოთ",
   "errorOccurred": "შეცდომა მოხდა",
   "unknownError": "უცნობი შეცდომა მოხდა",
   "unexpectedErrorOccurred": "მოულოდნელი შეცდომა მოხდა",

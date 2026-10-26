@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "עדיין אין קבוצה קודמת של חפיסת גלולות",
   "withPillSheetCount": "{number} חפיסות גלולות",
   "connectionError": "החיבור לאינטרנט נראה לא יציב. אנא המתינו ונסו שוב",
-  "unknownErrorAndRetryAfter": "אירעה שגיאה. אנא נסה שוב לאחר זמן מה",
+  "unknownErrorAndRetryAfter": "אירעה שגיאה. אפשר לנסות שוב מאוחר יותר",
   "errorOccurred": "התרחשה שגיאה",
   "unknownError": "אירעה שגיאה לא ידועה",
   "unexpectedErrorOccurred": "אירעה שגיאה בלתי צפויה",

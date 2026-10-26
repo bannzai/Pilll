@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "ຍັງບໍ່ມີກຸ່ມແຜງຢາຄຸມກ່ອນໜ້າ",
   "withPillSheetCount": "{number} ແຜງຢາ",
   "connectionError": "ການເຊື່ອມຕໍ່ອິນເຕີເນັດບໍ່ໝັ້ນຄົງ. ກະລຸນາລໍຖ້າຄັກໜຶ່ງແລ້ວລອງໃໝ່ອີກຄັ້ງ",
-  "unknownErrorAndRetryAfter": "ເກີດຂໍ້ຜິດພາດ. ກະລຸນາລໍຖ້າຊັ່ວຄາວແລ້ວລອງໃໝ່ອີກ",
+  "unknownErrorAndRetryAfter": "ເກີດຂໍ້ຜິດພາດ. ກະລຸນາລອງໃໝ່ພາຍຫຼັງ",
   "errorOccurred": "ເກີດຄວາມຜິດພາດຂຶ້ນ",
   "unknownError": "ການຜິດພາດທີ່ບໍ່ຮູ້ສາເຫດໄດ້ເກີດຂຶ້ນ",
   "unexpectedErrorOccurred": "ເກີດຂໍ້ຜິດພາດທີ່ບໍ່ຄາດຄິດ",

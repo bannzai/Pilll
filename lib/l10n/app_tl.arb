@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Wala pang naunang grupo ng pakete ng pildoras",
   "withPillSheetCount": "{number} pakete ng pildoras",
   "connectionError": "Mukhang hindi matatag ang koneksyon sa internet. Subukan ulit mamaya.",
-  "unknownErrorAndRetryAfter": "May naganap na error. Maghintay po ng kaunti at subukan muli.",
+  "unknownErrorAndRetryAfter": "Nagkaroon ng problema. Pakisubukan po ulit mamaya",
   "errorOccurred": "May error na naganap",
   "unknownError": "May naganap na hindi kilalang error",
   "unexpectedErrorOccurred": "Nagkaroon ng hindi inaasahang problema",

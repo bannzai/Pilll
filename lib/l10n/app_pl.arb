@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Poprzednia grupa blistów jeszcze nie istnieje",
   "withPillSheetCount": "{number} blistrów",
   "connectionError": "Połączenie z internetem wydaje się niestabilne. Spróbuj ponownie za chwilę.",
-  "unknownErrorAndRetryAfter": "Wystąpił błąd. Spróbuj ponownie po chwili.",
+  "unknownErrorAndRetryAfter": "Wystąpił błąd. Spróbuj ponownie później",
   "errorOccurred": "Wystąpił błąd",
   "unknownError": "Wystąpił nieznany błąd",
   "unexpectedErrorOccurred": "Wystąpił nieoczekiwany błąd",

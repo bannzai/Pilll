@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "ਪਿਛਲਾ ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਸਮੂਹ ਹਾਲੇ ਮੌਜੂਦ ਨਹੀਂ ਹੈ",
   "withPillSheetCount": "{number} ਗੋਲੀਆਂ ਦੇ ਪੱਤੇ",
   "connectionError": "ਨੈੱਟਵਰਕ ਕਨੈਕਸ਼ਨ ਅਸਥਿਰ ਲਗ ਰਿਹਾ ਹੈ। ਕੁਝ ਦੇਰ ਬਾਅਦ ਫਿਰ ਤੋਂ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
-  "unknownErrorAndRetryAfter": "ਇੱਕ ਗਲਤੀ ਹੋਈ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਕੁਝ ਦੇਰ ਬਾਅਦ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+  "unknownErrorAndRetryAfter": "ਕੁਝ ਗੜਬੜ ਹੋ ਗਈ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਕੁਝ ਸਮੇਂ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
   "errorOccurred": "ਇੱਕ ਗਲਤੀ ਹੋ ਗਈ ਹੈ",
   "unknownError": "ਅਣਜਾਣ ਗਲਤੀ ਹੋਈ ਹੈ",
   "unexpectedErrorOccurred": "ਇੱਕ ਅਚਾਨਕ ਗਲਤੀ ਹੋਈ ਹੈ",

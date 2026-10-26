@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Der er endnu ingen tidligere pillekortgruppe",
   "withPillSheetCount": "{number} pillepakker",
   "connectionError": "Netværksforbindelsen ser ud til at være ustabil. Vent lidt og prøv igen.",
-  "unknownErrorAndRetryAfter": "Der opstod en fejl. Prøv igen senere.",
+  "unknownErrorAndRetryAfter": "Der opstod en fejl. Prøv igen senere",
   "errorOccurred": "Der opstod en fejl",
   "unknownError": "Der opstod en ukendt fejl",
   "unexpectedErrorOccurred": "Der opstod en uventet fejl",

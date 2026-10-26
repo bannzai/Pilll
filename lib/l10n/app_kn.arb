@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "ಹಿಂದಿನ ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಗುಂಪು ಇನ್ನೂ ಇಲ್ಲ",
   "withPillSheetCount": "{number} ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್‌ಗಳು",
   "connectionError": "ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕ ಅಸ್ಥಿರವಾಗಿದೆ. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
-  "unknownErrorAndRetryAfter": "ದೋಷ ಸಂಭವಿಸಿದೆ. ಸ್ವಲ್ಪ ಸಮಯ ಕಾಯಿರಿ ಮತ್ತು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
+  "unknownErrorAndRetryAfter": "ದೋಷ ಸಂಭವಿಸಿದೆ. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
   "errorOccurred": "ದೋಷ ಸಂಭವಿಸಿದೆ",
   "unknownError": "ತಿಳಿಯದ ದೋಷ ಸಂಭವಿಸಿದೆ",
   "unexpectedErrorOccurred": "ಅನಿರೀಕ್ಷಿತ ದೋಷ ಸಂಭವಿಸಿದೆ",

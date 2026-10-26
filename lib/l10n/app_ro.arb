@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Nu există încă un grup anterior de blister",
   "withPillSheetCount": "{number} folii de pilule",
   "connectionError": "Conexiunea pare instabilă. Vă rugăm să încercați din nou mai târziu.",
-  "unknownErrorAndRetryAfter": "A apărut o eroare. Încercați din nou mai târziu.",
+  "unknownErrorAndRetryAfter": "A apărut o eroare. Încearcă din nou mai târziu",
   "errorOccurred": "A apărut o eroare",
   "unknownError": "A apărut o eroare necunoscută",
   "unexpectedErrorOccurred": "A apărut o eroare neașteptată",

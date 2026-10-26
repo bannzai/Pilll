@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "পূৰ্বৰ পিলৰ ষ্ট্ৰিপৰ গোট এতিয়াও নাই",
   "withPillSheetCount": "{number}খন পিলৰ পাত",
   "connectionError": "ইন্টাৰনেট সংযোগ অস্থিৰ যেন লাগিছে। কিছু সময়ৰ পিছত পুনৰ চেষ্টা কৰক।",
-  "unknownErrorAndRetryAfter": "এটা ত্ৰুটি ঘটিছে। কিছু সময়ৰ পিছত পুনৰ চেষ্টা কৰক।",
+  "unknownErrorAndRetryAfter": "কিবা এটা ভুল হৈছে। অনুগ্ৰহ কৰি কিছু সময়ৰ পাছত পুনৰ চেষ্টা কৰক",
   "errorOccurred": "ত্ৰুটি হৈছে",
   "unknownError": "অজ্ঞাত ত্ৰুটি ঘটিছে",
   "unexpectedErrorOccurred": "অপ্ৰত্যাশিত সমস্যা হৈছে",

@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "د ګولیو پاڼ پخوانۍ ډله تر اوسه نشته",
   "withPillSheetCount": "{number} د ګولیو پاڼې",
   "connectionError": "د انټرنېټ اړیکه بې‌ثباته ښکاري. مهرباني وکړئ لږ وروسته بیا هڅه وکړئ.",
-  "unknownErrorAndRetryAfter": "یوه خرابي رامنځته شوې. مهرباني وکړئ د یو څه وخت وروسته بیا هڅه وکړئ.",
+  "unknownErrorAndRetryAfter": "یوه تېروتنه رامنځته شوه. مهرباني وکړئ لږ وروسته بیا هڅه وکړئ",
   "errorOccurred": "خرابۍ پیښه شوه",
   "unknownError": "نامعلوم خرابي رامنځته شو",
   "unexpectedErrorOccurred": "یو غیر متوقع خطا پیښ شوې",

@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Aún no hay un grupo de blíster anterior",
   "withPillSheetCount": "{number} blísteres",
   "connectionError": "Parece que la conexión de red es inestable. Por favor, inténtalo de nuevo más tarde.",
-  "unknownErrorAndRetryAfter": "Ha ocurrido un error. Por favor, inténtalo de nuevo más tarde.",
+  "unknownErrorAndRetryAfter": "Se produjo un error. Inténtalo de nuevo más tarde",
   "errorOccurred": "Ha ocurrido un error",
   "unknownError": "Ha ocurrido un error desconocido",
   "unexpectedErrorOccurred": "Ha ocurrido un error inesperado",

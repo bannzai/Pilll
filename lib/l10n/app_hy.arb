@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Նախորդ հաբերի բլիստեր խումբը դեռ գոյություն չունի",
   "withPillSheetCount": "{number} դեղահաբերի թիթեղիկ",
   "connectionError": "Ցանցային կապը անկայուն է թվում: Խնդրում ենք սպասել մի փոքր և կրկին փորձել:",
-  "unknownErrorAndRetryAfter": "Սխալ է տեղի ունեցել: Մի փոքր սպասեք և կրկին փորձեք:",
+  "unknownErrorAndRetryAfter": "Սխալ է տեղի ունեցել։ Խնդրում ենք մի փոքր ուշ կրկին փորձեք",
   "errorOccurred": "Սխալ է տեղի ունեցել",
   "unknownError": "Անհայտ սխալ է տեղի ունեցել",
   "unexpectedErrorOccurred": "Անսպասելի սխալ է տեղի ունեցել",

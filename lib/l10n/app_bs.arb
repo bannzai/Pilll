@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Prethodna grupa blistera još ne postoji",
   "withPillSheetCount": "{number} blistera",
   "connectionError": "Izgleda da je mrežna veza nestabilna. Molimo pokušajte ponovo kasnije.",
-  "unknownErrorAndRetryAfter": "Došlo je do greške. Molimo sačekajte i pokušajte ponovo.",
+  "unknownErrorAndRetryAfter": "Došlo je do greške. Molimo Vas, pokušajte ponovo kasnije",
   "errorOccurred": "Došlo je do greške",
   "unknownError": "Dogodila se nepoznata greška",
   "unexpectedErrorOccurred": "Dogodila se neočekivana greška",

@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Алдыңғы таблетка блистер тобы әлі жоқ",
   "withPillSheetCount": "{number} таблетка блистері",
   "connectionError": "Интернет байланысы тұрақсыз. Кейінірек қайталап көріңіз",
-  "unknownErrorAndRetryAfter": "Қате орын алды. Біраз уақыттан кейін қайта көріңіз.",
+  "unknownErrorAndRetryAfter": "Қате орын алды. Сәлден кейін қайта көріңіз",
   "errorOccurred": "Қате орын алды",
   "unknownError": "Белгісіз қате пайда болды",
   "unexpectedErrorOccurred": "Күтпеген қате орын алды",

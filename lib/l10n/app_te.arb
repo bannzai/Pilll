@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "మునుపటి మాత్రల స్ట్రిప్ సమూహం ఇంకా లేదు",
   "withPillSheetCount": "{number} మాత్రల స్ట్రిప్‌లు",
   "connectionError": "ఇంటర్నెట్ కనెక్షన్ అస్థిరంగా ఉంది. కొంత సమయం తర్వాత మళ్లీ ప్రయత్నించండి",
-  "unknownErrorAndRetryAfter": "దోషం సంభవించింది. కొంత సమయం తర్వాత మళ్లీ ప్రయత్నించండి",
+  "unknownErrorAndRetryAfter": "లోపం సంభవించింది. దయచేసి కొంతసేపటి తర్వాత మళ్లీ ప్రయత్నించండి",
   "errorOccurred": "లోపం సంభవించింది",
   "unknownError": "తెలియని లోపం జరిగింది",
   "unexpectedErrorOccurred": "అనుకోని లోపం జరిగింది",

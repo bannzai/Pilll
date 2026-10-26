@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Сè уште нема претходна група блистер",
   "withPillSheetCount": "{number} блистери со таблети",
   "connectionError": "Мрежната врска изгледа нестабилна. Ве молиме почекајте малку и обидете се повторно.",
-  "unknownErrorAndRetryAfter": "Се случи грешка. Ве молиме обидете се повторно подоцна.",
+  "unknownErrorAndRetryAfter": "Се појави грешка. Ве молиме, обидете се повторно подоцна",
   "errorOccurred": "Се случи грешка",
   "unknownError": "Настана непозната грешка",
   "unexpectedErrorOccurred": "Настана неочекувана грешка",

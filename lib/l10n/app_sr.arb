@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Претходна група блистер још не постоји",
   "withPillSheetCount": "{number} блистера таблета",
   "connectionError": "Veza sa internetom je nestabilna. Molimo sačekajte malo i pokušajte ponovo.",
-  "unknownErrorAndRetryAfter": "Došlo je do greške. Molimo pokušajte kasnije.",
+  "unknownErrorAndRetryAfter": "Дошло је до грешке. Молимо Вас, покушајте поново касније",
   "errorOccurred": "Došlo je do greške",
   "unknownError": "Dogodila se nepoznata greška",
   "unexpectedErrorOccurred": "Dogodila se neočekivana greška",

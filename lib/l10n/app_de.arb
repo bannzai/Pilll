@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Es gibt noch keine vorherige Pillenblistergruppe",
   "withPillSheetCount": "{number} Pillenblister",
   "connectionError": "Ihre Internetverbindung scheint instabil zu sein. Bitte versuchen Sie es später erneut.",
-  "unknownErrorAndRetryAfter": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.",
+  "unknownErrorAndRetryAfter": "Ein Fehler ist aufgetreten. Versuch es bitte später noch einmal",
   "errorOccurred": "Ein Fehler ist aufgetreten",
   "unknownError": "Ein unbekannter Fehler ist aufgetreten",
   "unexpectedErrorOccurred": "Ein unerwarteter Fehler ist aufgetreten",

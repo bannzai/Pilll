@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "ยังไม่มีกลุ่มแผงยาก่อนหน้าค่ะ",
   "withPillSheetCount": "{number} แผง",
   "connectionError": "การเชื่อมต่ออินเทอร์เน็ตไม่เสถียร กรุณารอสักครู่แล้วลองใหม่อีกครั้ง",
-  "unknownErrorAndRetryAfter": "เกิดข้อผิดพลาด กรุณารอสักครู่แล้วลองใหม่อีกครั้ง",
+  "unknownErrorAndRetryAfter": "เกิดข้อผิดพลาดขึ้น โปรดลองอีกครั้งในภายหลังค่ะ",
   "errorOccurred": "เกิดข้อผิดพลาด",
   "unknownError": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุ",
   "unexpectedErrorOccurred": "เกิดข้อผิดพลาดที่ไม่คาดคิด",

@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "There’s no previous pill pack group yet",
   "withPillSheetCount": "{number} pill sheets",
   "connectionError": "Your connection seems unstable. Please try again later.",
-  "unknownErrorAndRetryAfter": "An error occurred. Please try again later.",
+  "unknownErrorAndRetryAfter": "Something went wrong. Please try again later",
   "errorOccurred": "An error occurred",
   "unknownError": "An unknown error occurred",
   "unexpectedErrorOccurred": "Something went wrong",

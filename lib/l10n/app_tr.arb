@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Önceki blister grubu henüz yok",
   "withPillSheetCount": "{number} hap blisteri",
   "connectionError": "Ağ bağlantısı kararsız görünüyor. Lütfen biraz bekledikten sonra tekrar deneyin.",
-  "unknownErrorAndRetryAfter": "Bir hata oluştu. Lütfen bir süre bekleyip tekrar deneyin",
+  "unknownErrorAndRetryAfter": "Bir hata oluştu. Lütfen daha sonra tekrar deneyin",
   "errorOccurred": "Bir hata oluştu",
   "unknownError": "Bilinmeyen bir hata oluştu",
   "unexpectedErrorOccurred": "Beklenmeyen bir hata oluştu",

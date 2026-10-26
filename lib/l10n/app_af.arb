@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Daar is nog nie ’n vorige pilstrokiegroep nie",
   "withPillSheetCount": "{number} pilvelle",
   "connectionError": "Dit lyk asof die netwerkverbinding onstabiel is. Probeer asseblief weer later.",
-  "unknownErrorAndRetryAfter": "'n Fout het voorgekom. Probeer asseblief weer later.",
+  "unknownErrorAndRetryAfter": "Daar was ’n fout. Probeer asseblief later weer",
   "errorOccurred": "'n Fout het voorgekom",
   "unknownError": "'n Onbekende fout het voorgekom",
   "unexpectedErrorOccurred": "'n Onverwagse fout het voorgekom",

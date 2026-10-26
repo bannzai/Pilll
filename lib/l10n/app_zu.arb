@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Alikabi khona iqembu langaphambilini leshidi lamaphilisi",
   "withPillSheetCount": "{number} amaphakethe amaphilisi",
   "connectionError": "Kubonakala sengathi uxhumano lunenkinga. Sicela uzame futhi kamuva.",
-  "unknownErrorAndRetryAfter": "Iphutha lenzekile. Sicela ulinde isikhashana bese uzama futhi.",
+  "unknownErrorAndRetryAfter": "Kuvele iphutha. Sicela uzame futhi ngokuhamba kwesikhathi",
   "errorOccurred": "Iphutha lenzekile",
   "unknownError": "Kuvele iphutha elingaziwa",
   "unexpectedErrorOccurred": "Iphutha elingalindelwe lenzekile",

@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Edellistä pilleriliuskaryhmää ei vielä ole",
   "withPillSheetCount": "{number} pillerilevyä",
   "connectionError": "Verkkoyhteys vaikuttaa epävakaalta. Odota hetki ja yritä uudelleen.",
-  "unknownErrorAndRetryAfter": "Tapahtui virhe. Yritä uudelleen hetken kuluttua.",
+  "unknownErrorAndRetryAfter": "Tapahtui virhe. Yritä myöhemmin uudelleen",
   "errorOccurred": "Tapahtui virhe",
   "unknownError": "Tuntematon virhe tapahtui",
   "unexpectedErrorOccurred": "Odottamaton virhe tapahtui",

@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Non c’è ancora un gruppo di blister precedente",
   "withPillSheetCount": "{number} blister di pillole",
   "connectionError": "La connessione sembra instabile. Riprova tra qualche momento.",
-  "unknownErrorAndRetryAfter": "Si è verificato un errore. Riprova tra qualche istante.",
+  "unknownErrorAndRetryAfter": "Si è verificato un errore. Riprova più tardi",
   "errorOccurred": "Si è verificato un errore",
   "unknownError": "Si è verificato un errore sconosciuto",
   "unexpectedErrorOccurred": "Si è verificato un errore imprevisto",

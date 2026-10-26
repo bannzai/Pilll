@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "अघिल्लो चक्की पत्ता समूह अझै छैन",
   "withPillSheetCount": "{number} चक्कीका पत्ता",
   "connectionError": "नेटवर्क कनेक्शन अस्थिर देखिन्छ। केही समय पछि फेरि प्रयास गर्नुहोस्।",
-  "unknownErrorAndRetryAfter": "त्रुटि भयो। केही समय पछि फेरि प्रयास गर्नुहोस्।",
+  "unknownErrorAndRetryAfter": "केही समस्या भयो। कृपया केही समयपछि फेरि प्रयास गर्नुहोस्",
   "errorOccurred": "त्रुटि भएको छ",
   "unknownError": "अज्ञात त्रुटि देखा पर्यो",
   "unexpectedErrorOccurred": "अप्रत्याशित त्रुटि भएको छ",

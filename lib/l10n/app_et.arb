@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Eelmist pillilehe rühma veel ei ole",
   "withPillSheetCount": "{number} pillilehte",
   "connectionError": "Tundub, et võrguühendus on ebastabiilne. Palun proovige mõne aja pärast uuesti.",
-  "unknownErrorAndRetryAfter": "Tekkis viga. Palun oodake veidi ja proovige uuesti.",
+  "unknownErrorAndRetryAfter": "Tekkis viga. Proovi hiljem uuesti",
   "errorOccurred": "Ilmnes viga",
   "unknownError": "Esines teadmatu viga",
   "unexpectedErrorOccurred": "Tekkis ootamatu viga",

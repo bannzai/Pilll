@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Det finns ingen tidigare p-pillerkarta-grupp ännu",
   "withPillSheetCount": "{number} pillerkartor",
   "connectionError": "Det verkar vara problem med nätverksanslutningen. Vänta en stund och försök igen.",
-  "unknownErrorAndRetryAfter": "Ett fel uppstod. Försök igen om ett tag.",
+  "unknownErrorAndRetryAfter": "Ett fel uppstod. Försök igen senare",
   "errorOccurred": "Ett fel har uppstått",
   "unknownError": "Ett okänt fel har inträffat",
   "unexpectedErrorOccurred": "Ett oväntat fel uppstod",

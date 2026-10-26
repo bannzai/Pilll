@@ -352,7 +352,7 @@
   "previousPillSheetGroupNotFound": "Bado hakuna kundi la awali la pakiti ya vidonge",
   "withPillSheetCount": "{number} vifurushi vya vidonge",
   "connectionError": "Muunganisho wa mtandao hauwa thabiti. Tafadhali subiri kidogo na ujaribu tena.",
-  "unknownErrorAndRetryAfter": "Hitilafu imetokea. Tafadhali jaribu tena baadaye.",
+  "unknownErrorAndRetryAfter": "Hitilafu imetokea. Tafadhali jaribu tena baadaye",
   "errorOccurred": "Kosa limetokea",
   "unknownError": "Hitilafu isiyojulikana imetokea",
   "unexpectedErrorOccurred": "Hitilafu isiyotarajiwa imetokea",
