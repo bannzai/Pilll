@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "ประหยัด {offPercent}% เมื่อเทียบกับแพ็กเกจรายเดือนปกติ",
   "premiumIntroductionDiscountPriceDeadline": "สมัครพรีเมียมแล้วใช้งานทุกฟีเจอร์ต่อได้ค่ะ",
   "countdownForDiscountPriceDeadline": "ซื้อภายใน {countdown} รับส่วนลด {offPercent}%",
-  "pillReminderChanged": "ตั้งการแจ้งเตือนการรับประทานยาเป็น{value}แล้ว",
+  "pillReminderChanged": "ตั้งค่าการแจ้งเตือนให้ทานยาเป็น {value} แล้วค่ะ",
   "silentModeNotificationDescription": "แม้ในโหมดไม่รบกวนหรือเมื่ออุปกรณ์เปิดโหมดเงียบ การแจ้งเตือนจะแสดงบนหน้าจอล็อกพร้อมเสียงเตือน",
   "enableNotificationInSilentMode": "แจ้งเตือนในโหมดปิดเสียง",
   "enableNotificationInSilentModeSetting": "การแจ้งเตือนในโหมดเงียบ",

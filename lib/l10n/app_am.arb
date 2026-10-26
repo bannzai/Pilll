@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "ከመደበኛው ወርሃዊ እቅድ ጋር ሲነጻጸር {offPercent}% ቅናሽ",
   "premiumIntroductionDiscountPriceDeadline": "ለፕሪሚየም በመመዝገብ ሁሉንም ባህሪያት መጠቀምዎን መቀጠል ይችላሉ",
   "countdownForDiscountPriceDeadline": "በ{countdown} ውስጥ ሲገዙ {offPercent}% ቅናሽ ያገኛሉ",
-  "pillReminderChanged": "የመድሃኒት አማሳሰቢያን ወደ {value} ቀይሬዋለሁ",
+  "pillReminderChanged": "የክኒን ማስታወሻ ወደ {value} ተቀይሯል",
   "silentModeNotificationDescription": "ትኩረት ሁነታ ሲበራ ወይም መሣሪያው ፀጥተኛ ሁነታ ላይ ሲሆን እንኳን፣ ማሳወቂያዎች በተቆለፈው ስክሪን ላይ ይታያሉ እና ድምፅ ይደመፃል።",
   "enableNotificationInSilentMode": "ፀጥታ ሁኔታ ባለበትም አሳውቅ",
   "enableNotificationInSilentModeSetting": "በጸጥታ ሁኔታም ማሳወቂያ ቅንብር",

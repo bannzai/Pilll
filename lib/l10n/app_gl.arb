@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "Aforra un {offPercent} % fronte ao plan mensual habitual",
   "premiumIntroductionDiscountPriceDeadline": "Coa subscrición Premium podes seguir usando todas as funcións",
   "countdownForDiscountPriceDeadline": "Compra nos próximos {countdown} cun desconto do {offPercent} %",
-  "pillReminderChanged": "Estableceuse a notificación de toma a {value}",
+  "pillReminderChanged": "Os avisos para tomar a pílula están configurados en {value}",
   "silentModeNotificationDescription": "Mesmo co modo concentración activado ou co dispositivo en silencio, as notificacións aparecerán na pantalla de bloqueo e reproducirase o son",
   "enableNotificationInSilentMode": "Notificar en modo silencioso",
   "enableNotificationInSilentModeSetting": "Configuración de notificacións en modo silencioso",

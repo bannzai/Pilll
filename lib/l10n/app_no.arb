@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "Spar {offPercent} % sammenlignet med det vanlige månedsabonnementet",
   "premiumIntroductionDiscountPriceDeadline": "Med et Premium-abonnement kan du fortsette å bruke alle funksjonene",
   "countdownForDiscountPriceDeadline": "Kjøp innen {countdown} og få {offPercent}% rabatt",
-  "pillReminderChanged": "Medisinpåminnelser er satt til {value}",
+  "pillReminderChanged": "Påminnelser om p-piller er satt til {value}",
   "silentModeNotificationDescription": "Varslingene vises på låseskjermen og lyd spilles selv når Ikke forstyrr-modus er påslått eller enheten er på lydløs",
   "enableNotificationInSilentMode": "Varsle selv i stillemodus",
   "enableNotificationInSilentModeSetting": "Varsling i stillemodus",

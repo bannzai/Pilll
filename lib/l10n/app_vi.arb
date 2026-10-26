@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "Tiết kiệm {offPercent}% so với gói hằng tháng thông thường",
   "premiumIntroductionDiscountPriceDeadline": "Đăng ký Premium để tiếp tục sử dụng tất cả tính năng",
   "countdownForDiscountPriceDeadline": "Mua trong vòng {countdown} để được giảm {offPercent}%",
-  "pillReminderChanged": "Thông báo uống thuốc đã được đặt thành {value}",
+  "pillReminderChanged": "Đã đặt lời nhắc uống thuốc thành {value}",
   "silentModeNotificationDescription": "Thông báo vẫn sẽ hiển thị trên màn hình khóa và phát âm thanh ngay cả khi Chế độ Tập trung đang bật hoặc thiết bị đang ở chế độ im lặng",
   "enableNotificationInSilentMode": "Thông báo ngay cả khi ở chế độ im lặng",
   "enableNotificationInSilentModeSetting": "Thông báo trong chế độ im lặng",

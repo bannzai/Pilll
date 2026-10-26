@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "خصم {offPercent}% مقارنة بالخطة الشهرية المعتادة",
   "premiumIntroductionDiscountPriceDeadline": "بالاشتراك في بريميوم، يمكنكِ الاستمرار في استخدام جميع الميزات",
   "countdownForDiscountPriceDeadline": "اشتري خلال {countdown} واحصلي على خصم {offPercent}%",
-  "pillReminderChanged": "تم تعديل موعد تذكير تناول الحبوب إلى {value}",
+  "pillReminderChanged": "تم ضبط إشعارات تناول الحبوب على {value}",
   "silentModeNotificationDescription": "حتى عند تشغيل وضع التركيز أو كتم صوت الجهاز، ستظهر الإشعارات على شاشة القفل وسيتم تشغيل الأصوات",
   "enableNotificationInSilentMode": "التنبيه حتى في الوضع الصامت",
   "enableNotificationInSilentModeSetting": "إعدادات الإشعارات في الوضع الصامت",

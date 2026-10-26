@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "Par {offPercent} % lētāk nekā parastais mēneša plāns",
   "premiumIntroductionDiscountPriceDeadline": "Ar Premium abonementu varat turpināt izmantot visas funkcijas",
   "countdownForDiscountPriceDeadline": "Iegādājieties {countdown} laikā un saņemiet {offPercent}% atlaidi",
-  "pillReminderChanged": "Lietošanas atgādinājums tika iestatīts uz {value}",
+  "pillReminderChanged": "Atgādinājumi par tabletes lietošanu iestatīti uz {value}",
   "silentModeNotificationDescription": "Pat kad ir ieslēgts fokusa režīms vai ierīce ir klusuma režīmā, paziņojumi tiks rādīti bloķēšanas ekrānā un tiks atskaņota skaņa",
   "enableNotificationInSilentMode": "Paziņot klusajā režīmā",
   "enableNotificationInSilentModeSetting": "Paziņojumi klusajā režīmā",

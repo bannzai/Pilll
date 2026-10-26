@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "Cu {offPercent}% mai ieftin decât planul lunar obișnuit",
   "premiumIntroductionDiscountPriceDeadline": "Cu un abonament premium poți folosi în continuare toate funcțiile",
   "countdownForDiscountPriceDeadline": "Cumpără în următoarele {countdown} și primești {offPercent}% reducere",
-  "pillReminderChanged": "Notificarea de administrare a fost setată la {value}",
+  "pillReminderChanged": "Notificările pentru luarea pilulei au fost setate la {value}",
   "silentModeNotificationDescription": "Notificările vor fi afișate pe ecranul de blocare și se va reda sunetul chiar și când modul Nu deranja este activat sau dispozitivul este pe silențios",
   "enableNotificationInSilentMode": "Notifică și în modul silențios",
   "enableNotificationInSilentModeSetting": "Notificări în modul silențios",

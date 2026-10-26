@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "باقاعدہ ماہانہ پلان کے مقابلے میں {offPercent}% رعایت",
   "premiumIntroductionDiscountPriceDeadline": "پریمیم سبسکرپشن کے ساتھ آپ تمام خصوصیات کا استعمال جاری رکھ سکتی ہیں",
   "countdownForDiscountPriceDeadline": "{countdown} کے اندر خریدنے پر {offPercent}% رعایت پائیں",
-  "pillReminderChanged": "خوراک کی یاد دہانی {value} پر سیٹ کر دی گئی ہے",
+  "pillReminderChanged": "گولی لینے کی یاد دہانیاں {value} پر سیٹ کر دی گئی ہیں",
   "silentModeNotificationDescription": "فوکس موڈ آن ہونے یا ڈیوائس خاموش ہونے کے باوجود بھی، اطلاعات لاک اسکرین پر ظاہر ہوں گی اور آواز بجے گی",
   "enableNotificationInSilentMode": "خاموش موڈ میں بھی اطلاع دیں",
   "enableNotificationInSilentModeSetting": "خاموش موڈ میں بھی نوٹیفیکیشن",

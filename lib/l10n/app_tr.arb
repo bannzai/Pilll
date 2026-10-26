@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "Standart aylık plana göre %{offPercent} indirim",
   "premiumIntroductionDiscountPriceDeadline": "Premium aboneliğiyle tüm özellikleri kullanmaya devam edebilirsiniz",
   "countdownForDiscountPriceDeadline": "{countdown} içinde satın alın, %{offPercent} indirim kazanın",
-  "pillReminderChanged": "İlaç hatırlatıcısı {value} olarak ayarlandı",
+  "pillReminderChanged": "Hap alma bildirimleri {value} olarak ayarlandı",
   "silentModeNotificationDescription": "Odak modu açık olduğunda veya cihaz sessiz modda olduğunda bile, bildirimler kilit ekranında görüntülenir ve ses çalar",
   "enableNotificationInSilentMode": "Sessiz modda bile bildirim",
   "enableNotificationInSilentModeSetting": "Sessiz modda bildirim",

@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "{offPercent}٪ تخفیف نسبت به طرح ماهانهٔ معمول",
   "premiumIntroductionDiscountPriceDeadline": "با اشتراک پریمیوم، می‌توانید همچنان از همه امکانات استفاده کنید",
   "countdownForDiscountPriceDeadline": "با خرید در {countdown} آینده، {offPercent}٪ تخفیف بگیرید",
-  "pillReminderChanged": "یادآوری مصرف را به {value} تنظیم کردم",
+  "pillReminderChanged": "اعلان‌های مصرف قرص روی {value} تنظیم شدند",
   "silentModeNotificationDescription": "حتی زمانی که حالت تمرکز روشن است یا دستگاه در حالت بی‌صدا قرار دارد، اعلان‌ها در صفحه قفل نمایش داده شده و صدا پخش خواهد شد",
   "enableNotificationInSilentMode": "اطلاع‌رسانی در حالت بی‌صدا",
   "enableNotificationInSilentModeSetting": "اعلان در حالت بی‌صدا",

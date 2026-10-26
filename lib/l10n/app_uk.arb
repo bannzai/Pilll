@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "На {offPercent}% дешевше за звичайний місячний план",
   "premiumIntroductionDiscountPriceDeadline": "З підпискою преміум ви зможете й надалі користуватися всіма функціями",
   "countdownForDiscountPriceDeadline": "Придбайте протягом {countdown} і отримайте знижку {offPercent}%",
-  "pillReminderChanged": "Нагадування про прийом встановлено на {value}",
+  "pillReminderChanged": "Нагадування про прийом пігулки встановлено на {value}",
   "silentModeNotificationDescription": "Коли увімкнено режим концентрації або пристрій беззвучний, сповіщення все одно відображатимуться на екрані блокування та відтворюватиметься звук",
   "enableNotificationInSilentMode": "Сповіщати навіть у тихому режимі",
   "enableNotificationInSilentModeSetting": "Сповіщення в беззвучному режимі",

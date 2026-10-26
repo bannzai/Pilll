@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "Bespaar {offPercent}% teenoor die gewone maandelikse plan",
   "premiumIntroductionDiscountPriceDeadline": "Met ’n Premium-intekening kan jy aanhou om al die funksies te gebruik",
   "countdownForDiscountPriceDeadline": "Koop binne {countdown} en kry {offPercent}% afslag",
-  "pillReminderChanged": "Innameherinnering is op {value} gestel.",
+  "pillReminderChanged": "Pilherinnerings is op {value} gestel",
   "silentModeNotificationDescription": "Selfs wanneer fokus modus aan is of die toestel stil is, sal kennisgewings op die slotskerm vertoon word en klanke sal gespeel word",
   "enableNotificationInSilentMode": "Kennisgewing selfs in stil modus",
   "enableNotificationInSilentModeSetting": "Kennisgewings in stille modus",

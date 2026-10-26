@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "Punguzo la {offPercent}% ikilinganishwa na mpango wa kawaida wa kila mwezi",
   "premiumIntroductionDiscountPriceDeadline": "Kwa kujisajili kwenye Premium, unaweza kuendelea kutumia vipengele vyote",
   "countdownForDiscountPriceDeadline": "Ukinunua ndani ya {countdown}, utapata punguzo la {offPercent}%",
-  "pillReminderChanged": "Arifa ya vidonge imewekwa {value}",
+  "pillReminderChanged": "Vikumbusho vya kumeza kidonge vimewekwa kuwa {value}",
   "silentModeNotificationDescription": "Hata wakati hali ya makini imeongezwa au kifaa kimewekwa kimya, arifa zitaonekana kwenye skrini iliyofungwa na sauti itasikika",
   "enableNotificationInSilentMode": "Arifa hata katika hali ya kimya",
   "enableNotificationInSilentModeSetting": "Arifa hata katika hali ya kimya",

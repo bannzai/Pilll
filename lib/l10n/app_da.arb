@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "Spar {offPercent} % i forhold til det normale månedsabonnement",
   "premiumIntroductionDiscountPriceDeadline": "Med et Premium-abonnement kan du fortsat bruge alle funktioner",
   "countdownForDiscountPriceDeadline": "Køb inden for {countdown} og få {offPercent}% rabat",
-  "pillReminderChanged": "Pillepåmindelse er sat til {value}",
+  "pillReminderChanged": "Påmindelser om p-piller er indstillet til {value}",
   "silentModeNotificationDescription": "Notifikationer vises på låseskærmen og lyd afspilles, selv når fokustilstand er aktiveret eller enheden er sat til lydløs",
   "enableNotificationInSilentMode": "Underret i lydløs tilstand",
   "enableNotificationInSilentModeSetting": "Notifikationer i lydløs tilstand",

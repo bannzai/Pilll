@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "הנחה של {offPercent}% לעומת התוכנית החודשית הרגילה",
   "premiumIntroductionDiscountPriceDeadline": "מינוי פרימיום מאפשר להמשיך להשתמש בכל האפשרויות",
   "countdownForDiscountPriceDeadline": "רכישה בתוך {countdown} תזכה בהנחה של {offPercent}%",
-  "pillReminderChanged": "תזכורת הנטילה הוגדרה ל{value}",
+  "pillReminderChanged": "תזכורות לנטילת הגלולה הוגדרו ל־{value}",
   "silentModeNotificationDescription": "גם כאשר מצב הריכוז מופעל או המכשיר מושתק, הודעות יוצגו במסך הנעילה וצליל יושמע",
   "enableNotificationInSilentMode": "התראה גם במצב שקט",
   "enableNotificationInSilentModeSetting": "הגדרות התראה במצב שקט",

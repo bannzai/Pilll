@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "{offPercent} % ceneje od običajnega mesečnega paketa",
   "premiumIntroductionDiscountPriceDeadline": "Z naročnino Premium lahko še naprej uporabljate vse funkcije",
   "countdownForDiscountPriceDeadline": "Ob nakupu v naslednjih {countdown} prejmete {offPercent}% popust",
-  "pillReminderChanged": "Opomnik za jemanje tablet je nastavljen na {value}",
+  "pillReminderChanged": "Opomniki za jemanje tabletke so nastavljeni na {value}",
   "silentModeNotificationDescription": "Obvestila se bodo prikazala na zaklenjenem zaslonu in predvajal se bo zvok tudi, ko je vklopljen način osredotočenja ali je naprava utišana",
   "enableNotificationInSilentMode": "Obvestila tudi v tihem načinu",
   "enableNotificationInSilentModeSetting": "Obvestila v tihem načinu",

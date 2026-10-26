@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "സാധാരണ പ്രതിമാസ പ്ലാനിനേക്കാൾ {offPercent}% കിഴിവ്",
   "premiumIntroductionDiscountPriceDeadline": "പ്രീമിയ സബ്‌സ്‌ക്രിപ്‌ഷനിലൂടെ എല്ലാ സൗകര്യങ്ങളും തുടർന്നും ഉപയോഗിക്കാം",
   "countdownForDiscountPriceDeadline": "{countdown}നുള്ളിൽ വാങ്ങിയാൽ {offPercent}% കിഴിവ് ലഭിക്കും",
-  "pillReminderChanged": "സേവന റിമൈൻഡർ {value} ആയി സജ്ജീകരിച്ചു",
+  "pillReminderChanged": "ഗുളിക കഴിക്കാനുള്ള അറിയിപ്പുകൾ {value} ആയി സജ്ജമാക്കി",
   "silentModeNotificationDescription": "ഫോക്കസ് മോഡ് ഓൺ ആയിരിക്കുമ്പോഴോ ഉപകരണം നിശബ്ദത്തിലായിരിക്കുമ്പോഴോ പോലും, അറിയിപ്പുകൾ ലോക്ക് സ്ക്രീനിൽ പ്രദർശിപ്പിക്കുകയും ശബ്ദം പ്ലേ ചെയ്യുകയും ചെയ്യും",
   "enableNotificationInSilentMode": "സൈലന്റ് മോഡിലും അറിയിപ്പ് നൽകുക",
   "enableNotificationInSilentModeSetting": "സൈലന്റ് മോഡിലും അറിയിപ്പുകൾ പ്രാപ്തമാക്കുക",

@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "ಸಾಮಾನ್ಯ ಮಾಸಿಕ ಯೋಜನೆಗಿಂತ {offPercent}% ರಿಯಾಯಿತಿ",
   "premiumIntroductionDiscountPriceDeadline": "ಪ್ರೀಮಿಯಂ ಚಂದಾದಾರಿಕೆಯೊಂದಿಗೆ ನೀವು ಎಲ್ಲಾ ಸೌಲಭ್ಯಗಳನ್ನು ಬಳಸುವುದನ್ನು ಮುಂದುವರಿಸಬಹುದು",
   "countdownForDiscountPriceDeadline": "{countdown} ಒಳಗೆ ಖರೀದಿಸಿದರೆ {offPercent}% ರಿಯಾಯಿತಿ ಪಡೆಯಿರಿ",
-  "pillReminderChanged": "ಸೇವನೆಯ ಅಧಿಸೂಚನೆಯನ್ನು {value} ಆಗಿ ಮಾಡಿದೆ",
+  "pillReminderChanged": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ಸೂಚನೆಗಳನ್ನು {value} ಗೆ ಹೊಂದಿಸಲಾಗಿದೆ",
   "silentModeNotificationDescription": "ಫೋಕಸ್ ಮೋಡ್ ಆನ್ ಆಗಿರುವಾಗ ಅಥವಾ ಸಾಧನವು ಸೈಲೆಂಟ್ ಆಗಿರುವಾಗಲೂ, ಸೂಚನೆಗಳು ಲಾಕ್ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ತೋರಿಸಲ್ಪಡುತ್ತವೆ ಮತ್ತು ಧ್ವನಿ ಕೇಳಿಸುತ್ತದೆ",
   "enableNotificationInSilentMode": "ಮೌನ ಮೋಡ್‌ನಲ್ಲಿಯೂ ಸೂಚನೆ ನೀಡಿ",
   "enableNotificationInSilentModeSetting": "ಮೌನ ಮೋಡ್‌ನಲ್ಲಿಯೂ ಅಧಿಸೂಚನೆ ಸೆಟ್ಟಿಂಗ್",

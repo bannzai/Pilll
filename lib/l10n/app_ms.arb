@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "Jimat {offPercent}% berbanding pelan bulanan biasa",
   "premiumIntroductionDiscountPriceDeadline": "Dengan langganan premium, anda boleh terus menggunakan semua ciri",
   "countdownForDiscountPriceDeadline": "Beli dalam masa {countdown} untuk diskaun {offPercent}%",
-  "pillReminderChanged": "Notifikasi pengambilan telah ditetapkan pada {value}",
+  "pillReminderChanged": "Peringatan mengambil pil ditetapkan kepada {value}",
   "silentModeNotificationDescription": "Notifikasi akan tetap dipaparkan pada skrin kunci dan bunyi akan dimainkan walaupun mod fokus diaktifkan atau peranti dalam keadaan senyap",
   "enableNotificationInSilentMode": "Hantar pemberitahuan walaupun mod senyap",
   "enableNotificationInSilentModeSetting": "Tetapan notifikasi mod senyap",

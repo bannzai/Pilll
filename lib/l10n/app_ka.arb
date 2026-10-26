@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "{offPercent}%-ით იაფი ჩვეულებრივ თვიურ გეგმასთან შედარებით",
   "premiumIntroductionDiscountPriceDeadline": "პრემიუმ გამოწერით შეგიძლიათ ყველა ფუნქციის გამოყენება გააგრძელოთ",
   "countdownForDiscountPriceDeadline": "შეიძინეთ {countdown}-ში და მიიღეთ {offPercent}%-იანი ფასდაკლება",
-  "pillReminderChanged": "მიღების შეხსენება {value}-ზე დაყენდა",
+  "pillReminderChanged": "აბის მიღების შეხსენებები დაყენებულია მნიშვნელობაზე {value}",
   "silentModeNotificationDescription": "ფოკუსირების რეჟიმის ჩართვისას ან მოწყობილობის უხმო რეჟიმშიც კი, შეტყობინებები ჩაკეტილ ეკრანზე გამოჩნდება და ხმა იკვრება",
   "enableNotificationInSilentMode": "უხმო რეჟიმშიც შეტყობინება",
   "enableNotificationInSilentModeSetting": "უხმო რეჟიმშიც შეტყობინებები",

@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "O {offPercent} % lacnejšie než bežný mesačný plán",
   "premiumIntroductionDiscountPriceDeadline": "S predplatným Premium môžete naďalej využívať všetky funkcie",
   "countdownForDiscountPriceDeadline": "Kúpte do {countdown} a získajte zľavu {offPercent}%",
-  "pillReminderChanged": "Upozornenie na užívanie bolo nastavené na {value}",
+  "pillReminderChanged": "Upozornenia na užitie tabletky sú nastavené na {value}",
   "silentModeNotificationDescription": "Aj keď je zapnutý režim sústredenosti alebo je zariadenie v tichom režime, oznámenia sa zobrazia na zamknutej obrazovke a prehrá sa zvuk.",
   "enableNotificationInSilentMode": "Upozorniť aj v tichom režime",
   "enableNotificationInSilentModeSetting": "Oznámenia aj v tichom režime",

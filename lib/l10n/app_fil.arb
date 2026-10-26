@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "{offPercent}% na mas mura kaysa sa karaniwang buwanang plano",
   "premiumIntroductionDiscountPriceDeadline": "Sa pag-subscribe sa Premium, magagamit pa rin ninyo ang lahat ng feature",
   "countdownForDiscountPriceDeadline": "Bumili sa loob ng {countdown} para makakuha ng {offPercent}% diskuwento",
-  "pillReminderChanged": "Naitakda na ang paalala sa pag-inom sa {value}",
+  "pillReminderChanged": "Nakatakda sa {value} ang mga paalala sa pag-inom ng pildoras",
   "silentModeNotificationDescription": "Kahit nakabukas ang Focus Mode o naka-silent ang device, makikita pa rin ang mga notification sa lock screen at tutunog pa rin ito.",
   "enableNotificationInSilentMode": "Mag-notify kahit naka-silent mode",
   "enableNotificationInSilentModeSetting": "Mga Abiso sa Silent Mode",

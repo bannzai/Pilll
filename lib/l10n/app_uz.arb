@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "Odatdagi oylik rejaga nisbatan {offPercent}% chegirma",
   "premiumIntroductionDiscountPriceDeadline": "Premium obunasi bilan barcha imkoniyatlardan foydalanishda davom etishingiz mumkin",
   "countdownForDiscountPriceDeadline": "{countdown} ichida xarid qilsangiz, {offPercent}% chegirma olasiz",
-  "pillReminderChanged": "Tabletka ichish xabari {value} ga o'rnatildi",
+  "pillReminderChanged": "Tabletka ichish eslatmalari {value} holatiga oʻrnatildi",
   "silentModeNotificationDescription": "Diqqat rejimi yoqilgan yoki qurilma jim rejimida bo'lsa ham, bildirishnomalar qulflangan ekranda ko'rsatiladi va tovush chiqariladi",
   "enableNotificationInSilentMode": "Jim rejimda ham bildirishnoma yuborish",
   "enableNotificationInSilentModeSetting": "Sakin rejimda ham bildirishnoma sozlamalari",

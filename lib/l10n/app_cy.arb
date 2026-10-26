@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "{offPercent}% yn rhatach na'r cynllun misol arferol",
   "premiumIntroductionDiscountPriceDeadline": "Gyda thanysgrifiad premiwm, gallwch barhau i ddefnyddio’r holl nodweddion",
   "countdownForDiscountPriceDeadline": "Prynwch o fewn {countdown} i gael gostyngiad o {offPercent}%",
-  "pillReminderChanged": "Wedi gosod yr hysbysiad cymryd i {value}",
+  "pillReminderChanged": "Mae hysbysiadau cymryd y bilsen wedi'u gosod i {value}",
   "silentModeNotificationDescription": "Er bod y modd canolbwyntio ymlaen neu'r ddyfais ar ddistaw, bydd hysbysiadau'n dal i ymddangos ar y sgrin clo gyda sain",
   "enableNotificationInSilentMode": "Hysbysu hyd yn oed mewn modd tawel",
   "enableNotificationInSilentModeSetting": "Hysbysiadau yn y modd tawel",

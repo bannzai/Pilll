@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "{offPercent}% günschtiger als s normale Monetsabo",
   "premiumIntroductionDiscountPriceDeadline": "Mit eme Premium-Abo chasch alli Funktione wiiter bruuche",
   "countdownForDiscountPriceDeadline": "Wenn du i de nöchschte {countdown} chaufsch, überchunsch {offPercent}% Rabatt",
-  "pillReminderChanged": "Ihnameerinnärig uf {value} gstellt",
+  "pillReminderChanged": "D Erinnerige für d Pille sind uf {value} igstellt",
   "silentModeNotificationDescription": "Benachrichtigunge wärded uf em Sperrbildschirm aazeigt und Tön abgspielt, au wenn de Konzentrationsmodus ii isch oder s Gerät stummgschaltet isch.",
   "enableNotificationInSilentMode": "Au im Stummmodus benachrichtige",
   "enableNotificationInSilentModeSetting": "Benachrichtung au im stumme Modus",

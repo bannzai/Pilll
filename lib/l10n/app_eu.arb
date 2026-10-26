@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "Ohiko hileko plana baino % {offPercent} merkeago",
   "premiumIntroductionDiscountPriceDeadline": "Premium harpidetzarekin, funtzio guztiak erabiltzen jarrai dezakezu",
   "countdownForDiscountPriceDeadline": "Erosi {countdown} barru, % {offPercent}eko deskontuarekin",
-  "pillReminderChanged": "Hartu-jakinarazpena {value}(e)ra aldatu da",
+  "pillReminderChanged": "Pilula hartzeko jakinarazpenak {value} gisa ezarri dira",
   "silentModeNotificationDescription": "Kontzentrazio modua aktibatuta dagoenean edo gailua isilik dagoenean ere, jakinarazpenak pantaila blokeatuan agertuko dira eta soinua erreproduzituko da",
   "enableNotificationInSilentMode": "Modu isilean ere jakinarazi",
   "enableNotificationInSilentModeSetting": "Modu isilean ere jakinarazpenak",

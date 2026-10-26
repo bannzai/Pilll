@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "{offPercent}% kedvezmény a szokásos havi csomaghoz képest",
   "premiumIntroductionDiscountPriceDeadline": "Prémium-előfizetéssel továbbra is használhatod az összes funkciót",
   "countdownForDiscountPriceDeadline": "Vásárolj {countdown} időn belül, és {offPercent}% kedvezményt kapsz",
-  "pillReminderChanged": "A bevételiértesítést {value}-ra beállítottam",
+  "pillReminderChanged": "A tablettaszedési értesítések beállítása: {value}",
   "silentModeNotificationDescription": "A koncentrációs mód bekapcsolása vagy az eszköz némítása esetén is az értesítések megjelennek a zárolási képernyőn és a hang lejátszásra kerül.",
   "enableNotificationInSilentMode": "Értesítés csendes módban is",
   "enableNotificationInSilentModeSetting": "Értesítés csendes módban",

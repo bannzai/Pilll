@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "د عادي میاشتني پلان په پرتله {offPercent}% تخفیف",
   "premiumIntroductionDiscountPriceDeadline": "د پریمیم ګډون سره تاسو کولی شئ له ټولو ځانګړنو څخه کار اخیستلو ته دوام ورکړئ",
   "countdownForDiscountPriceDeadline": "په {countdown} کې یې واخلئ او {offPercent}% تخفیف ترلاسه کړئ",
-  "pillReminderChanged": "د درملو یادونه {value} ته تنظیم شوه",
+  "pillReminderChanged": "د ګولۍ اخیستو خبرتیاوې پر {value} وټاکل شوې",
   "silentModeNotificationDescription": "که څه هم د تمرکز موډ فعال وي یا دستګاه بې غږه وي، خبرتیاوې به د قفل په سکرین کې ښکاره شي او غږ به وغږیږي",
   "enableNotificationInSilentMode": "په خاموش حالت کې هم اطلاع ورکول",
   "enableNotificationInSilentModeSetting": "د خاموش حالت کې د خبرتیاوو فعالول",

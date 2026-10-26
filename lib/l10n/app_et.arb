@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "{offPercent}% soodsam kui tavaline kuupakett",
   "premiumIntroductionDiscountPriceDeadline": "Premiumi tellimusega saad jätkata kõigi funktsioonide kasutamist",
   "countdownForDiscountPriceDeadline": "Osta järgmise {countdown} jooksul ja saad {offPercent}% soodustust",
-  "pillReminderChanged": "Seadsin võtmise teavituse ajaks {value}",
+  "pillReminderChanged": "Pilli võtmise meeldetuletused on seatud olekusse {value}",
   "silentModeNotificationDescription": "Teatised kuvatakse lukustusekraanil ja heli mängitakse isegi siis, kui keskendumisrežiim on sisse lülitatud või seade on vaigistatud",
   "enableNotificationInSilentMode": "Teavita ka vaikses režiimis",
   "enableNotificationInSilentModeSetting": "Teavitused ka vaikses režiimis",

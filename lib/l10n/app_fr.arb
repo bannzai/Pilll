@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "Économisez {offPercent} % par rapport à l’abonnement mensuel habituel",
   "premiumIntroductionDiscountPriceDeadline": "Avec un abonnement Premium, vous pouvez continuer à utiliser toutes les fonctionnalités",
   "countdownForDiscountPriceDeadline": "Achetez dans les {countdown} et profitez de {offPercent} % de réduction",
-  "pillReminderChanged": "Le rappel de pilule a été réglé sur {value}.",
+  "pillReminderChanged": "Les rappels de prise de pilule sont réglés sur {value}",
   "silentModeNotificationDescription": "Les notifications seront affichées sur l'écran de verrouillage et le son sera joué même lorsque le mode Focus est activé ou que l'appareil est en mode silencieux",
   "enableNotificationInSilentMode": "Remplacer le mode silencieux",
   "enableNotificationInSilentModeSetting": "Activer les notifications en mode silencieux",

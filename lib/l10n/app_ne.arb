@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "सामान्य मासिक योजनाको तुलनामा {offPercent}% छुट",
   "premiumIntroductionDiscountPriceDeadline": "प्रिमियम सदस्यतासँगै तपाईं सबै सुविधाहरू प्रयोग गरिरहन सक्नुहुन्छ",
   "countdownForDiscountPriceDeadline": "{countdown} भित्र खरिद गर्दा {offPercent}% छुट पाउनुहोस्",
-  "pillReminderChanged": "सेवन सूचना {value} मा सेट गरिएको छ",
+  "pillReminderChanged": "चक्की खाने सम्झाउने सूचना {value} मा सेट गरिएको छ",
   "silentModeNotificationDescription": "फोकस मोड सक्रिय भएको वा डिभाइस मौन मोडमा भएको बेलामा पनि, सूचनाहरू लक स्क्रिनमा देखाइनेछ र आवाज बज्नेछ",
   "enableNotificationInSilentMode": "मौन मोडमा पनि सूचना दिनुहोस्",
   "enableNotificationInSilentModeSetting": "साइलेन्ट मोडमा सूचना सेटिङ",

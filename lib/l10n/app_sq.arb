@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "{offPercent}% më lirë se plani i zakonshëm mujor",
   "premiumIntroductionDiscountPriceDeadline": "Me abonimin premium mund të vazhdoni të përdorni të gjitha veçoritë",
   "countdownForDiscountPriceDeadline": "Blini brenda {countdown} dhe përfitoni {offPercent}% ulje",
-  "pillReminderChanged": "E vendosa njoftimin e pilulës në {value}",
+  "pillReminderChanged": "Njoftimet për marrjen e pilulës u vendosën në {value}",
   "silentModeNotificationDescription": "Njoftimet do të shfaqen në ekranin e kyçur dhe do të luhet zëri, edhe kur modaliteti i përqendrimit është i aktivizuar ose pajisja është në heshtje",
   "enableNotificationInSilentMode": "Njofto edhe në modalitetin heshtur",
   "enableNotificationInSilentModeSetting": "Njoftimet edhe në mënyrë heshtur",

@@ -423,7 +423,7 @@
   "offPercentForMonthlyPremiumPackage": "{offPercent}% taniej niż w zwykłym planie miesięcznym",
   "premiumIntroductionDiscountPriceDeadline": "Z subskrypcją premium możesz nadal korzystać ze wszystkich funkcji",
   "countdownForDiscountPriceDeadline": "Kup w ciągu {countdown} i skorzystaj z {offPercent}% zniżki",
-  "pillReminderChanged": "Ustawiono przypomnienie o zażyciu na {value}",
+  "pillReminderChanged": "Przypomnienia o przyjęciu tabletki ustawiono na {value}",
   "silentModeNotificationDescription": "Powiadomienia będą wyświetlane na ekranie blokady i będzie odtwarzany dźwięk, nawet gdy tryb nie przeszkadzać jest włączony lub urządzenie jest wyciszone",
   "enableNotificationInSilentMode": "Powiadomienia w trybie cichym",
   "enableNotificationInSilentModeSetting": "Powiadomienia w trybie cichym",
