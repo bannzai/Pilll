@@ -281,7 +281,7 @@
   "allActivePills": "সকলো পিল সক্ৰিয় পিল",
   "twentyFourPlusFourDaysBreak": "24টা বড়ি + 4টা বিৰতিৰ বড়ি",
   "choosePillType": "পিলৰ প্ৰকাৰ বাছনি কৰক",
-  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} সময়ৰ জাননী",
+  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} সময়ছোৱাৰ জাননী",
   "autoRecordForNotTakenPeriodIfNotificationOff": "জ্ঞাপন বন্ধ থকা ক্ষেত্ৰত, {pillSheetPillSheetTypeNotTakenWord} সময়কালৰ সেৱনৰ ৰেকৰ্ডো স্বয়ংক্ৰিয়ভাৱে যোগ কৰা হয়",
   "requestForCancelSurvey": "বাতিলকৰণৰ পিছত সমীক্ষাত সহযোগিতাৰ অনুৰোধ",
   "pilllDescription": "Pilll - পিল সেৱন ব্যৱস্থাপনাৰ বাবে বিশেষভাৱে নিৰ্মিত ৰিমাইণ্ডাৰ এপ্",

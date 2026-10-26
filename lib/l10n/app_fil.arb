@@ -281,7 +281,7 @@
   "allActivePills": "Lahat ay aktibong pildoras",
   "twentyFourPlusFourDaysBreak": "24 na tableta + 4 na tableta para sa pahinga",
   "choosePillType": "Piliin ang uri ng pildoras",
-  "notificationForNotTakenPeriod": "Paunawa ng {pillSheetPillSheetTypeNotTakenWord} na yugto",
+  "notificationForNotTakenPeriod": "Abiso para sa panahon ng {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kapag naka-off ang notification, awtomatikong maitatatala din ang medication record sa {pillSheetPillSheetTypeNotTakenWord} na panahon",
   "requestForCancelSurvey": "Pakiusap para sa Pakikipagtulunga sa Survey Pagkatapos ng Pagkakakansel",
   "pilllDescription": "Pilll - App na pampaalala para sa contraceptive pills",

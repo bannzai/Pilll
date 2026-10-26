@@ -281,7 +281,7 @@
   "allActivePills": "Alle pillen zijn actieve pillen",
   "twentyFourPlusFourDaysBreak": "24 pillen + 4 pillen voor de stopweek",
   "choosePillType": "Kies het type pil",
-  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} periode notificatie",
+  "notificationForNotTakenPeriod": "Melding voor de periode {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Bij uitgeschakelde meldingen worden ook automatisch inname-records voor de {pillSheetPillSheetTypeNotTakenWord}-periode aangemaakt",
   "requestForCancelSurvey": "Verzoek om medewerking aan enquête na opzegging",
   "pilllDescription": "Pilll - Gespecialiseerde pil reminder app",

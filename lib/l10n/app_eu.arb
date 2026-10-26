@@ -281,7 +281,7 @@
   "allActivePills": "Guztiak pilula aktiboak dira",
   "twentyFourPlusFourDaysBreak": "24 pilula + 4 atsedenaldiko pilula",
   "choosePillType": "Aukeratu pilula mota",
-  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} aldiaren jakinarazpena",
+  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} aldiari buruzko jakinarazpena",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Jakinarazpenak desaktibatuta daudenean, {pillSheetPillSheetTypeNotTakenWord} aldiko hartzeko erregistroak ere automatikoki gehituko dira",
   "requestForCancelSurvey": "Ezeztatze ondorengo inkestarekin laguntzeko eskaria",
   "pilllDescription": "Pilll - Pilula hartzeko oroigarri aplikazio espezializatua",

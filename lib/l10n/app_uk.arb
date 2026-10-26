@@ -281,7 +281,7 @@
   "allActivePills": "Усі пігулки активні",
   "twentyFourPlusFourDaysBreak": "24 пігулки + 4 пігулки на перерву",
   "choosePillType": "Виберіть тип пігулки",
-  "notificationForNotTakenPeriod": "Повідомлення періоду {pillSheetPillSheetTypeNotTakenWord}",
+  "notificationForNotTakenPeriod": "Сповіщення про період {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "При вимкнених сповіщеннях записи про прийом за період {pillSheetPillSheetTypeNotTakenWord} також будуть автоматично створені",
   "requestForCancelSurvey": "Прохання про участь в опитуванні після скасування",
   "pilllDescription": "Pilll - додаток-нагадування для прийому протизаплідних таблеток",

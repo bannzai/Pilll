@@ -281,7 +281,7 @@
   "allActivePills": "Todas son pílulas activas",
   "twentyFourPlusFourDaysBreak": "24 pílulas + 4 pílulas de descanso",
   "choosePillType": "Escolle o tipo de pílula",
-  "notificationForNotTakenPeriod": "Notificación do período {pillSheetPillSheetTypeNotTakenWord}",
+  "notificationForNotTakenPeriod": "Notificación do período de {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Cando as notificacións están desactivadas, tamén se crea automaticamente o rexistro de toma do período de {pillSheetPillSheetTypeNotTakenWord}",
   "requestForCancelSurvey": "Solicitude de colaboración na enquisa posterior á cancelación",
   "pilllDescription": "Pilll - App recordatorio especializado na toma de píldoras",

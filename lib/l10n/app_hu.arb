@@ -281,7 +281,7 @@
   "allActivePills": "Mind hatóanyagos tabletta",
   "twentyFourPlusFourDaysBreak": "24 tabletta + 4 szüneti tabletta",
   "choosePillType": "Válaszd ki a tabletta típusát",
-  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} időszak értesítése",
+  "notificationForNotTakenPeriod": "Értesítés a(z) {pillSheetPillSheetTypeNotTakenWord} időszakáról",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Értesítések kikapcsolása esetén a {pillSheetPillSheetTypeNotTakenWord} időszak bevételi rekordjai szintén automatikusan rögzítésre kerülnek.",
   "requestForCancelSurvey": "Kérjük, segítsen a lemondás utáni felmérésben",
   "pilllDescription": "Pilll - Fogamzásgátló tabletta szedésére specializált emlékeztető alkalmazás",

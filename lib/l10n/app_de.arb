@@ -281,7 +281,7 @@
   "allActivePills": "Alles Wirkstofftabletten",
   "twentyFourPlusFourDaysBreak": "24 Pillen + 4 Pillen für die Einnahmepause",
   "choosePillType": "Wähle die Pillenart",
-  "notificationForNotTakenPeriod": "Benachrichtigung für {pillSheetPillSheetTypeNotTakenWord}-Phase",
+  "notificationForNotTakenPeriod": "Benachrichtigung zur {pillSheetPillSheetTypeNotTakenWord}-Phase",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Bei ausgeschalteten Benachrichtigungen werden auch die Einnahmeaufzeichnungen für die {pillSheetPillSheetTypeNotTakenWord} automatisch erstellt.",
   "requestForCancelSurvey": "Bitte um Ihre Mithilfe bei unserer Umfrage nach der Kündigung",
   "pilllDescription": "Pilll - Spezialisierte Pillen-Erinnerungs-App",

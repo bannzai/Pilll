@@ -281,7 +281,7 @@
   "allActivePills": "Všechny jsou aktivní tablety",
   "twentyFourPlusFourDaysBreak": "24 tablet + 4 tablety pro pauzu",
   "choosePillType": "Vybrat typ pilulky",
-  "notificationForNotTakenPeriod": "Oznámení {pillSheetPillSheetTypeNotTakenWord} období",
+  "notificationForNotTakenPeriod": "Oznámení pro období {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Při vypnutých oznámeních se také automaticky vytvoří záznamy o užívání pro období {pillSheetPillSheetTypeNotTakenWord}.",
   "requestForCancelSurvey": "Prosíme o vyplnění dotazníku po zrušení",
   "pilllDescription": "Pilll - Specializovaná aplikace pro připomínky pilulky",

@@ -281,7 +281,7 @@
   "allActivePills": "ທັງໝົດແມ່ນຢາຮໍໂມນ",
   "twentyFourPlusFourDaysBreak": "ຢາ 24 ເມັດ + ຢາສຳລັບພັກຢາ 4 ເມັດ",
   "choosePillType": "ກະລຸນາເລືອກປະເພດເມັດຢາ",
-  "notificationForNotTakenPeriod": "ການແຈ້ງເຕືອນໄລຍະ{pillSheetPillSheetTypeNotTakenWord}",
+  "notificationForNotTakenPeriod": "ແຈ້ງເຕືອນຊ່ວງ {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "ຫາກການແຈ້ງເຕືອນຖືກປິດໄວ້, ບັນທຶກການກິນຢາໃນໄລຍະ{pillSheetPillSheetTypeNotTakenWord}ກໍຈະຖືກສ້າງຂຶ້ນໂດຍອັດຕະໂນມັດ",
   "requestForCancelSurvey": "ຂໍຄວາມກະລຸນາຮ່ວມມືໃນການຕອບແບບສຳຫຼວດຫຼັງຈາກຍົກເລີກ",
   "pilllDescription": "Pilll - ແອັບຯແຈ້ງເຕືອນການກິນຢາຄຸມກຳເນີດສະເພາະ",

@@ -281,7 +281,7 @@
   "allActivePills": "سب ہارمون والی گولی ہیں",
   "twentyFourPlusFourDaysBreak": "24 گولیاں + وقف کے لیے 4 گولیاں",
   "choosePillType": "گولی کی قسم منتخب کریں",
-  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} مدت کی اطلاع",
+  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} کی مدت کی اطلاع",
   "autoRecordForNotTakenPeriodIfNotificationOff": "جب اطلاعات بند ہوں تو {pillSheetPillSheetTypeNotTakenWord} کی مدت کا دوا لینے کا ریکارڈ بھی خودکار طور پر شامل کیا جاتا ہے",
   "requestForCancelSurvey": "منسوخی کے بعد سروے میں تعاون کی درخواست",
   "pilllDescription": "Pilll پل کی یاد دہانی کے لیے مخصوص ایپ",

@@ -281,7 +281,7 @@
   "allActivePills": "Visos yra hormoninės tabletės",
   "twentyFourPlusFourDaysBreak": "24 tabletės + 4 pertraukos tabletės",
   "choosePillType": "Pasirinkite tabletės tipą",
-  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} laikotarpio pranešimas",
+  "notificationForNotTakenPeriod": "Pranešimas apie {pillSheetPillSheetTypeNotTakenWord} laikotarpį",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kai pranešimai išjungti, {pillSheetPillSheetTypeNotTakenWord} laikotarpio vartojimo įrašai taip pat automatiškai užregistruojami",
   "requestForCancelSurvey": "Prašymas dalyvauti apklausoje po prenumeratos atšaukimo",
   "pilllDescription": "Pilll - kontraceptinių tablečių vartojimo priminimo programėlė",

@@ -281,7 +281,7 @@
   "allActivePills": "Все таблетки гормональные",
   "twentyFourPlusFourDaysBreak": "24 таблетки + 4 таблетки на перерыв",
   "choosePillType": "Выберите тип таблетки",
-  "notificationForNotTakenPeriod": "Уведомление о {pillSheetPillSheetTypeNotTakenWord} периоде",
+  "notificationForNotTakenPeriod": "Уведомление о периоде {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "При отключенных уведомлениях записи о приеме за период {pillSheetPillSheetTypeNotTakenWord} также будут автоматически созданы",
   "requestForCancelSurvey": "Просим вас принять участие в опросе после отмены подписки",
   "pilllDescription": "Pilll - приложение-напоминание для приёма контрацептивов",

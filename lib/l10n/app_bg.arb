@@ -281,7 +281,7 @@
   "allActivePills": "Всички са активни хапчета",
   "twentyFourPlusFourDaysBreak": "24 хапчета + 4 хапчета за пауза",
   "choosePillType": "Изберете вида хапче",
-  "notificationForNotTakenPeriod": "Уведомление за {pillSheetPillSheetTypeNotTakenWord} период",
+  "notificationForNotTakenPeriod": "Известие за периода {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Когато известията са изключени, записите за приемане за периода {pillSheetPillSheetTypeNotTakenWord} също се добавят автоматично",
   "requestForCancelSurvey": "Молба за участие в анкетата след отмяната",
   "pilllDescription": "Pilll - специализирано приложение за напомняне за прием на контрацептивни хапчета",

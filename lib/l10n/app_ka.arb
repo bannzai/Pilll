@@ -281,7 +281,7 @@
   "allActivePills": "ყველა ჰორმონიან აბს შეიცავს",
   "twentyFourPlusFourDaysBreak": "24 აბი + 4 აბი შესვენებისთვის",
   "choosePillType": "აბის ტიპის არჩევა",
-  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} პერიოდის შეტყობინება",
+  "notificationForNotTakenPeriod": "შეტყობინება {pillSheetPillSheetTypeNotTakenWord} პერიოდის შესახებ",
   "autoRecordForNotTakenPeriodIfNotificationOff": "შეტყობინებების გამორთვის შემთხვევაში, {pillSheetPillSheetTypeNotTakenWord} პერიოდის მიღების ჩანაწერებიც ავტომატურად ემატება",
   "requestForCancelSurvey": "გაუქმების შემდგომი კითხვარის შევსების თხოვნა",
   "pilllDescription": "Pilll - კონტრაცეპტული აბების მიღების შეხსენების აპი",

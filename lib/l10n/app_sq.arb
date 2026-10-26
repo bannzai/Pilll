@@ -281,7 +281,7 @@
   "allActivePills": "Të gjitha janë pilula aktive",
   "twentyFourPlusFourDaysBreak": "24 pilula + 4 pilula për pushim",
   "choosePillType": "Zgjidhni llojin e pilulës",
-  "notificationForNotTakenPeriod": "Njoftim i periudhës {pillSheetPillSheetTypeNotTakenWord}",
+  "notificationForNotTakenPeriod": "Njoftim për periudhën {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kur njoftimet janë të fikura, regjistrimet e marrjes për periudhën {pillSheetPillSheetTypeNotTakenWord} do të shtohen gjithashtu automatikisht",
   "requestForCancelSurvey": "Lutje për bashkëpunimin tuaj në pyetësorin pas anulimit",
   "pilllDescription": "Pilll aplikacion kujtues i specializuar për marrjen e pilulës",

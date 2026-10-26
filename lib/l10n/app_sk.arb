@@ -281,7 +281,7 @@
   "allActivePills": "Všetky tabletky sú aktívne",
   "twentyFourPlusFourDaysBreak": "24 tabletiek + 4 tabletky na prestávku",
   "choosePillType": "Vyberte typ tabletky",
-  "notificationForNotTakenPeriod": "Upozornenie {pillSheetPillSheetTypeNotTakenWord} obdobia",
+  "notificationForNotTakenPeriod": "Upozornenie na obdobie {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Keď sú upozornenia vypnuté, záznamy o užívaní počas {pillSheetPillSheetTypeNotTakenWord} obdobia sa tiež automaticky pridajú",
   "requestForCancelSurvey": "Prosba o spoluprácu s anketou po zrušení",
   "pilllDescription": "Pilll - špecializovaný pripomínač na užívanie piluliek",

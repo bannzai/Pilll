@@ -281,7 +281,7 @@
   "allActivePills": "همه قرص‌ها قرص فعال هستند",
   "twentyFourPlusFourDaysBreak": "۲۴ قرص + ۴ قرص وقفه",
   "choosePillType": "نوع قرص را انتخاب کنید",
-  "notificationForNotTakenPeriod": "اطلاع‌رسانی دوره‌ی {pillSheetPillSheetTypeNotTakenWord}",
+  "notificationForNotTakenPeriod": "اعلان دورهٔ {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "در صورت خاموش بودن اعلان‌ها، سوابق مصرف دوره {pillSheetPillSheetTypeNotTakenWord} نیز به طور خودکار ثبت می‌شود",
   "requestForCancelSurvey": "درخواست همکاری در نظرسنجی پس از لغو اشتراک",
   "pilllDescription": "Pilll - اپلیکیشن یادآور تخصصی مصرف قرص",

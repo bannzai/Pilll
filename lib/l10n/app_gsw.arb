@@ -281,7 +281,7 @@
   "allActivePills": "Alli sind Wirkstoffpille",
   "twentyFourPlusFourDaysBreak": "24 Pille + 4 Pille für d Pillepause",
   "choosePillType": "Wähl d Pillensorte uus",
-  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord}-Ziit Mitteilig",
+  "notificationForNotTakenPeriod": "Mitteilige für d {pillSheetPillSheetTypeNotTakenWord}-Ziit",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Au wänn d Benachrichtigunge usgschaltet sind, werded d Inahmeufzeichnige för d {pillSheetPillSheetTypeNotTakenWord}-Period automatisch erfasst",
   "requestForCancelSurvey": "Bitte um Ihre Mithilfe bei der Umfrage nach der Kündigung",
   "pilllDescription": "Pilll - Spezialisierti Erinnerigsapp für Pille-Iinahm",

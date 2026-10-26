@@ -281,7 +281,7 @@
   "allActivePills": "Bütün həblər hormonlu həbdir",
   "twentyFourPlusFourDaysBreak": "24 həb + 4 fasilə həbi",
   "choosePillType": "Həb növünü seçin",
-  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} dövrü bildirişi",
+  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} dövrü üçün bildiriş",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Bildirişlər söndürüldükdə, {pillSheetPillSheetTypeNotTakenWord} dövrünün qəbul qeydləri də avtomatik olaraq əlavə olunur",
   "requestForCancelSurvey": "Ləğvetmədən sonra sorğuda əməkdaşlıq xahişi",
   "pilllDescription": "Pilll - Doğum nəzarəti həbləri üçün xüsusi xatırladıcı tətbiq",

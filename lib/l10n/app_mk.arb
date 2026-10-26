@@ -281,7 +281,7 @@
   "allActivePills": "Сите се хормонска таблета",
   "twentyFourPlusFourDaysBreak": "24 таблети + 4 таблети за пауза",
   "choosePillType": "Избор на вид таблета",
-  "notificationForNotTakenPeriod": "Известување за {pillSheetPillSheetTypeNotTakenWord} период",
+  "notificationForNotTakenPeriod": "Известување за периодот {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Кога известувањата се исклучени, записите за земање за {pillSheetPillSheetTypeNotTakenWord} периодот исто така автоматски се додаваат",
   "requestForCancelSurvey": "Ве молиме за соработка со анкетата по откажувањето",
   "pilllDescription": "Pilll специјализирана апликација за потсетување на пилули",

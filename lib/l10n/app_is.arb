@@ -281,7 +281,7 @@
   "allActivePills": "Allar eru hormónapillur",
   "twentyFourPlusFourDaysBreak": "24 pillur + 4 pillur í hlé",
   "choosePillType": "Veldu tegund pillu",
-  "notificationForNotTakenPeriod": "Tilkynning um {pillSheetPillSheetTypeNotTakenWord} tímabil",
+  "notificationForNotTakenPeriod": "Tilkynning um {pillSheetPillSheetTypeNotTakenWord}-tímabil",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Þegar tilkynningar eru slökkt eru inntökuskrár fyrir {pillSheetPillSheetTypeNotTakenWord} tímabilið einnig sjálfkrafa búnar til",
   "requestForCancelSurvey": "Vinsamlegast taktu þátt í könnun eftir uppsögn",
   "pilllDescription": "Pilll - píluáminningarforrit fyrir píluinntöku",

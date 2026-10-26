@@ -281,7 +281,7 @@
   "allActivePills": "Wonke amaphilisi anam ahomoni",
   "twentyFourPlusFourDaysBreak": "Amaphilisi angu-24 + amaphilisi ama-4 ekhefu",
   "choosePillType": "Sicela ukhethe uhlobo lwephilisi",
-  "notificationForNotTakenPeriod": "Isaziso senkathi ye{pillSheetPillSheetTypeNotTakenWord}",
+  "notificationForNotTakenPeriod": "Isaziso sesikhathi se-{pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Uma izaziso zivaliwe, amarekhodi okuthatha amaphilisi esikhathini se{pillSheetPillSheetTypeNotTakenWord} nawo azofakwa ngokuzenzakalayo.",
   "requestForCancelSurvey": "Sicela usisizise ngenhlolovo yangemva kokukhansela",
   "pilllDescription": "Pilll - I-app yesikhumbuzi samaphilisi okuvimbela ukukhulelwa",

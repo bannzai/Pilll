@@ -281,7 +281,7 @@
   "allActivePills": "Sve pilule su hormonske",
   "twentyFourPlusFourDaysBreak": "24 pilule + 4 pilule za pauz",
   "choosePillType": "Odaberite vrstu pilule",
-  "notificationForNotTakenPeriod": "Obavještenje o {pillSheetPillSheetTypeNotTakenWord} periodu",
+  "notificationForNotTakenPeriod": "Obavijest za period {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kada su obavještenja isključena, zapisi uzimanja za {pillSheetPillSheetTypeNotTakenWord} period će takođe biti automatski dodani",
   "requestForCancelSurvey": "Molimo vas za učešće u anketi nakon otkazivanja",
   "pilllDescription": "Pilll - podsjetnik za uzimanje pilula",

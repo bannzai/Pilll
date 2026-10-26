@@ -281,7 +281,7 @@
   "allActivePills": "Kaikki ovat hormonipillereitä",
   "twentyFourPlusFourDaysBreak": "24 pilleriä + 4 taukojakson pilleriä",
   "choosePillType": "Valitse pillerityyppi",
-  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord}-jakson ilmoitus",
+  "notificationForNotTakenPeriod": "Ilmoitus {pillSheetPillSheetTypeNotTakenWord}-jaksosta",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kun ilmoitukset ovat pois päältä, myös {pillSheetPillSheetTypeNotTakenWord}-jakson ottamiskirjaukset luodaan automaattisesti",
   "requestForCancelSurvey": "Pyyntö kyselyyn osallistumisesta irtisanomisen jälkeen",
   "pilllDescription": "Pilll - ehkäisypillerien ottamiseen keskittyvä muistutussovellus",

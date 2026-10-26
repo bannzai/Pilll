@@ -281,7 +281,7 @@
   "allActivePills": "Alle er hormonpiller",
   "twentyFourPlusFourDaysBreak": "24 p-piller + 4 p-piller til pillepause",
   "choosePillType": "Velg type p-pille",
-  "notificationForNotTakenPeriod": "Varsel for {pillSheetPillSheetTypeNotTakenWord}periode",
+  "notificationForNotTakenPeriod": "Varsel for {pillSheetPillSheetTypeNotTakenWord}-perioden",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Selv når varsler er av, vil pilleinntak for {pillSheetPillSheetTypeNotTakenWord}-perioden automatisk bli registrert",
   "requestForCancelSurvey": "Vi ber om din hjelp med en undersøkelse etter oppsigelse",
   "pilllDescription": "Pilll - Påminnelsesapp spesialisert på p-pilleinntak",

@@ -281,7 +281,7 @@
   "allActivePills": "Բոլորը ակտիվ հաբեր են",
   "twentyFourPlusFourDaysBreak": "24 հաբ + 4 դադարի հաբ",
   "choosePillType": "Ընտրեք հաբի տեսակը",
-  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} ժամանակահատվածի ծանուցում",
+  "notificationForNotTakenPeriod": "Ծանուցում {pillSheetPillSheetTypeNotTakenWord} ժամանակահատվածի համար",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Ծանուցումները անջատված լինելու դեպքում {pillSheetPillSheetTypeNotTakenWord} ժամանակահատվածի ընդունման գրառումները նույնպես ավտոմատ ավելացվում են:",
   "requestForCancelSurvey": "Լուծարման հետո հարցակցությանը մասնակցության խնդրանք",
   "pilllDescription": "Pilll - հակաբեղմնավորիչ դեղերի ընդունման մասնագիտացված հիշեցման հավելված",

@@ -281,7 +281,7 @@
   "allActivePills": "Kõik on toimeainega pillid",
   "twentyFourPlusFourDaysBreak": "24 pilli + 4 pillipausi pilli",
   "choosePillType": "Vali pilli tüüp",
-  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} perioodi teatis",
+  "notificationForNotTakenPeriod": "Teavitus perioodi {pillSheetPillSheetTypeNotTakenWord} kohta",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Teatiste keelamisel lisatakse ka {pillSheetPillSheetTypeNotTakenWord} perioodi võtmiskirjed automaatselt",
   "requestForCancelSurvey": "Palun osalemist küsitluses pärast tühistamist",
   "pilllDescription": "Pilll - pillide võtmise meeldetuletusrakendus",

@@ -281,7 +281,7 @@
   "allActivePills": "Toutes les pilules sont des pilules actives",
   "twentyFourPlusFourDaysBreak": "24 comprimés + 4 comprimés de pause",
   "choosePillType": "Choisissez le type de pilule",
-  "notificationForNotTakenPeriod": "Période de notification {pillSheetPillSheetTypeNotTakenWord}",
+  "notificationForNotTakenPeriod": "Notification pour la période de {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Même lorsque les notifications sont désactivées, les enregistrements de pilules pour la période {pillSheetPillSheetTypeNotTakenWord} seront automatiquement ajoutés",
   "requestForCancelSurvey": "Demande d'enquête post-annulation",
   "pilllDescription": "Pilll - Application de rappel de pilule contraceptive",

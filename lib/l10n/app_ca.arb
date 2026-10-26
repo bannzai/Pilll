@@ -281,7 +281,7 @@
   "allActivePills": "Totes són píndoles actives",
   "twentyFourPlusFourDaysBreak": "24 píndoles + 4 píndoles de descans",
   "choosePillType": "Tria el tipus de píndola",
-  "notificationForNotTakenPeriod": "Notificació del període {pillSheetPillSheetTypeNotTakenWord}",
+  "notificationForNotTakenPeriod": "Notificació del període de {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Si les notificacions estan desactivades, els registres de presa del període {pillSheetPillSheetTypeNotTakenWord} també s'afegeixen automàticament",
   "requestForCancelSurvey": "Sol·licitud de col·laboració per a l'enquesta posterior a la cancel·lació",
   "pilllDescription": "Pilll Recordatori especialitzat en la presa de píndoles",

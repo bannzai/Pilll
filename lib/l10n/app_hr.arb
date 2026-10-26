@@ -281,7 +281,7 @@
   "allActivePills": "Sve pilule su aktivne",
   "twentyFourPlusFourDaysBreak": "24 pilule + 4 pilule za pauzu",
   "choosePillType": "Odaberite vrstu pilule",
-  "notificationForNotTakenPeriod": "Obavijest o {pillSheetPillSheetTypeNotTakenWord} razdoblju",
+  "notificationForNotTakenPeriod": "Obavijest za razdoblje {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kad su obavještenja isključena, automatski se kreiraju i zapisi o uzimanju za {pillSheetPillSheetTypeNotTakenWord} period.",
   "requestForCancelSurvey": "Molimo vas za sudjelovanje u anketi nakon otkazivanja",
   "pilllDescription": "Pilll - aplikacija podsjetnik specijalizirana za uzimanje pilula",

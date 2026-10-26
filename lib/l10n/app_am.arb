@@ -281,7 +281,7 @@
   "allActivePills": "ሁሉም ሆርሞን ያለው ክኒን ናቸው",
   "twentyFourPlusFourDaysBreak": "24 ክኒን + 4 ክኒን እረፍት",
   "choosePillType": "የክኒን ዓይነት ይምረጡ",
-  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} ጊዜ ማሳወቂያ",
+  "notificationForNotTakenPeriod": "የ{pillSheetPillSheetTypeNotTakenWord} ጊዜ ማሳወቂያ",
   "autoRecordForNotTakenPeriodIfNotificationOff": "ማሳወቂያ ስራ ላይ ሳይሆን፣ የ{pillSheetPillSheetTypeNotTakenWord} ወቅት የመዳኅኒት መውሰድ ማስታወሻም በራስሰር ይመዘገባል",
   "requestForCancelSurvey": "የመሰረዝ በኋላ ጥናት ትብብር ጥያቄ",
   "pilllDescription": "Pilll የክኒን መውሰጃ አስታዋሽ መተግበሪያ",

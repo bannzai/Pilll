@@ -281,7 +281,7 @@
   "allActivePills": "Vyote ni kidonge chenye homoni",
   "twentyFourPlusFourDaysBreak": "Vidonge 24 + vidonge 4 vya mapumziko",
   "choosePillType": "Tafadhali chagua aina ya kidonge",
-  "notificationForNotTakenPeriod": "Taarifa ya {pillSheetPillSheetTypeNotTakenWord} kipindi",
+  "notificationForNotTakenPeriod": "Arifa ya kipindi cha {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Wakati arifa zimezimwa, rekodi za kumeza dawa za kipindi cha {pillSheetPillSheetTypeNotTakenWord} pia zitaongezwa kiotomatiki",
   "requestForCancelSurvey": "Tafadhali shiriki katika utafiti wetu baada ya kusitisha",
   "pilllDescription": "Pilll - Programu ya ukumbusho mahsusi kwa kutumia kidongowazi",
