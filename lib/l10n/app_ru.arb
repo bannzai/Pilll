@@ -11,7 +11,7 @@
   "placebo": "плацебо",
   "userNotFound": "Пользователь не найден",
   "userAlreadyExists": "Эта учётная запись уже существует",
-  "medicationHistory": "История приема",
+  "medicationHistory": "история приёма",
   "settings": "Настройки",
   "account": "Аккаунт",
   "dataTransferRequiresAccount": "При смене устройства или потере смартфона для передачи и восстановления данных требуется регистрация аккаунта.",

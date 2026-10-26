@@ -11,7 +11,7 @@
   "placebo": "plazebo",
   "userNotFound": "Ez da erabiltzailea aurkitu",
   "userAlreadyExists": "Kontu hau badago lehendik",
-  "medicationHistory": "Hartze-historia",
+  "medicationHistory": "hartze-historia",
   "settings": "Ezarpenak",
   "account": "Kontua",
   "dataTransferRequiresAccount": "Gailu aldaketa edo telefono mugikor galera bezalako kasuetan, datuak transferitu eta leheneratzeko kontu erregistroa beharrezkoa da.",

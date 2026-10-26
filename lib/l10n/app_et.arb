@@ -11,7 +11,7 @@
   "placebo": "platseebo",
   "userNotFound": "Kasutajat ei leitud",
   "userAlreadyExists": "See konto on juba olemas",
-  "medicationHistory": "Võtmisajalugu",
+  "medicationHistory": "võtmislogi",
   "settings": "Seaded",
   "account": "konto",
   "dataTransferRequiresAccount": "Seadme vahetamisel või telefoni kaotamisel on andmete ülekandmiseks ja taastamiseks vajalik konto registreerimine.",

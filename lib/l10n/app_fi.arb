@@ -11,7 +11,7 @@
   "placebo": "lumetabletit",
   "userNotFound": "Käyttäjää ei löytynyt",
   "userAlreadyExists": "Tämä tili on jo olemassa",
-  "medicationHistory": "Ottamishistoria",
+  "medicationHistory": "pillerihistoria",
   "settings": "Asetukset",
   "account": "Tili",
   "dataTransferRequiresAccount": "Laitteen vaihdossa tai puhelimen menetyksen yhteydessä tietojen siirtäminen ja palauttaminen vaatii tilin rekisteröinnin.",

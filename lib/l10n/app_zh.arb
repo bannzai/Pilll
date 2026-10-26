@@ -11,7 +11,7 @@
   "placebo": "安慰剂",
   "userNotFound": "未找到用户",
   "userAlreadyExists": "这个账号已存在",
-  "medicationHistory": "服用记录",
+  "medicationHistory": "服药历史",
   "settings": "设置",
   "account": "账户",
   "dataTransferRequiresAccount": "更换设备或手机丢失时，数据的转移和恢复需要注册账户。",

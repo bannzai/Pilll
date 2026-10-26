@@ -11,7 +11,7 @@
   "placebo": "placebo",
   "userNotFound": "Korisnik nije pronađen",
   "userAlreadyExists": "Ovaj račun već postoji",
-  "medicationHistory": "Historija uzimanja",
+  "medicationHistory": "historij",
   "settings": "Postavke",
   "account": "Nalog",
   "dataTransferRequiresAccount": "Za transfer i obnovu podataka u slučaju promjene uređaja ili gubitka telefona, potrebna je registracija računa.",

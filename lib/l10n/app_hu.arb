@@ -11,7 +11,7 @@
   "placebo": "placebotabletta",
   "userNotFound": "A felhasználó nem található",
   "userAlreadyExists": "Ez a fiók már létezik",
-  "medicationHistory": "Bevételi előzmények",
+  "medicationHistory": "szedési előzmények",
   "settings": "Beállítások",
   "account": "Fiók",
   "dataTransferRequiresAccount": "Készülékváltás vagy telefon elvesztése esetén az adatok átviteléhez és visszaállításához fiókregisztráció szükséges.",

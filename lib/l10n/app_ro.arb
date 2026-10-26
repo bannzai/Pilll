@@ -11,7 +11,7 @@
   "placebo": "placebo",
   "userNotFound": "Utilizatorul nu a fost găsit",
   "userAlreadyExists": "Acest cont există deja",
-  "medicationHistory": "Istoric administrare",
+  "medicationHistory": "istoric",
   "settings": "Setări",
   "account": "Cont",
   "dataTransferRequiresAccount": "Înregistrarea unui cont este necesară pentru transferul și restaurarea datelor în cazul schimbării dispozitivului sau pierderii smartphone-ului.",

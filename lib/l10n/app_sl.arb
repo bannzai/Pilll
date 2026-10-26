@@ -11,7 +11,7 @@
   "placebo": "placebo",
   "userNotFound": "Uporabnika ni bilo mogoče najti",
   "userAlreadyExists": "Ta račun že obstaja",
-  "medicationHistory": "Zgodovina jemanja",
+  "medicationHistory": "zgodovina jemanja",
   "settings": "Nastavitve",
   "account": "Račun",
   "dataTransferRequiresAccount": "Za prenos in obnovitev podatkov v primeru menjave naprave ali izgube pametnega telefona je potrebna registracija računa.",

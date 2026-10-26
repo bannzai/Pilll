@@ -11,7 +11,7 @@
   "placebo": "lyfleysutöflur",
   "userNotFound": "Notandi fannst ekki",
   "userAlreadyExists": "Þessi reikningur er þegar til",
-  "medicationHistory": "Inntökusaga",
+  "medicationHistory": "inntökuyfirlit",
   "settings": "Stillingar",
   "account": "Reikningur",
   "dataTransferRequiresAccount": "Reikningsskráning er nauðsynleg til að flytja og endurheimta gögn við tækjaskipti eða símatapmissi.",

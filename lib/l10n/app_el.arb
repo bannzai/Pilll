@@ -11,7 +11,7 @@
   "placebo": "πλασέμπο",
   "userNotFound": "Ο χρήστης δεν βρέθηκε",
   "userAlreadyExists": "Αυτός ο λογαριασμός υπάρχει ήδη",
-  "medicationHistory": "Ιστορικό λήψης",
+  "medicationHistory": "ιστορικό λήψης",
   "settings": "Ρυθμίσεις",
   "account": "Λογαριασμός",
   "dataTransferRequiresAccount": "Η εγγραφή λογαριασμού απαιτείται για τη μεταφορά και επαναφορά δεδομένων σε περιπτώσεις όπως αλλαγή συσκευής ή απώλεια smartphone.",

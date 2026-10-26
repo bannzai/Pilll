@@ -11,7 +11,7 @@
   "placebo": "Placebo",
   "userNotFound": "User not found",
   "userAlreadyExists": "This account already exists",
-  "medicationHistory": "Intake History",
+  "medicationHistory": "pill history",
   "settings": "Settings",
   "account": "Account",
   "dataTransferRequiresAccount": "Account registration is required for data transfer and restoration when changing devices or losing your smartphone.",

@@ -11,7 +11,7 @@
   "placebo": "ยาหลอก",
   "userNotFound": "ไม่พบผู้ใช้ค่ะ",
   "userAlreadyExists": "มีบัญชีนี้อยู่แล้วค่ะ",
-  "medicationHistory": "ประวัติการรับประทาน",
+  "medicationHistory": "ประวัติการทานยา",
   "settings": "การตั้งค่า",
   "account": "บัญชี",
   "dataTransferRequiresAccount": "เมื่อเปลี่ยนอุปกรณ์หรือสูญหายสมาร์ทโฟน จำเป็นต้องลงทะเบียนบัญชีเพื่อถ่ายโอนและกู้คืนข้อมูล",

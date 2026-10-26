@@ -11,7 +11,7 @@
   "placebo": "placebo",
   "userNotFound": "Brugeren blev ikke fundet",
   "userAlreadyExists": "Denne konto findes allerede",
-  "medicationHistory": "Indtagelseshistorik",
+  "medicationHistory": "pillehistorik",
   "settings": "Indstillinger",
   "account": "Konto",
   "dataTransferRequiresAccount": "Kontoregistrering er påkrævet for dataoverførsel og gendannelse ved f.eks. enhedsskift eller tab af smartphone.",

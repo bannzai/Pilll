@@ -11,7 +11,7 @@
   "placebo": "Placebo",
   "userNotFound": "Benutzerkonto nicht gefunden",
   "userAlreadyExists": "Dieses Konto gibt es bereits",
-  "medicationHistory": "Einnahmehistorie",
+  "medicationHistory": "Einnahmeverlauf",
   "settings": "Einstellungen",
   "account": "Konto",
   "dataTransferRequiresAccount": "Für die Datenübertragung und -wiederherstellung bei Gerätewechsel oder Smartphone-Verlust ist eine Kontoregistrierung erforderlich.",

@@ -11,7 +11,7 @@
   "placebo": "placebo",
   "userNotFound": "Uživatel nebyl nalezen",
   "userAlreadyExists": "Tento účet již existuje",
-  "medicationHistory": "Historie užívání",
+  "medicationHistory": "historie užívání",
   "settings": "Nastavení",
   "account": "Účet",
   "dataTransferRequiresAccount": "Registrace účtu je nutná pro přenos a obnovení dat při změně zařízení nebo ztrátě telefonu.",

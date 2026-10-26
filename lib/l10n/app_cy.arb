@@ -11,7 +11,7 @@
   "placebo": "plasebo",
   "userNotFound": "Heb ddod o hyd i'r defnyddiwr",
   "userAlreadyExists": "Mae'r cyfrif hwn yn bodoli eisoes",
-  "medicationHistory": "Hanes Cymryd",
+  "medicationHistory": "hanes cymryd",
   "settings": "Gosodiadau",
   "account": "cyfrif",
   "dataTransferRequiresAccount": "Mae cofrestru cyfrif yn angenrheidiol ar gyfer trosglwyddo ac adfer data, megis wrth newid dyfais neu golli'ch ffôn symudol.",

@@ -11,7 +11,7 @@
   "placebo": "placebo",
   "userNotFound": "Lietotājs nav atrasts",
   "userAlreadyExists": "Šis konts jau pastāv",
-  "medicationHistory": "Lietošanas vēsture",
+  "medicationHistory": "lietošanas vēsture",
   "settings": "Iestatījumi",
   "account": "Konts",
   "dataTransferRequiresAccount": "Ierīces maiņas vai tālruņa pazušanas gadījumā datu pārnešanai un atjaunošanai ir nepieciešama konta reģistrācija.",

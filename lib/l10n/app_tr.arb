@@ -11,7 +11,7 @@
   "placebo": "plasebo",
   "userNotFound": "Kullanıcı bulunamadı",
   "userAlreadyExists": "Bu hesap zaten mevcut",
-  "medicationHistory": "Kullanım geçmişi",
+  "medicationHistory": "kullanım geçmişi",
   "settings": "Ayarlar",
   "account": "Hesap",
   "dataTransferRequiresAccount": "Cihaz değişikliği veya telefon kaybı gibi durumlarda verilerin aktarılması ve geri yüklenmesi için hesap kaydı gereklidir.",

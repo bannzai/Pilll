@@ -11,7 +11,7 @@
   "placebo": "placebo",
   "userNotFound": "Nie znaleziono użytkownika",
   "userAlreadyExists": "To konto już istnieje",
-  "medicationHistory": "Historia przyjmowania",
+  "medicationHistory": "historia przyjmowania tabletek",
   "settings": "Ustawienia",
   "account": "Konto",
   "dataTransferRequiresAccount": "Rejestracja konta jest wymagana do przenoszenia i przywracania danych w przypadku zmiany urządzenia lub utraty telefonu.",

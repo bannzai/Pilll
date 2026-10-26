@@ -11,7 +11,7 @@
   "placebo": "placebo",
   "userNotFound": "No s'ha trobat l'usuari",
   "userAlreadyExists": "Aquest compte ja existeix",
-  "medicationHistory": "Historial de preses",
+  "medicationHistory": "historial de preses",
   "settings": "Configuració",
   "account": "Compte",
   "dataTransferRequiresAccount": "El registre de compte és necessari per a la transferència i recuperació de dades en cas de canvi de dispositiu o pèrdua del telèfon mòbil.",
