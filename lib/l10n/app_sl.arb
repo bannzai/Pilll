@@ -398,7 +398,7 @@
   "startFromNumber": "Začnite pri tej številki",
   "add": "Dodaj",
   "addPillSheet": "Dodajte ploščico",
-  "pillTakenCountPrefix": "1× na dan",
+  "pillTakenCountPrefix": "Na dan",
   "pillTakenCountSuffix": "Vzame 2-krat na dan",
   "duringPauseTaking": "Na premoru pri jemanju",
   "cannotPauseAlreadyTakenToday": "Premora jemanja ni mogoče nastaviti, ker je današnja tableta že vzeta",

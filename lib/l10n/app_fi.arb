@@ -398,7 +398,7 @@
   "startFromNumber": "Aloita tästä numerosta",
   "add": "Lisää",
   "addPillSheet": "Lisää pilleriliuska",
-  "pillTakenCountPrefix": "1 päivässä",
+  "pillTakenCountPrefix": "Päivässä",
   "pillTakenCountSuffix": "以下がフィンランド語 (fi) への翻訳です。\n\nkertaa otan",
   "duringPauseTaking": "Ottotauko",
   "cannotPauseAlreadyTakenToday": "Ottotaukoa ei voi aloittaa, kun tänään otettava pilleri on jo otettu",

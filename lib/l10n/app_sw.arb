@@ -398,7 +398,7 @@
   "startFromNumber": "Tafadhali anza kwenye nambari hii",
   "add": "Ongeza",
   "addPillSheet": "Ongeza pakiti ya vidonge",
-  "pillTakenCountPrefix": "Kwa siku moja",
+  "pillTakenCountPrefix": "Kwa siku",
   "pillTakenCountSuffix": "Kutumia mara moja",
   "duringPauseTaking": "Mapumziko wa dawa",
   "cannotPauseAlreadyTakenToday": "Huwezi 'Pumzika Kutumia' ikiwa tayari umetumia dawa ya leo",

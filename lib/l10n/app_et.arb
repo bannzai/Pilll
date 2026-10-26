@@ -398,7 +398,7 @@
   "startFromNumber": "Alusta sellest numbrist",
   "add": "Lisa",
   "addPillSheet": "Lisa pillileht",
-  "pillTakenCountPrefix": "1 päevas",
+  "pillTakenCountPrefix": "Päevas",
   "pillTakenCountSuffix": "1 korra võtta",
   "duringPauseTaking": "Võtmispaus",
   "cannotPauseAlreadyTakenToday": "Kui tänane tablett on võetud, ei saa „võtmise pausi\" kasutada",

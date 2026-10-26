@@ -398,7 +398,7 @@
   "startFromNumber": "Dechrau o'r rhif hwn",
   "add": "Ychwanegu",
   "addPillSheet": "Ychwanegwch stribed pils",
-  "pillTakenCountPrefix": "Un diwrnod",
+  "pillTakenCountPrefix": "Y dydd",
   "pillTakenCountSuffix": "Cymryd 2 lwy y dydd",
   "duringPauseTaking": "Seibiant cymryd",
   "cannotPauseAlreadyTakenToday": "Os yw pil heddiw wedi'i gymryd eisoes\nNi allwch ddefnyddio 'Seibiant Cymryd'",

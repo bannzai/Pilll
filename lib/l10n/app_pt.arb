@@ -398,7 +398,7 @@
   "startFromNumber": "Começar por este número",
   "add": "Adicionar",
   "addPillSheet": "Adicionar cartela",
-  "pillTakenCountPrefix": "Uma vez ao dia",
+  "pillTakenCountPrefix": "Por dia",
   "pillTakenCountSuffix": "vez(es) ao dia",
   "duringPauseTaking": "Em pausa",
   "cannotPauseAlreadyTakenToday": "Não é possível pausar a dose quando o comprimido de hoje já foi tomado",

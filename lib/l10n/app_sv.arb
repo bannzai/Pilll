@@ -398,7 +398,7 @@
   "startFromNumber": "Börja från det här numret",
   "add": "Lägg till",
   "addPillSheet": "Lägg till p-pillerkarta",
-  "pillTakenCountPrefix": "En dag att ta",
+  "pillTakenCountPrefix": "Per dag",
   "pillTakenCountSuffix": "Hon tar 2 tabletter per dag",
   "duringPauseTaking": "P-piller pausad",
   "cannotPauseAlreadyTakenToday": "Kan inte pausa intag när dagens p-piller redan är taget",

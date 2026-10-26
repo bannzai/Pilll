@@ -398,7 +398,7 @@
   "startFromNumber": "Почеток од овој број",
   "add": "Додавање",
   "addPillSheet": "Додавање блистер",
-  "pillTakenCountPrefix": "На ден",
+  "pillTakenCountPrefix": "Дневно",
   "pillTakenCountSuffix": "Земи по 1 пат на ден",
   "duringPauseTaking": "Во пауза",
   "cannotPauseAlreadyTakenToday": "Не можете да направите пауза од земање бидејќи денешната пилула е веќе земена",

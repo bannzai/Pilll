@@ -398,7 +398,7 @@
   "startFromNumber": "Ab dieser Nummer starten",
   "add": "Hinzufügen",
   "addPillSheet": "Pillenblister hinzufügen",
-  "pillTakenCountPrefix": "Einmal täglich",
+  "pillTakenCountPrefix": "Pro Tag",
   "pillTakenCountSuffix": "Täglich einnehmen",
   "duringPauseTaking": "Einnahmepause",
   "cannotPauseAlreadyTakenToday": "Wenn die heutige Pille bereits eingenommen wurde, ist eine „Einnahmepause\" nicht möglich",

@@ -398,7 +398,7 @@
   "startFromNumber": "Начать с этого номера",
   "add": "Добавить",
   "addPillSheet": "Добавить блистер",
-  "pillTakenCountPrefix": "Через день",
+  "pillTakenCountPrefix": "В день",
   "pillTakenCountSuffix": "Принимать по 2 раза в день",
   "duringPauseTaking": "Перерыв в приёме",
   "cannotPauseAlreadyTakenToday": "Функция «Пропуск приёма» недоступна, если сегодняшняя таблетка уже принята",

@@ -398,7 +398,7 @@
   "startFromNumber": "Začať od tohto čísla",
   "add": "Pridať",
   "addPillSheet": "Pridať blist",
-  "pillTakenCountPrefix": "Denne aplikáciu užíva denne",
+  "pillTakenCountPrefix": "Za deň",
   "pillTakenCountSuffix": "Užite 1x denne",
   "duringPauseTaking": "Pauza v užívaní",
   "cannotPauseAlreadyTakenToday": "Keď je dnešná pilulka už užitá, nemožno použiť „prestávku v užívaní\"",

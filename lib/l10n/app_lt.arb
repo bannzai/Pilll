@@ -398,7 +398,7 @@
   "startFromNumber": "Pradėti nuo šio numerio",
   "add": "Pridėti",
   "addPillSheet": "Pridėti tablečių plokštelę",
-  "pillTakenCountPrefix": "1 dieną",
+  "pillTakenCountPrefix": "Per dieną",
   "pillTakenCountSuffix": "1 dieną vartoti",
   "duringPauseTaking": "Vartojimo pertrauka",
   "cannotPauseAlreadyTakenToday": "Jei šiandienos tabletė jau išgerta, negalima padaryti „vartojimo pertraukos\"",

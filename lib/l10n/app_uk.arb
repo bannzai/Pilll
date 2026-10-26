@@ -398,7 +398,7 @@
   "startFromNumber": "Почати з цього номера",
   "add": "Додати",
   "addPillSheet": "Додати блістер",
-  "pillTakenCountPrefix": "На день",
+  "pillTakenCountPrefix": "За день",
   "pillTakenCountSuffix": "Приймати по [VAL] раз(и) на день",
   "duringPauseTaking": "Перерва в прийомі",
   "cannotPauseAlreadyTakenToday": "Не можна пропустити прийом після того, як таблетку вже прийнято",

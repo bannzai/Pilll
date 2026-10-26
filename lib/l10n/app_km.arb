@@ -398,7 +398,7 @@
   "startFromNumber": "ចាប់ផ្តើមពីលេខនេះ",
   "add": "បន្ថែម",
   "addPillSheet": "សូមបន្ថែមបន្ទះថ្នាំគ្រាប់",
-  "pillTakenCountPrefix": "1日に",
+  "pillTakenCountPrefix": "ក្នុងមួយថ្ងៃ",
   "pillTakenCountSuffix": "ដងលេប",
   "duringPauseTaking": "កំពុងសម្រាក",
   "cannotPauseAlreadyTakenToday": "មិនអាចផ្អាកការញ៉ាំបានទេ ប្រសិនបើថ្នាំថ្ងៃនេះត្រូវបានញ៉ាំរួចហើយ",

@@ -398,7 +398,7 @@
   "startFromNumber": "ဒီနံပါတ်ကနေ စတင်ပါ",
   "add": "ထည့်ရန်",
   "addPillSheet": "ဆေးပြားကတ် ထည့်ရန်",
-  "pillTakenCountPrefix": "1 ရက်လျှင်",
+  "pillTakenCountPrefix": "တစ်နေ့လျှင်",
   "pillTakenCountSuffix": "回服用する",
   "duringPauseTaking": "သောက်ခြင်း နားနေသည်",
   "cannotPauseAlreadyTakenToday": "ယနေ့ဆေးပြားကို သောက်ပြီးသားဆိုရင် \"ဆေးနားခြင်း\" မလုပ်နိုင်ပါ",

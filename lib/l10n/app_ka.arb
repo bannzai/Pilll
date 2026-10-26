@@ -398,7 +398,7 @@
   "startFromNumber": "ამ ნომრიდან დაწყება",
   "add": "დამატება",
   "addPillSheet": "აბების ბლისტერ დამატება",
-  "pillTakenCountPrefix": "1 დღეში",
+  "pillTakenCountPrefix": "დღეში",
   "pillTakenCountSuffix": "-ჯერ მიღება",
   "duringPauseTaking": "მიღების შესვენება",
   "cannotPauseAlreadyTakenToday": "დღეს მისაღები ტაბლეტი უკვე მიღებულია\n„მიღების შეჩერება\" შეუძლებელია",

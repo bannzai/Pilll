@@ -398,7 +398,7 @@
   "startFromNumber": "Mula dari nombor ini",
   "add": "Tambah",
   "addPillSheet": "Tambah pek pil",
-  "pillTakenCountPrefix": "Sehari sekali",
+  "pillTakenCountPrefix": "Sehari",
   "pillTakenCountSuffix": "Sehari [2] kali",
   "duringPauseTaking": "Sedang Berehat",
   "cannotPauseAlreadyTakenToday": "Tidak dapat menggunakan 'Rehat Pengambilan' kerana pil hari ini sudah diminum",

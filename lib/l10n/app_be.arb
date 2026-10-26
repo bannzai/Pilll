@@ -398,7 +398,7 @@
   "startFromNumber": "Пачаць з гэтага нумара",
   "add": "Дадаць",
   "addPillSheet": "Дадаць блістар",
-  "pillTakenCountPrefix": "На дзень",
+  "pillTakenCountPrefix": "За дзень",
   "pillTakenCountSuffix": "разы прымаецца",
   "duringPauseTaking": "Перапынак у прыёме",
   "cannotPauseAlreadyTakenToday": "Калі сённяшняя пілюля ўжо прынята,\n«Перапынак прыёму» недаступны",

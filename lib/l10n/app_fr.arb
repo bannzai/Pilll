@@ -398,7 +398,7 @@
   "startFromNumber": "Commencer à ce numéro",
   "add": "Ajouter",
   "addPillSheet": "Ajouter une plaquette",
-  "pillTakenCountPrefix": "Prendre",
+  "pillTakenCountPrefix": "Par jour",
   "pillTakenCountSuffix": "fois par jour",
   "duringPauseTaking": "Faire une pause",
   "cannotPauseAlreadyTakenToday": "Impossible d'interrompre la prise alors que la pilule du jour a déjà été prise",

@@ -398,7 +398,7 @@
   "startFromNumber": "આ નંબરથી શરૂ કરો",
   "add": "ઉમેરો",
   "addPillSheet": "ગોળીની સ્ટ્રિપ ઉમેરો",
-  "pillTakenCountPrefix": "1日に",
+  "pillTakenCountPrefix": "દરરોજ",
   "pillTakenCountSuffix": "વખત લો",
   "duringPauseTaking": "દવાનો વિરામ",
   "cannotPauseAlreadyTakenToday": "આજે ગોળી પહેલેથી લીધેલ હોવાથી 'સેવન વિરામ' કરી શકાતું નથી",

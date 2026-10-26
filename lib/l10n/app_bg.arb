@@ -398,7 +398,7 @@
   "startFromNumber": "Начало от този номер",
   "add": "Добавяне",
   "addPillSheet": "Добавяне на блистер",
-  "pillTakenCountPrefix": "На 1 ден",
+  "pillTakenCountPrefix": "На ден",
   "pillTakenCountSuffix": "Приемате 2 таблетки",
   "duringPauseTaking": "Пауза в приемането",
   "cannotPauseAlreadyTakenToday": "Когато днешното хапче вече е взето,\nне можете да активирате „пауза в приема\"",

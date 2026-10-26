@@ -398,7 +398,7 @@
   "startFromNumber": "Zacznij od tego numeru",
   "add": "Dodaj",
   "addPillSheet": "Dodaj blist",
-  "pillTakenCountPrefix": "Codziennie",
+  "pillTakenCountPrefix": "Dziennie",
   "pillTakenCountSuffix": "Wypij 1 raz",
   "duringPauseTaking": "Przerwa w przyjmowaniu",
   "cannotPauseAlreadyTakenToday": "Jeśli dzisiejsza pigułka została już przyjęta\nNie można użyć funkcji „przerwa w przyjmowaniu\"",

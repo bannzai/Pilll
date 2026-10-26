@@ -398,7 +398,7 @@
   "startFromNumber": "اس نمبر سے شروع کریں",
   "add": "شامل کریں",
   "addPillSheet": "گولیوں کی پٹی شامل کریں",
-  "pillTakenCountPrefix": "1日میں",
+  "pillTakenCountPrefix": "دن میں",
   "pillTakenCountSuffix": "بار لیں",
   "duringPauseTaking": "دوا موقوف ہے",
   "cannotPauseAlreadyTakenToday": "آج کی گولی لے چکنے کے بعد \"دوا بند کرنا\" استعمال نہیں کر سکتے",

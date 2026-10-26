@@ -398,7 +398,7 @@
   "startFromNumber": "Începe de la acest număr",
   "add": "Adaugă",
   "addPillSheet": "Adaugă un blister",
-  "pillTakenCountPrefix": "Într-o zi",
+  "pillTakenCountPrefix": "Pe zi",
   "pillTakenCountSuffix": "ori",
   "duringPauseTaking": "În pauză de administrare",
   "cannotPauseAlreadyTakenToday": "Pauza de administrare nu este posibilă dacă pastila de azi a fost deja luată",

@@ -398,7 +398,7 @@
   "startFromNumber": "Start fra dette nummer",
   "add": "Tilføj",
   "addPillSheet": "Tilføj pillekort",
-  "pillTakenCountPrefix": "Tag",
+  "pillTakenCountPrefix": "Om dagen",
   "pillTakenCountSuffix": "Tager 1 pille om dagen",
   "duringPauseTaking": "Indtagelsespause",
   "cannotPauseAlreadyTakenToday": "Kan ikke pausere indtagelse når dagens pille allerede er taget",

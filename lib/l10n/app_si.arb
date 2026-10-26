@@ -398,7 +398,7 @@
   "startFromNumber": "මෙම අංකයෙන් ආරම්භ කරන්න",
   "add": "එක් කරන්න",
   "addPillSheet": "පෙති කාඩ්පත එක් කරන්න",
-  "pillTakenCountPrefix": "1දිනකට",
+  "pillTakenCountPrefix": "දිනකට",
   "pillTakenCountSuffix": "回衣ගන්නවා",
   "duringPauseTaking": "මාධ්‍යය විවේකයේ",
   "cannotPauseAlreadyTakenToday": "අද ගන්නා පෙති දැනටමත් ගන්න ලද නිසා \"ගැනීම නවත්වන්න\" කළ නොහැකිය",

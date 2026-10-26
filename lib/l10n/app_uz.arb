@@ -398,7 +398,7 @@
   "startFromNumber": "Shu raqamdan boshlang",
   "add": "Qoʻshish",
   "addPillSheet": "Tabletka blister qoʻshing",
-  "pillTakenCountPrefix": "Bir kunda",
+  "pillTakenCountPrefix": "Kuniga",
   "pillTakenCountSuffix": "1 kunlik doza soni",
   "duringPauseTaking": "Qabul qilishdan dam olish",
   "cannotPauseAlreadyTakenToday": "Bugungi dori allaqachon qabul qilingan bo'lgani uchun tanaffus funksiyasini ishlatib bo'lmaydi",

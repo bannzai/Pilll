@@ -398,7 +398,7 @@
   "startFromNumber": "ເລີ່ມຈາກເລກນີ້",
   "add": "ເພີ່ມ",
   "addPillSheet": "ເພີ່ມແຜງຢາຄຸມ",
-  "pillTakenCountPrefix": "້ານໜຶ່ງ",
+  "pillTakenCountPrefix": "ຕໍ່ມື້",
   "pillTakenCountSuffix": "ຮັບປະທານ 回",
   "duringPauseTaking": "ພັກການກິນຢາ",
   "cannotPauseAlreadyTakenToday": "ຖ້າກິນເມັດຢາມື້ນີ້ແລ້ວ ບໍ່ສາມາດ 'ຫຍຸດພັກການກິນຢາ' ໄດ້",

@@ -398,7 +398,7 @@
   "startFromNumber": "এই নম্বর থেকে শুরু করুন",
   "add": "যোগ করুন",
   "addPillSheet": "পিল শিট যোগ করুন",
-  "pillTakenCountPrefix": "1 দিনে",
+  "pillTakenCountPrefix": "প্রতিদিন",
   "pillTakenCountSuffix": "১ দিনে [X] বার সেবন করুন",
   "duringPauseTaking": "সেবন বিরতিত",
   "cannotPauseAlreadyTakenToday": "আজকের পিল ইতিমধ্যে সেবন করা থাকলে 'সেবন বিরতি' করা যাবে না",

@@ -398,7 +398,7 @@
   "startFromNumber": "Comença per aquest número",
   "add": "Afegeix",
   "addPillSheet": "Afegeix un blíster",
-  "pillTakenCountPrefix": "1 dia",
+  "pillTakenCountPrefix": "Al dia",
   "pillTakenCountSuffix": "Prendre-la 2 vegades",
   "duringPauseTaking": "En descans",
   "cannotPauseAlreadyTakenToday": "Si ja has pres la píndola d'avui\nNo es pot fer el \"descans\" de la presa",

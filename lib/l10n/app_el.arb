@@ -398,7 +398,7 @@
   "startFromNumber": "Έναρξη από αυτόν τον αριθμό",
   "add": "Προσθήκη",
   "addPillSheet": "Προσθήκη καρτέλα χαπιών",
-  "pillTakenCountPrefix": "Μία φορά την ημέρα",
+  "pillTakenCountPrefix": "Την ημέρα",
   "pillTakenCountSuffix": "Λαμβάνω κατά τη λήψη",
   "duringPauseTaking": "Σε διάλειμμα λήψης",
   "cannotPauseAlreadyTakenToday": "Δεν μπορείτε να παυσετε τη λήψη αφού έχετε ήδη πάρει το σημερινό χάπι",

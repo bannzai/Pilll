@@ -398,7 +398,7 @@
   "startFromNumber": "له دې شمېرې پیل کړئ",
   "add": "زیاتول",
   "addPillSheet": "د ګولیو پاڼې اضافه کول",
-  "pillTakenCountPrefix": "په يوه ورځ کې",
+  "pillTakenCountPrefix": "په ورځ کې",
   "pillTakenCountSuffix": "ځله مصرفیږي",
   "duringPauseTaking": "د درملو وقفه",
   "cannotPauseAlreadyTakenToday": "که چیرې د نن ورځې ګوټۍ دمخه واخیستل شوي وي\n\"د درملو استعمال ودروول\" نشي کولی",

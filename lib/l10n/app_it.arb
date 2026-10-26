@@ -398,7 +398,7 @@
   "startFromNumber": "Inizia da questo numero",
   "add": "Aggiungi",
   "addPillSheet": "Aggiungi un blister",
-  "pillTakenCountPrefix": "Ogni giorno",
+  "pillTakenCountPrefix": "Al giorno",
   "pillTakenCountSuffix": "Prendo una volta al giorno",
   "duringPauseTaking": "In pausa",
   "cannotPauseAlreadyTakenToday": "Non è possibile sospendere l'assunzione quando la pillola di oggi è già stata presa",

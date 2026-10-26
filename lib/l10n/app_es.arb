@@ -398,7 +398,7 @@
   "startFromNumber": "Empezar desde este número",
   "add": "Agregar",
   "addPillSheet": "Añadir blíster",
-  "pillTakenCountPrefix": "1 día al",
+  "pillTakenCountPrefix": "Al día",
   "pillTakenCountSuffix": "Toma 2 veces al día",
   "duringPauseTaking": "En pausa",
   "cannotPauseAlreadyTakenToday": "No se puede pausar la toma cuando ya has tomado la píldora de hoy",

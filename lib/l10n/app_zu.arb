@@ -398,7 +398,7 @@
   "startFromNumber": "Sicela uqale kule nombolo",
   "add": "Engeza",
   "addPillSheet": "Engeza ishidi lamaphilisi",
-  "pillTakenCountPrefix": "Ngosuku ngalinye",
+  "pillTakenCountPrefix": "Ngosuku",
   "pillTakenCountSuffix": "izikhathi zokuthatha",
   "duringPauseTaking": "Ukuphumula emisebenzini yemithi",
   "cannotPauseAlreadyTakenToday": "Uma iphilisi lanamuhla sele lisetshenzisiwe\nAwukwazi \"ukuyeka ukuphuza\"",

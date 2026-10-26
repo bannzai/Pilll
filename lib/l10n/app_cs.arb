@@ -398,7 +398,7 @@
   "startFromNumber": "Začít od tohoto čísla",
   "add": "Přidat",
   "addPillSheet": "Přidat blistr",
-  "pillTakenCountPrefix": "Denně",
+  "pillTakenCountPrefix": "Za den",
   "pillTakenCountSuffix": "krát užívat",
   "duringPauseTaking": "Přestávka v užívání",
   "cannotPauseAlreadyTakenToday": "Pokud byl dnešní lék již užit, nelze použít „Přestávka v užívání\"",

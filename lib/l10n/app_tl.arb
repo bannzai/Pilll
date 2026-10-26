@@ -398,7 +398,7 @@
   "startFromNumber": "Magsimula sa numerong ito",
   "add": "Magdagdag",
   "addPillSheet": "Magdagdag ng pakete ng pildoras",
-  "pillTakenCountPrefix": "Isang beses sa isang araw",
+  "pillTakenCountPrefix": "Sa isang araw",
   "pillTakenCountSuffix": "1回服用する",
   "duringPauseTaking": "Naka-break sa pag-inom",
   "cannotPauseAlreadyTakenToday": "Hindi na pwedeng mag-\"Pahinga sa Pag-inom\" kapag nainuman na ang pill ngayong araw",

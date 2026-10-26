@@ -398,7 +398,7 @@
   "startFromNumber": "Осы нөмірден бастау",
   "add": "Қосу",
   "addPillSheet": "Таблетка блистер қосу",
-  "pillTakenCountPrefix": "1 күнде",
+  "pillTakenCountPrefix": "Күніне",
   "pillTakenCountSuffix": "рет қабылданады",
   "duringPauseTaking": "Қабылдау үзілісі",
   "cannotPauseAlreadyTakenToday": "Бүгінгі дәрі қабылданғаннан кейін\n«Дәрі демалысы» мүмкін емес",

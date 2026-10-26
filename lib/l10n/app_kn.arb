@@ -398,7 +398,7 @@
   "startFromNumber": "ಈ ಸಂಖ್ಯೆಯಿಂದ ಪ್ರಾರಂಭಿಸಿ",
   "add": "ಸೇರಿಸಿ",
   "addPillSheet": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಸೇರಿಸಿ",
-  "pillTakenCountPrefix": "1 ದಿನಕ್ಕೆ",
+  "pillTakenCountPrefix": "ದಿನಕ್ಕೆ",
   "pillTakenCountSuffix": "ದಿನಕ್ಕೆ [2] ಬಾರಿ ಸೇವಿಸಿ",
   "duringPauseTaking": "ಸೇವನೆ ವಿರಾಮದಲ್ಲಿ",
   "cannotPauseAlreadyTakenToday": "ಇಂದಿನ ಮಾತ್ರೆ ಈಗಾಗಲೇ ಸೇವಿಸಿದ್ದರೆ\n'ಸೇವನೆ ವಿರಾಮ' ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ",

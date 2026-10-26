@@ -398,7 +398,7 @@
   "startFromNumber": "Bi dere Nummere aafange",
   "add": "Dezue tue",
   "addPillSheet": "Pilleblister dezue tue",
-  "pillTakenCountPrefix": "1 Tag",
+  "pillTakenCountPrefix": "Am Tag",
   "pillTakenCountSuffix": "Nimm 2 Mal ein",
   "duringPauseTaking": "Ihname pausiert",
   "cannotPauseAlreadyTakenToday": "D'Pille vo hüt isch scho gnoh - «Inahm-Pause» isch nöd möglich",

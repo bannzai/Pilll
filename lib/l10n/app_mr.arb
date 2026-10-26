@@ -398,7 +398,7 @@
   "startFromNumber": "या क्रमांकापासून सुरू करा",
   "add": "जोडा",
   "addPillSheet": "पिल शीट जोडा",
-  "pillTakenCountPrefix": "1 दिवसात",
+  "pillTakenCountPrefix": "दिवसातून",
   "pillTakenCountSuffix": "वेळा घ्या",
   "duringPauseTaking": "सेवन विराम",
   "cannotPauseAlreadyTakenToday": "आजची गोळी आधीच घेतल्यामुळे 'सेवन विराम' करता येत नाही",

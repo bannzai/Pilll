@@ -398,7 +398,7 @@
   "startFromNumber": "ଏହି ନମ୍ବରରୁ ଆରମ୍ଭ କରନ୍ତୁ",
   "add": "ଯୋଡ଼ନ୍ତୁ",
   "addPillSheet": "ବଟିକା ସିଟ ଯୋଡ଼ନ୍ତୁ",
-  "pillTakenCountPrefix": "1日に",
+  "pillTakenCountPrefix": "ଦିନକୁ",
   "pillTakenCountSuffix": "1日に2回服用する",
   "duringPauseTaking": "ସେବନ ବିରାମରେ",
   "cannotPauseAlreadyTakenToday": "ଆଜିର ବଟିକା ସେବନ କରାଯାଇଥିବାରୁ 'ସେବନ ବିଶ୍ରାମ' କରିପାରିବେ ନାହିଁ",

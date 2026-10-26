@@ -398,7 +398,7 @@
   "startFromNumber": "شروع از این شماره",
   "add": "افزودن",
   "addPillSheet": "افزودن ورق قرص",
-  "pillTakenCountPrefix": "روزی",
+  "pillTakenCountPrefix": "در روز",
   "pillTakenCountSuffix": "アラビア語(RTL)の既訳「مرات تؤخذ」を参考に、ペルシャ語として自然な訳を出力します。\n\nبار مصرف می‌شود",
   "duringPauseTaking": "استراحت از مصرف",
   "cannotPauseAlreadyTakenToday": "وقتی قرص امروز را مصرف کرده‌اید، امکان «استراحت از مصرف» وجود ندارد",
