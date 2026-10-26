@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "বিজ্ঞপ্তি থেকেই সেবনের রেকর্ড",
   "quickRecordFeatureAppealShortDescription": "অ্যাপ না খুলেই বিজ্ঞপ্তি থেকে রেকর্ড করুন",
   "quickRecordFeatureAppealHeadline": "বিজ্ঞপ্তির স্ক্রিনে এক ট্যাপেই সেবনের রেকর্ড",
-  "quickRecordFeatureAppealBody": "রিমাইন্ডার বিজ্ঞপ্তিটি দীর্ঘ চাপ দিলে \"গ্রহণ করা হয়েছে\" অ্যাকশনটি প্রদর্শিত হয় এবং অ্যাপ না খুলেই সেবন রেকর্ড করা যায়।",
+  "quickRecordFeatureAppealBody": "রিমাইন্ডারের বিজ্ঞপ্তি চেপে ধরে রাখলে ‘খেয়েছি’ বিকল্পটি দেখাবে। অ্যাপ না খুলেই আপনি পিল খাওয়ার তথ্য নথিভুক্ত করতে পারবেন।",
   "creatingNewPillSheetFeatureAppealTitle": "স্বয়ংক্রিয়ভাবে পিল শিট যোগ করুন",
   "creatingNewPillSheetFeatureAppealShortDescription": "পরবর্তী শিট স্বয়ংক্রিয়ভাবে তৈরি করুন",
   "creatingNewPillSheetFeatureAppealHeadline": "পরবর্তী পিল শিট স্বয়ংক্রিয়ভাবে তৈরি করুন",

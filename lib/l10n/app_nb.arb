@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Pillelogg rett fra varselet",
   "quickRecordFeatureAppealShortDescription": "Registrer fra varselet uten å åpne appen",
   "quickRecordFeatureAppealHeadline": "pillelogg med ett trykk på varslingsskjermen",
-  "quickRecordFeatureAppealBody": "Hold inne påminnelsesvarselet for å vise handlingen «Tatt», slik at du kan registrere inntak uten å åpne appen.",
+  "quickRecordFeatureAppealBody": "Når du trykker og holder på varslet om påminnelse, vises valget «Tatt». Da kan du registrere at du har tatt p-pillen uten å åpne appen.",
   "creatingNewPillSheetFeatureAppealTitle": "Legg til pilleark automatisk",
   "creatingNewPillSheetFeatureAppealShortDescription": "Generer neste ark automatisk",
   "creatingNewPillSheetFeatureAppealHeadline": "Opprett neste pilleark automatisk",

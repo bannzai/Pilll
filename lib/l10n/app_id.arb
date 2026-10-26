@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Catatan minum pil langsung dari notifikasi",
   "quickRecordFeatureAppealShortDescription": "Catat langsung dari notifikasi tanpa membuka aplikasi",
   "quickRecordFeatureAppealHeadline": "catatan minum pil dengan satu ketukan di layar notifikasi",
-  "quickRecordFeatureAppealBody": "Jika Anda menekan dan menahan notifikasi pengingat, tindakan \"Sudah minum\" akan muncul sehingga Anda dapat mencatat pemakaian tanpa membuka aplikasi.",
+  "quickRecordFeatureAppealBody": "Tekan lama notifikasi pengingat untuk menampilkan pilihan “Sudah diminum”. Anda dapat mencatat konsumsi pil tanpa membuka aplikasi.",
   "creatingNewPillSheetFeatureAppealTitle": "Tambahkan lembar pil secara otomatis",
   "creatingNewPillSheetFeatureAppealShortDescription": "Lembar pil berikutnya dibuat secara otomatis",
   "creatingNewPillSheetFeatureAppealHeadline": "Buat lembar pil berikutnya secara otomatis",

@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Záznam o užití priamo z upozornenia",
   "quickRecordFeatureAppealShortDescription": "Zaznamenajte priamo z upozornenia bez otvorenia aplikácie",
   "quickRecordFeatureAppealHeadline": "záznam o užití jedným ťuknutím na obrazovke upozornení",
-  "quickRecordFeatureAppealBody": "Pri dlhom stlačení upozornenia sa zobrazí akcia \"Označiť ako užité\", vďaka čomu si môžete zaznamenať užitie bez otvorenia aplikácie.",
+  "quickRecordFeatureAppealBody": "Keď podržíte oznámenie pripomienky, zobrazí sa možnosť „Užité“. Užívanie tabletky tak môžete zaznamenať bez otvorenia aplikácie.",
   "creatingNewPillSheetFeatureAppealTitle": "Automatické pridanie pilulkového listu",
   "creatingNewPillSheetFeatureAppealShortDescription": "Automaticky pridať nasledujúci blister",
   "creatingNewPillSheetFeatureAppealHeadline": "Ďalší pilulkový list sa vytvorí automaticky",

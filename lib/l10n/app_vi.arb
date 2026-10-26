@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Nhật ký uống thuốc ngay từ thông báo",
   "quickRecordFeatureAppealShortDescription": "Ghi lại ngay trên thông báo mà không cần mở ứng dụng",
   "quickRecordFeatureAppealHeadline": "nhật ký uống thuốc chỉ với một lần chạm trên màn hình thông báo",
-  "quickRecordFeatureAppealBody": "Nhấn giữ thông báo nhắc uống thuốc sẽ hiện hành động \"Đã uống\", cho phép bạn ghi lại việc đã uống mà không cần mở ứng dụng.",
+  "quickRecordFeatureAppealBody": "Nhấn giữ thông báo lời nhắc để hiện tùy chọn “Đã uống”. Bạn có thể ghi lại việc uống thuốc mà không cần mở ứng dụng.",
   "creatingNewPillSheetFeatureAppealTitle": "Tự động thêm vỉ thuốc",
   "creatingNewPillSheetFeatureAppealShortDescription": "Tự động thêm vỉ thuốc tiếp theo",
   "creatingNewPillSheetFeatureAppealHeadline": "Tự động tạo vỉ thuốc tiếp theo",

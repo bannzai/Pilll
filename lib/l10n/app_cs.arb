@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Záznam užití přímo z oznámení",
   "quickRecordFeatureAppealShortDescription": "Zaznamenat přímo z oznámení bez otevření aplikace",
   "quickRecordFeatureAppealHeadline": "záznam užití jedním klepnutím na obrazovce oznámení",
-  "quickRecordFeatureAppealBody": "Dlouhým stisknutím oznámení připomenutí se zobrazí akce „Užito\" a můžete zaznamenat užití léku bez otevření aplikace.",
+  "quickRecordFeatureAppealBody": "Když podržíte oznámení připomínky, zobrazí se možnost „Užito“. Užívání pilulky tak můžete zaznamenat bez otevření aplikace.",
   "creatingNewPillSheetFeatureAppealTitle": "Automaticky přidat pilulkový arch",
   "creatingNewPillSheetFeatureAppealShortDescription": "Automaticky vytvořit další arch",
   "creatingNewPillSheetFeatureAppealHeadline": "Automatické vytvoření dalšího pilulkového listu",

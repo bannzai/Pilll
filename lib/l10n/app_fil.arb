@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Tala ng pag-inom mula mismo sa abiso",
   "quickRecordFeatureAppealShortDescription": "Itala mula sa abiso nang hindi binubuksan ang app",
   "quickRecordFeatureAppealHeadline": "tala ng pag-inom sa isang tap sa screen ng mga notification",
-  "quickRecordFeatureAppealBody": "Kapag pinindot nang matagal ang reminder notification, lalabas ang aksyon na \"Nainom na\", na nagbibigay-daan sa iyong i-record ang pag-inom nang hindi kailangang buksan ang app.",
+  "quickRecordFeatureAppealBody": "Pindutin nang matagal ang abiso ng paalala para lumabas ang opsyong “Nainom ko na”. Maaari ninyong itala ang pag-inom ng pill nang hindi binubuksan ang app.",
   "creatingNewPillSheetFeatureAppealTitle": "Awtomatikong Magdagdag ng Pill Sheet",
   "creatingNewPillSheetFeatureAppealShortDescription": "Awtomatikong likhain ang susunod na sheet",
   "creatingNewPillSheetFeatureAppealHeadline": "Awtomatikong Lumikha ng Susunod na Pill Sheet",

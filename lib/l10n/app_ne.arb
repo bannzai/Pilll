@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "सूचनाबाटै सेवन रेकर्ड",
   "quickRecordFeatureAppealShortDescription": "एप नखोली सूचनाबाटै रेकर्ड गर्नुहोस्",
   "quickRecordFeatureAppealHeadline": "सूचना स्क्रिनमा एक ट्यापमै सेवन रेकर्ड",
-  "quickRecordFeatureAppealBody": "रिमाइन्डर सूचनालाई लामो थिच्नुहोस् भने 'सेवन गरियो' को कार्य देखिन्छ, र एप नखोलीकन सेवन रेकर्ड गर्न सकिन्छ।",
+  "quickRecordFeatureAppealBody": "सम्झाउने सूचनाको सूचना थिचिराख्दा ‘लिइसकें’ विकल्प देखिन्छ। तपाईं एप नखोली चक्की खाएको कुरा टिपोट गर्न सक्नुहुन्छ।",
   "creatingNewPillSheetFeatureAppealTitle": "पिल सिट स्वतः थप्नुहोस्",
   "creatingNewPillSheetFeatureAppealShortDescription": "अर्को सिट स्वतः सिर्जना गर्नुहोस्",
   "creatingNewPillSheetFeatureAppealHeadline": "अर्को पिल शिट स्वचालित रूपमा सिर्जना गर्नुहोस्",

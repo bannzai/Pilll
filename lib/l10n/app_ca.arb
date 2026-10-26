@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Registre de preses directament des de la notificació",
   "quickRecordFeatureAppealShortDescription": "Registra-ho des de la notificació sense obrir l'aplicació",
   "quickRecordFeatureAppealHeadline": "registre de preses amb un sol toc a la pantalla de notificacions",
-  "quickRecordFeatureAppealBody": "Si manteniu premuda la notificació de recordatori, apareixerà l'acció «He pres la pastilla» i podreu registrar la presa sense obrir l'aplicació.",
+  "quickRecordFeatureAppealBody": "Si mantens premuda la notificació del recordatori, apareixerà l’opció «L’he presa». Així pots registrar la presa de la píndola sense obrir l’aplicació.",
   "creatingNewPillSheetFeatureAppealTitle": "Afegeix la fitxa de píndoles automàticament",
   "creatingNewPillSheetFeatureAppealShortDescription": "Genera automàticament el full següent",
   "creatingNewPillSheetFeatureAppealHeadline": "Crea automàticament el pròxim full de píndoles",

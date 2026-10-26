@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Запис за земање директно од известувањето",
   "quickRecordFeatureAppealShortDescription": "Запишете од известувањето без да ја отворите апликацијата",
   "quickRecordFeatureAppealHeadline": "Запис за земање со еден допир на екранот со известувања",
-  "quickRecordFeatureAppealBody": "Ако долго притиснете на известувањето за потсетник, ќе се појави акцијата „Земено“, што ви овозможува да го запишете земањето на пилулата без да ја отворите апликацијата.",
+  "quickRecordFeatureAppealBody": "Ако го притиснете и задржите известувањето од потсетникот, ќе се појави опцијата „Ја земав“. Можете да го запишете земањето на таблетата без да ја отворите апликацијата.",
   "creatingNewPillSheetFeatureAppealTitle": "Автоматско додавање на лист од таблети",
   "creatingNewPillSheetFeatureAppealShortDescription": "Следниот лист се генерира автоматски",
   "creatingNewPillSheetFeatureAppealHeadline": "Автоматско создавање на следниот лист за пилули",

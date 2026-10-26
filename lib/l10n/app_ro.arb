@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Înregistrare direct din notificare",
   "quickRecordFeatureAppealShortDescription": "Înregistrează din notificare fără să deschizi aplicația",
   "quickRecordFeatureAppealHeadline": "înregistrare a administrării pilulei cu o atingere din ecranul de notificări",
-  "quickRecordFeatureAppealBody": "Apăsați lung pe notificarea de memento pentru a afișa acțiunea „Am luat pastila\" și înregistrați administrarea fără a deschide aplicația.",
+  "quickRecordFeatureAppealBody": "Ține apăsată notificarea de memento pentru a vedea opțiunea „Am luat-o”. Astfel poți înregistra administrarea pilulei fără să deschizi aplicația.",
   "creatingNewPillSheetFeatureAppealTitle": "Adaugă automat foaia de pastile",
   "creatingNewPillSheetFeatureAppealShortDescription": "Generare automată a fișei următoare",
   "creatingNewPillSheetFeatureAppealHeadline": "Creare automată a următoarei foi de pastile",

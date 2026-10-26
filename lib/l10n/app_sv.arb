@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Intagslogg direkt från aviseringen",
   "quickRecordFeatureAppealShortDescription": "Registrera direkt i aviseringen utan att öppna appen",
   "quickRecordFeatureAppealHeadline": "intagslogg med ett tryck på aviseringsskärmen",
-  "quickRecordFeatureAppealBody": "Om du långtrycker på påminnelsen i aviseringen visas åtgärden \"Tagit\", så att du kan registrera intaget utan att öppna appen.",
+  "quickRecordFeatureAppealBody": "Håll ned aviseringen från din påminnelse så visas alternativet ”Tagen”. Då kan du registrera att du tagit ditt p-piller utan att öppna appen.",
   "creatingNewPillSheetFeatureAppealTitle": "Lägg automatiskt till ett nytt p-pillerark",
   "creatingNewPillSheetFeatureAppealShortDescription": "Skapa nästa pillerark automatiskt",
   "creatingNewPillSheetFeatureAppealHeadline": "Skapa nästa pillerförpackning automatiskt",

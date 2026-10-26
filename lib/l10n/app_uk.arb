@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Запис прийому просто зі сповіщення",
   "quickRecordFeatureAppealShortDescription": "Записуйте зі сповіщення, не відкриваючи застосунок",
   "quickRecordFeatureAppealHeadline": "запис прийому пігулки одним дотиком на екрані сповіщень",
-  "quickRecordFeatureAppealBody": "Якщо натиснути й утримувати сповіщення-нагадування, з’явиться дія «Прийнято», яка дозволить зафіксувати прийом без відкриття додатка.",
+  "quickRecordFeatureAppealBody": "Натисніть і утримуйте сповіщення нагадування — з’явиться дія «Прийнято». Так ви зможете записати прийом пігулки, не відкриваючи застосунок.",
   "creatingNewPillSheetFeatureAppealTitle": "Автоматичне додавання аркуша для таблеток",
   "creatingNewPillSheetFeatureAppealShortDescription": "Наступний аркуш буде створено автоматично",
   "creatingNewPillSheetFeatureAppealHeadline": "Автоматичне створення наступного листа таблеток",

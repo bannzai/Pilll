@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Vartojimo įrašas tiesiai iš pranešimo",
   "quickRecordFeatureAppealShortDescription": "Pažymėkite pranešime neatidarę programėlės",
   "quickRecordFeatureAppealHeadline": "vartojimo įrašas vienu palietimu pranešimų ekrane",
-  "quickRecordFeatureAppealBody": "Ilgai paspaudus priminimo pranešimą, bus rodoma veiksmo parinktis „Vartojau“, kuri leidžia užregistruoti vartojimą neatidarant programėlės.",
+  "quickRecordFeatureAppealBody": "Paspaudus ir palaikius priminimo pranešimą, pasirodo parinktis „Išgerta“. Taip galite pažymėti, kad išgėrėte tabletę, neatidarę programėlės.",
   "creatingNewPillSheetFeatureAppealTitle": "Automatiškai pridėti tablečių lapelius",
   "creatingNewPillSheetFeatureAppealShortDescription": "Automatiškai sukurti kitą tablečių lapelį",
   "creatingNewPillSheetFeatureAppealHeadline": "Automatiškai sukurti kitą tablečių lapelį",

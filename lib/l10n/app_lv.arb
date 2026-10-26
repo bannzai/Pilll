@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Tablešu lietošanas ieraksts tieši no paziņojuma",
   "quickRecordFeatureAppealShortDescription": "Atzīmējiet paziņojumā, neatverot lietotni",
   "quickRecordFeatureAppealHeadline": "tablešu lietošanas ieraksts ar vienu pieskārienu paziņojumu ekrānā",
-  "quickRecordFeatureAppealBody": "Ilgi nospiežot atgādinājuma paziņojumu, parādīsies darbība „Atzīmēt kā lietotu”, kas ļauj reģistrēt tabletes lietošanu, neatverot lietotni.",
+  "quickRecordFeatureAppealBody": "Nospiežot un paturot atgādinājuma paziņojumu, parādīsies iespēja „Iedzerta”. Tā varat atzīmēt tabletes lietošanu, neatverot lietotni.",
   "creatingNewPillSheetFeatureAppealTitle": "Automātiska tablešu plāksnes pievienošana",
   "creatingNewPillSheetFeatureAppealShortDescription": "Automātiski izveidot nākamo tablešu lapu",
   "creatingNewPillSheetFeatureAppealHeadline": "Automātiski izveidot nākamo tablešu loksni",

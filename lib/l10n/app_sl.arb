@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Beleženje jemanja neposredno iz obvestila",
   "quickRecordFeatureAppealShortDescription": "Zabeležite iz obvestila, ne da bi odprli aplikacijo",
   "quickRecordFeatureAppealHeadline": "beleženje jemanja z enim dotikom na zaslonu z obvestili",
-  "quickRecordFeatureAppealBody": "Pritisnite in pridržite obvestilo opomnika, da se prikaže dejanje »Vzeto«, s katerim lahko zabeležite vnos brez odpiranja aplikacije.",
+  "quickRecordFeatureAppealBody": "Če pridržite obvestilo opomnika, se prikaže možnost »Vzeto«. Tako lahko zabeležite jemanje tabletke, ne da bi odprli aplikacijo.",
   "creatingNewPillSheetFeatureAppealTitle": "Samodejno dodaj listo tabletk",
   "creatingNewPillSheetFeatureAppealShortDescription": "Samodejno doda naslednji trak tablet",
   "creatingNewPillSheetFeatureAppealHeadline": "Samodejno ustvarite naslednji list tabletk",

@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "알림에서 바로 복용 기록",
   "quickRecordFeatureAppealShortDescription": "앱을 열지 않고 알림에서 바로 기록해요",
   "quickRecordFeatureAppealHeadline": "알림 화면에서 한 번의 터치로 복용 기록",
-  "quickRecordFeatureAppealBody": "알림을 길게 누르면 '복용 완료' 액션이 표시되어 앱을 열지 않고도 복용을 기록할 수 있습니다.",
+  "quickRecordFeatureAppealBody": "알림을 길게 누르면 ‘복용했어요’가 표시돼요. 앱을 열지 않고도 복용을 기록할 수 있어요.",
   "creatingNewPillSheetFeatureAppealTitle": "피임약 시트 자동 추가",
   "creatingNewPillSheetFeatureAppealShortDescription": "다음 시트를 자동으로 생성",
   "creatingNewPillSheetFeatureAppealHeadline": "다음 피임약 시트를 자동으로 생성",

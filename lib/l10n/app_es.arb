@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Registro de toma directamente desde la notificación",
   "quickRecordFeatureAppealShortDescription": "Registra desde la notificación sin abrir la app",
   "quickRecordFeatureAppealHeadline": "registro de toma con un toque desde la pantalla de notificaciones",
-  "quickRecordFeatureAppealBody": "Al mantener presionada la notificación del recordatorio, aparecerá la acción «Tomé la pastilla», lo que te permite registrar la toma sin abrir la aplicación.",
+  "quickRecordFeatureAppealBody": "Mantén pulsada la notificación del recordatorio para ver la opción «La tomé». Así puedes registrar la toma de la píldora sin abrir la app.",
   "creatingNewPillSheetFeatureAppealTitle": "Agregar hoja de píldoras automáticamente",
   "creatingNewPillSheetFeatureAppealShortDescription": "Añadir hoja automáticamente",
   "creatingNewPillSheetFeatureAppealHeadline": "Crear automáticamente la siguiente hoja de píldoras",

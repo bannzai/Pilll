@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "அறிவிப்பிலிருந்தே மாத்திரை உட்கொண்ட பதிவு",
   "quickRecordFeatureAppealShortDescription": "செயலியைத் திறக்காமல் அறிவிப்பிலிருந்தே பதிவு செய்யுங்கள்",
   "quickRecordFeatureAppealHeadline": "அறிவிப்புத் திரையில் ஒரே தட்டலில் மாத்திரை உட்கொண்ட பதிவு",
-  "quickRecordFeatureAppealBody": "ரிமைண்டர் அறிவிப்பை நீண்ட நேரம் அழுத்தினால் \"மருந்து எடுத்துவிட்டேன்\" என்ற செயல் தோன்றும்; செயலியைத் திறக்காமலே மருந்து எடுத்ததை பதிவு செய்ய முடியும்.",
+  "quickRecordFeatureAppealBody": "நினைவூட்டல் அறிவிப்பை அழுத்திப் பிடித்தால் ‘எடுத்துக்கொண்டேன்’ என்ற விருப்பம் தோன்றும். செயலியைத் திறக்காமலேயே மாத்திரை எடுத்துக்கொண்டதைப் பதிவு செய்யலாம்.",
   "creatingNewPillSheetFeatureAppealTitle": "பில் சீட்டை தானாகச் சேர்க்க",
   "creatingNewPillSheetFeatureAppealShortDescription": "அடுத்த ஷீட்டை தானாக உருவாக்கவும்",
   "creatingNewPillSheetFeatureAppealHeadline": "அடுத்த பில் ஷீட்டை தானாக உருவாக்கவும்",

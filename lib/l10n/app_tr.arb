@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Bildirimden doğrudan hap kullanım kaydı",
   "quickRecordFeatureAppealShortDescription": "Uygulamayı açmadan bildirimden kaydedin",
   "quickRecordFeatureAppealHeadline": "Bildirim ekranında tek dokunuşla hap kullanım kaydı",
-  "quickRecordFeatureAppealBody": "Hatırlatıcı bildirimine uzun bastığınızda 'Kullandım' seçeneği görünür; uygulamayı açmadan ilacı aldığınızı kaydedebilirsiniz.",
+  "quickRecordFeatureAppealBody": "Hatırlatma bildirimine uzun bastığınızda “Aldım” seçeneği görünür. Uygulamayı açmadan hapı aldığınızı kaydedebilirsiniz.",
   "creatingNewPillSheetFeatureAppealTitle": "Hap şemasını otomatik ekle",
   "creatingNewPillSheetFeatureAppealShortDescription": "Sonraki şerit otomatik oluşturulur",
   "creatingNewPillSheetFeatureAppealHeadline": "Bir sonraki hap şeridini otomatik oluşturun",

@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Tablettaszedési napló közvetlenül az értesítésből",
   "quickRecordFeatureAppealShortDescription": "Rögzítsd az értesítésből az alkalmazás megnyitása nélkül",
   "quickRecordFeatureAppealHeadline": "tablettaszedési napló egy érintéssel az értesítési képernyőn",
-  "quickRecordFeatureAppealBody": "Ha hosszan megnyomod az emlékeztető-értesítést, megjelenik a „Bevettem” művelet, így az alkalmazás megnyitása nélkül is rögzítheted a bevételt.",
+  "quickRecordFeatureAppealBody": "Ha hosszan megnyomod az emlékeztető értesítését, megjelenik a „Beszedtem” lehetőség. Így az alkalmazás megnyitása nélkül rögzítheted a tabletta bevételét.",
   "creatingNewPillSheetFeatureAppealTitle": "Fogamzásgátló lapok automatikus hozzáadása",
   "creatingNewPillSheetFeatureAppealShortDescription": "Következő lap automatikus létrehozása",
   "creatingNewPillSheetFeatureAppealHeadline": "Következő bliszter automatikus létrehozása",

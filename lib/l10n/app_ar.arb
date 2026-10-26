@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "تسجيل تناول مباشرة من الإشعار",
   "quickRecordFeatureAppealShortDescription": "سجلي من الإشعار دون فتح التطبيق",
   "quickRecordFeatureAppealHeadline": "تسجيل تناول بلمسة واحدة من شاشة الإشعارات",
-  "quickRecordFeatureAppealBody": "عند الضغط المطول على إشعار التذكير، يظهر إجراء \"تم التناول\"، مما يتيح لك تسجيل الجرعة دون فتح التطبيق.",
+  "quickRecordFeatureAppealBody": "عند الضغط مطولًا على إشعار التذكير، يظهر خيار «تناولت الحبة»، ويمكنكِ تسجيل تناولها دون فتح التطبيق.",
   "creatingNewPillSheetFeatureAppealTitle": "إضافة ورقة الحبوب تلقائيًا",
   "creatingNewPillSheetFeatureAppealShortDescription": "إنشاء الورقة التالية تلقائيًا",
   "creatingNewPillSheetFeatureAppealHeadline": "إنشاء ورقة الحبوب التالية تلقائيًا",

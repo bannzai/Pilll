@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "მიღების ჩანაწერის დამატება პირდაპირ შეტყობინებიდან",
   "quickRecordFeatureAppealShortDescription": "ჩაწერეთ შეტყობინებიდან აპის გახსნის გარეშე",
   "quickRecordFeatureAppealHeadline": "მიღების ჩანაწერი ერთი შეხებით შეტყობინებების ეკრანზე",
-  "quickRecordFeatureAppealBody": "შეტყობინებაზე ხანგრძლივად დაჭერისას გამოჩნდება მოქმედება „მიიღე“, რაც საშუალებას მოგცემთ დაარეგისტრიროთ აბის მიღება აპლიკაციის გახსნის გარეშე.",
+  "quickRecordFeatureAppealBody": "შეხსენების შეტყობინებას თუ ხანგრძლივად დააჭერთ, გამოჩნდება მოქმედება „მივიღე“. აბის მიღების ჩაწერა აპის გახსნის გარეშეც შეგიძლიათ.",
   "creatingNewPillSheetFeatureAppealTitle": "ტაბლეტების ფურცლის ავტომატური დამატება",
   "creatingNewPillSheetFeatureAppealShortDescription": "შემდეგი ფურცელი ავტომატურად იქმნება",
   "creatingNewPillSheetFeatureAppealHeadline": "შემდეგი პილშიტის ავტომატური შექმნა",

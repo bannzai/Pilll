@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Unos u evidenciju direktno iz obavijesti",
   "quickRecordFeatureAppealShortDescription": "Zabilježite iz obavijesti bez otvaranja aplikacije",
   "quickRecordFeatureAppealHeadline": "evidencija uzimanja jednim dodirom na ekranu obavijesti",
-  "quickRecordFeatureAppealBody": "Dugim pritiskom na obavještenje podsjetnika prikazat će se akcija \"Uzeto\", i možete zabilježiti uzimanje lijeka bez otvaranja aplikacije.",
+  "quickRecordFeatureAppealBody": "Kada pritisnete i zadržite obavijest podsjetnika, pojavit će se opcija „Uzela sam“. Uzimanje pilule možete zabilježiti bez otvaranja aplikacije.",
   "creatingNewPillSheetFeatureAppealTitle": "Automatski dodaj listu pilula",
   "creatingNewPillSheetFeatureAppealShortDescription": "Automatski generiši sljedeći list",
   "creatingNewPillSheetFeatureAppealHeadline": "Automatsko kreiranje sljedećeg lista tableta",

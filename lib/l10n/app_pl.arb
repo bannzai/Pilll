@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Rejestr przyjęcia tabletki bezpośrednio z powiadomienia",
   "quickRecordFeatureAppealShortDescription": "Zapisuj z powiadomienia bez otwierania aplikacji",
   "quickRecordFeatureAppealHeadline": "Zapis przyjęcia tabletki jednym dotknięciem na ekranie powiadomień",
-  "quickRecordFeatureAppealBody": "Długie naciśnięcie powiadomienia o przypomnieniu wyświetla akcję „Przyjęto\", dzięki czemu możesz zapisać przyjęcie tabletki bez otwierania aplikacji.",
+  "quickRecordFeatureAppealBody": "Przytrzymaj powiadomienie przypomnienia, aby zobaczyć opcję „Przyjęta”. W ten sposób zapiszesz przyjęcie tabletki bez otwierania aplikacji.",
   "creatingNewPillSheetFeatureAppealTitle": "Automatyczne dodawanie kart tabletek",
   "creatingNewPillSheetFeatureAppealShortDescription": "Automatyczne generowanie następnego arkusza",
   "creatingNewPillSheetFeatureAppealHeadline": "Automatyczne tworzenie następnego blister pack tabletek",

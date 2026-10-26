@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Võtmiskirje otse teavitusest",
   "quickRecordFeatureAppealShortDescription": "Märgi üles otse teavitusest ilma rakendust avamata",
   "quickRecordFeatureAppealHeadline": "võtmiskirje ühe puudutusega teavituste ekraanil",
-  "quickRecordFeatureAppealBody": "Meeldetuletusteatist pikalt vajutades kuvatakse toiming „Võetud\" ja saate tableti võtmise registreerida rakendust avamata.",
+  "quickRecordFeatureAppealBody": "Hoia meeldetuletuse teadet all, et näha valikut „Võetud“. Nii saad pilli võtmise kirja panna rakendust avamata.",
   "creatingNewPillSheetFeatureAppealTitle": "Lisa pillileht automaatselt",
   "creatingNewPillSheetFeatureAppealShortDescription": "Järgmise lehe automaatne loomine",
   "creatingNewPillSheetFeatureAppealHeadline": "Järgmise pillilehe automaatne loomine",

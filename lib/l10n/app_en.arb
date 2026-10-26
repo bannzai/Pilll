@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Pill log right from the notification",
   "quickRecordFeatureAppealShortDescription": "Record from the notification without opening the app",
   "quickRecordFeatureAppealHeadline": "One-tap pill log from your notifications",
-  "quickRecordFeatureAppealBody": "Long-press the reminder notification to reveal a \"Taken\" action and log your dose without opening the app.",
+  "quickRecordFeatureAppealBody": "Press and hold the reminder notification to see the “Taken” action. You can record taking your pill without opening the app.",
   "creatingNewPillSheetFeatureAppealTitle": "Automatically add a new pill sheet",
   "creatingNewPillSheetFeatureAppealShortDescription": "The next sheet appears automatically",
   "creatingNewPillSheetFeatureAppealHeadline": "Start your next pill sheet automatically",

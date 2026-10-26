@@ -491,7 +491,7 @@
   "quickRecordFeatureAppealTitle": "Pilleriloki suoraan ilmoituksesta",
   "quickRecordFeatureAppealShortDescription": "Kirjaa suoraan ilmoituksesta avaamatta sovellusta",
   "quickRecordFeatureAppealHeadline": "pilleriloki yhdellä napautuksella ilmoitusnäytöltä",
-  "quickRecordFeatureAppealBody": "Kun painat muistutusilmoitusta pitkään, näkyviin tulee \"Otettu\"-toiminto, jonka avulla voit kirjata pillerin otetuksi avaamatta sovellusta.",
+  "quickRecordFeatureAppealBody": "Kun pidät muistutusilmoitusta painettuna, näkyviin tulee vaihtoehto ”Otettu”. Voit merkitä pillerin otetuksi avaamatta sovellusta.",
   "creatingNewPillSheetFeatureAppealTitle": "Lisää pillerisivu automaattisesti",
   "creatingNewPillSheetFeatureAppealShortDescription": "Luo seuraava arkki automaattisesti",
   "creatingNewPillSheetFeatureAppealHeadline": "Luo seuraava pillerisivu automaattisesti",
