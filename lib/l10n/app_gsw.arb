@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Bim Wächsle vom Pilleblister het s Aktualisiere nöd klappt. ID: {id}",
   "failedToGetPillSheetHistory": "D Informatione zum Iinahm-Verlauf händ nöd chöne glade werde. {error}",
   "cancelTaking": "Iitreiti Pille-Iinahm rückgängig mache",
-  "deletedDiaryCannotBeRestored": "Glöschti Tagebüecher chönd nöd widerhärgstellt wärde",
+  "deletedDiaryCannotBeRestored": "En glöschti Tagebuechufzeichnig chasch nümme zruggbringe",
   "editMenstruation": "Periode bearbeite",
   "changedPillNumber": "Pillennummere gänderet",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% günstiger als s normale Monatsabo",

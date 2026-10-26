@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "د ګولیو پاڼ د بدلولو پر مهال تازه کول ترسره نه شول. ID: {id}",
   "failedToGetPillSheetHistory": "د ګولۍ اخیستلو تاریخچې معلومات ترلاسه نه شول. {error}",
   "cancelTaking": "د ګولۍ د اخیستو ثبت لغوه کړئ",
-  "deletedDiaryCannotBeRestored": "ړنګ شوي ډایري بیرته راستنیدلی نشي",
+  "deletedDiaryCannotBeRestored": "د ورځني یادښت له ړنګولو وروسته یې بېرته ترلاسه کول امکان نه لري",
   "editMenstruation": "د میاشتنۍ دورې سمون",
   "changedPillNumber": "د ګولۍ شمېره بدلون",
   "offPercentForMonthlyPremiumPackage": "د عادي میاشتنۍ پیسو په پرتله {offPercent}٪ تخفیف",

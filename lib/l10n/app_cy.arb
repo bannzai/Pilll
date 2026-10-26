@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Methu diweddaru wrth newid y stribed pils. ID: {id}",
   "failedToGetPillSheetHistory": "Methu llwytho gwybodaeth hanes cymryd y bilsen. {error}",
   "cancelTaking": "Dadwneud cofnod cymryd y bilsen",
-  "deletedDiaryCannotBeRestored": "Ni ellir adfer dyddiaduron sydd wedi'u dileu",
+  "deletedDiaryCannotBeRestored": "Ni ellir adfer cofnod dyddiadur ar ôl ei ddileu",
   "editMenstruation": "Golygu cyfnod misglwyf",
   "changedPillNumber": "Newid Rhif y Bilsen",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% i ffwrdd o gymharu â'r pris misol arferol",

@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "पिल स्ट्रिप बदलते समय अपडेट नहीं हो सका। ID: {id}",
   "failedToGetPillSheetHistory": "सेवन इतिहास की जानकारी लोड नहीं हो सकी। {error}",
   "cancelTaking": "गोली लेने का रिकॉर्ड हटाएं",
-  "deletedDiaryCannotBeRestored": "हटाई गई डायरी को पुनर्प्राप्त नहीं किया जा सकता",
+  "deletedDiaryCannotBeRestored": "मिटाई गई डायरी प्रविष्टि वापस नहीं लाई जा सकती",
   "editMenstruation": "मासिक धर्म की अवधि संपादित करें",
   "changedPillNumber": "पिल नंबर परिवर्तन",
   "offPercentForMonthlyPremiumPackage": "सामान्य मासिक की तुलना में {offPercent}% छूट",

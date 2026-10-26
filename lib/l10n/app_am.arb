@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "ክኒን ሉህ ሲቀየር ማዘመን አልተቻለም። ID: {id}",
   "failedToGetPillSheetHistory": "የአወሳሰድ ታሪክ መረጃ ማግኘት አልተቻለም። {error}",
   "cancelTaking": "የክኒን መውሰድን ቀልብስ",
-  "deletedDiaryCannotBeRestored": "የተሰረዘው ዕለታዊ ማስታወሻ መመለስ አይቻልም",
+  "deletedDiaryCannotBeRestored": "የተሰረዘ የዕለት ማስታወሻ መዝገብ መመለስ አይቻልም",
   "editMenstruation": "የወር አበባ ጊዜን ማስተካከል",
   "changedPillNumber": "የክኒን ቁጥር ለውጥ",
   "offPercentForMonthlyPremiumPackage": "ከመደበኛ ወርሃዊ ክፍያ ጋር ሲወዳደር {offPercent}% ቅናሽ",

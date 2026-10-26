@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਬਦਲਦੇ ਸਮੇਂ ਅੱਪਡੇਟ ਨਹੀਂ ਹੋ ਸਕਿਆ। ID: {id}",
   "failedToGetPillSheetHistory": "ਸੇਵਨ ਇਤਿਹਾਸ ਦੀ ਜਾਣਕਾਰੀ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹੋ ਸਕੀ। {error}",
   "cancelTaking": "ਗੋਲੀ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਰੱਦ ਕਰੋ",
-  "deletedDiaryCannotBeRestored": "ਮਿਟਾਈ ਗਈ ਡਾਇਰੀ ਵਾਪਸ ਨਹੀਂ ਮਿਲ ਸਕਦੀ",
+  "deletedDiaryCannotBeRestored": "ਮਿਟਾਈ ਗਈ ਡਾਇਰੀ ਦੀ ਐਂਟਰੀ ਮੁੜ ਪ੍ਰਾਪਤ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ",
   "editMenstruation": "ਮਾਹਵਾਰੀ ਸੋਧੋ",
   "changedPillNumber": "ਪਿੱਲ ਨੰਬਰ ਬਦਲਾਅ",
   "offPercentForMonthlyPremiumPackage": "ਮਾਸਿਕ ਪਲਾਨ ਨਾਲੋਂ {offPercent}％ ਛੋਟ",

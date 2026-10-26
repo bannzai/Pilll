@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "更换药板时未能完成更新。ID：{id}",
   "failedToGetPillSheetHistory": "暂时无法获取服药历史信息。{error}",
   "cancelTaking": "撤销服药记录",
-  "deletedDiaryCannotBeRestored": "已删除的日记无法恢复",
+  "deletedDiaryCannotBeRestored": "删除的日记无法恢复",
   "editMenstruation": "编辑月经期间",
   "changedPillNumber": "药片编号更改",
   "offPercentForMonthlyPremiumPackage": "相比普通月费优惠{offPercent}％",

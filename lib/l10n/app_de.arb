@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Beim Wechsel des Pillenblisters konnte die Aktualisierung nicht abgeschlossen werden. ID: {id}",
   "failedToGetPillSheetHistory": "Informationen zum Einnahmeverlauf konnten nicht geladen werden. {error}",
   "cancelTaking": "Eingetragene Einnahme rückgängig machen",
-  "deletedDiaryCannotBeRestored": "Gelöschte Tagebucheinträge können nicht wiederhergestellt werden",
+  "deletedDiaryCannotBeRestored": "Ein gelöschter Tagebucheintrag kann nicht wiederhergestellt werden",
   "editMenstruation": "Periode bearbeiten",
   "changedPillNumber": "Pillennummer geändert",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% günstiger als das Monatsabo",

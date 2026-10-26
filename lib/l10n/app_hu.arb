@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "A tablettacsomag cseréjekor nem sikerült a frissítés. ID: {id}",
   "failedToGetPillSheetHistory": "Nem sikerült betölteni a szedési előzmények adatait. {error}",
   "cancelTaking": "Tabletta szedésének visszavonása",
-  "deletedDiaryCannotBeRestored": "A törölt napló nem állítható vissza",
+  "deletedDiaryCannotBeRestored": "A törölt naplóbejegyzés nem állítható vissza",
   "editMenstruation": "Menstruációs időszak szerkesztése",
   "changedPillNumber": "Tablettaszám módosítása",
   "offPercentForMonthlyPremiumPackage": "A normál havi díjhoz képest {offPercent}% kedvezmény",

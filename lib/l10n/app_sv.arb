@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Det gick inte att uppdatera när p-pillerkartan byttes. ID: {id}",
   "failedToGetPillSheetHistory": "Det gick inte att hämta information om intagshistorik. {error}",
   "cancelTaking": "Ångra registrerat pillerintag",
-  "deletedDiaryCannotBeRestored": "Raderade dagboksanteckningar kan inte återställas",
+  "deletedDiaryCannotBeRestored": "Ett raderat dagboksinlägg kan inte återställas",
   "editMenstruation": "Redigera menstruationsperiod",
   "changedPillNumber": "P-pillernummer ändrad",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% rabatt jämfört med månadspris",

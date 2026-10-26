@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "อัปเดตข้อมูลขณะเปลี่ยนแผงยาไม่สำเร็จค่ะ ID: {id}",
   "failedToGetPillSheetHistory": "ไม่สามารถโหลดข้อมูลประวัติการทานยาได้ค่ะ {error}",
   "cancelTaking": "ยกเลิกบันทึกการทานยา",
-  "deletedDiaryCannotBeRestored": "บันทึกที่ลบแล้วจะไม่สามารถกู้คืนได้",
+  "deletedDiaryCannotBeRestored": "บันทึกประจำวันที่ลบแล้วไม่สามารถกู้คืนได้ค่ะ",
   "editMenstruation": "แก้ไขช่วงประจำเดือน",
   "changedPillNumber": "เปลี่ยนหมายเลขยาคุม",
   "offPercentForMonthlyPremiumPackage": "ลด {offPercent}% จากแพ็กเกจรายเดือน",

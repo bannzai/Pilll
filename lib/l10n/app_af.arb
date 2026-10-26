@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Kon nie opdateer toe die pilstrokie vervang is nie. ID: {id}",
   "failedToGetPillSheetHistory": "Kon nie die innamegeskiedenis laai nie. {error}",
   "cancelTaking": "Maak inname ongedaan",
-  "deletedDiaryCannotBeRestored": "Verwyderde dagboekinskrywings kan nie herstel word nie",
+  "deletedDiaryCannotBeRestored": "’n Dagboekinskrywing wat jy uitvee, kan nie herstel word nie",
   "editMenstruation": "Wysig menstruasieperiode",
   "changedPillNumber": "Pilnommer wysiging",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% afslag in vergelyking met die gewone maandelikse plan",

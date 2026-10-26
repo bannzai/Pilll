@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Ezin izan da eguneratu pilula-blister aldatzean. ID: {id}",
   "failedToGetPillSheetHistory": "Ezin izan da hartze-historia informazioa kargatu. {error}",
   "cancelTaking": "Pilularen hartzea desegin",
-  "deletedDiaryCannotBeRestored": "Ezabatutako egunkaria ezin da berreskuratu",
+  "deletedDiaryCannotBeRestored": "Ezabatutako egunkariko sarrera ezin da berreskuratu",
   "editMenstruation": "Hilekoaren aldia editatu",
   "changedPillNumber": "Pilula zenbakia aldatu",
   "offPercentForMonthlyPremiumPackage": "Hilabeteko prezioarekin alderatuta %{offPercent} deskontua",

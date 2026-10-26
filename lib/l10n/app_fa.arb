@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "هنگام تعویض ورق قرص، به‌روزرسانی انجام نشد. شناسه: {id}",
   "failedToGetPillSheetHistory": "دریافت اطلاعات تاریخچه مصرف ممکن نشد. {error}",
   "cancelTaking": "لغو ثبت مصرف قرص",
-  "deletedDiaryCannotBeRestored": "یادداشت حذف شده قابل بازیابی نیست",
+  "deletedDiaryCannotBeRestored": "یادداشت روزانه پس از حذف قابل بازیابی نیست",
   "editMenstruation": "ویرایش دوره قاعدگی",
   "changedPillNumber": "تغییر شماره قرص",
   "offPercentForMonthlyPremiumPackage": "{offPercent}٪ تخفیف نسبت به پلان ماهانه معمولی",

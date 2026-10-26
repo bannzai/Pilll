@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Hindi na-update habang pinapalitan ang pakete ng pildoras. ID: {id}",
   "failedToGetPillSheetHistory": "Hindi makuha ang impormasyon sa kasaysayan ng pag-inom ng pill. {error}",
   "cancelTaking": "Bawiin ang tala ng pag-inom ng pildoras",
-  "deletedDiaryCannotBeRestored": "Hindi na maibabalik ang mga binurang diary",
+  "deletedDiaryCannotBeRestored": "Hindi na maibabalik ang naburang tala sa talaarawan",
   "editMenstruation": "I-edit ang Panahon ng Regla",
   "changedPillNumber": "Pagbabago ng Numero ng Pill",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% OFF kumpara sa regular na monthly",

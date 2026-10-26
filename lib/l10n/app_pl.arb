@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Nie udało się zaktualizować danych podczas wymiany blistu. ID: {id}",
   "failedToGetPillSheetHistory": "Nie udało się pobrać informacji z historii przyjmowania tabletek. {error}",
   "cancelTaking": "Cofnij zapis przyjęcia tabletki",
-  "deletedDiaryCannotBeRestored": "Usuniętego pamiętnika nie można przywrócić",
+  "deletedDiaryCannotBeRestored": "Usuniętego wpisu w dzienniku nie można przywrócić",
   "editMenstruation": "Edytuj okres",
   "changedPillNumber": "Zmiana numeru pigułki",
   "offPercentForMonthlyPremiumPackage": "O {offPercent}% taniej niż miesięczny plan",

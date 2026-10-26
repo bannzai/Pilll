@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "հաբերի բլիստեր փոխարինելիս թարմացումը չհաջողվեց։ ID: {id}",
   "failedToGetPillSheetHistory": "Չհաջողվեց ստանալ ընդունման պատմություն բաժնի տվյալները։ {error}",
   "cancelTaking": "Չեղարկել հաբի ընդունման գրառումը",
-  "deletedDiaryCannotBeRestored": "Ջնջված օրագիրը վերականգնել հնարավոր չէ",
+  "deletedDiaryCannotBeRestored": "Ջնջված օրագրային գրառումը հնարավոր չէ վերականգնել",
   "editMenstruation": "Մենստրուացիայի ժամանակաշրջանի խմբագրում",
   "changedPillNumber": "Հապի համարի փոփոխում",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% զեղչ կանոնավոր ամսական վճարման համեմատ",

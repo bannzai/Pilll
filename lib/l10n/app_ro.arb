@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Actualizarea la înlocuirea blisterului nu a reușit. ID: {id}",
   "failedToGetPillSheetHistory": "Nu s-au putut încărca informațiile din istoricul administrării pilulei. {error}",
   "cancelTaking": "Anulează înregistrarea pilulei",
-  "deletedDiaryCannotBeRestored": "Jurnalul șters nu poate fi restaurat",
+  "deletedDiaryCannotBeRestored": "O însemnare ștearsă din jurnal nu poate fi recuperată",
   "editMenstruation": "Editează perioada menstruală",
   "changedPillNumber": "Modificare număr pilulă",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% reducere față de abonamentul lunar",

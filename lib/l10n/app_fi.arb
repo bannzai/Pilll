@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Pilleriliuskan vaihdon yhteydessä päivittäminen ei onnistunut. ID: {id}",
   "failedToGetPillSheetHistory": "Pillerihistoriaa koskevia tietoja ei voitu ladata. {error}",
   "cancelTaking": "Kumoa pillerin ottomerkintä",
-  "deletedDiaryCannotBeRestored": "Poistettuja päiväkirjamerkintöjä ei voi palauttaa",
+  "deletedDiaryCannotBeRestored": "Poistettua päiväkirjamerkintää ei voi palauttaa",
   "editMenstruation": "Muokkaa kuukautisia",
   "changedPillNumber": "Pillerinumeron muutos",
   "offPercentForMonthlyPremiumPackage": "{offPercent}％ OFF tavallisesta kuukausimaksusta",

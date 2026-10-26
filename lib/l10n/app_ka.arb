@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "აბების ბლისტერის შეცვლისას განახლება ვერ მოხერხდა. ID: {id}",
   "failedToGetPillSheetHistory": "მიღების ისტორიის მონაცემების ჩატვირთვა ვერ მოხერხდა. {error}",
   "cancelTaking": "აბის მიღების ჩანაწერის გაუქმება",
-  "deletedDiaryCannotBeRestored": "წაშლილი დღიური ვერ აღდგება",
+  "deletedDiaryCannotBeRestored": "წაშლილი დღიურის ჩანაწერის აღდგენა შეუძლებელია",
   "editMenstruation": "მენსტრუაციის პერიოდის რედაქტირება",
   "changedPillNumber": "ტაბლეტის ნომრის ცვლილება",
   "offPercentForMonthlyPremiumPackage": "ყოველთვიურ გეგმასთან შედარებით {offPercent}% ფასდაკლება",

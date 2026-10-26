@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Ekki tókst að uppfæra við skipti á pilluspjaldi. ID: {id}",
   "failedToGetPillSheetHistory": "Ekki tókst að sækja upplýsingar um inntökuyfirlit. {error}",
   "cancelTaking": "Afturkalla skráða inntöku pillu",
-  "deletedDiaryCannotBeRestored": "Eydda dagbók er ekki hægt að endurheimta",
+  "deletedDiaryCannotBeRestored": "Ekki er hægt að endurheimta dagbókarfærslu eftir að henni hefur verið eytt",
   "editMenstruation": "Breyta tíðarblæðingu",
   "changedPillNumber": "Píllunúmer breytt",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% afsláttur af venjulegu mánaðargjaldi",

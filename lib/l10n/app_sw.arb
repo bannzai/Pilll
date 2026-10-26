@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Imeshindikana kusasisha wakati wa kubadilisha pakiti ya vidonge. ID: {id}",
   "failedToGetPillSheetHistory": "Imeshindikana kupata taarifa za historia ya kumeza vidonge. {error}",
   "cancelTaking": "Tafadhali futa rekodi ya kumeza kidonge",
-  "deletedDiaryCannotBeRestored": "Kumbuka zilizofutwa haziwezi kurejeshwa",
+  "deletedDiaryCannotBeRestored": "Ingizo la shajara lililofutwa haliwezi kurejeshwa",
   "editMenstruation": "Hariri kipindi cha hedhi",
   "changedPillNumber": "Mabadiliko ya Namba ya Kidonge",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% punguzo kutoka bei ya kila mwezi ya kawaida",

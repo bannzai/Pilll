@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Kunne ikke oppdatere ved bytte av pillebrett. ID: {id}",
   "failedToGetPillSheetHistory": "Kunne ikke hente informasjon om inntakshistorikk. {error}",
   "cancelTaking": "Angre registrert p-pille",
-  "deletedDiaryCannotBeRestored": "Slettede dagbokinnlegg kan ikke gjenopprettes",
+  "deletedDiaryCannotBeRestored": "Et slettet dagboknotat kan ikke gjenopprettes",
   "editMenstruation": "Rediger menstruasjonsperiode",
   "changedPillNumber": "Endret pillenummer",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% rabatt sammenlignet med månedspris",

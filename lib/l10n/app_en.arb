@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Couldn't update when replacing the pill pack. ID: {id}",
   "failedToGetPillSheetHistory": "Couldn’t load pill history information. {error}",
   "cancelTaking": "Undo pill taken",
-  "deletedDiaryCannotBeRestored": "Deleted diary entries cannot be restored",
+  "deletedDiaryCannotBeRestored": "Deleted diary entries can’t be restored",
   "editMenstruation": "Edit Period",
   "changedPillNumber": "Pill Number Change",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% OFF compared to monthly plan",

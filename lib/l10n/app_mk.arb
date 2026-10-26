@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Ажурирањето при замена на блистер не успеа. ID: {id}",
   "failedToGetPillSheetHistory": "Не успеавме да ги вчитаме податоците за Историја на земање. {error}",
   "cancelTaking": "Поништување запис за земање таблета",
-  "deletedDiaryCannotBeRestored": "Избришаните дневници не можат да се вратат",
+  "deletedDiaryCannotBeRestored": "Избришаниот запис во дневникот не може да се врати",
   "editMenstruation": "Уредување на менструалниот период",
   "changedPillNumber": "Промена на број на пилула",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% попуст споредено со месечниот план",

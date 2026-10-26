@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Blister değiştirilirken güncelleme yapılamadı. ID: {id}",
   "failedToGetPillSheetHistory": "Kullanım geçmişi bilgileri yüklenemedi. {error}",
   "cancelTaking": "Hap alım kaydını geri alın",
-  "deletedDiaryCannotBeRestored": "Silinen günlük geri getirilemez",
+  "deletedDiaryCannotBeRestored": "Silinen günlük kaydı geri yüklenemez",
   "editMenstruation": "Adet dönemini düzenle",
   "changedPillNumber": "Hap Numarası Değişikliği",
   "offPercentForMonthlyPremiumPackage": "Normal aylık plana kıyasla %{offPercent} İNDİRİM",

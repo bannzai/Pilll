@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Pillilehe vahetamisel ei õnnestunud andmeid uuendada. ID: {id}",
   "failedToGetPillSheetHistory": "Võtmislogi andmeid ei õnnestunud laadida. {error}",
   "cancelTaking": "Tühista pilli võtmise kirje",
-  "deletedDiaryCannotBeRestored": "Kustutatud päevikut ei saa taastada",
+  "deletedDiaryCannotBeRestored": "Kustutatud päevikukannet ei saa taastada",
   "editMenstruation": "Redigeeri menstruatsiooniperioodi",
   "changedPillNumber": "Pilli numbri muutmine",
   "offPercentForMonthlyPremiumPackage": "Kuumaksuga võrreldes {offPercent}% soodsam",

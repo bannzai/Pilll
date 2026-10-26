@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Mainot tablešu blister, neizdevās atjaunināt datus. ID: {id}",
   "failedToGetPillSheetHistory": "Neizdevās ielādēt informāciju par lietošanas vēsturi. {error}",
   "cancelTaking": "Atcelt tabletes lietošanas ierakstu",
-  "deletedDiaryCannotBeRestored": "Dzēsto dienasgrāmatu nevar atjaunot",
+  "deletedDiaryCannotBeRestored": "Dzēstu dienasgrāmatas ierakstu nevar atjaunot",
   "editMenstruation": "Rediģēt menstruācijas periodu",
   "changedPillNumber": "Tablešu numura maiņa",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% ATLAIDE salīdzinājumā ar mēneša plānu",

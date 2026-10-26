@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "No s'ha pogut actualitzar en substituir el blíster. ID: {id}",
   "failedToGetPillSheetHistory": "No s’ha pogut carregar la informació de l’historial de preses. {error}",
   "cancelTaking": "Desfer el registre de la píndola",
-  "deletedDiaryCannotBeRestored": "El diari eliminat no es pot recuperar",
+  "deletedDiaryCannotBeRestored": "No es pot recuperar una entrada del diari un cop eliminada",
   "editMenstruation": "Editar període menstrual",
   "changedPillNumber": "Canvi de número de píndola",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% de descompte respecte al preu mensual",

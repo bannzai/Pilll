@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "həb blister dəyişdirilərkən yeniləmək mümkün olmadı. ID: {id}",
   "failedToGetPillSheetHistory": "Qəbul tarixçəsi haqqında məlumatı əldə etmək mümkün olmadı. {error}",
   "cancelTaking": "Həb qəbulunu ləğv edin",
-  "deletedDiaryCannotBeRestored": "Silinmiş gündəlik qeydləri bərpa edilə bilməz",
+  "deletedDiaryCannotBeRestored": "Sildiyiniz gündəlik qeydini bərpa etmək mümkün deyil",
   "editMenstruation": "Menstruasiya dövrünü redaktə et",
   "changedPillNumber": "Həb nömrəsi dəyişikliyi",
   "offPercentForMonthlyPremiumPackage": "Adi aylıq planla müqayisədə {offPercent}% endirim",

@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "ବଟିକା ସିଟ ବଦଳାଇବା ସମୟରେ ଅପଡେଟ୍ ହୋଇପାରିଲା ନାହିଁ। ID: {id}",
   "failedToGetPillSheetHistory": "ସେବନ ଇତିହାସର ତଥ୍ୟ ଆଣି ହେଲା ନାହିଁ। {error}",
   "cancelTaking": "ବଟିକା ଖାଇଥିବା ରେକର୍ଡ ବାତିଲ କରନ୍ତୁ",
-  "deletedDiaryCannotBeRestored": "ମିଟାଇଥିବା ଡାଏରି ଆଉ ଫେରାଇ ଆଣି ହେବ ନାହିଁ",
+  "deletedDiaryCannotBeRestored": "ଡିଲିଟ୍ ହୋଇଥିବା ଡାଏରୀ ଟିପ୍ପଣୀକୁ ପୁଣି ଫେରାଇ ଆଣିହେବ ନାହିଁ",
   "editMenstruation": "ମାସିକ ଧର୍ମ ସମ୍ପାଦନା",
   "changedPillNumber": "ପିଲ୍ ସଂଖ୍ୟା ପରିବର୍ତ୍ତନ",
   "offPercentForMonthlyPremiumPackage": "ସାଧାରଣ ମାସିକ ଠାରୁ {offPercent}% ଛାଡ୍",

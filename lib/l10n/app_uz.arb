@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "tabletka blister almashtirilayotganda yangilab bo‘lmadi. ID: {id}",
   "failedToGetPillSheetHistory": "Qabul qilish tarixi maʼlumotlarini yuklab boʻlmadi. {error}",
   "cancelTaking": "Tabletka qabul qilish qaydini bekor qiling",
-  "deletedDiaryCannotBeRestored": "O'chirilgan kundalikni qayta tiklab bo'lmaydi",
+  "deletedDiaryCannotBeRestored": "Oʻchirilgan kundalik yozuvini qayta tiklab boʻlmaydi",
   "editMenstruation": "Hayiz davrini tahrirlash",
   "changedPillNumber": "Tabletka raqamini o'zgartirish",
   "offPercentForMonthlyPremiumPackage": "Oddiy oylik rejaga nisbatan {offPercent}% chegirma",

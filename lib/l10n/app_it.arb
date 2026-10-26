@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Impossibile aggiornare durante la sostituzione del blister. ID: {id}",
   "failedToGetPillSheetHistory": "Impossibile caricare le informazioni dello storico delle assunzioni. {error}",
   "cancelTaking": "Annulla l'assunzione registrata",
-  "deletedDiaryCannotBeRestored": "Il diario eliminato non può essere recuperato",
+  "deletedDiaryCannotBeRestored": "Una voce del diario eliminata non può essere ripristinata",
   "editMenstruation": "Modifica periodo mestruale",
   "changedPillNumber": "Modifica numero pillola",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% di sconto rispetto al piano mensile",

@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Não foi possível atualizar ao trocar a cartela. ID: {id}",
   "failedToGetPillSheetHistory": "Não foi possível carregar as informações do histórico de uso. {error}",
   "cancelTaking": "Desfazer registro da pílula",
-  "deletedDiaryCannotBeRestored": "O diário excluído não pode ser restaurado",
+  "deletedDiaryCannotBeRestored": "Uma anotação do diário excluída não pode ser recuperada",
   "editMenstruation": "Editar período menstrual",
   "changedPillNumber": "Alteração do número da pílula",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% de desconto comparado ao plano mensal",

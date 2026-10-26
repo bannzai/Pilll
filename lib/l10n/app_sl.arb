@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Pri zamenjavi ploščice podatkov ni bilo mogoče posodobiti. ID: {id}",
   "failedToGetPillSheetHistory": "Podatkov o zgodovini jemanja ni bilo mogoče naložiti. {error}",
   "cancelTaking": "Prekličite zapis o zaužitju tablete",
-  "deletedDiaryCannotBeRestored": "Izbrisanega dnevnika ni mogoče obnoviti",
+  "deletedDiaryCannotBeRestored": "Izbrisanega dnevniškega zapisa ni mogoče obnoviti",
   "editMenstruation": "Uredi menstruacijo",
   "changedPillNumber": "Sprememba številke tabletke",
   "offPercentForMonthlyPremiumPackage": "{offPercent} % popust v primerjavi z običajno mesečno naročnino",

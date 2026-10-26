@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "No se pudo actualizar al cambiar el blíster. ID: {id}",
   "failedToGetPillSheetHistory": "No se pudo cargar la información del historial de tomas. {error}",
   "cancelTaking": "Deshacer registro de la píldora",
-  "deletedDiaryCannotBeRestored": "Los diarios eliminados no se pueden recuperar",
+  "deletedDiaryCannotBeRestored": "Una entrada del diario eliminada no se puede recuperar",
   "editMenstruation": "Editar período menstrual",
   "changedPillNumber": "Cambio de número de píldora",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% de descuento comparado con el plan mensual regular",

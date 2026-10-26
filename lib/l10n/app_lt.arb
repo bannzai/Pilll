@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Keičiant tablečių plokštel nepavyko atnaujinti duomenų. ID: {id}",
   "failedToGetPillSheetHistory": "Nepavyko įkelti vartojimo istorijos informacijos. {error}",
   "cancelTaking": "Atšaukti tabletės vartojimo įrašą",
-  "deletedDiaryCannotBeRestored": "Ištrinta dienoraštis negali būti atkurtas",
+  "deletedDiaryCannotBeRestored": "Ištrinto dienoraščio įrašo atkurti nepavyks",
   "editMenstruation": "Redaguoti menstruacijų laikotarpį",
   "changedPillNumber": "Piliulės numerio pakeitimas",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% nuolaida nuo mėnesinio mokesčio",

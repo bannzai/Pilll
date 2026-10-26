@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಬದಲಾಯಿಸುವಾಗ ನವೀಕರಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ID: {id}",
   "failedToGetPillSheetHistory": "ಸೇವನೆಯ ಇತಿಹಾಸದ ಮಾಹಿತಿಯನ್ನು ಪಡೆಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. {error}",
   "cancelTaking": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಂಡ ದಾಖಲೆಯನ್ನು ರದ್ದುಮಾಡಿ",
-  "deletedDiaryCannotBeRestored": "ಅಳಿಸಿದ ಡೈರಿಯನ್ನು ಮರುಸ್ಥಾಪಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ",
+  "deletedDiaryCannotBeRestored": "ಅಳಿಸಿದ ದಿನಚರಿ ದಾಖಲೆಯನ್ನು ಮತ್ತೆ ಪಡೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ",
   "editMenstruation": "ಮುಟ್ಟಿನ ಅವಧಿಯನ್ನು ಸಂಪಾದಿಸಿ",
   "changedPillNumber": "ಮಾತ್ರೆ ಸಂಖ್ಯೆ ಬದಲಾವಣೆ",
   "offPercentForMonthlyPremiumPackage": "ಸಾಮಾನ್ಯ ಮಾಸಿಕ ಯೋಜನೆಗೆ ಹೋಲಿಸಿದರೆ {offPercent}% ರಿಯಾಯಿತಿ",

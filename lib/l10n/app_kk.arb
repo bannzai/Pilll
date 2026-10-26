@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "таблетка блистер ауыстырылғанда жаңарту мүмкін болмады. ID: {id}",
   "failedToGetPillSheetHistory": "Қабылдау тарихы туралы ақпаратты алу мүмкін болмады. {error}",
   "cancelTaking": "Таблетканы қабылдау жазбасын болдырмаңыз",
-  "deletedDiaryCannotBeRestored": "Жойылған күнделік қалпына келтірілмейді",
+  "deletedDiaryCannotBeRestored": "Жойылған күнделік жазбасын қалпына келтіру мүмкін емес",
   "editMenstruation": "Етеккір кезеңін өңдеу",
   "changedPillNumber": "Дәрі нөмірін өзгерту",
   "offPercentForMonthlyPremiumPackage": "Әдеттегі айлық жоспармен салыстырғанда {offPercent}% жеңілдік",

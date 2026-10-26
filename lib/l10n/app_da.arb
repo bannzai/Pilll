@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Kunne ikke opdatere ved udskiftning af pillekort. ID: {id}",
   "failedToGetPillSheetHistory": "Kunne ikke hente oplysninger om pillehistorik. {error}",
   "cancelTaking": "Fortryd registreret p-pille",
-  "deletedDiaryCannotBeRestored": "Slettede dagbogsindlæg kan ikke gendannes",
+  "deletedDiaryCannotBeRestored": "Et slettet dagbogsnotat kan ikke gendannes",
   "editMenstruation": "Rediger menstruationsperiode",
   "changedPillNumber": "Pillenummer ændret",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% rabat sammenlignet med månedlig pris",

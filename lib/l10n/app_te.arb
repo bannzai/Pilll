@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "మాత్రల స్ట్రిప్ మార్చేటప్పుడు అప్‌డేట్ చేయడం సాధ్యం కాలేదు. ID: {id}",
   "failedToGetPillSheetHistory": "మాత్రల సేవన చరిత్ర సమాచారాన్ని పొందలేకపోయాము. {error}",
   "cancelTaking": "మాత్ర తీసుకున్న రికార్డును రద్దు చేయండి",
-  "deletedDiaryCannotBeRestored": "తొలగించిన డైరీని తిరిగి పొందలేరు",
+  "deletedDiaryCannotBeRestored": "తొలగించిన డైరీ నమోదును తిరిగి పొందలేరు",
   "editMenstruation": "రుతుకాల కాలం సవరించు",
   "changedPillNumber": "మాత్ర సంఖ్య మార్పు",
   "offPercentForMonthlyPremiumPackage": "నెలవారీ ప్లాన్‌తో పోలిస్తే {offPercent}% తగ్గింపు",

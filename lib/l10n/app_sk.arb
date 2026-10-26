@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "Pri výmene blistu sa nepodarilo aktualizovať údaje. ID: {id}",
   "failedToGetPillSheetHistory": "Nepodarilo sa načítať informácie z histórie užívania. {error}",
   "cancelTaking": "Zrušiť záznam o užití tabletky",
-  "deletedDiaryCannotBeRestored": "Vymazané záznamy z denníka sa nedajú obnoviť",
+  "deletedDiaryCannotBeRestored": "Vymazaný záznam v denníku nie je možné obnoviť",
   "editMenstruation": "Upraviť menštruáciu",
   "changedPillNumber": "Zmena číslovania piluliek",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% zľava oproti mesačnému plánu",

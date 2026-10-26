@@ -417,7 +417,7 @@
   "cannotUpdateToReplacePillSheet": "알약 시트를 교체하는 동안 업데이트하지 못했어요. ID: {id}",
   "failedToGetPillSheetHistory": "복용 내역 정보를 불러오지 못했어요. {error}",
   "cancelTaking": "복용 기록 취소",
-  "deletedDiaryCannotBeRestored": "삭제된 일기는 복구할 수 없습니다",
+  "deletedDiaryCannotBeRestored": "삭제한 일기는 복원할 수 없어요",
   "editMenstruation": "생리 기간 수정",
   "changedPillNumber": "알약 번호 변경",
   "offPercentForMonthlyPremiumPackage": "정기 월 요금 대비 {offPercent}% 할인",
