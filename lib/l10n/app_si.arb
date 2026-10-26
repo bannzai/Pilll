@@ -354,7 +354,7 @@
   "connectionError": "ඔබගේ අන්තර්ජාල සම්බන්ධතාවය අස්ථිර බව පෙනේ. කරුණාකර කෙටි වේලාවකට පසු නැවත උත්සාහ කරන්න",
   "unknownErrorAndRetryAfter": "දෝෂයක් ඇති වුණා. කරුණාකර ටික වේලාවකට පසු නැවත උත්සාහ කරන්න",
   "errorOccurred": "දෝෂයක් ඇති වුණා",
-  "unknownError": "නොදන්නා දෝෂයක් සිදුවිය",
+  "unknownError": "හඳුනා නොගත් දෝෂයක් ඇති වුණා",
   "unexpectedErrorOccurred": "අනපේක්ෂිත දෝෂයක් සිදු වුණා",
   "pressAndHoldNotificationToRecordPillTaking": "දැනුම්දීම දිගුව ඔබා ඖෂධ ගැනීමේ වාර්තාව සෑදිය හැකිය",
   "letsTryIt": "අත්හදා බලන්න",

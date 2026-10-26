@@ -354,7 +354,7 @@
   "connectionError": "ఇంటర్నెట్ కనెక్షన్ అస్థిరంగా ఉంది. కొంత సమయం తర్వాత మళ్లీ ప్రయత్నించండి",
   "unknownErrorAndRetryAfter": "లోపం సంభవించింది. దయచేసి కొంతసేపటి తర్వాత మళ్లీ ప్రయత్నించండి",
   "errorOccurred": "లోపం సంభవించింది",
-  "unknownError": "తెలియని లోపం జరిగింది",
+  "unknownError": "తెలియని లోపం సంభవించింది",
   "unexpectedErrorOccurred": "అనుకోని లోపం జరిగింది",
   "pressAndHoldNotificationToRecordPillTaking": "నోటిఫికేషన్‌ను లాంగ్ ప్రెస్ చేస్తే మందు రికార్డు చేయవచ్చు",
   "letsTryIt": "తప్పకుండా ప్రయత్నించండి",

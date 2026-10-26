@@ -354,7 +354,7 @@
   "connectionError": "ਨੈੱਟਵਰਕ ਕਨੈਕਸ਼ਨ ਅਸਥਿਰ ਲਗ ਰਿਹਾ ਹੈ। ਕੁਝ ਦੇਰ ਬਾਅਦ ਫਿਰ ਤੋਂ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
   "unknownErrorAndRetryAfter": "ਕੁਝ ਗੜਬੜ ਹੋ ਗਈ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਕੁਝ ਸਮੇਂ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
   "errorOccurred": "ਕੋਈ ਗੜਬੜ ਹੋਈ ਹੈ",
-  "unknownError": "ਅਣਜਾਣ ਗਲਤੀ ਹੋਈ ਹੈ",
+  "unknownError": "ਇੱਕ ਅਣਜਾਣ ਗੜਬੜ ਹੋਈ ਹੈ",
   "unexpectedErrorOccurred": "ਇੱਕ ਅਚਾਨਕ ਗਲਤੀ ਹੋਈ ਹੈ",
   "pressAndHoldNotificationToRecordPillTaking": "ਨੋਟੀਫਿਕੇਸ਼ਨ ਨੂੰ ਲੰਬੇ ਸਮੇਂ ਤੱਕ ਦਬਾਉਣ ਨਾਲ ਦਵਾਈ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਬਣਾਇਆ ਜਾ ਸਕਦਾ ਹੈ",
   "letsTryIt": "ਇਸ ਨੂੰ ਜ਼ਰੂਰ ਅਜ਼ਮਾਓ!",

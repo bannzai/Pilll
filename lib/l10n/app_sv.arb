@@ -354,7 +354,7 @@
   "connectionError": "Det verkar vara problem med nätverksanslutningen. Vänta en stund och försök igen.",
   "unknownErrorAndRetryAfter": "Ett fel uppstod. Försök igen senare",
   "errorOccurred": "Ett fel uppstod",
-  "unknownError": "Ett okänt fel har inträffat",
+  "unknownError": "Ett okänt fel uppstod",
   "unexpectedErrorOccurred": "Ett oväntat fel uppstod",
   "pressAndHoldNotificationToRecordPillTaking": "Håll ned notisen för att registrera pillintag",
   "letsTryIt": "Pröva gärna!",

@@ -354,7 +354,7 @@
   "connectionError": "ନେଟୱାର୍କ ସଂଯୋଗ ଅସ୍ଥିର ଲାଗୁଛି। କିଛି ସମୟ ପରେ ପୁଣିଥରେ ଚେଷ୍ଟା କରନ୍ତୁ।",
   "unknownErrorAndRetryAfter": "କିଛି ତ୍ରୁଟି ଘଟିଛି। ଦୟାକରି କିଛି ସମୟ ପରେ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ",
   "errorOccurred": "ଏକ ତ୍ରୁଟି ଘଟିଛି",
-  "unknownError": "ଅଜଣା ତ୍ରୁଟି ଘଟିଛି",
+  "unknownError": "ଏକ ଅଜଣା ତ୍ରୁଟି ଘଟିଛି",
   "unexpectedErrorOccurred": "ଅପ୍ରତ୍ୟାଶିତ ସମସ୍ୟା ଘଟିଛି",
   "pressAndHoldNotificationToRecordPillTaking": "ନୋଟିଫିକେସନ୍‌କୁ ଦୀର୍ଘ ଦବାଇଲେ ସେବନ ରେକର୍ଡ କରିପାରିବେ",
   "letsTryIt": "ଏହାକୁ ଚେଷ୍ଟା କରି ଦେଖନ୍ତୁ",

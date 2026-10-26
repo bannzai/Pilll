@@ -354,7 +354,7 @@
   "connectionError": "Internet aloqasi beqaror ko'rinadi. Iltimos, biroz vaqt o'tgach qaytadan urinib ko'ring",
   "unknownErrorAndRetryAfter": "Xatolik yuz berdi. Iltimos, birozdan keyin qayta urinib koʻring",
   "errorOccurred": "Xatolik yuz berdi",
-  "unknownError": "Noma'lum xato yuz berdi",
+  "unknownError": "Nomaʼlum xatolik yuz berdi",
   "unexpectedErrorOccurred": "Kutilmagan xato yuz berdi",
   "pressAndHoldNotificationToRecordPillTaking": "Bildirishnomani uzoq bosib turib, dori qabul qilish yozuvini yaratish mumkin",
   "letsTryIt": "Albatta sinab ko'ring!",

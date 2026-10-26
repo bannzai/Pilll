@@ -354,7 +354,7 @@
   "connectionError": "Mae'r cysylltiad rhwydwaith yn ymddangos yn ansefydlog. Rhowch gynnig arall arni ar ôl ychydig o amser.",
   "unknownErrorAndRetryAfter": "Mae gwall wedi digwydd. Rhowch gynnig arall arni yn nes ymlaen, os gwelwch yn dda",
   "errorOccurred": "Mae gwall wedi digwydd",
-  "unknownError": "Mae gwall anhysbys wedi digwydd",
+  "unknownError": "Digwyddodd gwall anhysbys",
   "unexpectedErrorOccurred": "Mae gwall annisgwyl wedi digwydd",
   "pressAndHoldNotificationToRecordPillTaking": "Pwysiwch yn hir ar yr hysbysiad i gofnodi cymryd",
   "letsTryIt": "Rhowch gynnig arni!",

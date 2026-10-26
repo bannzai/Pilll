@@ -354,7 +354,7 @@
   "connectionError": "La connexió de xarxa sembla inestable. Si us plau, espereu una estona i torneu-ho a intentar.",
   "unknownErrorAndRetryAfter": "S’ha produït un error. Torna-ho a provar més tard",
   "errorOccurred": "S'ha produït un error",
-  "unknownError": "S'ha produït un error desconegut",
+  "unknownError": "S’ha produït un error desconegut",
   "unexpectedErrorOccurred": "S'ha produït un error inesperat",
   "pressAndHoldNotificationToRecordPillTaking": "Si manteniu premut la notificació, podreu registrar la presa.",
   "letsTryIt": "Proveu-ho!",

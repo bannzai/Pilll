@@ -354,7 +354,7 @@
   "connectionError": "การเชื่อมต่ออินเทอร์เน็ตไม่เสถียร กรุณารอสักครู่แล้วลองใหม่อีกครั้ง",
   "unknownErrorAndRetryAfter": "เกิดข้อผิดพลาดขึ้น โปรดลองอีกครั้งในภายหลังค่ะ",
   "errorOccurred": "เกิดข้อผิดพลาด",
-  "unknownError": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุ",
+  "unknownError": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุค่ะ",
   "unexpectedErrorOccurred": "เกิดข้อผิดพลาดที่ไม่คาดคิด",
   "pressAndHoldNotificationToRecordPillTaking": "กดค้างการแจ้งเตือนเพื่อบันทึกการทานยา",
   "letsTryIt": "ลองใช้ดูนะ",

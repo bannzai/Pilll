@@ -354,7 +354,7 @@
   "connectionError": "Dit lyk asof die netwerkverbinding onstabiel is. Probeer asseblief weer later.",
   "unknownErrorAndRetryAfter": "Daar was ’n fout. Probeer asseblief later weer",
   "errorOccurred": "Daar was 'n fout",
-  "unknownError": "'n Onbekende fout het voorgekom",
+  "unknownError": "Daar was ’n onbekende fout",
   "unexpectedErrorOccurred": "'n Onverwagse fout het voorgekom",
   "pressAndHoldNotificationToRecordPillTaking": "Hou die kennisgewing ingedruk om 'n inname rekord te skep",
   "letsTryIt": "Probeer dit gerus!",

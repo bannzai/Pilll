@@ -354,7 +354,7 @@
   "connectionError": "Parece que la conexión de red es inestable. Por favor, inténtalo de nuevo más tarde.",
   "unknownErrorAndRetryAfter": "Se produjo un error. Inténtalo de nuevo más tarde",
   "errorOccurred": "Se produjo un error",
-  "unknownError": "Ha ocurrido un error desconocido",
+  "unknownError": "Se produjo un error desconocido",
   "unexpectedErrorOccurred": "Ha ocurrido un error inesperado",
   "pressAndHoldNotificationToRecordPillTaking": "Mantén presionada la notificación para registrar la toma",
   "letsTryIt": "¡Pruébalo!",

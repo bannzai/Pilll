@@ -354,7 +354,7 @@
   "connectionError": "Tundub, et võrguühendus on ebastabiilne. Palun proovige mõne aja pärast uuesti.",
   "unknownErrorAndRetryAfter": "Tekkis viga. Proovi hiljem uuesti",
   "errorOccurred": "Tekkis viga",
-  "unknownError": "Esines teadmatu viga",
+  "unknownError": "Tekkis tundmatu viga",
   "unexpectedErrorOccurred": "Tekkis ootamatu viga",
   "pressAndHoldNotificationToRecordPillTaking": "Teavitust pikalt vajutades saab salvestada pillide võtmise",
   "letsTryIt": "Palun proovige seda!",

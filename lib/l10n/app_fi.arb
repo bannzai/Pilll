@@ -354,7 +354,7 @@
   "connectionError": "Verkkoyhteys vaikuttaa epävakaalta. Odota hetki ja yritä uudelleen.",
   "unknownErrorAndRetryAfter": "Tapahtui virhe. Yritä myöhemmin uudelleen",
   "errorOccurred": "Tapahtui virhe",
-  "unknownError": "Tuntematon virhe tapahtui",
+  "unknownError": "Tapahtui tuntematon virhe",
   "unexpectedErrorOccurred": "Odottamaton virhe tapahtui",
   "pressAndHoldNotificationToRecordPillTaking": "Ilmoitusta pitkään painamalla voit tallentaa ottamiskirjauksen",
   "letsTryIt": "Kokeile vain!",

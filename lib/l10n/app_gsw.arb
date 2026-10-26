@@ -354,7 +354,7 @@
   "connectionError": "D Netzwerkverbindig isch unstabil. Bitte warte churz und versuech's nomol.",
   "unknownErrorAndRetryAfter": "Es isch en Fähler passiert. Probier s bitte spöter nomal",
   "errorOccurred": "Es isch en Fähler passiert",
-  "unknownError": "En unbekannte Fähler isch uftrete",
+  "unknownError": "Es isch en unbekannte Fähler passiert",
   "unexpectedErrorOccurred": "En unerwartete Fähler isch ufträte",
   "pressAndHoldNotificationToRecordPillTaking": "Mäldig lang drücke zum d'Iinahm z'notiere",
   "letsTryIt": "Probiered's doch eifach uus!",

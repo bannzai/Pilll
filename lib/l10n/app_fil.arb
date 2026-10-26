@@ -354,7 +354,7 @@
   "connectionError": "Mukhang may problema sa koneksyon. Subukan ulit mamaya.",
   "unknownErrorAndRetryAfter": "Nagkaroon ng error. Pakisubukan po ulit mamaya",
   "errorOccurred": "Nagkaroon ng error",
-  "unknownError": "Nagkaroon ng hindi kilalang error",
+  "unknownError": "May naganap na hindi kilalang error",
   "unexpectedErrorOccurred": "Nagkaroon ng hindi inaasahang suliranin",
   "pressAndHoldNotificationToRecordPillTaking": "I-long press ang notification para makapagtala ng paginom ng gamot",
   "letsTryIt": "Subukan mo ito!",

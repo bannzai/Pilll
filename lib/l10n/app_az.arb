@@ -354,7 +354,7 @@
   "connectionError": "İnternet bağlantısı qeyri-sabit görünür. Bir müddət sonra yenidən cəhd edin.",
   "unknownErrorAndRetryAfter": "Xəta baş verdi. Zəhmət olmasa, bir az sonra yenidən cəhd edin",
   "errorOccurred": "Xəta baş verdi",
-  "unknownError": "Bilinməyən xəta baş verdi",
+  "unknownError": "Naməlum xəta baş verdi",
   "unexpectedErrorOccurred": "Gözlənilməz xəta baş verdi",
   "pressAndHoldNotificationToRecordPillTaking": "Bildirişə uzun bassanız, həb qəbulu qeydi yarada bilərsiniz",
   "letsTryIt": "Mütləq sınayın!",

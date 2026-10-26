@@ -354,7 +354,7 @@
   "connectionError": "Votre connexion semble instable. Veuillez réessayer plus tard.",
   "unknownErrorAndRetryAfter": "Une erreur s’est produite. Veuillez réessayer plus tard",
   "errorOccurred": "Une erreur s'est produite",
-  "unknownError": "Une erreur inconnue s'est produite",
+  "unknownError": "Une erreur inconnue s’est produite",
   "unexpectedErrorOccurred": "Quelque chose s'est mal passé",
   "pressAndHoldNotificationToRecordPillTaking": "Appuyez longuement sur la notification pour enregistrer la prise de pilules",
   "letsTryIt": "Essayez-le !",

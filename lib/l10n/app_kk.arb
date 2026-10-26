@@ -354,7 +354,7 @@
   "connectionError": "Интернет байланысы тұрақсыз. Кейінірек қайталап көріңіз",
   "unknownErrorAndRetryAfter": "Қате орын алды. Сәлден кейін қайта көріңіз",
   "errorOccurred": "Қате орын алды",
-  "unknownError": "Белгісіз қате пайда болды",
+  "unknownError": "Белгісіз қате орын алды",
   "unexpectedErrorOccurred": "Күтпеген қате орын алды",
   "pressAndHoldNotificationToRecordPillTaking": "Хабарландыруды ұзақ бассаңыз, таблетка қабылдау жазбасын жасауға болады",
   "letsTryIt": "Міндетті түрде сынап көріңіз",

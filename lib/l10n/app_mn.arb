@@ -354,7 +354,7 @@
   "connectionError": "Интернет холболт тогтвооргүй байна. Түр хүлээгээд дахин оролдоно уу.",
   "unknownErrorAndRetryAfter": "Алдаа гарлаа. Та түр хүлээгээд дахин оролдоно уу",
   "errorOccurred": "Алдаа гарлаа",
-  "unknownError": "Тодорхойгүй алдаа гарлаа",
+  "unknownError": "Үл мэдэгдэх алдаа гарлаа",
   "unexpectedErrorOccurred": "Санамсаргүй алдаа гарлаа",
   "pressAndHoldNotificationToRecordPillTaking": "Мэдэгдлийг удаан дарж эм уусан бүртгэл хийж болно",
   "letsTryIt": "Заавал туршиж үзээрэй",

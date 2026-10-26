@@ -354,7 +354,7 @@
   "connectionError": "ქსელური კავშირი არასტაბილურია. გთხოვთ, დაელოდოთ და სცადეთ ხელახლა.",
   "unknownErrorAndRetryAfter": "შეცდომა მოხდა. გთხოვთ, მოგვიანებით კვლავ სცადოთ",
   "errorOccurred": "მოხდა შეცდომა",
-  "unknownError": "უცნობი შეცდომა მოხდა",
+  "unknownError": "დაფიქსირდა უცნობი შეცდომა",
   "unexpectedErrorOccurred": "მოულოდნელი შეცდომა მოხდა",
   "pressAndHoldNotificationToRecordPillTaking": "შეტყობინების ხანგრძლივი დაჭერით შეგიძლიათ მიღების ჩანაწერის შექმნა",
   "letsTryIt": "აუცილებლად სცადეთ",

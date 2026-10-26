@@ -354,7 +354,7 @@
   "connectionError": "नेटवर्क कनेक्शन अस्थिर लग रहा है। कृपया कुछ समय बाद पुनः प्रयास करें।",
   "unknownErrorAndRetryAfter": "कुछ गड़बड़ हुई है। कृपया थोड़ी देर बाद फिर कोशिश करें",
   "errorOccurred": "कोई गड़बड़ी हुई है",
-  "unknownError": "अज्ञात त्रुटि हुई है",
+  "unknownError": "एक अज्ञात त्रुटि हुई है",
   "unexpectedErrorOccurred": "अप्रत्याशित त्रुटि हुई है",
   "pressAndHoldNotificationToRecordPillTaking": "सूचना को लंबे समय तक दबाकर सेवन रिकॉर्ड कर सकते हैं",
   "letsTryIt": "ज़रूर आज़माएं",

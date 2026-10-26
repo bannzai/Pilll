@@ -354,7 +354,7 @@
   "connectionError": "د انټرنېټ اړیکه بې‌ثباته ښکاري. مهرباني وکړئ لږ وروسته بیا هڅه وکړئ.",
   "unknownErrorAndRetryAfter": "یوه تېروتنه رامنځته شوه. مهرباني وکړئ لږ وروسته بیا هڅه وکړئ",
   "errorOccurred": "یوه تېروتنه رامنځته شوه",
-  "unknownError": "نامعلوم خرابي رامنځته شو",
+  "unknownError": "یوه نامعلومه تېروتنه رامنځته شوه",
   "unexpectedErrorOccurred": "یو غیر متوقع خطا پیښ شوې",
   "pressAndHoldNotificationToRecordPillTaking": "د خبرتیاوو په اوږد فشار سره د ګولۍ اخیستلو ثبت کولی شئ",
   "letsTryIt": "دا حتماً وآزمویئ",
