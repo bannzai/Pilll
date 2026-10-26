@@ -326,7 +326,7 @@
   "forceUpdateMessage": "ایپ کو اپ ڈیٹ کرنے کی ضرورت ہے۔ براہِ کرم {storeName} سے تازہ ترین ورژن ڈاؤن لوڈ کریں",
   "visitHospital": "باقاعدہ طبی معائنے کے لیے جانا",
   "receiveNotificationAt9AM": "اسی دن 9:00 بجے اطلاع حاصل کریں",
-  "deletedScheduleCannotBeRestored": "ڈیلیٹ شدہ شیڈول کو بحال نہیں کیا جا سکتا",
+  "deletedScheduleCannotBeRestored": "حذف شدہ شیڈول بحال نہیں کیا جا سکتا",
   "deleteSchedule": "شیڈول حذف کریں",
   "onlySupportiOS": "صرف iOS ایپ میں دستیاب ہے",
   "healthKitDoesNotSupport": "یہ فیچر ان ڈیوائسز پر دستیاب نہیں ہے جو ہیلتھ کیئر کو سپورٹ نہیں کرتے",

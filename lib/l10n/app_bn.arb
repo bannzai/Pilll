@@ -326,7 +326,7 @@
   "forceUpdateMessage": "অ্যাপটি আপডেট করা প্রয়োজন। অনুগ্রহ করে {storeName} থেকে সর্বশেষ সংস্করণে আপডেট করুন",
   "visitHospital": "নিয়মিত চিকিৎসকের কাছে যাওয়া",
   "receiveNotificationAt9AM": "সেদিন সকাল ৯:০০টায় বিজ্ঞপ্তি পান",
-  "deletedScheduleCannotBeRestored": "মুছে ফেলা সময়সূচী আর ফিরিয়ে আনা যাবে না",
+  "deletedScheduleCannotBeRestored": "মুছে ফেলা সময়সূচি ফিরিয়ে আনা যাবে না",
   "deleteSchedule": "সময়সূচি মুছে ফেলুন",
   "onlySupportiOS": "শুধুমাত্র iOS অ্যাপে সমর্থিত",
   "healthKitDoesNotSupport": "হেলথকেয়ার সমর্থিত নয় এমন ডিভাইসে এই সুবিধাটি ব্যবহার করা যাবে না",

@@ -326,7 +326,7 @@
   "forceUpdateMessage": "ਐਪ ਨੂੰ ਅੱਪਡੇਟ ਕਰਨ ਦੀ ਲੋੜ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ {storeName} ਤੋਂ ਨਵਾਂ ਵਰਜਨ ਡਾਊਨਲੋਡ ਕਰੋ",
   "visitHospital": "ਨਿਯਮਿਤ ਜਾਂਚ ਲਈ ਡਾਕਟਰ ਕੋਲ ਜਾਣਾ",
   "receiveNotificationAt9AM": "ਉਸੇ ਦਿਨ 9:00 ਵਜੇ ਸੂਚਨਾ ਪ੍ਰਾਪਤ ਕਰੋ",
-  "deletedScheduleCannotBeRestored": "ਮਿਟਾਇਆ ਗਿਆ ਸ਼ੈਡਿਊਲ ਵਾਪਸ ਨਹੀਂ ਲਿਆਇਆ ਜਾ ਸਕਦਾ",
+  "deletedScheduleCannotBeRestored": "ਮਿਟਾਇਆ ਹੋਇਆ ਸ਼ਡਿਊਲ ਮੁੜ ਪ੍ਰਾਪਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ",
   "deleteSchedule": "ਯੋਜਨਾ ਮਿਟਾਓ",
   "onlySupportiOS": "ਸਿਰਫ਼ iOS ਐਪ ਵਿੱਚ ਸਮਰਥਿਤ ਹੈ",
   "healthKitDoesNotSupport": "ਸਿਹਤ ਦੇਖਭਾਲ ਦਾ ਸਮਰਥਨ ਨਾ ਕਰਨ ਵਾਲੇ ਡਿਵਾਈਸਾਂ ਵਿੱਚ ਇਹ ਸੇਵਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",

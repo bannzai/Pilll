@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Ilovani yangilash kerak. Iltimos, eng soʻnggi versiyani {storeName} orqali yuklab oling",
   "visitHospital": "Shifokor ko‘rigiga muntazam borish",
   "receiveNotificationAt9AM": "Oʻsha kuni soat 9:00 da bildirishnoma oling",
-  "deletedScheduleCannotBeRestored": "O'chirilgan rejalarni qayta tiklab bo'lmaydi",
+  "deletedScheduleCannotBeRestored": "Oʻchirilgan jadvalni qayta tiklab boʻlmaydi",
   "deleteSchedule": "Rejani o'chirish",
   "onlySupportiOS": "Faqat iOS ilovasi qo'llab-quvvatlanadi",
   "healthKitDoesNotSupport": "Sog'liqni saqlash funksiyasini qo'llab-quvvatlamaydigan qurilmalarda bu xizmatdan foydalanib bo'lmaydi",

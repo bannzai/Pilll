@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Appen skal opdateres. Du kan hente den nyeste version i {storeName}",
   "visitHospital": "Tage til regelmæssig lægekontrol",
   "receiveNotificationAt9AM": "Få en notifikation kl. 9:00 samme dag",
-  "deletedScheduleCannotBeRestored": "Slettede planer kan ikke gendannes",
+  "deletedScheduleCannotBeRestored": "En slettet aftale kan ikke gendannes",
   "deleteSchedule": "Slet aftale",
   "onlySupportiOS": "Understøttes kun på iOS-appen",
   "healthKitDoesNotSupport": "Denne funktion er ikke tilgængelig på enheder, der ikke understøtter Sundhed-appen",

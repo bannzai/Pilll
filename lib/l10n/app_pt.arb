@@ -326,7 +326,7 @@
   "forceUpdateMessage": "O aplicativo precisa de uma atualização. Baixe a versão mais recente na {storeName}",
   "visitHospital": "Ir à consulta médica de acompanhamento",
   "receiveNotificationAt9AM": "Receba uma notificação às 9:00 do mesmo dia",
-  "deletedScheduleCannotBeRestored": "Os agendamentos excluídos não podem ser restaurados",
+  "deletedScheduleCannotBeRestored": "Não é possível restaurar uma programação excluída",
   "deleteSchedule": "Excluir agendamento",
   "onlySupportiOS": "Disponível apenas no aplicativo iOS",
   "healthKitDoesNotSupport": "Esta funcionalidade não está disponível em dispositivos que não suportam o app Saúde",

@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Programu inahitaji kusasishwa. Tafadhali pakua toleo jipya zaidi kutoka {storeName}",
   "visitHospital": "Kwenda kwa uchunguzi wa daktari wa mara kwa mara",
   "receiveNotificationAt9AM": "Pata arifa saa 9:00 siku hiyo",
-  "deletedScheduleCannotBeRestored": "Ratiba zilizofutwa haziwezi kurejeshwa",
+  "deletedScheduleCannotBeRestored": "Ratiba iliyofutwa haiwezi kurejeshwa",
   "deleteSchedule": "Futa ratiba",
   "onlySupportiOS": "Inapatikana kwa programu ya iOS tu",
   "healthKitDoesNotSupport": "Huduma hii haipatikani kwenye vifaa ambavyo havitumii mfumo wa afya",

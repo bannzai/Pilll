@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Aplikacioni duhet përditësuar. Ju lutemi, shkarkoni versionin më të fundit nga {storeName}",
   "visitHospital": "Të shkoni në kontrolle të rregullta te mjeku",
   "receiveNotificationAt9AM": "Merrni një njoftim në orën 9:00 të po asaj dite",
-  "deletedScheduleCannotBeRestored": "Programet e fshira nuk mund të rikthehen",
+  "deletedScheduleCannotBeRestored": "Orari i fshirë nuk mund të rikthehet",
   "deleteSchedule": "Fshij planifikimin",
   "onlySupportiOS": "I disponueshëm vetëm për aplikacionin iOS",
   "healthKitDoesNotSupport": "Nuk mund të përdoret në pajisje që nuk mbështesin HealthCare",

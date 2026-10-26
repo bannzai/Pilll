@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Cómpre actualizar a aplicación. Podes descargar a versión máis recente desde {storeName}",
   "visitHospital": "Ir á consulta médica de seguimento",
   "receiveNotificationAt9AM": "Recibe unha notificación ás 9:00 dese día",
-  "deletedScheduleCannotBeRestored": "As citas eliminadas non se poden restaurar",
+  "deletedScheduleCannotBeRestored": "Non se pode recuperar un plan eliminado",
   "deleteSchedule": "Eliminar a cita",
   "onlySupportiOS": "Só compatible con iOS",
   "healthKitDoesNotSupport": "Esta función non está dispoñible en dispositivos que non son compatibles coa aplicación de Saúde",

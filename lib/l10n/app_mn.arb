@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Аппыг шинэчлэх шаардлагатай. {storeName}-ээс хамгийн сүүлийн хувилбарыг татаж авна уу",
   "visitHospital": "Эмчийн тогтмол үзлэгт орох",
   "receiveNotificationAt9AM": "Тухайн өдөр 9:00 цагт мэдэгдэл авах",
-  "deletedScheduleCannotBeRestored": "Устгасан төлөвлөгөөг сэргээх боломжгүй",
+  "deletedScheduleCannotBeRestored": "Устгасан хуваарийг сэргээх боломжгүй",
   "deleteSchedule": "Хуваарийг устгах",
   "onlySupportiOS": "Зөвхөн iOS аппд дэмждэг",
   "healthKitDoesNotSupport": "Таны төхөөрөмж эрүүл мэндийн өгөгдлийг дэмждэггүй тул энэ функцийг ашиглах боломжгүй байна",

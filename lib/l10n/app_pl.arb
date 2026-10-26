@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Aplikacja wymaga aktualizacji. Pobierz najnowszą wersję z {storeName}",
   "visitHospital": "Chodzić na regularne wizyty kontrolne",
   "receiveNotificationAt9AM": "Otrzymuj powiadomienie o 9:00 tego samego dnia",
-  "deletedScheduleCannotBeRestored": "Usuniętego wydarzenia nie można przywrócić",
+  "deletedScheduleCannotBeRestored": "Usuniętego harmonogramu nie można przywrócić",
   "deleteSchedule": "Usuń termin",
   "onlySupportiOS": "Dostępne tylko na iOS",
   "healthKitDoesNotSupport": "Ta funkcja nie jest dostępna na urządzeniach, które nie obsługują aplikacji Zdrowie",

@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Það þarf að uppfæra appið. Þú getur sótt nýjustu útgáfuna í {storeName}",
   "visitHospital": "Fara í reglulegt eftirlit hjá lækni",
   "receiveNotificationAt9AM": "Fá tilkynningu kl. 9:00 sama dag",
-  "deletedScheduleCannotBeRestored": "Eyddar áætlanir er ekki hægt að endurheimta",
+  "deletedScheduleCannotBeRestored": "Ekki er hægt að endurheimta eydda áætlun",
   "deleteSchedule": "Eyða áætlun",
   "onlySupportiOS": "Aðeins fáanlegt í iOS appinu",
   "healthKitDoesNotSupport": "Þessi eiginleiki er ekki tiltækur á tækjum sem styðja ekki heilsugögn",

@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Kailangang i-update ang app. Paki-download po ang pinakabagong bersyon mula sa {storeName}",
   "visitHospital": "Pumunta sa regular na pagpapatingin",
   "receiveNotificationAt9AM": "Makatanggap ng abiso nang 9:00 sa araw na iyon",
-  "deletedScheduleCannotBeRestored": "Hindi na maibabalik ang mga natanggal na iskedyul",
+  "deletedScheduleCannotBeRestored": "Hindi na maibabalik ang iskedyul kapag nabura na",
   "deleteSchedule": "Tanggalin ang iskedyul",
   "onlySupportiOS": "Suportado lamang sa iOS app",
   "healthKitDoesNotSupport": "Hindi available ang feature na ito sa mga device na hindi sumusuporta sa HealthCare",

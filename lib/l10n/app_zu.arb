@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Uhlelo lokusebenza ludinga ukubuyekezwa. Sicela ulande inguqulo yakamuva ku-{storeName}",
   "visitHospital": "Ukuya ekuhlolweni okuvamile kodokotela",
   "receiveNotificationAt9AM": "Thola isaziso ngo-9:00 ngalolo suku",
-  "deletedScheduleCannotBeRestored": "Amacebo asusiwe awakwazi ukubuyiselwa",
+  "deletedScheduleCannotBeRestored": "Uhlelo olususiwe alukwazi ukubuyiselwa",
   "deleteSchedule": "Susa uhlelo",
   "onlySupportiOS": "Itholakala kuphela ku-app ye-iOS",
   "healthKitDoesNotSupport": "Akukwazi ukusetshenziswa kumadivayisi angazwani nezinhlelo zezempilo",

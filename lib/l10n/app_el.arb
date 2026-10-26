@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Χρειάζεται ενημέρωση της εφαρμογής. Ενημερώστε την στην πιο πρόσφατη έκδοση μέσω του {storeName}",
   "visitHospital": "Τακτική επίσκεψη στον γιατρό",
   "receiveNotificationAt9AM": "Λήψη ειδοποίησης στις 9:00 την ίδια ημέρα",
-  "deletedScheduleCannotBeRestored": "Τα διαγραμμένα σχέδια δεν μπορούν να ανακτηθούν",
+  "deletedScheduleCannotBeRestored": "Δεν είναι δυνατή η επαναφορά ενός διαγραμμένου προγράμματος",
   "deleteSchedule": "Διαγραφή προγράμματος",
   "onlySupportiOS": "Διαθέσιμο μόνο στην εφαρμογή iOS",
   "healthKitDoesNotSupport": "Δεν μπορεί να χρησιμοποιηθεί σε συσκευές που δεν υποστηρίζουν το HealthKit",

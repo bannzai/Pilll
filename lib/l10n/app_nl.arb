@@ -326,7 +326,7 @@
   "forceUpdateMessage": "De app moet worden bijgewerkt. Je kunt de nieuwste versie downloaden via {storeName}",
   "visitHospital": "Naar een regelmatige controle bij de arts gaan",
   "receiveNotificationAt9AM": "Ontvang die dag om 9:00 een melding",
-  "deletedScheduleCannotBeRestored": "Verwijderde afspraken kunnen niet worden hersteld",
+  "deletedScheduleCannotBeRestored": "Een verwijderd schema kun je niet herstellen",
   "deleteSchedule": "Afspraak verwijderen",
   "onlySupportiOS": "Alleen ondersteund in de iOS-app",
   "healthKitDoesNotSupport": "Deze functie is niet beschikbaar op apparaten die de Health-app niet ondersteunen",

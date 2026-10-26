@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Приложение необходимо обновить. Пожалуйста, установите последнюю версию через {storeName}",
   "visitHospital": "Ходить на регулярные осмотры к врачу",
   "receiveNotificationAt9AM": "Получать уведомление в 9:00 того же дня",
-  "deletedScheduleCannotBeRestored": "Удаленные записи не могут быть восстановлены",
+  "deletedScheduleCannotBeRestored": "Удалённое расписание нельзя восстановить",
   "deleteSchedule": "Удалить событие",
   "onlySupportiOS": "Доступно только для iOS-приложения",
   "healthKitDoesNotSupport": "Эта функция недоступна на устройствах, не поддерживающих HealthKit",

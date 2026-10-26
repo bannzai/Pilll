@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Հավելվածը թարմացման կարիք ունի։ Խնդրում ենք ներբեռնել վերջին տարբերակը {storeName}-ից",
   "visitHospital": "Պարբերաբար բժշկի այցելել",
   "receiveNotificationAt9AM": "Ստացեք ծանուցում նույն օրը՝ ժամը 9:00-ին",
-  "deletedScheduleCannotBeRestored": "Ջնջված ծրագրերը վերականգնել հնարավոր չէ",
+  "deletedScheduleCannotBeRestored": "Ջնջված ժամանակացույցը հնարավոր չէ վերականգնել",
   "deleteSchedule": "Ծրագիրը ջնջել",
   "onlySupportiOS": "Աջակցվում է միայն iOS հավելվածը",
   "healthKitDoesNotSupport": "Առողջապահություն չաջակցող սարքերում այս ֆունկցիան հասանելի չէ",

@@ -326,7 +326,7 @@
   "forceUpdateMessage": "আপুনি ব্যৱহাৰ কৰা এপটো আপডেট কৰাৰ প্ৰয়োজন হৈছে। অনুগ্ৰহ কৰি {storeName}ৰ পৰা শেহতীয়া সংস্কৰণলৈ আপডেট কৰক",
   "visitHospital": "নিয়মীয়া চিকিৎসাৰ বাবে যোৱা",
   "receiveNotificationAt9AM": "সেই দিনা 9:00 বজাত জাননী লাভ কৰক",
-  "deletedScheduleCannotBeRestored": "মচি পেলোৱা সূচী পুনৰুদ্ধাৰ কৰিব নোৱাৰি",
+  "deletedScheduleCannotBeRestored": "মচি পেলোৱা সময়সূচী পুনৰ ঘূৰাই আনিব নোৱাৰি",
   "deleteSchedule": "সূচী মচি পেলাওক",
   "onlySupportiOS": "কেৱল আইঅ'এছ এপৰ বাবে উপলব্ধ",
   "healthKitDoesNotSupport": "স্বাস্থ্য সেৱা সমৰ্থন নকৰা যন্ত্ৰত এই সুবিধা ব্যৱহাৰ কৰিব নোৱাৰি",

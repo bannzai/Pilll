@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Programėlę reikia atnaujinti. Atsisiųskite naujausią versiją iš {storeName}",
   "visitHospital": "Reguliariai lankytis pas gydytoją",
   "receiveNotificationAt9AM": "Gauti pranešimą tą pačią dieną 9:00 val.",
-  "deletedScheduleCannotBeRestored": "Ištrinti planai negali būti atkurti",
+  "deletedScheduleCannotBeRestored": "Ištrinto tvarkaraščio atkurti nepavyks",
   "deleteSchedule": "Ištrinti planą",
   "onlySupportiOS": "Palaikoma tik iOS programėlėje",
   "healthKitDoesNotSupport": "Šis funkcionalumas nepasiekiamas įrenginiuose, kurie nepalaiko sveikatos duomenų",

@@ -326,7 +326,7 @@
   "forceUpdateMessage": "የሚጠቀሙበትን መተግበሪያ እንዲያዘምኑ እንጠይቃለን። እባክዎ ከ{storeName} ወደ አዲሱ ስሪት ያዘምኑት",
   "visitHospital": "ለቀጣይ የሕክምና ቀጠሮ መሄድ",
   "receiveNotificationAt9AM": "በዚያው ቀን 9:00 ላይ ማሳወቂያ ይቀበሉ",
-  "deletedScheduleCannotBeRestored": "የተሰረዙ መርሃ ግብሮች መመለስ አይችሉም",
+  "deletedScheduleCannotBeRestored": "የተሰረዘ ቀጠሮ መመለስ አይቻልም",
   "deleteSchedule": "ቀን ሰቀንን ይሰርዙ",
   "onlySupportiOS": "iOS መተግበሪያ ላይ ብቻ ይገኛል",
   "healthKitDoesNotSupport": "ጤና እንክብካቤን የማይደግፉ መሣሪያዎች ላይ መጠቀም አይቻልም",

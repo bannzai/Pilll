@@ -326,7 +326,7 @@
   "forceUpdateMessage": "È necessario aggiornare l’app. Puoi scaricare la versione più recente da {storeName}",
   "visitHospital": "Andare a una visita medica di controllo",
   "receiveNotificationAt9AM": "Ricevi una notifica alle 9:00 dello stesso giorno",
-  "deletedScheduleCannotBeRestored": "Gli appuntamenti cancellati non possono essere ripristinati",
+  "deletedScheduleCannotBeRestored": "Un programma eliminato non può essere ripristinato",
   "deleteSchedule": "Elimina appuntamento",
   "onlySupportiOS": "Disponibile solo per l'app iOS",
   "healthKitDoesNotSupport": "Non è possibile utilizzare questa funzione su dispositivi non compatibili con Health",

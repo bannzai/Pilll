@@ -326,7 +326,7 @@
   "forceUpdateMessage": "L’application doit être mise à jour. Veuillez installer la dernière version depuis {storeName}",
   "visitHospital": "Aller à un rendez-vous médical de suivi",
   "receiveNotificationAt9AM": "Recevoir une notification à 9:00 le jour même",
-  "deletedScheduleCannotBeRestored": "Les horaires supprimés ne peuvent pas être restaurés",
+  "deletedScheduleCannotBeRestored": "Un programme supprimé ne peut pas être restauré",
   "deleteSchedule": "Supprimer le programme",
   "onlySupportiOS": "Cette fonctionnalité est uniquement disponible sur l'application iOS",
   "healthKitDoesNotSupport": "Cette fonctionnalité n'est pas disponible sur les appareils qui ne prennent pas en charge HealthKit",

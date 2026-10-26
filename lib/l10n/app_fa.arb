@@ -326,7 +326,7 @@
   "forceUpdateMessage": "لازم است برنامه به‌روزرسانی شود. لطفاً جدیدترین نسخه را از {storeName} دریافت کنید",
   "visitHospital": "مراجعه برای پیگیری درمان",
   "receiveNotificationAt9AM": "دریافت اعلان در ساعت ۹:۰۰ همان روز",
-  "deletedScheduleCannotBeRestored": "برنامه‌های حذف شده قابل بازیابی نیستند",
+  "deletedScheduleCannotBeRestored": "برنامهٔ حذف‌شده قابل بازیابی نیست",
   "deleteSchedule": "حذف برنامه",
   "onlySupportiOS": "فقط در اپ iOS پشتیبانی می‌شود",
   "healthKitDoesNotSupport": "در دستگاه‌هایی که از برنامه سلامت پشتیبانی نمی‌کنند، امکان استفاده از این قابلیت وجود ندارد",

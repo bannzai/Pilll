@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Ons vra jou asseblief om die app op te dateer. Werk dit via {storeName} op na die nuutste weergawe",
   "visitHospital": "Gaan vir 'n opvolgbesoek",
   "receiveNotificationAt9AM": "Ontvang ’n kennisgewing om 9:00 op dieselfde dag",
-  "deletedScheduleCannotBeRestored": "Geskrapte afsprake kan nie herstel word nie",
+  "deletedScheduleCannotBeRestored": "Jy kan ’n geskrapte afspraak nie herstel nie",
   "deleteSchedule": "Verwyder afspraak",
   "onlySupportiOS": "Slegs beskikbaar op iOS-toepassings",
   "healthKitDoesNotSupport": "Hierdie funksie is nie beskikbaar op toestelle wat nie gesondheidsorgfunksies ondersteun nie",

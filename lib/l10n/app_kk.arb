@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Қолданбаны жаңарту қажет. Соңғы нұсқасын {storeName} дүкенінен жүктеп алыңыз",
   "visitHospital": "Дәрігерге жоспарлы тексерілуге бару",
   "receiveNotificationAt9AM": "Сол күні сағат 9:00-де хабарлама алыңыз",
-  "deletedScheduleCannotBeRestored": "Өшірілген жоспарларды қалпына келтіру мүмкін емес",
+  "deletedScheduleCannotBeRestored": "Жойылған кестені қалпына келтіру мүмкін емес",
   "deleteSchedule": "Жоспарды жою",
   "onlySupportiOS": "Тек iOS қосымшасын ғана қолдайды",
   "healthKitDoesNotSupport": "Денсаулық сақтауды қолдамайтын құрылғыларда бұл функция қолжетімді емес",

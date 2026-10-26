@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Lietotne ir jāatjaunina. Lūdzu, lejupielādējiet jaunāko versiju no {storeName}",
   "visitHospital": "Regulāri apmeklēt ārstu",
   "receiveNotificationAt9AM": "Saņemt paziņojumu tajā pašā dienā plkst. 9:00",
-  "deletedScheduleCannotBeRestored": "Dzēstie plāni nav atjaunojami",
+  "deletedScheduleCannotBeRestored": "Izdzēstu grafiku nevar atjaunot",
   "deleteSchedule": "Dzēst plānu",
   "onlySupportiOS": "Pieejams tikai iOS lietotnē",
   "healthKitDoesNotSupport": "Šī funkcija nav pieejama ierīcēs, kas neatbalsta veselības datu funkcijas",

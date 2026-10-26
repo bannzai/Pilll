@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Aplicația trebuie actualizată. Poți descărca cea mai recentă versiune din {storeName}",
   "visitHospital": "Mergi la controlul medical periodic",
   "receiveNotificationAt9AM": "Primește o notificare la 9:00 în aceeași zi",
-  "deletedScheduleCannotBeRestored": "Programările șterse nu pot fi restaurate",
+  "deletedScheduleCannotBeRestored": "Un program șters nu poate fi restaurat",
   "deleteSchedule": "Șterge programarea",
   "onlySupportiOS": "Această funcție este disponibilă doar pentru aplicația iOS",
   "healthKitDoesNotSupport": "Nu poate fi utilizată pe dispozitivele care nu sunt compatibile cu HealthCare",

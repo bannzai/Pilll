@@ -326,7 +326,7 @@
   "forceUpdateMessage": "יש לעדכן את האפליקציה. אפשר להוריד את הגרסה העדכנית ביותר דרך {storeName}",
   "visitHospital": "להגיע לביקור מעקב רפואי",
   "receiveNotificationAt9AM": "קבלת התראה בשעה 9:00 באותו יום",
-  "deletedScheduleCannotBeRestored": "אירועים שנמחקו לא ניתנים לשחזור",
+  "deletedScheduleCannotBeRestored": "לא ניתן לשחזר לוח זמנים שנמחק",
   "deleteSchedule": "מחק תור",
   "onlySupportiOS": "זמין רק באפליקציה של iOS",
   "healthKitDoesNotSupport": "תכונה זו אינה זמינה במכשירים שאינם תומכים בבריאות",

@@ -326,7 +326,7 @@
   "forceUpdateMessage": "აპის განახლებაა საჭირო. გთხოვთ, უახლესი ვერსია {storeName}-დან ჩამოტვირთოთ",
   "visitHospital": "ექიმთან გეგმურ შემოწმებაზე მისვლა",
   "receiveNotificationAt9AM": "შეტყობინების მიღება იმავე დღეს 9:00 საათზე",
-  "deletedScheduleCannotBeRestored": "წაშლილი განრიგი ვერ აღდგება",
+  "deletedScheduleCannotBeRestored": "წაშლილი განრიგის აღდგენა შეუძლებელია",
   "deleteSchedule": "განრიგის წაშლა",
   "onlySupportiOS": "მხარდაჭერილია მხოლოდ iOS აპლიკაციაში",
   "healthKitDoesNotSupport": "ჯანმრთელობის დაცვას არ უჭერს მხარს ეს მოწყობილობა, ამიტომ ფუნქციის გამოყენება შეუძლებელია",

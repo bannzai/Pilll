@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Колдонмону жаңыртуу керек. Сураныч, эң акыркы версиясын {storeName} дүкөнүнөн жүктөп алыңыз",
   "visitHospital": "Дарыгерге үзгүлтүксүз көрүнүү",
   "receiveNotificationAt9AM": "Ошол күнү саат 9:00дө билдирме алыңыз",
-  "deletedScheduleCannotBeRestored": "Өчүрүлгөн пландарды кайра орнотуу мүмкүн эмес",
+  "deletedScheduleCannotBeRestored": "Өчүрүлгөн жадыбалды калыбына келтирүү мүмкүн эмес",
   "deleteSchedule": "Планды өчүрүү",
   "onlySupportiOS": "iOS колдонмосунда гана жеткиликтүү",
   "healthKitDoesNotSupport": "Ден соолук кызматын колдобогон түзүлүштөрдө бул функцияны пайдалана албайсыз",

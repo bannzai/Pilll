@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Die App muss aktualisiert werden. Bitte lade die neueste Version über {storeName} herunter",
   "visitHospital": "Zur regelmäßigen ärztlichen Kontrolle gehen",
   "receiveNotificationAt9AM": "Am selben Tag um 9:00 Uhr eine Benachrichtigung erhalten",
-  "deletedScheduleCannotBeRestored": "Gelöschte Termine können nicht wiederhergestellt werden",
+  "deletedScheduleCannotBeRestored": "Ein gelöschter Termin kann nicht wiederhergestellt werden",
   "deleteSchedule": "Termin löschen",
   "onlySupportiOS": "Nur für iOS-App verfügbar",
   "healthKitDoesNotSupport": "Diese Funktion ist auf Geräten ohne Health-Unterstützung nicht verfügbar.",

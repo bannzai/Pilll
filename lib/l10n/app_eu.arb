@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Aplikazioa eguneratu behar da. Mesedez, eskuratu azken bertsioa {storeName} dendan",
   "visitHospital": "Medikuaren jarraipen-kontsultara joatea",
   "receiveNotificationAt9AM": "Jaso jakinarazpena egun horretan 9:00etan",
-  "deletedScheduleCannotBeRestored": "Ezabatutako gertaerak ezin dira berreskuratu",
+  "deletedScheduleCannotBeRestored": "Ezabatutako plana ezin da berreskuratu",
   "deleteSchedule": "Hitzordua ezabatu",
   "onlySupportiOS": "iOS aplikaziorako soilik eskuragarria da",
   "healthKitDoesNotSupport": "Osasun-zaintza onartzen ez duten gailuetan ezin da funtzio hau erabili",

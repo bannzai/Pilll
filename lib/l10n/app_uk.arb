@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Застосунок потрібно оновити. Будь ласка, завантажте останню версію з {storeName}",
   "visitHospital": "Регулярно відвідувати лікаря",
   "receiveNotificationAt9AM": "Отримувати сповіщення о 9:00 того самого дня",
-  "deletedScheduleCannotBeRestored": "Видалені записи не можна відновити",
+  "deletedScheduleCannotBeRestored": "Видалений розклад неможливо відновити",
   "deleteSchedule": "Видалити план",
   "onlySupportiOS": "Підтримується лише в iOS додатку",
   "healthKitDoesNotSupport": "Функція недоступна на пристроях, які не підтримують Health",

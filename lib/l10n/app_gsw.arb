@@ -326,7 +326,7 @@
   "forceUpdateMessage": "D App brucht es Update. Du chasch di nöischti Version über {storeName} abelade",
   "visitHospital": "Zur regelmässige Kontroll bim Dokter gah",
   "receiveNotificationAt9AM": "Am gliiche Tag am 9:00 e Meldig übercho",
-  "deletedScheduleCannotBeRestored": "Gelöschti Termin chönd nid wiiderhergestellt werde",
+  "deletedScheduleCannotBeRestored": "En glöschte Termin chasch nümme zruggbringe",
   "deleteSchedule": "Termin lösche",
   "onlySupportiOS": "Isch numme für iOS verfügbar",
   "healthKitDoesNotSupport": "Die Funktion isch uf Gerät ohni HealthKit-Understützig nöd verfüegbar",

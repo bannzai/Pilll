@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Rakendust tuleb uuendada. Palun hanki uusim versioon poest {storeName}",
   "visitHospital": "Käia regulaarses arstlikus kontrollis",
   "receiveNotificationAt9AM": "Saa teavitus samal päeval kell 9:00",
-  "deletedScheduleCannotBeRestored": "Kustutatud plaane ei saa taastada",
+  "deletedScheduleCannotBeRestored": "Kustutatud ajakava ei saa taastada",
   "deleteSchedule": "Kustutan plaani",
   "onlySupportiOS": "Toetatud ainult iOS-rakenduses",
   "healthKitDoesNotSupport": "Selles seadmes, mis ei toeta terviseandmeid, ei saa seda funktsiooni kasutada",

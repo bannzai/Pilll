@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Ứng dụng cần được cập nhật. Vui lòng tải phiên bản mới nhất từ {storeName}",
   "visitHospital": "Đi tái khám định kỳ",
   "receiveNotificationAt9AM": "Nhận thông báo lúc 9:00 cùng ngày",
-  "deletedScheduleCannotBeRestored": "Lịch trình đã xóa không thể khôi phục",
+  "deletedScheduleCannotBeRestored": "Không thể khôi phục lịch trình đã xóa",
   "deleteSchedule": "Xóa lịch trình",
   "onlySupportiOS": "Chỉ hỗ trợ ứng dụng iOS",
   "healthKitDoesNotSupport": "Không thể sử dụng trên các thiết bị không hỗ trợ tính năng Sức khỏe",

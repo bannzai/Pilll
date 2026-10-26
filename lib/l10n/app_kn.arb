@@ -326,7 +326,7 @@
   "forceUpdateMessage": "ಆ್ಯಪ್‌ ಅನ್ನು ನವೀಕರಿಸುವ ಅಗತ್ಯವಿದೆ. ದಯವಿಟ್ಟು {storeName} ನಿಂದ ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಯನ್ನು ಪಡೆಯಿರಿ",
   "visitHospital": "ನಿಯಮಿತ ವೈದ್ಯಕೀಯ ತಪಾಸಣೆಗೆ ಹೋಗುವುದು",
   "receiveNotificationAt9AM": "ಅದೇ ದಿನ 9:00 ಗಂಟೆಗೆ ಅಧಿಸೂಚನೆ ಪಡೆಯಿರಿ",
-  "deletedScheduleCannotBeRestored": "ಅಳಿಸಿದ ಯೋಜನೆಗಳನ್ನು ಮರುಪ್ರಾಪ್ತಿ ಮಾಡಲಾಗುವುದಿಲ್ಲ",
+  "deletedScheduleCannotBeRestored": "ಅಳಿಸಿದ ವೇಳಾಪಟ್ಟಿಯನ್ನು ಮರುಸ್ಥಾಪಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ",
   "deleteSchedule": "ವೇಳಾಪಟ್ಟಿ ಅಳಿಸಿ",
   "onlySupportiOS": "ಕೇವಲ iOS ಆಪ್‌ನಲ್ಲಿ ಮಾತ್ರ ಲಭ್ಯವಿದೆ",
   "healthKitDoesNotSupport": "ಹೆಲ್ತ್‌ಕೇರ್ ಅನ್ನು ಬೆಂಬಲಿಸದ ಸಾಧನಗಳಲ್ಲಿ ಬಳಸಲಾಗುವುದಿಲ್ಲ",

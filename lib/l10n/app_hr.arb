@@ -326,7 +326,7 @@
   "forceUpdateMessage": "Aplikaciju je potrebno ažurirati. Molimo vas, preuzmite najnoviju verziju putem {storeName}",
   "visitHospital": "Odlaziti na redovite liječničke kontrole",
   "receiveNotificationAt9AM": "Primajte obavijest u 9:00 istog dana",
-  "deletedScheduleCannotBeRestored": "Obrisani termini se ne mogu vratiti",
+  "deletedScheduleCannotBeRestored": "Izbrisani raspored nije moguće vratiti",
   "deleteSchedule": "Obriši termin",
   "onlySupportiOS": "Dostupno samo u iOS aplikaciji",
   "healthKitDoesNotSupport": "Ova funkcija nije dostupna na uređajima koji ne podržavaju Health aplikaciju",
