@@ -478,7 +478,7 @@
   "menstruationFeatureAppealBody": "เมื่อประจำเดือนมา เพียงบันทึกไว้ก็สามารถดูประวัติประจำเดือนย้อนหลังเป็นรายการได้ค่ะ แอปจะคาดการณ์วันที่ประจำเดือนครั้งถัดไปโดยอัตโนมัติ เพื่อช่วยให้วางแผนล่วงหน้าได้ค่ะ",
   "calendarDiaryFeatureAppealTitle": "บันทึกอาการในปฏิทิน",
   "calendarDiaryFeatureAppealShortDescription": "บันทึกอาการในแต่ละวันไว้ในปฏิทินกันค่ะ",
-  "calendarDiaryFeatureAppealHeadline": "บันทึกสภาพร่างกายประจำวันลงในปฏิทิน",
+  "calendarDiaryFeatureAppealHeadline": "บันทึกอาการในแต่ละวันลงในปฏิทิน",
   "calendarDiaryFeatureAppealBody": "แตะวันที่ในปฏิทินเพื่อบันทึกสภาพร่างกาย อารมณ์ อาการต่างๆ ฯลฯ เมื่อดูร่วมกับบันทึกการทานยาและบันทึกประจำเดือน จะช่วยให้คุณเข้าใจจังหวะของร่างกายได้ดีขึ้น",
   "futureScheduleFeatureAppealTitle": "มาจดแผนในอนาคตกันเถอะ",
   "futureScheduleFeatureAppealShortDescription": "จัดการตารางนัดหมายในอนาคต เช่น นัดไปคลินิก",
