@@ -81,7 +81,7 @@
   "change": "เปลี่ยน",
   "pill": "ยาคุม",
   "calendar": "ปฏิทิน",
-  "userInformationWillBeDeleted": "ข้อมูลผู้ใช้จะถูกลบออก",
+  "userInformationWillBeDeleted": "ข้อมูลผู้ใช้ของคุณจะถูกลบค่ะ",
   "withdrawalMessage": "เมื่อยกเลิกบัญชีแล้ว ข้อมูลทั้งหมดจะถูกลบและไม่สามารถเข้าสู่ระบบด้วยบัญชีเดิมได้อีก",
   "recordPage": "บันทึกการใช้ยา",
   "doReLogin": "กรุณาเข้าสู่ระบบใหม่",

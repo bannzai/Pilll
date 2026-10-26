@@ -81,7 +81,7 @@
   "change": "更改",
   "pill": "避孕药",
   "calendar": "日历",
-  "userInformationWillBeDeleted": "用户数据将被删除",
+  "userInformationWillBeDeleted": "你的用户信息将被删除",
   "withdrawalMessage": "注销账户后，所有数据将被删除，您将无法再次使用同一账户登录。",
   "recordPage": "服用记录",
   "doReLogin": "请重新登录",

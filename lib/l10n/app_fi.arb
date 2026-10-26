@@ -81,7 +81,7 @@
   "change": "Muuta",
   "pill": "Ehkäisypilleri",
   "calendar": "Kalenteri",
-  "userInformationWillBeDeleted": "Käyttäjätiedot poistetaan",
+  "userInformationWillBeDeleted": "Käyttäjätietosi poistetaan",
   "withdrawalMessage": "Kun poistat tilin, kaikki tiedot poistetaan pysyvästi, etkä voi enää koskaan kirjautua sisään samalla tilillä.",
   "recordPage": "Kirjaussivu",
   "doReLogin": "Kirjaudu sisään uudelleen",

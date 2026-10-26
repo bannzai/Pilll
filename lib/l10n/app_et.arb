@@ -81,7 +81,7 @@
   "change": "Muuda",
   "pill": "Pill",
   "calendar": "Kalender",
-  "userInformationWillBeDeleted": "Kasutajateave kustutatakse",
+  "userInformationWillBeDeleted": "Sinu kasutajaandmed kustutatakse",
   "withdrawalMessage": "Konto kustutamisel kustutatakse jäädavalt kõik teie andmed ja sama kontoga enam kunagi sisse logida ei ole võimalik.",
   "recordPage": "Salvestused",
   "doReLogin": "Palun logige uuesti sisse",

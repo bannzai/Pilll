@@ -81,7 +81,7 @@
   "change": "Change",
   "pill": "Pill",
   "calendar": "Calendar",
-  "userInformationWillBeDeleted": "User data will be deleted",
+  "userInformationWillBeDeleted": "Your user information will be deleted",
   "withdrawalMessage": "Deleting your account will permanently remove all data and you will never be able to log in with the same account again.",
   "recordPage": "Records",
   "doReLogin": "Please log in again",
