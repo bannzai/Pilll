@@ -307,7 +307,7 @@
   "purchaseErrorIneligibleError": "तपाईंको खाताबाट खरिद पूरा गर्न सकिएन। कृपया केही समयपछि फेरि प्रयास गर्नुहोस्। समस्या रहिरहेमा सेटिङहरू > हामीलाई सम्पर्क गर्नुहोस् मार्फत सम्पर्क गर्नुहोस्। विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "तपाईंको {accountName} खाताबाट यो योजनाको सदस्यता लिन सकिँदैन। कृपया भुक्तानी विवरण जाँचेर फेरि प्रयास गर्नुहोस्",
   "purchaseErrorPaymentPendingError": "भुक्तानी पूरा हुनुअघि रोकिएको छ। तपाईं लग इन भएको {accountName} खाताबाट {storeName} मा यसको अवस्था जाँच गर्नुहोस्।",
-  "purchaseErrorInvalidSubscriberAttributesError": "खरिद असफल भयो। केही समय पछि फेरि प्रयास गर्नुहोस्। यदि समाधान हुँदैन भने सेटिङ > सम्पर्क मार्फत सम्पर्क गर्नुहोस्। विवरण: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidSubscriberAttributesError": "खरिद पूरा हुन सकेन। कृपया केही समयपछि फेरि प्रयास गर्नुहोस्। समस्या रहिरहेमा सेटिङहरू > हामीलाई सम्पर्क गर्नुहोस् मार्फत हामीलाई सम्पर्क गर्नुहोस्। विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "प्रयोगकर्ता जानकारी प्राप्त गर्न असफल भयो। केहि समयपछि फेरि प्रयास गर्नुहोस्। यदि समस्या समाधान भएन भने सेटिङ्ग्स > सम्पर्क गर्नुहोस् बाट सम्पर्क गर्नुहोस्। विस्तृत विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "खरिद जानकारी प्राप्त गर्न असफल भयो। समय पछि फेरि प्रयास गर्नुहोस्। यदि समस्या समाधान भएन भने सेटिङ > सम्पर्क बाट सम्पर्क गर्नुहोस्। विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnsupportedError": "अज्ञात कारणको त्रुटि छ। कृपया नवीनतम संस्करणमा अपडेट गरेर पुनः प्रयास गर्नुहोस्। समस्या समाधान नभएमा सेटिङ्गहरू > सम्पर्क बाट हामीलाई सम्पर्क गर्नुहोस्। कोड: {errorCode} विवरण: {exceptionMessage}:{exceptionDetails}",

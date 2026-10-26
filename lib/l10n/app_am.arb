@@ -307,7 +307,7 @@
   "purchaseErrorIneligibleError": "በእርስዎ መለያ ግዢውን ማጠናቀቅ አልተቻለም። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ። ችግሩ ከቀጠለ፣ ከቅንብሮች > አግኙን ያግኙን። ዝርዝሮች፦ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "በ{accountName} መለያዎ ለዕቅዱ መመዝገብ አይችሉም። እባክዎ የክፍያ መረጃዎን ይፈትሹና እንደገና ይሞክሩ",
   "purchaseErrorPaymentPendingError": "ክፍያው ተቋርጧል። በገቡበት የ{accountName} መለያ በ{storeName} ላይ የክፍያውን ሁኔታ እባክዎ ያረጋግጡ።",
-  "purchaseErrorInvalidSubscriberAttributesError": "ግዢ አልተሳካም። ትንሽ ጊዜ ቆይተው እንደገና ይሞክሩ። ችግሩ ካልተፈታ ቅንብሮች > ጥያቄ በኩል ያነጋግሩን። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidSubscriberAttributesError": "ግዢው አልተሳካም። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ። ችግሩ ካልተፈታ፣ በቅንብሮች > ያግኙን በኩል ያግኙን። ዝርዝሮች: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "የተጠቃሚ መረጃ ማግኘት አልተሳካም። እባክዎን ትንሽ ቆይተው እንደገና ይሞክሩ። ችግሩ ካልተፈታ ቅንብሮች > ጥያቄዎች በኩል ያግኙን። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "የግዢ መረጃ ማግኘት አልተቻለም። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ። ችግሩ ቢቀጥል ቅንብሮች > ጥያቄዎች በኩል ያነጋግሩን። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnsupportedError": "የማይታወቅ ስህተት ነው። ወደ ቅርብ ስሪት ማዘመን እና እንደገና መሞከር። ችግሩ ካልተፈታ ቅንብሮች > መጠይቅ በኩል ያነጋግሩን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",

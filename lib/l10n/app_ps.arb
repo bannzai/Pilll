@@ -307,7 +307,7 @@
   "purchaseErrorIneligibleError": "ستاسو له حساب سره پېرود بشپړ نه شو. مهرباني وکړئ لږ وروسته بیا هڅه وکړئ. که ستونزه دوام وکړي، د امستنې > له موږ سره اړیکه له لارې راسره اړیکه ونیسئ. جزییات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "ستاسو د {accountName} حساب له لارې د دې پلان ګډون نه شي کېدای. مهرباني وکړئ د تادیې معلومات وګورئ او بیا هڅه وکړئ",
   "purchaseErrorPaymentPendingError": "تادیه له بشپړېدو مخکې درېدلې ده. مهرباني وکړئ د هغه {accountName} حساب په کارولو سره چې ورننوتي یاست، په {storeName} کې د تادیې حالت وګورئ.",
-  "purchaseErrorInvalidSubscriberAttributesError": "پیرودونه ناکامه شوه. یو څه وخت وروسته بیا هڅه وکړئ. که دا حل نشي، د تنظیمات > پوښتنه څخه موږ سره اړیکه ونیسئ. تفصیلات: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidSubscriberAttributesError": "پېرودنه بشپړه نه شوه. مهرباني وکړئ لږ وروسته بیا هڅه وکړئ. که ستونزه پاتې وي، د امستنو > له موږ سره اړیکه له لارې موږ سره اړیکه ونیسئ. جزییات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "د کاروونکي معلوماتو ترلاسه کول ناکام شو. یو څه وخت وروسته بیا هڅه وکړئ. که ستونزه حل نشي، د تنظیمات > پوښتنه له لارې موږ سره اړیکه ونیسئ. تفصیلات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "د پیرودونو معلوماتو اخیستل ناکام شول. یو څه وخت وروسته بیا هڅه وکړئ. که ستونزه حل نه شي نو د تنظیماتو > پوښتنې څخه موږ سره اړیکه ونیسئ. تفصیلات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnsupportedError": "دا د نامعلومو دلایلو غلطي ده. مهرباني وکړئ تر ټولو نوي نسخي ته اپډیټ کړئ او بیا یې وآزمویئ. که ستونزه حل نشي، د تنظیماتو > پوښتنې له لارې له موږ سره اړیکه ونیسئ. کوډ: {errorCode} تفصیلات: {exceptionMessage}:{exceptionDetails}",

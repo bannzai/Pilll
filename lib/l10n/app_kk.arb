@@ -307,7 +307,7 @@
   "purchaseErrorIneligibleError": "Сіздің есептік жазбаңызбен сатып алуды аяқтау мүмкін болмады. Сәлден кейін қайталап көріңіз. Мәселе шешілмесе, Баптаулар > Бізге хабарласу бөлімі арқылы хабарласыңыз. Мәліметтер: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "{accountName} есептік жазбаңызбен жоспарға жазыла алмайсыз. Төлем деректерін тексеріп, қайтадан байқап көріңіз",
   "purchaseErrorPaymentPendingError": "Төлем аяқталмай тұрып тоқтап қалды. Оның күйін өзіңіз кірген {accountName} есептік жазбасы арқылы {storeName} дүкенінен тексеріңіз.",
-  "purchaseErrorInvalidSubscriberAttributesError": "Сатып алу сәтсіз аяқталды. Біраз уақыттан кейін қайталап көріңіз. Егер мәселе шешілмесе, Баптаулар > Сұрау арқылы хабарласыңыз. Толық ақпарат: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidSubscriberAttributesError": "Сатып алу аяқталмады. Сәл кейінірек қайта көріңіз. Мәселе шешілмесе, Баптаулар > Бізге хабарласу бөлімі арқылы бізге жазыңыз. Толығырақ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Пайдаланушы ақпаратын алу сәтсіз аяқталды. Біраз уақыттан кейін қайта көріңіз. Егер мәселе шешілмесе, Баптаулар > Сұрау жіберу арқылы хабарласыңыз. Толық ақпарат: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "Сатып алу ақпаратын алу сәтсіз аяқталды. Біраз уақыттан кейін қайта көріңіз. Егер мәселе шешілмесе, Баптаулар > Байланысу арқылы хабарласыңыз. Егжей-тегжейлі: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnsupportedError": "Белгісіз қате орын алды. Соңғы нұсқаға жаңартып, қайтадан көріңіз. Шешілмесе, Параметрлер > Сұрау арқылы хабарласыңыз. Код: {errorCode} Егжей: {exceptionMessage}:{exceptionDetails}",

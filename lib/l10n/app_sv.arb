@@ -307,7 +307,7 @@
   "purchaseErrorIneligibleError": "Köpet kunde inte slutföras med ditt konto. Försök igen om en stund. Om problemet kvarstår kan du kontakta oss via Inställningar > Kontakta oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Du kan inte prenumerera på planen med ditt {accountName}-konto. Kontrollera dina betalningsuppgifter och försök igen",
   "purchaseErrorPaymentPendingError": "Betalningen avbröts. Kontrollera statusen i {storeName} med det {accountName}-konto du är inloggad på.",
-  "purchaseErrorInvalidSubscriberAttributesError": "Köpet misslyckades. Vänta en stund och försök igen. Om problemet kvarstår, kontakta oss via Inställningar > Kontakt. Detaljer: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidSubscriberAttributesError": "Köpet kunde inte slutföras. Försök igen om en stund. Om problemet kvarstår kan du kontakta oss via Inställningar > Kontakta oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Kunde inte hämta användarinformation. Vänta en stund och försök igen. Om problemet kvarstår, kontakta oss via Inställningar > Kontakt. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "Misslyckades med att hämta köpinformation. Vänta lite och försök igen. Om problemet kvarstår, kontakta oss via Inställningar > Kontakt. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnsupportedError": "Ett okänt fel har inträffat. Uppdatera till senaste versionen och försök igen. Om problemet kvarstår, kontakta oss via Inställningar > Kontakta oss. Kod: {errorCode} Detaljer: {exceptionMessage}:{exceptionDetails}",
