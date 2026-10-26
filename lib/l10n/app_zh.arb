@@ -319,7 +319,7 @@
   "purchaseErrorSystemInfoError": "设备设置出了点问题。请检查设置后重试。如果问题仍未解决，请通过设置 > 联系我们与我们联系。代码：{errorCode} 详情：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorBeginRefundRequestError": "退款处理已开始。请确认处理状态后重试。如果问题仍未解决，请通过设置 > 联系我们与我们联系。代码：{errorCode} 详情：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductRequestTimeout": "请求超时了。请检查网络连接后重试。如果问题仍未解决，请通过设置 > 联系我们与我们联系。详情：{exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorApiEndpointBlocked": "未知错误。请更新到最新版本后重试。如果问题仍未解决，请通过 设置 > 联系我们 进行咨询。代码：{errorCode} 详细信息：{exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorApiEndpointBlocked": "发生了未知错误。请将应用更新到最新版本后重试。如果问题仍未解决，请通过设置 > 联系我们与我们联系。代码：{errorCode} 详情：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "未知错误。请更新到最新版本后重试。如仍无法解决，请通过 设置 > 意见反馈 联系我们。错误代码：{errorCode} 详细信息：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "网络连接异常。请检查网络环境后重试。如问题仍未解决，请通过 设置 > 联系我们 进行咨询。详细信息: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "请更新应用",

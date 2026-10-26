@@ -319,7 +319,7 @@
   "purchaseErrorSystemInfoError": "በመሣሪያዎ ቅንብሮች ላይ ችግር አለ። እባክዎ ቅንብሮቹን ያረጋግጡና እንደገና ይሞክሩ። ችግሩ ካልተፈታ በቅንብሮች > እኛን ያግኙ በኩል ያግኙን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorBeginRefundRequestError": "የገንዘብ ተመላሽ ሂደት ተጀምሯል። እባክዎ ሁኔታውን ያረጋግጡና እንደገና ይሞክሩ። ችግሩ ካልተፈታ፣ ከቅንብሮች > ያግኙን ያነጋግሩን። ኮድ፦ {errorCode} ዝርዝር፦ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductRequestTimeout": "ጥያቄው ጊዜው አልፎበታል። እባክዎ የበይነመረብ ግንኙነትዎን ያረጋግጡና እንደገና ይሞክሩ። ችግሩ ከቀጠለ፣ በቅንብሮች > ያግኙን በኩል ያግኙን። ዝርዝር፦ {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorApiEndpointBlocked": "አልታወቀ ስህተት ነው። ወደ ቅርብ ስሪት ወርድ እና እንደገና ሞክር። ካልተፈታ ቅንብሮች > ጥያቄ በኩል አግኝን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorApiEndpointBlocked": "ያልታወቀ ስህተት ተፈጥሯል። እባክዎ መተግበሪያውን ወደ አዲሱ ስሪት ያዘምኑና እንደገና ይሞክሩ። ችግሩ ካልተፈታ በቅንብሮች > ያግኙን በኩል ያግኙን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "በማይታወቅ ምክንያት የተፈጠረ ስህተት ነው። ወደ ቅርብ እትም ካሻሻሉ በኋላ እንደገና ይሞክሩ። ካልተፈታ በማቀናብሪያ > ጥያቄ በኩል ያነጋግሩን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "የኔትወርክ ግንኙነት ችግር አለ። የኔትወርክ ሁኔታዎን ያረጋግጡ እና እንደገና ይሞክሩ። ችግሩ ከቀጠለ ቅንብሮች > አግኙን በመሄድ ያግኙን። ዝርዝሮች: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "እባክዎ መተግበሪያውን ያዘምኑ",

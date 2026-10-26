@@ -319,7 +319,7 @@
   "purchaseErrorSystemInfoError": "יש בעיה בהגדרות המכשיר. כדאי לבדוק אותן ולנסות שוב. אם הבעיה נמשכת, אפשר ליצור איתנו קשר דרך הגדרות > יצירת קשר. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorBeginRefundRequestError": "הטיפול בהחזר הכספי החל. מומלץ לבדוק את המצב ולנסות שוב. אם הבעיה נמשכת, אפשר לפנות אלינו דרך הגדרות > יצירת קשר. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductRequestTimeout": "תם זמן ההמתנה. כדאי לבדוק את החיבור לאינטרנט ולנסות שוב. אם הבעיה נמשכת, אפשר לפנות אלינו דרך הגדרות > יצירת קשר. פרטים: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorApiEndpointBlocked": "שגיאה לא ידועה. אנא עדכן לגרסה החדשה ביותר ונסה שוב. במידה והבעיה לא נפתרת, אנא צור קשר דרך הגדרות > פנייה. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorApiEndpointBlocked": "אירעה שגיאה לא ידועה. כדאי לעדכן את האפליקציה לגרסה העדכנית ביותר ולנסות שוב. אם הבעיה נמשכת, אפשר ליצור איתנו קשר דרך הגדרות > יצירת קשר. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "שגיאה לא ידועה. אנא עדכן לגרסה האחרונה ונסה שוב. אם הבעיה לא נפתרת, אנא פנה אלינו דרך הגדרות > פנייה. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "יש בעיית תקשורת. אנא בדקו את סביבת התקשורת ונסו שוב. אם הבעיה לא נפתרת, אנא פנו אלינו דרך הגדרות > צור קשר. פרטים: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "אנא עדכן את האפליקציה",
