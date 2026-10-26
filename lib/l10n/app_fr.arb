@@ -78,7 +78,7 @@
   "appExitMessage": "L’application va se fermer. Pour repartir de zéro, ouvrez-la à nouveau et terminez la configuration initiale.",
   "oK": "OK",
   "changePillNumber": "Modifier le numéro de pilule",
-  "change": "Changement",
+  "change": "Modifier",
   "pill": "Pilule",
   "calendar": "Calendrier",
   "userInformationWillBeDeleted": "Les données utilisateur seront supprimées",
