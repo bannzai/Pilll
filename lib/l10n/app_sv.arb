@@ -135,7 +135,7 @@
   "changedToNumber": "Ändra till det här numret",
   "displayMode": "Visningsläge",
   "dateDisplay": "Datumvisning",
-  "pillNumber": "Pillnummer",
+  "pillNumber": "tablettnummer",
   "pillDaysCycle": "Intag dagar",
   "pillSheetEnded": "P-pillerförpackningen är slut",
   "checkLastTakenDate": "Kontrollera senaste intag",
