@@ -449,7 +449,7 @@
   "emailCannotReceiveICloud": "※እባክዎ ከ@icloud.com ውጭ የሆነ የኢሜይል አድራሻ ይጠቀሙ። የምላሽ ኢሜይሎች ብዙ ጊዜ ይታገዳሉ።",
   "emailReceiveSettingNote": "እባክዎ ከpilll.reminder.app@gmail.com የሚላኩ ኢሜይሎች እንዲደርሱዎ የኢሜይል ቅንብሮችዎን ያስተካክሉ",
   "inquiryContentRequired": "እባክዎ የጥያቄዎን ዝርዝር ያስገቡ",
-  "lifetimeSubscriptionWarning": "አንድ ጊዜ ክፍያ ፕላን ስለ ገዙ እናመሰግናለን። ወርሃዊ ወይም ዓመታዊ ፕላን ደንበኛ ከሆኑ፣ ደንበኝነት ምዝገባዎን ለመሰረዝ አይርሱ።",
+  "lifetimeSubscriptionWarning": "የዕድሜ ልክ እቅድን ስለገዙ እናመሰግናለን። ወርሃዊ ወይም ዓመታዊ ምዝገባ ካለዎት፣ እባክዎ መሰረዝዎን አይርሱ።",
   "lifetimePurchaseNotice1": "・«የአንድ ጊዜ ግዢ እቅድ»ን ቢገዙ እንኳን፣ «ወርሃዊ/ዓመታዊ እቅድ» በራስ-ሰር አይሰረዝም።",
   "lifetimePurchaseNotice2": "እዚህ",
   "lifetimePurchaseNotice3": "ቀደም ብሎ ሰርዘው ከዚያ ይግዙ።",
