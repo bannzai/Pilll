@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "មិនទាន់កំណត់",
   "selectPlannedResumeDate": "សូមជ្រើសរើសថ្ងៃដែលគ្រោងចាប់ផ្តើមលេបថ្នាំគ្រាប់វិញ",
   "pauseEndDateLimitIsToday": "កាលបរិច្ឆេទបញ្ចប់អាចជ្រើសបានត្រឹមថ្ងៃនេះ",
-  "pauseEndDateLimitBeforeNextPause": "រហូតដល់ថ្ងៃដែលមិនជាន់គ្នានឹងការសម្រាកបន្ទាប់ ({date}〜)",
+  "pauseEndDateLimitBeforeNextPause": "រហូតដល់ថ្ងៃដែលមិនជាន់នឹងរយៈពេលសម្រាកបន្ទាប់ (ចាប់ពី {date})",
   "pauseStartDateLimit": "អាចជ្រើសរើសកាលបរិច្ឆេទចាប់ផ្តើមបានរហូតដល់ {date}",
   "initialSettingAskYazFlex": "តើអ្នកកំពុងប្រើ Yaz Flex មែនទេ?",
   "initialSettingAskYazFlexDescription": "ប្រសិនបើអ្នកជ្រើសរើស «បាទ/ចាស»\nយើងនឹងកំណត់ឱ្យអាចបង្ហាញថា ជាថ្ងៃទីប៉ុន្មានបន្ទាប់ពីចប់រយៈពេលឈប់លេបថ្នាំ។",

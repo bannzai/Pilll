@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "טרם נקבע",
   "selectPlannedResumeDate": "לבחור את התאריך המתוכנן לחידוש נטילת הגלולה",
   "pauseEndDateLimitIsToday": "תאריך הסיום יכול להיות היום לכל המאוחר",
-  "pauseEndDateLimitBeforeNextPause": "עד ליום שאינו חופף להפסקה הבאה ({date}〜)",
+  "pauseEndDateLimitBeforeNextPause": "עד לתאריך שאינו חופף להפסקה הבאה (מ־{date})",
   "pauseStartDateLimit": "ניתן לבחור את תאריך ההתחלה עד {date}",
   "initialSettingAskYazFlex": "האם את משתמשת ב-Yaz Flex?",
   "initialSettingAskYazFlexDescription": "אם תבחרי ב״כן״,\nנגדיר שיוצג כמה ימים עברו מאז סיום ההפסקה.",

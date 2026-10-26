@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "अद्याप ठरवलेली नाही",
   "selectPlannedResumeDate": "गोळी पुन्हा घेण्याची नियोजित तारीख निवडा",
   "pauseEndDateLimitIsToday": "समाप्तीची तारीख आजपर्यंतच निवडता येईल",
-  "pauseEndDateLimitBeforeNextPause": "पुढील विश्रांती ({date}〜) शी जुळत नाही त्या दिवसापर्यंत",
+  "pauseEndDateLimitBeforeNextPause": "पुढील विश्रांतीशी ({date} पासून) न जुळणाऱ्या तारखेपर्यंत",
   "pauseStartDateLimit": "सुरुवातीची तारीख {date} पर्यंत निवडता येईल",
   "initialSettingAskYazFlex": "तुम्ही Yaz Flex वापरत आहात का?",
   "initialSettingAskYazFlexDescription": "“होय” निवडल्यास\nविश्रांतीचा कालावधी संपल्यानंतर कितवा दिवस आहे हे दाखवण्यासाठी सेट केले जाईल",

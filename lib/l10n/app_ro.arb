@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "Încă nestabilită",
   "selectPlannedResumeDate": "Alege data la care plănuiești să reiei pilula",
   "pauseEndDateLimitIsToday": "Data de încheiere poate fi cel târziu astăzi",
-  "pauseEndDateLimitBeforeNextPause": "Până în ziua care nu se suprapune cu următoarea pauză ({date}–)",
+  "pauseEndDateLimitBeforeNextPause": "Până la o dată care nu se suprapune cu următoarea pauză (din {date})",
   "pauseStartDateLimit": "Data de începere poate fi aleasă până la {date}",
   "initialSettingAskYazFlex": "Folosiți Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Dacă alegeți „Da”,\nvom seta afișarea numărului de zile de la încheierea pauzei.",

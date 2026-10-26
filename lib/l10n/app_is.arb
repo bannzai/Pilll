@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "Ekki ákveðið enn",
   "selectPlannedResumeDate": "Veldu daginn sem þú ætlar að byrja að taka pilluna aftur",
   "pauseEndDateLimitIsToday": "Lokadagsetning getur í síðasta lagi verið í dag",
-  "pauseEndDateLimitBeforeNextPause": "Fram að deginum sem skarast ekki við næsta hlé ({date}–)",
+  "pauseEndDateLimitBeforeNextPause": "Fram að degi sem skarast ekki við næsta pilluhlé (frá {date})",
   "pauseStartDateLimit": "Hægt er að velja upphafsdag til {date}",
   "initialSettingAskYazFlex": "Ertu að nota Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ef þú velur „Já“,\nstillum við þetta þannig að hægt sé að sýna hversu margir dagar eru liðnir frá því að hléinu lauk.",

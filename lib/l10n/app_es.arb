@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "Aún sin definir",
   "selectPlannedResumeDate": "Elige la fecha prevista para volver a tomar la píldora",
   "pauseEndDateLimitIsToday": "La fecha de finalización puede ser, como máximo, hoy",
-  "pauseEndDateLimitBeforeNextPause": "Hasta el día en que no se superponga con el siguiente descanso ({date}〜)",
+  "pauseEndDateLimitBeforeNextPause": "Hasta una fecha que no coincida con la próxima pausa (desde el {date})",
   "pauseStartDateLimit": "La fecha de inicio se puede seleccionar hasta {date}",
   "initialSettingAskYazFlex": "¿Estás usando Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Si eliges “Sí”,\nlo configuraremos para que puedas ver cuántos días han pasado desde que terminó el descanso.",

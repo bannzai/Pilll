@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "এতিয়াও নিৰ্ধাৰণ কৰা হোৱা নাই",
   "selectPlannedResumeDate": "পুনৰ বড়ি খাবলৈ পৰিকল্পনা কৰা তাৰিখ বাছনি কৰক",
   "pauseEndDateLimitIsToday": "শেষৰ তাৰিখ হিচাপে আজিলৈকে বাছিব পাৰিব",
-  "pauseEndDateLimitBeforeNextPause": "পৰৱৰ্তী বিৰতি ({date}〜)-ৰ সৈতে নুওভৰা দিনলৈকে",
+  "pauseEndDateLimitBeforeNextPause": "পৰৱৰ্তী বিৰতি ({date}ৰ পৰা)ৰ সৈতে একেলগ নোহোৱা তাৰিখলৈকে",
   "pauseStartDateLimit": "আৰম্ভৰ তাৰিখ {date} লৈকে বাছনি কৰিব পাৰি",
   "initialSettingAskYazFlex": "আপুনি Yaz Flex ব্যৱহাৰ কৰে নেকি?",
   "initialSettingAskYazFlexDescription": "“হয়” বাছনি কৰিলে\nঔষধ বন্ধৰ সময় শেষ হোৱাৰ পিছত কিমান দিন হ’ল সেয়া দেখুৱাব পৰাকৈ ছেট কৰা হ’ব",

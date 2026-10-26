@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "لم يُحدَّد بعد",
   "selectPlannedResumeDate": "اختاري التاريخ المخطط لاستئناف تناول الحبوب",
   "pauseEndDateLimitIsToday": "آخر تاريخ يمكن اختياره للنهاية هو اليوم",
-  "pauseEndDateLimitBeforeNextPause": "حتى اليوم الذي لا يتداخل مع فترة التوقف التالية ({date}〜)",
+  "pauseEndDateLimitBeforeNextPause": "حتى تاريخ لا يتداخل مع فترة التوقف التالية (تبدأ في {date})",
   "pauseStartDateLimit": "يمكن اختيار تاريخ البدء حتى {date}",
   "initialSettingAskYazFlex": "هل تستخدمين ياز فليكس؟",
   "initialSettingAskYazFlexDescription": "إذا اخترتِ «نعم»،\nفسنضبط الإعدادات بحيث يمكن عرض عدد الأيام منذ انتهاء فترة التوقف.",

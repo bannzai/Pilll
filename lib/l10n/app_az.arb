@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "Hələ təyin edilməyib",
   "selectPlannedResumeDate": "Həbi yenidən qəbul edəcəyiniz tarixi seçin",
   "pauseEndDateLimitIsToday": "Bitiş tarixi ən gec bu gün ola bilər",
-  "pauseEndDateLimitBeforeNextPause": "Növbəti fasilə ({date}〜) ilə üst-üstə düşməyən günədək",
+  "pauseEndDateLimitBeforeNextPause": "Növbəti fasilə ilə ({date} tarixindən) üst-üstə düşməyən tarixədək",
   "pauseStartDateLimit": "Başlanğıc tarixi ən gec {date} seçilə bilər",
   "initialSettingAskYazFlex": "Yaz Flex istifadə edirsiniz?",
   "initialSettingAskYazFlexDescription": "“Bəli” seçsəniz,\nfasilədən sonra neçə gün keçdiyini göstərə biləcək şəkildə tənzimləyəcəyik.",

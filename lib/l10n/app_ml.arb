@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "ഇതുവരെ നിശ്ചയിച്ചിട്ടില്ല",
   "selectPlannedResumeDate": "ഗുളിക വീണ്ടും കഴിക്കാൻ ഉദ്ദേശിക്കുന്ന തീയതി തിരഞ്ഞെടുക്കൂ",
   "pauseEndDateLimitIsToday": "അവസാന തീയതിയായി ഇന്നുവരെ മാത്രമേ തിരഞ്ഞെടുക്കാനാകൂ",
-  "pauseEndDateLimitBeforeNextPause": "അടുത്ത ഇടവേള ({date}〜) യുമായി ഒതുങ്ങാത്ത ദിവസം വരെ",
+  "pauseEndDateLimitBeforeNextPause": "അടുത്ത ഇടവേളയുമായി ({date} മുതൽ) ഒത്തുചേരാത്ത തീയതി വരെ",
   "pauseStartDateLimit": "ആരംഭ തീയതി {date} വരെ തിരഞ്ഞെടുക്കാം",
   "initialSettingAskYazFlex": "നിങ്ങൾ Yaz Flex ഉപയോഗിക്കുകയാണോ?",
   "initialSettingAskYazFlexDescription": "“അതെ” തിരഞ്ഞെടുക്കുകയാണെങ്കിൽ\nഇടവേള കഴിഞ്ഞ് എത്രാമത്തെ ദിവസമാണെന്ന് കാണിക്കുന്ന വിധത്തിൽ സജ്ജീകരിക്കും",

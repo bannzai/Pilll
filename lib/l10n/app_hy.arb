@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "Դեռ սահմանված չէ",
   "selectPlannedResumeDate": "Ընտրեք հաբի ընդունումը վերսկսելու նախատեսված օրը",
   "pauseEndDateLimitIsToday": "Ավարտի ամսաթիվը կարող է լինել ամենաուշը այսօր",
-  "pauseEndDateLimitBeforeNextPause": "Մինչ այն օրը, որը չի համընկնում հաջորդ դադարի հետ ({date}〜)",
+  "pauseEndDateLimitBeforeNextPause": "Մինչև հաջորդ ընդմիջման ({date}-ից) հետ չհամընկնող օրը",
   "pauseStartDateLimit": "Մեկնարկի ամսաթիվը կարելի է ընտրել մինչև {date}",
   "initialSettingAskYazFlex": "Yaz Flex օգտագործո՞ւմ եք։",
   "initialSettingAskYazFlexDescription": "Եթե ընտրեք «Այո»-ն,\nկկարգավորենք, որպեսզի ցուցադրվի, թե ընդմիջման ավարտից քանիերորդ օրն է։",

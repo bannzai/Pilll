@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "Одоогоор товлоогүй",
   "selectPlannedResumeDate": "Эмээ дахин ууж эхлэхээр төлөвлөсөн өдрөө сонгоно уу",
   "pauseEndDateLimitIsToday": "Дуусах өдрийг өнөөдрөөс хойш сонгох боломжгүй",
-  "pauseEndDateLimitBeforeNextPause": "Дараагийн завсарлага ({date}〜)-тай давхцахгүй өдөр хүртэл",
+  "pauseEndDateLimitBeforeNextPause": "Дараагийн завсарлагатай ({date}-наас) давхцахгүй өдөр хүртэл",
   "pauseStartDateLimit": "Эхлэх өдрийг {date} хүртэл сонгох боломжтой",
   "initialSettingAskYazFlex": "Та Yaz Flex хэрэглэж байна уу?",
   "initialSettingAskYazFlexDescription": "“Тийм”-ийг сонговол\nзавсарлага дууссанаас хойш хэд дэх өдөр болохыг харуулахаар тохируулна",

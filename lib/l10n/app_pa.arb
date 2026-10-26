@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "ਹਾਲੇ ਤੈਅ ਨਹੀਂ ਕੀਤਾ",
   "selectPlannedResumeDate": "ਗੋਲੀ ਦੁਬਾਰਾ ਲੈਣ ਦੀ ਯੋਜਨਾਬੱਧ ਤਾਰੀਖ ਚੁਣੋ",
   "pauseEndDateLimitIsToday": "ਸਮਾਪਤੀ ਦੀ ਤਾਰੀਖ ਅੱਜ ਤੱਕ ਹੀ ਚੁਣੀ ਜਾ ਸਕਦੀ ਹੈ",
-  "pauseEndDateLimitBeforeNextPause": "ਅਗਲੇ ਵਿਸ਼ਰਾਮ ({date}〜) ਨਾਲ ਨਾ ਓਵਰਲੈਪ ਕਰਨ ਵਾਲੇ ਦਿਨ ਤੱਕ",
+  "pauseEndDateLimitBeforeNextPause": "ਅਗਲੇ ਵਿਰਾਮ ({date} ਤੋਂ) ਨਾਲ ਨਾ ਟਕਰਾਉਣ ਵਾਲੀ ਤਾਰੀਖ਼ ਤੱਕ",
   "pauseStartDateLimit": "ਸ਼ੁਰੂਆਤੀ ਤਾਰੀਖ {date} ਤੱਕ ਚੁਣੀ ਜਾ ਸਕਦੀ ਹੈ",
   "initialSettingAskYazFlex": "ਕੀ ਤੁਸੀਂ Yaz Flex ਵਰਤ ਰਹੇ ਹੋ?",
   "initialSettingAskYazFlexDescription": "“ਹਾਂ” ਚੁਣਨ ਤੇ\nਬ੍ਰੇਕ ਖਤਮ ਹੋਣ ਤੋਂ ਬਾਅਦ ਕਿੰਨਾ ਦਿਨ ਹੋਇਆ ਹੈ, ਇਹ ਵੇਖਾਉਣ ਲਈ ਸੈਟ ਕੀਤਾ ਜਾਵੇਗਾ",

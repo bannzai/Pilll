@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "Nije postavljeno",
   "selectPlannedResumeDate": "Odaberite planirani datum ponovnog uzimanja pilule",
   "pauseEndDateLimitIsToday": "Datum završetka može biti najkasnije danas",
-  "pauseEndDateLimitBeforeNextPause": "Do dana koji se ne preklapa sa sljedećom pauzom ({date}–)",
+  "pauseEndDateLimitBeforeNextPause": "Do datuma koji se ne preklapa sa sljedećom pauzom (od {date})",
   "pauseStartDateLimit": "Datum početka može se odabrati do {date}",
   "initialSettingAskYazFlex": "Koristite li Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ako odaberete „Da”,\npodesit ćemo prikaz koji pokazuje koji je dan nakon završetka pauze.",

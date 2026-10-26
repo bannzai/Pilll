@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "አልተወሰነም",
   "selectPlannedResumeDate": "ክኒን መውሰድ የሚቀጥሉበትን ቀን ይምረጡ",
   "pauseEndDateLimitIsToday": "የመጨረሻ ቀን ከዛሬ በላይ መሆን አይችልም",
-  "pauseEndDateLimitBeforeNextPause": "ከሚቀጥለው እረፍት ({date}〜) ጋር እስካልተደራረበ ቀን ድረስ",
+  "pauseEndDateLimitBeforeNextPause": "ከቀጣዩ የክኒን እረፍት ({date} ጀምሮ) ጋር እስከማይደራረብ ቀን ድረስ",
   "pauseStartDateLimit": "የመጀመሪያ ቀን እስከ {date} ድረስ መምረጥ ይቻላል",
   "initialSettingAskYazFlex": "Yaz Flex ነው የምትወስዱት?",
   "initialSettingAskYazFlexDescription": "«አዎ»ን ከመረጡ\nከመድኃኒት እረፍቱ በኋላ ስንተኛ ቀን እንደሆነ እንዲታይ እናስተካክላለን",

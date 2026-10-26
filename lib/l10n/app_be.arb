@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "Не зададзена",
   "selectPlannedResumeDate": "Выберыце дату аднаўлення прыёму пігулкі",
   "pauseEndDateLimitIsToday": "Дата заканчэння можа быць не пазней за сёння",
-  "pauseEndDateLimitBeforeNextPause": "Да дня, які не перасякаецца з наступным перапынкам ({date}〜)",
+  "pauseEndDateLimitBeforeNextPause": "Да даты, якая не перасякаецца з наступным перапынкам (з {date})",
   "pauseStartDateLimit": "Дату пачатку можна выбраць да {date}",
   "initialSettingAskYazFlex": "Вы прымаеце Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Калі вы выбераце «Так»,\nмы наладзім паказ колькасці дзён пасля заканчэння перапынку.",

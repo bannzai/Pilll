@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "Δεν έχει οριστεί",
   "selectPlannedResumeDate": "Επιλέξτε την προγραμματισμένη ημερομηνία επανέναρξης λήψης του χαπιού",
   "pauseEndDateLimitIsToday": "Η ημερομηνία λήξης μπορεί να είναι το αργότερο σήμερα",
-  "pauseEndDateLimitBeforeNextPause": "Μέχρι την ημέρα που δεν επικαλύπτεται με την επόμενη παύση ({date}〜)",
+  "pauseEndDateLimitBeforeNextPause": "Έως ημερομηνία που δεν συμπίπτει με το επόμενο διάλειμμα (από {date})",
   "pauseStartDateLimit": "Η ημερομηνία έναρξης μπορεί να επιλεγεί έως τις {date}",
   "initialSettingAskYazFlex": "Παίρνετε το Yaz Flex;",
   "initialSettingAskYazFlexDescription": "Αν επιλέξετε «Ναι»,\nθα το ρυθμίσουμε ώστε να εμφανίζεται πόσες ημέρες έχουν περάσει από το τέλος της διακοπής.",

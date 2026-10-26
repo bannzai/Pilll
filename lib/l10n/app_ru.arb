@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "Пока не указана",
   "selectPlannedResumeDate": "Выберите планируемую дату возобновления приёма таблетки",
   "pauseEndDateLimitIsToday": "Дата окончания может быть не позднее сегодняшнего дня",
-  "pauseEndDateLimitBeforeNextPause": "До дня, который не пересекается со следующим перерывом ({date}–)",
+  "pauseEndDateLimitBeforeNextPause": "До даты, которая не пересекается со следующим перерывом (с {date})",
   "pauseStartDateLimit": "Дату начала можно выбрать до {date}",
   "initialSettingAskYazFlex": "Вы принимаете Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Если вы выберете «Да»,\nмы настроим отображение того, какой день идёт после окончания перерыва.",
