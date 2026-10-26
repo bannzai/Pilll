@@ -37,7 +37,7 @@
   "unsubscribeInfo": "درباره لغو اشتراک",
   "pillReminder": "یادآوری مصرف قرص",
   "takePillReminderChannelName": "یادآورهای مصرف قرص",
-  "takePillReminder": "💊 وقت قرص است!",
+  "takePillReminder": "وقت مصرف قرص شماست 💊",
   "copyDebugInfo": "کپی اطلاعات دیباگ",
   "cancel": "لغو",
   "signOut": "خروج",

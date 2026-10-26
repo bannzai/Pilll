@@ -37,7 +37,7 @@
   "unsubscribeInfo": "Tilauksen peruuttaminen",
   "pillReminder": "Pillerimuistutus",
   "takePillReminderChannelName": "Pillerimuistutukset",
-  "takePillReminder": "💊 Pilleriaika!",
+  "takePillReminder": "On aika ottaa pilleri 💊",
   "copyDebugInfo": "KOPIOI VIANETSINTÄTIEDOT",
   "cancel": "Peruuta",
   "signOut": "Kirjaudu ulos",

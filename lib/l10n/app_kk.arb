@@ -37,7 +37,7 @@
   "unsubscribeInfo": "Жазылымнан бас тарту туралы",
   "pillReminder": "Таблетка қабылдау туралы еске салу",
   "takePillReminderChannelName": "Таблетка қабылдау еске салғыштары",
-  "takePillReminder": "💊 уақыты!",
+  "takePillReminder": "Таблеткаңызды қабылдайтын уақыт келді 💊",
   "copyDebugInfo": "DEBUG АҚПАРАТЫН КӨШІРУ",
   "cancel": "Болдырмау",
   "signOut": "Шығу",

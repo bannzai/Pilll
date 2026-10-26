@@ -37,7 +37,7 @@
   "unsubscribeInfo": "सब्सक्रिप्शन रद्द करने के बारे में",
   "pillReminder": "गोली लेने का रिमाइंडर",
   "takePillReminderChannelName": "गोली लेने के रिमाइंडर",
-  "takePillReminder": "💊 का समय है",
+  "takePillReminder": "आपकी गोली लेने का समय हो गया है 💊",
   "copyDebugInfo": "डिबग जानकारी कॉपी करें",
   "cancel": "रद्द करें",
   "signOut": "साइन आउट",

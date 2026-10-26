@@ -37,7 +37,7 @@
   "unsubscribeInfo": "Tellimuse tühistamisest",
   "pillReminder": "Pilli võtmise meeldetuletus",
   "takePillReminderChannelName": "Pilli võtmise meeldetuletused",
-  "takePillReminder": "💊 aeg!",
+  "takePillReminder": "Aeg on võtta oma pill 💊",
   "copyDebugInfo": "KOPEERI SILUMISINFO",
   "cancel": "Tühista",
   "signOut": "Logi välja",

@@ -37,7 +37,7 @@
   "unsubscribeInfo": "Abunəliyin ləğvi haqqında",
   "pillReminder": "Həb qəbulu xatırlatması",
   "takePillReminderChannelName": "Həb qəbulu bildirişləri",
-  "takePillReminder": "💊 vaxtıdır",
+  "takePillReminder": "Həbinizi qəbul etməyin vaxtıdır 💊",
   "copyDebugInfo": "DEBUG MƏLUMATINI KOPYALA",
   "cancel": "Ləğv et",
   "signOut": "Çıxış",
