@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "Connect to Health",
   "healthCareIntegrationFeatureAppealShortDescription": "Share period records with Health",
   "healthCareIntegrationFeatureAppealHeadline": "Connect with Health",
-  "healthCareIntegrationFeatureAppealBody": "Automatically sync the period data you record in Pilll with the Apple Health app. View it together with your other health data, and reuse it across other apps that read from Health.",
+  "healthCareIntegrationFeatureAppealBody": "You can automatically sync the period data you record in Pilll with the Health app. View it alongside your other health data and use it in other apps.",
   "quickRecordFeatureAppealTitle": "Record from the notification",
   "quickRecordFeatureAppealShortDescription": "Log your dose right from the push",
   "quickRecordFeatureAppealHeadline": "Tap the notification to record",

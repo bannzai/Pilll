@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "Forbind til Sundhed",
   "healthCareIntegrationFeatureAppealShortDescription": "Del menstruationsregistreringer med Sundhed",
   "healthCareIntegrationFeatureAppealHeadline": "Kan forbindes med appen Sundhed",
-  "healthCareIntegrationFeatureAppealBody": "Du kan automatisk synkronisere menstruationsdata registreret i Pilll med Sundhed-appen. Du kan se dem sammen med andre sundhedsdata i Sundhed og bruge menstruationsdataene i andre apps.",
+  "healthCareIntegrationFeatureAppealBody": "Du kan automatisk synkronisere de menstruationsdata, du har registreret i Pilll, med appen Sundhed. Her kan du se dem sammen med dine øvrige sundhedsdata og bruge dem i andre apps.",
   "quickRecordFeatureAppealTitle": "Registrer direkte fra notifikation",
   "quickRecordFeatureAppealShortDescription": "Registrer via notifikationer uden at åbne appen",
   "quickRecordFeatureAppealHeadline": "Registrer med ét tryk fra notifikationsskærmen",

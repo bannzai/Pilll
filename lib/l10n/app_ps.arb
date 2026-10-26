@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "د روغتیا اپ سره ونښلوئ",
   "healthCareIntegrationFeatureAppealShortDescription": "د حیض ریکارډونه د روغتیا له اپ سره شریک کړئ",
   "healthCareIntegrationFeatureAppealHeadline": "د روغتیا له اپلېکېشن سره نښلېدای شي",
-  "healthCareIntegrationFeatureAppealBody": "تاسو کولای شئ چې د Pilll نه ثبت شوي د حیض معلومات د روغتیا اپلیکیشن سره اوتومات یوځای کړئ. تاسو کولای شئ دا د روغتیا اپلیکیشن کې د نورو روغتیا معلوماتو سره یوځای وګورئ، او د نورو اپلیکیشنونو کې هم د حیض معلومات کارولای شئ.",
+  "healthCareIntegrationFeatureAppealBody": "په Pilll کې ثبت شوي د حیض معلومات له روغتیايي اپ سره په اوتومات ډول همغږي کولی شئ. تاسو یې له نورو روغتیايي معلوماتو سره یوځای کتلی او په نورو اپونو کې هم کارولی شئ.",
   "quickRecordFeatureAppealTitle": "له خبرتیا نه مستقیم د دوا ثبت",
   "quickRecordFeatureAppealShortDescription": "پرته له اپ خلاصولو د خبرتیا له لارې ثبت کړئ",
   "quickRecordFeatureAppealHeadline": "د خبرتیا پر سکرین د یوه ټچ سره د دوا د اخیستلو ثبتول",

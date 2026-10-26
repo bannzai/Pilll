@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "Միացում Առողջություն հավելվածին",
   "healthCareIntegrationFeatureAppealShortDescription": "Կիսվեք դաշտանի գրառումներով Առողջություն հավելվածի հետ",
   "healthCareIntegrationFeatureAppealHeadline": "Կարող եք միացնել Առողջություն հավելվածին",
-  "healthCareIntegrationFeatureAppealBody": "Pilll-ում գրանցված ձեր դաշտանային տվյալները ավտոմատ համաժամացվում են Health հավելվածի հետ։ Կարող եք դրանք դիտել ձեր մյուս առողջական տվյալների հետ միասին, ինչպես նաև վերաօգտագործել այլ հավելվածներում, որոնք տվյալներ են կարդում Health-ից։",
+  "healthCareIntegrationFeatureAppealBody": "Pilll-ում գրանցված դաշտանի տվյալները կարող եք ինքնաշխատ համաժամեցնել Առողջություն հավելվածի հետ։ Այնտեղ կարող եք դրանք դիտել առողջության Ձեր մյուս տվյալների հետ և օգտագործել այլ հավելվածներում։",
   "quickRecordFeatureAppealTitle": "Գրանցել ընդունումը անմիջապես ծանուցումից",
   "quickRecordFeatureAppealShortDescription": "Ծանուցումից գրանցում՝ առանց հավելվածը բացելու",
   "quickRecordFeatureAppealHeadline": "Ծանուցման էկրանին՝ մեկ հպումով ընդունման գրառում",

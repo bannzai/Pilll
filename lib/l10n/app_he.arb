@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "חיבור לבריאות",
   "healthCareIntegrationFeatureAppealShortDescription": "שיתוף רישומי מחזור עם האפליקציה בריאות",
   "healthCareIntegrationFeatureAppealHeadline": "אפשר להתחבר לאפליקציית הבריאות",
-  "healthCareIntegrationFeatureAppealBody": "ניתן לסנכרן אוטומטית את נתוני המחזור שנרשמו ב-Pilll עם אפליקציית הבריאות. תוכלי לצפות בהם יחד עם נתוני בריאות אחרים באפליקציית הבריאות, ולהשתמש בנתוני המחזור גם באפליקציות אחרות.",
+  "healthCareIntegrationFeatureAppealBody": "אפשר לסנכרן אוטומטית את נתוני המחזור שתועדו ב-Pilll עם אפליקציית הבריאות. כך אפשר לצפות בהם לצד נתוני בריאות אחרים ולהשתמש בהם גם באפליקציות אחרות.",
   "quickRecordFeatureAppealTitle": "תיעוד נטילת תרופות ישירות מההתראה",
   "quickRecordFeatureAppealShortDescription": "תיעוד מההתראה ללא פתיחת האפליקציה",
   "quickRecordFeatureAppealHeadline": "תיעוד נטילה בהקשה אחת ממסך ההתראות",

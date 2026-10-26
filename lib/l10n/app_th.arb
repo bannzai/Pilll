@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "เชื่อมต่อกับแอปสุขภาพ",
   "healthCareIntegrationFeatureAppealShortDescription": "แชร์บันทึกประจำเดือนกับแอปสุขภาพ",
   "healthCareIntegrationFeatureAppealHeadline": "เชื่อมต่อกับแอปสุขภาพได้",
-  "healthCareIntegrationFeatureAppealBody": "คุณสามารถซิงค์ข้อมูลรอบเดือนที่บันทึกใน Pilll กับแอปสุขภาพโดยอัตโนมัติ เพื่อดูร่วมกับข้อมูลสุขภาพอื่นๆ บนแอปสุขภาพ หรือเพื่อให้แอปอื่นๆ สามารถเข้าถึงข้อมูลรอบเดือนได้",
+  "healthCareIntegrationFeatureAppealBody": "ข้อมูลประจำเดือนที่บันทึกใน Pilll สามารถซิงค์กับแอปสุขภาพได้โดยอัตโนมัติค่ะ คุณสามารถดูข้อมูลนี้ควบคู่กับข้อมูลสุขภาพอื่น ๆ และใช้ในแอปอื่นได้ด้วยค่ะ",
   "quickRecordFeatureAppealTitle": "บันทึกทันทีจากการแจ้งเตือน",
   "quickRecordFeatureAppealShortDescription": "บันทึกผ่านการแจ้งเตือนโดยไม่ต้องเปิดแอป",
   "quickRecordFeatureAppealHeadline": "แตะครั้งเดียวบนหน้าการแจ้งเตือนเพื่อบันทึกการรับประทาน",

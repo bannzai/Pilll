@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "Connecta amb Salut",
   "healthCareIntegrationFeatureAppealShortDescription": "Comparteix els registres de la regla amb Salut",
   "healthCareIntegrationFeatureAppealHeadline": "Pots connectar amb l'app Salut",
-  "healthCareIntegrationFeatureAppealBody": "Podeu sincronitzar automàticament les dades menstruals registrades a Pilll amb l'aplicació de Salut. Podreu consultar-les juntament amb les altres dades de salut i fer servir les dades menstruals en d'altres aplicacions.",
+  "healthCareIntegrationFeatureAppealBody": "Pots sincronitzar automàticament les dades de la regla que has registrat a Pilll amb l’app Salut. Les podràs consultar juntament amb altres dades de salut i fer-les servir en altres aplicacions.",
   "quickRecordFeatureAppealTitle": "Registre de presa des de la notificació",
   "quickRecordFeatureAppealShortDescription": "Registrar des de la notificació sense obrir l'app",
   "quickRecordFeatureAppealHeadline": "Registre de presa amb un toc des de la pantalla de notificació",

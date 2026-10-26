@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "连接健康 App",
   "healthCareIntegrationFeatureAppealShortDescription": "与健康 App 共享经期记录",
   "healthCareIntegrationFeatureAppealHeadline": "可与健康 App 连接",
-  "healthCareIntegrationFeatureAppealBody": "您可以将 Pilll 中记录的生理数据自动与健康应用同步。这样，您可以在健康应用中与其他健康数据一并查看，也可以让其他应用使用这些生理数据。",
+  "healthCareIntegrationFeatureAppealBody": "你可以将 Pilll 中记录的经期数据自动同步到健康 App，与其他健康数据一起查看，也可以在其他 App 中使用。",
   "quickRecordFeatureAppealTitle": "从通知直接记录服药",
   "quickRecordFeatureAppealShortDescription": "无需打开应用即可在通知上记录",
   "quickRecordFeatureAppealHeadline": "在通知上一键记录服药",

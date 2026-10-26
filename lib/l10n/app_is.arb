@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "Tengja við Heilsu",
   "healthCareIntegrationFeatureAppealShortDescription": "Deildu blæðingaskráningum með Heilsu",
   "healthCareIntegrationFeatureAppealHeadline": "Þú getur tengt við Heilsuappið",
-  "healthCareIntegrationFeatureAppealBody": "Þú getur sjálfkrafa samstillt tíðaupplýsingar sem skráðar eru í Pilll við Heilsuforritið. Þannig getur þú skoðað þær með öðrum heilsugögnum í Heilsuforritinu og gert öðrum forritum kleift að nota tíðaupplýsingarnar.",
+  "healthCareIntegrationFeatureAppealBody": "Þú getur samstillt blæðingagögnin sem þú skráir í Pilll sjálfkrafa við Heilsu-appið. Þar geturðu skoðað þau ásamt öðrum heilsufarsgögnum og notað þau í öðrum öppum.",
   "quickRecordFeatureAppealTitle": "Skrá inntöku beint úr tilkynningu",
   "quickRecordFeatureAppealShortDescription": "Skráðu beint úr tilkynningu án þess að opna appið",
   "quickRecordFeatureAppealHeadline": "Skráning með einum smelli í tilkynningum",

@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "Lidhuni me Shëndetin",
   "healthCareIntegrationFeatureAppealShortDescription": "Ndani shënimet e menstruacionit me aplikacionin Shëndeti",
   "healthCareIntegrationFeatureAppealHeadline": "Mund të lidheni me aplikacionin Shëndeti",
-  "healthCareIntegrationFeatureAppealBody": "Të dhënat e menstruacioneve të regjistruara në Pilll mund të sinkronizohen automatikisht me aplikacionin e kujdesit shëndetësor. Kështu mund t’i shihni ato së bashku me të dhënat e tjera shëndetësore në aplikacionin e kujdesit shëndetësor dhe t’i bëni të disponueshme për aplikacione të tjera.",
+  "healthCareIntegrationFeatureAppealBody": "Të dhënat e menstruacionit të regjistruara në Pilll mund t’i sinkronizoni automatikisht me aplikacionin Shëndeti. Mund t’i shihni bashkë me të dhënat e tjera shëndetësore dhe t’i përdorni edhe në aplikacione të tjera.",
   "quickRecordFeatureAppealTitle": "Regjistro direkt nga njoftimi",
   "quickRecordFeatureAppealShortDescription": "Regjistro pa hapur aplikacionin, direkt nga njoftimi",
   "quickRecordFeatureAppealHeadline": "Regjistrim me një trokitje nga njoftimet",

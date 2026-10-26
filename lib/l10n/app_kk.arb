@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "Денсаулық қолданбасына қосылу",
   "healthCareIntegrationFeatureAppealShortDescription": "Етеккір жазбаларын Денсаулық қолданбасымен бөлісіңіз",
   "healthCareIntegrationFeatureAppealHeadline": "Денсаулық қолданбасына қосуға болады",
-  "healthCareIntegrationFeatureAppealBody": "Pilll қолданбасында тіркелген етеккір деректерін Денсаулық қосымшасымен автоматты түрде синхрондауға болады. Бұл деректерді Денсаулық қосымшасындағы басқа денсаулық көрсеткіштерімен бірге көруге және басқа қолданбаларда пайдалануға мүмкіндік береді.",
+  "healthCareIntegrationFeatureAppealBody": "Pilll-де тіркелген етеккір туралы деректерді Денсаулық қолданбасымен автоматты түрде синхрондай аласыз. Оларды басқа денсаулық деректерімен бірге көріп, өзге қолданбаларда да пайдалана аласыз.",
   "quickRecordFeatureAppealTitle": "Хабарландырудан тікелей қабылдауды жазу",
   "quickRecordFeatureAppealShortDescription": "Қосымшаны ашпай-ақ хабарландырудан жазу",
   "quickRecordFeatureAppealHeadline": "Хабарлама экранында бір түрту арқылы таблетка қабылдауды тіркеу",

@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "Savienot ar Veselību",
   "healthCareIntegrationFeatureAppealShortDescription": "Kopīgojiet mēnešreižu ierakstus ar lietotni Veselība",
   "healthCareIntegrationFeatureAppealHeadline": "Varat savienot ar lietotni Veselība",
-  "healthCareIntegrationFeatureAppealBody": "Pilll lietotnē reģistrētos menstruāciju datus var automātiski sinhronizēt ar veselības lietotni. Tos varēs apskatīt kopā ar citiem veselības datiem un izmantot arī citās lietotnēs.",
+  "healthCareIntegrationFeatureAppealBody": "Pilll reģistrētos mēnešreižu datus varat automātiski sinhronizēt ar lietotni Veselība. Tajā varat tos apskatīt kopā ar citiem veselības datiem un izmantot arī citās lietotnēs.",
   "quickRecordFeatureAppealTitle": "Reģistrēt lietošanu tieši no paziņojuma",
   "quickRecordFeatureAppealShortDescription": "Ierakstīt paziņojumā, neatverot lietotni",
   "quickRecordFeatureAppealHeadline": "Vienu pieskārienu reģistrēšana paziņojumu ekrānā",

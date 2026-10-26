@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "स्वास्थ्य ऐप से जोड़ें",
   "healthCareIntegrationFeatureAppealShortDescription": "पीरियड के रिकॉर्ड स्वास्थ्य ऐप से साझा करें",
   "healthCareIntegrationFeatureAppealHeadline": "हेल्थ ऐप से कनेक्ट किया जा सकता है",
-  "healthCareIntegrationFeatureAppealBody": "Pilll में दर्ज आपके मासिक धर्म डेटा को हेल्थ ऐप के साथ स्वचालित रूप से सिंक किया जा सकता है। आप इसे हेल्थ ऐप में अन्य स्वास्थ्य डेटा के साथ देख सकते हैं, और अन्य ऐप्स में भी मासिक धर्म डेटा का उपयोग कर पाएँगे।",
+  "healthCareIntegrationFeatureAppealBody": "Pilll में दर्ज पीरियड का डेटा स्वास्थ्य ऐप से अपने आप सिंक किया जा सकता है। आप इसे अपने बाकी स्वास्थ्य डेटा के साथ देख सकती हैं और दूसरे ऐप्स में भी इस्तेमाल कर सकती हैं।",
   "quickRecordFeatureAppealTitle": "नोटिफिकेशन से सीधे दवा लेने का रिकॉर्ड",
   "quickRecordFeatureAppealShortDescription": "ऐप खोले बिना नोटिफिकेशन पर रिकॉर्ड करें",
   "quickRecordFeatureAppealHeadline": "नोटिफिकेशन स्क्रीन पर एक-टैप में सेवन दर्ज करें",

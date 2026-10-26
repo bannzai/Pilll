@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "Sağlık uygulamasına bağlanın",
   "healthCareIntegrationFeatureAppealShortDescription": "Adet kayıtlarını Sağlık uygulamasıyla paylaşın",
   "healthCareIntegrationFeatureAppealHeadline": "Sağlık uygulamasına bağlanabilirsiniz",
-  "healthCareIntegrationFeatureAppealBody": "Pilll'de kaydettiğiniz adet verilerini Sağlık uygulamasıyla otomatik olarak senkronize edebilirsiniz. Sağlık'taki diğer sağlık verilerinizle birlikte görüntüleyebilir, verilerinizi Sağlık'tan okuyan diğer uygulamalarda da kullanabilirsiniz.",
+  "healthCareIntegrationFeatureAppealBody": "Pilll'de kaydettiğiniz adet verilerini Sağlık uygulamasıyla otomatik olarak eşzamanlayabilirsiniz. Bu verileri diğer sağlık verilerinizle birlikte görebilir ve başka uygulamalarda da kullanabilirsiniz.",
   "quickRecordFeatureAppealTitle": "Bildirimden doğrudan ilaç kaydı",
   "quickRecordFeatureAppealShortDescription": "Uygulamayı açmadan bildirim üzerinden kaydet",
   "quickRecordFeatureAppealHeadline": "Bildirim ekranında tek dokunuşla hap kullanım kaydı",

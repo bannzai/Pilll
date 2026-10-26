@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "Osasunarekin konektatu",
   "healthCareIntegrationFeatureAppealShortDescription": "Partekatu hilekoaren erregistroak Osasunarekin",
   "healthCareIntegrationFeatureAppealHeadline": "Osasuna aplikazioarekin konekta dezakezu",
-  "healthCareIntegrationFeatureAppealBody": "Pilll-en erregistratutako hileko-datuak automatikoki sinkroniza daitezke Osasun aplikazioarekin. Osasuneko beste datu batzuekin batera ikusi ahal izango dituzu, eta beste aplikazioetan ere hileko-datuak erabil ditzakezu.",
+  "healthCareIntegrationFeatureAppealBody": "Pilll-en gordetako hilekoaren datuak automatikoki sinkroniza ditzakezu Osasuna aplikazioarekin. Beste osasun-datuekin batera ikusi eta beste aplikazio batzuetan ere erabil ditzakezu.",
   "quickRecordFeatureAppealTitle": "Jakinarazpenetik zuzenean hartzea erregistratu",
   "quickRecordFeatureAppealShortDescription": "Erregistratu jakinarazpenean aplikazioa ireki gabe",
   "quickRecordFeatureAppealHeadline": "Jakinarazpen-pantailan ukitu bakarrarekin hartzea erregistratu",

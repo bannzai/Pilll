@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "Conectar ao app Saúde",
   "healthCareIntegrationFeatureAppealShortDescription": "Compartilhe os registros de menstruação com o app Saúde",
   "healthCareIntegrationFeatureAppealHeadline": "Você pode conectar ao app Saúde",
-  "healthCareIntegrationFeatureAppealBody": "Os dados menstruais registrados no Pilll podem ser sincronizados automaticamente com o app de Saúde. Você pode consultá-los junto com outros dados de saúde no app de Saúde ou utilizá-los em outros aplicativos.",
+  "healthCareIntegrationFeatureAppealBody": "Você pode sincronizar automaticamente com o app Saúde os dados de menstruação registrados no Pilll. Assim, pode vê-los junto com seus outros dados de saúde e usá-los em outros apps.",
   "quickRecordFeatureAppealTitle": "Registro direto pela notificação",
   "quickRecordFeatureAppealShortDescription": "Registre na notificação sem abrir o app",
   "quickRecordFeatureAppealHeadline": "Registro de dose com um toque na tela de notificação",

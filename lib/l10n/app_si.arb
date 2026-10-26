@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "සෞඛ්‍ය යෙදුම සමඟ සම්බන්ධ කරන්න",
   "healthCareIntegrationFeatureAppealShortDescription": "ඔසප් වාර්තා සෞඛ්‍ය යෙදුම සමඟ බෙදා ගන්න",
   "healthCareIntegrationFeatureAppealHeadline": "සෞඛ්‍ය යෙදුම සමඟ සම්බන්ධ කළ හැකියි",
-  "healthCareIntegrationFeatureAppealBody": "Pilll තුළ සටහන් කළ මාසික දත්ත ස්වයංක්‍රීයව සෞඛ්‍යය යෙදුම සමඟ සම්බන්ධ කළ හැක. එම දත්ත සෞඛ්‍යය ඇප් තුළ ඇති අනෙක් සෞඛ්‍ය දත්ත සමඟ එක්ව පරීක්ෂා කළ හැකි අතර, අනික අපේ යෙදුම්වලටද මාසික දත්ත භාවිතයට හැකි වේ.",
+  "healthCareIntegrationFeatureAppealBody": "Pilll හි සටහන් කළ ඔසප් දත්ත සෞඛ්‍ය යෙදුම සමඟ ස්වයංක්‍රීයව සමමුහුර්ත කළ හැකියි. ඔබට ඒවා අනෙකුත් සෞඛ්‍ය දත්ත සමඟ බැලීමටත් වෙනත් යෙදුම්වල භාවිත කිරීමටත් පුළුවන්.",
   "quickRecordFeatureAppealTitle": "නිවේදනයෙන් සෘජුවම බෙහෙත් ගත් බව සටහන් කරන්න",
   "quickRecordFeatureAppealShortDescription": "යෙදුම විවෘත නොකර දැනුම්දීම් පණිවිඩයෙන්ම සටහන් කරන්න",
   "quickRecordFeatureAppealHeadline": "නිවේදන තිරයෙන් එක් ටැප් කර බෙහෙත් ගත් බව සටහන් කරන්න",

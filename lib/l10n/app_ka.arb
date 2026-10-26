@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "ჯანმრთელობის აპთან დაკავშირება",
   "healthCareIntegrationFeatureAppealShortDescription": "მენსტრუაციის ჩანაწერების გაზიარება ჯანმრთელობის აპთან",
   "healthCareIntegrationFeatureAppealHeadline": "შეგიძლიათ დაუკავშიროთ ჯანმრთელობის აპს",
-  "healthCareIntegrationFeatureAppealBody": "Pilll-ში ჩაწერილი მენსტრუაციის მონაცემები შესაძლებელია ავტომატურად სინქრონიზირდეს ჯანმრთელობის აპლიკაციასთან. ჯანმრთელობის აპლიკაციაში შეგიძლიათ დაათვალიეროთ ისინი სხვა ჯანმრთელობის მონაცემებთან ერთად და სხვა აპლიკაციებსაც მისცეთ უფლება გამოიყენონ ეს მონაცემები.",
+  "healthCareIntegrationFeatureAppealBody": "Pilll-ში ჩაწერილი მენსტრუაციის მონაცემები შეგიძლიათ ავტომატურად დაასინქრონოთ ჯანმრთელობის აპთან. იქ მათ ჯანმრთელობის სხვა მონაცემებთან ერთად ნახავთ და სხვა აპებშიც გამოიყენებთ.",
   "quickRecordFeatureAppealTitle": "შეტყობინებიდან პირდაპირ მიღების აღრიცხვა",
   "quickRecordFeatureAppealShortDescription": "აპლიკაციის გახსნის გარეშე ჩაწერა შეტყობინებიდან",
   "quickRecordFeatureAppealHeadline": "შეტყობინების ეკრანიდან მიღების ჩაწერა ერთი დაწკაპუნებით",

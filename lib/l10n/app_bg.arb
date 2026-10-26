@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "Свързване със Здраве",
   "healthCareIntegrationFeatureAppealShortDescription": "Споделете записите за мензис със Здраве",
   "healthCareIntegrationFeatureAppealHeadline": "Можете да свържете с приложението „Здраве“",
-  "healthCareIntegrationFeatureAppealBody": "Данните за менструалния цикъл, записани в Pilll, могат автоматично да се синхронизират с приложението за здраве. Можете да ги преглеждате заедно с другите здравни данни в приложението за здраве или да използвате данните за менструалния цикъл в други приложения.",
+  "healthCareIntegrationFeatureAppealBody": "Можете автоматично да синхронизирате данните за мензиса, записани в Pilll, с приложението „Здраве“. Там можете да ги преглеждате заедно с другите си здравни данни и да ги използвате и в други приложения.",
   "quickRecordFeatureAppealTitle": "Записвайте приема директно от известието",
   "quickRecordFeatureAppealShortDescription": "Записвай от известията, без да отваряш приложението",
   "quickRecordFeatureAppealHeadline": "Запис на приема с едно докосване от известието",

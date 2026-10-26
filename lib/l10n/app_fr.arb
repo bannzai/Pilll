@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "Connecter à Santé",
   "healthCareIntegrationFeatureAppealShortDescription": "Partagez vos suivis des règles avec Santé",
   "healthCareIntegrationFeatureAppealHeadline": "Connexion possible avec l’app Santé",
-  "healthCareIntegrationFeatureAppealBody": "Synchronisez automatiquement les données menstruelles que vous enregistrez dans Pilll avec l'application Apple Health. Affichez-le avec vos autres données de santé et réutilisez-le dans d'autres applications qui lisent Santé.",
+  "healthCareIntegrationFeatureAppealBody": "Vous pouvez synchroniser automatiquement les données de vos règles enregistrées dans Pilll avec l’app Santé. Vous pourrez les consulter avec vos autres données de santé et les utiliser dans d’autres apps.",
   "quickRecordFeatureAppealTitle": "Enregistrer à partir de la notification",
   "quickRecordFeatureAppealShortDescription": "Enregistrez votre dose directement depuis le push",
   "quickRecordFeatureAppealHeadline": "Appuyez sur la notification pour enregistrer",

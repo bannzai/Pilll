@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "Koble til Helse",
   "healthCareIntegrationFeatureAppealShortDescription": "Del mensregistreringer med Helse",
   "healthCareIntegrationFeatureAppealHeadline": "Kan kobles til Helse-appen",
-  "healthCareIntegrationFeatureAppealBody": "Du kan automatisk synkronisere menstruasjonsdata registrert i Pilll med Helse-appen. Du kan se dem sammen med annen helsedata i Helse-appen, og menstruasjonsdataene kan også brukes i andre apper.",
+  "healthCareIntegrationFeatureAppealBody": "Du kan automatisk synkronisere mensdataene du har registrert i Pilll, med Helse-appen. Der kan du se dem sammen med andre helsedata og bruke dem i andre apper.",
   "quickRecordFeatureAppealTitle": "Registrer inntak direkte fra varsel",
   "quickRecordFeatureAppealShortDescription": "Registrer i varslingen uten å åpne appen",
   "quickRecordFeatureAppealHeadline": "Registrer inntak med ett trykk fra varslingsskjermen",

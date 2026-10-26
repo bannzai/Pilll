@@ -487,7 +487,7 @@
   "healthCareIntegrationFeatureAppealTitle": "Kumonekta sa Kalusugan",
   "healthCareIntegrationFeatureAppealShortDescription": "Ibahagi ang mga tala ng regla sa Health",
   "healthCareIntegrationFeatureAppealHeadline": "Maaari ninyong ikonekta sa Health app",
-  "healthCareIntegrationFeatureAppealBody": "Ang datos ng regla na naitala sa Pilll ay maaaring awtomatikong i-sync sa Health Care app. Maaari mo itong tingnan kasama ang iba pang datos ng kalusugan sa Health Care, at maaari ding gamitin ang datos ng regla sa ibang mga app.",
+  "healthCareIntegrationFeatureAppealBody": "Maaari ninyong awtomatikong i-sync sa Health app ang datos ng regla na itinala ninyo sa Pilll. Maaari ninyo itong tingnan kasama ng iba ninyong datos sa kalusugan at gamitin din sa ibang app.",
   "quickRecordFeatureAppealTitle": "I-record ang paginom mula sa notipikasyon",
   "quickRecordFeatureAppealShortDescription": "I-record sa notification nang hindi binubuksan ang app",
   "quickRecordFeatureAppealHeadline": "Isang tapik lang para sa rekord ng paginom sa screen ng notipikasyon",
