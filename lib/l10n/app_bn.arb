@@ -98,7 +98,7 @@
   "viewMoreDetails": "বিস্তারিত দেখুন",
   "viewMore": "আরও দেখুন",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber} নম্বর পিল",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}নং",
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} নম্বর",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}নং",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}নম্বর",
   "oneToAfterDisplayNumberBeginPillNumber": "১→{afterDisplayNumberSettingBeginPillNumber} নং",

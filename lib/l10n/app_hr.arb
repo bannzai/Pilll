@@ -98,7 +98,7 @@
   "viewMoreDetails": "Pogledajte pojedinosti",
   "viewMore": "Prikažite više",
   "afterLastTakenPillNumber": "pilula br. {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}.",
+  "leftDashAfterLastTakenPillNumber": "{left}-br. {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}.",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}. pilula",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",

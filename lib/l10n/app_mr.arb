@@ -98,7 +98,7 @@
   "viewMoreDetails": "तपशील पाहा",
   "viewMore": "आणखी पाहा",
   "afterLastTakenPillNumber": "गोळी क्रमांक {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}वा",
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} क्रमांक",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} क्रमांक",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} क्रमांक",
   "oneToAfterDisplayNumberBeginPillNumber": "१→{afterDisplayNumberSettingBeginPillNumber} क्रमांक",

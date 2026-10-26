@@ -98,7 +98,7 @@
   "viewMoreDetails": "Shihni hollësitë",
   "viewMore": "Shihni më shumë",
   "afterLastTakenPillNumber": "pilula nr. {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
+  "leftDashAfterLastTakenPillNumber": "{left}-nr. {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "numri {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",

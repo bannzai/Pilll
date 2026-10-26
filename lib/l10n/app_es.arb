@@ -98,7 +98,7 @@
   "viewMoreDetails": "Ver detalles",
   "viewMore": "Ver más",
   "afterLastTakenPillNumber": "píldora n.º {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-nº{afterLastTakenPillNumber}",
+  "leftDashAfterLastTakenPillNumber": "{left}-n.º {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Nº {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "pastillas {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1 a {afterDisplayNumberSettingBeginPillNumber}",

@@ -98,7 +98,7 @@
   "viewMoreDetails": "Vezi detaliile",
   "viewMore": "Vezi mai mult",
   "afterLastTakenPillNumber": "pilula nr. {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
+  "leftDashAfterLastTakenPillNumber": "{left}-nr. {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Pastila {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "nr. {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",

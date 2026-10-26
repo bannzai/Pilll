@@ -98,7 +98,7 @@
   "viewMoreDetails": "Näytä lisätiedot",
   "viewMore": "Näytä lisää",
   "afterLastTakenPillNumber": "pilleri nro {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
+  "leftDashAfterLastTakenPillNumber": "{left}-nro {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "numero {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",

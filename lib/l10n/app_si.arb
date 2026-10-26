@@ -98,7 +98,7 @@
   "viewMoreDetails": "වැඩි විස්තර බලන්න",
   "viewMore": "තවත් බලන්න",
   "afterLastTakenPillNumber": "පෙති අංක {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}වෙනි",
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} අංකය",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}වන",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}වන",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}වන",

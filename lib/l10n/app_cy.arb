@@ -98,7 +98,7 @@
   "viewMoreDetails": "Gweld y manylion",
   "viewMore": "Gweld mwy",
   "afterLastTakenPillNumber": "pilsen rhif {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
+  "leftDashAfterLastTakenPillNumber": "{left}-rhif {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "rhif {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "rhif {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",

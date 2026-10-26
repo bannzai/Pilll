@@ -98,7 +98,7 @@
   "viewMoreDetails": "Skatiet sīkāk",
   "viewMore": "Skatīt vairāk",
   "afterLastTakenPillNumber": "tablete Nr. {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
+  "leftDashAfterLastTakenPillNumber": "{left}-Nr. {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Nr. {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}.-{afterLastTakenPillNumberPlusOne}.",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",

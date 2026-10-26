@@ -98,7 +98,7 @@
   "viewMoreDetails": "Tingnan ang detalye",
   "viewMore": "Tingnan pa",
   "afterLastTakenPillNumber": "pildoras blg. {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
+  "leftDashAfterLastTakenPillNumber": "{left}-blg. {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Numero {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "bilang {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",

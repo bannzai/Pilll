@@ -98,7 +98,7 @@
   "viewMoreDetails": "ବିବରଣୀ ଦେଖନ୍ତୁ",
   "viewMore": "ଅଧିକ ଦେଖନ୍ତୁ",
   "afterLastTakenPillNumber": "ବଟି ନମ୍ବର {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} ନଂ",
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} ନମ୍ବର",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} ନମ୍ବର",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}ନଂ",
   "oneToAfterDisplayNumberBeginPillNumber": "୧→{afterDisplayNumberSettingBeginPillNumber}ନମ୍ବର",

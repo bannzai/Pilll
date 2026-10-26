@@ -98,7 +98,7 @@
   "viewMoreDetails": "Ikusi xehetasunak",
   "viewMore": "Ikusi gehiago",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}. pilula",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}a",
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}. zk.",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}a",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} zenbakiak",
   "oneToAfterDisplayNumberBeginPillNumber": "1 → {afterDisplayNumberSettingBeginPillNumber}.a",

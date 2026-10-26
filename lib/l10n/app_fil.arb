@@ -98,7 +98,7 @@
   "viewMoreDetails": "Tingnan ang detalye",
   "viewMore": "Tingnan pa",
   "afterLastTakenPillNumber": "tableta blg. {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} na bilang",
+  "leftDashAfterLastTakenPillNumber": "{left}-blg. {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Bilang {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} na bilang",
   "oneToAfterDisplayNumberBeginPillNumber": "1→Bilang {afterDisplayNumberSettingBeginPillNumber}",

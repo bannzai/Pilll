@@ -98,7 +98,7 @@
   "viewMoreDetails": "ເບິ່ງລາຍລະອຽດ",
   "viewMore": "ເບິ່ງເພີ່ມເຕີມ",
   "afterLastTakenPillNumber": "ຢາເມັດເລກ {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-ທີ {afterLastTakenPillNumber}",
+  "leftDashAfterLastTakenPillNumber": "{left}-ເລກ {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "ເມັດທີ່ {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "ເມັດ {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} ເລກທີ",

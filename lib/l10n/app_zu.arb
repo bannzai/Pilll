@@ -98,7 +98,7 @@
   "viewMoreDetails": "Buka imininingwane",
   "viewMore": "Buka okwengeziwe",
   "afterLastTakenPillNumber": "iphilisi elingunombolo {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} inombolo",
+  "leftDashAfterLastTakenPillNumber": "{left}-inombolo {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "inombolo {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} inombolo",
   "oneToAfterDisplayNumberBeginPillNumber": "1 → {afterDisplayNumberSettingBeginPillNumber}",

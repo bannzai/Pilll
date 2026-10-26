@@ -98,7 +98,7 @@
   "viewMoreDetails": "Дэлгэрэнгүй харах",
   "viewMore": "Дэлгэрэнгүй харах",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber} дугаартай эм",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} дугаар",
+  "leftDashAfterLastTakenPillNumber": "{left}-№ {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} дугаар",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} дугаар",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} дугаар",

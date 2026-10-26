@@ -98,7 +98,7 @@
   "viewMoreDetails": "Vaata üksikasju",
   "viewMore": "Vaata rohkem",
   "afterLastTakenPillNumber": "pill nr {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}. pill",
+  "leftDashAfterLastTakenPillNumber": "{left}-nr {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}.",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}. tablett",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",

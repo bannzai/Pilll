@@ -98,7 +98,7 @@
   "viewMoreDetails": "დეტალების ნახვა",
   "viewMore": "მეტის ნახვა",
   "afterLastTakenPillNumber": "აბი № {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}№",
+  "leftDashAfterLastTakenPillNumber": "{left}-№ {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}-ე",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} ნომერი",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}№",

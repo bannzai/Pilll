@@ -98,7 +98,7 @@
   "viewMoreDetails": "Lihat butiran",
   "viewMore": "Lihat lagi",
   "afterLastTakenPillNumber": "pil nombor {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
+  "leftDashAfterLastTakenPillNumber": "{left}-no. {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "No. {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "nombor {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",

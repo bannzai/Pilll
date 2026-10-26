@@ -98,7 +98,7 @@
   "viewMoreDetails": "Повеќе детали",
   "viewMore": "Прикажи повеќе",
   "afterLastTakenPillNumber": "таблета бр. {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}-ти",
+  "leftDashAfterLastTakenPillNumber": "{left}-бр. {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "број {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} број",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",

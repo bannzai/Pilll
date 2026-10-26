@@ -98,7 +98,7 @@
   "viewMoreDetails": "تفصیلات دیکھیں",
   "viewMore": "مزید دیکھیں",
   "afterLastTakenPillNumber": "گولی نمبر {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}ویں",
+  "leftDashAfterLastTakenPillNumber": "{left}-نمبر {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} نمبر",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} نمبر",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} نمبر",

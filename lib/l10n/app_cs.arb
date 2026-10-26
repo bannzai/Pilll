@@ -98,7 +98,7 @@
   "viewMoreDetails": "Zobrazit podrobnosti",
   "viewMore": "Zobrazit více",
   "afterLastTakenPillNumber": "tableta č. {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}.",
+  "leftDashAfterLastTakenPillNumber": "{left}-č. {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}.",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}.-{afterLastTakenPillNumberPlusOne}.",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",

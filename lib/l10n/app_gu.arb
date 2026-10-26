@@ -98,7 +98,7 @@
   "viewMoreDetails": "વિગતો જુઓ",
   "viewMore": "વધુ જુઓ",
   "afterLastTakenPillNumber": "ગોળી નંબર {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}નંબર",
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} નંબર",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}નંબર",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}નં",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}નંબર",

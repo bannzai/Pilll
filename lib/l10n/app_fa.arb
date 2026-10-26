@@ -98,7 +98,7 @@
   "viewMoreDetails": "مشاهده جزئیات",
   "viewMore": "مشاهده بیشتر",
   "afterLastTakenPillNumber": "قرص شمارهٔ {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} شماره",
+  "leftDashAfterLastTakenPillNumber": "{left}-شمارهٔ {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "شماره {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "شماره {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "۱→{afterDisplayNumberSettingBeginPillNumber}",

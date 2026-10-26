@@ -98,7 +98,7 @@
   "viewMoreDetails": "ವಿವರಗಳನ್ನು ನೋಡಿ",
   "viewMore": "ಇನ್ನಷ್ಟು ನೋಡಿ",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}ನೇ ಮಾತ್ರೆ",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}ನೇ",
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}ನೇ ಸಂಖ್ಯೆ",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}ನೇ",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} ನೇ",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}ನಂ",

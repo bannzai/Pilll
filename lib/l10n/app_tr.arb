@@ -98,7 +98,7 @@
   "viewMoreDetails": "Ayrıntıları görüntüleyin",
   "viewMore": "Daha fazlasını görün",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber} numaralı hap",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}.",
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} numara",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}.",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} numaralı",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} no",

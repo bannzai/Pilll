@@ -98,7 +98,7 @@
   "viewMoreDetails": "Details aluege",
   "viewMore": "Meh aaluege",
   "afterLastTakenPillNumber": "Pille Nr. {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}.",
+  "leftDashAfterLastTakenPillNumber": "{left}-Nr. {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Nr. {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1 bis {afterDisplayNumberSettingBeginPillNumber}",

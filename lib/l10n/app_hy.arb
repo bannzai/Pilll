@@ -98,7 +98,7 @@
   "viewMoreDetails": "Դիտել մանրամասները",
   "viewMore": "Տեսնել ավելին",
   "afterLastTakenPillNumber": "հաբ № {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} համար",
+  "leftDashAfterLastTakenPillNumber": "{left}-համար {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}-րդ",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} համար",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} համար",

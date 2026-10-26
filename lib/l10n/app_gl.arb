@@ -98,7 +98,7 @@
   "viewMoreDetails": "Ver os detalles",
   "viewMore": "Ver máis",
   "afterLastTakenPillNumber": "pílula núm. {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}º",
+  "leftDashAfterLastTakenPillNumber": "{left}-núm. {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",

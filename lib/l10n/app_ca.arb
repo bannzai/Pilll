@@ -98,7 +98,7 @@
   "viewMoreDetails": "Veure'n els detalls",
   "viewMore": "Mostra'n més",
   "afterLastTakenPillNumber": "píndola núm. {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
+  "leftDashAfterLastTakenPillNumber": "{left}-núm. {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "núm. {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1 a {afterDisplayNumberSettingBeginPillNumber}",

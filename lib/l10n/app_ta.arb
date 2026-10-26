@@ -98,7 +98,7 @@
   "viewMoreDetails": "விவரங்களைப் பாருங்கள்",
   "viewMore": "மேலும் காண்க",
   "afterLastTakenPillNumber": "மாத்திரை எண் {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}எண்",
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}ஆம் எண்",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} எண்",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} எண்",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}எண்",

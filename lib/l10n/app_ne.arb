@@ -98,7 +98,7 @@
   "viewMoreDetails": "विवरण हेर्नुहोस्",
   "viewMore": "थप हेर्नुहोस्",
   "afterLastTakenPillNumber": "चक्की नम्बर {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} नंबर",
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} नम्बर",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}नं",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}नम्बर",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}नम्बर",

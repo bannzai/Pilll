@@ -98,7 +98,7 @@
   "viewMoreDetails": "ดูรายละเอียด",
   "viewMore": "ดูเพิ่มเติม",
   "afterLastTakenPillNumber": "ยาเม็ดที่ {afterLastTakenPillNumber}",
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
+  "leftDashAfterLastTakenPillNumber": "{left}-หมายเลข {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "ที่ {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "เม็ดที่ {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
