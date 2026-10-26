@@ -51,7 +51,7 @@
   "healthCareIntegration": "Connexió amb aplicacions de salut",
   "healthCareIntegrationDescription": "Els registres de la regla de Pilll es poden sincronitzar automàticament amb l’app Salut",
   "viewPremiumPlan": "Consulta el pla Premium",
-  "changePillNumberForToday": "Canvi del número de píndola d'avui",
+  "changePillNumberForToday": "Canvia el número de píndola d’avui",
   "discardAllPillSheets": "Eliminar tots els blísters de píndoles",
   "areYouSureDoing": "Vols {doing}?",
   "currentlyDisplayed": "Mostrat actualment",

@@ -51,7 +51,7 @@
   "healthCareIntegration": "Подключение к приложениям здоровья",
   "healthCareIntegrationDescription": "Записи о месячных в Pilll можно автоматически синхронизировать с приложением «Здоровье»",
   "viewPremiumPlan": "Посмотреть план премиум",
-  "changePillNumberForToday": "Изменение номера таблетки на сегодня",
+  "changePillNumberForToday": "Изменить номер таблетки на сегодня",
   "discardAllPillSheets": "Удалить все блистеры",
   "areYouSureDoing": "{doing}?",
   "currentlyDisplayed": "Сейчас отображается",

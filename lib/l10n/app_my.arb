@@ -51,7 +51,7 @@
   "healthCareIntegration": "ကျန်းမာရေးအက်ပ်များနှင့် ချိတ်ဆက်ခြင်း",
   "healthCareIntegrationDescription": "Pilll မှာ မှတ်တမ်းတင်ထားတဲ့ ရာသီလာချိန် မှတ်တမ်းတွေကို Apple Health နဲ့ အလိုအလျောက် ထပ်တူပြုနိုင်ပါတယ်",
   "viewPremiumPlan": "ပရီမီယံ အစီအစဉ်ကို ကြည့်ပါ",
-  "changePillNumberForToday": "ယနေ့သောက်ရမည့်ဆေးလုံးနံပါတ်ပြောင်းလဲခြင်း",
+  "changePillNumberForToday": "ယနေ့သောက်ရမည့် ဆေးပြားနံပါတ်ကို ပြောင်းပါ",
   "discardAllPillSheets": "ဆေးလုံးများစာရွက် အားလုံးပယ်ဖျက်",
   "areYouSureDoing": "{doing}မလား？",
   "currentlyDisplayed": "လက်ရှိပြသနေသော",

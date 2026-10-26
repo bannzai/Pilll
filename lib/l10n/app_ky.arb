@@ -51,7 +51,7 @@
   "healthCareIntegration": "Ден соолук колдонмолору менен байланыш",
   "healthCareIntegrationDescription": "Pilll колдонмосундагы айыз жазуулары Apple Health менен автоматтык түрдө шайкештештирилет",
   "viewPremiumPlan": "премиум планын көрүңүз",
-  "changePillNumberForToday": "Бүгүнкү таблетка номурун өзгөртүү",
+  "changePillNumberForToday": "Бүгүн ичиле турган таблетканын номерин өзгөртүңүз",
   "discardAllPillSheets": "Бардык таблетка барактарын өчүрүү",
   "areYouSureDoing": "{doing} кыласызбы?",
   "currentlyDisplayed": "учурда көрсөтүлгөн",

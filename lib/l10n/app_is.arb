@@ -51,7 +51,7 @@
   "healthCareIntegration": "Tenging við heilsuöpp",
   "healthCareIntegrationDescription": "Hægt er að samstilla skráningar um blæðingar í Pilll sjálfkrafa við Apple Health",
   "viewPremiumPlan": "Skoða Premium-áskrift",
-  "changePillNumberForToday": "Breyting á númeri pílu í dag",
+  "changePillNumberForToday": "Breyta pillunúmeri dagsins",
   "discardAllPillSheets": "Eyða öllum pilluborðum",
   "areYouSureDoing": "Viltu {doing}?",
   "currentlyDisplayed": "Nú sýnt",

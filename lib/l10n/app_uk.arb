@@ -51,7 +51,7 @@
   "healthCareIntegration": "Зв’язок із застосунками здоров’я",
   "healthCareIntegrationDescription": "Записи про місячні в Pilll можна автоматично синхронізувати з програмою «Здоров’я»",
   "viewPremiumPlan": "Переглянути план преміум",
-  "changePillNumberForToday": "Зміна номера сьогоднішньої таблетки",
+  "changePillNumberForToday": "Змінити номер пігулки на сьогодні",
   "discardAllPillSheets": "Видалити всі блістери",
   "areYouSureDoing": "{doing}?",
   "currentlyDisplayed": "Наразі відображено",

@@ -51,7 +51,7 @@
   "healthCareIntegration": "Savienojums ar veselības lietotnēm",
   "healthCareIntegrationDescription": "Pilll ierakstus par mēnešreizēm var automātiski sinhronizēt ar Apple Health",
   "viewPremiumPlan": "Skatīt Premium plānu",
-  "changePillNumberForToday": "Šodienas pilules numura maiņa",
+  "changePillNumberForToday": "Mainiet šodien lietojamās tabletes numuru",
   "discardAllPillSheets": "Dzēst visas tablešu plāksnes",
   "areYouSureDoing": "Vai {doing}?",
   "currentlyDisplayed": "Pašlaik rādīts",

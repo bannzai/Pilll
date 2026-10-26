@@ -51,7 +51,7 @@
   "healthCareIntegration": "Propojení se zdravotními aplikacemi",
   "healthCareIntegrationDescription": "Záznamy o menstruaci v Pilll se mohou automaticky synchronizovat s aplikací Zdraví",
   "viewPremiumPlan": "Zobrazit plán Premium",
-  "changePillNumberForToday": "Změna čísla dnešní pilulky",
+  "changePillNumberForToday": "Změnit číslo tablety pro dnešek",
   "discardAllPillSheets": "Smazat všechny pilulkové karty",
   "areYouSureDoing": "Opravdu chcete {doing}?",
   "currentlyDisplayed": "aktuálně zobrazené",

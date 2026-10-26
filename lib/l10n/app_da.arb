@@ -51,7 +51,7 @@
   "healthCareIntegration": "Forbindelse til sundhedsapps",
   "healthCareIntegrationDescription": "Dine menstruationsregistreringer i Pilll kan automatisk synkroniseres med Apple Sundhed",
   "viewPremiumPlan": "Se Premium-planen",
-  "changePillNumberForToday": "Ændre dagens pillenummer",
+  "changePillNumberForToday": "Skift pillenummer for i dag",
   "discardAllPillSheets": "Slet alle p-pille pakker",
   "areYouSureDoing": "Vil du {doing}?",
   "currentlyDisplayed": "aktuelt vist",

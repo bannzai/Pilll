@@ -51,7 +51,7 @@
   "healthCareIntegration": "ჯანმრთელობის აპებთან დაკავშირება",
   "healthCareIntegrationDescription": "Pilll-ში შენახული მენსტრუაციის ჩანაწერები შეიძლება ავტომატურად სინქრონიზდეს Apple Health-თან",
   "viewPremiumPlan": "იხილეთ პრემიუმ გეგმა",
-  "changePillNumberForToday": "დღეს მისაღები ტაბლეტის ნომრის შეცვლა",
+  "changePillNumberForToday": "დღეს მისაღები აბის ნომერის შეცვლა",
   "discardAllPillSheets": "ყველა პილების ფურცლის წაშლა",
   "areYouSureDoing": "გსურთ {doing}?",
   "currentlyDisplayed": "ამჟამად ნაჩვენები",

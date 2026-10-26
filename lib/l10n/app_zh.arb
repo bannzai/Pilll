@@ -51,7 +51,7 @@
   "healthCareIntegration": "连接健康应用",
   "healthCareIntegrationDescription": "Pilll 中记录的经期数据可自动同步到“健康”App",
   "viewPremiumPlan": "查看高级方案",
-  "changePillNumberForToday": "修改今日服用药片编号",
+  "changePillNumberForToday": "更改今天要服用的药片编号",
   "discardAllPillSheets": "删除所有药板",
   "areYouSureDoing": "要{doing}吗？",
   "currentlyDisplayed": "正在顯示的",

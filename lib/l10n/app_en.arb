@@ -51,7 +51,7 @@
   "healthCareIntegration": "Connect to health apps",
   "healthCareIntegrationDescription": "Period records in Pilll can sync automatically with Apple Health",
   "viewPremiumPlan": "View Premium plan",
-  "changePillNumberForToday": "Change today's pill number",
+  "changePillNumberForToday": "Change the pill number for today",
   "discardAllPillSheets": "Delete All Pill Sheets",
   "areYouSureDoing": "Do you want to {doing}?",
   "currentlyDisplayed": "Currently displayed",

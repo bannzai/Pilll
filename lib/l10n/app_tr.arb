@@ -51,7 +51,7 @@
   "healthCareIntegration": "Sağlık uygulamalarıyla bağlantı",
   "healthCareIntegrationDescription": "Pilll'de kaydettiğiniz adet kayıtları Apple Sağlık ile otomatik olarak eşzamanlanabilir",
   "viewPremiumPlan": "Premium planı görüntüleyin",
-  "changePillNumberForToday": "Bugün alınacak hap numarasını değiştir",
+  "changePillNumberForToday": "Bugün alınacak hap numarasını değiştirin",
   "discardAllPillSheets": "Tüm hap kartlarını sil",
   "areYouSureDoing": "{doing} yapacak mısınız?",
   "currentlyDisplayed": "Şu anda görüntülenen",

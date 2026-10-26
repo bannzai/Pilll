@@ -51,7 +51,7 @@
   "healthCareIntegration": "Collegamento alle app per la salute",
   "healthCareIntegrationDescription": "I dati sulle mestruazioni registrati in Pilll possono sincronizzarsi automaticamente con Salute",
   "viewPremiumPlan": "Visualizza il piano Premium",
-  "changePillNumberForToday": "Modifica numero pillola di oggi",
+  "changePillNumberForToday": "Cambia il numero della pillola di oggi",
   "discardAllPillSheets": "Elimina tutti i blister",
   "areYouSureDoing": "Vuoi {doing}?",
   "currentlyDisplayed": "Attualmente visualizzato",

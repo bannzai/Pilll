@@ -51,7 +51,7 @@
   "healthCareIntegration": "Поврзување со здравствени апликации",
   "healthCareIntegrationDescription": "Записите за менструација во Pilll може автоматски да се синхронизираат со Apple Health",
   "viewPremiumPlan": "Погледнете го премиум планот",
-  "changePillNumberForToday": "Менување на број на денешна пилула",
+  "changePillNumberForToday": "Променете го број на таблета за денес",
   "discardAllPillSheets": "Избриши ги сите листови за пилули",
   "areYouSureDoing": "Дали сакате да {doing}?",
   "currentlyDisplayed": "Тековно прикажано",

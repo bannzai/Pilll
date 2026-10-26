@@ -51,7 +51,7 @@
   "healthCareIntegration": "Prepojenie so zdravotnými aplikáciami",
   "healthCareIntegrationDescription": "Záznamy o menštruácii v Pilll sa môžu automaticky synchronizovať s aplikáciou Apple Zdravie",
   "viewPremiumPlan": "Zobraziť plán Premium",
-  "changePillNumberForToday": "Zmena čísla pilulky na dnes",
+  "changePillNumberForToday": "Zmeňte číslo tabletky na dnes",
   "discardAllPillSheets": "Odstrániť všetky blistre",
   "areYouSureDoing": "Chcete {doing}?",
   "currentlyDisplayed": "aktuálne zobrazené",

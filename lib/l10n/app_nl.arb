@@ -51,7 +51,7 @@
   "healthCareIntegration": "Koppeling met gezondheidsapps",
   "healthCareIntegrationDescription": "Je menstruatiegegevens in Pilll kunnen automatisch worden gesynchroniseerd met Apple Gezondheid",
   "viewPremiumPlan": "Bekijk het premiumabonnement",
-  "changePillNumberForToday": "Pilnummer voor vandaag wijzigen",
+  "changePillNumberForToday": "Wijzig het pilnummer voor vandaag",
   "discardAllPillSheets": "Alle pilstroken verwijderen",
   "areYouSureDoing": "Wil je {doing}?",
   "currentlyDisplayed": "Momenteel weergegeven",

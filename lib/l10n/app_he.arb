@@ -51,7 +51,7 @@
   "healthCareIntegration": "חיבור לאפליקציות בריאות",
   "healthCareIntegrationDescription": "אפשר לסנכרן אוטומטית עם אפליקציית הבריאות את רישומי המחזור שנשמרו ב־Pilll",
   "viewPremiumPlan": "לצפייה בתוכנית פרימיום",
-  "changePillNumberForToday": "שינוי מספר הגלולה להיום",
+  "changePillNumberForToday": "שינוי מספר גלולה לנטילה היום",
   "discardAllPillSheets": "מחק את כל גיליוני הכדורים",
   "areYouSureDoing": "ל{doing}?",
   "currentlyDisplayed": "מוצג כעת",

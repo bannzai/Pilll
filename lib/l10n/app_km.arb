@@ -51,7 +51,7 @@
   "healthCareIntegration": "ភ្ជាប់ជាមួយកម្មវិធីសុខភាព",
   "healthCareIntegrationDescription": "កំណត់ត្រារដូវនៅក្នុង Pilll អាចធ្វើសមកាលកម្មដោយស្វ័យប្រវត្តិជាមួយ Apple Health",
   "viewPremiumPlan": "មើលគម្រោងព្រីមៀម",
-  "changePillNumberForToday": "ការផ្លាស់ប្តូរលេខគ្រាប់ថ្នាំថ្ងៃនេះ",
+  "changePillNumberForToday": "ប្តូរលេខគ្រាប់ថ្នាំដែលត្រូវលេបថ្ងៃនេះ",
   "discardAllPillSheets": "លុបចោលសន្លឹកគ្រាប់ថ្នាំទាំងអស់",
   "areYouSureDoing": "តើអ្នកចង់ {doing} ទេ?",
   "currentlyDisplayed": "កំពុងបង្ហាញ",

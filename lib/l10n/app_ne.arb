@@ -51,7 +51,7 @@
   "healthCareIntegration": "स्वास्थ्य एपसँग जोड्ने",
   "healthCareIntegrationDescription": "Pilll मा राखिएका महिनावारीका विवरण Apple Health सँग स्वतः सिंक गर्न सकिन्छ",
   "viewPremiumPlan": "प्रिमियम योजना हेर्नुहोस्",
-  "changePillNumberForToday": "आजको गोली नम्बर परिवर्तन",
+  "changePillNumberForToday": "आज खाने चक्की नम्बर परिवर्तन गर्नुहोस्",
   "discardAllPillSheets": "सबै पिल शीट मेटाउनुहोस्",
   "areYouSureDoing": "के तपाईं {doing} गर्नुहुन्छ?",
   "currentlyDisplayed": "हाल देखाइएको",

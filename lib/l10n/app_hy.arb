@@ -51,7 +51,7 @@
   "healthCareIntegration": "Միացում առողջության հավելվածներին",
   "healthCareIntegrationDescription": "Pilll-ում գրանցված դաշտանի տվյալները կարող են ինքնաբերաբար համաժամացվել Apple Health-ի հետ",
   "viewPremiumPlan": "Դիտեք պրեմիում պլանը",
-  "changePillNumberForToday": "Այսօրվա հաբի համարի փոփոխում",
+  "changePillNumberForToday": "Փոխել այսօր ընդունվող հաբի համար",
   "discardAllPillSheets": "Ջնջել բոլոր հապի թերթիկները",
   "areYouSureDoing": "{doing}ե՞ք:",
   "currentlyDisplayed": "Ցուցադրվող",

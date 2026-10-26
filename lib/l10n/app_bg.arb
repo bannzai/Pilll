@@ -51,7 +51,7 @@
   "healthCareIntegration": "Свързване със здравни приложения",
   "healthCareIntegrationDescription": "Записите за мензис в Pilll могат автоматично да се синхронизират с Apple Health",
   "viewPremiumPlan": "Вижте плана премиум",
-  "changePillNumberForToday": "Промяна на номера на днешното хапче",
+  "changePillNumberForToday": "Промяна на номер на хапче за днес",
   "discardAllPillSheets": "Изтрий всички листове с хапчета",
   "areYouSureDoing": "Ще {doing} ли?",
   "currentlyDisplayed": "текущо показани",

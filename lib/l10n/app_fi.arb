@@ -51,7 +51,7 @@
   "healthCareIntegration": "Yhteys terveyssovelluksiin",
   "healthCareIntegrationDescription": "Pillliin tallennetut kuukautistiedot voi synkronoida automaattisesti Apple Healthiin",
   "viewPremiumPlan": "Katso Premium-tilaus",
-  "changePillNumberForToday": "Muuta tänään otettavan pillerin numeroa",
+  "changePillNumberForToday": "Vaihda tämän päivän pillerinumero",
   "discardAllPillSheets": "Poista kaikki pillilehteet",
   "areYouSureDoing": "Haluatko {doing}?",
   "currentlyDisplayed": "Näkyvillä",

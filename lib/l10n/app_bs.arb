@@ -51,7 +51,7 @@
   "healthCareIntegration": "Povezivanje sa zdravstvenim aplikacijama",
   "healthCareIntegrationDescription": "Zapisi o menstruaciji iz Pilll mogu se automatski sinhronizovati s aplikacijom Apple Health",
   "viewPremiumPlan": "Pogledajte premium plan",
-  "changePillNumberForToday": "Promjena broja današnje pilule",
+  "changePillNumberForToday": "Promijenite broj pilule za danas",
   "discardAllPillSheets": "Obriši sve liste pilula",
   "areYouSureDoing": "Želite li {doing}?",
   "currentlyDisplayed": "Trenutno prikazano",

@@ -51,7 +51,7 @@
   "healthCareIntegration": "Pagkonekta sa mga app sa kalusugan",
   "healthCareIntegrationDescription": "Maaaring awtomatikong i-sync sa Apple Health ang mga tala ng regla sa Pilll",
   "viewPremiumPlan": "Tingnan ang Premium na plano",
-  "changePillNumberForToday": "Pagbabago ng numero ng pill para sa ngayong araw",
+  "changePillNumberForToday": "Palitan ang numero ng pildoras para sa araw na ito",
   "discardAllPillSheets": "Burahin ang lahat ng pill sheet",
   "areYouSureDoing": "Gusto mo bang {doing}?",
   "currentlyDisplayed": "kasalukuyang naipapakita",

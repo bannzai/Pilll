@@ -51,7 +51,7 @@
   "healthCareIntegration": "Tilkobling til helseapper",
   "healthCareIntegrationDescription": "Mensregistreringer i Pilll kan synkroniseres automatisk med Apple Helse",
   "viewPremiumPlan": "Se Premium-planen",
-  "changePillNumberForToday": "Endre dagens pillenummer",
+  "changePillNumberForToday": "Endre pillenummer for i dag",
   "discardAllPillSheets": "Slett alle pilleark",
   "areYouSureDoing": "Vil du {doing}?",
   "currentlyDisplayed": "Vises for øyeblikket",

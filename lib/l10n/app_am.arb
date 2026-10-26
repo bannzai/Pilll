@@ -51,7 +51,7 @@
   "healthCareIntegration": "ከጤና መተግበሪያዎች ጋር ማገናኘት",
   "healthCareIntegrationDescription": "በPilll የተመዘገበው የወር አበባ መረጃ ከApple Health ጋር በራስ-ሰር ሊመሳሰል ይችላል",
   "viewPremiumPlan": "የፕሪሚየም ዕቅድን ይመልከቱ",
-  "changePillNumberForToday": "የዛሬ ፒል ቁጥር መቀየር",
+  "changePillNumberForToday": "ዛሬ የሚወሰደውን ክኒን ቁጥር መቀየር",
   "discardAllPillSheets": "ሁሉንም የአዳሪ ወረቀቶች ማጥፋት",
   "areYouSureDoing": "{doing} ይፈልጋሉ?",
   "currentlyDisplayed": "አሁን የሚታየው",

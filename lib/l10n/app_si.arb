@@ -51,7 +51,7 @@
   "healthCareIntegration": "සෞඛ්‍ය යෙදුම් සමඟ සම්බන්ධ කිරීම",
   "healthCareIntegrationDescription": "Pilll හි සටහන් කළ ඔසප් වාර්තා Apple Health සමඟ ස්වයංක්‍රීයව සමමුහුර්ත කළ හැකියි",
   "viewPremiumPlan": "ප්‍රීමියම් සැලැස්ම බලන්න",
-  "changePillNumberForToday": "අද ගන්නා පිල් අංකය වෙනස් කිරීම",
+  "changePillNumberForToday": "අද ගත යුතු පෙති අංකය වෙනස් කරන්න",
   "discardAllPillSheets": "සියලු පිල් ෂීට් ඉවත් කරන්න",
   "areYouSureDoing": "{doing} කරනවාද?",
   "currentlyDisplayed": "දැනට පෙන්වා ඇති",

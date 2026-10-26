@@ -51,7 +51,7 @@
   "healthCareIntegration": "له روغتیايي اپونو سره نښلول",
   "healthCareIntegrationDescription": "په Pilll کې د حیض ثبت شوي معلومات له Apple Health سره په اوتومات ډول همغږي کېدای شي",
   "viewPremiumPlan": "د پریمیم پلان وګورئ",
-  "changePillNumberForToday": "د نن ورځې د حبې د شمیرې بدلول",
+  "changePillNumberForToday": "د نن ورځې د ګولۍ شمېر بدل کړئ",
   "discardAllPillSheets": "ټولې د ګولیو پاڼې ړنګول",
   "areYouSureDoing": "ایا تاسو {doing} کول غواړئ؟",
   "currentlyDisplayed": "اوس ښودل شوی",

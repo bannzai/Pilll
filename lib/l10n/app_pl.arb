@@ -51,7 +51,7 @@
   "healthCareIntegration": "Połączenie z aplikacjami zdrowotnymi",
   "healthCareIntegrationDescription": "Dane o okresie zapisane w Pilll mogą automatycznie synchronizować się z Apple Zdrowie",
   "viewPremiumPlan": "Zobacz plan premium",
-  "changePillNumberForToday": "Zmiana numeru dzisiejszej pigułki",
+  "changePillNumberForToday": "Zmień numer tabletki na dziś",
   "discardAllPillSheets": "Usuń wszystkie blistry",
   "areYouSureDoing": "Czy {doing}?",
   "currentlyDisplayed": "Obecnie wyświetlane",

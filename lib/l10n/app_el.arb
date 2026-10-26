@@ -51,7 +51,7 @@
   "healthCareIntegration": "Σύνδεση με εφαρμογές υγείας",
   "healthCareIntegrationDescription": "Οι καταγραφές περιόδου στο Pilll μπορούν να συγχρονίζονται αυτόματα με την Υγεία",
   "viewPremiumPlan": "Δείτε το πρόγραμμα Premium",
-  "changePillNumberForToday": "Αλλαγή αριθμού σημερινού χαπιού",
+  "changePillNumberForToday": "Αλλάξτε τον αριθμό χαπιού για σήμερα",
   "discardAllPillSheets": "Διαγραφή όλων των φύλλων χαπιών",
   "areYouSureDoing": "Θα {doing};",
   "currentlyDisplayed": "Εμφανίζεται τώρα",

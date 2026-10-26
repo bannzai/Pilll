@@ -51,7 +51,7 @@
   "healthCareIntegration": "Osasun aplikazioekin lotura",
   "healthCareIntegrationDescription": "Pilll-en gordetako hilekoaren erregistroak automatikoki sinkroniza daitezke Apple Health-ekin",
   "viewPremiumPlan": "Ikusi Premium plana",
-  "changePillNumberForToday": "Gaurko pilula zenbakiaren aldaketa",
+  "changePillNumberForToday": "Aldatu gaur hartu beharreko pilula-zenbakia",
   "discardAllPillSheets": "Pillola-orri guztiak ezabatu",
   "areYouSureDoing": "{doing} egin nahi duzu?",
   "currentlyDisplayed": "Orain erakusten ari dena",

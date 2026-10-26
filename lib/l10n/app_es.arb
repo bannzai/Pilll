@@ -51,7 +51,7 @@
   "healthCareIntegration": "Conexión con apps de salud",
   "healthCareIntegrationDescription": "Los registros de la regla en Pilll se pueden sincronizar automáticamente con Salud",
   "viewPremiumPlan": "Ver el plan Premium",
-  "changePillNumberForToday": "Cambiar número de píldora de hoy",
+  "changePillNumberForToday": "Cambia el número de píldora de hoy",
   "discardAllPillSheets": "Eliminar todos los blísteres",
   "areYouSureDoing": "¿{doing}?",
   "currentlyDisplayed": "Actualmente mostrado",
