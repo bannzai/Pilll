@@ -389,7 +389,7 @@
   "changePausePeriod": "Промяна на продължителността на паузата",
   "changedPausePeriod": "Периодът на почивка от хапчетата е променен",
   "changedToDate": "Датата е променена на {date}",
-  "quickRecordTakePillFailed": "Възможно е записването на приема да не е успешно",
+  "quickRecordTakePillFailed": "Запис на приема може да не е запазен",
   "quickRecordTakePillFailedMessage": "Моля, отворете приложението и проверете",
   "alreadyTaken": "Прието",
   "startPauseTaking": "Пауза в приема",

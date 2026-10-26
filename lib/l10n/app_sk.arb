@@ -389,7 +389,7 @@
   "changePausePeriod": "Zmeniť dĺžku prestávky v užívaní tabletiek",
   "changedPausePeriod": "Dĺžka prestávky v užívaní tabletiek bola zmenená",
   "changedToDate": "Dátum bol zmenený na {date}",
-  "quickRecordTakePillFailed": "Uloženie záznamu užitia sa možno nepodarilo",
+  "quickRecordTakePillFailed": "Záznam o užití sa možno nepodarilo uložiť",
   "quickRecordTakePillFailedMessage": "Otvorte aplikáciu a skontrolujte",
   "alreadyTaken": "Užité",
   "startPauseTaking": "Prerušiť užívanie",

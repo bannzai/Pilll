@@ -389,7 +389,7 @@
   "changePausePeriod": "Thay đổi số ngày nghỉ uống thuốc",
   "changedPausePeriod": "Đã thay đổi thời gian nghỉ uống thuốc",
   "changedToDate": "Đã đổi ngày thành {date}",
-  "quickRecordTakePillFailed": "Việc ghi nhận việc uống thuốc có thể đã không thành công",
+  "quickRecordTakePillFailed": "Nhật ký uống thuốc có thể chưa được lưu",
   "quickRecordTakePillFailedMessage": "Vui lòng mở ứng dụng để kiểm tra",
   "alreadyTaken": "Đã uống",
   "startPauseTaking": "Tạm dừng uống thuốc",

@@ -389,7 +389,7 @@
   "changePausePeriod": "تغيير مدة التوقف عن تناول الحبوب",
   "changedPausePeriod": "تم تغيير فترة التوقف عن تناول الحبوب",
   "changedToDate": "تم تغيير التاريخ إلى {date}",
-  "quickRecordTakePillFailed": "قد يكون حفظ سجل الجرعة قد فشل",
+  "quickRecordTakePillFailed": "ربما لم ينجح تسجيل تناول الحبة",
   "quickRecordTakePillFailedMessage": "يرجى فتح التطبيق للتحقق",
   "alreadyTaken": "مُتناول",
   "startPauseTaking": "إيقاف التناول",

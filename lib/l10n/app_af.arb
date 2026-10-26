@@ -389,7 +389,7 @@
   "changePausePeriod": "Verander die pilpouse",
   "changedPausePeriod": "Die pilpouse is verander",
   "changedToDate": "Die datum is na {date} verander",
-  "quickRecordTakePillFailed": "Die pil-inname rekord het moontlik gefaal",
+  "quickRecordTakePillFailed": "Die innamerekord is dalk nie gestoor nie",
   "quickRecordTakePillFailedMessage": "Maak asseblief die app oop om te kontroleer",
   "alreadyTaken": "Geneem",
   "startPauseTaking": "Neem 'n pouse van pille",

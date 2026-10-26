@@ -389,7 +389,7 @@
   "changePausePeriod": "Ubah tempoh rehat pengambilan pil",
   "changedPausePeriod": "Tempoh rehat daripada mengambil pil telah diubah",
   "changedToDate": "Tarikh telah ditukar kepada {date}",
-  "quickRecordTakePillFailed": "Rekod pengambilan mungkin telah gagal",
+  "quickRecordTakePillFailed": "Rekod pengambilan mungkin tidak berjaya disimpan",
   "quickRecordTakePillFailedMessage": "Sila buka aplikasi dan semak",
   "alreadyTaken": "Sudah diambil",
   "startPauseTaking": "Berehat pengambilan",

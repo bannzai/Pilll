@@ -389,7 +389,7 @@
   "changePausePeriod": "Ndryshoni kohëzgjatjen e pushimit nga pilulat",
   "changedPausePeriod": "Kohëzgjatja e pushimit nga pilulat u ndryshua",
   "changedToDate": "Data u ndryshua në {date}",
-  "quickRecordTakePillFailed": "Regjistrimi i marrjes mund të ketë dështuar",
+  "quickRecordTakePillFailed": "Regjistrimi i marrjes mund të mos jetë ruajtur",
   "quickRecordTakePillFailedMessage": "Ju lutem hapni aplikacionin për ta kontrolluar",
   "alreadyTaken": "E marrë",
   "startPauseTaking": "Pushoj marrjen",

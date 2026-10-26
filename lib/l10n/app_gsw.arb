@@ -389,7 +389,7 @@
   "changePausePeriod": "D Lengi vo de Pillepaus ändere",
   "changedPausePeriod": "D Längi vo de Pillepause isch gänderet worde",
   "changedToDate": "S Datum isch uf {date} gänderet",
-  "quickRecordTakePillFailed": "D Regischrieru vo dä Iinahm chönt fählgschlage sii",
+  "quickRecordTakePillFailed": "D Iinahm-Ufzeichnig isch villicht nöd gspeicheret worde",
   "quickRecordTakePillFailedMessage": "Öffnet d'App und lueget nach",
   "alreadyTaken": "Iignoo",
   "startPauseTaking": "Iinahm pausiere",

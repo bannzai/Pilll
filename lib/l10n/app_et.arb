@@ -389,7 +389,7 @@
   "changePausePeriod": "Muuda pillipausi pikkust",
   "changedPausePeriod": "Pillipausi pikkus on muudetud",
   "changedToDate": "Kuupäevaks määrati {date}",
-  "quickRecordTakePillFailed": "Manustamise salvestamine võis ebaõnnestuda",
+  "quickRecordTakePillFailed": "Võtmiskirje ei pruukinud salvestuda",
   "quickRecordTakePillFailedMessage": "Palun avage rakendus ja kontrollige",
   "alreadyTaken": "Võetud",
   "startPauseTaking": "Võtmist peatada",

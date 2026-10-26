@@ -389,7 +389,7 @@
   "changePausePeriod": "ગોળી લેવાના વિરામનો સમયગાળો બદલો",
   "changedPausePeriod": "ગોળી લેવાના વિરામનો સમયગાળો બદલાયો છે",
   "changedToDate": "તારીખ બદલીને {date} કરવામાં આવી છે",
-  "quickRecordTakePillFailed": "દવા લેવાનો રેકોર્ડ નિષ્ફળ થવાની શક્યતા છે",
+  "quickRecordTakePillFailed": "ગોળી સેવનની નોંધ કદાચ સાચવાઈ નથી",
   "quickRecordTakePillFailedMessage": "કૃપા કરીને એપ ખોલીને તપાસો",
   "alreadyTaken": "લીધેલ",
   "startPauseTaking": "દવા લેવાનો વિરામ લેવો",

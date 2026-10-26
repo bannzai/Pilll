@@ -389,7 +389,7 @@
   "changePausePeriod": "የክኒን እረፍት ጊዜን መቀየር",
   "changedPausePeriod": "ክኒን ከመውሰድ የእረፍት ጊዜ ተቀይሯል",
   "changedToDate": "ቀኑ ወደ {date} ተቀይሯል",
-  "quickRecordTakePillFailed": "የመድሃኒት ወሰድ መመዝገብ ሊሳነው ይችላል",
+  "quickRecordTakePillFailed": "የአወሳሰድ መዝገብ ማስቀመጥ ላይሳካ ይችላል",
   "quickRecordTakePillFailedMessage": "አፕሊኬሽኑን ይክፈቱና ያረጋግጡ",
   "alreadyTaken": "ተወስዷል",
   "startPauseTaking": "መድኃኒት ማረፍ",

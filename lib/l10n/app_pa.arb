@@ -389,7 +389,7 @@
   "changePausePeriod": "ਗੋਲੀ ਲੈਣ ਦੇ ਵਿਰਾਮ ਦੀ ਮਿਆਦ ਬਦਲੋ",
   "changedPausePeriod": "ਗੋਲੀ ਲੈਣ ਦੇ ਵਿਰਾਮ ਦੀ ਮਿਆਦ ਬਦਲ ਦਿੱਤੀ ਗਈ ਹੈ",
   "changedToDate": "ਤਾਰੀਖ ਬਦਲ ਕੇ {date} ਕਰ ਦਿੱਤੀ ਗਈ ਹੈ",
-  "quickRecordTakePillFailed": "ਦਵਾਈ ਦਾ ਰਿਕਾਰਡ ਫੇਲ ਹੋਣ ਦੀ ਸੰਭਾਵਨਾ ਹੈ",
+  "quickRecordTakePillFailed": "ਸੇਵਨ ਰਿਕਾਰਡ ਸ਼ਾਇਦ ਸੁਰੱਖਿਅਤ ਨਹੀਂ ਹੋਇਆ",
   "quickRecordTakePillFailedMessage": "ਕਿਰਪਾ ਕਰਕੇ ਐਪ ਖੋਲ੍ਹ ਕੇ ਜਾਂਚ ਕਰੋ",
   "alreadyTaken": "ਲਿਆ ਗਿਆ",
   "startPauseTaking": "ਦਵਾਈ ਬੰਦ ਕਰੋ",

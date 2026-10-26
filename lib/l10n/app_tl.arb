@@ -389,7 +389,7 @@
   "changePausePeriod": "Baguhin ang tagal ng pahinga sa pag-inom ng pildoras",
   "changedPausePeriod": "Nabago na ang haba ng pahinga sa pag-inom ng pildoras",
   "changedToDate": "Napalitan ang petsa ng {date}",
-  "quickRecordTakePillFailed": "Maaaring hindi nakatala ang pagkakainom ng pildoras",
+  "quickRecordTakePillFailed": "Maaaring hindi na-save ang tala ng pag-inom",
   "quickRecordTakePillFailedMessage": "Mangyaring buksan ang app at suriin",
   "alreadyTaken": "Nainom na",
   "startPauseTaking": "Ihinto ang Pag-inom",

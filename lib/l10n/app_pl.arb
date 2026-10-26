@@ -389,7 +389,7 @@
   "changePausePeriod": "Zmień długość przerwy w przyjmowaniu tabletek",
   "changedPausePeriod": "Zmieniono długość przerwy w przyjmowaniu tabletek",
   "changedToDate": "Data została zmieniona na {date}",
-  "quickRecordTakePillFailed": "Możliwe, że zapis przyjęcia leku się nie powiódł",
+  "quickRecordTakePillFailed": "Zapis przyjęcia tabletki mógł się nie powieść",
   "quickRecordTakePillFailedMessage": "Otwórz aplikację i sprawdź",
   "alreadyTaken": "Zażyte",
   "startPauseTaking": "Przerwać przyjmowanie",

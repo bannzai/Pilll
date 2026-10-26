@@ -389,7 +389,7 @@
   "changePausePeriod": "Duur van de stopweek wijzigen",
   "changedPausePeriod": "De duur van de pillenpauze is gewijzigd",
   "changedToDate": "De datum is gewijzigd naar {date}",
-  "quickRecordTakePillFailed": "Het registreren van de inname is mogelijk mislukt",
+  "quickRecordTakePillFailed": "De innameregistratie is mogelijk niet opgeslagen",
   "quickRecordTakePillFailedMessage": "Open de app om te controleren",
   "alreadyTaken": "Ingenomen",
   "startPauseTaking": "Inname pauzeren",

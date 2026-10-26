@@ -389,7 +389,7 @@
   "changePausePeriod": "Muuta pilleritauon pituutta",
   "changedPausePeriod": "Pilleritauon pituus on muutettu",
   "changedToDate": "Päivämääräksi vaihdettiin {date}",
-  "quickRecordTakePillFailed": "Lääkkeenottomerkinnän tallentaminen on saattanut epäonnistua",
+  "quickRecordTakePillFailed": "Pilleriloki ei ehkä tallentunut",
   "quickRecordTakePillFailedMessage": "Avaa sovellus ja tarkista",
   "alreadyTaken": "Otettu",
   "startPauseTaking": "Pidä ottotaukoa",

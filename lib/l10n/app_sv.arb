@@ -389,7 +389,7 @@
   "changePausePeriod": "Ändra längden på pilleruppehållet",
   "changedPausePeriod": "Längden på pillerpausen har ändrats",
   "changedToDate": "Datumet har ändrats till {date}",
-  "quickRecordTakePillFailed": "Registreringen av ditt medicintag kan ha misslyckats",
+  "quickRecordTakePillFailed": "Intagsloggen kanske inte sparades",
   "quickRecordTakePillFailedMessage": "Vänligen öppna appen och kontrollera",
   "alreadyTaken": "Tagen",
   "startPauseTaking": "Pausa intag",

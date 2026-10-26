@@ -389,7 +389,7 @@
   "changePausePeriod": "Змяніць працягласць перапынку ў прыёме пігулак",
   "changedPausePeriod": "Перыяд перапынку ў прыёме пігулак зменены",
   "changedToDate": "Дата зменена на {date}",
-  "quickRecordTakePillFailed": "Магчыма, запіс прыёму не атрымаўся",
+  "quickRecordTakePillFailed": "Запіс прыёму пігулак мог не захавацца",
   "quickRecordTakePillFailedMessage": "Адкрыйце дадатак і праверце",
   "alreadyTaken": "прыняты",
   "startPauseTaking": "Зрабіць перапынак",

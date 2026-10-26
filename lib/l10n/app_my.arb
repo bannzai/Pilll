@@ -389,7 +389,7 @@
   "changePausePeriod": "ဆေးလုံးသောက်ခြင်း ခေတ္တရပ်နားချိန်ကို ပြောင်းရန်",
   "changedPausePeriod": "ဆေးလုံးသောက်ခြင်း ရပ်နားချိန်ကို ပြောင်းလဲပြီးပါပြီ",
   "changedToDate": "ရက်စွဲကို {date} သို့ ပြောင်းပြီးပါပြီ",
-  "quickRecordTakePillFailed": "ဆေးသောက်မှတ်တမ်း မှတ်ရာ ပျက်ကွက်နိုင်ပါသည်",
+  "quickRecordTakePillFailed": "ဆေးသောက်မှတ်တမ်းကို မသိမ်းဆည်းနိုင်ခဲ့တာ ဖြစ်နိုင်ပါတယ်",
   "quickRecordTakePillFailedMessage": "အက်ပ်ကို ဖွင့်ပြီး စစ်ဆေးပါ",
   "alreadyTaken": "သောက်ပြီး",
   "startPauseTaking": "ဆေးသောက်ခြင်း နားမည်",

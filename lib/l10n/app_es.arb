@@ -389,7 +389,7 @@
   "changePausePeriod": "Cambiar la duración del descanso de la píldora",
   "changedPausePeriod": "Se cambió la duración del descanso de la píldora",
   "changedToDate": "La fecha se cambió a {date}",
-  "quickRecordTakePillFailed": "Es posible que el registro de la toma haya fallado",
+  "quickRecordTakePillFailed": "Es posible que no se haya guardado el registro de toma",
   "quickRecordTakePillFailedMessage": "Por favor, abra la aplicación y verifique",
   "alreadyTaken": "Tomado",
   "startPauseTaking": "Pausar la toma",

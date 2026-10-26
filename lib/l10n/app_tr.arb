@@ -389,7 +389,7 @@
   "changePausePeriod": "Hap kullanma arasının süresini değiştirin",
   "changedPausePeriod": "İlaca ara verme süresi değiştirildi",
   "changedToDate": "Tarih {date} olarak değiştirildi",
-  "quickRecordTakePillFailed": "İlaç alım kaydınız başarısız olmuş olabilir",
+  "quickRecordTakePillFailed": "Hap kullanım kaydı kaydedilmemiş olabilir",
   "quickRecordTakePillFailedMessage": "Lütfen uygulamayı açın ve kontrol edin",
   "alreadyTaken": "Alındı",
   "startPauseTaking": "İlaç kullanımına ara ver",

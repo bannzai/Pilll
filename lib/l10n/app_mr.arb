@@ -389,7 +389,7 @@
   "changePausePeriod": "गोळ्या घेण्याच्या विश्रांतीचा कालावधी बदला",
   "changedPausePeriod": "गोळ्या घेण्याच्या विश्रांतीचा कालावधी बदलला आहे",
   "changedToDate": "तारीख {date} अशी बदलली आहे",
-  "quickRecordTakePillFailed": "सेवन रेकॉर्ड सेव्ह करण्यात अयशस्वी झाले असण्याची शक्यता आहे",
+  "quickRecordTakePillFailed": "सेवन नोंद जतन झाली नसण्याची शक्यता आहे",
   "quickRecordTakePillFailedMessage": "कृपया अॅप उघडून तपासा",
   "alreadyTaken": "घेतले",
   "startPauseTaking": "सेवन थांबवा",

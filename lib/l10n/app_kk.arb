@@ -389,7 +389,7 @@
   "changePausePeriod": "Таблетка қабылдаудағы үзіліс ұзақтығын өзгертіңіз",
   "changedPausePeriod": "Таблетка қабылдаудағы үзіліс ұзақтығы өзгертілді",
   "changedToDate": "Күн {date} болып өзгертілді",
-  "quickRecordTakePillFailed": "Дәрі қабылдау жазбасы сәтсіз болған мүмкіндігі бар",
+  "quickRecordTakePillFailed": "Қабылдау жазбасы сақталмаған болуы мүмкін",
   "quickRecordTakePillFailedMessage": "Қолданбаны ашып тексеріп көріңіз",
   "alreadyTaken": "Ішілді",
   "startPauseTaking": "Қабылдауды тоқтату",

@@ -389,7 +389,7 @@
   "changePausePeriod": "Αλλαγή διάρκειας διακοπής λήψης χαπιών",
   "changedPausePeriod": "Η διάρκεια της διακοπής λήψης του χαπιού άλλαξε",
   "changedToDate": "Η ημερομηνία άλλαξε σε {date}",
-  "quickRecordTakePillFailed": "Η καταγραφή της λήψης ενδέχεται να απέτυχε",
+  "quickRecordTakePillFailed": "Η καταγραφή λήψης ίσως δεν αποθηκεύτηκε",
   "quickRecordTakePillFailedMessage": "Παρακαλώ ανοίξτε την εφαρμογή για να ελέγξετε",
   "alreadyTaken": "Ληφθέν",
   "startPauseTaking": "Παύση λήψης",

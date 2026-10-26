@@ -389,7 +389,7 @@
   "changePausePeriod": "Modifier la durée de la pause de la pilule",
   "changedPausePeriod": "La durée de la pause entre les prises de pilule a été modifiée",
   "changedToDate": "La date a été modifiée pour {date}",
-  "quickRecordTakePillFailed": "L'enregistrement de votre dose a peut-être échoué",
+  "quickRecordTakePillFailed": "Le journal des prises n’a peut-être pas été enregistré",
   "quickRecordTakePillFailedMessage": "Veuillez ouvrir l'application pour vérifier",
   "alreadyTaken": "Pris",
   "startPauseTaking": "Faites une pause avec les pilules",

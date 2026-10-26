@@ -389,7 +389,7 @@
   "changePausePeriod": "Newid hyd y seibiant o gymryd y bilsen",
   "changedPausePeriod": "Mae hyd yr egwyl o gymryd y bilsen wedi newid",
   "changedToDate": "Mae'r dyddiad wedi'i newid i {date}",
-  "quickRecordTakePillFailed": "Efallai bod y cofnod cymryd wedi methu",
+  "quickRecordTakePillFailed": "Mae’n bosibl na chafodd y cofnod cymryd ei gadw",
   "quickRecordTakePillFailedMessage": "Agorwch yr ap a gwiriwch",
   "alreadyTaken": "Wedi'i gymryd",
   "startPauseTaking": "Cymryd seibiant",

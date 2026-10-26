@@ -389,7 +389,7 @@
   "changePausePeriod": "ବଟିକା ଖାଇବାର ବିରତି ଅବଧି ବଦଳାନ୍ତୁ",
   "changedPausePeriod": "ବଟିକା ଖାଇବାର ବିରତି ଅବଧି ପରିବର୍ତ୍ତନ କରାଯାଇଛି",
   "changedToDate": "ତାରିଖ {date}କୁ ବଦଳାଯାଇଛି",
-  "quickRecordTakePillFailed": "ସେବନ ରେକର୍ଡ ବିଫଳ ହେବାର ସମ୍ଭାବନା ଅଛି",
+  "quickRecordTakePillFailed": "ସେବନ ରେକର୍ଡ ସଂରକ୍ଷିତ ହୋଇନଥାଇପାରେ",
   "quickRecordTakePillFailedMessage": "ଦୟାକରି ଆପ୍ ଖୋଲି ଯାଞ୍ଚ କରନ୍ତୁ",
   "alreadyTaken": "ଖାଇଛି",
   "startPauseTaking": "ସେବନ ବିରତି କରିବା",

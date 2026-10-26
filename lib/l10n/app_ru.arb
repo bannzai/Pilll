@@ -389,7 +389,7 @@
   "changePausePeriod": "Изменить длительность перерыва в приёме таблеток",
   "changedPausePeriod": "Длительность перерыва в приёме таблеток изменена",
   "changedToDate": "Дата изменена на {date}",
-  "quickRecordTakePillFailed": "Возможно, не удалось сохранить запись о приеме таблеток",
+  "quickRecordTakePillFailed": "Журнал приёма таблеток, возможно, не сохранился",
   "quickRecordTakePillFailedMessage": "Откройте приложение и проверьте",
   "alreadyTaken": "Принято",
   "startPauseTaking": "Приостановить прием",

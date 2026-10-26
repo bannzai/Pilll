@@ -389,7 +389,7 @@
   "changePausePeriod": "පෙති ගැනීමේ විරාමයේ කාලය වෙනස් කරන්න",
   "changedPausePeriod": "පෙති ගැනීමේ විවේක කාලය වෙනස් කර ඇත",
   "changedToDate": "දිනය {date} ලෙස වෙනස් කර ඇත",
-  "quickRecordTakePillFailed": "ඖෂධ ගැනීමේ සටහන සුරැකීම අසාර්ථක වූ හැකියාවක් ඇත",
+  "quickRecordTakePillFailed": "පෙති ගැනීමේ සටහන සුරැකී නොතිබිය හැකියි",
   "quickRecordTakePillFailedMessage": "කරුණාකර යෙදුම විවෘත කර පරීක්ෂා කරන්න",
   "alreadyTaken": "ගත්තා",
   "startPauseTaking": "ගැනීම නවත්වන්න",

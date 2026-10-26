@@ -389,7 +389,7 @@
   "changePausePeriod": "更改停药期天数",
   "changedPausePeriod": "已更改停药期的天数",
   "changedToDate": "日期已改为{date}",
-  "quickRecordTakePillFailed": "服药记录可能保存失败",
+  "quickRecordTakePillFailed": "服药记录可能未保存成功",
   "quickRecordTakePillFailedMessage": "请打开应用程序确认",
   "alreadyTaken": "已服用",
   "startPauseTaking": "暂停服用",
