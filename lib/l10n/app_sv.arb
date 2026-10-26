@@ -121,7 +121,7 @@
   "addPillSheetButton": "Lägg till p-pillerkarta",
   "taken": "P-piller taget",
   "notTaken": "P-pillret är inte taget",
-  "pillSheetSettings": "Pillarks inställningar",
+  "pillSheetSettings": "Inställningar för p-pillerkarta",
   "unmarkTodayPillAsTakenToPause": "Markera först dagens piller som ej tagna",
   "pauseTaking": "Tabletpaus",
   "changePauseStartDate": "Ändra startdatum för pillpaus",

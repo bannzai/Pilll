@@ -121,7 +121,7 @@
   "addPillSheetButton": "Tambah strip pil",
   "taken": "Pil sudah diminum",
   "notTaken": "Pil belum diminum",
-  "pillSheetSettings": "Pengaturan Lembar Pil",
+  "pillSheetSettings": "Pengaturan strip pil",
   "unmarkTodayPillAsTakenToPause": "Setelah menandai pil hari ini sebagai belum diminum",
   "pauseTaking": "Jeda Minum",
   "changePauseStartDate": "Ubah Tanggal Mulai Jeda Konsumsi",

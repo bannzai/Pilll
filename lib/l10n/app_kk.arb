@@ -121,7 +121,7 @@
   "addPillSheetButton": "таблетка блистер қосу",
   "taken": "Таблетка қабылданды",
   "notTaken": "Таблетка қабылданбаған",
-  "pillSheetSettings": "Таблетка парағының баптаулары",
+  "pillSheetSettings": "таблетка блистер параметрлері",
   "unmarkTodayPillAsTakenToPause": "Бүгінгі таблетканы ішпеген деп белгілегеннен кейін",
   "pauseTaking": "Тоқтату",
   "changePauseStartDate": "Пилл қабылдау үзілісінің басталу күнін өзгерту",

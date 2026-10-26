@@ -121,7 +121,7 @@
   "addPillSheetButton": "Pillenblister hinzufügen",
   "taken": "Pille eingenommen",
   "notTaken": "Pille noch nicht genommen",
-  "pillSheetSettings": "Pillenpackung-Einstellungen",
+  "pillSheetSettings": "Einstellungen für den Pillenblister",
   "unmarkTodayPillAsTakenToPause": "Nachdem Sie die heutige Pille als nicht eingenommen markiert haben",
   "pauseTaking": "Einnahmepause",
   "changePauseStartDate": "Einnahmepause-Startdatum ändern",

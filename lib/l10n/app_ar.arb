@@ -121,7 +121,7 @@
   "addPillSheetButton": "أضيفي شريط",
   "taken": "تم تناول الحبة",
   "notTaken": "لم تؤخذ الحبة",
-  "pillSheetSettings": "إعدادات شرائط الحبوب",
+  "pillSheetSettings": "إعدادات الشريط",
   "unmarkTodayPillAsTakenToPause": "بعد تعيين حبة اليوم كغير مأخوذة",
   "pauseTaking": "إيقاف الدواء",
   "changePauseStartDate": "تغيير تاريخ بداية التوقف",

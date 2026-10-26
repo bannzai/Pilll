@@ -121,7 +121,7 @@
   "addPillSheetButton": "Lisa pillileh",
   "taken": "Pill võetud",
   "notTaken": "Pill võtmata",
-  "pillSheetSettings": "Pillipaki seaded",
+  "pillSheetSettings": "pillilehe seaded",
   "unmarkTodayPillAsTakenToPause": "Pärast tänase pilli võtmata märkimist",
   "pauseTaking": "Võtmise paus",
   "changePauseStartDate": "Puhkeaja alguskuupäeva muutmine",

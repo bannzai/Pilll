@@ -121,7 +121,7 @@
   "addPillSheetButton": "Új tablettacsomag hozzáadása",
   "taken": "Tabletta beszedve",
   "notTaken": "A tabletta nincs beszedve",
-  "pillSheetSettings": "Tablettafólia beállítások",
+  "pillSheetSettings": "A tablettacsomag beállításai",
   "unmarkTodayPillAsTakenToPause": "A mai tabletta nem bevettként való megjelölése után",
   "pauseTaking": "Szedési szünet",
   "changePauseStartDate": "Szedési szünet kezdő dátum módosítása",

@@ -121,7 +121,7 @@
   "addPillSheetButton": "Tilføj pillekort",
   "taken": "P-pille taget",
   "notTaken": "P-pillen er ikke taget",
-  "pillSheetSettings": "Pilleskema indstillinger",
+  "pillSheetSettings": "Indstillinger for pillekort",
   "unmarkTodayPillAsTakenToPause": "Efter at have markeret dagens pille som ikke taget",
   "pauseTaking": "Pillepause",
   "changePauseStartDate": "Ændre pausestartdato",

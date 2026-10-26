@@ -121,7 +121,7 @@
   "addPillSheetButton": "ဆေးပြားကတ် ထည့်ပါ",
   "taken": "ဆေးပြား သောက်ပြီးပါပြီ",
   "notTaken": "ဆေးပြား မသောက်ရသေးပါ",
-  "pillSheetSettings": "ဆေးတောင့်ပြား ဆက်တင်",
+  "pillSheetSettings": "ဆေးပြားကတ် ဆက်တင်များ",
   "unmarkTodayPillAsTakenToPause": "ယနေ့သောက်ရမည့်ဆေးတောင့်ကို မသောက်ရသေးအဖြစ်သတ်မှတ်ပြီးမှ",
   "pauseTaking": "ဆေးရပ်တန့်",
   "changePauseStartDate": "ဆေးလုံးသောက်ခြင်း ရပ်နားမည့် စတင်ရက် ပြောင်းလဲခြင်း",

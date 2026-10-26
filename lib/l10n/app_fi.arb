@@ -121,7 +121,7 @@
   "addPillSheetButton": "Lisää pilleriliuska",
   "taken": "Pilleri otettu",
   "notTaken": "Pilleri ottamatta",
-  "pillSheetSettings": "Pillerilevyn asetukset",
+  "pillSheetSettings": "pilleriliuskan asetukset",
   "unmarkTodayPillAsTakenToPause": "Merkitse tänään otettava pilleri ottamattomaksi ennen",
   "pauseTaking": "Lääketauko",
   "changePauseStartDate": "Muuta käyttötauon aloituspäivää",

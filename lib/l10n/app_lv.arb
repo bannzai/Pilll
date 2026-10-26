@@ -121,7 +121,7 @@
   "addPillSheetButton": "Pievienot tablešu blister",
   "taken": "Tablete lietota",
   "notTaken": "Tablete nav lietota",
-  "pillSheetSettings": "Tablešu plāksnes iestatījumi",
+  "pillSheetSettings": "tablešu blister iestatījumi",
   "unmarkTodayPillAsTakenToPause": "Pēc tam, kad šodienas tabletes atzīmējat kā neuzņemtas",
   "pauseTaking": "Lietošanas pārtraukums",
   "changePauseStartDate": "Pārtraukuma sākuma datuma maiņa",

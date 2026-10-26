@@ -121,7 +121,7 @@
   "addPillSheetButton": "Legg til pillebrett",
   "taken": "P-pille tatt",
   "notTaken": "P-pillen er ikke tatt",
-  "pillSheetSettings": "Pilleark-innstillinger",
+  "pillSheetSettings": "Innstillinger for pillebrett",
   "unmarkTodayPillAsTakenToPause": "Marker dagens pille som ikke tatt før",
   "pauseTaking": "Pause",
   "changePauseStartDate": "Endre startdato for medisinpause",

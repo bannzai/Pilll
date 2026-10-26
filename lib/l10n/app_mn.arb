@@ -121,7 +121,7 @@
   "addPillSheetButton": "эмийн блистер нэмэх",
   "taken": "Эмээ уусан",
   "notTaken": "Эмээ уугаагүй",
-  "pillSheetSettings": "Пил хуудасны тохиргоо",
+  "pillSheetSettings": "эмийн блистер тохиргоо",
   "unmarkTodayPillAsTakenToPause": "Өнөөдрийн эмийг уугаагүй болгосны дараа",
   "pauseTaking": "Түр амрах",
   "changePauseStartDate": "Эм амрах эхлэх өдрийг өөрчлөх",

@@ -121,7 +121,7 @@
   "addPillSheetButton": "เพิ่มแผงยา",
   "taken": "ทานยาแล้ว",
   "notTaken": "ยังไม่ได้ทานยา",
-  "pillSheetSettings": "การตั้งค่าแผงยาคุม",
+  "pillSheetSettings": "การตั้งค่าแผงยา",
   "unmarkTodayPillAsTakenToPause": "หลังจากเปลี่ยนยาคุมวันนี้เป็นยังไม่ได้รับประทานแล้ว",
   "pauseTaking": "พักรับประทาน",
   "changePauseStartDate": "เปลี่ยนวันเริ่มต้นหยุดรับประทานยา",

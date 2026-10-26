@@ -121,7 +121,7 @@
   "addPillSheetButton": "blister ekleyin",
   "taken": "Hap alındı",
   "notTaken": "Hap henüz alınmadı",
-  "pillSheetSettings": "Hap Şeridi Ayarları",
+  "pillSheetSettings": "Blister ayarları",
   "unmarkTodayPillAsTakenToPause": "Bugünkü hapları alınmamış olarak işaretledikten sonra",
   "pauseTaking": "İlaç Molası",
   "changePauseStartDate": "Kullanım Molası Başlangıç Tarihini Değiştir",

@@ -121,7 +121,7 @@
   "addPillSheetButton": "Dodajte blister",
   "taken": "Pilula je uzeta",
   "notTaken": "Pilula nije uzeta",
-  "pillSheetSettings": "Postavke blistera pilula",
+  "pillSheetSettings": "Postavke za blister",
   "unmarkTodayPillAsTakenToPause": "Prvo označite današnju pilulu kao neuzetu",
   "pauseTaking": "Pauza uzimanja",
   "changePauseStartDate": "Promjena datuma početka pauze",

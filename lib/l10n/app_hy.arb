@@ -121,7 +121,7 @@
   "addPillSheetButton": "Ավելացնել հաբերի բլիստեր",
   "taken": "Հաբը ընդունված է",
   "notTaken": "Հաբը չի ընդունվել",
-  "pillSheetSettings": "Հապերի թերթի կարգավորումներ",
+  "pillSheetSettings": "հաբերի բլիստեր կարգավորումներ",
   "unmarkTodayPillAsTakenToPause": "Այսօրվա հաբը չառնված նշելուց հետո",
   "pauseTaking": "Դուցի դադար",
   "changePauseStartDate": "Դադարի սկսման ամսաթիվը փոխել",

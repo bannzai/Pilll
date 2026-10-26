@@ -121,7 +121,7 @@
   "addPillSheetButton": "Gehitu pilula-blister",
   "taken": "Pilula hartuta",
   "notTaken": "Pilula hartu gabe",
-  "pillSheetSettings": "Pilula-orriaren konfigurazioa",
+  "pillSheetSettings": "pilula-blister ezarpenak",
   "unmarkTodayPillAsTakenToPause": "Gaurko pilula hartu gabe markatu eta gero",
   "pauseTaking": "Hartze-atsedenaldia",
   "changePauseStartDate": "Atseden hasiera data aldatu",

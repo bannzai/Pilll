@@ -121,7 +121,7 @@
   "addPillSheetButton": "Pillenstrip toevoegen",
   "taken": "Pil ingenomen",
   "notTaken": "Pil nog niet ingenomen",
-  "pillSheetSettings": "Pilstrip-instellingen",
+  "pillSheetSettings": "Instellingen voor de pillenstrip",
   "unmarkTodayPillAsTakenToPause": "Nadat je de pil van vandaag als niet-ingenomen hebt gemarkeerd",
   "pauseTaking": "Pilpauze",
   "changePauseStartDate": "Startdatum pauze wijzigen",

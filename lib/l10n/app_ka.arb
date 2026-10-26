@@ -121,7 +121,7 @@
   "addPillSheetButton": "აბების ბლისტერ დამატება",
   "taken": "აბი მიღებულია",
   "notTaken": "აბი არ არის მიღებული",
-  "pillSheetSettings": "აბების ფურცლის დაყენება",
+  "pillSheetSettings": "აბების ბლისტერ პარამეტრები",
   "unmarkTodayPillAsTakenToPause": "დღეს მისაღები აბი არ მიღებულად მონიშვნის შემდეგ",
   "pauseTaking": "მიღების დასვენება",
   "changePauseStartDate": "მიღების შეყოვნების დაწყების თარიღის შეცვლა",
