@@ -82,7 +82,7 @@
   "pill": "P-piller",
   "calendar": "Kalender",
   "userInformationWillBeDeleted": "Dina användaruppgifter kommer att raderas",
-  "withdrawalMessage": "Om du tar bort ditt konto kommer all data att raderas och du kommer aldrig kunna logga in med samma konto igen.",
+  "withdrawalMessage": "Om du raderar ditt konto raderas alla dina uppgifter, och du kan aldrig logga in med samma konto igen.",
   "recordPage": "Historik",
   "doReLogin": "Vänligen logga in igen",
   "reLoginMessage": "Vänligen logga in igen för att verifiera din identitet innan kontot avslutas. Avslutningsprocessen startar automatiskt efter återinloggningen.",

@@ -82,7 +82,7 @@
   "pill": "Pildoras",
   "calendar": "Kalendaryo",
   "userInformationWillBeDeleted": "Mabubura ang inyong impormasyon bilang gumagamit",
-  "withdrawalMessage": "Kapag mag-withdraw kayo, lahat ng inyong data ay mababura at hindi na ninyo magagamit ang account na ito ulit.",
+  "withdrawalMessage": "Kapag binura ninyo ang inyong account, mabubura ang lahat ng inyong datos at hindi na kayo kailanman makakapag-log in gamit ang account na iyon.",
   "recordPage": "Rekord",
   "doReLogin": "Mangyaring mag-login muli",
   "reLoginMessage": "Mangyaring mag-log in muli para sa pagpapatunay ng pagkakakilanlan bago tanggalin ang account. Pagkatapos ng muling pag-log in, awtomatikong magsisimula ang proseso ng pagtanggal ng account.",

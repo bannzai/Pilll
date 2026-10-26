@@ -82,7 +82,7 @@
   "pill": "Ehkäisypilleri",
   "calendar": "Kalenteri",
   "userInformationWillBeDeleted": "Käyttäjätietosi poistetaan",
-  "withdrawalMessage": "Kun poistat tilin, kaikki tiedot poistetaan pysyvästi, etkä voi enää koskaan kirjautua sisään samalla tilillä.",
+  "withdrawalMessage": "Jos poistat tilisi, kaikki tietosi poistetaan etkä voi enää koskaan kirjautua sisään samalla tilillä.",
   "recordPage": "Kirjaussivu",
   "doReLogin": "Kirjaudu sisään uudelleen",
   "reLoginMessage": "Vahvista henkilöllisyytesi kirjautumalla uudelleen sisään ennen tilin poistamista. Uudelleenkirjautumisen jälkeen tilin poistoprosessi alkaa automaattisesti.",

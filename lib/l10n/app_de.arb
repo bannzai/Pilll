@@ -82,7 +82,7 @@
   "pill": "Pille",
   "calendar": "Kalender",
   "userInformationWillBeDeleted": "Deine Benutzerdaten werden gelöscht",
-  "withdrawalMessage": "Wenn Sie Ihr Konto löschen, werden alle Daten unwiderruflich gelöscht und Sie können sich nie wieder mit demselben Konto anmelden.",
+  "withdrawalMessage": "Wenn du dein Konto löschst, werden alle deine Daten gelöscht. Mit demselben Konto kannst du dich danach nie wieder anmelden.",
   "recordPage": "Aufzeichnungen",
   "doReLogin": "Bitte melden Sie sich erneut an",
   "reLoginMessage": "Zur Identitätsverifikation melden Sie sich bitte vor der Kontolöschung erneut an. Nach der erneuten Anmeldung beginnt der Löschungsvorgang automatisch.",

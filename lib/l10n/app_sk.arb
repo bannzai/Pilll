@@ -82,7 +82,7 @@
   "pill": "Antikoncepčná tabletka",
   "calendar": "Kalendár",
   "userInformationWillBeDeleted": "Vaše používateľské údaje budú odstránené",
-  "withdrawalMessage": "Vymazaním účtu budú všetky vaše údaje natrvalo odstránené a už sa nikdy nebudete môcť prihlásiť pomocou tohto účtu.",
+  "withdrawalMessage": "Ak odstránite svoj účet, všetky vaše údaje sa vymažú a do toho istého účtu sa už nikdy nebudete môcť prihlásiť.",
   "recordPage": "Záznamy",
   "doReLogin": "Prihláste sa prosím znovu",
   "reLoginMessage": "Pred zrušením účtu sa prosím znovu prihláste na overenie totožnosti. Po opätovnom prihlásení sa automaticky spustí proces zrušenia účtu.",

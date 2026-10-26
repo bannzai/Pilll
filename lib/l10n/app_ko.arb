@@ -82,7 +82,7 @@
   "pill": "피임약",
   "calendar": "달력",
   "userInformationWillBeDeleted": "사용자 정보가 삭제돼요",
-  "withdrawalMessage": "탈퇴하시면 모든 데이터가 삭제되며, 동일한 계정으로 다시 로그인할 수 없습니다.",
+  "withdrawalMessage": "계정을 탈퇴하면 모든 데이터가 삭제되며, 같은 계정으로는 다시 로그인할 수 없어요.",
   "recordPage": "기록",
   "doReLogin": "다시 로그인해주세요",
   "reLoginMessage": "탈퇴 전에 본인 확인을 위해 다시 로그인해 주세요. 재로그인 후 자동으로 탈퇴 처리가 시작됩니다.",

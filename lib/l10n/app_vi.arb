@@ -82,7 +82,7 @@
   "pill": "Thuốc tránh thai",
   "calendar": "Lịch",
   "userInformationWillBeDeleted": "Thông tin người dùng của bạn sẽ bị xóa",
-  "withdrawalMessage": "Khi hủy tài khoản, tất cả dữ liệu sẽ bị xóa và bạn sẽ không thể đăng nhập lại bằng cùng tài khoản này nữa.",
+  "withdrawalMessage": "Nếu bạn xóa tài khoản, toàn bộ dữ liệu của bạn sẽ bị xóa và bạn sẽ không bao giờ đăng nhập lại được bằng tài khoản đó.",
   "recordPage": "Ghi Chép",
   "doReLogin": "Vui lòng đăng nhập lại",
   "reLoginMessage": "Vui lòng đăng nhập lại để xác minh danh tính trước khi hủy tài khoản. Sau khi đăng nhập lại, quá trình hủy tài khoản sẽ tự động bắt đầu.",

@@ -82,7 +82,7 @@
   "pill": "Pil",
   "calendar": "Kalender",
   "userInformationWillBeDeleted": "Jou gebruikersinligting sal uitgevee word",
-  "withdrawalMessage": "As jy jou rekening beëindig, sal alle data permanent uitgewis word en jy sal nooit weer met dieselfde rekening kan aanteken nie.",
+  "withdrawalMessage": "As jy jou rekening sluit, word al jou data uitgevee en kan jy nooit weer met dieselfde rekening aanmeld nie.",
   "recordPage": "Rekordblad",
   "doReLogin": "Meld asseblief weer aan",
   "reLoginMessage": "Teken asseblief weer aan vir identiteitsverifikasie voor u rekening gesluit word. Die rekening sluitingspreses sal outomaties begin nadat u weer aangemeld het.",

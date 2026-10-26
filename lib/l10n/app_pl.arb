@@ -82,7 +82,7 @@
   "pill": "Pigułka",
   "calendar": "Kalendarz",
   "userInformationWillBeDeleted": "Twoje dane użytkownika zostaną usunięte",
-  "withdrawalMessage": "Po usunięciu konta wszystkie dane zostaną na stałe usunięte i nie będzie możliwości ponownego zalogowania się na to samo konto.",
+  "withdrawalMessage": "Jeśli usuniesz konto, wszystkie Twoje dane zostaną usunięte i już nigdy nie zalogujesz się na to samo konto.",
   "recordPage": "Zapisy",
   "doReLogin": "Zaloguj się ponownie",
   "reLoginMessage": "Przed usunięciem konta zaloguj się ponownie w celu weryfikacji tożsamości. Po ponownym zalogowaniu proces usunięcia konta zostanie automatycznie rozpoczęty.",

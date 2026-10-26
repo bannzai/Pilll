@@ -82,7 +82,7 @@
   "pill": "P-pille",
   "calendar": "Kalender",
   "userInformationWillBeDeleted": "Brukeropplysningene dine blir slettet",
-  "withdrawalMessage": "Hvis du melder deg ut, vil alle data bli slettet og du vil aldri kunne logge inn med samme konto igjen.",
+  "withdrawalMessage": "Hvis du sletter kontoen din, blir alle dataene dine slettet, og du kan aldri logge inn med den samme kontoen igjen.",
   "recordPage": "Registreringsside",
   "doReLogin": "Vennligst logg inn på nytt",
   "reLoginMessage": "Vennligst logg inn på nytt for å bekrefte identiteten din før avmelding. Avmeldingsprosessen starter automatisk etter at du har logget inn på nytt.",

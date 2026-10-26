@@ -82,7 +82,7 @@
   "pill": "Pillola",
   "calendar": "Calendario",
   "userInformationWillBeDeleted": "Le tue informazioni utente verranno eliminate",
-  "withdrawalMessage": "Eliminando l'account, tutti i dati verranno cancellati e non sarà più possibile accedere con lo stesso account.",
+  "withdrawalMessage": "Se elimini il tuo account, tutti i tuoi dati verranno cancellati e non potrai mai più accedere con lo stesso account.",
   "recordPage": "Registro",
   "doReLogin": "Si prega di effettuare nuovamente il login",
   "reLoginMessage": "Prima di cancellare l'account, effettua nuovamente l'accesso per verificare la tua identità. Dopo il nuovo accesso, il processo di cancellazione dell'account inizierà automaticamente.",

@@ -82,7 +82,7 @@
   "pill": "Pílula",
   "calendar": "Calendário",
   "userInformationWillBeDeleted": "Suas informações de usuário serão excluídas",
-  "withdrawalMessage": "Se você cancelar sua conta, todos os dados serão excluídos permanentemente e não será possível fazer login com a mesma conta novamente.",
+  "withdrawalMessage": "Se você excluir sua conta, todos os seus dados serão apagados e nunca mais será possível entrar com a mesma conta.",
   "recordPage": "Registros",
   "doReLogin": "Por favor, faça login novamente",
   "reLoginMessage": "Por favor, faça login novamente para verificação de identidade antes de cancelar sua conta. O processo de cancelamento será iniciado automaticamente após o novo login.",

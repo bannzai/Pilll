@@ -82,7 +82,7 @@
   "pill": "Pil",
   "calendar": "Kalender",
   "userInformationWillBeDeleted": "Informasi pengguna Anda akan dihapus",
-  "withdrawalMessage": "Dengan membatalkan keanggotaan, semua data akan dihapus permanen dan Anda tidak akan pernah bisa masuk kembali dengan akun yang sama.",
+  "withdrawalMessage": "Jika Anda menghapus akun, semua data Anda akan dihapus dan Anda tidak akan pernah bisa masuk lagi dengan akun yang sama.",
   "recordPage": "Catatan",
   "doReLogin": "Silakan masuk kembali",
   "reLoginMessage": "Harap login kembali untuk verifikasi identitas sebelum menghapus akun. Setelah berhasil login kembali, proses penghapusan akun akan dimulai secara otomatis",

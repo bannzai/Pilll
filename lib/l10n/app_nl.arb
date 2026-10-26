@@ -82,7 +82,7 @@
   "pill": "Pil",
   "calendar": "Kalender",
   "userInformationWillBeDeleted": "Je gebruikersgegevens worden verwijderd",
-  "withdrawalMessage": "Door je account op te zeggen worden alle gegevens definitief verwijderd en kun je nooit meer inloggen met hetzelfde account.",
+  "withdrawalMessage": "Als je je account verwijdert, worden al je gegevens gewist en kun je nooit meer met hetzelfde account inloggen.",
   "recordPage": "Registraties",
   "doReLogin": "Log opnieuw in",
   "reLoginMessage": "Voordat u uw account verwijdert, moet u opnieuw inloggen voor identiteitsverificatie. Na het opnieuw inloggen begint automatisch het verwijderingsproces.",

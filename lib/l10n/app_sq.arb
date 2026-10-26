@@ -82,7 +82,7 @@
   "pill": "Pilulë",
   "calendar": "Kalendari",
   "userInformationWillBeDeleted": "Të dhënat tuaja të përdoruesit do të fshihen",
-  "withdrawalMessage": "Duke fshirë llogarinë, të gjitha të dhënat tuaja do të fshihen përgjithmonë dhe nuk do të mund të hyni më me të njëjtin llogari.",
+  "withdrawalMessage": "Nëse e fshini llogarinë tuaj, të gjitha të dhënat tuaja do të fshihen dhe nuk do të mund të hyni më kurrë me të njëjtën llogari.",
   "recordPage": "Regjistrimet",
   "doReLogin": "Ju lutemi hyni përsëri",
   "reLoginMessage": "Ju lutemi bëni hyrjen përsëri për verifikimin e identitetit përpara anulimit të llogarisë. Pas hyrjes së dytë, procesi i anulimit të llogarisë do të fillojë automatikisht.",

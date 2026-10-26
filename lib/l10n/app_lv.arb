@@ -82,7 +82,7 @@
   "pill": "Kontracepcijas tablete",
   "calendar": "Kalendārs",
   "userInformationWillBeDeleted": "Jūsu lietotāja dati tiks dzēsti",
-  "withdrawalMessage": "Konta dzēšanas gadījumā visi jūsu dati tiks neatgriezeniski dzēsti un jūs vairs nevarēsiet pieteikties ar šo kontu.",
+  "withdrawalMessage": "Ja dzēsīsiet savu kontu, visi jūsu dati tiks dzēsti un ar to pašu kontu vairs nekad nevarēsiet pieteikties.",
   "recordPage": "Ieraksti",
   "doReLogin": "Lūdzu, pieslēdzieties vēlreiz",
   "reLoginMessage": "Pirms konta dzēšanas, lūdzu piesakieties atkārtoti identitātes pārbaudei. Pēc atkārtotas pieteikšanās automātiski sāksies konta dzēšanas process.",

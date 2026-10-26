@@ -82,7 +82,7 @@
   "pill": "Píndola",
   "calendar": "Calendari",
   "userInformationWillBeDeleted": "S'eliminarà la teva informació d'usuari",
-  "withdrawalMessage": "Si et dones de baixa, totes les dades seran eliminades i no podràs tornar a iniciar sessió amb el mateix compte mai més.",
+  "withdrawalMessage": "Si elimines el compte, s’esborraran totes les teves dades i no podràs tornar a iniciar sessió amb el mateix compte.",
   "recordPage": "Registres",
   "doReLogin": "Si us plau, torneu a iniciar sessió",
   "reLoginMessage": "Abans de cancel·lar el compte, torneu a iniciar sessió per verificar la vostra identitat. Després de tornar a iniciar sessió, s'iniciarà automàticament el procés de cancel·lació del compte.",

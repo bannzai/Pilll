@@ -82,7 +82,7 @@
   "pill": "Pilsen",
   "calendar": "Calendr",
   "userInformationWillBeDeleted": "Bydd eich gwybodaeth defnyddiwr yn cael ei dileu",
-  "withdrawalMessage": "Wrth ymadael â'r cyfrif, bydd yr holl ddata yn cael ei ddileu'n barhaol ac ni fydd modd mewngofnodi gyda'r un cyfrif byth eto.",
+  "withdrawalMessage": "Os byddwch yn cau eich cyfrif, caiff eich holl ddata ei ddileu ac ni fyddwch byth yn gallu mewngofnodi gyda’r un cyfrif eto.",
   "recordPage": "Cofnodion",
   "doReLogin": "Mewngofnodwch eto os gwelwch yn dda",
   "reLoginMessage": "Rhowch ail-fewngofnodi i gadarnhau eich hunaniaeth cyn gadael. Ar ôl ail-fewngofnodi, bydd y broses gadael yn dechrau'n awtomatig",

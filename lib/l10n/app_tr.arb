@@ -82,7 +82,7 @@
   "pill": "Hap",
   "calendar": "Takvim",
   "userInformationWillBeDeleted": "Kullanıcı bilgileriniz silinecek",
-  "withdrawalMessage": "Üyelikten çıktığınızda tüm verileriniz kalıcı olarak silinecek ve bir daha aynı hesapla giriş yapamayacaksınız.",
+  "withdrawalMessage": "Hesabınızı silerseniz tüm verileriniz silinir ve aynı hesapla bir daha asla giriş yapamazsınız.",
   "recordPage": "Kayıtlar",
   "doReLogin": "Lütfen tekrar giriş yapın",
   "reLoginMessage": "Hesabınızı silmeden önce kimlik doğrulaması için lütfen tekrar giriş yapın. Yeniden giriş yaptıktan sonra hesap silme işlemi otomatik olarak başlayacaktır.",

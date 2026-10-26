@@ -82,7 +82,7 @@
   "pill": "Pilula",
   "calendar": "Egutegia",
   "userInformationWillBeDeleted": "Zure erabiltzaile-datuak ezabatuko dira",
-  "withdrawalMessage": "Kanpotaratzean datu guztiak betirako ezabatu egingo dira eta ezingo duzu inoiz kontu berean saioa hasi.",
+  "withdrawalMessage": "Kontua ezabatzen baduzu, zure datu guztiak ezabatuko dira, eta ezingo duzu inoiz berriro kontu berarekin saioa hasi.",
   "recordPage": "Erregistroak",
   "doReLogin": "Saioa hasi berriro",
   "reLoginMessage": "Kontua ezabatu aurretik, identitatea egiaztatzeko berriro saioa hasi behar duzu. Saioa berriro hasi ondoren, kontuaren ezabaketa-prozesua automatikoki hasiko da.",

@@ -82,7 +82,7 @@
   "pill": "Pill",
   "calendar": "Kalender",
   "userInformationWillBeDeleted": "Sinu kasutajaandmed kustutatakse",
-  "withdrawalMessage": "Konto kustutamisel kustutatakse jäädavalt kõik teie andmed ja sama kontoga enam kunagi sisse logida ei ole võimalik.",
+  "withdrawalMessage": "Kui kustutad oma konto, kustutatakse kõik sinu andmed ja sa ei saa enam kunagi sama kontoga sisse logida.",
   "recordPage": "Salvestused",
   "doReLogin": "Palun logige uuesti sisse",
   "reLoginMessage": "Enne konto kustutamist palun logige isiku tuvastamiseks uuesti sisse. Pärast uuesti sisselogimist algab automaatselt konto kustutamise protsess.",

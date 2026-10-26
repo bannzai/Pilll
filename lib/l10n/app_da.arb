@@ -82,7 +82,7 @@
   "pill": "P-pille",
   "calendar": "Kalender",
   "userInformationWillBeDeleted": "Dine brugeroplysninger bliver slettet",
-  "withdrawalMessage": "Ved sletning af din konto vil alle dine data blive slettet, og du kan aldrig igen logge ind med samme konto.",
+  "withdrawalMessage": "Hvis du sletter din konto, bliver alle dine data slettet, og du kan aldrig logge ind med den samme konto igen.",
   "recordPage": "Optegnelsesside",
   "doReLogin": "Log venligst ind igen",
   "reLoginMessage": "Venligst log ind igen for identitetsverifikation før sletning af din konto. Sletningsprocessen starter automatisk efter genindlogning.",

@@ -82,7 +82,7 @@
   "pill": "Контрацептивна пилула",
   "calendar": "Календар",
   "userInformationWillBeDeleted": "Ваши кориснички подаци ће бити обрисани",
-  "withdrawalMessage": "Deaktivacijom naloga svi podaci će biti trajno obrisani i nećete više nikada moći da se prijavite sa istim nalogom.",
+  "withdrawalMessage": "Ако избришете свој налог, сви Ваши подаци биће избрисани и више никада нећете моћи да се пријавите истим налогом.",
   "recordPage": "Evidencija",
   "doReLogin": "Molimo prijavite se ponovo",
   "reLoginMessage": "Молимо да се поново пријавите ради потврде идентитета пре повлачења налога. Након поновне пријаве, процес повлачења налога ће се аутоматски покренути.",

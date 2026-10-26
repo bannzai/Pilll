@@ -82,7 +82,7 @@
   "pill": "Pilula",
   "calendar": "Kalendar",
   "userInformationWillBeDeleted": "Vaši korisnički podaci bit će izbrisani",
-  "withdrawalMessage": "Odjavljivanjem će svi vaši podaci biti trajno obrisani i nećete se više nikada moći prijaviti na isti račun.",
+  "withdrawalMessage": "Ako zatvorite svoj račun, svi Vaši podaci bit će izbrisani i više se nikada nećete moći prijaviti istim računom.",
   "recordPage": "Evidencija",
   "doReLogin": "Molimo prijavite se ponovo",
   "reLoginMessage": "Molimo vas da se ponovo prijavite radi potvrde identiteta prije brisanja računa. Nakon ponovne prijave, proces brisanja računa će se automatski pokrenuti.",

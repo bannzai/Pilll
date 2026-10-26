@@ -82,7 +82,7 @@
   "pill": "Kontracepcijska tabletka",
   "calendar": "Koledar",
   "userInformationWillBeDeleted": "Vaši uporabniški podatki bodo izbrisani",
-  "withdrawalMessage": "Če izbrišete račun, bodo vsi podatki trajno izbrisani in se z istim računom nikoli več ne boste mogli prijaviti.",
+  "withdrawalMessage": "Če izbrišete svoj račun, bodo vsi vaši podatki izbrisani in z istim računom se ne boste mogli nikoli več prijaviti.",
   "recordPage": "Zapis",
   "doReLogin": "Prosim, prijavite se znova",
   "reLoginMessage": "Pred ukinitvijo računa se prosimo ponovno prijavite za preverjanje identitete. Po ponovni prijavi se bo samodejno začel postopek ukinitve računa.",
