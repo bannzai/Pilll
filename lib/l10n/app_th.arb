@@ -216,7 +216,7 @@
   "missedPillNotification": "แจ้งเตือนเมื่อยังไม่ได้ทานยาเม็ด",
   "setMultipleReminders": "การตั้งการแจ้งเตือนหลายครั้งช่วยให้จำเวลาทานยาได้ง่ายขึ้นค่ะ",
   "and": "และ",
-  "readAndStartUsing": "อ่านแล้วเริ่มใช้งาน",
+  "readAndStartUsing": "โปรดอ่านข้อมูลก่อน\nแล้วเริ่มใช้งานแอป",
   "next": "ถัดไป",
   "notificationIndex": "แจ้งเตือน{number}",
   "takingRecordFromNotification": "\\ บันทึกการรับประทานยาจากการแจ้งเตือนได้ /",

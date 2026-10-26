@@ -216,7 +216,7 @@
   "missedPillNotification": "Tilkynning um pillu sem á eftir að taka",
   "setMultipleReminders": "Fleiri áminningar geta hjálpað þér að muna eftir að taka pilluna",
   "and": "og",
-  "readAndStartUsing": "Lestu og byrjaðu að nota",
+  "readAndStartUsing": "Lestu upplýsingarnar og\nbyrjaðu að nota appið",
   "next": "Næsta",
   "notificationIndex": "Tilkynning{number}",
   "takingRecordFromNotification": "\\ Þú getur skráð inntak úr tilkynningu /",

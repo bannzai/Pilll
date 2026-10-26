@@ -216,7 +216,7 @@
   "missedPillNotification": "Varsel om p-pille som ikke er tatt",
   "setMultipleReminders": "Flere påminnelser kan hjelpe deg å huske å ta p-pillen",
   "and": "og",
-  "readAndStartUsing": "Les og kom i gang",
+  "readAndStartUsing": "Les informasjonen, og\nbegynn å bruke appen",
   "next": "Neste",
   "notificationIndex": "Varsel {number}",
   "takingRecordFromNotification": "\\ Du kan registrere inntak fra varslingen /",

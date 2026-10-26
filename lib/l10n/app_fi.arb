@@ -216,7 +216,7 @@
   "missedPillNotification": "Ilmoitus ottamatta jääneestä pilleristä",
   "setMultipleReminders": "Useampi muistutus auttaa sinua muistamaan pillerin ottamisen",
   "and": "ja",
-  "readAndStartUsing": "Lue ja aloita käyttö",
+  "readAndStartUsing": "Lue tiedot ja\naloita sovelluksen käyttö",
   "next": "Seuraava",
   "notificationIndex": "Ilmoitus {number}",
   "takingRecordFromNotification": "\\ Voit kirjata pillerin oton suoraan ilmoituksesta /",

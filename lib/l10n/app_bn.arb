@@ -216,7 +216,7 @@
   "missedPillNotification": "পিল খাওয়া বাকি থাকলে বিজ্ঞপ্তি",
   "setMultipleReminders": "একাধিক রিমাইন্ডার সেট করলে আপনার পিল খাওয়ার কথা মনে রাখতে সুবিধা হবে",
   "and": "ও",
-  "readAndStartUsing": "পড়ে ব্যবহার শুরু করুন",
+  "readAndStartUsing": "অনুগ্রহ করে পড়ুন এবং\nঅ্যাপটি ব্যবহার শুরু করুন",
   "next": "পরবর্তী",
   "notificationIndex": "নোটিফিকেশন {number}",
   "takingRecordFromNotification": "\\ বিজ্ঞপ্তি থেকে সেবনের রেকর্ড করুন /",

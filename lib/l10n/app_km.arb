@@ -216,7 +216,7 @@
   "missedPillNotification": "ការជូនដំណឹងពេលមិនទាន់លេបថ្នាំគ្រាប់",
   "setMultipleReminders": "ការកំណត់ការរំលឹកច្រើនដងអាចជួយឱ្យអ្នកចងចាំការលេបថ្នាំគ្រាប់",
   "and": "និង",
-  "readAndStartUsing": "សូមអានហើយចាប់ផ្តើមប្រើប្រាស់",
+  "readAndStartUsing": "សូមអានព័ត៌មាន រួច\nចាប់ផ្តើមប្រើកម្មវិធី",
   "next": "បន្ទាប់",
   "notificationIndex": "ដំណឹង{number}",
   "takingRecordFromNotification": "\\ អាចបញ្ជាក់ការទទួលថ្នាំពីការជូនដំណឹង /",

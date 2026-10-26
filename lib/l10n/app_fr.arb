@@ -216,7 +216,7 @@
   "missedPillNotification": "Notification de pilule non prise",
   "setMultipleReminders": "Vous pouvez définir plusieurs rappels pour penser à prendre votre pilule",
   "and": "et",
-  "readAndStartUsing": "Veuillez lire et commencer",
+  "readAndStartUsing": "Lisez les informations et\ncommencez à utiliser l’application",
   "next": "Suivant",
   "notificationIndex": "Notification {number}",
   "takingRecordFromNotification": "\\ Enregistrez votre dose à partir des notifications /",

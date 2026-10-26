@@ -216,7 +216,7 @@
   "missedPillNotification": "ክኒን ሳይወሰድ ሲቀር ማሳወቂያ",
   "setMultipleReminders": "ክኒን መውሰድ እንዳይረሱ ብዙ ማስታወሻዎችን ማዘጋጀት ይችላሉ",
   "and": "እና",
-  "readAndStartUsing": "አንብበው አገልግሎቱን መጠቀም ይጀምሩ",
+  "readAndStartUsing": "እባክዎ ያንብቡና\nመተግበሪያውን መጠቀም ይጀምሩ",
   "next": "ቀጣይ",
   "notificationIndex": "ማሳወቂያ{number}",
   "takingRecordFromNotification": "\\ ከማሳወቂያ መድኃኒት ወሰዳት መመዝገብ ይቻላል /",

@@ -216,7 +216,7 @@
   "missedPillNotification": "Уугаагүй эмийн тухай мэдэгдэл",
   "setMultipleReminders": "Хэд хэдэн сануулга тохируулах нь эмээ уухаа санахад тусална",
   "and": "ба",
-  "readAndStartUsing": "уншиж, ашиглаж эхлэнэ үү",
+  "readAndStartUsing": "Мэдээллийг уншаад\nаппыг ашиглаж эхэлнэ үү",
   "next": "Дараах",
   "notificationIndex": "мэдэгдэл {number}",
   "takingRecordFromNotification": "\\ Мэдэгдлээс эм уух тэмдэглэл хийж болно /",

@@ -216,7 +216,7 @@
   "missedPillNotification": "चक्की खान बाँकी हुँदा सूचना",
   "setMultipleReminders": "धेरै रिमाइन्डर राख्दा तपाईंलाई चक्की खान सम्झन मद्दत मिल्न सक्छ",
   "and": "र",
-  "readAndStartUsing": "पढेर प्रयोग सुरु गर्नुहोस्",
+  "readAndStartUsing": "कृपया जानकारी पढेर\nएप प्रयोग गर्न सुरु गर्नुहोस्",
   "next": "अगाडि",
   "notificationIndex": "सूचना{number}",
   "takingRecordFromNotification": "\\ सूचनाबाट औषधि सेवनको रेकर्ड गर्न सकिन्छ /",

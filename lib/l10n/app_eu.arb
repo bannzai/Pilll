@@ -216,7 +216,7 @@
   "missedPillNotification": "Hartu gabeko pilularen jakinarazpena",
   "setMultipleReminders": "Hainbat abisu ezar ditzakezu pilula hartzea gogoratzen laguntzeko",
   "and": "eta",
-  "readAndStartUsing": "Irakurri eta erabiltzen hasi ezazu",
+  "readAndStartUsing": "Irakurri informazioa eta\nhasi aplikazioa erabiltzen",
   "next": "Hurrengoa",
   "notificationIndex": "Jakinarazpena {number}",
   "takingRecordFromNotification": "/ Jakinarazpenetik hartu erregistroa egin dezakezu /",

@@ -216,7 +216,7 @@
   "missedPillNotification": "Notificação de pílula ainda não tomada",
   "setMultipleReminders": "Você pode configurar vários lembretes para se lembrar de tomar a pílula",
   "and": "e",
-  "readAndStartUsing": "leia e comece a utilizar",
+  "readAndStartUsing": "Leia as informações e\ncomece a usar o aplicativo",
   "next": "Próximo",
   "notificationIndex": "Notificação {number}",
   "takingRecordFromNotification": "\\ Registre a tomada pela notificação /",

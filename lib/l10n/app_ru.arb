@@ -216,7 +216,7 @@
   "missedPillNotification": "Уведомление о непринятой таблетке",
   "setMultipleReminders": "Несколько напоминаний помогут вам не забыть принять таблетку",
   "and": "и",
-  "readAndStartUsing": "Прочитайте и начните использование",
+  "readAndStartUsing": "Прочитайте информацию и\nначните пользоваться приложением",
   "next": "Далее",
   "notificationIndex": "Уведомление {number}",
   "takingRecordFromNotification": "\\ Отметка приема через уведомления /",

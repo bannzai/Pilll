@@ -216,7 +216,7 @@
   "missedPillNotification": "아직 복용하지 않은 피임약 알림",
   "setMultipleReminders": "알림을 여러 개 설정하면 피임약 복용을 기억하는 데 도움이 돼요",
   "and": "및",
-  "readAndStartUsing": "읽어보고 이용을 시작하세요",
+  "readAndStartUsing": "내용을 읽고\n앱 사용을 시작해 주세요",
   "next": "다음",
   "notificationIndex": "알림{number}",
   "takingRecordFromNotification": "\\ 알림으로 복용 기록 가능 /",

@@ -216,7 +216,7 @@
   "missedPillNotification": "药片尚未服用提醒",
   "setMultipleReminders": "设置多个提醒，可以帮助你记得按时服药",
   "and": "和",
-  "readAndStartUsing": "请阅读后开始使用",
+  "readAndStartUsing": "请阅读相关信息后\n开始使用应用",
   "next": "下一步",
   "notificationIndex": "通知{number}",
   "takingRecordFromNotification": "\\\\ 可从通知记录服药 /",

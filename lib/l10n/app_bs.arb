@@ -216,7 +216,7 @@
   "missedPillNotification": "Obavijest o neuzetoj piluli",
   "setMultipleReminders": "Više podsjetnika može Vam pomoći da ne zaboravite uzeti pilulu",
   "and": "i",
-  "readAndStartUsing": "Pročitajte i počnite koristiti",
+  "readAndStartUsing": "Pročitajte i\npočnite koristiti aplikaciju",
   "next": "Dalje",
   "notificationIndex": "Obavještenje {number}",
   "takingRecordFromNotification": "\\ Možete zabilježiti uzimanje iz notifikacije /",

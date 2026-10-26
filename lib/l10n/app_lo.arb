@@ -216,7 +216,7 @@
   "missedPillNotification": "ແຈ້ງເຕືອນເມື່ອຍັງບໍ່ໄດ້ກິນຢາເມັດ",
   "setMultipleReminders": "ການຕັ້ງເຕືອນຫຼາຍຄັ້ງອາດຊ່ວຍໃຫ້ຈື່ເວລາກິນຢາເມັດໄດ້",
   "and": "ແລະ",
-  "readAndStartUsing": "ກະລຸນາອ່ານແລ້ວເລີ່ມນຳໃຊ້",
+  "readAndStartUsing": "ກະລຸນາອ່ານຂໍ້ມູນ ແລ້ວ\nເລີ່ມໃຊ້ແອັບ",
   "next": "ຕໍ່ໄປ",
   "notificationIndex": "ການແຈ້ງເຕືອນ{number}",
   "takingRecordFromNotification": "\\ ສາມາດບັນທຶກການກິນຢາຈາກການແຈ້ງເຕືອນໄດ້ /",

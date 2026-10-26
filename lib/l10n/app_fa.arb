@@ -216,7 +216,7 @@
   "missedPillNotification": "اعلان قرص مصرف‌نشده",
   "setMultipleReminders": "با تنظیم چند یادآور، راحت‌تر می‌توانید مصرف قرص را به خاطر بسپارید",
   "and": "و",
-  "readAndStartUsing": "را مطالعه کنید و شروع کنید",
+  "readAndStartUsing": "لطفاً اطلاعات را بخوانید و\nاستفاده از برنامه را شروع کنید",
   "next": "بعدی",
   "notificationIndex": "یادآوری {number}",
   "takingRecordFromNotification": "\\ امکان ثبت مصرف از طریق اعلان /",

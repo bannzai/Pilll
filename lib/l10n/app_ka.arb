@@ -216,7 +216,7 @@
   "missedPillNotification": "შეტყობინება მიუღებელი აბის შესახებ",
   "setMultipleReminders": "რამდენიმე შეხსენების დაყენება დაგეხმარებათ აბის მიღების გახსენებაში",
   "and": "და",
-  "readAndStartUsing": "წაიკითხეთ და გამოყენება დაიწყეთ",
+  "readAndStartUsing": "გაეცანით ინფორმაციას და\nდაიწყეთ აპის გამოყენება",
   "next": "შემდეგ",
   "notificationIndex": "შეტყობინება {number}",
   "takingRecordFromNotification": "\\ შეტყობინებით მიღების რეგისტრაცია /",

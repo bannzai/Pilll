@@ -216,7 +216,7 @@
   "missedPillNotification": "Thông báo khi chưa uống thuốc",
   "setMultipleReminders": "Bạn có thể đặt nhiều lời nhắc để dễ nhớ giờ uống thuốc",
   "and": "và",
-  "readAndStartUsing": "và bắt đầu sử dụng",
+  "readAndStartUsing": "Vui lòng đọc thông tin rồi\nbắt đầu sử dụng ứng dụng",
   "next": "Tiếp theo",
   "notificationIndex": "Thông báo {number}",
   "takingRecordFromNotification": "\\ Có thể ghi lại việc uống thuốc từ thông báo /",

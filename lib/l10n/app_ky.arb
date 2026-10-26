@@ -216,7 +216,7 @@
   "missedPillNotification": "Ичиле элек таблетка тууралуу билдирүү",
   "setMultipleReminders": "Бир нече эскертме коюу таблетканы ичүүнү унутпоого жардам берет",
   "and": "жана",
-  "readAndStartUsing": "Окуп, колдонууну баштаңыз",
+  "readAndStartUsing": "Маалыматты окуп чыгып,\nколдонмону колдоно баштаңыз",
   "next": "Кийинки",
   "notificationIndex": "билдирүү {number}",
   "takingRecordFromNotification": "\\ Билдирүүдөн дарыны кабыл алгандыгын жаздыруу мүмкүн /",

@@ -216,7 +216,7 @@
   "missedPillNotification": "Teavitus võtmata pilli kohta",
   "setMultipleReminders": "Mitu meeldetuletust aitavad sul meeles pidada, millal pilli võtta",
   "and": "ja",
-  "readAndStartUsing": "Lugege läbi ja alustage kasutamist",
+  "readAndStartUsing": "Loe teave läbi ja\nalusta rakenduse kasutamist",
   "next": "Edasi",
   "notificationIndex": "Teatis {number}",
   "takingRecordFromNotification": "Teatisest saab pillide võtmist registreerida!",

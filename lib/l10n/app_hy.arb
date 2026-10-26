@@ -216,7 +216,7 @@
   "missedPillNotification": "Չընդունված հաբի մասին ծանուցում",
   "setMultipleReminders": "Մի քանի հիշեցում սահմանելը կարող է օգնել Ձեզ հիշել հաբի ընդունման մասին",
   "and": "և",
-  "readAndStartUsing": "Կարդացեք և սկսեք օգտագործել",
+  "readAndStartUsing": "Կարդացեք տեղեկությունները և\nսկսեք օգտվել հավելվածից",
   "next": "Հաջորդ",
   "notificationIndex": "ծանուցում{number}",
   "takingRecordFromNotification": "\\ Ծանուցումներից հնարավոր է դեղերի ընդունումը գրանցել /",

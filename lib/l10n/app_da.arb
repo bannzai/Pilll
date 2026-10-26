@@ -216,7 +216,7 @@
   "missedPillNotification": "Påmindelse om en p-pille, der ikke er taget",
   "setMultipleReminders": "Du kan indstille flere påmindelser, så det bliver lettere at huske din p-pille",
   "and": "og",
-  "readAndStartUsing": "Læs og kom i gang",
+  "readAndStartUsing": "Læs det, og\nbegynd at bruge appen",
   "next": "Næste",
   "notificationIndex": "Notifikation {number}",
   "takingRecordFromNotification": "\\ Registrer medicintag fra notifikationer /",

@@ -216,7 +216,7 @@
   "missedPillNotification": "Сповіщення про неприйняту пігулку",
   "setMultipleReminders": "Кілька нагадувань допоможуть вам не забути про прийом пігулки",
   "and": "і",
-  "readAndStartUsing": "Прочитайте та розпочніть користування",
+  "readAndStartUsing": "Прочитайте інформацію та\nпочніть користуватися застосунком",
   "next": "Далі",
   "notificationIndex": "Повідомлення {number}",
   "takingRecordFromNotification": "\\ Запис прийому з повідомлень /",
