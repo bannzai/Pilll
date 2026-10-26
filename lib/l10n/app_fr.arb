@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "Recevoir une notification le jour même à 9 h",
   "save": "Enregistrer",
   "physicalCondition": "État physique",
-  "deletedDiaryCannotBeRecovered": "Les entrées de journal supprimées ne peuvent pas être restaurées",
+  "deletedDiaryCannotBeRecovered": "Les notes du journal supprimées ne peuvent pas être récupérées",
   "sex": "activité sexuelle",
   "previousPillSheetGroup": "Groupe de feuilles de pilules précédent",
   "noPreviousPillSheetGroup": "Il n'existe pas encore de groupe de feuilles de pilules précédent.",

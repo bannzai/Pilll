@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "Recibe unha notificación o mesmo día ás 9:00",
   "save": "Gardar",
   "physicalCondition": "Estado físico",
-  "deletedDiaryCannotBeRecovered": "Os diarios eliminados non se poden restaurar",
+  "deletedDiaryCannotBeRecovered": "As entradas do diario eliminadas non se poden recuperar",
   "sex": "sexo",
   "previousPillSheetGroup": "Anterior grupo de cartelas",
   "noPreviousPillSheetGroup": "O grupo de píldoras anterior aínda non existe",

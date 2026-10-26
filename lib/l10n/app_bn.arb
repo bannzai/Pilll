@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "সেদিনই সকাল ৯:০০টায় বিজ্ঞপ্তি পান",
   "save": "সংরক্ষণ করুন",
   "physicalCondition": "শারীরিক অবস্থা",
-  "deletedDiaryCannotBeRecovered": "মুছে ফেলা ডায়েরি আর ফিরিয়ে আনা যাবে না",
+  "deletedDiaryCannotBeRecovered": "মুছে ফেলা ডায়েরির লেখা আর ফিরিয়ে আনা যাবে না",
   "sex": "সেক্স",
   "previousPillSheetGroup": "আগের পিল শিট গ্রুপ",
   "noPreviousPillSheetGroup": "আগের পিল শিট গ্রুপ এখনও বিদ্যমান নেই",

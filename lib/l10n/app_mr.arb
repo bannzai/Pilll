@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "त्याच दिवशी सकाळी 9:00 वाजता सूचना मिळवा",
   "save": "जतन करा",
   "physicalCondition": "शारीरिक स्थिती",
-  "deletedDiaryCannotBeRecovered": "काढलेली डायरी पुनर्स्थापित करता येत नाही",
+  "deletedDiaryCannotBeRecovered": "हटवलेल्या डायरीतील नोंदी पुन्हा मिळवता येणार नाहीत",
   "sex": "लैंगिक",
   "previousPillSheetGroup": "मागील गोळी शीट गट",
   "noPreviousPillSheetGroup": "मागील पिल शीट गट अजूनही अस्तित्वात नाही",

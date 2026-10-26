@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "Få en avisering samma dag kl. 9.00",
   "save": "Spara",
   "physicalCondition": "Fysiskt mående",
-  "deletedDiaryCannotBeRecovered": "Borttagna dagboksanteckningar kan inte återställas",
+  "deletedDiaryCannotBeRecovered": "Raderade dagboksanteckningar kan inte återställas",
   "sex": "sex",
   "previousPillSheetGroup": "Föregående p-pillergrupp",
   "noPreviousPillSheetGroup": "Det finns ingen tidigare p-pillerpaketsgrupp",

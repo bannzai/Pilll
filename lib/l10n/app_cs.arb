@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "Dostávat oznámení tentýž den v 9:00",
   "save": "Uložit",
   "physicalCondition": "Tělesný stav",
-  "deletedDiaryCannotBeRecovered": "Smazané deníky nelze obnovit",
+  "deletedDiaryCannotBeRecovered": "Smazané záznamy v deníku nelze obnovit",
   "sex": "sex",
   "previousPillSheetGroup": "Předchozí skupina blistrů",
   "noPreviousPillSheetGroup": "Předchozí skupina balení pilulek zatím neexistuje",

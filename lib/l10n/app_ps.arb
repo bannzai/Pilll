@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "په هماغه ورځ د سهار په 9:00 بجو خبرتیا ترلاسه کړئ",
   "save": "خوندي کړئ",
   "physicalCondition": "د بدن حالت",
-  "deletedDiaryCannotBeRecovered": "پاک شوی ډايری بیا نشي راګرځېدای",
+  "deletedDiaryCannotBeRecovered": "د ورځني یادښتونو ړنګ شوي لیکنې بېرته نه شي راګرځېدلی",
   "sex": "جنس",
   "previousPillSheetGroup": "پخوانۍ د ګولیو د پاڼو ډله",
   "noPreviousPillSheetGroup": "د پخوانی ګولیو د پاڼو ګروپ لا تر اوسه شتون نلري",

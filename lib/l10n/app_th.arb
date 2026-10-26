@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "รับการแจ้งเตือนในวันเดียวกันเวลา 9:00 น.",
   "save": "บันทึก",
   "physicalCondition": "สภาพร่างกาย",
-  "deletedDiaryCannotBeRecovered": "บันทึกที่ถูกลบแล้วไม่สามารถกู้คืนได้",
+  "deletedDiaryCannotBeRecovered": "บันทึกไดอารีที่ลบแล้วไม่สามารถกู้คืนได้ค่ะ",
   "sex": "เพศสัมพันธ์",
   "previousPillSheetGroup": "กลุ่มแผ่นยาครั้งก่อน",
   "noPreviousPillSheetGroup": "ยังไม่มีกลุ่มแผงยาครั้งก่อน",

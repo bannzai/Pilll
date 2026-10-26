@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "Aynı gün saat 09.00'da bildirim alın",
   "save": "Kaydedin",
   "physicalCondition": "Fiziksel durum",
-  "deletedDiaryCannotBeRecovered": "Silinen günlük geri yüklenemez",
+  "deletedDiaryCannotBeRecovered": "Silinen günlük kayıtları geri yüklenemez",
   "sex": "seks",
   "previousPillSheetGroup": "Önceki Hap Şeridi Grubu",
   "noPreviousPillSheetGroup": "Önceki hap levhası grubu henüz mevcut değil",

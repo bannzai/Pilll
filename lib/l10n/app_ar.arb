@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "تلقي إشعارًا في اليوم نفسه الساعة 9:00 صباحًا",
   "save": "حفظ",
   "physicalCondition": "الحالة الجسدية",
-  "deletedDiaryCannotBeRecovered": "لا يمكن استعادة اليوميات بعد حذفها",
+  "deletedDiaryCannotBeRecovered": "لا يمكن استعادة اليوميات المحذوفة",
   "sex": "الجنس",
   "previousPillSheetGroup": "مجموعة شرائط الحبوب السابقة",
   "noPreviousPillSheetGroup": "لا توجد مجموعة شرائح الحبوب السابقة بعد",

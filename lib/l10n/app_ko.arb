@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "당일 오전 9:00에 알림 받기",
   "save": "저장",
   "physicalCondition": "몸 상태",
-  "deletedDiaryCannotBeRecovered": "삭제된 일기는 복원할 수 없습니다",
+  "deletedDiaryCannotBeRecovered": "삭제한 일기는 복원할 수 없어요",
   "sex": "성관계",
   "previousPillSheetGroup": "이전 피임약 시트 그룹",
   "noPreviousPillSheetGroup": "이전 피임약 시트 그룹이 아직 존재하지 않습니다",

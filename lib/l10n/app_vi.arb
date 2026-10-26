@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "Nhận thông báo lúc 9:00 sáng cùng ngày",
   "save": "Lưu",
   "physicalCondition": "Tình trạng thể chất",
-  "deletedDiaryCannotBeRecovered": "Nhật ký đã xóa không thể khôi phục lại được",
+  "deletedDiaryCannotBeRecovered": "Không thể khôi phục các mục nhật ký đã xóa",
   "sex": "tình dục",
   "previousPillSheetGroup": "Nhóm vỉ thuốc trước đó",
   "noPreviousPillSheetGroup": "Chưa có nhóm vỉ thuốc tránh thai trước đó",

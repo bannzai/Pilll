@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "Cael hysbysiad am 9:00 y bore ar yr un diwrnod",
   "save": "Cadw",
   "physicalCondition": "Cyflwr corfforol",
-  "deletedDiaryCannotBeRecovered": "Ni ellir adfer y dyddiadur ar ôl ei ddileu",
+  "deletedDiaryCannotBeRecovered": "Ni ellir adfer cofnodion dyddiadur sydd wedi'u dileu",
   "sex": "rhyw",
   "previousPillSheetGroup": "Grŵp taflenni pils blaenorol",
   "noPreviousPillSheetGroup": "Nid yw'r grŵp taflen bilsen blaenorol yn bodoli eto",

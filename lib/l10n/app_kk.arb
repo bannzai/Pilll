@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "Сол күні сағат 9:00-де хабарлама алу",
   "save": "Сақтау",
   "physicalCondition": "Дене күйі",
-  "deletedDiaryCannotBeRecovered": "Жойылған күнделік жазбалары қалпына келтірілмейді",
+  "deletedDiaryCannotBeRecovered": "Жойылған күнделік жазбаларын қалпына келтіру мүмкін емес",
   "sex": "секс",
   "previousPillSheetGroup": "Алдыңғы дәрі парақтарының тобы",
   "noPreviousPillSheetGroup": "Алдыңғы дәрі парақтарының тобы әлі жоқ",

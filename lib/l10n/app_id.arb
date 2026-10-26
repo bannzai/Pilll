@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "Terima notifikasi pada hari yang sama pukul 09.00",
   "save": "Simpan",
   "physicalCondition": "Kondisi fisik",
-  "deletedDiaryCannotBeRecovered": "Catatan harian yang telah dihapus tidak dapat dipulihkan",
+  "deletedDiaryCannotBeRecovered": "Catatan harian yang dihapus tidak dapat dipulihkan",
   "sex": "seks",
   "previousPillSheetGroup": "Grup Lembar Pil Sebelumnya",
   "noPreviousPillSheetGroup": "Kelompok lembar pil sebelumnya belum ada",

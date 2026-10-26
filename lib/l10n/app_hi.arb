@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "उसी दिन सुबह 9:00 बजे सूचना पाएं",
   "save": "सहेजें",
   "physicalCondition": "शारीरिक स्थिति",
-  "deletedDiaryCannotBeRecovered": "हटाई गई डायरी को पुनर्स्थापित नहीं किया जा सकता है",
+  "deletedDiaryCannotBeRecovered": "मिटाई गई डायरी की प्रविष्टियाँ वापस नहीं लाई जा सकतीं",
   "sex": "यौन",
   "previousPillSheetGroup": "पिछला पिल शीट समूह",
   "noPreviousPillSheetGroup": "पिछला पिल शीट समूह अभी तक मौजूद नहीं है",

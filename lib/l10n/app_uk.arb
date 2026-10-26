@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "Отримувати сповіщення того ж дня о 9:00",
   "save": "Зберегти",
   "physicalCondition": "Фізичний стан",
-  "deletedDiaryCannotBeRecovered": "Видалені записи щоденника не можна відновити",
+  "deletedDiaryCannotBeRecovered": "Видалені записи щоденника неможливо відновити",
   "sex": "секс",
   "previousPillSheetGroup": "Попередня група блістерів",
   "noPreviousPillSheetGroup": "Попередня група блістерів з таблетками ще не існує",

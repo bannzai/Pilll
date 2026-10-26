@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "Receba uma notificação no mesmo dia às 9h",
   "save": "Salvar",
   "physicalCondition": "Condição física",
-  "deletedDiaryCannotBeRecovered": "Os diários excluídos não podem ser restaurados",
+  "deletedDiaryCannotBeRecovered": "As entradas do diário excluídas não podem ser recuperadas",
   "sex": "sexo",
   "previousPillSheetGroup": "Grupo anterior de cartelas",
   "noPreviousPillSheetGroup": "O grupo de cartela anterior ainda não existe",

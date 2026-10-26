@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "Dostávať upozornenie v ten istý deň o 9:00",
   "save": "Uložiť",
   "physicalCondition": "Telesný stav",
-  "deletedDiaryCannotBeRecovered": "Vymazané denníky sa nedajú obnoviť",
+  "deletedDiaryCannotBeRecovered": "Vymazané záznamy v denníku nie je možné obnoviť",
   "sex": "sex",
   "previousPillSheetGroup": "Predchádzajúca skupina piluliek",
   "noPreviousPillSheetGroup": "Predchádzajúca skupina tabliet ešte neexistuje",

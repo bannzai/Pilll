@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "קבלת התראה באותו יום בשעה 9:00 בבוקר",
   "save": "לשמור",
   "physicalCondition": "מצב גופני",
-  "deletedDiaryCannotBeRecovered": "לא ניתן לשחזר יומנים שנמחקו",
+  "deletedDiaryCannotBeRecovered": "אי אפשר לשחזר רשומות יומן שנמחקו",
   "sex": "מין",
   "previousPillSheetGroup": "קבוצת אריזות הכדורים הקודמת",
   "noPreviousPillSheetGroup": "קבוצת גיליון הכדורים הקודמת אינה קיימת עדיין",

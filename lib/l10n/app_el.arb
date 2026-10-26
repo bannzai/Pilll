@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "Λήψη ειδοποίησης την ίδια ημέρα στις 9:00 π.μ.",
   "save": "Αποθήκευση",
   "physicalCondition": "Σωματική κατάσταση",
-  "deletedDiaryCannotBeRecovered": "Το διαγραμμένο ημερολόγιο δεν μπορεί να επαναφερθεί",
+  "deletedDiaryCannotBeRecovered": "Οι διαγραμμένες καταχωρίσεις ημερολογίου δεν μπορούν να ανακτηθούν",
   "sex": "σεξ",
   "previousPillSheetGroup": "Προηγούμενη ομάδα συσκευασιών",
   "noPreviousPillSheetGroup": "Δεν υπάρχει ακόμα προηγούμενη ομάδα φύλλων χαπιών",

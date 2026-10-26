@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "当天上午9:00接收通知",
   "save": "保存",
   "physicalCondition": "身体状况",
-  "deletedDiaryCannotBeRecovered": "删除的日记无法恢复",
+  "deletedDiaryCannotBeRecovered": "已删除的日记无法恢复",
   "sex": "性行为",
   "previousPillSheetGroup": "上一个避孕药板组",
   "noPreviousPillSheetGroup": "上次的药片组尚不存在",

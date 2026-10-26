@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "ຮັບການແຈ້ງເຕືອນໃນມື້ດຽວກັນເວລາ 9:00 ໂມງເຊົ້າ",
   "save": "ບັນທຶກ",
   "physicalCondition": "ສະພາບຮ່າງກາຍ",
-  "deletedDiaryCannotBeRecovered": "ບັນທຶກປະຈຳວັນທີ່ຖືກລຶບແລ້ວບໍ່ສາມາດກູ້ຄືນໄດ້",
+  "deletedDiaryCannotBeRecovered": "ບັນທຶກໃນໄດອາຣີທີ່ລຶບແລ້ວບໍ່ສາມາດກູ້ຄືນໄດ້",
   "sex": "ເພດສຳພັນ",
   "previousPillSheetGroup": "ກຸ່ມແຜ່ນຢາກ່ອນໜ້າ",
   "noPreviousPillSheetGroup": "ຍັງບໍ່ມີກຸ່ມແຜ່ນຢາຄຸມກໍາເນີດຄັ້ງກ່ອນ",

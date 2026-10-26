@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "ထိုနေ့ နံနက် 9:00 နာရီတွင် အကြောင်းကြားချက် ရယူပါ",
   "save": "သိမ်းဆည်းရန်",
   "physicalCondition": "ခန္ဓာကိုယ်အခြေအနေ",
-  "deletedDiaryCannotBeRecovered": "ဖျက်လိုက်သောဒိုင်ယာရီများကို ပြန်လည်ရယူ၍မရပါ",
+  "deletedDiaryCannotBeRecovered": "ဖျက်လိုက်သော ဒိုင်ယာရီမှတ်တမ်းများကို ပြန်လည်ရယူ၍ မရပါ",
   "sex": "လိင်မှု",
   "previousPillSheetGroup": "ယခင် ဆေးပြားအုပ်စု",
   "noPreviousPillSheetGroup": "ယခင်က ဆေးပြားအုပ်စုမရှိသေးပါ",

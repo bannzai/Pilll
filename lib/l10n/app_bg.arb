@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "Получавайте известие в същия ден в 9:00 ч.",
   "save": "Запазете",
   "physicalCondition": "Физическо състояние",
-  "deletedDiaryCannotBeRecovered": "Изтритият дневник не може да бъде възстановен",
+  "deletedDiaryCannotBeRecovered": "Изтритите записи в дневника не могат да бъдат възстановени",
   "sex": "секс",
   "previousPillSheetGroup": "Предишна група блистери",
   "noPreviousPillSheetGroup": "Предишната група хапчета все още не съществува",

@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "එදිනම උදෑසන 9:00ට දැනුම්දීමක් ලබාගන්න",
   "save": "සුරකින්න",
   "physicalCondition": "ශාරීරික තත්ත්වය",
-  "deletedDiaryCannotBeRecovered": "මකා දමන ලද දිනපොත් ප්‍රතිසාධනය කළ නොහැකිය",
+  "deletedDiaryCannotBeRecovered": "මකා දැමූ දිනපොත් සටහන් නැවත ලබා ගත නොහැක",
   "sex": "ලිංගික",
   "previousPillSheetGroup": "පසුගිය ගෝලි පත්‍ර කණ්ඩායම",
   "noPreviousPillSheetGroup": "පෙර පිල් පත්‍ර කණ්ඩායම තවමත් නොමැත",

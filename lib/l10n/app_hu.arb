@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "Értesítés kérése aznap 9:00-kor",
   "save": "Mentés",
   "physicalCondition": "Fizikai állapot",
-  "deletedDiaryCannotBeRecovered": "A törölt napló nem állítható vissza",
+  "deletedDiaryCannotBeRecovered": "A törölt naplóbejegyzések nem állíthatók vissza",
   "sex": "szex",
   "previousPillSheetGroup": "Előző tablettacsoport",
   "noPreviousPillSheetGroup": "Az előző pilulacsoport még nem létezik",

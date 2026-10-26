@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "Primajte obavijest istog dana u 9:00",
   "save": "Sačuvajte",
   "physicalCondition": "Fizičko stanje",
-  "deletedDiaryCannotBeRecovered": "Obrisani dnevnik se ne može vratiti",
+  "deletedDiaryCannotBeRecovered": "Izbrisani zapisi u dnevniku ne mogu se vratiti",
   "sex": "seks",
   "previousPillSheetGroup": "Prethodna grupa pilula",
   "noPreviousPillSheetGroup": "Prethodna grupa pilula još uvijek ne postoji",

@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "Ստանալ ծանուցում նույն օրը՝ ժամը 9:00-ին",
   "save": "Պահպանել",
   "physicalCondition": "Ֆիզիկական վիճակ",
-  "deletedDiaryCannotBeRecovered": "Ջնջված օրագիրը վերականգնել հնարավոր չէ",
+  "deletedDiaryCannotBeRecovered": "Ջնջված օրագրային գրառումները հնարավոր չէ վերականգնել",
   "sex": "սեռ",
   "previousPillSheetGroup": "Նախորդ հաբային փաթեթների խումբ",
   "noPreviousPillSheetGroup": "Նախորդ հաբերի խումբը դեռ գոյություն չունի",

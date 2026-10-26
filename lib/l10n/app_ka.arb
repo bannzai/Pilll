@@ -249,7 +249,7 @@
   "receiveDailyNotificationAt9AM": "შეტყობინების მიღება იმავე დღეს, 9:00-ზე",
   "save": "შენახვა",
   "physicalCondition": "ფიზიკური მდგომარეობა",
-  "deletedDiaryCannotBeRecovered": "წაშლილი დღიურის აღდგენა შეუძლებელია",
+  "deletedDiaryCannotBeRecovered": "წაშლილი დღიურის ჩანაწერების აღდგენა შეუძლებელია",
   "sex": "სექსი",
   "previousPillSheetGroup": "წინა ტაბლეტების ფურცლის ჯგუფი",
   "noPreviousPillSheetGroup": "წინა აბების ფურცლის ჯგუფი ჯერ არ არსებობს",
