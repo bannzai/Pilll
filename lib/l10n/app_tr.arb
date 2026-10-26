@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll, doğum kontrol hapı için hatırlatma uygulaması",
   "reachedMaximumCountOfReminderTimes": "Kaydedilebilecek hatırlatma saati sınırına ulaştınız. Lütfen en fazla {ReminderTimeMaximumCount} saat bırakın",
   "minimumCountOfReminderTimes": "Lütfen en az {ReminderTimeMinimumCount} bildirim saati ayarlayın",
-  "purchaseErrorUnknownError": "Bilinmeyen bir hata oluştu. Lütfen bir süre bekledikten sonra tekrar deneyin. Sorun devam ederse Ayarlar > İletişim bölümünden bizimle iletişime geçin. Detaylar: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Bilinmeyen bir hata oluştu. Lütfen biraz sonra tekrar deneyin. Sorun devam ederse Ayarlar > Bize ulaşın üzerinden bizimle iletişime geçin. Ayrıntılar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} üzerinde bir hata oluştu. Lütfen bir süre bekleyip tekrar deneyin.",
   "purchaseErrorPurchaseNotAllowedError": "Bu cihazda satın alma işlemine izin verilmiyor",
   "purchaseErrorPurchaseInvalidError": "Ödeme işlemi başarısız oldu. Lütfen ödeme yönteminizin geçerli olduğunu kontrol ederek tekrar deneyin.",

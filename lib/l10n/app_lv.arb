@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll — atgādinājumu lietotne kontracepcijas tablešu lietošanai",
   "reachedMaximumCountOfReminderTimes": "Sasniegts maksimālais atgādinājumu laiku skaits. Lūdzu, atstājiet ne vairāk kā {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Lūdzu, iestatiet vismaz {ReminderTimeMinimumCount} paziņojumu laikus",
-  "purchaseErrorUnknownError": "Notika nezināma kļūda. Lūdzu, uzgaidiet un mēģiniet vēlreiz. Ja problēma nerisinājas, lūdzu, sazinieties ar mums sadaļā Iestatījumi > Saziņa. Detaļas: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Radās nezināma kļūda. Lūdzu, pēc brīža mēģiniet vēlreiz. Ja problēma saglabājas, sazinieties ar mums sadaļā Iestatījumi > Sazināties ar mums. Informācija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} radās kļūda. Lūdzu, uzgaidiet brīdi un mēģiniet vēlreiz.",
   "purchaseErrorPurchaseNotAllowedError": "Pirkšana šajā ierīcē nav atļauta",
   "purchaseErrorPurchaseInvalidError": "Maksājums neizdevās. Lūdzu, pārbaudiet, vai maksājuma veids ir derīgs, un mēģiniet vēlreiz.",

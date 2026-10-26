@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll — жирэмслэлтээс хамгаалах эм уух сануулгатай апп",
   "reachedMaximumCountOfReminderTimes": "Сануулах цагийн дээд тоонд хүрсэн байна. Тоог нь {ReminderTimeMaximumCount}-аас хэтрүүлэхгүй болгож өгнө үү",
   "minimumCountOfReminderTimes": "Мэдэгдэл ирэх дор хаяж {ReminderTimeMinimumCount} цаг тохируулна уу",
-  "purchaseErrorUnknownError": "Үл мэдэгдэх алдаа гарлаа. Хэсэг хугацааны дараа дахин оролдоно уу. Хэрэв шийдэгдэхгүй бол Тохиргоо > Хандах-аас хандана уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Тодорхойгүй алдаа гарлаа. Та түр хүлээгээд дахин оролдоно уу. Асуудал үргэлжилбэл Тохиргоо > Бидэнтэй холбогдох хэсгээр бидэнд хандана уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName}-д алдаа гарлаа. Хэсэг хугацааны дараа дахин оролдоно уу.",
   "purchaseErrorPurchaseNotAllowedError": "Энэ төхөөрөмжөөр худалдан авах зөвшөөрөгдөөгүй байна",
   "purchaseErrorPurchaseInvalidError": "Төлбөр амжилтгүй болсон. Төлбөрийн арга хэрэгслээ шалгаад дахин оролдоно уу.",

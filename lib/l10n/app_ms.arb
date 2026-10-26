@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll, aplikasi peringatan untuk mengambil pil perancang",
   "reachedMaximumCountOfReminderTimes": "Bilangan masa peringatan sudah mencapai had. Sila kekalkan tidak lebih daripada {ReminderTimeMaximumCount} masa",
   "minimumCountOfReminderTimes": "Sila tetapkan sekurang-kurangnya {ReminderTimeMinimumCount} waktu pemberitahuan",
-  "purchaseErrorUnknownError": "Ralat tidak diketahui telah berlaku. Sila cuba lagi selepas beberapa minit. Jika masalah berterusan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Ralat yang tidak diketahui telah berlaku. Sila cuba lagi sebentar nanti. Jika masalah berterusan, hubungi kami melalui Tetapan > Hubungi kami. Butiran: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Ralat telah berlaku di {storeName}. Sila tunggu sebentar dan cuba semula.",
   "purchaseErrorPurchaseNotAllowedError": "Pembelian tidak dibenarkan pada peranti ini",
   "purchaseErrorPurchaseInvalidError": "Pembayaran gagal. Sila pastikan kaedah pembayaran anda sah dan cuba lagi.",

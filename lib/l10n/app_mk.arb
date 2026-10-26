@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll — апликација со потсетник за земање контрацептивна таблета",
   "reachedMaximumCountOfReminderTimes": "Го достигнавте максималниот број времиња за потсетување. Ве молиме, оставете најмногу {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Ве молиме, поставете најмалку {ReminderTimeMinimumCount} термини за известувања",
-  "purchaseErrorUnknownError": "Се случи непозната грешка. Обидете се повторно подоцна. Ако проблемот не се реши, контактирајте нѐ преку Поставки > Контакт. Детали: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Се појави непозната грешка. Ве молиме, обидете се повторно подоцна. Ако проблемот продолжи, контактирајте нè преку Поставки > Контактирајте нè. Детали: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Се случи грешка во {storeName}. Ве молиме почекајте малку време и обидете се повторно.",
   "purchaseErrorPurchaseNotAllowedError": "Купувањето не е дозволено на овој уред",
   "purchaseErrorPurchaseInvalidError": "Плаќањето не успеша. Ве молиме проверете дали методот на плаќање е валиден и обидете се повторно.",

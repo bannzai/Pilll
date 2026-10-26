@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll, ’n herinnering vir jou pil",
   "reachedMaximumCountOfReminderTimes": "Jy het die maksimum aantal herinneringstye bereik. Hou dit asseblief by hoogstens {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Stel asseblief minstens {ReminderTimeMinimumCount} kennisgewingtye in",
-  "purchaseErrorUnknownError": "Daar het 'n onbekende fout voorgekom. Probeer dit asseblief weer later. Indien dit nie opgelos word nie, kontak ons asseblief via Instellings > Kontak. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "’n Onbekende fout het voorgekom. Probeer asseblief later weer. As dit aanhou, kontak ons via Instellings > Kontak ons. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "'n fout het by {storeName} voorgekom. Wag asseblief 'n rukkie en probeer weer.",
   "purchaseErrorPurchaseNotAllowedError": "Aankope is nie op hierdie toestel toegelaat nie",
   "purchaseErrorPurchaseInvalidError": "Betaling het misluk. Bevestig asseblief dat jou betaalmetode geldig is en probeer weer.",

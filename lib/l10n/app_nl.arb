@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll, een app met herinneringen voor je anticonceptiepil",
   "reachedMaximumCountOfReminderTimes": "Je hebt het maximumaantal herinneringstijden bereikt. Houd er maximaal {ReminderTimeMaximumCount} over",
   "minimumCountOfReminderTimes": "Stel minstens {ReminderTimeMinimumCount} meldingstijden in",
-  "purchaseErrorUnknownError": "Er is een onbekende fout opgetreden. Probeer het na een tijdje opnieuw. Als het probleem aanhoudt, neem dan contact met ons op via Instellingen > Contact. Details: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Er is een onbekende fout opgetreden. Probeer het later opnieuw. Blijft het probleem bestaan? Neem dan contact met ons op via Instellingen > Contact opnemen. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Er is een fout opgetreden in {storeName}. Probeer het later opnieuw.",
   "purchaseErrorPurchaseNotAllowedError": "Aankopen zijn niet toegestaan op dit apparaat",
   "purchaseErrorPurchaseInvalidError": "Betaling mislukt. Controleer uw betaalmethode en probeer het opnieuw.",

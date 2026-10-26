@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll – priminimų programėlė kontraceptinėms tabletėms vartoti",
   "reachedMaximumCountOfReminderTimes": "Pasiektas didžiausias priminimo laikų skaičius. Palikite ne daugiau kaip {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Nustatykite bent {ReminderTimeMinimumCount} pranešimų laikus",
-  "purchaseErrorUnknownError": "Įvyko nežinoma klaida. Pabandykite dar kartą po kurio laiko. Jei problema neišspręsta, susisiekite su mumis per Nustatymai > Kontaktai. Išsamiau: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Įvyko nežinoma klaida. Pabandykite dar kartą šiek tiek vėliau. Jei problema išlieka, susisiekite su mumis per Nustatymai > Susisiekti su mumis. Išsami informacija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} įvyko klaida. Palaukite šiek tiek ir bandykite dar kartą.",
   "purchaseErrorPurchaseNotAllowedError": "Šiame įrenginyje pirkimai neleistini",
   "purchaseErrorPurchaseInvalidError": "Mokėjimas nepavyko. Patikrinkite, ar jūsų mokėjimo būdas galioja, ir bandykite dar kartą.",

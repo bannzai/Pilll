@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll၊ သန္ဓေတားဆေးသောက်ရန် သတိပေးချက်ပေးသည့် အက်ပ်",
   "reachedMaximumCountOfReminderTimes": "သတိပေးချိန် သတ်မှတ်နိုင်သည့် အများဆုံးအရေအတွက် ပြည့်သွားပါပြီ။ ကျေးဇူးပြု၍ {ReminderTimeMaximumCount} ခုထက် မပိုအောင် လျှော့ပါ",
   "minimumCountOfReminderTimes": "အသိပေးချက်အတွက် အနည်းဆုံး {ReminderTimeMinimumCount} ကြိမ်စာ အချိန် သတ်မှတ်ပေးပါ",
-  "purchaseErrorUnknownError": "အကြောင်းရင်းမသိသော အမှားတစ်ခု ဖြစ်ပွားခဲ့သည်။ ခဏစောင့်ပြီး ထပ်မံကြိုးစားကြည့်ပါ။ ပြဿနာမပျောက်ပါက ဆက်တင် > စုံစမ်းမေးမြန်းရန် မှတစ်ဆင့် ဆက်သွယ်မေးမြန်းပါ။ အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "မသိရှိရသေးသော အမှားတစ်ခု ဖြစ်ပွားခဲ့ပါတယ်။ ခဏအကြာတွင် ထပ်မံကြိုးစားကြည့်ပါ။ ပြဿနာ ဆက်ရှိနေပါက ဆက်တင်များ > ဆက်သွယ်ရန် မှတစ်ဆင့် ကျွန်ုပ်တို့ကို ဆက်သွယ်ပါ။ အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} တွင် အမှားတစ်ခု ဖြစ်ပေါ်နေပါသည်။ ခဏစောင့်ပြီး ထပ်မံကြိုးစားကြည့်ပါ။",
   "purchaseErrorPurchaseNotAllowedError": "ဤစက်ပစ္စည်းတွင် ဝယ်ယူမှုကို ခွင့်မပြုပါ",
   "purchaseErrorPurchaseInvalidError": "ငွေပေးချေမှု မအောင်မြင်ပါ။ သင့်ပေးငွေနည်းလမ်း မှန်ကန်မှုကို စစ်ဆေးပြီး ပြန်လည်ကြိုးစားပါ။",

@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll, app na may paalala sa pag-inom ng pildoras na pangkontraseptibo",
   "reachedMaximumCountOfReminderTimes": "Naabot na ninyo ang pinakamataas na bilang ng oras ng paalala. Pakilimitahan po sa {ReminderTimeMaximumCount} o mas kaunti",
   "minimumCountOfReminderTimes": "Mangyaring magtakda ng hindi bababa sa {ReminderTimeMinimumCount} oras ng abiso",
-  "purchaseErrorUnknownError": "May naganap na hindi kilalang error. Pakihintay ang ilang sandali at subukang muli. Kung hindi pa rin nalulutas, mangyaring makipag-ugnayan sa Settings > Tanong. Mga detalye: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "May naganap na hindi kilalang error. Pakisubukan po ulit mamaya. Kung magpatuloy ang problema, makipag-ugnayan sa amin sa Mga Setting > Makipag-ugnayan sa amin. Mga detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "May error na naganap sa {storeName}. Mangyaring maghintay sandali at subukan ulit.",
   "purchaseErrorPurchaseNotAllowedError": "Hindi pinapahintulutan ang pagbili sa device na ito",
   "purchaseErrorPurchaseInvalidError": "Nabigo ang pagbabayad. Pakisuri kung valid ang inyong paraan ng pagbabayad at subukan muli.",

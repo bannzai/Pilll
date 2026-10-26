@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll، برنامهٔ یادآور مصرف قرص ضدبارداری",
   "reachedMaximumCountOfReminderTimes": "به حداکثر تعداد زمان‌های یادآوری رسیده‌اید. لطفاً تعداد آن‌ها را به {ReminderTimeMaximumCount} یا کمتر برسانید",
   "minimumCountOfReminderTimes": "لطفاً دست‌کم {ReminderTimeMinimumCount} زمان برای اعلان‌ها تنظیم کنید",
-  "purchaseErrorUnknownError": "خطای ناشناخته‌ای رخ داده است. لطفاً مدتی صبر کرده و دوباره تلاش کنید. در صورت حل نشدن مشکل، از طریق تنظیمات > تماس با ما با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "خطای ناشناخته‌ای رخ داد. لطفاً کمی بعد دوباره امتحان کنید. اگر مشکل ادامه داشت، از مسیر تنظیمات > تماس با ما با ما در ارتباط باشید. جزئیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "در {storeName} خطایی رخ داده است. لطفاً چند لحظه صبر کنید و دوباره تلاش کنید.",
   "purchaseErrorPurchaseNotAllowedError": "خرید در این دستگاه مجاز نیست",
   "purchaseErrorPurchaseInvalidError": "پرداخت ناموفق بود. لطفاً روش پرداخت معتبر خود را بررسی کرده و دوباره تلاش کنید",

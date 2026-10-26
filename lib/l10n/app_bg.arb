@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll — приложение с напомняне за прием на противозачатъчното хапче",
   "reachedMaximumCountOfReminderTimes": "Достигнахте максималния брой часове за напомняне. Моля, оставете най-много {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Моля, задайте поне {ReminderTimeMinimumCount} часа за известия",
-  "purchaseErrorUnknownError": "Възникна неизвестна грешка. Моля, опитайте отново след малко. Ако проблемът не се реши, се свържете с нас чрез Настройки > Контакт. Подробности: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Възникна неизвестна грешка. Моля, опитайте отново след малко. Ако проблемът продължи, свържете се с нас чрез Настройки > Свържете се с нас. Подробности: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "В {storeName} възникна грешка. Моля, изчакайте малко време и опитайте отново.",
   "purchaseErrorPurchaseNotAllowedError": "Покупките не са разрешени на това устройство",
   "purchaseErrorPurchaseInvalidError": "Плащането беше неуспешно. Проверете начина на плащане и опитайте отново.",

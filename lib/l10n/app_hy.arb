@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll՝ հակաբեղմնավորիչ հաբի ընդունման հիշեցումներով հավելված",
   "reachedMaximumCountOfReminderTimes": "Հասել եք հիշեցումների ժամերի առավելագույն քանակին։ Խնդրում ենք թողնել առավելագույնը {ReminderTimeMaximumCount} ժամ",
   "minimumCountOfReminderTimes": "Խնդրում ենք սահմանել ծանուցման առնվազն {ReminderTimeMinimumCount} ժամ",
-  "purchaseErrorUnknownError": "Անհայտ սխալ է տեղի ունեցել։ Խնդրում ենք փորձել մի փոքր ուշ։ Եթե խնդիրը չի լուծվում, կապվեք մեզ հետ Կարգավորումներ > Կապ մեզ հետ բաժնից։ Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Անհայտ սխալ է տեղի ունեցել։ Խնդրում ենք մի փոքր ուշ կրկին փորձել։ Եթե խնդիրը շարունակվի, կապվեք մեզ հետ՝ Կարգավորումներ > Կապ մեզ հետ բաժնից։ Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName}-ում սխալ է տեղի ունեցել: Խնդրում ենք մի փոքր սպասել և նորից փորձել:",
   "purchaseErrorPurchaseNotAllowedError": "Այս սարքում գնումները թույլատրված չեն",
   "purchaseErrorPurchaseInvalidError": "Վճարումը ձախողվեց: Խնդրում ենք ստուգել ձեր վճարման եղանակի վավերությունը և կրկին փորձել:",

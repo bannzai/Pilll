@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll, a reminder app for taking your birth control pill",
   "reachedMaximumCountOfReminderTimes": "You've reached the limit for reminder times. Please keep no more than {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Set at least {ReminderTimeMinimumCount} notification times",
-  "purchaseErrorUnknownError": "An unknown error has occurred. Please try again later. If the issue persists, please contact us via Settings > Contact. Details: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Something went wrong. Please try again later. If the problem continues, contact us through Settings > Contact us. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "An error occurred on {storeName}. Please wait a moment and try again.",
   "purchaseErrorPurchaseNotAllowedError": "Purchases are not allowed on this device",
   "purchaseErrorPurchaseInvalidError": "Payment failed. Please check your payment method and try again.",

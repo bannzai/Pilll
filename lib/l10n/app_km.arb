@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll កម្មវិធីរំលឹកការលេបថ្នាំពន្យារកំណើត",
   "reachedMaximumCountOfReminderTimes": "បានដល់ចំនួនអតិបរមានៃម៉ោងរំលឹកដែលអាចកំណត់បានហើយ។ សូមទុកត្រឹម {ReminderTimeMaximumCount} ម៉ោង ឬតិចជាងនេះ",
   "minimumCountOfReminderTimes": "សូមកំណត់ម៉ោងជូនដំណឹងយ៉ាងតិច {ReminderTimeMinimumCount} ម៉ោង",
-  "purchaseErrorUnknownError": "មានកំហុសដែលមិនស្គាល់មូលហេតុបានកើតឡើង។ សូមរង់ចាំបន្តិចហើយព្យាយាមម្តងទៀត។ ប្រសិនបើមិនអាចដោះស្រាយបាន សូមទាក់ទងមកកាន់យើងតាមរយៈ ការកំណត់ > ការទាក់ទង។ ព័ត៌មានលម្អិត៖ {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "មានកំហុសមិនស្គាល់មួយបានកើតឡើង។ សូមព្យាយាមម្ដងទៀតនៅពេលក្រោយ។ ប្រសិនបើបញ្ហានៅតែបន្ត សូមទាក់ទងមកយើងតាម ការកំណត់ > ទាក់ទងមកយើង។ ព័ត៌មានលម្អិត៖ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "មានបញ្ហាកើតឡើងនៅក្នុង {storeName} ។ សូមរង់ចាំបន្តិចហើយព្យាយាមម្តងទៀត។",
   "purchaseErrorPurchaseNotAllowedError": "ឧបករណ៍នេះមិនអនុញ្ញាតឱ្យធ្វើការទិញទេ",
   "purchaseErrorPurchaseInvalidError": "ការទូទាត់បានបរាជ័យ។ សូមពិនិត្យមើលថាតើវិធីសាស្រ្តទូទាត់របស់អ្នកមានសុពលភាពឬទេ រួចព្យាយាមម្តងទៀត។",

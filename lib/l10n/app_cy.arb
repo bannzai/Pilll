@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll, ap atgoffa ar gyfer cymryd y bilsen atal cenhedlu",
   "reachedMaximumCountOfReminderTimes": "Rydych wedi cyrraedd uchafswm yr amseroedd atgoffa. Cadwch ddim mwy na {ReminderTimeMaximumCount}, os gwelwch yn dda",
   "minimumCountOfReminderTimes": "Mae angen gosod o leiaf {ReminderTimeMinimumCount} amser ar gyfer hysbysiadau",
-  "purchaseErrorUnknownError": "Mae gwall anhysbys wedi digwydd. Rhowch gynnig arni eto ymhen ychydig. Os nad yw'n datrys, cysylltwch â ni drwy Gosodiadau > Ymholiad. Manylion: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Mae gwall anhysbys wedi digwydd. Rhowch gynnig arall arni ymhen ychydig. Os bydd y broblem yn parhau, cysylltwch â ni drwy Gosodiadau > Cysylltu â ni. Manylion: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Mae gwall wedi digwydd yn {storeName}. Arhoswch ychydig a rhowch gynnig arall arni.",
   "purchaseErrorPurchaseNotAllowedError": "Nid yw pryniadau yn cael eu caniatáu ar y ddyfais hon",
   "purchaseErrorPurchaseInvalidError": "Methodd y taliad. Gwiriwch fod eich dull talu yn ddilys a cheisiwch eto.",

@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll — aplikácia s pripomienkami na užitie antikoncepčnej tabletky",
   "reachedMaximumCountOfReminderTimes": "Dosiahli ste maximálny počet časov pripomienok. Nechajte ich, prosím, najviac {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Nastavte aspoň {ReminderTimeMinimumCount} časy upozornení",
-  "purchaseErrorUnknownError": "Vyskytla sa neznáma chyba. Počkajte chvíľu a skúste to znovu. Ak sa problém nevyrieši, kontaktujte nás cez Nastavenia > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Vyskytla sa neznáma chyba. Skúste to, prosím, o chvíľu znova. Ak problém pretrváva, kontaktujte nás cez Nastavenia > Kontaktovať nás. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "V {storeName} sa vyskytla chyba. Chvíľu počkajte a skúste to znovu.",
   "purchaseErrorPurchaseNotAllowedError": "Nákupy nie sú na tomto zariadení povolené",
   "purchaseErrorPurchaseInvalidError": "Platba zlyhala. Skontrolujte, či je váš platobný spôsob platný, a skúste to znova.",

@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll – muistutussovellus ehkäisypillerin ottamiseen",
   "reachedMaximumCountOfReminderTimes": "Muistutusaikoja on jo enimmäismäärä. Jätä niitä korkeintaan {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Aseta vähintään {ReminderTimeMinimumCount} ilmoitusaikaa",
-  "purchaseErrorUnknownError": "Tuntematon virhe on tapahtunut. Yritä uudelleen hetken kuluttua. Jos ongelma jatkuu, ota yhteyttä Asetukset > Yhteydenotto kautta. Yksityiskohdat: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Tapahtui tuntematon virhe. Yritä hetken kuluttua uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdasta Asetukset > Ota yhteyttä. Tiedot: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName}ssa on tapahtunut virhe. Odota hetki ja yritä uudelleen.",
   "purchaseErrorPurchaseNotAllowedError": "Ostoja ei sallita tällä laitteella",
   "purchaseErrorPurchaseInvalidError": "Maksu epäonnistui. Tarkista maksutapasi ja yritä uudelleen.",

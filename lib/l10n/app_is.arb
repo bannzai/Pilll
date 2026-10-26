@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll – áminningarapp fyrir töku getnaðarvarnarpillunnar",
   "reachedMaximumCountOfReminderTimes": "Hámarksfjölda áminningartíma er náð. Hafðu þá í mesta lagi {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Stilltu að minnsta kosti {ReminderTimeMinimumCount} tilkynningatíma",
-  "purchaseErrorUnknownError": "Óvænt villa kom upp. Vinsamlegast reyndu aftur síðar. Ef vandamálið helst, hafðu samband í gegnum Stillingar > Fyrirspurnir. Nánar: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Óþekkt villa kom upp. Prófaðu aftur eftir smástund. Ef vandinn heldur áfram geturðu haft samband við okkur í Stillingar > Hafa samband. Nánar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Villa kom upp í {storeName}. Bíddu í smá stund og reyndu aftur.",
   "purchaseErrorPurchaseNotAllowedError": "Kaup eru ekki leyfð á þessu tæki",
   "purchaseErrorPurchaseInvalidError": "Greiðsla mistókst. Vinsamlegast staðfestu að greiðslumáti þinn sé gildur og reyndu aftur",

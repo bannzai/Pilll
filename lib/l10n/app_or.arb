@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll, ଗର୍ଭନିରୋଧକ ବଟିକା ଖାଇବା ପାଇଁ ରିମାଇଣ୍ଡର ଆପ୍",
   "reachedMaximumCountOfReminderTimes": "ରିମାଇଣ୍ଡର୍ ସମୟ ଯୋଡ଼ିବାର ସର୍ବାଧିକ ସୀମାରେ ପହଞ୍ଚିଛନ୍ତି। ଦୟାକରି {ReminderTimeMaximumCount} କିମ୍ବା ତା'ଠାରୁ କମ୍ ସମୟ ରଖନ୍ତୁ",
   "minimumCountOfReminderTimes": "ଦୟାକରି ବିଜ୍ଞପ୍ତି ପାଇଁ ଅତି କମରେ {ReminderTimeMinimumCount}ଟି ସମୟ ସେଟ୍ କରନ୍ତୁ",
-  "purchaseErrorUnknownError": "ଏକ ଅଜଣା ତ୍ରୁଟି ଘଟିଛି। କିଛି ସମୟ ପରେ ଦୟାକରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ସମସ୍ୟାଟି ସମାଧାନ ନହୁଏ, ଦୟାକରି ସେଟିଂସ > ଯୋଗାଯୋଗ ଦ୍ୱାରା ଆମ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "ଏକ ଅଜଣା ତ୍ରୁଟି ଘଟିଛି। ଦୟାକରି କିଛି ସମୟ ପରେ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ। ସମସ୍ୟା ଲାଗି ରହିଲେ, ସେଟିଂସ୍ > ଆମ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ ମାଧ୍ୟମରେ ଆମକୁ ଜଣାନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} ରେ ତ୍ରୁଟି ଘଟିଛି। କିଛି ସମୟ ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ।",
   "purchaseErrorPurchaseNotAllowedError": "ଏହି ଡିଭାଇସରେ କ୍ରୟ ଅନୁମତି ନାହିଁ",
   "purchaseErrorPurchaseInvalidError": "ପେମେଣ୍ଟ ବିଫଳ ହୋଇଛି। ଦୟାକରି ବୈଧ ପେମେଣ୍ଟ ପଦ୍ଧତି କି ନାହିଁ ଯାଞ୍ଚ କରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ।",

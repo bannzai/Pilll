@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll – en påminnelseapp for p-pillen",
   "reachedMaximumCountOfReminderTimes": "Du har nådd grensen for påminnelsestidspunkter. Behold høyst {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Angi minst {ReminderTimeMinimumCount} varslingstidspunkter",
-  "purchaseErrorUnknownError": "Det oppstod en ukjent feil. Vennligst vent litt og prøv igjen. Dersom problemet vedvarer, kan du kontakte oss via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Det oppstod en ukjent feil. Prøv igjen om litt. Hvis problemet vedvarer, kan du kontakte oss via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Det har oppstått en feil i {storeName}. Vennligst vent litt og prøv igjen.",
   "purchaseErrorPurchaseNotAllowedError": "Kjøp er ikke tillatt på denne enheten",
   "purchaseErrorPurchaseInvalidError": "Betaling feilet. Kontroller betalingsmetoden din og prøv på nytt.",

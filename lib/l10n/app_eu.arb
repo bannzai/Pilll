@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll, pilula antisorgailua hartzeko gogorarazpen aplikazioa",
   "reachedMaximumCountOfReminderTimes": "Gehienezko oroigarri-ordu kopurura iritsi zara. Utzi gehienez {ReminderTimeMaximumCount}, mesedez",
   "minimumCountOfReminderTimes": "Ezarri gutxienez {ReminderTimeMinimumCount} jakinarazpen-ordu",
-  "purchaseErrorUnknownError": "Ezezaguna den errore bat gertatu da. Denbora pixka bat itxaron eta berriro saiatu. Konpondu ezin bada, Ezarpenak > Galdeketa bidez jarri harremanetan gurekin. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Errore ezezagun bat gertatu da. Saiatu berriro pixka bat geroago. Arazoak jarraitzen badu, jarri gurekin harremanetan Ezarpenak > Jarri harremanetan atalaren bidez. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName}(e)n errore bat gertatu da. Mesedez, itxaron pixka bat eta saiatu berriro.",
   "purchaseErrorPurchaseNotAllowedError": "Erosketak ez dira baimenduta gailu honetan",
   "purchaseErrorPurchaseInvalidError": "Ordainketak huts egin du. Mesedez, egiaztatu ordainketa metodoa baliozkoa den eta saiatu berriro.",

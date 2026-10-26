@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll — həb qəbulunuz üçün xatırlatma tətbiqi",
   "reachedMaximumCountOfReminderTimes": "Qeyd edə biləcəyiniz xatırlatma vaxtlarının maksimum sayına çatmısınız. Zəhmət olmasa, onların sayını {ReminderTimeMaximumCount} və ya daha az saxlayın",
   "minimumCountOfReminderTimes": "Zəhmət olmasa, ən azı {ReminderTimeMinimumCount} bildiriş vaxtı təyin edin",
-  "purchaseErrorUnknownError": "Naməlum səbəb üzündən xəta baş verdi. Bir az vaxt keçdikdən sonra yenidən cəhd edin. Həll olunmadığı halda Tənzimləmələr > Sorğu vasitəsilə bizimlə əlaqə saxlayın. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Naməlum xəta baş verdi. Zəhmət olmasa, bir qədər sonra yenidən cəhd edin. Problem davam edərsə, Parametrlər > Bizimlə əlaqə bölməsindən bizə yazın. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} mağazasında xəta baş verdi. Zəhmət olmasa, bir qədər sonra yenidən cəhd edin",
   "purchaseErrorPurchaseNotAllowedError": "Bu cihazda satın alma icazə verilmir",
   "purchaseErrorPurchaseInvalidError": "Ödəniş alınmadı. Ödəniş üsulunuzun etibarlı olduğunu yoxlayın və yenidən cəhd edin.",

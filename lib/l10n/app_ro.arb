@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll, aplicația cu mementouri pentru administrarea pilulei contraceptive",
   "reachedMaximumCountOfReminderTimes": "Ai ajuns la numărul maxim de ore pentru mementouri. Păstrează cel mult {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Setează cel puțin {ReminderTimeMinimumCount} ore pentru notificări",
-  "purchaseErrorUnknownError": "A apărut o eroare necunoscută. Vă rugăm să încercați din nou după un timp. Dacă problema persistă, contactați-ne prin Setări > Contact. Detalii: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "A apărut o eroare necunoscută. Încearcă din nou puțin mai târziu. Dacă problema persistă, contactează-ne din Setări > Contactează-ne. Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "A apărut o eroare în {storeName}. Vă rugăm să încercați din nou în câteva momente.",
   "purchaseErrorPurchaseNotAllowedError": "Achiziția nu este permisă pe acest dispozitiv",
   "purchaseErrorPurchaseInvalidError": "Plata a eșuat. Verificați dacă metoda de plată este validă și încercați din nou.",

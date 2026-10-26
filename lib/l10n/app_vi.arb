@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll, ứng dụng lời nhắc uống thuốc tránh thai",
   "reachedMaximumCountOfReminderTimes": "Bạn đã đạt giới hạn số giờ nhắc nhở. Vui lòng giữ tối đa {ReminderTimeMaximumCount} giờ",
   "minimumCountOfReminderTimes": "Vui lòng đặt ít nhất {ReminderTimeMinimumCount} thời điểm nhận thông báo",
-  "purchaseErrorUnknownError": "Đã xảy ra lỗi không xác định. Vui lòng thử lại sau một thời gian. Nếu không giải quyết được, hãy liên hệ với chúng tôi qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Đã xảy ra lỗi không xác định. Vui lòng thử lại sau ít phút. Nếu sự cố vẫn tiếp diễn, hãy liên hệ với chúng tôi qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Đã xảy ra lỗi trên {storeName}. Vui lòng đợi một lúc và thử lại.",
   "purchaseErrorPurchaseNotAllowedError": "Thiết bị này không được phép thực hiện mua hàng",
   "purchaseErrorPurchaseInvalidError": "Thanh toán thất bại. Vui lòng kiểm tra phương thức thanh toán có hợp lệ không và thử lại.",

@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll — εφαρμογή υπενθύμισης για το αντισυλληπτικό χάπι",
   "reachedMaximumCountOfReminderTimes": "Φτάσατε στο μέγιστο πλήθος ωρών υπενθύμισης. Παρακαλούμε κρατήστε έως {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Ορίστε τουλάχιστον {ReminderTimeMinimumCount} ώρες ειδοποίησης",
-  "purchaseErrorUnknownError": "Παρουσιάστηκε άγνωστο σφάλμα. Παρακαλώ δοκιμάστε ξανά αργότερα. Εάν το πρόβλημα δεν λυθεί, παρακαλώ επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Παρουσιάστηκε άγνωστο σφάλμα. Δοκιμάστε ξανά σε λίγο. Αν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας από τις Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Παρουσιάστηκε σφάλμα στο {storeName}. Παρακαλώ περιμένετε λίγο και δοκιμάστε ξανά.",
   "purchaseErrorPurchaseNotAllowedError": "Οι αγορές δεν επιτρέπονται σε αυτή τη συσκευή",
   "purchaseErrorPurchaseInvalidError": "Η πληρωμή απέτυχε. Παρακαλώ ελέγξτε εάν η μέθοδος πληρωμής σας είναι έγκυρη και δοκιμάστε ξανά.",

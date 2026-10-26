@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll, אפליקציית תזכור לנטילת גלולות למניעת היריון",
   "reachedMaximumCountOfReminderTimes": "הגעת למספר המרבי של זמני תזכורת. אפשר להשאיר עד {ReminderTimeMaximumCount} זמנים",
   "minimumCountOfReminderTimes": "יש להגדיר לפחות {ReminderTimeMinimumCount} שעות להתראות",
-  "purchaseErrorUnknownError": "שגיאה לא צפויה התרחשה. אנא נסו שוב מאוחר יותר. אם הבעיה נמשכת, אנא פנו אלינו דרך הגדרות > צור קשר. פרטים: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "אירעה שגיאה לא ידועה. כדאי לנסות שוב בעוד זמן מה. אם הבעיה נמשכת, אפשר ליצור איתנו קשר דרך הגדרות > יצירת קשר. פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "אירעה שגיאה ב-{storeName}. אנא המתן זמן מה ונסה שוב",
   "purchaseErrorPurchaseNotAllowedError": "רכישה לא מותרת במכשיר זה",
   "purchaseErrorPurchaseInvalidError": "התשלום נכשל. אנא ודאו שאמצעי התשלום תקף ונסו שוב",

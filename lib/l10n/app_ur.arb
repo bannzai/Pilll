@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll، مانع حمل گولی لینے کی یاد دہانی کی ایپ",
   "reachedMaximumCountOfReminderTimes": "یاددہانی کے اوقات شامل کرنے کی زیادہ سے زیادہ حد پوری ہو گئی ہے۔ براہِ کرم {ReminderTimeMaximumCount} یا اس سے کم اوقات رکھیں",
   "minimumCountOfReminderTimes": "براہِ کرم اطلاع کے لیے کم از کم {ReminderTimeMinimumCount} اوقات مقرر کریں",
-  "purchaseErrorUnknownError": "ایک نامعلوم خرابی پیدا ہوئی ہے۔ براہ کرم کچھ وقت بعد دوبارہ کوشش کریں۔ اگر مسئلہ حل نہیں ہوتا تو سیٹنگز > رابطہ کے ذریعے رابطہ کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "ایک نامعلوم خرابی پیش آئی ہے۔ براہِ کرم کچھ دیر بعد دوبارہ کوشش کریں۔ اگر مسئلہ برقرار رہے تو ترتیبات > ہم سے رابطہ کریں کے ذریعے ہم سے رابطہ کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} میں خرابی پیش آئی ہے۔ کچھ وقت بعد دوبارہ کوشش کریں",
   "purchaseErrorPurchaseNotAllowedError": "اس ڈیوائس پر خریداری کی اجازت نہیں ہے",
   "purchaseErrorPurchaseInvalidError": "ادائیگی ناکام ہو گئی۔ براہ کرم اپنے درست ادائیگی کے طریقے کی تصدیق کرکے دوبارہ کوشش کریں",

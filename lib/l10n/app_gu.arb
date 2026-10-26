@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll, ગર્ભનિરોધક ગોળી લેવા માટેની રિમાઇન્ડર ઍપ",
   "reachedMaximumCountOfReminderTimes": "રીમાઇન્ડરના સમય ઉમેરવાની મહત્તમ મર્યાદા સુધી પહોંચી ગયા છો. કૃપા કરીને {ReminderTimeMaximumCount} કે તેથી ઓછા સમય રાખો",
   "minimumCountOfReminderTimes": "કૃપા કરીને સૂચનાઓ માટે ઓછામાં ઓછા {ReminderTimeMinimumCount} સમય નક્કી કરો",
-  "purchaseErrorUnknownError": "અજ્ઞાત ભૂલ આવી છે. કૃપા કરીને થોડો સમય રાખીને ફરીથી પ્રયાસ કરો. જો તે ઉકેલાય નહીં તો સેટિંગ્સ > સંપર્ક મારફતે અમારો સંપર્ક કરો. વિગતો: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "અજાણી ભૂલ થઈ છે. કૃપા કરીને થોડી વાર પછી ફરી પ્રયાસ કરો. સમસ્યા ચાલુ રહે તો સેટિંગ્સ > સંપર્ક કરો દ્વારા અમારો સંપર્ક કરો. વિગતો: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} માં ભૂલ આવી છે. કૃપા કરીને થોડો સમય રાખીને ફરીથી પ્રયાસ કરો.",
   "purchaseErrorPurchaseNotAllowedError": "આ ઉપકરણ પર ખરીદીની પરવાનગી નથી",
   "purchaseErrorPurchaseInvalidError": "પેમેન્ટ નિષ્ફળ થઈ. કૃપા કરીને માન્ય પેમેન્ટ પદ્ધતિ છે કે કેમ તે ચકાસીને ફરીથી પ્રયાસ કરો",

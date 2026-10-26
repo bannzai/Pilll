@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll, උපත් පාලන පෙති ගැනීම සඳහා සිහිකැඳවීමේ යෙදුම",
   "reachedMaximumCountOfReminderTimes": "සිහිකැඳවීම් වේලාවන් එක් කළ හැකි උපරිම සීමාවට පැමිණ ඇත. කරුණාකර වේලාවන් {ReminderTimeMaximumCount}ක් හෝ ඊට අඩුවෙන් තබන්න",
   "minimumCountOfReminderTimes": "කරුණාකර දැනුම්දීම් සඳහා අවම වශයෙන් වේලාවන් {ReminderTimeMinimumCount}ක් සකසන්න",
-  "purchaseErrorUnknownError": "නොදන්නා හේතුවක් නිසා දෝෂයක් ඇතිවී ඇත. කරුණාකර මදක් වේලාවක් ගත වූ පසු නැවතත් උත්සාහ කරන්න. එය විසඳී නොගියහොත් සැකසීම් > විමසීම් හරහා අප සමඟ සම්බන්ධ වන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "නොදන්නා දෝෂයක් ඇති විය. කරුණාකර ටික වේලාවකට පසු නැවත උත්සාහ කරන්න. ගැටලුව දිගටම පවතී නම්, සැකසීම් > අප අමතන්න හරහා අප හා සම්බන්ධ වන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} හි දෝෂයක් ඇති වී ඇත. කරුණාකර ටික වේලාවක් බලා සිට නැවත උත්සාහ කරන්න.",
   "purchaseErrorPurchaseNotAllowedError": "මෙම උපකරණයෙන් මිලදී ගැනීමට අවසර නැත",
   "purchaseErrorPurchaseInvalidError": "ගෙවීම අසාර්ථක විය. වලංගු ගෙවීම් ක්‍රමයක් දැයි සත්‍යාපනය කර නැවත උත්සාහ කරන්න.",

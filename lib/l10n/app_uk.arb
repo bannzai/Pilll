@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll — застосунок із нагадуваннями про прийом протизаплідної пігулки",
   "reachedMaximumCountOfReminderTimes": "Ви досягли максимальної кількості часів нагадування. Будь ласка, залиште не більше ніж {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Укажіть щонайменше {ReminderTimeMinimumCount} часів для сповіщень",
-  "purchaseErrorUnknownError": "Сталася невідома помилка. Будь ласка, спробуйте знову через деякий час. Якщо проблема не вирішується, зверніться до нас через Налаштування > Зворотний зв'язок. Деталі: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Сталася невідома помилка. Будь ласка, спробуйте ще раз трохи пізніше. Якщо проблема не зникне, зв’яжіться з нами через Налаштування > Зв’язатися з нами. Подробиці: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "У {storeName} сталася помилка. Будь ласка, трохи зачекайте та спробуйте знову",
   "purchaseErrorPurchaseNotAllowedError": "Покупки заборонені на цьому пристрої",
   "purchaseErrorPurchaseInvalidError": "Не вдалося здійснити оплату. Будь ласка, перевірте дійсність способу оплати та спробуйте знову",

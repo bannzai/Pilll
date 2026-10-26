@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll，专为服用避孕药设计的提醒应用",
   "reachedMaximumCountOfReminderTimes": "提醒时间已达到可添加的上限，请保留不超过 {ReminderTimeMaximumCount} 个",
   "minimumCountOfReminderTimes": "请至少设置 {ReminderTimeMinimumCount} 个通知时间",
-  "purchaseErrorUnknownError": "发生了未知错误，请稍后重试。如果问题仍未解决，请通过 设置 > 问询 联系我们。详细信息：{exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "发生了未知错误，请稍后重试。如果问题仍未解决，请通过设置 > 联系我们与我们联系。详情：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} 出现错误。请稍后再试",
   "purchaseErrorPurchaseNotAllowedError": "此设备不允许购买",
   "purchaseErrorPurchaseInvalidError": "支付失败。请确认支付方式是否有效，然后重试。",

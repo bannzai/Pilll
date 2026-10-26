@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll — праграма з напамінам пра прыём пігулкі",
   "reachedMaximumCountOfReminderTimes": "Вы дасягнулі максімальнай колькасці часу для напамінаў. Калі ласка, пакіньце не больш за {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Калі ласка, задайце не менш за {ReminderTimeMinimumCount} часоў для апавяшчэнняў",
-  "purchaseErrorUnknownError": "Узнікла невядомая памылка. Паспрабуйце яшчэ раз праз некаторы час. Калі праблема не вырашаецца, звярніцеся праз Налады > Зваротная сувязь. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Узнікла невядомая памылка. Калі ласка, паспрабуйце яшчэ раз крыху пазней. Калі праблема не знікне, звяжыцеся з намі праз Налады > Звязацца з намі. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "У {storeName} адбылася памылка. Калі ласка, пачакайце некаторы час і паспрабуйце зноў",
   "purchaseErrorPurchaseNotAllowedError": "Пакупкі на гэтай прыладзе не дазволеныя",
   "purchaseErrorPurchaseInvalidError": "Плацёж не атрымаўся. Праверце, ці дзеючы спосаб плацяжу, і паспрабуйце зноў.",

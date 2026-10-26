@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll, uhlelo lokusebenza olunesikhumbuzo sokuphuza iphilisi lokuvimbela inzalo",
   "reachedMaximumCountOfReminderTimes": "Usufinyelele inani eliphezulu lezikhathi zesikhumbuzo. Sicela ushiye ezingadluli ku-{ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Sicela usethe okungenani izikhathi zezaziso ezingu-{ReminderTimeMinimumCount}",
-  "purchaseErrorUnknownError": "Kuveleke iphutha elingaziwa. Sicela uzame futhi emva kwesikhathi. Uma ingaxazululeki, sicela uxhumane nathi kusuka ku Izilungiselelo > Xhumana nathi. Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Kuvele iphutha elingaziwa. Sicela uzame futhi ngemva kwesikhashana. Uma inkinga iqhubeka, xhumana nathi ngokusebenzisa Izilungiselelo > Xhumana nathi. Imininingwane: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Kube nephutha ku-{storeName}. Sicela ulinde isikhashana bese uphinda uzama.",
   "purchaseErrorPurchaseNotAllowedError": "Ukuthenga akuvunyelwe kulesi mshini",
   "purchaseErrorPurchaseInvalidError": "Ukukhokha akuphumelelanga. Sicela uqinisekise ukuthi indlela yakho yokukhokha isebenza kahle bese uzama futhi.",

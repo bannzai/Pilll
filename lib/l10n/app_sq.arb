@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll, aplikacion me rikujtues për marrjen e pilulës kontraceptive",
   "reachedMaximumCountOfReminderTimes": "Keni arritur numrin maksimal të orareve të kujtesës. Ju lutemi, mbani jo më shumë se {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Ju lutemi, caktoni të paktën {ReminderTimeMinimumCount} orare njoftimesh",
-  "purchaseErrorUnknownError": "Ka ndodhur një gabim i panjohur. Ju lutem prisni pak dhe provoni përsëri. Nëse problemi nuk zgjidhet, ju lutem na kontaktoni përmes Cilësimet > Kontakto. Detajet: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Ndodhi një gabim i panjohur. Ju lutemi, provoni përsëri pas pak. Nëse problemi vazhdon, na kontaktoni te Cilësimet > Na kontaktoni. Hollësitë: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Është ndodhur një gabim në {storeName}. Ju lutemi prisni pak dhe provoni sërish.",
   "purchaseErrorPurchaseNotAllowedError": "Blerjet nuk janë të lejuara në këtë pajisje",
   "purchaseErrorPurchaseInvalidError": "Pagesa dështoi. Ju lutemi kontrolloni nëse metoda e pagesës është e vlefshme dhe provoni sërish.",

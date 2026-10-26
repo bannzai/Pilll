@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll — контрацепциялық таблетканы қабылдауға арналған еске салу қолданбасы",
   "reachedMaximumCountOfReminderTimes": "Еске салу уақыттарының ең көп санына жеттіңіз. Олардың санын {ReminderTimeMaximumCount} немесе одан аз етіп қалдырыңыз",
   "minimumCountOfReminderTimes": "Кемінде {ReminderTimeMinimumCount} хабарландыру уақытын орнатыңыз",
-  "purchaseErrorUnknownError": "Белгісіз қате орын алды. Біраз уақыттан кейін қайта көріңіз. Егер мәселе шешілмесе, Баптаулар > Сұрау арқылы хабарласыңыз. Толық ақпарат: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Белгісіз қате орын алды. Біраз уақыттан кейін қайталап көріңіз. Мәселе шешілмесе, Баптаулар > Бізге хабарласу арқылы бізге жазыңыз. Мәліметтер: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName}-да қате пайда болды. Біраз уақыттан соң қайта көріңіз.",
   "purchaseErrorPurchaseNotAllowedError": "Бұл құрылғыда сатып алуға рұқсат берілмеген",
   "purchaseErrorPurchaseInvalidError": "Төлем сәтсіз аяқталды. Төлем әдісінің жарамды екенін тексеріп, қайта көріңіз.",

@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll — kontratseptiv tabletkani ichish uchun eslatma ilovasi",
   "reachedMaximumCountOfReminderTimes": "Eslatma vaqtlarini qoʻshishning eng yuqori chegarasiga yetdingiz. Iltimos, koʻpi bilan {ReminderTimeMaximumCount} ta vaqt qoldiring",
   "minimumCountOfReminderTimes": "Iltimos, kamida {ReminderTimeMinimumCount} ta bildirishnoma vaqtini belgilang",
-  "purchaseErrorUnknownError": "Noma'lum sabab tufayli xato yuz berdi. Biroz vaqt o'tgach qayta urinib ko'ring. Agar muammo hal bo'lmasa, Sozlamalar > Murojaat orqali bog'laning. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Nomaʼlum xatolik yuz berdi. Iltimos, birozdan keyin qayta urinib koʻring. Muammo davom etsa, Sozlamalar > Biz bilan bogʻlanish orqali bizga murojaat qiling. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName}da xatolik yuz berdi. Biroz vaqt o'tgach yana urinib ko'ring.",
   "purchaseErrorPurchaseNotAllowedError": "Bu qurilmada sotib olish taqiqlangan",
   "purchaseErrorPurchaseInvalidError": "To'lov muvaffaqiyatsiz tugadi. Iltimos, to'lov usulining to'g'riligini tekshirib, qayta urinib ko'ring.",

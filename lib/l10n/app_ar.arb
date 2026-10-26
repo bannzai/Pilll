@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll، تطبيق تذكير بتناول حبوب منع الحمل",
   "reachedMaximumCountOfReminderTimes": "وصلتِ إلى الحد الأقصى لأوقات التذكير. يُرجى الاكتفاء بـ {ReminderTimeMaximumCount} أوقات أو أقل",
   "minimumCountOfReminderTimes": "يرجى تحديد {ReminderTimeMinimumCount} أوقات على الأقل للتنبيهات",
-  "purchaseErrorUnknownError": "حدث خطأ غير معروف السبب. يرجى المحاولة مرة أخرى بعد فترة. إذا لم يتم حل المشكلة، يرجى التواصل معنا عبر الإعدادات > الاستفسارات. التفاصيل: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "حدث خطأ غير معروف. يُرجى المحاولة مجددًا بعد قليل. إذا استمرت المشكلة، يُرجى التواصل معنا عبر الإعدادات > اتصلي بنا. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "حدث خطأ في {storeName}. يرجى الانتظار قليلاً والمحاولة مرة أخرى",
   "purchaseErrorPurchaseNotAllowedError": "الشراء غير مسموح على هذا الجهاز",
   "purchaseErrorPurchaseInvalidError": "فشلت عملية الدفع. يرجى التحقق من صحة طريقة الدفع وإعادة المحاولة",

@@ -287,7 +287,7 @@
   "pilllDescription": "Pilll – aplikacija z opomniki za jemanje kontracepcijskih tablet",
   "reachedMaximumCountOfReminderTimes": "Doseženo je največje dovoljeno število časov opomnikov. Ohranite jih največ {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Nastavite vsaj {ReminderTimeMinimumCount} časov za obvestila",
-  "purchaseErrorUnknownError": "Prišlo je do neznane napake. Počakajte malo in poskusite znova. Če se težava ne reši, pojdite na Nastavitve > Kontakt in nas kontaktirajte. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Prišlo je do neznane napake. Poskusite znova čez nekaj časa. Če težava ostane, nam pišite prek Nastavitve > Stik z nami. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "V {storeName} je prišlo do napake. Počakajte nekaj časa in poskusite znova.",
   "purchaseErrorPurchaseNotAllowedError": "Nakupovanje na tej napravi ni dovoljeno",
   "purchaseErrorPurchaseInvalidError": "Plačilo ni uspelo. Prosimo, preverite, ali je način plačila veljaven, in poskusite znova.",
