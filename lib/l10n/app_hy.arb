@@ -280,7 +280,7 @@
   "twentyOnePlusSevenPlacebo": "21 ակտիվ նյութով հաբ + 7 պլացեբո հաբ",
   "allActivePills": "Բոլորը ակտիվ հաբեր են",
   "twentyFourPlusFourDaysBreak": "24 հաբ + 4 դադարի հաբ",
-  "choosePillType": "Ընտրել հաբի տեսակը",
+  "choosePillType": "Ընտրեք հաբի տեսակը",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} ժամանակահատվածի ծանուցում",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Ծանուցումները անջատված լինելու դեպքում {pillSheetPillSheetTypeNotTakenWord} ժամանակահատվածի ընդունման գրառումները նույնպես ավտոմատ ավելացվում են:",
   "requestForCancelSurvey": "Լուծարման հետո հարցակցությանը մասնակցության խնդրանք",

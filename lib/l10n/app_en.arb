@@ -280,7 +280,7 @@
   "twentyOnePlusSevenPlacebo": "21 active pills + 7 placebo pills",
   "allActivePills": "All active pills",
   "twentyFourPlusFourDaysBreak": "24 pills + 4 pill break pills",
-  "choosePillType": "Select pill type",
+  "choosePillType": "Choose pill type",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} period notification",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Even when notifications are turned off, pill records for the {pillSheetPillSheetTypeNotTakenWord} period will be automatically added",
   "requestForCancelSurvey": "Post-Cancellation Survey Request",

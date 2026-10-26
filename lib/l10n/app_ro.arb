@@ -280,7 +280,7 @@
   "twentyOnePlusSevenPlacebo": "21 de pilule active + 7 pilule placebo",
   "allActivePills": "Toate pilulele sunt active",
   "twentyFourPlusFourDaysBreak": "24 de pilule + 4 pilule pentru pauză",
-  "choosePillType": "Selectează tipul de pilulă",
+  "choosePillType": "Alege tipul de pilulă",
   "notificationForNotTakenPeriod": "Notificare pentru perioada {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Când notificările sunt dezactivate, înregistrările de administrare pentru perioada {pillSheetPillSheetTypeNotTakenWord} sunt de asemenea adăugate automat.",
   "requestForCancelSurvey": "Vă rugăm să ne ajutați cu chestionarul post-anulare",

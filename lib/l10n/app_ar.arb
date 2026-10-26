@@ -280,7 +280,7 @@
   "twentyOnePlusSevenPlacebo": "21 قرصًا بمادة فعالة + 7 أقراص من دواء وهمي",
   "allActivePills": "جميع الحبوب فعالة",
   "twentyFourPlusFourDaysBreak": "24 حبة + 4 حبات راحة",
-  "choosePillType": "اختر نوع الحبوب",
+  "choosePillType": "اختاري نوع الحبوب",
   "notificationForNotTakenPeriod": "إشعار فترة {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "عند إيقاف الإشعارات، سيتم أيضاً إنشاء سجل تناول فترة {pillSheetPillSheetTypeNotTakenWord} تلقائياً",
   "requestForCancelSurvey": "نرجو التعاون في الاستبيان بعد الإلغاء",

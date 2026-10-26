@@ -280,7 +280,7 @@
   "twentyOnePlusSevenPlacebo": "21 tabletek z substancją czynną + 7 tabletek placebo",
   "allActivePills": "Wszystkie tabletki są aktywne",
   "twentyFourPlusFourDaysBreak": "24 tabletki + 4 tabletki na przerwę",
-  "choosePillType": "Wybierz rodzaj pigułki",
+  "choosePillType": "Wybierz rodzaj tabletki",
   "notificationForNotTakenPeriod": "Powiadomienie o okresie {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "W przypadku wyłączenia powiadomień, rekordy przyjmowania w okresie {pillSheetPillSheetTypeNotTakenWord} również będą automatycznie dodawane",
   "requestForCancelSurvey": "Prośba o wypełnienie ankiety po rezygnacji",

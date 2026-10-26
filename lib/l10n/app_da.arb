@@ -280,7 +280,7 @@
   "twentyOnePlusSevenPlacebo": "21 aktive p-piller + 7 placebopiller",
   "allActivePills": "Alle er aktive piller",
   "twentyFourPlusFourDaysBreak": "24 p-piller + 4 p-piller til pillepause",
-  "choosePillType": "Vælg pilletype",
+  "choosePillType": "Vælg type p-pille",
   "notificationForNotTakenPeriod": "Notifikation for {pillSheetPillSheetTypeNotTakenWord}periode",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Når meddelelser er slået fra, oprettes indtagelsesregistreringer for {pillSheetPillSheetTypeNotTakenWord}-perioden også automatisk",
   "requestForCancelSurvey": "Hjælp til spørgeskema efter opsigelse",

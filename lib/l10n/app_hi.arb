@@ -280,7 +280,7 @@
   "twentyOnePlusSevenPlacebo": "21 सक्रिय गोलियाँ + 7 प्लेसिबो गोलियाँ",
   "allActivePills": "सभी गोलियाँ हार्मोनल हैं",
   "twentyFourPlusFourDaysBreak": "24 गोलियाँ + 4 विराम की गोलियाँ",
-  "choosePillType": "पिल का प्रकार चुनें",
+  "choosePillType": "गोली का प्रकार चुनें",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} अवधि की सूचना",
   "autoRecordForNotTakenPeriodIfNotificationOff": "नोटिफिकेशन ऑफ होने की स्थिति में भी, {pillSheetPillSheetTypeNotTakenWord} अवधि के सेवन रिकॉर्ड अपने आप जोड़े जाते हैं",
   "requestForCancelSurvey": "रद्दीकरण के बाद सर्वेक्षण में सहयोग का अनुरोध",

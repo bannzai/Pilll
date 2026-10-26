@@ -280,7 +280,7 @@
   "twentyOnePlusSevenPlacebo": "21 таблета со активна состојка + 7 плацебо таблети",
   "allActivePills": "Сите се хормонска таблета",
   "twentyFourPlusFourDaysBreak": "24 таблети + 4 таблети за пауза",
-  "choosePillType": "Одберете вид на пилула",
+  "choosePillType": "Избор на вид таблета",
   "notificationForNotTakenPeriod": "Известување за {pillSheetPillSheetTypeNotTakenWord} период",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Кога известувањата се исклучени, записите за земање за {pillSheetPillSheetTypeNotTakenWord} периодот исто така автоматски се додаваат",
   "requestForCancelSurvey": "Ве молиме за соработка со анкетата по откажувањето",

@@ -280,7 +280,7 @@
   "twentyOnePlusSevenPlacebo": "21片含有效成分的药片＋7片安慰剂",
   "allActivePills": "全部为活性片",
   "twentyFourPlusFourDaysBreak": "24片药＋4片停药期用药",
-  "choosePillType": "选择避孕药类型",
+  "choosePillType": "选择药片类型",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord}期间通知",
   "autoRecordForNotTakenPeriodIfNotificationOff": "通知关闭时，{pillSheetPillSheetTypeNotTakenWord}期间的服用记录也会自动添加",
   "requestForCancelSurvey": "解约后问卷调查协助请求",

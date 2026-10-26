@@ -280,7 +280,7 @@
   "twentyOnePlusSevenPlacebo": "21 píldoras activas + 7 píldoras de placebo",
   "allActivePills": "Todas son píldoras activas",
   "twentyFourPlusFourDaysBreak": "24 píldoras + 4 píldoras de descanso",
-  "choosePillType": "Seleccionar tipo de píldora",
+  "choosePillType": "Elige el tipo de píldora",
   "notificationForNotTakenPeriod": "Notificación del período de {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Si las notificaciones están desactivadas, también se registrarán automáticamente las tomas del período {pillSheetPillSheetTypeNotTakenWord}",
   "requestForCancelSurvey": "Solicitud de colaboración con encuesta post-cancelación",

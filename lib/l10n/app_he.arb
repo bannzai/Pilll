@@ -280,7 +280,7 @@
   "twentyOnePlusSevenPlacebo": "21 גלולות פעילות + 7 גלולות פלצבו",
   "allActivePills": "כל הגלולות פעילות",
   "twentyFourPlusFourDaysBreak": "24 גלולות + 4 גלולות להפסק",
-  "choosePillType": "בחר סוג גלולה",
+  "choosePillType": "בחירת סוג הגלולה",
   "notificationForNotTakenPeriod": "התראה על תקופת {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "במקרה של כיבוי התראות, רישומי הנטילה של תקופת {pillSheetPillSheetTypeNotTakenWord} יתווספו באופן אוטומטי",
   "requestForCancelSurvey": "בקשה לשיתוף פעולה בסקר לאחר הביטול",

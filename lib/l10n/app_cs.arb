@@ -280,7 +280,7 @@
   "twentyOnePlusSevenPlacebo": "21 aktivních tablet + 7 tablet placeba",
   "allActivePills": "Všechny jsou aktivní tablety",
   "twentyFourPlusFourDaysBreak": "24 tablet + 4 tablety pro pauzu",
-  "choosePillType": "Vyberte typ pilulek",
+  "choosePillType": "Vybrat typ pilulky",
   "notificationForNotTakenPeriod": "Oznámení {pillSheetPillSheetTypeNotTakenWord} období",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Při vypnutých oznámeních se také automaticky vytvoří záznamy o užívání pro období {pillSheetPillSheetTypeNotTakenWord}.",
   "requestForCancelSurvey": "Prosíme o vyplnění dotazníku po zrušení",

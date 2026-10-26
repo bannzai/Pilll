@@ -280,7 +280,7 @@
   "twentyOnePlusSevenPlacebo": "21 comprimés actifs + 7 comprimés placebo",
   "allActivePills": "Toutes les pilules sont des pilules actives",
   "twentyFourPlusFourDaysBreak": "24 comprimés + 4 comprimés de pause",
-  "choosePillType": "Sélectionnez le type de pilule",
+  "choosePillType": "Choisissez le type de pilule",
   "notificationForNotTakenPeriod": "Période de notification {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Même lorsque les notifications sont désactivées, les enregistrements de pilules pour la période {pillSheetPillSheetTypeNotTakenWord} seront automatiquement ajoutés",
   "requestForCancelSurvey": "Demande d'enquête post-annulation",

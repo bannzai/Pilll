@@ -280,7 +280,7 @@
   "twentyOnePlusSevenPlacebo": "Amaphilisi angu-21 anezithako ezisebenzayo + angu-7 e-placebo",
   "allActivePills": "Wonke amaphilisi anam ahomoni",
   "twentyFourPlusFourDaysBreak": "Amaphilisi angu-24 + amaphilisi ama-4 ekhefu",
-  "choosePillType": "Khetha uhlobo lwepilisi",
+  "choosePillType": "Sicela ukhethe uhlobo lwephilisi",
   "notificationForNotTakenPeriod": "Isaziso senkathi ye{pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Uma izaziso zivaliwe, amarekhodi okuthatha amaphilisi esikhathini se{pillSheetPillSheetTypeNotTakenWord} nawo azofakwa ngokuzenzakalayo.",
   "requestForCancelSurvey": "Sicela usisizise ngenhlolovo yangemva kokukhansela",

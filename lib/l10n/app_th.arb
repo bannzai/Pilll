@@ -280,7 +280,7 @@
   "twentyOnePlusSevenPlacebo": "ยาเม็ดที่มีตัวยาสำคัญ 21 เม็ด + ยาหลอก 7 เม็ด",
   "allActivePills": "ทั้งหมดเป็นเม็ดฮอร์โมน",
   "twentyFourPlusFourDaysBreak": "ยา 24 เม็ด + ยา 4 เม็ดสำหรับช่วงหยุดยา",
-  "choosePillType": "เลือกประเภทยาคุมกำเนิด",
+  "choosePillType": "เลือกประเภทของยาเม็ด",
   "notificationForNotTakenPeriod": "การแจ้งเตือนช่วง{pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "หากปิดการแจ้งเตือนแล้ว การบันทึกการรับประทานยาในช่วง{pillSheetPillSheetTypeNotTakenWord}ก็จะถูกบันทึกโดยอัตโนมัติด้วย",
   "requestForCancelSurvey": "ขอความร่วมมือในการตอบแบบสำรวจหลังการยกเลิกสมาชิก",

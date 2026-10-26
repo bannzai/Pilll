@@ -280,7 +280,7 @@
   "twentyOnePlusSevenPlacebo": "ຢາເມັດທີ່ມີສານອອກລິດ 21 ເມັດ + ຢາຫຼອກ 7 ເມັດ",
   "allActivePills": "ທັງໝົດແມ່ນຢາຮໍໂມນ",
   "twentyFourPlusFourDaysBreak": "ຢາ 24 ເມັດ + ຢາສຳລັບພັກຢາ 4 ເມັດ",
-  "choosePillType": "ເລືອກປະເພດຍາເມັດ",
+  "choosePillType": "ກະລຸນາເລືອກປະເພດເມັດຢາ",
   "notificationForNotTakenPeriod": "ການແຈ້ງເຕືອນໄລຍະ{pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "ຫາກການແຈ້ງເຕືອນຖືກປິດໄວ້, ບັນທຶກການກິນຢາໃນໄລຍະ{pillSheetPillSheetTypeNotTakenWord}ກໍຈະຖືກສ້າງຂຶ້ນໂດຍອັດຕະໂນມັດ",
   "requestForCancelSurvey": "ຂໍຄວາມກະລຸນາຮ່ວມມືໃນການຕອບແບບສຳຫຼວດຫຼັງຈາກຍົກເລີກ",

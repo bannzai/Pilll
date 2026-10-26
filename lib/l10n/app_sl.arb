@@ -280,7 +280,7 @@
   "twentyOnePlusSevenPlacebo": "21 aktivnih tablet + 7 tablet placeba",
   "allActivePills": "Vse so aktivne tablete",
   "twentyFourPlusFourDaysBreak": "24 tablet + 4 tablete za premor",
-  "choosePillType": "Izberi vrsto tabletke",
+  "choosePillType": "Izberite vrsto tabletke",
   "notificationForNotTakenPeriod": "Obvestilo za {pillSheetPillSheetTypeNotTakenWord} obdobje",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Če so obvestila izklopljena, se samodejno zabeleži tudi jemanje zdravila v {pillSheetPillSheetTypeNotTakenWord} obdobju",
   "requestForCancelSurvey": "Prosimo za sodelovanje v anketi po odpovedi",

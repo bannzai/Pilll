@@ -280,7 +280,7 @@
   "twentyOnePlusSevenPlacebo": "सक्रिय तत्व भएका 21 चक्की + 7 प्लेसिबो चक्की",
   "allActivePills": "सबै हर्मोनयुक्त चक्की हुन्",
   "twentyFourPlusFourDaysBreak": "24 चक्की + विश्रामका लागि 4 चक्की",
-  "choosePillType": "गोलीको प्रकार छान्नुहोस्",
+  "choosePillType": "चक्कीको प्रकार छान्नुहोस्",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} अवधिको सूचना",
   "autoRecordForNotTakenPeriodIfNotificationOff": "सूचना बन्द भएमा पनि, {pillSheetPillSheetTypeNotTakenWord} अवधिको सेवन रेकर्ड स्वचालित रूपमा थपिन्छ",
   "requestForCancelSurvey": "रद्दीकरणपछिको सर्वेक्षणमा सहयोगका लागि अनुरोध",

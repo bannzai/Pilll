@@ -280,7 +280,7 @@
   "twentyOnePlusSevenPlacebo": "21 pildoras na may aktibong sangkap + 7 placebo na pildoras",
   "allActivePills": "Lahat ay aktibong pildoras",
   "twentyFourPlusFourDaysBreak": "24 na pildoras + 4 na pildoras para sa pahinga",
-  "choosePillType": "Piliin ang uri ng pildoras",
+  "choosePillType": "Piliin ninyo ang uri ng pildoras",
   "notificationForNotTakenPeriod": "Paalala ng {pillSheetPillSheetTypeNotTakenWord} na panahon",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kahit naka-off ang notification, awtomatikong matatala rin ang mga record ng pag-inom sa {pillSheetPillSheetTypeNotTakenWord} na panahon",
   "requestForCancelSurvey": "Pakisuyo sa Pagsasagot ng Survey Matapos ang Pagkansela",

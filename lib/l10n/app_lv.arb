@@ -280,7 +280,7 @@
   "twentyOnePlusSevenPlacebo": "21 aktīvā tablete + 7 placebo tabletes",
   "allActivePills": "Visas ir hormonu tabletes",
   "twentyFourPlusFourDaysBreak": "24 tabletes + 4 pārtraukuma tabletes",
-  "choosePillType": "Izvēlēties tablešu veidu",
+  "choosePillType": "Izvēlieties tabletes veidu",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} perioda paziņojums",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kad paziņojumi ir izslēgti, {pillSheetPillSheetTypeNotTakenWord} perioda lietošanas ieraksti arī tiek automātiski izveidoti",
   "requestForCancelSurvey": "Lūgums piedalīties aptaujā pēc atcelšanas",
