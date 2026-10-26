@@ -400,7 +400,7 @@
   "addPillSheet": "Lisa pillileht",
   "pillTakenCountPrefix": "Päevas",
   "pillTakenCountSuffix": "korda pilli võtta",
-  "duringPauseTaking": "Võtmispaus",
+  "duringPauseTaking": "Pillide võtmise paus",
   "cannotPauseAlreadyTakenToday": "Kui tänane tablett on võetud, ei saa „võtmise pausi\" kasutada",
   "pauseTakingStarted": "Pillide võtmise paus on alustatud",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

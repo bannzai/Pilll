@@ -400,7 +400,7 @@
   "addPillSheet": "Magdagdag ng pakete ng pildoras",
   "pillTakenCountPrefix": "Sa isang araw",
   "pillTakenCountSuffix": "beses uminom ng pildoras",
-  "duringPauseTaking": "Naka-break sa pag-inom",
+  "duringPauseTaking": "Pansamantalang pahinga sa pag-inom ng pildoras",
   "cannotPauseAlreadyTakenToday": "Hindi na pwedeng mag-\"Pahinga sa Pag-inom\" kapag nainuman na ang pill ngayong araw",
   "pauseTakingStarted": "Nagsimula na ang pahinga sa pag-inom ng pills",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

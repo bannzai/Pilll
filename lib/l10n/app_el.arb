@@ -400,7 +400,7 @@
   "addPillSheet": "Προσθήκη καρτέλα χαπιών",
   "pillTakenCountPrefix": "Την ημέρα",
   "pillTakenCountSuffix": "φορές λήψη",
-  "duringPauseTaking": "Σε διάλειμμα λήψης",
+  "duringPauseTaking": "Παύση στη λήψη του χαπιού",
   "cannotPauseAlreadyTakenToday": "Δεν μπορείτε να παυσετε τη λήψη αφού έχετε ήδη πάρει το σημερινό χάπι",
   "pauseTakingStarted": "Ξεκίνησε το διάλειμμα λήψης",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

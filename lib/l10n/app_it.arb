@@ -400,7 +400,7 @@
   "addPillSheet": "Aggiungi un blister",
   "pillTakenCountPrefix": "Al giorno",
   "pillTakenCountSuffix": "volte prendere la pillola",
-  "duringPauseTaking": "In pausa",
+  "duringPauseTaking": "Pausa nell’assunzione della pillola",
   "cannotPauseAlreadyTakenToday": "Non è possibile sospendere l'assunzione quando la pillola di oggi è già stata presa",
   "pauseTakingStarted": "Pausa dall'assunzione iniziata",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

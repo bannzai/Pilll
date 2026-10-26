@@ -400,7 +400,7 @@
   "addPillSheet": "Gehitu pilula-blister",
   "pillTakenCountPrefix": "Egunean",
   "pillTakenCountSuffix": "aldiz hartu",
-  "duringPauseTaking": "Hartzea pausatuta",
+  "duringPauseTaking": "Pilula hartzeko etenaldia",
   "cannotPauseAlreadyTakenToday": "Gaurko pilula hartuta dagoenean \"Hartzea pausatu\" ezin da",
   "pauseTakingStarted": "Pilularen hartzea etetea hasi da",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

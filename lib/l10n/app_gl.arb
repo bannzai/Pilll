@@ -400,7 +400,7 @@
   "addPillSheet": "Engadir un blíster",
   "pillTakenCountPrefix": "Ao día",
   "pillTakenCountSuffix": "veces tomar a pílula",
-  "duringPauseTaking": "En pausa na toma",
+  "duringPauseTaking": "Pausa na toma da pílula",
   "cannotPauseAlreadyTakenToday": "Non se pode pausar a toma se xa se inxeriu a píldora de hoxe",
   "pauseTakingStarted": "Comezou a pausa na toma",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

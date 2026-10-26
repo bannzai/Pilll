@@ -400,7 +400,7 @@
   "addPillSheet": "Voeg pilstrokie by",
   "pillTakenCountPrefix": "Per dag",
   "pillTakenCountSuffix": "keer neem",
-  "duringPauseTaking": "Inneem gepauzeer",
+  "duringPauseTaking": "Jy neem tans nie die pil nie",
   "cannotPauseAlreadyTakenToday": "Kan nie pil onderbreek as vandag se pil reeds geneem is nie",
   "pauseTakingStarted": "Die pilgebruik-pouse is begin",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

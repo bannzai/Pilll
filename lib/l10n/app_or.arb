@@ -400,7 +400,7 @@
   "addPillSheet": "ବଟିକା ସିଟ ଯୋଡ଼ନ୍ତୁ",
   "pillTakenCountPrefix": "ଦିନକୁ",
   "pillTakenCountSuffix": "ଥର ବଟିକା ନିଅନ୍ତୁ",
-  "duringPauseTaking": "ସେବନ ବିରାମରେ",
+  "duringPauseTaking": "ବଟିକା ଖାଇବାରେ ସାମୟିକ ବିରତି",
   "cannotPauseAlreadyTakenToday": "ଆଜିର ବଟିକା ସେବନ କରାଯାଇଥିବାରୁ 'ସେବନ ବିଶ୍ରାମ' କରିପାରିବେ ନାହିଁ",
   "pauseTakingStarted": "ସେବନ ବିରତି ଆରମ୍ଭ କରାଯାଇଛି",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",

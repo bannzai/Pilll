@@ -400,7 +400,7 @@
   "addPillSheet": "Přidat blistr",
   "pillTakenCountPrefix": "Za den",
   "pillTakenCountSuffix": "krát užít",
-  "duringPauseTaking": "Přestávka v užívání",
+  "duringPauseTaking": "Přestávka v užívání pilulek",
   "cannotPauseAlreadyTakenToday": "Pokud byl dnešní lék již užit, nelze použít „Přestávka v užívání\"",
   "pauseTakingStarted": "Byla zahájena pauza v užívání",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

@@ -400,7 +400,7 @@
   "addPillSheet": "ગોળીની સ્ટ્રિપ ઉમેરો",
   "pillTakenCountPrefix": "દરરોજ",
   "pillTakenCountSuffix": "વખત ગોળી લેવી",
-  "duringPauseTaking": "દવાનો વિરામ",
+  "duringPauseTaking": "ગોળી લેવાનું હાલ બંધ છે",
   "cannotPauseAlreadyTakenToday": "આજે ગોળી પહેલેથી લીધેલ હોવાથી 'સેવન વિરામ' કરી શકાતું નથી",
   "pauseTakingStarted": "ગોળી લેવાનો વિરામ શરૂ કર્યો છે",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

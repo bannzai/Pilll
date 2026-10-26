@@ -400,7 +400,7 @@
   "addPillSheet": "Ongeza pakiti ya vidonge",
   "pillTakenCountPrefix": "Kwa siku",
   "pillTakenCountSuffix": "mara kumeza kidonge",
-  "duringPauseTaking": "Mapumziko wa dawa",
+  "duringPauseTaking": "Mapumziko ya kumeza vidonge",
   "cannotPauseAlreadyTakenToday": "Huwezi 'Pumzika Kutumia' ikiwa tayari umetumia dawa ya leo",
   "pauseTakingStarted": "Mapumziko wa kunywa vidonge umeanza",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

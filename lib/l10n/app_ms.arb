@@ -400,7 +400,7 @@
   "addPillSheet": "Tambah pek pil",
   "pillTakenCountPrefix": "Sehari",
   "pillTakenCountSuffix": "kali makan pil",
-  "duringPauseTaking": "Sedang Berehat",
+  "duringPauseTaking": "Sedang berehat daripada mengambil pil",
   "cannotPauseAlreadyTakenToday": "Tidak dapat menggunakan 'Rehat Pengambilan' kerana pil hari ini sudah diminum",
   "pauseTakingStarted": "Rehat pengambilan pil telah dimulakan",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

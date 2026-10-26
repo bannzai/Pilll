@@ -400,7 +400,7 @@
   "addPillSheet": "Таблетка блистери кошуу",
   "pillTakenCountPrefix": "Күнүнө",
   "pillTakenCountSuffix": "жолу ичүү",
-  "duringPauseTaking": "Дарыдан эс алуу",
+  "duringPauseTaking": "Таблетка ичүүдөгү тыныгуу",
   "cannotPauseAlreadyTakenToday": "Бүгүнкү таблетка ичилгендиктен \"ичүүнү токтотуу\" мүмкүн эмес",
   "pauseTakingStarted": "Дарыны алуудан тыныгууну баштадык",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",

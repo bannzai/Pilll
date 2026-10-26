@@ -400,7 +400,7 @@
   "addPillSheet": "Dodajte blister",
   "pillTakenCountPrefix": "Dnevno",
   "pillTakenCountSuffix": "puta uzeti",
-  "duringPauseTaking": "Pauza u uzimanju",
+  "duringPauseTaking": "Pauza u uzimanju pilula",
   "cannotPauseAlreadyTakenToday": "Ne možete napraviti pauzu u uzimanju jer su pilule za danas već uzete",
   "pauseTakingStarted": "Započeli ste pauzu u uzimanju",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

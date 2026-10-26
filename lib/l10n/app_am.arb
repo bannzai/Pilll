@@ -400,7 +400,7 @@
   "addPillSheet": "ክኒን ሉህ ያክሉ",
   "pillTakenCountPrefix": "በቀን",
   "pillTakenCountSuffix": "ጊዜ መውሰድ",
-  "duringPauseTaking": "እረፍት ላይ",
+  "duringPauseTaking": "የክኒን መውሰድ ለጊዜው ቆሟል",
   "cannotPauseAlreadyTakenToday": "ዛሬ ክኒኑ አስቀድሞ ከተወሰደ 『የአገልግሎት እረፍት』 መጠቀም አይቻልም",
   "pauseTakingStarted": "የመድሃኒት እረፍት ተጀምሯል",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",

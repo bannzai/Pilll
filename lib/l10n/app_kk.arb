@@ -400,7 +400,7 @@
   "addPillSheet": "Таблетка блистер қосу",
   "pillTakenCountPrefix": "Күніне",
   "pillTakenCountSuffix": "рет қабылдау",
-  "duringPauseTaking": "Қабылдау үзілісі",
+  "duringPauseTaking": "Таблетка қабылдаудағы үзіліс",
   "cannotPauseAlreadyTakenToday": "Бүгінгі дәрі қабылданғаннан кейін\n«Дәрі демалысы» мүмкін емес",
   "pauseTakingStarted": "Дәрі қабылдау демалысы басталды",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

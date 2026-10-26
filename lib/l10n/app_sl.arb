@@ -400,7 +400,7 @@
   "addPillSheet": "Dodajte ploščico",
   "pillTakenCountPrefix": "Na dan",
   "pillTakenCountSuffix": "krat vzeti tableto",
-  "duringPauseTaking": "Na premoru pri jemanju",
+  "duringPauseTaking": "Premor pri jemanju tablet",
   "cannotPauseAlreadyTakenToday": "Premora jemanja ni mogoče nastaviti, ker je današnja tableta že vzeta",
   "pauseTakingStarted": "Začeli ste s pavzo pri jemanju",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

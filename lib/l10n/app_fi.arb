@@ -400,7 +400,7 @@
   "addPillSheet": "Lisää pilleriliuska",
   "pillTakenCountPrefix": "Päivässä",
   "pillTakenCountSuffix": "kertaa ottaa pilleri",
-  "duringPauseTaking": "Ottotauko",
+  "duringPauseTaking": "Tauko pillereiden ottamisessa",
   "cannotPauseAlreadyTakenToday": "Ottotaukoa ei voi aloittaa, kun tänään otettava pilleri on jo otettu",
   "pauseTakingStarted": "Ottotauko on aloitettu",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",

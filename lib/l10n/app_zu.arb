@@ -400,7 +400,7 @@
   "addPillSheet": "Engeza ishidi lamaphilisi",
   "pillTakenCountPrefix": "Ngosuku",
   "pillTakenCountSuffix": "izikhathi zokugwinya iphilisi",
-  "duringPauseTaking": "Ukuphumula emisebenzini yemithi",
+  "duringPauseTaking": "Ikhefu ekuphuzeni amaphilisi",
   "cannotPauseAlreadyTakenToday": "Uma iphilisi lanamuhla sele lisetshenzisiwe\nAwukwazi \"ukuyeka ukuphuza\"",
   "pauseTakingStarted": "Siqalile ikhefu lokuthatha amaphilisi",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",

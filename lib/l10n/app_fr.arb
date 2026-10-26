@@ -400,7 +400,7 @@
   "addPillSheet": "Ajouter une plaquette",
   "pillTakenCountPrefix": "Par jour",
   "pillTakenCountSuffix": "prises",
-  "duringPauseTaking": "Faire une pause",
+  "duringPauseTaking": "Pause dans la prise de la pilule",
   "cannotPauseAlreadyTakenToday": "Impossible d'interrompre la prise alors que la pilule du jour a déjà été prise",
   "pauseTakingStarted": "La pause pilule a commencé",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

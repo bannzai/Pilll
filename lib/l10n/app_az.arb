@@ -400,7 +400,7 @@
   "addPillSheet": "Həb blister əlavə edin",
   "pillTakenCountPrefix": "Gündə",
   "pillTakenCountSuffix": "dəfə qəbul etmək",
-  "duringPauseTaking": "Qəbul fasiləsi",
+  "duringPauseTaking": "Həb qəbuluna fasilə verilib",
   "cannotPauseAlreadyTakenToday": "Bu günün həbi artıq qəbul edilibsə, \"Qəbul etməyi dayandırmaq\" mümkün deyil",
   "pauseTakingStarted": "Həb qəbuluna fasilə başlanıldı",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

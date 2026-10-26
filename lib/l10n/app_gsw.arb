@@ -400,7 +400,7 @@
   "addPillSheet": "Pilleblister dezue tue",
   "pillTakenCountPrefix": "Am Tag",
   "pillTakenCountSuffix": "Mal iineh",
-  "duringPauseTaking": "Ihname pausiert",
+  "duringPauseTaking": "Pause bim Pille näh",
   "cannotPauseAlreadyTakenToday": "D'Pille vo hüt isch scho gnoh - «Inahm-Pause» isch nöd möglich",
   "pauseTakingStarted": "D Pille-Pause isch gstartet",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

@@ -400,7 +400,7 @@
   "addPillSheet": "د ګولیو پاڼې اضافه کول",
   "pillTakenCountPrefix": "په ورځ کې",
   "pillTakenCountSuffix": "ځله ګولۍ واخلئ",
-  "duringPauseTaking": "د درملو وقفه",
+  "duringPauseTaking": "د ګولیو له اخیستو لنډمهاله وقفه",
   "cannotPauseAlreadyTakenToday": "که چیرې د نن ورځې ګوټۍ دمخه واخیستل شوي وي\n\"د درملو استعمال ودروول\" نشي کولی",
   "pauseTakingStarted": "د درملو اخیستلو وقفه پیل شوه",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",

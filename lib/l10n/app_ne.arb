@@ -400,7 +400,7 @@
   "addPillSheet": "चक्की पत्ता थप्नुहोस्",
   "pillTakenCountPrefix": "दिनमा",
   "pillTakenCountSuffix": "पटक चक्की लिनुहोस्",
-  "duringPauseTaking": "सेवन बिराम",
+  "duringPauseTaking": "चक्की सेवनमा हाल विश्राम",
   "cannotPauseAlreadyTakenToday": "आजको चक्की सेवन गरिसकेको अवस्थामा 'सेवन विराम' गर्न सकिंदैन",
   "pauseTakingStarted": "औषधि सेवन विराम सुरु गरियो",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",

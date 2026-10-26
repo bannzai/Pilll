@@ -400,7 +400,7 @@
   "addPillSheet": "Дадаць блістар",
   "pillTakenCountPrefix": "За дзень",
   "pillTakenCountSuffix": "разы прымаць",
-  "duringPauseTaking": "Перапынак у прыёме",
+  "duringPauseTaking": "Перапынак у прыёме пігулак",
   "cannotPauseAlreadyTakenToday": "Калі сённяшняя пілюля ўжо прынята,\n«Перапынак прыёму» недаступны",
   "pauseTakingStarted": "Перапынак у прыёме ліків пачаты",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",

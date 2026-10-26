@@ -400,7 +400,7 @@
   "addPillSheet": "Add pill pack",
   "pillTakenCountPrefix": "Per day",
   "pillTakenCountSuffix": "times",
-  "duringPauseTaking": "Taking a break",
+  "duringPauseTaking": "Taking a break from the pill",
   "cannotPauseAlreadyTakenToday": "Cannot pause taking when today's pill has already been taken",
   "pauseTakingStarted": "Pill break started",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

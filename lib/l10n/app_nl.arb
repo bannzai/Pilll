@@ -400,7 +400,7 @@
   "addPillSheet": "Pillenstrip toevoegen",
   "pillTakenCountPrefix": "Per dag",
   "pillTakenCountSuffix": "keer de pil innemen",
-  "duringPauseTaking": "Innamepauze",
+  "duringPauseTaking": "Pauze met de pil",
   "cannotPauseAlreadyTakenToday": "Als de pil van vandaag al is ingenomen, kan 'Inname Pauze' niet worden gebruikt",
   "pauseTakingStarted": "Innamepauze gestart",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

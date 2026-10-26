@@ -400,7 +400,7 @@
   "addPillSheet": "Új tablettacsomag hozzáadása",
   "pillTakenCountPrefix": "Naponta",
   "pillTakenCountSuffix": "alkalommal szedni",
-  "duringPauseTaking": "Szedés szünetel",
+  "duringPauseTaking": "Szünet a tabletta szedésében",
   "cannotPauseAlreadyTakenToday": "A mai tabletta bevétele után nem lehet szedési szünetet tartani",
   "pauseTakingStarted": "A tablettaszedési szünet elkezdődött",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

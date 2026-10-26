@@ -400,7 +400,7 @@
   "addPillSheet": "Adaugă un blister",
   "pillTakenCountPrefix": "Pe zi",
   "pillTakenCountSuffix": "ori să iei pilula",
-  "duringPauseTaking": "În pauză de administrare",
+  "duringPauseTaking": "Pauză în administrarea pilulei",
   "cannotPauseAlreadyTakenToday": "Pauza de administrare nu este posibilă dacă pastila de azi a fost deja luată",
   "pauseTakingStarted": "Pauza de administrare a fost începută",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

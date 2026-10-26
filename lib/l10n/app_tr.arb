@@ -400,7 +400,7 @@
   "addPillSheet": "Blister ekleyin",
   "pillTakenCountPrefix": "Günde",
   "pillTakenCountSuffix": "kez alın",
-  "duringPauseTaking": "Kullanım molasında",
+  "duringPauseTaking": "Hap kullanımına ara verildi",
   "cannotPauseAlreadyTakenToday": "Bugün alınacak hap zaten alındığından \"İlaç Molası\" yapılamaz",
   "pauseTakingStarted": "Kullanım molası başlatıldı",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

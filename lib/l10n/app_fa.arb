@@ -400,7 +400,7 @@
   "addPillSheet": "افزودن ورق قرص",
   "pillTakenCountPrefix": "در روز",
   "pillTakenCountSuffix": "بار مصرف",
-  "duringPauseTaking": "استراحت از مصرف",
+  "duringPauseTaking": "وقفه در مصرف قرص",
   "cannotPauseAlreadyTakenToday": "وقتی قرص امروز را مصرف کرده‌اید، امکان «استراحت از مصرف» وجود ندارد",
   "pauseTakingStarted": "استراحت مصرف قرص شروع شد",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

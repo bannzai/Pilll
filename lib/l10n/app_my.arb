@@ -400,7 +400,7 @@
   "addPillSheet": "ဆေးပြားကတ် ထည့်ရန်",
   "pillTakenCountPrefix": "တစ်နေ့လျှင်",
   "pillTakenCountSuffix": "ကြိမ် သောက်ရန်",
-  "duringPauseTaking": "သောက်ခြင်း နားနေသည်",
+  "duringPauseTaking": "ဆေးလုံးသောက်ခြင်းကို ခေတ္တရပ်နားထားပါတယ်",
   "cannotPauseAlreadyTakenToday": "ယနေ့ဆေးပြားကို သောက်ပြီးသားဆိုရင် \"ဆေးနားခြင်း\" မလုပ်နိုင်ပါ",
   "pauseTakingStarted": "ဆေးသောက်ခြင်း ရပ်နားခြင်းကို စတင်ပြီးပါပြီ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",

@@ -400,7 +400,7 @@
   "addPillSheet": "Додати блістер",
   "pillTakenCountPrefix": "За день",
   "pillTakenCountSuffix": "разів приймати пігулку",
-  "duringPauseTaking": "Перерва в прийомі",
+  "duringPauseTaking": "Перерва у прийомі пігулок",
   "cannotPauseAlreadyTakenToday": "Не можна пропустити прийом після того, як таблетку вже прийнято",
   "pauseTakingStarted": "Розпочато перерву в прийомі",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

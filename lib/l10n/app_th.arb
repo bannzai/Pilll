@@ -400,7 +400,7 @@
   "addPillSheet": "เพิ่มแผงยา",
   "pillTakenCountPrefix": "วันละ",
   "pillTakenCountSuffix": "ครั้ง",
-  "duringPauseTaking": "หยุดทานยาชั่วคราว",
+  "duringPauseTaking": "อยู่ในช่วงพักทานยาเม็ด",
   "cannotPauseAlreadyTakenToday": "ไม่สามารถใช้ฟังก์ชัน \"การพักรับประทาน\" ได้เมื่อได้รับประทานยาเม็ดประจำวันแล้ว",
   "pauseTakingStarted": "เริ่มพักการรับประทานยาแล้ว",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

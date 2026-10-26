@@ -400,7 +400,7 @@
   "addPillSheet": "पिल स्ट्रिप जोड़ें",
   "pillTakenCountPrefix": "दिन में",
   "pillTakenCountSuffix": "बार गोली लेना",
-  "duringPauseTaking": "सेवन बंद",
+  "duringPauseTaking": "गोली लेने में फिलहाल विराम",
   "cannotPauseAlreadyTakenToday": "आज की गोली पहले से ली जा चुकी है\n\"सेवन विराम\" नहीं कर सकते",
   "pauseTakingStarted": "गोली का सेवन विराम शुरू किया गया है",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

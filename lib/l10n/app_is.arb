@@ -400,7 +400,7 @@
   "addPillSheet": "Bæta við pilluspjaldi",
   "pillTakenCountPrefix": "Á dag",
   "pillTakenCountSuffix": "sinnum taka pilluna",
-  "duringPauseTaking": "Á hlé frá innköllun",
+  "duringPauseTaking": "Hlé á töku pillunnar",
   "cannotPauseAlreadyTakenToday": "Ekki er hægt að hvíla frá inntöku þegar pilla dagsins hefur þegar verið tekin",
   "pauseTakingStarted": "Pilluhvíld hefur hafist",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

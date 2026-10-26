@@ -400,7 +400,7 @@
   "addPillSheet": "পিল শিট যোগ করুন",
   "pillTakenCountPrefix": "প্রতিদিন",
   "pillTakenCountSuffix": "বার খাবেন",
-  "duringPauseTaking": "সেবন বিরতিত",
+  "duringPauseTaking": "পিল খাওয়ায় বিরতি চলছে",
   "cannotPauseAlreadyTakenToday": "আজকের পিল ইতিমধ্যে সেবন করা থাকলে 'সেবন বিরতি' করা যাবে না",
   "pauseTakingStarted": "সেবন বিরতি শুরু হয়েছে",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

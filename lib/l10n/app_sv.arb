@@ -400,7 +400,7 @@
   "addPillSheet": "Lägg till p-pillerkarta",
   "pillTakenCountPrefix": "Per dag",
   "pillTakenCountSuffix": "gånger ta pillret",
-  "duringPauseTaking": "P-piller pausad",
+  "duringPauseTaking": "Paus från p-piller",
   "cannotPauseAlreadyTakenToday": "Kan inte pausa intag när dagens p-piller redan är taget",
   "pauseTakingStarted": "Paus från intag har påbörjats",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",

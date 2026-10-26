@@ -400,7 +400,7 @@
   "addPillSheet": "Tambahkan strip pil",
   "pillTakenCountPrefix": "Per hari",
   "pillTakenCountSuffix": "kali minum pil",
-  "duringPauseTaking": "Sedang istirahat",
+  "duringPauseTaking": "Sedang jeda minum pil",
   "cannotPauseAlreadyTakenToday": "Tidak dapat menggunakan \"Jeda Minum\" karena pil hari ini sudah diminum",
   "pauseTakingStarted": "Jeda konsumsi telah dimulai",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

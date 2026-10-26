@@ -400,7 +400,7 @@
   "addPillSheet": "Pillenblister hinzufügen",
   "pillTakenCountPrefix": "Pro Tag",
   "pillTakenCountSuffix": "Mal einnehmen",
-  "duringPauseTaking": "Einnahmepause",
+  "duringPauseTaking": "Pause bei der Pilleneinnahme",
   "cannotPauseAlreadyTakenToday": "Wenn die heutige Pille bereits eingenommen wurde, ist eine „Einnahmepause\" nicht möglich",
   "pauseTakingStarted": "Die Einnahmepause wurde gestartet",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

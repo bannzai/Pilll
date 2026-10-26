@@ -400,7 +400,7 @@
   "addPillSheet": "Добавяне на блистер",
   "pillTakenCountPrefix": "На ден",
   "pillTakenCountSuffix": "пъти прием",
-  "duringPauseTaking": "Пауза в приемането",
+  "duringPauseTaking": "Пауза в приема на хапчетата",
   "cannotPauseAlreadyTakenToday": "Когато днешното хапче вече е взето,\nне можете да активирате „пауза в приема\"",
   "pauseTakingStarted": "Започна пауза в приема",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",

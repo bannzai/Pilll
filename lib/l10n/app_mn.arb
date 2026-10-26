@@ -400,7 +400,7 @@
   "addPillSheet": "Эмийн блистер нэмэх",
   "pillTakenCountPrefix": "Өдөрт",
   "pillTakenCountSuffix": "удаа ууна",
-  "duringPauseTaking": "Уухыг амраж байна",
+  "duringPauseTaking": "Эм уухаа түр завсарлаж байна",
   "cannotPauseAlreadyTakenToday": "Өнөөдрийн эмийг аль хэдийн уусан тул \"Эм уухаа завсарлах\" хийх боломжгүй",
   "pauseTakingStarted": "Эм уухын завсарлагаа эхлүүлэв",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",

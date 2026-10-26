@@ -400,7 +400,7 @@
   "addPillSheet": "Добавить блистер",
   "pillTakenCountPrefix": "В день",
   "pillTakenCountSuffix": "раз принять таблетку",
-  "duringPauseTaking": "Перерыв в приёме",
+  "duringPauseTaking": "Перерыв в приёме таблеток",
   "cannotPauseAlreadyTakenToday": "Функция «Пропуск приёма» недоступна, если сегодняшняя таблетка уже принята",
   "pauseTakingStarted": "Начат перерыв в приёме",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

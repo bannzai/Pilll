@@ -400,7 +400,7 @@
   "addPillSheet": "Dodaj blist",
   "pillTakenCountPrefix": "Dziennie",
   "pillTakenCountSuffix": "razy przyjąć tabletkę",
-  "duringPauseTaking": "Przerwa w przyjmowaniu",
+  "duringPauseTaking": "Przerwa w przyjmowaniu tabletek",
   "cannotPauseAlreadyTakenToday": "Jeśli dzisiejsza pigułka została już przyjęta\nNie można użyć funkcji „przerwa w przyjmowaniu\"",
   "pauseTakingStarted": "Rozpoczęto przerwę w przyjmowaniu",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",

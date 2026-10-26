@@ -400,7 +400,7 @@
   "addPillSheet": "Afegeix un blíster",
   "pillTakenCountPrefix": "Al dia",
   "pillTakenCountSuffix": "vegades prendre la píndola",
-  "duringPauseTaking": "En descans",
+  "duringPauseTaking": "Pausa en la presa de la píndola",
   "cannotPauseAlreadyTakenToday": "Si ja has pres la píndola d'avui\nNo es pot fer el \"descans\" de la presa",
   "pauseTakingStarted": "He començat un període de descans en la presa del medicament.",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",

@@ -400,7 +400,7 @@
   "addPillSheet": "ഗുളിക സ്ട്രിപ്പ് ചേർക്കുക",
   "pillTakenCountPrefix": "ഒരു ദിവസത്തിൽ",
   "pillTakenCountSuffix": "തവണ ഗുളിക കഴിക്കുക",
-  "duringPauseTaking": "പിൽ സേവനം വിശ്രമത്തിൽ",
+  "duringPauseTaking": "ഗുളിക കഴിക്കുന്നതിന് താൽക്കാലിക ഇടവേള",
   "cannotPauseAlreadyTakenToday": "ഇന്നത്തെ ഗുളിക കഴിച്ചുകഴിഞ്ഞാൽ \"സേവന വിരാമം\" ചെയ്യാൻ കഴിയില്ല",
   "pauseTakingStarted": "ഗുളിക വിശ്രമം ആരംഭിച്ചു",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",

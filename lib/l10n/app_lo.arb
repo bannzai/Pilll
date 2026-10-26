@@ -400,7 +400,7 @@
   "addPillSheet": "ເພີ່ມແຜງຢາຄຸມ",
   "pillTakenCountPrefix": "ຕໍ່ມື້",
   "pillTakenCountSuffix": "ເທື່ອກິນຢາເມັດ",
-  "duringPauseTaking": "ພັກການກິນຢາ",
+  "duringPauseTaking": "ກຳລັງພັກການກິນຢາເມັດຊົ່ວຄາວ",
   "cannotPauseAlreadyTakenToday": "ຖ້າກິນເມັດຢາມື້ນີ້ແລ້ວ ບໍ່ສາມາດ 'ຫຍຸດພັກການກິນຢາ' ໄດ້",
   "pauseTakingStarted": "ເລີ່ມພັກການກິນຢາແລ້ວ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",

@@ -400,7 +400,7 @@
   "addPillSheet": "הוספת חפיסת גלולות",
   "pillTakenCountPrefix": "ביום",
   "pillTakenCountSuffix": "פעמים ליטול גלולה",
-  "duringPauseTaking": "הפסקת נטילה",
+  "duringPauseTaking": "הפסקה זמנית בנטילת הגלולה",
   "cannotPauseAlreadyTakenToday": "לא ניתן לבצע 'הפסקת נטילה' כאשר הגלולה של היום כבר נלקחה",
   "pauseTakingStarted": "החלה הפסקת נטילת הכדורים",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
