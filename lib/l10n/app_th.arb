@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 ยาเม็ดสำหรับวันนี้",
   "number": " (เม็ด)",
   "dayNumber": " วันที่",
-  "recordedMenstruationStartDate": "บันทึกการเริ่มประจำเดือนตั้งแต่{DateTimeFormatterMonthAndDay}เรียบร้อยแล้ว",
+  "recordedMenstruationStartDate": "บันทึกว่าประจำเดือนเริ่มวันที่ {DateTimeFormatterMonthAndDay} แล้วค่ะ",
   "menstruationStartDate": "วันเริ่มประจำเดือน",
   "menstruationEndDate": "วันสิ้นสุดประจำเดือน",
   "menstruationScheduleDate": "วันคาดการณ์ประจำเดือน",

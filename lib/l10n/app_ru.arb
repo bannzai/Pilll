@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 Таблетка на сегодня",
   "number": " (таблетка)",
   "dayNumber": "-й день",
-  "recordedMenstruationStartDate": "С {DateTimeFormatterMonthAndDay} записано начало менструации",
+  "recordedMenstruationStartDate": "Начало месячных записано на {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Дата начала менструации",
   "menstruationEndDate": "Дата окончания менструации",
   "menstruationScheduleDate": "Ожидаемая дата месячных",

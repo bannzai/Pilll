@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 Dagens p-pille",
   "number": " (p-pille)",
   "dayNumber": ". dag",
-  "recordedMenstruationStartDate": "Menstruationsstart registreret fra {DateTimeFormatterMonthAndDay}",
+  "recordedMenstruationStartDate": "Starten på din menstruation er registreret fra {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Menstruationsstartdato",
   "menstruationEndDate": "Menstruationsslutdato",
   "menstruationScheduleDate": "Forventet menstruationsdato",

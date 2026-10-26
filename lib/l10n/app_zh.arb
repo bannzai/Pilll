@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 今天要服用的药片",
   "number": "号",
   "dayNumber": "天",
-  "recordedMenstruationStartDate": "已记录{DateTimeFormatterMonthAndDay}为月经开始日",
+  "recordedMenstruationStartDate": "已记录经期从 {DateTimeFormatterMonthAndDay} 开始",
   "menstruationStartDate": "月经开始日",
   "menstruationEndDate": "月经结束日",
   "menstruationScheduleDate": "预计月经日",

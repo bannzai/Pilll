@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 Pilula za danas",
   "number": " (pilula)",
   "dayNumber": " dan",
-  "recordedMenstruationStartDate": "Početak menstruacije je zabilježen od {DateTimeFormatterMonthAndDay}",
+  "recordedMenstruationStartDate": "Početak menstruacije zabilježen je od {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Datum početka menstruacije",
   "menstruationEndDate": "Datum završetka menstruacije",
   "menstruationScheduleDate": "Očekivani datum menstruacije",

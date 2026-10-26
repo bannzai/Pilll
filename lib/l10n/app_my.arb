@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 ယနေ့သောက်ရမည့်ဆေးပြား",
   "number": " (ဆေးလုံး)",
   "dayNumber": " ရက်မြောက်နေ့",
-  "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}မှ ဒေတ်စတင်ခြင်းကို မှတ်တမ်းတင်ပါပြီ",
+  "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} မှ ရာသီစတင်ကြောင်း မှတ်တမ်းတင်ပြီးပါပြီ",
   "menstruationStartDate": "ရာသီစတင်ရက်",
   "menstruationEndDate": "လာရက်အဆုံးရက်",
   "menstruationScheduleDate": "ရာသီလာမည့်ရက်",

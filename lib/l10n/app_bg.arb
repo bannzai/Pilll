@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 Хапчето за днес",
   "number": " (хапче)",
   "dayNumber": " ден",
-  "recordedMenstruationStartDate": "Записах началото на менструацията от {DateTimeFormatterMonthAndDay}",
+  "recordedMenstruationStartDate": "Записано е начало на мензиса от {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Начална дата на менструацията",
   "menstruationEndDate": "Крайна дата на менструацията",
   "menstruationScheduleDate": "Очаквана дата на менструация",

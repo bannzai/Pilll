@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 Таблета за денес",
   "number": " (таблета)",
   "dayNumber": ". ден",
-  "recordedMenstruationStartDate": "Се запиша почеток на менструација од {DateTimeFormatterMonthAndDay}",
+  "recordedMenstruationStartDate": "Почетокот на менструација е запишан од {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Почеток на менструацијата",
   "menstruationEndDate": "Завршна дата на менструација",
   "menstruationScheduleDate": "Очекувана менструација",

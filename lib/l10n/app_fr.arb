@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 La pilule du jour",
   "number": " (pilule)",
   "dayNumber": " jour",
-  "recordedMenstruationStartDate": "Début de la période enregistrée à partir de {DateTimeFormatterMonthAndDay}",
+  "recordedMenstruationStartDate": "Le début des règles a été enregistré au {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Date de début de période",
   "menstruationEndDate": "Date de fin de période",
   "menstruationScheduleDate": "Prochaines règles",

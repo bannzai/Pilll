@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 A pílula de hoxe",
   "number": " (pílula)",
   "dayNumber": " día",
-  "recordedMenstruationStartDate": "Rexistrouse o inicio da menstruación o {DateTimeFormatterMonthAndDay}",
+  "recordedMenstruationStartDate": "Rexistrouse o inicio da regra o {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Data de inicio da menstruación",
   "menstruationEndDate": "Data de fin da menstruación",
   "menstruationScheduleDate": "Data prevista da menstruación",

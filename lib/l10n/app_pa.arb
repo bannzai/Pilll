@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 ਅੱਜ ਦੀ ਗੋਲੀ",
   "number": " (ਗੋਲੀ)",
   "dayNumber": "ਵਾਂ ਦਿਨ",
-  "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} ਤੋਂ ਮਾਹਵਾਰੀ ਸ਼ੁਰੂ ਵਜੋਂ ਰਿਕਾਰਡ ਕੀਤਾ ਗਿਆ",
+  "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} ਤੋਂ ਮਾਹਵਾਰੀ ਸ਼ੁਰੂ ਹੋਣ ਦਾ ਰਿਕਾਰਡ ਦਰਜ ਹੋ ਗਿਆ ਹੈ",
   "menstruationStartDate": "ਮਾਸਿਕ ਧਰਮ ਸ਼ੁਰੂਆਤ ਦੀ ਤਾਰੀਖ",
   "menstruationEndDate": "ਮਾਹਵਾਰੀ ਦੀ ਸਮਾਪਤੀ ਦੀ ਤਰੀਕ",
   "menstruationScheduleDate": "ਮਾਹਵਾਰੀ ਦੀ ਤਾਰੀਖ",

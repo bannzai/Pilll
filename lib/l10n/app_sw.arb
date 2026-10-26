@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 Kidonge cha leo",
   "number": " (kidonge)",
   "dayNumber": " siku",
-  "recordedMenstruationStartDate": "Imeandikwa mwanzo wa hedhi kuanzia {DateTimeFormatterMonthAndDay}",
+  "recordedMenstruationStartDate": "Mwanzo wa hedhi umerekodiwa kuanzia {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Tarehe ya mwanzo wa hedhi",
   "menstruationEndDate": "Tarehe ya mwisho wa hedhi",
   "menstruationScheduleDate": "Tarehe ya hedhi inayotarajiwa",

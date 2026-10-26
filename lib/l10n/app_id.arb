@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 Pil untuk hari ini",
   "number": " (pil)",
   "dayNumber": " hari",
-  "recordedMenstruationStartDate": "Telah dicatat sebagai awal menstruasi mulai {DateTimeFormatterMonthAndDay}",
+  "recordedMenstruationStartDate": "Awal haid tercatat pada {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Tanggal Mulai Menstruasi",
   "menstruationEndDate": "Tanggal Akhir Menstruasi",
   "menstruationScheduleDate": "Perkiraan Tanggal Haid",

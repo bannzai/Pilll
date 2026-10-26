@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 ఈ రోజు వేసుకోవాల్సిన మాత్ర",
   "number": " (మాత్ర)",
   "dayNumber": "వ రోజు",
-  "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} నుండి మాహవారీ ప్రారంభంగా రికార్డ్ చేశాము",
+  "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} నుంచి నెలసరి ప్రారంభమైనట్లు నమోదు చేయబడింది",
   "menstruationStartDate": "మాసిక ధర్మ ప్రారంభ తేదీ",
   "menstruationEndDate": "రుతువు ముగింపు తేదీ",
   "menstruationScheduleDate": "రుతుక్రమ సంభవిత తేదీ",

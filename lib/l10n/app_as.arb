@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 আজি খাবলগীয়া পিল",
   "number": " (বড়ি)",
   "dayNumber": " দিন",
-  "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}ৰ পৰা মাহেকীয়া আৰম্ভ হিচাপে ৰেকৰ্ড কৰিলোঁ",
+  "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}ৰ পৰা মাহেকীয়া আৰম্ভ হোৱা বুলি ৰেকৰ্ড কৰা হৈছে",
   "menstruationStartDate": "রজঃস্রাব আৰম্ভৰ তাৰিখ",
   "menstruationEndDate": "ঋতুকাল সমাপ্তিৰ তাৰিখ",
   "menstruationScheduleDate": "প্ৰত্যাশিত মাহেকীয়া",

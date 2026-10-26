@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 Dnešní tabletka",
   "number": ". tableta",
   "dayNumber": ". den",
-  "recordedMenstruationStartDate": "Menstruace byla zaznamenána od {DateTimeFormatterMonthAndDay}",
+  "recordedMenstruationStartDate": "Začátek menstruace byl zaznamenán k datu {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Datum začátku menstruace",
   "menstruationEndDate": "Konec menstruace",
   "menstruationScheduleDate": "Předpokládaná menstruace",

@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 De pil van vandaag",
   "number": " (pil)",
   "dayNumber": "e dag",
-  "recordedMenstruationStartDate": "Menstruatiestart geregistreerd vanaf {DateTimeFormatterMonthAndDay}",
+  "recordedMenstruationStartDate": "Het begin van je menstruatie is geregistreerd op {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Startdatum menstruatie",
   "menstruationEndDate": "Menstruatie einddatum",
   "menstruationScheduleDate": "Verwachte menstruatie",

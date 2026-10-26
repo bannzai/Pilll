@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 قرص امروز",
   "number": " (قرص)",
   "dayNumber": " روز",
-  "recordedMenstruationStartDate": "شروع قاعدگی از {DateTimeFormatterMonthAndDay} ثبت شد",
+  "recordedMenstruationStartDate": "شروع پریود از {DateTimeFormatterMonthAndDay} ثبت شد",
   "menstruationStartDate": "تاریخ شروع قاعدگی",
   "menstruationEndDate": "تاریخ پایان قاعدگی",
   "menstruationScheduleDate": "تاریخ مقرر قاعدگی",

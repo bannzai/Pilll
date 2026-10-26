@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 Iphilisi lanamuhla",
   "number": " (iphilisi)",
   "dayNumber": " usuku",
-  "recordedMenstruationStartDate": "Kurekhodiwe ukuqala kokuhamba kwezikhathi kusukela ku-{DateTimeFormatterMonthAndDay}",
+  "recordedMenstruationStartDate": "Ukuqala kokuya esikhathini kurekhodwe kusukela ngo-{DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Usuku lokuqala lwehla",
   "menstruationEndDate": "Usuku lokuphela kwehide",
   "menstruationScheduleDate": "Usuku Lwenyanga Olukulindelwe",

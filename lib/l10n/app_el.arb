@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 Το χάπι για σήμερα",
   "number": " (χάπι)",
   "dayNumber": "η ημέρα",
-  "recordedMenstruationStartDate": "Καταγράφηκε έναρξη περιόδου από {DateTimeFormatterMonthAndDay}",
+  "recordedMenstruationStartDate": "Η έναρξη της περιόδου καταγράφηκε για τις {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Ημερομηνία έναρξης περιόδου",
   "menstruationEndDate": "Ημερομηνία λήξης περιόδου",
   "menstruationScheduleDate": "Αναμενόμενη περίοδος",

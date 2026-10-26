@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 Today’s pill",
   "number": " (pill)",
   "dayNumber": " day",
-  "recordedMenstruationStartDate": "Recorded period start from {DateTimeFormatterMonthAndDay}",
+  "recordedMenstruationStartDate": "Period start recorded for {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Period start date",
   "menstruationEndDate": "Period End Date",
   "menstruationScheduleDate": "Expected Period Date",

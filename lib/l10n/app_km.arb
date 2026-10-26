@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 គ្រាប់ថ្នាំសម្រាប់ថ្ងៃនេះ",
   "number": " (គ្រាប់ថ្នាំ)",
   "dayNumber": " ថ្ងៃ",
-  "recordedMenstruationStartDate": "បានកត់ត្រាជាការចាប់ផ្តើមរដូវពីថ្ងៃ {DateTimeFormatterMonthAndDay}",
+  "recordedMenstruationStartDate": "បានកត់ត្រាថារដូវចាប់ផ្តើមនៅថ្ងៃទី {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "ថ្ងៃចាប់ផ្តើមរដូវ",
   "menstruationEndDate": "ថ្ងៃបញ្ចប់រដូវ",
   "menstruationScheduleDate": "ថ្ងៃរដូវកំណត់",

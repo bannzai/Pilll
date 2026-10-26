@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 Бүгінгі таблетка",
   "number": " (таблетка)",
   "dayNumber": "-күн",
-  "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}-дан етеккір басталғаны тіркелді",
+  "recordedMenstruationStartDate": "Етеккірдің басталуы {DateTimeFormatterMonthAndDay} күніне тіркелді",
   "menstruationStartDate": "Айыз басталу күні",
   "menstruationEndDate": "Менструация аяқталған күні",
   "menstruationScheduleDate": "менструация күтілетін күні",

@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 Pilla dagsins",
   "number": ". pilla",
   "dayNumber": ". dagur",
-  "recordedMenstruationStartDate": "Upphaf tíðar skráð frá {DateTimeFormatterMonthAndDay}",
+  "recordedMenstruationStartDate": "Upphaf blæðinga var skráð {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Byrjunardagur tíðablæðinga",
   "menstruationEndDate": "Lokadagur tíðablæðinga",
   "menstruationScheduleDate": "Væntanlegur tíðablæðingadagur",

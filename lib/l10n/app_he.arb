@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 הגלולה של היום",
   "number": " (גלולה)",
   "dayNumber": " יום",
-  "recordedMenstruationStartDate": "נרשמה תחילת הווסת החל מ-{DateTimeFormatterMonthAndDay}",
+  "recordedMenstruationStartDate": "תחילת המחזור נרשמה בתאריך {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "תאריך תחילת הוסת",
   "menstruationEndDate": "תאריך סיום הוסת",
   "menstruationScheduleDate": "תאריך הוסת הצפוי",

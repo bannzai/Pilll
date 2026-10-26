@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 Այսօրվա հաբը",
   "number": " (հաբ)",
   "dayNumber": "-րդ օր",
-  "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}-ից կանամսի սկիզբը գրանցվել է",
+  "recordedMenstruationStartDate": "Դաշտանի սկիզբը գրանցվել է {DateTimeFormatterMonthAndDay}-ից",
   "menstruationStartDate": "Դաշտանային ցիկլի սկիզբ",
   "menstruationEndDate": "Ամսական ավարտ",
   "menstruationScheduleDate": "Մենստրուացիայի նախատեսված ամսաթիվ",

@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 Deine Pille für heute",
   "number": ". Pille",
   "dayNumber": ". Tag",
-  "recordedMenstruationStartDate": "Menstruationsbeginn ab {DateTimeFormatterMonthAndDay} wurde erfasst",
+  "recordedMenstruationStartDate": "Der Beginn deiner Periode wurde für den {DateTimeFormatterMonthAndDay} eingetragen",
   "menstruationStartDate": "Periodenbeginn",
   "menstruationEndDate": "Periodenende",
   "menstruationScheduleDate": "Erwartete Menstruation",

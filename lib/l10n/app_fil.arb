@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 Pildoras para sa araw na ito",
   "number": " (tableta)",
   "dayNumber": " araw",
-  "recordedMenstruationStartDate": "Naitala na ang simula ng regla noong {DateTimeFormatterMonthAndDay}",
+  "recordedMenstruationStartDate": "Naitala ang simula ng regla noong {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Unang araw ng regla",
   "menstruationEndDate": "Petsa ng Pagtatapos ng Regla",
   "menstruationScheduleDate": "Inaasahang Petsa ng Regla",

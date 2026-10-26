@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 Šiandienos tabletė",
   "number": "-oji tabletė",
   "dayNumber": "-oji diena",
-  "recordedMenstruationStartDate": "Menstruacijų pradžia užregistruota nuo {DateTimeFormatterMonthAndDay}",
+  "recordedMenstruationStartDate": "Mėnesinių pradžia užregistruota nuo {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Menstruacijos pradžios diena",
   "menstruationEndDate": "Menstruacijų pabaigos diena",
   "menstruationScheduleDate": "Numatoma mėnesinių data",

@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 დღევანდელი აბი",
   "number": " (აბი)",
   "dayNumber": "-ე დღე",
-  "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}-იდან მენსტრუაციის დაწყება ჩაიწერა",
+  "recordedMenstruationStartDate": "მენსტრუაციის დაწყების თარიღად {DateTimeFormatterMonthAndDay} ჩაიწერა",
   "menstruationStartDate": "მენსტრუაციის დაწყების თარიღი",
   "menstruationEndDate": "მენსტრუაციის დამთავრების თარიღი",
   "menstruationScheduleDate": "მენსტრუაციის მოსალოდნელი თარიღი",

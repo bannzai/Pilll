@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 Пігулка на сьогодні",
   "number": " (пігулка)",
   "dayNumber": "-й день",
-  "recordedMenstruationStartDate": "Записано початок менструації з {DateTimeFormatterMonthAndDay}",
+  "recordedMenstruationStartDate": "Початок місячних записано на {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "дата початку менструації",
   "menstruationEndDate": "Дата закінчення менструації",
   "menstruationScheduleDate": "Очікувана дата менструації",

@@ -152,7 +152,7 @@
   "todayPillToTake": "💊 आजको चक्की",
   "number": " (चक्की)",
   "dayNumber": "औँ दिन",
-  "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} देखि मासिक धर्म सुरुवात भएको रूपमा रेकर्ड गरियो",
+  "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} देखि महिनावारी सुरु भएको भनेर रेकर्ड गरिएको छ",
   "menstruationStartDate": "मासिकधर्म शुरु मिति",
   "menstruationEndDate": "महिनावारी समाप्ति मिति",
   "menstruationScheduleDate": "अनुमानित महिनावारी मिति",
