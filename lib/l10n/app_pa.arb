@@ -501,7 +501,7 @@
   "alarmKitFeatureAppealHeadline": "ਅਲਾਰਮ ਘੜੀ ਵਾਂਗ ਗੋਲੀ ਲੈਣ ਦਾ ਅਲਾਰਮ",
   "alarmKitFeatureAppealBody": "iOS 26 ਅਤੇ ਇਸ ਤੋਂ ਬਾਅਦ ਉਪਲਬਧ AlarmKit ਨਾਲ, ਸਾਈਲੈਂਟ ਜਾਂ ਫੋਕਸ ਮੋਡ ਵਿੱਚ ਵੀ ਵੱਜਣ ਵਾਲਾ ਅਲਾਰਮ ਤੁਹਾਨੂੰ ਗੋਲੀ ਲੈਣ ਦਾ ਸਮਾਂ ਯਾਦ ਕਰਾਉਂਦਾ ਹੈ।",
   "todayPillNumberFeatureAppealTitle": "ਅੱਜ ਦੀ ਗੋਲੀ ਦਾ ਨੰਬਰ ਮਿਲਾਓ",
-  "todayPillNumberFeatureAppealShortDescription": "ਜੇ ਨੰਬਰ ਗ਼ਲਤ ਹੋਵੇ ਤਾਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਠੀਕ ਕਰੋ",
+  "todayPillNumberFeatureAppealShortDescription": "ਜੇ ਗੋਲੀ ਦਾ ਨੰਬਰ ਮੇਲ ਨਹੀਂ ਖਾਂਦਾ, ਤਾਂ ਤੁਸੀਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਇਸ ਨੂੰ ਠੀਕ ਕਰ ਸਕਦੇ ਹੋ",
   "todayPillNumberFeatureAppealHeadline": "ਅੱਜ ਲੈਣ ਵਾਲੀ ਗੋਲੀ ਦਾ ਨੰਬਰ ਬਦਲ ਸਕਦੇ ਹੋ",
   "todayPillNumberFeatureAppealBody": "ਜਦੋਂ ਭੁੱਲਣ ਜਾਂ ਗਲਤੀ ਨਾਲ ਲੈਣ ਕਾਰਨ ਪਿੱਲ ਸ਼ੀਟ 'ਤੇ ਨੰਬਰ ਅਤੇ ਅਸਲ ਵਿੱਚ ਲਈ ਗਈ ਗੋਲੀ ਵਿੱਚ ਫ਼ਰਕ ਆ ਜਾਵੇ, ਤਾਂ ਤੁਸੀਂ ਅੱਜ ਲੈਣ ਵਾਲੀ ਗੋਲੀ ਦਾ ਨੰਬਰ ਹੱਥੀਂ ਠੀਕ ਕਰ ਸਕਦੇ ਹੋ। ਹੋਮ ਸਕਰੀਨ 'ਤੇ ਗੋਲੀ ਨੰਬਰ ਡਿਸਪਲੇ ਤੋਂ ਵੀ ਉਹੀ ਸਕਰੀਨ ਖੋਲ੍ਹੀ ਜਾ ਸਕਦੀ ਹੈ।",
   "restDurationFeatureAppealTitle": "ਦਵਾਈ ਦੇ ਆਰਾਮ ਦੀ ਮਿਆਦ ਰਿਕਾਰਡ ਕਰੋ",

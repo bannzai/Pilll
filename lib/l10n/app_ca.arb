@@ -501,7 +501,7 @@
   "alarmKitFeatureAppealHeadline": "Una alarma per prendre la píndola com un despertador",
   "alarmKitFeatureAppealBody": "Amb AlarmKit, disponible a partir d’iOS 26, una alarma que sona fins i tot en mode de silenci o de concentració et recorda que has de prendre la píndola.",
   "todayPillNumberFeatureAppealTitle": "Ajusta el número de la píndola d'avui",
-  "todayPillNumberFeatureAppealShortDescription": "Si el número no és correcte, corregeix-lo a la configuració",
+  "todayPillNumberFeatureAppealShortDescription": "Si el número de la píndola no coincideix, pots corregir-lo a la configuració",
   "todayPillNumberFeatureAppealHeadline": "Podeu canviar el número de píndola d'avui",
   "todayPillNumberFeatureAppealBody": "Quan el número a la làmina de píndoles i la presa real no coincideixen per haver-se oblidat de prendre-la o per confusió, podeu ajustar manualment el número de la píndola que cal prendre avui. També podeu obrir la mateixa pantalla des de la visualització del número de píndola a l'inici.",
   "restDurationFeatureAppealTitle": "Registra el període de descans de la presa",

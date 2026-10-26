@@ -501,7 +501,7 @@
   "alarmKitFeatureAppealHeadline": "Alarm sa pag-inom ng pildoras na parang alarm clock",
   "alarmKitFeatureAppealBody": "Gamit ang AlarmKit na available sa iOS 26 o mas bago, ipinaaalala sa inyo ng alarm na tumutunog kahit naka-Silent mode o Focus na oras nang inumin ang pill.",
   "todayPillNumberFeatureAppealTitle": "Itugma ang numero ng pildoras para ngayong araw",
-  "todayPillNumberFeatureAppealShortDescription": "Ayusin sa settings kung mali ang numero",
+  "todayPillNumberFeatureAppealShortDescription": "Kung hindi tugma ang numero ng pildoras, maaari ninyo itong itama sa mga setting",
   "todayPillNumberFeatureAppealHeadline": "Maaaring baguhin ang numero ng pill na iinom ngayon",
   "todayPillNumberFeatureAppealBody": "Kapag may pagkakaiba ang numero sa pill sheet at ang aktual na pag-inom dahil sa pagkalimot o pagkakamali, maaari mong manu-manong itama ang numero ng pill na iinom mo ngayon. Maaari mo ring buksan ang parehong screen mula sa display ng numero ng pill sa Home.",
   "restDurationFeatureAppealTitle": "Itala ang pahinga sa pag-inom",

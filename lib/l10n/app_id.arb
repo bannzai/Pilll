@@ -501,7 +501,7 @@
   "alarmKitFeatureAppealHeadline": "Alarm minum pil seperti jam weker",
   "alarmKitFeatureAppealBody": "Dengan AlarmKit yang tersedia mulai iOS 26, alarm yang berbunyi meski mode Senyap atau Fokus aktif mengingatkan Anda untuk minum pil.",
   "todayPillNumberFeatureAppealTitle": "Sesuaikan nomor pil hari ini",
-  "todayPillNumberFeatureAppealShortDescription": "Jika nomor bergeser, koreksi di pengaturan",
+  "todayPillNumberFeatureAppealShortDescription": "Jika nomor pil tidak sesuai, Anda dapat memperbaikinya di pengaturan",
   "todayPillNumberFeatureAppealHeadline": "Ubah nomor pil untuk hari ini",
   "todayPillNumberFeatureAppealBody": "Jika nomor pada lembar pil tidak sesuai dengan pil yang sebenarnya diminum karena lupa minum atau salah mengambil, Anda dapat menyesuaikan nomor pil yang harus diminum hari ini secara manual. Halaman yang sama juga dapat dibuka dari tampilan angka pil di Beranda.",
   "restDurationFeatureAppealTitle": "Catat periode istirahat minum pil",

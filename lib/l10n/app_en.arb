@@ -501,7 +501,7 @@
   "alarmKitFeatureAppealHeadline": "A pill alarm that works like an alarm clock",
   "alarmKitFeatureAppealBody": "With AlarmKit on iOS 26 or later, an alarm that sounds even in Silent mode or Focus reminds you to take your pill.",
   "todayPillNumberFeatureAppealTitle": "Adjust today's pill number",
-  "todayPillNumberFeatureAppealShortDescription": "Fix the number if it drifted",
+  "todayPillNumberFeatureAppealShortDescription": "If the pill number is off, you can fix it in Settings",
   "todayPillNumberFeatureAppealHeadline": "Change today's pill number",
   "todayPillNumberFeatureAppealBody": "If the number on your pill sheet and what you actually took get out of sync, realign today's number in one tap. You can also open this from the pill number on the home screen.",
   "restDurationFeatureAppealTitle": "Log a pause in your medication",

@@ -501,7 +501,7 @@
   "alarmKitFeatureAppealHeadline": "Ébresztőóraként működő tablettaszedési emlékeztető",
   "alarmKitFeatureAppealBody": "Az iOS 26-tól elérhető AlarmKit segítségével a néma vagy Fókusz módban is megszólaló riasztás emlékeztet, hogy szedd be a tablettát.",
   "todayPillNumberFeatureAppealTitle": "A mai tabletta sorszámának beállítása",
-  "todayPillNumberFeatureAppealShortDescription": "Ha a szám elcsúszott, javítsd a Beállításokban.",
+  "todayPillNumberFeatureAppealShortDescription": "Ha nem stimmel a tabletta száma, a beállításokban módosíthatod",
   "todayPillNumberFeatureAppealHeadline": "A mai tabletta sorszámának módosítása",
   "todayPillNumberFeatureAppealBody": "Ha a bliszteren szereplő szám és a tényleges bevétel eltolódott (például elfelejtés vagy összekeverés miatt), manuálisan beállíthatja, melyik tablettát kell ma bevennie. Ugyanezt a képernyőt megnyithatja a Kezdőlap tablettaszám‑kijelzéséről is.",
   "restDurationFeatureAppealTitle": "Szedésszünet rögzítése",

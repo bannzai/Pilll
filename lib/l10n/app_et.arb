@@ -501,7 +501,7 @@
   "alarmKitFeatureAppealHeadline": "Pillialarm nagu äratuskell",
   "alarmKitFeatureAppealBody": "Alates iOS 26-st saadaval oleva AlarmKitiga tuletab sulle pilli võtmist meelde äratus, mis kõlab ka vaikses režiimis või keskendumisrežiimis.",
   "todayPillNumberFeatureAppealTitle": "Muuda tänase pilli numbrit",
-  "todayPillNumberFeatureAppealShortDescription": "Kui number on vale, paranda seadetes",
+  "todayPillNumberFeatureAppealShortDescription": "Kui pilli number ei klapi, saad seda seadetes muuta",
   "todayPillNumberFeatureAppealHeadline": "Saad muuta tänase pilli numbrit",
   "todayPillNumberFeatureAppealBody": "Kui pillide unustamise või vahetamise tõttu ei vasta pillilehe number tegelikule tarbimisele, saate tänase pilli numbri käsitsi korrigeerida. Sama ekraani saab avada ka avakuva pilli numbri kuvalt.",
   "restDurationFeatureAppealTitle": "Salvesta ravimipuhkuse periood",

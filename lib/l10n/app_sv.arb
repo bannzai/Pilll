@@ -501,7 +501,7 @@
   "alarmKitFeatureAppealHeadline": "Pillerlarm som en väckarklocka",
   "alarmKitFeatureAppealBody": "Med AlarmKit, som finns från iOS 26, påminner ett alarm som hörs även i tyst läge eller Fokus dig om att ta ditt p-piller.",
   "todayPillNumberFeatureAppealTitle": "Justera numret på dagens p-piller",
-  "todayPillNumberFeatureAppealShortDescription": "Om numreringen är fel, rätta till det i inställningarna.",
+  "todayPillNumberFeatureAppealShortDescription": "Om pillernumret inte stämmer kan du ändra det i inställningarna",
   "todayPillNumberFeatureAppealHeadline": "Du kan ändra numret på dagens piller",
   "todayPillNumberFeatureAppealBody": "Om numren på pillerarket inte stämmer med ditt faktiska intag på grund av att du glömt eller tagit fel, kan du manuellt justera vilket pillernummer som ska tas idag. Samma skärm nås även från pillernumrets visning på hemskärmen.",
   "restDurationFeatureAppealTitle": "Registrera uppehållsperiod",

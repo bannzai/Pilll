@@ -501,7 +501,7 @@
   "alarmKitFeatureAppealHeadline": "Um alarme para tomar a pílula, como um despertador",
   "alarmKitFeatureAppealBody": "Com o AlarmKit, disponível a partir do iOS 26, um alarme que toca mesmo no modo Silencioso ou Foco lembra você de tomar a pílula.",
   "todayPillNumberFeatureAppealTitle": "Ajuste o número da pílula de hoje",
-  "todayPillNumberFeatureAppealShortDescription": "Ajuste nas configurações se o número estiver incorreto",
+  "todayPillNumberFeatureAppealShortDescription": "Se o número da pílula não estiver certo, você pode ajustá-lo nas configurações",
   "todayPillNumberFeatureAppealHeadline": "Pode alterar o número do comprimido a tomar hoje",
   "todayPillNumberFeatureAppealBody": "Quando o número na cartela de pílulas não corresponder à ingestão real devido a esquecimentos ou trocas, você pode ajustar manualmente o número da pílula a tomar hoje. A mesma tela também pode ser aberta a partir da exibição do número de pílula na tela inicial.",
   "restDurationFeatureAppealTitle": "Registrar período de pausa na ingestão",

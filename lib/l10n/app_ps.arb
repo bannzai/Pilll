@@ -501,7 +501,7 @@
   "alarmKitFeatureAppealHeadline": "د ویښولو د ساعت په څېر د ګولۍ اخیستو زنګ",
   "alarmKitFeatureAppealBody": "د AlarmKit په کارولو سره، چې په iOS 26 او ورپسې بڼو کې شته، هغه زنګ چې په چوپ حالت یا د تمرکز په حالت کې هم غږېږي، تاسو ته د ګولۍ اخیستو وخت دریادوي.",
   "todayPillNumberFeatureAppealTitle": "د نننۍ ګولۍ شمېره برابره کړئ",
-  "todayPillNumberFeatureAppealShortDescription": "که شمیره ناسمه وي، د ترتیباتو له لارې سمه کړئ",
+  "todayPillNumberFeatureAppealShortDescription": "که د ګولۍ شمېره سمه نه وي، په امستنو کې یې سمولای شئ",
   "todayPillNumberFeatureAppealHeadline": "نن د حبې شمیره بدلولی شئ",
   "todayPillNumberFeatureAppealBody": "کله چې د هیرولو یا غلطۍ له امله د پیل شیټ پر شمیره او اصلي مصرف ترمینځ توپیر رامنځته شي، تاسو کولی شئ د نن ورځې د پیل شمیره لاسي سمه کړئ. همدا پرده د کور د پیل شمیرې ښودنې له لارې هم خلاصولی شئ.",
   "restDurationFeatureAppealTitle": "د دوا اخیستو د وقفې موده ثبت کول",

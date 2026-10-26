@@ -501,7 +501,7 @@
   "alarmKitFeatureAppealHeadline": "Budilnik kabi ishlaydigan tabletka ichish signali",
   "alarmKitFeatureAppealBody": "iOS 26 va undan keyingi versiyalarda mavjud AlarmKit yordamida ovozsiz yoki diqqatni jamlash rejimida ham chalinadigan signal sizga tabletkani qabul qilish vaqtini eslatadi.",
   "todayPillNumberFeatureAppealTitle": "Bugungi tabletka raqamini moslang",
-  "todayPillNumberFeatureAppealShortDescription": "Raqamlar siljigan bo'lsa, sozlamalarda to'g'rilang",
+  "todayPillNumberFeatureAppealShortDescription": "Agar tabletka raqami mos kelmasa, uni sozlamalarda tuzatishingiz mumkin",
   "todayPillNumberFeatureAppealHeadline": "Bugun ichiladigan tableta raqamini o'zgartirishingiz mumkin",
   "todayPillNumberFeatureAppealBody": "Unutish yoki tabletkalarni aralashtirish tufayli pill varaqasidagi raqamlar va amalda qabul qilingan tabletka mos kelmay qolsa, bugungi ichishingiz kerak bo'lgan pillaning raqamini qo'lda to'g'irlashingiz mumkin. Bosh sahifadagi pill raqami ko'rsatkichi orqali ham xuddi shu oynani ochishingiz mumkin.",
   "restDurationFeatureAppealTitle": "Qabulni to'xtatish davrini qayd eting",

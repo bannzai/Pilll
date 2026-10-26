@@ -501,7 +501,7 @@
   "alarmKitFeatureAppealHeadline": "Larwm cymryd y bilsen fel cloc larwm",
   "alarmKitFeatureAppealBody": "Gan ddefnyddio AlarmKit, sydd ar gael o iOS 26 ymlaen, mae larwm sy’n canu hyd yn oed yn y modd tawel neu’r modd Ffocws yn eich atgoffa i gymryd eich pilsen.",
   "todayPillNumberFeatureAppealTitle": "Addaswch rif pilsen heddiw",
-  "todayPillNumberFeatureAppealShortDescription": "Cywirwch yn y gosodiadau os yw'r rhif yn anghywir",
+  "todayPillNumberFeatureAppealShortDescription": "Os nad yw rhif y bilsen yn gywir, gallwch ei newid yn y gosodiadau",
   "todayPillNumberFeatureAppealHeadline": "Gallwch newid rhif y bilsen ar gyfer heddiw",
   "todayPillNumberFeatureAppealBody": "Pan fo'r rhif ar y daflen bilsen a'r dos gwirioneddol yn mynd allan o gydamseru oherwydd anghofio cymryd dos neu gymysgu, gallwch ailosod rhif y bilsen i'w chymryd heddiw â llaw. Gallwch hefyd agor yr un sgrin o arddangosiad rhif y bilsen ar y sgrin hafan.",
   "restDurationFeatureAppealTitle": "Cofnodi cyfnod gorffwys cymryd",

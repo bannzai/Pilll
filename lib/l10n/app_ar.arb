@@ -501,7 +501,7 @@
   "alarmKitFeatureAppealHeadline": "منبّه لتناول الحبة مثل منبّه الاستيقاظ",
   "alarmKitFeatureAppealBody": "باستخدام AlarmKit المتاح في iOS 26 والإصدارات الأحدث، ينبهك منبه يُسمع حتى في الوضع الصامت أو وضع التركيز إلى موعد تناول حبة منع الحمل.",
   "todayPillNumberFeatureAppealTitle": "عدلي رقم حبة اليوم",
-  "todayPillNumberFeatureAppealShortDescription": "إذا اختلف الرقم، صحّحه من الإعدادات",
+  "todayPillNumberFeatureAppealShortDescription": "إذا كان رقم الحبة غير صحيح، يمكنكِ تصحيحه من الإعدادات",
   "todayPillNumberFeatureAppealHeadline": "يمكنك تغيير رقم الحبة لليوم",
   "todayPillNumberFeatureAppealBody": "عندما يختلف الرقم الموجود على ورقة الحبوب عن الجرعة الفعلية بسبب النسيان أو الخطأ، يمكنك ضبط رقم الحبة التي ستتناولينها اليوم يدوياً. يمكنك أيضاً فتح نفس الشاشة من خلال عرض رقم الحبة في الصفحة الرئيسية.",
   "restDurationFeatureAppealTitle": "تسجيل فترة توقف تناول الدواء",

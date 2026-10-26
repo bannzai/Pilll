@@ -501,7 +501,7 @@
   "alarmKitFeatureAppealHeadline": "Une alarme pour la prise de la pilule, comme un réveil",
   "alarmKitFeatureAppealBody": "Avec AlarmKit, disponible à partir d’iOS 26, une alarme qui sonne même en mode Silence ou Concentration vous rappelle de prendre votre pilule.",
   "todayPillNumberFeatureAppealTitle": "Ajuster le numéro de la pilule du jour",
-  "todayPillNumberFeatureAppealShortDescription": "Corrigez le numéro s'il a dérivé",
+  "todayPillNumberFeatureAppealShortDescription": "Si le numéro de la pilule ne correspond pas, vous pouvez le corriger dans les réglages",
   "todayPillNumberFeatureAppealHeadline": "Changer le numéro de pilule du jour",
   "todayPillNumberFeatureAppealBody": "Si votre numéro de pilule et ce que vous avez réellement pris ne sont pas synchronisés, réalignez le numéro d'aujourd'hui en un seul clic. Vous pouvez également l'ouvrir à partir du numéro de pilule sur l'écran d'accueil.",
   "restDurationFeatureAppealTitle": "Enregistrez une pause dans votre traitement",
