@@ -450,7 +450,7 @@
   "emailReceiveSettingNote": "مهرباني وکړئ خپل برېښنالیک داسې تنظیم کړئ چې له pilll.reminder.app@gmail.com څخه پیغامونه ترلاسه کړئ",
   "inquiryContentRequired": "مهرباني وکړئ د خپلې پوښتنې متن ولیکئ",
   "lifetimeSubscriptionWarning": "د ټول عمر پلان د پېرلو مننه. که تاسو میاشتنی یا کلنی ګډون لرئ، مهرباني وکړئ د هغه لغوه کول مه هېروئ.",
-  "lifetimePurchaseNotice1": "・که د «یو ځل پیرودنې پلان» واخلئ، «میاشتنی/کلنی پلان» به اتوماتیک لغوه نه کیږي.",
+  "lifetimePurchaseNotice1": "・که د یو ځل پیسو ورکولو پلان هم واخلئ، ستاسو میاشتنی یا کلنی پلان به په اوتومات ډول لغوه نه شي.",
   "lifetimePurchaseNotice2": "دلته",
   "lifetimePurchaseNotice3": "له مخکې لغوه کړئ او بیا یې واخلئ۔",
   "featureAppealTryFeature": "تایید کړئ",

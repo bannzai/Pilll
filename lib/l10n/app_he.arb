@@ -450,7 +450,7 @@
   "emailReceiveSettingNote": "כדאי לוודא שהגדרות הדוא״ל מאפשרות קבלת הודעות מ־pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "יש להזין את תוכן הפנייה",
   "lifetimeSubscriptionWarning": "תודה על רכישת התוכנית לכל החיים. אם יש מינוי חודשי או שנתי, כדאי לזכור לבטל אותו.",
-  "lifetimePurchaseNotice1": "・גם לאחר רכישת \"תוכנית חד-פעמית\", \"תוכנית חודשית/שנתית\" לא תבוטל אוטומטית.",
+  "lifetimePurchaseNotice1": "・רכישת המסלול בתשלום חד־פעמי אינה מבטלת אוטומטית את המסלול החודשי או השנתי.",
   "lifetimePurchaseNotice2": "כאן",
   "lifetimePurchaseNotice3": "יש לבטל מראש ולאחר מכן לבצע את הרכישה.",
   "featureAppealTryFeature": "בדוק",

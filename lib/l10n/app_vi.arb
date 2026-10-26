@@ -450,7 +450,7 @@
   "emailReceiveSettingNote": "Vui lòng cài đặt email để nhận được thư từ pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Vui lòng nhập nội dung liên hệ",
   "lifetimeSubscriptionWarning": "Cảm ơn bạn đã mua gói trọn đời. Nếu bạn có gói đăng ký hằng tháng hoặc hằng năm, vui lòng nhớ hủy gói đó.",
-  "lifetimePurchaseNotice1": "Mua gói mua một lần sẽ không tự động hủy các gói đăng ký theo tháng hoặc theo năm.",
+  "lifetimePurchaseNotice1": "・Ngay cả khi bạn mua gói thanh toán một lần, gói hằng tháng hoặc hằng năm của bạn sẽ không tự động bị hủy.",
   "lifetimePurchaseNotice2": "Quản lý đăng ký",
   "lifetimePurchaseNotice3": "Vui lòng hủy trước khi mua.",
   "featureAppealTryFeature": "Dùng thử",

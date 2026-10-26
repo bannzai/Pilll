@@ -450,7 +450,7 @@
   "emailReceiveSettingNote": "ກະລຸນາຕັ້ງຄ່າອີເມວເພື່ອໃຫ້ຮັບຂໍ້ຄວາມຈາກ pilll.reminder.app@gmail.com ໄດ້",
   "inquiryContentRequired": "ກະລຸນາປ້ອນລາຍລະອຽດຄຳຖາມຂອງທ່ານ",
   "lifetimeSubscriptionWarning": "ຂອບໃຈທີ່ຊື້ແຜນໃຊ້ງານຕະຫຼອດຊີວິດ. ຖ້າທ່ານມີການສະໝັກໃຊ້ລາຍເດືອນ ຫຼື ລາຍປີ, ກະລຸນາຢ່າລືມຍົກເລີກການສະໝັກນັ້ນ.",
-  "lifetimePurchaseNotice1": "・ເຖິງແມ່ນຊື້ \"ແຜນຊື້ຄັ້ງດຽວ\" ແລ້ວ, \"ແຜນລາຍເດືອນ/ລາຍປີ\" ກໍຈະບໍ່ຖືກຍົກເລີກໂດຍອັດຕະໂນມັດ",
+  "lifetimePurchaseNotice1": "・ເຖິງຈະຊື້ແຜນຈ່າຍເທື່ອດຽວ ແຜນລາຍເດືອນ ຫຼື ລາຍປີຂອງທ່ານຈະບໍ່ຖືກຍົກເລີກອັດຕະໂນມັດ.",
   "lifetimePurchaseNotice2": "ທີ່ນີ້",
   "lifetimePurchaseNotice3": "ກະລຸນາຍົກເລີກການສະມັກກ່ອນການຊື້।",
   "featureAppealTryFeature": "ລອງໃຊ້",

@@ -450,7 +450,7 @@
   "emailReceiveSettingNote": "Kérjük, állítsd be az e-mail-fiókodat úgy, hogy fogadhassa a pilll.reminder.app@gmail.com címről érkező üzeneteket",
   "inquiryContentRequired": "Kérjük, írd be az üzeneted",
   "lifetimeSubscriptionWarning": "Köszönjük, hogy megvásároltad az élethosszig tartó csomagot. Ha havi vagy éves előfizetésed is van, ne felejtsd el lemondani.",
-  "lifetimePurchaseNotice1": "・Az egyszeri megvásárlásos csomag megvásárlása esetén a havi vagy éves előfizetés nem kerül automatikusan lemondásra.",
+  "lifetimePurchaseNotice1": "・Az egyszeri díjas csomag megvásárlása nem mondja le automatikusan a havi vagy éves csomagodat.",
   "lifetimePurchaseNotice2": "Előfizetés kezelése",
   "lifetimePurchaseNotice3": "Kérjük, előzetesen mondja le meglévő előfizetését, mielőtt megvásárolná.",
   "featureAppealTryFeature": "Próbálja ki",

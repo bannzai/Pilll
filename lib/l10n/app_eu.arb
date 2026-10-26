@@ -450,7 +450,7 @@
   "emailReceiveSettingNote": "Ziurtatu posta elektronikoa konfiguratuta duzula pilll.reminder.app@gmail.com helbidetik mezuak jasotzeko",
   "inquiryContentRequired": "Idatzi zure kontsultaren edukia, mesedez",
   "lifetimeSubscriptionWarning": "Eskerrik asko bizitza osorako plana erosteagatik. Hileko edo urteko harpidetza baduzu, gogoratu bertan behera uztea.",
-  "lifetimePurchaseNotice1": "・「Behin betiko plana」erosten baduzu ere, «hileko/urteko plana» ez da automatikoki bertan behera utziko.",
+  "lifetimePurchaseNotice1": "・Ordainketa bakarreko plana erosita ere, hileko edo urteko plana ez da automatikoki bertan behera geratuko.",
   "lifetimePurchaseNotice2": "Hemen",
   "lifetimePurchaseNotice3": "tik aldez aurretik ezeztatu eta erosi ezazu.",
   "featureAppealTryFeature": "Egiaztatu",

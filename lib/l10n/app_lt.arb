@@ -450,7 +450,7 @@
   "emailReceiveSettingNote": "Prašome nustatyti el. paštą taip, kad gautumėte laiškus iš pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Įveskite savo užklausos tekstą",
   "lifetimeSubscriptionWarning": "Dėkojame, kad įsigijote planą visam gyvenimui. Jei turite mėnesinę ar metinę prenumeratą, nepamirškite jos atšaukti.",
-  "lifetimePurchaseNotice1": "Net jei įsigysite „vienkartinį“ planą, jūsų mėnesio ar metiniai prenumeratos planai nebus automatiškai atšaukti.",
+  "lifetimePurchaseNotice1": "・Net jei įsigysite planą su vienkartiniu mokėjimu, jūsų mėnesinis ar metinis planas nebus automatiškai atšauktas.",
   "lifetimePurchaseNotice2": "Tvarkyti prenumeratą",
   "lifetimePurchaseNotice3": "Prieš pirkdami, prašome atšaukti esamą prenumeratą.",
   "featureAppealTryFeature": "Išbandyti",

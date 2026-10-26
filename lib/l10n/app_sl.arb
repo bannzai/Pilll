@@ -450,7 +450,7 @@
   "emailReceiveSettingNote": "Prosimo, nastavite e-pošto tako, da boste lahko prejemali sporočila z naslova pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Prosimo, vnesite besedilo svojega sporočila",
   "lifetimeSubscriptionWarning": "Hvala za nakup doživljenjskega paketa. Če imate mesečno ali letno naročnino, je ne pozabite preklicati.",
-  "lifetimePurchaseNotice1": "Nakup enkratnega načrta ne bo samodejno preklical mesečnih ali letnih naročnin.",
+  "lifetimePurchaseNotice1": "・Tudi če kupite paket z enkratnim plačilom, se vaš mesečni ali letni paket ne bo samodejno preklical.",
   "lifetimePurchaseNotice2": "Upravljanje naročnine",
   "lifetimePurchaseNotice3": "Prosimo, pred nakupom prekličite obstoječe naročnine.",
   "featureAppealTryFeature": "Preizkusite funkcijo",

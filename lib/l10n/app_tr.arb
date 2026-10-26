@@ -450,7 +450,7 @@
   "emailReceiveSettingNote": "Lütfen e-posta ayarlarınızı pilll.reminder.app@gmail.com adresinden gelen iletileri alabilecek şekilde düzenleyin",
   "inquiryContentRequired": "Lütfen mesajınızın içeriğini girin",
   "lifetimeSubscriptionWarning": "Ömür boyu geçerli planı satın aldığınız için teşekkür ederiz. Aylık veya yıllık aboneliğiniz varsa lütfen iptal etmeyi unutmayın.",
-  "lifetimePurchaseNotice1": "Tek seferlik satın alma planını satın alırsanız bile aylık/yıllık plan otomatik olarak iptal edilmez.",
+  "lifetimePurchaseNotice1": "・Tek seferlik ödeme planını satın alsanız bile aylık veya yıllık planınız otomatik olarak iptal edilmez.",
   "lifetimePurchaseNotice2": "Aboneliği yönet",
   "lifetimePurchaseNotice3": "Satın almadan önce lütfen mevcut aboneliğinizi iptal edin.",
   "featureAppealTryFeature": "Deneyin",

@@ -450,7 +450,7 @@
   "emailReceiveSettingNote": "请设置邮箱，以便接收来自 pilll.reminder.app@gmail.com 的邮件",
   "inquiryContentRequired": "请填写咨询内容",
   "lifetimeSubscriptionWarning": "感谢购买终身套餐。如果你有月度或年度订阅，别忘了取消哦。",
-  "lifetimePurchaseNotice1": "购买“买断计划”不会自动取消您当前的月度或年度订阅。",
+  "lifetimePurchaseNotice1": "・即使购买一次性付费方案，月度或年度方案也不会自动取消。",
   "lifetimePurchaseNotice2": "点此管理",
   "lifetimePurchaseNotice3": "请在购买前取消当前订阅。",
   "featureAppealTryFeature": "试用此功能",

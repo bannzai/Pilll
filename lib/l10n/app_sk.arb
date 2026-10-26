@@ -450,7 +450,7 @@
   "emailReceiveSettingNote": "Nastavte si, prosím, e-mail tak, aby ste mohli prijímať správy z adresy pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Zadajte, prosím, text svojej otázky",
   "lifetimeSubscriptionWarning": "Ďakujeme za zakúpenie doživotného plánu. Ak máte mesačné alebo ročné predplatné, nezabudnite ho zrušiť.",
-  "lifetimePurchaseNotice1": "Zakúpením jednorazového plánu sa mesačné alebo ročné predplatné automaticky nezruší.",
+  "lifetimePurchaseNotice1": "・Ani po zakúpení plánu s jednorazovou platbou sa váš mesačný alebo ročný plán automaticky nezruší.",
   "lifetimePurchaseNotice2": "Správa predplatného",
   "lifetimePurchaseNotice3": "Pred zakúpením prosím predchádzajúce predplatné zrušte.",
   "featureAppealTryFeature": "Vyskúšať",

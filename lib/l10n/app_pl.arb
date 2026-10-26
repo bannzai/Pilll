@@ -450,7 +450,7 @@
   "emailReceiveSettingNote": "Upewnij się, że ustawienia poczty pozwalają odbierać wiadomości z adresu pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Wpisz treść wiadomości",
   "lifetimeSubscriptionWarning": "Dziękujemy za zakup planu dożywotniego. Jeśli masz subskrypcję miesięczną lub roczną, pamiętaj o jej anulowaniu.",
-  "lifetimePurchaseNotice1": "・Zakup „Planu jednorazowego\" nie spowoduje automatycznego anulowania „Planu miesięcznego/rocznego\".",
+  "lifetimePurchaseNotice1": "・Zakup planu z jednorazową opłatą nie anuluje automatycznie planu miesięcznego ani rocznego.",
   "lifetimePurchaseNotice2": "Tutaj",
   "lifetimePurchaseNotice3": "anuluj wcześniej i dokonaj zakupu.",
   "featureAppealTryFeature": "Sprawdź",

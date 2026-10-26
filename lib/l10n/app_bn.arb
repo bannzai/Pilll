@@ -450,7 +450,7 @@
   "emailReceiveSettingNote": "অনুগ্রহ করে pilll.reminder.app@gmail.com থেকে ইমেইল পেতে আপনার ইমেইলের সেটিংস ঠিক করুন",
   "inquiryContentRequired": "অনুগ্রহ করে আপনার বার্তাটি লিখুন",
   "lifetimeSubscriptionWarning": "আজীবন প্ল্যানটি কেনার জন্য ধন্যবাদ। আপনার মাসিক বা বার্ষিক সাবস্ক্রিপশন থাকলে, অনুগ্রহ করে সেটি বাতিল করতে ভুলবেন না।",
-  "lifetimePurchaseNotice1": "・「এককালীন ক্রয় প্ল্যান」কিনলেও「মাসিক/বার্ষিক প্ল্যান」স্বয়ংক্রিয়ভাবে বাতিল হবে না।",
+  "lifetimePurchaseNotice1": "・এককালীন কেনার প্ল্যান কিনলেও আপনার মাসিক বা বার্ষিক প্ল্যান স্বয়ংক্রিয়ভাবে বাতিল হবে না।",
   "lifetimePurchaseNotice2": "এখানে",
   "lifetimePurchaseNotice3": "থেকে আগেই বাতিল করে কিনুন।",
   "featureAppealTryFeature": "নিশ্চিত করুন",
