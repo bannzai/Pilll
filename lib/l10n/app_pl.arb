@@ -473,7 +473,7 @@
   "recordPillFeatureAppealHeadline": "Zapisz przyjęcie tabletki na ekranie głównym",
   "recordPillFeatureAppealBody": "Dotknij blist na ekranie głównym, aby zapisać przyjęcie dzisiejszej tabletki. Jeśli zapis powstanie przez pomyłkę, dotknij ponownie, aby go cofnąć. Historię przyjmowania możesz sprawdzić później i spokojnie kontynuować.",
   "menstruationFeatureAppealTitle": "Zapisuj i przewiduj okres",
-  "menstruationFeatureAppealShortDescription": "Zapisuj datę początku miesiączki i śledź swój cykl",
+  "menstruationFeatureAppealShortDescription": "Zapisz datę rozpoczęcia okresu, aby śledzić swój cykl",
   "menstruationFeatureAppealHeadline": "Rejestruj i przewiduj miesiączkę",
   "menstruationFeatureAppealBody": "Wystarczy zarejestrować miesiączkę, gdy nadejdzie, aby przeglądać historię poprzednich cykli. Następna przewidywana data miesiączki jest obliczana automatycznie, co pozwala lepiej planować swój czas.",
   "calendarDiaryFeatureAppealTitle": "Zapisuj samopoczucie w kalendarzu",

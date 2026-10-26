@@ -473,7 +473,7 @@
   "recordPillFeatureAppealHeadline": "บันทึกการทานยาเม็ดจากหน้าหลัก",
   "recordPillFeatureAppealBody": "แตะแผงยาบนหน้าหลักเพื่อบันทึกการทานยาของวันนี้ได้เลยค่ะ หากบันทึกผิดพลาด แตะอีกครั้งเพื่อยกเลิกได้ค่ะ ดูประวัติการทานยาภายหลังได้ จึงใช้งานต่อได้อย่างสบายใจค่ะ",
   "menstruationFeatureAppealTitle": "บันทึกและคาดการณ์ประจำเดือน",
-  "menstruationFeatureAppealShortDescription": "บันทึกวันแรกของประจำเดือนเพื่อทราบรอบเดือน",
+  "menstruationFeatureAppealShortDescription": "บันทึกวันที่ประจำเดือนเริ่ม เพื่อดูรอบเดือนของคุณค่ะ",
   "menstruationFeatureAppealHeadline": "บันทึกและทำนายรอบเดือนได้",
   "menstruationFeatureAppealBody": "เมื่อประจำเดือนมาบันทึกไว้เพียงอย่างเดียว คุณก็สามารถดูประวัติการมีประจำเดือนย้อนหลังเป็นรายการได้ ระบบยังคาดการณ์วันประจำเดือนครั้งถัดไปให้โดยอัตโนมัติ ช่วยให้คุณวางแผนล่วงหน้าได้",
   "calendarDiaryFeatureAppealTitle": "บันทึกสภาพร่างกายในปฏิทิน",
