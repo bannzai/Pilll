@@ -266,7 +266,7 @@
   "satisfied": "Jestem zadowolona",
   "notSatisfied": "Nie jestem zadowolona",
   "perNumber": "dla każdego numeru tabletki",
-  "howManyDaysDoesMenstruationLast": "Ile dni trwa menstruacja?",
+  "howManyDaysDoesMenstruationLast": "Ile dni trwa twój okres?",
   "daysMenstruationLasts": "dni trwa menstruacja",
   "selectPillNumberForMenstruationStart": "Dotknij numer tabletki, od której zaczyna się miesiączka",
   "countOfSheet": "{number}. arkusz",

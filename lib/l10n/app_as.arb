@@ -266,7 +266,7 @@
   "satisfied": "সন্তুষ্ট",
   "notSatisfied": "সন্তুষ্ট নহয়",
   "perNumber": "প্ৰতিটো বড়িৰ নম্বৰ অনুসৰি",
-  "howManyDaysDoesMenstruationLast": "আপোনাৰ মাহেকীয়া কিমান দিন থাকে?",
+  "howManyDaysDoesMenstruationLast": "আপোনাৰ মাহেকীয়া কেইদিন থাকে?",
   "daysMenstruationLasts": "দিন ঋতুস্ৰাৱ চলে",
   "selectPillNumberForMenstruationStart": "মাহেকীয়া আৰম্ভ হোৱা বড়িৰ সংখ্যাত টেপ কৰক",
   "countOfSheet": "{number}তম",

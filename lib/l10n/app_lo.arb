@@ -266,7 +266,7 @@
   "satisfied": "ພໍໃຈ",
   "notSatisfied": "ບໍ່ພໍໃຈ",
   "perNumber": "ສຳລັບແຕ່ລະເລກຂອງເມັດຢາ",
-  "howManyDaysDoesMenstruationLast": "ມົດດາວຂອງທ່ານແກວ່ກີ່ມື້？",
+  "howManyDaysDoesMenstruationLast": "ປະຈຳເດືອນຂອງທ່ານເປັນຈັກມື້?",
   "daysMenstruationLasts": "ມື້ປະຈຳເດືອນ",
   "selectPillNumberForMenstruationStart": "ແຕະເລກຢາທີ່ເລີ່ມປະຈຳເດືອນ",
   "countOfSheet": "ແຜ່ນທີ່ {number}",

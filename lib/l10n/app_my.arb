@@ -266,7 +266,7 @@
   "satisfied": "ကျေနပ်ပါတယ်",
   "notSatisfied": "စိတ်မကျေနပ်ပါ",
   "perNumber": "ဆေးပြားနံပါတ်တစ်ခုချင်းစီအတွက်",
-  "howManyDaysDoesMenstruationLast": "ရာသီဘယ်နှစ်ရက်ကြာသလဲ။",
+  "howManyDaysDoesMenstruationLast": "ရာသီလာတာ ဘယ်နှရက်ကြာပါသလဲ?",
   "daysMenstruationLasts": "နေ့ ရာသီလာကြာသည်",
   "selectPillNumberForMenstruationStart": "ရာသီလာသောပီးနံပါတ်ကိုနှိပ်ပါ",
   "countOfSheet": "စာရွက်စု {number} ခုမြောက်",

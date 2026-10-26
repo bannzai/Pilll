@@ -266,7 +266,7 @@
   "satisfied": "Сэтгэл хангалуун байна",
   "notSatisfied": "Сэтгэл хангалуун биш",
   "perNumber": "эмийн дугаар бүрээр",
-  "howManyDaysDoesMenstruationLast": "Сарын тэмдэг хэдэн өдөр үргэлжлэх вэ?",
+  "howManyDaysDoesMenstruationLast": "Таны сарын тэмдгийн хугацаа хэдэн өдөр үргэлжилдэг вэ?",
   "daysMenstruationLasts": "өдөр сарын тэмдэг үргэлжилнэ",
   "selectPillNumberForMenstruationStart": "Сарын тэмдэг эхлэх эмийн дугаарыг товш",
   "countOfSheet": "{number}-дахь хуудас",

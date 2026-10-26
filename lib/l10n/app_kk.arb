@@ -266,7 +266,7 @@
   "satisfied": "Қанағаттанамын",
   "notSatisfied": "Қанағаттанбадым",
   "perNumber": "әр таблетка нөмірі үшін",
-  "howManyDaysDoesMenstruationLast": "Етеккір неше күн жалғасады?",
+  "howManyDaysDoesMenstruationLast": "Етеккіріңіз неше күнге созылады?",
   "daysMenstruationLasts": "күн етек көру жалғасады",
   "selectPillNumberForMenstruationStart": "Етіс басталатын дәрі нөмірін басыңыз",
   "countOfSheet": "{number}-ші",

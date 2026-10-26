@@ -266,7 +266,7 @@
   "satisfied": "सन्तुष्ट छु",
   "notSatisfied": "सन्तुष्ट छैन",
   "perNumber": "प्रत्येक चक्की नम्बरका लागि",
-  "howManyDaysDoesMenstruationLast": "तपाईंको महिनावारी कति दिन सम्म चल्छ？",
+  "howManyDaysDoesMenstruationLast": "तपाईंको महिनावारी कति दिनसम्म रहन्छ?",
   "daysMenstruationLasts": "दिन महिनावारी चल्छ",
   "selectPillNumberForMenstruationStart": "मासिक धर्म सुरु हुने गोली नम्बरमा ट्याप गर्नुहोस्",
   "countOfSheet": "{number}औं",

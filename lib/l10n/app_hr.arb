@@ -266,7 +266,7 @@
   "satisfied": "Zadovoljni",
   "notSatisfied": "Nisam zadovoljna",
   "perNumber": "za svaki broj pilule",
-  "howManyDaysDoesMenstruationLast": "Koliko dana traje menstruacija?",
+  "howManyDaysDoesMenstruationLast": "Koliko dana traje vaša menstruacija?",
   "daysMenstruationLasts": "dana traje menstruacija",
   "selectPillNumberForMenstruationStart": "Dodirnite broj pilule kada počinje menstruacija",
   "countOfSheet": "{number}.",

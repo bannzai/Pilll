@@ -266,7 +266,7 @@
   "satisfied": "Mi soddisfa",
   "notSatisfied": "Non sono soddisfatta",
   "perNumber": "per ogni numero di pillola",
-  "howManyDaysDoesMenstruationLast": "Per quanti giorni durano le mestruazioni?",
+  "howManyDaysDoesMenstruationLast": "Quanti giorni durano le tue mestruazioni?",
   "daysMenstruationLasts": "giorni di mestruazioni",
   "selectPillNumberForMenstruationStart": "Tocca il numero della pillola per l'inizio del ciclo",
   "countOfSheet": "{number}° foglio",

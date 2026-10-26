@@ -266,7 +266,7 @@
   "satisfied": "Nimeridhika",
   "notSatisfied": "Sijaridhika",
   "perNumber": "kwa kila nambari ya kidonge",
-  "howManyDaysDoesMenstruationLast": "Hedhi yako inendea kwa siku ngapi?",
+  "howManyDaysDoesMenstruationLast": "Hedhi yako hudumu kwa siku ngapi?",
   "daysMenstruationLasts": "siku hedhi inaendelea",
   "selectPillNumberForMenstruationStart": "Bofya nambari ya kidonge cha kuanza hedhi",
   "countOfSheet": "ya {number}",

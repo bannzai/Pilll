@@ -266,7 +266,7 @@
   "satisfied": "Με ικανοποιεί",
   "notSatisfied": "Δεν είμαι ικανοποιημένη",
   "perNumber": "για κάθε αριθμό χαπιού",
-  "howManyDaysDoesMenstruationLast": "Πόσες ημέρες διαρκεί η περίοδός σου;",
+  "howManyDaysDoesMenstruationLast": "Πόσες ημέρες διαρκεί η περίοδός σας;",
   "daysMenstruationLasts": "ημέρες περιόδου",
   "selectPillNumberForMenstruationStart": "Πατήστε τον αριθμό του χαπιού που αντιστοιχεί στην έναρξη της περιόδου",
   "countOfSheet": "{number}η",

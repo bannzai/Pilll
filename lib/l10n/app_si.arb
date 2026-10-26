@@ -266,7 +266,7 @@
   "satisfied": "තෘප්තිමත්",
   "notSatisfied": "සෑහීමකට පත් නොවේ",
   "perNumber": "එක් එක් පෙති අංකය සඳහා",
-  "howManyDaysDoesMenstruationLast": "මාසික ධර්මය දින කීයක් පවතී?",
+  "howManyDaysDoesMenstruationLast": "ඔබේ ඔසප් වීම දින කීයක් පවතිනවාද?",
   "daysMenstruationLasts": "දින ඔසප් කාලය පවතී",
   "selectPillNumberForMenstruationStart": "ඔසප් වීම ආරම්භ වන පෙති අංකය තට්ටු කරන්න",
   "countOfSheet": "{number}වන",

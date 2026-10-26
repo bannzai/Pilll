@@ -266,7 +266,7 @@
   "satisfied": "Nasiyahan ako",
   "notSatisfied": "Hindi nasiyahan",
   "perNumber": "para sa bawat numero ng tableta",
-  "howManyDaysDoesMenstruationLast": "Ilang araw tumatagal ang inyong regla?",
+  "howManyDaysDoesMenstruationLast": "Ilang araw tumatagal ang regla ninyo?",
   "daysMenstruationLasts": "araw na tumatagal ang regla",
   "selectPillNumberForMenstruationStart": "I-tap ang numero ng pill kapag nagsisimula ang regla",
   "countOfSheet": "ika-{number} na sheet",

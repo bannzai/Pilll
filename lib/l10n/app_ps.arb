@@ -266,7 +266,7 @@
   "satisfied": "زه راضي یم",
   "notSatisfied": "راضي نه یم",
   "perNumber": "د هرې ګولۍ د شمېرې لپاره",
-  "howManyDaysDoesMenstruationLast": "ستاسو میاشتنۍ دوره څومره ورځې روانه وي؟",
+  "howManyDaysDoesMenstruationLast": "ستاسو حیض څو ورځې دوام کوي؟",
   "daysMenstruationLasts": "ورځې حیض دوام کوي",
   "selectPillNumberForMenstruationStart": "د میاشتنۍ د پیل ګولۍ شمېره ټک وکړئ",
   "countOfSheet": "{number}مه پاڼه",

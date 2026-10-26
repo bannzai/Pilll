@@ -266,7 +266,7 @@
   "satisfied": "Memnunum",
   "notSatisfied": "Memnun değilim",
   "perNumber": "her hap numarası için",
-  "howManyDaysDoesMenstruationLast": "Adet kaç gün sürer?",
+  "howManyDaysDoesMenstruationLast": "Adetiniz kaç gün sürüyor?",
   "daysMenstruationLasts": "gün süren adet",
   "selectPillNumberForMenstruationStart": "Adet başlayan hap numarasına dokunun",
   "countOfSheet": "{number}. paket",
