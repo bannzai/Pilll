@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Recevoir une notification à 9:00 le jour même",
   "deletedScheduleCannotBeRestored": "Un programme supprimé ne peut pas être restauré",
   "deleteSchedule": "Supprimer le programme",
-  "onlySupportiOS": "Cette fonctionnalité est uniquement disponible sur l'application iOS",
+  "onlySupportiOS": "Cette fonctionnalité est disponible uniquement dans l’application iOS",
   "healthKitDoesNotSupport": "Cette fonctionnalité n'est pas disponible sur les appareils qui ne prennent pas en charge HealthKit",
   "enableHealthKitFromSettings": "Veuillez activer Santé dans l'application Paramètres",
   "accountAlreadyLinked": "Ce compte {accountTypeProviderName} est déjà lié à votre compte Pilll. Veuillez essayer d'actualiser l'écran ou consulter notre FAQ pour plus d'informations. Détails : {exceptionMessage}",

@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Merrni një njoftim në orën 9:00 të po asaj dite",
   "deletedScheduleCannotBeRestored": "Orari i fshirë nuk mund të rikthehet",
   "deleteSchedule": "Fshini planin",
-  "onlySupportiOS": "I disponueshëm vetëm për aplikacionin iOS",
+  "onlySupportiOS": "Kjo veçori është e disponueshme vetëm në aplikacionin për iOS",
   "healthKitDoesNotSupport": "Nuk mund të përdoret në pajisje që nuk mbështesin HealthCare",
   "enableHealthKitFromSettings": "Ju lutemi aktivizoni Shëndetin nga aplikacioni Cilësime",
   "accountAlreadyLinked": "Ky llogari {accountTypeProviderName} është tashmë e lidhur me llogarinë tuaj Pilll. Provoni të rifreshoni ekranin. Ju lutemi, shikoni edhe FAQ-të. Detajet: {exceptionMessage}",

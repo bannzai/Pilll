@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Ricevi una notifica alle 9:00 dello stesso giorno",
   "deletedScheduleCannotBeRestored": "Un programma eliminato non può essere ripristinato",
   "deleteSchedule": "Elimina il programma",
-  "onlySupportiOS": "Disponibile solo per l'app iOS",
+  "onlySupportiOS": "Questa funzione è disponibile solo nell'app per iOS",
   "healthKitDoesNotSupport": "Non è possibile utilizzare questa funzione su dispositivi non compatibili con Health",
   "enableHealthKitFromSettings": "Attiva Salute dall'app Impostazioni",
   "accountAlreadyLinked": "Questo account {accountTypeProviderName} è già collegato al tuo account Pilll. Prova ad aggiornare la schermata. Consulta anche le FAQ. Dettagli: {exceptionMessage}",

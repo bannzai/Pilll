@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Oʻsha kuni soat 9:00 da bildirishnoma oling",
   "deletedScheduleCannotBeRestored": "Oʻchirilgan jadvalni qayta tiklab boʻlmaydi",
   "deleteSchedule": "Rejani oʻchiring",
-  "onlySupportiOS": "Faqat iOS ilovasi qo'llab-quvvatlanadi",
+  "onlySupportiOS": "Bu funksiya faqat iOS ilovasida mavjud",
   "healthKitDoesNotSupport": "Sog'liqni saqlash funksiyasini qo'llab-quvvatlamaydigan qurilmalarda bu xizmatdan foydalanib bo'lmaydi",
   "enableHealthKitFromSettings": "Iltimos, Sozlamalar ilovasidan Salomatlikni faollashtiring",
   "accountAlreadyLinked": "Bu {accountTypeProviderName} hisob allaqachon sizning Pilll hisobingiz bilan bog'langan. Ekranni yangilashga harakat qiling. FAQni ham ko'ring. Tafsilotlar: {exceptionMessage}",

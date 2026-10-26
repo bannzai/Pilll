@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Получать уведомление в 9:00 того же дня",
   "deletedScheduleCannotBeRestored": "Удалённое расписание нельзя восстановить",
   "deleteSchedule": "Удалить план",
-  "onlySupportiOS": "Доступно только для iOS-приложения",
+  "onlySupportiOS": "Эта функция доступна только в приложении для iOS",
   "healthKitDoesNotSupport": "Эта функция недоступна на устройствах, не поддерживающих HealthKit",
   "enableHealthKitFromSettings": "Включите функцию «Здоровье» в приложении «Настройки»",
   "accountAlreadyLinked": "Этот аккаунт {accountTypeProviderName} уже связан с вашим аккаунтом Pilll. Попробуйте обновить экран. Также ознакомьтесь с FAQ. Подробности: {exceptionMessage}",

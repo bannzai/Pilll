@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Saa teavitus samal päeval kell 9:00",
   "deletedScheduleCannotBeRestored": "Kustutatud ajakava ei saa taastada",
   "deleteSchedule": "Kustuta plaan",
-  "onlySupportiOS": "Toetatud ainult iOS-rakenduses",
+  "onlySupportiOS": "See funktsioon on saadaval ainult iOS-i rakenduses",
   "healthKitDoesNotSupport": "Selles seadmes, mis ei toeta terviseandmeid, ei saa seda funktsiooni kasutada",
   "enableHealthKitFromSettings": "Aktiveerige Tervis Seadete rakenduses",
   "accountAlreadyLinked": "See {accountTypeProviderName} konto on juba teie Pilll kontoga seotud. Palun proovige lehte värskendada. Vaadake ka KKK-d. Üksikasjad: {exceptionMessage}",

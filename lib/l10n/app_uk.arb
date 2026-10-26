@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Отримувати сповіщення о 9:00 того самого дня",
   "deletedScheduleCannotBeRestored": "Видалений розклад неможливо відновити",
   "deleteSchedule": "Видалити план",
-  "onlySupportiOS": "Підтримується лише в iOS додатку",
+  "onlySupportiOS": "Ця функція доступна лише в застосунку для iOS",
   "healthKitDoesNotSupport": "Функція недоступна на пристроях, які не підтримують Health",
   "enableHealthKitFromSettings": "Будь ласка, увімкніть Здоров'я в додатку Налаштування",
   "accountAlreadyLinked": "Цей {accountTypeProviderName} обліковий запис вже прив'язаний до вашого облікового запису Pilll. Спробуйте оновити екран. Також перегляньте ЧаПи. Деталі: {exceptionMessage}",

@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Saat ilmoituksen samana päivänä klo 9:00",
   "deletedScheduleCannotBeRestored": "Poistettua aikataulua ei voi palauttaa",
   "deleteSchedule": "Poista suunnitelma",
-  "onlySupportiOS": "Tuettu vain iOS-sovelluksessa",
+  "onlySupportiOS": "Tämä ominaisuus on käytettävissä vain iOS-sovelluksessa",
   "healthKitDoesNotSupport": "Ei käytettävissä laitteissa, jotka eivät tue HealthKit-ominaisuutta",
   "enableHealthKitFromSettings": "Ota Terveys käyttöön Asetuksista",
   "accountAlreadyLinked": "Tämä {accountTypeProviderName}-tili on jo linkitetty Pilll-tiliisi. Kokeile päivittää näyttö. Katso myös UKK. Yksityiskohdat: {exceptionMessage}",

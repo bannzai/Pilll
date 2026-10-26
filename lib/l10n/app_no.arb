@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Få et varsel kl. 9:00 samme dag",
   "deletedScheduleCannotBeRestored": "En slettet avtale kan ikke gjenopprettes",
   "deleteSchedule": "Slett planen",
-  "onlySupportiOS": "Kun tilgjengelig på iOS-appen",
+  "onlySupportiOS": "Denne funksjonen er bare tilgjengelig i iOS-appen",
   "healthKitDoesNotSupport": "Denne funksjonen er ikke tilgjengelig på enheter som ikke støtter helse-app",
   "enableHealthKitFromSettings": "Aktiver Helse fra Innstillinger-appen",
   "accountAlreadyLinked": "Denne {accountTypeProviderName}-kontoen er allerede koblet til din Pilll-konto. Prøv å oppdatere skjermen. Se også FAQ. Detaljer: {exceptionMessage}",

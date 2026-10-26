@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Атрымліваць апавяшчэнне ў гэты дзень а 9:00",
   "deletedScheduleCannotBeRestored": "Выдалены план нельга аднавіць",
   "deleteSchedule": "Выдаліць запланаванае",
-  "onlySupportiOS": "Даступна толькі ў iOS-прыкладанні",
+  "onlySupportiOS": "Гэта функцыя даступная толькі ў праграме для iOS",
   "healthKitDoesNotSupport": "Гэтая функцыя недаступная на прыладах, якія не падтрымліваюць Health",
   "enableHealthKitFromSettings": "Калі ласка, уключыце Здароўе ў праграме Налады",
   "accountAlreadyLinked": "Гэты акаўнт {accountTypeProviderName} ужо звязаны з вашым акаўнтам Pilll. Паспрабуйце абнавіць экран. Таксама азнаёмцеся з FAQ. Падрабязнасці: {exceptionMessage}",

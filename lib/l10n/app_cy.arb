@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Derbyn hysbysiad am 9:00 ar y diwrnod hwnnw",
   "deletedScheduleCannotBeRestored": "Ni ellir adfer amserlen sydd wedi'i dileu",
   "deleteSchedule": "Dileu’r amserlen",
-  "onlySupportiOS": "Ar gael ar ap iOS yn unig",
+  "onlySupportiOS": "Mae'r nodwedd hon ar gael yn ap iOS yn unig",
   "healthKitDoesNotSupport": "Nid yw'r nodwedd hon ar gael ar ddyfeisiau nad ydynt yn cefnogi gofal iechyd",
   "enableHealthKitFromSettings": "Galluogwch Iechyd drwy'r ap Gosodiadau",
   "accountAlreadyLinked": "Mae'r cyfrif {accountTypeProviderName} hwn eisoes wedi'i gysylltu â'ch cyfrif Pilll. Rhowch gynnig ar adnewyddu'r sgrin. Gwelwch hefyd y CyfFAQ. Manylion: {exceptionMessage}",

@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "ទទួលការជូនដំណឹងនៅម៉ោង 9:00 នៅថ្ងៃនោះ",
   "deletedScheduleCannotBeRestored": "មិនអាចស្ដារកាលវិភាគដែលបានលុបវិញបានទេ",
   "deleteSchedule": "លុបកាលវិភាគ",
-  "onlySupportiOS": "គាំទ្រតែកម្មវិធី iOS ប៉ុណ្ណោះ",
+  "onlySupportiOS": "មុខងារនេះមានតែនៅក្នុងកម្មវិធី iOS ប៉ុណ្ណោះ",
   "healthKitDoesNotSupport": "មុខងារនេះមិនអាចប្រើបានលើឧបករណ៍ដែលមិនគាំទ្រការថែទាំសុខភាពទេ",
   "enableHealthKitFromSettings": "សូមបើកមុខងារសុខភាពនៅក្នុងកម្មវិធីកំណត់ការ",
   "accountAlreadyLinked": "គណនី{accountTypeProviderName}នេះត្រូវបានភ្ជាប់ជាមួយគណនី Pilll របស់អ្នករួចហើយ។ សូមព្យាយាមធ្វើបច្ចុប្បន្នភាពអេក្រង់។ សូមមើល FAQ ផងដែរ។ លម្អិត៖ {exceptionMessage}",

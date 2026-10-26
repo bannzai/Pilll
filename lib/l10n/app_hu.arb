@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Értesítés aznap 9:00-kor",
   "deletedScheduleCannotBeRestored": "A törölt időbeosztás nem állítható vissza",
   "deleteSchedule": "Ütemezés törlése",
-  "onlySupportiOS": "Csak iOS alkalmazásban elérhető",
+  "onlySupportiOS": "Ez a funkció csak az iOS-alkalmazásban érhető el",
   "healthKitDoesNotSupport": "Ez a funkció nem elérhető olyan eszközökön, amelyek nem támogatják az egészségügyi adatokat",
   "enableHealthKitFromSettings": "Kérjük, engedélyezze az Egészség funkciót a Beállítások alkalmazásból",
   "accountAlreadyLinked": "Ez a {accountTypeProviderName} fiók már kapcsolódik az Ön Pilll fiókjához. Kérjük, próbálja meg frissíteni a képernyőt. Tekintse meg a GYIK-ot is. Részletek: {exceptionMessage}",

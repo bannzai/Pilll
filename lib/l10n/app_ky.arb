@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Ошол күнү саат 9:00дө билдирме алыңыз",
   "deletedScheduleCannotBeRestored": "Өчүрүлгөн жадыбалды калыбына келтирүү мүмкүн эмес",
   "deleteSchedule": "Планды өчүрүңүз",
-  "onlySupportiOS": "iOS колдонмосунда гана жеткиликтүү",
+  "onlySupportiOS": "Бул функция iOS тиркемесинде гана жеткиликтүү",
   "healthKitDoesNotSupport": "Ден соолук кызматын колдобогон түзүлүштөрдө бул функцияны пайдалана албайсыз",
   "enableHealthKitFromSettings": "Жөндөөлөр колдонмосунан Саламаттыкты иштетиңиз",
   "accountAlreadyLinked": "Бул {accountTypeProviderName} аккаунт мурда эле сиздин Pilll аккаунтуңузга байланыштырылган. Экранды жаңыртып көрүңүз. FAQты да караңыз. Кененирээк маалымат: {exceptionMessage}",

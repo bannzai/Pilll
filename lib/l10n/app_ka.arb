@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "შეტყობინების მიღება იმავე დღეს 9:00 საათზე",
   "deletedScheduleCannotBeRestored": "წაშლილი განრიგის აღდგენა შეუძლებელია",
   "deleteSchedule": "გეგმის წაშლა",
-  "onlySupportiOS": "მხარდაჭერილია მხოლოდ iOS აპლიკაციაში",
+  "onlySupportiOS": "ეს ფუნქცია ხელმისაწვდომია მხოლოდ iOS აპში",
   "healthKitDoesNotSupport": "ჯანმრთელობის დაცვას არ უჭერს მხარს ეს მოწყობილობა, ამიტომ ფუნქციის გამოყენება შეუძლებელია",
   "enableHealthKitFromSettings": "პარამეტრების აპლიდან ჯანმრთელობის მონაცემები ჩართეთ",
   "accountAlreadyLinked": "ეს {accountTypeProviderName} ანგარიში უკვე დაკავშირებულია თქვენს Pilll ანგარიშთან. სცადეთ ეკრანის განახლება. ასევე იხილეთ FAQ. დეტალები: {exceptionMessage}",

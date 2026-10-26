@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "اسی دن 9:00 بجے اطلاع حاصل کریں",
   "deletedScheduleCannotBeRestored": "حذف شدہ شیڈول بحال نہیں کیا جا سکتا",
   "deleteSchedule": "شیڈول حذف کریں",
-  "onlySupportiOS": "صرف iOS ایپ میں دستیاب ہے",
+  "onlySupportiOS": "یہ سہولت صرف iOS ایپ میں دستیاب ہے",
   "healthKitDoesNotSupport": "یہ فیچر ان ڈیوائسز پر دستیاب نہیں ہے جو ہیلتھ کیئر کو سپورٹ نہیں کرتے",
   "enableHealthKitFromSettings": "سیٹنگز ایپ سے ہیلتھ کیئر کو فعال کریں",
   "accountAlreadyLinked": "یہ {accountTypeProviderName} اکاؤنٹ پہلے سے آپ کے Pilll اکاؤنٹ سے منسلک ہے۔ براہ کرم اسکرین کو ریفریش کرنے کی کوشش کریں۔ FAQ بھی دیکھیں۔ تفصیلات: {exceptionMessage}",

@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "በዚያው ቀን 9:00 ላይ ማሳወቂያ ይቀበሉ",
   "deletedScheduleCannotBeRestored": "የተሰረዘ ቀጠሮ መመለስ አይቻልም",
   "deleteSchedule": "ቀጠሮን ይሰርዙ",
-  "onlySupportiOS": "iOS መተግበሪያ ላይ ብቻ ይገኛል",
+  "onlySupportiOS": "ይህ ባህሪ በiOS መተግበሪያ ብቻ ይገኛል",
   "healthKitDoesNotSupport": "ጤና እንክብካቤን የማይደግፉ መሣሪያዎች ላይ መጠቀም አይቻልም",
   "enableHealthKitFromSettings": "እባክዎን ሴቲንግስ መተግበሪያ ውስጥ ሄልዝኬርን ያንቁ",
   "accountAlreadyLinked": "ይህ {accountTypeProviderName} መለያ ቀድሞውኑ ከእርስዎ Pilll መለያ ጋር ተያይዞ ነው። ስክሪኑን ማሻሻል ይሞክሩ። FAQ ይመልከቱ። ዝርዝር፡ {exceptionMessage}",

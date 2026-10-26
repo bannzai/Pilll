@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Receba uma notificação às 9:00 do mesmo dia",
   "deletedScheduleCannotBeRestored": "Não é possível restaurar uma programação excluída",
   "deleteSchedule": "Excluir programação",
-  "onlySupportiOS": "Disponível apenas no aplicativo iOS",
+  "onlySupportiOS": "Este recurso está disponível apenas no app para iOS",
   "healthKitDoesNotSupport": "Esta funcionalidade não está disponível em dispositivos que não suportam o app Saúde",
   "enableHealthKitFromSettings": "Ative a Saúde no app Configurações",
   "accountAlreadyLinked": "Esta conta {accountTypeProviderName} já está vinculada à sua conta do Pilll. Tente atualizar a tela. Consulte também as perguntas frequentes. Detalhes: {exceptionMessage}",

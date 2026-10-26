@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "په هماغه ورځ 9:00 بجې خبرتیا ترلاسه کړئ",
   "deletedScheduleCannotBeRestored": "ړنګ شوی مهالوېش بېرته نه شي راګرځېدلی",
   "deleteSchedule": "مهالوېش ړنګ کړئ",
-  "onlySupportiOS": "یوازې د iOS اپلیکیشن لپاره دستیاب دی",
+  "onlySupportiOS": "دا ځانګړنه یوازې د iOS په اپ کې شته",
   "healthKitDoesNotSupport": "دا فعالیت د هغو وسیلو لپاره چې د روغتیا پاملرنې سیسټم ته ملاتړ نه کوي، د کارونې وړ نه دی",
   "enableHealthKitFromSettings": "مهرباني وکړئ د تنظیماتو اپ څخه روغتیایی پاملرنه فعاله کړئ",
   "accountAlreadyLinked": "دا {accountTypeProviderName} اکاونټ دمخه ستاسو د Pilll اکاونټ سره وصل شوی دی. د پرده تازه کول وآزموئ. د FAQ برخه هم وګورئ. تفصیلات: {exceptionMessage}",

@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Добивајте известување истиот ден во 9:00",
   "deletedScheduleCannotBeRestored": "Избришаниот распоред не може да се врати",
   "deleteSchedule": "Избришете го планот",
-  "onlySupportiOS": "Достапно е само за iOS апликација",
+  "onlySupportiOS": "Оваа функција е достапна само во апликацијата за iOS",
   "healthKitDoesNotSupport": "Функцијата не е достапна на уреди без поддршка за здравствена заштита",
   "enableHealthKitFromSettings": "Ве молиме, овозможете го здравството од апликацијата за подесувања",
   "accountAlreadyLinked": "Оваа {accountTypeProviderName} сметка веќе е поврзана со вашата Pilll сметка. Обидете се да го освежите екранот. Исто така, погледнете ги ЧПП. Детали: {exceptionMessage}",

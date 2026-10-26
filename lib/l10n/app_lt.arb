@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Gauti pranešimą tą pačią dieną 9:00 val.",
   "deletedScheduleCannotBeRestored": "Ištrinto tvarkaraščio atkurti nepavyks",
   "deleteSchedule": "Ištrinkite planą",
-  "onlySupportiOS": "Palaikoma tik iOS programėlėje",
+  "onlySupportiOS": "Ši funkcija pasiekiama tik „iOS“ programėlėje",
   "healthKitDoesNotSupport": "Šis funkcionalumas nepasiekiamas įrenginiuose, kurie nepalaiko sveikatos duomenų",
   "enableHealthKitFromSettings": "Prašome įgalinti Sveikatą nustatymų programėlėje",
   "accountAlreadyLinked": "Ši {accountTypeProviderName} paskyra jau susieta su jūsų Pilll paskyra. Pabandykite atnaujinti ekraną. Taip pat peržiūrėkite DUK. Išsamiau: {exceptionMessage}",

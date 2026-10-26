@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "അതേ ദിവസം 9:00-ന് അറിയിപ്പ് ലഭിക്കുക",
   "deletedScheduleCannotBeRestored": "ഇല്ലാതാക്കിയ ഷെഡ്യൂൾ വീണ്ടെടുക്കാൻ കഴിയില്ല",
   "deleteSchedule": "പട്ടിക ഇല്ലാതാക്കുക",
-  "onlySupportiOS": "iOS ആപ്പിൽ മാത്രം ലഭ്യമാണ്",
+  "onlySupportiOS": "ഈ സൗകര്യം iOS ആപ്പിൽ മാത്രമേ ലഭ്യമാകൂ",
   "healthKitDoesNotSupport": "ഹെൽത്ത്‌കെയർ പിന്തുണയില്ലാത്ത ഉപകരണങ്ങളിൽ ഈ സവിശേഷത ഉപയോഗിക്കാൻ കഴിയില്ല",
   "enableHealthKitFromSettings": "സെറ്റിംഗ്സ് ആപ്പിൽ നിന്ന് ഹെൽത്ത്കെയർ സജീവമാക്കുക",
   "accountAlreadyLinked": "ഈ {accountTypeProviderName} അക്കൗണ്ട് ഇതിനകം നിങ്ങളുടെ Pilll അക്കൗണ്ടുമായി ബന്ധിപ്പിച്ചിട്ടുണ്ട്. സ്ക്രീൻ പുതുക്കാൻ ശ്രമിക്കുക. FAQ യും കാണുക. വിശദാംശങ്ങൾ: {exceptionMessage}",

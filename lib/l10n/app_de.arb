@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Am selben Tag um 9:00 Uhr eine Benachrichtigung erhalten",
   "deletedScheduleCannotBeRestored": "Ein gelöschter Termin kann nicht wiederhergestellt werden",
   "deleteSchedule": "Termin löschen",
-  "onlySupportiOS": "Nur für iOS-App verfügbar",
+  "onlySupportiOS": "Diese Funktion ist nur in der iOS-App verfügbar",
   "healthKitDoesNotSupport": "Diese Funktion ist auf Geräten ohne Health-Unterstützung nicht verfügbar.",
   "enableHealthKitFromSettings": "Bitte aktivieren Sie Health in den Einstellungen",
   "accountAlreadyLinked": "Dieses {accountTypeProviderName}-Konto ist bereits mit Ihrem Pilll-Konto verknüpft. Bitte versuchen Sie, die Ansicht zu aktualisieren. Schauen Sie auch in unsere FAQ. Details: {exceptionMessage}",

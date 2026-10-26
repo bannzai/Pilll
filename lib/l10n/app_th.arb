@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "รับการแจ้งเตือนเวลา 9:00 น. ของวันนั้น",
   "deletedScheduleCannotBeRestored": "ไม่สามารถกู้คืนกำหนดการที่ลบแล้วได้ค่ะ",
   "deleteSchedule": "ลบกำหนดการ",
-  "onlySupportiOS": "รองรับเฉพาะแอป iOS เท่านั้น",
+  "onlySupportiOS": "ฟีเจอร์นี้ใช้งานได้เฉพาะในแอป iOS ค่ะ",
   "healthKitDoesNotSupport": "ไม่สามารถใช้งานได้บนอุปกรณ์ที่ไม่รองรับฟีเจอร์สุขภาพ",
   "enableHealthKitFromSettings": "กรุณาเปิดใช้งาน Health จากแอปการตั้งค่า",
   "accountAlreadyLinked": "บัญชี{accountTypeProviderName}นี้ได้เชื่อมโยงกับบัญชี Pilll ของคุณแล้ว โปรดลองรีเฟรชหน้าจอและดู FAQ ด้วย รายละเอียด: {exceptionMessage}",

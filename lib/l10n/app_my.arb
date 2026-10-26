@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "ထိုနေ့ 9:00 နာရီတွင် အသိပေးချက် ရယူပါ",
   "deletedScheduleCannotBeRestored": "ဖျက်လိုက်သော အစီအစဉ်ကို ပြန်လည်ရယူ၍ မရပါ",
   "deleteSchedule": "အစီအစဉ်ကို ဖျက်ပါ",
-  "onlySupportiOS": "iOS အက်ပ်အတွက်သာ ပံ့ပိုးထားပါသည်",
+  "onlySupportiOS": "ဤလုပ်ဆောင်ချက်ကို iOS အက်ပ်တွင်သာ အသုံးပြုနိုင်ပါတယ်",
   "healthKitDoesNotSupport": "ကျန်းမာရေးစောင့်ရှောက်မှုကို မပံ့ပိုးပေးသော စက်ပစ္စည်းများတွင် အသုံးမပြုနိုင်ပါ",
   "enableHealthKitFromSettings": "Settings အပ်စ်မှ ကျန်းမာရေးကို ဖွင့်ပါ",
   "accountAlreadyLinked": "ဒီ{accountTypeProviderName}အကောင့်သည် သင့်လက်ရှိ Pilll အကောင့်နှင့် ပြီးသားချိတ်ဆက်ထားပါသည်။ မျက်နှာပြင်ကို ပြန်လည်တင်ကြည့်ပါ။ FAQ ကိုလည်း ကြည့်ရှုပါ။ အသေးစိတ်: {exceptionMessage}",

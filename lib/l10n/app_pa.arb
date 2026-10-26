@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "ਉਸੇ ਦਿਨ 9:00 ਵਜੇ ਸੂਚਨਾ ਪ੍ਰਾਪਤ ਕਰੋ",
   "deletedScheduleCannotBeRestored": "ਮਿਟਾਇਆ ਹੋਇਆ ਸ਼ਡਿਊਲ ਮੁੜ ਪ੍ਰਾਪਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ",
   "deleteSchedule": "ਯੋਜਨਾ ਮਿਟਾਓ",
-  "onlySupportiOS": "ਸਿਰਫ਼ iOS ਐਪ ਵਿੱਚ ਸਮਰਥਿਤ ਹੈ",
+  "onlySupportiOS": "ਇਹ ਸਹੂਲਤ ਸਿਰਫ਼ iOS ਐਪ ਵਿੱਚ ਉਪਲਬਧ ਹੈ",
   "healthKitDoesNotSupport": "ਸਿਹਤ ਦੇਖਭਾਲ ਦਾ ਸਮਰਥਨ ਨਾ ਕਰਨ ਵਾਲੇ ਡਿਵਾਈਸਾਂ ਵਿੱਚ ਇਹ ਸੇਵਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
   "enableHealthKitFromSettings": "ਸੈਟਿੰਗ ਐਪ ਵਿੱਚੋਂ ਹੈਲਥਕੇਅਰ ਨੂੰ ਚਾਲੂ ਕਰੋ",
   "accountAlreadyLinked": "ਇਹ {accountTypeProviderName} ਖਾਤਾ ਪਹਿਲਾਂ ਹੀ ਤੁਹਾਡੇ Pilll ਖਾਤੇ ਨਾਲ ਜੁੜਿਆ ਹੋਇਆ ਹੈ। ਸਕਰੀਨ ਨੂੰ ਰਿਫਰੈਸ਼ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ। FAQ ਵੀ ਵੇਖੋ। ਵੇਰਵਾ: {exceptionMessage}",

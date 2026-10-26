@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "అదే రోజు 9:00 గంటలకు నోటిఫికేషన్ పొందండి",
   "deletedScheduleCannotBeRestored": "తొలగించిన షెడ్యూల్‌ను తిరిగి పొందలేరు",
   "deleteSchedule": "షెడ్యూల్‌ను తొలగించండి",
-  "onlySupportiOS": "iOS యాప్‌లో మాత్రమే అందుబాటులో ఉంది",
+  "onlySupportiOS": "ఈ సదుపాయం iOS యాప్‌లో మాత్రమే అందుబాటులో ఉంది",
   "healthKitDoesNotSupport": "హెల్త్‌కేర్‌కు మద్దతు లేని పరికరాలలో ఈ ఫీచర్‌ను ఉపయోగించలేరు",
   "enableHealthKitFromSettings": "దయచేసి సెట్టింగ్స్ యాప్ నుండి హెల్త్‌కేర్‌ను ప్రారంభించండి",
   "accountAlreadyLinked": "ఈ {accountTypeProviderName} ఖాతా ఇప్పటికే మీ Pilll ఖాతాతో లింక్ చేయబడింది. పేజీని రిఫ్రెష్ చేయడాన్ని ప్రయత్నించండి. FAQ కూడా చూడండి. వివరాలు: {exceptionMessage}",

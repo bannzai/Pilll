@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Makatanggap ng abiso nang 9:00 sa araw na iyon",
   "deletedScheduleCannotBeRestored": "Hindi na maibabalik ang iskedyul kapag nabura na",
   "deleteSchedule": "Burahin ang iskedyul",
-  "onlySupportiOS": "Suportado lamang sa iOS app",
+  "onlySupportiOS": "Available lang po ang feature na ito sa iOS app",
   "healthKitDoesNotSupport": "Hindi available ang feature na ito sa mga device na hindi sumusuporta sa HealthCare",
   "enableHealthKitFromSettings": "Mangyaring paganahin ang Healthcare mula sa Settings app",
   "accountAlreadyLinked": "Ang {accountTypeProviderName} account na ito ay naka-link na sa inyong Pilll account. Subukan mag-refresh ng screen. Tingnan din ang FAQ. Detalye: {exceptionMessage}",

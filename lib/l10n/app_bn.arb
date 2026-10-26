@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "সেদিন সকাল ৯:০০টায় বিজ্ঞপ্তি পান",
   "deletedScheduleCannotBeRestored": "মুছে ফেলা সময়সূচি ফিরিয়ে আনা যাবে না",
   "deleteSchedule": "সময়সূচি মুছুন",
-  "onlySupportiOS": "শুধুমাত্র iOS অ্যাপে সমর্থিত",
+  "onlySupportiOS": "এই সুবিধাটি শুধু iOS অ্যাপে পাওয়া যায়",
   "healthKitDoesNotSupport": "হেলথকেয়ার সমর্থিত নয় এমন ডিভাইসে এই সুবিধাটি ব্যবহার করা যাবে না",
   "enableHealthKitFromSettings": "সেটিংস অ্যাপ থেকে হেলথকেয়ার সক্রিয় করুন",
   "accountAlreadyLinked": "এই {accountTypeProviderName} অ্যাকাউন্টটি ইতিমধ্যে আপনার Pilll অ্যাকাউন্টের সাথে সংযুক্ত। স্ক্রিন রিফ্রেশ করে দেখুন। FAQ-ও দেখুন। বিস্তারিত: {exceptionMessage}",

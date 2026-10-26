@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Dostávat oznámení v 9:00 téhož dne",
   "deletedScheduleCannotBeRestored": "Smazaný plán nelze obnovit",
   "deleteSchedule": "Smazat plán",
-  "onlySupportiOS": "Podporováno pouze v iOS aplikaci",
+  "onlySupportiOS": "Tato funkce je dostupná pouze v aplikaci pro iOS",
   "healthKitDoesNotSupport": "Tuto funkci nelze použít na zařízeních, která nepodporují zdravotní aplikace",
   "enableHealthKitFromSettings": "Prosím povolte Zdraví v aplikaci Nastavení",
   "accountAlreadyLinked": "Tento {accountTypeProviderName} účet je již propojený s vaším Pilll účtem. Zkuste aktualizovat obrazovku. Podívejte se také na FAQ. Podrobnosti: {exceptionMessage}",

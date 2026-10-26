@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Jaso jakinarazpena egun horretan 9:00etan",
   "deletedScheduleCannotBeRestored": "Ezabatutako plana ezin da berreskuratu",
   "deleteSchedule": "Ezabatu plana",
-  "onlySupportiOS": "iOS aplikaziorako soilik eskuragarria da",
+  "onlySupportiOS": "Eginbide hau iOS aplikazioan bakarrik dago erabilgarri",
   "healthKitDoesNotSupport": "Osasun-zaintza onartzen ez duten gailuetan ezin da funtzio hau erabili",
   "enableHealthKitFromSettings": "Mesedez, gaitu osasun-zaintza ezarpen aplikaziotik",
   "accountAlreadyLinked": "{accountTypeProviderName} kontu hau dagoeneko zure Pilll kontuarekin lotuta dago. Pantailaren eguneraketa saiatu ezazu. FAQ ere ikusi ezazu. Xehetasunak: {exceptionMessage}",

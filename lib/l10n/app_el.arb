@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Λήψη ειδοποίησης στις 9:00 την ίδια ημέρα",
   "deletedScheduleCannotBeRestored": "Δεν είναι δυνατή η επαναφορά ενός διαγραμμένου προγράμματος",
   "deleteSchedule": "Διαγραφή προγράμματος",
-  "onlySupportiOS": "Διαθέσιμο μόνο στην εφαρμογή iOS",
+  "onlySupportiOS": "Αυτή η λειτουργία είναι διαθέσιμη μόνο στην εφαρμογή για iOS",
   "healthKitDoesNotSupport": "Δεν μπορεί να χρησιμοποιηθεί σε συσκευές που δεν υποστηρίζουν το HealthKit",
   "enableHealthKitFromSettings": "Ενεργοποιήστε την Υγεία από την εφαρμογή Ρυθμίσεων",
   "accountAlreadyLinked": "Αυτός ο {accountTypeProviderName} λογαριασμός είναι ήδη συνδεδεμένος με τον λογαριασμό σας στο Pilll. Δοκιμάστε να ανανεώσετε την οθόνη. Επίσης, συμβουλευτείτε τις FAQ. Λεπτομέρειες: {exceptionMessage}",

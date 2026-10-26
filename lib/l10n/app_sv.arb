@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Få en avisering kl. 9:00 samma dag",
   "deletedScheduleCannotBeRestored": "Ett raderat schema kan inte återställas",
   "deleteSchedule": "Ta bort schemat",
-  "onlySupportiOS": "Endast tillgänglig för iOS-appen",
+  "onlySupportiOS": "Den här funktionen finns bara i iOS-appen",
   "healthKitDoesNotSupport": "Den här funktionen är inte tillgänglig på enheter som inte stöder Hälsodata",
   "enableHealthKitFromSettings": "Vänligen aktivera Hälsa i Inställningar-appen",
   "accountAlreadyLinked": "Detta {accountTypeProviderName}-konto är redan kopplat till ditt Pilll-konto. Försök uppdatera skärmen. Se även FAQ. Detaljer: {exceptionMessage}",

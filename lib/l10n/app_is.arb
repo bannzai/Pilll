@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Fá tilkynningu kl. 9:00 sama dag",
   "deletedScheduleCannotBeRestored": "Ekki er hægt að endurheimta eydda áætlun",
   "deleteSchedule": "Eyða áætlun",
-  "onlySupportiOS": "Aðeins fáanlegt í iOS appinu",
+  "onlySupportiOS": "Þessi eiginleiki er aðeins í boði í iOS-appinu",
   "healthKitDoesNotSupport": "Þessi eiginleiki er ekki tiltækur á tækjum sem styðja ekki heilsugögn",
   "enableHealthKitFromSettings": "Vinsamlegast virkjaðu heilsuvernd í stillingaforritinu",
   "accountAlreadyLinked": "Þessi {accountTypeProviderName} reikningur er nú þegar tengdur við Pilll reikninginn þinn. Reyndu að uppfæra skjáinn. Vinsamlegast skoðaðu einnig FAQ. Nánar: {exceptionMessage}",

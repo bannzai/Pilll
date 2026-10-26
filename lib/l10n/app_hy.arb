@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Ստացեք ծանուցում նույն օրը՝ ժամը 9:00-ին",
   "deletedScheduleCannotBeRestored": "Ջնջված ժամանակացույցը հնարավոր չէ վերականգնել",
   "deleteSchedule": "Ջնջել ժամանակացույցը",
-  "onlySupportiOS": "Աջակցվում է միայն iOS հավելվածը",
+  "onlySupportiOS": "Այս գործառույթը հասանելի է միայն iOS հավելվածում",
   "healthKitDoesNotSupport": "Առողջապահություն չաջակցող սարքերում այս ֆունկցիան հասանելի չէ",
   "enableHealthKitFromSettings": "Խնդրում ենք Կարգավորումների հավելվածում միացրեք Առողջությունը",
   "accountAlreadyLinked": "Այս {accountTypeProviderName} հաշիվն արդեն կապակցված է ձեր Pilll հաշվի հետ: Փորձեք թարմացնել էկրանը: Նաև նայեք FAQ-ին: Մանրամասներ՝ {exceptionMessage}",

@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Terima pemberitahuan pada pukul 9:00 hari yang sama",
   "deletedScheduleCannotBeRestored": "Jadual yang dipadam tidak dapat dipulihkan",
   "deleteSchedule": "Padam jadual",
-  "onlySupportiOS": "Hanya tersedia untuk aplikasi iOS",
+  "onlySupportiOS": "Ciri ini hanya tersedia dalam aplikasi iOS",
   "healthKitDoesNotSupport": "Ciri ini tidak tersedia pada peranti yang tidak menyokong HealthCare",
   "enableHealthKitFromSettings": "Sila dayakan Kesihatan daripada aplikasi Tetapan",
   "accountAlreadyLinked": "Akaun {accountTypeProviderName} ini sudah dikaitkan dengan akaun Pilll anda. Cuba muat semula skrin. Sila lihat juga FAQ. Butiran: {exceptionMessage}",

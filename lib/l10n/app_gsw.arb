@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Am gliiche Tag am 9:00 e Meldig übercho",
   "deletedScheduleCannotBeRestored": "En glöschte Termin chasch nümme zruggbringe",
   "deleteSchedule": "Plan lösche",
-  "onlySupportiOS": "Isch numme für iOS verfügbar",
+  "onlySupportiOS": "Die Funktion gits nume i de iOS-App",
   "healthKitDoesNotSupport": "Die Funktion isch uf Gerät ohni HealthKit-Understützig nöd verfüegbar",
   "enableHealthKitFromSettings": "Bitte aktiviere d'Gsundheit i de Iistelligs-App",
   "accountAlreadyLinked": "Ds {accountTypeProviderName}-Konto isch scho mit Ihrem Pilll-Konto verbunde. Bitte versuechet d'Aazeig z'aktualisiere. Luegget au s'FAQ aa. Details: {exceptionMessage}",

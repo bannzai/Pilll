@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Həmin gün saat 9:00-da bildiriş alın",
   "deletedScheduleCannotBeRestored": "Silinmiş planı bərpa etmək mümkün deyil",
   "deleteSchedule": "Planı silin",
-  "onlySupportiOS": "Yalnız iOS tətbiqi üçün mövcuddur",
+  "onlySupportiOS": "Bu funksiya yalnız iOS tətbiqində mövcuddur",
   "healthKitDoesNotSupport": "Səhiyyə funksiyasını dəstəkləməyən cihazlarda bu xidmətdən istifadə edilə bilməz",
   "enableHealthKitFromSettings": "Ayarlar tətbiqindən Sağlamlığı aktivləşdirin",
   "accountAlreadyLinked": "Bu {accountTypeProviderName} hesabı artıq istifadə etdiyiniz Pilll hesabı ilə əlaqələndirilmişdir. Ekranı yeniləməyə cəhd edin. FAQ-ya da baxın. Təfərrüatlar: {exceptionMessage}",

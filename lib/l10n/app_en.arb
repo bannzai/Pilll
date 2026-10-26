@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Get a notification at 9:00 that day",
   "deletedScheduleCannotBeRestored": "Deleted schedules cannot be restored",
   "deleteSchedule": "Delete schedule",
-  "onlySupportiOS": "This feature is only available on the iOS app",
+  "onlySupportiOS": "This feature is only available in the iOS app",
   "healthKitDoesNotSupport": "This feature is not available on devices that do not support HealthKit",
   "enableHealthKitFromSettings": "Please enable Health in the Settings app",
   "accountAlreadyLinked": "This {accountTypeProviderName} account is already linked to your Pilll account. Please try refreshing the screen or check our FAQ for more information. Details: {exceptionMessage}",

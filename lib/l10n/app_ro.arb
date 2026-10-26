@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Primește o notificare la 9:00 în aceeași zi",
   "deletedScheduleCannotBeRestored": "Un program șters nu poate fi restaurat",
   "deleteSchedule": "Șterge programul",
-  "onlySupportiOS": "Această funcție este disponibilă doar pentru aplicația iOS",
+  "onlySupportiOS": "Această funcție este disponibilă doar în aplicația pentru iOS",
   "healthKitDoesNotSupport": "Nu poate fi utilizată pe dispozitivele care nu sunt compatibile cu HealthCare",
   "enableHealthKitFromSettings": "Activați Sănătatea din aplicația Setări",
   "accountAlreadyLinked": "Acest cont {accountTypeProviderName} este deja asociat cu contul dvs. Pilll. Încercați să actualizați ecranul. Consultați și FAQ-ul. Detalii: {exceptionMessage}",

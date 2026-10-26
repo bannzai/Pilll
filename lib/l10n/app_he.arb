@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "קבלת התראה בשעה 9:00 באותו יום",
   "deletedScheduleCannotBeRestored": "לא ניתן לשחזר לוח זמנים שנמחק",
   "deleteSchedule": "מחיקת התוכנית",
-  "onlySupportiOS": "זמין רק באפליקציה של iOS",
+  "onlySupportiOS": "התכונה הזו זמינה רק באפליקציה ל־iOS",
   "healthKitDoesNotSupport": "תכונה זו אינה זמינה במכשירים שאינם תומכים בבריאות",
   "enableHealthKitFromSettings": "אנא הפעילו את הבריאות באפליקציית ההגדרות",
   "accountAlreadyLinked": "החשבון {accountTypeProviderName} הזה כבר מקושר לחשבון Pilll שלך. נסה לרענן את המסך. עיין גם בשאלות נפוצות. פרטים: {exceptionMessage}",

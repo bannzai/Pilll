@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Saņemt paziņojumu tajā pašā dienā plkst. 9:00",
   "deletedScheduleCannotBeRestored": "Izdzēstu grafiku nevar atjaunot",
   "deleteSchedule": "Dzēsiet plānu",
-  "onlySupportiOS": "Pieejams tikai iOS lietotnē",
+  "onlySupportiOS": "Šī funkcija ir pieejama tikai iOS lietotnē",
   "healthKitDoesNotSupport": "Šī funkcija nav pieejama ierīcēs, kas neatbalsta veselības datu funkcijas",
   "enableHealthKitFromSettings": "Lūdzu, iespējojiet Veselību iestatījumos",
   "accountAlreadyLinked": "Šis {accountTypeProviderName} konts jau ir saistīts ar jūsu Pilll kontu. Lūdzu, mēģiniet atjaunot ekrānu. Skatiet arī BUJ. Detaļas: {exceptionMessage}",

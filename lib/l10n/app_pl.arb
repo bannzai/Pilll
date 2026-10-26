@@ -328,7 +328,7 @@
   "receiveNotificationAt9AM": "Otrzymuj powiadomienie o 9:00 tego samego dnia",
   "deletedScheduleCannotBeRestored": "Usuniętego harmonogramu nie można przywrócić",
   "deleteSchedule": "Usuń plan",
-  "onlySupportiOS": "Dostępne tylko na iOS",
+  "onlySupportiOS": "Ta funkcja jest dostępna tylko w aplikacji na iOS",
   "healthKitDoesNotSupport": "Ta funkcja nie jest dostępna na urządzeniach, które nie obsługują aplikacji Zdrowie",
   "enableHealthKitFromSettings": "Włącz aplikację Zdrowie w Ustawieniach",
   "accountAlreadyLinked": "To konto {accountTypeProviderName} jest już powiązane z Twoim kontem Pilll. Spróbuj odświeżyć ekran. Sprawdź także nasze FAQ. Szczegóły: {exceptionMessage}",
