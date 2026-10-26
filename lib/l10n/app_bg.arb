@@ -510,7 +510,7 @@
   "restDurationFeatureAppealBody": "Можете да отбележите в блистер период, през който временно спирате приема на хапчетата. През паузата номерът на хапчето не се променя, а при подновяване на приема можете веднага да продължите записите.",
   "featureAppealLocationLabel": "Място в приложението",
   "criticalAlertFeatureAppealPoint1": "Получавате известия дори в режим на фокусиране",
-  "criticalAlertFeatureAppealPoint2": "Сигурно напомняне в зададения час",
+  "criticalAlertFeatureAppealPoint2": "Надеждно напомняне в зададения от вас час",
   "criticalAlertFeatureAppealPoint3": "Лесна настройка с едно докосване",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Редактирайте свободно съобщението за известие",
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "Отразяване в ежедневните известия за прием",

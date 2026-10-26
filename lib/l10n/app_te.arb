@@ -510,7 +510,7 @@
   "restDurationFeatureAppealBody": "కొంతకాలం మాత్రలు తీసుకోకుండా ఉండే వ్యవధిని మాత్రల స్ట్రిప్‌లో నమోదు చేయవచ్చు. విరామంలో మాత్ర సంఖ్య ముందుకు వెళ్లదు; మళ్లీ తీసుకోవడం ప్రారంభించిన వెంటనే నమోదును కొనసాగించవచ్చు.",
   "featureAppealLocationLabel": "యాప్‌లో ఎక్కడ కనుగొనవచ్చు",
   "criticalAlertFeatureAppealPoint1": "ఫోకస్ మోడ్ ఆన్‌లో ఉన్నా మీకు నోటిఫికేషన్‌లు వస్తాయి",
-  "criticalAlertFeatureAppealPoint2": "సెట్టుచేసిన సమయంలో ఖచ్చితంగా గుర్తుచేస్తుంది",
+  "criticalAlertFeatureAppealPoint2": "మీరు సెట్ చేసిన సమయానికి నమ్మదగిన రిమైండర్",
   "criticalAlertFeatureAppealPoint3": "ఒక ట్యాప్‌తో సులభ సెటప్",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "నోటిఫికేషన్ సందేశాన్ని స్వేచ్ఛగా సవరించండి",
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "రోజువారీ గుర్తింపుల్లో ప్రతిబింబించబడుతుంది",

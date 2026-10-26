@@ -510,7 +510,7 @@
   "restDurationFeatureAppealBody": "Vous pouvez noter sur la plaquette une période d'arrêt prolongé de la prise de pilule. Pendant cette pause, le numéro de la pilule n'avance pas. Vous pouvez reprendre le suivi dès que vous recommencez à la prendre.",
   "featureAppealLocationLabel": "Où le trouver dans l’application",
   "criticalAlertFeatureAppealPoint1": "Recevez des notifications même lorsque le mode Concentration est activé",
-  "criticalAlertFeatureAppealPoint2": "Des rappels fiables à l'heure prévue",
+  "criticalAlertFeatureAppealPoint2": "Un rappel fiable à l’heure que vous avez choisie",
   "criticalAlertFeatureAppealPoint3": "Configuration facile en un seul clic",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Personnaliser les messages de notification",
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "Réfléchissez aux notifications de dose quotidienne",

@@ -510,7 +510,7 @@
   "restDurationFeatureAppealBody": "შეგიძლიათ აბების მიღების დროებითი შეწყვეტის პერიოდი აბების ბლისტერ ჩანაწერში მიუთითოთ. შესვენებისას აბის ნომერი არ შეიცვლება, ხოლო მიღების განახლებისთანავე ჩანაწერების გაგრძელებას შეძლებთ.",
   "featureAppealLocationLabel": "სად იპოვით აპში",
   "criticalAlertFeatureAppealPoint1": "შეტყობინებებს ფოკუსირების რეჟიმშიც მიიღებთ",
-  "criticalAlertFeatureAppealPoint2": "საიმედო შეხსენება დაყენებულ დროს",
+  "criticalAlertFeatureAppealPoint2": "საიმედო შეხსენება თქვენ მიერ მითითებულ დროს",
   "criticalAlertFeatureAppealPoint3": "ერთი დაჭერით მარტივი დაყენება",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "შეტყობინების ტექსტის თავისუფალი რედაქტირება",
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "ყველა დღე შეხსენებებთან იქნება დაკავშირებული",

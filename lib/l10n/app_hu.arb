@@ -510,7 +510,7 @@
   "restDurationFeatureAppealBody": "A hosszabb szedési szünetet rögzítheted a tablettacsomagban. A szünet alatt a tabletta sorszáma nem változik, és amint újra szedni kezded, rögtön folytathatod a rögzítést.",
   "featureAppealLocationLabel": "Hol találod az alkalmazásban",
   "criticalAlertFeatureAppealPoint1": "Fókusz módban is megkapod az értesítéseket",
-  "criticalAlertFeatureAppealPoint2": "A beállított időpontban biztosan emlékeztet",
+  "criticalAlertFeatureAppealPoint2": "Megbízható emlékeztető az általad beállított időpontban",
   "criticalAlertFeatureAppealPoint3": "Egyszerű beállítás egy koppintással",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Értesítési üzenet testreszabása",
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "Megjelenik a napi szedésről szóló értesítésben",

@@ -510,7 +510,7 @@
   "restDurationFeatureAppealBody": "તમે થોડા સમય માટે ગોળી લેવાનું બંધ રાખો તે સમય ગોળીની સ્ટ્રિપમાં નોંધાવી શકો છો. વિરામ દરમિયાન ગોળીનો નંબર આગળ વધતો નથી અને ફરી લેવાનું શરૂ કરો ત્યારે તરત જ નોંધવાનું ચાલુ રાખી શકો છો.",
   "featureAppealLocationLabel": "ઍપમાં ક્યાં મળશે",
   "criticalAlertFeatureAppealPoint1": "ફોકસ મોડ ચાલુ હોય ત્યારે પણ તમને સૂચનાઓ મળશે",
-  "criticalAlertFeatureAppealPoint2": "નિર્ધારિત સમયે ચોક્કસ રિમાઇન્ડ",
+  "criticalAlertFeatureAppealPoint2": "તમે નક્કી કરેલા સમયે ભરોસાપાત્ર યાદ અપાવવાનું સૂચન",
   "criticalAlertFeatureAppealPoint3": "એક ટૅપથી સરળ સેટિંગ",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "સ્વતંત્ર રીતે સૂચના સંદેશ સંપાદિત કરો",
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "દૈનિક સેવન સૂચનામાં પ્રતિબિંબ",

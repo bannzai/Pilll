@@ -510,7 +510,7 @@
   "restDurationFeatureAppealBody": "Hap alımına bir süre ara verdiğiniz dönemi blister üzerinde kaydedebilirsiniz. Ara sırasında hap numarası ilerlemez; yeniden almaya başladığınızda kayda hemen devam edebilirsiniz.",
   "featureAppealLocationLabel": "Uygulamadaki yeri",
   "criticalAlertFeatureAppealPoint1": "Odak modu açıkken de bildirim alırsınız",
-  "criticalAlertFeatureAppealPoint2": "Belirlediğiniz saatte kesin olarak hatırlatır",
+  "criticalAlertFeatureAppealPoint2": "Ayarladığınız saatte güvenilir hatırlatma",
   "criticalAlertFeatureAppealPoint3": "Tek dokunuşla kolay kurulum",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Bildirim mesajını istediğiniz gibi düzenleyin",
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "Günlük hatırlatmalara uygula",

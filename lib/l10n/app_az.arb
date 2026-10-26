@@ -510,7 +510,7 @@
   "restDurationFeatureAppealBody": "Həbi qəbul etməyə bir müddət fasilə verdiyiniz dövrü həb blister üzərində qeyd edə bilərsiniz. Fasilə zamanı həb nömrəsi irəliləmir və qəbula yenidən başlayanda qeydləri dərhal davam etdirə bilərsiniz.",
   "featureAppealLocationLabel": "Tətbiqdəki yeri",
   "criticalAlertFeatureAppealPoint1": "Fokus rejimində də bildirişlər alırsınız",
-  "criticalAlertFeatureAppealPoint2": "Təyin olunmuş vaxtda mütləq xatırlatma",
+  "criticalAlertFeatureAppealPoint2": "Təyin etdiyiniz vaxtda etibarlı xatırlatma",
   "criticalAlertFeatureAppealPoint3": "Bir toxunuşla asan quraşdırma",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Bildiriş mesajını azad şəkildə redaktə et",
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "Gündəlik qəbul bildirişlərində əks etdir",

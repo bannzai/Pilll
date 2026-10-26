@@ -510,7 +510,7 @@
   "restDurationFeatureAppealBody": "ለተወሰነ ጊዜ ክኒን መውሰድ ያቆሙበትን ጊዜ በክኒን ሉህ ላይ መመዝገብ ይችላሉ። በእረፍቱ ጊዜ የክኒን ቁጥር አይጨምርም፤ እንደገና መውሰድ ሲጀምሩ ወዲያውኑ መመዝገብ መቀጠል ይችላሉ።",
   "featureAppealLocationLabel": "በመተግበሪያው ውስጥ ያለበት ቦታ",
   "criticalAlertFeatureAppealPoint1": "በትኩረት ሁነታ ላይ ሳሉም ማሳወቂያዎች ይደርሱዎታል",
-  "criticalAlertFeatureAppealPoint2": "በተቀናጀ ሰዓት አስተማማኝ ማስታወሻ",
+  "criticalAlertFeatureAppealPoint2": "ባስቀመጡት ሰዓት አስተማማኝ ማስታወሻ",
   "criticalAlertFeatureAppealPoint3": "በአንድ ጠቅታ ቀላል ቅንብር",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "የማሳወቂያ መልዕክቶችን በነፃነት አርትዕ",
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "በዕለታዊ የመድሃኒት ማሳወቂያ ላይ ይንፀባርቃል",

@@ -510,7 +510,7 @@
   "restDurationFeatureAppealBody": "Ви можете позначити в блістер період, коли на деякий час припиняєте прийом пігулок. Під час перерви номер пігулки не змінюється, а після відновлення прийому можна відразу продовжити записи.",
   "featureAppealLocationLabel": "Де знайти в застосунку",
   "criticalAlertFeatureAppealPoint1": "Ви отримуватимете сповіщення навіть у режимі зосередження",
-  "criticalAlertFeatureAppealPoint2": "Надійне нагадування у встановлений час",
+  "criticalAlertFeatureAppealPoint2": "Надійне нагадування у встановлений вами час",
   "criticalAlertFeatureAppealPoint3": "Просте налаштування одним дотиком",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Редагуйте текст сповіщень на свій розсуд",
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "Відображається у щоденних нагадуваннях про прийом",

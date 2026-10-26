@@ -510,7 +510,7 @@
   "restDurationFeatureAppealBody": "Можете да забележите у блистер период када неко време не узимате пилуле. Током паузе број пилуле се не мења, а када поново почнете да је узимате, можете одмах да наставите бележење.",
   "featureAppealLocationLabel": "Где се налази у апликацији",
   "criticalAlertFeatureAppealPoint1": "Добијате обавештења чак и када је укључен режим фокусирања",
-  "criticalAlertFeatureAppealPoint2": "Наведено је подешено време за поуздано подсећање",
+  "criticalAlertFeatureAppealPoint2": "Поуздан подсетник у време које сте подесили",
   "criticalAlertFeatureAppealPoint3": "Jednostavno podešavanje jednim dodirom",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Slobodno izmenite poruku obaveštenja",
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "Odražava se u dnevnim podsetnicima za uzimanje pilule",

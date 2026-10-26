@@ -510,7 +510,7 @@
   "restDurationFeatureAppealBody": "Эмээ хэсэг хугацаанд уухгүй байх үеийг эмийн блистер дээр тэмдэглэж болно. Завсарлагааны үеэр эмийн дугаар ахихгүй бөгөөд дахин ууж эхлэхдээ бүртгэлээ шууд үргэлжлүүлж болно.",
   "featureAppealLocationLabel": "Апп дотор хаанаас олох вэ",
   "criticalAlertFeatureAppealPoint1": "Төвлөрөх горим идэвхтэй үед ч мэдэгдэл ирнэ",
-  "criticalAlertFeatureAppealPoint2": "Тогтоосон цагт найдвартай сануулна",
+  "criticalAlertFeatureAppealPoint2": "Таны тохируулсан цагт найдвартай сануулга",
   "criticalAlertFeatureAppealPoint3": "Нэг товшилтоор хялбар тохиргоо",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Мэдэгдлийн мессежийг чөлөөтэй засварлах",
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "Өдөр тутмын эм уух мэдэгдэлд тусгах",

@@ -510,7 +510,7 @@
   "restDurationFeatureAppealBody": "Դուք կարող եք հաբերի բլիստեր բաժնում գրանցել այն ժամանակահատվածը, երբ որոշ ժամանակ դադարեցնում եք հաբերի ընդունումը։ Դադարի ընթացքում հաբի համարը չի փոխվում, իսկ ընդունումը վերսկսելիս կարող եք անմիջապես շարունակել գրանցումները։",
   "featureAppealLocationLabel": "Որտեղ գտնել հավելվածում",
   "criticalAlertFeatureAppealPoint1": "Դուք ծանուցումներ կստանաք նաև կենտրոնացման ռեժիմում",
-  "criticalAlertFeatureAppealPoint2": "Հուսալի հիշեցում սահմանված ժամին",
+  "criticalAlertFeatureAppealPoint2": "Հուսալի հիշեցում Ձեր սահմանած ժամին",
   "criticalAlertFeatureAppealPoint3": "Մի հպումով հեշտ կարգավորում",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Ծանուցման հաղորդագրությունը ազատորեն խմբագրեք",
   "reminderNotificationCustomizeWordFeatureAppealPoint2": "Արտացոլվում է ամենօրյա ընդունման հիշեցումներում",
