@@ -331,7 +331,7 @@
   "onlySupportiOS": "התכונה הזו זמינה רק באפליקציה ל־iOS",
   "healthKitDoesNotSupport": "האפשרות הזו אינה זמינה במכשירים שאינם תומכים בנתוני בריאות",
   "enableHealthKitFromSettings": "כדי לאפשר גישה ליישום ״בריאות״, יש לפתוח את היישום ״הגדרות״",
-  "accountAlreadyLinked": "החשבון {accountTypeProviderName} הזה כבר מקושר לחשבון Pilll שלך. נסה לרענן את המסך. עיין גם בשאלות נפוצות. פרטים: {exceptionMessage}",
+  "accountAlreadyLinked": "חשבון {accountTypeProviderName} הזה כבר מקושר לחשבון Pilll שלך. אפשר לנסות לרענן את המסך ולעיין גם בשאלות הנפוצות. פרטים: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "חשבון {accountTypeProviderName} זה כבר קשור לחשבון Pilll אחר ולכן לא ניתן להירשם. אנא עיינו גם בשאלות נפוצות (FAQ). פרטים: {exceptionMessage}",
   "emailAlreadyInUse": "כתובת האימייל שלך בחשבון {accountTypeProviderName} כבר מקושרת לחשבון Pilll אחר, לכן לא ניתן להירשם. אנא עיינו גם בשאלות נפוצות. פרטים: {exceptionMessage}",
   "todaySchedule": "לוח הזמנים של היום",

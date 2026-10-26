@@ -331,7 +331,7 @@
   "onlySupportiOS": "Бұл мүмкіндік тек iOS қолданбасында қолжетімді",
   "healthKitDoesNotSupport": "Бұл мүмкіндік денсаулық деректерін қолдамайтын құрылғыларда қолжетімсіз",
   "enableHealthKitFromSettings": "«Параметрлер» қолданбасында «Денсаулық» қолданбасына кіруге рұқсат беріңіз",
-  "accountAlreadyLinked": "Бұл {accountTypeProviderName} тіркелгісі сіздің Pilll тіркелгіңізге бұрыннан байланыстырылған. Экранды жаңартып көріңіз. ЖҚС бөлімін де қараңыз. Егжей-тегжей: {exceptionMessage}",
+  "accountAlreadyLinked": "Бұл {accountTypeProviderName} тіркелгісі сіздің Pilll тіркелгіңізге бұрыннан байланыстырылған. Экранды жаңартып көріңіз және жиі қойылатын сұрақтарды да қараңыз. Толығырақ: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Бұл {accountTypeProviderName} аккаунты басқа Pilll аккаунтымен байланысқан болғандықтан тіркелу мүмкін емес. FAQ-ды көріңіз. Егжей-тегжей: {exceptionMessage}",
   "emailAlreadyInUse": "Сіздің {accountTypeProviderName} аккаунтыңыздың электрондық пошта мекенжайы басқа Pilll аккаунтына байланысқан болғандықтан, тіркелу мүмкін емес. FAQ-ты да қараңыз. Егжей-тегжейлі: {exceptionMessage}",
   "todaySchedule": "Бүгінгі жоспарлар",

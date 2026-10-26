@@ -331,7 +331,7 @@
   "onlySupportiOS": "Bu özellik yalnızca iOS uygulamasında kullanılabilir",
   "healthKitDoesNotSupport": "Bu özellik, sağlık verilerini desteklemeyen cihazlarda kullanılamıyor",
   "enableHealthKitFromSettings": "Sağlık uygulamasına erişimi Ayarlar uygulamasından etkinleştirin",
-  "accountAlreadyLinked": "Bu {accountTypeProviderName} hesabı zaten Pilll hesabınızla bağlantılı. Lütfen sayfayı yenilemeyi deneyin. SSS bölümünü de inceleyebilirsiniz. Detay: {exceptionMessage}",
+  "accountAlreadyLinked": "Bu {accountTypeProviderName} hesabı Pilll hesabınıza zaten bağlı. Lütfen ekranı yenilemeyi deneyin ve sık sorulan sorulara da göz atın. Ayrıntılar: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Bu {accountTypeProviderName} hesabı zaten başka bir Pilll hesabına bağlı olduğu için kayıt oluşturulamaz. Lütfen SSS bölümünü de inceleyiniz. Detay: {exceptionMessage}",
   "emailAlreadyInUse": "{accountTypeProviderName} hesabınızla kullandığınız e-posta adresi zaten başka bir Pilll hesabı ile ilişkilendirilmiş olduğu için kayıt işlemi gerçekleştirilemez. SSS bölümünü de inceleyiniz. Ayrıntılar: {exceptionMessage}",
   "todaySchedule": "Bugünün Planı",

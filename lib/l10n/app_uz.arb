@@ -331,7 +331,7 @@
   "onlySupportiOS": "Bu funksiya faqat iOS ilovasida mavjud",
   "healthKitDoesNotSupport": "Bu funksiya salomatlik maʼlumotlarini qoʻllab-quvvatlamaydigan qurilmalarda mavjud emas",
   "enableHealthKitFromSettings": "Iltimos, Sozlamalar ilovasida Salomatlik ilovasiga kirishga ruxsat bering",
-  "accountAlreadyLinked": "Bu {accountTypeProviderName} hisob allaqachon sizning Pilll hisobingiz bilan bog'langan. Ekranni yangilashga harakat qiling. FAQni ham ko'ring. Tafsilotlar: {exceptionMessage}",
+  "accountAlreadyLinked": "Bu {accountTypeProviderName} hisobi allaqachon Pilll hisobingizga ulangan. Ekranni yangilab koʻring va koʻp soʻraladigan savollarni ham koʻrib chiqing. Tafsilotlar: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Bu {accountTypeProviderName} hisob allaqachon boshqa Pilll hisobiga bog'langanligi sababli ro'yxatdan o'ta olmaysiz. FAQga ham qarang. Tafsilotlar: {exceptionMessage}",
   "emailAlreadyInUse": "{accountTypeProviderName} hisobingiz uchun foydalanayotgan elektron pochta manzili boshqa Pilll hisobiga bog'langanligi sababli ro'yxatdan o'ta olmaysiz. FAQ bo'limini ham ko'rib chiqing. Batafsil ma'lumot: {exceptionMessage}",
   "todaySchedule": "Bugungi rejalar",

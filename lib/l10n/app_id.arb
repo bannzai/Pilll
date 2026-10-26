@@ -331,7 +331,7 @@
   "onlySupportiOS": "Fitur ini hanya tersedia di aplikasi iOS",
   "healthKitDoesNotSupport": "Fitur ini tidak tersedia di perangkat yang tidak mendukung data kesehatan",
   "enableHealthKitFromSettings": "Silakan aktifkan akses ke Kesehatan melalui aplikasi Pengaturan",
-  "accountAlreadyLinked": "Akun {accountTypeProviderName} ini sudah terhubung dengan akun Pilll Anda. Silakan coba refresh layar. Silakan juga lihat FAQ. Detail: {exceptionMessage}",
+  "accountAlreadyLinked": "Akun {accountTypeProviderName} ini sudah terhubung ke akun Pilll Anda. Coba muat ulang layar dan lihat juga FAQ. Detail: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Akun {accountTypeProviderName} ini sudah terkait dengan akun Pilll lain sehingga tidak dapat didaftarkan. Silakan lihat FAQ untuk informasi lebih lanjut. Detail: {exceptionMessage}",
   "emailAlreadyInUse": "Alamat email yang Anda gunakan untuk akun {accountTypeProviderName} sudah terhubung dengan akun Pilll lain sehingga tidak dapat mendaftar. Silakan lihat FAQ juga. Detail: {exceptionMessage}",
   "todaySchedule": "Jadwal Hari Ini",

@@ -331,7 +331,7 @@
   "onlySupportiOS": "Sa iOS app lang po magagamit ang feature na ito",
   "healthKitDoesNotSupport": "Hindi magagamit ang tampok na ito sa mga device na hindi sumusuporta sa datos ng kalusugan",
   "enableHealthKitFromSettings": "Pakibuksan po ang access sa Kalusugan sa app na Mga Setting",
-  "accountAlreadyLinked": "Ang {accountTypeProviderName} account na ito ay nakakonekta na sa inyong Pilll account. Subukan ninyong i-refresh ang screen. Tingnan din ninyo ang FAQ. Detalye: {exceptionMessage}",
+  "accountAlreadyLinked": "Nakaugnay na ang {accountTypeProviderName} account na ito sa inyong Pilll account. Pakisubukang i-refresh ang screen at tingnan din ang mga madalas itanong. Mga detalye: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Ang {accountTypeProviderName} account na ito ay nakalink na sa ibang Pilll account kaya hindi makakapag-register. Tingnan din ang FAQ. Detalye: {exceptionMessage}",
   "emailAlreadyInUse": "Hindi makakagawa ng account dahil ang email address na ginagamit sa {accountTypeProviderName} account ay nakakonekta na sa ibang Pilll account. Pakitingnan ang FAQ para sa karagdagang impormasyon. Detalye: {exceptionMessage}",
   "todaySchedule": "Mga plano ngayong araw",

@@ -331,7 +331,7 @@
   "onlySupportiOS": "यह सुविधा सिर्फ़ iOS ऐप में उपलब्ध है",
   "healthKitDoesNotSupport": "स्वास्थ्य डेटा का समर्थन न करने वाले डिवाइस पर यह सुविधा उपलब्ध नहीं है",
   "enableHealthKitFromSettings": "कृपया सेटिंग्स ऐप में स्वास्थ्य ऐप का ऐक्सेस चालू करें",
-  "accountAlreadyLinked": "यह {accountTypeProviderName} खाता पहले से ही आपके Pilll खाते से जुड़ा हुआ है। स्क्रीन को रिफ्रेश करने का प्रयास करें। FAQ भी देखें। विवरण: {exceptionMessage}",
+  "accountAlreadyLinked": "यह {accountTypeProviderName} खाता आपके Pilll खाते से पहले ही जुड़ा है। कृपया स्क्रीन रीफ़्रेश करके देखें और FAQ भी पढ़ें। विवरण: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "यह {accountTypeProviderName} खाता पहले से ही किसी अन्य Pilll खाते से जुड़ा हुआ है, इसलिए पंजीकरण नहीं किया जा सकता। कृपया FAQ भी देखें। विवरण: {exceptionMessage}",
   "emailAlreadyInUse": "आपका {accountTypeProviderName} खाते का ईमेल पता पहले से ही किसी अन्य Pilll खाते से जुड़ा हुआ है, इसलिए पंजीकरण नहीं हो सकता। कृपया FAQ भी देखें। विवरण: {exceptionMessage}",
   "todaySchedule": "आज का कार्यक्रम",

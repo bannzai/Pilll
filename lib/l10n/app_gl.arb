@@ -331,7 +331,7 @@
   "onlySupportiOS": "Esta función só está dispoñible na aplicación para iOS",
   "healthKitDoesNotSupport": "Esta función non está dispoñible en dispositivos que non admiten datos de saúde",
   "enableHealthKitFromSettings": "Podes activar o acceso a Saúde desde a aplicación Axustes",
-  "accountAlreadyLinked": "Esta conta de {accountTypeProviderName} xa está vinculada á túa conta de Pilll. Proba actualizar a pantalla. Consulta tamén as preguntas frecuentes (FAQ). Detalles: {exceptionMessage}",
+  "accountAlreadyLinked": "Esta conta de {accountTypeProviderName} xa está vinculada á túa conta de Pilll. Proba a actualizar a pantalla e consulta tamén as preguntas frecuentes. Detalles: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Esta conta de {accountTypeProviderName} xa está vinculada a outra conta de Pilll, polo que non se pode rexistrar. Consulte tamén as preguntas frecuentes (FAQ). Detalles: {exceptionMessage}",
   "emailAlreadyInUse": "Non é posible rexistrarse porque o enderezo de correo electrónico que está a usar coa conta de {accountTypeProviderName} xa está vinculado a outra conta de Pilll. Consulte tamén as preguntas frecuentes (FAQ). Detalles: {exceptionMessage}",
   "todaySchedule": "Programación de hoxe",

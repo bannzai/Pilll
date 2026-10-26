@@ -331,7 +331,7 @@
   "onlySupportiOS": "ฟีเจอร์นี้ใช้งานได้เฉพาะในแอป iOS ค่ะ",
   "healthKitDoesNotSupport": "ไม่สามารถใช้ฟีเจอร์นี้บนอุปกรณ์ที่ไม่รองรับข้อมูลสุขภาพได้ค่ะ",
   "enableHealthKitFromSettings": "โปรดเปิดการเข้าถึงแอปสุขภาพในแอปการตั้งค่าค่ะ",
-  "accountAlreadyLinked": "บัญชี{accountTypeProviderName}นี้ได้เชื่อมโยงกับบัญชี Pilll ของคุณแล้ว โปรดลองรีเฟรชหน้าจอและดู FAQ ด้วย รายละเอียด: {exceptionMessage}",
+  "accountAlreadyLinked": "บัญชี {accountTypeProviderName} นี้เชื่อมกับบัญชี Pilll ของคุณอยู่แล้วค่ะ ลองรีเฟรชหน้าจอและดูคำถามที่พบบ่อยด้วยนะคะ รายละเอียด: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "บัญชี{accountTypeProviderName}นี้เชื่อมโยงกับบัญชี Pilll อื่นอยู่แล้ว จึงไม่สามารถลงทะเบียนได้ โปรดดู FAQ ด้วย รายละเอียด: {exceptionMessage}",
   "emailAlreadyInUse": "อีเมลที่ใช้ในบัญชี{accountTypeProviderName}ได้เชื่อมโยงกับบัญชี Pilll อื่นอยู่แล้ว จึงไม่สามารถลงทะเบียนได้ กรุณาดู FAQ ด้วย รายละเอียด: {exceptionMessage}",
   "todaySchedule": "กำหนดการวันนี้",

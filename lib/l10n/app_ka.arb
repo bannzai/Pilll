@@ -331,7 +331,7 @@
   "onlySupportiOS": "ეს ფუნქცია ხელმისაწვდომია მხოლოდ iOS აპში",
   "healthKitDoesNotSupport": "ეს ფუნქცია მიუწვდომელია მოწყობილობებზე, რომლებსაც ჯანმრთელობის მონაცემების მხარდაჭერა არ აქვთ",
   "enableHealthKitFromSettings": "გთხოვთ, პარამეტრების აპში ჩართოთ ჯანმრთელობის აპზე წვდომა",
-  "accountAlreadyLinked": "ეს {accountTypeProviderName} ანგარიში უკვე დაკავშირებულია თქვენს Pilll ანგარიშთან. სცადეთ ეკრანის განახლება. ასევე იხილეთ FAQ. დეტალები: {exceptionMessage}",
+  "accountAlreadyLinked": "{accountTypeProviderName}-ის ეს ანგარიში უკვე დაკავშირებულია თქვენს Pilll ანგარიშთან. სცადეთ ეკრანის განახლება და გაეცანით ხშირად დასმულ კითხვებსაც. დეტალები: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "ეს {accountTypeProviderName} ანგარიში უკვე დაკავშირებული არის Pilll-ის სხვა ანგარიშთან, ამიტომ რეგისტრაცია ვერ ხერხდება. გთხოვთ ნახოთ FAQ-იც. დეტალები: {exceptionMessage}",
   "emailAlreadyInUse": "უკვე {accountTypeProviderName} ანგარიშით გამოყენებული ელ. ფოსტის მისამართი სხვა Pilll ანგარიშთან არის დაკავშირებული, ამიტომ რეგისტრაცია შეუძლებელია. გთხოვთ, იხილოთ FAQ. დეტალები: {exceptionMessage}",
   "todaySchedule": "დღეს გეგმა",

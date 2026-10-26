@@ -331,7 +331,7 @@
   "onlySupportiOS": "ଏହି ସୁବିଧା କେବଳ iOS ଆପ୍‌ରେ ଉପଲବ୍ଧ",
   "healthKitDoesNotSupport": "ସ୍ୱାସ୍ଥ୍ୟ ତଥ୍ୟକୁ ସମର୍ଥନ କରୁନଥିବା ଡିଭାଇସରେ ଏହି ସୁବିଧା ଉପଲବ୍ଧ ନାହିଁ",
   "enableHealthKitFromSettings": "ଦୟାକରି ସେଟିଂସ୍ ଆପ୍‌ରେ ସ୍ୱାସ୍ଥ୍ୟ ଆପ୍‌କୁ ଆକ୍ସେସ୍ ଦିଅନ୍ତୁ",
-  "accountAlreadyLinked": "ଏହି {accountTypeProviderName} ଆକାଉଣ୍ଟ ଆପଣଙ୍କ ବ୍ୟବହାର କରୁଥିବା Pilll ଆକାଉଣ୍ଟ ସହିତ ପୂର୍ବରୁ ସଂଯୁକ୍ତ ହୋଇଅଛି। ଦୟାକରି ସ୍କ୍ରିନ୍ ରିଫ୍ରେସ୍ କରିବାକୁ ଚେଷ୍ଟା କରନ୍ତୁ। FAQ ମଧ୍ୟ ଦେଖନ୍ତୁ। ବିସ୍ତୃତ ବିବରଣୀ: {exceptionMessage}",
+  "accountAlreadyLinked": "ଏହି {accountTypeProviderName} ଆକାଉଣ୍ଟଟି ଆପଣଙ୍କ Pilll ଆକାଉଣ୍ଟ ସହିତ ପୂର୍ବରୁ ଯୋଡ଼ା ହୋଇଛି। ଦୟାକରି ସ୍କ୍ରିନ୍‌କୁ ରିଫ୍ରେଶ୍ କରି ଦେଖନ୍ତୁ ଏବଂ ବାରମ୍ବାର ପଚରାଯାଉଥିବା ପ୍ରଶ୍ନଗୁଡ଼ିକୁ ମଧ୍ୟ ଦେଖନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "ଏହି {accountTypeProviderName} ଆକାଉଣ୍ଟ ପୂର୍ବରୁ ଅନ୍ୟ ଏକ Pilll ଆକାଉଣ୍ଟ ସହ ଲିଙ୍କ ହୋଇଛି, ତେଣୁ ରେଜିଷ୍ଟର କରିପାରିବେ ନାହିଁ। FAQ ମଧ୍ୟ ଦେଖନ୍ତୁ। ବିସ୍ତୃତ ବିବରଣୀ: {exceptionMessage}",
   "emailAlreadyInUse": "ପୂର୍ବରୁ {accountTypeProviderName} ଆକାଉଣ୍ଟରେ ବ୍ୟବହାର କରୁଥିବା ଇମେଲ ଠିକଣା ଅନ୍ୟ ଏକ Pilll ଆକାଉଣ୍ଟ ସହିତ ସଂଯୁକ୍ତ ଥିବାରୁ ପଞ୍ଜୀକରଣ କରିପାରିବେ ନାହିଁ। FAQ ମଧ୍ୟ ଦେଖନ୍ତୁ। ବିସ୍ତୃତ ବିବରଣୀ: {exceptionMessage}",
   "todaySchedule": "ଆଜିର ଯୋଜନା",

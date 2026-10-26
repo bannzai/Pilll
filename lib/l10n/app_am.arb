@@ -331,7 +331,7 @@
   "onlySupportiOS": "ይህ ባህሪ በiOS መተግበሪያ ብቻ ይገኛል",
   "healthKitDoesNotSupport": "የጤና መረጃን በማይደግፉ መሣሪያዎች ላይ ይህን ባህሪ መጠቀም አይቻልም",
   "enableHealthKitFromSettings": "እባክዎ በቅንብሮች መተግበሪያ ውስጥ የጤና መዳረሻን ያንቁ",
-  "accountAlreadyLinked": "ይህ {accountTypeProviderName} መለያ ቀድሞውኑ ከእርስዎ Pilll መለያ ጋር ተያይዞ ነው። ስክሪኑን ማሻሻል ይሞክሩ። FAQ ይመልከቱ። ዝርዝር፡ {exceptionMessage}",
+  "accountAlreadyLinked": "ይህ የ{accountTypeProviderName} መለያ ከእርስዎ የPilll መለያ ጋር አስቀድሞ ተገናኝቷል። እባክዎ ማያ ገጹን እንደገና ያድሱ። FAQንም ይመልከቱ። ዝርዝር፦ {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "ይህ {accountTypeProviderName} መለያ ቀድሞውንም ከሌላ Pilll መለያ ጋር የተገናኘ ስለሆነ መመዝገብ አይችሉም። እባክዎ የተደጋጋሚ ጥያቄዎችንም ይመልከቱ። ዝርዝር: {exceptionMessage}",
   "emailAlreadyInUse": "የ{accountTypeProviderName} መለያዎ ኢሜል አድራሻ በሌላ Pilll መለያ ተጠቅሟል፤ ስለዚህ ይህን መለያ መመዝገብ አይቻልም። FAQ ን ይመልከቱ። ዝርዝር: {exceptionMessage}",
   "todaySchedule": "የዛሬ ፕሮግራም",

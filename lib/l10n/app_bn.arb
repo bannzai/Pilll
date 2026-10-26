@@ -331,7 +331,7 @@
   "onlySupportiOS": "এই সুবিধাটি শুধু iOS অ্যাপে পাওয়া যায়",
   "healthKitDoesNotSupport": "যেসব ডিভাইসে স্বাস্থ্যসংক্রান্ত তথ্য সমর্থিত নয়, সেগুলোতে এই সুবিধা ব্যবহার করা যাবে না",
   "enableHealthKitFromSettings": "অনুগ্রহ করে সেটিংস অ্যাপ থেকে স্বাস্থ্য অ্যাপে অ্যাক্সেস চালু করুন",
-  "accountAlreadyLinked": "এই {accountTypeProviderName} অ্যাকাউন্টটি ইতিমধ্যে আপনার Pilll অ্যাকাউন্টের সাথে সংযুক্ত। স্ক্রিন রিফ্রেশ করে দেখুন। FAQ-ও দেখুন। বিস্তারিত: {exceptionMessage}",
+  "accountAlreadyLinked": "এই {accountTypeProviderName} অ্যাকাউন্টটি ইতিমধ্যে আপনার Pilll অ্যাকাউন্টের সঙ্গে যুক্ত আছে। অনুগ্রহ করে স্ক্রিনটি রিফ্রেশ করে দেখুন। FAQ-ও দেখে নিতে পারেন। বিস্তারিত: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "এই {accountTypeProviderName} অ্যাকাউন্টটি ইতিমধ্যে অন্য একটি Pilll অ্যাকাউন্টের সাথে সংযুক্ত থাকায় নিবন্ধন করা সম্ভব নয়। অনুগ্রহ করে FAQ দেখুন। বিস্তারিত: {exceptionMessage}",
   "emailAlreadyInUse": "আপনার {accountTypeProviderName} অ্যাকাউন্টের ইমেইল ঠিকানা ইতিমধ্যে অন্য একটি Pilll অ্যাকাউন্টের সাথে যুক্ত রয়েছে, তাই নিবন্ধন করা যাবে না। FAQ-ও দেখুন। বিস্তারিত: {exceptionMessage}",
   "todaySchedule": "আজের সূচি",

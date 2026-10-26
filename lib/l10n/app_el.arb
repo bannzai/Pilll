@@ -331,7 +331,7 @@
   "onlySupportiOS": "Αυτή η λειτουργία είναι διαθέσιμη μόνο στην εφαρμογή για iOS",
   "healthKitDoesNotSupport": "Αυτή η λειτουργία δεν είναι διαθέσιμη σε συσκευές που δεν υποστηρίζουν δεδομένα υγείας",
   "enableHealthKitFromSettings": "Ενεργοποιήστε την πρόσβαση στην Υγεία από την εφαρμογή Ρυθμίσεις",
-  "accountAlreadyLinked": "Αυτός ο {accountTypeProviderName} λογαριασμός είναι ήδη συνδεδεμένος με τον λογαριασμό σας στο Pilll. Δοκιμάστε να ανανεώσετε την οθόνη. Επίσης, συμβουλευτείτε τις FAQ. Λεπτομέρειες: {exceptionMessage}",
+  "accountAlreadyLinked": "Αυτός ο λογαριασμός {accountTypeProviderName} είναι ήδη συνδεδεμένος με τον λογαριασμό σας στο Pilll. Δοκιμάστε να ανανεώσετε την οθόνη και δείτε επίσης τις συχνές ερωτήσεις. Λεπτομέρειες: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Ο λογαριασμός {accountTypeProviderName} είναι ήδη συνδεδεμένος με άλλο λογαριασμό Pilll και δεν μπορεί να εγγραφεί. Ανατρέξτε επίσης στο FAQ. Λεπτομέρειες: {exceptionMessage}",
   "emailAlreadyInUse": "Δεν μπορείτε να εγγραφείτε επειδή η διεύθυνση email που χρησιμοποιείτε με τον λογαριασμό {accountTypeProviderName} είναι ήδη συνδεδεμένη με άλλον λογαριασμό Pilll. Παρακαλούμε δείτε επίσης τις Συχνές Ερωτήσεις. Λεπτομέρειες: {exceptionMessage}",
   "todaySchedule": "Σημερινό πρόγραμμα",

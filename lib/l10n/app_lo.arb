@@ -331,7 +331,7 @@
   "onlySupportiOS": "ຄຸນສົມບັດນີ້ມີໃຫ້ໃຊ້ສະເພາະໃນແອັບ iOS ເທົ່ານັ້ນ",
   "healthKitDoesNotSupport": "ຄຸນສົມບັດນີ້ໃຊ້ບໍ່ໄດ້ໃນອຸປະກອນທີ່ບໍ່ຮອງຮັບຂໍ້ມູນສຸຂະພາບ",
   "enableHealthKitFromSettings": "ກະລຸນາເປີດການເຂົ້າເຖິງແອັບສຸຂະພາບໃນແອັບການຕັ້ງຄ່າ",
-  "accountAlreadyLinked": "ບັນຊີ {accountTypeProviderName} ນີ້ໄດ້ເຊື່ອມຕໍ່ກັບບັນຊີ Pilll ຂອງທ່ານແລ້ວ. ກະລຸນາລອງປັບປຸງໜ້າຈໍ. ກະລຸນາເບິ່ງ FAQ ດ້ວຍ. ລາຍລະອຽດ: {exceptionMessage}",
+  "accountAlreadyLinked": "ບັນຊີ {accountTypeProviderName} ນີ້ໄດ້ເຊື່ອມຕໍ່ກັບບັນຊີ Pilll ຂອງທ່ານແລ້ວ. ກະລຸນາລອງໂຫຼດໜ້າຈໍຄືນໃໝ່ ແລະເບິ່ງຄຳຖາມທີ່ພົບເລື້ອຍນຳເດີ. ລາຍລະອຽດ: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "ບັນຊີ{accountTypeProviderName}ນີ້ໄດ້ເຊື່ອມໂຍງກັບບັນຊີ Pilll ອື່ນແລ້ວ ເນື່ອງຈາກນັ້ນຈຶ່ງບໍ່ສາມາດລົງທະບຽນໄດ້. ກະລຸນາເບິ່ງ FAQ ດ້ວຍ. ລາຍລະອຽດ: {exceptionMessage}",
   "emailAlreadyInUse": "ທີ່ຢູ່ອີເມວທີ່ທ່ານໃຊ້ສຳລັບບັນຊີ {accountTypeProviderName} ແລ້ວຖືກເຊື່ອມຕໍ່ກັບບັນຊີ Pilll ອື່ນແລ້ວ ເຊິ່ງເຮັດໃຫ້ບໍ່ສາມາດລົງທະບຽນໄດ້. ກະລຸນາເບິ່ງ FAQ ເພີ່ມເຕີມ. ລາຍລະອຽດ: {exceptionMessage}",
   "todaySchedule": "ກຳນົດການມື້ນີ້",

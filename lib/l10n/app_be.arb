@@ -331,7 +331,7 @@
   "onlySupportiOS": "Гэта функцыя даступная толькі ў праграме для iOS",
   "healthKitDoesNotSupport": "Гэта функцыя недаступная на прыладах, якія не падтрымліваюць даныя пра здароўе",
   "enableHealthKitFromSettings": "Калі ласка, уключыце доступ да праграмы «Здароўе» ў наладах",
-  "accountAlreadyLinked": "Гэты акаўнт {accountTypeProviderName} ужо звязаны з вашым акаўнтам Pilll. Паспрабуйце абнавіць экран. Таксама азнаёмцеся з FAQ. Падрабязнасці: {exceptionMessage}",
+  "accountAlreadyLinked": "Гэты ўліковы запіс {accountTypeProviderName} ужо звязаны з вашым уліковым запісам Pilll. Паспрабуйце абнавіць экран і паглядзіце FAQ. Падрабязнасці: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Гэты {accountTypeProviderName} акаўнт ужо звязаны з іншым акаўнтам Pilll, таму зарэгістравацца немагчыма. Таксама прачытайце FAQ. Падрабязнасці: {exceptionMessage}",
   "emailAlreadyInUse": "Ужо немагчыма зарэгістравацца, таму што адрас электроннай пошты, які выкарыстоўваецца для вашага акаунта {accountTypeProviderName}, ужо звязаны з іншым акаунтам Pilll. Калі ласка, азнаёмцеся з FAQ. Падрабязнасці: {exceptionMessage}",
   "todaySchedule": "Сённяшнія планы",
