@@ -549,7 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Možete otvoriti i dodirom broja na početnom zaslonu",
   "restDurationFeatureAppealPoint1": "Besplatna evidencija pauze",
   "restDurationFeatureAppealPoint2": "Započnite od ikone zupčanika gore desno na blisteru",
-  "restDurationFeatureAppealPoint3": "Jednostavno uređivanje i ponovno pokretanje ciklusa",
+  "restDurationFeatureAppealPoint3": "Razdoblje pauze možete jednostavno urediti i nastaviti",
   "endedPillSheetDialogHistoryTitle": "Želite li vidjeti povijest uzimanja pilula?",
   "endedPillSheetDialogSummaryTitle": "Osvrnimo se na ovaj blister",
   "endedPillSheetDialogSummaryMessage": "Zabilježeno dana: {recordedDays}, propušteno: {missedDays}",

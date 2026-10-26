@@ -549,7 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Gallwch ei agor hefyd drwy dapio’r rhif ar y sgrin gartref",
   "restDurationFeatureAppealPoint1": "Cofnod seibiant am ddim",
   "restDurationFeatureAppealPoint2": "Dechreuwch o'r eicon gêr ar ochr dde uchaf y stribed pils",
-  "restDurationFeatureAppealPoint3": "Mae golygu ac ailddechrau cyfnodau hefyd yn hawdd",
+  "restDurationFeatureAppealPoint3": "Mae'n hawdd newid cyfnod yr egwyl a'i ailddechrau hefyd",
   "endedPillSheetDialogHistoryTitle": "Eisiau gweld eich hanes cymryd pils?",
   "endedPillSheetDialogSummaryTitle": "Gadewch i ni edrych yn ôl ar y ddalen bils hon",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} diwrnod wedi'u cofnodi, {missedDays} diwrnod wedi'u methu",

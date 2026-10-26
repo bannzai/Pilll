@@ -549,7 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "მისი გახსნა მთავარ ეკრანზე რიცხვზე შეხებითაც შეგიძლიათ",
   "restDurationFeatureAppealPoint1": "შესვენების უფასო აღრიცხვა",
   "restDurationFeatureAppealPoint2": "დაიწყეთ აბების ბლისტერ-ის ზედა მარჯვენა კუთხეში მდებარე კბილანის ხატულიდან",
-  "restDurationFeatureAppealPoint3": "პერიოდის რედაქტირება და აღდგენა მარტივია",
+  "restDurationFeatureAppealPoint3": "შესვენების პერიოდის შეცვლა და გაგრძელებაც მარტივია",
   "endedPillSheetDialogHistoryTitle": "გსურთ ნახოთ აბების მიღების ისტორია?",
   "endedPillSheetDialogSummaryTitle": "მოდით გადავხედოთ ამ აბების ფურცელს",
   "endedPillSheetDialogSummaryMessage": "ჩაწერილია {recordedDays} დღე, გამოტოვებულია {missedDays} დღე",

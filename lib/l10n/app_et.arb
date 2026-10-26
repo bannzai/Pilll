@@ -549,7 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Saad selle avada ka avakuval olevat numbrit puudutades",
   "restDurationFeatureAppealPoint1": "Tasuta pillipausi jälgimine",
   "restDurationFeatureAppealPoint2": "Alusta pillilehe paremas ülanurgas olevast hammasrattaikoonist",
-  "restDurationFeatureAppealPoint3": "Perioodide muutmine ja jätkamine on lihtne",
+  "restDurationFeatureAppealPoint3": "Pillipausi saab hõlpsalt muuta ja jätkata",
   "endedPillSheetDialogHistoryTitle": "Kas soovid näha tablettide võtmise ajalugu?",
   "endedPillSheetDialogSummaryTitle": "Vaatame sellele tabletilehele tagasi",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} päeva kirjas, {missedDays} päeva vahele jäänud",

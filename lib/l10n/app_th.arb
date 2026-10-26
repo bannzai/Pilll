@@ -549,7 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "แตะตัวเลขบนหน้าหลักเพื่อเปิดได้เช่นกันค่ะ",
   "restDurationFeatureAppealPoint1": "บันทึกช่วงหยุดยาได้ฟรี",
   "restDurationFeatureAppealPoint2": "เริ่มจากไอคอนรูปเฟืองที่มุมขวาบนของแผงยาค่ะ",
-  "restDurationFeatureAppealPoint3": "แก้ไขหรือเริ่มรอบประจำเดือนได้อย่างง่ายดาย",
+  "restDurationFeatureAppealPoint3": "แก้ไขและเริ่มช่วงหยุดยาใหม่ได้ง่ายค่ะ",
   "endedPillSheetDialogHistoryTitle": "อยากดูประวัติการกินยาของคุณไหม",
   "endedPillSheetDialogSummaryTitle": "มาย้อนดูแผงยานี้กัน",
   "endedPillSheetDialogSummaryMessage": "บันทึกแล้ว {recordedDays} วัน พลาดไป {missedDays} วัน",

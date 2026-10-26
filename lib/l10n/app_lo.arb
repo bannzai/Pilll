@@ -549,7 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "ສາມາດເປີດໄດ້ໂດຍແຕະຕົວເລກຢູ່ໜ້າຫຼັກເຊັ່ນກັນ",
   "restDurationFeatureAppealPoint1": "ບັນທຶກການພັກຢາຟຣີ",
   "restDurationFeatureAppealPoint2": "ກະລຸນາເລີ່ມຈາກໄອຄອນຮູບເຟືອງຢູ່ມຸມຂວາເທິງຂອງແຜງຢາຄຸມ",
-  "restDurationFeatureAppealPoint3": "ແກ້ໄຂ ແລະ ເລີ່ມອີກ ງ່າຍ",
+  "restDurationFeatureAppealPoint3": "ການແກ້ໄຂ ແລະ ເລີ່ມໄລຍະພັກຢາຄືນໃໝ່ກໍງ່າຍ",
   "endedPillSheetDialogHistoryTitle": "ຢາກເບິ່ງປະຫວັດການກິນຢາຂອງທ່ານບໍ?",
   "endedPillSheetDialogSummaryTitle": "ມາເບິ່ງແຜງຢານີ້ຄືນກັນ",
   "endedPillSheetDialogSummaryMessage": "ບັນທຶກແລ້ວ {recordedDays} ມື້, ພາດ {missedDays} ມື້",

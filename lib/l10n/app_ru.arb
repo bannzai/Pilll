@@ -549,7 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Вы также можете открыть это, нажав на число на главном экране",
   "restDurationFeatureAppealPoint1": "Бесплатная запись перерыва",
   "restDurationFeatureAppealPoint2": "Начните со значка шестерёнки в правом верхнем углу блистера",
-  "restDurationFeatureAppealPoint3": "Редактирование и возобновление периода — просто",
+  "restDurationFeatureAppealPoint3": "Период перерыва также легко изменить и возобновить",
   "endedPillSheetDialogHistoryTitle": "Хотите посмотреть историю приёма таблеток?",
   "endedPillSheetDialogSummaryTitle": "Давайте взглянем на этот блистер",
   "endedPillSheetDialogSummaryMessage": "Записано дней: {recordedDays}, пропущено: {missedDays}",

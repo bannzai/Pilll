@@ -549,7 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "गृहपृष्ठको सङ्ख्यामा ट्याप गरेर पनि खोल्न सक्नुहुन्छ",
   "restDurationFeatureAppealPoint1": "विश्रामको निःशुल्क रेकर्ड",
   "restDurationFeatureAppealPoint2": "चक्की पत्ताको माथिल्लो दायाँ कुनामा रहेको गियर चिन्हबाट सुरु गर्नुहोस्",
-  "restDurationFeatureAppealPoint3": "अवधि सम्पादन र पुन: सुरु गर्न पनि सजिलो",
+  "restDurationFeatureAppealPoint3": "चक्कीको विश्राम अवधि बदल्न र फेरि सुरु गर्न पनि सजिलो छ",
   "endedPillSheetDialogHistoryTitle": "आफ्नो चक्की खाएको इतिहास हेर्न चाहनुहुन्छ?",
   "endedPillSheetDialogSummaryTitle": "यो चक्की पानालाई फर्केर हेरौं",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} दिन रेकर्ड भयो, {missedDays} दिन छुट्यो",

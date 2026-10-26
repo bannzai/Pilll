@@ -549,7 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Hasierako pantailako zenbakia sakatuta ere ireki dezakezu",
   "restDurationFeatureAppealPoint1": "Atsedenaldiaren doako erregistroa",
   "restDurationFeatureAppealPoint2": "Hasi pilula-blisterreko goiko eskuineko engranajearen ikonotik",
-  "restDurationFeatureAppealPoint3": "Aldia editatzea eta berrekitea ere erraza",
+  "restDurationFeatureAppealPoint3": "Pilulen atsedenaldia erraz aldatu eta berrabiarazi dezakezu",
   "endedPillSheetDialogHistoryTitle": "Pilulak hartzearen historia ikusi nahi duzu?",
   "endedPillSheetDialogSummaryTitle": "Errepasa dezagun pilula-orri hau",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} egun erregistratuta, {missedDays} egun galduta",

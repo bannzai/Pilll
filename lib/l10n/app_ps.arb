@@ -549,7 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "د کور پر سکرین د شمېرې په ټکولو سره یې هم خلاصولای شئ",
   "restDurationFeatureAppealPoint1": "د وقف وړیا ثبت",
   "restDurationFeatureAppealPoint2": "د ګولیو پاڼې په پورتنۍ ښي خوا کې د ګېر له نښې څخه پیل وکړئ",
-  "restDurationFeatureAppealPoint3": "د موده سمول او بیا پیل کول هم اسانه دي",
+  "restDurationFeatureAppealPoint3": "د ګولیو د وقفې موده بدلول او بیا پیلول هم اسانه دي",
   "endedPillSheetDialogHistoryTitle": "غواړئ د ګولۍ اخیستلو تاریخچه وګورئ؟",
   "endedPillSheetDialogSummaryTitle": "راځئ دې د ګولیو پاڼې ته یو ځل بیا وګورو",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} ورځې ثبت شوې، {missedDays} ورځې پاتې شوې",

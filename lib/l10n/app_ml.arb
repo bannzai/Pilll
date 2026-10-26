@@ -549,7 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "ഹോം സ്ക്രീനിലെ നമ്പറിൽ തൊട്ടും ഇത് തുറക്കാം",
   "restDurationFeatureAppealPoint1": "ഇടവേളയുടെ സൗജന്യ രേഖ",
   "restDurationFeatureAppealPoint2": "ഗുളിക സ്ട്രിപ്പിന്റെ മുകളിൽ വലതുവശത്തുള്ള ഗിയർ ചിഹ്നത്തിൽ നിന്ന് തുടങ്ങാം",
-  "restDurationFeatureAppealPoint3": "കാലയളവ് എഡിറ്റ് ചെയ്യലും പുനരാരംഭിക്കലും എളുപ്പം",
+  "restDurationFeatureAppealPoint3": "ഗുളിക ഇടവേള മാറ്റുന്നതും വീണ്ടും തുടരുന്നതും എളുപ്പമാണ്",
   "endedPillSheetDialogHistoryTitle": "നിങ്ങളുടെ ഗുളിക കഴിച്ച ചരിത്രം കാണണോ?",
   "endedPillSheetDialogSummaryTitle": "ഈ ഗുളിക ഷീറ്റ് ഒന്ന് തിരിഞ്ഞുനോക്കാം",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} ദിവസം രേഖപ്പെടുത്തി, {missedDays} ദിവസം വിട്ടുപോയി",

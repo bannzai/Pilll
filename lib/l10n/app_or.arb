@@ -549,7 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "ହୋମ୍ ସ୍କ୍ରିନ୍‌ରେ ଥିବା ସଂଖ୍ୟାକୁ ଟ୍ୟାପ୍ କରି ମଧ୍ୟ ଏହାକୁ ଖୋଲିପାରିବେ",
   "restDurationFeatureAppealPoint1": "ବିରତିର ମାଗଣା ରେକର୍ଡ",
   "restDurationFeatureAppealPoint2": "ବଟିକା ସିଟର ଉପର ଡାହାଣ କୋଣରେ ଥିବା ଗିଅର୍ ଚିହ୍ନରୁ ଆରମ୍ଭ କରନ୍ତୁ",
-  "restDurationFeatureAppealPoint3": "ସମୟ ସୀମା ସଂଶୋଧନ ଏବଂ ପୁନଃଆରମ୍ଭ ମଧ୍ୟ ସହଜ",
+  "restDurationFeatureAppealPoint3": "ବଟିକାର ବିରତି ଅବଧି ବଦଳାଇବା ଓ ପୁଣି ଆରମ୍ଭ କରିବା ମଧ୍ୟ ସହଜ",
   "endedPillSheetDialogHistoryTitle": "ଆପଣଙ୍କ ପିଲ୍ ଖାଇବା ଇତିହାସ ଦେଖିବାକୁ ଚାହୁଁଛନ୍ତି କି?",
   "endedPillSheetDialogSummaryTitle": "ଏହି ପିଲ୍ ସିଟ୍ କୁ ଫେରି ଦେଖିବା",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} ଦିନ ରେକର୍ଡ ହୋଇଛି, {missedDays} ଦିନ ଛାଡି ଯାଇଛି",

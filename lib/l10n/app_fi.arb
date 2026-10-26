@@ -549,7 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Voit avata sen myös napauttamalla aloitusnäytön numeroa",
   "restDurationFeatureAppealPoint1": "Maksuton taukojakson seuranta",
   "restDurationFeatureAppealPoint2": "Aloita pilleriliuskan oikean yläkulman rataskuvakkeesta",
-  "restDurationFeatureAppealPoint3": "Myös jakson muokkaaminen ja jatkaminen on helppoa",
+  "restDurationFeatureAppealPoint3": "Voit myös helposti muokata ja jatkaa pilleritaukoa",
   "endedPillSheetDialogHistoryTitle": "Haluatko nähdä pillereiden ottohistoriasi?",
   "endedPillSheetDialogSummaryTitle": "Katsotaanpa tätä pilleriliuskaa",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} päivää kirjattu, {missedDays} päivää väliin",

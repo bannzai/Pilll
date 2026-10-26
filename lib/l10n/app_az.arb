@@ -549,7 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Əsas ekrandakı rəqəmə toxunaraq da aça bilərsiniz",
   "restDurationFeatureAppealPoint1": "Pulsuz fasilə qeydi",
   "restDurationFeatureAppealPoint2": "həb blisterin yuxarı sağ küncündəki dişli çarx işarəsindən başlayın",
-  "restDurationFeatureAppealPoint3": "Dövrün redaktəsi və bərpası da asandır",
+  "restDurationFeatureAppealPoint3": "Fasilə müddətini dəyişmək və yenidən başlatmaq da asandır",
   "endedPillSheetDialogHistoryTitle": "Həb qəbulu tarixçənizə baxmaq istəyirsiniz?",
   "endedPillSheetDialogSummaryTitle": "Bu həb vərəqinə nəzər salaq",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} gün qeyd olunub, {missedDays} gün buraxılıb",

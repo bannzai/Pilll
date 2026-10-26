@@ -549,7 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Ana ekrandaki sayıya dokunarak da açabilirsiniz",
   "restDurationFeatureAppealPoint1": "Ücretsiz ara dönem kaydı",
   "restDurationFeatureAppealPoint2": "Blisterin sağ üst köşesindeki dişli simgesinden başlayın",
-  "restDurationFeatureAppealPoint3": "Dönemi düzenlemek veya yeniden başlatmak da kolay.",
+  "restDurationFeatureAppealPoint3": "Hap molası süresini düzenlemek ve yeniden başlatmak da kolay",
   "endedPillSheetDialogHistoryTitle": "Hap alma geçmişinizi görmek ister misiniz?",
   "endedPillSheetDialogSummaryTitle": "Bu hap tabakasına birlikte bakalım",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} gün kaydedildi, {missedDays} gün atlandı",

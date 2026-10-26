@@ -549,7 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Басты экрандағы санды басып та аша аласыз",
   "restDurationFeatureAppealPoint1": "Үзілісті тегін тіркеу",
   "restDurationFeatureAppealPoint2": "таблетка блистердің жоғарғы оң жақ бұрышындағы тісті дөңгелек белгішесінен бастаңыз",
-  "restDurationFeatureAppealPoint3": "Айлықты өңдеу мен қайта бастау да оңай",
+  "restDurationFeatureAppealPoint3": "Үзіліс мерзімін өзгерту және қайта жалғастыру да оңай",
   "endedPillSheetDialogHistoryTitle": "Дәрі қабылдау тарихын көргіңіз келе ме?",
   "endedPillSheetDialogSummaryTitle": "Осы дәрі парағын шолып шығайық",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} күн жазылды, {missedDays} күн өткізілді",

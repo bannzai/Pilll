@@ -549,7 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "হোম স্ক্রিনের সংখ্যায় ট্যাপ করেও আপনি এটি খুলতে পারেন",
   "restDurationFeatureAppealPoint1": "বিনামূল্যে বিরতির রেকর্ড",
   "restDurationFeatureAppealPoint2": "পিল শিটের ওপরের ডান দিকে থাকা গিয়ার চিহ্ন থেকে শুরু করুন",
-  "restDurationFeatureAppealPoint3": "সময়কাল সম্পাদনা ও পুনরায় শুরু করাও সহজ",
+  "restDurationFeatureAppealPoint3": "বিরতির সময় বদলানো ও আবার শুরু করাও সহজ",
   "endedPillSheetDialogHistoryTitle": "আপনার পিল খাওয়ার ইতিহাস দেখতে চান?",
   "endedPillSheetDialogSummaryTitle": "এই পিল শীটটি ফিরে দেখা যাক",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} দিন রেকর্ড হয়েছে, {missedDays} দিন বাদ পড়েছে",

@@ -549,7 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Нүүр дэлгэц дээрх тоог товшоод мөн нээж болно",
   "restDurationFeatureAppealPoint1": "Завсарлагаа үнэгүй бүртгэх",
   "restDurationFeatureAppealPoint2": "эмийн блистерийн баруун дээд буланд байгаа арааны дүрсээс эхэлнэ үү",
-  "restDurationFeatureAppealPoint3": "Хугацааг засах, дахин эхлүүлэх нь ч хялбар",
+  "restDurationFeatureAppealPoint3": "Завсарлагын хугацааг өөрчилж, дахин үргэлжлүүлэхэд ч амархан",
   "endedPillSheetDialogHistoryTitle": "Эм уусан түүхээ харахыг хүсэж байна уу?",
   "endedPillSheetDialogSummaryTitle": "Энэ эмийн хуудсыг эргэн харцгаая",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} өдөр бүртгэгдсэн, {missedDays} өдөр алгассан",

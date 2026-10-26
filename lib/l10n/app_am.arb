@@ -549,7 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "በመነሻ ገጹ ላይ ያለውን ቁጥር በመንካትም መክፈት ይችላሉ",
   "restDurationFeatureAppealPoint1": "ነፃ የክኒን እረፍት መዝገብ",
   "restDurationFeatureAppealPoint2": "በክኒን ሉህ ላይኛው ቀኝ ያለውን የማስተካከያ ምልክት በመንካት ይጀምሩ",
-  "restDurationFeatureAppealPoint3": "ጊዜን ማርትዕ እና ዳግም መጀመርም ቀላል ነው",
+  "restDurationFeatureAppealPoint3": "የእረፍት ጊዜውን ማስተካከልና እንደገና መጀመርም ቀላል ነው",
   "endedPillSheetDialogHistoryTitle": "የክኒን መውሰድ ታሪክዎን ማየት ይፈልጋሉ?",
   "endedPillSheetDialogSummaryTitle": "ይህን የክኒን ሉህ እንመልከት",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} ቀናት ተመዝግቧል፣ {missedDays} ቀናት ተዘሏል",

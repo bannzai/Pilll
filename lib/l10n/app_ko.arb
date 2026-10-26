@@ -549,7 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "홈 화면의 숫자를 눌러도 열 수 있어요",
   "restDurationFeatureAppealPoint1": "무료 휴약 기록",
   "restDurationFeatureAppealPoint2": "알약 시트 오른쪽 위의 톱니바퀴 아이콘에서 시작해요",
-  "restDurationFeatureAppealPoint3": "생리 기간의 편집 및 재개도 간편합니다.",
+  "restDurationFeatureAppealPoint3": "휴약 기간을 수정하고 다시 시작하기도 쉬워요",
   "endedPillSheetDialogHistoryTitle": "복용 기록을 확인해 보시겠어요?",
   "endedPillSheetDialogSummaryTitle": "이번 약 시트를 돌아봅시다",
   "endedPillSheetDialogSummaryMessage": "복용 기록 {recordedDays}일, 기록 누락 {missedDays}일",

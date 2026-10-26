@@ -549,7 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Taip pat galite atidaryti palietę skaičių pradžios ekrane",
   "restDurationFeatureAppealPoint1": "Nemokamas pertraukos žymėjimas",
   "restDurationFeatureAppealPoint2": "Pradėkite nuo krumpliaračio piktogramos tablečių plokštelės viršutiniame dešiniajame kampe",
-  "restDurationFeatureAppealPoint3": "Lengva redaguoti arba vėl pradėti laikotarpį",
+  "restDurationFeatureAppealPoint3": "Pertraukos laikotarpį taip pat lengva pakeisti ir pratęsti",
   "endedPillSheetDialogHistoryTitle": "Norite peržiūrėti tablečių vartojimo istoriją?",
   "endedPillSheetDialogSummaryTitle": "Apžvelkime šį tablečių lakštą",
   "endedPillSheetDialogSummaryMessage": "Užfiksuota dienų: {recordedDays}, praleista: {missedDays}",
