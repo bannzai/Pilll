@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Эм уухыг түр завсарлах функцийг хэрхэн ашиглахыг харна уу",
   "startPauseTakingLabel": "Эм уух завсарлагаа эхлүүлнэ үү",
   "pauseTakingChanged": "Эм уух завсарлагыг өөрчилсөн",
-  "editPausePeriod": "Эм уух амралтын хугацааг засах",
+  "editPausePeriod": "Эм уух завсарлагын хугацааг өөрчлөх",
   "changePillDays": "Уух өдрийн тоог өөрчлөх",
   "beginToEndNumbers": "{begin} дугаар ~ {end} дугаар",
   "resumeTaking": "Дахин уух",

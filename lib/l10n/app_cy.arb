@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Gweld sut i ddefnyddio'r nodwedd saib cymryd y bilsen",
   "startPauseTakingLabel": "Dechrau seibiant rhag cymryd y bilsen",
   "pauseTakingChanged": "Mae'r saib rhag cymryd y bilsen wedi'i newid",
-  "editPausePeriod": "Golygu cyfnod seibiant",
+  "editPausePeriod": "Golygu cyfnod yr egwyl rhag cymryd y bilsen",
   "changePillDays": "Newid dyddiau cymryd",
   "beginToEndNumbers": "{begin} i {end}",
   "resumeTaking": "Ailddechrau cymryd",

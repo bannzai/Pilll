@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "د ګولیو د خوړلو د لنډمهاله وقفې د ځانګړنې کارولو څرنګوالی وګورئ",
   "startPauseTakingLabel": "د ګولیو له اخیستو وقفه پیل کړئ",
   "pauseTakingChanged": "د ګولیو د اخیستلو دمه بدله شوه",
-  "editPausePeriod": "د دوا د استراحت دورې سمون",
+  "editPausePeriod": "د ګولیو د اخیستلو د دمې موده بدله کړئ",
   "changePillDays": "د درملو ورځې بدلول",
   "beginToEndNumbers": "{begin} څخه {end} پورې",
   "resumeTaking": "د ګولیو بیا پیل کول",

@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Həb qəbuluna fasilə vermə funksiyasından necə istifadə edəcəyinizə baxın",
   "startPauseTakingLabel": "Həb qəbuluna fasilə başlayın",
   "pauseTakingChanged": "Həb qəbuluna fasilə dəyişdirildi",
-  "editPausePeriod": "Fasilə dövrünü redaktə et",
+  "editPausePeriod": "Həb qəbuluna fasilə müddətini dəyişin",
   "changePillDays": "Qəbul günlərinin sayını dəyişdir",
   "beginToEndNumbers": "{begin}-ci - {end}-ci",
   "resumeTaking": "Qəbulu bərpa et",

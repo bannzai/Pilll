@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "ნახეთ, როგორ გამოიყენოთ აბების მიღების დროებით შეჩერების ფუნქცია",
   "startPauseTakingLabel": "აბების მიღების შესვენების დაწყება",
   "pauseTakingChanged": "აბის მიღების შესვენება შეიცვალა",
-  "editPausePeriod": "შესვენების პერიოდის რედაქტირება",
+  "editPausePeriod": "აბის მიღების შესვენების პერიოდის შეცვლა",
   "changePillDays": "მიღების დღეების შეცვლა",
   "beginToEndNumbers": "{begin}-ე ნომერი ~ {end}-ე ნომერი",
   "resumeTaking": "მიღების განახლება",

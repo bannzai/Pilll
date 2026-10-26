@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Se, hvordan du bruger funktionen til pillepause",
   "startPauseTakingLabel": "Start pillepause",
   "pauseTakingChanged": "Din pillepause er ændret",
-  "editPausePeriod": "Rediger pillepause",
+  "editPausePeriod": "Rediger p-pillepausen",
   "changePillDays": "Skift antal dage",
   "beginToEndNumbers": "{begin} til {end}",
   "resumeTaking": "Genoptag indtagelse",

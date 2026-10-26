@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "गोळी घेण्यास तात्पुरता विराम देण्याचे वैशिष्ट्य कसे वापरायचे ते पाहा",
   "startPauseTakingLabel": "गोळ्या घेण्याचा विराम सुरू करा",
   "pauseTakingChanged": "गोळी घेण्याचा विराम बदलला आहे",
-  "editPausePeriod": "सेवन विराम कालावधी संपादित करा",
+  "editPausePeriod": "गोळी घेण्यातील विश्रांतीचा कालावधी बदला",
   "changePillDays": "सेवनाचे दिवस बदला",
   "beginToEndNumbers": "{begin} नंबर ते {end} नंबर",
   "resumeTaking": "सेवन पुन्हा सुरू करा",

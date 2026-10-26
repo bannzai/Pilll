@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "ดูวิธีใช้ฟีเจอร์หยุดทานยาเม็ดชั่วคราว",
   "startPauseTakingLabel": "เริ่มพักการทานยาเม็ด",
   "pauseTakingChanged": "เปลี่ยนช่วงพักทานยาแล้วค่ะ",
-  "editPausePeriod": "แก้ไขช่วงหยุดยา",
+  "editPausePeriod": "แก้ไขช่วงพักทานยา",
   "changePillDays": "เปลี่ยนจำนวนวันรับประทาน",
   "beginToEndNumbers": "เลขที่ {begin} ถึง {end}",
   "resumeTaking": "เริ่มรับประทานใหม่",

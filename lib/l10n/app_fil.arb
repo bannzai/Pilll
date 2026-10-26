@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Tingnan kung paano gamitin ang feature na pansamantalang paghinto sa pag-inom ng pildoras",
   "startPauseTakingLabel": "Simulan ang pahinga sa pag-inom ng pildoras",
   "pauseTakingChanged": "Nabago na ang pahinga sa pag-inom ng pildoras ninyo",
-  "editPausePeriod": "I-edit ang pahinga period",
+  "editPausePeriod": "I-edit ang panahon ng pahinga sa pag-inom ng pildoras",
   "changePillDays": "Baguhin ang Bilang ng Araw ng Pag-inom",
   "beginToEndNumbers": "{begin} hanggang {end}",
   "resumeTaking": "Muling Pag-inom",

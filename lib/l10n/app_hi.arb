@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "गोली लेने में अस्थायी विराम की सुविधा का इस्तेमाल कैसे करें, देखें",
   "startPauseTakingLabel": "गोली लेने से विराम शुरू करें",
   "pauseTakingChanged": "गोली लेने का विराम बदल दिया गया है",
-  "editPausePeriod": "सेवन विराम अवधि संपादित करें",
+  "editPausePeriod": "गोली लेने का विराम बदलें",
   "changePillDays": "सेवन अवधि बदलें",
   "beginToEndNumbers": "{begin} नंबर ~ {end} नंबर",
   "resumeTaking": "सेवन पुनः आरंभ",

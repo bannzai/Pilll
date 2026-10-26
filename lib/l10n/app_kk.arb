@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Таблетка қабылдауды уақытша тоқтату мүмкіндігін қалай пайдалану керегін қараңыз",
   "startPauseTakingLabel": "Таблетка қабылдаудағы үзілісті бастаңыз",
   "pauseTakingChanged": "Таблетка қабылдау үзілісі өзгертілді",
-  "editPausePeriod": "Қабылдауды үзу кезеңін өңдеу",
+  "editPausePeriod": "Таблетка қабылдаудағы үзіліс мерзімін өзгерту",
   "changePillDays": "Қабылдау күн санын өзгерту",
   "beginToEndNumbers": "{begin} ~ {end}",
   "resumeTaking": "Қайта бастау",

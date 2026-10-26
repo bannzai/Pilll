@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Таблетка ичүүнү убактылуу токтотуу функциясын кантип колдонууну көрүңүз",
   "startPauseTakingLabel": "Таблетка ичүүдөгү тыныгууну баштаңыз",
   "pauseTakingChanged": "Таблетка ичүүдөгү тыныгуу өзгөртүлдү",
-  "editPausePeriod": "Дары ичүү тыныгуу мөөнөтүн өзгөртүү",
+  "editPausePeriod": "Таблетка ичүүдөгү тыныгуу мөөнөтүн өзгөртүңүз",
   "changePillDays": "Таблетка алуу күндөрүн өзгөртүү",
   "beginToEndNumbers": "{begin}-чи ~ {end}-чи",
   "resumeTaking": "Кайра ичип баштоо",

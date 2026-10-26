@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "ಮಾತ್ರೆ ಸೇವನೆಗೆ ತಾತ್ಕಾಲಿಕ ವಿರಾಮ ನೀಡುವ ಸೌಲಭ್ಯವನ್ನು ಹೇಗೆ ಬಳಸುವುದು ಎಂದು ನೋಡಿ",
   "startPauseTakingLabel": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದಕ್ಕೆ ವಿರಾಮ ಆರಂಭಿಸಿ",
   "pauseTakingChanged": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ವಿರಾಮವನ್ನು ಬದಲಾಯಿಸಲಾಗಿದೆ",
-  "editPausePeriod": "ಮಾತ್ರೆ ವಿರಾಮ ಅವಧಿಯನ್ನು ಸಂಪಾದಿಸಿ",
+  "editPausePeriod": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ವಿರಾಮದ ಅವಧಿಯನ್ನು ಬದಲಾಯಿಸಿ",
   "changePillDays": "ಸೇವನೆ ದಿನಗಳನ್ನು ಬದಲಾಯಿಸಿ",
   "beginToEndNumbers": "{begin}ನಂ ~ {end}ನಂ",
   "resumeTaking": "ಸೇವನೆ ಪುನರಾರಂಭ",

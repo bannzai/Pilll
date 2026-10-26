@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Se hur du använder funktionen för pillerpaus",
   "startPauseTakingLabel": "Starta pilleruppehåll",
   "pauseTakingChanged": "Ditt pilleruppehåll har ändrats",
-  "editPausePeriod": "Redigera pausperiod",
+  "editPausePeriod": "Ändra pilleruppehållet",
   "changePillDays": "Ändra intagsperiod",
   "beginToEndNumbers": "nr. {begin} - nr. {end}",
   "resumeTaking": "Återuppta intag",

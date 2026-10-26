@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Sjáðu hvernig þú notar pilluhléið",
   "startPauseTakingLabel": "Hefja hlé á pillutöku",
   "pauseTakingChanged": "Hléi á pillutöku hefur verið breytt",
-  "editPausePeriod": "Breyta inntökuhlé",
+  "editPausePeriod": "Breyta hléi frá töku pillunnar",
   "changePillDays": "Breyta inntökudögum",
   "beginToEndNumbers": "{begin}. - {end}.",
   "resumeTaking": "Hefja aftur",

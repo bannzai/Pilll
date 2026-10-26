@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Tabletkalarni ichishda vaqtincha tanaffus qilish funksiyasidan qanday foydalanishni koʻring",
   "startPauseTakingLabel": "Tabletka qabul qilishdagi tanaffusni boshlang",
   "pauseTakingChanged": "Tabletka qabul qilishdagi tanaffus oʻzgartirildi",
-  "editPausePeriod": "Qabul qilish tanaffusi davrini tahrirlash",
+  "editPausePeriod": "Tabletka ichishdagi tanaffus muddatini oʻzgartiring",
   "changePillDays": "Qabul qilish kunlarini o'zgartirish",
   "beginToEndNumbers": "{begin}-raqam ~ {end}-raqam",
   "resumeTaking": "Qayta boshlash",

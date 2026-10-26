@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "ເບິ່ງວິທີໃຊ້ຟັງຊັນຢຸດກິນຢາເມັດຊົ່ວຄາວ",
   "startPauseTakingLabel": "ເລີ່ມພັກການກິນຢາເມັດ",
   "pauseTakingChanged": "ໄດ້ປ່ຽນໄລຍະພັກການກິນຢາເມັດແລ້ວ",
-  "editPausePeriod": "ແກ້ໄຂໄລຍະພັກຜ່ອນກິນຢາ",
+  "editPausePeriod": "ແກ້ໄຂໄລຍະພັກກິນຢາເມັດ",
   "changePillDays": "ປ່ຽນແປງຈຳນວນມື້ກິນຢາ",
   "beginToEndNumbers": "{begin} ຫາ {end}",
   "resumeTaking": "ເລີ່ມກິນໃໝ່",

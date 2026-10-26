@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Погледнете како се користи функцијата за пауза во земањето таблета",
   "startPauseTakingLabel": "Започнете пауза во земање таблета",
   "pauseTakingChanged": "Променета е паузата во земањето таблета",
-  "editPausePeriod": "Уреди период на пауза",
+  "editPausePeriod": "Измена на периодот на пауза од земање таблета",
   "changePillDays": "Промени период на земање",
   "beginToEndNumbers": "{begin} број ~ {end} број",
   "resumeTaking": "Обнови прием",

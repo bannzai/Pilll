@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "የክኒን መውሰድ ማቆሚያ ባህሪን እንዴት እንደሚጠቀሙ ይመልከቱ",
   "startPauseTakingLabel": "የክኒን እረፍት ጀምር",
   "pauseTakingChanged": "የክኒን መውሰድ የእረፍት ጊዜ ተቀይሯል",
-  "editPausePeriod": "የመድሃኒት እረፍት ጊዜ ማስተካከል",
+  "editPausePeriod": "የክኒን ዕረፍት ጊዜን ያርትዑ",
   "changePillDays": "የመውሰጃ ቀናት ብዛት መቀየር",
   "beginToEndNumbers": "{begin}ኛ ~ {end}ኛ",
   "resumeTaking": "እንደገና መጀመር",

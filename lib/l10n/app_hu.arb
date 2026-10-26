@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Nézd meg, hogyan használhatod a tablettaszedési szünet funkcióját",
   "startPauseTakingLabel": "Tablettaszedési szünet kezdése",
   "pauseTakingChanged": "Módosult a tablettaszedési szünet",
-  "editPausePeriod": "Szedésmentes időszak szerkesztése",
+  "editPausePeriod": "Tablettaszedési szünet szerkesztése",
   "changePillDays": "Szedési napok módosítása",
   "beginToEndNumbers": "{begin}. - {end}.",
   "resumeTaking": "Szedés folytatása",

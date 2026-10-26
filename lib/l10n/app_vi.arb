@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Xem cách dùng tính năng tạm dừng uống thuốc",
   "startPauseTakingLabel": "Bắt đầu tạm ngừng uống thuốc",
   "pauseTakingChanged": "Đã thay đổi thời gian tạm ngừng uống thuốc",
-  "editPausePeriod": "Chỉnh sửa thời gian tạm ngừng uống thuốc",
+  "editPausePeriod": "Chỉnh sửa thời gian nghỉ uống thuốc",
   "changePillDays": "Thay đổi số ngày uống thuốc",
   "beginToEndNumbers": "Số {begin} ~ {end}",
   "resumeTaking": "Tiếp tục uống",

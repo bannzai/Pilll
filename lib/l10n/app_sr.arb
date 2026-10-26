@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Погледајте како се користи функција паузе у узимању пилуле",
   "startPauseTakingLabel": "Започните паузу у узимању пилуле",
   "pauseTakingChanged": "Пауза у узимању пилула је промењена",
-  "editPausePeriod": "Uredi period pauze u uzimanju",
+  "editPausePeriod": "Измените период паузе у узимању пилула",
   "changePillDays": "Izmeni broj dana uzimanja",
   "beginToEndNumbers": "{begin}. ~ {end}.",
   "resumeTaking": "Obnovi uzimanje",

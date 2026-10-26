@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "روش استفاده از قابلیت توقف موقت مصرف قرص را ببینید",
   "startPauseTakingLabel": "شروع وقفه در مصرف قرص",
   "pauseTakingChanged": "دورهٔ توقف مصرف قرص تغییر کرد",
-  "editPausePeriod": "ویرایش دوره استراحت از مصرف",
+  "editPausePeriod": "ویرایش دورهٔ استراحت از مصرف قرص",
   "changePillDays": "تغییر دوره مصرف",
   "beginToEndNumbers": "شماره {begin} تا {end}",
   "resumeTaking": "از سرگیری مصرف",

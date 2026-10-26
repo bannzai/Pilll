@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Vaata, kuidas kasutada pillide võtmise pausi funktsiooni",
   "startPauseTakingLabel": "Alusta pillide võtmise pausi",
   "pauseTakingChanged": "Pillivõtmise paus on muudetud",
-  "editPausePeriod": "Muuda võtmispausi",
+  "editPausePeriod": "Muuda pillivaba perioodi",
   "changePillDays": "Muuda manustamispäevi",
   "beginToEndNumbers": "{begin} - {end}",
   "resumeTaking": "Jätka võtmist",

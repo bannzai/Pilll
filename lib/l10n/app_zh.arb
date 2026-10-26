@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "查看暂时停药功能的使用方法",
   "startPauseTakingLabel": "开始暂停服用药片",
   "pauseTakingChanged": "已更改停药期",
-  "editPausePeriod": "编辑停药期间",
+  "editPausePeriod": "编辑停药期",
   "changePillDays": "更改服用天数",
   "beginToEndNumbers": "{begin}号 ~ {end}号",
   "resumeTaking": "恢复服用",

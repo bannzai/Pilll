@@ -382,7 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Shihni si të përdorni funksionin e ndërprerjes së përkohshme të pilulës",
   "startPauseTakingLabel": "Filloni pushimin nga marrja e pilulës",
   "pauseTakingChanged": "Pushimi nga marrja e pilulës u ndryshua",
-  "editPausePeriod": "Ndrysho periudhën e pushimit të marrjes",
+  "editPausePeriod": "Ndryshoni periudhën e pushimit nga pilula",
   "changePillDays": "Ndrysho ditët e marrjes",
   "beginToEndNumbers": "Nr. {begin} ~ Nr. {end}",
   "resumeTaking": "Rifillo marrjen",
