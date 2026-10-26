@@ -494,7 +494,7 @@
   "quickRecordFeatureAppealBody": "แตะการแจ้งเตือนจากแจ้งเตือนค้างไว้ แล้วตัวเลือก “ทานแล้ว” จะปรากฏขึ้น คุณจึงบันทึกการทานยาได้โดยไม่ต้องเปิดแอปค่ะ",
   "creatingNewPillSheetFeatureAppealTitle": "เพิ่มแผงยาอัตโนมัติ",
   "creatingNewPillSheetFeatureAppealShortDescription": "สร้างแผงยาถัดไปอัตโนมัติ",
-  "creatingNewPillSheetFeatureAppealHeadline": "สร้างแผ่นยาคุมถัดไปโดยอัตโนมัติ",
+  "creatingNewPillSheetFeatureAppealHeadline": "สร้างแผงยาถัดไปโดยอัตโนมัติ",
   "creatingNewPillSheetFeatureAppealBody": "เมื่อกลุ่มแผงยาคุมในปัจจุบันสิ้นสุดลง ระบบจะสร้างกลุ่มแผงยาใหม่ให้อัตโนมัติ ไม่ต้องสลับด้วยตนเอง และจะไม่มีการขาดตอนของการบันทึก",
   "alarmKitFeatureAppealTitle": "เตือนเหมือนนาฬิกาปลุก",
   "alarmKitFeatureAppealShortDescription": "แจ้งเตือนแม้เครื่องอยู่ในโหมดเงียบ",

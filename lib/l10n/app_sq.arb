@@ -494,7 +494,7 @@
   "quickRecordFeatureAppealBody": "Mbajeni të shtypur njoftimin e rikujtuesit që të shfaqet opsioni «E mora». Kështu mund të regjistroni marrjen e pilulës pa hapur aplikacionin.",
   "creatingNewPillSheetFeatureAppealTitle": "Shtoni automatikisht një blister",
   "creatingNewPillSheetFeatureAppealShortDescription": "Krijoni automatikisht blisterin tjetër të pilulave",
-  "creatingNewPillSheetFeatureAppealHeadline": "Krijo automatikisht fletën e pilulave të ardhshme",
+  "creatingNewPillSheetFeatureAppealHeadline": "Krijoni automatikisht blister-in e radhës",
   "creatingNewPillSheetFeatureAppealBody": "Kur përfundon grupi aktual i fletës së pilulave, krijohet automatikisht një grup i ri. Ndërrimi manual nuk është i nevojshëm, kështu që nuk do të ketë mungesa në regjistrime.",
   "alarmKitFeatureAppealTitle": "Alarm që tingëllon si një orë zgjimi",
   "alarmKitFeatureAppealShortDescription": "Njoftime që patjetër do të tingëllojnë edhe në modalitetin heshtjeje",

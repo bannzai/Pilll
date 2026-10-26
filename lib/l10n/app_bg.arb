@@ -494,7 +494,7 @@
   "quickRecordFeatureAppealBody": "Ако натиснете и задържите известието за напомняне, ще се появи опцията „Взех хапчето“. Така можете да отбележите приема, без да отваряте приложението.",
   "creatingNewPillSheetFeatureAppealTitle": "Автоматично добавяне на блистер",
   "creatingNewPillSheetFeatureAppealShortDescription": "Автоматично създаване на следващия блистер",
-  "creatingNewPillSheetFeatureAppealHeadline": "Автоматично създаване на следващия лист с таблетки",
+  "creatingNewPillSheetFeatureAppealHeadline": "Автоматично създаване на следващия блистер",
   "creatingNewPillSheetFeatureAppealBody": "Когато текущата група с таблетки приключи, автоматично се създава нова група с таблетки. Не е необходимо ръчно превключване и не се допускат пропуски в записите.",
   "alarmKitFeatureAppealTitle": "Аларм, звънящ като будилник",
   "alarmKitFeatureAppealShortDescription": "Известия, звучащи дори в тих режим",

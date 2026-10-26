@@ -494,7 +494,7 @@
   "quickRecordFeatureAppealBody": "Mantén pulsada la notificación del recordatorio para ver la opción «La tomé». Así puedes registrar la toma de la píldora sin abrir la app.",
   "creatingNewPillSheetFeatureAppealTitle": "Añadir un blíster automáticamente",
   "creatingNewPillSheetFeatureAppealShortDescription": "Crear automáticamente el siguiente blíster de píldoras",
-  "creatingNewPillSheetFeatureAppealHeadline": "Crear automáticamente la siguiente hoja de píldoras",
+  "creatingNewPillSheetFeatureAppealHeadline": "Crea automáticamente el siguiente blíster",
   "creatingNewPillSheetFeatureAppealBody": "Cuando el grupo de hojas de píldoras actual finaliza, se crea automáticamente un nuevo grupo de hojas de píldoras. No es necesario realizar ningún cambio manual, por lo que no se producirán omisiones en los registros.",
   "alarmKitFeatureAppealTitle": "Alarma que suena como un despertador",
   "alarmKitFeatureAppealShortDescription": "Notificaciones que suenan incluso en silencio",

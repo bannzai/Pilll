@@ -494,7 +494,7 @@
   "quickRecordFeatureAppealBody": "Xatırlatma bildirişini basıb saxladığınızda «Qəbul etdim» seçimi görünür. Tətbiqi açmadan həbi qəbul etdiyinizi qeyd edə bilərsiniz.",
   "creatingNewPillSheetFeatureAppealTitle": "həb blister avtomatik əlavə edin",
   "creatingNewPillSheetFeatureAppealShortDescription": "Növbəti həb vərəqini avtomatik yaradın",
-  "creatingNewPillSheetFeatureAppealHeadline": "Növbəti həb cədvəlini avtomatik yarat",
+  "creatingNewPillSheetFeatureAppealHeadline": "Növbəti həb blisterini avtomatik yaradın",
   "creatingNewPillSheetFeatureAppealBody": "Cari həb listi qrupu bitdikdə, yeni həb listi qrupu avtomatik olaraq yaradılır. Manual keçid əməliyyatına ehtiyac yoxdur və qeydlərdə boşluq əmələ gəlmir.",
   "alarmKitFeatureAppealTitle": "Zəng saatı kimi çalan alarm",
   "alarmKitFeatureAppealShortDescription": "Səssiz rejimdə də mütləq çalınan bildirişlər",

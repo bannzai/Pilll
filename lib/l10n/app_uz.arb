@@ -494,7 +494,7 @@
   "quickRecordFeatureAppealBody": "Eslatma bildirishnomasini bosib tursangiz, «Ichdim» amali paydo boʻladi. Ilovani ochmasdan ham dorini ichganingizni qayd etishingiz mumkin.",
   "creatingNewPillSheetFeatureAppealTitle": "tabletka blister avtomatik qoʻshilsin",
   "creatingNewPillSheetFeatureAppealShortDescription": "Keyingi tabletkalar varagʻini avtomatik yarating",
-  "creatingNewPillSheetFeatureAppealHeadline": "Keyingi dori varaqasini avtomatik yaratish",
+  "creatingNewPillSheetFeatureAppealHeadline": "Keyingi tabletka blisterni avtomatik yarating",
   "creatingNewPillSheetFeatureAppealBody": "Joriy dori varaqalari guruhi tugagach, yangi dori varaqalari guruhi avtomatik ravishda yaratiladi. Qo'lda almashish talab etilmaydi, shuning uchun yozuvlar o'tkazib yuborilmaydi.",
   "alarmKitFeatureAppealTitle": "Soat kabi chalinadigan signal",
   "alarmKitFeatureAppealShortDescription": "Jim rejimida ham ishonchli bildirishnoma",

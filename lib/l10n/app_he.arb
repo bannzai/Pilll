@@ -494,7 +494,7 @@
   "quickRecordFeatureAppealBody": "לחיצה ממושכת על התראת התזכור מציגה את האפשרות ״נלקחה״. כך אפשר לתעד את נטילת הגלולה בלי לפתוח את האפליקציה.",
   "creatingNewPillSheetFeatureAppealTitle": "הוספה אוטומטית של חפיסת גלולות",
   "creatingNewPillSheetFeatureAppealShortDescription": "יצירה אוטומטית של חפיסת הגלולות הבאה",
-  "creatingNewPillSheetFeatureAppealHeadline": "הוספת גליון גלולות הבא באופן אוטומטי",
+  "creatingNewPillSheetFeatureAppealHeadline": "יצירה אוטומטית של חפיסת הגלולות הבאה",
   "creatingNewPillSheetFeatureAppealBody": "ברגע שקבוצת גיליונות הגלולה הנוכחית מסתיימת, תיווצר באופן אוטומטי קבוצת גיליונות גלולות חדשה. אין צורך בהחלפה ידנית, וכך לא ייווצרו פערים ברישומים.",
   "alarmKitFeatureAppealTitle": "התראה שנשמעת כמו שעון מעורר",
   "alarmKitFeatureAppealShortDescription": "התראות שישמעו גם במצב שקט",

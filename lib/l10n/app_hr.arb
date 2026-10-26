@@ -494,7 +494,7 @@
   "quickRecordFeatureAppealBody": "Ako pritisnete i zadržite obavijest podsjetnika, prikazat će se opcija „Uzeto”. Tako možete zabilježiti uzimanje pilule bez otvaranja aplikacije.",
   "creatingNewPillSheetFeatureAppealTitle": "Automatski dodajte blister",
   "creatingNewPillSheetFeatureAppealShortDescription": "Automatski izradite sljedeći blister pilula",
-  "creatingNewPillSheetFeatureAppealHeadline": "Automatsko stvaranje sljedećeg paketa pilula",
+  "creatingNewPillSheetFeatureAppealHeadline": "Automatski izradite sljedeći blister",
   "creatingNewPillSheetFeatureAppealBody": "Kada trenutna grupa listića pilula završi, nova grupa će se automatski stvoriti. Nije potrebna ručna promjena, pa neće doći do propuštanja zapisa.",
   "alarmKitFeatureAppealTitle": "Alarm koji zvoni kao budilica",
   "alarmKitFeatureAppealShortDescription": "Obavijest koja pouzdano zvoni čak i u tihom načinu",

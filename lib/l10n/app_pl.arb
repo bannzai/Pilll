@@ -494,7 +494,7 @@
   "quickRecordFeatureAppealBody": "Przytrzymaj powiadomienie przypomnienia, aby zobaczyć opcję „Przyjęta”. W ten sposób zapiszesz przyjęcie tabletki bez otwierania aplikacji.",
   "creatingNewPillSheetFeatureAppealTitle": "Dodaj blist automatycznie",
   "creatingNewPillSheetFeatureAppealShortDescription": "Utwórz automatycznie następny blister tabletek",
-  "creatingNewPillSheetFeatureAppealHeadline": "Automatyczne tworzenie następnego blister pack tabletek",
+  "creatingNewPillSheetFeatureAppealHeadline": "Utwórz automatycznie kolejny blist",
   "creatingNewPillSheetFeatureAppealBody": "Po zakończeniu bieżącej grupy kart tabletek automatycznie tworzona jest nowa grupa. Nie jest wymagane ręczne przełączanie, dzięki czemu nie ma przerw w zapisach.",
   "alarmKitFeatureAppealTitle": "Alarm brzmiący jak budzik",
   "alarmKitFeatureAppealShortDescription": "Powiadomienia działające niezawodnie nawet w trybie cichym",

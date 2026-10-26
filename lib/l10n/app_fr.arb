@@ -494,7 +494,7 @@
   "quickRecordFeatureAppealBody": "Maintenez la notification de rappel enfoncée pour afficher l’option « Prise ». Vous pouvez ainsi noter la prise de votre pilule sans ouvrir l’application.",
   "creatingNewPillSheetFeatureAppealTitle": "Ajouter automatiquement une plaquette",
   "creatingNewPillSheetFeatureAppealShortDescription": "Créer automatiquement la prochaine plaquette de pilules",
-  "creatingNewPillSheetFeatureAppealHeadline": "Démarrez automatiquement votre prochaine feuille de pilules",
+  "creatingNewPillSheetFeatureAppealHeadline": "Création automatique de la prochaine plaquette",
   "creatingNewPillSheetFeatureAppealBody": "Lorsque votre groupe de feuilles de pilules actuel prend fin, un nouveau est automatiquement créé pour vous afin que vous ne manquiez aucun enregistrement.",
   "alarmKitFeatureAppealTitle": "Alarme médicamenteuse de type réveil",
   "alarmKitFeatureAppealShortDescription": "Sonne même en mode silencieux ou focus",

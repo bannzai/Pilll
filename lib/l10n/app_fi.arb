@@ -494,7 +494,7 @@
   "quickRecordFeatureAppealBody": "Kun pidät muistutusilmoitusta painettuna, näkyviin tulee vaihtoehto ”Otettu”. Voit merkitä pillerin otetuksi avaamatta sovellusta.",
   "creatingNewPillSheetFeatureAppealTitle": "Lisää pilleriliuska automaattisesti",
   "creatingNewPillSheetFeatureAppealShortDescription": "Luo seuraava pilleriliuska automaattisesti",
-  "creatingNewPillSheetFeatureAppealHeadline": "Luo seuraava pillerisivu automaattisesti",
+  "creatingNewPillSheetFeatureAppealHeadline": "Luo seuraava pilleriliuska automaattisesti",
   "creatingNewPillSheetFeatureAppealBody": "Kun nykyinen pillerikorttisarja päättyy, uusi pillerikorttisarja luodaan automaattisesti. Manuaalista vaihtamista ei tarvita, eikä kirjauksiin tule aukkoja.",
   "alarmKitFeatureAppealTitle": "Herätyskellon tavoin soiva hälytys",
   "alarmKitFeatureAppealShortDescription": "Ilmoitukset soivat varmasti myös äänettömässä tilassa",

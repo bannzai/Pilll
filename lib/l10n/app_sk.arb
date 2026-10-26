@@ -494,7 +494,7 @@
   "quickRecordFeatureAppealBody": "Keď podržíte oznámenie pripomienky, zobrazí sa možnosť „Užité“. Užívanie tabletky tak môžete zaznamenať bez otvorenia aplikácie.",
   "creatingNewPillSheetFeatureAppealTitle": "Automaticky pridať blist",
   "creatingNewPillSheetFeatureAppealShortDescription": "Automaticky vytvoriť ďalší blister tabletiek",
-  "creatingNewPillSheetFeatureAppealHeadline": "Ďalší pilulkový list sa vytvorí automaticky",
+  "creatingNewPillSheetFeatureAppealHeadline": "Automaticky vytvoriť ďalší blist",
   "creatingNewPillSheetFeatureAppealBody": "Keď sa aktuálna skupina piluliek skončí, automaticky sa vytvorí nová skupina piluliek. Manuálne prepínanie nie je potrebné, takže v záznamoch nevznikajú medzery.",
   "alarmKitFeatureAppealTitle": "Alarm, ktorý znie ako budík",
   "alarmKitFeatureAppealShortDescription": "Upozornenia, ktoré spoľahlivo zaznejú aj v tichom režime",

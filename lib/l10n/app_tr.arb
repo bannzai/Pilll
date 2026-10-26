@@ -494,7 +494,7 @@
   "quickRecordFeatureAppealBody": "Hatırlatma bildirimine uzun bastığınızda “Aldım” seçeneği görünür. Uygulamayı açmadan hapı aldığınızı kaydedebilirsiniz.",
   "creatingNewPillSheetFeatureAppealTitle": "blister otomatik ekleyin",
   "creatingNewPillSheetFeatureAppealShortDescription": "Sonraki hap blisterini otomatik oluşturun",
-  "creatingNewPillSheetFeatureAppealHeadline": "Bir sonraki hap şeridini otomatik oluşturun",
+  "creatingNewPillSheetFeatureAppealHeadline": "Sonraki blisteri otomatik oluşturun",
   "creatingNewPillSheetFeatureAppealBody": "Mevcut hap şeridi grubu sona erdiğinde, yeni bir hap şeridi grubu otomatik olarak oluşturulur. Manuel geçiş işlemi gerekmez; kayıt atlaması yaşanmaz.",
   "alarmKitFeatureAppealTitle": "Çalar saat gibi çalan alarm",
   "alarmKitFeatureAppealShortDescription": "Sessiz modda bile kesinlikle çalan bildirim",

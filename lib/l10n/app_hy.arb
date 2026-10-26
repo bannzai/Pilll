@@ -494,7 +494,7 @@
   "quickRecordFeatureAppealBody": "Եթե սեղմած պահեք հիշեցման ծանուցումը, կհայտնվի «Ընդունել եմ» տարբերակը։ Այսպես կարող եք գրանցել հաբի ընդունումը՝ առանց հավելվածը բացելու։",
   "creatingNewPillSheetFeatureAppealTitle": "հաբերի բլիստեր ինքնաշխատ ավելացնել",
   "creatingNewPillSheetFeatureAppealShortDescription": "Ավտոմատ ստեղծել հաբերի հաջորդ թերթիկը",
-  "creatingNewPillSheetFeatureAppealHeadline": "Ավտոմատ կերպով ստեղծել հաջորդ պիլշիթը",
+  "creatingNewPillSheetFeatureAppealHeadline": "Հաջորդ հաբերի բլիստեր-ի ավտոմատ ստեղծում",
   "creatingNewPillSheetFeatureAppealBody": "Երբ ընթացիկ հաբաթերթերի խումբը ավարտվում է, նոր հաբաթերթերի խումբը ավտոմատ կերպով ստեղծվում է։ Ձեռքի միջոցով փոխարինում անել հարկավոր չէ, ուստի գրառումների բացթողումներ չեն լինի։",
   "alarmKitFeatureAppealTitle": "Զարթուցիչի նման զանգող ահազանգ",
   "alarmKitFeatureAppealShortDescription": "Լռության ռեժիմում նույնպես վստահաբար հնչող ծանուցումներ",

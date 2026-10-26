@@ -494,7 +494,7 @@
   "quickRecordFeatureAppealBody": "Hoia meeldetuletuse teadet all, et näha valikut „Võetud“. Nii saad pilli võtmise kirja panna rakendust avamata.",
   "creatingNewPillSheetFeatureAppealTitle": "Lisa pillileh automaatselt",
   "creatingNewPillSheetFeatureAppealShortDescription": "Loo järgmine pillileht automaatselt",
-  "creatingNewPillSheetFeatureAppealHeadline": "Järgmise pillilehe automaatne loomine",
+  "creatingNewPillSheetFeatureAppealHeadline": "Loo järgmine pillileht automaatselt",
   "creatingNewPillSheetFeatureAppealBody": "Kui praegune pillilehe grupp lõpeb, luuakse automaatselt uus pillilehe grupp. Käsitsi ümberlülitamine pole vajalik ning kirjetes ei teki lünki.",
   "alarmKitFeatureAppealTitle": "Äratuskellana helisev alarm",
   "alarmKitFeatureAppealShortDescription": "Teavitused, mis helisevad kindlasti ka vaikses režiimis",

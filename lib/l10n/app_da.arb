@@ -494,7 +494,7 @@
   "quickRecordFeatureAppealBody": "Når du trykker og holder på påmindelsen, vises handlingen »Taget«. Så kan du registrere, at du har taget din p-pille, uden at åbne appen.",
   "creatingNewPillSheetFeatureAppealTitle": "Tilføj pillekort automatisk",
   "creatingNewPillSheetFeatureAppealShortDescription": "Opret automatisk det næste p-pillekort",
-  "creatingNewPillSheetFeatureAppealHeadline": "Opret automatisk det næste pilleark",
+  "creatingNewPillSheetFeatureAppealHeadline": "Opret det næste pillekort automatisk",
   "creatingNewPillSheetFeatureAppealBody": "Når den nuværende pillearkgruppe slutter, oprettes en ny pillearkgruppe automatisk. Manuel omskiftning er ikke nødvendig, og der opstår ingen huller i registreringerne.",
   "alarmKitFeatureAppealTitle": "Alarm, der ringer som en vækkeur",
   "alarmKitFeatureAppealShortDescription": "Notifikationer der lyder, selv på lydløs",

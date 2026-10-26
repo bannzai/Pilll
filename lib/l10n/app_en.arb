@@ -494,7 +494,7 @@
   "quickRecordFeatureAppealBody": "Press and hold the reminder notification to see the “Taken” action. You can record taking your pill without opening the app.",
   "creatingNewPillSheetFeatureAppealTitle": "Automatically add a pill pack",
   "creatingNewPillSheetFeatureAppealShortDescription": "Automatically create the next pill sheet",
-  "creatingNewPillSheetFeatureAppealHeadline": "Start your next pill sheet automatically",
+  "creatingNewPillSheetFeatureAppealHeadline": "Automatically create the next pill pack",
   "creatingNewPillSheetFeatureAppealBody": "When your current pill sheet group ends, a new one is created for you automatically so you never miss a record.",
   "alarmKitFeatureAppealTitle": "Wake-up style medication alarm",
   "alarmKitFeatureAppealShortDescription": "Rings even on silent or focus mode",

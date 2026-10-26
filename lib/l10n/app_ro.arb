@@ -494,7 +494,7 @@
   "quickRecordFeatureAppealBody": "Ține apăsată notificarea de memento pentru a vedea opțiunea „Am luat-o”. Astfel poți înregistra administrarea pilulei fără să deschizi aplicația.",
   "creatingNewPillSheetFeatureAppealTitle": "Adaugă automat un blister",
   "creatingNewPillSheetFeatureAppealShortDescription": "Creează automat următoarea folie de pilule",
-  "creatingNewPillSheetFeatureAppealHeadline": "Creare automată a următoarei foi de pastile",
+  "creatingNewPillSheetFeatureAppealHeadline": "Creează automat următorul blister",
   "creatingNewPillSheetFeatureAppealBody": "Când grupul curent de foi de pastile se termină, un nou grup de foi de pastile este creat automat. Nu este necesară nicio comutare manuală și nu vor exista înregistrări lipsă.",
   "alarmKitFeatureAppealTitle": "Alarmă care sună ca un ceas deșteptător",
   "alarmKitFeatureAppealShortDescription": "Notificări care sună sigur chiar și pe silențios",
