@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "Faltan {diff} días",
   "menstruationProgressingDay": "Día {diffPlusOne} de la regla",
   "recordMenstruation": "Registra la regla",
-  "menstruationHistory": "Historial menstrual",
+  "menstruationHistory": "Historial de la regla",
   "menstruationFromToday": "Regla desde hoy",
   "menstruationFromYesterday": "Menstruación desde ayer",
   "selectMenstruationStartDate": "Seleccionar fecha de inicio de la menstruación",

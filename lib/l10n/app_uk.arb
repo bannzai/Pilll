@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "Залишилося {diff} днів",
   "menstruationProgressingDay": "{diffPlusOne}-й день місячних",
   "recordMenstruation": "Записати місячні",
-  "menstruationHistory": "Історія менструацій",
+  "menstruationHistory": "Історія місячних",
   "menstruationFromToday": "Розпочати менструацію сьогодні",
   "menstruationFromYesterday": "Місячні з вчора",
   "selectMenstruationStartDate": "Обрати дату початку менструації",

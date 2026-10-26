@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "נותרו {diff} ימים",
   "menstruationProgressingDay": "יום {diffPlusOne} לווסת",
   "recordMenstruation": "לתעד מחזור",
-  "menstruationHistory": "היסטוריית וסת",
+  "menstruationHistory": "היסטוריית המחזור",
   "menstruationFromToday": "וסת מהיום",
   "menstruationFromYesterday": "וסת מאתמול",
   "selectMenstruationStartDate": "בחר תאריך תחילת הווסת",

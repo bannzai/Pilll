@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "{diff} days left",
   "menstruationProgressingDay": "Period day {diffPlusOne}",
   "recordMenstruation": "Record period",
-  "menstruationHistory": "Menstrual History",
+  "menstruationHistory": "Your period history",
   "menstruationFromToday": "Start period today",
   "menstruationFromYesterday": "Period started yesterday",
   "selectMenstruationStartDate": "Select period start date",

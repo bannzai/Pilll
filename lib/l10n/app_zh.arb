@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "还有{diff}天",
   "menstruationProgressingDay": "经期第 {diffPlusOne} 天",
   "recordMenstruation": "记录经期",
-  "menstruationHistory": "月经记录",
+  "menstruationHistory": "经期记录",
   "menstruationFromToday": "今日开始月经",
   "menstruationFromYesterday": "昨天来月经",
   "selectMenstruationStartDate": "选择月经开始日期",

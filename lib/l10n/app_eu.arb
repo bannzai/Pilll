@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "{diff} egun falta dira",
   "menstruationProgressingDay": "Hilekoaren {diffPlusOne}. eguna",
   "recordMenstruation": "Hilekoa erregistratu",
-  "menstruationHistory": "Hileko historia",
+  "menstruationHistory": "Hilekoaren historia",
   "menstruationFromToday": "Gaurtik hilekoa",
   "menstruationFromYesterday": "Atzotik hilea",
   "selectMenstruationStartDate": "Menstruazioaren hasiera data hautatu",

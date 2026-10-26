@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "{diff} ورځې پاتې دي",
   "menstruationProgressingDay": "د میاشتني عادت {diffPlusOne}مه ورځ",
   "recordMenstruation": "حیض ثبت کړئ",
-  "menstruationHistory": "د میاشتو تاریخ",
+  "menstruationHistory": "د حیض تاریخچه",
   "menstruationFromToday": "نن د میاشتنۍ دوره",
   "menstruationFromYesterday": "پرون څخه میاشتنۍ دوره",
   "selectMenstruationStartDate": "د میاشتنۍ دورې د پیل نېټه غوره کړئ",

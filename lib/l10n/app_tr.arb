@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "{diff} gün kaldı",
   "menstruationProgressingDay": "Adetin {diffPlusOne}. günü",
   "recordMenstruation": "Adet döneminizi kaydedin",
-  "menstruationHistory": "Adet Geçmişi",
+  "menstruationHistory": "Adet geçmişi",
   "menstruationFromToday": "Bugün adet başladı",
   "menstruationFromYesterday": "Dünden itibaren adet",
   "selectMenstruationStartDate": "Regl başlangıç tarihini seç",

@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "ಇನ್ನೂ {diff} ದಿನಗಳು ಬಾಕಿ",
   "menstruationProgressingDay": "ಮುಟ್ಟಿನ {diffPlusOne}ನೇ ದಿನ",
   "recordMenstruation": "ಮುಟ್ಟಿನ ವಿವರ ದಾಖಲಿಸಿ",
-  "menstruationHistory": "ಮಾಸಿಕ ಧರ್ಮದ ಇತಿಹಾಸ",
+  "menstruationHistory": "ಮುಟ್ಟಿನ ಇತಿಹಾಸ",
   "menstruationFromToday": "ಇಂದಿನಿಂದ ಋತುಚಕ್ರ",
   "menstruationFromYesterday": "ನಿನ್ನೆಯಿಂದ ಮಾಸಿಕ ಧರ್ಮ",
   "selectMenstruationStartDate": "ಋತುಚಕ್ರ ಪ್ರಾರಂಭ ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ",

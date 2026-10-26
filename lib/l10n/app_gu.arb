@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "હજુ {diff} દિવસ બાકી",
   "menstruationProgressingDay": "માસિકનો {diffPlusOne}મો દિવસ",
   "recordMenstruation": "માસિકની નોંધ કરો",
-  "menstruationHistory": "મહિનાવારીનો ઇતિહાસ",
+  "menstruationHistory": "માસિકનો ઇતિહાસ",
   "menstruationFromToday": "આજથી માસિક",
   "menstruationFromYesterday": "ગઈકાલથી માસિક ધર્મ",
   "selectMenstruationStartDate": "માસિક ધર્મની શરૂઆતની તારીખ પસંદ કરો",

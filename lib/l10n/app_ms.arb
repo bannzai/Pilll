@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "Tinggal {diff} hari lagi",
   "menstruationProgressingDay": "Hari ke-{diffPlusOne} haid",
   "recordMenstruation": "Catat haid",
-  "menstruationHistory": "Rekod Haid",
+  "menstruationHistory": "Sejarah haid",
   "menstruationFromToday": "Haid bermula hari ini",
   "menstruationFromYesterday": "Haid dari semalam",
   "selectMenstruationStartDate": "Pilih tarikh mula haid",

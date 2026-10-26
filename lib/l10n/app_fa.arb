@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "{diff} روز مانده",
   "menstruationProgressingDay": "روز {diffPlusOne} قاعدگی",
   "recordMenstruation": "ثبت پریود",
-  "menstruationHistory": "تاریخچه قاعدگی",
+  "menstruationHistory": "تاریخچه پریود",
   "menstruationFromToday": "قاعدگی از امروز",
   "menstruationFromYesterday": "قاعدگی از دیروز",
   "selectMenstruationStartDate": "انتخاب تاریخ شروع قاعدگی",

@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "Még {diff} nap",
   "menstruationProgressingDay": "A menstruáció {diffPlusOne}. napja",
   "recordMenstruation": "Menstruáció rögzítése",
-  "menstruationHistory": "Menstruációs előzmények",
+  "menstruationHistory": "menstruációs előzmények",
   "menstruationFromToday": "Ma kezdődő menstruáció",
   "menstruationFromYesterday": "Menstruáció tegnap óta",
   "selectMenstruationStartDate": "Menstruáció kezdődátumának kiválasztása",

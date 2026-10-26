@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "{diff} dager igjen",
   "menstruationProgressingDay": "Dag {diffPlusOne} av mensen",
   "recordMenstruation": "Registrer mens",
-  "menstruationHistory": "Menstruasjonshistorikk",
+  "menstruationHistory": "Menshistorikk",
   "menstruationFromToday": "Menstruasjon i dag",
   "menstruationFromYesterday": "Mensen fra i går",
   "selectMenstruationStartDate": "Velg menstruasjonsstartdato",

@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "{diff} päivää jäljellä",
   "menstruationProgressingDay": "Kuukautisten {diffPlusOne}. päivä",
   "recordMenstruation": "Kirjaa kuukautiset",
-  "menstruationHistory": "Kuukautishistoria",
+  "menstruationHistory": "kuukautishistoria",
   "menstruationFromToday": "Kuukautiset alkoivat tänään",
   "menstruationFromYesterday": "Kuukautiset eilen alkaen",
   "selectMenstruationStartDate": "Valitse kuukautisten alkamispäivä",

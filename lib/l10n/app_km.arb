@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "នៅសល់ {diff} ថ្ងៃ",
   "menstruationProgressingDay": "ថ្ងៃទី{diffPlusOne} នៃការមករដូវ",
   "recordMenstruation": "កត់ត្រារដូវ",
-  "menstruationHistory": "ប្រវត្តិការមករដូវ",
+  "menstruationHistory": "ប្រវត្តិរដូវ",
   "menstruationFromToday": "រដូវចាប់ពីថ្ងៃនេះ",
   "menstruationFromYesterday": "ម្សិលមិញចាប់ផ្តើមរដូវ",
   "selectMenstruationStartDate": "ជ្រើសរើសថ្ងៃចាប់ផ្តើមរដូវ",

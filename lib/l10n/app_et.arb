@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "{diff} päeva jäänud",
   "menstruationProgressingDay": "Menstruatsiooni {diffPlusOne}. päev",
   "recordMenstruation": "Märgi päevad üles",
-  "menstruationHistory": "Menstruatsiooni ajalugu",
+  "menstruationHistory": "Päevade ajalugu",
   "menstruationFromToday": "Menstruatsioon täna",
   "menstruationFromYesterday": "Menstruatsioon alates eilsest",
   "selectMenstruationStartDate": "Vali menstruatsiooni alguskuupäev",

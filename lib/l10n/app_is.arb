@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "{diff} dagar eftir",
   "menstruationProgressingDay": "{diffPlusOne}. dagur blæðinga",
   "recordMenstruation": "Skrá blæðingar",
-  "menstruationHistory": "Tíðasaga",
+  "menstruationHistory": "Saga blæðinga",
   "menstruationFromToday": "Blæðingar byrja í dag",
   "menstruationFromYesterday": "Blæðingar frá í gær",
   "selectMenstruationStartDate": "Veldu upphafsdag tíðablæðinga",

@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "अभी {diff} दिन बाकी हैं",
   "menstruationProgressingDay": "पीरियड का {diffPlusOne}वाँ दिन",
   "recordMenstruation": "पीरियड दर्ज करें",
-  "menstruationHistory": "पीरियड हिस्ट्री",
+  "menstruationHistory": "पीरियड का इतिहास",
   "menstruationFromToday": "आज से मासिक धर्म",
   "menstruationFromYesterday": "कल से माहवारी",
   "selectMenstruationStartDate": "पीरियड्स की शुरुआती तारीख चुनें",

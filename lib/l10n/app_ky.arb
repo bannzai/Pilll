@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "{diff} күн калды",
   "menstruationProgressingDay": "Айыздын {diffPlusOne}-күнү",
   "recordMenstruation": "Айызды каттаңыз",
-  "menstruationHistory": "айыз тарыхы",
+  "menstruationHistory": "Айыз тарыхы",
   "menstruationFromToday": "Бүгүндөн айгөл",
   "menstruationFromYesterday": "кечеден айлык курч",
   "selectMenstruationStartDate": "Айыз башталган күнүн тандоо",

@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "Liko {diff} dienų",
   "menstruationProgressingDay": "{diffPlusOne}-oji mėnesinių diena",
   "recordMenstruation": "Užregistruokite mėnesines",
-  "menstruationHistory": "Menstruacijos istorija",
+  "menstruationHistory": "mėnesinių istorija",
   "menstruationFromToday": "Mėnesinės nuo šiandien",
   "menstruationFromYesterday": "Mėnesinės nuo vakar",
   "selectMenstruationStartDate": "Pasirinkti menstruacijos pradžios datą",

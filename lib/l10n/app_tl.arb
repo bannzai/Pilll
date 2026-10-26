@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "{diff} araw pa",
   "menstruationProgressingDay": "Ika-{diffPlusOne} araw ng regla",
   "recordMenstruation": "Itala ang regla ninyo",
-  "menstruationHistory": "Kasaysayan ng Regla",
+  "menstruationHistory": "Kasaysayan ng regla",
   "menstruationFromToday": "Regla mula ngayon",
   "menstruationFromYesterday": "Regla mula kahapon",
   "selectMenstruationStartDate": "Piliin ang petsa ng simula ng regla",

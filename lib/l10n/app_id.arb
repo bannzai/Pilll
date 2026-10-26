@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "Tersisa {diff} hari",
   "menstruationProgressingDay": "Hari ke-{diffPlusOne} haid",
   "recordMenstruation": "Catat haid",
-  "menstruationHistory": "Riwayat Menstruasi",
+  "menstruationHistory": "Riwayat haid",
   "menstruationFromToday": "Haid mulai hari ini",
   "menstruationFromYesterday": "Haid sejak kemarin",
   "selectMenstruationStartDate": "Pilih tanggal mulai menstruasi",

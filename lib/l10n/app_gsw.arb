@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "No {diff} Täg",
   "menstruationProgressingDay": "{diffPlusOne}. Tag vo de Mens",
   "recordMenstruation": "Periode ufzeichne",
-  "menstruationHistory": "Periodeverlauf",
+  "menstruationHistory": "Verlauf vo dinere Periode",
   "menstruationFromToday": "Menstruation ab hüt",
   "menstruationFromYesterday": "Menstruation ab geschter",
   "selectMenstruationStartDate": "Startdatum vo de Periode wähle",

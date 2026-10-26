@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "Մնացել է {diff} օր",
   "menstruationProgressingDay": "Դաշտանի {diffPlusOne}-րդ օրը",
   "recordMenstruation": "Գրանցել դաշտանը",
-  "menstruationHistory": "Դաշտանության պատմություն",
+  "menstruationHistory": "Դաշտանի պատմություն",
   "menstruationFromToday": "Այսօրից դաշտանություն",
   "menstruationFromYesterday": "Երեկվանից մենստրուացիա",
   "selectMenstruationStartDate": "Ընտրեք մենստրուացիայի սկզբի օրը",

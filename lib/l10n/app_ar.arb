@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "باقي {diff} أيام",
   "menstruationProgressingDay": "اليوم {diffPlusOne} من الدورة الشهرية",
   "recordMenstruation": "تسجيل الدورة",
-  "menstruationHistory": "سجل الدورة الشهرية",
+  "menstruationHistory": "سجل الدورة",
   "menstruationFromToday": "بدء الحيض اليوم",
   "menstruationFromYesterday": "الدورة الشهرية من أمس",
   "selectMenstruationStartDate": "حدد تاريخ بداية الدورة الشهرية",

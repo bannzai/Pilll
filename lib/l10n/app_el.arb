@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "Απομένουν {diff} ημέρες",
   "menstruationProgressingDay": "{diffPlusOne}η ημέρα περιόδου",
   "recordMenstruation": "Καταγραφή περιόδου",
-  "menstruationHistory": "Ιστορικό Περιόδων",
+  "menstruationHistory": "Ιστορικό περιόδου",
   "menstruationFromToday": "Περίοδος από σήμερα",
   "menstruationFromYesterday": "Περίοδος από χθες",
   "selectMenstruationStartDate": "Επιλέξτε ημερομηνία έναρξης περιόδου",

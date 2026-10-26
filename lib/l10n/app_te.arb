@@ -161,7 +161,7 @@
   "menstruationRemainingDay": "ఇంకా {diff} రోజులు",
   "menstruationProgressingDay": "నెలసరి {diffPlusOne}వ రోజు",
   "recordMenstruation": "నెలసరిని నమోదు చేయండి",
-  "menstruationHistory": "మాసిక ధర్మ చరిత్ర",
+  "menstruationHistory": "నెలసరి చరిత్ర",
   "menstruationFromToday": "ఈ రోజు నుండి రుతుస్రావం",
   "menstruationFromYesterday": "నిన్న నుంచి రుతుస్రావం",
   "selectMenstruationStartDate": "రుతుక్రమ ప్రారంభ తేదీని ఎంచుకోండి",
