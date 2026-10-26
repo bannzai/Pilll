@@ -446,7 +446,7 @@
   "inquirySent": "ສົ່ງຂໍ້ຄວາມຂອງທ່ານແລ້ວ",
   "sendInquiry": "ສົ່ງ",
   "invalidEmailFormat": "ກະລຸນາປ້ອນທີ່ຢູ່ອີເມວທີ່ຖືກຕ້ອງ",
-  "emailCannotReceiveICloud": "ກະລຸນາໃຊ້ທີ່ຢູ່ອີເມລນອກເໜືອຈາກ @icloud.com ເນື່ອງຈາກມີການບລັອກເກີດຂຶ້ນເປັນປະຈໍາ",
+  "emailCannotReceiveICloud": "※ກະລຸນາໃຊ້ທີ່ຢູ່ອີເມວທີ່ບໍ່ລົງທ້າຍດ້ວຍ @icloud.com. ອີເມວຕອບກັບມັກຖືກບລັອກ.",
   "emailReceiveSettingNote": "ກະລຸນາຕັ້ງຄ່າເພື່ອສາມາດຮັບອີເມວຈາກ pilll.reminder.app@gmail.com ໄດ້",
   "inquiryContentRequired": "ກະລຸນາປ້ອນເນື້ອຫາການສອບຖາມ",
   "lifetimeSubscriptionWarning": "ຂອບໃຈທີ່ທ່ານໄດ້ຊື້ແຜນຄັ້ງດຽວ. ຖ້າທ່ານຍັງສະມາຊິກແຜນລາຄາປະຈໍາເດືອນ ຫຼື ປະຈໍາປີ, ກະລຸນາຢ່າລືມຍົກເລີກການສະມາຊິກ",

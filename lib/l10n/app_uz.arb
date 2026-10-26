@@ -446,7 +446,7 @@
   "inquirySent": "Murojaatingiz yuborildi",
   "sendInquiry": "Yuboring",
   "invalidEmailFormat": "Iltimos, toʻgʻri elektron pochta manzilini kiriting",
-  "emailCannotReceiveICloud": "Iltimos, @icloud.com dan boshqa elektron pochta manzilidan foydalaning. Xatlar tez-tez bloklanmoqda",
+  "emailCannotReceiveICloud": "※Iltimos, @icloud.com bilan tugamaydigan elektron pochta manzilidan foydalaning. Javob xatlari tez-tez bloklanadi.",
   "emailReceiveSettingNote": "Iltimos, pilll.reminder.app@gmail.com dan xat qabul qilish uchun sozlamalarni o'rnating",
   "inquiryContentRequired": "Murojaat mazmunini kiriting",
   "lifetimeSubscriptionWarning": "Bir martalik rejani sotib olganingiz uchun rahmat. Agar hozirda oyma-oy yoki yillik obunaga a'zo bo'lsangiz, iltimos, obunangizni bekor qilishni unutmang.",

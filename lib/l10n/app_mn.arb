@@ -446,7 +446,7 @@
   "inquirySent": "Таны хүсэлт илгээгдсэн",
   "sendInquiry": "Илгээх",
   "invalidEmailFormat": "Зөв имэйл хаяг оруулна уу",
-  "emailCannotReceiveICloud": "@icloud.com-аас бусад имэйл хаяг ашиглана уу. Блоклогдох тохиолдол их гарч байна",
+  "emailCannotReceiveICloud": "※@icloud.com-оор төгсөөгүй имэйл хаяг ашиглана уу. Хариу имэйлүүд ихэвчлэн хаагддаг.",
   "emailReceiveSettingNote": "pilll.reminder.app@gmail.com хаягаас ирэх имэйлийг хүлээн авч болохоор тохиргоо хийнэ үү",
   "inquiryContentRequired": "Лавлагааны агуулгаа оруулна уу",
   "lifetimeSubscriptionWarning": "Нэг удаагийн худалдан авалтын төлөвлөгөө худалдан авсанд баярлалаа. Сарын болон жилийн төлөвлөгөөнд бүртгүүлсэн хэрэглэгчид захиалгаа цуцлахаа мартуузай.",

@@ -446,7 +446,7 @@
   "inquirySent": "הפנייה נשלחה",
   "sendInquiry": "שליחה",
   "invalidEmailFormat": "נא להזין כתובת אימייל תקינה",
-  "emailCannotReceiveICloud": "* נא להשתמש בכתובת דוא״ל שאינה @icloud.com. חסימות מתרחשות לעתים קרובות",
+  "emailCannotReceiveICloud": "※מומלץ להשתמש בכתובת אימייל שאינה מסתיימת ב־@icloud.com. הודעות התשובה נחסמות לעיתים קרובות.",
   "emailReceiveSettingNote": "※נא לוודא שתוכלו לקבל הודעות דוא\"ל מהכתובת pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "נא להזין את תוכן הפנייה",
   "lifetimeSubscriptionWarning": "תודה על רכישת התוכנית החד-פעמית. אם אתם מנויים לתוכנית חודשית או שנתית, אל תשכחו לבטל את המנוי.",

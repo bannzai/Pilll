@@ -446,7 +446,7 @@
   "inquirySent": "Müraciətiniz göndərildi",
   "sendInquiry": "Göndərin",
   "invalidEmailFormat": "Zəhmət olmasa, etibarlı e-poçt ünvanı daxil edin",
-  "emailCannotReceiveICloud": "※ Xahiş edirik, @icloud.com-dan fərqli e-poçt ünvanından istifadə edin. Tez-tez bloklanma problemləri yaranır.",
+  "emailCannotReceiveICloud": "※Zəhmət olmasa, @icloud.com ilə bitməyən e-poçt ünvanından istifadə edin. Cavab məktubları tez-tez bloklanır.",
   "emailReceiveSettingNote": "※Zəhmət olmasa pilll.reminder.app@gmail.com ünvanından gələn e-poçtları qəbul edə bilməyiniz üçün tənzimləmələrinizi konfiqurasiya edin",
   "inquiryContentRequired": "Müraciət məzmununu daxil edin",
   "lifetimeSubscriptionWarning": "Birdəfəlik planı satın aldığınız üçün təşəkkür edirik. Aylıq və ya illik plana abunə olanlar, abunəliyi ləğv etməyi unutmayın.",

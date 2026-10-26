@@ -446,7 +446,7 @@
   "inquirySent": "پیام شما ارسال شد",
   "sendInquiry": "ارسال",
   "invalidEmailFormat": "لطفاً نشانی ایمیل معتبری وارد کنید",
-  "emailCannotReceiveICloud": "※ لطفاً از آدرس ایمیلی به جز @icloud.com استفاده کنید. ایمیل‌های پاسخ اغلب مسدود می‌شوند",
+  "emailCannotReceiveICloud": "※لطفاً از نشانی ایمیلی غیر از @icloud.com استفاده کنید. ایمیل‌های پاسخ اغلب مسدود می‌شوند.",
   "emailReceiveSettingNote": "※لطفاً تنظیمات ایمیل خود را طوری تغییر دهید که بتوانید پیام‌های ارسالی از pilll.reminder.app@gmail.com را دریافت کنید",
   "inquiryContentRequired": "لطفاً محتوای درخواست خود را وارد کنید",
   "lifetimeSubscriptionWarning": "از خرید پلن یکبار پرداخت شما متشکریم. اگر مشترک پلن ماهانه یا سالانه هستید، لطفاً فراموش نکنید که اشتراک خود را لغو کنید.",

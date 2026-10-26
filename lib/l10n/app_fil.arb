@@ -446,7 +446,7 @@
   "inquirySent": "Naipadala na ang inyong mensahe",
   "sendInquiry": "Ipadala",
   "invalidEmailFormat": "Pakilagay po ang wastong email address",
-  "emailCannotReceiveICloud": "※ Mangyaring gumamit ng email address maliban sa @icloud.com. Madalas ma-block ang mga email mula rito.",
+  "emailCannotReceiveICloud": "※Mangyaring gumamit po ng email address na hindi nagtatapos sa @icloud.com. Madalas ma-block ang mga email na sagot.",
   "emailReceiveSettingNote": "※Mangyaring siguraduhing makakatanggap kayo ng email mula sa pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Mangyaring ipasok ang nilalaman ng inyong katanungan",
   "lifetimeSubscriptionWarning": "Salamat sa pagbili ng one-time plan. Kung kayo ay naka-subscribe sa monthly o annual na plano, huwag kalimutang i-cancel ang inyong subscription.",

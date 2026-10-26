@@ -446,7 +446,7 @@
   "inquirySent": "Umlayezo wakho uthunyelwe",
   "sendInquiry": "Ukuthumela",
   "invalidEmailFormat": "Sicela ufake ikheli le-imeyili elivumelekile",
-  "emailCannotReceiveICloud": "Sicela usebenzise ikheli le-imeyili ngaphandle kwe-@icloud.com. Ukuvinjelwa kuvame ukwenzeka.",
+  "emailCannotReceiveICloud": "※Sicela usebenzise ikheli le-imeyili elingagcini ngo-@icloud.com. Ama-imeyili ezimpendulo avame ukuvinjwa.",
   "emailReceiveSettingNote": "Sicela uhlele ukuze ukwazi ukwamukela ama-imeyili avela ku-pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Sicela ufake okuqukethwe kombuzo",
   "lifetimeSubscriptionWarning": "Siyabonga ngokuthenga uhlelo lokukhokha okukodwa. Uma ubhalisiwe kuhlelo lwenyanga noma lonyaka, sicela ungakhohlwa ukukhansela ukubhalisa kwakho.",

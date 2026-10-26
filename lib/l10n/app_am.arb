@@ -446,7 +446,7 @@
   "inquirySent": "ጥያቄዎ ተልኳል",
   "sendInquiry": "ይላኩ",
   "invalidEmailFormat": "እባክዎ ትክክለኛ የኢሜይል አድራሻ ያስገቡ",
-  "emailCannotReceiveICloud": "※እባክዎ ከ@icloud.com በስተቀር ሌላ የኢሜይል አድራሻ ይጠቀሙ። መልዕክቶች ብዙ ጊዜ ይታገዳሉ።",
+  "emailCannotReceiveICloud": "※እባክዎ ከ@icloud.com ውጭ የሆነ የኢሜይል አድራሻ ይጠቀሙ። የምላሽ ኢሜይሎች ብዙ ጊዜ ይታገዳሉ።",
   "emailReceiveSettingNote": "※ ከ pilll.reminder.app@gmail.com የሚመጡ ኢሜይሎችን መቀበል እንዲችሉ እባክዎን ቅንብሮችዎን ያዋቅሩ",
   "inquiryContentRequired": "እባክዎን የጥያቄ ይዘትን ያስገቡ",
   "lifetimeSubscriptionWarning": "አንድ ጊዜ ክፍያ ፕላን ስለ ገዙ እናመሰግናለን። ወርሃዊ ወይም ዓመታዊ ፕላን ደንበኛ ከሆኑ፣ ደንበኝነት ምዝገባዎን ለመሰረዝ አይርሱ።",

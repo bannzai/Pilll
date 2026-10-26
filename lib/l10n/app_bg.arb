@@ -446,7 +446,7 @@
   "inquirySent": "Запитването ви е изпратено",
   "sendInquiry": "Изпратете",
   "invalidEmailFormat": "Моля, въведете валиден имейл адрес",
-  "emailCannotReceiveICloud": "※ Моля, използвайте имейл адрес, различен от @icloud.com. Възникват чести блокирания",
+  "emailCannotReceiveICloud": "※Моля, използвайте имейл адрес, който не завършва на @icloud.com. Имейлите с отговор често се блокират.",
   "emailReceiveSettingNote": "※Моля, уверете се, че можете да получавате имейли от pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Моля, въведете съдържанието на запитването",
   "lifetimeSubscriptionWarning": "Благодарим ви за закупуването на пожизнения план. Ако сте абонирани за месечен или годишен план, не забравяйте да го отмените.",

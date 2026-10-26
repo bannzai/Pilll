@@ -446,7 +446,7 @@
   "inquirySent": "Ujumbe wako umetumwa",
   "sendInquiry": "Kutuma",
   "invalidEmailFormat": "Tafadhali weka anwani sahihi ya barua pepe",
-  "emailCannotReceiveICloud": "Tafadhali tumia anwani ya barua pepe isiyokuwa @icloud.com. Kuzuiwa kunasikika mara kwa mara",
+  "emailCannotReceiveICloud": "※Tafadhali tumia anwani ya barua pepe isiyoishia kwa @icloud.com. Barua pepe za majibu huzuiwa mara nyingi.",
   "emailReceiveSettingNote": "Tafadhali hakikisha mipangilio yako inaruhusu kupokea barua pepe kutoka pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Tafadhali ingiza maudhui ya maombi yako",
   "lifetimeSubscriptionWarning": "Asante kwa kununua mpango wa malipo ya mara moja. Ikiwa umejiunga na mpango wa kila mwezi au wa kila mwaka, tafadhali usisahau kubatilisha usajili huo.",

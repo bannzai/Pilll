@@ -446,7 +446,7 @@
   "inquirySent": "Henvendelsen din er sendt",
   "sendInquiry": "Send",
   "invalidEmailFormat": "Skriv inn en gyldig e-postadresse",
-  "emailCannotReceiveICloud": "Vennligst bruk en annen e-postadresse enn @icloud.com. Blokkering forekommer ofte.",
+  "emailCannotReceiveICloud": "※Bruk gjerne en e-postadresse som ikke slutter på @icloud.com. E-postsvar blir ofte blokkert.",
   "emailReceiveSettingNote": "Vennligst sørg for at du kan motta e-post fra pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Vennligst skriv inn henvendelsen din",
   "lifetimeSubscriptionWarning": "Takk for kjøpet av livstidsplanen. Hvis du har et måneds- eller årsabonnement, ikke glem å si det opp.",

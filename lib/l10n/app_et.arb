@@ -446,7 +446,7 @@
   "inquirySent": "Sinu päring on saadetud",
   "sendInquiry": "Saada",
   "invalidEmailFormat": "Sisesta palun kehtiv e-posti aadress",
-  "emailCannotReceiveICloud": "※Palun kasutage muud meiliaadress kui @icloud.com. Blokeerimisi esineb sageli.",
+  "emailCannotReceiveICloud": "※Palun kasuta e-posti aadressi, mis ei lõpe domeeniga @icloud.com. Vastuskirjad blokeeritakse sageli.",
   "emailReceiveSettingNote": "※Palun seadistage oma e-posti nii, et saaksite vastu võtta kirju aadressilt pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Palun sisestage päringusisu",
   "lifetimeSubscriptionWarning": "Täname teid ühekordse ostu plaani soetamise eest. Kui teil on kuu- või aastatellimus, ärge unustage see tühistada.",

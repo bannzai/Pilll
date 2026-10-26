@@ -446,7 +446,7 @@
   "inquirySent": "សាររបស់អ្នកត្រូវបានផ្ញើហើយ",
   "sendInquiry": "ផ្ញើ",
   "invalidEmailFormat": "សូមបញ្ចូលអាសយដ្ឋានអ៊ីមែលដែលត្រឹមត្រូវ",
-  "emailCannotReceiveICloud": "សូមប្រើអាសយដ្ឋានអ៊ីមែលក្រៅពី @icloud.com ។ អ៊ីមែលឆ្លើយតបត្រូវបានទប់ស្កាត់ញឹកញាប់។",
+  "emailCannotReceiveICloud": "※សូមប្រើអាសយដ្ឋានអ៊ីមែលដែលមិនបញ្ចប់ដោយ @icloud.com។ អ៊ីមែលឆ្លើយតបតែងតែត្រូវបានរារាំង។",
   "emailReceiveSettingNote": "សូមធ្វើការកំណត់ដើម្បីអាចទទួលអ៊ីមែលពី pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "សូមបញ្ចូលខ្លឹមសារសំណួរ",
   "lifetimeSubscriptionWarning": "សូមអរគុណចំពោះការទិញផែនការទិញមួយលើក។ ប្រសិនបើអ្នកកំពុងជាវផែនការប្រចាំខែ ឬប្រចាំឆ្នាំ សូមកុំភ្លេចបោះបង់ការជាវនោះ។",

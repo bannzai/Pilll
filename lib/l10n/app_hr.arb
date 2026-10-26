@@ -446,7 +446,7 @@
   "inquirySent": "Vaš je upit poslan",
   "sendInquiry": "Pošaljite",
   "invalidEmailFormat": "Unesite valjanu adresu e-pošte",
-  "emailCannotReceiveICloud": "Molimo koristite e-mail adresu koja nije @icloud.com. E-mailovi s te domene često se blokiraju.",
+  "emailCannotReceiveICloud": "※Molimo vas da koristite adresu e-pošte koja ne završava na @icloud.com. E-poruke s odgovorom često se blokiraju.",
   "emailReceiveSettingNote": "Molimo postavite postavke kako biste mogli primati e-poštu s pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Molimo unesite sadržaj upita",
   "lifetimeSubscriptionWarning": "Hvala što ste kupili jednokratni plan. Ako imate aktivnu mjesečnu ili godišnju pretplatu, molimo vas da je otkažete.",

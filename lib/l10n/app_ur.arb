@@ -446,7 +446,7 @@
   "inquirySent": "آپ کا پیغام بھیج دیا گیا ہے",
   "sendInquiry": "بھیجیں",
   "invalidEmailFormat": "براہِ کرم درست ای میل پتہ درج کریں",
-  "emailCannotReceiveICloud": "براہ کرم @icloud.com کے علاوہ ای میل ایڈریس استعمال کریں۔ اس سے اکثر بلاک کیا جا رہا ہے",
+  "emailCannotReceiveICloud": "※براہِ کرم @icloud.com کے علاوہ کوئی اور ای میل پتہ استعمال کریں۔ جوابی ای میلز اکثر بلاک ہو جاتی ہیں۔",
   "emailReceiveSettingNote": "براہ کرم اس بات کو یقینی بنائیں کہ آپ pilll.reminder.app@gmail.com سے ای میلز وصول کر سکیں",
   "inquiryContentRequired": "براہ کرم استفسار کا مواد درج کریں",
   "lifetimeSubscriptionWarning": "خریداری کے لیے شکریہ۔ اگر آپ ماہانہ یا سالانہ منصوبے کے رکن ہیں تو براہِ کرم اپنی رکنیت منسوخ کرنا نہ بھولیں۔",

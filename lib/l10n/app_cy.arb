@@ -446,7 +446,7 @@
   "inquirySent": "Mae eich ymholiad wedi'i anfon",
   "sendInquiry": "Anfonwch",
   "invalidEmailFormat": "Rhowch gyfeiriad e-bost dilys, os gwelwch yn dda",
-  "emailCannotReceiveICloud": "※ Defnyddiwch gyfeiriad e-bost heblaw @icloud.com. Mae e-byst ateb yn cael eu blocio'n aml",
+  "emailCannotReceiveICloud": "※Defnyddiwch gyfeiriad e-bost nad yw’n gorffen â @icloud.com, os gwelwch yn dda. Caiff e-byst ateb eu rhwystro’n aml.",
   "emailReceiveSettingNote": "※Sicrhewch eich bod yn gallu derbyn e-byst o pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Nodwch gynnwys eich ymholiad",
   "lifetimeSubscriptionWarning": "Diolch am brynu'r cynllun untro. Os ydych chi wedi tanysgrifio i gynllun misol neu flynyddol, peidiwch ag anghofio canslo.",

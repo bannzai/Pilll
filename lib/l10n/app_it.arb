@@ -446,7 +446,7 @@
   "inquirySent": "La tua richiesta è stata inviata",
   "sendInquiry": "Invia",
   "invalidEmailFormat": "Inserisci un indirizzo email valido",
-  "emailCannotReceiveICloud": "Si prega di utilizzare un indirizzo email diverso da @icloud.com. Le email vengono bloccate frequentemente.",
+  "emailCannotReceiveICloud": "※Usa un indirizzo email che non termini con @icloud.com. Le email di risposta vengono spesso bloccate.",
   "emailReceiveSettingNote": "Si prega di configurare le impostazioni per ricevere email da pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Inserisci il contenuto della richiesta",
   "lifetimeSubscriptionWarning": "Grazie per aver acquistato il piano a pagamento una tantum. Se sei iscritto a un piano mensile o annuale, non dimenticare di annullarlo.",

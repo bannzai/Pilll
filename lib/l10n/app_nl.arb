@@ -446,7 +446,7 @@
   "inquirySent": "Je bericht is verzonden",
   "sendInquiry": "Verzenden",
   "invalidEmailFormat": "Vul een geldig e-mailadres in",
-  "emailCannotReceiveICloud": "Gebruik alstublieft een ander e-mailadres dan @icloud.com. Berichten worden vaak geblokkeerd",
+  "emailCannotReceiveICloud": "※Gebruik bij voorkeur een e-mailadres dat niet eindigt op @icloud.com. Antwoordmails worden vaak geblokkeerd.",
   "emailReceiveSettingNote": "Zorg ervoor dat u e-mails van pilll.reminder.app@gmail.com kunt ontvangen",
   "inquiryContentRequired": "Voer de inhoud van uw bericht in",
   "lifetimeSubscriptionWarning": "Bedankt voor uw aankoop van het eenmalige plan. Als u een maandelijks of jaarlijks abonnement heeft, vergeet dan niet dit op te zeggen.",

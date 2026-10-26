@@ -446,7 +446,7 @@
   "inquirySent": "Mesajul tău a fost trimis",
   "sendInquiry": "Trimite",
   "invalidEmailFormat": "Introdu o adresă de e-mail validă",
-  "emailCannotReceiveICloud": "Vă rugăm să utilizați o altă adresă de email decât @icloud.com. Blocările sunt frecvente",
+  "emailCannotReceiveICloud": "※Te rugăm să folosești o adresă de e-mail care nu se termină în @icloud.com. E-mailurile de răspuns sunt blocate frecvent.",
   "emailReceiveSettingNote": "Vă rugăm să configurați setările pentru a primi e-mailuri de la pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Vă rugăm să introduceți conținutul mesajului",
   "lifetimeSubscriptionWarning": "Vă mulțumim pentru achiziționarea planului cu plată unică. Dacă sunteți abonat la un plan lunar sau anual, vă rugăm să nu uitați să anulați abonamentul.",

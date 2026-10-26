@@ -446,7 +446,7 @@
   "inquirySent": "Yhteydenottosi on lähetetty",
   "sendInquiry": "Lähetä",
   "invalidEmailFormat": "Anna kelvollinen sähköpostiosoite",
-  "emailCannotReceiveICloud": "※Käytä muuta sähköpostiosoitetta kuin @icloud.com. Viestit estetään usein.",
+  "emailCannotReceiveICloud": "※Käytäthän sähköpostiosoitetta, joka ei pääty @icloud.com. Vastausviestit estetään usein.",
   "emailReceiveSettingNote": "※Varmistathan, että voit vastaanottaa sähköposteja osoitteesta pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Anna yhteydenoton sisältö",
   "lifetimeSubscriptionWarning": "Kiitos kertaostosuunnitelman hankinnasta. Jos sinulla on kuukausi- tai vuositilaus, muistathan peruuttaa se.",

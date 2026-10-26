@@ -446,7 +446,7 @@
   "inquirySent": "Đã gửi tin nhắn của bạn",
   "sendInquiry": "Gửi",
   "invalidEmailFormat": "Vui lòng nhập địa chỉ email hợp lệ",
-  "emailCannotReceiveICloud": "Vui lòng sử dụng địa chỉ email khác ngoài @icloud.com vì email trả lời thường bị chặn.",
+  "emailCannotReceiveICloud": "※Vui lòng dùng địa chỉ email không kết thúc bằng @icloud.com. Email phản hồi thường bị chặn.",
   "emailReceiveSettingNote": "Vui lòng cài đặt để có thể nhận email từ pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Vui lòng nhập nội dung liên hệ",
   "lifetimeSubscriptionWarning": "Cảm ơn bạn đã mua gói mua trọn đời. Nếu bạn đang đăng ký gói hàng tháng hoặc hàng năm, vui lòng hủy đăng ký đó.",
