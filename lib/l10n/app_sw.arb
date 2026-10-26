@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Unaweza kubadilisha maandishi ya mwanzo wa arifa",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Tafadhali weka angalau herufi 0",
-  "changeDailyNotificationMessage": "Unaweza kubadilisha ujumbe wa arifa ikiwa hukusahau kumeza tembe",
+  "changeDailyNotificationMessage": "Unaweza kubadilisha ujumbe wa arifa unaoonekana unapomeza kidonge kwa wakati",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Pokea taarifa leo saa 9:00 asubuhi",
   "save": "Hifadhi",

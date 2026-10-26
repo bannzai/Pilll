@@ -244,7 +244,7 @@
   "changeNotificationHeader": "אפשר לשנות את הטקסט בתחילת ההתראה",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "יש להזין לפחות 0 תווים",
-  "changeDailyNotificationMessage": "ניתן לשנות את נוסח ההודעה עבור מקרים שבהם נטלת את הגלולה בזמן",
+  "changeDailyNotificationMessage": "אפשר לשנות את הודעת ההתראה שמופיעה כשהגלולה ניטלת בזמן",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "קבלת התראה ב-9:00 ביום",
   "save": "שמור",

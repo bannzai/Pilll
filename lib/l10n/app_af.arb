@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Jy kan die begin van die kennisgewing verander",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Voer asseblief minstens 0 karakters in",
-  "changeDailyNotificationMessage": "Jy kan die kennisgewing boodskap aanpas vir wanneer jy nie jou pil vergeet het nie",
+  "changeDailyNotificationMessage": "Jy kan die kennisgewingboodskap verander vir wanneer jy jou pil betyds geneem het",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Ontvang kennisgewing om 9:00 dieselfde dag",
   "save": "Stoor",

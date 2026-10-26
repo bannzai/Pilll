@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Du kan endre teksten i starten av varselet",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Skriv inn minst 0 tegn",
-  "changeDailyNotificationMessage": "Du kan endre varslingsteksten for når du har tatt pillen som planlagt",
+  "changeDailyNotificationMessage": "Du kan endre varselmeldingen som vises når du har tatt p-pillen i tide",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Motta varsling samme dag kl. 09:00",
   "save": "Lagre",

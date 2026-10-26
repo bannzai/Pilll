@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Мэдэгдлийн эхэнд харагдах бичвэрийг өөрчилж болно",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Дор хаяж 0 тэмдэгт оруулна уу",
-  "changeDailyNotificationMessage": "Эм дутуугаагүй үеийн мэдэгдлийн мессежийг өөрчлөх боломжтой",
+  "changeDailyNotificationMessage": "Эмээ цагт нь уусан үед харагдах мэдэгдлийн бичвэрийг өөрчилж болно",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Тухайн өдрийн 9:00-д мэдэгдэл хүлээн авах",
   "save": "Хадгалах",

@@ -244,7 +244,7 @@
   "changeNotificationHeader": "تاسو د خبرتیا د پیل متن بدلولی شئ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "مهرباني وکړئ لږ تر لږه 0 توري ولیکئ",
-  "changeDailyNotificationMessage": "کولی شئ د درملو د نه هیرولو د خبرتیا پیغام بدل کړئ",
+  "changeDailyNotificationMessage": "تاسو کولی شئ هغه د خبرتیا پیغام بدل کړئ چې د ګولۍ پر وخت له اخیستو وروسته ښکاري",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "د ورځې په ۹:۰۰ بجې خبرتیا ترلاسه کړئ",
   "save": "ساتل",

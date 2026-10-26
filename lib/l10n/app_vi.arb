@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Bạn có thể thay đổi nội dung ở đầu thông báo",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Vui lòng nhập ít nhất 0 ký tự",
-  "changeDailyNotificationMessage": "Có thể tùy chỉnh thông báo khi không quên uống thuốc",
+  "changeDailyNotificationMessage": "Bạn có thể thay đổi nội dung thông báo hiển thị khi uống thuốc đúng giờ",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Nhận thông báo vào 9:00 sáng cùng ngày",
   "save": "Lưu",

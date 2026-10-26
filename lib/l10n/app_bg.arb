@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Можете да промените текста в началото на известието",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Моля, въведете поне 0 знака",
-  "changeDailyNotificationMessage": "Можете да променяте текста на уведомлението при редовен прием на хапчето",
+  "changeDailyNotificationMessage": "Можете да промените текста на известието, което се показва, когато сте взели хапчето навреме",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Уведомление в 9:00 в деня",
   "save": "Запази",

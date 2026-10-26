@@ -244,7 +244,7 @@
   "changeNotificationHeader": "အကြောင်းကြားချက်အစတွင် ပေါ်မည့်စာသားကို ပြောင်းလဲနိုင်ပါတယ်",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "အနည်းဆုံး စာလုံး 0 လုံး ထည့်ပါ",
-  "changeDailyNotificationMessage": "ဆေးမပျက်သောအခါ အကြောင်းကြားချက်စာသားကို ပြောင်းလဲနိုင်သည်",
+  "changeDailyNotificationMessage": "ဆေးလုံးကို အချိန်မီ သောက်ပြီးတဲ့အခါ ပြသမယ့် အသိပေးစာကို ပြောင်းနိုင်ပါတယ်",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "နံနက် ၉:၀၀ သတိပေးချက် လက်ခံရန်",
   "save": "သိမ်းရန်",

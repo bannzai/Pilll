@@ -244,7 +244,7 @@
   "changeNotificationHeader": "เปลี่ยนข้อความตอนต้นของการแจ้งเตือนได้ค่ะ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "กรุณากรอกอย่างน้อย 0 ตัวอักษรค่ะ",
-  "changeDailyNotificationMessage": "คุณสามารถเปลี่ยนแปลงข้อความแจ้งเตือนสำหรับกรณีที่ไม่ลืมทานยาได้",
+  "changeDailyNotificationMessage": "เปลี่ยนข้อความแจ้งเตือนที่แสดงเมื่อทานยาตรงเวลาได้ค่ะ",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "รับการแจ้งเตือนเวลา 09:00 น. ในวันเดียวกัน",
   "save": "บันทึก",

@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Spremenite lahko besedilo na začetku obvestila",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Vnesite vsaj 0 znakov",
-  "changeDailyNotificationMessage": "Lahko spremenite besedilo obvestila za primere, ko niste pozabili vzeti tabletke",
+  "changeDailyNotificationMessage": "Spremenite lahko besedilo obvestila, ki se prikaže, ko tableto vzamete pravočasno",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Obvestilo isti dan ob 9:00",
   "save": "Shrani",

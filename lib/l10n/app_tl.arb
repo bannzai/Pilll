@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Maaari ninyong baguhin ang teksto sa simula ng abiso",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Pakilagay po ang hindi bababa sa 0 character",
-  "changeDailyNotificationMessage": "Maaaring baguhin ang mensahe ng notification para sa mga araw na hindi nakalimutan uminom",
+  "changeDailyNotificationMessage": "Maaari ninyong baguhin ang mensahe ng abiso kapag nainom ninyo ang pildoras sa oras",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Tumanggap ng paalala sa 9:00 AM ngayong araw",
   "save": "I-save",

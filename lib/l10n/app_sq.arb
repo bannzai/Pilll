@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Mund ta ndryshoni tekstin në fillim të njoftimit",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Ju lutemi, shkruani të paktën 0 karaktere",
-  "changeDailyNotificationMessage": "Mund të ndryshoni mesazhin e njoftimit për rastet kur nuk keni harruar të merrni pilulën",
+  "changeDailyNotificationMessage": "Mund ta ndryshoni mesazhin e njoftimit që shfaqet kur e merrni pilulën në kohë",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Merr njoftim në orën 9:00 të ditës",
   "save": "Ruaj",

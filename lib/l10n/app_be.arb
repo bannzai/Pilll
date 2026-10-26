@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Вы можаце змяніць тэкст у пачатку апавяшчэння",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Калі ласка, увядзіце не менш за 0 сімвалаў",
-  "changeDailyNotificationMessage": "Можна змяніць тэкст паведамлення, калі пілюля была прынята вчасова",
+  "changeDailyNotificationMessage": "Вы можаце змяніць тэкст апавяшчэння, якое з’яўляецца, калі вы прынялі пігулку своечасова",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Апавяшчэнне ў 9:00 у дзень прыёму",
   "save": "Захаваць",

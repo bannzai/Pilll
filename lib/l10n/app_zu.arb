@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Ungashintsha umbhalo osekuqaleni kwesaziso",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Sicela ufake okungenani izinhlamvu ezingu-0",
-  "changeDailyNotificationMessage": "Ungaguqula umlayezo wesaziso uma ungakhohlwa ukuphuza",
+  "changeDailyNotificationMessage": "Ungawushintsha umlayezo wesaziso ovela uma uphuze iphilisi ngesikhathi",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Thola isaziso ngo-9:00 ekuseni",
   "save": "Gcina",

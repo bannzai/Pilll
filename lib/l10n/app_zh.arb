@@ -244,7 +244,7 @@
   "changeNotificationHeader": "可以更改通知开头的文字",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "请至少输入0个字符",
-  "changeDailyNotificationMessage": "可以自定义正常服用时的通知消息",
+  "changeDailyNotificationMessage": "按时服药时显示的通知内容可以修改",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "当天9:00接收通知",
   "save": "保存",

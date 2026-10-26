@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Możesz zmienić tekst na początku powiadomienia",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Wpisz co najmniej 0 znaków",
-  "changeDailyNotificationMessage": "Możesz zmienić treść powiadomień gdy regularnie bierzesz pigułkę",
+  "changeDailyNotificationMessage": "Możesz zmienić treść powiadomienia wyświetlanego po przyjęciu tabletki na czas",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Otrzymuj powiadomienia o 9:00 tego dnia",
   "save": "Zapisz",

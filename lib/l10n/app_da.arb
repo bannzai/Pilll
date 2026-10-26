@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Du kan ændre teksten i starten af notifikationen",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Indtast mindst 0 tegn",
-  "changeDailyNotificationMessage": "Du kan ændre notifikationsbeskeden for når du har taget din pille",
+  "changeDailyNotificationMessage": "Du kan ændre beskeden i notifikationen, der vises, når du har taget din p-pille til tiden",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Få besked kl. 9:00 samme dag",
   "save": "Gem",

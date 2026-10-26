@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Megváltoztathatod az értesítés elején megjelenő szöveget",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Adj meg legalább 0 karaktert",
-  "changeDailyNotificationMessage": "Módosíthatja a rendszeres bevétel értesítésének szövegét",
+  "changeDailyNotificationMessage": "Módosíthatod az értesítés szövegét, amely akkor jelenik meg, ha időben szeded be a tablettát",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Aznap 9:00-kor értesítést kapok",
   "save": "Mentés",

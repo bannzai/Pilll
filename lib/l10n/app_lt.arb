@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Galite pakeisti pranešimo pradžioje rodomą tekstą",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Įveskite bent 0 simbolių",
-  "changeDailyNotificationMessage": "Galite keisti pranešimo tekstą, kai nepamirštate gerti tablečių",
+  "changeDailyNotificationMessage": "Galite pakeisti pranešimo tekstą, kuris rodomas, kai laiku išgeriate tabletę",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Gauti priminimą 9:00 val. tą dieną",
   "save": "Išsaugoti",

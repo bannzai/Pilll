@@ -244,7 +244,7 @@
   "changeNotificationHeader": "അറിയിപ്പിന്റെ തുടക്കത്തിലെ വാചകം മാറ്റാം",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "കുറഞ്ഞത് 0 അക്ഷരങ്ങളെങ്കിലും നൽകൂ",
-  "changeDailyNotificationMessage": "സാധാരണ രീതിയിൽ കഴിച്ചാലുള്ള അറിയിപ്പ് സന്ദേശം മാറ്റാൻ കഴിയും",
+  "changeDailyNotificationMessage": "ഗുളിക കൃത്യസമയത്ത് കഴിക്കുമ്പോൾ കാണിക്കുന്ന അറിയിപ്പ് സന്ദേശം മാറ്റാം",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "അന്നു 9:00 ന് അറിയിപ്പ് ലഭിക്കുക",
   "save": "സേവ്",

@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Bildirimin başındaki metni değiştirebilirsiniz",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Lütfen en az 0 karakter girin",
-  "changeDailyNotificationMessage": "İlacınızı düzenli olarak aldığınızda gönderilecek bildirim mesajını özelleştirebilirsiniz",
+  "changeDailyNotificationMessage": "Hapınızı zamanında aldığınızda gösterilen bildirim mesajını değiştirebilirsiniz",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Aynı gün 09:00'da bildirim al",
   "save": "Kaydet",

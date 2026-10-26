@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Μπορείτε να αλλάξετε το αρχικό κείμενο της ειδοποίησης",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Παρακαλούμε εισαγάγετε τουλάχιστον 0 χαρακτήρες",
-  "changeDailyNotificationMessage": "Μπορείτε να προσαρμόσετε το μήνυμα ειδοποίησης όταν δεν έχετε ξεχάσει να πάρετε το χάπι σας",
+  "changeDailyNotificationMessage": "Μπορείτε να αλλάξετε το μήνυμα ειδοποίησης που εμφανίζεται όταν παίρνετε το χάπι στην ώρα του",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Ειδοποίηση στις 9:00 την ίδια μέρα",
   "save": "Αποθήκευση",

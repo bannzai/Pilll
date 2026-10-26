@@ -244,7 +244,7 @@
   "changeNotificationHeader": "يمكنكِ تغيير النص في بداية الإشعار",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "يرجى إدخال 0 أحرف على الأقل",
-  "changeDailyNotificationMessage": "يمكنك تغيير نص الإشعار في حالة عدم نسيان تناول الحبوب",
+  "changeDailyNotificationMessage": "يمكنكِ تغيير نص الإشعار الذي يظهر عند تناول الحبة في موعدها",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "تلقي إشعار في نفس اليوم الساعة 9:00 صباحاً",
   "save": "حفظ",

@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Вы можете изменить текст в начале уведомления",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Пожалуйста, введите не менее 0 символов",
-  "changeDailyNotificationMessage": "Можно изменить текст уведомления при своевременном приёме таблетки",
+  "changeDailyNotificationMessage": "Вы можете изменить текст уведомления, которое появляется, когда вы принимаете таблетку вовремя",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Уведомление в 9:00 в день приема",
   "save": "Сохранить",

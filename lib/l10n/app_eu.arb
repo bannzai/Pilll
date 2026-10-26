@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Jakinarazpenaren hasierako testua alda dezakezu",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Idatzi gutxienez 0 karaktere",
-  "changeDailyNotificationMessage": "Pilula hartzea ahaztu ez duzunean jakinarazpen mezua aldatu dezakezu.",
+  "changeDailyNotificationMessage": "Pilula garaiz hartu duzunean agertzen den jakinarazpenaren mezua alda dezakezu",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Egunean 9:00etan jakinarazpena jaso",
   "save": "Gorde",

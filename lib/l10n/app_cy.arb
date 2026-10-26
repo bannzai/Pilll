@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Gallwch newid y testun ar ddechrau'r hysbysiad",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Rhowch o leiaf 0 nod, os gwelwch yn dda",
-  "changeDailyNotificationMessage": "Gallwch newid testun yr hysbysiad pan nad ydych wedi anghofio cymryd y bilsen",
+  "changeDailyNotificationMessage": "Gallwch newid neges yr hysbysiad a ddangosir pan fyddwch wedi cymryd y bilsen ar amser",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Cael hysbysiad am 9:00 ar y diwrnod",
   "save": "Cadw",

@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Du kannst den Text am Anfang der Benachrichtigung ändern",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Gib bitte mindestens 0 Zeichen ein",
-  "changeDailyNotificationMessage": "Sie können den Benachrichtigungstext für die ordnungsgemäße Einnahme anpassen",
+  "changeDailyNotificationMessage": "Du kannst den Benachrichtigungstext ändern, der angezeigt wird, wenn du deine Pille pünktlich eingenommen hast",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Benachrichtigung um 9:00 Uhr am selben Tag",
   "save": "Speichern",

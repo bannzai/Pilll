@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Билдирменин башындагы текстти өзгөртө аласыз",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Кеминде 0 белги киргизиңиз",
-  "changeDailyNotificationMessage": "Унутпай ичкен учурдагы билдирүү текстин өзгөртө аласыз",
+  "changeDailyNotificationMessage": "Таблетканы убагында ичкениңизде көрсөтүлүүчү билдирүүнүн текстин өзгөртө аласыз",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Ошол күнү саат 9:00де эскертүү алуу",
   "save": "Сактоо",

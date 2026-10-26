@@ -244,7 +244,7 @@
   "changeNotificationHeader": "می‌توانید متن ابتدای اعلان را تغییر دهید",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "لطفاً دست‌کم ۰ نویسه وارد کنید",
-  "changeDailyNotificationMessage": "می‌توانید پیام اطلاع‌رسانی مربوط به مصرف به‌موقع قرص را تغییر دهید",
+  "changeDailyNotificationMessage": "می‌توانید متن اعلانی را که هنگام مصرف به‌موقع قرص نمایش داده می‌شود، تغییر دهید",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "دریافت اطلاع‌رسانی در ساعت 9:00 همان روز",
   "save": "ذخیره",

@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Хабарламаның басындағы мәтінді өзгерте аласыз",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Кемінде 0 таңба енгізіңіз",
-  "changeDailyNotificationMessage": "Дәрі ішуді ұмытпаған жағдайдағы хабарландыру мәтінін өзгерте аласыз",
+  "changeDailyNotificationMessage": "Дәріні уақытында қабылдағанда көрсетілетін хабарландыру мәтінін өзгерте аласыз",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Сол күні сағат 9:00-де хабарландыру алу",
   "save": "Сақтау",

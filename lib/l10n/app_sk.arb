@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Môžete zmeniť text na začiatku upozornenia",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Zadajte aspoň 0 znakov",
-  "changeDailyNotificationMessage": "Môžete zmeniť text notifikácií v prípadoch, keď nezabudnete na užitie",
+  "changeDailyNotificationMessage": "Môžete zmeniť text upozornenia, ktoré sa zobrazí, keď si vezmete tabletku načas",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Dostať upozornenie v ten deň o 9:00",
   "save": "Uložiť",

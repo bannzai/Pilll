@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Je kunt de tekst aan het begin van de melding aanpassen",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Vul minimaal 0 tekens in",
-  "changeDailyNotificationMessage": "Je kunt de notificatietekst wijzigen voor wanneer je je pil niet vergeet",
+  "changeDailyNotificationMessage": "Je kunt de melding aanpassen die verschijnt als je je pil op tijd hebt ingenomen",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Ontvang melding om 9:00 op de dag",
   "save": "Opslaan",

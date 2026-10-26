@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Vous pouvez modifier le texte au début de la notification",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Veuillez saisir au moins 0 caractère",
-  "changeDailyNotificationMessage": "Vous pouvez personnaliser les messages de notification lorsque vous prenez votre pilule à temps",
+  "changeDailyNotificationMessage": "Vous pouvez modifier le message de la notification affichée lorsque vous prenez votre pilule à l’heure",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Recevoir une notification à 9h00 le même jour",
   "save": "Sauvegarder",

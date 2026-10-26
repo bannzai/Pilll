@@ -244,7 +244,7 @@
   "changeNotificationHeader": "నోటిఫికేషన్ ప్రారంభంలో కనిపించే వచనాన్ని మీరు మార్చుకోవచ్చు",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "దయచేసి కనీసం 0 అక్షరాలు నమోదు చేయండి",
-  "changeDailyNotificationMessage": "మాత్రలు తప్పకుండా తీసుకున్నప్పుడు వచ్చే నోటిఫికేషన్ సందేశాన్ని మార్చవచ్చు",
+  "changeDailyNotificationMessage": "మాత్రను సమయానికి తీసుకున్నప్పుడు కనిపించే నోటిఫికేషన్ సందేశాన్ని మార్చుకోవచ్చు",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "ఆ రోజు 9:00కి నోటిఫికేషన్ అందుకోండి",
   "save": "సేవ్",

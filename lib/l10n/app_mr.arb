@@ -244,7 +244,7 @@
   "changeNotificationHeader": "तुम्ही सूचनेच्या सुरुवातीला दिसणारा मजकूर बदलू शकता",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "कृपया किमान 0 अक्षरे टाका",
-  "changeDailyNotificationMessage": "गोळी घेतल्यावर येणारे सूचना संदेश बदलू शकता",
+  "changeDailyNotificationMessage": "गोळी वेळेवर घेतल्यावर दिसणारा सूचना संदेश तुम्ही बदलू शकता",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "त्याच दिवशी सकाळी 9:00 वाजता सूचना प्राप्त करा",
   "save": "साठवा",

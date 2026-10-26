@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Можете да го промените текстот на почетокот на известувањето",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Ве молиме, внесете најмалку 0 знаци",
-  "changeDailyNotificationMessage": "Можете да ја промените пораката за известување кога не сте заборавиле да ја земете пилулата",
+  "changeDailyNotificationMessage": "Можете да го промените текстот на известувањето што се прикажува кога ќе ја земете таблета навреме",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Известување во 9:00 истиот ден",
   "save": "зачувај",

@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Դուք կարող եք փոխել ծանուցման սկզբում ցուցադրվող տեքստը",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Խնդրում ենք մուտքագրել առնվազն 0 նիշ",
-  "changeDailyNotificationMessage": "Կարող եք փոխել ծանուցման հաղորդագրությունը հաբը ժամանակին ընդունելու դեպքում",
+  "changeDailyNotificationMessage": "Դուք կարող եք փոխել ծանուցման տեքստը, որը ցուցադրվում է, երբ հաբը ժամանակին եք ընդունում",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Ծանուցում ստանալ այդ օրը ժամը 9:00-ին",
   "save": "Պահպանել",

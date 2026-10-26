@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Du kan ändra texten i början av aviseringen",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Ange minst 0 tecken",
-  "changeDailyNotificationMessage": "Du kan ändra meddelandet som visas när du inte glömt att ta p-pillret",
+  "changeDailyNotificationMessage": "Du kan ändra meddelandet som visas när du har tagit ditt p-piller i tid",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Notifiering samma dag kl. 09:00",
   "save": "Spara",

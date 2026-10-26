@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Pots canviar el text inicial de la notificació",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Introdueix almenys 0 caràcters",
-  "changeDailyNotificationMessage": "Pots personalitzar el missatge de notificació quan has pres la píndola correctament",
+  "changeDailyNotificationMessage": "Pots canviar el text de la notificació que apareix quan has pres la píndola a l’hora",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Rebre notificació a les 9:00 del dia",
   "save": "Desar",

@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Anda boleh menukar teks pada permulaan pemberitahuan",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Sila masukkan sekurang-kurangnya 0 aksara",
-  "changeDailyNotificationMessage": "Anda boleh mengubah mesej pemberitahuan apabila tidak terlupa mengambil pil",
+  "changeDailyNotificationMessage": "Anda boleh menukar mesej pemberitahuan yang dipaparkan apabila pil diambil tepat pada masanya",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Terima notifikasi pada pukul 9:00 hari itu",
   "save": "Simpan",

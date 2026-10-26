@@ -244,7 +244,7 @@
   "changeNotificationHeader": "შეგიძლიათ შეცვალოთ შეტყობინების დასაწყისში ნაჩვენები ტექსტი",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "გთხოვთ, შეიყვანოთ სულ მცირე 0 სიმბოლო",
-  "changeDailyNotificationMessage": "შეგიძლიათ შეცვალოთ შეტყობინების ტექსტი იმ შემთხვევისთვის, როცა ტაბლეტს არ ივიწყებთ",
+  "changeDailyNotificationMessage": "შეგიძლიათ შეცვალოთ შეტყობინების ტექსტი, რომელიც აბის დროულად მიღებისას გამოჩნდება",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "იმავე დღეს 9:00 საათზე შეტყობინება",
   "save": "შენახვა",

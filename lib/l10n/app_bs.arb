@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Možete promijeniti tekst na početku obavijesti",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Molimo unesite najmanje 0 znakova",
-  "changeDailyNotificationMessage": "Možete promijeniti tekst obavještenja kada niste zaboravili uzeti pilulu",
+  "changeDailyNotificationMessage": "Možete promijeniti tekst obavijesti koja se prikazuje kada ste uzeli pilulu na vrijeme",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Primi obavještenje istog dana u 9:00",
   "save": "Sačuvaj",

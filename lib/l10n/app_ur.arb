@@ -244,7 +244,7 @@
   "changeNotificationHeader": "آپ اطلاع کے آغاز میں آنے والا متن تبدیل کر سکتی ہیں",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "براہِ کرم کم از کم 0 حروف درج کریں",
-  "changeDailyNotificationMessage": "آپ اس صورت میں اطلاعی پیغام تبدیل کر سکتے ہیں جب آپ نے گولی لینا نہیں بھولا ہو",
+  "changeDailyNotificationMessage": "گولی وقت پر لینے کی صورت میں دکھایا جانے والا اطلاع کا پیغام آپ بدل سکتی ہیں",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "اسی دن ۹:۰۰ بجے نوٹیفیکیشن حاصل کریں",
   "save": "محفوظ کریں",

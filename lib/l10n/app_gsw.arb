@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Du chasch de Text am Aafang vo de Mitteilung ändere",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Gib bitte mindestens 0 Zeiche ii",
-  "changeDailyNotificationMessage": "Sie können die Benachrichtigung für den Fall anpassen, wenn Sie die Pille nicht vergessen haben",
+  "changeDailyNotificationMessage": "Du chasch d Nachricht i de Erinnerig ändere, wo aazeigt wird, wänn du dini Pille rächtziitig gnoo hesch",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Hüt um 9:00 Benachrichtig übercho",
   "save": "spichere",

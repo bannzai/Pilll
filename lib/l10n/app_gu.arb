@@ -244,7 +244,7 @@
   "changeNotificationHeader": "તમે સૂચનાની શરૂઆતનું લખાણ બદલી શકો છો",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "કૃપા કરીને ઓછામાં ઓછા 0 અક્ષરો દાખલ કરો",
-  "changeDailyNotificationMessage": "ગોળી સાચી રીતે લીધી હોય ત્યારેના નોટિફિકેશન મેસેજ બદલી શકાય છે",
+  "changeDailyNotificationMessage": "તમે ગોળી સમયસર લો ત્યારે દેખાતો સૂચનાનો સંદેશ બદલી શકો છો",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "આજે સવારે ૯:૦૦ વાગ્યે સૂચના મેળવો",
   "save": "સાચવો",

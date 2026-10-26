@@ -244,7 +244,7 @@
   "changeNotificationHeader": "আপনি বিজ্ঞপ্তির শুরুর লেখাটি বদলাতে পারেন",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "অনুগ্রহ করে অন্তত ০টি অক্ষর লিখুন",
-  "changeDailyNotificationMessage": "পিল খেতে ভুলে না গেলে বিজ্ঞপ্তির বার্তা কাস্টমাইজ করতে পারেন",
+  "changeDailyNotificationMessage": "সময়মতো পিল খেলে যে বিজ্ঞপ্তি দেখানো হয়, তার লেখা আপনি বদলাতে পারেন",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/১০০",
   "receiveDailyNotificationAt9AM": "একই দিন সকাল ৯:০০টায় বিজ্ঞপ্তি পান",
   "save": "সেভ",

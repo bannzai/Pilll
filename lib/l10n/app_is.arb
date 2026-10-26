@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Þú getur breytt textanum í upphafi tilkynningarinnar",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Sláðu inn að minnsta kosti 0 stafi",
-  "changeDailyNotificationMessage": "Þú getur breytt tilkynningatextanum þegar pillur eru teknar rétt",
+  "changeDailyNotificationMessage": "Þú getur breytt tilkynningunni sem birtist þegar þú tekur pilluna á réttum tíma",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Fá tilkynningu klukkan 9:00 sama dag",
   "save": "Vista",

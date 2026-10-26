@@ -244,7 +244,7 @@
   "changeNotificationHeader": "Puedes cambiar el texto inicial de la notificación",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Introduce al menos 0 caracteres",
-  "changeDailyNotificationMessage": "Puedes cambiar el mensaje de notificación cuando tomas la píldora correctamente",
+  "changeDailyNotificationMessage": "Puedes cambiar el mensaje de la notificación que aparece cuando tomas la píldora a tiempo",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Recibir notificación a las 9:00 del mismo día",
   "save": "Guardar",

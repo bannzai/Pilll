@@ -244,7 +244,7 @@
   "changeNotificationHeader": "የማሳወቂያውን መጀመሪያ መልዕክት መቀየር ይችላሉ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "እባክዎ ቢያንስ 0 ቁምፊዎችን ያስገቡ",
-  "changeDailyNotificationMessage": "መይምነን ለማስታወሻ ቃልን ማሻሻያ ይችላሉ",
+  "changeDailyNotificationMessage": "ክኒን በሰዓቱ ሲወስዱ የሚታየውን የማሳወቂያ መልእክት መቀየር ይችላሉ",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "ዛሬ በ9:00 ማሳወቂያ ይቀበላል",
   "save": "አስቀምጥ",
