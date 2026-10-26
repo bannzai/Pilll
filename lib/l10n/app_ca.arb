@@ -157,7 +157,7 @@
   "menstruationEndDate": "Data de finalització de la regla",
   "menstruationScheduleDate": "Data prevista de la propera regla",
   "menstruationScheduleDateWithNumber": "Previsió de la regla: dia {diffPlusOne}",
-  "menstruationScheduleDateWithNumberAndPillNumber": "Menstruació prevista: dia {diffPlusOne}, pastilla {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "Regla prevista: dia {diffPlusOne}, píndola {pillNumber}",
   "menstruationRemainingDay": "Falten {diff} dies",
   "menstruationProgressingDay": "dia {diffPlusOne}",
   "recordMenstruation": "Registrar la menstruació",

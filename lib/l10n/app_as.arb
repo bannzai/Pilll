@@ -157,7 +157,7 @@
   "menstruationEndDate": "মাহেকীয়া শেষ হোৱা তাৰিখ",
   "menstruationScheduleDate": "পৰৱৰ্তী মাহেকীয়া আৰম্ভ হোৱাৰ সম্ভাৱ্য তাৰিখ",
   "menstruationScheduleDateWithNumber": "মাহেকীয়া হোৱাৰ সম্ভাৱ্য দিন: {diffPlusOne} নম্বৰ দিন",
-  "menstruationScheduleDateWithNumberAndPillNumber": "ঋতুস্রাবৰ পৰিকল্পিত: {diffPlusOne}ম দিনৰ {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "সম্ভাৱ্য মাহেকীয়া: {diffPlusOne}তম দিনৰ {pillNumber} নম্বৰ বড়ি",
   "menstruationRemainingDay": "আৰু {diff} দিন",
   "menstruationProgressingDay": "{diffPlusOne}তম দিন",
   "recordMenstruation": "মাহেকীয়া অভিলেখ",

@@ -157,7 +157,7 @@
   "menstruationEndDate": "Data de încheiere a menstruației",
   "menstruationScheduleDate": "Data estimată a următoarei menstruații",
   "menstruationScheduleDateWithNumber": "Menstruație estimată: ziua {diffPlusOne}",
-  "menstruationScheduleDateWithNumberAndPillNumber": "Menstruație programată: ziua {diffPlusOne}, pastila {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "Menstruație estimată: ziua {diffPlusOne}, pilula {pillNumber}",
   "menstruationRemainingDay": "încă {diff} zile",
   "menstruationProgressingDay": "ziua {diffPlusOne}",
   "recordMenstruation": "Înregistrează menstruația",

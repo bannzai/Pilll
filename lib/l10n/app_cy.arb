@@ -157,7 +157,7 @@
   "menstruationEndDate": "Dyddiad diwedd y mislif",
   "menstruationScheduleDate": "Dyddiad disgwyliedig y mislif nesaf",
   "menstruationScheduleDateWithNumber": "Mislif disgwyliedig: diwrnod {diffPlusOne}",
-  "menstruationScheduleDateWithNumberAndPillNumber": "Misglwyf Disgwyliedig: Diwrnod {diffPlusOne}, Pil {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "Mislif disgwyliedig: diwrnod {diffPlusOne}, pilsen {pillNumber}",
   "menstruationRemainingDay": "mewn {diff} diwrnod",
   "menstruationProgressingDay": "Diwrnod {diffPlusOne}",
   "recordMenstruation": "Cofnodi misglwyf",

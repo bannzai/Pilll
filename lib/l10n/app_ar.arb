@@ -157,7 +157,7 @@
   "menstruationEndDate": "تاريخ انتهاء الدورة",
   "menstruationScheduleDate": "موعد الدورة المتوقع",
   "menstruationScheduleDateWithNumber": "موعد الدورة المتوقع: اليوم {diffPlusOne}",
-  "menstruationScheduleDateWithNumberAndPillNumber": "موعد الدورة الشهرية: الحبة {pillNumber} في اليوم الـ{diffPlusOne}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "الدورة المتوقعة: اليوم {diffPlusOne}، الحبة {pillNumber}",
   "menstruationRemainingDay": "بعد {diff} يوم",
   "menstruationProgressingDay": "اليوم {diffPlusOne}",
   "recordMenstruation": "سجل الدورة الشهرية",

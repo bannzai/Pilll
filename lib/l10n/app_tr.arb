@@ -157,7 +157,7 @@
   "menstruationEndDate": "Adet bitiş tarihi",
   "menstruationScheduleDate": "Sonraki adetin tahmini başlangıç tarihi",
   "menstruationScheduleDateWithNumber": "Beklenen adet: {diffPlusOne}. gün",
-  "menstruationScheduleDateWithNumberAndPillNumber": "Adet tahmini: {diffPlusOne}. gün {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "Beklenen adet: {diffPlusOne}. gün, {pillNumber}. hap",
   "menstruationRemainingDay": "{diff} gün kaldı",
   "menstruationProgressingDay": "{diffPlusOne}. gün",
   "recordMenstruation": "Adet Kaydet",

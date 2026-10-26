@@ -157,7 +157,7 @@
   "menstruationEndDate": "માસિક પૂરું થવાની તારીખ",
   "menstruationScheduleDate": "આગામી માસિક શરૂ થવાની અંદાજિત તારીખ",
   "menstruationScheduleDateWithNumber": "માસિક આવવાની સંભાવના: દિવસ {diffPlusOne}",
-  "menstruationScheduleDateWithNumberAndPillNumber": "માસિક ધર્મ અપેક્ષિત: {diffPlusOne}મો દિવસ {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "અંદાજિત માસિક: {diffPlusOne}મો દિવસ, ગોળી {pillNumber}",
   "menstruationRemainingDay": "બાકી {diff} દિવસ",
   "menstruationProgressingDay": "{diffPlusOne}માં દિવસ",
   "recordMenstruation": "પીરિયડ નોંધો",

@@ -157,7 +157,7 @@
   "menstruationEndDate": "생리 종료일",
   "menstruationScheduleDate": "다음 생리 예정일",
   "menstruationScheduleDateWithNumber": "생리 예정: {diffPlusOne}일째",
-  "menstruationScheduleDateWithNumberAndPillNumber": "생리 예정: {diffPlusOne}일째 {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "생리 예정: {diffPlusOne}일째, {pillNumber}번 알약",
   "menstruationRemainingDay": "앞으로 {diff}일",
   "menstruationProgressingDay": "{diffPlusOne}일째",
   "recordMenstruation": "생리 기록",

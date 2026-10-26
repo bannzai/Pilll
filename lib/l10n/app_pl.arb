@@ -157,7 +157,7 @@
   "menstruationEndDate": "Data zakończenia okresu",
   "menstruationScheduleDate": "Przewidywana data następnego okresu",
   "menstruationScheduleDateWithNumber": "Przewidywany okres: dzień {diffPlusOne}",
-  "menstruationScheduleDateWithNumberAndPillNumber": "Przewidywana menstruacja: dzień {diffPlusOne}, tabletka {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "Przewidywany okres: dzień {diffPlusOne}, tabletka {pillNumber}",
   "menstruationRemainingDay": "Za {diff} dni",
   "menstruationProgressingDay": "dzień {diffPlusOne}",
   "recordMenstruation": "Zapisz okres",

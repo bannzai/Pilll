@@ -157,7 +157,7 @@
   "menstruationEndDate": "Period end date",
   "menstruationScheduleDate": "Expected next period date",
   "menstruationScheduleDateWithNumber": "Expected period: day {diffPlusOne}",
-  "menstruationScheduleDateWithNumberAndPillNumber": "Expected period: Day {diffPlusOne}, pill {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "Expected period: day {diffPlusOne}, pill {pillNumber}",
   "menstruationRemainingDay": "in {diff} days",
   "menstruationProgressingDay": "Day {diffPlusOne}",
   "recordMenstruation": "Record period",

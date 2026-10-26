@@ -157,7 +157,7 @@
   "menstruationEndDate": "Ημερομηνία λήξης της περιόδου",
   "menstruationScheduleDate": "Πιθανή ημερομηνία έναρξης της επόμενης περιόδου",
   "menstruationScheduleDateWithNumber": "Αναμενόμενη έναρξη περιόδου: ημέρα {diffPlusOne}",
-  "menstruationScheduleDateWithNumberAndPillNumber": "Αναμενόμενη περίοδος: {diffPlusOne}η ημέρα, {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "Αναμενόμενη ημερομηνία περιόδου: ημέρα {diffPlusOne}, χάπι {pillNumber}",
   "menstruationRemainingDay": "Ακόμη {diff} ημέρες",
   "menstruationProgressingDay": "{diffPlusOne}η ημέρα",
   "recordMenstruation": "Καταγραφή περιόδου",

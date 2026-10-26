@@ -157,7 +157,7 @@
   "menstruationEndDate": "पीरियड खत्म होने की तारीख",
   "menstruationScheduleDate": "अगला पीरियड शुरू होने की संभावित तारीख",
   "menstruationScheduleDateWithNumber": "पीरियड की अनुमानित शुरुआत: दिन {diffPlusOne}",
-  "menstruationScheduleDateWithNumberAndPillNumber": "मासिक धर्म अनुसूची: {diffPlusOne} दिन की {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "अनुमानित पीरियड: दिन {diffPlusOne}, गोली {pillNumber}",
   "menstruationRemainingDay": "{diff} दिन बाकी",
   "menstruationProgressingDay": "{diffPlusOne} दिन",
   "recordMenstruation": "मासिक धर्म रिकॉर्ड करें",

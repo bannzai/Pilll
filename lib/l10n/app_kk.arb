@@ -157,7 +157,7 @@
   "menstruationEndDate": "Етеккірдің аяқталу күні",
   "menstruationScheduleDate": "Келесі етеккірдің болжамды басталу күні",
   "menstruationScheduleDateWithNumber": "Етеккірдің болжамды күні: {diffPlusOne}-күн",
-  "menstruationScheduleDateWithNumberAndPillNumber": "Етеккір жоспары: {diffPlusOne}-күнгі {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "Күтілетін етеккір: {diffPlusOne}-күн, {pillNumber}-таблетка",
   "menstruationRemainingDay": "тағы {diff} күн",
   "menstruationProgressingDay": "{diffPlusOne}-ші күн",
   "recordMenstruation": "Етеккірді жазу",

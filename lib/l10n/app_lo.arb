@@ -157,7 +157,7 @@
   "menstruationEndDate": "ວັນສິ້ນສຸດປະຈຳເດືອນ",
   "menstruationScheduleDate": "ວັນທີຄາດວ່າປະຈຳເດືອນຄັ້ງຕໍ່ໄປຈະເລີ່ມ",
   "menstruationScheduleDateWithNumber": "ຄາດວ່າປະຈຳເດືອນຈະມາ: ມື້ທີ {diffPlusOne}",
-  "menstruationScheduleDateWithNumberAndPillNumber": "ກຳນົດມະຫາຕຸ: ເມັດທີ {pillNumber} ຂອງມື້ທີ {diffPlusOne}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "ປະຈຳເດືອນທີ່ຄາດໄວ້: ມື້ທີ {diffPlusOne}, ຢາເມັດທີ {pillNumber}",
   "menstruationRemainingDay": "ອີກ {diff} ມື້",
   "menstruationProgressingDay": "ມື້ທີ {diffPlusOne}",
   "recordMenstruation": "ບັນທຶກປະຈໍາເດືອນ",

@@ -157,7 +157,7 @@
   "menstruationEndDate": "Tarikh tamat haid",
   "menstruationScheduleDate": "Tarikh jangkaan haid seterusnya",
   "menstruationScheduleDateWithNumber": "Jangkaan haid: hari ke-{diffPlusOne}",
-  "menstruationScheduleDateWithNumberAndPillNumber": "Jangkaan Haid: Hari ke-{diffPlusOne} pil {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "Jangkaan haid: hari ke-{diffPlusOne}, pil {pillNumber}",
   "menstruationRemainingDay": "lagi {diff} hari",
   "menstruationProgressingDay": "Hari ke-{diffPlusOne}",
   "recordMenstruation": "Rekod Haid",

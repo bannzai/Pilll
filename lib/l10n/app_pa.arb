@@ -157,7 +157,7 @@
   "menstruationEndDate": "ਮਾਹਵਾਰੀ ਖ਼ਤਮ ਹੋਣ ਦੀ ਤਾਰੀਖ",
   "menstruationScheduleDate": "ਅਗਲੀ ਮਾਹਵਾਰੀ ਸ਼ੁਰੂ ਹੋਣ ਦੀ ਸੰਭਾਵਿਤ ਤਾਰੀਖ",
   "menstruationScheduleDateWithNumber": "ਮਾਹਵਾਰੀ ਆਉਣ ਦਾ ਅਨੁਮਾਨਿਤ ਦਿਨ: {diffPlusOne}ਵਾਂ ਦਿਨ",
-  "menstruationScheduleDateWithNumberAndPillNumber": "ਮਾਹਵਾਰੀ ਦੀ ਯੋਜਨਾ: {diffPlusOne} ਦਿਨ ਦੀ {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "ਸੰਭਾਵਿਤ ਮਾਹਵਾਰੀ: {diffPlusOne}ਵਾਂ ਦਿਨ, ਗੋਲੀ {pillNumber}",
   "menstruationRemainingDay": "ਹੋਰ {diff} ਦਿਨ",
   "menstruationProgressingDay": "{diffPlusOne}ਵਾਂ ਦਿਨ",
   "recordMenstruation": "ਮਾਹਵਾਰੀ ਰਿਕਾਰਡ ਕਰੋ",

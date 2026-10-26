@@ -157,7 +157,7 @@
   "menstruationEndDate": "Lokadagur blæðinga",
   "menstruationScheduleDate": "Áætlaður upphafsdagur næstu blæðinga",
   "menstruationScheduleDateWithNumber": "Áætlaðar blæðingar: dagur {diffPlusOne}",
-  "menstruationScheduleDateWithNumberAndPillNumber": "Væntanlegar tíðir: {pillNumber} á {diffPlusOne}. degi",
+  "menstruationScheduleDateWithNumberAndPillNumber": "Áætlaðar blæðingar: dagur {diffPlusOne}, pilla {pillNumber}",
   "menstruationRemainingDay": "Eftir {diff} daga",
   "menstruationProgressingDay": "{diffPlusOne}. dagur",
   "recordMenstruation": "Skrá tíðablæðingar",

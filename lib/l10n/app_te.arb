@@ -157,7 +157,7 @@
   "menstruationEndDate": "నెలసరి ముగిసే తేదీ",
   "menstruationScheduleDate": "తదుపరి నెలసరి ప్రారంభమయ్యే అంచనా తేదీ",
   "menstruationScheduleDateWithNumber": "నెలసరి వచ్చే అవకాశం ఉన్న రోజు: {diffPlusOne}వ రోజు",
-  "menstruationScheduleDateWithNumberAndPillNumber": "ఋతు అంచనా: {diffPlusOne}వ రోజు {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "నెలసరి రావచ్చని భావించే రోజు: {diffPlusOne}వ రోజు, {pillNumber}వ మాత్ర",
   "menstruationRemainingDay": "ఇంకా {diff} రోజులు",
   "menstruationProgressingDay": "{diffPlusOne}వ రోజు",
   "recordMenstruation": "రుతుక్రమ నమోదు",

@@ -157,7 +157,7 @@
   "menstruationEndDate": "Einddatum van die maandstonde",
   "menstruationScheduleDate": "Verwagte datum van jou maandstonde",
   "menstruationScheduleDateWithNumber": "Verwagte maandstonde: dag {diffPlusOne}",
-  "menstruationScheduleDateWithNumberAndPillNumber": "Menstruasie beplan: op dag {diffPlusOne}, pil {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "Verwagte maandstonde: dag {diffPlusOne}, pil {pillNumber}",
   "menstruationRemainingDay": "Nog {diff} dae",
   "menstruationProgressingDay": "Dag {diffPlusOne}",
   "recordMenstruation": "Teken menstruasie aan",

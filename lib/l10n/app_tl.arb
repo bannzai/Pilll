@@ -157,7 +157,7 @@
   "menstruationEndDate": "Petsa ng pagtatapos ng regla",
   "menstruationScheduleDate": "Inaasahang petsa ng susunod na regla",
   "menstruationScheduleDateWithNumber": "Inaasahang regla: araw {diffPlusOne}",
-  "menstruationScheduleDateWithNumberAndPillNumber": "Inaasahang regla: Araw {diffPlusOne} ng {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "Inaasahang regla: araw {diffPlusOne}, pildoras {pillNumber}",
   "menstruationRemainingDay": "{diff} araw na lang",
   "menstruationProgressingDay": "Araw {diffPlusOne}",
   "recordMenstruation": "Itala ang Regla",

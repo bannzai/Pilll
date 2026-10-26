@@ -157,7 +157,7 @@
   "menstruationEndDate": "ඔසප් වීම අවසන් වන දිනය",
   "menstruationScheduleDate": "ඊළඟ ඔසප් වීම ආරම්භ වනු ඇතැයි අපේක්ෂිත දිනය",
   "menstruationScheduleDateWithNumber": "ඔසප් වීම අපේක්ෂිත දිනය: {diffPlusOne} වන දිනය",
-  "menstruationScheduleDateWithNumberAndPillNumber": "ඔසප් කාලසටහන: {diffPlusOne} දින {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "අපේක්ෂිත ඔසප් දිනය: {diffPlusOne} වන දිනය, {pillNumber} වන පෙත්ත",
   "menstruationRemainingDay": "තවත් {diff} දින",
   "menstruationProgressingDay": "{diffPlusOne}වන දින",
   "recordMenstruation": "ඔසප් කාලය සටහන් කරන්න",

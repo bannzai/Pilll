@@ -157,7 +157,7 @@
   "menstruationEndDate": "تاریخ پایان پریود",
   "menstruationScheduleDate": "تاریخ احتمالی شروع پریود بعدی",
   "menstruationScheduleDateWithNumber": "پریود پیش‌بینی‌شده: روز {diffPlusOne}",
-  "menstruationScheduleDateWithNumberAndPillNumber": "پیش‌بینی قاعدگی: قرص {pillNumber} در روز {diffPlusOne}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "پریود پیش‌بینی‌شده: روز {diffPlusOne}، قرص {pillNumber}",
   "menstruationRemainingDay": "{diff} روز دیگر",
   "menstruationProgressingDay": "روز {diffPlusOne}",
   "recordMenstruation": "ثبت قاعدگی",

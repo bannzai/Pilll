@@ -157,7 +157,7 @@
   "menstruationEndDate": "ថ្ងៃបញ្ចប់រដូវ",
   "menstruationScheduleDate": "កាលបរិច្ឆេទរំពឹងទុកនៃការមករដូវលើកក្រោយ",
   "menstruationScheduleDateWithNumber": "រដូវរំពឹងទុក៖ ថ្ងៃទី {diffPlusOne}",
-  "menstruationScheduleDateWithNumberAndPillNumber": "រដូវដែលរំពឹង៖ ថ្ងៃទី{diffPlusOne} ថ្នាំ{pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "រដូវដែលរំពឹងទុក៖ ថ្ងៃទី {diffPlusOne} គ្រាប់ទី {pillNumber}",
   "menstruationRemainingDay": "នៅសល់ {diff} ថ្ងៃ",
   "menstruationProgressingDay": "ថ្ងៃទី{diffPlusOne}",
   "recordMenstruation": "កត់ត្រារដូវ",

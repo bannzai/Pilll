@@ -157,7 +157,7 @@
   "menstruationEndDate": "Data de fin da regra",
   "menstruationScheduleDate": "Data prevista da próxima regra",
   "menstruationScheduleDateWithNumber": "Regra prevista: día {diffPlusOne}",
-  "menstruationScheduleDateWithNumberAndPillNumber": "Menstruación prevista: día {diffPlusOne}, píldora {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "Regra prevista: día {diffPlusOne}, pílula {pillNumber}",
   "menstruationRemainingDay": "Faltan {diff} días",
   "menstruationProgressingDay": "día {diffPlusOne}",
   "recordMenstruation": "Rexistrar menstruación",

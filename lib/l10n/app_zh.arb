@@ -157,7 +157,7 @@
   "menstruationEndDate": "经期结束日期",
   "menstruationScheduleDate": "下次经期预计开始日期",
   "menstruationScheduleDateWithNumber": "经期预计：第 {diffPlusOne} 天",
-  "menstruationScheduleDateWithNumberAndPillNumber": "月经预期：第{diffPlusOne}天的{pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "预计经期：第{diffPlusOne}天，第{pillNumber}片药",
   "menstruationRemainingDay": "还有{diff}天",
   "menstruationProgressingDay": "第{diffPlusOne}天",
   "recordMenstruation": "记录生理期",

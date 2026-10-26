@@ -157,7 +157,7 @@
   "menstruationEndDate": "ရာသီပြီးဆုံးသည့်ရက်",
   "menstruationScheduleDate": "နောက်တစ်ကြိမ် ရာသီစမည့် ခန့်မှန်းရက်",
   "menstruationScheduleDateWithNumber": "ရာသီလာမည့် ခန့်မှန်းရက်: {diffPlusOne} ရက်မြောက်နေ့",
-  "menstruationScheduleDateWithNumberAndPillNumber": "ရာသီလာရန်: {diffPlusOne}ရက်မြောက် {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "မျှော်မှန်းထားသော ရာသီလာချိန်: {diffPlusOne} ရက်မြောက်နေ့၊ ဆေးပြား {pillNumber}",
   "menstruationRemainingDay": "နောက် {diff} ရက်",
   "menstruationProgressingDay": "{diffPlusOne}ရက်မြောက်",
   "recordMenstruation": "ရာသီမှတ်တမ်းတင်",

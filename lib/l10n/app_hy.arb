@@ -157,7 +157,7 @@
   "menstruationEndDate": "Դաշտանի ավարտի ամսաթիվ",
   "menstruationScheduleDate": "Հաջորդ դաշտանի սպասվող ամսաթիվը",
   "menstruationScheduleDateWithNumber": "Սպասվող դաշտան՝ օր {diffPlusOne}",
-  "menstruationScheduleDateWithNumberAndPillNumber": "Մենստրուացիա․ {diffPlusOne}-րդ օր, {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "Սպասվող դաշտան․ օր {diffPlusOne}, հաբ {pillNumber}",
   "menstruationRemainingDay": "Մնացել է {diff} օր",
   "menstruationProgressingDay": "{diffPlusOne}-րդ օր",
   "recordMenstruation": "Գրանցել մենստրուացիան",

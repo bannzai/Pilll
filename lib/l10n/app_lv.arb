@@ -157,7 +157,7 @@
   "menstruationEndDate": "Mēnešreižu beigu datums",
   "menstruationScheduleDate": "Paredzamais nākamo mēnešreižu sākuma datums",
   "menstruationScheduleDateWithNumber": "Paredzamās mēnešreizes: {diffPlusOne}. diena",
-  "menstruationScheduleDateWithNumberAndPillNumber": "Paredzētā menstruācija: {diffPlusOne}. dienas {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "Paredzamās mēnešreizes: {diffPlusOne}. diena, {pillNumber}. tablete",
   "menstruationRemainingDay": "vēl {diff} dienas",
   "menstruationProgressingDay": "{diffPlusOne}. diena",
   "recordMenstruation": "Reģistrēt menstruāciju",

@@ -157,7 +157,7 @@
   "menstruationEndDate": "Änddatum vo de Periode",
   "menstruationScheduleDate": "Voraussichtlechs Datum vo de nöchschte Periode",
   "menstruationScheduleDateWithNumber": "Erwarteti Periode: Tag {diffPlusOne}",
-  "menstruationScheduleDateWithNumberAndPillNumber": "Regel erwartet: {diffPlusOne}. Tag, Pille {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "Erwarteti Periode: Tag {diffPlusOne}, Pille {pillNumber}",
   "menstruationRemainingDay": "no {diff} Täg",
   "menstruationProgressingDay": "{diffPlusOne}. Tag",
   "recordMenstruation": "Regel ufzäichne",
