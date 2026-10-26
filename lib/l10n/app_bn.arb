@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "একটি অজানা ত্রুটি হয়েছে। অনুগ্রহ করে অ্যাপটি সর্বশেষ সংস্করণে আপডেট করে আবার চেষ্টা করুন। সমস্যা থেকে গেলে সেটিংস > যোগাযোগ থেকে আমাদের সঙ্গে যোগাযোগ করুন। কোড: {errorCode} বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "ইন্টারনেট সংযোগে সমস্যা হচ্ছে। অনুগ্রহ করে সংযোগ পরীক্ষা করে আবার চেষ্টা করুন। সমস্যা থেকে গেলে সেটিংস > যোগাযোগ করুন থেকে আমাদের জানান। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "অনুগ্রহ করে অ্যাপটি আপডেট করুন",
-  "forceUpdateMessage": "আপনার অ্যাপের সংস্করণ আপডেট করার জন্য অনুরোধ করছি। {storeName} থেকে সর্বশেষ সংস্করণে আপডেট করুন।",
+  "forceUpdateMessage": "অ্যাপটি আপডেট করা প্রয়োজন। অনুগ্রহ করে {storeName} থেকে সর্বশেষ সংস্করণে আপডেট করুন",
   "visitHospital": "ডাক্তার দেখানো",
   "receiveNotificationAt9AM": "সেই দিন সকাল ৯:০০টায় বিজ্ঞপ্তি পান",
   "deletedScheduleCannotBeRestored": "মুছে ফেলা সময়সূচী আর ফিরিয়ে আনা যাবে না",

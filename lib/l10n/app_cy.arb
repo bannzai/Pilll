@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Mae gwall anhysbys wedi digwydd. Diweddarwch yr ap i’r fersiwn ddiweddaraf a rhowch gynnig arall arni. Os bydd y broblem yn parhau, cysylltwch â ni drwy Gosodiadau > Cysylltu â ni. Cod: {errorCode} Manylion: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Mae problem gyda'r cysylltiad rhyngrwyd. Gwiriwch eich cysylltiad a rhowch gynnig arall arni. Os bydd y broblem yn parhau, cysylltwch â ni drwy Gosodiadau > Cysylltu â ni. Manylion: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Diweddarwch yr ap, os gwelwch yn dda",
-  "forceUpdateMessage": "Mae angen i chi ddiweddaru fersiwn eich ap. Diweddarwch i'r fersiwn ddiweddaraf o {storeName}.",
+  "forceUpdateMessage": "Mae angen diweddaru’r ap. Diweddarwch i’r fersiwn ddiweddaraf drwy {storeName}, os gwelwch yn dda",
   "visitHospital": "Mynd at y meddyg",
   "receiveNotificationAt9AM": "Derbyn hysbysiad am 9:00 ar y diwrnod",
   "deletedScheduleCannotBeRestored": "Ni ellir adfer trefniadau sydd wedi'u dileu",

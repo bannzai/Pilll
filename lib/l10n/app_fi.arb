@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Tapahtui tuntematon virhe. Päivitä sovellus uusimpaan versioon ja yritä uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdassa Asetukset > Ota yhteyttä. Koodi: {errorCode} Tiedot: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Internet-yhteydessä on ongelma. Tarkista yhteys ja yritä uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdasta Asetukset > Ota yhteyttä. Lisätiedot: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Päivitä sovellus",
-  "forceUpdateMessage": "Pyydämme päivittämään sovelluksesi version. Ole hyvä ja päivitä uusimpaan versioon {storeName}sta.",
+  "forceUpdateMessage": "Sovellus on päivitettävä. Saat uusimman version palvelusta {storeName}",
   "visitHospital": "Hoitokäynti",
   "receiveNotificationAt9AM": "Saa muistutus samana päivänä kello 9:00",
   "deletedScheduleCannotBeRestored": "Poistettua aikataulua ei voi palauttaa",

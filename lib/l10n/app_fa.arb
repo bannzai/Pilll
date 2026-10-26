@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "خطای ناشناخته‌ای رخ داد. لطفاً برنامه را به آخرین نسخه به‌روزرسانی کنید و دوباره تلاش کنید. اگر مشکل ادامه داشت، از مسیر تنظیمات > تماس با ما با ما در ارتباط باشید. کد: {errorCode} جزئیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "اتصال اینترنت با مشکل روبه‌رو شده است. لطفاً اتصال خود را بررسی کنید و دوباره تلاش کنید. اگر مشکل ادامه داشت، از بخش تنظیمات > تماس با ما با ما در ارتباط باشید. جزئیات: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "لطفاً برنامه را به‌روزرسانی کنید",
-  "forceUpdateMessage": "به‌روزرسانی نسخه برنامه شما مورد نیاز است. لطفاً از {storeName} آخرین نسخه را دانلود کنید",
+  "forceUpdateMessage": "لازم است برنامه به‌روزرسانی شود. لطفاً جدیدترین نسخه را از {storeName} دریافت کنید",
   "visitHospital": "مراجعه پزشکی",
   "receiveNotificationAt9AM": "دریافت اعلان در ساعت ۹:۰۰ همان روز",
   "deletedScheduleCannotBeRestored": "برنامه‌های حذف شده قابل بازیابی نیستند",

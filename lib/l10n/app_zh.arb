@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "出现未知错误。请将应用更新至最新版本后重试。如果问题仍未解决，请通过设置 > 联系我们与我们联系。代码：{errorCode} 详情：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "网络连接出现问题。请检查网络后重试。如果问题仍未解决，请通过设置 > 联系我们与我们联系。详情：{exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "请更新应用",
-  "forceUpdateMessage": "请更新您的应用版本。请前往{storeName}下载最新版本",
+  "forceUpdateMessage": "应用需要更新。请前往 {storeName} 下载最新版本",
   "visitHospital": "就医",
   "receiveNotificationAt9AM": "在当日9:00接收通知",
   "deletedScheduleCannotBeRestored": "已删除的日程无法恢复",

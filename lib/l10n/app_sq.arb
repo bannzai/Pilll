@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Ndodhi një gabim i panjohur. Ju lutemi, përditësoni aplikacionin në versionin më të fundit dhe provoni përsëri. Nëse problemi vazhdon, na kontaktoni te Cilësimet > Na kontaktoni. Kodi: {errorCode} Hollësitë: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Ka një problem me lidhjen me internetin. Kontrolloni lidhjen dhe provoni përsëri. Nëse problemi vazhdon, na kontaktoni te Cilësimet > Na kontaktoni. Hollësi: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Ju lutemi, përditësoni aplikacionin",
-  "forceUpdateMessage": "Kërkohet përditësimi i aplikacionit tuaj. Ju lutemi përditësoni në versionin më të ri nga {storeName}.",
+  "forceUpdateMessage": "Aplikacioni duhet përditësuar. Ju lutemi, shkarkoni versionin më të fundit nga {storeName}",
   "visitHospital": "Vizitë mjekësore",
   "receiveNotificationAt9AM": "Njoftim në orën 9:00 të ditës",
   "deletedScheduleCannotBeRestored": "Programet e fshira nuk mund të rikthehen",

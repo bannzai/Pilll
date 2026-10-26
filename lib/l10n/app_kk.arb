@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Белгісіз қате орын алды. Қолданбаны соңғы нұсқаға жаңартып, қайта байқап көріңіз. Мәселе шешілмесе, Параметрлер > Бізбен байланысу арқылы хабарласыңыз. Код: {errorCode} Толығырақ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Интернет байланысында мәселе туындады. Байланысты тексеріп, қайта көріңіз. Мәселе шешілмесе, Баптаулар > Бізге хабарласу бөлімі арқылы хабарласыңыз. Мәліметтер: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Қолданбаны жаңартыңыз",
-  "forceUpdateMessage": "Сіздің қолданбаңыздың нұсқасын жаңарту қажет. {storeName} дүкенінен соңғы нұсқаға жаңартыңыз.",
+  "forceUpdateMessage": "Қолданбаны жаңарту қажет. Соңғы нұсқасын {storeName} дүкенінен жүктеп алыңыз",
   "visitHospital": "Дәрігерге бару",
   "receiveNotificationAt9AM": "Сол күні сағат 9:00-де хабарландыру алу",
   "deletedScheduleCannotBeRestored": "Өшірілген жоспарларды қалпына келтіру мүмкін емес",

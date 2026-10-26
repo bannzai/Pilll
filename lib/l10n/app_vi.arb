@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Đã xảy ra lỗi không xác định. Vui lòng cập nhật ứng dụng lên phiên bản mới nhất rồi thử lại. Nếu sự cố vẫn tiếp diễn, hãy liên hệ với chúng tôi qua Cài đặt > Liên hệ. Mã: {errorCode} Chi tiết: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Kết nối internet đang gặp sự cố. Vui lòng kiểm tra kết nối rồi thử lại. Nếu sự cố vẫn tiếp diễn, hãy liên hệ với chúng tôi qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Vui lòng cập nhật ứng dụng",
-  "forceUpdateMessage": "Vui lòng cập nhật phiên bản ứng dụng của bạn. Hãy cập nhật lên phiên bản mới nhất từ {storeName}.",
+  "forceUpdateMessage": "Ứng dụng cần được cập nhật. Vui lòng tải phiên bản mới nhất từ {storeName}",
   "visitHospital": "Tái khám",
   "receiveNotificationAt9AM": "Nhận thông báo lúc 9:00 trong ngày",
   "deletedScheduleCannotBeRestored": "Lịch trình đã xóa không thể khôi phục",

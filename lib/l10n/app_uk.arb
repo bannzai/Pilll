@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Сталася невідома помилка. Оновіть застосунок до найновішої версії та спробуйте ще раз. Якщо проблема не зникне, зв’яжіться з нами через Налаштування > Зв’язатися з нами. Код: {errorCode} Подробиці: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Виникла проблема з підключенням до інтернету. Перевірте з’єднання та спробуйте ще раз. Якщо проблема не зникне, зв’яжіться з нами через Налаштування > Зв’язатися з нами. Докладніше: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Будь ласка, оновіть застосунок",
-  "forceUpdateMessage": "Будь ласка, оновіть версію вашого додатку. Оновіть до останньої версії з {storeName}",
+  "forceUpdateMessage": "Застосунок потрібно оновити. Будь ласка, завантажте останню версію з {storeName}",
   "visitHospital": "візит до лікаря",
   "receiveNotificationAt9AM": "Отримувати сповіщення того дня о 9:00",
   "deletedScheduleCannotBeRestored": "Видалені записи не можна відновити",

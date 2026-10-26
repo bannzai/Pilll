@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "अज्ञात त्रुटि भयो। कृपया एपलाई नवीनतम संस्करणमा अद्यावधिक गरेर फेरि प्रयास गर्नुहोस्। समस्या रहिरहेमा सेटिङहरू > सम्पर्क गर्नुहोस् मार्फत हामीलाई सम्पर्क गर्नुहोस्। कोड: {errorCode} विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "इन्टरनेट जडानमा समस्या छ। कृपया जडान जाँचेर फेरि प्रयास गर्नुहोस्। समस्या रहिरहेमा सेटिङहरू > सम्पर्क गर्नुहोस् मार्फत हामीलाई सम्पर्क गर्नुहोस्। विवरण: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "कृपया एप अपडेट गर्नुहोस्",
-  "forceUpdateMessage": "कृपया आफ्नो एपको संस्करण अपडेट गर्नुहोस्। {storeName} बाट नवीनतम संस्करणमा अपडेट गर्नुहोस्",
+  "forceUpdateMessage": "एप अद्यावधिक गर्न आवश्यक छ। कृपया {storeName} बाट पछिल्लो संस्करण डाउनलोड गर्नुहोस्",
   "visitHospital": "अस्पताल जानु",
   "receiveNotificationAt9AM": "आजको 9:00 बजे सूचना प्राप्त गर्ने",
   "deletedScheduleCannotBeRestored": "मेटाइएपछि योजना फिर्ता ल्याउन सकिँदैन",

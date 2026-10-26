@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Daar was ’n onbekende fout. Dateer asseblief die app op na die nuutste weergawe en probeer weer. As dit nie help nie, kontak ons via Instellings > Kontak. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Die verbinding werk nie goed nie. Gaan asseblief jou internetverbinding na en probeer weer. As die probleem voortduur, kontak ons via Instellings > Kontak ons. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Dateer asseblief die app op",
-  "forceUpdateMessage": "Ons vra dat u u app opdateer. Werk asseblief vanaf {storeName} op na die nuutste weergawe.",
+  "forceUpdateMessage": "Ons vra jou asseblief om die app op te dateer. Werk dit via {storeName} op na die nuutste weergawe",
   "visitHospital": "Na dokter gaan",
   "receiveNotificationAt9AM": "Ontvang kennisgewing om 9:00 op die dag",
   "deletedScheduleCannotBeRestored": "Geskrapte afsprake kan nie herstel word nie",

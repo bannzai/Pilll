@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Vyskytla sa neznáma chyba. Aktualizujte aplikáciu na najnovšiu verziu a skúste to znova. Ak problém pretrváva, kontaktujte nás cez Nastavenia > Kontaktujte nás. Kód: {errorCode} Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Vyskytol sa problém s internetovým pripojením. Skontrolujte pripojenie a skúste to znova. Ak problém pretrváva, kontaktujte nás cez Nastavenia > Kontaktujte nás. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Aktualizujte, prosím, aplikáciu",
-  "forceUpdateMessage": "Prosíme o aktualizáciu verzie vašej aplikácie. Aktualizujte na najnovšiu verziu z {storeName}",
+  "forceUpdateMessage": "Aplikáciu je potrebné aktualizovať. Stiahnite si, prosím, najnovšiu verziu z {storeName}",
   "visitHospital": "Lekárska kontrola",
   "receiveNotificationAt9AM": "Dostávať upozornenie v ten deň o 9:00",
   "deletedScheduleCannotBeRestored": "Vymazané plány sa nedajú obnoviť",

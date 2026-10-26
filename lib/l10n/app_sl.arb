@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Prišlo je do neznane napake. Posodobite aplikacijo na najnovejšo različico in poskusite znova. Če težava ostane, se obrnite na nas v Nastavitve > Stik z nami. Koda: {errorCode} Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Prišlo je do težave z internetno povezavo. Preverite povezavo in poskusite znova. Če se težava nadaljuje, stopite v stik z nami prek Nastavitve > Stik z nami. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Prosimo, posodobite aplikacijo",
-  "forceUpdateMessage": "Potrebna je posodobitev vaše aplikacije. Prosimo, posodobite na najnovejšo različico iz {storeName}.",
+  "forceUpdateMessage": "Aplikacijo je treba posodobiti. Prosimo, prenesite najnovejšo različico iz {storeName}",
   "visitHospital": "Obisk zdravnika",
   "receiveNotificationAt9AM": "Prejmi obvestilo ob 9:00 istega dne",
   "deletedScheduleCannotBeRestored": "Izbrisani termini se ne morejo obnoviti",

@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Nagkaroon ng hindi matukoy na error. Paki-update po ang app sa pinakabagong bersyon at subukan muli. Kung magpatuloy ang problema, makipag-ugnayan po sa amin sa Mga Setting > Makipag-ugnayan sa amin. Kodigo: {errorCode} Mga detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "May problema sa koneksyon sa internet. Pakisuri po ang koneksyon ninyo at subukan muli. Kung magpatuloy ang problema, makipag-ugnayan sa amin sa Mga Setting > Makipag-ugnayan sa amin. Mga detalye: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Paki-update po ang app",
-  "forceUpdateMessage": "Mangyaring i-update ang inyong app sa pinakabagong version mula sa {storeName}.",
+  "forceUpdateMessage": "Kailangang i-update ang app. Paki-download po ang pinakabagong bersyon mula sa {storeName}",
   "visitHospital": "Magcheck-up",
   "receiveNotificationAt9AM": "Makatanggap ng abiso sa 9:00 ng umaga",
   "deletedScheduleCannotBeRestored": "Hindi na maaaring maibalik ang mga nataggal na iskedyul",

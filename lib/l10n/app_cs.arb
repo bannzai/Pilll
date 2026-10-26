@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Došlo k neznámé chybě. Aktualizujte prosím aplikaci na nejnovější verzi a zkuste to znovu. Pokud problém přetrvá, kontaktujte nás přes Nastavení > Kontaktovat nás. Kód: {errorCode} Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Došlo k potížím s internetovým připojením. Zkontrolujte připojení a zkuste to prosím znovu. Pokud potíže přetrvají, kontaktujte nás přes Nastavení > Kontaktovat podporu. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Aktualizujte prosím aplikaci",
-  "forceUpdateMessage": "Prosíme o aktualizaci verze vaší aplikace. Aktualizujte prosím na nejnovější verzi z {storeName}.",
+  "forceUpdateMessage": "Je potřeba aktualizovat aplikaci. Nainstalujte si prosím nejnovější verzi z {storeName}",
   "visitHospital": "Navštívit lékaře",
   "receiveNotificationAt9AM": "Upozornění v 9:00 téhož dne",
   "deletedScheduleCannotBeRestored": "Smazané termíny nelze obnovit",

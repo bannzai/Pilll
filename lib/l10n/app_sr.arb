@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Дошло је до непознате грешке. Ажурирајте апликацију на најновију верзију и покушајте поново. Ако се проблем настави, контактирајте нас преко Подешавања > Контактирајте нас. Код: {errorCode} Детаљи: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Постоји проблем са интернет везом. Проверите везу и покушајте поново. Ако се проблем настави, обратите нам се преко Подешавања > Контактирајте нас. Детаљи: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Молимо Вас, ажурирајте апликацију",
-  "forceUpdateMessage": "Molimo vas da ažurirate vašu aplikaciju. Preuzmite najnoviju verziju iz {storeName}",
+  "forceUpdateMessage": "Потребно је ажурирати апликацију. Молимо Вас, преузмите најновију верзију преко {storeName}",
   "visitHospital": "Poseta lekaru",
   "receiveNotificationAt9AM": "Primi obaveštenje u 9:00 istog dana",
   "deletedScheduleCannotBeRestored": "Obrisani termini se ne mogu vratiti",

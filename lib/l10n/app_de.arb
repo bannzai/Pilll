@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Ein unbekannter Fehler ist aufgetreten. Aktualisiere die App auf die neueste Version und versuche es erneut. Wenn das Problem bestehen bleibt, kontaktiere uns unter Einstellungen > Kontakt. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Es gibt ein Problem mit der Internetverbindung. Prüfe deine Verbindung und versuche es erneut. Wenn das Problem weiterhin besteht, kontaktiere uns über Einstellungen > Kontakt. Details: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Bitte aktualisiere die App",
-  "forceUpdateMessage": "Bitte aktualisieren Sie Ihre App-Version über {storeName} auf die neueste Version.",
+  "forceUpdateMessage": "Die App muss aktualisiert werden. Bitte lade die neueste Version über {storeName} herunter",
   "visitHospital": "Arzttermin",
   "receiveNotificationAt9AM": "Benachrichtigung am Tag um 9:00 Uhr erhalten",
   "deletedScheduleCannotBeRestored": "Gelöschte Termine können nicht wiederhergestellt werden",

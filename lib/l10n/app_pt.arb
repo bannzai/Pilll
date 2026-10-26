@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Ocorreu um erro desconhecido. Atualize o aplicativo para a versão mais recente e tente novamente. Se o problema continuar, fale com a gente em Configurações > Fale conosco. Código: {errorCode} Detalhes: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Há um problema com a conexão à internet. Verifique sua conexão e tente novamente. Se o problema continuar, fale conosco em Configurações > Entre em contato. Detalhes: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Atualize o aplicativo, por favor",
-  "forceUpdateMessage": "Por favor, atualize a versão do seu aplicativo. Atualize para a versão mais recente na {storeName}.",
+  "forceUpdateMessage": "O aplicativo precisa de uma atualização. Baixe a versão mais recente na {storeName}",
   "visitHospital": "Consulta médica",
   "receiveNotificationAt9AM": "Receber notificação às 9:00 do dia",
   "deletedScheduleCannotBeRestored": "Os agendamentos excluídos não podem ser restaurados",

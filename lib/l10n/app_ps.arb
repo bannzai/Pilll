@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "یوه ناپېژندل شوې تېروتنه رامنځته شوه. مهرباني وکړئ اپ وروستۍ نسخې ته تازه کړئ او بیا هڅه وکړئ. که ستونزه پاتې شي، د امستنو > له موږ سره اړیکه له لارې راسره اړیکه ونیسئ. کوډ: {errorCode} جزییات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "د انټرنېټ په اړیکه کې ستونزه ده. مهرباني وکړئ خپله اړیکه وڅېړئ او بیا هڅه وکړئ. که ستونزه دوام وکړي، د امستنې > له موږ سره اړیکه له لارې موږ سره اړیکه ونیسئ. جزییات: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "مهرباني وکړئ اپلېکېشن تازه کړئ",
-  "forceUpdateMessage": "ستاسو د اپلیکیشن نسخه تازه کولو ته اړتیا ده. مهرباني وکړئ د {storeName} څخه تر ټولو وروستۍ نسخې ته تازه کړئ",
+  "forceUpdateMessage": "اپلېکېشن تازه کولو ته اړتیا لري. مهرباني وکړئ وروستۍ نسخه له {storeName} څخه ښکته کړئ",
   "visitHospital": "ډاکټر ته ورتلل",
   "receiveNotificationAt9AM": "د ورځې په ۹:۰۰ بجه خبرتیا ترلاسه کول",
   "deletedScheduleCannotBeRestored": "پاک شوي پروګرامونه بیرته رانه اوړېدی شي",

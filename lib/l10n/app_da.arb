@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Der opstod en ukendt fejl. Opdater appen til den nyeste version, og prøv igen. Hvis problemet fortsætter, kan du kontakte os via Indstillinger > Kontakt os. Kode: {errorCode} Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Der er problemer med internetforbindelsen. Tjek din forbindelse, og prøv igen. Hvis problemet fortsætter, kan du kontakte os via Indstillinger > Kontakt os. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Opdater venligst appen",
-  "forceUpdateMessage": "Opdater venligst din appversion. Download den nyeste version fra {storeName}.",
+  "forceUpdateMessage": "Appen skal opdateres. Du kan hente den nyeste version i {storeName}",
   "visitHospital": "Lægebesøg",
   "receiveNotificationAt9AM": "Modtag påmindelse kl. 9:00 samme dag",
   "deletedScheduleCannotBeRestored": "Slettede planer kan ikke gendannes",

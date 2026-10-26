@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Tekkis tundmatu viga. Uuenda rakendus uusimale versioonile ja proovi uuesti. Kui probleem püsib, võta meiega ühendust jaotises Seaded > Võta ühendust. Kood: {errorCode} Üksikasjad: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Internetiühendusega on probleem. Kontrolli ühendust ja proovi uuesti. Kui probleem püsib, võta meiega ühendust: Seaded > Võta ühendust. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Palun uuenda rakendust",
-  "forceUpdateMessage": "Palume teil uuendada oma äpi versiooni. Palun uuendage {storeName} kaudu uusimale versioonile.",
+  "forceUpdateMessage": "Rakendust tuleb uuendada. Palun hanki uusim versioon poest {storeName}",
   "visitHospital": "Arsti külastus",
   "receiveNotificationAt9AM": "Saan teate samal päeval kell 9:00",
   "deletedScheduleCannotBeRestored": "Kustutatud plaane ei saa taastada",

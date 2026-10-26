@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Naməlum xəta baş verdi. Zəhmət olmasa, tətbiqi ən son versiyaya yeniləyib yenidən cəhd edin. Problem davam edərsə, Ayarlar > Əlaqə bölməsindən bizimlə əlaqə saxlayın. Kod: {errorCode} Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "İnternet bağlantısında problem var. Zəhmət olmasa, bağlantınızı yoxlayıb yenidən cəhd edin. Problem davam edərsə, Parametrlər > Bizimlə əlaqə bölməsindən bizə yazın. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Zəhmət olmasa tətbiqi yeniləyin",
-  "forceUpdateMessage": "Tətbiqin versiyasını yeniləməyinizi xahiş edirik. {storeName}-dən son versiyaya yeniləyin.",
+  "forceUpdateMessage": "Tətbiqi yeniləməyinizi xahiş edirik. Zəhmət olmasa, {storeName} vasitəsilə ən son versiyaya yeniləyin",
   "visitHospital": "Həkimə getmək",
   "receiveNotificationAt9AM": "Həmin gün 9:00-da bildiriş al",
   "deletedScheduleCannotBeRestored": "Silinmiş təyinatlar bərpa edilə bilməz",

@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "ଏକ ଅଜଣା ତ୍ରୁଟି ଘଟିଛି। ଦୟାକରି ଆପ୍‌କୁ ସର୍ବଶେଷ ସଂସ୍କରଣକୁ ଅପଡେଟ୍ କରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ। ସମସ୍ୟା ରହିଲେ ସେଟିଂସ୍ > ଯୋଗାଯୋଗ କରନ୍ତୁ ମାଧ୍ୟମରେ ଆମ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ। କୋଡ୍: {errorCode} ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "ଇଣ୍ଟରନେଟ୍ ସଂଯୋଗରେ ସମସ୍ୟା ହେଉଛି। ଦୟାକରି ଆପଣଙ୍କ ସଂଯୋଗ ଯାଞ୍ଚ କରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ। ସମସ୍ୟା ରହିଲେ ସେଟିଂସ୍ > ଯୋଗାଯୋଗ କରନ୍ତୁ ମାଧ୍ୟମରେ ଆମ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "ଦୟାକରି ଆପ୍‌ଟି ଅପଡେଟ୍ କରନ୍ତୁ",
-  "forceUpdateMessage": "ଆପଣଙ୍କ ଆପ୍‌ର ଭର୍ସନ୍ ଅପଡେଟ୍ କରିବାକୁ ଅନୁରୋଧ କରୁଛୁ। {storeName}ରୁ ସର୍ବଶେଷ ଭର୍ସନ୍‌କୁ ଅପଡେଟ୍ କରନ୍ତୁ",
+  "forceUpdateMessage": "ଆପ୍‌ଟି ଅପଡେଟ୍ କରିବା ଆବଶ୍ୟକ। ଦୟାକରି {storeName} ରୁ ସର୍ବଶେଷ ସଂସ୍କରଣ ଡାଉନଲୋଡ୍ କରନ୍ତୁ",
   "visitHospital": "ଡାକ୍ତର ଦେଖାଇବା",
   "receiveNotificationAt9AM": "ସେହି ଦିନ ୯:୦୦ରେ ବିଜ୍ଞପ୍ତି ପାଇବେ",
   "deletedScheduleCannotBeRestored": "ବିଲୋପିତ କାର୍ଯ୍ୟସୂଚୀ ପୁନଃସ୍ଥାପନ କରାଯାଇପାରିବ ନାହିଁ",

@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "ເກີດຂໍ້ຜິດພາດທີ່ບໍ່ຮູ້ສາເຫດ. ກະລຸນາອັບເດດແອັບເປັນເວີຊັນຫຼ້າສຸດ ແລ້ວລອງໃໝ່. ຖ້າບັນຫາຍັງຢູ່, ກະລຸນາຕິດຕໍ່ພວກເຮົາຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ພວກເຮົາ. ລະຫັດ: {errorCode} ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "ການເຊື່ອມຕໍ່ອິນເຕີເນັດມີບັນຫາ. ກະລຸນາກວດສອບການເຊື່ອມຕໍ່ ແລ້ວລອງໃໝ່. ຖ້າບັນຫາຍັງຄົງຢູ່ ກະລຸນາຕິດຕໍ່ພວກເຮົາຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ພວກເຮົາ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "ກະລຸນາອັບເດດແອັບ",
-  "forceUpdateMessage": "ກະລຸນາອັບເດດເວີຊັນແອັບພລິເຄຊັນຂອງທ່ານ. ກະລຸນາອັບເດດເປັນເວີຊັນລ່າສຸດຈາກ {storeName}",
+  "forceUpdateMessage": "ແອັບຕ້ອງການການອັບເດດ. ກະລຸນາດາວໂຫຼດເວີຊັນຫຼ້າສຸດຈາກ {storeName}",
   "visitHospital": "ໄປໂຮງໝໍ",
   "receiveNotificationAt9AM": "ຮັບການແຈ້ງເຕືອນໃນມື້ນີ້ເວລາ 9:00",
   "deletedScheduleCannotBeRestored": "ລາຍການທີ່ລຶບແລ້ວບໍ່ສາມາດກູ້ຄືນໄດ້",

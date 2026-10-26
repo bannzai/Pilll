@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Kuvele iphutha elingaziwa. Sicela ubuyekeze uhlelo lokusebenza lube yinguqulo yakamuva bese uzama futhi. Uma inkinga iqhubeka, sicela usithinte kokuthi Izilungiselelo > Xhumana nathi. Ikhodi: {errorCode} Imininingwane: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Kunenkinga ngoxhumo lwe-inthanethi. Sicela uhlole uxhumano lwakho bese uzama futhi. Uma inkinga iqhubeka, xhumana nathi ngokusebenzisa Izilungiselelo > Xhumana nathi. Imininingwane: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Sicela ubuyekeze uhlelo lokusebenza",
-  "forceUpdateMessage": "Siyacela ukuthi ubuyekeze i-app yakho. Sicela ulande inguqulo entsha ku-{storeName}",
+  "forceUpdateMessage": "Uhlelo lokusebenza ludinga ukubuyekezwa. Sicela ulande inguqulo yakamuva ku-{storeName}",
   "visitHospital": "ukuya esibhedlela",
   "receiveNotificationAt9AM": "Thola isaziso nge-9:00 ngalelolanga",
   "deletedScheduleCannotBeRestored": "Amacebo asusiwe awakwazi ukubuyiselwa",

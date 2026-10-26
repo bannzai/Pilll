@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Bilinmeyen bir hata oluştu. Lütfen uygulamayı en son sürüme güncelleyip tekrar deneyin. Sorun devam ederse Ayarlar > Bize ulaşın bölümünden bizimle iletişime geçin. Kod: {errorCode} Ayrıntılar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "İnternet bağlantısında bir sorun var. Lütfen bağlantınızı kontrol edip tekrar deneyin. Sorun devam ederse Ayarlar > Bize ulaşın bölümünden bizimle iletişime geçin. Ayrıntılar: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Lütfen uygulamayı güncelleyin",
-  "forceUpdateMessage": "Uygulama güncellemesi gerekiyor. Lütfen {storeName} üzerinden en son sürüme güncelleyin.",
+  "forceUpdateMessage": "Uygulamanın güncellenmesi gerekiyor. Lütfen en son sürümü {storeName} üzerinden indirin",
   "visitHospital": "kontrole gitmek",
   "receiveNotificationAt9AM": "Aynı gün 09:00'da bildirim al",
   "deletedScheduleCannotBeRestored": "Silinen planlar geri yüklenemez",

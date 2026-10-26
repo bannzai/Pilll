@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "ತಿಳಿಯದ ದೋಷ ಸಂಭವಿಸಿದೆ. ದಯವಿಟ್ಟು ಆ್ಯಪ್‌ ಅನ್ನು ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಗೆ ನವೀಕರಿಸಿ, ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ. ಸಮಸ್ಯೆ ಮುಂದುವರಿದರೆ, ಸೆಟ್ಟಿಂಗ್‌ಗಳು > ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ ಮೂಲಕ ಸಂಪರ್ಕಿಸಿ. ಕೋಡ್: {errorCode} ವಿವರಗಳು: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕದಲ್ಲಿ ಸಮಸ್ಯೆ ಇದೆ. ದಯವಿಟ್ಟು ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ, ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ. ಸಮಸ್ಯೆ ಮುಂದುವರಿದರೆ, ಸೆಟ್ಟಿಂಗ್‌ಗಳು > ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ ಮೂಲಕ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ. ವಿವರಗಳು: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "ದಯವಿಟ್ಟು ಆ್ಯಪ್ ಅನ್ನು ನವೀಕರಿಸಿ",
-  "forceUpdateMessage": "ನಿಮ್ಮ ಅಪ್ಲಿಕೇಶನ್ ಆವೃತ್ತಿಯನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡಬೇಕಾಗಿದೆ। {storeName} ನಿಂದ ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಗೆ ಅಪ್‌ಡೇಟ್ ಮಾಡಿ",
+  "forceUpdateMessage": "ಆ್ಯಪ್‌ ಅನ್ನು ನವೀಕರಿಸುವ ಅಗತ್ಯವಿದೆ. ದಯವಿಟ್ಟು {storeName} ನಿಂದ ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಯನ್ನು ಪಡೆಯಿರಿ",
   "visitHospital": "ವೈದ್ಯಾಲಯ ಭೇಟಿ",
   "receiveNotificationAt9AM": "ಅದೇ ದಿನ ೯:೦೦ ಕ್ಕೆ ಅಧಿಸೂಚನೆ ಸ್ವೀಕರಿಸಿ",
   "deletedScheduleCannotBeRestored": "ಅಳಿಸಿದ ಯೋಜನೆಗಳನ್ನು ಮರುಪ್ರಾಪ್ತಿ ಮಾಡಲಾಗುವುದಿಲ್ಲ",

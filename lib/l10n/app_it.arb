@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Si è verificato un errore sconosciuto. Aggiorna l’app all’ultima versione e riprova. Se il problema persiste, contattaci da Impostazioni > Contattaci. Codice: {errorCode} Dettagli: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "C'è un problema con la connessione Internet. Controlla la connessione e riprova. Se il problema persiste, contattaci da Impostazioni > Contattaci. Dettagli: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Aggiorna l’app, per favore",
-  "forceUpdateMessage": "Ti chiediamo di aggiornare la versione della tua app. Aggiorna alla versione più recente tramite {storeName}",
+  "forceUpdateMessage": "È necessario aggiornare l’app. Puoi scaricare la versione più recente da {storeName}",
   "visitHospital": "Visita medica",
   "receiveNotificationAt9AM": "Ricevi notifica alle 9:00 lo stesso giorno",
   "deletedScheduleCannotBeRestored": "Gli appuntamenti cancellati non possono essere ripristinati",

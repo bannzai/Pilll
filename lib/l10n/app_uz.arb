@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Nomaʼlum xatolik yuz berdi. Iltimos, ilovani eng soʻnggi versiyaga yangilab, qayta urinib koʻring. Muammo davom etsa, Sozlamalar > Biz bilan bogʻlanish orqali bizga murojaat qiling. Kod: {errorCode} Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Internet aloqasida muammo bor. Iltimos, aloqangizni tekshirib, qayta urinib koʻring. Muammo davom etsa, Sozlamalar > Biz bilan bogʻlanish orqali bizga murojaat qiling. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Iltimos, ilovani yangilang",
-  "forceUpdateMessage": "Ilovangizning versiyasini yangilash talab qilinadi. Iltimos, {storeName}dan eng yangi versiyaga yangilang.",
+  "forceUpdateMessage": "Ilovani yangilash kerak. Iltimos, eng soʻnggi versiyani {storeName} orqali yuklab oling",
   "visitHospital": "Shifokorga borish",
   "receiveNotificationAt9AM": "O'sha kun soat 9:00 da bildirishnoma olish",
   "deletedScheduleCannotBeRestored": "O'chirilgan rejalarni qayta tiklab bo'lmaydi",

@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Radās nezināma kļūda. Lūdzu, atjauniniet lietotni uz jaunāko versiju un mēģiniet vēlreiz. Ja problēma saglabājas, sazinieties ar mums sadaļā Iestatījumi > Sazināties ar mums. Kods: {errorCode} Informācija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Radusies interneta savienojuma problēma. Pārbaudiet savienojumu un mēģiniet vēlreiz. Ja problēma saglabājas, sazinieties ar mums sadaļā Iestatījumi > Sazināties ar mums. Detalizēta informācija: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Lūdzu, atjauniniet lietotni",
-  "forceUpdateMessage": "Lūdzam atjaunināt jūsu lietotnes versiju. Lūdzu, atjauniniet uz jaunāko versiju no {storeName}.",
+  "forceUpdateMessage": "Lietotne ir jāatjaunina. Lūdzu, lejupielādējiet jaunāko versiju no {storeName}",
   "visitHospital": "apmeklēt ārstu",
   "receiveNotificationAt9AM": "Saņemt paziņojumu šodien plkst. 9:00",
   "deletedScheduleCannotBeRestored": "Dzēstie plāni nav atjaunojami",

@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Óþekkt villa kom upp. Uppfærðu appið í nýjustu útgáfu og reyndu aftur. Ef vandinn heldur áfram geturðu haft samband við okkur í Stillingar > Hafa samband. Kóði: {errorCode} Nánari upplýsingar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Vandamál kom upp með nettenginguna. Athugaðu tenginguna og reyndu aftur. Ef vandamálið heldur áfram geturðu haft samband við okkur í Stillingar > Hafa samband. Nánari upplýsingar: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Vinsamlegast uppfærðu appið",
-  "forceUpdateMessage": "Vinsamlegast uppfærðu forritið þitt. Uppfærðu í nýjustu útgáfuna úr {storeName}",
+  "forceUpdateMessage": "Það þarf að uppfæra appið. Þú getur sótt nýjustu útgáfuna í {storeName}",
   "visitHospital": "Lækniskonum",
   "receiveNotificationAt9AM": "Fá tilkynningu á sama degi klukkan 9:00",
   "deletedScheduleCannotBeRestored": "Eyddar áætlanir er ekki hægt að endurheimta",

@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "დაფიქსირდა უცნობი შეცდომა. გთხოვთ, განაახლოთ აპი უახლეს ვერსიამდე და ხელახლა სცადოთ. თუ პრობლემა გაგრძელდა, დაგვიკავშირდით პარამეტრები > დაგვიკავშირდით განყოფილებიდან. კოდი: {errorCode} დეტალები: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "ინტერნეტკავშირთან დაკავშირებით პრობლემა წარმოიშვა. გთხოვთ, შეამოწმოთ კავშირი და ხელახლა სცადოთ. თუ პრობლემა გაგრძელდა, დაგვიკავშირდით პარამეტრები > დაგვიკავშირდით განყოფილებიდან. დეტალები: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "გთხოვთ, განაახლოთ აპი",
-  "forceUpdateMessage": "გთხოვთ განაახლოთ თქვენი აპლიკაციის ვერსია. გთხოვთ ჩამოტვირთოთ უახლესი ვერსია {storeName}-იდან",
+  "forceUpdateMessage": "აპის განახლებაა საჭირო. გთხოვთ, უახლესი ვერსია {storeName}-დან ჩამოტვირთოთ",
   "visitHospital": "ვიზიტი ექიმთან",
   "receiveNotificationAt9AM": "იმავე დღეს 9:00-ზე შეტყობინება",
   "deletedScheduleCannotBeRestored": "წაშლილი განრიგი ვერ აღდგება",

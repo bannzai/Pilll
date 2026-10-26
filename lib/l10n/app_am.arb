@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "ያልታወቀ ስህተት ተከስቷል። እባክዎ መተግበሪያውን ወደ አዲሱ ስሪት ያዘምኑና እንደገና ይሞክሩ። ችግሩ ካልተፈታ፣ ከቅንብሮች > ያግኙን በኩል ያግኙን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "የኢንተርኔት ግንኙነቱ ተቋርጧል። እባክዎ ግንኙነትዎን ያረጋግጡና እንደገና ይሞክሩ። ችግሩ ከቀጠለ፣ በቅንብሮች > ያግኙን በኩል ያነጋግሩን። ዝርዝሮች፦ {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "እባክዎ መተግበሪያውን ያዘምኑ",
-  "forceUpdateMessage": "የመተግበሪያዎን ስሪት ማሻሻል እንጠይቅዎታለን። እባክዎን ከ{storeName} ዘመናዊውን ስሪት ያውርዱ።",
+  "forceUpdateMessage": "የሚጠቀሙበትን መተግበሪያ እንዲያዘምኑ እንጠይቃለን። እባክዎ ከ{storeName} ወደ አዲሱ ስሪት ያዘምኑት",
   "visitHospital": "ሆስፒታል መሄድ",
   "receiveNotificationAt9AM": "ዛሬ በ9:00 ሰዓት ማሳወቂያ ተቀበል",
   "deletedScheduleCannotBeRestored": "የተሰረዙ መርሃ ግብሮች መመለስ አይችሉም",

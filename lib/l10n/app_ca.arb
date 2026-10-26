@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "S’ha produït un error desconegut. Actualitza l’aplicació a la versió més recent i torna-ho a provar. Si el problema continua, contacta amb nosaltres des de Configuració > Contacta amb nosaltres. Codi: {errorCode} Detalls: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Hi ha un problema amb la connexió a internet. Comprova la connexió i torna-ho a provar. Si el problema continua, contacta amb nosaltres a Configuració > Contacta amb nosaltres. Detalls: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Si us plau, actualitza l'aplicació",
-  "forceUpdateMessage": "Us demanem que actualitzeu la versió de l'aplicació. Si us plau, actualitzeu a la versió més recent des de {storeName}",
+  "forceUpdateMessage": "Cal actualitzar l’aplicació. Pots instal·lar la versió més recent des de {storeName}",
   "visitHospital": "Anar al metge",
   "receiveNotificationAt9AM": "Rebre la notificació a les 9:00 del dia",
   "deletedScheduleCannotBeRestored": "Els esdeveniments eliminats no es poden recuperar",

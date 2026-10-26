@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุค่ะ โปรดอัปเดตแอปเป็นเวอร์ชันล่าสุดแล้วลองอีกครั้งค่ะ หากยังพบปัญหา โปรดติดต่อเราผ่าน การตั้งค่า > ติดต่อเราค่ะ รหัส: {errorCode} รายละเอียด: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "การเชื่อมต่ออินเทอร์เน็ตมีปัญหาค่ะ โปรดตรวจสอบการเชื่อมต่อแล้วลองอีกครั้งค่ะ หากยังพบปัญหา โปรดติดต่อเราผ่าน การตั้งค่า > ติดต่อเรา ค่ะ รายละเอียด: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "โปรดอัปเดตแอป",
-  "forceUpdateMessage": "กรุณาอัปเดตแอปของคุณเป็นเวอร์ชันล่าสุดจาก{storeName}",
+  "forceUpdateMessage": "แอปจำเป็นต้องอัปเดตค่ะ กรุณาดาวน์โหลดเวอร์ชันล่าสุดจาก {storeName} ค่ะ",
   "visitHospital": "ไปพบแพทย์",
   "receiveNotificationAt9AM": "รับการแจ้งเตือนเวลา 09:00 น. ในวันนั้น",
   "deletedScheduleCannotBeRestored": "ไม่สามารถกู้คืนกำหนดการที่ถูกลบแล้วได้",

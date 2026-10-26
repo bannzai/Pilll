@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Узнікла невядомая памылка. Калі ласка, абнавіце праграму да апошняй версіі і паспрабуйце яшчэ раз. Калі праблема не знікне, звяжыцеся з намі праз Налады > Звязацца з намі. Код: {errorCode} Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Узнікла праблема з інтэрнэт-злучэннем. Праверце злучэнне і паспрабуйце яшчэ раз. Калі праблема застанецца, звяжыцеся з намі праз Налады > Зварот у падтрымку. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Калі ласка, абнавіце праграму",
-  "forceUpdateMessage": "Мы просім абнавіць версію вашага прыкладання. Абнавіце да апошняй версіі ў {storeName}",
+  "forceUpdateMessage": "Просім абнавіць праграму. Калі ласка, усталюйце апошнюю версію праз {storeName}",
   "visitHospital": "наведваць лекара",
   "receiveNotificationAt9AM": "Атрымліваць апавяшчэнне сёння ў 9:00",
   "deletedScheduleCannotBeRestored": "Выдаленыя планы нельга аднавіць",

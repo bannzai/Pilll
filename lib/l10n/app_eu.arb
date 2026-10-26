@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Errore ezezagun bat gertatu da. Eguneratu aplikazioa azken bertsiora eta saiatu berriro. Arazoak jarraitzen badu, jarri gurekin harremanetan Ezarpenak > Kontaktua atalean. Kodea: {errorCode} Xehetasunak: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Interneteko konexioarekin arazo bat dago. Egiaztatu konexioa eta saiatu berriro. Arazoak jarraitzen badu, jarri gurekin harremanetan Ezarpenak > Jarri harremanetan atalaren bidez. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Eguneratu aplikazioa, mesedez",
-  "forceUpdateMessage": "Zure aplikazioa eguneratu behar duzu. Mesedez, eguneratu azken bertsiora {storeName}tik.",
+  "forceUpdateMessage": "Aplikazioa eguneratu behar da. Mesedez, eskuratu azken bertsioa {storeName} dendan",
   "visitHospital": "Medikura joan",
   "receiveNotificationAt9AM": "Egun berean 9:00etan jakinarazpena jaso",
   "deletedScheduleCannotBeRestored": "Ezabatutako gertaerak ezin dira berreskuratu",

@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Se produjo un error desconocido. Actualiza la app a la versión más reciente y vuelve a intentarlo. Si el problema continúa, contáctanos desde Configuración > Contacto. Código: {errorCode} Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Hay un problema con la conexión a internet. Comprueba tu conexión e inténtalo de nuevo. Si el problema continúa, contáctanos desde Configuración > Contacto. Detalles: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Actualiza la aplicación, por favor",
-  "forceUpdateMessage": "Te pedimos que actualices la versión de tu aplicación. Por favor, actualiza a la última versión desde {storeName}",
+  "forceUpdateMessage": "Es necesario actualizar la aplicación. Descarga la versión más reciente desde {storeName}",
   "visitHospital": "Ir al médico",
   "receiveNotificationAt9AM": "Recibir recordatorio el mismo día a las 9:00",
   "deletedScheduleCannotBeRestored": "Las citas eliminadas no se pueden recuperar",

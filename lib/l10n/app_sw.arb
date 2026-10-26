@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Hitilafu isiyojulikana imetokea. Tafadhali sasisha programu hadi toleo jipya zaidi kisha ujaribu tena. Tatizo likiendelea, wasiliana nasi kupitia Mipangilio > Wasiliana nasi. Msimbo: {errorCode} Maelezo: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Kuna tatizo la muunganisho wa intaneti. Tafadhali angalia muunganisho wako ujaribu tena. Tatizo likiendelea, wasiliana nasi kupitia Mipangilio > Wasiliana nasi. Maelezo: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Tafadhali sasisha programu",
-  "forceUpdateMessage": "Tunahitaji kusasisha toleo la programu yako. Tafadhali sasisha hadi toleo jipya zaidi kutoka {storeName}",
+  "forceUpdateMessage": "Programu inahitaji kusasishwa. Tafadhali pakua toleo jipya zaidi kutoka {storeName}",
   "visitHospital": "Kutembelea hospitali",
   "receiveNotificationAt9AM": "Pokea arifa saa 9:00 siku hiyo",
   "deletedScheduleCannotBeRestored": "Ratiba zilizofutwa haziwezi kurejeshwa",

@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Something went wrong. Please update the app to the latest version and try again. If the problem continues, contact us through Settings > Contact us. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "There's a problem with your internet connection. Check your connection and try again. If the problem continues, contact us through Settings > Contact us. Details: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Please update the app",
-  "forceUpdateMessage": "Please update your app version. Download the latest version from {storeName}.",
+  "forceUpdateMessage": "This app needs an update. Please get the latest version from {storeName}",
   "visitHospital": "See doctor",
   "receiveNotificationAt9AM": "Receive notification at 9:00 AM on the day",
   "deletedScheduleCannotBeRestored": "Deleted schedules cannot be restored",

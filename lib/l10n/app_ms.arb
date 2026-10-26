@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Ralat yang tidak diketahui telah berlaku. Sila kemas kini aplikasi kepada versi terkini dan cuba lagi. Jika masalah berterusan, hubungi kami melalui Tetapan > Hubungi kami. Kod: {errorCode} Butiran: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Terdapat masalah dengan sambungan internet. Sila semak sambungan anda dan cuba lagi. Jika masalah berterusan, hubungi kami melalui Tetapan > Hubungi kami. Butiran: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Sila kemas kini aplikasi",
-  "forceUpdateMessage": "Sila kemaskini aplikasi anda ke versi terkini dari {storeName}",
+  "forceUpdateMessage": "Aplikasi perlu dikemas kini. Sila muat turun versi terkini daripada {storeName}",
   "visitHospital": "ke hospital",
   "receiveNotificationAt9AM": "Terima pemberitahuan pada 9:00 pada hari yang sama",
   "deletedScheduleCannotBeRestored": "Jadual yang dipadam tidak dapat dipulihkan",

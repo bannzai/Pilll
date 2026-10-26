@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Произошла неизвестная ошибка. Обновите приложение до последней версии и попробуйте ещё раз. Если проблема сохранится, свяжитесь с нами через Настройки > Связаться с нами. Код: {errorCode} Подробности: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Возникла проблема с подключением к интернету. Проверьте соединение и попробуйте ещё раз. Если проблема не исчезнет, свяжитесь с нами через Настройки > Связаться с нами. Подробности: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Пожалуйста, обновите приложение",
-  "forceUpdateMessage": "Требуется обновление приложения. Пожалуйста, обновите до последней версии из {storeName}",
+  "forceUpdateMessage": "Приложение необходимо обновить. Пожалуйста, установите последнюю версию через {storeName}",
   "visitHospital": "посещать врача",
   "receiveNotificationAt9AM": "Получать уведомление в 9:00 в день приёма",
   "deletedScheduleCannotBeRestored": "Удаленные записи не могут быть восстановлены",

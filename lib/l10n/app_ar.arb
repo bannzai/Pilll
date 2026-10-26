@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "حدث خطأ غير معروف. يُرجى تحديث التطبيق إلى أحدث إصدار ثم المحاولة مرة أخرى. إذا استمرت المشكلة، يمكنكِ التواصل معنا عبر الإعدادات > التواصل معنا. الرمز: {errorCode} التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "الاتصال بالإنترنت غير مستقر. يُرجى التحقق من اتصالكِ والمحاولة مرة أخرى. إذا استمرت المشكلة، تواصلي معنا عبر الإعدادات > اتصلي بنا. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "يرجى تحديث التطبيق",
-  "forceUpdateMessage": "نرجو منك تحديث إصدار التطبيق الخاص بك. يرجى التحديث إلى أحدث إصدار من {storeName}",
+  "forceUpdateMessage": "يرجى تحديث التطبيق إلى أحدث إصدار عبر {storeName}",
   "visitHospital": "مراجعة الطبيب",
   "receiveNotificationAt9AM": "تلقي إشعار في الساعة 9:00 من نفس اليوم",
   "deletedScheduleCannotBeRestored": "لا يمكن استعادة المواعيد المحذوفة",

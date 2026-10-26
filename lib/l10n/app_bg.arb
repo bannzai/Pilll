@@ -323,7 +323,7 @@
   "purchaseErrorInvalidPromotionalOfferError": "Възникна неизвестна грешка. Моля, актуализирайте приложението до последната версия и опитайте отново. Ако проблемът продължи, свържете се с нас чрез Настройки > Свържете се с нас. Код: {errorCode} Подробности: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Има проблем с интернет връзката. Проверете връзката си и опитайте отново. Ако проблемът продължи, свържете се с нас чрез Настройки > Свържете се с нас. Подробности: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Моля, актуализирайте приложението",
-  "forceUpdateMessage": "Моля, актуализирайте версията на вашето приложение. Актуализирайте до най-новата версия от {storeName}.",
+  "forceUpdateMessage": "Моля, актуализирайте приложението до най-новата версия чрез {storeName}",
   "visitHospital": "ходя на лекар",
   "receiveNotificationAt9AM": "Получаване на известие в 9:00 в деня",
   "deletedScheduleCannotBeRestored": "Изтритите планове не могат да бъдат възстановени",
