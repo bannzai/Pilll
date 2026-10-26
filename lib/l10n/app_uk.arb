@@ -405,7 +405,7 @@
   "pauseTakingStarted": "Почалася перерва у прийомі пігулок",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Змінити дату початку перерви в прийомі пігулки",
-  "shareWithFriends": "Розповісти друзям",
+  "shareWithFriends": "Порадьте друзям",
   "termsOfService": "Умови використання",
   "privacyPolicy": "Політика конфіденційності",
   "linkCopiedToClipboard": "Скопійовано до буфера обміну",

@@ -405,7 +405,7 @@
   "pauseTakingStarted": "Pilleritauko on alkanut",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Muokkaa pilleritauon alkamispäivää",
-  "shareWithFriends": "Kerro kaverille",
+  "shareWithFriends": "Kerro ystäville",
   "termsOfService": "Käyttöehdot",
   "privacyPolicy": "Tietosuojaseloste",
   "linkCopiedToClipboard": "Kopioitu leikepöydälle",

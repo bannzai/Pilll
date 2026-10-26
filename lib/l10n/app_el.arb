@@ -405,7 +405,7 @@
   "pauseTakingStarted": "Ξεκίνησε η παύση λήψης του χαπιού",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Επεξεργασία ημερομηνίας έναρξης της παύσης λήψης χαπιού",
-  "shareWithFriends": "Πες σε φίλους",
+  "shareWithFriends": "Μοιραστείτε το με φίλους",
   "termsOfService": "Όροι χρήσης",
   "privacyPolicy": "Πολιτική Απορρήτου",
   "linkCopiedToClipboard": "Αντιγράφηκε στο πρόχειρο",

@@ -405,7 +405,7 @@
   "pauseTakingStarted": "Nagsimula na ang pahinga sa pag-inom ng pildoras",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Baguhin ang petsa ng simula ng pahinga sa pag-inom ng pildoras",
-  "shareWithFriends": "Ibahagi sa mga kaibigan",
+  "shareWithFriends": "Ibahagi sa mga kaibigan ninyo",
   "termsOfService": "Mga Tuntunin ng Paggamit",
   "privacyPolicy": "Patakaran sa Privacy",
   "linkCopiedToClipboard": "Nakopya na sa clipboard",

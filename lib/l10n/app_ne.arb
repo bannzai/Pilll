@@ -405,7 +405,7 @@
   "pauseTakingStarted": "चक्की सेवनको विश्राम सुरु भएको छ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "चक्की सेवनमा विश्राम सुरु हुने मिति बदल्नुहोस्",
-  "shareWithFriends": "साथीलाई बताउनु",
+  "shareWithFriends": "साथीहरूलाई भन्नुहोस्",
   "termsOfService": "उपयोग सर्तहरू",
   "privacyPolicy": "गोपनीयता नीति",
   "linkCopiedToClipboard": "क्लिपबोर्डमा कपी गरियो",

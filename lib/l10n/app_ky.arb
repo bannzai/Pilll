@@ -405,7 +405,7 @@
   "pauseTakingStarted": "Таблетка ичүүдөгү тыныгуу башталды",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Таблетка ичүүдөгү тыныгуунун башталган күнүн өзгөртүңүз",
-  "shareWithFriends": "Досторго сунуштоо",
+  "shareWithFriends": "Досторуңузга сунуштаңыз",
   "termsOfService": "Колдонуу шарттары",
   "privacyPolicy": "Купуялык саясаты",
   "linkCopiedToClipboard": "Клипбордго көчүрүлдү",

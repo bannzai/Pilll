@@ -405,7 +405,7 @@
   "pauseTakingStarted": "A pausa da pílula começou",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Editar a data de início da pausa na pílula",
-  "shareWithFriends": "Recomendar para amigos",
+  "shareWithFriends": "Compartilhe com amigos",
   "termsOfService": "Termos de Uso",
   "privacyPolicy": "Política de Privacidade",
   "linkCopiedToClipboard": "Copiado para a área de transferência",

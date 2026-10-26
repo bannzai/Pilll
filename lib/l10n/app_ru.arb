@@ -405,7 +405,7 @@
   "pauseTakingStarted": "Начался перерыв в приёме таблеток",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Изменить дату начала перерыва в приёме таблетки",
-  "shareWithFriends": "Рассказать друзьям",
+  "shareWithFriends": "Поделиться с друзьями",
   "termsOfService": "Условия использования",
   "privacyPolicy": "Политика конфиденциальности",
   "linkCopiedToClipboard": "Скопировано в буфер обмена",

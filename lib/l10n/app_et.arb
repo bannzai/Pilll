@@ -405,7 +405,7 @@
   "pauseTakingStarted": "Pillipaus on alanud",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Muuda pillide võtmise pausi alguskuupäeva",
-  "shareWithFriends": "Soovita sõbrale",
+  "shareWithFriends": "Jaga sõpradega",
   "termsOfService": "Kasutustingimused",
   "privacyPolicy": "Privaatsuspoliitika",
   "linkCopiedToClipboard": "Kopeeritud lõikelauele",

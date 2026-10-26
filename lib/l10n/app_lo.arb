@@ -405,7 +405,7 @@
   "pauseTakingStarted": "ເລີ່ມພັກການກິນຢາເມັດແລ້ວ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "ແກ້ໄຂວັນທີເລີ່ມພັກການກິນຢາເມັດ",
-  "shareWithFriends": "ແນະນຳໃຫ້ໝູ່",
+  "shareWithFriends": "ແບ່ງປັນກັບໝູ່",
   "termsOfService": "ຂໍ້ກຳນົດການໃຊ້ງານ",
   "privacyPolicy": "ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ",
   "linkCopiedToClipboard": "ຄັດລອກໃສ່ຄລິບບອດແລ້ວ",

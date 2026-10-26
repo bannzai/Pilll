@@ -405,7 +405,7 @@
   "pauseTakingStarted": "Your pill break has started",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Edit pill pause start date",
-  "shareWithFriends": "Tell a Friend",
+  "shareWithFriends": "Share with friends",
   "termsOfService": "Terms of Service",
   "privacyPolicy": "Privacy Policy",
   "linkCopiedToClipboard": "Copied to clipboard",

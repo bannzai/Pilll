@@ -405,7 +405,7 @@
   "pauseTakingStarted": "Mae'r seibiant rhag cymryd y bilsen wedi dechrau",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Golygu dyddiad dechrau'r seibiant rhag cymryd y bilsen",
-  "shareWithFriends": "Rhannu gyda ffrindiau",
+  "shareWithFriends": "Rhannwch â ffrindiau",
   "termsOfService": "Telerau ac Amodau",
   "privacyPolicy": "Polisi Preifatrwydd",
   "linkCopiedToClipboard": "Wedi copïo i'r clipfwrdd",

@@ -405,7 +405,7 @@
   "pauseTakingStarted": "Таблетка қабылдаудағы үзіліс басталды",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Таблетка қабылдаудағы үзілістің басталу күнін өзгертіңіз",
-  "shareWithFriends": "Достарға таныстыру",
+  "shareWithFriends": "Достарыңызға ұсыныңыз",
   "termsOfService": "Пайдалану шарттары",
   "privacyPolicy": "Құпиялылық саясаты",
   "linkCopiedToClipboard": "Буферге көшірілді",

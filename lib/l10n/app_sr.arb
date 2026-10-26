@@ -405,7 +405,7 @@
   "pauseTakingStarted": "Почела је пауза у узимању пилула",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Измените датум почетка паузе у узимању пилуле",
-  "shareWithFriends": "Preporuči prijateljima",
+  "shareWithFriends": "Препоручите пријатељима",
   "termsOfService": "Услови коришћења",
   "privacyPolicy": "Pravila privatnosti",
   "linkCopiedToClipboard": "Копирано у клипборд",

@@ -405,7 +405,7 @@
   "pauseTakingStarted": "Эм уух завсарлага эхэлсэн",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Эм уух завсарлагын эхлэх өдрийг өөрчилнө үү",
-  "shareWithFriends": "найзуудад заах",
+  "shareWithFriends": "Найзууддаа санал болгоно уу",
   "termsOfService": "Ашиглалтын нөхцөл",
   "privacyPolicy": "Нууцлалын бодлого",
   "linkCopiedToClipboard": "Клипбордод хуулагдлаа",

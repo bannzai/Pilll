@@ -405,7 +405,7 @@
   "pauseTakingStarted": "已开始暂停服药",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "修改暂停服药的开始日期",
-  "shareWithFriends": "告诉朋友",
+  "shareWithFriends": "推荐给朋友",
   "termsOfService": "使用条款",
   "privacyPolicy": "隐私政策",
   "linkCopiedToClipboard": "已复制到剪贴板",

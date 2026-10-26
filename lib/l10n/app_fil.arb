@@ -405,7 +405,7 @@
   "pauseTakingStarted": "Nagsimula na ang pahinga sa pag-inom ng pill",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Baguhin ang petsa ng simula ng paghinto muna sa pag-inom ng pill",
-  "shareWithFriends": "Irekomenda sa kaibigan",
+  "shareWithFriends": "Ibahagi sa mga kaibigan ninyo",
   "termsOfService": "Mga Tuntunin ng Paggamit",
   "privacyPolicy": "Patakaran sa Privacy",
   "linkCopiedToClipboard": "Naikopya na sa clipboard",

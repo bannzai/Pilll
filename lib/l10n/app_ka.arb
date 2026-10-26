@@ -405,7 +405,7 @@
   "pauseTakingStarted": "აბების მიღების შესვენება დაიწყო",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "აბის მიღების შესვენების დაწყების თარიღის შეცვლა",
-  "shareWithFriends": "მეგობრებს გაუზიარე",
+  "shareWithFriends": "გაუზიარეთ მეგობრებს",
   "termsOfService": "გამოყენების პირობები",
   "privacyPolicy": "კონფიდენციალურობის პოლიტიკა",
   "linkCopiedToClipboard": "კლიპბორდში დაკოპირდა",

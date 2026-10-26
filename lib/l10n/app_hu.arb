@@ -405,7 +405,7 @@
   "pauseTakingStarted": "Elkezdődött a tablettaszedési szünet",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "A tablettaszedési szünet kezdőnapjának módosítása",
-  "shareWithFriends": "Ajánlás barátoknak",
+  "shareWithFriends": "Ajánld barátaidnak",
   "termsOfService": "Felhasználási feltételek",
   "privacyPolicy": "Adatvédelmi irányelvek",
   "linkCopiedToClipboard": "Vágólapra másolva",

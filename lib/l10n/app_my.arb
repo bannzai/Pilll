@@ -405,7 +405,7 @@
   "pauseTakingStarted": "ဆေးလုံးသောက်ခြင်း ခေတ္တရပ်နားမှု စတင်ပါပြီ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "ဆေးလုံးသောက်ခြင်း ခေတ္တရပ်နားမည့် စတင်ရက်ကို ပြင်ဆင်ပါ",
-  "shareWithFriends": "သူငယ်ချင်းတွေကို မျှဝေရန်",
+  "shareWithFriends": "သူငယ်ချင်းများကို မျှဝေပါ",
   "termsOfService": "အသုံးပြုမှုစည်းကမ်းများ",
   "privacyPolicy": "လုံခြုံမှုမူဝါဒ",
   "linkCopiedToClipboard": "Clipboard သို့ ကူးယူပြီးပါပြီ",

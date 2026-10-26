@@ -405,7 +405,7 @@
   "pauseTakingStarted": "Deine Pillenpause hat begonnen",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Beginn der Pillenpause bearbeiten",
-  "shareWithFriends": "Freunden empfehlen",
+  "shareWithFriends": "Mit Freunden teilen",
   "termsOfService": "Nutzungsbedingungen",
   "privacyPolicy": "Datenschutzerklärung",
   "linkCopiedToClipboard": "In die Zwischenablage kopiert",

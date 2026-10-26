@@ -405,7 +405,7 @@
   "pauseTakingStarted": "Pausen från p-piller har börjat",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Ändra startdatum för pillerpausen",
-  "shareWithFriends": "Rekommendera till vänner",
+  "shareWithFriends": "Dela med vänner",
   "termsOfService": "Användarvillkor",
   "privacyPolicy": "Integritetspolicy",
   "linkCopiedToClipboard": "Kopierat till urklipp",

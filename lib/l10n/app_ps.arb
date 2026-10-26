@@ -405,7 +405,7 @@
   "pauseTakingStarted": "د ګولیو له اخیستو وقفه پیل شوه",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "د ګولۍ اخیستلو د وقفې د پیل نېټه بدله کړئ",
-  "shareWithFriends": "ملګرو ته ویل",
+  "shareWithFriends": "له ملګرو سره یې شریک کړئ",
   "termsOfService": "د استعمال شرایط",
   "privacyPolicy": "د محرمیت پالیسي",
   "linkCopiedToClipboard": "کلپ بورډ ته کاپي شو",
