@@ -556,7 +556,7 @@
   "midnightTakenWarningDialogTitle": "לתשומת לב",
   "midnightTakenWarningDialogBody": "נוצר גם רישום נטילה לתאריך {takenDate}. היום, {takenDate}, לא תתקבל התזכורת של {reminderTimes}.\nאם הרישום נעשה בטעות, אפשר לבטל את הנטילה שנרשמה",
   "midnightTakenWarningDialogSeeHowToRevert": "איך לבטל רישום נטילה של גלולה",
-  "midnightTakenWarningDialogNeverShowAgain": "אל תציג הודעה זו שוב",
+  "midnightTakenWarningDialogNeverShowAgain": "לא להציג שוב",
   "pauseStartDateMustBeOnOrBefore": "יש לבחור תאריך התחלת הפסקה ב-{date} או לפני כן",
   "addPausePeriod": "הוספת תקופת הפסקה בנטילה",
   "addedPausePeriod": "נוספה תקופת הפסקה בנטילה",

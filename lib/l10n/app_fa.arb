@@ -556,7 +556,7 @@
   "midnightTakenWarningDialogTitle": "لطفاً توجه کنید",
   "midnightTakenWarningDialogBody": "برای {takenDate} هم ثبت مصرف انجام شد. امروز، {takenDate}، اعلان ساعت {reminderTimes} را دریافت نمی‌کنید.\nاگر اشتباهی ثبت شده است، لطفاً مصرف ثبت‌شده را لغو کنید",
   "midnightTakenWarningDialogSeeHowToRevert": "روش لغو ثبت مصرف قرص را ببینید",
-  "midnightTakenWarningDialogNeverShowAgain": "دیگر نمایش داده نشود",
+  "midnightTakenWarningDialogNeverShowAgain": "دیگر نشان داده نشود",
   "pauseStartDateMustBeOnOrBefore": "لطفاً تاریخ شروع استراحت را {date} یا قبل از آن انتخاب کنید",
   "addPausePeriod": "افزودن دورهٔ توقف مصرف",
   "addedPausePeriod": "بازهٔ استراحت مصرف اضافه شد",

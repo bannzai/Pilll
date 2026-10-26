@@ -556,7 +556,7 @@
   "midnightTakenWarningDialogTitle": "Zəhmət olmasa, diqqət edin",
   "midnightTakenWarningDialogBody": "{takenDate} üçün həb qəbulu qeyd edilib. Bu gün, {takenDate}, saat {reminderTimes} üçün bildiriş almayacaqsınız.\nSəhvən qeyd etmisinizsə, zəhmət olmasa həb qəbulunu ləğv edin",
   "midnightTakenWarningDialogSeeHowToRevert": "Həb qəbulunu necə ləğv etməyə baxın",
-  "midnightTakenWarningDialogNeverShowAgain": "Bir daha göstərmə",
+  "midnightTakenWarningDialogNeverShowAgain": "Bir daha göstərməyin",
   "pauseStartDateMustBeOnOrBefore": "Zəhmət olmasa fasilənin başlama tarixini {date} və ya ondan əvvəl seçin",
   "addPausePeriod": "Qəbul fasiləsi müddəti əlavə et",
   "addedPausePeriod": "Qəbul fasiləsi müddəti əlavə olundu",

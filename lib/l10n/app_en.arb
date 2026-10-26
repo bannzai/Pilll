@@ -556,7 +556,7 @@
   "midnightTakenWarningDialogTitle": "Please note",
   "midnightTakenWarningDialogBody": "A pill log was also created for {takenDate}. You won’t receive the {reminderTimes} reminder today, {takenDate}.\nIf this was a mistake, please undo the recorded dose",
   "midnightTakenWarningDialogSeeHowToRevert": "See how to undo a pill record",
-  "midnightTakenWarningDialogNeverShowAgain": "Don't show this again",
+  "midnightTakenWarningDialogNeverShowAgain": "Don't show again",
   "pauseStartDateMustBeOnOrBefore": "Please select a pause start date on or before {date}",
   "addPausePeriod": "Add pill break period",
   "addedPausePeriod": "Pill break period added",

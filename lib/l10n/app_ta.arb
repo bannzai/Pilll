@@ -556,7 +556,7 @@
   "midnightTakenWarningDialogTitle": "தயவுசெய்து கவனியுங்கள்",
   "midnightTakenWarningDialogBody": "{takenDate} தேதிக்கும் மாத்திரை உட்கொண்ட பதிவு செய்யப்பட்டுள்ளது. இன்று {takenDate} அன்று {reminderTimes} நேர அறிவிப்பு உங்களுக்கு வராது.\nதவறுதலாகப் பதிவு செய்திருந்தால், பதிவு செய்யப்பட்ட மாத்திரை உட்கொள்ளலை ரத்து செய்யுங்கள்",
   "midnightTakenWarningDialogSeeHowToRevert": "மாத்திரை எடுத்த பதிவை ரத்து செய்வது எப்படி என்று பாருங்கள்",
-  "midnightTakenWarningDialogNeverShowAgain": "இதை மீண்டும் காட்ட வேண்டாம்",
+  "midnightTakenWarningDialogNeverShowAgain": "மீண்டும் காட்ட வேண்டாம்",
   "pauseStartDateMustBeOnOrBefore": "தயவுசெய்து {date} அல்லது அதற்கு முந்தைய இடைவேளை தொடக்க தேதியைத் தேர்ந்தெடுக்கவும்",
   "addPausePeriod": "உட்கொள்ளும் இடைவேளை காலத்தைச் சேர்க்க",
   "addedPausePeriod": "உட்கொள்ளும் இடைவேளை காலம் சேர்க்கப்பட்டது",

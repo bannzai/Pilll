@@ -556,7 +556,7 @@
   "midnightTakenWarningDialogTitle": "Vær opmærksom",
   "midnightTakenWarningDialogBody": "Der er også lavet en pilleregistrering for {takenDate}. Du får ikke påmindelsen kl. {reminderTimes} i dag, {takenDate}.\nHvis det var en fejl, kan du annullere den registrerede indtagelse",
   "midnightTakenWarningDialogSeeHowToRevert": "Se, hvordan du fortryder en registreret p-pille",
-  "midnightTakenWarningDialogNeverShowAgain": "Vis ikke dette igen",
+  "midnightTakenWarningDialogNeverShowAgain": "Vis ikke igen",
   "pauseStartDateMustBeOnOrBefore": "Vælg en startdato for pausen den {date} eller tidligere",
   "addPausePeriod": "Tilføj pauseperiode",
   "addedPausePeriod": "Pauseperiode for indtagelse er tilføjet",

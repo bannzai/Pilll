@@ -556,7 +556,7 @@
   "midnightTakenWarningDialogTitle": "À noter",
   "midnightTakenWarningDialogBody": "Une entrée a aussi été ajoutée au journal des prises pour le {takenDate}. Aujourd’hui, {takenDate}, vous ne recevrez pas le rappel de {reminderTimes}.\nSi c’est une erreur, vous pouvez annuler la prise enregistrée",
   "midnightTakenWarningDialogSeeHowToRevert": "Voir comment annuler une prise enregistrée",
-  "midnightTakenWarningDialogNeverShowAgain": "Ne montre plus ça",
+  "midnightTakenWarningDialogNeverShowAgain": "Ne plus afficher",
   "pauseStartDateMustBeOnOrBefore": "Veuillez choisir une date de début de pause le {date} ou avant",
   "addPausePeriod": "Ajouter une période de pause de prise",
   "addedPausePeriod": "La période de pause de prise a été ajoutée",

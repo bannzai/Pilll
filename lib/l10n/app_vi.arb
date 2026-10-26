@@ -556,7 +556,7 @@
   "midnightTakenWarningDialogTitle": "Vui lòng lưu ý",
   "midnightTakenWarningDialogBody": "Nhật ký uống thuốc cho ngày {takenDate} cũng đã được ghi. Hôm nay, {takenDate}, bạn sẽ không nhận được thông báo lúc {reminderTimes}.\nNếu ghi nhầm, vui lòng hủy lần uống thuốc đã ghi",
   "midnightTakenWarningDialogSeeHowToRevert": "Xem cách hủy bản ghi uống thuốc",
-  "midnightTakenWarningDialogNeverShowAgain": "Không hiển thị lại nữa",
+  "midnightTakenWarningDialogNeverShowAgain": "Không hiển thị lại",
   "pauseStartDateMustBeOnOrBefore": "Vui lòng chọn ngày bắt đầu tạm ngưng vào {date} hoặc trước đó",
   "addPausePeriod": "Thêm thời gian nghỉ uống",
   "addedPausePeriod": "Đã thêm khoảng nghỉ uống thuốc",

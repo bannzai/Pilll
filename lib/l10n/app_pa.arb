@@ -556,7 +556,7 @@
   "midnightTakenWarningDialogTitle": "ਕਿਰਪਾ ਕਰਕੇ ਧਿਆਨ ਦਿਓ",
   "midnightTakenWarningDialogBody": "{takenDate} ਲਈ ਵੀ ਸੇਵਨ ਰਿਕਾਰਡ ਬਣ ਗਿਆ ਹੈ। ਅੱਜ {takenDate} ਨੂੰ {reminderTimes} ਵਾਲੀ ਸੂਚਨਾ ਤੁਹਾਨੂੰ ਨਹੀਂ ਮਿਲੇਗੀ।\nਜੇ ਇਹ ਗਲਤੀ ਨਾਲ ਦਰਜ ਹੋਇਆ ਹੈ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਦਰਜ ਕੀਤਾ ਗੋਲੀ ਦਾ ਸੇਵਨ ਰੱਦ ਕਰੋ",
   "midnightTakenWarningDialogSeeHowToRevert": "ਗੋਲੀ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਰੱਦ ਕਰਨ ਦਾ ਤਰੀਕਾ ਦੇਖੋ",
-  "midnightTakenWarningDialogNeverShowAgain": "ਦੁਬਾਰਾ ਨਾ ਦਿਖਾਓ",
+  "midnightTakenWarningDialogNeverShowAgain": "ਮੁੜ ਨਾ ਦਿਖਾਓ",
   "pauseStartDateMustBeOnOrBefore": "ਕਿਰਪਾ ਕਰਕੇ {date} ਜਾਂ ਇਸ ਤੋਂ ਪਹਿਲਾਂ ਦੀ ਵਿਰਾਮ ਸ਼ੁਰੂਆਤ ਮਿਤੀ ਚੁਣੋ",
   "addPausePeriod": "ਲੈਣ ਦੀ ਵਿਰਾਮ ਮਿਆਦ ਸ਼ਾਮਲ ਕਰੋ",
   "addedPausePeriod": "ਸੇਵਨ ਵਿਰਾਮ ਅਵਧੀ ਸ਼ਾਮਲ ਕੀਤੀ ਗਈ ਹੈ",

@@ -556,7 +556,7 @@
   "midnightTakenWarningDialogTitle": "Iltimos, eʼtibor bering",
   "midnightTakenWarningDialogBody": "{takenDate} uchun ham tabletka qabul qilish qaydi yaratildi. Bugun, {takenDate} kuni, {reminderTimes} dagi eslatmani olmaysiz.\nAgar bu xato bo‘lsa, qayd etilgan tabletka qabulini bekor qiling",
   "midnightTakenWarningDialogSeeHowToRevert": "Tabletka ichish qaydini qanday bekor qilishni koʻring",
-  "midnightTakenWarningDialogNeverShowAgain": "Boshqa ko'rsatmaslik",
+  "midnightTakenWarningDialogNeverShowAgain": "Boshqa koʻrsatmang",
   "pauseStartDateMustBeOnOrBefore": "Iltimos, tanaffus boshlanish sanasini {date} yoki undan oldin tanlang",
   "addPausePeriod": "Qabul qilish tanaffus muddatini qoʻshish",
   "addedPausePeriod": "Qabul qilish tanaffusi muddati qoʻshildi",

@@ -556,7 +556,7 @@
   "midnightTakenWarningDialogTitle": "Խնդրում ենք ուշադրություն դարձրեք",
   "midnightTakenWarningDialogBody": "{takenDate}-ի համար նույնպես ստեղծվել է ընդունման գրառում։ Այսօր՝ {takenDate}-ին, {reminderTimes}-ի ծանուցումը Դուք չեք ստանա։\nԵթե գրառումը սխալմամբ է արվել, խնդրում ենք չեղարկել գրանցված ընդունումը",
   "midnightTakenWarningDialogSeeHowToRevert": "Տեսեք, թե ինչպես չեղարկել հաբի ընդունման գրառումը",
-  "midnightTakenWarningDialogNeverShowAgain": "Այլևս երբեք չցուցադրել",
+  "midnightTakenWarningDialogNeverShowAgain": "Այլևս չցուցադրել",
   "pauseStartDateMustBeOnOrBefore": "Խնդրում ենք ընտրել դադարի մեկնարկի ամսաթիվ {date}-ը կամ ավելի վաղ",
   "addPausePeriod": "Ավելացնել ընդունման դադարային շրջան",
   "addedPausePeriod": "Ընդունման ընդմիջման շրջանը ավելացվել է",

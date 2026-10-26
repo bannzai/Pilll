@@ -556,7 +556,7 @@
   "midnightTakenWarningDialogTitle": "Venujte, prosím, pozornosť",
   "midnightTakenWarningDialogBody": "Pre {takenDate} bol vytvorený aj záznam o užití. Dnes, {takenDate}, vám upozornenie na {reminderTimes} nepríde.\nAk ide o omyl, môžete zaznamenané užitie zrušiť",
   "midnightTakenWarningDialogSeeHowToRevert": "Pozrite si, ako zrušiť záznam o užití tabletky",
-  "midnightTakenWarningDialogNeverShowAgain": "Túto správu už nezobrazovať",
+  "midnightTakenWarningDialogNeverShowAgain": "Už nezobrazovať",
   "pauseStartDateMustBeOnOrBefore": "Vyberte dátum začiatku prestávky {date} alebo skorší",
   "addPausePeriod": "Pridať obdobie prestávky v užívaní",
   "addedPausePeriod": "Obdobie prestávky v užívaní bolo pridané",

@@ -556,7 +556,7 @@
   "midnightTakenWarningDialogTitle": "Sylwch, os gwelwch yn dda",
   "midnightTakenWarningDialogBody": "Mae cofnod cymryd wedi’i wneud ar gyfer {takenDate} hefyd. Heddiw, {takenDate}, ni fyddwch yn cael yr hysbysiad am {reminderTimes}.\nOs oedd hyn yn gamgymeriad, gallwch ganslo’r cofnod cymryd",
   "midnightTakenWarningDialogSeeHowToRevert": "Gweld sut i ddadwneud cofnod cymryd pilsen",
-  "midnightTakenWarningDialogNeverShowAgain": "Peidiwch â dangos hwn eto",
+  "midnightTakenWarningDialogNeverShowAgain": "Peidio â dangos eto",
   "pauseStartDateMustBeOnOrBefore": "Dewiswch ddyddiad dechrau'r saib ar {date} neu cyn hynny",
   "addPausePeriod": "Ychwanegu cyfnod seibiant o gymryd",
   "addedPausePeriod": "Ychwanegwyd cyfnod saib rhag cymryd",
