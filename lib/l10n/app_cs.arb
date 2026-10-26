@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Podrobnosti dotazu",
   "inquiryContentPlaceholder": "Zadejte prosím podrobnosti svého dotazu",
-  "debugInfoLabel": "Ladicí informace (automaticky vyplněno)",
+  "debugInfoLabel": "Informace pro ladění (vyplněno automaticky)",
   "inquirySent": "Dotaz byl odeslán",
   "sendInquiry": "Odeslat",
   "invalidEmailFormat": "Zadejte platnou e-mailovou adresu",

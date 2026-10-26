@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "جزئیات پرسش شما",
   "inquiryContentPlaceholder": "لطفاً جزئیات پرسش خود را بنویسید",
-  "debugInfoLabel": "اطلاعات اشکال‌زدایی (تکمیل خودکار)",
+  "debugInfoLabel": "اطلاعات رفع اشکال (به‌طور خودکار تکمیل شده)",
   "inquirySent": "درخواست ارسال شد",
   "sendInquiry": "ارسال",
   "invalidEmailFormat": "لطفاً یک آدرس ایمیل معتبر وارد کنید",

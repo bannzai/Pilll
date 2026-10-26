@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Megkeresés részletei",
   "inquiryContentPlaceholder": "Írd le, miben segíthetünk",
-  "debugInfoLabel": "Debug információk (automatikusan kitöltve)",
+  "debugInfoLabel": "Hibakeresési adatok (automatikusan kitöltve)",
   "inquirySent": "Az üzenetet elküldtük",
   "sendInquiry": "Küldés",
   "invalidEmailFormat": "Kérjük, adjon meg érvényes e-mail címet",

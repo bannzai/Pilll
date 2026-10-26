@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Detail vo dinere Aafrag",
   "inquiryContentPlaceholder": "Schriib, um was es bi dinere Aafrag gaht",
-  "debugInfoLabel": "Debug-Informatione (automatisch usgfüllt)",
+  "debugInfoLabel": "Infos zum Fähler sueche (automatisch usgfüllt)",
   "inquirySent": "D'Afrag isch gschickt worde",
   "sendInquiry": "Absende",
   "invalidEmailFormat": "Bitte gänd Sie e gültigi E-Mail-Adräss ii",

@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Pojedinosti vašeg upita",
   "inquiryContentPlaceholder": "Molimo, unesite pojedinosti svojeg upita",
-  "debugInfoLabel": "Debug informacije (automatski ispunjeno)",
+  "debugInfoLabel": "Podaci za otklanjanje pogrešaka (automatski popunjeno)",
   "inquirySent": "Upit je poslan",
   "sendInquiry": "Pošalji",
   "invalidEmailFormat": "Molimo unesite valjanu adresu e-pošte",

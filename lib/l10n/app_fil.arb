@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Mga detalye ng inyong tanong",
   "inquiryContentPlaceholder": "Pakilagay po ang mga detalye ng inyong katanungan",
-  "debugInfoLabel": "Impormasyon para sa Debug (Awtomatikong Napunan)",
+  "debugInfoLabel": "Impormasyon para sa pag-aayos ng error (awtomatikong pinunan)",
   "inquirySent": "Naipadala na ang iyong inquiry",
   "sendInquiry": "Ipadala",
   "invalidEmailFormat": "Mangyaring magpasok ng wastong email address",

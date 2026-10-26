@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Manylion eich ymholiad",
   "inquiryContentPlaceholder": "Rhowch fanylion eich ymholiad",
-  "debugInfoLabel": "Gwybodaeth Ddadfygio (wedi'i llenwi'n awtomatig)",
+  "debugInfoLabel": "Gwybodaeth dadfygio (wedi'i llenwi'n awtomatig)",
   "inquirySent": "Mae eich ymholiad wedi'i anfon",
   "sendInquiry": "Anfon",
   "invalidEmailFormat": "Rhowch gyfeiriad e-bost dilys",

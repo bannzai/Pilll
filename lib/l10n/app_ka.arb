@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "თქვენი შეკითხვის დეტალები",
   "inquiryContentPlaceholder": "გთხოვთ, დაწეროთ თქვენი შეკითხვის დეტალები",
-  "debugInfoLabel": "დებაგის ინფორმაცია (ავტომატურად შევსებული)",
+  "debugInfoLabel": "შეცდომების გამართვის ინფორმაცია (ავტომატურად შევსებული)",
   "inquirySent": "მიმართვა გაიგზავნა",
   "sendInquiry": "გაგზავნა",
   "invalidEmailFormat": "გთხოვთ, შეიყვანოთ სწორი ელფოსტის მისამართი",

@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "ଆପଣଙ୍କ ପ୍ରଶ୍ନର ବିବରଣୀ",
   "inquiryContentPlaceholder": "ଦୟାକରି ଆପଣଙ୍କ ପ୍ରଶ୍ନର ବିବରଣୀ ଲେଖନ୍ତୁ",
-  "debugInfoLabel": "ଡିବଗ୍ ସୂଚନା (ସ୍ୱୟଂଚାଳିତ)",
+  "debugInfoLabel": "ତ୍ରୁଟି ଚିହ୍ନଟ ସୂଚନା (ସ୍ୱୟଂଚାଳିତ ଭାବେ ପୂରଣ ହୋଇଛି)",
   "inquirySent": "ଆପଣଙ୍କ ପଚାରିବା ପଠାଯାଇଛି",
   "sendInquiry": "ପଠାନ୍ତୁ",
   "invalidEmailFormat": "ଦୟାକରି ଏକ ବୈଧ ଇମେଲ ଠିକଣା ପ୍ରବିଷ୍ଟ କରନ୍ତୁ",

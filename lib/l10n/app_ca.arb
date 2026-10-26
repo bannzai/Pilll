@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Detalls de la consulta",
   "inquiryContentPlaceholder": "Escriu els detalls de la teva consulta",
-  "debugInfoLabel": "Informació de depuració (omplert automàticament)",
+  "debugInfoLabel": "Informació de depuració (emplenada automàticament)",
   "inquirySent": "S'ha enviat la consulta",
   "sendInquiry": "Enviar",
   "invalidEmailFormat": "Introduïu una adreça de correu electrònic vàlida",

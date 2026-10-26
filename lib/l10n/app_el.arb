@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Λεπτομέρειες του ερωτήματός σας",
   "inquiryContentPlaceholder": "Παρακαλούμε γράψτε τις λεπτομέρειες του ερωτήματός σας",
-  "debugInfoLabel": "Πληροφορίες αποσφαλμάτωσης (αυτόματη συμπλήρωση)",
+  "debugInfoLabel": "Πληροφορίες εντοπισμού σφαλμάτων (συμπληρώνονται αυτόματα)",
   "inquirySent": "Το αίτημά σας εστάλη",
   "sendInquiry": "Αποστολή",
   "invalidEmailFormat": "Παρακαλώ εισάγετε μια έγκυρη διεύθυνση email",

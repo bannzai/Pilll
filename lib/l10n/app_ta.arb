@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "உங்கள் கேள்வியின் விவரங்கள்",
   "inquiryContentPlaceholder": "உங்கள் கேள்வியின் விவரங்களை எழுதுங்கள்",
-  "debugInfoLabel": "பிழைத்திருத்த தகவல் (தானாக நிரப்பப்பட்டது)",
+  "debugInfoLabel": "பிழை கண்டறியும் தகவல் (தானாக நிரப்பப்பட்டது)",
   "inquirySent": "உங்கள் விசாரணை அனுப்பப்பட்டது",
   "sendInquiry": "அனுப்பு",
   "invalidEmailFormat": "செல்லுபடியாகும் மின்னஞ்சல் முகவரியை உள்ளிடவும்",

@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "פרטי הפנייה",
   "inquiryContentPlaceholder": "נא לכתוב את פרטי הפנייה",
-  "debugInfoLabel": "מידע דיבוג (מילוי אוטומטי)",
+  "debugInfoLabel": "מידע לאיתור תקלות (ממולא אוטומטית)",
   "inquirySent": "הפנייה נשלחה",
   "sendInquiry": "שלח",
   "invalidEmailFormat": "אנא הזן כתובת אימייל תקפה",

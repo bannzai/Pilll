@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "မေးမြန်းလိုသည့်အကြောင်းအရာ",
   "inquiryContentPlaceholder": "မေးမြန်းလိုသည့်အကြောင်းအရာကို ရေးပေးပါ",
-  "debugInfoLabel": "ဒီဘာ့ဂ်အချက်အလက် (အလိုအလျောက်ဖြည့်သွင်းထားသည်)",
+  "debugInfoLabel": "အမှားရှာဖွေရေး အချက်အလက် (အလိုအလျောက် ဖြည့်ထားသည်)",
   "inquirySent": "မေးမြန်းချက်ပေးပို့ပြီးပါပြီ",
   "sendInquiry": "ပို့မည်",
   "invalidEmailFormat": "မှန်ကန်သောအီးမေးလ်လိပ်စာကို ထည့်သွင်းပါ",

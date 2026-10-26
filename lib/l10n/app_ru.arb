@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Подробности обращения",
   "inquiryContentPlaceholder": "Пожалуйста, опишите ваш вопрос",
-  "debugInfoLabel": "Отладочная информация (автозаполнение)",
+  "debugInfoLabel": "Данные для отладки (заполняются автоматически)",
   "inquirySent": "Обращение отправлено",
   "sendInquiry": "Отправить",
   "invalidEmailFormat": "Введите корректный адрес электронной почты",

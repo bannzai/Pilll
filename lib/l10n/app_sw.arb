@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Maelezo ya swali lako",
   "inquiryContentPlaceholder": "Tafadhali andika maelezo ya swali lako",
-  "debugInfoLabel": "Taarifa za utatuzi (imejazwa kiotomatiki)",
+  "debugInfoLabel": "Taarifa za kutatua hitilafu (zimejazwa kiotomatiki)",
   "inquirySent": "Ujumbe wako umetumwa",
   "sendInquiry": "Tuma",
   "invalidEmailFormat": "Tafadhali weka anwani sahihi ya barua pepe",

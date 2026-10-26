@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "تفاصيل الاستفسار",
   "inquiryContentPlaceholder": "يرجى إدخال تفاصيل استفساركِ",
-  "debugInfoLabel": "معلومات التصحيح (ملء تلقائي)",
+  "debugInfoLabel": "معلومات تصحيح الأخطاء (تُملأ تلقائيًا)",
   "inquirySent": "تم إرسال استفسارك",
   "sendInquiry": "إرسال",
   "invalidEmailFormat": "يرجى إدخال عنوان بريد إلكتروني صالح",

@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Сұрауыңыздың мәліметтері",
   "inquiryContentPlaceholder": "Сұрағыңыздың мазмұнын жазыңыз",
-  "debugInfoLabel": "Жөндеу ақпараты (автотолтыру)",
+  "debugInfoLabel": "Қателерді түзету ақпараты (автоматты түрде толтырылған)",
   "inquirySent": "Сұрау жіберілді",
   "sendInquiry": "Жіберу",
   "invalidEmailFormat": "Дұрыс электрондық пошта мекенжайын енгізіңіз",

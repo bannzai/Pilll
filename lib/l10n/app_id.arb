@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Detail pertanyaan Anda",
   "inquiryContentPlaceholder": "Tulis detail pertanyaan Anda",
-  "debugInfoLabel": "Informasi Debug (Terisi Otomatis)",
+  "debugInfoLabel": "Informasi pemecahan masalah (terisi otomatis)",
   "inquirySent": "Pertanyaan telah dikirim",
   "sendInquiry": "Kirim",
   "invalidEmailFormat": "Masukkan alamat email yang valid",

@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Nánari upplýsingar um fyrirspurnina",
   "inquiryContentPlaceholder": "Skrifaðu hvað fyrirspurnin þín snýst um",
-  "debugInfoLabel": "Villuleitarupplýsingar (sjálfkrafa útfyllt)",
+  "debugInfoLabel": "Villuleitarupplýsingar (fyllt út sjálfkrafa)",
   "inquirySent": "Fyrirspurn send",
   "sendInquiry": "Senda",
   "invalidEmailFormat": "Vinsamlegast sláðu inn gilt netfang",

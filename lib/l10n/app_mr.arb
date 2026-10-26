@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "तुमच्या चौकशीचा तपशील",
   "inquiryContentPlaceholder": "कृपया तुमच्या चौकशीचा तपशील लिहा",
-  "debugInfoLabel": "डीबग माहिती (स्वयंचलित भरलेली)",
+  "debugInfoLabel": "त्रुटी शोधण्याची माहिती (आपोआप भरलेली)",
   "inquirySent": "चौकशी पाठवली",
   "sendInquiry": "पाठवा",
   "invalidEmailFormat": "कृपया वैध ईमेल पत्ता प्रविष्ट करा",

@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "તમારી પૂછપરછની વિગતો",
   "inquiryContentPlaceholder": "કૃપા કરીને તમારી પૂછપરછની વિગતો લખો",
-  "debugInfoLabel": "ડિબગ માહિતી (આપોઆપ ભરાયેલ)",
+  "debugInfoLabel": "ખામી શોધવાની માહિતી (આપમેળે ભરેલી)",
   "inquirySent": "પૂછપરછ મોકલી દીધી",
   "sendInquiry": "મોકલો",
   "invalidEmailFormat": "કૃપા કરીને માન્ય ઈમેઇલ સરનામું દાખલ કરો",

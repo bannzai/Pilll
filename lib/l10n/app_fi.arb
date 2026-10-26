@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Yhteydenoton tiedot",
   "inquiryContentPlaceholder": "Kirjoita yhteydenottosi sisältö",
-  "debugInfoLabel": "Virheenkorjaustiedot (täytetty automaattisesti)",
+  "debugInfoLabel": "Virheenjäljitystiedot (täytetään automaattisesti)",
   "inquirySent": "Yhteydenotto lähetetty",
   "sendInquiry": "Lähetä",
   "invalidEmailFormat": "Syötä kelvollinen sähköpostiosoite",

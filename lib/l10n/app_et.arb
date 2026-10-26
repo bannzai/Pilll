@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Päringu üksikasjad",
   "inquiryContentPlaceholder": "Kirjuta oma päringu üksikasjad",
-  "debugInfoLabel": "Silumisinfo (automaatselt täidetud)",
+  "debugInfoLabel": "Silumisteave (täidetakse automaatselt)",
   "inquirySent": "Päring on saadetud",
   "sendInquiry": "Saada",
   "invalidEmailFormat": "Palun sisestage kehtiv e-posti aadress",

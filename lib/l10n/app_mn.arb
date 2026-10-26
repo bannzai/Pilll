@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Таны асуултын дэлгэрэнгүй",
   "inquiryContentPlaceholder": "Асуултынхаа дэлгэрэнгүйг бичнэ үү",
-  "debugInfoLabel": "Дебаг мэдээлэл (автоматаар бөглөгдсөн)",
+  "debugInfoLabel": "Алдаа оношлох мэдээлэл (автоматаар бөглөгдөнө)",
   "inquirySent": "Лавлагаа илгээгдлээ",
   "sendInquiry": "Илгээх",
   "invalidEmailFormat": "Зөв имэйл хаяг оруулна уу",

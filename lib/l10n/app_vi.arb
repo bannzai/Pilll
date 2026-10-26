@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Nội dung liên hệ",
   "inquiryContentPlaceholder": "Vui lòng nhập nội dung cần liên hệ",
-  "debugInfoLabel": "Thông tin debug (tự động điền)",
+  "debugInfoLabel": "Thông tin gỡ lỗi (được tự động điền)",
   "inquirySent": "Đã gửi yêu cầu hỗ trợ",
   "sendInquiry": "Gửi",
   "invalidEmailFormat": "Vui lòng nhập địa chỉ email hợp lệ",

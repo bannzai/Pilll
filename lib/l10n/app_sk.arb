@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Podrobnosti otázky",
   "inquiryContentPlaceholder": "Prosím, opíšte svoju otázku",
-  "debugInfoLabel": "Ladiace informácie (automaticky vyplnené)",
+  "debugInfoLabel": "Informácie na ladenie (vyplnené automaticky)",
   "inquirySent": "Žiadosť bola odoslaná",
   "sendInquiry": "Odoslať",
   "invalidEmailFormat": "Zadajte platnú e-mailovú adresu",

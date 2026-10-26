@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Podrobnosti vprašanja",
   "inquiryContentPlaceholder": "Prosimo, opišite svoje vprašanje",
-  "debugInfoLabel": "Informacije za razhroščevanje (samodejno izpolnjeno)",
+  "debugInfoLabel": "Podatki za odpravljanje napak (samodejno izpolnjeno)",
   "inquirySent": "Vaša poizvedba je bila poslana",
   "sendInquiry": "Pošlji",
   "invalidEmailFormat": "Vnesite veljaven e-poštni naslov",

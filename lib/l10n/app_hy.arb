@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Ձեր հարցման մանրամասները",
   "inquiryContentPlaceholder": "Խնդրում ենք գրեք Ձեր հարցման մանրամասները",
-  "debugInfoLabel": "Դիբագի տեղեկություններ (ավտոմատ լրացված)",
+  "debugInfoLabel": "Սխալների հայտնաբերման տվյալներ (լրացվում են ինքնաբար)",
   "inquirySent": "Հարցումը ուղարկվել է",
   "sendInquiry": "Ուղարկել",
   "invalidEmailFormat": "Խնդրում ենք մուտքագրել վավեր էլփոստի հասցե",

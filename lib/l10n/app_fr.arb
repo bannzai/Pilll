@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Détails de votre demande",
   "inquiryContentPlaceholder": "Décrivez votre demande",
-  "debugInfoLabel": "Informations de débogage (remplies automatiquement)",
+  "debugInfoLabel": "Informations de débogage (renseignées automatiquement)",
   "inquirySent": "Votre demande a été envoyée",
   "sendInquiry": "Envoyer",
   "invalidEmailFormat": "S'il vous plaît, mettez une adresse email valide",

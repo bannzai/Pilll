@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Detaljer om din henvendelse",
   "inquiryContentPlaceholder": "Skriv, hvad din henvendelse drejer sig om",
-  "debugInfoLabel": "Debuginformation (automatisk udfyldt)",
+  "debugInfoLabel": "Fejlfindingsoplysninger (udfyldes automatisk)",
   "inquirySent": "Din henvendelse er sendt",
   "sendInquiry": "Send",
   "invalidEmailFormat": "Indtast en gyldig e-mailadresse",

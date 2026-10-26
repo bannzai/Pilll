@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Details van je vraag",
   "inquiryContentPlaceholder": "Beschrijf je vraag",
-  "debugInfoLabel": "Debug-informatie (automatisch ingevuld)",
+  "debugInfoLabel": "Foutopsporingsgegevens (automatisch ingevuld)",
   "inquirySent": "Uw vraag is verzonden",
   "sendInquiry": "Versturen",
   "invalidEmailFormat": "Voer een geldig e-mailadres in",

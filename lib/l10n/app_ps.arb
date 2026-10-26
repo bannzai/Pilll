@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "ستاسو د پوښتنې جزئیات",
   "inquiryContentPlaceholder": "مهرباني وکړئ د خپلې پوښتنې جزئیات ولیکئ",
-  "debugInfoLabel": "د ډیبګ معلومات (په اتوماتیک ډول ډکېدل)",
+  "debugInfoLabel": "د تېروتنو د موندلو معلومات (په خپله ډک شوي)",
   "inquirySent": "ستاسو پوښتنه واستول شوه",
   "sendInquiry": "لېږل",
   "invalidEmailFormat": "مهرباني وکړئ معتبر بریښنالیک پته دننه کړئ",

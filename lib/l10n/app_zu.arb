@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Imininingwane yombuzo wakho",
   "inquiryContentPlaceholder": "Sicela ubhale imininingwane yombuzo wakho",
-  "debugInfoLabel": "Ulwazi lwedibhagi (lugcwaliswe ngokuzenzakalelayo)",
+  "debugInfoLabel": "Imininingwane yokuthola amaphutha (igcwaliswa ngokuzenzakalelayo)",
   "inquirySent": "Umbuzo wakho uthunyelwe",
   "sendInquiry": "Thumela",
   "invalidEmailFormat": "Sicela ufake ikheli le-imeyili elivumelekile",

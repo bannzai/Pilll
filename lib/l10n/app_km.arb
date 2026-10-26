@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "ព័ត៌មានលម្អិតនៃសំណួរ",
   "inquiryContentPlaceholder": "សូមសរសេរព័ត៌មានលម្អិតអំពីសំណួររបស់អ្នក",
-  "debugInfoLabel": "ព័ត៌មានបច្ចេកទេស (បំពេញស្វ័យប្រវត្តិ)",
+  "debugInfoLabel": "ព័ត៌មានសម្រាប់ស្វែងរកកំហុស (បំពេញដោយស្វ័យប្រវត្តិ)",
   "inquirySent": "បានផ្ញើសំណើរបស់អ្នកហើយ",
   "sendInquiry": "ផ្ញើ",
   "invalidEmailFormat": "សូមបញ្ចូលអាសយដ្ឋានអ៊ីមែលត្រឹមត្រូវ",

@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "የጥያቄዎ ዝርዝር",
   "inquiryContentPlaceholder": "እባክዎ የጥያቄዎን ዝርዝር ያስገቡ",
-  "debugInfoLabel": "የማረም መረጃ (በራስ-ሰር የተሞላ)",
+  "debugInfoLabel": "የስህተት ማረሚያ መረጃ (በራስ-ሰር የተሞላ)",
   "inquirySent": "ጥያቄዎ ተልኳል",
   "sendInquiry": "ላክ",
   "invalidEmailFormat": "ትክክለኛ የኢሜይል አድራሻ ያስገቡ",

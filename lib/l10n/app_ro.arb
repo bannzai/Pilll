@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Detaliile solicitării",
   "inquiryContentPlaceholder": "Scrie detaliile întrebării tale",
-  "debugInfoLabel": "Informații de depanare (completare automată)",
+  "debugInfoLabel": "Informații pentru depanare (completate automat)",
   "inquirySent": "Solicitarea a fost trimisă",
   "sendInquiry": "Trimite",
   "invalidEmailFormat": "Vă rugăm să introduceți o adresă de e-mail validă",

@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "അന്വേഷണത്തിന്റെ വിശദാംശങ്ങൾ",
   "inquiryContentPlaceholder": "ദയവായി നിങ്ങളുടെ അന്വേഷണത്തിന്റെ വിശദാംശങ്ങൾ എഴുതൂ",
-  "debugInfoLabel": "ഡീബഗ് വിവരങ്ങൾ (സ്വയമേവ പൂരിപ്പിച്ചത്)",
+  "debugInfoLabel": "പിശക് കണ്ടെത്താനുള്ള വിവരങ്ങൾ (സ്വയമേവ പൂരിപ്പിച്ചത്)",
   "inquirySent": "അന്വേഷണം സമർപ്പിച്ചു",
   "sendInquiry": "അയയ്ക്കുക",
   "invalidEmailFormat": "ദയവായി സാധുവായ ഇമെയിൽ വിലാസം നൽകുക",

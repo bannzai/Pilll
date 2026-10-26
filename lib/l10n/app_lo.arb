@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "ລາຍລະອຽດຄຳຖາມ",
   "inquiryContentPlaceholder": "ກະລຸນາຂຽນລາຍລະອຽດຄຳຖາມຂອງທ່ານ",
-  "debugInfoLabel": "ຂໍ້ມູນດີບັກ (ປ້ອນອັດຕະໂນມັດ)",
+  "debugInfoLabel": "ຂໍ້ມູນສຳລັບກວດຫາຂໍ້ຜິດພາດ (ຕື່ມອັດຕະໂນມັດ)",
   "inquirySent": "ສົ່ງຄຳຖາມສຳເລັດແລ້ວ",
   "sendInquiry": "ສົ່ງ",
   "invalidEmailFormat": "ກະລຸນາໃສ່ທີ່ຢູ່ອີເມວທີ່ຖືກຕ້ອງ",

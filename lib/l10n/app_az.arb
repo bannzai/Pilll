@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Müraciətinizin təfərrüatları",
   "inquiryContentPlaceholder": "Zəhmət olmasa, müraciətinizin məzmununu yazın",
-  "debugInfoLabel": "Debug məlumatı (avtomatik doldurulmuş)",
+  "debugInfoLabel": "Xəta ayıklama məlumatları (avtomatik doldurulur)",
   "inquirySent": "Müraciət göndərildi",
   "sendInquiry": "Göndər",
   "invalidEmailFormat": "Düzgün e-poçt ünvanı daxil edin",

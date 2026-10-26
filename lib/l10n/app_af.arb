@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Besonderhede van jou navraag",
   "inquiryContentPlaceholder": "Voer asseblief jou navraag in",
-  "debugInfoLabel": "Ontfoutingsinligting (Outomaties ingevul)",
+  "debugInfoLabel": "Ontfoutinligting (outomaties ingevul)",
   "inquirySent": "U navraag is gestuur",
   "sendInquiry": "Stuur",
   "invalidEmailFormat": "Voer 'n geldige e-posadres in",

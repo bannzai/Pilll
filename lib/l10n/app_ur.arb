@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "آپ کی پوچھ گچھ کی تفصیلات",
   "inquiryContentPlaceholder": "براہِ کرم اپنے سوال کی تفصیل لکھیں",
-  "debugInfoLabel": "ڈیبگ کی معلومات (خودکار طور پر بھری گئی)",
+  "debugInfoLabel": "خرابی کی جانچ کی معلومات (خودکار طور پر بھری گئی)",
   "inquirySent": "استفسار بھیج دی گئی",
   "sendInquiry": "بھیجیں",
   "invalidEmailFormat": "براہ کرم ایک درست ای میل ایڈریس درج کریں",

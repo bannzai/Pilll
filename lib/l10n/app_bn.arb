@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "আপনার জিজ্ঞাসার বিবরণ",
   "inquiryContentPlaceholder": "অনুগ্রহ করে আপনার প্রশ্নের বিস্তারিত লিখুন",
-  "debugInfoLabel": "ডিবাগ তথ্য (স্বয়ংক্রিয়ভাবে পূরণ)",
+  "debugInfoLabel": "সমস্যা সমাধানের তথ্য (স্বয়ংক্রিয়ভাবে পূরণ করা হয়েছে)",
   "inquirySent": "অনুসন্ধান পাঠানো হয়েছে",
   "sendInquiry": "পাঠান",
   "invalidEmailFormat": "অনুগ্রহ করে একটি বৈধ ইমেল ঠিকানা প্রবেশ করান",

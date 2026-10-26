@@ -442,7 +442,7 @@
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Detajet e pyetjes suaj",
   "inquiryContentPlaceholder": "Ju lutemi, shkruani hollësitë e pyetjes suaj",
-  "debugInfoLabel": "Informacion depurimi (plotësohet automatikisht)",
+  "debugInfoLabel": "Informacion për zgjidhjen e gabimeve (plotësohet automatikisht)",
   "inquirySent": "Pyetja është dërguar",
   "sendInquiry": "Dërgo",
   "invalidEmailFormat": "Ju lutemi vendosni një adresë emaili të vlefshme",
