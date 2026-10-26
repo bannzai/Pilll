@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Amb la subscripció Premium pots continuar fent servir totes les funcions",
   "countdownForDiscountPriceDeadline": "Compra en els pròxims {countdown} amb un {offPercent}% de descompte",
   "pillReminderChanged": "Els avisos per prendre la píndola s'han configurat a {value}",
-  "silentModeNotificationDescription": "Fins i tot amb el mode de concentració activat o el dispositiu silenciat, les notificacions es mostraran a la pantalla de bloqueig i se'n reproduirà el so",
+  "silentModeNotificationDescription": "Encara que el mode de concentració estigui activat o el dispositiu estigui silenciat, les notificacions apareixen a la pantalla de bloqueig i sonen.",
   "enableNotificationInSilentMode": "Notificar en mode silenciós",
   "enableNotificationInSilentModeSetting": "Notificacions en mode silenciós",
   "criticalAlertVolume": "Volum",

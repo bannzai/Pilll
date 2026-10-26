@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Премиум жазылуусу менен бардык мүмкүнчүлүктөрдү колдонууну уланта аласыз",
   "countdownForDiscountPriceDeadline": "{countdown} ичинде сатып алып, {offPercent}% арзандатуу алыңыз",
   "pillReminderChanged": "Таблетка ичүү эскертмелери {value} абалына коюлду",
-  "silentModeNotificationDescription": "Концентрация режими күйгүзүлгөндө же түзмөк үнсүз болгондо дагы, билдирүүлөр кулпуланган экранда көрсөтүлөт жана үн ойнотулат",
+  "silentModeNotificationDescription": "Көңүл топтоо режими күйүп турса же түзмөгүңүз үнсүз режимде болсо да, эскертмелер кулпу экранында көрсөтүлүп, үн чыгат.",
   "enableNotificationInSilentMode": "Үнсүз режимде да эскертүү",
   "enableNotificationInSilentModeSetting": "Үнсүз режимде да билдирүү жөндөөсү",
   "criticalAlertVolume": "үн көлөмү",

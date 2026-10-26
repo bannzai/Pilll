@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Z subskrypcją premium możesz nadal korzystać ze wszystkich funkcji",
   "countdownForDiscountPriceDeadline": "Kup w ciągu {countdown} i skorzystaj z {offPercent}% zniżki",
   "pillReminderChanged": "Przypomnienia o przyjęciu tabletki ustawiono na {value}",
-  "silentModeNotificationDescription": "Powiadomienia będą wyświetlane na ekranie blokady i będzie odtwarzany dźwięk, nawet gdy tryb nie przeszkadzać jest włączony lub urządzenie jest wyciszone",
+  "silentModeNotificationDescription": "Nawet gdy tryb skupienia jest włączony lub urządzenie wyciszone, powiadomienia pojawiają się na ekranie blokady i odtwarzają dźwięk.",
   "enableNotificationInSilentMode": "Powiadomienia w trybie cichym",
   "enableNotificationInSilentModeSetting": "Powiadomienia w trybie cichym",
   "criticalAlertVolume": "Głośność",

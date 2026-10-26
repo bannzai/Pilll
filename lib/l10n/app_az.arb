@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Premium abunəliyi ilə bütün funksiyalardan istifadə etməyə davam edə bilərsiniz",
   "countdownForDiscountPriceDeadline": "{countdown} ərzində alın, {offPercent}% endirim qazanın",
   "pillReminderChanged": "Həb qəbulu bildirişləri {value} olaraq təyin edildi",
-  "silentModeNotificationDescription": "Fokus rejimi aktiv olduqda və ya cihaz səssiz rejimində olduqda belə, bildirişlər kilidli ekranda görünür və səs çalınır",
+  "silentModeNotificationDescription": "Fokus rejimi aktiv olduqda və ya cihazınızın səsi söndürüldükdə belə, bildirişlər kilid ekranında görünür və səs səslənir.",
   "enableNotificationInSilentMode": "Səssiz rejimdə də bildirmək",
   "enableNotificationInSilentModeSetting": "Səssiz rejimdə də bildiriş ayarları",
   "criticalAlertVolume": "Səs həcmi",

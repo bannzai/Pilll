@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Met ’n Premium-intekening kan jy aanhou om al die funksies te gebruik",
   "countdownForDiscountPriceDeadline": "Koop binne {countdown} en kry {offPercent}% afslag",
   "pillReminderChanged": "Pilherinnerings is op {value} gestel",
-  "silentModeNotificationDescription": "Selfs wanneer fokus modus aan is of die toestel stil is, sal kennisgewings op die slotskerm vertoon word en klanke sal gespeel word",
+  "silentModeNotificationDescription": "Selfs wanneer fokusmodus aan is of jou toestel stil is, verskyn kennisgewings op die sluitskerm en speel 'n klank.",
   "enableNotificationInSilentMode": "Kennisgewing selfs in stil modus",
   "enableNotificationInSilentModeSetting": "Kennisgewings in stille modus",
   "criticalAlertVolume": "Volume",

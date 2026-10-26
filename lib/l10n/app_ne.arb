@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "प्रिमियम सदस्यतासँगै तपाईं सबै सुविधाहरू प्रयोग गरिरहन सक्नुहुन्छ",
   "countdownForDiscountPriceDeadline": "{countdown} भित्र खरिद गर्दा {offPercent}% छुट पाउनुहोस्",
   "pillReminderChanged": "चक्की खाने सम्झाउने सूचना {value} मा सेट गरिएको छ",
-  "silentModeNotificationDescription": "फोकस मोड सक्रिय भएको वा डिभाइस मौन मोडमा भएको बेलामा पनि, सूचनाहरू लक स्क्रिनमा देखाइनेछ र आवाज बज्नेछ",
+  "silentModeNotificationDescription": "फोकस मोड चालु हुँदा वा तपाईंको उपकरण साइलेन्टमा हुँदा पनि सूचनाहरू लक स्क्रिनमा देखिन्छन् र आवाज बज्छ।",
   "enableNotificationInSilentMode": "मौन मोडमा पनि सूचना दिनुहोस्",
   "enableNotificationInSilentModeSetting": "साइलेन्ट मोडमा सूचना सेटिङ",
   "criticalAlertVolume": "भोल्युम",

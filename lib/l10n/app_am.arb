@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "ለፕሪሚየም በመመዝገብ ሁሉንም ባህሪያት መጠቀምዎን መቀጠል ይችላሉ",
   "countdownForDiscountPriceDeadline": "በ{countdown} ውስጥ ሲገዙ {offPercent}% ቅናሽ ያገኛሉ",
   "pillReminderChanged": "የክኒን ማስታወሻ ወደ {value} ተቀይሯል",
-  "silentModeNotificationDescription": "ትኩረት ሁነታ ሲበራ ወይም መሣሪያው ፀጥተኛ ሁነታ ላይ ሲሆን እንኳን፣ ማሳወቂያዎች በተቆለፈው ስክሪን ላይ ይታያሉ እና ድምፅ ይደመፃል።",
+  "silentModeNotificationDescription": "የትኩረት ሁኔታ በርቶ ወይም መሣሪያዎ ድምፅ አልባ ሆኖ ቢሆንም፣ ማሳወቂያዎች በመቆለፊያ ማያ ገጹ ላይ ይታያሉ እና ድምፅ ይሰማል።",
   "enableNotificationInSilentMode": "ፀጥታ ሁኔታ ባለበትም አሳውቅ",
   "enableNotificationInSilentModeSetting": "በጸጥታ ሁኔታም ማሳወቂያ ቅንብር",
   "criticalAlertVolume": "የድምፅ መጠን",

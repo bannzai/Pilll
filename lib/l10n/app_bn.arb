@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "প্রিমিয়াম সাবস্ক্রিপশন নিলে আপনি সব সুবিধা ব্যবহার করতে পারবেন",
   "countdownForDiscountPriceDeadline": "{countdown}-এর মধ্যে কিনলে {offPercent}% ছাড় পাবেন",
   "pillReminderChanged": "পিল খাওয়ার বিজ্ঞপ্তি {value} করা হয়েছে",
-  "silentModeNotificationDescription": "ফোকাস মোড অন বা ডিভাইস নীরব থাকলেও, বিজ্ঞপ্তি লক স্ক্রিনে প্রদর্শিত হবে এবং শব্দ চালানো হবে",
+  "silentModeNotificationDescription": "ফোকাস মোড চালু থাকলেও বা আপনার ডিভাইস নীরব থাকলেও, বিজ্ঞপ্তি লক স্ক্রিনে দেখানো হবে এবং শব্দ বাজবে।",
   "enableNotificationInSilentMode": "সাইলেন্ট মোডেও নোটিফিকেশন",
   "enableNotificationInSilentModeSetting": "নীরব মোডেও বিজ্ঞপ্তি সেটিং",
   "criticalAlertVolume": "ভলিউম",

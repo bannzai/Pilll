@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "պրեմիում բաժանորդագրությամբ Դուք կարող եք շարունակել օգտվել բոլոր հնարավորություններից",
   "countdownForDiscountPriceDeadline": "Գնեք {countdown} ընթացքում և ստացեք {offPercent}% զեղչ",
   "pillReminderChanged": "Հաբի ընդունման ծանուցումները կարգավորվել են որպես {value}",
-  "silentModeNotificationDescription": "Կենտրոնացման ռեժիմի միացման կամ սարքի լռության դեպքում էլ ծանուցումները կցուցադրվեն կողպված էկրանին և ձայնը կնվագարկվի",
+  "silentModeNotificationDescription": "Նույնիսկ երբ կենտրոնացման ռեժիմը միացված է կամ Ձեր սարքի ձայնն անջատված է, ծանուցումները ցուցադրվում են կողպէկրանին, և հնչում է ձայնային ազդանշան։",
   "enableNotificationInSilentMode": "Ծանուցել լուռ ռեժիմում էլ",
   "enableNotificationInSilentModeSetting": "Լուռ ռեժիմում ծանուցումների կարգավորում",
   "criticalAlertVolume": "ծավալ",

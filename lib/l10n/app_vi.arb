@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Đăng ký Premium để tiếp tục sử dụng tất cả tính năng",
   "countdownForDiscountPriceDeadline": "Mua trong vòng {countdown} để được giảm {offPercent}%",
   "pillReminderChanged": "Đã đặt lời nhắc uống thuốc thành {value}",
-  "silentModeNotificationDescription": "Thông báo vẫn sẽ hiển thị trên màn hình khóa và phát âm thanh ngay cả khi Chế độ Tập trung đang bật hoặc thiết bị đang ở chế độ im lặng",
+  "silentModeNotificationDescription": "Ngay cả khi chế độ Tập trung đang bật hoặc thiết bị ở chế độ im lặng, thông báo vẫn hiển thị trên màn hình khóa và phát âm thanh.",
   "enableNotificationInSilentMode": "Thông báo ngay cả khi ở chế độ im lặng",
   "enableNotificationInSilentModeSetting": "Thông báo trong chế độ im lặng",
   "criticalAlertVolume": "Âm lượng",

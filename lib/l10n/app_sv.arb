@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Med en premiumprenumeration kan du fortsätta använda alla funktioner",
   "countdownForDiscountPriceDeadline": "Köp inom {countdown} och få {offPercent}% rabatt",
   "pillReminderChanged": "Påminnelser om att ta p-pillret har ställts in på {value}",
-  "silentModeNotificationDescription": "Aviseringar visas på låsskärmen och ljud spelas upp även när fokusläget är PÅ eller enheten är på tyst",
+  "silentModeNotificationDescription": "Även när fokusläget är på eller enheten är ljudlös visas notiser på låsskärmen och ett ljud spelas upp.",
   "enableNotificationInSilentMode": "Meddela även i tyst läge",
   "enableNotificationInSilentModeSetting": "Aviseringar i tyst läge",
   "criticalAlertVolume": "Volym",

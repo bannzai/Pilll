@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Premium harpidetzarekin, funtzio guztiak erabiltzen jarrai dezakezu",
   "countdownForDiscountPriceDeadline": "Erosi {countdown} barru, % {offPercent}eko deskontuarekin",
   "pillReminderChanged": "Pilula hartzeko jakinarazpenak {value} gisa ezarri dira",
-  "silentModeNotificationDescription": "Kontzentrazio modua aktibatuta dagoenean edo gailua isilik dagoenean ere, jakinarazpenak pantaila blokeatuan agertuko dira eta soinua erreproduzituko da",
+  "silentModeNotificationDescription": "Kontzentrazio modua aktibatuta egon edo gailua isilduta egon arren, jakinarazpenak blokeo-pantailan agertuko dira eta soinua entzungo da.",
   "enableNotificationInSilentMode": "Modu isilean ere jakinarazi",
   "enableNotificationInSilentModeSetting": "Modu isilean ere jakinarazpenak",
   "criticalAlertVolume": "Bolumena",

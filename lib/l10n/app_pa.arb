@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "ਪ੍ਰੀਮੀਅਮ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਨਾਲ ਤੁਸੀਂ ਸਾਰੀਆਂ ਸੁਵਿਧਾਵਾਂ ਵਰਤਣਾ ਜਾਰੀ ਰੱਖ ਸਕਦੇ ਹੋ",
   "countdownForDiscountPriceDeadline": "{countdown} ਦੇ ਅੰਦਰ ਖਰੀਦਣ 'ਤੇ {offPercent}% ਛੋਟ ਪਾਓ",
   "pillReminderChanged": "ਗੋਲੀ ਲੈਣ ਦੀਆਂ ਸੂਚਨਾਵਾਂ {value} 'ਤੇ ਸੈੱਟ ਕੀਤੀਆਂ ਗਈਆਂ ਹਨ",
-  "silentModeNotificationDescription": "ਫੋਕਸ ਮੋਡ ਚਾਲੂ ਹੋਣ 'ਤੇ ਜਾਂ ਡਿਵਾਈਸ ਸਾਈਲੈਂਟ ਹੋਣ 'ਤੇ ਵੀ, ਨੋਟੀਫਿਕੇਸ਼ਨ ਲਾਕ ਸਕਰੀਨ 'ਤੇ ਦਿਖਾਈ ਜਾਵੇਗੀ ਅਤੇ ਆਵਾਜ਼ ਚੱਲੇਗੀ",
+  "silentModeNotificationDescription": "ਫੋਕਸ ਮੋਡ ਚਾਲੂ ਹੋਣ ਜਾਂ ਤੁਹਾਡੀ ਡਿਵਾਈਸ ਸਾਈਲੈਂਟ ਹੋਣ ’ਤੇ ਵੀ ਸੂਚਨਾਵਾਂ ਲੌਕ ਸਕ੍ਰੀਨ ’ਤੇ ਦਿਖਾਈ ਦੇਣਗੀਆਂ ਅਤੇ ਆਵਾਜ਼ ਵੱਜੇਗੀ।",
   "enableNotificationInSilentMode": "ਸਾਈਲੈਂਟ ਮੋਡ ਵਿੱਚ ਵੀ ਸੂਚਨਾ ਦਿਓ",
   "enableNotificationInSilentModeSetting": "ਸਾਈਲੈਂਟ ਮੋਡ ਵਿੱਚ ਵੀ ਨੋਟੀਫਿਕੇਸ਼ਨ ਸੈਟਿੰਗ",
   "criticalAlertVolume": "آواز",

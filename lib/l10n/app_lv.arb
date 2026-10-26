@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Ar Premium abonementu varat turpināt izmantot visas funkcijas",
   "countdownForDiscountPriceDeadline": "Iegādājieties {countdown} laikā un saņemiet {offPercent}% atlaidi",
   "pillReminderChanged": "Atgādinājumi par tabletes lietošanu iestatīti uz {value}",
-  "silentModeNotificationDescription": "Pat kad ir ieslēgts fokusa režīms vai ierīce ir klusuma režīmā, paziņojumi tiks rādīti bloķēšanas ekrānā un tiks atskaņota skaņa",
+  "silentModeNotificationDescription": "Pat ja ir ieslēgts koncentrēšanās režīms vai jūsu ierīcei ir izslēgta skaņa, paziņojumi tiek rādīti bloķēšanas ekrānā un atskan skaņa.",
   "enableNotificationInSilentMode": "Paziņot klusajā režīmā",
   "enableNotificationInSilentModeSetting": "Paziņojumi klusajā režīmā",
   "criticalAlertVolume": "Skaļums",

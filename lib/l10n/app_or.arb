@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "ପ୍ରିମିୟମ ସଦସ୍ୟତା ସହିତ ଆପଣ ସମସ୍ତ ସୁବିଧା ବ୍ୟବହାର ଜାରି ରଖିପାରିବେ",
   "countdownForDiscountPriceDeadline": "{countdown} ମଧ୍ୟରେ କିଣିଲେ {offPercent}% ରିହାତି ପାଆନ୍ତୁ",
   "pillReminderChanged": "ବଟିକା ଖାଇବା ସୂଚନା {value} ଭାବେ ସେଟ୍ ହୋଇଛି",
-  "silentModeNotificationDescription": "ଫୋକସ ମୋଡ଼ ଚାଲୁ ଥିଲେ କିମ୍ବା ଡିଭାଇସ ନୀରବ ଥିଲେ ମଧ୍ୟ, ବିଜ୍ଞପ୍ତି ଲକ ସ୍କ୍ରିନରେ ଦେଖାଯିବ ଏବଂ ସାଉଣ୍ଡ ବାଜିବ",
+  "silentModeNotificationDescription": "ଫୋକସ୍ ମୋଡ୍ ଚାଲୁ ଥିଲେ କିମ୍ବା ଆପଣଙ୍କ ଡିଭାଇସ୍ ନିରବ ଥିଲେ ମଧ୍ୟ, ବିଜ୍ଞପ୍ତିଗୁଡ଼ିକ ଲକ୍ ସ୍କ୍ରିନରେ ଦେଖାଯିବ ଏବଂ ଶବ୍ଦ ବାଜିବ।",
   "enableNotificationInSilentMode": "ସାଇଲେଣ୍ଟ ମୋଡ଼ରେ ମଧ୍ୟ ବିଜ୍ଞପ୍ତି",
   "enableNotificationInSilentModeSetting": "ନିରବ ମୋଡ୍‌ରେ ମଧ୍ୟ ବିଜ୍ଞପ୍ତି ସେଟିଂ",
   "criticalAlertVolume": "ଭଲ୍ୟୁମ୍",

@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "प्रीमियम सदस्यत्वासह तुम्ही सर्व सुविधा वापरणे सुरू ठेवू शकता",
   "countdownForDiscountPriceDeadline": "{countdown}मध्ये खरेदी केल्यास {offPercent}% सवलत मिळेल",
   "pillReminderChanged": "गोळी घेण्याच्या सूचना {value} वर सेट केल्या आहेत",
-  "silentModeNotificationDescription": "फोकस मोड चालू असताना किंवा डिव्हाइस साइलेंट असताना देखील, नोटिफिकेशन लॉक स्क्रीनवर दिसतील आणि आवाज वाजेल",
+  "silentModeNotificationDescription": "फोकस मोड सुरू असला किंवा तुमचे डिव्हाइस सायलेंटवर असले तरी सूचना लॉक स्क्रीनवर दिसतील आणि आवाज वाजेल.",
   "enableNotificationInSilentMode": "साइलेंट मोडमध्येही सूचना द्या",
   "enableNotificationInSilentModeSetting": "साइलेंट मोडमध्ये सूचना सेटिंग",
   "criticalAlertVolume": "आवाजाचे प्रमाण",

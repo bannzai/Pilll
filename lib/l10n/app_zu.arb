@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Ngokubhalisela i-Premium, ungaqhubeka nokusebenzisa zonke izici",
   "countdownForDiscountPriceDeadline": "Uma uthenga phakathi kuka-{countdown}, uzothola isaphulelo sika-{offPercent}%",
   "pillReminderChanged": "Izikhumbuzi zokuphuza iphilisi zisethwe ku-{value}",
-  "silentModeNotificationDescription": "Noma imodi yokugxila ivuliwe noma idivayisi ithulile, izaziso zizoboniswa kusikrini esivaliwe futhi umsindo uzodlalwa",
+  "silentModeNotificationDescription": "Ngisho noma imodi yokugxila ivuliwe noma idivayisi yakho ithulisiwe, izaziso zizovela esikrinini sokukhiya futhi umsindo uzodlala.",
   "enableNotificationInSilentMode": "Azisa nasemodi ethulile",
   "enableNotificationInSilentModeSetting": "Vumela izaziso nakuma-silent mode",
   "criticalAlertVolume": "Ivolumu",

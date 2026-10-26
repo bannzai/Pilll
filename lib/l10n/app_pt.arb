@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Com uma assinatura Premium, você pode continuar usando todos os recursos",
   "countdownForDiscountPriceDeadline": "Compre em até {countdown} e ganhe {offPercent}% de desconto",
   "pillReminderChanged": "Os lembretes para tomar a pílula foram definidos como {value}",
-  "silentModeNotificationDescription": "As notificações serão exibidas na tela de bloqueio e o som será reproduzido mesmo com o modo de concentração ativado ou dispositivo no modo silencioso",
+  "silentModeNotificationDescription": "Mesmo com o modo Foco ativado ou o dispositivo no silencioso, as notificações aparecem na tela bloqueada e emitem um som.",
   "enableNotificationInSilentMode": "Notificar mesmo em modo silencioso",
   "enableNotificationInSilentModeSetting": "Notificações no modo silencioso",
   "criticalAlertVolume": "Volume",

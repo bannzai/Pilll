@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Kwa kujisajili kwenye Premium, unaweza kuendelea kutumia vipengele vyote",
   "countdownForDiscountPriceDeadline": "Ukinunua ndani ya {countdown}, utapata punguzo la {offPercent}%",
   "pillReminderChanged": "Vikumbusho vya kumeza kidonge vimewekwa kuwa {value}",
-  "silentModeNotificationDescription": "Hata wakati hali ya makini imeongezwa au kifaa kimewekwa kimya, arifa zitaonekana kwenye skrini iliyofungwa na sauti itasikika",
+  "silentModeNotificationDescription": "Hata hali ya Kuzingatia ikiwa imewashwa au kifaa chako kikiwa kimenyamazishwa, arifa zitaonekana kwenye skrini iliyofungwa na sauti italia.",
   "enableNotificationInSilentMode": "Arifa hata katika hali ya kimya",
   "enableNotificationInSilentModeSetting": "Arifa hata katika hali ya kimya",
   "criticalAlertVolume": "sauti",

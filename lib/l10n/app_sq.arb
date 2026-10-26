@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Me abonimin premium mund të vazhdoni të përdorni të gjitha veçoritë",
   "countdownForDiscountPriceDeadline": "Blini brenda {countdown} dhe përfitoni {offPercent}% ulje",
   "pillReminderChanged": "Njoftimet për marrjen e pilulës u vendosën në {value}",
-  "silentModeNotificationDescription": "Njoftimet do të shfaqen në ekranin e kyçur dhe do të luhet zëri, edhe kur modaliteti i përqendrimit është i aktivizuar ose pajisja është në heshtje",
+  "silentModeNotificationDescription": "Edhe kur modaliteti i përqendrimit është aktiv ose pajisja juaj është pa zë, njoftimet shfaqen në ekranin e kyçjes dhe dëgjohet një tingull.",
   "enableNotificationInSilentMode": "Njofto edhe në modalitetin heshtur",
   "enableNotificationInSilentModeSetting": "Njoftimet edhe në mënyrë heshtur",
   "criticalAlertVolume": "Volumi",

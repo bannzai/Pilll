@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Mit eme Premium-Abo chasch alli Funktione wiiter bruuche",
   "countdownForDiscountPriceDeadline": "Wenn du i de nöchschte {countdown} chaufsch, überchunsch {offPercent}% Rabatt",
   "pillReminderChanged": "D Erinnerige für d Pille sind uf {value} igstellt",
-  "silentModeNotificationDescription": "Benachrichtigunge wärded uf em Sperrbildschirm aazeigt und Tön abgspielt, au wenn de Konzentrationsmodus ii isch oder s Gerät stummgschaltet isch.",
+  "silentModeNotificationDescription": "Au wänn dr Fokusmodus aa isch oder dis Grät uf stumm staht, chömed d Benachrichtigunge uf em Sperrbildschirm und es git en Ton.",
   "enableNotificationInSilentMode": "Au im Stummmodus benachrichtige",
   "enableNotificationInSilentModeSetting": "Benachrichtung au im stumme Modus",
   "criticalAlertVolume": "Luutstärchi",

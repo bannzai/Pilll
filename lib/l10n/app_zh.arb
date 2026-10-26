@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "订阅高级版后，可继续使用所有功能",
   "countdownForDiscountPriceDeadline": "在 {countdown} 内购买，可享 {offPercent}% 折扣",
   "pillReminderChanged": "服药提醒已设为{value}",
-  "silentModeNotificationDescription": "即便开启专注模式或设备处于静音状态，通知仍会在锁屏界面显示并播放声音",
+  "silentModeNotificationDescription": "即使已开启专注模式或设备处于静音状态，通知仍会显示在锁定屏幕上并发出提示音。",
   "enableNotificationInSilentMode": "静音模式下也要通知",
   "enableNotificationInSilentModeSetting": "静音模式通知设置",
   "criticalAlertVolume": "音量",

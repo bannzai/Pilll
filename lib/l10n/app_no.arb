@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Med et Premium-abonnement kan du fortsette å bruke alle funksjonene",
   "countdownForDiscountPriceDeadline": "Kjøp innen {countdown} og få {offPercent}% rabatt",
   "pillReminderChanged": "Påminnelser om p-piller er satt til {value}",
-  "silentModeNotificationDescription": "Varslingene vises på låseskjermen og lyd spilles selv når Ikke forstyrr-modus er påslått eller enheten er på lydløs",
+  "silentModeNotificationDescription": "Selv når Fokus er på eller enheten din er satt på lydløs, vises varsler på låseskjermen og spiller av en lyd.",
   "enableNotificationInSilentMode": "Varsle selv i stillemodus",
   "enableNotificationInSilentModeSetting": "Varsling i stillemodus",
   "criticalAlertVolume": "Volum",

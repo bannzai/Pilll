@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Með Premium-áskrift geturðu haldið áfram að nota alla eiginleika appsins",
   "countdownForDiscountPriceDeadline": "Ef þú kaupir innan {countdown} færðu {offPercent}% afslátt",
   "pillReminderChanged": "Áminningar um pillutöku eru stilltar á {value}",
-  "silentModeNotificationDescription": "Tilkynningar birtast á læsingaskjá og hljóð spilast jafnvel þegar einbeitingarhamur er virkur eða tækið er á þögn",
+  "silentModeNotificationDescription": "Jafnvel þegar einbeitingarstilling er virk eða hljóð er slökkt á tækinu birtast tilkynningar á læsiskjánum og hljóð heyrist.",
   "enableNotificationInSilentMode": "Tilkynna jafnvel í þögn ham",
   "enableNotificationInSilentModeSetting": "Tilkynningar í þögli stillingu",
   "criticalAlertVolume": "hljóðstyrkur",

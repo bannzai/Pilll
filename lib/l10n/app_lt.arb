@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Užsisakę Premium galėsite toliau naudotis visomis funkcijomis",
   "countdownForDiscountPriceDeadline": "Įsigykite per {countdown} ir gaukite {offPercent}% nuolaidą",
   "pillReminderChanged": "Priminimai išgerti piliulę nustatyti į {value}",
-  "silentModeNotificationDescription": "Net įjungus koncentracijos režimą arba nutildžius įrenginį, pranešimai bus rodomi užrakintame ekrane ir atkuriamas garsas",
+  "silentModeNotificationDescription": "Net kai įjungtas susikaupimo režimas arba jūsų įrenginys nutildytas, pranešimai rodomi užrakinimo ekrane ir pasigirsta garsas.",
   "enableNotificationInSilentMode": "Pranešti tylių režimu",
   "enableNotificationInSilentModeSetting": "Pranešimai tylaus režimo metu",
   "criticalAlertVolume": "Garsumas",

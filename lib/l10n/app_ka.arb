@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "პრემიუმ გამოწერით შეგიძლიათ ყველა ფუნქციის გამოყენება გააგრძელოთ",
   "countdownForDiscountPriceDeadline": "შეიძინეთ {countdown}-ში და მიიღეთ {offPercent}%-იანი ფასდაკლება",
   "pillReminderChanged": "აბის მიღების შეხსენებები დაყენებულია მნიშვნელობაზე {value}",
-  "silentModeNotificationDescription": "ფოკუსირების რეჟიმის ჩართვისას ან მოწყობილობის უხმო რეჟიმშიც კი, შეტყობინებები ჩაკეტილ ეკრანზე გამოჩნდება და ხმა იკვრება",
+  "silentModeNotificationDescription": "მაშინაც კი, როცა ფოკუსირების რეჟიმი ჩართულია ან თქვენს მოწყობილობაზე ხმა გამორთულია, შეტყობინებები დაბლოკილ ეკრანზე გამოჩნდება და ხმა გაისმის.",
   "enableNotificationInSilentMode": "უხმო რეჟიმშიც შეტყობინება",
   "enableNotificationInSilentModeSetting": "უხმო რეჟიმშიც შეტყობინებები",
   "criticalAlertVolume": "ხმის სიმაღლე",

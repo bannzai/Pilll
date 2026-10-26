@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "С абонамент за премиум можете да продължите да използвате всички функции",
   "countdownForDiscountPriceDeadline": "Купете в рамките на {countdown} с отстъпка {offPercent}%",
   "pillReminderChanged": "Напомнянията за прием на хапчето са зададени на {value}",
-  "silentModeNotificationDescription": "Дори когато режимът на фокус е включен или устройството е в беззвучен режим, известията ще се показват на заключения екран и ще се възпроизведе звук",
+  "silentModeNotificationDescription": "Дори когато режимът за фокусиране е включен или устройството ви е заглушено, известията се показват на заключения екран и се възпроизвежда звук.",
   "enableNotificationInSilentMode": "Уведомяване дори в тих режим",
   "enableNotificationInSilentModeSetting": "Уведомления дори в тих режим",
   "criticalAlertVolume": "Сила на звука",

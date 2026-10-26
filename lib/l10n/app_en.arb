@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Subscribe to Premium to keep using all features",
   "countdownForDiscountPriceDeadline": "Buy within {countdown} to get {offPercent}% off",
   "pillReminderChanged": "Pill reminders set to {value}",
-  "silentModeNotificationDescription": "Notifications will be displayed on the lock screen and sound will be played even when Focus mode is on or the device is on silent mode",
+  "silentModeNotificationDescription": "Even when Focus is on or your device is muted, notifications appear on the lock screen and play a sound.",
   "enableNotificationInSilentMode": "Override silent mode",
   "enableNotificationInSilentModeSetting": "Enable Notifications in Silent Mode",
   "criticalAlertVolume": "Volume",

@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Со претплата на премиум можете да продолжите да ги користите сите функции",
   "countdownForDiscountPriceDeadline": "Купете во рок од {countdown} со {offPercent}% попуст",
   "pillReminderChanged": "Известувањата за земање таблета се поставени на {value}",
-  "silentModeNotificationDescription": "Дури и кога режимот на фокус е вклучен или уредот е во безвучен режим, известувањата ќе се прикажуваат на заклучениот екран и ќе се репродуцира звук",
+  "silentModeNotificationDescription": "Дури и кога е вклучен режимот за фокусирање или уредот Ви е без звук, известувањата се прикажуваат на заклучениот екран и се слуша звук.",
   "enableNotificationInSilentMode": "Извести и во тивок режим",
   "enableNotificationInSilentModeSetting": "Известувања во тивок режим",
   "criticalAlertVolume": "Јачина на звук",

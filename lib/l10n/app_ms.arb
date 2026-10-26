@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Dengan langganan premium, anda boleh terus menggunakan semua ciri",
   "countdownForDiscountPriceDeadline": "Beli dalam masa {countdown} untuk diskaun {offPercent}%",
   "pillReminderChanged": "Peringatan mengambil pil ditetapkan kepada {value}",
-  "silentModeNotificationDescription": "Notifikasi akan tetap dipaparkan pada skrin kunci dan bunyi akan dimainkan walaupun mod fokus diaktifkan atau peranti dalam keadaan senyap",
+  "silentModeNotificationDescription": "Walaupun mod Fokus dihidupkan atau peranti anda dalam mod senyap, pemberitahuan akan muncul pada skrin kunci dan bunyi akan dimainkan.",
   "enableNotificationInSilentMode": "Hantar pemberitahuan walaupun mod senyap",
   "enableNotificationInSilentModeSetting": "Tetapan notifikasi mod senyap",
   "criticalAlertVolume": "Volum",

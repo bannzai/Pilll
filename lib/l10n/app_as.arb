@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "প্ৰিমিয়ামত সদস্যতা ল’লে আপুনি সকলো সুবিধা ব্যৱহাৰ কৰি থাকিব পাৰিব",
   "countdownForDiscountPriceDeadline": "{countdown}ৰ ভিতৰত ক্ৰয় কৰিলে {offPercent}% ৰেহাই পাব",
   "pillReminderChanged": "পিল খোৱাৰ জাননী {value} কৰা হৈছে",
-  "silentModeNotificationDescription": "ফোকাস মোড অন থাকিলে বা যন্ত্ৰ নীৰৱ অৱস্থাত থাকিলেও জাননী লক স্ক্ৰিনত প্ৰদৰ্শিত হ'ব আৰু শব্দ বাজিব",
+  "silentModeNotificationDescription": "ফ’কাছ মোড অন থাকিলেও বা আপোনাৰ ডিভাইচ নীৰৱ অৱস্থাত থাকিলেও, জাননী লক স্ক্ৰীনত দেখা যাব আৰু শব্দ বাজিব।",
   "enableNotificationInSilentMode": "নিৰৱ মোডতো সূচনা দিয়ক",
   "enableNotificationInSilentModeSetting": "নীৰব মোডতো জাননী সংস্থাপন",
   "criticalAlertVolume": "আওয়াজ",

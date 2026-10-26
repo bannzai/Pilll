@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "สมัครพรีเมียมแล้วใช้งานทุกฟีเจอร์ต่อได้ค่ะ",
   "countdownForDiscountPriceDeadline": "ซื้อภายใน {countdown} รับส่วนลด {offPercent}%",
   "pillReminderChanged": "ตั้งค่าการแจ้งเตือนให้ทานยาเป็น {value} แล้วค่ะ",
-  "silentModeNotificationDescription": "แม้ในโหมดไม่รบกวนหรือเมื่ออุปกรณ์เปิดโหมดเงียบ การแจ้งเตือนจะแสดงบนหน้าจอล็อกพร้อมเสียงเตือน",
+  "silentModeNotificationDescription": "แม้เปิดโหมดโฟกัสหรือปิดเสียงอุปกรณ์ การแจ้งเตือนก็จะแสดงบนหน้าจอล็อกและมีเสียงแจ้งเตือนค่ะ",
   "enableNotificationInSilentMode": "แจ้งเตือนในโหมดปิดเสียง",
   "enableNotificationInSilentModeSetting": "การแจ้งเตือนในโหมดเงียบ",
   "criticalAlertVolume": "ระดับเสียง",

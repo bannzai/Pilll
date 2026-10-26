@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Prémium-előfizetéssel továbbra is használhatod az összes funkciót",
   "countdownForDiscountPriceDeadline": "Vásárolj {countdown} időn belül, és {offPercent}% kedvezményt kapsz",
   "pillReminderChanged": "A tablettaszedési értesítések beállítása: {value}",
-  "silentModeNotificationDescription": "A koncentrációs mód bekapcsolása vagy az eszköz némítása esetén is az értesítések megjelennek a zárolási képernyőn és a hang lejátszásra kerül.",
+  "silentModeNotificationDescription": "Az értesítések akkor is megjelennek a zárolási képernyőn, és hangjelzés hallható, ha a Fókusz mód be van kapcsolva, vagy a készülék némítva van.",
   "enableNotificationInSilentMode": "Értesítés csendes módban is",
   "enableNotificationInSilentModeSetting": "Értesítés csendes módban",
   "criticalAlertVolume": "Hangerő",

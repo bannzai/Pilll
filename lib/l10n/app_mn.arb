@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "премиум захиалгатай бол бүх боломжийг үргэлжлүүлэн ашиглах боломжтой",
   "countdownForDiscountPriceDeadline": "{countdown} дотор худалдан авбал {offPercent}% хөнгөлөлт эдэлнэ",
   "pillReminderChanged": "Эм уух сануулгыг {value} болгож тохируулсан",
-  "silentModeNotificationDescription": "Анхаарал төвлөрүүлэх горим асаалттай эсвэл төхөөрөмж дуугүй горимд байгаа үед ч мэдэгдэл түгжээстэй дэлгэцэд харагдаж, дуу гарна",
+  "silentModeNotificationDescription": "Төвлөрөх горим асаалттай эсвэл таны төхөөрөмжийн дуу хаалттай байсан ч мэдэгдэл түгжээтэй дэлгэц дээр гарч, дохионы дуу дуугарна.",
   "enableNotificationInSilentMode": "Чимээгүй горимд ч мэдэгдэх",
   "enableNotificationInSilentModeSetting": "Чимээгүй горимд ч мэдэгдэл тохиргоо",
   "criticalAlertVolume": "дуу хүчин",

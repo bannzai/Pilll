@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Dengan berlangganan premium, Anda dapat terus menggunakan semua fitur",
   "countdownForDiscountPriceDeadline": "Beli dalam {countdown} dan dapatkan diskon {offPercent}%",
   "pillReminderChanged": "Pengingat minum pil telah diatur ke {value}",
-  "silentModeNotificationDescription": "Meskipun Mode Fokus aktif atau perangkat dalam keadaan senyap, notifikasi tetap akan ditampilkan di layar kunci dan suara akan diputar",
+  "silentModeNotificationDescription": "Meski mode Fokus aktif atau perangkat Anda dibisukan, notifikasi tetap muncul di layar kunci dan suara peringatan akan terdengar.",
   "enableNotificationInSilentMode": "Tetap bernotifikasi dalam mode senyap",
   "enableNotificationInSilentModeSetting": "Notifikasi dalam Mode Senyap",
   "criticalAlertVolume": "Volume",

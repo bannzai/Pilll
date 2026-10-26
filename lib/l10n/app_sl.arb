@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Z naročnino Premium lahko še naprej uporabljate vse funkcije",
   "countdownForDiscountPriceDeadline": "Ob nakupu v naslednjih {countdown} prejmete {offPercent}% popust",
   "pillReminderChanged": "Opomniki za jemanje tabletke so nastavljeni na {value}",
-  "silentModeNotificationDescription": "Obvestila se bodo prikazala na zaklenjenem zaslonu in predvajal se bo zvok tudi, ko je vklopljen način osredotočenja ali je naprava utišana",
+  "silentModeNotificationDescription": "Tudi ko je način osredotočanja vklopljen ali je vaša naprava utišana, se obvestila prikažejo na zaklenjenem zaslonu in oglasi se zvok.",
   "enableNotificationInSilentMode": "Obvestila tudi v tihem načinu",
   "enableNotificationInSilentModeSetting": "Obvestila v tihem načinu",
   "criticalAlertVolume": "Glasnost",

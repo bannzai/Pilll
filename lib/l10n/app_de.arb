@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Mit einem Premium-Abo kannst du weiterhin alle Funktionen nutzen",
   "countdownForDiscountPriceDeadline": "Kaufe innerhalb von {countdown} und spare {offPercent}%",
   "pillReminderChanged": "Benachrichtigungen zur Pilleneinnahme sind auf {value} eingestellt",
-  "silentModeNotificationDescription": "Auch wenn der Nicht-stören-Modus aktiviert ist oder das Gerät stumm geschaltet ist, werden Benachrichtigungen auf dem Sperrbildschirm angezeigt und Töne abgespielt",
+  "silentModeNotificationDescription": "Auch wenn der Fokusmodus aktiviert oder dein Gerät stummgeschaltet ist, erscheinen Mitteilungen auf dem Sperrbildschirm und ein Ton wird abgespielt.",
   "enableNotificationInSilentMode": "Auch im Lautlos-Modus benachrichtigen",
   "enableNotificationInSilentModeSetting": "Benachrichtigungen im Stummmodus",
   "criticalAlertVolume": "Lautstärke",

@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "З падпіскай прэміум вы зможаце і далей карыстацца ўсімі функцыямі",
   "countdownForDiscountPriceDeadline": "Купіце на працягу {countdown} і атрымайце зніжку {offPercent}%",
   "pillReminderChanged": "Напаміны пра прыём пігулкі ўсталяваны на {value}",
-  "silentModeNotificationDescription": "Нават пры ўключаным рэжыме сканцэнтравання або калі прылада ў бязгучным рэжыме, паведамленні будуць адлюстроўвацца на экране блакавання і прайгравацца гук",
+  "silentModeNotificationDescription": "Нават калі ўключаны рэжым канцэнтрацыі або гук прылады адключаны, апавяшчэнні з’яўляюцца на экране блакіроўкі і суправаджаюцца гукам.",
   "enableNotificationInSilentMode": "Апавяшчаць нават у бесшумным рэжыме",
   "enableNotificationInSilentModeSetting": "Налады паведамленняў у бесшумным рэжыме",
   "criticalAlertVolume": "гучнасць",

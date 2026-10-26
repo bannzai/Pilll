@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Avec un abonnement Premium, vous pouvez continuer à utiliser toutes les fonctionnalités",
   "countdownForDiscountPriceDeadline": "Achetez dans les {countdown} et profitez de {offPercent} % de réduction",
   "pillReminderChanged": "Les rappels de prise de pilule sont réglés sur {value}",
-  "silentModeNotificationDescription": "Les notifications seront affichées sur l'écran de verrouillage et le son sera joué même lorsque le mode Focus est activé ou que l'appareil est en mode silencieux",
+  "silentModeNotificationDescription": "Même si le mode Concentration est activé ou que votre appareil est en mode silencieux, les notifications s’affichent sur l’écran verrouillé et émettent un son.",
   "enableNotificationInSilentMode": "Remplacer le mode silencieux",
   "enableNotificationInSilentModeSetting": "Activer les notifications en mode silencieux",
   "criticalAlertVolume": "Volume",

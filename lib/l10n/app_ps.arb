@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "د پریمیم ګډون سره تاسو کولی شئ له ټولو ځانګړنو څخه کار اخیستلو ته دوام ورکړئ",
   "countdownForDiscountPriceDeadline": "په {countdown} کې یې واخلئ او {offPercent}% تخفیف ترلاسه کړئ",
   "pillReminderChanged": "د ګولۍ اخیستو خبرتیاوې پر {value} وټاکل شوې",
-  "silentModeNotificationDescription": "که څه هم د تمرکز موډ فعال وي یا دستګاه بې غږه وي، خبرتیاوې به د قفل په سکرین کې ښکاره شي او غږ به وغږیږي",
+  "silentModeNotificationDescription": "که د تمرکز حالت فعال وي یا مو وسیله غلې وي، خبرتیاوې بیا هم پر تړلې پرده ښکاري او غږ یې اورېدل کېږي.",
   "enableNotificationInSilentMode": "په خاموش حالت کې هم اطلاع ورکول",
   "enableNotificationInSilentModeSetting": "د خاموش حالت کې د خبرتیاوو فعالول",
   "criticalAlertVolume": "غږ",

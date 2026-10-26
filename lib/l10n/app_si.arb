@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "ප්‍රීමියම් දායකත්වයක් සමඟ ඔබට සියලුම විශේෂාංග දිගටම භාවිත කළ හැකියි",
   "countdownForDiscountPriceDeadline": "{countdown} ඇතුළත මිලදී ගත් විට {offPercent}% වට්ටමක් ලබාගන්න",
   "pillReminderChanged": "පෙත්ත ගැනීමේ මතක් කිරීම් {value} ලෙස සකසා ඇත",
-  "silentModeNotificationDescription": "අවධානය යොමු කිරීමේ ප්‍රකාරය සක්‍රීය වී ඇති විට හෝ උපකරණය නිහඬ කර ඇති විට පවා, දැනුම්දීම් අගුළු තිරයේ පෙන්වනු ලබන අතර ශබ්ද වාදනය කරනු ලැබේ",
+  "silentModeNotificationDescription": "අවධානය යොමු කිරීමේ ප්‍රකාරය ක්‍රියාත්මකව තිබුණත්, ඔබේ උපාංගය නිහඬ කර තිබුණත්, දැනුම්දීම් අගුළු තිරයේ දිස් වන අතර ශබ්දයක් ඇසෙයි.",
   "enableNotificationInSilentMode": "නිහඬ මාදිලියේදී ද දැනුම් දෙන්න",
   "enableNotificationInSilentModeSetting": "නිහඬ මාදිලියේදීත් දැනුම්දීම්",
   "criticalAlertVolume": "ශබ්ද මට්ටම",

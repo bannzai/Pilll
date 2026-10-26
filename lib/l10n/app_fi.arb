@@ -424,7 +424,7 @@
   "premiumIntroductionDiscountPriceDeadline": "Premium-tilauksella voit jatkaa kaikkien ominaisuuksien käyttöä",
   "countdownForDiscountPriceDeadline": "Osta {countdown} kuluessa ja saat {offPercent} % alennusta",
   "pillReminderChanged": "Pillerimuistutusten asetukseksi vaihdettiin {value}",
-  "silentModeNotificationDescription": "Ilmoitukset näkyvät lukitusnäytöllä ja ääni toistetaan, vaikka keskittymistila olisi päällä tai laite olisi äänettömässä",
+  "silentModeNotificationDescription": "Vaikka keskittymistila olisi käytössä tai laitteesi äänettömällä, ilmoitukset näkyvät lukitusnäytöllä ja niistä kuuluu ääni.",
   "enableNotificationInSilentMode": "Ilmoita myös hiljaisessa tilassa",
   "enableNotificationInSilentModeSetting": "Ilmoitukset hiljaisessa tilassa",
   "criticalAlertVolume": "Äänenvoimakkuus",
