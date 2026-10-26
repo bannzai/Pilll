@@ -575,7 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Nifer dyddiau'r seibiant",
   "yazFlexRestDurationDaysValue": "am {days} diwrnod",
   "yazFlexResting": "Mae'r seibiant yn parhau, ac nid ydych wedi ailddechrau cymryd y bilsen",
-  "yazFlexRestingDaysLabel": "Pa ddiwrnod o'r egwyl yw hi heddiw",
+  "yazFlexRestingDaysLabel": "Pa ddiwrnod o'r seibiant yw heddiw",
   "yazFlexSkipRestDuration": "Hepgor mewnbynnu'r cyfnod seibiant",
   "yazFlexSkipRestDurationDialogTitle": "Hepgor mewnbynnu’r egwyl",
   "yazFlexSkipRestDurationDialogMessage": "Gallwch nodi cyfnod saib y tabledi yn nes ymlaen o “Saib cymryd” ar y sgrin gartref.",

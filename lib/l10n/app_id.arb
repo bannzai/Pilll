@@ -575,7 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Jumlah hari jeda",
   "yazFlexRestDurationDaysValue": "{days} hari",
   "yazFlexResting": "Masih dalam jeda dan belum mulai minum pil lagi",
-  "yazFlexRestingDaysLabel": "Hari ke berapa masa jeda hari ini",
+  "yazFlexRestingDaysLabel": "Hari ke berapa jeda pil hari ini",
   "yazFlexSkipRestDuration": "Lewati pengisian masa jeda",
   "yazFlexSkipRestDurationDialogTitle": "Lewati pengisian masa jeda",
   "yazFlexSkipRestDurationDialogMessage": "Periode jeda minum dapat diisi nanti dari “Jeda minum” di Beranda.",

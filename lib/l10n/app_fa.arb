@@ -575,7 +575,7 @@
   "yazFlexRestDurationDaysLabel": "تعداد روزهای وقفه",
   "yazFlexRestDurationDaysValue": "به‌مدت {days} روز",
   "yazFlexResting": "هنوز در وقفه هستید و مصرف قرص را از سر نگرفته‌اید",
-  "yazFlexRestingDaysLabel": "امروز چندمین روزِ دوره توقف است",
+  "yazFlexRestingDaysLabel": "امروز چندمین روز وقفه است",
   "yazFlexSkipRestDuration": "از وارد کردن دوره قطع مصرف صرف‌نظر کنید",
   "yazFlexSkipRestDurationDialogTitle": "ورود دوره توقف را رد کنید",
   "yazFlexSkipRestDurationDialogMessage": "می‌توانید دوره توقف مصرف را بعداً از «توقف مصرف» در صفحه اصلی وارد کنید.",

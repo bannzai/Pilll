@@ -575,7 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Pārtraukuma dienu skaits",
   "yazFlexRestDurationDaysValue": "{days} dienas",
   "yazFlexResting": "Pārtraukums vēl turpinās, un tablešu lietošana nav atsākta",
-  "yazFlexRestingDaysLabel": "Kura šodien ir pārtraukuma diena",
+  "yazFlexRestingDaysLabel": "Kura pārtraukuma diena ir šodien",
   "yazFlexSkipRestDuration": "Izlaist pārtraukuma perioda ievadi",
   "yazFlexSkipRestDurationDialogTitle": "Izlaist pārtraukuma perioda ievadi",
   "yazFlexSkipRestDurationDialogMessage": "Lietošanas pārtraukuma periodu vēlāk varēsiet ievadīt sākuma ekrāna sadaļā “Lietošanas pārtraukums”.",

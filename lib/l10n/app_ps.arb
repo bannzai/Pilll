@@ -575,7 +575,7 @@
   "yazFlexRestDurationDaysLabel": "د وقف د ورځو شمېر",
   "yazFlexRestDurationDaysValue": "د {days} ورځو لپاره",
   "yazFlexResting": "لا هم په وقفه کې یاست او د ګولۍ اخیستل مو نه دي بیا پیل کړي",
-  "yazFlexRestingDaysLabel": "نن د وقفې څوهمه ورځ ده",
+  "yazFlexRestingDaysLabel": "نن د وقف څویمه ورځ ده",
   "yazFlexSkipRestDuration": "د وقفې مودې داخلول پرېږدئ",
   "yazFlexSkipRestDurationDialogTitle": "د وقفې مودې ننوتل پرېږدئ",
   "yazFlexSkipRestDurationDialogMessage": "تاسې کولی شئ د درملو د وقفې موده وروسته د کور سکرین له “د درملو وقفه” څخه دننه کړئ.",

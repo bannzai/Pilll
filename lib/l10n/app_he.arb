@@ -575,7 +575,7 @@
   "yazFlexRestDurationDaysLabel": "מספר ימי ההפסק",
   "yazFlexRestDurationDaysValue": "למשך {days} ימים",
   "yazFlexResting": "עדיין בהפסק, בלי לחדש את נטילת הגלולה",
-  "yazFlexRestingDaysLabel": "היום הוא היום ה־כמה של ההפסקה",
+  "yazFlexRestingDaysLabel": "איזה יום של ההפסק הוא היום",
   "yazFlexSkipRestDuration": "דלגי על הזנת תקופת ההפסקה",
   "yazFlexSkipRestDurationDialogTitle": "לדלג על הזנת תקופת ההפסקה",
   "yazFlexSkipRestDurationDialogMessage": "אפשר להזין אחר כך את תקופת ההפסקה בנטילה דרך „הפסקה בנטילה” במסך הבית.",

@@ -575,7 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Počet dní pauzy",
   "yazFlexRestDurationDaysValue": "{days} dní",
   "yazFlexResting": "Pauza stále trvá, užívání pilulky ještě nebylo obnoveno",
-  "yazFlexRestingDaysLabel": "Kolikátý je dnes den pauzy",
+  "yazFlexRestingDaysLabel": "Kolikátý den pauzy je dnes",
   "yazFlexSkipRestDuration": "Přeskočit zadání pauzy",
   "yazFlexSkipRestDurationDialogTitle": "Přeskočit zadání pauzy",
   "yazFlexSkipRestDurationDialogMessage": "Období přestávky v užívání můžete zadat později v části „Přestávka v užívání“ na domovské obrazovce.",

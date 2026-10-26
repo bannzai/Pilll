@@ -575,7 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Dies de descans",
   "yazFlexRestDurationDaysValue": "{days} dies",
   "yazFlexResting": "Encara ets en el descans i no has reprès la píndola",
-  "yazFlexRestingDaysLabel": "Quin dia de descans és avui",
+  "yazFlexRestingDaysLabel": "Quin dia del descans és avui",
   "yazFlexSkipRestDuration": "Omet la introducció del període de descans",
   "yazFlexSkipRestDurationDialogTitle": "Omet l’entrada del descans",
   "yazFlexSkipRestDurationDialogMessage": "Més endavant podràs introduir el període de descans de la presa a «Descans de la presa» de la pantalla d’inici.",

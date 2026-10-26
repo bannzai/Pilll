@@ -575,7 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Pill break duration in days",
   "yazFlexRestDurationDaysValue": "{days} days",
   "yazFlexResting": "Still on a pill break and haven't resumed taking pills",
-  "yazFlexRestingDaysLabel": "Which day of your break is it today?",
+  "yazFlexRestingDaysLabel": "Which day of your pill break is today",
   "yazFlexSkipRestDuration": "Skip entering the break period",
   "yazFlexSkipRestDurationDialogTitle": "Skip entering the break period",
   "yazFlexSkipRestDurationDialogMessage": "You can enter the break period later from “Break from Taking” on the Home screen.",

@@ -575,7 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Nombre de jours de pause",
   "yazFlexRestDurationDaysValue": "{days} jours",
   "yazFlexResting": "Vous êtes encore en pause et n'avez pas repris la pilule",
-  "yazFlexRestingDaysLabel": "À quel jour de la pause êtes-vous aujourd’hui ?",
+  "yazFlexRestingDaysLabel": "Quel jour de la pause est-ce aujourd’hui",
   "yazFlexSkipRestDuration": "Ignorer la saisie de la pause",
   "yazFlexSkipRestDurationDialogTitle": "Ignorer la saisie de la pause",
   "yazFlexSkipRestDurationDialogMessage": "Vous pourrez saisir plus tard la période de pause de prise depuis « Pause de prise » sur l’écran d’accueil.",

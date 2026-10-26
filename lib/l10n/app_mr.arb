@@ -575,7 +575,7 @@
   "yazFlexRestDurationDaysLabel": "विरामाचे दिवस",
   "yazFlexRestDurationDaysValue": "{days} दिवस",
   "yazFlexResting": "अजून विराम सुरू आहे आणि गोळी घेणे पुन्हा सुरू केलेले नाही",
-  "yazFlexRestingDaysLabel": "आज विश्रांतीचा कितवा दिवस आहे",
+  "yazFlexRestingDaysLabel": "आज विरामाचा कितवा दिवस आहे",
   "yazFlexSkipRestDuration": "ब्रेक कालावधी टाकणे वगळा",
   "yazFlexSkipRestDurationDialogTitle": "विश्रांती कालावधीची नोंद वगळा",
   "yazFlexSkipRestDurationDialogMessage": "गोळी घेण्याच्या विश्रांतीचा कालावधी नंतर होममधील “गोळी घेण्याची विश्रांती” मधून भरू शकता.",

@@ -575,7 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Ημέρες διαλείμματος",
   "yazFlexRestDurationDaysValue": "{days} ημέρες",
   "yazFlexResting": "Το διάλειμμα συνεχίζεται και δεν έχετε αρχίσει ξανά να παίρνετε το χάπι",
-  "yazFlexRestingDaysLabel": "Ποια μέρα της διακοπής είναι σήμερα",
+  "yazFlexRestingDaysLabel": "Ποια ημέρα του διαλείμματος είναι σήμερα",
   "yazFlexSkipRestDuration": "Παράλειψη εισαγωγής διαλείμματος",
   "yazFlexSkipRestDurationDialogTitle": "Παράλειψη καταχώρισης της διακοπής",
   "yazFlexSkipRestDurationDialogMessage": "Μπορείτε να καταχωρίσετε αργότερα την περίοδο διακοπής λήψης από το «Διακοπή λήψης» στην αρχική οθόνη.",

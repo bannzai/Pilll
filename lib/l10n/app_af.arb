@@ -575,7 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Aantal dae van die pouse",
   "yazFlexRestDurationDaysValue": "{days} dae",
   "yazFlexResting": "Nog op pouse en het nog nie weer die pil begin drink nie",
-  "yazFlexRestingDaysLabel": "Hoeveelste dag van jou pouse is dit vandag?",
+  "yazFlexRestingDaysLabel": "Die hoeveelste dag van jou pouse is dit vandag",
   "yazFlexSkipRestDuration": "Slaan die invoer van die pouse oor",
   "yazFlexSkipRestDurationDialogTitle": "Slaan die invoer van die pouse oor",
   "yazFlexSkipRestDurationDialogMessage": "Die pouseperiode kan later by \"Neem 'n pouse\" op die tuisskerm ingevul word.",

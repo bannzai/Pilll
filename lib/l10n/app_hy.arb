@@ -575,7 +575,7 @@
   "yazFlexRestDurationDaysLabel": "Դադարի օրերի քանակը",
   "yazFlexRestDurationDaysValue": "{days} օր",
   "yazFlexResting": "Դեռ դադարի մեջ եք և չեք վերսկսել հաբի ընդունումը",
-  "yazFlexRestingDaysLabel": "Այսօր ընդմիջման որերորդ օրն է",
+  "yazFlexRestingDaysLabel": "Այսօր դադարի քանի՞երորդ օրն է",
   "yazFlexSkipRestDuration": "Բաց թողնել ընդմիջման շրջանի մուտքագրումը",
   "yazFlexSkipRestDurationDialogTitle": "Բաց թողնել դադարի մուտքագրումը",
   "yazFlexSkipRestDurationDialogMessage": "Ընդունման դադարի ժամանակահատվածը կարող եք ավելի ուշ մուտքագրել Գլխավորի «Ընդունման դադար» բաժնից։",
