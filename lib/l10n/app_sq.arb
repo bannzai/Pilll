@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Sot është dita për të marrë pilulën",
   "todayPillToTake": "💊 Pilula e sotme",
   "number": " (pilulë)",
-  "dayNumber": "th day",
+  "dayNumber": " dita",
   "recordedMenstruationStartDate": "U regjistrua fillimi i menstruacionit nga {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Data e fillimit të menstruacionit",
   "menstruationEndDate": "Data e përfundimit të menstruacionit",

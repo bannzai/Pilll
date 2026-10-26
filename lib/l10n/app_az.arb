@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Bu gün həb qəbul etmə günüdür",
   "todayPillToTake": "💊 Bu gün qəbul ediləcək həb",
   "number": " (həb)",
-  "dayNumber": "th day",
+  "dayNumber": " gün",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} tarixindən etibarən adet başlanğıcı kimi qeyd edildi",
   "menstruationStartDate": "Aybaşı başlama tarixi",
   "menstruationEndDate": "Aybaşı bitməsi tarixi",

@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Hüt isch d Pille draa",
   "todayPillToTake": "💊 D Pille für hüt",
   "number": " (Pille)",
-  "dayNumber": "th day",
+  "dayNumber": ". Tag",
   "recordedMenstruationStartDate": "Periodenstart ab {DateTimeFormatterMonthAndDay} isch erfasst wordä",
   "menstruationStartDate": "Periode-Startdatum",
   "menstruationEndDate": "Menstruations-Enddatum",

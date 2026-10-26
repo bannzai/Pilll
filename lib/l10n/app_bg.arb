@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Днес е ден за прием на хапчето",
   "todayPillToTake": "💊 Хапчето за днес",
   "number": " (хапче)",
-  "dayNumber": "th day",
+  "dayNumber": " ден",
   "recordedMenstruationStartDate": "Записах началото на менструацията от {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Начална дата на менструацията",
   "menstruationEndDate": "Крайна дата на менструацията",

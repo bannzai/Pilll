@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Сёння дзень прыёму пігулкі",
   "todayPillToTake": "💊 Пігулка на сёння",
   "number": " (пігулка)",
-  "dayNumber": "th day",
+  "dayNumber": " дзень",
   "recordedMenstruationStartDate": "З {DateTimeFormatterMonthAndDay} зафіксаваны пачатак менструацыі",
   "menstruationStartDate": "дзень пачатку месячных",
   "menstruationEndDate": "Дата заканчэння менструацыі",

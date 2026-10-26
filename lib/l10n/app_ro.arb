@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Azi este ziua pentru administrarea pilulei",
   "todayPillToTake": "💊 Pilula de azi",
   "number": " (pilulă)",
-  "dayNumber": "th day",
+  "dayNumber": "a zi",
   "recordedMenstruationStartDate": "Începutul menstruației a fost înregistrat de la {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Data începerii menstruației",
   "menstruationEndDate": "Data sfârșitului menstruației",

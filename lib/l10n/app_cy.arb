@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Mae'n ddiwrnod cymryd y bilsen heddiw",
   "todayPillToTake": "💊 Pilsen heddiw",
   "number": " (pilsen)",
-  "dayNumber": "diwrnod",
+  "dayNumber": " diwrnod",
   "recordedMenstruationStartDate": "Cofnodwyd dechrau'r mislif o {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Dyddiad Dechrau'r Cyfnod",
   "menstruationEndDate": "Dyddiad diwedd mislif",

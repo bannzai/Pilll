@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Өнөөдөр эм уух өдөр",
   "todayPillToTake": "💊 Өнөөдөр уух эм",
   "number": " (эм)",
-  "dayNumber": "th day",
+  "dayNumber": " дэх өдөр",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}-аас эхлэн сарын тэмдгийг бүртгэлээ",
   "menstruationStartDate": "Сарын тэмдэгийн эхлэх өдөр",
   "menstruationEndDate": "Сарын тэмдгийн төгсгөл өдөр",

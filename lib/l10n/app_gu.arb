@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 આજે ગોળી લેવાનો દિવસ છે",
   "todayPillToTake": "💊 આજની ગોળી",
   "number": " (ગોળી)",
-  "dayNumber": "th day",
+  "dayNumber": "મો દિવસ",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}થી માસિક ધર્મની શરૂઆત રેકોર્ડ કરી",
   "menstruationStartDate": "માસિક ધર્મ શરુઆતની તારીખ",
   "menstruationEndDate": "માસિક ધર્મ સમાપ્તિ તારીખ",

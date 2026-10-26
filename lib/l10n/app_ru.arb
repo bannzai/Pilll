@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Сегодня день приёма таблетки",
   "todayPillToTake": "💊 Таблетка на сегодня",
   "number": " (таблетка)",
-  "dayNumber": "th day",
+  "dayNumber": "-й день",
   "recordedMenstruationStartDate": "С {DateTimeFormatterMonthAndDay} записано начало менструации",
   "menstruationStartDate": "Дата начала менструации",
   "menstruationEndDate": "Дата окончания менструации",

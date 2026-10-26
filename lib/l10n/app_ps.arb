@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 نن د ګولۍ اخیستو ورځ ده",
   "todayPillToTake": "💊 د نن ورځې ګولۍ",
   "number": " (ګولۍ)",
-  "dayNumber": "th day",
+  "dayNumber": "مه ورځ",
   "recordedMenstruationStartDate": "د {DateTimeFormatterMonthAndDay} څخه د میاشتنۍ دورې پیل ثبت شو",
   "menstruationStartDate": "د حیض د پیلېدو ورځ",
   "menstruationEndDate": "د میاشتنۍ پای نیټه",

@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 ມື້ນີ້ແມ່ນມື້ກິນຢາເມັດ",
   "todayPillToTake": "💊 ຢາເມັດສຳລັບມື້ນີ້",
   "number": " (ເມັດຢາ)",
-  "dayNumber": "th day",
+  "dayNumber": " ມື້",
   "recordedMenstruationStartDate": "ບັນທຶກການເລີ່ມຕົ້ນປະຈຳເດືອນຕັ້ງແຕ່ {DateTimeFormatterMonthAndDay} ແລ້ວ",
   "menstruationStartDate": "ວັນເລີ່ມປະຈຳເດືອນ",
   "menstruationEndDate": "ວັນສິ້ນສຸດປະຈຳເດືອນ",

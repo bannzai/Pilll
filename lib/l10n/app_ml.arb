@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 ഇന്ന് ഗുളിക കഴിക്കേണ്ട ദിവസമാണ്",
   "todayPillToTake": "💊 ഇന്നത്തെ ഗുളിക",
   "number": " (ഗുളിക)",
-  "dayNumber": "th day",
+  "dayNumber": "ാം ദിവസം",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} മുതൽ ആർത്തവം ആരംഭിച്ചതായി രേഖപ്പെടുത്തി",
   "menstruationStartDate": "ആർത്തവ ആരംഭ ദിനം",
   "menstruationEndDate": "ആർത്തവ അവസാന ദിനം",

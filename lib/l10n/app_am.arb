@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 ዛሬ ክኒን የሚወሰድበት ቀን ነው",
   "todayPillToTake": "💊 ዛሬ የሚወሰድ ክኒን",
   "number": " (ክኒን)",
-  "dayNumber": "th day",
+  "dayNumber": "ኛ ቀን",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} ወርሃዊ ዑደት መጀመሪያ ተመዝግቧል",
   "menstruationStartDate": "ወር አበባ መጀመሪያ ቀን",
   "menstruationEndDate": "የወርሐዊ መጨረሻ ቀን",

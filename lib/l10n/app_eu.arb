@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Gaur pilula hartzeko eguna da",
   "todayPillToTake": "💊 Gaurko pilula",
   "number": ". pilula",
-  "dayNumber": "th day",
+  "dayNumber": ". eguna",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}-tik hilekoa hasi bezala erregistratu da",
   "menstruationStartDate": "Hileko hasiera data",
   "menstruationEndDate": "Hilerokaren amaiera data",

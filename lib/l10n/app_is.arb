@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Í dag er dagur til að taka pilluna",
   "todayPillToTake": "💊 Pilla dagsins",
   "number": ". pilla",
-  "dayNumber": "th day",
+  "dayNumber": ". dagur",
   "recordedMenstruationStartDate": "Upphaf tíðar skráð frá {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Byrjunardagur tíðablæðinga",
   "menstruationEndDate": "Lokadagur tíðablæðinga",

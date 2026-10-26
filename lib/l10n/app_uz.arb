@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Bugun tabletka ichish kuni",
   "todayPillToTake": "💊 Bugungi tabletka",
   "number": " (tabletka)",
-  "dayNumber": "th day",
+  "dayNumber": "-kun",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} dan hayz boshlanishi sifatida qayd qilindi",
   "menstruationStartDate": "Hayz boshlanish sanasi",
   "menstruationEndDate": "Hayz tugash sanasi",

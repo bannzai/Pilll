@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Avui toca prendre la píndola",
   "todayPillToTake": "💊 La píndola d’avui",
   "number": " (píndola)",
-  "dayNumber": "th day",
+  "dayNumber": " dia",
   "recordedMenstruationStartDate": "S'ha enregistrat l'inici de la menstruació des de {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Data d'inici de la menstruació",
   "menstruationEndDate": "Data de fi de la menstruació",

@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Σήμερα είναι ημέρα λήψης του χαπιού",
   "todayPillToTake": "💊 Το χάπι για σήμερα",
   "number": " (χάπι)",
-  "dayNumber": "th day",
+  "dayNumber": "η ημέρα",
   "recordedMenstruationStartDate": "Καταγράφηκε έναρξη περιόδου από {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Ημερομηνία έναρξης περιόδου",
   "menstruationEndDate": "Ημερομηνία λήξης περιόδου",

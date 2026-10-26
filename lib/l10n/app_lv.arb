@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Šodien jālieto tablete",
   "todayPillToTake": "💊 Šodienas tablete",
   "number": ". tablete",
-  "dayNumber": "th day",
+  "dayNumber": ". diena",
   "recordedMenstruationStartDate": "Menstruācijas sākums no {DateTimeFormatterMonthAndDay} ir ierakstīts",
   "menstruationStartDate": "Menstruācijas sākuma datums",
   "menstruationEndDate": "Menstruācijas beigu datums",

@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Hôm nay là ngày uống thuốc",
   "todayPillToTake": "💊 Viên thuốc hôm nay",
   "number": " (viên thuốc)",
-  "dayNumber": "th day",
+  "dayNumber": " ngày",
   "recordedMenstruationStartDate": "Đã ghi nhận bắt đầu kinh nguyệt từ {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Ngày bắt đầu kinh nguyệt",
   "menstruationEndDate": "Ngày kết thúc kinh nguyệt",

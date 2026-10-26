@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Hoy toca tomar la píldora",
   "todayPillToTake": "💊 La píldora de hoy",
   "number": " (píldora)",
-  "dayNumber": "th day",
+  "dayNumber": " día",
   "recordedMenstruationStartDate": "Se registró el inicio de la menstruación desde {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Fecha de inicio de menstruación",
   "menstruationEndDate": "Fecha de fin de la menstruación",

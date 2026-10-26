@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 آج گولی لینے کا دن ہے",
   "todayPillToTake": "💊 آج کی گولی",
   "number": " (گولی)",
-  "dayNumber": "th day",
+  "dayNumber": "واں دن",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} سے حیض کی شروعات کا ریکارڈ کر دیا گیا",
   "menstruationStartDate": "ماہواری شروع کی تاریخ",
   "menstruationEndDate": "حیض ختم کی تاریخ",

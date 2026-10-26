@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 امروز روز مصرف قرص است",
   "todayPillToTake": "💊 قرص امروز",
   "number": " (قرص)",
-  "dayNumber": "th day",
+  "dayNumber": " روز",
   "recordedMenstruationStartDate": "شروع قاعدگی از {DateTimeFormatterMonthAndDay} ثبت شد",
   "menstruationStartDate": "تاریخ شروع قاعدگی",
   "menstruationEndDate": "تاریخ پایان قاعدگی",

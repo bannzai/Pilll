@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Tänään on pillerinottopäivä",
   "todayPillToTake": "💊 Tämän päivän pilleri",
   "number": ". pilleri",
-  "dayNumber": "th day",
+  "dayNumber": ". päivä",
   "recordedMenstruationStartDate": "Kuukautiset merkitty alkamaan {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Kuukautisten alkamispäivä",
   "menstruationEndDate": "Kuukautisten loppumispäivä",

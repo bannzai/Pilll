@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 I dag är det dags att ta p-piller",
   "todayPillToTake": "💊 Dagens p-piller",
   "number": " (piller)",
-  "dayNumber": "th day",
+  "dayNumber": ":e dagen",
   "recordedMenstruationStartDate": "Menstruationsstart registrerad från {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Mens startdatum",
   "menstruationEndDate": "Slutdag för mens",

@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Hari ini jadwal minum pil",
   "todayPillToTake": "💊 Pil untuk hari ini",
   "number": " (pil)",
-  "dayNumber": "Hari ke",
+  "dayNumber": " hari",
   "recordedMenstruationStartDate": "Telah dicatat sebagai awal menstruasi mulai {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Tanggal Mulai Menstruasi",
   "menstruationEndDate": "Tanggal Akhir Menstruasi",

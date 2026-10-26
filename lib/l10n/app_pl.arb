@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Dziś dzień przyjęcia tabletki",
   "todayPillToTake": "💊 Dzisiejsza tabletka",
   "number": ". tabletka",
-  "dayNumber": "th day",
+  "dayNumber": ". dzień",
   "recordedMenstruationStartDate": "Zarejestrowano początek menstruacji od {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Data rozpoczęcia miesiączki",
   "menstruationEndDate": "Data zakończenia miesiączki",

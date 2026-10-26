@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Ngayon ang araw ng pag-inom ng pildoras",
   "todayPillToTake": "💊 Pildoras para sa araw na ito",
   "number": " (pildoras)",
-  "dayNumber": "th day",
+  "dayNumber": " araw",
   "recordedMenstruationStartDate": "Naitala ang simula ng regla mula sa {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Simula ng regla",
   "menstruationEndDate": "Huling araw ng regla",

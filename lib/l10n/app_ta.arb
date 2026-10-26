@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 இன்று மாத்திரை எடுத்துக்கொள்ள வேண்டிய நாள்",
   "todayPillToTake": "💊 இன்றைய மாத்திரை",
   "number": " (மாத்திரை)",
-  "dayNumber": "th day",
+  "dayNumber": "ஆம் நாள்",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} இல் இருந்து மாதவிடாய் தொடங்கியதாக பதிவு செய்யப்பட்டது",
   "menstruationStartDate": "மாதவிடாய் தொடக்க நாள்",
   "menstruationEndDate": "மாதவிடாய் முடிவு நாள்",

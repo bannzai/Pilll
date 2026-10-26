@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 আজ পিল খাওয়ার দিন",
   "todayPillToTake": "💊 আজকের পিল",
   "number": " (পিল)",
-  "dayNumber": "th day",
+  "dayNumber": " দিন",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} থেকে ঋতুস্রাব শুরু হিসেবে রেকর্ড করা হয়েছে",
   "menstruationStartDate": "মাসিক শুরুর তারিখ",
   "menstruationEndDate": "মাসিক শেষের তারিখ",

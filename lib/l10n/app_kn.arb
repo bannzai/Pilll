@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 ಇಂದು ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ದಿನ",
   "todayPillToTake": "💊 ಇಂದಿನ ಮಾತ್ರೆ",
   "number": " (ಮಾತ್ರೆ)",
-  "dayNumber": "th day",
+  "dayNumber": "ನೇ ದಿನ",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} ಇಂದ ಮಾಸಿಕ ಪ್ರಾರಂಭವಾಗಿ ದಾಖಲಿಸಲಾಗಿದೆ",
   "menstruationStartDate": "ಋತುಚಕ್ರ ಆರಂಭ ದಿನಾಂಕ",
   "menstruationEndDate": "ಮುಟ್ಟು ಮುಗಿದ ದಿನ",

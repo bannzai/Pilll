@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Danes je dan za jemanje tabletke",
   "todayPillToTake": "💊 Današnja tabletka",
   "number": ". tableta",
-  "dayNumber": "th day",
+  "dayNumber": ". dan",
   "recordedMenstruationStartDate": "Od {DateTimeFormatterMonthAndDay} je zabeležen začetek menstruacije",
   "menstruationStartDate": "Prvi dan menstruacije",
   "menstruationEndDate": "konec menstruacije",

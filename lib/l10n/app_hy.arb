@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 Այսօր հաբ ընդունելու օրն է",
   "todayPillToTake": "💊 Այսօրվա հաբը",
   "number": " (հաբ)",
-  "dayNumber": "th day",
+  "dayNumber": "-րդ օր",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}-ից կանամսի սկիզբը գրանցվել է",
   "menstruationStartDate": "Դաշտանային ցիկլի սկիզբ",
   "menstruationEndDate": "Ամսական ավարտ",

@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 අද පෙත්ත ගත යුතු දිනයයි",
   "todayPillToTake": "💊 අද ගත යුතු පෙත්ත",
   "number": " (පෙත්ත)",
-  "dayNumber": "th day",
+  "dayNumber": "වන දිනය",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} සිට ඔසප් ආරම්භය ලෙස සටහන් කරන ලදී",
   "menstruationStartDate": "මසිකපේ ආරම්භක දිනය",
   "menstruationEndDate": "ආර්තව අවසන් දිනය",

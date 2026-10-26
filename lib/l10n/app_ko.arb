@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 오늘은 약을 복용하는 날이에요",
   "todayPillToTake": "💊 오늘 먹을 피임약",
   "number": "번",
-  "dayNumber": "th day",
+  "dayNumber": "일째",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}부터 생리 시작으로 기록했습니다",
   "menstruationStartDate": "생리 시작일",
   "menstruationEndDate": "생리 종료일",

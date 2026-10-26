@@ -151,7 +151,7 @@
   "todayIsTaking": "💊 اليوم موعد تناول الحبة",
   "todayPillToTake": "💊 حبة اليوم",
   "number": " (حبة)",
-  "dayNumber": "th day",
+  "dayNumber": " يوم",
   "recordedMenstruationStartDate": "تم تسجيل بداية الدورة الشهرية من {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "تاريخ بداية الدورة الشهرية",
   "menstruationEndDate": "تاريخ انتهاء الدورة الشهرية",
