@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "A menstruáció {diffPlusOne}. napja",
   "recordMenstruation": "Menstruáció rögzítése",
   "menstruationHistory": "menstruációs előzmények",
-  "menstruationFromToday": "Ma kezdődő menstruáció",
+  "menstruationFromToday": "A menstruáció ma kezdődik",
   "menstruationFromYesterday": "Menstruáció tegnap óta",
   "selectMenstruationStartDate": "Menstruáció kezdődátumának kiválasztása",
   "menstruationCycle": "{menstruationDuration} napos ciklus",

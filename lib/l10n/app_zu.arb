@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "Usuku lwesi-{diffPlusOne} lokuya esikhathini",
   "recordMenstruation": "Sicela uqophe ukuya esikhathini",
   "menstruationHistory": "Umlando wokuya esikhathini",
-  "menstruationFromToday": "Isicubu kusukela namuhla",
+  "menstruationFromToday": "Ukuya esikhathini kuqala namuhla",
   "menstruationFromYesterday": "Kusukela izolo",
   "selectMenstruationStartDate": "Khetha usuku lokuqala kwenyanga",
   "menstruationCycle": "umjikelezo {menstruationDuration} izinsuku",

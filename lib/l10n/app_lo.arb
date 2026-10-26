@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "ມື້ທີ {diffPlusOne} ຂອງປະຈຳເດືອນ",
   "recordMenstruation": "ບັນທຶກປະຈຳເດືອນ",
   "menstruationHistory": "ປະຫວັດປະຈຳເດືອນ",
-  "menstruationFromToday": "ມື້ນີ້ເລີ່ມມີແດງ",
+  "menstruationFromToday": "ປະຈຳເດືອນເລີ່ມມື້ນີ້",
   "menstruationFromYesterday": "ມື້ວານມີເດືອນ",
   "selectMenstruationStartDate": "ເລືອກວັນເລີ່ມຕົ້ນປະຈຳເດືອນ",
   "menstruationCycle": "{menstruationDuration}ວັນ ວົງຈອນ",

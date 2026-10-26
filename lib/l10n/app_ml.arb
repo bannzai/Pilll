@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "ആർത്തവത്തിന്റെ {diffPlusOne}-ാം ദിവസം",
   "recordMenstruation": "ആർത്തവം രേഖപ്പെടുത്തൂ",
   "menstruationHistory": "ആർത്തവ ചരിത്രം",
-  "menstruationFromToday": "ഇന്നു മുതൽ ആർത്തവം",
+  "menstruationFromToday": "ആർത്തവം ഇന്ന് ആരംഭിക്കുന്നു",
   "menstruationFromYesterday": "ഇന്നലെ മുതൽ ആർത്തവം",
   "selectMenstruationStartDate": "മാസിക ആരംഭ ദിനം തിരഞ്ഞെടുക്കുക",
   "menstruationCycle": "{menstruationDuration} ദിവസത്തെ ചക്രം",

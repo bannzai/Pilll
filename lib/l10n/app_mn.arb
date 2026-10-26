@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "Сарын тэмдгийн {diffPlusOne} дэх өдөр",
   "recordMenstruation": "Сарын тэмдгийн бүртгэл хийх",
   "menstruationHistory": "сарын тэмдгийн түүх",
-  "menstruationFromToday": "Өнөөдрөөс сарын тэмдэг",
+  "menstruationFromToday": "Сарын тэмдгийн эхлэл өнөөдөр",
   "menstruationFromYesterday": "өчигдрөөс сарын тэмдэг",
   "selectMenstruationStartDate": "Сарын тэмдэг эхлэх өдрийг сонгох",
   "menstruationCycle": "{menstruationDuration} өдрийн мөчлөг",

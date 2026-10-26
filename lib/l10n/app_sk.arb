@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "{diffPlusOne}. deň menštruácie",
   "recordMenstruation": "Zaznamenajte menštruáciu",
   "menstruationHistory": "História menštruácie",
-  "menstruationFromToday": "Menštruácia od dnes",
+  "menstruationFromToday": "Menštruácia sa začína dnes",
   "menstruationFromYesterday": "Menštruácia od včera",
   "selectMenstruationStartDate": "Vybrať dátum začiatku menštruácie",
   "menstruationCycle": "{menstruationDuration}-dňový cyklus",

@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "{diffPlusOne}-й день месячных",
   "recordMenstruation": "Записать месячные",
   "menstruationHistory": "История месячных",
-  "menstruationFromToday": "Месячные с сегодня",
+  "menstruationFromToday": "Месячные начинаются сегодня",
   "menstruationFromYesterday": "Месячные с вчера",
   "selectMenstruationStartDate": "Выбрать дату начала менструации",
   "menstruationCycle": "{menstruationDuration}-дневный цикл",

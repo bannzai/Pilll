@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "ថ្ងៃទី{diffPlusOne} នៃការមករដូវ",
   "recordMenstruation": "កត់ត្រារដូវ",
   "menstruationHistory": "ប្រវត្តិរដូវ",
-  "menstruationFromToday": "រដូវចាប់ពីថ្ងៃនេះ",
+  "menstruationFromToday": "រដូវចាប់ផ្តើមថ្ងៃនេះ",
   "menstruationFromYesterday": "ម្សិលមិញចាប់ផ្តើមរដូវ",
   "selectMenstruationStartDate": "ជ្រើសរើសថ្ងៃចាប់ផ្តើមរដូវ",
   "menstruationCycle": "{menstruationDuration}ថ្ងៃ វដ្ត",

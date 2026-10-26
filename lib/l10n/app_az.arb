@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "Aybaşının {diffPlusOne}-ci günü",
   "recordMenstruation": "Aybaşını qeyd edin",
   "menstruationHistory": "Aybaşı tarixçəsi",
-  "menstruationFromToday": "Bu gündən menstruasiya",
+  "menstruationFromToday": "Aybaşı bu gün başlayır",
   "menstruationFromYesterday": "Dünəndən menstruasiya",
   "selectMenstruationStartDate": "Menstruasiya başlama tarixini seçin",
   "menstruationCycle": "{menstruationDuration} günlük tsikl",

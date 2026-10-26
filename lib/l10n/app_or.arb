@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "ଋତୁସ୍ରାବର {diffPlusOne}ତମ ଦିନ",
   "recordMenstruation": "ମାସିକ ରେକର୍ଡ କରନ୍ତୁ",
   "menstruationHistory": "ମାସିକ ଇତିହାସ",
-  "menstruationFromToday": "ଆଜିଠାରୁ ମାସିକ",
+  "menstruationFromToday": "ଆଜିଠାରୁ ମାସିକ ଆରମ୍ଭ",
   "menstruationFromYesterday": "କାଲିରୁ ମାସିକ",
   "selectMenstruationStartDate": "ମାସିକ ଆରମ୍ଭ ଦିନ ଚୟନ କରନ୍ତୁ",
   "menstruationCycle": "{menstruationDuration}ଦିନ ଚକ୍ର",

@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "Dag {diffPlusOne} av mensen",
   "recordMenstruation": "Registrera mens",
   "menstruationHistory": "Menshistorik",
-  "menstruationFromToday": "Mens idag",
+  "menstruationFromToday": "Mensen börjar i dag",
   "menstruationFromYesterday": "Mens från igår",
   "selectMenstruationStartDate": "Välj menstruationsstartdatum",
   "menstruationCycle": "{menstruationDuration} dagars cykel",

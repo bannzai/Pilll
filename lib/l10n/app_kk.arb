@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "Етеккірдің {diffPlusOne}-күні",
   "recordMenstruation": "Етеккірді тіркеңіз",
   "menstruationHistory": "Етеккір тарихы",
-  "menstruationFromToday": "Бүгіннен етек көру",
+  "menstruationFromToday": "Етеккір бүгін басталады",
   "menstruationFromYesterday": "Кешеден етек",
   "selectMenstruationStartDate": "Айбасу басталу күнін таңдау",
   "menstruationCycle": "{menstruationDuration} күндік цикл",

@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "Dia {diffPlusOne} de la regla",
   "recordMenstruation": "Registra la regla",
   "menstruationHistory": "Historial de la regla",
-  "menstruationFromToday": "Regla avui",
+  "menstruationFromToday": "La regla comença avui",
   "menstruationFromYesterday": "Regla des d'ahir",
   "selectMenstruationStartDate": "Selecciona la data d'inici de la menstruació",
   "menstruationCycle": "cicle de {menstruationDuration} dies",

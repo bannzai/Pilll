@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "Ziua {diffPlusOne} a menstruației",
   "recordMenstruation": "Înregistrează menstruația",
   "menstruationHistory": "Istoricul menstruației",
-  "menstruationFromToday": "Menstruație de astăzi",
+  "menstruationFromToday": "Menstruația începe azi",
   "menstruationFromYesterday": "Menstruația de ieri",
   "selectMenstruationStartDate": "Selectează data de început a menstruației",
   "menstruationCycle": "ciclu de {menstruationDuration} zile",

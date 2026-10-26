@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "Ika-{diffPlusOne} araw ng regla",
   "recordMenstruation": "Itala ang regla ninyo",
   "menstruationHistory": "Kasaysayan ng regla",
-  "menstruationFromToday": "Regla mula ngayon",
+  "menstruationFromToday": "Simula ng regla ngayong araw",
   "menstruationFromYesterday": "Regla mula kahapon",
   "selectMenstruationStartDate": "Piliin ang petsa ng simula ng regla",
   "menstruationCycle": "{menstruationDuration} araw na siklo",

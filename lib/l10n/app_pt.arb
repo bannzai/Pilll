@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "{diffPlusOne}º dia da menstruação",
   "recordMenstruation": "Registre a menstruação",
   "menstruationHistory": "Histórico de menstruação",
-  "menstruationFromToday": "Período a partir de hoje",
+  "menstruationFromToday": "A menstruação começa hoje",
   "menstruationFromYesterday": "Menstruação desde ontem",
   "selectMenstruationStartDate": "Selecionar data de início da menstruação",
   "menstruationCycle": "Ciclo de {menstruationDuration} dias",

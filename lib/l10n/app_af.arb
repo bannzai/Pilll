@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "Dag {diffPlusOne}",
   "recordMenstruation": "Teken maandstonde aan",
   "menstruationHistory": "Geskiedenis van maandstonde",
-  "menstruationFromToday": "Menstruasie begin vandag",
+  "menstruationFromToday": "Maandstonde begin vandag",
   "menstruationFromYesterday": "Menstruasie vanaf gister",
   "selectMenstruationStartDate": "Kies periode begindatum",
   "menstruationCycle": "{menstruationDuration} dae siklus",

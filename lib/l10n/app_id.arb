@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "Hari ke-{diffPlusOne} haid",
   "recordMenstruation": "Catat haid",
   "menstruationHistory": "Riwayat haid",
-  "menstruationFromToday": "Haid mulai hari ini",
+  "menstruationFromToday": "Haid dimulai hari ini",
   "menstruationFromYesterday": "Haid sejak kemarin",
   "selectMenstruationStartDate": "Pilih tanggal mulai menstruasi",
   "menstruationCycle": "siklus {menstruationDuration} hari",

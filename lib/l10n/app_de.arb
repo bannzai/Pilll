@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "{diffPlusOne}. Tag der Periode",
   "recordMenstruation": "Periode eintragen",
   "menstruationHistory": "Verlauf deiner Periode",
-  "menstruationFromToday": "Periode ab heute",
+  "menstruationFromToday": "Periode beginnt heute",
   "menstruationFromYesterday": "Periode seit gestern",
   "selectMenstruationStartDate": "Periodenstart wählen",
   "menstruationCycle": "{menstruationDuration}-Tage-Zyklus",

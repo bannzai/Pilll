@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "Siku ya {diffPlusOne} ya hedhi",
   "recordMenstruation": "Tafadhali rekodi hedhi",
   "menstruationHistory": "Historia ya hedhi",
-  "menstruationFromToday": "Hedhi kutoka leo",
+  "menstruationFromToday": "Hedhi inaanza leo",
   "menstruationFromYesterday": "Hedhi tangu jana",
   "selectMenstruationStartDate": "Chagua siku ya mwanzo wa hedhi",
   "menstruationCycle": "Mzunguko wa siku {menstruationDuration}",

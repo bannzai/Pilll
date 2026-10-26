@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "მენსტრუაციის {diffPlusOne}-ე დღე",
   "recordMenstruation": "მენსტრუაციის ჩაწერა",
   "menstruationHistory": "მენსტრუაციის ისტორია",
-  "menstruationFromToday": "დღესდან მენსტრუაცია",
+  "menstruationFromToday": "მენსტრუაცია დღეს იწყება",
   "menstruationFromYesterday": "გუშინიდან მენსტრუაცია",
   "selectMenstruationStartDate": "აირჩიეთ მენსტრუაციის დაწყების თარიღი",
   "menstruationCycle": "{menstruationDuration} დღის ციკლი",

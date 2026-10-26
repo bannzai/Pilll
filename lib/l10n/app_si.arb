@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "ඔසප් සමයේ {diffPlusOne} වන දිනය",
   "recordMenstruation": "ඔසප් වීම සටහන් කරන්න",
   "menstruationHistory": "ඔසප් ඉතිහාසය",
-  "menstruationFromToday": "අද ඔසප් වීම",
+  "menstruationFromToday": "ඔසප් වීම අද සිට ආරම්භ වේ",
   "menstruationFromYesterday": "ඊයේ සිට ඔසප්",
   "selectMenstruationStartDate": "ආර්තව ආරම්භක දිනය තෝරන්න",
   "menstruationCycle": "{menstruationDuration} දින චක්‍රය",

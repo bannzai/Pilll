@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "{diffPlusOne}. dan menstruacije",
   "recordMenstruation": "Zabilježite menstruaciju",
   "menstruationHistory": "Povijest menstruacije",
-  "menstruationFromToday": "Menstruacija od danas",
+  "menstruationFromToday": "Menstruacija počinje danas",
   "menstruationFromYesterday": "Menstruacija od jučer",
   "selectMenstruationStartDate": "Odaberite datum početka menstruacije",
   "menstruationCycle": "{menstruationDuration}-dnevni ciklus",

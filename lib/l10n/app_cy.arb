@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "Diwrnod {diffPlusOne} o’r mislif",
   "recordMenstruation": "Cofnodi mislif",
   "menstruationHistory": "Hanes mislif",
-  "menstruationFromToday": "Misglwyf heddiw",
+  "menstruationFromToday": "Mislif yn dechrau heddiw",
   "menstruationFromYesterday": "Misglwyf ers ddoe",
   "selectMenstruationStartDate": "Dewis dyddiad dechrau'r misglwyf",
   "menstruationCycle": "cylch {menstruationDuration} diwrnod",

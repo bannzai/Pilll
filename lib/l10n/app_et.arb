@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "Menstruatsiooni {diffPlusOne}. päev",
   "recordMenstruation": "Märgi päevad üles",
   "menstruationHistory": "Päevade ajalugu",
-  "menstruationFromToday": "Menstruatsioon täna",
+  "menstruationFromToday": "Päevad algavad täna",
   "menstruationFromYesterday": "Menstruatsioon alates eilsest",
   "selectMenstruationStartDate": "Vali menstruatsiooni alguskuupäev",
   "menstruationCycle": "{menstruationDuration} päeva tsükkel",

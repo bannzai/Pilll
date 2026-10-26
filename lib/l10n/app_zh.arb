@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "经期第 {diffPlusOne} 天",
   "recordMenstruation": "记录经期",
   "menstruationHistory": "经期记录",
-  "menstruationFromToday": "今日开始月经",
+  "menstruationFromToday": "经期从今天开始",
   "menstruationFromYesterday": "昨天来月经",
   "selectMenstruationStartDate": "选择月经开始日期",
   "menstruationCycle": "{menstruationDuration}天周期",

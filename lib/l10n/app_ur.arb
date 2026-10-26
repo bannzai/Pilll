@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "ماہواری کا {diffPlusOne}واں دن",
   "recordMenstruation": "ماہواری درج کریں",
   "menstruationHistory": "ماہواری کی تاریخ",
-  "menstruationFromToday": "آج سے حیض",
+  "menstruationFromToday": "ماہواری آج سے شروع",
   "menstruationFromYesterday": "کل سے ماہواری",
   "selectMenstruationStartDate": "حیض کی شروعات کی تاریخ منتخب کریں",
   "menstruationCycle": "{menstruationDuration} دنوں کا دورانیہ",

@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "יום {diffPlusOne} לווסת",
   "recordMenstruation": "לתעד מחזור",
   "menstruationHistory": "היסטוריית המחזור",
-  "menstruationFromToday": "וסת מהיום",
+  "menstruationFromToday": "תחילת המחזור היום",
   "menstruationFromYesterday": "וסת מאתמול",
   "selectMenstruationStartDate": "בחר תאריך תחילת הווסת",
   "menstruationCycle": "מחזור {menstruationDuration} ימים",

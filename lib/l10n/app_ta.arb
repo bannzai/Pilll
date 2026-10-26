@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "மாதவிடாயின் {diffPlusOne}ஆம் நாள்",
   "recordMenstruation": "மாதவிடாயைப் பதிவு செய்யுங்கள்",
   "menstruationHistory": "மாதவிடாய் வரலாறு",
-  "menstruationFromToday": "இன்று முதல் மாதவிடாய்",
+  "menstruationFromToday": "மாதவிடாய் இன்று தொடங்குகிறது",
   "menstruationFromYesterday": "நேற்றிலிருந்து மாதவிடாய்",
   "selectMenstruationStartDate": "மாதவிடாய் தொடக்க தேதியைத் தேர்ந்தெடுக்கவும்",
   "menstruationCycle": "{menstruationDuration} நாள் சுழற்சி",

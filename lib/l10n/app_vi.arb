@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "Ngày thứ {diffPlusOne} của kỳ kinh",
   "recordMenstruation": "Ghi lại kinh nguyệt",
   "menstruationHistory": "Lịch sử kinh nguyệt",
-  "menstruationFromToday": "Hành kinh từ hôm nay",
+  "menstruationFromToday": "Kinh nguyệt bắt đầu hôm nay",
   "menstruationFromYesterday": "Kinh nguyệt từ hôm qua",
   "selectMenstruationStartDate": "Chọn ngày bắt đầu kinh nguyệt",
   "menstruationCycle": "Chu kỳ {menstruationDuration} ngày",

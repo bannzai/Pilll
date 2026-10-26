@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "মাহেকীয়াৰ {diffPlusOne}তম দিন",
   "recordMenstruation": "মাহেকীয়া ৰেকৰ্ড কৰক",
   "menstruationHistory": "মাহেকীয়াৰ ইতিহাস",
-  "menstruationFromToday": "আজিৰ পৰা ঋতুস্ৰাব",
+  "menstruationFromToday": "আজিৰ পৰা মাহেকীয়া",
   "menstruationFromYesterday": "কালিৰ পৰা মাহেকীয়া",
   "selectMenstruationStartDate": "মাহেকীয়াৰ আৰম্ভণি তাৰিখ বাছনি কৰক",
   "menstruationCycle": "{menstruationDuration} দিনৰ চক্ৰ",

@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "Mēnešreižu {diffPlusOne}. diena",
   "recordMenstruation": "Atzīmējiet mēnešreizes",
   "menstruationHistory": "mēnešreižu vēsture",
-  "menstruationFromToday": "Menstruācija no šodienas",
+  "menstruationFromToday": "Mēnešreizes sākas šodien",
   "menstruationFromYesterday": "Menstruācija no vakar",
   "selectMenstruationStartDate": "Izvēlēties menstruācijas sākuma dienu",
   "menstruationCycle": "{menstruationDuration} dienu cikls",

@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "Día {diffPlusOne} da regra",
   "recordMenstruation": "Rexistra a regra",
   "menstruationHistory": "Historial da regra",
-  "menstruationFromToday": "Menstruación desde hoxe",
+  "menstruationFromToday": "A regra comeza hoxe",
   "menstruationFromYesterday": "Regra desde onte",
   "selectMenstruationStartDate": "Seleccionar data de inicio da menstruación",
   "menstruationCycle": "ciclo de {menstruationDuration} días",

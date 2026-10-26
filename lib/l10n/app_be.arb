@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "{diffPlusOne}-ы дзень месячных",
   "recordMenstruation": "Запісаць месячныя",
   "menstruationHistory": "Гісторыя месячных",
-  "menstruationFromToday": "Месячныя сёння",
+  "menstruationFromToday": "Месячныя пачынаюцца сёння",
   "menstruationFromYesterday": "Месячныя з учора",
   "selectMenstruationStartDate": "Выбраць дату пачатку менструацыі",
   "menstruationCycle": "Цыкл {menstruationDuration} дзён",

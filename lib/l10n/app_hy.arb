@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "Դաշտանի {diffPlusOne}-րդ օրը",
   "recordMenstruation": "Գրանցել դաշտանը",
   "menstruationHistory": "Դաշտանի պատմություն",
-  "menstruationFromToday": "Այսօրից դաշտանություն",
+  "menstruationFromToday": "Դաշտանը սկսվում է այսօր",
   "menstruationFromYesterday": "Երեկվանից մենստրուացիա",
   "selectMenstruationStartDate": "Ընտրեք մենստրուացիայի սկզբի օրը",
   "menstruationCycle": "{menstruationDuration}օրյա ցիկլ",

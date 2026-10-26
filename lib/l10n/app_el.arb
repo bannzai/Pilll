@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "{diffPlusOne}η ημέρα περιόδου",
   "recordMenstruation": "Καταγραφή περιόδου",
   "menstruationHistory": "Ιστορικό περιόδου",
-  "menstruationFromToday": "Περίοδος από σήμερα",
+  "menstruationFromToday": "Έναρξη περιόδου σήμερα",
   "menstruationFromYesterday": "Περίοδος από χθες",
   "selectMenstruationStartDate": "Επιλέξτε ημερομηνία έναρξης περιόδου",
   "menstruationCycle": "Κύκλος {menstruationDuration} ημερών",

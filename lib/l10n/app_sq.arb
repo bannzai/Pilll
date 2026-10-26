@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "Dita {diffPlusOne} e menstruacioneve",
   "recordMenstruation": "Regjistroni menstruacionin",
   "menstruationHistory": "Historia e menstruacioneve",
-  "menstruationFromToday": "Menstruacion nga sot",
+  "menstruationFromToday": "Menstruacioni fillon sot",
   "menstruationFromYesterday": "Menstruacion nga dje",
   "selectMenstruationStartDate": "Zgjidh datën e fillimit të menstruacionit",
   "menstruationCycle": "{menstruationDuration} ditë cikël",

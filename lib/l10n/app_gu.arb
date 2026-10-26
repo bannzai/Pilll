@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "માસિકનો {diffPlusOne}મો દિવસ",
   "recordMenstruation": "માસિકની નોંધ કરો",
   "menstruationHistory": "માસિકનો ઇતિહાસ",
-  "menstruationFromToday": "આજથી માસિક",
+  "menstruationFromToday": "આજથી માસિક શરૂ",
   "menstruationFromYesterday": "ગઈકાલથી માસિક ધર્મ",
   "selectMenstruationStartDate": "માસિક ધર્મની શરૂઆતની તારીખ પસંદ કરો",
   "menstruationCycle": "{menstruationDuration} દિવસનું ચક્ર",

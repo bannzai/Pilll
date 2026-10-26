@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "생리 {diffPlusOne}일째",
   "recordMenstruation": "생리 기록",
   "menstruationHistory": "생리 기록",
-  "menstruationFromToday": "오늘부터 생리",
+  "menstruationFromToday": "오늘부터 생리 시작",
   "menstruationFromYesterday": "어제부터 생리",
   "selectMenstruationStartDate": "생리 시작일 선택",
   "menstruationCycle": "{menstruationDuration}일 주기",

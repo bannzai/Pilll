@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "روز {diffPlusOne} قاعدگی",
   "recordMenstruation": "ثبت پریود",
   "menstruationHistory": "تاریخچه پریود",
-  "menstruationFromToday": "قاعدگی از امروز",
+  "menstruationFromToday": "شروع پریود از امروز",
   "menstruationFromYesterday": "قاعدگی از دیروز",
   "selectMenstruationStartDate": "انتخاب تاریخ شروع قاعدگی",
   "menstruationCycle": "دوره {menstruationDuration} روزه",

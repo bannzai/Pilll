@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "पाळीचा {diffPlusOne}वा दिवस",
   "recordMenstruation": "मासिक पाळीची नोंद करा",
   "menstruationHistory": "मासिक पाळीचा इतिहास",
-  "menstruationFromToday": "आजपासून मासिक पाळी",
+  "menstruationFromToday": "आजपासून मासिक पाळी सुरू",
   "menstruationFromYesterday": "काल पासून मासिक पाळी",
   "selectMenstruationStartDate": "मासिक पाळीची सुरुवाती तारीख निवडा",
   "menstruationCycle": "{menstruationDuration} दिवसांचे चक्र",

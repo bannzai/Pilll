@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "মাসিকের {diffPlusOne}তম দিন",
   "recordMenstruation": "মাসিকের তথ্য লিখুন",
   "menstruationHistory": "মাসিকের ইতিহাস",
-  "menstruationFromToday": "আজ থেকে মাসিক",
+  "menstruationFromToday": "আজ থেকে মাসিক শুরু",
   "menstruationFromYesterday": "গতকাল থেকে মাসিক",
   "selectMenstruationStartDate": "মাসিক শুরুর তারিখ নির্বাচন করুন",
   "menstruationCycle": "{menstruationDuration} দিনের চক্র",

@@ -162,7 +162,7 @@
   "menstruationProgressingDay": "{diffPlusOne}. dagur blæðinga",
   "recordMenstruation": "Skrá blæðingar",
   "menstruationHistory": "Saga blæðinga",
-  "menstruationFromToday": "Blæðingar byrja í dag",
+  "menstruationFromToday": "Blæðingar hefjast í dag",
   "menstruationFromYesterday": "Blæðingar frá í gær",
   "selectMenstruationStartDate": "Veldu upphafsdag tíðablæðinga",
   "menstruationCycle": "{menstruationDuration} daga hringrás",
