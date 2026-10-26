@@ -560,7 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Tafadhali chagua {date} au tarehe ya awali zaidi kuwa mwanzo wa mapumziko ya kumeza vidonge",
   "addPausePeriod": "Ongeza kipindi cha mapumziko ya kumeza vidonge",
   "addedPausePeriod": "Kipindi cha mapumziko ya kumeza vidonge kimeongezwa",
-  "pausePeriodOverlapsOther": "Huwezi kuchagua kipindi kinachopishana na kipindi kingine cha mapumziko ya kumeza",
+  "pausePeriodOverlapsOther": "Huwezi kuchagua kipindi kinachoingiliana na kipindi kingine cha mapumziko ya kumeza vidonge",
   "pauseEndDateMustBeAfterStartDate": "Tafadhali chagua tarehe iliyo baada ya tarehe ya kuanza kama tarehe ya kumaliza mapumziko ya matumizi.",
   "plannedResumeDateOptional": "Tarehe iliyopangwa ya kuanza tena kutumia (hiari)",
   "plannedResumeDateNotSet": "Haijawekwa",

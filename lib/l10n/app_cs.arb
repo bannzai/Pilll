@@ -560,7 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Pro začátek pauzy v užívání pilulek prosím vyberte {date} nebo dřívější datum",
   "addPausePeriod": "Přidat pauzu v užívání pilulek",
   "addedPausePeriod": "Přestávka v užívání pilulek byla přidána",
-  "pausePeriodOverlapsOther": "Nelze vybrat období, které se překrývá s jiným obdobím pauzy v užívání",
+  "pausePeriodOverlapsOther": "Nelze vybrat období, které se překrývá s jinou pauzou v užívání pilulek",
   "pauseEndDateMustBeAfterStartDate": "Jako datum konce přestávky v užívání prosím vyberte datum po datu zahájení.",
   "plannedResumeDateOptional": "Plánované datum obnovení užívání (volitelné)",
   "plannedResumeDateNotSet": "Nenastaveno",

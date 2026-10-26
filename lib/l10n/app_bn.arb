@@ -560,7 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "পিল খাওয়ার বিরতির শুরুর দিন হিসেবে অনুগ্রহ করে {date} বা তার আগের কোনো দিন বেছে নিন",
   "addPausePeriod": "পিল খাওয়ার বিরতি যোগ করুন",
   "addedPausePeriod": "পিল খাওয়ার বিরতির সময় যোগ করা হয়েছে",
-  "pausePeriodOverlapsOther": "অন্য কোনো ওষুধ খাওয়া বন্ধের সময়ের সঙ্গে ওভারল্যাপ করা সময় বেছে নেওয়া যাবে না",
+  "pausePeriodOverlapsOther": "অন্য একটি পিল খাওয়ার বিরতির সঙ্গে মিলে যায় এমন সময়কাল আপনি বেছে নিতে পারবেন না",
   "pauseEndDateMustBeAfterStartDate": "অনুগ্রহ করে সেবন বিরতির শেষ তারিখ হিসেবে শুরুর তারিখের পরের একটি তারিখ নির্বাচন করুন।",
   "plannedResumeDateOptional": "পুনরায় সেবন শুরুর নির্ধারিত তারিখ (ঐচ্ছিক)",
   "plannedResumeDateNotSet": "সেট করা হয়নি",

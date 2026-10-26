@@ -560,7 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Escolle {date} ou unha data anterior para comezar a pausa da pílula",
   "addPausePeriod": "Engade unha pausa na toma da pílula",
   "addedPausePeriod": "Engadiuse o período de descanso da pílula",
-  "pausePeriodOverlapsOther": "Non se pode seleccionar un período que se solape con outro período de pausa de toma",
+  "pausePeriodOverlapsOther": "Non podes seleccionar un período que se solape con outra pausa na toma da pílula",
   "pauseEndDateMustBeAfterStartDate": "Selecciona unha data posterior á data de inicio como data de fin da pausa de toma, por favor.",
   "plannedResumeDateOptional": "Data prevista para retomar a toma (opcional)",
   "plannedResumeDateNotSet": "Sen configurar",

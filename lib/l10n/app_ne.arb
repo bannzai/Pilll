@@ -560,7 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "चक्की खाने विश्रामको सुरु मितिका लागि कृपया {date} वा त्यसभन्दा अघिको मिति छान्नुहोस्",
   "addPausePeriod": "चक्की सेवनमा विराम थप्नुहोस्",
   "addedPausePeriod": "चक्की खाने विश्राम अवधि थपिएको छ",
-  "pausePeriodOverlapsOther": "अर्को सेवन विश्राम अवधिसँग ओभरल्याप हुने अवधि चयन गर्न सकिँदैन",
+  "pausePeriodOverlapsOther": "चक्की सेवनको अर्को विश्राम अवधिसँग जुध्ने अवधि तपाईंले छान्न सक्नुहुन्न",
   "pauseEndDateMustBeAfterStartDate": "कृपया सेवन विश्रामको समाप्ति मितिका लागि सुरु मितिपछिको मिति चयन गर्नुहोस्।",
   "plannedResumeDateOptional": "फेरि सेवन सुरु गर्ने निर्धारित मिति (वैकल्पिक)",
   "plannedResumeDateNotSet": "सेट गरिएको छैन",

@@ -560,7 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "A tablettaszedési szünet kezdetének {date} vagy korábbi dátumot válassz",
   "addPausePeriod": "Tablettaszedési szünet hozzáadása",
   "addedPausePeriod": "A tablettaszedési szünet hozzáadva",
-  "pausePeriodOverlapsOther": "Nem választható ki olyan időszak, amely átfedésben van egy másik szedési szünettel",
+  "pausePeriodOverlapsOther": "Nem választhatsz olyan időszakot, amely átfedésben van egy másik tablettaszedési szünettel",
   "pauseEndDateMustBeAfterStartDate": "Kérjük, a szedési szünet befejezési dátumaként a kezdőnapnál későbbi dátumot válasszon.",
   "plannedResumeDateOptional": "A szedés tervezett újrakezdésének dátuma (nem kötelező)",
   "plannedResumeDateNotSet": "Nincs beállítva",

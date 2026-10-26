@@ -560,7 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Lūdzu, izvēlieties {date} vai agrāku datumu kā tablešu lietošanas pārtraukuma sākumu",
   "addPausePeriod": "Pievienot tablešu lietošanas pārtraukumu",
   "addedPausePeriod": "Pievienots tablešu lietošanas pārtraukuma periods",
-  "pausePeriodOverlapsOther": "Nevar izvēlēties periodu, kas pārklājas ar citu lietošanas pārtraukuma periodu",
+  "pausePeriodOverlapsOther": "Nevarat izvēlēties periodu, kas pārklājas ar citu tablešu lietošanas pārtraukumu",
   "pauseEndDateMustBeAfterStartDate": "Lūdzu, izvēlieties lietošanas pārtraukuma beigu datumu, kas ir pēc sākuma datuma.",
   "plannedResumeDateOptional": "Plānotais lietošanas atsākšanas datums (neobligāti)",
   "plannedResumeDateNotSet": "Nav iestatīts",

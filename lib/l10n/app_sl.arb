@@ -560,7 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Za začetek premora pri jemanju tablet izberite {date} ali zgodnejši datum",
   "addPausePeriod": "Dodajte premor pri jemanju tablet",
   "addedPausePeriod": "Obdobje premora pri jemanju tablet je dodano",
-  "pausePeriodOverlapsOther": "Ni mogoče izbrati obdobja, ki se prekriva z drugim obdobjem premora pri jemanju",
+  "pausePeriodOverlapsOther": "Ne morete izbrati obdobja, ki se prekriva z drugim premorom pri jemanju tablet",
   "pauseEndDateMustBeAfterStartDate": "Prosimo, izberite datum po začetnem datumu kot datum konca premora pri jemanju.",
   "plannedResumeDateOptional": "Predvideni datum ponovnega začetka jemanja (izbirno)",
   "plannedResumeDateNotSet": "Ni nastavljeno",

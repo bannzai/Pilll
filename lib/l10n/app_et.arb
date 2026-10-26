@@ -560,7 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Vali pillipausi alguseks {date} või varasem kuupäev",
   "addPausePeriod": "Lisa pillipaus",
   "addedPausePeriod": "Pillipaus on lisatud",
-  "pausePeriodOverlapsOther": "Ei saa valida perioodi, mis kattub mõne muu võtmise pausi perioodiga",
+  "pausePeriodOverlapsOther": "Sa ei saa valida ajavahemikku, mis kattub mõne teise pillivõtmise pausiga",
   "pauseEndDateMustBeAfterStartDate": "Palun valige võtmispausi lõppkuupäevaks alguskuupäevast hilisem kuupäev.",
   "plannedResumeDateOptional": "Planeeritud tarvitamise jätkamise kuupäev (valikuline)",
   "plannedResumeDateNotSet": "Määramata",

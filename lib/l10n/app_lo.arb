@@ -560,7 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "ກະລຸນາເລືອກ {date} ຫຼືວັນທີກ່ອນນັ້ນ ເປັນວັນເລີ່ມພັກການກິນຢາເມັດ",
   "addPausePeriod": "ເພີ່ມໄລຍະພັກກິນຢາເມັດ",
   "addedPausePeriod": "ເພີ່ມໄລຍະພັກການກິນຢາເມັດແລ້ວ",
-  "pausePeriodOverlapsOther": "ບໍ່ສາມາດເລືອກໄລຍະທີ່ທັບຊ້ອນກັບໄລຍະພັກການກິນອື່ນໄດ້",
+  "pausePeriodOverlapsOther": "ບໍ່ສາມາດເລືອກຊ່ວງເວລາທີ່ຊ້ອນກັບຊ່ວງພັກການກິນຢາເມັດອື່ນໄດ້",
   "pauseEndDateMustBeAfterStartDate": "ກະລຸນາເລືອກວັນທີຫຼັງຈາກວັນເລີ່ມຕົ້ນເປັນວັນສິ້ນສຸດຂອງໄລຍະພັກການຮັບປະທານ.",
   "plannedResumeDateOptional": "ວັນທີວາງແຜນຈະເລີ່ມຮັບປະທານອີກຄັ້ງ (ບໍ່ບັງຄັບ)",
   "plannedResumeDateNotSet": "ຍັງບໍ່ໄດ້ຕັ້ງ",

@@ -560,7 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Wähle für den Beginn deiner Pillenpause bitte {date} oder ein früheres Datum",
   "addPausePeriod": "Pillenpause hinzufügen",
   "addedPausePeriod": "Die Pillenpause wurde hinzugefügt",
-  "pausePeriodOverlapsOther": "Ein Zeitraum, der sich mit einem anderen Einnahmepausen-Zeitraum überschneidet, kann nicht ausgewählt werden",
+  "pausePeriodOverlapsOther": "Du kannst keinen Zeitraum auswählen, der sich mit einer anderen Pillenpause überschneidet",
   "pauseEndDateMustBeAfterStartDate": "Bitte wählen Sie als Enddatum der Einnahmepause ein Datum nach dem Startdatum aus.",
   "plannedResumeDateOptional": "Geplantes Datum für die Wiederaufnahme (optional)",
   "plannedResumeDateNotSet": "Nicht festgelegt",

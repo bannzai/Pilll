@@ -560,7 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Piliin po ang {date} o mas maagang petsa bilang simula ng pahinga sa pag-inom ng pill",
   "addPausePeriod": "Magdagdag ng pahinga sa pag-inom ng pildoras",
   "addedPausePeriod": "Naidagdag na ang pahinga sa pag-inom ng pill",
-  "pausePeriodOverlapsOther": "Hindi puwedeng pumili ng panahong nagsasapaw sa isa pang pahinga sa pag-inom",
+  "pausePeriodOverlapsOther": "Hindi kayo makakapili ng panahong nag-o-overlap sa isa pang pahinga sa pag-inom ng pill",
   "pauseEndDateMustBeAfterStartDate": "Mangyaring pumili ng petsang mas huli kaysa petsa ng pagsisimula bilang petsa ng pagtatapos ng pahinga sa pag-inom.",
   "plannedResumeDateOptional": "Nakatakdang petsa ng muling pag-inom (opsyonal)",
   "plannedResumeDateNotSet": "Hindi pa nakatakda",

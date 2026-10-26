@@ -560,7 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Alege {date} sau o dată anterioară pentru începutul pauzei de la pilulă",
   "addPausePeriod": "Adaugă o pauză în administrarea pilulei",
   "addedPausePeriod": "A fost adăugată perioada de pauză de la pilulă",
-  "pausePeriodOverlapsOther": "Nu puteți selecta o perioadă care se suprapune cu o altă perioadă de pauză de administrare",
+  "pausePeriodOverlapsOther": "Nu poți selecta o perioadă care se suprapune cu o altă pauză de la pilulă",
   "pauseEndDateMustBeAfterStartDate": "Vă rugăm să selectați o dată ulterioară datei de început ca dată de încheiere a pauzei de administrare.",
   "plannedResumeDateOptional": "Data planificată pentru reluarea administrării (opțional)",
   "plannedResumeDateNotSet": "Nesetat",

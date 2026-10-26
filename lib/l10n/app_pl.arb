@@ -560,7 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Wybierz {date} lub wcześniejszą datę jako początek przerwy w przyjmowaniu tabletek",
   "addPausePeriod": "Dodaj przerwę w przyjmowaniu tabletek",
   "addedPausePeriod": "Dodano okres przerwy w przyjmowaniu tabletek",
-  "pausePeriodOverlapsOther": "Nie można wybrać okresu, który nakłada się na inny okres przerwy w przyjmowaniu",
+  "pausePeriodOverlapsOther": "Nie możesz wybrać okresu, który pokrywa się z inną przerwą w braniu tabletek",
   "pauseEndDateMustBeAfterStartDate": "Proszę wybrać datę późniejszą niż data rozpoczęcia jako datę zakończenia przerwy w przyjmowaniu.",
   "plannedResumeDateOptional": "Planowana data wznowienia przyjmowania (opcjonalnie)",
   "plannedResumeDateNotSet": "Nie ustawiono",

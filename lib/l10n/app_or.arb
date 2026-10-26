@@ -560,7 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "ବଟି ଖାଇବାର ବିରତି ଆରମ୍ଭ ପାଇଁ ଦୟାକରି {date} କିମ୍ବା ତା’ ପୂର୍ବର ତାରିଖ ବାଛନ୍ତୁ",
   "addPausePeriod": "ବଟିକା ଖାଇବାର ବିରତି ଯୋଡ଼ନ୍ତୁ",
   "addedPausePeriod": "ବଟି ଖାଇବାର ବିରତି ଅବଧି ଯୋଡ଼ାଯାଇଛି",
-  "pausePeriodOverlapsOther": "ଅନ୍ୟ ଏକ ସେବନ ବିରତି ସମୟ ସହିତ ଓଭରଲ୍ୟାପ୍ ହେଉଥିବା ସମୟସୀମା ବାଛିହେବ ନାହିଁ",
+  "pausePeriodOverlapsOther": "ବଟି ଖାଇବାର ଅନ୍ୟ ଏକ ବିରତି ସହିତ ମେଳ ଖାଉଥିବା ଅବଧି ଆପଣ ବାଛିପାରିବେ ନାହିଁ",
   "pauseEndDateMustBeAfterStartDate": "ଦୟାକରି ସେବନ ବିରତିର ସମାପ୍ତି ତାରିଖ ଭାବେ ଆରମ୍ଭ ତାରିଖ ପରର ଗୋଟିଏ ତାରିଖ ବାଛନ୍ତୁ।",
   "plannedResumeDateOptional": "ପୁଣିଥରେ ସେବନ ଆରମ୍ଭ କରିବାର ନିର୍ଦ୍ଧାରିତ ତାରିଖ (ଇଚ୍ଛାଧୀନ)",
   "plannedResumeDateNotSet": "ସେଟ୍ ହୋଇନାହିଁ",
