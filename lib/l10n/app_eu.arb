@@ -456,7 +456,7 @@
   "featureAppealTryFeature": "Egiaztatu",
   "recommendSignupGeneralTitle": "Kontu bat sortzea gomendatzen dizugu",
   "recommendSignupGeneralDescription": "Erregistratu ondoren, zure datuen babeskopia egin dezakezu",
-  "criticalAlertFeatureAppealTitle": "Jakinarazpenak jaso modu isil moduan ere",
+  "criticalAlertFeatureAppealTitle": "Jaso jakinarazpenak modu isilean ere",
   "criticalAlertFeatureAppealShortDescription": "Ez molestatu moduan ere pilulak hartzea ez ahaztu",
   "criticalAlertFeatureAppealHeadline": "Modu isilean ere jakinarazpenak jasotzen dira",
   "criticalAlertFeatureAppealBody": "Critical Alert aktibatuz gero, Ez molestatu moduan edo isilik moduan egon arren ere, pastillak hartzeko jakinarazpenak jaso ditzakezu. Pastillak hartzearen une garrantzitsua ez galtzeko, ezarri ezazu orain.",

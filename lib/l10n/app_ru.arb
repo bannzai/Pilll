@@ -456,7 +456,7 @@
   "featureAppealTryFeature": "Проверить",
   "recommendSignupGeneralTitle": "Рекомендуем вам создать аккаунт",
   "recommendSignupGeneralDescription": "После регистрации вы сможете создать резервную копию своих данных",
-  "criticalAlertFeatureAppealTitle": "Получать уведомления даже в беззвучном режиме",
+  "criticalAlertFeatureAppealTitle": "Получайте уведомления даже в беззвучном режиме",
   "criticalAlertFeatureAppealShortDescription": "Не пропускайте приём таблеток даже в режиме «Не беспокоить»",
   "criticalAlertFeatureAppealHeadline": "Уведомления приходят даже в беззвучном режиме",
   "criticalAlertFeatureAppealBody": "При включении Critical Alert вы будете получать уведомления о приёме таблеток даже в режиме «Не беспокоить» или беззвучном режиме. Чтобы не пропустить важный момент приёма таблеток, обязательно настройте эту функцию.",

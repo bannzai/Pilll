@@ -456,7 +456,7 @@
   "featureAppealTryFeature": "შემოწმება",
   "recommendSignupGeneralTitle": "გირჩევთ, შექმნათ ანგარიში",
   "recommendSignupGeneralDescription": "რეგისტრაციის შემდეგ შეგიძლიათ თქვენი მონაცემების სარეზერვო ასლის შექმნა",
-  "criticalAlertFeatureAppealTitle": "საილენტო რეჟიმშიც მიიღე შეტყობინებები",
+  "criticalAlertFeatureAppealTitle": "შეტყობინებების მიღება უხმო რეჟიმშიც",
   "criticalAlertFeatureAppealShortDescription": "თუნდაც 'არ შემაწუხოთ' რეჟიმში, არ გამოტოვოთ წამლის მიღება",
   "criticalAlertFeatureAppealHeadline": "შეტყობინებები სიჩუმე რეჟიმშიც მიიღება",
   "criticalAlertFeatureAppealBody": "Critical Alert-ის ჩართვის შემთხვევაში, წამლის მიღების შეტყობინებებს მიიღებთ 'არ შემაწუხო' (Do Not Disturb) და ჩუმი რეჟიმების დროსაც. რათა არ გამოტოვოთ მნიშვნელოვანი წამლის მიღების დრო, გთხოვთ, ჩართოთ ეს ფუნქცია.",

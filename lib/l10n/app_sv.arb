@@ -456,7 +456,7 @@
   "featureAppealTryFeature": "Kontrollera",
   "recommendSignupGeneralTitle": "Vi rekommenderar att du skapar ett konto",
   "recommendSignupGeneralDescription": "När du registrerar dig kan du säkerhetskopiera dina data",
-  "criticalAlertFeatureAppealTitle": "Ta emot aviseringar även i tyst läge",
+  "criticalAlertFeatureAppealTitle": "Få aviseringar även när telefonen är på ljudlöst",
   "criticalAlertFeatureAppealShortDescription": "Missa inte din dos — även i Stör ej-läge",
   "criticalAlertFeatureAppealHeadline": "Aviseringar även i tyst läge",
   "criticalAlertFeatureAppealBody": "Om du aktiverar Critical Alert kan du få påminnelser om att ta din p-piller även när mobilen är i Stör ej-läge eller Ljudlös. Ställ in detta så att du inte missar viktiga tider för att ta din p-piller.",

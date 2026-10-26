@@ -456,7 +456,7 @@
   "featureAppealTryFeature": "Sjekk",
   "recommendSignupGeneralTitle": "Vi anbefaler at du oppretter en konto",
   "recommendSignupGeneralDescription": "Når du registrerer deg, kan du sikkerhetskopiere dataene dine",
-  "criticalAlertFeatureAppealTitle": "Motta varsler selv i stillemodus",
+  "criticalAlertFeatureAppealTitle": "Få varsler selv når telefonen er på lydløs",
   "criticalAlertFeatureAppealShortDescription": "Unngå å glemme pillen, selv i stillemodus",
   "criticalAlertFeatureAppealHeadline": "Varsler leveres selv i stillemodus",
   "criticalAlertFeatureAppealBody": "Når du aktiverer Critical Alert, kan du motta doseringsvarslinger selv i Ikke forstyrr-modus eller stillemodus. Sett det gjerne opp for å ikke gå glipp av viktige tidspunkter for å ta pillene dine.",

@@ -456,7 +456,7 @@
   "featureAppealTryFeature": "Pārbaudiet",
   "recommendSignupGeneralTitle": "Iesakām jums izveidot kontu",
   "recommendSignupGeneralDescription": "Pēc reģistrēšanās varēsiet dublēt savus datus",
-  "criticalAlertFeatureAppealTitle": "Saņemt paziņojumus pat klusajā režīmā",
+  "criticalAlertFeatureAppealTitle": "Saņemiet paziņojumus arī klusuma režīmā",
   "criticalAlertFeatureAppealShortDescription": "Neaizmirstiet tableti arī Netraucēt režīmā",
   "criticalAlertFeatureAppealHeadline": "Tīklājā klusuma režīmā paziņojumi tiks saņemti",
   "criticalAlertFeatureAppealBody": "Ieslēdzot Critical Alert, jūs varēsiet saņemt paziņojumus par tabletes lietošanu pat tad, kad ir ieslēgts “Netraucēt” vai klusuma režīms. Lai nepalaistu garām svarīgu tabletes lietošanas laiku, lūdzu, aktivizējiet šo iestatījumu.",

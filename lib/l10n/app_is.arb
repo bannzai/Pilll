@@ -456,7 +456,7 @@
   "featureAppealTryFeature": "Athugaðu",
   "recommendSignupGeneralTitle": "Við mælum með að þú stofnir aðgang",
   "recommendSignupGeneralDescription": "Þegar þú skráir þig geturðu tekið öryggisafrit af gögnunum þínum",
-  "criticalAlertFeatureAppealTitle": "Móttaka tilkynninga þrátt fyrir þöglu stillingu",
+  "criticalAlertFeatureAppealTitle": "Fáðu tilkynningar þótt síminn sé hljóðlaus",
   "criticalAlertFeatureAppealShortDescription": "Komdu í veg fyrir að þú gleymir tökunni, jafnvel í „Ekki trufla“-ham.",
   "criticalAlertFeatureAppealHeadline": "Tilkynningar þrátt fyrir þögla ham",
   "criticalAlertFeatureAppealBody": "When Critical Alert is enabled, you will receive medication reminders even in Do Not Disturb or Silent mode. Please enable it to avoid missing important pill-taking times.",

@@ -456,7 +456,7 @@
   "featureAppealTryFeature": "ตรวจสอบ",
   "recommendSignupGeneralTitle": "แนะนำให้สร้างบัญชีค่ะ",
   "recommendSignupGeneralDescription": "เมื่อลงทะเบียนแล้ว คุณจะสำรองข้อมูลได้ค่ะ",
-  "criticalAlertFeatureAppealTitle": "รับการแจ้งเตือนแม้ในโหมดเงียบ",
+  "criticalAlertFeatureAppealTitle": "รับการแจ้งเตือนแม้เปิดโหมดเงียบ",
   "criticalAlertFeatureAppealShortDescription": "ป้องกันการลืมกินยาทั้งในโหมดห้ามรบกวน",
   "criticalAlertFeatureAppealHeadline": "แจ้งเตือนมาถึงแม้อยู่ในโหมดเงียบ",
   "criticalAlertFeatureAppealBody": "เมื่อเปิดใช้งาน Critical Alert คุณจะได้รับการแจ้งเตือนการรับประทานยาแม้อยู่ในโหมดห้ามรบกวนหรือโหมดเงียบ ลองเปิดใช้งานดูเพื่อไม่ให้พลาดเวลาสำคัญในการทานยาคุมกำเนิด",

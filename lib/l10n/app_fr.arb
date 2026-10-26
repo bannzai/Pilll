@@ -456,7 +456,7 @@
   "featureAppealTryFeature": "Vérifier",
   "recommendSignupGeneralTitle": "Nous vous recommandons de créer un compte",
   "recommendSignupGeneralDescription": "En vous inscrivant, vous pourrez sauvegarder vos données",
-  "criticalAlertFeatureAppealTitle": "Soyez averti même en mode silencieux",
+  "criticalAlertFeatureAppealTitle": "Recevez des notifications même en mode silencieux",
   "criticalAlertFeatureAppealShortDescription": "Ne manquez jamais une dose, même sur Ne pas déranger",
   "criticalAlertFeatureAppealHeadline": "Recevez des notifications même en mode silencieux",
   "criticalAlertFeatureAppealBody": "Lorsque l'alerte critique est activée, vous pouvez recevoir des rappels de médicaments même lorsque le mode Ne pas déranger ou le mode silencieux est actif. Essayez de l'activer pour vous assurer de ne jamais manquer une dose importante.",
