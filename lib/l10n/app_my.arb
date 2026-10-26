@@ -441,7 +441,7 @@
   "emailAddress": "အီးမေးလ်လိပ်စာ",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "မေးမြန်းလိုသည့်အကြောင်းအရာ",
-  "inquiryContentPlaceholder": "ဆက်သွယ်လိုသည့် အကြောင်းအရာကို ရေးသွင်းပါ",
+  "inquiryContentPlaceholder": "မေးမြန်းလိုသည့်အကြောင်းအရာကို ရေးပေးပါ",
   "debugInfoLabel": "ဒီဘာ့ဂ်အချက်အလက် (အလိုအလျောက်ဖြည့်သွင်းထားသည်)",
   "inquirySent": "မေးမြန်းချက်ပေးပို့ပြီးပါပြီ",
   "sendInquiry": "ပို့မည်",

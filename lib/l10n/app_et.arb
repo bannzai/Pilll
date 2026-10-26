@@ -441,7 +441,7 @@
   "emailAddress": "E-posti aadress",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Päringu üksikasjad",
-  "inquiryContentPlaceholder": "Sisestage oma päring",
+  "inquiryContentPlaceholder": "Kirjuta oma päringu üksikasjad",
   "debugInfoLabel": "Silumisinfo (automaatselt täidetud)",
   "inquirySent": "Päring on saadetud",
   "sendInquiry": "Saada",

@@ -441,7 +441,7 @@
   "emailAddress": "Enderezo de correo electrónico",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Detalles da túa consulta",
-  "inquiryContentPlaceholder": "Introduza o contido da súa consulta",
+  "inquiryContentPlaceholder": "Escribe os detalles da túa consulta",
   "debugInfoLabel": "Información de depuración (autocompletada)",
   "inquirySent": "Enviouse a consulta",
   "sendInquiry": "Enviar",

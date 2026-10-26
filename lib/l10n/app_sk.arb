@@ -441,7 +441,7 @@
   "emailAddress": "E-mailová adresa",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Podrobnosti otázky",
-  "inquiryContentPlaceholder": "Zadajte obsah vášho dotazu",
+  "inquiryContentPlaceholder": "Prosím, opíšte svoju otázku",
   "debugInfoLabel": "Ladiace informácie (automaticky vyplnené)",
   "inquirySent": "Žiadosť bola odoslaná",
   "sendInquiry": "Odoslať",

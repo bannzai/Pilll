@@ -441,7 +441,7 @@
   "emailAddress": "ที่อยู่อีเมล",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "รายละเอียดการติดต่อ",
-  "inquiryContentPlaceholder": "กรุณากรอกรายละเอียดการสอบถาม",
+  "inquiryContentPlaceholder": "กรุณากรอกรายละเอียดที่ต้องการสอบถาม",
   "debugInfoLabel": "ข้อมูลดีบัก (กรอกอัตโนมัติ)",
   "inquirySent": "ส่งคำถามเรียบร้อยแล้ว",
   "sendInquiry": "ส่ง",

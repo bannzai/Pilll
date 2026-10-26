@@ -441,7 +441,7 @@
   "emailAddress": "Địa chỉ email",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Nội dung liên hệ",
-  "inquiryContentPlaceholder": "Vui lòng nhập nội dung liên hệ của bạn",
+  "inquiryContentPlaceholder": "Vui lòng nhập nội dung cần liên hệ",
   "debugInfoLabel": "Thông tin debug (tự động điền)",
   "inquirySent": "Đã gửi yêu cầu hỗ trợ",
   "sendInquiry": "Gửi",

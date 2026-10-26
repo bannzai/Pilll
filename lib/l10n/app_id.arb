@@ -441,7 +441,7 @@
   "emailAddress": "Alamat email",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Detail pertanyaan Anda",
-  "inquiryContentPlaceholder": "Masukkan isi pertanyaan Anda",
+  "inquiryContentPlaceholder": "Tulis detail pertanyaan Anda",
   "debugInfoLabel": "Informasi Debug (Terisi Otomatis)",
   "inquirySent": "Pertanyaan telah dikirim",
   "sendInquiry": "Kirim",

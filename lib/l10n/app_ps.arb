@@ -441,7 +441,7 @@
   "emailAddress": "د برېښنالیک پته",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "ستاسو د پوښتنې جزئیات",
-  "inquiryContentPlaceholder": "د خپلې پوښتنې منځپانګه دلته ولیکئ",
+  "inquiryContentPlaceholder": "مهرباني وکړئ د خپلې پوښتنې جزئیات ولیکئ",
   "debugInfoLabel": "د ډیبګ معلومات (په اتوماتیک ډول ډکېدل)",
   "inquirySent": "ستاسو پوښتنه واستول شوه",
   "sendInquiry": "لېږل",

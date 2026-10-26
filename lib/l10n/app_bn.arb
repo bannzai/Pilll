@@ -441,7 +441,7 @@
   "emailAddress": "ইমেইল ঠিকানা",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "আপনার জিজ্ঞাসার বিবরণ",
-  "inquiryContentPlaceholder": "আপনার জিজ্ঞাসার বিষয়বস্তু লিখুন",
+  "inquiryContentPlaceholder": "অনুগ্রহ করে আপনার প্রশ্নের বিস্তারিত লিখুন",
   "debugInfoLabel": "ডিবাগ তথ্য (স্বয়ংক্রিয়ভাবে পূরণ)",
   "inquirySent": "অনুসন্ধান পাঠানো হয়েছে",
   "sendInquiry": "পাঠান",

@@ -441,7 +441,7 @@
   "emailAddress": "Ikheli le-imeyili",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Imininingwane yombuzo wakho",
-  "inquiryContentPlaceholder": "Sicela ufake okuqukethwe kombuzo wakho",
+  "inquiryContentPlaceholder": "Sicela ubhale imininingwane yombuzo wakho",
   "debugInfoLabel": "Ulwazi lwedibhagi (lugcwaliswe ngokuzenzakalelayo)",
   "inquirySent": "Umbuzo wakho uthunyelwe",
   "sendInquiry": "Thumela",

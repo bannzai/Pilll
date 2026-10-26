@@ -441,7 +441,7 @@
   "emailAddress": "විද්‍යුත් තැපැල් ලිපිනය",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "ඔබේ විමසීමේ විස්තර",
-  "inquiryContentPlaceholder": "කරුණාකර ඔබගේ විචාරණ අන්තර්ගතය ඇතුළත් කරන්න",
+  "inquiryContentPlaceholder": "කරුණාකර ඔබේ විමසීමේ විස්තර ලියන්න",
   "debugInfoLabel": "නිදොස්කරණ තොරතුරු (ස්වයංක්‍රීයව පුරවා ඇත)",
   "inquirySent": "ඔබේ විමසීම යවන ලදී",
   "sendInquiry": "යවන්න",

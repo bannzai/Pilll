@@ -441,7 +441,7 @@
   "emailAddress": "ای میل پتہ",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "آپ کی پوچھ گچھ کی تفصیلات",
-  "inquiryContentPlaceholder": "براہ کرم اپنی انکوائری کی تفصیلات درج کریں",
+  "inquiryContentPlaceholder": "براہِ کرم اپنے سوال کی تفصیل لکھیں",
   "debugInfoLabel": "ڈیبگ کی معلومات (خودکار طور پر بھری گئی)",
   "inquirySent": "استفسار بھیج دی گئی",
   "sendInquiry": "بھیجیں",

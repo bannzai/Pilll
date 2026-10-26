@@ -441,7 +441,7 @@
   "emailAddress": "Anwani ya barua pepe",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Maelezo ya swali lako",
-  "inquiryContentPlaceholder": "Andika ujumbe wako hapa",
+  "inquiryContentPlaceholder": "Tafadhali andika maelezo ya swali lako",
   "debugInfoLabel": "Taarifa za utatuzi (imejazwa kiotomatiki)",
   "inquirySent": "Ujumbe wako umetumwa",
   "sendInquiry": "Tuma",

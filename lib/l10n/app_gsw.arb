@@ -441,7 +441,7 @@
   "emailAddress": "E-Mail-Adrässe",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Detail vo dinere Aafrag",
-  "inquiryContentPlaceholder": "Bitte gäbed Sie Ihri Afraag ii",
+  "inquiryContentPlaceholder": "Schriib, um was es bi dinere Aafrag gaht",
   "debugInfoLabel": "Debug-Informatione (automatisch usgfüllt)",
   "inquirySent": "D'Afrag isch gschickt worde",
   "sendInquiry": "Absende",

@@ -441,7 +441,7 @@
   "emailAddress": "ഇമെയിൽ വിലാസം",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "അന്വേഷണത്തിന്റെ വിശദാംശങ്ങൾ",
-  "inquiryContentPlaceholder": "അന്വേഷണ വിശദാംശങ്ങൾ നൽകുക",
+  "inquiryContentPlaceholder": "ദയവായി നിങ്ങളുടെ അന്വേഷണത്തിന്റെ വിശദാംശങ്ങൾ എഴുതൂ",
   "debugInfoLabel": "ഡീബഗ് വിവരങ്ങൾ (സ്വയമേവ പൂരിപ്പിച്ചത്)",
   "inquirySent": "അന്വേഷണം സമർപ്പിച്ചു",
   "sendInquiry": "അയയ്ക്കുക",

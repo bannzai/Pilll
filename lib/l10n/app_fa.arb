@@ -441,7 +441,7 @@
   "emailAddress": "نشانی ایمیل",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "جزئیات پرسش شما",
-  "inquiryContentPlaceholder": "محتوای پیام خود را وارد کنید",
+  "inquiryContentPlaceholder": "لطفاً جزئیات پرسش خود را بنویسید",
   "debugInfoLabel": "اطلاعات اشکال‌زدایی (تکمیل خودکار)",
   "inquirySent": "درخواست ارسال شد",
   "sendInquiry": "ارسال",

@@ -441,7 +441,7 @@
   "emailAddress": "इमेल ठेगाना",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "तपाईंको सोधपुछको विवरण",
-  "inquiryContentPlaceholder": "सोधपुछको विवरण प्रविष्ट गर्नुहोस्",
+  "inquiryContentPlaceholder": "कृपया तपाईंको जिज्ञासाको विवरण लेख्नुहोस्",
   "debugInfoLabel": "डिबग जानकारी (स्वचालित रूपमा भरिएको)",
   "inquirySent": "सोधपुछ पठाइयो",
   "sendInquiry": "पठाउनुहोस्",

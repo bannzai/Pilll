@@ -441,7 +441,7 @@
   "emailAddress": "Adresa e-pošte",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Pojedinosti vašeg upita",
-  "inquiryContentPlaceholder": "Unesite sadržaj upita",
+  "inquiryContentPlaceholder": "Molimo, unesite pojedinosti svojeg upita",
   "debugInfoLabel": "Debug informacije (automatski ispunjeno)",
   "inquirySent": "Upit je poslan",
   "sendInquiry": "Pošalji",

@@ -441,7 +441,7 @@
   "emailAddress": "Электрондық пошта мекенжайы",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Сұрауыңыздың мәліметтері",
-  "inquiryContentPlaceholder": "Сұрау мазмұнын енгізіңіз",
+  "inquiryContentPlaceholder": "Сұрағыңыздың мазмұнын жазыңыз",
   "debugInfoLabel": "Жөндеу ақпараты (автотолтыру)",
   "inquirySent": "Сұрау жіберілді",
   "sendInquiry": "Жіберу",

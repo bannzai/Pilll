@@ -441,7 +441,7 @@
   "emailAddress": "የኢሜይል አድራሻ",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "የጥያቄዎ ዝርዝር",
-  "inquiryContentPlaceholder": "የጥያቄዎን ይግለጹ",
+  "inquiryContentPlaceholder": "እባክዎ የጥያቄዎን ዝርዝር ያስገቡ",
   "debugInfoLabel": "የማረም መረጃ (በራስ-ሰር የተሞላ)",
   "inquirySent": "ጥያቄዎ ተልኳል",
   "sendInquiry": "ላክ",

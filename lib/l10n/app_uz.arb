@@ -441,7 +441,7 @@
   "emailAddress": "Elektron pochta manzili",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Savolingiz tafsilotlari",
-  "inquiryContentPlaceholder": "Murojaat mazmunini kiriting",
+  "inquiryContentPlaceholder": "Iltimos, savolingiz tafsilotlarini yozing",
   "debugInfoLabel": "Debug ma'lumotlari (avtomatik to'ldirilgan)",
   "inquirySent": "Murojaat yuborildi",
   "sendInquiry": "Yuborish",

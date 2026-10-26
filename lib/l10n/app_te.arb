@@ -441,7 +441,7 @@
   "emailAddress": "ఇమెయిల్ చిరునామా",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "మీ ప్రశ్న వివరాలు",
-  "inquiryContentPlaceholder": "దయచేసి మీ విచారణను నమోదు చేయండి",
+  "inquiryContentPlaceholder": "దయచేసి మీ ప్రశ్న వివరాలను రాయండి",
   "debugInfoLabel": "డీబగ్ సమాచారం (స్వయంచాలకంగా నింపబడింది)",
   "inquirySent": "విచారణ పంపబడింది",
   "sendInquiry": "పంపించు",

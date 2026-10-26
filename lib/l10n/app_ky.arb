@@ -441,7 +441,7 @@
   "emailAddress": "Электрондук почта дареги",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Сурооңуздун чоо-жайы",
-  "inquiryContentPlaceholder": "Кайрылуу мазмунун киргизиңиз",
+  "inquiryContentPlaceholder": "Суранычыңыздын чоо-жайын жазыңыз",
   "debugInfoLabel": "Отладка маалыматы (автоматтык толтуруу)",
   "inquirySent": "Кайрылуу жөнөтүлдү",
   "sendInquiry": "Жөнөтүү",

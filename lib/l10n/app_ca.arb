@@ -441,7 +441,7 @@
   "emailAddress": "Adreça electrònica",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Detalls de la consulta",
-  "inquiryContentPlaceholder": "Introduïu el contingut de la vostra consulta",
+  "inquiryContentPlaceholder": "Escriu els detalls de la teva consulta",
   "debugInfoLabel": "Informació de depuració (omplert automàticament)",
   "inquirySent": "S'ha enviat la consulta",
   "sendInquiry": "Enviar",

@@ -441,7 +441,7 @@
   "emailAddress": "ელფოსტის მისამართი",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "თქვენი შეკითხვის დეტალები",
-  "inquiryContentPlaceholder": "გთხოვთ, შეიყვანოთ მიმართვის შინაარსი",
+  "inquiryContentPlaceholder": "გთხოვთ, დაწეროთ თქვენი შეკითხვის დეტალები",
   "debugInfoLabel": "დებაგის ინფორმაცია (ავტომატურად შევსებული)",
   "inquirySent": "მიმართვა გაიგზავნა",
   "sendInquiry": "გაგზავნა",

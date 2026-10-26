@@ -441,7 +441,7 @@
   "emailAddress": "E-pasta adrese",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Jūsu jautājuma apraksts",
-  "inquiryContentPlaceholder": "Ievadiet jautājuma saturu",
+  "inquiryContentPlaceholder": "Lūdzu, aprakstiet savu jautājumu",
   "debugInfoLabel": "Atkļūdošanas informācija (aizpildīta automātiski)",
   "inquirySent": "Vaicājums nosūtīts",
   "sendInquiry": "Nosūtīt",

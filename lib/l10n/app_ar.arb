@@ -441,7 +441,7 @@
   "emailAddress": "عنوان البريد الإلكتروني",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "تفاصيل الاستفسار",
-  "inquiryContentPlaceholder": "يرجى إدخال محتوى الاستفسار",
+  "inquiryContentPlaceholder": "يرجى إدخال تفاصيل استفساركِ",
   "debugInfoLabel": "معلومات التصحيح (ملء تلقائي)",
   "inquirySent": "تم إرسال استفسارك",
   "sendInquiry": "إرسال",

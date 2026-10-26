@@ -441,7 +441,7 @@
   "emailAddress": "El. pašto adresas",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Jūsų užklausos informacija",
-  "inquiryContentPlaceholder": "Įveskite savo užklausos turinį",
+  "inquiryContentPlaceholder": "Įrašykite savo užklausos informaciją",
   "debugInfoLabel": "Derinimo informacija (užpildoma automatiškai)",
   "inquirySent": "Užklausa išsiųsta",
   "sendInquiry": "Siųsti",

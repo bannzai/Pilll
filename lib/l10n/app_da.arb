@@ -441,7 +441,7 @@
   "emailAddress": "E-mailadresse",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Detaljer om din henvendelse",
-  "inquiryContentPlaceholder": "Indtast din henvendelse",
+  "inquiryContentPlaceholder": "Skriv, hvad din henvendelse drejer sig om",
   "debugInfoLabel": "Debuginformation (automatisk udfyldt)",
   "inquirySent": "Din henvendelse er sendt",
   "sendInquiry": "Send",

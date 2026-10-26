@@ -441,7 +441,7 @@
   "emailAddress": "Sähköpostiosoite",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Yhteydenoton tiedot",
-  "inquiryContentPlaceholder": "Kirjoita kysymyksesi tähän",
+  "inquiryContentPlaceholder": "Kirjoita yhteydenottosi sisältö",
   "debugInfoLabel": "Virheenkorjaustiedot (täytetty automaattisesti)",
   "inquirySent": "Yhteydenotto lähetetty",
   "sendInquiry": "Lähetä",

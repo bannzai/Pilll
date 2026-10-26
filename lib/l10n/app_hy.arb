@@ -441,7 +441,7 @@
   "emailAddress": "Էլեկտրոնային փոստի հասցե",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Ձեր հարցման մանրամասները",
-  "inquiryContentPlaceholder": "Մուտքագրեք հարցման բովանդակությունը",
+  "inquiryContentPlaceholder": "Խնդրում ենք գրեք Ձեր հարցման մանրամասները",
   "debugInfoLabel": "Դիբագի տեղեկություններ (ավտոմատ լրացված)",
   "inquirySent": "Հարցումը ուղարկվել է",
   "sendInquiry": "Ուղարկել",

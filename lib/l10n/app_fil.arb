@@ -441,7 +441,7 @@
   "emailAddress": "Email address",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Mga detalye ng inyong tanong",
-  "inquiryContentPlaceholder": "Pakilagay ang detalye ng inyong katanungan",
+  "inquiryContentPlaceholder": "Pakilagay po ang mga detalye ng inyong katanungan",
   "debugInfoLabel": "Impormasyon para sa Debug (Awtomatikong Napunan)",
   "inquirySent": "Naipadala na ang iyong inquiry",
   "sendInquiry": "Ipadala",

@@ -441,7 +441,7 @@
   "emailAddress": "E-posta adresi",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Sorunuzun ayrıntıları",
-  "inquiryContentPlaceholder": "Lütfen mesajınızı giriniz",
+  "inquiryContentPlaceholder": "Lütfen sorunuzun ayrıntılarını yazın",
   "debugInfoLabel": "Hata Ayıklama Bilgileri (otomatik dolduruldu)",
   "inquirySent": "Mesajınız gönderildi",
   "sendInquiry": "Gönder",

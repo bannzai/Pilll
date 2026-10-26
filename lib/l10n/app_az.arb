@@ -441,7 +441,7 @@
   "emailAddress": "E-poçt ünvanı",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Müraciətinizin təfərrüatları",
-  "inquiryContentPlaceholder": "Müraciət məzmununu daxil edin",
+  "inquiryContentPlaceholder": "Zəhmət olmasa, müraciətinizin məzmununu yazın",
   "debugInfoLabel": "Debug məlumatı (avtomatik doldurulmuş)",
   "inquirySent": "Müraciət göndərildi",
   "sendInquiry": "Göndər",

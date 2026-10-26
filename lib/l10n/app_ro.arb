@@ -441,7 +441,7 @@
   "emailAddress": "Adresă de e-mail",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Detaliile solicitării",
-  "inquiryContentPlaceholder": "Vă rugăm să introduceți conținutul întrebării dumneavoastră",
+  "inquiryContentPlaceholder": "Scrie detaliile întrebării tale",
   "debugInfoLabel": "Informații de depanare (completare automată)",
   "inquirySent": "Solicitarea a fost trimisă",
   "sendInquiry": "Trimite",

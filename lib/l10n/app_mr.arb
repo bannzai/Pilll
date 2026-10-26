@@ -441,7 +441,7 @@
   "emailAddress": "ईमेल पत्ता",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "तुमच्या चौकशीचा तपशील",
-  "inquiryContentPlaceholder": "कृपया तुमची चौकशी प्रविष्ट करा",
+  "inquiryContentPlaceholder": "कृपया तुमच्या चौकशीचा तपशील लिहा",
   "debugInfoLabel": "डीबग माहिती (स्वयंचलित भरलेली)",
   "inquirySent": "चौकशी पाठवली",
   "sendInquiry": "पाठवा",

@@ -441,7 +441,7 @@
   "emailAddress": "Цахим шуудангийн хаяг",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Таны асуултын дэлгэрэнгүй",
-  "inquiryContentPlaceholder": "Асуултын агуулгаа оруулна уу",
+  "inquiryContentPlaceholder": "Асуултынхаа дэлгэрэнгүйг бичнэ үү",
   "debugInfoLabel": "Дебаг мэдээлэл (автоматаар бөглөгдсөн)",
   "inquirySent": "Лавлагаа илгээгдлээ",
   "sendInquiry": "Илгээх",

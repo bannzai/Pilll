@@ -441,7 +441,7 @@
   "emailAddress": "Адрас электроннай пошты",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Змест звароту",
-  "inquiryContentPlaceholder": "Увядзіце змест запыту",
+  "inquiryContentPlaceholder": "Калі ласка, апішыце ваша пытанне",
   "debugInfoLabel": "Адладачная інфармацыя (аўтаматычна запоўнена)",
   "inquirySent": "Запыт адпраўлены",
   "sendInquiry": "Адправіць",

@@ -441,7 +441,7 @@
   "emailAddress": "ઇમેઇલ સરનામું",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "તમારી પૂછપરછની વિગતો",
-  "inquiryContentPlaceholder": "કૃપા કરીને તમારી પૂછપરછની વિગતો દાખલ કરો",
+  "inquiryContentPlaceholder": "કૃપા કરીને તમારી પૂછપરછની વિગતો લખો",
   "debugInfoLabel": "ડિબગ માહિતી (આપોઆપ ભરાયેલ)",
   "inquirySent": "પૂછપરછ મોકલી દીધી",
   "sendInquiry": "મોકલો",

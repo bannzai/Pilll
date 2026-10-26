@@ -441,7 +441,7 @@
   "emailAddress": "Адрес электронной почты",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Подробности обращения",
-  "inquiryContentPlaceholder": "Введите текст обращения",
+  "inquiryContentPlaceholder": "Пожалуйста, опишите ваш вопрос",
   "debugInfoLabel": "Отладочная информация (автозаполнение)",
   "inquirySent": "Обращение отправлено",
   "sendInquiry": "Отправить",

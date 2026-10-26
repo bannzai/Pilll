@@ -441,7 +441,7 @@
   "emailAddress": "E-mailadres",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Details van je vraag",
-  "inquiryContentPlaceholder": "Voer de inhoud van uw bericht in",
+  "inquiryContentPlaceholder": "Beschrijf je vraag",
   "debugInfoLabel": "Debug-informatie (automatisch ingevuld)",
   "inquirySent": "Uw vraag is verzonden",
   "sendInquiry": "Versturen",

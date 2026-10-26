@@ -441,7 +441,7 @@
   "emailAddress": "כתובת אימייל",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "פרטי הפנייה",
-  "inquiryContentPlaceholder": "נא להזין את תוכן הפנייה",
+  "inquiryContentPlaceholder": "נא לכתוב את פרטי הפנייה",
   "debugInfoLabel": "מידע דיבוג (מילוי אוטומטי)",
   "inquirySent": "הפנייה נשלחה",
   "sendInquiry": "שלח",

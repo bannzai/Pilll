@@ -441,7 +441,7 @@
   "emailAddress": "E-posadres",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Besonderhede van jou navraag",
-  "inquiryContentPlaceholder": "Voer asseblief u navraaginhoud in",
+  "inquiryContentPlaceholder": "Voer asseblief jou navraag in",
   "debugInfoLabel": "Ontfoutingsinligting (Outomaties ingevul)",
   "inquirySent": "U navraag is gestuur",
   "sendInquiry": "Stuur",

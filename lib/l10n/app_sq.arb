@@ -441,7 +441,7 @@
   "emailAddress": "Adresa e emailit",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Detajet e pyetjes suaj",
-  "inquiryContentPlaceholder": "Shkruani përmbajtjen e pyetjes suaj",
+  "inquiryContentPlaceholder": "Ju lutemi, shkruani hollësitë e pyetjes suaj",
   "debugInfoLabel": "Informacion depurimi (plotësohet automatikisht)",
   "inquirySent": "Pyetja është dërguar",
   "sendInquiry": "Dërgo",

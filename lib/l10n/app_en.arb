@@ -441,7 +441,7 @@
   "emailAddress": "Email address",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Inquiry details",
-  "inquiryContentPlaceholder": "Please enter your inquiry details",
+  "inquiryContentPlaceholder": "Enter the details of your inquiry",
   "debugInfoLabel": "Debug Information (Auto-filled)",
   "inquirySent": "Your inquiry has been sent",
   "sendInquiry": "Send",

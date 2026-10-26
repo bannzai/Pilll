@@ -441,7 +441,7 @@
   "emailAddress": "Имейл адрес",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Подробности за запитването",
-  "inquiryContentPlaceholder": "Въведете съдържанието на запитването",
+  "inquiryContentPlaceholder": "Моля, опишете запитването си",
   "debugInfoLabel": "Дебъг информация (автоматично попълнена)",
   "inquirySent": "Запитването беше изпратено",
   "sendInquiry": "Изпрати",

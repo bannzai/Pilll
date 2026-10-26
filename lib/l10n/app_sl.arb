@@ -441,7 +441,7 @@
   "emailAddress": "E-poštni naslov",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Podrobnosti vprašanja",
-  "inquiryContentPlaceholder": "Vnesite vsebino sporočila",
+  "inquiryContentPlaceholder": "Prosimo, opišite svoje vprašanje",
   "debugInfoLabel": "Informacije za razhroščevanje (samodejno izpolnjeno)",
   "inquirySent": "Vaša poizvedba je bila poslana",
   "sendInquiry": "Pošlji",
