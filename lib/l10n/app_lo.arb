@@ -63,7 +63,7 @@
   "checkPillNumberForMenstruationStart": "ກະລຸນາກວດເບິ່ງເລກເມັດຢາສຳລັບມື້ເລີ່ມປະຈຳເດືອນ. ເລກເມັດຢາທີ່ຕັ້ງໄວ້ບໍ່ມີໃນປະເພດແຜງຢາຄຸມທີ່ເລືອກ",
   "customizeMedicationNotifications": "ປັບແຕ່ງການແຈ້ງເຕືອນການກິນຢາ",
   "medicationNotification": "ແຈ້ງເຕືອນເວລາກິນຢາເມັດ",
-  "xCanBeCustomized": "ສາມາດປັບແຕ່ງ {x} ໄດ້",
+  "xCanBeCustomized": "ທ່ານສາມາດປັບ {x} ໃຫ້ເໝາະກັບຄວາມຕ້ອງການໄດ້",
   "thankYouForCooperation": "ຂອບໃຈຫຼາຍໆສໍາລັບການຮ່ວມມື",
   "feedbackUsage": "ຄຳເຫັນທີ່ທ່ານໄດ້ມອບໃຫ້ນັ້ນ ພວກເຮົາຈະນຳໄປໃຊ້ເພື່ອການປັບປຸງໃນອະນາຄົດ",
   "close": "ປິດ",

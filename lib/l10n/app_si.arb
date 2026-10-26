@@ -63,7 +63,7 @@
   "checkPillNumberForMenstruationStart": "කරුණාකර ඔසප් ආරම්භ වන දිනය සඳහා සකසා ඇති පෙති අංකය පරීක්ෂා කරන්න. එම පෙති අංකය තෝරාගත් පෙති කාඩ්පත් වර්ගයේ නොමැත",
   "customizeMedicationNotifications": "පෙති ගැනීමේ දැනුම්දීම් ඔබට කැමති ලෙස සකසන්න",
   "medicationNotification": "පෙත්ත ගැනීමට මතක් කිරීම",
-  "xCanBeCustomized": "{x}ට අභිරුචිකරණය කළ හැකියි",
+  "xCanBeCustomized": "ඔබට {x} ඔබේ කැමැත්ත අනුව සකස් කළ හැකියි",
   "thankYouForCooperation": "ඔබගේ සහයෝගයට බොහොම ස්තූතියි",
   "feedbackUsage": "ඔබගේ වටිනා අදහස් අපගේ අනාගත සේවා වැඩිදියුණු කිරීම සඳහා ප්‍රයෝජනයට ගනු ලැබේ.",
   "close": "වසන්න",

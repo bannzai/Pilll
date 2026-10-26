@@ -63,7 +63,7 @@
   "checkPillNumberForMenstruationStart": "Sprawdź numer tabletki przypisany do pierwszego dnia okresu. Ustawiony numer tabletki nie występuje w wybranym rodzaju blistra",
   "customizeMedicationNotifications": "Dostosuj przypomnienia o tabletce",
   "medicationNotification": "Przypomnienie o tabletce",
-  "xCanBeCustomized": "Można dostosować {x}",
+  "xCanBeCustomized": "Możesz dostosować {x} do swoich potrzeb",
   "thankYouForCooperation": "Serdecznie dziękujemy za współpracę",
   "feedbackUsage": "Otrzymaną opinię wykorzystamy do dalszego rozwoju i ulepszania aplikacji.",
   "close": "Zamknij",

@@ -63,7 +63,7 @@
   "checkPillNumberForMenstruationStart": "Patikrinkite mėnesinių pradžios dienai nustatytą tabletės numerį. Nustatyto tabletės numerio nėra pasirinkto tipo tablečių plokštelėje",
   "customizeMedicationNotifications": "Pritaikyti priminimus išgerti tabletę",
   "medicationNotification": "Priminimas išgerti tabletę",
-  "xCanBeCustomized": "Galite tinkinti {x}",
+  "xCanBeCustomized": "Galite pritaikyti {x} pagal savo poreikius",
   "thankYouForCooperation": "Dėkojame už jūsų bendradarbiavimą",
   "feedbackUsage": "Jūsų atsiliepimus panaudosime būsimiems patobulinimams.",
   "close": "Uždaryti",

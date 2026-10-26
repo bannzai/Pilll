@@ -63,7 +63,7 @@
   "checkPillNumberForMenstruationStart": "Molimo, provjerite broj pilule za dan početka menstruacije. Postavljeni broj pilule ne postoji na odabranoj vrsti blistera",
   "customizeMedicationNotifications": "Prilagodite podsjetnike za uzimanje pilule",
   "medicationNotification": "Podsjetnik za uzimanje pilule",
-  "xCanBeCustomized": "Možete prilagoditi {x}",
+  "xCanBeCustomized": "Možete prilagoditi {x} svojim željama",
   "thankYouForCooperation": "Hvala vam na saradnji",
   "feedbackUsage": "Vaša mišljenja ćemo koristiti za buduća poboljšanja.",
   "close": "Zatvori",

@@ -63,7 +63,7 @@
   "checkPillNumberForMenstruationStart": "براہِ کرم ماہواری کے پہلے دن کے لیے گولی نمبر دیکھیں۔ مقرر کردہ گولی نمبر منتخب گولیوں کی پٹی کی قسم میں موجود نہیں ہے",
   "customizeMedicationNotifications": "گولی لینے کی اطلاعات اپنی پسند کے مطابق ترتیب دیں",
   "medicationNotification": "گولی لینے کی یاد دہانی",
-  "xCanBeCustomized": "{x} کی تخصیص کی جا سکتی ہے",
+  "xCanBeCustomized": "آپ {x} کو اپنی پسند کے مطابق ترتیب دے سکتی ہیں",
   "thankYouForCooperation": "آپ کے تعاون کے لیے شکریہ",
   "feedbackUsage": "آپ کی قیمتی رائے کو ہم مستقبل میں بہتری کے لیے استعمال کریں گے۔",
   "close": "بند کریں",

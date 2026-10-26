@@ -63,7 +63,7 @@
   "checkPillNumberForMenstruationStart": "โปรดตรวจสอบหมายเลขเม็ดยาสำหรับวันเริ่มประจำเดือนค่ะ หมายเลขเม็ดยาที่ตั้งไว้ไม่มีในประเภทแผงยาที่เลือกอยู่ค่ะ",
   "customizeMedicationNotifications": "ปรับแต่งการแจ้งเตือนให้ทานยา",
   "medicationNotification": "แจ้งเตือนเวลาทานยา",
-  "xCanBeCustomized": "สามารถปรับแต่ง{x}ได้",
+  "xCanBeCustomized": "สามารถปรับแต่ง {x} ได้ตามต้องการค่ะ",
   "thankYouForCooperation": "ขอบคุณสำหรับความร่วมมือของคุณ",
   "feedbackUsage": "ความคิดเห็นที่ท่านให้มาจะถูกนำไปใช้เพื่อการปรับปรุงในอนาคต",
   "close": "ปิด",

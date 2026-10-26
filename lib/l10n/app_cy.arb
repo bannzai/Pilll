@@ -63,7 +63,7 @@
   "checkPillNumberForMenstruationStart": "Gwiriwch rif y bilsen ar gyfer diwrnod dechrau eich mislif. Nid yw'r rhif y bilsen a osodwyd ar y math o stribed pils sydd wedi'i ddewis",
   "customizeMedicationNotifications": "Addasu hysbysiadau cymryd y bilsen",
   "medicationNotification": "Nodyn atgoffa i gymryd y bilsen",
-  "xCanBeCustomized": "Gallwch gustomeiddo {x}",
+  "xCanBeCustomized": "Gallwch addasu {x} at eich dant",
   "thankYouForCooperation": "Diolch yn fawr am eich cydweithrediad",
   "feedbackUsage": "Byddwn yn defnyddio'ch sylwadau i wella ein gwasanaeth yn y dyfodol.",
   "close": "Cau",

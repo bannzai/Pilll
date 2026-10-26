@@ -63,7 +63,7 @@
   "checkPillNumberForMenstruationStart": "Prosimo, preverite številko tablete za dan začetka menstruacije. Nastavljene številke tablete ni na izbrani vrsti ploščice",
   "customizeMedicationNotifications": "Prilagodite opomnike za jemanje tabletke",
   "medicationNotification": "Opomnik za jemanje tabletke",
-  "xCanBeCustomized": "Prilagodite lahko {x}",
+  "xCanBeCustomized": "{x} lahko prilagodite svojim željam",
   "thankYouForCooperation": "Hvala vam za sodelovanje",
   "feedbackUsage": "Vaše mnenje bomo uporabili za prihodnje izboljšave.",
   "close": "Zapri",

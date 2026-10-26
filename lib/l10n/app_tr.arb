@@ -63,7 +63,7 @@
   "checkPillNumberForMenstruationStart": "Lütfen adetin başladığı gün için ayarlanan hap numarasını kontrol edin. Ayarlanan hap numarası seçili blister türünde bulunmuyor",
   "customizeMedicationNotifications": "Hap alma bildirimlerini özelleştirin",
   "medicationNotification": "Hap alma hatırlatması",
-  "xCanBeCustomized": "{x} özelleştirebilirsiniz",
+  "xCanBeCustomized": "{x} ayarlarını isteğinize göre özelleştirebilirsiniz",
   "thankYouForCooperation": "Katkınız için teşekkür ederiz",
   "feedbackUsage": "Görüşleriniz gelecekteki iyileştirmelerimizde değerlendirilecektir.",
   "close": "Kapat",

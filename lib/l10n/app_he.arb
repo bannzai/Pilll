@@ -63,7 +63,7 @@
   "checkPillNumberForMenstruationStart": "כדאי לבדוק את מספר גלולה ליום תחילת המחזור. מספר גלולה שהוגדר אינו קיים בסוג חפיסת הגלולות שנבחר",
   "customizeMedicationNotifications": "התאמה אישית של תזכורות לנטילת הגלולה",
   "medicationNotification": "תזכורת לנטילת גלולה",
-  "xCanBeCustomized": "ניתן להתאים אישית את {x}",
+  "xCanBeCustomized": "אפשר להתאים את {x} להעדפות האישיות",
   "thankYouForCooperation": "תודה רבה על שיתוף הפעולה",
   "feedbackUsage": "אנו מעריכים את המשובים שקיבלנו ונשתמש בהם לשיפור השירות בעתיד.",
   "close": "סגור",

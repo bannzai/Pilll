@@ -63,7 +63,7 @@
   "checkPillNumberForMenstruationStart": "Zəhmət olmasa, aybaşı başlayan gün üçün həb nömrəsini yoxlayın. Təyin edilmiş həb nömrəsi hazırda seçilmiş həb blister növündə yoxdur",
   "customizeMedicationNotifications": "Həb qəbulu bildirişlərini fərdiləşdirin",
   "medicationNotification": "Həb qəbulu xatırlatması",
-  "xCanBeCustomized": "{x} fərdiləşdirə bilərsiniz",
+  "xCanBeCustomized": "{x} ayarlarını fərdiləşdirə bilərsiniz",
   "thankYouForCooperation": "Köməyinizə görə təşəkkür edirik",
   "feedbackUsage": "Verdiğiniz rəy və təklifləri gələcək təkmilləşdirmələrimiz üçün istifadə edəcəyik.",
   "close": "Bağla",

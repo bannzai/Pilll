@@ -63,7 +63,7 @@
   "checkPillNumberForMenstruationStart": "لطفاً شماره قرص روز شروع پریود را بررسی کنید. شماره قرص تنظیم‌شده در نوع ورق قرص انتخاب‌شده وجود ندارد",
   "customizeMedicationNotifications": "شخصی‌سازی اعلان‌های مصرف قرص",
   "medicationNotification": "یادآور مصرف قرص",
-  "xCanBeCustomized": "می‌توانید {x} را سفارشی‌سازی کنید",
+  "xCanBeCustomized": "می‌توانید {x} را به دلخواه تنظیم کنید",
   "thankYouForCooperation": "از همکاری شما متشکریم",
   "feedbackUsage": "از نظرات ارزشمند شما سپاسگزاریم و آن‌ها را برای بهبود خدمات آینده به کار خواهیم برد.",
   "close": "بستن",

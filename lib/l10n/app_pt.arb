@@ -63,7 +63,7 @@
   "checkPillNumberForMenstruationStart": "Confira o número da pílula para o primeiro dia da menstruação. O número da pílula definido não existe no tipo de cartela selecionado",
   "customizeMedicationNotifications": "Personalizar lembretes para tomar a pílula",
   "medicationNotification": "Lembrete para tomar a pílula",
-  "xCanBeCustomized": "Você pode personalizar {x}",
+  "xCanBeCustomized": "Você pode personalizar {x} do seu jeito",
   "thankYouForCooperation": "Agradecemos sua colaboração",
   "feedbackUsage": "Seu feedback será utilizado para futuras melhorias.",
   "close": "Fechar",

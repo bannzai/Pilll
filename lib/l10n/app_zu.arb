@@ -63,7 +63,7 @@
   "checkPillNumberForMenstruationStart": "Sicela uhlole inombolo yephilisi yosuku lokuqala lokuya esikhathini. Inombolo yephilisi esethiwe ayikho ohlotsheni lweshidi lamaphilisi olukhethiwe",
   "customizeMedicationNotifications": "Sicela ulungise izikhumbuzi zokuphuza iphilisi",
   "medicationNotification": "Isikhumbuzo sokuphuza iphilisi",
-  "xCanBeCustomized": "I-{x} ingahlelwa",
+  "xCanBeCustomized": "Ungenza {x} ihambisane nalokho okuthandayo",
   "thankYouForCooperation": "Siyabonga kakhulu ngokusebenzisana nathi",
   "feedbackUsage": "Siyabonga ngemibuzo yakho, sizoyisebenzisa ukuze sithuthukise insiza yethu esikhathini esizayo.",
   "close": "Vala",

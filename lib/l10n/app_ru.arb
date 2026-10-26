@@ -63,7 +63,7 @@
   "checkPillNumberForMenstruationStart": "Пожалуйста, проверьте номер таблетки для дня начала месячных. Указанный номер таблетки отсутствует в выбранном типе блистера",
   "customizeMedicationNotifications": "Настроить напоминания о приёме таблетки",
   "medicationNotification": "Напоминание о приёме таблетки",
-  "xCanBeCustomized": "Можно настроить {x}",
+  "xCanBeCustomized": "Вы можете настроить {x} под себя",
   "thankYouForCooperation": "Благодарим вас за сотрудничество",
   "feedbackUsage": "Ваши отзывы помогут нам улучшить наш сервис в будущем.",
   "close": "Закрыть",

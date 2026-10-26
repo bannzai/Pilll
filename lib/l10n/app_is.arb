@@ -63,7 +63,7 @@
   "checkPillNumberForMenstruationStart": "Athugaðu pillunúmerið fyrir fyrsta dag blæðinga. Skráð pillunúmer er ekki á þeirri gerð pilluspjalds sem var valin",
   "customizeMedicationNotifications": "Sérsníða áminningar um pillutöku",
   "medicationNotification": "Áminning um að taka pilluna",
-  "xCanBeCustomized": "Þú getur sérsniðið {x}",
+  "xCanBeCustomized": "Þú getur sérsniðið {x} að þínum óskum",
   "thankYouForCooperation": "Takk fyrir samstarfið",
   "feedbackUsage": "Ábendingar þínar verða nýttar til að bæta þjónustu okkar í framtíðinni.",
   "close": "Loka",
