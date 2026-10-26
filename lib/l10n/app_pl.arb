@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "Dziś zaczyna się nowe opakowanie tabletek",
   "newPillSheetNotificationMessage": "🆕 Dziś zaczynasz nowe opakowanie tabletek\nPamiętaj o przyjęciu tabletki 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Nie znaleziono informacji o premium",
-  "purchaseErrorPurchasePendingError": "Aktywacja płatności nie została jeszcze zakończona. Proszę sprawdzić ponownie za chwilę.",
+  "purchaseErrorPurchasePendingError": "Aktywacja zakupu jeszcze trwa. Poczekaj chwilę i sprawdź ponownie",
   "launchError": "Wystąpił błąd podczas uruchamiania aplikacji\n{ErrorMessagesConnection}\n\nSzczegóły:",
   "exampleRestDurationDate": "Na przykład „od 1/12 przez 3 dni\" w przypadku przerwy w przyjmowaniu",
   "exampleRestDurationNumber": "Na przykład „od numeru 18 przez 3 dni\" w przypadku przerwy w przyjmowaniu",

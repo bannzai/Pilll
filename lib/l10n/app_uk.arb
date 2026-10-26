@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "Сьогодні починається нова упаковка пігулок",
   "newPillSheetNotificationMessage": "🆕 Сьогодні починається нова упаковка пігулок\nНе забудьте прийняти пігулку 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Не вдалося знайти інформацію про преміум",
-  "purchaseErrorPurchasePendingError": "Активація оплати ще не завершена. Будь ласка, перевірте через деякий час",
+  "purchaseErrorPurchasePendingError": "Активація покупки ще не завершена. Будь ласка, трохи зачекайте й перевірте ще раз",
   "launchError": "Під час запуску додатку сталася помилка.\n{ErrorMessagesConnection}\n\nДеталі: ",
   "exampleRestDurationDate": "Наприклад, «з 1/12 протягом 3 днів» у випадку перерви в прийомі",
   "exampleRestDurationNumber": "Наприклад, «з №18 протягом 3 днів» перерва в прийомі",

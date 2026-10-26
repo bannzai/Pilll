@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "Dnes začíná nové platíčko pilulek",
   "newPillSheetNotificationMessage": "🆕 Dnes začíná nové balení pilulek\nNezapomeňte si vzít pilulku 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Informace o Premium se nepodařilo najít",
-  "purchaseErrorPurchasePendingError": "Aktivace předplatného není dokončena. Prosím počkejte chvíli a zkuste to znovu.",
+  "purchaseErrorPurchasePendingError": "Aktivace nákupu ještě není dokončena. Počkejte prosím chvíli a zkuste to znovu zkontrolovat",
   "launchError": "Při spuštění aplikace došlo k chybě.\n{ErrorMessagesConnection}\n\nPodrobnosti: ",
   "exampleRestDurationDate": "Například pokud přerušíte užívání „od 1/12 po dobu 3 dnů\"",
   "exampleRestDurationNumber": "Například když si dáte pauzu od užívání „od 18. tablety 3 dny\"",

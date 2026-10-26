@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "今天开始服用新的一板药",
   "newPillSheetNotificationMessage": "🆕 今天开始服用新的一板药\n记得按时服药哦 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "未找到高级服务信息",
-  "purchaseErrorPurchasePendingError": "付费功能激活尚未完成，请稍后再次确认",
+  "purchaseErrorPurchasePendingError": "购买尚未完成激活，请稍等片刻后再查看",
   "launchError": "应用启动时发生技术故障。详细信息：{ErrorMessagesConnection}",
   "exampleRestDurationDate": "例如「从1/12开始暂停服用3天」的情况下",
   "exampleRestDurationNumber": "例如\"从第18粒开始停药3天\"的情况",

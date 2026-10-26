@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "Σήμερα ξεκινά η νέα συσκευασία χαπιών",
   "newPillSheetNotificationMessage": "🆕 Σήμερα ξεκινάτε νέα συσκευασία χαπιών\nΘυμηθείτε να πάρετε το χάπι σας 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Δεν βρέθηκαν πληροφορίες για το Premium",
-  "purchaseErrorPurchasePendingError": "Η ενεργοποίηση της συνδρομής δεν έχει ολοκληρωθεί. Παρακαλώ περιμένετε λίγο και ελέγξτε ξανά.",
+  "purchaseErrorPurchasePendingError": "Η ενεργοποίηση της αγοράς δεν έχει ολοκληρωθεί ακόμη. Περιμένετε λίγο και ελέγξτε ξανά",
   "launchError": "Παρουσιάστηκε σφάλμα κατά την εκκίνηση της εφαρμογής.\n{ErrorMessagesConnection}\n\nΛεπτομέρειες: ",
   "exampleRestDurationDate": "Για παράδειγμα, εάν «από 1/12 για 3 ημέρες» διακόψατε τη λήψη",
   "exampleRestDurationNumber": "Για παράδειγμα, σε περίπτωση διακοπής λήψης «από το 18ο για 3 ημέρες»",

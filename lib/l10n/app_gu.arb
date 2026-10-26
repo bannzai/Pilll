@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "આજથી ગોળીઓનું નવું પૅક શરૂ થાય છે",
   "newPillSheetNotificationMessage": "🆕 આજથી ગોળીઓનું નવું પેક શરૂ થાય છે\nતમારી ગોળી લેવાનું યાદ રાખશો 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "પ્રીમિયમ વિશેની માહિતી મળી નથી",
-  "purchaseErrorPurchasePendingError": "પેમેન્ટનું સક્રિયકરણ હજુ પૂર્ણ થયું નથી. કૃપા કરીને થોડા સમય પછી ફરીથી તપાસો.",
+  "purchaseErrorPurchasePendingError": "તમારી ખરીદી હજી સક્રિય થઈ રહી છે. કૃપા કરીને થોડી વાર પછી ફરી તપાસો",
   "launchError": "એપ્લિકેશન શરૂ કરતી વખતે ભૂલ આવી.\n{ErrorMessagesConnection}\n\nવિગતો: ",
   "exampleRestDurationDate": "ઉદાહરણ તરીકે \\\"1/12 થી 3 દિવસ\\\" ગોળી લેવાનું બંધ કર્યું હોય તો",
   "exampleRestDurationNumber": "ઉદાહરણ તરીકે '18 નંબરથી 3 દિવસ' દવા લેવાનું બંધ કર્યું હોય તો",

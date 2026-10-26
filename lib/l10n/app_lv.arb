@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "Šodien sākas jauns tablešu iepakojums",
   "newPillSheetNotificationMessage": "🆕 Šodien sākat jaunu tablešu iepakojumu\nAtcerieties lietot tableti 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Informācija par Premium nav atrasta",
-  "purchaseErrorPurchasePendingError": "Maksājuma aktivizācija nav pabeigta. Lūdzu, uzgaidiet un pārbaudiet vēlreiz pēc brīža.",
+  "purchaseErrorPurchasePendingError": "Pirkuma aktivizēšana vēl nav pabeigta. Lūdzu, nedaudz uzgaidiet un pārbaudiet vēlreiz",
   "launchError": "Lietotnes palaišanas laikā radās kļūda.\n{ErrorMessagesConnection}\n\nDetaļas: ",
   "exampleRestDurationDate": "Piemēram, „no 1/12 uz 3 dienām\" tablešu lietošanas pārtraukums",
   "exampleRestDurationNumber": "Piemēram, „no 18. tabletes 3 dienas\" tablešu lietošanas pārtraukuma gadījumā",

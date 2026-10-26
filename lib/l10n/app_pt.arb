@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "Sua nova cartela de pílulas começa hoje",
   "newPillSheetNotificationMessage": "🆕 Hoje você começa uma nova cartela de pílulas\nLembre-se de tomar a pílula 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Não foi possível encontrar as informações do Premium",
-  "purchaseErrorPurchasePendingError": "A ativação do pagamento ainda não foi concluída. Aguarde um momento e verifique novamente.",
+  "purchaseErrorPurchasePendingError": "A ativação da compra ainda está em andamento. Aguarde um pouco e confira novamente",
   "launchError": "Ocorreu um erro ao iniciar o aplicativo.\n{ErrorMessagesConnection}\n\nDetalhes: ",
   "exampleRestDurationDate": "Por exemplo, se você pausar a medicação por 3 dias a partir de 1/12",
   "exampleRestDurationNumber": "Por exemplo, \"a partir do comprimido 18 por 3 dias\" quando pausou a toma",

@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "Uusi pilleripakkaus alkaa tänään",
   "newPillSheetNotificationMessage": "🆕 Uusi pilleripakkaus alkaa tänään\nMuistathan ottaa pillerin 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium-tietoja ei löytynyt",
-  "purchaseErrorPurchasePendingError": "Maksun aktivointi ei ole vielä valmistunut. Odota hetki ja tarkista tilanne uudelleen.",
+  "purchaseErrorPurchasePendingError": "Ostoksesi aktivointi on vielä kesken. Odota hetki ja tarkista uudelleen",
   "launchError": "Sovelluksen käynnistyksessä tapahtui virhe.\n{ErrorMessagesConnection}\n\nLisätiedot: ",
   "exampleRestDurationDate": "Esimerkiksi \"1/12 alkaen 3 päivää\" ottotauon tapauksessa",
   "exampleRestDurationNumber": "Esimerkiksi \"tabletista 18 alkaen 3 päivää\" kun otat tauon ottamisesta",

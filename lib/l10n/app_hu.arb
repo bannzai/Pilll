@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "Ma kezdődik az új tablettalevél",
   "newPillSheetNotificationMessage": "🆕 Ma új levél tablettát kezdesz\nNe felejtsd el szedni a tablettát 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "A prémium információk nem találhatók",
-  "purchaseErrorPurchasePendingError": "Az előfizetés aktiválása még nem fejeződött be. Kérjük, várjon egy kis ideig, majd ellenőrizze újra.",
+  "purchaseErrorPurchasePendingError": "A vásárlás aktiválása még folyamatban van. Várj egy kicsit, majd ellenőrizd újra",
   "launchError": "Hiba történt az alkalmazás indításakor.\n{ErrorMessagesConnection}\n\nRészletek: ",
   "exampleRestDurationDate": "Például \"1/12-től 3 napig\" szedés szüneteltetése esetén",
   "exampleRestDurationNumber": "Például ha „18. tablettától 3 napig\" szüneteltette a szedést",

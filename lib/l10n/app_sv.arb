@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "En ny pillerkarta börjar i dag",
   "newPillSheetNotificationMessage": "🆕 I dag börjar du på en ny pillerkarta\nKom ihåg att ta ditt piller 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Information om premium kunde inte hittas",
-  "purchaseErrorPurchasePendingError": "Din prenumeration har inte aktiverats ännu. Vänligen vänta en stund och försök igen.",
+  "purchaseErrorPurchasePendingError": "Ditt köp håller fortfarande på att aktiveras. Vänta en stund och kontrollera igen",
   "launchError": "Ett fel uppstod när appen startades.\n{ErrorMessagesConnection}\n\nDetaljer: ",
   "exampleRestDurationDate": "Till exempel 'från 1/12 i 3 dagar' om du pausade med pillintaget",
   "exampleRestDurationNumber": "Till exempel om du pausar intaget från piller nr 18 i 3 dagar",

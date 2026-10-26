@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "Данас почиње ново паковање пилула",
   "newPillSheetNotificationMessage": "🆕 Данас почињете ново паковање пилула\nНе заборавите да узмете пилулу 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Информације о премијум нису пронађене",
-  "purchaseErrorPurchasePendingError": "Aktivacija plaćanja još uvek nije završena. Molimo sačekajte nekoliko trenutaka pa zatim proverite ponovo.",
+  "purchaseErrorPurchasePendingError": "Активирање куповине још није завршено. Молимо Вас, сачекајте мало и проверите поново",
   "launchError": "Došlo je do greške prilikom pokretanja aplikacije.\n{ErrorMessagesConnection}\n\nDetalji: ",
   "exampleRestDurationDate": "На пример, ако прекинете узимање пилула „од 1/12 током 3 дана\"",
   "exampleRestDurationNumber": "Na primer „od 18. tableta 3 dana\" pauza u uzimanju",

@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "Yangi tabletkalar oʻrami bugun boshlanadi",
   "newPillSheetNotificationMessage": "🆕 Bugun yangi tabletkalar oʻramini boshlaysiz\nTabletkani qabul qilishni unutmang 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium maʼlumotlari topilmadi",
-  "purchaseErrorPurchasePendingError": "Obuna faollashtirish hali tugallanmagan. Biroz vaqt o'tgach, qaytadan tekshirib ko'ring.",
+  "purchaseErrorPurchasePendingError": "Xaridingizni faollashtirish hali yakunlanmadi. Iltimos, biroz kutib, qayta tekshiring",
   "launchError": "Ilovani ishga tushirishda xatolik yuz berdi.\n{ErrorMessagesConnection}\n\nTafsilotlar: ",
   "exampleRestDurationDate": "Masalan «1/12 dan 3 kun davomida» qabul qilishni to'xtatish holatida",
   "exampleRestDurationNumber": "Masalan «18-raqamdan 3 kun» qabul qilishni to'xtatgan holda",

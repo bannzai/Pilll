@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "Денес започнува ново пакување таблети",
   "newPillSheetNotificationMessage": "🆕 Денес започнува ново пакување со таблети\nВе молиме, не заборавајте да ја земете таблетата 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Не се пронајдени информации за премиум",
-  "purchaseErrorPurchasePendingError": "Активирањето на наплаќањето сè уште не е комплетирано. Ве молиме почекајте малку и проверете повторно.",
+  "purchaseErrorPurchasePendingError": "Активирањето на купувањето сè уште не е завршено. Ве молиме, почекајте малку и проверете повторно",
   "launchError": "Настана грешка при стартувањето на апликацијата.\n{ErrorMessagesConnection}\n\nДетали: ",
   "exampleRestDurationDate": "На пример „од 1/12 за 3 дена\" кога правите пауза во земањето",
   "exampleRestDurationNumber": "На пример „од број 18 за 3 дена\" во случај на прекин на земањето",

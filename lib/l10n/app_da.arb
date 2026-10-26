@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "En ny pakke p-piller begynder i dag",
   "newPillSheetNotificationMessage": "🆕 I dag starter du på en ny pakke p-piller\nHusk at tage din p-pille 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Oplysninger om Premium blev ikke fundet",
-  "purchaseErrorPurchasePendingError": "Abonnementsaktiveringen er ikke gennemført endnu. Vent venligst et øjeblik og tjek igen.",
+  "purchaseErrorPurchasePendingError": "Dit køb er ikke aktiveret endnu. Vent lidt, og tjek igen",
   "launchError": "Der opstod en fejl under start af appen.\n{ErrorMessagesConnection}\n\nDetaljer: ",
   "exampleRestDurationDate": "For eksempel \"1/12 i 3 dage\" når du holder pause med pilleindtagelsen",
   "exampleRestDurationNumber": "For eksempel hvis du holder pause med pilleindtagelsen \"fra nummer 18 i 3 dage\"",

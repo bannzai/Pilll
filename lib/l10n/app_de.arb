@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "Heute beginnt deine neue Pillenpackung",
   "newPillSheetNotificationMessage": "🆕 Heute beginnst du mit einer neuen Pillenpackung\nDenk daran, deine Pille zu nehmen 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Informationen zu Premium konnten nicht gefunden werden",
-  "purchaseErrorPurchasePendingError": "Die Aktivierung der Bezahlung ist noch nicht abgeschlossen. Bitte warten Sie einen Moment und überprüfen Sie dann erneut.",
+  "purchaseErrorPurchasePendingError": "Dein Kauf wird noch aktiviert. Warte bitte einen Moment und prüfe es dann erneut",
   "launchError": "Beim Start der App ist ein Fehler aufgetreten.\n{ErrorMessagesConnection}\n\nDetails: ",
   "exampleRestDurationDate": "Z.B. „ab 1/12 für 3 Tage\" bei einer Einnahmepause",
   "exampleRestDurationNumber": "Zum Beispiel bei einer 3-tägigen Einnahmepause ab Tablette 18",

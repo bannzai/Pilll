@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "కొత్త మాత్రల స్ట్రిప్ ఈ రోజు ప్రారంభమవుతుంది",
   "newPillSheetNotificationMessage": "🆕 ఈ రోజు నుంచి కొత్త మాత్రల ప్యాక్ మొదలవుతుంది\nమాత్ర తీసుకోవడం గుర్తుంచుకోండి 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ప్రీమియం సమాచారం కనుగొనబడలేదు",
-  "purchaseErrorPurchasePendingError": "చెల్లింపు సక్రియీకరణ ఇంకా పూర్తి కాలేదు. దయచేసి కొంత సమయం వేచి ఉండి మళ్లీ తనిఖీ చేయండి.",
+  "purchaseErrorPurchasePendingError": "మీ కొనుగోలు యాక్టివేషన్ ఇంకా పూర్తికాలేదు. దయచేసి కాసేపటి తర్వాత మళ్లీ తనిఖీ చేయండి",
   "launchError": "యాప్‌ను ప్రారంభించేటప్పుడు లోపం సంభవించింది.\n{ErrorMessagesConnection}\n\nవివరాలు: ",
   "exampleRestDurationDate": "ఉదాహరణకు \"1/12 నుండి 3 రోజులు\" మందు విరామం తీసుకున్న సందర్భంలో",
   "exampleRestDurationNumber": "ఉదాహరణకు \"18వ నుండి 3 రోజులు\" మందు తీసుకోవడం ఆపిన సందర్భంలో",

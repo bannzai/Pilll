@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "Hüt fangt dini nöii Pillipackig aa",
   "newPillSheetNotificationMessage": "🆕 Hüt fangsch mit ere neue Pillepackig aa\nDänk dra, dini Pille z näh 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "D Informatione zu Premium sind nöd gfunde worde",
-  "purchaseErrorPurchasePendingError": "D Aktivierig vo de Bezahlig isch no nöd abgschlosse. Bitte wartet e bitzeli und lueget denn nomal.",
+  "purchaseErrorPurchasePendingError": "Din Chauf wird no aktiviert. Wart bitte es bitzli und lueg dänn nomal",
   "launchError": "Bim App-Start isch e technische Fähler uftrette. {ErrorMessagesConnection}",
   "exampleRestDurationDate": "Zum Bispil wänn Sie «vo 1/12 aa für 3 Täg» d'Iinahm pausiert händ",
   "exampleRestDurationNumber": "z.B. «ab Nr. 18 für 3 Täg» Iinahm pausiert",

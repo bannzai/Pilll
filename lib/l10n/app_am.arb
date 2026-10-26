@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "አዲስ የክኒን ጥቅል ዛሬ ይጀምራል",
   "newPillSheetNotificationMessage": "🆕 ከዛሬ ጀምሮ አዲስ የክኒን ማሸጊያ ይጀምራል\nእባክዎ ክኒን መውሰድዎን ያስታውሱ 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "የፕሪሚየም መረጃ አልተገኘም",
-  "purchaseErrorPurchasePendingError": "የክፍያ ማግበሪያ አልተጠናቀቀም። እባክዎ ትንሽ ቆይተው እንደገና ያረጋግጡ",
+  "purchaseErrorPurchasePendingError": "የግዢው ማግበር ገና አልተጠናቀቀም። እባክዎ ትንሽ ቆይተው እንደገና ይፈትሹ",
   "launchError": "መተግበሪያውን በሚያስጀምሩበት ጊዜ ስህተት ተከስቷል።\n{ErrorMessagesConnection}\n\nዝርዝር: ",
   "exampleRestDurationDate": "ለምሳሌ \"ከ1/12 ጀምሮ ለ3 ቀናት\" መድሃኒት አለመውሰድ ሁኔታ",
   "exampleRestDurationNumber": "ለምሳሌ \"ከ18ኛ ቁጥር ለ3 ቀናት\" መድሃኒት መውሰድ ያቆሙ ከሆነ",

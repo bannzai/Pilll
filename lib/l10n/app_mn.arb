@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "Өнөөдөр шинэ эмийн блистер эхэлнэ",
   "newPillSheetNotificationMessage": "🆕 Өнөөдөр эмийн шинэ блистер эхэлнэ\nЭмээ уухаа санаарай 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "премиум мэдээлэл олдсонгүй",
-  "purchaseErrorPurchasePendingError": "Төлбөрийн идэвхжүүлэлт хараахан дуусаагүй байна. Хэсэг хугацааны дараа дахин шалгана уу.",
+  "purchaseErrorPurchasePendingError": "Худалдан авалтыг идэвхжүүлэх үйл явц хараахан дуусаагүй байна. Түр хүлээгээд дахин шалгана уу",
   "launchError": "Апп эхлэх үед алдаа гарлаа.\n{ErrorMessagesConnection}\n\nДэлгэрэнгүй: ",
   "exampleRestDurationDate": "Жишээлбэл \"1/12-оос 3 хоног\" эм ундахаа амарсан тохиолдолд",
   "exampleRestDurationNumber": "Жишээ нь \"18 дугаараас 3 хоног\" эм уухыг завсарлуулсан тохиолдолд",

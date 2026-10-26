@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "Astăzi începe o nouă folie de pilule",
   "newPillSheetNotificationMessage": "🆕 Azi începi un nou blister de pilule\nAmintește-ți să iei pilula 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Informațiile despre premium nu au fost găsite",
-  "purchaseErrorPurchasePendingError": "Activarea plății nu s-a finalizat încă. Vă rugăm să așteptați puțin și să verificați din nou.",
+  "purchaseErrorPurchasePendingError": "Activarea achiziției este încă în curs. Așteaptă puțin și verifică din nou",
   "launchError": "A apărut o eroare la pornirea aplicației.\n{ErrorMessagesConnection}\n\nDetalii: ",
   "exampleRestDurationDate": "De exemplu „din 12/1 timp de 3 zile\" dacă ați suspendat administrarea",
   "exampleRestDurationNumber": "De exemplu „de la pastila 18, timp de 3 zile\" în cazul unei pauze în administrare",

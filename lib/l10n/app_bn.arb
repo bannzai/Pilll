@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "আজ থেকে পিলের নতুন পাতা শুরু হচ্ছে",
   "newPillSheetNotificationMessage": "🆕 আজ থেকে পিলের নতুন পাতা শুরু হচ্ছে\nপিল খেতে মনে রাখুন 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "প্রিমিয়াম তথ্য পাওয়া যায়নি",
-  "purchaseErrorPurchasePendingError": "পেমেন্ট সক্রিয়করণ এখনও সম্পূর্ণ হয়নি। দয়া করে কিছুক্ষণ অপেক্ষা করে আবার পরীক্ষা করুন।",
+  "purchaseErrorPurchasePendingError": "কেনাকাটাটি এখনও সক্রিয় হয়নি। অনুগ্রহ করে কিছুক্ষণ পর আবার দেখুন",
   "launchError": "অ্যাপ চালু করার সময় একটি ত্রুটি ঘটেছে।\n{ErrorMessagesConnection}\n\nবিস্তারিত: ",
   "exampleRestDurationDate": "উদাহরণস্বরূপ \"১/১২ থেকে ৩ দিনের জন্য\" ওষুধ সেবন বন্ধ করার ক্ষেত্রে",
   "exampleRestDurationNumber": "যেমন \"১৮ নম্বর থেকে ৩ দিন\" সেবন বিরতির ক্ষেত্রে",

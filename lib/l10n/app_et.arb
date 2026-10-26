@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "Täna algab uus pillipakk",
   "newPillSheetNotificationMessage": "🆕 Täna alustad uue pillipakiga\nPea meeles pill võtta 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "premiumi teavet ei leitud",
-  "purchaseErrorPurchasePendingError": "Makse aktiveerimine ei ole veel lõppenud. Palun ootage veidi ja kontrollige hiljem uuesti.",
+  "purchaseErrorPurchasePendingError": "Ostu aktiveerimine pole veel lõppenud. Oota veidi ja kontrolli uuesti",
   "launchError": "Rakenduse käivitamisel ilmnes viga.\n{ErrorMessagesConnection}\n\nÜksikasjad: ",
   "exampleRestDurationDate": "Näiteks „1.12st 3 päevaks\" pillide võtmist peatanud",
   "exampleRestDurationNumber": "Näiteks „18. tabletist alates 3 päevaks\" võtmise peatamine",

@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "आजदेखि चक्कीको नयाँ प्याक सुरु हुन्छ",
   "newPillSheetNotificationMessage": "🆕 आजदेखि चक्कीको नयाँ पत्ता सुरु हुन्छ\nचक्की खान नबिर्सनुहोस् 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "प्रिमियम जानकारी फेला परेन",
-  "purchaseErrorPurchasePendingError": "भुक्तानी सक्रियकरण पूरा भएको छैन। केही समय पछि पुनः जाँच गर्नुहोस्।",
+  "purchaseErrorPurchasePendingError": "तपाईंको खरिद सक्रिय गर्ने प्रक्रिया अझै पूरा भएको छैन। कृपया केही बेरपछि फेरि जाँच गर्नुहोस्",
   "launchError": "एप्लिकेसन सुरु हुँदा त्रुटि भयो।\n{ErrorMessagesConnection}\n\nविवरण: ",
   "exampleRestDurationDate": "उदाहरणका लागि「1/12 देखि 3 दिन」सेवन बिदा गरेको अवस्थामा",
   "exampleRestDurationNumber": "उदाहरणका लागि \"18 नम्बरबाट 3 दिन\" सेवन बन्द गरेको अवस्थामा",

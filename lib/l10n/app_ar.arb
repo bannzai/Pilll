@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "تبدأ عبوة جديدة من الحبوب اليوم",
   "newPillSheetNotificationMessage": "🆕 تبدأ اليوم عبوة جديدة من الحبوب\nتذكري تناول الحبة 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "تعذر العثور على معلومات بريميوم",
-  "purchaseErrorPurchasePendingError": "لم يكتمل تفعيل الاشتراك بعد. يرجى الانتظار قليلاً ثم المحاولة مرة أخرى",
+  "purchaseErrorPurchasePendingError": "لم يكتمل تفعيل الشراء بعد. يُرجى الانتظار قليلًا ثم التحقق مرة أخرى",
   "launchError": "حدث خطأ عند بدء التشغيل\n{ErrorMessagesConnection}\n\nالتفاصيل:",
   "exampleRestDurationDate": "على سبيل المثال، في حالة التوقف عن تناول الحبوب \"من 1/12 لمدة 3 أيام\"",
   "exampleRestDurationNumber": "مثلاً \"من الحبة رقم 18 لمدة 3 أيام\" عند التوقف عن التناول",

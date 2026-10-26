@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "Yeni həb qutusuna bu gün başlayırsınız",
   "newPillSheetNotificationMessage": "🆕 Bu gün yeni həb qutusuna başlayırsınız\nHəbinizi qəbul etməyi unutmayın 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "premium məlumatı tapılmadı",
-  "purchaseErrorPurchasePendingError": "Ödəniş aktivasiyası hələ tamamlanmayıb. Xahiş edirik, bir qədər gözlədikdən sonra yenidən yoxlayın.",
+  "purchaseErrorPurchasePendingError": "Alışın aktivləşdirilməsi hələ tamamlanmayıb. Zəhmət olmasa, bir az gözləyib yenidən yoxlayın",
   "launchError": "Proqramın başlanması zamanında texniki xəta baş verdi.\\n{ErrorMessagesConnection}\\nƏtraflı məlumat:",
   "exampleRestDurationDate": "Məsələn «1/12-dən 3 gün» həb qəbuluna fasilə verdiyi halda",
   "exampleRestDurationNumber": "Məsələn \"18-ci həbdən 3 gün\" qəbuluna fasilə verildikdə",

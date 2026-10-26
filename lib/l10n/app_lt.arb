@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "Šiandien pradedate naują tablečių pakuotę",
   "newPillSheetNotificationMessage": "🆕 Šiandien pradedate naują tablečių pakuotę\nNepamirškite išgerti tabletės 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Nepavyko rasti informacijos apie Premium",
-  "purchaseErrorPurchasePendingError": "Mokėjimo aktyvinimas dar neužbaigtas. Prašome palaukti ir patikrinti vėliau.",
+  "purchaseErrorPurchasePendingError": "Pirkinio aktyvinimas dar nebaigtas. Šiek tiek palaukite ir patikrinkite dar kartą",
   "launchError": "Paleidžiant programėlę įvyko klaida.\n{ErrorMessagesConnection}\n\nIšsami informacija: ",
   "exampleRestDurationDate": "Pavyzdžiui, „nuo 1/12 3 dienas\" pertraukėte tablečių vartojimą",
   "exampleRestDurationNumber": "Pavyzdžiui, „nuo 18-ojo 3 dienas\" nevartojimo atveju",

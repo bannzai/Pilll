@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "Mae pecyn newydd o bilsen yn dechrau heddiw",
   "newPillSheetNotificationMessage": "🆕 Mae pecyn newydd o bilsenni'n dechrau heddiw\nCofiwch gymryd eich pilsen 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Heb ffeindio gwybodaeth am premiwm",
-  "purchaseErrorPurchasePendingError": "Nid yw actifadu'r taliad wedi'i gwblhau. Arhoswch am ychydig ac yna gwiriwch eto.",
+  "purchaseErrorPurchasePendingError": "Nid yw’r pryniant wedi’i actifadu eto. Arhoswch ychydig ac edrychwch eto",
   "launchError": "Digwyddodd gwall wrth lansio'r app\n{ErrorMessagesConnection}\n\nManylion:",
   "exampleRestDurationDate": "Er enghraifft \\\"o 1/12 am 3 diwrnod\\\" os gwnaethoch roi'r gorau i gymryd tabledi",
   "exampleRestDurationNumber": "Er enghraifft, os ydych wedi rhoi seibiant \"o rif 18 am 3 diwrnod\"",

@@ -339,7 +339,7 @@
   "newPillSheetNotificationTitle": "დღეს აბების ახალი შეფუთვა იწყება",
   "newPillSheetNotificationMessage": "🆕 დღეს აბების ახალი შეფუთვა იწყება\nგთხოვთ, გახსოვდეთ აბის მიღება 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "პრემიუმის შესახებ ინფორმაცია ვერ მოიძებნა",
-  "purchaseErrorPurchasePendingError": "გადახდის დადასტურება ჯერ კიდევ დასრულებული არ არის. გთხოვთ, ცოტა ხანში ხელახლა შეამოწმოთ.",
+  "purchaseErrorPurchasePendingError": "შენაძენის გააქტიურება ჯერ არ დასრულებულა. გთხოვთ, ცოტა ხანს დაელოდოთ და ხელახლა შეამოწმოთ",
   "launchError": "აპლიკაციის გაშვებისას მოხდა შეცდომა.\n{ErrorMessagesConnection}\n\nდეტალები: ",
   "exampleRestDurationDate": "მაგალითად „1/12-დან 3 დღით\" მიღების შეწყვეტის შემთხვევაში",
   "exampleRestDurationNumber": "მაგალითად „18 ნომრიდან 3 დღით\" მიღების შეწყვეტის შემთხვევაში",
