@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "For example, if you take a 3-day break from the pill starting 1/12",
   "exampleRestDurationNumber": "For example, if you take a 3-day pill break starting with pill 18",
   "withNumber": "No. {number}",
-  "currentPillSheetNotFound": "The current pill sheet could not be found",
+  "currentPillSheetNotFound": "The pill pack you're currently using couldn't be found",
   "doNotRevertTakePillInPausePeriod": "You cannot cancel pill intake during the pill-free period",
   "googleAccount": "Google Account",
   "diaryRecord": "Record diary",

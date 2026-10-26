@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "برای مثال، اگر از ۱/۱۲ به مدت ۳ روز مصرف قرص را متوقف کنید",
   "exampleRestDurationNumber": "برای مثال، اگر از قرص شمارهٔ ۱۸ به‌مدت ۳ روز مصرف قرص را متوقف کنید",
   "withNumber": "شمارهٔ {number}",
-  "currentPillSheetNotFound": "اطلاعات ورق قرص فعلی یافت نشد",
+  "currentPillSheetNotFound": "ورق قرص مورد استفادهٔ فعلی پیدا نشد",
   "doNotRevertTakePillInPausePeriod": "عملیات لغو مصرف قرص در طول دوره استراحت امکان‌پذیر نیست",
   "googleAccount": "حساب گوگل",
   "diaryRecord": "ثبت روزنامه",

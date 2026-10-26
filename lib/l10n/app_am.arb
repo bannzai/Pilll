@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "ለምሳሌ፣ ከ1/12 ጀምሮ ለ3 ቀናት ክኒን መውሰድን ካቆሙ",
   "exampleRestDurationNumber": "ለምሳሌ፣ ከክኒን ቁጥር 18 ጀምሮ ለ3 ቀናት መውሰድ ካቆሙ",
   "withNumber": "ቁጥር {number}",
-  "currentPillSheetNotFound": "አሁን የሚወሰደው የክኒን ወረቀት አልተገኘም",
+  "currentPillSheetNotFound": "አሁን እየተጠቀሙበት ያለው ክኒን ሉህ አልተገኘም",
   "doNotRevertTakePillInPausePeriod": "በእረፍት ጊዜ ውስጥ የክኒን መውሰድ መሰረዝ ክወና መፈጸም አይቻልም",
   "googleAccount": "Google መለያ",
   "diaryRecord": "ዕለታዊ ማስታወሻ መዝግብ",

@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "Жишээлбэл, 1/12-ноос эхлэн 3 өдөр эмээ уухгүй завсарлавал",
   "exampleRestDurationNumber": "Жишээлбэл, 18 дахь шахмалаас эхлэн 3 өдөр уухаа түр зогсоовол",
   "withNumber": "№ {number}",
-  "currentPillSheetNotFound": "Одоогийн зорилтот эмийн хуудас олдсонгүй",
+  "currentPillSheetNotFound": "Одоо хэрэглэж буй эмийн блистер олдсонгүй",
   "doNotRevertTakePillInPausePeriod": "Эмийн хэрэглээг цуцлах үйлдлийг амралтын хугацаанд гүйцэтгэх боломжгүй",
   "googleAccount": "Google бүртгэл",
   "diaryRecord": "Өдрийн тэмдэглэл бичих",

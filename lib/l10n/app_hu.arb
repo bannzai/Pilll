@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "Például ha 1/12-től 3 nap szünetet tartasz a tabletta szedésében",
   "exampleRestDurationNumber": "Például ha a 18. tablettától kezdve 3 napig szünetet tartasz a szedésben",
   "withNumber": "{number}.",
-  "currentPillSheetNotFound": "A jelenleg használt tablettabliszter nem található",
+  "currentPillSheetNotFound": "A jelenleg használt tablettacsomag nem található",
   "doNotRevertTakePillInPausePeriod": "A tabletta bevételének visszavonása nem lehetséges a szünet időszakban",
   "googleAccount": "Google-fiók",
   "diaryRecord": "Napló rögzítése",

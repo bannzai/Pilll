@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "For eksempel hvis du holder 3 dages pause med p-pillerne fra 1/12",
   "exampleRestDurationNumber": "For eksempel hvis du holder 3 dages pause fra p-pillen fra og med pille 18",
   "withNumber": "Nr. {number}",
-  "currentPillSheetNotFound": "Det nuværende pillekort kunne ikke findes",
+  "currentPillSheetNotFound": "Det pillekort, du bruger nu, blev ikke fundet",
   "doNotRevertTakePillInPausePeriod": "Annullering af pilleindtagelse kan ikke udføres under pauseperioden",
   "googleAccount": "Google-konto",
   "diaryRecord": "Registrer dagbog",

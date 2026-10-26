@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "د بېلګې په توګه، که تاسو له 1/12 څخه د 3 ورځو لپاره د ګولۍ اخیستل وځنډوئ",
   "exampleRestDurationNumber": "د بېلګې په توګه، که د 18مې ګولۍ څخه پیل او د 3 ورځو لپاره د ګولیو اخیستل وځنډوئ",
   "withNumber": "شمېره {number}",
-  "currentPillSheetNotFound": "د اوسنۍ هدف شوي ګولیو پاڼه ونه موندل شوه",
+  "currentPillSheetNotFound": "اوس مهال کارېدونکې د ګولیو پاڼه ونه موندل شوه",
   "doNotRevertTakePillInPausePeriod": "د آرام د دورې پرمهال د ګولۍ اخیستلو لغوه کول نشي کیدی",
   "googleAccount": "ګوګل حساب",
   "diaryRecord": "ډايري ثبتول",

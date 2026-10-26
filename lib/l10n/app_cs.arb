@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "Například pokud od 1/12 na 3 dny přerušíte užívání pilulky",
   "exampleRestDurationNumber": "Například při 3denní pauze v užívání počínaje tabletou č. 18",
   "withNumber": "Č. {number}",
-  "currentPillSheetNotFound": "Aktuální pilulkový arch nebyl nalezen",
+  "currentPillSheetNotFound": "Aktuální blistr se nepodařilo najít",
   "doNotRevertTakePillInPausePeriod": "Během bezpilulkové pauzy nelze zrušit užití pilulky",
   "googleAccount": "Google účet",
   "diaryRecord": "Zaznamenat deník",

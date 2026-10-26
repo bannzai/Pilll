@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "ဥပမာ၊ 1/12 မှစပြီး 3 ရက်ကြာ ဆေးလုံးသောက်ခြင်းကို ခေတ္တရပ်ထားပါက",
   "exampleRestDurationNumber": "ဥပမာ၊ အမှတ် 18 ဆေးလုံးကစပြီး 3 ရက်ကြာ ဆေးသောက်ခြင်းကို ခေတ္တရပ်ထားပါက",
   "withNumber": "နံပါတ် {number}",
-  "currentPillSheetNotFound": "လက်ရှိ သုံးစွဲနေသော ဆေးလုံးပြားစာရင်းကို မတွေ့ရပါ",
+  "currentPillSheetNotFound": "လက်ရှိအသုံးပြုနေသော ဆေးပြားကတ်ကို မတွေ့ပါ",
   "doNotRevertTakePillInPausePeriod": "ဆေးမသောက်သည့်ကာလအတွင်း ဆေးသောက်မှတ်တမ်းပယ်ဖျက်ခြင်းလုပ်ဆောင်၍မရပါ",
   "googleAccount": "Google အကောင့်",
   "diaryRecord": "နေ့စဉ်မှတ်တမ်းတင်",

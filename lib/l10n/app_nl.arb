@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "Bijvoorbeeld als je vanaf 1/12 3 dagen stopt met de pil",
   "exampleRestDurationNumber": "Bijvoorbeeld als je vanaf pil 18 een pauze van 3 dagen neemt",
   "withNumber": "Nr. {number}",
-  "currentPillSheetNotFound": "Het huidige pilstrip kon niet worden gevonden",
+  "currentPillSheetNotFound": "De pillenstrip die je nu gebruikt, is niet gevonden",
   "doNotRevertTakePillInPausePeriod": "Het annuleren van pilgebruik is niet mogelijk tijdens de rustperiode",
   "googleAccount": "Google-account",
   "diaryRecord": "Dagboek invullen",

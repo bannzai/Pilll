@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "ಉದಾಹರಣೆಗೆ, ನೀವು 1/12ರಿಂದ 3 ದಿನಗಳವರೆಗೆ ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದನ್ನು ನಿಲ್ಲಿಸಿದರೆ",
   "exampleRestDurationNumber": "ಉದಾಹರಣೆಗೆ, 18ನೇ ಮಾತ್ರೆಯಿಂದ ಆರಂಭಿಸಿ 3 ದಿನ ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದನ್ನು ನಿಲ್ಲಿಸಿದರೆ",
   "withNumber": "ಸಂ. {number}",
-  "currentPillSheetNotFound": "ಪ್ರಸ್ತುತ ಗುರಿಯಾಗಿರುವ ಮಾತ್ರೆ ಶೀಟ್ ಸಿಗಲಿಲ್ಲ",
+  "currentPillSheetNotFound": "ಈಗ ನೀವು ಬಳಸುತ್ತಿರುವ ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಕಂಡುಬಂದಿಲ್ಲ",
   "doNotRevertTakePillInPausePeriod": "ವಿರಾಮ ಅವಧಿಯಲ್ಲಿ ಗೋಳಿ ಸೇವನೆಯ ರದ್ದತಿ ಕಾರ್ಯವನ್ನು ಮಾಡಲಾಗುವುದಿಲ್ಲ",
   "googleAccount": "Google ಖಾತೆ",
   "diaryRecord": "ದಿನಚರಿ ದಾಖಲಿಸಿ",

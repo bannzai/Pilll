@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "Na przykład, jeśli od 1/12 zrobisz 3-dniową przerwę w przyjmowaniu pigułki",
   "exampleRestDurationNumber": "Na przykład przy 3-dniowej przerwie w przyjmowaniu, zaczynając od tabletki nr 18",
   "withNumber": "Nr {number}",
-  "currentPillSheetNotFound": "Nie znaleziono aktualnie używanego opakowania tabletek",
+  "currentPillSheetNotFound": "Nie znaleziono blistra, który jest teraz używany",
   "doNotRevertTakePillInPausePeriod": "Nie można cofnąć przyjęcia tabletki podczas okresu przerwy",
   "googleAccount": "Konto Google",
   "diaryRecord": "Zapisz w dzienniku",

@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "Ví dụ, nếu bạn ngừng uống thuốc trong 3 ngày kể từ 1/12",
   "exampleRestDurationNumber": "Ví dụ, nếu bạn tạm ngừng uống thuốc trong 3 ngày, bắt đầu từ viên số 18",
   "withNumber": "Số {number}",
-  "currentPillSheetNotFound": "Không tìm thấy gói thuốc hiện tại",
+  "currentPillSheetNotFound": "Không tìm thấy vỉ thuốc bạn đang dùng",
   "doNotRevertTakePillInPausePeriod": "Không thể hủy bỏ việc ghi nhận uống thuốc trong thời kỳ nghỉ thuốc",
   "googleAccount": "Tài khoản Google",
   "diaryRecord": "Ghi nhật ký",

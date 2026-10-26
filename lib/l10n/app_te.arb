@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "ఉదాహరణకు, 1/12 నుంచి 3 రోజుల పాటు మాత్ర తీసుకోవడం ఆపితే",
   "exampleRestDurationNumber": "ఉదాహరణకు, 18వ మాత్ర నుంచి 3 రోజుల పాటు మాత్రలు తీసుకోవడం ఆపితే",
   "withNumber": "సంఖ్య {number}",
-  "currentPillSheetNotFound": "ప్రస్తుత లక్ష్య పిల్ షీట్ కనుగొనబడలేదు",
+  "currentPillSheetNotFound": "ప్రస్తుతం ఉపయోగిస్తున్న మాత్రల స్ట్రిప్ కనుగొనబడలేదు",
   "doNotRevertTakePillInPausePeriod": "విరామ కాలంలో మందు తీసుకోవడాన్ని రద్దు చేయలేము",
   "googleAccount": "గూగుల్ ఖాతా",
   "diaryRecord": "డైరీ రికార్డ్ చేయండి",

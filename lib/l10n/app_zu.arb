@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "Isibonelo, uma uthatha ikhefu lokuphuza iphilisi izinsuku ezi-3 kusukela ngo-1/12",
   "exampleRestDurationNumber": "Ngokwesibonelo, uma uthatha ikhefu lezinsuku ezi-3 ekuphuzeni amaphilisi, kusukela kuphilisi le-18",
   "withNumber": "Inombolo {number}",
-  "currentPillSheetNotFound": "Iphakheji lamaphilisi elisetshenzisiwe yamanje alitholakali",
+  "currentPillSheetNotFound": "Ishidi lamaphilisi elisetshenziswa manje alitholakalanga",
   "doNotRevertTakePillInPausePeriod": "Ukucisha ukuthatha kwamaphilisi akukwazi ukwenziwa ngesikhathi sokuphumula emithini",
   "googleAccount": "I-akhawunti ye-Google",
   "diaryRecord": "Bhala idayari",

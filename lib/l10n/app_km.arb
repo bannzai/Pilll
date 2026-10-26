@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "ឧទាហរណ៍ ប្រសិនបើអ្នកផ្អាកលេបថ្នាំគ្រាប់រយៈពេល 3 ថ្ងៃ ចាប់ពីថ្ងៃទី 1/12",
   "exampleRestDurationNumber": "ឧទាហរណ៍ ប្រសិនបើអ្នកផ្អាកលេបថ្នាំរយៈពេល 3 ថ្ងៃ ចាប់ពីគ្រាប់ទី 18",
   "withNumber": "លេខ {number}",
-  "currentPillSheetNotFound": "រកមិនឃើញសន្លឹកពិលដែលកំពុងប្រើប្រាស់បច្ចុប្បន្ន",
+  "currentPillSheetNotFound": "រកមិនឃើញបន្ទះថ្នាំគ្រាប់ដែលកំពុងប្រើទេ",
   "doNotRevertTakePillInPausePeriod": "ការលុបចោលការកត់ត្រាការញុំាថ្នាំគុជមានមិនអាចធ្វើបានកំឡុងពេលឈប់ថ្នាំ",
   "googleAccount": "គណនី Google",
   "diaryRecord": "កត់ត្រាកំណត់ហេតុ",

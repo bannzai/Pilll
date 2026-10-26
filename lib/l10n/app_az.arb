@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "Məsələn, 1/12 tarixindən başlayaraq 3 gün həb qəbuluna fasilə vermisinizsə",
   "exampleRestDurationNumber": "Məsələn, 18-ci həbdən başlayaraq 3 gün həb qəbul etməyə fasilə vermisinizsə",
   "withNumber": "№ {number}",
-  "currentPillSheetNotFound": "Hazırda hədəflənən həb səhifəsi tapılmadı",
+  "currentPillSheetNotFound": "Hazırda istifadə etdiyiniz həb blister tapılmadı",
   "doNotRevertTakePillInPausePeriod": "İstirahət dövrü ərzində həb qəbulunun ləğv edilməsi mümkün deyil",
   "googleAccount": "Google hesabı",
   "diaryRecord": "Gündəlik yazmaq",

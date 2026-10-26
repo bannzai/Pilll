@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "Por ejemplo, si haces una pausa de 3 días en la toma de la píldora a partir del 1 de diciembre",
   "exampleRestDurationNumber": "Por ejemplo, si haces una pausa de 3 días a partir de la píldora 18",
   "withNumber": "N.º {number}",
-  "currentPillSheetNotFound": "No se encontró la cartela de píldoras actual",
+  "currentPillSheetNotFound": "No se encontró el blíster que usas actualmente",
   "doNotRevertTakePillInPausePeriod": "No se puede cancelar el registro de toma de píldora durante el período de descanso",
   "googleAccount": "Cuenta de Google",
   "diaryRecord": "Registrar diario",

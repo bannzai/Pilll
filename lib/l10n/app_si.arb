@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "උදාහරණයක් ලෙස, ඔබ 1/12 සිට දින 3ක් පෙත්ත ගැනීම නවතා තැබුවහොත්",
   "exampleRestDurationNumber": "උදාහරණයක් ලෙස, 18 වැනි පෙත්තෙන් පටන්ගෙන දින 3ක් පෙති ගැනීම නතර කළහොත්",
   "withNumber": "අංක {number}",
-  "currentPillSheetNotFound": "දැනට භාවිත කරන පිල් ෂීට් සොයා ගත නොහැකි විය",
+  "currentPillSheetNotFound": "දැනට භාවිත කරන පෙති කාඩ්පත සොයාගත නොහැකි විය",
   "doNotRevertTakePillInPausePeriod": "විරාම කාල පරිච්ඡේදය තුළ පෙත්ත ගැනීම අවලංගු කිරීමේ ක්‍රියාවලිය ක්‍රියාත්මක කළ නොහැක",
   "googleAccount": "Google ගිණුම",
   "diaryRecord": "දිනපොත ලියන්න",

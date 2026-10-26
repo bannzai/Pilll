@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "उदाहरणका लागि, तपाईंले 1/12 देखि 3 दिनसम्म चक्की खान रोक्नुभयो भने",
   "exampleRestDurationNumber": "उदाहरणका लागि, तपाईंले 18 नम्बरको चक्कीबाट सुरु गरी 3 दिन चक्की खान रोक्नुभयो भने",
   "withNumber": "नं. {number}",
-  "currentPillSheetNotFound": "हाल सक्रिय गोली शीट फेला परेन",
+  "currentPillSheetNotFound": "अहिले प्रयोग भइरहेको चक्की पत्ता फेला परेन",
   "doNotRevertTakePillInPausePeriod": "विश्राम अवधिमा गर्भनिरोधक गोलीको सेवन रद्द गर्न सकिँदैन",
   "googleAccount": "गूगल खाता",
   "diaryRecord": "डायरी रेकर्ड गर्नुहोस्",

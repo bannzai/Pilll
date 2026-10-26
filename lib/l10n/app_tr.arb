@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "Örneğin, 1/12’den itibaren 3 gün hap kullanımına ara verirseniz",
   "exampleRestDurationNumber": "Örneğin, 18. haptan başlayarak 3 gün hap almaya ara verirseniz",
   "withNumber": "No. {number}",
-  "currentPillSheetNotFound": "Mevcut hap levhası bulunamadı",
+  "currentPillSheetNotFound": "Şu anda kullandığınız blister bulunamadı",
   "doNotRevertTakePillInPausePeriod": "Dinlenme döneminde doğum kontrol hapı alma kaydını iptal edemezsiniz",
   "googleAccount": "Google Hesabı",
   "diaryRecord": "Günlük kaydet",

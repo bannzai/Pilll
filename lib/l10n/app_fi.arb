@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "Esimerkiksi jos pidät pillereistä 3 päivän tauon 1/12 alkaen",
   "exampleRestDurationNumber": "Esimerkiksi jos pidät 3 päivän tauon pillereistä alkaen pilleristä 18",
   "withNumber": "Nro {number}",
-  "currentPillSheetNotFound": "Käytössä olevaa pillerilehteä ei löytynyt",
+  "currentPillSheetNotFound": "Käytössä olevaa pilleriliuskaa ei löytynyt",
   "doNotRevertTakePillInPausePeriod": "Pillin ottoa ei voi peruuttaa taukojakson aikana",
   "googleAccount": "Google-tili",
   "diaryRecord": "Kirjaa päiväkirja",

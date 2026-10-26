@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "Contohnya, jika anda berhenti mengambil pil selama 3 hari mulai 1/12",
   "exampleRestDurationNumber": "Contohnya, jika anda berhenti mengambil pil selama 3 hari bermula dari pil nombor 18",
   "withNumber": "No. {number}",
-  "currentPillSheetNotFound": "Lembaran pil sasaran semasa tidak ditemui",
+  "currentPillSheetNotFound": "Pek pil yang sedang anda gunakan tidak ditemui",
   "doNotRevertTakePillInPausePeriod": "Operasi pembatalan pengambilan pil tidak dapat dilaksanakan semasa tempoh rehat ubat",
   "googleAccount": "Akaun Google",
   "diaryRecord": "Catat Diari",

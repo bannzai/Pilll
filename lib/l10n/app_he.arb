@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "לדוגמה, במקרה של הפסקה בנטילת הגלולה למשך 3 ימים החל מ־1/12",
   "exampleRestDurationNumber": "למשל, במקרה של הפסקה בנטילת הגלולות למשך 3 ימים החל מגלולה מספר 18",
   "withNumber": "מס׳ {number}",
-  "currentPillSheetNotFound": "לא נמצא גליון הכדורים הנוכחי",
+  "currentPillSheetNotFound": "לא נמצאה חפיסת הגלולות שבשימוש כעת",
   "doNotRevertTakePillInPausePeriod": "לא ניתן לבטל רישום נטילת גלולה במהלך תקופת המנוחה",
   "googleAccount": "חשבון Google",
   "diaryRecord": "רישום יומן",

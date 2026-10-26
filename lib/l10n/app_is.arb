@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "Til dæmis ef þú gerir 3 daga hlé á pillutöku frá 1/12",
   "exampleRestDurationNumber": "Til dæmis ef þú gerir 3 daga hlé á pillutöku frá pillu númer 18",
   "withNumber": "Nr. {number}",
-  "currentPillSheetNotFound": "Núverandi pillublað fannst ekki",
+  "currentPillSheetNotFound": "Pilluspjald sem er í notkun fannst ekki",
   "doNotRevertTakePillInPausePeriod": "Ekki er hægt að afturkalla pillutöku á hvíldartímabilinu",
   "googleAccount": "Google reikningur",
   "diaryRecord": "Skrá dagbók",

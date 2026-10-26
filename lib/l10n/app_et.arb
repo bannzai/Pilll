@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "Näiteks kui teed alates 1/12 pillide võtmises 3-päevase pausi",
   "exampleRestDurationNumber": "Näiteks kui teed alates pillist 18 pillide võtmisel 3-päevase pausi",
   "withNumber": "Nr {number}",
-  "currentPillSheetNotFound": "Aktiivset pillitabletti ei leitud",
+  "currentPillSheetNotFound": "Praegu kasutatavat pillilehte ei leitud",
   "doNotRevertTakePillInPausePeriod": "Pilli võtmise tühistamine pole pillipause ajal võimalik",
   "googleAccount": "Google'i konto",
   "diaryRecord": "Salvesta päevik",

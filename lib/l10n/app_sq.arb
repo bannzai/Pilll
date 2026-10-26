@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "Për shembull, nëse bëni një pushim 3-ditor nga marrja e pilulës duke filluar më 1/12",
   "exampleRestDurationNumber": "Për shembull, nëse bëni një ndërprerje 3-ditore duke filluar nga pilula numër 18",
   "withNumber": "Nr. {number}",
-  "currentPillSheetNotFound": "Nuk u gjet fletorja e pilulës aktuale",
+  "currentPillSheetNotFound": "Nuk u gjet blisteri që po përdorni tani",
   "doNotRevertTakePillInPausePeriod": "Anulimi i regjistrimit të pilulës nuk mund të kryhet gjatë periudhës së pushimit",
   "googleAccount": "Llogaria Google",
   "diaryRecord": "Regjistro ditarin",

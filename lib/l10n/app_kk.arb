@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "Мысалы, 1/12 бастап 3 күн бойы таблетка қабылдауға үзіліс жасасаңыз",
   "exampleRestDurationNumber": "Мысалы, 18-таблеткадан бастап қабылдауды 3 күнге тоқтатсаңыз",
   "withNumber": "№ {number}",
-  "currentPillSheetNotFound": "Ағымдағы дәрі жаплағы табылмады",
+  "currentPillSheetNotFound": "Қазір қолданылып жатқан таблетка блистер табылмады",
   "doNotRevertTakePillInPausePeriod": "Үзіліс кезеңінде таблетка қабылдауды болдырмау мүмкін емес",
   "googleAccount": "Google аккаунт",
   "diaryRecord": "Күнделік жазу",

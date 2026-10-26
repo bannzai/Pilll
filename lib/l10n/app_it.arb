@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "Per esempio, se fai una pausa di 3 giorni dall’assunzione della pillola a partire dal 1/12",
   "exampleRestDurationNumber": "Per esempio, se fai una pausa di 3 giorni a partire dalla pillola 18",
   "withNumber": "N. {number}",
-  "currentPillSheetNotFound": "Non è stata trovata la confezione di pillole attualmente in uso",
+  "currentPillSheetNotFound": "Non è stato trovato il blister che stai usando",
   "doNotRevertTakePillInPausePeriod": "Non è possibile annullare l'assunzione della pillola durante il periodo di pausa",
   "googleAccount": "Account Google",
   "diaryRecord": "Scrivi diario",

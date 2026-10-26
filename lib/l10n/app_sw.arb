@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "Kwa mfano, ukipumzika kumeza kidonge kwa siku 3 kuanzia 1/12",
   "exampleRestDurationNumber": "Kwa mfano, ukipumzika kumeza vidonge kwa siku 3 kuanzia kidonge cha 18",
   "withNumber": "Nambari {number}",
-  "currentPillSheetNotFound": "Karatasi ya vidonge vya sasa haikupatikana",
+  "currentPillSheetNotFound": "Pakiti ya vidonge inayotumika sasa haijapatikana",
   "doNotRevertTakePillInPausePeriod": "Tendo la kubatilisha kutumia vidonge haliwezi kufanyika wakati wa kipindi cha mapumziko ya dawa",
   "googleAccount": "Akaunti ya Google",
   "diaryRecord": "Andika diarii",

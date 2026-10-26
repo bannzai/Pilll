@@ -344,7 +344,7 @@
   "exampleRestDurationDate": "Par exemple, si vous faites une pause de 3 jours dans la prise de la pilule à partir du 1/12",
   "exampleRestDurationNumber": "Par exemple, si vous faites une pause de 3 jours à partir de la pilule nº 18",
   "withNumber": "N° {number}",
-  "currentPillSheetNotFound": "La liste de pilules actuelle est introuvable",
+  "currentPillSheetNotFound": "La plaquette que vous utilisez actuellement est introuvable",
   "doNotRevertTakePillInPausePeriod": "Vous ne pouvez pas annuler la prise de la pilule pendant la période sans pilule",
   "googleAccount": "Compte Google",
   "diaryRecord": "Journal d'enregistrement",
