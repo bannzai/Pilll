@@ -88,7 +88,7 @@
   "reLoginMessage": "Бүртгэлээ устгахаас өмнө хэн болохоо баталгаажуулахын тулд дахин нэвтэрнэ үү. Нэвтэрсний дараа бүртгэл устгах үйл явц автоматаар эхэлнэ.",
   "updateAuthenticationAfterReLogin": "Нэвтрэх мэдээллээ шинэчлэхийн тулд дахин нэвтэрнэ үү",
   "menstruationPage": "Сарын тэмдэг",
-  "calendarPage": "Календар",
+  "calendarPage": "Хуанли",
   "settingsPage": "Тохиргоо",
   "menstruationDeleted": "Сарын тэмдгийн хугацааг устгалаа",
   "editMenstruationPeriod": "Сарын тэмдгийн хугацааг засах",

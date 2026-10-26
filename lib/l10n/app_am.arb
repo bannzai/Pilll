@@ -88,7 +88,7 @@
   "reLoginMessage": "መለያዎ ከመሰረዙ በፊት ማንነትዎን ለማረጋገጥ እንደገና ይግቡ። እንደገና ከገቡ በኋላ የመለያ ስረዛ ሂደት በራስ-ሰር ይጀምራል።",
   "updateAuthenticationAfterReLogin": "የማረጋገጫ መረጃን ለማዘመን እባክዎ እንደገና ይግቡ",
   "menstruationPage": "የወር አበባ",
-  "calendarPage": "ካላንደር",
+  "calendarPage": "የቀን መቁጠሪያ",
   "settingsPage": "ቅንብሮች",
   "menstruationDeleted": "የወርሐዊ ዙር ተሰርዟል",
   "editMenstruationPeriod": "የአበባ ጊዜን ማርም",

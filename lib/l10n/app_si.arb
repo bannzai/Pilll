@@ -88,7 +88,7 @@
   "reLoginMessage": "ගිණුම මකා දැමීමට පෙර ඔබේ අනන්‍යතාව තහවුරු කර ගැනීමට කරුණාකර නැවත පුරනය වන්න. පුරනය වූ පසු ගිණුම මකා දැමීමේ ක්‍රියාවලිය ස්වයංක්‍රීයව ආරම්භ වේ.",
   "updateAuthenticationAfterReLogin": "සත්‍යාපන තොරතුරු යාවත්කාලීන කිරීමට කරුණාකර නැවත පිවිසෙන්න",
   "menstruationPage": "ඔසප් වීම",
-  "calendarPage": "දිනදර්ශන පිටුව",
+  "calendarPage": "දින දර්ශනය",
   "settingsPage": "සැකසුම්",
   "menstruationDeleted": "ඔසප් කාලය ඉවත් කරන ලදී",
   "editMenstruationPeriod": "ඔසප් කාලය සංස්කරණය කරන්න",

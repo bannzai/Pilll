@@ -88,7 +88,7 @@
   "reLoginMessage": "Молимо Вас да се поново пријавите ради потврде идентитета пре брисања налога. Након пријаве, брисање ће почети аутоматски.",
   "updateAuthenticationAfterReLogin": "Молимо Вас да се поново пријавите како би се подаци за потврду идентитета ажурирали",
   "menstruationPage": "Менструација",
-  "calendarPage": "Kalendar",
+  "calendarPage": "Календар",
   "settingsPage": "Postavke",
   "menstruationDeleted": "Menstrualni period je obrisan",
   "editMenstruationPeriod": "Уреди период менструације",

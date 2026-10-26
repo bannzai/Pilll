@@ -88,7 +88,7 @@
   "reLoginMessage": "একাউণ্ট মচাৰ আগতে পৰিচয় নিশ্চিত কৰিবলৈ অনুগ্ৰহ কৰি পুনৰ লগ ইন কৰক। লগ ইন কৰাৰ পাছত একাউণ্ট মচাৰ প্ৰক্ৰিয়া নিজে নিজে আৰম্ভ হ’ব।",
   "updateAuthenticationAfterReLogin": "প্ৰমাণীকৰণৰ তথ্য আপডেট কৰিবলৈ অনুগ্ৰহ কৰি পুনৰ লগ ইন কৰক",
   "menstruationPage": "মাহেকীয়া",
-  "calendarPage": "কেলেণ্ডাৰ",
+  "calendarPage": "দিনপঞ্জী",
   "settingsPage": "ছেটিং",
   "menstruationDeleted": "ঋতুকাল মচা হৈছে",
   "editMenstruationPeriod": "ঋতুস্ৰাৱৰ সময় সম্পাদনা কৰক",
