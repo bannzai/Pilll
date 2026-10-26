@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "Ве молиме, овозможете пристап до апликацијата Здравје преку Поставки",
   "accountAlreadyLinked": "Оваа сметка на {accountTypeProviderName} веќе е поврзана со Вашата сметка на Pilll. Обидете се да го освежите екранот и погледнете ги и често поставуваните прашања. Детали: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Оваа сметка на {accountTypeProviderName} веќе е поврзана со друга сметка на Pilll, па не можете да се регистрирате со неа. Погледнете го и FAQ. Детали: {exceptionMessage}",
-  "emailAlreadyInUse": "Не можете да се регистрирате бидејќи е-пошта адресата што ја користите со вашата {accountTypeProviderName} сметка веќе е поврзана со друга Pilll сметка. Моле, погледнете ги и честите прашања. Детали: {exceptionMessage}",
+  "emailAlreadyInUse": "Не можете да се регистрирате бидејќи адресата на е-пошта што ја користите со сметката {accountTypeProviderName} веќе е поврзана со друга сметка на Pilll. Погледнете ги и често поставуваните прашања. Детали: {exceptionMessage}",
   "todaySchedule": "Денешни планови",
   "calendarSchedule": "Календарски настани",
   "newPillSheetNotificationTitle": "Од денес започнува нова листче",

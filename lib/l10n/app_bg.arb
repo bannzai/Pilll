@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "Можете да разрешите достъпа до приложението „Здраве“ от „Настройки“",
   "accountAlreadyLinked": "Този акаунт в {accountTypeProviderName} вече е свързан с акаунта ви в Pilll. Опитайте да обновите екрана и разгледайте FAQ. Подробности: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Този профил в {accountTypeProviderName} вече е свързан с друг профил в Pilll, затова не може да се използва за регистрация. Моля, вижте и FAQ. Подробности: {exceptionMessage}",
-  "emailAlreadyInUse": "Имейл адресът, който използвате във вашия {accountTypeProviderName} акаунт, вече е свързан с друг Pilll акаунт, поради което регистрацията не е възможна. Моля, вижте FAQ. Подробности: {exceptionMessage}",
+  "emailAlreadyInUse": "Не можете да се регистрирате, защото имейл адресът, който използвате с акаунта си в {accountTypeProviderName}, вече е свързан с друг акаунт в Pilll. Можете да разгледате и често задаваните въпроси. Подробности: {exceptionMessage}",
   "todaySchedule": "Днешни планове",
   "calendarSchedule": "Календарни събития",
   "newPillSheetNotificationTitle": "От днес започва нова опаковка",

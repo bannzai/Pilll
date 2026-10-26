@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "Sila benarkan akses kepada Kesihatan dalam aplikasi Tetapan",
   "accountAlreadyLinked": "Akaun {accountTypeProviderName} ini sudah dipautkan ke akaun Pilll anda. Sila cuba segar semula skrin dan lihat juga soalan lazim. Butiran: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Akaun {accountTypeProviderName} ini sudah dipautkan kepada akaun Pilll yang lain, jadi anda tidak boleh mendaftar dengannya. Sila lihat FAQ juga. Butiran: {exceptionMessage}",
-  "emailAlreadyInUse": "Alamat e-mel yang digunakan dengan akaun {accountTypeProviderName} anda sudah dikaitkan dengan akaun Pilll lain, oleh itu pendaftaran tidak dapat dilakukan. Sila rujuk FAQ untuk maklumat lanjut. Butiran: {exceptionMessage}",
+  "emailAlreadyInUse": "Pendaftaran tidak dapat dilakukan kerana alamat e-mel yang anda gunakan dengan akaun {accountTypeProviderName} sudah dipautkan kepada akaun Pilll yang lain. Sila rujuk juga soalan lazim. Butiran: {exceptionMessage}",
   "todaySchedule": "Jadual Hari Ini",
   "calendarSchedule": "Jadual kalendar",
   "newPillSheetNotificationTitle": "Paket pil baru bermula hari ini",

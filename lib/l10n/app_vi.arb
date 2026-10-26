@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "Vui lòng bật quyền truy cập ứng dụng Sức khỏe trong Cài đặt",
   "accountAlreadyLinked": "Tài khoản {accountTypeProviderName} này đã được liên kết với tài khoản Pilll của bạn. Vui lòng thử làm mới màn hình và xem thêm phần câu hỏi thường gặp. Chi tiết: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Tài khoản {accountTypeProviderName} này đã được liên kết với một tài khoản Pilll khác, nên bạn không thể dùng tài khoản này để đăng ký. Vui lòng xem thêm FAQ. Chi tiết: {exceptionMessage}",
-  "emailAlreadyInUse": "Không thể đăng ký vì địa chỉ email bạn đang sử dụng trong tài khoản {accountTypeProviderName} đã được liên kết với tài khoản Pilll khác. Vui lòng tham khảo FAQ. Chi tiết: {exceptionMessage}",
+  "emailAlreadyInUse": "Bạn không thể đăng ký vì địa chỉ email dùng cho tài khoản {accountTypeProviderName} đã được liên kết với một tài khoản Pilll khác. Vui lòng xem thêm phần câu hỏi thường gặp. Chi tiết: {exceptionMessage}",
   "todaySchedule": "Lịch trình hôm nay",
   "calendarSchedule": "Lịch trình trên lịch",
   "newPillSheetNotificationTitle": "Hôm nay bắt đầu vỉ thuốc mới",

@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "Жөндөөлөр колдонмосунан Ден соолук колдонмосуна кирүүгө уруксат бериңиз",
   "accountAlreadyLinked": "Бул {accountTypeProviderName} аккаунту сиздин Pilll аккаунтуңузга мурунтан эле байланыштырылган. Экранды жаңыртып көрүңүз жана көп берилүүчү суроолорду да караңыз. Толук маалымат: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Бул {accountTypeProviderName} аккаунту башка Pilll аккаунтуна мурунтан эле байланыштырылган, андыктан аны менен каттала албайсыз. FAQ бөлүмүн да карап көрүңүз. Толук маалымат: {exceptionMessage}",
-  "emailAlreadyInUse": "{accountTypeProviderName} аккаунту менен колдонулган электрондук дарегиңиз башка Pilll аккаунтуна байланыштырылгандыктан катталуу мүмкүн эмес. FAQ бөлүмүн да көрүңүз. Чоо-жайы: {exceptionMessage}",
+  "emailAlreadyInUse": "{accountTypeProviderName} каттоо эсебиңизде колдонгон электрондук почта дареги башка Pilll каттоо эсебине мурунтан эле байланып тургандыктан, каттала албайсыз. Көп берилүүчү суроолорду да карап көрүңүз. Толук маалымат: {exceptionMessage}",
   "todaySchedule": "Бүгүнкү пландар",
   "calendarSchedule": "Календардын планы",
   "newPillSheetNotificationTitle": "Бүгүндөн жаңы курс башталат",

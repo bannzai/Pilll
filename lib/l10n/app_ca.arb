@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "Pots activar l’accés a Salut des de l’app Configuració",
   "accountAlreadyLinked": "Aquest compte de {accountTypeProviderName} ja està vinculat al teu compte de Pilll. Prova d’actualitzar la pantalla i consulta també les preguntes freqüents. Detalls: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Aquest compte de {accountTypeProviderName} ja està vinculat a un altre compte de Pilll i no el pots fer servir per registrar-te. Consulta també les FAQ. Detalls: {exceptionMessage}",
-  "emailAlreadyInUse": "No es pot registrar perquè l'adreça de correu del vostre compte de {accountTypeProviderName} ja està vinculada a un altre compte de Pilll. Consulteu les FAQ per obtenir més informació. Detalls: {exceptionMessage}",
+  "emailAlreadyInUse": "No et pots registrar perquè l’adreça electrònica que fas servir amb el compte de {accountTypeProviderName} ja està vinculada a un altre compte de Pilll. Pots consultar també les preguntes freqüents. Detalls: {exceptionMessage}",
   "todaySchedule": "Agenda d'avui",
   "calendarSchedule": "Cites del calendari",
   "newPillSheetNotificationTitle": "Avui comença un nou full",

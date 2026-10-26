@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "Você pode ativar o acesso ao app Saúde em Ajustes",
   "accountAlreadyLinked": "Esta conta do {accountTypeProviderName} já está vinculada à sua conta do Pilll. Tente atualizar a tela e confira também as perguntas frequentes. Detalhes: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Esta conta do {accountTypeProviderName} já está vinculada a outra conta do Pilll, então não é possível se cadastrar com ela. Consulte também as perguntas frequentes (FAQ). Detalhes: {exceptionMessage}",
-  "emailAlreadyInUse": "O endereço de email da sua conta {accountTypeProviderName} já está vinculado a outra conta Pilll, portanto não é possível realizar o cadastro. Consulte também as FAQ. Detalhes: {exceptionMessage}",
+  "emailAlreadyInUse": "Não é possível concluir o cadastro porque o endereço de e-mail que você usa na conta {accountTypeProviderName} já está vinculado a outra conta do Pilll. Consulte também as perguntas frequentes. Detalhes: {exceptionMessage}",
   "todaySchedule": "Agenda de hoje",
   "calendarSchedule": "Eventos do calendário",
   "newPillSheetNotificationTitle": "Uma nova cartela começa hoje",

@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "Þú getur virkjað aðgang að Heilsa í Stillingum",
   "accountAlreadyLinked": "Þessi {accountTypeProviderName}-reikningur er þegar tengdur Pilll-reikningnum þínum. Prófaðu að endurnýja skjáinn og skoðaðu líka algengar spurningar. Nánar: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Þessi {accountTypeProviderName}-reikningur er þegar tengdur öðrum Pilll-reikningi og því er ekki hægt að skrá sig með honum. Skoðaðu einnig FAQ. Nánari upplýsingar: {exceptionMessage}",
-  "emailAlreadyInUse": "Ekki er hægt að skrá sig því netfangið sem þú notar fyrir {accountTypeProviderName} reikninginn þinn er þegar tengt öðrum Pilll reikningi. Vinsamlegast skoðaðu FAQ. Nánar: {exceptionMessage}",
+  "emailAlreadyInUse": "Þú getur ekki skráð þig því netfangið sem þú notar með {accountTypeProviderName}-reikningnum þínum er þegar tengt öðrum Pilll-reikningi. Skoðaðu líka algengar spurningar. Nánar: {exceptionMessage}",
   "todaySchedule": "Dagskrá í dag",
   "calendarSchedule": "Dagataláætlanir",
   "newPillSheetNotificationTitle": "Í dag byrjar nýtt blað",

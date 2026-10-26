@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "Du kan gi tilgang til Helse i Innstillinger",
   "accountAlreadyLinked": "Denne {accountTypeProviderName}-kontoen er allerede knyttet til Pilll-kontoen din. Prøv å oppdatere skjermen, og se også vanlige spørsmål. Detaljer: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Denne {accountTypeProviderName}-kontoen er allerede koblet til en annen Pilll-konto, så du kan ikke registrere deg med den. Se også FAQ. Detaljer: {exceptionMessage}",
-  "emailAlreadyInUse": "Registrering er ikke mulig fordi e-postadressen som brukes med {accountTypeProviderName}-kontoen din allerede er tilknyttet en annen Pilll-konto. Se også FAQ. Detaljer: {exceptionMessage}",
+  "emailAlreadyInUse": "Du kan ikke registrere deg fordi e-postadressen du bruker med {accountTypeProviderName}-kontoen din, allerede er knyttet til en annen Pilll-konto. Se også ofte stilte spørsmål. Detaljer: {exceptionMessage}",
   "todaySchedule": "Dagens program",
   "calendarSchedule": "Kalenderavtaler",
   "newPillSheetNotificationTitle": "I dag starter en ny pillepakke",

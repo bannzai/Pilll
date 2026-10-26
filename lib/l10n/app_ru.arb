@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "Разрешите доступ к приложению «Здоровье» в настройках",
   "accountAlreadyLinked": "Эта учётная запись {accountTypeProviderName} уже связана с вашей учётной записью Pilll. Попробуйте обновить экран и загляните в раздел частых вопросов. Подробности: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Эта учётная запись {accountTypeProviderName} уже связана с другой учётной записью Pilll, поэтому зарегистрироваться с её помощью нельзя. Загляните также в FAQ. Подробности: {exceptionMessage}",
-  "emailAlreadyInUse": "Адрес электронной почты, используемый в вашем аккаунте {accountTypeProviderName}, уже привязан к другому аккаунту Pilll, поэтому регистрация невозможна. Также ознакомьтесь с FAQ. Подробности: {exceptionMessage}",
+  "emailAlreadyInUse": "Зарегистрироваться не получится: адрес электронной почты, который вы используете в учётной записи {accountTypeProviderName}, уже привязан к другой учётной записи Pilll. Загляните также в раздел частых вопросов. Подробности: {exceptionMessage}",
   "todaySchedule": "Планы на сегодня",
   "calendarSchedule": "События календаря",
   "newPillSheetNotificationTitle": "Сегодня начинается новая упаковка",

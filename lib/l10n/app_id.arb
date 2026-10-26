@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "Silakan aktifkan akses ke Kesehatan melalui aplikasi Pengaturan",
   "accountAlreadyLinked": "Akun {accountTypeProviderName} ini sudah terhubung ke akun Pilll Anda. Coba muat ulang layar dan lihat juga FAQ. Detail: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Akun {accountTypeProviderName} ini sudah terhubung ke akun Pilll lain, jadi Anda tidak dapat mendaftar dengannya. Silakan lihat juga FAQ. Detail: {exceptionMessage}",
-  "emailAlreadyInUse": "Alamat email yang Anda gunakan untuk akun {accountTypeProviderName} sudah terhubung dengan akun Pilll lain sehingga tidak dapat mendaftar. Silakan lihat FAQ juga. Detail: {exceptionMessage}",
+  "emailAlreadyInUse": "Pendaftaran tidak dapat dilakukan karena alamat email yang Anda gunakan untuk akun {accountTypeProviderName} sudah terhubung ke akun Pilll lain. Silakan lihat juga pertanyaan umum. Detail: {exceptionMessage}",
   "todaySchedule": "Jadwal Hari Ini",
   "calendarSchedule": "Jadwal Kalendar",
   "newPillSheetNotificationTitle": "Paket baru dimulai hari ini",

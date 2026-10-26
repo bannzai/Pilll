@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "அமைப்புகள் செயலியில் உடல்நலம் செயலிக்கான அணுகலை இயக்குங்கள்",
   "accountAlreadyLinked": "இந்த {accountTypeProviderName} கணக்கு ஏற்கெனவே உங்கள் Pilll கணக்குடன் இணைக்கப்பட்டுள்ளது. திரையைப் புதுப்பித்துப் பாருங்கள். அடிக்கடி கேட்கப்படும் கேள்விகளையும் பாருங்கள். விவரங்கள்: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "இந்த {accountTypeProviderName} கணக்கு ஏற்கெனவே வேறொரு Pilll கணக்குடன் இணைக்கப்பட்டுள்ளது. எனவே இதைப் பயன்படுத்திப் பதிவு செய்ய முடியாது. FAQ-ஐயும் பார்க்கவும். விவரங்கள்: {exceptionMessage}",
-  "emailAlreadyInUse": "ஏற்கனவே {accountTypeProviderName} கணக்கில் பயன்படுத்தும் மின்னஞ்சல் முகவரி வேறு Pilll கணக்குடன் இணைக்கப்பட்டுள்ளதால் பதிவு செய்ய முடியவில்லை. தயவுசெய்து FAQ ஐயும் பார்க்கவும். விவரங்கள்: {exceptionMessage}",
+  "emailAlreadyInUse": "உங்கள் {accountTypeProviderName} கணக்கில் பயன்படுத்தும் மின்னஞ்சல் முகவரி ஏற்கெனவே வேறொரு Pilll கணக்குடன் இணைக்கப்பட்டுள்ளதால் பதிவு செய்ய முடியவில்லை. அடிக்கடி கேட்கப்படும் கேள்விகளையும் பார்க்கவும். விவரங்கள்: {exceptionMessage}",
   "todaySchedule": "இன்றைய அட்டவணை",
   "calendarSchedule": "நாட்காட்டி நிகழ்வுகள்",
   "newPillSheetNotificationTitle": "இன்றிலிருந்து புதிய தாள் தொடங்குகிறது",

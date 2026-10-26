@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "Sağlık uygulamasına erişimi Ayarlar uygulamasından etkinleştirin",
   "accountAlreadyLinked": "Bu {accountTypeProviderName} hesabı Pilll hesabınıza zaten bağlı. Lütfen ekranı yenilemeyi deneyin ve sık sorulan sorulara da göz atın. Ayrıntılar: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Bu {accountTypeProviderName} hesabı başka bir Pilll hesabına zaten bağlı, bu nedenle bu hesapla kaydolamazsınız. Lütfen FAQ bölümüne de göz atın. Ayrıntılar: {exceptionMessage}",
-  "emailAlreadyInUse": "{accountTypeProviderName} hesabınızla kullandığınız e-posta adresi zaten başka bir Pilll hesabı ile ilişkilendirilmiş olduğu için kayıt işlemi gerçekleştirilemez. SSS bölümünü de inceleyiniz. Ayrıntılar: {exceptionMessage}",
+  "emailAlreadyInUse": "{accountTypeProviderName} hesabınızda kullandığınız e-posta adresi başka bir Pilll hesabına zaten bağlı olduğu için kayıt olamıyorsunuz. Sık sorulan sorulara da göz atabilirsiniz. Ayrıntılar: {exceptionMessage}",
   "todaySchedule": "Bugünün Planı",
   "calendarSchedule": "Takvim Etkinlikleri",
   "newPillSheetNotificationTitle": "Bugün yeni blister başlıyor",

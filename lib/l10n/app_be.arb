@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "Калі ласка, уключыце доступ да праграмы «Здароўе» ў наладах",
   "accountAlreadyLinked": "Гэты ўліковы запіс {accountTypeProviderName} ужо звязаны з вашым уліковым запісам Pilll. Паспрабуйце абнавіць экран і паглядзіце FAQ. Падрабязнасці: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Гэты ўліковы запіс {accountTypeProviderName} ужо звязаны з іншым уліковым запісам Pilll, таму зарэгістравацца з яго дапамогай нельга. Калі ласка, зазірніце таксама ў FAQ. Падрабязнасці: {exceptionMessage}",
-  "emailAlreadyInUse": "Ужо немагчыма зарэгістравацца, таму што адрас электроннай пошты, які выкарыстоўваецца для вашага акаунта {accountTypeProviderName}, ужо звязаны з іншым акаунтам Pilll. Калі ласка, азнаёмцеся з FAQ. Падрабязнасці: {exceptionMessage}",
+  "emailAlreadyInUse": "Адрас электроннай пошты, які вы выкарыстоўваеце для ўліковага запісу {accountTypeProviderName}, ужо звязаны з іншым уліковым запісам Pilll, таму зарэгістравацца не атрымаецца. Калі ласка, зазірніце таксама ў частыя пытанні. Падрабязнасці: {exceptionMessage}",
   "todaySchedule": "Сённяшнія планы",
   "calendarSchedule": "Каляндарныя планы",
   "newPillSheetNotificationTitle": "Сёння пачынаецца новы блістэр",

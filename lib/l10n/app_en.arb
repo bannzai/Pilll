@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "Please enable access to Health in the Settings app",
   "accountAlreadyLinked": "This {accountTypeProviderName} account is already linked to your Pilll account. Try refreshing the screen, and check the FAQ too. Details: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "This {accountTypeProviderName} account is already linked to another Pilll account, so you can’t sign up with it. Please see the FAQ too. Details: {exceptionMessage}",
-  "emailAlreadyInUse": "The email address from your {accountTypeProviderName} account is already linked to another Pilll account, so registration cannot be completed. Please check our FAQ. Details: {exceptionMessage}",
+  "emailAlreadyInUse": "You can’t sign up because the email address you use with your {accountTypeProviderName} account is already linked to another Pilll account. Please check the FAQ too. Details: {exceptionMessage}",
   "todaySchedule": "Today's Schedule",
   "calendarSchedule": "Calendar Events",
   "newPillSheetNotificationTitle": "Your new pill sheet starts today",

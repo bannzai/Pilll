@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "Az Egészség alkalmazáshoz való hozzáférést a Beállításokban engedélyezheted",
   "accountAlreadyLinked": "Ez a {accountTypeProviderName}-fiók már össze van kapcsolva a Pilll-fiókoddal. Próbáld frissíteni a képernyőt, és nézd meg a gyakori kérdéseket is. Részletek: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Ez a {accountTypeProviderName}-fiók már egy másik Pilll-fiókhoz van kapcsolva, ezért nem tudsz vele regisztrálni. Nézd meg a FAQ-t is. Részletek: {exceptionMessage}",
-  "emailAlreadyInUse": "A {accountTypeProviderName} fiókjához használt e-mail címe már egy másik Pilll fiókhoz van kapcsolva, ezért a regisztráció nem lehetséges. Kérjük, tekintse meg a GYIK-et is. Részletek: {exceptionMessage}",
+  "emailAlreadyInUse": "Nem tudsz regisztrálni, mert a {accountTypeProviderName}-fiókodhoz használt e-mail-cím már egy másik Pilll-fiókhoz kapcsolódik. Nézd meg a gyakori kérdéseket is. Részletek: {exceptionMessage}",
   "todaySchedule": "Mai programok",
   "calendarSchedule": "Naptári események",
   "newPillSheetNotificationTitle": "Ma új tablettacsomag kezdődik",

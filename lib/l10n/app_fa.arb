@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "لطفاً دسترسی به برنامهٔ سلامت را در تنظیمات فعال کنید",
   "accountAlreadyLinked": "این حساب {accountTypeProviderName} از قبل به حساب Pilll شما متصل است. لطفاً صفحه را تازه‌سازی کنید و پرسش‌های متداول را هم ببینید. جزئیات: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "این حساب {accountTypeProviderName} از قبل به حساب دیگری در Pilll متصل شده است؛ بنابراین نمی‌توانید با آن ثبت‌نام کنید. لطفاً بخش پرسش‌های متداول (FAQ) را هم ببینید. جزئیات: {exceptionMessage}",
-  "emailAlreadyInUse": "آدرس ایمیل شما که در حساب کاربری {accountTypeProviderName} استفاده می‌کنید، از قبل به حساب Pilll دیگری مرتبط شده است، بنابراین ثبت نام امکان‌پذیر نیست. لطفاً پرسش‌های متداول را نیز مطالعه کنید. جزئیات: {exceptionMessage}",
+  "emailAlreadyInUse": "ثبت‌نام ممکن نیست، چون نشانی ایمیلی که با حساب {accountTypeProviderName} استفاده می‌کنید، از قبل به حساب دیگری در Pilll پیوند داده شده است. لطفاً پرسش‌های متداول را هم ببینید. جزئیات: {exceptionMessage}",
   "todaySchedule": "برنامه‌های امروز",
   "calendarSchedule": "برنامه‌های تقویم",
   "newPillSheetNotificationTitle": "دوره جدید از امروز شروع می‌شود",

@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "Ota Terveys-sovelluksen käyttöoikeus käyttöön Asetuksissa",
   "accountAlreadyLinked": "Tämä {accountTypeProviderName}-tili on jo yhdistetty Pilll-tiliisi. Kokeile päivittää näkymä ja tutustu myös usein kysyttyihin kysymyksiin. Lisätiedot: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Tämä {accountTypeProviderName}-tili on jo yhdistetty toiseen Pilll-tiliin, joten et voi rekisteröityä sillä. Katso myös FAQ. Lisätiedot: {exceptionMessage}",
-  "emailAlreadyInUse": "Käyttämäsi {accountTypeProviderName}-tilin sähköpostiosoite on jo yhdistetty toiseen Pilll-tiliin, joten rekisteröinti ei ole mahdollista. Katso myös UKK. Lisätietoja: {exceptionMessage}",
+  "emailAlreadyInUse": "Rekisteröityminen ei onnistu, koska {accountTypeProviderName}-tililläsi käyttämäsi sähköpostiosoite on jo liitetty toiseen Pilll-tiliin. Katso myös usein kysytyt kysymykset. Lisätiedot: {exceptionMessage}",
   "todaySchedule": "Tämän päivän ohjelma",
   "calendarSchedule": "Kalenterin tapahtumat",
   "newPillSheetNotificationTitle": "Uusi pilleriloppu alkaa tänään",

@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "ದಯವಿಟ್ಟು ಸೆಟ್ಟಿಂಗ್‌ಗಳು ಆ್ಯಪ್‌ನಲ್ಲಿ ಆರೋಗ್ಯ ಆ್ಯಪ್‌ಗೆ ಪ್ರವೇಶವನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ",
   "accountAlreadyLinked": "ಈ {accountTypeProviderName} ಖಾತೆ ಈಗಾಗಲೇ ನಿಮ್ಮ Pilll ಖಾತೆಗೆ ಸಂಪರ್ಕಗೊಂಡಿದೆ. ದಯವಿಟ್ಟು ಪರದೆಯನ್ನು ರಿಫ್ರೆಶ್ ಮಾಡಿ ನೋಡಿ ಮತ್ತು ಪದೇ ಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳನ್ನೂ ನೋಡಿ. ವಿವರಗಳು: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "ಈ {accountTypeProviderName} ಖಾತೆ ಈಗಾಗಲೇ ಇನ್ನೊಂದು Pilll ಖಾತೆಗೆ ಸಂಪರ್ಕಗೊಂಡಿದೆ. ಆದ್ದರಿಂದ ಇದನ್ನು ಬಳಸಿ ನೋಂದಾಯಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ದಯವಿಟ್ಟು FAQ ಸಹ ನೋಡಿ. ವಿವರಗಳು: {exceptionMessage}",
-  "emailAlreadyInUse": "ಈಗಾಗಲೇ {accountTypeProviderName} ಖಾತೆಯಲ್ಲಿ ಬಳಸುತ್ತಿರುವ ಇಮೇಲ್ ವಿಳಾಸವು ಇತರ Pilll ಖಾತೆಗೆ ಲಿಂಕ್ ಮಾಡಲಾಗಿರುವುದರಿಂದ ನೋಂದಣಿ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ. FAQ ವನ್ನು ಸಹ ನೋಡಿ. ವಿವರಗಳು: {exceptionMessage}",
+  "emailAlreadyInUse": "ನಿಮ್ಮ {accountTypeProviderName} ಖಾತೆಯಲ್ಲಿ ಬಳಸುವ ಇಮೇಲ್ ವಿಳಾಸವು ಈಗಾಗಲೇ ಮತ್ತೊಂದು Pilll ಖಾತೆಗೆ ಸಂಪರ್ಕಗೊಂಡಿರುವುದರಿಂದ ನೋಂದಣಿ ಸಾಧ್ಯವಿಲ್ಲ. ದಯವಿಟ್ಟು ಪದೇಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳನ್ನೂ ನೋಡಿ. ವಿವರಗಳು: {exceptionMessage}",
   "todaySchedule": "ಇಂದಿನ ವೇಳಾಪಟ್ಟಿ",
   "calendarSchedule": "ಕ್ಯಾಲೆಂಡರ್ ವೇಳಾಪಟ್ಟಿ",
   "newPillSheetNotificationTitle": "ಇಂದಿನಿಂದ ಹೊಸ ಶೀಟ್ ಆರಂಭವಾಗುತ್ತದೆ",

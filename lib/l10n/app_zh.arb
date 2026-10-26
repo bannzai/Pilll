@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "请在“设置”App 中开启对“健康”App 的访问权限",
   "accountAlreadyLinked": "这个 {accountTypeProviderName} 账号已经关联到你的 Pilll 账号。请试着刷新页面，也可以查看常见问题。详情：{exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "此 {accountTypeProviderName} 账号已关联其他 Pilll 账号，因此无法用它注册。也请查看常见问题（FAQ）。详情：{exceptionMessage}",
-  "emailAlreadyInUse": "您的{accountTypeProviderName}账户邮箱已与其他Pilll账户关联，无法注册。请查看FAQ了解详情。错误信息：{exceptionMessage}",
+  "emailAlreadyInUse": "你用于 {accountTypeProviderName} 账号的邮箱已关联另一个 Pilll 账号，因此无法注册。也请查看常见问题。详情：{exceptionMessage}",
   "todaySchedule": "今天的日程",
   "calendarSchedule": "日历日程",
   "newPillSheetNotificationTitle": "从今天开始新药板",

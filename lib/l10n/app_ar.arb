@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "يرجى تفعيل الوصول إلى تطبيق الصحة من تطبيق الإعدادات",
   "accountAlreadyLinked": "حساب {accountTypeProviderName} هذا مرتبط بالفعل بحساب Pilll الخاص بكِ. يُرجى تجربة تحديث الشاشة والاطلاع على الأسئلة الشائعة. التفاصيل: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "حساب {accountTypeProviderName} هذا مرتبط بالفعل بحساب آخر على Pilll، لذا لا يمكن التسجيل به. يُرجى الاطلاع أيضًا على الأسئلة الشائعة (FAQ). التفاصيل: {exceptionMessage}",
-  "emailAlreadyInUse": "لا يمكن التسجيل لأن عنوان البريد الإلكتروني المستخدم في حساب {accountTypeProviderName} مرتبط بالفعل بحساب Pilll آخر. يرجى الاطلاع على الأسئلة الشائعة أيضاً. التفاصيل: {exceptionMessage}",
+  "emailAlreadyInUse": "لا يمكن إتمام التسجيل لأن عنوان البريد الإلكتروني المستخدم مع حساب {accountTypeProviderName} مرتبط بالفعل بحساب Pilll آخر. يُرجى الاطلاع أيضًا على الأسئلة الشائعة. التفاصيل: {exceptionMessage}",
   "todaySchedule": "مواعيد اليوم",
   "calendarSchedule": "مواعيد التقويم",
   "newPillSheetNotificationTitle": "يبدأ شريط جديد اليوم",

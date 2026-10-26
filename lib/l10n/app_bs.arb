@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "Molimo Vas da u aplikaciji Postavke omogućite pristup aplikaciji Zdravlje",
   "accountAlreadyLinked": "Ovaj {accountTypeProviderName} račun već je povezan s Vašim Pilll računom. Pokušajte osvježiti ekran i pogledajte FAQ. Detalji: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Ovaj {accountTypeProviderName} račun već je povezan s drugim Pilll računom, pa se njime ne možete registrovati. Pogledajte i FAQ. Detalji: {exceptionMessage}",
-  "emailAlreadyInUse": "Email adresa koju koristite sa {accountTypeProviderName} nalogom je već povezana sa drugim Pilll nalogom, pa se registracija ne može izvršiti. Molimo pogledajte i FAQ. Detalji: {exceptionMessage}",
+  "emailAlreadyInUse": "Ne možete se registrovati jer je e-mail adresa koju koristite za {accountTypeProviderName} račun već povezana s drugim Pilll računom. Pogledajte i često postavljana pitanja. Detalji: {exceptionMessage}",
   "todaySchedule": "Današnji planovi",
   "calendarSchedule": "Kalendarski termini",
   "newPillSheetNotificationTitle": "Od danas počinje nova blisterska traka",

@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "Ju lutemi, aktivizoni qasjen te Shëndeti në aplikacionin Cilësimet",
   "accountAlreadyLinked": "Kjo llogari {accountTypeProviderName} është tashmë e lidhur me llogarinë tuaj Pilll. Provoni të rifreskoni ekranin dhe shihni edhe pyetjet e shpeshta. Hollësi: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Kjo llogari {accountTypeProviderName} është lidhur tashmë me një llogari tjetër Pilll, prandaj nuk mund të regjistroheni me të. Ju lutemi, shihni edhe FAQ. Hollësi: {exceptionMessage}",
-  "emailAlreadyInUse": "Nuk mundeni të regjistroheni pasi adresa e emailit e llogarisë suaj {accountTypeProviderName} është tashmë e lidhur me një llogari tjetër Pilll. Shikoni FAQ-të. Detajet: {exceptionMessage}",
+  "emailAlreadyInUse": "Nuk mund të regjistroheni sepse adresa e emailit që përdorni me llogarinë {accountTypeProviderName} është lidhur tashmë me një llogari tjetër Pilll. Shihni edhe pyetjet e shpeshta. Hollësi: {exceptionMessage}",
   "todaySchedule": "Programi i sotëm",
   "calendarSchedule": "Ngjarjet e kalendarit",
   "newPillSheetNotificationTitle": "Sot fillon fletë e re",

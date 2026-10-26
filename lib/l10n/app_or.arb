@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "ଦୟାକରି ସେଟିଂସ୍ ଆପ୍‌ରେ ସ୍ୱାସ୍ଥ୍ୟ ଆପ୍‌କୁ ଆକ୍ସେସ୍ ଦିଅନ୍ତୁ",
   "accountAlreadyLinked": "ଏହି {accountTypeProviderName} ଆକାଉଣ୍ଟଟି ଆପଣଙ୍କ Pilll ଆକାଉଣ୍ଟ ସହିତ ପୂର୍ବରୁ ଯୋଡ଼ା ହୋଇଛି। ଦୟାକରି ସ୍କ୍ରିନ୍‌କୁ ରିଫ୍ରେଶ୍ କରି ଦେଖନ୍ତୁ ଏବଂ ବାରମ୍ବାର ପଚରାଯାଉଥିବା ପ୍ରଶ୍ନଗୁଡ଼ିକୁ ମଧ୍ୟ ଦେଖନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "ଏହି {accountTypeProviderName} ଆକାଉଣ୍ଟ ପୂର୍ବରୁ ଅନ୍ୟ ଏକ Pilll ଆକାଉଣ୍ଟ ସହିତ ଯୋଡ଼ା ହୋଇଛି, ତେଣୁ ଏହା ଦ୍ୱାରା ପଞ୍ଜୀକରଣ କରିହେବ ନାହିଁ। ଦୟାକରି FAQ ମଧ୍ୟ ଦେଖନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}",
-  "emailAlreadyInUse": "ପୂର୍ବରୁ {accountTypeProviderName} ଆକାଉଣ୍ଟରେ ବ୍ୟବହାର କରୁଥିବା ଇମେଲ ଠିକଣା ଅନ୍ୟ ଏକ Pilll ଆକାଉଣ୍ଟ ସହିତ ସଂଯୁକ୍ତ ଥିବାରୁ ପଞ୍ଜୀକରଣ କରିପାରିବେ ନାହିଁ। FAQ ମଧ୍ୟ ଦେଖନ୍ତୁ। ବିସ୍ତୃତ ବିବରଣୀ: {exceptionMessage}",
+  "emailAlreadyInUse": "ଆପଣଙ୍କ {accountTypeProviderName} ଆକାଉଣ୍ଟରେ ବ୍ୟବହୃତ ଇମେଲ୍ ଠିକଣା ପୂର୍ବରୁ ଅନ୍ୟ ଏକ Pilll ଆକାଉଣ୍ଟ ସହ ଯୋଡ଼ା ହୋଇଥିବାରୁ ପଞ୍ଜୀକରଣ କରିହେବ ନାହିଁ। ଦୟାକରି ବାରମ୍ବାର ପଚରାଯାଉଥିବା ପ୍ରଶ୍ନଗୁଡ଼ିକୁ ମଧ୍ୟ ଦେଖନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}",
   "todaySchedule": "ଆଜିର ଯୋଜନା",
   "calendarSchedule": "କ୍ୟାଲେଣ୍ଡର କାର୍ଯ୍ୟସୂଚୀ",
   "newPillSheetNotificationTitle": "ଆଜିଠାରୁ ନୂଆ ସିଟ୍ ଆରମ୍ଭ ହେଉଛି",

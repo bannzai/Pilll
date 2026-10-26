@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "გთხოვთ, პარამეტრების აპში ჩართოთ ჯანმრთელობის აპზე წვდომა",
   "accountAlreadyLinked": "{accountTypeProviderName}-ის ეს ანგარიში უკვე დაკავშირებულია თქვენს Pilll ანგარიშთან. სცადეთ ეკრანის განახლება და გაეცანით ხშირად დასმულ კითხვებსაც. დეტალები: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "{accountTypeProviderName}-ის ეს ანგარიში უკვე დაკავშირებულია Pilll-ის სხვა ანგარიშთან, ამიტომ მისი გამოყენებით რეგისტრაცია შეუძლებელია. გთხოვთ, გაეცნოთ FAQ-საც. დეტალები: {exceptionMessage}",
-  "emailAlreadyInUse": "უკვე {accountTypeProviderName} ანგარიშით გამოყენებული ელ. ფოსტის მისამართი სხვა Pilll ანგარიშთან არის დაკავშირებული, ამიტომ რეგისტრაცია შეუძლებელია. გთხოვთ, იხილოთ FAQ. დეტალები: {exceptionMessage}",
+  "emailAlreadyInUse": "რეგისტრაცია ვერ სრულდება, რადგან ელფოსტის მისამართი, რომელსაც {accountTypeProviderName} ანგარიშისთვის იყენებთ, უკვე დაკავშირებულია Pilll-ის სხვა ანგარიშთან. გთხოვთ, გაეცნოთ ხშირად დასმულ კითხვებსაც. დეტალები: {exceptionMessage}",
   "todaySchedule": "დღეს გეგმა",
   "calendarSchedule": "კალენდარის გეგმები",
   "newPillSheetNotificationTitle": "დღეს ახალი ბლისტერი იწყება",

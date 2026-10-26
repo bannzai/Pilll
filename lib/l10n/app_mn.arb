@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "Тохиргоо аппад Эрүүл мэнд аппад хандах эрхийг идэвхжүүлнэ үү",
   "accountAlreadyLinked": "Энэ {accountTypeProviderName} бүртгэл таны Pilll бүртгэлтэй аль хэдийн холбогдсон байна. Дэлгэцээ шинэчилж үзнэ үү. Түгээмэл асуултуудыг мөн харна уу. Дэлгэрэнгүй: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Энэ {accountTypeProviderName} бүртгэл өөр Pilll бүртгэлтэй аль хэдийн холбогдсон тул үүгээр шинээр бүртгүүлэх боломжгүй. FAQ хэсгийг мөн харна уу. Дэлгэрэнгүй: {exceptionMessage}",
-  "emailAlreadyInUse": "Таны {accountTypeProviderName} акаунтын имэйл хаяг аль хэдийн өөр Pilll акаунттай холбогдсон байгаа тул бүртгэл хийх боломжгүй байна. FAQ-г үзнэ үү. Дэлгэрэнгүй: {exceptionMessage}",
+  "emailAlreadyInUse": "Таны {accountTypeProviderName} бүртгэлд ашигладаг имэйл хаяг өөр Pilll бүртгэлтэй аль хэдийн холбогдсон тул шинээр бүртгүүлэх боломжгүй. Түгээмэл асуултуудыг мөн үзнэ үү. Дэлгэрэнгүй: {exceptionMessage}",
   "todaySchedule": "Өнөөдрийн төлөвлөгөө",
   "calendarSchedule": "Хуанлийн төлөвлөгөө",
   "newPillSheetNotificationTitle": "Өнөөдрөөс шинэ багц эхэлнэ",

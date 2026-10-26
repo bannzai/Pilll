@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "Sicela uvule ukufinyelela kuhlelo lokusebenza Lwezempilo kuhlelo lokusebenza Lwezilungiselelo",
   "accountAlreadyLinked": "Le akhawunti ye-{accountTypeProviderName} isivele ixhunywe ku-akhawunti yakho ye-Pilll. Sicela uzame ukuvuselela isikrini, ubheke nemibuzo evame ukubuzwa. Imininingwane: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Le akhawunti ye-{accountTypeProviderName} isivele ixhunywe kwenye i-akhawunti ye-Pilll, ngakho ngeke ukwazi ukubhalisa ngayo. Sicela ubheke ne-FAQ. Imininingwane: {exceptionMessage}",
-  "emailAlreadyInUse": "I-imeyili address osebenzisa nge-akhawunti ye-{accountTypeProviderName} isivele ixhunywe kwelinye i-akhawunti ye-Pilll, ngakho-ke ayikwazi ukubhalisa. Sicela ubheke ne-FAQ. Imininingwane: {exceptionMessage}",
+  "emailAlreadyInUse": "Awukwazi ukubhalisa ngoba ikheli le-imeyili olisebenzisa ku-akhawunti yakho ye-{accountTypeProviderName} selixhunywe kwenye i-akhawunti ye-Pilll. Sicela ubheke nemibuzo evame ukubuzwa. Imininingwane: {exceptionMessage}",
   "todaySchedule": "Ishedyuli yanamuhla",
   "calendarSchedule": "Amahlandlakwazi ekhalendeni",
   "newPillSheetNotificationTitle": "Ishidi elisha liqala namuhla",

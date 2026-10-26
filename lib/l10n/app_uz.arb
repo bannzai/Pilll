@@ -333,7 +333,7 @@
   "enableHealthKitFromSettings": "Iltimos, Sozlamalar ilovasida Salomatlik ilovasiga kirishga ruxsat bering",
   "accountAlreadyLinked": "Bu {accountTypeProviderName} hisobi allaqachon Pilll hisobingizga ulangan. Ekranni yangilab koʻring va koʻp soʻraladigan savollarni ham koʻrib chiqing. Tafsilotlar: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Bu {accountTypeProviderName} hisobi allaqachon boshqa Pilll hisobiga ulangan, shuning uchun u orqali roʻyxatdan oʻta olmaysiz. FAQ boʻlimini ham koʻrib chiqing. Tafsilotlar: {exceptionMessage}",
-  "emailAlreadyInUse": "{accountTypeProviderName} hisobingiz uchun foydalanayotgan elektron pochta manzili boshqa Pilll hisobiga bog'langanligi sababli ro'yxatdan o'ta olmaysiz. FAQ bo'limini ham ko'rib chiqing. Batafsil ma'lumot: {exceptionMessage}",
+  "emailAlreadyInUse": "{accountTypeProviderName} hisobingizda ishlatadigan elektron pochta manzili allaqachon boshqa Pilll hisobiga bogʻlangan, shu sababli roʻyxatdan oʻta olmaysiz. Koʻp soʻraladigan savollarni ham koʻring. Tafsilotlar: {exceptionMessage}",
   "todaySchedule": "Bugungi rejalar",
   "calendarSchedule": "Kalendar rejalari",
   "newPillSheetNotificationTitle": "Bugundan yangi qadoq boshlanadi",
