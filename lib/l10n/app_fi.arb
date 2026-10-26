@@ -126,7 +126,7 @@
   "pauseTaking": "Tauko pillereiden otossa",
   "changePauseStartDate": "Vaihda pilleritauon alkamispäivää",
   "pauseTakingPeriodEnded": "Pilleritauko on päättynyt",
-  "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}. saakka",
+  "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Muuta käyttöpäivien määrää",
   "changedStartAndEndNumbers": "Alku- ja loppunumerot on muutettu",
   "startOfPillDays": "Ottopäivien alku",
