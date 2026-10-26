@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "Početak menstruacije zabilježen je od {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Datum početka menstruacije",
   "menstruationEndDate": "Datum završetka menstruacije",
-  "menstruationScheduleDate": "Očekivani datum menstruacije",
+  "menstruationScheduleDate": "Očekivani datum sljedeće menstruacije",
   "menstruationScheduleDateWithNumber": "Očekivana menstruacija: {diffPlusOne}. dan",
   "menstruationScheduleDateWithNumberAndPillNumber": "Očekivana menstruacija: {diffPlusOne}. dan, tableta {pillNumber}",
   "menstruationRemainingDay": "još {diff} dana",

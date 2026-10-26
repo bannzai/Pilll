@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "Kuukautisten alkamispäiväksi kirjattiin {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Kuukautisten alkamispäivä",
   "menstruationEndDate": "Kuukautisten päättymispäivä",
-  "menstruationScheduleDate": "Arvioitu kuukautispäivä",
+  "menstruationScheduleDate": "Seuraavien kuukautisten arvioitu alkamispäivä",
   "menstruationScheduleDateWithNumber": "Kuukautisten ennuste: {diffPlusOne}. päivä",
   "menstruationScheduleDateWithNumberAndPillNumber": "Kuukautiset: {diffPlusOne}. päivä, pilleri {pillNumber}",
   "menstruationRemainingDay": "{diff} päivää jäljellä",

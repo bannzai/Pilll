@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}ৰ পৰা মাহেকীয়া আৰম্ভ হোৱা বুলি ৰেকৰ্ড কৰা হৈছে",
   "menstruationStartDate": "মাহেকীয়া আৰম্ভ হোৱাৰ তাৰিখ",
   "menstruationEndDate": "মাহেকীয়া শেষ হোৱা তাৰিখ",
-  "menstruationScheduleDate": "প্ৰত্যাশিত মাহেকীয়া",
+  "menstruationScheduleDate": "পৰৱৰ্তী মাহেকীয়া আৰম্ভ হোৱাৰ সম্ভাৱ্য তাৰিখ",
   "menstruationScheduleDateWithNumber": "মাহেকীয়াৰ অনুসূচী: {diffPlusOne} দিন",
   "menstruationScheduleDateWithNumberAndPillNumber": "ঋতুস্রাবৰ পৰিকল্পিত: {diffPlusOne}ম দিনৰ {pillNumber}",
   "menstruationRemainingDay": "আৰু {diff} দিন",

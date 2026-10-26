@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "Начало месячных записано на {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Дата начала месячных",
   "menstruationEndDate": "Дата окончания месячных",
-  "menstruationScheduleDate": "Ожидаемая дата месячных",
+  "menstruationScheduleDate": "Ожидаемая дата начала следующих месячных",
   "menstruationScheduleDateWithNumber": "Ожидаемая менструация: {diffPlusOne} день",
   "menstruationScheduleDateWithNumberAndPillNumber": "Ожидаемая менструация: {diffPlusOne}-й день, таблетка {pillNumber}",
   "menstruationRemainingDay": "осталось {diff} дней",

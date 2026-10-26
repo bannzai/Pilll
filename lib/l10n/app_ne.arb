@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} देखि महिनावारी सुरु भएको भनेर रेकर्ड गरिएको छ",
   "menstruationStartDate": "महिनावारी सुरु भएको मिति",
   "menstruationEndDate": "महिनावारी सकिने मिति",
-  "menstruationScheduleDate": "अनुमानित महिनावारी मिति",
+  "menstruationScheduleDate": "अर्को महिनावारी सुरु हुने अनुमानित मिति",
   "menstruationScheduleDateWithNumber": "अपेक्षित महिनावारी: {diffPlusOne} दिन",
   "menstruationScheduleDateWithNumberAndPillNumber": "मासिक धर्म अपेक्षित: {diffPlusOne}औं दिनको {pillNumber}",
   "menstruationRemainingDay": "बाँकी {diff} दिन",

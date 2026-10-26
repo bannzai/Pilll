@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "Permulaan haid telah direkodkan pada {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Tarikh mula haid",
   "menstruationEndDate": "Tarikh tamat haid",
-  "menstruationScheduleDate": "Tarikh Haid Dijangka",
+  "menstruationScheduleDate": "Tarikh jangkaan haid seterusnya",
   "menstruationScheduleDateWithNumber": "Jangkaan Haid: Hari ke-{diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Jangkaan Haid: Hari ke-{diffPlusOne} pil {pillNumber}",
   "menstruationRemainingDay": "lagi {diff} hari",

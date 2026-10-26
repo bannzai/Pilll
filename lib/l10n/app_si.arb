@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} සිට ඔසප් වීම ආරම්භ වූ බව සටහන් කර ඇත",
   "menstruationStartDate": "ඔසප් ආරම්භ වන දිනය",
   "menstruationEndDate": "ඔසප් වීම අවසන් වන දිනය",
-  "menstruationScheduleDate": "ඔසප් නියමිත දිනය",
+  "menstruationScheduleDate": "ඊළඟ ඔසප් වීම ආරම්භ වනු ඇතැයි අපේක්ෂිත දිනය",
   "menstruationScheduleDateWithNumber": "නියමිත ඔසප්: {diffPlusOne} වන දිනය",
   "menstruationScheduleDateWithNumberAndPillNumber": "ඔසප් කාලසටහන: {diffPlusOne} දින {pillNumber}",
   "menstruationRemainingDay": "තවත් {diff} දින",

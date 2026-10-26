@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} မှ ရာသီစတင်ကြောင်း မှတ်တမ်းတင်ပြီးပါပြီ",
   "menstruationStartDate": "ရာသီစတင်သည့်ရက်",
   "menstruationEndDate": "ရာသီပြီးဆုံးသည့်ရက်",
-  "menstruationScheduleDate": "ရာသီလာမည့်ရက်",
+  "menstruationScheduleDate": "နောက်တစ်ကြိမ် ရာသီစမည့် ခန့်မှန်းရက်",
   "menstruationScheduleDateWithNumber": "ရာသီမျှော်မှန်းချိန်း - {diffPlusOne}ရက်မြောက်",
   "menstruationScheduleDateWithNumberAndPillNumber": "ရာသီလာရန်: {diffPlusOne}ရက်မြောက် {pillNumber}",
   "menstruationRemainingDay": "နောက် {diff} ရက်",

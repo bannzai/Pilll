@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "Mae dechrau'r mislif wedi'i gofnodi o {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Dyddiad dechrau'r mislif",
   "menstruationEndDate": "Dyddiad diwedd y mislif",
-  "menstruationScheduleDate": "Dyddiad Disgwyliedig y Mislif",
+  "menstruationScheduleDate": "Dyddiad disgwyliedig y mislif nesaf",
   "menstruationScheduleDateWithNumber": "Rheolif ddisgwyliedig: diwrnod {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Misglwyf Disgwyliedig: Diwrnod {diffPlusOne}, Pil {pillNumber}",
   "menstruationRemainingDay": "mewn {diff} diwrnod",

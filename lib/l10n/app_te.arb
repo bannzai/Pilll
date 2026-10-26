@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} నుంచి నెలసరి ప్రారంభమైనట్లు నమోదు చేయబడింది",
   "menstruationStartDate": "నెలసరి ప్రారంభ తేదీ",
   "menstruationEndDate": "నెలసరి ముగిసే తేదీ",
-  "menstruationScheduleDate": "రుతుక్రమ సంభవిత తేదీ",
+  "menstruationScheduleDate": "తదుపరి నెలసరి ప్రారంభమయ్యే అంచనా తేదీ",
   "menstruationScheduleDateWithNumber": "మాసిక ధర్మం అంచనా: {diffPlusOne} రోజు",
   "menstruationScheduleDateWithNumberAndPillNumber": "ఋతు అంచనా: {diffPlusOne}వ రోజు {pillNumber}",
   "menstruationRemainingDay": "ఇంకా {diff} రోజులు",

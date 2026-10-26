@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} থেকে মাসিক শুরু হয়েছে বলে নথিভুক্ত করা হয়েছে",
   "menstruationStartDate": "মাসিক শুরুর তারিখ",
   "menstruationEndDate": "মাসিক শেষের তারিখ",
-  "menstruationScheduleDate": "প্রত্যাশিত মাসিকের তারিখ",
+  "menstruationScheduleDate": "পরবর্তী মাসিক শুরুর সম্ভাব্য তারিখ",
   "menstruationScheduleDateWithNumber": "মাসিক প্রত্যাশিত: {diffPlusOne} দিন",
   "menstruationScheduleDateWithNumberAndPillNumber": "প্রত্যাশিত মাসিক: {diffPlusOne}তম দিনের {pillNumber}",
   "menstruationRemainingDay": "আরও {diff} দিন",

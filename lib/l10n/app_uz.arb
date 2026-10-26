@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "Hayz boshlanishi {DateTimeFormatterMonthAndDay} sanasidan qayd etildi",
   "menstruationStartDate": "Hayz boshlanish sanasi",
   "menstruationEndDate": "Hayz tugash sanasi",
-  "menstruationScheduleDate": "Hayz kutilayotgan sanasi",
+  "menstruationScheduleDate": "Keyingi hayzning taxminiy boshlanish sanasi",
   "menstruationScheduleDateWithNumber": "Hayz: {diffPlusOne}-kun",
   "menstruationScheduleDateWithNumberAndPillNumber": "Hayz kutilayotgan: {diffPlusOne}-kun {pillNumber}",
   "menstruationRemainingDay": "{diff} kun qoldi",

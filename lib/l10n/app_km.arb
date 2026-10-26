@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "បានកត់ត្រាថារដូវចាប់ផ្តើមនៅថ្ងៃទី {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "ថ្ងៃចាប់ផ្តើមរដូវ",
   "menstruationEndDate": "ថ្ងៃបញ្ចប់រដូវ",
-  "menstruationScheduleDate": "ថ្ងៃរដូវកំណត់",
+  "menstruationScheduleDate": "កាលបរិច្ឆេទរំពឹងទុកនៃការមករដូវលើកក្រោយ",
   "menstruationScheduleDateWithNumber": "កាលកំណត់រដូវ៖ ថ្ងៃទី{diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "រដូវដែលរំពឹង៖ ថ្ងៃទី{diffPlusOne} ថ្នាំ{pillNumber}",
   "menstruationRemainingDay": "នៅសល់ {diff} ថ្ងៃ",

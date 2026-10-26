@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}부터 생리가 시작된 것으로 기록했어요",
   "menstruationStartDate": "생리 시작일",
   "menstruationEndDate": "생리 종료일",
-  "menstruationScheduleDate": "생리 예정일",
+  "menstruationScheduleDate": "다음 생리 예정일",
   "menstruationScheduleDateWithNumber": "생리 예정: {diffPlusOne}일째",
   "menstruationScheduleDateWithNumberAndPillNumber": "생리 예정: {diffPlusOne}일째 {pillNumber}",
   "menstruationRemainingDay": "앞으로 {diff}일",

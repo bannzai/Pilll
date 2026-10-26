@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "Ukuqala kokuya esikhathini kurekhodwe kusukela ngo-{DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Usuku lokuqala lokuya esikhathini",
   "menstruationEndDate": "Usuku lokugcina lokuya esikhathini",
-  "menstruationScheduleDate": "Usuku Lwenyanga Olukulindelwe",
+  "menstruationScheduleDate": "Usuku okulindeleke ukuthi kuqale ngalo ukuya esikhathini okulandelayo",
   "menstruationScheduleDateWithNumber": "Ukufinyela okuhloselwe: usuku loku-{diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Ukuya okulindelekile: usuku {diffPlusOne} lwepilisi {pillNumber}",
   "menstruationRemainingDay": "izinsuku {diff} ezisele",

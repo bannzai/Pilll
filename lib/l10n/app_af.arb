@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "Die begin van jou maandstonde is vanaf {DateTimeFormatterMonthAndDay} aangeteken",
   "menstruationStartDate": "Begindatum van maandstonde",
   "menstruationEndDate": "Einddatum van die maandstonde",
-  "menstruationScheduleDate": "Verwagte menstruasiedatum",
+  "menstruationScheduleDate": "Verwagte datum van jou maandstonde",
   "menstruationScheduleDateWithNumber": "Volgende menstruasie: dag {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Menstruasie beplan: op dag {diffPlusOne}, pil {pillNumber}",
   "menstruationRemainingDay": "Nog {diff} dae",

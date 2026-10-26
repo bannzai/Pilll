@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "Đã ghi nhận kỳ kinh nguyệt bắt đầu từ {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Ngày bắt đầu kinh nguyệt",
   "menstruationEndDate": "Ngày kết thúc kinh nguyệt",
-  "menstruationScheduleDate": "Ngày dự kiến kinh nguyệt",
+  "menstruationScheduleDate": "Ngày dự kiến bắt đầu kỳ kinh nguyệt tiếp theo",
   "menstruationScheduleDateWithNumber": "Dự kiến kinh nguyệt: ngày {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Dự kiến kinh nguyệt: viên {pillNumber} ngày {diffPlusOne}",
   "menstruationRemainingDay": "còn {diff} ngày",

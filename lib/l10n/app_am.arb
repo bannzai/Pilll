@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "ወር አበባ ከ{DateTimeFormatterMonthAndDay} ጀምሮ እንደተጀመረ ተመዝግቧል",
   "menstruationStartDate": "ወር አበባ የሚጀምርበት ቀን",
   "menstruationEndDate": "የወር አበባ ማብቂያ ቀን",
-  "menstruationScheduleDate": "የወርሃዊ ምልከታ ቀን",
+  "menstruationScheduleDate": "የሚቀጥለው ወር አበባ የሚጠበቅበት ቀን",
   "menstruationScheduleDateWithNumber": "የወር መውጫ፡ {diffPlusOne}ኛ ቀን",
   "menstruationScheduleDateWithNumberAndPillNumber": "የወርሃዊ ወርሮት መርሃ ግብር፦ {diffPlusOne} ቀን {pillNumber}",
   "menstruationRemainingDay": "{diff} ቀናት ቀርተዋል",

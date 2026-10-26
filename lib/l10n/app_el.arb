@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "Η έναρξη της περιόδου καταγράφηκε για τις {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Ημερομηνία έναρξης περιόδου",
   "menstruationEndDate": "Ημερομηνία λήξης της περιόδου",
-  "menstruationScheduleDate": "Αναμενόμενη περίοδος",
+  "menstruationScheduleDate": "Πιθανή ημερομηνία έναρξης της επόμενης περιόδου",
   "menstruationScheduleDateWithNumber": "Αναμενόμενη περίοδος: {diffPlusOne}η ημέρα",
   "menstruationScheduleDateWithNumberAndPillNumber": "Αναμενόμενη περίοδος: {diffPlusOne}η ημέρα, {pillNumber}",
   "menstruationRemainingDay": "Ακόμη {diff} ημέρες",

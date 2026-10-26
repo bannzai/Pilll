@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "მენსტრუაციის დაწყების თარიღად {DateTimeFormatterMonthAndDay} ჩაიწერა",
   "menstruationStartDate": "მენსტრუაციის დაწყების თარიღი",
   "menstruationEndDate": "მენსტრუაციის დასრულების თარიღი",
-  "menstruationScheduleDate": "მენსტრუაციის მოსალოდნელი თარიღი",
+  "menstruationScheduleDate": "შემდეგი მენსტრუაციის სავარაუდო დაწყების თარიღი",
   "menstruationScheduleDateWithNumber": "მენსტრუაციის პროგნოზი: {diffPlusOne} დღე",
   "menstruationScheduleDateWithNumberAndPillNumber": "მენსტრუაციის მოსალოდნელი: {diffPlusOne}-ე დღე, აბი {pillNumber}",
   "menstruationRemainingDay": "კიდევ {diff} დღე",

@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "Starten på din menstruation er registreret fra {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Startdato for menstruation",
   "menstruationEndDate": "Slutdato for menstruation",
-  "menstruationScheduleDate": "Forventet menstruationsdato",
+  "menstruationScheduleDate": "Forventet dato for næste menstruation",
   "menstruationScheduleDateWithNumber": "Forventet menstruation: dag {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Forventet menstruation: {diffPlusOne}. dag, pille {pillNumber}",
   "menstruationRemainingDay": "Om {diff} dage",

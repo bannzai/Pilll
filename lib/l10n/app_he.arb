@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "תחילת המחזור נרשמה בתאריך {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "תאריך תחילת המחזור",
   "menstruationEndDate": "תאריך סיום המחזור",
-  "menstruationScheduleDate": "תאריך הוסת הצפוי",
+  "menstruationScheduleDate": "תאריך משוער לתחילת המחזור הבא",
   "menstruationScheduleDateWithNumber": "וסת צפויה: יום {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "תחזית וסת: יום {diffPlusOne} גלולה {pillNumber}",
   "menstruationRemainingDay": "עוד {diff} ימים",

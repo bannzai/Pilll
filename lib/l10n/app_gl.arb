@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "Rexistrouse o inicio da regra o {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Data de inicio da regra",
   "menstruationEndDate": "Data de fin da regra",
-  "menstruationScheduleDate": "Data prevista da menstruación",
+  "menstruationScheduleDate": "Data prevista da próxima regra",
   "menstruationScheduleDateWithNumber": "Regra prevista: día {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Menstruación prevista: día {diffPlusOne}, píldora {pillNumber}",
   "menstruationRemainingDay": "Faltan {diff} días",

@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "Mēnešreižu sākums reģistrēts no {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Mēnešreižu sākuma datums",
   "menstruationEndDate": "Mēnešreižu beigu datums",
-  "menstruationScheduleDate": "Paredzētā menstruācija",
+  "menstruationScheduleDate": "Paredzamais nākamo mēnešreižu sākuma datums",
   "menstruationScheduleDateWithNumber": "Paredzētā menstruācija: {diffPlusOne}. diena",
   "menstruationScheduleDateWithNumberAndPillNumber": "Paredzētā menstruācija: {diffPlusOne}. dienas {pillNumber}",
   "menstruationRemainingDay": "vēl {diff} dienas",

@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "Upphaf blæðinga var skráð {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Upphafsdagur blæðinga",
   "menstruationEndDate": "Lokadagur blæðinga",
-  "menstruationScheduleDate": "Væntanlegur tíðablæðingadagur",
+  "menstruationScheduleDate": "Áætlaður upphafsdagur næstu blæðinga",
   "menstruationScheduleDateWithNumber": "Áætlaðar tíðablæðingar: dagur {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Væntanlegar tíðir: {pillNumber} á {diffPlusOne}. degi",
   "menstruationRemainingDay": "Eftir {diff} daga",

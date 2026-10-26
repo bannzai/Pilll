@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "Դաշտանի սկիզբը գրանցվել է {DateTimeFormatterMonthAndDay}-ից",
   "menstruationStartDate": "դաշտանի սկսվելու ամսաթիվ",
   "menstruationEndDate": "Դաշտանի ավարտի ամսաթիվ",
-  "menstruationScheduleDate": "Մենստրուացիայի նախատեսված ամսաթիվ",
+  "menstruationScheduleDate": "Հաջորդ դաշտանի սպասվող ամսաթիվը",
   "menstruationScheduleDateWithNumber": "Ամսական՝ {diffPlusOne} օր",
   "menstruationScheduleDateWithNumberAndPillNumber": "Մենստրուացիա․ {diffPlusOne}-րդ օր, {pillNumber}",
   "menstruationRemainingDay": "Մնացել է {diff} օր",

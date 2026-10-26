@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}ರಿಂದ ಮುಟ್ಟಿನ ಅವಧಿ ಆರಂಭವಾಗಿದೆ ಎಂದು ದಾಖಲಿಸಲಾಗಿದೆ",
   "menstruationStartDate": "ಮುಟ್ಟಿನ ಆರಂಭದ ದಿನಾಂಕ",
   "menstruationEndDate": "ಮುಟ್ಟಿನ ಕೊನೆಯ ದಿನಾಂಕ",
-  "menstruationScheduleDate": "ಮಾಸಿಕ ಧರ್ಮದ ನಿರೀಕ್ಷಿತ ದಿನಾಂಕ",
+  "menstruationScheduleDate": "ಮುಂದಿನ ಮುಟ್ಟಿನ ನಿರೀಕ್ಷಿತ ಆರಂಭದ ದಿನಾಂಕ",
   "menstruationScheduleDateWithNumber": "ಮುಟ್ಟು ನಿರೀಕ್ಷೆ: {diffPlusOne} ದಿನ",
   "menstruationScheduleDateWithNumberAndPillNumber": "ಮುಟ್ಟಿನ ಅಂದಾಜು: {diffPlusOne}ನೇ ದಿನದ {pillNumber}",
   "menstruationRemainingDay": "ಇನ್ನೂ {diff} ದಿನ",

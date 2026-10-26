@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "Айыздын башталышы {DateTimeFormatterMonthAndDay} күнүнөн тартып катталды",
   "menstruationStartDate": "Айыз башталган күн",
   "menstruationEndDate": "Айыздын аяктаган күнү",
-  "menstruationScheduleDate": "Күтүлүп жаткан айыздык күнү",
+  "menstruationScheduleDate": "Кийинки айыздын күтүлгөн башталыш күнү",
   "menstruationScheduleDateWithNumber": "Айыз болжолдоо: {diffPlusOne}-күн",
   "menstruationScheduleDateWithNumberAndPillNumber": "Айыздын пландалган күнү: {diffPlusOne}-күндө {pillNumber}",
   "menstruationRemainingDay": "дагы {diff} күн",

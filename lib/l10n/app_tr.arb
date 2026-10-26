@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "Adet başlangıcı {DateTimeFormatterMonthAndDay} olarak kaydedildi",
   "menstruationStartDate": "Adetin başlangıç tarihi",
   "menstruationEndDate": "Adet bitiş tarihi",
-  "menstruationScheduleDate": "Tahmini menstrüasyon tarihi",
+  "menstruationScheduleDate": "Sonraki adetin tahmini başlangıç tarihi",
   "menstruationScheduleDateWithNumber": "Adet tahmini: {diffPlusOne}. gün",
   "menstruationScheduleDateWithNumberAndPillNumber": "Adet tahmini: {diffPlusOne}. gün {pillNumber}",
   "menstruationRemainingDay": "{diff} gün kaldı",

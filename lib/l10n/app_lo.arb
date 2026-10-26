@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "ໄດ້ບັນທຶກວ່າປະຈຳເດືອນເລີ່ມໃນວັນທີ {DateTimeFormatterMonthAndDay} ແລ້ວເດີ",
   "menstruationStartDate": "ວັນເລີ່ມປະຈຳເດືອນ",
   "menstruationEndDate": "ວັນສິ້ນສຸດປະຈຳເດືອນ",
-  "menstruationScheduleDate": "ວັນກຳນົດມີເດືອນ",
+  "menstruationScheduleDate": "ວັນທີຄາດວ່າປະຈຳເດືອນຄັ້ງຕໍ່ໄປຈະເລີ່ມ",
   "menstruationScheduleDateWithNumber": "ກໍານົດປະຈໍາເດືອນ: ວັນທີ່ {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "ກຳນົດມະຫາຕຸ: ເມັດທີ {pillNumber} ຂອງມື້ທີ {diffPlusOne}",
   "menstruationRemainingDay": "ອີກ {diff} ມື້",

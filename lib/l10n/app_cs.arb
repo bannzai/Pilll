@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "Začátek menstruace byl zaznamenán k datu {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Datum začátku menstruace",
   "menstruationEndDate": "Datum konce menstruace",
-  "menstruationScheduleDate": "Předpokládaná menstruace",
+  "menstruationScheduleDate": "Předpokládané datum příští menstruace",
   "menstruationScheduleDateWithNumber": "Menstruace: {diffPlusOne}. den",
   "menstruationScheduleDateWithNumberAndPillNumber": "Menstruace: {diffPlusOne}. den, {pillNumber}",
   "menstruationRemainingDay": "za {diff} dní",

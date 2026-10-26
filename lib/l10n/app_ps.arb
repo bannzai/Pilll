@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "د حیض پیل له {DateTimeFormatterMonthAndDay} څخه ثبت شو",
   "menstruationStartDate": "د حیض د پیل نېټه",
   "menstruationEndDate": "د حیض د پای نېټه",
-  "menstruationScheduleDate": "د حیض اټکل نېټه",
+  "menstruationScheduleDate": "د راتلونکي حیض د پیل اټکلي نېټه",
   "menstruationScheduleDateWithNumber": "د میاشتنۍ پلان: {diffPlusOne} ورځ",
   "menstruationScheduleDateWithNumberAndPillNumber": "د میاشتنۍ اټکل: د {diffPlusOne} ورځ {pillNumber}",
   "menstruationRemainingDay": "{diff} نور ورځې",
