@@ -156,7 +156,7 @@
   "menstruationStartDate": "วันที่เริ่มประจำเดือน",
   "menstruationEndDate": "วันที่ประจำเดือนสิ้นสุด",
   "menstruationScheduleDate": "วันที่คาดว่าประจำเดือนครั้งถัดไปจะเริ่ม",
-  "menstruationScheduleDateWithNumber": "ประจำเดือนคาด: วันที่ {diffPlusOne}",
+  "menstruationScheduleDateWithNumber": "คาดว่าประจำเดือนจะมา: วันที่ {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "กำหนดประจำเดือน：วันที่ {diffPlusOne} ยา {pillNumber}",
   "menstruationRemainingDay": "อีก {diff} วัน",
   "menstruationProgressingDay": "วันที่ {diffPlusOne}",

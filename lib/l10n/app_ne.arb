@@ -156,7 +156,7 @@
   "menstruationStartDate": "महिनावारी सुरु भएको मिति",
   "menstruationEndDate": "महिनावारी सकिने मिति",
   "menstruationScheduleDate": "अर्को महिनावारी सुरु हुने अनुमानित मिति",
-  "menstruationScheduleDateWithNumber": "अपेक्षित महिनावारी: {diffPlusOne} दिन",
+  "menstruationScheduleDateWithNumber": "महिनावारी सुरु हुने अनुमानित दिन: {diffPlusOne}औँ दिन",
   "menstruationScheduleDateWithNumberAndPillNumber": "मासिक धर्म अपेक्षित: {diffPlusOne}औं दिनको {pillNumber}",
   "menstruationRemainingDay": "बाँकी {diff} दिन",
   "menstruationProgressingDay": "{diffPlusOne}औं दिन",

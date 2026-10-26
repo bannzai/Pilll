@@ -156,7 +156,7 @@
   "menstruationStartDate": "Data de início da menstruação",
   "menstruationEndDate": "Data de término da menstruação",
   "menstruationScheduleDate": "Data prevista da próxima menstruação",
-  "menstruationScheduleDateWithNumber": "Menstruação prevista: {diffPlusOne}º dia",
+  "menstruationScheduleDateWithNumber": "Menstruação prevista: dia {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Previsão da menstruação: {diffPlusOne}º dia da pílula {pillNumber}",
   "menstruationRemainingDay": "Faltam {diff} dias",
   "menstruationProgressingDay": "{diffPlusOne}º dia",

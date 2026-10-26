@@ -156,7 +156,7 @@
   "menstruationStartDate": "Айыз башталган күн",
   "menstruationEndDate": "Айыздын аяктаган күнү",
   "menstruationScheduleDate": "Кийинки айыздын күтүлгөн башталыш күнү",
-  "menstruationScheduleDateWithNumber": "Айыз болжолдоо: {diffPlusOne}-күн",
+  "menstruationScheduleDateWithNumber": "Күтүлгөн айыз: {diffPlusOne}-күн",
   "menstruationScheduleDateWithNumberAndPillNumber": "Айыздын пландалган күнү: {diffPlusOne}-күндө {pillNumber}",
   "menstruationRemainingDay": "дагы {diff} күн",
   "menstruationProgressingDay": "{diffPlusOne}-күн",

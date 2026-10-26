@@ -156,7 +156,7 @@
   "menstruationStartDate": "Tarehe ya kuanza hedhi",
   "menstruationEndDate": "Tarehe ya mwisho ya hedhi",
   "menstruationScheduleDate": "Tarehe inayotarajiwa ya hedhi inayofuata",
-  "menstruationScheduleDateWithNumber": "Mpango wa hedhi: Siku ya {diffPlusOne}",
+  "menstruationScheduleDateWithNumber": "Hedhi inayotarajiwa: siku ya {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Hedhi iliyotarajiwa: siku ya {diffPlusOne} ya {pillNumber}",
   "menstruationRemainingDay": "bado siku {diff}",
   "menstruationProgressingDay": "siku ya {diffPlusOne}",

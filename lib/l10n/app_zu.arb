@@ -156,7 +156,7 @@
   "menstruationStartDate": "Usuku lokuqala lokuya esikhathini",
   "menstruationEndDate": "Usuku lokugcina lokuya esikhathini",
   "menstruationScheduleDate": "Usuku okulindeleke ukuthi kuqale ngalo ukuya esikhathini okulandelayo",
-  "menstruationScheduleDateWithNumber": "Ukufinyela okuhloselwe: usuku loku-{diffPlusOne}",
+  "menstruationScheduleDateWithNumber": "Ukuya esikhathini okulindelekile: usuku {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Ukuya okulindelekile: usuku {diffPlusOne} lwepilisi {pillNumber}",
   "menstruationRemainingDay": "izinsuku {diff} ezisele",
   "menstruationProgressingDay": "Usuku lwe{diffPlusOne}",

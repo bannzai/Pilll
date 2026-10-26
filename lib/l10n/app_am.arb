@@ -156,7 +156,7 @@
   "menstruationStartDate": "ወር አበባ የሚጀምርበት ቀን",
   "menstruationEndDate": "የወር አበባ ማብቂያ ቀን",
   "menstruationScheduleDate": "የሚቀጥለው ወር አበባ የሚጠበቅበት ቀን",
-  "menstruationScheduleDateWithNumber": "የወር መውጫ፡ {diffPlusOne}ኛ ቀን",
+  "menstruationScheduleDateWithNumber": "የወር አበባ መጀመሪያ የሚጠበቅበት፦ ቀን {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "የወርሃዊ ወርሮት መርሃ ግብር፦ {diffPlusOne} ቀን {pillNumber}",
   "menstruationRemainingDay": "{diff} ቀናት ቀርተዋል",
   "menstruationProgressingDay": "{diffPlusOne}ኛ ቀን",

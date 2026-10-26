@@ -156,7 +156,7 @@
   "menstruationStartDate": "Startdato for mens",
   "menstruationEndDate": "Sluttdato for mens",
   "menstruationScheduleDate": "Forventet dato for neste mens",
-  "menstruationScheduleDateWithNumber": "Menstruasjon om: {diffPlusOne} dag",
+  "menstruationScheduleDateWithNumber": "Forventet mens: dag {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Forventet menstruasjon: dag {diffPlusOne}, pille {pillNumber}",
   "menstruationRemainingDay": "om {diff} dager",
   "menstruationProgressingDay": "{diffPlusOne}. dag",

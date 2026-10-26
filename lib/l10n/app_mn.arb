@@ -156,7 +156,7 @@
   "menstruationStartDate": "сарын тэмдгийн эхэлсэн өдөр",
   "menstruationEndDate": "Сарын тэмдгийн дуусах өдөр",
   "menstruationScheduleDate": "Дараагийн сарын тэмдгийн тооцоолсон эхлэх өдөр",
-  "menstruationScheduleDateWithNumber": "Сарын тэмдгийн төлөвлөгөө: {diffPlusOne} өдөр",
+  "menstruationScheduleDateWithNumber": "Сарын тэмдгийн хүлээгдэж буй өдөр: {diffPlusOne} дэх өдөр",
   "menstruationScheduleDateWithNumberAndPillNumber": "Сарын тэмдэг: {diffPlusOne} өдрийн {pillNumber}",
   "menstruationRemainingDay": "дахиад {diff} хоног",
   "menstruationProgressingDay": "{diffPlusOne} дахь өдөр",

@@ -156,7 +156,7 @@
   "menstruationStartDate": "Date de début des règles",
   "menstruationEndDate": "Date de fin des règles",
   "menstruationScheduleDate": "Date prévue des prochaines règles",
-  "menstruationScheduleDateWithNumber": "Période prévue : Jour {diffPlusOne}",
+  "menstruationScheduleDateWithNumber": "Règles prévues : jour {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Période prévue : Jour {diffPlusOne}, pilule {pillNumber}",
   "menstruationRemainingDay": "dans {diff} jours",
   "menstruationProgressingDay": "Jour {diffPlusOne}",

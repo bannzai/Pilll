@@ -156,7 +156,7 @@
   "menstruationStartDate": "Mėnesinių pradžios data",
   "menstruationEndDate": "Mėnesinių pabaigos data",
   "menstruationScheduleDate": "Numatoma kitų mėnesinių pradžios data",
-  "menstruationScheduleDateWithNumber": "Menstruacija: {diffPlusOne} diena",
+  "menstruationScheduleDateWithNumber": "Numatomos mėnesinės: {diffPlusOne} diena",
   "menstruationScheduleDateWithNumberAndPillNumber": "Menstruacijos prognozė: {diffPlusOne} dienos {pillNumber}",
   "menstruationRemainingDay": "dar {diff} dienų",
   "menstruationProgressingDay": "{diffPlusOne}-oji diena",

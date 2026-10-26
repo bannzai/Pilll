@@ -156,7 +156,7 @@
   "menstruationStartDate": "د حیض د پیل نېټه",
   "menstruationEndDate": "د حیض د پای نېټه",
   "menstruationScheduleDate": "د راتلونکي حیض د پیل اټکلي نېټه",
-  "menstruationScheduleDateWithNumber": "د میاشتنۍ پلان: {diffPlusOne} ورځ",
+  "menstruationScheduleDateWithNumber": "د حیض اټکلي ورځ: {diffPlusOne}مه ورځ",
   "menstruationScheduleDateWithNumberAndPillNumber": "د میاشتنۍ اټکل: د {diffPlusOne} ورځ {pillNumber}",
   "menstruationRemainingDay": "{diff} نور ورځې",
   "menstruationProgressingDay": "{diffPlusOne}مه ورځ",

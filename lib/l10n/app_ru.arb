@@ -156,7 +156,7 @@
   "menstruationStartDate": "Дата начала месячных",
   "menstruationEndDate": "Дата окончания месячных",
   "menstruationScheduleDate": "Ожидаемая дата начала следующих месячных",
-  "menstruationScheduleDateWithNumber": "Ожидаемая менструация: {diffPlusOne} день",
+  "menstruationScheduleDateWithNumber": "Ожидаемые месячные: день {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Ожидаемая менструация: {diffPlusOne}-й день, таблетка {pillNumber}",
   "menstruationRemainingDay": "осталось {diff} дней",
   "menstruationProgressingDay": "{diffPlusOne}-й день",

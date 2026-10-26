@@ -156,7 +156,7 @@
   "menstruationStartDate": "ಮುಟ್ಟಿನ ಆರಂಭದ ದಿನಾಂಕ",
   "menstruationEndDate": "ಮುಟ್ಟಿನ ಕೊನೆಯ ದಿನಾಂಕ",
   "menstruationScheduleDate": "ಮುಂದಿನ ಮುಟ್ಟಿನ ನಿರೀಕ್ಷಿತ ಆರಂಭದ ದಿನಾಂಕ",
-  "menstruationScheduleDateWithNumber": "ಮುಟ್ಟು ನಿರೀಕ್ಷೆ: {diffPlusOne} ದಿನ",
+  "menstruationScheduleDateWithNumber": "ಮುಟ್ಟಿನ ನಿರೀಕ್ಷಿತ ದಿನ: {diffPlusOne}ನೇ ದಿನ",
   "menstruationScheduleDateWithNumberAndPillNumber": "ಮುಟ್ಟಿನ ಅಂದಾಜು: {diffPlusOne}ನೇ ದಿನದ {pillNumber}",
   "menstruationRemainingDay": "ಇನ್ನೂ {diff} ದಿನ",
   "menstruationProgressingDay": "{diffPlusOne}ನೇ ದಿನ",
