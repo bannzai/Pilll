@@ -218,7 +218,7 @@
   "and": "kanye",
   "readAndStartUsing": "Sicela ufunde imininingwane bese\nuqala ukusebenzisa uhlelo lokusebenza",
   "next": "Okulandelayo",
-  "notificationIndex": "isaziso {number}",
+  "notificationIndex": "Isaziso {number}",
   "takingRecordFromNotification": "\\ Ungakwazi ukuqopha ukudla komuthi ngesaziso /",
   "startApp": "Qalisa uhlelo",
   "loggedInWithProvider": "Ungenile ngo{accountTypeProviderName}",

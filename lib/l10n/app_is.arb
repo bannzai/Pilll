@@ -218,7 +218,7 @@
   "and": "og",
   "readAndStartUsing": "Lestu upplýsingarnar og\nbyrjaðu að nota appið",
   "next": "Áfram",
-  "notificationIndex": "Tilkynning{number}",
+  "notificationIndex": "Tilkynning {number}",
   "takingRecordFromNotification": "\\ Þú getur skráð inntak úr tilkynningu /",
   "startApp": "Byrja",
   "loggedInWithProvider": "Skráði inn með {accountTypeProviderName}",

@@ -218,7 +218,7 @@
   "and": "និង",
   "readAndStartUsing": "សូមអានព័ត៌មាន រួច\nចាប់ផ្តើមប្រើកម្មវិធី",
   "next": "បន្ទាប់",
-  "notificationIndex": "ដំណឹង{number}",
+  "notificationIndex": "ការជូនដំណឹង {number}",
   "takingRecordFromNotification": "\\ អាចបញ្ជាក់ការទទួលថ្នាំពីការជូនដំណឹង /",
   "startApp": "ចាប់ផ្តើម",
   "loggedInWithProvider": "បានចូលប្រើដោយ{accountTypeProviderName}ហើយ",

@@ -218,7 +218,7 @@
   "and": "ଓ",
   "readAndStartUsing": "ଦୟାକରି ସୂଚନା ପଢ଼ନ୍ତୁ ଏବଂ\nଆପ୍ ବ୍ୟବହାର ଆରମ୍ଭ କରନ୍ତୁ",
   "next": "ପରବର୍ତ୍ତୀ",
-  "notificationIndex": "ସୂଚନା{number}",
+  "notificationIndex": "ସୂଚନା {number}",
   "takingRecordFromNotification": "\\ ବିଜ୍ଞପ୍ତିରୁ ସେବନ ରେକର୍ଡ କରିପାରିବେ /",
   "startApp": "ଆପ୍ ଆରମ୍ଭ କରନ୍ତୁ",
   "loggedInWithProvider": "{accountTypeProviderName}ରେ ଲଗିନ୍ ହୋଇଛି",

@@ -218,7 +218,7 @@
   "and": "ಮತ್ತು",
   "readAndStartUsing": "ದಯವಿಟ್ಟು ಮಾಹಿತಿಯನ್ನು ಓದಿ\nಆ್ಯಪ್ ಬಳಸಲು ಪ್ರಾರಂಭಿಸಿ",
   "next": "ಮುಂದೆ",
-  "notificationIndex": "ಅಧಿಸೂಚನೆ{number}",
+  "notificationIndex": "ಅಧಿಸೂಚನೆ {number}",
   "takingRecordFromNotification": "\\\\ ಅಧಿಸೂಚನೆಯಿಂದ ಮಾತ್ರೆ ಸೇವನೆ ದಾಖಲು ಮಾಡಬಹುದು /",
   "startApp": "ಪ್ರಾರಂಭಿಸಿ",
   "loggedInWithProvider": "{accountTypeProviderName}ನಲ್ಲಿ ಲಾಗ್ ಇನ್ ಮಾಡಿದ್ದೀರಿ",

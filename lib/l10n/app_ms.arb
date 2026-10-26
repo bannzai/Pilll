@@ -218,7 +218,7 @@
   "and": "dan",
   "readAndStartUsing": "Sila baca maklumat ini, kemudian\nmula gunakan aplikasi",
   "next": "Seterusnya",
-  "notificationIndex": "Notifikasi{number}",
+  "notificationIndex": "Pemberitahuan {number}",
   "takingRecordFromNotification": "\\ Rekod pengambilan boleh dibuat dari notifikasi /",
   "startApp": "Mulakan Aplikasi",
   "loggedInWithProvider": "Berjaya log masuk dengan {accountTypeProviderName}",

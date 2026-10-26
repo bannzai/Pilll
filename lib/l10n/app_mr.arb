@@ -218,7 +218,7 @@
   "and": "आणि",
   "readAndStartUsing": "कृपया माहिती वाचा आणि\nअॅप वापरायला सुरुवात करा",
   "next": "पुढे",
-  "notificationIndex": "सूचना{number}",
+  "notificationIndex": "सूचना {number}",
   "takingRecordFromNotification": "\\ सूचनेतून सेवन नोंद करू शकता /",
   "startApp": "अॅप सुरू करा",
   "loggedInWithProvider": "{accountTypeProviderName} वापरून लॉगिन केले",

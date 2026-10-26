@@ -218,7 +218,7 @@
   "and": "و",
   "readAndStartUsing": "لطفاً اطلاعات را بخوانید و\nاستفاده از برنامه را شروع کنید",
   "next": "بعدی",
-  "notificationIndex": "یادآوری {number}",
+  "notificationIndex": "اعلان {number}",
   "takingRecordFromNotification": "\\ امکان ثبت مصرف از طریق اعلان /",
   "startApp": "شروع اپلیکیشن",
   "loggedInWithProvider": "با {accountTypeProviderName} وارد شدید",

@@ -218,7 +218,7 @@
   "and": "ו",
   "readAndStartUsing": "לקרוא את המידע\nולהתחיל להשתמש באפליקציה",
   "next": "המשך",
-  "notificationIndex": "הודעה {number}",
+  "notificationIndex": "התראה {number}",
   "takingRecordFromNotification": "רישום נטילה מההודעה",
   "startApp": "התחל עם האפליקציה",
   "loggedInWithProvider": "התחברת באמצעות {accountTypeProviderName}",

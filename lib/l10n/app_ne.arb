@@ -218,7 +218,7 @@
   "and": "र",
   "readAndStartUsing": "कृपया जानकारी पढेर\nएप प्रयोग गर्न सुरु गर्नुहोस्",
   "next": "अर्को",
-  "notificationIndex": "सूचना{number}",
+  "notificationIndex": "सूचना {number}",
   "takingRecordFromNotification": "\\ सूचनाबाट औषधि सेवनको रेकर्ड गर्न सकिन्छ /",
   "startApp": "एप सुरु गर्नुहोस्",
   "loggedInWithProvider": "{accountTypeProviderName} मार्फत लग इन गर्नुभयो",

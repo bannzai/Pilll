@@ -218,7 +218,7 @@
   "and": "և",
   "readAndStartUsing": "Կարդացեք տեղեկությունները և\nսկսեք օգտվել հավելվածից",
   "next": "Հաջորդը",
-  "notificationIndex": "ծանուցում{number}",
+  "notificationIndex": "Ծանուցում {number}",
   "takingRecordFromNotification": "\\ Ծանուցումներից հնարավոր է դեղերի ընդունումը գրանցել /",
   "startApp": "Սկսել հավելվածը",
   "loggedInWithProvider": "{accountTypeProviderName}-ի միջոցով մուտք գործեցիք",

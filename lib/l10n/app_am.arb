@@ -218,7 +218,7 @@
   "and": "እና",
   "readAndStartUsing": "እባክዎ ያንብቡና\nመተግበሪያውን መጠቀም ይጀምሩ",
   "next": "ቀጣይ",
-  "notificationIndex": "ማሳወቂያ{number}",
+  "notificationIndex": "ማሳወቂያ {number}",
   "takingRecordFromNotification": "\\ ከማሳወቂያ መድኃኒት ወሰዳት መመዝገብ ይቻላል /",
   "startApp": "መተግበሪያውን ጀምር",
   "loggedInWithProvider": "በ{accountTypeProviderName} ገብተዋል",

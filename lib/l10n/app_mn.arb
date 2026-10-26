@@ -218,7 +218,7 @@
   "and": "ба",
   "readAndStartUsing": "Мэдээллийг уншаад\nаппыг ашиглаж эхэлнэ үү",
   "next": "Дараах",
-  "notificationIndex": "мэдэгдэл {number}",
+  "notificationIndex": "Мэдэгдэл {number}",
   "takingRecordFromNotification": "\\ Мэдэгдлээс эм уух тэмдэглэл хийж болно /",
   "startApp": "Эхлэх",
   "loggedInWithProvider": "{accountTypeProviderName} ашиглан нэвтрэв",

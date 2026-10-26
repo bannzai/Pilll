@@ -218,7 +218,7 @@
   "and": "및",
   "readAndStartUsing": "내용을 읽고\n앱 사용을 시작해 주세요",
   "next": "다음",
-  "notificationIndex": "알림{number}",
+  "notificationIndex": "알림 {number}",
   "takingRecordFromNotification": "\\ 알림으로 복용 기록 가능 /",
   "startApp": "시작하기",
   "loggedInWithProvider": "{accountTypeProviderName}로 로그인했습니다",

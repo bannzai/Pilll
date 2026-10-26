@@ -218,7 +218,7 @@
   "and": "ແລະ",
   "readAndStartUsing": "ກະລຸນາອ່ານຂໍ້ມູນ ແລ້ວ\nເລີ່ມໃຊ້ແອັບ",
   "next": "ຕໍ່ໄປ",
-  "notificationIndex": "ການແຈ້ງເຕືອນ{number}",
+  "notificationIndex": "ການແຈ້ງເຕືອນ {number}",
   "takingRecordFromNotification": "\\ ສາມາດບັນທຶກການກິນຢາຈາກການແຈ້ງເຕືອນໄດ້ /",
   "startApp": "ເລີມໃຊ້ແອັບ",
   "loggedInWithProvider": "ເຂົ້າສູ່ລະບົບດ້ວຍ {accountTypeProviderName} ແລ້ວ",

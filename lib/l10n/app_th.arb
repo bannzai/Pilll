@@ -218,7 +218,7 @@
   "and": "และ",
   "readAndStartUsing": "โปรดอ่านข้อมูลก่อน\nแล้วเริ่มใช้งานแอป",
   "next": "ถัดไป",
-  "notificationIndex": "แจ้งเตือน{number}",
+  "notificationIndex": "การแจ้งเตือน {number}",
   "takingRecordFromNotification": "\\ บันทึกการรับประทานยาจากการแจ้งเตือนได้ /",
   "startApp": "เริ่มใช้แอป",
   "loggedInWithProvider": "เข้าสู่ระบบผ่าน{accountTypeProviderName}แล้ว",

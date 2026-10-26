@@ -218,7 +218,7 @@
   "and": "і",
   "readAndStartUsing": "Прачытайце і\nпачніце карыстацца праграмай",
   "next": "Далей",
-  "notificationIndex": "Нагадванне {number}",
+  "notificationIndex": "Апавяшчэнне {number}",
   "takingRecordFromNotification": "\\ Запіс прыёму таблетак з апавяшчэння /",
   "startApp": "Пачаць",
   "loggedInWithProvider": "Увайшлі праз {accountTypeProviderName}",

@@ -218,7 +218,7 @@
   "and": "at",
   "readAndStartUsing": "Pakibasa ang impormasyon at\nsimulan nang gamitin ang app",
   "next": "Susunod",
-  "notificationIndex": "Paalala {number}",
+  "notificationIndex": "Abiso {number}",
   "takingRecordFromNotification": "\\ Maaari mong mag-record ng pag-inom mula sa notification /",
   "startApp": "Simulan ang App",
   "loggedInWithProvider": "Nakapag-login gamit ang {accountTypeProviderName}",

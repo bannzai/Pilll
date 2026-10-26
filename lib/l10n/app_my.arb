@@ -218,7 +218,7 @@
   "and": "နှင့်",
   "readAndStartUsing": "အချက်အလက်များကို ဖတ်ရှုပြီး\nအက်ပ်ကို စတင်အသုံးပြုပါ",
   "next": "နောက်တစ်ဆင့်",
-  "notificationIndex": "အကြောင်းကြားမှု {number}",
+  "notificationIndex": "အသိပေးချက် {number}",
   "takingRecordFromNotification": "\\ အကြောင်းကြားစာမှ ဆေးသုံးမှတ်တမ်းတင်နိုင်သည် /",
   "startApp": "အက်ပ်စတင်မည်",
   "loggedInWithProvider": "{accountTypeProviderName} ဖြင့် လော့ဂ်အင်ဝင်ပြီးပါပြီ",

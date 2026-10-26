@@ -218,7 +218,7 @@
   "and": "ও",
   "readAndStartUsing": "অনুগ্রহ করে পড়ুন এবং\nঅ্যাপটি ব্যবহার শুরু করুন",
   "next": "পরবর্তী",
-  "notificationIndex": "নোটিফিকেশন {number}",
+  "notificationIndex": "বিজ্ঞপ্তি {number}",
   "takingRecordFromNotification": "\\ বিজ্ঞপ্তি থেকে সেবনের রেকর্ড করুন /",
   "startApp": "অ্যাপ শুরু করুন",
   "loggedInWithProvider": "{accountTypeProviderName} দিয়ে সফলভাবে লগইন করেছেন",

@@ -218,7 +218,7 @@
   "and": "en",
   "readAndStartUsing": "Lees de informatie en\nbegin de app te gebruiken",
   "next": "Volgende",
-  "notificationIndex": "melding {number}",
+  "notificationIndex": "Melding {number}",
   "takingRecordFromNotification": "\\ Je kunt innames registreren via meldingen /",
   "startApp": "App starten",
   "loggedInWithProvider": "Ingelogd met {accountTypeProviderName}",

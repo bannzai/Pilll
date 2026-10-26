@@ -218,7 +218,7 @@
   "and": "и",
   "readAndStartUsing": "Прочитајте информације и\nпочните да користите апликацију",
   "next": "Даље",
-  "notificationIndex": "Obaveštenje {number}",
+  "notificationIndex": "Обавештење {number}",
   "takingRecordFromNotification": "\\ Забележите узимање директно са обавештења /",
   "startApp": "Започни",
   "loggedInWithProvider": "Prijavili ste se pomoću {accountTypeProviderName}",

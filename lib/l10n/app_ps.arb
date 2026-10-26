@@ -218,7 +218,7 @@
   "and": "او",
   "readAndStartUsing": "مهرباني وکړئ معلومات ولولئ او\nد اپ کارول پیل کړئ",
   "next": "بل",
-  "notificationIndex": "خبرتیا{number}",
+  "notificationIndex": "خبرتیا {number}",
   "takingRecordFromNotification": "\\ له خبرتیاوو څخه د درملو اخیستل ثبت کولی شو /",
   "startApp": "اپ پیل کړئ",
   "loggedInWithProvider": "په {accountTypeProviderName} سره ننوتل شوم",

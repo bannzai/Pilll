@@ -218,7 +218,7 @@
   "and": "және",
   "readAndStartUsing": "Ақпаратты оқып шығып,\nқолданбаны пайдалануды бастаңыз",
   "next": "Келесі",
-  "notificationIndex": "Хабарлама {number}",
+  "notificationIndex": "Хабарландыру {number}",
   "takingRecordFromNotification": "\\ Хабарландырудан дәрі қабылдауды тіркей аласыз /",
   "startApp": "Қолданбаны бастау",
   "loggedInWithProvider": "{accountTypeProviderName} арқылы кірдіңіз",

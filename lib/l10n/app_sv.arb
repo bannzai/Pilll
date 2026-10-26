@@ -218,7 +218,7 @@
   "and": "och",
   "readAndStartUsing": "Läs informationen och\nbörja använda appen",
   "next": "Nästa",
-  "notificationIndex": "Påminnelse {number}",
+  "notificationIndex": "Avisering {number}",
   "takingRecordFromNotification": "\\ Registrera intag från notifieringen /",
   "startApp": "Kom igång",
   "loggedInWithProvider": "Inloggad med {accountTypeProviderName}",

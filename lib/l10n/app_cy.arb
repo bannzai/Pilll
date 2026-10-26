@@ -218,7 +218,7 @@
   "and": "a",
   "readAndStartUsing": "Darllenwch y wybodaeth a\nDechreuwch ddefnyddio’r ap",
   "next": "Nesaf",
-  "notificationIndex": "hysbysiad {number}",
+  "notificationIndex": "Hysbysiad {number}",
   "takingRecordFromNotification": "\\ Gallwch chi gofnodi cymryd o hysbysiadau /",
   "startApp": "Dechrau'r Ap",
   "loggedInWithProvider": "Wedi mewngofnodi â {accountTypeProviderName}",

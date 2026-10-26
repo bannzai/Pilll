@@ -218,7 +218,7 @@
   "and": "ja",
   "readAndStartUsing": "Loe teave läbi ja\nalusta rakenduse kasutamist",
   "next": "Edasi",
-  "notificationIndex": "Teatis {number}",
+  "notificationIndex": "Teavitus {number}",
   "takingRecordFromNotification": "Teatisest saab pillide võtmist registreerida!",
   "startApp": "Alusta äppi",
   "loggedInWithProvider": "Logitud sisse {accountTypeProviderName} kaudu",

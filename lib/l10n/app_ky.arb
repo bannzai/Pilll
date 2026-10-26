@@ -218,7 +218,7 @@
   "and": "жана",
   "readAndStartUsing": "Маалыматты окуп чыгып,\nколдонмону колдоно баштаңыз",
   "next": "Кийинки",
-  "notificationIndex": "билдирүү {number}",
+  "notificationIndex": "Билдирүү {number}",
   "takingRecordFromNotification": "\\ Билдирүүдөн дарыны кабыл алгандыгын жаздыруу мүмкүн /",
   "startApp": "Колдонмону баштоо",
   "loggedInWithProvider": "{accountTypeProviderName} аркылуу кирдиңиз",

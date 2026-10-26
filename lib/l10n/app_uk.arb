@@ -218,7 +218,7 @@
   "and": "і",
   "readAndStartUsing": "Прочитайте інформацію та\nпочніть користуватися застосунком",
   "next": "Далі",
-  "notificationIndex": "Повідомлення {number}",
+  "notificationIndex": "Сповіщення {number}",
   "takingRecordFromNotification": "\\ Запис прийому з повідомлень /",
   "startApp": "Розпочати користування додатком",
   "loggedInWithProvider": "Ви увійшли через {accountTypeProviderName}",

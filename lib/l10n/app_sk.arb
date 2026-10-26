@@ -218,7 +218,7 @@
   "and": "a",
   "readAndStartUsing": "Prečítajte si informácie a\nzačnite používať aplikáciu",
   "next": "Ďalej",
-  "notificationIndex": "Oznámenie {number}",
+  "notificationIndex": "Upozornenie {number}",
   "takingRecordFromNotification": "\\ Môžete zaznamenať užitie z notifikácie /",
   "startApp": "Začať",
   "loggedInWithProvider": "Prihlásili ste sa cez {accountTypeProviderName}",
