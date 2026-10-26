@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Bilangan masa peringatan sudah mencapai had. Sila kekalkan tidak lebih daripada {ReminderTimeMaximumCount} masa",
   "minimumCountOfReminderTimes": "Sila tetapkan sekurang-kurangnya {ReminderTimeMinimumCount} waktu pemberitahuan",
   "purchaseErrorUnknownError": "Ralat yang tidak diketahui telah berlaku. Sila cuba lagi sebentar nanti. Jika masalah berterusan, hubungi kami melalui Tetapan > Hubungi kami. Butiran: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "Ralat telah berlaku di {storeName}. Sila tunggu sebentar dan cuba semula.",
+  "purchaseErrorStoreProblemError": "Ralat berlaku di {storeName}. Sila cuba lagi sebentar nanti.",
   "purchaseErrorPurchaseNotAllowedError": "Pembelian tidak dibenarkan pada peranti ini",
   "purchaseErrorPurchaseInvalidError": "Pembayaran gagal. Sila pastikan kaedah pembayaran anda sah dan cuba lagi.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Pelan ini tidak tersedia pada masa ini. Sila mulakan semula aplikasi dan cuba lagi.",

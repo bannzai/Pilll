@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "रिमाइन्डरको समय थप्ने अधिकतम सीमा पुगेको छ। कृपया {ReminderTimeMaximumCount} वा सोभन्दा कम समय राख्नुहोस्",
   "minimumCountOfReminderTimes": "कृपया सूचनाका लागि कम्तीमा {ReminderTimeMinimumCount} वटा समय तय गर्नुहोस्",
   "purchaseErrorUnknownError": "अज्ञात त्रुटि भयो। कृपया केही बेरपछि फेरि प्रयास गर्नुहोस्। समस्या जारी रहेमा सेटिङहरू > हामीलाई सम्पर्क गर्नुहोस् मार्फत सम्पर्क गर्नुहोस्। विवरण: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "{storeName} मा त्रुटि भएको छ। केहि समय पछि फेरि प्रयास गर्नुहोस्।",
+  "purchaseErrorStoreProblemError": "{storeName} मा त्रुटि भएको छ। कृपया केही बेरपछि फेरि प्रयास गर्नुहोस्।",
   "purchaseErrorPurchaseNotAllowedError": "यस डिभाइसमा खरिदारी गर्न अनुमति छैन",
   "purchaseErrorPurchaseInvalidError": "भुक्तानी असफल भयो। कृपया वैध भुक्तानी विधि छ कि छैन जाँच गरेर पुन: प्रयास गर्नुहोस्।",
   "purchaseErrorProductNotAvailableForPurchaseError": "यो योजना हाल उपलब्ध छैन। कृपया एपलाई रिस्टार्ट गरेर फेरि प्रयास गर्नुहोस्।",

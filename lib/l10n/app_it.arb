@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Hai raggiunto il numero massimo di orari per i promemoria. Tienine al massimo {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Imposta almeno {ReminderTimeMinimumCount} orari per le notifiche",
   "purchaseErrorUnknownError": "Si è verificato un errore sconosciuto. Riprova tra un po’. Se il problema continua, contattaci da Impostazioni > Contattaci. Dettagli: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "Si è verificato un errore su {storeName}. Riprova più tardi.",
+  "purchaseErrorStoreProblemError": "Si è verificato un errore su {storeName}. Riprova tra poco.",
   "purchaseErrorPurchaseNotAllowedError": "Gli acquisti non sono consentiti su questo dispositivo",
   "purchaseErrorPurchaseInvalidError": "Pagamento non riuscito. Verifica che il metodo di pagamento sia valido e riprova.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Il piano selezionato non è attualmente disponibile. Ci scusiamo per l'inconveniente, riavvia l'app e riprova.",

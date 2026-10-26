@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Has arribat al nombre màxim d'hores de recordatori. Deixa'n {ReminderTimeMaximumCount} o menys, si us plau",
   "minimumCountOfReminderTimes": "Cal configurar almenys {ReminderTimeMinimumCount} hores per a les notificacions",
   "purchaseErrorUnknownError": "S’ha produït un error desconegut. Torna-ho a provar d’aquí a una estona. Si el problema continua, contacta amb nosaltres a Configuració > Contacta amb nosaltres. Detalls: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "S'ha produït un error a {storeName}. Espereu una estona i torneu-ho a provar.",
+  "purchaseErrorStoreProblemError": "S’ha produït un error a {storeName}. Torna-ho a provar d’aquí a una estona.",
   "purchaseErrorPurchaseNotAllowedError": "No es permeten compres en aquest dispositiu",
   "purchaseErrorPurchaseInvalidError": "Ha fallat el pagament. Si us plau, verifiqueu si el mètode de pagament és vàlid i torneu-ho a intentar.",
   "purchaseErrorProductNotAvailableForPurchaseError": "El pla seleccionat no està disponible actualment. Si us plau, reinicieu l'aplicació i torneu-ho a provar.",

@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "به حداکثر تعداد زمان‌های یادآوری رسیده‌اید. لطفاً تعداد آن‌ها را به {ReminderTimeMaximumCount} یا کمتر برسانید",
   "minimumCountOfReminderTimes": "لطفاً دست‌کم {ReminderTimeMinimumCount} زمان برای اعلان‌ها تنظیم کنید",
   "purchaseErrorUnknownError": "خطای ناشناخته‌ای رخ داد. لطفاً کمی بعد دوباره امتحان کنید. اگر مشکل ادامه داشت، از مسیر تنظیمات > تماس با ما با ما در ارتباط باشید. جزئیات: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "در {storeName} خطایی رخ داده است. لطفاً چند لحظه صبر کنید و دوباره تلاش کنید.",
+  "purchaseErrorStoreProblemError": "در {storeName} خطایی رخ داده است. لطفاً کمی بعد دوباره امتحان کنید.",
   "purchaseErrorPurchaseNotAllowedError": "خرید در این دستگاه مجاز نیست",
   "purchaseErrorPurchaseInvalidError": "پرداخت ناموفق بود. لطفاً روش پرداخت معتبر خود را بررسی کرده و دوباره تلاش کنید",
   "purchaseErrorProductNotAvailableForPurchaseError": "طرح مورد نظر در حال حاضر در دسترس نیست. لطفاً اپلیکیشن را مجدداً راه‌اندازی کرده و دوباره تلاش کنید",

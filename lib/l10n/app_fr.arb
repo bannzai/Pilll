@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Vous avez atteint le nombre maximal d'heures de rappel. Veuillez n'en garder que {ReminderTimeMaximumCount} au maximum",
   "minimumCountOfReminderTimes": "Veuillez définir au moins {ReminderTimeMinimumCount} horaires de notification",
   "purchaseErrorUnknownError": "Une erreur inconnue s’est produite. Veuillez réessayer un peu plus tard. Si le problème persiste, contactez-nous depuis Paramètres > Nous contacter. Détails : {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "Une erreur s'est produite sur {storeName}. Veuillez patienter un moment et réessayer.",
+  "purchaseErrorStoreProblemError": "Une erreur s’est produite sur {storeName}. Veuillez réessayer dans quelques instants.",
   "purchaseErrorPurchaseNotAllowedError": "Les achats ne sont pas autorisés sur cet appareil",
   "purchaseErrorPurchaseInvalidError": "Le paiement a échoué. Veuillez vérifier votre mode de paiement et réessayer.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Le plan sélectionné n'est actuellement pas disponible à l'achat. Veuillez redémarrer l'application et réessayer.",

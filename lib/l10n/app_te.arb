@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "రిమైండర్ సమయాలను జోడించే గరిష్ఠ పరిమితికి చేరుకున్నారు. దయచేసి {ReminderTimeMaximumCount} లేదా అంతకంటే తక్కువ సమయాలను ఉంచండి",
   "minimumCountOfReminderTimes": "దయచేసి నోటిఫికేషన్‌ల కోసం కనీసం {ReminderTimeMinimumCount} సమయాలను సెట్ చేయండి",
   "purchaseErrorUnknownError": "తెలియని లోపం సంభవించింది. దయచేసి కాసేపటి తర్వాత మళ్లీ ప్రయత్నించండి. సమస్య కొనసాగితే, సెట్టింగ్‌లు > మమ్మల్ని సంప్రదించండి ద్వారా మమ్మల్ని సంప్రదించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "{storeName}లో లోపం సంభవించింది. కొంత సమయం వేచి ఉండి మళ్లీ ప్రయత్నించండి",
+  "purchaseErrorStoreProblemError": "{storeName}లో లోపం ఏర్పడింది. దయచేసి కాసేపటి తర్వాత మళ్లీ ప్రయత్నించండి.",
   "purchaseErrorPurchaseNotAllowedError": "ఈ పరికరంలో కొనుగోలుకు అనుమతి లేదు",
   "purchaseErrorPurchaseInvalidError": "చెల్లింపు విఫలమైంది. దయచేసి మీ చెల్లింపు పద్ధతి చెల్లుబాటు అవుతుందో తనిఖీ చేసి మళ్లీ ప్రయత్నించండి",
   "purchaseErrorProductNotAvailableForPurchaseError": "ఎంపిక చేసిన ప్లాన్ ప్రస్తుతం అందుబాటులో లేదు. దయచేసి యాప్‌ను రీస్టార్ట్ చేసి మళ్లీ ప్రయత్నించండి",

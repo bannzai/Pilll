@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Kaydedilebilecek hatırlatma saati sınırına ulaştınız. Lütfen en fazla {ReminderTimeMaximumCount} saat bırakın",
   "minimumCountOfReminderTimes": "Lütfen en az {ReminderTimeMinimumCount} bildirim saati ayarlayın",
   "purchaseErrorUnknownError": "Bilinmeyen bir hata oluştu. Lütfen biraz sonra tekrar deneyin. Sorun devam ederse Ayarlar > Bize ulaşın üzerinden bizimle iletişime geçin. Ayrıntılar: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "{storeName} üzerinde bir hata oluştu. Lütfen bir süre bekleyip tekrar deneyin.",
+  "purchaseErrorStoreProblemError": "{storeName} mağazasında bir hata oluştu. Lütfen biraz sonra tekrar deneyin.",
   "purchaseErrorPurchaseNotAllowedError": "Bu cihazda satın alma işlemine izin verilmiyor",
   "purchaseErrorPurchaseInvalidError": "Ödeme işlemi başarısız oldu. Lütfen ödeme yönteminizin geçerli olduğunu kontrol ederek tekrar deneyin.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Seçilen plan şu anda mevcut değildir. Lütfen uygulamayı yeniden başlatın ve tekrar deneyin.",

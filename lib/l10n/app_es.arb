@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Llegaste al límite de horarios de recordatorio. Deja {ReminderTimeMaximumCount} o menos, por favor",
   "minimumCountOfReminderTimes": "Configura al menos {ReminderTimeMinimumCount} horarios de notificación",
   "purchaseErrorUnknownError": "Se produjo un error desconocido. Vuelve a intentarlo más tarde. Si el problema continúa, contáctanos desde Configuración > Contacto. Detalles: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "Se ha producido un error en {storeName}. Por favor, espere un momento y vuelva a intentarlo",
+  "purchaseErrorStoreProblemError": "Se ha producido un error en {storeName}. Vuelve a intentarlo dentro de un rato.",
   "purchaseErrorPurchaseNotAllowedError": "Las compras no están permitidas en este dispositivo",
   "purchaseErrorPurchaseInvalidError": "El pago ha fallado. Por favor, verifique que su método de pago sea válido e inténtelo de nuevo.",
   "purchaseErrorProductNotAvailableForPurchaseError": "El plan seleccionado no está disponible en este momento. Por favor, reinicia la aplicación e inténtalo de nuevo.",

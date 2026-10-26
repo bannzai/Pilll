@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Հասել եք հիշեցումների ժամերի առավելագույն քանակին։ Խնդրում ենք թողնել առավելագույնը {ReminderTimeMaximumCount} ժամ",
   "minimumCountOfReminderTimes": "Խնդրում ենք սահմանել ծանուցման առնվազն {ReminderTimeMinimumCount} ժամ",
   "purchaseErrorUnknownError": "Անհայտ սխալ է տեղի ունեցել։ Խնդրում ենք մի փոքր ուշ կրկին փորձել։ Եթե խնդիրը շարունակվի, կապվեք մեզ հետ՝ Կարգավորումներ > Կապ մեզ հետ բաժնից։ Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "{storeName}-ում սխալ է տեղի ունեցել: Խնդրում ենք մի փոքր սպասել և նորից փորձել:",
+  "purchaseErrorStoreProblemError": "{storeName}-ում սխալ է առաջացել։ Խնդրում ենք որոշ ժամանակ անց կրկին փորձել։",
   "purchaseErrorPurchaseNotAllowedError": "Այս սարքում գնումները թույլատրված չեն",
   "purchaseErrorPurchaseInvalidError": "Վճարումը ձախողվեց: Խնդրում ենք ստուգել ձեր վճարման եղանակի վավերությունը և կրկին փորձել:",
   "purchaseErrorProductNotAvailableForPurchaseError": "Ընտրված ծրագիրն այժմ չի վաճառվում: Խնդրում ենք վերագործարկել ծրագիրը և նորից փորձել:",

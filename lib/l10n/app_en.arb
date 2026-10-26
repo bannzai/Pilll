@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "You've reached the limit for reminder times. Please keep no more than {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Set at least {ReminderTimeMinimumCount} notification times",
   "purchaseErrorUnknownError": "Something went wrong. Please try again later. If the problem continues, contact us through Settings > Contact us. Details: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "An error occurred on {storeName}. Please wait a moment and try again.",
+  "purchaseErrorStoreProblemError": "There’s a problem with {storeName}. Please try again in a little while.",
   "purchaseErrorPurchaseNotAllowedError": "Purchases are not allowed on this device",
   "purchaseErrorPurchaseInvalidError": "Payment failed. Please check your payment method and try again.",
   "purchaseErrorProductNotAvailableForPurchaseError": "The selected plan is currently not available for purchase. Please restart the app and try again.",

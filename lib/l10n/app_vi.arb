@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Bạn đã đạt giới hạn số giờ nhắc nhở. Vui lòng giữ tối đa {ReminderTimeMaximumCount} giờ",
   "minimumCountOfReminderTimes": "Vui lòng đặt ít nhất {ReminderTimeMinimumCount} thời điểm nhận thông báo",
   "purchaseErrorUnknownError": "Đã xảy ra lỗi không xác định. Vui lòng thử lại sau ít phút. Nếu sự cố vẫn tiếp diễn, hãy liên hệ với chúng tôi qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "Đã xảy ra lỗi trên {storeName}. Vui lòng đợi một lúc và thử lại.",
+  "purchaseErrorStoreProblemError": "Đã xảy ra lỗi tại {storeName}. Vui lòng thử lại sau ít phút.",
   "purchaseErrorPurchaseNotAllowedError": "Thiết bị này không được phép thực hiện mua hàng",
   "purchaseErrorPurchaseInvalidError": "Thanh toán thất bại. Vui lòng kiểm tra phương thức thanh toán có hợp lệ không và thử lại.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Gói dịch vụ này hiện không có sẵn. Vui lòng khởi động lại ứng dụng và thử lại.",

@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Достигли сте највећи број времена за подсетник. Молимо Вас да задржите највише {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Молимо Вас да подесите најмање {ReminderTimeMinimumCount} времена за обавештења",
   "purchaseErrorUnknownError": "Дошло је до непознате грешке. Молимо Вас, покушајте поново мало касније. Ако се проблем настави, контактирајте нас преко Подешавања > Контактирајте нас. Детаљи: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "Došlo je do greške u {storeName}. Molimo vas da sačekajte malo i pokušajte ponovo.",
+  "purchaseErrorStoreProblemError": "Дошло је до грешке у продавници {storeName}. Молимо Вас, покушајте поново мало касније.",
   "purchaseErrorPurchaseNotAllowedError": "Kupovina nije dozvoljena na ovom uređaju",
   "purchaseErrorPurchaseInvalidError": "Plaćanje nije uspešno. Molimo vas da proverite valjanost načina plaćanja i pokušajte ponovo.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Odabrani plan trenutno nije dostupan za kupovinu. Molimo vas restartujte aplikaciju i pokušajte ponovo.",

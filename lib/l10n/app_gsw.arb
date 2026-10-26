@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Du hesch s Maximum a Erinnerigsziite erreicht. Bitte lah höchstens {ReminderTimeMaximumCount} dinne",
   "minimumCountOfReminderTimes": "Leg bitte mindestens {ReminderTimeMinimumCount} Zite für Benachrichtigunge fescht",
   "purchaseErrorUnknownError": "Es isch en unbekannte Fähler passiert. Probier’s bitte spöter nomal. Wänn s Problem bliibt, chasch eus über Iistellige > Kontakt kontaktiere. Details: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "Bi {storeName} isch en Fähler ufträte. Bitte warted chli und versuecheds nomal.",
+  "purchaseErrorStoreProblemError": "Bi {storeName} isch en Fähler passiert. Probier’s bitte spöter nomal.",
   "purchaseErrorPurchaseNotAllowedError": "Chäuf sind uf däm Grät nöd erloubt",
   "purchaseErrorPurchaseInvalidError": "Zahlung fehlgeschlagen. Bitte überprüfen Sie Ihre Zahlungsmethode und versuchen Sie es erneut.",
   "purchaseErrorProductNotAvailableForPurchaseError": "S gwählte Abo isch momentan nöd verfüegbar. Bitte start d App neu und probier's nomol.",

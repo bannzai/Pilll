@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Вы достигли предела количества времени напоминаний. Пожалуйста, оставьте не более {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Укажите не менее {ReminderTimeMinimumCount} времён для уведомлений",
   "purchaseErrorUnknownError": "Произошла неизвестная ошибка. Пожалуйста, попробуйте ещё раз немного позже. Если проблема сохранится, свяжитесь с нами через Настройки > Связаться с нами. Подробности: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "В {storeName} произошла ошибка. Пожалуйста, подождите и попробуйте снова.",
+  "purchaseErrorStoreProblemError": "В {storeName} произошла ошибка. Пожалуйста, попробуйте ещё раз немного позже.",
   "purchaseErrorPurchaseNotAllowedError": "Покупки не разрешены на этом устройстве",
   "purchaseErrorPurchaseInvalidError": "Платеж не прошел. Проверьте корректность платежных данных и повторите попытку.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Данный план в настоящее время недоступен для покупки. Пожалуйста, перезапустите приложение и попробуйте ещё раз.",

@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Jumlah waktu pengingat sudah mencapai batas. Harap sisakan paling banyak {ReminderTimeMaximumCount} waktu",
   "minimumCountOfReminderTimes": "Atur setidaknya {ReminderTimeMinimumCount} waktu notifikasi",
   "purchaseErrorUnknownError": "Terjadi kesalahan yang tidak diketahui. Silakan coba lagi nanti. Jika masalah berlanjut, hubungi kami melalui Pengaturan > Hubungi kami. Detail: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "Terjadi kesalahan di {storeName}. Mohon tunggu sebentar dan coba lagi.",
+  "purchaseErrorStoreProblemError": "Terjadi kesalahan di {storeName}. Silakan coba lagi beberapa saat lagi.",
   "purchaseErrorPurchaseNotAllowedError": "Pembelian tidak diizinkan di perangkat ini",
   "purchaseErrorPurchaseInvalidError": "Pembayaran gagal. Harap periksa metode pembayaran Anda dan coba lagi.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Paket tersebut sedang tidak tersedia untuk saat ini. Silakan restart aplikasi dan coba kembali.",

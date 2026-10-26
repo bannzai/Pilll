@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "შეხსენების დროების მაქსიმალურ რაოდენობას მიაღწიეთ. გთხოვთ, დატოვოთ არაუმეტეს {ReminderTimeMaximumCount} დროისა",
   "minimumCountOfReminderTimes": "გთხოვთ, მიუთითოთ შეტყობინების სულ მცირე {ReminderTimeMinimumCount} დრო",
   "purchaseErrorUnknownError": "უცნობი შეცდომა მოხდა. გთხოვთ, ცოტა ხნის შემდეგ ხელახლა სცადოთ. თუ პრობლემა გაგრძელდება, დაგვიკავშირდით: პარამეტრები > დაგვიკავშირდით. დეტალები: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "{storeName}-ში შეცდომა წარმოიშვა. გთხოვთ, ცოტა ხნის შემდეგ ისევ სცადეთ.",
+  "purchaseErrorStoreProblemError": "{storeName}-ში შეცდომა მოხდა. გთხოვთ, ცოტა ხნის შემდეგ ხელახლა სცადოთ.",
   "purchaseErrorPurchaseNotAllowedError": "ამ მოწყობილობაზე შეძენა არ არის ნებადართული",
   "purchaseErrorPurchaseInvalidError": "გადახდა ვერ მოხერხდა. გთხოვთ, შეამოწმოთ თქვენი გადახდის მეთოდის ვალიდურობა და სცადოთ ხელახლა",
   "purchaseErrorProductNotAvailableForPurchaseError": "სამიზნე პლანი ამჟამად არ იყიდება. გთხოვთ, თავიდან გაუშვით აპლიკაცია და ისევ სცადეთ",

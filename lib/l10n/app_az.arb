@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Qeyd edə biləcəyiniz xatırlatma vaxtlarının maksimum sayına çatmısınız. Zəhmət olmasa, onların sayını {ReminderTimeMaximumCount} və ya daha az saxlayın",
   "minimumCountOfReminderTimes": "Zəhmət olmasa, ən azı {ReminderTimeMinimumCount} bildiriş vaxtı təyin edin",
   "purchaseErrorUnknownError": "Naməlum xəta baş verdi. Zəhmət olmasa, bir qədər sonra yenidən cəhd edin. Problem davam edərsə, Parametrlər > Bizimlə əlaqə bölməsindən bizə yazın. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "{storeName} mağazasında xəta baş verdi. Zəhmət olmasa, bir qədər sonra yenidən cəhd edin",
+  "purchaseErrorStoreProblemError": "{storeName} mağazasında xəta baş verib. Zəhmət olmasa, bir az sonra yenidən cəhd edin.",
   "purchaseErrorPurchaseNotAllowedError": "Bu cihazda satın alma icazə verilmir",
   "purchaseErrorPurchaseInvalidError": "Ödəniş alınmadı. Ödəniş üsulunuzun etibarlı olduğunu yoxlayın və yenidən cəhd edin.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Bu plan hazırda mövcud deyil. Zəhmət olmasa, tətbiqi yenidən başladıb təkrar cəhd edin.",

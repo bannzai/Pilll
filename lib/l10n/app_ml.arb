@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "ഓർമ്മപ്പെടുത്തൽ സമയങ്ങളുടെ പരമാവധി എണ്ണത്തിൽ എത്തി. ദയവായി {ReminderTimeMaximumCount} എണ്ണമോ അതിൽ കുറവോ മാത്രം നിലനിർത്തൂ",
   "minimumCountOfReminderTimes": "അറിയിപ്പുകൾക്കായി കുറഞ്ഞത് {ReminderTimeMinimumCount} സമയങ്ങൾ സജ്ജമാക്കൂ",
   "purchaseErrorUnknownError": "അജ്ഞാതമായ ഒരു പിശക് സംഭവിച്ചു. കുറച്ച് കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കൂ. പ്രശ്നം തുടരുകയാണെങ്കിൽ, ക്രമീകരണങ്ങൾ > ഞങ്ങളെ ബന്ധപ്പെടുക വഴി ബന്ധപ്പെടൂ. വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "{storeName}-ൽ പിശക് സംഭവിച്ചിരിക്കുന്നു. ദയവായി കുറച്ച് സമയം കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കുക",
+  "purchaseErrorStoreProblemError": "{storeName}ൽ ഒരു പിശക് സംഭവിച്ചു. കുറച്ച് സമയത്തിന് ശേഷം വീണ്ടും ശ്രമിക്കൂ.",
   "purchaseErrorPurchaseNotAllowedError": "ഈ ഉപകരണത്തിൽ വാങ്ങൽ അനുവദിച്ചിട്ടില്ല",
   "purchaseErrorPurchaseInvalidError": "പേയ്‌മെന്റ് പരാജയപ്പെട്ടു. സാധുവായ പേയ്‌മെന്റ് രീതിയാണോ എന്ന് പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക",
   "purchaseErrorProductNotAvailableForPurchaseError": "തിരഞ്ഞെടുത്ത പ്ലാൻ നിലവിൽ ലഭ്യമല്ല. ദയവായി ആപ്പ് പുനരാരംഭിച്ച് വീണ്ടും ശ്രമിക്കുക",

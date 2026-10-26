@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Usufinyelele inani eliphezulu lezikhathi zesikhumbuzo. Sicela ushiye ezingadluli ku-{ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Sicela usethe okungenani izikhathi zezaziso ezingu-{ReminderTimeMinimumCount}",
   "purchaseErrorUnknownError": "Kuvele iphutha elingaziwa. Sicela uzame futhi ngemva kwesikhashana. Uma inkinga iqhubeka, xhumana nathi ngokusebenzisa Izilungiselelo > Xhumana nathi. Imininingwane: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "Kube nephutha ku-{storeName}. Sicela ulinde isikhashana bese uphinda uzama.",
+  "purchaseErrorStoreProblemError": "Kuvele iphutha ku-{storeName}. Sicela uzame futhi ngemva kwesikhashana.",
   "purchaseErrorPurchaseNotAllowedError": "Ukuthenga akuvunyelwe kulesi mshini",
   "purchaseErrorPurchaseInvalidError": "Ukukhokha akuphumelelanga. Sicela uqinisekise ukuthi indlela yakho yokukhokha isebenza kahle bese uzama futhi.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Iplani oyikhethile ayitholakali njengamanje. Sicela uqalise kabusha i-app uphinde uzame.",

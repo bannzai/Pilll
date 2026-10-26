@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "ಜ್ಞಾಪನೆ ಸಮಯಗಳನ್ನು ಸೇರಿಸುವ ಗರಿಷ್ಠ ಮಿತಿ ತಲುಪಿದೆ. ದಯವಿಟ್ಟು {ReminderTimeMaximumCount} ಅಥವಾ ಅದಕ್ಕಿಂತ ಕಡಿಮೆ ಸಮಯಗಳನ್ನು ಇರಿಸಿ",
   "minimumCountOfReminderTimes": "ದಯವಿಟ್ಟು ಕನಿಷ್ಠ {ReminderTimeMinimumCount} ಸೂಚನೆ ಸಮಯಗಳನ್ನು ನಿಗದಿಪಡಿಸಿ",
   "purchaseErrorUnknownError": "ತಿಳಿಯದ ದೋಷ ಸಂಭವಿಸಿದೆ. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ. ಸಮಸ್ಯೆ ಮುಂದುವರಿದರೆ, ಸೆಟ್ಟಿಂಗ್‌ಗಳು > ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ ಮೂಲಕ ಸಂಪರ್ಕಿಸಿ. ವಿವರಗಳು: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "{storeName} ನಲ್ಲಿ ದೋಷ ಸಂಭವಿಸಿದೆ. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
+  "purchaseErrorStoreProblemError": "{storeName}ನಲ್ಲಿ ದೋಷ ಸಂಭವಿಸಿದೆ. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
   "purchaseErrorPurchaseNotAllowedError": "ಈ ಸಾಧನದಲ್ಲಿ ಖರೀದಿ ಅನುಮತಿಸಲಾಗಿಲ್ಲ",
   "purchaseErrorPurchaseInvalidError": "ಪಾವತಿ ವಿಫಲವಾಗಿದೆ. ನಿಮ್ಮ ಪಾವತಿ ವಿಧಾನ ಮಾನ್ಯವಾಗಿದೆಯೇ ಎಂದು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
   "purchaseErrorProductNotAvailableForPurchaseError": "ಆಯ್ಕೆಮಾಡಿದ ಯೋಜನೆಯು ಪ್ರಸ್ತುತ ಲಭ್ಯವಿಲ್ಲ. ದಯವಿಟ್ಟು ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಮರುಪಾರಂಭಿಸಿ ಮತ್ತು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",

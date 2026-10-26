@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Je hebt het maximumaantal herinneringstijden bereikt. Houd er maximaal {ReminderTimeMaximumCount} over",
   "minimumCountOfReminderTimes": "Stel minstens {ReminderTimeMinimumCount} meldingstijden in",
   "purchaseErrorUnknownError": "Er is een onbekende fout opgetreden. Probeer het later opnieuw. Blijft het probleem bestaan? Neem dan contact met ons op via Instellingen > Contact opnemen. Details: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "Er is een fout opgetreden in {storeName}. Probeer het later opnieuw.",
+  "purchaseErrorStoreProblemError": "Er is een fout opgetreden bij {storeName}. Probeer het over een tijdje opnieuw.",
   "purchaseErrorPurchaseNotAllowedError": "Aankopen zijn niet toegestaan op dit apparaat",
   "purchaseErrorPurchaseInvalidError": "Betaling mislukt. Controleer uw betaalmethode en probeer het opnieuw.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Het geselecteerde abonnement is momenteel niet beschikbaar. Herstart de app en probeer het opnieuw.",

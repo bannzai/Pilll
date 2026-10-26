@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Muistutusaikoja on jo enimmäismäärä. Jätä niitä korkeintaan {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Aseta vähintään {ReminderTimeMinimumCount} ilmoitusaikaa",
   "purchaseErrorUnknownError": "Tapahtui tuntematon virhe. Yritä hetken kuluttua uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdasta Asetukset > Ota yhteyttä. Tiedot: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "{storeName}ssa on tapahtunut virhe. Odota hetki ja yritä uudelleen.",
+  "purchaseErrorStoreProblemError": "Palvelussa {storeName} tapahtui virhe. Yritä hetken kuluttua uudelleen.",
   "purchaseErrorPurchaseNotAllowedError": "Ostoja ei sallita tällä laitteella",
   "purchaseErrorPurchaseInvalidError": "Maksu epäonnistui. Tarkista maksutapasi ja yritä uudelleen.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Valittu paketti ei ole tällä hetkellä saatavilla. Käynnistä sovellus uudelleen ja yritä uudelleen.",

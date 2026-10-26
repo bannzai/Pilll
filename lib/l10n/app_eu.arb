@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Gehienezko oroigarri-ordu kopurura iritsi zara. Utzi gehienez {ReminderTimeMaximumCount}, mesedez",
   "minimumCountOfReminderTimes": "Ezarri gutxienez {ReminderTimeMinimumCount} jakinarazpen-ordu",
   "purchaseErrorUnknownError": "Errore ezezagun bat gertatu da. Saiatu berriro pixka bat geroago. Arazoak jarraitzen badu, jarri gurekin harremanetan Ezarpenak > Jarri harremanetan atalaren bidez. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "{storeName}(e)n errore bat gertatu da. Mesedez, itxaron pixka bat eta saiatu berriro.",
+  "purchaseErrorStoreProblemError": "Errore bat gertatu da {storeName} dendan. Saiatu berriro pixka bat geroago.",
   "purchaseErrorPurchaseNotAllowedError": "Erosketak ez dira baimenduta gailu honetan",
   "purchaseErrorPurchaseInvalidError": "Ordainketak huts egin du. Mesedez, egiaztatu ordainketa metodoa baliozkoa den eta saiatu berriro.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Plan hau une honetan ez dago eskuragarri. Mesedez, aplikazioa berrabiarazi eta berriro saiatu.",

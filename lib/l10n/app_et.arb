@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Oled jõudnud meeldetuletuse kellaaegade ülempiirini. Palun jäta alles kuni {ReminderTimeMaximumCount} kellaaega",
   "minimumCountOfReminderTimes": "Määra vähemalt {ReminderTimeMinimumCount} teavitusaega",
   "purchaseErrorUnknownError": "Ilmnes tundmatu viga. Proovi mõne aja pärast uuesti. Kui probleem püsib, võta meiega ühendust jaotises Seaded > Võta ühendust. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "Rakenduses {storeName} tekkis viga. Palun oodake veidi ja proovige uuesti.",
+  "purchaseErrorStoreProblemError": "Teenuses {storeName} tekkis viga. Proovi mõne aja pärast uuesti.",
   "purchaseErrorPurchaseNotAllowedError": "Ostmine ei ole selles seadmes lubatud",
   "purchaseErrorPurchaseInvalidError": "Makse ebaõnnestus. Palun kontrollige, kas teie makseviis on kehtiv, ja proovige uuesti.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Valitud plaan ei ole praegu müügil. Palun taaskäivitage rakendus ja proovige uuesti.",

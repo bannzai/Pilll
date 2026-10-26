@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Hámarksfjölda áminningartíma er náð. Hafðu þá í mesta lagi {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Stilltu að minnsta kosti {ReminderTimeMinimumCount} tilkynningatíma",
   "purchaseErrorUnknownError": "Óþekkt villa kom upp. Prófaðu aftur eftir smástund. Ef vandinn heldur áfram geturðu haft samband við okkur í Stillingar > Hafa samband. Nánar: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "Villa kom upp í {storeName}. Bíddu í smá stund og reyndu aftur.",
+  "purchaseErrorStoreProblemError": "Villa kom upp í {storeName}. Prófaðu aftur eftir smástund.",
   "purchaseErrorPurchaseNotAllowedError": "Kaup eru ekki leyfð á þessu tæki",
   "purchaseErrorPurchaseInvalidError": "Greiðsla mistókst. Vinsamlegast staðfestu að greiðslumáti þinn sé gildur og reyndu aftur",
   "purchaseErrorProductNotAvailableForPurchaseError": "Valda áætlunin er ekki til sölu í augnablikinu. Vinsamlegast endurræstu forritið og reyndu aftur.",

@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Sasniegts maksimālais atgādinājumu laiku skaits. Lūdzu, atstājiet ne vairāk kā {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Lūdzu, iestatiet vismaz {ReminderTimeMinimumCount} paziņojumu laikus",
   "purchaseErrorUnknownError": "Radās nezināma kļūda. Lūdzu, pēc brīža mēģiniet vēlreiz. Ja problēma saglabājas, sazinieties ar mums sadaļā Iestatījumi > Sazināties ar mums. Informācija: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "{storeName} radās kļūda. Lūdzu, uzgaidiet brīdi un mēģiniet vēlreiz.",
+  "purchaseErrorStoreProblemError": "Veikalā {storeName} radās kļūda. Lūdzu, pēc brīža mēģiniet vēlreiz.",
   "purchaseErrorPurchaseNotAllowedError": "Pirkšana šajā ierīcē nav atļauta",
   "purchaseErrorPurchaseInvalidError": "Maksājums neizdevās. Lūdzu, pārbaudiet, vai maksājuma veids ir derīgs, un mēģiniet vēlreiz.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Izvēlētais plāns pašlaik nav pieejams. Lūdzam restartēt lietotni un mēģināt vēlreiz.",

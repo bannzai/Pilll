@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Эскертүү убакыттарынын эң көп санына жеттиңиз. Сураныч, алардын санын {ReminderTimeMaximumCount} же андан аз кылыңыз",
   "minimumCountOfReminderTimes": "Кеминде {ReminderTimeMinimumCount} билдирүү убактысын коюңуз",
   "purchaseErrorUnknownError": "Белгисиз ката кетти. Бир аздан кийин кайра аракет кылып көрүңүз. Көйгөй улана берсе, Жөндөөлөр > Биз менен байланышуу аркылуу бизге кайрылыңыз. Чоо-жайы: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "{storeName} дүкөнүндө ката болду. Бир аз күтүп туруп, кайра аракет кылыңыз.",
+  "purchaseErrorStoreProblemError": "{storeName} дүкөнүндө ката кетти. Бир аздан кийин кайра аракет кылып көрүңүз.",
   "purchaseErrorPurchaseNotAllowedError": "Бул түзмөктө сатып алууга уруксат жок",
   "purchaseErrorPurchaseInvalidError": "Төлөөдө ката кетти. Төлөө ыкмасы туура экендигин текшерип, кайрадан аракет кылыңыз",
   "purchaseErrorProductNotAvailableForPurchaseError": "Тандалган план азыркы учурда сатылбайт. Кыйналып, колдонмону кайра иштетип, кайрадан аракет кылыңыз",

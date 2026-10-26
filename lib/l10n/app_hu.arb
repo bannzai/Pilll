@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Elérted az emlékeztető időpontok maximális számát. Legfeljebb {ReminderTimeMaximumCount} időpontot tarts meg",
   "minimumCountOfReminderTimes": "Állíts be legalább {ReminderTimeMinimumCount} értesítési időpontot",
   "purchaseErrorUnknownError": "Ismeretlen hiba történt. Kérjük, próbáld újra később. Ha a probléma továbbra is fennáll, írj nekünk a Beállítások > Kapcsolat menüpontban. Részletek: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "Hiba történt a {storeName} szolgáltatásban. Kérjük, várjon egy kicsit, majd próbálja újra.",
+  "purchaseErrorStoreProblemError": "Hiba történt a(z) {storeName} áruházban. Kérjük, próbáld újra egy kis idő múlva.",
   "purchaseErrorPurchaseNotAllowedError": "Ezen az eszközön nem engedélyezett a vásárlás",
   "purchaseErrorPurchaseInvalidError": "A fizetés nem sikerült. Kérjük, ellenőrizze fizetési módját, majd próbálja újra.",
   "purchaseErrorProductNotAvailableForPurchaseError": "A kiválasztott csomag jelenleg nem elérhető. Kérjük, indítsa újra az alkalmazást és próbálja újra.",

@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "रिमाइंडर के समय जोड़ने की अधिकतम सीमा पूरी हो गई है। कृपया {ReminderTimeMaximumCount} या उससे कम समय रखें",
   "minimumCountOfReminderTimes": "कृपया सूचनाओं के लिए कम से कम {ReminderTimeMinimumCount} समय तय करें",
   "purchaseErrorUnknownError": "कोई अज्ञात त्रुटि हुई है। कृपया थोड़ी देर बाद फिर कोशिश करें। समस्या बनी रहे तो सेटिंग्स > संपर्क करें से हमसे संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "{storeName} में त्रुटि हो रही है। कृपया कुछ समय बाद फिर से प्रयास करें।",
+  "purchaseErrorStoreProblemError": "{storeName} में कोई समस्या हुई है। कृपया थोड़ी देर बाद फिर से कोशिश करें।",
   "purchaseErrorPurchaseNotAllowedError": "इस डिवाइस पर खरीदारी की अनुमति नहीं है",
   "purchaseErrorPurchaseInvalidError": "भुगतान असफल हो गया। कृपया अपनी भुगतान विधि की वैधता की जांच करें और पुनः प्रयास करें।",
   "purchaseErrorProductNotAvailableForPurchaseError": "यह प्लान अभी उपलब्ध नहीं है। कृपया ऐप को रीस्टार्ट करके दोबारा कोशिश करें।",

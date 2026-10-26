@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Еске салу уақыттарының ең көп санына жеттіңіз. Олардың санын {ReminderTimeMaximumCount} немесе одан аз етіп қалдырыңыз",
   "minimumCountOfReminderTimes": "Кемінде {ReminderTimeMinimumCount} хабарландыру уақытын орнатыңыз",
   "purchaseErrorUnknownError": "Белгісіз қате орын алды. Біраз уақыттан кейін қайталап көріңіз. Мәселе шешілмесе, Баптаулар > Бізге хабарласу арқылы бізге жазыңыз. Мәліметтер: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "{storeName}-да қате пайда болды. Біраз уақыттан соң қайта көріңіз.",
+  "purchaseErrorStoreProblemError": "{storeName} дүкенінде қате орын алды. Сәлден кейін қайта көріңіз.",
   "purchaseErrorPurchaseNotAllowedError": "Бұл құрылғыда сатып алуға рұқсат берілмеген",
   "purchaseErrorPurchaseInvalidError": "Төлем сәтсіз аяқталды. Төлем әдісінің жарамды екенін тексеріп, қайта көріңіз.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Мақсатты жоспар қазіргі уақытта сатылмайды. Қолданбаны қайта іске қосып, қайталап көріңіз",

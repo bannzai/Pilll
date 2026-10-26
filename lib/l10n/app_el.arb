@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Φτάσατε στο μέγιστο πλήθος ωρών υπενθύμισης. Παρακαλούμε κρατήστε έως {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Ορίστε τουλάχιστον {ReminderTimeMinimumCount} ώρες ειδοποίησης",
   "purchaseErrorUnknownError": "Παρουσιάστηκε άγνωστο σφάλμα. Δοκιμάστε ξανά σε λίγο. Αν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας από τις Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "Παρουσιάστηκε σφάλμα στο {storeName}. Παρακαλώ περιμένετε λίγο και δοκιμάστε ξανά.",
+  "purchaseErrorStoreProblemError": "Παρουσιάστηκε σφάλμα στο {storeName}. Δοκιμάστε ξανά σε λίγο.",
   "purchaseErrorPurchaseNotAllowedError": "Οι αγορές δεν επιτρέπονται σε αυτή τη συσκευή",
   "purchaseErrorPurchaseInvalidError": "Η πληρωμή απέτυχε. Παρακαλώ ελέγξτε εάν η μέθοδος πληρωμής σας είναι έγκυρη και δοκιμάστε ξανά.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Το πλάνο που επιλέξατε δεν είναι διαθέσιμο προς το παρόν. Παρακαλούμε επανεκκινήστε την εφαρμογή και δοκιμάστε ξανά.",

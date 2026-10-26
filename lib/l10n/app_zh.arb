@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "提醒时间已达到可添加的上限，请保留不超过 {ReminderTimeMaximumCount} 个",
   "minimumCountOfReminderTimes": "请至少设置 {ReminderTimeMinimumCount} 个通知时间",
   "purchaseErrorUnknownError": "发生了未知错误，请稍后重试。如果问题仍未解决，请通过设置 > 联系我们与我们联系。详情：{exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "{storeName} 出现错误。请稍后再试",
+  "purchaseErrorStoreProblemError": "{storeName} 出现了错误，请稍后再试。",
   "purchaseErrorPurchaseNotAllowedError": "此设备不允许购买",
   "purchaseErrorPurchaseInvalidError": "支付失败。请确认支付方式是否有效，然后重试。",
   "purchaseErrorProductNotAvailableForPurchaseError": "该套餐当前暂停销售，请重新启动应用后重试",

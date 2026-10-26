@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "ਯਾਦ-ਦਹਾਨੀ ਦੇ ਸਮੇਂ ਜੋੜਨ ਦੀ ਵੱਧ ਤੋਂ ਵੱਧ ਹੱਦ ਪੂਰੀ ਹੋ ਗਈ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ {ReminderTimeMaximumCount} ਜਾਂ ਇਸ ਤੋਂ ਘੱਟ ਸਮੇਂ ਰੱਖੋ",
   "minimumCountOfReminderTimes": "ਕਿਰਪਾ ਕਰਕੇ ਸੂਚਨਾਵਾਂ ਲਈ ਘੱਟੋ-ਘੱਟ {ReminderTimeMinimumCount} ਸਮੇਂ ਤੈਅ ਕਰੋ",
   "purchaseErrorUnknownError": "ਕੋਈ ਅਣਜਾਣ ਗੜਬੜ ਹੋਈ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਥੋੜ੍ਹੀ ਦੇਰ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਜੇ ਸਮੱਸਿਆ ਬਣੀ ਰਹੇ, ਤਾਂ ਸੈਟਿੰਗਾਂ > ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ ਰਾਹੀਂ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ। ਵੇਰਵੇ: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "{storeName} ਵਿੱਚ ਗਲਤੀ ਹੋ ਰਹੀ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਕੁਝ ਸਮਾਂ ਇੰਤਜ਼ਾਰ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+  "purchaseErrorStoreProblemError": "{storeName} ਵਿੱਚ ਕੋਈ ਗੜਬੜ ਹੋਈ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਕੁਝ ਸਮੇਂ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
   "purchaseErrorPurchaseNotAllowedError": "ਇਸ ਡਿਵਾਈਸ ਤੇ ਖਰੀਦਦਾਰੀ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ",
   "purchaseErrorPurchaseInvalidError": "ਭੁਗਤਾਨ ਅਸਫਲ ਹੋ ਗਿਆ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਜਾਂਚ ਲਓ ਕਿ ਭੁਗਤਾਨ ਦਾ ਢੰਗ ਵੈਧ ਹੈ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
   "purchaseErrorProductNotAvailableForPurchaseError": "ਚੁਣਿਆ ਗਿਆ ਪਲਾਨ ਫਿਲਹਾਲ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਐਪ ਨੂੰ ਰੀਸਟਾਰਟ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",

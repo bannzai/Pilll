@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "د یادونې د وختونو تر ټولو ډېر شمېر ته رسېدلي یاست. مهرباني وکړئ شمېر یې تر {ReminderTimeMaximumCount} یا لږ پورې راکم کړئ",
   "minimumCountOfReminderTimes": "مهرباني وکړئ د خبرتیاوو لپاره لږ تر لږه {ReminderTimeMinimumCount} وختونه وټاکئ",
   "purchaseErrorUnknownError": "یوه ناپېژندل شوې تېروتنه رامنځته شوې ده. مهرباني وکړئ لږ وروسته بیا هڅه وکړئ. که ستونزه دوام وکړي، د امستنې > له موږ سره اړیکه له لارې له موږ سره اړیکه ونیسئ. جزیات: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "په {storeName} کې یوه ستونزه رامنځته شوې ده. مهربانی وکړئ لږ وخت انتظار وکړئ او بیا یې هڅه وکړئ",
+  "purchaseErrorStoreProblemError": "په {storeName} کې تېروتنه رامنځته شوې ده. مهرباني وکړئ لږ وروسته بیا هڅه وکړئ.",
   "purchaseErrorPurchaseNotAllowedError": "په دغه وسیله کې پیرود ته اجازه نشته",
   "purchaseErrorPurchaseInvalidError": "پیسې ورکول ناکام شو. مهرباني وکړئ وګورئ چې ستاسو د پیسو ورکولو طریقه سمه ده او بیا یې وآزمویئ",
   "purchaseErrorProductNotAvailableForPurchaseError": "دا پلان اوس مه پلورل کیږي. مهرباني وکړئ اپلیکیشن بیا پیل کړئ او بیا یې وآزمویئ",

@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Ai ajuns la numărul maxim de ore pentru mementouri. Păstrează cel mult {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Setează cel puțin {ReminderTimeMinimumCount} ore pentru notificări",
   "purchaseErrorUnknownError": "A apărut o eroare necunoscută. Încearcă din nou puțin mai târziu. Dacă problema persistă, contactează-ne din Setări > Contactează-ne. Detalii: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "A apărut o eroare în {storeName}. Vă rugăm să încercați din nou în câteva momente.",
+  "purchaseErrorStoreProblemError": "A apărut o eroare în {storeName}. Încearcă din nou peste puțin timp.",
   "purchaseErrorPurchaseNotAllowedError": "Achiziția nu este permisă pe acest dispozitiv",
   "purchaseErrorPurchaseInvalidError": "Plata a eșuat. Verificați dacă metoda de plată este validă și încercați din nou.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Planul selectat nu este disponibil în acest moment. Vă rugăm să reporniți aplicația și să încercați din nou.",

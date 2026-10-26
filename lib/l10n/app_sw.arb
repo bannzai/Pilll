@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Umefikia idadi ya juu ya nyakati za vikumbusho. Tafadhali bakiza zisizozidi {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Tafadhali weka angalau nyakati {ReminderTimeMinimumCount} za arifa",
   "purchaseErrorUnknownError": "Hitilafu isiyojulikana imetokea. Tafadhali jaribu tena baadaye. Tatizo likiendelea, wasiliana nasi kupitia Mipangilio > Wasiliana nasi. Maelezo: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "Tatizo limeibuka katika {storeName}. Tafadhali subiri kwa muda na ujaribu tena.",
+  "purchaseErrorStoreProblemError": "Hitilafu imetokea kwenye {storeName}. Tafadhali jaribu tena baada ya muda mfupi.",
   "purchaseErrorPurchaseNotAllowedError": "Ununuzi hauruhusiwi kwenye kifaa hiki",
   "purchaseErrorPurchaseInvalidError": "Malipo yameshindikana. Tafadhali hakikisha njia yako ya malipo ni halali na ujaribu tena.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Mpango uliochagua haupatikani kwa sasa. Tafadhali zindua upya programu na ujaribu tena.",

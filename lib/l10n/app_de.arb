@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Du hast die Höchstzahl an Erinnerungszeiten erreicht. Bitte behalte höchstens {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Bitte lege mindestens {ReminderTimeMinimumCount} Benachrichtigungszeiten fest",
   "purchaseErrorUnknownError": "Ein unbekannter Fehler ist aufgetreten. Versuch es bitte später noch einmal. Wenn das Problem weiterhin besteht, kontaktiere uns über Einstellungen > Kontakt. Details: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "Im {storeName} ist ein Fehler aufgetreten. Bitte warten Sie einen Moment und versuchen Sie es erneut.",
+  "purchaseErrorStoreProblemError": "Bei {storeName} ist ein Fehler aufgetreten. Versuch es bitte in einer Weile noch einmal.",
   "purchaseErrorPurchaseNotAllowedError": "Käufe sind auf diesem Gerät nicht erlaubt",
   "purchaseErrorPurchaseInvalidError": "Die Zahlung ist fehlgeschlagen. Bitte überprüfen Sie, ob Ihre Zahlungsmethode gültig ist, und versuchen Sie es erneut.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Dieser Plan ist derzeit nicht verfügbar. Bitte starten Sie die App neu und versuchen Sie es erneut.",

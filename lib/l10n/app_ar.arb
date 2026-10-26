@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "وصلتِ إلى الحد الأقصى لأوقات التذكير. يُرجى الاكتفاء بـ {ReminderTimeMaximumCount} أوقات أو أقل",
   "minimumCountOfReminderTimes": "يرجى تحديد {ReminderTimeMinimumCount} أوقات على الأقل للتنبيهات",
   "purchaseErrorUnknownError": "حدث خطأ غير معروف. يُرجى المحاولة مجددًا بعد قليل. إذا استمرت المشكلة، يُرجى التواصل معنا عبر الإعدادات > اتصلي بنا. التفاصيل: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "حدث خطأ في {storeName}. يرجى الانتظار قليلاً والمحاولة مرة أخرى",
+  "purchaseErrorStoreProblemError": "حدث خطأ في {storeName}. يُرجى المحاولة مرة أخرى بعد قليل.",
   "purchaseErrorPurchaseNotAllowedError": "الشراء غير مسموح على هذا الجهاز",
   "purchaseErrorPurchaseInvalidError": "فشلت عملية الدفع. يرجى التحقق من صحة طريقة الدفع وإعادة المحاولة",
   "purchaseErrorProductNotAvailableForPurchaseError": "الخطة المحددة غير متاحة للبيع حاليًا. يرجى إعادة تشغيل التطبيق والمحاولة مرة أخرى",

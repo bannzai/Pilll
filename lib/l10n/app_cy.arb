@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Rydych wedi cyrraedd uchafswm yr amseroedd atgoffa. Cadwch ddim mwy na {ReminderTimeMaximumCount}, os gwelwch yn dda",
   "minimumCountOfReminderTimes": "Mae angen gosod o leiaf {ReminderTimeMinimumCount} amser ar gyfer hysbysiadau",
   "purchaseErrorUnknownError": "Mae gwall anhysbys wedi digwydd. Rhowch gynnig arall arni ymhen ychydig. Os bydd y broblem yn parhau, cysylltwch â ni drwy Gosodiadau > Cysylltu â ni. Manylion: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "Mae gwall wedi digwydd yn {storeName}. Arhoswch ychydig a rhowch gynnig arall arni.",
+  "purchaseErrorStoreProblemError": "Mae gwall wedi digwydd yn {storeName}. Rhowch gynnig arall arni ymhen ychydig, os gwelwch yn dda.",
   "purchaseErrorPurchaseNotAllowedError": "Nid yw pryniadau yn cael eu caniatáu ar y ddyfais hon",
   "purchaseErrorPurchaseInvalidError": "Methodd y taliad. Gwiriwch fod eich dull talu yn ddilys a cheisiwch eto.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Nid yw'r cynllun hwn ar gael ar hyn o bryd. Ailgychwynnwch yr ap os gwelwch yn dda a rhoi cynnig arall arni.",

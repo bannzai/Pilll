@@ -288,7 +288,7 @@
   "reachedMaximumCountOfReminderTimes": "Du har nået grænsen for påmindelsestidspunkter. Behold højst {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Angiv mindst {ReminderTimeMinimumCount} tidspunkter for notifikationer",
   "purchaseErrorUnknownError": "Der opstod en ukendt fejl. Prøv igen om lidt. Hvis problemet fortsætter, kan du kontakte os via Indstillinger > Kontakt os. Detaljer: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorStoreProblemError": "Der er opstået en fejl i {storeName}. Vent venligst et øjeblik og prøv igen.",
+  "purchaseErrorStoreProblemError": "Der er opstået en fejl i {storeName}. Prøv igen om lidt.",
   "purchaseErrorPurchaseNotAllowedError": "Køb er ikke tilladt på denne enhed",
   "purchaseErrorPurchaseInvalidError": "Betalingen slog fejl. Kontroller din betalingsmetode og prøv igen.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Det valgte abonnement er ikke tilgængeligt i øjeblikket. Genstart venligst appen og prøv igen.",
