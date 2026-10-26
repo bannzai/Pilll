@@ -438,7 +438,7 @@
   "featureRequest": "ความคิดเห็นและข้อเสนอแนะ",
   "otherInquiry": "อื่นๆ",
   "otherInquiryPlaceholder": "กรุณาระบุรายละเอียดเรื่องอื่น ๆ",
-  "emailAddress": "อีเมล",
+  "emailAddress": "ที่อยู่อีเมล",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "รายละเอียดการติดต่อ",
   "inquiryContentPlaceholder": "กรุณากรอกรายละเอียดการสอบถาม",

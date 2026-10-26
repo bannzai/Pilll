@@ -438,7 +438,7 @@
   "featureRequest": "Отзывы и предложения",
   "otherInquiry": "Другое",
   "otherInquiryPlaceholder": "Опишите ваш другой вопрос",
-  "emailAddress": "Электронная почта",
+  "emailAddress": "Адрес электронной почты",
   "emailPlaceholder": "primer@primer.ru",
   "inquiryContent": "Содержание обращения",
   "inquiryContentPlaceholder": "Введите текст обращения",

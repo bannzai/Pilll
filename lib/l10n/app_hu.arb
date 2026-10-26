@@ -438,7 +438,7 @@
   "featureRequest": "Visszajelzések és javaslatok",
   "otherInquiry": "Egyéb",
   "otherInquiryPlaceholder": "Írd le a másik kérésed részleteit",
-  "emailAddress": "E-mail cím",
+  "emailAddress": "E-mail-cím",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Megkeresés tartalma",
   "inquiryContentPlaceholder": "Kérem, írja le kérdését",

@@ -438,7 +438,7 @@
   "featureRequest": "Відгуки та пропозиції",
   "otherInquiry": "Інше",
   "otherInquiryPlaceholder": "Опишіть ваше інше запитання",
-  "emailAddress": "Електронна адреса",
+  "emailAddress": "Адреса електронної пошти",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Зміст звернення",
   "inquiryContentPlaceholder": "Введіть текст вашого звернення",

@@ -438,7 +438,7 @@
   "featureRequest": "意见与建议",
   "otherInquiry": "其他",
   "otherInquiryPlaceholder": "请填写其他咨询的具体内容",
-  "emailAddress": "电子邮箱",
+  "emailAddress": "电子邮箱地址",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "咨询内容",
   "inquiryContentPlaceholder": "请输入咨询内容",

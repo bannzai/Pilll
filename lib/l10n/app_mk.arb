@@ -438,7 +438,7 @@
   "featureRequest": "Мислења и предлози",
   "otherInquiry": "Друго",
   "otherInquiryPlaceholder": "Ве молиме, опишете го другото прашање",
-  "emailAddress": "Е-пошта",
+  "emailAddress": "Адреса на е-пошта",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Содржина на барањето",
   "inquiryContentPlaceholder": "Внесете ја содржината на вашето барање",
