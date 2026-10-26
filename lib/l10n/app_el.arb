@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "Μπορείτε να επιλέξετε ημερομηνία έναρξης έως και {date}",
   "initialSettingAskYazFlex": "Παίρνετε Yaz Flex;",
   "initialSettingAskYazFlexDescription": "Αν επιλέξετε «Ναι», θα ρυθμιστεί η εμφάνιση των ημερών που έχουν περάσει από το τέλος του διαλείμματος",
-  "yazFlexLastRestDurationTitle": "Πατήστε το χάπι\nπου πήρατε ακριβώς πριν από τη διακοπή",
+  "yazFlexLastRestDurationTitle": "Πατήστε το χάπι που πήρατε πριν από το διάλειμμα",
   "yazFlexLastRestDurationNote": "Παρακαλώ επιλέξτε το τελευταίο χάπι που πήρατε πριν ξεκινήσει η διακοπή",
   "yazFlexRestDurationDaysLabel": "Αριθμός ημερών διακοπής",
   "yazFlexRestDurationDaysValue": "{days} ημέρες",

@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "Du chasch s Aafangsdatum bis am {date} uswähle",
   "initialSettingAskYazFlex": "Nimmsch du Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Wänn du «Ja» uswählsch, zeigts der aa, wie vill Täg sit em Ändi vo de Pillepause verbi sind",
-  "yazFlexLastRestDurationTitle": "Bitte tipp uf d Pille,\nwoner du grad vor dr Pause gno hesch",
+  "yazFlexLastRestDurationTitle": "Tipp uf d Pille, wo du vor de Pillepause gno hesch",
   "yazFlexLastRestDurationNote": "Bitte wähl d’letscht Pille us, wo du vor dr Pause gnoh hesch",
   "yazFlexRestDurationDaysLabel": "Aazahl vo de Pause-Täg",
   "yazFlexRestDurationDaysValue": "{days} Täg",

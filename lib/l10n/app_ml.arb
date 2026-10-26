@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "ആരംഭ തീയതിയായി {date} വരെയുള്ള ദിവസം തിരഞ്ഞെടുക്കാം",
   "initialSettingAskYazFlex": "നിങ്ങൾ കഴിക്കുന്നത് Yaz Flex ഗുളികയാണോ?",
   "initialSettingAskYazFlexDescription": "“അതെ” തിരഞ്ഞെടുത്താൽ, ഇടവേള അവസാനിച്ചതിന് ശേഷം എത്ര ദിവസം കഴിഞ്ഞെന്ന് കാണിക്കുന്ന രീതിയിൽ സജ്ജീകരിക്കും",
-  "yazFlexLastRestDurationTitle": "ഇടവേള തുടങ്ങുന്നതിനുമുമ്പ് എടുത്ത ഗുളികയിൽ\nടാപ്പ് ചെയ്യുക",
+  "yazFlexLastRestDurationTitle": "ഇടവേളയ്ക്ക് മുമ്പ് കഴിച്ച ഗുളികയിൽ ടാപ്പ് ചെയ്യൂ",
   "yazFlexLastRestDurationNote": "ഇടവേള ആരംഭിക്കുന്നതിന് മുമ്പ് നിങ്ങൾ അവസാനമായി കഴിച്ച ഗുളിക തിരഞ്ഞെടുക്കുക",
   "yazFlexRestDurationDaysLabel": "ഇടവേള ദിവസങ്ങളുടെ എണ്ണം",
   "yazFlexRestDurationDaysValue": "{days} ദിവസം",

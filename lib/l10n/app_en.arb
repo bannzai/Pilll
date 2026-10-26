@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "You can choose a start date up to {date}",
   "initialSettingAskYazFlex": "Do you take Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Choose “Yes” to show how many days it’s been since your pill break ended",
-  "yazFlexLastRestDurationTitle": "Please tap the pill\nyou took just before the break",
+  "yazFlexLastRestDurationTitle": "Tap the pill you took before your pill break",
   "yazFlexLastRestDurationNote": "Please select the last pill you took before starting the break",
   "yazFlexRestDurationDaysLabel": "Number of break days",
   "yazFlexRestDurationDaysValue": "{days} days",

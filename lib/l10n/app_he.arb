@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "אפשר לבחור תאריך התחלה עד {date}",
   "initialSettingAskYazFlex": "האם הגלולה היא Yaz Flex?",
   "initialSettingAskYazFlexDescription": "בחירה ב״כן״ תגדיר תצוגה של מספר הימים שחלפו מאז סיום ההפסק",
-  "yazFlexLastRestDurationTitle": "יש להקיש על הגלולה\nשנטלת ממש לפני תחילת ההפסקה",
+  "yazFlexLastRestDurationTitle": "לגעת בגלולה שנלקחה לפני ההפסק",
   "yazFlexLastRestDurationNote": "יש לבחור את הגלולה האחרונה שלקחת לפני תחילת ההפסקה",
   "yazFlexRestDurationDaysLabel": "מספר ימי ההפסקה",
   "yazFlexRestDurationDaysValue": "{days} ימים",

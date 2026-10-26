@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "Pradžios datą galite pasirinkti ne vėlesnę kaip {date}",
   "initialSettingAskYazFlex": "Ar vartojate Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Pasirinkus „Taip“, bus rodoma, kiek dienų praėjo nuo tada, kai baigėsi pertrauka",
-  "yazFlexLastRestDurationTitle": "Palieskite tabletę,\nkurią išgėrėte prieš pat pertrauką",
+  "yazFlexLastRestDurationTitle": "Palieskite tabletę, kurią vartojote prieš pertrauką",
   "yazFlexLastRestDurationNote": "Pasirinkite paskutinę tabletę, kurią išgėrėte prieš pradėdama pertrauką",
   "yazFlexRestDurationDaysLabel": "Pertraukos dienų skaičius",
   "yazFlexRestDurationDaysValue": "{days} d.",

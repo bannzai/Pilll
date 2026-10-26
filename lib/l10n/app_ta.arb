@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "தொடக்கத் தேதியாக {date} வரை தேர்வு செய்யலாம்",
   "initialSettingAskYazFlex": "நீங்கள் Yaz Flex மாத்திரை எடுத்துக்கொள்கிறீர்களா?",
   "initialSettingAskYazFlexDescription": "“ஆம்” என்பதைத் தேர்ந்தெடுத்தால், இடைவேளை முடிந்ததிலிருந்து எத்தனை நாட்கள் ஆகியுள்ளன என்பதைக் காட்டும்படி அமைக்கப்படும்",
-  "yazFlexLastRestDurationTitle": "இடைவேளை தொடங்குவதற்கு முன் எடுத்த மாத்திரையைத்\nதட்டவும்",
+  "yazFlexLastRestDurationTitle": "இடைவேளைக்கு முன் எடுத்த மாத்திரையைத் தட்டுங்கள்",
   "yazFlexLastRestDurationNote": "இடைவேளை தொடங்குவதற்கு முன் நீங்கள் கடைசியாக எடுத்த மாத்திரையைத் தேர்ந்தெடுக்கவும்",
   "yazFlexRestDurationDaysLabel": "இடைவேளை நாட்களின் எண்ணிக்கை",
   "yazFlexRestDurationDaysValue": "{days} நாட்கள்",

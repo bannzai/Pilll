@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "Podes escoller unha data de inicio ata o {date}",
   "initialSettingAskYazFlex": "Tomas Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Se escolles «Si», configuraremos a pantalla para mostrar cantos días pasaron desde que rematou o descanso",
-  "yazFlexLastRestDurationTitle": "Toca a pílula\nque tomaches xusto antes da pausa",
+  "yazFlexLastRestDurationTitle": "Toca a pílula que tomaches antes do descanso",
   "yazFlexLastRestDurationNote": "Selecciona a última pílula que tomaches antes de comezar o descanso",
   "yazFlexRestDurationDaysLabel": "Número de días de descanso",
   "yazFlexRestDurationDaysValue": "{days} días",

@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "Þú getur valið upphafsdag til og með {date}",
   "initialSettingAskYazFlex": "Tekur þú Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ef þú velur „Já“ verður skjárinn stilltur til að sýna hve margir dagar eru liðnir frá því að hléinu lauk",
-  "yazFlexLastRestDurationTitle": "Pikkaðu á pilluna\nsem þú tókst rétt áður en hléið hófst",
+  "yazFlexLastRestDurationTitle": "Pikkaðu á pilluna sem þú tókst fyrir hlé",
   "yazFlexLastRestDurationNote": "Vinsamlegast veldu síðustu pilluna sem þú tókst áður en hléið hófst",
   "yazFlexRestDurationDaysLabel": "Fjöldi hlédaga",
   "yazFlexRestDurationDaysValue": "{days} dagar",

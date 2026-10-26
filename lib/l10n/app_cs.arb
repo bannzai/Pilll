@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "Datum začátku můžete zvolit nejpozději {date}",
   "initialSettingAskYazFlex": "Užíváte Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Pokud vyberete „Ano“, nastaví se zobrazení počtu dní od konce pauzy",
-  "yazFlexLastRestDurationTitle": "Klepněte na pilulku,\nkterou jste užila těsně před pauzou",
+  "yazFlexLastRestDurationTitle": "Klepněte na pilulku užitou před pauzou",
   "yazFlexLastRestDurationNote": "Vyberte prosím poslední pilulku, kterou jste užila před začátkem pauzy",
   "yazFlexRestDurationDaysLabel": "Počet dní pauzy",
   "yazFlexRestDurationDaysValue": "{days} dní",

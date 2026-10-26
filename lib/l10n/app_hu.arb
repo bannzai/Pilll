@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "Kezdőnapnak legkésőbb {date} választható",
   "initialSettingAskYazFlex": "Yaz Flexet szedsz?",
   "initialSettingAskYazFlexDescription": "Az „Igen” választásával beállítjuk, hogy hány nap telt el a szünet vége óta",
-  "yazFlexLastRestDurationTitle": "Koppintson arra a tablettára,\namelyet közvetlenül a szünet előtt vett be",
+  "yazFlexLastRestDurationTitle": "Koppints a szünet előtt szedett tablettára",
   "yazFlexLastRestDurationNote": "Kérjük, válaszd ki az utolsó tablettát, amelyet a szünet kezdete előtt vettél be",
   "yazFlexRestDurationDaysLabel": "Szünet napjainak száma",
   "yazFlexRestDurationDaysValue": "{days} nap",

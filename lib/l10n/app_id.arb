@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "Anda dapat memilih tanggal mulai hingga {date}",
   "initialSettingAskYazFlex": "Apakah pil yang Anda minum Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Jika Anda memilih “Ya”, tampilan akan diatur untuk menunjukkan jumlah hari sejak jeda berakhir",
-  "yazFlexLastRestDurationTitle": "Ketuk pil\nyang diminum tepat sebelum jeda",
+  "yazFlexLastRestDurationTitle": "Ketuk pil yang Anda minum sebelum jeda",
   "yazFlexLastRestDurationNote": "Silakan pilih pil terakhir yang Anda minum sebelum memulai jeda",
   "yazFlexRestDurationDaysLabel": "Jumlah hari jeda",
   "yazFlexRestDurationDaysValue": "{days} hari",

@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "დაწყების თარიღად შეგიძლიათ აირჩიოთ არაუგვიანეს {date}",
   "initialSettingAskYazFlex": "თქვენ Yaz Flex-ს იღებთ?",
   "initialSettingAskYazFlexDescription": "თუ აირჩევთ „დიახ“-ს, ჩაირთვება შესვენების დასრულებიდან გასული დღეების ჩვენება",
-  "yazFlexLastRestDurationTitle": "გთხოვთ, შეეხეთ აბს,\nრომელიც შესვენების დაწყებამდე მიიღეთ",
+  "yazFlexLastRestDurationTitle": "შეეხეთ აბს, რომელიც შესვენებამდე მიიღეთ",
   "yazFlexLastRestDurationNote": "გთხოვთ, აირჩიოთ ბოლო აბი, რომელიც შესვენების დაწყებამდე მიიღეთ",
   "yazFlexRestDurationDaysLabel": "შესვენების დღეების რაოდენობა",
   "yazFlexRestDurationDaysValue": "{days} დღე",

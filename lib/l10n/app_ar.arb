@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "يمكنكِ اختيار تاريخ بدء حتى {date}",
   "initialSettingAskYazFlex": "هل الحبوب التي تتناولينها هي Yaz Flex؟",
   "initialSettingAskYazFlexDescription": "عند اختيار «نعم»، سيُضبط العرض لإظهار عدد الأيام منذ انتهاء راحة تناول الحبوب",
-  "yazFlexLastRestDurationTitle": "يرجى الضغط على الحبة\nالتي تناولتها قبل بدء فترة التوقف",
+  "yazFlexLastRestDurationTitle": "المسي الحبة التي تناولتِها قبل فترة الراحة",
   "yazFlexLastRestDurationNote": "يرجى اختيار آخر حبة تناولتها قبل بدء فترة التوقف",
   "yazFlexRestDurationDaysLabel": "عدد أيام التوقف",
   "yazFlexRestDurationDaysValue": "{days} أيام",

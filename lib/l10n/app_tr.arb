@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "Başlangıç tarihini en geç {date} olarak seçebilirsiniz",
   "initialSettingAskYazFlex": "Yaz Flex kullanıyor musunuz?",
   "initialSettingAskYazFlexDescription": "“Evet”i seçerseniz, ara dönem bittikten sonra kaç gün geçtiği gösterilecek şekilde ayarlanır",
-  "yazFlexLastRestDurationTitle": "Molaya başlamadan hemen önce aldığınız hapı\nseçmek için dokunun",
+  "yazFlexLastRestDurationTitle": "Ara dönemden önce aldığınız hapı seçmek için dokunun",
   "yazFlexLastRestDurationNote": "Lütfen molaya başlamadan önce en son aldığınız hapı seçin",
   "yazFlexRestDurationDaysLabel": "Ara verilen gün sayısı",
   "yazFlexRestDurationDaysValue": "{days} gün",

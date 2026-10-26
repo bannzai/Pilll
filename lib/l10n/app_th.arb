@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "เลือกวันเริ่มต้นได้ถึง {date} ค่ะ",
   "initialSettingAskYazFlex": "ยาที่ทานอยู่คือ Yaz Flex ใช่ไหมคะ",
   "initialSettingAskYazFlexDescription": "หากเลือก “ใช่” ระบบจะแสดงจำนวนวันที่ผ่านไปหลังจากสิ้นสุดช่วงหยุดยาค่ะ",
-  "yazFlexLastRestDurationTitle": "โปรดแตะยาเม็ด\nที่คุณรับประทานก่อนเริ่มช่วงหยุดยา",
+  "yazFlexLastRestDurationTitle": "แตะเม็ดยาที่ทานก่อนเริ่มหยุดยา",
   "yazFlexLastRestDurationNote": "โปรดเลือกยาที่คุณรับประทานครั้งสุดท้ายก่อนเริ่มช่วงพักยา",
   "yazFlexRestDurationDaysLabel": "จำนวนวันหยุดยา",
   "yazFlexRestDurationDaysValue": "{days} วัน",

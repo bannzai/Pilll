@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "Vous pouvez choisir une date de début jusqu’au {date}",
   "initialSettingAskYazFlex": "Prenez-vous Yaz Flex ?",
   "initialSettingAskYazFlexDescription": "Si vous choisissez « Oui », l’affichage indiquera le nombre de jours écoulés depuis la fin de la pause",
-  "yazFlexLastRestDurationTitle": "Touchez la pilule\nque vous avez prise juste avant la pause",
+  "yazFlexLastRestDurationTitle": "Touchez la pilule prise avant la pause",
   "yazFlexLastRestDurationNote": "Veuillez sélectionner la dernière pilule que vous avez prise avant de commencer la pause",
   "yazFlexRestDurationDaysLabel": "Nombre de jours de pause",
   "yazFlexRestDurationDaysValue": "{days} jours",

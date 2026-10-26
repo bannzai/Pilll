@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "시작일은 {date}까지 선택할 수 있어요",
   "initialSettingAskYazFlex": "복용 중인 약이 야즈 플렉스인가요?",
   "initialSettingAskYazFlexDescription": "‘예’를 선택하면 휴약이 끝난 뒤 며칠이 지났는지 표시하도록 설정해요",
-  "yazFlexLastRestDurationTitle": "휴약에 들어가기 직전에 복용한 알약을\n눌러 주세요",
+  "yazFlexLastRestDurationTitle": "휴약 전에 복용한 알약을 탭해 주세요",
   "yazFlexLastRestDurationNote": "휴약에 들어가기 전에 마지막으로 복용한 알약을 선택해 주세요",
   "yazFlexRestDurationDaysLabel": "휴약 일수",
   "yazFlexRestDurationDaysValue": "{days}일",

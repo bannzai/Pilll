@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "Вы можете выбрать дату начала не позднее {date}",
   "initialSettingAskYazFlex": "Вы принимаете Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Если вы выберете «Да», будет показано, сколько дней прошло после окончания перерыва",
-  "yazFlexLastRestDurationTitle": "Нажмите на таблетку,\nкоторую вы приняли прямо перед перерывом",
+  "yazFlexLastRestDurationTitle": "Нажмите на таблетку, которую вы приняли перед перерывом",
   "yazFlexLastRestDurationNote": "Пожалуйста, выберите последнюю таблетку, которую вы приняли перед началом перерыва",
   "yazFlexRestDurationDaysLabel": "Количество дней перерыва",
   "yazFlexRestDurationDaysValue": "{days} дней",

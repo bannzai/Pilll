@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "Du kannst als Startdatum spätestens den {date} wählen",
   "initialSettingAskYazFlex": "Nimmst du Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Wenn du „Ja“ auswählst, wird angezeigt, wie viele Tage seit dem Ende der Einnahmepause vergangen sind",
-  "yazFlexLastRestDurationTitle": "Tippen Sie auf die Pille,\ndie Sie direkt vor der Pause eingenommen haben",
+  "yazFlexLastRestDurationTitle": "Tippe auf die Pille, die du vor der Einnahmepause genommen hast",
   "yazFlexLastRestDurationNote": "Bitte wähle die letzte Pille aus, die du vor der Pause eingenommen hast",
   "yazFlexRestDurationDaysLabel": "Anzahl der Pausentage",
   "yazFlexRestDurationDaysValue": "{days} Tage",

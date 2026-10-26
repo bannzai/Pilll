@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "Poți alege o dată de început până la {date}",
   "initialSettingAskYazFlex": "Iei Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Dacă alegi „Da”, vom seta afișarea numărului de zile trecute de la sfârșitul pauzei",
-  "yazFlexLastRestDurationTitle": "Atingeți pilula\npe care ați luat-o chiar înainte de pauză",
+  "yazFlexLastRestDurationTitle": "Atinge pilula luată înainte de pauză",
   "yazFlexLastRestDurationNote": "Te rugăm să selectezi ultima pilulă pe care ai luat-o înainte de începerea pauzei",
   "yazFlexRestDurationDaysLabel": "Numărul zilelor de pauză",
   "yazFlexRestDurationDaysValue": "{days} zile",

@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "Bạn có thể chọn ngày bắt đầu muộn nhất là {date}",
   "initialSettingAskYazFlex": "Bạn có đang dùng Yaz Flex không?",
   "initialSettingAskYazFlexDescription": "Nếu chọn “Có”, ứng dụng sẽ hiển thị số ngày kể từ khi kết thúc đợt nghỉ thuốc",
-  "yazFlexLastRestDurationTitle": "Vui lòng chạm vào viên thuốc\nbạn đã uống ngay trước khi bắt đầu nghỉ",
+  "yazFlexLastRestDurationTitle": "Vui lòng chạm vào viên thuốc bạn đã uống trước khi nghỉ thuốc",
   "yazFlexLastRestDurationNote": "Vui lòng chọn viên thuốc cuối cùng bạn đã uống trước khi bắt đầu thời gian nghỉ",
   "yazFlexRestDurationDaysLabel": "Số ngày tạm ngừng thuốc",
   "yazFlexRestDurationDaysValue": "{days} ngày",

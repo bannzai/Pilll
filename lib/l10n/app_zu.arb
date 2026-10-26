@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "Ungakhetha usuku lokuqala kuze kufike ku-{date}",
   "initialSettingAskYazFlex": "Ingabe iphilisi oliphuzayo yi-Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Uma ukhetha u-“Yebo”, kuzoboniswa ukuthi sekudlule izinsuku ezingaki kusukela kuphele ikhefu lokuphuza amaphilisi",
-  "yazFlexLastRestDurationTitle": "Sicela uthephe iphilisi\noliphuze ngaphambi nje kokuqala kwekhefu",
+  "yazFlexLastRestDurationTitle": "Sicela uthephe iphilisi oligwinye ngaphambi kwekhefu",
   "yazFlexLastRestDurationNote": "Sicela ukhethe iphilisi lokugcina oliphuzile ngaphambi kokuqala ikhefu",
   "yazFlexRestDurationDaysLabel": "Inani lezinsuku zekhefu",
   "yazFlexRestDurationDaysValue": "{days} izinsuku",

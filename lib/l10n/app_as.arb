@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "আৰম্ভণিৰ তাৰিখ {date}লৈকে বাছনি কৰিব পাৰে",
   "initialSettingAskYazFlex": "আপুনি Yaz Flex খায় নেকি?",
   "initialSettingAskYazFlexDescription": "“হয়” বাছনি কৰিলে, বিৰতি শেষ হোৱাৰ পৰা কিমান দিন হৈছে সেয়া দেখুৱাবলৈ ছেটিং কৰা হ’ব",
-  "yazFlexLastRestDurationTitle": "বিৰতি আৰম্ভ কৰাৰ ঠিক আগতে খোৱা পিলটোত\nটেপ কৰক",
+  "yazFlexLastRestDurationTitle": "বিৰতিৰ আগতে খোৱা পিলটোত টেপ কৰক",
   "yazFlexLastRestDurationNote": "বিৰতি আৰম্ভ কৰাৰ আগতে আপুনি শেষবাৰ খোৱা পিলটো নিৰ্বাচন কৰক",
   "yazFlexRestDurationDaysLabel": "ঔষধ নোখোৱা দিনৰ সংখ্যা",
   "yazFlexRestDurationDaysValue": "{days} দিন",

@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "सुरुवातीची तारीख {date} पर्यंतची निवडू शकता",
   "initialSettingAskYazFlex": "तुम्ही Yaz Flex ही गोळी घेता का?",
   "initialSettingAskYazFlexDescription": "“होय” निवडल्यास, विराम संपल्यानंतर किती दिवस झाले आहेत हे दिसण्यासाठी सेट केले जाईल",
-  "yazFlexLastRestDurationTitle": "ब्रेक सुरू होण्याच्या अगदी आधी घेतलेल्या गोळीवर\nटॅप करा",
+  "yazFlexLastRestDurationTitle": "विरामापूर्वी घेतलेल्या गोळीवर टॅप करा",
   "yazFlexLastRestDurationNote": "कृपया विश्रांती सुरू करण्यापूर्वी तुम्ही शेवटी घेतलेली गोळी निवडा",
   "yazFlexRestDurationDaysLabel": "विश्रांतीच्या दिवसांची संख्या",
   "yazFlexRestDurationDaysValue": "{days} दिवस",

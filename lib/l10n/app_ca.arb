@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "Pots triar una data d’inici fins al {date}",
   "initialSettingAskYazFlex": "Prens Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Si tries «Sí», configurarem la pantalla perquè mostri quants dies han passat des del final del descans",
-  "yazFlexLastRestDurationTitle": "Toca la píndola\nque vas prendre just abans de la pausa",
+  "yazFlexLastRestDurationTitle": "Toca la píndola que vas prendre abans del descans",
   "yazFlexLastRestDurationNote": "Selecciona l’última píndola que vas prendre abans de començar el descans",
   "yazFlexRestDurationDaysLabel": "Nombre de dies de descans",
   "yazFlexRestDurationDaysValue": "{days} dies",

@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "Դուք կարող եք ընտրել մեկնարկի ամսաթիվ՝ մինչև {date} ներառյալ",
   "initialSettingAskYazFlex": "Դուք Yaz Flex եք ընդունո՞ւմ։",
   "initialSettingAskYazFlexDescription": "«Այո» ընտրելու դեպքում կկարգավորվի դադարի ավարտից անցած օրերի ցուցադրումը",
-  "yazFlexLastRestDurationTitle": "Խնդրում ենք հպվել այն հաբին,\nորը ընդունել եք դադարից անմիջապես առաջ",
+  "yazFlexLastRestDurationTitle": "Հպվեք այն հաբին, որն ընդունել եք դադարից առաջ",
   "yazFlexLastRestDurationNote": "Խնդրում ենք ընտրել վերջին հաբը, որը ընդունել եք ընդմիջումը սկսելուց առաջ",
   "yazFlexRestDurationDaysLabel": "Դադարի օրերի քանակ",
   "yazFlexRestDurationDaysValue": "{days} օր",

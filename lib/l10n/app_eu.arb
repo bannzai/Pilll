@@ -570,7 +570,7 @@
   "pauseStartDateLimit": "Hasiera-data {date} arte aukeratu dezakezu",
   "initialSettingAskYazFlex": "Yaz Flex hartzen duzu?",
   "initialSettingAskYazFlexDescription": "«Bai» aukeratzen baduzu, atsedenaldia amaitu zenetik zenbat egun igaro diren erakusteko ezarriko da",
-  "yazFlexLastRestDurationTitle": "Sakatu atsedenaldia hasi aurretik\nhartu zenuen pilula",
+  "yazFlexLastRestDurationTitle": "Ukitu atsedenaldiaren aurretik hartu zenuen pilula",
   "yazFlexLastRestDurationNote": "Aukeratu atsedenaldia hasi aurretik hartu zenuen azken pilula",
   "yazFlexRestDurationDaysLabel": "Atseden egun kopurua",
   "yazFlexRestDurationDaysValue": "{days} egun",
