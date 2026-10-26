@@ -40,7 +40,7 @@
   "takePillReminder": "Është koha të merrni pilulën 💊",
   "copyDebugInfo": "Kopjoni informacionin për gjetjen e gabimeve",
   "cancel": "Anuloni",
-  "signOut": "Dilni",
+  "signOut": "Dilni nga llogaria",
   "autoAddPillSheetGroup": "Shtimi automatik i grupeve të fletëve të piluleve",
   "autoAddNewSheetAfterCurrentEnds": "Kur përfundon grupi aktual i fletëve të pilulës, do të shtohet automatikisht një fletë e re",
   "accountSettings": "Cilësimet e llogarisë",

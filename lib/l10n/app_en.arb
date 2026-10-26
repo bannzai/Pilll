@@ -40,7 +40,7 @@
   "takePillReminder": "Time to take your pill 💊",
   "copyDebugInfo": "Copy debug info",
   "cancel": "Cancel",
-  "signOut": "Sign Out",
+  "signOut": "Sign out",
   "autoAddPillSheetGroup": "Automatic Pill Sheet Group Addition",
   "autoAddNewSheetAfterCurrentEnds": "Automatically add a new sheet when the current pill sheet group is finished",
   "accountSettings": "Account Settings",

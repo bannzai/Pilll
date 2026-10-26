@@ -40,7 +40,7 @@
   "takePillReminder": "Пора принять таблетку 💊",
   "copyDebugInfo": "Скопируйте сведения для отладки",
   "cancel": "Отмена",
-  "signOut": "Выйти",
+  "signOut": "Выйти из аккаунта",
   "autoAddPillSheetGroup": "Автоматическое добавление групп блистеров",
   "autoAddNewSheetAfterCurrentEnds": "После окончания текущей упаковки таблеток автоматически добавится новая упаковка",
   "accountSettings": "Настройки аккаунта",

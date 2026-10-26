@@ -40,7 +40,7 @@
   "takePillReminder": "আপনার পিল খাওয়ার সময় হয়েছে 💊",
   "copyDebugInfo": "ডিবাগ তথ্য কপি করুন",
   "cancel": "বাতিল করুন",
-  "signOut": "সাইন আউট",
+  "signOut": "সাইন আউট করুন",
   "autoAddPillSheetGroup": "স্বয়ংক্রিয় পিল শিট গ্রুপ সংযোজন",
   "autoAddNewSheetAfterCurrentEnds": "বর্তমান পিল শিট গ্রুপ শেষ হলে, স্বয়ংক্রিয়ভাবে একটি নতুন শিট যোগ করা হবে",
   "accountSettings": "অ্যাকাউন্ট সেটিংস",

@@ -40,7 +40,7 @@
   "takePillReminder": "该服药啦 💊",
   "copyDebugInfo": "复制调试信息",
   "cancel": "取消",
-  "signOut": "登出",
+  "signOut": "退出登录",
   "autoAddPillSheetGroup": "避孕药板组自动添加",
   "autoAddNewSheetAfterCurrentEnds": "当前药片组完成后，将自动添加新的药片组",
   "accountSettings": "账户设置",

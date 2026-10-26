@@ -40,7 +40,7 @@
   "takePillReminder": "És hora de prendre la píndola 💊",
   "copyDebugInfo": "Copia la informació de depuració",
   "cancel": "Cancel·la",
-  "signOut": "Tancar sessió",
+  "signOut": "Tanca la sessió",
   "autoAddPillSheetGroup": "Addició automàtica de grups de planxa de pastilles",
   "autoAddNewSheetAfterCurrentEnds": "Quan acabi el grup actual de fulls de pastilles, s'afegirà automàticament un nou full",
   "accountSettings": "Configuració del compte",

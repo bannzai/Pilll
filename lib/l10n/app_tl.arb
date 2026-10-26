@@ -40,7 +40,7 @@
   "takePillReminder": "Oras na po para inumin ang inyong pildoras 💊",
   "copyDebugInfo": "Pakikopya ang impormasyon sa paghahanap ng error",
   "cancel": "Kanselahin",
-  "signOut": "Mag-logout",
+  "signOut": "Mag-sign out",
   "autoAddPillSheetGroup": "Awtomatikong Pagdagdag ng Grupo ng Pill Sheet",
   "autoAddNewSheetAfterCurrentEnds": "Kapag matapos na ang kasalukuyang pill sheet group, kusang magdadagdag ng bagong sheet",
   "accountSettings": "Mga Setting ng Akaunt",

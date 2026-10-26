@@ -40,7 +40,7 @@
   "takePillReminder": "ستاسو د ګولۍ خوړلو وخت دی 💊",
   "copyDebugInfo": "د تېروتنو د موندلو معلومات کاپي کړئ",
   "cancel": "لغوه کړئ",
-  "signOut": "بهر ته ووتل",
+  "signOut": "له حسابه ووځئ",
   "autoAddPillSheetGroup": "د ګولیو د پاڼې ګروپ خودکار اضافه کول",
   "autoAddNewSheetAfterCurrentEnds": "کله چې د اوسني د ګولۍ شیټ ګروپ پای ته ورسیږي، نوی شیټ به په اتوماتیک ډول اضافه شي",
   "accountSettings": "د حساب تنظیمات",
