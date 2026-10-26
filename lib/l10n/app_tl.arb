@@ -100,7 +100,7 @@
   "afterLastTakenPillNumber": "pildoras blg. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-blg. {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Pildoras blg. {beforeLastTakenPillNumber}",
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "bilang {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "mga pildoras bilang {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}",

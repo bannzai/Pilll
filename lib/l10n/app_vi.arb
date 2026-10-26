@@ -100,7 +100,7 @@
   "afterLastTakenPillNumber": "viên thuốc số {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-số {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Viên thuốc số {beforeLastTakenPillNumber}",
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} số",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "viên thuốc số {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1 → số {afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "Số {beforeBeginPillNumber}→Số {afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→số {afterDisplayNumberSettingEndPillNumber}",

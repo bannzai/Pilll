@@ -100,7 +100,7 @@
   "afterLastTakenPillNumber": "kidonge namba {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-nambari {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Kidonge nambari {beforeLastTakenPillNumber}",
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} nambari",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "vidonge nambari {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "Nambari {beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1 → nambari {afterDisplayNumberSettingEndPillNumber}",

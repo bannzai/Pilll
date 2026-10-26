@@ -100,7 +100,7 @@
   "afterLastTakenPillNumber": "pilule n° {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-n° {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Pilule n° {beforeLastTakenPillNumber}",
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "Pilules {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "pilules nº {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1 → {afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber} → {afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1 à {afterDisplayNumberSettingEndPillNumber}",

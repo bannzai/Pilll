@@ -100,7 +100,7 @@
   "afterLastTakenPillNumber": "pílula nº {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-nº {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Pílula nº {beforeLastTakenPillNumber}",
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "nº {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "pílulas {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}",

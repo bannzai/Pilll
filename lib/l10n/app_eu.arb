@@ -100,7 +100,7 @@
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}. pilula",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}. zk.",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}. pilula",
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} zenbakiak",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}. pilulak",
   "oneToAfterDisplayNumberBeginPillNumber": "1 → {afterDisplayNumberSettingBeginPillNumber}.a",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} zenbakia",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}",

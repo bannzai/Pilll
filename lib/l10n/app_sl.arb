@@ -100,7 +100,7 @@
   "afterLastTakenPillNumber": "tableta št. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-št. {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Tableta št. {beforeLastTakenPillNumber}",
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}.-{afterLastTakenPillNumberPlusOne}. tabl.",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "tablete št. {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}",

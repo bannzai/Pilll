@@ -100,7 +100,7 @@
   "afterLastTakenPillNumber": "таблета бр. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-бр. {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Таблета бр. {beforeLastTakenPillNumber}",
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} број",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "таблети бр. {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} број",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}",

@@ -100,7 +100,7 @@
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-raqamli tabletka",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}-raqam",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}-raqamli tabletka",
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}-raqam",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}-raqamli tabletkalar",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}-raqam",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}-son",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}-raqam",

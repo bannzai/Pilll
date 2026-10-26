@@ -100,7 +100,7 @@
   "afterLastTakenPillNumber": "píldora n.º {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-n.º {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Píldora n.º {beforeLastTakenPillNumber}",
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "pastillas {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "píldoras {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1 a {afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber} → {afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Del 1 al {afterDisplayNumberSettingEndPillNumber}",

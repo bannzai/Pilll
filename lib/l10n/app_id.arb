@@ -100,7 +100,7 @@
   "afterLastTakenPillNumber": "pil nomor {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-no. {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Pil nomor {beforeLastTakenPillNumber}",
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "nomor {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "pil nomor {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1 hingga {afterDisplayNumberSettingEndPillNumber}",

@@ -100,7 +100,7 @@
   "afterLastTakenPillNumber": "pill nr {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-nr {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Pill nr {beforeLastTakenPillNumber}",
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}. tablett",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "pillid {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}",

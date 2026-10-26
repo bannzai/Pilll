@@ -100,7 +100,7 @@
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber} numaralı hap",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} numara",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} numaralı hap",
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} numaralı",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} numaralı haplar",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} no",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}. numara",

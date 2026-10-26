@@ -100,7 +100,7 @@
   "afterLastTakenPillNumber": "ବଟି ନମ୍ବର {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} ନମ୍ବର",
   "beforeLastTakenPillNumber": "ବଟି ନମ୍ବର {beforeLastTakenPillNumber}",
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}ନଂ",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "ବଟିକା ନଂ {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "୧→{afterDisplayNumberSettingBeginPillNumber}ନମ୍ବର",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}ନମ୍ବର",
   "oneToAfterDisplayNumberEndPillNumber": "୧→{afterDisplayNumberSettingEndPillNumber} ନମ୍ବର",

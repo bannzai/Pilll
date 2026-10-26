@@ -100,7 +100,7 @@
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber} নম্বৰ বড়ি",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} নম্বৰ",
   "beforeLastTakenPillNumber": "পিল নম্বৰ {beforeLastTakenPillNumber}",
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}নং",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "বৰি নং {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "১→{afterDisplayNumberSettingBeginPillNumber}নং",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}নম্বৰ",
   "oneToAfterDisplayNumberEndPillNumber": "১→{afterDisplayNumberSettingEndPillNumber}নং",

@@ -100,7 +100,7 @@
   "afterLastTakenPillNumber": "pilsen rhif {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-rhif {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Pilsen rhif {beforeLastTakenPillNumber}",
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "rhif {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "pils rhif {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} rhif",
   "oneToAfterDisplayNumberEndPillNumber": "1 → {afterDisplayNumberSettingEndPillNumber}",

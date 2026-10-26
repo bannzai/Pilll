@@ -100,7 +100,7 @@
   "afterLastTakenPillNumber": "גלולה מספר {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-מס׳ {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "גלולה מספר {beforeLastTakenPillNumber}",
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "מס' {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "גלולות מספר {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1 ל{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "מס׳ {beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1-{afterDisplayNumberSettingEndPillNumber}",

@@ -100,7 +100,7 @@
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}ನೇ ಮಾತ್ರೆ",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}ನೇ ಸಂಖ್ಯೆ",
   "beforeLastTakenPillNumber": "ಮಾತ್ರೆ ಸಂಖ್ಯೆ {beforeLastTakenPillNumber}",
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} ನೇ",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}ನೇ ಮಾತ್ರೆಗಳು",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}ನಂ",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}ನೇ ಸಂಖ್ಯೆ",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}ನೇ",

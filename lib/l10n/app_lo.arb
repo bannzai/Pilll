@@ -100,7 +100,7 @@
   "afterLastTakenPillNumber": "ຢາເມັດເລກ {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-ເລກ {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "ເມັດຢາເລກ {beforeLastTakenPillNumber}",
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "ເມັດ {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "ຢາເມັດເລກ {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} ເລກທີ",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} ເລກທີ່",
   "oneToAfterDisplayNumberEndPillNumber": "1→ແຂງທີ່ {afterDisplayNumberSettingEndPillNumber}",

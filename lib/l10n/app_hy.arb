@@ -100,7 +100,7 @@
   "afterLastTakenPillNumber": "հաբ № {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-համար {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Հաբ № {beforeLastTakenPillNumber}",
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} համար",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} համարի հաբեր",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} համար",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} համար",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} համար",

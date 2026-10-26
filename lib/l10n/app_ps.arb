@@ -100,7 +100,7 @@
   "afterLastTakenPillNumber": "د {afterLastTakenPillNumber} شمېرې ګولۍ",
   "leftDashAfterLastTakenPillNumber": "{left}-شمېره {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "د {beforeLastTakenPillNumber} شمېرې ګولۍ",
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} شمېره",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "د ګولیو شمېرې {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "۱→{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} شمیره",
   "oneToAfterDisplayNumberEndPillNumber": "۱→{afterDisplayNumberSettingEndPillNumber}ګ",
