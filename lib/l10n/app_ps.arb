@@ -119,7 +119,7 @@
   "taking": "د ګولۍ اخیستل",
   "estimatedEndPillNumber": "د مخکینۍ پاڼې وروستۍ ګولۍ: شمېره {estimatedEndPillNumber}",
   "addPillSheetButton": "د ګولیو پاڼ ورزیات کړئ",
-  "taken": "څښلې",
+  "taken": "ګولۍ خوړل شوې ده",
   "notTaken": "نه نیولی",
   "pillSheetSettings": "د ګولیو شیټ ترتیبات",
   "unmarkTodayPillAsTakenToPause": "د نن ورځې ګولۍ ته نه څښل شوي بدلول څخه وروسته",

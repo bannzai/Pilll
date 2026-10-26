@@ -119,7 +119,7 @@
   "taking": "Pillerin ottaminen",
   "estimatedEndPillNumber": "Edellisen läpipainopakkauksen viimeinen pilleri: nro {estimatedEndPillNumber}",
   "addPillSheetButton": "Lisää pilleriliuska",
-  "taken": "Otettu",
+  "taken": "Pilleri otettu",
   "notTaken": "Ottamatta",
   "pillSheetSettings": "Pillerilevyn asetukset",
   "unmarkTodayPillAsTakenToPause": "Merkitse tänään otettava pilleri ottamattomaksi ennen",

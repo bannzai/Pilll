@@ -119,7 +119,7 @@
   "taking": "تناول الحبة",
   "estimatedEndPillNumber": "آخر حبة في الشريط السابق: رقم {estimatedEndPillNumber}",
   "addPillSheetButton": "أضيفي شريط",
-  "taken": "شرب",
+  "taken": "تم تناول الحبة",
   "notTaken": "غير مُتناول",
   "pillSheetSettings": "إعدادات شرائط الحبوب",
   "unmarkTodayPillAsTakenToPause": "بعد تعيين حبة اليوم كغير مأخوذة",

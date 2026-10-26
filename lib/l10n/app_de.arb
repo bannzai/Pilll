@@ -119,7 +119,7 @@
   "taking": "Pilleneinnahme",
   "estimatedEndPillNumber": "Letzte Pille auf dem vorherigen Blister: Nr. {estimatedEndPillNumber}",
   "addPillSheetButton": "Pillenblister hinzufügen",
-  "taken": "genommen",
+  "taken": "Pille eingenommen",
   "notTaken": "nicht genommen",
   "pillSheetSettings": "Pillenpackung-Einstellungen",
   "unmarkTodayPillAsTakenToPause": "Nachdem Sie die heutige Pille als nicht eingenommen markiert haben",

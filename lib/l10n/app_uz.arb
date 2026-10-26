@@ -119,7 +119,7 @@
   "taking": "Tabletkani qabul qilish",
   "estimatedEndPillNumber": "Oldingi blisterdagi oxirgi tabletka: № {estimatedEndPillNumber}",
   "addPillSheetButton": "tabletka blister qoʻshing",
-  "taken": "Ichdi",
+  "taken": "Tabletka qabul qilindi",
   "notTaken": "Qabul qilmagan",
   "pillSheetSettings": "Pill varaqasi sozlamalari",
   "unmarkTodayPillAsTakenToPause": "Bugungi dorini ichilmagan holga keltirgandan so'ng",

@@ -119,7 +119,7 @@
   "taking": "Tabletės vartojimas",
   "estimatedEndPillNumber": "Paskutinė tabletė ankstesnėje plokštelėje: Nr. {estimatedEndPillNumber}",
   "addPillSheetButton": "Pridėti tablečių plokštel",
-  "taken": "Priimta",
+  "taken": "Tabletė išgerta",
   "notTaken": "Neišgerta",
   "pillSheetSettings": "Tablečių pakuotės nustatymai",
   "unmarkTodayPillAsTakenToPause": "Po to, kai šiandienos tabletę pažymėsite kaip neišgertą",

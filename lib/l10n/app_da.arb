@@ -119,7 +119,7 @@
   "taking": "Indtagelse af p-pille",
   "estimatedEndPillNumber": "Sidste p-pille på det forrige ark: nr. {estimatedEndPillNumber}",
   "addPillSheetButton": "Tilføj pillekort",
-  "taken": "taget",
+  "taken": "P-pille taget",
   "notTaken": "ikke taget",
   "pillSheetSettings": "Pilleskema indstillinger",
   "unmarkTodayPillAsTakenToPause": "Efter at have markeret dagens pille som ikke taget",

@@ -119,7 +119,7 @@
   "taking": "Užívanie tabletky",
   "estimatedEndPillNumber": "Posledná tabletka v predchádzajúcom blistri: č. {estimatedEndPillNumber}",
   "addPillSheetButton": "Pridať blist",
-  "taken": "Užité",
+  "taken": "Tabletka užitá",
   "notTaken": "Nevzala",
   "pillSheetSettings": "Nastavenia balenia tabliet",
   "unmarkTodayPillAsTakenToPause": "Po označení dnešnej pilulky ako neužitej",

@@ -119,7 +119,7 @@
   "taking": "ክኒን መውሰድ",
   "estimatedEndPillNumber": "በቀድሞው ክኒን ሰሌዳ ላይ የመጨረሻው ክኒን፦ ቁጥር {estimatedEndPillNumber}",
   "addPillSheetButton": "ክኒን ሉህ ያክሉ",
-  "taken": "ወሰድኩ",
+  "taken": "ክኒን ተወስዷል",
   "notTaken": "አልወሰደም",
   "pillSheetSettings": "የክኒን ሉህ ቅንብር",
   "unmarkTodayPillAsTakenToPause": "ዛሬ የሚወሰደውን ክኒን ያልተወሰደ ከማድረግ በኋላ",

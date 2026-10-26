@@ -119,7 +119,7 @@
   "taking": "مصرف قرص",
   "estimatedEndPillNumber": "آخرین قرص بستهٔ قبلی: شمارهٔ {estimatedEndPillNumber}",
   "addPillSheetButton": "افزودن ورق قرص",
-  "taken": "خورده",
+  "taken": "قرص مصرف شده",
   "notTaken": "نخورده",
   "pillSheetSettings": "تنظیمات ورق قرص",
   "unmarkTodayPillAsTakenToPause": "پس از تغییر وضعیت قرص امروز به مصرف نشده",

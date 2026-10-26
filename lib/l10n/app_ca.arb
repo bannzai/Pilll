@@ -119,7 +119,7 @@
   "taking": "Presa de la píndola",
   "estimatedEndPillNumber": "Última píndola del blíster anterior: núm. {estimatedEndPillNumber}",
   "addPillSheetButton": "Afegeix un blíster",
-  "taken": "Presa",
+  "taken": "Píndola presa",
   "notTaken": "No presa",
   "pillSheetSettings": "Configuració del blíster",
   "unmarkTodayPillAsTakenToPause": "Després de marcar la píldola d'avui com a no presa",

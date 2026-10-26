@@ -119,7 +119,7 @@
   "taking": "Таблетка ичүү",
   "estimatedEndPillNumber": "Мурунку блистердеги акыркы таблетка: № {estimatedEndPillNumber}",
   "addPillSheetButton": "таблетка блистери кошуу",
-  "taken": "ичкен",
+  "taken": "Таблетка ичилди",
   "notTaken": "ичкен жок",
   "pillSheetSettings": "Таблетка барагын орнотуулары",
   "unmarkTodayPillAsTakenToPause": "Бүгүнкү пиллди ичилбеген абалга келтиргенден кийин",

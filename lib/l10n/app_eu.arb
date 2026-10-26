@@ -119,7 +119,7 @@
   "taking": "Pilula hartzea",
   "estimatedEndPillNumber": "Aurreko blisterreko azken pilula: {estimatedEndPillNumber}. zenbakia",
   "addPillSheetButton": "Gehitu pilula-blister",
-  "taken": "Edana",
+  "taken": "Pilula hartuta",
   "notTaken": "Hartu gabe",
   "pillSheetSettings": "Pilula-orriaren konfigurazioa",
   "unmarkTodayPillAsTakenToPause": "Gaurko pilula hartu gabe markatu eta gero",

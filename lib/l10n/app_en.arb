@@ -119,7 +119,7 @@
   "taking": "Taking a pill",
   "estimatedEndPillNumber": "Last pill on the previous sheet: No. {estimatedEndPillNumber}",
   "addPillSheetButton": "Add pill pack",
-  "taken": "Taken",
+  "taken": "Pill taken",
   "notTaken": "Not taken",
   "pillSheetSettings": "Pill Sheet Settings",
   "unmarkTodayPillAsTakenToPause": "After marking today's pill as not taken",

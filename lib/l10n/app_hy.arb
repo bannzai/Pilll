@@ -119,7 +119,7 @@
   "taking": "Հաբի ընդունում",
   "estimatedEndPillNumber": "Նախորդ բլիստերի վերջին հաբը՝ № {estimatedEndPillNumber}",
   "addPillSheetButton": "Ավելացնել հաբերի բլիստեր",
-  "taken": "խմեց",
+  "taken": "Հաբը ընդունված է",
   "notTaken": "չընդունված",
   "pillSheetSettings": "Հապերի թերթի կարգավորումներ",
   "unmarkTodayPillAsTakenToPause": "Այսօրվա հաբը չառնված նշելուց հետո",

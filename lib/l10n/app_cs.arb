@@ -119,7 +119,7 @@
   "taking": "Užívání pilulky",
   "estimatedEndPillNumber": "Poslední pilulka na předchozím blistru: č. {estimatedEndPillNumber}",
   "addPillSheetButton": "Přidat blistr",
-  "taken": "Vzato",
+  "taken": "Tableta užita",
   "notTaken": "Nevzato",
   "pillSheetSettings": "Nastavení balení pilulek",
   "unmarkTodayPillAsTakenToPause": "Označte dnešní pilulku jako nevzatou",

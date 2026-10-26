@@ -119,7 +119,7 @@
   "taking": "चक्की सेवन",
   "estimatedEndPillNumber": "अघिल्लो पाताको अन्तिम चक्की: नम्बर {estimatedEndPillNumber}",
   "addPillSheetButton": "चक्की पत्ता थप्नुहोस्",
-  "taken": "लिएको",
+  "taken": "चक्की खाइसकिएको छ",
   "notTaken": "लिएको छैन",
   "pillSheetSettings": "पिल शिटको सेटिङ",
   "unmarkTodayPillAsTakenToPause": "आजको चक्की नखाएको बनाएपछि",

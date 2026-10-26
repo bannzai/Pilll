@@ -119,7 +119,7 @@
   "taking": "ການກິນຢາເມັດ",
   "estimatedEndPillNumber": "ຢາເມັດສຸດທ້າຍໃນແຜງກ່ອນ: ເລກ {estimatedEndPillNumber}",
   "addPillSheetButton": "ເພີ່ມແຜງຢາຄຸມ",
-  "taken": "ກິນແລ້ວ",
+  "taken": "ກິນຢາເມັດແລ້ວ",
   "notTaken": "ບໍ່ກິນ",
   "pillSheetSettings": "ການຕັ້ງຄ່າແຜ່ນເມັດຢາ",
   "unmarkTodayPillAsTakenToPause": "ເຮັດໃຫ້ຢາມື້ນີ້ເປັນສະຖານະບໍ່ໄດ້ກິນກ່ອນ",

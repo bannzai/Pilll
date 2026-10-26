@@ -119,7 +119,7 @@
   "taking": "Ta p-pille",
   "estimatedEndPillNumber": "Siste p-pille på forrige brett: nr. {estimatedEndPillNumber}",
   "addPillSheetButton": "Legg til pillebrett",
-  "taken": "Tatt",
+  "taken": "P-pille tatt",
   "notTaken": "Ikke tatt",
   "pillSheetSettings": "P-pille ark innstillinger",
   "unmarkTodayPillAsTakenToPause": "Etter å ha merket dagens pille som ikke tatt",

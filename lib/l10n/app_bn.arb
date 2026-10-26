@@ -119,7 +119,7 @@
   "taking": "পিল খাওয়া",
   "estimatedEndPillNumber": "আগের পিলের পাতার শেষ পিল: নম্বর {estimatedEndPillNumber}",
   "addPillSheetButton": "পিল শিট যোগ করুন",
-  "taken": "খেয়েছে",
+  "taken": "পিল খাওয়া হয়েছে",
   "notTaken": "খাইনি",
   "pillSheetSettings": "পিল শিটের সেটিংস",
   "unmarkTodayPillAsTakenToPause": "আজকের পিল না খাওয়া হিসেবে সেট করার পর",

@@ -119,7 +119,7 @@
   "taking": "Marrja e pilulës",
   "estimatedEndPillNumber": "Pilula e fundit në blisterin e mëparshëm: nr. {estimatedEndPillNumber}",
   "addPillSheetButton": "Shtoni blister",
-  "taken": "Marrë",
+  "taken": "Pilula është marrë",
   "notTaken": "E pamarrë",
   "pillSheetSettings": "Cilësimet e bletores së pilulës",
   "unmarkTodayPillAsTakenToPause": "Pasi ta shënoni pilulën e sotme si të pamarrur",

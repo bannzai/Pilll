@@ -119,7 +119,7 @@
   "taking": "การทานยา",
   "estimatedEndPillNumber": "เม็ดสุดท้ายของแผงก่อนหน้า: หมายเลข {estimatedEndPillNumber}",
   "addPillSheetButton": "เพิ่มแผงยา",
-  "taken": "กินแล้ว",
+  "taken": "ทานยาแล้ว",
   "notTaken": "ยังไม่ได้กิน",
   "pillSheetSettings": "การตั้งค่าแผงยาคุม",
   "unmarkTodayPillAsTakenToPause": "หลังจากเปลี่ยนยาคุมวันนี้เป็นยังไม่ได้รับประทานแล้ว",

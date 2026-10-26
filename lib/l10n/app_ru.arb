@@ -119,7 +119,7 @@
   "taking": "Приём таблетки",
   "estimatedEndPillNumber": "Последняя таблетка в предыдущем блистере: № {estimatedEndPillNumber}",
   "addPillSheetButton": "Добавить блистер",
-  "taken": "Принята",
+  "taken": "Таблетка принята",
   "notTaken": "Не принято",
   "pillSheetSettings": "Настройки блистера",
   "unmarkTodayPillAsTakenToPause": "Отметив сегодняшнюю таблетку как не принятую",

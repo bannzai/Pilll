@@ -119,7 +119,7 @@
   "taking": "ဆေးလုံးသောက်ခြင်း",
   "estimatedEndPillNumber": "ယခင်ဆေးကတ်ရှိ နောက်ဆုံးဆေးလုံး: အမှတ် {estimatedEndPillNumber}",
   "addPillSheetButton": "ဆေးပြားကတ် ထည့်ပါ",
-  "taken": "သောက်ပြီး",
+  "taken": "ဆေးပြား သောက်ပြီးပါပြီ",
   "notTaken": "မသောက်ဘူး",
   "pillSheetSettings": "ဆေးတောင့်ပြား ဆက်တင်",
   "unmarkTodayPillAsTakenToPause": "ယနေ့သောက်ရမည့်ဆေးတောင့်ကို မသောက်ရသေးအဖြစ်သတ်မှတ်ပြီးမှ",

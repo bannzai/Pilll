@@ -119,7 +119,7 @@
   "taking": "Inntaka pillunnar",
   "estimatedEndPillNumber": "Síðasta pillan á fyrra spjaldi: nr. {estimatedEndPillNumber}",
   "addPillSheetButton": "Bæta við pilluspjald",
-  "taken": "Tekið",
+  "taken": "Pilla tekin",
   "notTaken": "Ekki tekið",
   "pillSheetSettings": "Píllublaðsstillingar",
   "unmarkTodayPillAsTakenToPause": "Merktu fyrst pilluna í dag sem ótekna",

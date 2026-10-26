@@ -119,7 +119,7 @@
   "taking": "පෙත්ත ගැනීම",
   "estimatedEndPillNumber": "පෙර පෙත්ත පත්‍රයේ අවසන් පෙත්ත: අංක {estimatedEndPillNumber}",
   "addPillSheetButton": "පෙති කාඩ්පත එක් කරන්න",
-  "taken": "ගත්තා",
+  "taken": "පෙත්ත ගෙන ඇත",
   "notTaken": "ගත්තේ නෑ",
   "pillSheetSettings": "ගෝලි පත්‍රයේ සැකසුම්",
   "unmarkTodayPillAsTakenToPause": "අද ගත යුතු පෙති නොගත් ලෙස ලකුණු කළ පසු",

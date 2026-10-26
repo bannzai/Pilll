@@ -119,7 +119,7 @@
   "taking": "Pil innemen",
   "estimatedEndPillNumber": "Laatste pil op de vorige strip: nr. {estimatedEndPillNumber}",
   "addPillSheetButton": "Pillenstrip toevoegen",
-  "taken": "genomen",
+  "taken": "Pil ingenomen",
   "notTaken": "Niet genomen",
   "pillSheetSettings": "Pilstrip-instellingen",
   "unmarkTodayPillAsTakenToPause": "Nadat je de pil van vandaag als niet-ingenomen hebt gemarkeerd",

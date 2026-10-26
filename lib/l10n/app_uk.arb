@@ -119,7 +119,7 @@
   "taking": "Прийом пігулки",
   "estimatedEndPillNumber": "Остання пігулка в попередньому блістері: № {estimatedEndPillNumber}",
   "addPillSheetButton": "Додати блістер",
-  "taken": "Прийнято",
+  "taken": "Пігулку прийнято",
   "notTaken": "Не прийнято",
   "pillSheetSettings": "Налаштування блістера таблеток",
   "unmarkTodayPillAsTakenToPause": "Після позначення сьогоднішньої таблетки як неприйнятої",
