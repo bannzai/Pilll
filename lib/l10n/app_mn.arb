@@ -433,7 +433,7 @@
   "deleteAccount": "Бүртгэл устгах",
   "logoutCompleted": "Та бүртгэлээсээ гарсан байна",
   "specialDiscountPriceNow": "Премиум багцыг тусгай үнээр аваарай!",
-  "inquiryTypeLabel": "Хандалтын төрөл",
+  "inquiryTypeLabel": "Лавлагааны төрөл",
   "bugReport": "Согог мэдээлэх",
   "featureRequest": "Санал, хүсэлт",
   "otherInquiry": "Бусад",

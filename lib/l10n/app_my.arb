@@ -433,7 +433,7 @@
   "deleteAccount": "အကောင့်ဖျက်ရန်",
   "logoutCompleted": "အကောင့်မှ ထွက်ပြီးပါပြီ",
   "specialDiscountPriceNow": "ပရီမီယံ အစီအစဉ်ကို အထူးဈေးနှုန်းဖြင့် ရယူလိုက်ပါ!",
-  "inquiryTypeLabel": "စုံစမ်းမေးမြန်းမှုအမျိုးအစား",
+  "inquiryTypeLabel": "မေးမြန်းမှုအမျိုးအစား",
   "bugReport": "ချို့ယွင်းချက်တင်ပြခြင်း",
   "featureRequest": "အကြံပြုချက်နှင့် တောင်းဆိုချက်များ",
   "otherInquiry": "အခြား",

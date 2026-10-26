@@ -433,7 +433,7 @@
   "deleteAccount": "Radera konto",
   "logoutCompleted": "Du är utloggad",
   "specialDiscountPriceNow": "Få premiumplanen till specialpris!",
-  "inquiryTypeLabel": "Ärendekategori",
+  "inquiryTypeLabel": "Typ av fråga",
   "bugReport": "Buggrapport",
   "featureRequest": "Synpunkter och önskemål",
   "otherInquiry": "Övrigt",

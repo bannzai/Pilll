@@ -433,7 +433,7 @@
   "deleteAccount": "Есептік жазбаны жою",
   "logoutCompleted": "Сіз есептік жазбаңыздан шықтыңыз",
   "specialDiscountPriceNow": "Премиум жоспарды арнайы бағамен алыңыз!",
-  "inquiryTypeLabel": "Өтініш түрі",
+  "inquiryTypeLabel": "Сұрау түрі",
   "bugReport": "Ақаулық туралы хабарлау",
   "featureRequest": "Пікірлер мен ұсыныстар",
   "otherInquiry": "Басқа",

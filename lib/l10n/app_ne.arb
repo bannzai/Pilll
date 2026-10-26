@@ -433,7 +433,7 @@
   "deleteAccount": "खाता मेटाउनुहोस्",
   "logoutCompleted": "तपाईं खाताबाट बाहिरिनुभएको छ",
   "specialDiscountPriceNow": "प्रिमियम योजना विशेष मूल्यमा लिनुहोस्!",
-  "inquiryTypeLabel": "सोधपुछ विषय",
+  "inquiryTypeLabel": "सोधपुछको प्रकार",
   "bugReport": "बग रिपोर्ट",
   "featureRequest": "राय र सुझाव",
   "otherInquiry": "अन्य",

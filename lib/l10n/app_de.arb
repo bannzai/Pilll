@@ -433,7 +433,7 @@
   "deleteAccount": "Konto löschen",
   "logoutCompleted": "Du bist abgemeldet",
   "specialDiscountPriceNow": "Hol dir den Premium-Plan zum Sonderpreis!",
-  "inquiryTypeLabel": "Kategorie",
+  "inquiryTypeLabel": "Art der Anfrage",
   "bugReport": "Fehlerbericht",
   "featureRequest": "Feedback und Vorschläge",
   "otherInquiry": "Sonstiges",

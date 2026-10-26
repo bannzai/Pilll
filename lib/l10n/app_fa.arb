@@ -433,7 +433,7 @@
   "deleteAccount": "حذف حساب کاربری",
   "logoutCompleted": "از حساب خود خارج شدید",
   "specialDiscountPriceNow": "طرح پریمیوم را با قیمت ویژه دریافت کنید!",
-  "inquiryTypeLabel": "موضوع تماس",
+  "inquiryTypeLabel": "نوع پرسش",
   "bugReport": "گزارش اشکال",
   "featureRequest": "نظرات و پیشنهادات",
   "otherInquiry": "سایر",

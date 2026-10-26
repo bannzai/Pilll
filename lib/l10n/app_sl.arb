@@ -433,7 +433,7 @@
   "deleteAccount": "Izbriši račun",
   "logoutCompleted": "Odjava je uspešna",
   "specialDiscountPriceNow": "Pridobite paket Premium po posebni ceni!",
-  "inquiryTypeLabel": "Kategorija poizvedbe",
+  "inquiryTypeLabel": "Vrsta vprašanja",
   "bugReport": "Prijava napake",
   "featureRequest": "Mnenja in predlogi",
   "otherInquiry": "Drugo",

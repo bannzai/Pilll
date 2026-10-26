@@ -433,7 +433,7 @@
   "deleteAccount": "Slet konto",
   "logoutCompleted": "Du er logget ud",
   "specialDiscountPriceNow": "Få Premium-planen til en særlig pris!",
-  "inquiryTypeLabel": "Henvendelsesemne",
+  "inquiryTypeLabel": "Type henvendelse",
   "bugReport": "Fejlrapport",
   "featureRequest": "Feedback og forslag",
   "otherInquiry": "Andet",

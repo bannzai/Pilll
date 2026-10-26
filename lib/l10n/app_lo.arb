@@ -433,7 +433,7 @@
   "deleteAccount": "ລຶບບັນຊີ",
   "logoutCompleted": "ທ່ານໄດ້ອອກຈາກບັນຊີແລ້ວ",
   "specialDiscountPriceNow": "ຮັບແພັກເກດ Premium ໃນລາຄາພິເສດ!",
-  "inquiryTypeLabel": "ປະເພດການສອບຖາມ",
+  "inquiryTypeLabel": "ປະເພດຄຳຖາມ",
   "bugReport": "ລາຍງານບັນຫາ",
   "featureRequest": "ຄຳຄິດເຫັນ ແລະ ຄຳແນະນຳ",
   "otherInquiry": "ອື່ນໆ",
