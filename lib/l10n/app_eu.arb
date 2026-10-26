@@ -147,7 +147,7 @@
   "withDay": "{word}. eguna",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}. eguna",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} aldia {diffPlusOne} egun barru hasiko da",
-  "remainingDaysAllFeatures": "Oraindik {diff} egun funtzio guztiak erabilgarri dituzu",
+  "remainingDaysAllFeatures": "Funtzio guztiak beste {diff} egunez erabil ditzakezu",
   "todayIsTaking": "💊 Gaur hartzeko",
   "todayPillToTake": "💊 Gaurko pilula",
   "number": "a",

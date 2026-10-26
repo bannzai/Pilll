@@ -147,7 +147,7 @@
   "withDay": "Dan {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}. dan",
   "daysUntilPausePeriod": "Period {activePillSheetPillSheetTypeNotTakenWord} počinje za {diffPlusOne} dana",
-  "remainingDaysAllFeatures": "Još {diff} dana možete koristiti sve funkcije",
+  "remainingDaysAllFeatures": "Sve funkcije možete koristiti još {diff} dana",
   "todayIsTaking": "💊 Danas uzimanje",
   "todayPillToTake": "💊 Današnja pilula",
   "number": "br.",

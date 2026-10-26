@@ -147,7 +147,7 @@
   "withDay": "Araw {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · ika-{restDurationDays} araw",
   "daysUntilPausePeriod": "Magsisimula ang panahon ng {activePillSheetPillSheetTypeNotTakenWord} sa loob ng {diffPlusOne} araw",
-  "remainingDaysAllFeatures": "Pwedeng gamitin mo pa ang lahat ng features sa loob ng {diff} araw",
+  "remainingDaysAllFeatures": "Magagamit ninyo ang lahat ng feature sa loob pa ng {diff} araw",
   "todayIsTaking": "💊 Inom ngayon",
   "todayPillToTake": "💊 Mga pildoras ngayong araw",
   "number": "bilang",

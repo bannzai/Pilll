@@ -147,7 +147,7 @@
   "withDay": "{word}. deň",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}. deň",
   "daysUntilPausePeriod": "Obdobie {activePillSheetPillSheetTypeNotTakenWord} sa začne o {diffPlusOne} dní",
-  "remainingDaysAllFeatures": "Zostáva vám {diff} dní na používanie všetkých funkcií",
+  "remainingDaysAllFeatures": "Všetky funkcie môžete využívať ešte {diff} dní",
   "todayIsTaking": "💊 Dnes užívanie",
   "todayPillToTake": "💊 Dnešná pilulka",
   "number": ".",

@@ -147,7 +147,7 @@
   "withDay": "ਦਿਨ {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}ਵਾਂ ਦਿਨ",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} ਦੀ ਮਿਆਦ ਸ਼ੁਰੂ ਹੋਣ ਵਿੱਚ {diffPlusOne} ਦਿਨ ਬਾਕੀ ਹਨ",
-  "remainingDaysAllFeatures": "ਤੁਸੀਂ ਬਾਕੀ {diff} ਦਿਨਾਂ ਤੱਕ ਸਾਰੇ ਫੀਚਰ ਵਰਤ ਸਕਦੇ ਹੋ",
+  "remainingDaysAllFeatures": "ਤੁਸੀਂ ਹੋਰ {diff} ਦਿਨਾਂ ਲਈ ਸਾਰੀਆਂ ਸਹੂਲਤਾਂ ਵਰਤ ਸਕਦੇ ਹੋ",
   "todayIsTaking": "💊 ਅੱਜ ਸੇਵਨ",
   "todayPillToTake": "💊 ਅੱਜ ਦੀਆਂ ਗੋਲੀਆਂ",
   "number": "ਵਾਂ",

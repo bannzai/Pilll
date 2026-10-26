@@ -147,7 +147,7 @@
   "withDay": "Dag {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · dag {restDurationDays}",
   "daysUntilPausePeriod": "Perioden med {activePillSheetPillSheetTypeNotTakenWord} begynder om {diffPlusOne} dage",
-  "remainingDaysAllFeatures": "Alle funktioner tilgængelige i {diff} dage tilbage",
+  "remainingDaysAllFeatures": "Du kan bruge alle funktioner i {diff} dage mere",
   "todayIsTaking": "💊 Tag i dag",
   "todayPillToTake": "💊 Dagens pille",
   "number": "Nr.",

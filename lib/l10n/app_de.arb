@@ -147,7 +147,7 @@
   "withDay": "Tag {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · Tag {restDurationDays}",
   "daysUntilPausePeriod": "Die Phase mit {activePillSheetPillSheetTypeNotTakenWord} beginnt in {diffPlusOne} Tagen",
-  "remainingDaysAllFeatures": "Sie können noch {diff} Tage alle Funktionen nutzen",
+  "remainingDaysAllFeatures": "Du kannst alle Funktionen noch {diff} Tage nutzen",
   "todayIsTaking": "💊 Heute Einnahme",
   "todayPillToTake": "💊 Heutige Pille",
   "number": ".",

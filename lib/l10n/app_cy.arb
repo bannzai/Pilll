@@ -147,7 +147,7 @@
   "withDay": "Diwrnod {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · diwrnod {restDurationDays}",
   "daysUntilPausePeriod": "Bydd cyfnod {activePillSheetPillSheetTypeNotTakenWord} yn dechrau ymhen {diffPlusOne} diwrnod",
-  "remainingDaysAllFeatures": "Gallwch ddefnyddio pob swyddogaeth am {diff} diwrnod eto",
+  "remainingDaysAllFeatures": "Gallwch ddefnyddio pob nodwedd am {diff} diwrnod arall",
   "todayIsTaking": "💊 Cymryd heddiw",
   "todayPillToTake": "💊 Pilen heddiw",
   "number": "rhif",

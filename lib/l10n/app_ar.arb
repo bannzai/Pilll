@@ -147,7 +147,7 @@
   "withDay": "اليوم {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · اليوم {restDurationDays}",
   "daysUntilPausePeriod": "تبدأ فترة {activePillSheetPillSheetTypeNotTakenWord} بعد {diffPlusOne} أيام",
-  "remainingDaysAllFeatures": "يمكنك استخدام جميع الميزات للأيام الـ {diff} المتبقية",
+  "remainingDaysAllFeatures": "يمكنكِ استخدام جميع الميزات لمدة {diff} يومًا إضافيًا",
   "todayIsTaking": "💊 تناول اليوم",
   "todayPillToTake": "💊 حبوب اليوم",
   "number": "رقم",

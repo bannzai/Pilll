@@ -147,7 +147,7 @@
   "withDay": "ថ្ងៃទី {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · ថ្ងៃទី{restDurationDays}",
   "daysUntilPausePeriod": "រយៈពេល{activePillSheetPillSheetTypeNotTakenWord}នឹងចាប់ផ្តើមក្នុងរយៈពេល {diffPlusOne} ថ្ងៃទៀត",
-  "remainingDaysAllFeatures": "នៅសល់ {diff} ថ្ងៃទៀត អ្នកអាចប្រើមុខងារទាំងអស់បាន",
+  "remainingDaysAllFeatures": "អ្នកអាចប្រើមុខងារទាំងអស់បានរយៈពេល {diff} ថ្ងៃទៀត",
   "todayIsTaking": "💊 ថ្ងៃនេះទទួលទាន",
   "todayPillToTake": "💊 ថ្នាំថ្ងៃនេះ",
   "number": "ទី",

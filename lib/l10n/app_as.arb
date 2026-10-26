@@ -147,7 +147,7 @@
   "withDay": "দিন {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays} নম্বৰ দিন",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord}ৰ সময় আৰম্ভ হ’বলৈ আৰু {diffPlusOne} দিন বাকী",
-  "remainingDaysAllFeatures": "বাকী {diff} দিনৰ বাবে সকলো সুবিধা ব্যৱহাৰ কৰিব পাৰিব",
+  "remainingDaysAllFeatures": "আপুনি আৰু {diff} দিনলৈ সকলো সুবিধা ব্যৱহাৰ কৰিব পাৰিব",
   "todayIsTaking": "💊 আজি সেৱন",
   "todayPillToTake": "💊 আজৰ পিল",
   "number": "নং",

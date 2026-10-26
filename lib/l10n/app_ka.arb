@@ -147,7 +147,7 @@
   "withDay": "დღე {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}-ე დღე",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} პერიოდი {diffPlusOne} დღეში დაიწყება",
-  "remainingDaysAllFeatures": "კიდევ {diff} დღე ყველა ფუნქცია ხელმისაწვდომია",
+  "remainingDaysAllFeatures": "ყველა ფუნქციის გამოყენება კიდევ {diff} დღის განმავლობაში შეგიძლიათ",
   "todayIsTaking": "💊 დღეს მიღება",
   "todayPillToTake": "💊 დღეს მისაღები ჰაპი",
   "number": "ე",

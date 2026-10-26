@@ -147,7 +147,7 @@
   "withDay": "Dzień {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · dzień {restDurationDays}",
   "daysUntilPausePeriod": "Okres {activePillSheetPillSheetTypeNotTakenWord} zacznie się za {diffPlusOne} dni",
-  "remainingDaysAllFeatures": "Pozostało {diff} dni dostępu do wszystkich funkcji",
+  "remainingDaysAllFeatures": "Możesz korzystać ze wszystkich funkcji jeszcze przez {diff} dni",
   "todayIsTaking": "💊 Przyjmij dzisiaj",
   "todayPillToTake": "💊 Pigułka na dziś",
   "number": "nr",

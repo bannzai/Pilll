@@ -147,7 +147,7 @@
   "withDay": "יום {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · יום {restDurationDays}",
   "daysUntilPausePeriod": "תקופת {activePillSheetPillSheetTypeNotTakenWord} תתחיל בעוד {diffPlusOne} ימים",
-  "remainingDaysAllFeatures": "נותרו לך {diff} ימים לשימוש בכל התכונות",
+  "remainingDaysAllFeatures": "אפשר להשתמש בכל התכונות למשך {diff} ימים נוספים",
   "todayIsTaking": "💊 נטילה היום",
   "todayPillToTake": "💊 הגלולה להיום",
   "number": "\"\"",

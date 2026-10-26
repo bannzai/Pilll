@@ -147,7 +147,7 @@
   "withDay": "День {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · день {restDurationDays}",
   "daysUntilPausePeriod": "Период {activePillSheetPillSheetTypeNotTakenWord} начнётся через {diffPlusOne} дней",
-  "remainingDaysAllFeatures": "Все функции доступны еще {diff} дней",
+  "remainingDaysAllFeatures": "Вы можете пользоваться всеми функциями ещё {diff} дней",
   "todayIsTaking": "💊 Прием сегодня",
   "todayPillToTake": "💊 Таблетки на сегодня",
   "number": "№",

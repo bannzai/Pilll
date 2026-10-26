@@ -147,7 +147,7 @@
   "withDay": "Hari ke-{word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · hari ke-{restDurationDays}",
   "daysUntilPausePeriod": "Tempoh {activePillSheetPillSheetTypeNotTakenWord} bermula dalam {diffPlusOne} hari lagi",
-  "remainingDaysAllFeatures": "Tinggal {diff} hari lagi untuk menggunakan semua ciri",
+  "remainingDaysAllFeatures": "Anda boleh menggunakan semua ciri selama {diff} hari lagi",
   "todayIsTaking": "💊 Minum hari ini",
   "todayPillToTake": "💊 Pil hari ini",
   "number": "No.",

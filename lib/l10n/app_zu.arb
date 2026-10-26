@@ -147,7 +147,7 @@
   "withDay": "Usuku {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · usuku {restDurationDays}",
   "daysUntilPausePeriod": "Isikhathi se-{activePillSheetPillSheetTypeNotTakenWord} sizoqala ezinsukwini ezingu-{diffPlusOne}",
-  "remainingDaysAllFeatures": "Ungasebenzisa zonke izici ezinsukwini ezisele ezi-{diff}",
+  "remainingDaysAllFeatures": "Ungasebenzisa zonke izici ezinye izinsuku ezingu-{diff}",
   "todayIsTaking": "💊 Thatha namuhla",
   "todayPillToTake": "💊 Amaphilisi zanamuhla",
   "number": "inombolo",

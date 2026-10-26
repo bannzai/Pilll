@@ -147,7 +147,7 @@
   "withDay": "{word}-ാം ദിവസം",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}ാം ദിവസം",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} കാലയളവ് തുടങ്ങാൻ ഇനി {diffPlusOne} ദിവസം",
-  "remainingDaysAllFeatures": "ബാക്കി {diff} ദിവസത്തേക്ക് എല്ലാ സവിശേഷതകളും ഉപയോഗിക്കാം",
+  "remainingDaysAllFeatures": "എല്ലാ സൗകര്യങ്ങളും ഇനി {diff} ദിവസം കൂടി ഉപയോഗിക്കാം",
   "todayIsTaking": "💊 ഇന്ന് കഴിക്കുക",
   "todayPillToTake": "💊 ഇന്നത്തെ ഗുളിക",
   "number": "നമ്പർ",

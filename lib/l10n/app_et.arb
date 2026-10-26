@@ -147,7 +147,7 @@
   "withDay": "Päev {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}. päev",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} periood algab {diffPlusOne} päeva pärast",
-  "remainingDaysAllFeatures": "Veel {diff} päeva saab kasutada kõiki funktsioone",
+  "remainingDaysAllFeatures": "Saad kõiki funktsioone kasutada veel {diff} päeva",
   "todayIsTaking": "💊 Täna võtta",
   "todayPillToTake": "💊 Tänane pill",
   "number": ".",
