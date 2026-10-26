@@ -253,7 +253,7 @@
   "sex": "Սեռական հարաբերություն",
   "previousPillSheetGroup": "Հաբերի բլիստերների նախորդ խումբ",
   "noPreviousPillSheetGroup": "Հաբերի բլիստերների նախորդ խումբը դեռ չկա",
-  "failedToFetchPillHistory": "Չհաջողվեց բեռնել ընդունման պատմության տվյալները։ {error}",
+  "failedToFetchPillHistory": "Չհաջողվեց ստանալ «ընդունման պատմություն» բաժնի տվյալները։ {error}",
   "seeFAQ": "Դիտեք հաճախ տրվող հարցերը",
   "reloadScreen": "Կրկին բեռնել էկրանը",
   "contactIfNotResolved": "Եթե խնդիրը չի լուծվել, կապ հաստատեք աջակցության թիմի հետ",
