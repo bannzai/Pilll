@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 vaikuttavaa pilleriä + 4 lumepilleriä",
   "twentyOnePlusSevenPlacebo": "21 vaikuttavaa pilleriä + 7 lumepilleriä",
   "allActivePills": "Kaikki ovat hormonipillereitä",
-  "twentyFourPlusFourDaysBreak": "24 tablettia + 4 plasebo",
+  "twentyFourPlusFourDaysBreak": "24 pilleriä + 4 taukojakson pilleriä",
   "choosePillType": "Valitse pillerin tyyppi",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord}-jakson ilmoitus",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kun ilmoitukset ovat pois päältä, myös {pillSheetPillSheetTypeNotTakenWord}-jakson ottamiskirjaukset luodaan automaattisesti",

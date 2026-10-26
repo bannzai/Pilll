@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 सक्रिय गोळ्या + 4 प्लेसिबो गोळ्या",
   "twentyOnePlusSevenPlacebo": "सक्रिय घटक असलेल्या 21 गोळ्या + 7 प्लेसिबो गोळ्या",
   "allActivePills": "सर्व गोळ्या संप्रेरकयुक्त आहेत",
-  "twentyFourPlusFourDaysBreak": "24 गोळ्या + 4 दिवस विश्रांती",
+  "twentyFourPlusFourDaysBreak": "24 गोळ्या + विरामासाठी 4 गोळ्या",
   "choosePillType": "गोळीचा प्रकार निवडा",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} कालावधीची सूचना",
   "autoRecordForNotTakenPeriodIfNotificationOff": "सूचना बंद असल्यास, {pillSheetPillSheetTypeNotTakenWord} कालावधीतील औषध सेवनाचे रेकॉर्ड देखील आपोआप जोडले जातात",

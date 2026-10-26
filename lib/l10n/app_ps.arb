@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 فعالې ګولۍ + 4 پلاسیبو ګولۍ",
   "twentyOnePlusSevenPlacebo": "21 فعالې ګولۍ + 7 پلاسیبو ګولۍ",
   "allActivePills": "ټولې هورمون لرونکې ګولۍ دي",
-  "twentyFourPlusFourDaysBreak": "24 ګولۍ + 4 ورځې وقفه",
+  "twentyFourPlusFourDaysBreak": "24 ګولۍ + د وقف لپاره 4 ګولۍ",
   "choosePillType": "د ګولیو ډول وټاکئ",
   "notificationForNotTakenPeriod": "د {pillSheetPillSheetTypeNotTakenWord} دورې خبرتیا",
   "autoRecordForNotTakenPeriodIfNotificationOff": "د خبرتیاوو د بندولو په صورت کې، د {pillSheetPillSheetTypeNotTakenWord} مودې د واخیستلو ریکارډ هم په اتوماتیک ډول ثبتیږي",

@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 белсенді таблетка + 4 плацебо таблетка",
   "twentyOnePlusSevenPlacebo": "21 белсенді заты бар таблетка + 7 плацебо таблетка",
   "allActivePills": "Барлығы белсенді таблетка",
-  "twentyFourPlusFourDaysBreak": "24 таблетка + 4 күн үзіліс",
+  "twentyFourPlusFourDaysBreak": "24 таблетка + үзіліске арналған 4 таблетка",
   "choosePillType": "Таблетка түрін таңдау",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} кезеңі туралы хабарландыру",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Хабарландыру өшірулген жағдайда, {pillSheetPillSheetTypeNotTakenWord} кезеңінің қабылдау жазбалары да автоматты түрде қосылады",

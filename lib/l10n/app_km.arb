@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "គ្រាប់ថ្នាំមានសារធាតុសកម្ម 24 គ្រាប់ + គ្រាប់ប្លាសេបូ 4 គ្រាប់",
   "twentyOnePlusSevenPlacebo": "គ្រាប់ថ្នាំមានសារធាតុសកម្ម 21 គ្រាប់ + គ្រាប់ប្លាសេបូ 7 គ្រាប់",
   "allActivePills": "ទាំងអស់ជាថ្នាំគ្រាប់មានអ័រម៉ូន",
-  "twentyFourPlusFourDaysBreak": "២៤គ្រាប់ថ្នាំ + ៤ថ្ងៃឈប់ថ្នាំ",
+  "twentyFourPlusFourDaysBreak": "ថ្នាំ 24 គ្រាប់ + ថ្នាំ 4 គ្រាប់សម្រាប់ផ្អាកលេបថ្នាំ",
   "choosePillType": "ជ្រើសរើសប្រភេទថ្នាំកុំកំណើត",
   "notificationForNotTakenPeriod": "ការជូនដំណឹងរយៈពេល{pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "ប្រសិនបើការជូនដំណឹងត្រូវបានបិទ កំណត់ត្រាការទទួលទានថ្នាំសម្រាប់អំឡុងពេល{pillSheetPillSheetTypeNotTakenWord}ក៏នឹងត្រូវបានបន្ថែមដោយស្វ័យប្រវត្តិដែរ",

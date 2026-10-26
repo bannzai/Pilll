@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 үйлчлэгч бодистой шахмал + 4 плацебо шахмал",
   "twentyOnePlusSevenPlacebo": "Үйлчлэгч бодистой 21 шахмал + 7 плацебо шахмал",
   "allActivePills": "Бүгд даавартай эм",
-  "twentyFourPlusFourDaysBreak": "24 шахмал + 4 хоног амралт",
+  "twentyFourPlusFourDaysBreak": "24 шахмал + завсарлагааны 4 шахмал",
   "choosePillType": "Эмийн төрөл сонгох",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} хугацааны мэдэгдэл",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Мэдэгдэл унтраасан байсан ч {pillSheetPillSheetTypeNotTakenWord} хугацааны уулгын бүртгэл автоматаар нэмэгдэнэ",

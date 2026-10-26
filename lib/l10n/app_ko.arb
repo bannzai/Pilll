@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "유효 성분이 든 알약 24정 + 위약 4정",
   "twentyOnePlusSevenPlacebo": "유효 성분이 있는 알약 21정 + 위약 7정",
   "allActivePills": "모두 활성 알약이에요",
-  "twentyFourPlusFourDaysBreak": "24정 + 4일 휴약",
+  "twentyFourPlusFourDaysBreak": "24정 + 휴약 4정",
   "choosePillType": "피임약 종류 선택",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} 기간 알림",
   "autoRecordForNotTakenPeriodIfNotificationOff": "알림이 꺼진 경우에도 {pillSheetPillSheetTypeNotTakenWord} 기간의 복용 기록이 자동으로 등록됩니다",

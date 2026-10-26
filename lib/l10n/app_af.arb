@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 aktiewe pille + 4 placebopille",
   "twentyOnePlusSevenPlacebo": "21 aktiewe pille + 7 placebopille",
   "allActivePills": "Alle pille is aktiewe pille",
-  "twentyFourPlusFourDaysBreak": "24 pille + 4 pillvrye",
+  "twentyFourPlusFourDaysBreak": "24 pille + 4 pille pouse",
   "choosePillType": "Kies pil tipe",
   "notificationForNotTakenPeriod": "Kennisgewing vir {pillSheetPillSheetTypeNotTakenWord}-periode",
   "autoRecordForNotTakenPeriodIfNotificationOff": "As kennisgewings afgeskakel is, sal inname-opnames vir die {pillSheetPillSheetTypeNotTakenWord}-periode ook outomaties aangeteken word.",

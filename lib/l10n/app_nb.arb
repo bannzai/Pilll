@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 aktive p-piller + 4 placebopiller",
   "twentyOnePlusSevenPlacebo": "21 aktive p-piller + 7 placebopiller",
   "allActivePills": "Alle er hormonpiller",
-  "twentyFourPlusFourDaysBreak": "24 tabletter + 4 dagers pause",
+  "twentyFourPlusFourDaysBreak": "24 p-piller + 4 p-piller til pillepause",
   "choosePillType": "Velg pilletype",
   "notificationForNotTakenPeriod": "Varsel for {pillSheetPillSheetTypeNotTakenWord}-periode",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Med varsler avslått registreres inntak i {pillSheetPillSheetTypeNotTakenWord}-perioden også automatisk",

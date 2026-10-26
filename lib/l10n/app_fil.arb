@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 na aktibong pill + 4 na placebo pill",
   "twentyOnePlusSevenPlacebo": "21 pildoras na may aktibong sangkap + 7 placebo na pildoras",
   "allActivePills": "Lahat ay aktibong pildoras",
-  "twentyFourPlusFourDaysBreak": "24 tableta + 4 placebo",
+  "twentyFourPlusFourDaysBreak": "24 na tableta + 4 na tableta para sa pahinga",
   "choosePillType": "Piliin ang uri ng pill",
   "notificationForNotTakenPeriod": "Paunawa ng {pillSheetPillSheetTypeNotTakenWord} na yugto",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kapag naka-off ang notification, awtomatikong maitatatala din ang medication record sa {pillSheetPillSheetTypeNotTakenWord} na panahon",

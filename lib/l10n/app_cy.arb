@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 pilsen weithredol + 4 pilsen plasebo",
   "twentyOnePlusSevenPlacebo": "21 o bils gweithredol + 7 o bils plasebo",
   "allActivePills": "Mae pob pilsen yn weithredol",
-  "twentyFourPlusFourDaysBreak": "24 pil + 4 diwrnod saib",
+  "twentyFourPlusFourDaysBreak": "24 pilsen + 4 pilsen seibiant",
   "choosePillType": "Dewis math y bil",
   "notificationForNotTakenPeriod": "Hysbysiad cyfnod {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Os yw hysbysiadau wedi'u diffodd, bydd cofnodion cymryd ar gyfer cyfnod {pillSheetPillSheetTypeNotTakenWord} yn cael eu creu'n awtomatig hefyd",

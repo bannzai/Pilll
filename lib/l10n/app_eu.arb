@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 pilula aktibo + 4 plazebo pilula",
   "twentyOnePlusSevenPlacebo": "21 pilula aktibo + 7 plazebo pilula",
   "allActivePills": "Guztiak pilula aktiboak dira",
-  "twentyFourPlusFourDaysBreak": "24 pastila + 4 atsedenaldi",
+  "twentyFourPlusFourDaysBreak": "24 pilula + 4 atsedenaldiko pilula",
   "choosePillType": "Pilula mota hautatu",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} aldiaren jakinarazpena",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Jakinarazpenak desaktibatuta daudenean, {pillSheetPillSheetTypeNotTakenWord} aldiko hartzeko erregistroak ere automatikoki gehituko dira",

@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 ಸಕ್ರಿಯ ಮಾತ್ರೆಗಳು + 4 ಪ್ಲಸೀಬೋ ಮಾತ್ರೆಗಳು",
   "twentyOnePlusSevenPlacebo": "21 ಸಕ್ರಿಯ ಅಂಶವಿರುವ ಮಾತ್ರೆಗಳು + 7 ಪ್ಲಸೀಬೋ ಮಾತ್ರೆಗಳು",
   "allActivePills": "ಎಲ್ಲವೂ ಹಾರ್ಮೋನ್ ಇರುವ ಮಾತ್ರೆಗಳು",
-  "twentyFourPlusFourDaysBreak": "24 ಮಾತ್ರೆಗಳು + 4 ದಿನಗಳ ವಿರಾಮ",
+  "twentyFourPlusFourDaysBreak": "24 ಮಾತ್ರೆಗಳು + ವಿರಾಮದ 4 ಮಾತ್ರೆಗಳು",
   "choosePillType": "ಮಾತ್ರೆಯ ವಿಧವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} ಅವಧಿಯ ಅಧಿಸೂಚನೆ",
   "autoRecordForNotTakenPeriodIfNotificationOff": "ಅಧಿಸೂಚನೆ ಆಫ್ ಆಗಿರುವ ಸಂದರ್ಭದಲ್ಲಿ, {pillSheetPillSheetTypeNotTakenWord} ಅವಧಿಯ ಸೇವನೆಯ ದಾಖಲೆಯನ್ನು ಸಹ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸೇರಿಸಲಾಗುತ್ತದೆ",

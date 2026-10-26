@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 aktiva p-piller + 4 placebopiller",
   "twentyOnePlusSevenPlacebo": "21 aktiva p-piller + 7 placebopiller",
   "allActivePills": "Alla är aktiva tabletter",
-  "twentyFourPlusFourDaysBreak": "24 tabletter + 4 dagars paus",
+  "twentyFourPlusFourDaysBreak": "24 piller + 4 piller för uppehåll",
   "choosePillType": "Välj p-pillertyp",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord}periodens avisering",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Om notifikationer är avstängda läggs intagsregistrering för {pillSheetPillSheetTypeNotTakenWord}perioden också till automatiskt",

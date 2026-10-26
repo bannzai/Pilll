@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 veikliosios tabletės + 4 placeb tabletės",
   "twentyOnePlusSevenPlacebo": "21 veiklioji tabletė + 7 placeb tabletės",
   "allActivePills": "Visos yra hormoninės tabletės",
-  "twentyFourPlusFourDaysBreak": "24 tabletės + 4 dienų pertrauka",
+  "twentyFourPlusFourDaysBreak": "24 tabletės + 4 pertraukos tabletės",
   "choosePillType": "Pasirinkite tablečių tipą",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} laikotarpio pranešimas",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kai pranešimai išjungti, {pillSheetPillSheetTypeNotTakenWord} laikotarpio vartojimo įrašai taip pat automatiškai užregistruojami",

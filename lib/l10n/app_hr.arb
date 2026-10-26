@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 aktivne pilule + 4 placeb pilule",
   "twentyOnePlusSevenPlacebo": "21 aktivna pilula + 7 pilula placeba",
   "allActivePills": "Sve pilule su aktivne",
-  "twentyFourPlusFourDaysBreak": "24 tablete + 4 dana pauze",
+  "twentyFourPlusFourDaysBreak": "24 pilule + 4 pilule za pauzu",
   "choosePillType": "Odaberite vrstu pilule",
   "notificationForNotTakenPeriod": "Obavijest o {pillSheetPillSheetTypeNotTakenWord} razdoblju",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kad su obavještenja isključena, automatski se kreiraju i zapisi o uzimanju za {pillSheetPillSheetTypeNotTakenWord} period.",

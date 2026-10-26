@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 pilula aktive + 4 pilula placebo",
   "twentyOnePlusSevenPlacebo": "21 pilula aktive + 7 pilula placebo",
   "allActivePills": "Të gjitha janë pilula aktive",
-  "twentyFourPlusFourDaysBreak": "24 pilula + 4 ditë pushim",
+  "twentyFourPlusFourDaysBreak": "24 pilula + 4 pilula për pushim",
   "choosePillType": "Zgjidhni llojin e pilës",
   "notificationForNotTakenPeriod": "Njoftim i periudhës {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kur njoftimet janë të fikura, regjistrimet e marrjes për periudhën {pillSheetPillSheetTypeNotTakenWord} do të shtohen gjithashtu automatikisht",

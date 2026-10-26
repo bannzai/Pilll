@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 hatóanyagos tabletta + 4 placebo tabletta",
   "twentyOnePlusSevenPlacebo": "21 hatóanyagos tabletta + 7 placebo tabletta",
   "allActivePills": "Mind hatóanyagos tabletta",
-  "twentyFourPlusFourDaysBreak": "24 tabletta + 4 napos szünet",
+  "twentyFourPlusFourDaysBreak": "24 tabletta + 4 szüneti tabletta",
   "choosePillType": "Válassz tabletta típust",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} időszak értesítése",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Értesítések kikapcsolása esetén a {pillSheetPillSheetTypeNotTakenWord} időszak bevételi rekordjai szintén automatikusan rögzítésre kerülnek.",

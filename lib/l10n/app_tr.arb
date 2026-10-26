@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 etkin hap + 4 plasebo hap",
   "twentyOnePlusSevenPlacebo": "21 etkin maddeli hap + 7 plasebo hap",
   "allActivePills": "Hepsi hormonlu hap",
-  "twentyFourPlusFourDaysBreak": "24 tablet + 4 gün ara",
+  "twentyFourPlusFourDaysBreak": "24 hap + ara dönem için 4 hap",
   "choosePillType": "Hap türünü seç",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} dönemi bildirimi",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Bildirimler kapalı olsa bile, {pillSheetPillSheetTypeNotTakenWord} dönemindeki ilaç alma kayıtları otomatik olarak eklenir.",

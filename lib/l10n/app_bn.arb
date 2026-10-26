@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "২৪টি সক্রিয় পিল + ৪টি প্লাসিবো পিল",
   "twentyOnePlusSevenPlacebo": "২১টি সক্রিয় উপাদানযুক্ত পিল + ৭টি প্লাসিবো পিল",
   "allActivePills": "সবগুলোই হরমোনযুক্ত পিল",
-  "twentyFourPlusFourDaysBreak": "২৪টি ট্যাবলেট + ৪ দিন বিরতি",
+  "twentyFourPlusFourDaysBreak": "২৪টি পিল + ৪টি বিরতির পিল",
   "choosePillType": "পিলের ধরন নির্বাচন করুন",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} সময়কালের বিজ্ঞপ্তি",
   "autoRecordForNotTakenPeriodIfNotificationOff": "নোটিফিকেশন বন্ধ থাকলে, {pillSheetPillSheetTypeNotTakenWord} সময়কালের সেবনের রেকর্ডও স্বয়ংক্রিয়ভাবে যোগ করা হবে",

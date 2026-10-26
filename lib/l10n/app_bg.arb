@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 активни хапчета + 4 хапчета плацебо",
   "twentyOnePlusSevenPlacebo": "21 хапчета с активна съставка + 7 хапчета плацебо",
   "allActivePills": "Всички са активни хапчета",
-  "twentyFourPlusFourDaysBreak": "24 таблетки + 4 дни почивка",
+  "twentyFourPlusFourDaysBreak": "24 хапчета + 4 хапчета за пауза",
   "choosePillType": "Изберете вид хапче",
   "notificationForNotTakenPeriod": "Уведомление за {pillSheetPillSheetTypeNotTakenWord} период",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Когато известията са изключени, записите за приемане за периода {pillSheetPillSheetTypeNotTakenWord} също се добавят автоматично",

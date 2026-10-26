@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "ဆေးအာနိသင်ပါသောဆေးပြား 24 ပြား + ဆေးအတု 4 ပြား",
   "twentyOnePlusSevenPlacebo": "အာနိသင်ရှိသော ဆေးလုံး 21 လုံး + ဆေးအတု 7 လုံး",
   "allActivePills": "အားလုံး ဟော်မုန်းဆေးပြားများဖြစ်ပါတယ်",
-  "twentyFourPlusFourDaysBreak": "၂၄လုံး + ၄လုံးဆေးရပ်",
+  "twentyFourPlusFourDaysBreak": "ဆေး 24 လုံး + ဆေးနားရက်အတွက် ဆေး 4 လုံး",
   "choosePillType": "မွေးထိန်းဆေးအမျိုးအစားရွေးချယ်ပါ",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} ကာလ သတိပေးချက်",
   "autoRecordForNotTakenPeriodIfNotificationOff": "သတိပေးချက်ကိုပိတ်ထားပါက {pillSheetPillSheetTypeNotTakenWord}ကာလအတွင်း ဆေးသောက်မှတ်တမ်းများကို အလိုအလျောက်ထည့်ပေးမည်ဖြစ်သည်",

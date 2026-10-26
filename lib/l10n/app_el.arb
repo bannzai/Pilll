@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 ενεργά χάπια + 4 χάπια πλασέμπο",
   "twentyOnePlusSevenPlacebo": "21 χάπια με δραστική ουσία + 7 χάπια πλασέμπο",
   "allActivePills": "Όλα είναι ενεργό χάπι",
-  "twentyFourPlusFourDaysBreak": "24 χάπια + 4 διάλειμμα",
+  "twentyFourPlusFourDaysBreak": "24 χάπια + 4 χάπια για διάλειμμα",
   "choosePillType": "Επιλογή τύπου χαπιού",
   "notificationForNotTakenPeriod": "Ειδοποίηση περιόδου {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Όταν οι ειδοποιήσεις είναι απενεργοποιημένες, θα προστεθούν αυτόματα και οι καταγραφές λήψης για την περίοδο {pillSheetPillSheetTypeNotTakenWord}",

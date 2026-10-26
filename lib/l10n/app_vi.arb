@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 viên có hoạt chất + 4 viên giả dược",
   "twentyOnePlusSevenPlacebo": "21 viên có hoạt chất + 7 viên giả dược",
   "allActivePills": "Tất cả đều là viên hoạt chất",
-  "twentyFourPlusFourDaysBreak": "24 viên + 4 ngày nghỉ thuốc",
+  "twentyFourPlusFourDaysBreak": "24 viên + 4 viên cho kỳ nghỉ thuốc",
   "choosePillType": "Chọn loại thuốc tránh thai",
   "notificationForNotTakenPeriod": "Thông báo giai đoạn {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Khi tắt thông báo, lịch sử uống thuốc trong {pillSheetPillSheetTypeNotTakenWord} cũng sẽ được tự động ghi lại",

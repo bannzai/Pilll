@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 faol tabletka + 4 platsebo tabletka",
   "twentyOnePlusSevenPlacebo": "21 ta faol moddalı tabletka + 7 ta platsebo tabletka",
   "allActivePills": "Barchasi gormonli tabletka",
-  "twentyFourPlusFourDaysBreak": "24 ta tablet + 4 kun tanaffus",
+  "twentyFourPlusFourDaysBreak": "24 tabletka + tanaffus uchun 4 tabletka",
   "choosePillType": "Kontratseptiv turini tanlang",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} davri haqida xabar",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Bildirishnomalar o'chirilgan bo'lsa, {pillSheetPillSheetTypeNotTakenWord} davridagi qabul qilish yozuvlari ham avtomatik ravishda yaratiladi",

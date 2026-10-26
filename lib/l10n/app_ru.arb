@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 активные таблетки + 4 таблетки плацебо",
   "twentyOnePlusSevenPlacebo": "21 таблетка с действующим веществом + 7 таблеток плацебо",
   "allActivePills": "Все таблетки гормональные",
-  "twentyFourPlusFourDaysBreak": "24 таблетки + 4 дня перерыва",
+  "twentyFourPlusFourDaysBreak": "24 таблетки + 4 таблетки на перерыв",
   "choosePillType": "Выберите тип таблеток",
   "notificationForNotTakenPeriod": "Уведомление о {pillSheetPillSheetTypeNotTakenWord} периоде",
   "autoRecordForNotTakenPeriodIfNotificationOff": "При отключенных уведомлениях записи о приеме за период {pillSheetPillSheetTypeNotTakenWord} также будут автоматически созданы",

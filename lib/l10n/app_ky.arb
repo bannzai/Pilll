@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 таасирдүү таблетка + 4 плацебо таблетка",
   "twentyOnePlusSevenPlacebo": "21 активдүү заты бар таблетка + 7 плацебо таблетка",
   "allActivePills": "Баары гормондуу таблеткалар",
-  "twentyFourPlusFourDaysBreak": "24 таблетка + 4 күн эс алуу",
+  "twentyFourPlusFourDaysBreak": "24 таблетка + тыныгуу үчүн 4 таблетка",
   "choosePillType": "Таблетканын түрүн тандаңыз",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} мезгилинин билдирүүсү",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Эскертүү өчүрүлгөн учурда, {pillSheetPillSheetTypeNotTakenWord} мезгилинин дары ичүү каттоосу да автоматтык түрдө жазылат",

@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 toimeainega pilli + 4 platseebopilli",
   "twentyOnePlusSevenPlacebo": "21 toimeainega pilli + 7 platseebopilli",
   "allActivePills": "Kõik on toimeainega pillid",
-  "twentyFourPlusFourDaysBreak": "24 tabletti + 4 tabletti paus",
+  "twentyFourPlusFourDaysBreak": "24 pilli + 4 pillipausi pilli",
   "choosePillType": "Vali pillitüüp",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} perioodi teatis",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Teatiste keelamisel lisatakse ka {pillSheetPillSheetTypeNotTakenWord} perioodi võtmiskirjed automaatselt",

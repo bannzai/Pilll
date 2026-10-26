@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 pílulas activas + 4 pílulas placebo",
   "twentyOnePlusSevenPlacebo": "21 pílulas activas + 7 pílulas de placebo",
   "allActivePills": "Todas son pílulas activas",
-  "twentyFourPlusFourDaysBreak": "24 comprimidos + 4 días de descanso",
+  "twentyFourPlusFourDaysBreak": "24 pílulas + 4 pílulas de descanso",
   "choosePillType": "Escoller o tipo de píldora",
   "notificationForNotTakenPeriod": "Notificación do período {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Cando as notificacións están desactivadas, tamén se crea automaticamente o rexistro de toma do período de {pillSheetPillSheetTypeNotTakenWord}",

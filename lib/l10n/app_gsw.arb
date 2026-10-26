@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 Pille mit Wirkstoff + 4 Placebo-Pille",
   "twentyOnePlusSevenPlacebo": "21 Pille mit Wirkstoff + 7 Placebo-Pille",
   "allActivePills": "Alli sind Wirkstoffpille",
-  "twentyFourPlusFourDaysBreak": "24 Tablette + 4 Pausetag",
+  "twentyFourPlusFourDaysBreak": "24 Pille + 4 Pille für d Pillepause",
   "choosePillType": "Pillenart wählen",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord}-Ziit Mitteilig",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Au wänn d Benachrichtigunge usgschaltet sind, werded d Inahmeufzeichnige för d {pillSheetPillSheetTypeNotTakenWord}-Period automatisch erfasst",

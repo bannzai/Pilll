@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "ක්‍රියාකාරී පෙති 24ක් + ප්ලැසිබෝ පෙති 4ක්",
   "twentyOnePlusSevenPlacebo": "සක්‍රීය අමුද්‍රව්‍ය සහිත පෙති 21ක් + ප්ලැසිබෝ පෙති 7ක්",
   "allActivePills": "සියල්ල හෝමෝන අඩංගු පෙති",
-  "twentyFourPlusFourDaysBreak": "24 පෙති + 4 දින විවේකය",
+  "twentyFourPlusFourDaysBreak": "පෙති 24ක් + විරාමය සඳහා පෙති 4ක්",
   "choosePillType": "ගෙඩිය වර්ගය තෝරන්න",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} කාලයේ දැනුම්දීම",
   "autoRecordForNotTakenPeriodIfNotificationOff": "දැනුම්දීම් අක්‍රිය කර ඇති විට, {pillSheetPillSheetTypeNotTakenWord} කාලයේ ගැනීමේ සටහන් ද ස්වයංක්‍රීයව එකතු වේ",

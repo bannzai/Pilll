@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 актыўныя пігулкі + 4 пігулкі плацэбо",
   "twentyOnePlusSevenPlacebo": "21 пігулка з актыўным рэчывам + 7 пігулак плацэбо",
   "allActivePills": "Усе пігулкі гарманальныя",
-  "twentyFourPlusFourDaysBreak": "24 таблеткі + 4 дні перапынку",
+  "twentyFourPlusFourDaysBreak": "24 пігулкі + 4 пігулкі на перапын",
   "choosePillType": "Выберыце тып пілюль",
   "notificationForNotTakenPeriod": "Паведамленне пра {pillSheetPillSheetTypeNotTakenWord} перыяд",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Пры выключаных апавяшчэннях запісы пра прыём за {pillSheetPillSheetTypeNotTakenWord} перыяд таксама ствараюцца аўтаматычна",

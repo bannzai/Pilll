@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "۲۴ قرص فعال + ۴ قرص دارونما",
   "twentyOnePlusSevenPlacebo": "۲۱ قرص دارای مادهٔ مؤثر + ۷ قرص دارونما",
   "allActivePills": "همه قرص‌ها قرص فعال هستند",
-  "twentyFourPlusFourDaysBreak": "۲۴ قرص + ۴ قرص توقف",
+  "twentyFourPlusFourDaysBreak": "۲۴ قرص + ۴ قرص وقفه",
   "choosePillType": "انتخاب نوع قرص",
   "notificationForNotTakenPeriod": "اطلاع‌رسانی دوره‌ی {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "در صورت خاموش بودن اعلان‌ها، سوابق مصرف دوره {pillSheetPillSheetTypeNotTakenWord} نیز به طور خودکار ثبت می‌شود",

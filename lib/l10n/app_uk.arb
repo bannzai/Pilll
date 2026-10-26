@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 пігулки з діючою речовиною + 4 пігулки плацебо",
   "twentyOnePlusSevenPlacebo": "21 пігулка з діючою речовиною + 7 пігулок плацебо",
   "allActivePills": "Усі пігулки активні",
-  "twentyFourPlusFourDaysBreak": "24 таблетки + 4 дні перерви",
+  "twentyFourPlusFourDaysBreak": "24 пігулки + 4 пігулки на перерву",
   "choosePillType": "Обрати тип таблеток",
   "notificationForNotTakenPeriod": "Повідомлення періоду {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "При вимкнених сповіщеннях записи про прийом за період {pillSheetPillSheetTypeNotTakenWord} також будуть автоматично створені",

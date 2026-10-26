@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 აქტიური აბი + 4 პლაცებო აბი",
   "twentyOnePlusSevenPlacebo": "21 აქტიური ნივთიერების შემცველი აბი + 7 პლაცებო აბი",
   "allActivePills": "ყველა ჰორმონიან აბს შეიცავს",
-  "twentyFourPlusFourDaysBreak": "24 ტაბლეტი + 4 ტაბლეტი შესვენება",
+  "twentyFourPlusFourDaysBreak": "24 აბი + 4 აბი შესვენებისთვის",
   "choosePillType": "აბის ტიპის არჩევა",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} პერიოდის შეტყობინება",
   "autoRecordForNotTakenPeriodIfNotificationOff": "შეტყობინებების გამორთვის შემთხვევაში, {pillSheetPillSheetTypeNotTakenWord} პერიოდის მიღების ჩანაწერებიც ავტომატურად ემატება",
