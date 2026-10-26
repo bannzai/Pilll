@@ -485,7 +485,7 @@
   "futureScheduleFeatureAppealHeadline": "Καταγράψτε τα μελλοντικά σας σχέδια στο ημερολόγιο",
   "futureScheduleFeatureAppealBody": "Μπορείτε να σημειώνετε στο ημερολόγιο μελλοντικά σχέδια, όπως επισκέψεις στον γιατρό και ταξίδια. Δείτε τα μαζί με τον κύκλο λήψης του χαπιού, ώστε να προγραμματίζετε λαμβάνοντας υπόψη και την αναμενόμενη ημερομηνία της περιόδου.",
   "healthCareIntegrationFeatureAppealTitle": "Σύνδεση με την Υγεία",
-  "healthCareIntegrationFeatureAppealShortDescription": "Κοινοποίηση εγγραφών περιόδου με το Healthcare",
+  "healthCareIntegrationFeatureAppealShortDescription": "Μοιραστείτε τις καταγραφές περιόδου με την εφαρμογή Υγεία",
   "healthCareIntegrationFeatureAppealHeadline": "Μπορεί να συνδεθεί με το Health",
   "healthCareIntegrationFeatureAppealBody": "Τα δεδομένα εμμήνου ρύσης που καταγράφετε στο Pilll μπορούν να συγχρονιστούν αυτόματα με την εφαρμογή Υγεία. Μπορείτε να τα δείτε μαζί με άλλα δεδομένα υγείας σας ή να χρησιμοποιήσετε τα δεδομένα εμμήνου ρύσης και σε άλλες εφαρμογές.",
   "quickRecordFeatureAppealTitle": "Καταγραφή λήψης απευθείας από την ειδοποίηση",

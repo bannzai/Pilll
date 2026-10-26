@@ -485,7 +485,7 @@
   "futureScheduleFeatureAppealHeadline": "Lisa oma tulevased plaanid kalendrisse",
   "futureScheduleFeatureAppealBody": "Saad kalendrisse kirja panna tulevased plaanid, näiteks arstivisiidid ja reisid. Vaata neid koos pillide võtmise tsükliga, et saaksid planeerides arvestada ka sellega, millal on oodata päevi.",
   "healthCareIntegrationFeatureAppealTitle": "Ühenda Tervise rakendusega",
-  "healthCareIntegrationFeatureAppealShortDescription": "Jaga menstruaalregistrit tervishoiuga",
+  "healthCareIntegrationFeatureAppealShortDescription": "Jaga päevade kirjeid rakendusega Tervis",
   "healthCareIntegrationFeatureAppealHeadline": "Saab integreerida tervishoiurakendusega",
   "healthCareIntegrationFeatureAppealBody": "Pilll'is salvestatud menstruatsiooniandmeid saab automaatselt sünkroniseerida tervishoiurakendusega. Saate neid koos teiste terviseandmetega vaadata ning kasutada menstruatsiooniandmeid ka teistes rakendustes.",
   "quickRecordFeatureAppealTitle": "Salvesta ravimivõtt otse teavitusest",

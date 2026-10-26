@@ -485,7 +485,7 @@
   "futureScheduleFeatureAppealHeadline": "Ирээдүйн төлөвлөгөөгөө хуанлид тэмдэглэнэ үү",
   "futureScheduleFeatureAppealBody": "Эмчид үзүүлэх, аялах зэрэг ирээдүйн төлөвлөгөөгөө хуанлид тэмдэглэж болно. Тэдгээрийг эм уух мөчлөгтэйгөө хамт харж, сарын тэмдгийн хүлээгдэж буй хугацааг ч харгалзан төлөвлөх боломжтой.",
   "healthCareIntegrationFeatureAppealTitle": "Эрүүл мэнд апптай холбох",
-  "healthCareIntegrationFeatureAppealShortDescription": "Сарын тэмдгийн бүртгэлийг Эрүүл мэндтэй хуваалцах",
+  "healthCareIntegrationFeatureAppealShortDescription": "Сарын тэмдгийн тэмдэглэлээ Эрүүл мэнд апптай хуваалцана уу",
   "healthCareIntegrationFeatureAppealHeadline": "Эрүүл мэндтэй холбогдох боломжтой",
   "healthCareIntegrationFeatureAppealBody": "Pilll-д бүртгэсэн сарын тэмдгийн өгөгдлийг эрүүл мэндийн аппликейшнтай автоматаар синхрончлах боломжтой. Эрүүл мэндийн бусад өгөгдлийн хамт харах, мөн бусад аппликейшнд сарын тэмдгийн өгөгдлийг ашиглах боломжтой болно.",
   "quickRecordFeatureAppealTitle": "Мэдэгдлээс шууд уух тэмдэглэл",

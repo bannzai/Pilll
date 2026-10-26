@@ -485,7 +485,7 @@
   "futureScheduleFeatureAppealHeadline": "მომავალი გეგმების კალენდარში ჩაწერა",
   "futureScheduleFeatureAppealBody": "კალენდარში შეგიძლიათ ჩაიწეროთ სამომავლო გეგმები, მაგალითად, ექიმთან ვიზიტი და მოგზაურობა. ისინი აბების მიღების ციკლთან ერთად შეგიძლიათ ნახოთ, რათა დაგეგმვისას მენსტრუაციის მოსალოდნელი პერიოდიც გაითვალისწინოთ.",
   "healthCareIntegrationFeatureAppealTitle": "ჯანმრთელობის აპთან დაკავშირება",
-  "healthCareIntegrationFeatureAppealShortDescription": "პერიოდის ჩანაწერების გაზიარება ჯანმრთელობის აპლიკაციასთან",
+  "healthCareIntegrationFeatureAppealShortDescription": "მენსტრუაციის ჩანაწერების გაზიარება ჯანმრთელობის აპთან",
   "healthCareIntegrationFeatureAppealHeadline": "სინქრონიზაცია Apple Health-თან",
   "healthCareIntegrationFeatureAppealBody": "Pilll-ში ჩაწერილი მენსტრუაციის მონაცემები შესაძლებელია ავტომატურად სინქრონიზირდეს ჯანმრთელობის აპლიკაციასთან. ჯანმრთელობის აპლიკაციაში შეგიძლიათ დაათვალიეროთ ისინი სხვა ჯანმრთელობის მონაცემებთან ერთად და სხვა აპლიკაციებსაც მისცეთ უფლება გამოიყენონ ეს მონაცემები.",
   "quickRecordFeatureAppealTitle": "შეტყობინებიდან პირდაპირ მიღების აღრიცხვა",

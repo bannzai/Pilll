@@ -485,7 +485,7 @@
   "futureScheduleFeatureAppealHeadline": "Segna i tuoi programmi futuri sul calendario",
   "futureScheduleFeatureAppealBody": "Puoi segnare sul calendario i programmi futuri, come visite mediche e viaggi. Consultali insieme al ciclo di assunzione della pillola, così puoi pianificare tenendo conto anche delle mestruazioni previste.",
   "healthCareIntegrationFeatureAppealTitle": "Collega a Salute",
-  "healthCareIntegrationFeatureAppealShortDescription": "Condividi i dati del ciclo con l'app Salute",
+  "healthCareIntegrationFeatureAppealShortDescription": "Condividi i dati delle mestruazioni con Salute",
   "healthCareIntegrationFeatureAppealHeadline": "Collegabile con Salute",
   "healthCareIntegrationFeatureAppealBody": "I dati del ciclo mestruale registrati in Pilll possono essere sincronizzati automaticamente con le app per la salute. Potrai consultarli insieme ad altri dati sanitari e consentire ad altre app di utilizzarli.",
   "quickRecordFeatureAppealTitle": "Registra l'assunzione direttamente dalla notifica",

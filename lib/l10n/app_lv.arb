@@ -485,7 +485,7 @@
   "futureScheduleFeatureAppealHeadline": "Ierakstiet turpmākos ieceres kalendārā",
   "futureScheduleFeatureAppealBody": "Kalendārā varat ierakstīt nākotnes plānus, piemēram, ārsta apmeklējumus un ceļojumus. Skatiet tos kopā ar tablešu lietošanas ciklu, lai plānojot ņemtu vērā arī gaidāmo mēnešreižu laiku.",
   "healthCareIntegrationFeatureAppealTitle": "Savienot ar Veselību",
-  "healthCareIntegrationFeatureAppealShortDescription": "Kopīgot menstruāciju ierakstus ar Veselību",
+  "healthCareIntegrationFeatureAppealShortDescription": "Kopīgojiet mēnešreižu ierakstus ar lietotni Veselība",
   "healthCareIntegrationFeatureAppealHeadline": "Sinhronizējiet ar Apple Health",
   "healthCareIntegrationFeatureAppealBody": "Pilll lietotnē reģistrētos menstruāciju datus var automātiski sinhronizēt ar veselības lietotni. Tos varēs apskatīt kopā ar citiem veselības datiem un izmantot arī citās lietotnēs.",
   "quickRecordFeatureAppealTitle": "Reģistrēt lietošanu tieši no paziņojuma",

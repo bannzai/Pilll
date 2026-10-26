@@ -485,7 +485,7 @@
   "futureScheduleFeatureAppealHeadline": "להוסיף תוכניות עתידיות ליומן",
   "futureScheduleFeatureAppealBody": "אפשר להוסיף ליומן תוכניות עתידיות, כמו תורים לרופא ונסיעות. אפשר לצפות בהן לצד מחזור נטילת הגלולות, כדי להביא בחשבון גם את מועד המחזור הצפוי בעת התכנון.",
   "healthCareIntegrationFeatureAppealTitle": "חיבור לבריאות",
-  "healthCareIntegrationFeatureAppealShortDescription": "שיתוף רישומי מחזור עם Health",
+  "healthCareIntegrationFeatureAppealShortDescription": "שיתוף רישומי מחזור עם האפליקציה בריאות",
   "healthCareIntegrationFeatureAppealHeadline": "ניתן להתחבר לאפליקציית הבריאות",
   "healthCareIntegrationFeatureAppealBody": "ניתן לסנכרן אוטומטית את נתוני המחזור שנרשמו ב-Pilll עם אפליקציית הבריאות. תוכלי לצפות בהם יחד עם נתוני בריאות אחרים באפליקציית הבריאות, ולהשתמש בנתוני המחזור גם באפליקציות אחרות.",
   "quickRecordFeatureAppealTitle": "תיעוד נטילת תרופות ישירות מההתראה",
