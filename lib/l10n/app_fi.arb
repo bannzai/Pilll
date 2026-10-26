@@ -267,7 +267,7 @@
   "notSatisfied": "En ole tyytyväinen",
   "perNumber": "jokaiselle pillerinumerolle",
   "howManyDaysDoesMenstruationLast": "Kuinka monta päivää kuukautisesi kestävät?",
-  "daysMenstruationLasts": "päivän kuukautiset",
+  "daysMenstruationLasts": "päivää kestävät kuukautiset",
   "selectPillNumberForMenstruationStart": "Napauta pillerinumeroa, josta kuukautiset alkavat",
   "countOfSheet": "{number}.",
   "newPillSheetStart": "Aloita uusi pilleripakkaus ▶︎",

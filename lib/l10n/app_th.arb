@@ -267,7 +267,7 @@
   "notSatisfied": "ไม่พอใจ",
   "perNumber": "สำหรับยาแต่ละหมายเลข",
   "howManyDaysDoesMenstruationLast": "ประจำเดือนมานานกี่วันคะ?",
-  "daysMenstruationLasts": "วันประจำเดือนมา",
+  "daysMenstruationLasts": "วัน ประจำเดือนจะมาต่อเนื่องค่ะ",
   "selectPillNumberForMenstruationStart": "แตะหมายเลขยาที่เริ่มประจำเดือน",
   "countOfSheet": "ใบที่ {number}",
   "newPillSheetStart": "เริ่มแผงยาใหม่ ▶︎",

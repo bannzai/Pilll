@@ -267,7 +267,7 @@
   "notSatisfied": "Δεν είμαι ικανοποιημένη",
   "perNumber": "για κάθε αριθμό χαπιού",
   "howManyDaysDoesMenstruationLast": "Πόσες ημέρες διαρκεί η περίοδός σας;",
-  "daysMenstruationLasts": "ημέρες περιόδου",
+  "daysMenstruationLasts": "ημέρες διάρκειας της περιόδου",
   "selectPillNumberForMenstruationStart": "Πατήστε τον αριθμό του χαπιού που αντιστοιχεί στην έναρξη της περιόδου",
   "countOfSheet": "{number}η",
   "newPillSheetStart": "Έναρξη νέου φύλλου χαπιών ▶︎",

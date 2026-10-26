@@ -267,7 +267,7 @@
   "notSatisfied": "Hindi nasiyahan",
   "perNumber": "para sa bawat numero ng pildoras",
   "howManyDaysDoesMenstruationLast": "Ilang araw tumatagal ang regla ninyo?",
-  "daysMenstruationLasts": "araw na tumatagal ang regla",
+  "daysMenstruationLasts": "araw tumatagal ang regla",
   "selectPillNumberForMenstruationStart": "I-tap ang numero ng pill kung saan nagsisimula ang regla",
   "countOfSheet": "ika-{number}",
   "newPillSheetStart": "Simulan ang Bagong Pill Sheet ▶︎",

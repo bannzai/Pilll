@@ -267,7 +267,7 @@
   "notSatisfied": "Сэтгэл хангалуун биш",
   "perNumber": "эмийн дугаар бүрээр",
   "howManyDaysDoesMenstruationLast": "Таны сарын тэмдгийн хугацаа хэдэн өдөр үргэлжилдэг вэ?",
-  "daysMenstruationLasts": "өдөр сарын тэмдэг үргэлжилнэ",
+  "daysMenstruationLasts": "өдөр сарын тэмдгийн хугацаа үргэлжилнэ",
   "selectPillNumberForMenstruationStart": "Сарын тэмдэг эхлэх эмийн дугаарыг товш",
   "countOfSheet": "{number}-дахь хуудас",
   "newPillSheetStart": "Шинэ эмийн хуудас эхлэх ▶︎",

@@ -267,7 +267,7 @@
   "notSatisfied": "Գոհ չեմ",
   "perNumber": "յուրաքանչյուր հաբի համարի համար",
   "howManyDaysDoesMenstruationLast": "Քանի՞ օր է տևում Ձեր դաշտանը:",
-  "daysMenstruationLasts": "օր դաশտանային շարունակվում է",
+  "daysMenstruationLasts": "օր տևում է դաշտանը",
   "selectPillNumberForMenstruationStart": "Սեղմեք դաշտանային ցիկլի սկզբի հապակի համարը",
   "countOfSheet": "{number}-րդ",
   "newPillSheetStart": "Սկսել նոր դեղահապի թերթ ▶︎",

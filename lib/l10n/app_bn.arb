@@ -267,7 +267,7 @@
   "notSatisfied": "সন্তুষ্ট নই",
   "perNumber": "প্রতিটি পিল নম্বর অনুযায়ী",
   "howManyDaysDoesMenstruationLast": "আপনার মাসিক কত দিন থাকে?",
-  "daysMenstruationLasts": "দিন মাসিক চলে",
+  "daysMenstruationLasts": "দিন মাসিক চলবে",
   "selectPillNumberForMenstruationStart": "মাসিক শুরু হওয়ার পিল নম্বরে ট্যাপ করুন",
   "countOfSheet": "{number}তম",
   "newPillSheetStart": "নতুন পিল শীট শুরু করুন ▶︎",

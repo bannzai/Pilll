@@ -267,7 +267,7 @@
   "notSatisfied": "Ei ole rahul",
   "perNumber": "iga pilli numbri jaoks",
   "howManyDaysDoesMenstruationLast": "Mitu päeva su päevad kestavad?",
-  "daysMenstruationLasts": "päeva kestab menstruatsioon",
+  "daysMenstruationLasts": "päeva kestavad päevad",
   "selectPillNumberForMenstruationStart": "Puuduta menstruatsiooni alguse pilli numbrit",
   "countOfSheet": "{number}. leht",
   "newPillSheetStart": "Alusta uut pillipakki ▶︎",

@@ -267,7 +267,7 @@
   "notSatisfied": "Ddim yn fodlon",
   "perNumber": "ar gyfer pob rhif pilsen",
   "howManyDaysDoesMenstruationLast": "Am sawl diwrnod mae eich mislif yn para?",
-  "daysMenstruationLasts": "diwrnod o fislif",
+  "daysMenstruationLasts": "diwrnod y bydd y mislif yn para",
   "selectPillNumberForMenstruationStart": "Tapiwch ar rif y bill lle mae'r misglwyf yn dechrau",
   "countOfSheet": "Dalen {number}",
   "newPillSheetStart": "Dechrau taflen bilsen newydd ▶︎",
