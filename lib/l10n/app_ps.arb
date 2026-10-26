@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "تادیه بشپړه نه شوه. مهرباني وکړئ وګورئ چې ستاسو د تادیې طریقه معتبره ده، بیا هڅه وکړئ.",
   "purchaseErrorProductNotAvailableForPurchaseError": "ټاکل شوی پلان دا مهال د پېرلو لپاره نشته. مهرباني وکړئ اپلېکېشن بیا پیل کړئ او بیا هڅه وکړئ.",
   "purchaseErrorProductAlreadyPurchasedError": "تاسو دا پلان مخکې اخیستی دی. په دې وسیله کې د پېرود معلوماتو د بېرته راګرځولو لپاره، مهرباني وکړئ «مخکې مو پېرود کړی؟» وټاکئ",
-  "purchaseErrorReceiptAlreadyInUseError": "دمخه پیرودل شوی. یا د پیرودنې معلومات د بل کاروونکي لخوا کارول کیږي. {accountName} تصدیق یې وکړئ",
+  "purchaseErrorReceiptAlreadyInUseError": "پېرود مخکې ترسره شوی، یا د پېرود معلومات د بل کاروونکي په حساب کې کارول کېږي. مهرباني وکړئ د {accountName} حساب وګورئ",
   "purchaseErrorInvalidReceiptError": "د پیرودونو معلومات ناسم دي. مهرباني وکړئ د پیرودونو معلومات تصدیق کړئ",
   "purchaseErrorMissingReceiptFileError": "د پیرودونکي معلومات موندل نشول. مهرباني وکړئ د {accountName} سره خپلې وسیلې ته ننوتل وکړئ او بیا هڅه وکړئ",
   "purchaseErrorNetworkError": "د انټرنیټ پیوستون ناثابته دی. مهرباني وکړئ خپل د انټرنیټ وضعیت وګورئ او بیا هڅه وکړئ.",

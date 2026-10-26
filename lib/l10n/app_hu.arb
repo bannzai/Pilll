@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "A fizetés nem sikerült. Ellenőrizd, hogy érvényes-e a fizetési módod, majd próbáld újra.",
   "purchaseErrorProductNotAvailableForPurchaseError": "A kiválasztott csomag jelenleg nem vásárolható meg. Kérjük, indítsd újra az alkalmazást, majd próbáld meg ismét.",
   "purchaseErrorProductAlreadyPurchasedError": "Ezt a csomagot már megvásároltad. A vásárlás visszaállításához ezen az eszközön válaszd a „Már megvásároltad?” lehetőséget",
-  "purchaseErrorReceiptAlreadyInUseError": "Már megvásárolt, vagy a vásárlási információt másik felhasználó használja. Kérjük, ellenőrizze a(z) {accountName} fiókot.",
+  "purchaseErrorReceiptAlreadyInUseError": "A vásárlás már megtörtént, vagy a vásárlási adatokat egy másik felhasználói fiók használja. Kérjük, ellenőrizd a(z) {accountName} fiókot",
   "purchaseErrorInvalidReceiptError": "Érvénytelen vásárlási információ. Kérjük, ellenőrizze a vásárlási adatokat.",
   "purchaseErrorMissingReceiptFileError": "Nem találhatók vásárlói adatok. Kérjük, jelentkezzen be a(z) {accountName} fiókkal az eszközön, majd próbálja újra.",
   "purchaseErrorNetworkError": "A hálózati kapcsolat instabil. Kérjük, ellenőrizze a kapcsolatot és próbálja újra.",

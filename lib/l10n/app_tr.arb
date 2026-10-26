@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "Ödeme tamamlanamadı. Ödeme yönteminizin geçerli olup olmadığını kontrol edip tekrar deneyin.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Seçtiğiniz plan şu anda satın alınamıyor. Lütfen uygulamayı yeniden başlatıp tekrar deneyin.",
   "purchaseErrorProductAlreadyPurchasedError": "Bu planı zaten satın aldınız. Satın alma bilgilerinizi bu cihazda geri yüklemek için lütfen “Daha önce satın aldınız mı?” seçeneğini belirleyin",
-  "purchaseErrorReceiptAlreadyInUseError": "Zaten satın alındı veya satın alma bilgileri başka bir kullanıcı tarafından kullanılıyor. {accountName} hesabını kontrol edin.",
+  "purchaseErrorReceiptAlreadyInUseError": "Satın alma zaten yapılmış veya satın alma bilgileri başka bir kullanıcı hesabında kullanılıyor. Lütfen {accountName} hesabını kontrol edin",
   "purchaseErrorInvalidReceiptError": "Geçersiz satın alma bilgisi. Lütfen satın alma bilgilerinizi kontrol edin.",
   "purchaseErrorMissingReceiptFileError": "Satın alıcı bilgisi bulunamadı. Lütfen {accountName} ile cihazda oturum açarak tekrar deneyin.",
   "purchaseErrorNetworkError": "Ağ bağlantısı kararsız. Bağlantı durumunuzu kontrol ettikten sonra tekrar deneyiniz.",

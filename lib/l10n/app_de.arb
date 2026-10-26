@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "Die Zahlung hat nicht geklappt. Prüfe bitte, ob deine Zahlungsmethode gültig ist, und versuche es erneut.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Der ausgewählte Plan kann derzeit nicht gekauft werden. Starte die App bitte neu und versuche es noch einmal.",
   "purchaseErrorProductAlreadyPurchasedError": "Du hast den Plan bereits gekauft. Um deinen Kauf auf diesem Gerät wiederherzustellen, wähle „Bereits gekauft?“",
-  "purchaseErrorReceiptAlreadyInUseError": "Bereits gekauft oder die Kaufinformationen werden von einem anderen Benutzer verwendet. Bitte überprüfen Sie {accountName}.",
+  "purchaseErrorReceiptAlreadyInUseError": "Der Kauf wurde bereits abgeschlossen oder die Kaufdaten werden von einem anderen Benutzerkonto verwendet. Bitte prüfe das Konto {accountName}",
   "purchaseErrorInvalidReceiptError": "Ungültige Kaufinformationen. Bitte überprüfen Sie Ihre Kaufdaten.",
   "purchaseErrorMissingReceiptFileError": "Es wurden keine Käuferinformationen gefunden. Bitte melden Sie sich mit {accountName} auf Ihrem Gerät an und versuchen Sie es erneut.",
   "purchaseErrorNetworkError": "Die Netzwerkverbindung ist instabil. Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.",

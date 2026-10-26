@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "Аплата не прайшла. Праверце, ці сапраўдны ваш спосаб аплаты, і паспрабуйце яшчэ раз.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Абраны план зараз недаступны для пакупкі. Калі ласка, перазапусціце праграму і паспрабуйце яшчэ раз.",
   "purchaseErrorProductAlreadyPurchasedError": "Вы ўжо набылі план. Каб аднавіць звесткі пра пакупку на гэтай прыладзе, выберыце «Ужо куплялі?»",
-  "purchaseErrorReceiptAlreadyInUseError": "Ужо куплена ці інфармацыя аб пакупцы выкарыстоўваецца іншым карыстальнікам. Праверце {accountName}.",
+  "purchaseErrorReceiptAlreadyInUseError": "Купля ўжо зроблена, або звесткі пра яе выкарыстоўваюцца ў іншым уліковым запісе. Калі ласка, праверце ўліковы запіс {accountName}",
   "purchaseErrorInvalidReceiptError": "Недзейсныя даныя аб пакупцы. Калі ласка, праверце інфармацыю аб пакупцы.",
   "purchaseErrorMissingReceiptFileError": "Інфармацыя пра пакупніка адсутнічае. Увайдзіце ў сістэму на прыладзе з уліковым запісам {accountName} і паспрабуйце яшчэ раз",
   "purchaseErrorNetworkError": "Нестабільнае сеткавае злучэнне. Праверце падключэнне і паспрабуйце зноў.",

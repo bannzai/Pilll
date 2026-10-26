@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "Inkokhelo ayiphumelelanga. Sicela uhlole ukuthi indlela yakho yokukhokha isasebenza, bese uzama futhi.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Uhlelo olukhethiwe alutholakali ukuthi luthengwe okwamanje. Sicela uqale kabusha uhlelo lokusebenza bese uzama futhi.",
   "purchaseErrorProductAlreadyPurchasedError": "Usulithengile lolu hlelo. Ukuze ubuyisele imininingwane yokuthenga kule divayisi, sicela ukhethe okuthi “Wake wathenga ngaphambilini?”",
-  "purchaseErrorReceiptAlreadyInUseError": "Sekuthengwe ngaphambili. Noma ulwazi lokuthenga lusetshenziswa ngomsebenzisi omunye. Sicela uhlole {accountName}.",
+  "purchaseErrorReceiptAlreadyInUseError": "Ukuthenga sekwenziwe, noma imininingwane yokuthenga isetshenziswa kwenye i-akhawunti. Sicela uhlole i-akhawunti ethi {accountName}",
   "purchaseErrorInvalidReceiptError": "Ulwazi lokuthenga alulungile. Sicela uhlole ulwazi lwakho lokuthenga.",
   "purchaseErrorMissingReceiptFileError": "Ulwazi lomthengi alutholakali. Sicela ungene nge-{accountName} esifeni sakho bese uzama futhi",
   "purchaseErrorNetworkError": "Inethiwekhi ayisebenzi kahle. Hlola ukuxhumana kwakho bese uzama futhi.",

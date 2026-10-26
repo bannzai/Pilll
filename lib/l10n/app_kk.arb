@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "Төлем орындалмады. Төлем әдісіңіздің жарамды екенін тексеріп, қайта көріңіз.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Таңдалған жоспарды қазір сатып алу мүмкін емес. Қолданбаны қайта іске қосып, тағы бір рет көріңіз.",
   "purchaseErrorProductAlreadyPurchasedError": "Бұл жоспарды сатып алып қойғансыз. Осы құрылғыда сатып алу деректерін қалпына келтіру үшін «Бұрын сатып алдыңыз ба?» тармағын таңдаңыз",
-  "purchaseErrorReceiptAlreadyInUseError": "Әлдеқашан сатып алынған немесе сатып алу ақپараты басқа пайдаланушымен пайдаланылуда. {accountName} тексеріңіз",
+  "purchaseErrorReceiptAlreadyInUseError": "Сатып алу бұрыннан жасалған немесе сатып алу деректері басқа пайдаланушының аккаунтында қолданылып жатыр. {accountName} аккаунтын тексеріңіз",
   "purchaseErrorInvalidReceiptError": "Жарамсыз сатып алу ақпараты. Сатып алу ақпаратын тексеріңіз.",
   "purchaseErrorMissingReceiptFileError": "Сатып алушы туралы ақпарат жоқ. {accountName} арқылы құрылғыға кіріп, қайталап көріңіз",
   "purchaseErrorNetworkError": "Желі күйі тұрақсыз. Қосылу жағдайын тексеріп, қайталап көріңіз.",

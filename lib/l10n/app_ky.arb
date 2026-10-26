@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "Төлөм ишке ашкан жок. Төлөм ыкмаңыз жарактуу экенин текшерип, кайра аракет кылыңыз.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Тандалган планды азыр сатып алуу мүмкүн эмес. Колдонмону кайра иштетип, дагы бир жолу аракет кылып көрүңүз.",
   "purchaseErrorProductAlreadyPurchasedError": "Бул планды буга чейин сатып алгансыз. Бул түзмөктө сатып алуу маалыматын калыбына келтирүү үчүн «Мурда сатып алгансызбы?» дегенди тандаңыз",
-  "purchaseErrorReceiptAlreadyInUseError": "Мурда эле сатып алынган же сатып алуу маалыматы башка колдонуучу тарабынан колдонулууда. {accountName} текшериңиз.",
+  "purchaseErrorReceiptAlreadyInUseError": "Сатып алуу буга чейин жасалган же сатып алуу маалыматы башка колдонуучунун аккаунтунда колдонулуп жатат. {accountName} аккаунтун текшериңиз",
   "purchaseErrorInvalidReceiptError": "Сатып алуу маалыматы туура эмес. Сатып алуу маалыматын текшерип көрүңүз",
   "purchaseErrorMissingReceiptFileError": "Сатып алуучунун маалыматы жок. {accountName} менен түзмөккө кирип, кайра аракет кылыңыз",
   "purchaseErrorNetworkError": "Интернет байланышы туруксуз. Байланышты текшерип, кайра аракет кылыңыз.",

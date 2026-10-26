@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "Pembayaran tidak berjaya. Sila semak sama ada kaedah pembayaran anda sah, kemudian cuba lagi.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Pelan yang dipilih tidak tersedia untuk dibeli buat masa ini. Sila mulakan semula aplikasi dan cuba lagi.",
   "purchaseErrorProductAlreadyPurchasedError": "Anda sudah membeli pelan ini. Untuk memulihkan maklumat pembelian pada peranti ini, sila pilih “Pernah membeli sebelum ini?”",
-  "purchaseErrorReceiptAlreadyInUseError": "Telah dibeli atau maklumat pembelian sedang digunakan oleh pengguna lain. Sila sahkan {accountName}",
+  "purchaseErrorReceiptAlreadyInUseError": "Pembelian sudah dibuat, atau maklumat pembelian sedang digunakan pada akaun lain. Sila semak akaun {accountName}",
   "purchaseErrorInvalidReceiptError": "Maklumat pembelian tidak sah. Sila semak maklumat pembelian anda.",
   "purchaseErrorMissingReceiptFileError": "Maklumat pembeli tidak dijumpai. Sila log masuk ke peranti menggunakan {accountName} dan cuba lagi.",
   "purchaseErrorNetworkError": "Sambungan rangkaian tidak stabil. Sila periksa sambungan anda dan cuba lagi.",

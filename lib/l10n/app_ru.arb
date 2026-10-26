@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "Оплата не прошла. Проверьте, действителен ли ваш способ оплаты, и попробуйте ещё раз.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Выбранный план сейчас недоступен для покупки. Пожалуйста, перезапустите приложение и попробуйте ещё раз.",
   "purchaseErrorProductAlreadyPurchasedError": "Вы уже купили этот план. Чтобы восстановить покупку на этом устройстве, выберите «Уже покупали?»",
-  "purchaseErrorReceiptAlreadyInUseError": "Уже приобретено или информация о покупке используется другим пользователем. Пожалуйста, проверьте {accountName}",
+  "purchaseErrorReceiptAlreadyInUseError": "Покупка уже совершена или сведения о ней используются в другой учётной записи. Пожалуйста, проверьте учётную запись {accountName}",
   "purchaseErrorInvalidReceiptError": "Недействительная информация о покупке. Проверьте данные покупки",
   "purchaseErrorMissingReceiptFileError": "Информация о покупателе отсутствует. Войдите в устройство под аккаунтом {accountName} и повторите попытку",
   "purchaseErrorNetworkError": "Нестабильное сетевое соединение. Пожалуйста, проверьте подключение к интернету и повторите попытку.",

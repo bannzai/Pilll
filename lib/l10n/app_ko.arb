@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "결제가 완료되지 않았어요. 결제 수단이 유효한지 확인한 뒤 다시 시도해 주세요.",
   "purchaseErrorProductNotAvailableForPurchaseError": "선택한 요금제는 현재 구매할 수 없어요. 앱을 다시 시작한 뒤 다시 시도해 주세요.",
   "purchaseErrorProductAlreadyPurchasedError": "이미 구매한 플랜이에요. 이 기기에서 구매 정보를 복원하려면 ‘이전에 구매하셨나요?’를 선택해 주세요",
-  "purchaseErrorReceiptAlreadyInUseError": "이미 구매가 완료되었거나 구매 정보가 다른 사용자에게 사용 중입니다. {accountName}을 확인해주세요",
+  "purchaseErrorReceiptAlreadyInUseError": "이미 구매했거나 구매 정보가 다른 사용자 계정에서 사용 중이에요. {accountName} 계정을 확인해 주세요",
   "purchaseErrorInvalidReceiptError": "유효하지 않은 구매 정보입니다. 구매 정보를 확인해 주세요.",
   "purchaseErrorMissingReceiptFileError": "구매자 정보가 존재하지 않습니다. {accountName}로 기기에 로그인한 후 다시 시도해주세요.",
   "purchaseErrorNetworkError": "네트워크 상태가 불안정합니다. 연결 상태를 확인한 후 다시 시도해 주세요.",

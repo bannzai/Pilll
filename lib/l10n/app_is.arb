@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "Greiðslan tókst ekki. Athugaðu hvort greiðslumátinn þinn sé gildur og reyndu aftur.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Ekki er hægt að kaupa valda áskrift eins og er. Prófaðu að endurræsa appið og reyna aftur.",
   "purchaseErrorProductAlreadyPurchasedError": "Þú hefur þegar keypt áskriftina. Til að endurheimta kaupin í þessu tæki skaltu velja „Hefurðu keypt áður?“",
-  "purchaseErrorReceiptAlreadyInUseError": "Þegar keypt eða kaupupplýsingarnar eru nú þegar í notkun hjá öðrum notanda. Vinsamlegast staðfestu {accountName}.",
+  "purchaseErrorReceiptAlreadyInUseError": "Kaupin hafa þegar farið fram eða kaupupplýsingarnar eru notaðar á öðrum notandareikningi. Athugaðu reikninginn {accountName}",
   "purchaseErrorInvalidReceiptError": "Rangar kaupupplýsingar. Vinsamlegast athugaðu kaupupplýsingarnar þínar.",
   "purchaseErrorMissingReceiptFileError": "Engar upplýsingar um kaupanda fundust. Vinsamlegast skráðu þig inn á tækið með {accountName} og reyndu aftur.",
   "purchaseErrorNetworkError": "Nettenging er óstöðug. Vinsamlegast athugaðu tengingu þína og reyndu aftur.",

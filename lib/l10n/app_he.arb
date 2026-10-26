@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "התשלום לא הושלם. כדאי לבדוק שאמצעי התשלום תקף ולנסות שוב.",
   "purchaseErrorProductNotAvailableForPurchaseError": "התוכנית שנבחרה אינה זמינה כרגע לרכישה. כדאי להפעיל מחדש את האפליקציה ולנסות שוב.",
   "purchaseErrorProductAlreadyPurchasedError": "התוכנית כבר נרכשה. לשחזור פרטי הרכישה במכשיר הזה, יש לבחור ב״כבר רכשת בעבר?״",
-  "purchaseErrorReceiptAlreadyInUseError": "כבר נרכש או שמידע הרכישה משמש על ידי משתמש אחר. אנא בדקו את {accountName}",
+  "purchaseErrorReceiptAlreadyInUseError": "הרכישה כבר בוצעה, או שפרטי הרכישה משמשים בחשבון אחר. יש לבדוק את החשבון {accountName}",
   "purchaseErrorInvalidReceiptError": "מידע רכישה לא תקין. אנא בדקו את פרטי הרכישה שלכם",
   "purchaseErrorMissingReceiptFileError": "מידע הרוכש לא נמצא. אנא התחבר למכשיר באמצעות {accountName} ונסה שוב",
   "purchaseErrorNetworkError": "מצב הרשת אינו יציב. אנא בדוק את מצב החיבור ונסה שוב.",

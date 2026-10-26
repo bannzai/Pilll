@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "ଦେୟ ସମ୍ପୂର୍ଣ୍ଣ ହୋଇପାରିଲା ନାହିଁ। ଆପଣଙ୍କ ଦେୟ ପଦ୍ଧତି ବୈଧ ଅଛି କି ନାହିଁ ଯାଞ୍ଚ କରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।",
   "purchaseErrorProductNotAvailableForPurchaseError": "ଚୟନ କରାଯାଇଥିବା ପ୍ଲାନ୍ ବର୍ତ୍ତମାନ କିଣିବା ପାଇଁ ଉପଲବ୍ଧ ନାହିଁ। ଦୟାକରି ଆପ୍‌ଟି ପୁଣି ଚାଲୁ କରି ଆଉ ଥରେ ଚେଷ୍ଟା କରନ୍ତୁ।",
   "purchaseErrorProductAlreadyPurchasedError": "ଆପଣ ଏହି ପ୍ଲାନ୍‌ଟି ପୂର୍ବରୁ କିଣିଛନ୍ତି। ଏହି ଡିଭାଇସ୍‌ରେ କ୍ରୟ ସୂଚନା ପୁନରୁଦ୍ଧାର କରିବାକୁ ଦୟାକରି “ପୂର୍ବରୁ କିଣିଛନ୍ତି?” ବାଛନ୍ତୁ",
-  "purchaseErrorReceiptAlreadyInUseError": "ପୂର୍ବରୁ କିଣାହୋଇଛି କିମ୍ବା କିଣା ସୂଚନା ଅନ୍ୟ ଉପଯୋଗକାରୀଙ୍କ ଦ୍ୱାରା ବ୍ୟବହୃତ ହେଉଛି। {accountName} ଯାଞ୍ଚ କରନ୍ତୁ।",
+  "purchaseErrorReceiptAlreadyInUseError": "କ୍ରୟ ପୂର୍ବରୁ ହୋଇସାରିଛି କିମ୍ବା କ୍ରୟ ସୂଚନା ଅନ୍ୟ ଜଣେ ବ୍ୟବହାରକାରୀଙ୍କ ଖାତାରେ ବ୍ୟବହୃତ ହେଉଛି। ଦୟାକରି {accountName} ଖାତା ଯାଞ୍ଚ କରନ୍ତୁ",
   "purchaseErrorInvalidReceiptError": "ଅବୈଧ କ୍ରୟ ସୂଚନା। ଦୟାକରି ଆପଣଙ୍କ କ୍ରୟ ସୂଚନା ଯାଞ୍ଚ କରନ୍ତୁ।",
   "purchaseErrorMissingReceiptFileError": "କ୍ରେତାଙ୍କ ସୂଚନା ମିଳୁନାହିଁ। {accountName} ସହିତ ଡିଭାଇସ୍‌ରେ ସାଇନ୍ ଇନ୍ କରି ଚେଷ୍ଟା କରନ୍ତୁ।",
   "purchaseErrorNetworkError": "ନେଟୱାର୍କ ସଂଯୋଗ ଅସ୍ଥିର ଅଛି। ଆପଣଙ୍କର ସଂଯୋଗ ସ୍ଥିତି ଯାଞ୍ଚ କରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ।",

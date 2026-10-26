@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "تعذّر إتمام الدفع. يُرجى التأكد من صلاحية طريقة الدفع ثم المحاولة مرة أخرى.",
   "purchaseErrorProductNotAvailableForPurchaseError": "الخطة المحددة غير متاحة للشراء حاليًا. يرجى إعادة تشغيل التطبيق والمحاولة مرة أخرى.",
   "purchaseErrorProductAlreadyPurchasedError": "لقد اشتريتِ الخطة بالفعل. لاستعادة معلومات الشراء على هذا الجهاز، اختاري «هل اشتريتِ من قبل؟»",
-  "purchaseErrorReceiptAlreadyInUseError": "تم الشراء بالفعل، أو تم استخدام معلومات الشراء من قبل مستخدم آخر. يرجى التحقق من {accountName}",
+  "purchaseErrorReceiptAlreadyInUseError": "تم الشراء بالفعل، أو أن معلومات الشراء مستخدمة في حساب مستخدمة أخرى. يرجى التحقق من الحساب {accountName}",
   "purchaseErrorInvalidReceiptError": "معلومات الشراء غير صالحة. يرجى التحقق من تفاصيل الشراء",
   "purchaseErrorMissingReceiptFileError": "لا توجد معلومات المشتري. الرجاء تسجيل الدخول إلى الجهاز باستخدام {accountName} ثم المحاولة مرة أخرى",
   "purchaseErrorNetworkError": "حالة الشبكة غير مستقرة. يرجى التحقق من اتصالك والمحاولة مرة أخرى.",

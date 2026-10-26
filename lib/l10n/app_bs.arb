@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "Plaćanje nije uspjelo. Provjerite je li Vaš način plaćanja važeći pa pokušajte ponovo.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Odabrani plan trenutno nije dostupan za kupovinu. Molimo Vas da ponovo pokrenete aplikaciju i pokušate opet.",
   "purchaseErrorProductAlreadyPurchasedError": "Već ste kupili plan. Ako želite vratiti podatke o kupovini na ovom uređaju, odaberite „Već ste kupili?“",
-  "purchaseErrorReceiptAlreadyInUseError": "Već kupljeno ili informacije o kupovini koristi drugi korisnik. Molimo provjerite {accountName}.",
+  "purchaseErrorReceiptAlreadyInUseError": "Kupovina je već obavljena ili se podaci o kupovini koriste na drugom korisničkom računu. Molimo Vas, provjerite račun {accountName}",
   "purchaseErrorInvalidReceiptError": "Nevažeće informacije o kupovini. Molimo provjerite podatke o kupovini.",
   "purchaseErrorMissingReceiptFileError": "Informacije o kupcu ne postoje. Molimo prijavite se na uređaj sa {accountName} račun i pokušajte ponovo.",
   "purchaseErrorNetworkError": "Mrežna veza je nestabilna. Provjerite vašu internetsku vezu i pokušajte ponovo.",

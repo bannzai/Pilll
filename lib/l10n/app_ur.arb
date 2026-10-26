@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "ادائیگی مکمل نہیں ہو سکی۔ براہِ کرم چیک کریں کہ آپ کا ادائیگی کا طریقہ درست ہے، پھر دوبارہ کوشش کریں۔",
   "purchaseErrorProductNotAvailableForPurchaseError": "منتخب کردہ پلان فی الحال خریداری کے لیے دستیاب نہیں ہے۔ براہِ کرم ایپ دوبارہ شروع کریں اور پھر کوشش کریں۔",
   "purchaseErrorProductAlreadyPurchasedError": "یہ پلان پہلے ہی خریدا جا چکا ہے۔ اس ڈیوائس پر خریداری کی معلومات بحال کرنے کے لیے براہِ کرم «پہلے خرید چکے ہیں؟» منتخب کریں",
-  "purchaseErrorReceiptAlreadyInUseError": "پہلے سے خریدا گیا۔ یا خریداری کی معلومات کسی اور صارف کے ذریعے استعمال ہو رہی ہیں۔ برائے کرم {accountName} کی تصدیق کریں۔",
+  "purchaseErrorReceiptAlreadyInUseError": "خریداری پہلے ہی ہو چکی ہے یا خریداری کی معلومات کسی دوسرے صارف کے اکاؤنٹ میں استعمال ہو رہی ہیں۔ براہ کرم {accountName} اکاؤنٹ دیکھیں",
   "purchaseErrorInvalidReceiptError": "غیر درست خریداری کی معلومات۔ برائے کرم اپنی خریداری کی تفصیلات کی تصدیق کریں۔",
   "purchaseErrorMissingReceiptFileError": "خریدار کی معلومات موجود نہیں ہے۔ براہ کرم {accountName} کے ساتھ ڈیوائس میں سائن ان کرکے دوبارہ کوشش کریں",
   "purchaseErrorNetworkError": "نیٹ ورک کنکشن غیر مستحکم ہے۔ اپنا کنکشن چیک کر کے دوبارہ کوشش کریں۔",

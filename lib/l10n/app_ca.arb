@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "No s’ha pogut completar el pagament. Comprova que el mètode de pagament sigui vàlid i torna-ho a provar.",
   "purchaseErrorProductNotAvailableForPurchaseError": "El pla que has triat no està disponible per comprar ara mateix. Si us plau, reinicia l'aplicació i torna-ho a provar.",
   "purchaseErrorProductAlreadyPurchasedError": "Ja has comprat el pla. Per restaurar la compra en aquest dispositiu, selecciona «Ja l’havies comprat?»",
-  "purchaseErrorReceiptAlreadyInUseError": "Ja s'ha comprat o la informació de compra s'està utilitzant per un altre usuari. Verifiqueu {accountName}.",
+  "purchaseErrorReceiptAlreadyInUseError": "La compra ja s’ha fet, o bé un altre compte d’usuari fa servir les dades de compra. Comprova el compte {accountName}",
   "purchaseErrorInvalidReceiptError": "La informació de compra no és vàlida. Si us plau, comproveu les dades de compra.",
   "purchaseErrorMissingReceiptFileError": "No existeix informació del comprador. Si us plau, inicieu sessió al dispositiu amb {accountName} i torneu-ho a provar.",
   "purchaseErrorNetworkError": "La connexió de xarxa és inestable. Comproveu l'estat de la connexió i torneu-ho a provar.",

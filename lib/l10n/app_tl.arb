@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "Hindi natuloy ang pagbabayad. Pakitingnan po kung wasto ang paraan ninyo ng pagbabayad, at subukan muli.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Hindi muna mabibili ang napili ninyong plano. Pakisuyong buksan muli ang app at subukan ulit.",
   "purchaseErrorProductAlreadyPurchasedError": "Nabili na ninyo ang planong ito. Para maibalik ang impormasyon ng pagbili sa device na ito, piliin po ang “Nakabili na dati?”",
-  "purchaseErrorReceiptAlreadyInUseError": "Nabili na o ginagamit ng ibang user ang purchase information. Pakitingnan ang {accountName}",
+  "purchaseErrorReceiptAlreadyInUseError": "Nabili na po ito, o ginagamit ang impormasyon ng pagbili sa ibang account. Pakitingnan ang account na {accountName}",
   "purchaseErrorInvalidReceiptError": "Hindi wastong impormasyon ng pagbili. Pakisuri ang inyong impormasyon ng pagbili.",
   "purchaseErrorMissingReceiptFileError": "Hindi natagpuan ang impormasyon ng mamimili. Mag-sign in muna sa device gamit ang {accountName} at subukan ulit.",
   "purchaseErrorNetworkError": "Hindi stable ang network connection. Pakisuri ang inyong connection at subukan ulit.",

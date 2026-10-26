@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "Pagesa nuk u krye. Ju lutemi, kontrolloni nëse mënyra juaj e pagesës është e vlefshme dhe provoni përsëri.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Plani i zgjedhur nuk mund të blihet për momentin. Ju lutemi, rinisni aplikacionin dhe provoni përsëri.",
   "purchaseErrorProductAlreadyPurchasedError": "E keni blerë tashmë këtë plan. Për të rikthyer blerjen në këtë pajisje, zgjidhni «E keni blerë më parë?»",
-  "purchaseErrorReceiptAlreadyInUseError": "E blerë tashmë ose informacionet e blerjes janë në përdorim nga një përdorues tjetër. Kontrolloni {accountName}.",
+  "purchaseErrorReceiptAlreadyInUseError": "Blerja është kryer tashmë ose të dhënat e saj po përdoren në një llogari tjetër. Ju lutemi, kontrolloni llogarinë {accountName}",
   "purchaseErrorInvalidReceiptError": "Informacioni i blerjes është i pavlefshëm. Ju lutemi kontrolloni informacionin e blerjes.",
   "purchaseErrorMissingReceiptFileError": "Informacioni i blerësit nuk ekziston. Ju lutemi identifikohuni në pajisje me {accountName} dhe provoni përsëri.",
   "purchaseErrorNetworkError": "Lidhja me internetin është e paqëndrueshme. Ju lutemi kontrolloni lidhjen tuaj dhe provoni përsëri.",

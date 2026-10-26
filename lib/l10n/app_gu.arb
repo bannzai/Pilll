@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "ચુકવણી થઈ શકી નથી. તમારી ચુકવણીની રીત માન્ય છે કે નહીં તે તપાસો અને ફરી પ્રયાસ કરો.",
   "purchaseErrorProductNotAvailableForPurchaseError": "તમે પસંદ કરેલો પ્લાન હાલમાં ખરીદી માટે ઉપલબ્ધ નથી. કૃપા કરીને એપ ફરી શરૂ કરીને ફરી પ્રયાસ કરો.",
   "purchaseErrorProductAlreadyPurchasedError": "તમે આ પ્લાન પહેલેથી ખરીદ્યો છે. આ ઉપકરણ પર ખરીદીની માહિતી પુનઃસ્થાપિત કરવા માટે કૃપા કરીને “પહેલેથી ખરીદ્યું છે?” પસંદ કરો",
-  "purchaseErrorReceiptAlreadyInUseError": "પહેલેથી ખરીદાયેલ છે. અથવા ખરીદીની માહિતી બીજા વપરાશકર્તા દ્વારા ઉપયોગમાં લેવાઈ રહી છે. {accountName} ની તપાસ કરો.",
+  "purchaseErrorReceiptAlreadyInUseError": "ખરીદી પહેલેથી થઈ ગઈ છે અથવા ખરીદીની માહિતી બીજા વપરાશકર્તાના ખાતામાં વપરાઈ રહી છે. કૃપા કરીને {accountName} ખાતું તપાસો",
   "purchaseErrorInvalidReceiptError": "અમાન્ય ખરીદી માહિતી છે. કૃપયા તમારી ખરીદી માહિતીની ચકાસણી કરો.",
   "purchaseErrorMissingReceiptFileError": "ખરીદદારની માહિતી અસ્તિત્વમાં નથી. {accountName} સાથે ડિવાઇસમાં સાઇન ઇન કરીને પ્રયાસ કરો",
   "purchaseErrorNetworkError": "નેટવર્ક કનેક્શન અસ્થિર છે. કૃપા કરીને તમારા કનેક્શનની સ્થિતિ તપાસીને ફરીથી પ્રયાસ કરો.",

@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "Malipo hayakukamilika. Tafadhali hakikisha kuwa njia yako ya kulipa ni halali, kisha ujaribu tena.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Mpango uliochagua haupatikani kwa ununuzi kwa sasa. Tafadhali anzisha upya programu kisha ujaribu tena.",
   "purchaseErrorProductAlreadyPurchasedError": "Tayari umenunua mpango huu. Ili kurejesha taarifa za ununuzi kwenye kifaa hiki, tafadhali chagua “Ulishanunua?”",
-  "purchaseErrorReceiptAlreadyInUseError": "Imesha nunuliwa. Au taarifa ya ununuzi inatumika na mtumiaji mwingine. Tafadhali kagua {accountName}",
+  "purchaseErrorReceiptAlreadyInUseError": "Ununuzi tayari umefanyika, au taarifa za ununuzi zinatumika kwenye akaunti nyingine. Tafadhali angalia akaunti {accountName}",
   "purchaseErrorInvalidReceiptError": "Taarifa za ununuzi ni batili. Tafadhali hakiki taarifa zako za ununuzi",
   "purchaseErrorMissingReceiptFileError": "Taarifa za mnunuzi hazipatikani. Tafadhali ingia kwenye kifaa kwa kutumia {accountName} kisha ujaribu tena.",
   "purchaseErrorNetworkError": "Hali ya mtandao haijulikani. Tafadhali kagua muunganisho wako na ujaribu tena.",

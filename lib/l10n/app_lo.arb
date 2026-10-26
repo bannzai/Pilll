@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "ການຊຳລະເງິນບໍ່ສຳເລັດ. ກະລຸນາກວດສອບວ່າວິທີຊຳລະເງິນຂອງທ່ານຍັງໃຊ້ໄດ້ ແລ້ວລອງໃໝ່.",
   "purchaseErrorProductNotAvailableForPurchaseError": "ແຜນທີ່ເລືອກໄວ້ຍັງບໍ່ພ້ອມໃຫ້ຊື້ໃນຕອນນີ້. ກະລຸນາເປີດແອັບຄືນໃໝ່ ແລ້ວລອງອີກຄັ້ງ.",
   "purchaseErrorProductAlreadyPurchasedError": "ທ່ານໄດ້ຊື້ແຜນນີ້ແລ້ວ. ເພື່ອກູ້ຄືນຂໍ້ມູນການຊື້ໃນອຸປະກອນນີ້ ກະລຸນາເລືອກ «ເຄີຍຊື້ແລ້ວ?»",
-  "purchaseErrorReceiptAlreadyInUseError": "ໄດ້ຊື້ແລ້ວ ຫຼື ຂໍ້ມູນການຊື້ຖືກນຳໃຊ້ໂດຍຜູ້ໃຊ້ອື່ນແລ້ວ. ກະລຸນາກວດສອບ {accountName}",
+  "purchaseErrorReceiptAlreadyInUseError": "ໄດ້ຊື້ແລ້ວ ຫຼື ຂໍ້ມູນການຊື້ກຳລັງໃຊ້ຢູ່ໃນບັນຊີອື່ນ. ກະລຸນາກວດສອບບັນຊີ {accountName}",
   "purchaseErrorInvalidReceiptError": "ຂໍ້ມູນການຊື້ບໍ່ຖືກຕ້ອງ. ກະລຸນາກວດສອບຂໍ້ມູນການຊື້ຂອງທ່ານ.",
   "purchaseErrorMissingReceiptFileError": "ບໍ່ພົບຂໍ້ມູນຜູ້ຊື້. ກະລຸນາເຂົ້າລະບົບດ້ວຍ {accountName} ໃນອຸປະກອນນີ້ກ່ອນ ແລ້ວລອງໃໝ່",
   "purchaseErrorNetworkError": "ສະຖານະເຄືອຂ່າຍບໍ່ຄັງທີ່. ກະລຸນາກວດສອບສະຖານະການເຊື່ອມຕໍ່ແລ້ວລອງໃໝ່.",

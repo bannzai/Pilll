@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "Η πληρωμή δεν ολοκληρώθηκε. Ελέγξτε αν η μέθοδος πληρωμής σας είναι έγκυρη και δοκιμάστε ξανά.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Το πρόγραμμα που επιλέξατε δεν είναι διαθέσιμο για αγορά αυτήν τη στιγμή. Κάντε επανεκκίνηση της εφαρμογής και δοκιμάστε ξανά.",
   "purchaseErrorProductAlreadyPurchasedError": "Έχετε ήδη αγοράσει το πρόγραμμα. Για να επαναφέρετε την αγορά σε αυτή τη συσκευή, επιλέξτε «Έχετε αγοράσει ξανά;»",
-  "purchaseErrorReceiptAlreadyInUseError": "Έχει ήδη αγοραστεί ή οι πληροφορίες αγοράς χρησιμοποιούνται από άλλον χρήστη. Παρακαλώ ελέγξτε το {accountName}.",
+  "purchaseErrorReceiptAlreadyInUseError": "Η αγορά έχει ήδη ολοκληρωθεί ή τα στοιχεία της χρησιμοποιούνται από άλλον λογαριασμό. Ελέγξτε τον λογαριασμό {accountName}",
   "purchaseErrorInvalidReceiptError": "Μη έγκυρες πληροφορίες αγοράς. Παρακαλώ ελέγξτε τις πληροφορίες αγοράς σας.",
   "purchaseErrorMissingReceiptFileError": "Δεν βρέθηκαν στοιχεία αγοραστή. Συνδεθείτε με {accountName} στη συσκευή σας και δοκιμάστε ξανά.",
   "purchaseErrorNetworkError": "Η σύνδεση δικτύου είναι ασταθής. Παρακαλώ ελέγξτε τη σύνδεσή σας και δοκιμάστε ξανά.",

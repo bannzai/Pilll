@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "ಪಾವತಿ ಪೂರ್ಣಗೊಳ್ಳಲಿಲ್ಲ. ನಿಮ್ಮ ಪಾವತಿ ವಿಧಾನ ಮಾನ್ಯವಾಗಿದೆಯೇ ಎಂದು ಪರಿಶೀಲಿಸಿ, ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
   "purchaseErrorProductNotAvailableForPurchaseError": "ನೀವು ಆಯ್ಕೆ ಮಾಡಿದ ಯೋಜನೆ ಈಗ ಖರೀದಿಗೆ ಲಭ್ಯವಿಲ್ಲ. ದಯವಿಟ್ಟು ಆ್ಯಪ್ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಿ, ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
   "purchaseErrorProductAlreadyPurchasedError": "ನೀವು ಈ ಯೋಜನೆಯನ್ನು ಈಗಾಗಲೇ ಖರೀದಿಸಿದ್ದೀರಿ. ಈ ಸಾಧನದಲ್ಲಿ ಖರೀದಿಯ ಮಾಹಿತಿಯನ್ನು ಮರುಸ್ಥಾಪಿಸಲು ದಯವಿಟ್ಟು “ಈ ಹಿಂದೆ ಖರೀದಿಸಿದ್ದೀರಾ?” ಆಯ್ಕೆಮಾಡಿ",
-  "purchaseErrorReceiptAlreadyInUseError": "ಈಗಾಗಲೇ ಖರೀದಿಸಲಾಗಿದೆ. ಅಥವಾ ಖರೀದಿ ಮಾಹಿತಿಯನ್ನು ಬೇರೆ ಬಳಕೆದಾರರು ಬಳಸುತ್ತಿದ್ದಾರೆ. ದಯವಿಟ್ಟು {accountName} ಅನ್ನು ಪರಿಶೀಲಿಸಿ",
+  "purchaseErrorReceiptAlreadyInUseError": "ಖರೀದಿ ಈಗಾಗಲೇ ಆಗಿದೆ ಅಥವಾ ಖರೀದಿಯ ಮಾಹಿತಿಯನ್ನು ಬೇರೆ ಬಳಕೆದಾರರ ಖಾತೆಯಲ್ಲಿ ಬಳಸಲಾಗುತ್ತಿದೆ. ದಯವಿಟ್ಟು {accountName} ಖಾತೆಯನ್ನು ಪರಿಶೀಲಿಸಿ",
   "purchaseErrorInvalidReceiptError": "ಅಮಾನ್ಯ ಖರೀದಿ ಮಾಹಿತಿ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ಖರೀದಿ ಮಾಹಿತಿಯನ್ನು ಪರಿಶೀಲಿಸಿ",
   "purchaseErrorMissingReceiptFileError": "ಖರೀದಿದಾರರ ಮಾಹಿತಿ ಲಭ್ಯವಿಲ್ಲ. {accountName} ನೊಂದಿಗೆ ಸಾಧನದಲ್ಲಿ ಸೈನ್ ಇನ್ ಮಾಡಿದ ನಂತರ ಪ್ರಯತ್ನಿಸಿ",
   "purchaseErrorNetworkError": "ನೆಟ್‌ವರ್ಕ್ ಸ್ಥಿತಿ ಅಸ್ಥಿರವಾಗಿದೆ. ಸಂಪರ್ಕ ಸ್ಥಿತಿಯನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",

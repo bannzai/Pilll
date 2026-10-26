@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "S Zahle hät nöd klappt. Lueg bitte, öb dini Zahligsmethode gültig isch, und probiers nomal.",
   "purchaseErrorProductNotAvailableForPurchaseError": "De uusgwählti Plan chasch im Momänt nöd chaufe. Start d App bitte neu und probier's nomal.",
   "purchaseErrorProductAlreadyPurchasedError": "Du häsch de Plan scho kauft. Zum de Chauf uf däm Grät widerhärstelle, wähl «Scho emal kauft?»",
-  "purchaseErrorReceiptAlreadyInUseError": "Scho chauft oder d'Chaufinfo wird vo emne andere Benutzer bruucht. Prüef bitte {accountName}.",
+  "purchaseErrorReceiptAlreadyInUseError": "De Chauf isch scho gmacht worde, oder d Chaufdate wärded bi eme andere Konto bruucht. Lueg bitte s Konto {accountName} aa",
   "purchaseErrorInvalidReceiptError": "Ungültigi Chaufinformation. Bitte überprüefed Eui Chaufinformation.",
   "purchaseErrorMissingReceiptFileError": "Es git kei Chäufer-Information. Bitte mäldet euch mit {accountName} am Gerät aa und versuechet es nomol.",
   "purchaseErrorNetworkError": "D Netzwerkverbindig isch instabil. Bitte prüefed Ihri Internetverbindig und versueched es nomal.",

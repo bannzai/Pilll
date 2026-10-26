@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "Platba sa nepodarila. Skontrolujte, či je váš spôsob platby platný, a skúste to znova.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Vybraný plán momentálne nie je možné zakúpiť. Reštartujte aplikáciu a skúste to znova.",
   "purchaseErrorProductAlreadyPurchasedError": "Tento plán ste si už zakúpili. Ak chcete obnoviť nákup v tomto zariadení, vyberte „Už ste nakúpili?“",
-  "purchaseErrorReceiptAlreadyInUseError": "Už zakúpené alebo informácie o nákupe sú používané iným používateľom. Skontrolujte {accountName}.",
+  "purchaseErrorReceiptAlreadyInUseError": "Nákup už bol vykonaný alebo sa údaje o ňom používajú v inom účte. Skontrolujte, prosím, účet {accountName}",
   "purchaseErrorInvalidReceiptError": "Neplatné informácie o nákupe. Prosím, skontrolujte informácie o nákupe.",
   "purchaseErrorMissingReceiptFileError": "Informácie o kupujúcom neexistujú. Prihláste sa do zariadenia s účtom {accountName} a skúste to znovu.",
   "purchaseErrorNetworkError": "Pripojenie k sieti je nestabilné. Prosím skontrolujte pripojenie a skúste to znova.",

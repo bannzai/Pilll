@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "ክፍያው አልተሳካም። የክፍያ ዘዴዎ ትክክለኛ መሆኑን አረጋግጠው እንደገና ይሞክሩ።",
   "purchaseErrorProductNotAvailableForPurchaseError": "የተመረጠው እቅድ ለጊዜው ለግዢ አይገኝም። እባክዎ መተግበሪያውን እንደገና ከፍተው ይሞክሩ።",
   "purchaseErrorProductAlreadyPurchasedError": "ዕቅዱን አስቀድመው ገዝተዋል። በዚህ መሣሪያ ላይ የግዢ መረጃን ለመመለስ «ከዚህ በፊት ገዝተዋል?» የሚለውን ይጠቀሙ።",
-  "purchaseErrorReceiptAlreadyInUseError": "ቀደም ሲል የተገዛ ነው። ወይም የግዢ መረጃው በሌላ ተጠቃሚ ጥቅም ላይ ውሏል። እባክዎ {accountName}ን ያረጋግጡ።",
+  "purchaseErrorReceiptAlreadyInUseError": "አስቀድሞ ተገዝቷል፣ ወይም የግዢ መረጃው በሌላ ተጠቃሚ ጥቅም ላይ ውሏል። እባክዎ {accountName} የተባለውን መለያ ያረጋግጡ",
   "purchaseErrorInvalidReceiptError": "የተሳሳተ የግዢ መረጃ ነው። እባክዎን የግዢ መረጃዎትን ያረጋግጡ።",
   "purchaseErrorMissingReceiptFileError": "የገዢ መረጃ አልተገኘም። እባኮትን በ{accountName} ወደ መሳሪያዎ ሲገቡ እንደገና ይሞክሩ።",
   "purchaseErrorNetworkError": "የኔትወርክ ግንኙነቱ ያልተረጋጋ ነው። የግንኙነት ሁኔታዎን ከማረጋገጥ በኋላ እንደገና ይሞክሩ።",

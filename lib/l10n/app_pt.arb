@@ -293,7 +293,7 @@
   "purchaseErrorPurchaseInvalidError": "Não foi possível concluir o pagamento. Confira se a forma de pagamento é válida e tente novamente.",
   "purchaseErrorProductNotAvailableForPurchaseError": "O plano selecionado não está disponível para compra no momento. Reinicie o aplicativo e tente novamente.",
   "purchaseErrorProductAlreadyPurchasedError": "Você já comprou este plano. Para restaurar a compra neste dispositivo, selecione “Já comprou antes?”",
-  "purchaseErrorReceiptAlreadyInUseError": "Já adquirido ou as informações de compra já estão sendo utilizadas por outro usuário. Verifique {accountName}.",
+  "purchaseErrorReceiptAlreadyInUseError": "A compra já foi feita ou os dados da compra estão em uso em outra conta. Confira a conta {accountName}",
   "purchaseErrorInvalidReceiptError": "Informações de compra inválidas. Verifique os dados da sua compra.",
   "purchaseErrorMissingReceiptFileError": "Informações do comprador não encontradas. Faça login no dispositivo com {accountName} e tente novamente.",
   "purchaseErrorNetworkError": "Sua conexão com a internet está instável. Verifique sua conexão e tente novamente.",
