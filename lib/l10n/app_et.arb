@@ -452,7 +452,7 @@
   "lifetimeSubscriptionWarning": "Aitäh, et ostsid eluaegse paketi. Kui sul on kuu- või aastatellimus, ära unusta seda tühistada.",
   "lifetimePurchaseNotice1": "・Isegi kui ostad ühekordse maksega paketi, ei tühistata sinu kuu- või aastapaketti automaatselt.",
   "lifetimePurchaseNotice2": "siin",
-  "lifetimePurchaseNotice3": "tühistage eelnevalt ja seejärel ostke.",
+  "lifetimePurchaseNotice3": "Palun tühista see enne ostmist.",
   "featureAppealTryFeature": "Kontrolli",
   "recommendSignupGeneralTitle": "Soovitame konto loomist",
   "recommendSignupGeneralDescription": "Registreerimine võimaldab teil andmeid varundada",

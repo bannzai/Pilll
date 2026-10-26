@@ -452,7 +452,7 @@
   "lifetimeSubscriptionWarning": "Өмірлік жоспарды сатып алғаныңызға рақмет. Айлық немесе жылдық жазылымыңыз болса, оны тоқтатуды ұмытпаңыз.",
   "lifetimePurchaseNotice1": "・Бір реттік төлемі бар жоспарды сатып алсаңыз да, айлық немесе жылдық жоспарыңыз автоматты түрде тоқтатылмайды.",
   "lifetimePurchaseNotice2": "осында",
-  "lifetimePurchaseNotice3": "Алдын ала жазылымды тоқтатып алғаннан кейін ғана сатып алыңыз.",
+  "lifetimePurchaseNotice3": "Сатып алмас бұрын оны алдын ала тоқтатыңыз.",
   "featureAppealTryFeature": "Қолданып көру",
   "recommendSignupGeneralTitle": "Есептік жазбаға тіркелуді ұсынамыз",
   "recommendSignupGeneralDescription": "Тіркелу арқылы деректеріңіз сақтық көшірмеленеді",
