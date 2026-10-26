@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "Pirkuma informācija nav derīga. Lūdzu, pārbaudiet pirkuma datus",
   "purchaseErrorMissingReceiptFileError": "Pircēja informācija nav atrasta. Pierakstieties ierīcē ar kontu {accountName} un mēģiniet vēlreiz",
   "purchaseErrorNetworkError": "Tīkla savienojums nav stabils. Lūdzu, pārbaudiet savienojumu un mēģiniet vēlreiz.",
-  "purchaseErrorInvalidCredentialsError": "Pirkums neizdevās. Lūdzu uzgaidiet un mēģiniet vēlreiz. Ja problēma netiek atrisināta, lūdzu sazinieties ar mums sadaļā Iestatījumi > Kontakti. Detaļas: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "Pirkumu neizdevās pabeigt. Lūdzu, pēc brīža mēģiniet vēlreiz. Ja problēma saglabājas, sazinieties ar mums sadaļā Iestatījumi > Sazināties ar mums. Informācija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Pašlaik pirkšana nav iespējama. Lūdzu, uzgaidiet un mēģiniet vēlreiz. Ja problēma netiek atrisināta, lūdzu, sazinieties ar mums caur Iestatījumi > Sazināties. Detaļas: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Šī pirkuma informācija jau tiek izmantota citam lietotājam. Lūdzu pārbaudiet ierīcē pierakstīto {accountName}.",
   "purchaseErrorInvalidAppUserIdError": "Neizdevās verificēt lietotāju. Lūdzu, restartējiet lietotni un mēģiniet vēlreiz. Detaļas: {exceptionMessage}:{exceptionDetails}",

@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "কেনাকাটার তথ্য বৈধ নয়। অনুগ্রহ করে কেনাকাটার তথ্য যাচাই করুন",
   "purchaseErrorMissingReceiptFileError": "ক্রেতার তথ্য পাওয়া যায়নি। অনুগ্রহ করে আপনার ডিভাইসে {accountName} দিয়ে সাইন ইন করে আবার চেষ্টা করুন",
   "purchaseErrorNetworkError": "নেটওয়ার্ক সংযোগ অস্থির। অনুগ্রহ করে সংযোগ পরীক্ষা করে আবার চেষ্টা করুন।",
-  "purchaseErrorInvalidCredentialsError": "ক্রয় ব্যর্থ হয়েছে। কিছুক্ষণ পর আবার চেষ্টা করুন। সমাধান না হলে সেটিংস > যোগাযোগ থেকে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "কেনাকাটা সম্পন্ন হয়নি। অনুগ্রহ করে কিছুক্ষণ পরে আবার চেষ্টা করুন। সমস্যা থেকে গেলে সেটিংস > যোগাযোগ করুন থেকে আমাদের সঙ্গে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "বর্তমানে ক্রয় করা যাচ্ছে না। কিছুক্ষণ পর আবার চেষ্টা করুন। সমস্যার সমাধান না হলে সেটিংস > যোগাযোগ থেকে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "ক্রয়ের তথ্য অন্য ব্যবহারকারী দ্বারা ব্যবহৃত হচ্ছে। ডিভাইসে লগইন করা {accountName} যাচাই করুন।",
   "purchaseErrorInvalidAppUserIdError": "ব্যবহারকারী যাচাই করা যায়নি। অ্যাপ পুনঃচালু করে আবার চেষ্টা করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",

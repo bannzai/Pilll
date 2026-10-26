@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "Satın alma bilgileri geçersiz. Lütfen satın alma bilgilerinizi kontrol edin",
   "purchaseErrorMissingReceiptFileError": "Satın alan kişinin bilgileri bulunamadı. Lütfen cihazınızda {accountName} hesabıyla oturum açıp tekrar deneyin",
   "purchaseErrorNetworkError": "Ağ bağlantısı kararsız. Lütfen bağlantınızı kontrol edip tekrar deneyin.",
-  "purchaseErrorInvalidCredentialsError": "Satın alma başarısız oldu. Lütfen biraz bekleyip tekrar deneyin. Sorun çözülmezse Ayarlar > İletişim üzerinden bizimle iletişime geçin. Ayrıntılar: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "Satın alma tamamlanamadı. Lütfen biraz sonra tekrar deneyin. Sorun devam ederse Ayarlar > Bize ulaşın üzerinden bizimle iletişime geçin. Ayrıntılar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Şu anda satın alma yapılamıyor. Lütfen bir süre bekleyip tekrar deneyin. Sorun devam ederse Ayarlar > İletişim üzerinden bizimle iletişime geçin. Detay: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Satın alma bilgisi başka bir kullanıcı tarafından kullanılmaktadır. Cihazda oturum açmış olan {accountName} hesabını kontrol edin.",
   "purchaseErrorInvalidAppUserIdError": "Kullanıcı doğrulanamadı. Lütfen uygulamayı yeniden başlatın ve tekrar deneyin. Detaylar: {exceptionMessage}:{exceptionDetails}",

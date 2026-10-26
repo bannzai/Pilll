@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "Podatki o nakupu niso veljavni. Prosimo, preverite podatke o nakupu",
   "purchaseErrorMissingReceiptFileError": "Podatkov o kupcu ni bilo mogoče najti. V napravi se prijavite z računom {accountName} in poskusite znova",
   "purchaseErrorNetworkError": "Omrežna povezava ni stabilna. Preverite povezavo in poskusite znova.",
-  "purchaseErrorInvalidCredentialsError": "Nakup ni uspel. Poskusite znova pozneje. Če se težava ne reši, se obrnite na Nastavitve > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "Nakupa ni bilo mogoče dokončati. Čez nekaj časa poskusite znova. Če težava ne izgine, se obrnite na nas prek Nastavitve > Stik z nami. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Trenutno nakup ni možen. Prosimo, poskusite ponovno čez nekaj časa. Če se težava ne reši, nas kontaktirajte preko Nastavitve > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Nakupne informacije že uporablja drug uporabnik. Preverite račun {accountName}, prijavljen v tej napravi",
   "purchaseErrorInvalidAppUserIdError": "Uporabnik ni mogel biti preverjen. Prosimo, znova zaženite aplikacijo in poskusite ponovno. Podrobnosti: {exceptionMessage}:{exceptionDetails}",

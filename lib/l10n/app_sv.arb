@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "Köpuppgifterna är ogiltiga. Kontrollera gärna dina köpuppgifter",
   "purchaseErrorMissingReceiptFileError": "Uppgifter om köparen hittades inte. Logga in på din enhet med {accountName} och försök igen",
   "purchaseErrorNetworkError": "Nätverksanslutningen är instabil. Kontrollera anslutningen och försök igen.",
-  "purchaseErrorInvalidCredentialsError": "Köpet misslyckades. Vänligen försök igen senare. Om problemet kvarstår, kontakta oss via Inställningar > Support. Detaljer: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "Köpet kunde inte slutföras. Försök igen om en stund. Om problemet kvarstår kan du kontakta oss via Inställningar > Kontakta oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Köpet kan inte genomföras just nu. Vänta en stund och försök igen. Om problemet kvarstår, kontakta oss via Inställningar > Kontakta oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Köpinformationen används redan av en annan användare. Kontrollera {accountName} som är inloggad på enheten",
   "purchaseErrorInvalidAppUserIdError": "Användaren kunde inte verifieras. Starta om appen och försök igen. Detaljer: {exceptionMessage}:{exceptionDetails}",

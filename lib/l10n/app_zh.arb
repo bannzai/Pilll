@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "购买信息无效，请核对购买详情",
   "purchaseErrorMissingReceiptFileError": "未找到购买者信息。请在设备上登录 {accountName} 账号后重试",
   "purchaseErrorNetworkError": "网络连接不稳定。请检查连接后重试。",
-  "purchaseErrorInvalidCredentialsError": "购买失败，请稍后重试。如果问题仍未解决，请通过 设置 > 联系我们 联系客服。详细信息：{exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "购买未能完成，请稍后重试。如果问题仍未解决，请通过“设置 > 联系我们”与我们联系。详情：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "现在无法购买。请稍后重试。如果问题仍未解决，请通过 设置 > 联系我们 与我们联系。详细信息: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "购买信息已被其他用户使用。请确认设备上登录的{accountName}。",
   "purchaseErrorInvalidAppUserIdError": "无法验证用户。请重新启动应用后再试。详细信息：{exceptionMessage}:{exceptionDetails}",

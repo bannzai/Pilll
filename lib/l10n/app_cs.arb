@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "Údaje o nákupu nejsou platné. Zkontrolujte prosím údaje o nákupu",
   "purchaseErrorMissingReceiptFileError": "Informace o kupujícím nebyly nalezeny. Přihlaste se prosím v zařízení účtem {accountName} a zkuste to znovu",
   "purchaseErrorNetworkError": "Síťové připojení je nestabilní. Zkontrolujte prosím připojení a zkuste to znovu.",
-  "purchaseErrorInvalidCredentialsError": "Nákup se nezdařil. Zkuste to prosím znovu za chvíli. Pokud se problém nevyřeší, kontaktujte nás v Nastavení > Dotazy. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "Nákup se nepodařilo dokončit. Zkuste to prosím za chvíli znovu. Pokud problém přetrvá, kontaktujte nás přes Nastavení > Kontaktovat nás. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Nákup momentálně není možný. Zkuste to prosím znovu později. Pokud se problém nevyřeší, kontaktujte nás prosím přes Nastavení > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Údaje o nákupu jsou již používány jiným uživatelem. Zkontrolujte prosím {accountName} přihlášený na tomto zařízení",
   "purchaseErrorInvalidAppUserIdError": "Uživatel nemohl být ověřen. Restartujte aplikaci a zkuste to znovu. Podrobnosti: {exceptionMessage}:{exceptionDetails}",

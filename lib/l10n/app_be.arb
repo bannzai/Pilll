@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "Інфармацыя пра пакупку несапраўдная. Калі ласка, праверце звесткі пра пакупку",
   "purchaseErrorMissingReceiptFileError": "Звесткі пра пакупніка не знойдзены. Калі ласка, увайдзіце на прыладзе праз {accountName} і паспрабуйце яшчэ раз",
   "purchaseErrorNetworkError": "Злучэнне з сеткай нестабільнае. Калі ласка, праверце злучэнне і паспрабуйце яшчэ раз.",
-  "purchaseErrorInvalidCredentialsError": "Не ўдалося здзейсніць пакупку. Паспрабуйце зноў праз некаторы час. Калі праблема не вырашаецца, звярніцеся да нас праз Налады > Зваротная сувязь. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "Не ўдалося завяршыць куплю. Калі ласка, паспрабуйце яшчэ раз крыху пазней. Калі праблема застанецца, звяжыцеся з намі праз Налады > Звязацца з намі. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "У дадзены момант пакупка немагчыма. Калі ласка, пачакайце і паспрабуйце зноў. Калі праблема не вырашаецца, звярніцеся да нас праз Налады > Зваротная сувязь. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Інфармацыя аб покупцы ўжо выкарыстоўваецца іншым карыстальнікам. Праверце {accountName}, які залагінены на прыладзе",
   "purchaseErrorInvalidAppUserIdError": "Немагчыма пацвердзіць карыстальніка. Перазапусціце праграму і паспрабуйце зноў. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",

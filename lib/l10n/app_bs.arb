@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "Podaci o kupovini nisu važeći. Molimo provjerite podatke o kupovini",
   "purchaseErrorMissingReceiptFileError": "Podaci o kupcu nisu pronađeni. Molimo, prijavite se na uređaju računom {accountName} pa pokušajte ponovo",
   "purchaseErrorNetworkError": "Mrežna veza je nestabilna. Molimo Vas, provjerite vezu i pokušajte ponovo.",
-  "purchaseErrorInvalidCredentialsError": "Kupovina nije uspješna. Molimo pričekajte i pokušajte ponovo. Ako se problem nastavi, kontaktirajte nas preko Postavke > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "Kupovina nije uspjela. Molimo pokušajte ponovo malo kasnije. Ako se problem nastavi, kontaktirajte nas putem Postavke > Kontaktirajte nas. Detalji: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Kupovina trenutno nije dostupna. Molimo pokušajte ponovo kasnije. Ako se problem ne riješi, kontaktirajte nas preko Postavke > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Informacije o kupovini već koristi drugi korisnik. Provjerite {accountName} koji je prijavljen na uređaju.",
   "purchaseErrorInvalidAppUserIdError": "Korisnik nije mogao biti potvrđen. Molimo restartajte aplikaciju i pokušajte ponovo. Detalji: {exceptionMessage}:{exceptionDetails}",

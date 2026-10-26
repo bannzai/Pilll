@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "Maklumat pembelian tidak sah. Sila semak butiran pembelian anda",
   "purchaseErrorMissingReceiptFileError": "Maklumat pembeli tidak ditemui. Sila log masuk pada peranti anda dengan akaun {accountName}, kemudian cuba lagi",
   "purchaseErrorNetworkError": "Sambungan rangkaian tidak stabil. Sila semak sambungan anda dan cuba lagi.",
-  "purchaseErrorInvalidCredentialsError": "Pembelian tidak berjaya. Sila cuba lagi selepas beberapa ketika. Jika masalah tidak diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "Pembelian tidak berjaya. Sila cuba lagi sebentar nanti. Jika masalah berterusan, hubungi kami melalui Tetapan > Hubungi kami. Butiran: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Pembelian tidak dapat dilakukan pada masa ini. Sila cuba lagi selepas beberapa masa. Jika masalah tidak diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Maklumat pembelian telah digunakan oleh pengguna lain. Sila semak {accountName} yang log masuk pada peranti ini",
   "purchaseErrorInvalidAppUserIdError": "Pengguna tidak dapat disahkan. Sila mulakan semula aplikasi dan cuba lagi. Butiran: {exceptionMessage}:{exceptionDetails}",

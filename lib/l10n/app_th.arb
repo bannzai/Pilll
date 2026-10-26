@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "ข้อมูลการซื้อไม่ถูกต้องค่ะ โปรดตรวจสอบรายละเอียดการซื้อค่ะ",
   "purchaseErrorMissingReceiptFileError": "ไม่พบข้อมูลผู้ซื้อค่ะ โปรดลงชื่อเข้าใช้บนอุปกรณ์ด้วยบัญชี {accountName} แล้วลองอีกครั้งค่ะ",
   "purchaseErrorNetworkError": "การเชื่อมต่อเครือข่ายไม่เสถียรค่ะ โปรดตรวจสอบการเชื่อมต่อแล้วลองอีกครั้งค่ะ",
-  "purchaseErrorInvalidCredentialsError": "การซื้อล้มเหลว กรุณาลองใหม่อีกครั้งภายหลัง หากปัญหายังไม่ได้รับการแก้ไข กรุณาติดต่อสอบถามผ่าน การตั้งค่า > สอบถาม รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "การซื้อไม่สำเร็จค่ะ โปรดลองอีกครั้งในภายหลังนะคะ หากยังพบปัญหา โปรดติดต่อเราผ่าน การตั้งค่า > ติดต่อเรา ค่ะ รายละเอียด: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "ขณะนี้ไม่สามารถซื้อได้ โปรดลองใหม่ในภายหลัง หากปัญหายังไม่หายไป โปรดติดต่อเราผ่าน การตั้งค่า > ติดต่อเรา รายละเอียด: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "ข้อมูลการซื้อถูกใช้งานโดยผู้ใช้อื่นแล้ว โปรดตรวจสอบ {accountName} ที่เข้าสู่ระบบในอุปกรณ์นี้",
   "purchaseErrorInvalidAppUserIdError": "ไม่สามารถยืนยันตัวผู้ใช้ได้ กรุณาปิดแอปแล้วเปิดใหม่และลองอีกครั้ง รายละเอียด: {exceptionMessage}:{exceptionDetails}",

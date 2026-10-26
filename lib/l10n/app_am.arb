@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "የግዢ መረጃው ትክክል አይደለም። እባክዎ የግዢ መረጃውን ያረጋግጡ",
   "purchaseErrorMissingReceiptFileError": "የገዢው መረጃ አልተገኘም። እባክዎ በመሣሪያዎ ላይ በ{accountName} ይግቡና እንደገና ይሞክሩ",
   "purchaseErrorNetworkError": "የኔትወርክ ግንኙነቱ ያልተረጋጋ ነው። እባክዎ ግንኙነትዎን ያረጋግጡና እንደገና ይሞክሩ።",
-  "purchaseErrorInvalidCredentialsError": "ግዢው አልተሳካም። ትንሽ ጊዜ ጠብቀው እንደገና ይሞክሩ። ችግሩ ካልተፈታ ማሳያ > ጥያቄ በኩል ያነጋግሩን። ዝርዝር፦ {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "ግዢው አልተሳካም። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ። ችግሩ ካልተፈታ፣ በቅንብሮች > ያግኙን በኩል ያግኙን። ዝርዝሮች፦ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "አሁን ግዢ ማድረግ አይቻልም። ትንሽ ቆይተው እንደገና ይሞክሩ። ችግሩ ካልተፈታ ቅንብሮች > ጥያቄ በኩል ያነጋግሩን። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "የግዢ መረጃው በሌላ ተጠቃሚ ጥቅም ላይ ውሏል። በመሳሪያዎ ላይ የገባውን {accountName} ያረጋግጡ።",
   "purchaseErrorInvalidAppUserIdError": "ተጠቃሚው መረጋገጥ አልቻለም። እባክዎ መተግበሪያውን እንደገና ጀምረው ይሞክሩ። ዝርዝሮች: {exceptionMessage}:{exceptionDetails}",

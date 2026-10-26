@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "Сатып алу мәліметтері жарамсыз. Сатып алу мәліметтерін тексеріңіз",
   "purchaseErrorMissingReceiptFileError": "Сатып алушы туралы ақпарат табылмады. Құрылғыңызға {accountName} тіркелгісімен кіріп, қайталап көріңіз",
   "purchaseErrorNetworkError": "Желі байланысы тұрақсыз. Байланысты тексеріп, қайталап көріңіз.",
-  "purchaseErrorInvalidCredentialsError": "Сатып алу сәтсіз аяқталды. Біраз уақыттан кейін қайталап көріңіз. Мәселе шешілмесе, Баптаулар > Хабарласу арқылы бізбен хабарласыңыз. Толық ақпарат: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "Сатып алуды аяқтау мүмкін болмады. Біраз уақыттан кейін қайталап көріңіз. Мәселе шешілмесе, Параметрлер > Бізбен байланысу арқылы бізге хабарласыңыз. Толығырақ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Қазір сатып алу мүмкін емес. Біраз уақыттан кейін қайтадан сынап көріңіз. Мәселе шешілмесе, Параметрлер > Хабарласу арқылы бізге хабарласыңыз. Толық ақпарат: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Сатып алу ақпараты басқа пайдаланушы тарапынан пайдаланылады. Құрылғыға кірген {accountName} тексеріңіз",
   "purchaseErrorInvalidAppUserIdError": "Пайдаланушыны растау мүмкін болмады. Қолданбаны қайта іске қосып, қайтадан көріңіз. Егжей-тегжейлі ақпарат: {exceptionMessage}:{exceptionDetails}",

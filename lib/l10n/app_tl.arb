@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "Hindi wasto ang impormasyon sa pagbili. Pakisuri po ang mga detalye ng inyong pagbili",
   "purchaseErrorMissingReceiptFileError": "Hindi makita ang impormasyon ng bumili. Paki-sign in po sa inyong device gamit ang {accountName}, saka subukan muli",
   "purchaseErrorNetworkError": "Hindi matatag ang koneksyon sa network. Pakisuri po ang inyong koneksyon at subukan muli.",
-  "purchaseErrorInvalidCredentialsError": "Nabigo ang pagbili. Mangyaring subukan muli pagkatapos ng ilang sandali. Kung hindi nalulutas ang problema, makipag-ugnayan sa amin sa pamamagitan ng Settings > Makipag-ugnayan. Mga Detalye: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "Hindi natuloy ang pagbili. Pakisubukan po ulit makalipas ang ilang sandali. Kung magpapatuloy ang problema, makipag-ugnayan sa amin sa Mga setting > Makipag-ugnayan sa amin. Mga detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Hindi makakabili ngayon. Subukan ulit mamaya. Kung hindi pa rin gumana, pumunta sa Settings > Contact. Detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Ang impormasyon ng pagbili ay ginagamit na ng ibang user. Pakitingnan ang {accountName} na naka-login sa device",
   "purchaseErrorInvalidAppUserIdError": "Hindi na-verify ang user. Mangyaring i-restart ang app at subukan ulit. Mga detalye: {exceptionMessage}:{exceptionDetails}",

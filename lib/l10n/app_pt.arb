@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "As informações da compra não são válidas. Confira os detalhes da sua compra",
   "purchaseErrorMissingReceiptFileError": "Não encontramos as informações de quem fez a compra. Entre no dispositivo com a conta {accountName} e tente novamente",
   "purchaseErrorNetworkError": "A conexão com a rede está instável. Confira sua conexão e tente novamente.",
-  "purchaseErrorInvalidCredentialsError": "A compra falhou. Tente novamente após alguns instantes. Se o problema persistir, entre em contato através de Configurações > Contato. Detalhes: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "Não foi possível concluir a compra. Tente novamente daqui a pouco. Se o problema continuar, entre em contato pelo caminho Configurações > Fale conosco. Detalhes: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "No momento não é possível realizar a compra. Tente novamente mais tarde. Se o problema persistir, entre em contato através de Configurações > Suporte. Detalhes: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "As informações de compra já estão em uso por outro usuário. Verifique a conta {accountName} conectada ao seu dispositivo.",
   "purchaseErrorInvalidAppUserIdError": "Não foi possível verificar o usuário. Reinicie o aplicativo e tente novamente. Detalhes: {exceptionMessage}:{exceptionDetails}",

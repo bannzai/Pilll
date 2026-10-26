@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "معلومات الشراء غير صالحة. يرجى التحقق من معلومات الشراء",
   "purchaseErrorMissingReceiptFileError": "لم يتم العثور على معلومات الشراء. يرجى تسجيل الدخول إلى الجهاز باستخدام {accountName} ثم المحاولة مرة أخرى",
   "purchaseErrorNetworkError": "اتصال الشبكة غير مستقر. يرجى التحقق من الاتصال ثم المحاولة مرة أخرى.",
-  "purchaseErrorInvalidCredentialsError": "فشل في إتمام عملية الشراء. يرجى المحاولة مرة أخرى بعد فترة. إذا استمرت المشكلة، يرجى التواصل معنا من خلال الإعدادات > الاستفسار. التفاصيل: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "تعذر إتمام الشراء. يُرجى المحاولة مجددًا بعد قليل. إذا استمرت المشكلة، فتواصلي معنا عبر الإعدادات > اتصلي بنا. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "لا يمكن إجراء الشراء حالياً. يرجى الانتظار قليلاً والمحاولة مرة أخرى. إذا لم تحل المشكلة، يرجى التواصل معنا من الإعدادات > اتصل بنا. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "معلومات الشراء مستخدمة بواسطة مستخدم آخر. يرجى التحقق من {accountName} المسجل دخوله على الجهاز",
   "purchaseErrorInvalidAppUserIdError": "تعذر التحقق من المستخدم. يرجى إعادة تشغيل التطبيق والمحاولة مرة أخرى. التفاصيل: {exceptionMessage}:{exceptionDetails}",

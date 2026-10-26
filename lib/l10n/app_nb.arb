@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "Kjøpsinformasjonen er ugyldig. Sjekk gjerne kjøpsopplysningene dine",
   "purchaseErrorMissingReceiptFileError": "Informasjonen om kjøperen ble ikke funnet. Logg inn på enheten med {accountName}, og prøv igjen",
   "purchaseErrorNetworkError": "Nettverkstilkoblingen er ustabil. Sjekk tilkoblingen og prøv igjen.",
-  "purchaseErrorInvalidCredentialsError": "Kjøpet mislyktes. Vennligst vent litt og prøv igjen. Hvis problemet vedvarer, kontakt oss via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "Kjøpet kunne ikke fullføres. Prøv igjen om litt. Hvis problemet fortsetter, kan du kontakte oss via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Kjøp er ikke mulig for øyeblikket. Prøv igjen senere. Hvis problemet ikke løses, kontakt oss via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Kjøpsinformasjonen er allerede i bruk av en annen bruker. Kontroller {accountName} som er logget inn på enheten.",
   "purchaseErrorInvalidAppUserIdError": "Kunne ikke bekrefte bruker. Start appen på nytt og prøv igjen. Detaljer: {exceptionMessage}:{exceptionDetails}",

@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "د پېرود معلومات سم نه دي. مهرباني وکړئ د پېرود معلومات وګورئ",
   "purchaseErrorMissingReceiptFileError": "د پېرودونکي معلومات ونه موندل شول. مهرباني وکړئ په خپل وسیله کې د {accountName} حساب ته ننوځئ او بیا هڅه وکړئ",
   "purchaseErrorNetworkError": "د شبکې اړیکه ثابته نه ده. مهرباني وکړئ اړیکه وګورئ او بیا هڅه وکړئ.",
-  "purchaseErrorInvalidCredentialsError": "پیرودل ناکام شو. مهرباني وکړئ د لږ وخت وروسته بیا هڅه وکړئ. که ستونزه حل نه شي، د تنظیمات > پوښتنو څخه موږ سره اړیکه ونیسئ. تفصیل: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "پېرود بشپړ نه شو. مهرباني وکړئ لږ وروسته بیا هڅه وکړئ. که ستونزه دوام وکړي، د امستنو > له موږ سره اړیکه له لارې له موږ سره اړیکه ونیسئ. جزییات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "دا وخت پیرودل ممکن ندي. مهرباني وکړئ د یو څه وخت وروسته بیا هڅه وکړئ. که ستونزه حل نشي د تنظیمات > اړیکه ونیسئ څخه زموږ سره اړیکه ونیسئ. تفصیلات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "د پیرودلو معلومات د بل کاروونکي لخوا کارول کیږي. د دغه وسیلې کې ننوتل شوی {accountName} وګورئ",
   "purchaseErrorInvalidAppUserIdError": "کاروونکي تصدیق نه شو. اپ ریسټارټ کړئ او بیا هڅه وکړئ. تفصیلات: {exceptionMessage}:{exceptionDetails}",

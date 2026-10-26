@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "Данные о покупке недействительны. Пожалуйста, проверьте сведения о покупке",
   "purchaseErrorMissingReceiptFileError": "Информация о покупателе не найдена. Войдите на устройстве в учётную запись {accountName} и попробуйте снова",
   "purchaseErrorNetworkError": "Соединение с сетью нестабильно. Проверьте подключение и попробуйте ещё раз.",
-  "purchaseErrorInvalidCredentialsError": "Не удалось совершить покупку. Попробуйте еще раз через некоторое время. Если проблема не решается, обратитесь к нам через Настройки > Обратная связь. Подробности: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "Не удалось завершить покупку. Пожалуйста, попробуйте ещё раз немного позже. Если проблема сохранится, свяжитесь с нами через Настройки > Связаться с нами. Подробности: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "В настоящее время покупка недоступна. Попробуйте снова через некоторое время. Если проблема не решается, обратитесь к нам через Настройки > Обратная связь. Подробности: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Информация о покупке используется другим пользователем. Проверьте {accountName}, под которым выполнен вход на устройство",
   "purchaseErrorInvalidAppUserIdError": "Не удалось подтвердить пользователя. Пожалуйста, перезапустите приложение и попробуйте снова. Подробности: {exceptionMessage}:{exceptionDetails}",

@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "Dane zakupu są nieprawidłowe. Sprawdź szczegóły zakupu",
   "purchaseErrorMissingReceiptFileError": "Nie znaleziono danych kupującego. Zaloguj się na urządzeniu na konto {accountName} i spróbuj ponownie",
   "purchaseErrorNetworkError": "Połączenie z siecią jest niestabilne. Sprawdź połączenie i spróbuj ponownie.",
-  "purchaseErrorInvalidCredentialsError": "Zakup nie powiódł się. Spróbuj ponownie po chwili. Jeśli problem nadal występuje, skontaktuj się z nami przez Ustawienia > Kontakt. Szczegóły: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "Nie udało się sfinalizować zakupu. Spróbuj ponownie za jakiś czas. Jeśli problem będzie się powtarzać, skontaktuj się z nami przez Ustawienia > Kontakt. Szczegóły: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Obecnie nie można dokonać zakupu. Proszę spróbować ponownie po chwili. Jeśli problem nie zostanie rozwiązany, skontaktuj się z nami poprzez Ustawienia > Kontakt. Szczegóły: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Informacje o zakupie są już używane przez innego użytkownika. Sprawdź konto {accountName} zalogowane na tym urządzeniu",
   "purchaseErrorInvalidAppUserIdError": "Nie można zweryfikować użytkownika. Uruchom ponownie aplikację i spróbuj jeszcze raz. Szczegóły: {exceptionMessage}:{exceptionDetails}",

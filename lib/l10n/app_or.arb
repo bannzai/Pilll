@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "କ୍ରୟ ସୂଚନା ବୈଧ ନୁହେଁ। ଦୟାକରି ଆପଣଙ୍କ କ୍ରୟ ବିବରଣୀ ଯାଞ୍ଚ କରନ୍ତୁ",
   "purchaseErrorMissingReceiptFileError": "କ୍ରେତାଙ୍କ ସୂଚନା ମିଳିଲା ନାହିଁ। ଦୟାକରି ଆପଣଙ୍କ ଡିଭାଇସରେ {accountName} ଆକାଉଣ୍ଟରେ ସାଇନ୍ ଇନ୍ କରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ",
   "purchaseErrorNetworkError": "ନେଟୱର୍କ ସଂଯୋଗ ସ୍ଥିର ନାହିଁ। ଦୟାକରି ସଂଯୋଗ ଯାଞ୍ଚ କରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।",
-  "purchaseErrorInvalidCredentialsError": "କିଣାଯିବାରେ ବିଫଳ ହୋଇଛି। କିଛି ସମୟ ପରେ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ। ସମାଧାନ ନ ହେଲେ ସେଟିଂ > ଯୋଗାଯୋଗ ଦ୍ୱାରା ଯୋଗାଯୋଗ କରନ୍ତୁ। ବିସ୍ତାରିତ ତଥ୍ୟ: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "କ୍ରୟ ସମ୍ପୂର୍ଣ୍ଣ ହୋଇପାରିଲା ନାହିଁ। ଦୟାକରି କିଛି ସମୟ ପରେ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ। ସମସ୍ୟା ଜାରି ରହିଲେ, ସେଟିଂସ୍ > ଆମ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ ମାଧ୍ୟମରେ ଆମ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "ବର୍ତ୍ତମାନ କ୍ରୟ କରିପାରିବେ ନାହିଁ। କିଛି ସମୟ ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ସମାଧାନ ହୁଏ ନାହିଁ, ସେଟିଂସ୍ > ଯୋଗାଯୋଗ ରୁ ଆମକୁ ଯୋଗାଯୋଗ କରନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "କ୍ରୟ ସୂଚନା ଅନ୍ୟ ଏକ ବ୍ୟବହାରକାରୀଙ୍କ ଦ୍ୱାରା ବ୍ୟବହାର ହେଉଛି। ଦୟାକରି ଆପଣଙ୍କ ଡିଭାଇସରେ ଲଗଇନ ହୋଇଥିବା {accountName} ଯାଞ୍ଚ କରନ୍ତୁ।",
   "purchaseErrorInvalidAppUserIdError": "ଉପଯୋଗକର୍ତ୍ତା ଯାଞ୍ଚ କରିହେଲା ନାହିଁ। ଆପ୍ ପୁନଃଚାଳୁ କରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ। ବିସ୍ତାର: {exceptionMessage}:{exceptionDetails}",

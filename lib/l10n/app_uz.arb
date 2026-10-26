@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "Xarid maʼlumotlari yaroqsiz. Iltimos, xarid tafsilotlarini tekshiring",
   "purchaseErrorMissingReceiptFileError": "Xaridor maʼlumotlari topilmadi. Iltimos, qurilmangizda {accountName} hisobi bilan tizimga kirib, qayta urinib koʻring",
   "purchaseErrorNetworkError": "Tarmoq aloqasi barqaror emas. Iltimos, ulanishni tekshirib, qayta urinib koʻring.",
-  "purchaseErrorInvalidCredentialsError": "Xarid amalga oshmadi. Biroz kutib, qaytadan urinib ko'ring. Agar muammo hal bo'lmasa, Sozlamalar > Murojaat orqali bog'laning. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "Xaridni yakunlab boʻlmadi. Iltimos, birozdan keyin qayta urinib koʻring. Muammo davom etsa, Sozlamalar > Biz bilan bogʻlanish orqali bizga murojaat qiling. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Hozirda xarid qilib bo'lmayapti. Biroz vaqtdan so'ng yana urinib ko'ring. Agar muammo hal bo'lmasa, Sozlamalar > Murojaat orqali murojaat qiling. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Bu xarid ma'lumotlari boshqa foydalanuvchi tomonidan ishlatilmoqda. Qurilmangizga kirgan {accountName}ni tekshiring",
   "purchaseErrorInvalidAppUserIdError": "Foydalanuvchini tasdiqlash mumkin emas edi. Ilovani qayta ishga tushiring va qayta urinib ko'ring. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",

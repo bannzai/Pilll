@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "შეძენის ინფორმაცია არასწორია. გთხოვთ, შეამოწმოთ შეძენის დეტალები",
   "purchaseErrorMissingReceiptFileError": "მყიდველის ინფორმაცია ვერ მოიძებნა. გთხოვთ, მოწყობილობაზე შეხვიდეთ {accountName} ანგარიშით და ხელახლა სცადოთ",
   "purchaseErrorNetworkError": "ქსელთან კავშირი არასტაბილურია. გთხოვთ, შეამოწმოთ კავშირი და ხელახლა სცადოთ.",
-  "purchaseErrorInvalidCredentialsError": "ყიდვა წარუმატებელი იყო. გთხოვთ, სცადოთ მოგვიანებით. თუ პრობლემა არ იქნება გადაწყვეტილი, გთხოვთ, დაგვიკავშირდით პარამეტრები > დაკავშირება საშუალებით. დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "შეძენა ვერ დასრულდა. გთხოვთ, ცოტა ხნის შემდეგ ისევ სცადოთ. თუ პრობლემა გაგრძელდა, დაგვიკავშირდით პარამეტრები > დაგვიკავშირდით განყოფილებიდან. დეტალები: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "ამჟამად შეძენა შეუძლებელია. გაიცადეთ ხანი და სცადეთ ხელახლა. თუ პრობლემა არ მოგვარდება, დაგვიკავშირდით პარამეტრები > მხარდაჭერა-ში. დეტალები: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "შესყიდვის ინფორმაცია სხვა მომხმარებლის მიერ გამოიყენება. გთხოვთ შეამოწმოთ მოწყობილობაში შესული {accountName}",
   "purchaseErrorInvalidAppUserIdError": "მომხმარებლის ვერიფიკაცია ვერ მოხერხდა. გთხოვთ, ხელახლა გაუშვათ აპლიკაცია და კიდევ სცადოთ. დეტალები: {exceptionMessage}:{exceptionDetails}",

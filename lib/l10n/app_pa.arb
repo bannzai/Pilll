@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "ਖਰੀਦ ਦੀ ਜਾਣਕਾਰੀ ਵੈਧ ਨਹੀਂ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਖਰੀਦ ਦੇ ਵੇਰਵੇ ਜਾਂਚੋ",
   "purchaseErrorMissingReceiptFileError": "ਖਰੀਦਦਾਰ ਦੀ ਜਾਣਕਾਰੀ ਨਹੀਂ ਮਿਲੀ। ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਡਿਵਾਈਸ 'ਤੇ {accountName} ਖਾਤੇ ਨਾਲ ਸਾਈਨ ਇਨ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
   "purchaseErrorNetworkError": "ਨੈੱਟਵਰਕ ਕਨੈਕਸ਼ਨ ਸਥਿਰ ਨਹੀਂ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
-  "purchaseErrorInvalidCredentialsError": "ਖਰੀਦਦਾਰੀ ਅਸਫਲ ਹੋ ਗਈ। ਕੁਝ ਸਮੇਂ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਜੇਕਰ ਸਮੱਸਿਆ ਹੱਲ ਨਹੀਂ ਹੁੰਦੀ ਤਾਂ ਸੈਟਿੰਗਜ਼ > ਸੰਪਰਕ ਰਾਹੀਂ ਸੰਪਰਕ ਕਰੋ। ਵਿਸਤਾਰ: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "ਖਰੀਦ ਪੂਰੀ ਨਹੀਂ ਹੋ ਸਕੀ। ਕਿਰਪਾ ਕਰਕੇ ਕੁਝ ਸਮੇਂ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਜੇ ਸਮੱਸਿਆ ਬਣੀ ਰਹੇ, ਤਾਂ ਸੈਟਿੰਗਾਂ > ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ ਰਾਹੀਂ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ। ਵੇਰਵੇ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "ਫਿਲਹਾਲ ਖਰੀਦਦਾਰੀ ਨਹੀਂ ਕਰ ਸਕਦੇ। ਕਿਰਪਾ ਕਰਕੇ ਕੁਝ ਸਮਾਂ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਜੇ ਸਮੱਸਿਆ ਬਣੀ ਰਹੇ, ਤਾਂ ਸੈਟਿੰਗਜ਼ > ਸੰਪਰਕ ਤੋਂ ਸਾਡੇ ਨਾਲ ਜੁੜੋ। ਵੇਰਵਾ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "ਖਰੀਦਦਾਰੀ ਦੀ ਜਾਣਕਾਰੀ ਕਿਸੇ ਹੋਰ ਯੂਜ਼ਰ ਦੁਆਰਾ ਵਰਤੀ ਜਾ ਰਹੀ ਹੈ। ਆਪਣੇ ਡਿਵਾਈਸ ਵਿੱਚ ਲਾਗਇਨ {accountName} ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ।",
   "purchaseErrorInvalidAppUserIdError": "ਯੂਜ਼ਰ ਦੀ ਪੁਸ਼ਟੀ ਨਹੀਂ ਹੋ ਸਕੀ। ਐਪ ਨੂੰ ਮੁੜ ਸ਼ੁਰੂ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਵੇਰਵੇ: {exceptionMessage}:{exceptionDetails}",

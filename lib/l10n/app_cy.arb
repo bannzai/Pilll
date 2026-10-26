@@ -297,7 +297,7 @@
   "purchaseErrorInvalidReceiptError": "Nid yw'r wybodaeth brynu'n ddilys. Gwiriwch fanylion eich pryniant",
   "purchaseErrorMissingReceiptFileError": "Ni chafwyd gwybodaeth y prynwr. Mewngofnodwch ar eich dyfais gyda {accountName} a rhowch gynnig arall arni",
   "purchaseErrorNetworkError": "Mae'r cysylltiad rhwydwaith yn ansefydlog. Gwiriwch eich cysylltiad a rhowch gynnig arall arni, os gwelwch yn dda.",
-  "purchaseErrorInvalidCredentialsError": "Mae'r bryniant wedi methu. Rhowch gynnig arall arni ar ôl ychydig o amser. Os na lwyddwch i ddatrys y broblem, cysylltwch â ni drwy Gosodiadau > Ymholiadau. Manylion: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "Ni fu modd cwblhau’r pryniant. Rhowch gynnig arall arni ymhen ychydig. Os bydd y broblem yn parhau, cysylltwch â ni drwy Gosodiadau > Cysylltu â ni. Manylion: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Ni ellir prynu ar hyn o bryd. Rhowch gynnig arall arni ar ôl sbel. Os na fydd hyn yn datrys y broblem, cysylltwch â ni drwy Gosodiadau > Cysylltu â ni. Manylion: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Mae'r wybodaeth brynu yn cael ei defnyddio gan ddefnyddiwr arall. Gwiriwch {accountName} sydd wedi mewngofnodi i'r ddyfais",
   "purchaseErrorInvalidAppUserIdError": "Ni allwyd cadarnhau'r defnyddiwr. Rhowch gynnig arall arni ar ôl ailgychwyn yr ap. Manylion: {exceptionMessage}:{exceptionDetails}",
