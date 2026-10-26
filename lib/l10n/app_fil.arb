@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "Gusto po ba ninyong pansamantalang ihinto ang pag-inom ng pildoras simula sa bilang {number}?",
   "lastTakenPlusOnePillNumber": "Pildoras bilang {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Pag-inom ng pildoras",
-  "estimatedEndPillNumber": "Katapusan ng nakaraang sheet: Pang-{estimatedEndPillNumber}",
+  "estimatedEndPillNumber": "Huling tableta sa nakaraang pakete: blg. {estimatedEndPillNumber}",
   "addPillSheetButton": "Magdagdag ng Pill Sheet",
   "taken": "uminom",
   "notTaken": "Hindi nainom",

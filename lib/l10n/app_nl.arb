@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "Wil je vanaf pil {number} een pauze nemen met de pil?",
   "lastTakenPlusOnePillNumber": "Pil nummer {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Pil innemen",
-  "estimatedEndPillNumber": "Laatste van vorige strip: pil {estimatedEndPillNumber}",
+  "estimatedEndPillNumber": "Laatste pil op de vorige strip: nr. {estimatedEndPillNumber}",
   "addPillSheetButton": "Pilstrip toevoegen",
   "taken": "genomen",
   "notTaken": "Niet genomen",

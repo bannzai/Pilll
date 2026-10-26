@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "{number}వ మాత్ర నుంచి మాత్రలు తీసుకోవడాన్ని కొంతకాలం ఆపాలనుకుంటున్నారా?",
   "lastTakenPlusOnePillNumber": "మాత్ర సంఖ్య {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "మాత్ర వేసుకోవడం",
-  "estimatedEndPillNumber": "గత షీట్ చివరిది: {estimatedEndPillNumber} నంబర్",
+  "estimatedEndPillNumber": "మునుపటి మాత్రల షీట్‌లో చివరి మాత్ర: నం. {estimatedEndPillNumber}",
   "addPillSheetButton": "పిల్ షీట్ జోడించండి",
   "taken": "తీసుకున్నాను",
   "notTaken": "తీసుకోలేదు",

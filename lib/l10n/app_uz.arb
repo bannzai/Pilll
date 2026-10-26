@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "{number}-raqamli tabletkadan boshlab qabul qilishni vaqtincha toʻxtatmoqchimisiz?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}-raqamli tabletka",
   "taking": "Tabletkani qabul qilish",
-  "estimatedEndPillNumber": "Oldingi varaqning oxiri: {estimatedEndPillNumber}-chi",
+  "estimatedEndPillNumber": "Oldingi blisterdagi oxirgi tabletka: № {estimatedEndPillNumber}",
   "addPillSheetButton": "Dori paketini qo'shish",
   "taken": "Ichdi",
   "notTaken": "Qabul qilmagan",

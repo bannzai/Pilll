@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "{number}. pilulatik aurrera hartzeari utzi nahi diozu aldi baterako?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}. pilula",
   "taking": "Pilula hartzea",
-  "estimatedEndPillNumber": "Aurreko orriaren azkena: {estimatedEndPillNumber}",
+  "estimatedEndPillNumber": "Aurreko blisterreko azken pilula: {estimatedEndPillNumber}. zenbakia",
   "addPillSheetButton": "Pilula-orria gehitu",
   "taken": "Edana",
   "notTaken": "Hartu gabe",

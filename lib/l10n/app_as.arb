@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "{number} নম্বৰৰ বড়িৰ পৰা খোৱাটো কিছুদিনৰ বাবে বন্ধ ৰাখিব বিচাৰেনে?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} নম্বৰ পিল",
   "taking": "পিল খোৱা",
-  "estimatedEndPillNumber": "আগৰ শ্বীটৰ শেষ: {estimatedEndPillNumber} নং",
+  "estimatedEndPillNumber": "আগৰ পিল শ্বীটৰ শেষৰ বড়ি: নম্বৰ {estimatedEndPillNumber}",
   "addPillSheetButton": "বড়িৰ শীট যোগ কৰক",
   "taken": "খোৱা",
   "notTaken": "নোলোৱা",

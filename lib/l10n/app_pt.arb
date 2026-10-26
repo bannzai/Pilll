@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "Quer fazer uma pausa na tomada das pílulas a partir da número {number}?",
   "lastTakenPlusOnePillNumber": "Pílula nº {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Tomar a pílula",
-  "estimatedEndPillNumber": "Último da cartela anterior: {estimatedEndPillNumber}",
+  "estimatedEndPillNumber": "Última pílula da cartela anterior: nº {estimatedEndPillNumber}",
   "addPillSheetButton": "Adicionar cartela",
   "taken": "Tomada",
   "notTaken": "Não tomado",

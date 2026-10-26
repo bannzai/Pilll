@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "{number}-таблеткадан баштап ичүүнү убактылуу токтоткуңуз келеби?",
   "lastTakenPlusOnePillNumber": "№ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} таблетка",
   "taking": "Таблетка ичүү",
-  "estimatedEndPillNumber": "Мурунку барактын соңку: {estimatedEndPillNumber}-номер",
+  "estimatedEndPillNumber": "Мурунку блистердеги акыркы таблетка: № {estimatedEndPillNumber}",
   "addPillSheetButton": "Таблетка пакетти кошуу",
   "taken": "ичкен",
   "notTaken": "ичкен жок",

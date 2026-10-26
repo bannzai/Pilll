@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "Θέλετε να κάνετε παύση στη λήψη των χαπιών από το χάπι {number} και μετά;",
   "lastTakenPlusOnePillNumber": "Χάπι αρ. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Λήψη χαπιού",
-  "estimatedEndPillNumber": "Τέλος προηγούμενου φύλλου: {estimatedEndPillNumber}",
+  "estimatedEndPillNumber": "Τελευταίο χάπι στην προηγούμενη καρτέλα: αρ. {estimatedEndPillNumber}",
   "addPillSheetButton": "Προσθήκη φύλλου χαπιών",
   "taken": "Πήρα",
   "notTaken": "Μη ληφθέν",

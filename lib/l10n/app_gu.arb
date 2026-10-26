@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "શું તમે {number} નંબરની ગોળીથી ગોળીઓ લેવાનું થોડા સમય માટે બંધ રાખવા માંગો છો?",
   "lastTakenPlusOnePillNumber": "ગોળી નંબર {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ગોળી લેવી",
-  "estimatedEndPillNumber": "પૂર્વ શીટનો છેલ્લો: {estimatedEndPillNumber} નંબર",
+  "estimatedEndPillNumber": "પાછલી પિલ શીટની છેલ્લી ગોળી: નંબર {estimatedEndPillNumber}",
   "addPillSheetButton": "ગોળી શીટ ઉમેરો",
   "taken": "લીધું",
   "notTaken": "લીધું નથી",

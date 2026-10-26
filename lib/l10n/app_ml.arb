@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "{number}-ാം ഗുളിക മുതൽ ഗുളിക കഴിക്കുന്നത് കുറച്ചുകാലത്തേക്ക് നിർത്തണോ?",
   "lastTakenPlusOnePillNumber": "ഗുളിക നമ്പർ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ഗുളിക കഴിക്കൽ",
-  "estimatedEndPillNumber": "മുൻപത്തെ ഷീറ്റിന്റെ അവസാനം: {estimatedEndPillNumber} നമ്പർ",
+  "estimatedEndPillNumber": "മുമ്പത്തെ സ്ട്രിപ്പിലെ അവസാന ഗുളിക: നമ്പർ {estimatedEndPillNumber}",
   "addPillSheetButton": "പിൽ ഷീറ്റ് ചേർക്കുക",
   "taken": "കഴിച്ചു",
   "notTaken": "കഴിച്ചിട്ടില്ല",

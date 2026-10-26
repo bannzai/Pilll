@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "{number}-ஆம் மாத்திரையிலிருந்து மாத்திரைகள் எடுத்துக்கொள்வதைச் சிறிது காலம் நிறுத்த விரும்புகிறீர்களா?",
   "lastTakenPlusOnePillNumber": "மாத்திரை எண் {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "மாத்திரை எடுத்துக்கொள்ளுதல்",
-  "estimatedEndPillNumber": "முந்தைய ஷீட்டின் கடைசி: {estimatedEndPillNumber} எண்",
+  "estimatedEndPillNumber": "முந்தைய மாத்திரை அட்டையின் கடைசி மாத்திரை: எண் {estimatedEndPillNumber}",
   "addPillSheetButton": "மாத்திரை தாள் சேர்க்க",
   "taken": "எடுத்துக்கொண்டேன்",
   "notTaken": "எடுக்கவில்லை",

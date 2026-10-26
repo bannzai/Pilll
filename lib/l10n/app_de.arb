@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "Möchtest du ab Pille {number} eine Einnahmepause machen?",
   "lastTakenPlusOnePillNumber": "Pille Nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Pilleneinnahme",
-  "estimatedEndPillNumber": "Ende der vorherigen Packung: {estimatedEndPillNumber}",
+  "estimatedEndPillNumber": "Letzte Pille auf dem vorherigen Blister: Nr. {estimatedEndPillNumber}",
   "addPillSheetButton": "Pillenpackung hinzufügen",
   "taken": "genommen",
   "notTaken": "nicht genommen",

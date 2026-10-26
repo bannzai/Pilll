@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "{number}번 알약부터 잠시 복용을 쉬시겠어요?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}번 알약",
   "taking": "복용",
-  "estimatedEndPillNumber": "이전 시트의 마지막: {estimatedEndPillNumber}번",
+  "estimatedEndPillNumber": "이전 시트의 마지막 알약: {estimatedEndPillNumber}번",
   "addPillSheetButton": "피임약 시트 추가",
   "taken": "먹음",
   "notTaken": "미복용",

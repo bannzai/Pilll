@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "ከክኒን ቁጥር {number} ጀምሮ መውሰድ ለጊዜው ማቆም ይፈልጋሉ?",
   "lastTakenPlusOnePillNumber": "ክኒን ቁጥር {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ክኒን መውሰድ",
-  "estimatedEndPillNumber": "ባለፈው ሺት መጨረሻ፡ {estimatedEndPillNumber}ኛ",
+  "estimatedEndPillNumber": "በቀድሞው ክኒን ሰሌዳ ላይ የመጨረሻው ክኒን፦ ቁጥር {estimatedEndPillNumber}",
   "addPillSheetButton": "ፊኖ ሺት ማከል",
   "taken": "ወሰድኩ",
   "notTaken": "አልወሰደም",

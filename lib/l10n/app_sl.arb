@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "Ali želite začasno prenehati jemati tabletke od tabletke številka {number} naprej?",
   "lastTakenPlusOnePillNumber": "Tableta št. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Jemanje tabletke",
-  "estimatedEndPillNumber": "Konec prejšnje plošče: {estimatedEndPillNumber}. tableta",
+  "estimatedEndPillNumber": "Zadnja tabletka na prejšnjem omotu: št. {estimatedEndPillNumber}",
   "addPillSheetButton": "Dodaj tablice",
   "taken": "Vzeto",
   "notTaken": "ni vzeto",

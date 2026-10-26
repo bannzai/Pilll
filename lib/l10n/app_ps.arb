@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "ایا غواړئ له {number} نمبر ګولۍ څخه د ګولیو خوړل د لنډ وخت لپاره ودروئ؟",
   "lastTakenPlusOnePillNumber": "د ګولۍ شمېره {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "د ګولۍ اخیستل",
-  "estimatedEndPillNumber": "د پخوانۍ شيټ وروستي: {estimatedEndPillNumber} شمېره",
+  "estimatedEndPillNumber": "د مخکینۍ پاڼې وروستۍ ګولۍ: شمېره {estimatedEndPillNumber}",
   "addPillSheetButton": "د ګولیو پېک اضافه کول",
   "taken": "څښلې",
   "notTaken": "نه نیولی",

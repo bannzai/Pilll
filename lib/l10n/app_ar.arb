@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "هل ترغبين في التوقف مؤقتًا عن تناول الحبوب بدءًا من الحبة رقم {number}؟",
   "lastTakenPlusOnePillNumber": "الحبة رقم {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "تناول الحبة",
-  "estimatedEndPillNumber": "آخر حبة من الشريط السابق: {estimatedEndPillNumber}",
+  "estimatedEndPillNumber": "آخر حبة في الشريط السابق: رقم {estimatedEndPillNumber}",
   "addPillSheetButton": "إضافة شريط الحبوب",
   "taken": "شرب",
   "notTaken": "غير مُتناول",

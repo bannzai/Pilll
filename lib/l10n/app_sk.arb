@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "Chcete si dať prestávku v užívaní tabletiek od tabletky číslo {number}?",
   "lastTakenPlusOnePillNumber": "Tabletka č. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Užívanie tabletky",
-  "estimatedEndPillNumber": "Koniec predchádzajúceho blistra: {estimatedEndPillNumber}.",
+  "estimatedEndPillNumber": "Posledná tabletka v predchádzajúcom blistri: č. {estimatedEndPillNumber}",
   "addPillSheetButton": "Pridať balíček piluliek",
   "taken": "Užité",
   "notTaken": "Nevzala",

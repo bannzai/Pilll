@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "{number} নম্বর পিল থেকে খাওয়া সাময়িকভাবে বন্ধ রাখতে চান?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} নম্বর পিল",
   "taking": "পিল খাওয়া",
-  "estimatedEndPillNumber": "আগের শিটের শেষ: {estimatedEndPillNumber} নম্বর",
+  "estimatedEndPillNumber": "আগের পিলের পাতার শেষ পিল: নম্বর {estimatedEndPillNumber}",
   "addPillSheetButton": "পিল শিট যোগ করুন",
   "taken": "খেয়েছে",
   "notTaken": "খাইনি",

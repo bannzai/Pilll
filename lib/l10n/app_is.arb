@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "Viltu gera hlé á pillutökunni frá pillu númer {number}?",
   "lastTakenPlusOnePillNumber": "Pilla númer {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Inntaka pillunnar",
-  "estimatedEndPillNumber": "Síðasti pakki lauk við: {estimatedEndPillNumber}. töflu",
+  "estimatedEndPillNumber": "Síðasta pillan á fyrra spjaldi: nr. {estimatedEndPillNumber}",
   "addPillSheetButton": "Bæta við pillublaði",
   "taken": "Tekið",
   "notTaken": "Ekki tekið",

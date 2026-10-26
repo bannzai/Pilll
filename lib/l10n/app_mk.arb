@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "Дали сакате да направите пауза во земањето таблети почнувајќи од таблета број {number}?",
   "lastTakenPlusOnePillNumber": "Таблета бр. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Земање таблета",
-  "estimatedEndPillNumber": "Последна од претходниот лист: {estimatedEndPillNumber}-ти",
+  "estimatedEndPillNumber": "Последна таблета од претходниот блистер: бр. {estimatedEndPillNumber}",
   "addPillSheetButton": "Додади лист на пилули",
   "taken": "Земено",
   "notTaken": "не земено",

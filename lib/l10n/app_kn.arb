@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "{number}ನೇ ಮಾತ್ರೆಯಿಂದ ಮಾತ್ರೆಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳುವುದನ್ನು ಸ್ವಲ್ಪ ಕಾಲ ನಿಲ್ಲಿಸಲು ಬಯಸುವಿರಾ?",
   "lastTakenPlusOnePillNumber": "ಮಾತ್ರೆ ಸಂಖ್ಯೆ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದು",
-  "estimatedEndPillNumber": "ಹಿಂದಿನ ಶೀಟ್‌ನ ಅಂತಿಮ: {estimatedEndPillNumber} ಸಂಖ್ಯೆ",
+  "estimatedEndPillNumber": "ಹಿಂದಿನ ಸ್ಟ್ರಿಪ್‌ನ ಕೊನೆಯ ಮಾತ್ರೆ: ಸಂಖ್ಯೆ {estimatedEndPillNumber}",
   "addPillSheetButton": "ಪಿಲ್ ಶೀಟ್ ಸೇರಿಸು",
   "taken": "ತೆಗೆದುಕೊಂಡೆ",
   "notTaken": "ಸೇವಿಸಿಲ್ಲ",

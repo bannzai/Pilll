@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "Ցանկանո՞ւմ եք ժամանակավորապես դադարեցնել հաբերի ընդունումը՝ սկսած {number}-րդ հաբից։",
   "lastTakenPlusOnePillNumber": "Հաբ № {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Հաբի ընդունում",
-  "estimatedEndPillNumber": "Նախորդ փաթեթի վերջը՝ {estimatedEndPillNumber} համար",
+  "estimatedEndPillNumber": "Նախորդ բլիստերի վերջին հաբը՝ № {estimatedEndPillNumber}",
   "addPillSheetButton": "Ավելացնել հաբերի փաթեթ",
   "taken": "խմեց",
   "notTaken": "չընդունված",

@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "Bạn có muốn tạm ngừng uống thuốc từ viên số {number} không?",
   "lastTakenPlusOnePillNumber": "Viên thuốc số {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Uống thuốc",
-  "estimatedEndPillNumber": "Cuối vỉ trước: viên số {estimatedEndPillNumber}",
+  "estimatedEndPillNumber": "Viên thuốc cuối cùng của vỉ trước: số {estimatedEndPillNumber}",
   "addPillSheetButton": "Thêm vỉ thuốc",
   "taken": "Đã uống",
   "notTaken": "Chưa uống",

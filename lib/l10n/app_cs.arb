@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "Chcete od pilulky číslo {number} přerušit užívání?",
   "lastTakenPlusOnePillNumber": "Tableta č. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Užívání pilulky",
-  "estimatedEndPillNumber": "Konec předchozího blistru: tableta č. {estimatedEndPillNumber}",
+  "estimatedEndPillNumber": "Poslední pilulka na předchozím blistru: č. {estimatedEndPillNumber}",
   "addPillSheetButton": "Přidat balení pilulek",
   "taken": "Vzato",
   "notTaken": "Nevzato",

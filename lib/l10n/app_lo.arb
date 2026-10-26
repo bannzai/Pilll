@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "ຕ້ອງການພັກການກິນຢາເລີ່ມຈາກເມັດທີ {number} ບໍ?",
   "lastTakenPlusOnePillNumber": "ເມັດທີ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ການກິນຢາເມັດ",
-  "estimatedEndPillNumber": "ແຜ່ນຄັ້ງກ່ອນສຸດທ້າຍ: ເມັດທີ່ {estimatedEndPillNumber}",
+  "estimatedEndPillNumber": "ຢາເມັດສຸດທ້າຍໃນແຜງກ່ອນ: ເລກ {estimatedEndPillNumber}",
   "addPillSheetButton": "ເພີ່ມແຜ່ນຢາ",
   "taken": "ກິນແລ້ວ",
   "notTaken": "ບໍ່ກິນ",

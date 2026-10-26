@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "Je, ungependa kupumzika kwa muda kutoka kumeza vidonge kuanzia kidonge nambari {number}?",
   "lastTakenPlusOnePillNumber": "Kidonge nambari {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Kumeza kidonge",
-  "estimatedEndPillNumber": "Mwisho wa shiti la awali: {estimatedEndPillNumber}",
+  "estimatedEndPillNumber": "Kidonge cha mwisho kwenye kifungashio kilichotangulia: namba {estimatedEndPillNumber}",
   "addPillSheetButton": "Ongeza Karatasi ya Vidonge",
   "taken": "Nimemeza",
   "notTaken": "Hajameza",

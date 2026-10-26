@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "要从第 {number} 粒药开始暂停服用吗？",
   "lastTakenPlusOnePillNumber": "第{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}片药",
   "taking": "服药",
-  "estimatedEndPillNumber": "上一板的最后：第{estimatedEndPillNumber}号",
+  "estimatedEndPillNumber": "上一板的最后一粒药：第 {estimatedEndPillNumber} 粒",
   "addPillSheetButton": "添加药板",
   "taken": "已服用",
   "notTaken": "未服",

@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "გსურთ, დროებით შეწყვიტოთ აბების მიღება {number} ნომრიდან?",
   "lastTakenPlusOnePillNumber": "აბი № {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "აბის მიღება",
-  "estimatedEndPillNumber": "წინა პაკეტის ბოლო: {estimatedEndPillNumber} ნომერი",
+  "estimatedEndPillNumber": "წინა ბლისტერის ბოლო აბი: № {estimatedEndPillNumber}",
   "addPillSheetButton": "აბების ფურცლის დამატება",
   "taken": "დალია",
   "notTaken": "არ მიღებულა",

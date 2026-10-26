@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "{number} дугаартай эмээс эхлэн уухаа түр завсарлуулах уу?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} дугаартай эм",
   "taking": "Эм уух",
-  "estimatedEndPillNumber": "Өмнөх цаасны сүүлийн: {estimatedEndPillNumber} дугаар",
+  "estimatedEndPillNumber": "Өмнөх блистерийн сүүлийн шахмал: № {estimatedEndPillNumber}",
   "addPillSheetButton": "Эмийн хавтанг нэмэх",
   "taken": "уусан",
   "notTaken": "авсангүй",

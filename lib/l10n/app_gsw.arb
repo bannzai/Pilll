@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "Wotsch ab Pille {number} e Pause mit em Iinäh mache?",
   "lastTakenPlusOnePillNumber": "Pille Nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Pille iinäh",
-  "estimatedEndPillNumber": "Letscht Pille vom vorherige Blatt: {estimatedEndPillNumber}",
+  "estimatedEndPillNumber": "Letschts Pilleli uf em vorige Blister: Nr. {estimatedEndPillNumber}",
   "addPillSheetButton": "Pilleblatt hinzuefüege",
   "taken": "gnoh",
   "notTaken": "nöd gno",

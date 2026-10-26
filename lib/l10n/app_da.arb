@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "Vil du holde pause med p-pillerne fra nummer {number}?",
   "lastTakenPlusOnePillNumber": "P-pille nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Indtagelse af p-pille",
-  "estimatedEndPillNumber": "Sidste fra forrige ark: {estimatedEndPillNumber}. pille",
+  "estimatedEndPillNumber": "Sidste p-pille på det forrige ark: nr. {estimatedEndPillNumber}",
   "addPillSheetButton": "Tilføj pillepakke",
   "taken": "taget",
   "notTaken": "ikke taget",

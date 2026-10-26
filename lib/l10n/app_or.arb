@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "ଆପଣ {number} ନମ୍ବର ବଟିକାରୁ ବଟିକା ଖାଇବା କିଛି ସମୟ ପାଇଁ ବନ୍ଦ ରଖିବାକୁ ଚାହୁଁଛନ୍ତି କି?",
   "lastTakenPlusOnePillNumber": "ବଟିକା ନମ୍ବର {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ବଟିକା ଖାଇବା",
-  "estimatedEndPillNumber": "ଗତ ସିଟ୍‌ର ଶେଷ: {estimatedEndPillNumber} ନମ୍ବର",
+  "estimatedEndPillNumber": "ପୂର୍ବ ପିଲ୍ ପତ୍ରର ଶେଷ ବଟିକା: ନମ୍ବର {estimatedEndPillNumber}",
   "addPillSheetButton": "ପିଲ୍ ଶିଟ୍ ଯୋଗ କରନ୍ତୁ",
   "taken": "ଖାଇଲା",
   "notTaken": "ନେଇନାହିଁ",

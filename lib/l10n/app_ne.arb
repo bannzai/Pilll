@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "के तपाईं {number} नम्बरको चक्कीबाट चक्की खान केही समयका लागि रोक्न चाहनुहुन्छ?",
   "lastTakenPlusOnePillNumber": "चक्की नम्बर {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "चक्की सेवन",
-  "estimatedEndPillNumber": "पछिल्लो शिटको अन्तिम: {estimatedEndPillNumber} नम्बर",
+  "estimatedEndPillNumber": "अघिल्लो पाताको अन्तिम चक्की: नम्बर {estimatedEndPillNumber}",
   "addPillSheetButton": "पिल शीट थप्नुहोस्",
   "taken": "लिएको",
   "notTaken": "लिएको छैन",

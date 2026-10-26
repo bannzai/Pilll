@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "Vols fer una pausa en la presa de la píndola a partir del número {number}?",
   "lastTakenPlusOnePillNumber": "Píndola número {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Presa de la píndola",
-  "estimatedEndPillNumber": "Final de la caixa anterior: {estimatedEndPillNumber}",
+  "estimatedEndPillNumber": "Última píndola del blíster anterior: núm. {estimatedEndPillNumber}",
   "addPillSheetButton": "Afegir plaqueta de píndoles",
   "taken": "Presa",
   "notTaken": "No presa",

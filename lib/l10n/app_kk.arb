@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "{number}-ші таблеткадан бастап қабылдауды уақытша тоқтатқыңыз келе ме?",
   "lastTakenPlusOnePillNumber": "№ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} таблетка",
   "taking": "Таблетка қабылдау",
-  "estimatedEndPillNumber": "Алдыңғы парақтың соңы: {estimatedEndPillNumber} №",
+  "estimatedEndPillNumber": "Алдыңғы блистердегі соңғы таблетка: № {estimatedEndPillNumber}",
   "addPillSheetButton": "Таблетка парағын қосу",
   "taken": "ішті",
   "notTaken": "Қабылдамады",

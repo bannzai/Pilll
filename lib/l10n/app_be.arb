@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "Хочаце зрабіць перапынак у прыёме пігулак, пачынаючы з № {number}?",
   "lastTakenPlusOnePillNumber": "Пігулка № {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Прыём пігулкі",
-  "estimatedEndPillNumber": "Канец папярэдняй упакоўкі: нумар {estimatedEndPillNumber}",
+  "estimatedEndPillNumber": "Апошняя пігулка ў папярэднім блістары: № {estimatedEndPillNumber}",
   "addPillSheetButton": "Дадаць блістэр",
   "taken": "Выпіла",
   "notTaken": "не прынята",

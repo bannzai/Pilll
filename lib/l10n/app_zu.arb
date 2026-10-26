@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "Ungathanda yini ukuthatha ikhefu ekuphuzeni amaphilisi kusukela ephilisini elingunombolo {number}?",
   "lastTakenPlusOnePillNumber": "Iphilisi elingunombolo {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Ukuphuza iphilisi",
-  "estimatedEndPillNumber": "Ukuphela kweshidi eledlule: {estimatedEndPillNumber}",
+  "estimatedEndPillNumber": "Iphilisi lokugcina ephaketheni langaphambilini: inombolo {estimatedEndPillNumber}",
   "addPillSheetButton": "Engeza ishidi lamaphilisi",
   "taken": "Kudliwe",
   "notTaken": "akathathanga",

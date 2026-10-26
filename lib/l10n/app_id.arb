@@ -117,7 +117,7 @@
   "pauseTakingFromNumber": "Ingin berhenti minum pil sementara mulai dari pil nomor {number}?",
   "lastTakenPlusOnePillNumber": "Pil nomor {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Minum pil",
-  "estimatedEndPillNumber": "Akhir lembar sebelumnya: {estimatedEndPillNumber}",
+  "estimatedEndPillNumber": "Pil terakhir pada lembar sebelumnya: no. {estimatedEndPillNumber}",
   "addPillSheetButton": "Tambah Lembar Pil",
   "taken": "Sudah diminum",
   "notTaken": "Belum minum",
