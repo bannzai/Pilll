@@ -58,7 +58,7 @@
   "allPillSheets": "Todos los blísteres",
   "willBeDiscarded": "se descartará",
   "discard": "Descartar",
-  "pillSheetDiscarded": "Se ha desechado el blíster de píldoras",
+  "pillSheetDiscarded": "Se ha desechado el blíster",
   "aboutMenstruation": "Sobre la menstruación",
   "checkPillNumberForMenstruationStart": "Por favor, confirme el número de pastilla para el inicio de la menstruación. El número configurado no existe en el tipo de blíster seleccionado actualmente",
   "customizeMedicationNotifications": "Personalización de notificaciones de toma",

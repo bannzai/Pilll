@@ -58,7 +58,7 @@
   "allPillSheets": "Kõik pillilehed",
   "willBeDiscarded": "visatakse ära",
   "discard": "Kustuta",
-  "pillSheetDiscarded": "Pillileht hävitati",
+  "pillSheetDiscarded": "Pillileh on ära visatud",
   "aboutMenstruation": "Menstruatsiooni kohta",
   "checkPillNumberForMenstruationStart": "Palun kontrollige menstruatsiooni alguskuupäeva tableti numbrit. Praegu valitud tablettlehe tüübis sellist tableti numbrit ei eksisteeri.",
   "customizeMedicationNotifications": "Võtmise märguannete kohandamine",

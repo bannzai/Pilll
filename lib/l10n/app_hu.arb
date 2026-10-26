@@ -58,7 +58,7 @@
   "allPillSheets": "Összes tablettacsomag",
   "willBeDiscarded": "törlésre kerül",
   "discard": "Elvetés",
-  "pillSheetDiscarded": "A tablettás csomag eldobva",
+  "pillSheetDiscarded": "A tablettacsomag ki lett dobva",
   "aboutMenstruation": "A menstruációról",
   "checkPillNumberForMenstruationStart": "Kérjük, ellenőrizze a menstruáció kezdő napjának tabletta számát. A beállított tabletta szám nem létezik a jelenleg kiválasztott csomag típusban.",
   "customizeMedicationNotifications": "Bevételi értesítések testreszabása",

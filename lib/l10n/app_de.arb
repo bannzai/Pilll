@@ -58,7 +58,7 @@
   "allPillSheets": "Alle Pillenblister",
   "willBeDiscarded": "wird verworfen",
   "discard": "Verwerfen",
-  "pillSheetDiscarded": "Pillenpackung entsorgt",
+  "pillSheetDiscarded": "Der Pillenblister wurde entsorgt",
   "aboutMenstruation": "Über die Periode",
   "checkPillNumberForMenstruationStart": "Bitte überprüfen Sie die Pillennummer für den Menstruationsbeginn. Die eingestellte Pillennummer existiert nicht im aktuell ausgewählten Pillenblister-Typ.",
   "customizeMedicationNotifications": "Benachrichtigungen anpassen",

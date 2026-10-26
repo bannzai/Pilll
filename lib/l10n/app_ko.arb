@@ -58,7 +58,7 @@
   "allPillSheets": "모든 알약 시트",
   "willBeDiscarded": "삭제돼요",
   "discard": "삭제해요",
-  "pillSheetDiscarded": "피임약 시트를 폐기했습니다",
+  "pillSheetDiscarded": "알약 시트를 버렸어요",
   "aboutMenstruation": "생리에 대해",
   "checkPillNumberForMenstruationStart": "생리 시작일의 알약 번호를 확인해 주세요. 현재 선택한 알약 시트 유형에는 존재하지 않는 알약 번호가 설정되어 있습니다",
   "customizeMedicationNotifications": "복용 알림 맞춤 설정",

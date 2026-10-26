@@ -58,7 +58,7 @@
   "allPillSheets": "Tất cả vỉ thuốc",
   "willBeDiscarded": "sẽ bị xóa",
   "discard": "Xóa",
-  "pillSheetDiscarded": "Đã loại bỏ gói thuốc",
+  "pillSheetDiscarded": "Đã bỏ vỉ thuốc",
   "aboutMenstruation": "Về kinh nguyệt",
   "checkPillNumberForMenstruationStart": "Vui lòng kiểm tra số viên thuốc tại ngày bắt đầu kinh nguyệt. Số viên thuốc đã thiết lập không tồn tại trong loại vỉ thuốc hiện được chọn",
   "customizeMedicationNotifications": "Tùy chỉnh thông báo uống thuốc",
