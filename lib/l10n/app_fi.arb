@@ -189,7 +189,7 @@
   "autoRenewNotice": "・Premium-tilauksesi uusiutuu automaattisesti, ellet peru sitä vähintään 24 tuntia ennen tilausjakson päättymistä",
   "cancelAutoRenewInfo": "Oston jälkeen voit perua automaattisen uusimisen {storeName}-sovelluksen tiliasetuksissa. Sitä ei voi perua Pilllissä.",
   "moreDetails": "Lisätietoja",
-  "restorePurchase": "Ostotiedot palautettu onnistuneesti",
+  "restorePurchase": "Ostotietosi on palautettu",
   "previouslyPurchased": "Palauta aiemmat ostokset",
   "noPreviousPurchaseInfo": "Aiempia ostoja ei löydetty. Tarkista tilisi ja yritä uudelleen.",
   "monthlyPlan": "Kuukausipaketti",

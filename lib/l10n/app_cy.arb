@@ -189,7 +189,7 @@
   "autoRenewNotice": "・Bydd eich tanysgrifiad premiwm yn adnewyddu'n awtomatig oni bai eich bod yn ei ganslo o leiaf 24 awr cyn diwedd cyfnod y tanysgrifiad",
   "cancelAutoRenewInfo": "Ar ôl prynu, gallwch ganslo’r adnewyddiad awtomatig yng ngosodiadau eich cyfrif yn ap {storeName}. Ni ellir ei ganslo o ap Pilll.",
   "moreDetails": "Rhagor o fanylion",
-  "restorePurchase": "Mae'r wybodaeth brynu wedi'i hadfer",
+  "restorePurchase": "Mae manylion eich pryniant wedi'u hadfer",
   "previouslyPurchased": "Os prynoch chi eisoes",
   "noPreviousPurchaseInfo": "Ni chanfuwyd gwybodaeth brynu flaenorol. Gwiriwch eich cyfrif a rhowch gynnig arall arni",
   "monthlyPlan": "Cynllun Misol",

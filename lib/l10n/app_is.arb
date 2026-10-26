@@ -189,7 +189,7 @@
   "autoRenewNotice": "・Premium-áskriftin endurnýjast sjálfkrafa nema þú segir henni upp að minnsta kosti 24 klukkustundum áður en áskriftartímabilinu lýkur",
   "cancelAutoRenewInfo": "Eftir kaupin geturðu sagt upp sjálfvirkri endurnýjun í reikningsstillingum {storeName}-appsins. Ekki er hægt að segja henni upp í Pilll.",
   "moreDetails": "Nánari upplýsingar",
-  "restorePurchase": "Kaupupplýsingar hafa verið endurheimtar",
+  "restorePurchase": "Upplýsingar um kaupin þín hafa verið endurheimtar",
   "previouslyPurchased": "Fyrri kaupendur - hér",
   "noPreviousPurchaseInfo": "Engar fyrri kaupupplýsingar fundust. Vinsamlegast staðfestu reikninginn þinn og reyndu aftur.",
   "monthlyPlan": "Mánaðaráskrift",

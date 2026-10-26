@@ -189,7 +189,7 @@
   "autoRenewNotice": "・Sinu premium-tellimus uueneb automaatselt, kui sa ei tühista seda vähemalt 24 tundi enne tellimusperioodi lõppu",
   "cancelAutoRenewInfo": "Pärast ostu saad automaatse uuendamise tühistada {storeName}i rakenduse kontoseadetes. Pilllis seda tühistada ei saa.",
   "moreDetails": "Lisateave",
-  "restorePurchase": "Ostud on taastatud",
+  "restorePurchase": "Sinu ostuteave on taastatud",
   "previouslyPurchased": "Varem ostnud kasutajatele",
   "noPreviousPurchaseInfo": "Varasemaid ostuandmeid ei leitud. Kontrollige oma kontot ja proovige uuesti.",
   "monthlyPlan": "Kuine plaan",

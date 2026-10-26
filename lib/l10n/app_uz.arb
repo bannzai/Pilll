@@ -189,7 +189,7 @@
   "autoRenewNotice": "・Premium obuna muddati tugashidan kamida 24 soat oldin uni bekor qilmasangiz, obuna avtomatik ravishda yangilanadi",
   "cancelAutoRenewInfo": "Xariddan soʻng avtomatik yangilanishni {storeName} ilovasidagi hisob sozlamalarida bekor qilishingiz mumkin. Uni Pilll ilovasi ichida bekor qilib boʻlmaydi.",
   "moreDetails": "Batafsil maʼlumot",
-  "restorePurchase": "Sotib olish ma'lumotlari tiklandi",
+  "restorePurchase": "Xaridingiz haqidagi maʼlumotlar tiklandi",
   "previouslyPurchased": "Avval sotib olganlar",
   "noPreviousPurchaseInfo": "Oldingi xarid ma'lumotlari topilmadi. Hisobingizni tekshirib, qaytadan urinib ko'ring.",
   "monthlyPlan": "Oylik plan",

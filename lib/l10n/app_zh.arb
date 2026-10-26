@@ -189,7 +189,7 @@
   "autoRenewNotice": "・高级订阅将在订阅期结束时自动续订，除非你在结束前至少 24 小时取消",
   "cancelAutoRenewInfo": "购买后，你可以在 {storeName} App 的账户设置中取消自动续订。无法在 Pilll 内取消。",
   "moreDetails": "查看详情",
-  "restorePurchase": "已恢复购买信息",
+  "restorePurchase": "购买信息已恢复",
   "previouslyPurchased": "已购买用户请点此",
   "noPreviousPurchaseInfo": "未找到先前的购买信息。请确认账户信息后重试。",
   "monthlyPlan": "月费套餐",

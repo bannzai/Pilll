@@ -189,7 +189,7 @@
   "autoRenewNotice": "・Premium aboneliğiniz, abonelik dönemi bitmeden en az 24 saat önce iptal etmediğiniz sürece otomatik olarak yenilenir",
   "cancelAutoRenewInfo": "Satın aldıktan sonra otomatik yenilemeyi {storeName} uygulamasındaki hesap ayarlarından iptal edebilirsiniz. Pilll içinden iptal edemezsiniz.",
   "moreDetails": "Ayrıntılı bilgi",
-  "restorePurchase": "Satın alma bilgileri geri yüklendi",
+  "restorePurchase": "Satın alma bilgileriniz geri yüklendi",
   "previouslyPurchased": "Daha önce satın alanlar",
   "noPreviousPurchaseInfo": "Önceki satın alma bilgileri bulunamadı. Lütfen hesabınızı kontrol edin ve tekrar deneyin.",
   "monthlyPlan": "Aylık Plan",

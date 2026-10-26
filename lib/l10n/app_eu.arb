@@ -189,7 +189,7 @@
   "autoRenewNotice": "・Premium harpidetza automatikoki berrituko da, harpidetza-aldia amaitu baino gutxienez 24 ordu lehenago bertan behera uzten ez baduzu",
   "cancelAutoRenewInfo": "Erosi ondoren, berritze automatikoa {storeName} aplikazioko kontuaren ezarpenetan bertan behera utz dezakezu. Ezin da Pilll aplikaziotik bertan behera utzi.",
   "moreDetails": "Xehetasun gehiago",
-  "restorePurchase": "Erosketa informazioa berreskuratu da",
+  "restorePurchase": "Zure erosketaren datuak berrezarri dira",
   "previouslyPurchased": "Aurretik erositakoak hemen",
   "noPreviousPurchaseInfo": "Aurreko erosketa-informazioa ez da aurkitu. Kontua egiaztatu eta berriz saiatu.",
   "monthlyPlan": "Hilabeteko plana",

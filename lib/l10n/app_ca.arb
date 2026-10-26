@@ -189,7 +189,7 @@
   "autoRenewNotice": "・La subscripció Premium es renova automàticament si no la cancel·les almenys 24 hores abans que acabi el període de subscripció",
   "cancelAutoRenewInfo": "Després de la compra, pots cancel·lar la renovació automàtica a la configuració del compte de l’app {storeName}. No es pot cancel·lar des de Pilll.",
   "moreDetails": "Més detalls",
-  "restorePurchase": "S'ha restaurat la informació de compra",
+  "restorePurchase": "S'ha restaurat la informació de la compra",
   "previouslyPurchased": "Restaurar compra anterior",
   "noPreviousPurchaseInfo": "No s'ha trobat informació de compres anteriors. Verifiqueu el vostre compte i torneu-ho a provar.",
   "monthlyPlan": "Pla mensual",

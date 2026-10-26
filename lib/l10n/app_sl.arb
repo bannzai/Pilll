@@ -189,7 +189,7 @@
   "autoRenewNotice": "・Naročnina Premium se samodejno obnovi, če je ne prekličete vsaj 24 ur pred koncem naročniškega obdobja",
   "cancelAutoRenewInfo": "Po nakupu lahko samodejno podaljšanje prekličete v nastavitvah računa v aplikaciji {storeName}. V aplikaciji Pilll ga ni mogoče preklicati.",
   "moreDetails": "Več podrobnosti",
-  "restorePurchase": "Nakupni podatki so bili obnovljeni",
+  "restorePurchase": "Podatki o vašem nakupu so obnovljeni",
   "previouslyPurchased": "Obnovitev nakupa",
   "noPreviousPurchaseInfo": "Prejšnje informacije o nakupu niso bile najdene. Preverite svoj račun in poskusite znova.",
   "monthlyPlan": "Mesečni paket",

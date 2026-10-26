@@ -189,7 +189,7 @@
   "autoRenewNotice": "・Votre abonnement Premium est renouvelé automatiquement, sauf si vous le résiliez au moins 24 heures avant la fin de la période d’abonnement",
   "cancelAutoRenewInfo": "Après l’achat, vous pouvez annuler le renouvellement automatique dans les paramètres de votre compte sur l’application {storeName}. Vous ne pouvez pas l’annuler depuis Pilll.",
   "moreDetails": "Plus de détails",
-  "restorePurchase": "Informations d'achat restaurées",
+  "restorePurchase": "Votre achat a été restauré",
   "previouslyPurchased": "Restaurer l'achat",
   "noPreviousPurchaseInfo": "Aucun achat précédent trouvé. Veuillez vérifier votre compte et réessayer.",
   "monthlyPlan": "Forfait mensuel",

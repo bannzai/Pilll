@@ -189,7 +189,7 @@
   "autoRenewNotice": "・Your Premium subscription renews automatically unless you cancel it at least 24 hours before the subscription period ends",
   "cancelAutoRenewInfo": "After purchase, you can cancel automatic renewal in the account settings of the {storeName} app. You can’t cancel it in Pilll.",
   "moreDetails": "More details",
-  "restorePurchase": "Purchase information restored",
+  "restorePurchase": "Your purchase has been restored",
   "previouslyPurchased": "Restore Purchase",
   "noPreviousPurchaseInfo": "No previous purchase found. Please check your account and try again.",
   "monthlyPlan": "Monthly Plan",
