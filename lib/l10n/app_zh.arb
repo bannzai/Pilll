@@ -311,7 +311,7 @@
   "purchaseErrorLogOutWithAnonymousUserError": "无法获取用户信息，请稍后重试。如果问题仍未解决，请通过设置 > 联系我们与我们联系。详情：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "无法获取购买信息。请稍后再试。如果问题仍未解决，请通过“设置 > 联系我们”与我们联系。详情：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnsupportedError": "发生了未知错误。请将应用更新到最新版本后重试。如果问题仍未解决，请通过“设置 > 联系我们”与我们联系。代码：{errorCode} 详情：{exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorEmptySubscriberAttributesError": "原因不明的错误。无法预先获取购买信息。详情：{exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorEmptySubscriberAttributesError": "发生未知错误，无法提前获取购买信息。详情：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductDiscountMissingIdentifierError": "出现未知错误。请更新到最新版本后重试。如果问题仍未解决，请通过 设置 > 联系我们 与我们联系。代码：{errorCode} 详细信息：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnknownNonNativeError": "出现了未知错误。请更新到最新版本后重试。如果仍未解决，请通过\"设置\">\"联系我们\"进行咨询。代码: {errorCode} 详情: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "发生未知错误。请更新至最新版本后重试。如果仍未解决，请通过 设置 > 意见反馈 联系我们。代码：{errorCode} 详情：{exceptionMessage}:{exceptionDetails}",
