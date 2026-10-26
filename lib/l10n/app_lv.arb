@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "numuri 1–{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Nr. 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}. → {afterDisplayNumberSettingEndPillNumber}.",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nr.",
   "selectPauseStartDate": "Pārtraukuma sākuma datuma izvēle",
   "selectPausePeriod": "Izvēlieties pārtraukuma periodu",
   "pauseStartDate": "Pārtraukuma sākuma datums",

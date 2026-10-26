@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "ເລກ 1 ຫາ {afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "ເລກ 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→ເລກ{afterDisplayNumberSettingEndPillNumber}",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} ເລກ",
   "selectPauseStartDate": "ເລືອກວັນເລີ່ມຕົ້ນການພັກກິນຢາ",
   "selectPausePeriod": "ເລືອກໄລຍະພັກການກິນຢາ",
   "pauseStartDate": "ວັນເລີ່ມພັກຢາ",

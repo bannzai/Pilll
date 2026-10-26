@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "අංක 1 සිට {afterDisplayNumberSettingBeginPillNumber} දක්වා",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "අංක 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}අංකය",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} අංකය",
   "selectPauseStartDate": "මාත්‍රා සේවනය විරාම ආරම්භක දිනය තේරීම",
   "selectPausePeriod": "ගැනීම නැවැත්වීමේ කාලය තෝරන්න",
   "pauseStartDate": "ඖෂධ ගැනීම් විරාම ආරම්භක දිනය",

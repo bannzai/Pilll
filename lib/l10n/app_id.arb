@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "nomor 1–{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Nomor 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "nomor {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nomor",
   "selectPauseStartDate": "Pilih Tanggal Mulai Jeda Konsumsi",
   "selectPausePeriod": "Pilih Periode Istirahat Konsumsi",
   "pauseStartDate": "Tanggal Mulai Jeda Konsumsi",

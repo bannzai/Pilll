@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "१ देखि {afterDisplayNumberSettingBeginPillNumber} सम्मका नम्बर",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "नम्बर 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}नं।",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} नम्बर",
   "selectPauseStartDate": "सेवन बिदा सुरुवात मिति छनोट",
   "selectPausePeriod": "सेवन विश्राम अवधि छान्नुहोस्",
   "pauseStartDate": "सेवन बिदाको सुरुवात मिति",

@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "номера 1–{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "№ 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} №",
   "selectPauseStartDate": "Выбор даты начала перерыва в приеме",
   "selectPausePeriod": "Выбор периода перерыва в приеме",
   "pauseStartDate": "Дата начала перерыва в приёме",

@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "နံပါတ် ၁ မှ {afterDisplayNumberSettingBeginPillNumber} အထိ",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "နံပါတ် 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}နံပါတ်",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} နံပါတ်",
   "selectPauseStartDate": "ဆေးသောက်ရပ်နားစတင်ရက် ရွေးချယ်ရန်",
   "selectPausePeriod": "ဆေးအနားယူကာလ ရွေးချယ်ပါ",
   "pauseStartDate": "ဆေးသောက်အားနားစတင်နေ့",

@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "nambari 1–{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Namba 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} namba",
   "selectPauseStartDate": "Chagua Tarehe ya Kuanza Mapumziko ya Dawa",
   "selectPausePeriod": "Chagua kipindi cha mapumziko cha dawa",
   "pauseStartDate": "Tarehe ya kuanza pumziko la dawa",

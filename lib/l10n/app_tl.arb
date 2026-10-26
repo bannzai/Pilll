@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "mga numero 1–{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Bilang 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} bilang",
   "selectPauseStartDate": "Piliin ang Simula ng Pahinga sa Pag-inom",
   "selectPausePeriod": "Piliin ang Tagal ng Pahinga sa Pag-inom",
   "pauseStartDate": "Simula ng Pahinga sa Pag-inom",

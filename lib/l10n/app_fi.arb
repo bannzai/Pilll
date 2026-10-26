@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "numerot 1–{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "nro 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nro",
   "selectPauseStartDate": "Ottotauon aloituspäivän valinta",
   "selectPausePeriod": "Valitse taukojakso",
   "pauseStartDate": "Käyttötauon aloituspäivä",

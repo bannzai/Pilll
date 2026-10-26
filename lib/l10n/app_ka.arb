@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "ნომრები 1–{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "ნომერი 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} ნომერი",
   "selectPauseStartDate": "მიღების შესვენების დაწყების თარიღის არჩევა",
   "selectPausePeriod": "მიღების შესვენების პერიოდის არჩევა",
   "pauseStartDate": "შესვენების დაწყების თარიღი",

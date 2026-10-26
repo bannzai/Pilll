@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "1 முதல் {afterDisplayNumberSettingBeginPillNumber} வரையிலான எண்கள்",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "எண் 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}வது",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} எண்",
   "selectPauseStartDate": "மருந்து இடைவெளி தொடக்க தேதி தெரிவு",
   "selectPausePeriod": "மாத்திரை ஓய்வு காலத்தை தேர்ந்தெடுக்கவும்",
   "pauseStartDate": "மருந்து ஓய்வு தொடக்க தேதி",

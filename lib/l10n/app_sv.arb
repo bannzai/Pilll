@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "nummer 1–{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Nr 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nr",
   "selectPauseStartDate": "Välj startdatum för pillerpaus",
   "selectPausePeriod": "Välj pausperiod",
   "pauseStartDate": "Startdatum för intaguppehåll",

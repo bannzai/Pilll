@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "números de 1 a {afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Nº 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nº",
   "selectPauseStartDate": "Seleção da data de início da pausa",
   "selectPausePeriod": "Selecionar período de pausa",
   "pauseStartDate": "Data de início da pausa",

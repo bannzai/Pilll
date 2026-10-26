@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "شماره‌های ۱ تا {afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "شمارهٔ ۱→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "شماره {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} شماره",
   "selectPauseStartDate": "انتخاب تاریخ شروع وقفه مصرف",
   "selectPausePeriod": "انتخاب دوره توقف مصرف",
   "pauseStartDate": "تاریخ شروع وقفه مصرف",

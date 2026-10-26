@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "1 ರಿಂದ {afterDisplayNumberSettingBeginPillNumber} ರವರೆಗಿನ ಸಂಖ್ಯೆಗಳು",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "ಸಂಖ್ಯೆ 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}ನೇ ಸಂಖ್ಯೆ",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} ಸಂಖ್ಯೆ",
   "selectPauseStartDate": "ಸೇವನೆ ವಿರಾಮ ಪ್ರಾರಂಭ ದಿನ ಆಯ್ಕೆ",
   "selectPausePeriod": "ಸೇವನೆ ವಿರಾಮ ಅವಧಿ ಆರಿಸಿ",
   "pauseStartDate": "ಸೇವನೆ ವಿರಾಮ ಪ್ರಾರಂಭ ದಿನ",

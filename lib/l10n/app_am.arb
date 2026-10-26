@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "ቁጥር 1–{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "ከ1→{afterDisplayNumberSettingEndPillNumber} ቁጥር",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}ኛ",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} ቁጥር",
   "selectPauseStartDate": "የመድሃኒት እረፍት መጀመሪያ ቀን ምርጫ",
   "selectPausePeriod": "የመድሐኒት እረፍተ ጊዜ ምረጣ",
   "pauseStartDate": "የመድሃኒት እረፍት መጀመሪያ ቀን",

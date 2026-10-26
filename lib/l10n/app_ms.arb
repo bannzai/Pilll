@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "nombor 1–{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Nombor 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "Nombor {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nombor",
   "selectPauseStartDate": "Pilih Tarikh Mula Rehat Pengambilan",
   "selectPausePeriod": "Pilih Tempoh Rehat Pengambilan",
   "pauseStartDate": "Tarikh Mula Berehat Pil",

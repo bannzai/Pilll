@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "1 മുതൽ {afterDisplayNumberSettingBeginPillNumber} വരെയുള്ള നമ്പറുകൾ",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "നമ്പർ 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}ാം",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} നമ്പർ",
   "selectPauseStartDate": "മരുന്ന് ഇടവേള ആരംഭ തീയതി തിരഞ്ഞെടുക്കുക",
   "selectPausePeriod": "സേവന വിശ്രമ കാലയളവ് തിരഞ്ഞെടുക്കുക",
   "pauseStartDate": "സേവന വിശ്രമ ആരംഭ തീയതി",

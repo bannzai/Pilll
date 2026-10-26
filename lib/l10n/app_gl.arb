@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "números do 1 ao {afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "N.º 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} núm.",
   "selectPauseStartDate": "Seleccionar data de inicio do descanso",
   "selectPausePeriod": "Seleccionar período de descanso da medicación",
   "pauseStartDate": "Data de inicio da pausa na toma",

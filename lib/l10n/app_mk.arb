@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "броеви 1–{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Број 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} бр.",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} број",
   "selectPauseStartDate": "Избор на почетен датум за пауза од земање",
   "selectPausePeriod": "Избери период на прекин од зимање",
   "pauseStartDate": "Почетен датум на пауза",

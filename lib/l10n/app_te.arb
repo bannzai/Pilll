@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "1 నుండి {afterDisplayNumberSettingBeginPillNumber} వరకు సంఖ్యలు",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "సంఖ్య 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} సంఖ్య",
   "selectPauseStartDate": "సేవన విరామ ప్రారంభ తేదీ ఎంపిక",
   "selectPausePeriod": "సేవన విరామ కాలాన్ని ఎంచుకోండి",
   "pauseStartDate": "సేవన విరామ ప్రారంభ తేదీ",

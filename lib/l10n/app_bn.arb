@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "১ থেকে {afterDisplayNumberSettingBeginPillNumber} নম্বর",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "১→{afterDisplayNumberSettingEndPillNumber} নম্বর",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}নং",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} নম্বর",
   "selectPauseStartDate": "ঔষধ সেবন বিরতির শুরুর তারিখ নির্বাচন",
   "selectPausePeriod": "সেবন বিরতির সময়কাল নির্বাচন করুন",
   "pauseStartDate": "সেবন বিরতি শুরুর তারিখ",

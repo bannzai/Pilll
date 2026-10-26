@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "numrat 1–{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Nr. 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nr.",
   "selectPauseStartDate": "Zgjedhja e datës së fillimit të pushimit nga pilula",
   "selectPausePeriod": "Zgjidhni periudhën e pushimit të marrjes",
   "pauseStartDate": "Data e fillimit të pushimit të marrjes",

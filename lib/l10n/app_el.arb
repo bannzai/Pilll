@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "αριθμοί 1–{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Αρ. 1→{afterDisplayNumberSettingEndPillNumber}",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} αρ.",
   "selectPauseStartDate": "Επιλογή έναρξης διαλείμματος",
   "selectPausePeriod": "Επιλογή περιόδου διακοπής λήψης",
   "pauseStartDate": "Ημερομηνία έναρξης διακοπής λήψης",

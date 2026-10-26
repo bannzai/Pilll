@@ -104,7 +104,7 @@
   "oneToAfterDisplayNumberBeginPillNumber": "1–{afterDisplayNumberSettingBeginPillNumber} nömrələr",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} nömrə",
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nömrə",
   "selectPauseStartDate": "Həb qəbuluna fasilənin başlama tarixi seçimi",
   "selectPausePeriod": "Qəbul fasiləsi müddətini seçin",
   "pauseStartDate": "Qəbul fasiləsinin başlama tarixi",
