@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "开始暂停服用药片",
   "pauseTakingChanged": "已更改停药期",
   "editPausePeriod": "编辑停药期",
-  "changePillDays": "更改服用天数",
+  "changePillDays": "更改服药天数",
   "beginToEndNumbers": "{begin}号 ~ {end}号",
   "resumeTaking": "恢复服用",
   "changePausePeriod": "更改休药期间",

@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Filloni pushimin nga marrja e pilulës",
   "pauseTakingChanged": "Pushimi nga marrja e pilulës u ndryshua",
   "editPausePeriod": "Ndryshoni periudhën e pushimit nga pilula",
-  "changePillDays": "Ndrysho ditët e marrjes",
+  "changePillDays": "Ndryshoni numrin e ditëve të marrjes së pilulës",
   "beginToEndNumbers": "Nr. {begin} ~ Nr. {end}",
   "resumeTaking": "Rifillo marrjen",
   "changePausePeriod": "Ndryshimi i periudhës së pushimit",

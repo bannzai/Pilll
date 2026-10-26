@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "गोळ्या घेण्याचा विराम सुरू करा",
   "pauseTakingChanged": "गोळी घेण्याचा विराम बदलला आहे",
   "editPausePeriod": "गोळी घेण्यातील विश्रांतीचा कालावधी बदला",
-  "changePillDays": "सेवनाचे दिवस बदला",
+  "changePillDays": "गोळी घेण्याच्या दिवसांची संख्या बदला",
   "beginToEndNumbers": "{begin} नंबर ते {end} नंबर",
   "resumeTaking": "सेवन पुन्हा सुरू करा",
   "changePausePeriod": "सेवन विराम कालावधी बदल",

@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Alusta pillide võtmise pausi",
   "pauseTakingChanged": "Pillivõtmise paus on muudetud",
   "editPausePeriod": "Muuda pillivaba perioodi",
-  "changePillDays": "Muuda manustamispäevi",
+  "changePillDays": "Muuda pilli võtmise päevade arvu",
   "beginToEndNumbers": "{begin} - {end}",
   "resumeTaking": "Jätka võtmist",
   "changePausePeriod": "Pillipauside muutmine",

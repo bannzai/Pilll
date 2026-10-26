@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Эм уух завсарлагаа эхлүүлнэ үү",
   "pauseTakingChanged": "Эм уух завсарлагыг өөрчилсөн",
   "editPausePeriod": "Эм уух завсарлагын хугацааг өөрчлөх",
-  "changePillDays": "Уух өдрийн тоог өөрчлөх",
+  "changePillDays": "Эм уух өдрийн тоог өөрчилнө үү",
   "beginToEndNumbers": "{begin} дугаар ~ {end} дугаар",
   "resumeTaking": "Дахин уух",
   "changePausePeriod": "Амралтын хугацаа өөрчлөх",

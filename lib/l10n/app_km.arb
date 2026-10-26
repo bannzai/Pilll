@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "ចាប់ផ្តើមផ្អាកការលេបថ្នាំគ្រាប់",
   "pauseTakingChanged": "បានផ្លាស់ប្តូររយៈពេលផ្អាកលេបថ្នាំគ្រាប់ហើយ",
   "editPausePeriod": "កែប្រែរយៈពេលសម្រាកពីការលេបថ្នាំគ្រាប់",
-  "changePillDays": "ផ្លាស់ប្តូរចំនួនថ្ងៃលេបថ្នាំ",
+  "changePillDays": "ប្ដូរចំនួនថ្ងៃលេបថ្នាំគ្រាប់",
   "beginToEndNumbers": "លេខ {begin} ~ លេខ {end}",
   "resumeTaking": "ចាប់ផ្តើមញុំាថ្នាំឡើងវិញ",
   "changePausePeriod": "ផ្លាស់ប្តូររយៈពេលសម្រាកការទទួលថ្នាំ",

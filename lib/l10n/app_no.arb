@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Start p-pillepause",
   "pauseTakingChanged": "Pillepausen din er endret",
   "editPausePeriod": "Endre p-pillepausen",
-  "changePillDays": "Endre antall inntak-dager",
+  "changePillDays": "Endre antall dager du tar p-piller",
   "beginToEndNumbers": "nr. {begin} til nr. {end}",
   "resumeTaking": "Gjenoppta inntak",
   "changePausePeriod": "Endre pauseperiode",

@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Starta pilleruppehåll",
   "pauseTakingChanged": "Ditt pilleruppehåll har ändrats",
   "editPausePeriod": "Ändra pilleruppehållet",
-  "changePillDays": "Ändra intagsperiod",
+  "changePillDays": "Ändra antalet dagar du tar p-piller",
   "beginToEndNumbers": "nr. {begin} - nr. {end}",
   "resumeTaking": "Återuppta intag",
   "changePausePeriod": "Ändra pausperiod",

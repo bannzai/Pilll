@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Dechrau seibiant rhag cymryd y bilsen",
   "pauseTakingChanged": "Mae'r saib rhag cymryd y bilsen wedi'i newid",
   "editPausePeriod": "Golygu cyfnod yr egwyl rhag cymryd y bilsen",
-  "changePillDays": "Newid dyddiau cymryd",
+  "changePillDays": "Newid nifer y diwrnodau o gymryd y bilsen",
   "beginToEndNumbers": "{begin} i {end}",
   "resumeTaking": "Ailddechrau cymryd",
   "changePausePeriod": "Newid Cyfnod Seibiant",

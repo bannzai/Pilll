@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "گولیاں لینے میں وقفہ شروع کریں",
   "pauseTakingChanged": "گولی لینے کا وقفہ تبدیل کر دیا گیا ہے",
   "editPausePeriod": "گولی لینے کے وقفے کی مدت میں ترمیم کریں",
-  "changePillDays": "استعمال کے دن تبدیل کریں",
+  "changePillDays": "گولی لینے کے دنوں کی تعداد تبدیل کریں",
   "beginToEndNumbers": "{begin} نمبر سے {end} نمبر تک",
   "resumeTaking": "دوبارہ شروع کریں",
   "changePausePeriod": "وقفے کی مدت تبدیل کریں",

@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Započnite stanku u uzimanju pilule",
   "pauseTakingChanged": "Stanka u uzimanju pilule je promijenjena",
   "editPausePeriod": "Uredite razdoblje pauze od pilule",
-  "changePillDays": "Promijeni broj dana",
+  "changePillDays": "Promijenite broj dana uzimanja pilule",
   "beginToEndNumbers": "{begin}. - {end}.",
   "resumeTaking": "Nastavi uzimanje",
   "changePausePeriod": "Promjena perioda pauze",

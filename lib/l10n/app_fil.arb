@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Simulan ang pahinga sa pag-inom ng pildoras",
   "pauseTakingChanged": "Nabago na ang pahinga sa pag-inom ng pildoras ninyo",
   "editPausePeriod": "I-edit ang panahon ng pahinga sa pag-inom ng pildoras",
-  "changePillDays": "Baguhin ang Bilang ng Araw ng Pag-inom",
+  "changePillDays": "Baguhin ang bilang ng mga araw ng pag-inom ng pildoras",
   "beginToEndNumbers": "{begin} hanggang {end}",
   "resumeTaking": "Muling Pag-inom",
   "changePausePeriod": "Baguhin ang Rest Period",

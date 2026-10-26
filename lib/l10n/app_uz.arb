@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Tabletka qabul qilishdagi tanaffusni boshlang",
   "pauseTakingChanged": "Tabletka qabul qilishdagi tanaffus oʻzgartirildi",
   "editPausePeriod": "Tabletka ichishdagi tanaffus muddatini oʻzgartiring",
-  "changePillDays": "Qabul qilish kunlarini o'zgartirish",
+  "changePillDays": "Tabletkani ichish kunlari sonini oʻzgartiring",
   "beginToEndNumbers": "{begin}-raqam ~ {end}-raqam",
   "resumeTaking": "Qayta boshlash",
   "changePausePeriod": "Tanaffus davrini o'zgartirish",

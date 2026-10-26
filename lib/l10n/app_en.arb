@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Start pill break",
   "pauseTakingChanged": "Your pill break has been changed",
   "editPausePeriod": "Edit pill break",
-  "changePillDays": "Change Dosage Days",
+  "changePillDays": "Change pill-taking days",
   "beginToEndNumbers": "{begin} - {end}",
   "resumeTaking": "Resume Taking",
   "changePausePeriod": "Change Rest Period",

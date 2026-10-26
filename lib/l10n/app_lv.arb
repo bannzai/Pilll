@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Sākt tablešu lietošanas pārtraukumu",
   "pauseTakingChanged": "Tablešu lietošanas pārtraukums ir mainīts",
   "editPausePeriod": "Mainīt tablešu lietošanas pārtraukuma ilgumu",
-  "changePillDays": "Mainīt lietošanas dienu skaitu",
+  "changePillDays": "Mainiet tablešu lietošanas dienu skaitu",
   "beginToEndNumbers": "{begin}. – {end}.",
   "resumeTaking": "Atsākt lietošanu",
   "changePausePeriod": "Pārtraukuma perioda maiņa",

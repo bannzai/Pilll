@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Начало на паузата в приема на хапчета",
   "pauseTakingChanged": "Паузата в приема на хапчета е променена",
   "editPausePeriod": "Промяна на периода на почивка от хапчета",
-  "changePillDays": "Промени дните на прием",
+  "changePillDays": "Промяна на броя дни за прием на хапчета",
   "beginToEndNumbers": "№{begin} до №{end}",
   "resumeTaking": "Възобновяване на приема",
   "changePausePeriod": "Промяна на почивния период",

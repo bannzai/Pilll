@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Iniciar pausa de la píldora",
   "pauseTakingChanged": "Se cambió la pausa de la píldora",
   "editPausePeriod": "Editar el período de descanso de la píldora",
-  "changePillDays": "Cambiar días de toma",
+  "changePillDays": "Cambiar los días de toma de la píldora",
   "beginToEndNumbers": "{begin} a {end}",
   "resumeTaking": "Reanudar toma",
   "changePausePeriod": "Cambiar período de descanso",

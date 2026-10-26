@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "להתחיל הפסקה בנטילת הגלולות",
   "pauseTakingChanged": "ההפסקה בנטילת הגלולה שונתה",
   "editPausePeriod": "עריכת תקופת ההפסקה בנטילת הגלולה",
-  "changePillDays": "שנה מספר ימי נטילה",
+  "changePillDays": "שינוי מספר ימי נטילת הגלולה",
   "beginToEndNumbers": "{begin} עד {end}",
   "resumeTaking": "חידוש הנטילה",
   "changePausePeriod": "שינוי תקופת ההפסקה",

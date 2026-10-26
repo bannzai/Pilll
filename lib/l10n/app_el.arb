@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Έναρξη διακοπής λήψης χαπιών",
   "pauseTakingChanged": "Η παύση λήψης του χαπιού άλλαξε",
   "editPausePeriod": "Επεξεργασία περιόδου διακοπής λήψης του χαπιού",
-  "changePillDays": "Αλλαγή ημερών λήψης",
+  "changePillDays": "Αλλαγή αριθμού ημερών λήψης του χαπιού",
   "beginToEndNumbers": "{begin} - {end}",
   "resumeTaking": "Επανάληψη λήψης",
   "changePausePeriod": "Αλλαγή διαλείμματος λήψης",

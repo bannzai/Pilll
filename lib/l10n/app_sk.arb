@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Začnite prestávku v užívaní tabletiek",
   "pauseTakingChanged": "Prestávka v užívaní tabletiek bola zmenená",
   "editPausePeriod": "Upraviť obdobie prestávky v užívaní tabletiek",
-  "changePillDays": "Zmeniť počet dní užívania",
+  "changePillDays": "Zmeňte počet dní užívania tabletky",
   "beginToEndNumbers": "{begin}. – {end}.",
   "resumeTaking": "Obnoviť užívanie",
   "changePausePeriod": "Zmena prestávky v užívaní",

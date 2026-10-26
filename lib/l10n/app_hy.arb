@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Սկսել հաբերի ընդունման դադարը",
   "pauseTakingChanged": "Հաբի ընդունման դադարը փոխվել է",
   "editPausePeriod": "Խմբագրել հաբերի ընդունման դադարի տևողությունը",
-  "changePillDays": "Ընդունման օրերի փոփոխում",
+  "changePillDays": "Փոխեք հաբի ընդունման օրերի քանակը",
   "beginToEndNumbers": "{begin}համար ~ {end}համար",
   "resumeTaking": "Վերսկսել ընդունումը",
   "changePausePeriod": "Դադարի ժամկետի փոփоխում",

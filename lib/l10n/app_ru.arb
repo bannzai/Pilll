@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Начать перерыв в приёме таблеток",
   "pauseTakingChanged": "Перерыв в приёме таблеток изменён",
   "editPausePeriod": "Изменить период перерыва в приёме таблеток",
-  "changePillDays": "Изменить количество дней приема",
+  "changePillDays": "Изменить число дней приёма таблеток",
   "beginToEndNumbers": "№{begin} - №{end}",
   "resumeTaking": "Возобновить приём",
   "changePausePeriod": "Изменение периода перерыва",

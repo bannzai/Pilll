@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Începe pauza de la pilulă",
   "pauseTakingChanged": "Pauza în administrarea pilulei a fost modificată",
   "editPausePeriod": "Editează pauza de la pilulă",
-  "changePillDays": "Modificare durata administrării",
+  "changePillDays": "Schimbă numărul de zile în care iei pilula",
   "beginToEndNumbers": "nr. {begin} ~ nr. {end}",
   "resumeTaking": "Reia administrarea",
   "changePausePeriod": "Schimbarea perioadei de pauză",

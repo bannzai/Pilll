@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Rozpocznij przerwę w braniu tabletek",
   "pauseTakingChanged": "Przerwa w przyjmowaniu tabletek została zmieniona",
   "editPausePeriod": "Edytuj przerwę w braniu tabletek",
-  "changePillDays": "Zmień liczbę dni przyjmowania",
+  "changePillDays": "Zmień liczbę dni przyjmowania pigułek",
   "beginToEndNumbers": "{begin} do {end}",
   "resumeTaking": "Wznów przyjmowanie",
   "changePausePeriod": "Zmiana okresu przerwy",

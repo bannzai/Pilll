@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "피임약 복용 쉬기 시작",
   "pauseTakingChanged": "약 복용 휴식 기간을 변경했어요",
   "editPausePeriod": "복용 휴식 기간 수정",
-  "changePillDays": "복용 일수 변경",
+  "changePillDays": "약 복용 일수 변경",
   "beginToEndNumbers": "{begin}번 ~ {end}번",
   "resumeTaking": "복용 재개",
   "changePausePeriod": "휴약 기간 변경",

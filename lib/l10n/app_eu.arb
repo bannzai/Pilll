@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Hasi pilulak hartzeko etenaldia",
   "pauseTakingChanged": "Pilula hartzeko atsedenaldia aldatu da",
   "editPausePeriod": "Pilula hartzeko atsedenaldia editatu",
-  "changePillDays": "Hartzeko egunen kopurua aldatu",
+  "changePillDays": "Aldatu pilula hartzeko egun kopurua",
   "beginToEndNumbers": "{begin}etik {end}era",
   "resumeTaking": "Hartzea berriz hasi",
   "changePausePeriod": "Atseden-aldiaren aldaketa",

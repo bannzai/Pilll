@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Pillenpause beginnen",
   "pauseTakingChanged": "Deine Pillenpause wurde geändert",
   "editPausePeriod": "Pillenpause bearbeiten",
-  "changePillDays": "Einnahmedauer ändern",
+  "changePillDays": "Anzahl der Einnahmetage ändern",
   "beginToEndNumbers": "Nr. {begin} bis {end}",
   "resumeTaking": "Einnahme fortsetzen",
   "changePausePeriod": "Einnahmepause ändern",

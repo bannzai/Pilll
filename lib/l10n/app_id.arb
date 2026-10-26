@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Mulai jeda minum pil",
   "pauseTakingChanged": "Jeda minum pil telah diubah",
   "editPausePeriod": "Ubah masa jeda minum pil",
-  "changePillDays": "Ubah Jumlah Hari Konsumsi",
+  "changePillDays": "Ubah jumlah hari minum pil",
   "beginToEndNumbers": "No. {begin} - {end}",
   "resumeTaking": "Lanjutkan Konsumsi",
   "changePausePeriod": "Ubah Periode Istirahat",

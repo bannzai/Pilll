@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Comença la pausa de la píndola",
   "pauseTakingChanged": "S'ha canviat la pausa de la píndola",
   "editPausePeriod": "Edita el període de descans de la píndola",
-  "changePillDays": "Canviar el nombre de la presa",
+  "changePillDays": "Canvia el nombre de dies que prens la píndola",
   "beginToEndNumbers": "{begin} a {end}",
   "resumeTaking": "Reinici de la presa",
   "changePausePeriod": "Canvi de període de descans de la medicació",

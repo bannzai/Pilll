@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "পিল খাওয়ার বিরতি শুরু করুন",
   "pauseTakingChanged": "পিল খাওয়ার বিরতি পরিবর্তন করা হয়েছে",
   "editPausePeriod": "পিল খাওয়ার বিরতির সময় বদলান",
-  "changePillDays": "সেবনের দিন পরিবর্তন করুন",
+  "changePillDays": "পিল খাওয়ার দিনের সংখ্যা পরিবর্তন করুন",
   "beginToEndNumbers": "{begin} থেকে {end} নম্বর",
   "resumeTaking": "সেবন পুনরায় শুরু",
   "changePausePeriod": "সেবন বিরতির সময় পরিবর্তন",

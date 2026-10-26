@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದಕ್ಕೆ ವಿರಾಮ ಆರಂಭಿಸಿ",
   "pauseTakingChanged": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ವಿರಾಮವನ್ನು ಬದಲಾಯಿಸಲಾಗಿದೆ",
   "editPausePeriod": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ವಿರಾಮದ ಅವಧಿಯನ್ನು ಬದಲಾಯಿಸಿ",
-  "changePillDays": "ಸೇವನೆ ದಿನಗಳನ್ನು ಬದಲಾಯಿಸಿ",
+  "changePillDays": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ದಿನಗಳ ಸಂಖ್ಯೆಯನ್ನು ಬದಲಾಯಿಸಿ",
   "beginToEndNumbers": "{begin}ನಂ ~ {end}ನಂ",
   "resumeTaking": "ಸೇವನೆ ಪುನರಾರಂಭ",
   "changePausePeriod": "ಸೇವನೆ ವಿರಾಮ ಅವಧಿ ಬದಲಾವಣೆ",

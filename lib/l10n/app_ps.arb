@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "د ګولیو له اخیستو وقفه پیل کړئ",
   "pauseTakingChanged": "د ګولیو د اخیستلو دمه بدله شوه",
   "editPausePeriod": "د ګولیو د اخیستلو د دمې موده بدله کړئ",
-  "changePillDays": "د درملو ورځې بدلول",
+  "changePillDays": "د ګولۍ اخیستو د ورځو شمېر بدل کړئ",
   "beginToEndNumbers": "{begin} څخه {end} پورې",
   "resumeTaking": "د ګولیو بیا پیل کول",
   "changePausePeriod": "د استعمال وقفه دوره تبديل",

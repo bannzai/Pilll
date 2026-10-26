@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Začnite premor pri jemanju tablet",
   "pauseTakingChanged": "Premor pri jemanju tablet je spremenjen",
   "editPausePeriod": "Uredite obdobje premora pri jemanju tablet",
-  "changePillDays": "Spremeni število dni jemanja",
+  "changePillDays": "Spremenite število dni jemanja tablet",
   "beginToEndNumbers": "{begin}–{end}",
   "resumeTaking": "Nadaljuj jemanje",
   "changePausePeriod": "Sprememba premora v jemanju",

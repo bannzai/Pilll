@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "మాత్రలు తీసుకోవడంలో విరామం ప్రారంభించండి",
   "pauseTakingChanged": "మాత్రలు తీసుకోవడంలో విరామం మార్చబడింది",
   "editPausePeriod": "మాత్రలు తీసుకునే విరామ కాలాన్ని మార్చండి",
-  "changePillDays": "సేవన రోజులను మార్చండి",
+  "changePillDays": "మాత్రలు తీసుకునే రోజుల సంఖ్యను మార్చండి",
   "beginToEndNumbers": "{begin}వ ~ {end}వ",
   "resumeTaking": "మళ్లీ ప్రారంభించండి",
   "changePausePeriod": "సేవన విరామ కాలం మార్పు",

@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "İlaç kullanımına ara vermeye başlayın",
   "pauseTakingChanged": "Hap kullanım molası değiştirildi",
   "editPausePeriod": "Hap kullanımına ara verme süresini düzenleyin",
-  "changePillDays": "Alım Gün Sayısını Değiştir",
+  "changePillDays": "Hap kullanma gün sayısını değiştirin",
   "beginToEndNumbers": "{begin} ~ {end}",
   "resumeTaking": "Kullanımı Devam Et",
   "changePausePeriod": "İlaç Arası Dönem Değişikliği",

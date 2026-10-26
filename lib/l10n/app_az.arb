@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Həb qəbuluna fasilə başlayın",
   "pauseTakingChanged": "Həb qəbuluna fasilə dəyişdirildi",
   "editPausePeriod": "Həb qəbuluna fasilə müddətini dəyişin",
-  "changePillDays": "Qəbul günlərinin sayını dəyişdir",
+  "changePillDays": "Həb qəbul etdiyiniz günlərin sayını dəyişin",
   "beginToEndNumbers": "{begin}-ci - {end}-ci",
   "resumeTaking": "Qəbulu bərpa et",
   "changePausePeriod": "Qəbul fasiləsinin dəyişdirilməsi",

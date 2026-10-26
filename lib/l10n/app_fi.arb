@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Aloita pilleritauko",
   "pauseTakingChanged": "Pilleritauko on muutettu",
   "editPausePeriod": "Muokkaa pilleritaukoa",
-  "changePillDays": "Muuta käyttöpäiviä",
+  "changePillDays": "Muuta pillereiden käyttöpäivien määrää",
   "beginToEndNumbers": "{begin}–{end}",
   "resumeTaking": "Jatka ottamista",
   "changePausePeriod": "Muuta taukojaksoa",

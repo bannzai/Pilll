@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਵਿਰਾਮ ਸ਼ੁਰੂ ਕਰੋ",
   "pauseTakingChanged": "ਗੋਲੀ ਲੈਣ ਦਾ ਵਿਰਾਮ ਬਦਲ ਦਿੱਤਾ ਗਿਆ ਹੈ",
   "editPausePeriod": "ਗੋਲੀ ਲੈਣ ਦੇ ਵਿਰਾਮ ਦੀ ਮਿਆਦ ਬਦਲੋ",
-  "changePillDays": "ਸੇਵਨ ਦਿਨ ਬਦਲੋ",
+  "changePillDays": "ਗੋਲੀ ਲੈਣ ਵਾਲੇ ਦਿਨਾਂ ਦੀ ਗਿਣਤੀ ਬਦਲੋ",
   "beginToEndNumbers": "{begin} ਤੋਂ {end} ਤੱਕ",
   "resumeTaking": "ਸੇਵਨ ਮੁੜ ਸ਼ੁਰੂ",
   "changePausePeriod": "ਸੇਵਨ ਵਿਰਾਮ ਮਿਆਦ ਬਦਲੋ",

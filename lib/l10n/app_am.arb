@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "የክኒን እረፍት ጀምር",
   "pauseTakingChanged": "የክኒን መውሰድ የእረፍት ጊዜ ተቀይሯል",
   "editPausePeriod": "የክኒን ዕረፍት ጊዜን ያርትዑ",
-  "changePillDays": "የመውሰጃ ቀናት ብዛት መቀየር",
+  "changePillDays": "ክኒን የሚወሰድበትን የቀናት ብዛት ይቀይሩ",
   "beginToEndNumbers": "{begin}ኛ ~ {end}ኛ",
   "resumeTaking": "እንደገና መጀመር",
   "changePausePeriod": "የእረፍት ጊዜ ለውጥ",

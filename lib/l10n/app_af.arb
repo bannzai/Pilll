@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Begin pillepouse",
   "pauseTakingChanged": "Jou pilpouse is verander",
   "editPausePeriod": "Wysig die pillepouse",
-  "changePillDays": "Verander gebruik dae",
+  "changePillDays": "Verander die aantal dae wat jy jou pil neem",
   "beginToEndNumbers": "Nr. {begin} ~ Nr. {end}",
   "resumeTaking": "Hervat inname",
   "changePausePeriod": "Verander rusperiode",

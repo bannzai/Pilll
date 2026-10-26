@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "شروع وقفه در مصرف قرص",
   "pauseTakingChanged": "دورهٔ توقف مصرف قرص تغییر کرد",
   "editPausePeriod": "ویرایش دورهٔ استراحت از مصرف قرص",
-  "changePillDays": "تغییر دوره مصرف",
+  "changePillDays": "تغییر تعداد روزهای مصرف قرص",
   "beginToEndNumbers": "شماره {begin} تا {end}",
   "resumeTaking": "از سرگیری مصرف",
   "changePausePeriod": "تغییر دوره توقف مصرف",

@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Започнете пауза во земање таблета",
   "pauseTakingChanged": "Променета е паузата во земањето таблета",
   "editPausePeriod": "Измена на периодот на пауза од земање таблета",
-  "changePillDays": "Промени период на земање",
+  "changePillDays": "Промена на бројот на денови за земање таблета",
   "beginToEndNumbers": "{begin} број ~ {end} број",
   "resumeTaking": "Обнови прием",
   "changePausePeriod": "Промена на периодот на пауза",

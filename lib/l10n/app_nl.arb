@@ -383,7 +383,7 @@
   "startPauseTakingLabel": "Pillenpauze starten",
   "pauseTakingChanged": "Je pillenpauze is gewijzigd",
   "editPausePeriod": "Pillenpauze aanpassen",
-  "changePillDays": "Innameduur wijzigen",
+  "changePillDays": "Aantal dagen dat je de pil neemt wijzigen",
   "beginToEndNumbers": "{begin} tot {end}",
   "resumeTaking": "Inname hervatten",
   "changePausePeriod": "Pauzeperiode wijzigen",
