@@ -237,7 +237,7 @@
   "title": "शीर्षक",
   "message": "संदेश",
   "option": "विकल्प",
-  "completed": "पूरा",
+  "completed": "पूरा हुआ",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "पिल लेना भूलने की स्थिति में मिलने वाली सूचना के संदेश को आप बदल सकते हैं",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

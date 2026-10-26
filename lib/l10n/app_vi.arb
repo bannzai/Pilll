@@ -237,7 +237,7 @@
   "title": "Tiêu đề",
   "message": "Tin nhắn",
   "option": "Tùy chọn",
-  "completed": "Hoàn thành",
+  "completed": "Xong",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Có thể thay đổi nội dung thông báo khi quên uống thuốc",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

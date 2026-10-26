@@ -237,7 +237,7 @@
   "title": "כותרת",
   "message": "הודעה",
   "option": "אפשרויות",
-  "completed": "אישור",
+  "completed": "סיום",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "ניתן לערוך הודעות התראה על שכחת נטילה",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

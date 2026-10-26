@@ -237,7 +237,7 @@
   "title": "หัวข้อ",
   "message": "ข้อความ",
   "option": "ตัวเลือก",
-  "completed": "เสร็จ",
+  "completed": "เสร็จสิ้น",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "สามารถเปลี่ยนแปลงข้อความแจ้งเตือนเมื่อลืมทานยาได้",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

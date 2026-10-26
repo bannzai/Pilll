@@ -237,7 +237,7 @@
   "title": "ਸਿਰਲੇਖ",
   "message": "ਸੁਨੇਹਾ",
   "option": "ਵਿਕਲਪ",
-  "completed": "ਪੂਰਾ",
+  "completed": "ਮੁਕੰਮਲ",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "ਦਵਾਈ ਛੁੱਟਣ 'ਤੇ ਸੂਚਨਾ ਮੈਸੇਜ ਬਦਲਿਆ ਜਾ ਸਕਦਾ ਹੈ",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

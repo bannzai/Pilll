@@ -237,7 +237,7 @@
   "title": "Pavadinimas",
   "message": "Pranešimas",
   "option": "Parinktys",
-  "completed": "Gerai",
+  "completed": "Atlikta",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Galite keisti pranešimo tekstą, kai pamirštate išgerti tabletes",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

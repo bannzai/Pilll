@@ -237,7 +237,7 @@
   "title": "عنوان",
   "message": "پیام",
   "option": "گزینه‌ها",
-  "completed": "تمام",
+  "completed": "انجام شد",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "می‌توانید پیام اعلان فراموشی مصرف را تغییر دهید",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

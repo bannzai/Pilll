@@ -237,7 +237,7 @@
   "title": "Titolo",
   "message": "Messaggio",
   "option": "Opzioni",
-  "completed": "Fatto",
+  "completed": "Fine",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Puoi modificare il messaggio di notifica per quando dimentichi di prendere la pillola",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

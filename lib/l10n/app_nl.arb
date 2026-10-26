@@ -237,7 +237,7 @@
   "title": "Titel",
   "message": "Bericht",
   "option": "Opties",
-  "completed": "Klaar",
+  "completed": "Gereed",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Je kunt de meldingstekst wijzigen voor wanneer je vergeet je pil in te nemen",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

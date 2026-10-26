@@ -237,7 +237,7 @@
   "title": "Titel",
   "message": "Meddelande",
   "option": "Alternativ",
-  "completed": "Klar",
+  "completed": "Klart",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Du kan anpassa påminnelsemeddelandet för missade doser",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

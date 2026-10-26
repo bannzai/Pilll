@@ -237,7 +237,7 @@
   "title": "Titulli",
   "message": "Mesazh",
   "option": "Opsionet",
-  "completed": "Kryer",
+  "completed": "U krye",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Mund të ndryshoni mesazhin e njoftimit kur harroni të merrni pilulën",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

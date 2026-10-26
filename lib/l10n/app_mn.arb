@@ -237,7 +237,7 @@
   "title": "Гарчиг",
   "message": "Мессеж",
   "option": "Сонголтууд",
-  "completed": "Дуусгах",
+  "completed": "Дууссан",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Эм уухаа мартсан үед илгээх мэдэгдлийн текстийг өөрчлөх боломжтой",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

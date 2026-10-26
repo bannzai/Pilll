@@ -237,7 +237,7 @@
   "title": "ခေါင်းစဉ်",
   "message": "မက်ဆေ့ချ်",
   "option": "ရွေးချယ်စရာများ",
-  "completed": "ပြီး",
+  "completed": "ပြီးပါပြီ",
   "pilll": "ပီလ်",
   "changeMissedNotificationMessage": "ဆေးမသောက်ရန်မေ့လျော့သွားသည့်အခါ အကြောင်းကြားစာသားကို ပြောင်းလဲနိုင်ပါသည်",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

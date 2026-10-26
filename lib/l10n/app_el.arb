@@ -237,7 +237,7 @@
   "title": "Τίτλος",
   "message": "Μήνυμα",
   "option": "Επιλογές",
-  "completed": "Έτοιμο",
+  "completed": "Τέλος",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Μπορείτε να αλλάξετε το μήνυμα ειδοποίησης όταν ξεχνάτε να πάρετε το χάπι",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

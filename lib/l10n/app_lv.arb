@@ -237,7 +237,7 @@
   "title": "Nosaukums",
   "message": "Ziņojums",
   "option": "Opcijas",
-  "completed": "Pabeigt",
+  "completed": "Gatavs",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Varat mainīt paziņojuma tekstu pilulu lietošanas aizmiršanas gadījumam",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

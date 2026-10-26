@@ -237,7 +237,7 @@
   "title": "શીર્ષક",
   "message": "સંદેશ",
   "option": "વિકલ્પો",
-  "completed": "સમાપ્ત",
+  "completed": "પૂર્ણ",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "તમે ગોળી લેવાનું ભૂલી જાવ ત્યારે સૂચનાનો સંદેશ બદલી શકો છો",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

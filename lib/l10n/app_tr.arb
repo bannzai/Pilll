@@ -237,7 +237,7 @@
   "title": "Başlık",
   "message": "Mesaj",
   "option": "Seçenekler",
-  "completed": "Tamam",
+  "completed": "Bitti",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "İlaç unutulduğunda gösterilecek bildirim mesajını özelleştirebilirsiniz",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

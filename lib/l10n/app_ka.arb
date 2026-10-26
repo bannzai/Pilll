@@ -237,7 +237,7 @@
   "title": "სათაური",
   "message": "შეტყობინება",
   "option": "ვარიანტები",
-  "completed": "მზადაა",
+  "completed": "დასრულება",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "შეგიძლიათ შეცვალოთ შეტყობინება, რომელიც გამოჩნდება აბის დავიწყებისას",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

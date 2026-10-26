@@ -237,7 +237,7 @@
   "title": "Teitl",
   "message": "Neges",
   "option": "Opsiynau",
-  "completed": "Gorffen",
+  "completed": "Wedi gorffen",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Gallwch newid neges yr hysbysiad pan fyddwch yn anghofio cymryd y bilsen",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

@@ -237,7 +237,7 @@
   "title": "سرلیک",
   "message": "پیغام",
   "option": "غوراوي",
-  "completed": "بشپړ",
+  "completed": "بشپړ شو",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "د ګولیو د هیرولو د اطلاعیې پیغام بدلولی شو",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

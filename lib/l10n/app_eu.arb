@@ -237,7 +237,7 @@
   "title": "Izenburua",
   "message": "Mezua",
   "option": "Aukerak",
-  "completed": "Osatu",
+  "completed": "Eginda",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Pilulak hartzea ahaztutako kasuetarako jakinarazpen mezua aldatu dezakezu",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

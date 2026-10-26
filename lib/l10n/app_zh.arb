@@ -237,7 +237,7 @@
   "title": "标题",
   "message": "消息",
   "option": "选项",
-  "completed": "确定",
+  "completed": "完成",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "可以自定义忘记服药时的通知内容",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

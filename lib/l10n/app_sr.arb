@@ -237,7 +237,7 @@
   "title": "Наслов",
   "message": "Порука",
   "option": "Опције",
-  "completed": "Završi",
+  "completed": "Готово",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Можете прилагодити текст обавештења када заборавите пилуле",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

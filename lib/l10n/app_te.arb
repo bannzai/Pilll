@@ -237,7 +237,7 @@
   "title": "శీర్షిక",
   "message": "సందేశం",
   "option": "ఎంపికలు",
-  "completed": "పూర్తి",
+  "completed": "పూర్తయింది",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "మర్చిపోయిన డోస్ నోటిఫికేషన్ సందేశాన్ని కస్టమైజ్ చేయవచ్చు",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

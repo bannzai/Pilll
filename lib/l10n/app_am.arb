@@ -237,7 +237,7 @@
   "title": "ርዕስ",
   "message": "መልዕክት",
   "option": "አማራጮች",
-  "completed": "ተጠናቅቋል",
+  "completed": "ተጠናቋል",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "ክኒን መውሰድ ስትረሱ የሚላክ ማሳወቂያ መልዕክት መቀየር ይችላሉ",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

@@ -237,7 +237,7 @@
   "title": "ចំណងជើង",
   "message": "សារ",
   "option": "ជម្រើស",
-  "completed": "ចប់",
+  "completed": "រួចរាល់",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "អាចកែប្រែសារជូនដំណឹងនៅពេលភ្លេចផឹកថ្នាំបាន",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

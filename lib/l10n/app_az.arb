@@ -237,7 +237,7 @@
   "title": "Başlıq",
   "message": "Mesaj",
   "option": "Seçimlər",
-  "completed": "Tamamla",
+  "completed": "Tamam",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Dərman qəbulunu unutduğunuz halda bildiriş mətnini dəyişdirə bilərsiniz",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

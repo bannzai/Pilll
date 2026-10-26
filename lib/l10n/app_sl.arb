@@ -237,7 +237,7 @@
   "title": "Naslov",
   "message": "Sporočilo",
   "option": "Možnosti",
-  "completed": "Dokončaj",
+  "completed": "Končano",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Besedilo obvestila za pozabljeno jemanje lahko prilagodite",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

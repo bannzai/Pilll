@@ -237,7 +237,7 @@
   "title": "ଶୀର୍ଷକ",
   "message": "ବାର୍ତ୍ତା",
   "option": "ବିକଳ୍ପଗୁଡ଼ିକ",
-  "completed": "ସମ୍ପନ୍ନ",
+  "completed": "ସମ୍ପୂର୍ଣ୍ଣ",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "ଗୋଲି ଖାଇବାକୁ ଭୁଲିଗଲେ ବିଜ୍ଞପ୍ତି ବାର୍ତ୍ତା ପରିବର୍ତ୍ତନ କରିପାରିବେ",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

@@ -237,7 +237,7 @@
   "title": "මාතෘකාව",
   "message": "පණිවිඩය",
   "option": "විකල්ප",
-  "completed": "අවසන්",
+  "completed": "සම්පූර්ණයි",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "මාත්‍රා ගැනීම අමතක වූ විට දැනුම්දීමේ පණිවිඩය වෙනස් කළ හැකිය",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

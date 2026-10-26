@@ -237,7 +237,7 @@
   "title": "Pamagat",
   "message": "Mensahe",
   "option": "Mga opsyon",
-  "completed": "Tapos",
+  "completed": "Tapos na",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Maaaring baguhin ang mensahe ng notification para sa nakalimutang pag-inom",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

@@ -237,7 +237,7 @@
   "title": "Titre",
   "message": "Message",
   "option": "Options",
-  "completed": "Fait",
+  "completed": "Terminé",
   "pilll": "Pilule",
   "changeMissedNotificationMessage": "Vous pouvez personnaliser le message de notification pour les pilules oubliées",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

@@ -237,7 +237,7 @@
   "title": "Isihloko",
   "message": "Umlayezo",
   "option": "Izinketho",
-  "completed": "Qedile",
+  "completed": "Kuqediwe",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Ungashintsha umlayezo wokwazisa uma ukhohlwe ukuphuza amaphilisi",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

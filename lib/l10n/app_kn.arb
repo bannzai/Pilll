@@ -237,7 +237,7 @@
   "title": "ಶೀರ್ಷಿಕೆ",
   "message": "ಸಂದೇಶ",
   "option": "ಆಯ್ಕೆಗಳು",
-  "completed": "ಮುಗಿಸಿ",
+  "completed": "ಮುಗಿದಿದೆ",
   "pilll": "ಪಿಲ್ಲ್",
   "changeMissedNotificationMessage": "ಗೋಳಿ ಮರೆಯಾದಾಗ ಅಧಿಸೂಚನೆ ಸಂದೇಶವನ್ನು ಬದಲಾಯಿಸಬಹುದು",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",

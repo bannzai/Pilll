@@ -237,7 +237,7 @@
   "title": "Վերնագիր",
   "message": "Հաղորդագրություն",
   "option": "Ընտրանքներ",
-  "completed": "Պատրաստ",
+  "completed": "Պատրաստ է",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Կարող եք փոխել դեղահաբի ընդունումը բաց թողնելու ծանուցման տեքստը",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
