@@ -489,7 +489,7 @@
   "healthCareIntegrationFeatureAppealHeadline": "Μπορείτε να συνδεθείτε με την εφαρμογή Υγεία",
   "healthCareIntegrationFeatureAppealBody": "Μπορείτε να συγχρονίζετε αυτόματα τα δεδομένα της περιόδου που καταγράψατε στο Pilll με την εφαρμογή Υγεία. Μπορείτε να τα βλέπετε μαζί με τα υπόλοιπα δεδομένα υγείας σας και να τα χρησιμοποιείτε σε άλλες εφαρμογές.",
   "quickRecordFeatureAppealTitle": "Καταγραφή λήψης απευθείας από την ειδοποίηση",
-  "quickRecordFeatureAppealShortDescription": "Καταγραφή από την ειδοποίηση χωρίς να ανοίξετε την εφαρμογή",
+  "quickRecordFeatureAppealShortDescription": "Καταγράψτε από την ειδοποίηση χωρίς να ανοίξετε την εφαρμογή",
   "quickRecordFeatureAppealHeadline": "Καταγραφή λήψης με ένα άγγιγμα από την οθόνη ειδοποιήσεων",
   "quickRecordFeatureAppealBody": "Πατώντας παρατεταμένα την ειδοποίηση υπενθύμισης, εμφανίζεται η ενέργεια «Έλαβα», και μπορείτε να καταγράψετε τη λήψη χωρίς να ανοίξετε την εφαρμογή.",
   "creatingNewPillSheetFeatureAppealTitle": "Αυτόματη προσθήκη φύλλου χαπιών",

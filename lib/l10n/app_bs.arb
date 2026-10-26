@@ -489,7 +489,7 @@
   "healthCareIntegrationFeatureAppealHeadline": "Možete povezati s aplikacijom Zdravlje",
   "healthCareIntegrationFeatureAppealBody": "Podatke o menstruaciji zabilježene u aplikaciji Pilll možete automatski sinhronizirati s aplikacijom Zdravlje. Možete ih pregledati uz ostale zdravstvene podatke i koristiti u drugim aplikacijama.",
   "quickRecordFeatureAppealTitle": "Unos u evidenciju direktno iz obavijesti",
-  "quickRecordFeatureAppealShortDescription": "Bilježi putem obavještenja bez otvaranja aplikacije",
+  "quickRecordFeatureAppealShortDescription": "Zabilježite iz obavijesti bez otvaranja aplikacije",
   "quickRecordFeatureAppealHeadline": "Evidentiranje uzimanja jednim dodirom na ekranu obavijesti",
   "quickRecordFeatureAppealBody": "Dugim pritiskom na obavještenje podsjetnika prikazat će se akcija \"Uzeto\", i možete zabilježiti uzimanje lijeka bez otvaranja aplikacije.",
   "creatingNewPillSheetFeatureAppealTitle": "Automatski dodaj listu pilula",

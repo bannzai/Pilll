@@ -489,7 +489,7 @@
   "healthCareIntegrationFeatureAppealHeadline": "Você pode conectar ao app Saúde",
   "healthCareIntegrationFeatureAppealBody": "Você pode sincronizar automaticamente com o app Saúde os dados de menstruação registrados no Pilll. Assim, pode vê-los junto com seus outros dados de saúde e usá-los em outros apps.",
   "quickRecordFeatureAppealTitle": "Registro de uso direto pela notificação",
-  "quickRecordFeatureAppealShortDescription": "Registre na notificação sem abrir o app",
+  "quickRecordFeatureAppealShortDescription": "Registre pela notificação sem abrir o aplicativo",
   "quickRecordFeatureAppealHeadline": "Registro de dose com um toque na tela de notificação",
   "quickRecordFeatureAppealBody": "Ao pressionar e segurar a notificação de lembrete, a ação \"Tomei\" é exibida, permitindo registrar a ingestão sem abrir o aplicativo.",
   "creatingNewPillSheetFeatureAppealTitle": "Adicionar folha de pílulas automaticamente",

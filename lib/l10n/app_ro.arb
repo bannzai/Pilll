@@ -489,7 +489,7 @@
   "healthCareIntegrationFeatureAppealHeadline": "Te poți conecta la aplicația Sănătate",
   "healthCareIntegrationFeatureAppealBody": "Poți sincroniza automat cu aplicația Sănătate datele despre menstruație înregistrate în Pilll. Le poți vedea alături de celelalte date de sănătate și le poți folosi și în alte aplicații.",
   "quickRecordFeatureAppealTitle": "Înregistrare direct din notificare",
-  "quickRecordFeatureAppealShortDescription": "Înregistrează din notificare fără a deschide aplicația",
+  "quickRecordFeatureAppealShortDescription": "Înregistrează din notificare fără să deschizi aplicația",
   "quickRecordFeatureAppealHeadline": "Înregistrare cu un singur tap din ecranul notificărilor",
   "quickRecordFeatureAppealBody": "Apăsați lung pe notificarea de memento pentru a afișa acțiunea „Am luat pastila\" și înregistrați administrarea fără a deschide aplicația.",
   "creatingNewPillSheetFeatureAppealTitle": "Adaugă automat foaia de pastile",

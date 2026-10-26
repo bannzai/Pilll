@@ -489,7 +489,7 @@
   "healthCareIntegrationFeatureAppealHeadline": "Puoi collegarti all'app Salute",
   "healthCareIntegrationFeatureAppealBody": "Puoi sincronizzare automaticamente con l’app Salute i dati sulle mestruazioni registrati in Pilll. Potrai consultarli insieme agli altri dati sulla salute e usarli anche in altre app.",
   "quickRecordFeatureAppealTitle": "Registro delle assunzioni direttamente dalla notifica",
-  "quickRecordFeatureAppealShortDescription": "Apri l'app e registra nella notifica",
+  "quickRecordFeatureAppealShortDescription": "Registra dalla notifica senza aprire l'app",
   "quickRecordFeatureAppealHeadline": "Registra l'assunzione con un solo tap dalla schermata delle notifiche",
   "quickRecordFeatureAppealBody": "Quando tieni premuta la notifica di promemoria viene mostrata l'azione \"Ho preso\" che ti permette di registrare l'assunzione senza aprire l'app.",
   "creatingNewPillSheetFeatureAppealTitle": "Aggiunta automatica del foglio delle pillole",

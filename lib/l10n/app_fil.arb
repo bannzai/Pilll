@@ -489,7 +489,7 @@
   "healthCareIntegrationFeatureAppealHeadline": "Maaari ninyong ikonekta sa Health app",
   "healthCareIntegrationFeatureAppealBody": "Maaari ninyong awtomatikong i-sync sa Health app ang datos ng regla na itinala ninyo sa Pilll. Maaari ninyo itong tingnan kasama ng iba ninyong datos sa kalusugan at gamitin din sa ibang app.",
   "quickRecordFeatureAppealTitle": "Tala ng pag-inom mula mismo sa abiso",
-  "quickRecordFeatureAppealShortDescription": "I-record sa notification nang hindi binubuksan ang app",
+  "quickRecordFeatureAppealShortDescription": "Itala mula sa abiso nang hindi binubuksan ang app",
   "quickRecordFeatureAppealHeadline": "Isang tapik lang para sa rekord ng paginom sa screen ng notipikasyon",
   "quickRecordFeatureAppealBody": "Kapag pinindot nang matagal ang reminder notification, lalabas ang aksyon na \"Nainom na\", na nagbibigay-daan sa iyong i-record ang pag-inom nang hindi kailangang buksan ang app.",
   "creatingNewPillSheetFeatureAppealTitle": "Awtomatikong Magdagdag ng Pill Sheet",

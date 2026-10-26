@@ -489,7 +489,7 @@
   "healthCareIntegrationFeatureAppealHeadline": "Денсаулық қолданбасына қосуға болады",
   "healthCareIntegrationFeatureAppealBody": "Pilll-де тіркелген етеккір туралы деректерді Денсаулық қолданбасымен автоматты түрде синхрондай аласыз. Оларды басқа денсаулық деректерімен бірге көріп, өзге қолданбаларда да пайдалана аласыз.",
   "quickRecordFeatureAppealTitle": "Хабарландырудан бірден қабылдау жазбасын қосу",
-  "quickRecordFeatureAppealShortDescription": "Қосымшаны ашпай-ақ хабарландырудан жазу",
+  "quickRecordFeatureAppealShortDescription": "Қолданбаны ашпай, хабарландырудан белгілеңіз",
   "quickRecordFeatureAppealHeadline": "Хабарлама экранында бір түрту арқылы таблетка қабылдауды тіркеу",
   "quickRecordFeatureAppealBody": "Еске салғыш хабарландыруын басып тұрсаңыз, «Ішілді» әрекеті көрінеді және қолданбаны ашпай-ақ қабылдауды жазуға болады.",
   "creatingNewPillSheetFeatureAppealTitle": "Дәрі парақтарын автоматты түрде қосу",

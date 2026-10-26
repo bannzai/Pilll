@@ -489,7 +489,7 @@
   "healthCareIntegrationFeatureAppealHeadline": "Có thể kết nối với ứng dụng Sức khỏe",
   "healthCareIntegrationFeatureAppealBody": "Bạn có thể tự động đồng bộ dữ liệu kinh nguyệt đã ghi trong Pilll với ứng dụng Sức khỏe. Bạn cũng có thể xem dữ liệu này cùng các dữ liệu sức khỏe khác và sử dụng trong những ứng dụng khác.",
   "quickRecordFeatureAppealTitle": "Nhật ký uống thuốc ngay từ thông báo",
-  "quickRecordFeatureAppealShortDescription": "Ghi ngay từ thông báo mà không cần mở ứng dụng",
+  "quickRecordFeatureAppealShortDescription": "Ghi lại ngay trên thông báo mà không cần mở ứng dụng",
   "quickRecordFeatureAppealHeadline": "Ghi nhận uống thuốc bằng một chạm từ màn hình thông báo",
   "quickRecordFeatureAppealBody": "Nhấn giữ thông báo nhắc uống thuốc sẽ hiện hành động \"Đã uống\", cho phép bạn ghi lại việc đã uống mà không cần mở ứng dụng.",
   "creatingNewPillSheetFeatureAppealTitle": "Tự động thêm vỉ thuốc",

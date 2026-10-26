@@ -489,7 +489,7 @@
   "healthCareIntegrationFeatureAppealHeadline": "د روغتیا له اپلېکېشن سره نښلېدای شي",
   "healthCareIntegrationFeatureAppealBody": "په Pilll کې ثبت شوي د حیض معلومات له روغتیايي اپ سره په اوتومات ډول همغږي کولی شئ. تاسو یې له نورو روغتیايي معلوماتو سره یوځای کتلی او په نورو اپونو کې هم کارولی شئ.",
   "quickRecordFeatureAppealTitle": "له خبرتیا څخه نېغ په نېغه د ګولۍ اخیستلو ریکارډ",
-  "quickRecordFeatureAppealShortDescription": "پرته له اپ خلاصولو د خبرتیا له لارې ثبت کړئ",
+  "quickRecordFeatureAppealShortDescription": "اپلېکېشن له پرانیستلو پرته له خبرتیا څخه ثبت کړئ",
   "quickRecordFeatureAppealHeadline": "د خبرتیا پر سکرین د یوه ټچ سره د دوا د اخیستلو ثبتول",
   "quickRecordFeatureAppealBody": "که تاسو د یادونې خبرتیا اوږده فشار ورکړئ، د 'دوا واخیستله' عمل ښکاره کیږي، او تاسو کولی شئ پرته له اپلیکیشن پرانیستلو د دوا اخیستل ثبت کړئ.",
   "creatingNewPillSheetFeatureAppealTitle": "د حبو پاڼه اتوماتیک اضافه کړئ",

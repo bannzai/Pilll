@@ -489,7 +489,7 @@
   "healthCareIntegrationFeatureAppealHeadline": "Podes conectar coa aplicación Saúde",
   "healthCareIntegrationFeatureAppealBody": "Podes sincronizar automaticamente coa aplicación Saúde os datos da regra que rexistraches en Pilll. Poderás velos xunto cos teus outros datos de saúde e usalos noutras aplicacións.",
   "quickRecordFeatureAppealTitle": "Rexistro de tomas directamente desde a notificación",
-  "quickRecordFeatureAppealShortDescription": "Gravar sen abrir a aplicación",
+  "quickRecordFeatureAppealShortDescription": "Rexistra desde a notificación sen abrir a aplicación",
   "quickRecordFeatureAppealHeadline": "Rexistro de toma cun un toque na pantalla de notificación",
   "quickRecordFeatureAppealBody": "Se manteñes premida a notificación de recordatorio, aparecerá a acción «Tomado» e poderás rexistrar a toma sen abrir a aplicación.",
   "creatingNewPillSheetFeatureAppealTitle": "Engadir ficha de pílulas automaticamente",

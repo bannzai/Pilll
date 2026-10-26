@@ -489,7 +489,7 @@
   "healthCareIntegrationFeatureAppealHeadline": "Kan forbindes med appen Sundhed",
   "healthCareIntegrationFeatureAppealBody": "Du kan automatisk synkronisere de menstruationsdata, du har registreret i Pilll, med appen Sundhed. Her kan du se dem sammen med dine øvrige sundhedsdata og bruge dem i andre apps.",
   "quickRecordFeatureAppealTitle": "Pilleregistrering direkte fra notifikationen",
-  "quickRecordFeatureAppealShortDescription": "Registrer via notifikationer uden at åbne appen",
+  "quickRecordFeatureAppealShortDescription": "Registrer direkte fra notifikationen uden at åbne appen",
   "quickRecordFeatureAppealHeadline": "Registrer med ét tryk fra notifikationsskærmen",
   "quickRecordFeatureAppealBody": "Hold nede på påmindelsesnotifikationen for at se handlingen \"Taget\", og registrer din indtagelse uden at åbne appen.",
   "creatingNewPillSheetFeatureAppealTitle": "Tilføj pilleark automatisk",

@@ -489,7 +489,7 @@
   "healthCareIntegrationFeatureAppealHeadline": "Connect with Health",
   "healthCareIntegrationFeatureAppealBody": "You can automatically sync the period data you record in Pilll with the Health app. View it alongside your other health data and use it in other apps.",
   "quickRecordFeatureAppealTitle": "Pill log right from the notification",
-  "quickRecordFeatureAppealShortDescription": "Log your dose right from the push",
+  "quickRecordFeatureAppealShortDescription": "Record from the notification without opening the app",
   "quickRecordFeatureAppealHeadline": "Tap the notification to record",
   "quickRecordFeatureAppealBody": "Long-press the reminder notification to reveal a \"Taken\" action and log your dose without opening the app.",
   "creatingNewPillSheetFeatureAppealTitle": "Automatically add a new pill sheet",

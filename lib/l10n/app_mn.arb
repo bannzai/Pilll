@@ -489,7 +489,7 @@
   "healthCareIntegrationFeatureAppealHeadline": "Эрүүл мэнд апптай холбох боломжтой",
   "healthCareIntegrationFeatureAppealBody": "Pilll-д бүртгэсэн сарын тэмдгийн мэдээллийг Эрүүл мэнд апптай автоматаар синк хийх боломжтой. Та үүнийг эрүүл мэндийн бусад мэдээлэлтэйгээ хамт харж, өөр аппуудад ашиглаж болно.",
   "quickRecordFeatureAppealTitle": "Мэдэгдлээс шууд эм уусан бүртгэл нэмэх",
-  "quickRecordFeatureAppealShortDescription": "Апп нээлгүйгээр мэдэгдэл дээрээс бүртгэх",
+  "quickRecordFeatureAppealShortDescription": "Аппыг нээлгүйгээр мэдэгдлээс бүртгэнэ үү",
   "quickRecordFeatureAppealHeadline": "Мэдэгдлийн дэлгэцэд нэг товшилтоор хэрэглээг бүртгэх",
   "quickRecordFeatureAppealBody": "Сануулагч мэдэгдэл дээр удаан дарвал \"Уусан\" гэсэн үйлдэл гарч ирэх тул аппыг нээлгүйгээр эм уусанаа бүртгэж болно.",
   "creatingNewPillSheetFeatureAppealTitle": "Пилийн хуудасыг автоматаар нэмэх",

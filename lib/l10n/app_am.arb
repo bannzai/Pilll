@@ -489,7 +489,7 @@
   "healthCareIntegrationFeatureAppealHeadline": "ከጤና መተግበሪያ ጋር መገናኘት ይቻላል",
   "healthCareIntegrationFeatureAppealBody": "በPilll የመዘገቡትን የወር አበባ መረጃ ከጤና መተግበሪያው ጋር በራስ-ሰር ማመሳሰል ይችላሉ። ከሌሎች የጤና መረጃዎችዎ ጋር ማየትና በሌሎች መተግበሪያዎችም መጠቀም ይችላሉ።",
   "quickRecordFeatureAppealTitle": "ከማሳወቂያው በቀጥታ የአወሳሰድ መዝገብ",
-  "quickRecordFeatureAppealShortDescription": "መተግበሪያ ሳይከፍቱ በማሳወቂያ ይመዝግቡ",
+  "quickRecordFeatureAppealShortDescription": "መተግበሪያውን ሳይከፍቱ ከማሳወቂያው ላይ ይመዝግቡ",
   "quickRecordFeatureAppealHeadline": "በማሳወቂያ ማያ ገጽ ላይ በአንድ ነካ የመድሃኒት ወሰዳ ምዝገባ",
   "quickRecordFeatureAppealBody": "የማስታወሻ ማሳወቂያውን ረጅም ጊዜ ሲጭኑ፣ \"ወሰድኩ\" የሚለው ድርጊት ይታያል፣ ይህም መተግበሪያውን ሳይከፍቱ ክኒን መውሰዱን እንዲመዘግቡ ያስችልዎታል።",
   "creatingNewPillSheetFeatureAppealTitle": "ፒል ሰሌዳን በራስ-ሰር ጨምር",

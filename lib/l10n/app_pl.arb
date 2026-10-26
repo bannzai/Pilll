@@ -489,7 +489,7 @@
   "healthCareIntegrationFeatureAppealHeadline": "Możesz połączyć z aplikacją Zdrowie",
   "healthCareIntegrationFeatureAppealBody": "Dane dotyczące okresu zapisane w Pilll możesz automatycznie synchronizować z aplikacją Zdrowie. Możesz je tam przeglądać razem z innymi danymi o zdrowiu i używać ich także w innych aplikacjach.",
   "quickRecordFeatureAppealTitle": "Rejestr przyjęcia tabletki bezpośrednio z powiadomienia",
-  "quickRecordFeatureAppealShortDescription": "Zapisuj z powiadomień bez otwierania aplikacji",
+  "quickRecordFeatureAppealShortDescription": "Zapisuj z powiadomienia bez otwierania aplikacji",
   "quickRecordFeatureAppealHeadline": "Rejestrowanie przyjęcia jednym kliknięciem na ekranie powiadomień",
   "quickRecordFeatureAppealBody": "Długie naciśnięcie powiadomienia o przypomnieniu wyświetla akcję „Przyjęto\", dzięki czemu możesz zapisać przyjęcie tabletki bez otwierania aplikacji.",
   "creatingNewPillSheetFeatureAppealTitle": "Automatyczne dodawanie kart tabletek",

@@ -489,7 +489,7 @@
   "healthCareIntegrationFeatureAppealHeadline": "Pots connectar amb l'app Salut",
   "healthCareIntegrationFeatureAppealBody": "Pots sincronitzar automàticament les dades de la regla que has registrat a Pilll amb l’app Salut. Les podràs consultar juntament amb altres dades de salut i fer-les servir en altres aplicacions.",
   "quickRecordFeatureAppealTitle": "Registre de preses directament des de la notificació",
-  "quickRecordFeatureAppealShortDescription": "Registrar des de la notificació sense obrir l'app",
+  "quickRecordFeatureAppealShortDescription": "Registra-ho des de la notificació sense obrir l'aplicació",
   "quickRecordFeatureAppealHeadline": "Registre de presa amb un toc des de la pantalla de notificació",
   "quickRecordFeatureAppealBody": "Si manteniu premuda la notificació de recordatori, apareixerà l'acció «He pres la pastilla» i podreu registrar la presa sense obrir l'aplicació.",
   "creatingNewPillSheetFeatureAppealTitle": "Afegeix la fitxa de píndoles automàticament",
