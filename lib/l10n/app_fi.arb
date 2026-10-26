@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "kertaa ottaa pilleri",
   "duringPauseTaking": "Tauko pillereiden ottamisessa",
   "cannotPauseAlreadyTakenToday": "Jos olet jo ottanut tämän päivän pillerin,\net voi käyttää toimintoa ”Tauko pillereistä”",
-  "pauseTakingStarted": "Ottotauko on aloitettu",
+  "pauseTakingStarted": "Pilleritauko on alkanut",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Muokkaa ottotauon aloituspäivää",
   "shareWithFriends": "Kerro kaverille",

@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "مرات لتناول الحبة",
   "duringPauseTaking": "فترة توقف عن تناول الحبوب",
   "cannotPauseAlreadyTakenToday": "إذا تناولتِ حبة اليوم بالفعل،\nفلن تتمكني من استخدام «إيقاف تناول الحبوب مؤقتًا»",
-  "pauseTakingStarted": "تم بدء فترة إيقاف تناول الحبوب",
+  "pauseTakingStarted": "بدأت فترة التوقف المؤقت عن تناول الحبوب",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "تعديل تاريخ بداية توقف التناول",
   "shareWithFriends": "شارك مع الأصدقاء",

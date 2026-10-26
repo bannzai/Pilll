@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "gwaith cymryd y bilsen",
   "duringPauseTaking": "Seibiant rhag cymryd y bilsen",
   "cannotPauseAlreadyTakenToday": "Os ydych chi eisoes wedi cymryd pilsen heddiw,\nni allwch ddefnyddio «Seibiant rhag cymryd y bilsen»",
-  "pauseTakingStarted": "Wedi dechrau seibiant cymryd",
+  "pauseTakingStarted": "Mae'r seibiant rhag cymryd y bilsen wedi dechrau",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Golygu dyddiad dechrau seibiant cymryd",
   "shareWithFriends": "Rhannu gyda ffrindiau",

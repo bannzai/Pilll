@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "alkalommal szedni",
   "duringPauseTaking": "Szünet a tabletta szedésében",
   "cannotPauseAlreadyTakenToday": "Ha a mai tablettát már szedted,\nnem használhatod a „Szedési szünet” funkciót",
-  "pauseTakingStarted": "A tablettaszedési szünet elkezdődött",
+  "pauseTakingStarted": "Elkezdődött a tablettaszedési szünet",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Szedési szünet kezdő dátumának szerkesztése",
   "shareWithFriends": "Ajánlás barátoknak",

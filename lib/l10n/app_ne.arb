@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "पटक चक्की लिनुहोस्",
   "duringPauseTaking": "चक्की सेवनमा हाल विश्राम",
   "cannotPauseAlreadyTakenToday": "आजको चक्की पहिले नै लिनुभएको छ भने,\nतपाईंले ‘चक्की लिन केही समय रोक्ने’ सुविधा प्रयोग गर्न सक्नुहुन्न",
-  "pauseTakingStarted": "औषधि सेवन विराम सुरु गरियो",
+  "pauseTakingStarted": "चक्की सेवनको विश्राम सुरु भएको छ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "सेवन बिदाको सुरुवात मिति सम्पादन गर्नुहोस्",
   "shareWithFriends": "साथीलाई बताउनु",

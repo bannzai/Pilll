@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "বাৰ খাব",
   "duringPauseTaking": "বৰ্তমান পিল খোৱাৰ বিৰতি চলি আছে",
   "cannotPauseAlreadyTakenToday": "আজিৰ পিলটো ইতিমধ্যে খাই থাকিলে,\nআপুনি «পিল খোৱা সাময়িকভাৱে বন্ধ» ব্যৱহাৰ কৰিব নোৱাৰিব",
-  "pauseTakingStarted": "ঔষধ সেৱনৰ বিৰাম আৰম্ভ কৰিলো",
+  "pauseTakingStarted": "পিল খোৱাৰ বিৰতি আৰম্ভ হৈছে",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "সেৱন বিৰতিৰ আৰম্ভৰ তাৰিখ সম্পাদনা",
   "shareWithFriends": "বন্ধুক জনোৱক",

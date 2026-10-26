@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "пъти прием",
   "duringPauseTaking": "Пауза в приема на хапчетата",
   "cannotPauseAlreadyTakenToday": "Ако вече сте взели днешното хапче,\nне можете да използвате „Пауза на приема“",
-  "pauseTakingStarted": "Започна пауза в приема",
+  "pauseTakingStarted": "Паузата в приема на хапчета започна",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Редактиране на началната дата на паузата в приема",
   "shareWithFriends": "Сподели с приятели",

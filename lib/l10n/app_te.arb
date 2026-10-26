@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "సార్లు మాత్ర తీసుకోండి",
   "duringPauseTaking": "మాత్రలు తీసుకోవడంలో తాత్కాలిక విరామం",
   "cannotPauseAlreadyTakenToday": "ఈ రోజు మాత్ర ఇప్పటికే తీసుకుని ఉంటే,\n‘మాత్ర తీసుకోవడానికి విరామం’ ఉపయోగించలేరు",
-  "pauseTakingStarted": "మందుల సేవన విరామం ప్రారంభమైంది",
+  "pauseTakingStarted": "మాత్రలు తీసుకోవడంలో విరామం ప్రారంభమైంది",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "సేవన విరామం ప్రారంభ తేదీని సవరించండి",
   "shareWithFriends": "స్నేహితులకు చెప్పండి",

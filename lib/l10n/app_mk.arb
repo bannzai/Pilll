@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "пати земање",
   "duringPauseTaking": "Пауза во земањето таблета",
   "cannotPauseAlreadyTakenToday": "Ако веќе сте ја зеле денешната таблета,\nне можете да користите „Пауза во земање“",
-  "pauseTakingStarted": "Започна паузата од земање на пилулите",
+  "pauseTakingStarted": "Започна пауза во земањето таблета",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Уреди датум за почеток на паузата во приемот",
   "shareWithFriends": "Кажи на пријател",

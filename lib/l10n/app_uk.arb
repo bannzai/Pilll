@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "разів приймати пігулку",
   "duringPauseTaking": "Перерва у прийомі пігулок",
   "cannotPauseAlreadyTakenToday": "Якщо ви вже прийняли сьогоднішню пігулку,\nскористатися функцією «Перерва в прийомі» не вийде",
-  "pauseTakingStarted": "Розпочато перерву в прийомі",
+  "pauseTakingStarted": "Почалася перерва у прийомі пігулок",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Редагувати дату початку перерви у прийомі",
   "shareWithFriends": "Розповісти друзям",

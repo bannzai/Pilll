@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "ጊዜ መውሰድ",
   "duringPauseTaking": "የክኒን መውሰድ ለጊዜው ቆሟል",
   "cannotPauseAlreadyTakenToday": "የዛሬውን ክኒን አስቀድመው ከወሰዱ፣\n«ክኒን መውሰድን ለጊዜው ማቆም» መጠቀም አይችሉም",
-  "pauseTakingStarted": "የመድሃኒት እረፍት ተጀምሯል",
+  "pauseTakingStarted": "የክኒን መውሰድ እረፍት ተጀምሯል",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "የመድሃኒት እረፍት መጀመሪያ ቀን ማስተካከል",
   "shareWithFriends": "ለወዳጆች ማስተዋወቅ",

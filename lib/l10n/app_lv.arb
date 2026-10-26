@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "reizes lietot",
   "duringPauseTaking": "Tablešu lietošanas pārtraukums",
   "cannotPauseAlreadyTakenToday": "Ja šodienas tableti jau esat iedzēruši,\nnevarat izmantot „Lietošanas pārtraukumu“",
-  "pauseTakingStarted": "Tablešu lietošanas pauze sākta",
+  "pauseTakingStarted": "Tablešu lietošanas pārtraukums ir sācies",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Rediģēt pārtraukuma sākuma datumu",
   "shareWithFriends": "Ieteikt draugiem",

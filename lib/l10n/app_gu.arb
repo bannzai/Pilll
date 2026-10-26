@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "વખત ગોળી લેવી",
   "duringPauseTaking": "ગોળી લેવાનું હાલ બંધ છે",
   "cannotPauseAlreadyTakenToday": "જો તમે આજની ગોળી પહેલેથી લઈ લીધી હોય,\nતો તમે ‘ગોળી લેવાનો વિરામ’ વાપરી શકતા નથી",
-  "pauseTakingStarted": "ગોળી લેવાનો વિરામ શરૂ કર્યો છે",
+  "pauseTakingStarted": "ગોળી લેવાનો વિરામ શરૂ થયો છે",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "વિરામ શરૂઆતની તારીખ સંપાદિત કરો",
   "shareWithFriends": "મિત્રોને કહો",

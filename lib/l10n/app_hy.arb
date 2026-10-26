@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "անգամ ընդունել",
   "duringPauseTaking": "Հաբերի ընդունման ժամանակավոր ընդմիջում",
   "cannotPauseAlreadyTakenToday": "Եթե Դուք արդեն ընդունել եք այսօրվա հաբը,\nչեք կարող օգտագործել «Ընդունման դադար» գործառույթը",
-  "pauseTakingStarted": "Դեղահատի ընդունման դադարը սկսվել է",
+  "pauseTakingStarted": "Հաբերի ընդունման դադարը սկսվել է",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Խմբագրել ընդունման ընդմիջման սկսման ամսաթիվը",
   "shareWithFriends": "Ընկերներին ներկայացնել",

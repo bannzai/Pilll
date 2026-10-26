@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "marta qabul qilish",
   "duringPauseTaking": "Tabletkalarni qabul qilishda tanaffus",
   "cannotPauseAlreadyTakenToday": "Agar bugungi tabletkani allaqachon ichgan boʻlsangiz,\n«Tabletka ichishni vaqtincha toʻxtatish» funksiyasidan foydalana olmaysiz",
-  "pauseTakingStarted": "Tabletka qabul qilishda tanaffus boshlandi",
+  "pauseTakingStarted": "Tabletkalarni ichishdagi tanaffus boshlandi",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Qabul qilishni to'xtatish boshlanish sanasini tahrirlash",
   "shareWithFriends": "Do'stlarga ulashish",

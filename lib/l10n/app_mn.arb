@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "удаа ууна",
   "duringPauseTaking": "Эм уухаа түр завсарлаж байна",
   "cannotPauseAlreadyTakenToday": "Хэрэв та өнөөдрийн эмээ аль хэдийн уусан бол\n«Эм уухыг түр завсарлах» боломжийг ашиглах боломжгүй",
-  "pauseTakingStarted": "Эм уухын завсарлагаа эхлүүлэв",
+  "pauseTakingStarted": "Эм уух завсарлага эхэлсэн",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Эм уух дунд тасалгааны эхлэх өдрийг засварлах",
   "shareWithFriends": "найзуудад заах",

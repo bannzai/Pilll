@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "krat vzeti tableto",
   "duringPauseTaking": "Premor pri jemanju tablet",
   "cannotPauseAlreadyTakenToday": "Če ste današnjo tableto že vzeli,\nne morete uporabiti možnosti »Premor pri jemanju«",
-  "pauseTakingStarted": "Začeli ste s pavzo pri jemanju",
+  "pauseTakingStarted": "Premor pri jemanju tablet je začel veljati",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Uredi datum začetka pavze jemanja",
   "shareWithFriends": "Povej prijateljem",

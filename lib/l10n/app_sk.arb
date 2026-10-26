@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "krát užiť tabletku",
   "duringPauseTaking": "Prestávka v užívaní tabletiek",
   "cannotPauseAlreadyTakenToday": "Ak ste už užili dnešnú tabletku,\nnemôžete použiť „Prestávku v užívaní“",
-  "pauseTakingStarted": "Začala sa prestávka v užívaní tablietiek",
+  "pauseTakingStarted": "Začala sa prestávka v užívaní tabletiek",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Upraviť začiatok pauzy v užívaní",
   "shareWithFriends": "Odporučiť priateľom",

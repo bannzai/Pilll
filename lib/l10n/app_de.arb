@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "Mal einnehmen",
   "duringPauseTaking": "Pause bei der Pilleneinnahme",
   "cannotPauseAlreadyTakenToday": "Wenn du die Pille für heute bereits genommen hast,\nkannst du „Pillenpause“ nicht verwenden",
-  "pauseTakingStarted": "Die Einnahmepause wurde gestartet",
+  "pauseTakingStarted": "Deine Pillenpause hat begonnen",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Startdatum der Einnahmepause bearbeiten",
   "shareWithFriends": "Freunden empfehlen",

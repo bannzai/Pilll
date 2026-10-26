@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "раз принять таблетку",
   "duringPauseTaking": "Перерыв в приёме таблеток",
   "cannotPauseAlreadyTakenToday": "Если вы уже приняли сегодняшнюю таблетку,\n«Паузу в приёме» использовать нельзя",
-  "pauseTakingStarted": "Начат перерыв в приёме",
+  "pauseTakingStarted": "Начался перерыв в приёме таблеток",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Редактировать дату начала перерыва в приеме",
   "shareWithFriends": "Рассказать друзьям",

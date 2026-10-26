@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "بار گولی لیں",
   "duringPauseTaking": "گولی لینے میں عارضی وقفہ",
   "cannotPauseAlreadyTakenToday": "اگر آج کی گولی پہلے ہی لی جا چکی ہے تو\nآپ «گولی لینے میں عارضی وقفہ» استعمال نہیں کر سکتیں",
-  "pauseTakingStarted": "دوائی لینے میں وقفہ شروع کیا گیا ہے",
+  "pauseTakingStarted": "گولی لینے کا وقفہ شروع ہو گیا ہے",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "دوا میں وقفے کی شروعاتی تاریخ میں ترمیم",
   "shareWithFriends": "دوستوں کو بتائیں",

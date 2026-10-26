@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "times",
   "duringPauseTaking": "Taking a break from the pill",
   "cannotPauseAlreadyTakenToday": "If you've already taken today's pill,\nyou can't use “Pause pills”",
-  "pauseTakingStarted": "Pill break started",
+  "pauseTakingStarted": "Your pill break has started",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Edit pause start date",
   "shareWithFriends": "Tell a Friend",

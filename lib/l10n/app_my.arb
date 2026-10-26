@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "ကြိမ် သောက်ရန်",
   "duringPauseTaking": "ဆေးလုံးသောက်ခြင်းကို ခေတ္တရပ်နားထားပါတယ်",
   "cannotPauseAlreadyTakenToday": "ဒီနေ့အတွက် ဆေးလုံးကို သောက်ပြီးသားဖြစ်ပါက\n‘ဆေးသောက်ခြင်း ခေတ္တရပ်နားရန်’ ကို အသုံးမပြုနိုင်ပါ",
-  "pauseTakingStarted": "ဆေးသောက်ခြင်း ရပ်နားခြင်းကို စတင်ပြီးပါပြီ",
+  "pauseTakingStarted": "ဆေးလုံးသောက်ခြင်း ခေတ္တရပ်နားမှု စတင်ပါပြီ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "သောက်သုံးမှု ရပ်နားမည့်နေ့ တည်းဖြတ်ရန်",
   "shareWithFriends": "သူငယ်ချင်းတွေကို မျှဝေရန်",

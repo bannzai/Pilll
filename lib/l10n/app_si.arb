@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "වරක් පෙත්ත ගන්න",
   "duringPauseTaking": "පෙති ගැනීම තාවකාලිකව නතර කර ඇත",
   "cannotPauseAlreadyTakenToday": "අදට නියමිත පෙත්ත දැනටමත් ගෙන ඇත්නම්,\n‘පෙති ගැනීම තාවකාලිකව නවත්වන්න’ භාවිත කළ නොහැක",
-  "pauseTakingStarted": "පෙත්ත ගැනීමේ විරාමය ආරම්භ කරන ලදී",
+  "pauseTakingStarted": "පෙති ගැනීමේ විරාමය ආරම්භ වී ඇත",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "ගැනීම් විරාම ආරම්භ දිනය සංස්කරණය කරන්න",
   "shareWithFriends": "මිතුරන්ට බෙදා ගන්න",

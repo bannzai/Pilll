@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "ganger ta p-pillen",
   "duringPauseTaking": "Pause fra p-piller",
   "cannotPauseAlreadyTakenToday": "Hvis du allerede har tatt dagens p-pille,\nkan du ikke bruke «Pillepause»",
-  "pauseTakingStarted": "Pillepausen er startet",
+  "pauseTakingStarted": "Pillepausen din har startet",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Rediger pausens startdato",
   "shareWithFriends": "Del med venner",

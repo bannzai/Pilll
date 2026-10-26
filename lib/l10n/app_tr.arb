@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "kez alın",
   "duringPauseTaking": "Hap kullanımına ara verildi",
   "cannotPauseAlreadyTakenToday": "Bugünkü hapı zaten aldıysanız,\n“İlaca ara ver” özelliğini kullanamazsınız",
-  "pauseTakingStarted": "Kullanım molası başlatıldı",
+  "pauseTakingStarted": "İlaç molası başladı",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "İlaç molası başlangıç tarihini düzenle",
   "shareWithFriends": "Arkadaşlara anlat",

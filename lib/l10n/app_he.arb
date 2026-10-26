@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "פעמים ליטול גלולה",
   "duringPauseTaking": "הפסקה זמנית בנטילת הגלולה",
   "cannotPauseAlreadyTakenToday": "אם הגלולה של היום כבר ניטלה,\nאי אפשר להשתמש ב״הפסקה זמנית בנטילה״",
-  "pauseTakingStarted": "החלה הפסקת נטילת הכדורים",
+  "pauseTakingStarted": "החלה הפסקה בנטילת הגלולה",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "עריכת תאריך תחילת ההפסקה",
   "shareWithFriends": "שתף עם חברים",

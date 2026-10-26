@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "razy przyjąć tabletkę",
   "duringPauseTaking": "Przerwa w przyjmowaniu tabletek",
   "cannotPauseAlreadyTakenToday": "Jeśli dzisiejsza tabletka została już przyjęta,\nnie można skorzystać z „Przerwy w przyjmowaniu”",
-  "pauseTakingStarted": "Rozpoczęto przerwę w przyjmowaniu",
+  "pauseTakingStarted": "Rozpoczęła się przerwa w braniu tabletek",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Edytuj datę rozpoczęcia przerwy",
   "shareWithFriends": "Poleć znajomym",

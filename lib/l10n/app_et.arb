@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "korda pilli võtta",
   "duringPauseTaking": "Pillide võtmise paus",
   "cannotPauseAlreadyTakenToday": "Kui oled tänase pilli juba võtnud,\nei saa kasutada valikut „Pillide võtmise paus“",
-  "pauseTakingStarted": "Pillide võtmise paus on alustatud",
+  "pauseTakingStarted": "Pillipaus on alanud",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Redigeeri võtmispausi alguskuupäeva",
   "shareWithFriends": "Soovita sõbrale",

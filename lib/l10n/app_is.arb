@@ -402,7 +402,7 @@
   "pillTakenCountSuffix": "sinnum taka pilluna",
   "duringPauseTaking": "Hlé á töku pillunnar",
   "cannotPauseAlreadyTakenToday": "Ef þú hefur þegar tekið pilluna í dag,\ngeturðu ekki notað „Hlé á pillutöku“",
-  "pauseTakingStarted": "Pilluhvíld hefur hafist",
+  "pauseTakingStarted": "Hlé á pillutöku er hafið",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Breyta upphafsdegi lyfjahlés",
   "shareWithFriends": "Kenna vinum",
