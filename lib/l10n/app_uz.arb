@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Siz hapni hali qabul qilmaganingizda koʻrsatiladigan bildirishnoma matnini oʻzgartirishingiz mumkin",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Bildirishnoma sarlavhasini o'zgartirish mumkin",
+  "changeNotificationHeader": "Bildirishnoma boshidagi matnni oʻzgartirishingiz mumkin",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Iltimos, matn kiriting",
   "changeDailyNotificationMessage": "Dori vaqtida ichilgan holatlar uchun bildirishnoma matnini o'zgartirishingiz mumkin",

@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Je kunt de tekst aanpassen van de melding die verschijnt als je je pil nog niet hebt ingenomen",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Je kunt het begin van de melding aanpassen",
+  "changeNotificationHeader": "Je kunt de tekst aan het begin van de melding aanpassen",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Voer ten minste 0 tekens in",
   "changeDailyNotificationMessage": "Je kunt de notificatietekst wijzigen voor wanneer je je pil niet vergeet",

@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Можете да промените текста на известието, което се показва, когато хапчето още не е взето",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Можете да промените началната част на известията",
+  "changeNotificationHeader": "Можете да промените текста в началото на известието",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Моля, въведете поне 0 символа",
   "changeDailyNotificationMessage": "Можете да променяте текста на уведомлението при редовен прием на хапчето",

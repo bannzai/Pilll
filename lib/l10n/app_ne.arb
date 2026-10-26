@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "चक्की खान बाँकी हुँदा देखिने सूचनाको सन्देश तपाईं परिवर्तन गर्न सक्नुहुन्छ",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "सूचनाको सुरुवाती भाग परिवर्तन गर्न सकिन्छ",
+  "changeNotificationHeader": "तपाईं सूचनाको सुरुमा देखिने सन्देश परिवर्तन गर्न सक्नुहुन्छ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "कृपया केही लेख्नुहोस्",
   "changeDailyNotificationMessage": "चक्की नबिर्सिएको अवस्थामा आउने सूचना सन्देश परिवर्तन गर्न सकिन्छ",

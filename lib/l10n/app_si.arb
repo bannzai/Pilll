@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "පෙත්ත තවමත් ගෙන නොමැති විට පෙන්වන දැනුම්දීමේ පෙළ ඔබට වෙනස් කළ හැකිය",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "දැනුම්දීම්වල මුල් කොටස වෙනස් කරන්න පුළුවන්",
+  "changeNotificationHeader": "ඔබට දැනුම්දීමේ මුලින් පෙන්වන පණිවිඩය වෙනස් කළ හැක",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "කරුණාකර ආදානය කරන්න",
   "changeDailyNotificationMessage": "පෙති ගැනීම අමතක නොවූ අවස්ථාවේ දැනුම්දීම් පණිවිඩය වෙනස් කළ හැකිය",

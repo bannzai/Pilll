@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "ഗുളിക ഇനിയും കഴിച്ചിട്ടില്ലെങ്കിൽ കാണിക്കുന്ന അറിയിപ്പിലെ വാചകം മാറ്റാം",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "അറിയിപ്പിന്റെ തുടക്കഭാഗം മാറ്റാൻ കഴിയും",
+  "changeNotificationHeader": "അറിയിപ്പിന്റെ തുടക്കത്തിലെ വാചകം മാറ്റാം",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "ദയവായി എന്തെങ്കിലും നൽകുക",
   "changeDailyNotificationMessage": "സാധാരണ രീതിയിൽ കഴിച്ചാലുള്ള അറിയിപ്പ് സന്ദേശം മാറ്റാൻ കഴിയും",

@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "ທ່ານສາມາດປ່ຽນຂໍ້ຄວາມແຈ້ງເຕືອນທີ່ສະແດງເມື່ອຍັງບໍ່ທັນກິນຢາເມັດ",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "ສາມາດປ່ຽນແປງສ່ວນຫົວຂອງການແຈ້ງເຕືອນໄດ້",
+  "changeNotificationHeader": "ສາມາດປ່ຽນຂໍ້ຄວາມຕອນຕົ້ນຂອງການແຈ້ງເຕືອນໄດ້",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "ກະລຸນາປ້ອນຂໍ້ມູນ",
   "changeDailyNotificationMessage": "ສາມາດປ່ຽນຂໍ້ຄວາມການແຈ້ງເຕືອນໃນກໍລະນີທີ່ບໍ່ລືມກິນ",

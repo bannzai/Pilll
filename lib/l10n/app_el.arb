@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Μπορείτε να αλλάξετε το κείμενο της ειδοποίησης που εμφανίζεται όταν δεν έχετε πάρει ακόμη το χάπι",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Μπορείτε να προσαρμόσετε το αρχικό μέρος της ειδοποίησης",
+  "changeNotificationHeader": "Μπορείτε να αλλάξετε το αρχικό κείμενο της ειδοποίησης",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Παρακαλώ εισάγετε τουλάχιστον 1 χαρακτήρα",
   "changeDailyNotificationMessage": "Μπορείτε να προσαρμόσετε το μήνυμα ειδοποίησης όταν δεν έχετε ξεχάσει να πάρετε το χάπι σας",

@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "피임약을 아직 먹지 않았을 때 표시되는 알림 문구를 바꿀 수 있어요",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "알림의 앞부분을 변경할 수 있습니다",
+  "changeNotificationHeader": "알림의 첫 문구를 변경할 수 있어요",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "0자 이상 입력해 주세요",
   "changeDailyNotificationMessage": "정상 복용 시 알림 메시지를 변경할 수 있습니다",

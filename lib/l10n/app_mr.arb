@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "गोळी घेणे बाकी असताना दिसणाऱ्या सूचनेतील मजकूर तुम्ही बदलू शकता",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "सूचनांच्या सुरुवातीचा भाग बदलू शकता",
+  "changeNotificationHeader": "तुम्ही सूचनेच्या सुरुवातीला दिसणारा मजकूर बदलू शकता",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "कृपया 0 अक्षर किंवा अधिक प्रविष्ट करा",
   "changeDailyNotificationMessage": "गोळी घेतल्यावर येणारे सूचना संदेश बदलू शकता",

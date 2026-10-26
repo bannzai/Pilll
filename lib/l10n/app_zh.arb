@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "你可以修改尚未服药时显示的通知文案",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "可以更改通知的开头部分",
+  "changeNotificationHeader": "可以更改通知开头的文字",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "请输入至少0个字符",
   "changeDailyNotificationMessage": "可以自定义正常服用时的通知消息",

@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Możesz zmienić tekst powiadomienia wyświetlanego, gdy tabletka nie została jeszcze przyjęta",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Możesz zmienić początek powiadomień",
+  "changeNotificationHeader": "Możesz zmienić tekst na początku powiadomienia",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Proszę wprowadzić co najmniej 0 znaków",
   "changeDailyNotificationMessage": "Możesz zmienić treść powiadomień gdy regularnie bierzesz pigułkę",

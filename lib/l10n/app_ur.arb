@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "آپ گولی ابھی نہ لینے کی صورت میں دکھائے جانے والے نوٹیفکیشن کا متن بدل سکتی ہیں",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "آپ نوٹیفیکیشن کے شروعاتی حصے میں تبدیلی کر سکتے ہیں",
+  "changeNotificationHeader": "آپ اطلاع کے آغاز میں آنے والا متن تبدیل کر سکتی ہیں",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "برائے کرم کچھ درج کریں",
   "changeDailyNotificationMessage": "آپ اس صورت میں اطلاعی پیغام تبدیل کر سکتے ہیں جب آپ نے گولی لینا نہیں بھولا ہو",

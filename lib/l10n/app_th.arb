@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "สามารถเปลี่ยนข้อความแจ้งเตือนที่แสดงเมื่อยังไม่ได้ทานยาได้ค่ะ",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "สามารถเปลี่ยนแปลงข้อความต้นของการแจ้งเตือนได้",
+  "changeNotificationHeader": "เปลี่ยนข้อความตอนต้นของการแจ้งเตือนได้ค่ะ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "กรุณาใส่ข้อมูลอย่างน้อย 0 ตัวอักษร",
   "changeDailyNotificationMessage": "คุณสามารถเปลี่ยนแปลงข้อความแจ้งเตือนสำหรับกรณีที่ไม่ลืมทานยาได้",

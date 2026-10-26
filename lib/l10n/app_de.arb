@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Du kannst den Benachrichtigungstext ändern, der angezeigt wird, wenn du deine Pille noch nicht genommen hast",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Sie können den Anfang der Benachrichtigung anpassen",
+  "changeNotificationHeader": "Du kannst den Text am Anfang der Benachrichtigung ändern",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Bitte geben Sie mindestens 0 Zeichen ein",
   "changeDailyNotificationMessage": "Sie können den Benachrichtigungstext für die ordnungsgemäße Einnahme anpassen",

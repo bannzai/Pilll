@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Bạn có thể thay đổi nội dung thông báo hiển thị khi chưa uống thuốc",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Có thể thay đổi phần đầu thông báo",
+  "changeNotificationHeader": "Bạn có thể thay đổi nội dung ở đầu thông báo",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Vui lòng nhập nội dung",
   "changeDailyNotificationMessage": "Có thể tùy chỉnh thông báo khi không quên uống thuốc",

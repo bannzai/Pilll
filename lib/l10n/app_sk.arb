@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Môžete zmeniť text upozornenia, ktoré sa zobrazí, keď tabletka ešte nebola užitá",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Môžete si upraviť začiatok oznámení",
+  "changeNotificationHeader": "Môžete zmeniť text na začiatku upozornenia",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Prosím, zadajte text",
   "changeDailyNotificationMessage": "Môžete zmeniť text notifikácií v prípadoch, keď nezabudnete na užitie",

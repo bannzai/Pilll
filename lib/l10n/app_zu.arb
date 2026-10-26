@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Ungawushintsha umbhalo wesaziso esivela lapho ungakaliphuzi iphilisi",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Ungakwazi ukushintsha isiqalo sesaziso",
+  "changeNotificationHeader": "Ungashintsha umbhalo osekuqaleni kwesaziso",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Sicela ufake izinhlamvu ezi-0 noma ngaphezulu",
   "changeDailyNotificationMessage": "Ungaguqula umlayezo wesaziso uma ungakhohlwa ukuphuza",

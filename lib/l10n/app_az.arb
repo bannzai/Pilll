@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Həbi qəbul etmədiyiniz zaman göstərilən bildiriş mətnini dəyişə bilərsiniz",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Bildirişlərin başlanğıc hissəsini dəyişdirə bilərsiniz",
+  "changeNotificationHeader": "Bildirişin başlanğıc mətnini dəyişə bilərsiniz",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Mətn daxil edin",
   "changeDailyNotificationMessage": "Həbləri düzgün qəbul etdiyiniz zaman göstəriləcək bildiriş mətnini dəyişdirə bilərsiniz",

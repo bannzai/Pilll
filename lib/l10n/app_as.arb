@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "পিল খাবলৈ বাকী থাকিলে দেখা দিয়া জাননীৰ লিখনি আপুনি সলনি কৰিব পাৰে",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "জাননীৰ প্ৰথম অংশ সলনি কৰিব পাৰে",
+  "changeNotificationHeader": "আপুনি জাননীৰ আৰম্ভণিৰ বাৰ্তা সলনি কৰিব পাৰে",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "কিবা এটা লিখক",
   "changeDailyNotificationMessage": "বড়ি নিয়মীয়াকৈ সেৱন কৰা অৱস্থাত জাননী বাৰ্তা পৰিৱৰ্তন কৰিব পাৰে",

@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Unaweza kubadilisha maandishi ya arifa inayoonekana wakati bado hujameza kidonge",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Unaweza kubadilisha kichwa cha arifa",
+  "changeNotificationHeader": "Unaweza kubadilisha maandishi ya mwanzo wa arifa",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Tafadhali ingiza maandishi",
   "changeDailyNotificationMessage": "Unaweza kubadilisha ujumbe wa arifa ikiwa hukusahau kumeza tembe",

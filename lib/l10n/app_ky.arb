@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Таблетканы иче элек кезде көрсөтүлүүчү билдирменин текстин өзгөртө аласыз",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Билдирүүнүн башталгычын өзгөртсө болот",
+  "changeNotificationHeader": "Билдирменин башындагы текстти өзгөртө аласыз",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Кеминде бир тамга киргизиңиз",
   "changeDailyNotificationMessage": "Унутпай ичкен учурдагы билдирүү текстин өзгөртө аласыз",

@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Դուք կարող եք փոխել ծանուցման տեքստը, որը ցուցադրվում է, երբ հաբը դեռ չեք ընդունել",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Կարող եք փոփոխել ծանուցումների գլխամասը",
+  "changeNotificationHeader": "Դուք կարող եք փոխել ծանուցման սկզբում ցուցադրվող տեքստը",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Խնդրում ենք մուտքագրել առնվազն 0 նիշ",
   "changeDailyNotificationMessage": "Կարող եք փոխել ծանուցման հաղորդագրությունը հաբը ժամանակին ընդունելու դեպքում",

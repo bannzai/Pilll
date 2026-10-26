@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Anda dapat mengubah teks notifikasi yang muncul saat pil belum diminum",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Anda dapat mengubah bagian awal notifikasi",
+  "changeNotificationHeader": "Anda dapat mengubah teks di awal notifikasi",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Harap masukkan 0 karakter atau lebih",
   "changeDailyNotificationMessage": "Anda dapat mengubah pesan notifikasi ketika tidak lupa minum pil",

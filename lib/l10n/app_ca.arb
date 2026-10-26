@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Pots canviar el text de la notificació que apareix quan encara no has pres la píndola",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Pots personalitzar el text inicial de les notificacions",
+  "changeNotificationHeader": "Pots canviar el text inicial de la notificació",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Si us plau, introduïu algun text",
   "changeDailyNotificationMessage": "Pots personalitzar el missatge de notificació quan has pres la píndola correctament",

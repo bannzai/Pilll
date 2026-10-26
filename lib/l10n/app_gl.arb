@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Podes cambiar o texto da notificación que aparece cando aínda non tomaches a pílula",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Podes cambiar a parte inicial das notificacións",
+  "changeNotificationHeader": "Podes cambiar o texto inicial da notificación",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Introduce polo menos 0 caracteres",
   "changeDailyNotificationMessage": "Podes personalizar a mensaxe de notificación para cando tomes a píldora correctamente",

@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Mund ta ndryshoni tekstin e njoftimit që shfaqet kur pilula nuk është marrë ende",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Mund të ndryshoni fillimin e njoftimit",
+  "changeNotificationHeader": "Mund ta ndryshoni tekstin në fillim të njoftimit",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Ju lutemi shkruani diçka",
   "changeDailyNotificationMessage": "Mund të ndryshoni mesazhin e njoftimit për rastet kur nuk keni harruar të merrni pilulën",

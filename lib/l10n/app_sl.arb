@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Spremenite lahko besedilo obvestila, ki se prikaže, ko tableta še ni bila vzeta",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Lahko spremenite začetni del obvestila",
+  "changeNotificationHeader": "Spremenite lahko besedilo na začetku obvestila",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Prosim, vnesite vsaj 0 znakov",
   "changeDailyNotificationMessage": "Lahko spremenite besedilo obvestila za primere, ko niste pozabili vzeti tabletke",

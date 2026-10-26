@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "మాత్ర ఇంకా తీసుకోనప్పుడు కనిపించే నోటిఫికేషన్ సందేశాన్ని మీరు మార్చుకోవచ్చు",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "నోటిఫికేషన్ ప్రారంభ వచనాన్ని మార్చవచ్చు",
+  "changeNotificationHeader": "నోటిఫికేషన్ ప్రారంభంలో కనిపించే వచనాన్ని మీరు మార్చుకోవచ్చు",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "దయచేసి 0 అక్షరాలు లేదా అంతకంటే ఎక్కువ నమోదు చేయండి",
   "changeDailyNotificationMessage": "మాత్రలు తప్పకుండా తీసుకున్నప్పుడు వచ్చే నోటిఫికేషన్ సందేశాన్ని మార్చవచ్చు",

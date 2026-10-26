@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "تاسو کولی شئ د هغه خبرتیا متن بدل کړئ چې د ګولۍ د نه اخیستو پر مهال ښکاري",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "تاسو کولی شئ د خبرتیاوو لومړۍ برخه بدله کړئ",
+  "changeNotificationHeader": "تاسو د خبرتیا د پیل متن بدلولی شئ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "لږ تر لږه ۰ حروف ولیکئ",
   "changeDailyNotificationMessage": "کولی شئ د درملو د نه هیرولو د خبرتیا پیغام بدل کړئ",

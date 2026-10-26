@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "می‌توانید متن اعلانی را که هنگام مصرف‌نشدن قرص نمایش داده می‌شود تغییر دهید",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "می‌توانید قسمت ابتدایی اعلان‌ها را تغییر دهید",
+  "changeNotificationHeader": "می‌توانید متن ابتدای اعلان را تغییر دهید",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "لطفاً متنی وارد کنید",
   "changeDailyNotificationMessage": "می‌توانید پیام اطلاع‌رسانی مربوط به مصرف به‌موقع قرص را تغییر دهید",
