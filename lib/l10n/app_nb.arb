@@ -132,7 +132,7 @@
   "startOfPillDays": "Start på p-pilledagene",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Siste dag på forrige p-pillebrett: dag {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Slutten på dagene med p-piller",
-  "changedToNumber": "endre til nummer",
+  "changedToNumber": "Bytt til dette nummeret",
   "displayMode": "Visningsmodus",
   "dateDisplay": "Datovisning",
   "pillNumber": "Pillenummer",

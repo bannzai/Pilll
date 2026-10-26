@@ -132,7 +132,7 @@
   "startOfPillDays": "วันเริ่มทานยาเม็ด",
   "beforePillSheetGroupSequentialEstimatedEndDay": "วันสุดท้ายของแผงยาก่อนหน้า: วันที่ {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "สิ้นสุดช่วงวันที่ทานยา",
-  "changedToNumber": "เปลี่ยนเป็นหมายเลข",
+  "changedToNumber": "เปลี่ยนเป็นหมายเลขนี้",
   "displayMode": "โหมดแสดงผล",
   "dateDisplay": "การแสดงวันที่",
   "pillNumber": "หมายเลขเม็ดยา",

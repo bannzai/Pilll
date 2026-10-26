@@ -132,7 +132,7 @@
   "startOfPillDays": "Začetek dni jemanja tablet",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Zadnji dan prejšnjega omota tablet: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. dan",
   "endOfPillDays": "Konec dni jemanja tablet",
-  "changedToNumber": "Spremeni na številko",
+  "changedToNumber": "Spremenite na to številko",
   "displayMode": "Način prikaza",
   "dateDisplay": "Prikaz datuma",
   "pillNumber": "Številka tablete",

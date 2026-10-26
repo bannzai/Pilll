@@ -132,7 +132,7 @@
   "startOfPillDays": "Inizio dei giorni di assunzione della pillola",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Ultimo giorno del blister precedente: giorno {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Fine dei giorni di assunzione della pillola",
-  "changedToNumber": "Cambia al numero",
+  "changedToNumber": "Cambia con questo numero",
   "displayMode": "Modalità di visualizzazione",
   "dateDisplay": "Formato data",
   "pillNumber": "Numero della pillola",

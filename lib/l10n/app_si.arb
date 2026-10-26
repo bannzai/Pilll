@@ -132,7 +132,7 @@
   "startOfPillDays": "පෙති ගන්නා දිනවල ආරම්භය",
   "beforePillSheetGroupSequentialEstimatedEndDay": "පෙර පෙති පත්‍රයේ අවසන් දිනය: {beforePillSheetGroupSequentialEstimatedEndPillNumber} වන දිනය",
   "endOfPillDays": "පෙති ගන්නා දිනවල අවසානය",
-  "changedToNumber": "අංකයට වෙනස් කරන්න",
+  "changedToNumber": "මෙම අංකයට වෙනස් කරන්න",
   "displayMode": "දර්ශන ආකාරය",
   "dateDisplay": "දිනය පෙන්වීම",
   "pillNumber": "පිල් අංකය",

@@ -132,7 +132,7 @@
   "startOfPillDays": "服药日的起始日",
   "beforePillSheetGroupSequentialEstimatedEndDay": "上一板药的最后一天：第{beforePillSheetGroupSequentialEstimatedEndPillNumber}天",
   "endOfPillDays": "服药日结束",
-  "changedToNumber": "更改号码",
+  "changedToNumber": "改为这个编号",
   "displayMode": "显示模式",
   "dateDisplay": "日期显示",
   "pillNumber": "药片编号",

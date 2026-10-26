@@ -132,7 +132,7 @@
   "startOfPillDays": "피임약 복용일 시작",
   "beforePillSheetGroupSequentialEstimatedEndDay": "이전 피임약 시트의 마지막 날: {beforePillSheetGroupSequentialEstimatedEndPillNumber}일째",
   "endOfPillDays": "피임약 복용일 종료",
-  "changedToNumber": "번으로 변경",
+  "changedToNumber": "이 번호로 변경해요",
   "displayMode": "표시 모드",
   "dateDisplay": "날짜 표시",
   "pillNumber": "알약 번호",

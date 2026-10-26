@@ -132,7 +132,7 @@
   "startOfPillDays": "Inici dels dies de presa de la píndola",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Últim dia del blíster de píndoles anterior: dia {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Final dels dies de presa de la píndola",
-  "changedToNumber": "Canviar al número",
+  "changedToNumber": "Canvia a aquest número",
   "displayMode": "Mode de visualització",
   "dateDisplay": "Format de data",
   "pillNumber": "Número de píndola",

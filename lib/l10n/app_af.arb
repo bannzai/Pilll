@@ -132,7 +132,7 @@
   "startOfPillDays": "Begin van pildae",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Laaste dag van die vorige pilstrook: dag {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Einde van die pilneemtyd",
-  "changedToNumber": "Verander na nommer",
+  "changedToNumber": "Verander na dié nommer",
   "displayMode": "Vertoonsmode",
   "dateDisplay": "Datumvertoning",
   "pillNumber": "Pilnommer",

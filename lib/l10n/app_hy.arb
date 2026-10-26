@@ -132,7 +132,7 @@
   "startOfPillDays": "Հաբի ընդունման օրերի սկիզբը",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Նախորդ հաբերի թերթիկի վերջին օրը՝ {beforePillSheetGroupSequentialEstimatedEndPillNumber}-րդ օր",
   "endOfPillDays": "Հաբերի ընդունման օրերի ավարտ",
-  "changedToNumber": "համարը փոխել",
+  "changedToNumber": "Փոխել այս համարով",
   "displayMode": "Ցուցադրման ռեժիմ",
   "dateDisplay": "ամսաթվի ցուցադրում",
   "pillNumber": "հաբի համար",

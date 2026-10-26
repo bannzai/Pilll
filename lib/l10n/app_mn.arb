@@ -132,7 +132,7 @@
   "startOfPillDays": "Эм уух өдрүүдийн эхлэл",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Өмнөх эмийн блистерийн сүүлийн өдөр: {beforePillSheetGroupSequentialEstimatedEndPillNumber} дахь өдөр",
   "endOfPillDays": "Эм уух өдрүүдийн төгсгөл",
-  "changedToNumber": "дугаарт өөрчлөх",
+  "changedToNumber": "Энэ дугаар болгож өөрчилнө үү",
   "displayMode": "Харуулах горим",
   "dateDisplay": "Огнооны харуулалт",
   "pillNumber": "эмийн дугаар",

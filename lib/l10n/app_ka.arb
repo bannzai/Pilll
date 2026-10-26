@@ -132,7 +132,7 @@
   "startOfPillDays": "აბების მიღების დღეების დასაწყისი",
   "beforePillSheetGroupSequentialEstimatedEndDay": "წინა აბების ფირფიტის ბოლო დღე: დღე {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "აბების მიღების დღეების დასასრული",
-  "changedToNumber": "ნომრის შეცვლა",
+  "changedToNumber": "ამ ნომერზე შეცვლა",
   "displayMode": "ჩვენების რეჟიმი",
   "dateDisplay": "თარიღის ჩვენება",
   "pillNumber": "აბის ნომერი",

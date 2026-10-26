@@ -132,7 +132,7 @@
   "startOfPillDays": "Beginn der Einnahmetage",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Letzter Tag des vorherigen Pillenblisters: Tag {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Ende der Einnahmetage",
-  "changedToNumber": "Nummer ändern",
+  "changedToNumber": "Zu dieser Nummer wechseln",
   "displayMode": "Anzeigemodus",
   "dateDisplay": "Datumsanzeige",
   "pillNumber": "Pillennummer",

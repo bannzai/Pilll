@@ -132,7 +132,7 @@
   "startOfPillDays": "תחילת ימי נטילת הגלולה",
   "beforePillSheetGroupSequentialEstimatedEndDay": "היום האחרון בחפיסת הגלולות הקודמת: יום {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "סיום ימי נטילת הגלולות",
-  "changedToNumber": "שנה למספר",
+  "changedToNumber": "שינוי למספר הזה",
   "displayMode": "מצב תצוגה",
   "dateDisplay": "תצוגת תאריך",
   "pillNumber": "מספר גלולה",

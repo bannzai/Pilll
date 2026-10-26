@@ -132,7 +132,7 @@
   "startOfPillDays": "Таблетка ичүү күндөрүнүн башталышы",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Мурунку таблетка блистеринин акыркы күнү: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-күн",
   "endOfPillDays": "Таблетка ичүү күндөрүнүн аягы",
-  "changedToNumber": "Санга өзгөртүү",
+  "changedToNumber": "Ушул номерге өзгөртүңүз",
   "displayMode": "Көрсөтүү режими",
   "dateDisplay": "күн көрсөтүү",
   "pillNumber": "таблетканын номери",

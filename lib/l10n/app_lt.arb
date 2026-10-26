@@ -132,7 +132,7 @@
   "startOfPillDays": "Tablečių vartojimo dienų pradžia",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Paskutinė ankstesnės tablečių plokštelės diena: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-oji diena",
   "endOfPillDays": "Tablečių vartojimo dienų pabaiga",
-  "changedToNumber": "Keisti numerį",
+  "changedToNumber": "Pakeiskite į šį numerį",
   "displayMode": "Rodymo režimas",
   "dateDisplay": "Datos rodymas",
   "pillNumber": "Tablečių numeris",

@@ -132,7 +132,7 @@
   "startOfPillDays": "ថ្ងៃចាប់ផ្តើមលេបថ្នាំគ្រាប់",
   "beforePillSheetGroupSequentialEstimatedEndDay": "ថ្ងៃចុងក្រោយនៃបន្ទះថ្នាំគ្រាប់មុន៖ ថ្ងៃទី{beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "ចុងបញ្ចប់នៃថ្ងៃលេបថ្នាំគ្រាប់",
-  "changedToNumber": "ប្តូរទៅលេខ",
+  "changedToNumber": "សូមប្ដូរទៅលេខនេះ",
   "displayMode": "ទម្រង់បង្ហាញ",
   "dateDisplay": "ការបង្ហាញកាលបរិច្ឆេទ",
   "pillNumber": "លេខថ្នាំគ្រាប់",

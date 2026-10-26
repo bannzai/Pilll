@@ -132,7 +132,7 @@
   "startOfPillDays": "Начало на дните за прием на хапчета",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Последен ден от предишния блистер с хапчета: ден {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Край на дните за прием на хапчета",
-  "changedToNumber": "Промени на номер",
+  "changedToNumber": "Промяна на този номер",
   "displayMode": "Режим на показване",
   "dateDisplay": "Показване на дата",
   "pillNumber": "Номер на пилулата",

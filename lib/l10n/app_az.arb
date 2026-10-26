@@ -132,7 +132,7 @@
   "startOfPillDays": "Həb qəbulunun başladığı gün",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Əvvəlki həb lövhəsinin son günü: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-ci gün",
   "endOfPillDays": "Həb qəbul edilən günlərin sonu",
-  "changedToNumber": "nömrəyə dəyişdir",
+  "changedToNumber": "Bu nömrəyə dəyişin",
   "displayMode": "Göstərmə rejimi",
   "dateDisplay": "Tarix göstərişi",
   "pillNumber": "həb nömrəsi",

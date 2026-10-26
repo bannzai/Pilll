@@ -132,7 +132,7 @@
   "startOfPillDays": "Hap alma günlerinin başlangıcı",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Önceki blisterin son günü: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. gün",
   "endOfPillDays": "Hap kullanım günlerinin sonu",
-  "changedToNumber": "numaraya değiştir",
+  "changedToNumber": "Bu numarayla değiştirin",
   "displayMode": "Görüntü Modu",
   "dateDisplay": "Tarih Görünümü",
   "pillNumber": "Hap Numarası",

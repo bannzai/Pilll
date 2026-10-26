@@ -132,7 +132,7 @@
   "startOfPillDays": "Upphaf daga sem pillan er tekin",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Síðasti dagur fyrri pilluspjalds: dagur {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Lok daga sem pillan er tekin",
-  "changedToNumber": "Breyta í númer",
+  "changedToNumber": "Breyta í þetta númer",
   "displayMode": "Birtingarhamur",
   "dateDisplay": "Dagsetningasýning",
   "pillNumber": "Pillunúmer",

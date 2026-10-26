@@ -132,7 +132,7 @@
   "startOfPillDays": "Dechrau’r dyddiau cymryd y bilsen",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Diwrnod olaf y pecyn pils blaenorol: diwrnod {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Diwedd y dyddiau cymryd y bilsen",
-  "changedToNumber": "Newid i rif",
+  "changedToNumber": "Newid i'r rhif hwn",
   "displayMode": "Modd Dangos",
   "dateDisplay": "Arddangos Dyddiad",
   "pillNumber": "rhif pil",

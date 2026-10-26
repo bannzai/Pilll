@@ -132,7 +132,7 @@
   "startOfPillDays": "Pillereiden ottopäivien alku",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Edellisen pillerilevyn viimeinen päivä: päivä {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Pillereiden ottopäivien loppu",
-  "changedToNumber": "numeroon",
+  "changedToNumber": "Vaihda tähän numeroon",
   "displayMode": "Näyttötila",
   "dateDisplay": "Päivämäärämuoto",
   "pillNumber": "Pillerinumero",

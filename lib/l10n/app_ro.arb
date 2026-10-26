@@ -132,7 +132,7 @@
   "startOfPillDays": "Începutul zilelor de administrare a pilulei",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Ultima zi din blisterul anterior de pilule: ziua {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Sfârșitul zilelor de administrare a pilulei",
-  "changedToNumber": "Schimbă în numărul",
+  "changedToNumber": "Schimbă la acest număr",
   "displayMode": "Mod de afișare",
   "dateDisplay": "Afișarea datei",
   "pillNumber": "Numărul pilulei",

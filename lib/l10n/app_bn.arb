@@ -132,7 +132,7 @@
   "startOfPillDays": "পিল খাওয়ার দিনগুলোর শুরু",
   "beforePillSheetGroupSequentialEstimatedEndDay": "আগের পিলের পাতার শেষ দিন: {beforePillSheetGroupSequentialEstimatedEndPillNumber}তম দিন",
   "endOfPillDays": "পিল খাওয়ার দিনগুলোর শেষ",
-  "changedToNumber": "নম্বরে পরিবর্তন",
+  "changedToNumber": "এই নম্বরে পরিবর্তন করুন",
   "displayMode": "প্রদর্শন মোড",
   "dateDisplay": "তারিখ প্রদর্শন",
   "pillNumber": "পিল নম্বর",

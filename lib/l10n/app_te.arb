@@ -132,7 +132,7 @@
   "startOfPillDays": "మాత్రలు తీసుకునే రోజుల ప్రారంభం",
   "beforePillSheetGroupSequentialEstimatedEndDay": "మునుపటి మాత్రల షీట్‌లో చివరి రోజు: {beforePillSheetGroupSequentialEstimatedEndPillNumber}వ రోజు",
   "endOfPillDays": "మాత్రలు తీసుకునే రోజుల ముగింపు",
-  "changedToNumber": "సంఖ్యకు మార్చు",
+  "changedToNumber": "ఈ సంఖ్యకు మార్చండి",
   "displayMode": "ప్రదర్శన మోడ్",
   "dateDisplay": "తేదీ ప్రదర్శన",
   "pillNumber": "గుళిక సంఖ్య",

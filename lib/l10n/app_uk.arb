@@ -132,7 +132,7 @@
   "startOfPillDays": "Початок днів прийому пігулок",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Останній день попереднього блістера з пігулками: день {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Кінець днів прийому пігулок",
-  "changedToNumber": "Змінити на номер",
+  "changedToNumber": "Змінити на цей номер",
   "displayMode": "Режим відображення",
   "dateDisplay": "Відображення дати",
   "pillNumber": "Номер пігулки",

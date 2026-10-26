@@ -132,7 +132,7 @@
   "startOfPillDays": "Начало дней приёма таблеток",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Последний день предыдущего блистера с таблетками: день {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Конец дней приёма таблеток",
-  "changedToNumber": "Изменить на номер",
+  "changedToNumber": "Изменить на этот номер",
   "displayMode": "Режим отображения",
   "dateDisplay": "Формат даты",
   "pillNumber": "номер таблетки",

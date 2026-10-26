@@ -132,7 +132,7 @@
   "startOfPillDays": "चक्की खाने दिनहरूको सुरुवात",
   "beforePillSheetGroupSequentialEstimatedEndDay": "अघिल्लो चक्कीको पत्ताको अन्तिम दिन: {beforePillSheetGroupSequentialEstimatedEndPillNumber}औँ दिन",
   "endOfPillDays": "चक्की खाने दिनहरूको अन्त्य",
-  "changedToNumber": "नम्बर बदल्नुहोस्",
+  "changedToNumber": "यो नम्बरमा परिवर्तन गर्नुहोस्",
   "displayMode": "प्रदर्शन मोड",
   "dateDisplay": "मिति प्रदर्शन",
   "pillNumber": "चक्की नम्बर",

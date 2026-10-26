@@ -132,7 +132,7 @@
   "startOfPillDays": "Tablešu lietošanas dienu sākums",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Iepriekšējā tablešu blistera pēdējā diena: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. diena",
   "endOfPillDays": "Tablešu lietošanas dienu beigas",
-  "changedToNumber": "Mainīt uz numuru",
+  "changedToNumber": "Mainiet uz šo numuru",
   "displayMode": "Attēlošanas režīms",
   "dateDisplay": "Datuma attēlošana",
   "pillNumber": "Tabletes numurs",
