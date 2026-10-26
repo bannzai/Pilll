@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "Aktualizujte prihlasovacie údaje",
   "registeredWithProvider": "Zaregistrovali ste sa cez {accountTypeProviderName}",
   "linkAccount": "Prepojte účet",
-  "withdraw": "Zrušiť účet",
+  "withdraw": "Odstráňte účet",
   "withdrawalCompleted": "Odhlásili ste sa",
   "appExitMessage": "Aplikácia sa teraz ukončí. Ak chcete začať odznova, reštartujte aplikáciu a vykonajte počiatočné nastavenie.",
   "oK": "OK",

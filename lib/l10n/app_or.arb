@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "ଲଗ୍‌ଇନ୍‌ ସୂଚନା ଅପଡେଟ୍‌ କରନ୍ତୁ",
   "registeredWithProvider": "ଆପଣ {accountTypeProviderName} ମାଧ୍ୟମରେ ପଞ୍ଜୀକରଣ କରିଛନ୍ତି",
   "linkAccount": "ଆକାଉଣ୍ଟ୍‌ ଲିଙ୍କ୍‌ କରନ୍ତୁ",
-  "withdraw": "ବାହାରିବା",
+  "withdraw": "ଆକାଉଣ୍ଟ ବିଲୋପ କରନ୍ତୁ",
   "withdrawalCompleted": "ଖାତା ବନ୍ଦ କରାଯାଇଛି",
   "appExitMessage": "ଆପ୍ ଏକଥର ବନ୍ଦ ହେବ। ନୂଆ ଆରମ୍ଭ କରିବା ପାଇଁ ଆପ୍ ପୁନଃଆରମ୍ଭ କରିବା ପରେ ପ୍ରାରମ୍ଭିକ ସେଟଅପ୍ କରନ୍ତୁ।",
   "oK": "ଠିକ",

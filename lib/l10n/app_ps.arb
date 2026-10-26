@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "د ننوتلو معلومات تازه کړئ",
   "registeredWithProvider": "ستاسو نوم‌لیکنه د {accountTypeProviderName} له لارې بشپړه شوه",
   "linkAccount": "حساب ونښلوئ",
-  "withdraw": "حساب ړنګول",
+  "withdraw": "حساب ړنګ کړئ",
   "withdrawalCompleted": "غړیتوب لغو شو",
   "appExitMessage": "تطبیق به یو ځل بند کیږي. د نوي پیل لپاره، د تطبیق د بیا پیلولو وروسته لومړنۍ تنظیمات ترسره کړئ.",
   "oK": "ښه",

@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "تحديث بيانات تسجيل الدخول",
   "registeredWithProvider": "تم تسجيل حسابكِ باستخدام {accountTypeProviderName}",
   "linkAccount": "ربط الحساب",
-  "withdraw": "إلغاء الحساب",
+  "withdraw": "حذف الحساب",
   "withdrawalCompleted": "تم حذف الحساب",
   "appExitMessage": "سيتم إغلاق التطبيق. إذا كنت تريد البدء من جديد، يرجى إعادة تشغيل التطبيق وإجراء الإعداد الأولي.",
   "oK": "موافق",

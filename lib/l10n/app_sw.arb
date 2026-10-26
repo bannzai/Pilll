@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "Tafadhali sasisha taarifa zako za kuingia",
   "registeredWithProvider": "Umejisajili kupitia {accountTypeProviderName}",
   "linkAccount": "Unganisha akaunti",
-  "withdraw": "Jiondoe",
+  "withdraw": "Futa akaunti",
   "withdrawalCompleted": "Umejiondoa",
   "appExitMessage": "Programu itafungwa sasa. Ikiwa ungependa kuanza upya, tafadhali anzisha tena programu na ufanye usanidi wa mwanzo.",
   "oK": "Sawa",

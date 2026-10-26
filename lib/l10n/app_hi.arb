@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "लॉगिन जानकारी अपडेट करें",
   "registeredWithProvider": "{accountTypeProviderName} से आपका पंजीकरण हो गया है",
   "linkAccount": "खाता लिंक करें",
-  "withdraw": "खाता हटाएं",
+  "withdraw": "खाता हटाएँ",
   "withdrawalCompleted": "खाता हटा दिया गया है",
   "appExitMessage": "ऐप अब समाप्त हो जाएगा। नई शुरुआत करने के लिए, कृपया ऐप को पुनः प्रारंभ करके प्रारंभिक सेटअप पूरा करें।",
   "oK": "OK",

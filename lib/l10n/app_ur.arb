@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "لاگ اِن کی معلومات اپ ڈیٹ کریں",
   "registeredWithProvider": "{accountTypeProviderName} کے ذریعے آپ کی رجسٹریشن مکمل ہو گئی ہے",
   "linkAccount": "اکاؤنٹ منسلک کریں",
-  "withdraw": "اکاؤنٹ ڈیلیٹ کریں",
+  "withdraw": "اکاؤنٹ حذف کریں",
   "withdrawalCompleted": "اکاؤنٹ حذف ہو گیا",
   "appExitMessage": "ایپ اب بند ہو جائے گا۔ نئے سرے سے شروع کرنے کے لیے ایپ کو دوبارہ شروع کرنے کے بعد ابتدائی سیٹنگز مکمل کریں۔",
   "oK": "ٹھیک ہے",

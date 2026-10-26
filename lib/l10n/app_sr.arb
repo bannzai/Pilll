@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "Ажурирајте податке за пријаву",
   "registeredWithProvider": "Регистровали сте се преко {accountTypeProviderName}",
   "linkAccount": "Повежите налог",
-  "withdraw": "Obriši nalog",
+  "withdraw": "Избришите налог",
   "withdrawalCompleted": "Налог је обрисан",
   "appExitMessage": "Aplikacija će se zatvoriti. Da biste počeli iznova, restartujte aplikaciju i izvršite početno podešavanje.",
   "oK": "ОК",

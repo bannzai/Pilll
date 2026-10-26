@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "Ажурирајте ги податоците за најава",
   "registeredWithProvider": "Се регистриравте преку {accountTypeProviderName}",
   "linkAccount": "Поврзување сметка",
-  "withdraw": "Се повлече",
+  "withdraw": "Избришете ја сметката",
   "withdrawalCompleted": "Се отпишавте",
   "appExitMessage": "Апликацијата ќе се затвори. За да почнете одново, рестартирајте ја апликацијата и извршете ја почетната поставка.",
   "oK": "ОК",

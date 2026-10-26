@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "Uppfærðu innskráningarupplýsingar",
   "registeredWithProvider": "Skráning með {accountTypeProviderName} tókst",
   "linkAccount": "Tengja reikning",
-  "withdraw": "Segja úr",
+  "withdraw": "Eyða aðgangi",
   "withdrawalCompleted": "Afskráning lokið",
   "appExitMessage": "Appið mun lokast núna. Ef þú vilt byrja að nýju skaltu endurræsa appið og klára upphaflegu stillingarnar.",
   "oK": "OK",

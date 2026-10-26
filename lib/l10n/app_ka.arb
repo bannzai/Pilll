@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "შესვლის მონაცემების განახლება",
   "registeredWithProvider": "თქვენ დარეგისტრირდით {accountTypeProviderName}-ის მეშვეობით",
   "linkAccount": "ანგარიშის დაკავშირება",
-  "withdraw": "გაწყვეტა",
+  "withdraw": "ანგარიშის წაშლა",
   "withdrawalCompleted": "ანგარიში წაიშალა",
   "appExitMessage": "აპლიკაცია დაიხურება. ახლიდან დასაწყებად, გთხოვთ ხელახლა გაუშვათ აპლიკაცია და გაიაროთ საწყისი კონფიგურაცია.",
   "oK": "კარგი",

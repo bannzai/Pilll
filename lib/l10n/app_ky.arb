@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "Кирүү маалыматын жаңыртыңыз",
   "registeredWithProvider": "Сиз {accountTypeProviderName} аркылуу катталдыңыз",
   "linkAccount": "Аккаунтту байланыштырыңыз",
-  "withdraw": "Чыгуу",
+  "withdraw": "Каттоо эсебин өчүрүү",
   "withdrawalCompleted": "Аккаунт жок кылынды",
   "appExitMessage": "Колдонмо жабылат. Жаңыдан баштоо үчүн колдонмону кайра иштетүүдөн кийин башталгыч жөндөөлөрдү жасаңыз.",
   "oK": "Макул",

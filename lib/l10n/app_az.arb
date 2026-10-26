@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "Giriş məlumatlarınızı yeniləyin",
   "registeredWithProvider": "{accountTypeProviderName} ilə qeydiyyatdan keçdiniz",
   "linkAccount": "Hesabı əlaqələndirin",
-  "withdraw": "Hesabı sil",
+  "withdraw": "Hesabınızı silin",
   "withdrawalCompleted": "Hesabdan çıxdınız",
   "appExitMessage": "Tətbiq bağlanacaq. Yenidən başlamaq üçün tətbiqi yenidən başlatdıqdan sonra ilkin quraşdırmanı aparın.",
   "oK": "Tamam",

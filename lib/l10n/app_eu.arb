@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "Eguneratu saioa hasteko datuak",
   "registeredWithProvider": "{accountTypeProviderName} bidez erregistratu zara",
   "linkAccount": "Lotu kontua",
-  "withdraw": "Kontua ezabatu",
+  "withdraw": "Ezabatu kontua",
   "withdrawalCompleted": "Baja eman duzu",
   "appExitMessage": "Aplikazioa itxiko da. Berriz hasteko, aplikazioa berrabiarazi ondoren hasierako konfigurazioa egin behar duzu.",
   "oK": "Ados",

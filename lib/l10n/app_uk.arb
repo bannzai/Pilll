@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "Оновіть дані для входу",
   "registeredWithProvider": "Ви зареєструвалися через {accountTypeProviderName}",
   "linkAccount": "Пов’язати обліковий запис",
-  "withdraw": "Видалити акаунт",
+  "withdraw": "Видалити обліковий запис",
   "withdrawalCompleted": "Обліковий запис видалено",
   "appExitMessage": "Додаток зараз закриється. Для нового початку перезапустіть додаток та виконайте початкові налаштування.",
   "oK": "Гаразд",

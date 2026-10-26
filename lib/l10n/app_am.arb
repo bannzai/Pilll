@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "የመግቢያ መረጃን ያዘምኑ",
   "registeredWithProvider": "በ{accountTypeProviderName} ተመዝግበዋል",
   "linkAccount": "መለያ ያገናኙ",
-  "withdraw": "መለያ ማጥፋት",
+  "withdraw": "መለያ ይሰርዙ",
   "withdrawalCompleted": "የመለያ መሰረዝ ተጠናቅቋል",
   "appExitMessage": "መተግበሪያው ይዘጋል። እንደገና ለመጀመር መተግበሪያውን ዳግም ጀምረው የመጀመሪያ ቅንብሮቹን ማቀናጀት አለብዎት።",
   "oK": "እሺ",

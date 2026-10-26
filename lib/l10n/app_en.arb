@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "Update sign-in details",
   "registeredWithProvider": "You've signed up with {accountTypeProviderName}",
   "linkAccount": "Link account",
-  "withdraw": "Delete Account",
+  "withdraw": "Delete account",
   "withdrawalCompleted": "Withdrawn",
   "appExitMessage": "The app will close. To start fresh, please restart the app and complete the initial setup.",
   "oK": "OK",

@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "Թարմացրեք մուտքի տվյալները",
   "registeredWithProvider": "Դուք գրանցվել եք {accountTypeProviderName}֊ի միջոցով",
   "linkAccount": "Կապակցել հաշիվը",
-  "withdraw": "Հաշիվը ջնջել",
+  "withdraw": "Ջնջել հաշիվը",
   "withdrawalCompleted": "Դուրս եկանք",
   "appExitMessage": "Ծրագիրը կփակվի: Նորից սկսելու համար ծրագիրը վերագործարկեք և կատարեք սկզբնական կարգավորումները:",
   "oK": "Լավ",

@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "ಲಾಗಿನ್ ಮಾಹಿತಿಯನ್ನು ನವೀಕರಿಸಿ",
   "registeredWithProvider": "ನೀವು {accountTypeProviderName} ಮೂಲಕ ನೋಂದಾಯಿಸಿದ್ದೀರಿ",
   "linkAccount": "ಖಾತೆಯನ್ನು ಲಿಂಕ್ ಮಾಡಿ",
-  "withdraw": "ಖಾತೆ ಅಳಿಸು",
+  "withdraw": "ಖಾತೆಯನ್ನು ಅಳಿಸಿ",
   "withdrawalCompleted": "ಖಾತೆ ಅಳಿಸಲಾಗಿದೆ",
   "appExitMessage": "ಅಪ್ಲಿಕೇಶನ್ ಮುಚ್ಚಲಾಗುತ್ತಿದೆ. ಹೊಸದಾಗಿ ಪ್ರಾರಂಭಿಸಲು ಅಪ್ಲಿಕೇಶನ್ ಮರುಪ್ರಾರಂಭಿಸಿದ ನಂತರ ಆರಂಭಿಕ ಸೆಟಪ್ ಮಾಡಿ.",
   "oK": "ಸರಿ",

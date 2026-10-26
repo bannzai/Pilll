@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "Actualitza les dades d'inici de sessió",
   "registeredWithProvider": "T'has registrat amb {accountTypeProviderName}",
   "linkAccount": "Vincula el compte",
-  "withdraw": "Donar-se de baixa",
+  "withdraw": "Elimina el compte",
   "withdrawalCompleted": "S'ha donat de baixa",
   "appExitMessage": "L'aplicació es tancarà ara. Per començar de nou, reinicieu l'aplicació i realitzeu la configuració inicial.",
   "oK": "D'acord",

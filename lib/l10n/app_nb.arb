@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "Oppdater innloggingsopplysningene dine",
   "registeredWithProvider": "Du har registrert deg med {accountTypeProviderName}",
   "linkAccount": "Koble til konto",
-  "withdraw": "Meld av",
+  "withdraw": "Slett konto",
   "withdrawalCompleted": "Du har meldt deg ut",
   "appExitMessage": "Appen vil nå avsluttes. For å starte på nytt må du starte appen på nytt og gjennomføre det opprinnelige oppsettet.",
   "oK": "OK",

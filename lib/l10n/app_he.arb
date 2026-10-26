@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "עדכון פרטי ההתחברות",
   "registeredWithProvider": "ההרשמה באמצעות {accountTypeProviderName} הושלמה",
   "linkAccount": "לקשר חשבון",
-  "withdraw": "לפרוש",
+  "withdraw": "מחיקת החשבון",
   "withdrawalCompleted": "החשבון בוטל",
   "appExitMessage": "האפליקציה תסגר. כדי להתחיל מחדש, אנא הפעל את האפליקציה מחדש ובצע הגדרות ראשוניות.",
   "oK": "אוקיי",

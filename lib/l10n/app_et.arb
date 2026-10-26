@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "Uuenda sisselogimisandmeid",
   "registeredWithProvider": "Registreerusid teenuse {accountTypeProviderName} kaudu",
   "linkAccount": "Seo konto",
-  "withdraw": "Lahkuda",
+  "withdraw": "Kustuta konto",
   "withdrawalCompleted": "Konto on kustutatud",
   "appExitMessage": "Rakendus suletakse. Uuesti alustamiseks käivitage rakendus uuesti ja tehke algseadistus.",
   "oK": "OK",

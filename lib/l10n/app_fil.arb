@@ -73,7 +73,7 @@
   "updateAuthenticationInformation": "I-update ang inyong impormasyon sa pag-sign in",
   "registeredWithProvider": "Nakarehistro na kayo gamit ang {accountTypeProviderName}",
   "linkAccount": "I-link ang account ninyo",
-  "withdraw": "Tanggalin ang Account",
+  "withdraw": "Burahin ang account",
   "withdrawalCompleted": "Nag-withdraw ka na",
   "appExitMessage": "Tatapusin na ang app. Kapag magsisimula ulit, i-restart ang app at isagawa ang initial setup.",
   "oK": "OK",
