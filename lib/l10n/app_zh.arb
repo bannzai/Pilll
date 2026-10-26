@@ -7,7 +7,7 @@
   "pillSheetType24": "24片装（全部为活性片）",
   "pillSheetType21": "21片型（全部为活性片）",
   "pillSheetType24WithRest4": "24片装",
-  "restPeriod": "停药期",
+  "restPeriod": "停药",
   "placebo": "安慰剂",
   "userNotFound": "用户未找到",
   "userAlreadyExists": "用户已存在",

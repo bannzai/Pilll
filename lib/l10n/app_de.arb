@@ -7,7 +7,7 @@
   "pillSheetType24": "24 Tabletten (alle Wirkstofftabletten)",
   "pillSheetType21": "Typ mit 21 Tabletten (alle sind Wirkstofftabletten)",
   "pillSheetType24WithRest4": "Typ mit 24 Pillen",
-  "restPeriod": "Pillenpause",
+  "restPeriod": "Einnahmepause",
   "placebo": "Placebo",
   "userNotFound": "Benutzer nicht gefunden",
   "userAlreadyExists": "Ein Benutzer existiert bereits",

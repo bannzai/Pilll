@@ -7,7 +7,7 @@
   "pillSheetType24": "24 pilli (kõik toimeainega pillid)",
   "pillSheetType21": "21 pilliga tüüp (kõik on toimeainega pillid)",
   "pillSheetType24WithRest4": "24 pilliga tüüp",
-  "restPeriod": "paus",
+  "restPeriod": "pillipaus",
   "placebo": "platseebo",
   "userNotFound": "Kasutajat ei leitud",
   "userAlreadyExists": "Kasutaja on juba olemas",

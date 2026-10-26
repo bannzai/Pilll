@@ -7,7 +7,7 @@
   "pillSheetType24": "24 pills (all active pills)",
   "pillSheetType21": "21-pill type (all active pills)",
   "pillSheetType24WithRest4": "24-pill type",
-  "restPeriod": "Break",
+  "restPeriod": "pill break",
   "placebo": "placebo pill",
   "userNotFound": "User not found",
   "userAlreadyExists": "User already exists",

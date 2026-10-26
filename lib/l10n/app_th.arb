@@ -7,7 +7,7 @@
   "pillSheetType24": "แบบ 24 เม็ด (ทุกเม็ดเป็นเม็ดฮอร์โมน)",
   "pillSheetType21": "แบบ 21 เม็ด (ทุกเม็ดเป็นเม็ดฮอร์โมน)",
   "pillSheetType24WithRest4": "ชนิด 24 เม็ด",
-  "restPeriod": "พักยา",
+  "restPeriod": "หยุดยา",
   "placebo": "ยาหลอก",
   "userNotFound": "ไม่พบผู้ใช้",
   "userAlreadyExists": "ผู้ใช้นี้มีอยู่แล้ว",

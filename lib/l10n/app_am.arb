@@ -7,7 +7,7 @@
   "pillSheetType24": "24 ክኒኖች (ሁሉም ሆርሞን ያለው ክኒን)",
   "pillSheetType21": "የ21 ክኒን ዓይነት (ሁሉም ሆርሞን ያለው ክኒን)",
   "pillSheetType24WithRest4": "የ24 ክኒን ዓይነት",
-  "restPeriod": "የመድሃኒት ዕረፍት",
+  "restPeriod": "ክኒን እረፍት",
   "placebo": "ፕላሴቦ ክኒን",
   "userNotFound": "ተጠቃሚ አልተገኘም",
   "userAlreadyExists": "ተጠቃሚው ቀድሞውኑ አለ",

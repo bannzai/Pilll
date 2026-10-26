@@ -7,7 +7,7 @@
   "pillSheetType24": "24 p-piller (alle aktive pille)",
   "pillSheetType21": "Type med 21 p-piller (alle er aktive piller)",
   "pillSheetType24WithRest4": "Type med 24 p-piller",
-  "restPeriod": "pause",
+  "restPeriod": "pillepause",
   "placebo": "placebopille",
   "userNotFound": "Bruger ikke fundet",
   "userAlreadyExists": "Der findes allerede en bruger",

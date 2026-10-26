@@ -7,7 +7,7 @@
   "pillSheetType24": "24 pilleriä (kaikki hormonipillereitä)",
   "pillSheetType21": "21 pillerin tyyppi (kaikki hormonipillereitä)",
   "pillSheetType24WithRest4": "24 pillerin tyyppi",
-  "restPeriod": "taukopäivät",
+  "restPeriod": "taukojakso",
   "placebo": "lumelääke",
   "userNotFound": "Käyttäjää ei löydy",
   "userAlreadyExists": "Käyttäjä on jo olemassa",
