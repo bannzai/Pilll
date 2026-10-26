@@ -164,7 +164,7 @@
   "menstruationHistory": "Riwayat haid",
   "menstruationFromToday": "Haid dimulai hari ini",
   "menstruationFromYesterday": "Haid dimulai kemarin",
-  "selectMenstruationStartDate": "Pilih tanggal mulai menstruasi",
+  "selectMenstruationStartDate": "Pilih tanggal mulai haid",
   "menstruationCycle": "siklus {menstruationDuration} hari",
   "login": "Masuk",
   "beforePremiumRegistration": "Sebelum mendaftar premium...",

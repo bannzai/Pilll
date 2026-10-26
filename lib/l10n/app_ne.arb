@@ -164,7 +164,7 @@
   "menstruationHistory": "महिनावारीको इतिहास",
   "menstruationFromToday": "महिनावारी आजदेखि सुरु",
   "menstruationFromYesterday": "महिनावारी हिजो सुरु भयो",
-  "selectMenstruationStartDate": "मासिक धर्म सुरु मिति छान्नुहोस्",
+  "selectMenstruationStartDate": "महिनावारी सुरु भएको मिति छान्नुहोस्",
   "menstruationCycle": "{menstruationDuration} दिनको चक्र",
   "login": "लगइन",
   "beforePremiumRegistration": "प्रिमियम दर्ता गर्नु अघि...",

@@ -164,7 +164,7 @@
   "menstruationHistory": "Hanes mislif",
   "menstruationFromToday": "Mislif yn dechrau heddiw",
   "menstruationFromYesterday": "Dechreuodd y mislif ddoe",
-  "selectMenstruationStartDate": "Dewis dyddiad dechrau'r misglwyf",
+  "selectMenstruationStartDate": "Dewiswch ddyddiad dechrau eich mislif",
   "menstruationCycle": "cylch {menstruationDuration} diwrnod",
   "login": "mewngofnodi",
   "beforePremiumRegistration": "Cyn cofrestru premiwm...",

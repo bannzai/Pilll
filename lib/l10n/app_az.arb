@@ -164,7 +164,7 @@
   "menstruationHistory": "Aybaşı tarixçəsi",
   "menstruationFromToday": "Aybaşı bu gün başlayır",
   "menstruationFromYesterday": "Aybaşı dünən başlayıb",
-  "selectMenstruationStartDate": "Menstruasiya başlama tarixini seçin",
+  "selectMenstruationStartDate": "Aybaşının başlama tarixini seçin",
   "menstruationCycle": "{menstruationDuration} günlük tsikl",
   "login": "Giriş",
   "beforePremiumRegistration": "Premium qeydiyyatından öncə...",

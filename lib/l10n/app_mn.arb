@@ -164,7 +164,7 @@
   "menstruationHistory": "сарын тэмдгийн түүх",
   "menstruationFromToday": "Сарын тэмдгийн эхлэл өнөөдөр",
   "menstruationFromYesterday": "Сарын тэмдгийн эхлэл өчигдөр",
-  "selectMenstruationStartDate": "Сарын тэмдэг эхлэх өдрийг сонгох",
+  "selectMenstruationStartDate": "Сарын тэмдгийн эхэлсэн өдрийг сонгоно уу",
   "menstruationCycle": "{menstruationDuration} өдрийн мөчлөг",
   "login": "нэвтрэх",
   "beforePremiumRegistration": "Премиум бүртгүүлэхийн өмнө...",

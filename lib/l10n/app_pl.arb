@@ -164,7 +164,7 @@
   "menstruationHistory": "Historia okresu",
   "menstruationFromToday": "Okres zaczyna się dziś",
   "menstruationFromYesterday": "Okres zaczął się wczoraj",
-  "selectMenstruationStartDate": "Wybierz początek miesiączki",
+  "selectMenstruationStartDate": "Wybierz datę rozpoczęcia okresu",
   "menstruationCycle": "Cykl {menstruationDuration} dni",
   "login": "Zaloguj się",
   "beforePremiumRegistration": "Przed rejestracją Premium...",

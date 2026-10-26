@@ -164,7 +164,7 @@
   "menstruationHistory": "Historial de la regla",
   "menstruationFromToday": "La regla comença avui",
   "menstruationFromYesterday": "La regla va començar ahir",
-  "selectMenstruationStartDate": "Selecciona la data d'inici de la menstruació",
+  "selectMenstruationStartDate": "Tria la data d'inici de la regla",
   "menstruationCycle": "cicle de {menstruationDuration} dies",
   "login": "Inicia sessió",
   "beforePremiumRegistration": "Abans de la subscripció premium...",

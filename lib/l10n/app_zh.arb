@@ -164,7 +164,7 @@
   "menstruationHistory": "经期记录",
   "menstruationFromToday": "经期从今天开始",
   "menstruationFromYesterday": "经期从昨天开始",
-  "selectMenstruationStartDate": "选择月经开始日期",
+  "selectMenstruationStartDate": "选择经期开始日期",
   "menstruationCycle": "{menstruationDuration}天周期",
   "login": "登录",
   "beforePremiumRegistration": "开通高级版前...",

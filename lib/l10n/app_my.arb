@@ -164,7 +164,7 @@
   "menstruationHistory": "ရာသီမှတ်တမ်း",
   "menstruationFromToday": "ရာသီ ဒီနေ့ စတင်ပါပြီ",
   "menstruationFromYesterday": "ရာသီ မနေ့က စတင်ခဲ့ပါတယ်",
-  "selectMenstruationStartDate": "ရာသီစတင်ရက်ရွေးချယ်ပါ",
+  "selectMenstruationStartDate": "ရာသီစတင်သည့်ရက်ကို ရွေးချယ်ပါ",
   "menstruationCycle": "{menstruationDuration}ရက် သံသရာ",
   "login": "ဝင်ရန်",
   "beforePremiumRegistration": "ပရီမီယမ် စာရင်းသွင်းခြင်းမတိုင်မီ...",

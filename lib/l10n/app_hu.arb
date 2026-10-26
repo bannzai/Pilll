@@ -164,7 +164,7 @@
   "menstruationHistory": "menstruációs előzmények",
   "menstruationFromToday": "A menstruáció ma kezdődik",
   "menstruationFromYesterday": "A menstruáció tegnap kezdődött",
-  "selectMenstruationStartDate": "Menstruáció kezdődátumának kiválasztása",
+  "selectMenstruationStartDate": "Válaszd ki a menstruáció kezdőnapját",
   "menstruationCycle": "{menstruationDuration} napos ciklus",
   "login": "Bejelentkezés",
   "beforePremiumRegistration": "A prémium regisztráció előtt...",

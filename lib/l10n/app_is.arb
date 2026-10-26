@@ -164,7 +164,7 @@
   "menstruationHistory": "Saga blæðinga",
   "menstruationFromToday": "Blæðingar hefjast í dag",
   "menstruationFromYesterday": "Blæðingar hófust í gær",
-  "selectMenstruationStartDate": "Veldu upphafsdag tíðablæðinga",
+  "selectMenstruationStartDate": "Veldu upphafsdag blæðinga",
   "menstruationCycle": "{menstruationDuration} daga hringrás",
   "login": "Innskrá",
   "beforePremiumRegistration": "Áður en þú skráir þig í Premium...",

@@ -164,7 +164,7 @@
   "menstruationHistory": "История месячных",
   "menstruationFromToday": "Месячные начинаются сегодня",
   "menstruationFromYesterday": "Месячные начались вчера",
-  "selectMenstruationStartDate": "Выбрать дату начала менструации",
+  "selectMenstruationStartDate": "Выберите дату начала месячных",
   "menstruationCycle": "{menstruationDuration}-дневный цикл",
   "login": "Войти",
   "beforePremiumRegistration": "Перед оформлением премиум-подписки...",

@@ -164,7 +164,7 @@
   "menstruationHistory": "მენსტრუაციის ისტორია",
   "menstruationFromToday": "მენსტრუაცია დღეს იწყება",
   "menstruationFromYesterday": "მენსტრუაცია გუშინ დაიწყო",
-  "selectMenstruationStartDate": "აირჩიეთ მენსტრუაციის დაწყების თარიღი",
+  "selectMenstruationStartDate": "მენსტრუაციის დაწყების თარიღის არჩევა",
   "menstruationCycle": "{menstruationDuration} დღის ციკლი",
   "login": "შესვლა",
   "beforePremiumRegistration": "პრემიუმ რეგისტრაციამდე...",

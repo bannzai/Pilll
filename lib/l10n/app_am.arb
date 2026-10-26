@@ -164,7 +164,7 @@
   "menstruationHistory": "የወር አበባ ታሪክ",
   "menstruationFromToday": "ወር አበባ ከዛሬ ጀምሮ",
   "menstruationFromYesterday": "ወር አበባ ትናንት ጀመረ",
-  "selectMenstruationStartDate": "የወር መጀመሪያ ቀን ምረጥ",
+  "selectMenstruationStartDate": "የወር አበባ መጀመሪያ ቀን ይምረጡ",
   "menstruationCycle": "{menstruationDuration} ቀን ዑደት",
   "login": "ግባት",
   "beforePremiumRegistration": "ከፕሪሚየም ምዝገባ በፊት...",

@@ -164,7 +164,7 @@
   "menstruationHistory": "Hayz tarixi",
   "menstruationFromToday": "Hayz bugun boshlanadi",
   "menstruationFromYesterday": "Hayz kecha boshlandi",
-  "selectMenstruationStartDate": "Hayz boshlanish sanasini tanlang",
+  "selectMenstruationStartDate": "Hayz boshlangan sanani tanlang",
   "menstruationCycle": "{menstruationDuration} kunlik sikl",
   "login": "Kirish",
   "beforePremiumRegistration": "Premium obunadan oldin...",

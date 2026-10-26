@@ -164,7 +164,7 @@
   "menstruationHistory": "Етеккір тарихы",
   "menstruationFromToday": "Етеккір бүгін басталады",
   "menstruationFromYesterday": "Етеккір кеше басталды",
-  "selectMenstruationStartDate": "Айбасу басталу күнін таңдау",
+  "selectMenstruationStartDate": "Етеккірдің басталу күнін таңдаңыз",
   "menstruationCycle": "{menstruationDuration} күндік цикл",
   "login": "Кіру",
   "beforePremiumRegistration": "Premium жазылуы алдында…",

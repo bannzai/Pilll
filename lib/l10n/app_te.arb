@@ -164,7 +164,7 @@
   "menstruationHistory": "నెలసరి చరిత్ర",
   "menstruationFromToday": "నెలసరి ఈ రోజు ప్రారంభమవుతుంది",
   "menstruationFromYesterday": "నెలసరి నిన్న ప్రారంభమైంది",
-  "selectMenstruationStartDate": "రుతుక్రమ ప్రారంభ తేదీని ఎంచుకోండి",
+  "selectMenstruationStartDate": "నెలసరి ప్రారంభమైన తేదీని ఎంచుకోండి",
   "menstruationCycle": "{menstruationDuration}రోజుల చక్రం",
   "login": "లాగిన్",
   "beforePremiumRegistration": "ప్రీమియం నమోదుకు ముందు...",

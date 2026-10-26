@@ -164,7 +164,7 @@
   "menstruationHistory": "د حیض تاریخچه",
   "menstruationFromToday": "حیض له نن څخه پیلېږي",
   "menstruationFromYesterday": "حیض پرون پیل شو",
-  "selectMenstruationStartDate": "د میاشتنۍ دورې د پیل نېټه غوره کړئ",
+  "selectMenstruationStartDate": "د حیض د پیل نېټه وټاکئ",
   "menstruationCycle": "{menstruationDuration} ورځې دوره",
   "login": "لاګ ان",
   "beforePremiumRegistration": "د پریمیم ثبت نوم څخه مخکې...",

@@ -164,7 +164,7 @@
   "menstruationHistory": "Menshistorikk",
   "menstruationFromToday": "Mensen starter i dag",
   "menstruationFromYesterday": "Mensen startet i går",
-  "selectMenstruationStartDate": "Velg menstruasjonsstartdato",
+  "selectMenstruationStartDate": "Velg startdato for mens",
   "menstruationCycle": "{menstruationDuration} dagers syklus",
   "login": "Logg inn",
   "beforePremiumRegistration": "Før du registrerer deg for Premium...",

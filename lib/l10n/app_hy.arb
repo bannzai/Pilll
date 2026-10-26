@@ -164,7 +164,7 @@
   "menstruationHistory": "Դաշտանի պատմություն",
   "menstruationFromToday": "Դաշտանը սկսվում է այսօր",
   "menstruationFromYesterday": "Դաշտանը սկսվել է երեկ",
-  "selectMenstruationStartDate": "Ընտրեք մենստրուացիայի սկզբի օրը",
+  "selectMenstruationStartDate": "Ընտրեք դաշտանի սկսվելու օրը",
   "menstruationCycle": "{menstruationDuration}օրյա ցիկլ",
   "login": "Մուտք",
   "beforePremiumRegistration": "Պրեմիում գրանցումից առաջ...",

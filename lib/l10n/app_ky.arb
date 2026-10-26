@@ -164,7 +164,7 @@
   "menstruationHistory": "Айыз тарыхы",
   "menstruationFromToday": "Айыз бүгүн башталат",
   "menstruationFromYesterday": "Айыз кечээ башталды",
-  "selectMenstruationStartDate": "Айыз башталган күнүн тандоо",
+  "selectMenstruationStartDate": "Айыз башталган күндү тандаңыз",
   "menstruationCycle": "{menstruationDuration} күнлүк циклi",
   "login": "Кирүү",
   "beforePremiumRegistration": "Премиум катталуудан мурун...",

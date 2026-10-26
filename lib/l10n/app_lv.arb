@@ -164,7 +164,7 @@
   "menstruationHistory": "mēnešreižu vēsture",
   "menstruationFromToday": "Mēnešreizes sākas šodien",
   "menstruationFromYesterday": "Mēnešreizes sākās vakar",
-  "selectMenstruationStartDate": "Izvēlēties menstruācijas sākuma dienu",
+  "selectMenstruationStartDate": "Izvēlieties mēnešreižu sākuma datumu",
   "menstruationCycle": "{menstruationDuration} dienu cikls",
   "login": "Pieslēgties",
   "beforePremiumRegistration": "Pirms premium abonēšanas...",

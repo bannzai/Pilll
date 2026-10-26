@@ -164,7 +164,7 @@
   "menstruationHistory": "Umlando wokuya esikhathini",
   "menstruationFromToday": "Ukuya esikhathini kuqala namuhla",
   "menstruationFromYesterday": "Ukuya esikhathini kuqale izolo",
-  "selectMenstruationStartDate": "Khetha usuku lokuqala kwenyanga",
+  "selectMenstruationStartDate": "Sicela ukhethe usuku lokuqala lokuya esikhathini",
   "menstruationCycle": "umjikelezo {menstruationDuration} izinsuku",
   "login": "Ngena",
   "beforePremiumRegistration": "Ngaphambi kokubhalisa i-premium...",

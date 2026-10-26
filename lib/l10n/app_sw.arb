@@ -164,7 +164,7 @@
   "menstruationHistory": "Historia ya hedhi",
   "menstruationFromToday": "Hedhi inaanza leo",
   "menstruationFromYesterday": "Hedhi ilianza jana",
-  "selectMenstruationStartDate": "Chagua siku ya mwanzo wa hedhi",
+  "selectMenstruationStartDate": "Tafadhali chagua tarehe ya kuanza kwa hedhi",
   "menstruationCycle": "Mzunguko wa siku {menstruationDuration}",
   "login": "Ingia",
   "beforePremiumRegistration": "Kabla ya usajili wa premium...",

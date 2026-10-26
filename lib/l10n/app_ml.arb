@@ -164,7 +164,7 @@
   "menstruationHistory": "ആർത്തവ ചരിത്രം",
   "menstruationFromToday": "ആർത്തവം ഇന്ന് ആരംഭിക്കുന്നു",
   "menstruationFromYesterday": "ആർത്തവം ഇന്നലെ തുടങ്ങി",
-  "selectMenstruationStartDate": "മാസിക ആരംഭ ദിനം തിരഞ്ഞെടുക്കുക",
+  "selectMenstruationStartDate": "ആർത്തവം തുടങ്ങിയ തീയതി തിരഞ്ഞെടുക്കൂ",
   "menstruationCycle": "{menstruationDuration} ദിവസത്തെ ചക്രം",
   "login": "ലോഗിൻ",
   "beforePremiumRegistration": "പ്രീമിയം രജിസ്ട്രേഷനു മുമ്പ്...",

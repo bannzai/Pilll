@@ -164,7 +164,7 @@
   "menstruationHistory": "Menstruatiegeschiedenis",
   "menstruationFromToday": "Menstruatie begint vandaag",
   "menstruationFromYesterday": "Menstruatie begon gisteren",
-  "selectMenstruationStartDate": "Selecteer menstruatiestartdatum",
+  "selectMenstruationStartDate": "Kies de startdatum van je menstruatie",
   "menstruationCycle": "{menstruationDuration}-daagse cyclus",
   "login": "Inloggen",
   "beforePremiumRegistration": "Voor de premium registratie...",

@@ -164,7 +164,7 @@
   "menstruationHistory": "היסטוריית המחזור",
   "menstruationFromToday": "תחילת המחזור היום",
   "menstruationFromYesterday": "המחזור התחיל אתמול",
-  "selectMenstruationStartDate": "בחר תאריך תחילת הווסת",
+  "selectMenstruationStartDate": "לבחור את תאריך תחילת המחזור",
   "menstruationCycle": "מחזור {menstruationDuration} ימים",
   "login": "התחבר",
   "beforePremiumRegistration": "לפני הרשמה לפרימיום...",

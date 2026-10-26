@@ -164,7 +164,7 @@
   "menstruationHistory": "Historial de la regla",
   "menstruationFromToday": "La regla empieza hoy",
   "menstruationFromYesterday": "La regla empezó ayer",
-  "selectMenstruationStartDate": "Seleccionar fecha de inicio de la menstruación",
+  "selectMenstruationStartDate": "Elige la fecha de inicio de la regla",
   "menstruationCycle": "Ciclo de {menstruationDuration} días",
   "login": "Iniciar sesión",
   "beforePremiumRegistration": "Antes de la suscripción premium...",

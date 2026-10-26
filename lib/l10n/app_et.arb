@@ -164,7 +164,7 @@
   "menstruationHistory": "Päevade ajalugu",
   "menstruationFromToday": "Päevad algavad täna",
   "menstruationFromYesterday": "Päevad algasid eile",
-  "selectMenstruationStartDate": "Vali menstruatsiooni alguskuupäev",
+  "selectMenstruationStartDate": "Vali päevade alguskuupäev",
   "menstruationCycle": "{menstruationDuration} päeva tsükkel",
   "login": "Logi sisse",
   "beforePremiumRegistration": "Enne premiumi tellimist...",

@@ -164,7 +164,7 @@
   "menstruationHistory": "ប្រវត្តិរដូវ",
   "menstruationFromToday": "រដូវចាប់ផ្តើមថ្ងៃនេះ",
   "menstruationFromYesterday": "រដូវចាប់ផ្តើមពីម្សិលមិញ",
-  "selectMenstruationStartDate": "ជ្រើសរើសថ្ងៃចាប់ផ្តើមរដូវ",
+  "selectMenstruationStartDate": "សូមជ្រើសរើសថ្ងៃចាប់ផ្តើមរដូវ",
   "menstruationCycle": "{menstruationDuration}ថ្ងៃ វដ្ត",
   "login": "ចូល",
   "beforePremiumRegistration": "មុនពេលចុះឈ្មោះបុរេមៀម...",
