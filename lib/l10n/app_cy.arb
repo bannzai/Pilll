@@ -387,7 +387,7 @@
   "beginToEndNumbers": "rhif {begin} ~ {end}",
   "resumeTaking": "Ailddechrau cymryd y bilsen",
   "changePausePeriod": "Newid hyd y seibiant o gymryd y bilsen",
-  "changedPausePeriod": "Wedi newid cyfnod saib y bilsen",
+  "changedPausePeriod": "Mae hyd yr egwyl o gymryd y bilsen wedi newid",
   "changedToDate": "Newidiwyd i {date}",
   "quickRecordTakePillFailed": "Efallai bod y cofnod cymryd wedi methu",
   "quickRecordTakePillFailedMessage": "Agorwch yr ap a gwiriwch",

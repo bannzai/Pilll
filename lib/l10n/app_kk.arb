@@ -387,7 +387,7 @@
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Таблетканы қабылдауды қайта бастаңыз",
   "changePausePeriod": "Таблетка қабылдаудағы үзіліс ұзақтығын өзгертіңіз",
-  "changedPausePeriod": "Дәрі қабылдаудан тыныш кезеңі өзгертілді",
+  "changedPausePeriod": "Таблетка қабылдаудағы үзіліс ұзақтығы өзгертілді",
   "changedToDate": "{date}-ға өзгертілді",
   "quickRecordTakePillFailed": "Дәрі қабылдау жазбасы сәтсіз болған мүмкіндігі бар",
   "quickRecordTakePillFailedMessage": "Қолданбаны ашып тексеріп көріңіз",

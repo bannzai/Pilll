@@ -387,7 +387,7 @@
   "beginToEndNumbers": "nr. {begin} ~ {end}",
   "resumeTaking": "Begynn å ta p-pillen igjen",
   "changePausePeriod": "Endre lengden på pillepausen",
-  "changedPausePeriod": "Pauseperioden har blitt endret",
+  "changedPausePeriod": "Lengden på pillepausen er endret",
   "changedToDate": "Endret til {date}",
   "quickRecordTakePillFailed": "Registrering av inntak kan ha mislyktes",
   "quickRecordTakePillFailedMessage": "Vennligst åpne appen og sjekk",

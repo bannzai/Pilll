@@ -387,7 +387,7 @@
   "beginToEndNumbers": "nr. {begin} ~ {end}",
   "resumeTaking": "Reia administrarea pilulei",
   "changePausePeriod": "Schimbă durata pauzei de la pilulă",
-  "changedPausePeriod": "Perioada de pauză a fost modificată",
+  "changedPausePeriod": "Durata pauzei de la pilulă a fost modificată",
   "changedToDate": "Schimbat la {date}",
   "quickRecordTakePillFailed": "Este posibil ca înregistrarea administrării să fi eșuat",
   "quickRecordTakePillFailedMessage": "Vă rugăm să deschideți aplicația și să verificați",

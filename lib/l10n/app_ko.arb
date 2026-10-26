@@ -387,7 +387,7 @@
   "beginToEndNumbers": "{begin}번 ~ {end}번",
   "resumeTaking": "복용 다시 시작하기",
   "changePausePeriod": "복용 휴지기 변경",
-  "changedPausePeriod": "휴약 기간을 변경했습니다",
+  "changedPausePeriod": "복용 휴식 기간을 변경했어요",
   "changedToDate": "{date}로 변경되었습니다",
   "quickRecordTakePillFailed": "복용 기록 저장에 실패했을 가능성이 있습니다",
   "quickRecordTakePillFailedMessage": "앱을 열어서 확인해 주세요",

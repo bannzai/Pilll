@@ -387,7 +387,7 @@
   "beginToEndNumbers": "លេខ {begin} ~ {end}",
   "resumeTaking": "សូមចាប់ផ្តើមលេបថ្នាំគ្រាប់វិញ",
   "changePausePeriod": "ប្តូររយៈពេលផ្អាកលេបថ្នាំគ្រាប់",
-  "changedPausePeriod": "រយៈពេលឈប់ទទួលទានថ្នាំត្រូវបានផ្លាស់ប្តូរហើយ",
+  "changedPausePeriod": "បានផ្លាស់ប្តូររយៈពេលផ្អាកលេបថ្នាំគ្រាប់ហើយ",
   "changedToDate": "បានផ្លាស់ប្តូរទៅជា {date}",
   "quickRecordTakePillFailed": "ការកត់ត្រាការទទួលទានអាចបរាជ័យ",
   "quickRecordTakePillFailedMessage": "សូមបើកកម្មវិធីនិងពិនិត្យមើល",

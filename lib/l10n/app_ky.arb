@@ -387,7 +387,7 @@
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Таблетка ичүүнү кайра баштаңыз",
   "changePausePeriod": "Таблетка ичүүдөгү тыныгуунун узактыгын өзгөртүңүз",
-  "changedPausePeriod": "Дары ичүүдө демалыс мезгили өзгөртүлдү",
+  "changedPausePeriod": "Таблетка ичүүдөгү тыныгуунун узактыгы өзгөртүлдү",
   "changedToDate": "{date}-га өзгөртүлдү",
   "quickRecordTakePillFailed": "Дары ичүү жазуусун сактоо жаңылышы болушу мүмкүн",
   "quickRecordTakePillFailedMessage": "Тиркемени ачып текшериңиз",

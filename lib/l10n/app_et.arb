@@ -387,7 +387,7 @@
   "beginToEndNumbers": "nr {begin} ~ {end}",
   "resumeTaking": "Jätka pilli võtmist",
   "changePausePeriod": "Muuda pillipausi pikkust",
-  "changedPausePeriod": "Võtmise pausperiood on muudetud",
+  "changedPausePeriod": "Pillipausi pikkus on muudetud",
   "changedToDate": "Muudetud {date}-le",
   "quickRecordTakePillFailed": "Manustamise salvestamine võis ebaõnnestuda",
   "quickRecordTakePillFailedMessage": "Palun avage rakendus ja kontrollige",

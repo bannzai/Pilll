@@ -387,7 +387,7 @@
   "beginToEndNumbers": "شمېره {begin} ~ {end}",
   "resumeTaking": "د ګولۍ اخیستل بیا پیل کړئ",
   "changePausePeriod": "د ګولیو د اخیستو د وقفې موده بدله کړئ",
-  "changedPausePeriod": "د ګولیو د نه اخیستلو وخت بدل شو",
+  "changedPausePeriod": "د ګولیو د اخیستو د وقفې موده بدله شوه",
   "changedToDate": "{date} ته بدل شو",
   "quickRecordTakePillFailed": "ممکن دی چې د دوا اخیستلو ثبت ناکام شوي وي",
   "quickRecordTakePillFailedMessage": "مهرباني وکړئ اپلیکیشن خلاص کړئ او وی یې وګورئ",

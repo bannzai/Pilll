@@ -387,7 +387,7 @@
   "beginToEndNumbers": "nr. {begin} ~ {end}",
   "resumeTaking": "Begin weer met de pil",
   "changePausePeriod": "Duur van de stopweek wijzigen",
-  "changedPausePeriod": "De pilpauze periode is gewijzigd",
+  "changedPausePeriod": "De duur van de pillenpauze is gewijzigd",
   "changedToDate": "Gewijzigd naar {date}",
   "quickRecordTakePillFailed": "Het registreren van de inname is mogelijk mislukt",
   "quickRecordTakePillFailedMessage": "Open de app om te controleren",

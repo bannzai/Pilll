@@ -387,7 +387,7 @@
   "beginToEndNumbers": "{begin}. ~ {end}. zenbakia",
   "resumeTaking": "Hasi berriro pilula hartzen",
   "changePausePeriod": "Pilulen atsedenaldiaren iraupena aldatu",
-  "changedPausePeriod": "Pilula hartzeko atseden aldia aldatu da",
+  "changedPausePeriod": "Pilula hartzeko atsedenaldiaren iraupena aldatu da",
   "changedToDate": "{date} datara aldatu da",
   "quickRecordTakePillFailed": "Hartze erregistroak huts egin dezake",
   "quickRecordTakePillFailedMessage": "Aplikazioa ireki eta egiaztatu ezazu",

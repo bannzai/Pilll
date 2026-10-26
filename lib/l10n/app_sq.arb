@@ -387,7 +387,7 @@
   "beginToEndNumbers": "nr. {begin} ~ {end}",
   "resumeTaking": "Rifilloni marrjen e pilulës",
   "changePausePeriod": "Ndryshoni kohëzgjatjen e pushimit nga pilulat",
-  "changedPausePeriod": "U ndryshua periudha e pauzës së pilulës",
+  "changedPausePeriod": "Kohëzgjatja e pushimit nga pilulat u ndryshua",
   "changedToDate": "Ndryshuar në {date}",
   "quickRecordTakePillFailed": "Regjistrimi i marrjes mund të ketë dështuar",
   "quickRecordTakePillFailedMessage": "Ju lutem hapni aplikacionin për ta kontrolluar",

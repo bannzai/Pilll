@@ -387,7 +387,7 @@
   "beginToEndNumbers": "núm. {begin} ~ {end}",
   "resumeTaking": "Retoma a pílula",
   "changePausePeriod": "Cambiar a duración da pausa da pílula",
-  "changedPausePeriod": "Cambiouse o período de descanso da toma",
+  "changedPausePeriod": "Cambiouse a duración da pausa da pílula",
   "changedToDate": "Cambiouse a {date}",
   "quickRecordTakePillFailed": "É posible que o rexistro da toma fallase",
   "quickRecordTakePillFailedMessage": "Abre a aplicación e comproba",

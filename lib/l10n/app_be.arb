@@ -387,7 +387,7 @@
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Аднавіць прыём пігулак",
   "changePausePeriod": "Змяніць працягласць перапынку ў прыёме пігулак",
-  "changedPausePeriod": "Перыяд перапынку ў прыёме зменены",
+  "changedPausePeriod": "Перыяд перапынку ў прыёме пігулак зменены",
   "changedToDate": "Зменена на {date}",
   "quickRecordTakePillFailed": "Магчыма, запіс прыёму не атрымаўся",
   "quickRecordTakePillFailedMessage": "Адкрыйце дадатак і праверце",

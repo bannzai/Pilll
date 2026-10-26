@@ -387,7 +387,7 @@
   "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "Pilleneinnahme fortsetzen",
   "changePausePeriod": "Dauer der Pillenpause ändern",
-  "changedPausePeriod": "Die Einnahmepause wurde angepasst",
+  "changedPausePeriod": "Die Pillenpause wurde geändert",
   "changedToDate": "Auf {date} geändert",
   "quickRecordTakePillFailed": "Die Einnahmeaufzeichnung konnte möglicherweise nicht gespeichert werden",
   "quickRecordTakePillFailedMessage": "Bitte öffnen Sie die App zur Überprüfung",

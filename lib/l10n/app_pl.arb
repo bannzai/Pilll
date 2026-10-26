@@ -387,7 +387,7 @@
   "beginToEndNumbers": "nr {begin} ~ {end}",
   "resumeTaking": "Wznów przyjmowanie pigułek",
   "changePausePeriod": "Zmień długość przerwy w przyjmowaniu tabletek",
-  "changedPausePeriod": "Okres przerwy w przyjmowaniu został zmieniony",
+  "changedPausePeriod": "Zmieniono długość przerwy w przyjmowaniu tabletek",
   "changedToDate": "Zmieniono na {date}",
   "quickRecordTakePillFailed": "Możliwe, że zapis przyjęcia leku się nie powiódł",
   "quickRecordTakePillFailedMessage": "Otwórz aplikację i sprawdź",

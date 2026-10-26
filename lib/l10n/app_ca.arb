@@ -387,7 +387,7 @@
   "beginToEndNumbers": "núm. {begin} ~ {end}",
   "resumeTaking": "Reprèn la píndola",
   "changePausePeriod": "Canvia la durada de la pausa de la píndola",
-  "changedPausePeriod": "He canviat el període de descans de la medicació.",
+  "changedPausePeriod": "S'ha canviat el període de descans de la píndola",
   "changedToDate": "He canviat a {date}",
   "quickRecordTakePillFailed": "És possible que el registre de la presa hagi fallat.",
   "quickRecordTakePillFailedMessage": "Obre l'aplicació i comprova-ho",

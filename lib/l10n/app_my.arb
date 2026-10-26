@@ -387,7 +387,7 @@
   "beginToEndNumbers": "နံပါတ် {begin} ~ {end}",
   "resumeTaking": "ဆေးပြားကို ပြန်သောက်ပါ",
   "changePausePeriod": "ဆေးလုံးသောက်ခြင်း ခေတ္တရပ်နားချိန်ကို ပြောင်းရန်",
-  "changedPausePeriod": "သောက်သုံးခြင်း အနားယူကာလကို ပြောင်းလဲပြီးပါပြီ",
+  "changedPausePeriod": "ဆေးလုံးသောက်ခြင်း ရပ်နားချိန်ကို ပြောင်းလဲပြီးပါပြီ",
   "changedToDate": "{date}သို့ ပြောင်းလဲပြီးပါပြီ",
   "quickRecordTakePillFailed": "ဆေးသောက်မှတ်တမ်း မှတ်ရာ ပျက်ကွက်နိုင်ပါသည်",
   "quickRecordTakePillFailedMessage": "အက်ပ်ကို ဖွင့်ပြီး စစ်ဆေးပါ",

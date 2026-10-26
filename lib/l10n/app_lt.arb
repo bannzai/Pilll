@@ -387,7 +387,7 @@
   "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "Vėl pradėkite vartoti tabletes",
   "changePausePeriod": "Pakeiskite tablečių vartojimo pertraukos trukmę",
-  "changedPausePeriod": "Pertraukos laikotarpis pakeistas",
+  "changedPausePeriod": "Tablečių vartojimo pertraukos trukmė pakeista",
   "changedToDate": "Pakeista į {date}",
   "quickRecordTakePillFailed": "Vaistų vartojimo įrašymas galėjo nepavykti",
   "quickRecordTakePillFailedMessage": "Atidarykite programėlę ir patikrinkite",

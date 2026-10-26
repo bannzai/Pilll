@@ -387,7 +387,7 @@
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Эмээ дахин ууж эхэлнэ үү",
   "changePausePeriod": "Эм уух завсарлагааны хугацааг өөрчилнө үү",
-  "changedPausePeriod": "Амралтын хугацааг өөрчиллөө",
+  "changedPausePeriod": "Эм уух завсарлагын хугацаа өөрчлөгдсөн",
   "changedToDate": "{date} рүү өөрчлөгдсөн",
   "quickRecordTakePillFailed": "Эм уусан бүртгэл амжилтгүй болсон байж болзошгүй байна",
   "quickRecordTakePillFailedMessage": "Апп-аа нээж шалгана уу",

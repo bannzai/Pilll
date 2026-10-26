@@ -387,7 +387,7 @@
   "beginToEndNumbers": "নং {begin} ~ {end}",
   "resumeTaking": "পিল খোৱা পুনৰ আৰম্ভ কৰক",
   "changePausePeriod": "বিৰতিৰ দিন সলনি কৰক",
-  "changedPausePeriod": "ঔষধ সেৱনৰ বিৰতি কাল সলনি কৰা হ'ল",
+  "changedPausePeriod": "পিল খোৱাৰ বিৰতিৰ সময় সলনি কৰা হৈছে",
   "changedToDate": "{date}লৈ সলনি কৰা হ'ল",
   "quickRecordTakePillFailed": "সেৱন ৰেকৰ্ড সংৰক্ষণত বিফল হোৱাৰ সম্ভাৱনা আছে",
   "quickRecordTakePillFailedMessage": "অনুগ্ৰহ কৰি এপ্টো খুলি পৰীক্ষা কৰক",

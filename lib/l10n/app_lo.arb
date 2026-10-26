@@ -387,7 +387,7 @@
   "beginToEndNumbers": "ເລກ {begin} ~ {end}",
   "resumeTaking": "ກັບມາກິນຢາເມັດອີກຄັ້ງ",
   "changePausePeriod": "ປ່ຽນໄລຍະເວລາພັກກິນຢາເມັດ",
-  "changedPausePeriod": "ໄດ້ປ່ຽນແປງໄລຍະຢຸດກິນຢາແລ້ວ",
+  "changedPausePeriod": "ປ່ຽນໄລຍະພັກການກິນຢາແລ້ວ",
   "changedToDate": "ປ່ຽນເປັນ {date} ແລ້ວ",
   "quickRecordTakePillFailed": "ບັນທຶກການກິນຢາອາດຈະລົ້ມເຫລວ",
   "quickRecordTakePillFailedMessage": "ກະລຸນາເປີດແອັບເພື່ອກວດສອບ",

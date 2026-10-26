@@ -387,7 +387,7 @@
   "beginToEndNumbers": "namba {begin} ~ {end}",
   "resumeTaking": "Anza tena kumeza kidonge",
   "changePausePeriod": "Badilisha muda wa mapumziko ya kumeza vidonge",
-  "changedPausePeriod": "Kipindi cha mapumziko kimebadilishwa",
+  "changedPausePeriod": "Muda wa mapumziko ya kumeza vidonge umebadilishwa",
   "changedToDate": "Imebadilishwa kuwa {date}",
   "quickRecordTakePillFailed": "Inawezekana rekodi ya kumeza dawa haijahifadhiwa",
   "quickRecordTakePillFailedMessage": "Tafadhali fungua app na kagua",
