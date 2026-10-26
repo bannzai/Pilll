@@ -229,7 +229,7 @@
   "pillForToday": "Tabletka do przyjęcia {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Podgląd",
-  "normal": "normalne",
+  "normal": "Normalnie",
   "missed": "Pominięto",
   "showsDate": "Wyświetlaj datę",
   "showsPillNumber": "Wyświetl numery",

@@ -229,7 +229,7 @@
   "pillForToday": "La píndola que toca prendre el {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Vista prèvia",
-  "normal": "normal",
+  "normal": "Normal",
   "missed": "Oblidat",
   "showsDate": "Mostrar data",
   "showsPillNumber": "Mostrar números",

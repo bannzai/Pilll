@@ -229,7 +229,7 @@
   "pillForToday": "P-pillen du skal ta {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Forhåndsvisning",
-  "normal": "normal",
+  "normal": "Normal",
   "missed": "Glemt dose",
   "showsDate": "Vis dato",
   "showsPillNumber": "Vis nummer",

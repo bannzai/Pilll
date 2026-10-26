@@ -229,7 +229,7 @@
   "pillForToday": "{today}에 먹을 피임약",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "미리보기",
-  "normal": "정상",
+  "normal": "일반",
   "missed": "복용 누락",
   "showsDate": "날짜 표시",
   "showsPillNumber": "번호 표시",

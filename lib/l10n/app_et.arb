@@ -229,7 +229,7 @@
   "pillForToday": "Pill, mida võtta {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Eelvaade",
-  "normal": "tavaline",
+  "normal": "Tavaline",
   "missed": "Võtmata",
   "showsDate": "Kuva kuupäev",
   "showsPillNumber": "Näita numbreid",

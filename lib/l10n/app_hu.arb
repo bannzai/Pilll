@@ -229,7 +229,7 @@
   "pillForToday": "A {today} napján szedendő tabletta",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Előnézet",
-  "normal": "normális",
+  "normal": "Normál",
   "missed": "Elmulasztott bevétel",
   "showsDate": "Dátum megjelenítése",
   "showsPillNumber": "Számok megjelenítése",

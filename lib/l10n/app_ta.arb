@@ -229,7 +229,7 @@
   "pillForToday": "{today} அன்று எடுத்துக்கொள்ள வேண்டிய மாத்திரை",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "முன்னோட்டம்",
-  "normal": "சாதாரண",
+  "normal": "வழக்கமானது",
   "missed": "தவறவிட்டது",
   "showsDate": "தேதி காட்சி",
   "showsPillNumber": "எண்களைக் காண்பி",

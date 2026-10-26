@@ -229,7 +229,7 @@
   "pillForToday": "Таблетка для приёма {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Предпросмотр",
-  "normal": "Нормальное",
+  "normal": "Обычно",
   "missed": "Пропуск приёма",
   "showsDate": "Показывать дату",
   "showsPillNumber": "Показать номера",

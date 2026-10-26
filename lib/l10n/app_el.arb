@@ -229,7 +229,7 @@
   "pillForToday": "Το χάπι για τις {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Προεπισκόπηση",
-  "normal": "κανονικό",
+  "normal": "Κανονικό",
   "missed": "Παραλείφθηκε",
   "showsDate": "Εμφάνιση ημερομηνίας",
   "showsPillNumber": "Εμφάνιση αριθμών",

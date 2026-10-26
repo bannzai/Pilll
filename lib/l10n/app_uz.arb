@@ -229,7 +229,7 @@
   "pillForToday": "{today} kuni qabul qilinadigan tabletka",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Oldindan ko‘rish",
-  "normal": "oddiy",
+  "normal": "Odatdagi",
   "missed": "Ichilmagan",
   "showsDate": "Sanani ko'rsatish",
   "showsPillNumber": "Raqamlarni ko'rsatish",
