@@ -553,7 +553,7 @@
   "endedPillSheetDialogHistoryTitle": "רוצה לראות את היסטוריית חפיסת הגלולות?",
   "endedPillSheetDialogSummaryTitle": "בואי נעבור על חפיסת הגלולות הזו",
   "endedPillSheetDialogSummaryMessage": "רישום נטילה: {recordedDays} ימים · ללא רישום: {missedDays} ימים",
-  "midnightTakenWarningDialogTitle": "שים לב",
+  "midnightTakenWarningDialogTitle": "לתשומת לב",
   "midnightTakenWarningDialogBody": "נרשמה נטילת הגלולות עד {takenDate}. הודעת התזכורת של היום ({takenDate}) בשעה {reminderTimes} לא תישלח אליך.\nאם מדובר בטעות, אנא בטל את רישום הנטילה",
   "midnightTakenWarningDialogSeeHowToRevert": "לראות איך לבטל רישום נטילה",
   "midnightTakenWarningDialogNeverShowAgain": "אל תציג הודעה זו שוב",

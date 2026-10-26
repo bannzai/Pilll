@@ -553,7 +553,7 @@
   "endedPillSheetDialogHistoryTitle": "ဆေးပြားကတ်မှတ်တမ်းကို ကြည့်ချင်ပါသလား?",
   "endedPillSheetDialogSummaryTitle": "ဒီဆေးပြားကတ်ကို ပြန်လည်ကြည့်ရှုကြရအောင်",
   "endedPillSheetDialogSummaryMessage": "ဆေးသောက်မှတ်တမ်းရှိသည့်ရက် {recordedDays} ရက် · မှတ်တမ်းမရှိသည့်ရက် {missedDays} ရက်ပါ",
-  "midnightTakenWarningDialogTitle": "သတိပြုပါ",
+  "midnightTakenWarningDialogTitle": "ကျေးဇူးပြု၍ သတိပြုပါ",
   "midnightTakenWarningDialogBody": "{takenDate} အထိ ဆေးသောက်မှတ်တမ်း ထည့်ပြီးဖြစ်ပါသည်။ ယနေ့ {takenDate} ၏ {reminderTimes} အချိန် သတိပေးချက်ကို လက်ခံရရှိမည်မဟုတ်ပါ။\nအမှားဖြစ်ပါက ဆေးသောက်မှတ်တမ်းကို ပယ်ဖျက်ပေးပါ",
   "midnightTakenWarningDialogSeeHowToRevert": "ဆေးသောက်မှတ်တမ်း ပယ်ဖျက်နည်းကို ကြည့်ရှုရန်",
   "midnightTakenWarningDialogNeverShowAgain": "နောက်တစ်ဖန် မပြပါနှင့်",

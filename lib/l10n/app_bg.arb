@@ -553,7 +553,7 @@
   "endedPillSheetDialogHistoryTitle": "Искате ли да видите историята на блистерите?",
   "endedPillSheetDialogSummaryTitle": "Нека прегледаме приема от този блистер",
   "endedPillSheetDialogSummaryMessage": "запис на приема: {recordedDays} дни · без запис: {missedDays} дни",
-  "midnightTakenWarningDialogTitle": "Внимание",
+  "midnightTakenWarningDialogTitle": "Моля, обърнете внимание",
   "midnightTakenWarningDialogBody": "Записан е прием на хапчета до {takenDate}. Днешното ({takenDate}) напомняне в {reminderTimes} няма да бъде изпратено.\nАко това е грешка, моля отменете записа за приема.",
   "midnightTakenWarningDialogSeeHowToRevert": "Вижте как да отмените записа за приема",
   "midnightTakenWarningDialogNeverShowAgain": "Не показвай отново",

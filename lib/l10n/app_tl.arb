@@ -553,7 +553,7 @@
   "endedPillSheetDialogHistoryTitle": "Gusto po ba ninyong tingnan ang kasaysayan ng pakete ng pildoras?",
   "endedPillSheetDialogSummaryTitle": "Balikan natin ang pakete ng pildoras na ito",
   "endedPillSheetDialogSummaryMessage": "tala ng pag-inom: {recordedDays} araw · walang tala: {missedDays} araw",
-  "midnightTakenWarningDialogTitle": "Mangyaring tandaan",
+  "midnightTakenWarningDialogTitle": "Pakitandaan po",
   "midnightTakenWarningDialogBody": "Naitala na ang pag-inom ng pill hanggang {takenDate}. Hindi maihahatid ang paalala ngayong {takenDate} sa oras na {reminderTimes}.\nKung pagkakamali ito, mangyaring bawiin ang naitalang pag-inom.",
   "midnightTakenWarningDialogSeeHowToRevert": "Tingnan kung paano bawiin ang pag-inom",
   "midnightTakenWarningDialogNeverShowAgain": "Huwag nang ipakita muli",

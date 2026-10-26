@@ -553,7 +553,7 @@
   "endedPillSheetDialogHistoryTitle": "Ti va di vedere la cronologia dei blister?",
   "endedPillSheetDialogSummaryTitle": "Rivediamo insieme questo blister",
   "endedPillSheetDialogSummaryMessage": "registro delle assunzioni: {recordedDays} giorni · senza registrazione: {missedDays} giorni",
-  "midnightTakenWarningDialogTitle": "Attenzione",
+  "midnightTakenWarningDialogTitle": "Fai attenzione",
   "midnightTakenWarningDialogBody": "Le pillole risultano registrate come assunte fino al {takenDate}. La notifica di oggi ({takenDate}) delle {reminderTimes} non ti verrà consegnata.\nSe si tratta di un errore, annulla l'assunzione registrata.",
   "midnightTakenWarningDialogSeeHowToRevert": "Vedi come annullare l'assunzione registrata",
   "midnightTakenWarningDialogNeverShowAgain": "Non mostrare più questo messaggio",

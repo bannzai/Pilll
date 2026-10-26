@@ -553,7 +553,7 @@
   "endedPillSheetDialogHistoryTitle": "Həb blister tarixçəsinə baxmaq istərdiniz?",
   "endedPillSheetDialogSummaryTitle": "Gəlin bu həb blister üzrə qeydlərinizə nəzər salaq",
   "endedPillSheetDialogSummaryMessage": "həb qəbulu qeyd: {recordedDays} gün · qeyd olunmayan: {missedDays} gün",
-  "midnightTakenWarningDialogTitle": "Diqqət edin",
+  "midnightTakenWarningDialogTitle": "Zəhmət olmasa, diqqət edin",
   "midnightTakenWarningDialogBody": "Həb qəbulunuz {takenDate} tarixinədək qeydə alınıb. Bu günə ({takenDate}) aid saat {reminderTimes}-dəki bildiriş sizə çatmayacaq.\nSəhvən olubsa, zəhmət olmasa qəbul qeydini ləğv edin.",
   "midnightTakenWarningDialogSeeHowToRevert": "Qəbul qeydinin necə ləğv ediləcəyini görün",
   "midnightTakenWarningDialogNeverShowAgain": "Bir daha göstərmə",

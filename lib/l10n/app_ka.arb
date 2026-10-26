@@ -553,7 +553,7 @@
   "endedPillSheetDialogHistoryTitle": "გსურთ ნახოთ აბების ბლისტერის ისტორია?",
   "endedPillSheetDialogSummaryTitle": "მოდით, გადავხედოთ ამ აბების ბლისტერს",
   "endedPillSheetDialogSummaryMessage": "მიღების ჩანაწერით: {recordedDays} დღე · ჩანაწერის გარეშე: {missedDays} დღე",
-  "midnightTakenWarningDialogTitle": "გთხოვთ გაითვალისწინოთ",
+  "midnightTakenWarningDialogTitle": "გთხოვთ, ყურადღება მიაქციოთ",
   "midnightTakenWarningDialogBody": "აბების მიღება ჩაწერილია {takenDate}-ის ჩათვლით. დღევანდელი ({takenDate}) შეხსენება {reminderTimes} საათზე არ მოგივათ.\nშეცდომის შემთხვევაში, გთხოვთ გააუქმოთ მიღების ჩანაწერი",
   "midnightTakenWarningDialogSeeHowToRevert": "მიღების გაუქმების მეთოდი იხილეთ",
   "midnightTakenWarningDialogNeverShowAgain": "აღარ მაჩვენო ეს",

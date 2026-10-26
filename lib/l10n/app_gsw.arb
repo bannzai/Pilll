@@ -553,7 +553,7 @@
   "endedPillSheetDialogHistoryTitle": "Wetsch d Gschicht vo dim Pilleblister aluege?",
   "endedPillSheetDialogSummaryTitle": "Luege mer zrugg uf dä Pilleblister",
   "endedPillSheetDialogSummaryMessage": "Iinahm-Ufzeichnig: {recordedDays} Täg · ohni Iitrag: {missedDays} Täg",
-  "midnightTakenWarningDialogTitle": "Bitte beachten",
+  "midnightTakenWarningDialogTitle": "Lueg bitte gnau",
   "midnightTakenWarningDialogBody": "D'Iinahm isch bis und mit {takenDate} als gnaa erfasst worde. D'Benachrichtigung vo hüt, am {takenDate}, um {reminderTimes} wird Ihne dromit nöd zuegstellt.\nFalls das aus Versehe passiert isch, mached Sie bitte d'Iinahm rückgängig.",
   "midnightTakenWarningDialogSeeHowToRevert": "Aaleitig zum Rückgängigmache vo de Iinahm aaluege",
   "midnightTakenWarningDialogNeverShowAgain": "Nie me aazeige",

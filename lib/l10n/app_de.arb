@@ -553,7 +553,7 @@
   "endedPillSheetDialogHistoryTitle": "Möchtest du den Verlauf deiner Pillenblister ansehen?",
   "endedPillSheetDialogSummaryTitle": "Schauen wir uns diesen Pillenblister noch einmal an",
   "endedPillSheetDialogSummaryMessage": "Einnahmeprotokoll: {recordedDays} Tage · ohne Eintrag: {missedDays} Tage",
-  "midnightTakenWarningDialogTitle": "Bitte beachten",
+  "midnightTakenWarningDialogTitle": "Bitte beachte",
   "midnightTakenWarningDialogBody": "Die Einnahme wurde bis einschließlich {takenDate} aufgezeichnet. Die heutige ({takenDate}) Benachrichtigung um {reminderTimes} wird nicht zugestellt.\nFalls dies ein Versehen war, stornieren Sie bitte die Einnahme.",
   "midnightTakenWarningDialogSeeHowToRevert": "Anleitung zum Stornieren der Einnahme ansehen",
   "midnightTakenWarningDialogNeverShowAgain": "Nicht mehr anzeigen",

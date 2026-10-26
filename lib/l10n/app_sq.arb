@@ -553,7 +553,7 @@
   "endedPillSheetDialogHistoryTitle": "Dëshironi të shihni historikun e blisterëve?",
   "endedPillSheetDialogSummaryTitle": "Le ta shohim sërish këtë blister",
   "endedPillSheetDialogSummaryMessage": "regjistrimi i marrjes: {recordedDays} ditë · pa regjistrim: {missedDays} ditë",
-  "midnightTakenWarningDialogTitle": "Kini parasysh",
+  "midnightTakenWarningDialogTitle": "Ju lutemi, kushtojini vëmendje",
   "midnightTakenWarningDialogBody": "Pilulat janë regjistruar si të marra deri më {takenDate}. Njoftimi i sotëm ({takenDate}) në orën {reminderTimes} nuk do të dërgohet.\nNëse ky ishte një gabim, ju lutemi anuloni regjistrimin e marrjes.",
   "midnightTakenWarningDialogSeeHowToRevert": "Shiko si të anulosh regjistrimin e marrjes",
   "midnightTakenWarningDialogNeverShowAgain": "Mos e shfaq më",

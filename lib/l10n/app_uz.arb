@@ -553,7 +553,7 @@
   "endedPillSheetDialogHistoryTitle": "Tabletka blister tarixini koʻrishni xohlaysizmi?",
   "endedPillSheetDialogSummaryTitle": "Keling, bu tabletka blister boʻyicha qaydlarni koʻrib chiqamiz",
   "endedPillSheetDialogSummaryMessage": "tabletka qabul qilish qaydi: {recordedDays} kun · qaydsiz: {missedDays} kun",
-  "midnightTakenWarningDialogTitle": "Ehtiyot bo'ling",
+  "midnightTakenWarningDialogTitle": "Iltimos, eʼtibor bering",
   "midnightTakenWarningDialogBody": "{takenDate} sanasigacha dorilaringiz qabul qilingan deb qayd etildi. Bugungi ({takenDate}) kuni soat {reminderTimes} dagi eslatma bildirishnomasi kelmaydi.\nAgar bu xato bo'lgan bo'lsa, iltimos, qabul yozuvini bekor qiling.",
   "midnightTakenWarningDialogSeeHowToRevert": "Qabulni bekor qilish usulini ko'rish",
   "midnightTakenWarningDialogNeverShowAgain": "Boshqa ko'rsatmaslik",

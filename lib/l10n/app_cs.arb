@@ -553,7 +553,7 @@
   "endedPillSheetDialogHistoryTitle": "Chcete se podívat na historii blistrů?",
   "endedPillSheetDialogSummaryTitle": "Podívejme se zpět na tento blistr",
   "endedPillSheetDialogSummaryMessage": "záznam užití: {recordedDays} dní · bez záznamu: {missedDays} dní",
-  "midnightTakenWarningDialogTitle": "Upozornění",
+  "midnightTakenWarningDialogTitle": "Věnujte prosím pozornost",
   "midnightTakenWarningDialogBody": "Užití pilulek je zaznamenáno až do data {takenDate}. Dnešní ({takenDate}) upozornění na užití v {reminderTimes} vám proto nepřijde.\nPokud šlo o omyl, zrušte prosím záznam o užití.",
   "midnightTakenWarningDialogSeeHowToRevert": "Zobrazit návod, jak zrušit záznam o užití",
   "midnightTakenWarningDialogNeverShowAgain": "Příště nezobrazovat",

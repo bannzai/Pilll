@@ -553,7 +553,7 @@
   "endedPillSheetDialogHistoryTitle": "¿Te gustaría ver el historial de tus blísteres?",
   "endedPillSheetDialogSummaryTitle": "Repasemos este blíster",
   "endedPillSheetDialogSummaryMessage": "registro de toma: {recordedDays} días · sin registrar: {missedDays} días",
-  "midnightTakenWarningDialogTitle": "Atención",
+  "midnightTakenWarningDialogTitle": "Tenlo en cuenta",
   "midnightTakenWarningDialogBody": "Se ha registrado la toma hasta el {takenDate}. La notificación de hoy ({takenDate}) programada para las {reminderTimes} no se recibirá.\nSi esto fue un error, cancele el registro de toma.",
   "midnightTakenWarningDialogSeeHowToRevert": "Ver cómo cancelar el registro de toma",
   "midnightTakenWarningDialogNeverShowAgain": "No volver a mostrar esto",

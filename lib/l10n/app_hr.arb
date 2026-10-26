@@ -553,7 +553,7 @@
   "endedPillSheetDialogHistoryTitle": "Želite li pogledati povijest blistera?",
   "endedPillSheetDialogSummaryTitle": "Pogledajmo zajedno ovaj blister",
   "endedPillSheetDialogSummaryMessage": "evidencija uzimanja: {recordedDays} dana · bez zapisa: {missedDays} dana",
-  "midnightTakenWarningDialogTitle": "Napomena",
+  "midnightTakenWarningDialogTitle": "Molimo, obratite pozornost",
   "midnightTakenWarningDialogBody": "Zapisano je uzimanje pilula zaključno s {takenDate}. Obavijest za danas, {takenDate}, u {reminderTimes} neće stići.\nAko je ovo pogreška, poništite zapis o uzimanju.",
   "midnightTakenWarningDialogSeeHowToRevert": "Pogledaj kako poništiti zapis o uzimanju",
   "midnightTakenWarningDialogNeverShowAgain": "Ne prikazuj ponovno",

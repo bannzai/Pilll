@@ -553,7 +553,7 @@
   "endedPillSheetDialogHistoryTitle": "የክኒን ሉህ ታሪክን ማየት ይፈልጋሉ?",
   "endedPillSheetDialogSummaryTitle": "የዚህን ክኒን ሉህ አጠቃቀም እንመልከት",
   "endedPillSheetDialogSummaryMessage": "አወሳሰድ መዝገብ፦ {recordedDays} ቀናት · ያልተመዘገቡ፦ {missedDays} ቀናት",
-  "midnightTakenWarningDialogTitle": "እባክዎ ልብ ይበሉ",
+  "midnightTakenWarningDialogTitle": "እባክዎ ያስተውሉ",
   "midnightTakenWarningDialogBody": "እስከ {takenDate} ድረስ የመድሃኒት አወሳሰድ ተመዝግቧል። ዛሬ ({takenDate}) በ{reminderTimes} ሰዓት የሚደርስዎት ማሳወቂያ አይደርስዎትም።\nበስህተት ከሆነ፣ እባክዎ የመውሰድ መዝገቡን ይሰርዙ።",
   "midnightTakenWarningDialogSeeHowToRevert": "የመውሰድ መዝገብን እንዴት እንደሚሰርዙ ይመልከቱ",
   "midnightTakenWarningDialogNeverShowAgain": "እንደገና አያሳዩ",

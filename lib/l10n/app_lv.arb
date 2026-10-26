@@ -553,7 +553,7 @@
   "endedPillSheetDialogHistoryTitle": "Vai vēlaties apskatīt tablešu blister vēsturi?",
   "endedPillSheetDialogSummaryTitle": "Atskatīsimies uz šo tablešu blister",
   "endedPillSheetDialogSummaryMessage": "tablešu lietošanas ierakstu dienas: {recordedDays} · bez ieraksta: {missedDays}",
-  "midnightTakenWarningDialogTitle": "Lūdzu, ņemiet vērā",
+  "midnightTakenWarningDialogTitle": "Lūdzu, pievērsiet uzmanību",
   "midnightTakenWarningDialogBody": "Tabletes ir atzīmētas kā lietotas līdz {takenDate}. Šodienas ({takenDate}) atgādinājuma paziņojums plkst. {reminderTimes} netiks nosūtīts.\nJa tā notika kļūdas dēļ, lūdzu, atceliet lietošanas atzīmi.",
   "midnightTakenWarningDialogSeeHowToRevert": "Skatīt, kā atcelt lietošanas atzīmi",
   "midnightTakenWarningDialogNeverShowAgain": "Vairs nerādīt",

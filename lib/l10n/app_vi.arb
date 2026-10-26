@@ -553,7 +553,7 @@
   "endedPillSheetDialogHistoryTitle": "Bạn muốn xem lịch sử vỉ thuốc không?",
   "endedPillSheetDialogSummaryTitle": "Cùng nhìn lại vỉ thuốc này nhé",
   "endedPillSheetDialogSummaryMessage": "nhật ký uống thuốc: {recordedDays} ngày · chưa ghi lại: {missedDays} ngày",
-  "midnightTakenWarningDialogTitle": "Xin lưu ý",
+  "midnightTakenWarningDialogTitle": "Vui lòng lưu ý",
   "midnightTakenWarningDialogBody": "Đã ghi nhận uống thuốc đến hết {takenDate}. Thông báo lúc {reminderTimes} của hôm nay ({takenDate}) sẽ không được gửi tới bạn.\nNếu đây là nhầm lẫn, vui lòng hủy ghi nhận uống thuốc.",
   "midnightTakenWarningDialogSeeHowToRevert": "Xem cách hủy ghi nhận uống thuốc",
   "midnightTakenWarningDialogNeverShowAgain": "Không hiển thị lại nữa",

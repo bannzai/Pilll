@@ -553,7 +553,7 @@
   "endedPillSheetDialogHistoryTitle": "Chcete si pozrieť históriu blistov?",
   "endedPillSheetDialogSummaryTitle": "Pozrime sa späť na tento blist",
   "endedPillSheetDialogSummaryMessage": "záznam o užití: {recordedDays} dní · bez záznamu: {missedDays} dní",
-  "midnightTakenWarningDialogTitle": "Upozornenie",
+  "midnightTakenWarningDialogTitle": "Venujte, prosím, pozornosť",
   "midnightTakenWarningDialogBody": "Záznam o užití bol vykonaný až do dňa {takenDate}. Dnešné upozornenie ({takenDate}) o {reminderTimes} preto nebude doručené.\nAk ide o omyl, zrušte prosím záznam o užití.",
   "midnightTakenWarningDialogSeeHowToRevert": "Pozrieť návod na zrušenie záznamu o užití",
   "midnightTakenWarningDialogNeverShowAgain": "Túto správu už nezobrazovať",

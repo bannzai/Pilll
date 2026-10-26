@@ -553,7 +553,7 @@
   "endedPillSheetDialogHistoryTitle": "Haluaisitko nähdä pilleriliuskojen historian?",
   "endedPillSheetDialogSummaryTitle": "Katsotaan yhdessä tätä pilleriliuskaa",
   "endedPillSheetDialogSummaryMessage": "pilleriloki: {recordedDays} päivää · ilman merkintää: {missedDays} päivää",
-  "midnightTakenWarningDialogTitle": "Huomioithan",
+  "midnightTakenWarningDialogTitle": "Huomaa tämä",
   "midnightTakenWarningDialogBody": "Pillerit on kirjattu otetuiksi {takenDate} asti. Tämän päivän ({takenDate}) klo {reminderTimes} ilmoitus ei saavu sinulle.\nJos tämä on virhe, peruuta merkintä.",
   "midnightTakenWarningDialogSeeHowToRevert": "Katso, miten peruutat merkinnän",
   "midnightTakenWarningDialogNeverShowAgain": "Älä näytä tätä uudelleen",

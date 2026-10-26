@@ -553,7 +553,7 @@
   "endedPillSheetDialogHistoryTitle": "আপনি কি পিল শিটের ইতিহাস দেখতে চান?",
   "endedPillSheetDialogSummaryTitle": "এই পিল শিটের তথ্য একবার দেখে নেওয়া যাক",
   "endedPillSheetDialogSummaryMessage": "সেবনের রেকর্ড: {recordedDays} দিন · রেকর্ড নেই: {missedDays} দিন",
-  "midnightTakenWarningDialogTitle": "অনুগ্রহ করে লক্ষ্য করুন",
+  "midnightTakenWarningDialogTitle": "অনুগ্রহ করে খেয়াল করুন",
   "midnightTakenWarningDialogBody": "{takenDate} পর্যন্ত সেবনের রেকর্ড করা হয়ে গেছে। আজ, {takenDate}-এর {reminderTimes} সময়ের বিজ্ঞপ্তি আপনার কাছে পৌঁছাবে না।\nভুল হয়ে থাকলে সেবন বাতিল করুন",
   "midnightTakenWarningDialogSeeHowToRevert": "সেবন বাতিলের পদ্ধতি দেখুন",
   "midnightTakenWarningDialogNeverShowAgain": "আর দেখাবেন না",

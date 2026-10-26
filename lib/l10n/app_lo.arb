@@ -553,7 +553,7 @@
   "endedPillSheetDialogHistoryTitle": "ຢາກເບິ່ງປະຫວັດແຜງຢາຄຸມບໍ?",
   "endedPillSheetDialogSummaryTitle": "ມາທົບທວນແຜງຢາຄຸມນີ້ນຳກັນ",
   "endedPillSheetDialogSummaryMessage": "ບັນທຶກການກິນຢາ: {recordedDays} ມື້ · ບໍ່ໄດ້ບັນທຶກ: {missedDays} ມື້",
-  "midnightTakenWarningDialogTitle": "ກະລຸນາຮັບຊາບ",
+  "midnightTakenWarningDialogTitle": "ກະລຸນາສັງເກດ",
   "midnightTakenWarningDialogBody": "ໄດ້ບັນທຶກການກິນຢາໃຫ້ຮອດວັນທີ {takenDate} ແລ້ວ. ການແຈ້ງເຕືອນເວລາ {reminderTimes} ຂອງມື້ນີ້ ({takenDate}) ຈະບໍ່ຖືກສົ່ງໄປຫາທ່ານ.\nຖ້າແມ່ນຄວາມຜິດພາດ, ກະລຸນາຍົກເລີກການບັນທຶກການກິນຢາ",
   "midnightTakenWarningDialogSeeHowToRevert": "ເບິ່ງວິທີຍົກເລີກການບັນທຶກການກິນຢາ",
   "midnightTakenWarningDialogNeverShowAgain": "ບໍ່ຕ້ອງສະແດງອີກ",
