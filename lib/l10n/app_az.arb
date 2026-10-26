@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Əvvəlki blisterdəki son həb: № {estimatedEndPillNumber}",
   "addPillSheetButton": "həb blister əlavə edin",
   "taken": "Həb qəbul edilib",
-  "notTaken": "Qəbul etmədi",
+  "notTaken": "Həb qəbul edilməyib",
   "pillSheetSettings": "Həb vərəqi tənzimləmələri",
   "unmarkTodayPillAsTakenToPause": "Bu gün qəbul ediləcək həb hələ qəbul edilməyib",
   "pauseTaking": "Fasilə",

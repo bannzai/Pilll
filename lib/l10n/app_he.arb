@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "הגלולה האחרונה בחפיסה הקודמת: מספר {estimatedEndPillNumber}",
   "addPillSheetButton": "להוסיף חפיסת גלולות",
   "taken": "הגלולה ניטלה",
-  "notTaken": "לא נלקח",
+  "notTaken": "הגלולה לא ניטלה",
   "pillSheetSettings": "הגדרות גיליון הכדורים",
   "unmarkTodayPillAsTakenToPause": "לאחר שתסמן את הגלולה של היום כלא נלקחה",
   "pauseTaking": "הפסקת נטילה",

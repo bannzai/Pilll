@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "मागील पिलच्या पट्टीतील शेवटची गोळी: क्रमांक {estimatedEndPillNumber}",
   "addPillSheetButton": "पिल शीट जोडा",
   "taken": "गोळी घेतली",
-  "notTaken": "नाही घेतले",
+  "notTaken": "गोळी घेतलेली नाही",
   "pillSheetSettings": "पिल शीट सेटिंग्ज",
   "unmarkTodayPillAsTakenToPause": "आजची गोळी न घेतली म्हणून चिन्हांकित केल्यानंतर",
   "pauseTaking": "सेवन विराम",

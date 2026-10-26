@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "पिछली पिल शीट की आख़िरी गोली: नंबर {estimatedEndPillNumber}",
   "addPillSheetButton": "पिल स्ट्रिप जोड़ें",
   "taken": "गोली ले ली गई",
-  "notTaken": "नहीं लिया",
+  "notTaken": "गोली नहीं ली गई",
   "pillSheetSettings": "पिल शीट सेटिंग्स",
   "unmarkTodayPillAsTakenToPause": "आज की गोली को न ली गई के रूप में मार्क करने के बाद",
   "pauseTaking": "दवा विराम",

@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "이전 시트의 마지막 알약: {estimatedEndPillNumber}번",
   "addPillSheetButton": "알약 시트 추가",
   "taken": "복용했어요",
-  "notTaken": "미복용",
+  "notTaken": "아직 복용하지 않았어요",
   "pillSheetSettings": "피임약 시트 설정",
   "unmarkTodayPillAsTakenToPause": "오늘 복용할 피임약을 미복용으로 변경한 후",
   "pauseTaking": "복용 휴식",

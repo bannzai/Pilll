@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "پچھلی پٹی کی آخری گولی: نمبر {estimatedEndPillNumber}",
   "addPillSheetButton": "گولیوں کی پٹی شامل کریں",
   "taken": "گولی لے لی گئی",
-  "notTaken": "نہیں لیا",
+  "notTaken": "گولی ابھی نہیں لی گئی",
   "pillSheetSettings": "پل شیٹ سیٹنگز",
   "unmarkTodayPillAsTakenToPause": "آج کی گولی کو غیر استعمال شدہ کے طور پر نشان زد کرنے کے بعد",
   "pauseTaking": "استعمال کا وقفہ",

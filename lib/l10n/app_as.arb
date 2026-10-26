@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "আগৰ পিল শ্বীটৰ শেষৰ বড়ি: নম্বৰ {estimatedEndPillNumber}",
   "addPillSheetButton": "পিলৰ ষ্ট্ৰিপ যোগ কৰক",
   "taken": "পিল খোৱা হৈছে",
-  "notTaken": "নোলোৱা",
+  "notTaken": "এতিয়াও খোৱা নাই",
   "pillSheetSettings": "পিল শ্বিটৰ ছেটিং",
   "unmarkTodayPillAsTakenToPause": "আজিটোৰ বড়ি নোখোৱা হিচাপে চিহ্নিত কৰাৰ পিছত",
   "pauseTaking": "ঔষধ বিৰাম",

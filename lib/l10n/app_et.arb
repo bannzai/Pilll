@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Eelmise lehe viimane pill: nr {estimatedEndPillNumber}",
   "addPillSheetButton": "Lisa pillileh",
   "taken": "Pill võetud",
-  "notTaken": "võtmata",
+  "notTaken": "Pill võtmata",
   "pillSheetSettings": "Pillipaki seaded",
   "unmarkTodayPillAsTakenToPause": "Pärast tänase pilli võtmata märkimist",
   "pauseTaking": "Võtmise paus",

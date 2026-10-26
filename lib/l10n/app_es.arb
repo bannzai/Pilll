@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Última píldora del blíster anterior: n.º {estimatedEndPillNumber}",
   "addPillSheetButton": "Añadir blíster",
   "taken": "Píldora tomada",
-  "notTaken": "No tomado",
+  "notTaken": "Píldora sin tomar",
   "pillSheetSettings": "Configuración del blíster",
   "unmarkTodayPillAsTakenToPause": "Después de marcar la píldora de hoy como no tomada",
   "pauseTaking": "Pausa de pastillas",

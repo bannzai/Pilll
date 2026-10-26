@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Az előző levél utolsó tablettája: {estimatedEndPillNumber}.",
   "addPillSheetButton": "Új tablettacsomag hozzáadása",
   "taken": "Tabletta beszedve",
-  "notTaken": "Nem bevett",
+  "notTaken": "A tabletta nincs beszedve",
   "pillSheetSettings": "Tablettafólia beállítások",
   "unmarkTodayPillAsTakenToPause": "A mai tabletta nem bevettként való megjelölése után",
   "pauseTaking": "Szedési szünet",

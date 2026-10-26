@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Última pílula da cartela anterior: nº {estimatedEndPillNumber}",
   "addPillSheetButton": "Adicionar cartela",
   "taken": "Pílula tomada",
-  "notTaken": "Não tomado",
+  "notTaken": "Pílula ainda não tomada",
   "pillSheetSettings": "Configurações da Cartela",
   "unmarkTodayPillAsTakenToPause": "Marque a pílula de hoje como não tomada antes de",
   "pauseTaking": "Pausar Pílula",

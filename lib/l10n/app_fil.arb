@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Huling tableta sa nakaraang pakete: blg. {estimatedEndPillNumber}",
   "addPillSheetButton": "Magdagdag ng pakete ng pildoras",
   "taken": "Nainom na ang pildoras",
-  "notTaken": "Hindi nainom",
+  "notTaken": "Hindi pa nainom ang pildoras",
   "pillSheetSettings": "Pagkakaayos ng Pill Sheet",
   "unmarkTodayPillAsTakenToPause": "I-mark muna ang ngayong pill bilang hindi pa nainom bago",
   "pauseTaking": "Pahinga sa Pag-inom",

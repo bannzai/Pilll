@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Ultima pilulă de pe folia anterioară: nr. {estimatedEndPillNumber}",
   "addPillSheetButton": "Adaugă blister",
   "taken": "Pilulă luată",
-  "notTaken": "Neluată",
+  "notTaken": "Pilula nu a fost luată",
   "pillSheetSettings": "Setările blisterului",
   "unmarkTodayPillAsTakenToPause": "După ce marchezi pilula de astăzi ca neluată",
   "pauseTaking": "Pauză pilule",

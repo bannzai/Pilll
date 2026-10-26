@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Ostatnia tabletka z poprzedniego blistra: nr {estimatedEndPillNumber}",
   "addPillSheetButton": "Dodaj blist",
   "taken": "Tabletka przyjęta",
-  "notTaken": "Nieprzyjęte",
+  "notTaken": "Tabletka nieprzyjęta",
   "pillSheetSettings": "Ustawienia blistra tabletek",
   "unmarkTodayPillAsTakenToPause": "Po oznaczeniu dzisiejszej pigułki jako nieprzyjętej",
   "pauseTaking": "Przerwa",

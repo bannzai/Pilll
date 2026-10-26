@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "上一板的最后一粒药：第 {estimatedEndPillNumber} 粒",
   "addPillSheetButton": "添加药板",
   "taken": "已服药",
-  "notTaken": "未服",
+  "notTaken": "尚未服药",
   "pillSheetSettings": "药板设置",
   "unmarkTodayPillAsTakenToPause": "将今天的药片标记为未服用后",
   "pauseTaking": "暂停服用",

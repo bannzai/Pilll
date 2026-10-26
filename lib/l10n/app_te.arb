@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "మునుపటి మాత్రల షీట్‌లో చివరి మాత్ర: నం. {estimatedEndPillNumber}",
   "addPillSheetButton": "మాత్రల స్ట్రిప్ జోడించండి",
   "taken": "మాత్ర వేసుకున్నారు",
-  "notTaken": "తీసుకోలేదు",
+  "notTaken": "మాత్ర ఇంకా తీసుకోలేదు",
   "pillSheetSettings": "పిల్ షీట్ సెట్టింగులు",
   "unmarkTodayPillAsTakenToPause": "ఈరోజు తీసుకోవాలసిన గుళికను తీసుకోలేదని గుర్తు చేసిన తర్వాత",
   "pauseTaking": "సేవన విరామం",

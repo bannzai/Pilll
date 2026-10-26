@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Өмнөх блистерийн сүүлийн шахмал: № {estimatedEndPillNumber}",
   "addPillSheetButton": "эмийн блистер нэмэх",
   "taken": "Эмээ уусан",
-  "notTaken": "авсангүй",
+  "notTaken": "Эмээ уугаагүй",
   "pillSheetSettings": "Пил хуудасны тохиргоо",
   "unmarkTodayPillAsTakenToPause": "Өнөөдрийн эмийг уугаагүй болгосны дараа",
   "pauseTaking": "Түр амрах",

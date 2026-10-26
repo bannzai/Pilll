@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Pil terakhir pada lembar sebelumnya: no. {estimatedEndPillNumber}",
   "addPillSheetButton": "Tambah strip pil",
   "taken": "Pil sudah diminum",
-  "notTaken": "Belum minum",
+  "notTaken": "Pil belum diminum",
   "pillSheetSettings": "Pengaturan Lembar Pil",
   "unmarkTodayPillAsTakenToPause": "Setelah menandai pil hari ini sebagai belum diminum",
   "pauseTaking": "Jeda Minum",

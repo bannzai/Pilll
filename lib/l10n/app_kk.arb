@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Алдыңғы блистердегі соңғы таблетка: № {estimatedEndPillNumber}",
   "addPillSheetButton": "таблетка блистер қосу",
   "taken": "Таблетка қабылданды",
-  "notTaken": "Қабылдамады",
+  "notTaken": "Таблетка қабылданбаған",
   "pillSheetSettings": "Таблетка парағының баптаулары",
   "unmarkTodayPillAsTakenToPause": "Бүгінгі таблетканы ішпеген деп белгілегеннен кейін",
   "pauseTaking": "Тоқтату",

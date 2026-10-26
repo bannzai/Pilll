@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "წინა ბლისტერის ბოლო აბი: № {estimatedEndPillNumber}",
   "addPillSheetButton": "აბების ბლისტერ დამატება",
   "taken": "აბი მიღებულია",
-  "notTaken": "არ მიღებულა",
+  "notTaken": "აბი არ არის მიღებული",
   "pillSheetSettings": "აბების ფურცლის დაყენება",
   "unmarkTodayPillAsTakenToPause": "დღეს მისაღები აბი არ მიღებულად მონიშვნის შემდეგ",
   "pauseTaking": "მიღების დასვენება",

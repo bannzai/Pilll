@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Viên thuốc cuối cùng của vỉ trước: số {estimatedEndPillNumber}",
   "addPillSheetButton": "Thêm vỉ thuốc",
   "taken": "Đã uống thuốc",
-  "notTaken": "Chưa uống",
+  "notTaken": "Chưa uống thuốc",
   "pillSheetSettings": "Cài đặt vỉ thuốc",
   "unmarkTodayPillAsTakenToPause": "Sau khi đánh dấu viên thuốc hôm nay là chưa uống",
   "pauseTaking": "Tạm ngừng",

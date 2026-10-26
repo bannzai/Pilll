@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Sista pillret på föregående karta: nr {estimatedEndPillNumber}",
   "addPillSheetButton": "Lägg till p-pillerkarta",
   "taken": "P-piller taget",
-  "notTaken": "ej tagen",
+  "notTaken": "P-pillret är inte taget",
   "pillSheetSettings": "Pillarks inställningar",
   "unmarkTodayPillAsTakenToPause": "Markera först dagens piller som ej tagna",
   "pauseTaking": "Tabletpaus",

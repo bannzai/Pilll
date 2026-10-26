@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Ultima pillola del blister precedente: n. {estimatedEndPillNumber}",
   "addPillSheetButton": "Aggiungi un blister",
   "taken": "Pillola presa",
-  "notTaken": "Non assunto",
+  "notTaken": "Pillola non assunta",
   "pillSheetSettings": "Impostazioni del blister",
   "unmarkTodayPillAsTakenToPause": "Dopo aver contrassegnato la pillola di oggi come non assunta",
   "pauseTaking": "Pausa pillola",

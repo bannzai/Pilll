@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Последното хапче от предишния блистер: № {estimatedEndPillNumber}",
   "addPillSheetButton": "Добавяне на блистер",
   "taken": "Хапчето е взето",
-  "notTaken": "не е взето",
+  "notTaken": "Хапчето не е взето",
   "pillSheetSettings": "Настройки на опаковката с хапчета",
   "unmarkTodayPillAsTakenToPause": "След като маркирате днешните хапчета като неприети",
   "pauseTaking": "Пауза от приемане",

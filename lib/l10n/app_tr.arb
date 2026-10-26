@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Önceki blisterdeki son hap: No. {estimatedEndPillNumber}",
   "addPillSheetButton": "blister ekleyin",
   "taken": "Hap alındı",
-  "notTaken": "Alınmadı",
+  "notTaken": "Hap henüz alınmadı",
   "pillSheetSettings": "Hap Şeridi Ayarları",
   "unmarkTodayPillAsTakenToPause": "Bugünkü hapları alınmamış olarak işaretledikten sonra",
   "pauseTaking": "İlaç Molası",

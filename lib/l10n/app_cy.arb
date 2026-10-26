@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Pilsen olaf y pecyn blaenorol: rhif {estimatedEndPillNumber}",
   "addPillSheetButton": "Ychwanegwch stribed pils",
   "taken": "Pilsen wedi'i chymryd",
-  "notTaken": "Heb gymryd",
+  "notTaken": "Heb gymryd y bilsen",
   "pillSheetSettings": "Gosodiadau Dalen Biliau",
   "unmarkTodayPillAsTakenToPause": "Ar ôl marcio pil heddiw fel heb ei gymryd",
   "pauseTaking": "Seibiant cymryd",

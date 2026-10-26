@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Pēdējā tablete iepriekšējā plāksnītē: Nr. {estimatedEndPillNumber}",
   "addPillSheetButton": "Pievienot tablešu blister",
   "taken": "Tablete lietota",
-  "notTaken": "Nav pieņēmis",
+  "notTaken": "Tablete nav lietota",
   "pillSheetSettings": "Tablešu plāksnes iestatījumi",
   "unmarkTodayPillAsTakenToPause": "Pēc tam, kad šodienas tabletes atzīmējat kā neuzņemtas",
   "pauseTaking": "Lietošanas pārtraukums",

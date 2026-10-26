@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Pil terakhir pada lepuh sebelumnya: no. {estimatedEndPillNumber}",
   "addPillSheetButton": "Tambah pek pil",
   "taken": "Pil sudah diambil",
-  "notTaken": "Tidak diminum",
+  "notTaken": "Pil belum diambil",
   "pillSheetSettings": "Tetapan Lembaran Pil",
   "unmarkTodayPillAsTakenToPause": "Setelah menandakan pil hari ini sebagai belum diminum",
   "pauseTaking": "Berehat Pengambilan",

@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Последна таблета од претходниот блистер: бр. {estimatedEndPillNumber}",
   "addPillSheetButton": "Додајте блистер",
   "taken": "Таблета е земена",
-  "notTaken": "не земено",
+  "notTaken": "Таблета не е земена",
   "pillSheetSettings": "Поставувања на листот на пилули",
   "unmarkTodayPillAsTakenToPause": "Прво означете ја денешната пилула како неземена",
   "pauseTaking": "Пауза од пилули",

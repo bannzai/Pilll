@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Dernière pilule de la plaquette précédente : n° {estimatedEndPillNumber}",
   "addPillSheetButton": "Ajouter une plaquette",
   "taken": "Pilule prise",
-  "notTaken": "Pas pris",
+  "notTaken": "Pilule non prise",
   "pillSheetSettings": "Paramètres de la feuille de pilules",
   "unmarkTodayPillAsTakenToPause": "Après avoir marqué la pilule d'aujourd'hui comme non prise",
   "pauseTaking": "Faites une pause",

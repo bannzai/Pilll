@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "គ្រាប់ថ្នាំចុងក្រោយក្នុងបន្ទះមុន៖ លេខ {estimatedEndPillNumber}",
   "addPillSheetButton": "បន្ថែមបន្ទះថ្នាំគ្រាប់",
   "taken": "បានលេបថ្នាំគ្រាប់ហើយ",
-  "notTaken": "មិនបានទទួលទាន",
+  "notTaken": "មិនទាន់បានលេបថ្នាំគ្រាប់",
   "pillSheetSettings": "ការកំណត់បន្ទះថ្នាំ",
   "unmarkTodayPillAsTakenToPause": "បន្ទាប់ពីកំណត់ថ្នាំថ្ងៃនេះជាមិនទាន់ទទួលទាន",
   "pauseTaking": "សម្រាកញ៉ាំថ្នាំ",

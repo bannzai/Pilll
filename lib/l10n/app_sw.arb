@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Kidonge cha mwisho kwenye kifungashio kilichotangulia: namba {estimatedEndPillNumber}",
   "addPillSheetButton": "Ongeza pakiti ya vidonge",
   "taken": "Kidonge kimemezwa",
-  "notTaken": "Hajameza",
+  "notTaken": "Kidonge bado hakijamezwa",
   "pillSheetSettings": "Mipangilio ya Uwanda wa Vidonge",
   "unmarkTodayPillAsTakenToPause": "Baada ya kurudisha vidonge vya leo katika hali ya kutojamezwa",
   "pauseTaking": "Pumzika dawa",

@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Zadnja tabletka na prejšnjem omotu: št. {estimatedEndPillNumber}",
   "addPillSheetButton": "Dodajte ploščic",
   "taken": "Tableta vzeta",
-  "notTaken": "ni vzeto",
+  "notTaken": "Tableta ni bila vzeta",
   "pillSheetSettings": "Nastavitve tabličnih plošč",
   "unmarkTodayPillAsTakenToPause": "Potem ko označite današnjo tableto kot neužito",
   "pauseTaking": "Premor jemanja",

@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Апошняя пігулка ў папярэднім блістары: № {estimatedEndPillNumber}",
   "addPillSheetButton": "Дадаць блістар",
   "taken": "Пігулка прынята",
-  "notTaken": "не прынята",
+  "notTaken": "Пігулка не прынята",
   "pillSheetSettings": "Налады пластоў з таблеткамі",
   "unmarkTodayPillAsTakenToPause": "Пасля пазначэння сённяшняй таблеткі як не прынятай",
   "pauseTaking": "Перапынак прыёму",

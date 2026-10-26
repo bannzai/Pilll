@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Posljednja pilula na prethodnom blisteru: br. {estimatedEndPillNumber}",
   "addPillSheetButton": "Dodajte blister",
   "taken": "Pilula uzeta",
-  "notTaken": "Neuzeto",
+  "notTaken": "Pilula nije uzeta",
   "pillSheetSettings": "Postavke blistera pilula",
   "unmarkTodayPillAsTakenToPause": "Označite današnju pilulu kao neuzetu prije",
   "pauseTaking": "Pauza u uzimanju",

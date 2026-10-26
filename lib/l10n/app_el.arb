@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Τελευταίο χάπι στην προηγούμενη καρτέλα: αρ. {estimatedEndPillNumber}",
   "addPillSheetButton": "Προσθήκη καρτέλα χαπιών",
   "taken": "Το χάπι ελήφθη",
-  "notTaken": "Μη ληφθέν",
+  "notTaken": "Το χάπι δεν έχει ληφθεί",
   "pillSheetSettings": "Ρυθμίσεις φύλλου χαπιών",
   "unmarkTodayPillAsTakenToPause": "Αφού σημειώσετε το σημερινό χάπι ως μη ληφθέν",
   "pauseTaking": "Παύση λήψης",

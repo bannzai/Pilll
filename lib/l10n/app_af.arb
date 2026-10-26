@@ -120,7 +120,7 @@
   "estimatedEndPillNumber": "Laaste pil op die vorige pilstrook: nr. {estimatedEndPillNumber}",
   "addPillSheetButton": "Voeg pilstrokie by",
   "taken": "Pil geneem",
-  "notTaken": "Nie geneem nie",
+  "notTaken": "Nog nie geneem nie",
   "pillSheetSettings": "Pilvél-instellings",
   "unmarkTodayPillAsTakenToPause": "Nadat vandag se pil as ongenome gemerk is",
   "pauseTaking": "Pil pouse",
