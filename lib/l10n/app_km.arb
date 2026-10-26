@@ -289,7 +289,7 @@
   "minimumCountOfReminderTimes": "សូមកំណត់ម៉ោងជូនដំណឹងយ៉ាងតិច {ReminderTimeMinimumCount} ម៉ោង",
   "purchaseErrorUnknownError": "មានកំហុសមិនស្គាល់មួយបានកើតឡើង។ សូមព្យាយាមម្ដងទៀតនៅពេលក្រោយ។ ប្រសិនបើបញ្ហានៅតែបន្ត សូមទាក់ទងមកយើងតាម ការកំណត់ > ទាក់ទងមកយើង។ ព័ត៌មានលម្អិត៖ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "មានបញ្ហាកើតឡើងនៅក្នុង {storeName}។ សូមព្យាយាមម្តងទៀតនៅពេលបន្តិចទៀត។",
-  "purchaseErrorPurchaseNotAllowedError": "ឧបករណ៍នេះមិនអនុញ្ញាតឱ្យធ្វើការទិញទេ",
+  "purchaseErrorPurchaseNotAllowedError": "មិនអនុញ្ញាតឱ្យទិញនៅលើឧបករណ៍នេះទេ",
   "purchaseErrorPurchaseInvalidError": "ការទូទាត់បានបរាជ័យ។ សូមពិនិត្យមើលថាតើវិធីសាស្រ្តទូទាត់របស់អ្នកមានសុពលភាពឬទេ រួចព្យាយាមម្តងទៀត។",
   "purchaseErrorProductNotAvailableForPurchaseError": "គម្រោងនេះមិនអាចប្រើបានក្នុងពេលបច្ចុប្បន្ននេះទេ។ សូមចាប់ផ្តើមកម្មវិធីឡើងវិញហើយព្យាយាមម្តងទៀត។",
   "purchaseErrorProductAlreadyPurchasedError": "អ្នកបានទិញគម្រោងរួចហើយ។ ប្រសិនបើអ្នកចង់ស្តារព័ត៌មានការទិញនៅលើឧបករណ៍នេះ សូមចុច「សម្រាប់អ្នកដែលបានទិញពីមុន」",

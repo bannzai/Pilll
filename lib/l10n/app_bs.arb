@@ -289,7 +289,7 @@
   "minimumCountOfReminderTimes": "Molimo, postavite najmanje {ReminderTimeMinimumCount} vremena za obavijesti",
   "purchaseErrorUnknownError": "Došlo je do nepoznate greške. Molimo, pokušajte ponovo kasnije. Ako se problem nastavi, kontaktirajte nas putem Postavke > Kontaktirajte nas. Detalji: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Došlo je do greške u {storeName}. Molimo Vas da pokušate ponovo malo kasnije.",
-  "purchaseErrorPurchaseNotAllowedError": "Kupovina nije dozvoljena na ovom uređaju",
+  "purchaseErrorPurchaseNotAllowedError": "Kupovine nisu dozvoljene na ovom uređaju",
   "purchaseErrorPurchaseInvalidError": "Plaćanje nije uspjelo. Molimo provjerite da li je način plaćanja valjan i pokušajte ponovo.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Odabrani plan trenutno nije dostupan za kupovinu. Molimo restartajte aplikaciju i pokušajte ponovo.",
   "purchaseErrorProductAlreadyPurchasedError": "Plan je već kupljen. Za obnovu informacija o kupovini na ovom uređaju, koristite opciju 'Za one koji su već kupili'.",

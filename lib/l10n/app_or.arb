@@ -289,7 +289,7 @@
   "minimumCountOfReminderTimes": "ଦୟାକରି ବିଜ୍ଞପ୍ତି ପାଇଁ ଅତି କମରେ {ReminderTimeMinimumCount}ଟି ସମୟ ସେଟ୍ କରନ୍ତୁ",
   "purchaseErrorUnknownError": "ଏକ ଅଜଣା ତ୍ରୁଟି ଘଟିଛି। ଦୟାକରି କିଛି ସମୟ ପରେ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ। ସମସ୍ୟା ଲାଗି ରହିଲେ, ସେଟିଂସ୍ > ଆମ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ ମାଧ୍ୟମରେ ଆମକୁ ଜଣାନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName}ରେ ଏକ ତ୍ରୁଟି ଘଟିଛି। ଦୟାକରି କିଛି ସମୟ ପରେ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।",
-  "purchaseErrorPurchaseNotAllowedError": "ଏହି ଡିଭାଇସରେ କ୍ରୟ ଅନୁମତି ନାହିଁ",
+  "purchaseErrorPurchaseNotAllowedError": "ଏହି ଡିଭାଇସରେ କିଣିବାକୁ ଅନୁମତି ନାହିଁ",
   "purchaseErrorPurchaseInvalidError": "ପେମେଣ୍ଟ ବିଫଳ ହୋଇଛି। ଦୟାକରି ବୈଧ ପେମେଣ୍ଟ ପଦ୍ଧତି କି ନାହିଁ ଯାଞ୍ଚ କରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ।",
   "purchaseErrorProductNotAvailableForPurchaseError": "ଲକ୍ଷ୍ୟ ଯୋଜନା ବର୍ତ୍ତମାନ ବିକ୍ରୟ କରୁନାହିଁ। ଦୟାକରି ଆପ୍‌କୁ ପୁନଃଆରମ୍ଭ କରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ।",
   "purchaseErrorProductAlreadyPurchasedError": "ଆପଣ ପୂର୍ବରୁ ଏକ ପ୍ଲାନ କିଣିଛନ୍ତି। ଏହି ଉପକରଣରେ କ୍ରୟ ତଥ୍ୟ ପୁନରୁଦ୍ଧାର କରିବାକୁ \"ପୂର୍ବରୁ କ୍ରୟ କରିଥିବା ବ୍ୟକ୍ତିଙ୍କ ପାଇଁ ଏଠାରେ\" ରୁ କ୍ରୟ ତଥ୍ୟ ପୁନରୁଦ୍ଧାର କରନ୍ତୁ।",

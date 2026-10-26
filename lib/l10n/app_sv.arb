@@ -289,7 +289,7 @@
   "minimumCountOfReminderTimes": "Ange minst {ReminderTimeMinimumCount} aviseringstider",
   "purchaseErrorUnknownError": "Ett okänt fel uppstod. Försök igen om en stund. Om problemet kvarstår kan du kontakta oss via Inställningar > Kontakta oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Ett fel uppstod i {storeName}. Försök igen om en liten stund.",
-  "purchaseErrorPurchaseNotAllowedError": "Inköp är inte tillåtet på den här enheten",
+  "purchaseErrorPurchaseNotAllowedError": "Köp är inte tillåtna på den här enheten",
   "purchaseErrorPurchaseInvalidError": "Betalningen misslyckades. Vänligen kontrollera att du har en giltig betalningsmetod och försök igen.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Detta abonnemang är för närvarande inte tillgängligt. Vänligen starta om appen och försök igen.",
   "purchaseErrorProductAlreadyPurchasedError": "Du har redan köpt ett abonnemang. För att återställa köpinformationen på den här enheten, använd \"För tidigare köpare\" för att återställa din köpinformation.",

@@ -289,7 +289,7 @@
   "minimumCountOfReminderTimes": "Nastavte prosím alespoň {ReminderTimeMinimumCount} časů oznámení",
   "purchaseErrorUnknownError": "Došlo k neznámé chybě. Zkuste to prosím za chvíli znovu. Pokud problém přetrvá, napište nám přes Nastavení > Kontaktovat nás. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "V {storeName} došlo k chybě. Zkuste to prosím za chvíli znovu.",
-  "purchaseErrorPurchaseNotAllowedError": "Nákup není na tomto zařízení povolen",
+  "purchaseErrorPurchaseNotAllowedError": "Na tomto zařízení nejsou povoleny nákupy",
   "purchaseErrorPurchaseInvalidError": "Platba se nezdařila. Zkontrolujte prosím, zda je váš způsob platby platný, a zkuste to znovu.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Vybraný plán není momentálně dostupný. Prosím restartujte aplikaci a zkuste to znovu.",
   "purchaseErrorProductAlreadyPurchasedError": "Plán již máte zakoupený. Chcete-li obnovit informace o nákupu na tomto zařízení, použijte možnost „Pro předchozí kupující\" k obnovení vašich nákupních informací.",

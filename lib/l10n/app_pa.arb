@@ -289,7 +289,7 @@
   "minimumCountOfReminderTimes": "ਕਿਰਪਾ ਕਰਕੇ ਸੂਚਨਾਵਾਂ ਲਈ ਘੱਟੋ-ਘੱਟ {ReminderTimeMinimumCount} ਸਮੇਂ ਤੈਅ ਕਰੋ",
   "purchaseErrorUnknownError": "ਕੋਈ ਅਣਜਾਣ ਗੜਬੜ ਹੋਈ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਥੋੜ੍ਹੀ ਦੇਰ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਜੇ ਸਮੱਸਿਆ ਬਣੀ ਰਹੇ, ਤਾਂ ਸੈਟਿੰਗਾਂ > ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ ਰਾਹੀਂ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ। ਵੇਰਵੇ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} ਵਿੱਚ ਕੋਈ ਗੜਬੜ ਹੋਈ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਕੁਝ ਸਮੇਂ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
-  "purchaseErrorPurchaseNotAllowedError": "ਇਸ ਡਿਵਾਈਸ ਤੇ ਖਰੀਦਦਾਰੀ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ",
+  "purchaseErrorPurchaseNotAllowedError": "ਇਸ ਡਿਵਾਈਸ 'ਤੇ ਖਰੀਦਦਾਰੀ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ",
   "purchaseErrorPurchaseInvalidError": "ਭੁਗਤਾਨ ਅਸਫਲ ਹੋ ਗਿਆ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਜਾਂਚ ਲਓ ਕਿ ਭੁਗਤਾਨ ਦਾ ਢੰਗ ਵੈਧ ਹੈ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
   "purchaseErrorProductNotAvailableForPurchaseError": "ਚੁਣਿਆ ਗਿਆ ਪਲਾਨ ਫਿਲਹਾਲ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਐਪ ਨੂੰ ਰੀਸਟਾਰਟ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
   "purchaseErrorProductAlreadyPurchasedError": "ਤੁਸੀਂ ਪਹਿਲਾਂ ਹੀ ਪਲਾਨ ਖਰੀਦ ਚੁੱਕੇ ਹੋ। ਇਸ ਡਿਵਾਈਸ ਤੇ ਖਰੀਦਦਾਰੀ ਦੀ ਜਾਣਕਾਰੀ ਨੂੰ ਬਹਾਲ ਕਰਨ ਲਈ \"ਪਹਿਲਾਂ ਖਰੀਦਣ ਵਾਲੇ ਇੱਥੇ ਕਲਿੱਕ ਕਰੋ\" ਤੋਂ ਖਰੀਦਦਾਰੀ ਦੀ ਜਾਣਕਾਰੀ ਨੂੰ ਬਹਾਲ ਕਰੋ।",

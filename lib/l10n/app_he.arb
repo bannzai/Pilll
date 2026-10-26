@@ -289,7 +289,7 @@
   "minimumCountOfReminderTimes": "יש להגדיר לפחות {ReminderTimeMinimumCount} שעות להתראות",
   "purchaseErrorUnknownError": "אירעה שגיאה לא ידועה. כדאי לנסות שוב בעוד זמן מה. אם הבעיה נמשכת, אפשר ליצור איתנו קשר דרך הגדרות > יצירת קשר. פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "אירעה שגיאה ב־{storeName}. כדאי לנסות שוב בעוד זמן קצר.",
-  "purchaseErrorPurchaseNotAllowedError": "רכישה לא מותרת במכשיר זה",
+  "purchaseErrorPurchaseNotAllowedError": "לא ניתן לבצע רכישות במכשיר הזה",
   "purchaseErrorPurchaseInvalidError": "התשלום נכשל. אנא ודאו שאמצעי התשלום תקף ונסו שוב",
   "purchaseErrorProductNotAvailableForPurchaseError": "התוכנית הנבחרת אינה זמינה כרגע למכירה. אנא הפעל מחדש את האפליקציה ונסה שוב",
   "purchaseErrorProductAlreadyPurchasedError": "כבר רכשת תוכנית. אם ברצונך לשחזר מידע רכישה במכשיר זה, אנא שחזר את מידע הרכישה מ'לרוכשים קודמים'",

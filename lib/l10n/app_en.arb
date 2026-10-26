@@ -289,7 +289,7 @@
   "minimumCountOfReminderTimes": "Set at least {ReminderTimeMinimumCount} notification times",
   "purchaseErrorUnknownError": "Something went wrong. Please try again later. If the problem continues, contact us through Settings > Contact us. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "There’s a problem with {storeName}. Please try again in a little while.",
-  "purchaseErrorPurchaseNotAllowedError": "Purchases are not allowed on this device",
+  "purchaseErrorPurchaseNotAllowedError": "Purchases aren't allowed on this device",
   "purchaseErrorPurchaseInvalidError": "Payment failed. Please check your payment method and try again.",
   "purchaseErrorProductNotAvailableForPurchaseError": "The selected plan is currently not available for purchase. Please restart the app and try again.",
   "purchaseErrorProductAlreadyPurchasedError": "You have already purchased a plan. To restore your purchase information on this device, please restore your purchase information from \"For Previous Purchasers\".",

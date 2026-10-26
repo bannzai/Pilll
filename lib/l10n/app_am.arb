@@ -289,7 +289,7 @@
   "minimumCountOfReminderTimes": "ቢያንስ {ReminderTimeMinimumCount} የማሳወቂያ ሰዓቶች ያስፈልጋሉ",
   "purchaseErrorUnknownError": "ያልታወቀ ስህተት ተከስቷል። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ። ችግሩ ከቀጠለ፣ በቅንብሮች > ያግኙን በኩል ያግኙን። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "በ{storeName} ላይ ችግር ተፈጥሯል። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ።",
-  "purchaseErrorPurchaseNotAllowedError": "በዚህ መሳሪያ ላይ ግዢ አልተፈቀደም",
+  "purchaseErrorPurchaseNotAllowedError": "በዚህ መሣሪያ ላይ ግዢ አይፈቀድም",
   "purchaseErrorPurchaseInvalidError": "ክፍያ አልተሳካም። ትክክለኛ የክፍያ ዘዴ መሆኑን ያረጋግጡና እንደገና ይሞክሩ",
   "purchaseErrorProductNotAvailableForPurchaseError": "የተመረጠው እቅድ አሁን አይሸጥም። እባክዎ መተግበሪያውን እንደገና ያስጀምሩ እና ይሞክሩ።",
   "purchaseErrorProductAlreadyPurchasedError": "ቀደም ብለው ፕላኑን ገዝተዋል። በዚህ መሳሪያ ላይ የግዢ መረጃውን መልሰው ማግኘት ከፈለጉ «ቀደም ብለው የገዙ ግለሰቦች እዚህ ይጫኑ» የሚለውን ተጠቅመው የግዢ መረጃውን መልሰው ያግኙ።",

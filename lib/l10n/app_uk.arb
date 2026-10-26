@@ -289,7 +289,7 @@
   "minimumCountOfReminderTimes": "Укажіть щонайменше {ReminderTimeMinimumCount} часів для сповіщень",
   "purchaseErrorUnknownError": "Сталася невідома помилка. Будь ласка, спробуйте ще раз трохи пізніше. Якщо проблема не зникне, зв’яжіться з нами через Налаштування > Зв’язатися з нами. Подробиці: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "У {storeName} сталася помилка. Будь ласка, спробуйте ще раз трохи пізніше.",
-  "purchaseErrorPurchaseNotAllowedError": "Покупки заборонені на цьому пристрої",
+  "purchaseErrorPurchaseNotAllowedError": "Покупки на цьому пристрої не дозволені",
   "purchaseErrorPurchaseInvalidError": "Не вдалося здійснити оплату. Будь ласка, перевірте дійсність способу оплати та спробуйте знову",
   "purchaseErrorProductNotAvailableForPurchaseError": "Обраний план зараз недоступний для покупки. Будь ласка, перезапустіть додаток і спробуйте знову.",
   "purchaseErrorProductAlreadyPurchasedError": "Ви вже придбали план. Щоб відновити інформацію про покупку на цьому пристрої, скористайтеся посиланням «Для тих, хто вже купував».",

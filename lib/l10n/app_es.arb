@@ -289,7 +289,7 @@
   "minimumCountOfReminderTimes": "Configura al menos {ReminderTimeMinimumCount} horarios de notificación",
   "purchaseErrorUnknownError": "Se produjo un error desconocido. Vuelve a intentarlo más tarde. Si el problema continúa, contáctanos desde Configuración > Contacto. Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Se ha producido un error en {storeName}. Vuelve a intentarlo dentro de un rato.",
-  "purchaseErrorPurchaseNotAllowedError": "Las compras no están permitidas en este dispositivo",
+  "purchaseErrorPurchaseNotAllowedError": "No se permiten compras en este dispositivo",
   "purchaseErrorPurchaseInvalidError": "El pago ha fallado. Por favor, verifique que su método de pago sea válido e inténtelo de nuevo.",
   "purchaseErrorProductNotAvailableForPurchaseError": "El plan seleccionado no está disponible en este momento. Por favor, reinicia la aplicación e inténtalo de nuevo.",
   "purchaseErrorProductAlreadyPurchasedError": "Ya has adquirido el plan. Para restaurar la información de compra en este dispositivo, selecciona \"Para usuarios que compraron anteriormente\" y restaura tu información de compra.",

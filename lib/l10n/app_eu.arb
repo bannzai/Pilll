@@ -289,7 +289,7 @@
   "minimumCountOfReminderTimes": "Ezarri gutxienez {ReminderTimeMinimumCount} jakinarazpen-ordu",
   "purchaseErrorUnknownError": "Errore ezezagun bat gertatu da. Saiatu berriro pixka bat geroago. Arazoak jarraitzen badu, jarri gurekin harremanetan Ezarpenak > Jarri harremanetan atalaren bidez. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Errore bat gertatu da {storeName} dendan. Saiatu berriro pixka bat geroago.",
-  "purchaseErrorPurchaseNotAllowedError": "Erosketak ez dira baimenduta gailu honetan",
+  "purchaseErrorPurchaseNotAllowedError": "Gailu honetan ezin da erosketarik egin",
   "purchaseErrorPurchaseInvalidError": "Ordainketak huts egin du. Mesedez, egiaztatu ordainketa metodoa baliozkoa den eta saiatu berriro.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Plan hau une honetan ez dago eskuragarri. Mesedez, aplikazioa berrabiarazi eta berriro saiatu.",
   "purchaseErrorProductAlreadyPurchasedError": "Plana dagoeneko erosita duzu. Gailu honetan erosketa informazioa berreskuratu nahi baduzu, sakatu \"Lehenago erosi zutenek hemen\" erosketa informazioa berreskuratzeko",

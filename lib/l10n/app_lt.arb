@@ -289,7 +289,7 @@
   "minimumCountOfReminderTimes": "Nustatykite bent {ReminderTimeMinimumCount} pranešimų laikus",
   "purchaseErrorUnknownError": "Įvyko nežinoma klaida. Pabandykite dar kartą šiek tiek vėliau. Jei problema išlieka, susisiekite su mumis per Nustatymai > Susisiekti su mumis. Išsami informacija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Parduotuvėje {storeName} įvyko klaida. Po kurio laiko bandykite dar kartą.",
-  "purchaseErrorPurchaseNotAllowedError": "Šiame įrenginyje pirkimai neleistini",
+  "purchaseErrorPurchaseNotAllowedError": "Šiame įrenginyje pirkti neleidžiama",
   "purchaseErrorPurchaseInvalidError": "Mokėjimas nepavyko. Patikrinkite, ar jūsų mokėjimo būdas galioja, ir bandykite dar kartą.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Šis planas šiuo metu neprieinamas. Prašome perkrauti programėlę ir bandyti dar kartą.",
   "purchaseErrorProductAlreadyPurchasedError": "Planas jau nupirktas. Jei norite atkurti pirkimo informaciją šiame įrenginyje, spustelėkite „Anksčiau pirkusiems čia\" ir atkurkite pirkimo informaciją.",

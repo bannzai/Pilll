@@ -289,7 +289,7 @@
   "minimumCountOfReminderTimes": "Iltimos, kamida {ReminderTimeMinimumCount} ta bildirishnoma vaqtini belgilang",
   "purchaseErrorUnknownError": "Nomaʼlum xatolik yuz berdi. Iltimos, birozdan keyin qayta urinib koʻring. Muammo davom etsa, Sozlamalar > Biz bilan bogʻlanish orqali bizga murojaat qiling. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} doʻkonida xatolik yuz berdi. Iltimos, birozdan keyin qayta urinib koʻring.",
-  "purchaseErrorPurchaseNotAllowedError": "Bu qurilmada sotib olish taqiqlangan",
+  "purchaseErrorPurchaseNotAllowedError": "Bu qurilmada xarid qilishga ruxsat berilmagan",
   "purchaseErrorPurchaseInvalidError": "To'lov muvaffaqiyatsiz tugadi. Iltimos, to'lov usulining to'g'riligini tekshirib, qayta urinib ko'ring.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Ushbu reja ayni paytda mavjud emas. Iltimos, ilovani qayta ishga tushiring va qayta urinib ko'ring.",
   "purchaseErrorProductAlreadyPurchasedError": "Siz allaqachon rejani sotib olgan ekansiz. Agar bu qurilmada sotib olish ma'lumotlarini tiklash kerak bo'lsa, \"Oldin sotib olganlar uchun\" dan sotib olish ma'lumotlarini tiklang",

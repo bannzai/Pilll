@@ -289,7 +289,7 @@
   "minimumCountOfReminderTimes": "Zəhmət olmasa, ən azı {ReminderTimeMinimumCount} bildiriş vaxtı təyin edin",
   "purchaseErrorUnknownError": "Naməlum xəta baş verdi. Zəhmət olmasa, bir qədər sonra yenidən cəhd edin. Problem davam edərsə, Parametrlər > Bizimlə əlaqə bölməsindən bizə yazın. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} mağazasında xəta baş verib. Zəhmət olmasa, bir az sonra yenidən cəhd edin.",
-  "purchaseErrorPurchaseNotAllowedError": "Bu cihazda satın alma icazə verilmir",
+  "purchaseErrorPurchaseNotAllowedError": "Bu cihazda alış-verişə icazə verilmir",
   "purchaseErrorPurchaseInvalidError": "Ödəniş alınmadı. Ödəniş üsulunuzun etibarlı olduğunu yoxlayın və yenidən cəhd edin.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Bu plan hazırda mövcud deyil. Zəhmət olmasa, tətbiqi yenidən başladıb təkrar cəhd edin.",
   "purchaseErrorProductAlreadyPurchasedError": "Siz artıq plan satın almısınız. Bu cihazda satın alma məlumatlarını bərpa etmək üçün \"Əvvəl satın alanlar üçün\" seçimindən satın alma məlumatlarını bərpa edin",

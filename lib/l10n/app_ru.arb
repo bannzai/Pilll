@@ -289,7 +289,7 @@
   "minimumCountOfReminderTimes": "Укажите не менее {ReminderTimeMinimumCount} времён для уведомлений",
   "purchaseErrorUnknownError": "Произошла неизвестная ошибка. Пожалуйста, попробуйте ещё раз немного позже. Если проблема сохранится, свяжитесь с нами через Настройки > Связаться с нами. Подробности: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "В {storeName} произошла ошибка. Пожалуйста, попробуйте ещё раз немного позже.",
-  "purchaseErrorPurchaseNotAllowedError": "Покупки не разрешены на этом устройстве",
+  "purchaseErrorPurchaseNotAllowedError": "Покупки на этом устройстве не разрешены",
   "purchaseErrorPurchaseInvalidError": "Платеж не прошел. Проверьте корректность платежных данных и повторите попытку.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Данный план в настоящее время недоступен для покупки. Пожалуйста, перезапустите приложение и попробуйте ещё раз.",
   "purchaseErrorProductAlreadyPurchasedError": "План уже приобретен. Для восстановления информации о покупке на этом устройстве используйте «Если вы уже приобретали ранее»",

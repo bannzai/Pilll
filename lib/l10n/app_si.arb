@@ -289,7 +289,7 @@
   "minimumCountOfReminderTimes": "කරුණාකර දැනුම්දීම් සඳහා අවම වශයෙන් වේලාවන් {ReminderTimeMinimumCount}ක් සකසන්න",
   "purchaseErrorUnknownError": "නොදන්නා දෝෂයක් ඇති විය. කරුණාකර ටික වේලාවකට පසු නැවත උත්සාහ කරන්න. ගැටලුව දිගටම පවතී නම්, සැකසීම් > අප අමතන්න හරහා අප හා සම්බන්ධ වන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} හි දෝෂයක් ඇති වී ඇත. කරුණාකර ටික වේලාවකට පසු නැවත උත්සාහ කරන්න.",
-  "purchaseErrorPurchaseNotAllowedError": "මෙම උපකරණයෙන් මිලදී ගැනීමට අවසර නැත",
+  "purchaseErrorPurchaseNotAllowedError": "මෙම උපාංගයෙන් මිලදී ගැනීමට අවසර නැත",
   "purchaseErrorPurchaseInvalidError": "ගෙවීම අසාර්ථක විය. වලංගු ගෙවීම් ක්‍රමයක් දැයි සත්‍යාපනය කර නැවත උත්සාහ කරන්න.",
   "purchaseErrorProductNotAvailableForPurchaseError": "ඉලක්කගත සැලැස්ම දැනට විකිණීමට නොමැත. කරුණාකර යෙදුම යළි ආරම්භ කර නැවත උත්සාහ කරන්න.",
   "purchaseErrorProductAlreadyPurchasedError": "ඔබ දැනටම සැලැස්ම මිලදී ගෙන ඇත. මෙම උපකරණයේ මිලදී ගැනීමේ තොරතුරු ප්‍රතිසාධනය කිරීමට \"පෙර මිලදී ගත් අය මෙතනින්\" සිට මිලදී ගැනීමේ තොරතුරු ප්‍රතිසාධනය කරන්න",

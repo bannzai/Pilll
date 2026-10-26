@@ -289,7 +289,7 @@
   "minimumCountOfReminderTimes": "Cal configurar almenys {ReminderTimeMinimumCount} hores per a les notificacions",
   "purchaseErrorUnknownError": "S’ha produït un error desconegut. Torna-ho a provar d’aquí a una estona. Si el problema continua, contacta amb nosaltres a Configuració > Contacta amb nosaltres. Detalls: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "S’ha produït un error a {storeName}. Torna-ho a provar d’aquí a una estona.",
-  "purchaseErrorPurchaseNotAllowedError": "No es permeten compres en aquest dispositiu",
+  "purchaseErrorPurchaseNotAllowedError": "Les compres no estan permeses en aquest dispositiu",
   "purchaseErrorPurchaseInvalidError": "Ha fallat el pagament. Si us plau, verifiqueu si el mètode de pagament és vàlid i torneu-ho a intentar.",
   "purchaseErrorProductNotAvailableForPurchaseError": "El pla seleccionat no està disponible actualment. Si us plau, reinicieu l'aplicació i torneu-ho a provar.",
   "purchaseErrorProductAlreadyPurchasedError": "Ja tens un pla comprat. Per restaurar la informació de compra en aquest dispositiu, utilitza l'opció «Si ja has comprat abans, clica aquí».",

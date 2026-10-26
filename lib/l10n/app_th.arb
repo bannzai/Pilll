@@ -289,7 +289,7 @@
   "minimumCountOfReminderTimes": "โปรดตั้งเวลาแจ้งเตือนอย่างน้อย {ReminderTimeMinimumCount} เวลาค่ะ",
   "purchaseErrorUnknownError": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุค่ะ โปรดลองอีกครั้งในภายหลัง หากยังพบปัญหา โปรดติดต่อเราผ่าน การตั้งค่า > ติดต่อเรา ค่ะ รายละเอียด: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "เกิดข้อผิดพลาดใน {storeName} กรุณาลองอีกครั้งในอีกสักครู่นะคะ",
-  "purchaseErrorPurchaseNotAllowedError": "การซื้อไม่ได้รับอนุญาตบนอุปกรณ์นี้",
+  "purchaseErrorPurchaseNotAllowedError": "ไม่อนุญาตให้ซื้อสินค้าบนอุปกรณ์นี้ค่ะ",
   "purchaseErrorPurchaseInvalidError": "การชำระเงินไม่สำเร็จ กรุณาตรวจสอบว่าวิธีการชำระเงินของคุณถูกต้องและมีผลใช้ แล้วลองใหม่อีกครั้ง",
   "purchaseErrorProductNotAvailableForPurchaseError": "แพ็คเกจที่เลือกไม่สามารถใช้งานได้ในขณะนี้ กรุณาปิดแอปฯ และเปิดใหม่อีกครั้ง",
   "purchaseErrorProductAlreadyPurchasedError": "คุณได้ซื้อแผนแล้ว หากต้องการกู้คืนข้อมูลการซื้อในอุปกรณ์นี้ กรุณากู้คืนข้อมูลการซื้อจาก \"สำหรับผู้ที่เคยซื้อแล้ว\"",
