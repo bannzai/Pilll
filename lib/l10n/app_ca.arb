@@ -444,7 +444,7 @@
   "inquiryContentPlaceholder": "Escriu els detalls de la teva consulta",
   "debugInfoLabel": "Informació de depuració (emplenada automàticament)",
   "inquirySent": "S'ha enviat la teva consulta",
-  "sendInquiry": "Enviar",
+  "sendInquiry": "Envia",
   "invalidEmailFormat": "Introduïu una adreça de correu electrònic vàlida",
   "emailCannotReceiveICloud": "※Si us plau, utilitzeu una adreça de correu electrònic diferent de @icloud.com. Es produeixen bloquejos amb freqüència",
   "emailReceiveSettingNote": "※Si us plau, configureu el vostre correu per poder rebre missatges de pilll.reminder.app@gmail.com",

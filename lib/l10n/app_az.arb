@@ -444,7 +444,7 @@
   "inquiryContentPlaceholder": "Zəhmət olmasa, müraciətinizin məzmununu yazın",
   "debugInfoLabel": "Xəta ayıklama məlumatları (avtomatik doldurulur)",
   "inquirySent": "Müraciətiniz göndərildi",
-  "sendInquiry": "Göndər",
+  "sendInquiry": "Göndərin",
   "invalidEmailFormat": "Düzgün e-poçt ünvanı daxil edin",
   "emailCannotReceiveICloud": "※ Xahiş edirik, @icloud.com-dan fərqli e-poçt ünvanından istifadə edin. Tez-tez bloklanma problemləri yaranır.",
   "emailReceiveSettingNote": "※Zəhmət olmasa pilll.reminder.app@gmail.com ünvanından gələn e-poçtları qəbul edə bilməyiniz üçün tənzimləmələrinizi konfiqurasiya edin",

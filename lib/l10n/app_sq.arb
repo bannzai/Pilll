@@ -444,7 +444,7 @@
   "inquiryContentPlaceholder": "Ju lutemi, shkruani hollësitë e pyetjes suaj",
   "debugInfoLabel": "Informacion për zgjidhjen e gabimeve (plotësohet automatikisht)",
   "inquirySent": "Mesazhi juaj u dërgua",
-  "sendInquiry": "Dërgo",
+  "sendInquiry": "Dërgoni",
   "invalidEmailFormat": "Ju lutemi vendosni një adresë emaili të vlefshme",
   "emailCannotReceiveICloud": "Ju lutemi përdorni një adresë emaili përveç @icloud.com. Po ndodhin shumë raste bllokimi.",
   "emailReceiveSettingNote": "Ju lutemi sigurohuni që të mund të merrni email-e nga pilll.reminder.app@gmail.com",

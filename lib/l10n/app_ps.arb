@@ -444,7 +444,7 @@
   "inquiryContentPlaceholder": "مهرباني وکړئ د خپلې پوښتنې جزئیات ولیکئ",
   "debugInfoLabel": "د تېروتنو د موندلو معلومات (په خپله ډک شوي)",
   "inquirySent": "ستاسو پیغام واستول شو",
-  "sendInquiry": "لېږل",
+  "sendInquiry": "ولېږئ",
   "invalidEmailFormat": "مهرباني وکړئ معتبر بریښنالیک پته دننه کړئ",
   "emailCannotReceiveICloud": "مهرباني وکړئ د @icloud.com پرته بل بریښنالیک پته وکاروئ. ډیری ځله بلاک کیږي",
   "emailReceiveSettingNote": "مهرباني وکړئ خپلې ترتیبات داسې تنظیم کړئ چې تاسو د pilll.reminder.app@gmail.com څخه بریښنالیکونه ترلاسه کړئ",

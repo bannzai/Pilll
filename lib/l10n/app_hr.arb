@@ -444,7 +444,7 @@
   "inquiryContentPlaceholder": "Molimo, unesite pojedinosti svojeg upita",
   "debugInfoLabel": "Podaci za otklanjanje pogrešaka (automatski popunjeno)",
   "inquirySent": "Vaš je upit poslan",
-  "sendInquiry": "Pošalji",
+  "sendInquiry": "Pošaljite",
   "invalidEmailFormat": "Molimo unesite valjanu adresu e-pošte",
   "emailCannotReceiveICloud": "Molimo koristite e-mail adresu koja nije @icloud.com. E-mailovi s te domene često se blokiraju.",
   "emailReceiveSettingNote": "Molimo postavite postavke kako biste mogli primati e-poštu s pilll.reminder.app@gmail.com",

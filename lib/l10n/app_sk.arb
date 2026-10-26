@@ -444,7 +444,7 @@
   "inquiryContentPlaceholder": "Prosím, opíšte svoju otázku",
   "debugInfoLabel": "Informácie na ladenie (vyplnené automaticky)",
   "inquirySent": "Vaša správa bola odoslaná",
-  "sendInquiry": "Odoslať",
+  "sendInquiry": "Odošlite",
   "invalidEmailFormat": "Zadajte platnú e-mailovú adresu",
   "emailCannotReceiveICloud": "Používajte prosím e-mailovú adresu inú ako @icloud.com. Odpovede sú často blokované.",
   "emailReceiveSettingNote": "Uistite sa, že môžete prijímať e-maily z adresy pilll.reminder.app@gmail.com",

@@ -444,7 +444,7 @@
   "inquiryContentPlaceholder": "Prosimo, opišite svoje vprašanje",
   "debugInfoLabel": "Podatki za odpravljanje napak (samodejno izpolnjeno)",
   "inquirySent": "Vaše sporočilo je bilo poslano",
-  "sendInquiry": "Pošlji",
+  "sendInquiry": "Pošljite",
   "invalidEmailFormat": "Vnesite veljaven e-poštni naslov",
   "emailCannotReceiveICloud": "Prosimo, ne uporabljajte e-poštnega naslova @icloud.com. Pogosto prihaja do blokiranja.",
   "emailReceiveSettingNote": "Prosimo, omogočite sprejem e-pošte z naslova pilll.reminder.app@gmail.com",

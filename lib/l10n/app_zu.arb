@@ -444,7 +444,7 @@
   "inquiryContentPlaceholder": "Sicela ubhale imininingwane yombuzo wakho",
   "debugInfoLabel": "Imininingwane yokuthola amaphutha (igcwaliswa ngokuzenzakalelayo)",
   "inquirySent": "Umlayezo wakho uthunyelwe",
-  "sendInquiry": "Thumela",
+  "sendInquiry": "Ukuthumela",
   "invalidEmailFormat": "Sicela ufake ikheli le-imeyili elivumelekile",
   "emailCannotReceiveICloud": "Sicela usebenzise ikheli le-imeyili ngaphandle kwe-@icloud.com. Ukuvinjelwa kuvame ukwenzeka.",
   "emailReceiveSettingNote": "Sicela uhlele ukuze ukwazi ukwamukela ama-imeyili avela ku-pilll.reminder.app@gmail.com",

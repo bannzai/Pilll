@@ -444,7 +444,7 @@
   "inquiryContentPlaceholder": "Ве молиме, напишете ги деталите за Вашето прашање",
   "debugInfoLabel": "Информации за откривање грешки (автоматски пополнети)",
   "inquirySent": "Вашата порака е испратена",
-  "sendInquiry": "Испрати",
+  "sendInquiry": "Испратете",
   "invalidEmailFormat": "Ве молиме внесете валидна е-маил адреса",
   "emailCannotReceiveICloud": "Ве молиме користете е-маил адреса различна од @icloud.com. Честопати доаѓа до блокирање",
   "emailReceiveSettingNote": "Ве молиме подесете ги вашите поставки за да можете да примате е-пошта од pilll.reminder.app@gmail.com",

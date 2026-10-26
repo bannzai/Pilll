@@ -444,7 +444,7 @@
   "inquiryContentPlaceholder": "Įrašykite savo užklausos informaciją",
   "debugInfoLabel": "Derinimo informacija (užpildoma automatiškai)",
   "inquirySent": "Jūsų užklausa išsiųsta",
-  "sendInquiry": "Siųsti",
+  "sendInquiry": "Išsiųskite",
   "invalidEmailFormat": "Įveskite galiojantį el. pašto adresą",
   "emailCannotReceiveICloud": "Prašome nenaudoti @icloud.com el. pašto adreso, nes atsakymai dažnai būna blokuojami.",
   "emailReceiveSettingNote": "Prašome nustatyti, kad galėtumėte gauti el. laiškus iš pilll.reminder.app@gmail.com",

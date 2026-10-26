@@ -444,7 +444,7 @@
   "inquiryContentPlaceholder": "Skriv hva henvendelsen din gjelder",
   "debugInfoLabel": "Feilsøkingsinformasjon (fylles ut automatisk)",
   "inquirySent": "Henvendelsen din er sendt",
-  "sendInquiry": "Send inn",
+  "sendInquiry": "Send",
   "invalidEmailFormat": "Vennligst oppgi en gyldig e-postadresse",
   "emailCannotReceiveICloud": "Vennligst bruk en annen e-postadresse enn @icloud.com. E-poster blir ofte blokkert.",
   "emailReceiveSettingNote": "Vennligst sørg for at du kan motta e-post fra pilll.reminder.app@gmail.com",

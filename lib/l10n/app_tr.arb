@@ -444,7 +444,7 @@
   "inquiryContentPlaceholder": "Lütfen sorunuzun ayrıntılarını yazın",
   "debugInfoLabel": "Hata Ayıklama Bilgileri (otomatik dolduruldu)",
   "inquirySent": "Mesajınız gönderildi",
-  "sendInquiry": "Gönder",
+  "sendInquiry": "Gönderin",
   "invalidEmailFormat": "Lütfen geçerli bir e-posta adresi girin",
   "emailCannotReceiveICloud": "Lütfen @icloud.com dışında bir e-posta adresi kullanın. Yanıt e-postaları sıklıkla engellenmektedir",
   "emailReceiveSettingNote": "Lütfen pilll.reminder.app@gmail.com adresinden gelen e-postaları alabilmek için ayarlarınızı yapın",
