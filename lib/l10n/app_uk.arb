@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "Цей обліковий запис {accountTypeProviderName} уже пов’язаний із вашим обліковим записом Pilll. Спробуйте оновити екран і перегляньте також поширені запитання. Докладніше: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Цей обліковий запис {accountTypeProviderName} уже пов’язаний з іншим обліковим записом Pilll, тому зареєструватися з його допомогою не можна. Перегляньте також FAQ. Подробиці: {exceptionMessage}",
   "emailAlreadyInUse": "Зареєструватися не вдається, оскільки адреса електронної пошти, яку ви використовуєте для облікового запису {accountTypeProviderName}, уже пов’язана з іншим обліковим записом Pilll. Перегляньте також поширені запитання. Докладніше: {exceptionMessage}",
-  "todaySchedule": "План на сьогодні",
+  "todaySchedule": "Ваші плани на сьогодні",
   "calendarSchedule": "Події календаря",
   "newPillSheetNotificationTitle": "Сьогодні починається новий блістер",
   "newPillSheetNotificationMessage": "🆕 Сьогодні починається новий блістер\nНе забудьте прийняти таблетки👍",

@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "Dit {accountTypeProviderName}-account is al gekoppeld aan je Pilll-account. Probeer het scherm te vernieuwen en bekijk ook de veelgestelde vragen. Details: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Dit {accountTypeProviderName}-account is al gekoppeld aan een ander Pilll-account. Je kunt je er daarom niet mee registreren. Bekijk ook de FAQ. Details: {exceptionMessage}",
   "emailAlreadyInUse": "Je kunt je niet registreren, omdat het e-mailadres van je {accountTypeProviderName}-account al aan een ander Pilll-account is gekoppeld. Bekijk ook de veelgestelde vragen. Details: {exceptionMessage}",
-  "todaySchedule": "Planning voor vandaag",
+  "todaySchedule": "Je planning voor vandaag",
   "calendarSchedule": "Kalenderafspraken",
   "newPillSheetNotificationTitle": "Vandaag begint een nieuwe strip",
   "newPillSheetNotificationMessage": "🆕 Vandaag begint een nieuwe strip\nVergeet niet je pil in te nemen 👍",

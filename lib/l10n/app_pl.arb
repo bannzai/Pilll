@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "To konto {accountTypeProviderName} jest już połączone z Twoim kontem Pilll. Spróbuj odświeżyć ekran i zajrzyj też do najczęściej zadawanych pytań. Szczegóły: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "To konto {accountTypeProviderName} jest już połączone z innym kontem Pilll, więc nie można się za jego pomocą zarejestrować. Zajrzyj też do FAQ. Szczegóły: {exceptionMessage}",
   "emailAlreadyInUse": "Rejestracja nie jest możliwa, ponieważ adres e-mail używany z kontem {accountTypeProviderName} jest już powiązany z innym kontem Pilll. Sprawdź też najczęściej zadawane pytania. Szczegóły: {exceptionMessage}",
-  "todaySchedule": "Plan na dziś",
+  "todaySchedule": "Dzisiejszy plan",
   "calendarSchedule": "Wydarzenia w kalendarzu",
   "newPillSheetNotificationTitle": "Dzisiaj rozpoczyna się nowy blister",
   "newPillSheetNotificationMessage": "🆕 Dzisiaj rozpoczyna się nowa blaszka\nPamiętaj o przyjęciu👍",

@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "এই {accountTypeProviderName} অ্যাকাউন্টটি ইতিমধ্যে আপনার Pilll অ্যাকাউন্টের সঙ্গে যুক্ত আছে। অনুগ্রহ করে স্ক্রিনটি রিফ্রেশ করে দেখুন। FAQ-ও দেখে নিতে পারেন। বিস্তারিত: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "এই {accountTypeProviderName} অ্যাকাউন্টটি ইতিমধ্যে অন্য একটি Pilll অ্যাকাউন্টের সঙ্গে যুক্ত, তাই এটি দিয়ে নিবন্ধন করা যাচ্ছে না। অনুগ্রহ করে FAQ-ও দেখুন। বিস্তারিত: {exceptionMessage}",
   "emailAlreadyInUse": "আপনার {accountTypeProviderName} অ্যাকাউন্টে ব্যবহার করা ইমেইল ঠিকানাটি ইতিমধ্যে অন্য একটি Pilll অ্যাকাউন্টের সঙ্গে যুক্ত আছে। তাই নিবন্ধন করা যাচ্ছে না। অনুগ্রহ করে সচরাচর জিজ্ঞাসিত প্রশ্নগুলোও দেখুন। বিস্তারিত: {exceptionMessage}",
-  "todaySchedule": "আজের সূচি",
+  "todaySchedule": "আজকের সময়সূচি",
   "calendarSchedule": "ক্যালেন্ডারের সূচি",
   "newPillSheetNotificationTitle": "আজ থেকে নতুন শিট শুরু হচ্ছে",
   "newPillSheetNotificationMessage": "🆕 আজ থেকে নতুন শিট শুরু হচ্ছে\nভুলে যাবেন না, নিয়মিত সেবন করুন👍",

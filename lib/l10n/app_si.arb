@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "මෙම {accountTypeProviderName} ගිණුම ඔබේ Pilll ගිණුමට දැනටමත් සම්බන්ධ කර ඇත. කරුණාකර තිරය නැවුම් කර බලන්න. නිතර අසන ප්‍රශ්නද බලන්න. විස්තර: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "මෙම {accountTypeProviderName} ගිණුම දැනටමත් වෙනත් Pilll ගිණුමකට සම්බන්ධ කර ඇති නිසා, එයින් ලියාපදිංචි විය නොහැක. කරුණාකර FAQ ද බලන්න. විස්තර: {exceptionMessage}",
   "emailAlreadyInUse": "ඔබේ {accountTypeProviderName} ගිණුමේ භාවිත වන ඊමේල් ලිපිනය දැනටමත් වෙනත් Pilll ගිණුමකට සම්බන්ධ වී ඇති නිසා ලියාපදිංචි විය නොහැක. කරුණාකර නිතර අසන ප්‍රශ්නද බලන්න. විස්තර: {exceptionMessage}",
-  "todaySchedule": "අද දිනයේ සැලසුම්",
+  "todaySchedule": "අද දින ඔබේ කාලසටහන",
   "calendarSchedule": "දින දර්ශන සැලසුම්",
   "newPillSheetNotificationTitle": "අද අලුත් සීට් එකක් ආරම්භ වේ",
   "newPillSheetNotificationMessage": "🆕 අද සිට නව ෂීට් එකක් ආරම්භ වේ\nසේවනය කිරීමට අමතක නොකරන්න👍",

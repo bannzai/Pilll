@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "Този акаунт в {accountTypeProviderName} вече е свързан с акаунта ви в Pilll. Опитайте да обновите екрана и разгледайте FAQ. Подробности: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Този профил в {accountTypeProviderName} вече е свързан с друг профил в Pilll, затова не може да се използва за регистрация. Моля, вижте и FAQ. Подробности: {exceptionMessage}",
   "emailAlreadyInUse": "Не можете да се регистрирате, защото имейл адресът, който използвате с акаунта си в {accountTypeProviderName}, вече е свързан с друг акаунт в Pilll. Можете да разгледате и често задаваните въпроси. Подробности: {exceptionMessage}",
-  "todaySchedule": "Днешни планове",
+  "todaySchedule": "Планът ви за днес",
   "calendarSchedule": "Календарни събития",
   "newPillSheetNotificationTitle": "От днес започва нова опаковка",
   "newPillSheetNotificationMessage": "🆕 Днес започва нова опаковка\nНе забравяйте да я приемете👍",

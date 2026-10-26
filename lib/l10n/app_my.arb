@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "ဒီ {accountTypeProviderName} အကောင့်ကို Pilll အကောင့်နဲ့ ချိတ်ဆက်ထားပြီးသားပါ။ မျက်နှာပြင်ကို ပြန်လည်ဖွင့်ကြည့်ပါ။ မေးလေ့ရှိသောမေးခွန်းများကိုလည်း ကြည့်ရှုနိုင်ပါတယ်။ အသေးစိတ်: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "ဤ {accountTypeProviderName} အကောင့်သည် အခြား Pilll အကောင့်တစ်ခုနှင့် ချိတ်ဆက်ထားပြီးဖြစ်သောကြောင့် ၎င်းဖြင့် စာရင်းသွင်း၍ မရပါ။ FAQ ကိုလည်း ကြည့်ရှုပေးပါ။ အသေးစိတ်: {exceptionMessage}",
   "emailAlreadyInUse": "{accountTypeProviderName} အကောင့်တွင် အသုံးပြုနေသော အီးမေးလ်လိပ်စာသည် အခြား Pilll အကောင့်တစ်ခုနှင့် ချိတ်ဆက်ပြီးသားဖြစ်သောကြောင့် အကောင့်အသစ် ဖွင့်၍မရပါ။ အမေးများသော မေးခွန်းများကိုလည်း ကြည့်ရှုပေးပါ။ အသေးစိတ်: {exceptionMessage}",
-  "todaySchedule": "ယနေ့၏ အစီအစဉ်များ",
+  "todaySchedule": "ဒီနေ့အတွက် အစီအစဉ်",
   "calendarSchedule": "ပြက္ခဒိန် အစီအစဉ်များ",
   "newPillSheetNotificationTitle": "ယနေ့မှ ပီလူးစာရွက်အသစ် စတင်မည်",
   "newPillSheetNotificationMessage": "🆕 ဒီနေ့ကစပြီး ဆေးအချပ်အသစ် စပါပြီ\nမမေ့ဘဲ သောက်ကြပါစို့👍",

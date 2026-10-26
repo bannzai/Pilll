@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "Mae’r cyfrif {accountTypeProviderName} hwn eisoes wedi’i gysylltu â’ch cyfrif Pilll. Rhowch gynnig ar adnewyddu’r sgrin ac edrychwch ar y cwestiynau cyffredin hefyd. Manylion: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Mae’r cyfrif {accountTypeProviderName} hwn eisoes wedi’i gysylltu â chyfrif Pilll arall, felly ni ellir ei ddefnyddio i gofrestru. Edrychwch ar y FAQ hefyd, os gwelwch yn dda. Manylion: {exceptionMessage}",
   "emailAlreadyInUse": "Allwch chi ddim cofrestru oherwydd bod y cyfeiriad e-bost rydych chi’n ei ddefnyddio gyda chyfrif {accountTypeProviderName} eisoes wedi’i gysylltu â chyfrif Pilll arall. Edrychwch ar y cwestiynau cyffredin hefyd. Manylion: {exceptionMessage}",
-  "todaySchedule": "Amserlen heddiw",
+  "todaySchedule": "Eich amserlen heddiw",
   "calendarSchedule": "Digwyddiadau'r calendr",
   "newPillSheetNotificationTitle": "Mae taflen newydd yn dechrau heddiw",
   "newPillSheetNotificationMessage": "🆕 Mae pecyn newydd yn dechrau heddiw\nPeidiwch ag anghofio ei gymryd 👍",

@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "Denne {accountTypeProviderName}-kontoen er allerede knyttet til Pilll-kontoen din. Prøv å oppdatere skjermen, og se også vanlige spørsmål. Detaljer: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Denne {accountTypeProviderName}-kontoen er allerede koblet til en annen Pilll-konto, så du kan ikke registrere deg med den. Se også FAQ. Detaljer: {exceptionMessage}",
   "emailAlreadyInUse": "Du kan ikke registrere deg fordi e-postadressen du bruker med {accountTypeProviderName}-kontoen din, allerede er knyttet til en annen Pilll-konto. Se også ofte stilte spørsmål. Detaljer: {exceptionMessage}",
-  "todaySchedule": "Dagens avtaler",
+  "todaySchedule": "Dagens planer",
   "calendarSchedule": "Kalenderavtaler",
   "newPillSheetNotificationTitle": "Ny pakke starter i dag",
   "newPillSheetNotificationMessage": "🆕 Nytt pilleark starter i dag\nHusk å ta pillene dine👍",

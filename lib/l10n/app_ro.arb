@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "Acest cont {accountTypeProviderName} este deja conectat la contul tău Pilll. Încearcă să reîmprospătezi ecranul și consultă și întrebările frecvente. Detalii: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Acest cont {accountTypeProviderName} este deja asociat cu un alt cont Pilll, așa că nu te poți înregistra cu el. Consultă și FAQ. Detalii: {exceptionMessage}",
   "emailAlreadyInUse": "Nu te poți înregistra, deoarece adresa de e-mail folosită pentru contul {accountTypeProviderName} este deja asociată cu un alt cont Pilll. Consultă și întrebările frecvente. Detalii: {exceptionMessage}",
-  "todaySchedule": "Programul de astăzi",
+  "todaySchedule": "Programul tău de azi",
   "calendarSchedule": "Evenimente din calendar",
   "newPillSheetNotificationTitle": "Astăzi începe un nou blister",
   "newPillSheetNotificationMessage": "🆕 Astăzi începe o nouă plaketă de pilule\nNu uitați să le luați👍",

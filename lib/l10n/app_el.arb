@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "Αυτός ο λογαριασμός {accountTypeProviderName} είναι ήδη συνδεδεμένος με τον λογαριασμό σας στο Pilll. Δοκιμάστε να ανανεώσετε την οθόνη και δείτε επίσης τις συχνές ερωτήσεις. Λεπτομέρειες: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Αυτός ο λογαριασμός {accountTypeProviderName} είναι ήδη συνδεδεμένος με άλλον λογαριασμό Pilll, επομένως δεν μπορείτε να εγγραφείτε με αυτόν. Δείτε επίσης τις FAQ. Λεπτομέρειες: {exceptionMessage}",
   "emailAlreadyInUse": "Δεν είναι δυνατή η εγγραφή, επειδή η διεύθυνση email που χρησιμοποιείτε με τον λογαριασμό {accountTypeProviderName} είναι ήδη συνδεδεμένη με άλλον λογαριασμό Pilll. Δείτε επίσης τις συχνές ερωτήσεις. Λεπτομέρειες: {exceptionMessage}",
-  "todaySchedule": "Σημερινό πρόγραμμα",
+  "todaySchedule": "Το πρόγραμμά σας για σήμερα",
   "calendarSchedule": "Γεγονότα ημερολογίου",
   "newPillSheetNotificationTitle": "Σήμερα ξεκινά ένα νέο φύλλο",
   "newPillSheetNotificationMessage": "🆕 Από σήμερα ξεκινά μια νέα συσκευασία\nΜην ξεχάσετε να πάρετε το χάπι σας👍",

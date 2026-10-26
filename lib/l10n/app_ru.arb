@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "Эта учётная запись {accountTypeProviderName} уже связана с вашей учётной записью Pilll. Попробуйте обновить экран и загляните в раздел частых вопросов. Подробности: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Эта учётная запись {accountTypeProviderName} уже связана с другой учётной записью Pilll, поэтому зарегистрироваться с её помощью нельзя. Загляните также в FAQ. Подробности: {exceptionMessage}",
   "emailAlreadyInUse": "Зарегистрироваться не получится: адрес электронной почты, который вы используете в учётной записи {accountTypeProviderName}, уже привязан к другой учётной записи Pilll. Загляните также в раздел частых вопросов. Подробности: {exceptionMessage}",
-  "todaySchedule": "Планы на сегодня",
+  "todaySchedule": "Ваши планы на сегодня",
   "calendarSchedule": "События календаря",
   "newPillSheetNotificationTitle": "Сегодня начинается новая упаковка",
   "newPillSheetNotificationMessage": "🆕 Сегодня начинается новая упаковка\nНе забудьте принять таблетку👍",

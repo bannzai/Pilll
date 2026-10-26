@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "Questo account {accountTypeProviderName} è già collegato al tuo account Pilll. Prova ad aggiornare la schermata e consulta anche le domande frequenti. Dettagli: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Questo account {accountTypeProviderName} è già collegato a un altro account Pilll, quindi non puoi usarlo per registrarti. Consulta anche le FAQ. Dettagli: {exceptionMessage}",
   "emailAlreadyInUse": "Non puoi registrarti perché l’indirizzo email che usi con il tuo account {accountTypeProviderName} è già collegato a un altro account Pilll. Consulta anche le domande frequenti. Dettagli: {exceptionMessage}",
-  "todaySchedule": "Programma di oggi",
+  "todaySchedule": "I tuoi impegni di oggi",
   "calendarSchedule": "Eventi del calendario",
   "newPillSheetNotificationTitle": "Oggi inizia un nuovo blister",
   "newPillSheetNotificationMessage": "🆕 Oggi inizia una nuova confezione\nRicordati di prenderla 👍",

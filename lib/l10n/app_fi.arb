@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "Tämä {accountTypeProviderName}-tili on jo yhdistetty Pilll-tiliisi. Kokeile päivittää näkymä ja tutustu myös usein kysyttyihin kysymyksiin. Lisätiedot: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Tämä {accountTypeProviderName}-tili on jo yhdistetty toiseen Pilll-tiliin, joten et voi rekisteröityä sillä. Katso myös FAQ. Lisätiedot: {exceptionMessage}",
   "emailAlreadyInUse": "Rekisteröityminen ei onnistu, koska {accountTypeProviderName}-tililläsi käyttämäsi sähköpostiosoite on jo liitetty toiseen Pilll-tiliin. Katso myös usein kysytyt kysymykset. Lisätiedot: {exceptionMessage}",
-  "todaySchedule": "Tämän päivän ohjelma",
+  "todaySchedule": "Tämän päivän suunnitelmat",
   "calendarSchedule": "Kalenterin tapahtumat",
   "newPillSheetNotificationTitle": "Uusi pilleriloppu alkaa tänään",
   "newPillSheetNotificationMessage": "🆕 Uusi pillikierto alkaa tänään\nMuista ottaa pillisi👍",

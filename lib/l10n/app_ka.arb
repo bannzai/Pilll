@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "{accountTypeProviderName}-ის ეს ანგარიში უკვე დაკავშირებულია თქვენს Pilll ანგარიშთან. სცადეთ ეკრანის განახლება და გაეცანით ხშირად დასმულ კითხვებსაც. დეტალები: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "{accountTypeProviderName}-ის ეს ანგარიში უკვე დაკავშირებულია Pilll-ის სხვა ანგარიშთან, ამიტომ მისი გამოყენებით რეგისტრაცია შეუძლებელია. გთხოვთ, გაეცნოთ FAQ-საც. დეტალები: {exceptionMessage}",
   "emailAlreadyInUse": "რეგისტრაცია ვერ სრულდება, რადგან ელფოსტის მისამართი, რომელსაც {accountTypeProviderName} ანგარიშისთვის იყენებთ, უკვე დაკავშირებულია Pilll-ის სხვა ანგარიშთან. გთხოვთ, გაეცნოთ ხშირად დასმულ კითხვებსაც. დეტალები: {exceptionMessage}",
-  "todaySchedule": "დღეს გეგმა",
+  "todaySchedule": "თქვენი დღევანდელი გეგმები",
   "calendarSchedule": "კალენდარის გეგმები",
   "newPillSheetNotificationTitle": "დღეს ახალი ბლისტერი იწყება",
   "newPillSheetNotificationMessage": "🆕 დღეს იწყება ახალი შიტი\nნუ დაივიწყებთ მიღებას👍",

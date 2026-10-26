@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "ఈ {accountTypeProviderName} ఖాతా ఇప్పటికే మీ Pilll ఖాతాతో అనుసంధానించబడింది. దయచేసి స్క్రీన్‌ను రిఫ్రెష్ చేసి చూడండి. తరచుగా అడిగే ప్రశ్నలను కూడా చూడండి. వివరాలు: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "ఈ {accountTypeProviderName} ఖాతా ఇప్పటికే మరో Pilll ఖాతాకు లింక్ అయి ఉంది. కాబట్టి దీనితో నమోదు చేసుకోవడం సాధ్యం కాదు. దయచేసి FAQ కూడా చూడండి. వివరాలు: {exceptionMessage}",
   "emailAlreadyInUse": "మీ {accountTypeProviderName} ఖాతాలో ఉపయోగించే ఇమెయిల్ చిరునామా ఇప్పటికే మరో Pilll ఖాతాతో అనుసంధానమై ఉన్నందున నమోదు చేసుకోలేరు. దయచేసి తరచుగా అడిగే ప్రశ్నలను కూడా చూడండి. వివరాలు: {exceptionMessage}",
-  "todaySchedule": "ఈరోజు కార్యక్రమాలు",
+  "todaySchedule": "ఈ రోజు మీ కార్యక్రమాలు",
   "calendarSchedule": "క్యాలెండర్ ప్రణాళికలు",
   "newPillSheetNotificationTitle": "ఈ రోజు నుండి కొత్త షీట్ మొదలవుతుంది",
   "newPillSheetNotificationMessage": "🆕 ఈరోజు నుండి కొత్త షీట్ ప్రారంభమవుతుంది\nమర్చిపోకుండా తీసుకోండి👍",

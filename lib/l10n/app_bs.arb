@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "Ovaj {accountTypeProviderName} račun već je povezan s Vašim Pilll računom. Pokušajte osvježiti ekran i pogledajte FAQ. Detalji: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Ovaj {accountTypeProviderName} račun već je povezan s drugim Pilll računom, pa se njime ne možete registrovati. Pogledajte i FAQ. Detalji: {exceptionMessage}",
   "emailAlreadyInUse": "Ne možete se registrovati jer je e-mail adresa koju koristite za {accountTypeProviderName} račun već povezana s drugim Pilll računom. Pogledajte i često postavljana pitanja. Detalji: {exceptionMessage}",
-  "todaySchedule": "Današnji planovi",
+  "todaySchedule": "Vaš raspored za danas",
   "calendarSchedule": "Kalendarski termini",
   "newPillSheetNotificationTitle": "Od danas počinje nova blisterska traka",
   "newPillSheetNotificationMessage": "🆕 Od danas počinje novo pakovanje pilula\nNe zaboravite uzimanje👍",

@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "{accountTypeProviderName} kontu hau zure Pilll kontuarekin lotuta dago jada. Saiatu pantaila freskatzen, eta begiratu maiz egiten diren galderak ere. Xehetasunak: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "{accountTypeProviderName} kontu hau beste Pilll kontu bati lotuta dago jada; beraz, ezin duzu harekin erregistratu. Begiratu FAQ atala ere. Xehetasunak: {exceptionMessage}",
   "emailAlreadyInUse": "Ezin duzu izena eman, {accountTypeProviderName} kontuarekin erabiltzen duzun helbide elektronikoa beste Pilll kontu bati lotuta dagoelako. Begiratu ohiko galderak ere. Xehetasunak: {exceptionMessage}",
-  "todaySchedule": "Gaurko planak",
+  "todaySchedule": "Gaurko zure plana",
   "calendarSchedule": "Egutegiaren plantak",
   "newPillSheetNotificationTitle": "Gaurtik plaka berri bat hasten da",
   "newPillSheetNotificationMessage": "🆕 Gaurtik txartel berria hasten da\nAhaztu gabe har ezazu👍",

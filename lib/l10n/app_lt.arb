@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "Ši {accountTypeProviderName} paskyra jau susieta su jūsų Pilll paskyra. Pabandykite atnaujinti ekraną ir peržiūrėkite dažniausiai užduodamus klausimus. Išsami informacija: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Ši {accountTypeProviderName} paskyra jau susieta su kita Pilll paskyra, todėl su ja užsiregistruoti negalite. Taip pat peržiūrėkite FAQ. Išsami informacija: {exceptionMessage}",
   "emailAlreadyInUse": "Užsiregistruoti nepavyksta, nes el. pašto adresas, kurį naudojate su {accountTypeProviderName} paskyra, jau susietas su kita Pilll paskyra. Peržiūrėkite ir dažniausiai užduodamus klausimus. Išsami informacija: {exceptionMessage}",
-  "todaySchedule": "Šiandienos planas",
+  "todaySchedule": "Šiandienos planai",
   "calendarSchedule": "Kalendoriaus renginiai",
   "newPillSheetNotificationTitle": "Šiandien prasideda nauja pakuotė",
   "newPillSheetNotificationMessage": "🆕 Šiandien prasideda naujas vaistų paketas\nNepamirškite juos išgerti👍",

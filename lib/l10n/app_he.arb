@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "חשבון {accountTypeProviderName} הזה כבר מקושר לחשבון Pilll שלך. אפשר לנסות לרענן את המסך ולעיין גם בשאלות הנפוצות. פרטים: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "חשבון {accountTypeProviderName} זה כבר מקושר לחשבון Pilll אחר, ולכן אי אפשר להירשם באמצעותו. ניתן לעיין גם בשאלות הנפוצות (FAQ). פרטים: {exceptionMessage}",
   "emailAlreadyInUse": "אי אפשר להירשם כי כתובת האימייל המשמשת בחשבון {accountTypeProviderName} כבר מקושרת לחשבון Pilll אחר. כדאי לעיין גם בשאלות הנפוצות. פרטים: {exceptionMessage}",
-  "todaySchedule": "לוח הזמנים של היום",
+  "todaySchedule": "לוח הזמנים להיום",
   "calendarSchedule": "אירועי לוח השנה",
   "newPillSheetNotificationTitle": "מהיום מתחיל מארז חדש",
   "newPillSheetNotificationMessage": "🆕 היום מתחיל מחזור חדש\nאל תשכחי לקחת👍",

@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "Nakaugnay na ang {accountTypeProviderName} account na ito sa inyong Pilll account. Pakisubukang i-refresh ang screen at tingnan din ang FAQ. Mga detalye: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Nakaugnay na ang {accountTypeProviderName} account na ito sa ibang Pilll account, kaya hindi kayo makakapagrehistro gamit ito. Pakitingnan din po ang FAQ. Mga detalye: {exceptionMessage}",
   "emailAlreadyInUse": "Hindi po kayo makapagrehistro dahil naka-link na sa ibang Pilll account ang email address na ginagamit ninyo sa {accountTypeProviderName} account. Pakitingnan din ang mga madalas itanong. Mga detalye: {exceptionMessage}",
-  "todaySchedule": "Mga Plano Ngayong Araw",
+  "todaySchedule": "Iskedyul ninyo ngayong araw",
   "calendarSchedule": "Mga Schedule sa Kalendaryo",
   "newPillSheetNotificationTitle": "Magsisimula ang bagong sheet ngayon",
   "newPillSheetNotificationMessage": "🆕 Simula na ng bagong sheet ngayong araw\nHuwag kalimutang uminom! 👍",

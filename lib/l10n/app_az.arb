@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "Bu {accountTypeProviderName} hesabı artıq sizin Pilll hesabınıza bağlıdır. Zəhmət olmasa, ekranı yeniləməyi sınayın və FAQ bölməsinə də baxın. Təfərrüatlar: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Bu {accountTypeProviderName} hesabı artıq başqa bir Pilll hesabına bağlıdır, ona görə də onunla qeydiyyatdan keçə bilməzsiniz. Zəhmət olmasa, FAQ bölməsinə də baxın. Təfərrüatlar: {exceptionMessage}",
   "emailAlreadyInUse": "{accountTypeProviderName} hesabınızda istifadə etdiyiniz e-poçt ünvanı artıq başqa bir Pilll hesabına bağlı olduğu üçün qeydiyyatdan keçə bilmirsiniz. Zəhmət olmasa, tez-tez verilən suallara da baxın. Təfərrüatlar: {exceptionMessage}",
-  "todaySchedule": "Bugünkü planlar",
+  "todaySchedule": "Bugünkü planlarınız",
   "calendarSchedule": "Təqvim planları",
   "newPillSheetNotificationTitle": "Bugündən yeni paket başlayır",
   "newPillSheetNotificationMessage": "🆕 Bugündən yeni həb vərəqi başlayır\nUnutmadan qəbul edək👍",

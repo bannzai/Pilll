@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "Akaunti hii ya {accountTypeProviderName} tayari imeunganishwa na akaunti yako ya Pilll. Tafadhali jaribu kuonyesha skrini upya na uangalie pia maswali yanayoulizwa mara kwa mara. Maelezo: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Akaunti hii ya {accountTypeProviderName} tayari imeunganishwa na akaunti nyingine ya Pilll, kwa hivyo haiwezi kutumika kujisajili. Tafadhali angalia pia FAQ. Maelezo: {exceptionMessage}",
   "emailAlreadyInUse": "Huwezi kujisajili kwa sababu anwani ya barua pepe unayotumia kwenye akaunti yako ya {accountTypeProviderName} tayari imeunganishwa na akaunti nyingine ya Pilll. Tafadhali angalia pia maswali yanayoulizwa mara kwa mara. Maelezo: {exceptionMessage}",
-  "todaySchedule": "Ratiba za Leo",
+  "todaySchedule": "Ratiba yako ya leo",
   "calendarSchedule": "Ratiba za kalenda",
   "newPillSheetNotificationTitle": "Leo kanda mpya ya dawa inaanza",
   "newPillSheetNotificationMessage": "🆕 Leo kuanzia karatasi mpya ya dawa inaanza\nUsisahau kuchukua dawa yako👍",

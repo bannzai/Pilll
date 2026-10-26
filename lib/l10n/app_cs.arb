@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "Tento účet {accountTypeProviderName} je už propojený s vaším účtem Pilll. Zkuste obnovit obrazovku a podívejte se také do častých dotazů. Podrobnosti: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Tento účet {accountTypeProviderName} je už propojený s jiným účtem Pilll, proto se s ním nelze zaregistrovat. Podívejte se prosím také do FAQ. Podrobnosti: {exceptionMessage}",
   "emailAlreadyInUse": "Registrace není možná, protože e-mailová adresa používaná s účtem {accountTypeProviderName} je už propojená s jiným účtem Pilll. Podívejte se prosím také na časté dotazy. Podrobnosti: {exceptionMessage}",
-  "todaySchedule": "Dnešní plány",
+  "todaySchedule": "Dnešní plán",
   "calendarSchedule": "Kalendářní události",
   "newPillSheetNotificationTitle": "Dnes začíná nové balení",
   "newPillSheetNotificationMessage": "🆕 Dnes začíná nový blistr\nNezapomeňte na užití👍",

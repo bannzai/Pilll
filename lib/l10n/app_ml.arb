@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "ഈ {accountTypeProviderName} അക്കൗണ്ട് ഇതിനകം നിങ്ങളുടെ Pilll അക്കൗണ്ടുമായി ബന്ധിപ്പിച്ചിരിക്കുന്നു. സ്ക്രീൻ പുതുക്കി നോക്കൂ. പതിവുചോദ്യങ്ങളും കാണാം. വിശദാംശങ്ങൾ: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "ഈ {accountTypeProviderName} അക്കൗണ്ട് ഇതിനകം മറ്റൊരു Pilll അക്കൗണ്ടുമായി ബന്ധിപ്പിച്ചിരിക്കുന്നു. അതിനാൽ ഇത് ഉപയോഗിച്ച് രജിസ്റ്റർ ചെയ്യാനാകില്ല. FAQ കൂടി നോക്കൂ. വിശദാംശങ്ങൾ: {exceptionMessage}",
   "emailAlreadyInUse": "{accountTypeProviderName} അക്കൗണ്ടിൽ ഉപയോഗിക്കുന്ന ഇമെയിൽ വിലാസം മറ്റൊരു Pilll അക്കൗണ്ടുമായി ഇതിനകം ബന്ധിപ്പിച്ചിരിക്കുന്നതിനാൽ രജിസ്റ്റർ ചെയ്യാനാകില്ല. പതിവുചോദ്യങ്ങളും നോക്കൂ. വിശദാംശങ്ങൾ: {exceptionMessage}",
-  "todaySchedule": "ഇന്നത്തെ പദ്ധതികൾ ആണ്",
+  "todaySchedule": "ഇന്നത്തെ പരിപാടികൾ",
   "calendarSchedule": "കാലെന്ഡർ ഇവന്റുകൾ",
   "newPillSheetNotificationTitle": "ഇന്നു മുതൽ പുതിയ ഷീറ്റ് ആരംഭിക്കുന്നു",
   "newPillSheetNotificationMessage": "🆕 ഇന്നു മുതൽ പുതിയ ഷീറ്റ് തുടങ്ങുന്നു\nമറക്കാതെ കഴിക്കാൻ ശ്രദ്ധിക്കുക👍",

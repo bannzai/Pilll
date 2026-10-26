@@ -334,7 +334,7 @@
   "accountAlreadyLinked": "Esta conta do {accountTypeProviderName} já está vinculada à sua conta do Pilll. Tente atualizar a tela e confira também as perguntas frequentes. Detalhes: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Esta conta do {accountTypeProviderName} já está vinculada a outra conta do Pilll, então não é possível se cadastrar com ela. Consulte também as perguntas frequentes (FAQ). Detalhes: {exceptionMessage}",
   "emailAlreadyInUse": "Não é possível concluir o cadastro porque o endereço de e-mail que você usa na conta {accountTypeProviderName} já está vinculado a outra conta do Pilll. Consulte também as perguntas frequentes. Detalhes: {exceptionMessage}",
-  "todaySchedule": "Agenda de hoje",
+  "todaySchedule": "Sua agenda de hoje",
   "calendarSchedule": "Eventos do calendário",
   "newPillSheetNotificationTitle": "Uma nova cartela começa hoje",
   "newPillSheetNotificationMessage": "🆕 Hoje começa uma nova cartela\nNão esqueça de tomar sua pílula 👍",
