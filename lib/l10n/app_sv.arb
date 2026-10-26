@@ -508,7 +508,7 @@
   "restDurationFeatureAppealShortDescription": "Håll noggrann koll på uppehåll och avbrott i pillerintaget",
   "restDurationFeatureAppealHeadline": "Ta en paus från p-pillren",
   "restDurationFeatureAppealBody": "Du kan registrera ett längre uppehåll med p-pillren på din p-pillerkarta. Under uppehållet ändras inte pillernumret, och du kan fortsätta registrera direkt när du börjar ta dem igen.",
-  "featureAppealLocationLabel": "Plats i appen",
+  "featureAppealLocationLabel": "Var du hittar det i appen",
   "criticalAlertFeatureAppealPoint1": "Ta emot aviseringar även i fokusläge",
   "criticalAlertFeatureAppealPoint2": "Påminn exakt vid inställd tid",
   "criticalAlertFeatureAppealPoint3": "Enkel inställning med ett tryck",

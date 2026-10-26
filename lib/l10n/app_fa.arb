@@ -508,7 +508,7 @@
   "restDurationFeatureAppealShortDescription": "ثبت دقیق وقفه و قطع مصرف قرص",
   "restDurationFeatureAppealHeadline": "وقفه در مصرف قرص",
   "restDurationFeatureAppealBody": "می‌توانید دوره‌ای را که برای مدتی مصرف قرص را قطع می‌کنید، در ورق قرص ثبت کنید. در زمان وقفه، شمارهٔ قرص جلو نمی‌رود و با شروع دوبارهٔ مصرف، می‌توانید ثبت را همان موقع ادامه دهید.",
-  "featureAppealLocationLabel": "مکان در برنامه",
+  "featureAppealLocationLabel": "محل آن در برنامه",
   "criticalAlertFeatureAppealPoint1": "اعلان‌ها حتی در حالت تمرکز هم دریافت می‌شوند",
   "criticalAlertFeatureAppealPoint2": "یادآوری قطعی در زمان تعیین‌شده",
   "criticalAlertFeatureAppealPoint3": "تنظیم آسان با یک ضربه",

@@ -508,7 +508,7 @@
   "restDurationFeatureAppealShortDescription": "Дары ичүүдөгү тыныгууну жана токтотууну так көзөмөлдөңүз",
   "restDurationFeatureAppealHeadline": "Таблетка ичүүнү убактылуу токтотуңуз",
   "restDurationFeatureAppealBody": "Таблеткаларды бир аз убакыт ичпей турган мезгилди таблетка блистери бөлүмүнө белгилеп койсоңуз болот. Тыныгуу учурунда таблетканын номери өзгөрбөйт, ал эми кайра иче баштаганда жазууну дароо уланта аласыз.",
-  "featureAppealLocationLabel": "Колдонмонун ичиндеги жай",
+  "featureAppealLocationLabel": "Колдонмодогу орду",
   "criticalAlertFeatureAppealPoint1": "Фокус режими учурунда да билдирүүлөр келет",
   "criticalAlertFeatureAppealPoint2": "Белгиленген убакта сөзсүз эскертет",
   "criticalAlertFeatureAppealPoint3": "Бир тийүү менен оңой орнотуу",

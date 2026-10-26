@@ -508,7 +508,7 @@
   "restDurationFeatureAppealShortDescription": "휴약과 복용 중단을 정확하게 관리해요",
   "restDurationFeatureAppealHeadline": "피임약 복용을 잠시 쉬어요",
   "restDurationFeatureAppealBody": "한동안 알약 복용을 쉬는 기간을 알약 시트에 기록할 수 있어요. 쉬는 동안에는 복용 번호가 넘어가지 않고, 다시 복용할 때 바로 기록을 이어갈 수 있어요.",
-  "featureAppealLocationLabel": "앱 내 위치",
+  "featureAppealLocationLabel": "앱에서 찾는 위치",
   "criticalAlertFeatureAppealPoint1": "집중 모드 중에도 알림이 도착합니다",
   "criticalAlertFeatureAppealPoint2": "설정한 시간에 확실히 알림",
   "criticalAlertFeatureAppealPoint3": "원터치로 간편 설정",

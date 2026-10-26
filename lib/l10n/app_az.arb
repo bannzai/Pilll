@@ -508,7 +508,7 @@
   "restDurationFeatureAppealShortDescription": "Fasilə və qəbulun dayandırılmasını dəqiq izləyin",
   "restDurationFeatureAppealHeadline": "Həb qəbuluna fasilə verin",
   "restDurationFeatureAppealBody": "Həbi qəbul etməyə bir müddət fasilə verdiyiniz dövrü həb blister üzərində qeyd edə bilərsiniz. Fasilə zamanı həb nömrəsi irəliləmir və qəbula yenidən başlayanda qeydləri dərhal davam etdirə bilərsiniz.",
-  "featureAppealLocationLabel": "Tətbiq daxilindəki yer",
+  "featureAppealLocationLabel": "Tətbiqdəki yeri",
   "criticalAlertFeatureAppealPoint1": "Fokus rejimində belə bildirişlər gəlir",
   "criticalAlertFeatureAppealPoint2": "Təyin olunmuş vaxtda mütləq xatırlatma",
   "criticalAlertFeatureAppealPoint3": "Bir toxunuşla asan quraşdırma",

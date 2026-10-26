@@ -508,7 +508,7 @@
   "restDurationFeatureAppealShortDescription": "বিরতি ও পিল খাওয়া বন্ধ রাখার সময় ঠিকভাবে নজরে রাখুন",
   "restDurationFeatureAppealHeadline": "পিল খাওয়া থেকে সাময়িক বিরতি নিন",
   "restDurationFeatureAppealBody": "কিছুদিন পিল খাওয়া বন্ধ রাখার সময়টি পিল শিটে লিখে রাখতে পারেন। বিরতির সময় পিলের নম্বর এগোবে না, আর আবার খাওয়া শুরু করলে সঙ্গে সঙ্গেই রেকর্ড রাখা শুরু করতে পারবেন।",
-  "featureAppealLocationLabel": "অ্যাপের মধ্যে অবস্থান",
+  "featureAppealLocationLabel": "অ্যাপে কোথায় পাবেন",
   "criticalAlertFeatureAppealPoint1": "ফোকাস মোডেও বিজ্ঞপ্তি পাওয়া যাবে",
   "criticalAlertFeatureAppealPoint2": "নির্ধারিত সময়ে নিশ্চিতভাবে রিমাইন্ড",
   "criticalAlertFeatureAppealPoint3": "এক ট্যাপে সহজ সেটআপ",

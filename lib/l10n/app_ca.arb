@@ -508,7 +508,7 @@
   "restDurationFeatureAppealShortDescription": "Segueix amb precisió el descans i les interrupcions de la píndola",
   "restDurationFeatureAppealHeadline": "Fes una pausa en la presa de la píndola",
   "restDurationFeatureAppealBody": "Pots registrar al blíster un període en què deixis de prendre la píndola durant un temps. Durant la pausa, el número de la píndola no avança i, quan reprenguis la presa, podràs tornar a registrar-la de seguida.",
-  "featureAppealLocationLabel": "Ubicació a l'aplicació",
+  "featureAppealLocationLabel": "On trobar-ho a l’aplicació",
   "criticalAlertFeatureAppealPoint1": "Rep notificacions fins i tot en mode de concentració",
   "criticalAlertFeatureAppealPoint2": "Recordatoris fiables a l'hora configurada",
   "criticalAlertFeatureAppealPoint3": "Configuració fàcil amb un sol toc",

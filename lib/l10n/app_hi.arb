@@ -508,7 +508,7 @@
   "restDurationFeatureAppealShortDescription": "विराम और गोली लेना रोकने की अवधि का सटीक हिसाब रखें",
   "restDurationFeatureAppealHeadline": "गोली लेने से कुछ समय का विराम लें",
   "restDurationFeatureAppealBody": "कुछ समय के लिए गोली लेना बंद रखने की अवधि पिल स्ट्रिप में दर्ज की जा सकती है। इस विराम के दौरान गोली का नंबर आगे नहीं बढ़ेगा, और दोबारा लेना शुरू करते ही आप रिकॉर्ड रखना जारी रख सकती हैं।",
-  "featureAppealLocationLabel": "ऐप के भीतर का स्थान",
+  "featureAppealLocationLabel": "ऐप में कहाँ मिलेगा",
   "criticalAlertFeatureAppealPoint1": "फोकस मोड में भी सूचनाएँ मिलेंगी",
   "criticalAlertFeatureAppealPoint2": "निश्चित समय पर याद दिलाना",
   "criticalAlertFeatureAppealPoint3": "एक टैप में आसान सेटअप",

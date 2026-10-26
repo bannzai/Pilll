@@ -508,7 +508,7 @@
   "restDurationFeatureAppealShortDescription": "የክኒን እረፍትን እና የመውሰድ መቋረጥን በትክክል ይከታተሉ",
   "restDurationFeatureAppealHeadline": "ክኒን መውሰድን ለጊዜው ማቆም",
   "restDurationFeatureAppealBody": "ለተወሰነ ጊዜ ክኒን መውሰድ ያቆሙበትን ጊዜ በክኒን ሉህ ላይ መመዝገብ ይችላሉ። በእረፍቱ ጊዜ የክኒን ቁጥር አይጨምርም፤ እንደገና መውሰድ ሲጀምሩ ወዲያውኑ መመዝገብ መቀጠል ይችላሉ።",
-  "featureAppealLocationLabel": "በመተግበሪያ ውስጥ ያለ ቦታ",
+  "featureAppealLocationLabel": "በመተግበሪያው ውስጥ ያለበት ቦታ",
   "criticalAlertFeatureAppealPoint1": "በትኩረት ሁነታ ወቅትም ማሳወቂያዎች ይደርሳሉ",
   "criticalAlertFeatureAppealPoint2": "በተቀናጀ ሰዓት አስተማማኝ ማስታወሻ",
   "criticalAlertFeatureAppealPoint3": "በአንድ ጠቅታ ቀላል ቅንብር",

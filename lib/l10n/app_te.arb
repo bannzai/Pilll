@@ -508,7 +508,7 @@
   "restDurationFeatureAppealShortDescription": "విరామం మరియు మాత్రలు తీసుకోవడం ఆపిన సమయాన్ని ఖచ్చితంగా నమోదు చేయండి",
   "restDurationFeatureAppealHeadline": "మాత్రలు తీసుకోవడంలో కొంత విరామం తీసుకోండి",
   "restDurationFeatureAppealBody": "కొంతకాలం మాత్రలు తీసుకోకుండా ఉండే వ్యవధిని మాత్రల స్ట్రిప్‌లో నమోదు చేయవచ్చు. విరామంలో మాత్ర సంఖ్య ముందుకు వెళ్లదు; మళ్లీ తీసుకోవడం ప్రారంభించిన వెంటనే నమోదును కొనసాగించవచ్చు.",
-  "featureAppealLocationLabel": "యాప్‌లోని స్థానం",
+  "featureAppealLocationLabel": "యాప్‌లో ఎక్కడ కనుగొనవచ్చు",
   "criticalAlertFeatureAppealPoint1": "ఫోకస్ మోడ్‌లో ఉన్నప్పటికీ నోటిఫికేషన్లు అందుతాయి",
   "criticalAlertFeatureAppealPoint2": "సెట్టుచేసిన సమయంలో ఖచ్చితంగా గుర్తుచేస్తుంది",
   "criticalAlertFeatureAppealPoint3": "ఒక ట్యాప్‌తో సులభ సెటప్",

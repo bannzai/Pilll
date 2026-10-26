@@ -508,7 +508,7 @@
   "restDurationFeatureAppealShortDescription": "د وقفې او د ګولیو د اخیستلو د بندېدو وختونه په کره ډول ثبت کړئ",
   "restDurationFeatureAppealHeadline": "د ګولۍ له اخیستو لږه دمه واخلئ",
   "restDurationFeatureAppealBody": "تاسو کولی شئ هغه موده په ګولیو پاڼ کې ثبت کړئ چې د څه وخت لپاره ګولۍ نه خورئ. د وقفې پر مهال د ګولۍ شمېره نه مخکې ځي، او کله چې بیا یې خوړل پیل کړئ، ثبتول سمدستي دوام ورکولی شئ.",
-  "featureAppealLocationLabel": "د اپلیکیشن دننه ځای",
+  "featureAppealLocationLabel": "په اپ کې یې ځای",
   "criticalAlertFeatureAppealPoint1": "د تمرکز حالت کې هم خبرتیاوې رسیږي",
   "criticalAlertFeatureAppealPoint2": "د ټاکل شوي وخت کې د باور وړ یادونه",
   "criticalAlertFeatureAppealPoint3": "د یو ټپ سره اسانه تنظیمات",
