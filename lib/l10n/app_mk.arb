@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Информациите за купувањето веќе ги користи друг корисник. Ве молиме проверете со која сметка на {accountName} сте најавени на уредот.",
   "purchaseErrorInvalidAppUserIdError": "Не можевме да ја потврдиме Вашата сметка. Ве молиме, рестартирајте ја апликацијата и обидете се повторно. Детали: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Друга набавка е во тек. Ве молиме почекајте малку и обидете се повторно",
-  "purchaseErrorUnknownBackendError": "Моментално не е возможна куповина. Ве молиме обидете се повторно по некое време. Ако проблемот не се реши, контактирајте не преку Поставки > Контакт. Детали: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "Купувањето во моментов не може да се заврши. Ве молиме, обидете се повторно малку подоцна. Ако проблемот продолжи, контактирајте нè преку Поставки > Контакт. Детали: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Купувањето не успеа. Ве молиме обидете се повторно подоцна. Ако проблемот не се реши, контактирајте не преку Поставки > Контакт. Детали: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Купувањето неуспеа за вашиот корисник. Ве молиме обидете се повторно подоцна. Ако проблемот не се реши, контактирајте не преку Поставки > Контакт. Детали: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Не можете да се претплатите на планот со вашиот {accountName}. Ве молиме проверете ги информациите за плаќање и обидете се повторно.",

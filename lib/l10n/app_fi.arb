@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Ostotiedot ovat jo toisen käyttäjän käytössä. Tarkista, mille {accountName}-tilille olet kirjautunut laitteellasi.",
   "purchaseErrorInvalidAppUserIdError": "Tiliäsi ei voitu vahvistaa. Käynnistä sovellus uudelleen ja yritä uudestaan. Lisätiedot: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Toista ostoa käsitellään parhaillaan. Odota hetki ja yritä uudelleen",
-  "purchaseErrorUnknownBackendError": "Osto ei ole tällä hetkellä mahdollinen. Odota hetki ja yritä uudelleen. Jos ongelma jatkuu, ota yhteyttä kohdassa Asetukset > Ota yhteyttä. Lisätiedot: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "Ostoa ei voi viimeistellä juuri nyt. Yritä hetken kuluttua uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdasta Asetukset > Ota yhteyttä. Lisätiedot: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Osto epäonnistui. Odota hetki ja yritä uudelleen. Jos ongelma ei ratkea, ota yhteyttä meihin valitsemalla Asetukset > Ota yhteyttä. Tiedot: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Ostaminen käyttäjätililläsi epäonnistui. Odota hetki ja yritä uudelleen. Jos ongelma ei ratkea, ota yhteyttä kohdasta Asetukset > Yhteydenotto. Yksityiskohdat: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Käyttämälläsi {accountName}-tilillä ei voi liittyä tilaukseen. Tarkista maksutietosi ja yritä uudelleen.",

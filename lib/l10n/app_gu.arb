@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "આ ખરીદીની માહિતી બીજા વપરાશકર્તા દ્વારા પહેલેથી ઉપયોગમાં લેવાઈ રહી છે. કૃપા કરીને તમારા ઉપકરણમાં સાઇન ઇન કરેલું {accountName} ખાતું તપાસો.",
   "purchaseErrorInvalidAppUserIdError": "તમારું એકાઉન્ટ ચકાસી શકાયું નથી. કૃપા કરીને ઍપ ફરી શરૂ કરીને ફરી પ્રયાસ કરો. વિગતો: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "બીજી ખરીદીની પ્રક્રિયા ચાલી રહી છે. કૃપા કરીને થોડી વાર પછી ફરી પ્રયાસ કરો",
-  "purchaseErrorUnknownBackendError": "હાલમાં ખરીદી કરી શકાતી નથી. કૃપા કરીને થોડા સમય પછી ફરીથી પ્રયાસ કરો. જો સમસ્યા ઉકેલાય નહીં તો સેટિંગ્સ > સંપર્ક દ્વારા અમારો સંપર્ક કરો. વિગતો: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "હાલમાં ખરીદી પૂર્ણ થઈ શકતી નથી. કૃપા કરીને થોડી વાર પછી ફરી પ્રયાસ કરો. સમસ્યા ચાલુ રહે તો સેટિંગ્સ > સંપર્ક દ્વારા અમારો સંપર્ક કરો. વિગતો: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "ખરીદી નિષ્ફળ થઈ. કૃપા કરીને થોડા સમય પછી ફરીથી પ્રયાસ કરો. જો સમસ્યા હલ ન થાય તો સેટિંગ્સ > સંપર્ક દ્વારા અમારો સંપર્ક કરો. વિગતો: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "તમારા યુઝર માટે ખરીદી નિષ્ફળ ગઈ. કૃપા કરીને થોડો સમય રાખીને ફરીથી પ્રયાસ કરો. જો તે ઉકેલાતું નથી તો સેટિંગ્સ > પૂછપરછ થી સંપર્ક કરો. વિગતો: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "તમારા {accountName} માં પ્લાનમાં જોડાઈ શકાતું નથી. ચુકવણીની માહિતી ચકાસીને ફરીથી પ્રયાસ કરો",

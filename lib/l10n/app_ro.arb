@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Informațiile despre această achiziție sunt deja folosite de alt utilizator. Verifică ce cont {accountName} este conectat pe dispozitivul tău.",
   "purchaseErrorInvalidAppUserIdError": "Nu am putut verifica contul tău. Repornește aplicația și încearcă din nou. Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "O altă achiziție este în curs de procesare. Așteaptă puțin și încearcă din nou",
-  "purchaseErrorUnknownBackendError": "În prezent, achiziția nu este posibilă. Vă rugăm să încercați din nou după un timp. Dacă problema persistă, vă rugăm să ne contactați prin Setări > Contact. Detalii: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "Achiziția nu poate fi finalizată acum. Încearcă din nou puțin mai târziu. Dacă problema persistă, contactează-ne din Setări > Contact. Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Achiziția a eșuat. Vă rugăm să încercați din nou după un timp. Dacă problema persistă, vă rugăm să ne contactați prin Setări > Contactează-ne. Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Achiziția a eșuat pentru utilizatorul dvs. Vă rugăm să încercați din nou după un timp. Dacă problema persistă, vă rugăm să ne contactați prin Setări > Contact. Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Nu puteți să vă abonați la plan cu contul dvs. {accountName}. Vă rugăm să verificați informațiile de plată și să încercați din nou.",

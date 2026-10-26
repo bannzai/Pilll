@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Købsoplysningerne bruges allerede af en anden bruger. Tjek, hvilken {accountName}-konto du er logget ind på på din enhed.",
   "purchaseErrorInvalidAppUserIdError": "Vi kunne ikke bekræfte din konto. Genstart appen, og prøv igen. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Et andet køb er ved at blive behandlet. Vent lidt, og prøv igen",
-  "purchaseErrorUnknownBackendError": "Du kan ikke foretage køb i øjeblikket. Prøv igen om lidt. Hvis problemet fortsætter, bedes du kontakte os via Indstillinger > Kontakt. Detaljer: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "Købet kan ikke gennemføres lige nu. Prøv igen om lidt. Hvis problemet fortsætter, kan du kontakte os via Indstillinger > Kontakt. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Købet fejlede. Vent et øjeblik og prøv igen. Hvis problemet ikke løses, kontakt os via Indstillinger > Kontakt. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Købet mislykkedes for din bruger. Prøv igen senere. Hvis problemet fortsætter, kontakt os via Indstillinger > Kontakt os. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Du kan ikke tilmelde dig planen med din {accountName}. Kontrollér dine betalingsoplysninger og prøv igen.",

@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Satınalma məlumatı başqa bir istifadəçi tərəfindən istifadə olunur. Zəhmət olmasa, cihazınızda daxil olduğunuz {accountName} hesabını yoxlayın.",
   "purchaseErrorInvalidAppUserIdError": "Hesabınızı təsdiqləmək mümkün olmadı. Zəhmət olmasa, tətbiqi yenidən başladın və təkrar cəhd edin. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Başqa bir alış əməliyyatı davam edir. Zəhmət olmasa, bir qədər sonra yenidən cəhd edin",
-  "purchaseErrorUnknownBackendError": "Hazırda alış-veriş mümkün deyil. Bir müddət sonra yenidən cəhd edin. Problem həll olmursa Ayarlar > Müraciət vasitəsilə bizə müraciət edin. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "Hazırda alış-verişi tamamlamaq mümkün deyil. Zəhmət olmasa, bir az sonra yenidən cəhd edin. Problem davam edərsə, Parametrlər > Əlaqə bölməsindən bizimlə əlaqə saxlayın. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Satın alma uğursuz oldu. Bir müddət sonra yenidən cəhd edin. Problemin həlli olmadıqda Tənzimləmələr > Müraciət bölməsindən bizimlə əlaqə saxlayın. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Bu istifadəçi ilə alış-veriş uğursuz oldu. Bir az gözləyib yenidən cəhd edin. Əgər problem həll olunmazsa, Tənzimləmələr > Müraciət vasitəsilə bizimlə əlaqə saxlayın. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Sizin {accountName} hesabınızla plana qoşulmaq mümkün deyil. Ödəniş məlumatlarınızı yoxlayın və yenidən cəhd edin",

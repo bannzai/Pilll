@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Bu xarid maʼlumotlaridan boshqa foydalanuvchi foydalanmoqda. Iltimos, qurilmangizda qaysi {accountName} hisobiga kirilganini tekshiring.",
   "purchaseErrorInvalidAppUserIdError": "Hisobingizni tasdiqlab boʻlmadi. Iltimos, ilovani qayta ishga tushiring va yana urinib koʻring. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Boshqa xarid amalga oshirilmoqda. Biroz kutib, qayta urinib koʻring",
-  "purchaseErrorUnknownBackendError": "Hozirda xarid qilib bo'lmaydi. Biroz vaqt o'tkazib, yana urinib ko'ring. Agar muammo hal bo'lmasa, Sozlamalar > Murojaat orqali murojaat qiling. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "Hozir xaridni yakunlab bo‘lmaydi. Iltimos, birozdan keyin qayta urinib ko‘ring. Muammo davom etsa, Sozlamalar > Bogʻlanish orqali biz bilan bogʻlaning. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Xarid amalga oshmadi. Biroz vaqtdan so'ng qayta urinib ko'ring. Agar muammo hal bo'lmasa, Sozlamalar > Murojaat orqali biz bilan bog'laning. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Sizning foydalanuvchi akkauntingiz uchun xarid muvaffaqiyatsiz tugadi. Biroz kutib yana urinib ko'ring. Agar muammo hal bo'lmasa, Sozlamalar > Murojaat orqali biz bilan bog'laning. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Sizning {accountName} hisobingizda rejaga obuna bo'lish mumkin emas. To'lov ma'lumotlaringizni tekshirib, qayta urinib ko'ring.",

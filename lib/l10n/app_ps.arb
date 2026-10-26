@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "د دې پېرود معلومات بل کاروونکی کاروي. مهرباني وکړئ په خپل وسیله کې ننوتلی د {accountName} حساب وګورئ.",
   "purchaseErrorInvalidAppUserIdError": "ستاسو حساب تایید نه شو. مهرباني وکړئ اپ بیا پیل کړئ او بیا هڅه وکړئ. جزییات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "بله پېرودنه روانه ده. مهرباني وکړئ لږ شېبه انتظار وکړئ او بیا هڅه وکړئ",
-  "purchaseErrorUnknownBackendError": "اوس مهال د پیرودلو توان نشته. د یو څه وخت وروسته بیا هڅه وکړئ. که ستونزه حل نشي نو د تنظیمات > پوښتنې څخه اړیکه ونیسئ. توضیحات: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "اوس مهال پېرود بشپړېدای نه شي. مهرباني وکړئ لږ وروسته بیا هڅه وکړئ. که ستونزه دوام وکړي، د امستنو > اړیکه له لارې له موږ سره اړیکه ونیسئ. جزیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "د پیرودلو ناکامي. مهرباني وروسته بیا هڅه وکړئ. که دا حل نشي نو د تنظیمات > پوښتنه څخه موږ سره اړیکه ونیسئ. توضیحات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "ستاسو د کارونکي لپاره پیرود ناکام شو. لږ وروسته بیا هڅه وکړئ. که دا حل نشي نو ترتیبات > اړیکه څخه موږ سره اړیکه ونیسئ. جزئیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "ستاسو د {accountName} څخه د پلان غړیتوب نشي کیدی. مهرباني وکړئ خپل د تادیاتو معلومات وګورئ او بیا هڅه وکړئ",

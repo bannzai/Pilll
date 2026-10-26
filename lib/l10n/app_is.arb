@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Kaupupplýsingarnar eru þegar í notkun hjá öðrum notanda. Athugaðu hvaða {accountName}-reikningur er skráður inn í tækinu þínu.",
   "purchaseErrorInvalidAppUserIdError": "Ekki tókst að staðfesta aðganginn þinn. Endurræstu appið og reyndu aftur. Nánari upplýsingar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Önnur kaup eru í vinnslu. Bíddu aðeins og reyndu aftur",
-  "purchaseErrorUnknownBackendError": "Ekki er hægt að kaupa í augnablikinu. Vinsamlegast reyndu aftur síðar. Ef vandamálið leysist ekki, hafðu samband við okkur í gegnum Stillingar > Fyrirspurnir. Nánar: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "Ekki er hægt að ljúka kaupunum eins og er. Prófaðu aftur eftir smástund. Ef vandinn heldur áfram geturðu haft samband við okkur í Stillingar > Hafa samband. Nánari upplýsingar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Kaup mistókst. Reyndu aftur síðar. Ef vandamálið helst, hafðu samband í gegnum Stillingar > Fyrirspurnir. Nánar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Kaup mistókst fyrir þinn notanda. Vinsamlegast reyndu aftur síðar. Ef vandamálið helst, vinsamlegast hafðu samband í gegnum Stillingar > Fyrirspurnir. Nánar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Ekki er hægt að skrá {accountName} reikninginn þinn í áskrift. Vinsamlegast athugaðu greiðsluupplýsingarnar þínar og reyndu aftur.",

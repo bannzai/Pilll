@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Thông tin mua hàng này đã được một người dùng khác sử dụng. Vui lòng kiểm tra tài khoản {accountName} đang đăng nhập trên thiết bị của bạn.",
   "purchaseErrorInvalidAppUserIdError": "Không thể xác minh tài khoản của bạn. Vui lòng khởi động lại ứng dụng rồi thử lại. Chi tiết: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Một giao dịch mua khác đang được xử lý. Vui lòng đợi một lát rồi thử lại",
-  "purchaseErrorUnknownBackendError": "Hiện tại không thể mua hàng. Vui lòng thử lại sau một thời gian. Nếu vấn đề vẫn chưa được giải quyết, vui lòng liên hệ qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "Hiện chưa thể hoàn tất giao dịch mua. Vui lòng thử lại sau ít phút. Nếu sự cố vẫn tiếp diễn, vui lòng liên hệ với chúng tôi qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Giao dịch mua hàng thất bại. Vui lòng thử lại sau một thời gian. Nếu vấn đề vẫn không được giải quyết, vui lòng liên hệ với chúng tôi qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Không thể mua hàng với tài khoản người dùng của bạn. Vui lòng đợi một lúc rồi thử lại. Nếu vấn đề vẫn không được giải quyết, hãy liên hệ với chúng tôi qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Tài khoản {accountName} của bạn không thể đăng ký gói premium. Vui lòng kiểm tra thông tin thanh toán và thử lại.",

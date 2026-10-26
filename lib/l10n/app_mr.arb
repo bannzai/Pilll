@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "या खरेदीची माहिती दुसरा वापरकर्ता आधीच वापरत आहे. कृपया तुमच्या डिव्हाइसवर लॉग इन असलेले {accountName} खाते तपासा.",
   "purchaseErrorInvalidAppUserIdError": "तुमचे खाते पडताळता आले नाही. कृपया अॅप पुन्हा सुरू करून पुन्हा प्रयत्न करा. तपशील: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "दुसऱ्या खरेदीची प्रक्रिया सुरू आहे. कृपया थोड्या वेळाने पुन्हा प्रयत्न करा",
-  "purchaseErrorUnknownBackendError": "सध्या खरेदी करता येत नाही. थोड्या वेळाने पुन्हा प्रयत्न करा. जर समस्या सुटली नाही तर सेटिंग्ज > संपर्क या मार्गे संपर्क साधा. तपशील: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "सध्या खरेदी पूर्ण करता येत नाही. कृपया थोड्या वेळाने पुन्हा प्रयत्न करा. समस्या कायम राहिल्यास, सेटिंग्ज > संपर्क करा येथून आमच्याशी संपर्क साधा. तपशील: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "खरेदी अयशस्वी झाली. काही वेळानंतर पुन्हा प्रयत्न करा. समस्या सुटत नसल्यास सेटिंग्स > संपर्क मधून संपर्क साधा. तपशील: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "तुमच्या वापरकर्त्यासाठी खरेदी अयशस्वी झाली. कृपया काही वेळानंतर पुन्हा प्रयत्न करा. समस्या सुटत नसल्यास सेटिंग्ज > चौकशी द्वारे आमच्याशी संपर्क साधा. तपशील: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "तुमच्या {accountName} वर प्लानची सदस्यता घेता येत नाही. कृपया तुमची पेमेंट माहिती तपासून पुन्हा प्रयत्न करा",

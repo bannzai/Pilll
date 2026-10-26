@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "这笔购买已由其他用户使用。请检查设备上登录的 {accountName} 账号。",
   "purchaseErrorInvalidAppUserIdError": "无法验证你的账号。请重启应用后再试。详情：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "另一笔购买正在处理中，请稍等片刻再试",
-  "purchaseErrorUnknownBackendError": "目前无法购买。请稍后再试。如果问题仍未解决，请通过\"设置 > 联系我们\"与我们联系。详情：{exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "目前无法完成购买，请稍后再试。如果问题仍未解决，请通过设置 > 联系我们与我们联系。详情：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "购买失败。请稍后重试。如果问题仍未解决，请通过 设置 > 联系我们 进行咨询。详细信息: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "您的用户购买失败。请稍后重试。如果问题仍未解决，请通过 设置 > 联系我们 进行咨询。详细信息：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "您的 {accountName} 无法加入此计划。请检查您的付款信息后重试。",

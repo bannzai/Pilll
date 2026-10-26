@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Ginagamit na ng ibang user ang impormasyon ng pagbiling ito. Pakitingnan po ang {accountName} account na naka-sign in sa device ninyo.",
   "purchaseErrorInvalidAppUserIdError": "Hindi namin ma-verify ang inyong account. Pakisuyong i-restart ang app at subukan muli. Mga detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "May isa pang pagbiling pinoproseso. Pakihintay po sandali bago subukan muli",
-  "purchaseErrorUnknownBackendError": "Hindi available ang pagbili sa ngayon. Subukan ulit mamaya. Kung tuloy-tuloy ang problema, makipag-ugnayan sa amin sa Mga Setting > Makipag-ugnayan. Detalye: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "Hindi makumpleto ang pagbili sa ngayon. Pakisubukan po muli pagkalipas ng ilang sandali. Kung magpapatuloy ang problema, makipag-ugnayan po sa amin sa Mga Setting > Makipag-ugnayan. Mga detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Nabigo ang pagbili. Maghintay muna ng konti at subukan ulit. Kung hindi pa rin naresolba, makipag-ugnayan sa amin sa Settings > Contact. Mga detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Nabigo ang pagbili para sa inyong user. Pakisubok ulit pagkatapos ng ilang sandali. Kung hindi pa rin naayos, makipag-ugnayan sa amin sa Settings > Contact Us. Detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Hindi makapag-subscribe sa plan ang inyong {accountName}. Pakisuri ang inyong impormasyon sa pagbabayad at subukan ulit.",

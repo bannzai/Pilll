@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Informasi pembelian ini sudah digunakan oleh pengguna lain. Silakan periksa akun {accountName} yang masuk di perangkat Anda.",
   "purchaseErrorInvalidAppUserIdError": "Akun Anda tidak dapat diverifikasi. Silakan mulai ulang aplikasi, lalu coba lagi. Detail: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Pembelian lain sedang diproses. Tunggu sebentar, lalu coba lagi",
-  "purchaseErrorUnknownBackendError": "Saat ini tidak dapat melakukan pembelian. Silakan coba lagi setelah beberapa saat. Jika masalah tidak teratasi, silakan hubungi kami melalui Pengaturan > Hubungi Kami. Detail: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "Pembelian belum dapat diselesaikan saat ini. Silakan coba lagi nanti. Jika masalah berlanjut, hubungi kami melalui Pengaturan > Hubungi kami. Detail: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Pembelian gagal. Silakan coba lagi setelah beberapa saat. Jika masalah berlanjut, hubungi kami melalui Pengaturan > Hubungi Kami. Detail: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Pembelian gagal untuk pengguna Anda. Silakan coba lagi nanti. Jika masalah tidak teratasi, silakan hubungi kami melalui Pengaturan > Hubungi Kami. Detail: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Tidak dapat berlangganan paket dengan {accountName} Anda. Silakan periksa informasi pembayaran Anda dan coba lagi.",

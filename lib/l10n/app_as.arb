@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "ক্ৰয়ৰ তথ্য আন এজন ব্যৱহাৰকাৰীয়ে ব্যৱহাৰ কৰি আছে। অনুগ্ৰহ কৰি আপোনাৰ ডিভাইচত লগ ইন কৰা {accountName} পৰীক্ষা কৰক।",
   "purchaseErrorInvalidAppUserIdError": "আপোনাৰ পৰিচয় নিশ্চিত কৰিব পৰা নগ’ল। অনুগ্ৰহ কৰি এপটো পুনৰ আৰম্ভ কৰি আকৌ চেষ্টা কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "আন এটা ক্ৰয়ৰ প্ৰক্ৰিয়া চলি আছে। অনুগ্ৰহ কৰি অলপ সময়ৰ পাছত পুনৰ চেষ্টা কৰক",
-  "purchaseErrorUnknownBackendError": "বৰ্তমান ক্ৰয় কৰিব পৰা নাই। কিছু সময় অপেক্ষা কৰি পুনৰ চেষ্টা কৰক। সমাধান নহ'লে ছেটিংছ > সোধা-পোছা ৰ পৰা যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "এতিয়া ক্ৰয় সম্পূৰ্ণ কৰিব পৰা নাই। অনুগ্ৰহ কৰি কিছু সময় পাছত পুনৰ চেষ্টা কৰক। সমস্যাটো থাকিলে ছেটিংছ > যোগাযোগৰ জৰিয়তে আমাৰ সৈতে যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "ক্ৰয় কৰাত বিফল হ'ল। কিছু সময়ৰ পিছত পুনৰ চেষ্টা কৰক। যদি সমাধান নহয় তেন্তে ছেটিংছ > যোগাযোগৰ যোগেদি আমাৰ লগত যোগাযোগ কৰক। বিতং: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "আপোনাৰ ব্যৱহাৰকাৰীৰ বাবে ক্ৰয় কৰিবত ব্যৰ্থ হৈছে। কিছু সময় অপেক্ষা কৰি পুনৰ চেষ্টা কৰক। সমাধান নহ'লে ছেটিংছ > যোগাযোগৰ জৰিয়তে আমাৰ লগত যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "আপোনাৰ {accountName} ৰ জৰিয়তে প্লেনত যোগদান কৰিব নোৱাৰি। আপোনাৰ পেমেণ্ট তথ্য পৰীক্ষা কৰি পুনৰ চেষ্টা কৰক।",

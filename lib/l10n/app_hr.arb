@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Podatke o kupnji već koristi drugi korisnik. Provjerite na koji ste račun {accountName} prijavljeni na uređaju.",
   "purchaseErrorInvalidAppUserIdError": "Nismo mogli potvrditi vaš račun. Ponovno pokrenite aplikaciju i pokušajte opet. Pojedinosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Druga kupnja je u tijeku. Pričekajte malo pa pokušajte ponovno",
-  "purchaseErrorUnknownBackendError": "Trenutno nije moguće izvršiti kupnju. Molimo pokušajte ponovo kasnije. Ako se problem nastavi, kontaktirajte nas preko Postavke > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "Kupnju trenutačno nije moguće dovršiti. Pokušajte ponovno malo kasnije. Ako se problem nastavi, obratite nam se putem Postavke > Kontakt. Pojedinosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Neuspješna kupnja. Molimo pokušajte ponovo kasnije. Ako se problem nastavi, kontaktirajte nas putem Postavke > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Kupnja za vašeg korisnika nije uspjela. Molimo pokušajte ponovo nakon nekog vremena. Ako se problem nastavi, obratite nam se putem Postavke > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "S vašim {accountName} se ne možete pretplatiti na plan. Molimo provjerite podatke za plaćanje i pokušajte ponovno.",

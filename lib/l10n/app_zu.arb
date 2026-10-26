@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Imininingwane yalokhu kuthenga isivele isetshenziswa omunye umsebenzisi. Sicela uhlole i-akhawunti ye-{accountName} ongene ngayo kudivayisi yakho.",
   "purchaseErrorInvalidAppUserIdError": "Asikwazanga ukuqinisekisa i-akhawunti yakho. Sicela uqale kabusha uhlelo lokusebenza bese uzama futhi. Imininingwane: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Okunye ukuthenga kuyacutshungulwa. Sicela ulinde isikhashana bese uzama futhi",
-  "purchaseErrorUnknownBackendError": "Ngeke ukwazi ukuthenga manje. Sicela uzame futhi ngemva kwesikhathi. Uma inkinga iqhubeka, xhumana nathi ku-Izilungiselelo > Buza. Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "Ukuthenga akukwazi ukuqedwa okwamanje. Sicela uzame futhi ngemva kwesikhashana. Uma inkinga iqhubeka, sicela usithinte kokuthi Izilungiselelo > Xhumana nathi. Imininingwane: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Ukuthenga kuhlulekile. Sicela uzame futhi ngemuva kwesikhathi. Uma inkinga ingalungiseki, sicela uxhumane nathi nga Izilungiselelo > Ukuxhumana. Imininingwane: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Ukuthenga kwe-akhawunti yakho yemsebenzisi akuphumelelanga. Sicela uzame futhi ngemuva kwesikhathi. Uma le nkinga ingalungiseki, sicela uxhumane nathi ngokungena ku-Izilungiselelo > Buza. Imininingwane: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Nge-akhawunti yakho {accountName} awukwazi ukubhalisa esichuninini. Sicela uhlole imininingwane yakho yokukhokha bese uzama futhi.",

@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Dä Chauf isch scho mit eme andere Benutzerkonto verbunde. Lueg bitte, mit welem {accountName}-Konto du uf dim Grät agmäldet bisch.",
   "purchaseErrorInvalidAppUserIdError": "Mir händ dis Konto nöd chöne überprüefe. Start d App bitte neu und probier s nomal. Detail: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "En andere Chauf isch grad am Verarbeite. Wart bitte es Bitzli und probier's nomal",
-  "purchaseErrorUnknownBackendError": "Derzitt chönd mir nöd chaufe. Bitte warte es bitzli und versuech es denn nomol. Falls sich s Problem nöd löst, melde di bitte über Iistellige > Kontakt. Details: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "De Chauf gaht im Momänt nöd dure. Probier's bitte spöter nomal. Wänn s Problem bliibt, chasch üs under Iistellige > Kontakt schriibe. Detail: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "De Chauf isch fehlgschlage. Bitte warte es bizli und versuech es nomal. Falls sich s Problem nid löst, chönd Sie üs unter Iistellige > Kontakt kontaktiere. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "De Chauf für Ihre Nutzer isch fehlgeschlage. Bitte warte Sie es Wili und versuche Sie es nomli. Falls s Problem witerbesteit, melde Sie sich über Istellige > Afrog. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Mit Ihrem {accountName} isch kei Plan-Aameldig möglich. Bitte prüefe Sie Ihri Zaligsinformatione und versuche Sie es nomol.",

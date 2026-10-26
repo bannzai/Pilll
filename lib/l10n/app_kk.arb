@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Сатып алу деректерін басқа пайдаланушы қолданып жатыр. Құрылғыңызда кірген {accountName} есептік жазбасын тексеріңіз.",
   "purchaseErrorInvalidAppUserIdError": "Есептік жазбаңызды растау мүмкін болмады. Қолданбаны қайта іске қосып, қайталап көріңіз. Толығырақ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Басқа сатып алу өңделіп жатыр. Сәл күтіп, қайта көріңіз",
-  "purchaseErrorUnknownBackendError": "Қазір сатып алу мүмкін емес. Біраз уақыттан кейін қайталап көріңіз. Мәселе шешілмесе, Параметрлер > Хабарласу арқылы бізге хабарласыңыз. Егжей-тегжейі: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "Қазір сатып алуды аяқтау мүмкін емес. Сәлден кейін қайта көріңіз. Мәселе шешілмесе, Баптаулар > Бізбен байланысу арқылы хабарласыңыз. Мәліметтер: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Сатып алу сәтсіз аяқталды. Біраз уақыттан кейін қайта көріңіз. Егер мәселе шешілмесе, Баптаулар > Сұрау арқылы хабарласыңыз. Толық ақпарат: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Сіздің пайдаланушы есептік жазбаңыз арқылы сатып алу сәтсіз аяқталды. Біраз уақыттан кейін қайта көріңіз. Егер мәселе шешілмесе, Баптаулар > Сұрау арқылы хабарласыңыз. Егжей-тегжейлі: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Сіздің {accountName} арқылы жоспарға жазылу мүмкін емес. Төлем ақпаратын тексеріп, қайталап көріңіз",

@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Сатып алуу маалыматын башка колдонуучу колдонуп жатат. Түзмөгүңүздө кирген {accountName} каттоо эсебин текшериңиз.",
   "purchaseErrorInvalidAppUserIdError": "Каттоо эсебиңизди ырастоо мүмкүн болгон жок. Колдонмону кайра иштетип, дагы бир жолу аракет кылып көрүңүз. Чоо-жайы: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Башка сатып алуу иштетилип жатат. Бир аз күтүп, кайра аракет кылыңыз",
-  "purchaseErrorUnknownBackendError": "Азырдакы учурда сатып алуу мүмкүн эмес. Убакыт өткөндөн кийин кайра аракет кылыңыз. Эгер чечилбесе, Жөндөөлөр > Байланыш арқылуу байланышыңыз. Кеңири маалымат: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "Азыр сатып алууну аяктоо мүмкүн болбой жатат. Бир аздан кийин кайра аракет кылып көрүңүз. Маселе чечилбесе, Жөндөөлөр > Байланышуу аркылуу бизге кайрылыңыз. Чоо-жайы: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Сатып алуу ийгиликсиз аяктады. Убакыт өткөзүп кайра аракет кылыңыз. Эгер маселе чечилбесе Жөндөөлөр > Кайрылуу аркылуу байланышыңыз. Толук маалымат: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Сиздин колдонуучу менен сатып алуу ийгиликсиз аяктады. Убакыт өткөрүп кайра аракет кылыңыз. Эгер чечилбесе, Жөндөөлөр > Кайрылуу аркылуу байланышыңыз. Кеңири маалымат: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Сиздин {accountName} аркылуу планга жазылуу мүмкүн эмес. Төлөм маалыматыңызды текшерип, кайра аракет кылыңыз",

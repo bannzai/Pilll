@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "ഈ വാങ്ങലിന്റെ വിവരങ്ങൾ മറ്റൊരു ഉപയോക്താവ് ഇതിനകം ഉപയോഗിക്കുന്നുണ്ട്. നിങ്ങളുടെ ഉപകരണത്തിൽ സൈൻ ഇൻ ചെയ്തിരിക്കുന്ന {accountName} അക്കൗണ്ട് പരിശോധിക്കൂ.",
   "purchaseErrorInvalidAppUserIdError": "നിങ്ങളുടെ അക്കൗണ്ട് സ്ഥിരീകരിക്കാനായില്ല. ദയവായി ആപ്പ് വീണ്ടും ആരംഭിച്ച് വീണ്ടും ശ്രമിക്കൂ. വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "മറ്റൊരു വാങ്ങൽ നടപടിയിലാണ്. ദയവായി കുറച്ച് കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കൂ",
-  "purchaseErrorUnknownBackendError": "ഇപ്പോൾ വാങ്ങാൻ കഴിയുന്നില്ല. കുറച്ച് സമയം കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കുക. പ്രശ്നം പരിഹരിക്കപ്പെടുന്നില്ലെങ്കിൽ ക്രമീകരണങ്ങൾ > ബന്ധപ്പെടുക വഴി ബന്ധപ്പെടുക. വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "ഇപ്പോൾ വാങ്ങൽ പൂർത്തിയാക്കാനാകുന്നില്ല. കുറച്ച് കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കൂ. പ്രശ്നം തുടരുകയാണെങ്കിൽ, ക്രമീകരണങ്ങൾ > ബന്ധപ്പെടുക വഴി ഞങ്ങളെ ബന്ധപ്പെടൂ. വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "വാങ്ങൽ പരാജയപ്പെട്ടു. കുറച്ച് സമയം കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കുക. പ്രശ്നം പരിഹരിക്കപ്പെടുന്നില്ലെങ്കിൽ ക്രമീകരണങ്ങൾ > അന്വേഷണം വഴി ബന്ധപ്പെടുക. വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "നിങ്ങളുടെ ഉപയോക്തൃ അക്കൗണ്ടിൽ പർച്ചേസ് പരാജയപ്പെട്ടു. കുറച്ച് സമയം കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കുക. പ്രശ്നം പരിഹരിക്കപ്പെടുന്നില്ലെങ്കിൽ സെറ്റിംഗ്സ് > അന്വേഷണം വഴി ബന്ധപ്പെടുക. വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "നിങ്ങളുടെ {accountName} ഉപയോഗിച്ച് പ്ലാൻ സബ്‌സ്‌ക്രൈബ് ചെയ്യാൻ കഴിയില്ല. പേയ്‌മെന്റ് വിവരങ്ങൾ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക",

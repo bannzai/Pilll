@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "შეძენის ინფორმაცია უკვე გამოიყენება სხვა მომხმარებლის მიერ. გთხოვთ, შეამოწმოთ, რომელი {accountName} ანგარიშით ხართ შესული მოწყობილობაზე.",
   "purchaseErrorInvalidAppUserIdError": "თქვენი ანგარიშის დადასტურება ვერ მოხერხდა. გთხოვთ, ხელახლა გაუშვათ აპი და კიდევ სცადოთ. დეტალები: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "სხვა შესყიდვა მუშავდება. გთხოვთ, ცოტა ხანს დაელოდოთ და ხელახლა სცადოთ",
-  "purchaseErrorUnknownBackendError": "ამჟამად შეძენა შეუძლებელია. გთხოვთ, მოგვიანებით სცადოთ ხელახლა. თუ პრობლემა არ მოგვარდება, დაგვიკავშირდით პარამეტრები > კონტაქტი მეშვეობით. დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "ამჟამად შეძენის დასრულება ვერ ხერხდება. გთხოვთ, ცოტა ხანში ხელახლა სცადოთ. თუ პრობლემა გაგრძელდება, დაგვიკავშირდით პარამეტრები > დაკავშირება განყოფილებიდან. დეტალები: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "შენაძენი ვერ მოხერხდა. გთხოვთ ცოტა ხანს დაელოდოთ და ხელახლა სცადოთ. თუ პრობლემა არ მოგვარდება, გთხოვთ დაგვიკავშირდეთ პარამეტრები > დახმარება მეშვეობით. დეტალები: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "თქვენი მომხმარებლისთვის შეძენა ვერ მოხერხდა. გთხოვთ, დაელოდოთ და კვლავ სცადოთ. თუ პრობლემა არ გადაიჭრება, მოგვმართოთ პარამეტრები > კონტაქტი გვერდიდან. დეტალები: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "თქვენი {accountName}-ით გეგმაზე ხელმოწერა შეუძლებელია. გთხოვთ, გადაამოწმოთ თქვენი გადახდის ინფორმაცია და სცადოთ ხელახლა.",

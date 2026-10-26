@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Esta compra xa está asociada a outra persoa usuaria. Comproba a conta de {accountName} coa que iniciaches sesión no dispositivo.",
   "purchaseErrorInvalidAppUserIdError": "Non puidemos verificar a túa conta. Reinicia a aplicación e téntao de novo, por favor. Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Hai outra compra en curso. Agarda un momento e téntao de novo",
-  "purchaseErrorUnknownBackendError": "Non é posible realizar a compra neste momento. Agarde un intre e ténteo de novo. Se o problema persiste, póñase en contacto a través de Configuración > Contacto. Detalles: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "Agora mesmo non se pode completar a compra. Volve tentalo máis tarde. Se o problema continúa, contacta connosco desde Axustes > Contacto. Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "A compra fallou. Téntao de novo pasado un tempo. Se o problema persiste, contacta connosco en Configuración > Contacto. Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Fallou a compra co teu usuario. Agarda un momento e téntao de novo. Se o problema persiste, contacta connosco desde Configuración > Contacto. Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "A túa {accountName} non pode subscribirse ao plan. Comproba a información de pagamento e téntao de novo.",

@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "ఈ కొనుగోలు సమాచారం ఇప్పటికే మరొక వినియోగదారు ఉపయోగిస్తున్నారు. దయచేసి మీ పరికరంలో సైన్ ఇన్ అయి ఉన్న {accountName} ఖాతాను తనిఖీ చేయండి.",
   "purchaseErrorInvalidAppUserIdError": "మీ ఖాతాను ధృవీకరించలేకపోయాం. దయచేసి యాప్‌ను మళ్లీ ప్రారంభించి మరోసారి ప్రయత్నించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "మరొక కొనుగోలు ప్రక్రియలో ఉంది. దయచేసి కొద్దిసేపటి తర్వాత మళ్లీ ప్రయత్నించండి",
-  "purchaseErrorUnknownBackendError": "ప్రస్తుతం కొనుగోలు చేయలేకపోతున్నాము. కొంత సమయం తర్వాత మళ్లీ ప్రయత్నించండి. సమస్య పరిష్కరం కాకపోతే సెట్టింగ్స్ > సంప్రదించండి ద్వారా మమ్మల్ని సంప్రదించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "ప్రస్తుతం కొనుగోలును పూర్తి చేయడం సాధ్యం కావడం లేదు. దయచేసి కాసేపటి తర్వాత మళ్లీ ప్రయత్నించండి. సమస్య కొనసాగితే, సెట్టింగ్‌లు > సంప్రదించండి ద్వారా మమ్మల్ని సంప్రదించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "కొనుగోలు విఫలమైంది. కొంత సమయం తర్వాత మళ్లీ ప్రయత్నించండి. ఇది పరిష్కరించబడకపోతే సెట్టింగ్‌లు > సంప్రదింపులు ద్వారా సంప్రదించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "మీ వినియోగదారు ఖాతాలో కొనుగోలు విఫలమైంది. కొంత సమయం తర్వాత మళ్లీ ప్రయత్నించండి. సమస్య పరిష్కరించకపోతే సెట్టింగ్స్ > సంప్రదింపు ద్వారా మాను సంప్రదించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "మీ {accountName}తో ప్లాన్‌కు చేరలేరు. దయచేసి మీ చెల్లింపు వివరాలను తనిఖీ చేసి మళ్లీ ప్రయత్నించండి",

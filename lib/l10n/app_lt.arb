@@ -302,7 +302,7 @@
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Pirkimo informacija jau naudojama kito naudotojo. Patikrinkite, prie kurios {accountName} paskyros esate prisijungę savo įrenginyje.",
   "purchaseErrorInvalidAppUserIdError": "Nepavyko patvirtinti jūsų paskyros. Paleiskite programėlę iš naujo ir bandykite dar kartą. Išsami informacija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Apdorojamas kitas pirkimas. Šiek tiek palaukite ir bandykite dar kartą",
-  "purchaseErrorUnknownBackendError": "Šiuo metu pirkimas nepasiekiamas. Palaukite ir bandykite dar kartą. Jei problema išlieka, susisiekite su mumis per Nustatymai > Kontaktai. Detalės: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "Šiuo metu nepavyksta užbaigti pirkimo. Po kurio laiko bandykite dar kartą. Jei problema išliks, susisiekite su mumis per Nustatymai > Susisiekti. Išsami informacija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Pirkimas nepavyko. Palaukite ir bandykite dar kartą. Jei problema išlieka, susisiekite su mumis per Nustatymai > Kreipimasis. Išsamiau: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Jūsų naudotojo pirkimas nepavyko. Palaukite šiek tiek ir bandykite dar kartą. Jei problema išlieka, kreipkitės per Nustatymai > Kontaktai. Išsami informacija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Su jūsų {accountName} paskyra negalima užsisakyti plano. Patikrinkite mokėjimo informaciją ir bandykite dar kartą.",
