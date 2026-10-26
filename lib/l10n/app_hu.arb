@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "A vágólapra másolva",
   "notificationNumber": "{number}. értesítés",
   "notificationTime": "Értesítés időpontja",
-  "timeZoneChangedTo": "{tz}-re módosítva",
+  "timeZoneChangedTo": "Az időzóna {tz} értékre változott",
   "changeStartOfPillDays": "A bevételi napok kezdetének módosítása",
   "changeEndOfPillDays": "A szedési napok végének módosítása",
   "cannotUpdateToReplacePillSheet": "Tabletta lap csere frissítése sikertelen id: {id}",

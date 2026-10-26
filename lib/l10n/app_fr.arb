@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Copié dans le presse-papiers",
   "notificationNumber": "Notification {number}",
   "notificationTime": "Heure de notification",
-  "timeZoneChangedTo": "Changé en {tz}",
+  "timeZoneChangedTo": "Le fuseau horaire a été défini sur {tz}",
   "changeStartOfPillDays": "Modifier le début des jours de dosage",
   "changeEndOfPillDays": "Modifier les jours de fin de traitement",
   "cannotUpdateToReplacePillSheet": "Impossible de mettre à jour en raison de l'ID de remplacement de la feuille de pilules : {id}",

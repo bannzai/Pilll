@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Պատճենվել է փոխանակման բուֆերում",
   "notificationNumber": "Ծանուցում {number}",
   "notificationTime": "Ծանուցման ժամը",
-  "timeZoneChangedTo": "{tz}-ին փոխված է",
+  "timeZoneChangedTo": "Ժամային գոտին փոխվել է՝ {tz}",
   "changeStartOfPillDays": "Ընդունման օրերի սկիզբը փոփոխել",
   "changeEndOfPillDays": "Փոփոխել ընդունման ավարտը",
   "cannotUpdateToReplacePillSheet": "Չհաջողվեց թարմացնել դեղահապի թերթի փոխարինումը id: {id}",

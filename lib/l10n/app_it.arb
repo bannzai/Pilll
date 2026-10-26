@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Copiato negli appunti",
   "notificationNumber": "Notifica {number}",
   "notificationTime": "Ora della notifica",
-  "timeZoneChangedTo": "Cambiato a {tz}",
+  "timeZoneChangedTo": "Il fuso orario è stato cambiato in {tz}",
   "changeStartOfPillDays": "Modifica l'inizio del conteggio dei giorni di assunzione",
   "changeEndOfPillDays": "Modifica fine del periodo di assunzione",
   "cannotUpdateToReplacePillSheet": "Impossibile aggiornare sostituendo il blister delle pillole id: {id}",

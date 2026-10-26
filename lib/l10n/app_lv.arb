@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Nokopēts starpliktuvē",
   "notificationNumber": "Paziņojums {number}",
   "notificationTime": "Paziņojuma laiks",
-  "timeZoneChangedTo": "Nomainīts uz {tz}",
+  "timeZoneChangedTo": "Laika josla mainīta uz {tz}",
   "changeStartOfPillDays": "Izmainīt lietošanas dienu skaitīšanas sākumu",
   "changeEndOfPillDays": "Mainīt terapijas beigas",
   "cannotUpdateToReplacePillSheet": "Nevar atjaunināt tablešu plāksni nomaiņas dēļ, ID: {id}",

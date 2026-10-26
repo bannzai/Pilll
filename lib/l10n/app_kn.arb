@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಲಾಗಿದೆ",
   "notificationNumber": "ಅಧಿಸೂಚನೆ {number}",
   "notificationTime": "ಅಧಿಸೂಚನೆಯ ಸಮಯ",
-  "timeZoneChangedTo": "{tz}ಗೆ ಬದಲಾಯಿಸಲಾಗಿದೆ",
+  "timeZoneChangedTo": "ಸಮಯ ವಲಯವನ್ನು {tz} ಗೆ ಬದಲಾಯಿಸಲಾಗಿದೆ",
   "changeStartOfPillDays": "ಸೇವನೆಯ ದಿನಗಳ ಆರಂಭವನ್ನು ಬದಲಾಯಿಸಿ",
   "changeEndOfPillDays": "ಸೇವನೆ ಅವಧಿಯ ಅಂತ್ಯವನ್ನು ಬದಲಿಸಿ",
   "cannotUpdateToReplacePillSheet": "ಪಿಲ್ ಶೀಟ್ ಬದಲಾಯಿಸುವಿಕೆಯಿಂದ ಅಪ್‌ಡೇಟ್ ಮಾಡಲಾಗಲಿಲ್ಲ id: {id}",

@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Nakopya na sa clipboard",
   "notificationNumber": "Abiso {number}",
   "notificationTime": "Oras ng abiso",
-  "timeZoneChangedTo": "Binago sa {tz}",
+  "timeZoneChangedTo": "Napalitan ang time zone sa {tz}",
   "changeStartOfPillDays": "Baguhin ang simula ng bilang ng araw ng pag-inom",
   "changeEndOfPillDays": "Baguhin ang katapusan ng mga araw ng pag-inom",
   "cannotUpdateToReplacePillSheet": "Hindi ma-update ang pill sheet dahil sa pagpapalit id: {id}",

@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "დაკოპირდა ბუფერში",
   "notificationNumber": "შეტყობინება {number}",
   "notificationTime": "შეტყობინების დრო",
-  "timeZoneChangedTo": "{tz}-ზე შეიცვალა",
+  "timeZoneChangedTo": "დროის სარტყელი შეიცვალა: {tz}",
   "changeStartOfPillDays": "მიღების დღეების დასაწყისის შეცვლა",
   "changeEndOfPillDays": "მიღების პერიოდის დასასრულის შეცვლა",
   "cannotUpdateToReplacePillSheet": "აბების ფურცლის ჩანაცვლებით განახლება ვერ ხერხდება id: {id}",

@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Wedi copïo i'r clipfwrdd",
   "notificationNumber": "Hysbysiad {number}",
   "notificationTime": "Amser yr hysbysiad",
-  "timeZoneChangedTo": "Newidiwyd i {tz}",
+  "timeZoneChangedTo": "Mae'r parth amser wedi'i newid i {tz}",
   "changeStartOfPillDays": "Newid dechrau'r dyddiau cymryd",
   "changeEndOfPillDays": "Newid diwedd cyfnod cymryd",
   "cannotUpdateToReplacePillSheet": "Methu diweddaru trwy amnewid taflen pil id: {id}",

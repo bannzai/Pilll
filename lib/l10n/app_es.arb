@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Copiado al portapapeles",
   "notificationNumber": "Notificación {number}",
   "notificationTime": "Hora de la notificación",
-  "timeZoneChangedTo": "Cambiado a {tz}",
+  "timeZoneChangedTo": "La zona horaria se cambió a {tz}",
   "changeStartOfPillDays": "Cambiar inicio de días de toma",
   "changeEndOfPillDays": "Cambiar el final del periodo de toma",
   "cannotUpdateToReplacePillSheet": "No se pudo actualizar el reemplazo del blíster id: {id}",

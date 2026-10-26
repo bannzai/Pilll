@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "تم النسخ إلى الحافظة",
   "notificationNumber": "الإشعار {number}",
   "notificationTime": "وقت الإشعار",
-  "timeZoneChangedTo": "تم التغيير إلى {tz}",
+  "timeZoneChangedTo": "تم تغيير المنطقة الزمنية إلى {tz}",
   "changeStartOfPillDays": "تغيير بداية أيام التناول",
   "changeEndOfPillDays": "تغيير نهاية فترة التناول",
   "cannotUpdateToReplacePillSheet": "تعذر تحديث شريط الحبوب بسبب الاستبدال المعرف: {id}",

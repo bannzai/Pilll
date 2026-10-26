@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Kopeeritud lõikelauale",
   "notificationNumber": "Teavitus {number}",
   "notificationTime": "Teavituse aeg",
-  "timeZoneChangedTo": "Muudetud ajavööndile {tz}",
+  "timeZoneChangedTo": "Ajavööndiks on nüüd {tz}",
   "changeStartOfPillDays": "Muuda võtmispäevade algust",
   "changeEndOfPillDays": "Muuda võtmispäevade lõppu",
   "cannotUpdateToReplacePillSheet": "Pillilehe asendamine ebaõnnestus id: {id}",

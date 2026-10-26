@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "已复制到剪贴板",
   "notificationNumber": "通知{number}",
   "notificationTime": "通知时间",
-  "timeZoneChangedTo": "时区已更改为{tz}",
+  "timeZoneChangedTo": "时区已更改为 {tz}",
   "changeStartOfPillDays": "更改服药起始日",
   "changeEndOfPillDays": "修改服用结束日期",
   "cannotUpdateToReplacePillSheet": "药片包替换更新失败 ID: {id}",

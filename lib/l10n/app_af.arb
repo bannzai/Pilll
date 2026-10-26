@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Na die knipbord gekopieer",
   "notificationNumber": "Kennisgewing {number}",
   "notificationTime": "Kennisgewingstyd",
-  "timeZoneChangedTo": "Tydsone is verander na {tz}",
+  "timeZoneChangedTo": "Tydsone verander na {tz}",
   "changeStartOfPillDays": "Verander die begin van doseringsdae",
   "changeEndOfPillDays": "Verander einde van innamedae",
   "cannotUpdateToReplacePillSheet": "Opdatering weens vervanging van die pilvel kon nie voltooi word nie. id: {id}",

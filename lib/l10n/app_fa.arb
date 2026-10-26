@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "در کلیپ‌بورد کپی شد",
   "notificationNumber": "اعلان {number}",
   "notificationTime": "زمان اعلان",
-  "timeZoneChangedTo": "منطقه زمانی به {tz} تغییر یافت",
+  "timeZoneChangedTo": "منطقهٔ زمانی به {tz} تغییر کرد",
   "changeStartOfPillDays": "تغییر شروع دوره مصرف",
   "changeEndOfPillDays": "تغییر پایان دوره مصرف",
   "cannotUpdateToReplacePillSheet": "به‌روزرسانی با جایگزینی ورق قرص امکان‌پذیر نیست id: {id}",

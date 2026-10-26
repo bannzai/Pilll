@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Kopirano u međuspremnik",
   "notificationNumber": "Obavijest {number}",
   "notificationTime": "Vrijeme obavijesti",
-  "timeZoneChangedTo": "Promijenjeno u {tz}",
+  "timeZoneChangedTo": "Vremenska zona promijenjena je na {tz}",
   "changeStartOfPillDays": "Promjeni početak uzimanja tableta",
   "changeEndOfPillDays": "Promjena kraja uzimanja",
   "cannotUpdateToReplacePillSheet": "Ažuriranje lista pilula nije uspjelo id: {id}",

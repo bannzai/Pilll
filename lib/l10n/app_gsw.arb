@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "I d Zwüscheablag kopiert",
   "notificationNumber": "Mitteilige {number}",
   "notificationTime": "Ziit vo de Erinnerig",
-  "timeZoneChangedTo": "Uf {tz} gänderet",
+  "timeZoneChangedTo": "D Ziitzoone isch uf {tz} gänderet worde",
   "changeStartOfPillDays": "Afang vo de Inahmetäg ändere",
   "changeEndOfPillDays": "Änd vo de Iinahmtäg ändere",
   "cannotUpdateToReplacePillSheet": "Pilleblatt chönd nöd uusgtuuscht werde id: {id}",

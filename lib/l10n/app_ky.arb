@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Алмашуу буферине көчүрүлдү",
   "notificationNumber": "Билдирүү {number}",
   "notificationTime": "Билдирүү убактысы",
-  "timeZoneChangedTo": "{tz} убакыт алкагына өзгөртүлдү",
+  "timeZoneChangedTo": "Убакыт алкагы {tz} болуп өзгөртүлдү",
   "changeStartOfPillDays": "Дары ичүүнүн башталуу күнүн өзгөртүү",
   "changeEndOfPillDays": "Ичүү мөөнөтүнүн аягын өзгөртүү",
   "cannotUpdateToReplacePillSheet": "Таблетка парагын алмаштырып жаңырта албадык id: {id}",

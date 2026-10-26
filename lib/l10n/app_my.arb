@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "ကလစ်ဘုတ်သို့ ကူးယူပြီးပါပြီ",
   "notificationNumber": "အသိပေးချက် {number}",
   "notificationTime": "အသိပေးချက်အချိန်",
-  "timeZoneChangedTo": "{tz} သို့ ပြောင်းလဲပြီးပါပြီ",
+  "timeZoneChangedTo": "အချိန်ဇုန်ကို {tz} သို့ ပြောင်းလဲပြီးပါပြီ",
   "changeStartOfPillDays": "သောက်သုံးရက်ပေါင်း၏ အစကို ပြောင်းလဲခြင်း",
   "changeEndOfPillDays": "သောက်သုံးရက်နေ့အဆုံးကို ပြောင်းလဲရန်",
   "cannotUpdateToReplacePillSheet": "ပီလ်ရှိတ် အစားထိုးမွမ်းမံ၍ မရပါ id: {id}",

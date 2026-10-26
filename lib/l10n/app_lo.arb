@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "ສຳເນົາໄປຍັງຄລິບບອດແລ້ວ",
   "notificationNumber": "ການແຈ້ງເຕືອນ {number}",
   "notificationTime": "ເວລາແຈ້ງເຕືອນ",
-  "timeZoneChangedTo": "ປ່ຽນເປັນ {tz} ແລ້ວ",
+  "timeZoneChangedTo": "ເຂດເວລາຖືກປ່ຽນເປັນ {tz} ແລ້ວ",
   "changeStartOfPillDays": "ປ່ຽນວັນເລີ່ມກິນຢາ",
   "changeEndOfPillDays": "ປ່ຽນແປງການສິ້ນສຸດວັນທີ່ກິນຢາ",
   "cannotUpdateToReplacePillSheet": "ບໍ່ສາມາດອັບເດດແຜ່ນຢາໂດຍການທົດແທນ id: {id}",

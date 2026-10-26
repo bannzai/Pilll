@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "ወደ ቅንጥብ ሰሌዳ ተቀድቷል",
   "notificationNumber": "ማሳወቂያ {number}",
   "notificationTime": "የማሳወቂያ ሰዓት",
-  "timeZoneChangedTo": "ወደ {tz} ተቀይሯል",
+  "timeZoneChangedTo": "የሰዓት ሰቅ ወደ {tz} ተቀይሯል",
   "changeStartOfPillDays": "የአወሳሰድ መጀመሪያ ቀን መቀየር",
   "changeEndOfPillDays": "የመድሃኒት መውሰጃ ቀናት መጨረሻ መቀየር",
   "cannotUpdateToReplacePillSheet": "በክኒን ሽርት መተካት ማሻሻል አልተሳካም id: {id}",

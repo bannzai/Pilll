@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Nukopijuota į iškarpinę",
   "notificationNumber": "Pranešimas {number}",
   "notificationTime": "Pranešimo laikas",
-  "timeZoneChangedTo": "Pakeista į {tz}",
+  "timeZoneChangedTo": "Laiko juosta pakeista į {tz}",
   "changeStartOfPillDays": "Keisti vartojimo pradžią",
   "changeEndOfPillDays": "Keisti vartojimo dienų pabaigą",
   "cannotUpdateToReplacePillSheet": "Tablečių paketo pakeitimo atnaujinimas nepavyko id: {id}",

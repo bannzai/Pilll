@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Copiouse no portapapeis",
   "notificationNumber": "Notificación {number}",
   "notificationTime": "Hora da notificación",
-  "timeZoneChangedTo": "Cambiado a {tz}",
+  "timeZoneChangedTo": "O fuso horario cambiouse a {tz}",
   "changeStartOfPillDays": "Cambiar o inicio dos días de toma",
   "changeEndOfPillDays": "Cambiar o final do período de toma",
   "cannotUpdateToReplacePillSheet": "Non se puido actualizar pola substitución da folla de píldoras id: {id}",

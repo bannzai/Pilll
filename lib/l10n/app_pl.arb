@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Skopiowano do schowka",
   "notificationNumber": "Powiadomienie {number}",
   "notificationTime": "Godzina powiadomienia",
-  "timeZoneChangedTo": "Zmieniono na {tz}",
+  "timeZoneChangedTo": "Strefa czasowa została zmieniona na {tz}",
   "changeStartOfPillDays": "Zmień początek liczenia dni przyjmowania",
   "changeEndOfPillDays": "Zmień koniec okresu przyjmowania",
   "cannotUpdateToReplacePillSheet": "Nie można zaktualizować z powodu wymiany opakowania tabletek id: {id}",

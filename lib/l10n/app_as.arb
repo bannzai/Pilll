@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "ক্লিপব’ৰ্ডলৈ কপি কৰা হ’ল",
   "notificationNumber": "জাননী {number}",
   "notificationTime": "জাননীৰ সময়",
-  "timeZoneChangedTo": "{tz}লৈ সলনি কৰা হ'ল",
+  "timeZoneChangedTo": "সময় অঞ্চল {tz}লৈ সলনি কৰা হৈছে",
   "changeStartOfPillDays": "সেৱন আৰম্ভৰ দিন সলনি কৰক",
   "changeEndOfPillDays": "সেৱনৰ দিনৰ সংখ্যাৰ সমাপন সলনি কৰক",
   "cannotUpdateToReplacePillSheet": "পিল শীট প্ৰতিস্থাপনৰ দ্বাৰা আপডেট কৰিব পৰা নাই id: {id}",

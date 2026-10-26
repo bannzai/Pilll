@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Αντιγράφηκε στο πρόχειρο",
   "notificationNumber": "Ειδοποίηση {number}",
   "notificationTime": "Ώρα ειδοποίησης",
-  "timeZoneChangedTo": "Άλλαξε σε {tz}",
+  "timeZoneChangedTo": "Η ζώνη ώρας άλλαξε σε {tz}",
   "changeStartOfPillDays": "Αλλαγή έναρξης ημερών λήψης",
   "changeEndOfPillDays": "Αλλαγή τέλους ημερών λήψης",
   "cannotUpdateToReplacePillSheet": "Δεν είναι δυνατή η ενημέρωση λόγω αντικατάστασης φύλλου χαπιών id: {id}",

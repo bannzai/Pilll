@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "क्लिपबोर्ड पर कॉपी हो गया",
   "notificationNumber": "सूचना {number}",
   "notificationTime": "सूचना का समय",
-  "timeZoneChangedTo": "{tz} में बदल दिया गया",
+  "timeZoneChangedTo": "समय क्षेत्र बदलकर {tz} कर दिया गया है",
   "changeStartOfPillDays": "सेवन अवधि की शुरुआत बदलें",
   "changeEndOfPillDays": "सेवन अवधि का अंत बदलें",
   "cannotUpdateToReplacePillSheet": "गोली शीट के बदलाव से अपडेट नहीं हो सका id: {id}",

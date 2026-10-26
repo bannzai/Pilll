@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "క్లిప్‌బోర్డ్‌కు కాపీ అయింది",
   "notificationNumber": "నోటిఫికేషన్ {number}",
   "notificationTime": "నోటిఫికేషన్ సమయం",
-  "timeZoneChangedTo": "{tz}కు మార్చబడింది",
+  "timeZoneChangedTo": "సమయ మండలం {tz}కి మార్చబడింది",
   "changeStartOfPillDays": "సేవన రోజుల ప్రారంభం మార్చండి",
   "changeEndOfPillDays": "సేవన కాలం ముగింపు మార్చండి",
   "cannotUpdateToReplacePillSheet": "పిల్ షీట్ మార్పిడిలో అప్డేట్ విఫలమైంది id: {id}",

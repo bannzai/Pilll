@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Imenakiliwa kwenye ubao wa kunakili",
   "notificationNumber": "Arifa {number}",
   "notificationTime": "Muda wa arifa",
-  "timeZoneChangedTo": "Imebadilishwa kuwa {tz}",
+  "timeZoneChangedTo": "Saa za eneo zimebadilishwa kuwa {tz}",
   "changeStartOfPillDays": "Badilisha mwanzo wa siku za kunywa dawa",
   "changeEndOfPillDays": "Badilisha mwisho wa kipindi cha umize dawa",
   "cannotUpdateToReplacePillSheet": "Imeshindwa kusasisha kutokana na kubadilisha karatasi ya vidonge id: {id}",

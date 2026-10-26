@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "คัดลอกไปยังคลิปบอร์ดแล้วค่ะ",
   "notificationNumber": "การแจ้งเตือน {number}",
   "notificationTime": "เวลาแจ้งเตือน",
-  "timeZoneChangedTo": "เปลี่ยนเป็น{tz}แล้ว",
+  "timeZoneChangedTo": "เปลี่ยนเขตเวลาเป็น {tz} แล้วค่ะ",
   "changeStartOfPillDays": "เปลี่ยนวันเริ่มต้นการรับประทานยา",
   "changeEndOfPillDays": "เปลี่ยนแปลงวันสิ้นสุดการรับประทานยา",
   "cannotUpdateToReplacePillSheet": "ไม่สามารถอัปเดตจากการเปลี่ยนแผงยาคุม id: {id}",

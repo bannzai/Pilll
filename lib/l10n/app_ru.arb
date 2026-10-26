@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Скопировано в буфер обмена",
   "notificationNumber": "Уведомление {number}",
   "notificationTime": "Время уведомления",
-  "timeZoneChangedTo": "Изменено на {tz}",
+  "timeZoneChangedTo": "Часовой пояс изменён на {tz}",
   "changeStartOfPillDays": "Изменить начало отсчета дней приема",
   "changeEndOfPillDays": "Изменить окончание периода приема",
   "cannotUpdateToReplacePillSheet": "Не удается обновить при замене упаковки таблеток id: {id}",

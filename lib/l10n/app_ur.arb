@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "کلپ بورڈ پر کاپی ہو گیا",
   "notificationNumber": "اطلاع {number}",
   "notificationTime": "اطلاع کا وقت",
-  "timeZoneChangedTo": "{tz} میں تبدیل کر دیا گیا",
+  "timeZoneChangedTo": "ٹائم زون {tz} میں تبدیل کر دیا گیا ہے",
   "changeStartOfPillDays": "دوا کے دنوں کی شروعات تبدیل کریں",
   "changeEndOfPillDays": "دوا لینے کی مدت کا اختتام تبدیل کریں",
   "cannotUpdateToReplacePillSheet": "پل شیٹ کی تبدیلی سے اپڈیٹ نہیں ہو سکا آئی ڈی: {id}",

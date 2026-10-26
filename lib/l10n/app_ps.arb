@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "کلیپبورډ ته کاپي شو",
   "notificationNumber": "خبرتیا {number}",
   "notificationTime": "د خبرتیا وخت",
-  "timeZoneChangedTo": "{tz} ته بدل شو",
+  "timeZoneChangedTo": "د وخت سیمه {tz} ته بدله شوه",
   "changeStartOfPillDays": "د اخستلو د پیل ورځ بدلول",
   "changeEndOfPillDays": "د استعمال ورځو د پای بدلون",
   "cannotUpdateToReplacePillSheet": "د ګولۍ ورقه بدلول ناکام و، پیژندنه: {id}",

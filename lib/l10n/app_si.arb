@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "පසුරු පුවරුවට පිටපත් කළා",
   "notificationNumber": "දැනුම්දීම {number}",
   "notificationTime": "දැනුම්දීමේ වේලාව",
-  "timeZoneChangedTo": "{tz} ට වෙනස් කරන ලදී",
+  "timeZoneChangedTo": "වේලා කලාපය {tz} ලෙස වෙනස් කර ඇත",
   "changeStartOfPillDays": "ගැනීමේ දින ගණනේ ආරම්භය වෙනස් කරන්න",
   "changeEndOfPillDays": "සේවන දින ගණනේ අවසානය වෙනස් කිරීම",
   "cannotUpdateToReplacePillSheet": "පිල් ශීට් ප්‍රතිස්ථාපනයෙන් යාවත්කාලීන කළ නොහැක id: {id}",

@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Копирано у привремену меморију",
   "notificationNumber": "Обавештење {number}",
   "notificationTime": "Време обавештења",
-  "timeZoneChangedTo": "Promenjeno na {tz}",
+  "timeZoneChangedTo": "Временска зона је промењена на {tz}",
   "changeStartOfPillDays": "Izmena početka perioda uzimanja",
   "changeEndOfPillDays": "Izmena kraja uzimanja",
   "cannotUpdateToReplacePillSheet": "Не може да се ажурира због замене листа пилула ИД: {id}",

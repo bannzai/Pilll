@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി",
   "notificationNumber": "അറിയിപ്പ് {number}",
   "notificationTime": "അറിയിപ്പ് സമയം",
-  "timeZoneChangedTo": "{tz}യിലേക്ക് മാറ്റി",
+  "timeZoneChangedTo": "സമയ മേഖല {tz} ആയി മാറ്റി",
   "changeStartOfPillDays": "സേവന ദിവസങ്ങളുടെ ആരംഭം മാറ്റുക",
   "changeEndOfPillDays": "കഴിക്കുന്ന ദിവസങ്ങളുടെ അവസാനം മാറ്റുക",
   "cannotUpdateToReplacePillSheet": "ഗുളിക ഷീറ്റ് മാറ്റിസ്ഥാപനം വഴി അപ്ഡേറ്റ് ചെയ്യാൻ കഴിയില്ല id: {id}",

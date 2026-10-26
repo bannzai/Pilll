@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "In die Zwischenablage kopiert",
   "notificationNumber": "Benachrichtigung {number}",
   "notificationTime": "Benachrichtigungszeit",
-  "timeZoneChangedTo": "Auf {tz} geändert",
+  "timeZoneChangedTo": "Die Zeitzone wurde auf {tz} geändert",
   "changeStartOfPillDays": "Beginn der Einnahmetage ändern",
   "changeEndOfPillDays": "Einnahmeende ändern",
   "cannotUpdateToReplacePillSheet": "Aktualisierung durch Pillentabellen-Ersatz fehlgeschlagen ID: {id}",

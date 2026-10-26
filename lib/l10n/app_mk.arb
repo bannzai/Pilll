@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Копирано во таблата со исечоци",
   "notificationNumber": "Известување {number}",
   "notificationTime": "Време на известување",
-  "timeZoneChangedTo": "Временската зона е променета на {tz}",
+  "timeZoneChangedTo": "Временската зона е променета во {tz}",
   "changeStartOfPillDays": "Промени почеток на бројот на денови за земање",
   "changeEndOfPillDays": "Промени крај на периодот на земање",
   "cannotUpdateToReplacePillSheet": "Не може да се ажурира заменувањето на листчето со пилули id: {id}",

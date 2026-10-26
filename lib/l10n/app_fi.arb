@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Kopioitu leikepöydälle",
   "notificationNumber": "Ilmoitus {number}",
   "notificationTime": "Ilmoituksen aika",
-  "timeZoneChangedTo": "Vaihdettu {tz}:ksi",
+  "timeZoneChangedTo": "Aikavyöhykkeeksi vaihdettiin {tz}",
   "changeStartOfPillDays": "Muuta ottopäivien alkua",
   "changeEndOfPillDays": "Muuta käyttöjakson päättymistä",
   "cannotUpdateToReplacePillSheet": "Pillerilehden päivittäminen epäonnistui id: {id}",

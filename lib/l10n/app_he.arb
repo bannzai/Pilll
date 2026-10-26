@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "הועתק ללוח",
   "notificationNumber": "התראה {number}",
   "notificationTime": "שעת ההתראה",
-  "timeZoneChangedTo": "שונה ל{tz}",
+  "timeZoneChangedTo": "אזור הזמן שונה ל־{tz}",
   "changeStartOfPillDays": "שינוי תחילת ימי הנטילה",
   "changeEndOfPillDays": "שינוי תאריך סיום הנטילה",
   "cannotUpdateToReplacePillSheet": "לא ניתן לעדכן באמצעות החלפת גליון הכדורים id: {id}",

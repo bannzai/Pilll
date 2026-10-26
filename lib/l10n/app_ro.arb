@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Copiat în clipboard",
   "notificationNumber": "Notificare {number}",
   "notificationTime": "Ora notificării",
-  "timeZoneChangedTo": "S-a schimbat la {tz}",
+  "timeZoneChangedTo": "Fusul orar a fost schimbat la {tz}",
   "changeStartOfPillDays": "Modificarea începutului administrării",
   "changeEndOfPillDays": "Modifică sfârșitul zilelor de administrare",
   "cannotUpdateToReplacePillSheet": "Nu se poate actualiza prin înlocuirea pastilei contraceptive id: {id}",

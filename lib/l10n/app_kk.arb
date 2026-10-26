@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Алмасу буферіне көшірілді",
   "notificationNumber": "Хабарландыру {number}",
   "notificationTime": "Хабарландыру уақыты",
-  "timeZoneChangedTo": "{tz} уақыт белдеуіне өзгертілді",
+  "timeZoneChangedTo": "Уақыт белдеуі {tz} болып өзгертілді",
   "changeStartOfPillDays": "Қабылдау күндерінің басталуын өзгерту",
   "changeEndOfPillDays": "Қабылдау мерзімінің соңын өзгерту",
   "cannotUpdateToReplacePillSheet": "Таблетка парағын ауыстыру арқылы жаңарту болмады id: {id}",

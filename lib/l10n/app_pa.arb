@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "ਕਲਿੱਪਬੋਰਡ 'ਤੇ ਕਾਪੀ ਹੋ ਗਿਆ",
   "notificationNumber": "ਸੂਚਨਾ {number}",
   "notificationTime": "ਸੂਚਨਾ ਦਾ ਸਮਾਂ",
-  "timeZoneChangedTo": "{tz} ਨੂੰ ਬਦਲ ਦਿੱਤਾ ਗਿਆ",
+  "timeZoneChangedTo": "ਸਮਾਂ ਖੇਤਰ {tz} ਵਿੱਚ ਬਦਲ ਦਿੱਤਾ ਗਿਆ ਹੈ",
   "changeStartOfPillDays": "ਸੇਵਨ ਦਿਨਾਂ ਦੀ ਸ਼ੁਰੂਆਤ ਬਦਲੋ",
   "changeEndOfPillDays": "ਸੇਵਨ ਦਿਨਾਂ ਦਾ ਅੰਤ ਬਦਲੋ",
   "cannotUpdateToReplacePillSheet": "ਪਿੱਲ ਸ਼ੀਟ ਦੀ ਬਦਲੀ ਨਾਲ ਅਪਡੇਟ ਨਹੀਂ ਹੋ ਸਕਦਾ id: {id}",

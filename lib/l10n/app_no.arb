@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Kopiert til utklippstavlen",
   "notificationNumber": "Varsel {number}",
   "notificationTime": "Varslingstidspunkt",
-  "timeZoneChangedTo": "Endret til {tz}",
+  "timeZoneChangedTo": "Tidssonen er endret til {tz}",
   "changeStartOfPillDays": "Endre start på inntaksperioden",
   "changeEndOfPillDays": "Endre slutten på brukeperioden",
   "cannotUpdateToReplacePillSheet": "Kan ikke oppdatere ved utskifting av pilleark id: {id}",

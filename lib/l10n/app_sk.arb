@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Skopírované do schránky",
   "notificationNumber": "Upozornenie {number}",
   "notificationTime": "Čas upozornenia",
-  "timeZoneChangedTo": "Zmenené na {tz}",
+  "timeZoneChangedTo": "Časové pásmo bolo zmenené na {tz}",
   "changeStartOfPillDays": "Zmeniť začiatok dní užívania",
   "changeEndOfPillDays": "Zmeniť koniec doby užívania",
   "cannotUpdateToReplacePillSheet": "Nepodarilo sa aktualizovať pri výmene tabletového balíčka id: {id}",

@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Скапіявана ў буфер абмену",
   "notificationNumber": "Апавяшчэнне {number}",
   "notificationTime": "Час апавяшчэння",
-  "timeZoneChangedTo": "Зменена на {tz}",
+  "timeZoneChangedTo": "Часавы пояс зменены на {tz}",
   "changeStartOfPillDays": "Змяніць пачатак прыёму дзён",
   "changeEndOfPillDays": "Змена канца прыёму пілюль",
   "cannotUpdateToReplacePillSheet": "Немагчыма абнавіць пілюльную схему id: {id}",

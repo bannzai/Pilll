@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "S'ha copiat al porta-retalls",
   "notificationNumber": "Notificació {number}",
   "notificationTime": "Hora de la notificació",
-  "timeZoneChangedTo": "S'ha canviat a {tz}",
+  "timeZoneChangedTo": "La zona horària s'ha canviat a {tz}",
   "changeStartOfPillDays": "Canviar l'inici dels dies de presa",
   "changeEndOfPillDays": "Canvi de final dels dies de presa",
   "cannotUpdateToReplacePillSheet": "No es pot actualitzar la substitució del blíster id: {id}",

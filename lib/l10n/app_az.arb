@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Mübadilə buferinə kopyalandı",
   "notificationNumber": "Bildiriş {number}",
   "notificationTime": "Bildiriş vaxtı",
-  "timeZoneChangedTo": "{tz} olaraq dəyişdirildi",
+  "timeZoneChangedTo": "Saat qurşağınız {tz} olaraq dəyişdirildi",
   "changeStartOfPillDays": "Qəbul başlanğıc tarixini dəyişdirmək",
   "changeEndOfPillDays": "Qəbul müddətinin sonunu dəyişdirmək",
   "cannotUpdateToReplacePillSheet": "Həb lövhəsinin əvəzlənməsi zamanı yeniləmə uğursuz oldu id: {id}",

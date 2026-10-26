@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Arbelean kopiatu da",
   "notificationNumber": "{number}. jakinarazpena",
   "notificationTime": "Jakinarazpenaren ordua",
-  "timeZoneChangedTo": "{tz}ra aldatu da",
+  "timeZoneChangedTo": "Ordu-eremua {tz} da orain",
   "changeStartOfPillDays": "Hartzeko egunen hasiera aldatu",
   "changeEndOfPillDays": "Hartzeko egunen amaiera aldatu",
   "cannotUpdateToReplacePillSheet": "Ezin da eguneratu pilula-orriaren ordezkapenaren ondorioz, id: {id}",

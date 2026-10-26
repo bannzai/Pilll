@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Скопійовано до буфера обміну",
   "notificationNumber": "Сповіщення {number}",
   "notificationTime": "Час сповіщення",
-  "timeZoneChangedTo": "Змінено на {tz}",
+  "timeZoneChangedTo": "Часовий пояс змінено на {tz}",
   "changeStartOfPillDays": "Змінити початок відліку прийому",
   "changeEndOfPillDays": "Змінити кінець курсу прийому",
   "cannotUpdateToReplacePillSheet": "Не вдалося оновити через заміну аркуша таблеток ID: {id}",

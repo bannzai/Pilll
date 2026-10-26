@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Copiado para a área de transferência",
   "notificationNumber": "Notificação {number}",
   "notificationTime": "Horário da notificação",
-  "timeZoneChangedTo": "Alterado para {tz}",
+  "timeZoneChangedTo": "O fuso horário foi alterado para {tz}",
   "changeStartOfPillDays": "Alterar início da contagem de dias",
   "changeEndOfPillDays": "Alterar fim do período de toma",
   "cannotUpdateToReplacePillSheet": "Não foi possível atualizar devido à substituição da cartela de pílulas id: {id}",

@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Afritað á klippiborð",
   "notificationNumber": "Tilkynning {number}",
   "notificationTime": "Tími tilkynningar",
-  "timeZoneChangedTo": "Breytt í {tz}",
+  "timeZoneChangedTo": "Tímabeltinu var breytt í {tz}",
   "changeStartOfPillDays": "Breyta upphafi inntökudaga",
   "changeEndOfPillDays": "Breyta loki inntökutímabils",
   "cannotUpdateToReplacePillSheet": "Uppfærsla pillublaðs mistókst, auðkenni: {id}",

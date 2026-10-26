@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Buferga nusxalandi",
   "notificationNumber": "Bildirishnoma {number}",
   "notificationTime": "Bildirishnoma vaqti",
-  "timeZoneChangedTo": "{tz}ga o'zgartirildi",
+  "timeZoneChangedTo": "Vaqt mintaqasi {tz} ga oʻzgartirildi",
   "changeStartOfPillDays": "Qabul qilish kunlarining boshlanishini o'zgartirish",
   "changeEndOfPillDays": "Ichish mudatining tugashini o'zgartirish",
   "cannotUpdateToReplacePillSheet": "Dori varaqlarini almashtirish orqali yangilab bo'lmadi id: {id}",

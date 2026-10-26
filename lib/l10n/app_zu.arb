@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Kukopishwe ebhodini lokunamathisela",
   "notificationNumber": "Isaziso {number}",
   "notificationTime": "Isikhathi sesaziso",
-  "timeZoneChangedTo": "Kushintshiwe ku-{tz}",
+  "timeZoneChangedTo": "Indawo yesikhathi ishintshelwe ku-{tz}",
   "changeStartOfPillDays": "Shintsha ukuqala kwezinsuku zokuthatha imithi",
   "changeEndOfPillDays": "Shintsha usuku lokuphela lokuphuza",
   "cannotUpdateToReplacePillSheet": "Akukwazi ukubuyekeza umqulu wamaphilisi ngokuwushintsha i-ID: {id}",

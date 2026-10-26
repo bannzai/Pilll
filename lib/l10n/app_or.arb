@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "କ୍ଲିପବୋର୍ଡକୁ କପି ହୋଇଛି",
   "notificationNumber": "ସୂଚନା {number}",
   "notificationTime": "ବିଜ୍ଞପ୍ତିର ସମୟ",
-  "timeZoneChangedTo": "{tz}କୁ ପରିବର୍ତ୍ତନ କରାଯାଇଛି",
+  "timeZoneChangedTo": "ସମୟ ମଣ୍ଡଳ {tz}କୁ ପରିବର୍ତ୍ତନ ହୋଇଛି",
   "changeStartOfPillDays": "ସେବନ ଆରମ୍ଭ ଦିନ ପରିବର୍ତ୍ତନ କରନ୍ତୁ",
   "changeEndOfPillDays": "ସେବନ ଅବଧିର ଶେଷ ପରିବର୍ତ୍ତନ କରନ୍ତୁ",
   "cannotUpdateToReplacePillSheet": "ଔଷଧ ଶୀଟ ବଦଳାଇବାରେ ଅପଡେଟ ହେଲା ନାହିଁ id: {id}",

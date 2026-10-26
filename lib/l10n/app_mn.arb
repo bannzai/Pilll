@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Түр санах ойд хууллаа",
   "notificationNumber": "Мэдэгдэл {number}",
   "notificationTime": "Мэдэгдлийн цаг",
-  "timeZoneChangedTo": "{tz}-д солигдлоо",
+  "timeZoneChangedTo": "Цагийн бүсийг {tz} болгож өөрчилсөн",
   "changeStartOfPillDays": "Хэрэглэх өдрийн эхлэлийг өөрчлөх",
   "changeEndOfPillDays": "Эм уух өдрийн тооны төгсгөлийг өөрчлөх",
   "cannotUpdateToReplacePillSheet": "Эмийн хуудас солихоор шинэчлэх боломжгүй id: {id}",

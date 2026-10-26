@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Kopieret til udklipsholderen",
   "notificationNumber": "Notifikation {number}",
   "notificationTime": "Notifikationstidspunkt",
-  "timeZoneChangedTo": "Ændret til {tz}",
+  "timeZoneChangedTo": "Tidszonen er ændret til {tz}",
   "changeStartOfPillDays": "Ændre startdato for indtagelse",
   "changeEndOfPillDays": "Ændr slutningen af indtagelsesperioden",
   "cannotUpdateToReplacePillSheet": "Kan ikke opdatere p-pille ark ved udskiftning id: {id}",

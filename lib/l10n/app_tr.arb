@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Panoya kopyalandı",
   "notificationNumber": "Bildirim {number}",
   "notificationTime": "Bildirim saati",
-  "timeZoneChangedTo": "{tz} olarak değiştirildi",
+  "timeZoneChangedTo": "Saat dilimi {tz} olarak değiştirildi",
   "changeStartOfPillDays": "Alım günlerinin başlangıcını değiştir",
   "changeEndOfPillDays": "Kullanım süresinin sonunu değiştir",
   "cannotUpdateToReplacePillSheet": "Hap paketi değişimi nedeniyle güncelleme başarısız id: {id}",

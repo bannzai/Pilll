@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Zkopírováno do schránky",
   "notificationNumber": "Oznámení {number}",
   "notificationTime": "Čas oznámení",
-  "timeZoneChangedTo": "Změněno na {tz}",
+  "timeZoneChangedTo": "Časové pásmo bylo změněno na {tz}",
   "changeStartOfPillDays": "Změnit začátek počítání dní užívání",
   "changeEndOfPillDays": "Změnit konec doby užívání",
   "cannotUpdateToReplacePillSheet": "Nepodařilo se aktualizovat výměnu balení pilulek id: {id}",

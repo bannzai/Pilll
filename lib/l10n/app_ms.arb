@@ -411,7 +411,7 @@
   "linkCopiedToClipboard": "Disalin ke papan klip",
   "notificationNumber": "Pemberitahuan {number}",
   "notificationTime": "Masa pemberitahuan",
-  "timeZoneChangedTo": "Telah ditukar kepada {tz}",
+  "timeZoneChangedTo": "Zon waktu telah ditukar kepada {tz}",
   "changeStartOfPillDays": "Ubah Permulaan Kiraan Hari Pengambilan",
   "changeEndOfPillDays": "Ubah akhir tempoh pengambilan",
   "cannotUpdateToReplacePillSheet": "Tidak dapat mengemaskini dengan penggantian helaian pil id: {id}",
