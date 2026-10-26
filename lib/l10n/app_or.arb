@@ -154,7 +154,7 @@
   "dayNumber": "ତମ ଦିନ",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}ରୁ ମାସିକ ଆରମ୍ଭ ହୋଇଥିବା ରେକର୍ଡ କରାଯାଇଛି",
   "menstruationStartDate": "ମାସିକ ଆରମ୍ଭ ତାରିଖ",
-  "menstruationEndDate": "ମାସିକ ଶେଷ ତାରିଖ",
+  "menstruationEndDate": "ମାସିକ ଶେଷ ହେବାର ତାରିଖ",
   "menstruationScheduleDate": "ମାସିକ ଧର୍ମର ସମ୍ଭାବ୍ୟ ତାରିଖ",
   "menstruationScheduleDateWithNumber": "ମାସିକ ଅନୁମାନ: {diffPlusOne} ଦିନ",
   "menstruationScheduleDateWithNumberAndPillNumber": "ରଜସ୍ବଳା ଆଶା: {diffPlusOne}ଦିନର {pillNumber}",

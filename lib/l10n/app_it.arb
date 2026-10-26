@@ -154,7 +154,7 @@
   "dayNumber": "º giorno",
   "recordedMenstruationStartDate": "L'inizio delle mestruazioni è stato registrato per il {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Data di inizio delle mestruazioni",
-  "menstruationEndDate": "Data fine mestruazioni",
+  "menstruationEndDate": "Data di fine delle mestruazioni",
   "menstruationScheduleDate": "Data prevista mestruazioni",
   "menstruationScheduleDateWithNumber": "Mestruazioni previste: giorno {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Mestruazioni previste: giorno {diffPlusOne}, pillola {pillNumber}",

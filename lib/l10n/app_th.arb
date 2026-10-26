@@ -154,7 +154,7 @@
   "dayNumber": " วันที่",
   "recordedMenstruationStartDate": "บันทึกว่าประจำเดือนเริ่มวันที่ {DateTimeFormatterMonthAndDay} แล้วค่ะ",
   "menstruationStartDate": "วันที่เริ่มประจำเดือน",
-  "menstruationEndDate": "วันสิ้นสุดประจำเดือน",
+  "menstruationEndDate": "วันที่ประจำเดือนสิ้นสุด",
   "menstruationScheduleDate": "วันคาดการณ์ประจำเดือน",
   "menstruationScheduleDateWithNumber": "ประจำเดือนคาด: วันที่ {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "กำหนดประจำเดือน：วันที่ {diffPlusOne} ยา {pillNumber}",

@@ -154,7 +154,7 @@
   "dayNumber": ". dzień",
   "recordedMenstruationStartDate": "Początek okresu zapisano na {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Data rozpoczęcia okresu",
-  "menstruationEndDate": "Data zakończenia miesiączki",
+  "menstruationEndDate": "Data zakończenia okresu",
   "menstruationScheduleDate": "Przewidywana data miesiączki",
   "menstruationScheduleDateWithNumber": "Przewidywana miesiączka: dzień {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Przewidywana menstruacja: dzień {diffPlusOne}, tabletka {pillNumber}",

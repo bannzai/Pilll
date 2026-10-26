@@ -154,7 +154,7 @@
   "dayNumber": "-oji diena",
   "recordedMenstruationStartDate": "Mėnesinių pradžia užregistruota nuo {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Mėnesinių pradžios data",
-  "menstruationEndDate": "Menstruacijų pabaigos diena",
+  "menstruationEndDate": "Mėnesinių pabaigos data",
   "menstruationScheduleDate": "Numatoma mėnesinių data",
   "menstruationScheduleDateWithNumber": "Menstruacija: {diffPlusOne} diena",
   "menstruationScheduleDateWithNumberAndPillNumber": "Menstruacijos prognozė: {diffPlusOne} dienos {pillNumber}",

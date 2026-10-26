@@ -154,7 +154,7 @@
   "dayNumber": "a zi",
   "recordedMenstruationStartDate": "Începutul menstruației a fost înregistrat pentru {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Data începerii menstruației",
-  "menstruationEndDate": "Data sfârșitului menstruației",
+  "menstruationEndDate": "Data de încheiere a menstruației",
   "menstruationScheduleDate": "Data prevăzută a menstruației",
   "menstruationScheduleDateWithNumber": "Menstruație prevăzută: ziua {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Menstruație programată: ziua {diffPlusOne}, pastila {pillNumber}",

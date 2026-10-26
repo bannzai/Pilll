@@ -154,7 +154,7 @@
   "dayNumber": ". Tag",
   "recordedMenstruationStartDate": "De Aafang vo dinere Periode isch ab em {DateTimeFormatterMonthAndDay} iitreit",
   "menstruationStartDate": "Aafangsdatum vo de Periode",
-  "menstruationEndDate": "Menstruations-Enddatum",
+  "menstruationEndDate": "Änddatum vo de Periode",
   "menstruationScheduleDate": "Erwarteti Periode",
   "menstruationScheduleDateWithNumber": "Regel-Vorhersag: {diffPlusOne}. Tag",
   "menstruationScheduleDateWithNumberAndPillNumber": "Regel erwartet: {diffPlusOne}. Tag, Pille {pillNumber}",

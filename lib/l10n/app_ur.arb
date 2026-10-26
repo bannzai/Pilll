@@ -154,7 +154,7 @@
   "dayNumber": "واں دن",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} سے ماہواری شروع ہونے کا اندراج ہو گیا ہے",
   "menstruationStartDate": "ماہواری شروع ہونے کی تاریخ",
-  "menstruationEndDate": "حیض ختم کی تاریخ",
+  "menstruationEndDate": "ماہواری ختم ہونے کی تاریخ",
   "menstruationScheduleDate": "متوقع حیض کی تاریخ",
   "menstruationScheduleDateWithNumber": "ماہواری کی پیش گوئی: {diffPlusOne} دن",
   "menstruationScheduleDateWithNumberAndPillNumber": "حیض کا شیڈول: {diffPlusOne}ویں دن کی {pillNumber}",

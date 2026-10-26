@@ -154,7 +154,7 @@
   "dayNumber": " dia",
   "recordedMenstruationStartDate": "S'ha registrat que la regla va començar el {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Data d'inici de la regla",
-  "menstruationEndDate": "Data de fi de la menstruació",
+  "menstruationEndDate": "Data de finalització de la regla",
   "menstruationScheduleDate": "Data prevista de la menstruació",
   "menstruationScheduleDateWithNumber": "Menstruació prevista: dia {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Menstruació prevista: dia {diffPlusOne}, pastilla {pillNumber}",

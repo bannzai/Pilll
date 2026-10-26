@@ -154,7 +154,7 @@
   "dayNumber": " gün",
   "recordedMenstruationStartDate": "Aybaşınızın {DateTimeFormatterMonthAndDay} tarixində başladığı qeyd edildi",
   "menstruationStartDate": "Aybaşının başlama tarixi",
-  "menstruationEndDate": "Aybaşı bitməsi tarixi",
+  "menstruationEndDate": "Aybaşının bitmə tarixi",
   "menstruationScheduleDate": "Gözlənilən menstruasiya tarixi",
   "menstruationScheduleDateWithNumber": "Aybaşı proqnozu: {diffPlusOne}-ci gün",
   "menstruationScheduleDateWithNumberAndPillNumber": "Menstruasiya planı: {diffPlusOne}-ci günün {pillNumber} həbi",

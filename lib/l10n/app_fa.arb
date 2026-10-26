@@ -154,7 +154,7 @@
   "dayNumber": " روز",
   "recordedMenstruationStartDate": "شروع پریود از {DateTimeFormatterMonthAndDay} ثبت شد",
   "menstruationStartDate": "تاریخ شروع پریود",
-  "menstruationEndDate": "تاریخ پایان قاعدگی",
+  "menstruationEndDate": "تاریخ پایان پریود",
   "menstruationScheduleDate": "تاریخ مقرر قاعدگی",
   "menstruationScheduleDateWithNumber": "برنامه قاعدگی: روز {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "پیش‌بینی قاعدگی: قرص {pillNumber} در روز {diffPlusOne}",

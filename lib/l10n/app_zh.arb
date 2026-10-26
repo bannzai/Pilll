@@ -154,7 +154,7 @@
   "dayNumber": "天",
   "recordedMenstruationStartDate": "已记录经期从 {DateTimeFormatterMonthAndDay} 开始",
   "menstruationStartDate": "经期开始日期",
-  "menstruationEndDate": "月经结束日",
+  "menstruationEndDate": "经期结束日期",
   "menstruationScheduleDate": "预计月经日",
   "menstruationScheduleDateWithNumber": "月经预期：第{diffPlusOne}天",
   "menstruationScheduleDateWithNumberAndPillNumber": "月经预期：第{diffPlusOne}天的{pillNumber}",

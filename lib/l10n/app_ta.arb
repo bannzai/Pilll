@@ -154,7 +154,7 @@
   "dayNumber": "ஆம் நாள்",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} முதல் மாதவிடாய் தொடங்கியதாகப் பதிவு செய்யப்பட்டுள்ளது",
   "menstruationStartDate": "மாதவிடாய் தொடங்கும் தேதி",
-  "menstruationEndDate": "மாதவிடாய் முடிவு நாள்",
+  "menstruationEndDate": "மாதவிடாய் முடியும் தேதி",
   "menstruationScheduleDate": "எதிர்பார்க்கப்படும் மாதவிடாய் தேதி",
   "menstruationScheduleDateWithNumber": "மாதவிடாய் கணிப்பு: {diffPlusOne}ஆம் நாள்",
   "menstruationScheduleDateWithNumberAndPillNumber": "மாதவிடாய் எதிர்பார்ப்பு: {diffPlusOne}ஆம் நாள் {pillNumber}",

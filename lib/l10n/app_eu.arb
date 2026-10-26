@@ -154,7 +154,7 @@
   "dayNumber": ". eguna",
   "recordedMenstruationStartDate": "Hilekoaren hasiera {DateTimeFormatterMonthAndDay} egunean erregistratu da",
   "menstruationStartDate": "Hilekoaren hasiera data",
-  "menstruationEndDate": "Hilerokaren amaiera data",
+  "menstruationEndDate": "Hilekoaren amaiera-data",
   "menstruationScheduleDate": "Hileko aurreikusitako data",
   "menstruationScheduleDateWithNumber": "Hileroko aurreikuspena: {diffPlusOne}. eguna",
   "menstruationScheduleDateWithNumberAndPillNumber": "Esperotako hilekoa: {diffPlusOne}. eguneko {pillNumber}",

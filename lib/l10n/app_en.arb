@@ -154,7 +154,7 @@
   "dayNumber": " day",
   "recordedMenstruationStartDate": "Period start recorded for {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Period start date",
-  "menstruationEndDate": "Period End Date",
+  "menstruationEndDate": "Period end date",
   "menstruationScheduleDate": "Expected Period Date",
   "menstruationScheduleDateWithNumber": "Expected period: Day {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Expected period: Day {diffPlusOne}, pill {pillNumber}",

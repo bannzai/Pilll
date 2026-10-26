@@ -154,7 +154,7 @@
   "dayNumber": " siku",
   "recordedMenstruationStartDate": "Mwanzo wa hedhi umerekodiwa kuanzia {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Tarehe ya kuanza hedhi",
-  "menstruationEndDate": "Tarehe ya mwisho wa hedhi",
+  "menstruationEndDate": "Tarehe ya mwisho ya hedhi",
   "menstruationScheduleDate": "Tarehe ya hedhi inayotarajiwa",
   "menstruationScheduleDateWithNumber": "Mpango wa hedhi: Siku ya {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Hedhi iliyotarajiwa: siku ya {diffPlusOne} ya {pillNumber}",

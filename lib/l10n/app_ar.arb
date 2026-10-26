@@ -154,7 +154,7 @@
   "dayNumber": " يوم",
   "recordedMenstruationStartDate": "تم تسجيل بداية الدورة اعتبارًا من {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "تاريخ بدء الدورة",
-  "menstruationEndDate": "تاريخ انتهاء الدورة الشهرية",
+  "menstruationEndDate": "تاريخ انتهاء الدورة",
   "menstruationScheduleDate": "موعد الدورة المتوقع",
   "menstruationScheduleDateWithNumber": "موعد الدورة الشهرية: اليوم {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "موعد الدورة الشهرية: الحبة {pillNumber} في اليوم الـ{diffPlusOne}",

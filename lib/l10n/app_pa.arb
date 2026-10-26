@@ -154,7 +154,7 @@
   "dayNumber": "ਵਾਂ ਦਿਨ",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} ਤੋਂ ਮਾਹਵਾਰੀ ਸ਼ੁਰੂ ਹੋਣ ਦਾ ਰਿਕਾਰਡ ਦਰਜ ਹੋ ਗਿਆ ਹੈ",
   "menstruationStartDate": "ਮਾਹਵਾਰੀ ਸ਼ੁਰੂ ਹੋਣ ਦੀ ਤਾਰੀਖ",
-  "menstruationEndDate": "ਮਾਹਵਾਰੀ ਦੀ ਸਮਾਪਤੀ ਦੀ ਤਰੀਕ",
+  "menstruationEndDate": "ਮਾਹਵਾਰੀ ਖ਼ਤਮ ਹੋਣ ਦੀ ਤਾਰੀਖ",
   "menstruationScheduleDate": "ਮਾਹਵਾਰੀ ਦੀ ਤਾਰੀਖ",
   "menstruationScheduleDateWithNumber": "ਮਾਸਿਕ ਧਰਮ: {diffPlusOne}ਵਾਂ ਦਿਨ",
   "menstruationScheduleDateWithNumberAndPillNumber": "ਮਾਹਵਾਰੀ ਦੀ ਯੋਜਨਾ: {diffPlusOne} ਦਿਨ ਦੀ {pillNumber}",

@@ -154,7 +154,7 @@
   "dayNumber": " дэх өдөр",
   "recordedMenstruationStartDate": "Сарын тэмдгийн эхлэх өдрийг {DateTimeFormatterMonthAndDay} гэж бүртгэсэн",
   "menstruationStartDate": "сарын тэмдгийн эхэлсэн өдөр",
-  "menstruationEndDate": "Сарын тэмдгийн төгсгөл өдөр",
+  "menstruationEndDate": "Сарын тэмдгийн дуусах өдөр",
   "menstruationScheduleDate": "Сарын тэмдгийн төлөвлөсөн өдөр",
   "menstruationScheduleDateWithNumber": "Сарын тэмдгийн төлөвлөгөө: {diffPlusOne} өдөр",
   "menstruationScheduleDateWithNumberAndPillNumber": "Сарын тэмдэг: {diffPlusOne} өдрийн {pillNumber}",

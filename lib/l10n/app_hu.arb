@@ -154,7 +154,7 @@
   "dayNumber": ". nap",
   "recordedMenstruationStartDate": "A menstruáció kezdetét {DateTimeFormatterMonthAndDay} dátummal rögzítettük",
   "menstruationStartDate": "A menstruáció kezdőnapja",
-  "menstruationEndDate": "Menstruáció vége",
+  "menstruationEndDate": "A menstruáció befejezésének dátuma",
   "menstruationScheduleDate": "Várható menstruáció",
   "menstruationScheduleDateWithNumber": "Várható menstruáció: {diffPlusOne}. nap",
   "menstruationScheduleDateWithNumberAndPillNumber": "Várható menstruáció: {diffPlusOne}. nap, {pillNumber}. tabletta",

@@ -154,7 +154,7 @@
   "dayNumber": "-күн",
   "recordedMenstruationStartDate": "Етеккірдің басталуы {DateTimeFormatterMonthAndDay} күніне тіркелді",
   "menstruationStartDate": "Етеккірдің басталу күні",
-  "menstruationEndDate": "Менструация аяқталған күні",
+  "menstruationEndDate": "Етеккірдің аяқталу күні",
   "menstruationScheduleDate": "менструация күтілетін күні",
   "menstruationScheduleDateWithNumber": "Етістік жоспары: {diffPlusOne} күні",
   "menstruationScheduleDateWithNumberAndPillNumber": "Етеккір жоспары: {diffPlusOne}-күнгі {pillNumber}",

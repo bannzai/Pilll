@@ -154,7 +154,7 @@
   "dayNumber": "e dag",
   "recordedMenstruationStartDate": "Het begin van je menstruatie is geregistreerd op {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Startdatum van de menstruatie",
-  "menstruationEndDate": "Menstruatie einddatum",
+  "menstruationEndDate": "Einddatum van de menstruatie",
   "menstruationScheduleDate": "Verwachte menstruatie",
   "menstruationScheduleDateWithNumber": "Verwachte menstruatie: dag {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Verwachte menstruatie: dag {diffPlusOne}, pil {pillNumber}",

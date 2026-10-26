@@ -154,7 +154,7 @@
   "dayNumber": " araw",
   "recordedMenstruationStartDate": "Naitala ang simula ng regla noong {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Petsa ng simula ng regla",
-  "menstruationEndDate": "Huling araw ng regla",
+  "menstruationEndDate": "Petsa ng pagtatapos ng regla",
   "menstruationScheduleDate": "Susunod na Regla",
   "menstruationScheduleDateWithNumber": "Inaasahang regla: Ika-{diffPlusOne} araw",
   "menstruationScheduleDateWithNumberAndPillNumber": "Inaasahang regla: Araw {diffPlusOne} ng {pillNumber}",

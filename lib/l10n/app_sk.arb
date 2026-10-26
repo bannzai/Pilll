@@ -154,7 +154,7 @@
   "dayNumber": ". deň",
   "recordedMenstruationStartDate": "Začiatok menštruácie bol zaznamenaný k dátumu {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Dátum začiatku menštruácie",
-  "menstruationEndDate": "Dátum ukončenia menštruácie",
+  "menstruationEndDate": "Dátum konca menštruácie",
   "menstruationScheduleDate": "Predpokladaný dátum menštruácie",
   "menstruationScheduleDateWithNumber": "Očakávaná menštruácia: {diffPlusOne}. deň",
   "menstruationScheduleDateWithNumberAndPillNumber": "Plánovaná menštruácia: {diffPlusOne}. deň, pilulka {pillNumber}",
